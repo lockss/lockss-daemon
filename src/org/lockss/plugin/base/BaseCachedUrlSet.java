@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.30 2012-03-12 07:06:55 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.31 2012-08-21 08:35:56 tlipkis Exp $
  */
 
 /*
@@ -68,6 +68,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   protected ArchivalUnit au;
   protected Plugin plugin;
   protected CachedUrlSetSpec spec;
+  protected long excludeFilesUnchangedAfter = 0;
 
   /**
    * Must invoke this constructor in plugin subclass.
@@ -337,6 +338,33 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     }
   }
 
+  public void setExcludeFilesUnchangedAfter(long date) {
+    excludeFilesUnchangedAfter = date;
+  }
+
+  public long getExcludeFilesUnchangedAfter() {
+    return excludeFilesUnchangedAfter;
+  }
+
+  protected boolean isExcludedByDate(CachedUrl cu) {
+    if (excludeFilesUnchangedAfter <= 0) {
+      return false;
+    }
+    Properties props = cu.getProperties();
+    String fetched = props.getProperty(CachedUrl.PROPERTY_FETCH_TIME);
+    if (StringUtil.isNullString(fetched)) {
+      return false;
+    }
+    try {
+      long fetchTime = Long.parseLong(fetched);
+      return fetchTime <= excludeFilesUnchangedAfter;
+    } catch (NumberFormatException ex) {
+      logger.warning("Couldn't parse fetch date: " + fetched +
+		  ", not excluding " + cu);
+      return false;
+    }
+  }
+
   /**
    * Overrides Object.hashCode().
    * Returns the hashcode of the spec.
@@ -505,7 +533,8 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   }
   /**
    * Iterator over all the content files in a CachedUrlSet, including
-   * archive members  */
+   * archive members.  Unlike {@link CusIterator}, this {@link CachedUrl}s,
+   * and only those that have content.  */
   public class ArcMemIterator implements Iterator<CachedUrl> {
     private Iterator<CachedUrlSetNode> cusIter;
     // Stack of directory iterators in the current archive
@@ -544,8 +573,9 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     }
 
     /**
-     * Does a pre-order traversal of the CachedUrlSet tree
-     * @return a {@link CachedUrlSetNode}
+     * Does a pre-order traversal of the CachedUrlSet tree including
+     * members of archive files
+     * @return the next {@link CachedUrl} in the traversal that has content.
      */
     private CachedUrl findNextElement() {
       if (nextCu != null) {
@@ -582,6 +612,9 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 	  CachedUrl cu = AuUtil.getCu(cusIter.next());
 	  try {
 	    if (cu == null || !cu.hasContent()) {
+	      continue;
+	    }
+	    if (isExcludedByDate(cu)) {
 	      continue;
 	    }
 	    String arcExt = ArchiveFileTypes.getArchiveExtension(cu);

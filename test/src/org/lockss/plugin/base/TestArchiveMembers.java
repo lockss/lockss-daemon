@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchiveMembers.java,v 1.5 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestArchiveMembers.java,v 1.6 2012-08-21 08:35:56 tlipkis Exp $
  */
 
 /*
@@ -89,7 +89,6 @@ public class TestArchiveMembers extends LockssTestCase {
     msau = (MySimulatedArchivalUnit)simau;
 
     simau.generateContentTree();
-    PluginTestUtil.crawlSimAu(simau);
     msau.setArchiveFileTypes(ArchiveFileTypes.DEFAULT);
   }
 
@@ -188,6 +187,7 @@ public class TestArchiveMembers extends LockssTestCase {
   }
 
   public void testReadMember() throws Exception {
+    PluginTestUtil.crawlSimAu(simau);
     String aurl = "http://www.example.com/branch1/branch1/zip5.zip";
 
     assertArchiveMember("file 1, depth 0, branch 0", "text/html", 226,
@@ -208,6 +208,7 @@ public class TestArchiveMembers extends LockssTestCase {
   }
 
   public void testIll() throws Exception {
+    PluginTestUtil.crawlSimAu(simau);
     String aurl = "http://www.example.com/branch1/branch1/zip5.zip";
     String memberName = "001file.html";
     CachedUrl cu0 = simau.makeCachedUrl(aurl);
@@ -232,9 +233,10 @@ public class TestArchiveMembers extends LockssTestCase {
   }
 
   public void testIter1() throws Exception {
+    PluginTestUtil.crawlSimAu(simau);
     String aurl = "http://www.example.com/branch1/branch1/zip5.zip";
     CachedUrlSet cus = simau.makeCachedUrlSet(new RangeCachedUrlSetSpec(aurl));
-    Iterator<CachedUrl> iter = ((BaseCachedUrlSet)cus).archiveMemberIterator();
+    Iterator<CachedUrl> iter = cus.archiveMemberIterator();
     int cnt = 0;
     while (iter.hasNext()) {
       CachedUrl cu = iter.next();
@@ -261,10 +263,10 @@ public class TestArchiveMembers extends LockssTestCase {
   Pattern pat = Pattern.compile(".*?(?:branch([0-9])/)?(?:branch([0-9])/)?00([0-9])file\\.html");
 
   public void testIter2() throws Exception {
+    PluginTestUtil.crawlSimAu(simau);
     CachedUrlSet cus = simau.makeCachedUrlSet(new AuCachedUrlSetSpec());
     List urls = readLinesFromResource("srcpub_urls.txt");
-    Iterator<CachedUrl> cuIter =
-      ((BaseCachedUrlSet)cus).archiveMemberIterator();
+    Iterator<CachedUrl> cuIter = cus.archiveMemberIterator();
     Iterator<String> urlIter = urls.iterator();
 
     int cnt = 0;
@@ -330,6 +332,7 @@ public class TestArchiveMembers extends LockssTestCase {
   }
 
   public void testIterPruned() throws Exception {
+    PluginTestUtil.crawlSimAu(simau);
     CachedUrlSetSpec cuss =
       PrunedCachedUrlSetSpec.excludeMatchingSubTrees("http://www.example.com/",
 						     "http://www.example.com/.*\\.zip");
@@ -341,8 +344,7 @@ public class TestArchiveMembers extends LockssTestCase {
       }
     }
     
-    Iterator<CachedUrl> cuIter =
-      ((BaseCachedUrlSet)cus).archiveMemberIterator();
+    Iterator<CachedUrl> cuIter = cus.archiveMemberIterator();
     Iterator<String> urlIter = urls.iterator();
 
     int cnt = 0;
@@ -376,7 +378,83 @@ public class TestArchiveMembers extends LockssTestCase {
     assertEquals(106, htmlcnt);
   }
 
+  void copyCu(String fromUrl, String toUrl) throws IOException {
+    CachedUrl cu = simau.makeCachedUrl(fromUrl);
+    UrlCacher uc = simau.makeUrlCacher(toUrl);
+    InputStream ins = cu.getUnfilteredInputStream();
+    CIProperties props = cu.getProperties();
+    props.setProperty(CachedUrl.PROPERTY_FETCH_TIME,
+		      Long.toString(TimeBase.nowMs()));
+    uc.storeContent(ins, props);
+  }
+
+  // Sample of URLs in recent archives 
+  String[] shouldContain = {
+    "http://www.example.com/branch1/branch1/newzip5.zip!/001file.html",
+    "http://www.example.com/branch1/branch1/newzip5.zip!/branch5/002file.xml",
+    "http://www.example.com/branch1/branch1/newzip5.zip!/branch5/branch1/001file.html",
+    "http://www.example.com/branch1/branch1/newzip5.zip!/branch5/branch2/002file.xml",
+    "http://www.example.com/branchnew/newtgz1.tgz!/001file.html",
+    "http://www.example.com/branchnew/newtgz1.tgz!/001file.xml",
+    "http://www.example.com/branchnew/newtgz1.tgz!/branch1/branch1/zip5.zip/002file.xml",
+    "http://www.example.com/branchnew/newtgz1.tgz!/branch1/branch1/zip5.zip/branch5/001file.html",
+    "http://www.example.com/branchnew/newtgz1.tgz!/branch1/branch1/zip6.zip/branch6/branch2/002file.html",
+    "http://www.example.com/branchnew/newtgz1.tgz!/branch1/branch2/001file.xml",
+    "http://www.example.com/branchnew/newtgz1.tgz!/branch1/branch2/zip7.zip/001file.html",
+    "http://www.example.com/branchnew/newtgz1.tgz!/branch1/branch2/zip8.zip/branch8/branch2/002file.xml",
+    "http://www.example.com/branchnew/newtgz1.tgz!/branch2/001file.html",
+    "http://www.example.com/branchnew/newtgz1.tgz!/branch2/branch2/002file.xml",
+  };
+
+  // Sample of URLs in old archives 
+  String[] shouldNotContain = {
+    "http://www.example.com/001file.html",
+    "http://www.example.com/branch1",
+    "http://www.example.com/branch1/001file.html",
+    "http://www.example.com/branch1/branch1/index.html",
+    "http://www.example.com/branch1/branch1/zip5.zip!/001file.html",
+    "http://www.example.com/branch1/branch1/zip6.zip!/branch6/branch2/002file.xml",
+    "http://www.example.com/branch1/branch2/001file.html",
+    "http://www.example.com/branch1/branch2/zip7.zip!/001file.html",
+  };
+
+  public void testIterExcludeFilesUnchangedAfter() throws Exception {
+    TimeBase.setSimulated(100000);
+    PluginTestUtil.crawlSimAu(simau);
+    TimeBase.setSimulated(500000);
+    copyCu("http://www.example.com/branch1/branch1/zip5.zip",
+	   "http://www.example.com/branch1/branch1/newzip5.zip");
+    TimeBase.setSimulated(700000);
+    copyCu("http://www.example.com/tgz1.tgz",
+	   "http://www.example.com/branchnew/newtgz1.tgz");
+    CachedUrlSet cus = simau.makeCachedUrlSet(new AuCachedUrlSetSpec());
+    cus.setExcludeFilesUnchangedAfter(200000);
+    Set urls = new HashSet();
+    Iterator<CachedUrl> cuIter = cus.archiveMemberIterator();
+    while (cuIter.hasNext()) {
+      CachedUrl cu = cuIter.next();
+      urls.add(cu.getUrl());
+    }
+    for (String url : shouldContain) {
+      assertContains(urls, url);
+    }
+    for (String url : shouldNotContain) {
+      assertDoesNotContain(urls, url);
+    }
+    assertEquals(108, urls.size());
+
+    cus.setExcludeFilesUnchangedAfter(600000);
+    Set urls2 = new HashSet();
+    Iterator<CachedUrl> cuIter2 = cus.archiveMemberIterator();
+    while (cuIter2.hasNext()) {
+      CachedUrl cu = cuIter2.next();
+      urls2.add(cu.getUrl());
+    }
+    assertEquals(92, urls2.size());
+  }
+
   public void testFindCu() throws Exception {
+    PluginTestUtil.crawlSimAu(simau);
     CachedUrl cu;
 
     String arcUrl = "http://www.example.com/branch1/branch1/zip5.zip";

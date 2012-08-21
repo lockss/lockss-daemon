@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.112 2012-07-09 07:52:31 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.113 2012-08-21 08:35:56 tlipkis Exp $
  */
 
 /*
@@ -365,6 +365,9 @@ public class NullPlugin {
     }
 
     public void storeActualHashDuration(long elapsed, Exception err) {
+    }
+
+    public void setExcludeFilesUnchangedAfter(long date) {
     }
 
     public Iterator flatSetIterator() {

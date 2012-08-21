@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.56 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: MockCachedUrlSet.java,v 1.57 2012-08-21 08:35:56 tlipkis Exp $
  */
 
 /*
@@ -147,6 +147,9 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   public int getType() {
     return CachedUrlSetNode.TYPE_CACHED_URL_SET;
+  }
+
+  public void setExcludeFilesUnchangedAfter(long date) {
   }
 
   public Iterator flatSetIterator() {

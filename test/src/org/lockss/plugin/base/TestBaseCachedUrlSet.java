@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.16 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.17 2012-08-21 08:35:56 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.base;
 
 import java.io.*;
 import java.util.*;
+import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
@@ -95,6 +96,29 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     theDaemon.getHistoryRepository(mau).stopService();
     theDaemon.stopDaemon();
     super.tearDown();
+  }
+
+  public void testExcludeByDate() throws Exception {
+    String base = "http://www.example.com/testDir";
+    createLeaf(base + "/leaf1", null, null);
+    createLeaf(base + "/leaf2", null,
+	       PropUtil.fromArgs(CachedUrl.PROPERTY_FETCH_TIME, "55555"));
+    createLeaf(base + "/leaf3", null,
+	       PropUtil.fromArgs(CachedUrl.PROPERTY_FETCH_TIME, "33333"));
+    createLeaf(base + "/leaf4", null,
+	       PropUtil.fromArgs(CachedUrl.PROPERTY_FETCH_TIME, "bogus"));
+
+    CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(base);
+    BaseCachedUrlSet cus = (BaseCachedUrlSet)mau.makeCachedUrlSet(rSpec);
+    assertFalse(cus.isExcludedByDate(mau.makeCachedUrl(base + "/leaf1")));
+    assertFalse(cus.isExcludedByDate(mau.makeCachedUrl(base + "/leaf2")));
+    assertFalse(cus.isExcludedByDate(mau.makeCachedUrl(base + "/leaf3")));
+    assertFalse(cus.isExcludedByDate(mau.makeCachedUrl(base + "/leaf4")));
+    cus.setExcludeFilesUnchangedAfter(44444);
+    assertFalse(cus.isExcludedByDate(mau.makeCachedUrl(base + "/leaf1")));
+    assertFalse(cus.isExcludedByDate(mau.makeCachedUrl(base + "/leaf2")));
+    assertTrue(cus.isExcludedByDate(mau.makeCachedUrl(base + "/leaf3")));
+    assertFalse(cus.isExcludedByDate(mau.makeCachedUrl(base + "/leaf4")));
   }
 
   public void testFlatSetIterator() throws Exception {

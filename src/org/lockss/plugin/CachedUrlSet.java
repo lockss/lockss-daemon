@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.10 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: CachedUrlSet.java,v 1.11 2012-08-21 08:35:56 tlipkis Exp $
  */
 
 /*
@@ -119,6 +119,15 @@ public interface CachedUrlSet extends CachedUrlSetNode {
    * not included in the iteration.
    */
   public Iterator<CachedUrl> archiveMemberIterator();
+
+  /**
+   * Exclude from iterators returned by {@link #archiveMemberIterator()}
+   * files known not to have changed since the specified date/time.  There
+   * is no guarantee that all such older files will be excluded; the
+   * purpose is to avoid the expense of descending into unchanged archives,
+   * e.g., when updating metadata after a recrawl.
+   */
+  public void setExcludeFilesUnchangedAfter(long date);
 
   /**
    * Return an estimate of the time required to hash the content.
