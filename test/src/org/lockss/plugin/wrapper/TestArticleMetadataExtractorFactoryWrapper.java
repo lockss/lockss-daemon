@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleMetadataExtractorFactoryWrapper.java,v 1.3 2011-08-09 04:17:30 tlipkis Exp $
+ * $Id: TestArticleMetadataExtractorFactoryWrapper.java,v 1.4 2012-08-21 08:37:32 tlipkis Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class TestArticleMetadataExtractorFactoryWrapper extends LockssTestCase {
       (MockArticleMetadataExtractorFactory)obj;
     a.setError(err);
     try {
-      wrapper.createArticleMetadataExtractor(MetadataTarget.Any);
+      wrapper.createArticleMetadataExtractor(MetadataTarget.Any());
       fail("Should have thrown PluginException");
     } catch (PluginException e) {
       assertTrue(e instanceof PluginException.LinkageError);

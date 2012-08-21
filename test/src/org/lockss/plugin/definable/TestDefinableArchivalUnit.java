@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.57 2012-07-09 07:52:31 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.58 2012-08-21 08:37:32 tlipkis Exp $
  */
 
 /*
@@ -1148,10 +1148,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 	       WrapperUtil.unwrap(afact) instanceof MockFactories.ArtIterFact);
     assertEquals(CollectionUtil.EMPTY_ITERATOR, au.getArticleIterator());
 
-    assertNull(au.getFileMetadataExtractor(MetadataTarget.Any,
+    assertNull(au.getFileMetadataExtractor(MetadataTarget.Any(),
 					   "application/pdf"));
     FileMetadataExtractor ext =
-      au.getFileMetadataExtractor(MetadataTarget.Any, "text/xml");
+      au.getFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
     assertTrue(ext instanceof FileMetadataExtractorWrapper);
     assertTrue(""+WrapperUtil.unwrap(ext),
 	       WrapperUtil.unwrap(ext) instanceof MockFactories.XmlMetaExt);

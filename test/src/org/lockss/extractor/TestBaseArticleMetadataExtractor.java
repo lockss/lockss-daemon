@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArticleMetadataExtractor.java,v 1.7 2012-08-15 03:34:59 tlipkis Exp $
+ * $Id: TestBaseArticleMetadataExtractor.java,v 1.8 2012-08-21 08:37:32 tlipkis Exp $
  */
 
 /*
@@ -164,7 +164,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
     Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16");
 
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any,
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
 					       makeAf(mau1, map));
     assertEquals(stringMap(map), getMap(mdlist.get(0)));
   }
@@ -178,7 +178,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16");
 
     List<ArticleMetadata> mdlist =
-      mle.extract(MetadataTarget.Any, makeAf(new MockArchivalUnit(), map));
+      mle.extract(MetadataTarget.Any(), makeAf(new MockArchivalUnit(), map));
     assertEquals(MapUtil.map("volume", "vol16", "access.url", "fullurl"),
 		 getMap(mdlist.get(0)));
   }
@@ -192,7 +192,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
 			  // Invalid value
 			  MetadataField.FIELD_ISSN, "not_an_issn");
 
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any,
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
 					       makeAf(mau1, map));
     // Copy of md values corresponding to tdb
     Map<String,String> exp = new HashMap<String,String>(tdbmap1);
@@ -208,7 +208,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
     Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol666");
 
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any,
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
 					       makeAf(mau2, map));
     // Copy of md values corresponding to tdb
     Map<String,String> exp = new HashMap<String,String>(tdbmap2);
