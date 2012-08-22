@@ -3480,7 +3480,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.medicalgasresearch.com/
       param[journal_issn] = 2045-9912
 
-      au < testing ; exists ; 2011 ; Medical Gas Research Volume 1 ; 1 >
+      au < released ; manifest ; 2011 ; Medical Gas Research Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Medical Gas Research Volume 2 ; 2 >
 
     }
@@ -3562,7 +3562,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Molecular Cancer Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; Molecular Cancer Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Molecular Cancer Volume 9 ; 9 >
-      au < testing ; exists ; 2011 ; Molecular Cancer Volume 10 ; 10 >
+      au < released ; manifest ; 2011 ; Molecular Cancer Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Molecular Cancer Volume 11 ; 11 >
 
     }
@@ -3580,7 +3580,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Molecular Cytogenetics Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; Molecular Cytogenetics Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Molecular Cytogenetics Volume 3 ; 3 >
-      au < testing ; exists ; 2011 ; Molecular Cytogenetics Volume 4 ; 4 >
+      au < released ; manifest ; 2011 ; Molecular Cytogenetics Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Molecular Cytogenetics Volume 5 ; 5 >
 
     }
