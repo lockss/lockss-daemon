@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.5 2012-08-16 22:13:57 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.6 2012-08-23 17:15:09 fergaloy-sf Exp $
  */
 
 /*
@@ -122,8 +122,14 @@ public class DbManager extends BaseLockssDaemonManager {
   // The database data source.
   private DataSource dataSource = null;
 
+  // The data source configuration.
+  private Configuration dataSourceConfig = null;
+
   // The data source user.
   private String datasourceUser = null;
+
+  // The network server control.
+  private NetworkServerControl networkServerControl = null;
 
   // An indication of whether this object is ready to be used.
   private boolean ready = false;
@@ -134,7 +140,7 @@ public class DbManager extends BaseLockssDaemonManager {
   @Override
   public void startService() {
     final String DEBUG_HEADER = "startService(): ";
-    log.debug(DEBUG_HEADER + "dataSource != null = " + (dataSource != null));
+    log.debug2(DEBUG_HEADER + "dataSource != null = " + (dataSource != null));
 
     // Do nothing more if it is already initialized.
     ready = ready && dataSource != null;
@@ -143,11 +149,11 @@ public class DbManager extends BaseLockssDaemonManager {
     }
 
     // Get the datasource configuration.
-    Configuration dataSourceConfig = getDataSourceConfig();
+    dataSourceConfig = getDataSourceConfig();
 
     // Create the datasource.
     try {
-      dataSource = createDataSource(dataSourceConfig);
+      dataSource = createDataSource();
     } catch (Exception e) {
       log.error("Cannot create the datasource - DbManager not ready", e);
       return;
@@ -155,7 +161,7 @@ public class DbManager extends BaseLockssDaemonManager {
 
     // Check whether the datasource properties have been successfully
     // initialized.
-    if (initializeDataSourceProperties(dataSourceConfig)) {
+    if (initializeDataSourceProperties()) {
       // Yes: Check whether the Derby NetworkServerControl for client
       // connections needs to be started.
       if (dataSource instanceof ClientDataSource) {
@@ -275,7 +281,7 @@ public class DbManager extends BaseLockssDaemonManager {
       return true;
     } else {
       // No.
-      log.debug(DEBUG_HEADER + "Table '" + tableName
+      log.debug2(DEBUG_HEADER + "Table '" + tableName
 	  + "' exists - Not creating it.");
       return false;
     }
@@ -495,6 +501,37 @@ public class DbManager extends BaseLockssDaemonManager {
    */
   @Override
   public void stopService() {
+    final String DEBUG_HEADER = "stopService(): ";
+
+    try {
+      if (networkServerControl != null) {
+	networkServerControl.shutdown();
+      }
+
+      // Create the datasource for shutdown.
+      dataSource = createDataSource();
+    } catch (Exception e) {
+      log.error("Cannot create the datasource to shutdown the database", e);
+      return;
+    }
+
+    dataSourceConfig.remove("createDatabase");
+    dataSourceConfig.put("shutdownDatabase", "shutdown");
+
+    // Check whether the datasource properties have been successfully
+    // initialized.
+    if (initializeDataSourceProperties()) {
+      try {
+	getConnection();
+      } catch (SQLException sqle) {
+	// This is expected.
+	log.debug2(DEBUG_HEADER + "Expected exception caught: " + sqle);
+      }
+      log.debug(DEBUG_HEADER + "Database shutdown.");
+    } else {
+      log.error("Failed database shutdown.");
+    }
+
     ready = false;
     dataSource = null;
   }
@@ -511,21 +548,21 @@ public class DbManager extends BaseLockssDaemonManager {
     Configuration currentConfig = ConfigManager.getCurrentConfig();
 
     // Create the datasource configuration.
-    Configuration dataSourceConfig = ConfigManager.newConfiguration();
+    Configuration dsConfig = ConfigManager.newConfiguration();
 
     // Populate it from the current configuration datasource tree.
-    dataSourceConfig.copyFrom(currentConfig.getConfigTree(DATASOURCE_ROOT));
+    dsConfig.copyFrom(currentConfig.getConfigTree(DATASOURCE_ROOT));
 
     // Save the default class name, if not configured.
-    dataSourceConfig.put("className", currentConfig.get(
+    dsConfig.put("className", currentConfig.get(
 	PARAM_DATASOURCE_CLASSNAME, DEFAULT_DATASOURCE_CLASSNAME));
 
     // Save the creation directive, if not configured.
-    dataSourceConfig.put("createDatabase", currentConfig.get(
+    dsConfig.put("createDatabase", currentConfig.get(
 	PARAM_DATASOURCE_CREATEDATABASE, DEFAULT_DATASOURCE_CREATEDATABASE));
 
     // Check whether the configured datasource database name does not exist.
-    if (dataSourceConfig.get("databaseName") == null) {
+    if (dsConfig.get("databaseName") == null) {
       // Yes: Get the data source root directory.
       File datasourceDir =
 	  ConfigManager.getConfigManager()
@@ -533,36 +570,34 @@ public class DbManager extends BaseLockssDaemonManager {
 				     DEFAULT_DATASOURCE_DATABASENAME, false);
 
       // Save the database name.
-      dataSourceConfig.put("databaseName", FileUtil
+      dsConfig.put("databaseName", FileUtil
 	  .getCanonicalOrAbsolutePath(datasourceDir));
-      log.debug(DEBUG_HEADER + "datasourceDatabaseName = '"
-	  + dataSourceConfig.get("databaseName") + "'.");
+      log.debug2(DEBUG_HEADER + "datasourceDatabaseName = '"
+	  + dsConfig.get("databaseName") + "'.");
     }
 
     // Save the port number, if not configured.
-    dataSourceConfig.put("portNumber", currentConfig.get(
+    dsConfig.put("portNumber", currentConfig.get(
 	PARAM_DATASOURCE_PORTNUMBER, DEFAULT_DATASOURCE_PORTNUMBER));
 
     // Save the server name, if not configured.
-    dataSourceConfig.put("serverName", currentConfig.get(
+    dsConfig.put("serverName", currentConfig.get(
 	PARAM_DATASOURCE_SERVERNAME, DEFAULT_DATASOURCE_SERVERNAME));
 
     // Save the user name, if not configured.
-    dataSourceConfig.put("user",
+    dsConfig.put("user",
 	currentConfig.get(PARAM_DATASOURCE_USER, DEFAULT_DATASOURCE_USER));
-    datasourceUser = dataSourceConfig.get("user");
+    datasourceUser = dsConfig.get("user");
 
-    return dataSourceConfig;
+    return dsConfig;
   }
 
   /**
    * Creates a datasource using the specified configuration.
    * 
-   * @param dataSourceConfig
-   *          A Configuration with the configuration parameters to be used.
    * @return <code>true</code> if created, <code>false</code> otherwise.
    */
-  private DataSource createDataSource(Configuration dataSourceConfig)
+  private DataSource createDataSource()
       throws Exception {
     // Get the datasource class name.
     String dataSourceClassName = dataSourceConfig.get("className");
@@ -592,30 +627,28 @@ public class DbManager extends BaseLockssDaemonManager {
    * Initializes the properties of the datasource using the specified
    * configuration.
    * 
-   * @param dataSourceConfig
-   *          A Configuration with the configuration parameters to be used.
    * @return <code>true</code> if successfully initialized, <code>false</code>
    *         otherwise.
    */
-  private boolean initializeDataSourceProperties(Configuration dataSourceConfig) {
+  private boolean initializeDataSourceProperties() {
     final String DEBUG_HEADER = "initializeDataSourceProperties(): ";
 
     String dataSourceClassName = dataSourceConfig.get("className");
-    log.debug(DEBUG_HEADER + "dataSourceClassName = '" + dataSourceClassName
+    log.debug2(DEBUG_HEADER + "dataSourceClassName = '" + dataSourceClassName
 	+ "'.");
     boolean errors = false;
     String value = null;
 
     // Loop through all the configured datasource properties.
     for (String key : dataSourceConfig.keySet()) {
-      log.debug(DEBUG_HEADER + "key = '" + key + "'.");
+      log.debug2(DEBUG_HEADER + "key = '" + key + "'.");
 
       // Skip over the class name, as it is not really part of the datasource
       // definition.
       if (!"className".equals(key)) {
 	// Get the property value.
 	value = dataSourceConfig.get(key);
-	log.debug(DEBUG_HEADER + "value = '" + value + "'.");
+	log.debug2(DEBUG_HEADER + "value = '" + value + "'.");
 
 	// Set the property value in the datasource.
 	try {
@@ -645,13 +678,13 @@ public class DbManager extends BaseLockssDaemonManager {
 
     ClientDataSource cds = (ClientDataSource) dataSource;
     String serverName = cds.getServerName();
-    log.debug(DEBUG_HEADER + "serverName = '" + serverName + "'.");
+    log.debug2(DEBUG_HEADER + "serverName = '" + serverName + "'.");
     int serverPort = cds.getPortNumber();
-    log.debug(DEBUG_HEADER + "serverPort = " + serverPort + ".");
+    log.debug2(DEBUG_HEADER + "serverPort = " + serverPort + ".");
 
     // Start the network server control.
     InetAddress inetAddr = InetAddress.getByName(serverName);
-    NetworkServerControl networkServerControl =
+    networkServerControl =
 	new NetworkServerControl(inetAddr, serverPort);
     networkServerControl.start(null);
 
