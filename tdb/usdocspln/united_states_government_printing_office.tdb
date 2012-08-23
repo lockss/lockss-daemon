@@ -145,7 +145,25 @@
 
   }
 
+{
+  
+    title < 
+      name = Commerce Business Daily
+  
+      >
+
+   param[collection_id] = CDB
+
+    
+       au < exists ; 1996 ; Code of Federal Regulations 1996 ; 1996 >
+       
+  }
+ 
+ 
   {
+  
+  
+  
   
     title <
       name = Congressional Bills
@@ -789,11 +807,7 @@
         param[collection_id] = SCD
 
 
-    au < exists ; 1996 ; Supreme Court Decisions 1996 ; 1996 >
-    au < exists ; 2000 ; Supreme Court Decisions 2000 ; 2000 >
-    au < exists ; 2002 ; Supreme Court Decisions 2002 ; 2002 >
-    au < exists ; 2008 ; Supreme Court Decisions 2008 ; 2008 >
-    au < exists ; 2012 ; Supreme Court Decisions 2012 ; 2012 >
+    au < exists ; 1937 ; Supreme Court Decisions 1937 ; 1937 >
 
     }
 
