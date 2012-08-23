@@ -779,7 +779,23 @@
 
   }
 
+{
+  
+    title < 
+      name = Supreme Court Decisions
+  
+      >
 
+        param[collection_id] = SCD
+
+
+    au < exists ; 1996 ; Supreme Court Decisions 1996 ; 1996 >
+    au < exists ; 2000 ; Supreme Court Decisions 2000 ; 2000 >
+    au < exists ; 2002 ; Supreme Court Decisions 2002 ; 2002 >
+    au < exists ; 2008 ; Supreme Court Decisions 2008 ; 2008 >
+    au < exists ; 2012 ; Supreme Court Decisions 2012 ; 2012 >
+
+    }
 
   {
 
