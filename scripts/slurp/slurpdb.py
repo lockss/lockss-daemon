@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurpdb.py,v 1.3 2012-08-24 06:40:59 thib_gc Exp $
+# $Id: slurpdb.py,v 1.4 2012-08-25 00:38:51 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,14 +28,17 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.0'
+__version__ = '0.4.1'
 
+from datetime import datetime
 import MySQLdb
 import optparse
 import os
 import sys
 
 class SlurpDb(object):
+
+    DB_STRFTIME = '%Y-%m-%d %H:%M:%S'
 
     def __init__(self):
         object.__init__(self)
@@ -167,6 +170,86 @@ class SlurpDb(object):
         cursor.close()
         self.__commit()
 
+    def get_auids_for_session(self, sid):
+        '''Returns (aid, auid) tuples.'''
+        self.__raise_if_closed()
+        cursor = self.__cursor()
+        cursor.execute('''\
+                SELECT %s, %s
+                FROM %s
+                WHERE %s = %%s
+        ''' % (AUIDS_ID, AUIDS_AUID,
+               AUIDS,
+               AUIDS_SID),
+        (sid,))
+        ret = cursor.fetchall()
+        cursor.close()
+        return ret
+
+    def make_au(self,
+                aid,
+                name,
+                publisher,
+                year,
+                repository,
+                creation_date,
+                status,
+                available,
+                last_crawl,
+                last_crawl_result,
+                last_completed_crawl,
+                last_poll,
+                last_poll_result,
+                last_completed_poll,
+                content_size,
+                disk_usage):
+        self.__raise_if_closed()
+        # Normalize
+        name = self.__str_to_db(name, AUS_NAME)
+        publisher = self.__str_to_db(publisher, AUS_PUBLISHER)
+        repository = self.__str_to_db(repository, AUS_REPOSITORY)
+        creation_date = self.__datetime_to_db(creation_date)
+        status = self.__str_to_db(status, AUS_STATUS)
+        last_crawl = self.__datetime_to_db(last_crawl)
+        last_crawl_result = self.__str_to_db(last_crawl_result, AUS_LAST_CRAWL_RESULT)
+        last_completed_crawl = self.__datetime_to_db(last_completed_crawl)
+        last_poll = self.__datetime_to_db(last_poll)
+        last_poll_result = self.__str_to_db(last_poll_result, AUS_LAST_POLL_RESULT)
+        last_completed_poll = self.__datetime_to_db(last_completed_poll)
+        # Insert
+        cursor = self.__cursor()
+        cursor.execute('''\
+                INSERT INTO %s
+                (%s, %s, %s, %s,
+                    %s, %s, %s, %s,
+                    %s, %s, %s, %s,
+                    %s, %s, %s, %s)
+                VALUES (%%s, %%s, %%s, %%s,
+                    %%s, %%s, %%s, %%s,
+                    %%s, %%s, %%s, %%s,
+                    %%s, %%s, %%s, %%s)
+        ''' % (AUS,
+               AUS_AID, AUS_NAME, AUS_PUBLISHER, AUS_YEAR,
+               AUS_REPOSITORY, AUS_CREATION_DATE, AUS_STATUS, AUS_AVAILABLE,
+               AUS_LAST_CRAWL, AUS_LAST_CRAWL_RESULT, AUS_LAST_COMPLETED_CRAWL, AUS_LAST_POLL,
+               AUS_LAST_POLL_RESULT, AUS_LAST_COMPLETED_POLL, AUS_CONTENT_SIZE, AUS_DISK_USAGE),
+        (aid, name, publisher, year,
+         repository, creation_date, status, available,
+         last_crawl, last_crawl_result, last_completed_crawl, last_poll,
+         last_poll_result, last_completed_poll, content_size, disk_usage))
+        cursor.close()
+        self.__commit()
+        
+    def __datetime_to_db(self, py_datetime):
+        if py_datetime is None: return None
+        return py_datetime.strftime(SlurpDb.DB_STRFTIME)
+
+    def __str_to_db(self, py_str, table):
+        if py_str is None: return None
+        enc = table.encoding()
+        if enc is not None: py_str = py_str.encode(enc)
+        return py_str[0:table.length()]
+
     def __raise_if_open(self):
         if self.is_open(): raise RuntimeError, 'Connection already open'
         
@@ -272,11 +355,12 @@ class Table(object):
 
 class Column(object):
 
-    def __init__(self, table, name, length=None):
+    def __init__(self, table, name, length=None, encoding=None):
         object.__init__(self)
         self.__table = table
         self.__name = name
         self.__length = length
+        self.__encoding = encoding
         table.add_column(self)
 
     def table(self): return self.__table
@@ -284,6 +368,8 @@ class Column(object):
     def name(self): return self.__name
 
     def length(self): return self.__length
+
+    def encoding(self): return self.__encoding
 
     def __str__(self): return self.name()
 
@@ -300,15 +386,36 @@ SESSIONS_END = Column(SESSIONS, 'end')
 SESSIONS_FLAGS = Column(SESSIONS, 'flags')
 SESSIONS_FLAGS_NONE = 0x0
 SESSIONS_FLAGS_AUIDS = 0x1
+SESSIONS_FLAGS_AUS = 0x2
 
 AUIDS = Table('auids', 1)
 AUIDS_ID = Column(AUIDS, 'id')
 AUIDS_SID = Column(AUIDS, 'sid')
 AUIDS_AUID = Column(AUIDS, 'auid', 511)
 
+AUS = Table('aus', 1)
+AUS_ID = Column(AUS, 'id')
+AUS_AID = Column(AUS, 'aid')
+AUS_NAME = Column(AUS, 'name', 511, 'utf-8')
+AUS_PUBLISHER = Column(AUS, 'publisher', 255, 'utf-8')
+AUS_YEAR = Column(AUS, 'year', 9)
+AUS_REPOSITORY = Column(AUS, 'repository', 255)
+AUS_CREATION_DATE = Column(AUS, 'creation_date')
+AUS_STATUS = Column(AUS, 'status', 127)
+AUS_AVAILABLE = Column(AUS, 'available')
+AUS_LAST_CRAWL = Column(AUS, 'last_crawl')
+AUS_LAST_CRAWL_RESULT = Column(AUS, 'last_crawl_result', 127)
+AUS_LAST_COMPLETED_CRAWL = Column(AUS, 'last_completed_crawl')
+AUS_LAST_POLL = Column(AUS, 'last_poll')
+AUS_LAST_POLL_RESULT = Column(AUS, 'last_poll_result', 127)
+AUS_LAST_COMPLETED_POLL = Column(AUS, 'last_completed_poll')
+AUS_CONTENT_SIZE = Column(AUS, 'content_size')
+AUS_DISK_USAGE = Column(AUS, 'disk_usage')
+
 ALL_TABLES = [TABLES,
               SESSIONS,
-              AUIDS]
+              AUIDS,
+              AUS]
 
 def slurpdb_option_parser(parser=None):
     if parser is None:
