@@ -1,3 +1,4 @@
+/* Version 1 */
 CREATE TABLE IF NOT EXISTS sessions (
 
     /* A unique row ID */

@@ -1,3 +1,4 @@
+/* Version 1 */
 CREATE TABLE IF NOT EXISTS tables (
 
     /* A unique row ID */

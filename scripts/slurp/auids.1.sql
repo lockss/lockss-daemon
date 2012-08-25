@@ -1,3 +1,4 @@
+/* Version 1 */
 /* Depends on the sessions table */
 CREATE TABLE IF NOT EXISTS auids (
 
