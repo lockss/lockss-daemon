@@ -4,7 +4,7 @@
     name = Association of Research Libraries
   >
 
-  attr[contract] = 
+  attr[contract] = 2011
   plugin = needs.plugin
   implicit < status ; status2 ; year ; name ; param[volume] >
   param[base_url] = 
