@@ -90,7 +90,7 @@
   {
   
     title <
-      name = Duke FOrum for Law & Social Change ;
+      name = Duke Forum for Law & Social Change ;
       issn = 2151-1128 
     >
 
@@ -98,6 +98,12 @@
     param[base_url] = http://scholarship.law.duke.edu/dflsc
     param[journal_abbr] = dflsc
     implicit < status ; status2; year ; name ; param[volume] >
+  
+  
+     au < manifest ; exists ; 2009 ; Duke Forum for Law & Social Change Volume 1 ; 1 >
+     au < manifest ; exists ; 2010 ; Duke Forum for Law & Social Change Volume 2 ; 2 >
+     au < manifest ; exists ; 2011 ; Duke Forum for Law & Social Change Volume 3 ; 3 >
+     au < manifest ; exists ; 2012 ; Duke Forum for Law & Social Change Volume 4 ; 4 >
   
   }
   
