@@ -21,18 +21,18 @@
       param[base_url] = http://als.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; American Literary Scholarship 2000 ; 1998 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; American Literary Scholarship 2001 ; 1999 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; American Literary Scholarship 2002 ; 2000 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; American Literary Scholarship 2003 ; 2001 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; American Literary Scholarship 2004 ; 2002 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; American Literary Scholarship 2005 ; 2003 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; American Literary Scholarship 2006 ; 2004 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; American Literary Scholarship 2007 ; 2005 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; American Literary Scholarship 2008 ; 2006 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; American Literary Scholarship 2009 ; 2007 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; American Literary Scholarship 2010 ; 2008 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; American Literary Scholarship 2011 ; 2009 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; American Literary Scholarship 2000 ; 2000 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; American Literary Scholarship 2001 ; 2001 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; American Literary Scholarship 2002 ; 2002 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; American Literary Scholarship 2003 ; 2003 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; American Literary Scholarship 2004 ; 2004 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; American Literary Scholarship 2005 ; 2005 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; American Literary Scholarship 2006 ; 2006 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; American Literary Scholarship 2007 ; 2007 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; American Literary Scholarship 2008 ; 2008 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; American Literary Scholarship 2009 ; 2009 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; American Literary Scholarship 2010 ; 2010 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; American Literary Scholarship 2011 ; 2011 >
   
     }
   
