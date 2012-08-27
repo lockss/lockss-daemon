@@ -18,7 +18,37 @@
     param[journal_abbr] = alr
     implicit < status ; status2; year ; name ; param[volume] >
   
+    au < manifest ; exists ; 1984 ; American Literary Scholarship Volume 1 ; 1 >
+    au < manifest ; exists ; 1985 ; American Literary Scholarship Volume 2 ; 2 >
+    au < manifest ; exists ; 1986 ; American Literary Scholarship Volume 3 ; 3 >
+    au < manifest ; exists ; 1987 ; American Literary Scholarship Volume 4 ; 4 >
+    au < manifest ; exists ; 1988 ; American Literary Scholarship Volume 5 ; 5 >
+    au < manifest ; exists ; 1989 ; American Literary Scholarship Volume 6 ; 6 >
+    au < manifest ; exists ; 1990 ; American Literary Scholarship Volume 7 ; 7 >
+    au < manifest ; exists ; 1991 ; American Literary Scholarship Volume 8 ; 8 >
+    au < manifest ; exists ; 1992 ; American Literary Scholarship Volume 9 ; 9 >
+    au < manifest ; exists ; 1993 ; American Literary Scholarship Volume 10 ; 10 >
+    au < manifest ; exists ; 1994 ; American Literary Scholarship Volume 11 ; 11 >
+    au < manifest ; exists ; 1995 ; American Literary Scholarship Volume 12 ; 12 >
+    au < manifest ; exists ; 1996 ; American Literary Scholarship Volume 13 ; 13 >
+    au < manifest ; exists ; 1997 ; American Literary Scholarship Volume 14 ; 14 >
+    au < manifest ; exists ; 1998 ; American Literary Scholarship Volume 15 ; 15 >
+    au < manifest ; exists ; 1999 ; American Literary Scholarship Volume 16 ; 16 >
+    au < manifest ; exists ; 1990 ; American Literary Scholarship Volume 17 ; 17 >
+    au < manifest ; exists ; 2001 ; American Literary Scholarship Volume 18 ; 18 >
+    au < manifest ; exists ; 2002 ; American Literary Scholarship Volume 19 ; 19 >
+    au < manifest ; exists ; 2003 ; American Literary Scholarship Volume 20 ; 20 >
+    au < manifest ; exists ; 2004 ; American Literary Scholarship Volume 21 ; 21 >
+    au < manifest ; exists ; 2005 ; American Literary Scholarship Volume 22 ; 22 >
+    au < manifest ; exists ; 2006 ; American Literary Scholarship Volume 23 ; 23 >
+    au < manifest ; exists ; 2007 ; American Literary Scholarship Volume 24 ; 24 >
+    au < manifest ; exists ; 2008 ; American Literary Scholarship Volume 25 ; 25 >
+    au < manifest ; exists ; 2009 ; American Literary Scholarship Volume 26 ; 26 >
+    au < manifest ; exists ; 2010 ; American Literary Scholarship Volume 27 ; 27 >
+    au < manifest ; exists ; 2011 ; American Literary Scholarship Volume 28 ; 28 >
+    au < manifest ; exists ; 2012 ; American Literary Scholarship Volume 29 ; 29 >
   }
+
 
   {
   
