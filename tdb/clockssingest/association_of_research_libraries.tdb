@@ -4,14 +4,81 @@
     name = Association of Research Libraries
   >
 
+  attr[contract] = 
+  plugin = needs.plugin
+  implicit < status ; status2 ; year ; name ; param[volume] >
+  param[base_url] = 
+
   {
   
     title < 
-      name = Placeholder
+      name = ARL Academic Law Library Statistics ;
+      issn = 1538-8999 ;
+      issnl = 1538-8999
     >
 
     
+
+  }
+
+  {
+  
+    title < 
+      name = ARL Academic Health Sciences Library Statistics ;
+      issn = 1538-9006 ;
+      issnl = 1538-9006
+    >
+
     
+
+  }
+
+  {
+  
+    title < 
+      name = ARL Annual Salary Survey ;
+      issn = 0361-5669 ;
+      issnl = 0361-5669
+    >
+
+    
+
+  }
+
+  {
+  
+    title < 
+      name = ARL Statistics ;
+      issn = 0147-2135 ;
+      issnl = 0147-2135
+    >
+
+    
+
+  }
+
+  {
+  
+    title < 
+      name = Research Library Issues ;
+      issn = 1947-4911 ;
+      issnl = 1947-4911
+    >
+
+    
+
+  }
+
+  {
+  
+    title < 
+      name = SPEC Kit ;
+      issn = 0160-3582 ;
+      issnl = 0160-3582
+    >
+
+    
+
   }
 
 }
