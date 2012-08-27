@@ -1,0 +1,137 @@
+{
+
+  publisher <
+    name = Duke Law School
+  >
+  
+  attr[contract] = 2012
+
+  {
+  
+    title <
+      name = Alaska Law Review ;
+      issn = 0883-0568 
+    >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://scholarship.law.duke.edu/alr
+    param[journal_abbr] = alr
+    implicit < status ; status2; year ; name ; param[volume] >
+  
+  }
+
+  {
+  
+    title <
+      name = Duke Environmental Law & Policy Forum ;
+      issn = 1064-3958 
+    >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://scholarship.law.duke.edu/delpf
+    param[journal_abbr] = delpf
+    implicit < status ; status2; year ; name ; param[volume] >
+  
+  }
+  
+  {
+  
+    title <
+      name = Duke FOrum for Law & Social Change ;
+      issn = 2151-1128 
+    >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://scholarship.law.duke.edu/dflsc
+    param[journal_abbr] = dflsc
+    implicit < status ; status2; year ; name ; param[volume] >
+  
+  }
+  
+  {
+  
+    title <
+      name = Duke Journal of Comparative and International Law ;
+      issn = 1053-6736 
+    >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://scholarship.law.duke.edu/djcil
+    param[journal_abbr] = djcil
+    implicit < status ; status2; year ; name ; param[volume] >
+  
+  }
+  
+  {
+  
+    title <
+      name = Duke Journal of Constitutional Law and Public Policy ;
+      issn = 1937-9439 
+    >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://scholarship.law.duke.edu/djclpp
+    param[journal_abbr] = djclpp
+    implicit < status ; status2; year ; name ; param[volume] >
+  
+  }
+  
+  {
+  
+    title <
+      name = Duke Journal of Gender and Law Policy ;
+      issn = 1090-1043 
+    >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://scholarship.law.duke.edu/djglp
+    param[journal_abbr] = djglp
+    implicit < status ; status2; year ; name ; param[volume] >
+  
+  }
+  
+  {
+  
+    title <
+      name = Duke Law and Technology Review ;
+      comment[issn] = none
+       
+    >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://scholarship.law.duke.edu/dltr
+    param[journal_abbr] = dltr
+    implicit < status ; status2; year ; name ; param[volume] >
+  
+  }
+  
+  {
+  
+    title <
+      name = Duke Law Journal ;
+      issn = 0012-7086 
+    >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://scholarship.law.duke.edu/dlj
+    param[journal_abbr] = dlj
+    implicit < status ; status2; year ; name ; param[volume] >
+  
+  }
+  
+  {
+  
+    title <
+      name = Law and Contemporary Problems ;
+      issn = 0023-9186 
+    >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://scholarship.law.duke.edu/lcp
+    param[journal_abbr] = lcp
+    implicit < status ; status2; year ; name ; param[volume] >
+  
+  }
+    
+  
+}
