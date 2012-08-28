@@ -1,5 +1,5 @@
 /*
- * $Id: RepairPolicy.java,v 1.1 2012-08-13 20:47:28 barry409 Exp $
+ * $Id: RepairPolicy.java,v 1.2 2012-08-28 16:29:07 barry409 Exp $
  */
 
 /*
@@ -153,10 +153,6 @@ public class RepairPolicy {
     boolean repairAnyTrustedPeer =
       CurrentConfig.getBooleanParam(PARAM_REPAIR_ANY_TRUSTED_PEER,
 				    DEFAULT_REPAIR_ANY_TRUSTED_PEER);
-    log.warning("****"+scomm);
-    log.warning("****"+scomm.isTrustedNetwork());
-    log.warning("****"+repairAnyTrustedPeer);
-
     if (scomm.isTrustedNetwork() && repairAnyTrustedPeer) {
       log.debug2("Trusted peer: true.");
       return true;
