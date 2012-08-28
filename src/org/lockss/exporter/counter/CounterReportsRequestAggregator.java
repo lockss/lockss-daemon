@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsRequestAggregator.java,v 1.3 2012-08-16 22:34:52 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestAggregator.java,v 1.4 2012-08-28 17:34:03 fergaloy-sf Exp $
  */
 
 /*
@@ -82,159 +82,190 @@ public class CounterReportsRequestAggregator {
       .getLogger("CounterReportsRequestAggregator");
 
   // Query to insert book type aggregates.
-  private static final String SQL_QUERY_BOOK_TYPE_AGGREGATE_INSERT =
-      "insert into " + SQL_TABLE_TYPE_AGGREGATES + " (" + SQL_COLUMN_LOCKSS_ID
-	  + "," + SQL_COLUMN_IS_PUBLISHER_INVOLVED + ","
-	  + SQL_COLUMN_REQUEST_YEAR + "," + SQL_COLUMN_REQUEST_MONTH + ","
-	  + SQL_COLUMN_FULL_BOOK_REQUESTS + ","
-	  + SQL_COLUMN_SECTION_BOOK_REQUESTS + ") values (?,?,?,?,?,?)";
+  private static final String SQL_QUERY_BOOK_TYPE_AGGREGATE_INSERT = "insert "
+      + "into " + SQL_TABLE_TYPE_AGGREGATES + " ("
+      + SQL_COLUMN_LOCKSS_ID + ","
+      + SQL_COLUMN_IS_PUBLISHER_INVOLVED + ","
+      + SQL_COLUMN_REQUEST_YEAR + ","
+      + SQL_COLUMN_REQUEST_MONTH + ","
+      + SQL_COLUMN_FULL_BOOK_REQUESTS + ","
+      + SQL_COLUMN_SECTION_BOOK_REQUESTS + ") values (?,?,?,?,?,?)";
 
   // Query to insert journal type aggregates.
-  private static final String SQL_QUERY_JOURNAL_TYPE_AGGREGATE_INSERT =
-      "insert into " + SQL_TABLE_TYPE_AGGREGATES + " (" + SQL_COLUMN_LOCKSS_ID
-	  + "," + SQL_COLUMN_IS_PUBLISHER_INVOLVED + ","
-	  + SQL_COLUMN_REQUEST_YEAR + "," + SQL_COLUMN_REQUEST_MONTH + ","
-	  + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS + ","
-	  + SQL_COLUMN_HTML_JOURNAL_REQUESTS + ","
-	  + SQL_COLUMN_PDF_JOURNAL_REQUESTS + ") values (?,?,?,?,?,?,?)";
+  private static final String SQL_QUERY_JOURNAL_TYPE_AGGREGATE_INSERT = "insert "
+      + "into " + SQL_TABLE_TYPE_AGGREGATES + " ("
+      + SQL_COLUMN_LOCKSS_ID + ","
+      + SQL_COLUMN_IS_PUBLISHER_INVOLVED + ","
+      + SQL_COLUMN_REQUEST_YEAR + ","
+      + SQL_COLUMN_REQUEST_MONTH + ","
+      + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS + ","
+      + SQL_COLUMN_HTML_JOURNAL_REQUESTS + ","
+      + SQL_COLUMN_PDF_JOURNAL_REQUESTS + ") values (?,?,?,?,?,?,?)";
 
   // Query to insert title publication year aggregates.
-  private static final String SQL_QUERY_TITLE_PUBYEAR_AGGREGATE_INSERT =
-      "insert into " + SQL_TABLE_PUBYEAR_AGGREGATES + " ("
-	  + SQL_COLUMN_LOCKSS_ID + "," + SQL_COLUMN_IS_PUBLISHER_INVOLVED + ","
-	  + SQL_COLUMN_REQUEST_YEAR + "," + SQL_COLUMN_REQUEST_MONTH + ","
-	  + SQL_COLUMN_PUBLICATION_YEAR + "," + SQL_COLUMN_REQUEST_COUNT
-	  + ") values (?,?,?,?,?,?)";
+  private static final String SQL_QUERY_TITLE_PUBYEAR_AGGREGATE_INSERT = "insert "
+      + "into " + SQL_TABLE_PUBYEAR_AGGREGATES + " ("
+      + SQL_COLUMN_LOCKSS_ID + ","
+      + SQL_COLUMN_IS_PUBLISHER_INVOLVED + ","
+      + SQL_COLUMN_REQUEST_YEAR + ","
+      + SQL_COLUMN_REQUEST_MONTH + ","
+      + SQL_COLUMN_PUBLICATION_YEAR + ","
+      + SQL_COLUMN_REQUEST_COUNT + ") values (?,?,?,?,?,?)";
 
   // Query to count the full requests for a book instance during a month.
-  private static final String SQL_QUERY_MONTH_BOOK_TYPE_REQUEST_COUNT =
-      "select count(*) from " + SQL_TABLE_REQUESTS + " where "
-	  + SQL_COLUMN_IS_SECTION + " = ? and " + SQL_COLUMN_REQUEST_YEAR
-	  + " = ? and " + SQL_COLUMN_REQUEST_MONTH + " = ? and "
-	  + SQL_COLUMN_LOCKSS_ID + " = ? and "
-	  + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? and "
-	  + SQL_COLUMN_IN_AGGREGATION + " = true";
+  private static final String SQL_QUERY_MONTH_BOOK_TYPE_REQUEST_COUNT = "select "
+      + "count(*) "
+      + "from " + SQL_TABLE_REQUESTS
+      + " where " + SQL_COLUMN_IS_SECTION + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
+      + "and " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? "
+      + "and " + SQL_COLUMN_IN_AGGREGATION + " = true";
 
   // Query to count the HTML requests for a journal instance during a month.
-  private static final String SQL_QUERY_MONTH_JOURNAL_HTML_REQUEST_COUNT =
-      "select count(*) from " + SQL_TABLE_REQUESTS + " where "
-	  + SQL_COLUMN_IS_HTML + " = true and " + SQL_COLUMN_REQUEST_YEAR
-	  + " = ? and " + SQL_COLUMN_REQUEST_MONTH + " = ? and "
-	  + SQL_COLUMN_LOCKSS_ID + " = ? and "
-	  + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? and "
-	  + SQL_COLUMN_IN_AGGREGATION + " = true";
+  private static final String SQL_QUERY_MONTH_JOURNAL_HTML_REQUEST_COUNT = "select "
+      + "count(*) "
+      + "from " + SQL_TABLE_REQUESTS
+      + " where " + SQL_COLUMN_IS_HTML + " = true "
+      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
+      + "and " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? "
+      + "and " + SQL_COLUMN_IN_AGGREGATION + " = true";
 
   // Query to count the PDF requests for a journal instance during a month.
-  private static final String SQL_QUERY_MONTH_JOURNAL_PDF_REQUEST_COUNT =
-      "select count(*) from " + SQL_TABLE_REQUESTS + " where "
-	  + SQL_COLUMN_IS_PDF + " = true and " + SQL_COLUMN_REQUEST_YEAR
-	  + " = ? and " + SQL_COLUMN_REQUEST_MONTH + " = ? and "
-	  + SQL_COLUMN_LOCKSS_ID + " = ? and "
-	  + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? and "
-	  + SQL_COLUMN_IN_AGGREGATION + " = true";
+  private static final String SQL_QUERY_MONTH_JOURNAL_PDF_REQUEST_COUNT = "select "
+      + "count(*) "
+      + "from " + SQL_TABLE_REQUESTS
+      + " where " + SQL_COLUMN_IS_PDF + " = true "
+      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
+      + "and " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? "
+      + "and " + SQL_COLUMN_IN_AGGREGATION + " = true";
 
   // Query to count the total requests for a title instance during a month.
-  private static final String SQL_QUERY_MONTH_TITLE_TOTAL_REQUEST_COUNT =
-      "select count(*) from " + SQL_TABLE_REQUESTS + " where "
-	  + SQL_COLUMN_REQUEST_YEAR + " = ? and " + SQL_COLUMN_REQUEST_MONTH
-	  + " = ? and " + SQL_COLUMN_LOCKSS_ID + " = ? and "
-	  + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? and "
-	  + SQL_COLUMN_IN_AGGREGATION + " = true";
+  private static final String SQL_QUERY_MONTH_TITLE_TOTAL_REQUEST_COUNT = "select "
+      + "count(*) "
+      + "from " + SQL_TABLE_REQUESTS
+      + " where " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
+      + "and " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? "
+      + "and " + SQL_COLUMN_IN_AGGREGATION + " = true";
 
   // Query to get the identifiers of the books requested during a month.
-  private static final String SQL_QUERY_MONTH_TITLE_REQUEST_SELECT =
-      "select distinct " + "h." + SQL_COLUMN_LOCKSS_ID + " from "
-	  + SQL_TABLE_REQUESTS + " h," + SQL_TABLE_TITLES + " t" + " where "
-	  + "t." + SQL_COLUMN_IS_BOOK + " = ? and " + "h."
-	  + SQL_COLUMN_REQUEST_YEAR + " = ? and " + "h."
-	  + SQL_COLUMN_REQUEST_MONTH + " = ? and " + "h."
-	  + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? and "
-	  + SQL_COLUMN_IN_AGGREGATION + " = true and " + "h."
-	  + SQL_COLUMN_LOCKSS_ID + " = " + "t." + SQL_COLUMN_LOCKSS_ID;
+  private static final String SQL_QUERY_MONTH_TITLE_REQUEST_SELECT = "select "
+      + "distinct " + "h." + SQL_COLUMN_LOCKSS_ID
+      + " from " + SQL_TABLE_REQUESTS + " h,"
+      + SQL_TABLE_TITLES + " t"
+      + " where " + "t." + SQL_COLUMN_IS_BOOK + " = ? "
+      + "and " + "h." + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + "h." + SQL_COLUMN_REQUEST_MONTH + " = ? "
+      + "and " + "h." + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? "
+      + "and " + SQL_COLUMN_IN_AGGREGATION + " = true "
+      + "and " + "h." + SQL_COLUMN_LOCKSS_ID + " = "
+      + "t." + SQL_COLUMN_LOCKSS_ID;
 
   // Query to get the aggregated type requests for a book during a month.
   private static final String SQL_QUERY_BOOK_TYPE_AGGREGATE_SELECT = "select "
-      + SQL_COLUMN_FULL_BOOK_REQUESTS + "," + SQL_COLUMN_SECTION_BOOK_REQUESTS
-      + " from " + SQL_TABLE_TYPE_AGGREGATES + " where " + SQL_COLUMN_LOCKSS_ID
-      + " = ? and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? and "
-      + SQL_COLUMN_REQUEST_YEAR + " = ? and " + SQL_COLUMN_REQUEST_MONTH
-      + " = ?";
+      + SQL_COLUMN_FULL_BOOK_REQUESTS + ","
+      + SQL_COLUMN_SECTION_BOOK_REQUESTS
+      + " from " + SQL_TABLE_TYPE_AGGREGATES
+      + " where " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ?";
 
   // Query to get the aggregated type requests for a journal during a month.
-  private static final String SQL_QUERY_JOURNAL_TYPE_AGGREGATE_SELECT =
-      "select " + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS + ","
-	  + SQL_COLUMN_HTML_JOURNAL_REQUESTS + ","
-	  + SQL_COLUMN_PDF_JOURNAL_REQUESTS + " from "
-	  + SQL_TABLE_TYPE_AGGREGATES + " where " + SQL_COLUMN_LOCKSS_ID
-	  + " = ? and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? and "
-	  + SQL_COLUMN_REQUEST_YEAR + " = ? and " + SQL_COLUMN_REQUEST_MONTH
-	  + " = ?";
+  private static final String SQL_QUERY_JOURNAL_TYPE_AGGREGATE_SELECT = "select "
+      + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS + ","
+      + SQL_COLUMN_HTML_JOURNAL_REQUESTS + ","
+      + SQL_COLUMN_PDF_JOURNAL_REQUESTS
+      + " from " + SQL_TABLE_TYPE_AGGREGATES
+      + " where " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ?";
 
   // Query to get the publication year requests for a journal instance during a
   // month.
-  private static final String SQL_QUERY_MONTH_TITLE_PUBYEAR_REQUEST_SELECT =
-      "select " + SQL_COLUMN_PUBLICATION_YEAR + ", count("
-	  + SQL_COLUMN_PUBLICATION_YEAR + ") as " + SQL_COLUMN_REQUEST_COUNT
-	  + " from " + SQL_TABLE_REQUESTS + " where " + SQL_COLUMN_REQUEST_YEAR
-	  + " = ? and " + SQL_COLUMN_REQUEST_MONTH + " = ? and "
-	  + SQL_COLUMN_LOCKSS_ID + " = ? and "
-	  + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? and "
-	  + SQL_COLUMN_IN_AGGREGATION + " = true " + "group by "
-	  + SQL_COLUMN_PUBLICATION_YEAR;
+  private static final String SQL_QUERY_MONTH_TITLE_PUBYEAR_REQUEST_SELECT = "select "
+      + SQL_COLUMN_PUBLICATION_YEAR
+      + ", count(" + SQL_COLUMN_PUBLICATION_YEAR + ") as "
+      + SQL_COLUMN_REQUEST_COUNT
+      + " from " + SQL_TABLE_REQUESTS
+      + " where " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
+      + "and " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? "
+      + "and " + SQL_COLUMN_IN_AGGREGATION + " = true "
+      + "group by " + SQL_COLUMN_PUBLICATION_YEAR;
 
   // Query to get the aggregated publication year requests for a journal during
   // a month.
-  private static final String SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATE_SELECT =
-      "select " + SQL_COLUMN_REQUEST_COUNT + " from "
-	  + SQL_TABLE_PUBYEAR_AGGREGATES + " where " + SQL_COLUMN_LOCKSS_ID
-	  + " = ? and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? and "
-	  + SQL_COLUMN_REQUEST_YEAR + " = ? and " + SQL_COLUMN_REQUEST_MONTH
-	  + " = ? and " + SQL_COLUMN_PUBLICATION_YEAR + " = ?";
+  private static final String SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATE_SELECT = "select "
+      + SQL_COLUMN_REQUEST_COUNT
+      + " from " + SQL_TABLE_PUBYEAR_AGGREGATES
+      + " where " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
+      + "and " + SQL_COLUMN_PUBLICATION_YEAR + " = ?";
 
   // Query to get the year/month pairs that have requests to be aggregated.
-  private static final String SQL_QUERY_YEAR_MONTH_REQUEST_SELECT =
-      "select distinct " + SQL_COLUMN_REQUEST_YEAR + ","
-	  + SQL_COLUMN_REQUEST_MONTH + " from " + SQL_TABLE_REQUESTS
-	  + " where " + SQL_COLUMN_IN_AGGREGATION + " = true";
+  private static final String SQL_QUERY_YEAR_MONTH_REQUEST_SELECT = "select "
+      + " distinct " + SQL_COLUMN_REQUEST_YEAR + ","
+      + SQL_COLUMN_REQUEST_MONTH
+      + " from " + SQL_TABLE_REQUESTS
+      + " where " + SQL_COLUMN_IN_AGGREGATION + " = true";
 
   // Query to mark the requests to be aggregated.
   private static final String SQL_QUERY_MARK_REQUESTS_UPDATE = "update "
-      + SQL_TABLE_REQUESTS + " set " + SQL_COLUMN_IN_AGGREGATION + " = true";
+      + SQL_TABLE_REQUESTS
+      + " set " + SQL_COLUMN_IN_AGGREGATION + " = true";
 
   // Query to update book type aggregates.
   private static final String SQL_QUERY_BOOK_TYPE_AGGREGATE_UPDATE = "update "
-      + SQL_TABLE_TYPE_AGGREGATES + " set " + SQL_COLUMN_FULL_BOOK_REQUESTS
-      + " = ?," + SQL_COLUMN_SECTION_BOOK_REQUESTS + " = ? where "
-      + SQL_COLUMN_LOCKSS_ID + " = ? and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED
-      + " = ? and " + SQL_COLUMN_REQUEST_YEAR + " = ? and "
-      + SQL_COLUMN_REQUEST_MONTH + " = ?";
+      + SQL_TABLE_TYPE_AGGREGATES
+      + " set " + SQL_COLUMN_FULL_BOOK_REQUESTS + " = ?,"
+      + SQL_COLUMN_SECTION_BOOK_REQUESTS + " = ? "
+      + "where " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ?";
 
   // Query to update journal type aggregates.
-  private static final String SQL_QUERY_JOURNAL_TYPE_AGGREGATE_UPDATE =
-      "update " + SQL_TABLE_TYPE_AGGREGATES + " set "
-	  + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS + " = ?,"
-	  + SQL_COLUMN_HTML_JOURNAL_REQUESTS + " = ?,"
-	  + SQL_COLUMN_PDF_JOURNAL_REQUESTS + " = ? where "
-	  + SQL_COLUMN_LOCKSS_ID + " = ? and "
-	  + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? and "
-	  + SQL_COLUMN_REQUEST_YEAR + " = ? and " + SQL_COLUMN_REQUEST_MONTH
-	  + " = ?";
+  private static final String SQL_QUERY_JOURNAL_TYPE_AGGREGATE_UPDATE = "update "
+      + SQL_TABLE_TYPE_AGGREGATES
+      + " set " + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS + " = ?,"
+      + SQL_COLUMN_HTML_JOURNAL_REQUESTS + " = ?,"
+      + SQL_COLUMN_PDF_JOURNAL_REQUESTS + " = ? "
+      + "where " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ?";
 
   // Query to update title publication year aggregates.
-  private static final String SQL_QUERY_TITLE_PUBYEAR_AGGREGATE_UPDATE =
-      "update " + SQL_TABLE_PUBYEAR_AGGREGATES + " set "
-	  + SQL_COLUMN_REQUEST_COUNT + " = ? where " + SQL_COLUMN_LOCKSS_ID
-	  + " = ? and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? and "
-	  + SQL_COLUMN_REQUEST_YEAR + " = ? and " + SQL_COLUMN_REQUEST_MONTH
-	  + " = ? and " + SQL_COLUMN_PUBLICATION_YEAR + " = ?";
+  private static final String SQL_QUERY_TITLE_PUBYEAR_AGGREGATE_UPDATE = "update "
+      + SQL_TABLE_PUBYEAR_AGGREGATES
+      + " set " + SQL_COLUMN_REQUEST_COUNT + " = ? "
+      + "where " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
+      + "and " + SQL_COLUMN_PUBLICATION_YEAR + " = ?";
 
   // Query to delete title requests for a month and a given publisher
   // involvement.
   private static final String SQL_QUERY_TITLE_REQUEST_DELETE = "delete from "
-      + SQL_TABLE_REQUESTS + " where " + SQL_COLUMN_LOCKSS_ID + " = ? and "
-      + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? and "
-      + SQL_COLUMN_REQUEST_YEAR + " = ? and " + SQL_COLUMN_REQUEST_MONTH
-      + " = ? and " + SQL_COLUMN_IN_AGGREGATION + " = true";
+      + SQL_TABLE_REQUESTS
+      + " where " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
+      + "and " + SQL_COLUMN_IN_AGGREGATION + " = true";
 
   private LockssDaemon daemon;
 
