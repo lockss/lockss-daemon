@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsManager.java,v 1.3 2012-08-16 22:34:52 fergaloy-sf Exp $
+ * $Id: CounterReportsManager.java,v 1.4 2012-08-28 17:34:34 fergaloy-sf Exp $
  */
 
 /*
@@ -130,64 +130,72 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
   public static final String SQL_TABLE_TYPE_AGGREGATES =
       "counter_type_aggregates";
 
+  // The reports extensions.
+  public static final String CSV_EXTENSION = "csv";
+  public static final String TSV_EXTENSION = "txt";
+
   private static final Logger log = Logger.getLogger("CounterReportsManager");
 
   // Query to create the table for recording title data used for COUNTER
   // reports.
   private static final String SQL_QUERY_TITLES_TABLE_CREATE = "create table "
-      + SQL_TABLE_TITLES + " (" + SQL_COLUMN_LOCKSS_ID
-      + " bigint NOT NULL PRIMARY KEY," + SQL_COLUMN_TITLE_NAME
-      + " varchar(512) NOT NULL," + SQL_COLUMN_PUBLISHER_NAME
-      + " varchar(512)," + SQL_COLUMN_PLATFORM_NAME + " varchar(512),"
-      + SQL_COLUMN_DOI + " varchar(256)," + SQL_COLUMN_PROPRIETARY_ID
-      + " varchar(256)," + SQL_COLUMN_IS_BOOK + " boolean NOT NULL,"
-      + SQL_COLUMN_PRINT_ISSN + " varchar(9)," + SQL_COLUMN_ONLINE_ISSN
-      + " varchar(9)," + SQL_COLUMN_ISBN + " varchar(15),"
+      + SQL_TABLE_TITLES + " ("
+      + SQL_COLUMN_LOCKSS_ID + " bigint NOT NULL PRIMARY KEY,"
+      + SQL_COLUMN_TITLE_NAME + " varchar(512) NOT NULL,"
+      + SQL_COLUMN_PUBLISHER_NAME + " varchar(512),"
+      + SQL_COLUMN_PLATFORM_NAME + " varchar(512),"
+      + SQL_COLUMN_DOI + " varchar(256),"
+      + SQL_COLUMN_PROPRIETARY_ID + " varchar(256),"
+      + SQL_COLUMN_IS_BOOK + " boolean NOT NULL,"
+      + SQL_COLUMN_PRINT_ISSN + " varchar(9),"
+      + SQL_COLUMN_ONLINE_ISSN + " varchar(9),"
+      + SQL_COLUMN_ISBN + " varchar(15),"
       + SQL_COLUMN_BOOK_ISSN + " varchar(9))";
 
   // Query to create the table for recording requests used for COUNTER reports.
   private static final String SQL_QUERY_REQUESTS_TABLE_CREATE = "create table "
-      + SQL_TABLE_REQUESTS + " (" + SQL_COLUMN_LOCKSS_ID
+      + SQL_TABLE_REQUESTS + " ("
+      + SQL_COLUMN_LOCKSS_ID
       + " bigint NOT NULL CONSTRAINT FK_LOCKSS_ID_REQUESTS REFERENCES "
-      + SQL_TABLE_TITLES + "," + SQL_COLUMN_PUBLICATION_YEAR + " smallint,"
-      + SQL_COLUMN_IS_SECTION + " boolean," + SQL_COLUMN_IS_HTML + " boolean,"
-      + SQL_COLUMN_IS_PDF + " boolean," + SQL_COLUMN_IS_PUBLISHER_INVOLVED
-      + " boolean NOT NULL," + SQL_COLUMN_REQUEST_YEAR + " smallint NOT NULL,"
+      + SQL_TABLE_TITLES + ","
+      + SQL_COLUMN_PUBLICATION_YEAR + " smallint,"
+      + SQL_COLUMN_IS_SECTION + " boolean,"
+      + SQL_COLUMN_IS_HTML + " boolean,"
+      + SQL_COLUMN_IS_PDF + " boolean,"
+      + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " boolean NOT NULL,"
+      + SQL_COLUMN_REQUEST_YEAR + " smallint NOT NULL,"
       + SQL_COLUMN_REQUEST_MONTH + " smallint NOT NULL,"
       + SQL_COLUMN_REQUEST_DAY + " smallint NOT NULL,"
       + SQL_COLUMN_IN_AGGREGATION + " boolean)";
 
   // Query to create the table for recording type aggregates (PDF vs. HTML, Full
   // vs. Section, etc.) used for COUNTER reports.
-  private static final String SQL_QUERY_TYPE_AGGREGATES_TABLE_CREATE =
-      "create table "
-	  + SQL_TABLE_TYPE_AGGREGATES
-	  + " ("
-	  + SQL_COLUMN_LOCKSS_ID
-	  + " bigint NOT NULL CONSTRAINT FK_LOCKSS_ID_TYPE_AGGREGATES REFERENCES "
-	  + SQL_TABLE_TITLES + "," + SQL_COLUMN_IS_PUBLISHER_INVOLVED
-	  + " boolean NOT NULL," + SQL_COLUMN_REQUEST_YEAR
-	  + " smallint NOT NULL," + SQL_COLUMN_REQUEST_MONTH
-	  + " smallint NOT NULL," + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS
-	  + " integer," + SQL_COLUMN_HTML_JOURNAL_REQUESTS + " integer,"
-	  + SQL_COLUMN_PDF_JOURNAL_REQUESTS + " integer,"
-	  + SQL_COLUMN_FULL_BOOK_REQUESTS + " integer,"
-	  + SQL_COLUMN_SECTION_BOOK_REQUESTS + " integer)";
+  private static final String SQL_QUERY_TYPE_AGGREGATES_TABLE_CREATE = "create "
+      + "table " + SQL_TABLE_TYPE_AGGREGATES + " ("
+      + SQL_COLUMN_LOCKSS_ID
+      + " bigint NOT NULL CONSTRAINT FK_LOCKSS_ID_TYPE_AGGREGATES REFERENCES "
+      + SQL_TABLE_TITLES + ","
+      + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " boolean NOT NULL,"
+      + SQL_COLUMN_REQUEST_YEAR + " smallint NOT NULL,"
+      + SQL_COLUMN_REQUEST_MONTH + " smallint NOT NULL,"
+      + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS + " integer,"
+      + SQL_COLUMN_HTML_JOURNAL_REQUESTS + " integer,"
+      + SQL_COLUMN_PDF_JOURNAL_REQUESTS + " integer,"
+      + SQL_COLUMN_FULL_BOOK_REQUESTS + " integer,"
+      + SQL_COLUMN_SECTION_BOOK_REQUESTS + " integer)";
 
   // Query to create the table for recording publication year aggregates used
   // for COUNTER reports.
-  private static final String SQL_QUERY_PUBYEAR_AGGREGATES_TABLE_CREATE =
-      "create table "
-	  + SQL_TABLE_PUBYEAR_AGGREGATES
-	  + " ("
-	  + SQL_COLUMN_LOCKSS_ID
-	  + " bigint NOT NULL CONSTRAINT FK_LOCKSS_ID_PUBYEAR_AGGREGATES REFERENCES "
-	  + SQL_TABLE_TITLES + "," + SQL_COLUMN_IS_PUBLISHER_INVOLVED
-	  + " boolean NOT NULL," + SQL_COLUMN_REQUEST_YEAR
-	  + " smallint NOT NULL," + SQL_COLUMN_REQUEST_MONTH
-	  + " smallint NOT NULL," + SQL_COLUMN_PUBLICATION_YEAR
-	  + " smallint NOT NULL," + SQL_COLUMN_REQUEST_COUNT
-	  + " integer NOT NULL)";
+  private static final String SQL_QUERY_PUBYEAR_AGGREGATES_TABLE_CREATE = "create "
+      + "table " + SQL_TABLE_PUBYEAR_AGGREGATES + " ("
+      + SQL_COLUMN_LOCKSS_ID
+      + " bigint NOT NULL CONSTRAINT FK_LOCKSS_ID_PUBYEAR_AGGREGATES REFERENCES "
+      + SQL_TABLE_TITLES + ","
+      + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " boolean NOT NULL,"
+      + SQL_COLUMN_REQUEST_YEAR + " smallint NOT NULL,"
+      + SQL_COLUMN_REQUEST_MONTH + " smallint NOT NULL,"
+      + SQL_COLUMN_PUBLICATION_YEAR + " smallint NOT NULL,"
+      + SQL_COLUMN_REQUEST_COUNT + " integer NOT NULL)";
 
   // The SQL code used to create the database tables.
   @SuppressWarnings("serial")
