@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.40 2012-08-14 21:27:13 barry409 Exp $
+ * $Id: V3PollFactory.java,v 1.41 2012-08-28 21:14:20 barry409 Exp $
  */
 
 /*
@@ -62,22 +62,6 @@ public class V3PollFactory extends BasePollFactory {
   public static final String PARAM_ENABLE_V3_VOTER =
     PREFIX + "enableV3Voter";
   public static final boolean DEFAULT_ENABLE_V3_VOTER = true;
-  
-  /** If set to 'false', do not start V3Repairers when repair requests
-   * are received.  This parameter is used by V3PollFactory and
-   * PollManager.
-   */
-  public static final String PARAM_ENABLE_V3_REPAIRER =
-    PREFIX + "enableV3Repairer";
-  public static final boolean DEFAULT_ENABLE_V3_REPAIRER = false;
-
-  /** If set to 'true', use the V3Repairer mechanism even for repair
-   * requests for which there is a V3Voter which might be able to
-   * perform the repair.
-   */
-  public static final String PARAM_PREFER_V3_REPAIRER =
-    PREFIX + "preferV3Repairer";
-  public static final boolean DEFAULT_PREFER_V3_REPAIRER = true;
 
   /** If set to 'false', do not start V3 Polls.  This parameter is used
    * by NodeManagerImpl and PollManager.
@@ -146,7 +130,7 @@ public class V3PollFactory extends BasePollFactory {
   }
 
   /**
-   * Create a V3Poller, V3Voter, or V3Repairer, as appropriate.
+   * Create a V3Poller, or V3Voter, as appropriate.
    */
   public BasePoll createPoll(PollSpec pollspec, LockssDaemon daemon,
                              PeerIdentity orig, long duration,
@@ -182,17 +166,6 @@ public class V3PollFactory extends BasePollFactory {
 	return makeV3Voter(daemon, msg, pollspec, orig, duration);
       } catch (V3Serializer.PollSerializerException ex) {
 	log.error("Serialization exception creating new V3Voter: ", ex);
-	return null;
-      }
-    }
-    // This is a repair request, and there is not a V3Voter or
-    // V3Repairer to handle this message.
-    if (msg.getOpcode() == V3LcapMessage.MSG_REPAIR_REQ) {
-      try {
-	return makeV3Repairer(daemon, msg, pollspec, orig, duration);
-      } catch (V3Serializer.PollSerializerException ex) {
-	log.error("Serialization exception creating new V3Voter for repairing:",
-		  ex);
 	return null;
       }
     }
@@ -349,89 +322,6 @@ public class V3PollFactory extends BasePollFactory {
     log.debug("Creating V3Voter to participate in poll " + m.getKey());
     V3Voter voter = new V3Voter(daemon, m);
     return voter;
-  }
-
-  /**
-   * Construct a new V3 Repairer to supply repairs.
-   * 
-   * @param daemon  The LOCKSS Daemon
-   * @param msg  The REPAIRER_REQ message that invited this peer.
-   * @param pollspec  The Poll Spec for this poll.
-   * @param orig  The caller of the poll
-   * @param duration Unused
-   * @return  An active V3 Voter or null if decide not to participate.
-   * @throws V3Serializer.PollSerializerException
-   */
-  private V3Voter makeV3Repairer(LockssDaemon daemon, LcapMessage msg,
-				 PollSpec pollspec, PeerIdentity orig,
-				 long duration)
-      throws V3Serializer.PollSerializerException {
-    
-    V3LcapMessage m = (V3LcapMessage)msg;
-    if (!CurrentConfig.getBooleanParam(PARAM_ENABLE_V3_REPAIRER,
-				       DEFAULT_ENABLE_V3_REPAIRER)) {
-      log.debug("V3 Repairer not enabled, so not repairing for poll " +
-                m.getKey());
-      sendNak(daemon, PollNak.NAK_DISABLED, pollspec.getAuId(), m);
-      return null;
-    }
-
-    log.debug2("Creating V3Repairer for " + orig + "'s poll: " + pollspec);
-    IdentityManager idMgr = daemon.getIdentityManager();
-    CachedUrlSet cus = pollspec.getCachedUrlSet();
-    // Do we have the AU?
-    if (cus == null) {
-      log.debug2("Ignoring repair request from " + orig + " don't have AU: "
-		 + pollspec.getAuId());
-      PollNak reason =
-	daemon.areAusStarted() ? PollNak.NAK_NO_AU : PollNak.NAK_NOT_READY;
-      sendNak(daemon, reason, pollspec.getAuId(), (V3LcapMessage)msg);
-      return null;
-    }
-    ArchivalUnit au = cus.getArchivalUnit();
-
-    // Remove any record that this peer doesn't have the AU
-    deleteFromNoAuPeers(au, orig);
-
-    // Ignore messages from ourself.
-    if (orig == idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL)) {
-      log.warning("Got request from myself, ignoring.");
-      return null;
-    }
-
-    // check polling group
-    List ourGroups = ConfigManager.getPlatformGroupList();
-    if (m.getGroupList() == null ||
-        !CollectionUtils.containsAny(ourGroups, m.getGroupList())) {
-      sendNak(daemon, PollNak.NAK_GROUP_MISMATCH, pollspec.getAuId(), m);
-      return null;
-    }
-    AuState aus = AuUtil.getAuState(au);
-
-    // Repair even if known to have no substance.
-
-    // Never repair if not crawled, even if pub down 
-    // XXX ?? Should Repair should be
-    // allowed if either crawled or recovered.  Substance test isn't
-    // enough.  Should vote only after *complete* crawl or recovery (which
-    // might be determined by poll agreement), but might have substance
-    // after incomplete crawl.
-    if (!aus.hasCrawled()) { 
-      log.debug("AU not crawled, not repairing: " + pollspec.getAuId());
-      sendNak(daemon, PollNak.NAK_NOT_CRAWLED, pollspec.getAuId(), m);
-      return null;
-    }
-    // XXX ?? Check to see if we're running too many polls already.
-
-    // XXX ?? Update the status of the peer that called this poll.
-    PeerIdentityStatus status = idMgr.getPeerIdentityStatus(orig);
-    if (status != null) {
-      status.calledPoll();
-    }
-
-    log.debug("Creating V3Repairer for poll " + m.getKey());
-    V3Repairer repairer = new V3Repairer(daemon, m);
-    return repairer;
   }
 
   /**

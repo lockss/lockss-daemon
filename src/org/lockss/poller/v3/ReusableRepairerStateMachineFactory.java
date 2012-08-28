@@ -1,5 +1,5 @@
 /*
- * $Id: RepairerStateMachineFactory.java,v 1.1 2012-08-14 21:27:13 barry409 Exp $
+ * $Id: ReusableRepairerStateMachineFactory.java,v 1.1 2012-08-28 21:14:20 barry409 Exp $
  */
 
 /*
@@ -34,19 +34,19 @@ package org.lockss.poller.v3;
 
 import org.lockss.protocol.psm.*;
 
-public class RepairerStateMachineFactory implements PsmMachine.Factory {
+public class ReusableRepairerStateMachineFactory implements PsmMachine.Factory {
 
   /**
-   * Obtain a PsmMachine for the Voter state table.
+   * Obtain a PsmMachine for the ReusableRepairer state table.
    *
-   * @return A PsmMachine representing the Voter state table.
+   * @return A PsmMachine representing the ReusableRepairer state table.
    * @param actionClass A class containing static handler methods
    *                    for the state machine to call.
    */
   public PsmMachine getMachine(Class actionClass) {
-    return new PsmMachine("Voter",
+    return new PsmMachine("ReusableRepairer",
                           makeStates(actionClass),
-                          "Initialize");
+                          "WaitForRequest");
   }
 
   /**
@@ -54,22 +54,16 @@ public class RepairerStateMachineFactory implements PsmMachine.Factory {
    */
   private static PsmState[] makeStates(Class actionClass) {
     PsmState[] states = {
-      // PollManager will supply the repair request message event after
-      // creating the repairer.
-      new PsmState("Initialize", PsmWait.FOREVER,
+      new PsmState("WaitForRequest", PsmWait.FOREVER,
                    new PsmResponse(V3Events.msgRepairRequest,
                                    new PsmMethodMsgAction(actionClass,
 							  "handleReceiveRepairRequest")),
-                   new PsmResponse(V3Events.evtNoSuchRepair, "FinalizeRepairer"),
+                   new PsmResponse(V3Events.evtNoSuchRepair, "WaitForRequest"),
 
                    new PsmResponse(V3Events.evtRepairRequestOk, "SendRepair")),
       new PsmState("SendRepair",
                    new PsmMethodAction(actionClass, "handleSendRepair"),
-                   new PsmResponse(V3Events.evtOk, "CloseRepairer")),
-      new PsmState("CloseRepairer",
-                   new PsmMethodAction(actionClass, "closeRepairer"),
-                   new PsmResponse(V3Events.evtOk, "FinalizeRepairer")),
-      new PsmState("FinalizeRepairer")
+                   new PsmResponse(V3Events.evtOk, "WaitForRequest")),
     };
     return states;
   }
