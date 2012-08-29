@@ -1,5 +1,5 @@
 /*
- * $Id: I18nUtil.java,v 1.4 2012-08-01 15:05:32 easyonthemayo Exp $
+ * $Id: I18nUtil.java,v 1.5 2012-08-29 00:25:44 tlipkis Exp $
  */
 
 /*
@@ -57,8 +57,11 @@ public class I18nUtil {
 
   // -------------------------- LOCKSS CONFIG PARAMS --------------------------
   static final String PREFIX = Configuration.PREFIX + "i18n.";
-  /** Enable i18n using the gettext-commons-generated packages.
-   * Daemon restart required. */
+  /**
+   * Enable i18n using the gettext-commons-generated packages.
+   * This is a System property, not a LOCKSS config param.  It should be
+   * set on the command line with <tt>-D</tt>.
+   */
   public static final String PARAM_ENABLE_I18N = PREFIX + "enabled";
   public static final boolean DEFAULT_ENABLE_I18N = false;
 
@@ -75,8 +78,7 @@ public class I18nUtil {
    * @return an I18n object
    */
   public static I18n getI18n(Class clazz) {
-    boolean enableI18n = CurrentConfig.getBooleanParam(PARAM_ENABLE_I18N,
-        DEFAULT_ENABLE_I18N);
+    boolean enableI18n = isEnabled();
     I18n i18n = null;
     // Try loading the full i18n if enabled
     if (enableI18n) try {
@@ -99,5 +101,16 @@ public class I18nUtil {
 
     return i18n;
   }
-  
+
+  static boolean isEnabled() {
+    String param = System.getProperty(PARAM_ENABLE_I18N,
+				      Boolean.toString(DEFAULT_ENABLE_I18N));
+    if ("true".equalsIgnoreCase(param)) {
+      return true;
+    }
+    if ("false".equalsIgnoreCase(param)) {
+      return false;
+    }
+    return DEFAULT_ENABLE_I18N;
+  }
 }
