@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.74 2012-04-04 23:43:33 thib_gc Exp $
+ * $Id: RemoteApi.java,v 1.75 2012-08-29 00:17:55 tlipkis Exp $
  */
 
 /*
@@ -555,9 +555,9 @@ public class RemoteApi
     int dirn = 1;
     for (Iterator iter = aus.iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
-      log.debug("au: "+ au);
+      log.debug2("au: "+ au);
       if (pluginMgr.isInternalAu(au)) {
-	log.debug("internal: "+ au);
+	log.debug2("internal: "+ au);
 	continue;
       }
       String dir = Integer.toString(dirn) + "/";
@@ -618,7 +618,7 @@ public class RemoteApi
 
   void addCfgFileToZip(ZipOutputStream z, File file, String entName)
       throws IOException {
-    log.debug("addCfgFileToZip: "+ file);
+    log.debug2("addCfgFileToZip: "+ file);
     try {
       ZipUtil.addFileToZip(z, file, entName);
     } catch (FileNotFoundException ignore) {}
@@ -628,7 +628,7 @@ public class RemoteApi
       throws IOException {
     try {
       ZipUtil.addFileToZip(z, in, entName);
-      log.debug("added: "+ entName);
+      log.debug2("added: "+ entName);
     } finally {
       IOUtil.safeClose(in);
     }
