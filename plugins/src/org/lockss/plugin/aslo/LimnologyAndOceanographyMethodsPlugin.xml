@@ -13,15 +13,32 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
+  </entry>
+    <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;ASLO Plugin, Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
+    <string>&quot;Limnology and Oceanography Methods Plugin, Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>ASLO Plugin</string>
+    <string>Limnology and Oceanography Methods Plugin</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -33,7 +50,6 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s%s/free/%d/&quot;, base_url, journal_id, year</string>
       <string>1,&quot;^%s&quot;, base_url</string>
-
     </list>
   </entry>
   <entry>
