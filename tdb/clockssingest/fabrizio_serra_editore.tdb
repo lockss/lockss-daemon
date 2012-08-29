@@ -1,0 +1,138 @@
+{
+
+  publisher <
+    name = Fabrizio Serra Editore
+  >
+
+  attr[contract] = 2010
+  plugin =
+  param[base_url] = http://http://www.libraweb.net/
+  implicit < status1 ; status ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Accoustical Arts and Artifacts ;
+      issn = 1824-6176 ;
+      eissn = 1825-3873 
+     >
+ 
+  }
+    
+  {
+
+    title <
+      name = Acta Philosphica ;
+      issn = 1121-2179 ;
+      eissn = 1825-6562
+      >
+      
+  }
+  
+  {
+
+    title <
+      name =  ;
+      issn = ;
+      eissn = 
+      >
+      
+  }
+  
+  {
+
+    title <
+      name =  ;
+      issn = ;
+      eissn = 
+      >
+      
+  }
+  
+  {
+
+    title <
+      name =  ;
+      issn = ;
+      eissn = 
+      >
+      
+  }
+  {
+
+    title <
+      name =  ;
+      issn = ;
+      eissn = 
+      >
+      
+  }  
+  
+  {
+
+    title <
+      name =  ;
+      issn = ;
+      eissn = 
+      >
+      
+  } 
+  
+  {
+
+    title <
+      name =  ;
+      issn = ;
+      eissn = 
+      >
+      
+  }       
+
+  {
+
+    title <
+      name =  ;
+      issn = ;
+      eissn = 
+      >
+      
+  }
+  
+  {
+
+    title <
+      name =  ;
+      issn = ;
+      eissn = 
+      >
+      
+  }    
+  {
+
+    title <
+      name =  ;
+      issn = ;
+      eissn = 
+      >
+      
+  }
+  {
+
+    title <
+      name =  ;
+      issn = ;
+      eissn = 
+      >
+      
+  }
+  {
+
+    title <
+      name =  ;
+      issn = ;
+      eissn = 
+      >
+      
+  }
+
+}
