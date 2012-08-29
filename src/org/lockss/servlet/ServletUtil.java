@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.77 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: ServletUtil.java,v 1.78 2012-08-29 00:19:30 tlipkis Exp $
  */
 
 /*
@@ -1269,10 +1269,11 @@ public class ServletUtil {
           tbl.newCell(CHOOSESETS_CHECKBOX_ATTRIBUTES);
           if (numOk > 0) {
             isAnySelectable.setValue(true);
-            tbl.add(checkbox(servlet, checkboxGroup, set.getName(), false));
+            tbl.add(checkbox(servlet, checkboxGroup,
+			     encodeAttr(set.getName()), false));
           }
           tbl.newCell(CHOOSESETS_CELL_ATTRIBUTES);
-          String txt = set.getName() + " (" + numOk + ")";
+          String txt = encodeText(set.getName()) + " (" + numOk + ")";
           tbl.add(numOk > 0 ? txt : gray(txt));
         }
       }
@@ -1585,7 +1586,7 @@ public class ServletUtil {
 
         tbl.newRow();
         tbl.newCell();
-        tbl.add(HtmlUtil.encode(descr.getDisplayName(), HtmlUtil.ENCODE_TEXT));
+        tbl.add(encodeText(descr.getDisplayName()));
         tbl.add(servlet.addFootnote(encodeText(descr.getDescription())));
         tbl.add(": ");
 
@@ -1658,7 +1659,7 @@ public class ServletUtil {
       tbl.newCell(AUSUMMARY_BUTTONCELL_ATTRIBUTES);
       tbl.add(submitButton(servlet, buttonNumber, act, act, auIdName, au.getAuId()));
       tbl.newCell(AUSUMMARY_TEXTCELL_ATTRIBUTES);
-      tbl.add(gray(HtmlUtil.encode(au.getName(), HtmlUtil.ENCODE_TEXT), isGray));
+      tbl.add(gray(encodeText(au.getName()), isGray));
     }
   }
 
@@ -1750,7 +1751,7 @@ public class ServletUtil {
     for (Iterator iter = pluginMgr.getAllAus().iterator(); iter.hasNext(); ) {
       ArchivalUnit au0 = (ArchivalUnit)iter.next();
       String id = au0.getAuId();
-      sel.add(au0.getName(), id.equals(preselId), id);
+      sel.add(encodeAttr(au0.getName()), id.equals(preselId), id);
     }
     return sel;
   }
@@ -1966,7 +1967,7 @@ public class ServletUtil {
       CrawlSpec spec = au.getCrawlSpec();
       tbl.newRow();
       tbl.newCell(ALIGN_LEFT);
-      tbl.add(au.getName());
+      tbl.add(encodeText(au.getName()));
       tbl.newCell("width=8");
       tbl.add("&nbsp;");
       tbl.newCell(ALIGN_LEFT);
