@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournal.java,v 1.1 2012-08-17 16:14:34 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournal.java,v 1.2 2012-08-29 23:07:12 fergaloy-sf Exp $
  */
 
 /*
@@ -39,6 +39,7 @@
 package org.lockss.exporter.counter;
 
 import static org.lockss.exporter.counter.CounterReportsManager.*;
+
 import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -48,7 +49,6 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
 import org.lockss.db.DbManager;
@@ -70,25 +70,35 @@ public class TestCounterReportsJournal extends LockssTestCase {
       + SQL_TABLE_REQUESTS;
 
   // Query to count the rows of requests for a LOCKSS identifier.
-  private static final String SQL_QUERY_REQUEST_BY_ID_COUNT =
-      "select count(*) from " + SQL_TABLE_REQUESTS + " where "
-	  + SQL_COLUMN_LOCKSS_ID + " = ?";
+  private static final String SQL_QUERY_REQUEST_BY_ID_COUNT = "select "
+      + "count(*) "
+      + "from " + SQL_TABLE_REQUESTS
+      + " where " + SQL_COLUMN_LOCKSS_ID + " = ?";
 
   // Query to get the properties of a journal.
   private static final String SQL_QUERY_JOURNAL_SELECT = "select "
-      + SQL_COLUMN_TITLE_NAME + "," + SQL_COLUMN_PUBLISHER_NAME + ","
-      + SQL_COLUMN_PLATFORM_NAME + "," + SQL_COLUMN_DOI + ","
-      + SQL_COLUMN_PROPRIETARY_ID + "," + SQL_COLUMN_IS_BOOK + ","
-      + SQL_COLUMN_PRINT_ISSN + "," + SQL_COLUMN_ONLINE_ISSN + " from "
-      + SQL_TABLE_TITLES + " where " + SQL_COLUMN_LOCKSS_ID + " = ?";
+      + SQL_COLUMN_TITLE_NAME + ","
+      + SQL_COLUMN_PUBLISHER_NAME + ","
+      + SQL_COLUMN_PLATFORM_NAME + ","
+      + SQL_COLUMN_DOI + ","
+      + SQL_COLUMN_PROPRIETARY_ID + ","
+      + SQL_COLUMN_IS_BOOK + ","
+      + SQL_COLUMN_PRINT_ISSN + ","
+      + SQL_COLUMN_ONLINE_ISSN
+      + " from " + SQL_TABLE_TITLES
+      + " where " + SQL_COLUMN_LOCKSS_ID + " = ?";
 
   // Query to get the properties of a journal request.
   private static final String SQL_QUERY_JOURNAL_REQUEST_SELECT = "select "
-      + SQL_COLUMN_PUBLICATION_YEAR + "," + SQL_COLUMN_IS_HTML + ","
-      + SQL_COLUMN_IS_PDF + "," + SQL_COLUMN_IS_PUBLISHER_INVOLVED + ","
-      + SQL_COLUMN_REQUEST_YEAR + "," + SQL_COLUMN_REQUEST_MONTH + ","
-      + SQL_COLUMN_REQUEST_DAY + " from " + SQL_TABLE_REQUESTS + " where "
-      + SQL_COLUMN_LOCKSS_ID + " = ?";
+      + SQL_COLUMN_PUBLICATION_YEAR + ","
+      + SQL_COLUMN_IS_HTML + ","
+      + SQL_COLUMN_IS_PDF + ","
+      + SQL_COLUMN_IS_PUBLISHER_INVOLVED + ","
+      + SQL_COLUMN_REQUEST_YEAR + ","
+      + SQL_COLUMN_REQUEST_MONTH + ","
+      + SQL_COLUMN_REQUEST_DAY
+      + " from " + SQL_TABLE_REQUESTS
+      + " where " + SQL_COLUMN_LOCKSS_ID + " = ?";
 
   private MockLockssDaemon theDaemon;
   private DbManager dbManager;
@@ -130,11 +140,27 @@ public class TestCounterReportsJournal extends LockssTestCase {
   }
 
   /**
+   * Runs all the tests.
+   * <br />
+   * This avoids unnecessary set up and tear down of the database.
+   * 
+   * @throws Exception
+   */
+  public void testAll() throws Exception {
+    runTestCreation();
+    runTestPersist();
+    runTestPersistRequest();
+    runTestNoRequestDataPersistRequest();
+    runTestPersistMultipleRequests();
+    runTestNoTitleFailure();
+  }
+
+  /**
    * Tests the successful creation of a journal.
    * 
    * @throws Exception
    */
-  public void testCreation() throws Exception {
+  public void runTestCreation() throws Exception {
     CounterReportsJournal journal =
 	new CounterReportsJournal("Journal1", "Publisher1", null, "02468",
 	    null, "1234-5678", "9876-5432");
@@ -153,15 +179,15 @@ public class TestCounterReportsJournal extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testPersist() throws Exception {
-    checkTitleRowCount(2);
+  public void runTestPersist() throws Exception {
+    checkTitleRowCount(3);
 
     CounterReportsJournal journal =
 	new CounterReportsJournal("Journal1", "Publisher1", null, null, null,
 	    "1234-5678", "9876-5432");
     journal.identify();
 
-    checkTitleRowCount(3);
+    checkTitleRowCount(4);
     checkJournal(journal);
   }
 
@@ -189,9 +215,9 @@ public class TestCounterReportsJournal extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     assertEquals(expected, count);
@@ -234,9 +260,9 @@ public class TestCounterReportsJournal extends LockssTestCase {
 	  resultSet.getString(SQL_COLUMN_ONLINE_ISSN));
       assertEquals(false, resultSet.next());
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -245,8 +271,8 @@ public class TestCounterReportsJournal extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testPersistRequest() throws Exception {
-    checkTitleRowCount(2);
+  public void runTestPersistRequest() throws Exception {
+    checkTitleRowCount(4);
     checkRequestRowCount(0);
 
     CounterReportsJournal journal =
@@ -271,14 +297,14 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(3);
+    checkTitleRowCount(4);
     checkJournal(journal);
     checkRequestRowCount(1);
     checkRequestRowCountById(journal.getLockssId(), 1);
@@ -309,9 +335,9 @@ public class TestCounterReportsJournal extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     assertEquals(expected, count);
@@ -344,9 +370,9 @@ public class TestCounterReportsJournal extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     assertEquals(expected, count);
@@ -427,9 +453,9 @@ public class TestCounterReportsJournal extends LockssTestCase {
       assertEquals(cal.get(Calendar.DAY_OF_MONTH),
 	  resultSet.getShort(SQL_COLUMN_REQUEST_DAY));
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -438,9 +464,9 @@ public class TestCounterReportsJournal extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testNoRequestDataPersistRequest() throws Exception {
-    checkTitleRowCount(2);
-    checkRequestRowCount(0);
+  public void runTestNoRequestDataPersistRequest() throws Exception {
+    checkTitleRowCount(4);
+    checkRequestRowCount(1);
 
     CounterReportsJournal journal =
 	new CounterReportsJournal("Journal1", "Publisher1", null, null, null,
@@ -458,18 +484,17 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(3);
+    checkTitleRowCount(4);
     checkJournal(journal);
-    checkRequestRowCount(1);
-    checkRequestRowCountById(journal.getLockssId(), 1);
-    checkRequest(journal, null);
+    checkRequestRowCount(2);
+    checkRequestRowCountById(journal.getLockssId(), 2);
 
     Map<String, Object> requestData = new HashMap<String, Object>();
     success = false;
@@ -482,17 +507,16 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(3);
-    checkRequestRowCount(2);
-    checkRequestRowCountById(journal.getLockssId(), 2);
-    checkRequest(journal, requestData);
+    checkTitleRowCount(4);
+    checkRequestRowCount(3);
+    checkRequestRowCountById(journal.getLockssId(), 3);
   }
 
   /**
@@ -500,9 +524,9 @@ public class TestCounterReportsJournal extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testPersistMultipleRequests() throws Exception {
-    checkTitleRowCount(2);
-    checkRequestRowCount(0);
+  public void runTestPersistMultipleRequests() throws Exception {
+    checkTitleRowCount(4);
+    checkRequestRowCount(3);
 
     CounterReportsJournal journal1 =
 	new CounterReportsJournal("Journal1", "Publisher1", null, null, null,
@@ -531,18 +555,17 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(4);
+    checkTitleRowCount(5);
     checkJournal(journal1);
-    checkRequestRowCount(1);
-    checkRequestRowCountById(journal1.getLockssId(), 1);
-    checkRequest(journal1, requestData);
+    checkRequestRowCount(4);
+    checkRequestRowCountById(journal1.getLockssId(), 4);
 
     try {
       conn = dbManager.getConnection();
@@ -551,16 +574,16 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(4);
+    checkTitleRowCount(5);
     checkJournal(journal2);
-    checkRequestRowCount(2);
+    checkRequestRowCount(5);
     checkRequestRowCountById(journal2.getLockssId(), 1);
     checkRequest(journal2, requestData);
 
@@ -571,16 +594,16 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(4);
-    checkRequestRowCount(3);
-    checkRequestRowCountById(journal1.getLockssId(), 2);
+    checkTitleRowCount(5);
+    checkRequestRowCount(6);
+    checkRequestRowCountById(journal1.getLockssId(), 5);
 
     try {
       conn = dbManager.getConnection();
@@ -589,16 +612,16 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(4);
-    checkRequestRowCount(4);
-    checkRequestRowCountById(journal1.getLockssId(), 3);
+    checkTitleRowCount(5);
+    checkRequestRowCount(7);
+    checkRequestRowCountById(journal1.getLockssId(), 6);
 
     try {
       conn = dbManager.getConnection();
@@ -607,15 +630,15 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(4);
-    checkRequestRowCount(5);
+    checkTitleRowCount(5);
+    checkRequestRowCount(8);
     checkRequestRowCountById(journal2.getLockssId(), 2);
 
     try {
@@ -625,15 +648,15 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(4);
-    checkRequestRowCount(6);
+    checkTitleRowCount(5);
+    checkRequestRowCount(9);
     checkRequestRowCountById(journal2.getLockssId(), 3);
 
     try {
@@ -643,16 +666,16 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(4);
-    checkRequestRowCount(7);
-    checkRequestRowCountById(journal1.getLockssId(), 4);
+    checkTitleRowCount(5);
+    checkRequestRowCount(10);
+    checkRequestRowCountById(journal1.getLockssId(), 7);
 
     try {
       conn = dbManager.getConnection();
@@ -661,16 +684,16 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(4);
-    checkRequestRowCount(8);
-    checkRequestRowCountById(journal1.getLockssId(), 5);
+    checkTitleRowCount(5);
+    checkRequestRowCount(11);
+    checkRequestRowCountById(journal1.getLockssId(), 8);
 
     try {
       conn = dbManager.getConnection();
@@ -679,15 +702,15 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(4);
-    checkRequestRowCount(9);
+    checkTitleRowCount(5);
+    checkRequestRowCount(12);
     checkRequestRowCountById(journal2.getLockssId(), 4);
 
     try {
@@ -697,15 +720,15 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(4);
-    checkRequestRowCount(10);
+    checkTitleRowCount(5);
+    checkRequestRowCount(13);
     checkRequestRowCountById(journal2.getLockssId(), 5);
 
     try {
@@ -715,15 +738,15 @@ public class TestCounterReportsJournal extends LockssTestCase {
     } finally {
       if (success) {
 	conn.commit();
-	dbManager.safeCloseConnection(conn);
+	DbManager.safeCloseConnection(conn);
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
     assertEquals(true, success);
-    checkTitleRowCount(4);
-    checkRequestRowCount(11);
+    checkTitleRowCount(5);
+    checkRequestRowCount(14);
     checkRequestRowCountById(journal2.getLockssId(), 6);
   }
 
@@ -732,42 +755,36 @@ public class TestCounterReportsJournal extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testNoTitleFailure() throws Exception {
+  public void runTestNoTitleFailure() throws Exception {
     CounterReportsJournal journal = null;
-    boolean success = false;
     try {
       journal =
 	  new CounterReportsJournal(null, "Publisher1", null, null, null,
 	      "1234-5678", "9876-5432");
-      success = true;
+      fail("Invalid null journal title");
     } catch (IllegalArgumentException iae) {
     }
 
-    assertEquals(false, success);
     assertNull(journal);
 
-    success = false;
     try {
       journal =
 	  new CounterReportsJournal("", "Publisher1", null, null, null,
 	      "1234-5678", "9876-5432");
-      success = true;
+      fail("Invalid empty journal title");
     } catch (IllegalArgumentException iae) {
     }
 
-    assertEquals(false, success);
     assertNull(journal);
 
-    success = false;
     try {
       journal =
 	  new CounterReportsJournal(" ", "Publisher1", null, null, null,
 	      "1234-5678", "9876-5432");
-      success = true;
+      fail("Invalid empty journal title");
     } catch (IllegalArgumentException iae) {
     }
 
-    assertEquals(false, success);
     assertNull(journal);
   }
 }

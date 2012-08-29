@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport1L.java,v 1.1 2012-08-28 18:03:17 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport1L.java,v 1.2 2012-08-29 23:07:12 fergaloy-sf Exp $
  */
 
 /*
@@ -39,6 +39,7 @@
 package org.lockss.exporter.counter;
 
 import static org.lockss.exporter.counter.CounterReportsManager.*;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -49,7 +50,6 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
 import org.lockss.db.DbManager;
@@ -64,18 +64,20 @@ import org.lockss.util.TimeBase;
 
 public class TestCounterReportsJournalReport1L extends LockssTestCase {
   // Query to add a type aggregation.
-  private static final String SQL_QUERY_TYPE_AGGREGATION_INSERT =
-      "insert into " + SQL_TABLE_TYPE_AGGREGATES + " (" + SQL_COLUMN_LOCKSS_ID
-	  + "," + SQL_COLUMN_IS_PUBLISHER_INVOLVED + ","
-	  + SQL_COLUMN_REQUEST_YEAR + "," + SQL_COLUMN_REQUEST_MONTH + ","
-	  + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS + ","
-	  + SQL_COLUMN_HTML_JOURNAL_REQUESTS + ","
-	  + SQL_COLUMN_PDF_JOURNAL_REQUESTS + ") values (?,?,?,?,?,?,?)";
+  private static final String SQL_QUERY_TYPE_AGGREGATION_INSERT = "insert into "
+      + SQL_TABLE_TYPE_AGGREGATES
+      + " (" + SQL_COLUMN_LOCKSS_ID
+      + "," + SQL_COLUMN_IS_PUBLISHER_INVOLVED
+      + "," + SQL_COLUMN_REQUEST_YEAR
+      + "," + SQL_COLUMN_REQUEST_MONTH
+      + "," + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS
+      + "," + SQL_COLUMN_HTML_JOURNAL_REQUESTS
+      + "," + SQL_COLUMN_PDF_JOURNAL_REQUESTS
+      + ") values (?,?,?,?,?,?,?)";
 
   // Query to delete a type aggregation.
   private static final String SQL_QUERY_TYPE_AGGREGATION_DELETE =
-      "delete from " + SQL_TABLE_TYPE_AGGREGATES + " where "
-	  + SQL_COLUMN_LOCKSS_ID + " = ?";
+      "delete from " + SQL_TABLE_TYPE_AGGREGATES;
 
   private MockLockssDaemon theDaemon;
   private DbManager dbManager;
@@ -118,53 +120,58 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
   }
 
   /**
+   * Runs all the tests.
+   * <br />
+   * This avoids unnecessary set up and tear down of the database.
+   * 
+   * @throws Exception
+   */
+  public void testAll() throws Exception {
+    runTestValidation();
+    runTestEmptyReport();
+    runTestDefaultPeriodReport();
+    runTestCustomPeriodReport();
+  }
+
+  /**
    * Tests the validation of the constructor parameters.
    * 
    * @throws Exception
    */
-  public void testValidation() throws Exception {
-    boolean validArgument = false;
+  public void runTestValidation() throws Exception {
 
     try {
       new CounterReportsJournalReport1L(theDaemon, 0, 2011, 7, 2012);
-      validArgument = true;
+      fail("Invalid start month - Must be between 1 and 12");
     } catch (IllegalArgumentException iae) {
     }
-
-    assertEquals(false, validArgument);
 
     try {
       new CounterReportsJournalReport1L(theDaemon, 13, 2011, 7, 2012);
-      validArgument = true;
+      fail("Invalid start month - Must be between 1 and 12");
     } catch (IllegalArgumentException iae) {
     }
-
-    assertEquals(false, validArgument);
 
     try {
       new CounterReportsJournalReport1L(theDaemon, 1, 2011, 0, 2012);
-      validArgument = true;
+      fail("Invalid end month - Must be between 1 and 12");
     } catch (IllegalArgumentException iae) {
     }
-
-    assertEquals(false, validArgument);
 
     try {
       new CounterReportsJournalReport1L(theDaemon, 1, 2011, 13, 2012);
-      validArgument = true;
+      fail("Invalid end month - Must be between 1 and 12");
     } catch (IllegalArgumentException iae) {
     }
-
-    assertEquals(false, validArgument);
 
     try {
       new CounterReportsJournalReport1L(theDaemon, 1, 2012, 12, 2011);
-      validArgument = true;
+      fail("Invalid report period - End must not precede start");
     } catch (IllegalArgumentException iae) {
     }
 
-    assertEquals(false, validArgument);
-
+    boolean validArgument = false;
+    
     try {
       new CounterReportsJournalReport1L(theDaemon, 1, 2012, 1, 2012);
       validArgument = true;
@@ -179,7 +186,7 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testEmptyReport() throws Exception {
+  public void runTestEmptyReport() throws Exception {
     CounterReportsJournalReport1L report =
 	new CounterReportsJournalReport1L(theDaemon);
 
@@ -204,6 +211,10 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
 	line);
     assertNull(reader.readLine());
 
+    IOUtil.safeClose(reader);
+    reportFile.delete();
+    assertEquals(false, reportFile.exists());
+
     report.saveTsvReport();
     reportFile =
 	new File(counterReportsManager.getOutputDir(),
@@ -223,6 +234,8 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
     assertNull(reader.readLine());
 
     IOUtil.safeClose(reader);
+    reportFile.delete();
+    assertEquals(false, reportFile.exists());
   }
 
   /**
@@ -230,7 +243,7 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testDefaultPeriodReport() throws Exception {
+  public void runTestDefaultPeriodReport() throws Exception {
 
     CounterReportsJournal journal =
 	new CounterReportsJournal("Journal1", "Publisher1", null, null, null,
@@ -281,6 +294,10 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
 	line);
     assertNull(reader.readLine());
 
+    IOUtil.safeClose(reader);
+    reportFile.delete();
+    assertEquals(false, reportFile.exists());
+
     report.saveTsvReport();
     reportFile =
 	new File(counterReportsManager.getOutputDir(),
@@ -304,6 +321,8 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
     assertNull(reader.readLine());
 
     IOUtil.safeClose(reader);
+    reportFile.delete();
+    assertEquals(false, reportFile.exists());
   }
 
   /**
@@ -331,10 +350,6 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
 
       String sql = SQL_QUERY_TYPE_AGGREGATION_DELETE;
       deleteAggregation = conn.prepareStatement(sql);
-
-      deleteAggregation.setLong(1,
-	  counterReportsManager.getAllJournalsLockssId());
-
       deleteAggregation.executeUpdate();
 
       sql = SQL_QUERY_TYPE_AGGREGATION_INSERT;
@@ -393,7 +408,7 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testCustomPeriodReport() throws Exception {
+  public void runTestCustomPeriodReport() throws Exception {
 
     CounterReportsJournal journal =
 	new CounterReportsJournal("Journal1", "Publisher1", null, null, null,
@@ -448,6 +463,10 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
 	"Journal1,Publisher1,,,,1234-5678,9876-5432,10,6,2,0,0,10,0,0", line);
     assertNull(reader.readLine());
 
+    IOUtil.safeClose(reader);
+    reportFile.delete();
+    assertEquals(false, reportFile.exists());
+
     report.saveTsvReport();
     reportFile =
 	new File(counterReportsManager.getOutputDir(),
@@ -470,5 +489,7 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
     assertNull(reader.readLine());
 
     IOUtil.safeClose(reader);
+    reportFile.delete();
+    assertEquals(false, reportFile.exists());
   }
 }

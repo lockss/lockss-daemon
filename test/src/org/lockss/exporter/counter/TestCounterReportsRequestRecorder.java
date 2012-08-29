@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestRecorder.java,v 1.1 2012-08-17 16:14:34 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestRecorder.java,v 1.2 2012-08-29 23:07:12 fergaloy-sf Exp $
  */
 
 /*
@@ -193,8 +193,21 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
     } finally {
       DbManager.safeCloseStatement(statement);
       conn.commit();
-      dbManager.safeCloseConnection(conn);
+      DbManager.safeCloseConnection(conn);
     }
+  }
+
+  /**
+   * Runs all the tests.
+   * <br />
+   * This avoids unnecessary set up and tear down of the database.
+   * 
+   * @throws Exception
+   */
+  public void testAll() throws Exception {
+    runTestRecordBookRequest();
+    runTestJournalRecordRequest();
+    runTestRecordMultipleRequests();
   }
 
   /**
@@ -202,7 +215,7 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testRecordBookRequest() throws Exception {
+  public void runTestRecordBookRequest() throws Exception {
     CounterReportsBook book =
 	new CounterReportsBook("Book1", "Publisher1", "Platform1", null, null,
 	    "987-654321-0987", "1234-5678");
@@ -314,9 +327,9 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     assertEquals(expected, count);
@@ -346,9 +359,9 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     assertEquals(expected, count);
@@ -381,9 +394,9 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     assertEquals(expected, count);
@@ -423,9 +436,9 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
       assertEquals(book.getIssn(), resultSet.getString(SQL_COLUMN_BOOK_ISSN));
       assertEquals(false, resultSet.next());
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -487,9 +500,9 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
       assertEquals(cal.get(Calendar.DAY_OF_MONTH),
 	  resultSet.getShort(SQL_COLUMN_REQUEST_DAY));
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -498,7 +511,7 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testJournalRecordRequest() throws Exception {
+  public void runTestJournalRecordRequest() throws Exception {
     CounterReportsJournal journal =
 	new CounterReportsJournal("Journal1", "Publisher1", "Platform1", null,
 	    null, "1234-5678", "9876-5432");
@@ -512,14 +525,14 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
     recorder.recordRequest(IGNORABLE_URL, journalAu,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
-    checkTitleRowCount(2);
-    checkRequestRowCount(0);
+    checkTitleRowCount(3);
+    checkRequestRowCount(1);
 
     recorder.recordRequest(RECORDABLE_URL, journalAu,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
-    checkTitleRowCount(3);
-    checkRequestRowCount(1);
+    checkTitleRowCount(4);
+    checkRequestRowCount(2);
 
     Map<String, Object> requestData = new HashMap<String, Object>();
     requestData.put(CounterReportsJournal.PUBLICATION_YEAR_KEY, "1954");
@@ -669,9 +682,9 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 	  resultSet.getString(SQL_COLUMN_ONLINE_ISSN));
       assertEquals(false, resultSet.next());
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -750,9 +763,9 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
       assertEquals(cal.get(Calendar.DAY_OF_MONTH),
 	  resultSet.getShort(SQL_COLUMN_REQUEST_DAY));
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -761,7 +774,7 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testRecordMultipleRequests() throws Exception {
+  public void runTestRecordMultipleRequests() throws Exception {
     CounterReportsBook book1 =
 	new CounterReportsBook("Book1", "Publisher1", "Platform1", null, null,
 	    "987-654321-0987", "1234-5678");
@@ -824,14 +837,14 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
     recorder.recordRequest(IGNORABLE_URL, bookAu1,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
-    checkTitleRowCount(2);
-    checkRequestRowCount(0);
+    checkTitleRowCount(4);
+    checkRequestRowCount(2);
 
     recorder.recordRequest(RECORDABLE_URL, bookAu1,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
-    checkTitleRowCount(3);
-    checkRequestRowCount(1);
+    checkTitleRowCount(4);
+    checkRequestRowCount(3);
 
     Map<String, Object> requestData = new HashMap<String, Object>();
     requestData.put(CounterReportsBook.IS_SECTION_KEY, Boolean.FALSE);
@@ -841,32 +854,10 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
     recorder.recordRequest(IGNORABLE_URL, bookAu2,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
-    checkTitleRowCount(3);
-    checkRequestRowCount(1);
-
-    recorder.recordRequest(RECORDABLE_URL, bookAu2,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(4);
-    checkRequestRowCount(2);
-
-    requestData = new HashMap<String, Object>();
-    requestData.put(CounterReportsBook.IS_SECTION_KEY, Boolean.FALSE);
-    requestData.put(CounterReportsBook.IS_PUBLISHER_INVOLVED_KEY, Boolean.TRUE);
-
-    recorder.recordRequest(RECORDABLE_URL, bookAu2,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
     checkTitleRowCount(4);
     checkRequestRowCount(3);
 
-    recorder.recordRequest(IGNORABLE_URL, bookAu3,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(4);
-    checkRequestRowCount(3);
-
-    recorder.recordRequest(RECORDABLE_URL, bookAu3,
+    recorder.recordRequest(RECORDABLE_URL, bookAu2,
 	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
 
     checkTitleRowCount(5);
@@ -876,8 +867,14 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
     requestData.put(CounterReportsBook.IS_SECTION_KEY, Boolean.FALSE);
     requestData.put(CounterReportsBook.IS_PUBLISHER_INVOLVED_KEY, Boolean.TRUE);
 
-    recorder.recordRequest(RECORDABLE_URL, bookAu3,
+    recorder.recordRequest(RECORDABLE_URL, bookAu2,
 	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
+
+    checkTitleRowCount(5);
+    checkRequestRowCount(5);
+
+    recorder.recordRequest(IGNORABLE_URL, bookAu3,
+	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
     checkTitleRowCount(5);
     checkRequestRowCount(5);
@@ -885,20 +882,36 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
     recorder.recordRequest(RECORDABLE_URL, bookAu3,
 	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
 
-    checkTitleRowCount(5);
+    checkTitleRowCount(6);
     checkRequestRowCount(6);
+
+    requestData = new HashMap<String, Object>();
+    requestData.put(CounterReportsBook.IS_SECTION_KEY, Boolean.FALSE);
+    requestData.put(CounterReportsBook.IS_PUBLISHER_INVOLVED_KEY, Boolean.TRUE);
+
+    recorder.recordRequest(RECORDABLE_URL, bookAu3,
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
+
+    checkTitleRowCount(6);
+    checkRequestRowCount(7);
+
+    recorder.recordRequest(RECORDABLE_URL, bookAu3,
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
+
+    checkTitleRowCount(6);
+    checkRequestRowCount(8);
 
     recorder.recordRequest(IGNORABLE_URL, journalAu1,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
-    checkTitleRowCount(5);
-    checkRequestRowCount(6);
+    checkTitleRowCount(6);
+    checkRequestRowCount(8);
 
     recorder.recordRequest(RECORDABLE_URL, journalAu1,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
     checkTitleRowCount(6);
-    checkRequestRowCount(7);
+    checkRequestRowCount(9);
 
     requestData = new HashMap<String, Object>();
     requestData.put(CounterReportsJournal.PUBLICATION_YEAR_KEY, "1954");
@@ -911,31 +924,31 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
 
     checkTitleRowCount(6);
-    checkRequestRowCount(8);
+    checkRequestRowCount(10);
 
     recorder.recordRequest(RECORDABLE_URL, journalAu1,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
     checkTitleRowCount(6);
-    checkRequestRowCount(9);
+    checkRequestRowCount(11);
 
     recorder.recordRequest(RECORDABLE_URL, journalAu1,
 	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
 
     checkTitleRowCount(6);
-    checkRequestRowCount(10);
+    checkRequestRowCount(12);
 
     recorder.recordRequest(IGNORABLE_URL, bookAu4,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
     checkTitleRowCount(6);
-    checkRequestRowCount(10);
+    checkRequestRowCount(12);
 
     recorder.recordRequest(RECORDABLE_URL, bookAu4,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
     checkTitleRowCount(7);
-    checkRequestRowCount(11);
+    checkRequestRowCount(13);
 
     requestData = new HashMap<String, Object>();
     requestData.put(CounterReportsBook.IS_SECTION_KEY, Boolean.FALSE);
@@ -946,31 +959,31 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
 
     checkTitleRowCount(7);
-    checkRequestRowCount(12);
+    checkRequestRowCount(14);
 
     recorder.recordRequest(RECORDABLE_URL, bookAu4,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
     checkTitleRowCount(7);
-    checkRequestRowCount(13);
+    checkRequestRowCount(15);
 
     recorder.recordRequest(RECORDABLE_URL, bookAu4,
 	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
 
     checkTitleRowCount(7);
-    checkRequestRowCount(14);
+    checkRequestRowCount(16);
 
     recorder.recordRequest(IGNORABLE_URL, journalAu2,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
     checkTitleRowCount(7);
-    checkRequestRowCount(14);
+    checkRequestRowCount(16);
 
     recorder.recordRequest(RECORDABLE_URL, journalAu2,
 	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
 
     checkTitleRowCount(8);
-    checkRequestRowCount(15);
+    checkRequestRowCount(17);
 
     requestData = new HashMap<String, Object>();
     requestData.put(CounterReportsJournal.PUBLICATION_YEAR_KEY, "1964");
@@ -983,25 +996,25 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
 
     checkTitleRowCount(8);
-    checkRequestRowCount(16);
+    checkRequestRowCount(18);
 
     recorder.recordRequest(RECORDABLE_URL, journalAu2,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
     checkTitleRowCount(8);
-    checkRequestRowCount(17);
+    checkRequestRowCount(19);
 
     recorder.recordRequest(IGNORABLE_URL, journalAu3,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
     checkTitleRowCount(8);
-    checkRequestRowCount(17);
+    checkRequestRowCount(19);
 
     recorder.recordRequest(RECORDABLE_URL, journalAu3,
 	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
 
     checkTitleRowCount(9);
-    checkRequestRowCount(18);
+    checkRequestRowCount(20);
 
     requestData = new HashMap<String, Object>();
     requestData.put(CounterReportsJournal.PUBLICATION_YEAR_KEY, "1974");
@@ -1014,19 +1027,19 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
 
     checkTitleRowCount(9);
-    checkRequestRowCount(19);
+    checkRequestRowCount(21);
 
     recorder.recordRequest(IGNORABLE_URL, journalAu4,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
     checkTitleRowCount(9);
-    checkRequestRowCount(19);
+    checkRequestRowCount(21);
 
     recorder.recordRequest(RECORDABLE_URL, journalAu4,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
     checkTitleRowCount(10);
-    checkRequestRowCount(20);
+    checkRequestRowCount(22);
 
     requestData = new HashMap<String, Object>();
     requestData.put(CounterReportsJournal.PUBLICATION_YEAR_KEY, "1984");

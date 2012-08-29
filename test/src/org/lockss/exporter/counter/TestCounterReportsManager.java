@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsManager.java,v 1.1 2012-08-17 16:14:34 fergaloy-sf Exp $
+ * $Id: TestCounterReportsManager.java,v 1.2 2012-08-29 23:07:12 fergaloy-sf Exp $
  */
 
 /*
@@ -46,7 +46,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
-
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
 import org.lockss.db.DbManager;
@@ -102,13 +101,20 @@ public class TestCounterReportsManager extends LockssTestCase {
   }
 
   /**
-   * Tests a CounterReportsManager that is ready to be used.
+   * Runs all the tests.
+   * <br />
+   * This avoids unnecessary set up and tear down of the database.
    * 
    * @throws Exception
    */
-  public void testReady() throws Exception {
+  public void testAll() throws Exception {
     startService();
-    assertEquals(true, counterReportsManager.isReady());
+    runTestReady();
+    runTestAllBooksAllJournalsTitles();
+    runTestOutputDir();
+    runTestRequestPersistence();
+    runTestWriteDeleteReportFile();
+    runTestNotReady();
   }
 
   /**
@@ -124,12 +130,20 @@ public class TestCounterReportsManager extends LockssTestCase {
   }
 
   /**
+   * Tests a CounterReportsManager that is ready to be used.
+   * 
+   * @throws Exception
+   */
+  public void runTestReady() throws Exception {
+    assertEquals(true, counterReportsManager.isReady());
+  }
+
+  /**
    * Tests the generation of titles used for totals.
    * 
    * @throws Exception
    */
-  public void testAllBooksAllJournalsTitles() throws Exception {
-    startService();
+  public void runTestAllBooksAllJournalsTitles() throws Exception {
     assertEquals(4796129050038543734L,
 	counterReportsManager.getAllBooksLockssId());
     assertEquals(3570692956966825695L,
@@ -141,8 +155,7 @@ public class TestCounterReportsManager extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testOutputDir() throws Exception {
-    startService();
+  public void runTestOutputDir() throws Exception {
     assertEquals(true, counterReportsManager.getOutputDir().exists());
   }
 
@@ -151,8 +164,7 @@ public class TestCounterReportsManager extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testRequestPersistence() throws Exception {
-    startService();
+  public void runTestRequestPersistence() throws Exception {
     CounterReportsBook book =
 	new CounterReportsBook("Book1", "Publisher1", null, "02468", null,
 	    "987-654321-0987", "1234-5678");
@@ -187,9 +199,9 @@ public class TestCounterReportsManager extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     assertEquals(expected, count);
@@ -219,9 +231,9 @@ public class TestCounterReportsManager extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      dbManager.safeRollbackAndClose(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     assertEquals(expected, count);
@@ -232,8 +244,7 @@ public class TestCounterReportsManager extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testWriteDeleteReportFile() throws Exception {
-    startService();
+  public void runTestWriteDeleteReportFile() throws Exception {
     String fileName = "testFile";
     PrintWriter writer = counterReportsManager.getReportOutputWriter(fileName);
     writer.println("test line");
@@ -248,7 +259,8 @@ public class TestCounterReportsManager extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testNotReady() throws Exception {
+  public void runTestNotReady() throws Exception {
+    counterReportsManager.stopService();
     dbManager.stopService();
     startService();
     assertEquals(false, counterReportsManager.isReady());

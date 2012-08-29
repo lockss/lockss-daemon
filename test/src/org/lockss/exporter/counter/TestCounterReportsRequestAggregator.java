@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestAggregator.java,v 1.1 2012-08-17 16:14:34 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestAggregator.java,v 1.2 2012-08-29 23:07:12 fergaloy-sf Exp $
  */
 
 /*
@@ -71,29 +71,33 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
       "select count(*) from " + SQL_TABLE_TYPE_AGGREGATES;
 
   // Query to count monthly rows of type aggregated totals.
-  private static final String SQL_QUERY_TYPE_AGGREGATED_MONTH_COUNT =
-      "select count(*) from " + SQL_TABLE_TYPE_AGGREGATES + " where "
-	  + SQL_COLUMN_REQUEST_YEAR + " = ? and " + SQL_COLUMN_REQUEST_MONTH
-	  + " = ? and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ?";
+  private static final String SQL_QUERY_TYPE_AGGREGATED_MONTH_COUNT = "select "
+      + "count(*) "
+      + "from " + SQL_TABLE_TYPE_AGGREGATES
+      + " where " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ?";
 
   // Query to get aggregated type book request counts for a month.
-  private static final String SQL_QUERY_TYPE_AGGREGATED_MONTH_BOOK_SELECT =
-      "select " + SQL_COLUMN_FULL_BOOK_REQUESTS + ","
-	  + SQL_COLUMN_SECTION_BOOK_REQUESTS + " from "
-	  + SQL_TABLE_TYPE_AGGREGATES + " where " + SQL_COLUMN_LOCKSS_ID
-	  + " = ? and " + SQL_COLUMN_REQUEST_YEAR + " = ? and "
-	  + SQL_COLUMN_REQUEST_MONTH + " = ? and "
-	  + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ?";
+  private static final String SQL_QUERY_TYPE_AGGREGATED_MONTH_BOOK_SELECT = "select "
+      + SQL_COLUMN_FULL_BOOK_REQUESTS + ","
+      + SQL_COLUMN_SECTION_BOOK_REQUESTS
+      + " from " + SQL_TABLE_TYPE_AGGREGATES
+      + " where " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ?";
 
   // Query to get aggregated type journal request counts for a month.
-  private static final String SQL_QUERY_TYPE_AGGREGATED_MONTH_JOURNAL_SELECT =
-      "select " + SQL_COLUMN_HTML_JOURNAL_REQUESTS + ","
-	  + SQL_COLUMN_PDF_JOURNAL_REQUESTS + ","
-	  + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS + " from "
-	  + SQL_TABLE_TYPE_AGGREGATES + " where " + SQL_COLUMN_LOCKSS_ID
-	  + " = ? and " + SQL_COLUMN_REQUEST_YEAR + " = ? and "
-	  + SQL_COLUMN_REQUEST_MONTH + " = ? and "
-	  + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ?";
+  private static final String SQL_QUERY_TYPE_AGGREGATED_MONTH_JOURNAL_SELECT = "select "
+      + SQL_COLUMN_HTML_JOURNAL_REQUESTS + ","
+      + SQL_COLUMN_PDF_JOURNAL_REQUESTS + ","
+      + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS
+      + " from " + SQL_TABLE_TYPE_AGGREGATES
+      + " where " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ?";
 
   // Query to count all the rows of publication year aggregated totals.
   private static final String SQL_QUERY_PUBYEAR_AGGREGATED_TOTAL_COUNT =
@@ -101,12 +105,14 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 
   // Query to get aggregated publication year journal request counts for a
   // month.
-  private static final String SQL_QUERY_PUBYEAR_AGGREGATED_MONTH_JOURNAL_SELECT =
-      "select " + SQL_COLUMN_PUBLICATION_YEAR + "," + SQL_COLUMN_REQUEST_COUNT
-	  + " from " + SQL_TABLE_PUBYEAR_AGGREGATES + " where "
-	  + SQL_COLUMN_LOCKSS_ID + " = ? and " + SQL_COLUMN_REQUEST_YEAR
-	  + " = ? and " + SQL_COLUMN_REQUEST_MONTH + " = ? and "
-	  + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ?";
+  private static final String SQL_QUERY_PUBYEAR_AGGREGATED_MONTH_JOURNAL_SELECT = "select "
+      + SQL_COLUMN_PUBLICATION_YEAR + ","
+      + SQL_COLUMN_REQUEST_COUNT
+      + " from " + SQL_TABLE_PUBYEAR_AGGREGATES
+      + " where " + SQL_COLUMN_LOCKSS_ID + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
+      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
+      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ?";
 
   private MockLockssDaemon theDaemon;
   private DbManager dbManager;
@@ -127,7 +133,8 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     props.setProperty(CounterReportsManager.PARAM_REPORT_BASEDIR_PATH,
 		      tempDirPath);
     props
-	.setProperty(CounterReportsRequestAggregator.PARAM_COUNTER_REQUEST_AGGREGATION_TASK_FREQUENCY,
+	.setProperty(CounterReportsRequestAggregator
+	             .PARAM_COUNTER_REQUEST_AGGREGATION_TASK_FREQUENCY,
 		     "hourly");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
@@ -151,16 +158,29 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
   }
 
   /**
+   * Runs all the tests.
+   * <br />
+   * This avoids unnecessary set up and tear down of the database.
+   * 
+   * @throws Exception
+   */
+  public void testAll() throws Exception {
+    runTestEmptyAggregation();
+    runTestMonthBookAggregation();
+    runTestMonthJournalAggregation();
+    runTestNextTime();
+  }
+
+  /**
    * Tests the aggregation of an empty system.
    * 
    * @throws Exception
    */
-  public void testEmptyAggregation() throws Exception {
+  public void runTestEmptyAggregation() throws Exception {
     CounterReportsRequestAggregator aggregator =
 	new CounterReportsRequestAggregator(theDaemon);
     aggregator.getCronTask().execute();
 
-    // 2 months * 2 title types * 2 publisher involvement possibilities.
     checkTypeAggregatedRowCount(0);
     checkPublicationYearAggregatedRowCount(0);
   }
@@ -189,7 +209,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
     }
 
@@ -222,7 +242,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
     }
 
@@ -234,7 +254,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testMonthBookAggregation() throws Exception {
+  public void runTestMonthBookAggregation() throws Exception {
     Map<String, Object> requestData = new HashMap<String, Object>();
     requestData.put(CounterReportsBook.IS_SECTION_KEY, Boolean.TRUE);
     requestData.put(CounterReportsBook.IS_PUBLISHER_INVOLVED_KEY, Boolean.TRUE);
@@ -266,14 +286,14 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
       if (success) {
 	try {
 	  conn.commit();
-	  dbManager.safeCloseConnection(conn);
+	  DbManager.safeCloseConnection(conn);
 	} catch (SQLException sqle) {
 	  success = false;
 	  log.error("Exception caught committing the connection", sqle);
-	  dbManager.safeRollbackAndClose(conn);
+	  DbManager.safeRollbackAndClose(conn);
 	}
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
@@ -316,7 +336,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
     }
 
@@ -358,7 +378,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 	count = resultSet.getInt(1);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
     }
 
@@ -408,7 +428,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 	sectionCount = resultSet.getInt(SQL_COLUMN_SECTION_BOOK_REQUESTS);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
     }
 
@@ -421,7 +441,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testMonthJournalAggregation() throws Exception {
+  public void runTestMonthJournalAggregation() throws Exception {
     Map<String, Object> requestData = new HashMap<String, Object>();
     requestData.put(CounterReportsJournal.IS_HTML_KEY, Boolean.FALSE);
     requestData.put(CounterReportsJournal.IS_PDF_KEY, Boolean.TRUE);
@@ -456,14 +476,14 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
       if (success) {
 	try {
 	  conn.commit();
-	  dbManager.safeCloseConnection(conn);
+	  DbManager.safeCloseConnection(conn);
 	} catch (SQLException sqle) {
 	  success = false;
 	  log.error("Exception caught committing the connection", sqle);
-	  dbManager.safeRollbackAndClose(conn);
+	  DbManager.safeRollbackAndClose(conn);
 	}
       } else {
-	dbManager.safeRollbackAndClose(conn);
+	DbManager.safeRollbackAndClose(conn);
       }
     }
 
@@ -474,8 +494,8 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 	new CounterReportsRequestAggregator(theDaemon);
     aggregator.getCronTask().execute();
 
-    checkTypeAggregatedRowCount(5);
-    checkTypeAggregatedRowCount(requestYear, requestMonth, Boolean.TRUE, 3);
+    checkTypeAggregatedRowCount(6);
+    checkTypeAggregatedRowCount(requestYear, requestMonth, Boolean.TRUE, 4);
     checkJournalMonthlyTypeRequests(journal.getLockssId(), requestYear,
 				    requestMonth, Boolean.TRUE, 0, 6, 6);
     checkPublicationYearAggregatedRowCount(1);
@@ -532,7 +552,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 	totalCount = resultSet.getInt(SQL_COLUMN_TOTAL_JOURNAL_REQUESTS);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
     }
 
@@ -585,7 +605,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 	count = resultSet.getInt(SQL_COLUMN_REQUEST_COUNT);
       }
     } finally {
-      dbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
     }
 
@@ -598,7 +618,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void testNextTime() throws Exception {
+  public void runTestNextTime() throws Exception {
     CounterReportsRequestAggregator aggregator =
 	new CounterReportsRequestAggregator(theDaemon);
 
@@ -615,7 +635,8 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     assertEquals(cal1.get(Calendar.MONTH), cal2.get(Calendar.MONTH));
     assertEquals(cal1.get(Calendar.DAY_OF_MONTH),
 		 cal2.get(Calendar.DAY_OF_MONTH));
-    assertEquals(cal1.get(Calendar.HOUR_OF_DAY), cal2.get(Calendar.HOUR_OF_DAY));
+    assertEquals(cal1.get(Calendar.HOUR_OF_DAY),
+                 cal2.get(Calendar.HOUR_OF_DAY));
     assertEquals(0, cal2.get(Calendar.MINUTE));
     assertEquals(0, cal2.get(Calendar.SECOND));
   }
