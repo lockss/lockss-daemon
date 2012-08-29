@@ -1,5 +1,5 @@
 /*
- * $Id: BaseTitleSet.java,v 1.9 2011-06-30 19:06:00 tlipkis Exp $
+ * $Id: BaseTitleSet.java,v 1.10 2012-08-29 21:11:45 tlipkis Exp $
  */
 
 /*
@@ -43,18 +43,28 @@ public abstract class BaseTitleSet implements TitleSet {
 
   protected LockssDaemon daemon;
   protected String name;
+  protected String id;
 
   public BaseTitleSet(LockssDaemon daemon, String name) {
     if (daemon == null) throw new NullPointerException("null daemon");
     if (name == null) throw new NullPointerException("null name");
     this.daemon = daemon;
     this.name = name;
+    this.id = StringUtil.toUnaccented(name);
+    if (name.equals(id)) this.id = name;
   }
 
   /** Return the human-readable name of the title set.
    * @return the name */
   public String getName() {
     return name;
+  }
+
+  /** Return the identifier of the title set (unaccented name, safe to put
+   * in HTML form attributes).
+   * @return the identifier */
+  public String getId() {
+    return id;
   }
 
   /** Return the titles in the set.

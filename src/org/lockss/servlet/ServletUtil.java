@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.78 2012-08-29 00:19:30 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.79 2012-08-29 21:11:45 tlipkis Exp $
  */
 
 /*
@@ -1270,7 +1270,7 @@ public class ServletUtil {
           if (numOk > 0) {
             isAnySelectable.setValue(true);
             tbl.add(checkbox(servlet, checkboxGroup,
-			     encodeAttr(set.getName()), false));
+			     set.getId(), false));
           }
           tbl.newCell(CHOOSESETS_CELL_ATTRIBUTES);
           String txt = encodeText(set.getName()) + " (" + numOk + ")";

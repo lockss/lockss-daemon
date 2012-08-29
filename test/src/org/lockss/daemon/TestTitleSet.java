@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSet.java,v 1.6 2012-06-20 18:58:46 thib_gc Exp $
+ * $Id: TestTitleSet.java,v 1.7 2012-08-29 21:11:45 tlipkis Exp $
  */
 
 /*
@@ -68,6 +68,18 @@ public class TestTitleSet extends LockssTestCase {
       fail("Should throw NullPointerException");
     } catch (NullPointerException e) {
     }
+  }
+
+  public void testName() throws Exception {
+    TitleSet ts1 = TitleSetXpath.create(daemon, "Title a", "[foo]");
+    TitleSet ts2 = TitleSetXpath.create(daemon, "Cedilla \u015Furf", "[foo]");
+    TitleSet ts3 = TitleSetXpath.create(daemon, "E-accent-aigu \u00E9", "[fo]");
+    assertEquals("Title a", ts1.getName());
+    assertEquals("Title a", ts1.getId());
+    assertEquals("Cedilla \u015Furf", ts2.getName());
+    assertEquals("Cedilla surf", ts2.getId());
+    assertEquals("E-accent-aigu \u00E9", ts3.getName());
+    assertEquals("E-accent-aigu e", ts3.getId());
   }
 
   public void testSort() throws Exception {

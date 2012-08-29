@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.231 2012-08-08 07:12:23 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.232 2012-08-29 21:11:45 tlipkis Exp $
  */
 
 /*
@@ -561,7 +561,7 @@ public class PluginManager
   private void installTitleSets(TreeSet<TitleSet> sets) {
     Map map = new HashMap();
     for (TitleSet ts : sets) {
-      map.put(ts.getName(), ts);
+      map.put(ts.getId(), ts);
     }
     titleSets = sets;
     titleSetMap = map;
@@ -587,7 +587,7 @@ public class PluginManager
     return null;
   }
 
-  /** Return the TitleSet name to {@link org.lockss.daemon.TitleSet}
+  /** Return the TitleSet id to {@link org.lockss.daemon.TitleSet}
    * mapping */
   public Map<String,TitleSet> getTitleSetMap() {
     return (titleSetMap != null) ? titleSetMap : Collections.EMPTY_MAP;
