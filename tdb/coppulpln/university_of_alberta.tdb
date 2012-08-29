@@ -71,12 +71,11 @@
       >
 
       param[journal_id] = cjai
-      comment[0] = seems to have gone away
 
-      au < released ; 2006 ; Canadian Journal of Arthropod Identification 2006 ; 2006 ; 2006 >
-      au < released ; 2007 ; Canadian Journal of Arthropod Identification 2007 ; 2007 ; 2007 >
-      au < released ; 2008 ; Canadian Journal of Arthropod Identification 2008 ; 2008 ; 2008 >
-      au < released ; 2009 ; Canadian Journal of Arthropod Identification 2009 ; 2009 ; 2009 >
+      au < down ; 2006 ; Canadian Journal of Arthropod Identification 2006 ; 2006 ; 2006 >
+      au < down ; 2007 ; Canadian Journal of Arthropod Identification 2007 ; 2007 ; 2007 >
+      au < down ; 2008 ; Canadian Journal of Arthropod Identification 2008 ; 2008 ; 2008 >
+      au < down ; 2009 ; Canadian Journal of Arthropod Identification 2009 ; 2009 ; 2009 >
 
     }
 

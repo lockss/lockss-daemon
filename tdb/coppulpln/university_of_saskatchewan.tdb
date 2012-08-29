@@ -54,19 +54,41 @@
     >
 
     plugin = ca.usask.plugin.etd.UniversityOfSaskatchewanETDPlugin
-    param[base_url] = http://library2.usask.ca/
     implicit < status ; year ; name ; param[year] > 
+
+    {
     
-    au < released ; 2003 ; University of Saskatchewan Electronic Theses & Dissertations 2003 ; 2003 >
-    au < released ; 2004 ; University of Saskatchewan Electronic Theses & Dissertations 2004 ; 2004 >
-    au < released ; 2005 ; University of Saskatchewan Electronic Theses & Dissertations 2005 ; 2005 >
-    au < released ; 2006 ; University of Saskatchewan Electronic Theses & Dissertations 2006 ; 2006 >
-    au < released ; 2007 ; University of Saskatchewan Electronic Theses & Dissertations 2007 ; 2007 >
-    au < released ; 2008 ; University of Saskatchewan Electronic Theses & Dissertations 2008 ; 2008 >
-    au < released ; 2009 ; University of Saskatchewan Electronic Theses & Dissertations 2009 ; 2009 >
-    au < released ; 2010 ; University of Saskatchewan Electronic Theses & Dissertations 2010 ; 2010 >
-    au < released ; 2011 ; University of Saskatchewan Electronic Theses & Dissertations 2011 ; 2011 >
-    au < released ; 2012 ; University of Saskatchewan Electronic Theses & Dissertations 2012 ; 2012 >
+      param[base_url] = http://library2.usask.ca/
+      
+      au < superseded ; 2003 ; University of Saskatchewan Electronic Theses & Dissertations 2003 [superseded] ; 2003 >
+      au < superseded ; 2004 ; University of Saskatchewan Electronic Theses & Dissertations 2004 [superseded] ; 2004 >
+      au < superseded ; 2005 ; University of Saskatchewan Electronic Theses & Dissertations 2005 [superseded] ; 2005 >
+      au < superseded ; 2006 ; University of Saskatchewan Electronic Theses & Dissertations 2006 [superseded] ; 2006 >
+      au < superseded ; 2007 ; University of Saskatchewan Electronic Theses & Dissertations 2007 [superseded] ; 2007 >
+      au < superseded ; 2008 ; University of Saskatchewan Electronic Theses & Dissertations 2008 [superseded] ; 2008 >
+      au < superseded ; 2009 ; University of Saskatchewan Electronic Theses & Dissertations 2009 [superseded] ; 2009 >
+      au < superseded ; 2010 ; University of Saskatchewan Electronic Theses & Dissertations 2010 [superseded] ; 2010 >
+      au < superseded ; 2011 ; University of Saskatchewan Electronic Theses & Dissertations 2011 [superseded] ; 2011 >
+      au < superseded ; 2012 ; University of Saskatchewan Electronic Theses & Dissertations 2012 [superseded] ; 2012 >
+
+    }
+    
+    {
+    
+      param[base_url] = http://library.usask.ca/
+      
+      au < testing ; 2003 ; University of Saskatchewan Electronic Theses & Dissertations 2003 ; 2003 >
+      au < testing ; 2004 ; University of Saskatchewan Electronic Theses & Dissertations 2004 ; 2004 >
+      au < testing ; 2005 ; University of Saskatchewan Electronic Theses & Dissertations 2005 ; 2005 >
+      au < testing ; 2006 ; University of Saskatchewan Electronic Theses & Dissertations 2006 ; 2006 >
+      au < testing ; 2007 ; University of Saskatchewan Electronic Theses & Dissertations 2007 ; 2007 >
+      au < testing ; 2008 ; University of Saskatchewan Electronic Theses & Dissertations 2008 ; 2008 >
+      au < testing ; 2009 ; University of Saskatchewan Electronic Theses & Dissertations 2009 ; 2009 >
+      au < testing ; 2010 ; University of Saskatchewan Electronic Theses & Dissertations 2010 ; 2010 >
+      au < testing ; 2011 ; University of Saskatchewan Electronic Theses & Dissertations 2011 ; 2011 >
+      au < testing ; 2012 ; University of Saskatchewan Electronic Theses & Dissertations 2012 ; 2012 >
+
+    }
     
   }
   

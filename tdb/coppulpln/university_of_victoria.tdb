@@ -23,23 +23,28 @@
   {
   
     title <
-      name = Appeal: Review of Current Law and Law Reform
+      name = Appeal: Review of Current Law and Law Reform ;
+      issn = 1205-612X ;
+      eissn = 1925-4938
     >
     
     param[journal_id] = appeal
+    
+    comment[2004] = 2004 volume does not exist
 
-    au < released ; 1995 ; Appeal: Review of Current Law and Law Reform Volume 1 ; 1995 >
-    au < released ; 1996 ; Appeal: Review of Current Law and Law Reform Volume 2 ; 1996 >
-    au < released ; 1997 ; Appeal: Review of Current Law and Law Reform Volume 3 ; 1997 >
-    au < released ; 1998 ; Appeal: Review of Current Law and Law Reform Volume 4 ; 1998 >
-    au < released ; 1999 ; Appeal: Review of Current Law and Law Reform Volume 5 ; 1999 >
-    au < released ; 2000 ; Appeal: Review of Current Law and Law Reform Volume 6 ; 2000 >
-    au < released ; 2001 ; Appeal: Review of Current Law and Law Reform Volume 7 ; 2001 >
-    au < released ; 2002 ; Appeal: Review of Current Law and Law Reform Volume 8 ; 2002 >
-    au < released ; 2003 ; Appeal: Review of Current Law and Law Reform Volume 9 ; 2003 >
-    au < released ; 2005 ; Appeal: Review of Current Law and Law Reform Volume 10 ; 2005 >
-    au < released ; 2006 ; Appeal: Review of Current Law and Law Reform Volume 11 ; 2006 >
-    au < released ; 2007 ; Appeal: Review of Current Law and Law Reform Volume 12 ; 2007 >
+    au < released ; 1995 ; Appeal: Review of Current Law and Law Reform Volume 1 [tables of contents only] ; 1995 >
+    au < released ; 1996 ; Appeal: Review of Current Law and Law Reform Volume 2 [tables of contents only] ; 1996 >
+    au < released ; 1997 ; Appeal: Review of Current Law and Law Reform Volume 3 [tables of contents only] ; 1997 >
+    au < released ; 1998 ; Appeal: Review of Current Law and Law Reform Volume 4 [tables of contents only] ; 1998 >
+    au < released ; 1999 ; Appeal: Review of Current Law and Law Reform Volume 5 [tables of contents only] ; 1999 >
+    au < released ; 2000 ; Appeal: Review of Current Law and Law Reform Volume 6 [tables of contents only] ; 2000 >
+    au < released ; 2001 ; Appeal: Review of Current Law and Law Reform Volume 7 [tables of contents only] ; 2001 >
+    au < released ; 2002 ; Appeal: Review of Current Law and Law Reform Volume 8 [tables of contents only] ; 2002 >
+    au < released ; 2003 ; Appeal: Review of Current Law and Law Reform Volume 9 [tables of contents only] ; 2003 >
+
+    au < released ; 2005 ; Appeal: Review of Current Law and Law Reform Volume 10 [tables of contents only] ; 2005 >
+    au < released ; 2006 ; Appeal: Review of Current Law and Law Reform Volume 11 [tables of contents only] ; 2006 >
+    au < released ; 2007 ; Appeal: Review of Current Law and Law Reform Volume 12 [tables of contents only] ; 2007 >
     au < released ; 2008 ; Appeal: Review of Current Law and Law Reform Volume 13 ; 2008 >
     au < released ; 2009 ; Appeal: Review of Current Law and Law Reform Volume 14 ; 2009 >
     au < released ; 2010 ; Appeal: Review of Current Law and Law Reform Volume 15 ; 2010 >
