@@ -15,6 +15,7 @@
       issnl = 1221-0803
     >
     
+    rights = openaccess
     plugin = org.lockss.plugin.bepress.BePressPlugin 
     param[base_url] = http://scholarcommons.usf.edu/
     param[journal_abbr] = geologia
