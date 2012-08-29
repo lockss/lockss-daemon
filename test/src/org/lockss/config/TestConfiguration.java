@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.18 2012-05-30 08:28:49 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.19 2012-08-29 00:17:31 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.config.TdbAu;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
 import org.lockss.test.*;
+import static org.lockss.config.Configuration.Differences;
 
 /**
  * Test class for <code>org.lockss.util.Configuration</code>
@@ -77,26 +78,30 @@ public class TestConfiguration extends LockssTestCase {
   }
 
   private Tdb newTdb() throws TdbException {
+    return newTdb("");
+  }
+
+  private Tdb newTdb(String pref) throws TdbException {
     Tdb tdb = new Tdb();
     TdbPublisher p1 = new TdbPublisher("p1");
     // create title with 2 aus with different plugins
     TdbTitle t1p1 = new TdbTitle("t1p1", "0000-0001");
     p1.addTdbTitle(t1p1);
-    TdbAu a1t1p1 = new TdbAu("a1t1p1", "plugin_t1p1");
-    a1t1p1.setParam("auName", "a1t1p1");  // distinguishing parameter
+    TdbAu a1t1p1 = new TdbAu(pref + "a1t1p1", pref + "plugin_t1p1");
+    a1t1p1.setParam("auName", pref + "a1t1p1");  // distinguishing parameter
     t1p1.addTdbAu(a1t1p1);
-    TdbAu a2t1p1 = new TdbAu("a2t1p1", "plugin_t1p1");
-    a2t1p1.setParam("auName", "a2t1p1");  // distinguishing parameter
+    TdbAu a2t1p1 = new TdbAu(pref + "a2t1p1", pref + "plugin_t1p1");
+    a2t1p1.setParam("auName", pref + "a2t1p1");  // distinguishing parameter
     t1p1.addTdbAu(a2t1p1);
 
     // create title with 2 aus with the same plugin
     TdbTitle t2p1 = new TdbTitle("t2p1", "0000-0002");
     p1.addTdbTitle(t2p1);
-    TdbAu a1t2p1 = new TdbAu("a1t2p1", "plugin_t2p1");
-    a1t2p1.setParam("auName", "a1t2p1");  // distinguishing parameter
+    TdbAu a1t2p1 = new TdbAu(pref + "a1t2p1", pref + "plugin_t2p1");
+    a1t2p1.setParam("auName", pref + "a1t2p1");  // distinguishing parameter
     t2p1.addTdbAu(a1t2p1);
-    TdbAu a2t2p1 = new TdbAu("a2t2p1", "plugin_t2p1");
-    a2t2p1.setParam("auName", "a2t2p1");  // distinguishing parameter
+    TdbAu a2t2p1 = new TdbAu(pref + "a2t2p1", pref + "plugin_t2p1");
+    a2t2p1.setParam("auName", pref + "a2t2p1");  // distinguishing parameter
     t2p1.addTdbAu(a2t2p1);
 
 
@@ -323,6 +328,81 @@ public class TestConfiguration extends LockssTestCase {
     Configuration c4 = c1.copy();
     c4.put("c", "4");
     assertNotEquals(c1, c4);
+  }
+
+  public void testDifferencesNullOrEmpty(Configuration other)
+      throws TdbException {
+    Configuration c1 = newConfiguration();
+    c1.put("a", "1");
+    c1.put("b", "2");
+    c1.put("b.x", "3");
+    Tdb tdb1 = newTdb();
+    c1.setTdb(tdb1);
+    Differences diffs = c1.differences(other);
+    assertTrue(diffs.isAllKeys());
+    assertSame(c1.keySet(), diffs.getDifferenceSet());
+    assertEquals(4, diffs.getTdbAuDifferenceCount());
+    assertEquals(SetUtil.set("plugin_t1p1", "plugin_t2p1"),
+		 diffs.getTdbDifferencePluginIds());
+  }
+
+  public void testDifferencesNull() throws TdbException {
+    testDifferencesNullOrEmpty(null);
+  }
+
+  public void testDifferencesEmpty() throws TdbException {
+    testDifferencesNullOrEmpty(newConfiguration());
+  }
+
+  public void testDifferencesSelfEmpty()
+      throws TdbException {
+    Configuration c1 = newConfiguration();
+    Configuration c2 = newConfiguration();
+    c2.put("a", "1");
+    c2.put("b", "2");
+    c2.put("b.x", "3");
+    Tdb tdb1 = newTdb();
+    c2.setTdb(tdb1);
+    Differences diffs = c1.differences(c2);
+    assertTrue(diffs.isAllKeys());
+    assertSame(c2.keySet(), diffs.getDifferenceSet());
+    assertEquals(-4, diffs.getTdbAuDifferenceCount());
+    assertEquals(SetUtil.set("plugin_t1p1", "plugin_t2p1"),
+		 diffs.getTdbDifferencePluginIds());
+  }
+
+  public void testDifferences() throws TdbException {
+    Configuration c1 = newConfiguration();
+    c1.put("a", "1");
+    c1.put("b", "2");
+    c1.put("b.x", "3");
+    c1.put("c", "0");
+    Tdb tdb1 = newTdb();
+    c1.setTdb(tdb1);
+    Configuration c2 = newConfiguration();
+    c2.put("a", "4");
+    c2.put("b", "2");
+    c2.put("b.x", "7");
+    c2.put("b.y", "8");
+    Tdb tdb2 = newTdb("X2");
+    tdb2.copyFrom(newTdb("Y2"));
+    c2.setTdb(tdb2);
+    Differences diffs = c1.differences(c2);
+    assertFalse(diffs.isAllKeys());
+    assertEquals(SetUtil.set("a", "b", "b.", "b.x", "b.y", "c"),
+		 diffs.getDifferenceSet());
+    assertTrue(diffs.contains("a"));
+    assertTrue(diffs.contains("b"));
+    assertTrue(diffs.contains("b."));
+    assertTrue(diffs.contains("b.x"));
+
+    assertNotSame(c1.keySet(), diffs.getDifferenceSet());
+    assertEquals(-4, diffs.getTdbAuDifferenceCount());
+    assertSameElements(new String[] {"plugin_t1p1", "plugin_t2p1",
+				     "X2plugin_t1p1", "X2plugin_t2p1",
+				     "Y2plugin_t1p1", "Y2plugin_t2p1"},
+      diffs.getTdbDifferencePluginIds());
+    assertTrue(diffs.contains("a"));
   }
 
   public void testLoad() throws IOException, Configuration.InvalidParam {

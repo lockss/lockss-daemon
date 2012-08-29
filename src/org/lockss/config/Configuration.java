@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.35 2012-05-30 08:28:49 tlipkis Exp $
+ * $Id: Configuration.java,v 1.36 2012-08-29 00:17:31 tlipkis Exp $
  */
 
 /*
@@ -892,11 +892,20 @@ public abstract class Configuration {
       }
       // contains all keys if other config is null, or either config has no keys
       // (ensures Configuration differences() and equals() are translative)
-      this.containsAllKeys =    (otherConfig == null)
-                             || !otherConfig.keyIterator().hasNext()
-                             || !thisConfig.keyIterator().hasNext();
+      if ((otherConfig == null) || otherConfig.keySet().isEmpty()) {
+	this.containsAllKeys = true;
+	this.diffKeys = thisConfig.keySet();
+      } else if (thisConfig.keySet().isEmpty()) {
+	this.containsAllKeys = true;
+	this.diffKeys = otherConfig.keySet();
+      } else {
+	// call differentKeys() iff necessary.  It's expensive on huge
+	// config trees and this gets called repeatedly at start as plugins
+	// register their config callbacks.
+	this.containsAllKeys = false;
+	this.diffKeys = thisConfig.differentKeys(otherConfig);
+      }
       this.tdbAuCountDiff = thisConfig.getTdbAuCount()-((otherConfig == null) ? 0 : otherConfig.getTdbAuCount());
-      this.diffKeys = thisConfig.differentKeys(otherConfig);
       this.diffPluginIds = thisConfig.differentPluginIds(otherConfig);
     }
 
@@ -964,6 +973,11 @@ public abstract class Configuration {
      */
     public int getTdbAuDifferenceCount() {
       return tdbAuCountDiff;
+    }
+
+    // For testing
+    boolean isAllKeys() {
+      return containsAllKeys;
     }
   }
 

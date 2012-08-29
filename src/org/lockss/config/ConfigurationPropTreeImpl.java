@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.14 2012-05-30 08:28:49 tlipkis Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.15 2012-08-29 00:17:31 tlipkis Exp $
  */
 
 /*
@@ -365,8 +365,14 @@ public class ConfigurationPropTreeImpl extends Configuration {
     return res;
   }
 
+  // Cache the unmodifiable keySet so tests can compare identity
+  private Set keySet = null;
+
   public Set keySet() {
-    return Collections.unmodifiableSet(props.keySet());
+    if (keySet == null) {
+      keySet = Collections.unmodifiableSet(props.keySet());
+    }
+    return keySet;
   }
 
   public Iterator keyIterator() {
