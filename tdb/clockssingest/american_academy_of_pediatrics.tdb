@@ -437,7 +437,9 @@
 
     {
 
-      comment[0] = This is a serialized book that requires a slight change to the H10 plugin, do not process unless the change is ready
+      comment[0] = This is a serialized book. As of 8/2012 HW has not defined how book manifests will work.
+      comment[1] = Waiting for manifest pages. See RT 4877.
+      comment[2] = A new plugin will be needed. Do not process unless the change is ready.
       plugin = needs.plugin
 
       au < exists ; exists ; 2000 ; Red Book Online Volume 2000 ; 2000 >

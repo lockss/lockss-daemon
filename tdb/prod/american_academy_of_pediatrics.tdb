@@ -364,18 +364,19 @@
       issnl = 1080-0131
     >
     
-    comment[0] = This is a serialized book that requires a slight change to the H10 plugin, do not process unless the change is ready
-
     param[base_url] = http://aapredbook.aappublications.org/
     implicit < status ; year ; name ; param[volume_name] >
 
     {
     
+      comment[0] = This is a serialized book. As of 8/2012 HW has not defined how book manifests will work.
+      comment[1] = Waiting for manifest pages. See RT 4877.
+      comment[2] = A new plugin will be needed. Do not process unless the change is ready.
       plugin = needs.plugin
     
-      au < doNotProcess ; 2003 ; Red Book Online Volume 2003 ; 2003 >
-      au < doNotProcess ; 2006 ; Red Book Online Volume 2006 ; 2006 >
-      au < doNotProcess ; 2009 ; Red Book Online Volume 2009 ; 2009 >
+      au < exists ; 2003 ; Red Book Online Volume 2003 ; 2003 >
+      au < exists ; 2006 ; Red Book Online Volume 2006 ; 2006 >
+      au < exists ; 2009 ; Red Book Online Volume 2009 ; 2009 >
     
     }
 
