@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.258 2012-08-28 21:14:20 barry409 Exp $
+ * $Id: PollManager.java,v 1.259 2012-08-29 20:56:17 barry409 Exp $
  */
 
 /*
@@ -182,10 +182,6 @@ public class PollManager
   public static final String PARAM_ENABLE_POLL_STARTER_THROTTLE =
     PREFIX + "enablePollStarterThrottle";
   public static boolean DEFAULT_ENABLE_POLL_STARTER_THROTTLE = true; 
-   
-  /** If true, state machines are run in their own thread */
-  public static final String PARAM_PSM_ASYNCH = PREFIX + "psmAsynch";
-  public static final boolean DEFAULT_PSM_ASYNCH = true;
 
   /** Interval after which we'll try inviting peers that we think are not
    * in our polling group */
@@ -644,7 +640,6 @@ public class PollManager
   private boolean paramDiscardSavedPolls =
     DEFAULT_DISCARD_SAVED_POLLS;
 
-  private boolean isAsynch = DEFAULT_PSM_ASYNCH;
   private long wrongGroupRetryTime = DEFAULT_WRONG_GROUP_RETRY_TIME;
   private IpFilter noInvitationSubnetFilter = null;
   private CompoundLinearSlope v3InvitationWeightAgeCurve = null;
@@ -1702,8 +1697,6 @@ public class PollManager
       enablePollStarterThrottle =
         newConfig.getBoolean(PARAM_ENABLE_POLL_STARTER_THROTTLE,
                              DEFAULT_ENABLE_POLL_STARTER_THROTTLE);
-      isAsynch = newConfig.getBoolean(PARAM_PSM_ASYNCH,
-				      DEFAULT_PSM_ASYNCH); 
       wrongGroupRetryTime =
 	newConfig.getTimeInterval(PARAM_WRONG_GROUP_RETRY_TIME,
 				  DEFAULT_WRONG_GROUP_RETRY_TIME); 
@@ -1914,10 +1907,6 @@ public class PollManager
 	return null;
       }
     }
-  }
-
-  public boolean isAsynch() {
-    return isAsynch;
   }
 
   public long getWrongGroupRetryTime() {

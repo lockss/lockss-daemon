@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.76 2012-08-14 21:27:13 barry409 Exp $
+ * $Id: V3Voter.java,v 1.77 2012-08-29 20:56:17 barry409 Exp $
  */
 
 /*
@@ -219,7 +219,6 @@ public class V3Voter extends BasePoll {
   private File stateDir;
   private int blockErrorCount = 0;
   private int maxBlockErrorCount = V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT;
-  private boolean isAsynch;
   private SubstanceChecker subChecker;
 
   // Task used to reserve time for hashing at the start of the poll.
@@ -273,7 +272,6 @@ public class V3Voter extends BasePoll {
 
     this.pollManager = daemon.getPollManager();
     this.scomm = daemon.getStreamCommManager();
-    isAsynch = pollManager.isAsynch();
 
     int min = CurrentConfig.getIntParam(PARAM_MIN_NOMINATION_SIZE,
                                         DEFAULT_MIN_NOMINATION_SIZE);
@@ -315,7 +313,6 @@ public class V3Voter extends BasePoll {
 
     this.pollManager = daemon.getPollManager();
     this.scomm = daemon.getStreamCommManager();
-    isAsynch = pollManager.isAsynch();
     this.continuedPoll = true;
     // Restore transient state.
     PluginManager plugMgr = theDaemon.getPluginManager();
@@ -361,7 +358,7 @@ public class V3Voter extends BasePoll {
   PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {
     PsmManager mgr = theDaemon.getPsmManager();
     PsmInterp interp = mgr.newPsmInterp(stateMachine, userData);
-    interp.setThreaded(isAsynch);
+    interp.setThreaded(true);
     return interp;
   }
 
@@ -586,40 +583,22 @@ public class V3Voter extends BasePoll {
 
   protected void resumeOrStartStateMachine() {
     // Resume or start the state machine running.
-    if (isAsynch) {
-      if (continuedPoll) {
-	String msg = "Error resuming poll";
-	try {
-	  stateMachine.enqueueResume(voterUserData.getPsmState(),
-				     ehAbortPoll(msg));
-	} catch (PsmException e) {
-	  log.warning(msg, e);
-	  abortPollWithError();
-	}
-      } else {
-	String msg = "Error starting poll";
-	try {
-	  stateMachine.enqueueStart(ehAbortPoll(msg));
-	} catch (PsmException e) {
-	  log.warning(msg, e);
-	  abortPollWithError();
-	}
+    if (continuedPoll) {
+      String msg = "Error resuming poll";
+      try {
+	stateMachine.enqueueResume(voterUserData.getPsmState(),
+				   ehAbortPoll(msg));
+      } catch (PsmException e) {
+	log.warning(msg, e);
+	abortPollWithError();
       }
     } else {
-      if (continuedPoll) {
-	try {
-	  stateMachine.resume(voterUserData.getPsmState());
-	} catch (PsmException e) {
-	  log.warning("Error resuming poll", e);
-	  abortPollWithError();
-	}
-      } else {
-	try {
-	  stateMachine.start();
-	} catch (PsmException e) {
-	  log.warning("Error starting poll", e);
-	  abortPollWithError();
-	}
+      String msg = "Error starting poll";
+      try {
+	stateMachine.enqueueStart(ehAbortPoll(msg));
+      } catch (PsmException e) {
+	log.warning(msg, e);
+	abortPollWithError();
       }
     }
   }
@@ -698,22 +677,14 @@ public class V3Voter extends BasePoll {
     PsmMsgEvent evt = V3Events.fromMessage(msg);
     log.debug3("Received message: " + message.getOpcodeString() + " " + message);
     String errmsg = "State machine error";
-    if (isAsynch) {
-      stateMachine.enqueueEvent(evt, ehAbortPoll(errmsg),
-				new PsmInterp.Action() {
-				  public void eval() {
-				    msg.delete();
-				  }
-				});
-    } else {
-      try {
-	stateMachine.handleEvent(evt);
-      } catch (PsmException e) {
-	log.warning(errmsg, e);
-	abortPollWithError();
-      }
-    }
+    stateMachine.enqueueEvent(evt, ehAbortPoll(errmsg),
+			      new PsmInterp.Action() {
+				public void eval() {
+				  msg.delete();
+				}
+			      });
     // Finally, clean up after the V3LcapMessage
+    // todo(bhayes): this still needed?
     msg.delete();    
   }
 
@@ -922,17 +893,8 @@ public class V3Voter extends BasePoll {
     // wait for a vote request.
     log.debug("Hashing complete for poll " + voterUserData.getPollKey());
     String errmsg = "State machine error";
-    if (isAsynch) {
-      stateMachine.enqueueEvent(V3Events.evtHashingDone,
-				ehAbortPoll(errmsg));
-    } else {
-      try {
-	stateMachine.handleEvent(V3Events.evtHashingDone);
-      } catch (PsmException e) {
-	log.warning(errmsg, e);
-	abortPollWithError();
-      }
-    }
+    stateMachine.enqueueEvent(V3Events.evtHashingDone,
+			      ehAbortPoll(errmsg));
   }
 
   /*

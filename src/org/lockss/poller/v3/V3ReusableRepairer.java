@@ -1,5 +1,5 @@
 /*
- * $Id: V3ReusableRepairer.java,v 1.1 2012-08-28 21:14:20 barry409 Exp $
+ * $Id: V3ReusableRepairer.java,v 1.2 2012-08-29 20:56:17 barry409 Exp $
  */
 
 /*
@@ -61,8 +61,6 @@ public class V3ReusableRepairer {
   private LockssDaemon daemon;
   private PollManager pollManager;
 
-  private boolean isAsynch;
-
   private static final Logger log = Logger.getLogger("V3ReusableRepairer");
 
   /**
@@ -78,7 +76,6 @@ public class V3ReusableRepairer {
     log.debug3("Creating V3ReusableRepairer");
 
     this.pollManager = daemon.getPollManager();
-    this.isAsynch = pollManager.isAsynch();
     this.userData = new UserData();
 
     postConstruct();
@@ -92,7 +89,7 @@ public class V3ReusableRepairer {
   private PsmInterp newPsmInterp(PsmMachine stateMachine, UserData userData) {
     PsmManager mgr = daemon.getPsmManager();
     PsmInterp interp = mgr.newPsmInterp(stateMachine, userData);
-    interp.setThreaded(isAsynch);
+    interp.setThreaded(true);
     return interp;
   }
 
@@ -118,21 +115,12 @@ public class V3ReusableRepairer {
     PsmMsgEvent evt = V3Events.fromMessage(msg);
     log.debug3("Received message: " + message.getOpcodeString() + " " + message);
     String errmsg = "State machine error";
-    if (isAsynch) {
-      stateMachine.enqueueEvent(evt, ehAbortPoll(errmsg),
-				new PsmInterp.Action() {
-				  public void eval() {
-				    msg.delete();
-				  }
-				});
-    } else {
-      try {
-	stateMachine.handleEvent(evt);
-      } catch (PsmException e) {
-	log.warning(errmsg, e);
-	abort();
-      }
-    }
+    stateMachine.enqueueEvent(evt, ehAbortPoll(errmsg),
+			      new PsmInterp.Action() {
+				public void eval() {
+				  msg.delete();
+				}
+			      });
     // Finally, clean up after the V3LcapMessage
     // todo(bhayes): Really? And "finally" rather than "try/finally?"
     msg.delete();
@@ -140,21 +128,12 @@ public class V3ReusableRepairer {
 
   private void startStateMachine() {
     // start the state machine running.
-    if (isAsynch) {
-      String msg = "Error starting poll";
-      try {
-	stateMachine.enqueueStart(ehAbortPoll(msg));
-      } catch (PsmException e) {
-	log.warning(msg, e);
-	abort();
-      }
-    } else {
-      try {
-	stateMachine.start();
-      } catch (PsmException e) {
-	log.warning("Error starting poll", e);
-	abort();
-      }
+    String msg = "Error starting V3ReusableRepairer";
+    try {
+      stateMachine.enqueueStart(ehAbortPoll(msg));
+    } catch (PsmException e) {
+      log.warning(msg, e);
+      abort();
     }
   }
 

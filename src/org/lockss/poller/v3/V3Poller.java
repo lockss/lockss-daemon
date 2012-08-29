@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.125 2012-08-08 07:12:42 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.126 2012-08-29 20:56:17 barry409 Exp $
  */
 
 /*
@@ -428,7 +428,6 @@ public class V3Poller extends BasePoll {
   private int voteDeadlineMultiplier = DEFAULT_VOTE_DURATION_MULTIPLIER;
   private boolean enableDiscovery = DEFAULT_ENABLE_DISCOVERY;
   private VoteTallyCallback voteTallyCallback;
-  private boolean isAsynch;
   private boolean repairHashAllVersions = DEFAULT_REPAIR_HASH_ALL_VERSIONS;
   private boolean logUniqueVersions = DEFAULT_LOG_UNIQUE_VERSIONS;
   private boolean enableHashStats = DEFAULT_V3_ENABLE_HASH_STATS;
@@ -462,7 +461,6 @@ public class V3Poller extends BasePoll {
     this.pollManager = daemon.getPollManager();
     this.idManager = daemon.getIdentityManager();
 
-    isAsynch = pollManager.isAsynch();
     setConfig();
 
     if (hashAlg == null) hashAlg = LcapMessage.DEFAULT_HASH_ALGORITHM;
@@ -519,7 +517,6 @@ public class V3Poller extends BasePoll {
                                          " is no longer supported");
     }
     pollManager = daemon.getPollManager();
-    isAsynch = pollManager.isAsynch();
     idManager = daemon.getIdentityManager();
     setConfig();
     // Restore transient cus and pollspec in the poller state.
@@ -596,7 +593,7 @@ public class V3Poller extends BasePoll {
     PsmManager mgr = theDaemon.getPsmManager();
     PsmInterp interp = mgr.newPsmInterp(stateMachine, userData);
     interp.setName(PollUtil.makeShortPollKey(getKey()));
-    interp.setThreaded(isAsynch);
+    interp.setThreaded(true);
     return interp;
   }
 
@@ -813,34 +810,19 @@ public class V3Poller extends BasePoll {
   void startParticipant(ParticipantUserData ud, boolean resume) {
     PeerIdentity id = ud.getVoterId();
     PsmInterp interp = ud.getPsmInterp();
-    if (isAsynch) {
-      try {
-	if (resume) {
-	  String msg = "Error resuming voter";
-	  interp.enqueueResume(ud.getPsmInterpState(),
-			       ehRemoveParticipant(id, msg));
-	} else {
-	  String msg = "Error starting voter";
-	  interp.enqueueStart(ehRemoveParticipant(id, msg));
-	}
-      } catch (PsmException e) {
-	log.warning("State machine error", e);
-	removeParticipant(id);
-	// 	      stopPoll(POLLER_STATUS_ERROR);
+    try {
+      if (resume) {
+	String msg = "Error resuming voter";
+	interp.enqueueResume(ud.getPsmInterpState(),
+			     ehRemoveParticipant(id, msg));
+      } else {
+	String msg = "Error starting voter";
+	interp.enqueueStart(ehRemoveParticipant(id, msg));
       }
-    } else {
-      try {
-	if (resume) {
-	  interp.resume(ud.getPsmInterpState());
-	} else {
-	  interp.start();
-	}
-      } catch (PsmException e) {
-	log.warning("State machine error", e);
-	// CR: drop participant, don't stop entire poll.  (And at end
-	// of loop, check that there are still enough participants)
-	stopPoll(POLLER_STATUS_ERROR);
-      }
+    } catch (PsmException e) {
+      log.warning("State machine error", e);
+      removeParticipant(id);
+      // 	      stopPoll(POLLER_STATUS_ERROR);
     }
   }
 
@@ -1736,18 +1718,8 @@ public class V3Poller extends BasePoll {
       for (ParticipantUserData ud : theParticipants.values()) {
         PsmInterp interp = ud.getPsmInterp();
 	String msg = "Error processing VoteComplete";
-	if (isAsynch) {
-	    // CR: too soon.  remember error and stop poll at end of loop
-	  interp.enqueueEvent(V3Events.evtVoteComplete, ehAbortPoll(msg));
-	} else {
-	  try {
-	    interp.handleEvent(V3Events.evtVoteComplete);
-	  } catch (PsmException e) {
-	    log.warning("State machine error", e);
-	    // CR: too soon.  remember error and stop poll at end of loop
-	    stopPoll(POLLER_STATUS_ERROR);
-	  }
-	}
+	// CR: too soon.  remember error and stop poll at end of loop
+	interp.enqueueEvent(V3Events.evtVoteComplete, ehAbortPoll(msg));
         if (log.isDebug2()) {
           log.debug2("Gave peer " + ud.getVoterId()
                      + " the Vote Complete event.");
@@ -1922,15 +1894,7 @@ public class V3Poller extends BasePoll {
 	+ msg.getOpcodeString() + " from peer "
 	+ msg.getOriginatorId() + " in poll "
 	+ getKey();
-      if (isAsynch) {
-	interp.enqueueEvent(evt, ehIgnore(errmsg));
-      } else {
-	try {
-	  interp.handleEvent(evt);
-	} catch (PsmException e) {
-	  log.warning(errmsg, e);
-	}
-      }
+      interp.enqueueEvent(evt, ehIgnore(errmsg));
     } else {
       log.error("No voter user data for peer.  May have " +
                 "been removed from poll: " + msg.getOriginatorId());
