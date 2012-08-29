@@ -72,7 +72,7 @@
   
     title < 
       name = Clinical Interventions in Aging ;
-      issn = 1178-2021
+      issn = 1178-1998
     >
     
     param[journal_id] = 4
@@ -145,18 +145,18 @@
   {
   
     title < 
-      name = Targets and Therapy ;
-      issn = 1178-2005
+      name = Biologics: Targets and Therapy ;
+      issn = 1177-5491
     >
     
     param[journal_id] = 8
 
-    au < manifest ; 2007 ; Targets and Therapy Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Targets and Therapy Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Targets and Therapy Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Targets and Therapy Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Targets and Therapy Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Targets and Therapy Volume 6 ; 2012 >
+    au < manifest ; 2007 ; Biologics: Targets and Therapy Volume 1 ; 2007 >
+    au < manifest ; 2008 ; Biologics: Targets and Therapy Volume 2 ; 2008 >
+    au < manifest ; 2009 ; Biologics: Targets and Therapy Volume 3 ; 2009 >
+    au < manifest ; 2010 ; Biologics: Targets and Therapy Volume 4 ; 2010 >
+    au < manifest ; 2011 ; Biologics: Targets and Therapy Volume 5 ; 2011 >
+    au < manifest ; 2012 ; Biologics: Targets and Therapy Volume 6 ; 2012 >
     
   }
 
@@ -164,7 +164,7 @@
   
     title < 
       name = Clinical Ophthalmology ;
-      issn = 1178-1998
+      issn = 1177-5483
     >
     
     param[journal_id] = 9
