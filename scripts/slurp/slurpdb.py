@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurpdb.py,v 1.4 2012-08-25 00:38:51 thib_gc Exp $
+# $Id: slurpdb.py,v 1.5 2012-08-31 07:07:58 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.1'
+__version__ = '0.4.2'
 
 from datetime import datetime
 import MySQLdb
@@ -202,7 +202,8 @@ class SlurpDb(object):
                 last_poll_result,
                 last_completed_poll,
                 content_size,
-                disk_usage):
+                disk_usage,
+                title):
         self.__raise_if_closed()
         # Normalize
         name = self.__str_to_db(name, AUS_NAME)
@@ -216,6 +217,7 @@ class SlurpDb(object):
         last_poll = self.__datetime_to_db(last_poll)
         last_poll_result = self.__str_to_db(last_poll_result, AUS_LAST_POLL_RESULT)
         last_completed_poll = self.__datetime_to_db(last_completed_poll)
+        title = self.__str_to_db(title, AUS_TITLE)
         # Insert
         cursor = self.__cursor()
         cursor.execute('''\
@@ -223,23 +225,56 @@ class SlurpDb(object):
                 (%s, %s, %s, %s,
                     %s, %s, %s, %s,
                     %s, %s, %s, %s,
-                    %s, %s, %s, %s)
+                    %s, %s, %s, %s,
+                    %s)
                 VALUES (%%s, %%s, %%s, %%s,
                     %%s, %%s, %%s, %%s,
                     %%s, %%s, %%s, %%s,
-                    %%s, %%s, %%s, %%s)
+                    %%s, %%s, %%s, %%s,
+                    %%s)
         ''' % (AUS,
                AUS_AID, AUS_NAME, AUS_PUBLISHER, AUS_YEAR,
                AUS_REPOSITORY, AUS_CREATION_DATE, AUS_STATUS, AUS_AVAILABLE,
                AUS_LAST_CRAWL, AUS_LAST_CRAWL_RESULT, AUS_LAST_COMPLETED_CRAWL, AUS_LAST_POLL,
-               AUS_LAST_POLL_RESULT, AUS_LAST_COMPLETED_POLL, AUS_CONTENT_SIZE, AUS_DISK_USAGE),
+               AUS_LAST_POLL_RESULT, AUS_LAST_COMPLETED_POLL, AUS_CONTENT_SIZE, AUS_DISK_USAGE,
+               AUS_TITLE),
         (aid, name, publisher, year,
          repository, creation_date, status, available,
          last_crawl, last_crawl_result, last_completed_crawl, last_poll,
-         last_poll_result, last_completed_poll, content_size, disk_usage))
+         last_poll_result, last_completed_poll, content_size, disk_usage,
+         title))
         cursor.close()
         self.__commit()
         
+    def make_agreement(self,
+                       aid,
+                       peer,
+                       highest_agreement,
+                       last_agreement,
+                       highest_agreement_hint,
+                       last_agreement_hint,
+                       consensus,
+                       last_consensus):
+        # Normalize
+        peer = self.__str_to_db(peer, AGREEMENT_PEER)
+        consensus = bool(consensus.lower() == 'yes')
+        last_consensus = self.__datetime_to_db(last_consensus)
+        # Insert
+        cursor = self.__cursor()
+        cursor.execute('''\
+                INSERT INTO %s
+                (%s, %s, %s, %s,
+                    %s, %s, %s, %s)
+                VALUES (%%s, %%s, %%s, %%s,
+                    %%s, %%s, %%s, %%s)
+        ''' % (AGREEMENT,
+               AGREEMENT_AID, AGREEMENT_PEER, AGREEMENT_HIGHEST_AGREEMENT, AGREEMENT_LAST_AGREEMENT,
+               AGREEMENT_HIGHEST_AGREEMENT_HINT, AGREEMENT_LAST_AGREEMENT_HINT, AGREEMENT_CONSENSUS, AGREEMENT_LAST_CONSENSUS),
+        (aid, peer, highest_agreement, last_agreement,
+         highest_agreement_hint, last_agreement_hint, consensus, last_consensus))
+        cursor.close()
+        self.__commit()
+
     def __datetime_to_db(self, py_datetime):
         if py_datetime is None: return None
         return py_datetime.strftime(SlurpDb.DB_STRFTIME)
@@ -297,8 +332,10 @@ class SlurpDb(object):
             else: self.__update_table(tab, ver)
 
     def __create_table(self, table):
-        f = open(os.path.dirname(sys.argv[0]) + os.sep + table.name() +
-                '.' + str(table.version()) + '.sql', 'r')
+        f = open('%s%s%s.sql' % (os.path.dirname(sys.argv[0]),
+                                 os.sep,
+                                 table.name()),
+                 'r')
         s = f.read()
         f.close()
         cursor = self.__cursor()
@@ -315,9 +352,12 @@ class SlurpDb(object):
 
     def __update_table(self, table, current_version):
         while current_version < table.version():
-            f = open(os.path.dirname(sys.argv[0]) + os.sep + table.name() +
-                    '.' + str(current_version) + '.' + str(current_version + 1) +
-                    '.sql', 'r')
+            f = open('%s%s%s.%d.%d.sql' % (os.path.dirname(sys.argv[0]),
+                                           os.sep,
+                                           table.name(),
+                                           current_version,
+                                           current_version + 1),
+                     'r')
             s = f.read()
             f.close()
             cursor = self.__cursor()
@@ -387,13 +427,14 @@ SESSIONS_FLAGS = Column(SESSIONS, 'flags')
 SESSIONS_FLAGS_NONE = 0x0
 SESSIONS_FLAGS_AUIDS = 0x1
 SESSIONS_FLAGS_AUS = 0x2
+SESSIONS_FLAGS_AGREEMENT = 0x4
 
 AUIDS = Table('auids', 1)
 AUIDS_ID = Column(AUIDS, 'id')
 AUIDS_SID = Column(AUIDS, 'sid')
 AUIDS_AUID = Column(AUIDS, 'auid', 511)
 
-AUS = Table('aus', 1)
+AUS = Table('aus', 2)
 AUS_ID = Column(AUS, 'id')
 AUS_AID = Column(AUS, 'aid')
 AUS_NAME = Column(AUS, 'name', 511, 'utf-8')
@@ -411,11 +452,24 @@ AUS_LAST_POLL_RESULT = Column(AUS, 'last_poll_result', 127)
 AUS_LAST_COMPLETED_POLL = Column(AUS, 'last_completed_poll')
 AUS_CONTENT_SIZE = Column(AUS, 'content_size')
 AUS_DISK_USAGE = Column(AUS, 'disk_usage')
+AUS_TITLE = Column(AUS, 'title', 511, 'utf-8')
+
+AGREEMENT = Table('agreement', 1)
+AGREEMENT_ID = Column(AGREEMENT, 'id')
+AGREEMENT_AID = Column(AGREEMENT, 'aid')
+AGREEMENT_PEER = Column(AGREEMENT, 'peer', 31)
+AGREEMENT_HIGHEST_AGREEMENT = Column(AGREEMENT, 'highest_agreement')
+AGREEMENT_LAST_AGREEMENT = Column(AGREEMENT, 'last_agreement')
+AGREEMENT_HIGHEST_AGREEMENT_HINT = Column(AGREEMENT, 'highest_agreement_hint')
+AGREEMENT_LAST_AGREEMENT_HINT = Column(AGREEMENT, 'last_agreement_hint')
+AGREEMENT_CONSENSUS = Column(AGREEMENT, 'consensus')
+AGREEMENT_LAST_CONSENSUS = Column(AGREEMENT, 'last_consensus')
 
 ALL_TABLES = [TABLES,
               SESSIONS,
               AUIDS,
-              AUS]
+              AUS,
+              AGREEMENT]
 
 def slurpdb_option_parser(parser=None):
     if parser is None:

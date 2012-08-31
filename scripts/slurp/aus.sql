@@ -1,5 +1,5 @@
-/* Version 1 */
-/* Depends on the 'auids' tablepr */
+/* Version 2 */
+/* Depends on the 'auids' table */
 CREATE TABLE IF NOT EXISTS aus (
 
     /* A unique row ID */
@@ -52,6 +52,9 @@ CREATE TABLE IF NOT EXISTS aus (
     
     /* The AU's disk usage in MB */
     disk_usage FLOAT UNSIGNED,
+
+    /* The AU's title */
+    title VARCHAR(511) CHARACTER SET utf8,
     
     /* id is the primary key */
     PRIMARY KEY (id),

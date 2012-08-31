@@ -718,6 +718,25 @@ class Client:
         """Returns a mapping of peers to poll agreement data."""
         return dict( ( row[ 'Box' ], row.get( key, '0' ).split( '%', 1 )[ 0 ] ) for row in self._getStatusTable( 'PeerRepair', AU.auId )[ 1 ] )
 
+    def getAllAuRepairerInfo(self, auid):
+        """Returns a map from peers to a map, which maps from keys in
+        the PeerRepair table to the corresponding data. Unlike in
+        getAuRepairerInfo(), the argument is an AUID (not an AU object)
+        and the percentages are converted to float."""
+        tab = self._getStatusTable('PeerRepair', auid)[1]
+        ret = dict()
+        for row in tab:
+            d = dict()
+            for k in ['Last', 'LastAgree']:
+                d[k] = row[k]
+            for k in ['HighestPercentAgreement', 'LastPercentAgreement',
+                      'HighestPercentAgreementHint', 'LastPercentAgreementHint']:
+                v = row.get(k)
+                if v is not None: v = float(v[0:-1])
+                d[k] = v
+            ret[row['Box']] = d
+        return ret
+
     def getNoAuPeers( self, AU ):
         """Return list of peers who have said they don't have the AU."""
         return [ row[ 'Peer' ] for row in self._getStatusTable( 'NoAuPeers', AU.auId )[ 1 ] ]

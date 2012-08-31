@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurp.py,v 1.7 2012-08-25 00:38:51 thib_gc Exp $
+# $Id: slurp.py,v 1.8 2012-08-31 07:07:58 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.1'
+__version__ = '0.4.2'
 
 from datetime import datetime
 import optparse
@@ -80,13 +80,38 @@ def slurp_aus(db, ui, sid, options):
         disk_usage = summary.get('Disk Usage (MB)', None)
         if disk_usage and disk_usage.lower() == 'awaiting recalc': disk_usage = None 
         if disk_usage: disk_usage = float(disk_usage)
+        title = summary.get('Journal Title', None)
 
         db.make_au(aid, name, publisher, year_str,
             repository, creation_date, status, available,
             last_crawl, last_crawl_result, last_completed_crawl, last_poll,
-            last_poll_result, last_completed_poll, content_size, disk_usage)
+            last_poll_result, last_completed_poll, content_size, disk_usage,
+            title)
 
     db.or_session_flags(sid, slurpdb.SESSIONS_FLAGS_AUS)
+
+def slurp_agreement(db, ui, sid, options):
+    for aid, auid in db.get_auids_for_session(sid):
+        retries = 0
+        while retries <= options.daemon_ui_retries:
+            try:
+                agreement_table = ui.getAllAuRepairerInfo(auid)
+                break
+            except URLError:
+                retries = retries + 1
+        else:
+            continue # Go on to the next AUID ###FIXME
+
+        for peer, vals in agreement_table.iteritems():
+            ha = vals['HighestPercentAgreement']
+            la = vals['LastPercentAgreement']
+            hah = vals['HighestPercentAgreementHint']
+            lah = vals['LastPercentAgreementHint']
+            con = vals['Last']
+            lcon = ui_to_datetime(vals['LastAgree'])
+            db.make_agreement(aid, peer, ha, la, hah, lah, con, lcon)
+    db.or_session_flags(sid, slurpdb.SESSIONS_FLAGS_AGREEMENT)
+    
 
 def daemon_ui_connection(options):
     ui_host, ui_port_str = options.daemon_ui_host_port.split(':')
@@ -124,10 +149,13 @@ def slurp_option_parser():
                       help='Daemon UI requests time out after SECS seconds. Default: %default')
     parser.add_option('--auids',
                       action='store_true',                     
-                      help='Fills the "auids" table with the AUIDs of active AUs.')
+                      help='Gathers the active AUIDS.')
     parser.add_option('--aus',
                       action='store_true',                     
-                      help='Fills the "aus" table with data from active AUs.')
+                      help='Gathers data about the active AUs. Implies --auids')
+    parser.add_option('--agreement',
+                      action='store_true',                     
+                      help='Gathers data about peer agreement for the active AUs. Implies --auids')
     return parser
 
 def slurp_process_options(parser, options):
@@ -135,6 +163,8 @@ def slurp_process_options(parser, options):
     if ':' not in options.daemon_ui_host_port: parser.error('-D/--daemon-ui-host-port does not specify a port')
     if options.daemon_ui_user is None: parser.error('-U/--daemon-ui-user is required')
     if options.daemon_ui_pass is None: parser.error('-P/--daemon-ui-pass is required')
+    if options.aus is not None: setattr(parser.values, parser.get_option('--auids').dest, True)
+    if options.agreement is not None: setattr(parser.values, parser.get_option('--auids').dest, True)
     if options.auids is None: parser.error('No action specified')
 
 if __name__ == '__main__':
@@ -155,6 +185,7 @@ if __name__ == '__main__':
 
     if options.auids: slurp_auids(db, ui, sid)
     if options.aus: slurp_aus(db, ui, sid, options)
+    if options.agreement: slurp_agreement(db, ui, sid, options)
 
     db.end_session(sid)
     db.close_connection()
