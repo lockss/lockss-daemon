@@ -4,6 +4,9 @@
     name = Clay Minerals Society
   >
 
+	plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin 
+    implicit < status ; year; name ; param[volume_name] >
+    
   {
   
     title <
@@ -13,15 +16,7 @@
       issnl = 0009-8604
     >
     
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/    
-    param[graphics_url] = http://graphics.ingentaconnect.com/    
-    param[publisher_id] = cms
-    param[journal_id] = ccm
-    param[journal_issn] = 0009-8604
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ClayMineralsSocietyPdfTransform
-    implicit < status ; year; name ; param[volume_name] >
+    param[base_url] = http://ccm.geoscienceworld.org/
   
     au < ready ; 2002 ; Clays and Clay Minerals Volume 50 ; 50 >
     au < ready ; 2003 ; Clays and Clay Minerals Volume 51 ; 51 >

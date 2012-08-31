@@ -7,8 +7,8 @@
   comment[0] = Publisher prefers to preserve content from HW. See RT 2695
 
 
-  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-  implicit < status ; year ; name ; param[volume_name] >
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin 
+    implicit < status ; year ; name ; param[volume_name] >
  
   {
   
