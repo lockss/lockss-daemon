@@ -347,6 +347,56 @@
     au < manifest ; 2010 ; ClinicoEconomics and Outcomes Research Volume 2 ; 2010 >
     au < manifest ; 2011 ; ClinicoEconomics and Outcomes Research Volume 3 ; 2011 >
     au < manifest ; 2012 ; ClinicoEconomics and Outcomes Research Volume 4 ; 2012 >
+	    
+  }
+
+  {
+  
+    title < 
+      name = Journal of Receptor, Ligand and Channel Research ;
+      issn = 1178-699X
+    >
+    
+    param[journal_id] = 30
+
+    au < manifest ; 2008 ; Journal of Receptor, Ligand and Channel Research Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Journal of Receptor, Ligand and Channel Research Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Journal of Receptor, Ligand and Channel Research Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Journal of Receptor, Ligand and Channel Research Volume 4 ; 2011 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Local and Regional Anesthesia ;
+      issn = 1178-7112
+    >
+    
+    param[journal_id] = 31
+
+    au < manifest ; 2008 ; Local and Regional Anesthesia Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Local and Regional Anesthesia Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Local and Regional Anesthesia Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Local and Regional Anesthesia Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Local and Regional Anesthesia Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy ;
+      issn = 1178-7007
+    >
+    
+    param[journal_id] = 32
+
+    au < manifest ; 2008 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 5 ; 2012 >
     
   }
 
