@@ -6,23 +6,29 @@
   >
 
     attr[contract] = 2012
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
   {
     title <
       name = Clinical Diabetes ;
       issn =  0891-8929 ;
       eissn =  1945-4953
-      
     >
-    param[base_url] = http://clinical.diabetesjournals.org/
     
-    au < exists ; exists ; 2012 ; Clinical Diabetes Volume 30 ; 30 >
+    {
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+      param[base_url] = http://clinical.diabetesjournals.org/
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      
     
+      au < exists ; exists ; 2012 ; Clinical Diabetes Volume 30 ; 30 >
     
     }
     
-    {
+  }
+    
+  {
     
   
     title < 
@@ -31,11 +37,17 @@
       eissn = 1935-5548
   
     >   
-    param[base_url] = http://care.diabetesjournals.org/
     
-    au < exists ; exists ; 2012 ; Clinical Practice Recommendations Volume 35 ; 35 >
+    {
+     plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+     param[base_url] = http://care.diabetesjournals.org/
+     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
+      au < exists ; exists ; 2012 ; Clinical Practice Recommendations Volume 35 ; 35 >
      
 
+    }
+    
     }
   
     {
@@ -46,10 +58,17 @@
       eissn = 1939-327X
 
     >
-    param[base_url] = http://diabetes.diabetesjournals.org/
     
-    au < exists ; exists ; 2012 ; Diabetes Volume 61 ; 61 >
+    {
 
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://diabetes.diabetesjournals.org/
+      implicit < status ; status2 ;year ; name ; param[volume_name] >
+   
+      au < exists ; exists ; 2012 ; Diabetes Volume 61 ; 61 >
+
+    }
+    
     }
     
     {
@@ -60,10 +79,17 @@
       eissn = 1935-5548
   
     >
-    param[base_url] = http://care.diabetesjournals.org/
     
-    au < exists ; exists ; 2012 ; Diabetes Care Volume 35 ; 35 >
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://care.diabetesjournals.org/
+      implicit < status ; status2 ;year ; name ; param[volume_name] >
+    
+      au < exists ; exists ; 2012 ; Diabetes Care Volume 35 ; 35 >
 
+    }
+    
     }
     
     {
@@ -74,10 +100,17 @@
       eissn = 1944-1753
   
     >
-    param[base_url] = http://spectrum.diabetesjournals.org/
     
-    au < exists ; exists ; 2012 ; Diabetes Spectrum Volume 25 ; 25 >
+    {
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://spectrum.diabetesjournals.org/
+      implicit < status ; status2 ;year ; name ; param[volume_name] >
+      
+    
+      au < exists ; exists ; 2012 ; Diabetes Spectrum Volume 25 ; 25 >
 
+    }
+    
     }
     
     {
@@ -88,11 +121,15 @@
       eissn = 1939-327X
   
     >
+    
+    {
+    
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.diabetesjournals.org/
     comment[issn] = identical issn and eissn to Diabetes - this is published as a supplement to Diabetes journal
     
     au < exists ; exists ; 2012 ; Diabetes Volume 61 ; 61 >
 
     }
-    
+    }
     }
