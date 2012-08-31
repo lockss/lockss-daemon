@@ -146,7 +146,8 @@
   
     title < 
       name = Biologics: Targets and Therapy ;
-      issn = 1177-5491
+      issn = 1177-5491 ;
+      eissn = 1177-5475
     >
     
     param[journal_id] = 8
@@ -245,6 +246,107 @@
     au < manifest ; 2010 ; OncoTargets and Therapy Volume 3 ; 2010 >
     au < manifest ; 2011 ; OncoTargets and Therapy Volume 4 ; 2011 >
     au < manifest ; 2012 ; OncoTargets and Therapy Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Medical Devices: Evidence and Research ;
+      issn = 1179-1470
+    >
+    
+    param[journal_id] = 24
+
+    au < manifest ; 2008 ; Medical Devices: Evidence and Research Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Medical Devices: Evidence and Research Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Medical Devices: Evidence and Research Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Medical Devices: Evidence and Research Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Medical Devices: Evidence and Research Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Advances and Applications in Bioinformatics and Chemistry ;
+      issn = 1178-6949
+    >
+    
+    param[journal_id] = 25
+
+    au < manifest ; 2008 ; Advances and Applications in Bioinformatics and Chemistry Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Advances and Applications in Bioinformatics and Chemistry Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Advances and Applications in Bioinformatics and Chemistry Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Advances and Applications in Bioinformatics and Chemistry Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Advances and Applications in Bioinformatics and Chemistry Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Stem Cells and Cloning: Advances and Applications ;
+      issn = 1178-6957
+    >
+    
+    param[journal_id] = 26
+
+    au < manifest ; 2008 ; Stem Cells and Cloning: Advances and Applications Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Stem Cells and Cloning: Advances and Applications Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Stem Cells and Cloning: Advances and Applications Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Stem Cells and Cloning: Advances and Applications Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Stem Cells and Cloning: Advances and Applications Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Journal of Asthma and Allergy ;
+      issn = 1178-6965
+    >
+    
+    param[journal_id] = 27
+
+    au < manifest ; 2008 ; Journal of Asthma and Allergy Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Journal of Asthma and Allergy Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Journal of Asthma and Allergy Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Journal of Asthma and Allergy Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Journal of Asthma and Allergy Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Infection and Drug Resistance ;
+      issn = 1178-6973
+    >
+    
+    param[journal_id] = 28
+
+    au < manifest ; 2008 ; Infection and Drug Resistance Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Infection and Drug Resistance Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Infection and Drug Resistance Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Infection and Drug Resistance Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Infection and Drug Resistance Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = ClinicoEconomics and Outcomes Research ;
+      issn = 1178-6981
+    >
+    
+    param[journal_id] = 29
+
+    au < manifest ; 2009 ; ClinicoEconomics and Outcomes Research Volume 1 ; 2009 >
+    au < manifest ; 2010 ; ClinicoEconomics and Outcomes Research Volume 2 ; 2010 >
+    au < manifest ; 2011 ; ClinicoEconomics and Outcomes Research Volume 3 ; 2011 >
+    au < manifest ; 2012 ; ClinicoEconomics and Outcomes Research Volume 4 ; 2012 >
     
   }
 
