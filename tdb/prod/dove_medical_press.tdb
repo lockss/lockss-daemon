@@ -4,7 +4,7 @@
     name = Dove Medical Press
   >
 
-  plugin = org.lockss.plugin.dovepress.DovePressPlugin
+  plugin = needs.plugin
   param[base_url] = http://www.dovepress.com/
   implicit < status ; year ; name ; param[year] >
 
@@ -17,14 +17,14 @@
     
     param[journal_id] = 1
 
-    au < manifest ; 2005 ; Therapeutics and Clinical Risk Management Volume 1 ; 2005 >
-    au < manifest ; 2006 ; Therapeutics and Clinical Risk Management Volume 2 ; 2006 >
-    au < manifest ; 2007 ; Therapeutics and Clinical Risk Management Volume 3 ; 2007 >
-    au < manifest ; 2008 ; Therapeutics and Clinical Risk Management Volume 4 ; 2008 >
-    au < manifest ; 2009 ; Therapeutics and Clinical Risk Management Volume 5 ; 2009 >
-    au < manifest ; 2010 ; Therapeutics and Clinical Risk Management Volume 6 ; 2010 >
-    au < manifest ; 2011 ; Therapeutics and Clinical Risk Management Volume 7 ; 2011 >
-    au < manifest ; 2012 ; Therapeutics and Clinical Risk Management Volume 8 ; 2012 >
+    au < exists ; 2005 ; Therapeutics and Clinical Risk Management Volume 1 ; 2005 >
+    au < exists ; 2006 ; Therapeutics and Clinical Risk Management Volume 2 ; 2006 >
+    au < exists ; 2007 ; Therapeutics and Clinical Risk Management Volume 3 ; 2007 >
+    au < exists ; 2008 ; Therapeutics and Clinical Risk Management Volume 4 ; 2008 >
+    au < exists ; 2009 ; Therapeutics and Clinical Risk Management Volume 5 ; 2009 >
+    au < exists ; 2010 ; Therapeutics and Clinical Risk Management Volume 6 ; 2010 >
+    au < exists ; 2011 ; Therapeutics and Clinical Risk Management Volume 7 ; 2011 >
+    au < exists ; 2012 ; Therapeutics and Clinical Risk Management Volume 8 ; 2012 >
     
   }
 
@@ -37,14 +37,14 @@
     
     param[journal_id] = 2
 
-    au < manifest ; 2005 ; Vascular Health and Risk Management Volume 1 ; 2005 >
-    au < manifest ; 2006 ; Vascular Health and Risk Management Volume 2 ; 2006 >
-    au < manifest ; 2007 ; Vascular Health and Risk Management Volume 3 ; 2007 >
-    au < manifest ; 2008 ; Vascular Health and Risk Management Volume 4 ; 2008 >
-    au < manifest ; 2009 ; Vascular Health and Risk Management Volume 5 ; 2009 >
-    au < manifest ; 2010 ; Vascular Health and Risk Management Volume 6 ; 2010 >
-    au < manifest ; 2011 ; Vascular Health and Risk Management Volume 7 ; 2011 >
-    au < manifest ; 2012 ; Vascular Health and Risk Management Volume 8 ; 2012 >
+    au < exists ; 2005 ; Vascular Health and Risk Management Volume 1 ; 2005 >
+    au < exists ; 2006 ; Vascular Health and Risk Management Volume 2 ; 2006 >
+    au < exists ; 2007 ; Vascular Health and Risk Management Volume 3 ; 2007 >
+    au < exists ; 2008 ; Vascular Health and Risk Management Volume 4 ; 2008 >
+    au < exists ; 2009 ; Vascular Health and Risk Management Volume 5 ; 2009 >
+    au < exists ; 2010 ; Vascular Health and Risk Management Volume 6 ; 2010 >
+    au < exists ; 2011 ; Vascular Health and Risk Management Volume 7 ; 2011 >
+    au < exists ; 2012 ; Vascular Health and Risk Management Volume 8 ; 2012 >
     
   }
 
@@ -57,14 +57,14 @@
     
     param[journal_id] = 3
 
-    au < manifest ; 2005 ; Neuropsychiatric Disease and Treatment Volume 1 ; 2005 >
-    au < manifest ; 2006 ; Neuropsychiatric Disease and Treatment Volume 2 ; 2006 >
-    au < manifest ; 2007 ; Neuropsychiatric Disease and Treatment Volume 3 ; 2007 >
-    au < manifest ; 2008 ; Neuropsychiatric Disease and Treatment Volume 4 ; 2008 >
-    au < manifest ; 2009 ; Neuropsychiatric Disease and Treatment Volume 5 ; 2009 >
-    au < manifest ; 2010 ; Neuropsychiatric Disease and Treatment Volume 6 ; 2010 >
-    au < manifest ; 2011 ; Neuropsychiatric Disease and Treatment Volume 7 ; 2011 >
-    au < manifest ; 2012 ; Neuropsychiatric Disease and Treatment Volume 8 ; 2012 >
+    au < exists ; 2005 ; Neuropsychiatric Disease and Treatment Volume 1 ; 2005 >
+    au < exists ; 2006 ; Neuropsychiatric Disease and Treatment Volume 2 ; 2006 >
+    au < exists ; 2007 ; Neuropsychiatric Disease and Treatment Volume 3 ; 2007 >
+    au < exists ; 2008 ; Neuropsychiatric Disease and Treatment Volume 4 ; 2008 >
+    au < exists ; 2009 ; Neuropsychiatric Disease and Treatment Volume 5 ; 2009 >
+    au < exists ; 2010 ; Neuropsychiatric Disease and Treatment Volume 6 ; 2010 >
+    au < exists ; 2011 ; Neuropsychiatric Disease and Treatment Volume 7 ; 2011 >
+    au < exists ; 2012 ; Neuropsychiatric Disease and Treatment Volume 8 ; 2012 >
     
   }
 
@@ -77,13 +77,13 @@
     
     param[journal_id] = 4
 
-    au < manifest ; 2006 ; Clinical Interventions in Aging Volume 1 ; 2006 >
-    au < manifest ; 2007 ; Clinical Interventions in Aging Volume 2 ; 2007 >
-    au < manifest ; 2008 ; Clinical Interventions in Aging Volume 3 ; 2008 >
-    au < manifest ; 2009 ; Clinical Interventions in Aging Volume 4 ; 2009 >
-    au < manifest ; 2010 ; Clinical Interventions in Aging Volume 5 ; 2010 >
-    au < manifest ; 2011 ; Clinical Interventions in Aging Volume 6 ; 2011 >
-    au < manifest ; 2012 ; Clinical Interventions in Aging Volume 7 ; 2012 >
+    au < exists ; 2006 ; Clinical Interventions in Aging Volume 1 ; 2006 >
+    au < exists ; 2007 ; Clinical Interventions in Aging Volume 2 ; 2007 >
+    au < exists ; 2008 ; Clinical Interventions in Aging Volume 3 ; 2008 >
+    au < exists ; 2009 ; Clinical Interventions in Aging Volume 4 ; 2009 >
+    au < exists ; 2010 ; Clinical Interventions in Aging Volume 5 ; 2010 >
+    au < exists ; 2011 ; Clinical Interventions in Aging Volume 6 ; 2011 >
+    au < exists ; 2012 ; Clinical Interventions in Aging Volume 7 ; 2012 >
     
   }
 
@@ -96,13 +96,13 @@
     
     param[journal_id] = 5
 
-    au < manifest ; 2006 ; International Journal of Nanomedicine Volume 1 ; 2006 >
-    au < manifest ; 2007 ; International Journal of Nanomedicine Volume 2 ; 2007 >
-    au < manifest ; 2008 ; International Journal of Nanomedicine Volume 3 ; 2008 >
-    au < manifest ; 2009 ; International Journal of Nanomedicine Volume 4 ; 2009 >
-    au < manifest ; 2010 ; International Journal of Nanomedicine Volume 5 ; 2010 >
-    au < manifest ; 2011 ; International Journal of Nanomedicine Volume 6 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Nanomedicine Volume 7 ; 2012 >
+    au < exists ; 2006 ; International Journal of Nanomedicine Volume 1 ; 2006 >
+    au < exists ; 2007 ; International Journal of Nanomedicine Volume 2 ; 2007 >
+    au < exists ; 2008 ; International Journal of Nanomedicine Volume 3 ; 2008 >
+    au < exists ; 2009 ; International Journal of Nanomedicine Volume 4 ; 2009 >
+    au < exists ; 2010 ; International Journal of Nanomedicine Volume 5 ; 2010 >
+    au < exists ; 2011 ; International Journal of Nanomedicine Volume 6 ; 2011 >
+    au < exists ; 2012 ; International Journal of Nanomedicine Volume 7 ; 2012 >
     
   }
 
@@ -115,13 +115,13 @@
     
     param[journal_id] = 6
 
-    au < manifest ; 2006 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 1 ; 2006 >
-    au < manifest ; 2007 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 2 ; 2007 >
-    au < manifest ; 2008 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 3 ; 2008 >
-    au < manifest ; 2009 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 4 ; 2009 >
-    au < manifest ; 2010 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 5 ; 2010 >
-    au < manifest ; 2011 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 6 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 7 ; 2012 >
+    au < exists ; 2006 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 1 ; 2006 >
+    au < exists ; 2007 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 2 ; 2007 >
+    au < exists ; 2008 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 3 ; 2008 >
+    au < exists ; 2009 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 4 ; 2009 >
+    au < exists ; 2010 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 5 ; 2010 >
+    au < exists ; 2011 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 6 ; 2011 >
+    au < exists ; 2012 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 7 ; 2012 >
     
   }
 
@@ -134,11 +134,11 @@
     
     param[journal_id] = 7
 
-    au < manifest ; 2008 ; Journal of Multidisciplinary Healthcare Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Journal of Multidisciplinary Healthcare Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Journal of Multidisciplinary Healthcare Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Journal of Multidisciplinary Healthcare Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Journal of Multidisciplinary Healthcare Volume 5 ; 2012 >
+    au < exists ; 2008 ; Journal of Multidisciplinary Healthcare Volume 1 ; 2008 >
+    au < exists ; 2009 ; Journal of Multidisciplinary Healthcare Volume 2 ; 2009 >
+    au < exists ; 2010 ; Journal of Multidisciplinary Healthcare Volume 3 ; 2010 >
+    au < exists ; 2011 ; Journal of Multidisciplinary Healthcare Volume 4 ; 2011 >
+    au < exists ; 2012 ; Journal of Multidisciplinary Healthcare Volume 5 ; 2012 >
     
   }
 
@@ -152,12 +152,12 @@
     
     param[journal_id] = 8
 
-    au < manifest ; 2007 ; Biologics: Targets and Therapy Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Biologics: Targets and Therapy Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Biologics: Targets and Therapy Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Biologics: Targets and Therapy Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Biologics: Targets and Therapy Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Biologics: Targets and Therapy Volume 6 ; 2012 >
+    au < exists ; 2007 ; Biologics: Targets and Therapy Volume 1 ; 2007 >
+    au < exists ; 2008 ; Biologics: Targets and Therapy Volume 2 ; 2008 >
+    au < exists ; 2009 ; Biologics: Targets and Therapy Volume 3 ; 2009 >
+    au < exists ; 2010 ; Biologics: Targets and Therapy Volume 4 ; 2010 >
+    au < exists ; 2011 ; Biologics: Targets and Therapy Volume 5 ; 2011 >
+    au < exists ; 2012 ; Biologics: Targets and Therapy Volume 6 ; 2012 >
     
   }
 
@@ -170,12 +170,12 @@
     
     param[journal_id] = 9
 
-    au < manifest ; 2007 ; Clinical Ophthalmology Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Clinical Ophthalmology Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Clinical Ophthalmology Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Clinical Ophthalmology Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Clinical Ophthalmology Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Clinical Ophthalmology Volume 6 ; 2012 >
+    au < exists ; 2007 ; Clinical Ophthalmology Volume 1 ; 2007 >
+    au < exists ; 2008 ; Clinical Ophthalmology Volume 2 ; 2008 >
+    au < exists ; 2009 ; Clinical Ophthalmology Volume 3 ; 2009 >
+    au < exists ; 2010 ; Clinical Ophthalmology Volume 4 ; 2010 >
+    au < exists ; 2011 ; Clinical Ophthalmology Volume 5 ; 2011 >
+    au < exists ; 2012 ; Clinical Ophthalmology Volume 6 ; 2012 >
     
   }
 
@@ -188,11 +188,11 @@
     
     param[journal_id] = 18
 
-    au < manifest ; 2008 ; Nanotechnology, Science and Applications Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Nanotechnology, Science and Applications Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Nanotechnology, Science and Applications Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Nanotechnology, Science and Applications Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Nanotechnology, Science and Applications Volume 5 ; 2012 >
+    au < exists ; 2008 ; Nanotechnology, Science and Applications Volume 1 ; 2008 >
+    au < exists ; 2009 ; Nanotechnology, Science and Applications Volume 2 ; 2009 >
+    au < exists ; 2010 ; Nanotechnology, Science and Applications Volume 3 ; 2010 >
+    au < exists ; 2011 ; Nanotechnology, Science and Applications Volume 4 ; 2011 >
+    au < exists ; 2012 ; Nanotechnology, Science and Applications Volume 5 ; 2012 >
     
   }
 
@@ -205,12 +205,12 @@
     
     param[journal_id] = 19
 
-    au < manifest ; 2007 ; Drug Design, Development and Therapy Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Drug Design, Development and Therapy Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Drug Design, Development and Therapy Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Drug Design, Development and Therapy Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Drug Design, Development and Therapy Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Drug Design, Development and Therapy Volume 6 ; 2012 >
+    au < exists ; 2007 ; Drug Design, Development and Therapy Volume 1 ; 2007 >
+    au < exists ; 2008 ; Drug Design, Development and Therapy Volume 2 ; 2008 >
+    au < exists ; 2009 ; Drug Design, Development and Therapy Volume 3 ; 2009 >
+    au < exists ; 2010 ; Drug Design, Development and Therapy Volume 4 ; 2010 >
+    au < exists ; 2011 ; Drug Design, Development and Therapy Volume 5 ; 2011 >
+    au < exists ; 2012 ; Drug Design, Development and Therapy Volume 6 ; 2012 >
     
   }
 
@@ -223,12 +223,12 @@
     
     param[journal_id] = 20
 
-    au < manifest ; 2007 ; Patient Preference and Adherence Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Patient Preference and Adherence Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Patient Preference and Adherence Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Patient Preference and Adherence Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Patient Preference and Adherence Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Patient Preference and Adherence Volume 6 ; 2012 >
+    au < exists ; 2007 ; Patient Preference and Adherence Volume 1 ; 2007 >
+    au < exists ; 2008 ; Patient Preference and Adherence Volume 2 ; 2008 >
+    au < exists ; 2009 ; Patient Preference and Adherence Volume 3 ; 2009 >
+    au < exists ; 2010 ; Patient Preference and Adherence Volume 4 ; 2010 >
+    au < exists ; 2011 ; Patient Preference and Adherence Volume 5 ; 2011 >
+    au < exists ; 2012 ; Patient Preference and Adherence Volume 6 ; 2012 >
     
   }
 
@@ -241,11 +241,11 @@
     
     param[journal_id] = 23
 
-    au < manifest ; 2008 ; OncoTargets and Therapy Volume 1 ; 2008 >
-    au < manifest ; 2009 ; OncoTargets and Therapy Volume 2 ; 2009 >
-    au < manifest ; 2010 ; OncoTargets and Therapy Volume 3 ; 2010 >
-    au < manifest ; 2011 ; OncoTargets and Therapy Volume 4 ; 2011 >
-    au < manifest ; 2012 ; OncoTargets and Therapy Volume 5 ; 2012 >
+    au < exists ; 2008 ; OncoTargets and Therapy Volume 1 ; 2008 >
+    au < exists ; 2009 ; OncoTargets and Therapy Volume 2 ; 2009 >
+    au < exists ; 2010 ; OncoTargets and Therapy Volume 3 ; 2010 >
+    au < exists ; 2011 ; OncoTargets and Therapy Volume 4 ; 2011 >
+    au < exists ; 2012 ; OncoTargets and Therapy Volume 5 ; 2012 >
     
   }
 
@@ -258,11 +258,11 @@
     
     param[journal_id] = 24
 
-    au < manifest ; 2008 ; Medical Devices: Evidence and Research Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Medical Devices: Evidence and Research Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Medical Devices: Evidence and Research Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Medical Devices: Evidence and Research Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Medical Devices: Evidence and Research Volume 5 ; 2012 >
+    au < exists ; 2008 ; Medical Devices: Evidence and Research Volume 1 ; 2008 >
+    au < exists ; 2009 ; Medical Devices: Evidence and Research Volume 2 ; 2009 >
+    au < exists ; 2010 ; Medical Devices: Evidence and Research Volume 3 ; 2010 >
+    au < exists ; 2011 ; Medical Devices: Evidence and Research Volume 4 ; 2011 >
+    au < exists ; 2012 ; Medical Devices: Evidence and Research Volume 5 ; 2012 >
     
   }
 
@@ -275,11 +275,11 @@
     
     param[journal_id] = 25
 
-    au < manifest ; 2008 ; Advances and Applications in Bioinformatics and Chemistry Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Advances and Applications in Bioinformatics and Chemistry Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Advances and Applications in Bioinformatics and Chemistry Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Advances and Applications in Bioinformatics and Chemistry Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Advances and Applications in Bioinformatics and Chemistry Volume 5 ; 2012 >
+    au < exists ; 2008 ; Advances and Applications in Bioinformatics and Chemistry Volume 1 ; 2008 >
+    au < exists ; 2009 ; Advances and Applications in Bioinformatics and Chemistry Volume 2 ; 2009 >
+    au < exists ; 2010 ; Advances and Applications in Bioinformatics and Chemistry Volume 3 ; 2010 >
+    au < exists ; 2011 ; Advances and Applications in Bioinformatics and Chemistry Volume 4 ; 2011 >
+    au < exists ; 2012 ; Advances and Applications in Bioinformatics and Chemistry Volume 5 ; 2012 >
     
   }
 
@@ -292,11 +292,11 @@
     
     param[journal_id] = 26
 
-    au < manifest ; 2008 ; Stem Cells and Cloning: Advances and Applications Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Stem Cells and Cloning: Advances and Applications Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Stem Cells and Cloning: Advances and Applications Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Stem Cells and Cloning: Advances and Applications Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Stem Cells and Cloning: Advances and Applications Volume 5 ; 2012 >
+    au < exists ; 2008 ; Stem Cells and Cloning: Advances and Applications Volume 1 ; 2008 >
+    au < exists ; 2009 ; Stem Cells and Cloning: Advances and Applications Volume 2 ; 2009 >
+    au < exists ; 2010 ; Stem Cells and Cloning: Advances and Applications Volume 3 ; 2010 >
+    au < exists ; 2011 ; Stem Cells and Cloning: Advances and Applications Volume 4 ; 2011 >
+    au < exists ; 2012 ; Stem Cells and Cloning: Advances and Applications Volume 5 ; 2012 >
     
   }
 
@@ -309,11 +309,11 @@
     
     param[journal_id] = 27
 
-    au < manifest ; 2008 ; Journal of Asthma and Allergy Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Journal of Asthma and Allergy Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Journal of Asthma and Allergy Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Journal of Asthma and Allergy Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Journal of Asthma and Allergy Volume 5 ; 2012 >
+    au < exists ; 2008 ; Journal of Asthma and Allergy Volume 1 ; 2008 >
+    au < exists ; 2009 ; Journal of Asthma and Allergy Volume 2 ; 2009 >
+    au < exists ; 2010 ; Journal of Asthma and Allergy Volume 3 ; 2010 >
+    au < exists ; 2011 ; Journal of Asthma and Allergy Volume 4 ; 2011 >
+    au < exists ; 2012 ; Journal of Asthma and Allergy Volume 5 ; 2012 >
     
   }
 
@@ -326,11 +326,11 @@
     
     param[journal_id] = 28
 
-    au < manifest ; 2008 ; Infection and Drug Resistance Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Infection and Drug Resistance Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Infection and Drug Resistance Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Infection and Drug Resistance Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Infection and Drug Resistance Volume 5 ; 2012 >
+    au < exists ; 2008 ; Infection and Drug Resistance Volume 1 ; 2008 >
+    au < exists ; 2009 ; Infection and Drug Resistance Volume 2 ; 2009 >
+    au < exists ; 2010 ; Infection and Drug Resistance Volume 3 ; 2010 >
+    au < exists ; 2011 ; Infection and Drug Resistance Volume 4 ; 2011 >
+    au < exists ; 2012 ; Infection and Drug Resistance Volume 5 ; 2012 >
     
   }
 
@@ -343,10 +343,10 @@
     
     param[journal_id] = 29
 
-    au < manifest ; 2009 ; ClinicoEconomics and Outcomes Research Volume 1 ; 2009 >
-    au < manifest ; 2010 ; ClinicoEconomics and Outcomes Research Volume 2 ; 2010 >
-    au < manifest ; 2011 ; ClinicoEconomics and Outcomes Research Volume 3 ; 2011 >
-    au < manifest ; 2012 ; ClinicoEconomics and Outcomes Research Volume 4 ; 2012 >
+    au < exists ; 2009 ; ClinicoEconomics and Outcomes Research Volume 1 ; 2009 >
+    au < exists ; 2010 ; ClinicoEconomics and Outcomes Research Volume 2 ; 2010 >
+    au < exists ; 2011 ; ClinicoEconomics and Outcomes Research Volume 3 ; 2011 >
+    au < exists ; 2012 ; ClinicoEconomics and Outcomes Research Volume 4 ; 2012 >
 	    
   }
 
@@ -359,10 +359,10 @@
     
     param[journal_id] = 30
 
-    au < manifest ; 2008 ; Journal of Receptor, Ligand and Channel Research Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Journal of Receptor, Ligand and Channel Research Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Journal of Receptor, Ligand and Channel Research Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Journal of Receptor, Ligand and Channel Research Volume 4 ; 2011 >
+    au < exists ; 2008 ; Journal of Receptor, Ligand and Channel Research Volume 1 ; 2008 >
+    au < exists ; 2009 ; Journal of Receptor, Ligand and Channel Research Volume 2 ; 2009 >
+    au < exists ; 2010 ; Journal of Receptor, Ligand and Channel Research Volume 3 ; 2010 >
+    au < exists ; 2011 ; Journal of Receptor, Ligand and Channel Research Volume 4 ; 2011 >
     
   }
 
@@ -375,11 +375,11 @@
     
     param[journal_id] = 31
 
-    au < manifest ; 2008 ; Local and Regional Anesthesia Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Local and Regional Anesthesia Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Local and Regional Anesthesia Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Local and Regional Anesthesia Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Local and Regional Anesthesia Volume 5 ; 2012 >
+    au < exists ; 2008 ; Local and Regional Anesthesia Volume 1 ; 2008 >
+    au < exists ; 2009 ; Local and Regional Anesthesia Volume 2 ; 2009 >
+    au < exists ; 2010 ; Local and Regional Anesthesia Volume 3 ; 2010 >
+    au < exists ; 2011 ; Local and Regional Anesthesia Volume 4 ; 2011 >
+    au < exists ; 2012 ; Local and Regional Anesthesia Volume 5 ; 2012 >
     
   }
 
@@ -392,11 +392,11 @@
     
     param[journal_id] = 32
 
-    au < manifest ; 2008 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 5 ; 2012 >
+    au < exists ; 2008 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 1 ; 2008 >
+    au < exists ; 2009 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 2 ; 2009 >
+    au < exists ; 2010 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 3 ; 2010 >
+    au < exists ; 2011 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 4 ; 2011 >
+    au < exists ; 2012 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 5 ; 2012 >
     
   }
 
