@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.22 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.23 2012-09-03 16:39:09 easyonthemayo Exp $
  */
 
 /*
 
-Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -150,7 +150,10 @@ public class HtmlKbartExporter extends KbartExporter {
     
     // Add an index column at the start
     printWriter.printf("<td>%s</td>", this.exportCount);
-    
+
+    // Add custom field value if present
+    filter.addConstantFieldIfPresent(values);
+
     for (int i=0; i<values.size(); i++) {
       String val = values.get(i);
       if (StringUtil.isNullString(val)) val = "&nbsp;";
@@ -243,7 +246,7 @@ public class HtmlKbartExporter extends KbartExporter {
    * Find the index of the named field in the current output. If the field
    * cannot be found, returns -1. 
    * @param field a field
-   * @return the index ofthe named field, or -1
+   * @return the index of the named field, or -1
    */
   private int findFieldIndex(Field field) {
     List<String> labs = getFieldLabels();
@@ -259,9 +262,16 @@ public class HtmlKbartExporter extends KbartExporter {
    * @return
    */
   private String makeHeader() {
-    return String.format("<tr><th>index</th><th>%s</th></tr>",
-	StringUtil.separatedString(filter.getColumnLabels(scope), "</th><th>")	
-    );
+    StringBuilder sb = new StringBuilder("<tr><th>index</th>");
+    List<String> labels = filter.getColumnLabels(scope);
+    // If there is a custom column, insert it into the labels list
+    filter.addConstantFieldIfPresent(labels);
+    // Combine all the column labels
+    for (int i=0; i<labels.size(); i++) {
+      sb.append("<th>").append(labels.get(i)).append("</th>");
+    }
+    sb.append("</tr>");
+    return sb.toString();
   }
 
   @Override

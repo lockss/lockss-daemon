@@ -1,10 +1,10 @@
 /*
- * $Id: SeparatedValuesKbartExporter.java,v 1.8 2012-02-24 15:39:57 easyonthemayo Exp $
+ * $Id: SeparatedValuesKbartExporter.java,v 1.9 2012-09-03 16:39:09 easyonthemayo Exp $
  */
 
 /*
 
-Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,6 @@ package org.lockss.exporter.kbart;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.util.List;
 
 import org.lockss.util.Logger;
@@ -100,17 +99,19 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
   }
   
   /**
-   * Construct a CSV-formatted record from a list of values.
+   * Construct a CSV-formatted record from a list of string values.
    * @param values list of field values
    * @return a properly formatted CSV row representing the data
    */
-  protected <T> String constructRecord(List<T> values) {
+  protected String constructRecord(List<String> values) {
+    // Add custom field value if present
+    filter.addConstantFieldIfPresent(values);
     // If using a comma, encode as CSV with appropriate quoting and escaping
     if (SEPARATOR == SEPARATOR_COMMA) {
       StringBuilder sb = new StringBuilder();
       // Build the string for those values which need the separator appended
       for (int i=0; i<values.size()-1; i++) {
-	sb.append(StringUtil.csvEncode(values.get(i).toString()) + SEPARATOR);
+        sb.append(StringUtil.csvEncode(values.get(i).toString()) + SEPARATOR);
       }
       // Add the last item
       sb.append(StringUtil.csvEncode(values.get(values.size()-1).toString()));

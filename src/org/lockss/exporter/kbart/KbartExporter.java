@@ -1,10 +1,10 @@
 /*
- * $Id: KbartExporter.java,v 1.23 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.24 2012-09-03 16:39:09 easyonthemayo Exp $
  */
 
 /*
 
-Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,7 +52,7 @@ import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.mortbay.html.Composite;
-import org.mortbay.html.Form;
+
 
 /**
  * Export the metadata from the LOCKSS holdings according to
@@ -172,7 +172,6 @@ public abstract class KbartExporter {
   /** Whether to auto flush the writer streams. */
   protected static final boolean AUTO_FLUSH = true;
 
-
   /**
    * Default constructor takes a list of KbartTitle objects to be exported.
    * Creates an export filter and sorts the titles. Due to this sorting,
@@ -212,15 +211,21 @@ public abstract class KbartExporter {
     this.filter = filter;
     // Use the filter to sort the titles for custom output
     filter.sortTitlesByFirstTwoFields();
+    // Set cols based on filter
+    KbartExportFilter.FieldOrdering ordering = filter.getFieldOrdering();
   }
-  
+
   /**
    * Return a list of field labels post-filtering. This will not include
-   * the labels of omitted fields.
+   * the labels of omitted fields, but will include any label of a custom
+   * constant column.
    * @return a list of field labels
    */
   protected List<String> getFieldLabels() {
-    return Field.getLabels(filter.getVisibleFieldOrder());
+    List<String> labs = Field.getLabels(filter.getVisibleFieldOrder());
+    // If there is a custom column, insert it
+    filter.addConstantFieldIfPresent(labs);
+    return labs;
   }
 
   
@@ -544,7 +549,7 @@ public abstract class KbartExporter {
     //if (!isHtml) throw new UnsupportedOperationException();
     if (this.outputFormat.isHtml) this.customForm = form;
   }
-  
+
   /** 
    * Enumeration of <code>KbartExporter</code> types and factories for their 
    * creation. 

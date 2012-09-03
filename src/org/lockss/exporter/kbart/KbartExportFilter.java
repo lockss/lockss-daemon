@@ -1,10 +1,10 @@
 /*
- * $Id: KbartExportFilter.java,v 1.12 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.13 2012-09-03 16:39:09 easyonthemayo Exp $
  */
 
 /*
 
-Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,9 @@ package org.lockss.exporter.kbart;
 import java.util.*;
 
 import org.apache.commons.collections.comparators.ComparatorChain;
+import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
+import org.apache.derby.iapi.services.io.ArrayUtil;
 import org.lockss.config.TdbUtil.ContentScope;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import static org.lockss.exporter.kbart.KbartTitle.Field.*;
@@ -318,7 +320,7 @@ public class KbartExportFilter {
   /**
    * Get a list of strings representing the labels for display columns. This
    * will include all the labels of visible fields, plus any extra columns 
-   * such as health rating.
+   * such as health rating. It does not include custom constant field
    * 
    * @param scope the scope of the export
    * @return a list of labels for the exported columns of data
@@ -471,9 +473,38 @@ public class KbartExportFilter {
     if (isOutput) lastOutputTitle = currentTitle;
     return isOutput;
   }
-  
-  
-  
+
+
+  /**
+   * If there is a custom field, add its value in the appropriate place in the
+   * given list of values.
+   * @param values a list of string values
+   */
+  protected void addConstantFieldIfPresent(List<String> values) {
+    if (fieldOrdering instanceof CustomFieldOrdering) {
+      if (hasCustomColumn(fieldOrdering)) {
+        CustomFieldOrdering cfo = (CustomFieldOrdering) fieldOrdering;
+        if (cfo.getConstantColumnInd() < values.size())
+          values.add(cfo.getConstantColumnInd(), cfo.getConstantColumnStr());
+        else values.add(cfo.getConstantColumnStr());
+      }
+    }
+  }
+
+  /**
+   * Whether a custom column is defined, which requires a CustomFieldOrdering.
+   * @return whether a custom column is defined.
+   */
+  public final static boolean hasCustomColumn(FieldOrdering fo) {
+    if (fo instanceof CustomFieldOrdering) {
+      return !StringUtil.isNullString(
+          ((CustomFieldOrdering)fo).getConstantColumnStr()
+      );
+    }
+    else return false;
+  }
+
+
   /**
    * A convenient way of storing a field ordering as both an ordered list and 
    * an unordered but more efficient set. This is to save converting between them
@@ -489,6 +520,9 @@ public class KbartExportFilter {
     public abstract EnumSet<Field> getFields();
     public abstract List<Field> getOrdering();
     //public abstract FieldOrdering getDefaultOrdering();
+    /** Return an ordered list of labels for the ordering; this will include
+     * any additional custom column with constant value, and therefore does not
+     * necessarily match the list of KbartTitle.Fields which are in the ordering. */
     public abstract List<String> getOrderedLabels();
   }
   
@@ -507,7 +541,12 @@ public class KbartExportFilter {
     public final List<Field> ordering;
     /** An ordered list of labels for the fields. */ 
     public final List<String> orderedLabels;
-    
+
+    /** A string to be inserted in every row under a custom column. */
+    private String constantColumnStr;
+    /** The index of that column if the string is non-empty (zero-based). */
+    private int constantColumnInd;
+
     /** The standard KBART field ordering. */
     private static final FieldOrdering KBART_ORDERING = 
         new CustomFieldOrdering(new ArrayList<Field>(Field.getFieldSet()));
@@ -517,6 +556,12 @@ public class KbartExportFilter {
      * custom ordering. This may be any combination of whitespace. 
      */
     public static final String CUSTOM_ORDERING_FIELD_SEPARATOR = "\n";
+    /**
+     * A regular expression representing characters used to separate field names
+     * in the specification of a custom ordering. Splits on line break and/or
+     * carriage return.
+     */
+    private static final String CUSTOM_ORDERING_FIELD_SEPARATOR_REGEX = "[\n\r]+";
     
     //private static final CustomFieldOrdering defaultOrdering = new CustomFieldOrdering(Arrays.asList(Field.values()));
     
@@ -548,20 +593,48 @@ public class KbartExportFilter {
     /**
      * Create a custom field ordering from a string containing a list of field 
      * labels separated by whitespace (specifically the 
-     * <code>CUSTOM_ORDERING_FIELD_SEPARATOR</code>).
+     * <code>CUSTOM_ORDERING_FIELD_SEPARATOR_REGEX</code>).
+     * <p>
+     * The ordering string must contain only valid field names separated by line
+     * returns ("\n" and/or "\r"), except for one exception; if it contains a
+     * quoted string on its own line, an extra column will be created in that
+     * position, containing only that string in every position including the
+     * header row. The string can include escaped characters.
+
      * @param orderStr a string of field labels separated by whitespace
      */
     public CustomFieldOrdering(String orderStr) throws CustomFieldOrderingException {
-      // Use ListUtil to make list, so we get an ArrayList which implements 
-      // both add() methods
-      this.orderedLabels = ListUtil.fromArray(StringUtils.split(orderStr.toLowerCase(),
-          CUSTOM_ORDERING_FIELD_SEPARATOR));
+      // First set the orderedLabels, which will include Fields plus any constant column
+      this.orderedLabels = splitCustomOrderingString(orderStr);
+      // If there is a quote, there is a constant field; record it separately
+      // from the rest of the field ordering, and remove it.
+      String quote= "\"";
+      String quotedString = null;
+      if (orderStr.indexOf(quote) > -1) {
+        for (String s : orderedLabels) {
+          // If we have found the string with the quote, first try and process it,
+          // then remove it and rebuild the custom ordering string.
+          if (s.startsWith(quote)) {
+            quotedString = s;
+            // If it holds a valid quoted string, process that
+            if (s.endsWith(quote) && s.length()>2) {
+              constantColumnStr = s.substring(1, s.length()-1);
+              constantColumnInd = orderedLabels.indexOf(s);
+              // Replace the quoted string
+              //orderedLabels.add(constantColumnInd, constantColumnStr);
+              break;
+            }
+          }
+        }
+      }
+      //System.out.format("Custom string \"%s\" index %s \n", constantColumnStr, constantColumnInd);
+
       // Create the Field ordering
       this.ordering = new ArrayList<Field>();
       for (String s : orderedLabels) {
         s = s.trim();
-        // Ignore white space lines
-        if (s.isEmpty()) continue;
+        // Ignore white space lines and constant value fields
+        if (s.isEmpty() || s.equals(quote+constantColumnStr+quote)) continue;
         Field f = labelFields.get(s);
         // Throw exception if the label is not valid
         if (f==null) throw new CustomFieldOrderingException(s,
@@ -583,6 +656,29 @@ public class KbartExportFilter {
       }
       this.fields = EnumSet.copyOf(this.ordering);
     }
+
+    /**
+     * Split a CustomOrdering string, like those supplied via the user interface,
+     * into individual strings. This does not check whether those strings are
+     * valid field names. It is just a convenience method for ListHoldings.
+     * @param orderStr
+     * @return
+     */
+    public static List<String> splitCustomOrderingString(String orderStr) {
+      // Use ListUtil to make list, so we get an ArrayList which implements
+      // both add() methods
+      /*return ListUtil.fromArray(StringUtils.split(orderStr.toLowerCase(),
+          CUSTOM_ORDERING_FIELD_SEPARATOR));*/
+      // Also trim whitespace from field strings, and omit empties
+      String[] arr = orderStr.toLowerCase().split(CUSTOM_ORDERING_FIELD_SEPARATOR_REGEX);
+      List<String> list = new ArrayList<String>();
+      for (String s : arr) {
+        s = s.trim();
+        if (s.length()!=0) list.add(s);
+      }
+      return list;
+    }
+
     
     public EnumSet<Field> getFields() {
       return this.fields;
@@ -593,7 +689,13 @@ public class KbartExportFilter {
     public List<String> getOrderedLabels() {
       return orderedLabels;
     }
- 
+    public String getConstantColumnStr() {
+      return constantColumnStr;
+    }
+    public int getConstantColumnInd() {
+      return constantColumnInd;
+    }
+
     public String toString() {
       return "" + StringUtil.separatedString(orderedLabels, 
           "CustomFieldOrdering(", " | ", ")");
