@@ -15760,6 +15760,26 @@
   {
 
     title <
+      name = Progress of Theoretical and Experimental Physics (PTEP) ;
+      eissn = 2050-3911 ;
+      issnl = 2050-3911
+    >
+
+    {
+
+    param[base_url] = http://ptep.oxfordjournals.org/
+    plugin = ??
+    implicit < status ; year ; name ; param[volume] >
+
+    au < exists ; 2013 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = Protein Engineering, Design & Selection : PEDS ;
       issn = 1741-0126 ;
       eissn = 1741-0134 ;
