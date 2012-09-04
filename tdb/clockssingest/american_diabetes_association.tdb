@@ -30,6 +30,22 @@
       au < exists ; exists ; 2012 ; Clinical Diabetes Volume 30 ; 30 >
     
     }
+    
+    {
+    
+    title < 
+      name = Clinical Practice Recommendations ;
+      issn = 0149-5992 ;
+      eissn = 1935-5548
+  
+    >   
+    
+     param[base_url] = http://care.diabetesjournals.org/
+    
+      au < exists ; exists ; 2012 ; Clinical Practice Recommendations Volume 35 ; 35 >
+     
+
+    }
   
     {
   
@@ -105,7 +121,6 @@
     >
       param[base_url] = http://care.diabetesjournals.org/
       comment[supplement] = Clinical Practice Recommendations - this is published as a supplement to Diabetes Care journal
-
 
       au < exists ; exists ; 1978 ; Diabetes Care Volume 1 [abstracts only] ; 1 >
       au < exists ; exists ; 1979 ; Diabetes Care Volume 2 [abstracts only] ; 2 >
@@ -191,4 +206,33 @@
 
     }
 
-   }
+    {
+  
+    title < 
+      name = Scientific Sessions Abstract Book ; 
+      issn =  0012-1797 ;
+      eissn = 1939-327X
+  
+    >
+    param[base_url] = http://www.diabetesjournals.org/
+    comment[issn] = identical issn and eissn to Diabetes - this is published as a supplement to Diabetes journal
+    
+    au < exists ; exists ; 1998 ; Diabetes Volume 47 ; 47 >
+    au < exists ; exists ; 1999 ; Diabetes Volume 48 ; 48 >
+    au < exists ; exists ; 2000 ; Diabetes Volume 49 ; 49 >
+    au < exists ; exists ; 2001 ; Diabetes Volume 50 ; 50 >
+    au < exists ; exists ; 2002 ; Diabetes Volume 51 ; 51 >
+    au < exists ; exists ; 2003 ; Diabetes Volume 52 ; 52 >
+    au < exists ; exists ; 2004 ; Diabetes Volume 53 ; 53 >
+    au < exists ; exists ; 2005 ; Diabetes Volume 54 ; 54 >
+    au < exists ; exists ; 2006 ; Diabetes Volume 55 ; 55 >
+    au < exists ; exists ; 2007 ; Diabetes Volume 56 ; 56 >
+    au < exists ; exists ; 2008 ; Diabetes Volume 57 ; 57 >
+    au < exists ; exists ; 2009 ; Diabetes Volume 58 ; 58 >
+    au < exists ; exists ; 2010 ; Diabetes Volume 59 ; 59 >
+    au < exists ; exists ; 2011 ; Diabetes Volume 60 ; 60 >
+    au < exists ; exists ; 2012 ; Diabetes Volume 61 ; 61 >
+
+    }
+    
+    }
