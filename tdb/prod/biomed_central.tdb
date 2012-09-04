@@ -1246,6 +1246,32 @@
 
     {
       title <
+        name = BMC Pharmacology and Toxicology ;
+        issn = 2050-6511 ;
+        issnl = 2050-6511
+      >
+
+      param[journal_issn] = 2050-6511
+      nondefparam[journal_code] = bmcpharmacoltoxicol
+
+      au < manifest ; 2001 ; BMC Pharmacology and Toxicology Volume 1 ; 1 >
+      au < manifest ; 2002 ; BMC Pharmacology and Toxicology Volume 2 ; 2 >
+      au < manifest ; 2003 ; BMC Pharmacology and Toxicology Volume 3 ; 3 >
+      au < manifest ; 2004 ; BMC Pharmacology and Toxicology Volume 4 ; 4 >
+      au < manifest ; 2005 ; BMC Pharmacology and Toxicology Volume 5 ; 5 >
+      au < manifest ; 2006 ; BMC Pharmacology and Toxicology Volume 6 ; 6 >
+      au < manifest ; 2007 ; BMC Pharmacology and Toxicology Volume 7 ; 7 >
+      au < manifest ; 2008 ; BMC Pharmacology and Toxicology Volume 8 ; 8 >
+      au < manifest ; 2009 ; BMC Pharmacology and Toxicology Volume 9 ; 9 >
+      au < manifest ; 2010 ; BMC Pharmacology and Toxicology Volume 10 ; 10 >
+      au < manifest ; 2011 ; BMC Pharmacology and Toxicology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Pharmacology and Toxicology Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Pharmacology and Toxicology Volume 13 ; 13 >
+
+    }
+
+    {
+      title <
         name = BMC Physiology ;
         issn = 1472-6793 ;
         issnl = 1472-6793
