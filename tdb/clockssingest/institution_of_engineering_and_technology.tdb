@@ -6,14 +6,157 @@
 
    attr[contract] = 2012
    
-   {
+     {
   
     title < 
-      name = Placeholder
+      name = Electronics Letters ;
+      issn = 0013-5194 ;
+      eissn = 1350-911X
     >
+    
+    }
 
+    {
+  
+    title < 
+      name = Micro & Nano Letters ;
+      eissn = 1750-0443
+  
+      >
+     
+
+    }
     
+    {
+  
+    title < 
+      name = IET Biometrics ;
+      issn = 2047-4938 ;
+      eissn = 2047-4946
+  
+      >
+     
+
+    }
     
-  }
+    {
+  
+    title < 
+      name = IET Circuits, Devices and Systems ;
+      issn = 1751-858X ;
+      eissn = 1751-8598
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Communications ;
+      issn = 1751-8628 ;
+      eissn = 1751-8636
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Computers & Digital Techniques ;
+      issn = 1751-8601 ;
+      eissn = 1751-861X
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Computer Vision ;
+      issn = 1751-9632 ;
+      eissn = 1751-9640
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Control Theory & Applications ;
+      issn = 1751-8644 ;
+      eissn = 1751-8652
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Electric Power Applications ;
+      issn = 1751-8660 ;
+      eissn = 1751-8679
+  
+      >
+     
+
+    }
+
+    {
+  
+    title < 
+      name = IET Electrical Systems in Transportation ;
+      issn = 2042-9738 ;
+      eissn = 2042-9746
+  
+      >
+     
+
+    }
+
+    {
+  
+    title < 
+      name = IET Generation, Transmission & Distribution ;
+      issn = 1751-8687 ;
+      eissn = 1751-8695
+  
+      >
+     
+
+    }    
+    
+    {
+  
+    title < 
+      name = IET Image Processing ;
+      issn = 1751-9659 ;
+      eissn = 1751-9667
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Information Security ;
+      issn = 1751-8709 ;
+      eissn = 1751-8717
+  
+      >
+     
+
+    }
 
 }
