@@ -1,0 +1,83 @@
+{
+
+  publisher <
+    name = The Institution of Engineering and Technology (IET)
+  >
+
+  attr[contract] = 2012
+  plugin = needs.plugin
+  comment[plugin] = plugin will be a daughter of OJS2 plugin, possibly called ClockssIETLinkBookPlugin
+  param[base_url] = http://www.theiet.org/
+
+  {
+
+    implicit < status ; status2 ; isbn ; eisbn ; year ; volume ; name ; param[book_isbn] >
+
+    {
+  
+    title < 
+      name = IET Circuits, Devices and Systems ;
+      type = bookseries
+  
+      >
+     
+      au < exists ; exists ; 9780863412677 ; 9781849193580 ; 1992 ; 4 ; Algorithmic and Knowledge-based CAD for VLSI  ; 978-0-863-41267-7  >
+      au < exists ; exists ; 9780863412592 ; 9781849193573 ; 1991 ; 3 ; Analogue-digital ASICs: circuit techniques, design tools and applications ; 978-0-863-41259-2  >
+
+    }   
+    
+    {
+    title < 
+      name = Advanced Control for Constrained Processes and Systems ;
+      issn = 9781849192613 ;
+      eissn = 9781849192620 
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = Construction: Health and Safety 2008/2009 
+  
+      >
+     
+
+    }
+    
+    {
+
+      title <
+        name = Developments in Control Theory towards Glocal Control ;
+        issn =  978-1-84919-533-1 
+        >
+    }
+   
+   {
+  
+    title < 
+      name = Energy Storage for Power Systems, 2nd Edition ;
+      issn = 9781849192194 ;
+      eissn = 9781849192200 
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = Energy Storage for Power Systems, 2nd Edition ;
+      issn = 9781849192194 ;
+      eissn = 9781849192200
+  
+      >
+     
+    }
+     
+  }
+
+}
