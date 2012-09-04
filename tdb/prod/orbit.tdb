@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Orbit
+  >
+
+ attr[contract] = 2012
+ 
+  {
+  
+    title < 
+      name = Orbit: Writing Around Pynchon ;
+      issn = 2047-2870 ;
+      eissn = 2047-2870
+    >
+
+      plugin = needs.plugin
+      param[base_url] = https://www.pynchon.net/
+      implicit < status ; year ; name ; param[year] >
+      comment[0] = includes 2012
+
+     au < manifest ; 2012 ; Orbit: Writing Around Pynchon Volume 1 ; 1 >  
+     
+  }
+    
+
+  }
