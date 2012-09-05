@@ -17,12 +17,13 @@
   
     title < 
       name = IET Circuits, Devices and Systems ;
-      type = bookseries
+      type = bookSeries
   
       >
-     
-      au < exists ; exists ; 9780863412677 ; 9781849193580 ; 1992 ; 4 ; Algorithmic and Knowledge-based CAD for VLSI  ; 978-0-863-41267-7  >
+      
       au < exists ; exists ; 9780863412592 ; 9781849193573 ; 1991 ; 3 ; Analogue-digital ASICs: circuit techniques, design tools and applications ; 978-0-863-41259-2  >
+      au < exists ; exists ; 9780863412677 ; 9781849193580 ; 1992 ; 4 ; Algorithmic and Knowledge-based CAD for VLSI ; 978-0-863-41267-7  >
+      au < exists ; exists ; 9780863412943 ; 9781849191647 ; 1993 ; 5 ; Analogue IC Design: The Current-Mode Approach ; 9780863412974   >
 
     }   
     
