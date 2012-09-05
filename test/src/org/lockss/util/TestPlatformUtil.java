@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformUtil.java,v 1.10 2012-08-08 07:11:25 tlipkis Exp $
+ * $Id: TestPlatformUtil.java,v 1.11 2012-09-05 23:31:36 clairegriffin Exp $
  */
 
 /*
@@ -103,6 +103,28 @@ public class TestPlatformUtil extends LockssTestCase {
     javatmp = "/very_unlik_elyd_irect_oryname/4x3";
     df = info.getDF(javatmp);
     assertNull(javatmp, df);
+  }
+
+  public void testNonexistentPathNullJavaDF() throws Exception {
+    String javatmp = System.getProperty("java.io.tmpdir");
+    PlatformUtil.DF df = info.getJavaDF(javatmp);
+    assertNotNull(javatmp + " is null", df);
+    javatmp = "/very_unlik_elyd_irect_oryname/4x3";
+    df = info.getJavaDF(javatmp);
+    assertNull(javatmp, df);
+  }
+
+  public void testJavaDFEqualsDF() throws Exception {
+    String javatmp = System.getProperty("java.io.tmpdir");
+    PlatformUtil.DF df = info.getDF(javatmp);
+
+    PlatformUtil.DF jdf = info.getJavaDF(javatmp);
+
+    assertEquals(df.getAvail(), jdf.getAvail());
+    assertEquals(df.getSize(), jdf.getSize());
+    assertEquals(df.getUsed(), jdf.getUsed());
+//    assertEquals(df.getPercent(), jdf.getPercent());
+    assertEquals(df.getPath(), jdf.getPath());
   }
 
   public void testMakeDF() throws Exception {

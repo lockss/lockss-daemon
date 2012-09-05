@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.14 2011-08-30 04:42:11 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.15 2012-09-05 23:31:36 clairegriffin Exp $
  */
 
 /*
@@ -255,11 +255,11 @@ public class RepositoryManager
   public PlatformUtil.DF getRepositoryDF(String repoName) {
     String path = LockssRepositoryImpl.getLocalRepositoryPath(repoName);
     log.debug("path: " + path);
-    try {
-      return platInfo.getDF(path);
-    } catch (PlatformUtil.UnsupportedException e) {
-      return null;
-    }
+//    try {
+      return platInfo.getJavaDF(path);
+//    } catch (PlatformUtil.UnsupportedException e) {
+//      return null;
+//    }
   }
 
   public Map<String,PlatformUtil.DF> getRepositoryMap() {

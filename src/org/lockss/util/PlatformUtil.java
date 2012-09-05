@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.21 2012-08-01 20:40:24 pgust Exp $
+ * $Id: PlatformUtil.java,v 1.22 2012-09-05 23:31:36 clairegriffin Exp $
  */
 
 /*
@@ -55,6 +55,8 @@ public class PlatformUtil {
 
   public static final String PARAM_UNFILTERED_UDP_PORTS =
     Configuration.PLATFORM + "unfilteredUdpPorts";
+
+  public static final File[] FILE_ROOTS = File.listRoots();
 
   static PlatformUtil instance;
 
@@ -232,10 +234,62 @@ public class PlatformUtil {
 
   }
 
+  public DF getJavaDF(String path)
+  {
+    File f = null;
+    try {
+      f = new File(path).getCanonicalFile();
+    }
+    catch (IOException e) {
+      f = new File(path).getAbsoluteFile();
+    }
+    // mirror the df behaviour of returning null if path doesn't exist
+    if(!f.exists())
+    {
+      return null;
+    }
+    DF df = new DF();
+    df.path = path;
+    df.size = f.getTotalSpace() / 1024;
+    df.avail = f.getUsableSpace() / 1024;
+
+    df.used = df.size - (f.getFreeSpace() /1024);
+    df.percent = Math.ceil(df.used * 100.00 / df.size);
+
+    df.percentString =  String.valueOf(Math.round(df.percent)) + "%";
+    df.percent /= 100.00;
+
+    df.fs = null;
+    df.mnt = longestRootFile(f);
+    if (log.isDebug2()) log.debug2(df.toString());
+    return df;
+
+  }
+
+  public static String longestRootFile(File file)
+  {
+    String longestRoot = null;
+
+    for (File root : FILE_ROOTS)
+    {
+      File parent = file.getParentFile();
+      while(parent != null) {
+        if(root.equals(parent)) {
+          if(longestRoot == null ||
+              longestRoot.length() < root.getPath().length())   {
+            longestRoot = root.getPath();
+          }
+        }
+        parent = parent.getParentFile();
+      }
+    }
+    return longestRoot;
+  }
 
   public DF getDF(String path) throws UnsupportedException {
     return getDF(path, "-k -P");
   }
+
 
   public DF getDF(String path, String dfArgs) throws UnsupportedException {
     String cmd = "df " + dfArgs + " " + path;
