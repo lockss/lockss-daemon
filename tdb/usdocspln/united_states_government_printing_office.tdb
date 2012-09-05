@@ -65,7 +65,26 @@
   
       
   }
+  
+  {
+  
+    title < 
+      name = Bulk Data Files
+    
+      >
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataPlugin
+      param[base_url] = http://www.gpo.gov/fdsys/bulkdata/
+      implicit < status ; year ; name ; param[year] >
+      
+    au < exists ; 1994-2012 ; Code of Federal Regulations 1994-2012 ; 1994-2012 >
+    au < exists ; 1996-2001 ; Commerce Business  1996-2001 ; 1996-2001 >
+    au < exists ; 2000-2012 ; Federal Regulations 2000-2012 ; 2000-2012 >
+    au < exists ; 2009 ; Public Papers of Presidents of the United States 2009 ; 2009 >
+    au < exists ; 1937-1975 ; Supreme Court Decisions 1937-1975 ; 1937-1975 >
+    au < exists ; 2011 ; United States Government Manual 2011 ; 2011 >
 
+  }
+    
   {
   
     title <
