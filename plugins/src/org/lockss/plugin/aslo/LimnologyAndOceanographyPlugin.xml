@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - cynthia</string>
+    <string>testing - Cynthia</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
     <entry>
     <string>plugin_feature_version_map</string>
@@ -34,11 +34,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Limnology and Oceanography Plugin, Base URL %s, Journal ID %s, Volume %s&quot;, base_url, journal_id, volume_name</string>
+    <string>&quot;ASLO Plugin (Limnology and Oceanography), Base URL %s, Journal ID %s, Volume %s&quot;, base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Limnology and Oceanography Plugin</string>
+    <string>ASLO Plugin (Limnology and Oceanography)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -55,6 +55,12 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%s%s/toc/vol_%s/lockss.html&quot;, base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+        <string>&quot;^%s%s/toc/vol_%s/[^/]/[^/].pdf$&quot;, base_url, journal_id, volume_name</string>
+      </list>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
