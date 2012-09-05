@@ -141,17 +141,11 @@
       eissn = 2154-1671
     >
     
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://hosppeds.aappublications.org/
 
-    {
-    
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
-      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
-    
-      au < exists ; exists ; 2012 ; Hospital Pediatrics Volume 1 ; 1 >
+    au < exists ; exists ; 2012 ; Hospital Pediatrics Volume 1 ; 1 >
 
-    }
-  
   }
   
   {
@@ -432,18 +426,16 @@
       issnl = 1080-0131
     >
     
-        param[base_url] = http://aapredbook.aappublications.org/
+    comment[0] = This is a serialized book. As of 8/2012 HW has not put up manifests.
+    comment[1] = Waiting for manifest pages. See RT 4877.
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    param[base_url] = http://aapredbook.aappublications.org/
 
-    {
-
-      comment[0] = This is a serialized book that requires a slight change to the H10 plugin, do not process unless the change is ready
-      plugin = needs.plugin
-
-      au < doNotProcess ; doNotProcess ; 2003 ; Red Book Online Volume 2003 ; 2003 >
-      au < doNotProcess ; doNotProcess ; 2006 ; Red Book Online Volume 2006 ; 2006 >
-      au < doNotProcess ; doNotProcess ; 2009 ; Red Book Online Volume 2009 ; 2009 >
-
-    }
+    au < exists ; exists ; 2000 ; Red Book Online Volume 2000 ; 2000 >
+    au < exists ; exists ; 2003 ; Red Book Online Volume 2003 ; 2003 >
+    au < exists ; exists ; 2006 ; Red Book Online Volume 2006 ; 2006 >
+    au < exists ; exists ; 2009 ; Red Book Online Volume 2009 ; 2009 >
+    au < exists ; exists ; 2012 ; Red Book Online Volume 2012 ; 2012 >
 
   }
 

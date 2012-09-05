@@ -13,8 +13,13 @@
     >
 
     {
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = asma
+    param[journal_id] = asem 
+    param[journal_issn] = 0095-6562
     implicit < status1 ; status ; year ; name ; param[volume_name] >
   
     au < manifest ; exists ; 2003 ; Aviation, Space, and Environmental Medicine Volume 74 ; 74 >

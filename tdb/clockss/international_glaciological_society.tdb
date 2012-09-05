@@ -4,16 +4,33 @@
     name = International Glaciological Society
   >
 
- attr[contract] = 2012
+  attr[contract] = 2012
+  param[base_url] = http://www.igsoc.org/
+  plugin = needs.plugin
+  implicit < status1 ; status ; name ; year ; param[year] >
  
   {
   
     title < 
-      name = Placeholder
+      name = Journal of Glaciology ;
+      issn = 0022-1430 ;
+      eissn = 1727-5652
+    
     >
 
     
     
   }
+  
+  {
+  
+     title <
+       name = Annals of Glaciology ;
+       issn = 0260-3055 ;
+       eissn = 1727-5644
+       
+     >
+     
+   }    
 
 }

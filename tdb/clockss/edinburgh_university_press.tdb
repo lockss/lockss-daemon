@@ -603,19 +603,6 @@
 
   {
 
-    title <
-      name = Journal of Victorian Culture ;
-      issn = 1355-5502 ;
-      eissn = 1750-0133 ;
-      issnl = 1355-5502
-    >
-
- comment[jvc] = no AUs in clockss. Vols 8-13 on EUP. From 2010 on Taylor & Francis
-      
-   }
-
-
-  {
 
     title <
       name = Katherine Mansfield Studies ;
@@ -629,7 +616,7 @@
     au < released ; crawling ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
     au < released ; crawling ; 2010 ; Katherine Mansfield Studies Volume 2 ; 2 >
     au < released ; crawling ; 2011 ; Katherine Mansfield Studies Volume 3 ; 3 >
-    au < expected ; exists ; 2012 ; Katherine Mansfield Studies Volume 4 ; 4 >
+    au < manifest ; exists ; 2012 ; Katherine Mansfield Studies Volume 4 ; 4 >
 
   }
 
@@ -727,17 +714,6 @@
     au < released ; crawling ; 2011 ; Oxford Literary Review Volume 33 ; 33 >
     au < crawling ; exists ; 2012 ; Oxford Literary Review Volume 34 ; 34 >
 
-  }
-
-  {
-
-    title <
-      name = Parliamentary History ;
-      issn = 0264-2824 ;
-      eissn = 1750-0206 ;
-      issnl = 0264-2824
-    >
-      comment[ph] = no AUs collected in clockss
   }
 
   {

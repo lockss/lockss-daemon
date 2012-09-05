@@ -5,7 +5,7 @@
   >
 
   attr[contract] = 2011
-  plugin = org.lockss.plugin.jstor.JSTORPlugin
+  plugin = org.lockss.plugin.jstor.ClockssJSTORPlugin
   
   {
   

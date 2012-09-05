@@ -1,0 +1,370 @@
+{
+
+  publisher <
+    name = Duke University School of Law
+  >
+  
+  attr[contract] = 2012
+
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  param[base_url] = http://scholarship.law.duke.edu/
+  implicit < status1 ; status; year ; name ; param[volume] >
+
+  {
+  
+    title <
+      name = Alaska Law Review ;
+      issn = 0883-0568 
+    >
+
+    param[journal_abbr] = alr
+  
+    au < exists ; exists ; 1984 ; American Literary Scholarship Volume 1 ; 1 >
+    au < exists ; exists ; 1985 ; American Literary Scholarship Volume 2 ; 2 >
+    au < exists ; exists ; 1986 ; American Literary Scholarship Volume 3 ; 3 >
+    au < exists ; exists ; 1987 ; American Literary Scholarship Volume 4 ; 4 >
+    au < exists ; exists ; 1988 ; American Literary Scholarship Volume 5 ; 5 >
+    au < exists ; exists ; 1989 ; American Literary Scholarship Volume 6 ; 6 >
+    au < exists ; exists ; 1990 ; American Literary Scholarship Volume 7 ; 7 >
+    au < exists ; exists ; 1991 ; American Literary Scholarship Volume 8 ; 8 >
+    au < exists ; exists ; 1992 ; American Literary Scholarship Volume 9 ; 9 >
+    au < exists ; exists ; 1993 ; American Literary Scholarship Volume 10 ; 10 >
+    au < exists ; exists ; 1994 ; American Literary Scholarship Volume 11 ; 11 >
+    au < exists ; exists ; 1995 ; American Literary Scholarship Volume 12 ; 12 >
+    au < exists ; exists ; 1996 ; American Literary Scholarship Volume 13 ; 13 >
+    au < exists ; exists ; 1997 ; American Literary Scholarship Volume 14 ; 14 >
+    au < exists ; exists ; 1998 ; American Literary Scholarship Volume 15 ; 15 >
+    au < exists ; exists ; 1999 ; American Literary Scholarship Volume 16 ; 16 >
+    au < exists ; exists ; 1990 ; American Literary Scholarship Volume 17 ; 17 >
+    au < exists ; exists ; 2001 ; American Literary Scholarship Volume 18 ; 18 >
+    au < exists ; exists ; 2002 ; American Literary Scholarship Volume 19 ; 19 >
+    au < exists ; exists ; 2003 ; American Literary Scholarship Volume 20 ; 20 >
+    au < exists ; exists ; 2004 ; American Literary Scholarship Volume 21 ; 21 >
+    au < exists ; exists ; 2005 ; American Literary Scholarship Volume 22 ; 22 >
+    au < exists ; exists ; 2006 ; American Literary Scholarship Volume 23 ; 23 >
+    au < exists ; exists ; 2007 ; American Literary Scholarship Volume 24 ; 24 >
+    au < exists ; exists ; 2008 ; American Literary Scholarship Volume 25 ; 25 >
+    au < exists ; exists ; 2009 ; American Literary Scholarship Volume 26 ; 26 >
+    au < exists ; exists ; 2010 ; American Literary Scholarship Volume 27 ; 27 >
+    au < exists ; exists ; 2011 ; American Literary Scholarship Volume 28 ; 28 >
+    au < exists ; exists ; 2012 ; American Literary Scholarship Volume 29 ; 29 >
+
+  }
+
+
+  {
+  
+    title <
+      name = Duke Environmental Law & Policy Forum ;
+      issn = 1064-3958 
+    >
+
+    param[journal_abbr] = delpf
+  
+    au < exists ; exists ; 1991 ; Duke Environmental Law & Policy Forum Volume 1 ; 1 >
+    au < exists ; exists ; 1992 ; Duke Environmental Law & Policy Forum Volume 2 ; 2 >
+    au < exists ; exists ; 1993 ; Duke Environmental Law & Policy Forum Volume 3 ; 3 >
+    au < exists ; exists ; 1994 ; Duke Environmental Law & Policy Forum Volume 4 ; 4 >
+    au < exists ; exists ; 1995 ; Duke Environmental Law & Policy Forum Volume 5 ; 5 >
+    au < exists ; exists ; 1996 ; Duke Environmental Law & Policy Forum Volume 6 ; 6 >
+    au < exists ; exists ; 1997 ; Duke Environmental Law & Policy Forum Volume 7 ; 7 >
+    au < exists ; exists ; 1998 ; Duke Environmental Law & Policy Forum Volume 8 ; 8 >
+    au < exists ; exists ; 1999 ; Duke Environmental Law & Policy Forum Volume 9 ; 9 >
+    au < exists ; exists ; 1990 ; Duke Environmental Law & Policy Forum Volume 10 ; 10 >
+    au < exists ; exists ; 2001 ; Duke Environmental Law & Policy Forum Volume 11 ; 11 >
+    au < exists ; exists ; 2002 ; Duke Environmental Law & Policy Forum Volume 12 ; 12 >
+    au < exists ; exists ; 2003 ; Duke Environmental Law & Policy Forum Volume 13 ; 13 >
+    au < exists ; exists ; 2004 ; Duke Environmental Law & Policy Forum Volume 14 ; 14 >
+    au < exists ; exists ; 2005 ; Duke Environmental Law & Policy Forum Volume 15 ; 15 >
+    au < exists ; exists ; 2006 ; Duke Environmental Law & Policy Forum Volume 16 ; 16 >
+    au < exists ; exists ; 2007 ; Duke Environmental Law & Policy Forum Volume 17 ; 17 >
+    au < exists ; exists ; 2008 ; Duke Environmental Law & Policy Forum Volume 18 ; 18 >
+    au < exists ; exists ; 2009 ; Duke Environmental Law & Policy Forum Volume 19 ; 19 >
+    au < exists ; exists ; 2010 ; Duke Environmental Law & Policy Forum Volume 20 ; 20 >
+    au < exists ; exists ; 2011 ; Duke Environmental Law & Policy Forum Volume 21 ; 21 >
+    au < exists ; exists ; 2012 ; Duke Environmental Law & Policy Forum Volume 22 ; 22 >
+  
+  }
+  
+  {
+  
+    title <
+      name = Duke Forum for Law & Social Change ;
+      issn = 2151-1128 
+    >
+
+    param[journal_abbr] = dflsc
+  
+    au < exists ; exists ; 2009 ; Duke Forum for Law & Social Change Volume 1 ; 1 >
+    au < exists ; exists ; 2010 ; Duke Forum for Law & Social Change Volume 2 ; 2 >
+    au < exists ; exists ; 2011 ; Duke Forum for Law & Social Change Volume 3 ; 3 >
+    au < exists ; exists ; 2012 ; Duke Forum for Law & Social Change Volume 4 ; 4 >
+  
+  }
+  
+  {
+  
+    title <
+      name = Duke Journal of Comparative and International Law ;
+      issn = 1053-6736 
+    >
+
+    param[journal_abbr] = djcil
+    
+    au < exists ; exists ; 1991 ; Duke Journal of Comparative and International Law Volume 1 ; 1 >
+    au < exists ; exists ; 1992 ; Duke Journal of Comparative and International Law Volume 2 ; 2 >
+    au < exists ; exists ; 1993 ; Duke Journal of Comparative and International Law Volume 3 ; 3 >
+    au < exists ; exists ; 1994 ; Duke Journal of Comparative and International Law Volume 4 ; 4 >
+    au < exists ; exists ; 1995 ; Duke Journal of Comparative and International Law Volume 5 ; 5 >
+    au < exists ; exists ; 1996 ; Duke Journal of Comparative and International Law Volume 6 ; 6 >
+    au < exists ; exists ; 1997 ; Duke Journal of Comparative and International Law Volume 7 ; 7 >
+    au < exists ; exists ; 1998 ; Duke Journal of Comparative and International Law Volume 8 ; 8 >
+    au < exists ; exists ; 1999 ; Duke Journal of Comparative and International Law Volume 9 ; 9 >
+    au < exists ; exists ; 1990 ; Duke Journal of Comparative and International Law Volume 10 ; 10 >
+    au < exists ; exists ; 2001 ; Duke Journal of Comparative and International Law Volume 11 ; 11 >
+    au < exists ; exists ; 2002 ; Duke Journal of Comparative and International Law Volume 12 ; 12 >
+    au < exists ; exists ; 2003 ; Duke Journal of Comparative and International Law Volume 13 ; 13 >
+    au < exists ; exists ; 2004 ; Duke Journal of Comparative and International Law Volume 14 ; 14 >
+    au < exists ; exists ; 2005 ; Duke Journal of Comparative and International Law Volume 15 ; 15 >
+    au < exists ; exists ; 2006 ; Duke Journal of Comparative and International Law Volume 16 ; 16 >
+    au < exists ; exists ; 2007 ; Duke Journal of Comparative and International Law Volume 17 ; 17 >
+    au < exists ; exists ; 2008 ; Duke Journal of Comparative and International Law Volume 18 ; 18 >
+    au < exists ; exists ; 2009 ; Duke Journal of Comparative and International Law Volume 19 ; 19 >
+    au < exists ; exists ; 2010 ; Duke Journal of Comparative and International Law Volume 20 ; 20 >
+    au < exists ; exists ; 2011 ; Duke Journal of Comparative and International Law Volume 21 ; 21 >
+    au < exists ; exists ; 2012 ; Duke Journal of Comparative and International Law Volume 22 ; 22 >
+    
+  }
+  
+  {
+  
+    title <
+      name = Duke Journal of Constitutional Law and Public Policy ;
+      issn = 1937-9439 
+    >
+
+    param[journal_abbr] = djclpp
+  
+    au < manifest ; exists ; 2006 ; Duke Journal of Constitutional Law and Public Policy Volume 1 ; 1 >
+    au < manifest ; exists ; 2007 ; Duke Journal of Constitutional Law and Public Policy Volume 2 ; 2 >
+    au < manifest ; exists ; 2008 ; Duke Journal of Constitutional Law and Public Policy Volume 3 ; 3 >
+    au < manifest ; exists ; 2009 ; Duke Journal of Constitutional Law and Public Policy Volume 4 ; 4 >
+    au < manifest ; exists ; 2010 ; Duke Journal of Constitutional Law and Public Policy Volume 5 ; 5 >
+    au < manifest ; exists ; 2011 ; Duke Journal of Constitutional Law and Public Policy Volume 6 ; 6 >
+    au < manifest ; exists ; 2012 ; Duke Journal of Constitutional Law and Public Policy Volume 7 ; 7 >
+  } 
+ 
+  {
+  
+    title <
+      name = Duke Journal of Gender and Law Policy ;
+      issn = 1090-1043 
+    >
+
+    param[journal_abbr] = djglp
+  
+    au < exists ; exists ; 1994 ; Duke Journal of Gender and Law Policy  Volume 1 ; 1 >
+    au < exists ; exists ; 1995 ; Duke Journal of Gender and Law Policy  Volume 2 ; 2 >
+    au < exists ; exists ; 1996 ; Duke Journal of Gender and Law Policy  Volume 3 ; 3 >
+    au < exists ; exists ; 1997 ; Duke Journal of Gender and Law Policy  Volume 4 ; 4 >
+    au < exists ; exists ; 1998 ; Duke Journal of Gender and Law Policy  Volume 5 ; 5 >
+    au < exists ; exists ; 1999 ; Duke Journal of Gender and Law Policy  Volume 6 ; 6 >
+    au < exists ; exists ; 1990 ; Duke Journal of Gender and Law Policy  Volume 7 ; 7 >
+    au < exists ; exists ; 2001 ; Duke Journal of Gender and Law Policy  Volume 8 ; 8 >
+    au < exists ; exists ; 2002 ; Duke Journal of Gender and Law Policy  Volume 9 ; 9 >
+    au < exists ; exists ; 2003 ; Duke Journal of Gender and Law Policy  Volume 10 ; 10 >
+    au < exists ; exists ; 2004 ; Duke Journal of Gender and Law Policy  Volume 11 ; 11 >
+    au < exists ; exists ; 2005 ; Duke Journal of Gender and Law Policy  Volume 12 ; 12 >
+    au < exists ; exists ; 2006 ; Duke Journal of Gender and Law Policy  Volume 13 ; 13 >
+    au < exists ; exists ; 2007 ; Duke Journal of Gender and Law Policy  Volume 14 ; 14 >
+    au < exists ; exists ; 2008 ; Duke Journal of Gender and Law Policy  Volume 15 ; 15 >
+    au < exists ; exists ; 2009 ; Duke Journal of Gender and Law Policy  Volume 16 ; 16 >
+    au < exists ; exists ; 2010 ; Duke Journal of Gender and Law Policy  Volume 17 ; 17 >
+    au < exists ; exists ; 2010-2011 ; Duke Journal of Gender and Law Policy  Volume 18 ; 18 >
+    au < exists ; exists ; 2011-2012 ; Duke Journal of Gender and Law Policy  Volume 19 ; 19 >
+ 
+  }
+
+  {
+  
+    title <
+      name = Duke Law and Technology Review
+    >
+
+    param[journal_abbr] = dltr
+  
+    au < exists ; exists ; 2001-2003 ; Duke Law and Technology Review Volume 1 ; 1 >
+    au < exists ; exists ; 2003-2004 ; Duke Law and Technology Review Volume 2 ; 2 >
+    au < exists ; exists ; 2004-2005 ; Duke Law and Technology Review Volume 3 ; 3 >
+    au < exists ; exists ; 2005-2006 ; Duke Law and Technology Review Volume 4 ; 4 >
+    au < exists ; exists ; 2006-2007 ; Duke Law and Technology Review Volume 5 ; 5 >
+    au < exists ; exists ; 2007-2008 ; Duke Law and Technology Review Volume 6 ; 6 >
+    au < exists ; exists ; 2008-2009 ; Duke Law and Technology Review Volume 7  ; 7 >
+    au < exists ; exists ; 2009-2010 ; Duke Law and Technology Review Volume 8  ; 8 >
+    au < exists ; exists ; 2010-2011 ; Duke Law and Technology Review Volume 9  ; 9 >
+    au < exists ; exists ; 2011-2012 ; Duke Law and Technology Review Volume 10 ; 10 >
+    au < exists ; exists ; 2012-2013 ; Duke Law and Technology Review Volume 11 ; 11 >
+    
+  }
+  
+  {
+  
+    title <
+      name = Duke Law Journal ;
+      issn = 0012-7086 
+    >
+
+    param[journal_abbr] = dlj
+  
+    au < exists ; exists ; 1951 ; Duke Law Journal Volume 1 ; 1 >
+    au < exists ; exists ; 1952 ; Duke Law Journal Volume 2 ; 2 >
+    au < exists ; exists ; 1953 ; Duke Law Journal Volume 3 ; 3 >
+    au < exists ; exists ; 1954 ; Duke Law Journal Volume 4 ; 4 >
+    au < exists ; exists ; 1955 ; Duke Law Journal Volume 5 ; 5 >
+    au < exists ; exists ; 1956 ; Duke Law Journal Volume 6 ; 6 >
+    au < exists ; exists ; 1957 ; Duke Law Journal Volume 7 ; 7 >
+    au < exists ; exists ; 1958 ; Duke Law Journal Volume 8 ; 8 >
+    au < exists ; exists ; 1959 ; Duke Law Journal Volume 9 ; 9 >
+    au < exists ; exists ; 1960 ; Duke Law Journal Volume 10 ; 10 >
+    au < exists ; exists ; 1961 ; Duke Law Journal Volume 11 ; 11 >
+    au < exists ; exists ; 1962 ; Duke Law Journal Volume 12 ; 12 >
+    au < exists ; exists ; 1963 ; Duke Law Journal Volume 13 ; 13 >
+    au < exists ; exists ; 1964 ; Duke Law Journal Volume 14 ; 14 >
+    au < exists ; exists ; 1965 ; Duke Law Journal Volume 15 ; 15 >
+    au < exists ; exists ; 1966 ; Duke Law Journal Volume 16 ; 16 >
+    au < exists ; exists ; 1967 ; Duke Law Journal Volume 17 ; 17 >
+    au < exists ; exists ; 1968 ; Duke Law Journal Volume 18 ; 18 >
+    au < exists ; exists ; 1969 ; Duke Law Journal Volume 19 ; 19 >
+    au < exists ; exists ; 1970 ; Duke Law Journal Volume 20 ; 20 >
+    au < exists ; exists ; 1971 ; Duke Law Journal Volume 21 ; 21 >
+    au < exists ; exists ; 1972 ; Duke Law Journal Volume 22 ; 22 >
+    au < exists ; exists ; 1973 ; Duke Law Journal Volume 23 ; 23 >
+    au < exists ; exists ; 1974 ; Duke Law Journal Volume 24 ; 24 >
+    au < exists ; exists ; 1975 ; Duke Law Journal Volume 25 ; 25 >
+    au < exists ; exists ; 1976 ; Duke Law Journal Volume 26 ; 26 >
+    au < exists ; exists ; 1977 ; Duke Law Journal Volume 27 ; 27 >
+    au < exists ; exists ; 1978 ; Duke Law Journal Volume 28 ; 28 >
+    au < exists ; exists ; 1979 ; Duke Law Journal Volume 29 ; 29 >
+    au < exists ; exists ; 1980 ; Duke Law Journal Volume 30 ; 30 >
+    au < exists ; exists ; 1981 ; Duke Law Journal Volume 31 ; 31 >
+    au < exists ; exists ; 1982 ; Duke Law Journal Volume 32 ; 32 >
+    au < exists ; exists ; 1983 ; Duke Law Journal Volume 33 ; 33 >
+    au < exists ; exists ; 1984 ; Duke Law Journal Volume 34 ; 34 >
+    au < exists ; exists ; 1985 ; Duke Law Journal Volume 35 ; 35 >
+    au < exists ; exists ; 1986 ; Duke Law Journal Volume 36 ; 36 >
+    au < exists ; exists ; 1987 ; Duke Law Journal Volume 37 ; 37 >
+    au < exists ; exists ; 1988 ; Duke Law Journal Volume 38 ; 38 >
+    au < exists ; exists ; 1989 ; Duke Law Journal Volume 39 ; 39 >
+    au < exists ; exists ; 1990 ; Duke Law Journal Volume 40 ; 40 >
+    au < exists ; exists ; 1991 ; Duke Law Journal Volume 41 ; 41 >
+    au < exists ; exists ; 1992 ; Duke Law Journal Volume 42 ; 42 >
+    au < exists ; exists ; 1993 ; Duke Law Journal Volume 43 ; 43 >
+    au < exists ; exists ; 1994 ; Duke Law Journal Volume 44 ; 44 >
+    au < exists ; exists ; 1995 ; Duke Law Journal Volume 45 ; 45 >
+    au < exists ; exists ; 1996 ; Duke Law Journal Volume 46 ; 46 >
+    au < exists ; exists ; 1997 ; Duke Law Journal Volume 47 ; 47 >
+    au < exists ; exists ; 1998 ; Duke Law Journal Volume 48 ; 48 >
+    au < exists ; exists ; 1999 ; Duke Law Journal Volume 49 ; 49 >
+    au < exists ; exists ; 1990 ; Duke Law Journal Volume 50 ; 50 >
+    au < exists ; exists ; 2001 ; Duke Law Journal Volume 51 ; 51 >
+    au < exists ; exists ; 2002 ; Duke Law Journal Volume 52 ; 52 >
+    au < exists ; exists ; 2003 ; Duke Law Journal Volume 53 ; 53 >
+    au < exists ; exists ; 2004 ; Duke Law Journal Volume 54 ; 54 >
+    au < exists ; exists ; 2005 ; Duke Law Journal Volume 55 ; 55 >
+    au < exists ; exists ; 2006 ; Duke Law Journal Volume 56 ; 56 >
+    au < exists ; exists ; 2007 ; Duke Law Journal Volume 57 ; 57 >
+    au < exists ; exists ; 2008 ; Duke Law Journal Volume 58 ; 58 >
+    au < exists ; exists ; 2009 ; Duke Law Journal Volume 59 ; 59 >
+    au < exists ; exists ; 2010 ; Duke Law Journal Volume 60 ; 60 >
+    au < exists ; exists ; 2011 ; Duke Law Journal Volume 61 ; 61 >
+    au < exists ; exists ; 2012 ; Duke Law Journal Volume 62 ; 62 >
+  }
+  
+  {
+  
+    title <
+      name = Law and Contemporary Problems ;
+      issn = 0023-9186 
+    >
+
+    param[journal_abbr] = lcp
+
+    au < manifest ; exists ; 1933-1934 ; Law and Contemporary Problems Volume 1 ; 1 >
+    au < manifest ; exists ; 1935 ; Law and Contemporary Problems Volume 2 ; 2 >
+    au < manifest ; exists ; 1936 ; Law and Contemporary Problems Volume 3 ; 3 >
+    au < manifest ; exists ; 1937 ; Law and Contemporary Problems Volume 4 ; 4 >
+    au < manifest ; exists ; 1938 ; Law and Contemporary Problems Volume 5 ; 5 >
+    au < manifest ; exists ; 1939 ; Law and Contemporary Problems Volume 6 ; 6 >
+    au < manifest ; exists ; 1940 ; Law and Contemporary Problems Volume 7 ; 7 >
+    au < manifest ; exists ; 1941 ; Law and Contemporary Problems Volume 8 ; 8 >
+    au < manifest ; exists ; 1942 ; Law and Contemporary Problems Volume 9 ; 9 >
+    au < manifest ; exists ; 1943-1944 ; Law and Contemporary Problems Volume 10 ; 10 >
+    au < manifest ; exists ; 1945-1946 ; Law and Contemporary Problems Volume 11 ; 11 >
+    au < manifest ; exists ; 1947 ; Law and Contemporary Problems Volume 12 ; 12 >
+    au < manifest ; exists ; 1948 ; Law and Contemporary Problems Volume 13 ; 13 >
+    au < manifest ; exists ; 1949 ; Law and Contemporary Problems Volume 14 ; 14 >
+    au < manifest ; exists ; 1950 ; Law and Contemporary Problems Volume 15 ; 15 >
+    au < manifest ; exists ; 1951 ; Law and Contemporary Problems Volume 16 ; 16 >
+    au < manifest ; exists ; 1952 ; Law and Contemporary Problems Volume 17 ; 17 >
+    au < manifest ; exists ; 1953 ; Law and Contemporary Problems Volume 18 ; 18 >
+    au < manifest ; exists ; 1954 ; Law and Contemporary Problems Volume 19 ; 19 >
+    au < manifest ; exists ; 1955 ; Law and Contemporary Problems Volume 20 ; 20 >
+    au < manifest ; exists ; 1956 ; Law and Contemporary Problems Volume 21 ; 21 >
+    au < manifest ; exists ; 1957 ; Law and Contemporary Problems Volume 22 ; 22 >
+    au < manifest ; exists ; 1958 ; Law and Contemporary Problems Volume 23 ; 23 >
+    au < manifest ; exists ; 1959 ; Law and Contemporary Problems Volume 24 ; 24 >
+    au < manifest ; exists ; 1960 ; Law and Contemporary Problems Volume 25 ; 25 >
+    au < manifest ; exists ; 1961 ; Law and Contemporary Problems Volume 26 ; 26 >
+    au < manifest ; exists ; 1962 ; Law and Contemporary Problems Volume 27 ; 27 >
+    au < manifest ; exists ; 1963 ; Law and Contemporary Problems Volume 28 ; 28 >
+    au < manifest ; exists ; 1964 ; Law and Contemporary Problems Volume 29 ; 29 >
+    au < manifest ; exists ; 1965 ; Law and Contemporary Problems Volume 30 ; 30 >
+    au < manifest ; exists ; 1966 ; Law and Contemporary Problems Volume 31 ; 31 >
+    au < manifest ; exists ; 1967 ; Law and Contemporary Problems Volume 32 ; 32 >
+    au < manifest ; exists ; 1968 ; Law and Contemporary Problems Volume 33 ; 33 >
+    au < manifest ; exists ; 1969 ; Law and Contemporary Problems Volume 34 ; 34 >
+    au < manifest ; exists ; 1970 ; Law and Contemporary Problems Volume 35 ; 35 >
+    au < manifest ; exists ; 1971 ; Law and Contemporary Problems Volume 36 ; 36 >
+    au < manifest ; exists ; 1972 ; Law and Contemporary Problems Volume 37 ; 37 >
+    au < manifest ; exists ; 1973-1974 ; Law and Contemporary Problems Volume 38 ; 38 >
+    au < manifest ; exists ; 1975 ; Law and Contemporary Problems Volume 39 ; 39 >
+    au < manifest ; exists ; 1976 ; Law and Contemporary Problems Volume 40 ; 40 >
+    au < manifest ; exists ; 1977 ; Law and Contemporary Problems Volume 41 ; 41 >
+    au < manifest ; exists ; 1978 ; Law and Contemporary Problems Volume 42 ; 42 >
+    au < manifest ; exists ; 1979-1980 ; Law and Contemporary Problems Volume 43 ; 43 >
+    au < manifest ; exists ; 1981 ; Law and Contemporary Problems Volume 44 ; 44 >
+    au < manifest ; exists ; 1982 ; Law and Contemporary Problems Volume 45 ; 45 >
+    au < manifest ; exists ; 1983 ; Law and Contemporary Problems Volume 46 ; 46 >
+    au < manifest ; exists ; 1984 ; Law and Contemporary Problems Volume 47 ; 47 >
+    au < manifest ; exists ; 1985 ; Law and Contemporary Problems Volume 48 ; 48 >
+    au < manifest ; exists ; 1986 ; Law and Contemporary Problems Volume 49 ; 49 >
+    au < manifest ; exists ; 1987 ; Law and Contemporary Problems Volume 50 ; 50 >
+    au < manifest ; exists ; 1988 ; Law and Contemporary Problems Volume 51 ; 51 >
+    au < manifest ; exists ; 1989 ; Law and Contemporary Problems Volume 52 ; 52 >
+    au < manifest ; exists ; 1990 ; Law and Contemporary Problems Volume 53 ; 53 >
+    au < manifest ; exists ; 1991 ; Law and Contemporary Problems Volume 54 ; 54 >
+    au < manifest ; exists ; 1992 ; Law and Contemporary Problems Volume 55 ; 55 >
+    au < manifest ; exists ; 1993 ; Law and Contemporary Problems Volume 56 ; 56 >
+    au < manifest ; exists ; 1994 ; Law and Contemporary Problems Volume 57 ; 57 >
+    au < manifest ; exists ; 1995 ; Law and Contemporary Problems Volume 58 ; 58 >
+    au < manifest ; exists ; 1996 ; Law and Contemporary Problems Volume 59 ; 59 >
+    au < manifest ; exists ; 1997 ; Law and Contemporary Problems Volume 60 ; 60 >
+    au < manifest ; exists ; 1998 ; Law and Contemporary Problems Volume 61 ; 61 >
+    au < manifest ; exists ; 1999 ; Law and Contemporary Problems Volume 62 ; 62 >
+    au < manifest ; exists ; 2000 ; Law and Contemporary Problems Volume 63 ; 63 >
+    au < manifest ; exists ; 2001 ; Law and Contemporary Problems Volume 64 ; 64 >
+    au < manifest ; exists ; 2002 ; Law and Contemporary Problems Volume 65 ; 65 >
+    au < manifest ; exists ; 2003 ; Law and Contemporary Problems Volume 66 ; 66 >
+    au < manifest ; exists ; 2004 ; Law and Contemporary Problems Volume 67 ; 67 >
+    au < manifest ; exists ; 2004-2005 ; Law and Contemporary Problems Volume 68 ; 68 >
+    au < manifest ; exists ; 2006 ; Law and Contemporary Problems Volume 69 ; 69 >
+    au < manifest ; exists ; 2007 ; Law and Contemporary Problems Volume 70 ; 70 >
+    au < manifest ; exists ; 2008 ; Law and Contemporary Problems Volume 71 ; 71 >
+    au < manifest ; exists ; 2009 ; Law and Contemporary Problems Volume 72 ; 72 >
+    au < manifest ; exists ; 2010 ; Law and Contemporary Problems Volume 73 ; 73 >
+    au < manifest ; exists ; 2011 ; Law and Contemporary Problems Volume 74 ; 74 >
+    au < manifest ; exists ; 2012 ; Law and Contemporary Problems Volume 75 ; 75 >
+  
+  }
+  
+}

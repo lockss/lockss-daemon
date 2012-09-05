@@ -84,7 +84,7 @@
       au < manifest ; exists ; 2008 ; BMC Bioinformatics Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Bioinformatics Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Bioinformatics Volume 11 ; 11 >
-      au < crawling ; exists ; 2011 ; BMC Bioinformatics Volume 12 ; 12 >
+      au < testing ; exists ; 2011 ; BMC Bioinformatics Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Bioinformatics Volume 13 ; 13 >
 
     }
@@ -509,7 +509,7 @@
       au < manifest ; exists ; 2008 ; BMC Evolutionary Biology Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Evolutionary Biology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Evolutionary Biology Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Evolutionary Biology Volume 11 ; 11 >
+      au < testing ; exists ; 2011 ; BMC Evolutionary Biology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Evolutionary Biology Volume 12 ; 12 >
 
     }
@@ -586,7 +586,7 @@
       au < manifest ; exists ; 2008 ; BMC Genetics Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Genetics Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Genetics Volume 11 ; 11 >
-      au < crawling ; exists ; 2011 ; BMC Genetics Volume 12 ; 12 >
+      au < testing ; exists ; 2011 ; BMC Genetics Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Genetics Volume 13 ; 13 >
 
     }
@@ -1240,6 +1240,32 @@
       au < manifest ; exists ; 2009 ; BMC Pharmacology Volume 9 ; 9 >
       au < released ; crawling ; 2010 ; BMC Pharmacology Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; BMC Pharmacology Volume 11 ; 11 >
+
+    }
+
+    {
+      title <
+        name = BMC Pharmacology and Toxicology ;
+        issn = 2050-6511 ;
+        issnl = 2050-6511
+      >
+
+      param[journal_issn] = 2050-6511
+      nondefparam[journal_code] = bmcpharmacoltoxicol
+
+      au < manifest ; exists ; 2001 ; BMC Pharmacology and Toxicology Volume 1 ; 1 >
+      au < manifest ; exists ; 2002 ; BMC Pharmacology and Toxicology Volume 2 ; 2 >
+      au < manifest ; exists ; 2003 ; BMC Pharmacology and Toxicology Volume 3 ; 3 >
+      au < manifest ; exists ; 2004 ; BMC Pharmacology and Toxicology Volume 4 ; 4 >
+      au < manifest ; exists ; 2005 ; BMC Pharmacology and Toxicology Volume 5 ; 5 >
+      au < manifest ; exists ; 2006 ; BMC Pharmacology and Toxicology Volume 6 ; 6 >
+      au < manifest ; exists ; 2007 ; BMC Pharmacology and Toxicology Volume 7 ; 7 >
+      au < manifest ; exists ; 2008 ; BMC Pharmacology and Toxicology Volume 8 ; 8 >
+      au < manifest ; exists ; 2009 ; BMC Pharmacology and Toxicology Volume 9 ; 9 >
+      au < manifest ; exists ; 2010 ; BMC Pharmacology and Toxicology Volume 10 ; 10 >
+      au < manifest ; exists ; 2011 ; BMC Pharmacology and Toxicology Volume 11 ; 11 >
+      au < manifest ; exists ; 2012 ; BMC Pharmacology and Toxicology Volume 12 ; 12 >
+      au < manifest ; exists ; 2012 ; BMC Pharmacology and Toxicology Volume 13 ; 13 >
 
     }
 
@@ -2249,8 +2275,10 @@ comment[bmr] = journal archive available, but no new volumes
       eissn = 2008-2231
       
     >
-    param[base_url] = http://daru.tums.ac.ir
-    comment[journal_issn] = 1560-8115
+      param[base_url] = http://www.darujps.com/
+      param[journal_issn] = 1560-8115
+
+      au < exists ; exists ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 1 ; 1 >
     
     }
 
@@ -3439,7 +3467,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Lipids in Health and Disease Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; Lipids in Health and Disease Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Lipids in Health and Disease Volume 9 ; 9 >
-      au < crawling ; exists ; 2011 ; Lipids in Health and Disease Volume 10 ; 10 >
+      au < released ; manifest ; 2011 ; Lipids in Health and Disease Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Lipids in Health and Disease Volume 11 ; 11 >
 
     }
@@ -3463,7 +3491,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Malaria Journal Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; Malaria Journal Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Malaria Journal Volume 9 ; 9 >
-      au < crawling ; exists ; 2011 ; Malaria Journal Volume 10 ; 10 >
+      au < testing ; exists ; 2011 ; Malaria Journal Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Malaria Journal Volume 11 ; 11 >
 
     }
@@ -3478,7 +3506,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.medicalgasresearch.com/
       param[journal_issn] = 2045-9912
 
-      au < crawling ; exists ; 2011 ; Medical Gas Research Volume 1 ; 1 >
+      au < released ; manifest ; 2011 ; Medical Gas Research Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Medical Gas Research Volume 2 ; 2 >
 
     }
@@ -3502,7 +3530,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Microbial Cell Factories Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; Microbial Cell Factories Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Microbial Cell Factories Volume 9 ; 9 >
-      au < crawling ; exists ; 2011 ; Microbial Cell Factories Volume 10 ; 10 >
+      au < released ; manifest ; 2011 ; Microbial Cell Factories Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Microbial Cell Factories Volume 11 ; 11 >
 
     }
@@ -3517,7 +3545,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.microbialinformaticsj.com/
       param[journal_issn] = 2042-5783
 
-      au < crawling ; exists ; 2011 ; Microbial Informatics and Experimentation Volume 1 ; 1 >
+      au < released ; manifest ; 2011 ; Microbial Informatics and Experimentation Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Microbial Informatics and Experimentation Volume 2 ; 2 >
 
     }
@@ -3536,7 +3564,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Molecular Brain Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; Molecular Brain Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Molecular Brain Volume 3 ; 3 >
-      au < crawling ; exists ; 2011 ; Molecular Brain Volume 4 ; 4 >
+      au < released ; manifest ; 2011 ; Molecular Brain Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Molecular Brain Volume 5 ; 5 >
 
     }
@@ -3560,7 +3588,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Molecular Cancer Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; Molecular Cancer Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Molecular Cancer Volume 9 ; 9 >
-      au < crawling ; exists ; 2011 ; Molecular Cancer Volume 10 ; 10 >
+      au < released ; manifest ; 2011 ; Molecular Cancer Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Molecular Cancer Volume 11 ; 11 >
 
     }
@@ -3578,7 +3606,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Molecular Cytogenetics Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; Molecular Cytogenetics Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Molecular Cytogenetics Volume 3 ; 3 >
-      au < crawling ; exists ; 2011 ; Molecular Cytogenetics Volume 4 ; 4 >
+      au < released ; manifest ; 2011 ; Molecular Cytogenetics Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Molecular Cytogenetics Volume 5 ; 5 >
 
     }
@@ -3598,7 +3626,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Molecular Neurodegeneration Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; Molecular Neurodegeneration Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Molecular Neurodegeneration Volume 5 ; 5 >
-      au < crawling ; exists ; 2011 ; Molecular Neurodegeneration Volume 6 ; 6 >
+      au < testing ; exists ; 2011 ; Molecular Neurodegeneration Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Molecular Neurodegeneration Volume 7 ; 7 >
       
     }
@@ -3619,7 +3647,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Molecular Pain Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; Molecular Pain Volume 5 ; 5 >
       au < crawling ; exists ; 2010 ; Molecular Pain Volume 6 ; 6 >
-      au < crawling ; exists ; 2011 ; Molecular Pain Volume 7 ; 7 >
+      au < released ; manifest ; 2011 ; Molecular Pain Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Molecular Pain Volume 8 ; 8 >
 
     }

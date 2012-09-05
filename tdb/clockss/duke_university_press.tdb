@@ -20,6 +20,9 @@
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://als.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
+      comment[years] = years in web addresses are two years behind the publishing year as of 20110912
+      comment[years1] = .long links still go to the year indicated (i.e. vol2009 manifest links to 2009, not 2011)
+      
 
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; American Literary Scholarship 2000 ; 1998 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; American Literary Scholarship 2001 ; 1999 >
@@ -32,7 +35,8 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; American Literary Scholarship 2008 ; 2006 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; American Literary Scholarship 2009 ; 2007 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; American Literary Scholarship 2010 ; 2008 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; American Literary Scholarship 2011 ; 2009 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2011 ; American Literary Scholarship 2011 ; 2009 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; American Literary Scholarship 2012 ; 2010 >
   
     }
   
@@ -65,7 +69,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; American Literature Volume 81 ; 81 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; American Literature Volume 82 ; 82 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; American Literature Volume 83 ; 83 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; American Literature Volume 84 ; 84 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; American Literature Volume 84 ; 84 >
   
     }
   
@@ -98,7 +102,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; American Speech Volume 84 ; 84 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; American Speech Volume 85 ; 85 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; American Speech Volume 86 ; 86 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; American Speech Volume 87 ; 87 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; American Speech Volume 87 ; 87 >
   
     }
   
@@ -131,7 +135,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; boundary 2 Volume 36 ; 36 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; boundary 2 Volume 37 ; 37 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; boundary 2 Volume 38 ; 38 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; boundary 2 Volume 39 ; 39 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; boundary 2 Volume 39 ; 39 >
   
     }
   
@@ -159,7 +163,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 26 ; 26 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 27 ; 27 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 27 ; 27 >
   
     }
   
@@ -276,7 +280,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Comparative Literature Volume 61 ; 61 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Comparative Literature Volume 62 ; 62 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Comparative Literature Volume 63 ; 63 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Comparative Literature Volume 64 ; 64 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Comparative Literature Volume 64 ; 64 >
   
     }
   
@@ -304,7 +308,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 ; 32 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 ; 32 >
   
     }
   
@@ -332,7 +336,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Cultural Politics Volume 5 ; 5 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Cultural Politics Volume 6 ; 6 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Cultural Politics Volume 7 ; 7 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Cultural Politics Volume 8 ; 8 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Cultural Politics Volume 8 ; 8 >
   
     }
   
@@ -365,7 +369,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; differences: A Journal of Feminist Cultural Studies Volume 23 ; 23 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; differences: A Journal of Feminist Cultural Studies Volume 23 ; 23 >
   
     }
   
@@ -391,7 +395,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 ; 3 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 ; 4 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 ; 5 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
   
     }
   
@@ -423,7 +427,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Eighteenth Century Life Volume 33 ; 33 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Eighteenth Century Life Volume 34 ; 34 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Eighteenth Century Life Volume 35 ; 35 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Eighteenth Century Life Volume 36 ; 36 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Eighteenth Century Life Volume 36 ; 36 >
   
     }
   
@@ -455,7 +459,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Ethnohistory Volume 56 ; 56 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Ethnohistory Volume 57 ; 57 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Ethnohistory Volume 58 ; 58 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Ethnohistory Volume 59 ; 59 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Ethnohistory Volume 59 ; 59 >
 
     }
   
@@ -488,7 +492,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; French Historical Studies Volume 32 ; 32 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; French Historical Studies Volume 33 ; 33 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; French Historical Studies Volume 34 ; 34 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; French Historical Studies Volume 35 ; 35 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; French Historical Studies Volume 35 ; 35 >
 
   }
   
@@ -519,7 +523,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 >
 
   }
 
@@ -584,7 +588,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Hispanic American Historical Review Volume 89 ; 89 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Hispanic American Historical Review Volume 90 ; 90>
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Hispanic American Historical Review Volume 92 ; 92 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Hispanic American Historical Review Volume 92 ; 92 >
       
     }
 
@@ -643,7 +647,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; History of Political Economy Volume 41 ; 41 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; History of Political Economy Volume 42 ; 42 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; History of Political Economy Volume 43 ; 43 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; History of Political Economy Volume 44 ; 44 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; History of Political Economy Volume 44 ; 44 >
     
     }
     
@@ -695,7 +699,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Journal of Health Politics, Policy and Law Volume 34 ; 34 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Journal of Health Politics, Policy and Law Volume 35 ; 35 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Journal of Health Politics, Policy and Law Volume 36 ; 36 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Journal of Health Politics, Policy and Law Volume 37 ; 37 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Journal of Health Politics, Policy and Law Volume 37 ; 37 >
 
     }
     
@@ -707,60 +711,60 @@
       eissn = 
   
 >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      plugin = needs.plugin
       param[base_url] = http://projecteuclid.org/
-      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
+      implicit < status1 ; status ; year ; name ; param[volume_name] >
 
 
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1961-1962 ; The Journal of Mathematics of Kyoto University Volume 1 ; 1 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1962 ; The Journal of Mathematics of Kyoto University Volume 2 ; 2 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1963 ; The Journal of Mathematics of Kyoto University Volume 3 ; 3 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1964 ; The Journal of Mathematics of Kyoto University Volume 4 ; 4 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1965 ; The Journal of Mathematics of Kyoto University Volume 5 ; 5 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1966 ; The Journal of Mathematics of Kyoto University Volume 5 ; 5 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1967 ; The Journal of Mathematics of Kyoto University Volume 7 ; 7 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1968 ; The Journal of Mathematics of Kyoto University Volume 8 ; 8 >      
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1969 ; The Journal of Mathematics of Kyoto University Volume 9 ; 9 >      
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1970 ; The Journal of Mathematics of Kyoto University Volume 10 ; 10 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1971 ; The Journal of Mathematics of Kyoto University Volume 11 ; 11 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1972 ; The Journal of Mathematics of Kyoto University Volume 12 ; 12 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1973 ; The Journal of Mathematics of Kyoto University Volume 13 ; 13 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1974 ; The Journal of Mathematics of Kyoto University Volume 14 ; 14 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1975 ; The Journal of Mathematics of Kyoto University Volume 15 ; 15 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1976 ; The Journal of Mathematics of Kyoto University Volume 16 ; 16 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1977 ; The Journal of Mathematics of Kyoto University Volume 17 ; 17 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1978 ; The Journal of Mathematics of Kyoto University Volume 18 ; 18 >      
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1979 ; The Journal of Mathematics of Kyoto University Volume 19 ; 19 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1980 ; The Journal of Mathematics of Kyoto University Volume 20 ; 20 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1981 ; The Journal of Mathematics of Kyoto University Volume 21 ; 21 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1982 ; The Journal of Mathematics of Kyoto University Volume 22 ; 22 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1983 ; The Journal of Mathematics of Kyoto University Volume 23 ; 23 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1984 ; The Journal of Mathematics of Kyoto University Volume 24 ; 24 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1985 ; The Journal of Mathematics of Kyoto University Volume 25 ; 25 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1986 ; The Journal of Mathematics of Kyoto University Volume 26 ; 26 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1987 ; The Journal of Mathematics of Kyoto University Volume 27 ; 27 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1988 ; The Journal of Mathematics of Kyoto University Volume 28 ; 28 >      
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1989 ; The Journal of Mathematics of Kyoto University Volume 29 ; 29 >      
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1990 ; The Journal of Mathematics of Kyoto University Volume 30 ; 30 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1991 ; The Journal of Mathematics of Kyoto University Volume 31 ; 31 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1992 ; The Journal of Mathematics of Kyoto University Volume 32 ; 32 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1993 ; The Journal of Mathematics of Kyoto University Volume 33 ; 33 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1994 ; The Journal of Mathematics of Kyoto University Volume 34 ; 34 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1995 ; The Journal of Mathematics of Kyoto University Volume 35 ; 35 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1996 ; The Journal of Mathematics of Kyoto University Volume 36 ; 36 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1997 ; The Journal of Mathematics of Kyoto University Volume 37 ; 37 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1998 ; The Journal of Mathematics of Kyoto University Volume 38 ; 38 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1999 ; The Journal of Mathematics of Kyoto University Volume 39 ; 39 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2000 ; The Journal of Mathematics of Kyoto University Volume 40 ; 40 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2001 ; The Journal of Mathematics of Kyoto University Volume 41 ; 41 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2002 ; The Journal of Mathematics of Kyoto University Volume 42 ; 42 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2003 ; The Journal of Mathematics of Kyoto University Volume 43 ; 43 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2004 ; The Journal of Mathematics of Kyoto University Volume 44 ; 44 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2005 ; The Journal of Mathematics of Kyoto University Volume 45 ; 45 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2006 ; The Journal of Mathematics of Kyoto University Volume 46 ; 46 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2007 ; The Journal of Mathematics of Kyoto University Volume 47 ; 47 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2008 ; The Journal of Mathematics of Kyoto University Volume 48 ; 48 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2009 ; The Journal of Mathematics of Kyoto University Volume 49 ; 49 >
+      au < exists ; exists ; 1961-1962 ; The Journal of Mathematics of Kyoto University Volume 1 ; 1 >
+      au < exists ; exists ; 1962 ; The Journal of Mathematics of Kyoto University Volume 2 ; 2 >
+      au < exists ; exists ; 1963 ; The Journal of Mathematics of Kyoto University Volume 3 ; 3 >
+      au < exists ; exists ; 1964 ; The Journal of Mathematics of Kyoto University Volume 4 ; 4 >
+      au < exists ; exists ; 1965 ; The Journal of Mathematics of Kyoto University Volume 5 ; 5 >
+      au < exists ; exists ; 1966 ; The Journal of Mathematics of Kyoto University Volume 5 ; 5 >
+      au < exists ; exists ; 1967 ; The Journal of Mathematics of Kyoto University Volume 7 ; 7 >
+      au < exists ; exists ; 1968 ; The Journal of Mathematics of Kyoto University Volume 8 ; 8 >      
+      au < exists ; exists ; 1969 ; The Journal of Mathematics of Kyoto University Volume 9 ; 9 >      
+      au < exists ; exists ; 1970 ; The Journal of Mathematics of Kyoto University Volume 10 ; 10 >
+      au < exists ; exists ; 1971 ; The Journal of Mathematics of Kyoto University Volume 11 ; 11 >
+      au < exists ; exists ; 1972 ; The Journal of Mathematics of Kyoto University Volume 12 ; 12 >
+      au < exists ; exists ; 1973 ; The Journal of Mathematics of Kyoto University Volume 13 ; 13 >
+      au < exists ; exists ; 1974 ; The Journal of Mathematics of Kyoto University Volume 14 ; 14 >
+      au < exists ; exists ; 1975 ; The Journal of Mathematics of Kyoto University Volume 15 ; 15 >
+      au < exists ; exists ; 1976 ; The Journal of Mathematics of Kyoto University Volume 16 ; 16 >
+      au < exists ; exists ; 1977 ; The Journal of Mathematics of Kyoto University Volume 17 ; 17 >
+      au < exists ; exists ; 1978 ; The Journal of Mathematics of Kyoto University Volume 18 ; 18 >      
+      au < exists ; exists ; 1979 ; The Journal of Mathematics of Kyoto University Volume 19 ; 19 >
+      au < exists ; exists ; 1980 ; The Journal of Mathematics of Kyoto University Volume 20 ; 20 >
+      au < exists ; exists ; 1981 ; The Journal of Mathematics of Kyoto University Volume 21 ; 21 >
+      au < exists ; exists ; 1982 ; The Journal of Mathematics of Kyoto University Volume 22 ; 22 >
+      au < exists ; exists ; 1983 ; The Journal of Mathematics of Kyoto University Volume 23 ; 23 >
+      au < exists ; exists ; 1984 ; The Journal of Mathematics of Kyoto University Volume 24 ; 24 >
+      au < exists ; exists ; 1985 ; The Journal of Mathematics of Kyoto University Volume 25 ; 25 >
+      au < exists ; exists ; 1986 ; The Journal of Mathematics of Kyoto University Volume 26 ; 26 >
+      au < exists ; exists ; 1987 ; The Journal of Mathematics of Kyoto University Volume 27 ; 27 >
+      au < exists ; exists ; 1988 ; The Journal of Mathematics of Kyoto University Volume 28 ; 28 >      
+      au < exists ; exists ; 1989 ; The Journal of Mathematics of Kyoto University Volume 29 ; 29 >      
+      au < exists ; exists ; 1990 ; The Journal of Mathematics of Kyoto University Volume 30 ; 30 >
+      au < exists ; exists ; 1991 ; The Journal of Mathematics of Kyoto University Volume 31 ; 31 >
+      au < exists ; exists ; 1992 ; The Journal of Mathematics of Kyoto University Volume 32 ; 32 >
+      au < exists ; exists ; 1993 ; The Journal of Mathematics of Kyoto University Volume 33 ; 33 >
+      au < exists ; exists ; 1994 ; The Journal of Mathematics of Kyoto University Volume 34 ; 34 >
+      au < exists ; exists ; 1995 ; The Journal of Mathematics of Kyoto University Volume 35 ; 35 >
+      au < exists ; exists ; 1996 ; The Journal of Mathematics of Kyoto University Volume 36 ; 36 >
+      au < exists ; exists ; 1997 ; The Journal of Mathematics of Kyoto University Volume 37 ; 37 >
+      au < exists ; exists ; 1998 ; The Journal of Mathematics of Kyoto University Volume 38 ; 38 >
+      au < exists ; exists ; 1999 ; The Journal of Mathematics of Kyoto University Volume 39 ; 39 >
+      au < exists ; exists ; 2000 ; The Journal of Mathematics of Kyoto University Volume 40 ; 40 >
+      au < exists ; exists ; 2001 ; The Journal of Mathematics of Kyoto University Volume 41 ; 41 >
+      au < exists ; exists ; 2002 ; The Journal of Mathematics of Kyoto University Volume 42 ; 42 >
+      au < exists ; exists ; 2003 ; The Journal of Mathematics of Kyoto University Volume 43 ; 43 >
+      au < exists ; exists ; 2004 ; The Journal of Mathematics of Kyoto University Volume 44 ; 44 >
+      au < exists ; exists ; 2005 ; The Journal of Mathematics of Kyoto University Volume 45 ; 45 >
+      au < exists ; exists ; 2006 ; The Journal of Mathematics of Kyoto University Volume 46 ; 46 >
+      au < exists ; exists ; 2007 ; The Journal of Mathematics of Kyoto University Volume 47 ; 47 >
+      au < exists ; exists ; 2008 ; The Journal of Mathematics of Kyoto University Volume 48 ; 48 >
+      au < exists ; exists ; 2009 ; The Journal of Mathematics of Kyoto University Volume 49 ; 49 >
       
     }
     
@@ -788,7 +792,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Journal of Medieval and Early Modern Studies Volume 41 ; 41 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Journal of Medieval and Early Modern Studies Volume 42 ; 42 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Journal of Medieval and Early Modern Studies Volume 42 ; 42 >
 
    }
    
@@ -817,7 +821,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Journal of Music Theory Volume 53 ; 53 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Journal of Music Theory Volume 54 ; 54 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Journal of Music Theory Volume 55 ; 55 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Journal of Music Theory Volume 56 ; 56 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Journal of Music Theory Volume 56 ; 56 >
 
     }
     
@@ -829,16 +833,16 @@
       eissn = 2154-3321
   
       >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      plugin = needs.plugin
       param[base_url] =  http://ProjectEuclid.org/kjm
-      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
+      implicit < status1 ; status ; year ; name ; param[volume_name] >
       comment[0] = formerly The Journal of Mathematics of Kyoto University, 1961-2009
       comment[1] = formerly Memoirs of the College of Science, University of Kyoto. Series A: Mathematics, 1950-1961
 
 
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2010 ; Kyoto Journal of Mathematics Volume 50 ; 50 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2011 ; Kyoto Journal of Mathematics Volume 51 ; 50 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; Kyoto Journal of Mathematics Volume 52 ; 52 >
+      au < exists ; exists ; 2010 ; Kyoto Journal of Mathematics Volume 50 ; 50 >
+      au < exists ; exists ; 2011 ; Kyoto Journal of Mathematics Volume 51 ; 50 >
+      au < exists ; exists ; 2012 ; Kyoto Journal of Mathematics Volume 52 ; 52 >
 
 
 }
@@ -862,7 +866,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Labor: Studies in Working-Class History of the Americas Volume 8 ; 8 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Labor: Studies in Working-Class History of the Americas Volume 9 ; 9 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Labor: Studies in Working-Class History of the Americas Volume 9 ; 9 >
 
     }
 
@@ -879,7 +883,7 @@
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Limnology and Oceanography: Fluids and Environments Volume 2 ; 2 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Limnology and Oceanography: Fluids and Environments Volume 2 ; 2 >
 
     }
 
@@ -907,7 +911,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Mediterranean Quarterly: A Journal of Global Issues Volume 20 ; 20 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Mediterranean Quarterly: A Journal of Global Issues Volume 21 ; 21 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Mediterranean Quarterly: A Journal of Global Issues Volume 22 ; 22 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Mediterranean Quarterly: A Journal of Global Issues Volume 23 ; 23 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Mediterranean Quarterly: A Journal of Global Issues Volume 23 ; 23 >
 
 }
     {
@@ -918,19 +922,19 @@
       eissn = 
   
       >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      plugin = needs.plugin
       param[base_url] = http://ProjectEuclid.org/kjm
-      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
+      implicit < status1 ; status ; year ; name ; param[volume_name] >
 
 
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1950-1951 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 26 ; 26 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1952-1953 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 27 ; 27 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1953-1954 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 28 ; 28 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1955 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 29 ; 29 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1956-1957 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 30 ; 30 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1958 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 31 ; 31 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1959-1960 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 32 ; 32 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1960-1961 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 33 ; 33 >
+      au < exists ; exists ; 1950-1951 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 26 ; 26 >
+      au < exists ; exists ; 1952-1953 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 27 ; 27 >
+      au < exists ; exists ; 1953-1954 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 28 ; 28 >
+      au < exists ; exists ; 1955 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 29 ; 29 >
+      au < exists ; exists ; 1956-1957 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 30 ; 30 >
+      au < exists ; exists ; 1958 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 31 ; 31 >
+      au < exists ; exists ; 1959-1960 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 32 ; 32 >
+      au < exists ; exists ; 1960-1961 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 33 ; 33 >
     
     }
     
@@ -1043,7 +1047,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Modern Language Quarterly: A Journal of Literary History Volume 60 ; 70 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Modern Language Quarterly: A Journal of Literary History Volume 71 ; 71 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Modern Language Quarterly: A Journal of Literary History Volume 72 ; 72 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Modern Language Quarterly: A Journal of Literary History Volume 73 ; 73 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Modern Language Quarterly: A Journal of Literary History Volume 73 ; 73 >
  
     }
     
@@ -1143,7 +1147,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; New German Critique Volume 36 ; 36 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; New German Critique Volume 37 ; 37 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; New German Critique Volume 38 ; 38 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; New German Critique Volume 39 ; 39 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; New German Critique Volume 39 ; 39 >
 
 
      }
@@ -1302,7 +1306,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 9 ; 9  >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 10 ;10 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 11 ;11 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 12 ;12 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 12 ;12 >
       
     }
 
@@ -1330,7 +1334,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Philosophical Review Volume 118 ; 118 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Philosophical Review Volume 119 ; 119 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Philosophical Review Volume 120 ; 120 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Philosophical Review Volume 121 ; 121 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Philosophical Review Volume 121 ; 121 >
 
   }
   
@@ -1359,7 +1363,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 30 ; 30 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 31 ; 31 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 32 ; 32 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 33 ; 33 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 33 ; 33 >
      
      }
      
@@ -1395,7 +1399,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; positions: asia critique Volume 17 ; 17 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; positions: asia critique Volume 18 ; 18 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; positions: asia critique Volume 19 ; 19 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; positions: asia critique Volume 20 ; 20 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; positions: asia critique Volume 20 ; 20 >
 
 }
 
@@ -1515,7 +1519,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Small Axe: A Caribbean Journal of Criticism Volume 13 ; 13 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Small Axe: A Caribbean Journal of Criticism Volume 14 ; 14 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Small Axe: A Caribbean Journal of Criticism Volume 15 ; 15 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Small Axe: A Caribbean Journal of Criticism Volume 16 ; 16 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Small Axe: A Caribbean Journal of Criticism Volume 16 ; 16 >
 
     }
     
@@ -1543,7 +1547,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Social Science History Volume 33 ; 33 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Social Science History Volume 34 ; 34 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Social Science History Volume 35 ; 35 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Social Science History Volume 36 ; 36 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Social Science History Volume 36 ; 36 >
 
      }
    
@@ -1571,7 +1575,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Social Text Volume 27 ; 27 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Social Text Volume 28 ; 28 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Social Text Volume 29 ; 29 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Social Text Volume 30 ; 30 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Social Text Volume 30 ; 30 >
 
      }  
      
@@ -1599,7 +1603,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; South Atlantic Quarterly Volume 108 ; 108 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; South Atlantic Quarterly Volume 109 ; 109 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; South Atlantic Quarterly Volume 110 ; 110 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; South Atlantic Quarterly Volume 111 ; 111 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; South Atlantic Quarterly Volume 111 ; 111 >
  
      }  
      
@@ -1675,7 +1679,7 @@
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Tikkun Volume 26 ; 26 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Tikkun Volume 27 ; 27 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Tikkun Volume 27 ; 27 >
 
 
   }   

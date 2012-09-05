@@ -7,14 +7,6 @@
     attr[contract] = 2011
 
   {
-  
-    comment[1] = Environmental and Engineering Geoscience
-    comment[2] = GeoScienceWorld
-    comment[3] = http://eeg.geoscienceworld.org/
-  
-  }
-
-  {
 
     title <
       name = Geological Society of America Bulletin ;
@@ -133,8 +125,6 @@
       issn = 0072-1069
     >
   
-    comment[1] = this title has no issues, just volumes check/test to see if it works with h20 plugin-- -SC
-
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://memoirs.gsapubs.org/
 

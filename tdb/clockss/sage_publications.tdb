@@ -473,20 +473,20 @@
       
         pluginSuffix = ClockssHighWirePressH20Plugin
         
-        au < exists ; exists ; 1998-1999 ; Adult Learning Volume 10 ; 10 ; >
-        au < exists ; exists ; 1999-2000 ; Adult Learning Volume 11 ; 11 ; >
-        au < exists ; exists ; 2001 ; Adult Learning Volume 12 ; 12 ; >
-        au < exists ; exists ; 2001-2002 ; Adult Learning Volume 13 ; 13 ; >
-        au < exists ; exists ; 2003 ; Adult Learning Volume 14 ; 14 ; >
-        au < exists ; exists ; 2004 ; Adult Learning Volume 15 ; 15 ; >
-        au < exists ; exists ; 2005 ; Adult Learning Volume 16 ; 16 ; >
-        au < exists ; exists ; 2006 ; Adult Learning Volume 17 ; 17 ; >
-        au < exists ; exists ; 2007 ; Adult Learning Volume 18 ; 18 ; >
-        au < exists ; exists ; 2008 ; Adult Learning Volume 19 ; 19 ; >
-        au < exists ; exists ; 2009 ; Adult Learning Volume 20 ; 20 ; >
-        au < exists ; exists ; 2010 ; Adult Learning Volume 21 ; 21 ; >
-        au < exists ; exists ; 2011-2012 ; Adult Learning Volume 22 ; 22 ; >
-        au < manifest ; exists ; 2012 ; Adult Learning Volume 23 ; 23 ; >
+        au < manifest ; exists ; 1998-1999 ; Adult Learning Volume 10 ; 10 ; >
+        au < manifest ; exists ; 1999-2000 ; Adult Learning Volume 11 ; 11 ; >
+        au < manifest ; exists ; 2001 ; Adult Learning Volume 12 ; 12 ; >
+        au < manifest ; exists ; 2001-2002 ; Adult Learning Volume 13 ; 13 ; >
+        au < manifest ; exists ; 2003 ; Adult Learning Volume 14 ; 14 ; >
+        au < manifest ; exists ; 2004 ; Adult Learning Volume 15 ; 15 ; >
+        au < manifest ; exists ; 2005 ; Adult Learning Volume 16 ; 16 ; >
+        au < manifest ; exists ; 2006 ; Adult Learning Volume 17 ; 17 ; >
+        au < manifest ; exists ; 2007 ; Adult Learning Volume 18 ; 18 ; >
+        au < manifest ; exists ; 2008 ; Adult Learning Volume 19 ; 19 ; >
+        au < manifest ; exists ; 2009 ; Adult Learning Volume 20 ; 20 ; >
+        au < manifest ; exists ; 2010 ; Adult Learning Volume 21 ; 21 ; >
+        au < crawling ; exists ; 2011-2012 ; Adult Learning Volume 22 ; 22 ; >
+        au < crawling ; exists ; 2012 ; Adult Learning Volume 23 ; 23 ; >
       
       }
       
@@ -3214,12 +3214,12 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://bjp.sagepub.com/
 
-        au < exists ; exists ; 2007-2008 ; British Journal of Pine Volume 1 ; 1 ; >
-        au < exists ; exists ; 2008 ; British Journal of Pine Volume 2 ; 2 ; >
-        au < exists ; exists ; 2009 ; British Journal of Pine Volume 3 ; 3 ; >
-        au < exists ; exists ; 2010 ; British Journal of Pine Volume 4 ; 4 ; >
-        au < exists ; exists ; 2011 ; British Journal of Pine Volume 5 ; 5 ; >
-        au < exists ; exists ; 2012 ; British Journal of Pine Volume 6 ; 6 ; >
+        au < manifest ; exists ; 2007-2008 ; British Journal of Pain Volume 1 ; 1 ; >
+        au < manifest ; exists ; 2008 ; British Journal of Pain Volume 2 ; 2 ; >
+        au < manifest ; exists ; 2009 ; British Journal of Pain Volume 3 ; 3 ; >
+        au < manifest ; exists ; 2010 ; British Journal of Pain Volume 4 ; 4 ; >
+        au < manifest ; exists ; 2011 ; British Journal of Pain Volume 5 ; 5 ; >
+        au < manifest ; exists ; 2012 ; British Journal of Pain Volume 6 ; 6 ; >
 
       }
       
@@ -4374,7 +4374,7 @@
       au < released ; crawling ; 2009 ; China Report Volume 45 ; 45 ; >
       au < released ; crawling ; 2010 ; China Report Volume 46 ; 46 ; >
       au < released ; crawling ; 2011 ; China Report Volume 47 ; 47 ; >
-      au < manifest ; exists ; 2012 ; China Report Volume 48 ; 48 ; >
+      au < crawling ; exists ; 2012 ; China Report Volume 48 ; 48 ; >
 
 
     }
@@ -7250,7 +7250,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Diogenes Volume 55 ; 55 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Diogenes Volume 56 ; 56 ; >
       au < released ; manifest ; 2010 ; Diogenes Volume 57 ; 57 ; >
-      au < manifest ; exists ; 2011 ; Diogenes Volume 58 ; 58 ; >
+      au < crawling ; exists ; 2011 ; Diogenes Volume 58 ; 58 ; >
 
     }
 
@@ -8360,7 +8360,7 @@
 
       au < released ; crawling ; 2010 ; Environment and Urbanization Asia Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Environment and Urbanization Asia Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2012 ; Environment and Urbanization Asia Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2012 ; Environment and Urbanization Asia Volume 3 ; 3 ; >
 
     }
 
@@ -9786,7 +9786,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Feminist Theology Volume 18 ; 18 ; >
       au < zapped ; down ; 2010-2011 ; Feminist Theology Volume 19 ; 19 ; >
       au < released ; crawling ; 2011-2012 ; Feminist Theology Volume 20 ; 20 ; >
-      au < expected ; exists ; 2012-2013 ; Feminist Theology Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2012-2013 ; Feminist Theology Volume 21 ; 21 ; >
 
     }
 
@@ -10316,7 +10316,7 @@
       au < released ; crawling ; 2009-2010 ; General Music Today Volume 23 ; 23 ; >
       au < zapped ; down ; 2010-2011 ; General Music Today Volume 24 ; 24 ; >
       au < released ; crawling ; 2011-2012 ; General Music Today Volume 25 ; 25 ; >
-      au < expected ; exists ; 2012-2013 ; General Music Today Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2012-2013 ; General Music Today Volume 26 ; 26 ; >
 
     }
 
@@ -10338,7 +10338,7 @@
 
       au < released ; crawling ; 2010 ; Genes & Cancer Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Genes & Cancer Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2012 ; Genes & Cancer Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2012 ; Genes & Cancer Volume 3 ; 3 ; >
 
     }
 
@@ -11704,7 +11704,7 @@
       au < manifest ; exists ; 1973 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 15 ; 15 ; >
       au < manifest ; exists ; 1974 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 16 ; 16 ; >
       au < manifest ; exists ; 1975 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 17 ; 17 ; >
-      au < exists ; exists ; 1976 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1976 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 18 ; 18 ; >
       au < manifest ; exists ; 1977 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 19 ; 19 ; >
       au < manifest ; exists ; 1978 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 20 ; 20 ; >
       au < manifest ; exists ; 1979 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 21 ; 21 ; >
@@ -12295,7 +12295,7 @@
       au < released ; crawling ; 2009 ; Indian Historical Review Volume 36 ; 36 ; >
       au < released ; crawling ; 2010 ; Indian Historical Review Volume 37 ; 37 ; >
       au < released ; crawling ; 2011 ; Indian Historical Review Volume 38 ; 38 ; >
-      au < expected ; exists ; 2012 ; Indian Historical Review Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2012 ; Indian Historical Review Volume 39 ; 39 ; >
 
     }
 
@@ -12500,22 +12500,20 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      comment[notReady] = Invalid manifest link. Includes cgi.
-    
-      au < exists ; exists ; 1997-1998 ; International Area Studies Review Volume 1 ; 1 ; >
-      au < exists ; exists ; 1999 ; International Area Studies Review Volume 2 ; 2 ; >
-      au < exists ; exists ; 2000 ; International Area Studies Review Volume 3 ; 3 ; >
-      au < exists ; exists ; 2001 ; International Area Studies Review Volume 4 ; 4 ; >
-      au < exists ; exists ; 2002 ; International Area Studies Review Volume 5 ; 5 ; >
-      au < exists ; exists ; 2003 ; International Area Studies Review Volume 6 ; 6 ; >
-      au < exists ; exists ; 2004 ; International Area Studies Review Volume 7 ; 7 ; >
-      au < exists ; exists ; 2005 ; International Area Studies Review Volume 8 ; 8 ; >
-      au < exists ; exists ; 2006 ; International Area Studies Review Volume 9 ; 9 ; >
-      au < exists ; exists ; 2007 ; International Area Studies Review Volume 10 ; 10 ; >
-      au < exists ; exists ; 2008 ; International Area Studies Review Volume 11 ; 11 ; >
-      au < exists ; exists ; 2009 ; International Area Studies Review Volume 12 ; 12 ; >
-      au < exists ; exists ; 2010 ; International Area Studies Review Volume 13 ; 13 ; >
-      au < notReady ; exists ; 2011 ; International Area Studies Review Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1997-1998 ; International Area Studies Review Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1999 ; International Area Studies Review Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2000 ; International Area Studies Review Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2001 ; International Area Studies Review Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2002 ; International Area Studies Review Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2003 ; International Area Studies Review Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2004 ; International Area Studies Review Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2005 ; International Area Studies Review Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2006 ; International Area Studies Review Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2007 ; International Area Studies Review Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2008 ; International Area Studies Review Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2009 ; International Area Studies Review Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2010 ; International Area Studies Review Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2011 ; International Area Studies Review Volume 14 ; 14 ; >
       au < crawling ; exists ; 2012 ; International Area Studies Review Volume 15 ; 15 ; >
      
     }
@@ -13124,18 +13122,18 @@
         param[base_url] = http://jdi.sagepub.com/
         pluginSuffix = ClockssHighWirePressH20Plugin
         
-        au < exists ; exists ; 1995-1996 ; International Journal of Discrimination and the Law Volume 1 ; 1 ; >
-        au < exists ; exists ; 1996-1997 ; International Journal of Discrimination and the Law Volume 2 ; 2 ; >
-        au < exists ; exists ; 1998-1999 ; International Journal of Discrimination and the Law Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1995-1996 ; International Journal of Discrimination and the Law Volume 1 ; 1 ; >
+        au < manifest ; exists ; 1996-1997 ; International Journal of Discrimination and the Law Volume 2 ; 2 ; >
+        au < manifest ; exists ; 1998-1999 ; International Journal of Discrimination and the Law Volume 3 ; 3 ; >
         au < manifest ; exists ; 2000 ; International Journal of Discrimination and the Law Volume 4 ; 4 ; >
-        au < exists ; exists ; 2001-2002 ; International Journal of Discrimination and the Law Volume 5 ; 5 ; >
-        au < exists ; exists ; 2003-2005 ; International Journal of Discrimination and the Law Volume 6 ; 6 ; >
-        au < exists ; exists ; 2005 ; International Journal of Discrimination and the Law Volume 7 ; 7 ; >
-        au < exists ; exists ; 2005-2007 ; International Journal of Discrimination and the Law Volume 8 ; 8 ; >
-        au < exists ; exists ; 2007-2008 ; International Journal of Discrimination and the Law Volume 9 ; 9 ; >
-        au < exists ; exists ; 2009 ; International Journal of Discrimination and the Law Volume 10 ; 10 ; >
+        au < manifest ; exists ; 2001-2002 ; International Journal of Discrimination and the Law Volume 5 ; 5 ; >
+        au < manifest ; exists ; 2003-2005 ; International Journal of Discrimination and the Law Volume 6 ; 6 ; >
+        au < manifest ; exists ; 2005 ; International Journal of Discrimination and the Law Volume 7 ; 7 ; >
+        au < manifest ; exists ; 2005-2007 ; International Journal of Discrimination and the Law Volume 8 ; 8 ; >
+        au < manifest ; exists ; 2007-2008 ; International Journal of Discrimination and the Law Volume 9 ; 9 ; >
+        au < manifest ; exists ; 2009 ; International Journal of Discrimination and the Law Volume 10 ; 10 ; >
         au < released ; crawling ; 2011 ; International Journal of Discrimination and the Law Volume 11 ; 11 ; >
-        au < manifest ; exists ; 2012 ; International Journal of Discrimination and the Law Volume 12 ; 12 ; >
+        au < crawling ; exists ; 2012 ; International Journal of Discrimination and the Law Volume 12 ; 12 ; >
 
       }
       
@@ -14145,23 +14143,23 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
 
-        au < exists ; exists ; 1990-1991 ; International Review of Victimology Volume 1 ; 1 ; >
-        au < exists ; exists ; 1991-1993 ; International Review of Victimology Volume 2 ; 2 ; >
-        au < exists ; exists ; 1994-1995 ; International Review of Victimology Volume 3 ; 3 ; >
-        au < exists ; exists ; 1995-1997 ; International Review of Victimology Volume 4 ; 4 ; >
-        au < exists ; exists ; 1997-1998 ; International Review of Victimology Volume 5 ; 5 ; >
-        au < exists ; exists ; 1998-1999 ; International Review of Victimology Volume 6 ; 6 ; >
-        au < exists ; exists ; 2000 ; International Review of Victimology Volume 7 ; 7 ; >
-        au < exists ; exists ; 2001 ; International Review of Victimology Volume 8 ; 8 ; >
-        au < exists ; exists ; 2002 ; International Review of Victimology Volume 9 ; 9 ; >
-        au < exists ; exists ; 2003-2004 ; International Review of Victimology Volume 10 ; 10 ; >
-        au < exists ; exists ; 2004 ; International Review of Victimology Volume 11 ; 11 ; >
-        au < exists ; exists ; 2005 ; International Review of Victimology Volume 12 ; 12 ; >
-        au < exists ; exists ; 2006 ; International Review of Victimology Volume 13 ; 13 ; >
-        au < exists ; exists ; 2007 ; International Review of Victimology Volume 14 ; 14 ; >
-        au < exists ; exists ; 2008-2009 ; International Review of Victimology Volume 15 ; 15 ; >
-        au < exists ; exists ; 2009 ; International Review of Victimology Volume 16 ; 16 ; >
-        au < exists ; exists ; 2010 ; International Review of Victimology Volume 17 ; 17 ; >
+        au < manifest ; exists ; 1990-1991 ; International Review of Victimology Volume 1 ; 1 ; >
+        au < manifest ; exists ; 1991-1993 ; International Review of Victimology Volume 2 ; 2 ; >
+        au < manifest ; exists ; 1994-1995 ; International Review of Victimology Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1995-1997 ; International Review of Victimology Volume 4 ; 4 ; >
+        au < manifest ; exists ; 1997-1998 ; International Review of Victimology Volume 5 ; 5 ; >
+        au < manifest ; exists ; 1998-1999 ; International Review of Victimology Volume 6 ; 6 ; >
+        au < manifest ; exists ; 2000 ; International Review of Victimology Volume 7 ; 7 ; >
+        au < manifest ; exists ; 2001 ; International Review of Victimology Volume 8 ; 8 ; >
+        au < manifest ; exists ; 2002 ; International Review of Victimology Volume 9 ; 9 ; >
+        au < manifest ; exists ; 2003-2004 ; International Review of Victimology Volume 10 ; 10 ; >
+        au < manifest ; exists ; 2004 ; International Review of Victimology Volume 11 ; 11 ; >
+        au < manifest ; exists ; 2005 ; International Review of Victimology Volume 12 ; 12 ; >
+        au < manifest ; exists ; 2006 ; International Review of Victimology Volume 13 ; 13 ; >
+        au < manifest ; exists ; 2007 ; International Review of Victimology Volume 14 ; 14 ; >
+        au < manifest ; exists ; 2008-2009 ; International Review of Victimology Volume 15 ; 15 ; >
+        au < manifest ; exists ; 2009 ; International Review of Victimology Volume 16 ; 16 ; >
+        au < manifest ; exists ; 2010 ; International Review of Victimology Volume 17 ; 17 ; >
         au < crawling ; exists ; 2012 ; International Review of Victimology Volume 18 ; 18 ; >
   
       }
@@ -14514,7 +14512,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Intervention in School and Clinic Volume 45 ; 45 ; >
       au < released ; crawling ; 2010-2011 ; Intervention in School and Clinic Volume 46 ; 46 ; >
       au < released ; crawling ; 2011-2012 ; Intervention in School and Clinic Volume 47 ; 47 ; >
-      au < manifest ; exists ; 2012-2013 ; Intervention in School and Clinic Volume 48 ; 48 ; >
+      au < crawling ; exists ; 2012-2013 ; Intervention in School and Clinic Volume 48 ; 48 ; >
 
     }
 
@@ -14658,7 +14656,7 @@
       au < zapped ; down ; 2009-2010 ; Journal for the Study of the New Testament Volume 32 ; 32 ; >
       au < released ; crawling ; 2010-2011 ; Journal for the Study of the New Testament Volume 33 ; 33 ; >
       au < released ; crawling ; 2011-2012 ; Journal for the Study of the New Testament Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2012-2013 ; Journal for the Study of the New Testament Volume 35 ; 35 ; >
+      au < crawling ; exists ; 2012-2013 ; Journal for the Study of the New Testament Volume 35 ; 35 ; >
 
     }
 
@@ -14723,7 +14721,7 @@
       au < released ; crawling ; 2009-2010 ; Journal for the Study of the Old Testament Volume 34 ; 34 ; >
       au < released ; crawling ; 2010-2011 ; Journal for the Study of the Old Testament Volume 35 ; 35 ; >
       au < released ; crawling ; 2011-2012 ; Journal for the Study of the Old Testament Volume 36 ; 36 ; >
-      au < expected ; exists ; 2012-2013 ; Journal for the Study of the Old Testament Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2012-2013 ; Journal for the Study of the Old Testament Volume 37 ; 37 ; >
 
     }
 
@@ -14773,6 +14771,7 @@
       au < released ; crawling ; 2009-2010 ; Journal for the Study of the Pseudepigrapha Volume 19 ; 19 ; >
       au < released ; crawling ; 2010-2011 ; Journal for the Study of the Pseudepigrapha Volume 20 ; 20 ; >
       au < released ; crawling ; 2012 ; Journal for the Study of the Pseudepigrapha Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2012 ; Journal for the Study of the Pseudepigrapha Volume 22 ; 22 ; >
 
     }
 
@@ -14893,17 +14892,21 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
 
-        au < exists ; exists ; 1999-2000 ; Journal of Advanced Academics Volume 11 ; 11 ; >
-        au < exists ; exists ; 2000-2001 ; Journal of Advanced Academics Volume 12 ; 12 ; >
-        au < exists ; exists ; 2001-2002 ; Journal of Advanced Academics Volume 13 ; 13 ; >
-        au < exists ; exists ; 2002-2003 ; Journal of Advanced Academics Volume 14 ; 14 ; >
-        au < exists ; exists ; 2003-2004 ; Journal of Advanced Academics Volume 15 ; 15 ; >
-        au < exists ; exists ; 2004-2005 ; Journal of Advanced Academics Volume 16 ; 16 ; >
-        au < exists ; exists ; 2005-2006 ; Journal of Advanced Academics Volume 17 ; 17 ; >
-        au < exists ; exists ; 2006-2007 ; Journal of Advanced Academics Volume 18 ; 18 ; >
-        au < exists ; exists ; 2007-2008 ; Journal of Advanced Academics Volume 19 ; 19 ; >
-        au < exists ; exists ; 2008-2009 ; Journal of Advanced Academics Volume 20 ; 20 ; >
-        au < exists ; exists ; 2009-2010 ; Journal of Advanced Academics Volume 21 ; 21 ; >
+        au < manifest ; exists ; 1995-1996 ; Journal of Advanced Academics Volume 7 ; 7 ; >
+        au < manifest ; exists ; 1996-1997 ; Journal of Advanced Academics Volume 8 ; 8 ; >
+        au < manifest ; exists ; 1997-1998 ; Journal of Advanced Academics Volume 9 ; 9 ; >
+        au < manifest ; exists ; 1998-1999 ; Journal of Advanced Academics Volume 10 ; 10 ; >
+        au < manifest ; exists ; 1999-2000 ; Journal of Advanced Academics Volume 11 ; 11 ; >
+        au < manifest ; exists ; 2000-2001 ; Journal of Advanced Academics Volume 12 ; 12 ; >
+        au < manifest ; exists ; 2001-2002 ; Journal of Advanced Academics Volume 13 ; 13 ; >
+        au < manifest ; exists ; 2002-2003 ; Journal of Advanced Academics Volume 14 ; 14 ; >
+        au < manifest ; exists ; 2003-2004 ; Journal of Advanced Academics Volume 15 ; 15 ; >
+        au < manifest ; exists ; 2004-2005 ; Journal of Advanced Academics Volume 16 ; 16 ; >
+        au < manifest ; exists ; 2005-2006 ; Journal of Advanced Academics Volume 17 ; 17 ; >
+        au < manifest ; exists ; 2006-2007 ; Journal of Advanced Academics Volume 18 ; 18 ; >
+        au < manifest ; exists ; 2007-2008 ; Journal of Advanced Academics Volume 19 ; 19 ; >
+        au < manifest ; exists ; 2008-2009 ; Journal of Advanced Academics Volume 20 ; 20 ; >
+        au < manifest ; exists ; 2009-2010 ; Journal of Advanced Academics Volume 21 ; 21 ; >
         au < released ; crawling ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 ; >
         au < released ; crawling ; 2011-2012 ; Journal of Advanced Academics Volume 23 ; 23 ; >
         au < expected ; exists ; 2012-2013 ; Journal of Advanced Academics Volume 24 ; 24 ; >
@@ -15112,12 +15115,12 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://jax.sagepub.com/
 
-      au < exists ; exists ; 2007 ; Journal of Applied Social Science Volume 1 ; 1 ; >
-      au < exists ; exists ; 2008 ; Journal of Applied Social Science Volume 2 ; 2 ; >
-      au < exists ; exists ; 2009 ; Journal of Applied Social Science Volume 3 ; 3 ; >
-      au < exists ; exists ; 2010 ; Journal of Applied Social Science Volume 4 ; 4 ; >
-      au < exists ; exists ; 2011 ; Journal of Applied Social Science Volume 5 ; 5 ; >
-      au < exists ; exists ; 2012 ; Journal of Applied Social Science Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2007 ; Journal of Applied Social Science Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2008 ; Journal of Applied Social Science Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2009 ; Journal of Applied Social Science Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2010 ; Journal of Applied Social Science Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2011 ; Journal of Applied Social Science Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2012 ; Journal of Applied Social Science Volume 6 ; 6 ; >
 
   }
 
@@ -17070,8 +17073,9 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         rights = openaccess
 
-        au < exists ; exists ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 ; >
-        au < manifest ; exists ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 ; >
+        au < manifest ; exists ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 ; >
+        au < crawling ; exists ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 ; >
+        au < manifest ; exists ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 ; >
         
       }
       
@@ -17361,17 +17365,17 @@
     
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < exists ; exists ; 2001 ; Journal of Drug Issues Volume 31 ; 31 ; >
-      au < exists ; exists ; 2002 ; Journal of Drug Issues Volume 32 ; 32 ; >
-      au < exists ; exists ; 2003 ; Journal of Drug Issues Volume 33 ; 33 ; >
-      au < exists ; exists ; 2004 ; Journal of Drug Issues Volume 34 ; 34 ; >
-      au < exists ; exists ; 2005 ; Journal of Drug Issues Volume 35 ; 35 ; >
-      au < exists ; exists ; 2006 ; Journal of Drug Issues Volume 36 ; 36 ; >
-      au < exists ; exists ; 2007 ; Journal of Drug Issues Volume 37 ; 37 ; >
-      au < exists ; exists ; 2008 ; Journal of Drug Issues Volume 38 ; 38 ; >
-      au < exists ; exists ; 2009 ; Journal of Drug Issues Volume 39 ; 39 ; >
-      au < exists ; exists ; 2010 ; Journal of Drug Issues Volume 40 ; 40 ; >
-      au < exists ; exists ; 2011 ; Journal of Drug Issues Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2001 ; Journal of Drug Issues Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2002 ; Journal of Drug Issues Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2003 ; Journal of Drug Issues Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2004 ; Journal of Drug Issues Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2005 ; Journal of Drug Issues Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2006 ; Journal of Drug Issues Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2007 ; Journal of Drug Issues Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2008 ; Journal of Drug Issues Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2009 ; Journal of Drug Issues Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2010 ; Journal of Drug Issues Volume 40 ; 40 ; >
+      au < crawling ; exists ; 2011 ; Journal of Drug Issues Volume 41 ; 41 ; >
       au < crawling ; exists ; 2012 ; Journal of Drug Issues Volume 42 ; 42 ; > 
     
     }
@@ -17716,7 +17720,7 @@
       au < manifest ; exists ; 1974 ; Journal of Elastomers and Plastics Volume 6 ; 6 ; >
       au < manifest ; exists ; 1975 ; Journal of Elastomers and Plastics Volume 7 ; 7 ; >
       au < manifest ; exists ; 1976 ; Journal of Elastomers and Plastics Volume 8 ; 8 ; >
-      au < exists ; exists ; 1977 ; Journal of Elastomers and Plastics Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1977 ; Journal of Elastomers and Plastics Volume 9 ; 9 ; >
       au < manifest ; exists ; 1978 ; Journal of Elastomers and Plastics Volume 10 ; 10 ; >
       au < manifest ; exists ; 1979 ; Journal of Elastomers and Plastics Volume 11 ; 11 ; >
       au < manifest ; exists ; 1980 ; Journal of Elastomers and Plastics Volume 12 ; 12 ; >
@@ -18326,19 +18330,19 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < exists ; exists ; 1999 ; Journal of Feline Medicine and Surgery Volume 1 ; 1 ; >
-      au < exists ; exists ; 2000 ; Journal of Feline Medicine and Surgery Volume 2 ; 2 ; >
-      au < exists ; exists ; 2001 ; Journal of Feline Medicine and Surgery Volume 3 ; 3 ; >
-      au < exists ; exists ; 2002 ; Journal of Feline Medicine and Surgery Volume 4 ; 4 ; >
-      au < exists ; exists ; 2003 ; Journal of Feline Medicine and Surgery Volume 5 ; 5 ; >
-      au < exists ; exists ; 2004 ; Journal of Feline Medicine and Surgery Volume 6 ; 6 ; >
-      au < exists ; exists ; 2005 ; Journal of Feline Medicine and Surgery Volume 7 ; 7 ; >
-      au < exists ; exists ; 2006 ; Journal of Feline Medicine and Surgery Volume 8 ; 8 ; >
-      au < exists ; exists ; 2007 ; Journal of Feline Medicine and Surgery Volume 9 ; 9 ; >
-      au < exists ; exists ; 2008 ; Journal of Feline Medicine and Surgery Volume 10 ; 10 ; >
-      au < exists ; exists ; 2009 ; Journal of Feline Medicine and Surgery Volume 11 ; 11 ; >
-      au < exists ; exists ; 2010 ; Journal of Feline Medicine and Surgery Volume 12 ; 12 ; >
-      au < exists ; exists ; 2011 ; Journal of Feline Medicine and Surgery Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1999 ; Journal of Feline Medicine and Surgery Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2000 ; Journal of Feline Medicine and Surgery Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2001 ; Journal of Feline Medicine and Surgery Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2002 ; Journal of Feline Medicine and Surgery Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2003 ; Journal of Feline Medicine and Surgery Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2004 ; Journal of Feline Medicine and Surgery Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2005 ; Journal of Feline Medicine and Surgery Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2006 ; Journal of Feline Medicine and Surgery Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2007 ; Journal of Feline Medicine and Surgery Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2008 ; Journal of Feline Medicine and Surgery Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2009 ; Journal of Feline Medicine and Surgery Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2010 ; Journal of Feline Medicine and Surgery Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2011 ; Journal of Feline Medicine and Surgery Volume 13 ; 13 ; >
       au < crawling ; exists ; 2012 ; Journal of Feline Medicine and Surgery Volume 14 ; 14 ; >
 
     }
@@ -19682,19 +19686,19 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1999 ; Journal of Laboratory Automation Volume 4 ; 4 ; >
-      au < exists ; exists ; 2000 ; Journal of Laboratory Automation Volume 5 ; 5 ; >
-      au < exists ; exists ; 2001 ; Journal of Laboratory Automation Volume 6 ; 6 ; >
-      au < exists ; exists ; 2002 ; Journal of Laboratory Automation Volume 7 ; 7 ; >
-      au < exists ; exists ; 2003 ; Journal of Laboratory Automation Volume 8 ; 8 ; >
-      au < exists ; exists ; 2004 ; Journal of Laboratory Automation Volume 9 ; 9 ; >
-      au < exists ; exists ; 2005 ; Journal of Laboratory Automation Volume 10 ; 10 ; >
-      au < exists ; exists ; 2006 ; Journal of Laboratory Automation Volume 11 ; 11 ; >
-      au < exists ; exists ; 2007 ; Journal of Laboratory Automation Volume 12 ; 12 ; >
-      au < exists ; exists ; 2008 ; Journal of Laboratory Automation Volume 13 ; 13 ; >
-      au < exists ; exists ; 2009 ; Journal of Laboratory Automation Volume 14 ; 14 ; >
-      au < exists ; exists ; 2010 ; Journal of Laboratory Automation Volume 15 ; 15 ; >
-      au < exists ; exists ; 2011 ; Journal of Laboratory Automation Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1999 ; Journal of Laboratory Automation Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2000 ; Journal of Laboratory Automation Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2001 ; Journal of Laboratory Automation Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2002 ; Journal of Laboratory Automation Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2003 ; Journal of Laboratory Automation Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2004 ; Journal of Laboratory Automation Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2005 ; Journal of Laboratory Automation Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2006 ; Journal of Laboratory Automation Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2007 ; Journal of Laboratory Automation Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2008 ; Journal of Laboratory Automation Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2009 ; Journal of Laboratory Automation Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2010 ; Journal of Laboratory Automation Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2011 ; Journal of Laboratory Automation Volume 16 ; 16 ; >
       au < crawling ; exists ; 2012 ; Journal of Laboratory Automation Volume 17 ; 17 ; >
 
     }
@@ -21503,13 +21507,13 @@
 
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 2006 ; Journal of Research on Leadership Education Volume 1 ; 1 ; >
-    au < exists ; exists ; 2007 ; Journal of Research on Leadership Education Volume 2 ; 2 ; >
-    au < exists ; exists ; 2008 ; Journal of Research on Leadership Education Volume 3 ; 3 ; >
-    au < exists ; exists ; 2009 ; Journal of Research on Leadership Education Volume 4 ; 4 ; >
-    au < exists ; exists ; 2010 ; Journal of Research on Leadership Education Volume 5 ; 5 ; >
-    au < exists ; exists ; 2011 ; Journal of Research on Leadership Education Volume 6 ; 6 ; >
-    au < exists ; exists ; 2012 ; Journal of Research on Leadership Education Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2006 ; Journal of Research on Leadership Education Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2007 ; Journal of Research on Leadership Education Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2008 ; Journal of Research on Leadership Education Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2009 ; Journal of Research on Leadership Education Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2010 ; Journal of Research on Leadership Education Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2011 ; Journal of Research on Leadership Education Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2012 ; Journal of Research on Leadership Education Volume 7 ; 7 ; >
 
     }
 
@@ -21890,7 +21894,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of South Asian Development Volume 4 ; 4 ; >
       au < released ; crawling ; 2010 ; Journal of South Asian Development Volume 5 ; 5 ; >
       au < released ; crawling ; 2011 ; Journal of South Asian Development Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2012 ; Journal of South Asian Development Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2012 ; Journal of South Asian Development Volume 7 ; 7 ; >
 
     }
 
@@ -22482,66 +22486,65 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
 
-        au < exists ; exists ; 1911 ; Journal of the Institution of Locomotive Engineers Volume 1 ; 1 ; >
-        au < exists ; exists ; 1912 ; Journal of the Institution of Locomotive Engineers Volume 2 ; 2 ; >
-        au < exists ; exists ; 1913 ; Journal of the Institution of Locomotive Engineers Volume 3 ; 3 ; >
-        au < exists ; exists ; 1914 ; Journal of the Institution of Locomotive Engineers Volume 4 ; 4 ; >
-        au < exists ; exists ; 1915 ; Journal of the Institution of Locomotive Engineers Volume 5 ; 5 ; >
-        au < exists ; exists ; 1916 ; Journal of the Institution of Locomotive Engineers Volume 6 ; 6 ; >
-        au < exists ; exists ; 1917 ; Journal of the Institution of Locomotive Engineers Volume 7 ; 7 ; >
-        au < exists ; exists ; 1918 ; Journal of the Institution of Locomotive Engineers Volume 8 ; 8 ; >
-        au < exists ; exists ; 1919 ; Journal of the Institution of Locomotive Engineers Volume 9 ; 9 ; >
-        au < exists ; exists ; 1920 ; Journal of the Institution of Locomotive Engineers Volume 10 ; 10 ; >
-        au < exists ; exists ; 1921 ; Journal of the Institution of Locomotive Engineers Volume 11 ; 11 ; >
-        au < exists ; exists ; 1922 ; Journal of the Institution of Locomotive Engineers Volume 12 ; 12 ; >
-        au < exists ; exists ; 1923 ; Journal of the Institution of Locomotive Engineers Volume 13 ; 13 ; >
-        au < exists ; exists ; 1924 ; Journal of the Institution of Locomotive Engineers Volume 14 ; 14 ; >
-        au < exists ; exists ; 1925 ; Journal of the Institution of Locomotive Engineers Volume 15 ; 15 ; >
-        au < exists ; exists ; 1926 ; Journal of the Institution of Locomotive Engineers Volume 16 ; 16 ; >
-        au < exists ; exists ; 1927 ; Journal of the Institution of Locomotive Engineers Volume 17 ; 17 ; >
-        au < exists ; exists ; 1928 ; Journal of the Institution of Locomotive Engineers Volume 18 ; 18 ; >
-        au < exists ; exists ; 1929 ; Journal of the Institution of Locomotive Engineers Volume 19 ; 19 ; >
-        au < exists ; exists ; 1930 ; Journal of the Institution of Locomotive Engineers Volume 20 ; 20 ; >
-        au < exists ; exists ; 1931 ; Journal of the Institution of Locomotive Engineers Volume 21 ; 21 ; >
-        au < exists ; exists ; 1932 ; Journal of the Institution of Locomotive Engineers Volume 22 ; 22 ; >
-        au < exists ; exists ; 1933 ; Journal of the Institution of Locomotive Engineers Volume 23 ; 23 ; >
-        au < exists ; exists ; 1934 ; Journal of the Institution of Locomotive Engineers Volume 24 ; 24 ; >
-        au < exists ; exists ; 1935 ; Journal of the Institution of Locomotive Engineers Volume 25 ; 25 ; >
-        au < exists ; exists ; 1936 ; Journal of the Institution of Locomotive Engineers Volume 26 ; 26 ; >
-        au < exists ; exists ; 1937 ; Journal of the Institution of Locomotive Engineers Volume 27 ; 27 ; >
-        au < exists ; exists ; 1938 ; Journal of the Institution of Locomotive Engineers Volume 28 ; 28 ; >
-        au < exists ; exists ; 1939 ; Journal of the Institution of Locomotive Engineers Volume 29 ; 29 ; >
-        au < exists ; exists ; 1940 ; Journal of the Institution of Locomotive Engineers Volume 30 ; 30 ; >
-        au < exists ; exists ; 1941 ; Journal of the Institution of Locomotive Engineers Volume 31 ; 31 ; >
-        au < exists ; exists ; 1942 ; Journal of the Institution of Locomotive Engineers Volume 32 ; 32 ; >
-        au < exists ; exists ; 1943 ; Journal of the Institution of Locomotive Engineers Volume 33 ; 33 ; >
-        au < exists ; exists ; 1944 ; Journal of the Institution of Locomotive Engineers Volume 34 ; 34 ; >
-        au < exists ; exists ; 1945 ; Journal of the Institution of Locomotive Engineers Volume 35 ; 35 ; >
-        au < exists ; exists ; 1946 ; Journal of the Institution of Locomotive Engineers Volume 36 ; 36 ; >
-        au < exists ; exists ; 1947 ; Journal of the Institution of Locomotive Engineers Volume 37 ; 37 ; >
-        au < exists ; exists ; 1948 ; Journal of the Institution of Locomotive Engineers Volume 38 ; 38 ; >
-        au < exists ; exists ; 1949 ; Journal of the Institution of Locomotive Engineers Volume 39 ; 39 ; >
-        au < exists ; exists ; 1950 ; Journal of the Institution of Locomotive Engineers Volume 40 ; 40 ; >
-        au < exists ; exists ; 1951 ; Journal of the Institution of Locomotive Engineers Volume 41 ; 41 ; >
-        au < exists ; exists ; 1952 ; Journal of the Institution of Locomotive Engineers Volume 42 ; 42 ; >
-        au < doesNotExist ; doesNotExist ; 0 ; Journal of the Institution of Locomotive Engineers Volume 43 ; 43 ; >
-        au < exists ; exists ; 1954 ; Journal of the Institution of Locomotive Engineers Volume 44 ; 44 ; >
-        au < exists ; exists ; 1955 ; Journal of the Institution of Locomotive Engineers Volume 45 ; 45 ; >
-        au < exists ; exists ; 1956 ; Journal of the Institution of Locomotive Engineers Volume 46 ; 46 ; >
-        au < exists ; exists ; 1957 ; Journal of the Institution of Locomotive Engineers Volume 47 ; 47 ; >
-        au < exists ; exists ; 1958 ; Journal of the Institution of Locomotive Engineers Volume 48 ; 48 ; >
-        au < exists ; exists ; 1959 ; Journal of the Institution of Locomotive Engineers Volume 49 ; 49 ; >
-        au < exists ; exists ; 1960 ; Journal of the Institution of Locomotive Engineers Volume 50 ; 50 ; >
-        au < exists ; exists ; 1961 ; Journal of the Institution of Locomotive Engineers Volume 51 ; 51 ; >
-        au < exists ; exists ; 1962 ; Journal of the Institution of Locomotive Engineers Volume 52 ; 52 ; >
-        au < exists ; exists ; 1963 ; Journal of the Institution of Locomotive Engineers Volume 53 ; 53 ; >
-        au < exists ; exists ; 1964 ; Journal of the Institution of Locomotive Engineers Volume 54 ; 54 ; >
-        au < exists ; exists ; 1965 ; Journal of the Institution of Locomotive Engineers Volume 55 ; 55 ; >
-        au < exists ; exists ; 1965 ; Journal of the Institution of Locomotive Engineers Volume 55 ; 55 ; >
-        au < exists ; exists ; 1966 ; Journal of the Institution of Locomotive Engineers Volume 56 ; 56 ; >
-        au < exists ; exists ; 1967 ; Journal of the Institution of Locomotive Engineers Volume 57 ; 57 ; >
-        au < exists ; exists ; 1968 ; Journal of the Institution of Locomotive Engineers Volume 58 ; 58 ; >
-        au < exists ; exists ; 1969 ; Journal of the Institution of Locomotive Engineers Volume 59 ; 59 ; >
+        au < manifest ; exists ; 1911 ; Journal of the Institution of Locomotive Engineers Volume 1 ; 1 ; >
+        au < manifest ; exists ; 1912 ; Journal of the Institution of Locomotive Engineers Volume 2 ; 2 ; >
+        au < manifest ; exists ; 1913 ; Journal of the Institution of Locomotive Engineers Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1914 ; Journal of the Institution of Locomotive Engineers Volume 4 ; 4 ; >
+        au < manifest ; exists ; 1915 ; Journal of the Institution of Locomotive Engineers Volume 5 ; 5 ; >
+        au < manifest ; exists ; 1916 ; Journal of the Institution of Locomotive Engineers Volume 6 ; 6 ; >
+        au < manifest ; exists ; 1917 ; Journal of the Institution of Locomotive Engineers Volume 7 ; 7 ; >
+        au < manifest ; exists ; 1918 ; Journal of the Institution of Locomotive Engineers Volume 8 ; 8 ; >
+        au < manifest ; exists ; 1919 ; Journal of the Institution of Locomotive Engineers Volume 9 ; 9 ; >
+        au < manifest ; exists ; 1920 ; Journal of the Institution of Locomotive Engineers Volume 10 ; 10 ; >
+        au < manifest ; exists ; 1921 ; Journal of the Institution of Locomotive Engineers Volume 11 ; 11 ; >
+        au < manifest ; exists ; 1922 ; Journal of the Institution of Locomotive Engineers Volume 12 ; 12 ; >
+        au < manifest ; exists ; 1923 ; Journal of the Institution of Locomotive Engineers Volume 13 ; 13 ; >
+        au < manifest ; exists ; 1924 ; Journal of the Institution of Locomotive Engineers Volume 14 ; 14 ; >
+        au < manifest ; exists ; 1925 ; Journal of the Institution of Locomotive Engineers Volume 15 ; 15 ; >
+        au < manifest ; exists ; 1926 ; Journal of the Institution of Locomotive Engineers Volume 16 ; 16 ; >
+        au < manifest ; exists ; 1927 ; Journal of the Institution of Locomotive Engineers Volume 17 ; 17 ; >
+        au < manifest ; exists ; 1928 ; Journal of the Institution of Locomotive Engineers Volume 18 ; 18 ; >
+        au < manifest ; exists ; 1929 ; Journal of the Institution of Locomotive Engineers Volume 19 ; 19 ; >
+        au < manifest ; exists ; 1930 ; Journal of the Institution of Locomotive Engineers Volume 20 ; 20 ; >
+        au < manifest ; exists ; 1931 ; Journal of the Institution of Locomotive Engineers Volume 21 ; 21 ; >
+        au < manifest ; exists ; 1932 ; Journal of the Institution of Locomotive Engineers Volume 22 ; 22 ; >
+        au < manifest ; exists ; 1933 ; Journal of the Institution of Locomotive Engineers Volume 23 ; 23 ; >
+        au < manifest ; exists ; 1934 ; Journal of the Institution of Locomotive Engineers Volume 24 ; 24 ; >
+        au < manifest ; exists ; 1935 ; Journal of the Institution of Locomotive Engineers Volume 25 ; 25 ; >
+        au < manifest ; exists ; 1936 ; Journal of the Institution of Locomotive Engineers Volume 26 ; 26 ; >
+        au < manifest ; exists ; 1937 ; Journal of the Institution of Locomotive Engineers Volume 27 ; 27 ; >
+        au < manifest ; exists ; 1938 ; Journal of the Institution of Locomotive Engineers Volume 28 ; 28 ; >
+        au < manifest ; exists ; 1939 ; Journal of the Institution of Locomotive Engineers Volume 29 ; 29 ; >
+        au < manifest ; exists ; 1940 ; Journal of the Institution of Locomotive Engineers Volume 30 ; 30 ; >
+        au < manifest ; exists ; 1941 ; Journal of the Institution of Locomotive Engineers Volume 31 ; 31 ; >
+        au < manifest ; exists ; 1942 ; Journal of the Institution of Locomotive Engineers Volume 32 ; 32 ; >
+        au < manifest ; exists ; 1943 ; Journal of the Institution of Locomotive Engineers Volume 33 ; 33 ; >
+        au < manifest ; exists ; 1944 ; Journal of the Institution of Locomotive Engineers Volume 34 ; 34 ; >
+        au < manifest ; exists ; 1945 ; Journal of the Institution of Locomotive Engineers Volume 35 ; 35 ; >
+        au < manifest ; exists ; 1946 ; Journal of the Institution of Locomotive Engineers Volume 36 ; 36 ; >
+        au < manifest ; exists ; 1947 ; Journal of the Institution of Locomotive Engineers Volume 37 ; 37 ; >
+        au < manifest ; exists ; 1948 ; Journal of the Institution of Locomotive Engineers Volume 38 ; 38 ; >
+        au < manifest ; exists ; 1949 ; Journal of the Institution of Locomotive Engineers Volume 39 ; 39 ; >
+        au < manifest ; exists ; 1950 ; Journal of the Institution of Locomotive Engineers Volume 40 ; 40 ; >
+        au < manifest ; exists ; 1951 ; Journal of the Institution of Locomotive Engineers Volume 41 ; 41 ; >
+        au < manifest ; exists ; 1952 ; Journal of the Institution of Locomotive Engineers Volume 42 ; 42 ; >
+        au < manifest ; exists ; 1953 ; Journal of the Institution of Locomotive Engineers Volume 43 ; 43 ; >
+        au < manifest ; exists ; 1954 ; Journal of the Institution of Locomotive Engineers Volume 44 ; 44 ; >
+        au < manifest ; exists ; 1955 ; Journal of the Institution of Locomotive Engineers Volume 45 ; 45 ; >
+        au < manifest ; exists ; 1956 ; Journal of the Institution of Locomotive Engineers Volume 46 ; 46 ; >
+        au < manifest ; exists ; 1957 ; Journal of the Institution of Locomotive Engineers Volume 47 ; 47 ; >
+        au < manifest ; exists ; 1958 ; Journal of the Institution of Locomotive Engineers Volume 48 ; 48 ; >
+        au < manifest ; exists ; 1959 ; Journal of the Institution of Locomotive Engineers Volume 49 ; 49 ; >
+        au < manifest ; exists ; 1960 ; Journal of the Institution of Locomotive Engineers Volume 50 ; 50 ; >
+        au < manifest ; exists ; 1961 ; Journal of the Institution of Locomotive Engineers Volume 51 ; 51 ; >
+        au < manifest ; exists ; 1962 ; Journal of the Institution of Locomotive Engineers Volume 52 ; 52 ; >
+        au < manifest ; exists ; 1963 ; Journal of the Institution of Locomotive Engineers Volume 53 ; 53 ; >
+        au < manifest ; exists ; 1964 ; Journal of the Institution of Locomotive Engineers Volume 54 ; 54 ; >
+        au < manifest ; exists ; 1965 ; Journal of the Institution of Locomotive Engineers Volume 55 ; 55 ; >
+        au < manifest ; exists ; 1966 ; Journal of the Institution of Locomotive Engineers Volume 56 ; 56 ; >
+        au < manifest ; exists ; 1967 ; Journal of the Institution of Locomotive Engineers Volume 57 ; 57 ; >
+        au < manifest ; exists ; 1968 ; Journal of the Institution of Locomotive Engineers Volume 58 ; 58 ; >
+        au < manifest ; exists ; 1969 ; Journal of the Institution of Locomotive Engineers Volume 59 ; 59 ; >
 
       }
       
@@ -22802,7 +22805,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Transformative Education Volume 7 ; 7 ; >
       au < released ; crawling ; 2010 ; Journal of Transformative Education Volume 8 ; 8 ; >
       au < released ; crawling ; 2011 ; Journal of Transformative Education Volume 9 ; 9 ; >
-      au < expected ; exists ; 2012 ; Journal of Transformative Education Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2012 ; Journal of Transformative Education Volume 10 ; 10 ; >
 
     }
 
@@ -23008,26 +23011,26 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1989 ; Journal of Veterinary Diagnostic Investigation Volume 1 ; 1 ; >
-      au < exists ; exists ; 1990 ; Journal of Veterinary Diagnostic Investigation Volume 2 ; 2 ; >
-      au < exists ; exists ; 1991 ; Journal of Veterinary Diagnostic Investigation Volume 3 ; 3 ; >
-      au < exists ; exists ; 1992 ; Journal of Veterinary Diagnostic Investigation Volume 4 ; 4 ; >
-      au < exists ; exists ; 1993 ; Journal of Veterinary Diagnostic Investigation Volume 5 ; 5 ; >
-      au < exists ; exists ; 1994 ; Journal of Veterinary Diagnostic Investigation Volume 6 ; 6 ; >
-      au < exists ; exists ; 1995 ; Journal of Veterinary Diagnostic Investigation Volume 7 ; 7 ; >
-      au < exists ; exists ; 1996 ; Journal of Veterinary Diagnostic Investigation Volume 8 ; 8 ; >
-      au < exists ; exists ; 1997 ; Journal of Veterinary Diagnostic Investigation Volume 9 ; 9 ; >
-      au < exists ; exists ; 1998 ; Journal of Veterinary Diagnostic Investigation Volume 10 ; 10 ; >
-      au < exists ; exists ; 1999 ; Journal of Veterinary Diagnostic Investigation Volume 11 ; 11 ; >
-      au < exists ; exists ; 2000 ; Journal of Veterinary Diagnostic Investigation Volume 12 ; 12 ; >
-      au < exists ; exists ; 2001 ; Journal of Veterinary Diagnostic Investigation Volume 13 ; 13 ; >
-      au < exists ; exists ; 2002 ; Journal of Veterinary Diagnostic Investigation Volume 14 ; 14 ; >
-      au < exists ; exists ; 2003 ; Journal of Veterinary Diagnostic Investigation Volume 15 ; 15 ; >
-      au < exists ; exists ; 2004 ; Journal of Veterinary Diagnostic Investigation Volume 16 ; 16 ; >
-      au < exists ; exists ; 2005 ; Journal of Veterinary Diagnostic Investigation Volume 17 ; 17 ; >
-      au < exists ; exists ; 2006 ; Journal of Veterinary Diagnostic Investigation Volume 18 ; 18 ; >
-      au < exists ; exists ; 2007 ; Journal of Veterinary Diagnostic Investigation Volume 19 ; 19 ; >
-      au < exists ; exists ; 2008 ; Journal of Veterinary Diagnostic Investigation Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1989 ; Journal of Veterinary Diagnostic Investigation Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1990 ; Journal of Veterinary Diagnostic Investigation Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1991 ; Journal of Veterinary Diagnostic Investigation Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1992 ; Journal of Veterinary Diagnostic Investigation Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1993 ; Journal of Veterinary Diagnostic Investigation Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1994 ; Journal of Veterinary Diagnostic Investigation Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1995 ; Journal of Veterinary Diagnostic Investigation Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1996 ; Journal of Veterinary Diagnostic Investigation Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1997 ; Journal of Veterinary Diagnostic Investigation Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1998 ; Journal of Veterinary Diagnostic Investigation Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1999 ; Journal of Veterinary Diagnostic Investigation Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2000 ; Journal of Veterinary Diagnostic Investigation Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2001 ; Journal of Veterinary Diagnostic Investigation Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2002 ; Journal of Veterinary Diagnostic Investigation Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2003 ; Journal of Veterinary Diagnostic Investigation Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2004 ; Journal of Veterinary Diagnostic Investigation Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2005 ; Journal of Veterinary Diagnostic Investigation Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2006 ; Journal of Veterinary Diagnostic Investigation Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2007 ; Journal of Veterinary Diagnostic Investigation Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2008 ; Journal of Veterinary Diagnostic Investigation Volume 20 ; 20 ; >
       au < released ; manifest ; 2009 ; Journal of Veterinary Diagnostic Investigation Volume 21 ; 21 ; >
       au < released ; crawling ; 2010 ; Journal of Veterinary Diagnostic Investigation Volume 22 ; 22 ; >
       au < released ; crawling ; 2011 ; Journal of Veterinary Diagnostic Investigation Volume 23 ; 23 ; >
@@ -23162,51 +23165,51 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         
-        au < exists ; exists ; 1967 ; Journalism & Mass Communication Educator Volume 22 ; 22 ; >
-        au < exists ; exists ; 1968 ; Journalism & Mass Communication Educator Volume 23 ; 23 ; >
+        au < manifest ; exists ; 1967 ; Journalism & Mass Communication Educator Volume 22 ; 22 ; >
+        au < manifest ; exists ; 1968 ; Journalism & Mass Communication Educator Volume 23 ; 23 ; >
         au < doesNotExist ; doesNotExist ; 0 ; Journalism & Mass Communication Educator Volume 24 ; 24 ; >
         au < doesNotExist ; doesNotExist ; 0 ; Journalism & Mass Communication Educator Volume 25 ; 25 ; >
-        au < exists ; exists ; 1971 ; Journalism & Mass Communication Educator Volume 26 ; 26 ; >
-        au < exists ; exists ; 1972 ; Journalism & Mass Communication Educator Volume 27 ; 27 ; >
-        au < exists ; exists ; 1973 ; Journalism & Mass Communication Educator Volume 28 ; 28 ; >
-        au < exists ; exists ; 1974 ; Journalism & Mass Communication Educator Volume 29 ; 29 ; >
-        au < exists ; exists ; 1975 ; Journalism & Mass Communication Educator Volume 30 ; 30 ; >
-        au < exists ; exists ; 1976 ; Journalism & Mass Communication Educator Volume 31 ; 31 ; >
-        au < exists ; exists ; 1977 ; Journalism & Mass Communication Educator Volume 32 ; 32 ; >
-        au < exists ; exists ; 1978 ; Journalism & Mass Communication Educator Volume 33 ; 33 ; >
-        au < exists ; exists ; 1979 ; Journalism & Mass Communication Educator Volume 34 ; 34 ; >
-        au < exists ; exists ; 1980 ; Journalism & Mass Communication Educator Volume 35 ; 35 ; >
-        au < exists ; exists ; 1981 ; Journalism & Mass Communication Educator Volume 36 ; 36 ; >
-        au < exists ; exists ; 1982 ; Journalism & Mass Communication Educator Volume 37 ; 37 ; >
-        au < exists ; exists ; 1983 ; Journalism & Mass Communication Educator Volume 38 ; 38 ; >
-        au < exists ; exists ; 1984 ; Journalism & Mass Communication Educator Volume 39 ; 39 ; >
-        au < exists ; exists ; 1985 ; Journalism & Mass Communication Educator Volume 40 ; 40 ; >
-        au < exists ; exists ; 1986 ; Journalism & Mass Communication Educator Volume 41 ; 41 ; >
-        au < exists ; exists ; 1987 ; Journalism & Mass Communication Educator Volume 42 ; 42 ; >
-        au < exists ; exists ; 1988 ; Journalism & Mass Communication Educator Volume 43 ; 43 ; >
-        au < exists ; exists ; 1989 ; Journalism & Mass Communication Educator Volume 44 ; 44 ; >
-        au < exists ; exists ; 1990 ; Journalism & Mass Communication Educator Volume 45 ; 45 ; >
-        au < exists ; exists ; 1991 ; Journalism & Mass Communication Educator Volume 46 ; 46 ; >
-        au < exists ; exists ; 1992 ; Journalism & Mass Communication Educator Volume 47 ; 47 ; >
-        au < exists ; exists ; 1993 ; Journalism & Mass Communication Educator Volume 48 ; 48 ; >
-        au < exists ; exists ; 1994 ; Journalism & Mass Communication Educator Volume 49 ; 49 ; >
-        au < exists ; exists ; 1995 ; Journalism & Mass Communication Educator Volume 50 ; 50 ; >
-        au < exists ; exists ; 1996 ; Journalism & Mass Communication Educator Volume 51 ; 51 ; >
-        au < exists ; exists ; 1997 ; Journalism & Mass Communication Educator Volume 52 ; 52 ; >
-        au < exists ; exists ; 1998 ; Journalism & Mass Communication Educator Volume 53 ; 53 ; >
-        au < exists ; exists ; 1999 ; Journalism & Mass Communication Educator Volume 54 ; 54 ; >
-        au < exists ; exists ; 2000 ; Journalism & Mass Communication Educator Volume 55 ; 55 ; >
-        au < exists ; exists ; 2001 ; Journalism & Mass Communication Educator Volume 56 ; 56 ; >
-        au < exists ; exists ; 2002 ; Journalism & Mass Communication Educator Volume 57 ; 57 ; >
-        au < exists ; exists ; 2003 ; Journalism & Mass Communication Educator Volume 58 ; 58 ; >
-        au < exists ; exists ; 2004 ; Journalism & Mass Communication Educator Volume 59 ; 59 ; >
-        au < exists ; exists ; 2005 ; Journalism & Mass Communication Educator Volume 60 ; 60 ; >
-        au < exists ; exists ; 2006 ; Journalism & Mass Communication Educator Volume 61 ; 61 ; >
-        au < exists ; exists ; 2007 ; Journalism & Mass Communication Educator Volume 62 ; 62 ; >
-        au < exists ; exists ; 2008 ; Journalism & Mass Communication Educator Volume 63 ; 63 ; >
-        au < exists ; exists ; 2009 ; Journalism & Mass Communication Educator Volume 64 ; 64 ; >
-        au < exists ; exists ; 2010 ; Journalism & Mass Communication Educator Volume 65 ; 65 ; >
-        au < notReady ; exists ; 2011 ; Journalism & Mass Communication Educator Volume 66 ; 66 ; >
+        au < manifest ; exists ; 1971 ; Journalism & Mass Communication Educator Volume 26 ; 26 ; >
+        au < manifest ; exists ; 1972 ; Journalism & Mass Communication Educator Volume 27 ; 27 ; >
+        au < manifest ; exists ; 1973 ; Journalism & Mass Communication Educator Volume 28 ; 28 ; >
+        au < manifest ; exists ; 1974 ; Journalism & Mass Communication Educator Volume 29 ; 29 ; >
+        au < manifest ; exists ; 1975 ; Journalism & Mass Communication Educator Volume 30 ; 30 ; >
+        au < manifest ; exists ; 1976 ; Journalism & Mass Communication Educator Volume 31 ; 31 ; >
+        au < manifest ; exists ; 1977 ; Journalism & Mass Communication Educator Volume 32 ; 32 ; >
+        au < manifest ; exists ; 1978 ; Journalism & Mass Communication Educator Volume 33 ; 33 ; >
+        au < manifest ; exists ; 1979 ; Journalism & Mass Communication Educator Volume 34 ; 34 ; >
+        au < manifest ; exists ; 1980 ; Journalism & Mass Communication Educator Volume 35 ; 35 ; >
+        au < manifest ; exists ; 1981 ; Journalism & Mass Communication Educator Volume 36 ; 36 ; >
+        au < manifest ; exists ; 1982 ; Journalism & Mass Communication Educator Volume 37 ; 37 ; >
+        au < manifest ; exists ; 1983 ; Journalism & Mass Communication Educator Volume 38 ; 38 ; >
+        au < manifest ; exists ; 1984 ; Journalism & Mass Communication Educator Volume 39 ; 39 ; >
+        au < manifest ; exists ; 1985 ; Journalism & Mass Communication Educator Volume 40 ; 40 ; >
+        au < manifest ; exists ; 1986 ; Journalism & Mass Communication Educator Volume 41 ; 41 ; >
+        au < manifest ; exists ; 1987 ; Journalism & Mass Communication Educator Volume 42 ; 42 ; >
+        au < manifest ; exists ; 1988 ; Journalism & Mass Communication Educator Volume 43 ; 43 ; >
+        au < manifest ; exists ; 1989 ; Journalism & Mass Communication Educator Volume 44 ; 44 ; >
+        au < manifest ; exists ; 1990 ; Journalism & Mass Communication Educator Volume 45 ; 45 ; >
+        au < manifest ; exists ; 1991 ; Journalism & Mass Communication Educator Volume 46 ; 46 ; >
+        au < manifest ; exists ; 1992 ; Journalism & Mass Communication Educator Volume 47 ; 47 ; >
+        au < manifest ; exists ; 1993 ; Journalism & Mass Communication Educator Volume 48 ; 48 ; >
+        au < manifest ; exists ; 1994 ; Journalism & Mass Communication Educator Volume 49 ; 49 ; >
+        au < manifest ; exists ; 1995 ; Journalism & Mass Communication Educator Volume 50 ; 50 ; >
+        au < manifest ; exists ; 1996 ; Journalism & Mass Communication Educator Volume 51 ; 51 ; >
+        au < manifest ; exists ; 1997 ; Journalism & Mass Communication Educator Volume 52 ; 52 ; >
+        au < manifest ; exists ; 1998 ; Journalism & Mass Communication Educator Volume 53 ; 53 ; >
+        au < manifest ; exists ; 1999 ; Journalism & Mass Communication Educator Volume 54 ; 54 ; >
+        au < manifest ; exists ; 2000 ; Journalism & Mass Communication Educator Volume 55 ; 55 ; >
+        au < manifest ; exists ; 2001 ; Journalism & Mass Communication Educator Volume 56 ; 56 ; >
+        au < manifest ; exists ; 2002 ; Journalism & Mass Communication Educator Volume 57 ; 57 ; >
+        au < manifest ; exists ; 2003 ; Journalism & Mass Communication Educator Volume 58 ; 58 ; >
+        au < manifest ; exists ; 2004 ; Journalism & Mass Communication Educator Volume 59 ; 59 ; >
+        au < manifest ; exists ; 2005 ; Journalism & Mass Communication Educator Volume 60 ; 60 ; >
+        au < manifest ; exists ; 2006 ; Journalism & Mass Communication Educator Volume 61 ; 61 ; >
+        au < manifest ; exists ; 2007 ; Journalism & Mass Communication Educator Volume 62 ; 62 ; >
+        au < manifest ; exists ; 2008 ; Journalism & Mass Communication Educator Volume 63 ; 63 ; >
+        au < manifest ; exists ; 2009 ; Journalism & Mass Communication Educator Volume 64 ; 64 ; >
+        au < manifest ; exists ; 2010 ; Journalism & Mass Communication Educator Volume 65 ; 65 ; >
+        au < crawling ; exists ; 2011 ; Journalism & Mass Communication Educator Volume 66 ; 66 ; >
         au < crawling ; exists ; 2012 ; Journalism & Mass Communication Educator Volume 67 ; 67 ; >
 
       }
@@ -23227,21 +23230,19 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      comment[notReady] = manifest page for V13 has incorrect link to issue: jmo.sagepub.com/cgi/content/13/2.long
-
-      au < exists ; exists ; 1999 ; Journalism & Communication Monographs Volume 1 ; 1 ; >
-      au < exists ; exists ; 2000 ; Journalism & Communication Monographs Volume 2 ; 2 ; >
-      au < exists ; exists ; 2001 ; Journalism & Communication Monographs Volume 3 ; 3 ; >
-      au < exists ; exists ; 2002 ; Journalism & Communication Monographs Volume 4 ; 4 ; >
-      au < exists ; exists ; 2003 ; Journalism & Communication Monographs Volume 5 ; 5 ; >
-      au < exists ; exists ; 2004 ; Journalism & Communication Monographs Volume 6 ; 6 ; >
-      au < exists ; exists ; 2005 ; Journalism & Communication Monographs Volume 7 ; 7 ; >
-      au < exists ; exists ; 2006 ; Journalism & Communication Monographs Volume 8 ; 8 ; >
-      au < exists ; exists ; 2007 ; Journalism & Communication Monographs Volume 9 ; 9 ; >
-      au < exists ; exists ; 2008 ; Journalism & Communication Monographs Volume 10 ; 10 ; >
-      au < exists ; exists ; 2009 ; Journalism & Communication Monographs Volume 11 ; 11 ; >
-      au < exists ; exists ; 2010 ; Journalism & Communication Monographs Volume 12 ; 12 ; >
-      au < notReady ; exists ; 2011 ; Journalism & Communication Monographs Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1999 ; Journalism & Communication Monographs Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2000 ; Journalism & Communication Monographs Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2001 ; Journalism & Communication Monographs Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2002 ; Journalism & Communication Monographs Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2003 ; Journalism & Communication Monographs Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2004 ; Journalism & Communication Monographs Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2005 ; Journalism & Communication Monographs Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2006 ; Journalism & Communication Monographs Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2007 ; Journalism & Communication Monographs Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2008 ; Journalism & Communication Monographs Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2009 ; Journalism & Communication Monographs Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2010 ; Journalism & Communication Monographs Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2011 ; Journalism & Communication Monographs Volume 13 ; 13 ; >
       au < crawling ; exists ; 2012 ; Journalism & Communication Monographs Volume 14 ; 14 ; >
 
     }
@@ -23262,66 +23263,64 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
-      comment[notReady] = V88 manifest page has incorrect link to issue. jmq.sagepub.com/cgi/content/88/2.long
 
-      au < exists ; exists ; 1955 ; Journalism & Mass Communication Quarterly Volume 32 ; 32 ; >
-      au < exists ; exists ; 1956 ; Journalism & Mass Communication Quarterly Volume 33 ; 33 ; >
-      au < exists ; exists ; 1957 ; Journalism & Mass Communication Quarterly Volume 34 ; 34 ; >
-      au < exists ; exists ; 1958 ; Journalism & Mass Communication Quarterly Volume 35 ; 35 ; >
-      au < exists ; exists ; 1959 ; Journalism & Mass Communication Quarterly Volume 36 ; 36 ; >
-      au < exists ; exists ; 1960 ; Journalism & Mass Communication Quarterly Volume 37 ; 37 ; >
-      au < exists ; exists ; 1961 ; Journalism & Mass Communication Quarterly Volume 38 ; 38 ; >
-      au < exists ; exists ; 1962 ; Journalism & Mass Communication Quarterly Volume 39 ; 39 ; >
-      au < exists ; exists ; 1963 ; Journalism & Mass Communication Quarterly Volume 40 ; 40 ; >
-      au < exists ; exists ; 1964 ; Journalism & Mass Communication Quarterly Volume 41 ; 41 ; >
-      au < exists ; exists ; 1965 ; Journalism & Mass Communication Quarterly Volume 42 ; 42 ; >
-      au < exists ; exists ; 1966 ; Journalism & Mass Communication Quarterly Volume 43 ; 43 ; >
-      au < exists ; exists ; 1967 ; Journalism & Mass Communication Quarterly Volume 44 ; 44 ; >
-      au < exists ; exists ; 1968 ; Journalism & Mass Communication Quarterly Volume 45 ; 45 ; >
-      au < exists ; exists ; 1969 ; Journalism & Mass Communication Quarterly Volume 46 ; 46 ; >
-      au < exists ; exists ; 1970 ; Journalism & Mass Communication Quarterly Volume 47 ; 47 ; >
-      au < exists ; exists ; 1971 ; Journalism & Mass Communication Quarterly Volume 48 ; 48 ; >
-      au < exists ; exists ; 1972 ; Journalism & Mass Communication Quarterly Volume 49 ; 49 ; >
-      au < exists ; exists ; 1973 ; Journalism & Mass Communication Quarterly Volume 50 ; 50 ; >
-      au < exists ; exists ; 1974 ; Journalism & Mass Communication Quarterly Volume 51 ; 51 ; >
-      au < exists ; exists ; 1975 ; Journalism & Mass Communication Quarterly Volume 52 ; 52 ; >
-      au < exists ; exists ; 1976 ; Journalism & Mass Communication Quarterly Volume 53 ; 53 ; >
-      au < exists ; exists ; 1977 ; Journalism & Mass Communication Quarterly Volume 54 ; 54 ; >
-      au < exists ; exists ; 1978 ; Journalism & Mass Communication Quarterly Volume 55 ; 55 ; >
-      au < exists ; exists ; 1979 ; Journalism & Mass Communication Quarterly Volume 56 ; 56 ; >
-      au < exists ; exists ; 1980 ; Journalism & Mass Communication Quarterly Volume 57 ; 57 ; >
-      au < exists ; exists ; 1981 ; Journalism & Mass Communication Quarterly Volume 58 ; 58 ; >
-      au < exists ; exists ; 1982 ; Journalism & Mass Communication Quarterly Volume 59 ; 59 ; >
-      au < exists ; exists ; 1983 ; Journalism & Mass Communication Quarterly Volume 60 ; 60 ; >
-      au < exists ; exists ; 1984 ; Journalism & Mass Communication Quarterly Volume 61 ; 61 ; >
-      au < exists ; exists ; 1985 ; Journalism & Mass Communication Quarterly Volume 62 ; 62 ; >
-      au < exists ; exists ; 1986 ; Journalism & Mass Communication Quarterly Volume 63 ; 63 ; >
-      au < exists ; exists ; 1987 ; Journalism & Mass Communication Quarterly Volume 64 ; 64 ; >
-      au < exists ; exists ; 1988 ; Journalism & Mass Communication Quarterly Volume 65 ; 65 ; >
-      au < exists ; exists ; 1989 ; Journalism & Mass Communication Quarterly Volume 66 ; 66 ; >
-      au < exists ; exists ; 1990 ; Journalism & Mass Communication Quarterly Volume 67 ; 67 ; >
-      au < exists ; exists ; 1991 ; Journalism & Mass Communication Quarterly Volume 68 ; 68 ; >
-      au < exists ; exists ; 1992 ; Journalism & Mass Communication Quarterly Volume 69 ; 69 ; >
-      au < exists ; exists ; 1993 ; Journalism & Mass Communication Quarterly Volume 70 ; 70 ; >
-      au < exists ; exists ; 1994 ; Journalism & Mass Communication Quarterly Volume 71 ; 71 ; >
-      au < exists ; exists ; 1995 ; Journalism & Mass Communication Quarterly Volume 72 ; 72 ; >
-      au < exists ; exists ; 1996 ; Journalism & Mass Communication Quarterly Volume 73 ; 73 ; >
-      au < exists ; exists ; 1997 ; Journalism & Mass Communication Quarterly Volume 74 ; 74 ; >
-      au < exists ; exists ; 1998 ; Journalism & Mass Communication Quarterly Volume 75 ; 75 ; >
-      au < exists ; exists ; 1999 ; Journalism & Mass Communication Quarterly Volume 76 ; 76 ; >
-      au < exists ; exists ; 2000 ; Journalism & Mass Communication Quarterly Volume 77 ; 77 ; >
-      au < exists ; exists ; 2001 ; Journalism & Mass Communication Quarterly Volume 78 ; 78 ; >
-      au < exists ; exists ; 2002 ; Journalism & Mass Communication Quarterly Volume 79 ; 79 ; >
-      au < exists ; exists ; 2003 ; Journalism & Mass Communication Quarterly Volume 80 ; 80 ; >
-      au < exists ; exists ; 2004 ; Journalism & Mass Communication Quarterly Volume 81 ; 81 ; >
-      au < exists ; exists ; 2005 ; Journalism & Mass Communication Quarterly Volume 82 ; 82 ; >
-      au < exists ; exists ; 2006 ; Journalism & Mass Communication Quarterly Volume 83 ; 83 ; >
-      au < exists ; exists ; 2007 ; Journalism & Mass Communication Quarterly Volume 84 ; 84 ; >
-      au < exists ; exists ; 2008 ; Journalism & Mass Communication Quarterly Volume 85 ; 85 ; >
-      au < exists ; exists ; 2009 ; Journalism & Mass Communication Quarterly Volume 86 ; 86 ; >
-      au < exists ; exists ; 2010 ; Journalism & Mass Communication Quarterly Volume 87 ; 87 ; >
-      au < notReady ; exists ; 2011 ; Journalism & Mass Communication Quarterly Volume 88 ; 88 ; >
+      au < manifest ; exists ; 1955 ; Journalism & Mass Communication Quarterly Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1956 ; Journalism & Mass Communication Quarterly Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1957 ; Journalism & Mass Communication Quarterly Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1958 ; Journalism & Mass Communication Quarterly Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1959 ; Journalism & Mass Communication Quarterly Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1960 ; Journalism & Mass Communication Quarterly Volume 37 ; 37 ; >
+      au < manifest ; exists ; 1961 ; Journalism & Mass Communication Quarterly Volume 38 ; 38 ; >
+      au < manifest ; exists ; 1962 ; Journalism & Mass Communication Quarterly Volume 39 ; 39 ; >
+      au < manifest ; exists ; 1963 ; Journalism & Mass Communication Quarterly Volume 40 ; 40 ; >
+      au < manifest ; exists ; 1964 ; Journalism & Mass Communication Quarterly Volume 41 ; 41 ; >
+      au < manifest ; exists ; 1965 ; Journalism & Mass Communication Quarterly Volume 42 ; 42 ; >
+      au < manifest ; exists ; 1966 ; Journalism & Mass Communication Quarterly Volume 43 ; 43 ; >
+      au < manifest ; exists ; 1967 ; Journalism & Mass Communication Quarterly Volume 44 ; 44 ; >
+      au < manifest ; exists ; 1968 ; Journalism & Mass Communication Quarterly Volume 45 ; 45 ; >
+      au < manifest ; exists ; 1969 ; Journalism & Mass Communication Quarterly Volume 46 ; 46 ; >
+      au < manifest ; exists ; 1970 ; Journalism & Mass Communication Quarterly Volume 47 ; 47 ; >
+      au < manifest ; exists ; 1971 ; Journalism & Mass Communication Quarterly Volume 48 ; 48 ; >
+      au < manifest ; exists ; 1972 ; Journalism & Mass Communication Quarterly Volume 49 ; 49 ; >
+      au < manifest ; exists ; 1973 ; Journalism & Mass Communication Quarterly Volume 50 ; 50 ; >
+      au < manifest ; exists ; 1974 ; Journalism & Mass Communication Quarterly Volume 51 ; 51 ; >
+      au < manifest ; exists ; 1975 ; Journalism & Mass Communication Quarterly Volume 52 ; 52 ; >
+      au < manifest ; exists ; 1976 ; Journalism & Mass Communication Quarterly Volume 53 ; 53 ; >
+      au < manifest ; exists ; 1977 ; Journalism & Mass Communication Quarterly Volume 54 ; 54 ; >
+      au < manifest ; exists ; 1978 ; Journalism & Mass Communication Quarterly Volume 55 ; 55 ; >
+      au < manifest ; exists ; 1979 ; Journalism & Mass Communication Quarterly Volume 56 ; 56 ; >
+      au < manifest ; exists ; 1980 ; Journalism & Mass Communication Quarterly Volume 57 ; 57 ; >
+      au < manifest ; exists ; 1981 ; Journalism & Mass Communication Quarterly Volume 58 ; 58 ; >
+      au < manifest ; exists ; 1982 ; Journalism & Mass Communication Quarterly Volume 59 ; 59 ; >
+      au < manifest ; exists ; 1983 ; Journalism & Mass Communication Quarterly Volume 60 ; 60 ; >
+      au < manifest ; exists ; 1984 ; Journalism & Mass Communication Quarterly Volume 61 ; 61 ; >
+      au < manifest ; exists ; 1985 ; Journalism & Mass Communication Quarterly Volume 62 ; 62 ; >
+      au < manifest ; exists ; 1986 ; Journalism & Mass Communication Quarterly Volume 63 ; 63 ; >
+      au < manifest ; exists ; 1987 ; Journalism & Mass Communication Quarterly Volume 64 ; 64 ; >
+      au < manifest ; exists ; 1988 ; Journalism & Mass Communication Quarterly Volume 65 ; 65 ; >
+      au < manifest ; exists ; 1989 ; Journalism & Mass Communication Quarterly Volume 66 ; 66 ; >
+      au < manifest ; exists ; 1990 ; Journalism & Mass Communication Quarterly Volume 67 ; 67 ; >
+      au < manifest ; exists ; 1991 ; Journalism & Mass Communication Quarterly Volume 68 ; 68 ; >
+      au < manifest ; exists ; 1992 ; Journalism & Mass Communication Quarterly Volume 69 ; 69 ; >
+      au < manifest ; exists ; 1993 ; Journalism & Mass Communication Quarterly Volume 70 ; 70 ; >
+      au < manifest ; exists ; 1994 ; Journalism & Mass Communication Quarterly Volume 71 ; 71 ; >
+      au < manifest ; exists ; 1995 ; Journalism & Mass Communication Quarterly Volume 72 ; 72 ; >
+      au < manifest ; exists ; 1996 ; Journalism & Mass Communication Quarterly Volume 73 ; 73 ; >
+      au < manifest ; exists ; 1997 ; Journalism & Mass Communication Quarterly Volume 74 ; 74 ; >
+      au < manifest ; exists ; 1998 ; Journalism & Mass Communication Quarterly Volume 75 ; 75 ; >
+      au < manifest ; exists ; 1999 ; Journalism & Mass Communication Quarterly Volume 76 ; 76 ; >
+      au < manifest ; exists ; 2000 ; Journalism & Mass Communication Quarterly Volume 77 ; 77 ; >
+      au < manifest ; exists ; 2001 ; Journalism & Mass Communication Quarterly Volume 78 ; 78 ; >
+      au < manifest ; exists ; 2002 ; Journalism & Mass Communication Quarterly Volume 79 ; 79 ; >
+      au < manifest ; exists ; 2003 ; Journalism & Mass Communication Quarterly Volume 80 ; 80 ; >
+      au < manifest ; exists ; 2004 ; Journalism & Mass Communication Quarterly Volume 81 ; 81 ; >
+      au < manifest ; exists ; 2005 ; Journalism & Mass Communication Quarterly Volume 82 ; 82 ; >
+      au < manifest ; exists ; 2006 ; Journalism & Mass Communication Quarterly Volume 83 ; 83 ; >
+      au < manifest ; exists ; 2007 ; Journalism & Mass Communication Quarterly Volume 84 ; 84 ; >
+      au < manifest ; exists ; 2008 ; Journalism & Mass Communication Quarterly Volume 85 ; 85 ; >
+      au < manifest ; exists ; 2009 ; Journalism & Mass Communication Quarterly Volume 86 ; 86 ; >
+      au < manifest ; exists ; 2010 ; Journalism & Mass Communication Quarterly Volume 87 ; 87 ; >
+      au < crawling ; exists ; 2011 ; Journalism & Mass Communication Quarterly Volume 88 ; 88 ; >
       au < crawling ; exists ; 2012 ; Journalism & Mass Communication Quarterly Volume 89 ; 89 ; >
 
    }
@@ -23966,7 +23965,7 @@
     {
 
       title <
-        name = Management and Labour Studies ;
+        name = Management & Labour Studies ;
         issn = 0258-042X ;
         issnl = 0258-042X
       >
@@ -23976,20 +23975,20 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://mls.sagepub.com/
 
-        au <  exists ; exists ; 1999 ; Management and Labour Studies Volume 24 ; 24 ; >
-        au <  exists ; exists ; 2000 ; Management and Labour Studies Volume 25 ; 25 ; >
-        au <  exists ; exists ; 2001 ; Management and Labour Studies Volume 26 ; 26 ; >
-        au <  exists ; exists ; 2002 ; Management and Labour Studies Volume 27 ; 27 ; >
-        au <  exists ; exists ; 2003 ; Management and Labour Studies Volume 28 ; 28 ; >
-        au <  exists ; exists ; 2004 ; Management and Labour Studies Volume 29 ; 29 ; >
-        au <  exists ; exists ; 2005 ; Management and Labour Studies Volume 30 ; 30 ; >
-        au <  exists ; exists ; 2006 ; Management and Labour Studies Volume 31 ; 31 ; >
-        au <  exists ; exists ; 2007 ; Management and Labour Studies Volume 32 ; 32 ; >
-        au <  exists ; exists ; 2008 ; Management and Labour Studies Volume 33 ; 33 ; >
-        au <  exists ; exists ; 2009 ; Management and Labour Studies Volume 34 ; 34 ; >
-        au <  exists ; exists ; 2010 ; Management and Labour Studies Volume 35 ; 35 ; >
-        au <  exists ; exists ; 2011 ; Management and Labour Studies Volume 36 ; 36 ; >
-        au <  exists ; exists ; 2012 ; Management and Labour Studies Volume 37 ; 37 ; >
+        au <  manifest ; exists ; 1999 ; Management & Labour Studies Volume 24 ; 24 ; >
+        au <  manifest ; exists ; 2000 ; Management & Labour Studies Volume 25 ; 25 ; >
+        au <  manifest ; exists ; 2001 ; Management & Labour Studies Volume 26 ; 26 ; >
+        au <  manifest ; exists ; 2002 ; Management & Labour Studies Volume 27 ; 27 ; >
+        au <  manifest ; exists ; 2003 ; Management & Labour Studies Volume 28 ; 28 ; >
+        au <  manifest ; exists ; 2004 ; Management & Labour Studies Volume 29 ; 29 ; >
+        au <  manifest ; exists ; 2005 ; Management & Labour Studies Volume 30 ; 30 ; >
+        au <  manifest ; exists ; 2006 ; Management & Labour Studies Volume 31 ; 31 ; >
+        au <  manifest ; exists ; 2007 ; Management & Labour Studies Volume 32 ; 32 ; >
+        au <  manifest ; exists ; 2008 ; Management & Labour Studies Volume 33 ; 33 ; >
+        au <  manifest ; exists ; 2009 ; Management & Labour Studies Volume 34 ; 34 ; >
+        au <  manifest ; exists ; 2010 ; Management & Labour Studies Volume 35 ; 35 ; >
+        au <  manifest ; exists ; 2011 ; Management & Labour Studies Volume 36 ; 36 ; >
+        au <  manifest ; exists ; 2012 ; Management & Labour Studies Volume 37 ; 37 ; >
 
       }
 
@@ -24633,15 +24632,15 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         
         au < manifest ; exists ; 1993-1995 ; Medical Law International Volume 1 ; 1 ; >
-        au < exists ; exists ; 1995-1997 ; Medical Law International Volume 2 ; 2 ; >
-        au < exists ; exists ; 1997-1998 ; Medical Law International Volume 3 ; 3 ; >
-        au < exists ; exists ; 1999-2000 ; Medical Law International Volume 4 ; 4 ; >
-        au < exists ; exists ; 2000-2002 ; Medical Law International Volume 5 ; 5 ; >
-        au < exists ; exists ; 2003-2004 ; Medical Law International Volume 6 ; 6 ; >
-        au < exists ; exists ; 2005-2006 ; Medical Law International Volume 7 ; 7 ; >
-        au < exists ; exists ; 2006-2007 ; Medical Law International Volume 8 ; 8 ; >
-        au < exists ; exists ; 2008 ; Medical Law International Volume 9 ; 9 ; >
-        au < exists ; exists ; 2009-2010 ; Medical Law International Volume 10 ; 10 ; >
+        au < manifest ; exists ; 1995-1997 ; Medical Law International Volume 2 ; 2 ; >
+        au < manifest ; exists ; 1997-1998 ; Medical Law International Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1999-2000 ; Medical Law International Volume 4 ; 4 ; >
+        au < manifest ; exists ; 2000-2002 ; Medical Law International Volume 5 ; 5 ; >
+        au < manifest ; exists ; 2003-2004 ; Medical Law International Volume 6 ; 6 ; >
+        au < manifest ; exists ; 2005-2006 ; Medical Law International Volume 7 ; 7 ; >
+        au < manifest ; exists ; 2006-2007 ; Medical Law International Volume 8 ; 8 ; >
+        au < manifest ; exists ; 2008 ; Medical Law International Volume 9 ; 9 ; >
+        au < manifest ; exists ; 2009-2010 ; Medical Law International Volume 10 ; 10 ; >
         au < released ; crawling ; 2011 ; Medical Law International Volume 11 ; 11 ; >
         au < crawling ; exists ; 2012 ; Medical Law International Volume 12 ; 12 ; >
         
@@ -24834,7 +24833,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Millennium - Journal of International Studies Volume 38 ; 38 ; >
       au < released ; crawling ; 2010 ; Millennium - Journal of International Studies Volume 39 ; 39 ; >
       au < released ; crawling ; 2011 ; Millennium - Journal of International Studies Volume 40 ; 40 ; >
-      au < expected ; exists ; 2012 ; Millennium - Journal of International Studies Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2012 ; Millennium - Journal of International Studies Volume 41 ; 41 ; >
 
     }
 
@@ -25558,7 +25557,7 @@
       au < released ; crawling ; 2011 ; National Institute Economic Review Volume 218 ; 218 ; >
       au < crawling ; exists ; 2012 ; National Institute Economic Review Volume 219 ; 219 ; >
       au < crawling ; exists ; 2012 ; National Institute Economic Review Volume 220 ; 220 ; >
-      au < manifest ; exists ; 2012 ; National Institute Economic Review Volume 221 ; 221 ; >
+      au < crawling ; exists ; 2012 ; National Institute Economic Review Volume 221 ; 221 ; >
       au < expected ; exists ; 2012 ; National Institute Economic Review Volume 222 ; 222 ; >
 
     }
@@ -25917,26 +25916,26 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1982-1983 ; Nutrition and Health Volume 1 ; 1 ; >
-      au < exists ; exists ; 1983 ; Nutrition and Health Volume 2 ; 2 ; >
-      au < exists ; exists ; 1984 ; Nutrition and Health Volume 3 ; 3 ; >
-      au < exists ; exists ; 1985-1987 ; Nutrition and Health Volume 4 ; 4 ; >
-      au < exists ; exists ; 1987 ; Nutrition and Health Volume 5 ; 5 ; >
-      au < exists ; exists ; 1988-1990 ; Nutrition and Health Volume 6 ; 6 ; >
-      au < exists ; exists ; 1990-1991 ; Nutrition and Health Volume 7 ; 7 ; >
-      au < exists ; exists ; 1992 ; Nutrition and Health Volume 8 ; 8 ; >
-      au < exists ; exists ; 1993-1994 ; Nutrition and Health Volume 9 ; 9 ; >
-      au < exists ; exists ; 1994-1996 ; Nutrition and Health Volume 10 ; 10 ; >
-      au < exists ; exists ; 1996-1997 ; Nutrition and Health Volume 11 ; 11 ; >
-      au < exists ; exists ; 1997-1998 ; Nutrition and Health Volume 12 ; 12 ; >
-      au < exists ; exists ; 1999 ; Nutrition and Health Volume 13 ; 13 ; >
-      au < exists ; exists ; 2000 ; Nutrition and Health Volume 14 ; 14 ; >
-      au < exists ; exists ; 2001 ; Nutrition and Health Volume 15 ; 15 ; >
-      au < exists ; exists ; 2002 ; Nutrition and Health Volume 16 ; 16 ; >
-      au < exists ; exists ; 2003-2004 ; Nutrition and Health Volume 17 ; 17 ; >
-      au < exists ; exists ; 2004-2007 ; Nutrition and Health Volume 18 ; 18 ; >
-      au < exists ; exists ; 2007-2008 ; Nutrition and Health Volume 19 ; 19 ; >
-      au < exists ; exists ; 2009-2011 ; Nutrition and Health Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1982-1983 ; Nutrition and Health Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1983 ; Nutrition and Health Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1984 ; Nutrition and Health Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1985-1987 ; Nutrition and Health Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1987 ; Nutrition and Health Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1988-1990 ; Nutrition and Health Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1990-1991 ; Nutrition and Health Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1992 ; Nutrition and Health Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1993-1994 ; Nutrition and Health Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1994-1996 ; Nutrition and Health Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1996-1997 ; Nutrition and Health Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1997-1998 ; Nutrition and Health Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1999 ; Nutrition and Health Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2000 ; Nutrition and Health Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2001 ; Nutrition and Health Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2002 ; Nutrition and Health Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2003-2004 ; Nutrition and Health Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2004-2007 ; Nutrition and Health Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2007-2008 ; Nutrition and Health Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2009-2011 ; Nutrition and Health Volume 20 ; 20 ; >
       au < crawling ; exists ; 2012 ; Nutrition and Health Volume 21 ; 21 ; >
 
     }
@@ -26277,7 +26276,7 @@
       au < released ; crawling ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 144 ; 144 ; >
       au < released ; crawling ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 145 ; 145 ; >
       au < crawling ; exists ; 2012 ; Otolaryngology -- Head and Neck Surgery Volume 146 ; 146 ; >
-      au < manifest ; exists ; 2012 ; Otolaryngology -- Head and Neck Surgery Volume 147 ; 147 ; >
+      au < crawling ; exists ; 2012 ; Otolaryngology -- Head and Neck Surgery Volume 147 ; 147 ; >
 
     }
 
@@ -27589,26 +27588,26 @@
         au < manifest ; exists ; 1975 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 19 ; 19 ; >
         au < manifest ; exists ; 1976 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 20 ; 20 ; >
         au < doesNotExist ; doesNotExist ; 0 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 21 ; 21 ; >
-        au < exists ; exists ; 1978 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 22 ; 22 ; >
-        au < exists ; exists ; 1979 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 23 ; 23 ; >
-        au < exists ; exists ; 1980 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 24 ; 24 ; >
-        au < exists ; exists ; 1981 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 25 ; 25 ; >
+        au < manifest ; exists ; 1978 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 22 ; 22 ; >
+        au < manifest ; exists ; 1979 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 23 ; 23 ; >
+        au < manifest ; exists ; 1980 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 24 ; 24 ; >
+        au < manifest ; exists ; 1981 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 25 ; 25 ; >
         au < manifest ; exists ; 1982 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 26 ; 26 ; >
         au < manifest ; exists ; 1983 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 27 ; 27 ; >
         au < manifest ; exists ; 1984 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 28 ; 28 ; >
         au < manifest ; exists ; 1985 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 29 ; 29 ; >
         au < manifest ; exists ; 1986 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 30 ; 30 ; >
         au < manifest ; exists ; 1987 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 31 ; 31 ; >
-        au < exists ; exists ; 1988 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 32 ; 32 ; >
-        au < exists ; exists ; 1989 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 33 ; 33 ; >
+        au < manifest ; exists ; 1988 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 32 ; 32 ; >
+        au < manifest ; exists ; 1989 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 33 ; 33 ; >
         au < manifest ; exists ; 1990 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 34 ; 34 ; >
-        au < exists ; exists ; 1991 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 35 ; 35 ; >
-        au < exists ; exists ; 1992 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 36 ; 36 ; >
-        au < exists ; exists ; 1993 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 37 ; 37 ; >
+        au < manifest ; exists ; 1991 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 35 ; 35 ; >
+        au < manifest ; exists ; 1992 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 36 ; 36 ; >
+        au < manifest ; exists ; 1993 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 37 ; 37 ; >
         au < manifest ; exists ; 1994 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 38 ; 38 ; >
         au < manifest ; exists ; 1995 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 39 ; 39 ; >
         au < manifest ; exists ; 1996 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 40 ; 40 ; >
-        au < exists ; exists ; 1997 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 41 ; 41 ; >
+        au < manifest ; exists ; 1997 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 41 ; 41 ; >
         au < manifest ; exists ; 1998 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 42 ; 42 ; >
         au < manifest ; exists ; 1999 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 43 ; 43 ; >
         au < manifest ; exists ; 2000 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 44 ; 44 ; >
@@ -27618,11 +27617,11 @@
         au < manifest ; exists ; 2004 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 48 ; 48 ; >
         au < manifest ; exists ; 2005 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 49 ; 49 ; >
         au < manifest ; exists ; 2006 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 50 ; 50 ; >
-        au < exists ; exists ; 2007 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 51 ; 51 ; >
-        au < exists ; exists ; 2008 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 52 ; 52 ; >
-        au < exists ; exists ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 ; >
-        au < exists ; exists ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 ; >
-        au < exists ; exists ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 ; >
+        au < manifest ; exists ; 2007 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 51 ; 51 ; >
+        au < manifest ; exists ; 2008 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 52 ; 52 ; >
+        au < manifest ; exists ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 ; >
+        au < manifest ; exists ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 ; >
+        au < manifest ; exists ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 ; >
         au < expected ; exists ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 56 ; 56 ; >
 
       }
@@ -27692,31 +27691,31 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1983 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 197 ; 197 ; >
-      au < exists ; exists ; 1984 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 198 ; 198 ; >
-      au < exists ; exists ; 1985 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 199 ; 199 ; >
-      au < exists ; exists ; 1986 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 200 ; 200 ; >
-      au < exists ; exists ; 1987 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 201 ; 201 ; >
-      au < exists ; exists ; 1988 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 202 ; 202 ; >
-      au < exists ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 203 ; 203 ; >
-      au < exists ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 204 ; 204 ; >
-      au < exists ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 205 ; 205 ; >
-      au < exists ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 206 ; 206 ; >
-      au < exists ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 207 ; 207 ; >
-      au < exists ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 208 ; 208 ; >
-      au < exists ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 209 ; 209 ; >
-      au < exists ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 210 ; 210 ; >
-      au < exists ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 211 ; 211 ; >
-      au < exists ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 212 ; 212 ; >
-      au < exists ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 213 ; 213 ; >
-      au < exists ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 214 ; 214 ; >
-      au < exists ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 215 ; 215 ; >
-      au < exists ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 216 ; 216 ; >
-      au < exists ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 217 ; 217 ; >
-      au < exists ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 218 ; 218 ; >
-      au < exists ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 219 ; 219 ; >
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 221 ; 221 ; >
+      au < manifest ; exists ; 1983 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 197 ; 197 ; >
+      au < manifest ; exists ; 1984 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 198 ; 198 ; >
+      au < manifest ; exists ; 1985 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 199 ; 199 ; >
+      au < manifest ; exists ; 1986 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 200 ; 200 ; >
+      au < manifest ; exists ; 1987 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 201 ; 201 ; >
+      au < manifest ; exists ; 1988 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 202 ; 202 ; >
+      au < manifest ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 203 ; 203 ; >
+      au < manifest ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 204 ; 204 ; >
+      au < manifest ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 205 ; 205 ; >
+      au < manifest ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 206 ; 206 ; >
+      au < manifest ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 207 ; 207 ; >
+      au < manifest ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 208 ; 208 ; >
+      au < manifest ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 209 ; 209 ; >
+      au < manifest ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 210 ; 210 ; >
+      au < manifest ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 211 ; 211 ; >
+      au < manifest ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 212 ; 212 ; >
+      au < manifest ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 213 ; 213 ; >
+      au < manifest ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 214 ; 214 ; >
+      au < manifest ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 215 ; 215 ; >
+      au < manifest ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 222 ; 222 ; >
       au < testing ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 224 ; 224 ; >
@@ -27838,25 +27837,25 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 203 ; 203 ; >
-      au < exists ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 204 ; 204 ; >
-      au < exists ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 205 ; 205 ; >
-      au < exists ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 206 ; 206 ; >
-      au < exists ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 207 ; 207 ; >
-      au < exists ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 208 ; 208 ; >
-      au < exists ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 209 ; 209 ; >
-      au < exists ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 210 ; 210 ; >
-      au < exists ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 211 ; 211 ; >
-      au < exists ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 212 ; 212 ; >
-      au < exists ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 213 ; 213 ; >
-      au < exists ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 214 ; 214 ; >
-      au < exists ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 215 ; 215 ; >
-      au < exists ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 216 ; 216 ; >
-      au < exists ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 217 ; 217 ; >
-      au < exists ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 218 ; 218 ; >
-      au < exists ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 219 ; 219 ; >
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 221 ; 221 ; >
+      au < manifest ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 203 ; 203 ; >
+      au < manifest ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 204 ; 204 ; >
+      au < manifest ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 205 ; 205 ; >
+      au < manifest ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 206 ; 206 ; >
+      au < manifest ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 207 ; 207 ; >
+      au < manifest ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 208 ; 208 ; >
+      au < manifest ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 209 ; 209 ; >
+      au < manifest ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 210 ; 210 ; >
+      au < manifest ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 211 ; 211 ; >
+      au < manifest ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 212 ; 212 ; >
+      au < manifest ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 213 ; 213 ; >
+      au < manifest ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 214 ; 214 ; >
+      au < manifest ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 215 ; 215 ; >
+      au < manifest ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 222 ; 222 ; >
       au < testing ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 224 ; 224 ; >
@@ -27881,25 +27880,25 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 203 ; 203 ; >
-      au < exists ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 204 ; 204 ; >
-      au < exists ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 205 ; 205 ; >
-      au < exists ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 206 ; 206 ; >
-      au < exists ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 207 ; 207 ; >
-      au < exists ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 208 ; 208 ; >
-      au < exists ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 209 ; 209 ; >
-      au < exists ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 210 ; 210 ; >
-      au < exists ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 211 ; 211 ; >
-      au < exists ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 212 ; 212 ; >
-      au < exists ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 213 ; 213 ; >
-      au < exists ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 214 ; 214 ; >
-      au < exists ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 215 ; 215 ; >
-      au < exists ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 216 ; 216 ; >
-      au < exists ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 217 ; 217 ; >
-      au < exists ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 218 ; 218 ; >
-      au < exists ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 219 ; 219 ; >
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 221 ; 221 ; >
+      au < manifest ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 203 ; 203 ; >
+      au < manifest ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 204 ; 204 ; >
+      au < manifest ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 205 ; 205 ; >
+      au < manifest ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 206 ; 206 ; >
+      au < manifest ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 207 ; 207 ; >
+      au < manifest ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 208 ; 208 ; >
+      au < manifest ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 209 ; 209 ; >
+      au < manifest ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 210 ; 210 ; >
+      au < manifest ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 211 ; 211 ; >
+      au < manifest ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 212 ; 212 ; >
+      au < manifest ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 213 ; 213 ; >
+      au < manifest ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 214 ; 214 ; >
+      au < manifest ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 215 ; 215 ; >
+      au < manifest ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 222 ; 222 ; >
       au < testing ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 224 ; 224 ; >
@@ -27924,25 +27923,25 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 203 ; 203 ; >
-      au < exists ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 204 ; 204 ; >
-      au < exists ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 205 ; 205 ; >
-      au < exists ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 206 ; 206 ; >
-      au < exists ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 207 ; 207 ; >
-      au < exists ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 208 ; 208 ; >
-      au < exists ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 209 ; 209 ; >
-      au < exists ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 210 ; 210 ; >
-      au < exists ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 211 ; 211 ; >
-      au < exists ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 212 ; 212 ; >
-      au < exists ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 213 ; 213 ; >
-      au < exists ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 214 ; 214 ; >
-      au < exists ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 215 ; 215 ; >
-      au < exists ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 216 ; 216 ; >
-      au < exists ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 217 ; 217 ; >
-      au < exists ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 218 ; 218 ; >
-      au < exists ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 219 ; 219 ; >
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 221 ; 221 ; >
+      au < manifest ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 203 ; 203 ; >
+      au < manifest ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 204 ; 204 ; >
+      au < manifest ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 205 ; 205 ; >
+      au < manifest ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 206 ; 206 ; >
+      au < manifest ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 207 ; 207 ; >
+      au < manifest ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 208 ; 208 ; >
+      au < manifest ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 209 ; 209 ; >
+      au < manifest ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 210 ; 210 ; >
+      au < manifest ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 211 ; 211 ; >
+      au < manifest ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 212 ; 212 ; >
+      au < manifest ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 213 ; 213 ; >
+      au < manifest ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 214 ; 214 ; >
+      au < manifest ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 215 ; 215 ; >
+      au < manifest ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 222 ; 222 ; >
       au < testing ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 224 ; 224 ; >
@@ -27967,25 +27966,25 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 203 ; 203 ; >
-      au < exists ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 204 ; 204 ; >
-      au < exists ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 205 ; 205 ; >
-      au < exists ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 206 ; 206 ; >
-      au < exists ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 207 ; 207 ; >
-      au < exists ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 208 ; 208 ; >
-      au < exists ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 209 ; 209 ; >
-      au < exists ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 210 ; 210 ; >
-      au < exists ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 211 ; 211 ; >
-      au < exists ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 212 ; 212 ; >
-      au < exists ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 213 ; 213 ; >
-      au < exists ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 214 ; 214 ; >
-      au < exists ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 215 ; 215 ; >
-      au < exists ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 216 ; 216 ; >
-      au < exists ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 217 ; 217 ; >
-      au < exists ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 218 ; 218 ; >
-      au < exists ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 219 ; 219 ; >
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 221 ; 221 ; >
+      au < manifest ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 203 ; 203 ; >
+      au < manifest ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 204 ; 204 ; >
+      au < manifest ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 205 ; 205 ; >
+      au < manifest ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 206 ; 206 ; >
+      au < manifest ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 207 ; 207 ; >
+      au < manifest ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 208 ; 208 ; >
+      au < manifest ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 209 ; 209 ; >
+      au < manifest ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 210 ; 210 ; >
+      au < manifest ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 211 ; 211 ; >
+      au < manifest ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 212 ; 212 ; >
+      au < manifest ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 213 ; 213 ; >
+      au < manifest ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 214 ; 214 ; >
+      au < manifest ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 215 ; 215 ; >
+      au < manifest ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 222 ; 222 ; >
       au < testing ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 224 ; 224 ; >
@@ -28010,23 +28009,23 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 205 ; 205 ; >
-      au < exists ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 206 ; 206 ; >
-      au < exists ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 207 ; 207 ; >
-      au < exists ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 208 ; 208 ; >
-      au < exists ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 209 ; 209 ; >
-      au < exists ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 210 ; 210 ; >
-      au < exists ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 211 ; 211 ; >
-      au < exists ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 212 ; 212 ; >
-      au < exists ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 213 ; 213 ; >
-      au < exists ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 214 ; 214 ; >
-      au < exists ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 215 ; 215 ; >
-      au < exists ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 216 ; 216 ; >
-      au < exists ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 217 ; 217 ; >
-      au < exists ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 218 ; 218 ; >
-      au < exists ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 219 ; 219 ; >
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 221 ; 221 ; >
+      au < manifest ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 205 ; 205 ; >
+      au < manifest ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 206 ; 206 ; >
+      au < manifest ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 207 ; 207 ; >
+      au < manifest ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 208 ; 208 ; >
+      au < manifest ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 209 ; 209 ; >
+      au < manifest ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 210 ; 210 ; >
+      au < manifest ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 211 ; 211 ; >
+      au < manifest ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 212 ; 212 ; >
+      au < manifest ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 213 ; 213 ; >
+      au < manifest ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 214 ; 214 ; >
+      au < manifest ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 215 ; 215 ; >
+      au < manifest ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 222 ; 222 ; >
       au < testing ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 224 ; 224 ; >
@@ -28051,20 +28050,20 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 208 ; 208 ; >
-      au < exists ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 209 ; 209 ; >
-      au < exists ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 210 ; 210 ; >
-      au < exists ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 211 ; 211 ; >
-      au < exists ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 212 ; 212 ; >
-      au < exists ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 213 ; 213 ; >
-      au < exists ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 214 ; 214 ; >
-      au < exists ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 215 ; 215 ; >
-      au < exists ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 216 ; 216 ; >
-      au < exists ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 217 ; 217 ; >
-      au < exists ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 218 ; 218 ; >
-      au < exists ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 219 ; 219 ; >
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 221 ; 221 ; >
+      au < manifest ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 208 ; 208 ; >
+      au < manifest ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 209 ; 209 ; >
+      au < manifest ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 210 ; 210 ; >
+      au < manifest ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 211 ; 211 ; >
+      au < manifest ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 212 ; 212 ; >
+      au < manifest ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 213 ; 213 ; >
+      au < manifest ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 214 ; 214 ; >
+      au < manifest ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 215 ; 215 ; >
+      au < manifest ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 222 ; 222 ; >
       au < manifest ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 224 ; 224 ; >
@@ -28089,15 +28088,15 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 213 ; 213 ; >
-      au < exists ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 214 ; 214 ; >
-      au < exists ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 215 ; 215 ; >
-      au < exists ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 216 ; 216 ; >
-      au < exists ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 217 ; 217 ; >
-      au < exists ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 218 ; 218 ; >
-      au < exists ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 219 ; 219 ; >
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 221 ; 221 ; >
+      au < manifest ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 213 ; 213 ; >
+      au < manifest ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 214 ; 214 ; >
+      au < manifest ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 215 ; 215 ; >
+      au < manifest ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 222 ; 222 ; >
       au < manifest ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 224 ; 224 ; >
@@ -28122,15 +28121,15 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 213 ; 213 ; >
-      au < exists ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 214 ; 214 ; >
-      au < exists ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 215 ; 215 ; >
-      au < exists ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 216 ; 216 ; >
-      au < exists ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 217 ; 217 ; >
-      au < exists ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 218 ; 218 ; >
-      au < exists ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 219 ; 219 ; >
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 221 ; 221 ; >
+      au < manifest ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 213 ; 213 ; >
+      au < manifest ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 214 ; 214 ; >
+      au < manifest ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 215 ; 215 ; >
+      au < manifest ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 222 ; 222 ; >
       au < manifest ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 224 ; 224 ; >
@@ -28155,12 +28154,12 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 216 ; 216 ; >
-      au < exists ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 217 ; 217 ; >
-      au < exists ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 218 ; 218 ; >
-      au < exists ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 219 ; 219 ; >
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 221 ; 221 ; >
+      au < manifest ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 222 ; 222 ; >
       au < manifest ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 224 ; 224 ; >
@@ -28185,10 +28184,10 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 218 ; 218 ; >
-      au < exists ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 219 ; 219 ; >
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 221 ; 221 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 222 ; 222 ; >
       au < manifest ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 224 ; 224 ; >
@@ -28213,8 +28212,8 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 221 ; 221 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 222 ; 222 ; >
       au < manifest ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 224 ; 224 ; >
@@ -28531,12 +28530,12 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2000 ; Psychological Science in the Public Interest Volume 1 ; 1 ; >
-      au < exists ; exists ; 2001 ; Psychological Science in the Public Interest Volume 2 ; 2 ; >
-      au < exists ; exists ; 2002 ; Psychological Science in the Public Interest Volume 3 ; 3 ; >
-      au < exists ; exists ; 2003 ; Psychological Science in the Public Interest Volume 4 ; 4 ; >
-      au < exists ; exists ; 2004 ; Psychological Science in the Public Interest Volume 5 ; 5 ; >
-      au < exists ; exists ; 2005 ; Psychological Science in the Public Interest Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2000 ; Psychological Science in the Public Interest Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2001 ; Psychological Science in the Public Interest Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2002 ; Psychological Science in the Public Interest Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2003 ; Psychological Science in the Public Interest Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2004 ; Psychological Science in the Public Interest Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2005 ; Psychological Science in the Public Interest Volume 6 ; 6 ; >
       au < manifest ; exists ; 2006 ; Psychological Science in the Public Interest Volume 7 ; 7 ; >
       au < manifest ; exists ; 2007 ; Psychological Science in the Public Interest Volume 8 ; 8 ; >
       au < manifest ; exists ; 2008 ; Psychological Science in the Public Interest Volume 9 ; 9 ; >
@@ -28681,40 +28680,40 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         
-        au < exists ; exists ; 1976-1977 ; Psychology of Women Quarterly Volume 1 ; 1 ; >
-        au < exists ; exists ; 1978 ; Psychology of Women Quarterly Volume 2 ; 2 ; >
-        au < exists ; exists ; 1979 ; Psychology of Women Quarterly Volume 3 ; 3 ; >
-        au < exists ; exists ; 1980 ; Psychology of Women Quarterly Volume 4 ; 4 ; >
-        au < exists ; exists ; 1981 ; Psychology of Women Quarterly Volume 5 ; 5 ; >
-        au < exists ; exists ; 1982 ; Psychology of Women Quarterly Volume 6 ; 6 ; >
-        au < exists ; exists ; 1983 ; Psychology of Women Quarterly Volume 7 ; 7 ; >
-        au < exists ; exists ; 1984 ; Psychology of Women Quarterly Volume 8 ; 8 ; >
-        au < exists ; exists ; 1985 ; Psychology of Women Quarterly Volume 9 ; 9 ; >
-        au < exists ; exists ; 1986 ; Psychology of Women Quarterly Volume 10 ; 10 ; >
-        au < exists ; exists ; 1987 ; Psychology of Women Quarterly Volume 11 ; 11 ; >
-        au < exists ; exists ; 1988 ; Psychology of Women Quarterly Volume 12 ; 12 ; >
-        au < exists ; exists ; 1989 ; Psychology of Women Quarterly Volume 13 ; 13 ; >
-        au < exists ; exists ; 1990 ; Psychology of Women Quarterly Volume 14 ; 14 ; >
-        au < exists ; exists ; 1991 ; Psychology of Women Quarterly Volume 15 ; 15 ; >
-        au < exists ; exists ; 1992 ; Psychology of Women Quarterly Volume 16 ; 16 ; >
-        au < exists ; exists ; 1993 ; Psychology of Women Quarterly Volume 17 ; 17 ; >
-        au < exists ; exists ; 1994 ; Psychology of Women Quarterly Volume 18 ; 18 ; >
-        au < exists ; exists ; 1995 ; Psychology of Women Quarterly Volume 19 ; 19 ; >
-        au < exists ; exists ; 1996 ; Psychology of Women Quarterly Volume 20 ; 20 ; >
-        au < exists ; exists ; 1997 ; Psychology of Women Quarterly Volume 21 ; 21 ; >
-        au < exists ; exists ; 1998 ; Psychology of Women Quarterly Volume 22 ; 22 ; >
-        au < exists ; exists ; 1999 ; Psychology of Women Quarterly Volume 23 ; 23 ; >
-        au < exists ; exists ; 2000 ; Psychology of Women Quarterly Volume 24 ; 24 ; >
-        au < exists ; exists ; 2001 ; Psychology of Women Quarterly Volume 25 ; 25 ; >
-        au < exists ; exists ; 2002 ; Psychology of Women Quarterly Volume 26 ; 26 ; >
-        au < exists ; exists ; 2003 ; Psychology of Women Quarterly Volume 27 ; 27 ; >
-        au < exists ; exists ; 2004 ; Psychology of Women Quarterly Volume 28 ; 28 ; >
-        au < exists ; exists ; 2005 ; Psychology of Women Quarterly Volume 29 ; 29 ; >
-        au < exists ; exists ; 2006 ; Psychology of Women Quarterly Volume 30 ; 30 ; >
-        au < exists ; exists ; 2007 ; Psychology of Women Quarterly Volume 31 ; 31 ; >
-        au < exists ; exists ; 2008 ; Psychology of Women Quarterly Volume 32 ; 32 ; >
-        au < exists ; exists ; 2009 ; Psychology of Women Quarterly Volume 33 ; 33 ; >
-        au < exists ; exists ; 2010 ; Psychology of Women Quarterly Volume 34 ; 34 ; >
+        au < manifest ; exists ; 1976-1977 ; Psychology of Women Quarterly Volume 1 ; 1 ; >
+        au < manifest ; exists ; 1978 ; Psychology of Women Quarterly Volume 2 ; 2 ; >
+        au < manifest ; exists ; 1979 ; Psychology of Women Quarterly Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1980 ; Psychology of Women Quarterly Volume 4 ; 4 ; >
+        au < manifest ; exists ; 1981 ; Psychology of Women Quarterly Volume 5 ; 5 ; >
+        au < manifest ; exists ; 1982 ; Psychology of Women Quarterly Volume 6 ; 6 ; >
+        au < manifest ; exists ; 1983 ; Psychology of Women Quarterly Volume 7 ; 7 ; >
+        au < manifest ; exists ; 1984 ; Psychology of Women Quarterly Volume 8 ; 8 ; >
+        au < manifest ; exists ; 1985 ; Psychology of Women Quarterly Volume 9 ; 9 ; >
+        au < manifest ; exists ; 1986 ; Psychology of Women Quarterly Volume 10 ; 10 ; >
+        au < manifest ; exists ; 1987 ; Psychology of Women Quarterly Volume 11 ; 11 ; >
+        au < manifest ; exists ; 1988 ; Psychology of Women Quarterly Volume 12 ; 12 ; >
+        au < manifest ; exists ; 1989 ; Psychology of Women Quarterly Volume 13 ; 13 ; >
+        au < manifest ; exists ; 1990 ; Psychology of Women Quarterly Volume 14 ; 14 ; >
+        au < manifest ; exists ; 1991 ; Psychology of Women Quarterly Volume 15 ; 15 ; >
+        au < manifest ; exists ; 1992 ; Psychology of Women Quarterly Volume 16 ; 16 ; >
+        au < manifest ; exists ; 1993 ; Psychology of Women Quarterly Volume 17 ; 17 ; >
+        au < manifest ; exists ; 1994 ; Psychology of Women Quarterly Volume 18 ; 18 ; >
+        au < manifest ; exists ; 1995 ; Psychology of Women Quarterly Volume 19 ; 19 ; >
+        au < manifest ; exists ; 1996 ; Psychology of Women Quarterly Volume 20 ; 20 ; >
+        au < manifest ; exists ; 1997 ; Psychology of Women Quarterly Volume 21 ; 21 ; >
+        au < manifest ; exists ; 1998 ; Psychology of Women Quarterly Volume 22 ; 22 ; >
+        au < manifest ; exists ; 1999 ; Psychology of Women Quarterly Volume 23 ; 23 ; >
+        au < manifest ; exists ; 2000 ; Psychology of Women Quarterly Volume 24 ; 24 ; >
+        au < manifest ; exists ; 2001 ; Psychology of Women Quarterly Volume 25 ; 25 ; >
+        au < manifest ; exists ; 2002 ; Psychology of Women Quarterly Volume 26 ; 26 ; >
+        au < manifest ; exists ; 2003 ; Psychology of Women Quarterly Volume 27 ; 27 ; >
+        au < manifest ; exists ; 2004 ; Psychology of Women Quarterly Volume 28 ; 28 ; >
+        au < manifest ; exists ; 2005 ; Psychology of Women Quarterly Volume 29 ; 29 ; >
+        au < manifest ; exists ; 2006 ; Psychology of Women Quarterly Volume 30 ; 30 ; >
+        au < manifest ; exists ; 2007 ; Psychology of Women Quarterly Volume 31 ; 31 ; >
+        au < manifest ; exists ; 2008 ; Psychology of Women Quarterly Volume 32 ; 32 ; >
+        au < manifest ; exists ; 2009 ; Psychology of Women Quarterly Volume 33 ; 33 ; >
+        au < manifest ; exists ; 2010 ; Psychology of Women Quarterly Volume 34 ; 34 ; >
         au < released ; crawling ; 2011 ; Psychology of Women Quarterly Volume 35 ; 35 ; >
         au < crawling ; exists ; 2012 ; Psychology of Women Quarterly Volume 36 ; 36 ; >
 
@@ -29378,7 +29377,7 @@
       au < released ; crawling ; 2009-2010 ; Rehabilitation Counseling Bulletin Volume 53 ; 53 ; >
       au < released ; crawling ; 2010-2011 ; Rehabilitation Counseling Bulletin Volume 54 ; 54 ; >
       au < released ; crawling ; 2011-2012 ; Rehabilitation Counseling Bulletin Volume 55 ; 55 ; >
-      au < expected ; exists ; 2012 ; Rehabilitation Counseling Bulletin Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2012 ; Rehabilitation Counseling Bulletin Volume 56 ; 56 ; >
       
 
     }
@@ -29577,15 +29576,13 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      comment[notReady] = 2011 manifest page has bad links like: http://rea.sagepub.com/cgi/content/7/1.long
-
-      au < exists ; exists ; 2005 ; Research Ethics Volume 1 ; 1 ; >
-      au < exists ; exists ; 2006 ; Research Ethics Volume 2 ; 2 ; >
-      au < exists ; exists ; 2007 ; Research Ethics Volume 3 ; 3 ; >
-      au < exists ; exists ; 2008 ; Research Ethics Volume 4 ; 4 ; >
-      au < exists ; exists ; 2009 ; Research Ethics Volume 5 ; 5 ; >
-      au < exists ; exists ; 2010 ; Research Ethics Volume 6 ; 6 ; >
-      au < notReady ; exists ; 2011 ; Research Ethics Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2005 ; Research Ethics Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2006 ; Research Ethics Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2007 ; Research Ethics Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2008 ; Research Ethics Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2009 ; Research Ethics Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2010 ; Research Ethics Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2011 ; Research Ethics Volume 7 ; 7 ; >
       au < crawling ; exists ; 2012 ; Research Ethics Volume 8 ; 8 ; >
 
     }
@@ -29919,7 +29916,7 @@
       au < manifest ; exists ; 2009 ; Review of Market Integration Volume 1 ; 1 ; >
       au < released ; crawling ; 2010 ; Review of Market Integration Volume 2 ; 2 ; >
       au < released ; crawling ; 2011 ; Review of Market Integration Volume 3 ; 3 ; >
-      au < expected ; exists ; 2012 ; Review of Market Integration Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2012 ; Review of Market Integration Volume 4 ; 4 ; >
 
     }
 
@@ -30209,7 +30206,7 @@
       au < manifest ; exists ; 1984 ; Scandinavian Journal of Public Health Volume 12 ; 12 ; >
       au < manifest ; exists ; 1985 ; Scandinavian Journal of Public Health Volume 13 ; 13 ; >
       au < manifest ; exists ; 1986 ; Scandinavian Journal of Public Health Volume 14 ; 14 ; >
-      au < exists ; exists ; 1987 ; Scandinavian Journal of Public Health Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1987 ; Scandinavian Journal of Public Health Volume 15 ; 15 ; >
       au < manifest ; exists ; 1988 ; Scandinavian Journal of Public Health Volume 16 ; 16 ; >
       au < manifest ; exists ; 1989 ; Scandinavian Journal of Public Health Volume 17 ; 17 ; >
       au < manifest ; exists ; 1990 ; Scandinavian Journal of Public Health Volume 18 ; 18 ; >
@@ -31210,9 +31207,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2004 ; Social Psychology Quarterly Volume 67 ; 67 ; >
-      au < exists ; exists ; 2005 ; Social Psychology Quarterly Volume 68 ; 68 ; >
-      au < exists ; exists ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 ; >
+      au < manifest ; exists ; 2004 ; Social Psychology Quarterly Volume 67 ; 67 ; >
+      au < manifest ; exists ; 2005 ; Social Psychology Quarterly Volume 68 ; 68 ; >
+      au < manifest ; exists ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 ; >
       au < manifest ; exists ; 2007 ; Social Psychology Quarterly Volume 70 ; 70 ; >
       au < manifest ; exists ; 2008 ; Social Psychology Quarterly Volume 71 ; 71 ; >
       au < manifest ; exists ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 ; >
@@ -31613,9 +31610,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2004 ; Sociology of Education Volume 77 ; 77 ; >
-      au < exists ; exists ; 2005 ; Sociology of Education Volume 78 ; 78 ; >
-      au < exists ; exists ; 2006 ; Sociology of Education Volume 79 ; 79 ; >
+      au < manifest ; exists ; 2004 ; Sociology of Education Volume 77 ; 77 ; >
+      au < manifest ; exists ; 2005 ; Sociology of Education Volume 78 ; 78 ; >
+      au < manifest ; exists ; 2006 ; Sociology of Education Volume 79 ; 79 ; >
       au < manifest ; exists ; 2007 ; Sociology of Education Volume 80 ; 80 ; >
       au < manifest ; exists ; 2008 ; Sociology of Education Volume 81 ; 81 ; >
       au < manifest ; exists ; 2009 ; Sociology of Education Volume 82 ; 82 ; >
@@ -31855,17 +31852,17 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1997 ; State and Local Government Review Volume 29 ; 29 ; >
-      au < exists ; exists ; 1998 ; State and Local Government Review Volume 30 ; 30 ; >
-      au < exists ; exists ; 1999 ; State and Local Government Review Volume 31 ; 31 ; >
-      au < exists ; exists ; 2000 ; State and Local Government Review Volume 32 ; 32 ; >
-      au < exists ; exists ; 2001 ; State and Local Government Review Volume 33 ; 33 ; >
-      au < exists ; exists ; 2002 ; State and Local Government Review Volume 34 ; 34 ; >
-      au < exists ; exists ; 2003 ; State and Local Government Review Volume 35 ; 35 ; >
-      au < exists ; exists ; 2004 ; State and Local Government Review Volume 36 ; 36 ; >
-      au < exists ; exists ; 2005 ; State and Local Government Review Volume 37 ; 37 ; >
-      au < exists ; exists ; 2006 ; State and Local Government Review Volume 38 ; 38 ; >
-      au < exists ; exists ; 2007 ; State and Local Government Review Volume 39 ; 39 ; >
+      au < manifest ; exists ; 1997 ; State and Local Government Review Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1998 ; State and Local Government Review Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1999 ; State and Local Government Review Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2000 ; State and Local Government Review Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2001 ; State and Local Government Review Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2002 ; State and Local Government Review Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2003 ; State and Local Government Review Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2004 ; State and Local Government Review Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2005 ; State and Local Government Review Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2006 ; State and Local Government Review Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2007 ; State and Local Government Review Volume 39 ; 39 ; >
       au < manifest ; exists ; 2008 ; State and Local Government Review Volume 40 ; 40 ; >
       au < manifest ; exists ; 2009 ; State and Local Government Review Volume 41 ; 41 ; >
       au < released ; crawling ; 2010 ; State and Local Government Review Volume 42 ; 42 ; >
@@ -32202,40 +32199,40 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1971-1972 ; Studies in Religion/Sciences Religieuses Volume 1 ; 1 ; >
-      au < exists ; exists ; 1972-1973 ; Studies in Religion/Sciences Religieuses Volume 2 ; 2 ; >
-      au < exists ; exists ; 1973-1974 ; Studies in Religion/Sciences Religieuses Volume 3 ; 3 ; >
-      au < exists ; exists ; 1974-1975 ; Studies in Religion/Sciences Religieuses Volume 4 ; 4 ; >
-      au < exists ; exists ; 1975-1976 ; Studies in Religion/Sciences Religieuses Volume 5 ; 5 ; >
-      au < exists ; exists ; 1976-1977 ; Studies in Religion/Sciences Religieuses Volume 6 ; 6 ; >
-      au < exists ; exists ; 1978 ; Studies in Religion/Sciences Religieuses Volume 7 ; 7 ; >
-      au < exists ; exists ; 1979 ; Studies in Religion/Sciences Religieuses Volume 8 ; 8 ; >
-      au < exists ; exists ; 1980 ; Studies in Religion/Sciences Religieuses Volume 9 ; 9 ; >
-      au < exists ; exists ; 1981 ; Studies in Religion/Sciences Religieuses Volume 10 ; 10 ; >
-      au < exists ; exists ; 1982 ; Studies in Religion/Sciences Religieuses Volume 11 ; 11 ; >
-      au < exists ; exists ; 1983 ; Studies in Religion/Sciences Religieuses Volume 12 ; 12 ; >
-      au < exists ; exists ; 1984 ; Studies in Religion/Sciences Religieuses Volume 13 ; 13 ; >
-      au < exists ; exists ; 1985 ; Studies in Religion/Sciences Religieuses Volume 14 ; 14 ; >
-      au < exists ; exists ; 1986 ; Studies in Religion/Sciences Religieuses Volume 15 ; 15 ; >
-      au < exists ; exists ; 1987 ; Studies in Religion/Sciences Religieuses Volume 16 ; 16 ; >
-      au < exists ; exists ; 1988 ; Studies in Religion/Sciences Religieuses Volume 17 ; 17 ; >
-      au < exists ; exists ; 1989 ; Studies in Religion/Sciences Religieuses Volume 18 ; 18 ; >
-      au < exists ; exists ; 1990 ; Studies in Religion/Sciences Religieuses Volume 19 ; 19 ; >
-      au < exists ; exists ; 1991 ; Studies in Religion/Sciences Religieuses Volume 20 ; 20 ; >
-      au < exists ; exists ; 1992 ; Studies in Religion/Sciences Religieuses Volume 21 ; 21 ; >
-      au < exists ; exists ; 1993 ; Studies in Religion/Sciences Religieuses Volume 22 ; 22 ; >
-      au < exists ; exists ; 1994 ; Studies in Religion/Sciences Religieuses Volume 23 ; 23 ; >
-      au < exists ; exists ; 1995 ; Studies in Religion/Sciences Religieuses Volume 24 ; 24 ; >
-      au < exists ; exists ; 1996 ; Studies in Religion/Sciences Religieuses Volume 25 ; 25 ; >
-      au < exists ; exists ; 1997 ; Studies in Religion/Sciences Religieuses Volume 26 ; 26 ; >
-      au < exists ; exists ; 1998 ; Studies in Religion/Sciences Religieuses Volume 27 ; 27 ; >
-      au < exists ; exists ; 1999 ; Studies in Religion/Sciences Religieuses Volume 28 ; 28 ; >
-      au < exists ; exists ; 2000 ; Studies in Religion/Sciences Religieuses Volume 29 ; 29 ; >
-      au < exists ; exists ; 2001 ; Studies in Religion/Sciences Religieuses Volume 30 ; 30 ; >
-      au < exists ; exists ; 2002 ; Studies in Religion/Sciences Religieuses Volume 31 ; 31 ; >
-      au < exists ; exists ; 2003 ; Studies in Religion/Sciences Religieuses Volume 32 ; 32 ; >
-      au < exists ; exists ; 2004 ; Studies in Religion/Sciences Religieuses Volume 33 ; 33 ; >
-      au < exists ; exists ; 2005 ; Studies in Religion/Sciences Religieuses Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1971-1972 ; Studies in Religion/Sciences Religieuses Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1972-1973 ; Studies in Religion/Sciences Religieuses Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1973-1974 ; Studies in Religion/Sciences Religieuses Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1974-1975 ; Studies in Religion/Sciences Religieuses Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1975-1976 ; Studies in Religion/Sciences Religieuses Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1976-1977 ; Studies in Religion/Sciences Religieuses Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1978 ; Studies in Religion/Sciences Religieuses Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1979 ; Studies in Religion/Sciences Religieuses Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1980 ; Studies in Religion/Sciences Religieuses Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1981 ; Studies in Religion/Sciences Religieuses Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1982 ; Studies in Religion/Sciences Religieuses Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1983 ; Studies in Religion/Sciences Religieuses Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1984 ; Studies in Religion/Sciences Religieuses Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1985 ; Studies in Religion/Sciences Religieuses Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1986 ; Studies in Religion/Sciences Religieuses Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1987 ; Studies in Religion/Sciences Religieuses Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1988 ; Studies in Religion/Sciences Religieuses Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1989 ; Studies in Religion/Sciences Religieuses Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1990 ; Studies in Religion/Sciences Religieuses Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1991 ; Studies in Religion/Sciences Religieuses Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1992 ; Studies in Religion/Sciences Religieuses Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1993 ; Studies in Religion/Sciences Religieuses Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1994 ; Studies in Religion/Sciences Religieuses Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1995 ; Studies in Religion/Sciences Religieuses Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1996 ; Studies in Religion/Sciences Religieuses Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1997 ; Studies in Religion/Sciences Religieuses Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1998 ; Studies in Religion/Sciences Religieuses Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1999 ; Studies in Religion/Sciences Religieuses Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2000 ; Studies in Religion/Sciences Religieuses Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2001 ; Studies in Religion/Sciences Religieuses Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2002 ; Studies in Religion/Sciences Religieuses Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2003 ; Studies in Religion/Sciences Religieuses Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2004 ; Studies in Religion/Sciences Religieuses Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2005 ; Studies in Religion/Sciences Religieuses Volume 34 ; 34 ; >
       au < manifest ; exists ; 2006 ; Studies in Religion/Sciences Religieuses Volume 35 ; 35 ; >
       au < manifest ; exists ; 2007 ; Studies in Religion/Sciences Religieuses Volume 36 ; 36 ; >
       au < manifest ; exists ; 2008 ; Studies in Religion/Sciences Religieuses Volume 37 ; 37 ; >
@@ -32395,32 +32392,32 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1977 ; Teaching Public Administration Volume 1 ; 1 ; >
-      au < exists ; exists ; 1978 ; Teaching Public Administration Volume 2 ; 2 ; >
-      au < exists ; exists ; 1979 ; Teaching Public Administration Volume 3 ; 3 ; >
-      au < exists ; exists ; 1980 ; Teaching Public Administration Volume 4 ; 4 ; >
-      au < exists ; exists ; 1981 ; Teaching Public Administration Volume 5 ; 5 ; >
-      au < exists ; exists ; 1982 ; Teaching Public Administration Volume 6 ; 6 ; >
-      au < exists ; exists ; 1983 ; Teaching Public Administration Volume 7 ; 7 ; >
-      au < exists ; exists ; 1984 ; Teaching Public Administration Volume 8 ; 8 ; >
-      au < exists ; exists ; 1985 ; Teaching Public Administration Volume 9 ; 9 ; >
-      au < exists ; exists ; 1986 ; Teaching Public Administration Volume 10 ; 10 ; >
-      au < exists ; exists ; 1987 ; Teaching Public Administration Volume 11 ; 11 ; >
-      au < exists ; exists ; 1988 ; Teaching Public Administration Volume 12 ; 12 ; >
-      au < exists ; exists ; 1989 ; Teaching Public Administration Volume 13 ; 13 ; >
-      au < exists ; exists ; 1990 ; Teaching Public Administration Volume 14 ; 14 ; >
-      au < exists ; exists ; 1991 ; Teaching Public Administration Volume 15 ; 15 ; >
-      au < exists ; exists ; 1992 ; Teaching Public Administration Volume 16 ; 16 ; >
-      au < exists ; exists ; 1993 ; Teaching Public Administration Volume 17 ; 17 ; >
-      au < exists ; exists ; 1994 ; Teaching Public Administration Volume 18 ; 18 ; >
-      au < exists ; exists ; 1995 ; Teaching Public Administration Volume 19 ; 19 ; >
-      au < exists ; exists ; 1996 ; Teaching Public Administration Volume 20 ; 20 ; >
-      au < exists ; exists ; 1997 ; Teaching Public Administration Volume 21 ; 21 ; >
-      au < exists ; exists ; 1998 ; Teaching Public Administration Volume 22 ; 22 ; >
-      au < exists ; exists ; 1999 ; Teaching Public Administration Volume 23 ; 23 ; >
-      au < exists ; exists ; 2000 ; Teaching Public Administration Volume 24 ; 24 ; >
-      au < exists ; exists ; 2001 ; Teaching Public Administration Volume 25 ; 25 ; >
-      au < exists ; exists ; 2002 ; Teaching Public Administration Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1977 ; Teaching Public Administration Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1978 ; Teaching Public Administration Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1979 ; Teaching Public Administration Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1980 ; Teaching Public Administration Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1981 ; Teaching Public Administration Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1982 ; Teaching Public Administration Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1983 ; Teaching Public Administration Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1984 ; Teaching Public Administration Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1985 ; Teaching Public Administration Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1986 ; Teaching Public Administration Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1987 ; Teaching Public Administration Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1988 ; Teaching Public Administration Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1989 ; Teaching Public Administration Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1990 ; Teaching Public Administration Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1991 ; Teaching Public Administration Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1992 ; Teaching Public Administration Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1993 ; Teaching Public Administration Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1994 ; Teaching Public Administration Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1995 ; Teaching Public Administration Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1996 ; Teaching Public Administration Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1997 ; Teaching Public Administration Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1998 ; Teaching Public Administration Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1999 ; Teaching Public Administration Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2000 ; Teaching Public Administration Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2001 ; Teaching Public Administration Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2002 ; Teaching Public Administration Volume 26 ; 26 ; >
       au < manifest ; exists ; 2003 ; Teaching Public Administration Volume 27 ; 27 ; >
 
     }
@@ -32441,9 +32438,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2004 ; Teaching Sociology Volume 32 ; 32 ; >
-      au < exists ; exists ; 2005 ; Teaching Sociology Volume 33 ; 33 ; >
-      au < exists ; exists ; 2006 ; Teaching Sociology Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2004 ; Teaching Sociology Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2005 ; Teaching Sociology Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2006 ; Teaching Sociology Volume 34 ; 34 ; >
       au < manifest ; exists ; 2007 ; Teaching Sociology Volume 35 ; 35 ; >
       au < manifest ; exists ; 2008 ; Teaching Sociology Volume 36 ; 36 ; >
       au < manifest ; exists ; 2009 ; Teaching Sociology Volume 37 ; 37 ; >
@@ -33806,7 +33803,7 @@
       au < manifest ; exists ; 1987 ; Toxicology and Industrial Health Volume 3 ; 3 ; >
       au < manifest ; exists ; 1988 ; Toxicology and Industrial Health Volume 4 ; 4 ; >
       au < manifest ; exists ; 1989 ; Toxicology and Industrial Health Volume 5 ; 5 ; >
-      au < exists ; exists ; 1990 ; Toxicology and Industrial Health Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1990 ; Toxicology and Industrial Health Volume 6 ; 6 ; >
       au < manifest ; exists ; 1991 ; Toxicology and Industrial Health Volume 7 ; 7 ; >
       au < manifest ; exists ; 1992 ; Toxicology and Industrial Health Volume 8 ; 8 ; >
       au < doesNotExist ; doesNotExist ; 0 ; Toxicology and Industrial Health Volume 9 ; 9 ; >
@@ -33989,18 +33986,18 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1995 ; Transfer: European Review of Labour and Research Volume 1 ; 1 ; >
-      au < exists ; exists ; 1996 ; Transfer: European Review of Labour and Research Volume 2 ; 2 ; >
-      au < exists ; exists ; 1997 ; Transfer: European Review of Labour and Research Volume 3 ; 3 ; >
-      au < exists ; exists ; 1998 ; Transfer: European Review of Labour and Research Volume 4 ; 4 ; >
-      au < exists ; exists ; 1999 ; Transfer: European Review of Labour and Research Volume 5 ; 5 ; >
-      au < exists ; exists ; 2000 ; Transfer: European Review of Labour and Research Volume 6 ; 6 ; >
-      au < exists ; exists ; 2001 ; Transfer: European Review of Labour and Research Volume 7 ; 7 ; >
-      au < exists ; exists ; 2002 ; Transfer: European Review of Labour and Research Volume 8 ; 8 ; >
-      au < exists ; exists ; 2003 ; Transfer: European Review of Labour and Research Volume 9 ; 9 ; >
-      au < exists ; exists ; 2004 ; Transfer: European Review of Labour and Research Volume 10 ; 10 ; >
-      au < exists ; exists ; 2005 ; Transfer: European Review of Labour and Research Volume 11 ; 11 ; >
-      au < exists ; exists ; 2006 ; Transfer: European Review of Labour and Research Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1995 ; Transfer: European Review of Labour and Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1996 ; Transfer: European Review of Labour and Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1997 ; Transfer: European Review of Labour and Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1998 ; Transfer: European Review of Labour and Research Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1999 ; Transfer: European Review of Labour and Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2000 ; Transfer: European Review of Labour and Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2001 ; Transfer: European Review of Labour and Research Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2002 ; Transfer: European Review of Labour and Research Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2003 ; Transfer: European Review of Labour and Research Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2004 ; Transfer: European Review of Labour and Research Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2005 ; Transfer: European Review of Labour and Research Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2006 ; Transfer: European Review of Labour and Research Volume 12 ; 12 ; >
       au < manifest ; exists ; 2007 ; Transfer: European Review of Labour and Research Volume 13 ; 13 ; >
       au < manifest ; exists ; 2008 ; Transfer: European Review of Labour and Research Volume 14 ; 14 ; >
       au < manifest ; exists ; 2009 ; Transfer: European Review of Labour and Research Volume 15 ; 15 ; >
@@ -35023,7 +35020,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Word of Mouth Volume 21 ; 21 ; >
       au < released ; crawling ; 2010-2011 ; Word of Mouth Volume 22 ; 22 ; >
       au < released ; crawling ; 2011-2012 ; Word of Mouth Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2012 ; Word of Mouth Volume 24 ; 24 ; >
+      au < crawling ; exists ; 2012 ; Word of Mouth Volume 24 ; 24 ; >
 
     }
 
@@ -35186,8 +35183,8 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 ; >
-      au < exists ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 ; >
       au < manifest ; exists ; 2008 ; World Policy Journal Volume 25 ; 25 ; >
       au < manifest ; exists ; 2009 ; World Policy Journal Volume 26 ; 26 ; >
       au < released ; crawling ; 2010 ; World Policy Journal Volume 27 ; 27 ; >
