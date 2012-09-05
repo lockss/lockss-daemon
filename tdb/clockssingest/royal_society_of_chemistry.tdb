@@ -34,8 +34,8 @@
     au < manifest ; exists ; 2006 ; The Analyst Volume 131 ; 131 ; 2006 >
     au < manifest ; exists ; 2007 ; The Analyst Volume 132 ; 132 ; 2007 >
     au < zapped ; down ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 >
-    au < zappedCandidate ; down ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 >
-    au < zappedCandidate ; down ; 2010 ; The Analyst Volume 135 ; 135 ; 2010 >
+    au < zapped ; down ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 >
+    au < zapped ; down ; 2010 ; The Analyst Volume 135 ; 135 ; 2010 >
   
   }
 
@@ -81,7 +81,7 @@
     
     param[journal_code] = ic
 
-    au < zappedCandidate ; down ; 2008 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 104 ; 104 ; 2008 >
+    au < zapped ; down ; 2008 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 104 ; 104 ; 2008 >
     au < zapped ; down ; 2009 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 105 ; 105 ; 2009 >
     au < zapped ; down ; 2010 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 106 ; 106 ; 2010 >
   
@@ -139,7 +139,7 @@
     au < manifest ; exists ; 2005 ; Chemical Communications 2005 ; 0 ; 2005 >
     au < manifest ; exists ; 2006 ; Chemical Communications 2006 ; 0 ; 2006 >
     au < manifest ; exists ; 2007 ; Chemical Communications 2007 ; 0 ; 2007 >
-    au < zappedCandidate ; down ; 2008 ; Chemical Communications 2008 ; 0 ; 2008 >
+    au < zapped ; down ; 2008 ; Chemical Communications 2008 ; 0 ; 2008 >
     au < down ; crawling ; 2009 ; Chemical Communications 2009 ; 0 ; 2009 >
     au < down ; down ; 2010 ; Chemical Communications Volume 46 [superseded] ; 0 ; 2010 >
     au < doNotProcess ; doNotProcess ; 2010 ; Chemical Communications Volume 46 ; 46 ; 2010 >
@@ -222,9 +222,9 @@
     au < manifest ; exists ; 2005 ; CrystEngComm Volume 7 ; 7 ; 2005 >
     au < manifest ; exists ; 2006 ; CrystEngComm Volume 8 ; 8 ; 2006 >
     au < manifest ; exists ; 2007 ; CrystEngComm Volume 9 ; 9 ; 2007 >
-    au < zappedCandidate ; down ; 2008 ; CrystEngComm Volume 10 ; 10 ; 2008 >
-    au < zappedCandidate ; down ; 2009 ; CrystEngComm Volume 11 ; 11 ; 2009 >
-    au < zappedCandidate ; down ; 2010 ; CrystEngComm Volume 12 ; 12 ; 2010 >
+    au < zapped ; down ; 2008 ; CrystEngComm Volume 10 ; 10 ; 2008 >
+    au < zapped ; down ; 2009 ; CrystEngComm Volume 11 ; 11 ; 2009 >
+    au < zapped ; down ; 2010 ; CrystEngComm Volume 12 ; 12 ; 2010 >
   
   }
 
@@ -250,7 +250,7 @@
     au < manifest ; exists ; 2005 ; Dalton Transactions 2005 ; 0 ; 2005 >
     au < manifest ; exists ; 2006 ; Dalton Transactions 2006 ; 0 ; 2006 >
     au < manifest ; exists ; 2007 ; Dalton Transactions 2007 ; 0 ; 2007 >
-    au < zappedCandidate ; down ; 2008 ; Dalton Transactions 2008 ; 0 ; 2008 >
+    au < zapped ; down ; 2008 ; Dalton Transactions 2008 ; 0 ; 2008 >
     au < down ; crawling ; 2009 ; Dalton Transactions 2009 ; 0 ; 2009 >
     au < down ; down ; 2010 ; Dalton Transactions Volume 39 [superseded] ; 0 ; 2010 >
     au < doNotProcess ; doNotProcess ; 2010 ; Dalton Transactions Volume 39 ; 39 ; 2010 >
@@ -478,7 +478,7 @@
     au < manifest ; exists ; 2007 ; Journal of Environmental Monitoring Volume 9 ; 9 ; 2007 >
     au < zapped ; down ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 >
     au < zapped ; down ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 >
-    au < zappedCandidate ; down ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 >
+    au < zapped ; down ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 >
   
   }
 
@@ -503,8 +503,8 @@
     au < manifest ; exists ; 2005 ; Journal of Materials Chemistry Volume 15 ; 15 ; 2005 >
     au < manifest ; exists ; 2006 ; Journal of Materials Chemistry Volume 16 ; 16 ; 2006 >
     au < manifest ; exists ; 2007 ; Journal of Materials Chemistry Volume 17 ; 17 ; 2007 >
-    au < zappedCandidate ; down ; 2008 ; Journal of Materials Chemistry Volume 18 ; 18 ; 2008 >
-    au < zappedCandidate ; down ; 2009 ; Journal of Materials Chemistry Volume 19 ; 19 ; 2009 >
+    au < zapped ; down ; 2008 ; Journal of Materials Chemistry Volume 18 ; 18 ; 2008 >
+    au < zapped ; down ; 2009 ; Journal of Materials Chemistry Volume 19 ; 19 ; 2009 >
     au < down ; crawling ; 2010 ; Journal of Materials Chemistry Volume 20 ; 20 ; 2010 >
   
   }
@@ -527,9 +527,9 @@
     au < manifest ; exists ; 2005 ; Lab on a Chip Volume 5 ; 5 ; 2005 >
     au < manifest ; exists ; 2006 ; Lab on a Chip Volume 6 ; 6 ; 2006 >
     au < manifest ; exists ; 2007 ; Lab on a Chip Volume 7 ; 7 ; 2007 >
-    au < zappedCandidate ; down ; 2008 ; Lab on a Chip Volume 8 ; 8 ; 2008 >
-    au < zappedCandidate ; down ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 >
-    au < zappedCandidate ; down ; 2010 ; Lab on a Chip Volume 10 ; 10 ; 2010 >
+    au < zapped ; down ; 2008 ; Lab on a Chip Volume 8 ; 8 ; 2008 >
+    au < zapped ; down ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 >
+    au < zapped ; down ; 2010 ; Lab on a Chip Volume 10 ; 10 ; 2010 >
   
   }
 
@@ -634,7 +634,7 @@
     au < manifest ; exists ; 2006 ; New Journal of Chemistry Volume 30 ; 30 ; 2006 >
     au < manifest ; exists ; 2007 ; New Journal of Chemistry Volume 31 ; 31 ; 2007 >
     au < zapped ; down ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 >
-    au < zappedCandidate ; down ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
+    au < zapped ; down ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
     au < zapped ; down ; 2010 ; New Journal of Chemistry Volume 34 ; 34 ; 2010 >
   
   }
@@ -655,9 +655,9 @@
     au < manifest ; exists ; 2005 ; Organic & Biomolecular Chemistry Volume 3 ; 3 ; 2005 >
     au < manifest ; exists ; 2006 ; Organic & Biomolecular Chemistry Volume 4 ; 4 ; 2006 >
     au < manifest ; exists ; 2007 ; Organic & Biomolecular Chemistry Volume 5 ; 5 ; 2007 >
-    au < zappedCandidate ; down ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 >
-    au < zappedCandidate ; down ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
-    au < zappedCandidate ; down ; 2010 ; Organic & Biomolecular Chemistry Volume 8 ; 8 ; 2010 >
+    au < zapped ; down ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 >
+    au < zapped ; down ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
+    au < zapped ; down ; 2010 ; Organic & Biomolecular Chemistry Volume 8 ; 8 ; 2010 >
   
   }
 
@@ -737,9 +737,9 @@
     au < manifest ; exists ; 2005 ; Physical Chemistry Chemical Physics Volume 7 ; 7 ; 2005 >
     au < manifest ; exists ; 2006 ; Physical Chemistry Chemical Physics Volume 8 ; 8 ; 2006 >
     au < manifest ; exists ; 2007 ; Physical Chemistry Chemical Physics Volume 9 ; 9 ; 2007 >
-    au < zappedCandidate ; down ; 2008 ; Physical Chemistry Chemical Physics Volume 10 ; 10 ; 2008 >
+    au < zapped ; down ; 2008 ; Physical Chemistry Chemical Physics Volume 10 ; 10 ; 2008 >
     au < down ; crawling ; 2009 ; Physical Chemistry Chemical Physics Volume 11 ; 11 ; 2009 >
-    au < zappedCandidate ; down ; 2010 ; Physical Chemistry Chemical Physics Volume 12 ; 12 ; 2010 >
+    au < zapped ; down ; 2010 ; Physical Chemistry Chemical Physics Volume 12 ; 12 ; 2010 >
   
   }
 
@@ -776,8 +776,8 @@
     au < manifest ; exists ; 2005 ; Soft Matter Volume 1 ; 1 ; 2005 >
     au < manifest ; exists ; 2006 ; Soft Matter Volume 2 ; 2 ; 2006 >
     au < manifest ; exists ; 2007 ; Soft Matter Volume 3 ; 3 ; 2007 >
-    au < zappedCandidate ; down ; 2008 ; Soft Matter Volume 4 ; 4 ; 2008 >
-    au < zappedCandidate ; down ; 2009 ; Soft Matter Volume 5 ; 5 ; 2009 >
+    au < zapped ; down ; 2008 ; Soft Matter Volume 4 ; 4 ; 2008 >
+    au < zapped ; down ; 2009 ; Soft Matter Volume 5 ; 5 ; 2009 >
     au < down ; crawling ; 2010 ; Soft Matter Volume 6 ; 6 ; 2010 >
   
   }
