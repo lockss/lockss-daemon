@@ -490,7 +490,7 @@
     au < manifest ; exists ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
     au < manifest ; exists ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
     au < released ; crawling ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
-    au < crawling ; exists ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
+    au < testing ; exists ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
     au < crawling ; exists ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
 
 
@@ -665,8 +665,8 @@
     au < manifest ; exists ; 2007 ; Tellus A: Dynamic Meteorology and Oceanography Volume 59 ; 59 ; 2007 >
     au < manifest ; exists ; 2008 ; Tellus A: Dynamic Meteorology and Oceanography Volume 60 ; 60 ; 2008 >
     au < manifest ; exists ; 2009 ; Tellus A: Dynamic Meteorology and Oceanography Volume 61 ; 61 ; 2009 >
-    au < crawling ; exists ; 2010 ; Tellus A: Dynamic Meteorology and Oceanography Volume 62 ; 62 ; 2010 >
-    au < crawling ; exists ; 2011 ; Tellus A: Dynamic Meteorology and Oceanography Volume 63 ; 63 ; 2011 >
+    au < testing ; exists ; 2010 ; Tellus A: Dynamic Meteorology and Oceanography Volume 62 ; 62 ; 2010 >
+    au < testing ; exists ; 2011 ; Tellus A: Dynamic Meteorology and Oceanography Volume 63 ; 63 ; 2011 >
     au < crawling ; exists ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 ; 2012 >
 
   }
@@ -744,8 +744,8 @@
     au < manifest ; exists ; 2007 ; Tellus B: Chemical and Physical Meteorology Volume 59 ; 59 ; 2007 >
     au < manifest ; exists ; 2008 ; Tellus B: Chemical and Physical Meteorology Volume 60 ; 60 ; 2008 >
     au < manifest ; exists ; 2009 ; Tellus B: Chemical and Physical Meteorology Volume 61 ; 61 ; 2009 >
-    au < crawling ; exists ; 2010 ; Tellus B: Chemical and Physical Meteorology Volume 62 ; 62 ; 2010 >
-    au < crawling ; exists ; 2011 ; Tellus B: Chemical and Physical Meteorology Volume 63 ; 63 ; 2011 >
+    au < testing ; exists ; 2010 ; Tellus B: Chemical and Physical Meteorology Volume 62 ; 62 ; 2010 >
+    au < testing ; exists ; 2011 ; Tellus B: Chemical and Physical Meteorology Volume 63 ; 63 ; 2011 >
     au < crawling ; exists ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 ; 2012 >
 
   }
