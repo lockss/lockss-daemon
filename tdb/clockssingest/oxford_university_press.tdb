@@ -11724,7 +11724,7 @@
     au < released ; crawling ; 2009-2010 ; Journal of Social History Volume 43 ; 43 ; >
     au < released ; crawling ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ; >
     au < released ; crawling ; 2011-2012 ; Journal of Social History Volume 45 ; 45 ; >
-    au < expected ; exists ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ; >
 
     }
 
@@ -17212,8 +17212,8 @@
     param[base_url] = http://swr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1995 ; Social Work Research Volume 19 ; 19 ; >
-    au < exists ; exists ; 1996 ; Social Work Research Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1995 ; Social Work Research Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1996 ; Social Work Research Volume 20 ; 20 ; >
     au < manifest ; exists ; 1997 ; Social Work Research Volume 21 ; 21 ; >
     au < manifest ; exists ; 1998 ; Social Work Research Volume 22 ; 22 ; >
     au < manifest ; exists ; 1999 ; Social Work Research Volume 23 ; 23 ; >
