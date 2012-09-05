@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - cynthia</string>
+    <string>testing - Cynthia</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
     <entry>
     <string>plugin_feature_version_map</string>
@@ -34,11 +34,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Limnology and Oceanography Methods Plugin, Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
+    <string>&quot;ASLO Plugin (Limnology and Oceanography Methods), Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Limnology and Oceanography Methods Plugin</string>
+    <string>ASLO Plugin (Limnology and Oceanography Methods)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -48,13 +48,19 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s%s/free/%d/&quot;, base_url, journal_id, year</string>
+      <string>4,&quot;^%s%s/(free|locked)/%d/&quot;, base_url, journal_id, year</string>
       <string>1,&quot;^%s&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>&quot;%s%s/free/%d/lockss.html&quot;, base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+        <string>&quot;^%s%s/(free|locked)/%d/[^/].pdf$&quot;, base_url, journal_id, year</string>
+      </list>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
