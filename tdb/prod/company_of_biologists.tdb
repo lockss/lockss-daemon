@@ -4,6 +4,8 @@
     name = Company of Biologists
   >
 
+  pluginPrefix = org.lockss.plugin.highwire.
+
   {
   
     title <
@@ -12,14 +14,14 @@
       issnl = 2046-6390
     >
 
-    pluginPrefix = org.lockss.plugin.highwire.
+    pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://bio.biologists.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; ready ; 2011 ; Biology Open Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 2012 ; Biology Open Volume 2 ; 2 >
+    au < ready ; 2012 ; Biology Open Volume 1 ; 1 >
     
   }
+
   {
   
     title <
@@ -29,7 +31,6 @@
       issnl = 0950-1991
     >
 
-    pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://dev.biologists.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -85,7 +86,7 @@
       issnl = 1754-8403
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://dmm.biologists.org/
     implicit < status ; year ; name ; param[volume_name] >
 
@@ -108,7 +109,6 @@
 
     comment[legacy] = 1853-1965 under a different name, with three series of synthetic volume names
 
-    pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jcs.biologists.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
