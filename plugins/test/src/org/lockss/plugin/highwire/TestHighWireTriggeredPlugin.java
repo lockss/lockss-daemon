@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireTriggeredPlugin.java,v 1.3 2012-07-13 12:56:38 pgust Exp $
+ * $Id: TestHighWireTriggeredPlugin.java,v 1.4 2012-09-06 03:33:16 pgust Exp $
  */
 
 /*
@@ -121,7 +121,8 @@ public class TestHighWireTriggeredPlugin extends LockssTestCase {
 //     props.setProperty(YEAR_KEY, "2004");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("HighWire Plugin (H10c Triggered Content), Base URL http://pediatrics.aappublications.org/, Volume 52", au.getName());
+    assertEquals("HighWire Triggered Plugin (H10c for CLOCKSS Triggered Content), "
+        + "Base URL http://pediatrics.aappublications.org/, Volume 52", au.getName());
   }
 
   public void testGetPluginId() {
@@ -137,7 +138,8 @@ public class TestHighWireTriggeredPlugin extends LockssTestCase {
   }
 
   public void testHandles404Result() throws Exception {
-    assertClass(RetryDeadLinkException.class, ( (HttpResultMap) plugin.getCacheResultMap()).mapException(null, null, 404, null));
+    assertClass(RetryDeadLinkException.class, 
+        ( (HttpResultMap) plugin.getCacheResultMap()).mapException(null, null, 404, null));
 
   }
   public void testGetArticleMetadataExtractor() { 
@@ -153,10 +155,10 @@ public class TestHighWireTriggeredPlugin extends LockssTestCase {
   catch (ConfigurationException ex) {
   }
  
-  assertTrue(""+plugin.getArticleMetadataExtractor(MetadataTarget.Any, au),
-           plugin.getArticleMetadataExtractor(MetadataTarget.Any, au) instanceof ArticleMetadataExtractor );
-  assertTrue(""+plugin.getFileMetadataExtractor(MetadataTarget.Any, "text/html", au),
-           plugin.getFileMetadataExtractor(MetadataTarget.Any, "text/html", au) instanceof
+  assertTrue(""+plugin.getArticleMetadataExtractor(MetadataTarget.Any(), au),
+           plugin.getArticleMetadataExtractor(MetadataTarget.Any(), au) instanceof ArticleMetadataExtractor );
+  assertTrue(""+plugin.getFileMetadataExtractor(MetadataTarget.Any(), "text/html", au),
+           plugin.getFileMetadataExtractor(MetadataTarget.Any(), "text/html", au) instanceof
          FileMetadataExtractor);
 } 
   public void testGetHashFilterFactory() {
