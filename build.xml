@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.321 2012-08-17 22:57:48 tlipkis Exp $
+ $Id: build.xml,v 1.322 2012-09-06 03:58:35 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -122,6 +122,9 @@ Args:
 <!--   <property name="noqualifier" -->
 <!-- 	    value="java.lang:java.io:java.net:java.util:java.text" /> -->
   <property name="papersize" value="letter" />
+
+  <!-- Default tmpdir is java.io.tmpdir -->
+  <property name="tmpdir" value="${java.io.tmpdir}" />
 
   <!-- Default heap for junit if none specified in jvmargs -->
   <property name="junit.default.args" value="-Xmx256m" />
@@ -559,6 +562,14 @@ Test results in ${test.results}
        </echo>
       </then>
      </if>
+     <if>
+       <not>
+	 <equals arg1="${tmpdir}" arg2="${java.io.tmpdir}"/>
+       </not>
+       <then>
+	 <echo message="Temp dir: ${tmpdir}" />
+       </then>
+     </if>
     <junit1 fork="${fork}" printsummary="yes"
          haltonfailure="${halt}" failureproperty="failed"
          filtertrace="${filtertrace}" showoutput="${showoutput}">
@@ -569,6 +580,7 @@ Test results in ${test.results}
       <formatter type="plain" usefile="@{usefile}" />
       <classpath refid="@{cpid}" />
       <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="java.io.tmpdir" value="${tmpdir}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
       <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
@@ -1853,7 +1865,7 @@ published on the Web. http://www.lockss.org
   <!-- ==================================================================== -->
   <target name="index" depends="jar-lockss,jar-tests,jar-tools"
    description="Print an index for a .java file">
-    <tempfile property="index.file" destdir="${java.io.tmpdir}"
+    <tempfile property="index.file" destdir="${tmpdir}"
        prefix="index"/>
     <property name="copies" value="1" />
     <basename property="indexname" file="${file}" suffix=".java" />
