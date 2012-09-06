@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.61 2012-07-09 07:55:13 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.62 2012-09-06 04:05:37 tlipkis Exp $
  */
 
 /*
@@ -830,7 +830,7 @@ try {
     assertEquals("member/path.ext", ams.getName());
   }
 
-  public void testMakeCachedUrlWithFalseMember() {
+  public void testMakeCachedUrlWithMemberNoArchives() {
     String u1 = "http://www.example.com/foo.zip!/member/path.ext";
     CachedUrl cu = mbau.makeCachedUrl(u1);
     assertEquals(u1, cu.getUrl());
@@ -845,7 +845,16 @@ try {
     assertClass(BaseUrlCacher.class, uc);
   }
 
+  public void testMakeUrlCacherWithMemberNoArchives() {
+    mbau.setAuId("random");
+    String u1 = "http://www.example.com/1.zip!/foo/bar";
+    UrlCacher uc = mbau.makeUrlCacher(u1);
+    assertEquals(u1, uc.getUrl());
+    assertClass(BaseUrlCacher.class, uc);
+  }
+
   public void testMakeUrlCacherWithMember() {
+    mbau.setArchiveFileTypes(ArchiveFileTypes.DEFAULT);
     mbau.setAuId("random");
     String u1 = "http://www.example.com/1.zip!/foo/bar";
     try {

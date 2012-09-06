@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.158 2012-07-09 07:52:31 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.159 2012-09-06 04:05:38 tlipkis Exp $
  */
 
 /*
@@ -178,7 +178,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public UrlCacher makeUrlCacher(String url) {
-    ArchiveMemberSpec ams = ArchiveMemberSpec.fromUrl(url);
+    ArchiveMemberSpec ams = ArchiveMemberSpec.fromUrl(this, url);
     if (ams != null) {
       throw new IllegalArgumentException("Cannot make a UrlCacher for an archive member: " + url);
     }
@@ -724,6 +724,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public LinkRewriterFactory getLinkRewriterFactory(String contentType) {
     return plugin.getLinkRewriterFactory(contentType);
+  }
+
+  public boolean isBulkContent() {
+    return plugin.isBulkContent();
   }
 
   public ArchiveFileTypes getArchiveFileTypes() {
