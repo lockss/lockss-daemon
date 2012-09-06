@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.34 2012-07-23 17:47:46 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.35 2012-09-06 03:10:51 pgust Exp $
  */
 
 /*
@@ -54,9 +54,13 @@ import org.lockss.config.Tdb;
 import org.lockss.config.TdbAu;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
+import org.lockss.config.TdbUtil;
 import org.lockss.daemon.ConfigParamDescr.InvalidFormatException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.biblio.BibliographicItem;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
+import org.lockss.plugin.AuUtil.AuProxyInfo;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PrintfConverter;
@@ -836,6 +840,7 @@ public class OpenUrlResolver {
     
   }
 
+  
   /**
    * Resolves from a url.
    *  
@@ -843,23 +848,43 @@ public class OpenUrlResolver {
    * @return a resolved URL
    */
   public OpenUrlInfo resolveFromUrl(String aUrl) {
-    String url = resolveUrl(aUrl);
+    String url = resolveUrl(aUrl, null); // no proxy specified
     return OpenUrlInfo.newInstance(url);
   }
+
+  /**
+   * Resolves from a url.
+   *  
+   * @param aUrl the URL
+   * @param proxySpec a proxy string of the form "host:port"
+   * @return a resolved URL
+   */
+  public OpenUrlInfo resolveFromUrl(String aUrl, String proxySpec) {
+    String url = resolveUrl(aUrl, proxySpec);
+    return OpenUrlInfo.newInstance(url);
+  }
+  
   
   /**
    * Validates a URL and resolve it by following indirects, and stopping
    * early if a URL that is in the LOCKSS cache is found.
    *  
    * @param aUrl the URL
+   * @param auProxySpec an AU proxy spec of the form "host:port"
    * @return a resolved URL
    */
-  public String resolveUrl(String aUrl) {
+  String resolveUrl(String aUrl, String auProxySpec) { // protected for testing
     String url = aUrl;
     try {
       final PluginManager pluginMgr = daemon.getPluginManager();
       final LockssUrlConnectionPool connectionPool =
         daemon.getProxyManager().getQuickConnectionPool();
+      
+      // get proxy host and port for the proxy spec or the current config
+      AuProxyInfo proxyInfo = AuUtil.getAuProxyInfo(auProxySpec);
+      String proxyHost = proxyInfo.getHost();
+      int proxyPort = proxyInfo.getPort();
+      
       for (int i = 0; i < MAX_REDIRECTS; i++) {
         // no need to look further if content already cached
         if (pluginMgr.findCachedUrl(url,true) != null) {
@@ -872,6 +897,16 @@ public class OpenUrlResolver {
           conn = UrlUtil.openConnection(url, connectionPool);
           conn.setFollowRedirects(false);
           conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
+
+          if (!StringUtil.isNullString(proxyHost) && (proxyPort > 0)) {
+            try {
+              conn.setProxy(proxyHost, proxyPort);
+            } catch (UnsupportedOperationException ex) {
+              log.warning("Unsupported connection request proxy: " 
+                          + proxyHost + ":" + proxyPort);
+            }
+          }
+          
           conn.execute();
           
           // if not redirected, validate based on response code
@@ -922,6 +957,65 @@ public class OpenUrlResolver {
     return resolved;
   }    
 
+  /**
+   * Return the OpenUrl query string for the specified auid.
+   * 
+   * @param auid the auid
+   * @return the OpenUrl query string, or null if not available
+   */
+  public String getOpenUrlQueryForAuid(String auid) {
+    TdbAu tdbau = TdbUtil.getTdbAu(auid);
+    if (tdbau != null) {
+      StringBuffer sb = new StringBuffer();
+      String isbn = tdbau.getIsbn();
+
+      // if the tdbau has an ISBN, return an 
+      // OpenURL query with the ISBN
+      if (!StringUtil.isNullString(isbn)) {
+        sb.append("isbn=");
+        sb.append(isbn);
+        return sb.toString();
+      } 
+
+      // if the tdbau has an ISSN, return an
+      // OpenURL query with ISSN, year, and volume
+      String issn = tdbau.getIssn();
+      if (!StringUtil.isNullString(issn)) {
+        sb.append("issn=");
+        sb.append(issn);
+        String year = tdbau.getStartYear();
+        if (!StringUtil.isNullString(year)) {
+          sb.append("&year="); 
+          sb.append(year);
+        }
+        String volume = tdbau.getStartVolume();
+        if (!StringUtil.isNullString(volume)) {
+          sb.append("&volume="); 
+          sb.append(volume);
+        }
+        return sb.toString();
+      }
+      
+      // Try returning an OpenURL with the starting URL
+      // corresponding to the AU with a SpiderCrawlSpec; 
+      // by convention, the first URL is the manifest page 
+      // (not for OAICrawlSpec or other types of CrawlSpec)
+      ArchivalUnit au = daemon.getPluginManager().getAuFromId(auid);
+      if (au != null) {
+        CrawlSpec spec = au.getCrawlSpec();
+        if (spec instanceof SpiderCrawlSpec) {
+          List<String> urls = ((SpiderCrawlSpec)spec).getStartingUrls();
+          if (urls.size() > 0) {
+            sb.append("&rft_id="); 
+            sb.append(urls.get(0));
+            return sb.toString();
+          }
+        }
+      }
+    }
+    
+    return null;
+  }
   /**
    * Return the article URL from a DOI using the MDB.
    * @param dbMgr the database manager
@@ -1530,6 +1624,13 @@ public class OpenUrlResolver {
       return noOpenUrlInfo;
     }
 
+    String proxySpec = null;
+    try {
+      proxySpec = paramMap.getString(ConfigParamDescr.CRAWL_PROXY.getKey());
+    } catch (NoSuchElementException ex) {
+      // no crawl_proxy param specified
+    }
+    
     for (FeatureEntry pluginEntry : pluginEntries) {
       // locate object value for plugin key path
       String pluginKey = pluginEntry.auFeatureKey;
@@ -1610,7 +1711,7 @@ public class OpenUrlResolver {
         // validate URL: either it's cached, or it can be reached
         if (!StringUtil.isNullString(url)) {
           log.debug3("Resolving from url: " + url);
-          url = resolveUrl(url);
+          url = resolveUrl(url, proxySpec);
           if (url != null) {
             return OpenUrlInfo.newInstance(url, pluginEntry.resolvedTo);
           }
