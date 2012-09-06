@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.83 2012-05-30 08:29:57 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.84 2012-09-06 04:01:51 tlipkis Exp $
  */
 
 /*
@@ -433,6 +433,10 @@ public abstract class BasePlugin
 
   protected ExploderHelper getExploderHelper() {
     return null;
+  }
+
+  public boolean isBulkContent() {
+    return false;
   }
 
   public ArchiveFileTypes getArchiveFileTypes() {

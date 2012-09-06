@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.62 2012-07-09 07:52:31 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.63 2012-09-06 04:01:51 tlipkis Exp $
  */
 
 /*
@@ -308,6 +308,12 @@ public interface ArchivalUnit {
    * there is none
    */
   public LinkRewriterFactory getLinkRewriterFactory(String contentType);
+
+  /** Return true if the AU contains bulk content.  <i>Ie</i>, the content
+   * belongs to several logical collections (titles, volumes, etc.), not
+   * described by the AU's Tdb info.
+   */
+  public boolean isBulkContent();
 
   /**
    * Return the {@link ArchiveFileTypes} describing which archive (zip,

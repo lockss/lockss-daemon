@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.68 2012-07-09 07:52:31 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.69 2012-09-06 04:01:51 tlipkis Exp $
  */
 
 /*
@@ -88,6 +88,9 @@ public class DefinablePlugin extends BasePlugin {
     "plugin_crawl_url_comparator_factory";
   public static final String KEY_PLUGIN_FETCH_RATE_LIMITER_SOURCE =
     "plugin_fetch_rate_limiter_source";
+
+  public static final String KEY_PLUGIN_BULK_CONTENT =
+    "plugin_bulk_content";
 
   public static final String KEY_PLUGIN_ARCHIVE_FILE_TYPES =
     "plugin_archive_file_types";
@@ -678,6 +681,13 @@ public class DefinablePlugin extends BasePlugin {
 	}
       }
     }
+  }
+
+  public boolean isBulkContent() {
+    return definitionMap.getBoolean(KEY_PLUGIN_BULK_CONTENT, false)
+      // Temporary hack for compatibility with existing behavior; remove
+      // once new versions of all bulk plugins have been distributed.
+      || getPluginId().endsWith("SourcePlugin");
   }
 
   public ArchiveFileTypes getArchiveFileTypes() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.58 2012-08-21 08:37:32 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.59 2012-09-06 04:01:50 tlipkis Exp $
  */
 
 /*
@@ -674,6 +674,41 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		 au.getPermissionPages());
   }
 
+  public void testIsNotBulkContent() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    String pname = "org.lockss.plugin.definable.GoodPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue("Plugin was not successfully loaded",
+	       pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+    assertFalse(au.isBulkContent());
+  }
+
+  public void testIsBulkContentBecauseOfName() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    String pname = "org.lockss.plugin.definable.NamedSourcePlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue("Plugin was not successfully loaded",
+	       pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+    assertTrue(au.isBulkContent());
+    // ensure above was true based only on the plugin name
+    assertFalse(((DefinablePlugin)plug).getDefinitionMap()
+		.containsKey(DefinablePlugin.KEY_PLUGIN_BULK_CONTENT));
+  }
+
   public void testGetLinkExtractor() {
     setupAu();
     // test we find the default
@@ -1211,6 +1246,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertNotNull(aft);
     assertEquals(MapUtil.map(".zip", ".zip", "application/x-tar", ".tar"),
 		 aft.getExtMimeMap());
+
+    assertTrue(au.isBulkContent());
   }
 
   public void testFeatureUrls() throws Exception {

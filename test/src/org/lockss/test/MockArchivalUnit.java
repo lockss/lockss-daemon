@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.101 2012-08-15 03:35:14 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.102 2012-09-06 04:01:50 tlipkis Exp $
  */
 
 /*
@@ -92,6 +92,9 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   private String perHostPermissionPath;
   private Comparator<CrawlUrl> crawlUrlCmp;
+
+  boolean isBulkContent = false;
+  ArchiveFileTypes aft = null;
 
   private static final Logger logger = Logger.getLogger("MockArchivalUnit");
 
@@ -602,11 +605,17 @@ public class MockArchivalUnit implements ArchivalUnit {
     return null;
   }
 
+  public boolean isBulkContent() {
+    return isBulkContent;
+  }
+
+  public void setBulkContent(boolean val) {
+    isBulkContent = val;
+  }
+
   public ArchiveFileTypes getArchiveFileTypes() {
     return aft;
   }
-
-  ArchiveFileTypes aft = null;
 
   public void setArchiveFileTypes(ArchiveFileTypes aft) {
     this.aft = aft;

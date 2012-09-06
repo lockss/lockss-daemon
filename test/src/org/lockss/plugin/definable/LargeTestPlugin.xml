@@ -177,6 +177,10 @@
     </org.lockss.daemon.CrawlWindows-Interval>
   </entry>
   <entry>
+    <string>plugin_bulk_content</string>
+    <boolean>true</boolean>
+  </entry>
+  <entry>
     <string>plugin_archive_file_types</string>
     <org.lockss.plugin.ArchiveFileTypes>
       <extMimeMap>

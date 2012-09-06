@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.113 2012-08-21 08:35:56 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.114 2012-09-06 04:01:50 tlipkis Exp $
  */
 
 /*
@@ -586,6 +586,10 @@ public class NullPlugin {
 
     public List<String> getAuFeatureUrls(String auFeature) {
       return null;
+    }
+
+    public boolean isBulkContent() {
+      return false;
     }
 
     public ArchiveFileTypes getArchiveFileTypes() {

@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.56 2012-08-09 19:56:08 pgust Exp $
+ * $Id: MetadataManager.java,v 1.57 2012-09-06 04:01:51 tlipkis Exp $
  */
 
 /*
@@ -1396,8 +1396,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       auid = au.getAuId();
       pluginId = PluginManager.pluginIdFromAuId(auid);
 
-      // TEMPORARY KLUDGE FOR DEVELOPMENT ONLY -- HONEST!
-      isTitleInTdb = !pluginId.endsWith("SourcePlugin");
+      isTitleInTdb = !au.isBulkContent();
 
       auKey = PluginManager.auKeyFromAuId(auid);
       TitleConfig tc = au.getTitleConfig();
