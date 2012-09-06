@@ -4,14 +4,13 @@
     name = Orbit
   >
 
- attr[contract] = 2012
+   attr[contract] = 2012
  
   {
   
     title < 
       name = Orbit: Writing Around Pynchon ;
-      issn = 2047-2870 ;
-      eissn = 2047-2870
+      issn = 2047-2870 
     >
 
       plugin = needs.plugin
