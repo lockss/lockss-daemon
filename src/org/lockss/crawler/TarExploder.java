@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.15 2011-06-20 06:59:15 tlipkis Exp $
+ * $Id: TarExploder.java,v 1.16 2012-09-06 03:59:41 tlipkis Exp $
  */
 
 /*
@@ -111,9 +111,7 @@ public class TarExploder extends Exploder {
       TarEntry te;
       while ((te = tis.getNextEntry()) != null) {
 	// XXX probably not necessary
-	if (crawler.wdog != null) {
-	  crawler.wdog.pokeWDog();
-	}
+	crawler.pokeWDog();
 	if ((++entriesBetweenSleep % sleepAfter) == 0) {
 	  long pauseTime =
             CurrentConfig.getTimeIntervalParam(PARAM_RETRY_PAUSE,

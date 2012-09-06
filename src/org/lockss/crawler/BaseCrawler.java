@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.48 2012-05-17 17:58:06 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.49 2012-09-06 03:59:41 tlipkis Exp $
  */
 
 /*
@@ -458,6 +458,7 @@ public abstract class BaseCrawler
       logger.debug("Couldn't reset input stream, so getting new one for " +
 		   url + " : " + e);
       IOUtil.safeClose(is);
+      pokeWDog();
       UrlCacher uc = makeUrlCacher(url);
       uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
       is = new BufferedInputStream(uc.getUncachedInputStream());
@@ -580,6 +581,12 @@ public abstract class BaseCrawler
 
   public void setWatchdog(LockssWatchdog wdog) {
     this.wdog = wdog;
+  }
+
+  protected void pokeWDog() {
+    if (wdog != null) {
+      wdog.pokeWDog();
+    }
   }
 
   public String toString() {

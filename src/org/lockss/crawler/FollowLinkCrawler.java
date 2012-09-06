@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.91 2012-07-17 08:48:25 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.92 2012-09-06 03:59:41 tlipkis Exp $
  */
 
 /*
@@ -580,9 +580,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	}
       }
     } else {
-      if (wdog != null) {
-	wdog.pokeWDog();
-      }
+      pokeWDog();
       // If didn't fetch, check for existing substance file
       checkSubstanceCollected(uc.getCachedUrl());
       if (!reparse) {
@@ -700,9 +698,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     logger.debug2("Fetching " + uc.getUrl());
     while (true) {
       try {
-	if (wdog != null) {
-	  wdog.pokeWDog();
-	}
+	pokeWDog();
 	updateCacheStats(uc.cache(), uc);
 	// success
 	return;

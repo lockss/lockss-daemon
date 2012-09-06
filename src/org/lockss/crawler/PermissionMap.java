@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.31 2012-03-12 05:26:38 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.32 2012-09-06 03:59:41 tlipkis Exp $
  */
 
 /*
@@ -506,7 +506,7 @@ public class PermissionMap {
     } finally {
       IOUtil.safeClose(is);
     }
-    return true;
+    return foundPermission;
   }
 
   public void setPerHostPermissionPath(String absolutePath)

@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.14 2011-06-20 06:59:15 tlipkis Exp $
+ * $Id: ZipExploder.java,v 1.15 2012-09-06 03:59:41 tlipkis Exp $
  */
 
 /*
@@ -109,9 +109,7 @@ public class ZipExploder extends Exploder {
       ZipEntry ze;
       while ((ze = zis.getNextEntry()) != null) {
 	// XXX probably not necessary
-	if (crawler.wdog != null) {
-	  crawler.wdog.pokeWDog();
-	}
+	crawler.pokeWDog();
 	if ((++entriesBetweenSleep % sleepAfter) == 0) {
 	  long pauseTime =
             CurrentConfig.getTimeIntervalParam(PARAM_RETRY_PAUSE,

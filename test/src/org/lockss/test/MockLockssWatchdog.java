@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssWatchdog.java,v 1.2 2006-10-07 23:12:07 tlipkis Exp $
+ * $Id: MockLockssWatchdog.java,v 1.3 2012-09-06 03:59:41 tlipkis Exp $
  */
 
 /*
@@ -57,8 +57,7 @@ public class MockLockssWatchdog implements LockssWatchdog {
 
   public void assertPoked(int numTimes) {
     if (this.numTimesPoked != numTimes) {
-      Assert.fail("pokeWDog was only called "+numTimesPoked
-	   +" times but should have been called "+numTimes+" times");
+      Assert.fail("Expected watchdog to be poked " + numTimes + " times but was poked " + numTimesPoked + " times");
     }
   }
 }

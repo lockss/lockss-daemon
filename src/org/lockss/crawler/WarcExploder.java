@@ -1,5 +1,5 @@
 /*
- * $Id: WarcExploder.java,v 1.4 2012-06-06 17:33:58 fergaloy-sf Exp $
+ * $Id: WarcExploder.java,v 1.5 2012-09-06 03:59:41 tlipkis Exp $
  */
 
 /*
@@ -127,9 +127,7 @@ public class WarcExploder extends Exploder {
       // Skip first record
       for (i.next(); i.hasNext(); ) {
         // XXX probably not necessary
-        if (crawler.wdog != null) {
-          crawler.wdog.pokeWDog();
-        }
+	crawler.pokeWDog();
         if ((++entriesBetweenSleep % sleepAfter) == 0) {
           long pauseTime =
             CurrentConfig.getTimeIntervalParam(PARAM_RETRY_PAUSE,
