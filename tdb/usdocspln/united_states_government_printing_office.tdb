@@ -991,7 +991,7 @@
   {
   
   plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataPlugin
-  param[base_url] = http://www.gpo.gov
+  param[base_url] = http://www.gpo.gov/
   implicit < status ; year ; name ; param[year] >
     
   {
