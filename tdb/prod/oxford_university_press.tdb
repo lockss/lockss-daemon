@@ -15768,10 +15768,10 @@
     {
 
     param[base_url] = http://ptep.oxfordjournals.org/
-    plugin = ??
-    implicit < status ; year ; name ; param[volume] >
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status ; year ; name ; param[volume] >
 
-    au < exists ; 2013 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2013 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 1 ; 1 >
 
     }
 
