@@ -11,7 +11,7 @@
       issn = 2047-2870 
     >
 
-      plugin = plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
       param[base_url] = https://www.pynchon.net/
       param[journal_id] = owap
 
