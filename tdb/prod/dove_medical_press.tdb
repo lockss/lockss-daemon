@@ -1116,4 +1116,394 @@
     
   }
 
+  {
+  
+    title < 
+      name = Lung Cancer: Targets and Therapy ;
+      issn = 1179-2728
+    >
+    
+    param[journal_id] = 83
+
+    au < exists ; 2010 ; Lung Cancer: Targets and Therapy Volume 1 ; 2010 >
+    au < exists ; 2011 ; Lung Cancer: Targets and Therapy Volume 2 ; 2011 >
+    au < exists ; 2012 ; Lung Cancer: Targets and Therapy Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Patient Related Outcome Measures ;
+      issn = 1179-271X
+    >
+    
+    param[journal_id] = 84
+
+    au < exists ; 2010 ; Patient Related Outcome Measures Volume 1 ; 2010 >
+    au < exists ; 2011 ; Patient Related Outcome Measures Volume 2 ; 2011 >
+    au < exists ; 2012 ; Patient Related Outcome Measures Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Journal of Blood Medicine ;
+      issn = 1179-2736
+    >
+    
+    param[journal_id] = 85
+
+    au < exists ; 2010 ; Journal of Blood Medicine Volume 1 ; 2010 >
+    au < exists ; 2011 ; Journal of Blood Medicine Volume 2 ; 2011 >
+    au < exists ; 2012 ; Journal of Blood Medicine Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Open Access Insect Physiology ;
+      issn = 1179-2787
+    >
+    
+    param[journal_id] = 86
+
+    au < exists ; 2009 ; Open Access Insect Physiology Volume 1 ; 2009 >
+    au < exists ; 2010 ; Open Access Insect Physiology Volume 2 ; 2010 >
+    au < exists ; 2011 ; Open Access Insect Physiology Volume 3 ; 2011 >
+    au < exists ; 2012 ; Open Access Insect Physiology Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Open Access Animal Physiology ;
+      issn = 1179-2779
+    >
+    
+    param[journal_id] = 87
+
+    au < exists ; 2010 ; Open Access Animal Physiology Volume 1 ; 2010 >
+    au < exists ; 2011 ; Open Access Animal Physiology Volume 2 ; 2011 >
+    au < exists ; 2012 ; Open Access Animal Physiology Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Core Evidence ;
+      issn = 1555-1741 ;
+      eissn = 1555-175X
+    >
+    
+    param[journal_id] = 88
+
+    au < exists ; 2005 ; Core Evidence Volume 1 ; 2005 >
+    au < exists ; 2006 ; Core Evidence Volume 1 ; 2006 >
+    au < exists ; 2007 ; Core Evidence Volume 2 ; 2007 >
+    au < exists ; 2008 ; Core Evidence Volume 3 ; 2008 >
+    au < exists ; 2009 ; Core Evidence Volume 4 ; 2009 >
+    au < exists ; 2010 ; Core Evidence Volume 5 ; 2010 >
+    au < exists ; 2011 ; Core Evidence Volume 6 ; 2011 >
+    au < exists ; 2012 ; Core Evidence Volume 7 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Adolescent Health, Medicine and Therapeutics ;
+      issn = 1179-318X
+    >
+    
+    param[journal_id] = 89
+
+    au < exists ; 2010 ; Adolescent Health, Medicine and Therapeutics Volume 1 ; 2010 >
+    au < exists ; 2011 ; Adolescent Health, Medicine and Therapeutics Volume 2 ; 2011 >
+    au < exists ; 2012 ; Adolescent Health, Medicine and Therapeutics Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Patient Intelligence ;
+      issn = 1179-3198
+    >
+    
+    param[journal_id] = 90
+
+    au < exists ; 2009 ; Patient Intelligence Volume 1 ; 2009 >
+    au < exists ; 2010 ; Patient Intelligence Volume 2 ; 2010 >
+    au < exists ; 2011 ; Patient Intelligence Volume 3 ; 2011 >
+    au < exists ; 2012 ; Patient Intelligence Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Journal of Healthcare Leadership ;
+      issn = 1179-3201
+    >
+    
+    param[journal_id] = 91
+
+    au < exists ; 2009 ; Journal of Healthcare Leadership Volume 1 ; 2009 >
+    au < exists ; 2010 ; Journal of Healthcare Leadership Volume 2 ; 2010 >
+    au < exists ; 2011 ; Journal of Healthcare Leadership Volume 3 ; 2011 >
+    au < exists ; 2012 ; Journal of Healthcare Leadership Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Advances in Medical Education and Practice ;
+      issn = 1179-7258
+    >
+    
+    param[journal_id] = 92
+
+    au < exists ; 2010 ; Advances in Medical Education and Practice Volume 1 ; 2010 >
+    au < exists ; 2011 ; Advances in Medical Education and Practice Volume 2 ; 2011 >
+    au < exists ; 2012 ; Advances in Medical Education and Practice Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Tropical Medicine ;
+      issn = 1179-7282
+    >
+    
+    param[journal_id] = 93
+
+    au < exists ; 2010 ; Research and Reports in Tropical Medicine Volume 1 ; 2010 >
+    au < exists ; 2011 ; Research and Reports in Tropical Medicine Volume 2 ; 2011 >
+    au < exists ; 2012 ; Research and Reports in Tropical Medicine Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Biology ;
+      issn = 1179-7274
+    >
+    
+    param[journal_id] = 94
+
+    au < exists ; 2010 ; Research and Reports in Biology Volume 1 ; 2010 >
+    au < exists ; 2011 ; Research and Reports in Biology Volume 2 ; 2011 >
+    au < exists ; 2012 ; Research and Reports in Biology Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Pragmatic and Observational Research ;
+      issn = 1179-7266
+    >
+    
+    param[journal_id] = 95
+
+    au < exists ; 2010 ; Pragmatic and Observational Research Volume 1 ; 2010 >
+    au < exists ; 2011 ; Pragmatic and Observational Research Volume 2 ; 2011 >
+    au < exists ; 2012 ; Pragmatic and Observational Research Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Research Reports in Clinical Cardiology ;
+      issn = 1179-8475
+    >
+    
+    param[journal_id] = 96
+
+    au < exists ; 2010 ; Research Reports in Clinical Cardiology Volume 1 ; 2010 >
+    au < exists ; 2011 ; Research Reports in Clinical Cardiology Volume 2 ; 2011 >
+    au < exists ; 2012 ; Research Reports in Clinical Cardiology Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Comparative Effectiveness Research ;
+      issn = 1179-8483
+    >
+    
+    param[journal_id] = 97
+
+    au < exists ; 2011 ; Comparative Effectiveness Research Volume 1 ; 2011 >
+    au < exists ; 2012 ; Comparative Effectiveness Research Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Substance Abuse and Rehabilitation ;
+      issn = 1179-8467
+    >
+    
+    param[journal_id] = 98
+
+    au < exists ; 2010 ; Substance Abuse and Rehabilitation Volume 1 ; 2010 >
+    au < exists ; 2011 ; Substance Abuse and Rehabilitation Volume 2 ; 2011 >
+    au < exists ; 2012 ; Substance Abuse and Rehabilitation Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Degenerative Neurological and Neuromuscular Disease ;
+      issn = 1179-9900
+    >
+    
+    param[journal_id] = 99
+
+    au < exists ; 2011 ; Degenerative Neurological and Neuromuscular Disease Volume 1 ; 2011 >
+    au < exists ; 2012 ; Degenerative Neurological and Neuromuscular Disease Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Advances in Genomics and Genetics ;
+      issn = 1179-9870
+    >
+    
+    param[journal_id] = 100
+
+    au < exists ; 2011 ; Advances in Genomics and Genetics Volume 1 ; 2011 >
+    au < exists ; 2012 ; Advances in Genomics and Genetics Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Blood and Lymphatic Cancer: Targets and Therapy ;
+      issn = 1179-9889
+    >
+    
+    param[journal_id] = 101
+
+    au < exists ; 2011 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 1 ; 2011 >
+    au < exists ; 2012 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Gastrointestinal Cancer: Targets and Therapy ;
+      issn = 1179-9919
+    >
+    
+    param[journal_id] = 102
+
+    au < exists ; 2011 ; Gastrointestinal Cancer: Targets and Therapy Volume 1 ; 2011 >
+    au < exists ; 2012 ; Gastrointestinal Cancer: Targets and Therapy Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Pediatric Health, Medicine and Therapeutics ;
+      issn = 1179-9927
+    >
+    
+    param[journal_id] = 103
+
+    au < exists ; 2010 ; Pediatric Health, Medicine and Therapeutics Volume 1 ; 2010 >
+    au < exists ; 2011 ; Pediatric Health, Medicine and Therapeutics Volume 2 ; 2011 >
+    au < exists ; 2012 ; Pediatric Health, Medicine and Therapeutics Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Neonatology ;
+      issn = 1179-9935
+    >
+    
+    param[journal_id] = 104
+
+    au < exists ; 2011 ; Research and Reports in Neonatology Volume 1 ; 2011 >
+    au < exists ; 2012 ; Research and Reports in Neonatology Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Clinical Oncology in Adolescents and Young Adults ;
+      issn = 2230-2263
+    >
+    
+    param[journal_id] = 105
+
+    au < exists ; 2011 ; Clinical Oncology in Adolescents and Young Adults Volume 1 ; 2011 >
+    au < exists ; 2012 ; Clinical Oncology in Adolescents and Young Adults Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Botanics: Targets and Therapy ;
+      issn = 1179-9897
+    >
+    
+    param[journal_id] = 106
+
+    au < exists ; 2011 ; Botanics: Targets and Therapy Volume 1 ; 2011 >
+    au < exists ; 2012 ; Botanics: Targets and Therapy Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = ChronoPhysiology and Therapy ;
+      issn = 2230-2026
+    >
+    
+    param[journal_id] = 107
+
+    au < exists ; 2011 ; ChronoPhysiology and Therapy Volume 1 ; 2011 >
+    au < exists ; 2012 ; ChronoPhysiology and Therapy Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Veterinary Medicine: Research and Reports ;
+      issn = 2230-2034
+    >
+    
+    param[journal_id] = 108
+
+    au < exists ; 2010 ; Veterinary Medicine: Research and Reports Volume 1 ; 2010 >
+    au < exists ; 2011 ; Veterinary Medicine: Research and Reports Volume 2 ; 2011 >
+    au < exists ; 2012 ; Veterinary Medicine: Research and Reports Volume 3 ; 2012 >
+    
+  }
+
 }
