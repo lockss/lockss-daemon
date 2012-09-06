@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.66 2012-09-06 03:18:52 pgust Exp $
+ * $Id: ServeContent.java,v 1.67 2012-09-06 16:46:44 pgust Exp $
  */
 
 /*
@@ -51,11 +51,9 @@ import org.lockss.util.*;
 import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.LockssUrlConnection;
-import org.lockss.util.urlconn.LockssUrlConnection.CantProxyException;
 import org.lockss.util.urlconn.LockssUrlConnectionPool;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
-import org.lockss.crawler.BaseCrawler;
 import org.lockss.daemon.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo.ResolvedTo;
@@ -538,6 +536,7 @@ public class ServeContent extends LockssServlet {
       }
 
       if (au != null) {
+        AuProxyInfo info = AuUtil.getAuProxyInfo(au);
         handleAuRequest();
       } else {
         handleMissingUrlRequest(url, PubState.Unknown);
@@ -1320,7 +1319,10 @@ public class ServeContent extends LockssServlet {
     Block block = new Block(Block.Center);
     ResolvedTo resolvedTo = info.getResolvedTo();
     BibliographicItem bibliographicItem = info.getBibliographicItem();
-    
+    String proxySpec = info.getProxySpec();
+    String proxyMsg = StringUtil.isNullString(proxySpec) ? "."
+        : " by proxying through '" + proxySpec + "'.";
+        
     Table table = new Table(0, "");
 
     switch (resolvedTo) {
@@ -1335,8 +1337,9 @@ public class ServeContent extends LockssServlet {
         block.add("</h2>");
       }
       
-      addLink(table, 
-              "Additional publisher information available at the publisher.");
+      addLink(table,
+              "Additional publisher information available at the publisher.",
+              "Selecting link takes you away from this LOCKSS box.");
 
       logAccess("404 to publisher page");
       break;
@@ -1354,7 +1357,9 @@ public class ServeContent extends LockssServlet {
         addIsbnOrIssn(table, bibliographicItem);
       }
       
-      addLink(table,"Additional title information available at the publisher.");
+      addLink(table,
+          "Additional title information available at the publisher" + proxyMsg,
+          "Selecting link takes you away from this LOCKSS box.");
 
       logAccess("404 title page");
       break;
@@ -1373,7 +1378,10 @@ public class ServeContent extends LockssServlet {
         addVolumeAndYear(table, bibliographicItem);
       }
         
-      addLink(table, "Volume is available at the publisher.");
+      addLink(table, 
+             "Volume is available at the publisher" + proxyMsg,
+             "Selecting link takes you away from this LOCKSS box.");
+
 
       // display volume page
       logAccess("404 volume page");
@@ -1402,7 +1410,9 @@ public class ServeContent extends LockssServlet {
         }
       }
         
-      addLink(table, "Issue is available at the publisher.");
+      addLink(table, 
+              "Issue is available at the publisher" + proxyMsg,
+              "Selecting link takes you away from this LOCKSS box.");
 
       logAccess("404 issue page");
       break;
@@ -1430,7 +1440,10 @@ public class ServeContent extends LockssServlet {
         }
       }
         
-      addLink(table, "Chapter is available at the publisher.");
+      addLink(table, 
+              "Chapter is available at the publisher" + proxyMsg,
+              "Selecting link takes you away from this LOCKSS box.");
+
 
       logAccess("404 chapter page");
       break;
@@ -1458,7 +1471,9 @@ public class ServeContent extends LockssServlet {
         }
       }
 
-      addLink(table, "Article is available at the publisher.");
+      addLink(table, 
+              "Article is available at the publisher" + proxyMsg,
+              "Selecting link takes you away from this LOCKSS box.");
 
       logAccess("404 article page");
       break;
@@ -1467,7 +1482,10 @@ public class ServeContent extends LockssServlet {
       // display other page for ResolvedTo.OTHER
       block.add("<h2>Found requested page</h2>");
 
-      addLink(table, "Article is available at the publisher.");
+      addLink(table, 
+              "Article is available at the publisher" + proxyMsg,
+              "Selecting link takes you away from this LOCKSS box.");
+
 
       logAccess("404 other page");
       break;
@@ -1608,14 +1626,16 @@ public class ServeContent extends LockssServlet {
    * @param additionalInfo additional info to appear in the footnote
    */
   private void addLink(
-      Table table, String additionalInfo) {
+      Table table, String... additionalInfo ) {
     if (url != null) {
       table.newRow(rowfmt);
       table.newCell(labelfmt);
       table.add("URL:");
-      table.add(addFootnote(
-          ((additionalInfo == null) ? "" : additionalInfo)
-        + " Selecting link takes you away from this LOCKSS box."));
+      if (additionalInfo != null) {
+        for (String info : additionalInfo) {
+          table.add(addFootnote(info));
+        }
+      }
       table.newCell();
       Link link = new Link(url,url);
       table.add(link);
