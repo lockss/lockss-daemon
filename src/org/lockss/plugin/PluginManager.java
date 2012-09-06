@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.232 2012-08-29 21:11:45 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.233 2012-09-06 04:04:51 tlipkis Exp $
  */
 
 /*
@@ -2456,10 +2456,14 @@ public class PluginManager
       }
     }
 
-    // Add the JAR's bundled titledb config (if any) to the ConfigManager.
-    // Do this once at the end so as not to trigger more than one config
-    // update & reload.
-    configMgr.addTitleDbConfigFrom(classloaders);
+    // Title DBs bundled with plugin jars are currently disabled.  To work
+    // correctly, bundled tdb files must be removed from the config if/when
+    // the containing plugin is unloaded/superseded.
+
+//     // Add the JAR's bundled titledb config (if any) to the ConfigManager.
+//     // Do this once at the end so as not to trigger more than one config
+//     // update & reload.
+//     configMgr.addTitleDbConfigFrom(classloaders);
 
     // Cleanup as a hint to GC.
     tmpMap.clear();
