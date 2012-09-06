@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchiveMemberSpec.java,v 1.1 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: TestArchiveMemberSpec.java,v 1.2 2012-09-06 04:04:12 tlipkis Exp $
  */
 
 /*
@@ -37,9 +37,16 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 
 public class TestArchiveMemberSpec extends LockssTestCase {
+  MockArchivalUnit mau;
 
-  ArchiveMemberSpec fromUrl(String url) {
-    return ArchiveMemberSpec.fromUrl(url);
+  public void setUp() throws Exception {
+    super.setUp();
+    mau = new MockArchivalUnit();
+    mau.setArchiveFileTypes(ArchiveFileTypes.DEFAULT);
+  }
+
+  ArchiveMemberSpec fromUrl(ArchivalUnit au, String url) {
+    return ArchiveMemberSpec.fromUrl(au, url);
   }
 
   void assertUrlMemb(String expUrl, String expMemb, ArchiveMemberSpec ams) {
@@ -47,9 +54,17 @@ public class TestArchiveMemberSpec extends LockssTestCase {
     assertEquals(expMemb, ams.getName());
   }
 
+  void testAuConditional(String url, String memb) {
+    MockArchivalUnit mmm = new MockArchivalUnit();
+    String membUrl = url + "!/" + memb;
+    assertNull(ArchiveMemberSpec.fromUrl(mmm, membUrl));
+    mmm.setArchiveFileTypes(ArchiveFileTypes.DEFAULT);
+    assertNotNull(ArchiveMemberSpec.fromUrl(mmm, membUrl));
+  }
+
   void assertParse(String url, String memb) {
     String membUrl = url + "!/" + memb;
-    ArchiveMemberSpec ams1 = ArchiveMemberSpec.fromUrl(membUrl);
+    ArchiveMemberSpec ams1 = ArchiveMemberSpec.fromUrl(mau, membUrl);
     assertEquals(url, ams1.getUrl());
     assertEquals(memb, ams1.getName());
     assertEquals(membUrl, ams1.toUrl());

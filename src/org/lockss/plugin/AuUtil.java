@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.32 2012-09-06 03:08:49 pgust Exp $
+ * $Id: AuUtil.java,v 1.33 2012-09-06 04:04:12 tlipkis Exp $
  */
 
 /*
@@ -489,6 +489,12 @@ public class AuUtil {
       return (CachedUrl)node;
     }
     return null;
+  }
+
+  /** Return true iff the AU specifies archive file types whose memebers
+   * should be accessible as CachedUrls */
+  public static boolean hasArchiveFileTypes(ArchivalUnit au) {
+    return au.getArchiveFileTypes() != null;
   }
 
 }

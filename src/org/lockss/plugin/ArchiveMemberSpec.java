@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveMemberSpec.java,v 1.1 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: ArchiveMemberSpec.java,v 1.2 2012-09-06 04:04:12 tlipkis Exp $
  */
 
 /*
@@ -50,11 +50,12 @@ public class ArchiveMemberSpec {
   }
     
   /** If the URL refers to an archive member, return a ArchiveMemberSpec
-   * containing the archive URL and member name, else null.
+   * containing the archive URL and member name, else null.  Should be
+   * called only if it's known that the AU wants archive member processing.
    * @param url
    * @return a ArchiveMemberSpec or null.
    */
-  public static ArchiveMemberSpec fromUrl(String url) {
+  private static ArchiveMemberSpec fromUrl(String url) {
     int pos = url.indexOf(URL_SEPARATOR);
     if (pos > 0) {
       return new ArchiveMemberSpec(url.substring(0, pos),
