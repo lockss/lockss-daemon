@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.65 2012-08-17 21:36:57 aftran Exp $
+ * $Id: ServeContent.java,v 1.66 2012-09-06 03:18:52 pgust Exp $
  */
 
 /*
@@ -51,15 +51,18 @@ import org.lockss.util.*;
 import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.LockssUrlConnection;
+import org.lockss.util.urlconn.LockssUrlConnection.CantProxyException;
 import org.lockss.util.urlconn.LockssUrlConnectionPool;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
+import org.lockss.crawler.BaseCrawler;
 import org.lockss.daemon.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo.ResolvedTo;
 import org.lockss.exporter.counter.CounterReportsRequestRecorder;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.plugin.*;
+import org.lockss.plugin.AuUtil.AuProxyInfo;
 import org.lockss.plugin.base.BaseUrlCacher;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.state.*;
@@ -430,6 +433,20 @@ public class ServeContent extends LockssServlet {
         handleOpenUrlInfo(resolved);
         return;
       } 
+      
+      // redirect to the OpenURL corresponding to the specified auid;
+      // ensures that the corresponding OpenURL is available to the client.
+      if (auid != null) {
+        String openUrlQueryString = 
+            openUrlResolver.getOpenUrlQueryForAuid(auid);
+        if (openUrlQueryString != null) {
+          StringBuffer sb = req.getRequestURL();
+          sb.append("?");
+          sb.append(openUrlQueryString);
+          resp.sendRedirect(sb.toString());
+          return;
+        }
+      }
 
       log.debug3("Unknown request");
     } catch (RuntimeException ex) {
@@ -706,12 +723,25 @@ public class ServeContent extends LockssServlet {
         break;
       }
     }
-    
+        
     // Send request to publisher
     LockssUrlConnection conn = null;
     PubState pstate = PubState.Unknown;
     try {
       conn = openLockssUrlConnection(connPool);
+
+      // set proxy for connection if specified
+      AuProxyInfo info = AuUtil.getAuProxyInfo(au);
+      String proxyHost = info.getHost();
+      int proxyPort = info.getPort();
+      if (!StringUtil.isNullString(proxyHost) && (proxyPort > 0)) { 
+        try {
+          conn.setProxy(info.getHost(), info.getPort());
+        } catch (UnsupportedOperationException ex) {
+          log.warning(  "Unsupported connection request proxy: " 
+                      + proxyHost + ":" + proxyPort);
+        }
+      }
       conn.execute();
     } catch (IOException ex) {
       if (log.isDebug3()) log.debug3("conn.execute", ex);
