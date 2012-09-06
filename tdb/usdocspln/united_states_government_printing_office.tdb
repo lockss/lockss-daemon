@@ -1015,9 +1015,9 @@
     au < manifest ; 2006 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2006 ; 2006 >
     au < manifest ; 2007 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2007 ; 2007 >
     au < manifest ; 2008 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2008 ; 2008 >
-    au < manifest ; 2009 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2009 ; 2009 >
-    au < manifest ; 2010 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2010 ; 2010 >
-    au < manifest ; 2011 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2011 ; 2011 >
+    au < testing ; 2009 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2009 ; 2009 >
+    au < testing ; 2010 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2010 ; 2010 >
+    au < testing ; 2011 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2011 ; 2011 >
     au < manifest ; 2012 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2012 ; 2012 >
 
   }
@@ -1034,8 +1034,8 @@
     au < manifest ; 1997 ; Commerce Business Daily - Bulk Data 1997 ; 1997 >
     au < manifest ; 1998 ; Commerce Business Daily - Bulk Data 1998 ; 1998 >
     au < manifest ; 1999 ; Commerce Business Daily - Bulk Data 1999 ; 1999 >
-    au < manifest ; 2000 ; Commerce Business Daily - Bulk Data 2000 ; 2000 >
-    au < manifest ; 2001 ; Commerce Business Daily - Bulk Data 2001 ; 2001 >
+    au < testing ; 2000 ; Commerce Business Daily - Bulk Data 2000 ; 2000 >
+    au < testing ; 2001 ; Commerce Business Daily - Bulk Data 2001 ; 2001 >
     
   }
      
@@ -1057,8 +1057,8 @@
     au < manifest ; 2007 ; Federal Regulations  - Bulk Data 2007 ; 2007 >
     au < manifest ; 2008 ; Federal Regulations  - Bulk Data 2008 ; 2008 >
     au < manifest ; 2009 ; Federal Regulations  - Bulk Data 2009 ; 2009 >
-    au < manifest ; 2010 ; Federal Regulations  - Bulk Data 2010 ; 2010 >
-    au < manifest ; 2011 ; Federal Regulations  - Bulk Data 2011 ; 2011 >
+    au < testing ; 2010 ; Federal Regulations  - Bulk Data 2010 ; 2010 >
+    au < testing ; 2011 ; Federal Regulations  - Bulk Data 2011 ; 2011 >
     au < manifest ; 2012 ; Federal Regulations  - Bulk Data 2012 ; 2012 >
     
   }
@@ -1071,7 +1071,7 @@
       >
       param[collection_id] = PPP
     
-    au < manifest ; 2009 ; Public Papers of Presidents of the United States - Bulk Data 2009 ; 2009 >    
+    au < testing ; 2009 ; Public Papers of Presidents of the United States - Bulk Data 2009 ; 2009 >    
     
     
   }
@@ -1084,7 +1084,7 @@
       >
       param[collection_id] = SCD
     
-    au < manifest ; 1937 ; Supreme Court Decisions 1937-1975 (FLITE) - Bulk Data 1937 ; 1937 >    
+    au < testing ; 1937 ; Supreme Court Decisions 1937-1975 (FLITE) - Bulk Data 1937 ; 1937 >    
     
     
   }
@@ -1097,7 +1097,7 @@
       >
       param[collection_id] = SCD
     
-     au < manifest ; 2011 ; United States Government Manual - Bulk Data 2011 ; 2011 >    
+     au < testing ; 2011 ; United States Government Manual - Bulk Data 2011 ; 2011 >    
     
     
     }
