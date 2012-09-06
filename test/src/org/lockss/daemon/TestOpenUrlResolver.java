@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.23 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.24 2012-09-06 03:14:22 pgust Exp $
  */
 
 /*
@@ -52,7 +52,6 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.simulated.*;
-import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
@@ -235,7 +234,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     
     // override to eliminate URL resolution for testing
     openUrlResolver = new OpenUrlResolver(theDaemon) {
-      public String resolveUrl(String url) {
+      @Override
+      public String resolveUrl(String url, String auProxySpec) {
         return url;
       }
     };
