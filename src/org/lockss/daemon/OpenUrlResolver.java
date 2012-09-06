@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.35 2012-09-06 03:10:51 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.36 2012-09-06 16:47:50 pgust Exp $
  */
 
 /*
@@ -182,7 +182,7 @@ public class OpenUrlResolver {
   
   // pre-defined OpenUrlInfo for no url
   public static final OpenUrlInfo noOpenUrlInfo = 
-      new OpenUrlInfo(null, OpenUrlInfo.ResolvedTo.NONE);
+      new OpenUrlInfo(null, null, OpenUrlInfo.ResolvedTo.NONE);
 
   /**
    * Information returned by OpenUrlResolver includes the resolvedUrl
@@ -201,26 +201,57 @@ public class OpenUrlResolver {
     };
     
     private String resolvedUrl;
+    private String proxySpec;
     private ResolvedTo resolvedTo;
     private BibliographicItem resolvedBibliographicItem = null;
     
-    private OpenUrlInfo(String resolvedUrl, ResolvedTo resolvedTo) {
+    private OpenUrlInfo(String resolvedUrl, 
+                        String proxySpec,
+                        ResolvedTo resolvedTo) {
       this.resolvedUrl = resolvedUrl;
       this.resolvedTo = resolvedTo;
+      this.proxySpec = proxySpec;
     }
 
     protected static OpenUrlInfo newInstance(
-        String resolvedUrl, ResolvedTo resolvedTo) {
+        String resolvedUrl, String proxySpec, ResolvedTo resolvedTo) {
       return ((resolvedTo == ResolvedTo.NONE) || (resolvedUrl == null)) 
           ? OpenUrlResolver.noOpenUrlInfo
-          : new OpenUrlInfo(resolvedUrl, resolvedTo);
+          : new OpenUrlInfo(resolvedUrl, proxySpec, resolvedTo);
     }
     protected static OpenUrlInfo newInstance(String resolvedUrl) {
       return (resolvedUrl == null) 
           ? noOpenUrlInfo 
-          : new OpenUrlInfo(resolvedUrl, OpenUrlInfo.ResolvedTo.OTHER);
+          : new OpenUrlInfo(resolvedUrl, null, OpenUrlInfo.ResolvedTo.OTHER);
+    }
+    protected static OpenUrlInfo newInstance(String resolvedUrl,
+                                             String proxySpec) {
+      return (resolvedUrl == null) 
+        ? noOpenUrlInfo 
+        : new OpenUrlInfo(resolvedUrl, proxySpec, OpenUrlInfo.ResolvedTo.OTHER);
     }
     
+    public String getProxySpec() {
+      return proxySpec;
+    }
+    public String getProxyHost() {
+      if (proxySpec == null) { 
+        return null;
+      }
+      int i = proxySpec.indexOf(':');
+      return (i < 0) ? proxySpec : proxySpec.substring(0,i);
+    }
+    public int getProxyPort() {
+      if (proxySpec == null) {
+        return 0;
+      }
+      int i = proxySpec.indexOf(':');
+      try {
+        return (i < 0) ? 0 : Integer.parseInt(proxySpec.substring(i+1));
+      } catch (NumberFormatException ex) {
+        return 0;
+      }
+    }
     public String getResolvedUrl() {
       return resolvedUrl;
     }
@@ -1048,7 +1079,7 @@ public class OpenUrlResolver {
     } finally {
       dbMgr.safeRollbackAndClose(conn);
     }
-    return new OpenUrlInfo(url, OpenUrlInfo.ResolvedTo.ARTICLE);
+    return new OpenUrlInfo(url, null, OpenUrlInfo.ResolvedTo.ARTICLE);
   }
 
   /**
@@ -1195,7 +1226,7 @@ public class OpenUrlResolver {
       }
       
       String url = resolveFromQuery(conn, query.toString(), args);
-      return OpenUrlInfo.newInstance(url, OpenUrlInfo.ResolvedTo.ARTICLE);
+      return OpenUrlInfo.newInstance(url, null, OpenUrlInfo.ResolvedTo.ARTICLE);
 
     } catch (SQLException ex) {
       log.error("Getting ISSNs:" + Arrays.toString(issns), ex);
@@ -1501,7 +1532,7 @@ public class OpenUrlResolver {
     OpenUrlInfo resolved = getPluginUrl(plugin, auBookAuFeatures, paramMap);
     if (resolved.resolvedUrl == null) {
       resolved = OpenUrlInfo.newInstance(
-          paramMap.getString("base_url"), OpenUrlInfo.ResolvedTo.PUBLISHER);
+        paramMap.getString("base_url"), null, OpenUrlInfo.ResolvedTo.PUBLISHER);
     }
     return resolved;
   }
@@ -1593,7 +1624,7 @@ public class OpenUrlResolver {
   private OpenUrlInfo getJournalUrl(Plugin plugin, TypedEntryMap paramMap) { 
     OpenUrlInfo resolved = getPluginUrl(plugin, auJournalFeatures, paramMap);
     if (resolved.resolvedUrl == null) {
-      resolved = OpenUrlInfo.newInstance(paramMap.getString("base_url"), 
+      resolved = OpenUrlInfo.newInstance(paramMap.getString("base_url"), null,
                                          OpenUrlInfo.ResolvedTo.PUBLISHER);
     }
     return resolved;
@@ -1713,7 +1744,8 @@ public class OpenUrlResolver {
           log.debug3("Resolving from url: " + url);
           url = resolveUrl(url, proxySpec);
           if (url != null) {
-            return OpenUrlInfo.newInstance(url, pluginEntry.resolvedTo);
+            return OpenUrlInfo.newInstance(url, proxySpec, 
+                                           pluginEntry.resolvedTo);
           }
         }
       }
@@ -1987,7 +2019,8 @@ public class OpenUrlResolver {
       }
       
       String url = resolveFromQuery(conn, query.toString(), args);
-      resolved = OpenUrlInfo.newInstance(url, OpenUrlInfo.ResolvedTo.CHAPTER);
+      resolved = OpenUrlInfo.newInstance(url, null, 
+                                         OpenUrlInfo.ResolvedTo.CHAPTER);
       
     } catch (SQLException ex) {
       log.error("Getting ISBN:" + isbn, ex);
