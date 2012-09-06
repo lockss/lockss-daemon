@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.22 2012-03-15 08:52:03 tlipkis Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.23 2012-09-06 04:02:32 tlipkis Exp $
  */
 
 /*
@@ -107,10 +107,18 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
       return !isRangeRestricted();
     }
     // url is longer than prefix.  The suffix must be separated from the
-    // prefix by a path separator character
+    // prefix by a path separator character.
     boolean pathSep =
       prefix.charAt(plen-1) == UrlUtil.URL_PATH_SEPARATOR_CHAR
-      || prefix.endsWith(ArchiveMemberSpec.URL_SEPARATOR)
+
+      // The last character in ArchiveMemberSpec.URL_SEPARATOR is the same
+      // as URL_PATH_SEPARATOR_CHAR checked above, so this clause is not
+      // necessary.  If that were not the case, this clause should be
+      // included iff the CUSS will be used with an AU that requests
+      // archive member processing (see AuUtil.hasArchiveFileTypes()),
+      // which would require adding the AU to all CUSS constructors.
+      // || prefix.endsWith(ArchiveMemberSpec.URL_SEPARATOR)
+
       || url.charAt(plen) == UrlUtil.URL_PATH_SEPARATOR_CHAR
       || (url.length() > plen
 	  && url.regionMatches(plen, ArchiveMemberSpec.URL_SEPARATOR, 0, 2));
