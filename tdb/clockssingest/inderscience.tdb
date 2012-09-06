@@ -846,7 +846,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Bioinformatics Research and Applications Volume 4 ; 4 >
       au < manifest ; exists ; 2008 ; International Journal of Bioinformatics Research and Applications Volume 5 ; 5 >
       au < manifest ; exists ; 2010 ; International Journal of Bioinformatics Research and Applications Volume 6 ; 6 >
-      au < testing ; exists ; 2011 ; International Journal of Bioinformatics Research and Applications Volume 7 ; 7 >
+      au < released ; manifest ; 2011 ; International Journal of Bioinformatics Research and Applications Volume 7 ; 7 >
       au < manifest ; exists ; 2012 ; International Journal of Bioinformatics Research and Applications Volume 8 ; 8 >
 
     }
@@ -899,9 +899,9 @@
       au < manifest ; exists ; 2009 ; International Journal of Biomedical Engineering and Technology Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Biomedical Engineering and Technology Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; International Journal of Biomedical Engineering and Technology Volume 4 ; 4 >
-      au < testing ; exists ; 2011 ; International Journal of Biomedical Engineering and Technology Volume 5 ; 5 >
-      au < testing ; exists ; 2011 ; International Journal of Biomedical Engineering and Technology Volume 6 ; 6 >
-      au < testing ; exists ; 2011 ; International Journal of Biomedical Engineering and Technology Volume 7 ; 7 >
+      au < released ; manifest ; 2011 ; International Journal of Biomedical Engineering and Technology Volume 5 ; 5 >
+      au < released ; manifest ; 2011 ; International Journal of Biomedical Engineering and Technology Volume 6 ; 6 >
+      au < released ; manifest ; 2011 ; International Journal of Biomedical Engineering and Technology Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; International Journal of Biomedical Engineering and Technology Volume 8 ; 8 >
 
     }
@@ -918,7 +918,7 @@
       param[journal_issn] = 1756-0802
       
       au < manifest ; exists ; 2010 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 1 ; 1 >
-      au < testing ; exists ; 2011 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 2 ; 2 >
+      au < released ; manifest ; 2011 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 2 ; 2 >
 
     }
 
@@ -5444,7 +5444,7 @@
       param[journal_issn] = 1755-2079
       
       au < manifest ; exists ; 2007-2010 ; International Journal of Precision Technology Volume 1 ; 1 >
-      au < testing ; exists ; 2011-2012 ; International Journal of Precision Technology Volume 2 ; 2 >
+      au < released ; manifest ; 2011-2012 ; International Journal of Precision Technology Volume 2 ; 2 >
 
     }
 
@@ -6196,7 +6196,7 @@
 
       param[journal_issn] = 2040-073X
       
-      au < testing ; exists ; 2011-2012 ; International Journal of Social Computing and Cyber-Physical Systems Volume 1 ; 1 >
+      au < released ; manifest ; 2011-2012 ; International Journal of Social Computing and Cyber-Physical Systems Volume 1 ; 1 >
 
     }
 
@@ -6211,7 +6211,7 @@
 
       param[journal_issn] = 2043-8265
       
-      au < testing ; exists ; 2011-2012 ; International Journal of Social Entrepreneurship and Innovation Volume 1 ; 1 >
+      au < released ; manifest ; 2011-2012 ; International Journal of Social Entrepreneurship and Innovation Volume 1 ; 1 >
 
     }
 
@@ -7301,7 +7301,7 @@
 
       param[journal_issn] = 1757-8809
       
-      au < testing ; exists ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 >
+      au < released ; manifest ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 >
 
     }
 
