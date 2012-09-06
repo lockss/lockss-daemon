@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.18 2012-07-02 16:19:31 tlipkis Exp $
+ * $Id: TitleConfig.java,v 1.19 2012-09-06 04:04:41 tlipkis Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class TitleConfig {
   /**
    * TitleConfig attributes, corresponding to properties in the TdbAu
    */
-  private Map<String,String> attrs = null;
+  private Map<String,String> attrs = Collections.<String,String>emptyMap();
   
   /**
    * The TdbAu used to construct the TitleConfig
@@ -209,14 +209,15 @@ public class TitleConfig {
    * Set the attributes
    */
   public void setAttributes(Map<String,String>  attrs) {
-    this.attrs = attrs;
+    this.attrs =
+      (attrs == null) ? Collections.<String,String>emptyMap() : attrs;
   }
 
   /**
    * @return the attributes
    */
   public Map<String,String> getAttributes() {
-    return (attrs == null) ? Collections.<String,String>emptyMap() : attrs;
+    return attrs;
   }
 
   /**
@@ -445,7 +446,7 @@ public class TitleConfig {
     }
     sb.append(", params: ");
     sb.append(params);
-    if (attrs != null) {
+    if (!attrs.isEmpty()) {
       sb.append(", attrs: ");
       sb.append(attrs);
     }
