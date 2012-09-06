@@ -18,11 +18,11 @@
     param[journal_dir] = advertising_and_society_review
     attr[journal_id] = asr
 
-    au < ready ; 2000 ; Advertising & Society Review Volume 1 ; 1 >
-    au < ready ; 2001 ; Advertising & Society Review Volume 2 ; 2 >
+    au < released ; 2000 ; Advertising & Society Review Volume 1 ; 1 >
+    au < released ; 2001 ; Advertising & Society Review Volume 2 ; 2 >
     au < testing ; 2002 ; Advertising & Society Review Volume 3 ; 3 >
-    au < ready ; 2003 ; Advertising & Society Review Volume 4 ; 4 >
-    au < ready ; 2004 ; Advertising & Society Review Volume 5 ; 5 >
+    au < released ; 2003 ; Advertising & Society Review Volume 4 ; 4 >
+    au < released ; 2004 ; Advertising & Society Review Volume 5 ; 5 >
     au < released ; 2005 ; Advertising & Society Review Volume 6 ; 6 >
     au < released ; 2006 ; Advertising & Society Review Volume 7 ; 7 >
     au < released ; 2007 ; Advertising & Society Review Volume 8 ; 8 >
