@@ -925,4 +925,195 @@
     
   }
 
+  {
+  
+    title < 
+      name = HIV/AIDS - Research and Palliative Care ;
+      issn = 1179-1373
+    >
+    
+    param[journal_id] = 68
+
+    au < exists ; 2009 ; HIV/AIDS - Research and Palliative Care Volume 1 ; 2009 >
+    au < exists ; 2010 ; HIV/AIDS - Research and Palliative Care Volume 2 ; 2010 >
+    au < exists ; 2011 ; HIV/AIDS - Research and Palliative Care Volume 3 ; 2011 >
+    au < exists ; 2012 ; HIV/AIDS - Research and Palliative Care Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Breast Cancer: Targets and Therapy ;
+      issn = 1179-1314
+    >
+    
+    param[journal_id] = 69
+
+    au < exists ; 2009 ; Breast Cancer: Targets and Therapy Volume 1 ; 2009 >
+    au < exists ; 2010 ; Breast Cancer: Targets and Therapy Volume 2 ; 2010 >
+    au < exists ; 2011 ; Breast Cancer: Targets and Therapy Volume 3 ; 2011 >
+    au < exists ; 2012 ; Breast Cancer: Targets and Therapy Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Nutrition and Dietary Supplements ;
+      issn = 1179-1489
+    >
+    
+    param[journal_id] = 71
+
+    au < exists ; 2009 ; Nutrition and Dietary Supplements Volume 1 ; 2009 >
+    au < exists ; 2010 ; Nutrition and Dietary Supplements Volume 2 ; 2010 >
+    au < exists ; 2011 ; Nutrition and Dietary Supplements Volume 3 ; 2011 >
+    au < exists ; 2012 ; Nutrition and Dietary Supplements Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Orthopedic Research and Reviews ;
+      issn = 1179-1462
+    >
+    
+    param[journal_id] = 72
+
+    au < exists ; 2009 ; Orthopedic Research and Reviews Volume 1 ; 2009 >
+    au < exists ; 2010 ; Orthopedic Research and Reviews Volume 2 ; 2010 >
+    au < exists ; 2011 ; Orthopedic Research and Reviews Volume 3 ; 2011 >
+    au < exists ; 2012 ; Orthopedic Research and Reviews Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Nature and Science of Sleep ;
+      issn = 1179-1608
+    >
+    
+    param[journal_id] = 73
+
+    au < exists ; 2009 ; Nature and Science of Sleep Volume 1 ; 2009 >
+    au < exists ; 2010 ; Nature and Science of Sleep Volume 2 ; 2010 >
+    au < exists ; 2011 ; Nature and Science of Sleep Volume 3 ; 2011 >
+    au < exists ; 2012 ; Nature and Science of Sleep Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Open Access Journal of Contraception ;
+      issn = 1179-1527
+    >
+    
+    param[journal_id] = 74
+
+    au < exists ; 2010 ; Open Access Journal of Contraception Volume 1 ; 2010 >
+    au < exists ; 2011 ; Open Access Journal of Contraception Volume 2 ; 2011 >
+    au < exists ; 2012 ; Open Access Journal of Contraception Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Neurobehavioral HIV Medicine ;
+      issn = 1179-1497
+    >
+    
+    param[journal_id] = 75
+
+    au < exists ; 2009 ; Neurobehavioral HIV Medicine Volume 1 ; 2009 >
+    au < exists ; 2010 ; Neurobehavioral HIV Medicine Volume 2 ; 2010 >
+    au < exists ; 2011 ; Neurobehavioral HIV Medicine Volume 3 ; 2011 >
+    au < exists ; 2012 ; Neurobehavioral HIV Medicine Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Clinical Optometry ;
+      issn = 1179-2752
+    >
+    
+    param[journal_id] = 78
+
+    au < exists ; 2009 ; Clinical Optometry Volume 1 ; 2009 >
+    au < exists ; 2010 ; Clinical Optometry Volume 2 ; 2010 >
+    au < exists ; 2011 ; Clinical Optometry Volume 3 ; 2011 >
+    au < exists ; 2012 ; Clinical Optometry Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Eye and Brain ;
+      issn = 1179-2744
+    >
+    
+    param[journal_id] = 79
+
+    au < exists ; 2009 ; Eye and Brain Volume 1 ; 2009 >
+    au < exists ; 2010 ; Eye and Brain Volume 2 ; 2010 >
+    au < exists ; 2011 ; Eye and Brain Volume 3 ; 2011 >
+    au < exists ; 2012 ; Eye and Brain Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Pathology and Laboratory Medicine International ;
+      issn = 1179-2698
+    >
+    
+    param[journal_id] = 80
+
+    au < exists ; 2009 ; Pathology and Laboratory Medicine International Volume 1 ; 2009 >
+    au < exists ; 2010 ; Pathology and Laboratory Medicine International Volume 2 ; 2010 >
+    au < exists ; 2011 ; Pathology and Laboratory Medicine International Volume 3 ; 2011 >
+    au < exists ; 2012 ; Pathology and Laboratory Medicine International Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Open Access Bioinformatics ;
+      issn = 1179-2701
+    >
+    
+    param[journal_id] = 81
+
+    au < exists ; 2009 ; Open Access Bioinformatics Volume 1 ; 2009 >
+    au < exists ; 2010 ; Open Access Bioinformatics Volume 2 ; 2010 >
+    au < exists ; 2011 ; Open Access Bioinformatics Volume 3 ; 2011 >
+    au < exists ; 2012 ; Open Access Bioinformatics Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Clinical Audit ;
+      issn = 1179-2760
+    >
+    
+    param[journal_id] = 82
+
+    au < exists ; 2009 ; Clinical Audit Volume 1 ; 2009 >
+    au < exists ; 2010 ; Clinical Audit Volume 2 ; 2010 >
+    au < exists ; 2011 ; Clinical Audit Volume 3 ; 2011 >
+    au < exists ; 2012 ; Clinical Audit Volume 4 ; 2012 >
+    
+  }
+
 }
