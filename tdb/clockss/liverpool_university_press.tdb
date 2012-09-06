@@ -168,11 +168,9 @@
     param[journal_issn] = 1754-3800 
     comment[down] = publisher has been moved to Berghahn Journals
 
-    au < down ; exists ; 2008 ; European Comic Art Volume 1 ; 1 >
     au < down ; crawling ; 2009 ; European Comic Art Volume 2 ; 2 >
     au < down ; crawling ; 2010 ; European Comic Art Volume 3 ; 3 >    
     au < down ; crawling ; 2011 ; European Comic Art Volume 4 ; 4 >
-    au < down ; exists ; 2012 ; European Comic Art Volume 5 ; 5 >
 
   }  
   
