@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.31 2012-03-15 08:20:53 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.32 2012-09-06 03:08:49 pgust Exp $
  */
 
 /*
@@ -291,12 +291,73 @@ public class AuUtil {
     }
   }
 
+  /**
+   * Returns the proxy info specified by au's proxy spec if it is 
+   * of the form "host:port" for the proxy host and port. Otherwise,
+   * return the proxy host and port from the global configuration.
+   *  
+   * @param au the AU for the proxy spec from an AU of the form "host:port"
+   *   or <code>null</code> if no override proxy is specified.
+   * @return the proxy info from either the override or the global config 
+   *   proxy settings
+   */
   public static AuProxyInfo getAuProxyInfo(ArchivalUnit au) {
     return getAuProxyInfo(au, ConfigManager.getCurrentConfig());
   }
 
+  /**
+   * Returns the proxy info specified by auProxySpec if it is 
+   * of the form "host:port" for the proxy host and port. Otherwise,
+   * return the proxy host and port from the global configuration.
+   *  
+   * @param auProxySpec the proxy spec from an AU of the form "host:port"
+   *   or <code>null</code> if no override proxy is specified.
+   * @return the proxy info from either the override or the global proxy
+   *   settings
+   */
+  public static AuProxyInfo getAuProxyInfo(String auProxySpec) {
+    return getAuProxyInfo(auProxySpec, ConfigManager.getCurrentConfig());
+  }
+
+  /**
+   * Returns the proxy info specified by au's proxy spec if it is 
+   * of the form "host:port" for the proxy host and port. Otherwise,
+   * return the proxy host and port from the specified configuration.
+   *  
+   * @param au the AU for the proxy spec from an AU of the form "host:port"
+   *   or <code>null</code> if no override proxy is specified.
+   * @param config the configuration specifying the global proxy host and port
+   * @return the proxy info from either the override or the config proxy
+   *   settings
+   */
   public static AuProxyInfo getAuProxyInfo(ArchivalUnit au,
 					   Configuration config) {
+    // In RegistryArchivalUnit, CRAWL_PROXY is set in au.getProperties(),
+    // not in au.getConfiguration().  Unless/until
+    // getAuParamOrTitleDefault() is changed, we need to look in
+    // au.getProperties() ourselves
+    String auProxySpec =
+        getStringValue(getAuParamOrTitleDefault(au, ConfigParamDescr.CRAWL_PROXY),
+                       null);
+    auProxySpec =
+        au.getProperties().getString(ConfigParamDescr.CRAWL_PROXY.getKey(),
+                                     auProxySpec);
+    return getAuProxyInfo(auProxySpec, config);
+  }
+  
+  /**
+   * Returns the proxy info specified by auProxySpec if it is 
+   * of the form "host:port" for the proxy host and port. Otherwise,
+   * return the proxy host and port from the specified configuration.
+   *  
+   * @param auProxySpec the proxy spec from an AU of the form "host:port"
+   *   or <code>null</code> if no override proxy is specified.
+   * @param config the configuration specifying the global proxy host and port
+   * @return the proxy info from either the override or the config proxy
+   *   settings
+   */
+  public static AuProxyInfo getAuProxyInfo(String auProxySpec,
+                                           Configuration config) {
     AuProxyInfo global = new AuProxyInfo();
     if (config.getBoolean(BaseCrawler.PARAM_PROXY_ENABLED,
 			  BaseCrawler.DEFAULT_PROXY_ENABLED)) {
@@ -309,16 +370,6 @@ public class AuUtil {
       }
     }
 
-    // In RegistryArchivalUnit, CRAWL_PROXY is set in au.getProperties(),
-    // not in au.getConfiguration().  Unless/until
-    // getAuParamOrTitleDefault() is changed, we need to look in
-    // au.getProperties() ourselves
-    String auProxySpec =
-      getStringValue(getAuParamOrTitleDefault(au, ConfigParamDescr.CRAWL_PROXY),
-		     null);
-    auProxySpec =
-      au.getProperties().getString(ConfigParamDescr.CRAWL_PROXY.getKey(),
-				   auProxySpec);
     if (!StringUtil.isNullString(auProxySpec)) {
       AuProxyInfo res = new AuProxyInfo();
       try {
