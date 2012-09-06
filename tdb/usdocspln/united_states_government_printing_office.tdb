@@ -65,26 +65,7 @@
   
       
   }
-  
-  {
-  
-    title < 
-      name = Bulk Data Files
-    
-      >
-      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataPlugin
-      param[base_url] = http://www.gpo.gov/fdsys/bulkdata/
-      implicit < status ; year ; name ; param[year] >
       
-    au < exists ; 1994-2012 ; Code of Federal Regulations 1994-2012 ; 1994-2012 >
-    au < exists ; 1996-2001 ; Commerce Business  1996-2001 ; 1996-2001 >
-    au < exists ; 2000-2012 ; Federal Regulations 2000-2012 ; 2000-2012 >
-    au < exists ; 2009 ; Public Papers of Presidents of the United States 2009 ; 2009 >
-    au < exists ; 1937-1975 ; Supreme Court Decisions 1937-1975 ; 1937-1975 >
-    au < exists ; 2011 ; United States Government Manual 2011 ; 2011 >
-
-  }
-    
   {
   
     title <
@@ -163,8 +144,9 @@
     au < released ; 2012 ; Code of Federal Regulations 2012 ; 2012 >
 
   }
-
-{
+  
+  
+  {
   
     title < 
       name = Commerce Business Daily
@@ -177,7 +159,6 @@
        au < exists ; 1996 ; Code of Federal Regulations 1996 ; 1996 >
        
   }
- 
  
   {
   
@@ -1007,5 +988,121 @@
   
   }
   
+  {
+  
+  plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataPlugin
+  param[base_url] = http://www.gpo.gov
+  implicit < status ; year ; name ; param[year] >
+    
+  {
+  
+  } 
+    title < 
+      name = Code of Federal Regulations (Annual Editions) - Bulk Data
+    
+      >
+      param[collection_id] = CFR
+      
+    au < manifest ; 1996 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1996 ; 1996 >
+    au < manifest ; 1997 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1997 ; 1997 >
+    au < manifest ; 1998 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1998 ; 1998 >
+    au < manifest ; 1999 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1999 ; 1999 >
+    au < manifest ; 2000 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2000 ; 2000 >
+    au < manifest ; 2001 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2001 ; 2001 >
+    au < manifest ; 2002 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2002 ; 2002 >
+    au < manifest ; 2003 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2003 ; 2003 >
+    au < manifest ; 2004 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2004 ; 2004 >
+    au < manifest ; 2005 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2005 ; 2005 >
+    au < manifest ; 2006 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2006 ; 2006 >
+    au < manifest ; 2007 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2007 ; 2007 >
+    au < manifest ; 2008 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2008 ; 2008 >
+    au < manifest ; 2009 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2009 ; 2009 >
+    au < manifest ; 2010 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2010 ; 2010 >
+    au < manifest ; 2011 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2011 ; 2011 >
+    au < manifest ; 2012 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2012 ; 2012 >
+
+  }
+    
+  {
+  
+    title < 
+      name = Commerce Business Daily - Bulk Data
+    
+      >
+      param[collection_id] = CBD
+    
+    au < exists ; 1996 ; Commerce Business Daily - Bulk Data 1996 ; 1996 >
+    au < exists ; 1997 ; Commerce Business Daily - Bulk Data 1997 ; 1997 >
+    au < exists ; 1998 ; Commerce Business Daily - Bulk Data 1998 ; 1998 >
+    au < exists ; 1999 ; Commerce Business Daily - Bulk Data 1999 ; 1999 >
+    au < exists ; 2000 ; Commerce Business Daily - Bulk Data 2000 ; 2000 >
+    au < exists ; 2001 ; Commerce Business Daily - Bulk Data 2001 ; 2001 >
+    
+  }
+     
+  {
+  
+    title < 
+      name = Federal Regulations - Bulk Data
+    
+      >
+      param[collection_id] = FR
+    
+    au < exists ; 2000 ; Federal Regulations  - Bulk Data 2000 ; 2000 >
+    au < exists ; 2001 ; Federal Regulations  - Bulk Data 2001 ; 2001 >
+    au < exists ; 2002 ; Federal Regulations  - Bulk Data 2002 ; 2002 >
+    au < exists ; 2003 ; Federal Regulations  - Bulk Data 2003 ; 2003 >
+    au < exists ; 2004 ; Federal Regulations  - Bulk Data 2004 ; 2004 >
+    au < exists ; 2005 ; Federal Regulations  - Bulk Data 2005 ; 2005 >
+    au < exists ; 2006 ; Federal Regulations  - Bulk Data 2006 ; 2006 >
+    au < exists ; 2007 ; Federal Regulations  - Bulk Data 2007 ; 2007 >
+    au < exists ; 2008 ; Federal Regulations  - Bulk Data 2008 ; 2008 >
+    au < exists ; 2009 ; Federal Regulations  - Bulk Data 2009 ; 2009 >
+    au < exists ; 2010 ; Federal Regulations  - Bulk Data 2010 ; 2010 >
+    au < exists ; 2011 ; Federal Regulations  - Bulk Data 2011 ; 2011 >
+    au < exists ; 2012 ; Federal Regulations  - Bulk Data 2012 ; 2012 >
+    
+  }
+      
+  {
+  
+    title < 
+      name = Public Papers of Presidents of the United States - Bulk Data
+    
+      >
+      param[collection_id] = PPP
+    
+    au < exists ; 2009 ; Public Papers of Presidents of the United States - Bulk Data 2009 ; 2009 >    
+    
+    
+  }
+    
+  {
+  
+    title < 
+      name = Supreme Court Decisions 1937-1975 (FLITE) - Bulk Data
+    
+      >
+      param[collection_id] = SCD
+    
+    au < exists ; 1937 ; Supreme Court Decisions 1937-1975 (FLITE) - Bulk Data 1937 ; 1937 >    
+    
+    
+  }
+   
+  {
+  
+    title < 
+      name = United States Government Manual - Bulk Data
+    
+      >
+      param[collection_id] = SCD
+    
+     au < exists ; 2011 ; United States Government Manual - Bulk Data 2011 ; 2011 >    
+    
+    
+    }
+    
+  }
 
 }
