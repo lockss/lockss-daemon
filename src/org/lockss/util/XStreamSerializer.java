@@ -1,10 +1,10 @@
 /*
- * $Id: XStreamSerializer.java,v 1.26 2009-02-02 23:25:48 edwardsb1 Exp $
+ * $Id: XStreamSerializer.java,v 1.27 2012-09-06 23:01:36 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,6 +44,7 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.alias.*;
 import com.thoughtworks.xstream.converters.*;
 import com.thoughtworks.xstream.converters.basic.*;
+import com.thoughtworks.xstream.converters.reflection.*;
 import com.thoughtworks.xstream.core.*;
 import com.thoughtworks.xstream.io.*;
 import com.thoughtworks.xstream.io.xml.DomDriver;
@@ -685,10 +686,53 @@ public class XStreamSerializer extends ObjectSerializer {
    */
   private synchronized void init() {
     if (!initialized) {
-      initialized = true;
-      xs = new XStream(new DomDriver());
+      // Mimic the behavior of XStream's JVM class
+      String vendor = System.getProperty("java.vm.vendor");
+      float version = 1.3f;
+      try {
+        version = Float.parseFloat(System.getProperty("java.version").substring(0, 3));
+      }
+      catch (NumberFormatException nfe) {
+        // Keep the default
+      }
+      Class unsafe = null;
+      try {
+        unsafe = Class.forName("sun.misc.Unsafe", false, getClass().getClassLoader());
+      }
+      catch (ClassNotFoundException cnfe) {
+        // Keep the default
+      }
+      ReflectionProvider reflectionProvider = null;
+      if (   (   vendor.contains("Sun")
+              || vendor.contains("Oracle")
+              || vendor.contains("Apple")
+              || vendor.contains("Hewlett-Packard")
+              || vendor.contains("IBM")
+              || vendor.contains("Blackdown"))
+          && version >= 1.4f
+          && unsafe != null) {
+        try {
+          reflectionProvider = (ReflectionProvider)Class.forName("com.thoughtworks.xstream.converters.reflection.Sun14ReflectionProvider", false, getClass().getClassLoader()).newInstance();
+        }
+        catch (InstantiationException ie) {
+          reflectionProvider = new PureJavaReflectionProvider();
+        }
+        catch (IllegalAccessException iae) {
+          reflectionProvider = new PureJavaReflectionProvider();
+        }
+        catch (ClassNotFoundException cnfe) {
+          reflectionProvider = new PureJavaReflectionProvider();
+        }
+      }
+      else {
+        reflectionProvider = new PureJavaReflectionProvider();
+      }
+      HierarchicalStreamDriver driver = new DomDriver();
+      
+      xs = new XStream(reflectionProvider, driver);
       xs.setMarshallingStrategy(new LockssReferenceByXPathMarshallingStrategy(lockssContext));
       xs.registerConverter(new LockssDateConverter());
+      initialized = true;
     }
   }
 
