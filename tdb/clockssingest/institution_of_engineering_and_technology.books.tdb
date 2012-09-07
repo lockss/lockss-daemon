@@ -102,6 +102,66 @@
       comment[0] = series string - /emis/
       
 
+    }  
+     
+    {
+  
+    title < 
+      name = History of Technology ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /history/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Information Technology ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /it/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Management of Technology ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /man-tech/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Manufacturing ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /manufac/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Model forms of general conditions of contract ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /model/
+      
+
     }   
         
    {
