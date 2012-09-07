@@ -29,7 +29,7 @@
     {
   
     title < 
-      name = IET Circuits, Devices and Systems ;
+      name = Circuits, Devices and Systems ;
       type = bookSeries 
       
       >
@@ -44,8 +44,66 @@
 
     }   
     
+    {
+  
+    title < 
+      name = Computing ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /computing/
+      
+
+    }   
     
+    {
+  
+    title < 
+      name = Control ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /control/
+      
+
+    }   
     
+    {
+  
+    title < 
+      name = Electrical Measurement ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /electrical/
+      
+
+    } 
+      
+    {
+  
+    title < 
+      name = Electromagnetic waves ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /electro/
+      
+
+    }   
+        
+    {
+  
+    title < 
+      name = EMIS Datareviews ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /emis/
+      
+
+    }   
+        
    {
   
     title < 
