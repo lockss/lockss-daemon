@@ -16,7 +16,7 @@
     {
   
     title < 
-      name = Business Compliance ;
+      name = Business compliance ;
       type = bookSeries 
       
       >
@@ -25,11 +25,10 @@
 
     }   
 
-
     {
   
     title < 
-      name = Circuits, Devices and Systems ;
+      name = Circuits, devices and systems ;
       type = bookSeries 
       
       >
@@ -71,7 +70,7 @@
     {
   
     title < 
-      name = Electrical Measurement ;
+      name = Electrical measurement ;
       type = bookSeries 
       
       >
@@ -95,7 +94,7 @@
     {
   
     title < 
-      name = EMIS Datareviews ;
+      name = EMIS datareviews ;
       type = bookSeries 
       
       >
@@ -107,7 +106,7 @@
     {
   
     title < 
-      name = History of Technology ;
+      name = History of technology ;
       type = bookSeries 
       
       >
@@ -119,7 +118,7 @@
     {
   
     title < 
-      name = Information Technology ;
+      name = Information technology ;
       type = bookSeries 
       
       >
@@ -131,7 +130,7 @@
     {
   
     title < 
-      name = Management of Technology ;
+      name = Management of technology ;
       type = bookSeries 
       
       >
@@ -203,11 +202,47 @@
     {
   
     title < 
-      name = Radar, Sonar, Navigation and Avionics ;
+      name = Radar, sonar, navigation and avionics ;
       type = bookSeries 
       
       >
       comment[0] = series string - /rsna/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Renewable energy ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /renewable/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Telecommuncations ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /telecom/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Wiring regulations ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /wiring-regulations/
       
 
     }   
