@@ -162,6 +162,54 @@
       comment[0] = series string - /model/
       
 
+    }  
+     
+    {
+  
+    title < 
+      name = Policy publications ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /policy/
+      
+
+    }  
+     
+    {
+  
+    title < 
+      name = Power and energy ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /pow-en/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Processing ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /process/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Radar, Sonar, Navigation and Avionics ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /rsna/
+      
+
     }   
         
    {
