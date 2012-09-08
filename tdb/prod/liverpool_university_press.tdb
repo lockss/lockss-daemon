@@ -226,11 +226,11 @@
     comment[down] = publisher has been moved to Berghahn Journals
 
 
-    au < down ; 2008 ; European Comic Art Volume 1 ; 1 >
-    au < down ; 2009 ; European Comic Art Volume 2 ; 2 >
-    au < down ; 2010 ; European Comic Art Volume 3 ; 3 >    
+    au < doNotProcess ; 2008 ; European Comic Art Volume 1 ; 1 >
+    au < doNotProcess ; 2009 ; European Comic Art Volume 2 ; 2 >
+    au < doNotProcess ; 2010 ; European Comic Art Volume 3 ; 3 >    
     au < down ; 2011 ; European Comic Art Volume 4 ; 4 >
-    au < down ; 2012 ; European Comic Art Volume 5 ; 5 >
+    au < doNotProcess ; 2012 ; European Comic Art Volume 5 ; 5 >
 
   }  
   
