@@ -15924,7 +15924,7 @@
         param[base_url] = http://ire.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1954-1956 ; International Relations Volume 1 ; 1 >
+        au < doesNotExist ; 1954-1956 ; International Relations Volume 1 ; 1 >
         au < manifest ; 1960-1965 ; International Relations Volume 2 ; 2 >
         au < manifest ; 1967-1971 ; International Relations Volume 3 ; 3 >
         au < manifest ; 1972 ; International Relations Volume 4 ; 4 >
