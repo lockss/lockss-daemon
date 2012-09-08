@@ -4,8 +4,11 @@
     name = NRC Research Press (Canadian Science Publishing)
   >
 
- attr[contract] = 2012
- attr[platform] = Atypon
+  attr[contract] = 2012
+  comment[platform] = Atypon
+  
+  plugin = needs.plugin
+
   {
   
     title < 
