@@ -11,6 +11,9 @@
 
   comment[platform] = Ingenta
 
+  param[publisher_id] = manup
+  implicit < status ; year ; name ; param[volume_name] >
+
   {
 
     title <
@@ -19,10 +22,8 @@
       issnl = 0955-7490
     >
     
-   param[publisher_id] = manup
    param[journal_id] = alex 
    param[journal_issn] = 0955-7490 
-   implicit < status ; year ; name ; param[volume_name] >
    
    au < exists ; 2009 ; Alexandria Volume 21 ; 21 >
    au < exists ; 2011 ; Alexandria Volume 22 ; 22 >
@@ -39,10 +40,8 @@
       issnl = 1749-6020
     >
     
-   param[publisher_id] = manup
    param[journal_id] = cstv 
    param[journal_issn] =
-   implicit < status ; year ; name ; param[volume_name] >
    
    au < exists ; 2006 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 1 ; 1 >
    au < exists ; 2007 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 2 ; 2 >
@@ -59,13 +58,12 @@
     title <
       name = Gothic Studies ;
       issn = 1362-7937 ;
+      eissn = 2050-456X ;
       issnl = 1362-7937
     >
     
-   param[publisher_id] = manup
    param[journal_id] = gothst 
    param[journal_issn] = 1362-7937
-   implicit < status ; year ; name ; param[volume_name] >
    
    au < exists ; 1999 ; Gothic Studies Volume 1 ; 1 >
    au < exists ; 2000 ; Gothic Studies Volume 2 ; 2 >
@@ -89,13 +87,12 @@
     title <
       name = International Journal of Electrical Engineering Education ;
       issn = 0020-7209 ;
+      eissn = 2050-4578;
       issnl = 0020-7209
     >
     
-   param[publisher_id] = manup
    param[journal_id] = ijeee 
    param[journal_issn] = 1362-7937
-   implicit < status ; year ; name ; param[volume_name] >
    
    au < exists ; 2005 ; International Journal of Electrical Engineering Education Volume 42 ; 42 >
    au < exists ; 2006 ; International Journal of Electrical Engineering Education Volume 43 ; 43 >
@@ -127,13 +124,12 @@
     title <
       name = International Journal of Mechanical Engineering Education ;
       issn = 0306-4190 ;
+      eissn = 2050-4586 ;
       issnl = 0306-4190
     >
     
-   param[publisher_id] = manup
    param[journal_id] = ijmee 
    param[journal_issn] = 0306-4190
-   implicit < status ; year ; name ; param[volume_name] >
    
    au < exists ; 2004-2005 ; International Journal of Electrical Engineering Education Volume 32 ; 32 >
    au < exists ; 2005 ; International Journal of Electrical Engineering Education Volume 33 ; 33 >
@@ -152,13 +148,12 @@
     title <
       name = Irish Economic and Social History ;
       issn = 0332-4893 ;
+      eissn =  0332-4893 ;
       issnl = 0332-4893
     >
     
-   param[publisher_id] = manup
    param[journal_id] = iesh 
    param[journal_issn] = 0332-4893
-   implicit < status ; year ; name ; param[volume_name] >
    
    au < exists ; 2007 ; Irish Economic and Social History Volume 34 ; 34 >
    au < exists ; 2008 ; Irish Economic and Social History Volume 35 ; 35 >
@@ -175,13 +170,12 @@
     title <
       name = Irish Journal of Sociology ;
       issn = 0791-6035 ;
+      eissn = 2050-5280 ;
       issnl = 0791-6035
     >
     
-   param[publisher_id] = manup
    param[journal_id] = ijs 
    param[journal_issn] = 0791-6035
-   implicit < status ; year ; name ; param[volume_name] >
    
    au < exists ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 >
    au < exists ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 >
@@ -197,10 +191,8 @@
       issnl = 1477-9714
     >
     
-   param[publisher_id] = manup
    param[journal_id] = jace 
-   param[journal_issn] = 
-   implicit < status ; year ; name ; param[volume_name] >
+   param[journal_issn] = 1477-9714
    
    au < exists ; 2002-2003 ; Journal of Adult and Continuing Education Volume 8 ; 8 >
    au < exists ; 2003 ; Journal of Adult and Continuing Education Volume 9 ; 9 >
@@ -224,10 +216,8 @@
       issnl = 0022-5266
     >
     
-   param[publisher_id] = manup
    param[journal_id] = jtth 
-   param[journal_issn] = 
-   implicit < status ; year ; name ; param[volume_name] >
+   param[journal_issn] = 0022-5266
    
    au < exists ; 2005 ; The Journal of Transport History Volume 26 ; 26 >
    au < exists ; 2006 ; The Journal of Transport History Volume 27 ; 27 >
@@ -248,10 +238,8 @@
       issnl = 0306-1973
     >
     
-   param[publisher_id] = manup
    param[journal_id] = lah 
    param[journal_issn] = 0306-1973
-   implicit < status ; year ; name ; param[volume_name] >
    
    au < exists ; 2002 ; Literature & History Volume 11 ; 11 >
    au < exists ; 2003 ; Literature & History Volume 12 ; 12 >
@@ -276,10 +264,8 @@
       issnl = 1074-164X
     >
     
-   param[publisher_id] = manup
    param[journal_id] = medst 
    param[journal_issn] = 1074-164X
-   implicit < status ; year ; name ; param[volume_name] >
    
    au < exists ; 2005 ; Mediterranean Studies Volume 14 ; 14 >
    au < exists ; 2006 ; Mediterranean Studies Volume 15 ; 15 >
@@ -296,13 +282,12 @@
     title <
       name = Nineteenth Century Theatre and Film ;
       issn = 1748-3727 ;
+      eissn = 2048-2906 ;
       issnl = 1748-3727
     >
     
-   param[publisher_id] = manup
    param[journal_id] = nttf 
    param[journal_issn] = 1748-3727
-   implicit < status ; year ; name ; param[volume_name] >
    
    au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 >
    au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 >
@@ -322,10 +307,8 @@
       issnl = 0034-5237
     >
     
-   param[publisher_id] = manup
    param[journal_id] = rie 
    param[journal_issn] = 0034-5237
-   implicit < status ; year ; name ; param[volume_name] >
    
    au < exists ; 2004 ; Nineteenth Century Theatre and Film Volume 71 ; 71 >
    au < exists ; 2004 ; Nineteenth Century Theatre and Film Volume 72 ; 72 >
@@ -352,13 +335,14 @@
     title <
       name = The Seventeenth Century ;
       issn = 0268-117X ;
+      eissn = 2050-4616 ;
       issnl = 0268-117X
     >
     
-   param[publisher_id] = manup
    param[journal_id] = tsc 
    param[journal_issn] = 0268-117X
-   implicit < status ; year ; name ; param[volume_name] >
+   
+   comment[URGENT] = Moving off of Ingenta Dec 2012
    
    au < exists ; 2005 ; The Seventeenth Century Volume 20 ; 20 >
    au < exists ; 2006 ; The Seventeenth Century Volume 21 ; 21 >
@@ -381,11 +365,11 @@
       issnl = 1471-4787
     >
     
-   param[publisher_id] = manup
    param[journal_id] = vcb 
    param[journal_issn] = 1471-4787
-   implicit < status ; year ; name ; param[volume_name] >
    
+   comment[URGENT] = Discontinuing publication Dec 2012
+
    au < exists ; 2004 ; Visual Culture in Britain Volume 5 ; 5 >
    au < exists ; 2005 ; Visual Culture in Britain Volume 6 ; 6 >
    au < exists ; 2006 ; Visual Culture in Britain Volume 7 ; 7 >
