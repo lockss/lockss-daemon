@@ -9,44 +9,14 @@ tpath="/home/$LOGNAME/tmp"
 mkdir -p $tpath
 numdiffAUs=20
 
-for file in \
-  american_academy_of_pediatrics.tdb \
-  american_academy_of_psychiatry_and_the_law.tdb \
-  american_physiological_society.tdb \
-  american_society_for_pharmacology_and_experimental_therapeutics.tdb \
-  berghahn_journals.tdb \
-  berkeley_electronic_press.tdb \
-  biomed_central.tdb \
-  bloomsbury_qatar_foundation_journals.tdb \
-  british_institute_of_radiology.tdb \
-  co_action_publishing.tdb \
-  company_of_biologists.tdb \
-  edinburgh_university_press.tdb \
-  endocrine_society.tdb \
-  european_respiratory_society.tdb \
-  federation_of_american_societies_for_experimental_biology.tdb \
-  geological_society_of_america.tdb \
-  igi_global.tdb \
-  inderscience.tdb \
-  international_union_of_crystallography.tdb \
-  liverpool_university_press.tdb \
-  maney_publishing.tdb \
-  medknow_publications.tdb \
-  national_academy_of_sciences.tdb \
-  oxford_university_press.tdb \
-  pennsylvania_state_university_press.tdb \
-  rockefeller_university_press.tdb \
-  royal_society_of_chemistry.tdb \
-  royal_society_publishing.tdb \
-  sage_publications.tdb \
-  society_for_general_microbiology.tdb \
-  society_for_leukocyte_biology.tdb \
-  society_for_the_study_of_reproduction.tdb \
-  springer_science_business_media.tdb \
-  taylor_and_francis.tdb \
-  united_kingdom_serials_group.tdb \
-  university_of_british_columbia.tdb
+echo "springer_science_business_media.tdb" > $tpath/pairs
+ls ../../tdb/clockssingest | grep .tdb > $tpath/ci
+ls ../../tdb/prod | grep .tdb > $tpath/gln
+diff $tpath/ci $tpath/gln | grep "> " | sed 's/..//' > $tpath/notgln
+diff $tpath/gln $tpath/notgln | grep "< " | sed 's/..//' >> $tpath/pairs
+diff $tpath/gln $tpath/notgln | grep "< " | wc -l
 
+for file in `cat $tpath/pairs`
 do
 echo "-----------------------------"
 echo $file
