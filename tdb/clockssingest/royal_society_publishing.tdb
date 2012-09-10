@@ -94,9 +94,9 @@
     param[base_url] = http://rsbl.royalsocietypublishing.org/
     attr[journal_id] = rsbl
 
-    au < testing ; exists ; 2005 ; Biology Letters Volume 1 ; 1 >
-    au < testing ; exists ; 2006 ; Biology Letters Volume 2 ; 2 >
-    au < testing ; exists ; 2007 ; Biology Letters Volume 3 ; 3 >
+    au < released ; manifest ; 2005 ; Biology Letters Volume 1 ; 1 >
+    au < released ; manifest ; 2006 ; Biology Letters Volume 2 ; 2 >
+    au < released ; manifest ; 2007 ; Biology Letters Volume 3 ; 3 >
     au < released ; crawling ; 2008 ; Biology Letters Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; Biology Letters Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; Biology Letters Volume 6 ; 6 >
@@ -137,10 +137,10 @@
     param[base_url] = http://rsif.royalsocietypublishing.org/
     attr[journal_id] = rsif
 
-    au < testing ; exists ; 2004 ; Journal of the Royal Society Interface Volume 1 ; 1 >
-    au < testing ; exists ; 2005 ; Journal of the Royal Society Interface Volume 2 ; 2 >
-    au < testing ; exists ; 2006 ; Journal of the Royal Society Interface Volume 3 ; 3 >
-    au < testing ; exists ; 2007 ; Journal of the Royal Society Interface Volume 4 ; 4 >
+    au < released ; manifest ; 2004 ; Journal of the Royal Society Interface Volume 1 ; 1 >
+    au < released ; manifest ; 2005 ; Journal of the Royal Society Interface Volume 2 ; 2 >
+    au < released ; manifest ; 2006 ; Journal of the Royal Society Interface Volume 3 ; 3 >
+    au < released ; manifest ; 2007 ; Journal of the Royal Society Interface Volume 4 ; 4 >
     au < released ; crawling ; 2008 ; Journal of the Royal Society Interface Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; Journal of the Royal Society Interface Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Journal of the Royal Society Interface Volume 7 ; 7 >
@@ -214,15 +214,15 @@
     au < manifest ; exists ; 1997 ; Notes and Records of the Royal Society Volume 51 ; 51 >
     au < manifest ; exists ; 1998 ; Notes and Records of the Royal Society Volume 52 ; 52 >
     au < manifest ; exists ; 1999 ; Notes and Records of the Royal Society Volume 53 ; 53 >
-    au < testing ; exists ; 2000 ; Notes and Records of the Royal Society Volume 54 ; 54 >
-    au < testing ; exists ; 2001 ; Notes and Records of the Royal Society Volume 55 ; 55 >
-    au < testing ; exists ; 2002 ; Notes and Records of the Royal Society Volume 56 ; 56 >
-    au < testing ; exists ; 2003 ; Notes and Records of the Royal Society Volume 57 ; 57 >
-    au < testing ; exists ; 2004 ; Notes and Records of the Royal Society Volume 58 ; 58 >
-    au < testing ; exists ; 2005 ; Notes and Records of the Royal Society Volume 59 ; 59 >
-    au < testing ; exists ; 2006 ; Notes and Records of the Royal Society Volume 60 ; 60 >
-    au < testing ; exists ; 2007 ; Notes and Records of the Royal Society Volume 61 ; 61 >
-    au < testing ; exists ; 2008 ; Notes and Records of the Royal Society Volume 62 ; 62 >
+    au < released ; manifest ; 2000 ; Notes and Records of the Royal Society Volume 54 ; 54 >
+    au < released ; manifest ; 2001 ; Notes and Records of the Royal Society Volume 55 ; 55 >
+    au < released ; manifest ; 2002 ; Notes and Records of the Royal Society Volume 56 ; 56 >
+    au < released ; manifest ; 2003 ; Notes and Records of the Royal Society Volume 57 ; 57 >
+    au < released ; manifest ; 2004 ; Notes and Records of the Royal Society Volume 58 ; 58 >
+    au < released ; manifest ; 2005 ; Notes and Records of the Royal Society Volume 59 ; 59 >
+    au < released ; manifest ; 2006 ; Notes and Records of the Royal Society Volume 60 ; 60 >
+    au < released ; manifest ; 2007 ; Notes and Records of the Royal Society Volume 61 ; 61 >
+    au < released ; manifest ; 2008 ; Notes and Records of the Royal Society Volume 62 ; 62 >
     au < released ; crawling ; 2009 ; Notes and Records of the Royal Society Volume 63 ; 63 >
     au < released ; crawling ; 2010 ; Notes and Records of the Royal Society Volume 64 ; 64 >
     au < released ; crawling ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 >
@@ -1480,7 +1480,7 @@
     au < released ; crawling ; 2009 ; Proceedings of the Royal Society B: Biological Sciences Volume 276 ; 276 >
     au < released ; crawling ; 2010 ; Proceedings of the Royal Society B: Biological Sciences Volume 277 ; 277 >
     au < released ; crawling ; 2011 ; Proceedings of the Royal Society B: Biological Sciences Volume 278 ; 278 >
-    au < testing ; exists ; 2012 ; Proceedings of the Royal Society B: Biological Sciences Volume 279 ; 279 >
+    au < released ; manifest ; 2012 ; Proceedings of the Royal Society B: Biological Sciences Volume 279 ; 279 >
 
   }
 
