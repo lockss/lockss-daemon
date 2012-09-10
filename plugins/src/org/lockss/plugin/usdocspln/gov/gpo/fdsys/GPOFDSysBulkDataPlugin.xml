@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -95,6 +95,19 @@
     </list>
   </entry>
   <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>&quot;%sfdsys/bulkdata/%s&quot;, base_url, collection_id</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>&quot;%sfdsys/bulkdata/%s/%d&quot;, base_url, collection_id, year</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
@@ -118,5 +131,9 @@
     <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataHtmlFilterFactory</string>
   </entry>
 </map>
