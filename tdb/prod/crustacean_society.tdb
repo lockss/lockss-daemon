@@ -17,7 +17,9 @@
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0278-0372
-  
+
+      comment[0] = Leaving BioOne and moving to Brill
+      
       au < down ; 1981 ; Journal of Crustacean Biology Volume 1 ; 1 >
       au < down ; 1982 ; Journal of Crustacean Biology Volume 2 ; 2 >
       au < down ; 1983 ; Journal of Crustacean Biology Volume 3 ; 3 >
@@ -53,6 +55,8 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = crus
+      
+      comment[0] = Leaving BioOne and moving to Brill
       
       au < doNotProcess ; 1981 ; Journal of Crustacean Biology Volume 1 ; 1 >
       au < doNotProcess ; 1982 ; Journal of Crustacean Biology Volume 2 ; 2 >
