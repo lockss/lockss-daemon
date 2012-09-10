@@ -443,11 +443,11 @@
     
     param[journal_id] = 35
 
-    au < exists ; exists ; 008 ; Journal of Inflammation Research Volume 1 ; 2008 >
-    au < exists ; exists ; 009 ; Journal of Inflammation Research Volume 2 ; 2009 >
-    au < exists ; exists ; 010 ; Journal of Inflammation Research Volume 3 ; 2010 >
-    au < exists ; exists ; 011 ; Journal of Inflammation Research Volume 4 ; 2011 >
-    au < exists ; exists ; 012 ; Journal of Inflammation Research Volume 5 ; 2012 >
+    au < exists ; exists ; 2008 ; Journal of Inflammation Research Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Inflammation Research Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Inflammation Research Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Inflammation Research Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Inflammation Research Volume 5 ; 2012 >
     
   }
 
