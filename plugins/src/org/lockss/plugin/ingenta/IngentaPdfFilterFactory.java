@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.4 2012-08-08 20:46:35 wkwilson Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.5 2012-09-10 21:52:06 wkwilson Exp $
  */ 
 
 /*
@@ -57,14 +57,12 @@ public class IngentaPdfFilterFactory implements FilterFactory,
    *all of the publishers on this platform that have a pdf filter
    *lse: London School Of Economics
    *maney: Maney
-   *minsoc: Mineralogical Society
    *paaf: Pacific Affairs
    *wab: Whiting And Birch
    *berghahn: Berghahn
-   *cms: Clay Minerals Society
    *arn: Hodder Arnold
    */
-  private enum PublisherId {UNKNOWN, ARN, BERGHAHN, CMS, LSE, MANEY, MINSOC, PAAF, WAB}
+  private enum PublisherId {UNKNOWN, ARN, BERGHAHN, LSE, MANEY, PAAF, WAB}
   static Logger logger = Logger.getLogger("IngentaPdfFilterFactory");
   protected PdfDocumentFactory pdfDocumentFactory;
   private FilterFactory normFiltFact = new NormalizingPdfFilterFactory();
@@ -163,7 +161,7 @@ public class IngentaPdfFilterFactory implements FilterFactory,
       }
     }
     switch (publisherId) {
-      case ARN: case CMS: case MINSOC:
+      case ARN:
 	return normExtractFiltFact.createFilteredInputStream(au, in, encoding);
 	
       case BERGHAHN: case LSE: case WAB: case MANEY: case UNKNOWN:
