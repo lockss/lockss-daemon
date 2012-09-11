@@ -11,7 +11,7 @@
 
   {
 
-    implicit < status ; status2 ; isbn ; eisbn ; year ; volume ; name ; param[book_isbn] >
+    implicit < status ; status2 ; isbn ; eisbn ; year ; volume ; name ; param[isbn] >
 
     {
   
