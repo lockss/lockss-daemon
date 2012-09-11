@@ -11,27 +11,271 @@
 
   {
 
-    implicit < status1 ; status ; isbn ; eisbn ; year ; volume ; name ; param[book_isbn] >
+    implicit < status1 ; status ; isbn ; eisbn ; year ; volume ; name ; param[isbn] >
 
     {
   
     title < 
-      name = IET Circuits, Devices and Systems ;
-      type = bookSeries
-  
-      >
+      name = Business compliance ;
+      type = bookSeries 
       
-      au < exists ; exists ; 9780863412592 ; 9781849193573 ; 1991 ; 3 ; Analogue-digital ASICs: circuit techniques, design tools and applications ; 978-0-863-41259-2  >
-      au < exists ; exists ; 9780863412677 ; 9781849193580 ; 1992 ; 4 ; Algorithmic and Knowledge-based CAD for VLSI ; 978-0-863-41267-7  >
-      au < exists ; exists ; 9780863412943 ; 9781849191647 ; 1993 ; 5 ; Analogue IC Design: The Current-Mode Approach ; 9780863412974   >
+      >
+      comment[0] = series string - /bus-comp/
+      
 
     }   
+
+    {
+  
+    title < 
+      name = Circuits, devices and systems ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /circuits/
+      
+      au < exists ; exists ; 9780863412592 ; 9781849193573 ; 1991 ; 3 ; Analogue-digital ASICs: circuit techniques, design tools and applications ; 9780863412592  >
+      au < exists ; exists ; 9780863412677 ; 9781849193580 ; 1992 ; 4 ; Algorithmic and Knowledge-based CAD for VLSI ; 9780863412677  >
+      au < exists ; exists ; 9780863412974 ; 9781849191647 ; 1993 ; 5 ; Analogue IC Design: The Current-Mode Approach ; 9780863412974 >
+      au < exists ; exists ; 9780863412974 ; ; 1993 ; 2 ; Analogue IC Design: the current-mode approach (paperback) ; 9780863412974 >
+      au < exists ; exists ; 9781891121869 ; ; 2010 ; 1 ; Designing Amplifier Circuits ; 9781891121869  >
+      au < exists ; exists ; 9781849191494 ; ; 2012 ; 5 ; The Handbook of Electrical Resistivity - new materials and pressure effects ; 9781849191494 >
+
+    }   
+    
+    {
+  
+    title < 
+      name = Computing ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /computing/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Control ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /control/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Electrical measurement ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /electrical/
+      
+
+    } 
+      
+    {
+  
+    title < 
+      name = Electromagnetic waves ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /electro/
+      
+
+    }   
+        
+    {
+  
+    title < 
+      name = EMIS datareviews ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /emis/
+      
+
+    }  
+     
+    {
+  
+    title < 
+      name = History of technology ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /history/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Information technology ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /it/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Management of technology ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /man-tech/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Manufacturing ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /manufac/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Model forms of general conditions of contract ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /model/
+      
+
+    }  
+     
+    {
+  
+    title < 
+      name = Policy publications ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /policy/
+      
+
+    }  
+     
+    {
+  
+    title < 
+      name = Power and energy ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /pow-en/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Processing ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /process/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Radar, sonar, navigation and avionics ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /rsna/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Renewable energy ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /renewable/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Telecommuncations ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /telecom/
+      
+
+    }   
+    
+    {
+  
+    title < 
+      name = Wiring regulations ;
+      type = bookSeries 
+      
+      >
+      comment[0] = series string - /wiring-regulations/
+      
+
+    }   
+        
+   {
+  
+    title < 
+      name = Adaptive Array Principles ;
+      issn = 978-0-86341-247-9 ;
+      eissn = 978-1-84919-374-0
+  
+      >
+     
+
+    }
     
     {
     title < 
       name = Advanced Control for Constrained Processes and Systems ;
       issn = 9781849192613 ;
       eissn = 9781849192620 
+  
+      >
+     
+
+   }
+    
+   {
+  
+    title < 
+      name = Aperture Antennas and Diffraction Theory ;
+      issn = 978-0-90604-852-8 ;
+      eissn = 978-1-84919-373-3
   
       >
      
@@ -55,6 +299,18 @@
         issn =  978-1-84919-533-1 
         >
     }
+    
+    {
+  
+    title < 
+      name = Electrochemical Power Sources: primary and secondary batteries ;
+      issn = 978-0-90604-826-9 ;
+      eissn = 978-1-84919-368-9
+  
+      >
+     
+
+   }
    
    {
   
@@ -62,6 +318,18 @@
       name = Energy Storage for Power Systems, 2nd Edition ;
       issn = 9781849192194 ;
       eissn = 9781849192200 
+  
+      >
+     
+
+   }
+    
+   {
+  
+    title < 
+      name = Geometrical Theory of Diffraction for Electromagnetic Waves ;
+      issn = 978-0-86341-062-8 ;
+      eissn = 978-1-84919-372-6
   
       >
      
@@ -78,7 +346,22 @@
       >
      
     }
+    
+   {
+  
+    title < 
+      name = A History of Control Engineering 1800-1930 ;
+      issn = 978-0-86341-047-5 ;
+      eissn = 978-1-84919-332-0
+  
+      >
      
-  }
+
+   }
+
+ 
+      
+ }
+ 
 
 }

@@ -4,14 +4,1876 @@
     name = Dove Medical Press
   >
 
+  plugin = needs.plugin
+  param[base_url] = http://www.dovepress.com/
+  implicit < status1 ; status ; year ; name ; param[year] >
+
   {
   
     title < 
-      name = Placeholder
+      name = Therapeutics and Clinical Risk Management ;
+      issn = 1178-203X
     >
+    
+    param[journal_id] = 1
 
+    au < exists ; exists ; 2005 ; Therapeutics and Clinical Risk Management Volume 1 ; 2005 >
+    au < exists ; exists ; 2006 ; Therapeutics and Clinical Risk Management Volume 2 ; 2006 >
+    au < exists ; exists ; 2007 ; Therapeutics and Clinical Risk Management Volume 3 ; 2007 >
+    au < exists ; exists ; 2008 ; Therapeutics and Clinical Risk Management Volume 4 ; 2008 >
+    au < exists ; exists ; 2009 ; Therapeutics and Clinical Risk Management Volume 5 ; 2009 >
+    au < exists ; exists ; 2010 ; Therapeutics and Clinical Risk Management Volume 6 ; 2010 >
+    au < exists ; exists ; 2011 ; Therapeutics and Clinical Risk Management Volume 7 ; 2011 >
+    au < exists ; exists ; 2012 ; Therapeutics and Clinical Risk Management Volume 8 ; 2012 >
     
+  }
+
+  {
+  
+    title < 
+      name = Vascular Health and Risk Management ;
+      issn = 1178-2048
+    >
     
+    param[journal_id] = 2
+
+    au < exists ; exists ; 2005 ; Vascular Health and Risk Management Volume 1 ; 2005 >
+    au < exists ; exists ; 2006 ; Vascular Health and Risk Management Volume 2 ; 2006 >
+    au < exists ; exists ; 2007 ; Vascular Health and Risk Management Volume 3 ; 2007 >
+    au < exists ; exists ; 2008 ; Vascular Health and Risk Management Volume 4 ; 2008 >
+    au < exists ; exists ; 2009 ; Vascular Health and Risk Management Volume 5 ; 2009 >
+    au < exists ; exists ; 2010 ; Vascular Health and Risk Management Volume 6 ; 2010 >
+    au < exists ; exists ; 2011 ; Vascular Health and Risk Management Volume 7 ; 2011 >
+    au < exists ; exists ; 2012 ; Vascular Health and Risk Management Volume 8 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Neuropsychiatric Disease and Treatment ;
+      issn = 1178-2021
+    >
+    
+    param[journal_id] = 3
+
+    au < exists ; exists ; 2005 ; Neuropsychiatric Disease and Treatment Volume 1 ; 2005 >
+    au < exists ; exists ; 2006 ; Neuropsychiatric Disease and Treatment Volume 2 ; 2006 >
+    au < exists ; exists ; 2007 ; Neuropsychiatric Disease and Treatment Volume 3 ; 2007 >
+    au < exists ; exists ; 2008 ; Neuropsychiatric Disease and Treatment Volume 4 ; 2008 >
+    au < exists ; exists ; 2009 ; Neuropsychiatric Disease and Treatment Volume 5 ; 2009 >
+    au < exists ; exists ; 2010 ; Neuropsychiatric Disease and Treatment Volume 6 ; 2010 >
+    au < exists ; exists ; 2011 ; Neuropsychiatric Disease and Treatment Volume 7 ; 2011 >
+    au < exists ; exists ; 2012 ; Neuropsychiatric Disease and Treatment Volume 8 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Clinical Interventions in Aging ;
+      issn = 1178-1998
+    >
+    
+    param[journal_id] = 4
+
+    au < exists ; exists ; 2006 ; Clinical Interventions in Aging Volume 1 ; 2006 >
+    au < exists ; exists ; 2007 ; Clinical Interventions in Aging Volume 2 ; 2007 >
+    au < exists ; exists ; 2008 ; Clinical Interventions in Aging Volume 3 ; 2008 >
+    au < exists ; exists ; 2009 ; Clinical Interventions in Aging Volume 4 ; 2009 >
+    au < exists ; exists ; 2010 ; Clinical Interventions in Aging Volume 5 ; 2010 >
+    au < exists ; exists ; 2011 ; Clinical Interventions in Aging Volume 6 ; 2011 >
+    au < exists ; exists ; 2012 ; Clinical Interventions in Aging Volume 7 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = International Journal of Nanomedicine ;
+      issn = 1178-2013
+    >
+    
+    param[journal_id] = 5
+
+    au < exists ; exists ; 2006 ; International Journal of Nanomedicine Volume 1 ; 2006 >
+    au < exists ; exists ; 2007 ; International Journal of Nanomedicine Volume 2 ; 2007 >
+    au < exists ; exists ; 2008 ; International Journal of Nanomedicine Volume 3 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Nanomedicine Volume 4 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Nanomedicine Volume 5 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Nanomedicine Volume 6 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Nanomedicine Volume 7 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = International Journal of Chronic Obstructive Pulmonary Disease ;
+      issn = 1178-2005
+    >
+    
+    param[journal_id] = 6
+
+    au < exists ; exists ; 2006 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 1 ; 2006 >
+    au < exists ; exists ; 2007 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 2 ; 2007 >
+    au < exists ; exists ; 2008 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 3 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 4 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 5 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 6 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 7 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Journal of Multidisciplinary Healthcare ;
+      issn = 1178-2390
+    >
+    
+    param[journal_id] = 7
+
+    au < exists ; exists ; 2008 ; Journal of Multidisciplinary Healthcare Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Multidisciplinary Healthcare Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Multidisciplinary Healthcare Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Multidisciplinary Healthcare Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Multidisciplinary Healthcare Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Biologics: Targets and Therapy ;
+      issn = 1177-5491 ;
+      eissn = 1177-5475
+    >
+    
+    param[journal_id] = 8
+
+    au < exists ; exists ; 2007 ; Biologics: Targets and Therapy Volume 1 ; 2007 >
+    au < exists ; exists ; 2008 ; Biologics: Targets and Therapy Volume 2 ; 2008 >
+    au < exists ; exists ; 2009 ; Biologics: Targets and Therapy Volume 3 ; 2009 >
+    au < exists ; exists ; 2010 ; Biologics: Targets and Therapy Volume 4 ; 2010 >
+    au < exists ; exists ; 2011 ; Biologics: Targets and Therapy Volume 5 ; 2011 >
+    au < exists ; exists ; 2012 ; Biologics: Targets and Therapy Volume 6 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Clinical Ophthalmology ;
+      issn = 1177-5483
+    >
+    
+    param[journal_id] = 9
+
+    au < exists ; exists ; 2007 ; Clinical Ophthalmology Volume 1 ; 2007 >
+    au < exists ; exists ; 2008 ; Clinical Ophthalmology Volume 2 ; 2008 >
+    au < exists ; exists ; 2009 ; Clinical Ophthalmology Volume 3 ; 2009 >
+    au < exists ; exists ; 2010 ; Clinical Ophthalmology Volume 4 ; 2010 >
+    au < exists ; exists ; 2011 ; Clinical Ophthalmology Volume 5 ; 2011 >
+    au < exists ; exists ; 2012 ; Clinical Ophthalmology Volume 6 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Nanotechnology, Science and Applications ;
+      issn = 1177-8903
+    >
+    
+    param[journal_id] = 18
+
+    au < exists ; exists ; 2008 ; Nanotechnology, Science and Applications Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Nanotechnology, Science and Applications Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Nanotechnology, Science and Applications Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Nanotechnology, Science and Applications Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Nanotechnology, Science and Applications Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Drug Design, Development and Therapy ;
+      issn = 1177-8881
+    >
+    
+    param[journal_id] = 19
+
+    au < exists ; exists ; 2007 ; Drug Design, Development and Therapy Volume 1 ; 2007 >
+    au < exists ; exists ; 2008 ; Drug Design, Development and Therapy Volume 2 ; 2008 >
+    au < exists ; exists ; 2009 ; Drug Design, Development and Therapy Volume 3 ; 2009 >
+    au < exists ; exists ; 2010 ; Drug Design, Development and Therapy Volume 4 ; 2010 >
+    au < exists ; exists ; 2011 ; Drug Design, Development and Therapy Volume 5 ; 2011 >
+    au < exists ; exists ; 2012 ; Drug Design, Development and Therapy Volume 6 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Patient Preference and Adherence ;
+      issn = 1177-889X
+    >
+    
+    param[journal_id] = 20
+
+    au < exists ; exists ; 2007 ; Patient Preference and Adherence Volume 1 ; 2007 >
+    au < exists ; exists ; 2008 ; Patient Preference and Adherence Volume 2 ; 2008 >
+    au < exists ; exists ; 2009 ; Patient Preference and Adherence Volume 3 ; 2009 >
+    au < exists ; exists ; 2010 ; Patient Preference and Adherence Volume 4 ; 2010 >
+    au < exists ; exists ; 2011 ; Patient Preference and Adherence Volume 5 ; 2011 >
+    au < exists ; exists ; 2012 ; Patient Preference and Adherence Volume 6 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = OncoTargets and Therapy ;
+      issn = 1178-6930
+    >
+    
+    param[journal_id] = 23
+
+    au < exists ; exists ; 2008 ; OncoTargets and Therapy Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; OncoTargets and Therapy Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; OncoTargets and Therapy Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; OncoTargets and Therapy Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; OncoTargets and Therapy Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Medical Devices: Evidence and Research ;
+      issn = 1179-1470
+    >
+    
+    param[journal_id] = 24
+
+    au < exists ; exists ; 2008 ; Medical Devices: Evidence and Research Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Medical Devices: Evidence and Research Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Medical Devices: Evidence and Research Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Medical Devices: Evidence and Research Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Medical Devices: Evidence and Research Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Advances and Applications in Bioinformatics and Chemistry ;
+      issn = 1178-6949
+    >
+    
+    param[journal_id] = 25
+
+    au < exists ; exists ; 2008 ; Advances and Applications in Bioinformatics and Chemistry Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Advances and Applications in Bioinformatics and Chemistry Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Advances and Applications in Bioinformatics and Chemistry Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Advances and Applications in Bioinformatics and Chemistry Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Advances and Applications in Bioinformatics and Chemistry Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Stem Cells and Cloning: Advances and Applications ;
+      issn = 1178-6957
+    >
+    
+    param[journal_id] = 26
+
+    au < exists ; exists ; 2008 ; Stem Cells and Cloning: Advances and Applications Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Stem Cells and Cloning: Advances and Applications Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Stem Cells and Cloning: Advances and Applications Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Stem Cells and Cloning: Advances and Applications Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Stem Cells and Cloning: Advances and Applications Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Journal of Asthma and Allergy ;
+      issn = 1178-6965
+    >
+    
+    param[journal_id] = 27
+
+    au < exists ; exists ; 2008 ; Journal of Asthma and Allergy Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Asthma and Allergy Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Asthma and Allergy Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Asthma and Allergy Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Asthma and Allergy Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Infection and Drug Resistance ;
+      issn = 1178-6973
+    >
+    
+    param[journal_id] = 28
+
+    au < exists ; exists ; 2008 ; Infection and Drug Resistance Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Infection and Drug Resistance Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Infection and Drug Resistance Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Infection and Drug Resistance Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Infection and Drug Resistance Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = ClinicoEconomics and Outcomes Research ;
+      issn = 1178-6981
+    >
+    
+    param[journal_id] = 29
+
+    au < exists ; exists ; 2009 ; ClinicoEconomics and Outcomes Research Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; ClinicoEconomics and Outcomes Research Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; ClinicoEconomics and Outcomes Research Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; ClinicoEconomics and Outcomes Research Volume 4 ; 2012 >
+	    
+  }
+
+  {
+  
+    title < 
+      name = Journal of Receptor, Ligand and Channel Research ;
+      issn = 1178-699X
+    >
+    
+    param[journal_id] = 30
+
+    au < exists ; exists ; 2008 ; Journal of Receptor, Ligand and Channel Research Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Receptor, Ligand and Channel Research Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Receptor, Ligand and Channel Research Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Receptor, Ligand and Channel Research Volume 4 ; 2011 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Local and Regional Anesthesia ;
+      issn = 1178-7112
+    >
+    
+    param[journal_id] = 31
+
+    au < exists ; exists ; 2008 ; Local and Regional Anesthesia Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Local and Regional Anesthesia Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Local and Regional Anesthesia Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Local and Regional Anesthesia Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Local and Regional Anesthesia Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy ;
+      issn = 1178-7007
+    >
+    
+    param[journal_id] = 32
+
+    au < exists ; exists ; 2008 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Clinical, Cosmetic and Investigational Dermatology ;
+      issn = 1178-7015
+    >
+    
+    param[journal_id] = 33
+
+    au < exists ; exists ; 2008 ; Clinical, Cosmetic and Investigational Dermatology Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Clinical, Cosmetic and Investigational Dermatology Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Clinical, Cosmetic and Investigational Dermatology Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Clinical, Cosmetic and Investigational Dermatology Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Clinical, Cosmetic and Investigational Dermatology Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Clinical and Experimental Gastroenterology ;
+      issn = 1178-7023
+    >
+    
+    param[journal_id] = 34
+
+    au < exists ; exists ; 2008 ; Clinical and Experimental Gastroenterology Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Clinical and Experimental Gastroenterology Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Clinical and Experimental Gastroenterology Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Clinical and Experimental Gastroenterology Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Clinical and Experimental Gastroenterology Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Journal of Inflammation Research ;
+      issn = 1178-7031
+    >
+    
+    param[journal_id] = 35
+
+    au < exists ; exists ; 2008 ; Journal of Inflammation Research Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Inflammation Research Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Inflammation Research Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Inflammation Research Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Inflammation Research Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = The Application of Clinical Genetics ;
+      issn = 1178-704X
+    >
+    
+    param[journal_id] = 36
+
+    au < exists ; exists ; 2008 ; The Application of Clinical Genetics Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; The Application of Clinical Genetics Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; The Application of Clinical Genetics Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; The Application of Clinical Genetics Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; The Application of Clinical Genetics Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = International Journal of Nephrology and Renovascular Disease ;
+      issn = 1178-7058
+    >
+    
+    param[journal_id] = 37
+
+    au < exists ; exists ; 2008 ; International Journal of Nephrology and Renovascular Disease Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Nephrology and Renovascular Disease Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Nephrology and Renovascular Disease Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Nephrology and Renovascular Disease Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Nephrology and Renovascular Disease Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Pharmacogenomics and Personalized Medicine ;
+      issn = 1178-7066
+    >
+    
+    param[journal_id] = 38
+
+    au < exists ; exists ; 2008 ; Pharmacogenomics and Personalized Medicine Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Pharmacogenomics and Personalized Medicine Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Pharmacogenomics and Personalized Medicine Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Pharmacogenomics and Personalized Medicine Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Pharmacogenomics and Personalized Medicine Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = International Journal of General Medicine ;
+      issn = 1178-7074
+    >
+    
+    param[journal_id] = 39
+
+    au < exists ; exists ; 2008 ; International Journal of General Medicine Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of General Medicine Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of General Medicine Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of General Medicine Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of General Medicine Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Open Access Surgery ;
+      issn = 1178-7082
+    >
+    
+    param[journal_id] = 40
+
+    au < exists ; exists ; 2008 ; Open Access Surgery Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Open Access Surgery Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Open Access Surgery Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Open Access Surgery Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Open Access Surgery Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Journal of Pain Research ;
+      issn = 1178-7090
+    >
+    
+    param[journal_id] = 41
+
+    au < exists ; exists ; 2008 ; Journal of Pain Research Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Pain Research Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Pain Research Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Pain Research Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Pain Research Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Integrated Blood Pressure Control ;
+      issn = 1178-7104
+    >
+    
+    param[journal_id] = 42
+
+    au < exists ; exists ; 2008 ; Integrated Blood Pressure Control Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Integrated Blood Pressure Control Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Integrated Blood Pressure Control Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Integrated Blood Pressure Control Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Integrated Blood Pressure Control Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Clinical Epidemiology ;
+      issn = 1179-1349
+    >
+    
+    param[journal_id] = 43
+
+    au < exists ; exists ; 2009 ; Clinical Epidemiology Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Clinical Epidemiology Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Clinical Epidemiology Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Clinical Epidemiology Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Drug, Healthcare and Patient Safety ;
+      issn = 1179-1365
+    >
+    
+    param[journal_id] = 44
+
+    au < exists ; exists ; 2009 ; Drug, Healthcare and Patient Safety Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Drug, Healthcare and Patient Safety Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Drug, Healthcare and Patient Safety Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Drug, Healthcare and Patient Safety Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = International Journal of Women's Health ;
+      issn = 1179-1411
+    >
+    
+    param[journal_id] = 45
+
+    au < exists ; exists ; 2009 ; International Journal of Women's Health Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Women's Health Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Women's Health Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Women's Health Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = International Medical Case Reports Journal ;
+      issn = 1179-142X
+    >
+    
+    param[journal_id] = 46
+
+    au < exists ; exists ; 2008 ; International Medical Case Reports Journal Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; International Medical Case Reports Journal Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; International Medical Case Reports Journal Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; International Medical Case Reports Journal Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; International Medical Case Reports Journal Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Open Access Emergency Medicine ;
+      issn = 1179-1500
+    >
+    
+    param[journal_id] = 47
+
+    au < exists ; exists ; 2009 ; Open Access Emergency Medicine Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Open Access Emergency Medicine Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Open Access Emergency Medicine Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Open Access Emergency Medicine Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = International Journal of Interferon, Cytokine and Mediator Research ;
+      issn = 1179-139X
+    >
+    
+    param[journal_id] = 48
+
+    au < exists ; exists ; 2009 ; International Journal of Interferon, Cytokine and Mediator Research Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Interferon, Cytokine and Mediator Research Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Interferon, Cytokine and Mediator Research Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Interferon, Cytokine and Mediator Research Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Reports in Medical Imaging ;
+      issn = 1179-1586
+    >
+    
+    param[journal_id] = 49
+
+    au < exists ; exists ; 2008 ; Reports in Medical Imaging Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Reports in Medical Imaging Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Reports in Medical Imaging Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Reports in Medical Imaging Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Reports in Medical Imaging Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Urology ;
+      issn = 2253-2447
+    >
+    
+    param[journal_id] = 50
+
+    au < exists ; exists ; 2009 ; Research and Reports in Urology Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Research and Reports in Urology Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Research and Reports in Urology Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Research and Reports in Urology Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Open Access Journal of Clinical Trials ;
+      issn = 1179-1519
+    >
+    
+    param[journal_id] = 51
+
+    au < exists ; exists ; 2009 ; Open Access Journal of Clinical Trials Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Open Access Journal of Clinical Trials Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Open Access Journal of Clinical Trials Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Open Access Journal of Clinical Trials Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = International Journal of Wine Research ;
+      issn = 1179-1403
+    >
+    
+    param[journal_id] = 52
+
+    au < exists ; exists ; 2009 ; International Journal of Wine Research Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Wine Research Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Wine Research Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Wine Research Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Psychology Research and Behavior Management ;
+      issn = 1179-1578
+    >
+    
+    param[journal_id] = 53
+
+    au < exists ; exists ; 2008 ; Psychology Research and Behavior Management Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Psychology Research and Behavior Management Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Psychology Research and Behavior Management Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Psychology Research and Behavior Management Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Psychology Research and Behavior Management Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Clinical, Cosmetic and Investigational Dentistry ;
+      issn = 1179-1357
+    >
+    
+    param[journal_id] = 54
+
+    au < exists ; exists ; 2009 ; Clinical, Cosmetic and Investigational Dentistry Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Clinical, Cosmetic and Investigational Dentistry Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Clinical, Cosmetic and Investigational Dentistry Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Clinical, Cosmetic and Investigational Dentistry Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Cancer Management and Research ;
+      issn = 1179-1322
+    >
+    
+    param[journal_id] = 55
+
+    au < exists ; exists ; 2009 ; Cancer Management and Research Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Cancer Management and Research Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Cancer Management and Research Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Cancer Management and Research Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Risk Management and Healthcare Policy ;
+      issn = 1179-1594
+    >
+    
+    param[journal_id] = 56
+
+    au < exists ; exists ; 2008 ; Risk Management and Healthcare Policy Volume 1 ; 2008 >
+    au < exists ; exists ; 2009 ; Risk Management and Healthcare Policy Volume 2 ; 2009 >
+    au < exists ; exists ; 2010 ; Risk Management and Healthcare Policy Volume 3 ; 2010 >
+    au < exists ; exists ; 2011 ; Risk Management and Healthcare Policy Volume 4 ; 2011 >
+    au < exists ; exists ; 2012 ; Risk Management and Healthcare Policy Volume 5 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Transplant Research and Risk Management ;
+      issn = 1179-1616
+    >
+    
+    param[journal_id] = 57
+
+    au < exists ; exists ; 2009 ; Transplant Research and Risk Management Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Transplant Research and Risk Management Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Transplant Research and Risk Management Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Transplant Research and Risk Management Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Cell Health and Cytoskeleton ;
+      issn = 1179-1330
+    >
+    
+    param[journal_id] = 58
+
+    au < exists ; exists ; 2009 ; Cell Health and Cytoskeleton Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Cell Health and Cytoskeleton Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Cell Health and Cytoskeleton Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Cell Health and Cytoskeleton Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Open Access Rheumatology: Research and Reviews ;
+      issn = 1179-156X
+    >
+    
+    param[journal_id] = 59
+
+    au < exists ; exists ; 2009 ; Open Access Rheumatology: Research and Reviews Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Open Access Rheumatology: Research and Reviews Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Open Access Rheumatology: Research and Reviews Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Open Access Rheumatology: Research and Reviews Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Virus Adaptation and Treatment ;
+      issn = 1179-1624
+    >
+    
+    param[journal_id] = 60
+
+    au < exists ; exists ; 2009 ; Virus Adaptation and Treatment Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Virus Adaptation and Treatment Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Virus Adaptation and Treatment Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Virus Adaptation and Treatment Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Hepatic Medicine: Evidence and Research ;
+      issn = 1179-1535
+    >
+    
+    param[journal_id] = 61
+
+    au < exists ; exists ; 2009 ; Hepatic Medicine: Evidence and Research Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Hepatic Medicine: Evidence and Research Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Hepatic Medicine: Evidence and Research Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Hepatic Medicine: Evidence and Research Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Open Access Journal of Sports Medicine ;
+      issn = 1179-1543
+    >
+    
+    param[journal_id] = 64
+
+    au < exists ; exists ; 2010 ; Open Access Journal of Sports Medicine Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Open Access Journal of Sports Medicine Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Open Access Journal of Sports Medicine Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Clinical Pharmacology: Advances and Applications ;
+      issn = 1179-1438
+    >
+    
+    param[journal_id] = 65
+
+    au < exists ; exists ; 2009 ; Clinical Pharmacology: Advances and Applications Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Clinical Pharmacology: Advances and Applications Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Clinical Pharmacology: Advances and Applications Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Clinical Pharmacology: Advances and Applications Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Journal of Experimental Pharmacology ;
+      issn = 1179-1454
+    >
+    
+    param[journal_id] = 66
+
+    au < exists ; exists ; 2009 ; Journal of Experimental Pharmacology Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Experimental Pharmacology Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Experimental Pharmacology Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Experimental Pharmacology Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = HIV/AIDS - Research and Palliative Care ;
+      issn = 1179-1373
+    >
+    
+    param[journal_id] = 68
+
+    au < exists ; exists ; 2009 ; HIV/AIDS - Research and Palliative Care Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; HIV/AIDS - Research and Palliative Care Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; HIV/AIDS - Research and Palliative Care Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; HIV/AIDS - Research and Palliative Care Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Breast Cancer: Targets and Therapy ;
+      issn = 1179-1314
+    >
+    
+    param[journal_id] = 69
+
+    au < exists ; exists ; 2009 ; Breast Cancer: Targets and Therapy Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Breast Cancer: Targets and Therapy Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Breast Cancer: Targets and Therapy Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Breast Cancer: Targets and Therapy Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Nutrition and Dietary Supplements ;
+      issn = 1179-1489
+    >
+    
+    param[journal_id] = 71
+
+    au < exists ; exists ; 2009 ; Nutrition and Dietary Supplements Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Nutrition and Dietary Supplements Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Nutrition and Dietary Supplements Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Nutrition and Dietary Supplements Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Orthopedic Research and Reviews ;
+      issn = 1179-1462
+    >
+    
+    param[journal_id] = 72
+
+    au < exists ; exists ; 2009 ; Orthopedic Research and Reviews Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Orthopedic Research and Reviews Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Orthopedic Research and Reviews Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Orthopedic Research and Reviews Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Nature and Science of Sleep ;
+      issn = 1179-1608
+    >
+    
+    param[journal_id] = 73
+
+    au < exists ; exists ; 2009 ; Nature and Science of Sleep Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Nature and Science of Sleep Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Nature and Science of Sleep Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Nature and Science of Sleep Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Open Access Journal of Contraception ;
+      issn = 1179-1527
+    >
+    
+    param[journal_id] = 74
+
+    au < exists ; exists ; 2010 ; Open Access Journal of Contraception Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Open Access Journal of Contraception Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Open Access Journal of Contraception Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Neurobehavioral HIV Medicine ;
+      issn = 1179-1497
+    >
+    
+    param[journal_id] = 75
+
+    au < exists ; exists ; 2009 ; Neurobehavioral HIV Medicine Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Neurobehavioral HIV Medicine Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Neurobehavioral HIV Medicine Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Neurobehavioral HIV Medicine Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Clinical Optometry ;
+      issn = 1179-2752
+    >
+    
+    param[journal_id] = 78
+
+    au < exists ; exists ; 2009 ; Clinical Optometry Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Clinical Optometry Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Clinical Optometry Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Clinical Optometry Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Eye and Brain ;
+      issn = 1179-2744
+    >
+    
+    param[journal_id] = 79
+
+    au < exists ; exists ; 2009 ; Eye and Brain Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Eye and Brain Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Eye and Brain Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Eye and Brain Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Pathology and Laboratory Medicine International ;
+      issn = 1179-2698
+    >
+    
+    param[journal_id] = 80
+
+    au < exists ; exists ; 2009 ; Pathology and Laboratory Medicine International Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Pathology and Laboratory Medicine International Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Pathology and Laboratory Medicine International Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Pathology and Laboratory Medicine International Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Open Access Bioinformatics ;
+      issn = 1179-2701
+    >
+    
+    param[journal_id] = 81
+
+    au < exists ; exists ; 2009 ; Open Access Bioinformatics Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Open Access Bioinformatics Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Open Access Bioinformatics Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Open Access Bioinformatics Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Clinical Audit ;
+      issn = 1179-2760
+    >
+    
+    param[journal_id] = 82
+
+    au < exists ; exists ; 2009 ; Clinical Audit Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Clinical Audit Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Clinical Audit Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Clinical Audit Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Lung Cancer: Targets and Therapy ;
+      issn = 1179-2728
+    >
+    
+    param[journal_id] = 83
+
+    au < exists ; exists ; 2010 ; Lung Cancer: Targets and Therapy Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Lung Cancer: Targets and Therapy Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Lung Cancer: Targets and Therapy Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Patient Related Outcome Measures ;
+      issn = 1179-271X
+    >
+    
+    param[journal_id] = 84
+
+    au < exists ; exists ; 2010 ; Patient Related Outcome Measures Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Patient Related Outcome Measures Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Patient Related Outcome Measures Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Journal of Blood Medicine ;
+      issn = 1179-2736
+    >
+    
+    param[journal_id] = 85
+
+    au < exists ; exists ; 2010 ; Journal of Blood Medicine Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Blood Medicine Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Blood Medicine Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Open Access Insect Physiology ;
+      issn = 1179-2787
+    >
+    
+    param[journal_id] = 86
+
+    au < exists ; exists ; 2009 ; Open Access Insect Physiology Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Open Access Insect Physiology Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Open Access Insect Physiology Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Open Access Insect Physiology Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Open Access Animal Physiology ;
+      issn = 1179-2779
+    >
+    
+    param[journal_id] = 87
+
+    au < exists ; exists ; 2010 ; Open Access Animal Physiology Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Open Access Animal Physiology Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Open Access Animal Physiology Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Core Evidence ;
+      issn = 1555-1741 ;
+      eissn = 1555-175X
+    >
+    
+    param[journal_id] = 88
+
+    au < exists ; exists ; 2005 ; Core Evidence Volume 1 ; 2005 >
+    au < exists ; exists ; 2006 ; Core Evidence Volume 1 ; 2006 >
+    au < exists ; exists ; 2007 ; Core Evidence Volume 2 ; 2007 >
+    au < exists ; exists ; 2008 ; Core Evidence Volume 3 ; 2008 >
+    au < exists ; exists ; 2009 ; Core Evidence Volume 4 ; 2009 >
+    au < exists ; exists ; 2010 ; Core Evidence Volume 5 ; 2010 >
+    au < exists ; exists ; 2011 ; Core Evidence Volume 6 ; 2011 >
+    au < exists ; exists ; 2012 ; Core Evidence Volume 7 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Adolescent Health, Medicine and Therapeutics ;
+      issn = 1179-318X
+    >
+    
+    param[journal_id] = 89
+
+    au < exists ; exists ; 2010 ; Adolescent Health, Medicine and Therapeutics Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Adolescent Health, Medicine and Therapeutics Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Adolescent Health, Medicine and Therapeutics Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Patient Intelligence ;
+      issn = 1179-3198
+    >
+    
+    param[journal_id] = 90
+
+    au < exists ; exists ; 2009 ; Patient Intelligence Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Patient Intelligence Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Patient Intelligence Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Patient Intelligence Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Journal of Healthcare Leadership ;
+      issn = 1179-3201
+    >
+    
+    param[journal_id] = 91
+
+    au < exists ; exists ; 2009 ; Journal of Healthcare Leadership Volume 1 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Healthcare Leadership Volume 2 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Healthcare Leadership Volume 3 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Healthcare Leadership Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Advances in Medical Education and Practice ;
+      issn = 1179-7258
+    >
+    
+    param[journal_id] = 92
+
+    au < exists ; exists ; 2010 ; Advances in Medical Education and Practice Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Advances in Medical Education and Practice Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Advances in Medical Education and Practice Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Tropical Medicine ;
+      issn = 1179-7282
+    >
+    
+    param[journal_id] = 93
+
+    au < exists ; exists ; 2010 ; Research and Reports in Tropical Medicine Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Research and Reports in Tropical Medicine Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Research and Reports in Tropical Medicine Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Biology ;
+      issn = 1179-7274
+    >
+    
+    param[journal_id] = 94
+
+    au < exists ; exists ; 2010 ; Research and Reports in Biology Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Research and Reports in Biology Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Research and Reports in Biology Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Pragmatic and Observational Research ;
+      issn = 1179-7266
+    >
+    
+    param[journal_id] = 95
+
+    au < exists ; exists ; 2010 ; Pragmatic and Observational Research Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Pragmatic and Observational Research Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Pragmatic and Observational Research Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Research Reports in Clinical Cardiology ;
+      issn = 1179-8475
+    >
+    
+    param[journal_id] = 96
+
+    au < exists ; exists ; 2010 ; Research Reports in Clinical Cardiology Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Research Reports in Clinical Cardiology Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Research Reports in Clinical Cardiology Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Comparative Effectiveness Research ;
+      issn = 1179-8483
+    >
+    
+    param[journal_id] = 97
+
+    au < exists ; exists ; 2011 ; Comparative Effectiveness Research Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Comparative Effectiveness Research Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Substance Abuse and Rehabilitation ;
+      issn = 1179-8467
+    >
+    
+    param[journal_id] = 98
+
+    au < exists ; exists ; 2010 ; Substance Abuse and Rehabilitation Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Substance Abuse and Rehabilitation Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Substance Abuse and Rehabilitation Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Degenerative Neurological and Neuromuscular Disease ;
+      issn = 1179-9900
+    >
+    
+    param[journal_id] = 99
+
+    au < exists ; exists ; 2011 ; Degenerative Neurological and Neuromuscular Disease Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Degenerative Neurological and Neuromuscular Disease Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Advances in Genomics and Genetics ;
+      issn = 1179-9870
+    >
+    
+    param[journal_id] = 100
+
+    au < exists ; exists ; 2011 ; Advances in Genomics and Genetics Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Advances in Genomics and Genetics Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Blood and Lymphatic Cancer: Targets and Therapy ;
+      issn = 1179-9889
+    >
+    
+    param[journal_id] = 101
+
+    au < exists ; exists ; 2011 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Gastrointestinal Cancer: Targets and Therapy ;
+      issn = 1179-9919
+    >
+    
+    param[journal_id] = 102
+
+    au < exists ; exists ; 2011 ; Gastrointestinal Cancer: Targets and Therapy Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Gastrointestinal Cancer: Targets and Therapy Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Pediatric Health, Medicine and Therapeutics ;
+      issn = 1179-9927
+    >
+    
+    param[journal_id] = 103
+
+    au < exists ; exists ; 2010 ; Pediatric Health, Medicine and Therapeutics Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Pediatric Health, Medicine and Therapeutics Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Pediatric Health, Medicine and Therapeutics Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Neonatology ;
+      issn = 1179-9935
+    >
+    
+    param[journal_id] = 104
+
+    au < exists ; exists ; 2011 ; Research and Reports in Neonatology Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Research and Reports in Neonatology Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Clinical Oncology in Adolescents and Young Adults ;
+      issn = 2230-2263
+    >
+    
+    param[journal_id] = 105
+
+    au < exists ; exists ; 2011 ; Clinical Oncology in Adolescents and Young Adults Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Clinical Oncology in Adolescents and Young Adults Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Botanics: Targets and Therapy ;
+      issn = 1179-9897
+    >
+    
+    param[journal_id] = 106
+
+    au < exists ; exists ; 2011 ; Botanics: Targets and Therapy Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Botanics: Targets and Therapy Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = ChronoPhysiology and Therapy ;
+      issn = 2230-2026
+    >
+    
+    param[journal_id] = 107
+
+    au < exists ; exists ; 2011 ; ChronoPhysiology and Therapy Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; ChronoPhysiology and Therapy Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Veterinary Medicine: Research and Reports ;
+      issn = 2230-2034
+    >
+    
+    param[journal_id] = 108
+
+    au < exists ; exists ; 2010 ; Veterinary Medicine: Research and Reports Volume 1 ; 2010 >
+    au < exists ; exists ; 2011 ; Veterinary Medicine: Research and Reports Volume 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Veterinary Medicine: Research and Reports Volume 3 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Nuclear Medicine ;
+      issn = 2230-228X
+    >
+    
+    param[journal_id] = 109
+
+    au < exists ; exists ; 2011 ; Research and Reports in Nuclear Medicine Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Research and Reports in Nuclear Medicine Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Endocrine Disorders ;
+      issn = 2230-2271
+    >
+    
+    param[journal_id] = 110
+
+    au < exists ; exists ; 2011 ; Research and Reports in Endocrine Disorders Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Research and Reports in Endocrine Disorders Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Vaccine: Development and Therapy ;
+      issn = 2230-2298
+    >
+    
+    param[journal_id] = 111
+
+    au < exists ; exists ; 2011 ; Vaccine: Development and Therapy Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Vaccine: Development and Therapy Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Medicolegal and Bioethics ;
+      issn = 2230-2468
+    >
+    
+    param[journal_id] = 112
+
+    au < exists ; exists ; 2011 ; Medicolegal and Bioethics Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Medicolegal and Bioethics Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Biosimilars ;
+      issn = 2230-245X
+    >
+    
+    param[journal_id] = 113
+
+    au < exists ; exists ; 2011 ; Biosimilars Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Biosimilars Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Forensic Medical Science ;
+      issn = 2230-2476
+    >
+    
+    param[journal_id] = 114
+
+    au < exists ; exists ; 2011 ; Research and Reports in Forensic Medical Science Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Research and Reports in Forensic Medical Science Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Biodiversity Studies ;
+      issn = 2230-2484
+    >
+    
+    param[journal_id] = 115
+
+    au < exists ; exists ; 2011 ; Research and Reports in Biodiversity Studies Volume 1 ; 2011 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Current Biomarker Findings ;
+      issn = 2230-2492
+    >
+    
+    param[journal_id] = 116
+
+    au < exists ; exists ; 2011 ; Current Biomarker Findings Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Current Biomarker Findings Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Reports in Parasitology ;
+      issn = 2230-3162
+    >
+    
+    param[journal_id] = 117
+
+    au < exists ; exists ; 2011 ; Reports in Parasitology Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Reports in Parasitology Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Biochemistry ;
+      issn = 2230-3154
+    >
+    
+    param[journal_id] = 118
+
+    au < exists ; exists ; 2011 ; Research and Reports in Biochemistry Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Research and Reports in Biochemistry Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Antibody Technology Journal ;
+      issn = 2230-3170
+    >
+    
+    param[journal_id] = 119
+
+    au < exists ; exists ; 2011 ; Antibody Technology Journal Volume 1 ; 2011 >
+    au < exists ; 
+    exists ; 2012 ; Antibody Technology Journal Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Open Access Medical Statistics ;
+      issn = 2230-3251
+    >
+    
+    param[journal_id] = 120
+
+    au < exists ; exists ; 2011 ; Open Access Medical Statistics Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Open Access Medical Statistics Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Psoriasis: Targets and Therapy ;
+      issn = 2230-326X
+    >
+    
+    param[journal_id] = 121
+
+    au < exists ; exists ; 2011 ; Psoriasis: Targets and Therapy Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Psoriasis: Targets and Therapy Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Neuroscience and Neuroeconomics ;
+      issn = 2230-3561
+    >
+    
+    param[journal_id] = 125
+
+    au < exists ; exists ; 2012 ; Neuroscience and Neuroeconomics Volume 1 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Reports in Electrochemistry ;
+      issn = 2230-4096
+    >
+    
+    param[journal_id] = 127
+
+    au < exists ; exists ; 2011 ; Reports in Electrochemistry Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Reports in Electrochemistry Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Reports in Theoretical Chemistry ;
+      issn = 2230-410X
+    >
+    
+    param[journal_id] = 129
+
+    au < exists ; exists ; 2012 ; Reports in Theoretical Chemistry Volume 1 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Nursing: Research and Reviews ;
+      issn = 2230-522X
+    >
+    
+    param[journal_id] = 131
+
+    au < exists ; exists ; 2011 ; Nursing: Research and Reviews Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Nursing: Research and Reviews Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Medicinal Chemistry ;
+      issn = 2230-5238
+    >
+    
+    param[journal_id] = 133
+
+    au < exists ; exists ; 2011 ; Research and Reports in Medicinal Chemistry Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Research and Reports in Medicinal Chemistry Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Reports in Organic Chemistry ;
+      issn = 2230-5246
+    >
+    
+    param[journal_id] = 134
+
+    au < exists ; exists ; 2011 ; Reports in Organic Chemistry Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Reports in Organic Chemistry Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Integrated Pharmacy Research and Practice ;
+      issn = 2230-5254
+    >
+    
+    param[journal_id] = 135
+
+    au < exists ; exists ; 2012 ; Integrated Pharmacy Research and Practice Volume 1 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Orphan Drugs: Research and Reviews ;
+      issn = 2230-6161
+    >
+    
+    param[journal_id] = 136
+
+    au < exists ; exists ; 2011 ; Orphan Drugs: Research and Reviews Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Orphan Drugs: Research and Reviews Volume 2 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Nanobiosensors in Disease Diagnosis ;
+      issn = 2230-6153
+    >
+    
+    param[journal_id] = 137
+
+    au < exists ; exists ; 2012 ; Nanobiosensors in Disease Diagnosis Volume 1 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = ImmunoTargets and Therapy ;
+      issn = 2253-1556
+    >
+    
+    param[journal_id] = 138
+
+    au < exists ; exists ; 2012 ; ImmunoTargets and Therapy Volume 1 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Oncolytic Virotherapy ;
+      issn = 2253-1572
+    >
+    
+    param[journal_id] = 141
+
+    au < exists ; exists ; 2012 ; Oncolytic Virotherapy Volume 1 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Research and Reports in Transdermal Drug Delivery ;
+      issn = 2253-1580
+    >
+    
+    param[journal_id] = 142
+
+    au < exists ; exists ; 2012 ; Research and Reports in Transdermal Drug Delivery Volume 1 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Journal of Biorepository Science for Applied Medicine ;
+      issn = 2253-1785
+    >
+    
+    param[journal_id] = 143
+
+    au < exists ; exists ; 2012 ; Journal of Biorepository Science for Applied Medicine Volume 1 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Journal of Parkinsonism & Restless Legs Syndrome ;
+      issn = 1927-7733
+    >
+    
+    param[journal_id] = 147
+
+    au < exists ; exists ; 2011 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 2 ; 2012 >
+   
   }
 
 }

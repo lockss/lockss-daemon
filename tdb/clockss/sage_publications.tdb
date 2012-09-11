@@ -484,7 +484,7 @@
         au < manifest ; exists ; 2007 ; Adult Learning Volume 18 ; 18 ; >
         au < manifest ; exists ; 2008 ; Adult Learning Volume 19 ; 19 ; >
         au < manifest ; exists ; 2009 ; Adult Learning Volume 20 ; 20 ; >
-        au < manifest ; exists ; 2010 ; Adult Learning Volume 21 ; 21 ; >
+        au < crawling ; exists ; 2010 ; Adult Learning Volume 21 ; 21 ; >
         au < crawling ; exists ; 2011-2012 ; Adult Learning Volume 22 ; 22 ; >
         au < crawling ; exists ; 2012 ; Adult Learning Volume 23 ; 23 ; >
       
@@ -3217,8 +3217,8 @@
         au < manifest ; exists ; 2007-2008 ; British Journal of Pain Volume 1 ; 1 ; >
         au < manifest ; exists ; 2008 ; British Journal of Pain Volume 2 ; 2 ; >
         au < manifest ; exists ; 2009 ; British Journal of Pain Volume 3 ; 3 ; >
-        au < manifest ; exists ; 2010 ; British Journal of Pain Volume 4 ; 4 ; >
-        au < manifest ; exists ; 2011 ; British Journal of Pain Volume 5 ; 5 ; >
+        au < crawling ; exists ; 2010 ; British Journal of Pain Volume 4 ; 4 ; >
+        au < crawling ; exists ; 2011 ; British Journal of Pain Volume 5 ; 5 ; >
         au < manifest ; exists ; 2012 ; British Journal of Pain Volume 6 ; 6 ; >
 
       }
@@ -9523,7 +9523,7 @@
       au < released ; crawling ; 2009-2010 ; The Expository Times Volume 121 ; 121 ; >
       au < released ; crawling ; 2010-2011 ; The Expository Times Volume 122 ; 122 ; >
       au < released ; crawling ; 2011-2012 ; The Expository Times Volume 123 ; 123 ; >
-      au < expected ; exists ; 2012-2013 ; The Expository Times Volume 124 ; 124 ; >
+      au < manifest ; exists ; 2012-2013 ; The Expository Times Volume 124 ; 124 ; >
 
     }
 
@@ -12512,7 +12512,7 @@
       au < manifest ; exists ; 2007 ; International Area Studies Review Volume 10 ; 10 ; >
       au < manifest ; exists ; 2008 ; International Area Studies Review Volume 11 ; 11 ; >
       au < manifest ; exists ; 2009 ; International Area Studies Review Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2010 ; International Area Studies Review Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2010 ; International Area Studies Review Volume 13 ; 13 ; >
       au < crawling ; exists ; 2011 ; International Area Studies Review Volume 14 ; 14 ; >
       au < crawling ; exists ; 2012 ; International Area Studies Review Volume 15 ; 15 ; >
      
@@ -13937,7 +13937,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1954-1956 ; International Relations Volume 1 ; 1 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; International Relations Volume 1 ; 1 ; >
       au < manifest ; exists ; 1960-1965 ; International Relations Volume 2 ; 2 ; >
       au < manifest ; exists ; 1967-1971 ; International Relations Volume 3 ; 3 ; >
       au < manifest ; exists ; 1972 ; International Relations Volume 4 ; 4 ; >
@@ -14159,7 +14159,7 @@
         au < manifest ; exists ; 2007 ; International Review of Victimology Volume 14 ; 14 ; >
         au < manifest ; exists ; 2008-2009 ; International Review of Victimology Volume 15 ; 15 ; >
         au < manifest ; exists ; 2009 ; International Review of Victimology Volume 16 ; 16 ; >
-        au < manifest ; exists ; 2010 ; International Review of Victimology Volume 17 ; 17 ; >
+        au < crawling ; exists ; 2010 ; International Review of Victimology Volume 17 ; 17 ; >
         au < crawling ; exists ; 2012 ; International Review of Victimology Volume 18 ; 18 ; >
   
       }
@@ -14708,7 +14708,7 @@
       au < manifest ; exists ; 1996 ; Journal for the Study of the Old Testament Volume 21 ; 21 ; >
       au < manifest ; exists ; 1997 ; Journal for the Study of the Old Testament Volume 22 ; 22 ; >
       au < manifest ; exists ; 1998 ; Journal for the Study of the Old Testament Volume 23 ; 23 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Journal for the Study of the Old Testament Volume 24 ; 24 ; >
+      au < exists ; exists ; 1999 ; Journal for the Study of the Old Testament Volume 24 ; 24 ; >
       au < manifest ; exists ; 2000 ; Journal for the Study of the Old Testament Volume 25 ; 25 ; >
       au < manifest ; exists ; 2001-2002 ; Journal for the Study of the Old Testament Volume 26 ; 26 ; >
       au < manifest ; exists ; 2002-2003 ; Journal for the Study of the Old Testament Volume 27 ; 27 ; >
@@ -15118,7 +15118,7 @@
       au < manifest ; exists ; 2007 ; Journal of Applied Social Science Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; Journal of Applied Social Science Volume 2 ; 2 ; >
       au < manifest ; exists ; 2009 ; Journal of Applied Social Science Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2010 ; Journal of Applied Social Science Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2010 ; Journal of Applied Social Science Volume 4 ; 4 ; >
       au < crawling ; exists ; 2011 ; Journal of Applied Social Science Volume 5 ; 5 ; >
       au < crawling ; exists ; 2012 ; Journal of Applied Social Science Volume 6 ; 6 ; >
 
@@ -17073,7 +17073,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         rights = openaccess
 
-        au < manifest ; exists ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 ; >
+        au < crawling ; exists ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 ; >
         au < crawling ; exists ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 ; >
         au < manifest ; exists ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 ; >
         
@@ -17374,7 +17374,7 @@
       au < manifest ; exists ; 2007 ; Journal of Drug Issues Volume 37 ; 37 ; >
       au < manifest ; exists ; 2008 ; Journal of Drug Issues Volume 38 ; 38 ; >
       au < manifest ; exists ; 2009 ; Journal of Drug Issues Volume 39 ; 39 ; >
-      au < manifest ; exists ; 2010 ; Journal of Drug Issues Volume 40 ; 40 ; >
+      au < crawling ; exists ; 2010 ; Journal of Drug Issues Volume 40 ; 40 ; >
       au < crawling ; exists ; 2011 ; Journal of Drug Issues Volume 41 ; 41 ; >
       au < crawling ; exists ; 2012 ; Journal of Drug Issues Volume 42 ; 42 ; > 
     
@@ -18341,7 +18341,7 @@
       au < manifest ; exists ; 2007 ; Journal of Feline Medicine and Surgery Volume 9 ; 9 ; >
       au < manifest ; exists ; 2008 ; Journal of Feline Medicine and Surgery Volume 10 ; 10 ; >
       au < manifest ; exists ; 2009 ; Journal of Feline Medicine and Surgery Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2010 ; Journal of Feline Medicine and Surgery Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2010 ; Journal of Feline Medicine and Surgery Volume 12 ; 12 ; >
       au < crawling ; exists ; 2011 ; Journal of Feline Medicine and Surgery Volume 13 ; 13 ; >
       au < crawling ; exists ; 2012 ; Journal of Feline Medicine and Surgery Volume 14 ; 14 ; >
 
@@ -19697,7 +19697,7 @@
       au < manifest ; exists ; 2007 ; Journal of Laboratory Automation Volume 12 ; 12 ; >
       au < manifest ; exists ; 2008 ; Journal of Laboratory Automation Volume 13 ; 13 ; >
       au < manifest ; exists ; 2009 ; Journal of Laboratory Automation Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2010 ; Journal of Laboratory Automation Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2010 ; Journal of Laboratory Automation Volume 15 ; 15 ; >
       au < crawling ; exists ; 2011 ; Journal of Laboratory Automation Volume 16 ; 16 ; >
       au < crawling ; exists ; 2012 ; Journal of Laboratory Automation Volume 17 ; 17 ; >
 
@@ -21511,7 +21511,7 @@
     au < manifest ; exists ; 2007 ; Journal of Research on Leadership Education Volume 2 ; 2 ; >
     au < manifest ; exists ; 2008 ; Journal of Research on Leadership Education Volume 3 ; 3 ; >
     au < manifest ; exists ; 2009 ; Journal of Research on Leadership Education Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2010 ; Journal of Research on Leadership Education Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2010 ; Journal of Research on Leadership Education Volume 5 ; 5 ; >
     au < crawling ; exists ; 2011 ; Journal of Research on Leadership Education Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; Journal of Research on Leadership Education Volume 7 ; 7 ; >
 
@@ -23208,7 +23208,7 @@
         au < manifest ; exists ; 2007 ; Journalism & Mass Communication Educator Volume 62 ; 62 ; >
         au < manifest ; exists ; 2008 ; Journalism & Mass Communication Educator Volume 63 ; 63 ; >
         au < manifest ; exists ; 2009 ; Journalism & Mass Communication Educator Volume 64 ; 64 ; >
-        au < manifest ; exists ; 2010 ; Journalism & Mass Communication Educator Volume 65 ; 65 ; >
+        au < crawling ; exists ; 2010 ; Journalism & Mass Communication Educator Volume 65 ; 65 ; >
         au < crawling ; exists ; 2011 ; Journalism & Mass Communication Educator Volume 66 ; 66 ; >
         au < crawling ; exists ; 2012 ; Journalism & Mass Communication Educator Volume 67 ; 67 ; >
 
@@ -23241,7 +23241,7 @@
       au < manifest ; exists ; 2007 ; Journalism & Communication Monographs Volume 9 ; 9 ; >
       au < manifest ; exists ; 2008 ; Journalism & Communication Monographs Volume 10 ; 10 ; >
       au < manifest ; exists ; 2009 ; Journalism & Communication Monographs Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2010 ; Journalism & Communication Monographs Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2010 ; Journalism & Communication Monographs Volume 12 ; 12 ; >
       au < crawling ; exists ; 2011 ; Journalism & Communication Monographs Volume 13 ; 13 ; >
       au < crawling ; exists ; 2012 ; Journalism & Communication Monographs Volume 14 ; 14 ; >
 
@@ -23319,7 +23319,7 @@
       au < manifest ; exists ; 2007 ; Journalism & Mass Communication Quarterly Volume 84 ; 84 ; >
       au < manifest ; exists ; 2008 ; Journalism & Mass Communication Quarterly Volume 85 ; 85 ; >
       au < manifest ; exists ; 2009 ; Journalism & Mass Communication Quarterly Volume 86 ; 86 ; >
-      au < manifest ; exists ; 2010 ; Journalism & Mass Communication Quarterly Volume 87 ; 87 ; >
+      au < crawling ; exists ; 2010 ; Journalism & Mass Communication Quarterly Volume 87 ; 87 ; >
       au < crawling ; exists ; 2011 ; Journalism & Mass Communication Quarterly Volume 88 ; 88 ; >
       au < crawling ; exists ; 2012 ; Journalism & Mass Communication Quarterly Volume 89 ; 89 ; >
 
@@ -23965,7 +23965,7 @@
     {
 
       title <
-        name = Management & Labour Studies ;
+        name = Management and Labour Studies ;
         issn = 0258-042X ;
         issnl = 0258-042X
       >
@@ -23975,20 +23975,20 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://mls.sagepub.com/
 
-        au <  manifest ; exists ; 1999 ; Management & Labour Studies Volume 24 ; 24 ; >
-        au <  manifest ; exists ; 2000 ; Management & Labour Studies Volume 25 ; 25 ; >
-        au <  manifest ; exists ; 2001 ; Management & Labour Studies Volume 26 ; 26 ; >
-        au <  manifest ; exists ; 2002 ; Management & Labour Studies Volume 27 ; 27 ; >
-        au <  manifest ; exists ; 2003 ; Management & Labour Studies Volume 28 ; 28 ; >
-        au <  manifest ; exists ; 2004 ; Management & Labour Studies Volume 29 ; 29 ; >
-        au <  manifest ; exists ; 2005 ; Management & Labour Studies Volume 30 ; 30 ; >
-        au <  manifest ; exists ; 2006 ; Management & Labour Studies Volume 31 ; 31 ; >
-        au <  manifest ; exists ; 2007 ; Management & Labour Studies Volume 32 ; 32 ; >
-        au <  manifest ; exists ; 2008 ; Management & Labour Studies Volume 33 ; 33 ; >
-        au <  manifest ; exists ; 2009 ; Management & Labour Studies Volume 34 ; 34 ; >
-        au <  manifest ; exists ; 2010 ; Management & Labour Studies Volume 35 ; 35 ; >
-        au <  manifest ; exists ; 2011 ; Management & Labour Studies Volume 36 ; 36 ; >
-        au <  manifest ; exists ; 2012 ; Management & Labour Studies Volume 37 ; 37 ; >
+        au <  manifest ; exists ; 1999 ; Management and Labour Studies Volume 24 ; 24 ; >
+        au <  manifest ; exists ; 2000 ; Management and Labour Studies Volume 25 ; 25 ; >
+        au <  manifest ; exists ; 2001 ; Management and Labour Studies Volume 26 ; 26 ; >
+        au <  manifest ; exists ; 2002 ; Management and Labour Studies Volume 27 ; 27 ; >
+        au <  manifest ; exists ; 2003 ; Management and Labour Studies Volume 28 ; 28 ; >
+        au <  manifest ; exists ; 2004 ; Management and Labour Studies Volume 29 ; 29 ; >
+        au <  manifest ; exists ; 2005 ; Management and Labour Studies Volume 30 ; 30 ; >
+        au <  manifest ; exists ; 2006 ; Management and Labour Studies Volume 31 ; 31 ; >
+        au <  manifest ; exists ; 2007 ; Management and Labour Studies Volume 32 ; 32 ; >
+        au <  manifest ; exists ; 2008 ; Management and Labour Studies Volume 33 ; 33 ; >
+        au <  manifest ; exists ; 2009 ; Management and Labour Studies Volume 34 ; 34 ; >
+        au <  crawling ; exists ; 2010 ; Management and Labour Studies Volume 35 ; 35 ; >
+        au <  crawling ; exists ; 2011 ; Management and Labour Studies Volume 36 ; 36 ; >
+        au <  manifest ; exists ; 2012 ; Management and Labour Studies Volume 37 ; 37 ; >
 
       }
 
@@ -27620,8 +27620,8 @@
         au < manifest ; exists ; 2007 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 51 ; 51 ; >
         au < manifest ; exists ; 2008 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 52 ; 52 ; >
         au < manifest ; exists ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 ; >
-        au < manifest ; exists ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 ; >
-        au < manifest ; exists ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 ; >
+        au < crawling ; exists ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 ; >
+        au < crawling ; exists ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 ; >
         au < expected ; exists ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 56 ; 56 ; >
 
       }
@@ -28713,7 +28713,7 @@
         au < manifest ; exists ; 2007 ; Psychology of Women Quarterly Volume 31 ; 31 ; >
         au < manifest ; exists ; 2008 ; Psychology of Women Quarterly Volume 32 ; 32 ; >
         au < manifest ; exists ; 2009 ; Psychology of Women Quarterly Volume 33 ; 33 ; >
-        au < manifest ; exists ; 2010 ; Psychology of Women Quarterly Volume 34 ; 34 ; >
+        au < crawling ; exists ; 2010 ; Psychology of Women Quarterly Volume 34 ; 34 ; >
         au < released ; crawling ; 2011 ; Psychology of Women Quarterly Volume 35 ; 35 ; >
         au < crawling ; exists ; 2012 ; Psychology of Women Quarterly Volume 36 ; 36 ; >
 
@@ -29581,7 +29581,7 @@
       au < manifest ; exists ; 2007 ; Research Ethics Volume 3 ; 3 ; >
       au < manifest ; exists ; 2008 ; Research Ethics Volume 4 ; 4 ; >
       au < manifest ; exists ; 2009 ; Research Ethics Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2010 ; Research Ethics Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2010 ; Research Ethics Volume 6 ; 6 ; >
       au < crawling ; exists ; 2011 ; Research Ethics Volume 7 ; 7 ; >
       au < crawling ; exists ; 2012 ; Research Ethics Volume 8 ; 8 ; >
 
@@ -32579,12 +32579,12 @@
       au < manifest ; exists ; 1989 ; Textile Research Journal Volume 59 ; 59 ; >
       au < manifest ; exists ; 1990 ; Textile Research Journal Volume 60 ; 60 ; >
       au < manifest ; exists ; 1991 ; Textile Research Journal Volume 61 ; 61 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Textile Research Journal Volume 62 ; 62 ; >
+      au < exists ; exists ; 1992 ; Textile Research Journal Volume 62 ; 62 ; >
       au < manifest ; exists ; 1993 ; Textile Research Journal Volume 63 ; 63 ; >
       au < manifest ; exists ; 1994 ; Textile Research Journal Volume 64 ; 64 ; >
       au < manifest ; exists ; 1995 ; Textile Research Journal Volume 65 ; 65 ; >
       au < manifest ; exists ; 1996 ; Textile Research Journal Volume 66 ; 66 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Textile Research Journal Volume 67 ; 67 ; >
+      au < exists ; exists ; 1997 ; Textile Research Journal Volume 67 ; 67 ; >
       au < manifest ; exists ; 1998 ; Textile Research Journal Volume 68 ; 68 ; >
       au < manifest ; exists ; 1999 ; Textile Research Journal Volume 69 ; 69 ; >
       au < manifest ; exists ; 2000 ; Textile Research Journal Volume 70 ; 70 ; >
@@ -33518,10 +33518,11 @@
       au < released ; crawling ; 2011 ; Thesis Eleven Volume 104 ; 104 ; >
       au < released ; crawling ; 2011 ; Thesis Eleven Volume 105 ; 105 ; >
       au < released ; crawling ; 2011 ; Thesis Eleven Volume 106 ; 106 ; >
-      au < crawling ; exists ; 2012 ; Thesis Eleven Volume 107 ; 107 ; >
+      au < crawling ; exists ; 2011 ; Thesis Eleven Volume 107 ; 107 ; >
       au < crawling ; exists ; 2012 ; Thesis Eleven Volume 108 ; 108 ; >
       au < crawling ; exists ; 2012 ; Thesis Eleven Volume 109 ; 109 ; >
       au < crawling ; exists ; 2012 ; Thesis Eleven Volume 110 ; 110 ; >
+      au < manifest ; exists ; 2012 ; Thesis Eleven Volume 111 ; 111 ; >
       
 
     }

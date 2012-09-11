@@ -6,13 +6,61 @@
 
   attr[contract] = 2012
 
-  plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+  plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
   param[base_url] = http://www.ingentaconnect.com/
   param[api_url] = http://api.ingentaconnect.com/
   param[graphics_url] = http://graphics.ingentaconnect.com/
 
-  {
+  param[publisher_id] = manup
+  implicit < status1 ; status ; year ; name ; param[volume_name] >
 
+  {
+    title <
+      name = Mediterranean Studies ;
+      issn = 1074-164X ;
+      eissn = 2161-4741 ;
+      issnl = 1471-4787
+    >
+
+    param[journal_issn] = 1074-164X 
+    param[journal_id] = medst 
+
+    comment[URGENT] = Moving off of Ingenta 2012
+
+    au < exists ; exists ; 2005 ; Mediterranean Studies Volume 14 ; 14 >
+    au < exists ; exists ; 2006 ; Mediterranean Studies Volume 15 ; 15 >
+    au < exists ; exists ; 2007 ; Mediterranean Studies Volume 16 ; 16 >
+    au < exists ; exists ; 2008 ; Mediterranean Studies Volume 17 ; 17 >
+    au < exists ; exists ; 2009 ; Mediterranean Studies Volume 18 ; 18 >
+    au < exists ; exists ; 2010 ; Mediterranean Studies Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = The Seventeenth Century ;
+      issn = 0268-117X ;
+      eissn = 2050-4616 ;
+      issnl = 0268-117X
+    >
+
+    param[journal_issn] = 0268-117X 
+    param[journal_id] = tsc
+
+    comment[URGENT] = Moving off of Ingenta Dec 2012
+
+    au < exists ; exists ; 2005 ; The Seventeenth Century Volume 20 ; 20 >
+    au < exists ; exists ; 2006 ; The Seventeenth Century Volume 21 ; 21 >
+    au < exists ; exists ; 2007 ; The Seventeenth Century Volume 22 ; 22 >
+    au < exists ; exists ; 2008 ; The Seventeenth Century Volume 23 ; 23 >
+    au < exists ; exists ; 2009 ; The Seventeenth Century Volume 24 ; 24 >
+    au < exists ; exists ; 2010 ; The Seventeenth Century Volume 25 ; 25 >
+    au < exists ; exists ; 2011 ; The Seventeenth Century Volume 26 ; 26 >
+    au < exists ; exists ; 2012 ; The Seventeenth Century Volume 27 ; 27 >
+
+  }
+
+  {
     title <
       name = Visual Culture in Britain ;
       issn = 1471-4787 ;
@@ -21,11 +69,9 @@
     >
 
     param[journal_issn] = 1471-4787 
-    param[publisher_id] = manup
     param[journal_id] = vcb 
-    implicit < status1 ; status ; year ; name ; param[volume_name] >
 
-    comment[URGENT] = Trigger in clockss
+    comment[URGENT] = Trigger in clockss Dec 2012
 
     au < exists ; exists ; 2004 ; Visual Culture in Britain Volume 5 ; 5 >
     au < exists ; exists ; 2005 ; Visual Culture in Britain Volume 6 ; 6 >

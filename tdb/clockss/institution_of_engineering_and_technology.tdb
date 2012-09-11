@@ -5,14 +5,328 @@
   >
 
    attr[contract] = 2012
+   plugin = needs.plugin
+  comment[plugin] = pluging will be a daughter of OJS2 plugin, possibly called ClockssIETLinkPlugin
    
-   {
+     {
   
     title < 
-      name = Placeholder
-      
+      name = Electronics Letters ;
+      issn = 0013-5194 ;
+      eissn = 1350-911X
     >
     
     }
+    
+    {
+  
+    title < 
+      name = Engineering & Technology ;
+      issn = 1750-9637 ;
+      eissn = 1750-9645
+  
+      >
+     
 
+    }
+    
+    {
+  
+    title < 
+      name = IET Biometrics ;
+      issn = 2047-4938 ;
+      eissn = 2047-4946
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Circuits, Devices and Systems ;
+      issn = 1751-858X ;
+      eissn = 1751-8598
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Communications ;
+      issn = 1751-8628 ;
+      eissn = 1751-8636
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Computers & Digital Techniques ;
+      issn = 1751-8601 ;
+      eissn = 1751-861X
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Computer Vision ;
+      issn = 1751-9632 ;
+      eissn = 1751-9640
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Control Theory & Applications ;
+      issn = 1751-8644 ;
+      eissn = 1751-8652
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Electric Power Applications ;
+      issn = 1751-8660 ;
+      eissn = 1751-8679
+  
+      >
+     
+
+    }
+
+    {
+  
+    title < 
+      name = IET Electrical Systems in Transportation ;
+      issn = 2042-9738 ;
+      eissn = 2042-9746
+  
+      >
+     
+
+    }
+
+    {
+  
+    title < 
+      name = IET Generation, Transmission & Distribution ;
+      issn = 1751-8687 ;
+      eissn = 1751-8695
+  
+      >
+     
+
+    }    
+    
+    {
+  
+    title < 
+      name = IET Image Processing ;
+      issn = 1751-9659 ;
+      eissn = 1751-9667
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Information Security ;
+      issn = 1751-8709 ;
+      eissn = 1751-8717
+  
+      >
+     
+
+    }
+
+    {
+  
+    title < 
+      name = IET Intelligent Transport Systems ;
+      issn = 1751-956X ;
+      eissn = 1751-9578
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET  Microwaves, Antennas & Propagation ;
+      issn = 1751-8725 ;
+      eissn = 1751-8733
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Nanotechnology ;
+      issn = 1751-8741 ;
+      eissn = 1751-875X
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Networks ;
+      issn = 2047-4954 ;
+      eissn = 2047-4962
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Optoelectronics ;
+      issn = 1751-8768 ;
+      eissn = 1751-8776
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Power Electronics ;
+      issn = 1755-4535 ;
+      eissn = 1755-4543
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Radar, Sonar & Navigation ;
+      issn = 1751-8784 ;
+      eissn = 1751-8792
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Renewable Power Generation ;
+      issn = 1752-1416 ;
+      eissn = 1752-1424
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Science, Measurement & Technology ;
+      issn = 1751-8822 ;
+      eissn = 1751-8830
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Signal Processing ;
+      issn = 1751-9675 ;
+      eissn = 1751-9683
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Software ;
+      issn = 1751-8806 ;
+      eissn = 1751-8814
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Systems Biology ;
+      issn = 1751-8849 ;
+      eissn = 1751-8857
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = IET Wireless Sensor Systems ;
+      issn = 2043-6386 ;
+      eissn = 2043-6394
+  
+      >
+     
+
+    }
+    
+    {
+  
+    title < 
+      name = Micro & Nano Letters ;
+      eissn = 1750-0443
+  
+      >
+     
+
+    }
+    
 }
