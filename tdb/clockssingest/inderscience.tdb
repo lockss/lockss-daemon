@@ -155,12 +155,12 @@
 
       param[journal_issn] = 1751-5262
       
-      au < manifest ; exists ; 2007; European Journal of Industrial Engineering Volume 1 ; 1 >
-      au < manifest ; exists ; 2008; European Journal of Industrial Engineering Volume 2 ; 2 >
-      au < manifest ; exists ; 2009; European Journal of Industrial Engineering Volume 3 ; 3 >
-      au < manifest ; exists ; 2010; European Journal of Industrial Engineering Volume 4 ; 4 >
-      au < released ; crawling ; 2011; European Journal of Industrial Engineering Volume 5 ; 5 >
-      au < crawling ; exists ; 2012; European Journal of Industrial Engineering Volume 6 ; 6 >
+      au < manifest ; exists ; 2007 ; European Journal of Industrial Engineering Volume 1 ; 1 >
+      au < manifest ; exists ; 2008 ; European Journal of Industrial Engineering Volume 2 ; 2 >
+      au < manifest ; exists ; 2009 ; European Journal of Industrial Engineering Volume 3 ; 3 >
+      au < manifest ; exists ; 2010 ; European Journal of Industrial Engineering Volume 4 ; 4 >
+      au < released ; crawling ; 2011 ; European Journal of Industrial Engineering Volume 5 ; 5 >
+      au < crawling ; exists ; 2012 ; European Journal of Industrial Engineering Volume 6 ; 6 >
 
     }
 
@@ -2623,7 +2623,7 @@
       au < released ; crawling ; 2011 ; International Journal of Environment and Pollution Volume 44 ; 44 >
       au < released ; crawling ; 2011 ; International Journal of Environment and Pollution Volume 45 ; 45 >
       au < released ; crawling ; 2011 ; International Journal of Environment and Pollution Volume 46 ; 46 >
-      au < manifest ; exists ; 2011 ; International Journal of Environment and Pollution Volume 47 ; 47 >
+      au < crawling ; exists ; 2011 ; International Journal of Environment and Pollution Volume 47 ; 47 >
 
     }
 
@@ -4515,7 +4515,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Manufacturing Technology and Management Volume 21 ; 21 >
       au < released ; manifest ; 2011 ; International Journal of Manufacturing Technology and Management Volume 22 ; 22 >
       au < released ; manifest ; 2011 ; International Journal of Manufacturing Technology and Management Volume 23 ; 23 >
-      au < manifest ; exists ; 2011 ; International Journal of Manufacturing Technology and Management Volume 24 ; 24 >
+      au < crawling ; exists ; 2011 ; International Journal of Manufacturing Technology and Management Volume 24 ; 24 >
       au < manifest ; exists ; 2012 ; International Journal of Manufacturing Technology and Management Volume 25 ; 25 >
 
     }
@@ -6930,7 +6930,7 @@
       au < manifest ; exists ; 2007-2008 ; International Journal of Tourism Policy Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Tourism Policy Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Tourism Policy Volume 3 ; 3 >
-      au < manifest ; exists ; 2011 ; International Journal of Tourism Policy Volume 4 ; 4 >
+      au < crawling ; exists ; 2011 ; International Journal of Tourism Policy Volume 4 ; 4 >
 
     }
 
