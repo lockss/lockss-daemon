@@ -1002,18 +1002,18 @@
       >
       param[collection_id] = CFR
       
-    au < manifest ; 1996 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1996 ; 1996 >
-    au < manifest ; 1997 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1997 ; 1997 >
-    au < manifest ; 1998 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1998 ; 1998 >
-    au < manifest ; 1999 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1999 ; 1999 >
-    au < manifest ; 2000 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2000 ; 2000 >
-    au < manifest ; 2001 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2001 ; 2001 >
-    au < manifest ; 2002 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2002 ; 2002 >
-    au < manifest ; 2003 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2003 ; 2003 >
-    au < manifest ; 2004 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2004 ; 2004 >
-    au < manifest ; 2005 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2005 ; 2005 >
-    au < manifest ; 2006 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2006 ; 2006 >
-    au < manifest ; 2007 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2007 ; 2007 >
+    au < testing ; 1996 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1996 ; 1996 >
+    au < testing ; 1997 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1997 ; 1997 >
+    au < testing ; 1998 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1998 ; 1998 >
+    au < testing ; 1999 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1999 ; 1999 >
+    au < testing ; 2000 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2000 ; 2000 >
+    au < testing ; 2001 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2001 ; 2001 >
+    au < testing ; 2002 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2002 ; 2002 >
+    au < testing ; 2003 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2003 ; 2003 >
+    au < testing ; 2004 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2004 ; 2004 >
+    au < testing ; 2005 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2005 ; 2005 >
+    au < testing ; 2006 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2006 ; 2006 >
+    au < testing ; 2007 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2007 ; 2007 >
     au < testing ; 2008 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2008 ; 2008 >
     au < testing ; 2009 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2009 ; 2009 >
     au < testing ; 2010 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2010 ; 2010 >
@@ -1030,10 +1030,10 @@
       >
       param[collection_id] = CBD
     
-    au < manifest ; 1996 ; Commerce Business Daily - Bulk Data 1996 ; 1996 >
-    au < manifest ; 1997 ; Commerce Business Daily - Bulk Data 1997 ; 1997 >
-    au < manifest ; 1998 ; Commerce Business Daily - Bulk Data 1998 ; 1998 >
-    au < manifest ; 1999 ; Commerce Business Daily - Bulk Data 1999 ; 1999 >
+    au < testing ; 1996 ; Commerce Business Daily - Bulk Data 1996 ; 1996 >
+    au < testing ; 1997 ; Commerce Business Daily - Bulk Data 1997 ; 1997 >
+    au < testing ; 1998 ; Commerce Business Daily - Bulk Data 1998 ; 1998 >
+    au < testing ; 1999 ; Commerce Business Daily - Bulk Data 1999 ; 1999 >
     au < testing ; 2000 ; Commerce Business Daily - Bulk Data 2000 ; 2000 >
     au < testing ; 2001 ; Commerce Business Daily - Bulk Data 2001 ; 2001 >
     
@@ -1047,16 +1047,16 @@
       >
       param[collection_id] = FR
     
-    au < manifest ; 2000 ; Federal Regulations  - Bulk Data 2000 ; 2000 >
-    au < manifest ; 2001 ; Federal Regulations  - Bulk Data 2001 ; 2001 >
-    au < manifest ; 2002 ; Federal Regulations  - Bulk Data 2002 ; 2002 >
-    au < manifest ; 2003 ; Federal Regulations  - Bulk Data 2003 ; 2003 >
-    au < manifest ; 2004 ; Federal Regulations  - Bulk Data 2004 ; 2004 >
-    au < manifest ; 2005 ; Federal Regulations  - Bulk Data 2005 ; 2005 >
-    au < manifest ; 2006 ; Federal Regulations  - Bulk Data 2006 ; 2006 >
-    au < manifest ; 2007 ; Federal Regulations  - Bulk Data 2007 ; 2007 >
-    au < manifest ; 2008 ; Federal Regulations  - Bulk Data 2008 ; 2008 >
-    au < manifest ; 2009 ; Federal Regulations  - Bulk Data 2009 ; 2009 >
+    au < testing ; 2000 ; Federal Regulations  - Bulk Data 2000 ; 2000 >
+    au < testing ; 2001 ; Federal Regulations  - Bulk Data 2001 ; 2001 >
+    au < testing ; 2002 ; Federal Regulations  - Bulk Data 2002 ; 2002 >
+    au < testing ; 2003 ; Federal Regulations  - Bulk Data 2003 ; 2003 >
+    au < testing ; 2004 ; Federal Regulations  - Bulk Data 2004 ; 2004 >
+    au < testing ; 2005 ; Federal Regulations  - Bulk Data 2005 ; 2005 >
+    au < testing ; 2006 ; Federal Regulations  - Bulk Data 2006 ; 2006 >
+    au < testing ; 2007 ; Federal Regulations  - Bulk Data 2007 ; 2007 >
+    au < testing ; 2008 ; Federal Regulations  - Bulk Data 2008 ; 2008 >
+    au < testing ; 2009 ; Federal Regulations  - Bulk Data 2009 ; 2009 >
     au < testing ; 2010 ; Federal Regulations  - Bulk Data 2010 ; 2010 >
     au < testing ; 2011 ; Federal Regulations  - Bulk Data 2011 ; 2011 >
     au < manifest ; 2012 ; Federal Regulations  - Bulk Data 2012 ; 2012 >
