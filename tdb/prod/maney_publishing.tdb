@@ -1090,7 +1090,7 @@
     au < manifest ; 2009 ; Early Medieval China Volume 2009 ; 2009 > 
     au < manifest ; 2010 ; Early Medieval China Volume 2010 ; 2010 > 
     au < manifest ; 2011 ; Early Medieval China Volume 2011 ; 2011 > 
-    au < expected ; 2012 ; Early Medieval China Volume 2012 ; 2012 > 
+    au < manifest ; 2012 ; Early Medieval China Volume 2012 ; 2012 > 
 
   }
 
@@ -4713,13 +4713,13 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < testing ; 1983 ; War & Society Volume 1 ; 1 > 
-    au < testing ; 1984 ; War & Society Volume 2 ; 2 > 
-    au < testing ; 1985 ; War & Society Volume 3 ; 3 > 
+    au < ready ; 1984 ; War & Society Volume 2 ; 2 > 
+    au < ready ; 1985 ; War & Society Volume 3 ; 3 > 
     au < testing ; 1986 ; War & Society Volume 4 ; 4 > 
     au < testing ; 1987 ; War & Society Volume 5 ; 5 > 
-    au < testing ; 1988 ; War & Society Volume 6 ; 6 > 
+    au < ready ; 1988 ; War & Society Volume 6 ; 6 > 
     au < testing ; 1989 ; War & Society Volume 7 ; 7 > 
-    au < testing ; 1990 ; War & Society Volume 8 ; 8 > 
+    au < ready ; 1990 ; War & Society Volume 8 ; 8 > 
     au < testing ; 1991 ; War & Society Volume 9 ; 9 > 
     au < testing ; 1992 ; War & Society Volume 10 ; 10 > 
     au < manifest ; 1993 ; War & Society Volume 11 ; 11 > 
