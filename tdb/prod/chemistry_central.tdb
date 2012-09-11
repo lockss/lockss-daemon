@@ -19,12 +19,29 @@
     param[base_url] = http://www.journal.chemistrycentral.com/
     param[journal_issn] = 1752-153X
     
-    au < released ; 2007 ; Chemistry Central Journal Volume 1 ; 1 >
-    au < released ; 2008 ; Chemistry Central Journal Volume 2 ; 2 >
-    au < released ; 2009 ; Chemistry Central Journal Volume 3 ; 3 >
-    au < released ; 2010 ; Chemistry Central Journal Volume 4 ; 4 >
-    au < testing ; 2011 ; Chemistry Central Journal Volume 5 ; 5 >
-    au < testing ; 2012 ; Chemistry Central Journal Volume 6 ; 6 >
+    {
+      param[base_url] = http://www.journal.chemistrycentral.com/
+      param[journal_issn] = 1752-153X
+      
+      au < down ; 2007 ; Chemistry Central Journal Volume 1 ; 1 >
+      au < down ; 2008 ; Chemistry Central Journal Volume 2 ; 2 >
+      au < down ; 2009 ; Chemistry Central Journal Volume 3 ; 3 >
+      au < down ; 2010 ; Chemistry Central Journal Volume 4 ; 4 >
+      
+    }
+    
+    {
+      param[base_url] = http://journal.chemistrycentral.com/
+      param[journal_issn] = 1752-153X
+      
+      au < doNotProcess ; 2007 ; Chemistry Central Journal Volume 1 ; 1 >
+      au < doNotProcess ; 2008 ; Chemistry Central Journal Volume 2 ; 2 >
+      au < doNotProcess ; 2009 ; Chemistry Central Journal Volume 3 ; 3 >
+      au < doNotProcess ; 2010 ; Chemistry Central Journal Volume 4 ; 4 >
+      au < testing ; 2011 ; Chemistry Central Journal Volume 5 ; 5 >
+      au < testing ; 2012 ; Chemistry Central Journal Volume 6 ; 6 >
+      
+    }
   
   }
   
