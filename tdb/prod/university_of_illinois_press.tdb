@@ -21,8 +21,8 @@
       param[journal_dir] = american_journal_of_theology_and_philosophy
       attr[journal_id] = ajt
 
-      au < ready ; 2010 ; American Journal of Theology & Philosophy Volume 31 ; 31 >
-      au < ready ; 2011 ; American Journal of Theology & Philosophy Volume 32 ; 32 >
+      au < releasing ; 2010 ; American Journal of Theology & Philosophy Volume 31 ; 31 >
+      au < releasing ; 2011 ; American Journal of Theology & Philosophy Volume 32 ; 32 >
       au < manifest ; 2012 ; American Journal of Theology & Philosophy Volume 33 ; 33 >
 
     }
@@ -41,7 +41,7 @@
       au < released ; 2007-2008 ; American Literary Realism Volume 40 ; 40 >
       au < released ; 2008-2009 ; American Literary Realism Volume 41 ; 41 >
       au < released ; 2009-2010 ; American Literary Realism Volume 42 ; 42 >
-      au < ready ; 2010-2011 ; American Literary Realism Volume 43 ; 43 >
+      au < releasing ; 2010-2011 ; American Literary Realism Volume 43 ; 43 >
       au < manifest ; 2011-2012 ; American Literary Realism Volume 44 ; 44 >
       au < manifest ; 2012-2013 ; American Literary Realism Volume 45 ; 45 >
 
@@ -58,9 +58,9 @@
       param[journal_dir] = american_music
       attr[journal_id] = amm
 
-      au < ready ; 2009 ; American Music Volume 27 ; 27 >
-      au < ready ; 2010 ; American Music Volume 28 ; 28 >
-      au < ready ; 2011 ; American Music Volume 29 ; 29 >
+      au < releasing ; 2009 ; American Music Volume 27 ; 27 >
+      au < releasing ; 2010 ; American Music Volume 28 ; 28 >
+      au < releasing ; 2011 ; American Music Volume 29 ; 29 >
       au < expected ; 2012 ; American Music Volume 30 ; 30 >
 
     }
@@ -76,8 +76,8 @@
       param[journal_dir] = black_music_research_journal
       attr[journal_id] = bmr
 
-      au < ready ; 2010 ; Black Music Research Journal Volume 30 ; 30 >
-      au < ready ; 2011 ; Black Music Research Journal Volume 31 ; 31 >
+      au < releasing ; 2010 ; Black Music Research Journal Volume 30 ; 30 >
+      au < releasing ; 2011 ; Black Music Research Journal Volume 31 ; 31 >
       au < expected ; 2012 ; Black Music Research Journal Volume 32 ; 32 >
 
     }
@@ -94,8 +94,8 @@
       attr[journal_id] = bwg
 
       au < released ; 2009 ; Black Women, Gender & Families Volume 3 ; 3 >
-      au < ready ; 2010 ; Black Women, Gender & Families Volume 4 ; 4 >
-      au < ready ; 2011 ; Black Women, Gender & Families Volume 5 ; 5 >
+      au < releasing ; 2010 ; Black Women, Gender & Families Volume 4 ; 4 >
+      au < releasing ; 2011 ; Black Women, Gender & Families Volume 5 ; 5 >
       au < manifest ; 2012 ; Black Women, Gender & Families Volume 6 ; 6 >
 
     }
@@ -113,8 +113,8 @@
 
       au < released ; 2008 ; Dance Research Journal Volume 40 ; 40 >
       au < released ; 2009 ; Dance Research Journal Volume 41 ; 41 >
-      au < ready ; 2010 ; Dance Research Journal Volume 42 ; 42 >
-      au < ready ; 2011 ; Dance Research Journal Volume 43 ; 43 >
+      au < releasing ; 2010 ; Dance Research Journal Volume 42 ; 42 >
+      au < releasing ; 2011 ; Dance Research Journal Volume 43 ; 43 >
       au < manifest ; 2012 ; Dance Research Journal Volume 44 ; 44 >
 
     }
@@ -132,8 +132,8 @@
 
       au < released ; 2007-2008 ; Feminist Teacher Volume 18 ; 18 >
       au < released ; 2008-2009 ; Feminist Teacher Volume 19 ; 19 >
-      au < ready ; 2009-2010 ; Feminist Teacher Volume 20 ; 20 >
-      au < ready ; 2010-2011 ; Feminist Teacher Volume 21 ; 21 >
+      au < releasing ; 2009-2010 ; Feminist Teacher Volume 20 ; 20 >
+      au < releasing ; 2010-2011 ; Feminist Teacher Volume 21 ; 21 >
       au < expected ; 2011-2012 ; Feminist Teacher Volume 22 ; 22 >
  
     }
@@ -151,7 +151,7 @@
 
       au < released ; 2009 ; JEGP, Journal of English and Germanic Philology Volume 108 ; 108 >
       au < released ; 2010 ; JEGP, Journal of English and Germanic Philology Volume 109 ; 109 >
-      au < ready ; 2011 ; JEGP, Journal of English and Germanic Philology Volume 110 ; 110 >
+      au < releasing ; 2011 ; JEGP, Journal of English and Germanic Philology Volume 110 ; 110 >
       au < manifest ; 2012 ; JEGP, Journal of English and Germanic Philology Volume 111 ; 111 >
 
     }
@@ -175,7 +175,7 @@
       au < released ; 2008 ; The Journal of Aesthetic Education Volume 42 ; 42 >
       au < released ; 2009 ; The Journal of Aesthetic Education Volume 43 ; 43 >
       au < released ; 2010 ; The Journal of Aesthetic Education Volume 44 ; 44 >
-      au < ready ; 2011 ; The Journal of Aesthetic Education Volume 45 ; 45 >
+      au < releasing ; 2011 ; The Journal of Aesthetic Education Volume 45 ; 45 >
       au < manifest ; 2012 ; The Journal of Aesthetic Education Volume 46 ; 46 >
 
     }
@@ -192,8 +192,8 @@
       attr[journal_id] = jef
 
       au < released ; 2009 ; Journal of Education Finance Volume 35 ; 35 >
-      au < ready ; 2010 ; Journal of Education Finance Volume 36 ; 36 >
-      au < ready ; 2011 ; Journal of Education Finance Volume 37 ; 37 >
+      au < releasing ; 2010 ; Journal of Education Finance Volume 36 ; 36 >
+      au < releasing ; 2011 ; Journal of Education Finance Volume 37 ; 37 >
       au < manifest ; 2012 ; Journal of Education Finance Volume 38 ; 38 >
 
     }
@@ -212,7 +212,7 @@
       au < released ; 2008 ; Journal of Film and Video Volume 60 ; 60 >
       au < released ; 2009 ; Journal of Film and Video Volume 61 ; 61 >
       au < released ; 2010 ; Journal of Film and Video Volume 62 ; 62 >
-      au < ready ; 2011 ; Journal of Film and Video Volume 63 ; 63 >
+      au < releasing ; 2011 ; Journal of Film and Video Volume 63 ; 63 >
       au < manifest ; 2012 ; Journal of Film and Video Volume 64 ; 64 >
 
     }
@@ -229,8 +229,8 @@
       attr[journal_id] = plu
 
       au < released ; 2009 ; The Pluralist Volume 4 ; 4 >
-      au < ready ; 2010 ; The Pluralist Volume 5 ; 5 >
-      au < ready ; 2011 ; The Pluralist Volume 6 ; 6 >
+      au < releasing ; 2010 ; The Pluralist Volume 5 ; 5 >
+      au < releasing ; 2011 ; The Pluralist Volume 6 ; 6 >
       au < manifest ; 2012 ; The Pluralist Volume 7 ; 7 >
 
     }
@@ -252,12 +252,12 @@
       au < released ; 2009 ; Radical Teacher Number 84 ; 84 >
       au < released ; 2009 ; Radical Teacher Number 85 ; 85 >
       au < released ; 2009 ; Radical Teacher Number 86 ; 86 >
-      au < ready ; 2010 ; Radical Teacher Number 87 ; 87 >
-      au < ready ; 2010 ; Radical Teacher Number 88 ; 88 >
-      au < ready ; 2010 ; Radical Teacher Number 89 ; 89 >
-      au < ready ; 2011 ; Radical Teacher Number 90 ; 90 >
-      au < ready ; 2011 ; Radical Teacher Number 91 ; 91 >
-      au < ready ; 2011 ; Radical Teacher Number 92 ; 92 >
+      au < releasing ; 2010 ; Radical Teacher Number 87 ; 87 >
+      au < releasing ; 2010 ; Radical Teacher Number 88 ; 88 >
+      au < releasing ; 2010 ; Radical Teacher Number 89 ; 89 >
+      au < releasing ; 2011 ; Radical Teacher Number 90 ; 90 >
+      au < releasing ; 2011 ; Radical Teacher Number 91 ; 91 >
+      au < releasing ; 2011 ; Radical Teacher Number 92 ; 92 >
       au < manifest ; 2012 ; Radical Teacher Number 93 ; 93 >
       au < manifest ; 2012 ; Radical Teacher Number 94 ; 94 >
       au < expected ; 2012 ; Radical Teacher Number 95 ; 95 >
@@ -275,8 +275,8 @@
       param[journal_dir] = visual_arts_research
       attr[journal_id] = var
 
-      au < ready ; 2010 ; Visual Arts Research Volume 36 ; 36 >
-      au < ready ; 2011 ; Visual Arts Research Volume 37 ; 37 >
+      au < releasing ; 2010 ; Visual Arts Research Volume 36 ; 36 >
+      au < releasing ; 2011 ; Visual Arts Research Volume 37 ; 37 >
       au < manifest ; 2012 ; Visual Arts Research Volume 38 ; 38 >
 
     }

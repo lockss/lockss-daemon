@@ -167,20 +167,20 @@
       param[base_url] = http://pediatrics.aappublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 1948 ; Pediatrics Volume 1 ; 1 >
-      au < ready ; 1948 ; Pediatrics Volume 2 ; 2 >
-      au < ready ; 1949 ; Pediatrics Volume 3 ; 3 >
-      au < ready ; 1949 ; Pediatrics Volume 4 ; 4 >
-      au < ready ; 1950 ; Pediatrics Volume 5 ; 5 >
-      au < ready ; 1950 ; Pediatrics Volume 6 ; 6 >
-      au < ready ; 1951 ; Pediatrics Volume 7 ; 7 >
-      au < ready ; 1951 ; Pediatrics Volume 8 ; 8 >
-      au < ready ; 1952 ; Pediatrics Volume 9 ; 9 >
-      au < ready ; 1952 ; Pediatrics Volume 10 ; 10 >
-      au < ready ; 1953 ; Pediatrics Volume 11 ; 11 >
-      au < ready ; 1953 ; Pediatrics Volume 12 ; 12 >
-      au < ready ; 1954 ; Pediatrics Volume 13 ; 13 >
-      au < ready ; 1954 ; Pediatrics Volume 14 ; 14 >
+      au < releasing ; 1948 ; Pediatrics Volume 1 ; 1 >
+      au < releasing ; 1948 ; Pediatrics Volume 2 ; 2 >
+      au < releasing ; 1949 ; Pediatrics Volume 3 ; 3 >
+      au < releasing ; 1949 ; Pediatrics Volume 4 ; 4 >
+      au < releasing ; 1950 ; Pediatrics Volume 5 ; 5 >
+      au < releasing ; 1950 ; Pediatrics Volume 6 ; 6 >
+      au < releasing ; 1951 ; Pediatrics Volume 7 ; 7 >
+      au < releasing ; 1951 ; Pediatrics Volume 8 ; 8 >
+      au < releasing ; 1952 ; Pediatrics Volume 9 ; 9 >
+      au < releasing ; 1952 ; Pediatrics Volume 10 ; 10 >
+      au < releasing ; 1953 ; Pediatrics Volume 11 ; 11 >
+      au < releasing ; 1953 ; Pediatrics Volume 12 ; 12 >
+      au < releasing ; 1954 ; Pediatrics Volume 13 ; 13 >
+      au < releasing ; 1954 ; Pediatrics Volume 14 ; 14 >
       au < released ; 1955 ; Pediatrics Volume 15 ; 15 >
       au < released ; 1955 ; Pediatrics Volume 16 ; 16 >
       au < released ; 1956 ; Pediatrics Volume 17 ; 17 >
@@ -236,13 +236,13 @@
       au < released ; 1981 ; Pediatrics Volume 67 ; 67 >
       au < released ; 1981 ; Pediatrics Volume 68 ; 68 >
       au < released ; 1982 ; Pediatrics Volume 69 ; 69 >
-      au < ready ; 1982 ; Pediatrics Volume 70 ; 70 >
-      au < ready ; 1983 ; Pediatrics Volume 71 ; 71 >
-      au < ready ; 1983 ; Pediatrics Volume 72 ; 72 >
-      au < ready ; 1984 ; Pediatrics Volume 73 ; 73 >
-      au < ready ; 1984 ; Pediatrics Volume 74 ; 74 >
-      au < ready ; 1985 ; Pediatrics Volume 75 ; 75 >
-      au < ready ; 1985 ; Pediatrics Volume 76 ; 76 >
+      au < releasing ; 1982 ; Pediatrics Volume 70 ; 70 >
+      au < releasing ; 1983 ; Pediatrics Volume 71 ; 71 >
+      au < releasing ; 1983 ; Pediatrics Volume 72 ; 72 >
+      au < releasing ; 1984 ; Pediatrics Volume 73 ; 73 >
+      au < releasing ; 1984 ; Pediatrics Volume 74 ; 74 >
+      au < releasing ; 1985 ; Pediatrics Volume 75 ; 75 >
+      au < releasing ; 1985 ; Pediatrics Volume 76 ; 76 >
       au < testing ; 1986 ; Pediatrics Volume 77 ; 77 >
       au < released ; 1986 ; Pediatrics Volume 78 ; 78 >
       au < released ; 1987 ; Pediatrics Volume 79 ; 79 >
@@ -264,11 +264,11 @@
       au < released ; 1995 ; Pediatrics Volume 95 ; 95 >
       au < released ; 1995 ; Pediatrics Volume 96 ; 96 >
       au < released ; 1996 ; Pediatrics Volume 97 ; 97 >
-      au < ready ; 1996 ; Pediatrics Volume 98 ; 98 >
-      au < ready ; 1997 ; Pediatrics Volume 99 ; 99 >
+      au < releasing ; 1996 ; Pediatrics Volume 98 ; 98 >
+      au < releasing ; 1997 ; Pediatrics Volume 99 ; 99 >
       au < released ; 1997 ; Pediatrics Volume 100 ; 100 >
       au < released ; 1998 ; Pediatrics Volume 101 ; 101 >
-      au < ready ; 1998 ; Pediatrics Volume 102 ; 102 >
+      au < releasing ; 1998 ; Pediatrics Volume 102 ; 102 >
       au < testing ; 1999 ; Pediatrics Volume 103 ; 103 >
       au < released ; 1999 ; Pediatrics Volume 104 ; 104 >
       au < testing ; 2000 ; Pediatrics Volume 105 ; 105 >

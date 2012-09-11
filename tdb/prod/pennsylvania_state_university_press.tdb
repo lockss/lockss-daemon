@@ -44,11 +44,11 @@
       au < released ; 2005 ; The Chaucer Review Volume 39 ; 39 >
       au < released ; 2006 ; The Chaucer Review Volume 40 ; 40 >
       au < released ; 2007 ; The Chaucer Review Volume 41 ; 41 >
-      au < ready ; 2008 ; The Chaucer Review Volume 42 ; 42 >
-      au < ready ; 2009 ; The Chaucer Review Volume 43 ; 43 >
-      au < ready ; 2010 ; The Chaucer Review Volume 44 ; 44 >
-      au < ready ; 2011 ; The Chaucer Review Volume 45 ; 45 >
-      au < ready ; 2011 ; The Chaucer Review Volume 46 ; 46 >
+      au < releasing ; 2008 ; The Chaucer Review Volume 42 ; 42 >
+      au < releasing ; 2009 ; The Chaucer Review Volume 43 ; 43 >
+      au < releasing ; 2010 ; The Chaucer Review Volume 44 ; 44 >
+      au < releasing ; 2011 ; The Chaucer Review Volume 45 ; 45 >
+      au < releasing ; 2011 ; The Chaucer Review Volume 46 ; 46 >
       au < manifest ; 2012 ; The Chaucer Review Volume 47 ; 47 >
     
     }
@@ -180,8 +180,8 @@
       au < released ; 2007 ; The Good Society Volume 16 ; 16 >
       au < released ; 2008 ; The Good Society Volume 17 ; 17 >
       au < released ; 2009 ; The Good Society Volume 18 ; 18 >
-      au < ready ; 2010 ; The Good Society Volume 19 ; 19 >
-      au < ready ; 2011 ; The Good Society Volume 20 ; 20 >
+      au < releasing ; 2010 ; The Good Society Volume 19 ; 19 >
+      au < releasing ; 2011 ; The Good Society Volume 20 ; 20 >
       au < manifest ; 2012 ; The Good Society Volume 21 ; 21 >
       
     }
@@ -204,7 +204,7 @@
       param[journal_dir] = interdisciplinary_literary_studies
       attr[journal_id] = ids
     
-      au < ready ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 14 >
+      au < releasing ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 14 >
       
     }
 
@@ -303,8 +303,8 @@
       au < released ; 2007 ; The Journal of General Education Volume 56 ; 56 >
       au < released ; 2008 ; The Journal of General Education Volume 57 ; 57 >
       au < released ; 2009 ; The Journal of General Education Volume 58 ; 58 >
-      au < ready ; 2010 ; The Journal of General Education Volume 59 ; 59 >
-      au < ready ; 2011 ; The Journal of General Education Volume 60 ; 60 >
+      au < releasing ; 2010 ; The Journal of General Education Volume 59 ; 59 >
+      au < releasing ; 2011 ; The Journal of General Education Volume 60 ; 60 >
       au < manifest ; 2012 ; The Journal of General Education Volume 61 ; 61 >
       
     }
@@ -337,8 +337,8 @@
       param[journal_dir] = journal_of_medieval_religious_cultures
       attr[journal_id] = mrc
 
-      au < ready ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 36 >
-      au < ready ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 37 >
+      au < releasing ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 36 >
+      au < releasing ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 37 >
       au < manifest ; 2012 ; Journal of Medieval Religious Cultures Volume 38 ; 38 >
       
     }
@@ -361,8 +361,8 @@
       param[journal_dir] = journal_of_modern_periodical_studies
       attr[journal_id] = jmp
     
-      au < ready ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 1 >
-      au < ready ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2 >
+      au < releasing ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 1 >
+      au < releasing ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2 >
       au < manifest ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 3 >
       
     }
@@ -432,10 +432,10 @@
       au < released ; 2008 ; The Journal of Nietzsche Studies Issue 35/36 ; 35 ; 35-36 >
       au < released ; 2009 ; The Journal of Nietzsche Studies Issue 37 ; 37 ; 37 >
       au < released ; 2009 ; The Journal of Nietzsche Studies Issue 38 ; 38 ; 38 >
-      au < ready ; 2010 ; The Journal of Nietzsche Studies Issue 39 ; 39 ; 39 >
-      au < ready ; 2010 ; The Journal of Nietzsche Studies Issue 40 ; 40 ; 40 >
-      au < ready ; 2011 ; The Journal of Nietzsche Studies Issue 41 ; 41 ; 41 >
-      au < ready ; 2011 ; The Journal of Nietzsche Studies Issue 42 ; 42 ; 42 >
+      au < releasing ; 2010 ; The Journal of Nietzsche Studies Issue 39 ; 39 ; 39 >
+      au < releasing ; 2010 ; The Journal of Nietzsche Studies Issue 40 ; 40 ; 40 >
+      au < releasing ; 2011 ; The Journal of Nietzsche Studies Issue 41 ; 41 ; 41 >
+      au < releasing ; 2011 ; The Journal of Nietzsche Studies Issue 42 ; 42 ; 42 >
       au < manifest ; 2012 ; The Journal of Nietzsche Studies Issue 43 ; 43 ; 43 >
       au < expected ; 2012 ; The Journal of Nietzsche Studies Issue 44 ; 44 ; 44 >
       
@@ -470,8 +470,8 @@
       au < released ; 2007 ; The Journal of Speculative Philosophy Volume 21 ; 21 >
       au < released ; 2008 ; The Journal of Speculative Philosophy Volume 22 ; 22 >
       au < released ; 2009 ; The Journal of Speculative Philosophy Volume 23 ; 23 >
-      au < ready ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 >
-      au < ready ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 >
+      au < releasing ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 >
+      au < releasing ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 >
       au < manifest ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 26 >
       
     }
@@ -563,7 +563,7 @@
       attr[journal_id] = pnh
 
       au < released ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
-      au < ready ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
+      au < releasing ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
       au < manifest ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 79 >
       
     }
@@ -597,8 +597,8 @@
       au < released ; 2007 ; Philosophy and Rhetoric Volume 40 ; 40 >
       au < released ; 2008 ; Philosophy and Rhetoric Volume 41 ; 41 >
       au < released ; 2009 ; Philosophy and Rhetoric Volume 42 ; 42 >
-      au < ready ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 >
-      au < ready ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 >
+      au < releasing ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 >
+      au < releasing ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 >
       au < manifest ; 2012 ; Philosophy and Rhetoric Volume 45 ; 45 >
       
     }
@@ -699,8 +699,8 @@
       au < released ; 2007 ; SHAW The Annual of Bernard Shaw Studies Volume 27 ; 27 >
       au < released ; 2008 ; SHAW The Annual of Bernard Shaw Studies Volume 28 ; 28 >
       au < released ; 2009 ; SHAW The Annual of Bernard Shaw Studies Volume 29 ; 29 >
-      au < ready ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 >
-      au < ready ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 31 >
+      au < releasing ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 >
+      au < releasing ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 31 >
       au < manifest ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 ; 32 >
       
     }
@@ -747,8 +747,8 @@
 
       au < released ; 2008 ; Studies in American Jewish Literature Volume 27 ; 27 >
       au < released ; 2009 ; Studies in American Jewish Literature Volume 28 ; 28 >
-      au < ready ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 >
-      au < ready ; 2011 ; Studies in American Jewish Literature Volume 30 ; 30 >
+      au < releasing ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 >
+      au < releasing ; 2011 ; Studies in American Jewish Literature Volume 30 ; 30 >
       au < manifest ; 2012 ; Studies in American Jewish Literature Volume 31 ; 31 >
       
     }
@@ -793,8 +793,8 @@
       param[journal_dir] = utopian_studies
       attr[journal_id] = utp
 
-      au < ready ; 2010 ; Utopian Studies Volume 21 ; 21 >
-      au < ready ; 2011 ; Utopian Studies Volume 22 ; 22 >
+      au < releasing ; 2010 ; Utopian Studies Volume 21 ; 21 >
+      au < releasing ; 2011 ; Utopian Studies Volume 22 ; 22 >
       au < manifest ; 2012 ; Utopian Studies Volume 23 ; 23 >
     }
     

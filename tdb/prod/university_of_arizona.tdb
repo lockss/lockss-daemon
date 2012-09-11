@@ -19,10 +19,10 @@
     attr[journal_id] = hcs
 
     au < released ; 2006 ; Arizona Journal of Hispanic Cultural Studies Volume 10 ; 10 >
-    au < ready ; 2007 ; Arizona Journal of Hispanic Cultural Studies Volume 11 ; 11 >
-    au < ready ; 2008 ; Arizona Journal of Hispanic Cultural Studies Volume 12 ; 12 >
-    au < ready ; 2009 ; Arizona Journal of Hispanic Cultural Studies Volume 13 ; 13 >
-    au < ready ; 2010 ; Arizona Journal of Hispanic Cultural Studies Volume 14 ; 14 >
+    au < releasing ; 2007 ; Arizona Journal of Hispanic Cultural Studies Volume 11 ; 11 >
+    au < releasing ; 2008 ; Arizona Journal of Hispanic Cultural Studies Volume 12 ; 12 >
+    au < releasing ; 2009 ; Arizona Journal of Hispanic Cultural Studies Volume 13 ; 13 >
+    au < releasing ; 2010 ; Arizona Journal of Hispanic Cultural Studies Volume 14 ; 14 >
 
   }
 
@@ -39,10 +39,10 @@
 
     au < released ; 2006 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 62 ; 62 >
     au < released ; 2007 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 63 ; 63 >
-    au < ready ; 2008 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 64 ; 64 >
-    au < ready ; 2009 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 65 ; 65 >
-    au < ready ; 2010 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 66 ; 66 >
-    au < ready ; 2011 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 67 ; 67 >
+    au < releasing ; 2008 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 64 ; 64 >
+    au < releasing ; 2009 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 65 ; 65 >
+    au < releasing ; 2010 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 66 ; 66 >
+    au < releasing ; 2011 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 67 ; 67 >
     au < manifest ; 2012 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 68 ; 68 >
 
   }
@@ -58,7 +58,7 @@
     param[journal_dir] = journal_of_the_southwest
     attr[journal_id] = jsw
 
-    au < ready ; 2011 ; Journal of the Southwest Volume 53 ; 53 >
+    au < releasing ; 2011 ; Journal of the Southwest Volume 53 ; 53 >
     au < manifest ; 2012 ; Journal of the Southwest Volume 54 ; 54 >
 
   }
