@@ -167,272 +167,241 @@
   {
   
     title < 
-      name = Canadian Medicinal Crops ;
-      issn = 978-0-660-17534-8 ;
-      eissn = 978-0-660-18296-4
+      name = Canadian Medicinal Crops
+       
     >
-
-    
+     comment[isbn] = 978-0-660-17534-8 
+     comment[eisbn] = 978-0-660-18296-4 
     
   }
   
   {
   
     title < 
-      name = Canadian System of Soil Classification, 3rd Ed. ;
-      issn = 978-0-660-17404-4 ;
-      eissn = 978-0-660-18469-2
+      name = Canadian System of Soil Classification, 3rd Ed.
+      
     >
-
-    
-    
+     comment[isbn] = 978-0-660-17404-4 
+     comment[eisbn] = 978-0-660-18469-2
   }
     
   {
   
     title < 
-      name = Catalog of Scolytidae and Platypodidae (Coleoptera), Supplement 1 (1990-1994) ;
-      issn = 978-0-660-16709-1 ;
-      eissn = 978-0-9878114-3-1
+      name = Catalog of Scolytidae and Platypodidae (Coleoptera), Supplement 1 (1990-1994)
   
       >
-     
-
+     comment[isbn] = 978-0-660-16709-1 
+     comment[eisbn] = 978-0-9878114-3-1
 
     }
     
     {
   
     title < 
-      name = Catalog of Scolytidae and Platypodidae (Coleoptera), Supplement 2 (1995–1999) ;
-      issn = 978-0-660-18612-2 ;
-      eissn = 978-0-660-18994-9
-  
+      name = Catalog of Scolytidae and Platypodidae (Coleoptera), Supplement 2 (1995–1999)
+ 
       >
+     comment[isbn] = 978-0-660-18612-2  
+     comment[eisbn] = 978-0-660-18994-9
      
     }
     
     {
   
     title < 
-      name = Catalogue des Invertébrés marins de l'estuaire et du golfe du Saint-Laurent / Catalogue of the Marine Invertebrates of the Estuary and Gulf of Saint Lawrence Canadian Special Publication of Fisheries and Aquatic Sciences No. 126 ;
-      issn = 978-0-660-80366-1 ;
-      eissn = 978-0-662-49442-3
+      name = Catalogue des Invertébrés marins de l'estuaire et du golfe du Saint-Laurent / Catalogue of the Marine Invertebrates of the Estuary and Gulf of Saint Lawrence Canadian Special Publication of Fisheries and Aquatic Sciences No. 126
   
       >
-     
-
+     comment[isbn] = 978-0-660-80366-1  
+     comment[eisbn] = 978-0-662-49442-3
 
     }
     
     {
   
     title < 
-      name = Catalogue of the Tiger Beetles of Canada and the United States ;
-      issn = 978-0-660-17640-6 ;
-      eissn = 978-0-9878114-9-3
+      name = Catalogue of the Tiger Beetles of Canada and the United States
   
       >
+     comment[isbn] = 978-0-660-17640-6     
+     comment[eisbn] = 978-0-9878114-9-3 
      
     }
     
     {
   
     title < 
-      name = Checklist of the Hemiptera of Canada and Alaska ;
-      issn = 978-0-660-18165-3 ;
-      eissn = 978-0-660-18463-0
+      name = Checklist of the Hemiptera of Canada and Alaska
   
       >
+     comment[isbn] = 978-0-660-18165-3   
+     comment[eisbn] = 978-0-660-18463-0
      
     }
     
     {
   
     title < 
-      name = Chemistry as a Diagnostic of Star Formation ;
-      issn = 978-0-660-19089-1 ;
-      eissn = 978-0-660-19091-4
-  
+      name = Chemistry as a Diagnostic of Star Formation
+      
       >
      
-
+     comment[isbn] = 978-0-660-19089-1 
+     comment[eisbn] = 978-0-660-19091-4
+    }
+    
+    {
+  
+    title < 
+      name = Climate Change & Northern Fish Populations Canadian Special Publication of Fisheries and Aquatic Sciences No. 121
+      
+      >
+     comment[isbn] = 978-0-660-15780-1 
+     comment[eisbn] = 978-0-9877172-3-8    
+    }
+    
+    {
+  
+    title < 
+      name = Coleoptera Histeridae
+      
+      >
+     comment[isbn] = 978-0-660-19399-1 
+     comment[eisbn] = 978-0-660-19401-1
+    }
+    
+    {
+  
+    title < 
+      name = Coleoptera, Curculionidae, Entiminae
+  
+      >
+     comment[isbn] = 978-0-660-19400-4 
+     comment[eisbn] = 978-0-660-19767-8
+    }
+    {
+  
+    title < 
+      name = Cretaceous and Eocene Decapod Crustaceans from Southern Vancouver Island, British Columbia, Canada
+ 
+      >
+     comment[isbn] = 978-0-660-19092-1    
+     comment[eisbn] = 978-0-660-19093-8
 
     }
     
     {
   
     title < 
-      name = Climate Change & Northern Fish Populations Canadian Special Publication of Fisheries and Aquatic Sciences No. 121 ;
-      issn = 978-0-660-15780-1 ;
-      eissn = 978-0-9877172-3-8
+      name = Culinary Herbs for Short-Season Gardeners
+      
+      >
+     comment[isbn] = 978-0-660-17785-4    
+     comment[eisbn] = 978-0-660-18600-9
+
+    }
+    
+    {
   
+    title < 
+      name = Culinary Herbs: 2nd Edition
+      
+      >
+     comment[isbn] = 978-0-660-19073-0
+     comment[eisbn] = 978-0-660-19074-7
+    }
+    
+    {
+  
+    title < 
+      name = Current Trends in International Fusion Research
+      
       >
      
+     comment[isbn] = 978-0-660-19827-9 
+     comment[eisbn] = 978-0-660-19827-9
     }
     
     {
   
     title < 
-      name = Coleoptera Histeridae ;
-      issn = 978-0-660-19399-1 ;
-      eissn = 978-0-660-19401-1
-  
+      name = Current Trends in International Fusion Research
+      
       >
-
-
+     comment[isbn] = 978-0-660-18480-7
+     comment[eisbn] = 978-1-927346-07-5
     }
     
     {
   
     title < 
-      name = Coleoptera, Curculionidae, Entiminae ;
-      issn = 978-0-660-19400-4 ;
-      eissn = 978-0-660-19767-8
-  
+      name = Current Trends in International Fusion Research
+ 
       >
-
-
-    }
-    {
-  
-    title < 
-      name = Cretaceous and Eocene Decapod Crustaceans from Southern Vancouver Island, British Columbia, Canada ;
-      issn = 978-0-660-19092-1 ;
-      eissn = 978-0-660-19093-8
-  
-      >
-     
-
+     comment[isbn] = 978-0-660-19707-4 
+     comment[eisbn] = 978-0-660-19708-1
 
     }
     
     {
   
     title < 
-      name = Culinary Herbs for Short-Season Gardeners ;
-      issn = 978-0-660-17785-4 ;
-      eissn = 978-0-660-18600-9
-  
-      >
-     
-
-
-    }
-    
-    {
-  
-    title < 
-      name = Culinary Herbs: 2nd Edition ;
-      issn = 978-0-660-19073-0 ;
-      eissn = 978-0-660-19074-7
-  
-      >
-
-
-    }
-    
-    {
-  
-    title < 
-      name = Current Trends in International Fusion Research ;
-      issn = 978-0-660-19827-9 ;
-      eissn = 978-0-660-19827-9
-  
-      >
-     
-
-
-    }
-    
-    {
-  
-    title < 
-      name = Current Trends in International Fusion Research ;
-      issn = 978-0-660-18480-7 ;
-      eissn = 978-1-927346-07-5
-  
-      >
-
-
-    }
-    
-    {
-  
-    title < 
-      name = Current Trends in International Fusion Research ;
-      issn = 978-0-660-19707-4 ;
-      eissn = 978-0-660-19708-1
-  
-      >
-     
-
-
-    }
-    
-    {
-  
-    title < 
-      name = Current Trends in International Fusion Research ;
-      issn = 978-0-660-17522-5 ;
-      eissn = 978-0-9878114-7-9
+      name = Current Trends in International Fusion Research
+      
       >
       
       comment[publication_type] = ebook published in 1999 - now out of print
 
-
+     comment[isbn] = 978-0-660-17522-5 
+     comment[eisbn] = 978-0-9878114-7-9 
+     
     }
     
     {
   
     title < 
-      name = Current Trends in International Fusion Research ;
-      issn = 978-0-660-19890-3 ;
-      eissn = 978-1-927346-13-6
+      name = Current Trends in International Fusion Research
+      
       >
       
      comment[publication_type] = ebook published in 2009 - now out of print
-
+     comment[isbn] = 978-0-660-19890-3
+     comment[eisbn] = 978-1-927346-13-6
+     
+    }
+    
+    {
+  
+    title < 
+      name = Durability of Building Materials and Components 8, Volumes 1–4 
+  
+      >
+     comment[isbn] = 978-0-660-17737-3    
+     comment[eisbn] = 978-1-927346-01-3
 
     }
     
     {
   
     title < 
-      name = Durability of Building Materials and Components 8, Volumes 1–4 ;
-      issn = 978-0-660-17737-3 ;
-      eissn = 978-1-927346-01-3
+      name = Ecophysiology of Northern Spruce Species
   
       >
      
-
-
+     comment[isbn] = 978-0-660-17959-9 
+     comment[eisbn] = 978-0-660-18470-8
     }
     
     {
   
     title < 
-      name = Ecophysiology of Northern Spruce Species ;
-      issn = 978-0-660-17959-9 ;
-      eissn = 978-0-660-18470-8
-  
+      name = Emergence of Unsaturated Soil Mechanics
+      
       >
      
-
-
-    }
-    
-    {
-  
-    title < 
-      name = Emergence of Unsaturated Soil Mechanics ;
-      issn = 978-0-660-17256-9 ;
-      eissn = 978-0-660-18466-1
-  
-      >
-     
-
-
+     comment[isbn] = 978-0-660-17256-9 
+     comment[eisbn] = 978-0-660-18466-1
     }
     
   
