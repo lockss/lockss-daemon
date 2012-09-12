@@ -864,7 +864,7 @@
       
       au < manifest ; exists ; 2009 ; International Journal of Bio-Inspired Computation Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Bio-Inspired Computation Volume 2 ; 2 >
-      au < notReady ; exists ; 2011 ; International Journal of Bio-Inspired Computation Volume 3 ; 3 >
+      au < testing ; exists ; 2011 ; International Journal of Bio-Inspired Computation Volume 3 ; 3 >
       au < crawling ; exists ; 2012 ; International Journal of Bio-Inspired Computation Volume 4 ; 4 >
 
     }
@@ -880,7 +880,7 @@
 
       param[journal_issn] = 1757-6806
       
-      au < manifest ; exists ; 2009-2011 ; International Journal of Biomechatronics and Biomedical Robotics Volume 1 ; 1 >
+      au < testing ; exists ; 2009-2011 ; International Journal of Biomechatronics and Biomedical Robotics Volume 1 ; 1 >
 
     }
 
@@ -2623,7 +2623,11 @@
       au < released ; crawling ; 2011 ; International Journal of Environment and Pollution Volume 44 ; 44 >
       au < released ; crawling ; 2011 ; International Journal of Environment and Pollution Volume 45 ; 45 >
       au < released ; crawling ; 2011 ; International Journal of Environment and Pollution Volume 46 ; 46 >
+<<<<<<< inderscience.tdb
+      au < testing ; exists ; 2011 ; International Journal of Environment and Pollution Volume 47 ; 47 >
+=======
       au < crawling ; exists ; 2011 ; International Journal of Environment and Pollution Volume 47 ; 47 >
+>>>>>>> 1.85
 
     }
 
@@ -2788,7 +2792,7 @@
 
       param[journal_issn] = 1755-8743
       
-      au < manifest ; exists ; 2009-2011 ; International Journal of Experimental and Computational Biomechanics Volume 1 ; 1 >
+      au < testing ; exists ; 2009-2011 ; International Journal of Experimental and Computational Biomechanics Volume 1 ; 1 >
 
     }
 
@@ -4515,7 +4519,11 @@
       au < manifest ; exists ; 2010 ; International Journal of Manufacturing Technology and Management Volume 21 ; 21 >
       au < released ; manifest ; 2011 ; International Journal of Manufacturing Technology and Management Volume 22 ; 22 >
       au < released ; manifest ; 2011 ; International Journal of Manufacturing Technology and Management Volume 23 ; 23 >
+<<<<<<< inderscience.tdb
+      au < testing ; exists ; 2011 ; International Journal of Manufacturing Technology and Management Volume 24 ; 24 >
+=======
       au < crawling ; exists ; 2011 ; International Journal of Manufacturing Technology and Management Volume 24 ; 24 >
+>>>>>>> 1.85
       au < manifest ; exists ; 2012 ; International Journal of Manufacturing Technology and Management Volume 25 ; 25 >
 
     }
@@ -6416,7 +6424,7 @@
 
       param[journal_issn] = 1743-8292
       
-      au < manifest ; exists ; 2008-2011 ; International Journal of Sustainable Design Volume 1 ; 1 >
+      au < testing ; exists ; 2008-2011 ; International Journal of Sustainable Design Volume 1 ; 1 >
 
     }
 
@@ -6627,7 +6635,7 @@
       param[journal_issn] = 1746-5389
       
       au < manifest ; exists ; 2007-2008 ; International Journal of Technoentrepreneurship Volume 1 ; 1 >
-      au < manifest ; exists ; 2009-2011 ; International Journal of Technoentrepreneurship Volume 2 ; 2 >
+      au < testing ; exists ; 2009-2011 ; International Journal of Technoentrepreneurship Volume 2 ; 2 >
 
     }
 
@@ -6930,7 +6938,11 @@
       au < manifest ; exists ; 2007-2008 ; International Journal of Tourism Policy Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Tourism Policy Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Tourism Policy Volume 3 ; 3 >
+<<<<<<< inderscience.tdb
+      au < testing ; exists ; 2011 ; International Journal of Tourism Policy Volume 4 ; 4 >
+=======
       au < crawling ; exists ; 2011 ; International Journal of Tourism Policy Volume 4 ; 4 >
+>>>>>>> 1.85
 
     }
 
