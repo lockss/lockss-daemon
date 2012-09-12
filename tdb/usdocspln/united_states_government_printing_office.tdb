@@ -1034,8 +1034,8 @@
     au < testing ; 1997 ; Commerce Business Daily - Bulk Data 1997 ; 1997 >
     au < testing ; 1998 ; Commerce Business Daily - Bulk Data 1998 ; 1998 >
     au < testing ; 1999 ; Commerce Business Daily - Bulk Data 1999 ; 1999 >
-    au < testing ; 2000 ; Commerce Business Daily - Bulk Data 2000 ; 2000 >
-    au < testing ; 2001 ; Commerce Business Daily - Bulk Data 2001 ; 2001 >
+    au < ready ; 2000 ; Commerce Business Daily - Bulk Data 2000 ; 2000 >
+    au < ready ; 2001 ; Commerce Business Daily - Bulk Data 2001 ; 2001 >
     
   }
      
@@ -1071,7 +1071,7 @@
       >
       param[collection_id] = PPP
     
-    au < testing ; 2009 ; Public Papers of Presidents of the United States - Bulk Data 2009 ; 2009 >    
+    au < ready ; 2009 ; Public Papers of Presidents of the United States - Bulk Data 2009 ; 2009 >    
     
     
   }
@@ -1084,7 +1084,7 @@
       >
       param[collection_id] = SCD
     
-    au < testing ; 1937 ; Supreme Court Decisions 1937-1975 (FLITE) - Bulk Data 1937 ; 1937 >    
+    au < ready ; 1937 ; Supreme Court Decisions 1937-1975 (FLITE) - Bulk Data 1937 ; 1937 >    
     
     
   }
