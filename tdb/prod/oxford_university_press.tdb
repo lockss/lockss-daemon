@@ -7626,11 +7626,11 @@
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; InnovAiT Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; InnovAiT Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; InnovAiT Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; InnovAiT Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010 ; InnovAiT Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; InnovAiT Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; InnovAiT Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; InnovAiT Volume 5 ; 5 >
 
     }
 
