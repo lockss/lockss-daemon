@@ -522,7 +522,8 @@
 
     param[base_url] = http://aje.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[aje174] = multiple poll failures
+    comment[doNotProcess] = multiple poll failures, see RU 4377
+    comment[0] = includes supplements
 
     au < manifest ; exists ; 1921 ; American Journal of Epidemiology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1922 ; American Journal of Epidemiology Volume 2 ; 2 ; >
@@ -696,9 +697,9 @@
     au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; >
     au < released ; crawling ; 2010 ; American Journal of Epidemiology Volume 171 ; 171 ; >
     au < released ; crawling ; 2010 ; American Journal of Epidemiology Volume 172 ; 172 ; >
-    au < released ; crawling ; 2011 ; American Journal of Epidemiology Volume 173 ; 173 ; >
-    au < testing ; exists ; 2011 ; American Journal of Epidemiology Volume 174 ; 174 ; >
-    au < crawling ; exists ; 2012 ; American Journal of Epidemiology Volume 175 ; 175 ; >
+    au < released ; crawling ; 2011 ; American Journal of Epidemiology [including Supplements] Volume 173 ; 173 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; American Journal of Epidemiology [including Supplements] Volume 174 ; 174 ; >
+    au < crawling ; exists ; 2012 ; American Journal of Epidemiology [including Supplements] Volume 175 ; 175 ; >
     au < crawling ; exists ; 2012 ; American Journal of Epidemiology Volume 176 ; 176 ; >
 
     }
