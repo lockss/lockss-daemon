@@ -911,7 +911,7 @@
 
   {
     title <
-      name = MLQ: Modern Language Quarterly ;
+      name = Modern Language Quarterly ;
       issn = 0026-7929 ;
       eissn = 1527-1943 ;
       issnl = 0026-7929
@@ -925,12 +925,12 @@
       param[journal_dir] = modern_language_quarterly
       attr[journal_id] = mlq
 
-      au < released ; 1999 ; MLQ: Modern Language Quarterly Volume 60 ; 60 >
-      au < released ; 2000 ; MLQ: Modern Language Quarterly Volume 61 ; 61 >
-      au < released ; 2001 ; MLQ: Modern Language Quarterly Volume 62 ; 62 >
-      au < released ; 2002 ; MLQ: Modern Language Quarterly Volume 63 ; 63 >
-      au < released ; 2003 ; MLQ: Modern Language Quarterly Volume 64 ; 64 >
-      au < released ; 2004 ; MLQ: Modern Language Quarterly Volume 65 ; 65 >
+      au < released ; 1999 ; Modern Language Quarterly Volume 60 ; 60 >
+      au < released ; 2000 ; Modern Language Quarterly Volume 61 ; 61 >
+      au < released ; 2001 ; Modern Language Quarterly Volume 62 ; 62 >
+      au < released ; 2002 ; Modern Language Quarterly Volume 63 ; 63 >
+      au < released ; 2003 ; Modern Language Quarterly Volume 64 ; 64 >
+      au < released ; 2004 ; Modern Language Quarterly Volume 65 ; 65 >
       
     }
     
@@ -940,14 +940,14 @@
       param[base_url] = http://mlq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; down ; 2005 ; MLQ: Modern Language Quarterly Volume 66 ; 66 >
-      au < HighWireStrVolPlugin ; down ; 2006 ; MLQ: Modern Language Quarterly Volume 67 ; 67 >
-      au < HighWireStrVolPlugin ; down ; 2007 ; MLQ: Modern Language Quarterly Volume 68 ; 68 >      
-      au < HighWirePressH20Plugin ; released ; 2008 ; MLQ: Modern Language Quarterly Volume 69 ; 69 >
-      au < HighWirePressH20Plugin ; released ; 2009 ; MLQ: Modern Language Quarterly Volume 70 ; 70 >
-      au < HighWirePressH20Plugin ; released ; 2010 ; MLQ: Modern Language Quarterly Volume 71 ; 71 >
-      au < HighWirePressH20Plugin ; released ; 2011 ; MLQ: Modern Language Quarterly Volume 72 ; 72 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; MLQ: Modern Language Quarterly Volume 73 ; 73 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Modern Language Quarterly Volume 66 ; 66 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Modern Language Quarterly Volume 67 ; 67 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Modern Language Quarterly Volume 68 ; 68 >      
+      au < HighWirePressH20Plugin ; released ; 2008 ; Modern Language Quarterly Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Modern Language Quarterly Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Modern Language Quarterly Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Modern Language Quarterly Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Modern Language Quarterly Volume 73 ; 73 >
     
     }
     
