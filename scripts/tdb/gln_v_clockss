@@ -31,6 +31,13 @@ if [[ $exists_cks == 0 ]]
 then
   echo "CLOCKSS file does not exist"
 fi
+# Ignore this file?
+if [[ $file == "american_medical_association.tdb" ]]
+then
+  echo "Ignore files"
+  exists_cks=0
+  exists_gln=0
+fi
 # If the files exist, compare the titles.
 if [[ $exists_cks == 1  &&  $exists_gln == 1 ]]
 then
