@@ -1680,7 +1680,7 @@
      {
   
     title < 
-      name = Small Axe: A Caribbean Journal of Criticism ;
+      name = Small Axe ;
       issn = 0799-0537 ;
       eissn = 1534-6714
   
@@ -1689,18 +1689,18 @@
       param[base_url] = http://smallaxe.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Small Axe: A Caribbean Journal of Criticism Volume 5 ; 5 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Small Axe: A Caribbean Journal of Criticism Volume 6 ; 6 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Small Axe: A Caribbean Journal of Criticism Volume 7 ; 7 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Small Axe: A Caribbean Journal of Criticism Volume 8 ; 8 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Small Axe: A Caribbean Journal of Criticism Volume 9 ; 9 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Small Axe: A Caribbean Journal of Criticism Volume 10 ; 10 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Small Axe: A Caribbean Journal of Criticism Volume 11 ; 11 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Small Axe: A Caribbean Journal of Criticism Volume 12 ; 12 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Small Axe: A Caribbean Journal of Criticism Volume 13 ; 13 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Small Axe: A Caribbean Journal of Criticism Volume 14 ; 14 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Small Axe: A Caribbean Journal of Criticism Volume 15 ; 15 >
-      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Small Axe: A Caribbean Journal of Criticism Volume 16 ; 16 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Small Axe Volume 5 ; 5 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Small Axe Volume 6 ; 6 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Small Axe Volume 7 ; 7 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Small Axe Volume 8 ; 8 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Small Axe Volume 9 ; 9 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Small Axe Volume 10 ; 10 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Small Axe Volume 11 ; 11 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Small Axe Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Small Axe Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Small Axe Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Small Axe Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Small Axe Volume 16 ; 16 >
 
     }
     
