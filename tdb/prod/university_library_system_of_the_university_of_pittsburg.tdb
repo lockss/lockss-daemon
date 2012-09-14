@@ -134,9 +134,9 @@
       param[base_url] = http://ethnology.pitt.edu/ojs/
       param[journal_id] = Ethnology
 
-      au < manifest ; 2008 ; Ethnology Volume 47 ; 2008 ; 47 >
-      au < manifest ; 2009 ; Ethnology Volume 48 ; 2009 ; 48 >
-      au < manifest ; 2010 ; Ethnology Volume 49 ; 2010 ; 49 >
+      au < exists ; 2008 ; Ethnology Volume 47 ; 47 ; 2008 >
+      au < exists ; 2009 ; Ethnology Volume 48 ; 48 ; 2009 >
+      au < exists ; 2010 ; Ethnology Volume 49 ; 49 ; 2010 >
 
     }
 
