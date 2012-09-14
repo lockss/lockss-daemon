@@ -1,5 +1,5 @@
 /*
- * $Id: TestIpFilter.java,v 1.10 2011-06-26 20:20:47 tlipkis Exp $
+ * $Id: TestIpFilter.java,v 1.11 2012-09-14 18:17:54 tlipkis Exp $
  */
 
 /*
@@ -258,6 +258,7 @@ public class TestIpFilter extends LockssTestCase {
     }
 
     assertAddrOk("::1");
+    assertAddrOk("::1%0");
     assertAddrOk("2001:0db8:85a3:0000:0000:8a2e:0370:7334");
     assertAddrOk("2001:0db8::0370:7334");
     assertAddrOk("::7334");
@@ -462,6 +463,8 @@ public class TestIpFilter extends LockssTestCase {
     assertNoMatch("ffee::abab", "ffee::abac");
 
     assertMatch("::/0", "::1");
+    assertMatch("::/0", "::1%123");
+    assertMatch("::/0", "::1%eth0");
     assertMatch("::/0", "1::");
     assertMatch("::/0", "1::1");
     assertMatch("::/0", "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff");

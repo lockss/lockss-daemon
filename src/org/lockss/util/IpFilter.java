@@ -1,5 +1,5 @@
 /*
- * $Id: IpFilter.java,v 1.15 2011-07-07 05:23:04 tlipkis Exp $
+ * $Id: IpFilter.java,v 1.16 2012-09-14 18:17:54 tlipkis Exp $
  */
 
 /*
@@ -164,7 +164,8 @@ public class IpFilter {
   // performed in the Mask4 and Mask6 constructors.
 
   private static Pattern IPV4_ADDR = Pattern.compile("[\\d*.]+");
-  private static Pattern IPV6_ADDR = Pattern.compile("[\\p{XDigit}:]+");
+  // IPv6 addresses can end with "%<zone index>"
+  private static Pattern IPV6_ADDR = Pattern.compile("[\\p{XDigit}:]+(%.*)?");
 
   private static Pattern IPV4_MASK =
     Pattern.compile("[\\d*.]+(?:/[\\d.]+)?");
