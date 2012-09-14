@@ -73,11 +73,11 @@
 
     comment[URGENT] = Trigger in clockss Dec 2012
 
-    au < exists ; exists ; 2004 ; Visual Culture in Britain Volume 5 ; 5 >
-    au < exists ; exists ; 2005 ; Visual Culture in Britain Volume 6 ; 6 >
-    au < exists ; exists ; 2006 ; Visual Culture in Britain Volume 7 ; 7 >
-    au < exists ; exists ; 2007 ; Visual Culture in Britain Volume 8 ; 8 >
-    au < exists ; exists ; 2008 ; Visual Culture in Britain Volume 9 ; 9 >
+    au < crawling ; exists ; 2004 ; Visual Culture in Britain Volume 5 ; 5 >
+    au < manifest ; exists ; 2005 ; Visual Culture in Britain Volume 6 ; 6 >
+    au < manifest ; exists ; 2006 ; Visual Culture in Britain Volume 7 ; 7 >
+    au < manifest ; exists ; 2007 ; Visual Culture in Britain Volume 8 ; 8 >
+    au < manifest ; exists ; 2008 ; Visual Culture in Britain Volume 9 ; 9 >
 
   }
 
