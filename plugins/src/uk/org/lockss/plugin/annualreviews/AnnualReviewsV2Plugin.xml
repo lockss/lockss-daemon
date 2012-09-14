@@ -1,11 +1,23 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>uk.org.lockss.plugin.annualreviews.AnnualReviewsV2Plugin</string>
   </entry>
   <entry>
+    <string>plugin_name</string>
+    <string>Annual Reviews Plugin V2 (2011)</string>
+  </entry>
+  <entry>
     <string>plugin_version</string>
     <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_publishing_platform</string>
+    <string>Atypon</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -22,10 +34,6 @@
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>Annual Reviews Plugin V2 (2011)</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
