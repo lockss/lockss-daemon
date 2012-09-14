@@ -47,8 +47,9 @@
       name = Fresh Ink: Essays From Boston College's First-Year Writing Seminar
   
       >
-     
-
+      param[base_url] = http://ejournals.bc.edu/ojs/
+      param[journal_id] = freshink
+      
     }
 
    {
@@ -57,8 +58,9 @@
       name = Information Technology and Libraries 
   
       >
-     
-
+      param[base_url] = http://ejournals.bc.edu/ojs/
+      param[journal_id] = ital
+      
     }
 
   
@@ -89,10 +91,30 @@
         Name = Levantine Review
         
         >
-        
-        
+      param[base_url] = http://ejournals.bc.edu/ojs/
+      param[journal_id] = levantine
         
      }
+          
+     {
+       title <
+         name = Lumen et Vita
+         
+         >
+      param[base_url] = http://ejournals.bc.edu/ojs/
+      param[journal_id] = lumenetvita
+      
+      }
+     
+     {
+       title <
+         name = Proceedings of the Catholic Theological Society of America
+         
+         >
+      param[base_url] = http://ejournals.bc.edu/ojs/
+      param[journal_id] = ctsa
+      
+    }         
           
     {
       title <
