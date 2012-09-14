@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.5 2012-08-13 23:26:21 davidecorcoran Exp $
+ * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.6 2012-09-14 23:03:07 davidecorcoran Exp $
  */
 
 /*
@@ -144,6 +144,26 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     "<h4></h4><ol><li></li></ol></div></div>";
   private static final String withoutCbSection =
     "<div></div>";
+  
+  private static final String withHwGenPage =
+    "<div class=\"hw-gen-page pagetype-content hw-pub-id-article\" " +
+    "id=\"pageid-content\" itemscope=\"itemscope\" " +
+    "itemtype=\"http://schema.org/ScholarlyArticle\">content</div>";
+  private static final String withoutHwGenPage =
+    "<div class=\"hw-gen-page pagetype-content hw-pub-id-article\" " +
+    "id=\"pageid-content\">content</div>";
+  
+  private static final String withNavCurrentIssue =
+    "<li id=\"nav_current_issue\" title=\"Current\">" +
+    "<a href=\"/content/current\">" +
+    "<span>View Current Issue (Volume 175 Issue 12 June 15, 2012)" +
+    "</span></a></li>";
+
+  private static final String withoutNavCurrentIssue =
+    "<li id=\"nav_current_issue\" title=\"Current\">" +
+    "<a href=\"/content/current\">" +
+    "<span>View Current Issue (Volume 174 Issue 12 December 15, 2011)" +
+    "</span>>/a></li>";
 
 	public void testFiltering() throws IOException, PluginException {
     assertFilterToSame(inst1, inst2);
@@ -153,6 +173,8 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
 	  assertFilterToSame(withSporadicDivs, withoutSporadicDivs);
 	  assertFilterToSame(withCmeCredit, withoutCmeCredit);
 	  assertFilterToSame(withCbSection, withoutCbSection);
+	  assertFilterToSame(withHwGenPage, withoutHwGenPage);
+	  assertFilterToSame(withNavCurrentIssue, withoutNavCurrentIssue);
 	}
 	
 	private void assertFilterToSame(String str1, String Str2) throws IOException, PluginException {

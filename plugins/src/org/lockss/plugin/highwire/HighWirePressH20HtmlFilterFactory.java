@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.38 2012-08-13 23:26:21 davidecorcoran Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.39 2012-09-14 23:03:07 davidecorcoran Exp $
  */
 
 /*
@@ -32,16 +32,24 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
+import java.io.IOException;
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
 
+  Logger log = Logger.getLogger("HighWirePressH20HtmlHashFilterFactory");
+  
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
@@ -142,12 +150,58 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         // "Earn FREE CME Credit" link (wrapped in a list item)
         HtmlNodeFilters.tagWithText("li", "class=\"dslink-earn-free-cme-credit\""),
         // Variable list of links to PubMed, Google Scholar, other sites
-        HtmlNodeFilters.tagWithAttribute("div", "class", "cb-section collapsible default-closed")
+        HtmlNodeFilters.tagWithAttribute("div", "class", "cb-section collapsible default-closed"),
+        
+        // For American Journal of Epidemiology
+        HtmlNodeFilters.tagWithAttribute("li", "id", "nav_current_issue")
+    };
+    
+    // HTML transform to remove uniqueness from microtagging attributes
+    // "itemscope" and "itemtype" in content divs (first appearance:
+    // American Journal of Epidemiology). Method tag.setAttribute() does not
+    // insert quotation marks when creating a new attribute, so we must do it
+    // manually. Quotation marks are handled correctly when modifying an
+    // existing attribute.
+    HtmlTransform xform = new HtmlTransform() {
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              try {
+                if ("div".equalsIgnoreCase(tag.getTagName()) && 
+                    tag.getAttribute("id") != null && 
+                    tag.getAttribute("id").trim().startsWith("pageid-content")) {
+                    
+                  if (tag.getAttribute("itemscope") != null) {
+                    tag.setAttribute("itemscope", "itemscope");
+                  } else tag.setAttribute("itemscope", "\"itemscope\"");
+                    
+                  if (tag.getAttribute("itemtype") != null) {
+                    tag.setAttribute("itemtype", "http://schema.org/ScholarlyArticle");
+                  } else tag.setAttribute("itemtype", "\"http://schema.org/ScholarlyArticle\"");
+                }
+                else {
+                  super.visitTag(tag);
+                }
+              }
+              catch (Exception exc) {
+                log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+              }
+            }
+          });
+        }
+        catch (ParserException pe) {
+          log.debug2("Internal error (parser)", pe); // Bail
+        }
+        return nodeList;
+      }
     };
     
     return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+        encoding,
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform));
   }
 
 }
