@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.5 2012-09-10 21:52:06 wkwilson Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.6 2012-09-15 18:19:29 pgust Exp $
  */ 
 
 /*
@@ -62,7 +62,7 @@ public class IngentaPdfFilterFactory implements FilterFactory,
    *berghahn: Berghahn
    *arn: Hodder Arnold
    */
-  private enum PublisherId {UNKNOWN, ARN, BERGHAHN, LSE, MANEY, PAAF, WAB}
+  private enum PublisherId {UNKNOWN, ARN, BERGHAHN, LSE, MANEY, MANUP, PAAF, WAB}
   static Logger logger = Logger.getLogger("IngentaPdfFilterFactory");
   protected PdfDocumentFactory pdfDocumentFactory;
   private FilterFactory normFiltFact = new NormalizingPdfFilterFactory();
@@ -164,7 +164,7 @@ public class IngentaPdfFilterFactory implements FilterFactory,
       case ARN:
 	return normExtractFiltFact.createFilteredInputStream(au, in, encoding);
 	
-      case BERGHAHN: case LSE: case WAB: case MANEY: case UNKNOWN:
+      case BERGHAHN: case LSE: case WAB: case MANEY: case MANUP: case UNKNOWN:
 	return normFiltFact.createFilteredInputStream(au, in, encoding);
 	
       case PAAF:
