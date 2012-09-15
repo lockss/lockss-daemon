@@ -220,6 +220,8 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = 
+      attr[journal_id] = 
       
     }
     
@@ -260,6 +262,8 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = 
+      attr[journal_id] = 
       
     }
     
