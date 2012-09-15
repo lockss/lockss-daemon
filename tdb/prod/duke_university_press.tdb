@@ -1524,31 +1524,81 @@
   
   {
     title <
+      name = Novel: A Forum on Fiction ;
+      issn = 0029-5132 ;
+      eissn = 1945-8509 
+    >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://nka.dukejournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Novel: A Forum on Fiction Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Novel: A Forum on Fiction Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Novel: A Forum on Fiction Volume 35 ; 35 >
+
+  }
+
+  {
+    title <
       name = Pedagogy ;
       issn = 1531-4200 ;
       eissn = 1533-6255 ;
       issnl = 1531-4200
     >
-
+    
+    {
+    
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = pedagogy
     attr[journal_id] = ped
 
-    au < released ; 2001 ; Pedagogy Volume 1 ; 1 >
-    au < released ; 2002 ; Pedagogy Volume 2 ; 2 >
-    au < released ; 2003 ; Pedagogy Volume 3 ; 3 >
-    au < released ; 2004 ; Pedagogy Volume 4 ; 4 >
-    au < released ; 2005 ; Pedagogy Volume 5 ; 5 >
-    au < released ; 2006 ; Pedagogy Volume 6 ; 6 >
-    au < released ; 2007 ; Pedagogy Volume 7 ; 7 >
-    au < released ; 2008 ; Pedagogy Volume 8 ; 8 >
-    au < released ; 2009 ; Pedagogy Volume 9 ; 9 >
-    au < released ; 2010 ; Pedagogy Volume 10 ; 10 >
-    au < released ; 2011 ; Pedagogy Volume 11 ; 11 >
-    au < manifest ; 2012 ; Pedagogy Volume 12 ; 12 >
+      au < released ; 2001 ; Pedagogy Volume 1 ; 1 >
+      au < released ; 2002 ; Pedagogy Volume 2 ; 2 >
+      au < released ; 2003 ; Pedagogy Volume 3 ; 3 >
+      au < released ; 2004 ; Pedagogy Volume 4 ; 4 >
+      au < released ; 2005 ; Pedagogy Volume 5 ; 5 >
+      au < released ; 2006 ; Pedagogy Volume 6 ; 6 >
+      au < released ; 2007 ; Pedagogy Volume 7 ; 7 >
+      au < released ; 2008 ; Pedagogy Volume 8 ; 8 >
+      au < released ; 2009 ; Pedagogy Volume 9 ; 9 >
+      au < released ; 2010 ; Pedagogy Volume 10 ; 10 >
+      au < released ; 2011 ; Pedagogy Volume 11 ; 11 >
+      au < manifest ; 2012 ; Pedagogy Volume 12 ; 12 >
+    
+    }
 
+    {
+    
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://pedagogy.dukejournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      
+      au < HighWirePressH20Plugin ; exists ; 2001 ; Pedagogy Volume 1 ; 1 >
+    
+    }
+    
+  }
+
+  {
+    title <
+      name = Philosophical Review ;
+      issn = 0031-8108  ;
+      eissn = 1558-1470 
+    >
+    
+    {
+    
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://philreview.dukejournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      
+      au < HighWirePressH20Plugin ; exists ; 2000 ; Pedagogy Volume 109 ; 109 >
+    
+    }
+    
   }
 
   {
