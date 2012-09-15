@@ -104,9 +104,8 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = 
-      attr[journal_id] = cpr
+      attr[journal_id] = 
 
-      au < expected ; 2013 ; Critical Philosophy of Race Volume 1 ; 1 >
      
     }
 
@@ -127,8 +126,6 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = 
       attr[journal_id] = 
-
-      au < expected ; 2013 ; The Edgar Allan Poe Review Volume 1 ; 1 >
      
     }
 
@@ -223,10 +220,6 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = 
-      attr[journal_id] = jar
-    
-      au < expected ; 2013 ; Journal of Africana Religions Volume 1 ; 1 >
       
     }
     
@@ -267,10 +260,6 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = 
-      attr[journal_id] = 
-    
-      au < expected ; 2013 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 1 ; 1 >
       
     }
     
@@ -493,8 +482,6 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = 
       attr[journal_id] = 
-    
-      au < expected ; 2013 ; The Mark Twain Annual Volume 11 ; 11 >
       
     }
     
@@ -642,8 +629,6 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = 
       attr[journal_id] = 
-    
-      au < expected ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 1 ; 1 >
       
     }
     
