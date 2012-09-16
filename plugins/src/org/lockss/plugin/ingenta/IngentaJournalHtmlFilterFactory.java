@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.13 2012-08-08 20:46:35 wkwilson Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.14 2012-09-16 10:12:09 pgust Exp $
  */ 
 
 /*
@@ -60,6 +60,8 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+        // Filter out <div id="links">...</div>
+        HtmlNodeFilters.tagWithAttribute("div", "id", "links"),
         // Filter out <div id="footer">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // Filter out <div id="top-ad-alignment">...</div>
