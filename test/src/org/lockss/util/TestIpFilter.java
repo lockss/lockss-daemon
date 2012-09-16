@@ -1,5 +1,5 @@
 /*
- * $Id: TestIpFilter.java,v 1.11 2012-09-14 18:17:54 tlipkis Exp $
+ * $Id: TestIpFilter.java,v 1.12 2012-09-16 01:16:25 tlipkis Exp $
  */
 
 /*
@@ -465,6 +465,7 @@ public class TestIpFilter extends LockssTestCase {
     assertMatch("::/0", "::1");
     assertMatch("::/0", "::1%123");
     assertMatch("::/0", "::1%eth0");
+    assertMatch("::/0", "::1%snkrnt17");
     assertMatch("::/0", "1::");
     assertMatch("::/0", "1::1");
     assertMatch("::/0", "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff");

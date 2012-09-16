@@ -1,5 +1,5 @@
 /*
- * $Id: IpFilter.java,v 1.16 2012-09-14 18:17:54 tlipkis Exp $
+ * $Id: IpFilter.java,v 1.17 2012-09-16 01:16:25 tlipkis Exp $
  */
 
 /*
@@ -165,7 +165,7 @@ public class IpFilter {
 
   private static Pattern IPV4_ADDR = Pattern.compile("[\\d*.]+");
   // IPv6 addresses can end with "%<zone index>"
-  private static Pattern IPV6_ADDR = Pattern.compile("[\\p{XDigit}:]+(%.*)?");
+  private static Pattern IPV6_ADDR = Pattern.compile("([\\p{XDigit}:]+)(%.*)?");
 
   private static Pattern IPV4_MASK =
     Pattern.compile("[\\d*.]+(?:/[\\d.]+)?");
@@ -181,7 +181,18 @@ public class IpFilter {
     }
     Matcher m6 = IPV6_ADDR.matcher(str);
     if (m6.matches()) {
-      return new Addr6(str);
+
+      // Remove any zone index.  IPAddr.getByName() may throw if given an
+      // invalid zone (e.g., a non-numeric string that doesn't match a
+      // local interface name).  That shouldn't happen in normal use, but
+      // the zone index isn't needed and it's easier to remove it here than
+      // to ensure the unit tests use a valid string.
+
+      String str1 = m6.group(1);
+      if (!str.equals(str1)) {
+	log.debug3("Stripped addr6 " + str + " to " + str1);
+      }
+      return new Addr6(str1);
     }
     // Produce better message if matches mask pattern
     if (IPV4_MASK.matcher(str).matches() ||
