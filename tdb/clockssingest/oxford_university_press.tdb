@@ -6568,7 +6568,7 @@
 
     param[base_url] = http://humrep.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[notReady] = RT4463, RU4166 503 error on vol26
+    comment[notReady] = RT4387 index error, needs filter
 
     au < manifest ; exists ; 1986 ; Human Reproduction Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; Human Reproduction Volume 2 ; 2 ; >
@@ -6595,7 +6595,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
     au < zapped ; down ; 2009 ; Human Reproduction Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Human Reproduction Volume 25 ; 25 ; >
-    au < testing ; exists ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
     au < crawling ; exists ; 2012 ; Human Reproduction Volume 27 ; 27 ; >
 
     }
