@@ -42,24 +42,24 @@
     au < released ; manifest ; 1973 ; Biographical Memoirs of Fellows of the Royal Society Volume 19 ; 19 >
     au < released ; manifest ; 1974 ; Biographical Memoirs of Fellows of the Royal Society Volume 20 ; 20 >
     au < released ; manifest ; 1975 ; Biographical Memoirs of Fellows of the Royal Society Volume 21 ; 21 >
-    au < manifest ; exists ; 1976 ; Biographical Memoirs of Fellows of the Royal Society Volume 22 ; 22 >
-    au < manifest ; exists ; 1977 ; Biographical Memoirs of Fellows of the Royal Society Volume 23 ; 23 >
-    au < manifest ; exists ; 1978 ; Biographical Memoirs of Fellows of the Royal Society Volume 24 ; 24 >
-    au < manifest ; exists ; 1979 ; Biographical Memoirs of Fellows of the Royal Society Volume 25 ; 25 >
-    au < manifest ; exists ; 1980 ; Biographical Memoirs of Fellows of the Royal Society Volume 26 ; 26 >
-    au < manifest ; exists ; 1981 ; Biographical Memoirs of Fellows of the Royal Society Volume 27 ; 27 >
-    au < manifest ; exists ; 1982 ; Biographical Memoirs of Fellows of the Royal Society Volume 28 ; 28 >
-    au < manifest ; exists ; 1983 ; Biographical Memoirs of Fellows of the Royal Society Volume 29 ; 29 >
-    au < manifest ; exists ; 1984 ; Biographical Memoirs of Fellows of the Royal Society Volume 30 ; 30 >
-    au < manifest ; exists ; 1985 ; Biographical Memoirs of Fellows of the Royal Society Volume 31 ; 31 >
-    au < manifest ; exists ; 1986 ; Biographical Memoirs of Fellows of the Royal Society Volume 32 ; 32 >
-    au < manifest ; exists ; 1987 ; Biographical Memoirs of Fellows of the Royal Society Volume 33 ; 33 >
-    au < manifest ; exists ; 1988 ; Biographical Memoirs of Fellows of the Royal Society Volume 34 ; 34 >
-    au < manifest ; exists ; 1989 ; Biographical Memoirs of Fellows of the Royal Society Volume 35 ; 35 >
-    au < manifest ; exists ; 1990 ; Biographical Memoirs of Fellows of the Royal Society Volume 36 ; 36 >
-    au < manifest ; exists ; 1991 ; Biographical Memoirs of Fellows of the Royal Society Volume 37 ; 37 >
-    au < manifest ; exists ; 1992 ; Biographical Memoirs of Fellows of the Royal Society Volume 38 ; 38 >
-    au < manifest ; exists ; 1993 ; Biographical Memoirs of Fellows of the Royal Society Volume 39 ; 39 >
+    au < testing ; exists ; 1976 ; Biographical Memoirs of Fellows of the Royal Society Volume 22 ; 22 >
+    au < testing ; exists ; 1977 ; Biographical Memoirs of Fellows of the Royal Society Volume 23 ; 23 >
+    au < testing ; exists ; 1978 ; Biographical Memoirs of Fellows of the Royal Society Volume 24 ; 24 >
+    au < testing ; exists ; 1979 ; Biographical Memoirs of Fellows of the Royal Society Volume 25 ; 25 >
+    au < testing ; exists ; 1980 ; Biographical Memoirs of Fellows of the Royal Society Volume 26 ; 26 >
+    au < testing ; exists ; 1981 ; Biographical Memoirs of Fellows of the Royal Society Volume 27 ; 27 >
+    au < testing ; exists ; 1982 ; Biographical Memoirs of Fellows of the Royal Society Volume 28 ; 28 >
+    au < testing ; exists ; 1983 ; Biographical Memoirs of Fellows of the Royal Society Volume 29 ; 29 >
+    au < testing ; exists ; 1984 ; Biographical Memoirs of Fellows of the Royal Society Volume 30 ; 30 >
+    au < testing ; exists ; 1985 ; Biographical Memoirs of Fellows of the Royal Society Volume 31 ; 31 >
+    au < testing ; exists ; 1986 ; Biographical Memoirs of Fellows of the Royal Society Volume 32 ; 32 >
+    au < testing ; exists ; 1987 ; Biographical Memoirs of Fellows of the Royal Society Volume 33 ; 33 >
+    au < testing ; exists ; 1988 ; Biographical Memoirs of Fellows of the Royal Society Volume 34 ; 34 >
+    au < testing ; exists ; 1989 ; Biographical Memoirs of Fellows of the Royal Society Volume 35 ; 35 >
+    au < testing ; exists ; 1990 ; Biographical Memoirs of Fellows of the Royal Society Volume 36 ; 36 >
+    au < testing ; exists ; 1991 ; Biographical Memoirs of Fellows of the Royal Society Volume 37 ; 37 >
+    au < testing ; exists ; 1992 ; Biographical Memoirs of Fellows of the Royal Society Volume 38 ; 38 >
+    au < testing ; exists ; 1993 ; Biographical Memoirs of Fellows of the Royal Society Volume 39 ; 39 >
     au < released ; manifest ; 1994 ; Biographical Memoirs of Fellows of the Royal Society Volume 40 ; 40 >
     au < released ; manifest ; 1995 ; Biographical Memoirs of Fellows of the Royal Society Volume 41 ; 41 >
     au < released ; manifest ; 1996 ; Biographical Memoirs of Fellows of the Royal Society Volume 42 ; 42 >
@@ -161,16 +161,16 @@
     param[base_url] = http://rsnr.royalsocietypublishing.org/
     attr[journal_id] = rsnr
 
-    au < manifest ; exists ; 1938 ; Notes and Records of the Royal Society Volume 1 ; 1 >
-    au < manifest ; exists ; 1939 ; Notes and Records of the Royal Society Volume 2 ; 2 >
-    au < manifest ; exists ; 1940 ; Notes and Records of the Royal Society Volume 3 ; 3 >
-    au < manifest ; exists ; 1946 ; Notes and Records of the Royal Society Volume 4 ; 4 >
-    au < manifest ; exists ; 1947-1948 ; Notes and Records of the Royal Society Volume 5 ; 5 >
-    au < manifest ; exists ; 1948-1949 ; Notes and Records of the Royal Society Volume 6 ; 6 >
-    au < manifest ; exists ; 1949-1950 ; Notes and Records of the Royal Society Volume 7 ; 7 >
-    au < manifest ; exists ; 1950-1951 ; Notes and Records of the Royal Society Volume 8 ; 8 >
-    au < manifest ; exists ; 1951-1952 ; Notes and Records of the Royal Society Volume 9 ; 9 >
-    au < manifest ; exists ; 1952-1953 ; Notes and Records of the Royal Society Volume 10 ; 10 >
+    au < testing ; exists ; 1938 ; Notes and Records of the Royal Society Volume 1 ; 1 >
+    au < testing ; exists ; 1939 ; Notes and Records of the Royal Society Volume 2 ; 2 >
+    au < testing ; exists ; 1940 ; Notes and Records of the Royal Society Volume 3 ; 3 >
+    au < testing ; exists ; 1946 ; Notes and Records of the Royal Society Volume 4 ; 4 >
+    au < testing ; exists ; 1947-1948 ; Notes and Records of the Royal Society Volume 5 ; 5 >
+    au < testing ; exists ; 1948-1949 ; Notes and Records of the Royal Society Volume 6 ; 6 >
+    au < testing ; exists ; 1949-1950 ; Notes and Records of the Royal Society Volume 7 ; 7 >
+    au < testing ; exists ; 1950-1951 ; Notes and Records of the Royal Society Volume 8 ; 8 >
+    au < testing ; exists ; 1951-1952 ; Notes and Records of the Royal Society Volume 9 ; 9 >
+    au < testing ; exists ; 1952-1953 ; Notes and Records of the Royal Society Volume 10 ; 10 >
     au < manifest ; exists ; 1954-1955 ; Notes and Records of the Royal Society Volume 11 ; 11 >
     au < manifest ; exists ; 1956-1957 ; Notes and Records of the Royal Society Volume 12 ; 12 >
     au < manifest ; exists ; 1958 ; Notes and Records of the Royal Society Volume 13 ; 13 >
