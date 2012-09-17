@@ -1,22 +1,23 @@
 {
   publisher <
     name = American Diabetes Association
+    
   >
-
-  {
+     attr[contract] = 2012
+     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin  
+     implicit < status ; year ; name ; param[volume_name] >
+     
+    {
+    
     title <
       name = Clinical Diabetes ;
       issn = 0891-8929 ;
       eissn = 1945-4953 ;
       issnl = 0891-8929
     >
-
-    {
-
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+ 
       param[base_url] = http://clinical.diabetesjournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
-
+     
       au < released ; 2001 ; Clinical Diabetes Volume 19 ; 19 >
       au < released ; 2002 ; Clinical Diabetes Volume 20 ; 20 >
       au < released ; 2003 ; Clinical Diabetes Volume 21 ; 21 >
@@ -31,10 +32,26 @@
       au < manifest ; 2012 ; Clinical Diabetes Volume 30 ; 30 >
 
     }
+    
+    {
+    
+    title < 
+      name = Clinical Practice Recommendations ;
+      issn = 0149-5992 ;
+      eissn = 1935-5548
+  
+    >   
+    
+     param[base_url] = http://care.diabetesjournals.org/
+    
+      au < exists ; 2012 ; Clinical Practice Recommendations Volume 35 ; 35 >
+     
 
-  }
+    }
 
-  {
+
+    {
+    
     title <
       name = Diabetes ;
       issn = 0012-1797 ;
@@ -42,12 +59,12 @@
       issnl = 0012-1797
     >
 
-    {
-
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://diabetes.diabetesjournals.org/
+
+
       implicit < status ; year ; name ; param[volume_name] >
       comment[supplement] = Scientific Sessions Abstract Book - this is published as a supplement to Diabetes journal
+
 
       au < released ; 1966 ; Diabetes Volume 14 [tables of contents only] ; 14 >
       au < released ; 1966 ; Diabetes Volume 15 [tables of contents only] ; 15 >
@@ -100,9 +117,8 @@
 
     }
 
-  }
-
-  {
+    {
+    
     title <
       name = Diabetes Care ;
       issn = 0149-5992 ;
@@ -110,12 +126,11 @@
       issnl = 0149-5992
     >
 
-    {
-
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://care.diabetesjournals.org/
+
       implicit < status ; year ; name ; param[volume_name] >
       comment[supplement] = Clinical Practice Recommendations - this is published as a supplement to Diabetes Care journal
+
 
       au < released ; 1978 ; Diabetes Care Volume 1 [abstracts only] ; 1 >
       au < released ; 1979 ; Diabetes Care Volume 2 [abstracts only] ; 2 >
@@ -155,9 +170,8 @@
 
     }
 
-  }
-
-  {
+    {
+    
     title <
       name = Diabetes Spectrum ;
       issn = 1040-9165 ;
@@ -165,11 +179,7 @@
       issnl = 1040-9165
     >
 
-    {
-
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://spectrum.diabetesjournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
       comment[ds24] = found a login page
       comment[ds25] = login page through manifest
 
@@ -188,9 +198,7 @@
 
     }
 
-  }
-
-  {
+    {
     title <
       name = DOC News ;
       issn = 1552-2024 ;
@@ -198,11 +206,7 @@
       issnl = 1552-2024
     >
 
-    {
-
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://docnews.diabetesjournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
       comment[0] = farewell issue Jan 2008
 
       au < released ; 2004 ; DOC News Volume 1 ; 1 >
@@ -213,7 +217,5 @@
 
     }
 
-  }
-
-}
+    }
 
