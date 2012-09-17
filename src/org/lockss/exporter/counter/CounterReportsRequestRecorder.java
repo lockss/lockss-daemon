@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsRequestRecorder.java,v 1.2 2012-08-16 22:29:56 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestRecorder.java,v 1.3 2012-09-17 22:23:45 fergaloy-sf Exp $
  */
 
 /*
@@ -76,10 +76,8 @@ public class CounterReportsRequestRecorder {
     TRUE, FALSE
   }
 
-  // Cached instance of OpenUrlResolver, for efficiency.
-  private OpenUrlResolver our = new OpenUrlResolver(
-						    LockssDaemon
-							.getLockssDaemon());
+  // Lazy-loaded, cached instance of OpenUrlResolver, for efficiency.
+  private OpenUrlResolver our = null;
 
   /**
    * Constructor.
@@ -306,7 +304,7 @@ public class CounterReportsRequestRecorder {
     String issn = tdbAu.getIssn();
     log.debug2(DEBUG_HEADER + "issn = '" + issn + "'.");
 
-    OpenUrlInfo oui = our.resolveFromUrl(url);
+    OpenUrlInfo oui = getOpenUrlResolver().resolveFromUrl(url);
     log.debug2(DEBUG_HEADER + "oui.resolvedTo = '" + oui.getResolvedTo() + "'.");
 
     // Record whether this is a request for a section of a book.
@@ -379,5 +377,21 @@ public class CounterReportsRequestRecorder {
     return new CounterReportsJournal(titleName, publisherName,
 				     publishingPlatform, doi, proprietaryId,
 				     printIssn, onlineIssn);
+  }
+
+  /**
+   * Provides the OpenUrlResolver.
+   * 
+   * @return an OpenUrlResolver with a cached instance of OpenUrlResolver, for
+   *         efficiency.
+   * */
+  private OpenUrlResolver getOpenUrlResolver() {
+
+    // Check whether an OpenUrlResolver needs to  be created.
+    if (our == null) {
+      our = new OpenUrlResolver(LockssDaemon.getLockssDaemon());
+    }
+
+    return our;
   }
 }
