@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -81,12 +81,8 @@ Cartography/Maps/000006/</string>
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>2,&quot;^%s.*\?.*(;O=[AD]|Thumbs\.db)$&quot;, base_url</string>
+      <string>2,&quot;^%s.*(\?.*;O=[AD]|Thumbs\.db)$&quot;, base_url</string>
       <string>1,&quot;^%s%s/%s(/?$|/)&quot;, base_url, group, collection</string>
     </list>
-  </entry>
-  <entry>
-    <string>plugin_crawl_type</string>
-    <string>HTML Links</string>
   </entry>
 </map>
