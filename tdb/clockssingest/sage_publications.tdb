@@ -12512,8 +12512,8 @@
       au < manifest ; exists ; 2007 ; International Area Studies Review Volume 10 ; 10 ; >
       au < manifest ; exists ; 2008 ; International Area Studies Review Volume 11 ; 11 ; >
       au < manifest ; exists ; 2009 ; International Area Studies Review Volume 12 ; 12 ; >
-      au < testing ; exists ; 2010 ; International Area Studies Review Volume 13 ; 13 ; >
-      au < testing ; exists ; 2011 ; International Area Studies Review Volume 14 ; 14 ; >
+      au < released ; manifest ; 2010 ; International Area Studies Review Volume 13 ; 13 ; >
+      au < released ; manifest ; 2011 ; International Area Studies Review Volume 14 ; 14 ; >
       au < crawling ; exists ; 2012 ; International Area Studies Review Volume 15 ; 15 ; >
      
     }
@@ -15120,11 +15120,11 @@
       au < manifest ; exists ; 2008 ; Journal of Applied Social Science Volume 2 ; 2 ; >
       au < manifest ; exists ; 2009 ; Journal of Applied Social Science Volume 3 ; 3 ; >
       au < testing ; exists ; 2010 ; Journal of Applied Social Science Volume 4 ; 4 ; >
-      au < testing ; exists ; 2011 ; Journal of Applied Social Science Volume 5 ; 5 ; >
+      au < released ; manifest ; 2011 ; Journal of Applied Social Science Volume 5 ; 5 ; >
       au < crawling ; exists ; 2012 ; Journal of Applied Social Science Volume 6 ; 6 ; >
 
   }
-
+  
   {
   
     title <
@@ -17074,8 +17074,8 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         rights = openaccess
 
-        au < testing ; exists ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 ; >
-        au < testing ; exists ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 ; >
+        au < released ; manifest ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 ; >
+        au < released ; manifest ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 ; >
         au < crawling ; exists ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 ; >
         
       }
@@ -21513,7 +21513,7 @@
     au < manifest ; exists ; 2008 ; Journal of Research on Leadership Education Volume 3 ; 3 ; >
     au < manifest ; exists ; 2009 ; Journal of Research on Leadership Education Volume 4 ; 4 ; >
     au < testing ; exists ; 2010 ; Journal of Research on Leadership Education Volume 5 ; 5 ; >
-    au < testing ; exists ; 2011 ; Journal of Research on Leadership Education Volume 6 ; 6 ; >
+    au < released ; manifest ; 2011 ; Journal of Research on Leadership Education Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; Journal of Research on Leadership Education Volume 7 ; 7 ; >
 
     }
