@@ -16,6 +16,7 @@
     
     plugin = needs.plugin
     param[base_url] = http://www.iumj.indiana.edu/
+    param[journal_id] = IUMJ
     implicit < status ; status2 ; year ; name ; param[year] >
 
     au < exists ; exists ; 1952 ; Indiana University Mathematics Journal Volume 1 ; 1952 >
