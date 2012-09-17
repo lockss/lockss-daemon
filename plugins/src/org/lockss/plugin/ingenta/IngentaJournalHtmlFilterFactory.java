@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.14 2012-09-16 10:12:09 pgust Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.15 2012-09-17 17:59:12 pgust Exp $
  */ 
 
 /*
@@ -34,19 +34,15 @@ package org.lockss.plugin.ingenta;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Reader;
 
-import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
 import org.htmlparser.filters.OrFilter;
-import org.htmlparser.tags.Div;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
-import org.lockss.filter.HtmlTagFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -60,6 +56,9 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+        // Filter out <div id="subscribe-links" ...> 
+        // institution-specific subscription link section
+        HtmlNodeFilters.tagWithAttribute("div", "id", "subscribe-links"),
         // Filter out <div id="links">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "links"),
         // Filter out <div id="footer">...</div>
