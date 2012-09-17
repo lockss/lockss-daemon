@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurp.py,v 1.8 2012-08-31 07:07:58 thib_gc Exp $
+# $Id: slurp.py,v 1.9 2012-09-17 23:38:18 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,11 +28,12 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.2'
+__version__ = '0.4.3'
 
 from datetime import datetime
 import optparse
 import os
+import re
 import slurpdb
 import sys
 from urllib2 import URLError
@@ -43,10 +44,19 @@ from lockss_util import LockssError
 
 UI_STRFTIME = '%H:%M:%S %m/%d/%y'
 
-def slurp_auids(db, ui, sid):
-    for auid in ui.getListOfAuids():
-        db.make_auid(sid, auid)
-    db.or_session_flags(sid, slurpdb.SESSIONS_FLAGS_AUIDS)
+def ui_to_datetime(ui_str):
+    if ui_str is None or ui_str.lower() == 'never': return None
+    return datetime.strptime(ui_str, UI_STRFTIME)
+
+def slurp_auids(db, ui, sid, options):
+    flag = slurpdb.SESSIONS_FLAGS_AUIDS
+    list_of_auids = ui.getListOfAuids()
+    if options is not None and options.auid_regex is not None:
+        r = re.compile(options.auid_regex)
+        list_of_auids = filter(lambda a: r.search(a), list_of_auids)
+        flag = flag | slurpdb.SESSIONS_FLAGS_AUIDS_REGEX
+    db.make_many_auids(sid, list_of_auids)
+    db.or_session_flags(sid, flag)
 
 def slurp_aus(db, ui, sid, options):
     for aid, auid in db.get_auids_for_session(sid):
@@ -112,7 +122,6 @@ def slurp_agreement(db, ui, sid, options):
             db.make_agreement(aid, peer, ha, la, hah, lah, con, lcon)
     db.or_session_flags(sid, slurpdb.SESSIONS_FLAGS_AGREEMENT)
     
-
 def daemon_ui_connection(options):
     ui_host, ui_port_str = options.daemon_ui_host_port.split(':')
     return lockss_daemon.Client(ui_host,
@@ -120,23 +129,19 @@ def daemon_ui_connection(options):
                                 options.daemon_ui_user,
                                 options.daemon_ui_pass)
 
-def ui_to_datetime(ui_str):
-    if ui_str is None or ui_str.lower() == 'never': return None
-    return datetime.strptime(ui_str, UI_STRFTIME)
-
 def slurp_option_parser():
     parser = optparse.OptionParser(version=__version__,
                                    description='Queries a LOCKSS daemon UI and stores results in a Slurp database.')
     slurpdb.slurpdb_option_parser(parser)
     parser.add_option('-D', '--daemon-ui-host-port',
                       metavar='HOSTPORT',
-                      help='Daemon UI host and port.')
+                      help='Daemon UI host and port')
     parser.add_option('-U', '--daemon-ui-user',
                       metavar='USER',
-                      help='Daemon UI user name.')
+                      help='Daemon UI user name')
     parser.add_option('-P', '--daemon-ui-pass',
                       metavar='PASS',
-                      help='Daemon UI password.')
+                      help='Daemon UI password')
     parser.add_option('-R', '--daemon-ui-retries',
                       metavar='RETR',
                       type='int',
@@ -150,6 +155,9 @@ def slurp_option_parser():
     parser.add_option('--auids',
                       action='store_true',                     
                       help='Gathers the active AUIDS.')
+    parser.add_option('--auid-regex',
+                      metavar='REGEX',                     
+                      help='Only processes AUIDs that match REGEX.')
     parser.add_option('--aus',
                       action='store_true',                     
                       help='Gathers data about the active AUs. Implies --auids')
@@ -165,6 +173,9 @@ def slurp_process_options(parser, options):
     if options.daemon_ui_pass is None: parser.error('-P/--daemon-ui-pass is required')
     if options.aus is not None: setattr(parser.values, parser.get_option('--auids').dest, True)
     if options.agreement is not None: setattr(parser.values, parser.get_option('--auids').dest, True)
+    if options.auid_regex:
+        try: r = re.compile(options.auid_regex)
+        except: parser.error('--auid-regex regular expression is invalid: %s' % (options.auid_regex,))
     if options.auids is None: parser.error('No action specified')
 
 if __name__ == '__main__':
@@ -183,7 +194,7 @@ if __name__ == '__main__':
         raise RuntimeError, '%s is not ready after %d seconds' % (options.daemon_ui_host_port,
                                                                   options.daemon_ui_timeout)
 
-    if options.auids: slurp_auids(db, ui, sid)
+    if options.auids: slurp_auids(db, ui, sid, options)
     if options.aus: slurp_aus(db, ui, sid, options)
     if options.agreement: slurp_agreement(db, ui, sid, options)
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurpdb.py,v 1.5 2012-08-31 07:07:58 thib_gc Exp $
+# $Id: slurpdb.py,v 1.6 2012-09-17 23:38:18 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.2'
+__version__ = '0.4.3'
 
 from datetime import datetime
 import MySQLdb
@@ -158,15 +158,18 @@ class SlurpDb(object):
         self.__commit()
 
     def make_auid(self, sid, auid):
+        self.make_many_auids(sid, [auid])
+
+    def make_many_auids(self, sid, list_of_auids):
         self.__raise_if_closed()
         cursor = self.__cursor()
-        cursor.execute('''\
+        cursor.executemany('''\
                 INSERT INTO %s
                 (%s, %s)
                 VALUES (%%s, %%s)
         ''' % (AUIDS,
                AUIDS_SID, AUIDS_AUID),
-        (sid, auid))
+        [(sid, auid) for auid in list_of_auids])
         cursor.close()
         self.__commit()
 
@@ -428,6 +431,7 @@ SESSIONS_FLAGS_NONE = 0x0
 SESSIONS_FLAGS_AUIDS = 0x1
 SESSIONS_FLAGS_AUS = 0x2
 SESSIONS_FLAGS_AGREEMENT = 0x4
+SESSIONS_FLAGS_AUIDS_REGEX = 0x8
 
 AUIDS = Table('auids', 1)
 AUIDS_ID = Column(AUIDS, 'id')
@@ -485,13 +489,13 @@ def slurpdb_option_parser(parser=None):
                          help='Database host and port. Default: %default')
     container.add_option('-u', '--db-user',
                          metavar='USER',
-                         help='Database user name.')
+                         help='Database user name')
     container.add_option('-p', '--db-pass',
                          metavar='PASS',
-                         help='Database password.')
+                         help='Database password')
     container.add_option('-n', '--db-name',
                          metavar='NAME',
-                         help='Database name.')
+                         help='Database name')
     if parser is None:
         return container
     else:
