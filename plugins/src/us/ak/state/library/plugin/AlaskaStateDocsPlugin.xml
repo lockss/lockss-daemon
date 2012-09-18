@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>down - needs update</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>us.ak.state.library.plugin.AlaskaStateDocsPlugin</string>
   </entry>
@@ -44,11 +48,11 @@
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
-    <long>1814400000</long>
+    <long>1209600000</long>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Alaska State Docs</string>
+    <string>Alaska State Documents Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
