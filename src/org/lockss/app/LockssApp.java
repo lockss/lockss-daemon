@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.21 2012-07-17 02:33:26 thib_gc Exp $
+ * $Id: LockssApp.java,v 1.22 2012-09-18 19:07:42 tlipkis Exp $
  */
 
 /*
@@ -194,6 +194,18 @@ public abstract class LockssApp {
       vApp = vApp + ", " + plat.displayString();
     }
     return vApp;
+  }
+
+  /** Return a string describing the JVM */
+  public String getJavaVersionInfo() {
+    Properties props = System.getProperties();
+    StringBuilder sb = new StringBuilder();
+    sb.append(props.get("java.vm.vendor"));
+    sb.append(", ");
+    sb.append(props.get("java.vm.name"));
+    sb.append(", ");
+    sb.append(props.get("java.runtime.version"));
+    return sb.toString();
   }
 
   // LockssManager accessors
@@ -419,6 +431,7 @@ public abstract class LockssApp {
 
     startDate = TimeBase.nowDate();
 
+    log.info(getJavaVersionInfo());
     log.info(getVersionInfo() + ": starting");
 
     // initialize our properties from the urls given
@@ -427,6 +440,7 @@ public abstract class LockssApp {
     // repeat the version info, as we may now be logging to a different target
     // (And to include the platform version, which wasn't availabe before the
     // config was loaded.)
+    log.info(getJavaVersionInfo());
     log.info(getVersionInfo() + ": starting managers");
 
     // startup all services
