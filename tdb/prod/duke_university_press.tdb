@@ -1596,7 +1596,7 @@
       param[base_url] = http://philreview.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 2000 ; Pedagogy Volume 109 ; 109 >
+      au < HighWirePressH20Plugin ; exists ; 2000 ; Philosophical Review Volume 109 ; 109 >
     
     }
     
@@ -1834,25 +1834,46 @@
       eissn = 1534-6714 ;
       issnl = 1534-6714
     >
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = small_axe
+      attr[journal_id] = smx
+      
+      au < released ; 2001 ; Small Axe Volume 5 ; 5 >
+      au < released ; 2002 ; Small Axe Volume 6 ; 6 >
+      au < released ; 2003 ; Small Axe Volume 7 ; 7 >
+      au < released ; 2004 ; Small Axe Volume 8 ; 8 >
+      au < released ; 2005 ; Small Axe Volume 9 ; 9 >
+      au < released ; 2006 ; Small Axe Volume 10 ; 10 >
+      au < released ; 2007 ; Small Axe Volume 11 ; 11 >
+      au < released ; 2008 ; Small Axe Volume 12 ; 12 >
+      au < released ; 2009 ; Small Axe Volume 13 ; 13 >
+      au < released ; 2010 ; Small Axe Volume 14 ; 14 >
+      au < released ; 2011 ; Small Axe Volume 15 ; 15 >
+      au < manifest ; 2012 ; Small Axe Volume 16 ; 16 >
+    }
+    
+    {
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://smallaxe.dukejournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    implicit < status ; year ; name ; param[volume] >
-    param[base_url] = http://muse.jhu.edu/
-    param[journal_dir] = small_axe
-    attr[journal_id] = smx
-
-    au < released ; 2001 ; Small Axe Volume 5 ; 5 >
-    au < released ; 2002 ; Small Axe Volume 6 ; 6 >
-    au < released ; 2003 ; Small Axe Volume 7 ; 7 >
-    au < released ; 2004 ; Small Axe Volume 8 ; 8 >
-    au < released ; 2005 ; Small Axe Volume 9 ; 9 >
-    au < released ; 2006 ; Small Axe Volume 10 ; 10 >
-    au < released ; 2007 ; Small Axe Volume 11 ; 11 >
-    au < released ; 2008 ; Small Axe Volume 12 ; 12 >
-    au < released ; 2009 ; Small Axe Volume 13 ; 13 >
-    au < released ; 2010 ; Small Axe Volume 14 ; 14 >
-    au < released ; 2011 ; Small Axe Volume 15 ; 15 >
-    au < manifest ; 2012 ; Small Axe Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; Small Axe Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; Small Axe Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; Small Axe Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; Small Axe Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; exists ; 2005 ; Small Axe Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; exists ; 2006 ; Small Axe Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; exists ; 2007 ; Small Axe Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; exists ; 2008 ; Small Axe Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; exists ; 2009 ; Small Axe Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; exists ; 2010 ; Small Axe Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; exists ; 2011 ; Small Axe Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; exists ; 2012 ; Small Axe Volume 16 ; 16 >
+    }
 
   }
 
