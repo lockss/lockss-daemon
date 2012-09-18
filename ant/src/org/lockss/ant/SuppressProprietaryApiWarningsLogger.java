@@ -1,5 +1,5 @@
 /*
- * $Id: SuppressProprietaryApiWarningsLogger.java,v 1.2 2010-02-22 06:59:57 tlipkis Exp $
+ * $Id: SuppressProprietaryApiWarningsLogger.java,v 1.3 2012-09-18 19:10:19 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class SuppressProprietaryApiWarningsLogger extends NoBannerLogger {
 
   private int skipLines = 0;
 
-  Pattern pat = Pattern.compile(".* is Sun proprietary API .*");
+  Pattern pat = Pattern.compile(".* is (Sun|internal) proprietary API .*");
 
   /** Sole constructor. */
   public SuppressProprietaryApiWarningsLogger() {
