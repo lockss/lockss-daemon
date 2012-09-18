@@ -1123,7 +1123,7 @@
     {
   
     title < 
-      name = minnesota review: a journal of creative and critical writing ;
+      name = The Minnesota Review ;
       issn = 0026-5667 ;
       eissn = 2157-4189
   
@@ -1132,14 +1132,14 @@
       param[base_url] = http://minnesotareview.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2005 ; minnesota review: a journal of creative and critical writing Volume 63-64 ; 63-64 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2006 ; minnesota review: a journal of creative and critical writing Volume 65-67 ; 65-67 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2007 ; minnesota review: a journal of creative and critical writing Volume 68-69 ; 68-69 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2008 ; minnesota review: a journal of creative and critical writing Volume 70 ; 70 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2009 ; minnesota review: a journal of creative and critical writing Volume 71-73 ; 71-73 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2010 ; minnesota review: a journal of creative and critical writing Volume 75 ; 75 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2011 ; minnesota review: a journal of creative and critical writing Volume 76-77 ; 76-77 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; minnesota review: a journal of creative and critical writing Volume 78 ; 78 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; The Minnesota Review Volume 2012 ; 2012 >
 
     }
     
