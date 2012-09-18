@@ -200,8 +200,8 @@
     
     au < testing ; 2005 ; Contemporary French Civilization Volume 29 ; 29 >
     au < testing ; 2006 ; Contemporary French Civilization Volume 30 ; 30 >
-    au < testing ; 2007 ; Contemporary French Civilization Volume 31 ; 31 >
-    au < testing ; 2008 ; Contemporary French Civilization Volume 32 ; 32 >
+    au < ready ; 2007 ; Contemporary French Civilization Volume 31 ; 31 >
+    au < ready ; 2008 ; Contemporary French Civilization Volume 32 ; 32 >
     au < released ; 2009 ; Contemporary French Civilization Volume 33 ; 33 >
     au < released ; 2010 ; Contemporary French Civilization Volume 34 ; 34 >
     au < released ; 2011 ; Contemporary French Civilization Volume 35 ; 35 >    
@@ -301,13 +301,13 @@
     implicit < status ; year ; name ; param[volume_name] >  
     param[journal_issn] = 1478-3401 
 
-    au < testing ; 2002 ; International Development Planning Review Volume 24 ; 24 >
-    au < testing ; 2003 ; International Development Planning Review Volume 25 ; 25 >
-    au < testing ; 2004 ; International Development Planning Review Volume 26 ; 26 >
-    au < testing ; 2005 ; International Development Planning Review Volume 27 ; 27 >
-    au < testing ; 2006 ; International Development Planning Review Volume 28 ; 28 >
-    au < testing ; 2007 ; International Development Planning Review Volume 29 ; 29 >
-    au < testing ; 2008 ; International Development Planning Review Volume 30 ; 30 >
+    au < ready ; 2002 ; International Development Planning Review Volume 24 ; 24 >
+    au < ready ; 2003 ; International Development Planning Review Volume 25 ; 25 >
+    au < ready ; 2004 ; International Development Planning Review Volume 26 ; 26 >
+    au < ready ; 2005 ; International Development Planning Review Volume 27 ; 27 >
+    au < ready ; 2006 ; International Development Planning Review Volume 28 ; 28 >
+    au < ready ; 2007 ; International Development Planning Review Volume 29 ; 29 >
+    au < ready ; 2008 ; International Development Planning Review Volume 30 ; 30 >
     au < released ; 2009 ; International Development Planning Review Volume 31 ; 31 >
     au < released ; 2010 ; International Development Planning Review Volume 32 ; 32 >
     au < released ; 2011 ; International Development Planning Review Volume 33 ; 33 >
@@ -346,8 +346,8 @@
       implicit < status ; year ; name ; param[volume_name] >  
       param[journal_issn] = 1757-6466 
 
-      au < testing ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
-      au < testing ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
+      au < ready ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
+      au < ready ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
       au < released ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
       au < released ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
       au < released ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
