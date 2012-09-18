@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.15 2012-09-17 17:59:12 pgust Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.16 2012-09-18 16:27:59 pgust Exp $
  */ 
 
 /*
@@ -56,6 +56,10 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+        // filter out <div class="heading"> that encloses the list of references
+        // for the article: reference links won't be the same because not all 
+        // the referenced articles are available at a given institution.
+        HtmlNodeFilters.tagWithAttribute("div", "class", "heading"),
         // Filter out <div id="subscribe-links" ...> 
         // institution-specific subscription link section
         HtmlNodeFilters.tagWithAttribute("div", "id", "subscribe-links"),
