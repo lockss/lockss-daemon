@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.322 2012-09-06 03:58:35 tlipkis Exp $
+ $Id: build.xml,v 1.323 2012-09-18 19:07:27 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -50,6 +50,7 @@ Args:
   -Dforkc=true             Run compiler in a separate jvm.
   -Dhalt=false             Run all tests in group, even if some fail.
   -Dinclude=path           Include matching tests.
+  -Djavaversion=1.6        The version of Java accepted/targeted.
   -Dkeeptempfiles=true     Don't delete temp files after tests run.
   -Dlistfiles=true         List the source files that will be compiled.  Use if
                               a compile step runs when nothing should need to
@@ -102,6 +103,7 @@ Args:
   <property file="${user.home}/.lockssprops"/>
 
   <!-- Defaults -->
+  <property name="javaversion" value="1.6" />
   <property name="loglevel" value="" />
   <property name="showoutput" value="no" />
   <property name="filtertrace" value="yes" />
@@ -532,6 +534,8 @@ Args:
    <sequential>
     <javac srcdir="@{srcdir}"
            destdir="@{destdir}"
+           source="${javaversion}"
+           target="${javaversion}"
            debug="${javac.debug}"
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
