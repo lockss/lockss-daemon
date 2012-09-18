@@ -50,10 +50,15 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
 
   // block tags from IngentaJouranlHtmlFilterFactory
   String blockIds[][] = new String[][] {
-    // filter out <div class="heading"> that encloses the list of references
-    // for the article: reference links won't be the same because not all 
+    // filter out <div class="heading"> that encloses a statement with
+    // the number of references and the number that can be referenced: 
+    // number of reference links won't be the same because not all 
     // the referenced articles are available at a given institution.
     {"div", "class", "heading"},
+    // filter out <li class="data"> that encloses a reference for the
+    // article: reference links won't be the same because not all 
+    // the referenced articles are available at a given institution.
+    {"li", "class", "data"},
     // institution-specific subscription link section
     {"div", "id", "subscribe-links"},
     // Filter out <div id="links">...</div>
