@@ -1450,7 +1450,7 @@
   
   {
     title <
-      name = New German Review ;
+      name = New German Critique ;
       issn =  0094-033X ;
       eissn = 1558-1462
     >
@@ -1459,8 +1459,8 @@
       param[base_url] = http://ngc.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
 
-      au < HighWirePressH20Plugin ; exists ; 2006 ; New German Review Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; exists ; 2007 ; New German Review Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; exists ; 2006 ; New German Critique Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; exists ; 2007 ; New German Critique Volume 34 ; 34 >
 
   }
 
