@@ -1,5 +1,5 @@
 /*
- * $Id: EditKeyStores.java,v 1.6 2010-03-25 07:35:39 tlipkis Exp $
+ * $Id: EditKeyStores.java,v 1.7 2012-09-18 19:09:57 tlipkis Exp $
  */
 
 /*
@@ -52,10 +52,7 @@ import sun.security.x509.CertificateValidity;
 import sun.security.x509.CertificateSerialNumber;
 import sun.security.x509.CertificateAlgorithmId;
 import sun.security.x509.X509Key;
-import sun.security.x509.X500Signer;
 import sun.security.pkcs.PKCS10;
-import sun.security.provider.IdentityDatabase;
-import sun.security.provider.SystemSigner;
 
 import org.lockss.util.*;
 

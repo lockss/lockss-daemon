@@ -1,5 +1,5 @@
 /*
- * $Id: BuildPermKeyStores.java,v 1.3 2007-08-06 18:45:23 thib_gc Exp $
+ * $Id: BuildPermKeyStores.java,v 1.4 2012-09-18 19:09:57 tlipkis Exp $
  */
 
 /*
@@ -52,10 +52,7 @@ import sun.security.x509.CertificateValidity;
 import sun.security.x509.CertificateSerialNumber;
 import sun.security.x509.CertificateAlgorithmId;
 import sun.security.x509.X509Key;
-import sun.security.x509.X500Signer;
 import sun.security.pkcs.PKCS10;
-import sun.security.provider.IdentityDatabase;
-import sun.security.provider.SystemSigner;
 
 /**
  * A tool to build key stores for V3 over SSL support in CLOCKSS

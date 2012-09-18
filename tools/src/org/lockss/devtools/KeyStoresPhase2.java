@@ -1,5 +1,5 @@
 /*
- * $Id: KeyStoresPhase2.java,v 1.1 2006-10-04 22:52:49 dshr Exp $
+ * $Id: KeyStoresPhase2.java,v 1.2 2012-09-18 19:09:57 tlipkis Exp $
  */
 
 /*
@@ -53,10 +53,7 @@ import sun.security.x509.CertificateValidity;
 import sun.security.x509.CertificateSerialNumber;
 import sun.security.x509.CertificateAlgorithmId;
 import sun.security.x509.X509Key;
-import sun.security.x509.X500Signer;
 import sun.security.pkcs.PKCS10;
-import sun.security.provider.IdentityDatabase;
-import sun.security.provider.SystemSigner;
 
 /**
  * This program is invoked with a list of domain names.  For each
