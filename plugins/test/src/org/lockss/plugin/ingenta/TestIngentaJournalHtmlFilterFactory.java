@@ -31,6 +31,7 @@ package org.lockss.plugin.ingenta;
 import java.io.*;
 
 import org.lockss.util.*;
+import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.test.*;
 
 /**
@@ -49,6 +50,10 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
 
   // block tags from IngentaJouranlHtmlFilterFactory
   String blockIds[][] = new String[][] {
+    // filter out <div class="heading"> that encloses the list of references
+    // for the article: reference links won't be the same because not all 
+    // the referenced articles are available at a given institution.
+    {"div", "class", "heading"},
     // institution-specific subscription link section
     {"div", "id", "subscribe-links"},
     // Filter out <div id="links">...</div>
