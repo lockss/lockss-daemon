@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.259 2012-08-29 20:56:17 barry409 Exp $
+ * $Id: PollManager.java,v 1.260 2012-09-18 19:09:00 tlipkis Exp $
  */
 
 /*
@@ -2435,7 +2435,7 @@ public class PollManager
       map = new HashMap();
     }
     
-    private V3PollStatusAccessorEntry getEntry(String auId) {
+    private synchronized V3PollStatusAccessorEntry getEntry(String auId) {
       V3PollStatusAccessorEntry e = (V3PollStatusAccessorEntry)map.get(auId);
       if (e == null) {
         e = new V3PollStatusAccessorEntry();
@@ -2526,7 +2526,7 @@ public class PollManager
     /**
      * Clear the poll history map.
      */
-    public void clear() {
+    public synchronized void clear() {
       map.clear();
     }
   }
