@@ -201,14 +201,14 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2000 ; Active Learning in Higher Education Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2001 ; Active Learning in Higher Education Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2002 ; Active Learning in Higher Education Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2003 ; Active Learning in Higher Education Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2004 ; Active Learning in Higher Education Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2005 ; Active Learning in Higher Education Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2006 ; Active Learning in Higher Education Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2007 ; Active Learning in Higher Education Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2000 ; Active Learning in Higher Education Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2001 ; Active Learning in Higher Education Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2002 ; Active Learning in Higher Education Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2003 ; Active Learning in Higher Education Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2004 ; Active Learning in Higher Education Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2005 ; Active Learning in Higher Education Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2006 ; Active Learning in Higher Education Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2007 ; Active Learning in Higher Education Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
       au < zapped ; down ; 2010 ; Active Learning in Higher Education Volume 11 ; 11 ; >
@@ -243,21 +243,21 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1992 ; Adaptive Behavior Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1993 ; Adaptive Behavior Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1994 ; Adaptive Behavior Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1995 ; Adaptive Behavior Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1996 ; Adaptive Behavior Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1997 ; Adaptive Behavior Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1999 ; Adaptive Behavior Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2000 ; Adaptive Behavior Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2001 ; Adaptive Behavior Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2002 ; Adaptive Behavior Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2003 ; Adaptive Behavior Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2004 ; Adaptive Behavior Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2005 ; Adaptive Behavior Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2006 ; Adaptive Behavior Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2007 ; Adaptive Behavior Volume 15 ; 15 ; >
+      au < crawling ; exists ; 1992 ; Adaptive Behavior Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1993 ; Adaptive Behavior Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1994 ; Adaptive Behavior Volume 3 ; 3 ; >
+      au < crawling ; exists ; 1995 ; Adaptive Behavior Volume 4 ; 4 ; >
+      au < crawling ; exists ; 1996 ; Adaptive Behavior Volume 5 ; 5 ; >
+      au < crawling ; exists ; 1997 ; Adaptive Behavior Volume 6 ; 6 ; >
+      au < crawling ; exists ; 1999 ; Adaptive Behavior Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2000 ; Adaptive Behavior Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2001 ; Adaptive Behavior Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2002 ; Adaptive Behavior Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2003 ; Adaptive Behavior Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2004 ; Adaptive Behavior Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2005 ; Adaptive Behavior Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2006 ; Adaptive Behavior Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2007 ; Adaptive Behavior Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Adaptive Behavior Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Adaptive Behavior Volume 17 ; 17 ; >
       au < released ; crawling ; 2010 ; Adaptive Behavior Volume 18 ; 18 ; >
@@ -292,45 +292,45 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1969 ; Administration & Society Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1970 ; Administration & Society Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1971 ; Administration & Society Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1972 ; Administration & Society Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1973 ; Administration & Society Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1974 ; Administration & Society Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1975 ; Administration & Society Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1976 ; Administration & Society Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1977 ; Administration & Society Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1978 ; Administration & Society Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1979 ; Administration & Society Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1980 ; Administration & Society Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1981 ; Administration & Society Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1982 ; Administration & Society Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1983 ; Administration & Society Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1984 ; Administration & Society Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1985 ; Administration & Society Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1986 ; Administration & Society Volume 18 ; 18 ; >
-      au < manifest ; exists ; 1987 ; Administration & Society Volume 19 ; 19 ; >
-      au < manifest ; exists ; 1988 ; Administration & Society Volume 20 ; 20 ; >
-      au < manifest ; exists ; 1989 ; Administration & Society Volume 21 ; 21 ; >
-      au < manifest ; exists ; 1990 ; Administration & Society Volume 22 ; 22 ; >
-      au < manifest ; exists ; 1991 ; Administration & Society Volume 23 ; 23 ; >
-      au < manifest ; exists ; 1992 ; Administration & Society Volume 24 ; 24 ; >
-      au < manifest ; exists ; 1993 ; Administration & Society Volume 25 ; 25 ; >
-      au < manifest ; exists ; 1994 ; Administration & Society Volume 26 ; 26 ; >
-      au < manifest ; exists ; 1995 ; Administration & Society Volume 27 ; 27 ; >
-      au < manifest ; exists ; 1996 ; Administration & Society Volume 28 ; 28 ; >
-      au < manifest ; exists ; 1997 ; Administration & Society Volume 29 ; 29 ; >
-      au < manifest ; exists ; 1998 ; Administration & Society Volume 30 ; 30 ; >
-      au < manifest ; exists ; 1999 ; Administration & Society Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2000 ; Administration & Society Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2001 ; Administration & Society Volume 33 ; 33 ; >
-      au < manifest ; exists ; 2002 ; Administration & Society Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2003 ; Administration & Society Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2004 ; Administration & Society Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2005 ; Administration & Society Volume 37 ; 37 ; >
-      au < manifest ; exists ; 2006 ; Administration & Society Volume 38 ; 38 ; >
-      au < manifest ; exists ; 2007 ; Administration & Society Volume 39 ; 39 ; >
+      au < crawling ; exists ; 1969 ; Administration & Society Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1970 ; Administration & Society Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1971 ; Administration & Society Volume 3 ; 3 ; >
+      au < crawling ; exists ; 1972 ; Administration & Society Volume 4 ; 4 ; >
+      au < crawling ; exists ; 1973 ; Administration & Society Volume 5 ; 5 ; >
+      au < crawling ; exists ; 1974 ; Administration & Society Volume 6 ; 6 ; >
+      au < crawling ; exists ; 1975 ; Administration & Society Volume 7 ; 7 ; >
+      au < crawling ; exists ; 1976 ; Administration & Society Volume 8 ; 8 ; >
+      au < crawling ; exists ; 1977 ; Administration & Society Volume 9 ; 9 ; >
+      au < crawling ; exists ; 1978 ; Administration & Society Volume 10 ; 10 ; >
+      au < crawling ; exists ; 1979 ; Administration & Society Volume 11 ; 11 ; >
+      au < crawling ; exists ; 1980 ; Administration & Society Volume 12 ; 12 ; >
+      au < crawling ; exists ; 1981 ; Administration & Society Volume 13 ; 13 ; >
+      au < crawling ; exists ; 1982 ; Administration & Society Volume 14 ; 14 ; >
+      au < crawling ; exists ; 1983 ; Administration & Society Volume 15 ; 15 ; >
+      au < crawling ; exists ; 1984 ; Administration & Society Volume 16 ; 16 ; >
+      au < crawling ; exists ; 1985 ; Administration & Society Volume 17 ; 17 ; >
+      au < crawling ; exists ; 1986 ; Administration & Society Volume 18 ; 18 ; >
+      au < crawling ; exists ; 1987 ; Administration & Society Volume 19 ; 19 ; >
+      au < crawling ; exists ; 1988 ; Administration & Society Volume 20 ; 20 ; >
+      au < crawling ; exists ; 1989 ; Administration & Society Volume 21 ; 21 ; >
+      au < crawling ; exists ; 1990 ; Administration & Society Volume 22 ; 22 ; >
+      au < crawling ; exists ; 1991 ; Administration & Society Volume 23 ; 23 ; >
+      au < crawling ; exists ; 1992 ; Administration & Society Volume 24 ; 24 ; >
+      au < crawling ; exists ; 1993 ; Administration & Society Volume 25 ; 25 ; >
+      au < crawling ; exists ; 1994 ; Administration & Society Volume 26 ; 26 ; >
+      au < crawling ; exists ; 1995 ; Administration & Society Volume 27 ; 27 ; >
+      au < crawling ; exists ; 1996 ; Administration & Society Volume 28 ; 28 ; >
+      au < crawling ; exists ; 1997 ; Administration & Society Volume 29 ; 29 ; >
+      au < crawling ; exists ; 1998 ; Administration & Society Volume 30 ; 30 ; >
+      au < crawling ; exists ; 1999 ; Administration & Society Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2000 ; Administration & Society Volume 32 ; 32 ; >
+      au < crawling ; exists ; 2001 ; Administration & Society Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2002 ; Administration & Society Volume 34 ; 34 ; >
+      au < crawling ; exists ; 2003 ; Administration & Society Volume 35 ; 35 ; >
+      au < crawling ; exists ; 2004 ; Administration & Society Volume 36 ; 36 ; >
+      au < crawling ; exists ; 2005 ; Administration & Society Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2006 ; Administration & Society Volume 38 ; 38 ; >
+      au < crawling ; exists ; 2007 ; Administration & Society Volume 39 ; 39 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Administration & Society Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Administration & Society Volume 41 ; 41 ; >
       au < zapped ; down ; 2010 ; Administration & Society Volume 42 ; 42 ; >
@@ -354,14 +354,14 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2005 ; Administrative Science Quarterly Volume 50 ; 50 ; >
-      au < manifest ; exists ; 2006 ; Administrative Science Quarterly Volume 51 ; 51 ; >
-      au < manifest ; exists ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 ; >
-      au < manifest ; exists ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 ; >
+      au < crawling ; exists ; 2005 ; Administrative Science Quarterly Volume 50 ; 50 ; >
+      au < crawling ; exists ; 2006 ; Administrative Science Quarterly Volume 51 ; 51 ; >
+      au < crawling ; exists ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 ; >
+      au < crawling ; exists ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 ; >
       au < released ; crawling ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 ; >
       au < released ; crawling ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 ; >
       au < released ; crawling ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 ; >
-      au < crawling ; exists ; 2012 ; Administrative Science Quarterly Volume 57 ; 57 ; >
+      au < testing ; exists ; 2012 ; Administrative Science Quarterly Volume 57 ; 57 ; >
 
     }
 
