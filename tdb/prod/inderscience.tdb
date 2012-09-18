@@ -2,6 +2,7 @@
   publisher <
     name = Inderscience
   >
+    attr[contract] = 2011
     plugin = org.lockss.plugin.metapress.MetaPressPlugin
     param[base_url] = http://inderscience.metapress.com/
     implicit < status ; year ; name ; param[volume_name] >
@@ -1706,7 +1707,7 @@
         issnl = 1560-4624
       >
 
-      param[journal_issn] = 1741-5055
+      param[journal_issn] = 1560-4624
       
       au < exists ; 1990-1991 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 1 ; 1 >
       au < exists ; 1992 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 2 ; 2 >
@@ -6711,7 +6712,7 @@
         issnl = 0267-5730
       >
 
-      param[journal_issn] = 1741-5276
+      param[journal_issn] = 0267-5730
       
       au < exists ; 1986 ; International Journal of Technology Management Volume 1 ; 1 >
       au < exists ; 1987 ; International Journal of Technology Management Volume 2 ; 2 >
