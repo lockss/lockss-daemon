@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunction.java,v 1.14 2006-09-14 01:43:54 dshr Exp $
+ * $Id: TestMemoryBoundFunction.java,v 1.15 2012-09-18 19:09:21 tlipkis Exp $
  */
 
 /*
@@ -78,6 +78,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
       rand.nextBytes(basisA0);
       log.info(basisA0.length + " bytes of A0 created");
     }
+    setUpFactories();
   }
 
   /** tearDown method for test case
@@ -90,6 +91,19 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   // XXX test that calling computeSteps() when finished does nothing.
   // XXX test behavior of empty proof
   // XXX separate timing tests etc into Func
+
+  private void setUpFactories() {
+    if (factory == null) {
+      factory = new MemoryBoundFunctionFactory[names.length];
+      for (int i = 0; i < names.length; i++) {
+	try {
+	  factory[i] = new MemoryBoundFunctionFactory(names[i], basisA0, basisT);
+	} catch (Exception ex) {
+	  fail(names[i] + " threw " + ex.toString());
+	}
+      }
+    }
+  }
 
   /**
    * Test factory by attempting to create one for a BOGUS implementation.
@@ -144,16 +158,6 @@ public class TestMemoryBoundFunction extends LockssTestCase {
       }
       if (!gotException) {
 	fail(names[i] + " makeGenerator did not throw");
-      }
-    }
-    if (factory == null) {
-      factory = new MemoryBoundFunctionFactory[names.length];
-      for (int i = 0; i < names.length; i++) {
-	try {
-	  factory[i] = new MemoryBoundFunctionFactory(names[i], basisA0, basisT);
-	} catch (Exception ex) {
-	  fail(names[i] + " threw " + ex.toString());
-	}
       }
     }
     for (int i = 0; i < factory.length; i++) {

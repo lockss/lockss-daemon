@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperUtil.java,v 1.3 2011-08-09 04:17:30 tlipkis Exp $
+ * $Id: TestWrapperUtil.java,v 1.4 2012-09-18 19:09:21 tlipkis Exp $
  */
 
 /*
@@ -44,12 +44,12 @@ import org.lockss.util.*;
 public class TestWrapperUtil extends LockssTestCase {
 
   public void testNoWrap() throws PluginException {
-    AnInterface obj = new AClass();
-    AnInterface wrapper = WrapperUtil.wrap(obj, AnInterface.class);
+    AnotherInterface obj = new AnotherClass();
+    AnotherInterface wrapper = WrapperUtil.wrap(obj, AnotherInterface.class);
     assertEquals("foo0", wrapper.op("foo"));
-    AClass a = (AClass)obj;
+    AnotherClass a = (AnotherClass)obj;
     assertEquals("foo", a.arg);
-    assertTrue(wrapper instanceof AClass);
+    assertClass(AnotherClass.class, wrapper);
   }
 
   public void testWrap() throws PluginException {
@@ -104,7 +104,30 @@ public class TestWrapperUtil extends LockssTestCase {
     String op(String arg) throws PluginException.LinkageError;
   }
 
+  public interface AnotherInterface {
+    String op(String arg) throws PluginException.LinkageError;
+  }
+
   public static class AClass implements AnInterface {
+    String arg;
+    List args = new ArrayList();
+    Error error;
+
+    void setError(Error error) {
+      this.error = error;
+    }
+
+    public String op(String arg) {
+      this.arg = arg;
+      args.add(arg);
+      if (error != null) {
+	throw error;
+      }
+      return arg + "0";
+    }
+  }
+
+  public static class AnotherClass implements AnotherInterface {
     String arg;
     List args = new ArrayList();
     Error error;

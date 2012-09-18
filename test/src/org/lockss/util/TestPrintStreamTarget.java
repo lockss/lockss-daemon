@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrintStreamTarget.java,v 1.6 2012-03-20 17:40:11 tlipkis Exp $
+ * $Id: TestPrintStreamTarget.java,v 1.7 2012-09-18 19:09:21 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,13 @@ public class TestPrintStreamTarget extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.util.PrintStreamTarget.class
   };
+
+  protected void setUp() throws Exception {
+    super.setUp();
+    // DateFormat is stored in a static in Logger; ensure it has the
+    // default value
+    ConfigurationUtil.setFromArgs("dummy", "");
+  }
 
   public void testOutputStringFormat1() {
     testOutputStringFormat("\\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: ");

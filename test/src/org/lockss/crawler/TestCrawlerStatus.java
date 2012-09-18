@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.9 2012-07-17 08:48:25 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.10 2012-09-18 19:09:21 tlipkis Exp $
  */
 
 /*
@@ -72,9 +72,10 @@ public class TestCrawlerStatus extends LockssTestCase {
   }
 
   public void testAccessors() {
+    mau.setAuId("Mach 7");
     CrawlerStatus c1 = new CrawlerStatus(mau, null, "Type 42");
     assertEquals(mau, c1.getAu());
-    assertEquals("MockAU0", c1.getAuId());
+    assertEquals("Mach 7", c1.getAuId());
     assertEquals("MockAU", c1.getAuName());
     assertEquals("Type 42", c1.getType());
 
