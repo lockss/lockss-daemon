@@ -90,7 +90,23 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
             	return divContents.length() < 150 && divContents.contains("/Images/trialaccess.png");
 
             }
-        }
+        },
+        
+        // Stylesheets sometimes contain version numbers
+        HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
+        // Institution-specific stuff
+        HtmlNodeFilters.tagWithAttribute("div", "class", "Institution"),
+        HtmlNodeFilters.tagWithAttribute("img", "src", "/Images/institution-icon.png"),
+        // Login page
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/gateway/login"),
+        // Article titles
+        HtmlNodeFilters.tagWithAttribute("div", "class", "Title1 BorderBottom"),
+        HtmlNodeFilters.tagWithAttributeRegex("h2", "style", "border-bottom"),
+        // Favorite button
+        HtmlNodeFilters.tagWithAttribute("span", "id", "ctl00_ctl00_cphMain_cphCenter_favorite"),
+        // <h3> replaced <h4> or vice versa at one point
+        new TagNameFilter("h3"),
+        new TagNameFilter("h4")    
         
     };
     
