@@ -12,6 +12,39 @@
     <string>2</string>
   </entry>
   <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Alaska State Documents Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Alaska State Documents Plugin</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sshippinglists/.*&quot;, base_url</string>
+      <string>1,&quot;%sedocs/.*&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sshippinglists/fy_%d/fy_%d_shippinglists.html&quot;, base_url, year, year</string>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
@@ -32,34 +65,6 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
-    </list>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;%s%d&quot;, base_url, year</string>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%sshippinglists/fy_%d/fy_%d_shippinglists.html&quot;, base_url, year, year</string>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>Alaska State Documents Plugin</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sshippinglists/.*&quot;, base_url</string>
-      <string>1,&quot;%sedocs/.*&quot;, base_url</string>
     </list>
   </entry>
 </map>
