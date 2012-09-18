@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.31 2012-08-21 08:35:56 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.32 2012-09-18 19:08:36 tlipkis Exp $
  */
 
 /*
@@ -446,6 +446,9 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 
   private static class UrlComparator implements Comparator {
     public int compare(Object o1, Object o2) {
+      // This now happens on the first insertion into a TreeMap, and would
+      // falsely trigger the prefix error below.
+      if (o1 == o2) return 0;
       String prefix = null;
       String prefix2 = null;
       if ((o1 instanceof CachedUrlSetNode)
