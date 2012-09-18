@@ -216,8 +216,8 @@
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2003 ; Action Research Volume 1 ; 1 >
-        au < manifest ; 2004 ; Action Research Volume 2 ; 2 >
+        au < testing ; 2003 ; Action Research Volume 1 ; 1 >
+        au < testing ; 2004 ; Action Research Volume 2 ; 2 >
         au < doNotProcess ; 2005 ; Action Research Volume 3 ; 3 >
         au < doNotProcess ; 2006 ; Action Research Volume 4 ; 4 >
         au < doNotProcess ; 2007 ; Action Research Volume 5 ; 5 >
@@ -246,9 +246,9 @@
 
       implicit < status ; year ; name ; param[volume_name] ; proxy >
      
-      au < manifest ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 ; reingest.lockss.org:80 >
-      au < manifest ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 ; reingest.lockss.org:80 >
-      au < manifest ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 ; reingest.lockss.org:80 >
+      au < testing ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 ; reingest.lockss.org:80 >
+      au < testing ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 ; reingest.lockss.org:80 >
+      au < testing ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 ; reingest.lockss.org:80 >
     
     }
  
@@ -293,11 +293,11 @@
         param[base_url] = http://alh.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2000 ; Active Learning in Higher Education Volume 1 ; 1 >
-        au < manifest ; 2001 ; Active Learning in Higher Education Volume 2 ; 2 >
-        au < manifest ; 2002 ; Active Learning in Higher Education Volume 3 ; 3 >
-        au < manifest ; 2003 ; Active Learning in Higher Education Volume 4 ; 4 >
-        au < manifest ; 2004 ; Active Learning in Higher Education Volume 5 ; 5 >
+        au < testing ; 2000 ; Active Learning in Higher Education Volume 1 ; 1 >
+        au < testing ; 2001 ; Active Learning in Higher Education Volume 2 ; 2 >
+        au < testing ; 2002 ; Active Learning in Higher Education Volume 3 ; 3 >
+        au < testing ; 2003 ; Active Learning in Higher Education Volume 4 ; 4 >
+        au < testing ; 2004 ; Active Learning in Higher Education Volume 5 ; 5 >
         au < doNotProcess ; 2005 ; Active Learning in Higher Education Volume 6 ; 6 >
         au < doNotProcess ; 2006 ; Active Learning in Higher Education Volume 7 ; 7 >
         au < doNotProcess ; 2007 ; Active Learning in Higher Education Volume 8 ; 8 >
@@ -351,18 +351,18 @@
         param[base_url] = http://adb.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1992 ; Adaptive Behavior Volume 1 ; 1 >
-        au < manifest ; 1993 ; Adaptive Behavior Volume 2 ; 2 >
-        au < manifest ; 1994 ; Adaptive Behavior Volume 3 ; 3 >
-        au < manifest ; 1995 ; Adaptive Behavior Volume 4 ; 4 >
-        au < manifest ; 1996 ; Adaptive Behavior Volume 5 ; 5 >
-        au < manifest ; 1997 ; Adaptive Behavior Volume 6 ; 6 >
-        au < manifest ; 1999 ; Adaptive Behavior Volume 7 ; 7 >
-        au < manifest ; 2000 ; Adaptive Behavior Volume 8 ; 8 >
-        au < manifest ; 2001 ; Adaptive Behavior Volume 9 ; 9 >
-        au < manifest ; 2002 ; Adaptive Behavior Volume 10 ; 10 >
-        au < manifest ; 2003 ; Adaptive Behavior Volume 11 ; 11 >
-        au < manifest ; 2004 ; Adaptive Behavior Volume 12 ; 12 >
+        au < testing ; 1992 ; Adaptive Behavior Volume 1 ; 1 >
+        au < testing ; 1993 ; Adaptive Behavior Volume 2 ; 2 >
+        au < testing ; 1994 ; Adaptive Behavior Volume 3 ; 3 >
+        au < testing ; 1995 ; Adaptive Behavior Volume 4 ; 4 >
+        au < testing ; 1996 ; Adaptive Behavior Volume 5 ; 5 >
+        au < testing ; 1997 ; Adaptive Behavior Volume 6 ; 6 >
+        au < testing ; 1999 ; Adaptive Behavior Volume 7 ; 7 >
+        au < testing ; 2000 ; Adaptive Behavior Volume 8 ; 8 >
+        au < testing ; 2001 ; Adaptive Behavior Volume 9 ; 9 >
+        au < testing ; 2002 ; Adaptive Behavior Volume 10 ; 10 >
+        au < testing ; 2003 ; Adaptive Behavior Volume 11 ; 11 >
+        au < testing ; 2004 ; Adaptive Behavior Volume 12 ; 12 >
         au < doNotProcess ; 2005 ; Adaptive Behavior Volume 13 ; 13 >
         au < doNotProcess ; 2006 ; Adaptive Behavior Volume 14 ; 14 >
         au < doNotProcess ; 2007 ; Adaptive Behavior Volume 15 ; 15 >
@@ -416,42 +416,42 @@
         param[base_url] = http://aas.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1969 ; Administration & Society Volume 1 ; 1 >
-        au < manifest ; 1970 ; Administration & Society Volume 2 ; 2 >
-        au < manifest ; 1971 ; Administration & Society Volume 3 ; 3 >
-        au < manifest ; 1972 ; Administration & Society Volume 4 ; 4 >
-        au < manifest ; 1973 ; Administration & Society Volume 5 ; 5 >
-        au < manifest ; 1974 ; Administration & Society Volume 6 ; 6 >
-        au < manifest ; 1975 ; Administration & Society Volume 7 ; 7 >
-        au < manifest ; 1976 ; Administration & Society Volume 8 ; 8 >
-        au < manifest ; 1977 ; Administration & Society Volume 9 ; 9 >
-        au < manifest ; 1978 ; Administration & Society Volume 10 ; 10 >
-        au < manifest ; 1979 ; Administration & Society Volume 11 ; 11 >
-        au < manifest ; 1980 ; Administration & Society Volume 12 ; 12 >
-        au < manifest ; 1981 ; Administration & Society Volume 13 ; 13 >
-        au < manifest ; 1982 ; Administration & Society Volume 14 ; 14 >
-        au < manifest ; 1983 ; Administration & Society Volume 15 ; 15 >
-        au < manifest ; 1984 ; Administration & Society Volume 16 ; 16 >
-        au < manifest ; 1985 ; Administration & Society Volume 17 ; 17 >
-        au < manifest ; 1986 ; Administration & Society Volume 18 ; 18 >
-        au < manifest ; 1987 ; Administration & Society Volume 19 ; 19 >
-        au < manifest ; 1988 ; Administration & Society Volume 20 ; 20 >
-        au < manifest ; 1989 ; Administration & Society Volume 21 ; 21 >
-        au < manifest ; 1990 ; Administration & Society Volume 22 ; 22 >
-        au < manifest ; 1991 ; Administration & Society Volume 23 ; 23 >
-        au < manifest ; 1992 ; Administration & Society Volume 24 ; 24 >
-        au < manifest ; 1993 ; Administration & Society Volume 25 ; 25 >
-        au < manifest ; 1994 ; Administration & Society Volume 26 ; 26 >
-        au < manifest ; 1995 ; Administration & Society Volume 27 ; 27 >
-        au < manifest ; 1996 ; Administration & Society Volume 28 ; 28 >
-        au < manifest ; 1997 ; Administration & Society Volume 29 ; 29 >
-        au < manifest ; 1998 ; Administration & Society Volume 30 ; 30 >
-        au < manifest ; 1999 ; Administration & Society Volume 31 ; 31 >
-        au < manifest ; 2000 ; Administration & Society Volume 32 ; 32 >
-        au < manifest ; 2001 ; Administration & Society Volume 33 ; 33 >
-        au < manifest ; 2002 ; Administration & Society Volume 34 ; 34 >
-        au < manifest ; 2003 ; Administration & Society Volume 35 ; 35 >
-        au < manifest ; 2004 ; Administration & Society Volume 36 ; 36 >
+        au < testing ; 1969 ; Administration & Society Volume 1 ; 1 >
+        au < testing ; 1970 ; Administration & Society Volume 2 ; 2 >
+        au < testing ; 1971 ; Administration & Society Volume 3 ; 3 >
+        au < testing ; 1972 ; Administration & Society Volume 4 ; 4 >
+        au < testing ; 1973 ; Administration & Society Volume 5 ; 5 >
+        au < testing ; 1974 ; Administration & Society Volume 6 ; 6 >
+        au < testing ; 1975 ; Administration & Society Volume 7 ; 7 >
+        au < testing ; 1976 ; Administration & Society Volume 8 ; 8 >
+        au < testing ; 1977 ; Administration & Society Volume 9 ; 9 >
+        au < testing ; 1978 ; Administration & Society Volume 10 ; 10 >
+        au < testing ; 1979 ; Administration & Society Volume 11 ; 11 >
+        au < testing ; 1980 ; Administration & Society Volume 12 ; 12 >
+        au < testing ; 1981 ; Administration & Society Volume 13 ; 13 >
+        au < testing ; 1982 ; Administration & Society Volume 14 ; 14 >
+        au < testing ; 1983 ; Administration & Society Volume 15 ; 15 >
+        au < testing ; 1984 ; Administration & Society Volume 16 ; 16 >
+        au < testing ; 1985 ; Administration & Society Volume 17 ; 17 >
+        au < testing ; 1986 ; Administration & Society Volume 18 ; 18 >
+        au < testing ; 1987 ; Administration & Society Volume 19 ; 19 >
+        au < testing ; 1988 ; Administration & Society Volume 20 ; 20 >
+        au < testing ; 1989 ; Administration & Society Volume 21 ; 21 >
+        au < testing ; 1990 ; Administration & Society Volume 22 ; 22 >
+        au < testing ; 1991 ; Administration & Society Volume 23 ; 23 >
+        au < testing ; 1992 ; Administration & Society Volume 24 ; 24 >
+        au < testing ; 1993 ; Administration & Society Volume 25 ; 25 >
+        au < testing ; 1994 ; Administration & Society Volume 26 ; 26 >
+        au < testing ; 1995 ; Administration & Society Volume 27 ; 27 >
+        au < testing ; 1996 ; Administration & Society Volume 28 ; 28 >
+        au < testing ; 1997 ; Administration & Society Volume 29 ; 29 >
+        au < testing ; 1998 ; Administration & Society Volume 30 ; 30 >
+        au < testing ; 1999 ; Administration & Society Volume 31 ; 31 >
+        au < testing ; 2000 ; Administration & Society Volume 32 ; 32 >
+        au < testing ; 2001 ; Administration & Society Volume 33 ; 33 >
+        au < testing ; 2002 ; Administration & Society Volume 34 ; 34 >
+        au < testing ; 2003 ; Administration & Society Volume 35 ; 35 >
+        au < testing ; 2004 ; Administration & Society Volume 36 ; 36 >
         au < doNotProcess ; 2005 ; Administration & Society Volume 37 ; 37 >
         au < doNotProcess ; 2006 ; Administration & Society Volume 38 ; 38 >
         au < doNotProcess ; 2007 ; Administration & Society Volume 39 ; 39 >
@@ -478,10 +478,10 @@
         param[base_url] = http://asq.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2005 ; Administrative Science Quarterly Volume 50 ; 50 >
-        au < manifest ; 2006 ; Administrative Science Quarterly Volume 51 ; 51 >
-        au < manifest ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 >
-        au < manifest ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 >
+        au < testing ; 2005 ; Administrative Science Quarterly Volume 50 ; 50 >
+        au < testing ; 2006 ; Administrative Science Quarterly Volume 51 ; 51 >
+        au < testing ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 >
+        au < testing ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 >
         au < released ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 >
         au < released ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 >
         au < released ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 >
