@@ -1132,14 +1132,14 @@
       param[base_url] = http://minnesotareview.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; The Minnesota Review Volume 2012 ; 2012 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; The Minnesota Review Volume 2012 ; 2012 >
 
     }
     
@@ -1599,19 +1599,19 @@
       param[base_url] = http://pads.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >  
       
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2011 ; Publication of the American Dialect Society Volume 96 ; 96 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Publication of the American Dialect Society Volume 96 ; 96 >
       au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; Publication of the American Dialect Society Volume 97 ; 97 >
 
     }
