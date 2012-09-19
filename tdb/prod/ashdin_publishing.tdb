@@ -5,7 +5,7 @@
   >
 
   comment[base_url] = http://www.ashdin.com/
-  comment[0] = none of these have any content published yet 12-15-2011
+  comment[0] = Issue on publisher's end. See RU 3791
   implicit < status ; year ; name ; param[volume_name] >
 
     {
