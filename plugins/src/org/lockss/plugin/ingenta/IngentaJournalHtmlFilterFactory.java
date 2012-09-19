@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.17 2012-09-18 17:21:30 pgust Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.18 2012-09-19 17:50:24 pgust Exp $
  */ 
 
 /*
@@ -56,6 +56,9 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+        // filter out <link rel="stylesheet" href="..."> because Ingenta has
+        // bad habit of adding a version number to the CSS file name
+        HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
         // filter out <div class="heading"> that encloses a statement with
         // the number of references and the number that can be referenced: 
         // number of reference links won't be the same because not all 
