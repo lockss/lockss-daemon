@@ -112,6 +112,9 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
   
   // single tags from IngentaJouranlHtmlFilterFactory
   String[][] tagIds = new String[][] {
+    // filter out <link rel="stylesheet" href="..."> because Ingenta has
+    // bad habit of adding a version number to the CSS file name
+    {"link", "rel", "stylesheet"},
     // Filter out <input name="exitTargetId">
     {"input", "name", "exitTargetId"},
   };
