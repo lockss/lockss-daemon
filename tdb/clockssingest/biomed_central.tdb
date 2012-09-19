@@ -1634,7 +1634,7 @@
       au < manifest ; exists ; 2008 ; Algorithms for Molecular Biology Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; Algorithms for Molecular Biology Volume 4 ; 4 >
       au < released ; crawling ; 2010 ; Algorithms for Molecular Biology Volume 5 ; 5 >
-      au < testing ; exists ; 2011 ; Algorithms for Molecular Biology Volume 6 ; 6 >
+      au < released ; manifest ; 2011 ; Algorithms for Molecular Biology Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Algorithms for Molecular Biology Volume 7 ; 7 >
 
     }
@@ -1684,7 +1684,7 @@
       au < manifest ; exists ; 2008 ; Annals of General Psychiatry Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; Annals of General Psychiatry Volume 8 ; 8 >
       au < released ; crawling ; 2010 ; Annals of General Psychiatry Volume 9 ; 9 >
-      au < testing ; exists ; 2011 ; Annals of General Psychiatry Volume 10 ; 10 >
+      au < released ; manifest ; 2011 ; Annals of General Psychiatry Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Annals of General Psychiatry Volume 11 ; 11 >
 
     }
@@ -2035,7 +2035,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Cases Journal Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; Cases Journal Volume 2 ; 2 >
       au < released ; crawling ; 2010 ; Cases Journal Volume 3 ; 3 >
-      au < testing ; exists ; 2011 ; Cases Journal Volume 4 ; 4 >
+      au < released ; manifest ; 2011 ; Cases Journal Volume 4 ; 4 >
 
     }
 
