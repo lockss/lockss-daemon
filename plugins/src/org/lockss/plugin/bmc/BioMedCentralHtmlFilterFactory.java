@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.6 2012-07-04 00:22:34 kendrayee Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.7 2012-09-19 18:51:42 alexandraohlson Exp $
  */
 
 /*
@@ -35,8 +35,15 @@ package org.lockss.plugin.bmc;
 import java.io.InputStream;
 import java.io.Reader;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.DefinitionListBullet;
+import org.htmlparser.tags.Div;
+import org.htmlparser.tags.HeadTag;
+import org.htmlparser.tags.HeadingTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.HtmlTagFilter;
@@ -78,8 +85,34 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         // Institution-dependent greeting
         HtmlNodeFilters.tagWithAttribute("span", "id", "username"),
         // Malformed HTML
-        HtmlNodeFilters.tagWithAttribute("span", "id", "articles-tab")
-        
+        HtmlNodeFilters.tagWithAttribute("span", "id", "articles-tab"),
+        // A usage counter/glif that gets updated over time
+        HtmlNodeFilters.tagWithAttribute("div", "id", "impact-factor"),
+        // An open access link/glyph that may get added
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/access"),
+        // A highly accessed link/glyph that may get added
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/mostviewed"),
+        // Journal of Cheminformatics -  an "accesses" and/or "citations" block
+        // but the id is associated with the <h2>, not with the sibling <div>
+        new NodeFilter() {
+          @Override public boolean accept(Node node) {
+            if (!(node instanceof Div)) return false;
+            Node prevNode = node.getPreviousSibling();
+            while (prevNode != null && !(prevNode instanceof HeadingTag)) {
+              prevNode = prevNode.getPreviousSibling();
+            }
+            if (prevNode != null && prevNode instanceof HeadingTag) {
+              CompositeTag prevTag = (CompositeTag)prevNode;
+              if ( ("accesses".equals(prevTag.getAttribute("id"))) || 
+                  ("citations".equals(prevTag.getAttribute("id"))) ){
+                return true;
+              } else {
+                return false;
+              }
+            }
+            return false;
+          }
+        }
     };
     
     InputStream filtered =  new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
