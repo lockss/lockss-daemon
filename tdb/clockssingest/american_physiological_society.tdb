@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = American Physiological Society
+    name = American Physiological Society ;
+    info[contract] = 2008 ;
+    info[tester] = 5
   >
     attr[contract] = 2008
 

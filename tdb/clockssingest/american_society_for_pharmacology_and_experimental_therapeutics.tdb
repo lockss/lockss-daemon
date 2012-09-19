@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = American Society for Pharmacology and Experimental Therapeutics
+    name = American Society for Pharmacology and Experimental Therapeutics ;
+    info[contract] = 2011 ;
+    tester[contract] = 5
   >
   
   attr[contract] = 2011

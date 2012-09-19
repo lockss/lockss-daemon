@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = American Meteorological Society
+    name = American Meteorological Society ;
+    info[contract] = 2012 ;
+    info[tester] = 0
   >
 
   attr[contract] = 2012
