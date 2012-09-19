@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.6 2012-09-14 23:03:07 davidecorcoran Exp $
+ * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.7 2012-09-19 18:54:23 alexandraohlson Exp $
  */
 
 /*
@@ -165,6 +165,12 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     "<span>View Current Issue (Volume 174 Issue 12 December 15, 2011)" +
     "</span>>/a></li>";
 
+  private static final String withRelatedURLs =
+      "<div><span id=\"related-urls\"" +
+      "/span></div>";
+    private static final String withoutRelatedURLs =
+      "<div></div>";
+    
 	public void testFiltering() throws IOException, PluginException {
     assertFilterToSame(inst1, inst2);
     assertFilterToSame(withAds, withoutAds);
@@ -173,6 +179,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
 	  assertFilterToSame(withSporadicDivs, withoutSporadicDivs);
 	  assertFilterToSame(withCmeCredit, withoutCmeCredit);
 	  assertFilterToSame(withCbSection, withoutCbSection);
+          assertFilterToSame(withRelatedURLs, withoutRelatedURLs);
 	  assertFilterToSame(withHwGenPage, withoutHwGenPage);
 	  assertFilterToSame(withNavCurrentIssue, withoutNavCurrentIssue);
 	}

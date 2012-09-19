@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.39 2012-09-14 23:03:07 davidecorcoran Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.40 2012-09-19 18:54:23 alexandraohlson Exp $
  */
 
 /*
@@ -150,8 +150,9 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         // "Earn FREE CME Credit" link (wrapped in a list item)
         HtmlNodeFilters.tagWithText("li", "class=\"dslink-earn-free-cme-credit\""),
         // Variable list of links to PubMed, Google Scholar, other sites
-        HtmlNodeFilters.tagWithAttribute("div", "class", "cb-section collapsible default-closed"),
-        
+        HtmlNodeFilters.tagWithAttribute("div", "class", "cb-section collapsible default-closed"),     
+        //The following is also for jultrasoundmed.org  - possibly also need whitespace filter
+        HtmlNodeFilters.tagWithAttribute("span", "id", "related-urls"),  
         // For American Journal of Epidemiology
         HtmlNodeFilters.tagWithAttribute("li", "id", "nav_current_issue")
     };
