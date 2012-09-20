@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchiveMembers.java,v 1.6 2012-08-21 08:35:56 tlipkis Exp $
+ * $Id: TestArchiveMembers.java,v 1.7 2012-09-20 03:46:27 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.truezip.*;
 import org.lockss.repository.*;
 
 /** Tests for CachedUrls that refer to archive members */
@@ -66,6 +67,7 @@ public class TestArchiveMembers extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = setUpDiskSpace();
+    ConfigurationUtil.addFromArgs(TrueZipManager.PARAM_CACHE_DIR, tempDirPath);
     daemon = getMockLockssDaemon();
     pluginMgr = daemon.getPluginManager();
     pluginMgr.setLoadablePluginsReady(true);
