@@ -315,7 +315,7 @@
 
   {
     title <
-      name = Perspectives in Telepractice ;
+      name = Perspectives on Telepractice ;
       eissn = 2162-2353 ;
       issnl = 2162-2353
     >
@@ -326,8 +326,8 @@
       param[base_url] = http://div18perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2011 ; Perspectives in Telepractice Volume 1 ; 1 >
-      au < expected ; 2012 ; Perspectives in Telepractice Volume 2 ; 2 >
+      au < manifest ; 2011 ; Perspectives on Telepractice Volume 1 ; 1 >
+      au < manifest ; 2012 ; Perspectives on Telepractice Volume 2 ; 2 >
 
     }
     
