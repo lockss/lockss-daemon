@@ -86,7 +86,7 @@
     au < exists ; exists ; 2007 ; American Journal of Hypertension Volume 20 ; 2007 ; 20 >
     au < manifest ; exists ; 2008 ; American Journal of Hypertension Volume 21 ; 2008 ; 21 >
     au < manifest ; exists ; 2009 ; American Journal of Hypertension Volume 22 ; 2009 ; 22 >
-    au < testing ; exists ; 2010 ; American Journal of Hypertension Volume 23 ; 2010 ; 23 >
+    au < released ; manifest ; 2010 ; American Journal of Hypertension Volume 23 ; 2010 ; 23 >
     au < released ; crawling ; 2011 ; American Journal of Hypertension Volume 24 ; 2011 ; 24 >
     au < crawling ; exists ; 2012 ; American Journal of Hypertension Volume 25 ; 2012 ; 25 >
 
@@ -3171,7 +3171,7 @@
   }
 
   {
-
+ 
     title <
       name = Pharmacogenomics Journal ;
       issn = 1470-269X ;
