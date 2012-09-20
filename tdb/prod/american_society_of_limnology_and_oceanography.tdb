@@ -4,6 +4,7 @@
   >
 
 comment[aslo] = we're not preserving the last ~4 volumes of the run due to a moving paywall
+comment[fe] = H20, "Limnology and Oceanography: Fluids and Environments" published by Duke University Press
 
   param[base_url] = http://www.aslo.org/
 
@@ -16,7 +17,9 @@ comment[aslo] = we're not preserving the last ~4 volumes of the run due to a mov
     plugin = org.lockss.plugin.aslo.LimnologyAndOceanographyPlugin
     param[journal_id] = lo
     implicit < status ; year ; name ; param[volume_name] >
-    
+
+comment[lo] = we're not preserving the last ~4 volumes of the run due to a moving paywall
+
     au < ready ; 1956 ; Limnology and Oceanography Volume 1 ; 1 >
     au < ready ; 1957 ; Limnology and Oceanography Volume 2 ; 2 >
     au < ready ; 1958 ; Limnology and Oceanography Volume 3 ; 3 >
@@ -79,16 +82,6 @@ comment[aslo] = we're not preserving the last ~4 volumes of the run due to a mov
   
   {
     title <
-      name = Limnology and Oceanography: Fluids & Environment ;
-      eissn = 2157-3698
-    >  
-    
-    comment[fe] = H20, published by Duke University Press
-    
-  }
-    
-  {
-    title <
       name = Limnology and Oceanography: Methods ;
       issn = 1541-5856
     >
@@ -96,6 +89,8 @@ comment[aslo] = we're not preserving the last ~4 volumes of the run due to a mov
     plugin = org.lockss.plugin.aslo.LimnologyAndOceanographyMethodsPlugin
     param[journal_id] = lomethods
     implicit < status ; name ; attr[volume] ; param[year] >
+    
+comment[methods] = we're not preserving the last ~4 volumes of the run due to a moving paywall
     
     au < ready ; Limnology and Oceanography: Methods Volume 1 ; 1 ; 2003 >   
     au < ready ; Limnology and Oceanography: Methods Volume 2 ; 2 ; 2004 >   
