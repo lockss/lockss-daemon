@@ -351,14 +351,14 @@
         param[base_url] = http://adb.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 1992 ; Adaptive Behavior Volume 1 ; 1 >
-        au < testing ; 1993 ; Adaptive Behavior Volume 2 ; 2 >
+        au < ready ; 1992 ; Adaptive Behavior Volume 1 ; 1 >
+        au < ready ; 1993 ; Adaptive Behavior Volume 2 ; 2 >
         au < ready ; 1994 ; Adaptive Behavior Volume 3 ; 3 >
-        au < testing ; 1995 ; Adaptive Behavior Volume 4 ; 4 >
+        au < ready ; 1995 ; Adaptive Behavior Volume 4 ; 4 >
         au < testing ; 1996 ; Adaptive Behavior Volume 5 ; 5 >
         au < testing ; 1997 ; Adaptive Behavior Volume 6 ; 6 >
         au < testing ; 1999 ; Adaptive Behavior Volume 7 ; 7 >
-        au < testing ; 2000 ; Adaptive Behavior Volume 8 ; 8 >
+        au < ready ; 2000 ; Adaptive Behavior Volume 8 ; 8 >
         au < testing ; 2001 ; Adaptive Behavior Volume 9 ; 9 >
         au < testing ; 2002 ; Adaptive Behavior Volume 10 ; 10 >
         au < testing ; 2003 ; Adaptive Behavior Volume 11 ; 11 >
