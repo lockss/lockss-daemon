@@ -1590,7 +1590,7 @@
       au < manifest ; exists ; 2008 ; Acta Veterinaria Scandinavica Volume 50 ; 50 >
       au < manifest ; exists ; 2009 ; Acta Veterinaria Scandinavica Volume 51 ; 51 >
       au < released ; crawling ; 2010 ; Acta Veterinaria Scandinavica Volume 52 ; 52 >
-      au < testing ; exists ; 2011 ; Acta Veterinaria Scandinavica Volume 53 ; 53 >
+      au < released ; manifest ; 2011 ; Acta Veterinaria Scandinavica Volume 53 ; 53 >
       au < crawling ; exists ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 >
       
     }
@@ -3563,7 +3563,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2008 ; Molecular Brain Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; Molecular Brain Volume 2 ; 2 >
-      au < testing ; exists ; 2010 ; Molecular Brain Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; Molecular Brain Volume 3 ; 3 >
       au < released ; manifest ; 2011 ; Molecular Brain Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Molecular Brain Volume 5 ; 5 >
 
