@@ -80,7 +80,7 @@
   
     title < 
       name = Journal of Photonics for Energy ;
-      issn = 1947-7988
+      eissn = 1947-7988
     >
 
 
@@ -89,8 +89,18 @@
     {
   
     title < 
-      name = SPIE Letters Virtual Journal ;
-      issn =  1948-7541 
+      name = SPIE Letters ;
+      eissn =  1948-7541 
+    >
+
+
+    }
+
+    {
+  
+    title < 
+      name = SPIE Reviews ;
+      eissn =  1946-3251 
     >
 
 
