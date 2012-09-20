@@ -1,10 +1,15 @@
 {
 
   publisher <
-    name = SPIE
+    name = SPIE ;
+    info[contract] = 2012 ;
+    info[tester] = 0
   >
 
- attr[contract] = 2012
+    attr[contract] = 2012
+    plugin = needs.plugin
+    param[base_url] = http://spiedigitallibrary.org/journals/
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
  
   {
   
@@ -14,10 +19,6 @@
       eissn = 1560-2303
     >
 
-        
-      plugin = needs.plugin
-      param[base_url] = http://spiedigitallibrary.org/journals/
-      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
     }
     
@@ -27,10 +28,9 @@
       name = Journal of Electronic Imaging ;
       issn = 1017-9909 ;
       eissn = 1560-229X
-  
->
-          
-          
+     >
+
+
     }
     
     {
@@ -40,9 +40,9 @@
       name = Journal of Biomedical Optics ;
       issn = 1083-3668 ;
       eissn = 1560-2281
-  
->
-      
+    >
+
+
     }
     
     {
@@ -51,8 +51,9 @@
       name = Journal of Micro/Nanolithography, MEMS, and MOEMS ;
       issn = 1932-5150 ;
       eissn = 1932-5134
-  
->
+    >
+
+
     }
     
     {
@@ -60,30 +61,29 @@
     title < 
       name = Journal of Applied Remote Sensing ;
       eissn = 1931-3195
-  
->
+    >
+
 
     }
     
     {
     
-  
     title < 
       name = Journal of Nanophotonics ;
       eissn = 1934-2608
-  
-     >
-    
+    >
 
-     } 
+
+    } 
     
     {
   
     title < 
       name = Journal of Photonics for Energy ;
       issn = 1947-7988
-  
->
+    >
+
+
     }
     
     {
@@ -91,9 +91,9 @@
     title < 
       name = SPIE Letters Virtual Journal ;
       issn =  1948-7541 
-  
->
+    >
 
-}
+
+    }
 
 }
