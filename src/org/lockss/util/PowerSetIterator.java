@@ -1,5 +1,5 @@
 /*
- * $Id: PowerSetIterator.java,v 1.1 2012-09-18 21:55:17 clairegriffin Exp $
+ * $Id: PowerSetIterator.java,v 1.2 2012-09-21 20:45:22 clairegriffin Exp $
  */
 /*
 
@@ -34,7 +34,8 @@ import java.util.*;
 
 /**
  * A general purpose class to iterate over the power set of a set. This is the
- * set of all subsets of the set, including the set itself and the empty set.
+ * set of all subsets of a set of elements, including the set itself and the
+ * empty set.
  * The size of a powerset is 2^N.
  */
 public class PowerSetIterator<T> implements Iterator<List<T>> {
@@ -44,7 +45,7 @@ public class PowerSetIterator<T> implements Iterator<List<T>> {
   private List<T> items;
 
   /**
-   * The mask for the items
+   * A mask for the items currently selected
    */
   BitSet mask;
 
@@ -53,9 +54,14 @@ public class PowerSetIterator<T> implements Iterator<List<T>> {
    */
   List<T> result;
 
+  /**
+   * Constructor for new iterator which a takes a set of items from which
+   * to generate subsets.
+   * @param items the list of items
+   */
   public PowerSetIterator(List<T> items)
   {
-    if (items == null || items.size() == 0) {
+    if (items == null) {
       throw new IllegalArgumentException("items");
     }
     this.items = items;

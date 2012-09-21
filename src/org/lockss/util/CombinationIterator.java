@@ -1,5 +1,5 @@
 /*
- * $Id: CombinationIterator.java,v 1.1 2012-09-18 21:55:17 clairegriffin Exp $
+ * $Id: CombinationIterator.java,v 1.2 2012-09-21 20:45:22 clairegriffin Exp $
  */
 /*
 
@@ -37,7 +37,7 @@ import java.util.*;
  * A general purpose class to iterate over the  combination of n things
  * taken k at a time without repetitions: C(n,k).
  * Unlike permutations, there are no repetitions and the order is unimportant
- * The number combinations can be calculated as n!/((n-r)! * (r!))
+ * The number of combinations can be calculated as n!/((n-r)! * (r!))
  */
 public class CombinationIterator<T> implements Iterator<List<T>> {
   /**
@@ -57,9 +57,17 @@ public class CombinationIterator<T> implements Iterator<List<T>> {
    */
   private int[] current;
 
-
+  /**
+   * the list for results from each call of next
+   */
   private List<T> result;
 
+  /**
+   * Constructor for a new iterator which takes the list of items and
+   * the number of items to 'choose' from the list each time
+   * @param items the list of items
+   * @param choose the size of each set
+   */
   public CombinationIterator(List<T> items, int choose) {
     if (items == null || items.size() == 0) {
       throw new IllegalArgumentException("items");
