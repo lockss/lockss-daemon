@@ -1,5 +1,5 @@
 /*
- * $Id: RepairPolicy.java,v 1.2 2012-08-28 16:29:07 barry409 Exp $
+ * $Id: RepairPolicy.java,v 1.3 2012-09-21 20:55:15 barry409 Exp $
  */
 
 /*
@@ -32,8 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import java.util.*;
 import java.net.MalformedURLException;
+import java.util.*;
 
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
@@ -48,6 +48,10 @@ import org.lockss.repository.RepositoryNode;
 import org.lockss.state.AuState;
 import org.lockss.util.Logger;
 
+
+/**
+ * Control the daemon's policy to respond to repair requests.
+ */
 public class RepairPolicy {
   // todo(bhayes): rationalize and incorporate
   // V3Poller.isWillingRepairer and
@@ -91,6 +95,14 @@ public class RepairPolicy {
     PREFIX + "enablePerUrlAgreement";
   public static final boolean DEFAULT_ENABLE_PER_URL_AGREEMENT = false;
 
+  private boolean allowRepairs = DEFAULT_ALLOW_V3_REPAIRS;
+  private boolean openAccessNeedsAgreement =
+    DEFAULT_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT;
+  private boolean repairAnyTrustedPeer = DEFAULT_REPAIR_ANY_TRUSTED_PEER;
+  // todo(bhayes): URL agreement should be a per-AU property, not a
+  // daemon property.
+  private boolean perUrlAgreement = DEFAULT_ENABLE_PER_URL_AGREEMENT;
+
   private final PollManager pollManager;
   private final IdentityManager idManager;
   private final LcapStreamComm scomm;
@@ -126,22 +138,37 @@ public class RepairPolicy {
     reputationTransfers.release();
   }
 
+  public void setConfig(Configuration newConfig,
+			Configuration oldConfig,
+			Configuration.Differences changedKeys) {
+    allowRepairs = 
+      newConfig.getBoolean(PARAM_ALLOW_V3_REPAIRS,
+			   DEFAULT_ALLOW_V3_REPAIRS);
+    openAccessNeedsAgreement =
+      newConfig.getBoolean(PARAM_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT,
+			   DEFAULT_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT);
+    repairAnyTrustedPeer =
+      newConfig.getBoolean(PARAM_REPAIR_ANY_TRUSTED_PEER,
+			   DEFAULT_REPAIR_ANY_TRUSTED_PEER);
+    perUrlAgreement =
+      newConfig.getBoolean(PARAM_ENABLE_PER_URL_AGREEMENT,
+			   DEFAULT_ENABLE_PER_URL_AGREEMENT);
+  }
+
   /**
+   * @param reqPid The PeerIdentity of the requesting peer.
+   * @param au The ArchivalUnit being repaired.
+   * @param url The URL being repaired.
    * @return true iff this daemon should serve the given repair.
    */
-  public boolean serveRepair(PeerIdentity pid, ArchivalUnit au, String url) {
-    log.debug2("called serveRepair: "+pid+", "+au+", "+url);
-    boolean allowRepairs = 
-      CurrentConfig.getBooleanParam(PARAM_ALLOW_V3_REPAIRS,
-                                    DEFAULT_ALLOW_V3_REPAIRS);
+  public boolean shouldServeRepair(PeerIdentity reqPid,
+				   ArchivalUnit au, String url) {
+    log.debug2("called serveRepair: "+reqPid+", "+au+", "+url);
     if (!allowRepairs) {
       log.debug2("no v3 repairs allowed: false.");
       return false;
     }
 
-    boolean openAccessNeedsAgreement =
-      CurrentConfig.getBooleanParam(PARAM_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT,
-				    DEFAULT_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT);
     if (!openAccessNeedsAgreement) {
       AuState aus = AuUtil.getAuState(au);
       if (aus.isOpenAccess()) {
@@ -150,34 +177,29 @@ public class RepairPolicy {
       }
     }
 
-    boolean repairAnyTrustedPeer =
-      CurrentConfig.getBooleanParam(PARAM_REPAIR_ANY_TRUSTED_PEER,
-				    DEFAULT_REPAIR_ANY_TRUSTED_PEER);
     if (scomm.isTrustedNetwork() && repairAnyTrustedPeer) {
       log.debug2("Trusted peer: true.");
       return true;
     }
 
-    boolean perUrlAgreement =
-      CurrentConfig.getBooleanParam(PARAM_ENABLE_PER_URL_AGREEMENT,
-                                    DEFAULT_ENABLE_PER_URL_AGREEMENT);
     if (perUrlAgreement) {
-      return serveUrlRepair(pid, au, url);
+      return shouldServeUrlRepair(reqPid, au, url);
     } else {
-      return serveAuRepair(pid, au);
+      return shouldServeAuRepair(reqPid, au);
     }
   }
 
-  // todo(bhayes): this code should not be run in production.
+  // Note: this code is not run in production.
   /**
-   * @param pid0 The peer requesting a repair.
+   * @param reqPid The peer requesting a repair.
    * @param au The ArchivalUnit for which the repair is requested.
    * @param url The URL for which the repair is requested.
    * @return true iff the given peer has previously had a high enough
    * agreement with us on the URL, or has had reputation transferred
    * from a peer who has.
    */
-  boolean serveUrlRepair(PeerIdentity pid0, ArchivalUnit au, String url) {
+  boolean shouldServeUrlRepair(PeerIdentity reqPid,
+			       ArchivalUnit au, String url) {
     RepositoryNode node;
     try {
       node = AuUtil.getRepositoryNode(au, url);
@@ -189,7 +211,7 @@ public class RepairPolicy {
     }
 
     for (PeerIdentity pid:
-	   reputationTransfers.getAllReputationsTransferredFrom(pid0)) {
+	   reputationTransfers.getAllReputationsTransferredFrom(reqPid)) {
       if (node.hasAgreement(pid)) {
 	log.debug2("Previous agreement found for peer " + pid + " on URL "
 		  + url);
@@ -201,19 +223,19 @@ public class RepairPolicy {
   }
 
   /**
-   * @param pid0 The peer requesting a repair.
+   * @param reqPid The peer requesting a repair.
    * @param au The ArchivalUnit for which the repair is requested.
    * @return true iff the given peer has previously had a high enough
    * agreement with us on the ArchivalUnit, or has had reputation
    * transferred from a peer who has.
    */
-  boolean serveAuRepair(PeerIdentity pid0, ArchivalUnit au) {
+  boolean shouldServeAuRepair(PeerIdentity reqPid, ArchivalUnit au) {
     double minPercentForRepair = pollManager.getMinPercentForRepair();
     log.debug2("Minimum percent agreement required for repair: "
 	       + minPercentForRepair);
 
     for (PeerIdentity pid: 
-	   reputationTransfers.getAllReputationsTransferredFrom(pid0)) {
+	   reputationTransfers.getAllReputationsTransferredFrom(reqPid)) {
       float percentAgreement = idManager.getHighestPercentAgreement(pid, au);
       log.debug2("peer " + pid + " has agreement " + percentAgreement);
       if (percentAgreement >= minPercentForRepair) {

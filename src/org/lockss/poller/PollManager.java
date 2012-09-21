@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.260 2012-09-18 19:09:00 tlipkis Exp $
+ * $Id: PollManager.java,v 1.261 2012-09-21 20:55:15 barry409 Exp $
  */
 
 /*
@@ -1815,6 +1815,10 @@ public class PollManager
       }
 
       needRebuildPollQueue();
+      if (theRepairPolicy != null) {
+	// May be null in testing
+	theRepairPolicy.setConfig(newConfig, oldConfig, changedKeys);
+      }
     }
     long scommTimeout =
       newConfig.getTimeInterval(BlockingStreamComm.PARAM_CONNECT_TIMEOUT,

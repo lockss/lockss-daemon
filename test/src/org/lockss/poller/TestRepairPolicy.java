@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairPolicy.java,v 1.1 2012-08-13 20:47:28 barry409 Exp $
+ * $Id: TestRepairPolicy.java,v 1.2 2012-09-21 20:55:15 barry409 Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class TestRepairPolicy extends LockssTestCase {
   protected MockArchivalUnit lowAgreeAu;
   private MockLockssDaemon daemon;
 
-  protected PeerIdentity pid;
+  protected PeerIdentity reqPid;
   protected MockPollManager pollManager;
   protected MyBlockingStreamComm scomm;
   protected IdentityManager idManager;
@@ -110,19 +110,19 @@ public class TestRepairPolicy extends LockssTestCase {
     daemon.setStreamCommManager(scomm);
 
     idManager = daemon.getIdentityManager();
-    pid = idManager.stringToPeerIdentity(peer);
+    reqPid = idManager.stringToPeerIdentity(peer);
 
     highAgreeAu =
       (MockArchivalUnit)PollTestPlugin.PTArchivalUnit.
       createFromListOfRootUrls(rooturls);
     setUpAu(highAgreeAu);
-    idManager.signalPartialAgreement(pid, highAgreeAu, (float)0.95);
+    idManager.signalPartialAgreement(reqPid, highAgreeAu, (float)0.95);
 
     lowAgreeAu =
       (MockArchivalUnit)PollTestPlugin.PTArchivalUnit.
       createFromListOfRootUrls(rooturls);
     setUpAu(lowAgreeAu);
-    idManager.signalPartialAgreement(pid, lowAgreeAu, (float)0.05);
+    idManager.signalPartialAgreement(reqPid, lowAgreeAu, (float)0.05);
 
     daemon.getSchedService().startService();
     daemon.getHashService().startService();
@@ -133,27 +133,25 @@ public class TestRepairPolicy extends LockssTestCase {
   }
 
   public void testSetup() throws Exception {
-    assertEquals(0.95, idManager.getHighestPercentAgreement(pid, highAgreeAu),
+    assertEquals(0.95, idManager.getHighestPercentAgreement(reqPid, highAgreeAu),
 		 0.01);
-    assertEquals(0.05, idManager.getHighestPercentAgreement(pid, lowAgreeAu),
+    assertEquals(0.05, idManager.getHighestPercentAgreement(reqPid, lowAgreeAu),
 		 0.01);
   }
 
-  /** Check the base method for serving a repair.  */
   public void testServeAuRepair() throws Exception {
-    assertTrue(pollManager.getRepairPolicy().serveAuRepair(pid, highAgreeAu));
-    assertFalse(pollManager.getRepairPolicy().serveAuRepair(pid, lowAgreeAu));
+    RepairPolicy rp = pollManager.getRepairPolicy();
+    assertTrue(rp.shouldServeAuRepair(reqPid, highAgreeAu));
+    assertFalse(rp.shouldServeAuRepair(reqPid, lowAgreeAu));
   }
 
-  /** Check disabling all V3 repairs.  */
   public void testDisallowV3Repair() throws Exception {
     ConfigurationUtil.addFromArgs(RepairPolicy.PARAM_ALLOW_V3_REPAIRS, "false");
     RepairPolicy rp = pollManager.getRepairPolicy();
-    assertFalse(rp.serveRepair(pid, highAgreeAu, rooturls[0]));
-    assertFalse(rp.serveRepair(pid, lowAgreeAu, rooturls[0]));
+    assertFalse(rp.shouldServeRepair(reqPid, highAgreeAu, rooturls[0]));
+    assertFalse(rp.shouldServeRepair(reqPid, lowAgreeAu, rooturls[0]));
   }
 
-  /** Check open access override. */
   public void testAllowOpenAccessRepair() throws Exception {
     ConfigurationUtil.addFromArgs(RepairPolicy.PARAM_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT, "false");
 
@@ -161,11 +159,10 @@ public class TestRepairPolicy extends LockssTestCase {
     aus.setAccessType(AuState.AccessType.OpenAccess);
 
     RepairPolicy rp = pollManager.getRepairPolicy();
-    assertTrue(rp.serveRepair(pid, highAgreeAu, rooturls[0]));
-    assertTrue(rp.serveRepair(pid, lowAgreeAu, rooturls[0]));
+    assertTrue(rp.shouldServeRepair(reqPid, highAgreeAu, rooturls[0]));
+    assertTrue(rp.shouldServeRepair(reqPid, lowAgreeAu, rooturls[0]));
   }
 
-  /** Check open access override. */
   public void testTrustedNetworks() throws Exception {
     ConfigurationUtil.addFromArgs(BlockingStreamComm.PARAM_USE_V3_OVER_SSL, "true");
     ConfigurationUtil.addFromArgs(BlockingStreamComm.PARAM_USE_SSL_CLIENT_AUTH, "true");
@@ -176,16 +173,8 @@ public class TestRepairPolicy extends LockssTestCase {
     scomm.setTrustedNetwork(true);
 
     RepairPolicy rp = pollManager.getRepairPolicy();
-    assertTrue(rp.serveRepair(pid, highAgreeAu, rooturls[0]));
-    assertTrue(rp.serveRepair(pid, lowAgreeAu, rooturls[0]));
-  }
-
-  /** Executes the test case
-   * @param argv array of Strings containing command line arguments
-   * */
-  public static void main(String[] argv) {
-    String[] testCaseList = {TestRepairPolicy.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
+    assertTrue(rp.shouldServeRepair(reqPid, highAgreeAu, rooturls[0]));
+    assertTrue(rp.shouldServeRepair(reqPid, lowAgreeAu, rooturls[0]));
   }
 
   static class MyBlockingStreamComm extends BlockingStreamComm {

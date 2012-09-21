@@ -1,5 +1,5 @@
 /*
- * $Id: ReusableRepairerActions.java,v 1.1 2012-08-28 21:14:20 barry409 Exp $
+ * $Id: ReusableRepairerActions.java,v 1.2 2012-09-21 20:55:15 barry409 Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.poller.PollManager;
 import org.lockss.poller.PollManager.EventCtr;
 import org.lockss.app.LockssDaemon;
 import org.lockss.plugin.*;
+import org.lockss.poller.RepairPolicy;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
@@ -59,7 +60,8 @@ public class ReusableRepairerActions {
     PeerIdentity pid = reqMsg.getOriginatorId();
     ArchivalUnit au = ud.getPluginManager().getAuFromId(reqMsg.getArchivalId());
     String targetUrl = reqMsg.getTargetUrl();
-    if (ud.getPollManager().getRepairPolicy().serveRepair(pid, au, targetUrl)) {
+    RepairPolicy repairPolicy = ud.getPollManager().getRepairPolicy();
+    if (repairPolicy.shouldServeRepair(pid, au, targetUrl)) {
       // I have this repair and I'm willing to serve it.
       log.debug2("Accepting repair request from " + pid + " for URL: " +
 		 targetUrl);

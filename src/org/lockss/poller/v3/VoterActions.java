@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.27 2012-08-13 20:47:28 barry409 Exp $
+ * $Id: VoterActions.java,v 1.28 2012-09-21 20:55:15 barry409 Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.poller.PollManager;
 import org.lockss.poller.PollManager.EventCtr;
 import org.lockss.plugin.*;
+import org.lockss.poller.RepairPolicy;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
@@ -240,7 +241,7 @@ public class VoterActions {
     String targetUrl = msg.getTargetUrl();
     CachedUrlSet cus = ud.getCachedUrlSet();
     if (cus.containsUrl(targetUrl) &&
-	getPollManager(ud).getRepairPolicy().serveRepair(
+	getPollManager(ud).getRepairPolicy().shouldServeRepair(
 	  msg.getOriginatorId(), voter.getAu(), targetUrl)) {
       // I have this repair and I'm willing to serve it.
       log.debug2("Accepting repair request from " + ud.getPollerId() +
