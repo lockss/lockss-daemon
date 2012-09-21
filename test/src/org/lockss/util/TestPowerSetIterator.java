@@ -126,12 +126,13 @@ public class TestPowerSetIterator extends LockssTestCase {
 
 
     }
-    public void testNull() throws Exception {
+
+    public void testNullorEmpty() throws Exception {
             // test a null list
-      ArrayList<Integer> null_list = new ArrayList<Integer>();
+      PowerSetIterator<Integer> ps_iter;
       try {
-        PowerSetIterator<Integer> psn =
-          new PowerSetIterator<Integer>(null_list);
+        ps_iter =
+          new PowerSetIterator<Integer>(null);
         assertTrue("Null set did not throw!", false);
       }
       catch(Exception ex)
@@ -139,7 +140,17 @@ public class TestPowerSetIterator extends LockssTestCase {
         assertTrue(ex instanceof IllegalArgumentException);
       }
 
+      // an empty list should return an empty list
+      ArrayList<Integer> empty_list = new ArrayList<Integer>();
+      ps_iter = new PowerSetIterator<Integer>(empty_list);
+      assertTrue(ps_iter.hasNext());
+      List<Integer> li = ps_iter.next();
+      assertTrue(li.isEmpty());
+      assertFalse(ps_iter.hasNext());
     }
+
+
+
     /**
      *
      * Method: remove()

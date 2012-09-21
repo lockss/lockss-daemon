@@ -1,5 +1,5 @@
 /*
- * $Id: TestCombinationIterator.java,v 1.1 2012-09-18 21:59:09 clairegriffin Exp $
+ * $Id: TestCombinationIterator.java,v 1.2 2012-09-21 20:46:25 clairegriffin Exp $
  */
 
 /*
@@ -137,13 +137,25 @@ public class TestCombinationIterator extends LockssTestCase {
     }
   }
 
-  public void testNullList() throws Exception {
+  /**
+   * check Null or Empty lists
+   */
+  public void testNullorEmptyList() throws Exception {
     // test a null list
-    ArrayList<Integer> null_list = new ArrayList<Integer>();
+    CombinationIterator<Integer> ci;
     try {
-      CombinationIterator<Integer> ci =
-          new CombinationIterator<Integer>(null_list, 1);
+       ci = new CombinationIterator<Integer>(null, 1);
       assertTrue("Null set did not throw!", false);
+    }
+    catch(Exception ex)
+    {
+      assertTrue(ex instanceof IllegalArgumentException);
+
+    }
+    ArrayList<Integer> empty_list = new ArrayList<Integer>();
+    try {
+      ci = new CombinationIterator<Integer>(empty_list, 1);
+      assertTrue("empty set did not throw!", false);
     }
     catch(Exception ex)
     {
@@ -152,6 +164,14 @@ public class TestCombinationIterator extends LockssTestCase {
     }
   }
 
+  /**
+   * given a list of integer from which to select all combinations of choose
+   * size
+   * Make sure that all combinations are found.
+   * @param iList the list to generate combinations from
+   * @param choose the number of items to choose from the list
+   * @param combinations the expected combinations
+   */
   private void checkIntLists(List<Integer> iList, int choose,
                       Integer[][] combinations)
   {
@@ -172,6 +192,14 @@ public class TestCombinationIterator extends LockssTestCase {
     assertTrue(iCombiList.isEmpty());
   }
 
+  /**
+   * given a list of strings from which to select all combinations of choose
+   * size
+   * Make sure that all combinations are found.
+   * @param sList the list to generate combinations from
+   * @param choose the number of items to choose from the list
+   * @param combinations the expected combinations
+   */
   private void checkStringLists(List<String> sList, int choose,
                                 String[][] combinations)
   {
