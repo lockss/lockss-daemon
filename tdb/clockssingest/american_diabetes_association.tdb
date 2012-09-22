@@ -36,22 +36,6 @@
     }
     
     {
-    
-    title < 
-      name = Clinical Practice Recommendations ;
-      issn = 0149-5992 ;
-      eissn = 1935-5548
-  
-    >   
-    
-     param[base_url] = http://care.diabetesjournals.org/
-    
-      au < exists ; exists ; 2012 ; Clinical Practice Recommendations Volume 35 ; 35 >
-     
-
-    }
-    
-    {
   
     title < 
       name = Diabetes ;
@@ -123,7 +107,7 @@
   
     >
       param[base_url] = http://care.diabetesjournals.org/
-      comment[supplement] = Clinical Practice Recommendations - this is published as a supplement to Diabetes Care journal
+      comment[supplement] = Clinical Practice Recommendations - is published as a supplement to Diabetes Care journal
 
       au < manifest ; exists ; 1978 ; Diabetes Care Volume 1 [abstracts only] ; 1 >
       au < manifest ; exists ; 1979 ; Diabetes Care Volume 2 [abstracts only] ; 2 >
