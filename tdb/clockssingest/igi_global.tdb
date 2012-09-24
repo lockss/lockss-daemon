@@ -243,7 +243,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 1 ; 1 > 
     au < testing ; exists ; 2011 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 2 ; 2 > 
-    au < crawling ; exists ; 2012 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 3 ; 3 > 
+    au < testing ; exists ; 2012 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 3 ; 3 > 
 
   }
 
@@ -468,7 +468,7 @@
 	param[journal_issn] = 2155-4110
 	
     au < testing ; exists ; 2011 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 1 ; 1 > 
-    au < crawling ; exists ; 2012 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 2 ; 2 > 
+    au < testing ; exists ; 2012 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 2 ; 2 > 
 
   }
 
@@ -1865,7 +1865,7 @@
     comment[0] = forthcoming in 2012
 	param[journal_issn] = 2160-9837
 	
-	    au < exists ; exists ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
+	    au < manifest ; exists ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
 	
   }
 
@@ -2047,7 +2047,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 2 ; 2 > 
     au < testing ; exists ; 2011 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 3 ; 3 > 
-    au < crawling ; exists ; 2012 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 4 ; 4 > 
+    au < testing ; exists ; 2012 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 4 ; 4 > 
 
   }
 
@@ -2168,7 +2168,7 @@
     >
 	param[journal_issn] = 2160-9772
 	
-    au < crawling ; exists ; 2012 ; International Journal of System Dynamics Applications (IJSDA) Volume 1 ; 1 > 
+    au < testing ; exists ; 2012 ; International Journal of System Dynamics Applications (IJSDA) Volume 1 ; 1 > 
 
   }
 
@@ -2423,7 +2423,7 @@
     au < manifest ; exists ; 2009 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 5 ; 5 > 
     au < manifest ; exists ; 2010 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 6 ; 6 > 
     au < testing ; exists ; 2011 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 7 ; 7 > 
-    au < crawling ; exists ; 2012 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 8 ; 8 > 
+    au < testing ; exists ; 2012 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 8 ; 8 > 
 
   }
 
