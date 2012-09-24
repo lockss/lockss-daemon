@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressHashHtmlFilterFactory.java,v 1.2 2010-07-06 05:34:53 thib_gc Exp $
+ * $Id: EdinburghUniversityPressHashHtmlFilterFactory.java,v 1.3 2012-09-24 17:36:05 alexandraohlson Exp $
  */
 
 /*
@@ -55,6 +55,8 @@ public class EdinburghUniversityPressHashHtmlFilterFactory implements FilterFact
         HtmlNodeFilters.tagWithAttribute("div", "id", "journalSidebar"),
         // Contains the current year
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        // Contains the changeable list of citations
+        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
