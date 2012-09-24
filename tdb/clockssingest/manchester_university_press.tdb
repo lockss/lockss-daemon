@@ -276,6 +276,36 @@
     au < manifest ; exists ; 2010 ; Mediterranean Studies Volume 19 ; 19 >
 
   }
+  {
+
+    title <
+      name = Research in Education ;
+      issn = 0034-5237 ;
+      issnl = 0034-5237
+    >
+    
+   param[journal_id] = rie 
+   param[journal_issn] = 0034-5237
+   
+   au < exists ; exists ; 2004 ; Nineteenth Century Theatre and Film Volume 71 ; 71 >
+   au < exists ; exists ; 2004 ; Nineteenth Century Theatre and Film Volume 72 ; 72 >
+   au < exists ; exists ; 2005 ; Nineteenth Century Theatre and Film Volume 73 ; 73 >
+   au < exists ; exists ; 2005 ; Nineteenth Century Theatre and Film Volume 74 ; 74 >
+   au < exists ; exists ; 2006 ; Nineteenth Century Theatre and Film Volume 75 ; 75 >
+   au < exists ; exists ; 2006 ; Nineteenth Century Theatre and Film Volume 76 ; 76 >
+   au < exists ; exists ; 2007 ; Nineteenth Century Theatre and Film Volume 77 ; 77 >
+   au < exists ; exists ; 2007 ; Nineteenth Century Theatre and Film Volume 78 ; 78 >
+   au < exists ; exists ; 2008 ; Nineteenth Century Theatre and Film Volume 79 ; 79 >
+   au < exists ; exists ; 2008 ; Nineteenth Century Theatre and Film Volume 80 ; 80 >
+   au < exists ; exists ; 2009 ; Nineteenth Century Theatre and Film Volume 81 ; 81 >
+   au < exists ; exists ; 2009 ; Nineteenth Century Theatre and Film Volume 82 ; 82 >
+   au < exists ; exists ; 2010 ; Nineteenth Century Theatre and Film Volume 83 ; 83 >
+   au < exists ; exists ; 2010 ; Nineteenth Century Theatre and Film Volume 84 ; 84 >
+   au < exists ; exists ; 2011 ; Nineteenth Century Theatre and Film Volume 85 ; 85 >
+   au < exists ; exists ; 2011 ; Nineteenth Century Theatre and Film Volume 86 ; 86 >
+
+  }
+
 
   {
     title <
