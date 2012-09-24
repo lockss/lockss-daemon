@@ -436,22 +436,22 @@
         au < ready ; 1986 ; Administration & Society Volume 18 ; 18 >
         au < ready ; 1987 ; Administration & Society Volume 19 ; 19 >
         au < testing ; 1988 ; Administration & Society Volume 20 ; 20 >
-        au < testing ; 1989 ; Administration & Society Volume 21 ; 21 >
-        au < testing ; 1990 ; Administration & Society Volume 22 ; 22 >
+        au < ready ; 1989 ; Administration & Society Volume 21 ; 21 >
+        au < ready ; 1990 ; Administration & Society Volume 22 ; 22 >
         au < testing ; 1991 ; Administration & Society Volume 23 ; 23 >
         au < testing ; 1992 ; Administration & Society Volume 24 ; 24 >
         au < ready ; 1993 ; Administration & Society Volume 25 ; 25 >
-        au < testing ; 1994 ; Administration & Society Volume 26 ; 26 >
+        au < ready ; 1994 ; Administration & Society Volume 26 ; 26 >
         au < ready ; 1995 ; Administration & Society Volume 27 ; 27 >
-        au < testing ; 1996 ; Administration & Society Volume 28 ; 28 >
-        au < testing ; 1997 ; Administration & Society Volume 29 ; 29 >
+        au < ready ; 1996 ; Administration & Society Volume 28 ; 28 >
+        au < ready ; 1997 ; Administration & Society Volume 29 ; 29 >
         au < ready ; 1998 ; Administration & Society Volume 30 ; 30 >
-        au < testing ; 1999 ; Administration & Society Volume 31 ; 31 >
-        au < testing ; 2000 ; Administration & Society Volume 32 ; 32 >
-        au < testing ; 2001 ; Administration & Society Volume 33 ; 33 >
+        au < ready ; 1999 ; Administration & Society Volume 31 ; 31 >
+        au < ready ; 2000 ; Administration & Society Volume 32 ; 32 >
+        au < ready ; 2001 ; Administration & Society Volume 33 ; 33 >
         au < testing ; 2002 ; Administration & Society Volume 34 ; 34 >
         au < ready ; 2003 ; Administration & Society Volume 35 ; 35 >
-        au < testing ; 2004 ; Administration & Society Volume 36 ; 36 >
+        au < ready ; 2004 ; Administration & Society Volume 36 ; 36 >
         au < doNotProcess ; 2005 ; Administration & Society Volume 37 ; 37 >
         au < doNotProcess ; 2006 ; Administration & Society Volume 38 ; 38 >
         au < doNotProcess ; 2007 ; Administration & Society Volume 39 ; 39 >
@@ -478,10 +478,10 @@
         param[base_url] = http://asq.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 2005 ; Administrative Science Quarterly Volume 50 ; 50 >
+        au < ready ; 2005 ; Administrative Science Quarterly Volume 50 ; 50 >
         au < testing ; 2006 ; Administrative Science Quarterly Volume 51 ; 51 >
-        au < testing ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 >
-        au < testing ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 >
+        au < ready ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 >
+        au < ready ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 >
         au < released ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 >
         au < released ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 >
         au < released ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 >
@@ -1446,7 +1446,7 @@
         au < testing ; 2005 ; The American Journal of Sports Medicine Volume 33 ; 33 >
         au < doNotProcess ; 2006 ; The American Journal of Sports Medicine Volume 34 ; 34 >
         au < doNotProcess ; 2007 ; The American Journal of Sports Medicine Volume 35 ; 35 >
-        au < testing ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 >
+        au < ready ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 >
         au < released ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 >
         au < released ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 >
         au < released ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 >
