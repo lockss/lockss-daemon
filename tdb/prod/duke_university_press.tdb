@@ -1096,8 +1096,7 @@
       issnl = 0361-6878
     >
     
-    {
-    
+   {
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -1111,9 +1110,9 @@
       au < released ; 2003 ; Journal of Health Politics, Policy and Law Volume 28 ; 28 >
       au < released ; 2004 ; Journal of Health Politics, Policy and Law Volume 29 ; 29 >
       
-    }
+     }
     
-    {
+    {  
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jhppl.dukejournals.org/
@@ -1127,10 +1126,11 @@
       au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Health Politics, Policy and Law Volume 35 ; 35 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Health Politics, Policy and Law Volume 36 ; 36 >
       au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Health Politics, Policy and Law Volume 37 ; 37 >
+    }
     
-    }    
-    
-    {
+  }
+
+  {
   
     title < 
       name = The Journal of Mathematics of Kyoto University ;
@@ -1195,8 +1195,6 @@
       
     }
     
-    
-  }
 
   {
     title <
@@ -1273,6 +1271,8 @@
     
     }
     
+    }
+    
     {
   
     title < 
@@ -1307,16 +1307,15 @@
       param[base_url] = http://labor.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; 2004 ; Labor: Studies in Working-Class History of the Americas Volume 1 ; 1 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; 2005 ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; 2006 ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; 2007 ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; 2011 ; Labor: Studies in Working-Class History of the Americas Volume 8 ; 8 >
-      au < ClockssHighWirePressH20Plugin ; crawling ; 2012 ; Labor: Studies in Working-Class History of the Americas Volume 9 ; 9 >
-
+     au < HighWireStrVolPlugin ; down ; 2005 ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
+     au < HighWireStrVolPlugin ; down ; 2006 ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 >
+     au < HighWireStrVolPlugin ; down ; 2007 ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 >
+     au < HighWirePressH20Plugin ; released ; 2008 ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 >
+     au < HighWirePressH20Plugin ; released ; 2009 ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 >
+     au < HighWirePressH20Plugin ; released ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
+     au < HighWirePressH20Plugin ; released ; 2011 ; Labor: Studies in Working-Class History of the Americas Volume 8 ; 8 >
+     au < HighWirePressH20Plugin ; manifest ; 2012 ; Labor: Studies in Working-Class History of the Americas Volume 9 ; 9 >
+     
     }
 
   {
@@ -1389,6 +1388,8 @@
 
     }
     
+    }
+    
     {
   
     title < 
@@ -1396,7 +1397,7 @@
       issn = 0368-8887 ;
       comment[continued_by] = 2156-2261 ;
       comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
->
+       >
   
       plugin = needs.plugin
       param[base_url] = http://ProjectEuclid.org/kjm
@@ -1413,8 +1414,6 @@
       au < exists ; 1960-1961 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 33 ; 33 >
     
     }
-    
-  }
 
   {
   
@@ -1534,6 +1533,7 @@
       au < HighWirePressH20Plugin ; manifest ; 2012 ; Modern Language Quarterly Volume 73 ; 73 >
     
     }
+    }
     {
   
     title < 
@@ -1612,7 +1612,6 @@
 
     }
         
-  }
 
   {
     title <
@@ -1692,6 +1691,7 @@
       au < released ; 2011 ; Nka: Journal of Contemporary African Art Number 28 ; 28 >
 
     }
+    
     {
     
       pluginPrefix = org.lockss.plugin.highwire.
@@ -1706,7 +1706,7 @@
       au < HighWirePressH20Plugin ; exists ; 1999 ; Nka: Journal of Contemporary African Art Volume 1999 ; 1999 >
     
     }
-    
+    }
     {
   
     title < 
@@ -1774,8 +1774,6 @@
       au < exists ; 2012 ; Notre Dame Journal of Formal Logic Volume 53 ; 53 >
 
     }
-
-  }
   
   {
     title <
