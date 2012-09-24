@@ -19,7 +19,7 @@
 
       param[journal_issn] = 2046-8091
       
-      au < testing ; exists ; 2012 ; African Journal of Accounting, Auditing and Finance Volume 1 ; 1 >
+      au < released ; manifest ; 2012 ; African Journal of Accounting, Auditing and Finance Volume 1 ; 1 >
 
     }
 
@@ -34,7 +34,7 @@
 
       param[journal_issn] = 2046-4789
       
-      au < testing ; exists ; 2012 ; African Journal of Economic and Sustainable Development Volume 1 ; 1 >
+      au < released ; manifest ; 2012 ; African Journal of Economic and Sustainable Development Volume 1 ; 1 >
 
     }
 
@@ -52,7 +52,7 @@
 
       au < manifest ; exists ; 2008-2009 ; Afro-Asian Journal of Finance and Accounting Volume 1 ; 1 >
       au < released ; crawling ; 2010-2011 ; Afro-Asian Journal of Finance and Accounting Volume 2 ; 2 >
-      au < testing ; exists ; 2012 ; Afro-Asian Journal of Finance and Accounting Volume 3 ; 3 >
+      au < released ; manifest ; 2012 ; Afro-Asian Journal of Finance and Accounting Volume 3 ; 3 >
 
     }
 
@@ -160,7 +160,7 @@
       au < manifest ; exists ; 2009 ; European Journal of Industrial Engineering Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; European Journal of Industrial Engineering Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; European Journal of Industrial Engineering Volume 5 ; 5 >
-      au < testing ; exists ; 2012 ; European Journal of Industrial Engineering Volume 6 ; 6 >
+      au < released ; manifest ; 2012 ; European Journal of Industrial Engineering Volume 6 ; 6 >
 
     }
 
@@ -180,7 +180,7 @@
       au < manifest ; exists ; 2009 ; European Journal of International Management Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; European Journal of International Management Volume 4 ; 4 >
       au < released ; manifest ; 2011 ; European Journal of International Management Volume 5 ; 5 >
-      au < testing ; exists ; 2012 ; European Journal of International Management Volume 6 ; 6 >
+      au < released ; manifest ; 2012 ; European Journal of International Management Volume 6 ; 6 >
 
     }
 
@@ -208,7 +208,7 @@
       au < manifest ; exists ; 2009 ; Global Business and Economics Review Volume 11 ; 11 >
       au < manifest ; exists ; 2010 ; Global Business and Economics Review Volume 12 ; 12 >
       au < released ; manifest ; 2011 ; Global Business and Economics Review Volume 13 ; 13 >
-      au < testing ; exists ; 2012 ; Global Business and Economics Review Volume 14 ; 14 >
+      au < released ; manifest ; 2012 ; Global Business and Economics Review Volume 14 ; 14 >
 
     }
 
@@ -227,7 +227,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Abrasive Technology Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Abrasive Technology Volume 3 ; 3 >
       au < released ; manifest ; 2011 ; International Journal of Abrasive Technology Volume 4 ; 4 >
-	  au < testing ; exists ; 2012 ; International Journal of Abrasive Technology Volume 5 ; 5 >
+	  au < released ; manifest ; 2012 ; International Journal of Abrasive Technology Volume 5 ; 5 >
     }
 
     {
@@ -265,7 +265,7 @@
       au < manifest ; exists ; 2008-2009 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 5 ; 5 >
       au < manifest ; exists ; 2010 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 6 ; 6 >
       au < released ; manifest ; 2011 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 7 ; 7 >
-      au < testing ; exists ; 2012 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 8 ; 8 >
+      au < released ; manifest ; 2012 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 8 ; 8 >
 
     }
 
@@ -288,7 +288,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 6 ; 6 >
       au < released ; manifest ; 2011 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 7 ; 7 >
       au < released ; manifest ; 2011 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 8 ; 8 >
-      au < testing ; exists ; 2012 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 9 ; 9 > 
+      au < released ; manifest ; 2012 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 9 ; 9 > 
 
     }
 
@@ -321,7 +321,7 @@
       au < manifest ; exists ; 2008-2009 ; International Journal of Advanced Intelligence Paradigms Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Advanced Intelligence Paradigms Volume 2 ; 2 >
       au < released ; manifest ; 2011 ; International Journal of Advanced Intelligence Paradigms Volume 3 ; 3 >
-      au < crawling ; exists ; 2012 ; International Journal of Advanced Intelligence Paradigms Volume 4 ; 4 >
+      au < testing ; exists ; 2012 ; International Journal of Advanced Intelligence Paradigms Volume 4 ; 4 >
 
     }
 
@@ -339,7 +339,7 @@
       au < manifest ; exists ; 2008-2009 ; International Journal of Advanced Mechatronic Systems Volume 1 ; 1 > 
       au < manifest ; exists ; 2010 ; International Journal of Advanced Mechatronic Systems Volume 2 ; 2 > 
       au < released ; manifest ; 2011 ; International Journal of Advanced Mechatronic Systems Volume 3 ; 3 > 
-      au < crawling ; exists ; 2012 ; International Journal of Advanced Mechatronic Systems Volume 4 ; 4 > 
+      au < testing ; exists ; 2012 ; International Journal of Advanced Mechatronic Systems Volume 4 ; 4 > 
 
     }
 
@@ -375,7 +375,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Advanced Operations Management Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Advanced Operations Management Volume 2 ; 2 >
       au < released ; manifest ; 2011 ; International Journal of Advanced Operations Management Volume 3 ; 3 >
-      au < crawling ; exists ; 2012 ; International Journal of Advanced Operations Management Volume 4 ; 4 >
+      au < testing ; exists ; 2012 ; International Journal of Advanced Operations Management Volume 4 ; 4 >
 
     }
 
@@ -423,7 +423,7 @@
 
       param[journal_issn] = 1743-5145
       
-      au < crawling ; exists ; 2012 ; International Journal of Agile and Extreme Software Development Volume 1 ; 1 >
+      au < testing ; exists ; 2012 ; International Journal of Agile and Extreme Software Development Volume 1 ; 1 >
 
     }
 
@@ -442,7 +442,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Agile Systems and Management Volume 2 ; 2 >
       au < manifest ; exists ; 2008 ; International Journal of Agile Systems and Management Volume 3 ; 3 >
       au < released ; crawling ; 2009-2011 ; International Journal of Agile Systems and Management Volume 4 ; 4 >
-      au < crawling ; exists ; 2012 ; International Journal of Agile Systems and Management Volume 5 ; 5 >
+      au < testing ; exists ; 2012 ; International Journal of Agile Systems and Management Volume 5 ; 5 >
 
     }
 
@@ -516,7 +516,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Applied Decision Sciences Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Applied Decision Sciences Volume 3 ; 3 >
       au < released ; manifest ; 2011 ; International Journal of Applied Decision Sciences Volume 4 ; 4 >
-      au < crawling ; exists ; 2012 ; International Journal of Applied Decision Sciences Volume 5 ; 5 >
+      au < testing ; exists ; 2012 ; International Journal of Applied Decision Sciences Volume 5 ; 5 >
 
     }
 
@@ -534,7 +534,7 @@
       au < manifest ; exists ; 2008-2009 ; International Journal of Applied Management Science Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Applied Management Science Volume 2 ; 2 >
       au < released ; manifest ; 2011 ; International Journal of Applied Management Science Volume 3 ; 3 >
-      au < crawling ; exists ; 2012 ; International Journal of Applied Management Science Volume 4 ; 4 >
+      au < testing ; exists ; 2012 ; International Journal of Applied Management Science Volume 4 ; 4 >
 
     }
 
@@ -633,7 +633,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Arts and Technology Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Arts and Technology Volume 3 ; 3 >
       au < released ; manifest ; 2011 ; International Journal of Arts and Technology Volume 4 ; 4 >
-      au < crawling ; exists ; 2012 ; International Journal of Arts and Technology Volume 5 ; 5 >
+      au < testing ; exists ; 2012 ; International Journal of Arts and Technology Volume 5 ; 5 >
 
     }
 
@@ -668,7 +668,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Automation and Control Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; International Journal of Automation and Control Volume 4 ; 4 >
       au < released ; manifest ; 2011 ; International Journal of Automation and Control Volume 5 ; 5 >
-      au < crawling ; exists ; 2012 ; International Journal of Automation and Control Volume 6 ; 6 >
+      au < testing ; exists ; 2012 ; International Journal of Automation and Control Volume 6 ; 6 >
 
     }
 
@@ -709,7 +709,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Automotive Technology and Management Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; International Journal of Automotive Technology and Management Volume 10 ; 10 >
       au < released ; manifest ; 2011 ; International Journal of Automotive Technology and Management Volume 11 ; 11 >
-      au < crawling ; exists ; 2012 ; International Journal of Automotive Technology and Management Volume 12 ; 12 >
+      au < testing ; exists ; 2012 ; International Journal of Automotive Technology and Management Volume 12 ; 12 >
       
     }
 
@@ -3409,7 +3409,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Information and Computer Security Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; International Journal of Information and Computer Security Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Information and Computer Security Volume 3 ; 3 >
-      au < testing ; exists ; 2010-2011 ; International Journal of Information and Computer Security Volume 4 ; 4 >
+      au < released ; manifest ; 2010-2011 ; International Journal of Information and Computer Security Volume 4 ; 4 >
 
     }
 
