@@ -1450,7 +1450,7 @@
         au < released ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 >
         au < released ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 >
         au < released ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 >
-        au < testing ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 >
+        au < ready ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 >
 
       }
 
@@ -4657,13 +4657,13 @@
         au < manifest ; 1998 ; Cephalalgia Volume 18 ; 18 >
         au < manifest ; 1999 ; Cephalalgia Volume 19 ; 19 >
         au < testing ; 2000 ; Cephalalgia Volume 20 ; 20 >
-        au < testing ; 2001 ; Cephalalgia Volume 21 ; 21 >
+        au < ready ; 2001 ; Cephalalgia Volume 21 ; 21 >
         au < ready ; 2002 ; Cephalalgia Volume 22 ; 22 >
-        au < testing ; 2003 ; Cephalalgia Volume 23 ; 23 >
-        au < testing ; 2004 ; Cephalalgia Volume 24 ; 24 >
+        au < ready ; 2003 ; Cephalalgia Volume 23 ; 23 >
+        au < ready ; 2004 ; Cephalalgia Volume 24 ; 24 >
         au < testing ; 2005 ; Cephalalgia Volume 25 ; 25 >
-        au < testing ; 2006 ; Cephalalgia Volume 26 ; 26 >
-        au < testing ; 2007 ; Cephalalgia Volume 27 ; 27 >
+        au < ready ; 2006 ; Cephalalgia Volume 26 ; 26 >
+        au < ready ; 2007 ; Cephalalgia Volume 27 ; 27 >
         au < testing ; 2008 ; Cephalalgia Volume 28 ; 28 >
         au < released ; 2009 ; Cephalalgia Volume 29 ; 29 >
         au < released ; 2010 ; Cephalalgia Volume 30 ; 30 >
@@ -28874,12 +28874,12 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < testing ; 1995 ; The Neuroscientist Volume 1 ; 1 >
-        au < testing ; 1996 ; The Neuroscientist Volume 2 ; 2 >
-        au < testing ; 1997 ; The Neuroscientist Volume 3 ; 3 >
+        au < ready ; 1996 ; The Neuroscientist Volume 2 ; 2 >
+        au < ready ; 1997 ; The Neuroscientist Volume 3 ; 3 >
         au < ready ; 1998 ; The Neuroscientist Volume 4 ; 4 >
-        au < testing ; 1999 ; The Neuroscientist Volume 5 ; 5 >
-        au < testing ; 2000 ; The Neuroscientist Volume 6 ; 6 >
-        au < testing ; 2001 ; The Neuroscientist Volume 7 ; 7 >
+        au < ready ; 1999 ; The Neuroscientist Volume 5 ; 5 >
+        au < ready ; 2000 ; The Neuroscientist Volume 6 ; 6 >
+        au < ready ; 2001 ; The Neuroscientist Volume 7 ; 7 >
         au < testing ; 2002 ; The Neuroscientist Volume 8 ; 8 >
         au < testing ; 2003 ; The Neuroscientist Volume 9 ; 9 >
         au < testing ; 2004 ; The Neuroscientist Volume 10 ; 10 >
