@@ -684,7 +684,24 @@
     }
 
   }
-  
+
+  {
+
+    title <
+      name = American Journal of Hypertension ;
+      issn = 0895-7061 ;
+      eissn = 1941-7225 ;
+      issnl = 0895-7061
+    >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://ajh.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; exists ; 2013 ; American Journal of Hypertension Volume 1 ; 1 >
+
+  }
+
   {
 
     title <
@@ -4058,6 +4075,23 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Database: The Journal of Biological Databases and Curation Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Database: The Journal of Biological Databases and Curation Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Database: The Journal of Biological Databases and Curation Volume 2012 ; 2012 >
+
+  }
+
+  {
+
+    title <
+      name = Diplomatic History ;
+      issn = 0145-2096 ;
+      eissn = 1467-7709 ;
+      issnl = 0145-2096
+    >
+
+    plugin = org.lockss.plugin.highwire.
+    param[base_url] = http://dh.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume] >
+
+    au < HighWirePressH20Plugin ; exists ; 2013 ; Diplomatic History Volume 1 ; 1 >
 
   }
 
@@ -7843,6 +7877,23 @@
 
     au < HighWirePressH20Plugin ; released ; 2011 ; International Data Privacy Law Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; International Data Privacy Law Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = International Health ;
+      issn = 1876-3413 ;
+      eissn = 1876-3405 ;
+      issnl = 1876-3413
+    >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://inthealth.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; expected ; 2013 ; International Health Volume 1 ; 1 >
 
   }
 
@@ -12128,6 +12179,22 @@
   {
 
     title <
+      name = Journal of Surgical Case Reports ;
+      eissn = 2042-8812 ;
+      issnl = 2042-8812 
+    >
+
+    plugin = org.lockss.plugin.highwire.
+    param[base_url] = http://jts.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume] >
+
+    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Surgical Case Reports Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = The Journal of Theological Studies ;
       issn = 0022-5185 ;
       eissn = 1477-4607 ;
@@ -13021,6 +13088,23 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Medical Law Review Volume 20 ; 20 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = MELUS ;
+      issn = 0163-755X ;
+      eissn = 1946-3170 ;
+      issnl = 0163-755X
+    >
+
+    plugin = org.lockss.plugin.highwire.
+    param[base_url] = http://mind.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume] >
+
+    au < HighWirePressH20Plugin ; expected ; 2013 ; MELUS Volume 1 ; 1 >
 
   }
 
@@ -18200,6 +18284,23 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; Toxicological Sciences Volume 130 ; 130 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Transactions of The Royal Society of Tropical Medicine and Hygiene ;
+      issn = 0035-9203 ;
+      eissn = 1878-3503 ;
+      issnl = 0035-9203
+    >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://treephys.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; expected ; 2013 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 1 ; 1 >
 
   }
 
