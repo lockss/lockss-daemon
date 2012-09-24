@@ -216,8 +216,8 @@
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 2003 ; Action Research Volume 1 ; 1 >
-        au < testing ; 2004 ; Action Research Volume 2 ; 2 >
+        au < ready ; 2003 ; Action Research Volume 1 ; 1 >
+        au < ready ; 2004 ; Action Research Volume 2 ; 2 >
         au < doNotProcess ; 2005 ; Action Research Volume 3 ; 3 >
         au < doNotProcess ; 2006 ; Action Research Volume 4 ; 4 >
         au < doNotProcess ; 2007 ; Action Research Volume 5 ; 5 >
@@ -248,7 +248,7 @@
      
       au < testing ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 ; reingest.lockss.org:80 >
       au < testing ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 ; reingest.lockss.org:80 >
-      au < testing ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 ; reingest.lockss.org:80 >
+      au < ready ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 ; reingest.lockss.org:80 >
     
     }
  
@@ -293,10 +293,10 @@
         param[base_url] = http://alh.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 2000 ; Active Learning in Higher Education Volume 1 ; 1 >
+        au < ready ; 2000 ; Active Learning in Higher Education Volume 1 ; 1 >
         au < testing ; 2001 ; Active Learning in Higher Education Volume 2 ; 2 >
         au < testing ; 2002 ; Active Learning in Higher Education Volume 3 ; 3 >
-        au < testing ; 2003 ; Active Learning in Higher Education Volume 4 ; 4 >
+        au < ready ; 2003 ; Active Learning in Higher Education Volume 4 ; 4 >
         au < testing ; 2004 ; Active Learning in Higher Education Volume 5 ; 5 >
         au < doNotProcess ; 2005 ; Active Learning in Higher Education Volume 6 ; 6 >
         au < doNotProcess ; 2006 ; Active Learning in Higher Education Volume 7 ; 7 >
@@ -355,14 +355,14 @@
         au < ready ; 1993 ; Adaptive Behavior Volume 2 ; 2 >
         au < ready ; 1994 ; Adaptive Behavior Volume 3 ; 3 >
         au < ready ; 1995 ; Adaptive Behavior Volume 4 ; 4 >
-        au < testing ; 1996 ; Adaptive Behavior Volume 5 ; 5 >
+        au < ready ; 1996 ; Adaptive Behavior Volume 5 ; 5 >
         au < testing ; 1997 ; Adaptive Behavior Volume 6 ; 6 >
         au < testing ; 1999 ; Adaptive Behavior Volume 7 ; 7 >
         au < ready ; 2000 ; Adaptive Behavior Volume 8 ; 8 >
-        au < testing ; 2001 ; Adaptive Behavior Volume 9 ; 9 >
-        au < testing ; 2002 ; Adaptive Behavior Volume 10 ; 10 >
-        au < testing ; 2003 ; Adaptive Behavior Volume 11 ; 11 >
-        au < testing ; 2004 ; Adaptive Behavior Volume 12 ; 12 >
+        au < ready ; 2001 ; Adaptive Behavior Volume 9 ; 9 >
+        au < ready ; 2002 ; Adaptive Behavior Volume 10 ; 10 >
+        au < ready ; 2003 ; Adaptive Behavior Volume 11 ; 11 >
+        au < ready ; 2004 ; Adaptive Behavior Volume 12 ; 12 >
         au < doNotProcess ; 2005 ; Adaptive Behavior Volume 13 ; 13 >
         au < doNotProcess ; 2006 ; Adaptive Behavior Volume 14 ; 14 >
         au < doNotProcess ; 2007 ; Adaptive Behavior Volume 15 ; 15 >
