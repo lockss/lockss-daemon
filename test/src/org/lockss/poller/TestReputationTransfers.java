@@ -1,5 +1,5 @@
 /*
- * $Id: 
+ * $Id: TestReputationTransfers.java,v 1.4 2012-09-24 18:51:29 barry409 Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.File;
 import java.util.*;
 
 import org.lockss.config.Configuration;
+import org.lockss.config.CurrentConfig;
 import org.lockss.config.ConfigManager;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.protocol.PeerIdentity;
@@ -85,6 +86,24 @@ public class TestReputationTransfers extends LockssTestCase {
     super.tearDown();
   }
 
+  /** Test that a configuration change will be relayed to the instance
+   * in use. */
+  public void testConfigChange() throws Exception {
+    setUpCacheDir();
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    daemon.getPollManager().startService();
+
+    ReputationTransfers rpm = daemon.getPollManager().getRepairPolicy().
+      getReputationTransfers();
+    assertNull(rpm.getReputationTransferredFrom(peer1));
+    String xfermap = p1 + "," + p2;
+    ConfigurationUtil.addFromArgs(
+      ReputationTransfers.PARAM_REPUTATION_TRANSFER_MAP, xfermap);
+    assertEquals(peer1, rpm.getReputationTransferredFrom(peer2));
+
+    daemon.getPollManager().stopService();
+  }
+
   public void testReputationTransfers() throws Exception {
     String xfermap = p1 + "," + p2 + ";" + p3 + "," + p4;
     ConfigurationUtil.addFromArgs(
@@ -103,22 +122,20 @@ public class TestReputationTransfers extends LockssTestCase {
       ReputationTransfers.PARAM_REPUTATION_TRANSFER_MAP, xfermap);
 
     ReputationTransfers rpm = new ReputationTransfers(idManager);
-    // This relies on the order being maintained by
-    // ReputationTransfers, which is not part of its contract.
-    assertEquals(ListUtil.list(peer3, peer2, peer1),
-		 ListUtil.fromIterator(
-		   rpm.getAllReputationsTransferredFrom(peer3).iterator()));
-    assertEquals(ListUtil.list(peer2, peer1),
-		 ListUtil.fromIterator(
-		   rpm.getAllReputationsTransferredFrom(peer2).iterator()));
-    assertEquals(ListUtil.list(peer1),
-		 ListUtil.fromIterator(
-		   rpm.getAllReputationsTransferredFrom(peer1).iterator()));
+    assertSameElements(ListUtil.list(peer3, peer2, peer1),
+		     ListUtil.fromIterator(
+		       rpm.getAllReputationsTransferredFrom(peer3).iterator()));
+    assertSameElements(ListUtil.list(peer2, peer1),
+		     ListUtil.fromIterator(
+		       rpm.getAllReputationsTransferredFrom(peer2).iterator()));
+    assertSameElements(ListUtil.list(peer1),
+		     ListUtil.fromIterator(
+		       rpm.getAllReputationsTransferredFrom(peer1).iterator()));
 
     // No transfer in the param for this peer.
-    assertEquals(ListUtil.list(peer4),
-		 ListUtil.fromIterator(
-		   rpm.getAllReputationsTransferredFrom(peer4).iterator()));
+    assertSameElements(ListUtil.list(peer4),
+		     ListUtil.fromIterator(
+		       rpm.getAllReputationsTransferredFrom(peer4).iterator()));
   }
 
   public void testEmptyMapping() throws Exception {
@@ -126,18 +143,6 @@ public class TestReputationTransfers extends LockssTestCase {
     assertNull(rpm.getReputationTransferredFrom(peer1));
     assertNull(rpm.getReputationTransferredFrom(peer2));
   }
-
-  public void testConfigChanged() throws Exception {
-    ReputationTransfers rpm = new ReputationTransfers(idManager);
-    assertNull(rpm.getReputationTransferredFrom(peer1));
-    assertNull(rpm.getReputationTransferredFrom(peer2));
-
-    Configuration oldConfig = ConfigManager.getCurrentConfig();
-    String xfermap = p1 + "," + p2;
-    ConfigurationUtil.addFromArgs(
-      ReputationTransfers.PARAM_REPUTATION_TRANSFER_MAP, xfermap);
-    assertEquals(peer1, rpm.getReputationTransferredFrom(peer2));
- }
 
   // todo(bhayes): Need to think about how to deal with this error case.
   /**
@@ -180,12 +185,12 @@ public class TestReputationTransfers extends LockssTestCase {
     // Should not be allowed!
     assertEquals(peer1, rpm.getReputationTransferredFrom(peer2));
     assertEquals(peer2, rpm.getReputationTransferredFrom(peer1));
-    assertEquals(ListUtil.list(peer1, peer2),
-		 ListUtil.fromIterator(
-		   rpm.getAllReputationsTransferredFrom(peer1).iterator()));
-    assertEquals(ListUtil.list(peer2, peer1),
-		 ListUtil.fromIterator(
-		   rpm.getAllReputationsTransferredFrom(peer2).iterator()));
+    assertSameElements(ListUtil.list(peer1, peer2),
+		     ListUtil.fromIterator(
+		       rpm.getAllReputationsTransferredFrom(peer1).iterator()));
+    assertSameElements(ListUtil.list(peer2, peer1),
+		     ListUtil.fromIterator(
+		       rpm.getAllReputationsTransferredFrom(peer2).iterator()));
   }
 
   // todo(bhayes): Need to think about how to deal with this error case.

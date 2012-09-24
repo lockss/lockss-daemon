@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.261 2012-09-21 20:55:15 barry409 Exp $
+ * $Id: PollManager.java,v 1.262 2012-09-24 18:51:29 barry409 Exp $
  */
 
 /*
@@ -1059,7 +1059,6 @@ public class PollManager
       getDaemon().getPluginManager().unregisterAuEventHandler(auEventHandler);
       auEventHandler = null;
     }
-    theRepairPolicy.release();
     // unregister our status
     StatusService statusServ = getDaemon().getStatusService();
     statusServ.unregisterStatusAccessor(V3PollStatus.POLLER_STATUS_TABLE_NAME);
@@ -1815,10 +1814,10 @@ public class PollManager
       }
 
       needRebuildPollQueue();
-      if (theRepairPolicy != null) {
-	// May be null in testing
-	theRepairPolicy.setConfig(newConfig, oldConfig, changedKeys);
-      }
+    }
+    if (theRepairPolicy != null) {
+      // May be null in testing
+      theRepairPolicy.setConfig(newConfig, oldConfig, changedKeys);
     }
     long scommTimeout =
       newConfig.getTimeInterval(BlockingStreamComm.PARAM_CONNECT_TIMEOUT,

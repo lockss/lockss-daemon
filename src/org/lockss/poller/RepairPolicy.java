@@ -1,5 +1,5 @@
 /*
- * $Id: RepairPolicy.java,v 1.3 2012-09-21 20:55:15 barry409 Exp $
+ * $Id: RepairPolicy.java,v 1.4 2012-09-24 18:51:29 barry409 Exp $
  */
 
 /*
@@ -131,11 +131,10 @@ public class RepairPolicy {
   }
 
   /**
-   * Release any resources.
-   * After this call, results of calls on this object are not defined.
+   * @return the current ReputationTransfers objects.
    */
-  public void release() {
-    reputationTransfers.release();
+  ReputationTransfers getReputationTransfers() {
+    return reputationTransfers;
   }
 
   public void setConfig(Configuration newConfig,
@@ -153,6 +152,8 @@ public class RepairPolicy {
     perUrlAgreement =
       newConfig.getBoolean(PARAM_ENABLE_PER_URL_AGREEMENT,
 			   DEFAULT_ENABLE_PER_URL_AGREEMENT);
+
+    reputationTransfers.setConfig(newConfig, oldConfig, changedKeys);
   }
 
   /**

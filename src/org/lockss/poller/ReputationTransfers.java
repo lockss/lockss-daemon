@@ -1,5 +1,5 @@
 /*
- * $Id: ReputationTransfers.java,v 1.4 2012-08-13 20:47:28 barry409 Exp $
+ * $Id: ReputationTransfers.java,v 1.5 2012-09-24 18:51:29 barry409 Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.config.ConfigManager;
+import org.lockss.config.CurrentConfig;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.protocol.PeerIdentity;
 import org.lockss.util.Logger;
@@ -66,15 +67,12 @@ public class ReputationTransfers {
   /** The IdentityManager */
   private final IdentityManager idManager;
 
-  /** A callback for subscribing to changes. */
-  private final Configuration.Callback configCallback;
-
-  /**
+ /**
    * Make an unmodifiable view of a HashMap containing the reputation
    * transfers present in peerPairs. Ignore the second time a peer is
    * listed as a source or destination.
    */
-  private static Map<PeerIdentity, PeerIdentity>
+  private Map<PeerIdentity, PeerIdentity>
     makeMap(Collection<String> peerPairs, IdentityManager idManager) {
     if (peerPairs == null) {
       return Collections.EMPTY_MAP;
@@ -86,26 +84,26 @@ public class ReputationTransfers {
 	List<String> list = StringUtil.breakAt(onePair, ',', -1, true, true);
 	if (list.size() == 2) {
 	  try {
-	    PeerIdentity pid1 = idManager.stringToPeerIdentity(list.get(0));
-	    PeerIdentity pid2 = idManager.stringToPeerIdentity(list.get(1));
-	    if (pid1 == pid2) {
+	    PeerIdentity oldPid = idManager.stringToPeerIdentity(list.get(0));
+	    PeerIdentity newPid = idManager.stringToPeerIdentity(list.get(1));
+	    if (oldPid == newPid) {
 	      log.warning("Trying to extend a peer's reputation to itself: "+
-			  pid1);
+			  oldPid);
 	      continue;
 	    }
-	    if (map.containsKey(pid2)) {
-	      log.warning("Ignoring second transfer from "+pid1+" to "+pid2+
-			  ". Keeping "+pid1+" to "+map.get(pid1)+".");
+	    if (map.containsKey(newPid)) {
+	      log.warning("Ignoring second transfer from "+oldPid+" to "+newPid+
+			  ". Keeping "+oldPid+" to "+map.get(oldPid)+".");
 	      continue;
 	    }
-	    if (map.containsValue(pid1)) {
-	      log.warning("Ignoring second transfer from "+pid1+" to "+pid2+
-			  ". "+pid2+" has a reputation donor.");
+	    if (map.containsValue(oldPid)) {
+	      log.warning("Ignoring second transfer from "+oldPid+" to "+newPid+
+			  ". "+newPid+" has a reputation donor.");
 	      continue;
 	    }
-	    map.put(pid2, pid1);
+	    map.put(newPid, oldPid);
 	    if (log.isDebug2()) {
-	      log.debug2("Extend reputation from " + pid1 + " to " + pid2);
+	      log.debug2("Extend reputation from " + oldPid + " to " + newPid);
 	    }
 	  } catch (IdentityManager.MalformedIdentityKeyException e) {
 	    log.warning("Bad peer id in peer2peer map entry "+list, e);
@@ -120,59 +118,45 @@ public class ReputationTransfers {
 
   public ReputationTransfers(IdentityManager idManager) {
     this.idManager = idManager;
-    // This will make a call to the callback, setting the configured
-    // instance variables.
-    this.configCallback = registerConfigurationCallback();
-  }
-
-  private Configuration.Callback registerConfigurationCallback() {
-    Configuration.Callback configCallback = new Configuration.Callback() {
-	public void configurationChanged(
-	    Configuration newConfig,
-	    Configuration oldConfig,
-	    Configuration.Differences changedKeys) {
-	  ReputationTransfers.this.configurationChanged(
-	    newConfig, oldConfig, changedKeys);
-	}
-      };
-    ConfigManager.getConfigManager().
-      registerConfigurationCallback(configCallback);
-    return configCallback;
-  }
-
-  /**
-   * Release any resources.
-   * After this call, results of calls on this object are not defined.
-   */
-  public void release() {
-    ConfigManager.getConfigManager().
-      unregisterConfigurationCallback(configCallback);
+    // In production, the PollManager's initial setConfig call will
+    // end up calling our setConfig, and setMap there. This setMap is
+    // needed for testing.
+    setMap();
   }
 
   /**
    * Update from the changed configuration, if needed.
    */
-  private void configurationChanged(Configuration newConfig,
-				    Configuration oldConfig,
-				    Configuration.Differences changedKeys) {
+  public void setConfig(Configuration newConfig,
+			Configuration oldConfig,
+			Configuration.Differences changedKeys) {
     if (changedKeys.contains(PARAM_REPUTATION_TRANSFER_MAP)) {
-      this.map = makeMap(newConfig.getList(PARAM_REPUTATION_TRANSFER_MAP),
-			 idManager);
+      setMap(newConfig.getList(PARAM_REPUTATION_TRANSFER_MAP));
     }
   }
 
+  /** Set the map from the parameter in CurrentConfig. */
+  private void setMap() {
+    setMap(CurrentConfig.getList(PARAM_REPUTATION_TRANSFER_MAP));
+  }
+
+  /** Set the map from the given parameter. */
+  private void setMap(Collection<String> mapParam) {
+    this.map = makeMap(mapParam, idManager);
+  }
+
   /**
-   * Find the old peer, if any, which was in the transfer map as "old
-   * peer, new peer".
+   * Find the old peer, if any, which was in the transfer map
+   * parameter as "old peer, new peer".
    *
    * @param pid the PeerIdentity of the new peer.
    * @return the PeerIdentity that transferred its reputation to pid;
    * null if none exists.
    */
-  public PeerIdentity getReputationTransferredFrom(PeerIdentity pid) {
+  PeerIdentity getReputationTransferredFrom(PeerIdentity newPid) {
     // todo(bhayes): deprecate this, and pre-calculate the Collections
     // returned below, rather than just the raw Map?
-    return map.get(pid);
+    return map.get(newPid);
   }
 
   /**
@@ -188,14 +172,13 @@ public class ReputationTransfers {
    * reputation of the "new peer".
    */
   public Collection<PeerIdentity>
-      getAllReputationsTransferredFrom(PeerIdentity pid) {
-    Collection<PeerIdentity> pids = new LinkedHashSet<PeerIdentity>();
-    while (pid != null) {
-      pids.add(pid);
-      pid = getReputationTransferredFrom(pid);
+      getAllReputationsTransferredFrom(PeerIdentity newPid) {
+    Collection<PeerIdentity> pids = new ArrayList<PeerIdentity>();
+    while (newPid != null) {
+      pids.add(newPid);
+      newPid = getReputationTransferredFrom(newPid);
       // Found a loop; stop.
-      if (pids.contains(pid)) {
-	// todo(bhayes): check if it's hit size 10 and break?
+      if (pids.contains(newPid)) {
 	log.warning("Found cycle: "+pids);
 	break;
       }
