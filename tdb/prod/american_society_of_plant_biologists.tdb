@@ -29,23 +29,23 @@
       param[base_url] = http://www.plantcell.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       
-      au < HighWirePressPlugin ; manifest ; 1989 ; The Plant Cell Volume 1 ; 1 >
-      au < HighWirePressPlugin ; manifest ; 1990 ; The Plant Cell Volume 2 ; 2 >
-      au < HighWirePressPlugin ; manifest ; 1991 ; The Plant Cell Volume 3 ; 3 >
-      au < HighWirePressPlugin ; manifest ; 1992 ; The Plant Cell Volume 4 ; 4 >
-      au < HighWirePressPlugin ; manifest ; 1993 ; The Plant Cell Volume 5 ; 5 >
-      au < HighWirePressPlugin ; manifest ; 1994 ; The Plant Cell Volume 6 ; 6 >
-      au < HighWirePressPlugin ; manifest ; 1995 ; The Plant Cell Volume 7 ; 7 >
-      au < HighWirePressPlugin ; manifest ; 1996 ; The Plant Cell Volume 8 ; 8 >
-      au < HighWirePressPlugin ; manifest ; 1997 ; The Plant Cell Volume 9 ; 9 >
-      au < HighWirePressPlugin ; manifest ; 1998 ; The Plant Cell Volume 10 ; 10 >
-      au < HighWirePressPlugin ; manifest ; 1999 ; The Plant Cell Volume 11 ; 11 >
-      au < HighWirePressPlugin ; manifest ; 2000 ; The Plant Cell Volume 12 ; 12 >
-      au < HighWirePressPlugin ; manifest ; 2001 ; The Plant Cell Volume 13 ; 13 >
-      au < HighWirePressPlugin ; manifest ; 2002 ; The Plant Cell Volume 14 ; 14 >
-      au < HighWirePressPlugin ; manifest ; 2003 ; The Plant Cell Volume 15 ; 15 >
-      au < HighWirePressPlugin ; manifest ; 2004 ; The Plant Cell Volume 16 ; 16 >
-      au < HighWirePressPlugin ; doNotProcess ; 2005 ; The Plant Cell Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; The Plant Cell Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; The Plant Cell Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; The Plant Cell Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; The Plant Cell Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; The Plant Cell Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; The Plant Cell Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; The Plant Cell Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; The Plant Cell Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; The Plant Cell Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; The Plant Cell Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; The Plant Cell Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; The Plant Cell Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; The Plant Cell Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; The Plant Cell Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; The Plant Cell Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; The Plant Cell Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; The Plant Cell Volume 17 ; 17 >
       au < HighWirePressPlugin ; down ; 2006 ; The Plant Cell Volume 18 ; 18 >
       au < HighWirePressPlugin ; down ; 2007 ; The Plant Cell Volume 19 ; 19 >
       au < HighWirePressPlugin ; down ; 2008 ; The Plant Cell Volume 20 ; 20 >
