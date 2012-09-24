@@ -1026,7 +1026,8 @@
       au < exists ; exists ; 2012 ; Kyoto Journal of Mathematics Volume 52 ; 52 >
 
 
-}
+    }
+    
     {
   
     title < 
@@ -1055,7 +1056,6 @@
   
     title < 
       name = Limnology and Oceanography: Fluids and Environments ;
-      issn = ;
       eissn = 2157-3689
   
     >
@@ -1094,7 +1094,8 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
 
-}
+     }
+     
     {
   
     title < 
@@ -1102,8 +1103,8 @@
       issn = 0368-8887 ;
       comment[continued_by] = 2156-2261 ;
       comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
->
-  
+       
+      >
       plugin = needs.plugin
       param[base_url] = http://ProjectEuclid.org/kjm
       implicit < status ; status2 ; year ; name ; param[volume_name] >
