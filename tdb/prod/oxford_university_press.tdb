@@ -698,7 +698,7 @@
     param[base_url] = http://ajh.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 2013 ; American Journal of Hypertension Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; expected ; 2013 ; American Journal of Hypertension Volume 1 ; 1 >
 
   }
 
@@ -4091,7 +4091,7 @@
     param[base_url] = http://dh.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < HighWirePressH20Plugin ; exists ; 2013 ; Diplomatic History Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; expected ; 2013 ; Diplomatic History Volume 1 ; 1 >
 
   }
 
@@ -12185,7 +12185,7 @@
     >
 
     plugin = org.lockss.plugin.highwire.
-    param[base_url] = http://jts.oxfordjournals.org/
+    param[base_url] = http://jscr.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
     au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Surgical Case Reports Volume 1 ; 1 >
@@ -13101,7 +13101,7 @@
     >
 
     plugin = org.lockss.plugin.highwire.
-    param[base_url] = http://mind.oxfordjournals.org/
+    param[base_url] = http://melus.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
     au < HighWirePressH20Plugin ; expected ; 2013 ; MELUS Volume 1 ; 1 >
@@ -18297,7 +18297,7 @@
     >
 
     pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://treephys.oxfordjournals.org/
+    param[base_url] = http://trstmh.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; expected ; 2013 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 1 ; 1 >
