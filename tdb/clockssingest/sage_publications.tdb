@@ -4370,7 +4370,7 @@
       au < manifest ; exists ; 2005 ; China Report Volume 41 ; 41 ; >
       au < manifest ; exists ; 2006 ; China Report Volume 42 ; 42 ; >
       au < manifest ; exists ; 2007 ; China Report Volume 43 ; 43 ; >
-      au < testing ; exists ; 2008 ; China Report Volume 44 ; 44 ; >
+      au < released ; manifest ; 2008 ; China Report Volume 44 ; 44 ; >
       au < released ; crawling ; 2009 ; China Report Volume 45 ; 45 ; >
       au < released ; crawling ; 2010 ; China Report Volume 46 ; 46 ; >
       au < released ; crawling ; 2011 ; China Report Volume 47 ; 47 ; >
@@ -7437,7 +7437,7 @@
       au < manifest ; exists ; 2005 ; Drug Information Journal Volume 39 ; 39 ; >
       au < manifest ; exists ; 2006 ; Drug Information Journal Volume 40 ; 40 ; >
       au < manifest ; exists ; 2007 ; Drug Information Journal Volume 41 ; 41 ; >
-      au < testing ; exists ; 2008 ; Drug Information Journal Volume 42 ; 42 ; >
+      au < released ; manifest ; 2008 ; Drug Information Journal Volume 42 ; 42 ; >
       au < released ; crawling ; 2009 ; Drug Information Journal Volume 43 ; 43 ; >
       au < released ; crawling ; 2010 ; Drug Information Journal Volume 44 ; 44 ; >
       au < released ; crawling ; 2011 ; Drug Information Journal Volume 45 ; 45 ; >
@@ -8178,7 +8178,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2007 ; Electronic News Volume 1 ; 1 ; >
-      au < testing ; exists ; 2008 ; Electronic News Volume 2 ; 2 ; >
+      au < released ; manifest ; 2008 ; Electronic News Volume 2 ; 2 ; >
       au < released ; crawling ; 2009 ; Electronic News Volume 3 ; 3 ; >
       au < released ; crawling ; 2010 ; Electronic News Volume 4 ; 4 ; >
       au < released ; crawling ; 2011 ; Electronic News Volume 5 ; 5 ; >
@@ -8282,7 +8282,7 @@
       au < manifest ; exists ; 2005 ; Environment and Behavior Volume 37 ; 37 ; >
       au < manifest ; exists ; 2006 ; Environment and Behavior Volume 38 ; 38 ; >
       au < manifest ; exists ; 2007 ; Environment and Behavior Volume 39 ; 39 ; >
-      au < testing ; exists ; 2008 ; Environment and Behavior Volume 40 ; 40 ; >
+      au < released ; manifest ; 2008 ; Environment and Behavior Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Environment and Behavior Volume 41 ; 41 ; >
       au < released ; crawling ; 2010 ; Environment and Behavior Volume 42 ; 42 ; >
       au < released ; crawling ; 2011 ; Environment and Behavior Volume 43 ; 43 ; >
@@ -16335,7 +16335,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2007 ; Journal of Cognitive Engineering and Decision Making Volume 1 ; 1 ; >
-      au < testing ; exists ; 2008 ; Journal of Cognitive Engineering and Decision Making Volume 2 ; 2 ; >
+      au < released ; manifest ; 2008 ; Journal of Cognitive Engineering and Decision Making Volume 2 ; 2 ; >
       au < released ; crawling ; 2009 ; Journal of Cognitive Engineering and Decision Making Volume 3 ; 3 ; >
       au < released ; crawling ; 2010 ; Journal of Cognitive Engineering and Decision Making Volume 4 ; 4 ; >
       au < released ; crawling ; 2011 ; Journal of Cognitive Engineering and Decision Making Volume 5 ; 5 ; >
@@ -25936,7 +25936,7 @@
       au < manifest ; exists ; 2003-2004 ; Nutrition and Health Volume 17 ; 17 ; >
       au < manifest ; exists ; 2004-2007 ; Nutrition and Health Volume 18 ; 18 ; >
       au < manifest ; exists ; 2007-2008 ; Nutrition and Health Volume 19 ; 19 ; >
-      au < testing ; exists ; 2009-2011 ; Nutrition and Health Volume 20 ; 20 ; >
+      au < released ; exists ; 2009-2011 ; Nutrition and Health Volume 20 ; 20 ; >
       au < crawling ; exists ; 2012 ; Nutrition and Health Volume 21 ; 21 ; >
 
     }
@@ -27668,7 +27668,7 @@
       au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 219 ; 219 ; >
       au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 220 ; 220 ; >
       au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 221 ; 221 ; >
-      au < testing ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 222 ; 222 ; >
+      au < released ; manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 222 ; 222 ; >
       au < released ; manifest ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 224 ; 224 ; >
       au < released ; crawling ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 225 ; 225 ; >
@@ -27717,7 +27717,7 @@
       au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 219 ; 219 ; >
       au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 220 ; 220 ; >
       au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 221 ; 221 ; >
-      au < testing ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 222 ; 222 ; >
+      au < released ; manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 222 ; 222 ; >
       au < released ; manifest ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 224 ; 224 ; >
       au < released ; crawling ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 225 ; 225 ; >
@@ -29580,7 +29580,7 @@
       au < manifest ; exists ; 2005 ; Research Ethics Volume 1 ; 1 ; >
       au < manifest ; exists ; 2006 ; Research Ethics Volume 2 ; 2 ; >
       au < manifest ; exists ; 2007 ; Research Ethics Volume 3 ; 3 ; >
-      au < testing ; exists ; 2008 ; Research Ethics Volume 4 ; 4 ; >
+      au < released ; manifest ; 2008 ; Research Ethics Volume 4 ; 4 ; >
       au < testing ; exists ; 2009 ; Research Ethics Volume 5 ; 5 ; >
       au < released ; manifest ; 2010 ; Research Ethics Volume 6 ; 6 ; >
       au < crawling ; exists ; 2011 ; Research Ethics Volume 7 ; 7 ; >
@@ -34057,7 +34057,7 @@
       au < manifest ; exists ; 2005 ; Transformation: An International Journal of Holistic Mission Studies Volume 22 ; 22 ; >
       au < manifest ; exists ; 2006 ; Transformation: An International Journal of Holistic Mission Studies Volume 23 ; 23 ; >
       au < manifest ; exists ; 2007 ; Transformation: An International Journal of Holistic Mission Studies Volume 24 ; 24 ; >
-      au < testing ; exists ; 2008 ; Transformation: An International Journal of Holistic Mission Studies Volume 25 ; 25 ; >
+      au < released ; manifest ; 2008 ; Transformation: An International Journal of Holistic Mission Studies Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Transformation: An International Journal of Holistic Mission Studies Volume 26 ; 26 ; >
       au < released ; crawling ; 2010 ; Transformation: An International Journal of Holistic Mission Studies Volume 27 ; 27 ; >
       au < released ; crawling ; 2011 ; Transformation: An International Journal of Holistic Mission Studies Volume 28 ; 28 ; >
@@ -34713,7 +34713,7 @@
       au < manifest ; exists ; 2006 ; Veterinary Pathology Volume 43 ; 43 ; >
       au < manifest ; exists ; 2007 ; Veterinary Pathology Volume 44 ; 44 ; >
       au < testing ; exists ; 2008 ; Veterinary Pathology Volume 45 ; 45 ; >
-      au < testing ; exists ; 2009 ; Veterinary Pathology Volume 46 ; 46 ; >
+      au < released ; manifest ; 2009 ; Veterinary Pathology Volume 46 ; 46 ; >
       au < released ; crawling ; 2010 ; Veterinary Pathology Volume 47 ; 47 ; >
       au < released ; crawling ; 2011 ; Veterinary Pathology Volume 48 ; 48 ; >
       au < crawling ; exists ; 2012 ; Veterinary Pathology Volume 49 ; 49 ; >
@@ -35437,7 +35437,7 @@
       au < manifest ; exists ; 2005 ; Youth Justice Volume 5 ; 5 ; >
       au < manifest ; exists ; 2006 ; Youth Justice Volume 6 ; 6 ; >
       au < manifest ; exists ; 2007 ; Youth Justice Volume 7 ; 7 ; >
-      au < testing ; exists ; 2008 ; Youth Justice Volume 8 ; 8 ; >
+      au < released ; manifest ; 2008 ; Youth Justice Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Youth Justice Volume 9 ; 9 ; >
       au < released ; crawling ; 2010 ; Youth Justice Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; Youth Justice Volume 11 ; 11 ; >
