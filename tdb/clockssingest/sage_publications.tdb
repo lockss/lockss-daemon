@@ -1186,7 +1186,7 @@
       au < manifest ; exists ; 2005 ; The American Journal of Sports Medicine Volume 33 ; 33 ; >
       au < manifest ; exists ; 2006 ; The American Journal of Sports Medicine Volume 34 ; 34 ; >
       au < manifest ; exists ; 2007 ; The American Journal of Sports Medicine Volume 35 ; 35 ; >
-      au < testing ; exists ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 ; >
+      au < released ; manifest ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 ; >
       au < released ; crawling ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 ; >
       au < released ; crawling ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 ; >
       au < released ; crawling ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 ; >
@@ -4568,7 +4568,7 @@
       au < manifest ; exists ; 2005 ; Clinical and Applied Thrombosis/Hemostasis Volume 11 ; 11 ; >
       au < manifest ; exists ; 2006 ; Clinical and Applied Thrombosis/Hemostasis Volume 12 ; 12 ; >
       au < manifest ; exists ; 2007 ; Clinical and Applied Thrombosis/Hemostasis Volume 13 ; 13 ; >
-      au < testing ; exists ; 2008 ; Clinical and Applied Thrombosis/Hemostasis Volume 14 ; 14 ; >
+      au < released ; manifest ; 2008 ; Clinical and Applied Thrombosis/Hemostasis Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Clinical and Applied Thrombosis/Hemostasis Volume 15 ; 15 ; >
       au < zapped ; down ; 2010 ; Clinical and Applied Thrombosis/Hemostasis Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; Clinical and Applied Thrombosis/Hemostasis Volume 17 ; 17 ; >
@@ -27619,7 +27619,7 @@
         au < manifest ; exists ; 2005 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 49 ; 49 ; >
         au < manifest ; exists ; 2006 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 50 ; 50 ; >
         au < manifest ; exists ; 2007 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 51 ; 51 ; >
-        au < testing ; exists ; 2008 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 52 ; 52 ; >
+        au < released ; manifest ; 2008 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 52 ; 52 ; >
         au < testing ; exists ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 ; >
         au < released ; manifest ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 ; >
         au < crawling ; exists ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 ; >
@@ -31830,7 +31830,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2009 ; Sports Health: A Multidisciplinary Approach Volume 1 ; 1 ; >
+      au < released ; manifest ; 2009 ; Sports Health: A Multidisciplinary Approach Volume 1 ; 1 ; >
       au < released ; crawling ; 2010 ; Sports Health: A Multidisciplinary Approach Volume 2 ; 2 ; >
       au < released ; crawling ; 2011 ; Sports Health: A Multidisciplinary Approach Volume 3 ; 3 ; >
       au < crawling ; exists ; 2012 ; Sports Health: A Multidisciplinary Approach Volume 4 ; 4 ; >
