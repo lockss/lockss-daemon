@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.17 2012-08-07 23:02:34 aishizaki Exp $
+# $Id: tdbq.py,v 1.18 2012-09-25 20:58:05 thib_gc Exp $
 
 __copyright__ = '''\
 
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.0'''
+__version__ = '''0.4.1'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -147,7 +147,7 @@ class TdbqLiteral:
     '''Literals encountered in TDB query strings.'''
     
     RE_WHITESPACE = r'\s+'
-    RE_IDENTIFIER = r'[a-zA-Z0-9_./]+(\[[a-zA-Z0-9_./]+\])*'
+    RE_IDENTIFIER = r'((au|title|publisher):)?[a-zA-Z0-9_./]+(\[[a-zA-Z0-9_./]+\])*'
     AND = 'and'
     OR = 'or'
     IS = 'is'
@@ -627,35 +627,81 @@ def tdbq_reprocess(tdb, options):
             if au.title().publisher() not in newtdb.publishers(): newtdb.add_publisher(au.title().publisher())
     return newtdb
 
+STR_TO_LAMBDA_AU = {
+    'au:auid': lambda au: au.auid(),
+    'au:auidplus': lambda au: au.auidplus(),
+    'au:name': lambda au: au.name(),
+    'au:plugin': lambda au: au.plugin(),
+    'au:pluginPrefix': lambda au: au.get(AU.PLUGIN_PREFIX),
+    'au:pluginSuffix': lambda au: au.get(AU.PLUGIN_SUFFIX),
+    'au:proxy': lambda au: au.proxy(),
+    'au:rights': lambda au: au.rights(),
+    'au:status': lambda au: au.status(),
+    'au:status1': lambda au: au.get('status1'),
+    'au:status2': lambda au: au.get('status2'),
+    'au:volume': lambda au: au.volume(),
+    'au:year': lambda au: au.year(),
+    'auid': lambda au: au.auid(),
+    'auidplus': lambda au: au.auidplus(),
+    'eisbn': lambda au: au.title().eisbn(),
+    'eissn': lambda au: au.title().eissn(),
+    'isbn': lambda au: au.title().isbn(),
+    'issn': lambda au: au.title().issn(),
+    'issnl': lambda au: au.title().issnl(),
+    'name': lambda au: au.name(),
+    'plugin': lambda au: au.plugin(),
+    'pluginPrefix': lambda au: au.get(AU.PLUGIN_PREFIX),
+    'pluginSuffix': lambda au: au.get(AU.PLUGIN_SUFFIX),
+    'proxy': lambda au: au.proxy(),
+    'publisher': lambda au: au.title().publisher().name(),
+    'publisher:name': lambda au: au.title().publisher().name(),
+    'rights': lambda au: au.rights(),
+    'status': lambda au: au.status(),
+    'status1': lambda au: au.get('status1'),
+    'status2': lambda au: au.get('status2'),
+    'title': lambda au: au.title().name(),
+    'title:eisbn': lambda au: au.title().eisbn(),
+    'title:eissn': lambda au: au.title().eissn(),
+    'title:isbn': lambda au: au.title().isbn(),
+    'title:issn': lambda au: au.title().issn(),
+    'title:issnl': lambda au: au.title().issnl(),
+    'title:name': lambda au: au.title().name(),
+    'title:type': lambda au: au.title().type(),
+    'type': lambda au: au.title().type(),
+    'volume': lambda au: au.volume(),
+    'year': lambda au: au.year()
+}
+
+def __xlate(str):
+    if str[-1] != ']': return str
+    ret = []
+    j = str.find('[')
+    ret.append(str[:j])
+    i = j + 1
+    j = str.find(']', i)
+    while j != -1:
+        ret.append(str[i:j])
+        i = j + 2
+        j = str.find(']', i)
+    return tuple(ret)
+
 def str_to_lambda_au(str):
     '''Translates a keyword into a lambda function that accepts an AU
     and returns the corresponding AU trait.
     
     Returns None if the keyword is not recognized.'''
-    for id, fn in [('status', lambda au: au.status()),
-                   ('status1', lambda au: au.get('status1')),
-                   ('status2', lambda au: au.get('status2')),
-                   ('year', lambda au: au.year()),
-                   ('volume', lambda au: au.volume()),
-                   ('name', lambda au: au.name()),
-                   ('plugin', lambda au: au.plugin()),
-                   ('pluginPrefix', lambda au: au.get(AU.PLUGIN_PREFIX)),
-                   ('pluginSuffix', lambda au: au.get(AU.PLUGIN_SUFFIX)),
-                   ('proxy', lambda au: au.proxy()),
-                   ('rights', lambda au: au.rights()),
-                   ('auid', lambda au: au.auid()),
-                   ('auidplus', lambda au: au.auidplus()),
-                   ('title', lambda au: au.title().name()),
-                   ('type', lambda au: au.title().type()),
-                   ('isbn', lambda au: au.title().isbn()),
-                   ('eisbn', lambda au: au.title().eisbn()),
-                   ('issn', lambda au: au.title().issn()),
-                   ('eissn', lambda au: au.title().eissn()),
-                   ('issnl', lambda au: au.title().issnl()),
-                   ('publisher', lambda au: au.title().publisher().name())]:
-        if id == str: return fn
-    if str.endswith(']'):
+    # Well-known keys
+    ret = STR_TO_LAMBDA_AU.get(str)
+    if ret is not None: return ret
+    # Definitional parameters, non-definitional parameters, attributes
+    if str[-1] == ']':
         if str.startswith('attr['): return lambda au: au.attr(str[5:-1]) 
         if str.startswith('param['): return lambda au: au.param(str[6:-1]) 
         if str.startswith('nondefparam['): return lambda au: au.nondefparam(str[12:-1]) 
+    # Arbitrary keys
+    if ':' in str:
+        if str.startswith('au:'): return lambda au: au.get(__xlate(str[3:]))
+        if str.startswith('title:'): return lambda au: au.title().get(__xlate(str[6:]))
+        if str.startswith('publisher:'): return lambda au: au.title().publisher().get(__xlate(str[10:]))
     return None
+
