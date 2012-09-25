@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRule.java,v 1.3 2006-12-09 07:09:01 tlipkis Exp $
+ * $Id: FilterRule.java,v 1.4 2012-09-25 18:42:08 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,9 @@ package org.lockss.plugin;
 import java.io.*;
 import org.lockss.daemon.*;
 
+/** Factory that creates a filtered Reader from a source Reader.
+ * @deprecated Use FilterFactory instead.
+ */
 public interface FilterRule {
   public Reader createFilteredReader(Reader reader)
       throws PluginException;
