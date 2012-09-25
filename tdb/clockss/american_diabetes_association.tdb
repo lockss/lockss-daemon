@@ -1,12 +1,13 @@
 {
 
   publisher <
-    name = American Diabetes Association 
-    info[contract] = 2008 ;
-    info[tester] = 5
+    name = American Diabetes Association ;
+    info[contract] = 2012 ;
+    info[tester] = 8
 
   >
 
+    attr[contract] = 2012
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
@@ -17,6 +18,8 @@
       eissn =  1945-4953
     >
     
+      param[base_url] = http://clinical.diabetesjournals.org/
+
       au < manifest ; exists ; 2001 ; Clinical Diabetes Volume 19 ; 19 >
       au < manifest ; exists ; 2002 ; Clinical Diabetes Volume 20 ; 20 >
       au < manifest ; exists ; 2003 ; Clinical Diabetes Volume 21 ; 21 >
@@ -28,26 +31,10 @@
       au < manifest ; exists ; 2009 ; Clinical Diabetes Volume 27 ; 27 >
       au < manifest ; exists ; 2010 ; Clinical Diabetes Volume 28 ; 28 >
       au < manifest ; exists ; 2011 ; Clinical Diabetes Volume 29 ; 29 >
-      au < manifest ; exists ; 2012 ; Clinical Diabetes Volume 30 ; 30 >
+      au < crawling ; exists ; 2012 ; Clinical Diabetes Volume 30 ; 30 >
     
     }
     
-    {
-    
-    title < 
-      name = Clinical Practice Recommendations ;
-      issn = 0149-5992 ;
-      eissn = 1935-5548
-  
-    >   
-    
-     param[base_url] = http://clinical.diabetesjournals.org/
-    
-      au < manifest ; exists ; 2012 ; Clinical Practice Recommendations Volume 35 ; 35 >
-     
-
-    }
-  
     {
   
     title < 
@@ -107,7 +94,7 @@
       au < manifest ; exists ; 2009 ; Diabetes Volume 58 ; 58 >
       au < manifest ; exists ; 2010 ; Diabetes Volume 59 ; 59 >
       au < manifest ; exists ; 2011 ; Diabetes Volume 60 ; 60 >
-      au < manifest ; exists ; 2012 ; Diabetes Volume 61 ; 61 >
+      au < crawling ; exists ; 2012 ; Diabetes Volume 61 ; 61 >
 
     }
     
@@ -120,28 +107,28 @@
   
     >
       param[base_url] = http://care.diabetesjournals.org/
-      comment[supplement] = Clinical Practice Recommendations - this is published as a supplement to Diabetes Care journal
+      comment[supplement] = Clinical Practice Recommendations - is published as a supplement to Diabetes Care journal
 
-      au < manifest ; exists ; 1978 ; Diabetes Care Volume 1 ; 1 >
-      au < manifest ; exists ; 1979 ; Diabetes Care Volume 2 ; 2 >
-      au < manifest ; exists ; 1980 ; Diabetes Care Volume 3 ; 3 >
-      au < manifest ; exists ; 1981 ; Diabetes Care Volume 4 ; 4 >
-      au < manifest ; exists ; 1982 ; Diabetes Care Volume 5 ; 5 >
-      au < manifest ; exists ; 1983 ; Diabetes Care Volume 6 ; 6 >
-      au < manifest ; exists ; 1984 ; Diabetes Care Volume 7 ; 7 >
-      au < manifest ; exists ; 1985 ; Diabetes Care Volume 8 ; 8 >
-      au < manifest ; exists ; 1986 ; Diabetes Care Volume 9 ; 9 >
-      au < manifest ; exists ; 1987 ; Diabetes Care Volume 10 ; 10 >
-      au < manifest ; exists ; 1988 ; Diabetes Care Volume 11 ; 11 >
-      au < manifest ; exists ; 1989 ; Diabetes Care Volume 12 ; 12 >
-      au < manifest ; exists ; 1990 ; Diabetes Care Volume 13 ; 13 >
-      au < manifest ; exists ; 1991 ; Diabetes Care Volume 14 ; 14 >
-      au < manifest ; exists ; 1992 ; Diabetes Care Volume 15 ; 15 >
-      au < manifest ; exists ; 1993 ; Diabetes Care Volume 16 ; 16 >
-      au < manifest ; exists ; 1994 ; Diabetes Care Volume 17 ; 17 >
-      au < manifest ; exists ; 1995 ; Diabetes Care Volume 18 ; 18 >
-      au < manifest ; exists ; 1996 ; Diabetes Care Volume 19 ; 19 >
-      au < manifest ; exists ; 1997 ; Diabetes Care Volume 20 ; 20 >
+      au < manifest ; exists ; 1978 ; Diabetes Care Volume 1 [abstracts only] ; 1 >
+      au < manifest ; exists ; 1979 ; Diabetes Care Volume 2 [abstracts only] ; 2 >
+      au < manifest ; exists ; 1980 ; Diabetes Care Volume 3 [abstracts only] ; 3 >
+      au < manifest ; exists ; 1981 ; Diabetes Care Volume 4 [abstracts only] ; 4 >
+      au < manifest ; exists ; 1982 ; Diabetes Care Volume 5 [abstracts only] ; 5 >
+      au < manifest ; exists ; 1983 ; Diabetes Care Volume 6 [abstracts only] ; 6 >
+      au < manifest ; exists ; 1984 ; Diabetes Care Volume 7 [abstracts only] ; 7 >
+      au < manifest ; exists ; 1985 ; Diabetes Care Volume 8 [abstracts only] ; 8 >
+      au < manifest ; exists ; 1986 ; Diabetes Care Volume 9 [abstracts only] ; 9 >
+      au < manifest ; exists ; 1987 ; Diabetes Care Volume 10 [abstracts only] ; 10 >
+      au < manifest ; exists ; 1988 ; Diabetes Care Volume 11 [abstracts only] ; 11 >
+      au < manifest ; exists ; 1989 ; Diabetes Care Volume 12 [abstracts only] ; 12 >
+      au < manifest ; exists ; 1990 ; Diabetes Care Volume 13 [abstracts only] ; 13 >
+      au < manifest ; exists ; 1991 ; Diabetes Care Volume 14 [abstracts only] ; 14 >
+      au < manifest ; exists ; 1992 ; Diabetes Care Volume 15 [abstracts only] ; 15 >
+      au < manifest ; exists ; 1993 ; Diabetes Care Volume 16 [abstracts only] ; 16 >
+      au < manifest ; exists ; 1994 ; Diabetes Care Volume 17 [abstracts only] ; 17 >
+      au < manifest ; exists ; 1995 ; Diabetes Care Volume 18 [abstracts only] ; 18 >
+      au < manifest ; exists ; 1996 ; Diabetes Care Volume 19 [abstracts only] ; 19 >
+      au < manifest ; exists ; 1997 ; Diabetes Care Volume 20 [abstracts only] ; 20 >
       au < manifest ; exists ; 1998 ; Diabetes Care Volume 21 ; 21 >
       au < manifest ; exists ; 1999 ; Diabetes Care Volume 22 ; 22 >
       au < manifest ; exists ; 2000 ; Diabetes Care Volume 23 ; 23 >
@@ -156,7 +143,7 @@
       au < manifest ; exists ; 2009 ; Diabetes Care Volume 32 ; 32 >
       au < manifest ; exists ; 2010 ; Diabetes Care Volume 33 ; 33 >
       au < manifest ; exists ; 2011 ; Diabetes Care Volume 34 ; 34 >    
-      au < manifest ; exists ; 2012 ; Diabetes Care Volume 35 ; 35 >
+      au < crawling ; exists ; 2012 ; Diabetes Care Volume 35 ; 35 >
 
     }
     
@@ -181,7 +168,7 @@
       au < manifest ; exists ; 2009 ; Diabetes Spectrum Volume 22 ; 22 >
       au < manifest ; exists ; 2010 ; Diabetes Spectrum Volume 23 ; 23 >
       au < manifest ; exists ; 2011 ; Diabetes Spectrum Volume 24 ; 24 >      
-      au < manifest ; exists ; 2012 ; Diabetes Spectrum Volume 25 ; 25 >
+      au < crawling ; exists ; 2012 ; Diabetes Spectrum Volume 25 ; 25 >
 
     }
 
@@ -205,33 +192,4 @@
 
     }
 
-    {
-  
-    title < 
-      name = Scientific Sessions Abstract Book ; 
-      issn =  0012-1797 ;
-      eissn = 1939-327X
-  
-    >
-    param[base_url] = http://www.diabetesjournals.org/
-    comment[issn] = identical issn and eissn to Diabetes - this is published as a supplement to Diabetes journal
-    
-    au < manifest ; exists ; 1998 ; Diabetes Volume 47 ; 47 >
-    au < manifest ; exists ; 1999 ; Diabetes Volume 48 ; 48 >
-    au < manifest ; exists ; 2000 ; Diabetes Volume 49 ; 49 >
-    au < manifest ; exists ; 2001 ; Diabetes Volume 50 ; 50 >
-    au < manifest ; exists ; 2002 ; Diabetes Volume 51 ; 51 >
-    au < manifest ; exists ; 2003 ; Diabetes Volume 52 ; 52 >
-    au < manifest ; exists ; 2004 ; Diabetes Volume 53 ; 53 >
-    au < manifest ; exists ; 2005 ; Diabetes Volume 54 ; 54 >
-    au < manifest ; exists ; 2006 ; Diabetes Volume 55 ; 55 >
-    au < manifest ; exists ; 2007 ; Diabetes Volume 56 ; 56 >
-    au < manifest ; exists ; 2008 ; Diabetes Volume 57 ; 57 >
-    au < manifest ; exists ; 2009 ; Diabetes Volume 58 ; 58 >
-    au < manifest ; exists ; 2010 ; Diabetes Volume 59 ; 59 >
-    au < manifest ; exists ; 2011 ; Diabetes Volume 60 ; 60 >
-    au < manifest ; exists ; 2012 ; Diabetes Volume 61 ; 61 >
-
-    }
-    
     }
