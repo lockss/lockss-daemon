@@ -24,7 +24,7 @@
     au < released ; 2008 ; Asian Music Volume 39 ; 39 >
     au < released ; 2009 ; Asian Music Volume 40 ; 40 >
     au < released ; 2010 ; Asian Music Volume 41 ; 41 >
-    au < ready ; 2011 ; Asian Music Volume 42 ; 42 >
+    au < releasing ; 2011 ; Asian Music Volume 42 ; 42 >
     au < manifest ; 2012 ; Asian Music Volume 43 ; 43 >
 
   }
@@ -51,7 +51,7 @@
     au < released ; 2007-2008 ; Cinema Journal Volume 47 ; 47 >
     au < released ; 2008-2009 ; Cinema Journal Volume 48 ; 48 >
     au < released ; 2009-2010 ; Cinema Journal Volume 49 ; 49 >
-    au < ready ; 2010-2011 ; Cinema Journal Volume 50 ; 50 >
+    au < releasing ; 2010-2011 ; Cinema Journal Volume 50 ; 50 >
     au < manifest ; 2011-2012 ; Cinema Journal Volume 51 ; 51 >
 
   }
@@ -77,7 +77,7 @@
     au < released ; 2008 ; Journal of the History of Sexuality Volume 17 ; 17 >
     au < released ; 2009 ; Journal of the History of Sexuality Volume 18 ; 18 >
     au < released ; 2010 ; Journal of the History of Sexuality Volume 19 ; 19 >
-    au < ready ; 2011 ; Journal of the History of Sexuality Volume 20 ; 20 >
+    au < releasing ; 2011 ; Journal of the History of Sexuality Volume 20 ; 20 >
     au < manifest ; 2012 ; Journal of the History of Sexuality Volume 21 ; 21 >
 
   }
@@ -102,8 +102,8 @@
     au < released ; 2007 ; Latin American Music Review Volume 28 ; 28 >
     au < released ; 2008 ; Latin American Music Review Volume 29 ; 29 >
     au < released ; 2009 ; Latin American Music Review Volume 30 ; 30 >
-    au < ready ; 2010 ; Latin American Music Review Volume 31 ; 31 >
-    au < ready ; 2011 ; Latin American Music Review Volume 32 ; 32 >
+    au < releasing ; 2010 ; Latin American Music Review Volume 31 ; 31 >
+    au < releasing ; 2011 ; Latin American Music Review Volume 32 ; 32 >
     au < manifest ; 2012 ; Latin American Music Review Volume 33 ; 33 >
 
   }
@@ -129,7 +129,7 @@
     au < released ; 2008 ; Libraries & the Cultural Record Volume 43 ; 43 >
     au < released ; 2009 ; Libraries & the Cultural Record Volume 44 ; 44 >
     au < released ; 2010 ; Libraries & the Cultural Record Volume 45 ; 45 >
-    au < ready ; 2011 ; Libraries & the Cultural Record Volume 46 ; 46 >
+    au < releasing ; 2011 ; Libraries & the Cultural Record Volume 46 ; 46 >
     au < manifest ; 2012 ; Libraries & the Cultural Record Volume 47 ; 47 >
 
   }
@@ -145,8 +145,8 @@
     param[journal_dir] = studies_in_latin_american_popular_culture
     attr[journal_id] = sla
 
-    au < ready ; 2010 ; Studies in Latin American Popular Culture Volume 28 ; 28 >
-    au < ready ; 2011 ; Studies in Latin American Popular Culture Volume 29 ; 29 >
+    au < releasing ; 2010 ; Studies in Latin American Popular Culture Volume 28 ; 28 >
+    au < releasing ; 2011 ; Studies in Latin American Popular Culture Volume 29 ; 29 >
     au < manifest ; 2012 ; Studies in Latin American Popular Culture Volume 30 ; 30 >
 
   }
@@ -172,7 +172,7 @@
     au < released ; 2008 ; Texas Studies in Literature and Language Volume 50 ; 50 >
     au < released ; 2009 ; Texas Studies in Literature and Language Volume 51 ; 51 >
     au < released ; 2010 ; Texas Studies in Literature and Language Volume 52 ; 52 >
-    au < ready ; 2011 ; Texas Studies in Literature and Language Volume 53 ; 53 >
+    au < releasing ; 2011 ; Texas Studies in Literature and Language Volume 53 ; 53 >
     au < manifest ; 2012 ; Texas Studies in Literature and Language Volume 54 ; 54 >
 
   }
@@ -203,9 +203,9 @@
     au < released ; 2009 ; The Velvet Light Trap Volume 63 ; 63 >
     au < released ; 2009 ; The Velvet Light Trap Number 64 ; 64 >
     au < released ; 2010 ; The Velvet Light Trap Number 65 ; 65 >
-    au < ready ; 2010 ; The Velvet Light Trap Number 66 ; 66 >
-    au < ready ; 2011 ; The Velvet Light Trap Number 67 ; 67 >
-    au < ready ; 2011 ; The Velvet Light Trap Number 68 ; 68 >
+    au < releasing ; 2010 ; The Velvet Light Trap Number 66 ; 66 >
+    au < releasing ; 2011 ; The Velvet Light Trap Number 67 ; 67 >
+    au < releasing ; 2011 ; The Velvet Light Trap Number 68 ; 68 >
     au < manifest ; 2012 ; The Velvet Light Trap Number 69 ; 69 >
 
   }

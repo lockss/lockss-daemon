@@ -216,8 +216,8 @@
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < ready ; 2003 ; Action Research Volume 1 ; 1 >
-        au < ready ; 2004 ; Action Research Volume 2 ; 2 >
+        au < releasing ; 2003 ; Action Research Volume 1 ; 1 >
+        au < releasing ; 2004 ; Action Research Volume 2 ; 2 >
         au < doNotProcess ; 2005 ; Action Research Volume 3 ; 3 >
         au < doNotProcess ; 2006 ; Action Research Volume 4 ; 4 >
         au < doNotProcess ; 2007 ; Action Research Volume 5 ; 5 >
@@ -358,11 +358,11 @@
         au < ready ; 1996 ; Adaptive Behavior Volume 5 ; 5 >
         au < ready ; 1997 ; Adaptive Behavior Volume 6 ; 6 >
         au < testing ; 1999 ; Adaptive Behavior Volume 7 ; 7 >
-        au < ready ; 2000 ; Adaptive Behavior Volume 8 ; 8 >
-        au < ready ; 2001 ; Adaptive Behavior Volume 9 ; 9 >
-        au < ready ; 2002 ; Adaptive Behavior Volume 10 ; 10 >
-        au < ready ; 2003 ; Adaptive Behavior Volume 11 ; 11 >
-        au < ready ; 2004 ; Adaptive Behavior Volume 12 ; 12 >
+        au < releasing ; 2000 ; Adaptive Behavior Volume 8 ; 8 >
+        au < releasing ; 2001 ; Adaptive Behavior Volume 9 ; 9 >
+        au < releasing ; 2002 ; Adaptive Behavior Volume 10 ; 10 >
+        au < releasing ; 2003 ; Adaptive Behavior Volume 11 ; 11 >
+        au < releasing ; 2004 ; Adaptive Behavior Volume 12 ; 12 >
         au < doNotProcess ; 2005 ; Adaptive Behavior Volume 13 ; 13 >
         au < doNotProcess ; 2006 ; Adaptive Behavior Volume 14 ; 14 >
         au < doNotProcess ; 2007 ; Adaptive Behavior Volume 15 ; 15 >
@@ -450,8 +450,8 @@
         au < ready ; 2000 ; Administration & Society Volume 32 ; 32 >
         au < ready ; 2001 ; Administration & Society Volume 33 ; 33 >
         au < testing ; 2002 ; Administration & Society Volume 34 ; 34 >
-        au < ready ; 2003 ; Administration & Society Volume 35 ; 35 >
-        au < ready ; 2004 ; Administration & Society Volume 36 ; 36 >
+        au < releasing ; 2003 ; Administration & Society Volume 35 ; 35 >
+        au < releasing ; 2004 ; Administration & Society Volume 36 ; 36 >
         au < doNotProcess ; 2005 ; Administration & Society Volume 37 ; 37 >
         au < doNotProcess ; 2006 ; Administration & Society Volume 38 ; 38 >
         au < doNotProcess ; 2007 ; Administration & Society Volume 39 ; 39 >
@@ -480,8 +480,8 @@
 
         au < ready ; 2005 ; Administrative Science Quarterly Volume 50 ; 50 >
         au < testing ; 2006 ; Administrative Science Quarterly Volume 51 ; 51 >
-        au < ready ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 >
-        au < ready ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 >
+        au < releasing ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 >
+        au < releasing ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 >
         au < released ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 >
         au < released ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 >
         au < released ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 >
@@ -624,8 +624,8 @@
         au < manifest ; 2007 ; Adult Learning Volume 18 ; 18 >
         au < manifest ; 2008 ; Adult Learning Volume 19 ; 19 >
         au < manifest ; 2009 ; Adult Learning Volume 20 ; 20 >
-        au < ready ; 2010 ; Adult Learning Volume 21 ; 21 >
-        au < ready ; 2011-2012 ; Adult Learning Volume 22 ; 22 >
+        au < releasing ; 2010 ; Adult Learning Volume 21 ; 21 >
+        au < releasing ; 2011-2012 ; Adult Learning Volume 22 ; 22 >
         au < manifest ; 2012 ; Adult Learning Volume 23 ; 23 >
       
       }
@@ -1446,11 +1446,11 @@
         au < testing ; 2005 ; The American Journal of Sports Medicine Volume 33 ; 33 >
         au < doNotProcess ; 2006 ; The American Journal of Sports Medicine Volume 34 ; 34 >
         au < doNotProcess ; 2007 ; The American Journal of Sports Medicine Volume 35 ; 35 >
-        au < ready ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 >
+        au < releasing ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 >
         au < released ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 >
         au < released ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 >
         au < released ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 >
-        au < ready ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 >
+        au < releasing ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 >
 
       }
 
@@ -3718,8 +3718,8 @@
         au < manifest ; 2007-2008 ; British Journal of Pain Volume 1 ; 1 >
         au < manifest ; 2008 ; British Journal of Pain Volume 2 ; 2 >
         au < manifest ; 2009 ; British Journal of Pain Volume 3 ; 3 >
-        au < ready ; 2010 ; British Journal of Pain Volume 4 ; 4 >
-        au < ready ; 2011 ; British Journal of Pain Volume 5 ; 5 >
+        au < releasing ; 2010 ; British Journal of Pain Volume 4 ; 4 >
+        au < releasing ; 2011 ; British Journal of Pain Volume 5 ; 5 >
         au < manifest ; 2012 ; British Journal of Pain Volume 6 ; 6 >
 
       }
@@ -4662,9 +4662,9 @@
         au < ready ; 2003 ; Cephalalgia Volume 23 ; 23 >
         au < ready ; 2004 ; Cephalalgia Volume 24 ; 24 >
         au < testing ; 2005 ; Cephalalgia Volume 25 ; 25 >
-        au < ready ; 2006 ; Cephalalgia Volume 26 ; 26 >
-        au < ready ; 2007 ; Cephalalgia Volume 27 ; 27 >
-        au < ready ; 2008 ; Cephalalgia Volume 28 ; 28 >
+        au < releasing ; 2006 ; Cephalalgia Volume 26 ; 26 >
+        au < releasing ; 2007 ; Cephalalgia Volume 27 ; 27 >
+        au < releasing ; 2008 ; Cephalalgia Volume 28 ; 28 >
         au < released ; 2009 ; Cephalalgia Volume 29 ; 29 >
         au < released ; 2010 ; Cephalalgia Volume 30 ; 30 >
         au < released ; 2011 ; Cephalalgia Volume 31 ; 31 >
@@ -9797,9 +9797,9 @@
         au < manifest ; 2006 ; European Journal of Cardiovascular Nursing Volume 5 ; 5 >
         au < manifest ; 2007 ; European Journal of Cardiovascular Nursing Volume 6 ; 6 >
         au < manifest ; 2008 ; European Journal of Cardiovascular Nursing Volume 7 ; 7 >
-        au < ready ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8 >
-        au < ready ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9 >
-        au < ready ; 2011 ; European Journal of Cardiovascular Nursing Volume 10 ; 10 >
+        au < releasing ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8 >
+        au < releasing ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9 >
+        au < releasing ; 2011 ; European Journal of Cardiovascular Nursing Volume 10 ; 10 >
         au < manifest ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 11 >
   
       }
@@ -13158,7 +13158,7 @@
 
         au < manifest ; 2007 ; History and Sociology of South Asia Volume 1 ; 1 >
         au < manifest ; 2008 ; History and Sociology of South Asia Volume 2 ; 2 >
-        au < ready ; 2009 ; History and Sociology of South Asia Volume 3 ; 3 >
+        au < releasing ; 2009 ; History and Sociology of South Asia Volume 3 ; 3 >
         au < released ; 2010 ; History and Sociology of South Asia Volume 4 ; 4 >
         au < released ; 2011 ; History and Sociology of South Asia Volume 5 ; 5 >
         au < manifest ; 2012 ; History and Sociology of South Asia Volume 6 ; 6 >
@@ -14551,8 +14551,8 @@
         au < manifest ; 2007 ; International Area Studies Review Volume 10 ; 10 >
         au < manifest ; 2008 ; International Area Studies Review Volume 11 ; 11 >
         au < manifest ; 2009 ; International Area Studies Review Volume 12 ; 12 >
-        au < ready ; 2010 ; International Area Studies Review Volume 13 ; 13 >
-        au < ready ; 2011 ; International Area Studies Review Volume 14 ; 14 >
+        au < releasing ; 2010 ; International Area Studies Review Volume 13 ; 13 >
+        au < releasing ; 2011 ; International Area Studies Review Volume 14 ; 14 >
         au < manifest ; 2012 ; International Area Studies Review Volume 15 ; 15 >
         
       }
@@ -16167,7 +16167,7 @@
         au < manifest ; 2007 ; International Review of Victimology Volume 14 ; 14 >
         au < manifest ; 2008-2009 ; International Review of Victimology Volume 15 ; 15 >
         au < manifest ; 2009 ; International Review of Victimology Volume 16 ; 16 >
-        au < ready ; 2010 ; International Review of Victimology Volume 17 ; 17 >
+        au < releasing ; 2010 ; International Review of Victimology Volume 17 ; 17 >
         au < manifest ; 2012 ; International Review of Victimology Volume 18 ; 18 >
   
       }
@@ -17195,8 +17195,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2007 ; Journal of Applied Social Science Volume 1 ; 1 >
         au < manifest ; 2008 ; Journal of Applied Social Science Volume 2 ; 2 >
         au < manifest ; 2009 ; Journal of Applied Social Science Volume 3 ; 3 >
-        au < ready ; 2010 ; Journal of Applied Social Science Volume 4 ; 4 >
-        au < ready ; 2011 ; Journal of Applied Social Science Volume 5 ; 5 >
+        au < releasing ; 2010 ; Journal of Applied Social Science Volume 4 ; 4 >
+        au < releasing ; 2011 ; Journal of Applied Social Science Volume 5 ; 5 >
         au < manifest ; 2012 ; Journal of Applied Social Science Volume 6 ; 6 >
 
     }
@@ -17935,8 +17935,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         rights = openaccess
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < ready ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 >
-        au < ready ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 >
+        au < releasing ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 >
+        au < releasing ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 >
         au < manifest ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 >
         
       }
@@ -19510,7 +19510,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2006 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 3 ; 3 >
         au < manifest ; 2007 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 4 ; 4 >
         au < manifest ; 2008 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 >
-        au < ready ; 2009 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 6 ; 6 >
+        au < releasing ; 2009 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 6 ; 6 >
         au < released ; 2010 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 7 ; 7 >
         au < released ; 2011 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 8 ; 8 >
         au < manifest ; 2012 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 9 ; 9 >
@@ -19789,8 +19789,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2007 ; Journal of Drug Issues Volume 37 ; 37 >
       au < manifest ; 2008 ; Journal of Drug Issues Volume 38 ; 38 >
       au < manifest ; 2009 ; Journal of Drug Issues Volume 39 ; 39 >
-      au < ready ; 2010 ; Journal of Drug Issues Volume 40 ; 40 >
-      au < ready ; 2011 ; Journal of Drug Issues Volume 41 ; 41 >
+      au < releasing ; 2010 ; Journal of Drug Issues Volume 40 ; 40 >
+      au < releasing ; 2011 ; Journal of Drug Issues Volume 41 ; 41 >
       au < manifest ; 2012 ; Journal of Drug Issues Volume 42 ; 42 > 
     
     }
@@ -20971,8 +20971,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2007 ; Journal of Feline Medicine and Surgery Volume 9 ; 9 >
         au < manifest ; 2008 ; Journal of Feline Medicine and Surgery Volume 10 ; 10 >
         au < manifest ; 2009 ; Journal of Feline Medicine and Surgery Volume 11 ; 11 >
-        au < ready ; 2010 ; Journal of Feline Medicine and Surgery Volume 12 ; 12 >
-        au < ready ; 2011 ; Journal of Feline Medicine and Surgery Volume 13 ; 13 >
+        au < releasing ; 2010 ; Journal of Feline Medicine and Surgery Volume 12 ; 12 >
+        au < releasing ; 2011 ; Journal of Feline Medicine and Surgery Volume 13 ; 13 >
         au < manifest ; 2012 ; Journal of Feline Medicine and Surgery Volume 14 ; 14 >
   
       }
@@ -21216,7 +21216,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2006 ; Journal of Health and Social Behavior Volume 47 ; 47 >
         au < manifest ; 2007 ; Journal of Health and Social Behavior Volume 48 ; 48 >
         au < manifest ; 2008 ; Journal of Health and Social Behavior Volume 49 ; 49 >
-        au < ready ; 2009 ; Journal of Health and Social Behavior Volume 50 ; 50 >
+        au < releasing ; 2009 ; Journal of Health and Social Behavior Volume 50 ; 50 >
         au < released ; 2010 ; Journal of Health and Social Behavior Volume 51 ; 51 >
         au < released ; 2011 ; Journal of Health and Social Behavior Volume 52 ; 52 >
         au < manifest ; 2012 ; Journal of Health and Social Behavior Volume 53 ; 53 >
@@ -21801,7 +21801,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2006 ; Journal of Human Values Volume 12 ; 12 >
         au < doNotProcess ; 2007 ; Journal of Human Values Volume 13 ; 13 >
         au < doNotProcess ; 2008 ; Journal of Human Values Volume 14 ; 14 >
-        au < ready ; 2009 ; Journal of Human Values Volume 15 ; 15 >
+        au < releasing ; 2009 ; Journal of Human Values Volume 15 ; 15 >
         au < released ; 2010 ; Journal of Human Values Volume 16 ; 16 >
         au < released ; 2011 ; Journal of Human Values Volume 17 ; 17 >
         au < manifest ; 2012 ; Journal of Human Values Volume 18 ; 18 >
@@ -22449,8 +22449,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2007 ; Journal of Laboratory Automation Volume 12 ; 12 >
         au < manifest ; 2008 ; Journal of Laboratory Automation Volume 13 ; 13 >
         au < manifest ; 2009 ; Journal of Laboratory Automation Volume 14 ; 14 >
-        au < ready ; 2010 ; Journal of Laboratory Automation Volume 15 ; 15 >
-        au < ready ; 2011 ; Journal of Laboratory Automation Volume 16 ; 16 >
+        au < releasing ; 2010 ; Journal of Laboratory Automation Volume 15 ; 15 >
+        au < releasing ; 2011 ; Journal of Laboratory Automation Volume 16 ; 16 >
         au < manifest ; 2012 ; Journal of Laboratory Automation Volume 17 ; 17 >
   
       }
@@ -23140,7 +23140,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2006 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 6 ; 6 >
         au < manifest ; 2007 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 7 ; 7 >
         au < manifest ; 2008 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 8 ; 8 >
-        au < ready ; 2009 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 9 ; 9 >
+        au < releasing ; 2009 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 9 ; 9 >
         au < released ; 2010 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 10 ; 10 >
         au < released ; 2011 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 11 ; 11 >
         au < manifest ; 2012 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 12 ; 12 >
@@ -23245,7 +23245,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Journal of Music Teacher Education Volume 16 ; 16 >
         au < manifest ; 2007 ; Journal of Music Teacher Education Volume 17 ; 17 >
         au < manifest ; 2008 ; Journal of Music Teacher Education Volume 18 ; 18 >
-        au < ready ; 2009 ; Journal of Music Teacher Education Volume 19 ; 19 >
+        au < releasing ; 2009 ; Journal of Music Teacher Education Volume 19 ; 19 >
         au < released ; 2010 ; Journal of Music Teacher Education Volume 20 ; 20 >
         au < released ; 2011 ; Journal of Music Teacher Education Volume 21 ; 21 >
         au < manifest ; 2012 ; Journal of Music Teacher Education Volume 22 ; 22 >
@@ -23634,7 +23634,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2006 ; Journal of Planning Education and Research Volume 26 ; 26 >
         au < doNotProcess ; 2007 ; Journal of Planning Education and Research Volume 27 ; 27 >
         au < doNotProcess ; 2008 ; Journal of Planning Education and Research Volume 28 ; 28 >
-        au < ready ; 2009 ; Journal of Planning Education and Research Volume 29 ; 29 >
+        au < releasing ; 2009 ; Journal of Planning Education and Research Volume 29 ; 29 >
         au < released ; 2010 ; Journal of Planning Education and Research Volume 30 ; 30 >
         au < released ; 2011 ; Journal of Planning Education and Research Volume 31 ; 31 >
         au < manifest ; 2012 ; Journal of Planning Education and Research Volume 32 ; 32 >
@@ -23740,7 +23740,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2006 ; Journal of Planning Literature Volume 21 ; 21 >
         au < doNotProcess ; 2007 ; Journal of Planning Literature Volume 22 ; 22 >
         au < doNotProcess ; 2008 ; Journal of Planning Literature Volume 23 ; 23 >
-        au < ready ; 2009 ; Journal of Planning Literature Volume 24 ; 24 >
+        au < releasing ; 2009 ; Journal of Planning Literature Volume 24 ; 24 >
         au < released ; 2010 ; Journal of Planning Literature Volume 25 ; 25 >
         au < released ; 2011 ; Journal of Planning Literature Volume 26 ; 26 >
         au < manifest ; 2012 ; Journal of Planning Literature Volume 27 ; 27 >
@@ -23801,7 +23801,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2006 ; Journal of Plastic Film and Sheeting Volume 22 ; 22 >
         au < doNotProcess ; 2007 ; Journal of Plastic Film and Sheeting Volume 23 ; 23 >
         au < doNotProcess ; 2008 ; Journal of Plastic Film and Sheeting Volume 24 ; 24 >
-        au < ready ; 2009 ; Journal of Plastic Film and Sheeting Volume 25 ; 25 >
+        au < releasing ; 2009 ; Journal of Plastic Film and Sheeting Volume 25 ; 25 >
         au < released ; 2010 ; Journal of Plastic Film and Sheeting Volume 26 ; 26 >
         au < released ; 2011 ; Journal of Plastic Film and Sheeting Volume 27 ; 27 >
         au < manifest ; 2012 ; Journal of Plastic Film and Sheeting Volume 28 ; 28 >
@@ -24355,8 +24355,8 @@ comment[mpj] = now published by Brill
         au < manifest ; 2007 ; Journal of Research on Leadership Education Volume 2 ; 2 >
         au < manifest ; 2008 ; Journal of Research on Leadership Education Volume 3 ; 3 >
         au < manifest ; 2009 ; Journal of Research on Leadership Education Volume 4 ; 4 >
-        au < ready ; 2010 ; Journal of Research on Leadership Education Volume 5 ; 5 >
-        au < ready ; 2011 ; Journal of Research on Leadership Education Volume 6 ; 6 >
+        au < releasing ; 2010 ; Journal of Research on Leadership Education Volume 5 ; 5 >
+        au < releasing ; 2011 ; Journal of Research on Leadership Education Volume 6 ; 6 >
         au < manifest ; 2012 ; Journal of Research on Leadership Education Volume 7 ; 7 >
 
       }
@@ -24943,7 +24943,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Journal of Strain Analysis for Engineering Design Volume 41 ; 41 >
         au < manifest ; 2007 ; Journal of Strain Analysis for Engineering Design Volume 42 ; 42 >
         au < manifest ; 2008 ; Journal of Strain Analysis for Engineering Design Volume 43 ; 43 >
-        au < ready ; 2009 ; Journal of Strain Analysis for Engineering Design Volume 44 ; 44 >
+        au < releasing ; 2009 ; Journal of Strain Analysis for Engineering Design Volume 44 ; 44 >
         au < released ; 2010 ; Journal of Strain Analysis for Engineering Design Volume 45 ; 45 >
         au < released ; 2011 ; Journal of Strain Analysis for Engineering Design Volume 46 ; 46 >
         au < manifest ; 2012 ; Journal of Strain Analysis for Engineering Design Volume 47 ; 47 >
@@ -25693,7 +25693,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Perspectives on Psychological Science Volume 1 ; 1 >
         au < manifest ; 2007 ; Perspectives on Psychological Science Volume 2 ; 2 >
         au < manifest ; 2008 ; Perspectives on Psychological Science Volume 3 ; 3 >
-        au < ready ; 2009 ; Perspectives on Psychological Science Volume 4 ; 4 >
+        au < releasing ; 2009 ; Perspectives on Psychological Science Volume 4 ; 4 >
         au < released ; 2010 ; Perspectives on Psychological Science Volume 5 ; 5 >
         au < released ; 2011 ; Perspectives on Psychological Science Volume 6 ; 6 >
         au < manifest ; 2012 ; Perspectives on Psychological Science Volume 7 ; 7 >
@@ -26163,7 +26163,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Journal of Veterinary Diagnostic Investigation Volume 18 ; 18 >
         au < manifest ; 2007 ; Journal of Veterinary Diagnostic Investigation Volume 19 ; 19 >
         au < manifest ; 2008 ; Journal of Veterinary Diagnostic Investigation Volume 20 ; 20 >
-        au < ready ; 2009 ; Journal of Veterinary Diagnostic Investigation Volume 21 ; 21 >
+        au < releasing ; 2009 ; Journal of Veterinary Diagnostic Investigation Volume 21 ; 21 >
         au < released ; 2010 ; Journal of Veterinary Diagnostic Investigation Volume 22 ; 22 >
         au < released ; 2011 ; Journal of Veterinary Diagnostic Investigation Volume 23 ; 23 >
         au < manifest ; 2012 ; Journal of Veterinary Diagnostic Investigation Volume 24 ; 24 >
@@ -26363,8 +26363,8 @@ comment[mpj] = now published by Brill
         au < manifest ; 2007 ; Journalism & Mass Communication Educator Volume 62 ; 62 >
         au < manifest ; 2008 ; Journalism & Mass Communication Educator Volume 63 ; 63 >
         au < manifest ; 2009 ; Journalism & Mass Communication Educator Volume 64 ; 64 >
-        au < ready ; 2010 ; Journalism & Mass Communication Educator Volume 65 ; 65 >
-        au < ready ; 2011 ; Journalism & Mass Communication Educator Volume 66 ; 66 >
+        au < releasing ; 2010 ; Journalism & Mass Communication Educator Volume 65 ; 65 >
+        au < releasing ; 2011 ; Journalism & Mass Communication Educator Volume 66 ; 66 >
         au < manifest ; 2012 ; Journalism & Mass Communication Educator Volume 67 ; 67 >
 
       }
@@ -26397,8 +26397,8 @@ comment[mpj] = now published by Brill
         au < manifest ; 2007 ; Journalism & Communication Monographs Volume 9 ; 9 >
         au < manifest ; 2008 ; Journalism & Communication Monographs Volume 10 ; 10 >
         au < manifest ; 2009 ; Journalism & Communication Monographs Volume 11 ; 11 >
-        au < ready ; 2010 ; Journalism & Communication Monographs Volume 12 ; 12 >
-        au < ready ; 2011 ; Journalism & Communication Monographs Volume 13 ; 13 >
+        au < releasing ; 2010 ; Journalism & Communication Monographs Volume 12 ; 12 >
+        au < releasing ; 2011 ; Journalism & Communication Monographs Volume 13 ; 13 >
         au < manifest ; 2012 ; Journalism & Communication Monographs Volume 14 ; 14 >
 
       }
@@ -26475,7 +26475,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2007 ; Journalism & Mass Communication Quarterly Volume 84 ; 84 >
         au < manifest ; 2008 ; Journalism & Mass Communication Quarterly Volume 85 ; 85 >
         au < manifest ; 2009 ; Journalism & Mass Communication Quarterly Volume 86 ; 86 >
-        au < ready ; 2010 ; Journalism & Mass Communication Quarterly Volume 87 ; 87 >
+        au < releasing ; 2010 ; Journalism & Mass Communication Quarterly Volume 87 ; 87 >
         au < manifest ; 2011 ; Journalism & Mass Communication Quarterly Volume 88 ; 88 >
         au < manifest ; 2012 ; Journalism & Mass Communication Quarterly Volume 89 ; 89 >
 
@@ -27085,7 +27085,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 21 ; 21 >
         au < manifest ; 2007 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 22 ; 22 >
         au < manifest ; 2008 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 23 ; 23 >
-        au < ready ; 2009 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 24 ; 24 >
+        au < releasing ; 2009 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 24 ; 24 >
         au < released ; 2010 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 25 ; 25 >
         au < released ; 2011 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 26 ; 26 >
         au < manifest ; 2012 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 27 ; 27 >
@@ -27173,7 +27173,7 @@ comment[mpj] = now published by Brill
         au <  manifest ; 2007 ; Management and Labour Studies Volume 32 ; 32 >
         au <  manifest ; 2008 ; Management and Labour Studies Volume 33 ; 33 >
         au <  manifest ; 2009 ; Management and Labour Studies Volume 34 ; 34 >
-        au <  ready ; 2010 ; Management and Labour Studies Volume 35 ; 35 >
+        au <  releasing ; 2010 ; Management and Labour Studies Volume 35 ; 35 >
         au <  manifest ; 2011 ; Management and Labour Studies Volume 36 ; 36 >
         au <  manifest ; 2012 ; Management and Labour Studies Volume 37 ; 37 >
 
@@ -27976,7 +27976,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2006 ; Men and Masculinities Volume 9 ; 9 >
         au < doNotProcess ; 2007 ; Men and Masculinities Volume 10 ; 10 >
         au < doNotProcess ; 2008 ; Men and Masculinities Volume 11 ; 11 >
-        au < ready ; 2009 ; Men and Masculinities Volume 12 ; 12 >
+        au < releasing ; 2009 ; Men and Masculinities Volume 12 ; 12 >
         au < released ; 2010 ; Men and Masculinities Volume 13 ; 13 >
         au < released ; 2011 ; Men and Masculinities Volume 14 ; 14 >
         au < manifest ; 2012 ; Men and Masculinities Volume 15 ; 15 >
@@ -28300,7 +28300,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Music Educators Journal Volume 93 ; 93 >
         au < manifest ; 2007 ; Music Educators Journal Volume 94 ; 94 >
         au < manifest ; 2008 ; Music Educators Journal Volume 95 ; 95 >
-        au < ready ; 2009 ; Music Educators Journal Volume 96 ; 96 >
+        au < releasing ; 2009 ; Music Educators Journal Volume 96 ; 96 >
         au < manifest ; 2010 ; Music Educators Journal Volume 97 ; 97 >
         au < released ; 2011 ; Music Educators Journal Volume 98 ; 98 >
         au < manifest ; 2012 ; Music Educators Journal Volume 99 ; 99 >
@@ -28325,7 +28325,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Musicae Scientiae Volume 10 ; 10 >
         au < manifest ; 2007 ; Musicae Scientiae Volume 11 ; 11 >
         au < manifest ; 2008 ; Musicae Scientiae Volume 12 ; 12 >
-        au < ready ; 2009 ; Musicae Scientiae Volume 13 ; 13 >
+        au < releasing ; 2009 ; Musicae Scientiae Volume 13 ; 13 >
         au < released ; 2010 ; Musicae Scientiae Volume 14 ; 14 >
         au < released ; 2011 ; Musicae Scientiae Volume 15 ; 15 >
         au < manifest ; 2012 ; Musicae Scientiae Volume 16 ; 16 >
@@ -28874,15 +28874,15 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < testing ; 1995 ; The Neuroscientist Volume 1 ; 1 >
-        au < ready ; 1996 ; The Neuroscientist Volume 2 ; 2 >
-        au < ready ; 1997 ; The Neuroscientist Volume 3 ; 3 >
-        au < ready ; 1998 ; The Neuroscientist Volume 4 ; 4 >
-        au < ready ; 1999 ; The Neuroscientist Volume 5 ; 5 >
-        au < ready ; 2000 ; The Neuroscientist Volume 6 ; 6 >
-        au < ready ; 2001 ; The Neuroscientist Volume 7 ; 7 >
+        au < releasing ; 1996 ; The Neuroscientist Volume 2 ; 2 >
+        au < releasing ; 1997 ; The Neuroscientist Volume 3 ; 3 >
+        au < releasing ; 1998 ; The Neuroscientist Volume 4 ; 4 >
+        au < releasing ; 1999 ; The Neuroscientist Volume 5 ; 5 >
+        au < releasing ; 2000 ; The Neuroscientist Volume 6 ; 6 >
+        au < releasing ; 2001 ; The Neuroscientist Volume 7 ; 7 >
         au < testing ; 2002 ; The Neuroscientist Volume 8 ; 8 >
         au < testing ; 2003 ; The Neuroscientist Volume 9 ; 9 >
-        au < ready ; 2004 ; The Neuroscientist Volume 10 ; 10 >
+        au < releasing ; 2004 ; The Neuroscientist Volume 10 ; 10 >
         au < doNotProcess ; 2005 ; The Neuroscientist Volume 11 ; 11 >
         au < doNotProcess ; 2006 ; The Neuroscientist Volume 12 ; 12 >
         au < doNotProcess ; 2007 ; The Neuroscientist Volume 13 ; 13 >
@@ -29506,8 +29506,8 @@ comment[mpj] = now published by Brill
         au < manifest ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 137 ; 137 >
         au < manifest ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 138 ; 138 >
         au < manifest ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 139 ; 139 >
-        au < ready ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 140 ; 140 >
-        au < ready ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 141 ; 141 >
+        au < releasing ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 140 ; 140 >
+        au < releasing ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 141 ; 141 >
         au < released ; 2010 ; Otolaryngology -- Head and Neck Surgery Volume 142 ; 142 >
         au < released ; 2010 ; Otolaryngology -- Head and Neck Surgery Volume 143 ; 143 >
         au < released ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 144 ; 144 >
@@ -30709,7 +30709,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2007 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 51 ; 51 >
         au < manifest ; 2008 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 52 ; 52 >
         au < manifest ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 >
-        au < ready ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 >
+        au < releasing ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 >
         au < manifest ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 >
         au < expected ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 56 ; 56 >
 
@@ -30757,7 +30757,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 226 ; 226 >
@@ -30806,7 +30806,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 226 ; 226 >
@@ -30855,7 +30855,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 226 ; 226 >
@@ -30903,7 +30903,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 226 ; 226 >
@@ -30946,7 +30946,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 226 ; 226 >
@@ -30989,7 +30989,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 226 ; 226 >
@@ -31032,7 +31032,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 226 ; 226 >
@@ -31075,7 +31075,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 226 ; 226 >
@@ -31116,7 +31116,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 226 ; 226 >
@@ -31154,7 +31154,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 226 ; 226 >
@@ -31187,7 +31187,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 226 ; 226 >
@@ -31220,7 +31220,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 226 ; 226 >
@@ -31250,7 +31250,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 226 ; 226 >
@@ -31278,7 +31278,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 224 ; 224 >
         au < doesNotExist ; 0 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 226 ; 226 >
@@ -31304,7 +31304,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 221 ; 221 >
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 226 ; 226 >
@@ -31328,7 +31328,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 222 ; 222 >
-        au < ready ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 223 ; 223 >
+        au < releasing ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 225 ; 225 >
         au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 226 ; 226 >
@@ -31823,7 +31823,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2007 ; Psychology of Women Quarterly Volume 31 ; 31 >
         au < manifest ; 2008 ; Psychology of Women Quarterly Volume 32 ; 32 >
         au < manifest ; 2009 ; Psychology of Women Quarterly Volume 33 ; 33 >
-        au < ready ; 2010 ; Psychology of Women Quarterly Volume 34 ; 34 >
+        au < releasing ; 2010 ; Psychology of Women Quarterly Volume 34 ; 34 >
         au < released ; 2011 ; Psychology of Women Quarterly Volume 35 ; 35 >
         au < manifest ; 2012 ; Psychology of Women Quarterly Volume 36 ; 36 >
 
@@ -32726,7 +32726,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2007 ; Research Ethics Volume 3 ; 3 >
         au < manifest ; 2008 ; Research Ethics Volume 4 ; 4 >
         au < manifest ; 2009 ; Research Ethics Volume 5 ; 5 >
-        au < ready ; 2010 ; Research Ethics Volume 6 ; 6 >
+        au < releasing ; 2010 ; Research Ethics Volume 6 ; 6 >
         au < manifest ; 2011 ; Research Ethics Volume 7 ; 7 >
         au < manifest ; 2012 ; Research Ethics Volume 8 ; 8 >
   
