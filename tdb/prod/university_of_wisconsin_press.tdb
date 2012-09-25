@@ -131,8 +131,8 @@
       au < released ; 2007 ; Contemporary Literature Volume 48 ; 48 >
       au < released ; 2008 ; Contemporary Literature Volume 49 ; 49 >
       au < released ; 2009 ; Contemporary Literature Volume 50 ; 50 >
-      au < releasing ; 2010 ; Contemporary Literature Volume 51 ; 51 >
-      au < releasing ; 2011 ; Contemporary Literature Volume 52 ; 52 >
+      au < released ; 2010 ; Contemporary Literature Volume 51 ; 51 >
+      au < released ; 2011 ; Contemporary Literature Volume 52 ; 52 >
       au < manifest ; 2012 ; Contemporary Literature Volume 53 ; 53 >
 
     }
@@ -195,8 +195,8 @@
       attr[journal_id] = ecr
       implicit < status ; year ; name ; param[volume] >
 
-      au < releasing ; 2010 ; Ecological Restoration Volume 28 ; 28 >
-      au < releasing ; 2011 ; Ecological Restoration Volume 29 ; 29 >
+      au < released ; 2010 ; Ecological Restoration Volume 28 ; 28 >
+      au < released ; 2011 ; Ecological Restoration Volume 29 ; 29 >
       au < manifest ; 2012 ; Ecological Restoration Volume 30 ; 30 >
 
     }
@@ -345,7 +345,7 @@
       attr[journal_id] = lnd
       implicit < status ; year ; name ; param[volume] >
 
-      au < releasing ; 2011 ; Landscape Journal: Design, Planning and Management of the Land Volume 30 ; 30 >
+      au < released ; 2011 ; Landscape Journal: Design, Planning and Management of the Land Volume 30 ; 30 >
       au < expected ; 2012 ; Landscape Journal: Design, Planning and Management of the Land Volume 31 ; 31 >
 
     }
@@ -396,8 +396,8 @@
       au < released ; 2007 ; Luso-Brazilian Review Volume 44 ; 44 >
       au < released ; 2008 ; Luso-Brazilian Review Volume 45 ; 45 >
       au < released ; 2009 ; Luso-Brazilian Review Volume 46 ; 46 >
-      au < releasing ; 2010 ; Luso-Brazilian Review Volume 47 ; 47 >
-      au < releasing ; 2011 ; Luso-Brazilian Review Volume 48 ; 48 >
+      au < released ; 2010 ; Luso-Brazilian Review Volume 47 ; 47 >
+      au < released ; 2011 ; Luso-Brazilian Review Volume 48 ; 48 >
       au < manifest ; 2012 ; Luso-Brazilian Review Volume 49 ; 49 >
 
     }
@@ -444,7 +444,7 @@
       au < released ; 2008 ; Monatshefte Volume 100 ; 100 >
       au < released ; 2009 ; Monatshefte Volume 101 ; 101 >
       au < released ; 2010 ; Monatshefte Volume 102 ; 102 >
-      au < releasing ; 2011 ; Monatshefte Volume 103 ; 103 >
+      au < released ; 2011 ; Monatshefte Volume 103 ; 103 >
       au < manifest ; 2012 ; Monatshefte Volume 104 ; 104 >
 
     }
@@ -498,7 +498,7 @@
       au < released ; 2008 ; Native Plants Journal Volume 9 ; 9 >
       au < released ; 2009 ; Native Plants Journal Volume 10 ; 10 >
       au < released ; 2010 ; Native Plants Journal Volume 11 ; 11 >
-      au < releasing ; 2011 ; Native Plants Journal Volume 12 ; 12 >
+      au < released ; 2011 ; Native Plants Journal Volume 12 ; 12 >
       au < manifest ; 2012 ; Native Plants Journal Volume 13 ; 13 >
 
     }
@@ -552,8 +552,8 @@
       au < released ; 2007 ; SubStance Volume 36 ; 36 >
       au < released ; 2008 ; SubStance Volume 37 ; 37 >
       au < released ; 2009 ; SubStance Volume 38 ; 38 >
-      au < releasing ; 2010 ; SubStance Volume 39 ; 39 >
-      au < releasing ; 2011 ; SubStance Volume 40 ; 40 >
+      au < released ; 2010 ; SubStance Volume 39 ; 39 >
+      au < released ; 2011 ; SubStance Volume 40 ; 40 >
       au < manifest ; 2012 ; SubStance Volume 41 ; 41 >
 
     }

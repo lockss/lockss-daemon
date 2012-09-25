@@ -60,10 +60,10 @@
     
     implicit < status ; year ; name ; volume ; param[year] >
     
-    au < releasing ; 1996 ; First Monday Volume 1 ; 1 ; 1996 >
-    au < releasing ; 1997 ; First Monday Volume 2 ; 2 ; 1997 >
-    au < releasing ; 1998 ; First Monday Volume 3 ; 3 ; 1998 >
-    au < releasing ; 1999 ; First Monday Volume 4 ; 4 ; 1999 > 
+    au < released ; 1996 ; First Monday Volume 1 ; 1 ; 1996 >
+    au < released ; 1997 ; First Monday Volume 2 ; 2 ; 1997 >
+    au < released ; 1998 ; First Monday Volume 3 ; 3 ; 1998 >
+    au < released ; 1999 ; First Monday Volume 4 ; 4 ; 1999 > 
     au < testing ; 2000 ; First Monday Volume 5 ; 5 ; 2000 >
     au < testing ; 2001 ; First Monday Volume 6 ; 6 ; 2001 >
     au < testing ; 2002 ; First Monday Volume 7 ; 7 ; 2002 >

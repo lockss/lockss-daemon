@@ -200,8 +200,8 @@
     
     au < testing ; 2005 ; Contemporary French Civilization Volume 29 ; 29 >
     au < testing ; 2006 ; Contemporary French Civilization Volume 30 ; 30 >
-    au < releasing ; 2007 ; Contemporary French Civilization Volume 31 ; 31 >
-    au < releasing ; 2008 ; Contemporary French Civilization Volume 32 ; 32 >
+    au < released ; 2007 ; Contemporary French Civilization Volume 31 ; 31 >
+    au < released ; 2008 ; Contemporary French Civilization Volume 32 ; 32 >
     au < released ; 2009 ; Contemporary French Civilization Volume 33 ; 33 >
     au < released ; 2010 ; Contemporary French Civilization Volume 34 ; 34 >
     au < released ; 2011 ; Contemporary French Civilization Volume 35 ; 35 >    
@@ -301,13 +301,13 @@
     implicit < status ; year ; name ; param[volume_name] >  
     param[journal_issn] = 1478-3401 
 
-    au < releasing ; 2002 ; International Development Planning Review Volume 24 ; 24 >
-    au < releasing ; 2003 ; International Development Planning Review Volume 25 ; 25 >
-    au < releasing ; 2004 ; International Development Planning Review Volume 26 ; 26 >
-    au < releasing ; 2005 ; International Development Planning Review Volume 27 ; 27 >
-    au < releasing ; 2006 ; International Development Planning Review Volume 28 ; 28 >
-    au < releasing ; 2007 ; International Development Planning Review Volume 29 ; 29 >
-    au < releasing ; 2008 ; International Development Planning Review Volume 30 ; 30 >
+    au < released ; 2002 ; International Development Planning Review Volume 24 ; 24 >
+    au < released ; 2003 ; International Development Planning Review Volume 25 ; 25 >
+    au < released ; 2004 ; International Development Planning Review Volume 26 ; 26 >
+    au < released ; 2005 ; International Development Planning Review Volume 27 ; 27 >
+    au < released ; 2006 ; International Development Planning Review Volume 28 ; 28 >
+    au < released ; 2007 ; International Development Planning Review Volume 29 ; 29 >
+    au < released ; 2008 ; International Development Planning Review Volume 30 ; 30 >
     au < released ; 2009 ; International Development Planning Review Volume 31 ; 31 >
     au < released ; 2010 ; International Development Planning Review Volume 32 ; 32 >
     au < released ; 2011 ; International Development Planning Review Volume 33 ; 33 >
@@ -346,8 +346,8 @@
       implicit < status ; year ; name ; param[volume_name] >  
       param[journal_issn] = 1757-6466 
 
-      au < releasing ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
-      au < releasing ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
+      au < released ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
+      au < released ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
       au < released ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
       au < released ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
       au < released ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
@@ -377,7 +377,7 @@
 	au < manifest ; 2008 ; Labour History Review Volume 73 ; 73 >
 	au < released ; 2009 ; Labour History Review Volume 74 ; 74 >
 	au < released ; 2010 ; Labour History Review Volume 75 ; 75 >
-	au < releasing ; 2011 ; Labour History Review Volume 76 ; 76 >
+	au < released ; 2011 ; Labour History Review Volume 76 ; 76 >
 	au < exists ; 2012 ; Labour History Review Volume 77 ; 77 >
 
   }
@@ -440,8 +440,8 @@
     implicit < status ; year ; name ; param[volume_name] >  
     param[journal_issn] = 1754-3827 
 
-    au < releasing ; 2008 ; Popular Narrative Media Volume 1 ; 1 >
-    au < releasing ; 2009 ; Popular Narrative Media Volume 2 ; 2 >
+    au < released ; 2008 ; Popular Narrative Media Volume 1 ; 1 >
+    au < released ; 2009 ; Popular Narrative Media Volume 2 ; 2 >
 
   }
 
@@ -559,7 +559,7 @@
     au < released ; 2009 ; Sculpture Journal Volume 18 ; 18 >
     au < released ; 2010 ; Sculpture Journal Volume 19 ; 19 > 
     au < released ; 2011 ; Sculpture Journal Volume 20 ; 20 >
-    au < releasing ; 2012 ; Sculpture Journal Volume 21 ; 21 >
+    au < released ; 2012 ; Sculpture Journal Volume 21 ; 21 >
 
   }
   
