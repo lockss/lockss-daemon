@@ -356,7 +356,7 @@
         au < ready ; 1994 ; Adaptive Behavior Volume 3 ; 3 >
         au < ready ; 1995 ; Adaptive Behavior Volume 4 ; 4 >
         au < ready ; 1996 ; Adaptive Behavior Volume 5 ; 5 >
-        au < testing ; 1997 ; Adaptive Behavior Volume 6 ; 6 >
+        au < ready ; 1997 ; Adaptive Behavior Volume 6 ; 6 >
         au < testing ; 1999 ; Adaptive Behavior Volume 7 ; 7 >
         au < ready ; 2000 ; Adaptive Behavior Volume 8 ; 8 >
         au < ready ; 2001 ; Adaptive Behavior Volume 9 ; 9 >
@@ -531,7 +531,7 @@
         param[base_url] = http://aeq.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-	    au < testing ; 1950-1951 ; Adult Education Quarterly Volume 1 ; 1 >
+	    au < ready ; 1950-1951 ; Adult Education Quarterly Volume 1 ; 1 >
 	    au < testing ; 1951-1952 ; Adult Education Quarterly Volume 2 ; 2 >
 	    au < ready ; 1952-1953 ; Adult Education Quarterly Volume 3 ; 3 >
 	    au < testing ; 1953-1954 ; Adult Education Quarterly Volume 4 ; 4 >
@@ -556,7 +556,7 @@
 	    au < ready ; 1972-1973 ; Adult Education Quarterly Volume 23 ; 23 >
 	    au < ready ; 1973-1974 ; Adult Education Quarterly Volume 24 ; 24 >
 	    au < ready ; 1974-1975 ; Adult Education Quarterly Volume 25 ; 25 >
-	    au < testing ; 1975-1976 ; Adult Education Quarterly Volume 26 ; 26 >
+	    au < ready ; 1975-1976 ; Adult Education Quarterly Volume 26 ; 26 >
 	    au < testing ; 1976-1977 ; Adult Education Quarterly Volume 27 ; 27 >
 	    au < testing ; 1977-1978 ; Adult Education Quarterly Volume 28 ; 28 >
 	    au < ready ; 1978-1979 ; Adult Education Quarterly Volume 29 ; 29 >
