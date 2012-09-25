@@ -4089,7 +4089,7 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://dh.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; expected ; 2013 ; Diplomatic History Volume 1 ; 1 >
 
@@ -12186,7 +12186,7 @@
 
     plugin = org.lockss.plugin.highwire.
     param[base_url] = http://jscr.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Surgical Case Reports Volume 1 ; 1 >
 
@@ -13102,7 +13102,7 @@
 
     plugin = org.lockss.plugin.highwire.
     param[base_url] = http://melus.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; expected ; 2013 ; MELUS Volume 1 ; 1 >
 
