@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssUrlConnection.java,v 1.13 2012-07-02 16:25:28 tlipkis Exp $
+ * $Id: BaseLockssUrlConnection.java,v 1.14 2012-09-25 23:01:42 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util.urlconn;
 
 import java.io.*;
+import java.net.URL;
 import java.util.*;
 import java.text.*;
 
@@ -41,12 +42,18 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
   private static Logger log = Logger.getLogger("BaseLockssUrlConnection");
 
   protected String urlString;
+  protected URL url;
   protected boolean isExecuted = false;
   protected String proxyHost = null;
   protected int proxyPort;
   protected IPAddr localAddress = null;
   protected LockssSecureSocketFactory sockFact = null;
   protected boolean isAuthenticatedServer = false;
+
+  protected BaseLockssUrlConnection(String url) throws IOException {
+    this.urlString = url;
+    this.url = new URL(url);
+  }
 
   /** Return the URL
    * @return the URL
@@ -101,6 +108,18 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
   }
 
   public void setCookiePolicy(String policy) {
+    throw new UnsupportedOperationException();
+  }
+
+  public final void addCookie(String name, String value) {
+    addCookie("/", name, value);
+  }
+
+  public final void addCookie(String path, String name, String value) {
+    addCookie(url.getHost(), path, name, value);
+  }
+
+  public void addCookie(String domain, String path, String name, String value) {
     throw new UnsupportedOperationException();
   }
 

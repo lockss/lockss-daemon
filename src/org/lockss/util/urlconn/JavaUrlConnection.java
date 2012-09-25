@@ -1,5 +1,5 @@
 /*
- * $Id: JavaUrlConnection.java,v 1.7 2011-01-24 23:32:03 pgust Exp $
+ * $Id: JavaUrlConnection.java,v 1.8 2012-09-25 23:01:42 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -44,10 +44,16 @@ public class JavaUrlConnection extends BaseLockssUrlConnection {
   private URLConnection urlConn;
 
   public JavaUrlConnection(String urlString) throws IOException {
-    this(new URL(urlString));
+    super(urlString);
+    init(new URL(urlString));
   }
 
   public JavaUrlConnection(URL url) throws IOException {
+    super(url.toString());
+    init(url);
+  }
+
+  private void init(URL url) throws IOException {
     urlConn = url.openConnection();
   }
 

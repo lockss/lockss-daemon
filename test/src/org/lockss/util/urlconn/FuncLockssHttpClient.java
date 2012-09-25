@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.16 2011-01-25 07:15:17 tlipkis Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.17 2012-09-25 23:01:42 tlipkis Exp $
  */
 
 /*
@@ -258,6 +258,30 @@ public class FuncLockssHttpClient extends LockssTestCase {
     assertHeaderLine("^User-Agent: Jakarta Commons-HttpClient", req);
 
     assertEquals(200, conn.getResponseCode());
+    conn.release();
+    th.stopServer();
+    assertEquals(1, th.getNumConnects());
+  }
+
+  // Add a manually set cookie
+  public void testAddCookie() throws Exception {
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_200));
+    th.setMaxReads(10);
+    th.start();
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				  localurl(port), connectionPool);
+    conn.addCookie("127.0.0.1", "/", "cooktop", "eggs");
+
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    String req = th.getRequest(0);
+    assertMatchesRE("^GET / HTTP/", req);
+    assertEquals(200, conn.getResponseCode());
+    assertHeaderLine("^Cookie: .*cooktop=eggs", req);
     conn.release();
     th.stopServer();
     assertEquals(1, th.getNumConnects());

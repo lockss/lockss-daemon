@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.34 2011-01-25 00:10:41 pgust Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.35 2012-09-25 23:01:42 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -133,7 +133,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 				 HttpClient client,
 				 LockssUrlConnectionPool connectionPool)
       throws IOException {
-    this.urlString = urlString;
+    super(urlString);
     this.client = client != null ? client : new HttpClient();
     this.methodCode = methodCode;
     method = createMethod(methodCode, urlString);
@@ -170,8 +170,9 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
  
   /** for testing */
   protected HttpClientUrlConnection(String urlString, HttpClient client,
-				    LockssGetMethod method) {
-    this.urlString = urlString;
+				    LockssGetMethod method)
+      throws IOException {
+    super(urlString);
     this.client = client;
     this.method = method;
   }
@@ -200,7 +201,6 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     if (sockFact != null) {
       SecureProtocolSocketFactory hcSockFact =
 	sockFact.getHttpClientSecureProtocolSocketFactory();
-      URL url = new URL(urlString);
       String host = url.getHost();
       int port = url.getPort();
       if (port <= 0) {
@@ -269,6 +269,13 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     HttpParams params = method.getParams();
     params.setParameter(HttpMethodParams.COOKIE_POLICY,
 			getCookiePolicy(policy));
+  }
+
+  public void addCookie(String domain, String path, String name, String value) {
+    assertNotExecuted();
+    HttpState state = client.getState();
+    Cookie cook = new Cookie(domain, name, value, path, null, false);
+    state.addCookie(cook);
   }
 
   public void setCredentials(String username, String password) {

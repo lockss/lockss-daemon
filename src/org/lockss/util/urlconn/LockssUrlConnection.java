@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnection.java,v 1.16 2011-01-25 07:15:17 tlipkis Exp $
+ * $Id: LockssUrlConnection.java,v 1.17 2012-09-25 23:01:42 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -121,6 +121,36 @@ public interface LockssUrlConnection {
 
   /** Set the cookie policy to "rfc2109", "netscape" or "compatibility". */
   public void setCookiePolicy(String policy);
+
+  /** Add a cookie to the request.  Cookies are normally processed
+   * automatically; this is used only to send a cookie that wasn't
+   * originally recieved in a Set-Cookie: response header.  The cookie's
+   * domain is set to the hostname in the URL, the path is set to
+   * <code>/</code>;.
+   * @param name the cookie name
+   * @param value the cookie value
+   */
+  public void addCookie(String name, String value);
+
+  /** Add a cookie to the request.  Cookies are normally processed
+   * automatically; this is used only to send a cookie that wasn't
+   * originally recieved in a Set-Cookie: response header.  The cookie's
+   * domain is set to the hostname in the URL.
+   * @param path the cookie path
+   * @param name the cookie name
+   * @param value the cookie value
+   */
+  public void addCookie(String path, String name, String value);
+
+  /** Add a cookie to the request.  Cookies are normally processed
+   * automatically; this is used only to send a cookie that wasn't
+   * originally recieved in a Set-Cookie: response header.
+   * @param domain the cookie domain
+   * @param path the cookie path
+   * @param name the cookie name
+   * @param value the cookie value
+   */
+  public void addCookie(String domain, String path, String name, String value);
 
   /** Set the username/password for the connection. */
   public void setCredentials(String username, String password);
