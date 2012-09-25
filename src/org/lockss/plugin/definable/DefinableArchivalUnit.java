@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.92 2012-07-09 07:52:31 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.93 2012-09-25 22:59:56 tlipkis Exp $
  */
 
 /*
@@ -89,6 +89,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   public static final String KEY_AU_PERMISSION_URL = "au_permission_url";
   // The old name of au_permission_url
   public static final String KEY_AU_MANIFEST_OBSOLESCENT = "au_manifest";
+
+  public static final String KEY_AU_HTTP_COOKIES = "au_http_cookie";
 
   //public static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
   public static final String KEY_AU_EXPLODER_HELPER = "au_exploder_helper";
@@ -190,6 +192,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   public String getPerHostPermissionPath() {
     return (String)definitionMap.getMapElement(DefinablePlugin.KEY_PER_HOST_PERMISSION_PATH);
+  }
+
+  public List<String> getHttpCookies() {
+    return listOrEmpty(getElementList(KEY_AU_HTTP_COOKIES));
   }
 
   /** Use rate limiter source specified in AU, if any, then in plugin, then
@@ -336,8 +342,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     if (featureUrlMap == null) {
       featureUrlMap = makeAuFeatureUrlMap();
     }
-    List<String> res = featureUrlMap.get(auFeature);
-    return res != null ? res : Collections.EMPTY_LIST;
+    return listOrEmpty(featureUrlMap.get(auFeature));
   }
 
   protected Map<String,List<String>> makeAuFeatureUrlMap() {
@@ -607,6 +612,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected List<String> convertRegexpList(String key, RegexpContext context) {
     return convertRegexpList(getElementList(key), key, context);
+  }
+
+  protected <T> List<T> listOrEmpty(List<T> lst) {
+    return lst != null ? lst : Collections.EMPTY_LIST;
   }
 
 // ---------------------------------------------------------------------

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.159 2012-09-06 04:05:38 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.160 2012-09-25 22:59:56 tlipkis Exp $
  */
 
 /*
@@ -559,6 +559,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   /** Override to provide permission path */
   public String getPerHostPermissionPath() {
     return null;
+  }
+
+  public List<String> getHttpCookies() {
+    return Collections.EMPTY_LIST;
   }
 
   public String getName() {

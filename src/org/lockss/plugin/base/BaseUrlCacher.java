@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.91 2012-07-02 16:25:28 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.92 2012-09-25 22:59:56 tlipkis Exp $
  */
 
 /*
@@ -681,6 +681,14 @@ public class BaseUrlCacher implements UrlCacher {
       }
       if (localAddr != null) {
 	conn.setLocalAddress(localAddr);
+      }
+      for (String cookie : au.getHttpCookies()) {
+	int pos = cookie.indexOf("=");
+	if (pos > 0) {
+	  conn.addCookie(cookie.substring(0, pos), cookie.substring(pos + 1));
+	} else {
+	  logger.error("Illegal cookie: " + cookie);
+	}
       }
       String userPass = getUserPass();
       if (userPass != null) {
