@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.15 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id: NumberUtil.java,v 1.16 2012-09-25 16:41:52 pgust Exp $
  */
 
 /*
@@ -1160,7 +1160,7 @@ public class NumberUtil {
     
     if (value > 3999) {  // largest "regular" roman number
       // calculate upper roman number to be multiplied by 1000 
-      String upper = Roman.toString(value/1000);
+      String upper = toRomanNumber(value/1000);
       
       // extract lower value to be converted directly
       value = value%1000;
