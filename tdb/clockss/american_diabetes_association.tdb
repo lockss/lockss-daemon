@@ -2,10 +2,11 @@
 
   publisher <
     name = American Diabetes Association 
+    info[contract] = 2008 ;
+    info[tester] = 5
 
   >
 
-    attr[contract] = 2012
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
