@@ -233,7 +233,7 @@
       implicit < status ; status2 ; year ; name ; volume ; param[volume_name] >
       comment[changed_publisher] = http://www.oldcitypublishing.com/index.html, 2008-2012, vols. 37-41
       
-<<<<<<< pion.tdb
+
       au < crawling ; exists ; 1995-1996 ; High Temperatures - High Pressures Volume 27/28 ; 27-28 ; 27 >
       au < crawling ; exists ; 1997 ; High Temperatures - High Pressures Volume 29 ; 29 ; 29 >
       au < crawling ; exists ; 1998 ; High Temperatures - High Pressures Volume 30 ; 30 ; 30 >
@@ -246,7 +246,6 @@
       au < crawling ; exists ; 2009 ; High Temperatures - High Pressures Volume 38 ; 38 ; 38 >
       au < zapped ; down ; 2010 ; High Temperatures - High Pressures Volume 39 ; 39 ; 39 >
       au < zapped ; down ; 2011 ; High Temperatures - High Pressures Volume 40 ; 40 ; 40 >
-=======
       au < testing ; exists ; 1995-1996 ; High Temperatures - High Pressures Volume 27/28 ; 27-28 ; 27 >
       au < testing ; exists ; 1997 ; High Temperatures - High Pressures Volume 29 ; 29 ; 29 >
       au < testing ; exists ; 1998 ; High Temperatures - High Pressures Volume 30 ; 30 ; 30 >
@@ -259,7 +258,6 @@
       au < testing ; exists ; 2009 ; High Temperatures - High Pressures Volume 38 ; 38 ; 38 >
       au < released ; crawling ; 2010 ; High Temperatures - High Pressures Volume 39 ; 39 ; 39 >
       au < released ; crawling ; 2011 ; High Temperatures - High Pressures Volume 40 ; 40 ; 40 >
->>>>>>> 1.45
       au < crawling ; exists ; 2012 ; High Temperatures - High Pressures Volume 41 ; 41 ; 41 >
   
     }
