@@ -520,6 +520,11 @@
       param[base_url] = http://differences.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
+      au < HighWirePressH20Plugin ; exists ; 1999-2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
       au < HighWireStrVolPlugin ; down ; 2005 ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
       au < HighWireStrVolPlugin ; down ; 2006 ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >      
       au < HighWirePressH20Plugin ; released ; 2007 ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 >
@@ -797,6 +802,11 @@
       param[base_url] = http://ecl.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
+      au < ighWirePressH20Plugin ; exists ; 2000 ; Eighteenth-Century Life Volume 24 ; 24 >
+      au < ighWirePressH20Plugin ; exists ; 2001 ; Eighteenth-Century Life Volume 25 ; 25 >
+      au < ighWirePressH20Plugin ; exists ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 >
+      au < ighWirePressH20Plugin ; exists ; 2003 ; Eighteenth-Century Life Volume 27 ; 27 >
+      au < ighWirePressH20Plugin ; exists ; 2004 ; Eighteenth-Century Life Volume 28 ; 28 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >
@@ -841,6 +851,11 @@
       param[base_url] = http://ethnohistory.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
+     au < HighWirePressH20Plugin ; exists ; 2000 ; Ethnohistory Volume 47 ; 47 >
+     au < HighWirePressH20Plugin ; exists ; 2001 ; Ethnohistory Volume 48 ; 48 >
+     au < HighWirePressH20Plugin ; exists ; 2002 ; Ethnohistory Volume 49 ; 49 >
+     au < HighWirePressH20Plugin ; exists ; 2003 ; Ethnohistory Volume 50 ; 50 >
+     au < HighWirePressH20Plugin ; exists ; 2004 ; Ethnohistory Volume 51 ; 51 >
      au < HighWireStrVolPlugin ; down ; 2005 ; Ethnohistory Volume 52 ; 52 >
      au < HighWireStrVolPlugin ; down ; 2006 ; Ethnohistory Volume 53 ; 53 >
      au < HighWireStrVolPlugin ; down ; 2007 ; Ethnohistory Volume 54 ; 54 >
@@ -885,6 +900,11 @@
       param[base_url] = http://fhs.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
+     au < HighWirePressH20Plugin ; exists ; 2000 ; French Historical Studies Volume 23 ; 23 >
+     au < HighWirePressH20Plugin ; exists ; 2001 ; French Historical Studies Volume 24 ; 24 >
+     au < HighWirePressH20Plugin ; exists ; 2002 ; French Historical Studies Volume 25 ; 25 >
+     au < HighWirePressH20Plugin ; exists ; 2003 ; French Historical Studies Volume 26 ; 26 >
+     au < HighWirePressH20Plugin ; exists ; 2004 ; French Historical Studies Volume 27 ; 27 >
      au < HighWireStrVolPlugin ; down ; 2005 ; French Historical Studies Volume 28 ; 28 >
      au < HighWireStrVolPlugin ; down ; 2006 ; French Historical Studies Volume 29 ; 29 >
      au < HighWireStrVolPlugin ; down ; 2007 ; French Historical Studies Volume 30 ; 30 >      
@@ -969,6 +989,17 @@
       param[base_url] = http://glq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
+      au < HighWirePressH20Plugin ; exists ; 1993 ; GLQ: A Journal of Lesbian and Gay Studies Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; exists ; 1994 ; GLQ: A Journal of Lesbian and Gay Studies Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; exists ; 1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; exists ; 1996 ; GLQ: A Journal of Lesbian and Gay Studies Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; exists ; 1997 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; exists ; 1998 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; exists ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; exists ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
       au < HighWireStrVolPlugin ; down ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
       au < HighWireStrVolPlugin ; down ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >      
       au < HighWirePressH20Plugin ; released ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
@@ -1523,6 +1554,71 @@
       param[base_url] = http://mlq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
+      au < HighWirePressH20Plugin ; exists ; 1940 ; Modern Language Quarterly Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; exists ; 1941 ; Modern Language Quarterly Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; exists ; 1942 ; Modern Language Quarterly Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; exists ; 1943 ; Modern Language Quarterly Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; exists ; 1944 ; Modern Language Quarterly Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; exists ; 1945 ; Modern Language Quarterly Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; exists ; 1946 ; Modern Language Quarterly Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; exists ; 1947 ; Modern Language Quarterly Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; exists ; 1948 ; Modern Language Quarterly Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; exists ; 1949 ; Modern Language Quarterly Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; exists ; 1950 ; Modern Language Quarterly Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; exists ; 1951 ; Modern Language Quarterly Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; exists ; 1952 ; Modern Language Quarterly Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; exists ; 1953 ; Modern Language Quarterly Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; exists ; 1954 ; Modern Language Quarterly Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; exists ; 1955 ; Modern Language Quarterly Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; exists ; 1956 ; Modern Language Quarterly Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; exists ; 1957 ; Modern Language Quarterly Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; exists ; 1958 ; Modern Language Quarterly Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; exists ; 1959 ; Modern Language Quarterly Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; exists ; 1960 ; Modern Language Quarterly Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; exists ; 1961 ; Modern Language Quarterly Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; exists ; 1962 ; Modern Language Quarterly Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; exists ; 1963 ; Modern Language Quarterly Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; exists ; 1964 ; Modern Language Quarterly Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; exists ; 1965 ; Modern Language Quarterly Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; exists ; 1966 ; Modern Language Quarterly Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; exists ; 1967 ; Modern Language Quarterly Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; exists ; 1968 ; Modern Language Quarterly Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; exists ; 1969 ; Modern Language Quarterly Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; exists ; 1970 ; Modern Language Quarterly Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; exists ; 1971 ; Modern Language Quarterly Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; exists ; 1972 ; Modern Language Quarterly Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; exists ; 1973 ; Modern Language Quarterly Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; exists ; 1974 ; Modern Language Quarterly Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; exists ; 1975 ; Modern Language Quarterly Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; exists ; 1976 ; Modern Language Quarterly Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; exists ; 1977 ; Modern Language Quarterly Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; exists ; 1978 ; Modern Language Quarterly Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; exists ; 1979 ; Modern Language Quarterly Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; exists ; 1980 ; Modern Language Quarterly Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; exists ; 1981 ; Modern Language Quarterly Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; exists ; 1982 ; Modern Language Quarterly Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; exists ; 1983 ; Modern Language Quarterly Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; exists ; 1984 ; Modern Language Quarterly Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; exists ; 1985 ; Modern Language Quarterly Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; exists ; 1986 ; Modern Language Quarterly Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; exists ; 1987 ; Modern Language Quarterly Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; exists ; 1988 ; Modern Language Quarterly Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; exists ; 1989 ; Modern Language Quarterly Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; exists ; 1990 ; Modern Language Quarterly Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; exists ; 1991 ; Modern Language Quarterly Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; exists ; 1992 ; Modern Language Quarterly Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; exists ; 1993 ; Modern Language Quarterly Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; exists ; 1994 ; Modern Language Quarterly Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; exists ; 1995 ; Modern Language Quarterly Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; exists ; 1996 ; Modern Language Quarterly Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; exists ; 1997 ; Modern Language Quarterly Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; exists ; 1998 ; Modern Language Quarterly Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; exists ; 1999 ; Modern Language Quarterly Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; exists ; 2000 ; Modern Language Quarterly Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; Modern Language Quarterly Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; Modern Language Quarterly Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; Modern Language Quarterly Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; Modern Language Quarterly Volume 65 ; 65 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Modern Language Quarterly Volume 66 ; 66 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Modern Language Quarterly Volume 67 ; 67 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Modern Language Quarterly Volume 68 ; 68 >      
@@ -1704,6 +1800,19 @@
       au < HighWirePressH20Plugin ; exists ; 1997 ; Nka: Journal of Contemporary African Art Volume 1997 ; 1997 >
       au < HighWirePressH20Plugin ; exists ; 1998 ; Nka: Journal of Contemporary African Art Volume 1998 ; 1998 >
       au < HighWirePressH20Plugin ; exists ; 1999 ; Nka: Journal of Contemporary African Art Volume 1999 ; 1999 >
+      au < HighWirePressH20Plugin ; exists ; 2000 ; Nka: Journal of Contemporary African Art Volume 2000 ; 2000 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; Nka: Journal of Contemporary African Art Volume 2001 ; 2001 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; Nka: Journal of Contemporary African Art Volume 2002 ; 2002 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; Nka: Journal of Contemporary African Art Volume 2003 ; 2003 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; Nka: Journal of Contemporary African Art Volume 2004 ; 2004 >
+      au < HighWirePressH20Plugin ; exists ; 2005 ; Nka: Journal of Contemporary African Art Volume 2005 ; 2005 >
+      au < HighWirePressH20Plugin ; exists ; 2006 ; Nka: Journal of Contemporary African Art Volume 2006 ; 2006 >
+      au < HighWirePressH20Plugin ; exists ; 2007 ; Nka: Journal of Contemporary African Art Volume 2007 ; 2007 >
+      au < HighWirePressH20Plugin ; exists ; 2008 ; Nka: Journal of Contemporary African Art Volume 2008 ; 2008 >
+      au < HighWirePressH20Plugin ; exists ; 2009 ; Nka: Journal of Contemporary African Art Volume 2009 ; 2009 >
+      au < HighWirePressH20Plugin ; exists ; 2010 ; Nka: Journal of Contemporary African Art Volume 2010 ; 2010 >
+      au < HighWirePressH20Plugin ; exists ; 2011 ; Nka: Journal of Contemporary African Art Volume 2011 ; 2011 >
+      au < HighWirePressH20Plugin ; exists ; 2012 ; Nka: Journal of Contemporary African Art Volume 2012 ; 2012 >
     
     }
     }
@@ -1789,6 +1898,17 @@
     au < HighWirePressH20Plugin ; exists ; 1999 ; Novel: A Forum on Fiction Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; exists ; 2000 ; Novel: A Forum on Fiction Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; Novel: A Forum on Fiction Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Novel: A Forum on Fiction Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Novel: A Forum on Fiction Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Novel: A Forum on Fiction Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Novel: A Forum on Fiction Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; Novel: A Forum on Fiction Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; Novel: A Forum on Fiction Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; Novel: A Forum on Fiction Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; Novel: A Forum on Fiction Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; Novel: A Forum on Fiction Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; Novel: A Forum on Fiction Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; Novel: A Forum on Fiction Volume 46 ; 46 >
 
   }
 
@@ -2016,6 +2136,22 @@
       param[base_url] = http://publicculture.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
+      au < HighWirePressH20Plugin ; exists ; 1988 ; Public Culture Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; exists ; 1989 ; Public Culture Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; exists ; 1990 ; Public Culture Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; exists ; 1991 ; Public Culture Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; exists ; 1992 ; Public Culture Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; exists ; 1993 ; Public Culture Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; exists ; 1994 ; Public Culture Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; exists ; 1995 ; Public Culture Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; exists ; 1996 ; Public Culture Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; exists ; 1997 ; Public Culture Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; exists ; 1998 ; Public Culture Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; exists ; 1999 ; Public Culture Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; exists ; 2000 ; Public Culture Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; Public Culture Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; Public Culture Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; Public Culture Volume 16 ; 16 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Public Culture Volume 17 ; 17 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Public Culture Volume 18 ; 18 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Public Culture Volume 19 ; 19 >
