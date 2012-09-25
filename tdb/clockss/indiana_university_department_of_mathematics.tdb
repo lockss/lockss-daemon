@@ -10,11 +10,13 @@
   
     title < 
       name = Indiana University Mathematics Journal ;
-      issn = 0022-2518 
+      issn = 0022-2518 ;
+      eissn = 1943-5258
     >
     
     plugin = needs.plugin
     param[base_url] = http://www.iumj.indiana.edu/
+    param[journal_id] = IUMJ
     implicit < status1 ; status ; year ; name ; param[year] >
 
     au < exists ; exists ; 1952 ; Indiana University Mathematics Journal Volume 1 ; 1952 >
@@ -77,6 +79,7 @@
     au < exists ; exists ; 2009 ; Indiana University Mathematics Journal Volume 58 ; 2009 >
     au < exists ; exists ; 2010 ; Indiana University Mathematics Journal Volume 59 ; 2010 >
     au < exists ; exists ; 2011 ; Indiana University Mathematics Journal Volume 60 ; 2011 >
+    au < expected ; exists ; 2012 ; Indiana University Mathematics Journal Volume 61 ; 2012 >
     
    
   }

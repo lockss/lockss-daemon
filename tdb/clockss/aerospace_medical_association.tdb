@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Aerospace Medical Association
+    name = Aerospace Medical Association ;
+    info[contract] = 2012 ;
+    info[tester] = 5
   >
 
     attr[contract] = 2012
@@ -13,7 +15,7 @@
     >
 
     {
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -31,7 +33,7 @@
     au < manifest ; exists ; 2009 ; Aviation, Space, and Environmental Medicine Volume 80 ; 80 >
     au < manifest ; exists ; 2010 ; Aviation, Space, and Environmental Medicine Volume 81 ; 81 >
     au < manifest ; exists ; 2011 ; Aviation, Space, and Environmental Medicine Volume 82 ; 82 >
-    au < manifest ; exists ; 2012 ; Aviation, Space, and Environmental Medicine Volume 83 ; 83 >
+    au < crawling ; exists ; 2012 ; Aviation, Space, and Environmental Medicine Volume 83 ; 83 >
       
     }
 

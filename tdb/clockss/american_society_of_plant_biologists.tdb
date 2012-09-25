@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = American Society of Plant Biologists
+    name = American Society of Plant Biologists ;
+    info[contract] = 2012 ;
+    info[tester] = 8
   >
   
   attr[contract] = 2012
@@ -220,7 +222,7 @@
       au < manifest ; exists ; 2011 ; Plant Physiology Volume 157 ; 157 >
       au < crawling ; exists ; 2012 ; Plant Physiology Volume 158 ; 158 >
       au < crawling ; exists ; 2012 ; Plant Physiology Volume 159 ; 159 >
-      au < manifest ; exists ; 2012 ; Plant Physiology Volume 160 ; 160 >
+      au < crawling ; exists ; 2012 ; Plant Physiology Volume 160 ; 160 >
 
     }
 }

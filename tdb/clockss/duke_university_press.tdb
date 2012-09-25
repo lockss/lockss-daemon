@@ -17,9 +17,10 @@
     
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://als.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
+      
       comment[years] = years in web addresses are two years behind the publishing year as of 20110912
       comment[years1] = .long links still go to the year indicated (i.e. vol2009 manifest links to 2009, not 2011)
       
@@ -36,7 +37,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; American Literary Scholarship 2009 ; 2007 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; American Literary Scholarship 2010 ; 2008 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; American Literary Scholarship 2011 ; 2009 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; American Literary Scholarship 2012 ; 2010 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; American Literary Scholarship 2012 ; 2010 >
   
     }
   
@@ -53,7 +54,7 @@
     
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://americanliterature.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -86,7 +87,7 @@
     
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://americanspeech.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -119,7 +120,7 @@
     
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://boundary2.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -152,7 +153,7 @@
     
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://cameraobscura.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -180,7 +181,7 @@
     
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://carlyleletters.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -235,7 +236,7 @@
     
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://commonknowledge.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -264,7 +265,7 @@
     
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://complit.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -297,7 +298,7 @@
     
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://cssaame.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -325,7 +326,7 @@
     
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://culturalpolitics.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -353,7 +354,7 @@
     
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://differences.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -565,7 +566,7 @@
     
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://easts.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -590,7 +591,7 @@
     >
     
    {
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ecl.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -615,14 +616,14 @@
   {
   
     title < 
-      name = Ethnohistory ; 
+      name = Ethnohistory ;
       issn = 0014-1801 ;
       eissn = 1527-5477
       
     >
     
    {
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ethnohistory.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -655,7 +656,7 @@
     >
     
    {
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://fhs.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
       
@@ -686,7 +687,7 @@
   
   >
   
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://genre.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -715,7 +716,7 @@
       eissn = 1527-9375
   
 >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://glq.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
       
@@ -751,7 +752,7 @@
       eissn = 1527-1900
 
 >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://hahr.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -779,7 +780,7 @@
       eissn = 1527-1919
   
    >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://hope.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
       
@@ -838,7 +839,7 @@
       eissn = 1527-1927
   
 >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jhppl.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -955,7 +956,7 @@
       eissn = 1527-8263
   
 >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jmems.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -983,7 +984,7 @@
       eissn = 1941-7497
   
    >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jmt.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -1025,7 +1026,8 @@
       au < exists ; exists ; 2012 ; Kyoto Journal of Mathematics Volume 52 ; 52 >
 
 
-}
+    }
+    
     {
   
     title < 
@@ -1034,7 +1036,7 @@
       eissn = 1558-1454
   
 >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://labor.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -1054,11 +1056,10 @@
   
     title < 
       name = Limnology and Oceanography: Fluids and Environments ;
-      issn = ;
       eissn = 2157-3689
   
     >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://lofe.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -1070,30 +1071,31 @@
     {
   
     title < 
-      name = Mediterranean Quarterly: A Journal of Global Issues ;
+      name = Mediterranean Quarterly ;
       issn = 1047-4552 ;
       eissn = 1527-1935
   
     >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mq.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Mediterranean Quarterly: A Journal of Global Issues Volume 11 ; 11 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Mediterranean Quarterly: A Journal of Global Issues Volume 12 ; 12 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Mediterranean Quarterly: A Journal of Global Issues Volume 13 ; 13 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Mediterranean Quarterly: A Journal of Global Issues Volume 14 ; 14 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Mediterranean Quarterly: A Journal of Global Issues Volume 15 ; 15 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Mediterranean Quarterly: A Journal of Global Issues Volume 16 ; 16 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Mediterranean Quarterly: A Journal of Global Issues Volume 17 ; 17 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Mediterranean Quarterly: A Journal of Global Issues Volume 18 ; 18 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Mediterranean Quarterly: A Journal of Global Issues Volume 19 ; 19 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Mediterranean Quarterly: A Journal of Global Issues Volume 20 ; 20 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Mediterranean Quarterly: A Journal of Global Issues Volume 21 ; 21 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Mediterranean Quarterly: A Journal of Global Issues Volume 22 ; 22 >
-      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Mediterranean Quarterly: A Journal of Global Issues Volume 23 ; 23 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Mediterranean Quarterly Volume 11 ; 11 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Mediterranean Quarterly Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Mediterranean Quarterly Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Mediterranean Quarterly Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Mediterranean Quarterly Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Mediterranean Quarterly Volume 16 ; 16 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Mediterranean Quarterly Volume 17 ; 17 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Mediterranean Quarterly Volume 18 ; 18 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Mediterranean Quarterly Volume 19 ; 19 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
 
-}
+     }
+     
     {
   
     title < 
@@ -1101,8 +1103,8 @@
       issn = 0368-8887 ;
       comment[continued_by] = 2156-2261 ;
       comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
->
-  
+       
+      >
       plugin = needs.plugin
       param[base_url] = http://ProjectEuclid.org/kjm
       implicit < status1 ; status ; year ; name ; param[volume_name] >
@@ -1122,113 +1124,113 @@
     {
   
     title < 
-      name = minnesota review: a journal of creative and critical writing ;
+      name = The Minnesota Review ;
       issn = 0026-5667 ;
       eissn = 2157-4189
   
 >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://minnesotareview.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2005 ; minnesota review: a journal of creative and critical writing Volume 63-64 ; 63-64 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2006 ; minnesota review: a journal of creative and critical writing Volume 65-67 ; 65-67 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2007 ; minnesota review: a journal of creative and critical writing Volume 68-69 ; 68-69 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2008 ; minnesota review: a journal of creative and critical writing Volume 70 ; 70 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2009 ; minnesota review: a journal of creative and critical writing Volume 71-73 ; 71-73 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2010 ; minnesota review: a journal of creative and critical writing Volume 75 ; 75 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2011 ; minnesota review: a journal of creative and critical writing Volume 76-77 ; 76-77 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; minnesota review: a journal of creative and critical writing Volume 78 ; 78 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; The Minnesota Review Volume 2012 ; 2012 >
 
     }
     
     {
   
     title < 
-      name = Modern Language Quarterly: A Journal of Literary History ;
+      name = Modern Language Quarterly ;
       issn = 0026-7929 ;
       eissn = 1527-1943
   
      >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mlq.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
 
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1940 ; Modern Language Quarterly: A Journal of Literary History Volume 1 ; 1 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1941 ; Modern Language Quarterly: A Journal of Literary History Volume 2 ; 2 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1942 ; Modern Language Quarterly: A Journal of Literary History Volume 3 ; 3 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1943 ; Modern Language Quarterly: A Journal of Literary History Volume 4 ; 4 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1944 ; Modern Language Quarterly: A Journal of Literary History Volume 5 ; 5 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1945 ; Modern Language Quarterly: A Journal of Literary History Volume 6 ; 6 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1946 ; Modern Language Quarterly: A Journal of Literary History Volume 7 ; 7 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1947 ; Modern Language Quarterly: A Journal of Literary History Volume 8 ; 8 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1948 ; Modern Language Quarterly: A Journal of Literary History Volume 9 ; 9 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1949 ; Modern Language Quarterly: A Journal of Literary History Volume 10 ; 10 >      
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1950 ; Modern Language Quarterly: A Journal of Literary History Volume 11 ; 11 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1951 ; Modern Language Quarterly: A Journal of Literary History Volume 12 ; 12 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1952 ; Modern Language Quarterly: A Journal of Literary History Volume 13 ; 13 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1953 ; Modern Language Quarterly: A Journal of Literary History Volume 14 ; 14 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1954 ; Modern Language Quarterly: A Journal of Literary History Volume 15 ; 15 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1955 ; Modern Language Quarterly: A Journal of Literary History Volume 16 ; 16 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1956 ; Modern Language Quarterly: A Journal of Literary History Volume 17 ; 17 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1957 ; Modern Language Quarterly: A Journal of Literary History Volume 18 ; 18 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1958 ; Modern Language Quarterly: A Journal of Literary History Volume 19 ; 19 >     
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1959 ; Modern Language Quarterly: A Journal of Literary History Volume 20 ; 20 >      
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1960 ; Modern Language Quarterly: A Journal of Literary History Volume 21 ; 21 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1961 ; Modern Language Quarterly: A Journal of Literary History Volume 22 ; 22 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1962 ; Modern Language Quarterly: A Journal of Literary History Volume 23 ; 23 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1963 ; Modern Language Quarterly: A Journal of Literary History Volume 24 ; 24 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1964 ; Modern Language Quarterly: A Journal of Literary History Volume 25 ; 25 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1965 ; Modern Language Quarterly: A Journal of Literary History Volume 26 ; 26 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1966 ; Modern Language Quarterly: A Journal of Literary History Volume 27 ; 27 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1967 ; Modern Language Quarterly: A Journal of Literary History Volume 28 ; 28 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1968 ; Modern Language Quarterly: A Journal of Literary History Volume 29 ; 29 >      
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1969 ; Modern Language Quarterly: A Journal of Literary History Volume 30 ; 30 >      
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1970 ; Modern Language Quarterly: A Journal of Literary History Volume 31 ; 31 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1971 ; Modern Language Quarterly: A Journal of Literary History Volume 32 ; 32 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1972 ; Modern Language Quarterly: A Journal of Literary History Volume 33 ; 33 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1973 ; Modern Language Quarterly: A Journal of Literary History Volume 34 ; 34 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1974 ; Modern Language Quarterly: A Journal of Literary History Volume 35 ; 35 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1975 ; Modern Language Quarterly: A Journal of Literary History Volume 36 ; 36 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1976 ; Modern Language Quarterly: A Journal of Literary History Volume 37 ; 37 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1977 ; Modern Language Quarterly: A Journal of Literary History Volume 38 ; 38 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1978 ; Modern Language Quarterly: A Journal of Literary History Volume 39 ; 39 >      
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1979 ; Modern Language Quarterly: A Journal of Literary History Volume 40 ; 40 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1980 ; Modern Language Quarterly: A Journal of Literary History Volume 41 ; 41 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1981 ; Modern Language Quarterly: A Journal of Literary History Volume 42 ; 42 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1982 ; Modern Language Quarterly: A Journal of Literary History Volume 43 ; 43 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1983 ; Modern Language Quarterly: A Journal of Literary History Volume 44 ; 44 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1984 ; Modern Language Quarterly: A Journal of Literary History Volume 45 ; 45 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1985 ; Modern Language Quarterly: A Journal of Literary History Volume 46 ; 46 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1986 ; Modern Language Quarterly: A Journal of Literary History Volume 47 ; 47 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1987 ; Modern Language Quarterly: A Journal of Literary History Volume 48 ; 48 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1988 ; Modern Language Quarterly: A Journal of Literary History Volume 49 ; 49 >      
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1989 ; Modern Language Quarterly: A Journal of Literary History Volume 50 ; 50 >      
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1990 ; Modern Language Quarterly: A Journal of Literary History Volume 51 ; 51 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1991 ; Modern Language Quarterly: A Journal of Literary History Volume 52 ; 52 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1992 ; Modern Language Quarterly: A Journal of Literary History Volume 53 ; 53 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1993 ; Modern Language Quarterly: A Journal of Literary History Volume 54 ; 54 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1994 ; Modern Language Quarterly: A Journal of Literary History Volume 55 ; 55 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1995 ; Modern Language Quarterly: A Journal of Literary History Volume 56 ; 56 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1996 ; Modern Language Quarterly: A Journal of Literary History Volume 57 ; 57 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1997 ; Modern Language Quarterly: A Journal of Literary History Volume 58 ; 58 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1998 ; Modern Language Quarterly: A Journal of Literary History Volume 59 ; 59 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999 ; Modern Language Quarterly: A Journal of Literary History Volume 60 ; 60 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Modern Language Quarterly: A Journal of Literary History Volume 61 ; 61 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Modern Language Quarterly: A Journal of Literary History Volume 62 ; 62 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Modern Language Quarterly: A Journal of Literary History Volume 63 ; 63 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Modern Language Quarterly: A Journal of Literary History Volume 64 ; 64 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Modern Language Quarterly: A Journal of Literary History Volume 65 ; 65 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Modern Language Quarterly: A Journal of Literary History Volume 66 ; 66 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Modern Language Quarterly: A Journal of Literary History Volume 67 ; 67 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Modern Language Quarterly: A Journal of Literary History Volume 68 ; 68 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Modern Language Quarterly: A Journal of Literary History Volume 69 ; 69 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Modern Language Quarterly: A Journal of Literary History Volume 60 ; 70 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Modern Language Quarterly: A Journal of Literary History Volume 71 ; 71 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Modern Language Quarterly: A Journal of Literary History Volume 72 ; 72 >
-      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Modern Language Quarterly: A Journal of Literary History Volume 73 ; 73 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1940 ; Modern Language Quarterly Volume 1 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1941 ; Modern Language Quarterly Volume 2 ; 2 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1942 ; Modern Language Quarterly Volume 3 ; 3 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1943 ; Modern Language Quarterly Volume 4 ; 4 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1944 ; Modern Language Quarterly Volume 5 ; 5 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1945 ; Modern Language Quarterly Volume 6 ; 6 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1946 ; Modern Language Quarterly Volume 7 ; 7 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1947 ; Modern Language Quarterly Volume 8 ; 8 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1948 ; Modern Language Quarterly Volume 9 ; 9 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1949 ; Modern Language Quarterly Volume 10 ; 10 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1950 ; Modern Language Quarterly Volume 11 ; 11 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1951 ; Modern Language Quarterly Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1952 ; Modern Language Quarterly Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1953 ; Modern Language Quarterly Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1954 ; Modern Language Quarterly Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1955 ; Modern Language Quarterly Volume 16 ; 16 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1956 ; Modern Language Quarterly Volume 17 ; 17 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1957 ; Modern Language Quarterly Volume 18 ; 18 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1958 ; Modern Language Quarterly Volume 19 ; 19 >     
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1959 ; Modern Language Quarterly Volume 20 ; 20 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1960 ; Modern Language Quarterly Volume 21 ; 21 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1961 ; Modern Language Quarterly Volume 22 ; 22 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1962 ; Modern Language Quarterly Volume 23 ; 23 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1963 ; Modern Language Quarterly Volume 24 ; 24 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1964 ; Modern Language Quarterly Volume 25 ; 25 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1965 ; Modern Language Quarterly Volume 26 ; 26 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1966 ; Modern Language Quarterly Volume 27 ; 27 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1967 ; Modern Language Quarterly Volume 28 ; 28 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1968 ; Modern Language Quarterly Volume 29 ; 29 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1969 ; Modern Language Quarterly Volume 30 ; 30 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1970 ; Modern Language Quarterly Volume 31 ; 31 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1971 ; Modern Language Quarterly Volume 32 ; 32 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1972 ; Modern Language Quarterly Volume 33 ; 33 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1973 ; Modern Language Quarterly Volume 34 ; 34 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1974 ; Modern Language Quarterly Volume 35 ; 35 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1975 ; Modern Language Quarterly Volume 36 ; 36 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1976 ; Modern Language Quarterly Volume 37 ; 37 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1977 ; Modern Language Quarterly Volume 38 ; 38 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1978 ; Modern Language Quarterly Volume 39 ; 39 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1979 ; Modern Language Quarterly Volume 40 ; 40 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1980 ; Modern Language Quarterly Volume 41 ; 41 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1981 ; Modern Language Quarterly Volume 42 ; 42 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1982 ; Modern Language Quarterly Volume 43 ; 43 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1983 ; Modern Language Quarterly Volume 44 ; 44 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1984 ; Modern Language Quarterly Volume 45 ; 45 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1985 ; Modern Language Quarterly Volume 46 ; 46 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1986 ; Modern Language Quarterly Volume 47 ; 47 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1987 ; Modern Language Quarterly Volume 48 ; 48 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1988 ; Modern Language Quarterly Volume 49 ; 49 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1989 ; Modern Language Quarterly Volume 50 ; 50 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1990 ; Modern Language Quarterly Volume 51 ; 51 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1991 ; Modern Language Quarterly Volume 52 ; 52 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1992 ; Modern Language Quarterly Volume 53 ; 53 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1993 ; Modern Language Quarterly Volume 54 ; 54 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1994 ; Modern Language Quarterly Volume 55 ; 55 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1995 ; Modern Language Quarterly Volume 56 ; 56 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1996 ; Modern Language Quarterly Volume 57 ; 57 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1997 ; Modern Language Quarterly Volume 58 ; 58 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1998 ; Modern Language Quarterly Volume 59 ; 59 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999 ; Modern Language Quarterly Volume 60 ; 60 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Modern Language Quarterly Volume 61 ; 61 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Modern Language Quarterly Volume 62 ; 62 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Modern Language Quarterly Volume 63 ; 63 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Modern Language Quarterly Volume 64 ; 64 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Modern Language Quarterly Volume 65 ; 65 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Modern Language Quarterly Volume 66 ; 66 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Modern Language Quarterly Volume 67 ; 67 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Modern Language Quarterly Volume 68 ; 68 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Modern Language Quarterly Volume 69 ; 69 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Modern Language Quarterly Volume 60 ; 70 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Modern Language Quarterly Volume 71 ; 71 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Modern Language Quarterly Volume 72 ; 72 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Modern Language Quarterly Volume 73 ; 73 >
  
     }
     
@@ -1240,7 +1242,7 @@
       eissn = 2152-6842
   
      >
-      plugin = needs.Plugin
+      plugin = needs.plugin
       param[base_url] = http://projecteuclid.org/nmj
       implicit < status1 ; status ; year ; name ; param[volume_name] >
 
@@ -1318,7 +1320,7 @@
       eissn = 1558-1462
   
      >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ngc.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -1341,7 +1343,7 @@
       eissn = 2152-7792
   
      >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://nka.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -1443,7 +1445,7 @@
       eissn = 1945-8509
   
      >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://novel.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -1467,27 +1469,27 @@
     {
   
     title < 
-      name = Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture ;
+      name = Pedagogy ;
       issn = 1531-4200 ;
       eissn =  1533-6255
   
       >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://pedagogy.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 1 ; 1  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 2 ; 2  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 3 ; 3  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 4 ; 4  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 5 ; 5  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 6 ; 6  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 7 ; 7  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 8 ; 8  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 9 ; 9  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 10 ;10 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 11 ;11 >
-      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 12 ;12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Pedagogy Volume 1 ; 1  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Pedagogy Volume 2 ; 2  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Pedagogy Volume 3 ; 3  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Pedagogy Volume 4 ; 4  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Pedagogy Volume 5 ; 5  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Pedagogy Volume 6 ; 6  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Pedagogy Volume 7 ; 7  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Pedagogy Volume 8 ; 8  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Pedagogy Volume 9 ; 9  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Pedagogy Volume 10 ;10 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Pedagogy Volume 11 ;11 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Pedagogy Volume 12 ;12 >
       
     }
 
@@ -1499,7 +1501,7 @@
       eissn = 1558-1470
   
       >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://philreview.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -1523,28 +1525,28 @@
       {
   
     title < 
-      name = Poetics Today: International Journal for Theory and Analysis of Literature and Communication ;
+      name = Poetics Today ;
       issn =  0333-5372 ;
       eissn = 1527-5507
   
      >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://poeticstoday.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 21 ; 21 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 22 ; 22 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 23 ; 23 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 24 ; 24 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 25 ; 25 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 26 ; 26 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 27 ; 27 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 28 ; 28 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 29 ; 29 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 30 ; 30 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 31 ; 31 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 32 ; 32 >
-      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 33 ; 33 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Poetics Today Volume 21 ; 21 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Poetics Today Volume 22 ; 22 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Poetics Today Volume 23 ; 23 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Poetics Today Volume 24 ; 24 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Poetics Today Volume 25 ; 25 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Poetics Today Volume 26 ; 26 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Poetics Today Volume 27 ; 27 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Poetics Today Volume 28 ; 28 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Poetics Today Volume 29 ; 29 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Poetics Today Volume 30 ; 30 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Poetics Today Volume 31 ; 31 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Poetics Today Volume 32 ; 32 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Poetics Today Volume 33 ; 33 >
      
      }
      
@@ -1557,33 +1559,66 @@
       eissn = 1527-8271
   
 >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://positions.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1993 ; positions: asia critique Volume 1 ; 1 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1994 ; positions: asia critique Volume 2 ; 2 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1995 ; positions: asia critique Volume 3 ; 3 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1996 ; positions: asia critique Volume 4 ; 4 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1997 ; positions: asia critique Volume 5 ; 5 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1998 ; positions: asia critique Volume 6 ; 6 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999 ; positions: asia critique Volume 7 ; 7 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; positions: asia critique Volume 8 ; 8 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; positions: asia critique Volume 9 ; 9 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; positions: asia critique Volume 10 ; 10 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; positions: asia critique Volume 11 ; 11 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; positions: asia critique Volume 12 ; 12 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; positions: asia critique Volume 13 ; 13 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; positions: asia critique Volume 14 ; 14 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; positions: asia critique Volume 15 ; 15 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; positions: asia critique Volume 16 ; 16 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; positions: asia critique Volume 17 ; 17 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; positions: asia critique Volume 18 ; 18 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; positions: asia critique Volume 19 ; 19 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1993 ; positions: east asia cultures critique Volume 1 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1994 ; positions: east asia cultures critique Volume 2 ; 2 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1995 ; positions: east asia cultures critique Volume 3 ; 3 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1996 ; positions: east asia cultures critique Volume 4 ; 4 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1997 ; positions: east asia cultures critique Volume 5 ; 5 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1998 ; positions: east asia cultures critique Volume 6 ; 6 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999 ; positions: east asia cultures critique Volume 7 ; 7 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; positions: east asia cultures critique Volume 8 ; 8 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; positions: east asia cultures critique Volume 9 ; 9 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; positions: east asia cultures critique Volume 10 ; 10 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; positions: east asia cultures critique Volume 11 ; 11 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; positions: east asia cultures critique Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; positions: east asia cultures critique Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; positions: east asia cultures critique Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; positions: east asia cultures critique Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; positions: east asia cultures critique Volume 16 ; 16 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; positions: east asia cultures critique Volume 19 ; 19 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; positions: asia critique Volume 20 ; 20 >
 
-}
+  }
 
+  {
+    title <
+      name = Publication of the American Dialect Society ;
+      issn = 2157-6114 ;
+      eissn = 0002-8207
+
+    >
+    
+    {
+    
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://pads.dukejournals.org/
+      implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >  
+      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Publication of the American Dialect Society Volume 96 ; 96 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; Publication of the American Dialect Society Volume 97 ; 97 >
+
+    }
+  
+  }
+ 
     {
   
     title < 
@@ -1592,7 +1627,7 @@
       eissn = 1527-8018
   
       >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://publicculture.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -1632,7 +1667,7 @@
       eissn = 1534-1453
   
 >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://rhr.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -1680,27 +1715,27 @@
      {
   
     title < 
-      name = Small Axe: A Caribbean Journal of Criticism ;
+      name = Small Axe ;
       issn = 0799-0537 ;
       eissn = 1534-6714
   
       >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://smallaxe.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Small Axe: A Caribbean Journal of Criticism Volume 5 ; 5 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Small Axe: A Caribbean Journal of Criticism Volume 6 ; 6 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Small Axe: A Caribbean Journal of Criticism Volume 7 ; 7 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Small Axe: A Caribbean Journal of Criticism Volume 8 ; 8 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Small Axe: A Caribbean Journal of Criticism Volume 9 ; 9 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Small Axe: A Caribbean Journal of Criticism Volume 10 ; 10 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Small Axe: A Caribbean Journal of Criticism Volume 11 ; 11 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Small Axe: A Caribbean Journal of Criticism Volume 12 ; 12 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Small Axe: A Caribbean Journal of Criticism Volume 13 ; 13 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Small Axe: A Caribbean Journal of Criticism Volume 14 ; 14 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Small Axe: A Caribbean Journal of Criticism Volume 15 ; 15 >
-      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Small Axe: A Caribbean Journal of Criticism Volume 16 ; 16 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Small Axe Volume 5 ; 5 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Small Axe Volume 6 ; 6 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Small Axe Volume 7 ; 7 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Small Axe Volume 8 ; 8 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Small Axe Volume 9 ; 9 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Small Axe Volume 10 ; 10 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Small Axe Volume 11 ; 11 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Small Axe Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Small Axe Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Small Axe Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Small Axe Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; Small Axe Volume 16 ; 16 >
 
     }
     
@@ -1712,7 +1747,7 @@
       eissn = 1527-8034
   
       >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ssh.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -1740,7 +1775,7 @@
       eissn = 1527-1951
   
       >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://socialtext.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -1763,28 +1798,28 @@
      {
    
     title < 
-      name = South Atlantic Quarterly ;
+      name = The South Atlantic Quarterly ;
       issn = 0038-2876 ;
       eissn = 1527-8026
   
       >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://saq.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; South Atlantic Quarterly Volume 99 ; 99 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; South Atlantic Quarterly Volume 100 ; 100 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; South Atlantic Quarterly Volume 101 ; 101 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; South Atlantic Quarterly Volume 102 ; 102 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; South Atlantic Quarterly Volume 103 ; 103 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; South Atlantic Quarterly Volume 104 ; 104  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; South Atlantic Quarterly Volume 105 ; 105  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; South Atlantic Quarterly Volume 106 ; 106 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; South Atlantic Quarterly Volume 107 ; 107 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; South Atlantic Quarterly Volume 108 ; 108 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; South Atlantic Quarterly Volume 109 ; 109 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; South Atlantic Quarterly Volume 110 ; 110 >
-      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; South Atlantic Quarterly Volume 111 ; 111 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; The South Atlantic Quarterly Volume 99 ; 99 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; The South Atlantic Quarterly Volume 100 ; 100 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; The South Atlantic Quarterly Volume 102 ; 102 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; The South Atlantic Quarterly Volume 103 ; 103 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; The South Atlantic Quarterly Volume 104 ; 104  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; The South Atlantic Quarterly Volume 105 ; 105  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; The South Atlantic Quarterly Volume 106 ; 106 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; The South Atlantic Quarterly Volume 107 ; 107 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; The South Atlantic Quarterly Volume 108 ; 108 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; The South Atlantic Quarterly Volume 109 ; 109 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; The South Atlantic Quarterly Volume 110 ; 110 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2012 ; The South Atlantic Quarterly Volume 111 ; 111 >
  
      }  
      
@@ -1796,7 +1831,7 @@
       eissn = 1527-196X
   
       >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://theater.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 
@@ -1855,7 +1890,7 @@
       eissn = 2164-0041
   
 >
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://tikkun.dukejournals.org/
       implicit < pluginSuffix ; status1 ; status ; year ; name ; param[volume_name] >
 

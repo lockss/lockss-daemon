@@ -4,6 +4,7 @@
     name = Dove Medical Press
   >
 
+  attr[contract] = 2012
   plugin = needs.plugin
   param[base_url] = http://www.dovepress.com/
   implicit < status1 ; status ; year ; name ; param[year] >

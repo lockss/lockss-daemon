@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = American University Washington College of Law
+    name = American University Washington College of Law ;
+    info[contract] = 2010 ;
+    info[tester] = 5
   >
   
   attr[contract] = 2010

@@ -375,9 +375,9 @@
     au < manifest ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 ; >
     au < exists ; exists ; 2007 ; The American Historical Review Volume 112 ; 112 ; >
     au < manifest ; exists ; 2008 ; The American Historical Review Volume 113 ; 113 ; >
-    au < testing ; exists ; 2009 ; The American Historical Review Volume 114 ; 114 ; >
-    au < testing ; exists ; 2010 ; The American Historical Review Volume 115 ; 115 ; >
-    au < testing ; exists ; 2011 ; The American Historical Review Volume 116 ; 116 ; >
+    au < released ; manifest ; 2009 ; The American Historical Review Volume 114 ; 114 ; >
+    au < released ; manifest ; 2010 ; The American Historical Review Volume 115 ; 115 ; >
+    au < released ; manifest ; 2011 ; The American Historical Review Volume 116 ; 116 ; >
     au < crawling ; exists ; 2012 ; The American Historical Review Volume 117 ; 117 ; >
     
     }
@@ -522,7 +522,8 @@
 
     param[base_url] = http://aje.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[aje174] = multiple poll failures
+    comment[doNotProcess] = multiple poll failures, see RU 4377
+    comment[0] = includes supplements
 
     au < manifest ; exists ; 1921 ; American Journal of Epidemiology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1922 ; American Journal of Epidemiology Volume 2 ; 2 ; >
@@ -696,12 +697,28 @@
     au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; >
     au < released ; crawling ; 2010 ; American Journal of Epidemiology Volume 171 ; 171 ; >
     au < released ; crawling ; 2010 ; American Journal of Epidemiology Volume 172 ; 172 ; >
-    au < released ; crawling ; 2011 ; American Journal of Epidemiology Volume 173 ; 173 ; >
-    au < testing ; exists ; 2011 ; American Journal of Epidemiology Volume 174 ; 174 ; >
-    au < crawling ; exists ; 2012 ; American Journal of Epidemiology Volume 175 ; 175 ; >
+    au < released ; crawling ; 2011 ; American Journal of Epidemiology [including Supplements] Volume 173 ; 173 ; >
+    au < released ; manifest ; 2011 ; American Journal of Epidemiology [including Supplements] Volume 174 ; 174 ; >
+    au < crawling ; exists ; 2012 ; American Journal of Epidemiology [including Supplements] Volume 175 ; 175 ; >
     au < crawling ; exists ; 2012 ; American Journal of Epidemiology Volume 176 ; 176 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Hypertension ;
+      issn = 0895-7061 ;
+      eissn = 1941-7225 ;
+      issnl = 0895-7061
+    >
+
+    param[base_url] = http://ajh.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2013 ; American Journal of Hypertension Volume 1 ; 1 ; >
 
   }
 
@@ -2689,7 +2706,7 @@
     au < released ; crawling ; 2011 ; British Medical Bulletin Volume 100 ; 100 ; >
     au < crawling ; exists ; 2012 ; British Medical Bulletin Volume 101 ; 101 ; >
     au < crawling ; exists ; 2012 ; British Medical Bulletin Volume 102 ; 102 ; >
-    au < manifest ; exists ; 2012 ; British Medical Bulletin Volume 103 ; 103 ; >
+    au < crawling ; exists ; 2012 ; British Medical Bulletin Volume 103 ; 103 ; >
     au < expected ; exists ; 2012 ; British Medical Bulletin Volume 104 ; 104 ; >
 
     }
@@ -3211,7 +3228,7 @@
     au < crawling ; exists ; 2012 ; Cardiovascular Research Volume 93 ; 93 ; >
     au < crawling ; exists ; 2012 ; Cardiovascular Research Volume 94 ; 94 ; >
     au < crawling ; exists ; 2012 ; Cardiovascular Research Volume 95 ; 95 ; >
-    au < expected ; exists ; 2012 ; Cardiovascular Research Volume 96 ; 96 ; >
+    au < crawling ; exists ; 2012 ; Cardiovascular Research Volume 96 ; 96 ; >
 
     }
 
@@ -4002,6 +4019,22 @@
     au < released ; crawling ; 2010 ; Database: The Journal of Biological Databases and Curation Volume 2010 ; 2010 ; >
     au < released ; crawling ; 2011 ; Database: The Journal of Biological Databases and Curation Volume 2011 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Database: The Journal of Biological Databases and Curation Volume 2012 ; 2012 ; >
+
+  }
+
+  {
+
+    title <
+      name = Diplomatic History ;
+      issn = 0145-2096 ;
+      eissn = 1467-7709 ;
+      issnl = 0145-2096
+    >
+
+    param[base_url] = http://dh.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2013 ; Diplomatic History Volume 1 ; 1 ; >
 
   }
 
@@ -4960,7 +4993,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; >
     au < down ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
-    au < testing ; exists ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
+    au < released ; manifest ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
     au < crawling ; exists ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 ; >
 
     }
@@ -6168,7 +6201,7 @@
     au < released ; crawling ; 2009 ; Health & Social Work Volume 34 ; 34 ; >
     au < released ; crawling ; 2010 ; Health & Social Work Volume 35 ; 35 ; >
     au < released ; crawling ; 2011 ; Health & Social Work Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2012 ; Health & Social Work Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2012 ; Health & Social Work Volume 37 ; 37 ; >
 
   }
 
@@ -6428,7 +6461,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; History Workshop Journal Volume 66 ; 66 ; >
     au < released ; crawling ; 2009 ; History Workshop Journal Volume 67 ; 67 ; >
     au < released ; crawling ; 2009 ; History Workshop Journal Volume 68 ; 68 ; >
-    au < testing ; exists ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
+    au < released ; manifest ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
     au < released ; crawling ; 2010 ; History Workshop Journal Volume 70 ; 70 ; >
     au < released ; crawling ; 2011 ; History Workshop Journal Volume 71 ; 71 ; >
     au < released ; crawling ; 2011 ; History Workshop Journal Volume 72 ; 72 ; >
@@ -6567,7 +6600,7 @@
 
     param[base_url] = http://humrep.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[notReady] = RT4463, RU4166 503 error on vol26
+    comment[notReady] = RT4387 index error, needs filter
 
     au < manifest ; exists ; 1986 ; Human Reproduction Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; Human Reproduction Volume 2 ; 2 ; >
@@ -6594,7 +6627,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
     au < zapped ; down ; 2009 ; Human Reproduction Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Human Reproduction Volume 25 ; 25 ; >
-    au < testing ; exists ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
     au < crawling ; exists ; 2012 ; Human Reproduction Volume 27 ; 27 ; >
 
     }
@@ -7532,6 +7565,22 @@
 
     au < released ; crawling ; 2011 ; International Data Privacy Law Volume 1 ; 1 ; >
     au < crawling ; exists ; 2012 ; International Data Privacy Law Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+    title <
+      name = International Health ;
+      issn = 1876-3413 ;
+      eissn = 1876-3405 ;
+      issnl = 1876-3413
+    >
+
+    param[base_url] = http://inthealth.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2013 ; International Health Volume 1 ; 1 ; >
 
   }
 
@@ -9025,8 +9074,8 @@
     au < manifest ; exists ; 2006 ; Journal of Chromatographic Science Volume 44 ; 44 ; >
     au < manifest ; exists ; 2007 ; Journal of Chromatographic Science Volume 45 ; 45 ; >
     au < manifest ; exists ; 2008 ; Journal of Chromatographic Science Volume 46 ; 46 ; >
-    au < testing ; exists ; 2009 ; Journal of Chromatographic Science Volume 47 ; 47 ; >
-    au < testing ; exists ; 2010 ; Journal of Chromatographic Science Volume 48 ; 48 ; >
+    au < released ; manifest ; 2009 ; Journal of Chromatographic Science Volume 47 ; 47 ; >
+    au < released ; manifest ; 2010 ; Journal of Chromatographic Science Volume 48 ; 48 ; >
     au < released ; crawling ; 2011 ; Journal of Chromatographic Science Volume 49 ; 49 ; >
     au < released ; crawling ; 2012 ; Journal of Chromatographic Science Volume 50 ; 50 ; >
     au < expected ; exists ; 2013 ; Journal of Chromatographic Science Volume 51 ; 51 ; >
@@ -10567,7 +10616,7 @@
     au < released ; crawling ; 2009 ; Journal of Legal Analysis Volume 1 ; 1 ; >
     au < released ; crawling ; 2010 ; Journal of Legal Analysis Volume 2 ; 2 ; >
     au < released ; crawling ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2012 ; Journal of Legal Analysis Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2012 ; Journal of Legal Analysis Volume 4 ; 4 ; >
 
     }
 
@@ -10780,7 +10829,7 @@
     au < released ; crawling ; 2011 ; Journal of the London Mathematical Society Volume 83 ; 83 ; >
     au < released ; crawling ; 2011 ; Journal of the London Mathematical Society Volume 84 ; 84 ; >
     au < crawling ; exists ; 2012 ; Journal of the London Mathematical Society Volume 85 ; 85 ; >
-    au < manifest ; exists ; 2012 ; Journal of the London Mathematical Society Volume 86 ; 86 ; >
+    au < crawling ; exists ; 2012 ; Journal of the London Mathematical Society Volume 86 ; 86 ; >
     
     }
 
@@ -11724,9 +11773,24 @@
     au < released ; crawling ; 2009-2010 ; Journal of Social History Volume 43 ; 43 ; >
     au < released ; crawling ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ; >
     au < released ; crawling ; 2011-2012 ; Journal of Social History Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Surgical Case Reports ;
+      eissn = 2042-8812 ;
+      issnl = 2042-8812 
+    >
+
+    param[base_url] = http://jscr.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2013 ; Journal of Surgical Case Reports Volume 1 ; 1 ; >
 
   }
 
@@ -12638,6 +12702,22 @@
   {
 
     title <
+      name = MELUS ;
+      issn = 0163-755X ;
+      eissn = 1946-3170 ;
+      issnl = 0163-755X
+    >
+
+    param[base_url] = http://melus.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2013 ; MELUS Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Mind ;
       issn = 0026-4423 ;
       eissn = 1460-2113 ;
@@ -12786,7 +12866,7 @@
     au < released ; crawling ; 2009 ; Mind Volume 118 ; 118 ; >
     au < released ; crawling ; 2010 ; Mind Volume 119 ; 119 ; >
     au < released ; crawling ; 2011 ; Mind Volume 120 ; 120 ; >
-    au < manifest ; exists ; 2012 ; Mind Volume 121 ; 121 ; >
+    au < crawling ; exists ; 2012 ; Mind Volume 121 ; 121 ; >
 
     }
 
@@ -13392,8 +13472,8 @@
     au < manifest ; exists ; 2005 ; Nephrology Dialysis Transplantation Volume 20 ; 20 ; >
     au < manifest ; exists ; 2006 ; Nephrology Dialysis Transplantation Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; Nephrology Dialysis Transplantation Volume 22 ; 22 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 ; >
     au < released ; manifest; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 ; >
     au < crawling ; exists; 2012 ; Nephrology Dialysis Transplantation Volume 27 ; 27 ; >
@@ -13425,7 +13505,7 @@
     au < manifest ; exists ; 2007 ; Neuro-Oncology Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; Neuro-Oncology Volume 10 ; 10 ; >
     au < released ; crawling ; 2009 ; Neuro-Oncology Volume 11 ; 11 ; >
-    au < testing ; exists ; 2010 ; Neuro-Oncology Volume 12 ; 12 ; >
+    au < released ; manifest ; 2010 ; Neuro-Oncology Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; Neuro-Oncology Volume 13 ; 13 ; >
     au < crawling ; exists ; 2012 ; Neuro-Oncology Volume 14 ; 14 ; >
 
@@ -14776,7 +14856,7 @@
     au < released; crawling ; 2011 ; Past & Present Volume 213 ; 213 ; >
     au < crawling ; exists ; 2012 ; Past & Present Volume 214 ; 214 ; >
     au < crawling ; exists ; 2012 ; Past & Present Volume 215 ; 215 ; >
-    au < manifest ; exists ; 2012 ; Past & Present Volume 216 ; 216 ; >
+    au < crawling ; exists ; 2012 ; Past & Present Volume 216 ; 216 ; >
     au < expected ; exists ; 2012 ; Past & Present Volume 217 ; 217 ; >
 
     }
@@ -16074,7 +16154,7 @@
     au < crawling ; exists ; 2012 ; Radiation Protection Dosimetry Volume 148 ; 148 ; >
     au < crawling ; exists ; 2012 ; Radiation Protection Dosimetry Volume 149 ; 149 ; >
     au < crawling ; exists ; 2012 ; Radiation Protection Dosimetry Volume 150 ; 150 ; >
-    au < manifest ; exists ; 2012 ; Radiation Protection Dosimetry Volume 151 ; 151 ; >
+    au < crawling ; exists ; 2012 ; Radiation Protection Dosimetry Volume 151 ; 151 ; >
     au < expected ; exists ; 2012 ; Radiation Protection Dosimetry Volume 152 ; 152 ; >
 
     }
@@ -16975,7 +17055,7 @@
     au < released ; crawling ; 2009 ; Social Forces Volume 88 ; 88 ; >
     au < released ; crawling ; 2010 ; Social Forces Volume 89 ; 89 ; >
     au < released ; crawling ; 2011 ; Social Forces Volume 90 ; 90 ; >
-    au < manifest ; exists ; 2012 ; Social Forces Volume 91 ; 91 ; >
+    au < crawling ; exists ; 2012 ; Social Forces Volume 91 ; 91 ; >
 
   }
 
@@ -17228,7 +17308,7 @@
     au < released ; crawling ; 2009 ; Social Work Research Volume 33 ; 33 ; >
     au < released ; crawling ; 2010 ; Social Work Research Volume 34 ; 34 ; >
     au < released ; crawling ; 2011 ; Social Work Research Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2012 ; Social Work Research Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2012 ; Social Work Research Volume 36 ; 36 ; >
 
   }
 
@@ -17721,10 +17801,26 @@
     au < crawling ; exists ; 2012 ; Toxicological Sciences Volume 126 ; 126 ; >
     au < crawling ; exists ; 2012 ; Toxicological Sciences Volume 127 ; 127 ; >
     au < crawling ; exists ; 2012 ; Toxicological Sciences Volume 128 ; 128 ; >
-    au < manifest ; exists ; 2012 ; Toxicological Sciences Volume 129 ; 129 ; >
+    au < crawling ; exists ; 2012 ; Toxicological Sciences Volume 129 ; 129 ; >
     au < expected ; exists ; 2012 ; Toxicological Sciences Volume 130 ; 130 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Transactions of The Royal Society of Tropical Medicine and Hygiene ;
+      issn = 0035-9203 ;
+      eissn = 1878-3503 ;
+      issnl = 0035-9203
+    >
+
+    param[base_url] = http://trstmh.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2013 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 1 ; 1 ; >
 
   }
 
@@ -18077,7 +18173,7 @@
     au < manifest ; exists ; 2008 ; Yearbook of International Environmental Law Volume 18 ; 18 ; >
     au < released ; crawling ; 2009 ; Yearbook of International Environmental Law Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Yearbook of International Environmental Law Volume 20 ; 20 ; >
-    au < testing ; exists ; 2011 ; Yearbook of International Environmental Law Volume 21 ; 21 ; >
+    au < released ; manifest ; 2011 ; Yearbook of International Environmental Law Volume 21 ; 21 ; >
     au < expected ; exists ; 2012 ; Yearbook of International Environmental Law Volume 22 ; 22 ; >
 
   }
@@ -18244,7 +18340,7 @@
     au < released ; crawling ; 2009 ; The Year's Work in English Studies Volume 88 ; 88 ; >
     au < released ; crawling ; 2010 ; The Year's Work in English Studies Volume 89 ; 89 ; >
     au < released ; crawling ; 2011 ; The Year's Work in English Studies Volume 90 ; 90 ; >
-    au < manifest ; exists ; 2012 ; The Year's Work in English Studies Volume 91 ; 91 ; >
+    au < crawling ; exists ; 2012 ; The Year's Work in English Studies Volume 91 ; 91 ; >
 
     }
 
