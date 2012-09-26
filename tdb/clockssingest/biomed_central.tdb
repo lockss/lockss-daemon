@@ -1925,7 +1925,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Breast Cancer Research Volume 10 ; 10 >
       au < manifest ; exists ; 2009 ; Breast Cancer Research Volume 11 ; 11 >
       au < released ; crawling ; 2010 ; Breast Cancer Research Volume 12 ; 12 >
-      au < testing ; exists ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
+      au < released ; manifest ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
       au < crawling ; exists ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
 
     }
