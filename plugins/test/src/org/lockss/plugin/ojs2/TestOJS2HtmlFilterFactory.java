@@ -76,6 +76,15 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
   
   private static final String dateAccessedHtmlFiltered = 
     "<div class=\"separator\"></div></div><div class=\"separator\"></div>";
+  
+  private static final String headerImageHtml =
+    "<div id=\"headerTitle\"><h1>" +
+    "<img src=\"http://www.tellusa.net/public/journals/27/" +
+    "pageHeaderTitleImage_en_US.jpg\" width=\"750\" height=\"90\" " +
+    "alt=\"Page Header\" /></h1></div>";
+  
+  private static final String headerImageHtmlFiltered =
+    "";
 
   
   public void testSidebarKeywordCloudFiltering() throws Exception {
@@ -111,6 +120,14 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
       
       assertEquals(dateAccessedHtmlFiltered, StringUtil.fromInputStream(actIn));
     
+  }
+  
+  public void testHeaderImage() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+                               new StringInputStream(headerImageHtml),
+                               Constants.DEFAULT_ENCODING);
+      
+      assertEquals(headerImageHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
   
 }

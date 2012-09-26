@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.5 2012-07-24 22:05:25 davidecorcoran Exp $
+ * $Id: OJS2HtmlFilterFactory.java,v 1.6 2012-09-26 00:14:11 davidecorcoran Exp $
  */
 
 /*
@@ -61,6 +61,8 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithTextRegex("div", "Date accessed: "),
             // The version of the OJS software, which can change over time, appears in a tag
             HtmlNodeFilters.tagWithAttribute("meta", "name", "generator"),
+            // Header image with variable dimensions
+            HtmlNodeFilters.tagWithAttribute("div", "id", "headerTitle")
         };
         return new HtmlFilterInputStream(in,
                                          encoding,
