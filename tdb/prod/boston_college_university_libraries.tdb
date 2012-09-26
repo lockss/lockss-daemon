@@ -61,6 +61,9 @@
       param[base_url] = http://ejournals.bc.edu/ojs/
       param[journal_id] = ital
       
+      au < exists ; 2011 ; Information Technology and Libraries Volume 30 (2011) ; 30 ; 2011 >
+      au < exists ; 2012 ; Information Technology and Libraries Volume 31 (2012) ; 31 ; 2012 >
+
     }
 
   
@@ -93,7 +96,7 @@
         >
       param[base_url] = http://ejournals.bc.edu/ojs/
       param[journal_id] = levantine
-        
+
      }
           
      {
@@ -104,6 +107,9 @@
       param[base_url] = http://ejournals.bc.edu/ojs/
       param[journal_id] = lumenetvita
       
+      au < exists ; 2011 ; Lumen et Vita Volume 1 (2011) ; 1 ; 2011 >
+      au < exists ; 2012 ; Lumen et Vita Volume 2 (2012) ; 2 ; 2012 >
+
       }
      
      {
@@ -114,6 +120,9 @@
       param[base_url] = http://ejournals.bc.edu/ojs/
       param[journal_id] = ctsa
       
+      au < exists ; 2004 ; Proceedings of the Catholic Theological Society of America Volume 59 (2004) ; 59 ; 2004 >
+      au < exists ; 2012 ; Proceedings of the Catholic Theological Society of America Volume 67 (2012) ; 67 ; 2012 >
+
     }         
           
     {
