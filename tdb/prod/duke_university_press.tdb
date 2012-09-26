@@ -989,17 +989,17 @@
       param[base_url] = http://glq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 1993 ; GLQ: A Journal of Lesbian and Gay Studies Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; 1994 ; GLQ: A Journal of Lesbian and Gay Studies Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; 1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; 1996 ; GLQ: A Journal of Lesbian and Gay Studies Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; 1997 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; 1998 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; exists ; 1993-1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; exists ; 1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; exists ; 1996-1997 ; GLQ: A Journal of Lesbian and Gay Studies Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; exists ; 1998 ; GLQ: A Journal of Lesbian and Gay Studies Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; exists ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; exists ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; exists ; 2003-2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; exists ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
       au < HighWireStrVolPlugin ; down ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
       au < HighWireStrVolPlugin ; down ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >      
       au < HighWirePressH20Plugin ; released ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
@@ -1043,6 +1043,11 @@
       param[base_url] = http://hahr.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
+      au < HighWirePressH20Plugin ; exists ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; Hispanic American Historical Review Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; Hispanic American Historical Review Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; Hispanic American Historical Review Volume 84 ; 84 >
      au < HighWireStrVolPlugin ; down ; 2005 ; Hispanic American Historical Review Volume 85 ; 85 >
      au < HighWireStrVolPlugin ; down ; 2006 ; Hispanic American Historical Review Volume 86 ; 86 >
      au < HighWireStrVolPlugin ; down ; 2007 ; Hispanic American Historical Review Volume 87 ; 87 >      
@@ -1087,6 +1092,42 @@
       param[base_url] = http://hope.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
+     au < HighWirePressH20Plugin ; exists ; 1969 ; History of Political Economy Volume 1 ; 1 >
+     au < HighWirePressH20Plugin ; exists ; 1970 ; History of Political Economy Volume 2 ; 2 >
+     au < HighWirePressH20Plugin ; exists ; 1971 ; History of Political Economy Volume 3 ; 3 >
+     au < HighWirePressH20Plugin ; exists ; 1972 ; History of Political Economy Volume 4 ; 4 >
+     au < HighWirePressH20Plugin ; exists ; 1973 ; History of Political Economy Volume 5 ; 5 >
+     au < HighWirePressH20Plugin ; exists ; 1974 ; History of Political Economy Volume 6 ; 6 >
+     au < HighWirePressH20Plugin ; exists ; 1975 ; History of Political Economy Volume 7 ; 7 >
+     au < HighWirePressH20Plugin ; exists ; 1976 ; History of Political Economy Volume 8 ; 8 >
+     au < HighWirePressH20Plugin ; exists ; 1977 ; History of Political Economy Volume 9 ; 9 >
+     au < HighWirePressH20Plugin ; exists ; 1978 ; History of Political Economy Volume 10 ; 10 >
+     au < HighWirePressH20Plugin ; exists ; 1979 ; History of Political Economy Volume 11 ; 11 >
+     au < HighWirePressH20Plugin ; exists ; 1980 ; History of Political Economy Volume 12 ; 12 >
+     au < HighWirePressH20Plugin ; exists ; 1981 ; History of Political Economy Volume 13 ; 13 >
+     au < HighWirePressH20Plugin ; exists ; 1982 ; History of Political Economy Volume 14 ; 14 >
+     au < HighWirePressH20Plugin ; exists ; 1983 ; History of Political Economy Volume 15 ; 15 >
+     au < HighWirePressH20Plugin ; exists ; 1984 ; History of Political Economy Volume 16 ; 16 >
+     au < HighWirePressH20Plugin ; exists ; 1985 ; History of Political Economy Volume 17 ; 17 >
+     au < HighWirePressH20Plugin ; exists ; 1986 ; History of Political Economy Volume 18 ; 18 >
+     au < HighWirePressH20Plugin ; exists ; 1987 ; History of Political Economy Volume 19 ; 19 >
+     au < HighWirePressH20Plugin ; exists ; 1988 ; History of Political Economy Volume 20 ; 20 >
+     au < HighWirePressH20Plugin ; exists ; 1989 ; History of Political Economy Volume 21 ; 21 >
+     au < HighWirePressH20Plugin ; exists ; 1990 ; History of Political Economy Volume 22 ; 22 >
+     au < HighWirePressH20Plugin ; exists ; 1991 ; History of Political Economy Volume 23 ; 23 >
+     au < HighWirePressH20Plugin ; exists ; 1992 ; History of Political Economy Volume 24 ; 24 >
+     au < HighWirePressH20Plugin ; exists ; 1993 ; History of Political Economy Volume 25 ; 25 >
+     au < HighWirePressH20Plugin ; exists ; 1994 ; History of Political Economy Volume 26 ; 26 >
+     au < HighWirePressH20Plugin ; exists ; 1995 ; History of Political Economy Volume 27 ; 27 >
+     au < HighWirePressH20Plugin ; exists ; 1996 ; History of Political Economy Volume 28 ; 28 >
+     au < HighWirePressH20Plugin ; exists ; 1997 ; History of Political Economy Volume 29 ; 29 >
+     au < HighWirePressH20Plugin ; exists ; 1998 ; History of Political Economy Volume 30 ; 30 >
+     au < HighWirePressH20Plugin ; exists ; 1999 ; History of Political Economy Volume 31 ; 31 >
+     au < HighWirePressH20Plugin ; exists ; 2000 ; History of Political Economy Volume 32 ; 32 >
+     au < HighWirePressH20Plugin ; exists ; 2001 ; History of Political Economy Volume 33 ; 33 >
+     au < HighWirePressH20Plugin ; exists ; 2002 ; History of Political Economy Volume 34 ; 34 >
+     au < HighWirePressH20Plugin ; exists ; 2003 ; History of Political Economy Volume 35 ; 35 >
+     au < HighWirePressH20Plugin ; exists ; 2004 ; History of Political Economy Volume 36 ; 36 >
      au < HighWireStrVolPlugin ; down ; 2005 ; History of Political Economy Volume 37 ; 37 >
      au < HighWireStrVolPlugin ; down ; 2006 ; History of Political Economy Volume 38 ; 38 >
      au < HighWireStrVolPlugin ; down ; 2007 ; History of Political Economy Volume 39 ; 39 >      
@@ -1892,7 +1933,7 @@
     >
 
     pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://nka.dukejournals.org/
+    param[base_url] = http://novel.dukejournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
 
     au < HighWirePressH20Plugin ; exists ; 1999 ; Novel: A Forum on Fiction Volume 33 ; 33 >
