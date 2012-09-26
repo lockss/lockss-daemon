@@ -823,7 +823,7 @@ class Client:
         key = self.getV3PollKey( AU, excluded_polls )
         if key:
             summary = self.getV3PollerDetail( key )[ 0 ]
-            return summary and summary[ 'Status' ] in ( 'No Time Available', 'Complete', 'No Quorum', 'Error', 'Expired' )
+            return summary and summary[ 'Status' ] in ( 'No Time Available', 'Complete', 'No Quorum', 'Error', 'Expired', 'Aborted' )
         else: return False
 
     ###
