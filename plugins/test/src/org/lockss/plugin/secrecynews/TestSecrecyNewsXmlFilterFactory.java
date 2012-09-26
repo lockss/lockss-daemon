@@ -1,5 +1,5 @@
 /*
- * $Id: TestSecrecyNewsXmlFilterFactory.java,v 1.1 2012-05-04 22:30:59 davidecorcoran Exp $
+ * $Id: TestSecrecyNewsXmlFilterFactory.java,v 1.2 2012-09-26 20:59:28 alexandraohlson Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class TestSecrecyNewsXmlFilterFactory extends LockssTestCase {
   private static final String inst2 =
     "<lastBuildDate>Wed, 25 May 2012 13:54:18 +0000</lastBuildDate>";
 
-  public void testFiltering() throws PluginException, IOException {
+  public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
 

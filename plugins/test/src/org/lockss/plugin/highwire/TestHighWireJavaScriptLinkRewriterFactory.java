@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireJavaScriptLinkRewriterFactory.java,v 1.2 2012-01-21 00:33:11 pgust Exp $
+ * $Id: TestHighWireJavaScriptLinkRewriterFactory.java,v 1.3 2012-09-26 20:59:28 alexandraohlson Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class TestHighWireJavaScriptLinkRewriterFactory extends LockssTestCase {
   static final String output_2 = 
     "org/lockss/plugin/highwire/HighWireJavaScriptLinkRewriter_output_2.html";
 
-  public void testCase1() throws IOException, PluginException {
+  public void testCase1() throws Exception {
     InputStream input = null;
     InputStream filtered = null;
     InputStream expected = null;
@@ -81,7 +81,7 @@ public class TestHighWireJavaScriptLinkRewriterFactory extends LockssTestCase {
     }
   }
 
-  public void testCase2() throws IOException, PluginException {
+  public void testCase2() throws Exception {
     InputStream input = null;
     InputStream filtered = null;
     InputStream expected = null;

@@ -87,35 +87,35 @@ public class TestEmeraldHtmlFilterFactory extends LockssTestCase {
 
   
   public void testToCopyFiltering() throws Exception {
-	  InputStream actIn = fact.createFilteredInputStream(mau,
-			  										     new StringInputStream(toCopyHtml),
-			  										     Constants.DEFAULT_ENCODING);
-	  
-	  assertEquals(toCopyHtmlFiltered, StringUtil.fromInputStream(actIn));
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(toCopyHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(toCopyHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
 
   public void testReleatedFiltering() throws Exception {
-	  InputStream actIn = fact.createFilteredInputStream(mau,
-			  										     new StringInputStream(releatedHtml),
-			  										     Constants.DEFAULT_ENCODING);
-	  
-	  assertEquals(releatedHtmlFiltered, StringUtil.fromInputStream(actIn));
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(releatedHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(releatedHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testPrintedFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-                                                                                                       new StringInputStream(printedHtml),
-                                                                                                       Constants.DEFAULT_ENCODING);
-    
+        new StringInputStream(printedHtml),
+        Constants.DEFAULT_ENCODING);
+
     assertEquals(printedHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testWhiteSpaceFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-                                                                                                       new StringInputStream(whiteSpaceHtml),
-                                                                                                       Constants.DEFAULT_ENCODING);
-    
+        new StringInputStream(whiteSpaceHtml),
+        Constants.DEFAULT_ENCODING);
+
     assertEquals(whiteSpaceHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
 }

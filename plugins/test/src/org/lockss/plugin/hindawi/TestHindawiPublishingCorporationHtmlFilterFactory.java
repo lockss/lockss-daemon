@@ -124,71 +124,71 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
 
   
   public void testScriptFiltering() throws Exception {
-	  InputStream actIn = fact.createFilteredInputStream(mau,
-			  										     new StringInputStream(scriptHtml),
-			  										     Constants.DEFAULT_ENCODING);
-	  
-	  assertEquals(scriptHtmlFiltered, StringUtil.fromInputStream(actIn));
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(scriptHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(scriptHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
 
   public void testStuffScriptFiltering() throws Exception {
-	  InputStream actIn = fact.createFilteredInputStream(mau,
-			  										     new StringInputStream(stuffScriptHtml),
-			  										     Constants.DEFAULT_ENCODING);
-	  
-	  assertEquals(stuffScriptHtmlFiltered, StringUtil.fromInputStream(actIn));
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(stuffScriptHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(stuffScriptHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
-  
-  
+
+
+
   public void testStuffScriptStuffFiltering() throws Exception {
-	  InputStream actIn = fact.createFilteredInputStream(mau,
-			  										     new StringInputStream(stuffScriptStuffHtml),
-			  										     Constants.DEFAULT_ENCODING);
-	  
-	  assertEquals(stuffScriptStuffHtmlFiltered, StringUtil.fromInputStream(actIn));
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(stuffScriptStuffHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(stuffScriptStuffHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
- 
-  
-  
+
+
+
   public void testLeftColumnFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-    												   new StringInputStream(leftColumnHtml),
-    												   Constants.DEFAULT_ENCODING);
-    
+        new StringInputStream(leftColumnHtml),
+        Constants.DEFAULT_ENCODING);
+
     assertEquals(leftColumnHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testViewStateFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-    												   new StringInputStream(viewStateHtml),
-    												   Constants.DEFAULT_ENCODING);
-    
+        new StringInputStream(viewStateHtml),
+        Constants.DEFAULT_ENCODING);
+
     assertEquals(viewStateHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testViewState2Filtering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau, 
-    												   new StringInputStream(viewState2Html),
-    												   Constants.DEFAULT_ENCODING);
-    
+        new StringInputStream(viewState2Html),
+        Constants.DEFAULT_ENCODING);
+
     assertEquals(viewState2HtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testEventValidationFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau, 
-    												   new StringInputStream(eventValidationHtml),
-    												   Constants.DEFAULT_ENCODING);
-    
+        new StringInputStream(eventValidationHtml),
+        Constants.DEFAULT_ENCODING);
+
     assertEquals(eventValidationHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testeventValidation2Filtering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-    												   new StringInputStream(eventValidation2Html),
-    												   Constants.DEFAULT_ENCODING);
+        new StringInputStream(eventValidation2Html),
+        Constants.DEFAULT_ENCODING);
     assertEquals(eventValidation2HtmlFiltered, StringUtil.fromInputStream(actIn));
-    
+
   }
-  
+
 }

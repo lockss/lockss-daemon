@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackwellHtmlFilterFactory.java,v 1.3 2007-05-01 22:36:44 troberts Exp $
+ * $Id: TestBlackwellHtmlFilterFactory.java,v 1.4 2012-09-26 20:59:27 alexandraohlson Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class TestBlackwellHtmlFilterFactory extends LockssTestCase {
     "</ul>" +
     "Blah, more random content";
 
-  public void testFilter() throws IOException {
+  public void testFilter() throws Exception {
     InputStream inA;
     InputStream inB;
 
@@ -110,7 +110,7 @@ public class TestBlackwellHtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(oneCitation, twoCitations);
   }
 
-  private void assertFilterToSame(String str1, String Str2) throws IOException {
+  private void assertFilterToSame(String str1, String Str2) throws Exception {
     InputStream inA = fact.createFilteredInputStream(mau, new StringInputStream(str1),
 					 Constants.DEFAULT_ENCODING);
     InputStream inB = fact.createFilteredInputStream(mau, new StringInputStream(Str2),

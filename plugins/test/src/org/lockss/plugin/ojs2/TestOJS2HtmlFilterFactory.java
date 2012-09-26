@@ -88,46 +88,46 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
 
   
   public void testSidebarKeywordCloudFiltering() throws Exception {
-	  InputStream actIn = fact.createFilteredInputStream(mau,
-			  										     new StringInputStream(sidebarKeywordCloudHtml),
-			  										     Constants.DEFAULT_ENCODING);
-	  
-	  assertEquals(sidebarKeywordCloudHtmlFiltered, StringUtil.fromInputStream(actIn));
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(sidebarKeywordCloudHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(sidebarKeywordCloudHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testSidebarSubscriptionFiltering() throws Exception {
-	  InputStream actIn = fact.createFilteredInputStream(mau,
-				  										 new StringInputStream(sidebarSubscriptionHtml),
-				  										 Constants.DEFAULT_ENCODING);
-		  
-	  assertEquals(sidebarSubscriptionHtmlFiltered, StringUtil.fromInputStream(actIn));
-    
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(sidebarSubscriptionHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(sidebarSubscriptionHtmlFiltered, StringUtil.fromInputStream(actIn));
+
   }
-  
+
   public void testCustomFiltering() throws Exception {
-	  InputStream actIn = fact.createFilteredInputStream(mau,
-				  										 new StringInputStream(customHtml),
-				  										 Constants.DEFAULT_ENCODING);
-		  
-      assertEquals(customHtmlFiltered, StringUtil.fromInputStream(actIn));
-    
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(customHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(customHtmlFiltered, StringUtil.fromInputStream(actIn));
+
   }
-  
+
   public void testDateAccessed() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-                               new StringInputStream(dateAccessedHtml),
-                               Constants.DEFAULT_ENCODING);
-      
-      assertEquals(dateAccessedHtmlFiltered, StringUtil.fromInputStream(actIn));
-    
+        new StringInputStream(dateAccessedHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(dateAccessedHtmlFiltered, StringUtil.fromInputStream(actIn));
+
   }
-  
+
   public void testHeaderImage() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-                               new StringInputStream(headerImageHtml),
-                               Constants.DEFAULT_ENCODING);
-      
-      assertEquals(headerImageHtmlFiltered, StringUtil.fromInputStream(actIn));
+        new StringInputStream(headerImageHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(headerImageHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
 }

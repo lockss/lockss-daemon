@@ -57,20 +57,20 @@ public class TestUbiquityPressHtmlFilterFactory extends LockssTestCase {
 
   
   public void testSidebarFiltering() throws Exception {
-	  InputStream actIn = fact.createFilteredInputStream(mau,
-			  										     new StringInputStream(sidebarHtml),
-			  										     Constants.DEFAULT_ENCODING);
-	  
-	  assertEquals(sidebarHtmlFiltered, StringUtil.fromInputStream(actIn));
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(sidebarHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(sidebarHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testsideStuffBarFiltering() throws Exception {
-	  InputStream actIn = fact.createFilteredInputStream(mau,
-				  										 new StringInputStream(sideStuffBarHtml),
-				  										 Constants.DEFAULT_ENCODING);
-		  
-	  assertEquals(sideStuffBarHtmlFiltered, StringUtil.fromInputStream(actIn));
-    
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(sideStuffBarHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(sideStuffBarHtmlFiltered, StringUtil.fromInputStream(actIn));
+
   }
-  
+
 }

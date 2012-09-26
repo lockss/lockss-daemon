@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsychiatryOnlineUrlNormalizer.java,v 1.3 2009-03-13 22:45:21 thib_gc Exp $
+ * $Id: TestPsychiatryOnlineUrlNormalizer.java,v 1.4 2012-09-26 20:59:28 alexandraohlson Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class TestPsychiatryOnlineUrlNormalizer extends LockssTestCase {
     urlNormalizer = new PsychiatryOnlineUrlNormalizer();
   }
 
-  public void testNormalization() throws PluginException {
+  public void testNormalization() throws Exception {
     assertEquals("http://www.example.com/foo.html?param1=value1&param2=value2",
                  urlNormalizer.normalizeUrl("http://www.example.com/foo.html?param1=value1&param2=value2", null));
     assertEquals("http://www.example.com/foo.html?param1=value1&param2=value2",

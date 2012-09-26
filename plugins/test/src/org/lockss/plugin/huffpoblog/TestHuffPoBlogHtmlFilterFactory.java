@@ -1,5 +1,5 @@
 /*
- * $Id: TestHuffPoBlogHtmlFilterFactory.java,v 1.1 2007-02-10 07:05:10 tlipkis Exp $
+ * $Id: TestHuffPoBlogHtmlFilterFactory.java,v 1.2 2012-09-26 20:59:28 alexandraohlson Exp $
  */
 
 /*
@@ -140,52 +140,52 @@ public class TestHuffPoBlogHtmlFilterFactory extends LockssTestCase {
 	  "Goodbye\n";
 
 
-  public void testAdvertFiltering() throws IOException {
+  public void testAdvertFiltering() throws Exception {
     InputStream in1 =
-      fact.createFilteredInputStream(mau, new StringInputStream(inst1),
-				     Constants.DEFAULT_ENCODING);
+        fact.createFilteredInputStream(mau, new StringInputStream(inst1),
+            Constants.DEFAULT_ENCODING);
     InputStream in2 =
-      fact.createFilteredInputStream(mau, new StringInputStream(inst2),
-				     Constants.DEFAULT_ENCODING);
+        fact.createFilteredInputStream(mau, new StringInputStream(inst2),
+            Constants.DEFAULT_ENCODING);
     assertEquals(StringUtil.fromInputStream(in1),
-		 StringUtil.fromInputStream(in2));
+        StringUtil.fromInputStream(in2));
   }
 
-  public void testWhiteSpaceFiltering() throws IOException {
+  public void testWhiteSpaceFiltering() throws Exception {
     InputStream in2 =
-      fact.createFilteredInputStream(mau,
-				     new StringInputStream(inst2),
-				     Constants.DEFAULT_ENCODING);
+        fact.createFilteredInputStream(mau,
+            new StringInputStream(inst2),
+            Constants.DEFAULT_ENCODING);
     InputStream in3 =
-      fact.createFilteredInputStream(mau,
-				     new StringInputStream(inst3),
-				     Constants.DEFAULT_ENCODING);
+        fact.createFilteredInputStream(mau,
+            new StringInputStream(inst3),
+            Constants.DEFAULT_ENCODING);
     assertEquals(StringUtil.fromInputStream(in2),
-		 StringUtil.fromInputStream(in3));
+        StringUtil.fromInputStream(in3));
   }
 
-  public void testRelatedPostFiltering() throws IOException {
+  public void testRelatedPostFiltering() throws Exception {
     InputStream in4 =
-      fact.createFilteredInputStream(mau,
-				     new StringInputStream(inst4),
-				     Constants.DEFAULT_ENCODING);
+        fact.createFilteredInputStream(mau,
+            new StringInputStream(inst4),
+            Constants.DEFAULT_ENCODING);
     InputStream in5 =
-      fact.createFilteredInputStream(mau,
-				     new StringInputStream(inst5),
-				     Constants.DEFAULT_ENCODING);
+        fact.createFilteredInputStream(mau,
+            new StringInputStream(inst5),
+            Constants.DEFAULT_ENCODING);
     assertEquals(StringUtil.fromInputStream(in4),
-		 StringUtil.fromInputStream(in5));
+        StringUtil.fromInputStream(in5));
   }
-  public void testRelatedCatFiltering() throws IOException {
+  public void testRelatedCatFiltering() throws Exception {
     InputStream in6 =
-      fact.createFilteredInputStream(mau,
-				     new StringInputStream(inst6),
-				     Constants.DEFAULT_ENCODING);
+        fact.createFilteredInputStream(mau,
+            new StringInputStream(inst6),
+            Constants.DEFAULT_ENCODING);
     InputStream in7 =
-      fact.createFilteredInputStream(mau,
-				     new StringInputStream(inst7),
-				     Constants.DEFAULT_ENCODING);
+        fact.createFilteredInputStream(mau,
+            new StringInputStream(inst7),
+            Constants.DEFAULT_ENCODING);
     assertEquals(StringUtil.fromInputStream(in6),
-		 StringUtil.fromInputStream(in7));
+        StringUtil.fromInputStream(in7));
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetaPressHtmlHashFilterFactory.java,v 1.1 2012-06-19 00:13:24 davidecorcoran Exp $
+ * $Id: TestMetaPressHtmlHashFilterFactory.java,v 1.2 2012-09-26 20:59:28 alexandraohlson Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
     "<div class=\"MetaPress_Products_Reader_Web_UI_Controls_RecognizedAsControlBody\">" +
     "Indiana University, Bloomington <nobr>(641-02-015)</nobr></div>";
 
-  public void testFiltering() throws PluginException, IOException {
+  public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
 

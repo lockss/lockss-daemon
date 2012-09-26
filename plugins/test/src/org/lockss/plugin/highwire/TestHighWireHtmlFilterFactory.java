@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireHtmlFilterFactory.java,v 1.1 2006-09-16 23:04:48 tlipkis Exp $
+ * $Id: TestHighWireHtmlFilterFactory.java,v 1.2 2012-09-26 20:59:28 alexandraohlson Exp $
  */
 
 /*
@@ -55,23 +55,23 @@ public class TestHighWireHtmlFilterFactory extends LockssTestCase {
 
   private static final String inst3 = "<FONT SIZE=\"-2\" FACE=\"verdana,arial,helvetica\">\n    <NOBR><STRONG>Institution: Stanford University Libraries</STRONG></NOBR>\n      <NOBR><A TARGET=\"_top\" HREF=\"/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F4%2F1%2F121\">Sign In as SOMETHING SOMETHING</A></NOBR>";
 
-  public void testFiltering() throws IOException {
+  public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
 
     inA = fact.createFilteredInputStream(mau,
-					 new StringInputStream(inst1), ENC);
+        new StringInputStream(inst1), ENC);
     inB = fact.createFilteredInputStream(mau,
-					 new StringInputStream(inst2), ENC);
+        new StringInputStream(inst2), ENC);
     assertEquals(StringUtil.fromInputStream(inA),
-                 StringUtil.fromInputStream(inB));
+        StringUtil.fromInputStream(inB));
 
     inA = fact.createFilteredInputStream(mau,
-					 new StringInputStream(inst1), ENC);
+        new StringInputStream(inst1), ENC);
     inB = fact.createFilteredInputStream(mau,
-					 new StringInputStream(inst3), ENC);
+        new StringInputStream(inst3), ENC);
     assertEquals(StringUtil.fromInputStream(inA),
-                 StringUtil.fromInputStream(inB));
+        StringUtil.fromInputStream(inB));
   }
 
 }

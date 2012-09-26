@@ -139,56 +139,56 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 
   public void testSibebarFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-    												   new StringInputStream(sidebarHtml),
-    												   Constants.DEFAULT_ENCODING);
-    
+        new StringInputStream(sidebarHtml),
+        Constants.DEFAULT_ENCODING);
+
     assertEquals(sidebarHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testInputKeysFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-    												   new StringInputStream(inputKeysHtml),
-    												   Constants.DEFAULT_ENCODING);
-    
+        new StringInputStream(inputKeysHtml),
+        Constants.DEFAULT_ENCODING);
+
     assertEquals(inputKeysHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testCitationHeaderFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau, 
-    												   new StringInputStream(citationHtml),
-    												   Constants.DEFAULT_ENCODING);
-    
+        new StringInputStream(citationHtml),
+        Constants.DEFAULT_ENCODING);
+
     assertEquals(citationHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testTrialImageFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau, 
-    												   new StringInputStream(trialImageHtml),
-    												   Constants.DEFAULT_ENCODING);
-    
+        new StringInputStream(trialImageHtml),
+        Constants.DEFAULT_ENCODING);
+
     assertEquals(trialImageHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testGoodHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-    												   new StringInputStream(goodHtml),
-    												   Constants.DEFAULT_ENCODING);
+        new StringInputStream(goodHtml),
+        Constants.DEFAULT_ENCODING);
     assertEquals(goodHtml, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void testJavascriptHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-    											       new StringInputStream(javascriptHtml),
-    											       Constants.DEFAULT_ENCODING);
-    
+        new StringInputStream(javascriptHtml),
+        Constants.DEFAULT_ENCODING);
+
     assertEquals(javascriptHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
   public void testInstitutionHeaderHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-    											       new StringInputStream(institutionHeaderHtml),
-    											       Constants.DEFAULT_ENCODING);
-    
+        new StringInputStream(institutionHeaderHtml),
+        Constants.DEFAULT_ENCODING);
+
     assertEquals(institutionHeaderHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
 }

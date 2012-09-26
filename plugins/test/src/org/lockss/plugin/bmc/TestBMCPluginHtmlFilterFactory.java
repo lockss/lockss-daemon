@@ -1,5 +1,5 @@
 /*
- * $Id: TestBMCPluginHtmlFilterFactory.java,v 1.1 2012-05-04 20:28:45 akanshab01 Exp $
+ * $Id: TestBMCPluginHtmlFilterFactory.java,v 1.2 2012-09-26 20:59:28 alexandraohlson Exp $
  */
 
 /*
@@ -61,13 +61,12 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
   private static final String inst2 = "<ul>Fill in SOMETHING SOMETHING</ul>";
   
  
-  public void testFiltering() throws IOException {
+  public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
     InputStream inC;
     InputStream inD;
 
-    try {
       inA = fact.createFilteredInputStream(mau, new StringInputStream(inst1),
           ENC);
       inB = fact.createFilteredInputStream(mau, new StringInputStream(inst2),
@@ -81,10 +80,6 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
           StringUtil.fromInputStream(inB));
     assertEquals(StringUtil.fromInputStream(inC),
           StringUtil.fromInputStream(inD));
-    } catch (PluginException e) {
-       e.printStackTrace();
-    }
-
   }
 
 }

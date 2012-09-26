@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.4 2012-09-19 18:51:41 alexandraohlson Exp $
+ * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.5 2012-09-26 20:59:28 alexandraohlson Exp $
  */
 
 /*
@@ -101,91 +101,62 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
           "<h2 class=\"active\" id=\"citations\">Cited by</h2> " +
           "</div>";
 
-  public void testFiltering() throws IOException {
+  public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
 
-    try {
-      inA = fact.createFilteredInputStream(mau, new StringInputStream(inst1),
-          ENC);
-      inB = fact.createFilteredInputStream(mau, new StringInputStream(inst2),
-          ENC);
-      
+    /* inst1 test */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst1),
+        ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(inst2),
+        ENC);
+
     assertEquals(StringUtil.fromInputStream(inA),
-          StringUtil.fromInputStream(inB));
-    
+        StringUtil.fromInputStream(inB));
 
-    } catch (PluginException e) {
-       e.printStackTrace();
-    }
-    
-    try {
-      inA = fact.createFilteredInputStream(mau, new StringInputStream(articlesTab1),
-          ENC);
-      inB = fact.createFilteredInputStream(mau, new StringInputStream(articlesTab2),
-          ENC);
-      
+
+    /* articlesTab test */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(articlesTab1),
+        ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(articlesTab2),
+        ENC);
+
     assertEquals(StringUtil.fromInputStream(inA),
-          StringUtil.fromInputStream(inB));
-    
+        StringUtil.fromInputStream(inB));
 
-    } catch (PluginException e) {
-       e.printStackTrace();
-    }
-    
-    try {
-      inA = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpace1),
-          ENC);
-      inB = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpace2),
-          ENC);
-      
+    /* whiteSpace test */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpace1),
+        ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpace2),
+        ENC);
+
     assertEquals(StringUtil.fromInputStream(inA),
-          StringUtil.fromInputStream(inB));
-    
+        StringUtil.fromInputStream(inB));
 
-    } catch (PluginException e) {
-       e.printStackTrace();
-    }
-    
-    try {
-     
-      inA = fact.createFilteredInputStream(mau, new StringInputStream(impactFactorHtmlHash),
-          ENC);
-      
-      assertEquals(impactFactorHtmlHashFiltered,StringUtil.fromInputStream(inA));
+    /* impactFactor test */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(impactFactorHtmlHash),
+        ENC);
 
-      } catch (PluginException e) {
-         e.printStackTrace();
-      }
-    try {
-        inA = fact.createFilteredInputStream(mau, new StringInputStream(accessHtmlHash),
-            ENC);
-        
-      assertEquals(accessHtmlHashFiltered,StringUtil.fromInputStream(inA));
-      
+    assertEquals(impactFactorHtmlHashFiltered,StringUtil.fromInputStream(inA));
 
-      } catch (PluginException e) {
-         e.printStackTrace();
-      }
-    try {
-      inA = fact.createFilteredInputStream(mau, new StringInputStream(accessesBlockHtml),
-          ENC);
+    /* access test */     
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(accessHtmlHash),
+        ENC);
 
-      assertEquals(accessesBlockHtmlFiltered,StringUtil.fromInputStream(inA));
+    assertEquals(accessHtmlHashFiltered,StringUtil.fromInputStream(inA));
+
+    /* access block */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(accessesBlockHtml),
+        ENC);
+
+    assertEquals(accessesBlockHtmlFiltered,StringUtil.fromInputStream(inA));
 
 
-    } catch (PluginException e) {
-      e.printStackTrace();
-    }
-    try {
-      inA = fact.createFilteredInputStream(mau, new StringInputStream(citationsBlockHtml),
-          ENC);
+    /* citations block */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(citationsBlockHtml),
+        ENC);
 
-      assertEquals(citationsBlockHtmlFiltered,StringUtil.fromInputStream(inA));
+    assertEquals(citationsBlockHtmlFiltered,StringUtil.fromInputStream(inA));
 
-
-    } catch (PluginException e) {
-      e.printStackTrace();
-    }
   }
 }

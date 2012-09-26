@@ -126,70 +126,70 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
 	  
 	  public void testSfxLinkHtmlHashFiltering() throws Exception {
 	    InputStream actIn = fact.createFilteredInputStream(mau,
-	    												   new StringInputStream(sfxLinkHtmlHash),
-	    												   Constants.DEFAULT_ENCODING);
-	    
+	        new StringInputStream(sfxLinkHtmlHash),
+	        Constants.DEFAULT_ENCODING);
+
 	    assertEquals(sfxLinkHtmlHashFiltered, StringUtil.fromInputStream(actIn));
 	  }
-	  
+
 	  public void testBrandingHtmlHashFiltering() throws Exception {
 	    InputStream actIn = fact.createFilteredInputStream(mau,
-	    												   new StringInputStream(brandingHtmlHash),
-	    												   Constants.DEFAULT_ENCODING);
-	    
+	        new StringInputStream(brandingHtmlHash),
+	        Constants.DEFAULT_ENCODING);
+
 	    assertEquals(brandingHtmlHashFiltered, StringUtil.fromInputStream(actIn));
 	  }
-	  
+
 	  public void testRssHtmlHashFiltering() throws Exception {
 	    InputStream actIn = fact.createFilteredInputStream(mau,
-	    												   new StringInputStream(rssHtmlHash),
-	    												   Constants.DEFAULT_ENCODING);
-	    
+	        new StringInputStream(rssHtmlHash),
+	        Constants.DEFAULT_ENCODING);
+
 	    assertEquals(rssHtmlHashFiltered, StringUtil.fromInputStream(actIn));
 	  }
-	  
+
 	  public void testRssLinkHtmlHashFiltering() throws Exception {
 	    InputStream actIn = fact.createFilteredInputStream(mau,
-	    												   new StringInputStream(rssLinkHtmlHash),
-	    												   Constants.DEFAULT_ENCODING);
-	    
+	        new StringInputStream(rssLinkHtmlHash),
+	        Constants.DEFAULT_ENCODING);
+
 	    assertEquals(rssLinkHtmlHashFiltered, StringUtil.fromInputStream(actIn));
 	  }
-	  
+
 	  public void testCreditsHtmlHashFiltering() throws Exception {
 	    InputStream actIn = fact.createFilteredInputStream(mau,
-	    												   new StringInputStream(creditsHtmlHash),
-	    												   Constants.DEFAULT_ENCODING);
-	    												   
+	        new StringInputStream(creditsHtmlHash),
+	        Constants.DEFAULT_ENCODING);
+
 	    assertEquals(creditsHtmlHashFiltered, StringUtil.fromInputStream(actIn));
 	  }
-	  
+
 	  public void testJavascriptHtmlHashFiltering() throws Exception {
 	    InputStream actIn = fact.createFilteredInputStream(mau, 
-	    												   new StringInputStream(javascriptHtmlHash),
-	    												   Constants.DEFAULT_ENCODING);
-	    
+	        new StringInputStream(javascriptHtmlHash),
+	        Constants.DEFAULT_ENCODING);
+
 	    assertEquals(javascriptHtmlHashFiltered, StringUtil.fromInputStream(actIn));
 	  }
-	  
-	  
-	  
+
+
+
 	  public void testAccessHtmlHashFiltering() throws Exception {
 	    InputStream actIn = fact.createFilteredInputStream(mau, 
-	    												   new StringInputStream(accessHtmlHash),
-	    												   Constants.DEFAULT_ENCODING);
-	    
+	        new StringInputStream(accessHtmlHash),
+	        Constants.DEFAULT_ENCODING);
+
 	    assertEquals(accessHtmlHashFiltered, StringUtil.fromInputStream(actIn));
 	  }
-	  
+
 	  public void testLinkoutHtmlHashFiltering() throws Exception {
 	    InputStream actIn = fact.createFilteredInputStream(mau, 
-	    												   new StringInputStream(linkoutHtmlHash),
-	    												   Constants.DEFAULT_ENCODING);
-	    
+	        new StringInputStream(linkoutHtmlHash),
+	        Constants.DEFAULT_ENCODING);
+
 	    assertEquals(linkoutHtmlHashFiltered, StringUtil.fromInputStream(actIn));
 	  }
-	  
+
   }
 
   public static Test suite() {

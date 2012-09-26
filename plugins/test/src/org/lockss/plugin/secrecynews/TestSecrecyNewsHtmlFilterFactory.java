@@ -1,5 +1,5 @@
 /*
- * $Id: TestSecrecyNewsHtmlFilterFactory.java,v 1.3 2012-06-18 21:43:16 davidecorcoran Exp $
+ * $Id: TestSecrecyNewsHtmlFilterFactory.java,v 1.4 2012-09-26 20:59:28 alexandraohlson Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class TestSecrecyNewsHtmlFilterFactory extends LockssTestCase {
     "<li><h2>Archives</h2><ul><li><a href='http://www.fas.org/blog/secrecy/2012/05' title='May 2012'>May 2012</a></li></ul></li>" +
     "<li class=\"categories\"><h2><Categories</h2><ul><li class=\"cat-item cat-item-3\"><a href=\"http://www.fas.org/blog/secrecy/category/crs\" title=\"View all posts filed under CRS\">CRS</a> 117)</li></ul>";
 
-  public void testFiltering() throws PluginException, IOException {
+  public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
 
