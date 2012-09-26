@@ -23,15 +23,15 @@
     au < testing ; 1990 ; Information Resources Management Journal (IRMJ) Volume 3 ; 3 > 
     au < testing ; 1991 ; Information Resources Management Journal (IRMJ) Volume 4 ; 4 > 
     au < testing ; 1992 ; Information Resources Management Journal (IRMJ) Volume 5 ; 5 > 
-    au < testing ; 1993 ; Information Resources Management Journal (IRMJ) Volume 6 ; 6 > 
+    au < ready ; 1993 ; Information Resources Management Journal (IRMJ) Volume 6 ; 6 > 
     au < testing ; 1994 ; Information Resources Management Journal (IRMJ) Volume 7 ; 7 > 
-    au < testing ; 1995 ; Information Resources Management Journal (IRMJ) Volume 8 ; 8 > 
+    au < ready ; 1995 ; Information Resources Management Journal (IRMJ) Volume 8 ; 8 > 
     au < testing ; 1996 ; Information Resources Management Journal (IRMJ) Volume 9 ; 9 > 
     au < testing ; 1997 ; Information Resources Management Journal (IRMJ) Volume 10 ; 10 > 
     au < testing ; 1998 ; Information Resources Management Journal (IRMJ) Volume 11 ; 11 > 
-    au < testing ; 1999 ; Information Resources Management Journal (IRMJ) Volume 12 ; 12 > 
-    au < testing ; 2000 ; Information Resources Management Journal (IRMJ) Volume 13 ; 13 > 
-    au < testing ; 2001 ; Information Resources Management Journal (IRMJ) Volume 14 ; 14 > 
+    au < ready ; 1999 ; Information Resources Management Journal (IRMJ) Volume 12 ; 12 > 
+    au < ready ; 2000 ; Information Resources Management Journal (IRMJ) Volume 13 ; 13 > 
+    au < ready ; 2001 ; Information Resources Management Journal (IRMJ) Volume 14 ; 14 > 
     au < testing ; 2002 ; Information Resources Management Journal (IRMJ) Volume 15 ; 15 > 
     au < testing ; 2003 ; Information Resources Management Journal (IRMJ) Volume 16 ; 16 > 
     au < testing ; 2004 ; Information Resources Management Journal (IRMJ) Volume 17 ; 17 > 
@@ -112,8 +112,8 @@
     >
 	param[journal_issn] = 1942-535x
 	
-    au < testing ; 2009 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 1 ; 1 > 
-    au < testing ; 2010 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 2 ; 2 > 
+    au < ready ; 2009 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 1 ; 1 > 
+    au < ready ; 2010 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 2 ; 2 > 
     au < testing ; 2011 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 3 ; 3 > 
     au < manifest ; 2012 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 4 ; 4 > 
 
@@ -129,7 +129,7 @@
     >
 	param[journal_issn] = 1947-9220
 
-    au < testing ; 2010 ; International Journal of Adaptive, Resilient and Autonomic Systems (IJARAS) Volume 1 ; 1 > 
+    au < ready ; 2010 ; International Journal of Adaptive, Resilient and Autonomic Systems (IJARAS) Volume 1 ; 1 > 
     au < testing ; 2011 ; International Journal of Adaptive, Resilient and Autonomic Systems (IJARAS) Volume 2 ; 2 > 
     au < manifest ; 2012 ; International Journal of Adaptive, Resilient and Autonomic Systems (IJARAS) Volume 3 ; 3 > 
 
