@@ -2451,6 +2451,19 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Extreme Physiology & Medicine ;
+        issn = 2046-7648
+      >
+      
+      param[base_url] = http://www.extremephysiolmed.com/
+      param[journal_issn] = 2046-7648
+
+      au < exists ; 2012 ; Extreme Physiology & Medicine Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Fluids and Barriers of the CNS ;
         issn = 2045-8118 ;
         issnl = 2045-8118
@@ -3529,6 +3542,19 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2010 ; Lipids in Health and Disease Volume 9 ; 9 >
       au < released ; 2011 ; Lipids in Health and Disease Volume 10 ; 10 >
       au < manifest ; 2012 ; Lipids in Health and Disease Volume 11 ; 11 >
+
+    }
+
+    {
+      title <
+        name = Longevity & Healthspan ;
+        issn = 2046-2395
+      >
+      
+      param[base_url] = http://www.longevityandhealthspan.com/
+      param[journal_issn] = 2046-2395
+
+      au < exists ; 2012 ; Longevity & Healthspan Volume 1 ; 1 >
 
     }
 
