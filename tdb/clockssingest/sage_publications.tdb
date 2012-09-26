@@ -683,6 +683,24 @@
 
   {
     title <
+      name = Agrarian South: Journal of Political Economy ;
+      issn = 2277-9760
+    >
+	
+      param[base_url] = http://ags.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2012 ; Agrarian South: Journal of Political Economy Volume 1 ; 1 ; >
+	
+    }
+
+  }
+
+  {
+    title <
       name = Alternatives: Global, Local, Political ;
       issn = 0304-3754
     >
@@ -4852,6 +4870,25 @@
 
     }
     
+  }
+
+  {
+    title <
+      name = Clinical Psychological Science ;
+      issn = 2167-7026 ;
+      eissn = 2167-7034
+    >
+	
+      param[base_url] = http://cpx.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2012 ; Clinical Psychological Science Volume OnlineFirst ; 1 ; >
+	
+    }
+
   }
 
   {
@@ -31661,6 +31698,24 @@
       au < released ; crawling ; 2011 ; South Asia Economic Journal Volume 12 ; 12 ; >
       au < crawling ; exists ; 2012 ; South Asia Economic Journal Volume 13 ; 13 ; >
 
+    }
+
+  }
+
+  {
+    title <
+      name = South Asian Journal of Business and Management Cases ;
+      issn = 2277-9779
+    >
+	
+      param[base_url] = http://bmc.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2012 ; South Asian Journal of Business and Management Cases Volume 1 ; 1 ; >
+	
     }
 
   }
