@@ -36,4 +36,19 @@
 
   }
 
+  {
+
+    title <
+      name = Applications in Plant Sciences ;
+      issn =
+    >
+    
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin 
+    param[base_url] = 
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < expected ; 2012 ; Applications in Plant Sciences Volume 1 ; 1 >
+    
+  }
+
 }
