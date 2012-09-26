@@ -1,0 +1,41 @@
+{
+
+  publisher <
+    name = Association des Amis des Cryptogames
+  >
+
+  plugin =  
+  implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Cryptogamie, Algologie ;
+      issn = 
+    >
+    
+     comment[0] = coming 2013
+ 
+  }
+  
+  {
+    title <
+      name = Cryptogamie, Bryologie ;
+      issn = 
+    >
+    
+     comment[0] = coming 2013
+ 
+  }
+  
+  {
+    title <
+      name = Cryptogamie, Mycologie ;
+      issn = 
+    >
+    
+     comment[0] = coming 2013
+ 
+  }
+  
+}

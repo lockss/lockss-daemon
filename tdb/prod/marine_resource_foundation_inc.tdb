@@ -1,0 +1,21 @@
+{
+
+  publisher <
+    name = Marine Resource Foundation, Inc.
+  >
+
+  plugin =  
+  implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Marine Resource Economics ;
+      issn = 
+    >
+    
+     comment[0] = coming 2013
+ 
+  }
+  
+}
