@@ -802,11 +802,11 @@
       param[base_url] = http://ecl.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < ighWirePressH20Plugin ; exists ; 2000 ; Eighteenth-Century Life Volume 24 ; 24 >
-      au < ighWirePressH20Plugin ; exists ; 2001 ; Eighteenth-Century Life Volume 25 ; 25 >
-      au < ighWirePressH20Plugin ; exists ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 >
-      au < ighWirePressH20Plugin ; exists ; 2003 ; Eighteenth-Century Life Volume 27 ; 27 >
-      au < ighWirePressH20Plugin ; exists ; 2004 ; Eighteenth-Century Life Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; exists ; 2000 ; Eighteenth-Century Life Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; Eighteenth-Century Life Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; Eighteenth-Century Life Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; Eighteenth-Century Life Volume 28 ; 28 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >
