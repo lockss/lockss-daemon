@@ -34925,7 +34925,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://bmc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2012 ; South Asian Journal of Business and Management Cases Volume 1 ; 1 >
+        au < manifest ; 2012 ; South Asian Journal of Business and Management Cases Volume 1 ; 1 >
 
       }
 
