@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsRequestRecorder.java,v 1.3 2012-09-17 22:23:45 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestRecorder.java,v 1.4 2012-09-27 21:10:46 fergaloy-sf Exp $
  */
 
 /*
@@ -113,9 +113,18 @@ public class CounterReportsRequestRecorder {
       PublisherContacted contacted, int publisherCode) {
     try {
       final String DEBUG_HEADER = "recordRequest(): ";
-      log.debug2(DEBUG_HEADER + "url = '" + url + "'.");
+      CounterReportsManager counterReportsManager =
+	  LockssDaemon.getLockssDaemon().getCounterReportsManager();
+      
+      // Check whether the COUNTER reports manager is disabled.
+      if (!counterReportsManager.isReady()) {
+	// Yes: Do nothing.
+	log.debug2(DEBUG_HEADER + "Done: COUNTER reports manager is disabled.");
+	return;
+      }
 
-      // Get the metadata identifier of the URL.
+      // No: Get the metadata identifier of the URL.
+      log.debug2(DEBUG_HEADER + "url = '" + url + "'.");
       Long mdId = findMatchingFullTextMetadataId(url);
 
       // Do nothing more if it is not a request needed for any report.
@@ -131,8 +140,7 @@ public class CounterReportsRequestRecorder {
       title.identify();
 
       // Persist the request data.
-      LockssDaemon.getLockssDaemon().getCounterReportsManager()
-	  .persistRequest(title, requestData);
+      counterReportsManager.persistRequest(title, requestData);
       log.debug2(DEBUG_HEADER + "Done.");
     } catch (SQLException sqle) {
       log.error("Cannot persist request - Statistics not collected", sqle);

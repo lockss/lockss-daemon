@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsManager.java,v 1.4 2012-08-28 17:34:34 fergaloy-sf Exp $
+ * $Id: CounterReportsManager.java,v 1.5 2012-09-27 21:10:46 fergaloy-sf Exp $
  */
 
 /*
@@ -60,7 +60,23 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
   // Prefix for the reporting configuration entries.
   public static final String PREFIX = Configuration.PREFIX + "report.";
 
-  /*
+  /**
+   * Indication of whether the COUNTER reports subsystem should be enabled.
+   * <p />
+   * Defaults to false. If the COUNTER reports subsystem is not enabled, no
+   * statistics are collected or aggregated. Changes require daemon restart.
+   */
+  public static final String PARAM_COUNTER_ENABLED = PREFIX + "counterEnabled";
+
+  /**
+   * Default value of COUNTER reports subsystem operation configuration
+   * parameter.
+   * <p />
+   * <code>false</code> to disable, <code>true</code> to enable.
+   */
+  public static final boolean DEFAULT_COUNTER_ENABLED = false;
+
+  /**
    * Base directory for reporting.<p /> Defaults to
    * <code><i>daemon_tmpdir</i>/report</code>. Changes require daemon restart.
    */
@@ -72,7 +88,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
   public static final String DEFAULT_REPORT_BASEDIR_PATH = "<tmpdir>/"
       + DEFAULT_REPORT_BASEDIR;
 
-  /*
+  /**
    * Name of the directory used to store the report output files. <p /> Defaults
    * to <code>output</code>. Changes require daemon restart.
    */
@@ -298,13 +314,20 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
   /**
    * Handles configuration parameters.
    * 
-   * @return <code>true</code> if the configuration is successful,
+   * @return <code>true</code> if the configuration is enabled and successful,
    *         <code>false</code> otherwise.
    */
   private boolean configure() {
     final String DEBUG_HEADER = "configure(): ";
     // Get the current configuration.
     Configuration config = ConfigManager.getCurrentConfig();
+
+    // Check whether COUNTER reports should be disabled.
+    if (!config.getBoolean(PARAM_COUNTER_ENABLED, DEFAULT_COUNTER_ENABLED)) {
+      // Yes: Do nothing more.
+      log.debug2(DEBUG_HEADER + "COUNTER reports are disabled.");
+      return false;
+    }
 
     // Specify the configured base directory for the reporting files.
     reportDir =
