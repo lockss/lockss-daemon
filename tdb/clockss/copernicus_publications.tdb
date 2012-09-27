@@ -1,0 +1,343 @@
+{
+
+  publisher <
+    name = Copernicus Publications ;
+    info[contract] = 2012 ;
+    info[tester] = 
+
+  >
+
+    attr[contract] = 2012
+    plugin = need.plugin
+    implicit < status1 ; status ; year ; name ; param[volume_name] >
+
+  {
+    title <
+      name = Advances in Geosciences (ADGEO) ;
+      issn = 1680-7340 ;
+      eissn = 1680-7359
+    >
+    
+      param[base_url] = http://www.adv-geosci.net
+
+      au < exists ; exists ; 2003 ; Advances in Geosciences (ADGEO) Volume 1 ; 1 >
+      au < exists ; exists ; 2005 ; Advances in Geosciences (ADGEO) Volume 2 ; 2 >
+      au < exists ; exists ; 2005 ; Advances in Geosciences (ADGEO) Volume 3 ; 3 >
+      au < exists ; exists ; 2005 ; Advances in Geosciences (ADGEO) Volume 4 ; 4 >
+      au < exists ; exists ; 2005 ; Advances in Geosciences (ADGEO) Volume 5 ; 5 >
+      au < exists ; exists ; 2006 ; Advances in Geosciences (ADGEO) Volume 6 ; 6 >
+      au < exists ; exists ; 2006 ; Advances in Geosciences (ADGEO) Volume 7 ; 7 >
+      au < exists ; exists ; 2006 ; Advances in Geosciences (ADGEO) Volume 8 ; 8 >
+      au < exists ; exists ; 2006 ; Advances in Geosciences (ADGEO) Volume 9 ; 9 >
+      au < exists ; exists ; 2007 ; Advances in Geosciences (ADGEO) Volume 10 ; 10 >
+      au < exists ; exists ; 2007 ; Advances in Geosciences (ADGEO) Volume 11 ; 11 >
+      au < exists ; exists ; 2007 ; Advances in Geosciences (ADGEO) Volume 12 ; 12 >
+      au < exists ; exists ; 2007 ; Advances in Geosciences (ADGEO) Volume 13 ; 13 >
+      au < exists ; exists ; 2008 ; Advances in Geosciences (ADGEO) Volume 14 ; 14 >
+      au < exists ; exists ; 2008 ; Advances in Geosciences (ADGEO) Volume 15 ; 15 >
+      au < exists ; exists ; 2008 ; Advances in Geosciences (ADGEO) Volume 16 ; 16 >
+      au < exists ; exists ; 2008 ; Advances in Geosciences (ADGEO) Volume 17 ; 17 >
+      au < exists ; exists ; 2008 ; Advances in Geosciences (ADGEO) Volume 18 ; 18 >
+      au < exists ; exists ; 2008 ; Advances in Geosciences (ADGEO) Volume 19 ; 19 >
+      au < exists ; exists ; 2009 ; Advances in Geosciences (ADGEO) Volume 20 ; 20 >
+      au < exists ; exists ; 2009 ; Advances in Geosciences (ADGEO) Volume 21 ; 21 >
+      au < exists ; exists ; 2009 ; Advances in Geosciences (ADGEO) Volume 22 ; 22 >
+      au < exists ; exists ; 2010 ; Advances in Geosciences (ADGEO) Volume 23 ; 23 >
+      au < exists ; exists ; 2010 ; Advances in Geosciences (ADGEO) Volume 24 ; 24 >
+      au < exists ; exists ; 2010 ; Advances in Geosciences (ADGEO) Volume 25 ; 25 >
+      au < exists ; exists ; 2010 ; Advances in Geosciences (ADGEO) Volume 26 ; 26 >
+      au < exists ; exists ; 2010 ; Advances in Geosciences (ADGEO) Volume 27 ; 27 >
+      au < exists ; exists ; 2010 ; Advances in Geosciences (ADGEO) Volume 28 ; 28 >
+      au < exists ; exists ; 2011 ; Advances in Geosciences (ADGEO) Volume 29 ; 29 >
+      au < exists ; exists ; 2011 ; Advances in Geosciences (ADGEO) Volume 30 ; 30 >
+      au < exists ; exists ; 2012 ; Advances in Geosciences (ADGEO) Volume 31 ; 31 >
+    
+   }
+    
+  {
+    title <
+      name = Advances in Radio Science (ARS) ;
+      issn = 1684-9965 ;
+      eissn = 1684-9973
+    >
+    
+      param[base_url] = http://www.adv-radio-sci.net/
+
+      au < exists ; exists ; 2003 ; Advances in Radio Science (ARS) 2002 Volume 1 ; 1 >
+      au < exists ; exists ; 2004 ; Advances in Radio Science (ARS) 2003 Volume 2 ; 2 >
+      au < exists ; exists ; 2005 ; Advances in Radio Science (ARS) 2004 Volume 3 ; 3 >
+      au < exists ; exists ; 2006 ; Advances in Radio Science (ARS) 2005 Volume 4 ; 4 >
+      au < exists ; exists ; 2007 ; Advances in Radio Science (ARS) 2006 Volume 5 ; 5 >
+      au < exists ; exists ; 2008 ; Advances in Radio Science (ARS) 2007 Volume 6 ; 6 >
+      au < exists ; exists ; 2009 ; Advances in Radio Science (ARS) 2008 Volume 7 ; 7 >
+      au < exists ; exists ; 2010 ; Advances in Radio Science (ARS) 2009 Volume 8 ; 8 >
+      au < exists ; exists ; 2011 ; Advances in Radio Science (ARS) 2010 Volume 9 ; 9 >
+      au < exists ; exists ; 2012 ; Advances in Radio Science (ARS) 2011 Volume 10 ; 10 >
+    
+   }
+    
+  {
+    title <
+      name = Advances in Science and Research (ASR) ;
+      issn = 1992-0628 ;
+      eissn = 1992-0636
+    >
+    
+      param[base_url] = http://www.adv-sci-res.net
+
+      au < exists ; exists ; 2007 ; Advances in Science and Research (ASR) 2006 Volume 1 ; 1 >
+      au < exists ; exists ; 2008 ; Advances in Science and Research (ASR) 2007 Volume 2 ; 2 >
+      au < exists ; exists ; 2009 ; Advances in Science and Research (ASR) 2008 Volume 3 ; 3 >
+      au < exists ; exists ; 2010 ; Advances in Science and Research (ASR) 2009 Volume 4 ; 4 >
+      au < exists ; exists ; 2010 ; Advances in Science and Research (ASR) 2010 Volume 5 ; 5 >
+      au < exists ; exists ; 2011 ; Advances in Science and Research (ASR) 2010 Volume 6 ; 6 >
+      au < exists ; exists ; 2011 ; Advances in Science and Research (ASR) 2011 Volume 7 ; 7 >
+      au < exists ; exists ; 2012 ; Advances in Science and Research (ASR) 2011 Volume 8 ; 8 >
+    
+   }
+    
+  {
+    title <
+      name = Annales Geophysicae (ANGEO) ;
+      issn = 0992-7689 ;
+      eissn = 1432-0576
+    >
+    
+      param[base_url] = http://www.ann-geophys.net
+
+      au < exists ; exists ; 1994 ; Annales Geophysicae (ANGEO) Volume 12 ; 12 >
+      au < exists ; exists ; 1995 ; Annales Geophysicae (ANGEO) Volume 13 ; 13 >
+      au < exists ; exists ; 1996 ; Annales Geophysicae (ANGEO) Volume 14 ; 14 >
+      au < exists ; exists ; 1997 ; Annales Geophysicae (ANGEO) Volume 15 ; 15 >
+      au < exists ; exists ; 1998 ; Annales Geophysicae (ANGEO) Volume 16 ; 16 >
+      au < exists ; exists ; 1999 ; Annales Geophysicae (ANGEO) Volume 17 ; 17 >
+      au < exists ; exists ; 2000 ; Annales Geophysicae (ANGEO) Volume 18 ; 18 >
+      au < exists ; exists ; 2001 ; Annales Geophysicae (ANGEO) Volume 19 ; 19 >
+      au < exists ; exists ; 2002 ; Annales Geophysicae (ANGEO) Volume 20 ; 20 >
+      au < exists ; exists ; 2003 ; Annales Geophysicae (ANGEO) Volume 21 ; 21 >
+      au < exists ; exists ; 2004 ; Annales Geophysicae (ANGEO) Volume 22 ; 22 >
+      au < exists ; exists ; 2005 ; Annales Geophysicae (ANGEO) Volume 23 ; 23 >
+      au < exists ; exists ; 2006 ; Annales Geophysicae (ANGEO) Volume 24 ; 24 >
+      au < exists ; exists ; 2007 ; Annales Geophysicae (ANGEO) Volume 25 ; 25 >
+      au < exists ; exists ; 2008 ; Annales Geophysicae (ANGEO) Volume 26 ; 26 >
+      au < exists ; exists ; 2009 ; Annales Geophysicae (ANGEO) Volume 27 ; 27 >
+      au < exists ; exists ; 2010 ; Annales Geophysicae (ANGEO) Volume 28 ; 28 >
+      au < exists ; exists ; 2011 ; Annales Geophysicae (ANGEO) Volume 29 ; 29 >
+      au < exists ; exists ; 2012 ; Annales Geophysicae (ANGEO) Volume 30 ; 30 >
+    
+   }
+    
+  {
+    title <
+      name = Astrophysics and Space Sciences Transactions (ASTRA) ;
+      issn = 1810-6528 ;
+      eissn = 1810-6536
+    >
+    
+      param[base_url] = http://www.astrophys-space-sci-trans.net
+
+      au < exists ; exists ; 2005 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 1 ; 1 >
+      au < exists ; exists ; 2006 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 2 ; 2 >
+      au < exists ; exists ; 2007 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 3 ; 3 >
+      au < exists ; exists ; 2008 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 4 ; 4 >
+      au < exists ; exists ; 2009 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 5 ; 5 >
+      au < exists ; exists ; 2010 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 6 ; 6 >
+      au < exists ; exists ; 2011 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 7 ; 7 >
+      au < exists ; exists ; 2012 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 8 ; 8 >
+    
+   }
+    
+  {
+    title <
+      name = Atmospheric Chemistry and Physics (ACP) ;
+      issn = 1680-7316 ;
+      eissn = 1680-7324
+    >
+    
+      param[base_url] = http://www.atmos-chem-phys.net
+
+      au < exists ; exists ; 2001 ; Atmospheric Chemistry and Physics (ACP) Volume 1 ; 1 >
+      au < exists ; exists ; 2002 ; Atmospheric Chemistry and Physics (ACP) Volume 2 ; 2 >
+      au < exists ; exists ; 2003 ; Atmospheric Chemistry and Physics (ACP) Volume 3 ; 3 >
+      au < exists ; exists ; 2004 ; Atmospheric Chemistry and Physics (ACP) Volume 4 ; 4 >
+      au < exists ; exists ; 2005 ; Atmospheric Chemistry and Physics (ACP) Volume 5 ; 5 >
+      au < exists ; exists ; 2006 ; Atmospheric Chemistry and Physics (ACP) Volume 6 ; 6 >
+      au < exists ; exists ; 2007 ; Atmospheric Chemistry and Physics (ACP) Volume 7 ; 7 >
+      au < exists ; exists ; 2008 ; Atmospheric Chemistry and Physics (ACP) Volume 8 ; 8 >
+      au < exists ; exists ; 2009 ; Atmospheric Chemistry and Physics (ACP) Volume 9 ; 9 >
+      au < exists ; exists ; 2010 ; Atmospheric Chemistry and Physics (ACP) Volume 10 ; 10 >
+      au < exists ; exists ; 2011 ; Atmospheric Chemistry and Physics (ACP) Volume 11 ; 11 >
+      au < exists ; exists ; 2012 ; Atmospheric Chemistry and Physics (ACP) Volume 12 ; 12 >
+    
+   }
+    
+  {
+    title <
+      name = Atmospheric Chemistry and Physics Discussions (ACPD) ;
+      eissn = 1680-7375
+    >
+    
+      param[base_url] = http://www.atmos-chem-phys-discuss.net
+
+      au < exists ; exists ; 2001 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 1 ; 1 >
+      au < exists ; exists ; 2002 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 2 ; 2 >
+      au < exists ; exists ; 2003 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 3 ; 3 >
+      au < exists ; exists ; 2004 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 4 ; 4 >
+      au < exists ; exists ; 2005 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 5 ; 5 >
+      au < exists ; exists ; 2006 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 6 ; 6 >
+      au < exists ; exists ; 2007 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 7 ; 7 >
+      au < exists ; exists ; 2008 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 8 ; 8 >
+      au < exists ; exists ; 2009 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 9 ; 9 >
+      au < exists ; exists ; 2010 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 10 ; 10 >
+      au < exists ; exists ; 2011 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 11 ; 11 >
+      au < exists ; exists ; 2012 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 12 ; 12 >
+    
+   }
+    
+  {
+    title <
+      name = Atmospheric Measurement Techniques (AMT) ;
+      issn = 1867-1381 ;
+      eissn = 1867-8548
+    >
+    
+      param[base_url] = http://www.atmos-meas-tech.net
+
+      au < exists ; exists ; 2008 ; Atmospheric Measurement Techniques (AMT) Volume 1 ; 1 >
+      au < exists ; exists ; 2009 ; Atmospheric Measurement Techniques (AMT) Volume 2 ; 2 >
+      au < exists ; exists ; 2010 ; Atmospheric Measurement Techniques (AMT) Volume 3 ; 3 >
+      au < exists ; exists ; 2011 ; Atmospheric Measurement Techniques (AMT) Volume 4 ; 4 >
+      au < exists ; exists ; 2012 ; Atmospheric Measurement Techniques (AMT) Volume 5 ; 5 >
+    
+   }
+    
+  {
+    title <
+      name = Atmospheric Measurement Techniques Discussions (AMTD) ;
+      eissn = 1867-8610
+    >
+    
+      param[base_url] = http://www.atmos-meas-tech-discuss.net
+
+      au < exists ; exists ; 2008 ; Atmospheric Measurement Techniques Discussions (AMTD) Volume 1 ; 1 >
+      au < exists ; exists ; 2009 ; Atmospheric Measurement Techniques Discussions (AMTD) Volume 2 ; 2 >
+      au < exists ; exists ; 2010 ; Atmospheric Measurement Techniques Discussions (AMTD) Volume 3 ; 3 >
+      au < exists ; exists ; 2011 ; Atmospheric Measurement Techniques Discussions (AMTD) Volume 4 ; 4 >
+      au < exists ; exists ; 2012 ; Atmospheric Measurement Techniques Discussions (AMTD) Volume 5 ; 5 >
+    
+   }
+    
+  {
+    title <
+      name = Biogeosciences (BG) ;
+      issn = 1726-4170 ;
+      eissn = 1726-4189
+    >
+    
+      param[base_url] = http://www.biogeosciences.net
+
+      au < exists ; exists ; 2004 ; Biogeosciences (BG) Volume 1 ; 1 >
+      au < exists ; exists ; 2005 ; Biogeosciences (BG) Volume 2 ; 2 >
+      au < exists ; exists ; 2006 ; Biogeosciences (BG) Volume 3 ; 3 >
+      au < exists ; exists ; 2007 ; Biogeosciences (BG) Volume 4 ; 4 >
+      au < exists ; exists ; 2008 ; Biogeosciences (BG) Volume 5 ; 5 >
+      au < exists ; exists ; 2009 ; Biogeosciences (BG) Volume 6 ; 6 >
+      au < exists ; exists ; 2010 ; Biogeosciences (BG) Volume 7 ; 7 >
+      au < exists ; exists ; 2011 ; Biogeosciences (BG) Volume 8 ; 8 >
+      au < exists ; exists ; 2012 ; Biogeosciences (BG) Volume 9 ; 9 >
+    
+   }
+    
+  {
+    title <
+      name = Biogeosciences Discussions (BGD) ;
+      eissn = 1810-6285
+    >
+    
+      param[base_url] = http://www.biogeosciences-discuss.net
+
+      au < exists ; exists ; 2004 ; Biogeosciences Discussions (BGD) Volume 1 ; 1 >
+      au < exists ; exists ; 2005 ; Biogeosciences Discussions (BGD) Volume 2 ; 2 >
+      au < exists ; exists ; 2006 ; Biogeosciences Discussions (BGD) Volume 3 ; 3 >
+      au < exists ; exists ; 2007 ; Biogeosciences Discussions (BGD) Volume 4 ; 4 >
+      au < exists ; exists ; 2008 ; Biogeosciences Discussions (BGD) Volume 5 ; 5 >
+      au < exists ; exists ; 2009 ; Biogeosciences Discussions (BGD) Volume 6 ; 6 >
+      au < exists ; exists ; 2010 ; Biogeosciences Discussions (BGD) Volume 7 ; 7 >
+      au < exists ; exists ; 2011 ; Biogeosciences Discussions (BGD) Volume 8 ; 8 >
+      au < exists ; exists ; 2012 ; Biogeosciences Discussions (BGD) Volume 9 ; 9 >
+    
+   }
+    
+  {
+    title <
+      name = Climate of the Past (CP) ;
+      issn = 1814-9324 ;
+      eissn = 1814-9332
+    >
+    
+      param[base_url] = http://www.clim-past.net
+
+      au < exists ; exists ; 2005 ; Climate of the Past (CP) Volume 1 ; 1 >
+      au < exists ; exists ; 2006 ; Climate of the Past (CP) Volume 2 ; 2 >
+      au < exists ; exists ; 2007 ; Climate of the Past (CP) Volume 3 ; 3 >
+      au < exists ; exists ; 2008 ; Climate of the Past (CP) Volume 4 ; 4 >
+      au < exists ; exists ; 2009 ; Climate of the Past (CP) Volume 5 ; 5 >
+      au < exists ; exists ; 2010 ; Climate of the Past (CP) Volume 6 ; 6 >
+      au < exists ; exists ; 2011 ; Climate of the Past (CP) Volume 7 ; 7 >
+      au < exists ; exists ; 2012 ; Climate of the Past (CP) Volume 8 ; 8 >
+    
+   }
+    
+  {
+    title <
+      name = Climate of the Past Discussions (CPD) ;
+      eissn = 1814-9359
+    >
+    
+      param[base_url] = http://www.clim-past-discuss.net
+
+      au < exists ; exists ; 2005 ; Climate of the Past Discussions (CPD) Volume 1 ; 1 >
+      au < exists ; exists ; 2006 ; Climate of the Past Discussions (CPD) Volume 2 ; 2 >
+      au < exists ; exists ; 2007 ; Climate of the Past Discussions (CPD) Volume 3 ; 3 >
+      au < exists ; exists ; 2008 ; Climate of the Past Discussions (CPD) Volume 4 ; 4 >
+      au < exists ; exists ; 2009 ; Climate of the Past Discussions (CPD) Volume 5 ; 5 >
+      au < exists ; exists ; 2010 ; Climate of the Past Discussions (CPD) Volume 6 ; 6 >
+      au < exists ; exists ; 2011 ; Climate of the Past Discussions (CPD) Volume 7 ; 7 >
+      au < exists ; exists ; 2012 ; Climate of the Past Discussions (CPD) Volume 8 ; 8 >
+    
+   }
+    
+  {
+    title <
+      name = Drinking Water Engineering and Science (DWES) ;
+      issn = 1996-9457 ;
+      eissn = 1996-9465
+    >
+    
+      param[base_url] = http://www.drink-water-eng-sci.net
+
+      au < exists ; exists ; 2008 ; Drinking Water Engineering and Science (DWES) Volume 1 ; 1 >
+      au < exists ; exists ; 2009 ; Drinking Water Engineering and Science (DWES) Volume 2 ; 2 >
+      au < exists ; exists ; 2010 ; Drinking Water Engineering and Science (DWES) Volume 3 ; 3 >
+      au < exists ; exists ; 2011 ; Drinking Water Engineering and Science (DWES) Volume 4 ; 4 >
+      au < exists ; exists ; 2012 ; Drinking Water Engineering and Science (DWES) Volume 5 ; 5 >
+    
+   }
+    
+  {
+    title <
+      name = Drinking Water Engineering and Science Discussions (DWESD) ;
+      eissn = 1996-9481
+    >
+    
+      param[base_url] = http://www.drink-water-eng-sci-discuss.net
+
+      au < exists ; exists ; 2008 ; Drinking Water Engineering and Science Discussions (DWESD) Volume 1 ; 1 >
+      au < exists ; exists ; 2009 ; Drinking Water Engineering and Science Discussions (DWESD) Volume 2 ; 2 >
+      au < exists ; exists ; 2010 ; Drinking Water Engineering and Science Discussions (DWESD) Volume 3 ; 3 >
+      au < exists ; exists ; 2011 ; Drinking Water Engineering and Science Discussions (DWESD) Volume 4 ; 4 >
+      au < exists ; exists ; 2012 ; Drinking Water Engineering and Science Discussions (DWESD) Volume 5 ; 5 >
+    
+   }
+    
+}

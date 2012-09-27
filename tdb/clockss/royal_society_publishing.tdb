@@ -21,60 +21,60 @@
     attr[journal_id] = rsbm
     comment[legacy] = there are more AUs in an earlier incarnation of the journal
 
-    au < released ; manifest ; 1955 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 ; 1 >
-    au < released ; manifest ; 1956 ; Biographical Memoirs of Fellows of the Royal Society Volume 2 ; 2 >
-    au < released ; manifest ; 1957 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 ; 3 >
-    au < released ; manifest ; 1958 ; Biographical Memoirs of Fellows of the Royal Society Volume 4 ; 4 >
-    au < released ; manifest ; 1959 ; Biographical Memoirs of Fellows of the Royal Society Volume 5 ; 5 >
-    au < released ; manifest ; 1960 ; Biographical Memoirs of Fellows of the Royal Society Volume 6 ; 6 >
-    au < released ; manifest ; 1961 ; Biographical Memoirs of Fellows of the Royal Society Volume 7 ; 7 >
-    au < released ; manifest ; 1962 ; Biographical Memoirs of Fellows of the Royal Society Volume 8 ; 8 >
-    au < released ; manifest ; 1963 ; Biographical Memoirs of Fellows of the Royal Society Volume 9 ; 9 >
-    au < released ; manifest ; 1964 ; Biographical Memoirs of Fellows of the Royal Society Volume 10 ; 10 >
-    au < released ; manifest ; 1965 ; Biographical Memoirs of Fellows of the Royal Society Volume 11 ; 11 >
-    au < released ; manifest ; 1966 ; Biographical Memoirs of Fellows of the Royal Society Volume 12 ; 12 >
-    au < released ; manifest ; 1967 ; Biographical Memoirs of Fellows of the Royal Society Volume 13 ; 13 >
-    au < released ; manifest ; 1968 ; Biographical Memoirs of Fellows of the Royal Society Volume 14 ; 14 >
-    au < released ; manifest ; 1969 ; Biographical Memoirs of Fellows of the Royal Society Volume 15 ; 15 >
-    au < released ; manifest ; 1970 ; Biographical Memoirs of Fellows of the Royal Society Volume 16 ; 16 >
-    au < released ; manifest ; 1971 ; Biographical Memoirs of Fellows of the Royal Society Volume 17 ; 17 >
-    au < released ; manifest ; 1972 ; Biographical Memoirs of Fellows of the Royal Society Volume 18 ; 18 >
-    au < released ; manifest ; 1973 ; Biographical Memoirs of Fellows of the Royal Society Volume 19 ; 19 >
-    au < released ; manifest ; 1974 ; Biographical Memoirs of Fellows of the Royal Society Volume 20 ; 20 >
-    au < released ; manifest ; 1975 ; Biographical Memoirs of Fellows of the Royal Society Volume 21 ; 21 >
-    au < released ; manifest ; 1976 ; Biographical Memoirs of Fellows of the Royal Society Volume 22 ; 22 >
+    au < released ; crawling ; 1955 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 ; 1 >
+    au < released ; crawling ; 1956 ; Biographical Memoirs of Fellows of the Royal Society Volume 2 ; 2 >
+    au < released ; crawling ; 1957 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 ; 3 >
+    au < released ; crawling ; 1958 ; Biographical Memoirs of Fellows of the Royal Society Volume 4 ; 4 >
+    au < released ; crawling ; 1959 ; Biographical Memoirs of Fellows of the Royal Society Volume 5 ; 5 >
+    au < released ; crawling ; 1960 ; Biographical Memoirs of Fellows of the Royal Society Volume 6 ; 6 >
+    au < released ; crawling ; 1961 ; Biographical Memoirs of Fellows of the Royal Society Volume 7 ; 7 >
+    au < released ; crawling ; 1962 ; Biographical Memoirs of Fellows of the Royal Society Volume 8 ; 8 >
+    au < released ; crawling ; 1963 ; Biographical Memoirs of Fellows of the Royal Society Volume 9 ; 9 >
+    au < released ; crawling ; 1964 ; Biographical Memoirs of Fellows of the Royal Society Volume 10 ; 10 >
+    au < released ; crawling ; 1965 ; Biographical Memoirs of Fellows of the Royal Society Volume 11 ; 11 >
+    au < released ; crawling ; 1966 ; Biographical Memoirs of Fellows of the Royal Society Volume 12 ; 12 >
+    au < released ; crawling ; 1967 ; Biographical Memoirs of Fellows of the Royal Society Volume 13 ; 13 >
+    au < released ; crawling ; 1968 ; Biographical Memoirs of Fellows of the Royal Society Volume 14 ; 14 >
+    au < released ; crawling ; 1969 ; Biographical Memoirs of Fellows of the Royal Society Volume 15 ; 15 >
+    au < released ; crawling ; 1970 ; Biographical Memoirs of Fellows of the Royal Society Volume 16 ; 16 >
+    au < released ; crawling ; 1971 ; Biographical Memoirs of Fellows of the Royal Society Volume 17 ; 17 >
+    au < released ; crawling ; 1972 ; Biographical Memoirs of Fellows of the Royal Society Volume 18 ; 18 >
+    au < released ; crawling ; 1973 ; Biographical Memoirs of Fellows of the Royal Society Volume 19 ; 19 >
+    au < released ; crawling ; 1974 ; Biographical Memoirs of Fellows of the Royal Society Volume 20 ; 20 >
+    au < released ; crawling ; 1975 ; Biographical Memoirs of Fellows of the Royal Society Volume 21 ; 21 >
+    au < released ; crawling ; 1976 ; Biographical Memoirs of Fellows of the Royal Society Volume 22 ; 22 >
     au < testing ; exists ; 1977 ; Biographical Memoirs of Fellows of the Royal Society Volume 23 ; 23 >
-    au < released ; manifest ; 1978 ; Biographical Memoirs of Fellows of the Royal Society Volume 24 ; 24 >
-    au < released ; manifest ; 1979 ; Biographical Memoirs of Fellows of the Royal Society Volume 25 ; 25 >
-    au < testing ; exists ; 1980 ; Biographical Memoirs of Fellows of the Royal Society Volume 26 ; 26 >
-    au < testing ; exists ; 1981 ; Biographical Memoirs of Fellows of the Royal Society Volume 27 ; 27 >
-    au < testing ; exists ; 1982 ; Biographical Memoirs of Fellows of the Royal Society Volume 28 ; 28 >
-    au < testing ; exists ; 1983 ; Biographical Memoirs of Fellows of the Royal Society Volume 29 ; 29 >
-    au < testing ; exists ; 1984 ; Biographical Memoirs of Fellows of the Royal Society Volume 30 ; 30 >
-    au < testing ; exists ; 1985 ; Biographical Memoirs of Fellows of the Royal Society Volume 31 ; 31 >
-    au < testing ; exists ; 1986 ; Biographical Memoirs of Fellows of the Royal Society Volume 32 ; 32 >
-    au < testing ; exists ; 1987 ; Biographical Memoirs of Fellows of the Royal Society Volume 33 ; 33 >
-    au < testing ; exists ; 1988 ; Biographical Memoirs of Fellows of the Royal Society Volume 34 ; 34 >
-    au < testing ; exists ; 1989 ; Biographical Memoirs of Fellows of the Royal Society Volume 35 ; 35 >
-    au < testing ; exists ; 1990 ; Biographical Memoirs of Fellows of the Royal Society Volume 36 ; 36 >
-    au < released ; manifest ; 1991 ; Biographical Memoirs of Fellows of the Royal Society Volume 37 ; 37 >
+    au < released ; crawling ; 1978 ; Biographical Memoirs of Fellows of the Royal Society Volume 24 ; 24 >
+    au < released ; crawling ; 1979 ; Biographical Memoirs of Fellows of the Royal Society Volume 25 ; 25 >
+    au < manifest ; exists ; 1980 ; Biographical Memoirs of Fellows of the Royal Society Volume 26 ; 26 >
+    au < manifest ; exists ; 1981 ; Biographical Memoirs of Fellows of the Royal Society Volume 27 ; 27 >
+    au < manifest ; exists ; 1982 ; Biographical Memoirs of Fellows of the Royal Society Volume 28 ; 28 >
+    au < manifest ; exists ; 1983 ; Biographical Memoirs of Fellows of the Royal Society Volume 29 ; 29 >
+    au < manifest ; exists ; 1984 ; Biographical Memoirs of Fellows of the Royal Society Volume 30 ; 30 >
+    au < manifest ; exists ; 1985 ; Biographical Memoirs of Fellows of the Royal Society Volume 31 ; 31 >
+    au < manifest ; exists ; 1986 ; Biographical Memoirs of Fellows of the Royal Society Volume 32 ; 32 >
+    au < manifest ; exists ; 1987 ; Biographical Memoirs of Fellows of the Royal Society Volume 33 ; 33 >
+    au < manifest ; exists ; 1988 ; Biographical Memoirs of Fellows of the Royal Society Volume 34 ; 34 >
+    au < manifest ; exists ; 1989 ; Biographical Memoirs of Fellows of the Royal Society Volume 35 ; 35 >
+    au < manifest ; exists ; 1990 ; Biographical Memoirs of Fellows of the Royal Society Volume 36 ; 36 >
+    au < released ; crawling ; 1991 ; Biographical Memoirs of Fellows of the Royal Society Volume 37 ; 37 >
     au < testing ; exists ; 1992 ; Biographical Memoirs of Fellows of the Royal Society Volume 38 ; 38 >
-    au < released ; manifest ; 1993 ; Biographical Memoirs of Fellows of the Royal Society Volume 39 ; 39 >
-    au < released ; manifest ; 1994 ; Biographical Memoirs of Fellows of the Royal Society Volume 40 ; 40 >
-    au < released ; manifest ; 1995 ; Biographical Memoirs of Fellows of the Royal Society Volume 41 ; 41 >
-    au < released ; manifest ; 1996 ; Biographical Memoirs of Fellows of the Royal Society Volume 42 ; 42 >
-    au < released ; manifest ; 1997 ; Biographical Memoirs of Fellows of the Royal Society Volume 43 ; 43 >
-    au < released ; manifest ; 1998 ; Biographical Memoirs of Fellows of the Royal Society Volume 44 ; 44 >
-    au < released ; manifest ; 1999 ; Biographical Memoirs of Fellows of the Royal Society Volume 45 ; 45 >
-    au < released ; manifest ; 2000 ; Biographical Memoirs of Fellows of the Royal Society Volume 46 ; 46 >
-    au < released ; manifest ; 2001 ; Biographical Memoirs of Fellows of the Royal Society Volume 47 ; 47 >
-    au < released ; manifest ; 2002 ; Biographical Memoirs of Fellows of the Royal Society Volume 48 ; 48 >
-    au < released ; manifest ; 2003 ; Biographical Memoirs of Fellows of the Royal Society Volume 49 ; 49 >
-    au < released ; manifest ; 2004 ; Biographical Memoirs of Fellows of the Royal Society Volume 50 ; 50 >
-    au < released ; manifest ; 2005 ; Biographical Memoirs of Fellows of the Royal Society Volume 51 ; 51 >
-    au < released ; manifest ; 2006 ; Biographical Memoirs of Fellows of the Royal Society Volume 52 ; 52 >
-    au < released ; manifest ; 2007 ; Biographical Memoirs of Fellows of the Royal Society Volume 53 ; 53 >
-    au < released ; manifest ; 2008 ; Biographical Memoirs of Fellows of the Royal Society Volume 54 ; 54 >
+    au < released ; crawling ; 1993 ; Biographical Memoirs of Fellows of the Royal Society Volume 39 ; 39 >
+    au < released ; crawling ; 1994 ; Biographical Memoirs of Fellows of the Royal Society Volume 40 ; 40 >
+    au < released ; crawling ; 1995 ; Biographical Memoirs of Fellows of the Royal Society Volume 41 ; 41 >
+    au < released ; crawling ; 1996 ; Biographical Memoirs of Fellows of the Royal Society Volume 42 ; 42 >
+    au < released ; crawling ; 1997 ; Biographical Memoirs of Fellows of the Royal Society Volume 43 ; 43 >
+    au < released ; crawling ; 1998 ; Biographical Memoirs of Fellows of the Royal Society Volume 44 ; 44 >
+    au < released ; crawling ; 1999 ; Biographical Memoirs of Fellows of the Royal Society Volume 45 ; 45 >
+    au < released ; crawling ; 2000 ; Biographical Memoirs of Fellows of the Royal Society Volume 46 ; 46 >
+    au < released ; crawling ; 2001 ; Biographical Memoirs of Fellows of the Royal Society Volume 47 ; 47 >
+    au < released ; crawling ; 2002 ; Biographical Memoirs of Fellows of the Royal Society Volume 48 ; 48 >
+    au < released ; crawling ; 2003 ; Biographical Memoirs of Fellows of the Royal Society Volume 49 ; 49 >
+    au < released ; crawling ; 2004 ; Biographical Memoirs of Fellows of the Royal Society Volume 50 ; 50 >
+    au < released ; crawling ; 2005 ; Biographical Memoirs of Fellows of the Royal Society Volume 51 ; 51 >
+    au < released ; crawling ; 2006 ; Biographical Memoirs of Fellows of the Royal Society Volume 52 ; 52 >
+    au < released ; crawling ; 2007 ; Biographical Memoirs of Fellows of the Royal Society Volume 53 ; 53 >
+    au < released ; crawling ; 2008 ; Biographical Memoirs of Fellows of the Royal Society Volume 54 ; 54 >
     au < zapped ; down ; 2009 ; Biographical Memoirs of Fellows of the Royal Society Volume 55 ; 55 >
     au < zapped ; down ; 2010 ; Biographical Memoirs of Fellows of the Royal Society Volume 56 ; 56 >
     au < released ; crawling ; 2011 ; Biographical Memoirs of Fellows of the Royal Society Volume 57 ; 57 >
@@ -94,9 +94,9 @@
     param[base_url] = http://rsbl.royalsocietypublishing.org/
     attr[journal_id] = rsbl
 
-    au < released ; manifest ; 2005 ; Biology Letters Volume 1 ; 1 >
-    au < released ; manifest ; 2006 ; Biology Letters Volume 2 ; 2 >
-    au < released ; manifest ; 2007 ; Biology Letters Volume 3 ; 3 >
+    au < released ; crawling ; 2005 ; Biology Letters Volume 1 ; 1 >
+    au < released ; crawling ; 2006 ; Biology Letters Volume 2 ; 2 >
+    au < released ; crawling ; 2007 ; Biology Letters Volume 3 ; 3 >
     au < zapped ; down ; 2008 ; Biology Letters Volume 4 ; 4 >
     au < zapped ; down ; 2009 ; Biology Letters Volume 5 ; 5 >
     au < zapped ; down ; 2010 ; Biology Letters Volume 6 ; 6 >
@@ -137,10 +137,10 @@
     param[base_url] = http://rsif.royalsocietypublishing.org/
     attr[journal_id] = rsif
 
-    au < released ; manifest ; 2004 ; Journal of the Royal Society Interface Volume 1 ; 1 >
-    au < released ; manifest ; 2005 ; Journal of the Royal Society Interface Volume 2 ; 2 >
-    au < released ; manifest ; 2006 ; Journal of the Royal Society Interface Volume 3 ; 3 >
-    au < released ; manifest ; 2007 ; Journal of the Royal Society Interface Volume 4 ; 4 >
+    au < released ; crawling ; 2004 ; Journal of the Royal Society Interface Volume 1 ; 1 >
+    au < released ; crawling ; 2005 ; Journal of the Royal Society Interface Volume 2 ; 2 >
+    au < released ; crawling ; 2006 ; Journal of the Royal Society Interface Volume 3 ; 3 >
+    au < released ; crawling ; 2007 ; Journal of the Royal Society Interface Volume 4 ; 4 >
     au < zapped ; down ; 2008 ; Journal of the Royal Society Interface Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; Journal of the Royal Society Interface Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Journal of the Royal Society Interface Volume 7 ; 7 >
@@ -161,15 +161,15 @@
     param[base_url] = http://rsnr.royalsocietypublishing.org/
     attr[journal_id] = rsnr
 
-    au < released ; manifest ; 1938 ; Notes and Records of the Royal Society Volume 1 ; 1 >
+    au < released ; crawling ; 1938 ; Notes and Records of the Royal Society Volume 1 ; 1 >
     au < testing ; exists ; 1939 ; Notes and Records of the Royal Society Volume 2 ; 2 >
     au < testing ; exists ; 1940 ; Notes and Records of the Royal Society Volume 3 ; 3 >
     au < testing ; exists ; 1946 ; Notes and Records of the Royal Society Volume 4 ; 4 >
-    au < released ; manifest ; 1947-1948 ; Notes and Records of the Royal Society Volume 5 ; 5 >
+    au < released ; crawling ; 1947-1948 ; Notes and Records of the Royal Society Volume 5 ; 5 >
     au < testing ; exists ; 1948-1949 ; Notes and Records of the Royal Society Volume 6 ; 6 >
     au < testing ; exists ; 1949-1950 ; Notes and Records of the Royal Society Volume 7 ; 7 >
     au < testing ; exists ; 1950-1951 ; Notes and Records of the Royal Society Volume 8 ; 8 >
-    au < released ; manifest ; 1951-1952 ; Notes and Records of the Royal Society Volume 9 ; 9 >
+    au < released ; crawling ; 1951-1952 ; Notes and Records of the Royal Society Volume 9 ; 9 >
     au < testing ; exists ; 1952-1953 ; Notes and Records of the Royal Society Volume 10 ; 10 >
     au < manifest ; exists ; 1954-1955 ; Notes and Records of the Royal Society Volume 11 ; 11 >
     au < manifest ; exists ; 1956-1957 ; Notes and Records of the Royal Society Volume 12 ; 12 >
@@ -202,27 +202,27 @@
     au < manifest ; exists ; 1984-1985 ; Notes and Records of the Royal Society Volume 39 ; 39 >
     au < manifest ; exists ; 1985-1986 ; Notes and Records of the Royal Society Volume 40 ; 40 >
     au < manifest ; exists ; 1986-1987 ; Notes and Records of the Royal Society Volume 41 ; 41 >
-    au < released ; manifest ; 1988 ; Notes and Records of the Royal Society Volume 42 ; 42 >
-    au < released ; manifest ; 1989 ; Notes and Records of the Royal Society Volume 43 ; 43 >
-    au < released ; manifest ; 1990 ; Notes and Records of the Royal Society Volume 44 ; 44 >
-    au < released ; manifest ; 1991 ; Notes and Records of the Royal Society Volume 45 ; 45 >
-    au < released ; manifest ; 1992 ; Notes and Records of the Royal Society Volume 46 ; 46 >
-    au < released ; manifest ; 1993 ; Notes and Records of the Royal Society Volume 47 ; 47 >
-    au < released ; manifest ; 1994 ; Notes and Records of the Royal Society Volume 48 ; 48 >
-    au < released ; manifest ; 1995 ; Notes and Records of the Royal Society Volume 49 ; 49 >
-    au < released ; manifest ; 1996 ; Notes and Records of the Royal Society Volume 50 ; 50 >
-    au < released ; manifest ; 1997 ; Notes and Records of the Royal Society Volume 51 ; 51 >
-    au < released ; manifest ; 1998 ; Notes and Records of the Royal Society Volume 52 ; 52 >
-    au < released ; manifest ; 1999 ; Notes and Records of the Royal Society Volume 53 ; 53 >
-    au < released ; manifest ; 2000 ; Notes and Records of the Royal Society Volume 54 ; 54 >
-    au < released ; manifest ; 2001 ; Notes and Records of the Royal Society Volume 55 ; 55 >
-    au < released ; manifest ; 2002 ; Notes and Records of the Royal Society Volume 56 ; 56 >
-    au < released ; manifest ; 2003 ; Notes and Records of the Royal Society Volume 57 ; 57 >
-    au < released ; manifest ; 2004 ; Notes and Records of the Royal Society Volume 58 ; 58 >
-    au < released ; manifest ; 2005 ; Notes and Records of the Royal Society Volume 59 ; 59 >
-    au < released ; manifest ; 2006 ; Notes and Records of the Royal Society Volume 60 ; 60 >
-    au < released ; manifest ; 2007 ; Notes and Records of the Royal Society Volume 61 ; 61 >
-    au < released ; manifest ; 2008 ; Notes and Records of the Royal Society Volume 62 ; 62 >
+    au < released ; crawling ; 1988 ; Notes and Records of the Royal Society Volume 42 ; 42 >
+    au < released ; crawling ; 1989 ; Notes and Records of the Royal Society Volume 43 ; 43 >
+    au < released ; crawling ; 1990 ; Notes and Records of the Royal Society Volume 44 ; 44 >
+    au < released ; crawling ; 1991 ; Notes and Records of the Royal Society Volume 45 ; 45 >
+    au < released ; crawling ; 1992 ; Notes and Records of the Royal Society Volume 46 ; 46 >
+    au < released ; crawling ; 1993 ; Notes and Records of the Royal Society Volume 47 ; 47 >
+    au < released ; crawling ; 1994 ; Notes and Records of the Royal Society Volume 48 ; 48 >
+    au < released ; crawling ; 1995 ; Notes and Records of the Royal Society Volume 49 ; 49 >
+    au < released ; crawling ; 1996 ; Notes and Records of the Royal Society Volume 50 ; 50 >
+    au < released ; crawling ; 1997 ; Notes and Records of the Royal Society Volume 51 ; 51 >
+    au < released ; crawling ; 1998 ; Notes and Records of the Royal Society Volume 52 ; 52 >
+    au < released ; crawling ; 1999 ; Notes and Records of the Royal Society Volume 53 ; 53 >
+    au < released ; crawling ; 2000 ; Notes and Records of the Royal Society Volume 54 ; 54 >
+    au < released ; crawling ; 2001 ; Notes and Records of the Royal Society Volume 55 ; 55 >
+    au < released ; crawling ; 2002 ; Notes and Records of the Royal Society Volume 56 ; 56 >
+    au < released ; crawling ; 2003 ; Notes and Records of the Royal Society Volume 57 ; 57 >
+    au < released ; crawling ; 2004 ; Notes and Records of the Royal Society Volume 58 ; 58 >
+    au < released ; crawling ; 2005 ; Notes and Records of the Royal Society Volume 59 ; 59 >
+    au < released ; crawling ; 2006 ; Notes and Records of the Royal Society Volume 60 ; 60 >
+    au < released ; crawling ; 2007 ; Notes and Records of the Royal Society Volume 61 ; 61 >
+    au < released ; crawling ; 2008 ; Notes and Records of the Royal Society Volume 62 ; 62 >
     au < zapped ; down ; 2009 ; Notes and Records of the Royal Society Volume 63 ; 63 >
     au < released ; crawling ; 2010 ; Notes and Records of the Royal Society Volume 64 ; 64 >
     au < released ; crawling ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 >
@@ -1451,26 +1451,26 @@
     au < manifest ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 247 ; 247 >
     au < manifest ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 248 ; 248 >
     au < manifest ; exists ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 249 ; 249 >
-    au < released ; manifest ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 250 ; 250 >
+    au < released ; crawling ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 250 ; 250 >
     au < testing ; exists ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 251 ; 251 >
-    au < released ; manifest ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 252 ; 252 >
-    au < released ; manifest ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 253 ; 253 >
-    au < released ; manifest ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 254 ; 254 >
-    au < released ; manifest ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 255 ; 255 >
-    au < released ; manifest ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 256 ; 256 >
-    au < released ; manifest ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 257 ; 257 >
-    au < released ; manifest ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 258 ; 258 >
-    au < released ; manifest ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 259 ; 259 >
+    au < released ; crawling ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 252 ; 252 >
+    au < released ; crawling ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 253 ; 253 >
+    au < released ; crawling ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 254 ; 254 >
+    au < released ; crawling ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 255 ; 255 >
+    au < released ; crawling ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 256 ; 256 >
+    au < released ; crawling ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 257 ; 257 >
+    au < released ; crawling ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 258 ; 258 >
+    au < released ; crawling ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 259 ; 259 >
     au < testing ; exists ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 260 ; 260 >
     au < testing ; exists ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 261 ; 261 >
-    au < released ; manifest ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 262 ; 262 >
+    au < released ; crawling ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 262 ; 262 >
     au < testing ; exists ; 1996 ; Proceedings of the Royal Society B: Biological Sciences Volume 263 ; 263 >
-    au < released ; manifest ; 1997 ; Proceedings of the Royal Society B: Biological Sciences Volume 264 ; 264 >
+    au < released ; crawling ; 1997 ; Proceedings of the Royal Society B: Biological Sciences Volume 264 ; 264 >
     au < testing ; exists ; 1998 ; Proceedings of the Royal Society B: Biological Sciences Volume 265 ; 265 >
     au < testing ; exists ; 1999 ; Proceedings of the Royal Society B: Biological Sciences Volume 266 ; 266 >
-    au < released ; manifest ; 2000 ; Proceedings of the Royal Society B: Biological Sciences Volume 267 ; 267 >
+    au < released ; crawling ; 2000 ; Proceedings of the Royal Society B: Biological Sciences Volume 267 ; 267 >
     au < testing ; exists ; 2001 ; Proceedings of the Royal Society B: Biological Sciences Volume 268 ; 268 >
-    au < released ; manifest ; 2002 ; Proceedings of the Royal Society B: Biological Sciences Volume 269 ; 269 >
+    au < released ; crawling ; 2002 ; Proceedings of the Royal Society B: Biological Sciences Volume 269 ; 269 >
     au < testing ; exists ; 2003 ; Proceedings of the Royal Society B: Biological Sciences Volume 270 ; 270 >
     au < testing ; exists ; 2004 ; Proceedings of the Royal Society B: Biological Sciences Volume 271 ; 271 >
     au < testing ; exists ; 2005 ; Proceedings of the Royal Society B: Biological Sciences Volume 272 ; 272 >
@@ -1480,7 +1480,7 @@
     au < zapped ; down ; 2009 ; Proceedings of the Royal Society B: Biological Sciences Volume 276 ; 276 >
     au < released ; crawling ; 2010 ; Proceedings of the Royal Society B: Biological Sciences Volume 277 ; 277 >
     au < released ; crawling ; 2011 ; Proceedings of the Royal Society B: Biological Sciences Volume 278 ; 278 >
-    au < released ; manifest ; 2012 ; Proceedings of the Royal Society B: Biological Sciences Volume 279 ; 279 >
+    au < released ; crawling ; 2012 ; Proceedings of the Royal Society B: Biological Sciences Volume 279 ; 279 >
 
   }
 
@@ -1554,22 +1554,22 @@
     au < manifest ; exists ; 1894 ; Proceedings of the Royal Society of London Volume 57 ; 57 >
     au < manifest ; exists ; 1895 ; Proceedings of the Royal Society of London Volume 58 ; 58 >
     au < manifest ; exists ; 1895 ; Proceedings of the Royal Society of London Volume 59 ; 59 >
-    au < released ; manifest ; 1896 ; Proceedings of the Royal Society of London Volume 60 ; 60 >
-    au < released ; manifest ; 1897 ; Proceedings of the Royal Society of London Volume 61 ; 61 >
-    au < released ; manifest ; 1897 ; Proceedings of the Royal Society of London Volume 62 ; 62 >
-    au < released ; manifest ; 1898 ; Proceedings of the Royal Society of London Volume 63 ; 63 >
-    au < released ; manifest ; 1898 ; Proceedings of the Royal Society of London Volume 64 ; 64 >
-    au < released ; manifest ; 1899 ; Proceedings of the Royal Society of London Volume 65 ; 65 >
-    au < released ; manifest ; 1899 ; Proceedings of the Royal Society of London Volume 66 ; 66 >
-    au < released ; manifest ; 1900 ; Proceedings of the Royal Society of London Volume 67 ; 67 >
-    au < released ; manifest ; 1901 ; Proceedings of the Royal Society of London Volume 68 ; 68 >
-    au < released ; manifest ; 1901 ; Proceedings of the Royal Society of London Volume 69 ; 69 >
-    au < released ; manifest ; 1902 ; Proceedings of the Royal Society of London Volume 70 ; 70 >
-    au < released ; manifest ; 1902 ; Proceedings of the Royal Society of London Volume 71 ; 71 >
-    au < released ; manifest ; 1903 ; Proceedings of the Royal Society of London Volume 72 ; 72 >
-    au < released ; manifest ; 1904 ; Proceedings of the Royal Society of London Volume 73 ; 73 >
-    au < released ; manifest ; 1904 ; Proceedings of the Royal Society of London Volume 74 ; 74 >
-    au < released ; manifest ; 1904 ; Proceedings of the Royal Society of London Volume 75 ; 75 >
+    au < released ; crawling ; 1896 ; Proceedings of the Royal Society of London Volume 60 ; 60 >
+    au < released ; crawling ; 1897 ; Proceedings of the Royal Society of London Volume 61 ; 61 >
+    au < released ; crawling ; 1897 ; Proceedings of the Royal Society of London Volume 62 ; 62 >
+    au < released ; crawling ; 1898 ; Proceedings of the Royal Society of London Volume 63 ; 63 >
+    au < released ; crawling ; 1898 ; Proceedings of the Royal Society of London Volume 64 ; 64 >
+    au < released ; crawling ; 1899 ; Proceedings of the Royal Society of London Volume 65 ; 65 >
+    au < released ; crawling ; 1899 ; Proceedings of the Royal Society of London Volume 66 ; 66 >
+    au < released ; crawling ; 1900 ; Proceedings of the Royal Society of London Volume 67 ; 67 >
+    au < released ; crawling ; 1901 ; Proceedings of the Royal Society of London Volume 68 ; 68 >
+    au < released ; crawling ; 1901 ; Proceedings of the Royal Society of London Volume 69 ; 69 >
+    au < released ; crawling ; 1902 ; Proceedings of the Royal Society of London Volume 70 ; 70 >
+    au < released ; crawling ; 1902 ; Proceedings of the Royal Society of London Volume 71 ; 71 >
+    au < released ; crawling ; 1903 ; Proceedings of the Royal Society of London Volume 72 ; 72 >
+    au < released ; crawling ; 1904 ; Proceedings of the Royal Society of London Volume 73 ; 73 >
+    au < released ; crawling ; 1904 ; Proceedings of the Royal Society of London Volume 74 ; 74 >
+    au < released ; crawling ; 1904 ; Proceedings of the Royal Society of London Volume 75 ; 75 >
 
   }
 
