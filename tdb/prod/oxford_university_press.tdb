@@ -12184,7 +12184,7 @@
       issnl = 2042-8812 
     >
 
-    plugin = org.lockss.plugin.highwire.
+    pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jscr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -13100,7 +13100,7 @@
       issnl = 0163-755X
     >
 
-    plugin = org.lockss.plugin.highwire.
+    pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://melus.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
