@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = SAGE Publications
+    name = SAGE Publications ;
+    info[contract] = 2008 ;
+    info[tester] = 7
   >
 
   attr[contract] = 2008
