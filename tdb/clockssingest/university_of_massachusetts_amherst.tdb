@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = University of Massachusetts Amherst
+    name = University of Massachusetts Amherst ;
+    info[contract] = 2012 ;
+    info[tester] = 5
   >
   
   attr[contract] = 2012

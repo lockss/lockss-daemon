@@ -1,7 +1,9 @@
 {
   
   publisher <
-    name = Pion
+    name = Pion ;
+    info[contract] = 2010 ;
+    info[tester] = 3
   >
   
     attr[contract] = 2010

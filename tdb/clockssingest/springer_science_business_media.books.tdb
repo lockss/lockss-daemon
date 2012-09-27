@@ -1,7 +1,10 @@
 {
 
   publisher <
-    name = Springer Science+Business Media
+    name = Springer Science+Business Media ;
+    info[contract] = 2008 ;
+    info[tester] = 1
+    
   >
 
   attr[contract] = 2008

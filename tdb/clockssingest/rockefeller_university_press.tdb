@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Rockefeller University Press
+    name = Rockefeller University Press ;
+    info[contract] = 2009 ;
+    info[tester] = 3
   >
 
   attr[contract] = 2009

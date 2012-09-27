@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = University of British Columbia 
+    name = University of British Columbia ;
+    info[contract] = 2010 ;
+    info[tester] = 5
   >
     attr[contract] = 2010
   {

@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = University of Alberta
+    name = University of Alberta ;
+    info[contract] = 2011 ;
+    info[tester] = 3
   >
 
   {

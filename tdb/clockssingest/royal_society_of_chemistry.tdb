@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Royal Society of Chemistry
+    name = Royal Society of Chemistry ;
+    info[contract] = 2009 ;
+    info[tester] = 4
   >
   
   attr[contract] = 2009

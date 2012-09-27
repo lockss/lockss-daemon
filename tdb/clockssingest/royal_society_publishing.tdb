@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Royal Society Publishing
+    name = Royal Society Publishing ;
+    info[contract] = 2009 ;
+    info[tester] = 3
   >
 
   attr[contract] = 2009

@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Oxford University Press
+    name = Oxford University Press ;
+    info[contract] = 2009 ;
+    info[tester] = 8
   >
 
     attr[contract] = 2009

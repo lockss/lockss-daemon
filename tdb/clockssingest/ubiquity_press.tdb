@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Ubiquity Press
+    name = Ubiquity Press ;
+    info[contract] = 2011 ;
+    info[tester] = 4
   >
 
   attr[contract] = 2011

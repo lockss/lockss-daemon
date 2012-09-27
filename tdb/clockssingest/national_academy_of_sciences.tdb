@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = National Academy of Sciences
+    name = National Academy of Sciences ;
+    info[contract] = 2010 ;
+    info[tester] = 3
   >
   
     attr[contract] = 2010
