@@ -867,7 +867,7 @@
         param[base_url] = http://ags.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2012 ; Agrarian South: Journal of Political Economy Volume 1 ; 1 >
+        au < manifest ; 2012 ; Agrarian South: Journal of Political Economy Volume 1 ; 1 >
 
       }
 
