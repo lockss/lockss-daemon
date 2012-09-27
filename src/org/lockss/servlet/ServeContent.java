@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.67 2012-09-06 16:46:44 pgust Exp $
+ * $Id: ServeContent.java,v 1.67.2.1 2012-09-27 18:50:27 fergaloy-sf Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo.ResolvedTo;
-import org.lockss.exporter.counter.CounterReportsRequestRecorder;
+//import org.lockss.exporter.counter.CounterReportsRequestRecorder;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.plugin.*;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
@@ -693,8 +693,8 @@ public class ServeContent extends LockssServlet {
         serveFromCache();
         logAccess("200 from cache");
 	// Record the necessary information required for COUNTER reports.
-	CounterReportsRequestRecorder.getInstance().recordRequest(url, au,
-	    CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
+	//CounterReportsRequestRecorder.getInstance().recordRequest(url, au,
+	//    CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
       } else {
 	/*
 	 * We don't want to redirect to the publisher, so pass KnownDown below
@@ -769,10 +769,10 @@ public class ServeContent extends LockssServlet {
             serveFromPublisher(conn);
 	    logAccess(present(isInCache, "200 from publisher"));
 	    // Record the necessary information required for COUNTER reports.
-	    CounterReportsRequestRecorder.getInstance()
-		.recordRequest(url, au,
-		    CounterReportsRequestRecorder.PublisherContacted.TRUE,
-		    response);
+	    //CounterReportsRequestRecorder.getInstance()
+		//.recordRequest(url, au,
+		//    CounterReportsRequestRecorder.PublisherContacted.TRUE,
+		//    response);
 	    return;
           } catch (CacheException.PermissionException ex) {
             logAccess("login exception: " + ex.getMessage());
@@ -792,8 +792,8 @@ public class ServeContent extends LockssServlet {
       serveFromCache();
       logAccess("present, 200 from cache");
       // Record the necessary information required for COUNTER reports.
-      CounterReportsRequestRecorder.getInstance().recordRequest(url, au,
-	  CounterReportsRequestRecorder.PublisherContacted.TRUE, response);
+      //CounterReportsRequestRecorder.getInstance().recordRequest(url, au,
+	//  CounterReportsRequestRecorder.PublisherContacted.TRUE, response);
     } else {
       log.debug2("No content for: " + url);
       // return 404 with index
