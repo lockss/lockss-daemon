@@ -1,5 +1,5 @@
 /*
- * $Id: TestGPOFDSysBulkDataHtmlFilterFactory.java,v 1.1 2012-09-10 21:27:56 davidecorcoran Exp $
+ * $Id: TestGPOFDSysBulkDataHtmlFilterFactory.java,v 1.2 2012-09-27 21:49:50 davidecorcoran Exp $
  */
 
 /*
@@ -73,6 +73,15 @@ public class TestGPOFDSysBulkDataHtmlFilterFactory extends LockssTestCase {
   private static final String noScriptHtmlFiltered =
     "";
   
+  private static final String retrievalDateHtml = 
+    "<tr><td> <a href=\"bulkdata/FR/2012/01/FR-2012-01.zip\" " +
+    "onclick=\"logRetrievalStats(RETRIEVAL_TYPE_BULKDATA," +
+    "'FR',FILE_TYPE_ZIP,this.href,'Bulk Data')\" target=\"_blank\"> " +
+    "FR-2012-01.zip </a> </td> <td>18-Sep-2012 07:08</td> " +
+    "<td>8.20 M</td> </tr>";
+  
+  private static final String retrievalDateHtmlFiltered =
+    "";
   
   public void testTokenFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
@@ -96,6 +105,14 @@ public class TestGPOFDSysBulkDataHtmlFilterFactory extends LockssTestCase {
                                    Constants.DEFAULT_ENCODING);
     
     assertEquals(noScriptHtmlFiltered, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testRetrievalDateFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+                                   new StringInputStream(retrievalDateHtml),
+                                   Constants.DEFAULT_ENCODING);
+    
+    assertEquals(retrievalDateHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
   
 }

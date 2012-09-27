@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysBulkDataHtmlFilterFactory.java,v 1.1 2012-09-10 21:27:06 davidecorcoran Exp $
+ * $Id: GPOFDSysBulkDataHtmlFilterFactory.java,v 1.2 2012-09-27 21:49:49 davidecorcoran Exp $
  */
 
 /*
@@ -53,7 +53,10 @@ public class GPOFDSysBulkDataHtmlFilterFactory implements FilterFactory {
   
     NodeFilter[] filters = new NodeFilter[] {
         new TagNameFilter("script"),
-        new TagNameFilter("noscript")
+        new TagNameFilter("noscript"),
+        
+        // Access date
+        HtmlNodeFilters.tagWithText("tr", "logRetrievalStats")
     };
   
     OrFilter combinedFilter = new OrFilter(filters);
