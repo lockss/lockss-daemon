@@ -19,9 +19,9 @@
 
     param[journal_id] = main
 
-    au < released ; manifest ; 2010 ; BIO-Complexity ; 2010 >
-    au < released ; manifest ; 2011 ; BIO-Complexity ; 2011 >
-    au < released ; manifest ; 2012 ; BIO-Complexity ; 2012 >
+    au < released ; crawling ; 2010 ; BIO-Complexity ; 2010 >
+    au < released ; crawling ; 2011 ; BIO-Complexity ; 2011 >
+    au < released ; crawling ; 2012 ; BIO-Complexity ; 2012 >
 
   }
 
