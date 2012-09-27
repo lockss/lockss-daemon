@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Libertas Academica
+    name = Libertas Academica ;
+    info[contract] = 2011 ;
+    info[tester] = 4
   >
 
   attr[contract] = 2011

@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = International Glaciological Society
+    name = International Glaciological Society ;
+    info[contract] = 2012 ;
+    info[tester] = 0
   >
 
   attr[contract] = 2012

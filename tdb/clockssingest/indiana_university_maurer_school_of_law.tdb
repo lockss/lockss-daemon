@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Indiana University Maurer School of Law
+    name = Indiana University Maurer School of Law ;
+    info[contract] = 2012 ;
+    info[tester] = 5
   >
   
   attr[contract] = 2012

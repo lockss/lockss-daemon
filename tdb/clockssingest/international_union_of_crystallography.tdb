@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = International Union of Crystallography
+    name = International Union of Crystallography ;
+    info[contract] = 2010 ;
+    info[tester] = 4
   >
   
   attr[contract] = 2010

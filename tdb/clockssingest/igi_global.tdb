@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = IGI Global
+    name = IGI Global ;
+    info[contract] = 2011 ;
+    info[tester] = 3
   >
 
   attr[contract] = 2011
