@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.19 2012-08-17 23:44:15 aishizaki Exp $
+# $Id: tdb.py,v 1.20 2012-09-27 18:31:29 pgust Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -111,6 +111,7 @@ class Title(Map):
     ISBN = ('isbn',)
     ISSN = ('issn',)
     ISSNL = ('issnl',)
+    DOI = ('doi',)
     NAME = ('name',)
     TYPE = ('type',)
     class Type:
@@ -129,6 +130,7 @@ class Title(Map):
         self.__isbn = Undef
         self.__issn = Undef
         self.__issnl = Undef
+        self.__doi = Undef
         self.__name = None
         self.__type = Undef
     
@@ -153,6 +155,10 @@ class Title(Map):
     def issnl(self):
         ret = self.__issnl
         if ret is Undef: ret = self.__issnl = self._internal_get(Title.ISSNL)
+        return ret
+    def doi(self):
+        ret = self.__doi
+        if ret is Undef: ret = self.__doi = self._internal_get(Title.DOI)
         return ret
     def name(self):
         ret = self.__name
