@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Bloomsbury Qatar Foundation Journals
+    name = Bloomsbury Qatar Foundation Journals ;
+    info[contract] = 2011 ;
+    info[tester] = 3
   >
   
   attr[contract] = 2011

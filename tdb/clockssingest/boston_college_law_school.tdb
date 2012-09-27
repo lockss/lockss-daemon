@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Boston College Law School
+    name = Boston College Law School ;
+    info[contract] = 2011 ;
+    info[tester] = 3
   >
   
   attr[contract] = 2011
