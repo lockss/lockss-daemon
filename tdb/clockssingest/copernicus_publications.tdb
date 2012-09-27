@@ -340,4 +340,536 @@
     
    }
     
+  {
+    title <
+      name = Earth System Dynamics (ESD) ;
+      issn = 2190-4979 ;
+      eissn = 2190-4987
+    >
+    
+      param[base_url] = http://www.earth-syst-dynam.net
+
+      au < exists ; exists ; 2010 ; Earth System Dynamics (ESD) Volume 1 ; 1 >
+      au < exists ; exists ; 2011 ; Earth System Dynamics (ESD) Volume 2 ; 2 >
+      au < exists ; exists ; 2012 ; Earth System Dynamics (ESD) Volume 3 ; 3 >
+    
+   }
+    
+  {
+    title <
+      name = Earth System Dynamics Discussions (ESDD) ;
+      eissn = 2190-4995
+    >
+    
+      param[base_url] = http://www.earth-syst-dynam-discuss.net
+
+      au < exists ; exists ; 2010 ; Earth System Dynamics Discussions (ESDD) Volume 1 ; 1 >
+      au < exists ; exists ; 2011 ; Earth System Dynamics Discussions (ESDD) Volume 2 ; 2 >
+      au < exists ; exists ; 2012 ; Earth System Dynamics Discussions (ESDD) Volume 3 ; 3 >
+    
+   }
+    
+  {
+    title <
+      name = Earth System Science Data (ESSD) ;
+      issn = 1866-3508 ;
+      eissn = 1866-3516
+    >
+    
+      param[base_url] = http://www.earth-syst-sci-data.net
+
+      au < exists ; exists ; 2009 ; Earth System Science Data (ESSD) Volume 1 ; 1 >
+      au < exists ; exists ; 2010 ; Earth System Science Data (ESSD) Volume 2 ; 2 >
+      au < exists ; exists ; 2011 ; Earth System Science Data (ESSD) Volume 3 ; 3 >
+      au < exists ; exists ; 2012 ; Earth System Science Data (ESSD) Volume 4 ; 4 >
+    
+   }
+    
+  {
+    title <
+      name = Earth System Science Data Discussions (ESSDD) ;
+      eissn = 1866-3591
+    >
+    
+      param[base_url] = http://www.earth-syst-sci-data-discuss.net
+
+      au < exists ; exists ; 2008 ; Earth System Science Data Discussions (ESSDD) Volume 1 ; 1 >
+      au < exists ; exists ; 2009 ; Earth System Science Data Discussions (ESSDD) Volume 2 ; 2 >
+      au < exists ; exists ; 2010 ; Earth System Science Data Discussions (ESSDD) Volume 3 ; 3 >
+      au < exists ; exists ; 2011 ; Earth System Science Data Discussions (ESSDD) Volume 4 ; 4 >
+      au < exists ; exists ; 2012 ; Earth System Science Data Discussions (ESSDD) Volume 5 ; 5 >
+    
+   }
+    
+  {
+    title <
+      name = eEarth (eE) ;
+      issn = 1815-381X ;
+      eissn = 1815-3828
+    >
+    
+      param[base_url] = http://www.electronic-earth.net
+
+      au < exists ; exists ; 2006 ; eEarth (eE) Volume 1 ; 1 >
+      au < exists ; exists ; 2007 ; eEarth (eE) Volume 2 ; 2 >
+      au < exists ; exists ; 2008 ; eEarth (eE) Volume 3 ; 3 >
+      au < exists ; exists ; 2009 ; eEarth (eE) Volume 4 ; 4 >
+      au < exists ; exists ; 2010 ; eEarth (eE) Volume 5 ; 5 >
+    
+   }
+    
+  {
+    title <
+      name = eEarth Discussions (eED) ;
+      issn = 1815-3836 ;
+      eissn = 1815-3844
+    >
+    
+      param[base_url] = http://www.electronic-earth-discuss.net
+
+      au < exists ; exists ; 2006 ; eEarth Discussions (eED) Volume 1 ; 1 >
+      au < exists ; exists ; 2007 ; eEarth Discussions (eED) Volume 2 ; 2 >
+      au < exists ; exists ; 2008 ; eEarth Discussions (eED) Volume 3 ; 3 >
+      au < exists ; exists ; 2009 ; eEarth Discussions (eED) Volume 4 ; 4 >
+    
+   }
+    
+  {
+    title <
+      name = Field Actions Science Reports (FACTS) ;
+      eissn = 1867-8521
+    >
+    
+      param[base_url] = http://www.field-actions-sci-rep.net
+
+      au < exists ; exists ; 2008 ; Field Actions Science Reports (FACTS) Volume 1 ; 1 >
+      au < exists ; exists ; 2009 ; Field Actions Science Reports (FACTS) Volume 2 ; 2 >
+    
+   }
+    
+  {
+    title <
+      name = Geographica Helvetica (GH) ;
+      issn = 0016-7312
+    >
+    
+      param[base_url] = http://www.geographica-helvetica.net/
+
+      au < exists ; exists ; 1999 ; Geographica Helvetica (GH) Volume 1999 ; 1999 >
+      au < exists ; exists ; 2000 ; Geographica Helvetica (GH) Volume 2000 ; 2000 >
+      au < exists ; exists ; 2001 ; Geographica Helvetica (GH) Volume 2001 ; 2001 >
+      au < exists ; exists ; 2002 ; Geographica Helvetica (GH) Volume 2002 ; 2002 >
+      au < exists ; exists ; 2003 ; Geographica Helvetica (GH) Volume 2003 ; 2003 >
+      au < exists ; exists ; 2004 ; Geographica Helvetica (GH) Volume 2004 ; 2004 >
+      au < exists ; exists ; 2005 ; Geographica Helvetica (GH) Volume 2005 ; 2005 >
+      au < exists ; exists ; 2006 ; Geographica Helvetica (GH) Volume 2006 ; 2006 >
+      au < exists ; exists ; 2007 ; Geographica Helvetica (GH) Volume 2007 ; 2007 >
+      au < exists ; exists ; 2008 ; Geographica Helvetica (GH) Volume 2008 ; 2008 >
+      au < exists ; exists ; 2009 ; Geographica Helvetica (GH) Volume 2009 ; 2009 >
+      au < exists ; exists ; 2010 ; Geographica Helvetica (GH) Volume 2010 ; 2010 >
+      au < exists ; exists ; 2011 ; Geographica Helvetica (GH) Volume 2011 ; 2011 >
+      au < exists ; exists ; 2012 ; Geographica Helvetica (GH) Volume 2012 ; 2012 >
+    
+   }
+    
+  {
+    title <
+      name = Geoscientific Instrumentation, Methods and Data Systems (GI) ;
+      issn = 2193-0856 ;
+      eissn = 2193-0864
+    >
+    
+      param[base_url] = http://www.geosci-instrum-method-data-syst.net
+
+      au < exists ; exists ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems (GI) Volume 1 ; 1 >
+    
+   }
+   
+  {
+    title <
+      name = Geoscientific Instrumentation, Methods and Data Systems Discussions (GID) ;
+      eissn = 2193-0872
+    >
+    
+      param[base_url] = http://www.geosci-instrum-method-data-syst-discuss.net
+
+      au < exists ; exists ; 2011 ; Geoscientific Instrumentation, Methods and Data Systems Discussions (GID) Volume 1 ; 1 >
+      au < exists ; exists ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Discussions (GID) Volume 2 ; 2 >
+    
+   }
+
+  {
+    title <
+      name = Geoscientific Model Development (GMD) ;
+      issn = 1991-959X ;
+      eissn = 1991-9603
+    >
+    
+      param[base_url] = http://www.geosci-model-dev.net
+
+      au < exists ; exists ; 2008 ; Geoscientific Model Development (GMD) Volume 1 ; 1 >
+      au < exists ; exists ; 2009 ; Geoscientific Model Development (GMD) Volume 2 ; 2 >
+      au < exists ; exists ; 2010 ; Geoscientific Model Development (GMD) Volume 3 ; 3 >
+      au < exists ; exists ; 2011 ; Geoscientific Model Development (GMD) Volume 4 ; 4 >
+      au < exists ; exists ; 2012 ; Geoscientific Model Development (GMD) Volume 5 ; 5 >
+    
+   }
+    
+  {
+    title <
+      name = Geoscientific Model Development Discussions (GMDD) ;
+      eissn = 1991-962X
+    >
+    
+      param[base_url] = http://www.geosci-model-dev-discuss.net
+
+      au < exists ; exists ; 2008 ; Geoscientific Model Development Discussions (GMDD) Volume 1 ; 1 >
+      au < exists ; exists ; 2009 ; Geoscientific Model Development Discussions (GMDD) Volume 2 ; 2 >
+      au < exists ; exists ; 2010 ; Geoscientific Model Development Discussions (GMDD) Volume 3 ; 3 >
+      au < exists ; exists ; 2011 ; Geoscientific Model Development Discussions (GMDD) Volume 4 ; 4 >
+      au < exists ; exists ; 2012 ; Geoscientific Model Development Discussions (GMDD) Volume 5 ; 5 >
+    
+   }
+    
+  {
+    title <
+      name = History of Geo- and Space Sciences (HGSS) ;
+      issn = 2190-5010 ;
+      eissn = 2190-5029
+    >
+    
+      param[base_url] = http://www.hist-geo-space-sci.net
+
+      au < exists ; exists ; 2010 ; History of Geo- and Space Sciences (HGSS) Volume 1 ; 1 >
+      au < exists ; exists ; 2011 ; History of Geo- and Space Sciences (HGSS) Volume 2 ; 2 >
+      au < exists ; exists ; 2012 ; History of Geo- and Space Sciences (HGSS) Volume 3 ; 3 >
+    
+   }
+    
+  {
+    title <
+      name = Hydrology and Earth System Sciences (HESS) ;
+      issn = 1027-5606 ;
+      eissn = 1607-7938
+    >
+    
+      param[base_url] = http://www.hydrol-earth-syst-sci.net
+
+      au < exists ; exists ; 1997 ; Hydrology and Earth System Sciences (HESS) Volume 1 ; 1 >
+      au < exists ; exists ; 1998 ; Hydrology and Earth System Sciences (HESS) Volume 2 ; 2 >
+      au < exists ; exists ; 1999 ; Hydrology and Earth System Sciences (HESS) Volume 3 ; 3 >
+      au < exists ; exists ; 2000 ; Hydrology and Earth System Sciences (HESS) Volume 4 ; 4 >
+      au < exists ; exists ; 2001 ; Hydrology and Earth System Sciences (HESS) Volume 5 ; 5 >
+      au < exists ; exists ; 2002 ; Hydrology and Earth System Sciences (HESS) Volume 6 ; 6 >
+      au < exists ; exists ; 2003 ; Hydrology and Earth System Sciences (HESS) Volume 7 ; 7 >
+      au < exists ; exists ; 2004 ; Hydrology and Earth System Sciences (HESS) Volume 8 ; 8 >
+      au < exists ; exists ; 2005 ; Hydrology and Earth System Sciences (HESS) Volume 9 ; 9 >
+      au < exists ; exists ; 2006 ; Hydrology and Earth System Sciences (HESS) Volume 10 ; 10 >
+      au < exists ; exists ; 2007 ; Hydrology and Earth System Sciences (HESS) Volume 11 ; 11 >
+      au < exists ; exists ; 2008 ; Hydrology and Earth System Sciences (HESS) Volume 12 ; 12 >
+      au < exists ; exists ; 2009 ; Hydrology and Earth System Sciences (HESS) Volume 13 ; 13 >
+      au < exists ; exists ; 2010 ; Hydrology and Earth System Sciences (HESS) Volume 14 ; 14 >
+      au < exists ; exists ; 2011 ; Hydrology and Earth System Sciences (HESS) Volume 15 ; 15 >
+      au < exists ; exists ; 2012 ; Hydrology and Earth System Sciences (HESS) Volume 16 ; 16 >
+    
+   }
+    
+  {
+    title <
+      name = Hydrology and Earth System Sciences Discussions (HESSD) ;
+      eissn = 1812-2116
+    >
+    
+      param[base_url] = http://www.hydrol-earth-syst-sci-discuss.net
+
+      au < exists ; exists ; 2004 ; Hydrology and Earth System Sciences Discussions (HESSD) Volume 1 ; 1 >
+      au < exists ; exists ; 2005 ; Hydrology and Earth System Sciences Discussions (HESSD) Volume 2 ; 2 >
+      au < exists ; exists ; 2006 ; Hydrology and Earth System Sciences Discussions (HESSD) Volume 3 ; 3 >
+      au < exists ; exists ; 2007 ; Hydrology and Earth System Sciences Discussions (HESSD) Volume 4 ; 4 >
+      au < exists ; exists ; 2008 ; Hydrology and Earth System Sciences Discussions (HESSD) Volume 5 ; 5 >
+      au < exists ; exists ; 2009 ; Hydrology and Earth System Sciences Discussions (HESSD) Volume 6 ; 6 >
+      au < exists ; exists ; 2010 ; Hydrology and Earth System Sciences Discussions (HESSD) Volume 7 ; 7 >
+      au < exists ; exists ; 2011 ; Hydrology and Earth System Sciences Discussions (HESSD) Volume 8 ; 8 >
+      au < exists ; exists ; 2012 ; Hydrology and Earth System Sciences Discussions (HESSD) Volume 9 ; 9 >
+    
+   }
+    
+  {
+    title <
+      name = Journal of Sensors and Sensor Systems (JSSS) ;
+      issn = 2194-8771 ;
+      eissn = 2194-878X
+    >
+    
+      param[base_url] = http://www.j-sens-sens-syst.net
+
+      au < exists ; exists ; 2012 ; Journal of Sensors and Sensor Systems (JSSS) Volume 1 ; 1 >
+    
+   }
+   
+  {
+    title <
+      name = Mechanical Sciences (MS) ;
+      issn = 2191-9151 ;
+      eissn = 2191-916X
+    >
+    
+      param[base_url] = http://www.mech-sci.net
+
+      au < exists ; exists ; 2010 ; Mechanical Sciences (MS) Volume 1 ; 1 >
+      au < exists ; exists ; 2011 ; Mechanical Sciences (MS) Volume 2 ; 2 >
+      au < exists ; exists ; 2012 ; Mechanical Sciences (MS) Volume 3 ; 3 >
+    
+   }
+    
+  {
+    title <
+      name = Natural Hazards and Earth System Sciences (NHESS) ;
+      issn = 1561-8633 ;
+      eissn = 1684-9981
+    >
+    
+      param[base_url] = http://www.nat-hazards-earth-syst-sci.net
+
+      au < exists ; exists ; 2001 ; Natural Hazards and Earth System Sciences (NHESS) Volume 1 ; 1 >
+      au < exists ; exists ; 2002 ; Natural Hazards and Earth System Sciences (NHESS) Volume 2 ; 2 >
+      au < exists ; exists ; 2003 ; Natural Hazards and Earth System Sciences (NHESS) Volume 3 ; 3 >
+      au < exists ; exists ; 2004 ; Natural Hazards and Earth System Sciences (NHESS) Volume 4 ; 4 >
+      au < exists ; exists ; 2005 ; Natural Hazards and Earth System Sciences (NHESS) Volume 5 ; 5 >
+      au < exists ; exists ; 2006 ; Natural Hazards and Earth System Sciences (NHESS) Volume 6 ; 6 >
+      au < exists ; exists ; 2007 ; Natural Hazards and Earth System Sciences (NHESS) Volume 7 ; 7 >
+      au < exists ; exists ; 2008 ; Natural Hazards and Earth System Sciences (NHESS) Volume 8 ; 8 >
+      au < exists ; exists ; 2009 ; Natural Hazards and Earth System Sciences (NHESS) Volume 9 ; 9 >
+      au < exists ; exists ; 2010 ; Natural Hazards and Earth System Sciences (NHESS) Volume 10 ; 10 >
+      au < exists ; exists ; 2011 ; Natural Hazards and Earth System Sciences (NHESS) Volume 11 ; 11 >
+      au < exists ; exists ; 2012 ; Natural Hazards and Earth System Sciences (NHESS) Volume 12 ; 12 >
+    
+   }
+    
+  {
+    title <
+      name = Nonlinear Processes in Geophysics (NPG) ;
+      issn = 1023-5809 ;
+      eissn = 1607-7946
+    >
+    
+      param[base_url] = http://www.nonlin-processes-geophys.net
+
+      au < exists ; exists ; 1994 ; Nonlinear Processes in Geophysics (NPG) Volume 1 ; 1 >
+      au < exists ; exists ; 1995 ; Nonlinear Processes in Geophysics (NPG) Volume 2 ; 2 >
+      au < exists ; exists ; 1996 ; Nonlinear Processes in Geophysics (NPG) Volume 3 ; 3 >
+      au < exists ; exists ; 1997 ; Nonlinear Processes in Geophysics (NPG) Volume 4 ; 4 >
+      au < exists ; exists ; 1998 ; Nonlinear Processes in Geophysics (NPG) Volume 5 ; 5 >
+      au < exists ; exists ; 1999 ; Nonlinear Processes in Geophysics (NPG) Volume 6 ; 6 >
+      au < exists ; exists ; 2000 ; Nonlinear Processes in Geophysics (NPG) Volume 7 ; 7 >
+      au < exists ; exists ; 2001 ; Nonlinear Processes in Geophysics (NPG) Volume 8 ; 8 >
+      au < exists ; exists ; 2002 ; Nonlinear Processes in Geophysics (NPG) Volume 9 ; 9 >
+      au < exists ; exists ; 2003 ; Nonlinear Processes in Geophysics (NPG) Volume 10 ; 10 >
+      au < exists ; exists ; 2004 ; Nonlinear Processes in Geophysics (NPG) Volume 11 ; 11 >
+      au < exists ; exists ; 2005 ; Nonlinear Processes in Geophysics (NPG) Volume 12 ; 12 >
+      au < exists ; exists ; 2006 ; Nonlinear Processes in Geophysics (NPG) Volume 13 ; 13 >
+      au < exists ; exists ; 2007 ; Nonlinear Processes in Geophysics (NPG) Volume 14 ; 14 >
+      au < exists ; exists ; 2008 ; Nonlinear Processes in Geophysics (NPG) Volume 15 ; 15 >
+      au < exists ; exists ; 2009 ; Nonlinear Processes in Geophysics (NPG) Volume 16 ; 16 >
+      au < exists ; exists ; 2010 ; Nonlinear Processes in Geophysics (NPG) Volume 17 ; 17 >
+      au < exists ; exists ; 2011 ; Nonlinear Processes in Geophysics (NPG) Volume 18 ; 18 >
+      au < exists ; exists ; 2012 ; Nonlinear Processes in Geophysics (NPG) Volume 19 ; 19 >
+    
+   }
+    
+  {
+    title <
+      name = Ocean Science (OS) ;
+      issn = 1812-0784 ;
+      eissn = 1812-0792
+    >
+    
+      param[base_url] = http://www.ocean-sci.net
+
+      au < exists ; exists ; 2005 ; Ocean Science (OS) Volume 1 ; 1 >
+      au < exists ; exists ; 2006 ; Ocean Science (OS) Volume 2 ; 2 >
+      au < exists ; exists ; 2007 ; Ocean Science (OS) Volume 3 ; 3 >
+      au < exists ; exists ; 2008 ; Ocean Science (OS) Volume 4 ; 4 >
+      au < exists ; exists ; 2009 ; Ocean Science (OS) Volume 5 ; 5 >
+      au < exists ; exists ; 2010 ; Ocean Science (OS) Volume 6 ; 6 >
+      au < exists ; exists ; 2011 ; Ocean Science (OS) Volume 7 ; 7 >
+      au < exists ; exists ; 2012 ; Ocean Science (OS) Volume 8 ; 8 >
+    
+   }
+    
+  {
+    title <
+      name = Ocean Science Discussions (OSD) ;
+      eissn = 1812-0822
+    >
+    
+      param[base_url] = http://www.ocean-sci-discuss.net
+
+      au < exists ; exists ; 2004 ; Ocean Science Discussions (OSD) Volume 1 ; 1 >
+      au < exists ; exists ; 2005 ; Ocean Science Discussions (OSD) Volume 2 ; 2 >
+      au < exists ; exists ; 2006 ; Ocean Science Discussions (OSD) Volume 3 ; 3 >
+      au < exists ; exists ; 2007 ; Ocean Science Discussions (OSD) Volume 4 ; 4 >
+      au < exists ; exists ; 2008 ; Ocean Science Discussions (OSD) Volume 5 ; 5 >
+      au < exists ; exists ; 2009 ; Ocean Science Discussions (OSD) Volume 6 ; 6 >
+      au < exists ; exists ; 2010 ; Ocean Science Discussions (OSD) Volume 7 ; 7 >
+      au < exists ; exists ; 2011 ; Ocean Science Discussions (OSD) Volume 8 ; 8 >
+      au < exists ; exists ; 2012 ; Ocean Science Discussions (OSD) Volume 9 ; 9 >
+    
+   }
+    
+  {
+    title <
+      name = Social Geography (SG) ;
+      issn = 1729-4274 ;
+      eissn = 1729-4312
+    >
+    
+      param[base_url] = http://www.soc-geogr.net
+
+      au < exists ; exists ; 2005 ; Social Geography (SG) Volume 1 ; 1 >
+      au < exists ; exists ; 2007 ; Social Geography (SG) Volume 2 ; 2 >
+      au < exists ; exists ; 2008 ; Social Geography (SG) Volume 3 ; 3 >
+      au < exists ; exists ; 2009 ; Social Geography (SG) Volume 4 ; 4 >
+      au < exists ; exists ; 2010 ; Social Geography (SG) Volume 5 ; 5 >
+      au < exists ; exists ; 2011 ; Social Geography (SG) Volume 6 ; 6 >
+      au < exists ; exists ; 2012 ; Social Geography (SG) Volume 7 ; 7 >
+    
+   }
+    
+  {
+    title <
+      name = Social Geography Discussions (SGD) ;
+      eissn = 1816-1502
+    >
+    
+      param[base_url] = http://www.soc-geogr-discuss.net
+
+      au < exists ; exists ; 2005 ; Social Geography Discussions (SGD) Volume 1 ; 1 >
+      au < exists ; exists ; 2006 ; Social Geography Discussions (SGD) Volume 2 ; 2 >
+      au < exists ; exists ; 2007 ; Social Geography Discussions (SGD) Volume 3 ; 3 >
+      au < exists ; exists ; 2008 ; Social Geography Discussions (SGD) Volume 4 ; 4 >
+      au < exists ; exists ; 2009 ; Social Geography Discussions (SGD) Volume 5 ; 5 >
+      au < exists ; exists ; 2010 ; Social Geography Discussions (SGD) Volume 6 ; 6 >
+      au < exists ; exists ; 2011 ; Social Geography Discussions (SGD) Volume 7 ; 7 >
+      au < exists ; exists ; 2012 ; Social Geography Discussions (SGD) Volume 8 ; 8 >
+    
+   }
+    
+  {
+    title <
+      name = Solid Earth (SE) ;
+      issn = 1869-9510 ;
+      eissn = 1869-9529
+    >
+    
+      param[base_url] = http://www.electronic-earth-discuss.net
+
+      au < exists ; exists ; 2010 ; Solid Earth (SE) Volume 1 ; 1 >
+      au < exists ; exists ; 2011 ; Solid Earth (SE) Volume 2 ; 2 >
+      au < exists ; exists ; 2012 ; Solid Earth (SE) Volume 3 ; 3 >
+    
+   }
+    
+  {
+    title <
+      name = Solid Earth Discussions (SED) ;
+      eissn = 1869-9537
+    >
+    
+      param[base_url] = http://www.solid-earth-discuss.net
+
+      au < exists ; exists ; 2009 ; Solid Earth Discussions (SED) Volume 1 ; 1 >
+      au < exists ; exists ; 2010 ; Solid Earth Discussions (SED) Volume 2 ; 2 >
+      au < exists ; exists ; 2011 ; Solid Earth Discussions (SED) Volume 3 ; 3 >
+      au < exists ; exists ; 2012 ; Solid Earth Discussions (SED) Volume 4 ; 4 >
+    
+   }
+    
+  {
+    title <
+      name = Stephan Mueller Special Publication Series (SMSPS) ;
+      issn = 1868-4556 ;
+      eissn = 1868-4564
+    >
+    
+      param[base_url] = http://www.stephan-mueller-spec-publ-ser.net
+
+      au < exists ; exists ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 1 ; 1 >
+      au < exists ; exists ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 2 ; 2 >
+      au < exists ; exists ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 3 ; 3 >
+      au < exists ; exists ; 2009 ; Stephan Mueller Special Publication Series (SMSPS) Volume 4 ; 4 >
+    
+   }
+    
+  {
+    title <
+      name = Surveys and Perspectives Integrating Environment and Society (SAPIENS) ;
+      eissn = 1993-3819
+    >
+    
+      param[base_url] = http://www.surv-perspect-integr-environ-soc.net
+
+      au < exists ; exists ; 2008 ; Surveys and Perspectives Integrating Environment and Society (SAPIENS) Volume 1 ; 1 >
+    
+   }
+    
+  {
+    title <
+      name = The Cryosphere (TC) ;
+      issn = 1994-0416 ;
+      eissn = 1994-0424
+    >
+    
+      param[base_url] = http://www.the-cryosphere.net
+
+      au < exists ; exists ; 2007 ; The Cryosphere (TC) Volume 1 ; 1 >
+      au < exists ; exists ; 2008 ; The Cryosphere (TC) Volume 2 ; 2 >
+      au < exists ; exists ; 2009 ; The Cryosphere (TC) Volume 3 ; 3 >
+      au < exists ; exists ; 2010 ; The Cryosphere (TC) Volume 4 ; 4 >
+      au < exists ; exists ; 2011 ; The Cryosphere (TC) Volume 5 ; 5 >
+      au < exists ; exists ; 2012 ; The Cryosphere (TC) Volume 6 ; 6 >
+    
+   }
+    
+  {
+    title <
+      name = The Cryosphere Discussions (TCD) ;
+      eissn = 1994-0440
+    >
+    
+      param[base_url] = http://www.the-cryosphere-discuss.net
+
+      au < exists ; exists ; 2007 ; The Cryosphere Discussions (TCD) Volume 1 ; 1 >
+      au < exists ; exists ; 2008 ; The Cryosphere Discussions (TCD) Volume 2 ; 2 >
+      au < exists ; exists ; 2009 ; The Cryosphere Discussions (TCD) Volume 3 ; 3 >
+      au < exists ; exists ; 2010 ; The Cryosphere Discussions (TCD) Volume 4 ; 4 >
+      au < exists ; exists ; 2011 ; The Cryosphere Discussions (TCD) Volume 5 ; 5 >
+      au < exists ; exists ; 2012 ; The Cryosphere Discussions (TCD) Volume 6 ; 6 >
+    
+   }
+    
+  {
+    title <
+      name = Web Ecology (WE) ;
+      issn = 2193-3081 ;
+      eissn = 1399-1183
+    >
+    
+      param[base_url] = http://www.web-ecol.net
+
+      au < exists ; exists ; 2000 ; Web Ecology (WE) Volume 1 ; 1 >
+      au < exists ; exists ; 2001 ; Web Ecology (WE) Volume 2 ; 2 >
+      au < exists ; exists ; 2002 ; Web Ecology (WE) Volume 3 ; 3 >
+      au < exists ; exists ; 2003 ; Web Ecology (WE) Volume 4 ; 4 >
+      au < exists ; exists ; 2005 ; Web Ecology (WE) Volume 5 ; 5 >
+      au < exists ; exists ; 2006 ; Web Ecology (WE) Volume 6 ; 6 >
+      au < exists ; exists ; 2007 ; Web Ecology (WE) Volume 7 ; 7 >
+      au < exists ; exists ; 2008 ; Web Ecology (WE) Volume 8 ; 8 >
+      au < exists ; exists ; 2009 ; Web Ecology (WE) Volume 9 ; 9 >
+      au < exists ; exists ; 2010 ; Web Ecology (WE) Volume 10 ; 10 >
+      au < exists ; exists ; 2011 ; Web Ecology (WE) Volume 11 ; 11 >
+      au < exists ; exists ; 2012 ; Web Ecology (WE) Volume 12 ; 12 >
+    
+   }
+    
 }
