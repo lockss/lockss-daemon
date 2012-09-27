@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.32 2012-08-21 22:28:03 thib_gc Exp $
+# $Id: tdbxml.py,v 1.33 2012-09-27 18:34:21 pgust Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -171,7 +171,8 @@ def __process_au(au, options):
     title = au.title()
     for val, st in [(title.issn(), 'issn'),
                     (title.eissn(), 'eissn'),
-                    (title.issnl(), 'issnl')]:
+                    (title.issnl(), 'issnl'),
+                    (title.doi(), 'journalDoi')]:
       if val is not None: austr.append('''\
    <property name="%s" value="%s" />
 ''' % ( st, val ))
