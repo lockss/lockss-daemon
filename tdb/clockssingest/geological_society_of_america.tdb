@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Geological Society of America
+    name = Geological Society of America ;
+    info[contract] = 2011 ;
+    info[tester] = 8
   >
 
     attr[contract] = 2011

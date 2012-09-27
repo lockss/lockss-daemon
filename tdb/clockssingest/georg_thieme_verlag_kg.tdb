@@ -1,8 +1,11 @@
 {
 
   publisher <
-    name = Georg Thieme Verlag KG
+    name = Georg Thieme Verlag KG ;
+    info[contract] = 2010 ;
+    info[tester] = 0
   >
+  
   attr[contract] = 2010
   param[base_url] = https://www.thieme-connect.de/
   plugin = needs.plugin
