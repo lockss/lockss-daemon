@@ -8,7 +8,7 @@
   >
 
     attr[contract] = 2012
-    plugin = need.plugin
+    plugin = needs.plugin
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
   {
