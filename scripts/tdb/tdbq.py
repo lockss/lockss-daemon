@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.18 2012-09-25 20:58:05 thib_gc Exp $
+# $Id: tdbq.py,v 1.19 2012-09-27 18:33:07 pgust Exp $
 
 __copyright__ = '''\
 
@@ -648,6 +648,7 @@ STR_TO_LAMBDA_AU = {
     'isbn': lambda au: au.title().isbn(),
     'issn': lambda au: au.title().issn(),
     'issnl': lambda au: au.title().issnl(),
+    'doi': lambda au: au.title().doi(),
     'name': lambda au: au.name(),
     'plugin': lambda au: au.plugin(),
     'pluginPrefix': lambda au: au.get(AU.PLUGIN_PREFIX),
@@ -665,6 +666,7 @@ STR_TO_LAMBDA_AU = {
     'title:isbn': lambda au: au.title().isbn(),
     'title:issn': lambda au: au.title().issn(),
     'title:issnl': lambda au: au.title().issnl(),
+    'title:doi': lambda au: au.title().doi(),
     'title:name': lambda au: au.title().name(),
     'title:type': lambda au: au.title().type(),
     'type': lambda au: au.title().type(),
