@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestAggregator.java,v 1.2 2012-08-29 23:07:12 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestAggregator.java,v 1.3 2012-09-28 00:13:23 fergaloy-sf Exp $
  */
 
 /*
@@ -130,6 +130,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props
 	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    props.setProperty(CounterReportsManager.PARAM_COUNTER_ENABLED, "true");
     props.setProperty(CounterReportsManager.PARAM_REPORT_BASEDIR_PATH,
 		      tempDirPath);
     props
