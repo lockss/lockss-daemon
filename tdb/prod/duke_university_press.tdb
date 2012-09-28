@@ -505,8 +505,8 @@
       param[journal_dir] = differences
       attr[journal_id] = dif
 
-      au < released ; 1999 ; differences: A Journal of Feminist Cultural Studies Volume 10 ; 10 >
-      au < released ; 2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
+      au < released ; 1998 ; differences: A Journal of Feminist Cultural Studies Volume 10 ; 10 >
+      au < released ; 1999 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
       au < released ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
       au < released ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
       au < released ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
@@ -971,7 +971,7 @@
       au < released ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
       au < released ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
       au < released ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
-      au < released ; 2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
+      au < released ; 2003-2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
       au < released ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
       au < released ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
       au < released ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >
@@ -2066,6 +2066,18 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
       au < HighWirePressH20Plugin ; exists ; 2000 ; Philosophical Review Volume 109 ; 109 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; Philosophical Review Volume 110 ; 110 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; Philosophical Review Volume 111 ; 111 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; Philosophical Review Volume 112 ; 112 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; Philosophical Review Volume 113 ; 113 >
+      au < HighWirePressH20Plugin ; exists ; 2005 ; Philosophical Review Volume 114 ; 114 >
+      au < HighWirePressH20Plugin ; exists ; 2006 ; Philosophical Review Volume 115 ; 115 >
+      au < HighWirePressH20Plugin ; exists ; 2007 ; Philosophical Review Volume 116 ; 116 >
+      au < HighWirePressH20Plugin ; exists ; 2008 ; Philosophical Review Volume 117 ; 117 >
+      au < HighWirePressH20Plugin ; exists ; 2009 ; Philosophical Review Volume 118 ; 118 >
+      au < HighWirePressH20Plugin ; exists ; 2010 ; Philosophical Review Volume 119 ; 119 >
+      au < HighWirePressH20Plugin ; exists ; 2011 ; Philosophical Review Volume 120 ; 120 >
+      au < HighWirePressH20Plugin ; exists ; 2012 ; Philosophical Review Volume 121 ; 121 >
     
     }
     
@@ -2102,6 +2114,11 @@
       param[base_url] = http://poeticstoday.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
+      au < HighWirePressH20Plugin ; exists ; 2000 ; Poetics Today Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; Poetics Today Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; Poetics Today Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; Poetics Today Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; Poetics Today Volume 25 ; 25 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Poetics Today Volume 26 ; 26 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Poetics Today Volume 27 ; 27 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Poetics Today Volume 28 ; 28 >
@@ -2156,6 +2173,18 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       comment[title] = title changed since 2012 in Duke only
       
+      au < HighWirePressH20Plugin ; exists ; 1993 ; positions: east asia cultures critique Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; exists ; 1994 ; positions: east asia cultures critique Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; exists ; 1995 ; positions: east asia cultures critique Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; exists ; 1996 ; positions: east asia cultures critique Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; exists ; 1997 ; positions: east asia cultures critique Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; exists ; 1998 ; positions: east asia cultures critique Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; exists ; 1999 ; positions: east asia cultures critique Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; exists ; 2000 ; positions: east asia cultures critique Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; positions: east asia cultures critique Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; positions: east asia cultures critique Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; positions: east asia cultures critique Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; positions: east asia cultures critique Volume 12 ; 12 >
       au < HighWireStrVolPlugin ; down ; 2005 ; positions: east asia cultures critique Volume 13 ; 13 >
       au < HighWireStrVolPlugin ; down ; 2006 ; positions: east asia cultures critique Volume 14 ; 14 >
       au < HighWireStrVolPlugin ; down ; 2007 ; positions: east asia cultures critique Volume 15 ; 15 >
@@ -2299,9 +2328,9 @@
       param[base_url] = http://rhr.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 1975 ; Radical History Review Volume 1975 ; 1975 >
-      au < HighWirePressH20Plugin ; exists ; 1976 ; Radical History Review Volume 1976 ; 1976 >
-      au < HighWirePressH20Plugin ; exists ; 1977 ; Radical History Review Volume 1977 ; 1977 >
+      au < HighWirePressH20Plugin ; exists ; 1975 ; Radical History Review Volume 1975 (Issues 9-10) ; 1975 >
+      au < HighWirePressH20Plugin ; exists ; 1976 ; Radical History Review Volume 1976 (Issues 11-12) ; 1976 >
+      au < HighWirePressH20Plugin ; exists ; 1977 ; Radical History Review Volume 1977 (Issues 13-15) ; 1977 >
       au < HighWirePressH20Plugin ; exists ; 1978 ; Radical History Review Volume 1978 ; 1978 >
       au < HighWirePressH20Plugin ; exists ; 1979 ; Radical History Review Volume 1979 ; 1979 >
       au < HighWirePressH20Plugin ; exists ; 1980 ; Radical History Review Volume 1980 ; 1980  >
