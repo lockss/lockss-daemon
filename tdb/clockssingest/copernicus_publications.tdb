@@ -8,7 +8,7 @@
   >
 
     attr[contract] = 2012
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.copernicus.CopernicusPublicationsPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
   {
@@ -18,7 +18,8 @@
       eissn = 1680-7359
     >
     
-      param[base_url] = http://www.adv-geosci.net
+      param[base_url] = http://www.adv-geosci.net/
+      param[home_url] = http://www.advances-in-geosciences.net/
 
       au < exists ; exists ; 2003 ; Advances in Geosciences (ADGEO) Volume 1 ; 1 >
       au < exists ; exists ; 2005 ; Advances in Geosciences (ADGEO) Volume 2 ; 2 >
@@ -62,6 +63,7 @@
     >
     
       param[base_url] = http://www.adv-radio-sci.net/
+      param[home_url] = http://www.advances-in-radio-science.net/
 
       au < exists ; exists ; 2003 ; Advances in Radio Science (ARS) 2002 Volume 1 ; 1 >
       au < exists ; exists ; 2004 ; Advances in Radio Science (ARS) 2003 Volume 2 ; 2 >
@@ -83,7 +85,8 @@
       eissn = 1992-0636
     >
     
-      param[base_url] = http://www.adv-sci-res.net
+      param[base_url] = http://www.adv-sci-res.net/
+      param[home_url] = http://www.advances-in-science-and-research.net/
 
       au < exists ; exists ; 2007 ; Advances in Science and Research (ASR) 2006 Volume 1 ; 1 >
       au < exists ; exists ; 2008 ; Advances in Science and Research (ASR) 2007 Volume 2 ; 2 >
@@ -103,7 +106,8 @@
       eissn = 1432-0576
     >
     
-      param[base_url] = http://www.ann-geophys.net
+      param[base_url] = http://www.ann-geophys.net/
+      param[home_url] = http://www.annales-geophysicae.net/
 
       au < exists ; exists ; 1994 ; Annales Geophysicae (ANGEO) Volume 12 ; 12 >
       au < exists ; exists ; 1995 ; Annales Geophysicae (ANGEO) Volume 13 ; 13 >
@@ -134,7 +138,8 @@
       eissn = 1810-6536
     >
     
-      param[base_url] = http://www.astrophys-space-sci-trans.net
+      param[base_url] = http://www.astrophys-space-sci-trans.net/
+      param[home_url] = http://www.astrophysics-and-space-sciences-transactions.net/
 
       au < exists ; exists ; 2005 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 1 ; 1 >
       au < exists ; exists ; 2006 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 2 ; 2 >
@@ -154,7 +159,8 @@
       eissn = 1680-7324
     >
     
-      param[base_url] = http://www.atmos-chem-phys.net
+      param[base_url] = http://www.atmos-chem-phys.net/
+      param[home_url] = http://www.atmospheric-chemistry-and-physics.net/
 
       au < exists ; exists ; 2001 ; Atmospheric Chemistry and Physics (ACP) Volume 1 ; 1 >
       au < exists ; exists ; 2002 ; Atmospheric Chemistry and Physics (ACP) Volume 2 ; 2 >
@@ -177,7 +183,8 @@
       eissn = 1680-7375
     >
     
-      param[base_url] = http://www.atmos-chem-phys-discuss.net
+      param[base_url] = http://www.atmos-chem-phys-discuss.net/
+      param[home_url] = http://www.atmospheric-chemistry-and-physics.net/
 
       au < exists ; exists ; 2001 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 1 ; 1 >
       au < exists ; exists ; 2002 ; Atmospheric Chemistry and Physics Discussions (ACPD) Volume 2 ; 2 >
@@ -201,7 +208,8 @@
       eissn = 1867-8548
     >
     
-      param[base_url] = http://www.atmos-meas-tech.net
+      param[base_url] = http://www.atmos-meas-tech.net/
+      param[home_url] = http://www.atmospheric-measurement-techniques.net/
 
       au < exists ; exists ; 2008 ; Atmospheric Measurement Techniques (AMT) Volume 1 ; 1 >
       au < exists ; exists ; 2009 ; Atmospheric Measurement Techniques (AMT) Volume 2 ; 2 >
@@ -217,7 +225,8 @@
       eissn = 1867-8610
     >
     
-      param[base_url] = http://www.atmos-meas-tech-discuss.net
+      param[base_url] = http://www.atmos-meas-tech-discuss.net/
+      param[home_url] = http://www.atmospheric-measurement-techniques.net/
 
       au < exists ; exists ; 2008 ; Atmospheric Measurement Techniques Discussions (AMTD) Volume 1 ; 1 >
       au < exists ; exists ; 2009 ; Atmospheric Measurement Techniques Discussions (AMTD) Volume 2 ; 2 >
@@ -234,7 +243,8 @@
       eissn = 1726-4189
     >
     
-      param[base_url] = http://www.biogeosciences.net
+      param[base_url] = http://www.biogeosciences.net/
+      param[home_url] = http://www.biogeosciences.net/
 
       au < exists ; exists ; 2004 ; Biogeosciences (BG) Volume 1 ; 1 >
       au < exists ; exists ; 2005 ; Biogeosciences (BG) Volume 2 ; 2 >
@@ -254,7 +264,8 @@
       eissn = 1810-6285
     >
     
-      param[base_url] = http://www.biogeosciences-discuss.net
+      param[base_url] = http://www.biogeosciences-discuss.net/
+      param[home_url] = http://www.biogeosciences.net/
 
       au < exists ; exists ; 2004 ; Biogeosciences Discussions (BGD) Volume 1 ; 1 >
       au < exists ; exists ; 2005 ; Biogeosciences Discussions (BGD) Volume 2 ; 2 >
@@ -275,7 +286,8 @@
       eissn = 1814-9332
     >
     
-      param[base_url] = http://www.clim-past.net
+      param[base_url] = http://www.clim-past.net/
+      param[home_url] = http://www.climate-of-the-past.net/
 
       au < exists ; exists ; 2005 ; Climate of the Past (CP) Volume 1 ; 1 >
       au < exists ; exists ; 2006 ; Climate of the Past (CP) Volume 2 ; 2 >
@@ -294,7 +306,8 @@
       eissn = 1814-9359
     >
     
-      param[base_url] = http://www.clim-past-discuss.net
+      param[base_url] = http://www.clim-past-discuss.net/
+      param[home_url] = http://www.climate-of-the-past.net/
 
       au < exists ; exists ; 2005 ; Climate of the Past Discussions (CPD) Volume 1 ; 1 >
       au < exists ; exists ; 2006 ; Climate of the Past Discussions (CPD) Volume 2 ; 2 >
@@ -314,7 +327,8 @@
       eissn = 1996-9465
     >
     
-      param[base_url] = http://www.drink-water-eng-sci.net
+      param[base_url] = http://www.drink-water-eng-sci.net/
+      param[home_url] = http://www.drinking-water-engineering-and-science.net/
 
       au < exists ; exists ; 2008 ; Drinking Water Engineering and Science (DWES) Volume 1 ; 1 >
       au < exists ; exists ; 2009 ; Drinking Water Engineering and Science (DWES) Volume 2 ; 2 >
@@ -330,7 +344,8 @@
       eissn = 1996-9481
     >
     
-      param[base_url] = http://www.drink-water-eng-sci-discuss.net
+      param[base_url] = http://www.drink-water-eng-sci-discuss.net/
+      param[home_url] = http://www.drinking-water-engineering-and-science.net/
 
       au < exists ; exists ; 2008 ; Drinking Water Engineering and Science Discussions (DWESD) Volume 1 ; 1 >
       au < exists ; exists ; 2009 ; Drinking Water Engineering and Science Discussions (DWESD) Volume 2 ; 2 >
@@ -347,7 +362,8 @@
       eissn = 2190-4987
     >
     
-      param[base_url] = http://www.earth-syst-dynam.net
+      param[base_url] = http://www.earth-syst-dynam.net/
+      param[home_url] = http://www.earth-system-dynamics.net/
 
       au < exists ; exists ; 2010 ; Earth System Dynamics (ESD) Volume 1 ; 1 >
       au < exists ; exists ; 2011 ; Earth System Dynamics (ESD) Volume 2 ; 2 >
@@ -361,7 +377,8 @@
       eissn = 2190-4995
     >
     
-      param[base_url] = http://www.earth-syst-dynam-discuss.net
+      param[base_url] = http://www.earth-syst-dynam-discuss.net/
+      param[home_url] = http://www.earth-system-dynamics.net/
 
       au < exists ; exists ; 2010 ; Earth System Dynamics Discussions (ESDD) Volume 1 ; 1 >
       au < exists ; exists ; 2011 ; Earth System Dynamics Discussions (ESDD) Volume 2 ; 2 >
@@ -376,7 +393,8 @@
       eissn = 1866-3516
     >
     
-      param[base_url] = http://www.earth-syst-sci-data.net
+      param[base_url] = http://www.earth-syst-sci-data.net/
+      param[home_url] = http://www.earth-system-science-data.net/
 
       au < exists ; exists ; 2009 ; Earth System Science Data (ESSD) Volume 1 ; 1 >
       au < exists ; exists ; 2010 ; Earth System Science Data (ESSD) Volume 2 ; 2 >
@@ -391,7 +409,8 @@
       eissn = 1866-3591
     >
     
-      param[base_url] = http://www.earth-syst-sci-data-discuss.net
+      param[base_url] = http://www.earth-syst-sci-data-discuss.net/
+      param[home_url] = http://www.earth-system-science-data.net/
 
       au < exists ; exists ; 2008 ; Earth System Science Data Discussions (ESSDD) Volume 1 ; 1 >
       au < exists ; exists ; 2009 ; Earth System Science Data Discussions (ESSDD) Volume 2 ; 2 >
@@ -408,7 +427,8 @@
       eissn = 1815-3828
     >
     
-      param[base_url] = http://www.electronic-earth.net
+      param[base_url] = http://www.electronic-earth.net/
+      param[home_url] = http://www.electronic-earth.net/
 
       au < exists ; exists ; 2006 ; eEarth (eE) Volume 1 ; 1 >
       au < exists ; exists ; 2007 ; eEarth (eE) Volume 2 ; 2 >
@@ -425,7 +445,8 @@
       eissn = 1815-3844
     >
     
-      param[base_url] = http://www.electronic-earth-discuss.net
+      param[base_url] = http://www.electronic-earth-discuss.net/
+      param[home_url] = http://www.electronic-earth.net/
 
       au < exists ; exists ; 2006 ; eEarth Discussions (eED) Volume 1 ; 1 >
       au < exists ; exists ; 2007 ; eEarth Discussions (eED) Volume 2 ; 2 >
@@ -440,7 +461,8 @@
       eissn = 1867-8521
     >
     
-      param[base_url] = http://www.field-actions-sci-rep.net
+      param[base_url] = http://www.field-actions-sci-rep.net/
+      param[home_url] = http://www.field-actions-science-reports.net/
 
       au < exists ; exists ; 2008 ; Field Actions Science Reports (FACTS) Volume 1 ; 1 >
       au < exists ; exists ; 2009 ; Field Actions Science Reports (FACTS) Volume 2 ; 2 >
@@ -454,6 +476,7 @@
     >
     
       param[base_url] = http://www.geographica-helvetica.net/
+      param[home_url] = http://www.geographica-helvetica.net/
 
       au < exists ; exists ; 1999 ; Geographica Helvetica (GH) Volume 1999 ; 1999 >
       au < exists ; exists ; 2000 ; Geographica Helvetica (GH) Volume 2000 ; 2000 >
@@ -479,7 +502,8 @@
       eissn = 2193-0864
     >
     
-      param[base_url] = http://www.geosci-instrum-method-data-syst.net
+      param[base_url] = http://www.geosci-instrum-method-data-syst.net/
+      param[home_url] = http://www.geoscientific-instrumentation-methods-and-data-systems.net/
 
       au < exists ; exists ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems (GI) Volume 1 ; 1 >
     
@@ -491,7 +515,8 @@
       eissn = 2193-0872
     >
     
-      param[base_url] = http://www.geosci-instrum-method-data-syst-discuss.net
+      param[base_url] = http://www.geosci-instrum-method-data-syst-discuss.net/
+      param[home_url] = http://www.geoscientific-instrumentation-methods-and-data-systems.net/
 
       au < exists ; exists ; 2011 ; Geoscientific Instrumentation, Methods and Data Systems Discussions (GID) Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Discussions (GID) Volume 2 ; 2 >
@@ -505,7 +530,8 @@
       eissn = 1991-9603
     >
     
-      param[base_url] = http://www.geosci-model-dev.net
+      param[base_url] = http://www.geosci-model-dev.net/
+      param[home_url] = http://www.geoscientific-model-development.net/
 
       au < exists ; exists ; 2008 ; Geoscientific Model Development (GMD) Volume 1 ; 1 >
       au < exists ; exists ; 2009 ; Geoscientific Model Development (GMD) Volume 2 ; 2 >
@@ -521,7 +547,8 @@
       eissn = 1991-962X
     >
     
-      param[base_url] = http://www.geosci-model-dev-discuss.net
+      param[base_url] = http://www.geosci-model-dev-discuss.net/
+      param[home_url] = http://www.geoscientific-model-development.net/
 
       au < exists ; exists ; 2008 ; Geoscientific Model Development Discussions (GMDD) Volume 1 ; 1 >
       au < exists ; exists ; 2009 ; Geoscientific Model Development Discussions (GMDD) Volume 2 ; 2 >
@@ -538,7 +565,8 @@
       eissn = 2190-5029
     >
     
-      param[base_url] = http://www.hist-geo-space-sci.net
+      param[base_url] = http://www.hist-geo-space-sci.net/
+      param[home_url] = http://www.history-of-geo-and-space-sciences.net/
 
       au < exists ; exists ; 2010 ; History of Geo- and Space Sciences (HGSS) Volume 1 ; 1 >
       au < exists ; exists ; 2011 ; History of Geo- and Space Sciences (HGSS) Volume 2 ; 2 >
@@ -553,7 +581,8 @@
       eissn = 1607-7938
     >
     
-      param[base_url] = http://www.hydrol-earth-syst-sci.net
+      param[base_url] = http://www.hydrol-earth-syst-sci.net/
+      param[home_url] = http://www.hydrology-and-earth-system-sciences.net/
 
       au < exists ; exists ; 1997 ; Hydrology and Earth System Sciences (HESS) Volume 1 ; 1 >
       au < exists ; exists ; 1998 ; Hydrology and Earth System Sciences (HESS) Volume 2 ; 2 >
@@ -580,7 +609,8 @@
       eissn = 1812-2116
     >
     
-      param[base_url] = http://www.hydrol-earth-syst-sci-discuss.net
+      param[base_url] = http://www.hydrol-earth-syst-sci-discuss.net/
+      param[home_url] = http://www.hydrology-and-earth-system-sciences.net/
 
       au < exists ; exists ; 2004 ; Hydrology and Earth System Sciences Discussions (HESSD) Volume 1 ; 1 >
       au < exists ; exists ; 2005 ; Hydrology and Earth System Sciences Discussions (HESSD) Volume 2 ; 2 >
@@ -601,7 +631,8 @@
       eissn = 2194-878X
     >
     
-      param[base_url] = http://www.j-sens-sens-syst.net
+      param[base_url] = http://www.j-sens-sens-syst.net/
+      param[home_url] = http://www.journal-of-sensors-and-sensor-systems.net/
 
       au < exists ; exists ; 2012 ; Journal of Sensors and Sensor Systems (JSSS) Volume 1 ; 1 >
     
@@ -614,7 +645,8 @@
       eissn = 2191-916X
     >
     
-      param[base_url] = http://www.mech-sci.net
+      param[base_url] = http://www.mech-sci.net/
+      param[home_url] = http://www.mechanical-sciences.net/
 
       au < exists ; exists ; 2010 ; Mechanical Sciences (MS) Volume 1 ; 1 >
       au < exists ; exists ; 2011 ; Mechanical Sciences (MS) Volume 2 ; 2 >
@@ -629,7 +661,8 @@
       eissn = 1684-9981
     >
     
-      param[base_url] = http://www.nat-hazards-earth-syst-sci.net
+      param[base_url] = http://www.nat-hazards-earth-syst-sci.net/
+      param[home_url] = http://www.natural-hazards-and-earth-system-sciences.net/
 
       au < exists ; exists ; 2001 ; Natural Hazards and Earth System Sciences (NHESS) Volume 1 ; 1 >
       au < exists ; exists ; 2002 ; Natural Hazards and Earth System Sciences (NHESS) Volume 2 ; 2 >
@@ -653,7 +686,8 @@
       eissn = 1607-7946
     >
     
-      param[base_url] = http://www.nonlin-processes-geophys.net
+      param[base_url] = http://www.nonlin-processes-geophys.net/
+      param[home_url] = http://www.nonlinear-processes-in-geophysics.net/
 
       au < exists ; exists ; 1994 ; Nonlinear Processes in Geophysics (NPG) Volume 1 ; 1 >
       au < exists ; exists ; 1995 ; Nonlinear Processes in Geophysics (NPG) Volume 2 ; 2 >
@@ -684,7 +718,8 @@
       eissn = 1812-0792
     >
     
-      param[base_url] = http://www.ocean-sci.net
+      param[base_url] = http://www.ocean-sci.net/
+      param[home_url] = http://www.ocean-science.net/
 
       au < exists ; exists ; 2005 ; Ocean Science (OS) Volume 1 ; 1 >
       au < exists ; exists ; 2006 ; Ocean Science (OS) Volume 2 ; 2 >
@@ -703,7 +738,8 @@
       eissn = 1812-0822
     >
     
-      param[base_url] = http://www.ocean-sci-discuss.net
+      param[base_url] = http://www.ocean-sci-discuss.net/
+      param[home_url] = http://www.ocean-science.net/
 
       au < exists ; exists ; 2004 ; Ocean Science Discussions (OSD) Volume 1 ; 1 >
       au < exists ; exists ; 2005 ; Ocean Science Discussions (OSD) Volume 2 ; 2 >
@@ -724,7 +760,8 @@
       eissn = 1729-4312
     >
     
-      param[base_url] = http://www.soc-geogr.net
+      param[base_url] = http://www.soc-geogr.net/
+      param[home_url] = http://www.social-geography.net/
 
       au < exists ; exists ; 2005 ; Social Geography (SG) Volume 1 ; 1 >
       au < exists ; exists ; 2007 ; Social Geography (SG) Volume 2 ; 2 >
@@ -742,7 +779,8 @@
       eissn = 1816-1502
     >
     
-      param[base_url] = http://www.soc-geogr-discuss.net
+      param[base_url] = http://www.soc-geogr-discuss.net/
+      param[home_url] = http://www.social-geography.net/
 
       au < exists ; exists ; 2005 ; Social Geography Discussions (SGD) Volume 1 ; 1 >
       au < exists ; exists ; 2006 ; Social Geography Discussions (SGD) Volume 2 ; 2 >
@@ -762,7 +800,8 @@
       eissn = 1869-9529
     >
     
-      param[base_url] = http://www.electronic-earth-discuss.net
+      param[base_url] = http://www.solid-earth.net/
+      param[home_url] = http://www.solid-earth.net/
 
       au < exists ; exists ; 2010 ; Solid Earth (SE) Volume 1 ; 1 >
       au < exists ; exists ; 2011 ; Solid Earth (SE) Volume 2 ; 2 >
@@ -776,7 +815,8 @@
       eissn = 1869-9537
     >
     
-      param[base_url] = http://www.solid-earth-discuss.net
+      param[base_url] = http://www.solid-earth-discuss.net/
+      param[home_url] = http://www.solid-earth.net/
 
       au < exists ; exists ; 2009 ; Solid Earth Discussions (SED) Volume 1 ; 1 >
       au < exists ; exists ; 2010 ; Solid Earth Discussions (SED) Volume 2 ; 2 >
@@ -792,7 +832,8 @@
       eissn = 1868-4564
     >
     
-      param[base_url] = http://www.stephan-mueller-spec-publ-ser.net
+      param[base_url] = http://www.stephan-mueller-spec-publ-ser.net/
+      param[home_url] = http://www.stephan-mueller-special-publication-series.net/
 
       au < exists ; exists ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 1 ; 1 >
       au < exists ; exists ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 2 ; 2 >
@@ -807,7 +848,8 @@
       eissn = 1993-3819
     >
     
-      param[base_url] = http://www.surv-perspect-integr-environ-soc.net
+      param[base_url] = http://www.surv-perspect-integr-environ-soc.net/
+      param[home_url] = http://www.surveys-and-perspectives-integrating-environment-and-society.net/
 
       au < exists ; exists ; 2008 ; Surveys and Perspectives Integrating Environment and Society (SAPIENS) Volume 1 ; 1 >
     
@@ -820,7 +862,8 @@
       eissn = 1994-0424
     >
     
-      param[base_url] = http://www.the-cryosphere.net
+      param[base_url] = http://www.the-cryosphere.net/
+      param[home_url] = http://www.the-cryosphere.net/
 
       au < exists ; exists ; 2007 ; The Cryosphere (TC) Volume 1 ; 1 >
       au < exists ; exists ; 2008 ; The Cryosphere (TC) Volume 2 ; 2 >
@@ -837,7 +880,8 @@
       eissn = 1994-0440
     >
     
-      param[base_url] = http://www.the-cryosphere-discuss.net
+      param[base_url] = http://www.the-cryosphere-discuss.net/
+      param[home_url] = http://www.the-cryosphere.net/
 
       au < exists ; exists ; 2007 ; The Cryosphere Discussions (TCD) Volume 1 ; 1 >
       au < exists ; exists ; 2008 ; The Cryosphere Discussions (TCD) Volume 2 ; 2 >
@@ -855,7 +899,8 @@
       eissn = 1399-1183
     >
     
-      param[base_url] = http://www.web-ecol.net
+      param[base_url] = http://www.web-ecol.net/
+      param[home_url] = http://www.web-ecology.net/
 
       au < exists ; exists ; 2000 ; Web Ecology (WE) Volume 1 ; 1 >
       au < exists ; exists ; 2001 ; Web Ecology (WE) Volume 2 ; 2 >
