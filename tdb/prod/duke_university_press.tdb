@@ -2460,6 +2460,11 @@
       param[base_url] = http://ssh.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
+      au < HighWirePressH20Plugin ; exists ; 2000 ; Social Science History Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; Social Science History Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; Social Science History Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; Social Science History Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; Social Science History Volume 28 ; 28 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Social Science History Volume 29 ; 29 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Social Science History Volume 30 ; 30 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Social Science History Volume 31 ; 31 >
@@ -2504,6 +2509,11 @@
       param[base_url] = http://socialtext.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
+      au < HighWirePressH20Plugin ; exists ; 2000 ; Social Text Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; Social Text Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; Social Text Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; Social Text Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; Social Text Volume 22 ; 22 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Social Text Volume 23 ; 23 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Social Text Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Social Text Volume 25 ; 25 >
