@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.27 2012-06-25 14:14:55 easyonthemayo Exp $
+ * $Id: AdminServletManager.java,v 1.28 2012-10-01 21:12:31 fergaloy-sf Exp $
  */
 
 /*
@@ -35,15 +35,12 @@ package org.lockss.servlet;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-
-import org.apache.commons.lang.ArrayUtils;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.account.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
 import org.mortbay.http.*;
-import org.mortbay.http.handler.*;
 import org.mortbay.jetty.servlet.*;
 import com.planetj.servlet.filter.compression.*;
 import javax.servlet.http.*;
@@ -465,6 +462,14 @@ public class AdminServletManager extends BaseServletManager {
 		     LoginForm.class,
                      "LOCKSS Administration",
 		     ServletDescr.NO_NAV_TABLE | ServletDescr.LARGE_LOGO);
+		     
+  protected static final ServletDescr SERVLET_COUNTER_REPORTS =
+      new ServletDescr("CounterReportsServlet",
+                       CounterReportsServlet.class,
+                       "COUNTER Reports Servlet",
+		       "CounterReports",
+                       0,
+	               "COUNTER Report generator");
 
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;
@@ -510,6 +515,7 @@ public class AdminServletManager extends BaseServletManager {
      LINK_HELP,
      LINK_LOGOUT,
      LOGIN_FORM,
+     SERVLET_COUNTER_REPORTS
   };
   // XXXUI List of servlets to show in new UI: parallel main list but with new versions
   static final ServletDescr servletDescrsNew[] = {
