@@ -341,7 +341,7 @@
     param[journal_issn] = 0268-117X 
     param[journal_id] = tsc
 
-    comment[URGENT] = Moving off of Ingenta Dec 2012
+    comment[1] = Moving off of Ingenta Dec 2012 and picked up by T&F
 
     au < manifest ; exists ; 2005 ; The Seventeenth Century Volume 20 ; 20 >
     au < manifest ; exists ; 2006 ; The Seventeenth Century Volume 21 ; 21 >
