@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = IOP Publishing
+    name = IOP Publishing ;
+    info[contract] = 2008 ;
+    info[tester] = 5
   >
 
   attr[contract] = 2008
