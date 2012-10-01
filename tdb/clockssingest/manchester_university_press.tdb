@@ -269,12 +269,12 @@
 
     comment[URGENT] = Moving off of Ingenta 2012
 
-    au < manifest ; exists ; 2005 ; Mediterranean Studies Volume 14 ; 14 >
-    au < manifest ; exists ; 2006 ; Mediterranean Studies Volume 15 ; 15 >
-    au < manifest ; exists ; 2007 ; Mediterranean Studies Volume 16 ; 16 >
-    au < manifest ; exists ; 2008 ; Mediterranean Studies Volume 17 ; 17 >
-    au < manifest ; exists ; 2009 ; Mediterranean Studies Volume 18 ; 18 >
-    au < manifest ; exists ; 2010 ; Mediterranean Studies Volume 19 ; 19 >
+    au < crawling ; exists ; 2005 ; Mediterranean Studies Volume 14 ; 14 >
+    au < crawling ; exists ; 2006 ; Mediterranean Studies Volume 15 ; 15 >
+    au < crawling ; exists ; 2007 ; Mediterranean Studies Volume 16 ; 16 >
+    au < crawling ; exists ; 2008 ; Mediterranean Studies Volume 17 ; 17 >
+    au < crawling ; exists ; 2009 ; Mediterranean Studies Volume 18 ; 18 >
+    au < crawling ; exists ; 2010 ; Mediterranean Studies Volume 19 ; 19 >
 
   }
   
