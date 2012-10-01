@@ -1,5 +1,5 @@
 /*
- * $Id: MimeUtil.java,v 1.1 2012-02-16 10:39:47 tlipkis Exp $
+ * $Id: MimeUtil.java,v 1.2 2012-10-01 21:07:26 fergaloy-sf Exp $
  */
 
 /*
@@ -33,12 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.text.Normalizer.Form;
-import java.lang.reflect.*;
-import org.apache.oro.text.regex.*;
-import org.apache.commons.lang.StringUtils;
 
 /**
  * MIME utilities
@@ -70,6 +64,7 @@ public class MimeUtil {
   static void initMaps() {
     addMapping("text/html", ".html", ".htm");
     addMapping("text/plain", ".txt", ".raw", ".toc", ".fil");
+    addMapping("text/csv", ".csv");
 
     addMapping("image/gif", ".gif");
     addMapping("image/jpeg", ".jpeg", ".jpg");
