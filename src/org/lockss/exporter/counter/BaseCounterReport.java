@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCounterReport.java,v 1.1 2012-08-28 17:36:49 fergaloy-sf Exp $
+ * $Id: BaseCounterReport.java,v 1.2 2012-10-01 21:08:50 fergaloy-sf Exp $
  */
 
 /*
@@ -38,6 +38,7 @@
  */
 package org.lockss.exporter.counter;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -183,23 +184,25 @@ public abstract class BaseCounterReport implements CounterReport {
   /**
    * Saves the report in a CSV-formatted file.
    * 
+   * @return a File with the report output file.
    * @throws SQLException
    * @throws IOException
    * @throws Exception
    */
-  public void saveCsvReport() throws SQLException, IOException, Exception {
-    saveReport(COMMA, CounterReportsManager.CSV_EXTENSION);
+  public File saveCsvReport() throws SQLException, IOException, Exception {
+    return saveReport(COMMA, CounterReportsManager.CSV_EXTENSION);
   }
 
   /**
    * Saves the report in a TSV-formatted file.
    * 
+   * @return a File with the report output file.
    * @throws SQLException
    * @throws IOException
    * @throws Exception
    */
-  public void saveTsvReport() throws SQLException, IOException, Exception {
-    saveReport(TAB, CounterReportsManager.TSV_EXTENSION);
+  public File saveTsvReport() throws SQLException, IOException, Exception {
+    return saveReport(TAB, CounterReportsManager.TSV_EXTENSION);
   }
 
   /**
@@ -210,16 +213,17 @@ public abstract class BaseCounterReport implements CounterReport {
    *          lines.
    * @param extension
    *          A String with the file extension to be used.
+   * @return a File with the report output file.
    * @throws SQLException
    * @throws IOException
    * @throws Exception
    */
-  private void saveReport(String separator, String extension)
+  private File saveReport(String separator, String extension)
       throws SQLException, IOException, Exception {
     // Determine the report file name.
-    String fileName = getReportFileName(extension);
-
     CounterReportsManager reportManager = daemon.getCounterReportsManager();
+    String fileName = getReportFileName(extension);
+    File reportFile = new File(reportManager.getOutputDir(), fileName);
 
     // Get the writer for this report.
     PrintWriter writer = reportManager.getReportOutputWriter(fileName);
@@ -258,6 +262,8 @@ public abstract class BaseCounterReport implements CounterReport {
 
       IOUtil.safeClose(writer);
     }
+    
+    return reportFile;
   }
 
   /**

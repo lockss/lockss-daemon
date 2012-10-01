@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReport.java,v 1.1 2012-08-28 17:36:49 fergaloy-sf Exp $
+ * $Id: CounterReport.java,v 1.2 2012-10-01 21:08:50 fergaloy-sf Exp $
  */
 
 /*
@@ -38,6 +38,7 @@
  */
 package org.lockss.exporter.counter;
 
+import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -56,20 +57,22 @@ public interface CounterReport {
   /**
    * Saves the report in a CSV-formatted file.
    * 
+   * @return a File with the report output file.
    * @throws SQLException
    * @throws IOException
    * @throws Exception
    */
-  void saveCsvReport() throws SQLException, IOException, Exception;
+  File saveCsvReport() throws SQLException, IOException, Exception;
 
   /**
    * Saves the report in a TSV-formatted file.
    * 
+   * @return a File with the report output file.
    * @throws SQLException
    * @throws IOException
    * @throws Exception
    */
-  void saveTsvReport() throws SQLException, IOException, Exception;
+  File saveTsvReport() throws SQLException, IOException, Exception;
 
   /**
    * Writes the report to the log. For debugging purposes only.
