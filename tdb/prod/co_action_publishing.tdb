@@ -66,7 +66,7 @@
 
       au < ready ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
       au < ready ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
-      au < manifest ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+      au < testing ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
     }
   }
 
@@ -604,7 +604,7 @@
     param[journal_id] = tellusa
     
     au < testing ; 1949 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1 ; 1 ; 1949 >
-    au < testing ; 1950 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2 ; 2 ; 1950 >
+    au < ready ; 1950 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2 ; 2 ; 1950 >
     au < released ; 1951 ; Tellus A: Dynamic Meteorology and Oceanography Volume 3 ; 3 ; 1951 >
     au < released ; 1952 ; Tellus A: Dynamic Meteorology and Oceanography Volume 4 ; 4 ; 1952 >
     au < released ; 1953 ; Tellus A: Dynamic Meteorology and Oceanography Volume 5 ; 5 ; 1953 >
@@ -618,7 +618,7 @@
     au < released ; 1961 ; Tellus A: Dynamic Meteorology and Oceanography Volume 13 ; 13 ; 1961 >
     au < released ; 1962 ; Tellus A: Dynamic Meteorology and Oceanography Volume 14 ; 14 ; 1962 >
     au < released ; 1963 ; Tellus A: Dynamic Meteorology and Oceanography Volume 15 ; 15 ; 1963 >
-    au < testing ; 1964 ; Tellus A: Dynamic Meteorology and Oceanography Volume 16 ; 16 ; 1964 >
+    au < ready ; 1964 ; Tellus A: Dynamic Meteorology and Oceanography Volume 16 ; 16 ; 1964 >
     au < ready ; 1965 ; Tellus A: Dynamic Meteorology and Oceanography Volume 17 ; 17 ; 1965 >
     au < ready ; 1966 ; Tellus A: Dynamic Meteorology and Oceanography Volume 18 ; 18 ; 1966 >
     au < testing ; 1967 ; Tellus A: Dynamic Meteorology and Oceanography Volume 19 ; 19 ; 1967 >
@@ -703,7 +703,7 @@
     au < ready ; 1967 ; Tellus B: Chemical and Physical Meteorology Volume 19 ; 19 ; 1967 >
     au < ready ; 1968 ; Tellus B: Chemical and Physical Meteorology Volume 20 ; 20 ; 1968 >
     au < ready ; 1969 ; Tellus B: Chemical and Physical Meteorology Volume 21 ; 21 ; 1969 >
-    au < testing ; 1970 ; Tellus B: Chemical and Physical Meteorology Volume 22 ; 22 ; 1970 >
+    au < ready ; 1970 ; Tellus B: Chemical and Physical Meteorology Volume 22 ; 22 ; 1970 >
     au < released ; 1971 ; Tellus B: Chemical and Physical Meteorology Volume 23 ; 23 ; 1971 >
     au < released ; 1972 ; Tellus B: Chemical and Physical Meteorology Volume 24 ; 24 ; 1972 >
     au < released ; 1973 ; Tellus B: Chemical and Physical Meteorology Volume 25 ; 25 ; 1973 >
