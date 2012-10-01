@@ -13495,7 +13495,7 @@
 
     param[base_url] = http://neuro-oncology.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment [notReady] = needs hash filter for fetch error see RU 4388
+    comment [notReady] = 404 and 503 fetch error see RU 4388
 
     au < manifest ; exists ; 1999 ; Neuro-Oncology Volume 1 ; 1 ; >
     au < manifest ; exists ; 2000 ; Neuro-Oncology Volume 2 ; 2 ; >
