@@ -5,9 +5,17 @@
   >
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://aom.org/
       implicit < status ; year ; name ; param[volume_name] >
       
+  {
+
+    title <
+      name = Academy of Management Discoveries (AMD) ;
+      comment[0] = expected in 2014
+    >
+    
+   }
+
   {
 
     title <
@@ -19,7 +27,7 @@
     
     {
       
-      para[journal_id] = acls
+      param[base_url] = http://amle.aom.org/
   
       au < exists ; 2002 ; Academy of Management Learning and Education (AMLE) Volume 1 ; 1 >
       au < exists ; 2003 ; Academy of Management Learning and Education (AMLE) Volume 2 ; 2 >
@@ -48,7 +56,7 @@
     
     {
       
-      para[journal_id] = amj
+      param[base_url] = http://amj.aom.org/
   
       au < exists ; 1958 ; Academy of Management Journal (AMJ) Volume 1 ; 1 >
       au < exists ; 1959 ; Academy of Management Journal (AMJ) Volume 2 ; 2 >
@@ -121,7 +129,7 @@
     
     {
       
-      para[journal_id] = amr
+      param[base_url] = http://amr.aom.org/
   
       au < exists ; 1976 ; Academy of Management Review (AMR) Volume 1 ; 1 >
       au < exists ; 1977 ; Academy of Management Review (AMR) Volume 2 ; 2 >
@@ -176,7 +184,7 @@
     
     {
       
-      para[journal_id] = amp
+      param[base_url] = http://amp.aom.org/
   
       au < exists ; 1987 ; Academy of Management Perspectives (AMP) Volume 1 ; 1 >
       au < exists ; 1988 ; Academy of Management Perspectives (AMP) Volume 2 ; 2 >
