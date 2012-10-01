@@ -1,5 +1,5 @@
 /*
- * $Id: TestTimeBase.java,v 1.2 2012-03-27 20:55:51 tlipkis Exp $
+ * $Id: TestTimeBase.java,v 1.3 2012-10-01 22:15:33 tlipkis Exp $
  */
 
 /*
@@ -60,6 +60,7 @@ public class TestTimeBase extends LockssTestCase {
   }
 
   public void testReal() {
+    TimeBase.setReal();
     assertFalse(TimeBase.isSimulated());
     long now = TimeBase.nowMs();
     TimerUtil.guaranteedSleep(10);
