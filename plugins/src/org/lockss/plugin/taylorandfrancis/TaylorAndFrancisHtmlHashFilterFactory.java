@@ -1,10 +1,10 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.4 2012-05-22 19:35:22 wkwilson Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.5 2012-10-01 22:16:05 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,16 +35,16 @@ package org.lockss.plugin.taylorandfrancis;
 import java.io.*;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.lf5.util.StreamUtils;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
-import org.htmlparser.tags.*;
 import org.htmlparser.util.*;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.*;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 
 
 public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
@@ -71,6 +71,8 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
          */
         // Contains site-specific SFX code
         new TagNameFilter("script"),
+        // Can change over time
+        new TagNameFilter("style"),
         // Contains site-specific SFX markup
         HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
         // Contains institution-specific markup
@@ -85,6 +87,26 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessIconWrapper"),
         // Counterpart of the previous clause when there is no integrated SFX
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout\\?"),
+        // These two equivalent links are found (this is not a regex)
+        HtmlNodeFilters.tagWithAttribute("a", "href", "/"),
+        HtmlNodeFilters.tagWithAttribute("a", "href", "http://www.tandfonline.com"),
+        // Spuriously versioned CSS URLs
+        HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
+        // These two are sometimes found in a temporary overlay
+        // (also requires whitespace normalization to work)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "overlay"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "overlay clear overlayHelp"),
+        // Changed from 'id' to 'class'
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "alertDiv"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alertDiv"),
+        // Two alternative versions of the same empty section
+        HtmlNodeFilters.tagWithAttribute("a", "id", "fpi"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "fpi"),
+        // These two sections are newer placeholders
+        HtmlNodeFilters.tagWithAttribute("li", "id", "citationsTab"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "citationsPanel"),
+        // Some <h4> tags had/have a 'class' attribute
+        new TagNameFilter("h4"),
     };
     
     HtmlTransform xform = new HtmlTransform() {
@@ -95,15 +117,51 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
             @Override
             public void visitTag(Tag tag) {
               try {
-                if ("span".equalsIgnoreCase(tag.getTagName()) && tag.getAttribute("id") != null) {
-                  tag.removeAttribute("id");
+                String tagName = tag.getTagName().toLowerCase();
+                switch (tagName.charAt(0)) {
+                  case 'a': {
+                    /*
+                     * <a>
+                     */
+                    if ("a".equals(tagName)) {
+                      // The anchor ID 'content' was renamed 'tandf_content'
+                      if (tag.getAttribute("href") != null && "#content".equals(tag.getAttribute("href"))) {
+                        tag.setAttribute("href", "#tandf_content");
+                        return;
+                      }
+                    }
+                  } break;
+                  case 'd': {
+                    /*
+                     * <div>
+                     */
+                    if ("div".equals(tagName)) {
+                      if (tag.getAttribute("class") != null && tag.getAttribute("class").startsWith("access ")) {
+                        tag.removeAttribute("class");
+                        return;
+                      }
+                      // For a while, there were two <div> tags with 'id' set to 'content'
+                      // Now clarified to 'journal_content' and 'tandf_content'
+                      else if (tag.getAttribute("id") != null && ("journal_content".equals(tag.getAttribute("id")) || "tandf_content".equals(tag.getAttribute("id")))) {
+                        tag.setAttribute("id", "content");
+                        return;
+                      }
+                    }
+                  } break;
+                  case 's': {
+                    /*
+                     * <span>
+                     */
+                    if ("span".equals(tagName)) {
+                      if (tag.getAttribute("id") != null) {
+                        tag.removeAttribute("id");
+                        return;
+                      }
+                    }
+                  } break;
                 }
-                else if ("div".equalsIgnoreCase(tag.getTagName()) && tag.getAttribute("class") != null && tag.getAttribute("class").startsWith("access ")) {
-                  tag.removeAttribute("class");
-                }
-                else {
-                  super.visitTag(tag);
-                }
+                // Still here: tag has not been visited
+                super.visitTag(tag);
               }
               catch (Exception exc) {
                 log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
@@ -118,10 +176,21 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
       }
     };
     
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),
-                                                               xform));
+    InputStream filtered = new HtmlFilterInputStream(in,
+                                                     encoding,
+                                                     new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),
+                                                                               xform));
+    
+    Reader reader = FilterUtil.getReader(filtered, encoding);
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader,
+                                                      ListUtil.list(
+        // Two alternate forms of citation links (no easy to characterize in the DOM)
+        new TagPair("<strong>Citations:", "</strong>"),
+        new TagPair("<strong><a href=\"/doi/citedby/", "</strong>"),
+        // some comments contain an opaque hash or timestamp
+        new TagPair("<!--", "-->")
+    ));
+    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
 
   public static void main(String[] args) throws Exception {

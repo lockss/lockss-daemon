@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.3 2012-10-01 21:15:41 thib_gc Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.4 2012-10-01 22:16:05 thib_gc Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 
 import junit.framework.Test;
 
+import org.apache.commons.lang.RandomStringUtils;
 import org.lockss.util.*;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.test.*;
@@ -64,10 +65,10 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
   "<div class=\"tabsPanel articleSummaries hide\" id=\"citedPanel\"></div>";
 
   private static final String moduleHtml =
-  "<!-- ads module --><div class=\"ad module\"><!-- Literatum Advertisement --><!-- width:200 -->" +
+  "<div class=\"ad module\"><!-- Literatum Advertisement --><!-- width:200 -->" +
   "<!-- placeholder id=null, description=Journal right column 1 --></div>";
   private static final String moduleHtmlFiltered =
-  "<!-- ads module -->";
+  "";
 
   /**
    * Variant to test with Crawl Filter
@@ -126,8 +127,9 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
     private static final String javascriptHtmlHash = 
         "<noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript>\n" +
         "<script type=\"text/javascript\" src=\"http://nejm.resultspage.com/autosuggest/searchbox_suggest_v1.js\" language=\"javascript\">Hello</script>";
+    // Trailing space is due to the WhiteSpaceFilter
     private static final String javascriptHtmlHashFiltered = 
-        "<noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript>\n";
+        "<noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript> ";
     
     public void setUp() throws Exception {
       super.setUp();
@@ -198,6 +200,142 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
       assertEquals(linkoutHtmlHashFiltered, StringUtil.fromInputStream(actIn));
     }
 
+    public void testLinkToHomePage() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<a href=\"/\">" + rand() + "</a>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<a href=\"http://www.tandfonline.com\">" + rand() + "</a>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testLinkToStyleSheets() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<link rel=\"stylesheet\" type=\"text/css\" media=\"screen, projection\" href=\"/cssJawr/1107879557/style.css\" />"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<link href=\"/templates/jsp/css/grids-min.css\" rel=\"stylesheet\" type=\"text/css\" />"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testH4() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<h4 class=\"" + rand() + "\">" + rand() + "</h4>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<h4>" + rand() + "</h4>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testCitationsWithStrongTag() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<strong>Citations:" + rand() + "\n\n\n</strong>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<strong><a href=\"/doi/citedby/10.1080/13607863.2010.551339\">Citations:" + rand() + "\n\n\n</strong>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testDivIdContent() throws Exception {
+      assertEquals("<div id=\"content\">ABCDEFGHIJKLM</div>",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<div id=\"content\">ABCDEFGHIJKLM</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("<div id=\"content\">ABCDEFGHIJKLM</div>",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<div id=\"journal_content\">ABCDEFGHIJKLM</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("<div id=\"content\">ABCDEFGHIJKLM</div>",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<div id=\"tandf_content\">ABCDEFGHIJKLM</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("<a href=\"#tandf_content\">ABCDEFGHIJKLM</a>",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<a href=\"#content\">ABCDEFGHIJKLM</a>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("<a href=\"#tandf_content\">ABCDEFGHIJKLM</a>",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<a href=\"#tandf_content\">ABCDEFGHIJKLM</a>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testOverlay() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<div id=\"overlay\">" + rand() + "</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<div class=\"overlay clear overlayHelp\">" + rand() + "</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals(" ", // Note the single space (WhiteSpaceFilter)
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("\n\n\n   <div id=\"overlay\">" + rand() + "</div>   \n\n\n   <div class=\"overlay clear overlayHelp\">" + rand() + "</div>   \n\n\n"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testDivAlertDiv() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<div id=\"alertDiv\">" + rand() + "</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<div class=\"alertDiv\">" + rand() + "</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<div class=\"script_only alertDiv\">" + rand() + "</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testIdFpi() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<a href=\"\" id=\"fpi\">" + rand() + "</a>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<div id=\"fpi\">" + rand() + "</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testCitationsTab() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<li id=\"citationsTab\">" + rand() + "</li>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testCitationsPanel() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<div id=\"citationsPanel\">" + rand() + "</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testHtmlComments() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<!-- " + rand() + "-->"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testStyle() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<style>" + rand() + "</style>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
   }
 
   public static Test suite() {
@@ -230,6 +368,10 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
                                        new StringInputStream(moduleHtml),
                                        Constants.DEFAULT_ENCODING);
     assertEquals(moduleHtmlFiltered, StringUtil.fromInputStream(actIn));
+  }
+  
+  public static String rand() {
+    return RandomStringUtils.randomAlphabetic(30);
   }
   
 }
