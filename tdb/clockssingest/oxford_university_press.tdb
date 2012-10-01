@@ -12704,7 +12704,7 @@
   {
 
     title <
-      name = MELUS ;
+      name = MELUS: Multi-Ethnic Literature of the U.S. ;
       issn = 0163-755X ;
       eissn = 1946-3170 ;
       issnl = 0163-755X
@@ -12713,7 +12713,7 @@
     param[base_url] = http://melus.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; exists ; 2013 ; MELUS Volume 1 ; 1 ; >
+    au < expected ; exists ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 1 ; 1 ; >
 
   }
 
