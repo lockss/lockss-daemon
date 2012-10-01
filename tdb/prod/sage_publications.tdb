@@ -64,7 +64,7 @@
         au < doNotProcess ; 2006 ; Accounting History Volume 11 ; 11 >
         au < doNotProcess ; 2007 ; Accounting History Volume 12 ; 12 >
         au < doNotProcess ; 2008 ; Accounting History Volume 13 ; 13 >
-        au < ready ; 2009 ; Accounting History Volume 14 ; 14 >
+        au < doNotProcess ; 2009 ; Accounting History Volume 14 ; 14 >
         au < released ; 2010 ; Accounting History Volume 15 ; 15 >
         au < released ; 2011 ; Accounting History Volume 16 ; 16 >
         au < manifest ; 2012 ; Accounting History Volume 17 ; 17 >
@@ -236,7 +236,8 @@
     title <
       name = Active Learning in Higher Education ;
       issn = 1469-7874 ;
-      eissn = 1741-2625
+      eissn = 1741-2625 ;
+      issnl = 1369-7874
     >
 
     param[base_url] = http://alh.sagepub.com/
@@ -245,33 +246,48 @@
 
       pluginSuffix = HighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+      implicit < status ; year ; name ; param[volume] >
+      
+      au < down ; 2005 ; Active Learning in Higher Education Volume 6 ; 6 >
 
-      au < down ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 ; >
-      au < down ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
+    }
+
+   {
+
+      param[base_url] = http://alh.sagepub.com/
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+
+
+      au < HighWireStrVolPlugin ; down ; 2006 ; Active Learning in Higher Education Volume 7 ; 7 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Active Learning in Higher Education Volume 8 ; 8 >
+      au < HighWirePressPlugin ; down ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 >
+      au < HighWirePressPlugin ; down ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 >
 
     }
 
     {
 
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < manifest ; 2000 ; Active Learning in Higher Education Volume 1 ; 1 ; >
-      au < manifest ; 2001 ; Active Learning in Higher Education Volume 2 ; 2 ; >
-      au < manifest ; 2002 ; Active Learning in Higher Education Volume 3 ; 3 ; >
-      au < manifest ; 2003 ; Active Learning in Higher Education Volume 4 ; 4 ; >
-      au < manifest ; 2004 ; Active Learning in Higher Education Volume 5 ; 5 ; >
-      au < manifest ; 2005 ; Active Learning in Higher Education Volume 6 ; 6 ; >
-      au < manifest ; 2006 ; Active Learning in Higher Education Volume 7 ; 7 ; >
-      au < manifest ; 2007 ; Active Learning in Higher Education Volume 8 ; 8 ; >
-      au < doNotProcess ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 ; >
-      au < doNotProcess ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
-      au < zapped ; down ; 2010 ; Active Learning in Higher Education Volume 11 ; 11 ; >
-      au < released ; 2011 ; Active Learning in Higher Education Volume 12 ; 12 ; >
-      au < testing ; 2012 ; Active Learning in Higher Education Volume 13 ; 13 ; >
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      au < ready ; 2000 ; Active Learning in Higher Education Volume 1 ; 1 >
+      au < testing ; 2001 ; Active Learning in Higher Education Volume 2 ; 2 >
+      au < testing ; 2002 ; Active Learning in Higher Education Volume 3 ; 3 >
+      au < ready ; 2003 ; Active Learning in Higher Education Volume 4 ; 4 >
+      au < testing ; 2004 ; Active Learning in Higher Education Volume 5 ; 5 >
+      au < doNotProcess ; 2005 ; Active Learning in Higher Education Volume 6 ; 6 >
+      au < doNotProcess ; 2006 ; Active Learning in Higher Education Volume 7 ; 7 >
+      au < doNotProcess ; 2007 ; Active Learning in Higher Education Volume 8 ; 8 >
+      au < doNotProcess ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 >
+      au < doNotProcess ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 >
+      au < released ; 2010 ; Active Learning in Higher Education Volume 11 ; 11 >
+      au < released ; 2011 ; Active Learning in Higher Education Volume 12 ; 12 >
+      au < manifest ; 2012 ; Active Learning in Higher Education Volume 13 ; 13 >
 
     }
-
-    
+  }
 
     {
 
