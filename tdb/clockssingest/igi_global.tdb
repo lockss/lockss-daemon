@@ -1728,11 +1728,12 @@
       issnl = 1947-928X
     >
 	param[journal_issn] = 1947-928X
+	comment[notReady] = bad manifest page, no url
 	
     au < manifest ; exists ; 2009 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 > 
     au < testing ; exists ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 3 ; 3 > 
-    au < crawling ; exists ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
+    au < notReady ; exists ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
 
   }
 
@@ -1864,10 +1865,10 @@
       issnl = 2160-9837
     >
 
-    comment[0] = forthcoming in 2012
+    comment[notReady] = bad manifest page, no url
 	param[journal_issn] = 2160-9837
 	
-	    au < crawling ; exists ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
+	    au < notReady ; exists ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
 	
   }
 
