@@ -485,7 +485,7 @@
     au < manifest ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 ; >
     au < manifest ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 ; >
     au < manifest ; exists ; 2007 ; The American Historical Review Volume 112 ; 112 ; >
-    au < manifest ; exists ; 2008 ; The American Historical Review Volume 113 ; 113 ; >
+    au < testing ; exists ; 2008 ; The American Historical Review Volume 113 ; 113 ; >
     au < released ; crawling ; 2009 ; The American Historical Review Volume 114 ; 114 ; >
     au < released ; crawling ; 2010 ; The American Historical Review Volume 115 ; 115 ; >
     au < released ; crawling ; 2011 ; The American Historical Review Volume 116 ; 116 ; >
@@ -7491,11 +7491,11 @@
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < notReady ; exists ; 2008 ; InnovAiT Volume 1 ; 1 ; >
-    au < notReady ; exists ; 2009 ; InnovAiT Volume 2 ; 2 ; >
+    au < testing ; exists ; 2008 ; InnovAiT Volume 1 ; 1 ; >
+    au < testing ; exists ; 2009 ; InnovAiT Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; InnovAiT Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; InnovAiT Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2012 ; InnovAiT Volume 5 ; 5 ; >
+    au < testing ; exists ; 2012 ; InnovAiT Volume 5 ; 5 ; >
 
     }
 
