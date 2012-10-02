@@ -6739,7 +6739,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
     au < zapped ; down ; 2009 ; Human Reproduction Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Human Reproduction Volume 25 ; 25 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
+    au < notReady ; exists ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
     au < crawling ; exists ; 2012 ; Human Reproduction Volume 27 ; 27 ; >
 
     }
@@ -7491,8 +7491,8 @@
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < doNotProcess ; doNotProcess ; 2008 ; InnovAiT Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; InnovAiT Volume 2 ; 2 ; >
+    au < notReady ; exists ; 2008 ; InnovAiT Volume 1 ; 1 ; >
+    au < notReady ; exists ; 2009 ; InnovAiT Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; InnovAiT Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; InnovAiT Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; InnovAiT Volume 5 ; 5 ; >
