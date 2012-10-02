@@ -57,7 +57,9 @@ END {
   #print out header
   printf "Publisher\tPlugin\tContr\tYear\tT\tTotal"
   for (j = 0 ; j < scn ; j++) {
+  	if (x[s[j]] > 0) {
     printf "\t%s", sc[j]
+    }
   }
   printf "\n"
 
