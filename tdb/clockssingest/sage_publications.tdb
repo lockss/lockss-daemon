@@ -10398,9 +10398,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      comment[notReady] = volume 1 has incorrect base url for problink and issues link.
-      
-      au < notReady ; exists ; 2010 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2010 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 2 ; 2 ; >
       au < testing ; exists ; 2012 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 3 ; 3 ; >
 
