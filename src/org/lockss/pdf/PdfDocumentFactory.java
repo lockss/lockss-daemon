@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocumentFactory.java,v 1.3 2012-07-11 23:53:38 thib_gc Exp $
+ * $Id: PdfDocumentFactory.java,v 1.3.2.1 2012-10-02 23:59:25 thib_gc Exp $
  */
 
 /*
@@ -54,10 +54,7 @@ public interface PdfDocumentFactory {
    * Interprets the bytes in the given input stream as a PDF document.
    * </p>
    * <p>
-   * The input stream is not closed by this call. It is the caller's
-   * responsibility to close the input stream. However, when this call
-   * returns, it is safe to close the input stream even if the
-   * document has not been closed (see {@link PdfDocument #close()}).
+   * The input stream may be closed by this call.
    * </p>
    * <p>
    * It is possible that the returned document is not fully parsed due
