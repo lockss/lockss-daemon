@@ -1,6 +1,10 @@
 /*
+ * $Id: RisFilterInputStream.java,v 1.2 2012-10-02 09:25:08 thib_gc Exp $
+ */
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,29 +35,7 @@ package org.lockss.plugin.massachusettsmedicalsociety;
 import java.io.*;
 import java.util.*;
 
-import org.apache.commons.io.FileUtils;
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.pdf.*;
-import org.lockss.filter.pdf.PageTransformUtil.ExtractStringsToOutputStream;
-import org.lockss.plugin.*;
-import org.lockss.plugin.highwire.ArchivalUnitDependent;
-import org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform;
-import org.lockss.plugin.highwire.HighWirePdfFilterFactory.NormalizeMetadata;
-import org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform.EraseVariableFooter;
-import org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform.EraseVariableFooter.ProcessEndTextObject;
-import org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPdfFilterFactory.FilteringException;
 import org.lockss.util.*;
-import org.pdfbox.cos.*;
-import org.pdfbox.pdfwriter.ContentStreamWriter;
-import org.pdfbox.pdmodel.*;
-import org.pdfbox.pdmodel.common.PDRectangle;
-import org.pdfbox.pdmodel.common.PDStream;
-import org.pdfbox.pdmodel.interactive.action.type.*;
-import org.pdfbox.pdmodel.interactive.annotation.*;
-import org.pdfbox.util.PDFStreamEngine.OperatorProcessorFactory;
-import org.pdfbox.util.operator.OperatorProcessor;
-
-import uk.org.lockss.plugin.annualreviews.AnnualReviewsPdfTransform;
 
 /*
  * Reads in an RIS file line by line removing any lines that start with any substring on the filterList
