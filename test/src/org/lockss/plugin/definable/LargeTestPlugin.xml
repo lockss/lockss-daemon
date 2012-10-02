@@ -128,6 +128,13 @@
     </list>
   </entry>
   <entry>
+    <string>au_http_cookie</string>
+    <list>
+      <string>uid=gingerbread</string>
+      <string>s_vi=[CS]v1|26-60[CE]</string>
+    </list>
+  </entry>
+  <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.definable.MockFactories$ArtIterFact</string>
   </entry>

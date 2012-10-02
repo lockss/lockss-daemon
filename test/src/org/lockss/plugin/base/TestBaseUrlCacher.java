@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.68 2012-07-02 16:25:27 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.68.4.1 2012-10-02 03:05:28 tlipkis Exp $
  */
 
 /*
@@ -330,7 +330,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertEquals("SHA-1:1EEBDF4FDC9FC7BF283031B93F9AEF3338DE9052", props.getProperty(CachedUrl.PROPERTY_CHECKSUM));
   }
 
-  public void testCheckConnection() {
+  public void testCheckConnection() throws IOException {
     MockLockssUrlConnection conn = new MockLockssUrlConnection();
     conn.setResponseCode(200);
     conn.setResponseMessage("OK");
@@ -355,19 +355,22 @@ public class TestBaseUrlCacher extends LockssTestCase {
   // MockConnectionMockBaseUrlCacher is used to create a mock connection.
 
   MyMockLockssUrlConnection makeConn(int respCode, String respMessage,
-                                     String redirectTo) {
+                                     String redirectTo)
+      throws IOException {
     return makeConn(respCode, respMessage, redirectTo, (String)null);
   }
 
   MyMockLockssUrlConnection makeConn(int respCode, String respMessage,
-                                     String redirectTo, String input) {
+                                     String redirectTo, String input)
+      throws IOException {
     return makeConn(respCode, respMessage, redirectTo,
 		    input != null ? new StringInputStream(input) : null);
   }
 
   MyMockLockssUrlConnection makeConn(int respCode, String respMessage,
                                      String redirectTo,
-				     InputStream inputStream) {
+				     InputStream inputStream)
+      throws IOException {
     MyMockLockssUrlConnection mconn = new MyMockLockssUrlConnection();
     mconn.setResponseCode(respCode);
     mconn.setResponseMessage(respMessage);
@@ -397,6 +400,20 @@ public class TestBaseUrlCacher extends LockssTestCase {
     Properties props = muc.getUncachedProperties();
     assertEquals("", props.get(CachedUrl.PROPERTY_CONTENT_TYPE));
     assertEquals("555666", props.get(CachedUrl.PROPERTY_FETCH_TIME));
+  }
+
+  public void testCookies() throws IOException {
+    TimeBase.setSimulated(555666);
+    mau.setCookies(ListUtil.list("foo=bar"));
+
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muc.addConnection(mconn);
+    muc.getUncachedInputStream();
+    assertEquals(ListUtil.list(ListUtil.list("www.example.com", "/",
+					     "foo", "bar")),
+		 mconn.getCookies());
   }
 
   public void testGetUncachedProperties() throws IOException {
@@ -1479,8 +1496,17 @@ public class TestBaseUrlCacher extends LockssTestCase {
     String username;
     String password;
     String cpolicy;
+    List<List<String>> cookies = new ArrayList<List<String>>();
 
-    public void setProxy(String host, int port) {
+    public MyMockLockssUrlConnection() throws IOException {
+      super();
+    }
+
+    public MyMockLockssUrlConnection(String url) throws IOException {
+      super(url);
+    }
+
+  public void setProxy(String host, int port) {
       proxyHost = host;
       proxyPort = port;
     }
@@ -1501,12 +1527,22 @@ public class TestBaseUrlCacher extends LockssTestCase {
     String getCookiePolicy() {
       return cpolicy;
     }
+
+    public void addCookie(String domain, String path,
+			  String name, String value) {
+      cookies.add(ListUtil.list(domain, path, name, value));
+    }
+
+    public List<List<String>> getCookies() {
+      return cookies;
+    }
   }
 
   private class ThrowingMockLockssUrlConnection extends MockLockssUrlConnection {
     IOException ex;
 
-    public ThrowingMockLockssUrlConnection(IOException ex) {
+    public ThrowingMockLockssUrlConnection(IOException ex) throws IOException {
+      super();
       this.ex = ex;
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.59 2012-09-06 04:01:50 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.59.2.1 2012-10-02 03:05:28 tlipkis Exp $
  */
 
 /*
@@ -655,6 +655,63 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		 cau.getUrlStems());
   }
 
+  // Test default values of elements not present in plugin
+  public void testDefaults() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a minimal plugin definition
+    String pname = "org.lockss.plugin.definable.MinimalPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue("Plugin was not successfully loaded",
+	       pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+
+    assertFalse(au.isLoginPageUrl(("http://example.com/baz/")));
+    assertEquals("1/6000ms", au.findFetchRateLimiter().getRate());
+
+    String u1 = "http://example.com/baz/";
+    assertSame(u1, au.siteNormalizeUrl(u1));
+
+    assertNull(au.getFetchRateLimiterKey());
+    assertEquals("au", au.getFetchRateLimiterSource());
+    assertEquals(new RateLimiterInfo(null, "1/6000"), au.getRateLimiterInfo());
+
+    assertNull(au.getPerHostPermissionPath());
+
+    assertEmpty(au.getHttpCookies());
+
+    assertNull(au.makeNonSubstanceUrlPatterns());
+    assertNull(au.makeSubstanceUrlPatterns());
+    assertNull(au.makeSubstancePredicate());
+
+    assertNull(au.getCrawlUrlComparator());
+    assertClass(GoslingHtmlLinkExtractor.class,
+		au.getLinkExtractor(Constants.MIME_TYPE_HTML));
+    assertNull(au.getLinkExtractor("text/alphabet"));
+    assertNull(au.getFileMetadataExtractor(MetadataTarget.Any,
+					   "text/alphabet"));
+
+    assertNull(au.getFilterRule(Constants.MIME_TYPE_HTML));
+    assertNull(au.getHashFilterFactory(Constants.MIME_TYPE_HTML));
+    assertNull(au.getCrawlFilterFactory(Constants.MIME_TYPE_HTML));
+    assertClass(NodeFilterHtmlLinkRewriterFactory.class,
+		au.getLinkRewriterFactory(Constants.MIME_TYPE_HTML));
+    assertNull(au.getLinkRewriterFactory("text/alphabet"));
+
+    assertFalse(au.isBulkContent());
+    assertNull(au.getArchiveFileTypes());
+    Iterator artit = au.getArticleIterator();
+    assertFalse(artit.hasNext());
+
+    assertNull(au.getTitleConfig());
+
+    assertEmpty(au.getAuFeatureUrls("au_title"));
+  }
+
   public void testObsolescentAuManifest() throws Exception {
     PluginManager pmgr = getMockLockssDaemon().getPluginManager();
     // Load a plugin definition with the old au_manifest
@@ -1248,6 +1305,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		 aft.getExtMimeMap());
 
     assertTrue(au.isBulkContent());
+    assertEquals(ListUtil.list("uid=gingerbread", "s_vi=[CS]v1|26-60[CE]"),
+		 au.getHttpCookies());
   }
 
   public void testFeatureUrls() throws Exception {

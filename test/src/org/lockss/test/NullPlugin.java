@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.114 2012-09-06 04:01:50 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.114.2.1 2012-10-02 03:05:28 tlipkis Exp $
  */
 
 /*
@@ -474,6 +474,10 @@ public class NullPlugin {
 
     public String getPerHostPermissionPath() {
       return null;
+    }
+
+    public List<String> getHttpCookies() {
+      return Collections.EMPTY_LIST;
     }
 
     public boolean shouldBeCached(String url) {

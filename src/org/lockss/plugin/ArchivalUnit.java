@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.63 2012-09-06 04:01:51 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.63.2.1 2012-10-02 03:05:28 tlipkis Exp $
  */
 
 /*
@@ -212,6 +212,12 @@ public interface ArchivalUnit {
   public String getPerHostPermissionPath();
 
   /**
+   * Return the list of HTTP cookies that should be sent along with every
+   * request, or an empty list if none.
+   */
+  public List<String> getHttpCookies();
+
+  /**
    * Construct a list of Patterns of non-substance URLs.  Used to determine
    * whether initial crawl collects actual content.
    */
@@ -248,7 +254,7 @@ public interface ArchivalUnit {
   public boolean shouldCallTopLevelPoll(AuState aus);
 
   /**
-   * Returns a Comparator<CrawlUrl> used to stermine the order in which URLs
+   * Returns a Comparator<CrawlUrl> used to determine the order in which URLs
    * are fetched during a crawl.
    * @return the Comparator<CrawlUrl>, or null if none
    */
