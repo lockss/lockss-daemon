@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.5 2012-10-01 22:16:05 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.6 2012-10-02 00:31:53 thib_gc Exp $
  */
 
 /*
@@ -193,9 +193,4 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
     return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
 
-  public static void main(String[] args) throws Exception {
-    FilterFactory fact = new TaylorAndFrancisHtmlHashFilterFactory();
-    InputStream in = fact.createFilteredInputStream(null, new FileInputStream("/tmp/h0"), "UTF-8");
-    IOUtils.copy(in, new FileOutputStream("/tmp/h0.out"));
-  }
 }
