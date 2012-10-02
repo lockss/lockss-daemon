@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressH20Plugin.java,v 1.4 2012-07-13 13:18:04 pgust Exp $
+ * $Id: TestHighWirePressH20Plugin.java,v 1.4.2.1 2012-10-02 03:06:48 tlipkis Exp $
  */
 
 /*
@@ -128,7 +128,7 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
       "http://www.example.com/lockss-manifest/vol_322_manifest.dtl";
     DefinableArchivalUnit au = makeAuFromProps(props);
     MockLockssUrlConnection conn = new MockLockssUrlConnection();
-    conn.setURL("uuu17");
+    conn.setURL("http://uuu17/");
     CacheException exc =
       ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
                                                                500, "foo");
