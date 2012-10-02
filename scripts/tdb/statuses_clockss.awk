@@ -31,28 +31,28 @@ END {
   s[0] = "expected"
   s[1] = "exists"
   s[2] = "manifest"
-#  s[3] = "wanted"
-  s[3] = "crawling"
-  s[4] = "testing"
-  s[5] = "notReady"
-  s[6] = "released"
-  s[7] = "down"
-#  s[9] = "superseded"
-#  s[10] = "zapped"
-  sn = 8
+  s[3] = "wanted"
+  s[4] = "crawling"
+  s[5] = "testing"
+  s[6] = "notReady"
+  s[7] = "released"
+  s[8] = "down"
+  s[9] = "superseded"
+  s[10] = "zapped"
+  sn = 11
   
   sc[0] = "expe"
   sc[1] = "exis"
   sc[2] = "mani"
-#  sc[3] = "want"
-  sc[3] = "craw"
-  sc[4] = "test"
-  sc[5] = "notR"
-  sc[6] = "rele"
-  sc[7] = "down"
-#  sc[9] = "supe"
-#  sc[10] = "zapp"
-  scn = 8
+  sc[3] = "want"
+  sc[4] = "craw"
+  sc[5] = "test"
+  sc[6] = "notR"
+  sc[7] = "rele"
+  sc[8] = "down"
+  sc[9] = "supe"
+  sc[10] = "zapp"
+  scn = 11
 
   #print out header
   printf "Publisher\tPlugin\tContr\tYear\tT\tTotal"
@@ -65,18 +65,22 @@ END {
   for (i = 0 ; i < pn ; i++) {
     printf "%s\t%s\t%s\t%s\t%s\t%d", p[i], n[i], t[i], d[i], r[i], b[p[i],n[i],t[i],d[i]]
     for (j = 0 ; j < sn ; j++) {
+      if (x[s[j]] > 0){
       if (c[p[i],n[i],t[i],d[i],s[j]] == 0) {
       printf "\t.." 
     } else {
         printf "\t%d", c[p[i],n[i],t[i],d[i],s[j]]
       }
     }
+    }
     printf "\n"
   }
     #print out bottom line sums
     printf "Publisher\tPlugin\tContr\tYear\tT\t%d", tt
     for (j = 0 ; j < sn ; j++) {
-    	printf "\t%d", x[s[j]]
+    	if (x[s[j]] > 0) {
+    		printf "\t%d", x[s[j]]
+      }
     }
 
   printf "\n"
