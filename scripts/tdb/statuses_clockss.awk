@@ -36,10 +36,10 @@ END {
   s[4] = "testing"
   s[5] = "notReady"
   s[6] = "released"
-#  s[8] = "down"
+  s[7] = "down"
 #  s[9] = "superseded"
 #  s[10] = "zapped"
-  sn = 7
+  sn = 8
   
   sc[0] = "expe"
   sc[1] = "exis"
@@ -49,10 +49,10 @@ END {
   sc[4] = "test"
   sc[5] = "notR"
   sc[6] = "rele"
-#  sc[8] = "down"
+  sc[7] = "down"
 #  sc[9] = "supe"
 #  sc[10] = "zapp"
-  scn = 7
+  scn = 8
 
   #print out header
   printf "Publisher\tPlugin\tContr\tYear\tT\tTotal"
