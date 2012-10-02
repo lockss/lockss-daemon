@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalHtmlMetadataExtractorFactory.java,v 1.1 2012-03-26 18:27:33 wkwilson Exp $
+ * $Id: IgiGlobalHtmlMetadataExtractorFactory.java,v 1.2 2012-10-02 23:42:17 aishizaki Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ import org.lockss.plugin.*;
  */
 
 public class IgiGlobalHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("HighWireHtmlMetadataExtractorFactory");
+  static Logger log = Logger.getLogger("IgiGlobalHtmlMetadataExtractorFactory");
 
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
