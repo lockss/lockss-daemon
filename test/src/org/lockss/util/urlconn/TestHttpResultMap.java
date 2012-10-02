@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpResultMap.java,v 1.12 2010-12-01 01:43:16 tlipkis Exp $
+ * $Id: TestHttpResultMap.java,v 1.12.24.1 2012-10-02 03:13:19 tlipkis Exp $
  */
 
 /*
@@ -334,7 +334,7 @@ public class TestHttpResultMap extends LockssTestCase {
     }
   }
 
-  public void testHttpResultHandlerHandleCode() {
+  public void testHttpResultHandlerHandleCode() throws IOException {
     int[] handledCodes = {200, 405, 302};
     CacheException exception;
     int result_code = 0;
@@ -343,11 +343,11 @@ public class TestHttpResultMap extends LockssTestCase {
     handler.setHandledCodes(handledCodes);
     resultMap.storeMapEntry(405, new MyHttpResultHandler());
     MockLockssUrlConnection conn = new MockLockssUrlConnection();
-    conn.setURL("uuu17");
+    conn.setURL("http://uuu17/");
     Exception ee = resultMap.mapException(mau, conn, 405, null);
     assertEquals(RecordingCacheException.class, ee.getClass());
     RecordingCacheException re = (RecordingCacheException)ee;
-    assertEquals("uuu17", re.url);
+    assertEquals("http://uuu17/", re.url);
     assertSame(mau, re.au);
     assertEquals(405, re.responseCode);
     assertEquals(null, re.triggerException);
@@ -356,7 +356,7 @@ public class TestHttpResultMap extends LockssTestCase {
     assertEquals(null, resultMap.mapException(null, null, 200, null));
   }
 
-  public void testHttpResultHandlerHandleException() {
+  public void testHttpResultHandlerHandleException() throws IOException {
     Exception e1 = new RuntimeException("foo");
     Exception e2 = new SocketException("foo");
     MyHttpResultHandler handler = new MyHttpResultHandler();
@@ -364,12 +364,12 @@ public class TestHttpResultMap extends LockssTestCase {
     resultMap.storeMapEntry(e1.getClass(), new MyHttpResultHandler());
 
     MockLockssUrlConnection conn = new MockLockssUrlConnection();
-    conn.setURL("uuu17");
+    conn.setURL("http://uuu17/");
 
     Exception ee = resultMap.mapException(mau, conn, e1, null);
     assertEquals(RecordingCacheException.class, ee.getClass());
     RecordingCacheException re = (RecordingCacheException)ee;
-    assertEquals("uuu17", re.url);
+    assertEquals("http://uuu17/", re.url);
     assertSame(mau, re.au);
     assertSame(e1, re.triggerException);
     assertEquals(-1, re.responseCode);
