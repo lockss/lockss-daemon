@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigFile.java,v 1.13 2012-07-02 16:25:27 tlipkis Exp $
+ * $Id: TestConfigFile.java,v 1.13.4.1 2012-10-02 03:06:23 tlipkis Exp $
  */
 
 /*
@@ -665,7 +665,8 @@ public abstract class TestConfigFile extends LockssTestCase {
       lastModified = dateString(TimeBase.nowMs());
     }
 
-    protected LockssUrlConnection openUrlConnection(String url) {
+    protected LockssUrlConnection openUrlConnection(String url)
+	throws IOException {
       MyMockLockssUrlConnection conn = new MyMockLockssUrlConnection();
       conn.setURL(url);
       return conn;
@@ -694,6 +695,14 @@ public abstract class TestConfigFile extends LockssTestCase {
     }
 
     class MyMockLockssUrlConnection extends MockLockssUrlConnection {
+
+      public MyMockLockssUrlConnection() throws IOException {
+	super();
+      }
+
+      public MyMockLockssUrlConnection(String url) throws IOException {
+	super(url);
+      }
 
       public void execute() throws IOException {
 	super.execute();

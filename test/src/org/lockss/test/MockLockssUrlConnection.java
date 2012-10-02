@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssUrlConnection.java,v 1.8 2012-01-18 03:40:41 tlipkis Exp $
+ * $Id: MockLockssUrlConnection.java,v 1.8.12.1 2012-10-02 03:06:23 tlipkis Exp $
  */
 
 /*
@@ -50,11 +50,18 @@ public class MockLockssUrlConnection extends BaseLockssUrlConnection {
   long respDate = -1;
   long respLastModified = -1;
 
-  public MockLockssUrlConnection() {
+  // Some tests don't need a URL
+  public MockLockssUrlConnection() throws IOException {
+    this("http://example.com/dummy/url");
   }
 
-  public void setURL(String url) {
+  public MockLockssUrlConnection(String url) throws IOException {
+    super(url);
+  }
+
+  public void setURL(String url) throws IOException {
     this.urlString = url;
+    this.url = new URL(url);
   }
 
   public boolean isHttp() {
