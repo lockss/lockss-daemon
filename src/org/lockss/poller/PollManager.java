@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.262 2012-09-24 18:51:29 barry409 Exp $
+ * $Id: PollManager.java,v 1.263 2012-10-02 20:32:40 tlipkis Exp $
  */
 
 /*
@@ -785,7 +785,7 @@ public class PollManager
     /**
      * Invalidate the current list of pending polls.
      */
-    public void needRebuildPollQueue() {
+    public void needRebuild() {
       timeToRebuildPollQueue.expire();
     }
 
@@ -2680,7 +2680,7 @@ public class PollManager
     // Expiration of these timers causes nextReq() to rebuild the poll
     // queue the next time it's called.  As it doesn't trigger an immediate
     // event, there's no need for a short delay.
-    pollQueue.needRebuildPollQueue();
+    pollQueue.needRebuild();
     startOneWait.expire();
   }
 
