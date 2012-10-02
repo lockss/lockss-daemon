@@ -1,10 +1,10 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.3 2011-07-20 21:15:28 thib_gc Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.4 2012-10-02 00:37:50 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,8 +37,10 @@ import java.io.InputStream;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ReaderInputStream;
 
 
 public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
@@ -62,9 +64,11 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         // Contains variable ads, promos, etc.
         HtmlNodeFilters.tagWithAttribute("div", "id", "tacticalBanners"),
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    
+    InputStream filtered = new HtmlFilterInputStream(in,
+                                                     encoding,
+                                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(filtered, encoding)));
   }
 
 }
