@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.2 2012-04-17 22:36:02 wkwilson Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.3 2012-10-02 23:40:59 aishizaki Exp $
  */
 
 /*
@@ -61,20 +61,20 @@ public class IgiGlobalArticleIteratorFactory
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
-    return new MassachusettsMedicalSocietyArticleIterator(au,
+    return new IgiGlobalArticleIterator(au,
                                          new SubTreeArticleIterator.Spec()
                                              .setTarget(target)
                                              .setRootTemplate(ROOT_TEMPLATE)
                                              .setPatternTemplate(PATTERN_TEMPLATE));
   }
 
-  protected static class MassachusettsMedicalSocietyArticleIterator extends SubTreeArticleIterator {
+  protected static class IgiGlobalArticleIterator extends SubTreeArticleIterator {
 
     protected Pattern ABSTRACT_PATTERN = Pattern.compile("article/([0-9]+)$", Pattern.CASE_INSENSITIVE);
     
     protected Pattern PDF_PATTERN = Pattern.compile("article/full-text-pdf/([0-9]+)$", Pattern.CASE_INSENSITIVE);
     
-    public MassachusettsMedicalSocietyArticleIterator(ArchivalUnit au,
+    public IgiGlobalArticleIterator(ArchivalUnit au,
                                      SubTreeArticleIterator.Spec spec) {
       super(au, spec);
     }
