@@ -21,7 +21,7 @@
     >
 
     param[journal_id] = aps
-    comment[notReady] = fetch error on ingest 3 - see RT 4106
+    comment[notReady] = fetch error RT 4106
 
     au < manifest ; exists ; 2005 ; Acta Pharmacologica Sinica Volume 26 ; 2005 ; 26 >
     au < manifest ; exists ; 2006 ; Acta Pharmacologica Sinica Volume 27 ; 2006 ; 27 >
@@ -30,7 +30,7 @@
     au < released ; crawling ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
     au < released ; crawling ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 >
     au < released ; crawling ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 >
-    au < notReady ; notReady ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 >
+    au < notReady ; exists ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 >
 
   }
 
@@ -105,6 +105,7 @@
     >
 
     param[journal_id] = aja
+    comment[notReady] = fetch error RT 4106
 
     au < manifest ; exists ; 2005 ; Asian Journal of Andrology Volume 7 ; 2005 ; 7 >
     au < manifest ; exists ; 2006 ; Asian Journal of Andrology Volume 8 ; 2006 ; 8 >
@@ -113,7 +114,7 @@
     au < released ; crawling ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
     au < released ; crawling ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
     au < released ; crawling ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 >
-    au < testing ; exists ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
+    au < notReady ; exists ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
 
   }
 
@@ -294,6 +295,7 @@
     >
 
     param[journal_id] = cgt
+    comment[notReady] = fetch error RT 4106
 
     au < manifest ; exists ; 1999 ; Cancer Gene Therapy Volume 6 ; 1999 ; 6 >
     au < manifest ; exists ; 2000 ; Cancer Gene Therapy Volume 7 ; 2000 ; 7 >
@@ -308,7 +310,7 @@
     au < zapped ; down ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Cancer Gene Therapy Volume 17 ; 2010 ; 17 >
     au < released ; crawling ; 2011 ; Cancer Gene Therapy Volume 18 ; 2011 ; 18 >
-    au < testing ; exists ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 >
+    au < notReady ; exists ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 >
 
   }
 
@@ -352,6 +354,7 @@
     >
 
     param[journal_id] = cr
+    comment[notReady] = fetch error RT 4106
 
     au < manifest ; exists ; 1999 ; Cell Research Volume 9 ; 1999 ; 9 >
     au < manifest ; exists ; 2000 ; Cell Research Volume 10 ; 2000 ; 10 >
@@ -366,7 +369,7 @@
     au < zapped ; down ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
     au < released ; crawling ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 >
     au < released ; crawling ; 2011 ; Cell Research Volume 21 ; 2011 ; 21 >
-    au < testing ; exists ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 >
+    au < notReady ; exists ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 >
 
   }
 
@@ -516,6 +519,7 @@
     >
 
     param[journal_id] = ejcn
+    comment[notReady] = fetch error RT 4106
 
     au < manifest ; exists ; 1997 ; European Journal of Clinical Nutrition Volume 51 ; 1997 ; 51 >
     au < manifest ; exists ; 1998 ; European Journal of Clinical Nutrition Volume 52 ; 1998 ; 52 >
@@ -532,7 +536,7 @@
     au < zapped ; down ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
     au < released ; crawling ; 2010 ; European Journal of Clinical Nutrition Volume 64 ; 2010 ; 64 >
     au < released ; crawling ; 2011 ; European Journal of Clinical Nutrition Volume 65 ; 2011 ; 65 >
-    au < testing ; exists ; 2012 ; European Journal of Clinical Nutrition Volume 66 ; 2012 ; 66 >
+    au < notReady ; exists ; 2012 ; European Journal of Clinical Nutrition Volume 66 ; 2012 ; 66 >
 
   }
 
@@ -575,6 +579,7 @@
     >
 
     param[journal_id] = ebd
+    comment[notReady] = fetch error RT 4106
 
     au < exists ; exists ; 1998 ; Evidence-Based Dentistry Volume 1 ; 1998 ; 1 >
     au < exists ; exists ; 1999 ; Evidence-Based Dentistry Volume 1 ; 1999 ; 1 >
@@ -587,9 +592,9 @@
     au < exists ; exists ; 2007 ; Evidence-Based Dentistry Volume 8 ; 2007 ; 8 >
     au < manifest ; exists ; 2008 ; Evidence-Based Dentistry Volume 9 ; 2008 ; 9 >
     au < manifest ; exists ; 2009 ; Evidence-Based Dentistry Volume 10 ; 2009 ; 10 >
-    au < testing ; exists ; 2010 ; Evidence-Based Dentistry Volume 11 ; 2010 ; 11 >
+    au < notReady ; exists ; 2010 ; Evidence-Based Dentistry Volume 11 ; 2010 ; 11 >
     au < released ; crawling ; 2011 ; Evidence-Based Dentistry Volume 12 ; 2011 ; 12 >
-    au < testing ; exists ; 2012 ; Evidence-Based Dentistry Volume 13 ; 2012 ; 13 >
+    au < notReady ; exists ; 2012 ; Evidence-Based Dentistry Volume 13 ; 2012 ; 13 >
 
   }
 
@@ -822,6 +827,7 @@
     >
 
     param[journal_id] = hr
+    comment[notReady] = fetch error RT 4106
 
     au < manifest ; exists ; 2005 ; Hypertension Research Volume 28 ; 2005 ; 28 >
     au < manifest ; exists ; 2006 ; Hypertension Research Volume 29 ; 2006 ; 29 >
@@ -830,7 +836,7 @@
     au < released ; crawling ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
     au < released ; crawling ; 2010 ; Hypertension Research Volume 33 ; 2010 ; 33 >
     au < released ; crawling ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 >
-    au < testing ; exists ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 >
+    au < notReady ; exists ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 >
 
   }
 
@@ -1111,8 +1117,8 @@
     au < manifest ; exists ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 >
     au < released ; crawling ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 >
     au < released ; manifest ; 2010 ; Journal of Cerebral Blood Flow and Metabolism Volume 30 ; 2010 ; 30 >
-    au < notReady ; notReady ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
-    au < notReady ; notReady ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 >
+    au < notReady ; exists ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
+    au < notReady ; exists ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 >
 
   }
 
@@ -1206,7 +1212,8 @@
     >
 
     param[journal_id] = jhh
-
+    comment[notReady] = fetch error RT 4106
+    
     au < manifest ; exists ; 1997 ; Journal of Human Hypertension Volume 11 ; 1997 ; 11 >
     au < manifest ; exists ; 1998 ; Journal of Human Hypertension Volume 12 ; 1998 ; 12 >
     au < manifest ; exists ; 1999 ; Journal of Human Hypertension Volume 13 ; 1999 ; 13 >
@@ -1222,7 +1229,7 @@
     au < zapped ; down ; 2009 ; Journal of Human Hypertension Volume 23 ; 2009 ; 23 >
     au < released ; crawling ; 2010 ; Journal of Human Hypertension Volume 24 ; 2010 ; 24 >
     au < released ; crawling ; 2011 ; Journal of Human Hypertension Volume 25 ; 2011 ; 25 >
-    au < testing ; exists ; 2012 ; Journal of Human Hypertension Volume 26 ; 2012 ; 26 >
+    au < notReady ; exists ; 2012 ; Journal of Human Hypertension Volume 26 ; 2012 ; 26 >
 
   }
 
@@ -3106,10 +3113,10 @@
     au < exists ; exists ; 2005 ; Neuropsychopharmacology Volume 30 ; 2005 ; 30 >
     au < exists ; exists ; 2006 ; Neuropsychopharmacology Volume 31 ; 2006 ; 31 >
     au < exists ; exists ; 2007 ; Neuropsychopharmacology Volume 32 ; 2007 ; 32 >
-    au < testing ; exists ; 2008 ; Neuropsychopharmacology Volume 33 ; 2008 ; 33 >
+    au < crawling ; exists ; 2008 ; Neuropsychopharmacology Volume 33 ; 2008 ; 33 >
     au < crawling ; exists ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 >
     au < testing ; exists ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
-    au < notReady ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
+    au < testing ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
     au < testing ; exists ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
 
   }
