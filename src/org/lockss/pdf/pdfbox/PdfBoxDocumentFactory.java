@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxDocumentFactory.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfBoxDocumentFactory.java,v 1.2 2012-10-02 23:56:09 thib_gc Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.pdf.pdfbox;
 
 import java.io.*;
 
-import org.apache.commons.io.input.ProxyInputStream;
 import org.apache.pdfbox.exceptions.*;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -55,15 +54,10 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
       throws IOException,
              PdfCryptographyException,
              PdfException {
-    // Prevent PDFBox from closing the input stream after parsing
-    InputStream ignoreCloseInputStream = new ProxyInputStream(pdfInputStream) {
-      @Override public void close() throws IOException { /* Ignore request */ }
-    };
-    
     try {
       // Parse the input stream
-      PDFParser pdfParser = new PDFParser(ignoreCloseInputStream);
-      pdfParser.parse();
+      PDFParser pdfParser = new PDFParser(pdfInputStream);
+      pdfParser.parse(); // Note: also closes the input stream
       PDDocument pdDocument = pdfParser.getPDDocument();
     
       // Trivial decryption if encrypted without a password
