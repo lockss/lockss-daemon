@@ -156,7 +156,7 @@
     au < released ; crawling ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
     au < zapped ; down ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
     au < released ; crawling ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 >
-    au < superseded ; down ; 2010 ; Bone Marrow Transplantation Volume 46 [superseded] ; 2010 ; 46 >
+    au < zappedCandidate ; down ; 2010 ; Bone Marrow Transplantation Volume 46 [superseded] ; 2010 ; 46 >
     au < released ; crawling ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 >
     au < released ; manifest ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 >
 
@@ -446,7 +446,7 @@
     au < testing ; exists ; 2009 ; Clinical Pharmacology & Therapeutics Volume 86 ; 2009 ; 86 >
     au < released ; crawling ; 2010 ; Clinical Pharmacology & Therapeutics Volume 87 ; 2010 ; 87 >
     au < testing ; exists ; 2010 ; Clinical Pharmacology & Therapeutics Volume 88 ; 2010 ; 88 >
-    au < released ; crawling ; 2011 ; Clinical Pharmacology & Therapeutics Volume 89 ; 2011 ; 89 >
+    au < zappedCandidate ; down ; 2011 ; Clinical Pharmacology & Therapeutics Volume 89 ; 2011 ; 89 >
     au < released ; crawling ; 2011 ; Clinical Pharmacology & Therapeutics Volume 90 ; 2011 ; 90 >
     au < released ; manifest ; 2012 ; Clinical Pharmacology & Therapeutics Volume 91 ; 2012 ; 91 >
 
@@ -1019,7 +1019,7 @@
     au < testing ; exists ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 >
     au < testing ; exists ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 >
     au < testing ; exists ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 >
-    au < released ; crawling ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 >
+    au < zappedCandidate ; down ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 >
     au < testing ; exists ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 >
 
   }
@@ -2379,7 +2379,7 @@
     au < zapped ; down ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
     au < zapped ; down ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
-    au < released ; crawling ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
+    au < zappedCandidate ; down ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
     au < crawling ; exists ; 2012 ; Nature Digest Volume 9 ; 2012 ; 9 >
 
   }
