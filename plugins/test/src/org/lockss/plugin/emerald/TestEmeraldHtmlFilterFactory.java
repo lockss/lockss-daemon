@@ -85,6 +85,23 @@ public class TestEmeraldHtmlFilterFactory extends LockssTestCase {
   private static final String whiteSpaceHtmlFiltered =
       "<body> <div id=\"pgContainer\" class=\"rounded\"> <div id=\"pgHead\"><img src=\"journalcover.gif\" alt=\"Journal cover: Advances in Medecine\" width=\"90\" border=\"0\" align=\"left\" /></div> </div> </body>";
 
+  private static final String articlePrintTableHtml =
+    "<div id=\"printJournalHead\"><h1>Article Title</h1> <table summary=\"" +
+    "Article Information: \" class=\"articlePrintTable\"> <caption>Article " +
+    "Information:</caption> <tbody> <tr><th scope=\"row\" id=\"references\" " +
+    "class=\"column1\" valign=\"top\">References:</th><td header=\"references\" " +
+    "class=\"column2\">17</td></tr><tr><th scope=\"row\" id=\"tocite\" " +
+    "valign=\"top\" class=\"column1\">To cite this article:</th><td headers=" +
+    "\"tocite\"> Author Name, (2012) \"Article Title\", Journal Title, " +
+    "Vol. X Iss: X, pp.XX - XX</td></tr><tr><th scope=\"row\" id=\"tocopy\" " +
+    "valign=\"top\" class=\"column1\">To copy this article:</th></tr><tr><th " +
+    "scope=\"row\" id=\"count\" valign=\"top\" class=\"column1\">Downloads:" +
+    "</th></tr><tr><th scope=\"row\" id=\"releatedlist\" valign=\"top\" " +
+    "colspan=\"2\">Users who downloaded this case study also downloaded:" +
+    "</th></tr><tr></tr></td></tr> </tbody> </table> </div>";
+  
+  private static final String articlePrintTableHtmlFiltered =
+    "<div id=\"printJournalHead\"><h1>Article Title</h1> </div>";
   
   public void testToCopyFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
@@ -116,6 +133,14 @@ public class TestEmeraldHtmlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
 
     assertEquals(whiteSpaceHtmlFiltered, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testArticlePrintTableFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(articlePrintTableHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(articlePrintTableHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
 
 }

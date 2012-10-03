@@ -1,5 +1,5 @@
 /*
- *  * $Id: EmeraldHtmlFilterFactory.java,v 1.5 2012-08-03 23:59:22 kendrayee Exp $ 
+ *  * $Id: EmeraldHtmlFilterFactory.java,v 1.6 2012-10-03 15:32:01 davidecorcoran Exp $ 
  *   */
 
 /*
@@ -50,10 +50,12 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
 					       InputStream in,
 					       String encoding) {
 	  NodeFilter[] filters = new NodeFilter[] {
-			  	//Has number of article download in row
+			  	 // Has number of article download in row
 		        HtmlNodeFilters.tagWithAttribute("td", "headers", "tocopy"),
-		        //Has related articles download list
-		        HtmlNodeFilters.tagWithAttribute("td", "headers", "releatedlist")
+		        // Has related articles download list
+		        HtmlNodeFilters.tagWithAttribute("td", "headers", "releatedlist"),
+		        // Alternate related articles download list
+		        HtmlNodeFilters.tagWithAttribute("table", "class", "articlePrintTable")
 		     
 		    };
 		    
