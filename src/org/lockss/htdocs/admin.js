@@ -196,3 +196,16 @@ function initRepoMap(form) {
  repoSelections = buttonMap["DefaultRepository"];
 }
 
+// Toggle the visibility of two elements, so that one is visible while the other
+// is hidden.
+function toggleElements(id1, id2) {
+  var el1 = document.getElementById(id1);
+  var el2 = document.getElementById(id2);
+  if (el1.style.display == "none") {
+    el1.style.display = "block";
+	el2.style.display = "none";
+  } else {
+	el1.style.display = "none";
+    el2.style.display = "block";
+  }
+}
