@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxDocumentFactory.java,v 1.2 2012-10-02 23:56:09 thib_gc Exp $
+ * $Id: PdfBoxDocumentFactory.java,v 1.3 2012-10-03 00:50:15 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.apache.pdfbox.exceptions.*;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.lockss.pdf.*;
+import org.lockss.util.IOUtil;
 
 /**
  * <p>
@@ -57,7 +58,7 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
     try {
       // Parse the input stream
       PDFParser pdfParser = new PDFParser(pdfInputStream);
-      pdfParser.parse(); // Note: also closes the input stream
+      pdfParser.parse(); // Probably closes the input stream
       PDDocument pdDocument = pdfParser.getPDDocument();
     
       // Trivial decryption if encrypted without a password
@@ -75,6 +76,10 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
     }
     catch (IOException ioe) {
       throw new PdfException(ioe);
+    }
+    finally {
+      // PDFBox normally closes the input stream, but just in case
+      IOUtil.safeClose(pdfInputStream);
     }
   }
   
