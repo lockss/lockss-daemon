@@ -11,6 +11,22 @@
   param[base_url] = http://iopscience.iop.org/
   implicit < status ; status2 ; year; name ; param[volume_name] >
   comment[journal_issn] = varies between print issn and eissn (redirects to preferred issn)
+  
+  comment[doNotInclude0] = RT2955 do not include: 
+  comment[doNotInclude1] = Astronomical Journal 0004-637X, Astrophysical Journal Letters 2041-8205,
+  comment[doNotInclude2] = Chinese Physics B 1674-1056, Izvestiya: Mathematics 1064-5632,
+  comment[doNotInclude3] = Physics-Uspekhi 1063-7869, Quantum Electronics 1063-7818,
+  comment[doNotInclude4] = Russian Chemical Reviews 0036-021X, Russian Mathematical Surveys 0036-0279,
+  comment[doNotInclude5] = Sbornik: Mathematics 1064-5616, Science Foundation in China 1005-0841,
+  comment[doNotInclude6] = 
+  
+  
+  
+  
+  
+  
+  
+  
 
   {
 
@@ -27,54 +43,6 @@
     au < released ; crawling ; 2010 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 3 ; 3 > 
-
-  }
-
-  {
-
-    title <
-      name = The Astronomical Journal ;
-      issn = 0004-6256 ;
-      eissn = 1538-3881
-    >
-
-	comment[scope] = not included -- see RT ticket 2955
-
-  }
-
-  {
-
-    title <
-      name = The Astrophysical Journal ;
-      issn = 0004-637X ;
-      eissn = 1538-4357
-    >
-
-	comment[scope] = not included -- see RT ticket 2955
-
-  }
-
-  {
-
-    title <
-      name = The Astrophysical Journal Letters ;
-      issn = 2041-8205 ;
-      eissn = 2041-8213
-    >
-
-	comment[scope] = not included -- see RT ticket 2955
-
-  }
-
-  {
-
-    title <
-      name = The Astrophysical Journal Supplement Series ;
-      issn = 0067-0049 ;
-      eissn = 1538-4365
-    >
-
-	comment[scope] = not included -- see RT ticket 2955
 
   }
 
@@ -235,17 +203,6 @@
 
     param[journal_issn] = 0253-4177
     comment[0] = no content online yet, toc lists years 1980-2008
-
-  }
-
-  {
-
-    title <
-      name = Chinese Physics B ;
-      issn = 1674-1056
-    >
-
-	comment[scope] = not included -- see RT ticket 2955
 
   }
 
@@ -799,18 +756,6 @@
     au < released ; manifest ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 23 ; 23 > 
     au < released ; manifest ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 24 ; 24 >
     au < released ; manifest ; 2012 ; IOP Conference Series: Materials Science and Engineering Volume 25 ; 25 >
-
-  }
-
-  {
-
-    title <
-      name = Izvestiya: Mathematics ;
-      issn = 1064-5632 ;
-      eissn = 1468-4810
-    >
-
-	comment[scope] = not included -- see RT ticket 2955
 
   }
 
@@ -2729,18 +2674,6 @@
   {
 
     title <
-      name = Physics-Uspekhi ;
-      issn = 1063-7869 ;
-      eissn = 1468-4780
-    >
-
-	comment[scope] = not included -- see RT ticket 2955
-
-  }
-  
-  {
-
-    title <
       name = Physiological Measurement ;
       issn = 0967-3334 ;
       eissn = 1361-6579 ;
@@ -3127,18 +3060,6 @@
   {
 
     title <
-      name = Quantum Electronics ;
-      issn = 1063-7818 ;
-      eissn = 1468-4799
-    >
-
-	comment[scope] = not included -- see RT ticket 2955
-
-  }
-
-  {
-
-    title <
       name = Quantum Optics: Journal of the European Optical Society Part B ;
       issn = 0954-8998
     >
@@ -3280,42 +3201,6 @@
   {
 
     title <
-      name = Russian Chemical Reviews ;
-      issn = 0036-021X ;
-      eissn = 1468-4837
-    >
-
-	comment[scope] = not included -- see RT ticket 2955
-
-  }
-
-  {
-
-    title <
-      name = Russian Mathematical Surveys ;
-      issn = 0036-0279 ;
-      eissn = 1468-4829
-    >
-
-	comment[scope] = not included -- see RT ticket 2955
-
-  }
-
-  {
-
-    title <
-      name = Sbornik: Mathematics ;
-      issn = 1064-5616 ;
-      eissn = 1468-4802
-    >
-
-	comment[scope] = not included -- see RT ticket 2955
-
-  }
-
-  {
-
-    title <
       name = Science and Technology of Advanced Materials ;
       issn = 1468-6996 ;
       eissn = 1878-5514 ;
@@ -3338,17 +3223,6 @@
     au < released ; crawling ; 2010 ; Science and Technology of Advanced Materials Volume 11 ; 11 > 
     au < released ; crawling ; 2011 ; Science and Technology of Advanced Materials Volume 12 ; 12 > 
     au < crawling ; exists ; 2012 ; Science and Technology of Advanced Materials Volume 13 ; 13 > 
-
-  }
-
-  {
-
-    title <
-      name = Science Foundation in China ;
-      issn = 1005-0841
-    >
-
-	comment[scope] = not included -- see RT ticket 2955
 
   }
 
