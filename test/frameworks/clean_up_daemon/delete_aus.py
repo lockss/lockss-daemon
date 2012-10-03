@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: delete_aus.py,v 1.3 2011-10-19 17:41:36 barry409 Exp $
+# $Id: delete_aus.py,v 1.4 2012-10-03 20:44:29 thib_gc Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -36,7 +36,7 @@ import fix_auth_failure
 
 __author__ = "Barry Hayes"
 __maintainer__ = "Barry Hayes"
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 
 def _parser():
@@ -118,6 +118,8 @@ def main():
                 options.verify and \
                 raw_input('delete %s [n]? ' % au.title).startswith('y'):
             client.deleteAu(au)
+            if options.verbose:
+                print 'Deleted: %s' % (au.auId,)
 
 
 if __name__ == '__main__':
