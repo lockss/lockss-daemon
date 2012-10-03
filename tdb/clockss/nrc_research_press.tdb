@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = NRC Research Press (Canadian Science Publishing)
+    name = NRC Research Press (Canadian Science Publishing) ;
+    info[contract] = 2012 ;
+    info[tester] = 0
   >
 
   attr[contract] = 2012

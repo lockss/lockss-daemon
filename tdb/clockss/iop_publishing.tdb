@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = IOP Publishing
+    name = IOP Publishing ;
+    info[contract] = 2008 ;
+    info[tester] = 5
   >
 
   attr[contract] = 2008
@@ -770,6 +772,7 @@
 
     param[journal_issn] = 1757-899X
     comment[param] = eissn preferred
+    comment[notReady] = low agreement, will re-test later
 
     au < manifest ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 1 ; 1 > 
     au < manifest ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 2 ; 2 > 
@@ -777,25 +780,25 @@
     au < manifest ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 4 ; 4 > 
     au < manifest ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 5 ; 5 > 
     au < manifest ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 6 ; 6 > 
-    au < testing ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 7 ; 7 > 
-    au < testing ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 8 ; 8 > 
-    au < testing ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 9 ; 9 > 
-    au < testing ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 10 ; 10 > 
-    au < testing ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 11 ; 11 > 
-    au < testing ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 12 ; 12 > 
-    au < testing ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 13 ; 13 > 
-    au < testing ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 14 ; 14 > 
-    au < testing ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 15 ; 15 > 
-    au < testing ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 16 ; 16 > 
-    au < released ; crawling ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 17 ; 17 > 
+    au < notReady ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 7 ; 7 > 
+    au < released ; manifest ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 8 ; 8 > 
+    au < released ; manifest ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 9 ; 9 > 
+    au < released ; manifest ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 10 ; 10 > 
+    au < notReady ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 11 ; 11 > 
+    au < released ; manifest ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 12 ; 12 > 
+    au < released ; manifest ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 13 ; 13 > 
+    au < released ; manifest ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 14 ; 14 > 
+    au < released ; manifest ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 15 ; 15 > 
+    au < released ; manifest ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 16 ; 16 > 
+    au < released ; manifest ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 17 ; 17 > 
     au < released ; crawling ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 18 ; 18 > 
-    au < released ; crawling ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 19 ; 19 > 
-    au < released ; crawling ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 20 ; 20 > 
-    au < released ; crawling ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 21 ; 21 > 
-    au < released ; crawling ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 22 ; 22 > 
-    au < released ; crawling ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 23 ; 23 > 
-    au < released ; crawling ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 24 ; 24 >
-    au < released ; crawling ; 2012 ; IOP Conference Series: Materials Science and Engineering Volume 25 ; 25 >
+    au < released ; manifest ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 19 ; 19 > 
+    au < released ; manifest ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 20 ; 20 > 
+    au < released ; manifest ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 21 ; 21 > 
+    au < released ; manifest ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 22 ; 22 > 
+    au < released ; manifest ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 23 ; 23 > 
+    au < released ; manifest ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 24 ; 24 >
+    au < released ; manifest ; 2012 ; IOP Conference Series: Materials Science and Engineering Volume 25 ; 25 >
 
   }
 
@@ -1764,144 +1767,144 @@
     au < manifest ; exists ; 2009 ; Journal of Physics: Conference Series Volume 196 ; 196 >
     au < manifest ; exists ; 2009 ; Journal of Physics: Conference Series Volume 197 ; 197 >
     au < manifest ; exists ; 2009 ; Journal of Physics: Conference Series Volume 198 ; 198 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 199 ; 199 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 199 ; 199 >
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 200 ; 200 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 201 ; 201 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 202 ; 202 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 203 ; 203 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 204 ; 204 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 205 ; 205 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 206 ; 206 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 207 ; 207 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 208 ; 208 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 209 ; 209 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 210 ; 210 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 211 ; 211 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 212 ; 212 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 213 ; 213 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 214 ; 214 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 215 ; 215 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 216 ; 216 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 217 ; 217 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 218 ; 218 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 201 ; 201 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 202 ; 202 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 203 ; 203 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 204 ; 204 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 205 ; 205 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 206 ; 206 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 207 ; 207 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 208 ; 208 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 209 ; 209 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 210 ; 210 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 211 ; 211 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 212 ; 212 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 213 ; 213 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 214 ; 214 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 215 ; 215 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 216 ; 216 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 217 ; 217 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 218 ; 218 >
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 219 ; 219 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 220 ; 220 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 221 ; 221 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 222 ; 222 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 223 ; 223 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 224 ; 224 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 225 ; 225 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 226 ; 226 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 227 ; 227 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 228 ; 228 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 229 ; 229 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 230 ; 230 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 231 ; 231 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 232 ; 232 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 233 ; 233 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 220 ; 220 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 221 ; 221 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 222 ; 222 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 223 ; 223 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 224 ; 224 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 225 ; 225 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 226 ; 226 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 227 ; 227 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 228 ; 228 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 229 ; 229 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 230 ; 230 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 231 ; 231 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 232 ; 232 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 233 ; 233 >
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 234 ; 234 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 235 ; 235 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 236 ; 236 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 237 ; 237 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 238 ; 238 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 239 ; 239 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 240 ; 240 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 241 ; 241 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 242 ; 242 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 243 ; 243 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 235 ; 235 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 236 ; 236 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 237 ; 237 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 238 ; 238 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 239 ; 239 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 240 ; 240 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 241 ; 241 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 242 ; 242 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 243 ; 243 >
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 244 ; 244 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 245 ; 245 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 246 ; 246 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 247 ; 247 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 248 ; 248 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 249 ; 249 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 250 ; 250 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 245 ; 245 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 246 ; 246 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 247 ; 247 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 248 ; 248 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 249 ; 249 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 250 ; 250 >
     au < notReady ; exists ; 2010 ; Journal of Physics: Conference Series Volume 251 ; 251 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 252 ; 252 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 253 ; 253 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 254 ; 254 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 255 ; 255 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 256 ; 256 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 257 ; 257 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 258 ; 258 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 252 ; 252 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 253 ; 253 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 254 ; 254 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 255 ; 255 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 256 ; 256 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 257 ; 257 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 258 ; 258 >
     au < notReady ; exists ; 2010 ; Journal of Physics: Conference Series Volume 259 ; 259 >
-    au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 260 ; 260 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 261 ; 261 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 262 ; 262 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 263 ; 263 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 264 ; 264 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 265 ; 265 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 266 ; 266 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 267 ; 267 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 268 ; 268 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 269 ; 269 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 270 ; 270 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 271 ; 271 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 272 ; 272 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 273 ; 273 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 274 ; 274 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 275 ; 275 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 276 ; 276 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 277 ; 277 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 278 ; 278 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 279 ; 279 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 280 ; 280 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 281 ; 281 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 282 ; 282 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 283 ; 283 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 284 ; 284 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 285 ; 285 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 286 ; 286 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 287 ; 287 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 288 ; 288 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 289 ; 289 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 290 ; 290 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 291 ; 291 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 292 ; 292 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 293 ; 293 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 294 ; 294 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 295 ; 295 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 296 ; 296 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 297 ; 297 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 298 ; 298 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 299 ; 299 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 300 ; 300 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 301 ; 301 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 302 ; 302 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 260 ; 260 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 261 ; 261 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 262 ; 262 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 263 ; 263 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 264 ; 264 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 265 ; 265 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 266 ; 266 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 267 ; 267 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 268 ; 268 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 269 ; 269 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 270 ; 270 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 271 ; 271 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 272 ; 272 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 273 ; 273 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 274 ; 274 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 275 ; 275 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 276 ; 276 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 277 ; 277 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 278 ; 278 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 279 ; 279 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 280 ; 280 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 281 ; 281 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 282 ; 282 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 283 ; 283 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 284 ; 284 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 285 ; 285 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 286 ; 286 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 287 ; 287 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 288 ; 288 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 289 ; 289 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 290 ; 290 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 291 ; 291 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 292 ; 292 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 293 ; 293 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 294 ; 294 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 295 ; 295 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 296 ; 296 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 297 ; 297 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 298 ; 298 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 299 ; 299 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 300 ; 300 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 301 ; 301 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 302 ; 302 >
     au < notReady ; exists ; 2011 ; Journal of Physics: Conference Series Volume 303 ; 303 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 304 ; 304 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 305 ; 305 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 306 ; 306 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 307 ; 307 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 308 ; 308 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 309 ; 309 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 310 ; 310 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 311 ; 311 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 304 ; 304 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 305 ; 305 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 306 ; 306 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 307 ; 307 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 308 ; 308 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 309 ; 309 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 310 ; 310 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 311 ; 311 >
     au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 312 ; 312 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 313 ; 313 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 314 ; 314 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 315 ; 315 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 313 ; 313 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 314 ; 314 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 315 ; 315 >
     au < notReady ; exists ; 2011 ; Journal of Physics: Conference Series Volume 316 ; 316 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 317 ; 317 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 318 ; 318 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 319 ; 319 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 320 ; 320 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 321 ; 321 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 322 ; 322 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 323 ; 323 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 324 ; 324 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 325 ; 325 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 326 ; 326 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 327 ; 327 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 328 ; 328 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 329 ; 329 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 330 ; 330 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 317 ; 317 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 318 ; 318 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 319 ; 319 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 320 ; 320 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 321 ; 321 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 322 ; 322 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 323 ; 323 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 324 ; 324 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 325 ; 325 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 326 ; 326 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 327 ; 327 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 328 ; 328 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 329 ; 329 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 330 ; 330 >
     au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 331 ; 331 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 332 ; 332 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 333 ; 333 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 334 ; 334 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 335 ; 335 >
-    au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 336 ; 336 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 332 ; 332 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 333 ; 333 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 334 ; 334 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 335 ; 335 >
+    au < released ; manifest ; 2011 ; Journal of Physics: Conference Series Volume 336 ; 336 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 337 ; 337 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 338 ; 338 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 339 ; 339 >

@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = The Global Summitry Project
+    name = The Global Summitry Project ;
+    info[contract] = 2012 ;
+    info[tester] = 5
   >
   
     attr[contract] = 2012

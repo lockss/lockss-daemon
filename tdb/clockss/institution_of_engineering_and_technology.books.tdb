@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = The Institution of Engineering and Technology (IET)
+    name = The Institution of Engineering and Technology (IET) ;
+    info[contract] = 2012 ;
+    info[tester] = 0
   >
 
   attr[contract] = 2012

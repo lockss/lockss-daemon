@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = British Institute of Radiology
+    name = British Institute of Radiology ;
+    info[contract] = 2011 ;
+    info[tester] = 5
   >
 
   attr[contract] = 2011

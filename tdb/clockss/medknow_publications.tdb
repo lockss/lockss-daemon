@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Medknow Publications
+    name = Medknow Publications ;
+    info[contract] = 2011 ;
+    info[tester] = 0
   >
     
   attr[contract] = 2011

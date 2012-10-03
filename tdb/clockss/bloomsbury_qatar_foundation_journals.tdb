@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Bloomsbury Qatar Foundation Journals
+    name = Bloomsbury Qatar Foundation Journals ;
+    info[contract] = 2011 ;
+    info[tester] = 3
   >
   
   attr[contract] = 2011
@@ -20,7 +22,7 @@
     param[journal_dir] = ahcsps
  
     au < released ; crawling ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
-    au < crawling ; exists ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 >
+    au < testing ; exists ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 >
  
   }
 
@@ -35,7 +37,7 @@
 
     au < released ; crawling ; 2010 ; Avicenna Volume 2010 ; 2010 >
     au < released ; crawling ; 2011 ; Avicenna Volume 2011 ; 2011 >    
-    au < crawling ; exists ; 2012 ; Avicenna Volume 2012 ; 2012 >    
+    au < testing ; exists ; 2012 ; Avicenna Volume 2012 ; 2012 >    
     
   }
 
@@ -82,7 +84,7 @@
 
     au < released ; crawling ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
     au < released ; crawling ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >  
-    au < crawling ; exists ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 >  
+    au < testing ; exists ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 >  
     
   }
 
@@ -110,7 +112,7 @@
     param[journal_dir] = connect
 
     au < released ; crawling ; 2011 ; QScience Connect Volume 2011 ; 2011 >
-    au < crawling ; exists ; 2012 ; QScience Connect Volume 2012 ; 2012 >
+    au < testing ; exists ; 2012 ; QScience Connect Volume 2012 ; 2012 >
 
   }
   

@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Purdue University Press
+    name = Purdue University Press ;
+    info[contract] = 2012 ;
+    info[tester] = 5
   >
   
   attr[contract] = 2012

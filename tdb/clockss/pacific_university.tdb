@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Pacific University
+    name = Pacific University ;
+    info[contract] = 2011 ;
+    info[tester] = 5
   >
   
   attr[contract] = 2012

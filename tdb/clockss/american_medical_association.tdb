@@ -1516,7 +1516,7 @@
         au < zapped ; down ; 1892 ; Journal of the American Medical Association Volume XIX ; XIX ; reingest1.clockss.org:8082 >                                                        
         au < zapped ; down ; 1893 ; Journal of the American Medical Association Volume XX ; XX ; reingest2.clockss.org:8085 >                                                          
         au < zapped ; down ; 1893 ; Journal of the American Medical Association Volume XXI ; XXI ; reingest2.clockss.org:8085 >                                                        
-        au < down ; crawling ; 1894 ; Journal of the American Medical Association Volume XXII ; XXII ; reingest3.clockss.org:8083 >                                                    
+        au < zapped ; down ; 1894 ; Journal of the American Medical Association Volume XXII ; XXII ; reingest3.clockss.org:8083 >                                                    
         au < zapped ; down ; 1894 ; Journal of the American Medical Association Volume XXIII ; XXIII ; reingest3.clockss.org:8083 >                                                  
         au < zapped ; down ; 1895 ; Journal of the American Medical Association Volume XXIV ; XXIV ; reingest4.clockss.org:8082 >                                                    
         au < zapped ; down ; 1895 ; Journal of the American Medical Association Volume XXV ; XXV ; reingest4.clockss.org:8082 >                                                        
@@ -1553,7 +1553,7 @@
         au < zapped ; down ; 1910 ; Journal of the American Medical Association Volume 55 ; 55 ; reingest3.clockss.org:8083 >
         au < zapped ; down ; 1911 ; Journal of the American Medical Association Volume LVI ; LVI ; reingest4.clockss.org:8082 >
         au < zapped ; down ; 1911 ; Journal of the American Medical Association Volume LVII ; LVII ; reingest4.clockss.org:8082 >
-        au < down ; crawling ; 1912 ; Journal of the American Medical Association Volume LVIII ; LVIII ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1912 ; Journal of the American Medical Association Volume LVIII ; LVIII ; reingest1.clockss.org:8082 >
         au < zapped ; down ; 1912 ; Journal of the American Medical Association Volume LIX ; LIX ; reingest1.clockss.org:8082 >
         au < down ; down ; 1913 ; Journal of the American Medical Association Volume LX [superseded] ; LX ; reingest2.clockss.org:8085 >
         au < zapped ; down ; 1913 ; Journal of the American Medical Association Volume 60 ; 60 ; reingest2.clockss.org:8085 >
@@ -1838,10 +1838,10 @@
         au < zapped ; down ; 2005 ; JAMA Français Volume 294 ; 294 ; >
         au < zapped ; down ; 2006 ; JAMA Français Volume 295 ; 295 ; >
         au < down ; crawling ; 2006 ; JAMA Français Volume 296 ; 296 ; >
-        au < down ; crawling ; 2007 ; JAMA Français Volume 297 ; 297 ; >
+        au < zapped ; down ; 2007 ; JAMA Français Volume 297 ; 297 ; >
         au < down ; crawling ; 2007 ; JAMA Français Volume 298 ; 298 ; >
         au < down ; crawling ; 2008 ; JAMA Français Volume 299 ; 299 ; >
-        au < down ; crawling ; 2008 ; JAMA Français Volume 300 ; 300 ; >
+        au < zapped ; down ; 2008 ; JAMA Français Volume 300 ; 300 ; >
         
       }
     }
