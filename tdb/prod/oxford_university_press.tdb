@@ -6480,26 +6480,26 @@
     param[base_url] = http://hsw.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1976 ; Health & Social Work Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1977 ; Health & Social Work Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1978 ; Health & Social Work Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 1979 ; Health & Social Work Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 1980 ; Health & Social Work Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 1981 ; Health & Social Work Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 1982 ; Health & Social Work Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 1983 ; Health & Social Work Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; 1984 ; Health & Social Work Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; exists ; 1985 ; Health & Social Work Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; exists ; 1986 ; Health & Social Work Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; exists ; 1987 ; Health & Social Work Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; exists ; 1988 ; Health & Social Work Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; exists ; 1989 ; Health & Social Work Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; exists ; 1990 ; Health & Social Work Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; exists ; 1991 ; Health & Social Work Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; exists ; 1992 ; Health & Social Work Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; exists ; 1993 ; Health & Social Work Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; exists ; 1994 ; Health & Social Work Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; exists ; 1995 ; Health & Social Work Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; Health & Social Work Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; Health & Social Work Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; Health & Social Work Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; Health & Social Work Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; Health & Social Work Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; Health & Social Work Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; Health & Social Work Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; Health & Social Work Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; Health & Social Work Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; Health & Social Work Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; Health & Social Work Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; Health & Social Work Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; Health & Social Work Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; Health & Social Work Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; Health & Social Work Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; Health & Social Work Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; Health & Social Work Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; Health & Social Work Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; Health & Social Work Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; Health & Social Work Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; Health & Social Work Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Health & Social Work Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Health & Social Work Volume 23 ; 23 >
