@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.42 2012-07-12 22:34:53 barry409 Exp $
+* $Id: V3PollStatus.java,v 1.43 2012-10-04 02:13:48 tlipkis Exp $
  */
 
 /*
@@ -712,7 +712,7 @@ public class V3PollStatus {
                                     ColumnDescriptor.TYPE_STRING,
                                     pollerState.getErrorDetail()));
       }
-      if (poll.getStatus() == STATUS_COMPLETE) {
+      if (poll.getStatus() == POLLER_STATUS_COMPLETE) {
 	summary.add(new SummaryInfo("Agreement",
 				    ColumnDescriptor.TYPE_AGREEMENT,
 				    poll.getPercentAgreement()));
