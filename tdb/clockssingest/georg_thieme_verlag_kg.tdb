@@ -53,7 +53,8 @@
   {
      title <
        name = Anästhesiologie, Intensivmedizin, Notfallmedizin ;
-       issn = 0174-1837
+       issn = 0174-1837 ;
+       doi = 10.1055/s-00000001
 
      >
     param[journal_id] = 10.1055/s-00000001
@@ -78,7 +79,8 @@
     title <
       name = Aktuelle Dermatologie ;
       issn = 0340-2541 ;
-      eissn = 1438-938X
+      eissn = 1438-938X ;
+      doi = 10.1055/s-00000002
 
      >
     param[journal_id] = 10.1055/s-00000002
@@ -103,7 +105,8 @@
     title <
       name = Aktuelle Ernährungsmedizin ;
       issn = 0341-0501 ;
-      eissn = 1438-9916
+      eissn = 1438-9916 ;
+      doi = 10.1055/s-00000003
 
      >
     param[journal_id] = 10.1055/s-00000003
@@ -128,7 +131,8 @@
     title <
       name = Aktuelle Neurologie ;
       issn = 0302-4350 ;
-      eissn = 1438-9428
+      eissn = 1438-9428 ;
+      doi = 10.1055/s-00000004
 
     >
     param[journal_id] = 10.1055/s-00000004
@@ -174,7 +178,8 @@
     title <
       name =  Aktuelle Rheumatologie ;
       issn = 0341-051X ;
-      eissn = 1438-9940
+      eissn = 1438-9940 ;
+      doi = 10.1055/s-00000005
 
     >
     param[journal_id] = 10.1055/s-00000005
@@ -219,7 +224,8 @@
     title <
       name = Aktuelle Traumatologie ;
       issn = 0044-6173 ;
-      eissn = 1438-9436
+      eissn = 1438-9436 ;
+      doi = 10.1055/s-00000006
 
    >
    param[journal_id] = 10.1055/s-00000006
@@ -244,7 +250,8 @@
      title <
        name = Aktuelle Urologie ;
        issn = 0001-7868 ;
-       eissn = 1438-8820
+       eissn = 1438-8820 ;
+       doi = 10.1055/s-00000007
 
     >
     param[journal_id] = 10.1055/s-00000007
@@ -290,7 +297,8 @@
     title <
       name = Allgemeine Homöopathische Zeitung ;
       issn = 1438-2563 ;
-      eissn = 1439-8990
+      eissn = 1439-8990 ;
+      doi = 10.1055/s-00000008
 
     >
     param[journal_id] = 10.1055/s-00000008
@@ -346,7 +354,8 @@
      title <
        name = Allgemein- und Viszeralchirurgie up2date ;
        issn = 1611-6437 ;
-       eissn = 1611-6461
+       eissn = 1611-6461 ;
+       doi = 10.1055/s-00000147
 
      >
      param[journal_id] = 10.1055/s-00000147
@@ -362,7 +371,8 @@
       title <
         name = American Journal of Perinatology ;
         issn = 0735-1631 ;
-        eissn = 1098-8785
+        eissn = 1098-8785 ;
+        doi = 10.1055/s-00000009
 
       >
       param[journal_id] = 10.1055/s-00000009
@@ -405,7 +415,8 @@
     title <
       name = American Journal of Perinatology Reports ;
       issn = 2157-6998 ;
-      eissn = 2157-7005
+      eissn = 2157-7005 ;
+      doi = 10.1055/s-00000169
 
      >
     param[journal_id] = 10.1055/s-00000169
@@ -420,7 +431,8 @@
     title <
       name = Arzneimittelforschung ;
       issn = 0004-4172 ;
-      eissn = 1616-7066
+      eissn = 1616-7066 ;
+      doi = 10.1055/s-00000175
 
     >
     param[journal_id] = 10.1055/s-00000175
@@ -448,7 +460,8 @@
     title <
       name = Augenheilkunde up2date ;
       issn = 1616-9719 ;
-      eissn = 1616-9735
+      eissn = 1616-9735 ;
+      doi = 10.1055/s-00000174
 
     >
     param[journal_id] = 10.1055/s-00000174
@@ -465,7 +478,8 @@
     title <
       name = B&G Bewegungstherapie und Gesundheitssport ;
       issn = 1613-0863 ;
-      eissn = 1613-3269
+      eissn = 1613-3269 ;
+      doi = 10.1055/s-00000119
 
     >
     param[journal_id] = 10.1055/s-00000119
@@ -487,7 +501,8 @@
     title <
       name = Balint Journal ;
       issn = 1439-5142 ;
-      eissn = 1439-9008
+      eissn = 1439-9008 ;
+      doi = 10.1055/s-00000114
 
     >
     param[journal_id] = 10.1055/s-00000114
@@ -515,7 +530,8 @@
     title <
       name = Central European Neurosurgery - Zentralblatt für Neurochirurgie ;
       issn = 1438-9746 ;
-      eissn = 0044-4251
+      eissn = 0044-4251 ;
+      doi = 10.1055/s-00000110
 
     >
     param[journal_id] = 10.1055/s-00000110
@@ -543,7 +559,8 @@
     title <
       name = Clinics in Colon and Rectal Surgery ;
       issn = 1531-0043 ;
-      eissn = 1530-9681
+      eissn = 1530-9681 ;
+      doi = 10.1055/s-00000049
 
     >
     param[journal_id] = 10.1055/s-00000049
@@ -568,7 +585,8 @@
     title <
       name = Craniomaxillofacial Trauma & Reconstruction ;
       issn = 1943-3875 ;
-      eissn = 1943-3883
+      eissn = 1943-3883 ;
+      doi = 10.1055/s-00000151
 
     >
     param[journal_id] = 10.1055/s-00000151
