@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;BioMed Central Plugin (BMC Series, PhysMath Central, for CLOCKSS), Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
+    <string>"BioMed Central Plugin (BMC Series, PhysMath Central, for CLOCKSS), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -72,49 +72,49 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>2,&quot;^%s%s/%s/[^/]+/(comments|email|postcomment)$&quot; ,base_url,journal_issn,volume_name</string>
-      <string>1,&quot;^%s%s/%s/.*&quot; ,base_url,journal_issn,volume_name</string>
-      <string>1,&quot;^%scontent/(download/figures/?|download/xml|files/pdf|pdf|xml|supplementary)/&quot; ,base_url</string>
-      <string>1,&quot;^%scontent/[^/]+/%s-%s-[^/]+\.[^/]+$&quot; ,base_url,journal_issn,volume_name</string>
-      <string>1,&quot;^%s%s/content/%s/[^/]+/[^/]+&quot; ,base_url,journal_code,volume_name</string>
-      <string>1,&quot;^%s[^/]+/%s\?page=[0-9]+$&quot; ,base_url,volume_name</string>
-      <string>1,&quot;^%slockss/&quot;, base_url</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)[\?\d]*$", base_url_host</string>
+      <string>2,"^%s%s/%s/[^/]+/(comments|email|postcomment)$" ,base_url,journal_issn,volume_name</string>
+      <string>1,"^%s%s/%s/.*" ,base_url,journal_issn,volume_name</string>
+      <string>1,"^%scontent/(download/figures/?|download/xml|files/pdf|pdf|xml|supplementary)/" ,base_url</string>
+      <string>1,"^%scontent/[^/]+/%s-%s-[^/]+\.[^/]+$" ,base_url,journal_issn,volume_name</string>
+      <string>1,"^%s%s/content/%s/[^/]+/[^/]+" ,base_url,journal_code,volume_name</string>
+      <string>1,"^%s[^/]+/%s\?page=[0-9]+$" ,base_url,volume_name</string>
+      <string>1,"^%slockss/", base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%s/content/%s&quot;, base_url, journal_code, volume_name</string>
+    <string>"%s%s/content/%s", base_url, journal_code, volume_name</string>
   </entry>
   <entry>
         <string>au_feature_urls</string>
         <map>
           <entry>
             <string>au_title</string>
-            <string>&quot;%s%s&quot;, base_url,journal_code</string>
+            <string>"%s%s", base_url,journal_code</string>
           </entry>
           <entry>
             <string>au_volume</string>
-            <string>&quot;%s%s/content/%s&quot;, base_url, journal_code, volume_name</string>
+            <string>"%s%s/content/%s", base_url, journal_code, volume_name</string>
           </entry>
             <entry>
             <string>au_issue</string>
-            <string>&quot;%s%scontent/%s/%s/%s&quot;, base_url, journal_code, volume_name, issue, year</string>
+            <string>"%s%scontent/%s/%s/%s", base_url, journal_code, volume_name, issue, year</string>
           </entry>
           <entry>
             <string>au_article</string>
-            <string>&quot;%s%s/%s/%s&quot;, base_url, journal_issn, volume_name, spage</string>
+            <string>"%s%s/%s/%s", base_url, journal_issn, volume_name, spage</string>
           </entry>
         </map>
   </entry>
   <entry>
-    <string>au_manifest</string>
-    <string>&quot;%slockss/&quot;, base_url</string>
+    <string>au_permission_url</string>
+    <string>"%slockss/", base_url</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%s%s/%s/[0-9]+$&quot;, base_url, journal_issn, volume_name</string>
+      <string>"^%scontent/pdf/%s-%s-[-\d]{1,7}.pdf$", base_url, journal_issn, volume_name </string>
     </list>
   </entry>
   <entry>

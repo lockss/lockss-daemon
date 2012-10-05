@@ -1,11 +1,15 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down see RU 3643; crawlrules need work - david</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.bmc.ClockssBioMedCentralPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_publishing_platform</string>
+    <string>BioMedCentral</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -23,6 +27,10 @@
         <string>1</string>
       </entry>
       <entry>
+      <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
         <string>Poll</string>
         <string>4</string>
       </entry>
@@ -30,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;BioMed Central Plugin (BMC Journals, Chemistry Central, for CLOCKSS), Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
+    <string>"BioMed Central Plugin (BMC Journals, Chemistry Central, for CLOCKSS), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -42,6 +50,10 @@
   </entry>
    <entry>
     <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.bmc.BioMedCentralPluginArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.bmc.BioMedCentralPluginArticleIteratorFactory</string>
   </entry>
   <entry>
@@ -60,37 +72,47 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s.{0,150}&quot;, base_url</string>
-      <string>2,&quot;^%sregistration&quot;, base_url</string>
-      <string>1,&quot;^%s(articles/browse\.asp|content)?(date=&amp;)/%s&quot;, base_url, volume_name</string>
-      <string>1,&quot;%slockss/&quot;, base_url</string>
-      <string>1,&quot;^%scontent/%s/[^/]+/[^/]+(/(abstract/?|additional/?|citation|comments|ref|figure/.*|suppl/.*|table/.*))?$&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%scontent/(download/figures|download/xml|files/pdf|pdf|xml|supplementary|html)/&quot;, base_url</string>
-      <string>1,&quot;^%ssupplements/(%s|notes)/&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%srender/render.asp\?&quot;, base_url</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)[\?\d]*$", base_url_host</string>
+      <string>4,"^%s.{0,150}", base_url</string>
+      <string>2,"^%sregistration", base_url</string>
+      <string>2,"^%scontent/%s/[\d]{1,3}/[\d]{1,3}/(comments|email|postcomment)$", base_url, volume_name</string> <!-- excluding a login-type page -->
+      <string>1,"^%scontent/(%s|notes)/", base_url, volume_name</string>
+      <string>1,"^%s(articles/browse\.asp|content)\?(date=&amp;volume=%s)[^0-9]", base_url, volume_name</string>
+      <string>1,"^%scontent/pdf//%s-%s-\[-\d]{1,7}(.pdf)?", base_url, journal_issn, volume_name</string>
+      <string>1,"^%slockss/", base_url</string>
+      <string>1,"^%scontent/%s/[^/]+/[^/]+(/(abstract/?|additional/?|citation|comments|ref|figure/.*|suppl/.*|table/.*|/))?$", base_url, volume_name</string>
+      <string>1,"^%scontent/(download/figures|download/xml|files/pdf|pdf|xml|supplementary|html)/", base_url</string>
+      <string>1,"^%ssupplements/(%s|notes)/", base_url, volume_name</string>
+      <string>1,"^%srender/render.asp\?", base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%scontent/%s&quot;, base_url, volume_name</string>
+    <string>"%scontent/%s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+         <string>"^%scontent/%s/[\w]{1,4}[\d]{1,4}.pdf$", base_url, volume_name</string>
+         <string>"^%scontent/pdf/%s-%s-[-\d]{1,7}(.pdf)?$", base_url, journal_issn, volume_name</string>
+      </list>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
   	<map>
 	  <entry>
 	    <string>au_title</string>
-	    <string>&quot;%scontent&quot;, base_url</string>
+	    <string>"%scontent", base_url</string>
 	  </entry>
 	  <entry>
 	    <string>au_volume</string>
-	    <string>&quot;%scontent/%s&quot;, base_url, volume_name</string>
+	    <string>"%scontent/%s", base_url, volume_name</string>
 	  </entry>
   	</map>
   </entry>
   <entry>
-    <string>au_manifest</string>
-    <string>&quot;%slockss/&quot;, base_url</string>
+    <string>au_permission_url</string>
+    <string>"%slockss/", base_url</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
