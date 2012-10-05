@@ -485,7 +485,7 @@
     au < manifest ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 ; >
     au < manifest ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 ; >
     au < manifest ; exists ; 2007 ; The American Historical Review Volume 112 ; 112 ; >
-    au < testing ; exists ; 2008 ; The American Historical Review Volume 113 ; 113 ; >
+    au < released ; manifest ; 2008 ; The American Historical Review Volume 113 ; 113 ; >
     au < released ; crawling ; 2009 ; The American Historical Review Volume 114 ; 114 ; >
     au < released ; crawling ; 2010 ; The American Historical Review Volume 115 ; 115 ; >
     au < released ; crawling ; 2011 ; The American Historical Review Volume 116 ; 116 ; >
@@ -7501,7 +7501,7 @@
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < notReady ; exists ; 2008 ; InnovAiT Volume 1 ; 1 ; >
+    au < released ; manifest ; 2008 ; InnovAiT Volume 1 ; 1 ; >
     au < zapped ; down ; 2009 ; InnovAiT Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
     }
@@ -13640,7 +13640,7 @@
     au < released ; crawling ; 2009 ; Neuro-Oncology Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; Neuro-Oncology Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; Neuro-Oncology Volume 13 ; 13 ; >
-    au < notReady ; exists ; 2012 ; Neuro-Oncology Volume 14 ; 14 ; >
+    au < released ; manifest ; 2012 ; Neuro-Oncology Volume 14 ; 14 ; >
 
   }
 
