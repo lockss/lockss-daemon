@@ -8,12 +8,16 @@
     <string>org.lockss.plugin.bmc.BMCPlugin</string>
   </entry>
   <entry>
+    <string>plugin_publishing_platform</string>
+    <string>BioMed Central</string>
+  </entry>
+  <entry>
    <string>plugin_notes</string>
    <string>added a new non-definitional parameter journal_code</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -72,7 +76,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)[\?\d]*$", base_url_host</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?\d+)?$", base_url_host</string>
       <string>2,"^%s%s/%s/[^/]+/(comments|email|postcomment)$" ,base_url,journal_issn,volume_name</string>
       <string>1,"^%s%s/%s/.*" ,base_url,journal_issn,volume_name</string>
       <string>1,"^%scontent/(download/figures/?|download/xml|files/pdf|pdf|xml|supplementary)/" ,base_url</string>
