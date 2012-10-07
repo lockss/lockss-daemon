@@ -7511,11 +7511,11 @@
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < testing ; exists ; 2008 ; InnovAiT Volume 1 ; 1 ; >
-    au < testing ; exists ; 2009 ; InnovAiT Volume 2 ; 2 ; >
+    au < released ; manifest ; 2008 ; InnovAiT Volume 1 ; 1 ; >
+    au < released ; manifest ; 2009 ; InnovAiT Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; InnovAiT Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; InnovAiT Volume 4 ; 4 ; >
-    au < testing ; exists ; 2012 ; InnovAiT Volume 5 ; 5 ; >
+    au < released ; manifest ; 2012 ; InnovAiT Volume 5 ; 5 ; >
 
     }
 
