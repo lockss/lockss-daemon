@@ -8,6 +8,8 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    
+    comment[0] = ASM is moving to a new platform at the end of 2012.
   
     {
       title <
