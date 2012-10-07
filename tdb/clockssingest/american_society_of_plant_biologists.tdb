@@ -9,6 +9,8 @@
   attr[contract] = 2012
   plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin 
   implicit < status ; status2 ; year ; name ; param[volume_name] >
+  
+  comment[notReady] = TPC 24 and PP 158,159,160 need plugin filter RU 4418
 
   {
   
@@ -46,7 +48,7 @@
       au < manifest ; exists ; 2009 ; The Plant Cell Volume 21 ; 21 >
       au < manifest ; exists ; 2010 ; The Plant Cell Volume 22 ; 22 >
       au < manifest ; exists ; 2011 ; The Plant Cell Volume 23 ; 23 >
-      au < testing ; exists ; 2012 ; The Plant Cell Volume 24 ; 24 >
+      au < notReady ; exists ; 2012 ; The Plant Cell Volume 24 ; 24 >
 
     }
 
@@ -220,9 +222,9 @@
       au < manifest ; exists ; 2011 ; Plant Physiology Volume 155 ; 155 >
       au < manifest ; exists ; 2011 ; Plant Physiology Volume 156 ; 156 >
       au < manifest ; exists ; 2011 ; Plant Physiology Volume 157 ; 157 >
-      au < testing ; exists ; 2012 ; Plant Physiology Volume 158 ; 158 >
-      au < testing ; exists ; 2012 ; Plant Physiology Volume 159 ; 159 >
-      au < testing ; exists ; 2012 ; Plant Physiology Volume 160 ; 160 >
+      au < notReady ; exists ; 2012 ; Plant Physiology Volume 158 ; 158 >
+      au < notReady ; exists ; 2012 ; Plant Physiology Volume 159 ; 159 >
+      au < notReady ; exists ; 2012 ; Plant Physiology Volume 160 ; 160 >
 
     }
 }
