@@ -4,7 +4,7 @@
     name = Dove Medical Press
   >
 
-  plugin = org.lockss.plugin.maffey.MaffeyPlugin
+  plugin = needs.plugin
   param[base_url] = http://www.dovepress.com/
   implicit < status ; year ; name ; param[year] >
 
