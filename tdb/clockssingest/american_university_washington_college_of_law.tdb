@@ -6,7 +6,6 @@
     info[tester] = 5
   >
   
-  attr[contract] = 2010
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
   param[base_url] = http://digitalcommons.wcl.american.edu/
   implicit < status ; status2 ; year ; name ; param[volume] >
