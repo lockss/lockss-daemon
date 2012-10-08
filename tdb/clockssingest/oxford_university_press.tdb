@@ -14657,7 +14657,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; Oxford Review of Economic Policy Volume 26 ; 26 ; >
     au < released ; crawling ; 2011 ; Oxford Review of Economic Policy Volume 27 ; 27 ; >
-    au < expected ; exists ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 ; >
 
     }
 
@@ -16476,7 +16476,7 @@
     param[base_url] = http://rcfs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; exists ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 ; >
 
   }
 
