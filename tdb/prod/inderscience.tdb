@@ -3010,7 +3010,7 @@
       au < released ; 2009 ; International Journal of Global Environmental Issues Volume 9 ; 9 >
       au < released ; 2010 ; International Journal of Global Environmental Issues Volume 10 ; 10 >
       au < released ; 2011 ; International Journal of Global Environmental Issues Volume 11 ; 11 >
-      au < manifest ; 2012 ; International Journal of Global Environmental Issues Volume 12 ; 12 >
+      au < ready ; 2012 ; International Journal of Global Environmental Issues Volume 12 ; 12 >
 
     }
 
@@ -3028,7 +3028,7 @@
       au < released ; 2009 ; International Journal of Global Warming Volume 1 ; 1 >
       au < released ; 2010 ; International Journal of Global Warming Volume 2 ; 2 >
       au < released ; 2011 ; International Journal of Global Warming Volume 3 ; 3 >
-      au < manifest ; 2012 ; International Journal of Global Warming Volume 4 ; 4 >
+      au < ready ; 2012 ; International Journal of Global Warming Volume 4 ; 4 >
 
     }
 
@@ -3205,7 +3205,7 @@
       au < released ; 2007-2008 ; International Journal of High Performance Systems Architecture Volume 1 ; 1 >
       au < released ; 2009-2010 ; International Journal of High Performance Systems Architecture Volume 2 ; 2 >
       au < released ; 2011 ; International Journal of High Performance Systems Architecture Volume 3 ; 3 >
-      au < manifest ; 2012 ; International Journal of High Performance Systems Architecture Volume 4 ; 4 >
+      au < ready ; 2012 ; International Journal of High Performance Systems Architecture Volume 4 ; 4 >
 
     }
 
@@ -5529,7 +5529,7 @@
       au < ready ; 2006 ; International Journal of Product Development Volume 3 ; 3 >
       au < ready ; 2007 ; International Journal of Product Development Volume 4 ; 4 >
       au < ready ; 2008 ; International Journal of Product Development Volume 5 ; 5 >
-      au < testing ; 2008 ; International Journal of Product Development Volume 6 ; 6 >
+      au < ready ; 2008 ; International Journal of Product Development Volume 6 ; 6 >
       au < released ; 2009 ; International Journal of Product Development Volume 7 ; 7 >
       au < released ; 2009 ; International Journal of Product Development Volume 8 ; 8 >
       au < released ; 2009 ; International Journal of Product Development Volume 9 ; 9 >
@@ -5857,20 +5857,20 @@
 
       param[journal_issn] = 1741-5241
       
-      au < manifest ; 2000 ; International Journal of Risk Assessment and Management Volume 1 ; 1 >
-      au < manifest ; 2001 ; International Journal of Risk Assessment and Management Volume 2 ; 2 >
-      au < manifest ; 2002 ; International Journal of Risk Assessment and Management Volume 3 ; 3 >
-      au < manifest ; 2003 ; International Journal of Risk Assessment and Management Volume 4 ; 4 >
-      au < manifest ; 2005 ; International Journal of Risk Assessment and Management Volume 5 ; 5 >
-      au < manifest ; 2006 ; International Journal of Risk Assessment and Management Volume 6 ; 6 >
-      au < manifest ; 2007 ; International Journal of Risk Assessment and Management Volume 7 ; 7 >
-      au < manifest ; 2008 ; International Journal of Risk Assessment and Management Volume 8 ; 8 >
-      au < manifest ; 2008 ; International Journal of Risk Assessment and Management Volume 9 ; 9 >
-      au < manifest ; 2008 ; International Journal of Risk Assessment and Management Volume 10 ; 10 >
-      au < manifest ; 2009 ; International Journal of Risk Assessment and Management Volume 11 ; 11 >
-      au < manifest ; 2009 ; International Journal of Risk Assessment and Management Volume 12 ; 12 >
-      au < manifest ; 2009 ; International Journal of Risk Assessment and Management Volume 13 ; 13 >
-      au < manifest ; 2010 ; International Journal of Risk Assessment and Management Volume 14 ; 14 >
+      au < testing ; 2000 ; International Journal of Risk Assessment and Management Volume 1 ; 1 >
+      au < testing ; 2001 ; International Journal of Risk Assessment and Management Volume 2 ; 2 >
+      au < testing ; 2002 ; International Journal of Risk Assessment and Management Volume 3 ; 3 >
+      au < testing ; 2003 ; International Journal of Risk Assessment and Management Volume 4 ; 4 >
+      au < testing ; 2005 ; International Journal of Risk Assessment and Management Volume 5 ; 5 >
+      au < testing ; 2006 ; International Journal of Risk Assessment and Management Volume 6 ; 6 >
+      au < testing ; 2007 ; International Journal of Risk Assessment and Management Volume 7 ; 7 >
+      au < testing ; 2008 ; International Journal of Risk Assessment and Management Volume 8 ; 8 >
+      au < testing ; 2008 ; International Journal of Risk Assessment and Management Volume 9 ; 9 >
+      au < testing ; 2008 ; International Journal of Risk Assessment and Management Volume 10 ; 10 >
+      au < testing ; 2009 ; International Journal of Risk Assessment and Management Volume 11 ; 11 >
+      au < testing ; 2009 ; International Journal of Risk Assessment and Management Volume 12 ; 12 >
+      au < testing ; 2009 ; International Journal of Risk Assessment and Management Volume 13 ; 13 >
+      au < testing ; 2010 ; International Journal of Risk Assessment and Management Volume 14 ; 14 >
       au < released ; 2011 ; International Journal of Risk Assessment and Management Volume 15 ; 15 >
       au < manifest ; 2012 ; International Journal of Risk Assessment and Management Volume 16 ; 16 >
 
@@ -5902,11 +5902,11 @@
 
       param[journal_issn] = 1747-8413
       
-      au < manifest ; 2006 ; International Journal of Security and Networks Volume 1 ; 1 >
-      au < manifest ; 2007 ; International Journal of Security and Networks Volume 2 ; 2 >
-      au < manifest ; 2008 ; International Journal of Security and Networks Volume 3 ; 3 >
-      au < manifest ; 2009 ; International Journal of Security and Networks Volume 4 ; 4 >
-      au < manifest ; 2010 ; International Journal of Security and Networks Volume 5 ; 5 >
+      au < testing ; 2006 ; International Journal of Security and Networks Volume 1 ; 1 >
+      au < testing ; 2007 ; International Journal of Security and Networks Volume 2 ; 2 >
+      au < testing ; 2008 ; International Journal of Security and Networks Volume 3 ; 3 >
+      au < testing ; 2009 ; International Journal of Security and Networks Volume 4 ; 4 >
+      au < testing ; 2010 ; International Journal of Security and Networks Volume 5 ; 5 >
       au < released ; 2011 ; International Journal of Security and Networks Volume 6 ; 6 >
 
     }
@@ -5922,14 +5922,14 @@
 
       param[journal_issn] = 1748-1287
       
-      au < manifest ; 2006 ; International Journal of Sensor Networks Volume 1 ; 1 >
-      au < manifest ; 2007 ; International Journal of Sensor Networks Volume 2 ; 2 >
-      au < manifest ; 2008 ; International Journal of Sensor Networks Volume 3 ; 3 >
-      au < manifest ; 2008 ; International Journal of Sensor Networks Volume 4 ; 4 >
-      au < manifest ; 2009 ; International Journal of Sensor Networks Volume 5 ; 5 >
-      au < manifest ; 2009 ; International Journal of Sensor Networks Volume 6 ; 6 >
-      au < manifest ; 2010 ; International Journal of Sensor Networks Volume 7 ; 7 >
-      au < manifest ; 2010 ; International Journal of Sensor Networks Volume 8 ; 8 >
+      au < testing ; 2006 ; International Journal of Sensor Networks Volume 1 ; 1 >
+      au < testing ; 2007 ; International Journal of Sensor Networks Volume 2 ; 2 >
+      au < testing ; 2008 ; International Journal of Sensor Networks Volume 3 ; 3 >
+      au < testing ; 2008 ; International Journal of Sensor Networks Volume 4 ; 4 >
+      au < testing ; 2009 ; International Journal of Sensor Networks Volume 5 ; 5 >
+      au < testing ; 2009 ; International Journal of Sensor Networks Volume 6 ; 6 >
+      au < testing ; 2010 ; International Journal of Sensor Networks Volume 7 ; 7 >
+      au < testing ; 2010 ; International Journal of Sensor Networks Volume 8 ; 8 >
       au < released ; 2011 ; International Journal of Sensor Networks Volume 9 ; 9 >
       au < released ; 2011 ; International Journal of Sensor Networks Volume 10 ; 10 >
       au < manifest ; 2012 ; International Journal of Sensor Networks Volume 11 ; 11 >
@@ -5962,13 +5962,13 @@
 
       param[journal_issn] = 1744-2389
       
-      au < manifest ; 2005 ; International Journal of Services and Operations Management Volume 1 ; 1 >
-      au < manifest ; 2006 ; International Journal of Services and Operations Management Volume 2 ; 2 >
-      au < manifest ; 2007 ; International Journal of Services and Operations Management Volume 3 ; 3 >
-      au < manifest ; 2008 ; International Journal of Services and Operations Management Volume 4 ; 4 >
-      au < manifest ; 2009 ; International Journal of Services and Operations Management Volume 5 ; 5 >
-      au < manifest ; 2010 ; International Journal of Services and Operations Management Volume 6 ; 6 >
-      au < manifest ; 2010 ; International Journal of Services and Operations Management Volume 7 ; 7 >
+      au < testing ; 2005 ; International Journal of Services and Operations Management Volume 1 ; 1 >
+      au < testing ; 2006 ; International Journal of Services and Operations Management Volume 2 ; 2 >
+      au < testing ; 2007 ; International Journal of Services and Operations Management Volume 3 ; 3 >
+      au < testing ; 2008 ; International Journal of Services and Operations Management Volume 4 ; 4 >
+      au < testing ; 2009 ; International Journal of Services and Operations Management Volume 5 ; 5 >
+      au < testing ; 2010 ; International Journal of Services and Operations Management Volume 6 ; 6 >
+      au < testing ; 2010 ; International Journal of Services and Operations Management Volume 7 ; 7 >
       au < released ; 2011 ; International Journal of Services and Operations Management Volume 8 ; 8 >
       au < released ; 2011 ; International Journal of Services and Operations Management Volume 9 ; 9 >
       au < released ; 2011 ; International Journal of Services and Operations Management Volume 10 ; 10 >
@@ -5988,12 +5988,12 @@
 
       param[journal_issn] = 1740-8857
       
-      au < manifest ; 2004-2005 ; International Journal of Services and Standards Volume 1 ; 1 >
-      au < manifest ; 2006 ; International Journal of Services and Standards Volume 2 ; 2 >
-      au < manifest ; 2007 ; International Journal of Services and Standards Volume 3 ; 3 >
-      au < manifest ; 2008 ; International Journal of Services and Standards Volume 4 ; 4 >
-      au < manifest ; 2009 ; International Journal of Services and Standards Volume 5 ; 5 >
-      au < manifest ; 2010 ; International Journal of Services and Standards Volume 6 ; 6 >
+      au < testing ; 2004-2005 ; International Journal of Services and Standards Volume 1 ; 1 >
+      au < testing ; 2006 ; International Journal of Services and Standards Volume 2 ; 2 >
+      au < testing ; 2007 ; International Journal of Services and Standards Volume 3 ; 3 >
+      au < testing ; 2008 ; International Journal of Services and Standards Volume 4 ; 4 >
+      au < testing ; 2009 ; International Journal of Services and Standards Volume 5 ; 5 >
+      au < testing ; 2010 ; International Journal of Services and Standards Volume 6 ; 6 >
       au < released ; 2011 ; International Journal of Services and Standards Volume 7 ; 7 >
 
     }
