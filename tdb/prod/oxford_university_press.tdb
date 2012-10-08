@@ -11611,6 +11611,87 @@
     param[base_url] = http://jnci.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+
+    au < HighWirePressH20Plugin ; manifest ; 1909 ; Journal of the National Cancer Institute Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1910 ; Journal of the National Cancer Institute Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1911 ; Journal of the National Cancer Institute Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1912 ; Journal of the National Cancer Institute Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1913 ; Journal of the National Cancer Institute Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1914 ; Journal of the National Cancer Institute Volume 6 ; 6  >
+    au < HighWirePressH20Plugin ; manifest ; 1915 ; Journal of the National Cancer Institute Volume 7 ; 7  >
+    au < HighWirePressH20Plugin ; manifest ; 1916 ; Journal of the National Cancer Institute Volume 8 ; 8  >
+    au < HighWirePressH20Plugin ; manifest ; 1917 ; Journal of the National Cancer Institute Volume 9 ; 9  >
+    au < HighWirePressH20Plugin ; manifest ; 1918 ; Journal of the National Cancer Institute Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1919 ; Journal of the National Cancer Institute Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1920 ; Journal of the National Cancer Institute Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1921 ; Journal of the National Cancer Institute Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1922 ; Journal of the National Cancer Institute Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 1923 ; Journal of the National Cancer Institute Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1924 ; Journal of the National Cancer Institute Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1925 ; Journal of the National Cancer Institute Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 1926 ; Journal of the National Cancer Institute Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1927 ; Journal of the National Cancer Institute Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1928 ; Journal of the National Cancer Institute Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 1929 ; Journal of the National Cancer Institute Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 1930 ; Journal of the National Cancer Institute Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 1931 ; Journal of the National Cancer Institute Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 1932 ; Journal of the National Cancer Institute Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; manifest ; 1933 ; Journal of the National Cancer Institute Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 1934 ; Journal of the National Cancer Institute Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 1935 ; Journal of the National Cancer Institute Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 1936 ; Journal of the National Cancer Institute Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 1937 ; Journal of the National Cancer Institute Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 1938 ; Journal of the National Cancer Institute Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 1939 ; Journal of the National Cancer Institute Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 1940 ; Journal of the National Cancer Institute Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 1941 ; Journal of the National Cancer Institute Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 1942 ; Journal of the National Cancer Institute Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 1943 ; Journal of the National Cancer Institute Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; manifest ; 1944 ; Journal of the National Cancer Institute Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; manifest ; 1945 ; Journal of the National Cancer Institute Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 1946 ; Journal of the National Cancer Institute Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; manifest ; 1947 ; Journal of the National Cancer Institute Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; manifest ; 1948 ; Journal of the National Cancer Institute Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; manifest ; 1949 ; Journal of the National Cancer Institute Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; manifest ; 1950 ; Journal of the National Cancer Institute Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; manifest ; 1951 ; Journal of the National Cancer Institute Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; manifest ; 1952 ; Journal of the National Cancer Institute Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; manifest ; 1953 ; Journal of the National Cancer Institute Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; manifest ; 1954 ; Journal of the National Cancer Institute Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; manifest ; 1955 ; Journal of the National Cancer Institute Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; manifest ; 1956 ; Journal of the National Cancer Institute Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; manifest ; 1957 ; Journal of the National Cancer Institute Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; manifest ; 1958 ; Journal of the National Cancer Institute Volume 50 ; 52 >
+    au < HighWirePressH20Plugin ; manifest ; 1959 ; Journal of the National Cancer Institute Volume 51 ; 52 >
+    au < HighWirePressH20Plugin ; manifest ; 1960 ; Journal of the National Cancer Institute Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; manifest ; 1961 ; Journal of the National Cancer Institute Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; Journal of the National Cancer Institute Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; Journal of the National Cancer Institute Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; Journal of the National Cancer Institute Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; Journal of the National Cancer Institute Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; Journal of the National Cancer Institute Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of the National Cancer Institute Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of the National Cancer Institute Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of the National Cancer Institute Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; Journal of the National Cancer Institute Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; Journal of the National Cancer Institute Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of the National Cancer Institute Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of the National Cancer Institute Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of the National Cancer Institute Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of the National Cancer Institute Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of the National Cancer Institute Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of the National Cancer Institute Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of the National Cancer Institute Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of the National Cancer Institute Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of the National Cancer Institute Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of the National Cancer Institute Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of the National Cancer Institute Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of the National Cancer Institute Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of the National Cancer Institute Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of the National Cancer Institute Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of the National Cancer Institute Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of the National Cancer Institute Volume 79 ; 79 >
+    
     au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of the National Cancer Institute Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of the National Cancer Institute Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of the National Cancer Institute Volume 82 ; 82 >
