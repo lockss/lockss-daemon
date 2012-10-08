@@ -7227,15 +7227,15 @@
     param[base_url] = http://icsidreview.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1986 ; ICSID Review: Foreign Investment Law Journal Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1987 ; ICSID Review: Foreign Investment Law Journal Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1988 ; ICSID Review: Foreign Investment Law Journal Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 1989 ; ICSID Review: Foreign Investment Law Journal Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 1990 ; ICSID Review: Foreign Investment Law Journal Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 1991 ; ICSID Review: Foreign Investment Law Journal Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 1992 ; ICSID Review: Foreign Investment Law Journal Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 1993 ; ICSID Review: Foreign Investment Law Journal Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; 1994 ; ICSID Review: Foreign Investment Law Journal Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; ICSID Review: Foreign Investment Law Journal Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; ICSID Review: Foreign Investment Law Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; ICSID Review: Foreign Investment Law Journal Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; ICSID Review: Foreign Investment Law Journal Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; ICSID Review: Foreign Investment Law Journal Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; ICSID Review: Foreign Investment Law Journal Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; ICSID Review: Foreign Investment Law Journal Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; ICSID Review: Foreign Investment Law Journal Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; ICSID Review: Foreign Investment Law Journal Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 1995 ; ICSID Review: Foreign Investment Law Journal Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; ICSID Review: Foreign Investment Law Journal Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; ICSID Review: Foreign Investment Law Journal Volume 12 ; 12 >
@@ -8855,7 +8855,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Jerusalem Review of Legal Studies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Jerusalem Review of Legal Studies Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 >
 
   }
 
@@ -15168,7 +15168,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Oxford Review of Economic Policy Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Oxford Review of Economic Policy Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 >
 
     }
 
@@ -16967,7 +16967,7 @@
     param[base_url] = http://rcfs.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 >
+    au < manifest ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 >
 
   }
 
