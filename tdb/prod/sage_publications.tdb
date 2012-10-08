@@ -592,15 +592,15 @@
         param[base_url] = http://alx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        au < manifest ; 1998-1999 ; Adult Learning Volume 10 ; 10 >
-        au < manifest ; 1999-2000 ; Adult Learning Volume 11 ; 11 >
-        au < manifest ; 2001 ; Adult Learning Volume 12 ; 12 >
-        au < manifest ; 2001-2002 ; Adult Learning Volume 13 ; 13 >
-        au < manifest ; 2003 ; Adult Learning Volume 14 ; 14 >
-        au < manifest ; 2004 ; Adult Learning Volume 15 ; 15 >
-        au < manifest ; 2005 ; Adult Learning Volume 16 ; 16 >
-        au < manifest ; 2006 ; Adult Learning Volume 17 ; 17 >
-        au < manifest ; 2007 ; Adult Learning Volume 18 ; 18 >
+        au < testing ; 1998-1999 ; Adult Learning Volume 10 ; 10 >
+        au < testing ; 1999-2000 ; Adult Learning Volume 11 ; 11 >
+        au < testing ; 2001 ; Adult Learning Volume 12 ; 12 >
+        au < testing ; 2001-2002 ; Adult Learning Volume 13 ; 13 >
+        au < testing ; 2003 ; Adult Learning Volume 14 ; 14 >
+        au < testing ; 2004 ; Adult Learning Volume 15 ; 15 >
+        au < testing ; 2005 ; Adult Learning Volume 16 ; 16 >
+        au < testing ; 2006 ; Adult Learning Volume 17 ; 17 >
+        au < testing ; 2007 ; Adult Learning Volume 18 ; 18 >
         au < ready ; 2008 ; Adult Learning Volume 19 ; 19 >
         au < ready ; 2009 ; Adult Learning Volume 20 ; 20 >
         au < released ; 2010 ; Adult Learning Volume 21 ; 21 >
