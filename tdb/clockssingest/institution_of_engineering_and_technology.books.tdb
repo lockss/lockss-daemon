@@ -6,7 +6,6 @@
     info[tester] = 0
   >
 
-  attr[contract] = 2012
   plugin = needs.plugin
   comment[plugin] = plugin will be a daughter of OJS2 plugin, possibly called ClockssIETLinkBookPlugin
   param[base_url] = http://www.theiet.org/

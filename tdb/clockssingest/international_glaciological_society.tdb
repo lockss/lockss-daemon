@@ -6,7 +6,6 @@
     info[tester] = 0
   >
 
-  attr[contract] = 2012
   param[base_url] = http://www.igsoc.org/
   plugin = needs.plugin
   implicit < status ; status2 ; name ; year ; param[year] >

@@ -5,7 +5,6 @@
     info[tester] = 4
   >
   
-    attr[contract] = 2011
     plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
     param[base_url] = http://inderscience.metapress.com/
     implicit < status ; status2 ; year ; name ; param[volume_name] >

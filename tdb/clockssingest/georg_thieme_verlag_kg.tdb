@@ -6,7 +6,6 @@
     info[tester] = 0
   >
 
-  attr[contract] = 2010
   param[base_url] = https://www.thieme-connect.de/
   plugin = needs.plugin
   implicit < status ; status2 ; name ; year ; param[year] >
