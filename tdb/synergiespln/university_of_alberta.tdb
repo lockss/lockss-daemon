@@ -5,7 +5,7 @@
   >
 
   rights = openaccess
-  implicit < status ; year ; name ; param[year] >
+  implicit < status ; year ; name ; volume ; param[year] >
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
 
   {
@@ -18,18 +18,18 @@
     param[base_url] = http://ajer.synergiesprairies.ca/ajer/
     param[journal_id] = ajer
 
-    au < released ; 1998 ; Alberta Journal of Educational Research Volume 44 ; 1998 >
-    au < released ; 1999 ; Alberta Journal of Educational Research Volume 45 ; 1999 >
-    au < manifest ; 2000 ; Alberta Journal of Educational Research Volume 46 ; 2000 >
-    au < released ; 2001 ; Alberta Journal of Educational Research Volume 47 ; 2001 >
-    au < released ; 2002 ; Alberta Journal of Educational Research Volume 48 ; 2002 >
-    au < released ; 2003 ; Alberta Journal of Educational Research Volume 49 ; 2003 >
-    au < released ; 2004 ; Alberta Journal of Educational Research Volume 50 ; 2004 >
-    au < released ; 2005 ; Alberta Journal of Educational Research Volume 51 ; 2005 >
-    au < released ; 2006 ; Alberta Journal of Educational Research Volume 52 ; 2006 >
-    au < released ; 2007 ; Alberta Journal of Educational Research Volume 53 ; 2007 >
-    au < doNotProcess ; 2008 ; Alberta Journal of Educational Research Volume 54 ; 2008 >
-    au < doNotProcess ; 2009 ; Alberta Journal of Educational Research Volume 55 ; 2009 >
+    au < released ; 1998 ; Alberta Journal of Educational Research Volume 44 ; 44 ; 1998 >
+    au < released ; 1999 ; Alberta Journal of Educational Research Volume 45 ; 45 ; 1999 >
+    au < manifest ; 2000 ; Alberta Journal of Educational Research Volume 46 ; 46 ; 2000 >
+    au < released ; 2001 ; Alberta Journal of Educational Research Volume 47 ; 47 ; 2001 >
+    au < released ; 2002 ; Alberta Journal of Educational Research Volume 48 ; 48 ; 2002 >
+    au < released ; 2003 ; Alberta Journal of Educational Research Volume 49 ; 49 ; 2003 >
+    au < released ; 2004 ; Alberta Journal of Educational Research Volume 50 ; 50 ; 2004 >
+    au < released ; 2005 ; Alberta Journal of Educational Research Volume 51 ; 51 ; 2005 >
+    au < released ; 2006 ; Alberta Journal of Educational Research Volume 52 ; 52 ; 2006 >
+    au < released ; 2007 ; Alberta Journal of Educational Research Volume 53 ; 53 ; 2007 >
+    au < doNotProcess ; 2008 ; Alberta Journal of Educational Research Volume 54 ; 54 ; 2008 >
+    au < doNotProcess ; 2009 ; Alberta Journal of Educational Research Volume 55 ; 55 ; 2009 >
 
   }
   
