@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
   param[base_url] = http://journals.uvic.ca/
-  implicit < status ; year ; name ; param[year] >
+  implicit < status ; year ; name ; volume ; param[year] >
   
   {
   
@@ -16,7 +16,7 @@
     
     param[journal_id] = albatross
 
-    au < released ; 2011 ; The Albatross Volume 1 ; 2011 >
+    au < released ; 2011 ; The Albatross Volume 1 ; 1 ; 2011 >
 
   }
   
@@ -32,23 +32,22 @@
     
     comment[2004] = 2004 volume does not exist
 
-    au < released ; 1995 ; Appeal: Review of Current Law and Law Reform Volume 1 [tables of contents only] ; 1995 >
-    au < released ; 1996 ; Appeal: Review of Current Law and Law Reform Volume 2 [tables of contents only] ; 1996 >
-    au < released ; 1997 ; Appeal: Review of Current Law and Law Reform Volume 3 [tables of contents only] ; 1997 >
-    au < released ; 1998 ; Appeal: Review of Current Law and Law Reform Volume 4 [tables of contents only] ; 1998 >
-    au < released ; 1999 ; Appeal: Review of Current Law and Law Reform Volume 5 [tables of contents only] ; 1999 >
-    au < released ; 2000 ; Appeal: Review of Current Law and Law Reform Volume 6 [tables of contents only] ; 2000 >
-    au < released ; 2001 ; Appeal: Review of Current Law and Law Reform Volume 7 [tables of contents only] ; 2001 >
-    au < released ; 2002 ; Appeal: Review of Current Law and Law Reform Volume 8 [tables of contents only] ; 2002 >
-    au < released ; 2003 ; Appeal: Review of Current Law and Law Reform Volume 9 [tables of contents only] ; 2003 >
-
-    au < released ; 2005 ; Appeal: Review of Current Law and Law Reform Volume 10 [tables of contents only] ; 2005 >
-    au < released ; 2006 ; Appeal: Review of Current Law and Law Reform Volume 11 [tables of contents only] ; 2006 >
-    au < released ; 2007 ; Appeal: Review of Current Law and Law Reform Volume 12 [tables of contents only] ; 2007 >
-    au < released ; 2008 ; Appeal: Review of Current Law and Law Reform Volume 13 ; 2008 >
-    au < released ; 2009 ; Appeal: Review of Current Law and Law Reform Volume 14 ; 2009 >
-    au < released ; 2010 ; Appeal: Review of Current Law and Law Reform Volume 15 ; 2010 >
-    au < released ; 2011 ; Appeal: Review of Current Law and Law Reform Volume 16 ; 2011 >
+    au < released ; 1995 ; Appeal: Review of Current Law and Law Reform Volume 1 [tables of contents only] ; 1 ; 1995 >
+    au < released ; 1996 ; Appeal: Review of Current Law and Law Reform Volume 2 [tables of contents only] ; 2 ; 1996 >
+    au < released ; 1997 ; Appeal: Review of Current Law and Law Reform Volume 3 [tables of contents only] ; 3 ; 1997 >
+    au < released ; 1998 ; Appeal: Review of Current Law and Law Reform Volume 4 [tables of contents only] ; 4 ; 1998 >
+    au < released ; 1999 ; Appeal: Review of Current Law and Law Reform Volume 5 [tables of contents only] ; 5 ; 1999 >
+    au < released ; 2000 ; Appeal: Review of Current Law and Law Reform Volume 6 [tables of contents only] ; 6 ; 2000 >
+    au < released ; 2001 ; Appeal: Review of Current Law and Law Reform Volume 7 [tables of contents only] ; 7 ; 2001 >
+    au < released ; 2002 ; Appeal: Review of Current Law and Law Reform Volume 8 [tables of contents only] ; 8 ; 2002 >
+    au < released ; 2003 ; Appeal: Review of Current Law and Law Reform Volume 9 [tables of contents only] ; 9 ; 2003 >
+    au < released ; 2005 ; Appeal: Review of Current Law and Law Reform Volume 10 [tables of contents only] ; 10 ; 2005 >
+    au < released ; 2006 ; Appeal: Review of Current Law and Law Reform Volume 11 [tables of contents only] ; 11 ; 2006 >
+    au < released ; 2007 ; Appeal: Review of Current Law and Law Reform Volume 12 [tables of contents only] ; 12 ; 2007 >
+    au < released ; 2008 ; Appeal: Review of Current Law and Law Reform Volume 13 ; 13 ; 2008 >
+    au < released ; 2009 ; Appeal: Review of Current Law and Law Reform Volume 14 ; 14 ; 2009 >
+    au < released ; 2010 ; Appeal: Review of Current Law and Law Reform Volume 15 ; 15 ; 2010 >
+    au < released ; 2011 ; Appeal: Review of Current Law and Law Reform Volume 16 ; 16 ; 2011 >
 
   }
   
@@ -60,8 +59,8 @@
     
     param[journal_id] = arbutus
 
-    au < released ; 2010 ; The Arbutus Volume 1 ; 2010 >
-    au < released ; 2011 ; The Arbutus Volume 2 ; 2011 >
+    au < released ; 2010 ; The Arbutus Volume 1 ; 1 ; 2010 >
+    au < released ; 2011 ; The Arbutus Volume 2 ; 2 ; 2011 >
 
   }
   
@@ -76,10 +75,10 @@
     
     param[journal_id] = platforum
 
-    au < released ; 2002 ; Cultural Reflections Volume 4 ; 2002 >
-    au < released ; 2003 ; Cultural Reflections Volume 5 ; 2003 >
-    au < doesNotExist ; 2004 ; Cultural Reflections 2004 ; 2004 >
-    au < released ; 2005 ; Cultural Reflections Volume 6 ; 2005 >
+    au < released ; 2002 ; Cultural Reflections Volume 4 ; 4 ; 2002 >
+    au < released ; 2003 ; Cultural Reflections Volume 5 ; 5 ; 2003 >
+    au < doesNotExist ; 2004 ; Cultural Reflections 2004 ; ; 2004 >
+    au < released ; 2005 ; Cultural Reflections Volume 6 ; 6 ; 2005 >
 
   }
   
@@ -92,10 +91,10 @@
     
     param[journal_id] = ghr
 
-    au < exists ; 0 ; The Graduate History Review: Previous Conference Programs ; 0 >
-    au < released ; 2009 ; Preteritus: A Graduate History Journal Volume 1 ; 2009 >
-    au < released ; 2010 ; Preteritus: A Graduate History Journal Volume 2 ; 2010 >
-    au < released ; 2011 ; The Graduate History Review Volume 3 ; 2011 >
+    au < exists ; 0 ; The Graduate History Review: Previous Conference Programs ; 0 ; 0 >
+    au < released ; 2009 ; Preteritus: A Graduate History Journal Volume 1 ; 1 ; 2009 >
+    au < released ; 2010 ; Preteritus: A Graduate History Journal Volume 2 ; 2 ; 2010 >
+    au < released ; 2011 ; The Graduate History Review Volume 3 ; 3 ; 2011 >
 
   }
   
@@ -109,16 +108,16 @@
     
     param[journal_id] = illumine
 
-    au < released ; 2002 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 1 ; 2002 >
-    au < released ; 2003 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 2 ; 2003 >
-    au < released ; 2004 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 3 ; 2004 >
-    au < released ; 2005 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 4 ; 2005 >
-    au < released ; 2006 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 5 ; 2006 >
-    au < released ; 2007 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 6 ; 2007 >
-    au < released ; 2008 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 7 ; 2008 >
-    au < released ; 2009 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 8 ; 2009 >
-    au < released ; 2010 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 9 ; 2010 >
-    au < released ; 2011 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 10 ; 2011 >
+    au < released ; 2002 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 1 ; 1 ; 2002 >
+    au < released ; 2003 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 2 ; 2 ; 2003 >
+    au < released ; 2004 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 3 ; 3 ; 2004 >
+    au < released ; 2005 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 4 ; 4 ; 2005 >
+    au < released ; 2006 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 5 ; 5 ; 2006 >
+    au < released ; 2007 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 6 ; 6 ; 2007 >
+    au < released ; 2008 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 7 ; 7 ; 2008 >
+    au < released ; 2009 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 8 ; 8 ; 2009 >
+    au < released ; 2010 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 9 ; 9 ; 2010 >
+    au < released ; 2011 ; Illumine: Journal of the Centre for Studies in Religion and Society Volume 10 ; 10 ; 2011 >
 
   }
   
@@ -131,10 +130,10 @@
     
     param[journal_id] = ijcyfs
 
-    au < released ; 2009 ; International Journal of Child, Youth and Family Studies Volume 1 (2009) ; 2009 >
-    au < released ; 2010 ; International Journal of Child, Youth and Family Studies Volume 1 (2010) ; 2010 >
-    au < released ; 2011 ; International Journal of Child, Youth and Family Studies Volume 2 ; 2011 >
-    au < released ; 2012 ; International Journal of Child, Youth and Family Studies Volume 3 ; 2012 >
+    au < released ; 2009 ; International Journal of Child, Youth and Family Studies Volume 1 (2009) ; 1 ; 2009 >
+    au < released ; 2010 ; International Journal of Child, Youth and Family Studies Volume 1 (2010) ; 1 ; 2010 >
+    au < released ; 2011 ; International Journal of Child, Youth and Family Studies Volume 2 ; 2 ; 2011 >
+    au < released ; 2012 ; International Journal of Child, Youth and Family Studies Volume 3 ; 3 ; 2012 >
 
   }
   
@@ -146,14 +145,14 @@
     
     param[journal_id] = me
 
-    au < released ; 2004 ; Musicological Explorations Volume 5 ; 2004 >
-    au < released ; 2005 ; Musicological Explorations Volume 6 ; 2005 >
-    au < released ; 2006 ; Musicological Explorations Volume 7 ; 2006 >
-    au < released ; 2007 ; Musicological Explorations Volume 8 ; 2007 >
-    au < released ; 2008 ; Musicological Explorations Volume 9 ; 2008 >
-    au < released ; 2009 ; Musicological Explorations Volume 10 ; 2009 >
-    au < released ; 2010 ; Musicological Explorations Volume 11 ; 2010 >
-    au < released ; 2011 ; Musicological Explorations Volume 12 ; 2011 >
+    au < released ; 2004 ; Musicological Explorations Volume 5 ; 5 ; 2004 >
+    au < released ; 2005 ; Musicological Explorations Volume 6 ; 6 ; 2005 >
+    au < released ; 2006 ; Musicological Explorations Volume 7 ; 7 ; 2006 >
+    au < released ; 2007 ; Musicological Explorations Volume 8 ; 8 ; 2007 >
+    au < released ; 2008 ; Musicological Explorations Volume 9 ; 9 ; 2008 >
+    au < released ; 2009 ; Musicological Explorations Volume 10 ; 10 ; 2009 >
+    au < released ; 2010 ; Musicological Explorations Volume 11 ; 11 ; 2010 >
+    au < released ; 2011 ; Musicological Explorations Volume 12 ; 12 ; 2011 >
 
   }
   
@@ -166,8 +165,8 @@
     param[journal_id] = inke
     comment[inquiry] = the 2010 AU seems to have disappeared
 
-    au < released ; 2009 ; New Knowledge Environments Volume 1 (2009) ; 2009 >
-    au < released ; 2010 ; New Knowledge Environments Volume 1 (2010) ; 2010 >
+    au < released ; 2009 ; New Knowledge Environments Volume 1 (2009) ; 1 (2009) ; 2009 >
+    au < released ; 2010 ; New Knowledge Environments Volume 1 (2010) ; 1 (2010) ; 2010 >
 
   }
   
@@ -179,12 +178,12 @@
     
     param[journal_id] = onpolitics
 
-    au < released ; 2005 ; On Politics 2005 ; 2005 >
-    au < released ; 2006 ; On Politics 2006 ; 2006 >
-    au < released ; 2007 ; On Politics 2007 ; 2007 >
-    au < doesNotExist ; 2008 ; On Politics 2008 ; 2008 >
-    au < released ; 2009 ; On Politics 2009 ; 2009 >
-    au < released ; 2010 ; On Politics 2010 ; 2010 >
+    au < released ; 2005 ; On Politics 2005 ; 2005 ; 2005 >
+    au < released ; 2006 ; On Politics 2006 ; 2006 ; 2006 >
+    au < released ; 2007 ; On Politics 2007 ; 2007 ; 2007 >
+    au < doesNotExist ; 2008 ; On Politics 2008 ; 2008 ; 2008 >
+    au < released ; 2009 ; On Politics 2009 ; 2009 ; 2009 >
+    au < released ; 2010 ; On Politics 2010 ; 2010 ; 2010 >
 
   }
   
@@ -197,7 +196,7 @@
     
     param[journal_id] = peninsula
 
-    au < released ; 2011 ; Peninsula: A Journal of Relational Politics Volume 1 ; 2011 >
+    au < released ; 2011 ; Peninsula: A Journal of Relational Politics Volume 1 ; 1 ; 2011 >
 
   }
   
@@ -210,12 +209,12 @@
     
     param[journal_id] = pir
 
-    au < released ; 2007 ; Philosophy in Review Volume 27 ; 2007 >
-    au < released ; 2008 ; Philosophy in Review Volume 28 ; 2008 >
-    au < released ; 2009 ; Philosophy in Review Volume 29 ; 2009 >
-    au < released ; 2010 ; Philosophy in Review Volume 30 ; 2010 >
-    au < released ; 2011 ; Philosophy in Review Volume 31 ; 2011 >
-    au < released ; 2012 ; Philosophy in Review Volume 32 ; 2012 >
+    au < released ; 2007 ; Philosophy in Review Volume 27 ; 27 ; 2007 >
+    au < released ; 2008 ; Philosophy in Review Volume 28 ; 28 ; 2008 >
+    au < released ; 2009 ; Philosophy in Review Volume 29 ; 29 ; 2009 >
+    au < released ; 2010 ; Philosophy in Review Volume 30 ; 30 ; 2010 >
+    au < released ; 2011 ; Philosophy in Review Volume 31 ; 31 ; 2011 >
+    au < released ; 2012 ; Philosophy in Review Volume 32 ; 32 ; 2012 >
 
   }
   
@@ -231,10 +230,10 @@
     
     param[journal_id] = platforum
 
-    au < released ; 2008 ; PlatForum Volume 9 ; 2008 >
-    au < released ; 2009 ; PlatForum Volume 10 ; 2009 >
-    au < released ; 2010 ; PlatForum Volume 11 ; 2010 >
-    au < released ; 2011 ; PlatForum Volume 12 ; 2011 >
+    au < released ; 2008 ; PlatForum Volume 9 ; 9 ; 2008 >
+    au < released ; 2009 ; PlatForum Volume 10 ;10 ; 2009 >
+    au < released ; 2010 ; PlatForum Volume 11 ;11 ; 2010 >
+    au < released ; 2011 ; PlatForum Volume 12 ;12 ; 2011 >
 
   }
   
@@ -247,7 +246,7 @@
     param[journal_id] = preteritus
     comment[renamed] = Graduate History Journal
 
-    au < superseded ; 2010 ; Preteritus Volume 1 [superseded] ; 2010 >
+    au < superseded ; 2010 ; Preteritus Volume 1 [superseded] ; 1 ; 2010 >
 
   }
   
@@ -259,26 +258,26 @@
     
     param[journal_id] = wplc
 
-    au < released ; 1981 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 1 ; 1981 >
-    au < released ; 1982 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 2 ; 1982 >
-    au < released ; 1983 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 3 ; 1983 >
-    au < released ; 1984 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 4 ; 1984 >
-    au < released ; 1986 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 5 ; 1986 >
-    au < released ; 1987 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 6 ; 1987 >
-    au < released ; 1988 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 7 ; 1988 >
-    au < released ; 1989 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 8 ; 1989 >
-    au < released ; 1990 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 9 ; 1990 >
-    au < released ; 1991 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 10 ; 1991 >
-    au < released ; 1992 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 11 ; 1992 >
-    au < released ; 1994 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 12 ; 1994 >
-    au < released ; 1996 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 13 ; 1996 >
-    au < released ; 1997 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 14 ; 1997 >
-    au < released ; 2002 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 15-16 ; 2002 >
-    au < released ; 2003 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 17 ; 2003 >
-    au < released ; 2004 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 18 ; 2004 >
-    au < released ; 2009 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 19 ; 2009 >
-    au < released ; 2010 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 20 ; 2010 >
-    au < released ; 2011 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 21 ; 2011 >
+    au < released ; 1981 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 1 ; 1 ; 1981 >
+    au < released ; 1982 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 2 ; 2 ; 1982 >
+    au < released ; 1983 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 3 ; 3 ; 1983 >
+    au < released ; 1984 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 4 ; 4 ; 1984 >
+    au < released ; 1986 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 5 ; 5 ; 1986 >
+    au < released ; 1987 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 6 ; 6 ; 1987 >
+    au < released ; 1988 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 7 ; 7 ; 1988 >
+    au < released ; 1989 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 8 ; 8 ; 1989 >
+    au < released ; 1990 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 9 ; 9 ; 1990 >
+    au < released ; 1991 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 10 ; 10 ; 1991 >
+    au < released ; 1992 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 11 ; 11 ; 1992 >
+    au < released ; 1994 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 12 ; 12 ; 1994 >
+    au < released ; 1996 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 13 ; 13 ; 1996 >
+    au < released ; 1997 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 14 ; 14 ; 1997 >
+    au < released ; 2002 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 15-16 ; 15-16 ; 2002 >
+    au < released ; 2003 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 17 ; 17 ; 2003 >
+    au < released ; 2004 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 18 ; 18 ; 2004 >
+    au < released ; 2009 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 19 ; 19 ; 2009 >
+    au < released ; 2010 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 20 ; 20 ; 2010 >
+    au < released ; 2011 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 21 ; 21 ; 2011 >
 
   }
   
