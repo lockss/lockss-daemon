@@ -13,10 +13,10 @@
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://ojs.lib.umanitoba.ca/
     param[journal_id] = prairie_fire
-    implicit < status ; year ; name ; param[year] >
+    implicit < status ; year ; name ; volume ; param[year] >
 
-    au < released ; 2010 ; Prairie Fire Review of Books Volume 10 ; 2010 >
-    au < released ; 2011 ; Prairie Fire Review of Books Volume 11 ; 2011 >
+    au < released ; 2010 ; Prairie Fire Review of Books Volume 10 ; 10 ; 2010 >
+    au < released ; 2011 ; Prairie Fire Review of Books Volume 11 ; 11 ; 2011 >
 
   }
   

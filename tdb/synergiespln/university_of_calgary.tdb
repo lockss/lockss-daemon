@@ -5,7 +5,7 @@
   >
 
   rights = openaccess
-  implicit < status ; year ; name ; param[year] >
+  implicit < status ; year ; name ; volume ; param[year] >
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
   
   {
@@ -18,18 +18,18 @@
     param[base_url] = http://136.159.25.41/ojstest/
     param[journal_id] = arctic
 
-    au < released ; 1948 ; Arctic (Disaster Recovery Test) Volume 1 ; 1948 >
-    au < released ; 1949 ; Arctic (Disaster Recovery Test) Volume 2 ; 1949 >
-    au < released ; 1950 ; Arctic (Disaster Recovery Test) Volume 3 ; 1950 >
+    au < released ; 1948 ; Arctic (Disaster Recovery Test) Volume 1 ; 1 ; 1948 >
+    au < released ; 1949 ; Arctic (Disaster Recovery Test) Volume 2 ; 2 ; 1949 >
+    au < released ; 1950 ; Arctic (Disaster Recovery Test) Volume 3 ; 3 ; 1950 >
     
-    au < released ; 1954 ; Arctic (Disaster Recovery Test) Volume 7 ; 1954 >
+    au < released ; 1954 ; Arctic (Disaster Recovery Test) Volume 7 ; 7 ; 1954 >
     
-    au < released ; 1958 ; Arctic (Disaster Recovery Test) Volume 11 ; 1958 >
-    
-    au < released ; 1989 ; Arctic (Disaster Recovery Test) Volume 42 ; 1989 >
-    
-    au < released ; 2003 ; Arctic (Disaster Recovery Test) Volume 56 ; 2003 >
-    au < released ; 2004 ; Arctic (Disaster Recovery Test) Volume 57 ; 2004 >
+    au < released ; 1958 ; Arctic (Disaster Recovery Test) Volume 11 ; 11 ; 1958 >
+
+    au < released ; 1989 ; Arctic (Disaster Recovery Test) Volume 42 ; 42 ; 1989 >
+
+    au < released ; 2003 ; Arctic (Disaster Recovery Test) Volume 56 ; 56 ; 2003 >
+    au < released ; 2004 ; Arctic (Disaster Recovery Test) Volume 57 ; 57 ; 2004 >
 
   }
   
@@ -43,46 +43,46 @@
     param[base_url] = http://ariel.synergiesprairies.ca/ariel/
     param[journal_id] = ariel
 
-    au < released ; 1970 ; ARIEL: A Review of International English Literature Volume 1 ; 1970 >
-    au < released ; 1971 ; ARIEL: A Review of International English Literature Volume 2 ; 1971 >
-    au < released ; 1972 ; ARIEL: A Review of International English Literature Volume 3 ; 1972 >
-    au < released ; 1973 ; ARIEL: A Review of International English Literature Volume 4 ; 1973 >
-    au < released ; 1974 ; ARIEL: A Review of International English Literature Volume 5 ; 1974 >
-    au < released ; 1975 ; ARIEL: A Review of International English Literature Volume 6 ; 1975 >
-    au < released ; 1976 ; ARIEL: A Review of International English Literature Volume 7 ; 1976 >
-    au < released ; 1977 ; ARIEL: A Review of International English Literature Volume 8 ; 1977 >
-    au < released ; 1978 ; ARIEL: A Review of International English Literature Volume 9 ; 1978 >
-    au < released ; 1979 ; ARIEL: A Review of International English Literature Volume 10 ; 1979 >
-    au < released ; 1980 ; ARIEL: A Review of International English Literature Volume 11 ; 1980 >
-    au < released ; 1981 ; ARIEL: A Review of International English Literature Volume 12 ; 1981 >
-    au < released ; 1982 ; ARIEL: A Review of International English Literature Volume 13 ; 1982 >
-    au < released ; 1983 ; ARIEL: A Review of International English Literature Volume 14 ; 1983 >
-    au < released ; 1984 ; ARIEL: A Review of International English Literature Volume 15 ; 1984 >
-    au < released ; 1985 ; ARIEL: A Review of International English Literature Volume 16 ; 1985 >
-    au < released ; 1986 ; ARIEL: A Review of International English Literature Volume 17 ; 1986 >
-    au < released ; 1987 ; ARIEL: A Review of International English Literature Volume 18 ; 1987 >
-    au < released ; 1988 ; ARIEL: A Review of International English Literature Volume 19 ; 1988 >
-    au < released ; 1989 ; ARIEL: A Review of International English Literature Volume 20 ; 1989 >
-    au < released ; 1990 ; ARIEL: A Review of International English Literature Volume 21 ; 1990 >
-    au < released ; 1991 ; ARIEL: A Review of International English Literature Volume 22 ; 1991 >
-    au < released ; 1992 ; ARIEL: A Review of International English Literature Volume 23 ; 1992 >
-    au < released ; 1993 ; ARIEL: A Review of International English Literature Volume 24 ; 1993 >
-    au < released ; 1994 ; ARIEL: A Review of International English Literature Volume 25 ; 1994 >
-    au < released ; 1995 ; ARIEL: A Review of International English Literature Volume 26 ; 1995 >
-    au < released ; 1996 ; ARIEL: A Review of International English Literature Volume 27 ; 1996 >
-    au < released ; 1997 ; ARIEL: A Review of International English Literature Volume 28 ; 1997 >
-    au < released ; 1998 ; ARIEL: A Review of International English Literature Volume 29 ; 1998 >
-    au < released ; 1999 ; ARIEL: A Review of International English Literature Volume 30 ; 1999 >
-    au < released ; 2000 ; ARIEL: A Review of International English Literature Volume 31 ; 2000 >
-    au < released ; 2001 ; ARIEL: A Review of International English Literature Volume 32 ; 2001 >
-    au < released ; 2002 ; ARIEL: A Review of International English Literature Volume 33 ; 2002 >
-    au < released ; 2003 ; ARIEL: A Review of International English Literature Volume 34 ; 2003 >
-    au < released ; 2004 ; ARIEL: A Review of International English Literature Volume 35 ; 2004 >
-    au < released ; 2005 ; ARIEL: A Review of International English Literature Volume 36 ; 2005 >
-    au < released ; 2006 ; ARIEL: A Review of International English Literature Volume 37 ; 2006 >
-    au < released ; 2007 ; ARIEL: A Review of International English Literature Volume 38 ; 2007 >
-    au < doNotProcess ; 2008 ; ARIEL: A Review of International English Literature Volume 39 ; 2008 >
-    au < doNotProcess ; 2009 ; ARIEL: A Review of International English Literature Volume 40 ; 2009 >
+    au < released ; 1970 ; ARIEL: A Review of International English Literature Volume 1 ; 1 ; 1970 >
+    au < released ; 1971 ; ARIEL: A Review of International English Literature Volume 2 ; 2 ; 1971 >
+    au < released ; 1972 ; ARIEL: A Review of International English Literature Volume 3 ; 3 ; 1972 >
+    au < released ; 1973 ; ARIEL: A Review of International English Literature Volume 4 ; 4 ; 1973 >
+    au < released ; 1974 ; ARIEL: A Review of International English Literature Volume 5 ; 5 ; 1974 >
+    au < released ; 1975 ; ARIEL: A Review of International English Literature Volume 6 ; 6 ; 1975 >
+    au < released ; 1976 ; ARIEL: A Review of International English Literature Volume 7 ; 7 ; 1976 >
+    au < released ; 1977 ; ARIEL: A Review of International English Literature Volume 8 ; 8 ; 1977 >
+    au < released ; 1978 ; ARIEL: A Review of International English Literature Volume 9 ; 9 ; 1978 >
+    au < released ; 1979 ; ARIEL: A Review of International English Literature Volume 10 ; 10 ; 1979 >
+    au < released ; 1980 ; ARIEL: A Review of International English Literature Volume 11 ; 11 ; 1980 >
+    au < released ; 1981 ; ARIEL: A Review of International English Literature Volume 12 ; 12 ; 1981 >
+    au < released ; 1982 ; ARIEL: A Review of International English Literature Volume 13 ; 13 ; 1982 >
+    au < released ; 1983 ; ARIEL: A Review of International English Literature Volume 14 ; 14 ; 1983 >
+    au < released ; 1984 ; ARIEL: A Review of International English Literature Volume 15 ; 15 ; 1984 >
+    au < released ; 1985 ; ARIEL: A Review of International English Literature Volume 16 ; 16 ; 1985 >
+    au < released ; 1986 ; ARIEL: A Review of International English Literature Volume 17 ; 17 ; 1986 >
+    au < released ; 1987 ; ARIEL: A Review of International English Literature Volume 18 ; 18 ; 1987 >
+    au < released ; 1988 ; ARIEL: A Review of International English Literature Volume 19 ; 19 ; 1988 >
+    au < released ; 1989 ; ARIEL: A Review of International English Literature Volume 20 ; 20 ; 1989 >
+    au < released ; 1990 ; ARIEL: A Review of International English Literature Volume 21 ; 21 ; 1990 >
+    au < released ; 1991 ; ARIEL: A Review of International English Literature Volume 22 ; 22 ; 1991 >
+    au < released ; 1992 ; ARIEL: A Review of International English Literature Volume 23 ; 23 ; 1992 >
+    au < released ; 1993 ; ARIEL: A Review of International English Literature Volume 24 ; 24 ; 1993 >
+    au < released ; 1994 ; ARIEL: A Review of International English Literature Volume 25 ; 25 ; 1994 >
+    au < released ; 1995 ; ARIEL: A Review of International English Literature Volume 26 ; 26 ; 1995 >
+    au < released ; 1996 ; ARIEL: A Review of International English Literature Volume 27 ; 27 ; 1996 >
+    au < released ; 1997 ; ARIEL: A Review of International English Literature Volume 28 ; 28 ; 1997 >
+    au < released ; 1998 ; ARIEL: A Review of International English Literature Volume 29 ; 29 ; 1998 >
+    au < released ; 1999 ; ARIEL: A Review of International English Literature Volume 30 ; 30 ; 1999 >
+    au < released ; 2000 ; ARIEL: A Review of International English Literature Volume 31 ; 31 ; 2000 >
+    au < released ; 2001 ; ARIEL: A Review of International English Literature Volume 32 ; 32 ; 2001 >
+    au < released ; 2002 ; ARIEL: A Review of International English Literature Volume 33 ; 33 ; 2002 >
+    au < released ; 2003 ; ARIEL: A Review of International English Literature Volume 34 ; 34 ; 2003 >
+    au < released ; 2004 ; ARIEL: A Review of International English Literature Volume 35 ; 35 ; 2004 >
+    au < released ; 2005 ; ARIEL: A Review of International English Literature Volume 36 ; 36 ; 2005 >
+    au < released ; 2006 ; ARIEL: A Review of International English Literature Volume 37 ; 37 ; 2006 >
+    au < released ; 2007 ; ARIEL: A Review of International English Literature Volume 38 ; 38 ; 2007 >
+    au < doNotProcess ; 2008 ; ARIEL: A Review of International English Literature Volume 39 ; 39 ; 2008 >
+    au < doNotProcess ; 2009 ; ARIEL: A Review of International English Literature Volume 40 ; 40 ; 2009 >
 
   }
   
@@ -96,25 +96,25 @@
     param[base_url] = http://cjc-rcc.ucalgary.ca/cjc/
     param[journal_id] = rcc
 
-    au < released ; 1992 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 26 ; 1992 >
-    au < released ; 1993 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 27 ; 1993 >
-    au < released ; 1994 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 28 ; 1994 >
-    au < released ; 1995 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 29 ; 1995 >
-    au < released ; 1996 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 30 ; 1996 >
-    au < released ; 1997 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 31 ; 1997 >
-    au < released ; 1998 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 32 ; 1998 >
-    au < released ; 1999 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 33 ; 1999 >
-    au < released ; 2000 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 34 ; 2000 >
-    au < released ; 2001 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 35 ; 2001 >
-    au < released ; 2002 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 36 ; 2002 >
-    au < released ; 2003 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 37 ; 2003 >
-    au < released ; 2004 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 38 ; 2004 >
-    au < released ; 2005 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 39 ; 2005 >
-    au < released ; 2006 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 40 ; 2006 >
-    au < released ; 2007 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 41 ; 2007 >
-    au < released ; 2008 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 42 ; 2008 >
-    au < doNotProcess ; 2009 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 43 ; 2009 >
-    au < doNotProcess ; 2010 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 44 ; 2010 >
+    au < released ; 1992 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 26 ; 26 ; 1992 >
+    au < released ; 1993 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 27 ; 27 ; 1993 >
+    au < released ; 1994 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 28 ; 28 ; 1994 >
+    au < released ; 1995 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 29 ; 29 ; 1995 >
+    au < released ; 1996 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 30 ; 30 ; 1996 >
+    au < released ; 1997 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 31 ; 31 ; 1997 >
+    au < released ; 1998 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 32 ; 32 ; 1998 >
+    au < released ; 1999 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 33 ; 33 ; 1999 >
+    au < released ; 2000 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 34 ; 34 ; 2000 >
+    au < released ; 2001 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 35 ; 35 ; 2001 >
+    au < released ; 2002 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 36 ; 36 ; 2002 >
+    au < released ; 2003 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 37 ; 37 ; 2003 >
+    au < released ; 2004 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 38 ; 38 ; 2004 >
+    au < released ; 2005 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 39 ; 39 ; 2005 >
+    au < released ; 2006 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 40 ; 40 ; 2006 >
+    au < released ; 2007 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 41 ; 41 ; 2007 >
+    au < released ; 2008 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 42 ; 42 ; 2008 >
+    au < doNotProcess ; 2009 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 43 ; 43 ; 2009 >
+    au < doNotProcess ; 2010 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 44 ; 44 ; 2010 >
 
   }
   
@@ -128,7 +128,7 @@
     param[base_url] = http://www.cmej.ca/
     param[journal_id] = cmej
 
-    au < released ; 2010 ; Canadian Medical Education Journal Volume 1 ; 2010 >
+    au < released ; 2010 ; Canadian Medical Education Journal Volume 1 ; 1 ; 2010 >
 
   }
   
@@ -142,9 +142,9 @@
     param[base_url] = http://currents.synergiesprairies.ca/currents/
     param[journal_id] = currents
 
-    au < released ; 2008 ; Currents: New Scholarship in the Human Services Volume 7 ; 2008 >
-    au < released ; 2009 ; Currents: New Scholarship in the Human Services Volume 8 ; 2009 >
-    au < released ; 2010 ; Currents: New Scholarship in the Human Services Volume 9 ; 2010 >
+    au < released ; 2008 ; Currents: New Scholarship in the Human Services Volume 7 ; 7 ; 2008 >
+    au < released ; 2009 ; Currents: New Scholarship in the Human Services Volume 8 ; 8 ; 2009 >
+    au < released ; 2010 ; Currents: New Scholarship in the Human Services Volume 9 ; 9 ; 2010 >
 
   }
   
@@ -158,19 +158,19 @@
     param[base_url] = http://iejll.synergiesprairies.ca/iejll/
     param[journal_id] = iejll
 
-    au < released ; 1997 ; International Electronic Journal for Leadership in Learning Volume 1 ; 1997 >
-    au < released ; 1998 ; International Electronic Journal for Leadership in Learning Volume 2 ; 1998 >
-    au < released ; 1999 ; International Electronic Journal for Leadership in Learning Volume 3 ; 1999 >
-    au < released ; 2000 ; International Electronic Journal for Leadership in Learning Volume 4 ; 2000 >
-    au < released ; 2001 ; International Electronic Journal for Leadership in Learning Volume 5 ; 2001 >
-    au < released ; 2002 ; International Electronic Journal for Leadership in Learning Volume 6 ; 2002 >
-    au < released ; 2003 ; International Electronic Journal for Leadership in Learning Volume 7 ; 2003 >
-    au < released ; 2004 ; International Electronic Journal for Leadership in Learning Volume 8 ; 2004 >
-    au < released ; 2005 ; International Electronic Journal for Leadership in Learning Volume 9 ; 2005 >
-    au < released ; 2006 ; International Electronic Journal for Leadership in Learning Volume 10 ; 2006 >
-    au < released ; 2007 ; International Electronic Journal for Leadership in Learning Volume 11 ; 2007 >
-    au < released ; 2008 ; International Electronic Journal for Leadership in Learning Volume 12 ; 2008 >
-    au < released ; 2009 ; International Electronic Journal for Leadership in Learning Volume 13 ; 2009 >
+    au < released ; 1997 ; International Electronic Journal for Leadership in Learning Volume 1 ; 1 ; 1997 >
+    au < released ; 1998 ; International Electronic Journal for Leadership in Learning Volume 2 ; 2 ; 1998 >
+    au < released ; 1999 ; International Electronic Journal for Leadership in Learning Volume 3 ; 3 ; 1999 >
+    au < released ; 2000 ; International Electronic Journal for Leadership in Learning Volume 4 ; 4 ; 2000 >
+    au < released ; 2001 ; International Electronic Journal for Leadership in Learning Volume 5 ; 5 ; 2001 >
+    au < released ; 2002 ; International Electronic Journal for Leadership in Learning Volume 6 ; 6 ; 2002 >
+    au < released ; 2003 ; International Electronic Journal for Leadership in Learning Volume 7 ; 7 ; 2003 >
+    au < released ; 2004 ; International Electronic Journal for Leadership in Learning Volume 8 ; 8 ; 2004 >
+    au < released ; 2005 ; International Electronic Journal for Leadership in Learning Volume 9 ; 9 ; 2005 >
+    au < released ; 2006 ; International Electronic Journal for Leadership in Learning Volume 10 ; 10 ; 2006 >
+    au < released ; 2007 ; International Electronic Journal for Leadership in Learning Volume 11 ; 11 ; 2007 >
+    au < released ; 2008 ; International Electronic Journal for Leadership in Learning Volume 12 ; 12 ; 2008 >
+    au < released ; 2009 ; International Electronic Journal for Leadership in Learning Volume 13 ; 13 ; 2009 >
 
   }
   
@@ -184,19 +184,19 @@
     param[base_url] = http://www.jmss.org/jmss/
     param[journal_id] = jmss
 
-    au < released ; 1998 ; Journal of Military and Strategic Studies Volume 1 ; 1998 >
-    au < released ; 1999 ; Journal of Military and Strategic Studies Volume 2 ; 1999 >
-    au < released ; 2000 ; Journal of Military and Strategic Studies Volume 3 ; 2000 >
-    au < released ; 2001 ; Journal of Military and Strategic Studies Volume 4 ; 2001 >
-    au < released ; 2002 ; Journal of Military and Strategic Studies Volume 5 ; 2002 >
-    au < released ; 2003 ; Journal of Military and Strategic Studies Volume 6 (2003) ; 2003 >
-    au < released ; 2004 ; Journal of Military and Strategic Studies Volume 6-7 (2004) ; 2004 >
-    au < released ; 2005 ; Journal of Military and Strategic Studies Volume 7-8 (2005) ; 2005 >
-    au < released ; 2006 ; Journal of Military and Strategic Studies Volume 8-9 (2006) ; 2006 >
-    au < released ; 2007 ; Journal of Military and Strategic Studies Volume 9-10 (2007) ; 2007 >
-    au < released ; 2008 ; Journal of Military and Strategic Studies Volume 10 (2008) ; 2008 >
-    au < released ; 2009 ; Journal of Military and Strategic Studies Volume 11-12 (2009) ; 2009 >
-    au < released ; 2010 ; Journal of Military and Strategic Studies Volume 12 (2010) ; 2010 >
+    au < released ; 1998 ; Journal of Military and Strategic Studies Volume 1 ; 1 ; 1998 >
+    au < released ; 1999 ; Journal of Military and Strategic Studies Volume 2 ; 2 ; 1999 >
+    au < released ; 2000 ; Journal of Military and Strategic Studies Volume 3 ; 3 ; 2000 >
+    au < released ; 2001 ; Journal of Military and Strategic Studies Volume 4 ; 4 ; 2001 >
+    au < released ; 2002 ; Journal of Military and Strategic Studies Volume 5 ; 5 ; 2002 >
+    au < released ; 2003 ; Journal of Military and Strategic Studies Volume 6 (2003) ; 6 ; 2003 >
+    au < released ; 2004 ; Journal of Military and Strategic Studies Volume 6-7 (2004) ; 6-7 ; 2004 >
+    au < released ; 2005 ; Journal of Military and Strategic Studies Volume 7-8 (2005) ; 7-8 ; 2005 >
+    au < released ; 2006 ; Journal of Military and Strategic Studies Volume 8-9 (2006) ; 8-9 ; 2006 >
+    au < released ; 2007 ; Journal of Military and Strategic Studies Volume 9-10 (2007) ; 9-10 ; 2007 >
+    au < released ; 2008 ; Journal of Military and Strategic Studies Volume 10 (2008) ; 10 ; 2008 >
+    au < released ; 2009 ; Journal of Military and Strategic Studies Volume 11-12 (2009) ; 11-12 ; 2009 >
+    au < released ; 2010 ; Journal of Military and Strategic Studies Volume 12 (2010) ; 12 ; 2010 >
 
   }
 
@@ -209,8 +209,8 @@
     param[base_url] = http://136.159.25.41/ojstest/
     param[journal_id] = jms
 
-    au < released ; 2009 ; Journal of Modern Science (Proxy Test) 2009 ; 2009 >
-    au < released ; 2010 ; Journal of Modern Science (Proxy Test) 2010 ; 2010 >
+    au < released ; 2009 ; Journal of Modern Science (Proxy Test) 2009 ; 2009 ; 2009 >
+    au < released ; 2010 ; Journal of Modern Science (Proxy Test) 2010 ; 2010 ; 2010 >
 
   }
   
