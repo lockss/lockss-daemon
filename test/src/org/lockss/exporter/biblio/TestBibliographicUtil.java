@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicUtil.java,v 1.4 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id: TestBibliographicUtil.java,v 1.5 2012-10-08 23:20:11 pgust Exp $
  */
 
 /*
@@ -462,7 +462,7 @@ public class TestBibliographicUtil extends LockssTestCase {
     // These are considered to be non-ranges (single ids) with numerical and
     // non-numerical parts of different lengths
     assertFalse(isRange("i-ion"));
-    assertFalse(isRange("i-ixi"));
+    assertTrue(isRange("i-ixi"));
     // Non-normalised Roman numerical parts are not considered numbers
     // so this is interpreted as a topical range
     assertTrue(isRange("vin-viv"));
