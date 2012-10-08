@@ -6,7 +6,6 @@
     info[tester] = 7
   >
 
-  attr[contract] = 2009
   plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
   param[base_url] = http://liverpool.metapress.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] >

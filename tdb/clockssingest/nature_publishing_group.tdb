@@ -6,7 +6,6 @@
     info[tester] = 7
   >
 
-  attr[contract] = 2008
   plugin = org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin
   param[base_url] = http://www.nature.com/
   implicit < status ; status2 ; year ; name ; param[year] ; param[volume_name] >
