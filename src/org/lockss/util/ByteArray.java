@@ -1,5 +1,5 @@
 /*
- * $Id: ByteArray.java,v 1.13 2012-03-07 20:37:49 barry409 Exp $
+ * $Id: ByteArray.java,v 1.14 2012-10-08 22:06:16 barry409 Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.util;
 
 import java.io.*;
 import java.math.BigInteger;
+import java.util.Comparator;
 
 import org.mortbay.util.*;
 
@@ -45,6 +46,25 @@ public class ByteArray {
 
   private static final char[] HEX_CHARS = {
     '0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'
+  };
+
+  /**
+   * A Comparator for lexicographical comparison of arrays of bytes,
+   * with each byte considered unsigned.
+   * The null byte array is less than any non-null byte array.
+   * @see #lexicographicalCompare
+   */
+  public static final Comparator<byte[]> lexicographicalComparator =
+    new Comparator<byte[]>() {
+    public int compare(byte[] o1, byte[] o2) {
+      if (o1 == o2) return 0;
+      if (o1 == null) {
+	return -1;
+      } else if (o2 == null) {
+	return 1;
+      }
+      return lexicographicalCompare(o1, o2);
+    }
   };
 
   /**
@@ -191,13 +211,15 @@ public class ByteArray {
   }
 
   /**
-   * Compare the two byte arrays lexicographically.
+   * Compare the two byte arrays lexicographically, with each byte
+   * considered unsigned.
    *
    * @param left The "left" array.
    * @param right The "right" array.
    * @return a negative integer, zero, or a positive integer as the
    * first argument is less than, equal to, or greater than the
    * second.
+   * @throws NullPointerException if either array is null.
    */
   public static int lexicographicalCompare(byte[] left, byte[] right) {
     for (int i = 0; i < left.length && i < right.length; i++) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestByteArray.java,v 1.8 2012-03-07 20:37:49 barry409 Exp $
+ * $Id: TestByteArray.java,v 1.9 2012-10-08 22:06:16 barry409 Exp $
  */
 
 /*
@@ -220,6 +220,46 @@ public class TestByteArray extends LockssTestCase {
     assertTrue(ByteArray.lexicographicalCompare(b2, b3) < 0);
     assertTrue(ByteArray.lexicographicalCompare(b2, b1) > 0);
     assertTrue(ByteArray.lexicographicalCompare(b3, b2) > 0);
+  }
+
+  public void testLexicographicalComparatorNull() {
+    byte b[] = {1, 2};
+    assertEquals(0, ByteArray.lexicographicalComparator.compare(null, null));
+    assertTrue(ByteArray.lexicographicalComparator.compare(b, null) > 0);
+    assertTrue(ByteArray.lexicographicalComparator.compare(null, b) < 0);
+  }
+
+  public void testLexicographicalComparatorEmpty() {
+    byte empty[] = {};
+    byte some[] = {1};
+    assertTrue(ByteArray.lexicographicalComparator.compare(empty, some) < 0);
+    assertTrue(ByteArray.lexicographicalComparator.compare(some, empty) > 0);
+  }
+
+  public void testLexicographicalComparatorEqual() {
+    byte empty1[] = {};
+    byte empty2[] = {};
+    byte some1[] = {1, 1, 1};
+    byte some2[] = {1, 1, 1};
+    assertEquals(0, ByteArray.lexicographicalComparator.compare(empty1, empty2));
+    assertEquals(0, ByteArray.lexicographicalComparator.compare(some1, some2));
+  }
+
+  public void testLexicographicalComparatorDiffLengths() {
+    byte some[] = {1};
+    byte more[] = {1, 1, 1};
+    assertTrue(ByteArray.lexicographicalComparator.compare(some, more) < 0);
+    assertTrue(ByteArray.lexicographicalComparator.compare(more, some) > 0);
+  }
+
+  public void testLexicographicalComparatorDiffValues() {
+    byte b1[] = {1};
+    byte b2[] = {5};
+    byte b3[] = {(byte)0xff};
+    assertTrue(ByteArray.lexicographicalComparator.compare(b1, b2) < 0);
+    assertTrue(ByteArray.lexicographicalComparator.compare(b2, b3) < 0);
+    assertTrue(ByteArray.lexicographicalComparator.compare(b2, b1) > 0);
+    assertTrue(ByteArray.lexicographicalComparator.compare(b3, b2) > 0);
   }
 
 }
