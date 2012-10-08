@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.34 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.34.2.1 2012-10-08 22:24:53 pgust Exp $
  */
 
 /*
@@ -1065,27 +1065,22 @@ public class KbartConverter {
     String lastVol = range.last.getEndVolume();
     // If either of the volumes is null, we can't verify; return true
     if (firstVol==null || lastVol==null) return true;
-    // Check if the first vol is greater than last (integer)
-    if (NumberUtil.isInteger(firstVol) && NumberUtil.isInteger(lastVol)) {
-      return Integer.parseInt(firstVol) <= Integer.parseInt(lastVol);
-
-    }
-    // Check if the first vol is greater than last (normalised Roman)
-    else if (NumberUtil.isRomanNumber(firstVol) && NumberUtil.isRomanNumber(lastVol)) {
-      return NumberUtil.parseRomanNumber(firstVol, true) <= NumberUtil.parseRomanNumber(lastVol, true);
+    // Check if the first vol is greater than last as integer values
+    try {
+      return NumberUtil.parseInt(firstVol) <= NumberUtil.parseInt(lastVol);
+    } catch (NumberFormatException ex) {
+      // firstVol or lastVol is not a Roman or Arabic number
     }
     // If the identifiers appear not to differ in format, compare the
     // normalised strings. Note: alternatively we could try something like
     // BibliographicOrderScorer.areVolumesIncreasing() which is expensive and
     // therefore not public.
-    else if (!BibliographicUtil.changeOfFormats(firstVol, lastVol)) {
+    if (!BibliographicUtil.changeOfFormats(firstVol, lastVol)) {
       return BibliographicUtil.normaliseIdentifier(firstVol).compareTo(
           BibliographicUtil.normaliseIdentifier(lastVol)) <= 0;
     }
     // Otherwise compare first and last vol alphabetically
-    else {
-      return firstVol.compareTo(lastVol) <= 0;
-    }
+    return firstVol.compareTo(lastVol) <= 0;
   }
 
   // Output a warning if an AU is 'down' with a replacement.
