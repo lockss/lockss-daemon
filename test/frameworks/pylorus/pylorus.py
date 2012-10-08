@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''Pylorus content validation and ingestion gateway
 Michael R Bax, 2008-2009
-$Id: pylorus.py,v 2.22 2012-08-18 00:00:00 aishizaki Exp $'''
+$Id: pylorus.py,v 2.23 2012-10-08 21:06:17 thib_gc Exp $'''
 
 
 import ConfigParser
@@ -27,7 +27,7 @@ fix_auth_failure.fix_auth_failure()
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.22 $'.split()[ 1 ]
+REVISION = '$Revision: 2.23 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 SERVER_READY_TIMEOUT = 600
@@ -520,7 +520,7 @@ option_parser.add_option( '-f', '--fix', help = 'poll disagreement threshold to 
 option_parser.add_option( '-e', '--expiration', help = 'time-out expiration in hours [%default]' )
 option_parser.add_option( '-v', '--verbosity', help = 'verbosity level, 1-7 [%default]' )
 option_parser.add_option( '-d', '--delete', action = 'store_const', const = 'true', help = "delete added AU's from servers after validation [%default]" )
-option_parser.add_option( '-b', '--batch', action = 'store_const', const = 'true', help = 'batch output when pipeline is empty [%default]' )
+option_parser.add_option( '-b', '--batch', action = 'store_const', const = 'false', help = 'accumulate results until the end [%default]' )
 option_parser.add_option( '-t', '--test', action = 'store_const', const = 'true', help = 'run self test [%default]' )
 option_parser.add_option( '-s', '--snapshot', help = 'restore and save status in snapshot FILE [%default]', metavar = 'FILE' )
 ( options, content_list ) = option_parser.parse_args( values = Structure() )
