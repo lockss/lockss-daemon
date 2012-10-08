@@ -8,7 +8,6 @@
 
   {
 
-    attr[contract] = 2011
     comment[eblip] = Only this one title - "Evidence Based Library and Information Practice" is participating in CLOCKSS. No other titles are forthcoming.
     plugin = org.lockss.plugin.universityofalberta.ClockssUniversityOfAlbertaPlugin 
     param[base_url] = http://ejournals.library.ualberta.ca/

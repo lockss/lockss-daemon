@@ -6,8 +6,6 @@
     info[tester] = 3
   >
   
-    attr[contract] = 2010
-
   {
     
     plugin = org.lockss.plugin.pion.ClockssPionPlugin

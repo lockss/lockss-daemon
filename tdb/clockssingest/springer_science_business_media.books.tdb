@@ -7,7 +7,6 @@
     
   >
 
-  attr[contract] = 2008
   plugin = org.lockss.plugin.springer.ClockssSpringerLinkBookPlugin
   param[base_url] = http://www.springerlink.com/
 
