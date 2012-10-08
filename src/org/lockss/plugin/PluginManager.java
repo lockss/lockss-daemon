@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.233 2012-09-06 04:04:51 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.233.2.1 2012-10-08 21:33:23 tlipkis Exp $
  */
 
 /*
@@ -2449,9 +2449,10 @@ public class PluginManager
       }
 
       Plugin newPlug = info.getPlugin();
+      log.info("Loaded plugin: version " + newPlug.getVersion() +
+	       " of " + newPlug.getPluginName());
       setPlugin(key, newPlug);
       if (startAus && newPlug != oldPlug) {
-	log.debug2("new/changed plugin: " + key);
 	changedPluginKeys.add(key);
       }
     }
