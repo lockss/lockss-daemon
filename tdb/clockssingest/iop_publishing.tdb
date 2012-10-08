@@ -6,6 +6,7 @@
     info[tester] = 5
   >
 
+  attr[contract] = 2008
   plugin = org.lockss.plugin.iop.ClockssIOPSciencePlugin
   param[base_url] = http://iopscience.iop.org/
   implicit < status ; status2 ; year; name ; param[volume_name] >
@@ -699,10 +700,10 @@
     comment[param] = eissn preferred
     comment[au_start_url] = redirects to issue toc, permission statement found in page source
 
-    au < manifest ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 1 ; 1 > 
-    au < manifest ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 2 ; 2 > 
-    au < manifest ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 3 ; 3 > 
-    au < manifest ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 4 ; 4 > 
+    au < crawling ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 1 ; 1 > 
+    au < crawling ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 2 ; 2 > 
+    au < crawling ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 3 ; 3 > 
+    au < crawling ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 4 ; 4 > 
     au < manifest ; exists ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 5 ; 5 > 
     au < released ; crawling ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 6 ; 6 > 
     au < released ; crawling ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 7 ; 7 > 
@@ -1492,7 +1493,7 @@
     au < manifest ; exists ; 2005 ; Journal of Physics: Condensed Matter Volume 17 ; 17 > 
     au < manifest ; exists ; 2006 ; Journal of Physics: Condensed Matter Volume 18 ; 18 > 
     au < manifest ; exists ; 2007 ; Journal of Physics: Condensed Matter Volume 19 ; 19 > 
-    au < manifest ; exists ; 2008 ; Journal of Physics: Condensed Matter Volume 20 ; 20 > 
+    au < crawling ; exists ; 2008 ; Journal of Physics: Condensed Matter Volume 20 ; 20 > 
     au < released ; crawling ; 2009 ; Journal of Physics: Condensed Matter Volume 21 ; 21 > 
     au < released ; crawling ; 2010 ; Journal of Physics: Condensed Matter Volume 22 ; 22 > 
     au < released ; crawling ; 2011 ; Journal of Physics: Condensed Matter Volume 23 ; 23 > 
@@ -1606,55 +1607,55 @@
     au < manifest ; exists ; 2007 ; Journal of Physics: Conference Series Volume 91 ; 91 >
     au < manifest ; exists ; 2007 ; Journal of Physics: Conference Series Volume 92 ; 92 >
     au < manifest ; exists ; 2007 ; Journal of Physics: Conference Series Volume 93 ; 93 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 94 ; 94 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 95 ; 95 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 96 ; 96 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 97 ; 97 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 98 ; 98 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 99 ; 99 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 100 ; 100 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 101 ; 101 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 102 ; 102 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 103 ; 103 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 104 ; 104 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 105 ; 105 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 106 ; 106 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 107 ; 107 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 108 ; 108 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 109 ; 109 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 110 ; 110 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 111 ; 111 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 112 ; 112 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 113 ; 113 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 114 ; 114 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 115 ; 115 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 116 ; 116 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 117 ; 117 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 118 ; 118 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 119 ; 119 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 120 ; 120 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 121 ; 121 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 122 ; 122 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 123 ; 123 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 124 ; 124 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 125 ; 125 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 126 ; 126 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 127 ; 127 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 128 ; 128 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 129 ; 129 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 130 ; 130 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 131 ; 131 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 132 ; 132 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 133 ; 133 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 134 ; 134 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 135 ; 135 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 136 ; 136 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 137 ; 137 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 138 ; 138 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 139 ; 139 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 140 ; 140 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 141 ; 141 >
-    au < manifest ; exists ; 2008 ; Journal of Physics: Conference Series Volume 142 ; 142 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 94 ; 94 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 95 ; 95 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 96 ; 96 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 97 ; 97 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 98 ; 98 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 99 ; 99 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 100 ; 100 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 101 ; 101 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 102 ; 102 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 103 ; 103 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 104 ; 104 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 105 ; 105 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 106 ; 106 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 107 ; 107 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 108 ; 108 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 109 ; 109 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 110 ; 110 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 111 ; 111 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 112 ; 112 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 113 ; 113 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 114 ; 114 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 115 ; 115 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 116 ; 116 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 117 ; 117 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 118 ; 118 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 119 ; 119 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 120 ; 120 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 121 ; 121 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 122 ; 122 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 123 ; 123 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 124 ; 124 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 125 ; 125 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 126 ; 126 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 127 ; 127 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 128 ; 128 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 129 ; 129 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 130 ; 130 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 131 ; 131 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 132 ; 132 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 133 ; 133 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 134 ; 134 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 135 ; 135 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 136 ; 136 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 137 ; 137 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 138 ; 138 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 139 ; 139 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 140 ; 140 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 141 ; 141 >
+    au < crawling ; exists ; 2008 ; Journal of Physics: Conference Series Volume 142 ; 142 >
     au < manifest ; exists ; 2009 ; Journal of Physics: Conference Series Volume 143 ; 143 >
     au < manifest ; exists ; 2009 ; Journal of Physics: Conference Series Volume 144 ; 144 >
     au < manifest ; exists ; 2009 ; Journal of Physics: Conference Series Volume 145 ; 145 >
@@ -2233,7 +2234,7 @@
     au < manifest ; exists ; 2005 ; New Journal of Physics Volume 7 ; 7 > 
     au < manifest ; exists ; 2006 ; New Journal of Physics Volume 8 ; 8 > 
     au < manifest ; exists ; 2007 ; New Journal of Physics Volume 9 ; 9 > 
-    au < manifest ; exists ; 2008 ; New Journal of Physics Volume 10 ; 10 > 
+    au < crawling ; exists ; 2008 ; New Journal of Physics Volume 10 ; 10 > 
     au < released ; crawling ; 2009 ; New Journal of Physics Volume 11 ; 11 > 
     au < released ; crawling ; 2010 ; New Journal of Physics Volume 12 ; 12 > 
     au < released ; crawling ; 2011 ; New Journal of Physics Volume 13 ; 13 > 
