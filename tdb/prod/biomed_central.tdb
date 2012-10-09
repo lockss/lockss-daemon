@@ -1820,6 +1820,22 @@
     }
 
     {
+
+      title <
+        name = Biology of Mood & Anxiety Disorders ;
+        issn = 2045-5380 ;
+        issnl = 2045-5380
+      >
+
+      param[base_url] = http://www.biolmoodanxietydisord.com/
+      param[journal_issn] = 2045-5380
+
+      au < exists ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 >
+      au < exists ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
+
+    }
+
+    {
       title <
         name = BioMagnetic Research and Technology ;
         issn = 1477-044X ;
@@ -2094,6 +2110,21 @@ comment[bmr] = journal archive available, but no new volumes
     }
 
     {
+
+      title <
+        name = Cell Regeneration ;
+        issn = 2045-9769 ;
+        issnl = 2045-9769
+      >
+
+      param[base_url] = http://www.cellregenerationjournal.com/
+      param[journal_issn] = 2045-9769
+
+      au < exists ; 2012 ; Cell Regeneration Volume 1 ; 1 >
+
+    }
+
+    {
       title <
         name = Cerebrospinal Fluid Research ;
         issn = 1743-8454 ;
@@ -2232,6 +2263,21 @@ comment[bmr] = journal archive available, but no new volumes
     }
 
     {
+
+      title <
+        name = Cilia ;
+        issn = 2046-2530 ;
+        issnl = 2046-2530
+      >
+
+      param[base_url] = http://www.ciliajournal.com/
+      param[journal_issn] = 2046-2530
+
+      au < exists ; 2012 ; Cilia Volume 1 ; 1 >
+
+    }
+
+    {
       title <
         name = Clinical and Molecular Allergy ;
         issn = 1476-7961 ;
@@ -2255,6 +2301,23 @@ comment[bmr] = journal archive available, but no new volumes
     }
 
     {
+
+      title <
+        name = Clinical Epigenetics ;
+        issn = 1868-7083 ;
+        issnl = 1868-7083
+      >
+
+      param[base_url] = http://www.clinicalepigeneticsjournal.com/
+      param[journal_issn] = 1868-7083
+
+      au < exists ; 2011 ; Clinical Epigenetics Volume 2 ; 2 >
+      au < exists ; 2011 ; Clinical Epigenetics Volume 3 ; 3 >
+      au < exists ; 2012 ; Clinical Epigenetics Volume 4 ; 4 >
+
+    }
+
+    {
       title <
         name = Clinical Proteomics ;
         issn = 1542-6416 ;
@@ -2268,6 +2331,22 @@ comment[bmr] = journal archive available, but no new volumes
       
       au < expected ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
       au < expected ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
+
+    }
+
+    {
+
+      title <
+        name = Clinical Sarcoma Research ;
+        issn = 2045-3329 ;
+        issnl = 2045-3329
+      >
+
+      param[base_url] = http://www.clinicalsarcomaresearch.com/
+      param[journal_issn] = 2045-3329
+
+      au < exists ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
+      au < exists ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
 
     }
 
@@ -2428,6 +2507,21 @@ comment[bmr] = journal archive available, but no new volumes
     }
 
     {
+
+      title < 
+        name = Environmental Evidence ;
+        issn = 2047-2382 ;
+        issnl = 2047-2382
+      >
+
+      param[base_url] = http://www.environmentalevidencejournal.org/
+      param[journal_issn] = 2047-2382
+
+      au < exists ; 2011-2012 ; Environmental Evidence Volume 1 ; 1 >
+
+    }
+
+    {
       title <
         name = Epidemiologic Perspectives & Innovations ;
         issn = 1742-5573 ;
@@ -2446,6 +2540,21 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 >
       au < released ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 ; 8 >
       au < manifest ; 2012 ; Epidemiologic Perspectives & Innovations Volume 9 ; 9 >
+
+    }
+
+    {
+
+      title <
+        name = EPMA Journal ;
+        issn = 1878-5085 ;
+        issnl = 1878-5085
+      >
+
+      param[base_url] = http://www.epmajournal.com/
+      param[journal_issn] = 1878-5085
+
+      au < exists ; 2012 ; EPMA Journal Volume 3 ; 3 >
 
     }
 
@@ -2700,6 +2809,26 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2010 ; Health Research Policy and Systems Volume 8 ; 8 >
       au < released ; 2011 ; Health Research Policy and Systems Volume 9 ; 9 >
       au < manifest ; 2012 ; Health Research Policy and Systems Volume 10 ; 10 >
+
+    }
+
+    {
+
+      title <
+        name = Human Genomics ;
+        issn = 1479-7364 ;
+        issnl = 1479-7364
+      >
+
+      param[base_url] = http://www.humgenomics.com/
+      param[journal_issn] = 1479-7364
+
+      au < exists ; 2003-2004 ; Human Genomics Volume 1 ; 1 >
+      au < exists ; 2005-2006 ; Human Genomics Volume 2 ; 2 >
+      au < exists ; 2008-2009 ; Human Genomics Volume 3 ; 3 >
+      au < exists ; 2009-2010 ; Human Genomics Volume 4 ; 4 >
+      au < exists ; 2010-2011 ; Human Genomics Volume 5 ; 5 >
+      au < exists ; 2012 ; Human Genomics Volume 6 ; 6 >
 
     }
 
@@ -2985,6 +3114,36 @@ comment[bmr] = journal archive available, but no new volumes
       au < exists ; 2010 ; Irish Veterinary Journal Volume 63 ; 63 >
       au < exists ; 2011 ; Irish Veterinary Journal Volume 64 ; 64 >
       au < exists ; 2012 ; Irish Veterinary Journal Volume 65 ; 65 >
+
+    }
+
+    {
+
+      title <
+        name = Israel Journal of Health Policy Research ;
+        issn = 2045-4015 ;
+        issnl = 2045-4015
+      >
+
+      param[base_url] = http://www.ijhpr.org/
+      param[journal_issn] = 2045-4015
+
+      au < exists ; 2012 ; Israel Journal of Health Policy Research Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Animal Science and Biotechnology ;
+        issn = 2049-1891 ;
+        issnl = 2049-1891
+      >
+
+      param[base_url] = http://www.jasbsci.com/
+      param[journal_issn] = 2049-1891
+
+      au < exists ; 2012 ; Journal of Animal Science and Biotechnology Volume 3 ; 3 >
 
     }
 
@@ -3353,6 +3512,21 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2010 ; Journal of Negative Results in BioMedicine Volume 9 ; 9 >
       au < released ; 2011 ; Journal of Negative Results in BioMedicine Volume 10 ; 10 >
       au < manifest ; 2012 ; Journal of Negative Results in BioMedicine Volume 11 ; 11 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Neurodevelopmental Disorders ;
+        issn = 1866-1955 ;
+        issnl = 1866-1955
+      >
+
+      param[base_url] = http://www.jneurodevdisorders.com/
+      param[journal_issn] = 1866-1955
+
+      au < exists ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 >
 
     }
 
@@ -3959,6 +4133,21 @@ comment[bmr] = journal archive available, but no new volumes
     }
 
     {
+
+      title <
+        name = Perioperative Medicine ;
+        issn = 2047-0525 ;
+        issnl = 2047-0525
+      >
+
+      param[base_url] = http://www.perioperativemedicinejournal.com/
+      param[journal_issn] = 2047-0525
+
+      au < exists ; 2012 ; Perioperative Medicine Volume 1 ; 1 >
+
+    }
+
+    {
       title <
         name = Philosophy, Ethics, and Humanities in Medicine ;
         issn = 1747-5341 ;
@@ -4212,6 +4401,20 @@ comment[bmr] = journal archive available, but no new volumes
       au < ready ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
       au < manifest ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 >
 
+    }
+
+    {
+
+      title <
+        name = Systematic Reviews ;
+        issn = 2046-4053 ;
+        issnl = 2046-4053
+      >
+
+      param[base_url] = http://www.systematicreviewsjournal.com/
+      param[journal_issn] = 2046-4053
+
+      au < exists ; 2012 ; Systematic Reviews Volume 1 ; 1 >
 
     }
 
@@ -4257,6 +4460,36 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2010 ; Thrombosis Journal Volume 8 ; 8 >
       au < ready ; 2011 ; Thrombosis Journal Volume 9 ; 9 >
       au < manifest ; 2012 ; Thrombosis Journal Volume 10 ; 10 >
+
+    }
+
+    {
+
+      title <
+        name = Translational Neurodegeneration ;
+        issn = 2047-9158 ;
+        issnl = 2047-9158
+      >
+
+      param[base_url] = http://www.translationalneurodegeneration.com/
+      param[journal_issn] = 2047-9158
+
+      au < exists ; 2012 ; Translational Neurodegeneration Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Transplantation Research ;
+        issn = 2047-1440 ;
+        issnl = 2047-1440
+      >
+
+      param[base_url] = http://www.transplantationresearch.com/
+      param[journal_issn] = 2047-1440
+
+      au < exists ; 2012 ; Transplantation Research Volume 1 ; 1 >
 
     }
 
