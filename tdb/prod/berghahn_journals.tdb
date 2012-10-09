@@ -275,18 +275,18 @@
 
     au < testing ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 >
     au < testing ; 2000 ; French Politics, Culture & Society Volume 18 ; 18 >
-    au < testing ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 >
-    au < testing ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 >
-    au < testing ; 2003 ; French Politics, Culture & Society Volume 21 ; 21 >
-    au < testing ; 2004 ; French Politics, Culture & Society Volume 22 ; 22 >
-    au < testing ; 2005 ; French Politics, Culture & Society Volume 23 ; 23 >
-    au < testing ; 2006 ; French Politics, Culture & Society Volume 24 ; 24 >
+    au < ready ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 >
+    au < ready ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 >
+    au < ready ; 2003 ; French Politics, Culture & Society Volume 21 ; 21 >
+    au < ready ; 2004 ; French Politics, Culture & Society Volume 22 ; 22 >
+    au < ready ; 2005 ; French Politics, Culture & Society Volume 23 ; 23 >
+    au < ready ; 2006 ; French Politics, Culture & Society Volume 24 ; 24 >
     au < testing ; 2007 ; French Politics, Culture & Society Volume 25 ; 25 >
-    au < testing ; 2008 ; French Politics, Culture & Society Volume 26 ; 26 >
-    au < testing ; 2009 ; French Politics, Culture & Society Volume 27 ; 27 >
-    au < testing ; 2010 ; French Politics, Culture & Society Volume 28 ; 28 >
-    au < testing ; 2011 ; French Politics, Culture & Society Volume 29 ; 29 >
-    au < manifest ; 2012 ; French Politics, Culture & Society Volume 30 ; 30 >
+    au < ready ; 2008 ; French Politics, Culture & Society Volume 26 ; 26 >
+    au < ready ; 2009 ; French Politics, Culture & Society Volume 27 ; 27 >
+    au < ready ; 2010 ; French Politics, Culture & Society Volume 28 ; 28 >
+    au < ready ; 2011 ; French Politics, Culture & Society Volume 29 ; 29 >
+    au < ready ; 2012 ; French Politics, Culture & Society Volume 30 ; 30 >
     
   }
 
@@ -302,21 +302,21 @@
     param[journal_id] = gerpol
     param[journal_issn] = 1045-0300
 
-    au < testing ; 1998 ; German Politics and Society Volume 16 ; 16 >
-    au < testing ; 1999 ; German Politics and Society Volume 17 ; 17 >
-    au < testing ; 2000 ; German Politics and Society Volume 18 ; 18 >
-    au < testing ; 2001 ; German Politics and Society Volume 19 ; 19 >
-    au < testing ; 2002 ; German Politics and Society Volume 20 ; 20 >
-    au < testing ; 2003 ; German Politics and Society Volume 21 ; 21 >
-    au < testing ; 2004 ; German Politics and Society Volume 22 ; 22 >
-    au < testing ; 2005 ; German Politics and Society Volume 23 ; 23 >
-    au < testing ; 2006 ; German Politics and Society Volume 24 ; 24 >
+    au < ready ; 1998 ; German Politics and Society Volume 16 ; 16 >
+    au < ready ; 1999 ; German Politics and Society Volume 17 ; 17 >
+    au < ready ; 2000 ; German Politics and Society Volume 18 ; 18 >
+    au < ready ; 2001 ; German Politics and Society Volume 19 ; 19 >
+    au < ready ; 2002 ; German Politics and Society Volume 20 ; 20 >
+    au < ready ; 2003 ; German Politics and Society Volume 21 ; 21 >
+    au < ready ; 2004 ; German Politics and Society Volume 22 ; 22 >
+    au < ready ; 2005 ; German Politics and Society Volume 23 ; 23 >
+    au < ready ; 2006 ; German Politics and Society Volume 24 ; 24 >
     au < testing ; 2007 ; German Politics and Society Volume 25 ; 25 >
-    au < testing ; 2008 ; German Politics and Society Volume 26 ; 26 >
-    au < testing ; 2009 ; German Politics and Society Volume 27 ; 27 >
-    au < testing ; 2010 ; German Politics and Society Volume 28 ; 28 >
-    au < testing ; 2011 ; German Politics and Society Volume 29 ; 29 >
-    au < manifest ; 2012 ; German Politics and Society Volume 30 ; 30 >
+    au < ready ; 2008 ; German Politics and Society Volume 26 ; 26 >
+    au < ready ; 2009 ; German Politics and Society Volume 27 ; 27 >
+    au < ready ; 2010 ; German Politics and Society Volume 28 ; 28 >
+    au < ready ; 2011 ; German Politics and Society Volume 29 ; 29 >
+    au < ready ; 2012 ; German Politics and Society Volume 30 ; 30 >
     
   }
 
@@ -555,8 +555,8 @@
     param[journal_id] = reco
     param[journal_issn] = 2152-906X
 
-    au < testing ; 2011 ; Regions & Cohesion Volume 1 ; 1 >
-    au < manifest ; 2012 ; Regions & Cohesion Volume 2 ; 2 >
+    au < ready ; 2011 ; Regions & Cohesion Volume 1 ; 1 >
+    au < ready ; 2012 ; Regions & Cohesion Volume 2 ; 2 >
     
   }
 
