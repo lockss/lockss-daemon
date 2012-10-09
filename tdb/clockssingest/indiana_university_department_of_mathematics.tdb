@@ -14,7 +14,7 @@
       eissn = 1943-5258
     >
     
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.iumj.ClockssIUMJPlugin
     param[base_url] = http://www.iumj.indiana.edu/
     param[journal_id] = IUMJ
     implicit < status ; status2 ; year ; name ; param[year] >
