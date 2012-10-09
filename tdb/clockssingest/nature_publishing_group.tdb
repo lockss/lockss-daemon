@@ -104,7 +104,6 @@
     >
 
     param[journal_id] = aja
-    comment[notReady] = fetch error RT 4106
 
     au < manifest ; exists ; 2005 ; Asian Journal of Andrology Volume 7 ; 2005 ; 7 >
     au < manifest ; exists ; 2006 ; Asian Journal of Andrology Volume 8 ; 2006 ; 8 >
@@ -113,7 +112,7 @@
     au < released ; crawling ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
     au < released ; crawling ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
     au < released ; crawling ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 >
-    au < notReady ; exists ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
+    au < testing ; exists ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
 
   }
 
@@ -3113,7 +3112,7 @@
     au < exists ; exists ; 2005 ; Neuropsychopharmacology Volume 30 ; 2005 ; 30 >
     au < exists ; exists ; 2006 ; Neuropsychopharmacology Volume 31 ; 2006 ; 31 >
     au < exists ; exists ; 2007 ; Neuropsychopharmacology Volume 32 ; 2007 ; 32 >
-    au < notReady ; exists ; 2008 ; Neuropsychopharmacology Volume 33 ; 2008 ; 33 >
+    au < released ; manifest ; 2008 ; Neuropsychopharmacology Volume 33 ; 2008 ; 33 >
     au < testing ; exists ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 >
     au < testing ; exists ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
     au < testing ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
