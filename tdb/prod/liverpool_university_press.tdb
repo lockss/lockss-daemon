@@ -333,8 +333,8 @@
       attr[journal_id] = jlc
       
       au < released ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
-      au < ready ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
-      au < ready ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
+      au < releasing ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
+      au < releasing ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
       au < manifest ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
     
     }
@@ -402,9 +402,9 @@
       au < released ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 >
       au < released ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
       au < released ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
-      au < ready ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
-      au < ready ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
-      au < ready ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
+      au < releasing ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
+      au < releasing ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
+      au < releasing ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
 
     }
    
@@ -463,9 +463,9 @@
       attr[journal_id] = rms
    
       au < released ; 2009 ; Romani Studies Volume 19 ; 19 >
-      au < ready ; 2010 ; Romani Studies Volume 20 ; 20 >
-      au < ready ; 2011 ; Romani Studies Volume 21 ; 21 >
-      au < ready ; 2012 ; Romani Studies Volume 22 ; 22 >
+      au < releasing ; 2010 ; Romani Studies Volume 20 ; 20 >
+      au < releasing ; 2011 ; Romani Studies Volume 21 ; 21 >
+      au < releasing ; 2012 ; Romani Studies Volume 22 ; 22 >
 
     }      
 
@@ -514,8 +514,8 @@
 
       au < released ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
       au < released ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
-      au < ready ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
-      au < ready ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
+      au < releasing ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
+      au < releasing ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
       au < manifest ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
  
     }
