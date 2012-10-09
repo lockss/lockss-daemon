@@ -9,8 +9,6 @@
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     
-    comment[notReady] = probably not set up for Rice U, see RT4853. Retesting Oct 6 2012
-
   {
     title <
       name = Clinical Diabetes ;
@@ -94,7 +92,7 @@
       au < manifest ; exists ; 2009 ; Diabetes Volume 58 ; 58 >
       au < manifest ; exists ; 2010 ; Diabetes Volume 59 ; 59 >
       au < manifest ; exists ; 2011 ; Diabetes Volume 60 ; 60 >
-      au < testing ; exists ; 2012 ; Diabetes Volume 61 ; 61 >
+      au < released ; manifest ; 2012 ; Diabetes Volume 61 ; 61 >
 
     }
     
