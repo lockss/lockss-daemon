@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicUtil.java,v 1.4.4.1 2012-10-08 23:21:50 pgust Exp $
+ * $Id: TestBibliographicUtil.java,v 1.4.4.2 2012-10-09 00:21:17 pgust Exp $
  */
 
 /*
@@ -455,6 +455,8 @@ public class TestBibliographicUtil extends LockssTestCase {
     // Topical range, as the tokens are the same length and alphabetically increasing
     assertTrue(isRange("va-vi"));
     assertTrue(isRange("il-iv"));
+    // non-normalized roman number is part of s numerical range
+    assertTrue(isRange("i-ixi"));
     // This is not a topical range as it decreases; it is a single id
     assertFalse(isRange("vi-va"));
     // This is a single id; it is not a topic range because of the case difference
@@ -462,9 +464,6 @@ public class TestBibliographicUtil extends LockssTestCase {
     // These are considered to be non-ranges (single ids) with numerical and
     // non-numerical parts of different lengths
     assertFalse(isRange("i-ion"));
-    assertTrue(isRange("i-ixi"));
-    // Non-normalised Roman numerical parts are not considered numbers
-    // so this is interpreted as a topical range
     assertTrue(isRange("vin-viv"));
     // This is a range as the vii can represent a normalised Roman number,
     // and the tokens are the same length and alphabetically increasing
