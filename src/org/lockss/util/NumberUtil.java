@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.16 2012-09-25 16:41:52 pgust Exp $
+ * $Id: NumberUtil.java,v 1.17 2012-10-09 00:00:13 pgust Exp $
  */
 
 /*
@@ -595,7 +595,7 @@ public class NumberUtil {
     if (isInteger(s)) return true;
     // Secondly try as a Roman numeral, requiring normalisation
     try {
-      NumberUtil.parseRomanNumber(s.toUpperCase(), true);
+      NumberUtil.parseRomanNumber(s.toUpperCase());
       return true;
     } catch (NumberFormatException ex) {
       return false;
