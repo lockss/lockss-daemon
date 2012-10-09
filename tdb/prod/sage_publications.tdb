@@ -592,11 +592,11 @@
         param[base_url] = http://alx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        au < testing ; 1998-1999 ; Adult Learning Volume 10 ; 10 >
-        au < testing ; 1999-2000 ; Adult Learning Volume 11 ; 11 >
+        au < ready ; 1998-1999 ; Adult Learning Volume 10 ; 10 >
+        au < ready ; 1999-2000 ; Adult Learning Volume 11 ; 11 >
         au < testing ; 2001 ; Adult Learning Volume 12 ; 12 >
-        au < testing ; 2001-2002 ; Adult Learning Volume 13 ; 13 >
-        au < testing ; 2003 ; Adult Learning Volume 14 ; 14 >
+        au < ready ; 2001-2002 ; Adult Learning Volume 13 ; 13 >
+        au < ready ; 2003 ; Adult Learning Volume 14 ; 14 >
         au < testing ; 2004 ; Adult Learning Volume 15 ; 15 >
         au < testing ; 2005 ; Adult Learning Volume 16 ; 16 >
         au < testing ; 2006 ; Adult Learning Volume 17 ; 17 >
@@ -660,7 +660,7 @@
         au < doNotProcess ; 2009 ; Advances in Dental Research Volume 21 ; 21 >
         au < released ; 2010 ; Advances in Dental Research Volume 22 ; 22 >
         au < released ; 2011 ; Advances in Dental Research Volume 23 ; 23 >
-        au < testing ; 2012 ; Advances in Dental Research Volume 24 ; 24 >
+        au < ready ; 2012 ; Advances in Dental Research Volume 24 ; 24 >
 
       }
 
@@ -828,7 +828,7 @@
         au < doNotProcess ; 2009 ; Affilia Volume 24 ; 24 >
         au < released ; 2010 ; Affilia Volume 25 ; 25 >
         au < released ; 2011 ; Affilia Volume 26 ; 26 >
-        au < testing ; 2012 ; Affilia Volume 27 ; 27 >
+        au < ready ; 2012 ; Affilia Volume 27 ; 27 >
 
       }
 
@@ -871,7 +871,7 @@
         au < released ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 >
         au < released ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 >
         au < released ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 >
-        au < testing ; 2012 ; Alternatives: Global, Local, Political Volume 37 ; 37 >
+        au < ready ; 2012 ; Alternatives: Global, Local, Political Volume 37 ; 37 >
 
       }
 
@@ -1045,7 +1045,7 @@
         au < doNotProcess ; 2009 ; American Educational Research Journal Volume 46 ; 46 >
         au < released ; 2010 ; American Educational Research Journal Volume 47 ; 47 >
         au < released ; 2011 ; American Educational Research Journal Volume 48 ; 48 >
-        au < testing ; 2012 ; American Educational Research Journal Volume 49 ; 49 >
+        au < ready ; 2012 ; American Educational Research Journal Volume 49 ; 49 >
 
       }
 
