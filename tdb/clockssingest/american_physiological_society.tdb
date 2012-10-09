@@ -2573,7 +2573,6 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment[notReady] = see RU3956
 
       au < doNotProcess ; doNotProcess ; 1986 ; Physiology Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 1987 ; Physiology Volume 2 ; 2 ; >
@@ -2600,7 +2599,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Physiology Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Physiology Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Physiology Volume 25 ; 25 ; >
-      au < notReady ; exists ; 2011 ; Physiology Volume 26 ; 26 ; >
+      au < released ; manifest ; 2011 ; Physiology Volume 26 ; 26 ; >
       au < released ; manifest ; 2012 ; Physiology Volume 27 ; 27 ; >
 
     }
