@@ -1,5 +1,5 @@
 /*
- * $Id: TestNumberUtil.java,v 1.11 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id: TestNumberUtil.java,v 1.12 2012-10-09 00:24:38 pgust Exp $
  */
 
 /*
@@ -253,15 +253,13 @@ public class TestNumberUtil extends LockssTestCase {
     assertFalse(NumberUtil.isNumber(""));
     assertFalse(NumberUtil.isNumber(null));
 
-    // Strings not intended to represent Roman numerals will not be considered
-    // numbers by default - normalisation must be explicitly enabled to
-    // parse the following as Roman numerals:
-    assertFalse(NumberUtil.isNumber("Viv"));
-    assertFalse(NumberUtil.isNumber("Vic"));
-    assertFalse(NumberUtil.isNumber("Civic"));
-    assertFalse(NumberUtil.isNumber("Livid"));
-    assertFalse(NumberUtil.isNumber("Mivvi"));
-    assertFalse(NumberUtil.isNumber("Mill"));
+    // Strings represent non-normal roman numbers:
+    assertTrue(NumberUtil.isNumber("Viv"));
+    assertTrue(NumberUtil.isNumber("Vic"));
+    assertTrue(NumberUtil.isNumber("Civic"));
+    assertTrue(NumberUtil.isNumber("Livid"));
+    assertTrue(NumberUtil.isNumber("Mivvi"));
+    assertTrue(NumberUtil.isNumber("Mill"));
   }
 
   /**
@@ -316,9 +314,9 @@ public class TestNumberUtil extends LockssTestCase {
     
     // Unnormalized Roman strings
     assertTrue(NumberUtil.isRomanNumber("XVIIIII"));
-    assertFalse(NumberUtil.isNumber("XVIIIII"));
+    assertTrue(NumberUtil.isNumber("XVIIIII"));
     assertTrue(NumberUtil.isRomanNumber("clivic"));
-    assertFalse(NumberUtil.isNumber("clivic"));
+    assertTrue(NumberUtil.isNumber("clivic"));
 
     // Strings not intended to represent Roman numerals can be taken so
     // when normalisation is not enforced:
