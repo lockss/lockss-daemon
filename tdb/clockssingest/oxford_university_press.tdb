@@ -8923,17 +8923,7 @@
 
     {
 
-    plugin = ClockssHighWirePlugin
-    param[base_url] = http://jac.oxfordjournals.org/
-   
-
-    au < superseded ; exists ; 2006 ; Journal of Antimicrobial Chemotherapy Volume 57 [superseded] ; 57 ; >
-
-    }
-
-    {
-
-    pluginPrefix = ClockssHighWirePlugin
+    pluginSuffix = ClockssHighWirePluginH20Plugin
     param[base_url] = http://jac.oxfordjournals.org/
 
     au < manifest ; exists ; 1975 ; Journal of Antimicrobial Chemotherapy Volume 1 ; 1 ; >
