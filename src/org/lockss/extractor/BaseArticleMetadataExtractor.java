@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.14 2012-08-15 03:34:59 tlipkis Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.15 2012-10-09 07:59:37 tlipkis Exp $
  */
 
 /*
@@ -99,16 +99,13 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
    */
   protected void addTdbDefaults(ArticleFiles af,
 				CachedUrl cu, ArticleMetadata am) {
-    log.critical("addTdbDefaults("+af+", "+cu+", "+am+")");
+    if (log.isDebug3()) log.debug3("addTdbDefaults("+af+", "+cu+", "+am+")");
     TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
-    log.critical("tc; "+tc);
+    if (log.isDebug3()) log.debug3("tc; "+tc);
     TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
-    log.critical("tdbau; "+tdbau);
+    if (log.isDebug3()) log.debug3("tdbau; "+tdbau);
     if (tdbau != null) {
-      log.critical("Adding data from " + tdbau + " to " + am);
-      if (log.isDebug3()) {
-	log.debug3("Adding data from " + tdbau + " to " + am);
-      }
+      if (log.isDebug3()) log.debug3("Adding data from " + tdbau + " to " + am);
       am.putIfBetter(MetadataField.FIELD_ISBN, tdbau.getPrintIsbn());
       am.putIfBetter(MetadataField.FIELD_EISBN, tdbau.getEisbn());
       am.putIfBetter(MetadataField.FIELD_ISSN, tdbau.getPrintIssn());
@@ -118,9 +115,9 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
       am.putIfBetter(MetadataField.FIELD_ISSUE, tdbau.getStartIssue());
       am.putIfBetter(MetadataField.FIELD_JOURNAL_TITLE,tdbau.getJournalTitle());
     }
-    log.critical("adding("+af.getFullTextCu());
+    if (log.isDebug3()) log.debug3("adding("+af.getFullTextCu());
     am.putIfBetter(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
-    log.critical("am: ("+am);
+    if (log.isDebug3()) log.debug3("am: ("+am);
   }
 
   class MyEmitter implements FileMetadataExtractor.Emitter {
@@ -149,7 +146,7 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
 
     MyEmitter myEmitter = new MyEmitter(af, emitter);
     CachedUrl cu = getCuToExtract(af);
-    log.debug3("extract(" + af + "), cu: " + cu);
+    if (log.isDebug3()) log.debug3("extract(" + af + "), cu: " + cu);
     if (cu != null) {
       try {
 	FileMetadataExtractor me = cu.getFileMetadataExtractor(target);
