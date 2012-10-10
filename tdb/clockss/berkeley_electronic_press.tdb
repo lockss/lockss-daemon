@@ -6,7 +6,6 @@
     info[tester] = 5
   >
   
-  attr[contract] = 2008
   pluginPrefix = org.lockss.plugin.bepress.
   implicit < status1 ; status ; year ; name ; param[volume] >
   

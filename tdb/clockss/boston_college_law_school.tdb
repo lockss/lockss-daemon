@@ -6,7 +6,6 @@
     info[tester] = 3
   >
   
-  attr[contract] = 2011
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
   implicit < status1 ; status ; year ; name ; param[volume] >
   param[base_url] = http://lawdigitalcommons.bc.edu/	

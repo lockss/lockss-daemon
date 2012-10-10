@@ -484,7 +484,7 @@
     au < manifest ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 ; >
     au < manifest ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 ; >
     au < manifest ; exists ; 2007 ; The American Historical Review Volume 112 ; 112 ; >
-    au < released ; manifest ; 2008 ; The American Historical Review Volume 113 ; 113 ; >
+    au < released ; crawling ; 2008 ; The American Historical Review Volume 113 ; 113 ; >
     au < released ; crawling ; 2009 ; The American Historical Review Volume 114 ; 114 ; >
     au < released ; crawling ; 2010 ; The American Historical Review Volume 115 ; 115 ; >
     au < released ; crawling ; 2011 ; The American Historical Review Volume 116 ; 116 ; >
@@ -7511,7 +7511,7 @@
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < released ; manifest ; 2008 ; InnovAiT Volume 1 ; 1 ; >
+    au < released ; crawling ; 2008 ; InnovAiT Volume 1 ; 1 ; >
     au < zapped ; down ; 2009 ; InnovAiT Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
     }
@@ -7521,11 +7521,11 @@
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < released ; manifest ; 2008 ; InnovAiT Volume 1 ; 1 ; >
-    au < released ; manifest ; 2009 ; InnovAiT Volume 2 ; 2 ; >
+    au < released ; crawling ; 2008 ; InnovAiT Volume 1 ; 1 ; >
+    au < released ; crawling ; 2009 ; InnovAiT Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; InnovAiT Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; InnovAiT Volume 4 ; 4 ; >
-    au < released ; manifest ; 2012 ; InnovAiT Volume 5 ; 5 ; >
+    au < released ; crawling ; 2012 ; InnovAiT Volume 5 ; 5 ; >
 
     }
 
@@ -13729,7 +13729,7 @@
     au < manifest ; exists ; 2006 ; Nephrology Dialysis Transplantation Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; Nephrology Dialysis Transplantation Volume 22 ; 22 ; >
     au < crawling ; exists ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
-    au < released ; manifest ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
+    au < released ; crawling ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 ; >
     au < released ; manifest; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 ; >
     au < crawling ; exists; 2012 ; Nephrology Dialysis Transplantation Volume 27 ; 27 ; >
@@ -13764,7 +13764,7 @@
     au < released ; crawling ; 2009 ; Neuro-Oncology Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; Neuro-Oncology Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; Neuro-Oncology Volume 13 ; 13 ; >
-    au < released ; manifest ; 2012 ; Neuro-Oncology Volume 14 ; 14 ; >
+    au < released ; crawling ; 2012 ; Neuro-Oncology Volume 14 ; 14 ; >
 
   }
 
@@ -13805,7 +13805,7 @@
     au < released ; crawling ; 2009 ; Nicotine and Tobacco Research Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; Nicotine and Tobacco Research Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; Nicotine and Tobacco Research Volume 13 ; 13 ; >
-    au < released ; manifest ; 2012 ; Nicotine and Tobacco Research Volume 14 ; 14 ; >
+    au < released ; crawling ; 2012 ; Nicotine and Tobacco Research Volume 14 ; 14 ; >
 
 
     }
@@ -14103,7 +14103,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Notes and Queries Volume 56 ; 56 ; >
     au < released ; crawling ; 2010 ; Notes and Queries Volume 57 ; 57 ; >
     au < released ; crawling ; 2011 ; Notes and Queries Volume 58 ; 58 ; >
-    au < released ; manifest ; 2012 ; Notes and Queries Volume 59 ; 59 ; >
+    au < released ; crawling ; 2012 ; Notes and Queries Volume 59 ; 59 ; >
 
     }
 
@@ -14173,7 +14173,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Nucleic Acids Research Volume 37 ; 37 ; >
     au < released ; crawling ; 2010 ; Nucleic Acids Research Volume 38 ; 38 ; >
     au < released ; crawling ; 2011 ; Nucleic Acids Research Volume 39 ; 39 ; >
-    au < released ; manifest ; 2012 ; Nucleic Acids Research Volume 40 ; 40 ; >
+    au < released ; crawling ; 2012 ; Nucleic Acids Research Volume 40 ; 40 ; >
 
     }
 
@@ -14467,7 +14467,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
     au < released ; crawling ; 2010 ; The Oral History Review Volume 37 ; 37 ; >
     au < released ; crawling ; 2011 ; The Oral History Review Volume 38 ; 38 ; >
-    au < released ; manifest ; 2012 ; The Oral History Review Volume 39 ; 39 ; >
+    au < released ; crawling ; 2012 ; The Oral History Review Volume 39 ; 39 ; >
 
     }
 
@@ -14531,7 +14531,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Art Journal Volume 32 ; 32 ; >
     au < released ; crawling ; 2010 ; Oxford Art Journal Volume 33 ; 33 ; >
     au < released ; crawling ; 2011 ; Oxford Art Journal Volume 34 ; 34 ; >
-    au < released ; manifest ; 2012 ; Oxford Art Journal Volume 35 ; 35 ; >
+    au < released ; crawling ; 2012 ; Oxford Art Journal Volume 35 ; 35 ; >
 
     }
 

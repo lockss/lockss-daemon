@@ -6,7 +6,6 @@
     info[tester] = 0
   >
     
-  attr[contract] = 2011
   rights = openaccess
   plugin = org.lockss.plugin.medknow.ClockssMedknowPlugin
   implicit < status1 ; status ; year ; name ; param[year] ; param[volume_name] >

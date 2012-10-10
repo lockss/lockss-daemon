@@ -6,7 +6,6 @@
     info[tester] = 0
   >
 
-  attr[contract] = 2011
   plugin = org.lockss.plugin.jstor.ClockssJSTORPlugin
   
   {

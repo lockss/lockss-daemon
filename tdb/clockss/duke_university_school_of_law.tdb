@@ -6,8 +6,6 @@
     info[tester] = 5
   >
   
-  attr[contract] = 2012
-
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
   param[base_url] = http://scholarship.law.duke.edu/
   implicit < status1 ; status; year ; name ; param[volume] >
@@ -49,7 +47,7 @@
     au < manifest ; exists ; 2009 ; American Literary Scholarship Volume 26 ; 26 >
     au < manifest ; exists ; 2010 ; American Literary Scholarship Volume 27 ; 27 >
     au < manifest ; exists ; 2011 ; American Literary Scholarship Volume 28 ; 28 >
-    au < crawling ; exists ; 2012 ; American Literary Scholarship Volume 29 ; 29 >
+    au < released ; crawling ; 2012 ; American Literary Scholarship Volume 29 ; 29 >
 
   }
 
@@ -84,7 +82,7 @@
     au < manifest ; exists ; 2009 ; Duke Environmental Law & Policy Forum Volume 19 ; 19 >
     au < manifest ; exists ; 2010 ; Duke Environmental Law & Policy Forum Volume 20 ; 20 >
     au < manifest ; exists ; 2011 ; Duke Environmental Law & Policy Forum Volume 21 ; 21 >
-    au < crawling ; exists ; 2012 ; Duke Environmental Law & Policy Forum Volume 22 ; 22 >
+    au < released ; crawling ; 2012 ; Duke Environmental Law & Policy Forum Volume 22 ; 22 >
   
   }
   
@@ -100,7 +98,7 @@
     au < manifest ; exists ; 2009 ; Duke Forum for Law & Social Change Volume 1 ; 1 >
     au < manifest ; exists ; 2010 ; Duke Forum for Law & Social Change Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Duke Forum for Law & Social Change Volume 3 ; 3 >
-    au < crawling ; exists ; 2012 ; Duke Forum for Law & Social Change Volume 4 ; 4 >
+    au < released ; crawling ; 2012 ; Duke Forum for Law & Social Change Volume 4 ; 4 >
   
   }
   
@@ -134,7 +132,7 @@
     au < manifest ; exists ; 2009 ; Duke Journal of Comparative and International Law Volume 19 ; 19 >
     au < manifest ; exists ; 2010 ; Duke Journal of Comparative and International Law Volume 20 ; 20 >
     au < manifest ; exists ; 2011 ; Duke Journal of Comparative and International Law Volume 21 ; 21 >
-    au < crawling ; exists ; 2012 ; Duke Journal of Comparative and International Law Volume 22 ; 22 >
+    au < released ; crawling ; 2012 ; Duke Journal of Comparative and International Law Volume 22 ; 22 >
     
   }
   
@@ -153,7 +151,7 @@
     au < manifest ; exists ; 2009 ; Duke Journal of Constitutional Law and Public Policy Volume 4 ; 4 >
     au < manifest ; exists ; 2010 ; Duke Journal of Constitutional Law and Public Policy Volume 5 ; 5 >
     au < released ; crawling ; 2011 ; Duke Journal of Constitutional Law and Public Policy Volume 6 ; 6 >
-    au < crawling ; exists ; 2012 ; Duke Journal of Constitutional Law and Public Policy Volume 7 ; 7 >
+    au < released ; crawling ; 2012 ; Duke Journal of Constitutional Law and Public Policy Volume 7 ; 7 >
   } 
  
   {
@@ -205,7 +203,7 @@
     au < manifest ; exists ; 2009-2010 ; Duke Law and Technology Review Volume 8  ; 8 >
     au < manifest ; exists ; 2010-2011 ; Duke Law and Technology Review Volume 9  ; 9 >
     au < crawling ; exists ; 2011-2012 ; Duke Law and Technology Review Volume 10 ; 10 >
-    au < crawling ; exists ; 2012-2013 ; Duke Law and Technology Review Volume 11 ; 11 >
+    au < released ; crawling ; 2012-2013 ; Duke Law and Technology Review Volume 11 ; 11 >
     
   }
   
@@ -217,6 +215,7 @@
     >
 
     param[journal_abbr] = dlj
+    comment[notReady] = low agressment, will re-test later
   
     au < manifest ; exists ; 1951 ; Duke Law Journal Volume 1 ; 1 >
     au < manifest ; exists ; 1952 ; Duke Law Journal Volume 2 ; 2 >
@@ -279,7 +278,7 @@
     au < manifest ; exists ; 2009 ; Duke Law Journal Volume 59 ; 59 >
     au < manifest ; exists ; 2010 ; Duke Law Journal Volume 60 ; 60 >
     au < manifest ; exists ; 2011 ; Duke Law Journal Volume 61 ; 61 >
-    au < crawling ; exists ; 2012 ; Duke Law Journal Volume 62 ; 62 >
+    au < notReady ; exists ; 2012 ; Duke Law Journal Volume 62 ; 62 >
   }
   
   {
@@ -365,7 +364,7 @@
     au < manifest ; exists ; 2009 ; Law and Contemporary Problems Volume 72 ; 72 >
     au < manifest ; exists ; 2010 ; Law and Contemporary Problems Volume 73 ; 73 >
     au < manifest ; exists ; 2011 ; Law and Contemporary Problems Volume 74 ; 74 >
-    au < crawling ; exists ; 2012 ; Law and Contemporary Problems Volume 75 ; 75 >
+    au < released ; crawling ; 2012 ; Law and Contemporary Problems Volume 75 ; 75 >
   
   }
   

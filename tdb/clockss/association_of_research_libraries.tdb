@@ -6,7 +6,6 @@
     info[tester] = 0
   >
 
-  attr[contract] = 2011
   plugin = needs.plugin
   implicit < status1 ; status ; year ; name ; param[volume] >
   param[base_url] = 

@@ -6,7 +6,6 @@
     info[tester] = 0
   >
 
-  attr[contract] = 2010
   plugin = needs.plugin
   param[base_url] = http://http://www.libraweb.net/
   implicit < status1 ; status ; year ; name ; param[volume_name] >

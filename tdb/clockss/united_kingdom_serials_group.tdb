@@ -6,7 +6,6 @@
     info[tester] = 4
   >
 
-  attr[contract] = 2011
   plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
   param[base_url] = http://uksg.metapress.com/
 

@@ -6,7 +6,6 @@
     info[tester] = 0
   >
 
-    attr[contract] = 2012
     plugin = needs.plugin
     param[base_url] = http://spiedigitallibrary.org/journals/
     implicit < status1 ; status ; year ; name ; param[volume_name] >

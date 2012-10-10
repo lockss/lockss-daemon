@@ -6,7 +6,6 @@
     info[tester] = 0
   >
 
-  attr[contract] = 2010
   param[base_url] = https://www.thieme-connect.de/
   plugin = needs.plugin
   implicit < status1 ; status ; name ; year ; param[year] >
@@ -17,7 +16,8 @@
     title <
        name = AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie ;
        issn = 0939-2661 ;
-       eissn = 1439-1074
+       eissn = 1439-1074 ;
+       doi = 10.1055/s-00000001
 
      >
     param[journal_id] = 10.1055/s-00000001
@@ -52,7 +52,8 @@
   {
      title <
        name = Anästhesiologie, Intensivmedizin, Notfallmedizin ;
-       issn = 0174-1837
+       issn = 0174-1837 ;
+       doi = 10.1055/s-00000001
 
      >
     param[journal_id] = 10.1055/s-00000001
@@ -77,7 +78,8 @@
     title <
       name = Aktuelle Dermatologie ;
       issn = 0340-2541 ;
-      eissn = 1438-938X
+      eissn = 1438-938X ;
+      doi = 10.1055/s-00000002
 
      >
     param[journal_id] = 10.1055/s-00000002
@@ -102,7 +104,8 @@
     title <
       name = Aktuelle Ernährungsmedizin ;
       issn = 0341-0501 ;
-      eissn = 1438-9916
+      eissn = 1438-9916 ;
+      doi = 10.1055/s-00000003
 
      >
     param[journal_id] = 10.1055/s-00000003
@@ -127,7 +130,8 @@
     title <
       name = Aktuelle Neurologie ;
       issn = 0302-4350 ;
-      eissn = 1438-9428
+      eissn = 1438-9428 ;
+      doi = 10.1055/s-00000004
 
     >
     param[journal_id] = 10.1055/s-00000004
@@ -173,7 +177,8 @@
     title <
       name =  Aktuelle Rheumatologie ;
       issn = 0341-051X ;
-      eissn = 1438-9940
+      eissn = 1438-9940 ;
+      doi = 10.1055/s-00000005
 
     >
     param[journal_id] = 10.1055/s-00000005
@@ -218,7 +223,8 @@
     title <
       name = Aktuelle Traumatologie ;
       issn = 0044-6173 ;
-      eissn = 1438-9436
+      eissn = 1438-9436 ;
+      doi = 10.1055/s-00000006
 
    >
    param[journal_id] = 10.1055/s-00000006
@@ -243,7 +249,8 @@
      title <
        name = Aktuelle Urologie ;
        issn = 0001-7868 ;
-       eissn = 1438-8820
+       eissn = 1438-8820 ;
+       doi = 10.1055/s-00000007
 
     >
     param[journal_id] = 10.1055/s-00000007
@@ -289,7 +296,8 @@
     title <
       name = Allgemeine Homöopathische Zeitung ;
       issn = 1438-2563 ;
-      eissn = 1439-8990
+      eissn = 1439-8990 ;
+      doi = 10.1055/s-00000008
 
     >
     param[journal_id] = 10.1055/s-00000008
@@ -345,7 +353,8 @@
      title <
        name = Allgemein- und Viszeralchirurgie up2date ;
        issn = 1611-6437 ;
-       eissn = 1611-6461
+       eissn = 1611-6461 ;
+       doi = 10.1055/s-00000147
 
      >
      param[journal_id] = 10.1055/s-00000147
@@ -361,7 +370,8 @@
       title <
         name = American Journal of Perinatology ;
         issn = 0735-1631 ;
-        eissn = 1098-8785
+        eissn = 1098-8785 ;
+        doi = 10.1055/s-00000009
 
       >
       param[journal_id] = 10.1055/s-00000009
@@ -404,7 +414,8 @@
     title <
       name = American Journal of Perinatology Reports ;
       issn = 2157-6998 ;
-      eissn = 2157-7005
+      eissn = 2157-7005 ;
+      doi = 10.1055/s-00000169
 
      >
     param[journal_id] = 10.1055/s-00000169
@@ -419,7 +430,8 @@
     title <
       name = Arzneimittelforschung ;
       issn = 0004-4172 ;
-      eissn = 1616-7066
+      eissn = 1616-7066 ;
+      doi = 10.1055/s-00000175
 
     >
     param[journal_id] = 10.1055/s-00000175
@@ -447,7 +459,8 @@
     title <
       name = Augenheilkunde up2date ;
       issn = 1616-9719 ;
-      eissn = 1616-9735
+      eissn = 1616-9735 ;
+      doi = 10.1055/s-00000174
 
     >
     param[journal_id] = 10.1055/s-00000174
@@ -464,7 +477,8 @@
     title <
       name = B&G Bewegungstherapie und Gesundheitssport ;
       issn = 1613-0863 ;
-      eissn = 1613-3269
+      eissn = 1613-3269 ;
+      doi = 10.1055/s-00000119
 
     >
     param[journal_id] = 10.1055/s-00000119
@@ -486,7 +500,8 @@
     title <
       name = Balint Journal ;
       issn = 1439-5142 ;
-      eissn = 1439-9008
+      eissn = 1439-9008 ;
+      doi = 10.1055/s-00000114
 
     >
     param[journal_id] = 10.1055/s-00000114
@@ -514,7 +529,8 @@
     title <
       name = Central European Neurosurgery - Zentralblatt für Neurochirurgie ;
       issn = 1438-9746 ;
-      eissn = 0044-4251
+      eissn = 0044-4251 ;
+      doi = 10.1055/s-00000110
 
     >
     param[journal_id] = 10.1055/s-00000110
@@ -542,7 +558,8 @@
     title <
       name = Clinics in Colon and Rectal Surgery ;
       issn = 1531-0043 ;
-      eissn = 1530-9681
+      eissn = 1530-9681 ;
+      doi = 10.1055/s-00000049
 
     >
     param[journal_id] = 10.1055/s-00000049
@@ -567,7 +584,8 @@
     title <
       name = Craniomaxillofacial Trauma & Reconstruction ;
       issn = 1943-3875 ;
-      eissn = 1943-3883
+      eissn = 1943-3883 ;
+      doi = 10.1055/s-00000151
 
     >
     param[journal_id] = 10.1055/s-00000151
@@ -585,7 +603,8 @@
     title <
       name = Deutsche Gesellschaft für Unfallchirurgie - Mitteilungen und Nachrichten ;
       issn = 1436-6142 ;
-      eissn = 1438-9576
+      eissn = 1438-9576 ;
+      doi = 10.1055/s-00000176
 
     >
     param[journal_id] = 10.1055/s-00000176
@@ -602,7 +621,8 @@
     title <
       name = Deutsche Heilpraktiker-Zeitschrift ;
       issn = 1862-2267 ;
-      eissn = 1862-2275
+      eissn = 1862-2275 ;
+      doi = 10.1055/s-00000135
 
     >
     param[journal_id] = 10.1055/s-00000135
@@ -623,7 +643,8 @@
     title <
       name = Deutsche Zeitschrift für Akupunktur ;
       issn = 0415-6412 ;
-      eissn = 1439-4359
+      eissn = 1439-4359 ;
+      doi = 10.1055/s-00000010
 
     >
     param[journal_id] = 10.1055/s-00000010
@@ -639,7 +660,8 @@
     title <
       name = Deutsche Zeitschrift für Onkologie ;
       issn = 1617-5891 ;
-      eissn = 1439-0930
+      eissn = 1439-0930 ;
+      doi = 10.1055/s-00000097
 
     >
     param[journal_id] = 10.1055/s-00000097
@@ -665,7 +687,8 @@
   {
     title <
       name = Zeitschrift für Onkologie ;
-      issn = 1432-2919
+      issn = 1432-2919 ;
+      doi = 10.1055/s-00000097
 
     >
     param[journal_id] = 10.1055/s-00000097
@@ -691,7 +714,8 @@
     title <
       name = Diabetes aktuell ;
       issn = 1861-6089 ;
-      eissn = 1864-1733
+      eissn = 1864-1733 ;
+      doi = 10.1055/s-00000146
 
     >
     param[journal_id] = 10.1055/s-00000146
@@ -710,7 +734,8 @@
     title <
       name = Diabetologie und Stoffwechsel ;
       issn = 1861-9002 ;
-      eissn = 1861-9010
+      eissn = 1861-9010 ;
+      doi = 10.1055/s-00000134
 
     >
     param[journal_id] = 10.1055/s-00000134
@@ -731,7 +756,8 @@
     title <
       name = Dialyse aktuell ;
       issn = 1434-0704 ;
-      eissn = 1860-3300
+      eissn = 1860-3300 ;
+      doi = 10.1055/s-00000145
 
     >
     param[journal_id] = 10.1055/s-00000145
@@ -751,7 +777,8 @@
     title <
       name = DMW - Deutsche Medizinische Wochenschrift ;
       issn = 0012-0472 ;
-      eissn = 1439-4413
+      eissn = 1439-4413 ;
+      doi = 10.1055/s-00000011
 
     >
     param[journal_id] = 10.1055/s-00000011
@@ -902,7 +929,8 @@
     title <
       name = DO - Deutsche Zeitschrift für Osteopathie ;
       issn = 1610-5044 ;
-      eissn = 1613-3781
+      eissn = 1613-3781 ;
+      doi = 10.1055/s-00000120
 
 
     >
@@ -929,7 +957,8 @@
     title <
       name = Endo-Praxis ;
       issn = 0177-4077 ;
-      eissn = 1611-6429
+      eissn = 1611-6429 ;
+      doi = 10.1055/s-00000136
 
     >
     param[journal_id] = 10.1055/s-00000136
@@ -951,7 +980,8 @@
     title <
       name = Endoscopy ;
       issn = 0013-726X ;
-      eissn = 1438-8812
+      eissn = 1438-8812 ;
+      doi = 10.1055/s-00000012
 
     >
     param[journal_id] = 10.1055/s-00000012
@@ -1010,7 +1040,8 @@
     title <
       name = Endoskopie heute ;
       issn = 0933-811X ;
-      eissn = 1439-2577
+      eissn = 1439-2577 ;
+      doi = 10.1055/s-00000013
 
     >
     param[journal_id] = 10.1055/s-00000013
@@ -1034,7 +1065,8 @@
     title <
       name = Erfahrungsheilkunde ;
       issn = 0014-0082 ;
-      eissn = 1439-4294
+      eissn = 1439-4294 ;
+      doi = 10.1055/s-00000014
 
     >
     param[journal_id] = 10.1055/s-00000014
@@ -1061,7 +1093,8 @@
     title <
       name = Ergopraxis ;
       issn = 1439-2283 ;
-      eissn = 1869-5507
+      eissn = 1869-5507 ;
+      doi = 10.1055/s-00000163
 
     >
     param[journal_id] = 10.1055/s-00000163
@@ -1080,7 +1113,8 @@
     title <
       name = Ernährung & Medizin ;
       issn = 1439-1635 ;
-      eissn = 1438-9002
+      eissn = 1438-9002 ;
+      doi = 10.1055/s-00000093
 
     >
     param[journal_id] = 10.1055/s-00000093
@@ -1108,7 +1142,8 @@
     title <
       name = European Journal of Pediatric Surgery ;
       issn = 0939-7248 ;
-      eissn = 1439-359X
+      eissn = 1439-359X ;
+      doi = 10.1055/s-00000015
 
     >
     param[journal_id] = 10.1055/s-00000015
@@ -1155,7 +1190,8 @@
     title <
       name = Evidence-Based Spine-Care Journal ;
       issn = 1663-7976 ;
-      eissn = 1869-4136
+      eissn = 1869-4136 ;
+      doi = 10.1055/s-00000165
 
     >
     param[journal_id] = 10.1055/s-00000165
@@ -1175,7 +1211,8 @@
     title <
       name = Experimental and Clinical Endocrinology & Diabetes ;
       issn = 0947-7349 ;
-      eissn = 1439-3646
+      eissn = 1439-3646 ;
+      doi = 10.1055/s-00000017
 
     >
     param[journal_id] = 10.1055/s-00000017
@@ -1219,7 +1256,8 @@
     title <
       name = Facial Plastic Surgery ;
       issn = 0736-6825 ;
-      eissn = 1098-8793
+      eissn = 1098-8793 ;
+      doi = 10.1055/s-00000018
 
     >
     param[journal_id] = 10.1055/s-00000018
@@ -1262,7 +1300,8 @@
     title <
       name = Flugmedizin - Tropenmedizin - Reisemedizin - FTR ;
       issn = 1864-4538 ;
-      eissn = 1864-175X
+      eissn = 1864-175X ;
+      doi = 10.1055/s-00000148
 
     >
     param[journal_id] = 10.1055/s-00000148
@@ -1282,7 +1321,8 @@
     title <
       name = Fortschritte der Neurologie - Psychiatrie ;
       issn = 0720-4299 ;
-      eissn = 1439-3522
+      eissn = 1439-3522 ;
+      doi = 10.1055/s-00000019
 
     >
     param[journal_id] = 10.1055/s-00000019
@@ -1328,7 +1368,8 @@
     title <
       name = Frauenheilkunde up2date ;
       issn = 1439-3719 ;
-      eissn = 1611-650X
+      eissn = 1611-650X ;
+      doi = 10.1055/s-00000142
 
     >
     param[journal_id] = 10.1055/s-00000142
@@ -1348,7 +1389,8 @@
     title <
       name = Gastroenterologie up2date ;
       issn = 1616-9670 ;
-      eissn = 1616-9727
+      eissn = 1616-9727 ;
+      doi = 10.1055/s-00000133
 
     >
     param[journal_id] = 10.1055/s-00000133
@@ -1369,7 +1411,8 @@
     title <
       name = Geburtshilfe und Frauenheilkunde ;
       issn = 0016-5751 ;
-      eissn = 1438-8804
+      eissn = 1438-8804 ;
+      doi = 10.1055/s-00000020
 
 
     >
@@ -1417,7 +1460,8 @@
     title <
       name = Gesundheitsökonomie & Qualitätsmanagement ;
       issn = 1432-2625 ;
-      eissn = 1439-4049
+      eissn = 1439-4049 ;
+      doi = 10.1055/s-00000021
 
     >
     param[journal_id] = 10.1055/s-00000021
@@ -1443,7 +1487,8 @@
     title <
       name = Gesundheitswesen Das ;
       issn = 0941-3790 ;
-      eissn = 1439-4421
+      eissn = 1439-4421 ;
+      doi = 10.1055/s-00000022
 
     >
     param[journal_id] = 10.1055/s-00000022
@@ -1471,7 +1516,8 @@
     title <
       name = Global Spine Journal ;
       issn = 2192-5682 ;
-      eissn = 2192-5690
+      eissn = 2192-5690 ;
+      doi = 10.1055/s-00000177
 
     >
     param[journal_id] = 10.1055/s-00000177
@@ -1486,7 +1532,8 @@
     title <
       name = Handchirurgie - Mikrochirurgie - Plastische Chirurgie ;
       issn = 0722-1819 ;
-      eissn = 1439-3980
+      eissn = 1439-3980 ;
+      doi = 10.1055/s-00000023
 
     >
     param[journal_id] = 10.1055/s-00000023
@@ -1514,7 +1561,8 @@
     title <
       name = Hebamme Die ;
       issn = 0932-8122 ;
-      eissn = 1439-4197
+      eissn = 1439-4197 ;
+      doi = 10.1055/s-00000024
 
     >
     param[journal_id] = 10.1055/s-00000024
@@ -1537,7 +1585,8 @@
     title <
       name = HNO-Informationen ;
       issn = 0344-9319 ;
-      eissn = 1439-4537
+      eissn = 1439-4537 ;
+      doi = 10.1055/s-00000130
 
     >
     param[journal_id] = 10.1055/s-00000130
@@ -1552,7 +1601,8 @@
     title <
       name = Homoeopathic Links ;
       issn = 1019-2050 ;
-      eissn = 1860-3149
+      eissn = 1860-3149 ;
+      doi = 10.1055/s-00000127
 
     >
     param[journal_id] = 10.1055/s-00000127
@@ -1575,7 +1625,8 @@
     title <
       name = Hormone and Metabolic Research ;
       issn = 0018-5043 ;
-      eissn = 1439-4286
+      eissn = 1439-4286 ;
+      doi = 10.1055/s-00000025
 
     >
     param[journal_id] = 10.1055/s-00000025
@@ -1633,7 +1684,8 @@
     title <
       name = Im OP ;
       issn = 1611-7905 ;
-      eissn = 1611-7913
+      eissn = 1611-7913 ;
+      doi = 10.1055/s-00000166
 
     >
     param[journal_id] = 10.1055/s-00000166
@@ -1649,7 +1701,8 @@
     title <
       name = Informationen aus Orthodontie & Kieferorthopädie ;
       issn = 0020-0336 ;
-      eissn = 1439-4200
+      eissn = 1439-4200 ;
+      doi = 10.1055/s-00000026
 
     >
     param[journal_id] = 10.1055/s-00000026
@@ -1675,7 +1728,8 @@
     title <
       name = intensiv ;
       issn = 0942-6035 ;
-	  eissn = 1439-3840
+	  eissn = 1439-3840 ;
+	  doi = 10.1055/s-00000027
 	
     >
     param[journal_id] = 10.1055/s-00000027
@@ -1701,7 +1755,8 @@
     title <
       name = Intensivmedizin up2date ;
       issn = 1614-4856 ;
-      eissn = 1614-6697
+      eissn = 1614-6697 ;
+      doi = 10.1055/s-00000126
 
     >
     param[journal_id] = 10.1055/s-00000126
@@ -1724,7 +1779,8 @@
     title <
       name = International Journal of Angiology ;
       issn = 1061-1711 ;
-      eissn = 1615-5939
+      eissn = 1615-5939 ;
+      doi = 10.1055/s-00000167
 
     >
     param[journal_id] = 10.1055/s-00000167
@@ -1759,7 +1815,8 @@
     title <
       name = International Journal of Sports Medicine ;
       issn = 0172-4622 ;
-      eissn = 1439-3964
+      eissn = 1439-3964 ;
+      doi = 10.1055/s-00000028
 
     >
     param[journal_id] = 10.1055/s-00000028
@@ -1806,7 +1863,8 @@
     title <
       name = Journal of Knee Surgery ;
       issn = 1538-8506 ;
-      eissn = 1938-2480
+      eissn = 1938-2480 ;
+      doi = 10.1055/s-00000161
 
     >
     param[journal_id] = 10.1055/s-00000161
@@ -1829,7 +1887,8 @@
     title <
       name = Journal of Neurological Surgery Part A : Central European Neurosurgery ;
       issn = 2193-6315 ;
-      eissn = 2193-6323
+      eissn = 2193-6323 ;
+      doi = 10.500/s.00000180
 
     >
     param[journal_id] = 10.500/s.00000180
@@ -1845,7 +1904,8 @@
     title <
       name = Journal of Neurological Surgery Part : Skull Base ;
       issn = 2193-6331 ;
-      eissn = 2193-634X
+      eissn = 2193-634X ;
+      doi = 10.500/s.00000181
 
     >
     param[journal_id] = 10.500/s.00000181
@@ -1861,7 +1921,8 @@
     title <
       name = Journal of Neurological Surgery Reports ;
       issn = 2193-6358 ;
-      eissn = 2193-6366
+      eissn = 2193-6366 ;
+      doi = 10.500/s.00000182
 
     >
     param[journal_id] = 10.500/s.00000182
@@ -1877,7 +1938,8 @@
     title <
       name = Journal of Reconstructive Microsurgery ;
       issn = 1662-3282 ;
-      eissn = 1098-8947
+      eissn = 1098-8947 ;
+      doi = 10.1055/s-00000029
 
     >
     param[journal_id] = 10.1055/s-00000029
@@ -1920,7 +1982,8 @@
     title <
       name = Journal of Wrist Surgery ;
       issn = 2163-3916 ;
-      eissn = 2163-3924
+      eissn = 2163-3924 ;
+      doi = 10.500/s.0032.1312044
 
     >
     param[journal_id] = 10.500/s.0032.1312044
@@ -1935,7 +1998,8 @@
     title <
       name = JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege ;
       issn = 1439-2569 ;
-      eissn = 1439-9164
+      eissn = 1439-9164 ;
+      doi = 10.1055/s-002-23435
 
     >
     param[journal_id] = 10.1055/s-002-23435
@@ -1950,7 +2014,8 @@
     title <
       name = Kardiologie up2date ;
       issn = 1611-6534 ;
-      eissn = 1860-3513
+      eissn = 1860-3513 ;
+      doi = 10.1055/s-00000129
 
     >
     param[journal_id] = 10.1055/s-00000129
@@ -1972,7 +2037,8 @@
     title <
       name = kleintier konkret ;
       issn = 1434-9132 ;
-      eissn = 1439-3832
+      eissn = 1439-3832 ;
+      doi = 10.1055/s-00000143
 
     >
     param[journal_id] = 10.1055/s-00000143
@@ -1992,7 +2058,8 @@
     title <
       name = Klinikarzt Der ;
       issn = 0341-2350 ;
-      eissn = 1439-3859
+      eissn = 1439-3859 ;
+      doi = 10.1055/s-00000030
 
     >
     param[journal_id] = 10.1055/s-00000030
@@ -2016,7 +2083,8 @@
     title <
       name = Klinische Monatsblätter für Augenheilkunde ;
       issn = 0023-2165 ;
-      eissn = 1439-3999
+      eissn = 1439-3999 ;
+      doi = 10.1055/s-00000031
 
     >
     param[journal_id] = 10.1055/s-00000031
@@ -2062,7 +2130,8 @@
     title <
       name = Klinische Neurophysiologie ;
       issn = 1434-0275 ;
-      eissn = 1439-4081
+      eissn = 1439-4081 ;
+      doi = 10.1055/s-00000032
 
     >
     param[journal_id] = 10.1055/s-00000032
@@ -2091,7 +2160,8 @@
     title <
       name = Klinische Monatsblätter für Augenheilkunde ;
       issn = 0023-2165 ;
-      eissn = 1439-3999
+      eissn = 1439-3999 ;
+      doi = 10.1055/s-00000031
 
     >
     param[journal_id] = 10.1055/s-00000031
@@ -2114,7 +2184,8 @@
     title <
       name = Klinische Neurophysiologie ;
       issn = 1434-0275 ;
-      eissn = 1439-4081
+      eissn = 1439-4081 ;
+      doi = 10.1055/s-00000032
 
     >
     param[journal_id] = 10.1055/s-00000032
@@ -2145,7 +2216,8 @@
     title <
       name = Klinische Pädiatrie ;
       issn = 0300-8630 ;
-      eissn = 1439-3824
+      eissn = 1439-3824 ;
+      doi = 10.1055/s-00000034
 
     >
     param[journal_id] = 10.1055/s-00000034
@@ -2191,7 +2263,8 @@
     title <
       name = Krankenhaushygiene up2date ;
       issn = 1862-5797 ;
-      eissn = 1862-5800
+      eissn = 1862-5800 ;
+      doi = 10.1055/s-00000137
 
     >
     param[journal_id] = 10.1055/s-00000137
@@ -2211,7 +2284,8 @@
     title <
       name = Krankenhauspsychiatrie ;
       issn = 0937-289X ;
-      eissn = 1439-3816
+      eissn = 1439-3816 ;
+      doi = 10.1055/s-00000035
 
     >
     param[journal_id] = 10.1055/s-00000035
@@ -2237,7 +2311,8 @@
     title <
       name = Laryngo-Rhino-Otologie ;
       issn = 0935-8943 ;
-      eissn = 1438-8685
+      eissn = 1438-8685 ;
+      doi = 10.1055/s-00000036
 
     >
     param[journal_id] = 10.1055/s-00000036
@@ -2284,7 +2359,8 @@
     title <
       name = Lege artis Das Magazin zur ärztlichen Weiterbildung ;
       issn = 2191-4192 ;
-      eissn = 2191-4591
+      eissn = 2191-4591 ;
+      doi = 10.1055/s-00000168
 
     >
     param[journal_id] = 10.1055/s-00000168
@@ -2299,7 +2375,8 @@
     title <
       name = manuelletherapie ;
       issn = 1433-2671 ;
-      eissn = 1439-2348
+      eissn = 1439-2348 ;
+      doi = 10.1055/s-00000038
 
     >
     param[journal_id] = 10.1055/s-00000038
@@ -2322,7 +2399,8 @@
     title <
       name = Neuropediatrics ;
       issn = 0174-304X ;
-      eissn = 1439-1899
+      eissn = 1439-1899 ;
+      doi = 10.1055/s-00000041
 
     >
     param[journal_id] = 10.1055/s-00000041
@@ -2368,7 +2446,8 @@
     title <
       name = Neuroradiologie Scan ;
       issn = 1616-9697 ;
-      eissn = 1616-9700
+      eissn = 1616-9700 ;
+      doi = 10.1055/s-00000173
 
 
     >
@@ -2385,7 +2464,8 @@
     title <
       name = neuroreha ;
       issn = 1611-6496 ;
-      eissn = 1611-7654
+      eissn = 1611-7654 ;
+      doi = 10.1055/s-00000160
 
     >
     param[journal_id] = 10.1055/s-00000160
@@ -2403,7 +2483,8 @@
     title <
       name = Notarzt Der ;
       issn = 0177-2309 ;
-      eissn = 1438-8693
+      eissn = 1438-8693 ;
+      doi = 10.1055/s-00000043
 
     >
     param[journal_id] = 10.1055/s-00000043
@@ -2431,7 +2512,8 @@
     title <
       name = Notfallmedizin up2date ;
       issn = 1611-6550 ;
-      eissn = 1862-6955
+      eissn = 1862-6955 ;
+      doi = 10.1055/s-00000139
 
     >
     param[journal_id] = 10.1055/s-00000139
@@ -2451,7 +2533,8 @@
     title <
       name = Nuklearmediziner Der ;
       issn = 0723-7065 ;
-      eissn = 1439-5800
+      eissn = 1439-5800 ;
+      doi = 10.1055/s-00000045
 
     >
     param[journal_id] = 10.1055/s-00000045
@@ -2475,7 +2558,8 @@
     title <
       name = OP-Journal ;
       issn = 0178-1715 ;
-      eissn = 1439-2496
+      eissn = 1439-2496 ;
+      doi = 10.1055/s-00000046
 
     >
     param[journal_id] = 10.1055/s-00000046
@@ -2501,7 +2585,8 @@
     title <
       name = Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten ;
       issn = 2193-5254 ;
-      eissn = 2193-5262
+      eissn = 2193-5262 ;
+      doi = 10.1055/s-00000046179
 
     >
     param[journal_id] = 10.1055/s-00000046179
@@ -2516,7 +2601,8 @@
     title <
       name = Orthopädie und Unfallchirurgie up2date ;
       issn = 1611-7859 ;
-      eissn = 1861-1982
+      eissn = 1861-1982 ;
+      doi = 10.1055/s-00000132
 
     >
     param[journal_id] = 10.1055/s-00000132
@@ -2537,7 +2623,8 @@
     title <
       name = Orthopedic Trauma Directions ;
       issn = 1612-8060 ;
-      eissn = 1612-8087
+      eissn = 1612-8087 ;
+      doi = 10.1055/s-00000121
 
     >
     param[journal_id] = 10.1055/s-00000121
@@ -2560,7 +2647,8 @@
     title <
       name = Osteosynthesis & Trauma Care ;
       issn = 1618-971X ;
-      eissn = 1618-9728
+      eissn = 1618-9728 ;
+      doi = 10.1055/s-00000048
 
     >
     param[journal_id] = 10.1055/s-00000048
@@ -2584,7 +2672,8 @@
     title <
       name = Osteosynthese International ;
       issn = 0944-6516 ;
-      eissn = 1439-0868
+      eissn = 1439-0868 ;
+      doi = 10.1055/s-00000047
 
     >
     param[journal_id] = 10.1055/s-00000047
@@ -2609,7 +2698,8 @@
     title <
       name = Pädiatrie up2date ;
       issn = 1611-6445 ;
-      eissn = 1862-9393
+      eissn = 1862-9393 ;
+      doi = 10.1055/s-00000140
 
     >
     param[journal_id] = 10.1055/s-00000140
@@ -2630,7 +2720,8 @@
     title <
       name = Perspectives in Plastic Surgery ;
       issn = 0892-3957 ;
-      eissn = 1521-575X
+      eissn = 1521-575X ;
+      doi = 10.1055/s-00000051
 
     >
     param[journal_id] = 10.1055/s-00000051
@@ -2669,7 +2760,8 @@
     title <
       name = pferde spiegel ;
       issn = 1860-3203 ;
-      eissn = 1868-0445
+      eissn = 1868-0445 ;
+      doi = 10.1055/s-00000155
 
     >
     param[journal_id] = 10.1055/s-00000155
@@ -2692,7 +2784,8 @@
     title <
       name = Pharmacopsychiatry ;
       issn = 0176-3679 ;
-      eissn = 1439-0795
+      eissn = 1439-0795 ;
+      doi = 10.1055/s-00000054
 
     >
     param[journal_id] = 10.1055/s-00000054
@@ -2751,7 +2844,8 @@
     title <
       name = Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin ;
       issn = 0940-6689 ;
-      eissn = 1439-085X
+      eissn = 1439-085X ;
+      doi = 10.1055/s-00000056
 
     >
     param[journal_id] = 10.1055/s-00000056
@@ -2786,7 +2880,8 @@
     title <
       name = physiopraxis ;
       issn = 1439-023X ;
-      eissn = 1869-5515
+      eissn = 1869-5515 ;
+      doi = 10.1055/s-00000162
 
     >
     param[journal_id] = 10.1055/s-00000162
@@ -2802,7 +2897,8 @@
     title <
       name = physioscience ;
       issn = 1860-3092 ;
-      eissn = 1860-3351
+      eissn = 1860-3351 ;
+      doi = 10.1055/s-00000128
 
     >
     param[journal_id] = 10.1055/s-00000128
@@ -2823,7 +2919,8 @@
     title <
       name = PiD - Psychotherapie im Dialog ;
       issn = 1438-7026 ;
-      eissn = 1439-913X
+      eissn = 1439-913X ;
+      doi = 10.1055/s-00000117
 
     >
     param[journal_id] = 10.1055/s-00000117
@@ -2850,7 +2947,8 @@
     title <
       name = Plant Biology ;
       issn = 1435-8603 ;
-      eissn = 1438-8677
+      eissn = 1438-8677 ;
+      doi = 10.1055/s-00000057
 
     >
     param[journal_id] = 10.1055/s-00000057
@@ -2878,7 +2976,8 @@
     title <
       name = Planta Medica ;
       issn = 0032-0943 ;
-      eissn = 1439-0221
+      eissn = 1439-0221 ;
+      doi = 10.1055/s-00000058
 
     >
     param[journal_id] = 10.1055/s-00000058
@@ -2951,7 +3050,8 @@
     title <
       name = Pneumologie ;
       issn = 0934-8387 ;
-      eissn = 1438-8790
+      eissn = 1438-8790 ;
+      doi = 10.1055/s-00000059
 
     >
     param[journal_id] = 10.1055/s-00000059
@@ -2978,7 +3078,8 @@
     title <
       name = PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie ;
       issn = 0937-2032 ;
-      eissn = 1439-1058
+      eissn = 1439-1058 ;
+      doi = 10.1055/s-00000060
 
     >
     param[journal_id] = 10.1055/s-00000060
@@ -3004,7 +3105,8 @@
     title <
       name = Psych Pflege Heute ;
       issn = 0949-1619 ;
-      eissn = 1439-0213
+      eissn = 1439-0213 ;
+      doi = 10.1055/s-00000061
 
     >
     param[journal_id] = 10.1055/s-00000061
@@ -3029,7 +3131,8 @@
     title <
       name = Psychiatrie und Psychotherapie up2date ;
       issn = 1611-7867 ;
-      eissn = 1863-7175
+      eissn = 1863-7175 ;
+      doi = 10.1055/s-00000141
 
 
     >
@@ -3049,7 +3152,8 @@
     title <
       name = Psychiatrische Praxis ;
       issn = 0303-4259 ;
-      eissn = 1439-0876
+      eissn = 1439-0876 ;
+      doi = 10.1055/s-00000062
 
     >
     param[journal_id] = 10.1055/s-00000062
@@ -3074,7 +3178,8 @@
     title <
       name = Psychoneuro - Psychiatrie - Neurologie - Psychotherapie ;
       issn = 1611-9991 ;
-      eissn = 1439-1813
+      eissn = 1439-1813 ;
+      doi = 10.1055/s-00000063
 
     >
     param[journal_id] = 10.1055/s-00000063
@@ -3097,7 +3202,8 @@
     title <
       name = Radiologie up2date ;
       issn = 1616-0681 ;
-      eissn = 1617-8300
+      eissn = 1617-8300 ;
+      doi = 10.1055/s-00000118
 
     >
     param[journal_id] = 10.1055/s-00000118
@@ -3122,7 +3228,8 @@
     title <
       name = Radiopraxis ;
       issn = 1866-1033 ;
-      eissn = 1866-1041
+      eissn = 1866-1041 ;
+      doi = 10.1055/s-00000159
 
     >
     param[journal_id] = 10.1055/s-00000159
@@ -3140,7 +3247,8 @@
     title <
       name = Rehabilitation Die ;
       issn = 0034-3536 ;
-      eissn = 1439-1309
+      eissn = 1439-1309 ;
+      doi = 10.1055/s-00000065
 
     >
     param[journal_id] = 10.1055/s-00000065
@@ -3166,7 +3274,8 @@
     title <
       name = retten! ;
       issn = 2193-2387 ;
-      eissn = 2193-2395
+      eissn = 2193-2395 ;
+      doi = 10.1055/s-002-23220
 
     >
     param[journal_id] = 10.1055/s-002-23220
@@ -3180,7 +3289,8 @@
     title <
       name = RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren ;
       issn = 1438-9029 ;
-      eissn = 1438-9010
+      eissn = 1438-9010 ;
+      doi = 10.1055/s-00000066
 
     >
     param[journal_id] = 10.1055/s-00000066
@@ -3259,7 +3369,8 @@
     title <
       name = Seminars in Hearing ;
       issn = 0734-0451 ;
-      eissn = 1098-8955
+      eissn = 1098-8955 ;
+      doi = 10.1055/s-00000067
 
     >
     param[journal_id] = 10.1055/s-00000067
@@ -3303,7 +3414,8 @@
     title <
       name = Seminars in Interventional Radiology ;
       issn = 0739-9529 ;
-      eissn = 1098-8963
+      eissn = 1098-8963 ;
+      doi = 10.1055/s-00000068
 
     >
     param[journal_id] = 10.1055/s-00000068
@@ -3346,7 +3458,8 @@
     title <
       name = Seminars in Liver Disease ;
       issn = 0272-8087 ;
-      eissn = 1098-8971
+      eissn = 1098-8971 ;
+      doi = 10.1055/s-00000069
 
     >
     param[journal_id] = 10.1055/s-00000069
@@ -3392,7 +3505,8 @@
     title <
       name = Seminars in Musculoskeletal Radiology ;
       issn = 1089-7860 ;
-      eissn = 1098-898X
+      eissn = 1098-898X ;
+      doi = 10.1055/s-00000070
 
     >
     param[journal_id] = 10.1055/s-00000070
@@ -3422,7 +3536,8 @@
     title <
       name = Seminars in Neurology ;
       issn = 0271-8235 ;
-      eissn = 1098-9021
+      eissn = 1098-9021 ;
+      doi = 10.1055/s-00000071
 
     >
     param[journal_id] = 10.1055/s-00000071
@@ -3467,7 +3582,8 @@
     title <
       name = Seminars in Neurosurgery ;
       issn = 1526-8012 ;
-      eissn = 1526-4572
+      eissn = 1526-4572 ;
+      doi = 10.1055/s-00000050
 
 
     >
@@ -3495,7 +3611,8 @@
     title <
       name = Seminars in Plastic Surgery ;
       issn = 1535-2188 ;
-      eissn = 1536-0067
+      eissn = 1536-0067 ;
+      doi = 10.1055/s-00000051
 
     >
     param[journal_id] = 10.1055/s-00000051
@@ -3520,7 +3637,8 @@
     title <
       name = Seminars in Reproductive Medicine ;
       issn = 1526-8004 ;
-      eissn = 1526-4564
+      eissn = 1526-4564 ;
+      doi = 10.1055/s-00000072
 
     >
     param[journal_id] = 10.1055/s-00000072
@@ -3547,7 +3665,8 @@
     title <
       name = Seminars in Respiratory and Critical Care Medicine ;
       issn = 1069-3424 ;
-      eissn = 1098-9048
+      eissn = 1098-9048 ;
+      doi = 10.1055/s-00000075
 
     >
     param[journal_id] = 10.1055/s-00000075
@@ -3580,7 +3699,8 @@
     title <
       name = Seminars in Speech and Language ;
       issn = 0734-0478 ;
-      eissn = 1098-9056
+      eissn = 1098-9056 ;
+      doi = 10.1055/s-00000076
 
     >
     param[journal_id] = 10.1055/s-00000076
@@ -3623,7 +3743,8 @@
     title <
       name = Seminars in Thrombosis and Hemostasis ;
       issn = 0094-6176 ;
-      eissn = 1098-9064
+      eissn = 1098-9064 ;
+      doi = 10.1055/s-00000077
 
     >
     param[journal_id] = 10.1055/s-00000077
@@ -3676,7 +3797,8 @@
     title <
       name = Senologie - Zeitschrift für Mammadiagnostik und -therapie ;
       issn = 1611-6453 ;
-      eissn = 1611-647X
+      eissn = 1611-647X ;
+      doi = 10.1055/s-00000125
 
     >
     param[journal_id] = 10.1055/s-00000125
@@ -3699,7 +3821,8 @@
     title <
       name = Skull Base ;
       issn = 1531-5010 ;
-      eissn = 1532-0065
+      eissn = 1532-0065 ;
+      doi = 10.1055/s-00000079
 
     >
     param[journal_id] = 10.1055/s-00000079
@@ -3725,7 +3848,8 @@
     title <
       name = Skull Base Reports ;
       issn = 2157-6971 ;
-      eissn = 2157-698X
+      eissn = 2157-698X ;
+      doi = 10.1055/s-00000170
 
     >
     param[journal_id] = 10.1055/s-00000170
@@ -3741,7 +3865,8 @@
     title <
       name = Sleep And Breathing ;
       issn = 1520-9512 ;
-      eissn = 1522-1709
+      eissn = 1522-1709 ;
+      doi = 10.1055/s-00000080
 
     >
     param[journal_id] = 10.1055/s-00000080
@@ -3769,7 +3894,8 @@
     title <
       name = Sportverletzung - Sportschaden ;
       issn = 0932-0555 ;
-      eissn = 1439-1236
+      eissn = 1439-1236 ;
+      doi = 10.1055/s-00000081
 
     >
     param[journal_id] = 10.1055/s-00000081
@@ -3809,7 +3935,8 @@
     title <
       name = Sprache Stimme Gehör ;
       issn = 0342-0477 ;
-      eissn = 1439-1260
+      eissn = 1439-1260 ;
+      doi = 10.1055/s-00000082
 
     >
     param[journal_id] = 10.1055/s-00000082
@@ -3836,7 +3963,8 @@
     title <
       name = Suchttherapie ;
       issn = 1439-9903 ;
-      eissn = 1439-989X
+      eissn = 1439-989X ;
+      doi = 10.1055/s-00000115
 
     >
     param[journal_id] = 10.1055/s-00000115
@@ -3863,7 +3991,8 @@
     title <
       name = SYNFACTS ;
       issn = 1861-1958 ;
-      eissn = 1861-194X
+      eissn = 1861-194X ;
+      doi = 10.1055/s-00000131
 
     >
     param[journal_id] = 10.1055/s-00000131
@@ -3885,7 +4014,8 @@
     title <
       name = SYNLETT ;
       issn = 0936-5214 ;
-      eissn = 1437-2096
+      eissn = 1437-2096 ;
+      doi = 10.1055/s-00000083
 
     >
     param[journal_id] = 10.1055/s-00000083
@@ -3923,7 +4053,8 @@
     title <
       name = SYNTHESIS ;
       issn = 0039-7881 ;
-      eissn = 1437-210X
+      eissn = 1437-210X ;
+      doi = 10.1055/s-00000084
 
     >
     param[journal_id] = 10.1055/s-00000084
@@ -3961,7 +4092,8 @@
     title <
       name = team spiegel ;
       issn = 1868-1948 ;
-      eissn = 1868-193X
+      eissn = 1868-193X ;
+      doi = 10.1055/s-00000156
 
     >
     param[journal_id] = 10.1055/s-00000156
@@ -3985,7 +4117,8 @@
     title <
       name = team-konkret ;
       issn = 1869-3202 ;
-      eissn = 1869-3210
+      eissn = 1869-3210 ;
+      doi = 10.1055/s-00000164
 
     >
     param[journal_id] = 10.1055/s-00000164
@@ -4002,7 +4135,8 @@
     title <
       name = The Thoracic and Cardiovascular Surgeon ;
       issn = 0171-6425 ;
-      eissn = 1439-1902
+      eissn = 1439-1902 ;
+      doi = 10.1055/s-00000085
 
     >
    param[journal_id] = 10.1055/s-00000085
@@ -4050,7 +4184,8 @@
     title <
       name = Tierarzthelfer/in konkret ;
       issn = 1614-8754 ;
-      eissn = 1865-3987
+      eissn = 1865-3987 ;
+      doi = 10.1055/s-00000157
 
 
     >
@@ -4067,7 +4202,8 @@
     title <
       name = Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie ;
       issn = 2191-8805 ;
-      eissn = 2191-8813
+      eissn = 2191-8813 ;
+      doi = 10.1055/s-00000172
 
     >
     param[journal_id] = 10.1055/s-00000172
@@ -4083,7 +4219,8 @@
     title <
       name = TumorDiagnostik & Therapie ;
       issn = 0722-219X ;
-      eissn = 1439-1279
+      eissn = 1439-1279 ;
+      doi = 10.1055/s-00000088
 
     >
     param[journal_id] = 10.1055/s-00000088
@@ -4110,7 +4247,8 @@
     title <
       name = Ultraschall in der Medizin - European Journal of Ultrasound ;
       issn = 0172-4614 ;
-      eissn = 1438-8782
+      eissn = 1438-8782 ;
+      doi = 10.1055/s-00000089
 
     >
     param[journal_id] = 10.1055/s-00000089
@@ -4157,7 +4295,8 @@
     title <
       name = veterinär spiegel ;
       issn = 0940-8711 ;
-      eissn = 1868-0437
+      eissn = 1868-0437 ;
+      doi = 10.1055/s-00000154
 
     >
     param[journal_id] = 10.1055/s-00000154
@@ -4181,7 +4320,8 @@
     title <
       name = Via medici ;
       issn = 0949-2488 ;
-      eissn = 1439-1414
+      eissn = 1439-1414 ;
+      doi = 10.1055/s-00000158
 
     >
     param[journal_id] = 10.1055/s-00000158
@@ -4200,7 +4340,8 @@
     title <
       name = Viszeralchirurgie ;
       issn = 1435-3067 ;
-      eissn = 1439-1643
+      eissn = 1439-1643 ;
+      doi = 10.1055/s-00000091
 
     >
     param[journal_id] = 10.1055/s-00000091
@@ -4227,7 +4368,8 @@
     title <
       name = Zahnmedizin up2date ;
       issn = 1865-0457 ;
-      eissn = 1865-0465
+      eissn = 1865-0465 ;
+      doi = 10.1055/s-00000150
 
     >
     param[journal_id] = 10.1055/s-00000150
@@ -4247,7 +4389,8 @@
     title <
       name = Zeitschrift für Ganzheitliche Tiermedizin ;
       issn = 0939-7868 ;
-      eissn = 1439-1422
+      eissn = 1439-1422 ;
+      doi = 10.1055/s-00000149
 
     >
     param[journal_id] = 10.1055/s-00000149
@@ -4267,7 +4410,8 @@
     title <
       name = Zeitschrift für Gastroenterologie ;
       issn = 0044-2771 ;
-      eissn = 1439-7803
+      eissn = 1439-7803 ;
+      doi = 10.1055/s-00000094
 
     >
     param[journal_id] = 10.1055/s-00000094
@@ -4294,7 +4438,8 @@
     title <
       name = Zeitschrift für Geburtshilfe und Neonatologie ;
       issn = 0948-2393 ;
-      eissn = 1439-1651
+      eissn = 1439-1651 ;
+      doi = 10.1055/s-00000095
 
     >
     param[journal_id] = 10.1055/s-00000095
@@ -4321,7 +4466,8 @@
     title <
       name = Zeitschrift für Klassische Homöopathie ;
       issn = 0935-0853 ;
-      eissn = 1439-4308
+      eissn = 1439-4308 ;
+      doi = 10.1055/s-00000096
 
     >
     param[journal_id] = 10.1055/s-00000096
@@ -4392,7 +4538,8 @@
     title <
       name = Zeitschrift für Komplementärmedizin ;
       issn = 1867-6081 ;
-      eissn = 1867-6103
+      eissn = 1867-6103 ;
+      doi = 10.1055/s-00000153
 
     >
     param[journal_id] = 10.1055/s-00000153
@@ -4410,7 +4557,8 @@
     title <
       name = Zeitschrift für Orthomolekulare Medizin ;
       issn = 1611-5562 ;
-      eissn = 1864-2470
+      eissn = 1864-2470 ;
+      doi = 10.1055/s-00000144
 
     >
     param[journal_id] = 10.1055/s-00000144
@@ -4430,7 +4578,8 @@
     title <
       name = Zeitschrift für Orthopädie und Unfallchirurgie ;
       issn = 1864-6697 ;
-      eissn = 1864-6743
+      eissn = 1864-6743 ;
+      doi = 10.1055/s-00000099
 
     >
     param[journal_id] = 10.1055/s-00000099
@@ -4449,7 +4598,8 @@
     title <
       name = Zeitschrift für Orthopädie und ihre Grenzgebiete ;
       issn = 0044-3220 ;
-      eissn = 1438-941X
+      eissn = 1438-941X ;
+      doi = 10.1055/s-00000100
 
     >
     param[journal_id] = 10.1055/s-00000100
@@ -4495,7 +4645,8 @@
     title <
       name = Zeitschrift für Palliativmedizin ;
       issn = 1615-2921 ;
-      eissn = 1615-293X
+      eissn = 1615-293X ;
+      doi = 10.1055/s-00000102
 
     >
     param[journal_id] = 10.1055/s-00000102
@@ -4521,7 +4672,8 @@
     title <
       name = Zeitschrift für Phytotherapie ;
       issn = 0722-348X ;
-      eissn = 1438-9584
+      eissn = 1438-9584 ;
+      doi = 10.1055/s-00000101
 
     >
     param[journal_id] = 10.1055/s-00000101
@@ -4543,7 +4695,8 @@
     title <
       name = Zeitschrift für Sexualforschung ;
       issn = 0932-8114 ;
-      eissn = 1438-9460
+      eissn = 1438-9460 ;
+      doi = 10.1055/s-00000103
 
     >
     param[journal_id] = 10.1055/s-00000103
@@ -4569,7 +4722,8 @@
     title <
       name = Zentralblatt für Chirurgie ;
       issn = 0044-409X ;
-      eissn = 1438-9592
+      eissn = 1438-9592 ;
+      doi = 10.1055/s-00000104
 
     >
     param[journal_id] = 10.1055/s-00000104
@@ -4596,7 +4750,8 @@
     title <
       name = Zentralblatt für Gynäkologie ;
       issn = 0044-4197 ;
-      eissn = 1438-9762
+      eissn = 1438-9762 ;
+      doi = 10.1055/s-00000105
 
     >
     param[journal_id] = 10.1055/s-00000105
@@ -4623,7 +4778,8 @@
     title <
       name = Zentralblatt für Kinderchirurgie ;
       issn = 0940-9599 ;
-      eissn = 1438-9770
+      eissn = 1438-9770 ;
+      doi = 10.1055/s-00000016
 
     >
     param[journal_id] = 10.1055/s-00000016
@@ -4650,7 +4806,8 @@
     title <
       name = ZFA - Zeitschrift für Allgemeinmedizin ;
       issn = 1433-6251 ;
-      eissn = 1439-9229
+      eissn = 1439-9229 ;
+      doi = 10.1055/s-00000111
 
     >
     param[journal_id] = 10.1055/s-00000111
@@ -4674,7 +4831,8 @@
     title <
       name = ZWR - Das Deutsche Zahnärzteblatt ;
       issn = 0044-166X ;
-      eissn = 1439-9148
+      eissn = 1439-9148 ;
+      doi = 10.1055/s-00000112
 
     >
     param[journal_id] = 10.1055/s-00000112

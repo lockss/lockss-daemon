@@ -6,7 +6,6 @@
     info[tester] = 3
   >
 
-  attr[contract] = 2009
   plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
   implicit < status1 ; status ; year ; name ; param[volume_name] >
 
@@ -217,8 +216,8 @@
     au < released ; crawling ; 2011 ; The Journal of Cell Biology Volume 195 ; 195 >
     au < released ; crawling ; 2012 ; The Journal of Cell Biology Volume 196 ; 196 >
     au < released ; crawling ; 2012 ; The Journal of Cell Biology Volume 197 ; 197 >
-    au < released ; manifest ; 2012 ; The Journal of Cell Biology Volume 198 ; 198 >
-    au < expected ; exists ; 2012 ; The Journal of Cell Biology Volume 199 ; 199 >
+    au < released ; crawling ; 2012 ; The Journal of Cell Biology Volume 198 ; 198 >
+    au < released ; crawling ; 2012 ; The Journal of Cell Biology Volume 199 ; 199 >
 
   }
 
@@ -594,7 +593,7 @@
     au < released ; crawling ; 2011 ; The Journal of General Physiology Volume 137 ; 137 >
     au < released ; crawling ; 2011 ; The Journal of General Physiology Volume 138 ; 138 >
     au < released ; crawling ; 2012 ; The Journal of General Physiology Volume 139 ; 139 >
-    au < released ; manifest ; 2012 ; The Journal of General Physiology Volume 140 ; 140 >
+    au < released ; crawling ; 2012 ; The Journal of General Physiology Volume 140 ; 140 >
 
   }
 

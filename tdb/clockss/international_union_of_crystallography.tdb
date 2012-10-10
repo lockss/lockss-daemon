@@ -6,7 +6,6 @@
     info[tester] = 4
   >
   
-  attr[contract] = 2010
   plugin = org.lockss.plugin.internationalunionofcrystallography.ClockssInternationalUnionOfCrystallographyPlugin
   param[base_url] = http://journals.iucr.org/
   param[scripts_url] = http://scripts.iucr.org/

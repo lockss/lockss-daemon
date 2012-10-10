@@ -6,7 +6,6 @@
     info[tester] = 4
   >
 
-  attr[contract] = 2011
   plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin 
   implicit < status1 ; status ; year ; name ; volume ; param[year] >
   comment[year] = even though bibliographic year is e.g. 2006-2007, the manifest year is 2006.
@@ -39,7 +38,7 @@
     au < manifest ; exists ; 2006-2007 ; Archaeology International Volume 10 ; 10 ; 2006 >
     au < manifest ; exists ; 2007-2008 ; Archaeology International Volume 11 ; 11 ; 2007 >
     au < manifest ; exists ; 2008-2009 ; Archaeology International Volume 12 ; 12 ; 2008 >
-    au < testing ; exists ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 >
+    au < released ; crawling ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 >
     
   }
   
