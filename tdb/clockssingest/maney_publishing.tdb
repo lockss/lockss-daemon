@@ -330,7 +330,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[0] = changing name to International Journal of Developmental Disabilities (IJDD) in 2012
     
-    au < crawling ; exists ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
+    au < testing ; exists ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
 
   }
 
@@ -393,9 +393,9 @@
     au < manifest ; exists ; 2007 ; Bronte Studies Volume 32 ; 32 > 
     au < manifest ; exists ; 2008 ; Bronte Studies Volume 33 ; 33 > 
     au < manifest ; exists ; 2009 ; Bronte Studies Volume 34 ; 34 > 
-    au < crawling ; exists ; 2010 ; Bronte Studies Volume 35 ; 35 > 
-    au < crawling ; exists ; 2011 ; Bronte Studies Volume 36 ; 36 > 
-    au < crawling ; exists ; 2012 ; Bronte Studies Volume 37 ; 37 > 
+    au < testing ; exists ; 2010 ; Bronte Studies Volume 35 ; 35 > 
+    au < testing ; exists ; 2011 ; Bronte Studies Volume 36 ; 36 > 
+    au < testing ; exists ; 2012 ; Bronte Studies Volume 37 ; 37 > 
 
   }
 
@@ -422,7 +422,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
     au < doNotProcess ; doNotProcess ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 >
-    au < crawling ; exists ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 > 
+    au < testing ; exists ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 > 
 
   }
 
@@ -449,8 +449,8 @@
     au < manifest ; exists ; 2007 ; Bulletin of the Council for British Research in the Levant Volume 2 ; 2 > 
     au < manifest ; exists ; 2008 ; Bulletin of the Council for British Research in the Levant Volume 3 ; 3 > 
     au < manifest ; exists ; 2009 ; Bulletin of the Council for British Research in the Levant Volume 4 ; 4 > 
-    au < crawling ; exists ; 2010 ; Bulletin of the Council for British Research in the Levant Volume 5 ; 5 > 
-    au < crawling ; exists ; 2011 ; Bulletin of the Council for British Research in the Levant Volume 6 ; 6 > 
+    au < testing ; exists ; 2010 ; Bulletin of the Council for British Research in the Levant Volume 5 ; 5 > 
+    au < testing ; exists ; 2011 ; Bulletin of the Council for British Research in the Levant Volume 6 ; 6 > 
     au < expected ; exists ; 2012 ; Bulletin of the Council for British Research in the Levant Volume 7 ; 7 > 
 
   }
@@ -507,9 +507,9 @@
     au < manifest ; exists ; 2007 ; Byzantine and Modern Greek Studies Volume 31 ; 31 >
     au < manifest ; exists ; 2008 ; Byzantine and Modern Greek Studies Volume 32 ; 32 >
     au < manifest ; exists ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 >
-    au < crawling ; exists ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
-    au < crawling ; exists ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
-    au < crawling ; exists ; 2012 ; Byzantine and Modern Greek Studies Volume 36 ; 36 >
+    au < testing ; exists ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
+    au < testing ; exists ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
+    au < testing ; exists ; 2012 ; Byzantine and Modern Greek Studies Volume 36 ; 36 >
 
   }
 
