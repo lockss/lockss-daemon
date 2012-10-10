@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.8 2012-09-26 20:59:28 alexandraohlson Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.9 2012-10-10 18:03:52 ldoan Exp $
  */
 
 /*
@@ -82,6 +82,30 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       + "<span class=\"issn\">0315-162X</span></li>"
       + "<li><span>Online ISSN: </span>"
       + "<span class=\"issn\">1499-2752</span></li>" + "</ul>" + "</div>"
+      + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
+
+  private static final String withCol4SquareAds = "<div id=\"footer\">"
+      + "<div class=\"block-1\">"
+      + "<ul class=\"col4-square\">"
+      + "<li><a href=\"/cgi/adclick/?ad=35597&amp;adclick=true&amp;url=http%3A%2F%2Fwww.facebook.com%2FPlantphysiology\">"
+      + "<img class=\"adborder0\" title=\"PlantPhysFacebook\" width=\"160\" height=\"150\" src=\"http://www.plantphysiol.org/adsystem/graphics/5602385865303331/plantphysiol/squarepp.jpg?ad=35597&amp;adview=true\" alt=\"PlantPhysFacebook\" /></a></li>"
+      + "</ul>"
+      + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
+
+  private static final String withoutCol4SquareAds = "<div id=\"footer\">"
+      + "<div class=\"block-1\">"
+      + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
+
+  private static final String withCol4TowerAds = "<div id=\"footer\">"
+      + "<div class=\"block-1\">"
+      + "<ul class=\"col4-tower\">"
+      + "<li><a href=\"/cgi/adclick/?ad=35598&amp;adclick=true&amp;url=http%3A%2F%2Fwww.plantphysiol.org%2F\">"
+      + "<img class=\"adborder10\" title=\"10pdfPromo\" width=\"160\" height=\"600\" src=\"http://www.plantphysiol.org/adsystem/graphics/06456092319841111/plantphysiol/vertauthors.jpg?ad=35598&amp;adview=true alt=\"10pdfPromo\" /></a></li>"
+      + "</ul>"
+      + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
+
+  private static final String withoutCol4TowerAds = "<div id=\"footer\">"
+      + "<div class=\"block-1\">"
       + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
 
   private static final String withCopyright = "<div id=\"footer\">"
