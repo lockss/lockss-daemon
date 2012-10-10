@@ -6317,7 +6317,7 @@
     au < manifest ; exists ; 1993 ; Health & Social Work Volume 18 ; 18 ; >
     au < manifest ; exists ; 1994 ; Health & Social Work Volume 19 ; 19 ; >
     au < manifest ; exists ; 1995 ; Health & Social Work Volume 20 ; 20 ; >
-    au < exists ; exists ; 1995 ; Health & Social Work Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1995 ; Health & Social Work Volume 21 ; 21 ; >
     au < manifest ; exists ; 1997 ; Health & Social Work Volume 22 ; 22 ; >
     au < manifest ; exists ; 1998 ; Health & Social Work Volume 23 ; 23 ; >
     au < manifest ; exists ; 1999 ; Health & Social Work Volume 24 ; 24 ; >
@@ -6965,16 +6965,16 @@
     param[base_url] = http://icsidreview.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1986 ; ICSID Review: Foreign Investment Law Journal Volume 1 ; 1 ; >
-    au < exists ; exists ; 1987 ; ICSID Review: Foreign Investment Law Journal Volume 2 ; 2 ; >
-    au < exists ; exists ; 1988 ; ICSID Review: Foreign Investment Law Journal Volume 3 ; 3 ; >
-    au < exists ; exists ; 1989 ; ICSID Review: Foreign Investment Law Journal Volume 4 ; 4 ; >
-    au < exists ; exists ; 1990 ; ICSID Review: Foreign Investment Law Journal Volume 5 ; 5 ; >
-    au < exists ; exists ; 1991 ; ICSID Review: Foreign Investment Law Journal Volume 6 ; 6 ; >
-    au < exists ; exists ; 1992 ; ICSID Review: Foreign Investment Law Journal Volume 7 ; 7 ; >
-    au < exists ; exists ; 1993 ; ICSID Review: Foreign Investment Law Journal Volume 8 ; 8 ; >
-    au < exists ; exists ; 1994 ; ICSID Review: Foreign Investment Law Journal Volume 9 ; 9 ; >
-    au < exists ; exists ; 1995 ; ICSID Review: Foreign Investment Law Journal Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1986 ; ICSID Review: Foreign Investment Law Journal Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1987 ; ICSID Review: Foreign Investment Law Journal Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1988 ; ICSID Review: Foreign Investment Law Journal Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1989 ; ICSID Review: Foreign Investment Law Journal Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1990 ; ICSID Review: Foreign Investment Law Journal Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1991 ; ICSID Review: Foreign Investment Law Journal Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1992 ; ICSID Review: Foreign Investment Law Journal Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1993 ; ICSID Review: Foreign Investment Law Journal Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1994 ; ICSID Review: Foreign Investment Law Journal Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1995 ; ICSID Review: Foreign Investment Law Journal Volume 10 ; 10 ; >
     au < manifest ; exists ; 1996 ; ICSID Review: Foreign Investment Law Journal Volume 11 ; 11 ; >
     au < manifest ; exists ; 1997 ; ICSID Review: Foreign Investment Law Journal Volume 12 ; 12 ; >
     au < manifest ; exists ; 1998 ; ICSID Review: Foreign Investment Law Journal Volume 13 ; 13 ; >
@@ -8873,41 +8873,41 @@
     param[base_url] = http://jat.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1976 ; Journal of Analytical Toxicology Volume 1 ; 1 ; >
-    au < exists ; exists ; 1977 ; Journal of Analytical Toxicology Volume 2 ; 2 ; >
-    au < exists ; exists ; 1978 ; Journal of Analytical Toxicology Volume 3 ; 3 ; >
-    au < exists ; exists ; 1979 ; Journal of Analytical Toxicology Volume 4 ; 4 ; >
-    au < exists ; exists ; 1980 ; Journal of Analytical Toxicology Volume 5 ; 5 ; >
-    au < exists ; exists ; 1981 ; Journal of Analytical Toxicology Volume 6 ; 6 ; >
-    au < exists ; exists ; 1982 ; Journal of Analytical Toxicology Volume 7 ; 7 ; >
-    au < exists ; exists ; 1983 ; Journal of Analytical Toxicology Volume 8 ; 8 ; >
-    au < exists ; exists ; 1984 ; Journal of Analytical Toxicology Volume 8 ; 8 ; >
-    au < exists ; exists ; 1985 ; Journal of Analytical Toxicology Volume 9 ; 9 ; >
-    au < exists ; exists ; 1986 ; Journal of Analytical Toxicology Volume 10 ; 10 ; >
-    au < exists ; exists ; 1987 ; Journal of Analytical Toxicology Volume 11 ; 11 ; >
-    au < exists ; exists ; 1988 ; Journal of Analytical Toxicology Volume 12 ; 12 ; >
-    au < exists ; exists ; 1989 ; Journal of Analytical Toxicology Volume 13 ; 13 ; >
-    au < exists ; exists ; 1990 ; Journal of Analytical Toxicology Volume 14 ; 14 ; >
-    au < exists ; exists ; 1981 ; Journal of Analytical Toxicology Volume 15 ; 15 ; >
-    au < exists ; exists ; 1992 ; Journal of Analytical Toxicology Volume 16 ; 16 ; >
-    au < exists ; exists ; 1993 ; Journal of Analytical Toxicology Volume 17 ; 17 ; >
-    au < exists ; exists ; 1994 ; Journal of Analytical Toxicology Volume 18 ; 18 ; >
-    au < exists ; exists ; 1995 ; Journal of Analytical Toxicology Volume 19 ; 19 ; >
-    au < exists ; exists ; 1996 ; Journal of Analytical Toxicology Volume 20 ; 20 ; >
-    au < exists ; exists ; 1997 ; Journal of Analytical Toxicology Volume 21 ; 21 ; >
-    au < exists ; exists ; 1998 ; Journal of Analytical Toxicology Volume 22 ; 22 ; >
-    au < exists ; exists ; 1999 ; Journal of Analytical Toxicology Volume 23 ; 23 ; >
-    au < exists ; exists ; 2000 ; Journal of Analytical Toxicology Volume 24 ; 24 ; >
-    au < exists ; exists ; 2001 ; Journal of Analytical Toxicology Volume 25 ; 25 ; >
-    au < exists ; exists ; 2002 ; Journal of Analytical Toxicology Volume 26 ; 26 ; >
-    au < exists ; exists ; 2003 ; Journal of Analytical Toxicology Volume 27 ; 27 ; >
-    au < exists ; exists ; 2004 ; Journal of Analytical Toxicology Volume 28 ; 28 ; >
-    au < exists ; exists ; 2005 ; Journal of Analytical Toxicology Volume 29 ; 29 ; >
-    au < exists ; exists ; 2006 ; Journal of Analytical Toxicology Volume 30 ; 30 ; >
-    au < exists ; exists ; 2007 ; Journal of Analytical Toxicology Volume 31 ; 31 ; >
-    au < exists ; exists ; 2008 ; Journal of Analytical Toxicology Volume 32 ; 32 ; >
-    au < exists ; exists ; 2009 ; Journal of Analytical Toxicology Volume 33 ; 33 ; >
-    au < exists ; exists ; 2010 ; Journal of Analytical Toxicology Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1976 ; Journal of Analytical Toxicology Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1977 ; Journal of Analytical Toxicology Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1978 ; Journal of Analytical Toxicology Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1979 ; Journal of Analytical Toxicology Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1980 ; Journal of Analytical Toxicology Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1981 ; Journal of Analytical Toxicology Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1982 ; Journal of Analytical Toxicology Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1983 ; Journal of Analytical Toxicology Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1984 ; Journal of Analytical Toxicology Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1985 ; Journal of Analytical Toxicology Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1986 ; Journal of Analytical Toxicology Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1987 ; Journal of Analytical Toxicology Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1988 ; Journal of Analytical Toxicology Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1989 ; Journal of Analytical Toxicology Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1990 ; Journal of Analytical Toxicology Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1981 ; Journal of Analytical Toxicology Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1992 ; Journal of Analytical Toxicology Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1993 ; Journal of Analytical Toxicology Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1994 ; Journal of Analytical Toxicology Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1995 ; Journal of Analytical Toxicology Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1996 ; Journal of Analytical Toxicology Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1997 ; Journal of Analytical Toxicology Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1998 ; Journal of Analytical Toxicology Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1999 ; Journal of Analytical Toxicology Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2000 ; Journal of Analytical Toxicology Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2001 ; Journal of Analytical Toxicology Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2002 ; Journal of Analytical Toxicology Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2003 ; Journal of Analytical Toxicology Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2004 ; Journal of Analytical Toxicology Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2005 ; Journal of Analytical Toxicology Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2006 ; Journal of Analytical Toxicology Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2007 ; Journal of Analytical Toxicology Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2008 ; Journal of Analytical Toxicology Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2009 ; Journal of Analytical Toxicology Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2010 ; Journal of Analytical Toxicology Volume 34 ; 34 ; >
     au < released ; crawling ; 2011 ; Journal of Analytical Toxicology Volume 35 ; 35 ; >
     au < crawling ; exists ; 2012 ; Journal of Analytical Toxicology Volume 36 ; 36 ; >
 
@@ -16555,25 +16555,25 @@
     param[base_url] = http://rev.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1992 ; Research Evaluation Volume 1 ; 1 ; >
-    au < exists ; exists ; 1993 ; Research Evaluation Volume 2 ; 2 ; >
-    au < exists ; exists ; 1994 ; Research Evaluation Volume 3 ; 3 ; >
-    au < exists ; exists ; 1995 ; Research Evaluation Volume 4 ; 4 ; >
-    au < exists ; exists ; 1996 ; Research Evaluation Volume 5 ; 5 ; >
-    au < exists ; exists ; 1997 ; Research Evaluation Volume 6 ; 6 ; >
-    au < exists ; exists ; 1998 ; Research Evaluation Volume 7 ; 7 ; >
-    au < exists ; exists ; 1999 ; Research Evaluation Volume 8 ; 8 ; >
-    au < exists ; exists ; 2000 ; Research Evaluation Volume 9 ; 9 ; >
-    au < exists ; exists ; 2001 ; Research Evaluation Volume 10 ; 10 ; >
-    au < exists ; exists ; 2002 ; Research Evaluation Volume 11 ; 11 ; >
-    au < exists ; exists ; 2003 ; Research Evaluation Volume 12 ; 12 ; >
-    au < exists ; exists ; 2004 ; Research Evaluation Volume 13 ; 13 ; >
-    au < exists ; exists ; 2005 ; Research Evaluation Volume 14 ; 14 ; >
-    au < exists ; exists ; 2006 ; Research Evaluation Volume 15 ; 15 ; >
-    au < exists ; exists ; 2007 ; Research Evaluation Volume 16 ; 16 ; >
-    au < exists ; exists ; 2008 ; Research Evaluation Volume 17 ; 17 ; >
-    au < exists ; exists ; 2009 ; Research Evaluation Volume 18 ; 18 ; >
-    au < exists ; exists ; 2010 ; Research Evaluation Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1992 ; Research Evaluation Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1993 ; Research Evaluation Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1994 ; Research Evaluation Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1995 ; Research Evaluation Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1996 ; Research Evaluation Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1997 ; Research Evaluation Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1998 ; Research Evaluation Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1999 ; Research Evaluation Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2000 ; Research Evaluation Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2001 ; Research Evaluation Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2002 ; Research Evaluation Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2003 ; Research Evaluation Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2004 ; Research Evaluation Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2005 ; Research Evaluation Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2006 ; Research Evaluation Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2007 ; Research Evaluation Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2008 ; Research Evaluation Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2009 ; Research Evaluation Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2010 ; Research Evaluation Volume 19 ; 19 ; >
     au < released ; crawling ; 2011 ; Research Evaluation Volume 20 ; 20 ; >
     au < crawling ; exists ; 2012 ; Research Evaluation Volume 21 ; 21 ; >
 
@@ -17115,43 +17115,43 @@
     param[base_url] = http://spp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1974 ; Science and Public Policy Volume 1 ; 1 ; >
-    au < exists ; exists ; 1975 ; Science and Public Policy Volume 2 ; 2 ; >
-    au < exists ; exists ; 1976 ; Science and Public Policy Volume 3 ; 3 ; >
-    au < exists ; exists ; 1977 ; Science and Public Policy Volume 4 ; 4 ; >
-    au < exists ; exists ; 1978 ; Science and Public Policy Volume 5 ; 5 ; >
-    au < exists ; exists ; 1979 ; Science and Public Policy Volume 6 ; 6 ; >
-    au < exists ; exists ; 1980 ; Science and Public Policy Volume 7 ; 7 ; >
-    au < exists ; exists ; 1981 ; Science and Public Policy Volume 8 ; 8 ; >
-    au < exists ; exists ; 1982 ; Science and Public Policy Volume 9 ; 9 ; >
-    au < exists ; exists ; 1983 ; Science and Public Policy Volume 10 ; 10 ; >
-    au < exists ; exists ; 1984 ; Science and Public Policy Volume 11 ; 11 ; >
-    au < exists ; exists ; 1985 ; Science and Public Policy Volume 12 ; 12 ; >
-    au < exists ; exists ; 1986 ; Science and Public Policy Volume 13 ; 13 ; >
-    au < exists ; exists ; 1987 ; Science and Public Policy Volume 14 ; 14 ; >
-    au < exists ; exists ; 1988 ; Science and Public Policy Volume 15 ; 15 ; >
-    au < exists ; exists ; 1989 ; Science and Public Policy Volume 16 ; 16 ; >
-    au < exists ; exists ; 1990 ; Science and Public Policy Volume 17 ; 17 ; >
-    au < exists ; exists ; 1991 ; Science and Public Policy Volume 18 ; 18 ; >
-    au < exists ; exists ; 1992 ; Science and Public Policy Volume 19 ; 19 ; >
-    au < exists ; exists ; 1993 ; Science and Public Policy Volume 20 ; 20 ; >
-    au < exists ; exists ; 1994 ; Science and Public Policy Volume 21 ; 21 ; >
-    au < exists ; exists ; 1995 ; Science and Public Policy Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1974 ; Science and Public Policy Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1975 ; Science and Public Policy Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1976 ; Science and Public Policy Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1977 ; Science and Public Policy Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1978 ; Science and Public Policy Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1979 ; Science and Public Policy Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1980 ; Science and Public Policy Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1981 ; Science and Public Policy Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1982 ; Science and Public Policy Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1983 ; Science and Public Policy Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1984 ; Science and Public Policy Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1985 ; Science and Public Policy Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1986 ; Science and Public Policy Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1987 ; Science and Public Policy Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1988 ; Science and Public Policy Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1989 ; Science and Public Policy Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1990 ; Science and Public Policy Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1991 ; Science and Public Policy Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1992 ; Science and Public Policy Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1993 ; Science and Public Policy Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1994 ; Science and Public Policy Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1995 ; Science and Public Policy Volume 22 ; 22 ; >
     au < exists ; exists ; 1996 ; Science and Public Policy Volume 23 ; 23 ; >
     au < exists ; exists ; 1997 ; Science and Public Policy Volume 24 ; 24 ; >
     au < exists ; exists ; 1998 ; Science and Public Policy Volume 25 ; 25 ; >
-    au < exists ; exists ; 1999 ; Science and Public Policy Volume 26 ; 26 ; >
-    au < exists ; exists ; 2000 ; Science and Public Policy Volume 27 ; 27 ; >
-    au < exists ; exists ; 2001 ; Science and Public Policy Volume 28 ; 28 ; >
-    au < exists ; exists ; 2002 ; Science and Public Policy Volume 29 ; 29 ; >
-    au < exists ; exists ; 2003 ; Science and Public Policy Volume 30 ; 30 ; >
-    au < exists ; exists ; 2004 ; Science and Public Policy Volume 31 ; 31 ; >
-    au < exists ; exists ; 2005 ; Science and Public Policy Volume 32 ; 32 ; >
-    au < exists ; exists ; 2006 ; Science and Public Policy Volume 33 ; 33 ; >
-    au < exists ; exists ; 2007 ; Science and Public Policy Volume 34 ; 34 ; >
-    au < exists ; exists ; 2008 ; Science and Public Policy Volume 35 ; 35 ; >
-    au < exists ; exists ; 2009 ; Science and Public Policy Volume 36 ; 36 ; >
-    au < exists ; exists ; 2010 ; Science and Public Policy Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1999 ; Science and Public Policy Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2000 ; Science and Public Policy Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2001 ; Science and Public Policy Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2002 ; Science and Public Policy Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2003 ; Science and Public Policy Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2004 ; Science and Public Policy Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2005 ; Science and Public Policy Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2006 ; Science and Public Policy Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2007 ; Science and Public Policy Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2008 ; Science and Public Policy Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2009 ; Science and Public Policy Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2010 ; Science and Public Policy Volume 37 ; 37 ; >
     au < released ; crawling ; 2011 ; Science and Public Policy Volume 38 ; 38 ; >
     au < crawling ; exists ; 2012 ; Science and Public Policy Volume 39 ; 39 ; >
 	
