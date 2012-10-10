@@ -37,8 +37,8 @@ public class TestIgiGlobalUrlNormalizer extends LockssTestCase {
 
   public void testUrlNormalizer() throws Exception {
     UrlNormalizer normalizer = new IgiGlobalUrlNormalizer();
-    assertEquals("http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55667",
-    			 normalizer.normalizeUrl("http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55667&accesstype=", null));
+    assertEquals("http://www.igi-global.com/gateway/contentowned/article.aspx",
+    			 normalizer.normalizeUrl("http://www.igi-global.com/gateway/contentowned/article.aspx?v=12314", null));
     assertEquals("http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55667&true=true",
     			 normalizer.normalizeUrl("http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55667&true=true", null));
     assertEquals("http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55667",

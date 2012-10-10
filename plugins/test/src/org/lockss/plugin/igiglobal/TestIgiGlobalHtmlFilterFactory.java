@@ -135,7 +135,10 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 			  "<input id=\"__EVENTARGUMENT\" type=\"hidden\" value=\"\" name=\"__EVENTARGUMENT\">\n" +
 			  "<input id=\"_VIEWSTATE\" type=\"hidden\" value=\"/wEPDwUENTM4MQ9kFgJmD2QWAgIDEBYCHgZhY3Rpb24FQy9nYXRld2F5L2NvbnRlbnRvd25lZC9hcnRpY2xlLmFzcHg/dGl0bGVpZD01NTY1NiZhY2Nlc3N0eXBlPWluZm9zY2lkFgoCAw9kFgYCAQ8WAh4HVmlzaWJsZWgWAgIBDw8WAh4EVGV4dGVkZAICD2QWBAIBDw8WAh4LTmF2aWdhdGVVcmwFci9tZW1iZXJzaGlwL2xvZ2luLmFzcHg/cmV0dXJudXJsPSUyZmdhdGV3YXklMmZjb250ZW50b3duZWQlMmZhcnRpY2xlLmFzcHglM2Z0aXRsZWlkJTNkNTU2NTYlMjZhY2Nlc3N0eXBlJTNkaW5mb3NjaWRkAgMPDxYCHwMFHi9tZW1iZXJzaGlwL2NyZWF0ZWFjY291bnQuYXNweGRkAgMPFgIfAWhkAgUPDxYCHwIFBkxPQ0tTU2RkAgkPZBYCZg9kFgQCAQ8PFgIfAgUQRS1EYXRhYm...8WAgU+Y3RsMDAkY3BoQ2VudGVyQ29udGVudCRjdGwwMCR1Y0NpdGVDb250ZW50JGxua1N1Ym1pdFRvUmVmV29ya3MFPWN0bDAwJGNwaENlbnRlckNvbnRlbnQkY3RsMDAkdWNDaXRlQ29udGVudCRsbmtTdWJtaXRUb0Vhc3lCaWIFJGN0bDAwJGNwaENlbnRlckNvbnRlbnQkY3RsMDAkbHN0SXN4bg88KwAKAgcUKwACZGQIAgJkBShjdGwwMCRjcGhTaWRlYmFyUmlnaHQkdG1fR2VuZXJpY0NvbnRlbnQxDxQrAAFkZAU2Y3RsMDAkdWNSZXNlYXJjaENvbGxlY3Rpb25zTmF2aWdhdGlvbiRsc3RQcm9kdWN0c093bmVkDzwrAAoBCGZkBTRjdGwwMCR1Y1Jlc2VhcmNoQ29sbGVjdGlvbnNOYXZpZ2F0aW9uJGxzdEJ1bmRsZVR5cGVzDzwrAAoBCGZkF8NmCQCZmjS6K/62J+kVNIwpJpA=\" name=\"__VIEWSTATE\">\n" +
 		  "</div>";
-
+  public static final String dynamicCssHtml = 
+    "<link rel=\"stylesheet\" href=\"css/grid2.css?1349472143\" type=\"text/css\" media=\"screen\" />";
+  public static final String dynamicCssHtmlFiltered = "";
+	
 
   public void testSibebarFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
@@ -189,6 +192,13 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
 
     assertEquals(institutionHeaderHtmlFiltered, StringUtil.fromInputStream(actIn));
+  }
+  public void testDynamicCssHtmlFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        					       new StringInputStream(dynamicCssHtml),
+        					       Constants.DEFAULT_ENCODING);
+
+    assertEquals(dynamicCssHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
 
 }

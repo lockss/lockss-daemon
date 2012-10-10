@@ -114,6 +114,7 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 	    assertShouldCache(BASE_URL + "gateway/article/full-text-pdf/55656", true, au, cus);
 	    // pdf file displayed in iframe
 	    assertShouldCache(BASE_URL + "viewtitle.aspx?titleid=55663", true, au, cus);
+	    assertShouldCache(BASE_URL + "pdf.aspx?titleid=55663", true, au, cus);
 	    
 	    // images, css, js
 	    assertShouldCache(BASE_URL + "jQuery/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png", true, au, cus);

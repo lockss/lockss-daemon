@@ -68,6 +68,8 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
          */
         // Contains ad-specific cookies
         new TagNameFilter("script"),
+        // Contains dynamic css URLs
+        new TagNameFilter("link"),
         // Contains testimonials, sponsors, and news
         HtmlNodeFilters.tagWithAttribute("div", "class", "SidebarRight"),
         // Contains institution name

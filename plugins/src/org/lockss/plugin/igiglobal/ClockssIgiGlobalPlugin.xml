@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - Wendell</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,11 +24,11 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
     </map>
   </entry>
@@ -56,13 +56,13 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>2,&quot;^%smembership/login&quot;, base_url</string>
-      <string>2,&quot;(/App_Master){2}&quot;, base_url</string>
-      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.+)?$&quot;, base_url</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sgateway/contentowned/articles\.aspx&quot;, base_url</string>
-      <string>1,&quot;^%sgateway/(issue|article(/full-text-pdf|/full-text-html)?)/[0-9]+$&quot;, base_url</string>
-      <string>1,&quot;^%sviewtitle\.aspx\?titleid=[0-9]+$&quot;, base_url</string>
+      <string>2,"^%smembership/login", base_url</string>
+      <string>2,"(/App_Master){2}", base_url</string>
+      <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.+)?$", base_url</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sgateway/contentowned/articles\.aspx", base_url</string>
+      <string>1,"^%sgateway/(issue|article(/full-text-pdf|/full-text-html)?)/[0-9]+$", base_url</string>
+      <string>1,"^%spdf\.aspx\?", base_url</string>
     </list>
   </entry>
   <entry>
@@ -103,8 +103,9 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%s(viewtitle\.aspx\?titleid=|gateway/article/full-text-html/)[0-9]+$&quot;, base_url</string>
-      <string>&quot;^%s(viewtitle\.aspx\?titleid=|gateway/article/full-text-pdf/)[0-9]+$&quot;, base_url</string>
+      <string>"^%sgateway/article/full-text-html/[0-9]+$", base_url</string>
+      <string>"^%sgateway/article/full-text-pdf/[0-9]+$", base_url</string>
+      <string>"^%spdf\.aspx\?", base_url</string>
     </list>
   </entry>
   <entry>

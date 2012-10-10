@@ -107,12 +107,12 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
     
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.wrong.com/article/full-text-pdf/55656");
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/articles/full-text-pdf/55656");
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/article/full-text-pd");
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "/gateway/article/full-text-pdf/55656");
-    assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/article/full-text-pdf/55656");
-    assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/article/full-text-pdf/1");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.wrong.com/article/55656");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/articles/55656");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/article/full");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "/gateway/article/55656");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/article/55656");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/article/1");
    }
 
   /*
@@ -122,8 +122,9 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
     String[] urls = {
-					    BASE_URL + "gateway/article/full-text-pdf/11111",
+					    BASE_URL + "gateway/article/full-text-html/11111",
 					    BASE_URL + "gateway/article/full-text-pdf/2222",
+					    BASE_URL + "gateway/article/full-text-html/55656",
 					    BASE_URL + "gateway/article/full-text-pdf/55656",
 					    BASE_URL + "gateway/article/full-text-pdf/12345",
 					    BASE_URL + "gateway/article/11111",
@@ -158,37 +159,27 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
 	    	}
 	    	cusn = cuIter.next();
 		}
-	    for(String url : urls)
-	    {
-		    uc = au.makeUrlCacher(url);
-		    if(url.contains("viewtitle.aspx")){
-		    	uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
-		    } else {
-		    	uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-		    }
+	    for (String url : urls) {
+	      uc = au.makeUrlCacher(url);
+              uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
 	    }
     }
     
     Stack<String[]> expStack = new Stack<String[]>();
-    String [] af1 = {
-    				BASE_URL + "gateway/article/full-text-pdf/11111",
-    				BASE_URL + "gateway/article/11111"
-		    		};
-    String [] af2 = {
-					BASE_URL + "gateway/article/full-text-pdf/2222",
-    				null
-		    		};
-    String [] af3 = {
-					BASE_URL + "gateway/article/full-text-pdf/55656",
-					BASE_URL + "gateway/article/55656"
-		    		};
-    String [] af4 = {
-					BASE_URL + "gateway/article/full-text-pdf/12345",
-    				null
-		    		};
+    String [] af1 = {BASE_URL + "gateway/article/full-text-html/11111",
+    		     null,
+    		     BASE_URL + "gateway/article/11111"};
+    
+    String [] af2 = {null,
+		     null,
+		     BASE_URL + "gateway/article/54321"};
+    
+    String [] af3 = {BASE_URL + "gateway/article/full-text-html/55656",
+		     BASE_URL + "gateway/article/full-text-pdf/55656",
+		     BASE_URL + "gateway/article/55656"};
+    
     expStack.push(af3);
     expStack.push(af2);
-    expStack.push(af4);
     expStack.push(af1);
     
     for ( SubTreeArticleIterator artIter = createSubTreeIter(); artIter.hasNext(); ) 
@@ -196,6 +187,7 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
     		ArticleFiles af = artIter.next();
     		String[] act = {
 					af.getFullTextUrl(),
+					af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF),
 					af.getRoleUrl(ArticleFiles.ROLE_ABSTRACT)
 					};
     		String[] exp = expStack.pop();

@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.3 2012-10-02 23:40:59 aishizaki Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.4 2012-10-10 01:42:57 wkwilson Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class IgiGlobalArticleIteratorFactory
   
   protected static final String ROOT_TEMPLATE = "\"%sgateway/article/\", base_url"; // params from tdb file corresponding to AU
   
-  protected static final String PATTERN_TEMPLATE = "\"^%sgateway/article/full-text-pdf/\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"^%sgateway/article/[0-9]+\", base_url";
 
   
   @Override
@@ -72,8 +72,6 @@ public class IgiGlobalArticleIteratorFactory
 
     protected Pattern ABSTRACT_PATTERN = Pattern.compile("article/([0-9]+)$", Pattern.CASE_INSENSITIVE);
     
-    protected Pattern PDF_PATTERN = Pattern.compile("article/full-text-pdf/([0-9]+)$", Pattern.CASE_INSENSITIVE);
-    
     public IgiGlobalArticleIterator(ArchivalUnit au,
                                      SubTreeArticleIterator.Spec spec) {
       super(au, spec);
@@ -82,11 +80,10 @@ public class IgiGlobalArticleIteratorFactory
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
-      log.info("article url?: " + url);
       Matcher mat;
-      mat = PDF_PATTERN.matcher(url);
+      mat = ABSTRACT_PATTERN.matcher(url);
       if (mat.find()) {
-        return processFullTextPdf(cu, mat);
+        return processAbstract(cu, mat);
       }
 
       log.warning("Mismatch between article iterator factory and article iterator: " + url);
@@ -94,22 +91,28 @@ public class IgiGlobalArticleIteratorFactory
     }
     
 
-    protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
+    protected ArticleFiles processAbstract(CachedUrl absCu, Matcher absMat) {
       ArticleFiles af = new ArticleFiles();
-      af.setFullTextCu(pdfCu);
-      if (spec.getTarget() != MetadataTarget.Article) {
-          guessAbstract(af, pdfMat);
-      }
+      af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+      guessFullText(af, absMat);
       return af;
     }
     
-    protected void guessAbstract(ArticleFiles af, Matcher mat) {
-      String absUrlBase = mat.replaceFirst("article/$1");
-      CachedUrl absCu = au.makeCachedUrl(absUrlBase);
-      if (absCu != null && absCu.hasContent()) {
-    	  af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+    protected void guessFullText(ArticleFiles af, Matcher mat) {
+      String pdfUrlBase = mat.replaceFirst("article/full-text-pdf/$1");
+      String htmlUrlBase = mat.replaceFirst("article/full-text-html/$1");
+      CachedUrl pdfCu = au.makeCachedUrl(pdfUrlBase);
+      CachedUrl htmlCu = au.makeCachedUrl(htmlUrlBase);
+      if (pdfCu != null && pdfCu.hasContent()) {
+        af.setFullTextCu(pdfCu);
+   	af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+      }
+      if (htmlCu != null && htmlCu.hasContent()) {
+	af.setFullTextCu(htmlCu);
+  	af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
       } 
     }
+
   }
   
   @Override

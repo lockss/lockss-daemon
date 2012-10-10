@@ -41,11 +41,14 @@ import org.lockss.plugin.*;
 public class IgiGlobalUrlNormalizer implements UrlNormalizer {
 
   protected static final String SUFFIX = "&accesstype=";
+  protected static final String SUFFIX1 = "?v=";
 
   public String normalizeUrl(String url,
                              ArchivalUnit au)
       throws PluginException {
-    return StringUtils.substringBeforeLast(url, SUFFIX);
+    url = StringUtils.substringBeforeLast(url, SUFFIX);
+    url = StringUtils.substringBeforeLast(url, SUFFIX1);
+    return url;
   }
 
 }
