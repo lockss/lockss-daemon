@@ -269,6 +269,7 @@
 
     {
 
+      pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
       
       au < released ; 2000 ; Active Learning in Higher Education Volume 1 ; 1 >
@@ -593,18 +594,18 @@
         
         au < ready ; 1998-1999 ; Adult Learning Volume 10 ; 10 >
         au < ready ; 1999-2000 ; Adult Learning Volume 11 ; 11 >
-        au < ready ; 2001 ; Adult Learning Volume 12 ; 12 >
+        au < testing ; 2001 ; Adult Learning Volume 12 ; 12 >
         au < ready ; 2001-2002 ; Adult Learning Volume 13 ; 13 >
         au < ready ; 2003 ; Adult Learning Volume 14 ; 14 >
         au < ready ; 2004 ; Adult Learning Volume 15 ; 15 >
-        au < ready ; 2005 ; Adult Learning Volume 16 ; 16 >
-        au < ready ; 2006 ; Adult Learning Volume 17 ; 17 >
-        au < ready ; 2007 ; Adult Learning Volume 18 ; 18 >
+        au < testing ; 2005 ; Adult Learning Volume 16 ; 16 >
+        au < testing ; 2006 ; Adult Learning Volume 17 ; 17 >
+        au < testing ; 2007 ; Adult Learning Volume 18 ; 18 >
         au < ready ; 2008 ; Adult Learning Volume 19 ; 19 >
         au < ready ; 2009 ; Adult Learning Volume 20 ; 20 >
         au < released ; 2010 ; Adult Learning Volume 21 ; 21 >
         au < released ; 2011-2012 ; Adult Learning Volume 22 ; 22 >
-        au < ready ; 2012 ; Adult Learning Volume 23 ; 23 >
+        au < testing ; 2012 ; Adult Learning Volume 23 ; 23 >
       
       }
       
@@ -718,7 +719,7 @@
         au < doNotProcess ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 >
         au < released ; 2010 ; Advances in Developing Human Resources Volume 12 ; 12 >
         au < released ; 2011 ; Advances in Developing Human Resources Volume 13 ; 13 >
-        au < ready ; 2012 ; Advances in Developing Human Resources Volume 14 ; 14 >
+        au < testing ; 2012 ; Advances in Developing Human Resources Volume 14 ; 14 >
 
       }
 
@@ -1106,7 +1107,7 @@
         au < doNotProcess ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 >
         au < released ; 2010 ; American Journal of Alzheimer's Disease and Other Dementias Volume 25 ; 25 >
         au < released ; 2011 ; American Journal of Alzheimer's Disease and Other Dementias Volume 26 ; 26 >
-        au < ready ; 2012 ; American Journal of Alzheimer's Disease and Other Dementias Volume 27 ; 27 >
+        au < testing ; 2012 ; American Journal of Alzheimer's Disease and Other Dementias Volume 27 ; 27 >
 
       }
 
@@ -1396,7 +1397,7 @@
         au < doNotProcess ; 2009 ; American Journal of Men's Health Volume 3 ; 3 >
         au < released ; 2010 ; American Journal of Men's Health Volume 4 ; 4 >
         au < released ; 2011 ; American Journal of Men's Health Volume 5 ; 5 >
-        au < ready ; 2012 ; American Journal of Men's Health Volume 6 ; 6 >
+        au < testing ; 2012 ; American Journal of Men's Health Volume 6 ; 6 >
 
       }
 
@@ -1635,7 +1636,7 @@
         au < released ; 2009 ; American Sociological Review Volume 74 ; 74 >
         au < released ; 2010 ; American Sociological Review Volume 75 ; 75 >
         au < released ; 2011 ; American Sociological Review Volume 76 ; 76 >
-        au < ready ; 2012 ; American Sociological Review Volume 77 ; 77 >
+        au < testing ; 2012 ; American Sociological Review Volume 77 ; 77 >
 
       }
 
@@ -1732,7 +1733,7 @@
         au < doNotProcess ; 2009 ; Angiology Volume 60 ; 60 >
         au < released ; 2010 ; Angiology Volume 61 ; 61 >
         au < released ; 2011 ; Angiology Volume 62 ; 62 >
-        au < ready ; 2012 ; Angiology Volume 63 ; 63 >
+        au < testing ; 2012 ; Angiology Volume 63 ; 63 >
 
       }
 
@@ -1772,7 +1773,7 @@
         au < doNotProcess ; 2009 ; Animation Volume 4 ; 4 >
         au < released ; 2010 ; Animation Volume 5 ; 5 >
         au < released ; 2011 ; Animation Volume 6 ; 6 >
-        au < ready ; 2012 ; Animation Volume 7 ; 7 >
+        au < testing ; 2012 ; Animation Volume 7 ; 7 >
 
       }
 
@@ -2687,7 +2688,7 @@
         au < doNotProcess ; 2008-2009 ; Armed Forces & Society Volume 35 ; 35 >
         au < released ; 2009-2010 ; Armed Forces & Society Volume 36 ; 36 >
         au < released ; 2011 ; Armed Forces & Society Volume 37 ; 37 >
-        au < ready ; 2012 ; Armed Forces & Society Volume 38 ; 38 >
+        au < testing ; 2012 ; Armed Forces & Society Volume 38 ; 38 >
 
       }
 
