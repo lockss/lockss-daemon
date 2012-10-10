@@ -6,7 +6,6 @@
     info[tester] = 7
   >
 
-  attr[contract] = 2009
   plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
   param[base_url] = http://liverpool.metapress.com/
   implicit < status1 ; status ; year ; name ; param[volume_name] >
@@ -131,7 +130,7 @@
     au < manifest ; exists ; 2006 ; Comma Volume 2006 ; 2006 >
     au < manifest ; exists ; 2007 ; Comma Volume 2007 ; 2007 >
     au < manifest ; exists ; 2008 ; Comma Volume 2008 ; 2008 >
-    au < released ; manifest ; 2009 ; Comma Volume 2009 ; 2009 >
+    au < released ; crawling ; 2009 ; Comma Volume 2009 ; 2009 >
     au < released ; crawling ; 2010 ; Comma Volume 2010 ; 2010 >
     
   }
@@ -314,7 +313,7 @@
     comment[ceased_publication]=after 2009
 
     au < manifest ; exists ; 2008 ; Popular Narrative Media Volume 1 ; 1 >
-    au < testing ; exists ; 2009 ; Popular Narrative Media Volume 2 ; 2 >
+    au < released ; crawling ; 2009 ; Popular Narrative Media Volume 2 ; 2 >
 
 
  
