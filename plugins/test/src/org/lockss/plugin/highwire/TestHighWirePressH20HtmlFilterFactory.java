@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.9 2012-10-10 18:03:52 ldoan Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.10 2012-10-10 21:59:12 ldoan Exp $
  */
 
 /*
@@ -206,6 +206,8 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(withRelatedURLs, withoutRelatedURLs);
     assertFilterToSame(withHwGenPage, withoutHwGenPage);
     assertFilterToSame(withNavCurrentIssue, withoutNavCurrentIssue);
+    assertFilterToSame(withCol4SquareAds, withoutCol4SquareAds);
+    assertFilterToSame(withCol4TowerAds, withoutCol4TowerAds);
   }
 
   private void assertFilterToSame(String str1, String Str2) throws Exception {
