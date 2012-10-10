@@ -474,20 +474,20 @@
       
         pluginSuffix = ClockssHighWirePressH20Plugin
         
-        au < released ; manifest ; 1998-1999 ; Adult Learning Volume 10 ; 10 ; >
-        au < released ; manifest ; 1999-2000 ; Adult Learning Volume 11 ; 11 ; >
-        au < released ; manifest ; 2001 ; Adult Learning Volume 12 ; 12 ; >
-        au < released ; manifest ; 2001-2002 ; Adult Learning Volume 13 ; 13 ; >
-        au < released ; manifest ; 2003 ; Adult Learning Volume 14 ; 14 ; >
-        au < released ; manifest ; 2004 ; Adult Learning Volume 15 ; 15 ; >
-        au < released ; manifest ; 2005 ; Adult Learning Volume 16 ; 16 ; >
-        au < released ; manifest ; 2006 ; Adult Learning Volume 17 ; 17 ; >
-        au < released ; manifest ; 2007 ; Adult Learning Volume 18 ; 18 ; >
+        au < manifest ; exists ; 1998-1999 ; Adult Learning Volume 10 ; 10 ; >
+        au < manifest ; exists ; 1999-2000 ; Adult Learning Volume 11 ; 11 ; >
+        au < manifest ; exists ; 2001 ; Adult Learning Volume 12 ; 12 ; >
+        au < manifest ; exists ; 2001-2002 ; Adult Learning Volume 13 ; 13 ; >
+        au < manifest ; exists ; 2003 ; Adult Learning Volume 14 ; 14 ; >
+        au < manifest ; exists ; 2004 ; Adult Learning Volume 15 ; 15 ; >
+        au < manifest ; exists ; 2005 ; Adult Learning Volume 16 ; 16 ; >
+        au < manifest ; exists ; 2006 ; Adult Learning Volume 17 ; 17 ; >
+        au < manifest ; exists ; 2007 ; Adult Learning Volume 18 ; 18 ; >
         au < released ; crawling ; 2008 ; Adult Learning Volume 19 ; 19 ; >
         au < released ; crawling ; 2009 ; Adult Learning Volume 20 ; 20 ; >
         au < released ; crawling ; 2010 ; Adult Learning Volume 21 ; 21 ; >
         au < released ; crawling ; 2011-2012 ; Adult Learning Volume 22 ; 22 ; >
-        au < released ; manifest ; 2012 ; Adult Learning Volume 23 ; 23 ; >
+        au < crawling ; exists ; 2012 ; Adult Learning Volume 23 ; 23 ; >
       
       }
       
@@ -583,7 +583,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 ; >
       au < zapped ; down ; 2010 ; Advances in Developing Human Resources Volume 12 ; 12 ; >
       au < released ; crawling ; 2011 ; Advances in Developing Human Resources Volume 13 ; 13 ; >
-      au < released ; manifest ; 2012 ; Advances in Developing Human Resources Volume 14 ; 14 ; >
+      au < testing ; exists ; 2012 ; Advances in Developing Human Resources Volume 14 ; 14 ; >
 
     }
 
@@ -936,7 +936,7 @@
       au < released ; crawling ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; American Journal of Alzheimer's Disease and Other Dementias Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; American Journal of Alzheimer's Disease and Other Dementias Volume 26 ; 26 ; >
-      au < released ; manifest ; 2012 ; American Journal of Alzheimer's Disease and Other Dementias Volume 27 ; 27 ; >
+      au < testing ; exists ; 2012 ; American Journal of Alzheimer's Disease and Other Dementias Volume 27 ; 27 ; >
 
     }
 
@@ -1056,7 +1056,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 ; >
       au < released ; crawling ; 2010 ; American Journal of Hospice and Palliative Medicine Volume 27 ; 27 ; >
       au < released ; crawling ; 2011 ; American Journal of Hospice and Palliative Medicine Volume 28 ; 28 ; >
-      au < released ; manifest ; 2012 ; American Journal of Hospice and Palliative Medicine Volume 29 ; 29 ; >
+      au < testing ; exists ; 2012 ; American Journal of Hospice and Palliative Medicine Volume 29 ; 29 ; >
 
     }
 
@@ -1182,7 +1182,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Men's Health Volume 3 ; 3 ; >
       au < released ; crawling ; 2010 ; American Journal of Men's Health Volume 4 ; 4 ; >
       au < released ; crawling ; 2011 ; American Journal of Men's Health Volume 5 ; 5 ; >
-      au < released ; manifest ; 2012 ; American Journal of Men's Health Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2012 ; American Journal of Men's Health Volume 6 ; 6 ; >
 
     }
 
@@ -1377,7 +1377,7 @@
       au < released ; crawling ; 2009 ; American Sociological Review Volume 74 ; 74 ; >
       au < released ; crawling ; 2010 ; American Sociological Review Volume 75 ; 75 ; >
       au < released ; crawling ; 2011 ; American Sociological Review Volume 76 ; 76 ; >
-      au < released ; manifest ; 2012 ; American Sociological Review Volume 77 ; 77 ; >
+      au < crawling ; exists ; 2012 ; American Sociological Review Volume 77 ; 77 ; >
 
     }
 
@@ -1469,7 +1469,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Angiology Volume 60 ; 60 ; >
       au < released ; crawling ; 2010 ; Angiology Volume 61 ; 61 ; >
       au < released ; crawling ; 2011 ; Angiology Volume 62 ; 62 ; >
-      au < released ; manifest ; 2012 ; Angiology Volume 63 ; 63 ; >
+      au < crawling ; exists ; 2012 ; Angiology Volume 63 ; 63 ; >
 
     }
 
@@ -1505,7 +1505,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Animation Volume 4 ; 4 ; >
       au < released ; crawling ; 2010 ; Animation Volume 5 ; 5 ; >
       au < released ; crawling ; 2011 ; Animation Volume 6 ; 6 ; >
-      au < released ; manifest ; 2012 ; Animation Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2012 ; Animation Volume 7 ; 7 ; >
 
     }
 
@@ -2359,7 +2359,7 @@
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Armed Forces & Society Volume 35 ; 35 ; >
       au < released ; crawling ; 2009-2010 ; Armed Forces & Society Volume 36 ; 36 ; >
       au < released ; crawling ; 2011 ; Armed Forces & Society Volume 37 ; 37 ; >
-      au < released ; manifest ; 2012 ; Armed Forces & Society Volume 38 ; 38 ; >
+      au < crawling ; exists ; 2012 ; Armed Forces & Society Volume 38 ; 38 ; >
 
     }
 
@@ -2399,7 +2399,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Arts and Humanities in Higher Education Volume 8 ; 8 ; >
       au < zapped ; down ; 2010 ; Arts and Humanities in Higher Education Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; Arts and Humanities in Higher Education Volume 10 ; 10 ; >
-      au < released ; manifest ; 2012 ; Arts and Humanities in Higher Education Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2012 ; Arts and Humanities in Higher Education Volume 11 ; 11 ; >
 
     }
 
