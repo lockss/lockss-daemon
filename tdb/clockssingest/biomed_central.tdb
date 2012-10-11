@@ -1437,9 +1437,9 @@
       au < manifest ; exists ; 2005 ; BMC Structural Biology Volume 5 ; 5 >
       au < manifest ; exists ; 2006 ; BMC Structural Biology Volume 6 ; 6 >
       au < manifest ; exists ; 2007 ; BMC Structural Biology Volume 7 ; 7 >
-      au < manifest ; exists ; 2008 ; BMC Structural Biology Volume 8 ; 8 >
-      au < manifest ; exists ; 2009 ; BMC Structural Biology Volume 9 ; 9 >
-      au < manifest ; exists ; 2010 ; BMC Structural Biology Volume 10 ; 10 >
+      au < crawling ; exists ; 2008 ; BMC Structural Biology Volume 8 ; 8 >
+      au < crawling ; exists ; 2009 ; BMC Structural Biology Volume 9 ; 9 >
+      au < crawling ; exists ; 2010 ; BMC Structural Biology Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; BMC Structural Biology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Structural Biology Volume 12 ; 12 >
 
@@ -1462,9 +1462,9 @@
       au < manifest ; exists ; 2005 ; BMC Surgery Volume 5 ; 5 >
       au < manifest ; exists ; 2006 ; BMC Surgery Volume 6 ; 6 >
       au < manifest ; exists ; 2007 ; BMC Surgery Volume 7 ; 7 >
-      au < manifest ; exists ; 2008 ; BMC Surgery Volume 8 ; 8 >
-      au < manifest ; exists ; 2009 ; BMC Surgery Volume 9 ; 9 >
-      au < manifest ; exists ; 2010 ; BMC Surgery Volume 10 ; 10 >
+      au < crawling ; exists ; 2008 ; BMC Surgery Volume 8 ; 8 >
+      au < crawling ; exists ; 2009 ; BMC Surgery Volume 9 ; 9 >
+      au < crawling ; exists ; 2010 ; BMC Surgery Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; BMC Surgery Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Surgery Volume 12 ; 12 >
 
@@ -1481,9 +1481,9 @@
       nondefparam[journal_code] = bmcsystbiol
 
       au < manifest ; exists ; 2007 ; BMC Systems Biology Volume 1 ; 1 >
-      au < manifest ; exists ; 2008 ; BMC Systems Biology Volume 2 ; 2 >
-      au < manifest ; exists ; 2009 ; BMC Systems Biology Volume 3 ; 3 >
-      au < manifest ; exists ; 2010 ; BMC Systems Biology Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; BMC Systems Biology Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; BMC Systems Biology Volume 3 ; 3 >
+      au < crawling ; exists ; 2010 ; BMC Systems Biology Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; BMC Systems Biology Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; BMC Systems Biology Volume 6 ; 6 >
       au < expected ; exists ; 2013 ; BMC Systems Biology Volume 7 ; 7 >
@@ -1509,9 +1509,9 @@
       au < manifest ; exists ; 2005 ; BMC Urology Volume 5 ; 5 >
       au < manifest ; exists ; 2006 ; BMC Urology Volume 6 ; 6 >
       au < manifest ; exists ; 2007 ; BMC Urology Volume 7 ; 7 >
-      au < manifest ; exists ; 2008 ; BMC Urology Volume 8 ; 8 >
-      au < manifest ; exists ; 2009 ; BMC Urology Volume 9 ; 9 >
-      au < manifest ; exists ; 2010 ; BMC Urology Volume 10 ; 10 >
+      au < crawling ; exists ; 2008 ; BMC Urology Volume 8 ; 8 >
+      au < crawling ; exists ; 2009 ; BMC Urology Volume 9 ; 9 >
+      au < crawling ; exists ; 2010 ; BMC Urology Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; BMC Urology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Urology Volume 12 ; 12 >
 
@@ -1530,9 +1530,9 @@
       au < manifest ; exists ; 2005 ; BMC Veterinary Research Volume 1 ; 1 >
       au < manifest ; exists ; 2006 ; BMC Veterinary Research Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; BMC Veterinary Research Volume 3 ; 3 >
-      au < manifest ; exists ; 2008 ; BMC Veterinary Research Volume 4 ; 4 >
-      au < manifest ; exists ; 2009 ; BMC Veterinary Research Volume 5 ; 5 >
-      au < manifest ; exists ; 2010 ; BMC Veterinary Research Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; BMC Veterinary Research Volume 4 ; 4 >
+      au < crawling ; exists ; 2009 ; BMC Veterinary Research Volume 5 ; 5 >
+      au < crawling ; exists ; 2010 ; BMC Veterinary Research Volume 6 ; 6 >
       au < released ; crawling ; 2011 ; BMC Veterinary Research Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; BMC Veterinary Research Volume 8 ; 8 >
       au < expected ; exists ; 2013 ; BMC Veterinary Research Volume 9 ; 9 >
@@ -1557,9 +1557,9 @@
       au < manifest ; exists ; 2005 ; BMC Women's Health Volume 5 ; 5 >
       au < manifest ; exists ; 2006 ; BMC Women's Health Volume 6 ; 6 >
       au < manifest ; exists ; 2007 ; BMC Women's Health Volume 7 ; 7 >
-      au < manifest ; exists ; 2008 ; BMC Women's Health Volume 8 ; 8 >
-      au < manifest ; exists ; 2009 ; BMC Women's Health Volume 9 ; 9 >
-      au < manifest ; exists ; 2010 ; BMC Women's Health Volume 10 ; 10 >
+      au < crawling ; exists ; 2008 ; BMC Women's Health Volume 8 ; 8 >
+      au < crawling ; exists ; 2009 ; BMC Women's Health Volume 9 ; 9 >
+      au < crawling ; exists ; 2010 ; BMC Women's Health Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; BMC Women's Health Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Women's Health Volume 12 ; 12 >
 
@@ -1588,8 +1588,8 @@
       au < manifest ; exists ; 2005 ; Acta Veterinaria Scandinavica Volume 47 ; 47 >
       au < manifest ; exists ; 2006 ; Acta Veterinaria Scandinavica Volume 48 ; 48 >
       au < manifest ; exists ; 2007 ; Acta Veterinaria Scandinavica Volume 49 ; 49 >
-      au < manifest ; exists ; 2008 ; Acta Veterinaria Scandinavica Volume 50 ; 50 >
-      au < manifest ; exists ; 2009 ; Acta Veterinaria Scandinavica Volume 51 ; 51 >
+      au < crawling ; exists ; 2008 ; Acta Veterinaria Scandinavica Volume 50 ; 50 >
+      au < crawling ; exists ; 2009 ; Acta Veterinaria Scandinavica Volume 51 ; 51 >
       au < released ; crawling ; 2010 ; Acta Veterinaria Scandinavica Volume 52 ; 52 >
       au < released ; crawling ; 2011 ; Acta Veterinaria Scandinavica Volume 53 ; 53 >
       au < crawling ; exists ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 >
@@ -1612,8 +1612,8 @@
       au < manifest ; exists ; 2005 ; AIDS Research and Therapy Volume 2 ; 2 >
       au < manifest ; exists ; 2006 ; AIDS Research and Therapy Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; AIDS Research and Therapy Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; AIDS Research and Therapy Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; AIDS Research and Therapy Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; AIDS Research and Therapy Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; AIDS Research and Therapy Volume 6 ; 6 >
       au < released ; crawling ; 2010 ; AIDS Research and Therapy Volume 7 ; 7 >
       au < testing ; exists ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; AIDS Research and Therapy Volume 9 ; 9 >
@@ -1632,8 +1632,8 @@
 
       au < manifest ; exists ; 2006 ; Algorithms for Molecular Biology Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Algorithms for Molecular Biology Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Algorithms for Molecular Biology Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Algorithms for Molecular Biology Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Algorithms for Molecular Biology Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Algorithms for Molecular Biology Volume 4 ; 4 >
       au < released ; crawling ; 2010 ; Algorithms for Molecular Biology Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Algorithms for Molecular Biology Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Algorithms for Molecular Biology Volume 7 ; 7 >
@@ -1658,8 +1658,8 @@
       au < manifest ; exists ; 2005 ; Annals of Clinical Microbiology and Antimicrobials Volume 4 ; 4 >
       au < manifest ; exists ; 2006 ; Annals of Clinical Microbiology and Antimicrobials Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; Annals of Clinical Microbiology and Antimicrobials Volume 6 ; 6 >
-      au < manifest ; exists ; 2008 ; Annals of Clinical Microbiology and Antimicrobials Volume 7 ; 7 >
-      au < manifest ; exists ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 >
+      au < crawling ; exists ; 2008 ; Annals of Clinical Microbiology and Antimicrobials Volume 7 ; 7 >
+      au < crawling ; exists ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 >
       au < released ; crawling ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
       au < released ; manifest ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
@@ -1682,8 +1682,8 @@
       au < manifest ; exists ; 2005 ; Annals of General Psychiatry Volume 4 ; 4 >
       au < manifest ; exists ; 2006 ; Annals of General Psychiatry Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; Annals of General Psychiatry Volume 6 ; 6 >
-      au < manifest ; exists ; 2008 ; Annals of General Psychiatry Volume 7 ; 7 >
-      au < manifest ; exists ; 2009 ; Annals of General Psychiatry Volume 8 ; 8 >
+      au < crawling ; exists ; 2008 ; Annals of General Psychiatry Volume 7 ; 7 >
+      au < crawling ; exists ; 2009 ; Annals of General Psychiatry Volume 8 ; 8 >
       au < released ; crawling ; 2010 ; Annals of General Psychiatry Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Annals of General Psychiatry Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Annals of General Psychiatry Volume 11 ; 11 >
@@ -1701,8 +1701,8 @@
       param[journal_issn] = 1750-1164
 
       au < manifest ; exists ; 2007 ; Annals of Surgical Innovation and Research Volume 1 ; 1 >
-      au < manifest ; exists ; 2008 ; Annals of Surgical Innovation and Research Volume 2 ; 2 >
-      au < manifest ; exists ; 2009 ; Annals of Surgical Innovation and Research Volume 3 ; 3 >
+      au < crawling ; exists ; 2008 ; Annals of Surgical Innovation and Research Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; Annals of Surgical Innovation and Research Volume 3 ; 3 >
       au < released ; crawling ; 2010 ; Annals of Surgical Innovation and Research Volume 4 ; 4 >
       au < released ; manifest ; 2011 ; Annals of Surgical Innovation and Research Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Annals of Surgical Innovation and Research Volume 6 ; 6 >
@@ -1731,8 +1731,8 @@
       au < manifest ; exists ; 2005 ; Arthritis Research & Therapy Volume 7 ; 7 >
       au < manifest ; exists ; 2006 ; Arthritis Research & Therapy Volume 8 ; 8 >
       au < manifest ; exists ; 2007 ; Arthritis Research & Therapy Volume 9 ; 9 >
-      au < manifest ; exists ; 2008 ; Arthritis Research & Therapy Volume 10 ; 10 >
-      au < manifest ; exists ; 2009 ; Arthritis Research & Therapy Volume 11 ; 11 >
+      au < crawling ; exists ; 2008 ; Arthritis Research & Therapy Volume 10 ; 10 >
+      au < crawling ; exists ; 2009 ; Arthritis Research & Therapy Volume 11 ; 11 >
       au < released ; crawling ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
       au < released ; crawling ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
       au < crawling ; exists ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
@@ -1753,8 +1753,8 @@
       au < manifest ; exists ; 2005 ; Australia and New Zealand Health Policy Volume 2 ; 2 >
       au < manifest ; exists ; 2006 ; Australia and New Zealand Health Policy Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; Australia and New Zealand Health Policy Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; Australia and New Zealand Health Policy Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; Australia and New Zealand Health Policy Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Australia and New Zealand Health Policy Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Australia and New Zealand Health Policy Volume 6 ; 6 >
       au < released ; crawling ; 2010 ; Australia and New Zealand Health Policy Volume 7 ; 7 >
       au < released ; crawling ; 2011 ; Australia and New Zealand Health Policy Volume 8 ; 8 >
 
@@ -1773,8 +1773,8 @@
       au < manifest ; exists ; 2005 ; Behavioral and Brain Functions Volume 1 ; 1 >
       au < manifest ; exists ; 2006 ; Behavioral and Brain Functions Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; Behavioral and Brain Functions Volume 3 ; 3 >
-      au < manifest ; exists ; 2008 ; Behavioral and Brain Functions Volume 4 ; 4 >
-      au < manifest ; exists ; 2009 ; Behavioral and Brain Functions Volume 5 ; 5 >
+      au < crawling ; exists ; 2008 ; Behavioral and Brain Functions Volume 4 ; 4 >
+      au < crawling ; exists ; 2009 ; Behavioral and Brain Functions Volume 5 ; 5 >
       au < released ; crawling ; 2010 ; Behavioral and Brain Functions Volume 6 ; 6 >
       au < released ; manifest ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 >
@@ -1791,8 +1791,8 @@
       param[base_url] = http://www.biologicalproceduresonline.com/
       param[journal_issn] = 1480-9222
 
-      au < manifest ; exists ; 2009 ; Biological Procedures Online Volume 11 ; 11 >
-      au < manifest ; exists ; 2009-2010 ; Biological Procedures Online Volume 12 ; 12 >
+      au < crawling ; exists ; 2009 ; Biological Procedures Online Volume 11 ; 11 >
+      au < crawling ; exists ; 2009-2010 ; Biological Procedures Online Volume 12 ; 12 >
       au < crawling ; exists ; 2010-2011 ; Biological Procedures Online Volume 13 ; 13 >
       au < crawling ; exists ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
 
@@ -1813,8 +1813,8 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
 
       au < manifest ; exists ; 2006 ; Biology Direct Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Biology Direct Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Biology Direct Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Biology Direct Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Biology Direct Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Biology Direct Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Biology Direct Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Biology Direct Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Biology Direct Volume 7 ; 7 >
@@ -1854,8 +1854,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; BioMagnetic Research and Technology Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; BioMagnetic Research and Technology Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; BioMagnetic Research and Technology Volume 5 ; 5 >
-      au < manifest ; exists ; 2008 ; BioMagnetic Research and Technology Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; BioMagnetic Research and Technology Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; BioMagnetic Research and Technology Volume 6 ; 6 >
+      au < crawling ; exists ; 2009 ; BioMagnetic Research and Technology Volume 7 ; 7 >
 
     }
 
@@ -1878,7 +1878,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2008 ; BioMedical Engineering OnLine Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; BioMedical Engineering OnLine Volume 8 ; 8 >
       au < released ; crawling ; 2010 ; BioMedical Engineering OnLine Volume 9 ; 9 >
-      au < testing ; exists ; 2011 ; BioMedical Engineering OnLine Volume 10 ; 10 >
+      au < crawling ; exists ; 2011 ; BioMedical Engineering OnLine Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; BioMedical Engineering OnLine Volume 11 ; 11 >
 
     }
@@ -1894,8 +1894,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1751-0759
 
       au < manifest ; exists ; 2007 ; BioPsychoSocial Medicine Volume 1 ; 1 >
-      au < manifest ; exists ; 2008 ; BioPsychoSocial Medicine Volume 2 ; 2 >
-      au < manifest ; exists ; 2009 ; BioPsychoSocial Medicine Volume 3 ; 3 >
+      au < crawling ; exists ; 2008 ; BioPsychoSocial Medicine Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; BioPsychoSocial Medicine Volume 3 ; 3 >
       au < released ; crawling ; 2010 ; BioPsychoSocial Medicine Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
@@ -1912,8 +1912,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.biotechnologyforbiofuels.com/
       param[journal_issn] = 1754-6834
 
-      au < manifest ; exists ; 2008 ; Biotechnology for Biofuels Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; Biotechnology for Biofuels Volume 2 ; 2 >
+      au < crawling ; exists ; 2008 ; Biotechnology for Biofuels Volume 1 ; 1 >
+      au < crawling ; exists ; 2009 ; Biotechnology for Biofuels Volume 2 ; 2 >
       au < released ; crawling ; 2010 ; Biotechnology for Biofuels Volume 3 ; 3 >
       au < notReady ; exists ; 2011 ; Biotechnology for Biofuels Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Biotechnology for Biofuels Volume 5 ; 5 >
@@ -1939,8 +1939,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Breast Cancer Research Volume 7 ; 7 >
       au < manifest ; exists ; 2006 ; Breast Cancer Research Volume 8 ; 8 >
       au < manifest ; exists ; 2007 ; Breast Cancer Research Volume 9 ; 9 >
-      au < manifest ; exists ; 2008 ; Breast Cancer Research Volume 10 ; 10 >
-      au < manifest ; exists ; 2009 ; Breast Cancer Research Volume 11 ; 11 >
+      au < crawling ; exists ; 2008 ; Breast Cancer Research Volume 10 ; 10 >
+      au < crawling ; exists ; 2009 ; Breast Cancer Research Volume 11 ; 11 >
       au < released ; crawling ; 2010 ; Breast Cancer Research Volume 12 ; 12 >
       au < released ; crawling ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
       au < crawling ; exists ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
@@ -1964,8 +1964,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Cancer Cell International Volume 5 ; 5 >
       au < manifest ; exists ; 2006 ; Cancer Cell International Volume 6 ; 6 >
       au < manifest ; exists ; 2007 ; Cancer Cell International Volume 7 ; 7 >
-      au < manifest ; exists ; 2008 ; Cancer Cell International Volume 8 ; 8 >
-      au < manifest ; exists ; 2009 ; Cancer Cell International Volume 9 ; 9 >
+      au < crawling ; exists ; 2008 ; Cancer Cell International Volume 8 ; 8 >
+      au < crawling ; exists ; 2009 ; Cancer Cell International Volume 9 ; 9 >
       au < released ; crawling ; 2010 ; Cancer Cell International Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; Cancer Cell International Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; Cancer Cell International Volume 12 ; 12 >
@@ -1984,8 +1984,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Carbon Balance and Management Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Carbon Balance and Management Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Carbon Balance and Management Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Carbon Balance and Management Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Carbon Balance and Management Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Carbon Balance and Management Volume 4 ; 4 >
       au < released ; crawling ; 2010 ; Carbon Balance and Management Volume 5 ; 5 >
       au < released ; manifest ; 2011 ; Carbon Balance and Management Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Carbon Balance and Management Volume 7 ; 7 >
@@ -2008,8 +2008,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Cardiovascular Diabetology Volume 4 ; 4 >
       au < manifest ; exists ; 2006 ; Cardiovascular Diabetology Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; Cardiovascular Diabetology Volume 6 ; 6 >
-      au < manifest ; exists ; 2008 ; Cardiovascular Diabetology Volume 7 ; 7 >
-      au < manifest ; exists ; 2009 ; Cardiovascular Diabetology Volume 8 ; 8 >
+      au < crawling ; exists ; 2008 ; Cardiovascular Diabetology Volume 7 ; 7 >
+      au < crawling ; exists ; 2009 ; Cardiovascular Diabetology Volume 8 ; 8 >
       au < released ; crawling ; 2010 ; Cardiovascular Diabetology Volume 9 ; 9 >
       au < testing ; exists ; 2011 ; Cardiovascular Diabetology Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Cardiovascular Diabetology Volume 11 ; 11 >
@@ -2031,8 +2031,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Cardiovascular Ultrasound Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; Cardiovascular Ultrasound Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Cardiovascular Ultrasound Volume 5 ; 5 >
-      au < manifest ; exists ; 2008 ; Cardiovascular Ultrasound Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; Cardiovascular Ultrasound Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; Cardiovascular Ultrasound Volume 6 ; 6 >
+      au < crawling ; exists ; 2009 ; Cardiovascular Ultrasound Volume 7 ; 7 >
       au < released ; crawling ; 2010 ; Cardiovascular Ultrasound Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; Cardiovascular Ultrasound Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Cardiovascular Ultrasound Volume 10 ; 10 >
@@ -2049,8 +2049,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.casesjournal.com/
       param[journal_issn] = 1757-1626
 
-      au < manifest ; exists ; 2008 ; Cases Journal Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; Cases Journal Volume 2 ; 2 >
+      au < crawling ; exists ; 2008 ; Cases Journal Volume 1 ; 1 >
+      au < crawling ; exists ; 2009 ; Cases Journal Volume 2 ; 2 >
       au < released ; crawling ; 2010 ; Cases Journal Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; Cases Journal Volume 4 ; 4 >
 
@@ -2071,8 +2071,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Cell Communication and Signaling Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; Cell Communication and Signaling Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Cell Communication and Signaling Volume 5 ; 5 >
-      au < manifest ; exists ; 2008 ; Cell Communication and Signaling Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; Cell Communication and Signaling Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; Cell Communication and Signaling Volume 6 ; 6 >
+      au < crawling ; exists ; 2009 ; Cell Communication and Signaling Volume 7 ; 7 >
       au < released ; crawling ; 2010 ; Cell Communication and Signaling Volume 8 ; 8 >
       au < testing ; exists ; 2011 ; Cell Communication and Signaling Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Cell Communication and Signaling Volume 10 ; 10 >
@@ -2091,8 +2091,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Cell Division Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Cell Division Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Cell Division Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Cell Division Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Cell Division Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Cell Division Volume 4 ; 4 >
       au < released ; crawling ; 2010 ; Cell Division Volume 5 ; 5 >
       au < crawling ; exists ; 2011 ; Cell Division Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Cell Division Volume 7 ; 7 >
@@ -2129,8 +2129,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Cerebrospinal Fluid Research Volume 2 ; 2 >
       au < manifest ; exists ; 2006 ; Cerebrospinal Fluid Research Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; Cerebrospinal Fluid Research Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; Cerebrospinal Fluid Research Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; Cerebrospinal Fluid Research Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Cerebrospinal Fluid Research Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Cerebrospinal Fluid Research Volume 6 ; 6 >
       au < released ; crawling ; 2010 ; Cerebrospinal Fluid Research Volume 7 ; 7 >
 
     }
