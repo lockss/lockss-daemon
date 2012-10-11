@@ -809,9 +809,9 @@
     au < manifest ; exists ; 2007 ; Competition & Change Volume 11 ; 11 > 
     au < manifest ; exists ; 2008 ; Competition & Change Volume 12 ; 12 > 
     au < manifest ; exists ; 2009 ; Competition & Change Volume 13 ; 13 > 
-    au < testing ; exists ; 2010 ; Competition & Change Volume 14 ; 14 > 
-    au < testing ; exists ; 2011 ; Competition & Change Volume 15 ; 15 > 
-    au < testing ; exists ; 2012 ; Competition & Change Volume 16 ; 16 > 
+    au < released ; manifest ; 2010 ; Competition & Change Volume 14 ; 14 > 
+    au < released ; manifest ; 2011 ; Competition & Change Volume 15 ; 15 > 
+    au < released ; manifest ; 2012 ; Competition & Change Volume 16 ; 16 > 
 
   }
 
@@ -845,8 +845,8 @@
     au < manifest ; exists ; 2007 ; Conservation and Management of Archaeological Sites Volume 9 ; 9 > 
     au < manifest ; exists ; 2008 ; Conservation and Management of Archaeological Sites Volume 10 ; 10 > 
     au < manifest ; exists ; 2009 ; Conservation and Management of Archaeological Sites Volume 11 ; 11 > 
-    au < testing ; exists ; 2010 ; Conservation and Management of Archaeological Sites Volume 12 ; 12 > 
-    au < testing ; exists ; 2011 ; Conservation and Management of Archaeological Sites Volume 13 ; 13 > 
+    au < released ; manifest ; 2010 ; Conservation and Management of Archaeological Sites Volume 12 ; 12 > 
+    au < released ; manifest ; 2011 ; Conservation and Management of Archaeological Sites Volume 13 ; 13 > 
     au < expected ; exists ; 2012 ; Conservation and Management of Archaeological Sites Volume 14 ; 14 > 
 
   }
@@ -870,6 +870,7 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[continues] = 0007-0599
+    comment[notReady] = low agreement
 
     au < manifest ; exists ; 2003 ; Corrosion Engineering, Science and Technology Volume 38 ; 38 > 
     au < manifest ; exists ; 2004 ; Corrosion Engineering, Science and Technology Volume 39 ; 39 > 
@@ -878,9 +879,9 @@
     au < manifest ; exists ; 2007 ; Corrosion Engineering, Science and Technology Volume 42 ; 42 > 
     au < manifest ; exists ; 2008 ; Corrosion Engineering, Science and Technology Volume 43 ; 43 > 
     au < manifest ; exists ; 2009 ; Corrosion Engineering, Science and Technology Volume 44 ; 44 > 
-    au < testing ; exists ; 2010 ; Corrosion Engineering, Science and Technology Volume 45 ; 45 > 
-    au < testing ; exists ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 ; 46 > 
-    au < testing ; exists ; 2012 ; Corrosion Engineering, Science and Technology Volume 47 ; 47 > 
+    au < released ; manifest ; 2010 ; Corrosion Engineering, Science and Technology Volume 45 ; 45 > 
+    au < notReady ; exists ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 ; 46 > 
+    au < released ; manifest ; 2012 ; Corrosion Engineering, Science and Technology Volume 47 ; 47 > 
 
   }
 
@@ -948,9 +949,9 @@
     au < manifest ; exists ; 2007 ; Costume Volume 41 ; 41 > 
     au < manifest ; exists ; 2008 ; Costume Volume 42 ; 42 > 
     au < manifest ; exists ; 2009 ; Costume Volume 43 ; 43 > 
-    au < testing ; exists ; 2010 ; Costume Volume 44 ; 44 > 
-    au < testing ; exists ; 2011 ; Costume Volume 45 ; 2011 > 
-    au < testing ; exists ; 2012 ; Costume Volume 46 ; 46 > 
+    au < released ; manifest ; 2010 ; Costume Volume 44 ; 44 > 
+    au < released ; manifest ; 2011 ; Costume Volume 45 ; 2011 > 
+    au < released ; manifest ; 2012 ; Costume Volume 46 ; 46 > 
 
   }
 
@@ -987,7 +988,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Deafness & Education International Volume 11 ; 11 > 
     au < doNotProcess ; doNotProcess ; 2010 ; Deafness & Education International Volume 12 ; 12 > 
     au < doNotProcess ; doNotProcess ; 2011 ; Deafness & Education International Volume 13 ; 13 >  
-    au < testing ; exists ; 2012 ; Deafness & Education International Volume 14 ; 14 >
+    au < released ; manifest ; 2012 ; Deafness & Education International Volume 14 ; 14 >
 
   }
 
@@ -1022,9 +1023,9 @@
     au < manifest ; exists ; 2008 ; Dix-Neuf Volume 11 ; 11 > 
     au < manifest ; exists ; 2009 ; Dix-Neuf Volume 12 ; 12 > 
     au < manifest ; exists ; 2009 ; Dix-Neuf Volume 13 ; 13 > 
-    au < testing ; exists ; 2010 ; Dix-Neuf Volume 14 ; 14 > 
-    au < testing ; exists ; 2011 ; Dix-Neuf Volume 15 ; 15 > 
-    au < testing ; exists ; 2012 ; Dix-Neuf Volume 16 ; 16 > 
+    au < released ; manifest ; 2010 ; Dix-Neuf Volume 14 ; 14 > 
+    au < released ; manifest ; 2011 ; Dix-Neuf Volume 15 ; 15 > 
+    au < released ; manifest ; 2012 ; Dix-Neuf Volume 16 ; 16 > 
 
   }
 
@@ -1047,8 +1048,8 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < testing ; exists ; 2010 ; Dress Volume 36 ; 36 > 
-    au < testing ; exists ; 2011 ; Dress Volume 37 ; 37 > 
+    au < released ; manifest ; 2010 ; Dress Volume 36 ; 36 > 
+    au < released ; manifest ; 2011 ; Dress Volume 37 ; 37 > 
     au < expected ; exists ; 2012 ; Dress Volume 38 ; 38 > 
 
   }
@@ -1073,9 +1074,9 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < manifest ; exists ; 2009 ; Dutch Crossing: Journal of Low Countries Studies Volume 33 ; 33 > 
-    au < testing ; exists ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 > 
-    au < testing ; exists ; 2011 ; Dutch Crossing: Journal of Low Countries Studies Volume 35 ; 35 > 
-    au < testing ; exists ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 > 
+    au < released ; manifest ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 > 
+    au < released ; manifest ; 2011 ; Dutch Crossing: Journal of Low Countries Studies Volume 35 ; 35 > 
+    au < released ; manifest ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 > 
 
   }
 
@@ -1114,9 +1115,9 @@
     au < manifest ; exists ; 2007 ; Early Medieval China Volume 2007 ; 2007 > 
     au < manifest ; exists ; 2008 ; Early Medieval China Volume 2008 ; 2008 > 
     au < manifest ; exists ; 2009 ; Early Medieval China Volume 2009 ; 2009 > 
-    au < crawling ; exists ; 2010 ; Early Medieval China Volume 2010 ; 2010 > 
-    au < crawling ; exists ; 2011 ; Early Medieval China Volume 2011 ; 2011 > 
-    au < crawling ; exists ; 2012 ; Early Medieval China Volume 2012 ; 2012 > 
+    au < testing ; exists ; 2010 ; Early Medieval China Volume 2010 ; 2010 > 
+    au < testing ; exists ; 2011 ; Early Medieval China Volume 2011 ; 2011 > 
+    au < testing ; exists ; 2012 ; Early Medieval China Volume 2012 ; 2012 > 
 
   }
 
@@ -1169,7 +1170,7 @@
     au < manifest ; exists ; 2007 ;  English Heritage Historical Review Volume 2 ; 2 >
     au < manifest ; exists ; 2008 ;  English Heritage Historical Review Volume 3 ; 3 >     
     au < manifest ; exists ; 2009 ;  English Heritage Historical Review Volume 4 ; 4 >   
-    au < crawling ; exists ; 2010 ;  English Heritage Historical Review Volume 5 ; 5 >  
+    au < testing ; exists ; 2010 ;  English Heritage Historical Review Volume 5 ; 5 >  
     au < expected ; exists ; 2011 ;  English Heritage Historical Review Volume 6 ; 6 >
     au < expected ; exists ; 2012 ;  English Heritage Historical Review Volume 7 ; 7 >
    
@@ -1208,9 +1209,9 @@
     au < manifest ; exists ; 2007 ; Environmental Archaeology Volume 12 ; 12 > 
     au < manifest ; exists ; 2008 ; Environmental Archaeology Volume 13 ; 13 > 
     au < manifest ; exists ; 2009 ; Environmental Archaeology Volume 14 ; 14 > 
-    au < crawling ; exists ; 2010 ; Environmental Archaeology Volume 15 ; 15 > 
-    au < crawling ; exists ; 2011 ; Environmental Archaeology Volume 16 ; 16 > 
-    au < crawling ; exists ; 2012 ; Environmental Archaeology Volume 17 ; 17 > 
+    au < testing ; exists ; 2010 ; Environmental Archaeology Volume 15 ; 15 > 
+    au < testing ; exists ; 2011 ; Environmental Archaeology Volume 16 ; 16 > 
+    au < testing ; exists ; 2012 ; Environmental Archaeology Volume 17 ; 17 > 
 
   }
 
@@ -1232,8 +1233,8 @@
     param[journal_issn] = 1461-9571
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < crawling ; exists ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
-    au < crawling ; exists ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
+    au < testing ; exists ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
+    au < testing ; exists ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
     
   }
 
