@@ -9193,14 +9193,13 @@
     param[base_url] = http://jat.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1976 ; Journal of Analytical Toxicology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1977 ; Journal of Analytical Toxicology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1978 ; Journal of Analytical Toxicology Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 1979 ; Journal of Analytical Toxicology Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 1980 ; Journal of Analytical Toxicology Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 1981 ; Journal of Analytical Toxicology Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 1982 ; Journal of Analytical Toxicology Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 1983 ; Journal of Analytical Toxicology Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1977 ; Journal of Analytical Toxicology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1978 ; Journal of Analytical Toxicology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1979 ; Journal of Analytical Toxicology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; Journal of Analytical Toxicology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; Journal of Analytical Toxicology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; Journal of Analytical Toxicology Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; Journal of Analytical Toxicology Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; exists ; 1984 ; Journal of Analytical Toxicology Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; exists ; 1985 ; Journal of Analytical Toxicology Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; exists ; 1986 ; Journal of Analytical Toxicology Volume 10 ; 10 >
