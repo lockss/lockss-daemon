@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -41,7 +41,7 @@
     <list>
       <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?[0-9]+)?$&quot;, base_url</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%slockss\.php\?(t=lockss&amp;)?pa=article&amp;i_id=[0-9]+$&quot;, base_url</string>
+      <string>1,&quot;^%sclockss\.php\?(t=lockss&amp;)?pa=article&amp;i_id=[0-9]+$&quot;, base_url</string>
       <string>1,&quot;^%sredirect_file\.php\?.*fileType=pdf.*$&quot;, base_url</string>
       <string>1,&quot;^%s[^/]+-article-a[0-9]+$&quot;, base_url</string>
     </list>
