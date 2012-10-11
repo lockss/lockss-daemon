@@ -1115,9 +1115,9 @@
     au < manifest ; exists ; 2007 ; Early Medieval China Volume 2007 ; 2007 > 
     au < manifest ; exists ; 2008 ; Early Medieval China Volume 2008 ; 2008 > 
     au < manifest ; exists ; 2009 ; Early Medieval China Volume 2009 ; 2009 > 
-    au < testing ; exists ; 2010 ; Early Medieval China Volume 2010 ; 2010 > 
-    au < testing ; exists ; 2011 ; Early Medieval China Volume 2011 ; 2011 > 
-    au < testing ; exists ; 2012 ; Early Medieval China Volume 2012 ; 2012 > 
+    au < released ; manifest ; 2010 ; Early Medieval China Volume 2010 ; 2010 > 
+    au < released ; manifest ; 2011 ; Early Medieval China Volume 2011 ; 2011 > 
+    au < released ; manifest ; 2012 ; Early Medieval China Volume 2012 ; 2012 > 
 
   }
 
@@ -1170,7 +1170,7 @@
     au < manifest ; exists ; 2007 ;  English Heritage Historical Review Volume 2 ; 2 >
     au < manifest ; exists ; 2008 ;  English Heritage Historical Review Volume 3 ; 3 >     
     au < manifest ; exists ; 2009 ;  English Heritage Historical Review Volume 4 ; 4 >   
-    au < testing ; exists ; 2010 ;  English Heritage Historical Review Volume 5 ; 5 >  
+    au < released ; manifest ; 2010 ;  English Heritage Historical Review Volume 5 ; 5 >  
     au < expected ; exists ; 2011 ;  English Heritage Historical Review Volume 6 ; 6 >
     au < expected ; exists ; 2012 ;  English Heritage Historical Review Volume 7 ; 7 >
    
@@ -1209,9 +1209,9 @@
     au < manifest ; exists ; 2007 ; Environmental Archaeology Volume 12 ; 12 > 
     au < manifest ; exists ; 2008 ; Environmental Archaeology Volume 13 ; 13 > 
     au < manifest ; exists ; 2009 ; Environmental Archaeology Volume 14 ; 14 > 
-    au < testing ; exists ; 2010 ; Environmental Archaeology Volume 15 ; 15 > 
-    au < testing ; exists ; 2011 ; Environmental Archaeology Volume 16 ; 16 > 
-    au < testing ; exists ; 2012 ; Environmental Archaeology Volume 17 ; 17 > 
+    au < released ; manifest ; 2010 ; Environmental Archaeology Volume 15 ; 15 > 
+    au < released ; manifest ; 2011 ; Environmental Archaeology Volume 16 ; 16 > 
+    au < released ; manifest ; 2012 ; Environmental Archaeology Volume 17 ; 17 > 
 
   }
 
@@ -1233,8 +1233,8 @@
     param[journal_issn] = 1461-9571
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < testing ; exists ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
-    au < testing ; exists ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
+    au < released ; manifest ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
+    au < released ; manifest ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
     
   }
 
@@ -1278,9 +1278,9 @@
     au < manifest ; exists ; 2007 ; Exemplaria Volume 19 ; 19 > 
     au < manifest ; exists ; 2008 ; Exemplaria Volume 20 ; 20 > 
     au < manifest ; exists ; 2009 ; Exemplaria Volume 21 ; 21 > 
-    au < crawling ; exists ; 2010 ; Exemplaria Volume 22 ; 22 > 
-    au < crawling ; exists ; 2011 ; Exemplaria Volume 23 ; 23 > 
-    au < crawling ; exists ; 2012 ; Exemplaria Volume 24 ; 24 > 
+    au < testing ; exists ; 2010 ; Exemplaria Volume 22 ; 22 > 
+    au < testing ; exists ; 2011 ; Exemplaria Volume 23 ; 23 > 
+    au < testing ; exists ; 2012 ; Exemplaria Volume 24 ; 24 > 
 
   }
 
@@ -1307,9 +1307,9 @@
     au < manifest ; exists ; 2007 ; Family & Community History Volume 10 ; 10 > 
     au < manifest ; exists ; 2008 ; Family & Community History Volume 11 ; 11 > 
     au < manifest ; exists ; 2009 ; Family & Community History Volume 12 ; 12 > 
-    au < crawling ; exists ; 2010 ; Family & Community History Volume 13 ; 13 >  
-    au < crawling ; exists ; 2011 ; Family & Community History Volume 14 ; 14 > 
-    au < crawling ; exists ; 2012 ; Family & Community History Volume 15 ; 15 >
+    au < testing ; exists ; 2010 ; Family & Community History Volume 13 ; 13 >  
+    au < testing ; exists ; 2011 ; Family & Community History Volume 14 ; 14 > 
+    au < testing ; exists ; 2012 ; Family & Community History Volume 15 ; 15 >
 
   }
 
@@ -1333,9 +1333,9 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < manifest ; exists ; 2009 ; Folk Life: Journal of Ethnological Studies Volume 47 ; 47 > 
-    au < crawling ; exists ; 2010 ; Folk Life: Journal of Ethnological Studies Volume 48 ; 48 > 
-    au < crawling ; exists ; 2011 ; Folk Life: Journal of Ethnological Studies Volume 49 ; 49 >  
-    au < crawling ; exists ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 >
+    au < testing ; exists ; 2010 ; Folk Life: Journal of Ethnological Studies Volume 48 ; 48 > 
+    au < testing ; exists ; 2011 ; Folk Life: Journal of Ethnological Studies Volume 49 ; 49 >  
+    au < testing ; exists ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 >
 
   }
 
