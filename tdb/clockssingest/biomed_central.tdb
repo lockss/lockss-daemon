@@ -3302,8 +3302,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Journal of Ethnobiology and Ethnomedicine Volume 1 ; 1 >
       au < manifest ; exists ; 2006 ; Journal of Ethnobiology and Ethnomedicine Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; Journal of Ethnobiology and Ethnomedicine Volume 3 ; 3 >
-      au < manifest ; exists ; 2008 ; Journal of Ethnobiology and Ethnomedicine Volume 4 ; 4 >
-      au < manifest ; exists ; 2009 ; Journal of Ethnobiology and Ethnomedicine Volume 5 ; 5 >
+      au < crawling ; exists ; 2008 ; Journal of Ethnobiology and Ethnomedicine Volume 4 ; 4 >
+      au < crawling ; exists ; 2009 ; Journal of Ethnobiology and Ethnomedicine Volume 5 ; 5 >
       au < crawling ; exists ; 2010 ; Journal of Ethnobiology and Ethnomedicine Volume 6 ; 6 >
       au < crawling ; exists ; 2011 ; Journal of Ethnobiology and Ethnomedicine Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Journal of Ethnobiology and Ethnomedicine Volume 8 ; 8 >
@@ -3320,8 +3320,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jeccr.com/
       param[journal_issn] = 1756-9966
 
-      au < manifest ; exists ; 2008 ; Journal of Experimental & Clinical Cancer Research Volume 27 ; 27 >
-      au < manifest ; exists ; 2009 ; Journal of Experimental & Clinical Cancer Research Volume 28 ; 28 >
+      au < crawling ; exists ; 2008 ; Journal of Experimental & Clinical Cancer Research Volume 27 ; 27 >
+      au < crawling ; exists ; 2009 ; Journal of Experimental & Clinical Cancer Research Volume 28 ; 28 >
       au < crawling ; exists ; 2010 ; Journal of Experimental & Clinical Cancer Research Volume 29 ; 29 >
       au < crawling ; exists ; 2011 ; Journal of Experimental & Clinical Cancer Research Volume 30 ; 30 >
       au < crawling ; exists ; 2012 ; Journal of Experimental & Clinical Cancer Research Volume 31 ; 31 >
@@ -3338,8 +3338,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jhoonline.org/
       param[journal_issn] = 1756-8722
 
-      au < manifest ; exists ; 2008 ; Journal of Hematology & Oncology Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; Journal of Hematology & Oncology Volume 2 ; 2 >
+      au < crawling ; exists ; 2008 ; Journal of Hematology & Oncology Volume 1 ; 1 >
+      au < crawling ; exists ; 2009 ; Journal of Hematology & Oncology Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Journal of Hematology & Oncology Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; Journal of Hematology & Oncology Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Journal of Hematology & Oncology Volume 5 ; 5 >
@@ -3363,8 +3363,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Journal of Immune Based Therapies and Vaccines Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; Journal of Immune Based Therapies and Vaccines Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Journal of Immune Based Therapies and Vaccines Volume 5 ; 5 >
-      au < manifest ; exists ; 2008 ; Journal of Immune Based Therapies and Vaccines Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; Journal of Immune Based Therapies and Vaccines Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; Journal of Immune Based Therapies and Vaccines Volume 6 ; 6 >
+      au < crawling ; exists ; 2009 ; Journal of Immune Based Therapies and Vaccines Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Journal of Immune Based Therapies and Vaccines Volume 8 ; 8 >
       au < crawling ; exists ; 2011 ; Journal of Immune Based Therapies and Vaccines Volume 9 ; 9 >
 
@@ -3384,8 +3384,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Journal of Inflammation Volume 2 ; 2 >
       au < manifest ; exists ; 2006 ; Journal of Inflammation Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; Journal of Inflammation Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; Journal of Inflammation Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; Journal of Inflammation Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Journal of Inflammation Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Journal of Inflammation Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; Journal of Inflammation Volume 7 ; 7 >
       au < crawling ; exists ; 2011 ; Journal of Inflammation Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Journal of Inflammation Volume 9 ; 9 >
@@ -3405,8 +3405,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Journal of Molecular Signaling Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Journal of Molecular Signaling Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Journal of Molecular Signaling Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Journal of Molecular Signaling Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Journal of Molecular Signaling Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Journal of Molecular Signaling Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Journal of Molecular Signaling Volume 5 ; 5 >
       au < crawling ; exists ; 2011 ; Journal of Molecular Signaling Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Journal of Molecular Signaling Volume 7 ; 7 >
@@ -3428,8 +3428,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Journal of Nanobiotechnology Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; Journal of Nanobiotechnology Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Journal of Nanobiotechnology Volume 5 ; 5 >
-      au < manifest ; exists ; 2008 ; Journal of Nanobiotechnology Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; Journal of Nanobiotechnology Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; Journal of Nanobiotechnology Volume 6 ; 6 >
+      au < crawling ; exists ; 2009 ; Journal of Nanobiotechnology Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Journal of Nanobiotechnology Volume 8 ; 8 >
       au < crawling ; exists ; 2011 ; Journal of Nanobiotechnology Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Journal of Nanobiotechnology Volume 10 ; 10 >
@@ -3452,8 +3452,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Journal of Negative Results in Biomedicine Volume 4 ; 4 >
       au < manifest ; exists ; 2006 ; Journal of Negative Results in Biomedicine Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; Journal of Negative Results in Biomedicine Volume 6 ; 6 >
-      au < manifest ; exists ; 2008 ; Journal of Negative Results in Biomedicine Volume 7 ; 7 >
-      au < manifest ; exists ; 2009 ; Journal of Negative Results in Biomedicine Volume 8 ; 8 >
+      au < crawling ; exists ; 2008 ; Journal of Negative Results in Biomedicine Volume 7 ; 7 >
+      au < crawling ; exists ; 2009 ; Journal of Negative Results in Biomedicine Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Journal of Negative Results in Biomedicine Volume 9 ; 9 >
       au < crawling ; exists ; 2011 ; Journal of Negative Results in Biomedicine Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Journal of Negative Results in Biomedicine Volume 11 ; 11 >
@@ -3489,8 +3489,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Journal of NeuroEngineering and Rehabilitation Volume 2 ; 2 >
       au < manifest ; exists ; 2006 ; Journal of NeuroEngineering and Rehabilitation Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; Journal of NeuroEngineering and Rehabilitation Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; Journal of NeuroEngineering and Rehabilitation Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; Journal of NeuroEngineering and Rehabilitation Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Journal of NeuroEngineering and Rehabilitation Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Journal of NeuroEngineering and Rehabilitation Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; Journal of NeuroEngineering and Rehabilitation Volume 7 ; 7 >
       au < crawling ; exists ; 2011 ; Journal of NeuroEngineering and Rehabilitation Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Journal of NeuroEngineering and Rehabilitation Volume 9 ; 9 >
@@ -3511,8 +3511,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Journal of Neuroinflammation Volume 2 ; 2 >
       au < manifest ; exists ; 2006 ; Journal of Neuroinflammation Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; Journal of Neuroinflammation Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; Journal of Neuroinflammation Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; Journal of Neuroinflammation Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Journal of Neuroinflammation Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Journal of Neuroinflammation Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; Journal of Neuroinflammation Volume 7 ; 7 >
       au < crawling ; exists ; 2011 ; Journal of Neuroinflammation Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Journal of Neuroinflammation Volume 9 ; 9 >
@@ -3531,8 +3531,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Journal of Occupational Medicine and Toxicology Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Journal of Occupational Medicine and Toxicology Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Journal of Occupational Medicine and Toxicology Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Journal of Occupational Medicine and Toxicology Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Journal of Occupational Medicine and Toxicology Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Journal of Occupational Medicine and Toxicology Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Journal of Occupational Medicine and Toxicology Volume 5 ; 5 >
       au < crawling ; exists ; 2011 ; Journal of Occupational Medicine and Toxicology Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Journal of Occupational Medicine and Toxicology Volume 7 ; 7 >
@@ -3551,8 +3551,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Journal of Orthopaedic Surgery and Research Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Journal of Orthopaedic Surgery and Research Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Journal of Orthopaedic Surgery and Research Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Journal of Orthopaedic Surgery and Research Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Journal of Orthopaedic Surgery and Research Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Journal of Orthopaedic Surgery and Research Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Journal of Orthopaedic Surgery and Research Volume 5 ; 5 >
       au < crawling ; exists ; 2011 ; Journal of Orthopaedic Surgery and Research Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Journal of Orthopaedic Surgery and Research Volume 7 ; 7 >
@@ -3587,8 +3587,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Journal of the International Society of Sports Nutrition Volume 2 ; 2 >
       au < manifest ; exists ; 2006 ; Journal of the International Society of Sports Nutrition Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; Journal of the International Society of Sports Nutrition Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; Journal of the International Society of Sports Nutrition Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; Journal of the International Society of Sports Nutrition Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Journal of the International Society of Sports Nutrition Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Journal of the International Society of Sports Nutrition Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; Journal of the International Society of Sports Nutrition Volume 7 ; 7 >
       au < crawling ; exists ; 2011 ; Journal of the International Society of Sports Nutrition Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Journal of the International Society of Sports Nutrition Volume 9 ; 9 >
@@ -3610,8 +3610,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Journal of Translational Medicine Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; Journal of Translational Medicine Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Journal of Translational Medicine Volume 5 ; 5 >
-      au < manifest ; exists ; 2008 ; Journal of Translational Medicine Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; Journal of Translational Medicine Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; Journal of Translational Medicine Volume 6 ; 6 >
+      au < crawling ; exists ; 2009 ; Journal of Translational Medicine Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Journal of Translational Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2011 ; Journal of Translational Medicine Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Journal of Translational Medicine Volume 10 ; 10 >
@@ -3629,8 +3629,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1752-2897
 
       au < manifest ; exists ; 2007 ; Journal of Trauma Management & Outcomes Volume 1 ; 1 >
-      au < manifest ; exists ; 2008 ; Journal of Trauma Management & Outcomes Volume 2 ; 2 >
-      au < manifest ; exists ; 2009 ; Journal of Trauma Management & Outcomes Volume 3 ; 3 >
+      au < crawling ; exists ; 2008 ; Journal of Trauma Management & Outcomes Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; Journal of Trauma Management & Outcomes Volume 3 ; 3 >
       au < crawling ; exists ; 2010 ; Journal of Trauma Management & Outcomes Volume 4 ; 4 >
       au < crawling ; exists ; 2011 ; Journal of Trauma Management & Outcomes Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Journal of Trauma Management & Outcomes Volume 6 ; 6 >
@@ -3653,8 +3653,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Lipids in Health and Disease Volume 4 ; 4 >
       au < manifest ; exists ; 2006 ; Lipids in Health and Disease Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; Lipids in Health and Disease Volume 6 ; 6 >
-      au < manifest ; exists ; 2008 ; Lipids in Health and Disease Volume 7 ; 7 >
-      au < manifest ; exists ; 2009 ; Lipids in Health and Disease Volume 8 ; 8 >
+      au < crawling ; exists ; 2008 ; Lipids in Health and Disease Volume 7 ; 7 >
+      au < crawling ; exists ; 2009 ; Lipids in Health and Disease Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Lipids in Health and Disease Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Lipids in Health and Disease Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Lipids in Health and Disease Volume 11 ; 11 >
@@ -3690,8 +3690,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Malaria Journal Volume 4 ; 4 >
       au < manifest ; exists ; 2006 ; Malaria Journal Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; Malaria Journal Volume 6 ; 6 >
-      au < manifest ; exists ; 2008 ; Malaria Journal Volume 7 ; 7 >
-      au < manifest ; exists ; 2009 ; Malaria Journal Volume 8 ; 8 >
+      au < crawling ; exists ; 2008 ; Malaria Journal Volume 7 ; 7 >
+      au < crawling ; exists ; 2009 ; Malaria Journal Volume 8 ; 8 >
       au < testing ; exists ; 2010 ; Malaria Journal Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Malaria Journal Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Malaria Journal Volume 11 ; 11 >
@@ -3729,8 +3729,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Microbial Cell Factories Volume 4 ; 4 >
       au < manifest ; exists ; 2006 ; Microbial Cell Factories Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; Microbial Cell Factories Volume 6 ; 6 >
-      au < manifest ; exists ; 2008 ; Microbial Cell Factories Volume 7 ; 7 >
-      au < manifest ; exists ; 2009 ; Microbial Cell Factories Volume 8 ; 8 >
+      au < crawling ; exists ; 2008 ; Microbial Cell Factories Volume 7 ; 7 >
+      au < crawling ; exists ; 2009 ; Microbial Cell Factories Volume 8 ; 8 >
       au < testing ; exists ; 2010 ; Microbial Cell Factories Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Microbial Cell Factories Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Microbial Cell Factories Volume 11 ; 11 >
@@ -3787,8 +3787,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Molecular Cancer Volume 4 ; 4 >
       au < manifest ; exists ; 2006 ; Molecular Cancer Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; Molecular Cancer Volume 6 ; 6 >
-      au < manifest ; exists ; 2008 ; Molecular Cancer Volume 7 ; 7 >
-      au < manifest ; exists ; 2009 ; Molecular Cancer Volume 8 ; 8 >
+      au < crawling ; exists ; 2008 ; Molecular Cancer Volume 7 ; 7 >
+      au < crawling ; exists ; 2009 ; Molecular Cancer Volume 8 ; 8 >
       au < released ; crawling ; 2010 ; Molecular Cancer Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Molecular Cancer Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Molecular Cancer Volume 11 ; 11 >
@@ -3805,8 +3805,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.molecularcytogenetics.org/
       param[journal_issn] = 1755-8166
 
-      au < manifest ; exists ; 2008 ; Molecular Cytogenetics Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; Molecular Cytogenetics Volume 2 ; 2 >
+      au < crawling ; exists ; 2008 ; Molecular Cytogenetics Volume 1 ; 1 >
+      au < crawling ; exists ; 2009 ; Molecular Cytogenetics Volume 2 ; 2 >
       au < testing ; exists ; 2010 ; Molecular Cytogenetics Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; Molecular Cytogenetics Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Molecular Cytogenetics Volume 5 ; 5 >
@@ -3825,8 +3825,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Molecular Neurodegeneration Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Molecular Neurodegeneration Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Molecular Neurodegeneration Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Molecular Neurodegeneration Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Molecular Neurodegeneration Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Molecular Neurodegeneration Volume 4 ; 4 >
       au < released ; crawling ; 2010 ; Molecular Neurodegeneration Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Molecular Neurodegeneration Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Molecular Neurodegeneration Volume 7 ; 7 >
@@ -3846,8 +3846,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Molecular Pain Volume 1 ; 1 >
       au < manifest ; exists ; 2006 ; Molecular Pain Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; Molecular Pain Volume 3 ; 3 >
-      au < manifest ; exists ; 2008 ; Molecular Pain Volume 4 ; 4 >
-      au < manifest ; exists ; 2009 ; Molecular Pain Volume 5 ; 5 >
+      au < crawling ; exists ; 2008 ; Molecular Pain Volume 4 ; 4 >
+      au < crawling ; exists ; 2009 ; Molecular Pain Volume 5 ; 5 >
       au < testing ; exists ; 2010 ; Molecular Pain Volume 6 ; 6 >
       au < released ; crawling ; 2011 ; Molecular Pain Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Molecular Pain Volume 8 ; 8 >
@@ -3882,8 +3882,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Neural Development Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Neural Development Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Neural Development Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Neural Development Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Neural Development Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Neural Development Volume 4 ; 4 >
       au < testing ; exists ; 2010 ; Neural Development Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Neural Development Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Neural Development Volume 7 ; 7 >
@@ -3901,8 +3901,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1753-4631
 
       au < manifest ; exists ; 2007 ; Nonlinear Biomedical Physics Volume 1 ; 1 >
-      au < manifest ; exists ; 2008 ; Nonlinear Biomedical Physics Volume 2 ; 2 >
-      au < manifest ; exists ; 2009 ; Nonlinear Biomedical Physics Volume 3 ; 3 >
+      au < crawling ; exists ; 2008 ; Nonlinear Biomedical Physics Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; Nonlinear Biomedical Physics Volume 3 ; 3 >
       au < released ; crawling ; 2010 ; Nonlinear Biomedical Physics Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; Nonlinear Biomedical Physics Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Nonlinear Biomedical Physics Volume 6 ; 6 >
@@ -3923,8 +3923,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Nutrition & Metabolism Volume 2 ; 2 >
       au < manifest ; exists ; 2006 ; Nutrition & Metabolism Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; Nutrition & Metabolism Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; Nutrition & Metabolism Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; Nutrition & Metabolism Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Nutrition & Metabolism Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Nutrition & Metabolism Volume 6 ; 6 >
       au < released ; crawling ; 2010 ; Nutrition & Metabolism Volume 7 ; 7 >      
       au < released ; crawling ; 2011 ; Nutrition & Metabolism Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Nutrition & Metabolism Volume 9 ; 9 >
@@ -3947,8 +3947,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Nutrition Journal Volume 4 ; 4 >
       au < manifest ; exists ; 2006 ; Nutrition Journal Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; Nutrition Journal Volume 6 ; 6 >
-      au < manifest ; exists ; 2008 ; Nutrition Journal Volume 7 ; 7 >
-      au < manifest ; exists ; 2009 ; Nutrition Journal Volume 8 ; 8 >
+      au < crawling ; exists ; 2008 ; Nutrition Journal Volume 7 ; 7 >
+      au < crawling ; exists ; 2009 ; Nutrition Journal Volume 8 ; 8 >
       au < testing ; exists ; 2010 ; Nutrition Journal Volume 9 ; 9 >      
       au < released ; crawling ; 2011 ; Nutrition Journal Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Nutrition Journal Volume 11 ; 11 >
@@ -3967,8 +3967,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Orphanet Journal of Rare Diseases Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Orphanet Journal of Rare Diseases Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Orphanet Journal of Rare Diseases Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Orphanet Journal of Rare Diseases Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Orphanet Journal of Rare Diseases Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Orphanet Journal of Rare Diseases Volume 4 ; 4 >
       au < released ; crawling ; 2010 ; Orphanet Journal of Rare Diseases Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Orphanet Journal of Rare Diseases Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Orphanet Journal of Rare Diseases Volume 7 ; 7 >
@@ -3986,8 +3986,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1750-4732
 
       au < manifest ; exists ; 2007 ; Osteopathic Medicine and Primary Care Volume 1 ; 1 >
-      au < manifest ; exists ; 2008 ; Osteopathic Medicine and Primary Care Volume 2 ; 2 >
-      au < manifest ; exists ; 2009 ; Osteopathic Medicine and Primary Care Volume 3 ; 3 >
+      au < crawling ; exists ; 2008 ; Osteopathic Medicine and Primary Care Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; Osteopathic Medicine and Primary Care Volume 3 ; 3 >
       au < released ; crawling ; 2010 ; Osteopathic Medicine and Primary Care Volume 4 ; 4 >
 
     }
@@ -4002,8 +4002,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.parasitesandvectors.com/
       param[journal_issn] = 1756-3305
 
-      au < manifest ; exists ; 2008 ; Parasites & Vectors Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; Parasites & Vectors Volume 2 ; 2 >
+      au < crawling ; exists ; 2008 ; Parasites & Vectors Volume 1 ; 1 >
+      au < crawling ; exists ; 2009 ; Parasites & Vectors Volume 2 ; 2 >
       au < released ; crawling ; 2010 ; Parasites & Vectors Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; Parasites & Vectors Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Parasites & Vectors Volume 5 ; 5 >
@@ -4024,8 +4024,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Particle and Fibre Toxicology Volume 2 ; 2 >
       au < manifest ; exists ; 2006 ; Particle and Fibre Toxicology Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; Particle and Fibre Toxicology Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; Particle and Fibre Toxicology Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; Particle and Fibre Toxicology Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Particle and Fibre Toxicology Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Particle and Fibre Toxicology Volume 6 ; 6 >
       au < testing ; exists ; 2010 ; Particle and Fibre Toxicology Volume 7 ; 7 >
       au < released ; crawling ; 2011 ; Particle and Fibre Toxicology Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Particle and Fibre Toxicology Volume 9 ; 9 >
@@ -4043,8 +4043,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1754-9493
 
       au < manifest ; exists ; 2007 ; Patient Safety in Surgery Volume 1 ; 1 >
-      au < manifest ; exists ; 2008 ; Patient Safety in Surgery Volume 2 ; 2 >
-      au < manifest ; exists ; 2009 ; Patient Safety in Surgery Volume 3 ; 3 >
+      au < crawling ; exists ; 2008 ; Patient Safety in Surgery Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; Patient Safety in Surgery Volume 3 ; 3 >
       au < testing ; exists ; 2010 ; Patient Safety in Surgery Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; Patient Safety in Surgery Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Patient Safety in Surgery Volume 6 ; 6 >
@@ -4066,8 +4066,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Pediatric Rheumatology Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; Pediatric Rheumatology Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Pediatric Rheumatology Volume 5 ; 5 >
-      au < manifest ; exists ; 2008 ; Pediatric Rheumatology Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; Pediatric Rheumatology Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; Pediatric Rheumatology Volume 6 ; 6 >
+      au < crawling ; exists ; 2009 ; Pediatric Rheumatology Volume 7 ; 7 >
       au < released ; crawling ; 2010 ; Pediatric Rheumatology Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; Pediatric Rheumatology Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Pediatric Rheumatology Volume 10 ; 10 >
@@ -4101,8 +4101,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Philosophy, Ethics, and Humanities in Medicine Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Philosophy, Ethics, and Humanities in Medicine Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Philosophy, Ethics, and Humanities in Medicine Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Philosophy, Ethics, and Humanities in Medicine Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Philosophy, Ethics, and Humanities in Medicine Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Philosophy, Ethics, and Humanities in Medicine Volume 4 ; 4 >
       au < testing ; exists ; 2010 ; Philosophy, Ethics, and Humanities in Medicine Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Philosophy, Ethics, and Humanities in Medicine Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Philosophy, Ethics, and Humanities in Medicine Volume 7 ; 7 >
@@ -4122,8 +4122,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Plant Methods Volume 1 ; 1 >
       au < manifest ; exists ; 2006 ; Plant Methods Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; Plant Methods Volume 3 ; 3 >
-      au < manifest ; exists ; 2008 ; Plant Methods Volume 4 ; 4 >
-      au < manifest ; exists ; 2009 ; Plant Methods Volume 5 ; 5 >
+      au < crawling ; exists ; 2008 ; Plant Methods Volume 4 ; 4 >
+      au < crawling ; exists ; 2009 ; Plant Methods Volume 5 ; 5 >
       au < released ; crawling ; 2010 ; Plant Methods Volume 6 ; 6 >
       au < released ; crawling ; 2011 ; Plant Methods Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Plant Methods Volume 8 ; 8 >
@@ -4145,8 +4145,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Population Health Metrics Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; Population Health Metrics Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Population Health Metrics Volume 5 ; 5 >
-      au < manifest ; exists ; 2008 ; Population Health Metrics Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; Population Health Metrics Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; Population Health Metrics Volume 6 ; 6 >
+      au < crawling ; exists ; 2009 ; Population Health Metrics Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Population Health Metrics Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; Population Health Metrics Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Population Health Metrics Volume 10 ; 10 >
@@ -4168,10 +4168,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Proteome Science Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; Proteome Science Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Proteome Science Volume 5 ; 5 >
-      au < manifest ; exists ; 2008 ; Proteome Science Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; Proteome Science Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; Proteome Science Volume 6 ; 6 >
+      au < crawling ; exists ; 2009 ; Proteome Science Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Proteome Science Volume 8 ; 8 >
-      au < notReady ; exists ; 2011 ; Proteome Science Volume 9 ; 9 >
+      au < crawling ; exists ; 2011 ; Proteome Science Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Proteome Science Volume 10 ; 10 >
 
     }
@@ -4188,8 +4188,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Radiation Oncology Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Radiation Oncology Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Radiation Oncology Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Radiation Oncology Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Radiation Oncology Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Radiation Oncology Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Radiation Oncology Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Radiation Oncology Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Radiation Oncology Volume 7 ; 7 >
@@ -4211,8 +4211,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Reproductive Biology and Endocrinology Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; Reproductive Biology and Endocrinology Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Reproductive Biology and Endocrinology Volume 5 ; 5 >
-      au < manifest ; exists ; 2008 ; Reproductive Biology and Endocrinology Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; Reproductive Biology and Endocrinology Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; Reproductive Biology and Endocrinology Volume 6 ; 6 >
+      au < crawling ; exists ; 2009 ; Reproductive Biology and Endocrinology Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Reproductive Biology and Endocrinology Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; Reproductive Biology and Endocrinology Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Reproductive Biology and Endocrinology Volume 10 ; 10 >
@@ -4233,8 +4233,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Reproductive Health Volume 2 ; 2 >
       au < manifest ; exists ; 2006 ; Reproductive Health Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; Reproductive Health Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; Reproductive Health Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; Reproductive Health Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Reproductive Health Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Reproductive Health Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; Reproductive Health Volume 7 ; 7 >
       au < released ; crawling ; 2011 ; Reproductive Health Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Reproductive Health Volume 9 ; 9 >
@@ -4255,8 +4255,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Retrovirology Volume 2 ; 2 >
       au < manifest ; exists ; 2006 ; Retrovirology Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; Retrovirology Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; Retrovirology Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; Retrovirology Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Retrovirology Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Retrovirology Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; Retrovirology Volume 7 ; 7 >
       au < released ; crawling ; 2011 ; Retrovirology Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Retrovirology Volume 9 ; 9 >
@@ -4277,8 +4277,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Saline Systems Volume 1 ; 1 >
       au < manifest ; exists ; 2006 ; Saline Systems Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; Saline Systems Volume 3 ; 3 >
-      au < manifest ; exists ; 2008 ; Saline Systems Volume 4 ; 4 >
-      au < manifest ; exists ; 2009 ; Saline Systems Volume 5 ; 5 >
+      au < crawling ; exists ; 2008 ; Saline Systems Volume 4 ; 4 >
+      au < crawling ; exists ; 2009 ; Saline Systems Volume 5 ; 5 >
       au < crawling ; exists ; 2010 ; Saline Systems Volume 6 ; 6 >
       au < testing ; exists ; 2011 ; Saline Systems Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Saline Systems Volume 8 ; 8 >
@@ -4297,8 +4297,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Scoliosis Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Scoliosis Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Scoliosis Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Scoliosis Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Scoliosis Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Scoliosis Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Scoliosis Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Scoliosis Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Scoliosis Volume 7 ; 7 >
@@ -4317,8 +4317,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Source Code for Biology and Medicine Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Source Code for Biology and Medicine Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Source Code for Biology and Medicine Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Source Code for Biology and Medicine Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Source Code for Biology and Medicine Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Source Code for Biology and Medicine Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Source Code for Biology and Medicine Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Source Code for Biology and Medicine Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 >
@@ -4337,8 +4337,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 >
@@ -4374,8 +4374,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Theoretical Biology and Medical Modelling Volume 2 ; 2 >
       au < manifest ; exists ; 2006 ; Theoretical Biology and Medical Modelling Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; Theoretical Biology and Medical Modelling Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; Theoretical Biology and Medical Modelling Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; Theoretical Biology and Medical Modelling Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Theoretical Biology and Medical Modelling Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Theoretical Biology and Medical Modelling Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; Theoretical Biology and Medical Modelling Volume 7 ; 7 >
       au < released ; crawling ; 2011 ; Theoretical Biology and Medical Modelling Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Theoretical Biology and Medical Modelling Volume 9 ; 9 >
@@ -4397,8 +4397,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Thrombosis Journal Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; Thrombosis Journal Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Thrombosis Journal Volume 5 ; 5 >
-      au < manifest ; exists ; 2008 ; Thrombosis Journal Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; Thrombosis Journal Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; Thrombosis Journal Volume 6 ; 6 >
+      au < crawling ; exists ; 2009 ; Thrombosis Journal Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Thrombosis Journal Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; Thrombosis Journal Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Thrombosis Journal Volume 10 ; 10 >
@@ -4453,8 +4453,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Trials Volume 6 ; 6 >
       au < manifest ; exists ; 2006 ; Trials Volume 7 ; 7 >
       au < manifest ; exists ; 2007 ; Trials Volume 8 ; 8 >
-      au < manifest ; exists ; 2008 ; Trials Volume 9 ; 9 >
-      au < manifest ; exists ; 2009 ; Trials Volume 10 ; 10 >
+      au < crawling ; exists ; 2008 ; Trials Volume 9 ; 9 >
+      au < crawling ; exists ; 2009 ; Trials Volume 10 ; 10 >
       au < crawling ; exists ; 2010 ; Trials Volume 11 ; 11 >
       au < released ; crawling ; 2011 ; Trials Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; Trials Volume 13 ; 13 >
@@ -4490,8 +4490,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Virology Journal Volume 2 ; 2 >
       au < manifest ; exists ; 2006 ; Virology Journal Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; Virology Journal Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; Virology Journal Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; Virology Journal Volume 6 ; 6 >
+      au < crawling ; exists ; 2008 ; Virology Journal Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Virology Journal Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; Virology Journal Volume 7 ; 7 >      
       au < testing ; exists ; 2011 ; Virology Journal Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Virology Journal Volume 9 ; 9>
@@ -4510,8 +4510,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; World Journal of Emergency Surgery Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; World Journal of Emergency Surgery Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; World Journal of Emergency Surgery Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; World Journal of Emergency Surgery Volume 4 ; 4 >
+      au < crawling ; exists ; 2008 ; World Journal of Emergency Surgery Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; World Journal of Emergency Surgery Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; World Journal of Emergency Surgery Volume 5 ; 5 >
       au < testing ; exists ; 2011 ; World Journal of Emergency Surgery Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; World Journal of Emergency Surgery Volume 7 ; 7 >
@@ -4533,8 +4533,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; World Journal of Surgical Oncology Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; World Journal of Surgical Oncology Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; World Journal of Surgical Oncology Volume 5 ; 5 >
-      au < manifest ; exists ; 2008 ; World Journal of Surgical Oncology Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; World Journal of Surgical Oncology Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; World Journal of Surgical Oncology Volume 6 ; 6 >
+      au < crawling ; exists ; 2009 ; World Journal of Surgical Oncology Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; World Journal of Surgical Oncology Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; World Journal of Surgical Oncology Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; World Journal of Surgical Oncology Volume 10 ; 10 >
