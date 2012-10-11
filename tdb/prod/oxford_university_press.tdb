@@ -17045,25 +17045,25 @@
     param[base_url] = http://rev.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1992 ; Research Evaluation Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1993 ; Research Evaluation Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1994 ; Research Evaluation Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 1995 ; Research Evaluation Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 1996 ; Research Evaluation Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Research Evaluation Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; Research Evaluation Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; Research Evaluation Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Research Evaluation Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; Research Evaluation Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Research Evaluation Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; Research Evaluation Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; Research Evaluation Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Research Evaluation Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; exists ; 2006 ; Research Evaluation Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; exists ; 2007 ; Research Evaluation Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; exists ; 2008 ; Research Evaluation Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; exists ; 2009 ; Research Evaluation Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; exists ; 2010 ; Research Evaluation Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; Research Evaluation Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; Research Evaluation Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; Research Evaluation Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; Research Evaluation Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; Research Evaluation Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; Research Evaluation Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; Research Evaluation Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; Research Evaluation Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; Research Evaluation Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Research Evaluation Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Research Evaluation Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; Research Evaluation Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Research Evaluation Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; Research Evaluation Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; Research Evaluation Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Research Evaluation Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; Research Evaluation Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Research Evaluation Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Research Evaluation Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Research Evaluation Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Research Evaluation Volume 21 ; 21 >
 
