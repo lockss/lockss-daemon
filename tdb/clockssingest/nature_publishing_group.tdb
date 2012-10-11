@@ -1682,10 +1682,10 @@
 
     param[journal_id] = mi
 
-    au < testing ; exists ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
-    au < testing ; exists ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
+    au < notReady ; exists ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
+    au < notReady ; exists ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
     au < released ; crawling ; 2010 ; Mucosal Immunology Volume 3 ; 2010 ; 3 >
-    au < testing ; exists ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
+    au < notReady ; exists ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
     au < crawling ; exists ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 >
 
   }
