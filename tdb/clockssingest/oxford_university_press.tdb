@@ -14288,7 +14288,8 @@
 
     param[base_url] = http://occmed.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-
+    comment[notReady] = Needs hash filter see RU 4433
+    
     au < manifest ; exists ; 1948-1949 ; Occupational Medicine Volume os-1 ; os-1 ; >
     au < manifest ; exists ; 1951-1952 ; Occupational Medicine Volume 1 ; 1 ; >
     au < manifest ; exists ; 1952-1953 ; Occupational Medicine Volume 2 ; 2 ; >
@@ -14351,7 +14352,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Occupational Medicine Volume 59 ; 59 ; >
     au < released ; crawling ; 2010 ; Occupational Medicine Volume 60 ; 60 ; >
     au < released ; crawling ; 2011 ; Occupational Medicine Volume 61 ; 61 ; >
-    au < testing ; exists ; 2012 ; Occupational Medicine Volume 62 ; 62 ; >
+    au < notReady ; exists ; 2012 ; Occupational Medicine Volume 62 ; 62 ; >
 
 
     }
