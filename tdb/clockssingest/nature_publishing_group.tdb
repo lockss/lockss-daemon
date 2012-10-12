@@ -73,6 +73,7 @@
     >
 
     param[journal_id] = ajh
+    comment[notReady] = fetch error on ingest 2, page not found
 
     au < exists ; exists ; 1995 ; American Journal of Hypertension Volume 8 ; 1995 ; 8 >
     au < exists ; exists ; 1996 ; American Journal of Hypertension Volume 9 ; 1996 ; 9 >
@@ -87,8 +88,8 @@
     au < exists ; exists ; 2005 ; American Journal of Hypertension Volume 18 ; 2005 ; 18 >
     au < exists ; exists ; 2006 ; American Journal of Hypertension Volume 19 ; 2006 ; 19 >
     au < exists ; exists ; 2007 ; American Journal of Hypertension Volume 20 ; 2007 ; 20 >
-    au < testing ; exists ; 2008 ; American Journal of Hypertension Volume 21 ; 2008 ; 21 >
-    au < testing ; exists ; 2009 ; American Journal of Hypertension Volume 22 ; 2009 ; 22 >
+    au < notReady ; exists ; 2008 ; American Journal of Hypertension Volume 21 ; 2008 ; 21 >
+    au < notReady ; exists ; 2009 ; American Journal of Hypertension Volume 22 ; 2009 ; 22 >
     au < released ; crawling ; 2010 ; American Journal of Hypertension Volume 23 ; 2010 ; 23 >
     au < released ; crawling ; 2011 ; American Journal of Hypertension Volume 24 ; 2011 ; 24 >
     au < released ; crawling ; 2012 ; American Journal of Hypertension Volume 25 ; 2012 ; 25 >
@@ -439,8 +440,8 @@
     au < exists ; exists ; 2006 ; Clinical Pharmacology & Therapeutics Volume 80 ; 2006 ; 80 >
     au < exists ; exists ; 2007 ; Clinical Pharmacology & Therapeutics Volume 81 ; 2007 ; 81 >
     au < exists ; exists ; 2007 ; Clinical Pharmacology & Therapeutics Volume 82 ; 2007 ; 82 >
-    au < testing ; exists ; 2008 ; Clinical Pharmacology & Therapeutics Volume 83 ; 2008 ; 83 >
-    au < testing ; exists ; 2008 ; Clinical Pharmacology & Therapeutics Volume 84 ; 2008 ; 84 >
+    au < notReady ; exists ; 2008 ; Clinical Pharmacology & Therapeutics Volume 83 ; 2008 ; 83 >
+    au < notReady ; exists ; 2008 ; Clinical Pharmacology & Therapeutics Volume 84 ; 2008 ; 84 >
     au < testing ; exists ; 2009 ; Clinical Pharmacology & Therapeutics Volume 85 ; 2009 ; 85 >
     au < testing ; exists ; 2009 ; Clinical Pharmacology & Therapeutics Volume 86 ; 2009 ; 86 >
     au < released ; crawling ; 2010 ; Clinical Pharmacology & Therapeutics Volume 87 ; 2010 ; 87 >
@@ -589,11 +590,11 @@
     au < exists ; exists ; 2005 ; Evidence-Based Dentistry Volume 6 ; 2005 ; 6 >
     au < exists ; exists ; 2006 ; Evidence-Based Dentistry Volume 7 ; 2006 ; 7 >
     au < exists ; exists ; 2007 ; Evidence-Based Dentistry Volume 8 ; 2007 ; 8 >
-    au < testing ; exists ; 2008 ; Evidence-Based Dentistry Volume 9 ; 2008 ; 9 >
-    au < testing ; exists ; 2009 ; Evidence-Based Dentistry Volume 10 ; 2009 ; 10 >
-    au < testing ; exists ; 2010 ; Evidence-Based Dentistry Volume 11 ; 2010 ; 11 >
+    au < notReady ; exists ; 2008 ; Evidence-Based Dentistry Volume 9 ; 2008 ; 9 >
+    au < notReady ; exists ; 2009 ; Evidence-Based Dentistry Volume 10 ; 2009 ; 10 >
+    au < notReady ; exists ; 2010 ; Evidence-Based Dentistry Volume 11 ; 2010 ; 11 >
     au < released ; crawling ; 2011 ; Evidence-Based Dentistry Volume 12 ; 2011 ; 12 >
-    au < testing ; exists ; 2012 ; Evidence-Based Dentistry Volume 13 ; 2012 ; 13 >
+    au < notReady ; exists ; 2012 ; Evidence-Based Dentistry Volume 13 ; 2012 ; 13 >
 
   }
 
@@ -1113,11 +1114,11 @@
     au < exists ; exists ; 2005 ; Journal of Cerebral Blood Flow and Metabolism Volume 25 ; 2005 ; 25 >
     au < exists ; exists ; 2006 ; Journal of Cerebral Blood Flow and Metabolism Volume 26 ; 2006 ; 26 >
     au < exists ; exists ; 2007 ; Journal of Cerebral Blood Flow and Metabolism Volume 27 ; 2007 ; 27 >
-    au < testing ; exists ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 >
+    au < notReady ; exists ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 >
     au < released ; crawling ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 >
     au < released ; crawling ; 2010 ; Journal of Cerebral Blood Flow and Metabolism Volume 30 ; 2010 ; 30 >
-    au < testing ; exists ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
-    au < testing ; exists ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 >
+    au < notReady ; exists ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
+    au < notReady ; exists ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 >
 
   }
 
