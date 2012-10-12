@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurp.py,v 1.9 2012-09-17 23:38:18 thib_gc Exp $
+# $Id: slurp.py,v 1.10 2012-10-12 22:59:01 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.3'
+__version__ = '0.5.0'
 
 from datetime import datetime
 import optparse
@@ -36,6 +36,7 @@ import os
 import re
 import slurpdb
 import sys
+import threading
 from urllib2 import URLError
 
 sys.path.append(os.path.realpath(os.path.join(os.path.dirname(sys.argv[0]), '../../test/frameworks/lib')))
@@ -48,94 +49,11 @@ def ui_to_datetime(ui_str):
     if ui_str is None or ui_str.lower() == 'never': return None
     return datetime.strptime(ui_str, UI_STRFTIME)
 
-def slurp_auids(db, ui, sid, options):
-    flag = slurpdb.SESSIONS_FLAGS_AUIDS
-    list_of_auids = ui.getListOfAuids()
-    if options is not None and options.auid_regex is not None:
-        r = re.compile(options.auid_regex)
-        list_of_auids = filter(lambda a: r.search(a), list_of_auids)
-        flag = flag | slurpdb.SESSIONS_FLAGS_AUIDS_REGEX
-    db.make_many_auids(sid, list_of_auids)
-    db.or_session_flags(sid, flag)
-
-def slurp_aus(db, ui, sid, options):
-    for aid, auid in db.get_auids_for_session(sid):
-        retries = 0
-        while retries <= options.daemon_ui_retries:
-            try:
-                summary, table = ui._getStatusTable('ArchivalUnitTable', auid)
-                break
-            except URLError:
-                retries = retries + 1
-        else:
-            continue # Go on to the next AUID ###FIXME
-
-        name = summary.get('Volume', None)
-        publisher = summary.get('Publisher', None)
-        year_str = summary.get('Year', None)
-        repository = summary.get('Repository', None)
-        creation_date = ui_to_datetime(summary.get('Created', None))
-        status = summary.get('Status', None)
-        available = summary.get('Available From Publisher', None)
-        if available: available = (available.lower() == 'yes') 
-        last_crawl = ui_to_datetime(summary.get('Last Crawl', None))
-        last_crawl_result = summary.get('Last Crawl Result', None)
-        last_completed_crawl = ui_to_datetime(summary.get('Last Completed Crawl', None))
-        last_poll = ui_to_datetime(summary.get('Last Poll', None))
-        last_poll_result = summary.get('Last Poll Result', None)
-        last_completed_poll = ui_to_datetime(summary.get('Last Completed Poll', None))
-        content_size = summary.get('Content Size', None)
-        if content_size and content_size.lower() == 'awaiting recalc': content_size = None 
-        if content_size: content_size = int(content_size.replace(',', ''))
-        disk_usage = summary.get('Disk Usage (MB)', None)
-        if disk_usage and disk_usage.lower() == 'awaiting recalc': disk_usage = None 
-        if disk_usage: disk_usage = float(disk_usage)
-        title = summary.get('Journal Title', None)
-
-        db.make_au(aid, name, publisher, year_str,
-            repository, creation_date, status, available,
-            last_crawl, last_crawl_result, last_completed_crawl, last_poll,
-            last_poll_result, last_completed_poll, content_size, disk_usage,
-            title)
-
-    db.or_session_flags(sid, slurpdb.SESSIONS_FLAGS_AUS)
-
-def slurp_agreement(db, ui, sid, options):
-    for aid, auid in db.get_auids_for_session(sid):
-        retries = 0
-        while retries <= options.daemon_ui_retries:
-            try:
-                agreement_table = ui.getAllAuRepairerInfo(auid)
-                break
-            except URLError:
-                retries = retries + 1
-        else:
-            continue # Go on to the next AUID ###FIXME
-
-        for peer, vals in agreement_table.iteritems():
-            ha = vals['HighestPercentAgreement']
-            la = vals['LastPercentAgreement']
-            hah = vals['HighestPercentAgreementHint']
-            lah = vals['LastPercentAgreementHint']
-            con = vals['Last']
-            lcon = ui_to_datetime(vals['LastAgree'])
-            db.make_agreement(aid, peer, ha, la, hah, lah, con, lcon)
-    db.or_session_flags(sid, slurpdb.SESSIONS_FLAGS_AGREEMENT)
-    
-def daemon_ui_connection(options):
-    ui_host, ui_port_str = options.daemon_ui_host_port.split(':')
-    return lockss_daemon.Client(ui_host,
-                                int(ui_port_str),
-                                options.daemon_ui_user,
-                                options.daemon_ui_pass)
-
 def slurp_option_parser():
     parser = optparse.OptionParser(version=__version__,
-                                   description='Queries a LOCKSS daemon UI and stores results in a Slurp database.')
+                                   description='Queries a LOCKSS daemon UI and stores results in a Slurp database',
+                                   usage='Usage: %prog [options] host1:port1 host2:port2...')
     slurpdb.slurpdb_option_parser(parser)
-    parser.add_option('-D', '--daemon-ui-host-port',
-                      metavar='HOSTPORT',
-                      help='Daemon UI host and port')
     parser.add_option('-U', '--daemon-ui-user',
                       metavar='USER',
                       help='Daemon UI user name')
@@ -154,10 +72,10 @@ def slurp_option_parser():
                       help='Daemon UI requests time out after SECS seconds. Default: %default')
     parser.add_option('--auids',
                       action='store_true',                     
-                      help='Gathers the active AUIDS.')
+                      help='Gathers the active AUIDS')
     parser.add_option('--auid-regex',
                       metavar='REGEX',                     
-                      help='Only processes AUIDs that match REGEX.')
+                      help='Only processes AUIDs that match REGEX')
     parser.add_option('--aus',
                       action='store_true',                     
                       help='Gathers data about the active AUs. Implies --auids')
@@ -166,9 +84,124 @@ def slurp_option_parser():
                       help='Gathers data about peer agreement for the active AUs. Implies --auids')
     return parser
 
-def slurp_process_options(parser, options):
-    if options.daemon_ui_host_port is None: parser.error('-D/--daemon-ui-host-port is required')
-    if ':' not in options.daemon_ui_host_port: parser.error('-D/--daemon-ui-host-port does not specify a port')
+class SlurpThread(threading.Thread):
+
+    def __init__(self, options, daemon_ui_host_port):
+        threading.Thread.__init__(self)
+        self.__options = options
+        self.__daemon_ui_host_port = daemon_ui_host_port
+
+    def run(self):
+        self.__make_db_connection()
+        self.__make_ui_connection()
+        self.__dispatch()
+        self.__db.end_session(self.__sid)
+        self.__db.close_connection()
+
+    def __make_db_connection(self):
+        self.__db = slurpdb.SlurpDb()
+        db_host, db_port_str = self.__options.db_host_port.split(':')
+        self.__db.set_db_host(db_host)
+        self.__db.set_db_port(int(db_port_str))
+        self.__db.set_db_user(self.__options.db_user)
+        self.__db.set_db_pass(self.__options.db_pass)
+        self.__db.set_db_name(self.__options.db_name)
+        self.__db.open_connection()
+        self.__sid = self.__db.make_session(self.__daemon_ui_host_port)
+
+    def __make_ui_connection(self):
+        opt = self.__options
+        daemon_ui_host, daemon_ui_port_str = self.__daemon_ui_host_port.split(':')
+        self.__ui = lockss_daemon.Client(daemon_ui_host,
+                                         int(daemon_ui_port_str),
+                                         opt.daemon_ui_user,
+                                         opt.daemon_ui_pass)
+        if not self.__ui.waitForDaemonReady(self.__options.daemon_ui_timeout):
+            raise RuntimeError, '%s is not ready after %d seconds' % (self.__options.daemon_ui_host_port,
+                                                                      self.__options.daemon_ui_timeout)
+
+    def __dispatch(self):
+        if self.__options.auids: self.__slurp_auids()
+        if self.__options.aus: self.__slurp_aus()
+        if self.__options.agreement: self.__slurp_agreement()
+
+    def __slurp_auids(self):
+        flag = slurpdb.SESSIONS_FLAGS_AUIDS
+        list_of_auids = self.__ui.getListOfAuids()
+        r0 = options.auid_regex
+        if r0:
+            r = re.compile(r0)
+            list_of_auids = filter(lambda a: r.search(a), list_of_auids)
+            flag = flag | slurpdb.SESSIONS_FLAGS_AUIDS_REGEX
+        self.__db.make_many_auids(self.__sid, list_of_auids)
+        self.__db.or_session_flags(self.__sid, flag)
+
+    def __slurp_aus(self):
+        for aid, auid in self.__db.get_auids_for_session(self.__sid):
+            retries = 0
+            while retries <= self.__options.daemon_ui_retries:
+                try:
+                    summary, table = self.__ui._getStatusTable('ArchivalUnitTable', auid)
+                    break
+                except URLError:
+                    retries = retries + 1
+            else:
+                continue # Go on to the next AUID ###FIXME
+
+            name = summary.get('Volume', None)
+            publisher = summary.get('Publisher', None)
+            year_str = summary.get('Year', None)
+            repository = summary.get('Repository', None)
+            creation_date = ui_to_datetime(summary.get('Created', None))
+            status = summary.get('Status', None)
+            available = summary.get('Available From Publisher', None)
+            if available: available = (available.lower() == 'yes') 
+            last_crawl = ui_to_datetime(summary.get('Last Crawl', None))
+            last_crawl_result = summary.get('Last Crawl Result', None)
+            last_completed_crawl = ui_to_datetime(summary.get('Last Completed Crawl', None))
+            last_poll = ui_to_datetime(summary.get('Last Poll', None))
+            last_poll_result = summary.get('Last Poll Result', None)
+            last_completed_poll = ui_to_datetime(summary.get('Last Completed Poll', None))
+            content_size = summary.get('Content Size', None)
+            if content_size and content_size.lower() == 'awaiting recalc': content_size = None 
+            if content_size: content_size = int(content_size.replace(',', ''))
+            disk_usage = summary.get('Disk Usage (MB)', None)
+            if disk_usage and disk_usage.lower() == 'awaiting recalc': disk_usage = None 
+            if disk_usage: disk_usage = float(disk_usage)
+            title = summary.get('Journal Title', None)
+
+            self.__db.make_au(aid, name, publisher, year_str,
+                repository, creation_date, status, available,
+                last_crawl, last_crawl_result, last_completed_crawl, last_poll,
+                last_poll_result, last_completed_poll, content_size, disk_usage,
+                title)
+
+        self.__db.or_session_flags(self.__sid, slurpdb.SESSIONS_FLAGS_AUS)
+
+    def __slurp_agreement(self):
+        for aid, auid in self.__db.get_auids_for_session(self.__sid):
+            retries = 0
+            while retries <= self.__options.daemon_ui_retries:
+                try:
+                    agreement_table = self.__ui.getAllAuRepairerInfo(auid)
+                    break
+                except URLError:
+                    retries = retries + 1
+            else:
+                continue # Go on to the next AUID ###FIXME
+
+            for peer, vals in agreement_table.iteritems():
+                ha = vals['HighestPercentAgreement']
+                la = vals['LastPercentAgreement']
+                hah = vals['HighestPercentAgreementHint']
+                lah = vals['LastPercentAgreementHint']
+                con = vals['Last']
+                lcon = ui_to_datetime(vals['LastAgree'])
+                self.__db.make_agreement(aid, peer, ha, la, hah, lah, con, lcon)
+        self.__db.or_session_flags(self.__sid, slurpdb.SESSIONS_FLAGS_AGREEMENT)
+
+def slurp_validate_options(parser, options):
+    slurpdb.slurpdb_validate_options(parser, options)
     if options.daemon_ui_user is None: parser.error('-U/--daemon-ui-user is required')
     if options.daemon_ui_pass is None: parser.error('-P/--daemon-ui-pass is required')
     if options.aus is not None: setattr(parser.values, parser.get_option('--auids').dest, True)
@@ -178,26 +211,15 @@ def slurp_process_options(parser, options):
         except: parser.error('--auid-regex regular expression is invalid: %s' % (options.auid_regex,))
     if options.auids is None: parser.error('No action specified')
 
+def slurp_validate_args(parser, options, args):
+    for daemon_ui_host_port in args:
+        if ':' not in daemon_ui_host_port: parser.error('No port specified: %s' % (daemon_ui_host_port,))
+
 if __name__ == '__main__':
     parser = slurp_option_parser()
     (options, args) = parser.parse_args(values=parser.get_default_values())
-    slurp_process_options(parser, options)
-
-    # Open a database connection
-    db = slurpdb.slurpdb_connection(options)
-    db.open_connection()
-    sid = db.make_session(options.daemon_ui_host_port)
-    
-    # Open a daemon UI connection
-    ui = daemon_ui_connection(options)
-    if not ui.waitForDaemonReady(options.daemon_ui_timeout):
-        raise RuntimeError, '%s is not ready after %d seconds' % (options.daemon_ui_host_port,
-                                                                  options.daemon_ui_timeout)
-
-    if options.auids: slurp_auids(db, ui, sid, options)
-    if options.aus: slurp_aus(db, ui, sid, options)
-    if options.agreement: slurp_agreement(db, ui, sid, options)
-
-    db.end_session(sid)
-    db.close_connection()
+    slurp_validate_options(parser, options)
+    slurp_validate_args(parser, options, args)
+    for daemon_ui_host_port in args:
+        SlurpThread(options, daemon_ui_host_port).start()
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurpdb.py,v 1.6 2012-09-17 23:38:18 thib_gc Exp $
+# $Id: slurpdb.py,v 1.7 2012-10-12 22:59:01 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.3'
+__version__ = '0.5.0'
 
 from datetime import datetime
 import MySQLdb
@@ -502,7 +502,7 @@ def slurpdb_option_parser(parser=None):
         parser.add_option_group(container)
         return parser
 
-def slurpdb_process_options(parser, options):
+def slurpdb_validate_options(parser, options):
     if options.db_host_port is None: parser.error('-d/--db-host-port is required')
     if ':' not in options.db_host_port: parser.error('-d/--db-host-port does not specify a port')
     if options.db_user is None: parser.error('-u/--db-user is required')
@@ -522,7 +522,7 @@ def slurpdb_connection(options):
 if __name__ == '__main__':
     parser = slurpdb_option_parser()
     (options, args) = parser.parse_args(values=parser.get_default_values())
-    slurpdb_process_options(parser, options)
+    slurpdb_validate_options(parser, options)
     db = slurpdb_connection(options)
     db.open_connection()
     db.close_connection()
