@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.6 2012-10-02 00:31:53 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.7 2012-10-12 18:15:10 ldoan Exp $
  */
 
 /*
@@ -105,6 +105,7 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         // These two sections are newer placeholders
         HtmlNodeFilters.tagWithAttribute("li", "id", "citationsTab"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "citationsPanel"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "articleUsage"),
         // Some <h4> tags had/have a 'class' attribute
         new TagNameFilter("h4"),
     };

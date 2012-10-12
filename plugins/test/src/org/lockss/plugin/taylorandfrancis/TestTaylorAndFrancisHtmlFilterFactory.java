@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.4 2012-10-01 22:16:05 thib_gc Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.5 2012-10-12 18:15:11 ldoan Exp $
  */
 
 /*
@@ -123,6 +123,30 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
         "<a href=\"/servlet/linkout?yes=no&foo=bar\">Example</a>";
     private static final String linkoutHtmlHashFiltered = 
         "";
+
+    private static final String articleUsageHtmlHash =
+      "<div id=\"footer\">"
+      + "<div class=\"block-1\">"
+      + "<div class=\"articleUsage\">"
+      + "<strong>Article Views:</strong> 179"
+      + "<div class=\"auPopUp hidden\">"
+      + "<div class=\"pointyEdge\">"
+      + "</div>Article usage statistics combine cumulative total PDF"
+      +	"downloads and full-text HTML views from publication"
+      + "date (but no earlier than 25 Jun 2011, launch date of"
+      +	"this website) to 08 Oct 2012. Article views are only"
+      + "counted from this site. Although these data are updated"
+      + "every 24 hours, there may be a 48-hour delay before the"
+      + "most recent numbers are available."
+      +	"</div>"
+      + "</div>"
+      + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
+
+    private static final String articleUsageHtmlHashFiltered =
+      "<div id=\"footer\">"
+      + "<div class=\"block-1\">"
+      + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
+ 
     
     private static final String javascriptHtmlHash = 
         "<noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript>\n" +
@@ -130,6 +154,8 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
     // Trailing space is due to the WhiteSpaceFilter
     private static final String javascriptHtmlHashFiltered = 
         "<noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript> ";
+
+         
     
     public void setUp() throws Exception {
       super.setUp();
@@ -174,6 +200,14 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
                                          new StringInputStream(creditsHtmlHash),
                                          Constants.DEFAULT_ENCODING);
       assertEquals(creditsHtmlHashFiltered, StringUtil.fromInputStream(actIn));
+    }
+
+    public void testarticleUsageHtmlHashFiltering() throws Exception {
+      InputStream actIn =
+          fact.createFilteredInputStream(mau, 
+                                         new StringInputStream(articleUsageHtmlHash),
+                                         Constants.DEFAULT_ENCODING);
+      assertEquals(articleUsageHtmlHashFiltered, StringUtil.fromInputStream(actIn));
     }
 
     public void testJavascriptHtmlHashFiltering() throws Exception {
