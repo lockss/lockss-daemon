@@ -20,7 +20,7 @@
     >
 
     param[journal_id] = aps
-    comment[notReady] = fetch error RT 4106
+    comment[notReady] = fetch error on ingest 3 RT 4106
 
     au < manifest ; exists ; 2005 ; Acta Pharmacologica Sinica Volume 26 ; 2005 ; 26 >
     au < manifest ; exists ; 2006 ; Acta Pharmacologica Sinica Volume 27 ; 2006 ; 27 >
@@ -43,6 +43,7 @@
     >
 
     param[journal_id] = ajg
+    comment[notReady] = fetch error on ingest 3 RT 4106
 
     au < exists ; exists ; 1998 ; American Journal of Gastroenterology Volume 93 ; 1998 ; 93 >
     au < exists ; exists ; 1999 ; American Journal of Gastroenterology Volume 94 ; 1999 ; 94 >
@@ -54,11 +55,11 @@
     au < exists ; exists ; 2005 ; American Journal of Gastroenterology Volume 100 ; 2005 ; 100 >
     au < exists ; exists ; 2006 ; American Journal of Gastroenterology Volume 101 ; 2006 ; 101 >
     au < exists ; exists ; 2007 ; American Journal of Gastroenterology Volume 102 ; 2007 ; 102 >
-    au < testing ; exists ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
-    au < testing ; exists ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
-    au < testing ; exists ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
+    au < notReady ; exists ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
+    au < notReady ; exists ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
+    au < notReady ; exists ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
     au < released ; crawling ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 >
-    au < testing ; exists ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 >
+    au < notReady ; exists ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 >
 
   }
 
@@ -1681,6 +1682,7 @@
     >
 
     param[journal_id] = mi
+    comment[notReady] = fetch error RT 4106
 
     au < notReady ; exists ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
     au < notReady ; exists ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
@@ -2303,6 +2305,7 @@
     >
 
     param[journal_id] = ncb
+    comment[notReady] = fetch error RT 4106
 
     au < exists ; exists ; 1999 ; Nature Cell Biology Volume 1 ; 1999 ; 1 >
     au < exists ; exists ; 2000 ; Nature Cell Biology Volume 2 ; 2000 ; 2 >
@@ -2353,6 +2356,7 @@
     >
 
     param[journal_id] = nchem
+    comment[notReady] = fetch error RT 4106
 
     au < released ; crawling ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
     au < released ; crawling ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 >
@@ -2470,6 +2474,7 @@
     >
 
     param[journal_id] = ni
+    comment[notReady] = fetch error RT 4106
 
     au < exists ; exists ; 2000 ; Nature Immunology Volume 1 ; 2000 ; 1 >
     au < exists ; exists ; 2001 ; Nature Immunology Volume 2 ; 2001 ; 2 >
@@ -2497,6 +2502,7 @@
     >
 
     param[journal_id] = nmat
+    comment[notReady] = fetch error RT 4106
 
     au < exists ; exists ; 2002 ; Nature Materials Volume 1 ; 2002 ; 1 >
     au < manifest ; exists ; 2003 ; Nature Materials Volume 2 ; 2003 ; 2 >
@@ -2598,6 +2604,7 @@
     >
 
     param[journal_id] = neuro
+    comment[notReady] = fetch error RT 4106
 
     au < exists ; exists ; 1998 ; Nature Neuroscience Volume 1 ; 1998 ; 1 >
     au < exists ; exists ; 1999 ; Nature Neuroscience Volume 2 ; 1999 ; 2 >
@@ -2670,6 +2677,7 @@
     >
 
     param[journal_id] = nprot
+    comment[notReady] = fetch error RT 4106
 
     au < exists ; exists ; 2006 ; Nature Protocols Volume 1 ; 2006 ; 1 >
     au < exists ; exists ; 2007 ; Nature Protocols Volume 2 ; 2007 ; 2 >
@@ -2788,6 +2796,7 @@
     >
 
     param[journal_id] = nrendo
+    comment[notReady] = fetch error RT 4106
 
     au < exists ; exists ; 2005 ; Nature Reviews Endocrinology Volume 1 ; 2005 ; 1 >
     au < exists ; exists ; 2006 ; Nature Reviews Endocrinology Volume 2 ; 2006 ; 2 >
