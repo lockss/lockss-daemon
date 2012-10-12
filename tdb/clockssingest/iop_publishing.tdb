@@ -728,7 +728,6 @@
 
     param[journal_issn] = 1757-899X
     comment[param] = eissn preferred
-    comment[notReady] = low agreement, will re-test later
 
     au < crawling ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 1 ; 1 > 
     au < crawling ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 2 ; 2 > 
@@ -736,11 +735,11 @@
     au < crawling ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 4 ; 4 > 
     au < crawling ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 5 ; 5 > 
     au < crawling ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 6 ; 6 > 
-    au < notReady ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 7 ; 7 > 
+    au < released ; manifest ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 7 ; 7 > 
     au < released ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 8 ; 8 > 
     au < released ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 9 ; 9 > 
     au < released ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 10 ; 10 > 
-    au < notReady ; exists ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 11 ; 11 > 
+    au < released ; manifest ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 11 ; 11 > 
     au < released ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 12 ; 12 > 
     au < released ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 13 ; 13 > 
     au < released ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 14 ; 14 > 
@@ -1511,7 +1510,6 @@
 
     param[journal_issn] = 1742-6596
     comment[param] = eissn preferred
-    comment[notReady] = low agreement, will re-test later
 
     au < manifest ; exists ; 2004 ; Journal of Physics: Conference Series Volume 1 ; 1 >
     au < manifest ; exists ; 2004 ; Journal of Physics: Conference Series Volume 2 ; 2 >
@@ -1763,7 +1761,7 @@
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 248 ; 248 >
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 249 ; 249 >
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 250 ; 250 >
-    au < notReady ; exists ; 2010 ; Journal of Physics: Conference Series Volume 251 ; 251 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 251 ; 251 >
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 252 ; 252 >
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 253 ; 253 >
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 254 ; 254 >
@@ -1771,7 +1769,7 @@
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 256 ; 256 >
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 257 ; 257 >
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 258 ; 258 >
-    au < notReady ; exists ; 2010 ; Journal of Physics: Conference Series Volume 259 ; 259 >
+    au < released ; manifest ; 2010 ; Journal of Physics: Conference Series Volume 259 ; 259 >
     au < released ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 260 ; 260 >
     au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 261 ; 261 >
     au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 262 ; 262 >
