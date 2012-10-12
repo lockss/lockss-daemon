@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -147,7 +147,7 @@
         <type>1</type>
         <size>20</size>
         <definitional>false</definitional>
-        <defaultOnly>false</defaultOnly>
+        <defaultOnly>true</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>base_url</key>
