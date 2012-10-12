@@ -8905,7 +8905,7 @@
     au < manifest ; exists ; 2006 ; Journal of Analytical Toxicology Volume 30 ; 30 ; >
     au < manifest ; exists ; 2007 ; Journal of Analytical Toxicology Volume 31 ; 31 ; >
     au < manifest ; exists ; 2008 ; Journal of Analytical Toxicology Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2009 ; Journal of Analytical Toxicology Volume 33 ; 33 ; >
+    au < testing ; exists ; 2009 ; Journal of Analytical Toxicology Volume 33 ; 33 ; >
     au < manifest ; exists ; 2010 ; Journal of Analytical Toxicology Volume 34 ; 34 ; >
     au < released ; crawling ; 2011 ; Journal of Analytical Toxicology Volume 35 ; 35 ; >
     au < crawling ; exists ; 2012 ; Journal of Analytical Toxicology Volume 36 ; 36 ; >
@@ -14258,7 +14258,7 @@
     au < released ; crawling ; 2009 ; OAH Magazine of History Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; OAH Magazine of History Volume 24 ; 24 ; >
     au < released ; crawling ; 2011 ; OAH Magazine of History Volume 25 ; 25 ; >
-    au < testing ; exists ; 2012 ; OAH Magazine of History Volume 26 ; 26 ; >
+    au < released ; manifest ; 2012 ; OAH Magazine of History Volume 26 ; 26 ; >
 
     }
 
@@ -16572,8 +16572,8 @@
     au < manifest ; exists ; 2006 ; Research Evaluation Volume 15 ; 15 ; >
     au < manifest ; exists ; 2007 ; Research Evaluation Volume 16 ; 16 ; >
     au < manifest ; exists ; 2008 ; Research Evaluation Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2009 ; Research Evaluation Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2010 ; Research Evaluation Volume 19 ; 19 ; >
+    au < testing ; exists ; 2009 ; Research Evaluation Volume 18 ; 18 ; >
+    au < testing ; exists ; 2010 ; Research Evaluation Volume 19 ; 19 ; >
     au < released ; crawling ; 2011 ; Research Evaluation Volume 20 ; 20 ; >
     au < crawling ; exists ; 2012 ; Research Evaluation Volume 21 ; 21 ; >
 
@@ -17150,8 +17150,8 @@
     au < manifest ; exists ; 2006 ; Science and Public Policy Volume 33 ; 33 ; >
     au < manifest ; exists ; 2007 ; Science and Public Policy Volume 34 ; 34 ; >
     au < manifest ; exists ; 2008 ; Science and Public Policy Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2009 ; Science and Public Policy Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2010 ; Science and Public Policy Volume 37 ; 37 ; >
+    au < testing ; exists ; 2009 ; Science and Public Policy Volume 36 ; 36 ; >
+    au < testing ; exists ; 2010 ; Science and Public Policy Volume 37 ; 37 ; >
     au < released ; crawling ; 2011 ; Science and Public Policy Volume 38 ; 38 ; >
     au < crawling ; exists ; 2012 ; Science and Public Policy Volume 39 ; 39 ; >
 	
