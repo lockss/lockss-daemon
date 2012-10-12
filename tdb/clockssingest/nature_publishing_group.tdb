@@ -1555,7 +1555,7 @@
     au < released ; crawling ; 2009 ; Leukemia Volume 23 ; 2009 ; 23 >
     au < released ; crawling ; 2010 ; Leukemia Volume 24 ; 2010 ; 24 >
     au < released ; crawling ; 2011 ; Leukemia Volume 25 ; 2011 ; 25 >
-    au < crawling ; exists ; 2012 ; Leukemia Volume 26 ; 2012 ; 26 >
+    au < testing ; exists ; 2012 ; Leukemia Volume 26 ; 2012 ; 26 >
 
   }
 
@@ -1582,8 +1582,8 @@
     au < testing ; exists ; 2008 ; Modern Pathology Volume 21 ; 2008 ; 21 >
     au < released ; crawling ; 2009 ; Modern Pathology Volume 22 ; 2009 ; 22 >
     au < testing ; exists ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 >
-    au < notReady ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
-    au < crawling ; exists ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
+    au < testing ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
+    au < testing ; exists ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
 
   }
 
@@ -3329,7 +3329,7 @@
     au < released ; down ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
     au < released ; crawling ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 >
     au < released ; down ; 2011 ; Spinal Cord Volume 49 ; 2011 ; 49 >
-    au < crawling ; exists ; 2012 ; Spinal Cord Volume 50 ; 2012 ; 50 >
+    au < testing ; exists ; 2012 ; Spinal Cord Volume 50 ; 2012 ; 50 >
 
   }
 
