@@ -412,7 +412,7 @@
     >
 
     param[journal_issn] = 1748-9326
-    comment[notReady] = crawl failed, recrawling
+    comment[notReady] = crawl failed, Fetch error - access denied, RU4441
 
     au < manifest ; exists ; 2006 ; Environmental Research Letters Volume 1 ; 1 > 
     au < manifest ; exists ; 2007 ; Environmental Research Letters Volume 2 ; 2 > 
@@ -1851,9 +1851,9 @@
     au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 334 ; 334 >
     au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 335 ; 335 >
     au < released ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 336 ; 336 >
-    au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 337 ; 337 >
-    au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 338 ; 338 >
-    au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 339 ; 339 >
+    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 337 ; 337 >
+    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 338 ; 338 >
+    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 339 ; 339 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 340 ; 340 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 341 ; 341 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 342 ; 342 >
