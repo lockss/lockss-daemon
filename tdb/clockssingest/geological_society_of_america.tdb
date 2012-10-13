@@ -114,7 +114,7 @@
     au < manifest ; exists ; 2009 ; Geological Society of America Bulletin Volume 121 ; 121 >
     au < manifest ; exists ; 2010 ; Geological Society of America Bulletin Volume 122 ; 122 >
     au < released ; crawling ; 2011 ; Geological Society of America Bulletin Volume 123 ; 123 >
-    au < crawling ; exists ; 2012 ; Geological Society of America Bulletin Volume 124 ; 124 >
+    au < testing ; exists ; 2012 ; Geological Society of America Bulletin Volume 124 ; 124 >
 
   }
 
@@ -153,7 +153,7 @@
       au < manifest ; exists ; 2010 ; 978-0-8137-1205-5 ; Geological Society of America Memoirs Volume 205 ; 205 >
       au < manifest ; exists ; 2010 ; 978-0-8137-1206-2 ; Geological Society of America Memoirs Volume 206 ; 206 >
       au < released ; crawling ; 2011 ; 978-0-8137-1207-9 ; Geological Society of America Memoirs Volume 207 ; 207 >
-      au < crawling ; exists ; 2012 ; 978-0-8137-1208-6 ; Geological Society of America Memoirs Volume 208 ; 208 >
+      au < testing ; exists ; 2012 ; 978-0-8137-1208-6 ; Geological Society of America Memoirs Volume 208 ; 208 >
       au < expected ; exists ; 2012 ; comment[isbn] ; Geological Society of America Memoirs Volume 209 ; 209 >
       
       
@@ -221,7 +221,7 @@
     au < manifest ; exists ; 2009 ; Geology Volume 37 ; 37 >
     au < manifest ; exists ; 2010 ; Geology Volume 38 ; 38 >
     au < released ; crawling ; 2011 ; Geology Volume 39 ; 39 >
-    au < crawling ; exists ; 2012 ; Geology Volume 40 ; 40 >
+    au < testing ; exists ; 2012 ; Geology Volume 40 ; 40 >
 
   }
 
@@ -243,7 +243,7 @@
     au < manifest ; exists ; 2009 ; Geosphere Volume 5 ; 5 >
     au < manifest ; exists ; 2010 ; Geosphere Volume 6 ; 6 >
     au < released ; crawling ; 2011 ; Geosphere Volume 7 ; 7 >
-    au < crawling ; exists ; 2012 ; Geosphere Volume 8 ; 8 >
+    au < testing ; exists ; 2012 ; Geosphere Volume 8 ; 8 >
 
   }
 
@@ -285,9 +285,9 @@
       au < released ; crawling ; 2011 ; 978-0-8137-0022-9 ; GSA Field Guides Volume 22 ; 22 >
       au < zapped ; down ; 2011 ; 978-0-8137-0023-6 ; GSA Field Guides Volume 23 ; 23 >
       au < zapped ; down ; 2011 ; 978-0-8137-0024-3 ; GSA Field Guides Volume 24 ; 24 >
-      au < crawling ; exists ; 2012 ; 978-0-8137-0025-0 ; GSA Field Guides Volume 25 ; 25 >
-      au < crawling ; exists ; 2012 ; 978-0-8137-0026-7 ; GSA Field Guides Volume 26 ; 26 >
-      au < crawling ; exists ; 2012 ; 978-0-8137-0027-4 ; GSA Field Guides Volume 27 ; 27 >
+      au < testing ; exists ; 2012 ; 978-0-8137-0025-0 ; GSA Field Guides Volume 25 ; 25 >
+      au < testing ; exists ; 2012 ; 978-0-8137-0026-7 ; GSA Field Guides Volume 26 ; 26 >
+      au < testing ; exists ; 2012 ; 978-0-8137-0027-4 ; GSA Field Guides Volume 27 ; 27 >
       au < expected ; exists ; 2012 ; XXXX ; GSA Field Guides Volume 28 ; 28 >
       au < expected ; exists ; 2012 ; XXXX ; GSA Field Guides Volume 29 ; 29 >
       au < expected ; exists ; 2012 ; XXXX ; GSA Field Guides Volume 30 ; 30 >
@@ -311,7 +311,7 @@
     au < manifest ; exists ; 2009 ; Lithosphere Volume 1 ; 1 >
     au < manifest ; exists ; 2010 ; Lithosphere Volume 2 ; 2 >
     au < released ; crawling ; 2011 ; Lithosphere Volume 3 ; 3 >
-    au < crawling ; exists ; 2012 ; Lithosphere Volume 4 ; 4 >
+    au < testing ; exists ; 2012 ; Lithosphere Volume 4 ; 4 >
 
   }
 
