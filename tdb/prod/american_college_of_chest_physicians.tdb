@@ -60,26 +60,27 @@
       eissn = 1931-3543 ;
       issnl = 0012-3692
     >
+    
+    comment[down] = moved to Silverchair.
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://chestjournal.chestpubs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < released ; 2005 ; Chest Volume 127 ; 127 >
-    au < released ; 2005 ; Chest Volume 128 ; 128 >
-    au < released ; 2006 ; Chest Volume 129 ; 129 >
-    au < released ; 2006 ; Chest Volume 130 ; 130 >
-    au < released ; 2007 ; Chest Volume 131 ; 131 >
-    au < released ; 2007 ; Chest Volume 132 ; 132 >
-    au < released ; 2008 ; Chest Volume 133 ; 133 >
-    au < released ; 2008 ; Chest Volume 134 ; 134 >
-    au < released ; 2009 ; Chest Volume 135 ; 135 >
-    au < released ; 2009 ; Chest Volume 136 ; 136 >
-    au < released ; 2010 ; Chest Volume 137 ; 137 >
-    au < released ; 2010 ; Chest Volume 138 ; 138 >
-    au < released ; 2011 ; Chest Volume 139 ; 139 >
-    au < released ; 2011 ; Chest Volume 140 ; 140 >
-    au < manifest ; 2012 ; Chest Volume 141 ; 141 >
+    au < down ; 2005 ; Chest Volume 127 ; 127 >
+    au < down ; 2005 ; Chest Volume 128 ; 128 >
+    au < down ; 2006 ; Chest Volume 129 ; 129 >
+    au < down ; 2006 ; Chest Volume 130 ; 130 >
+    au < down ; 2007 ; Chest Volume 131 ; 131 >
+    au < down ; 2007 ; Chest Volume 132 ; 132 >
+    au < down ; 2008 ; Chest Volume 133 ; 133 >
+    au < down ; 2008 ; Chest Volume 134 ; 134 >
+    au < down ; 2009 ; Chest Volume 135 ; 135 >
+    au < down ; 2009 ; Chest Volume 136 ; 136 >
+    au < down ; 2010 ; Chest Volume 137 ; 137 >
+    au < down ; 2010 ; Chest Volume 138 ; 138 >
+    au < down ; 2011 ; Chest Volume 139 ; 139 >
+    au < down ; 2011 ; Chest Volume 140 ; 140 >
 
   }
 
