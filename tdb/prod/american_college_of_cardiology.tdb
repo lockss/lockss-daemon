@@ -6,6 +6,8 @@
 
   plugin = org.lockss.plugin.highwire.HighWirePressPlugin
   implicit < status ; year ; name ; param[volume_name] >
+  
+  comment[down] = publisher moved to Silverchair.
 
   {
 
