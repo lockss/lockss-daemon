@@ -6598,7 +6598,7 @@
     au < released ; crawling ; 2011 ; History Workshop Journal Volume 71 ; 71 ; >
     au < released ; crawling ; 2011 ; History Workshop Journal Volume 72 ; 72 ; >
     au < crawling ; exists ; 2012 ; History Workshop Journal Volume 73 ; 73 ; >
-    au < manifest ; exists ; 2012 ; History Workshop Journal Volume 74 ; 74 ; >
+    au < crawling ; exists ; 2012 ; History Workshop Journal Volume 74 ; 74 ; >
 
     }
 
@@ -8906,7 +8906,7 @@
     au < manifest ; exists ; 2007 ; Journal of Analytical Toxicology Volume 31 ; 31 ; >
     au < manifest ; exists ; 2008 ; Journal of Analytical Toxicology Volume 32 ; 32 ; >
     au < released ; manifest ; 2009 ; Journal of Analytical Toxicology Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2010 ; Journal of Analytical Toxicology Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2010 ; Journal of Analytical Toxicology Volume 34 ; 34 ; >
     au < released ; crawling ; 2011 ; Journal of Analytical Toxicology Volume 35 ; 35 ; >
     au < crawling ; exists ; 2012 ; Journal of Analytical Toxicology Volume 36 ; 36 ; >
 
@@ -14769,7 +14769,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; Oxford Review of Economic Policy Volume 26 ; 26 ; >
     au < released ; crawling ; 2011 ; Oxford Review of Economic Policy Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 ; >
 
     }
 
@@ -16607,7 +16607,7 @@
     param[base_url] = http://rcfs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 ; >
 
   }
 
@@ -18533,7 +18533,7 @@
     au < released ; crawling ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; The Year's Work in Critical and Cultural Theory Volume 18 ; 18 ; >
     au < released ; crawling ; 2011 ; The Year's Work in Critical and Cultural Theory Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2012 ; The Year's Work in Critical and Cultural Theory Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2012 ; The Year's Work in Critical and Cultural Theory Volume 20 ; 20 ; >
 
     }
 
