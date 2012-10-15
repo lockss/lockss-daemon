@@ -86,8 +86,8 @@
     param[journal_id] = ehtj
     comment[0] = vol. 4 includes Supplements 1
 
-    au < manifest ; exists ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
-    au < manifest ; exists ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
+    au < crawling ; exists ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
+    au < crawling ; exists ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
     au < released ; crawling ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
     au < released ; crawling ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
     au < released ; crawling ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
@@ -106,8 +106,8 @@
     param[base_url] = http://www.ethicsandglobalpolitics.net/
     param[journal_id] = egp
 
-    au < manifest ; exists ; 2008 ; Ethics & Global Politics Volume 1 ; 1 ; 2008 >
-    au < manifest ; exists ; 2009 ; Ethics & Global Politics Volume 2 ; 2 ; 2009 >
+    au < crawling ; exists ; 2008 ; Ethics & Global Politics Volume 1 ; 1 ; 2008 >
+    au < crawling ; exists ; 2009 ; Ethics & Global Politics Volume 2 ; 2 ; 2009 >
     au < released ; crawling ; 2010 ; Ethics & Global Politics Volume 3 ; 3 ; 2010 >
     au < released ; crawling ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; 2011 >
     au < ready ; exists ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; 2012 >
@@ -147,8 +147,8 @@
     param[journal_id] = fnr
     comment[issn] = for supplements
 
-    au < manifest ; exists ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
-    au < manifest ; exists ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
+    au < crawling ; exists ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
+    au < crawling ; exists ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
     au < released ; crawling ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 >
     au < released ; crawling ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
     au < released ; crawling ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 >
@@ -168,8 +168,8 @@
     param[journal_id] = gha
     comment[issn] = for supplements
     
-    au < manifest ; exists ; 2008 ; Global Health Action Volume 1 ; 1 ; 2008 >
-    au < manifest ; exists ; 2009 ; Global Health Action [including Supplements] Volume 2 ; 2 ; 2009 >
+    au < crawling ; exists ; 2008 ; Global Health Action Volume 1 ; 1 ; 2008 >
+    au < crawling ; exists ; 2009 ; Global Health Action [including Supplements] Volume 2 ; 2 ; 2009 >
     au < released ; crawling ; 2010 ; Global Health Action [including Supplements] Volume 3 ; 3 ; 2010 >
     au < released ; crawling ; 2011 ; Global Health Action [including Supplements] Volume 4 ; 4 ; 2011 >
     au < released ; crawling ; 2012 ; Global Health Action [including Supplements] Volume 5 ; 5 ; 2012 >
@@ -212,8 +212,8 @@
     au < manifest ; exists ; 2005 ; International Journal of Circumpolar Health Volume 64 ; 64 ; 2005 >
     au < manifest ; exists ; 2006 ; International Journal of Circumpolar Health Volume 65 ; 65 ; 2006 >
     au < manifest ; exists ; 2007 ; International Journal of Circumpolar Health Volume 66 ; 66 ; 2007 >
-    au < manifest ; exists ; 2008 ; International Journal of Circumpolar Health Volume 67 ; 67 ; 2008 >
-    au < manifest ; exists ; 2009 ; International Journal of Circumpolar Health Volume 68 ; 68 ; 2009 >
+    au < crawling ; exists ; 2008 ; International Journal of Circumpolar Health Volume 67 ; 67 ; 2008 >
+    au < crawling ; exists ; 2009 ; International Journal of Circumpolar Health Volume 68 ; 68 ; 2009 >
     au < released ; crawling ; 2010 ; International Journal of Circumpolar Health Volume 69 ; 69 ; 2010 >
     au < released ; crawling ; 2011 ; International Journal of Circumpolar Health Volume 70 ; 70 ; 2011 >
     au < released ; manifest ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
@@ -235,8 +235,8 @@
 
     au < manifest ; exists ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 ; 2006 >
     au < manifest ; exists ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2 ; 2007 >
-    au < manifest ; exists ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 >
-    au < manifest ; exists ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 >
+    au < crawling ; exists ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 >
+    au < crawling ; exists ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 >
     au < released ; crawling ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 >
     au < released ; crawling ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 >
     au < released ; crawling ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 ; 2012 >
@@ -254,7 +254,7 @@
     param[base_url] = http://www.aestheticsandculture.net/
     param[journal_id] = jac
 
-    au < manifest ; exists ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; 2009 >
+    au < crawling ; exists ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; 2009 >
     au < released ; crawling ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; 2010 >
     au < released ; crawling ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
     au < released ; crawling ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 ; 2012 >
@@ -288,7 +288,7 @@
     param[base_url] = http://www.journaloforalmicrobiology.net/
     param[journal_id] = jom
 
-    au < manifest ; exists ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2009 >
+    au < crawling ; exists ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2009 >
     au < released ; crawling ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 ; 2010 >
     au < released ; crawling ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 >
     au < released ; crawling ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 >
