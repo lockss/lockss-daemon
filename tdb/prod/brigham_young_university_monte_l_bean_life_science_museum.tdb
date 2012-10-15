@@ -4,7 +4,7 @@
     name = Brigham Young University Monte L. Bean Life Science Museum
   >
   
-  plugin = org.lockss.plugin.bioone.BioOnePlugin
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
   param[base_url] = http://www.bioone.org/
 
   {
