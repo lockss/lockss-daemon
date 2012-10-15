@@ -36,7 +36,7 @@
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-
+      
         au < HighWireStrVolPlugin ; down ; 2005 ; Accounting History Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; down ; 2006 ; Accounting History Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; 2007 ; Accounting History Volume 12 ; 12 >
@@ -594,18 +594,18 @@
         
         au < ready ; 1998-1999 ; Adult Learning Volume 10 ; 10 >
         au < ready ; 1999-2000 ; Adult Learning Volume 11 ; 11 >
-        au < testing ; 2001 ; Adult Learning Volume 12 ; 12 >
+        au < ready ; 2001 ; Adult Learning Volume 12 ; 12 >
         au < ready ; 2001-2002 ; Adult Learning Volume 13 ; 13 >
         au < ready ; 2003 ; Adult Learning Volume 14 ; 14 >
         au < ready ; 2004 ; Adult Learning Volume 15 ; 15 >
-        au < testing ; 2005 ; Adult Learning Volume 16 ; 16 >
-        au < testing ; 2006 ; Adult Learning Volume 17 ; 17 >
-        au < testing ; 2007 ; Adult Learning Volume 18 ; 18 >
+        au < ready ; 2005 ; Adult Learning Volume 16 ; 16 >
+        au < ready ; 2006 ; Adult Learning Volume 17 ; 17 >
+        au < ready ; 2007 ; Adult Learning Volume 18 ; 18 >
         au < ready ; 2008 ; Adult Learning Volume 19 ; 19 >
         au < ready ; 2009 ; Adult Learning Volume 20 ; 20 >
         au < released ; 2010 ; Adult Learning Volume 21 ; 21 >
         au < released ; 2011-2012 ; Adult Learning Volume 22 ; 22 >
-        au < testing ; 2012 ; Adult Learning Volume 23 ; 23 >
+        au < ready ; 2012 ; Adult Learning Volume 23 ; 23 >
       
       }
       
@@ -719,7 +719,7 @@
         au < doNotProcess ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 >
         au < released ; 2010 ; Advances in Developing Human Resources Volume 12 ; 12 >
         au < released ; 2011 ; Advances in Developing Human Resources Volume 13 ; 13 >
-        au < testing ; 2012 ; Advances in Developing Human Resources Volume 14 ; 14 >
+        au < ready ; 2012 ; Advances in Developing Human Resources Volume 14 ; 14 >
 
       }
 
@@ -756,7 +756,7 @@
         au < released ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 >
         au < released ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 >
         au < released ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 >
-        au < testing ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 >
+        au < ready ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 >
 
       }
 
@@ -963,7 +963,7 @@
         au < doNotProcess ; 2009 ; American Behavioral Scientist Volume 53 ; 53 >
         au < released ; 2010 ; American Behavioral Scientist Volume 54 ; 54 >
         au < released ; 2011 ; American Behavioral Scientist Volume 55 ; 55 >
-        au < testing ; 2012 ; American Behavioral Scientist Volume 56 ; 56 >
+        au < ready ; 2012 ; American Behavioral Scientist Volume 56 ; 56 >
 
       }
 
@@ -1107,7 +1107,7 @@
         au < doNotProcess ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 >
         au < released ; 2010 ; American Journal of Alzheimer's Disease and Other Dementias Volume 25 ; 25 >
         au < released ; 2011 ; American Journal of Alzheimer's Disease and Other Dementias Volume 26 ; 26 >
-        au < testing ; 2012 ; American Journal of Alzheimer's Disease and Other Dementias Volume 27 ; 27 >
+        au < ready ; 2012 ; American Journal of Alzheimer's Disease and Other Dementias Volume 27 ; 27 >
 
       }
 
@@ -2873,7 +2873,7 @@
         au < doNotProcess ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
         au < released ; 2010 ; Asia-Pacific Journal of Public Health Volume 22 ; 22 >
         au < released ; 2011 ; Asia-Pacific Journal of Public Health Volume 23 ; 23 >
-        au < testing ; 2012 ; Asia-Pacific Journal of Public Health Volume 24 ; 24 >
+        au < ready ; 2012 ; Asia-Pacific Journal of Public Health Volume 24 ; 24 >
       }
 
     }
@@ -2915,7 +2915,7 @@
         au < doNotProcess ; 2009 ; Asian Journal of Management Cases Volume 6 ; 6 >
         au < released ; 2010 ; Asian Journal of Management Cases Volume 7 ; 7 >
         au < released ; 2011 ; Asian Journal of Management Cases Volume 8 ; 8 >
-        au < testing ; 2012 ; Asian Journal of Management Cases Volume 9 ; 9 >
+        au < ready ; 2012 ; Asian Journal of Management Cases Volume 9 ; 9 >
 
       }
 
@@ -2968,7 +2968,7 @@
         au < doNotProcess ; 2009 ; Assessment Volume 16 ; 16 >
         au < released ; 2010 ; Assessment Volume 17 ; 17 >
         au < released ; 2011 ; Assessment Volume 18 ; 18 >
-        au < testing ; 2012 ; Assessment Volume 19 ; 19 >
+        au < ready ; 2012 ; Assessment Volume 19 ; 19 >
 
       }
 
@@ -3085,7 +3085,7 @@
         au < doNotProcess ; 2009 ; Autism Volume 13 ; 13 >
         au < released ; 2010 ; Autism Volume 14 ; 14 >
         au < released ; 2011 ; Autism Volume 15 ; 15 >
-        au < testing ; 2012 ; Autism Volume 16 ; 16 >
+        au < ready ; 2012 ; Autism Volume 16 ; 16 >
 
       }
       
@@ -3125,7 +3125,7 @@
         au < released ; 2009 ; Australasian Psychiatry Volume 17 ; 17 >
         au < released ; 2010 ; Australasian Psychiatry Volume 18 ; 18 >
         au < released ; 2011 ; Australasian Psychiatry Volume 19 ; 19 >
-        au < testing ; 2012 ; Australasian Psychiatry Volume 20 ; 20 >
+        au < ready ; 2012 ; Australasian Psychiatry Volume 20 ; 20 >
       }
       
     }
@@ -3146,7 +3146,7 @@
 
         au < released ; 2010 ; Australian & New Zealand Journal of Criminology Volume 43 ; 43 >
         au < released ; 2011 ; Australian & New Zealand Journal of Criminology Volume 44 ; 44 >
-        au < testing ; 2012 ; Australian & New Zealand Journal of Criminology Volume 45 ; 45 >
+        au < ready ; 2012 ; Australian & New Zealand Journal of Criminology Volume 45 ; 45 >
 
       }
       
@@ -3212,7 +3212,7 @@
         au < released ; 2009 ; Australian & New Zealand Journal of Psychiatry Volume 43 ; 43 >
         au < released ; 2010 ; Australian & New Zealand Journal of Psychiatry Volume 44 ; 44 >
         au < released ; 2011 ; Australian & New Zealand Journal of Psychiatry Volume 45 ; 45 >
-        au < testing ; 2012 ; Australian & New Zealand Journal of Psychiatry Volume 46 ; 46 >
+        au < ready ; 2012 ; Australian & New Zealand Journal of Psychiatry Volume 46 ; 46 >
       
       }
       
@@ -3268,7 +3268,7 @@
         au < released ; 2009 ; Australian Journal of Management Volume 34 ; 34 >
         au < released ; 2010 ; Australian Journal of Management Volume 35 ; 35 >
         au < released ; 2011 ; Australian Journal of Management Volume 36 ; 36 >
-        au < testing ; 2012 ; Australian Journal of Management Volume 37 ; 37 >
+        au < ready ; 2012 ; Australian Journal of Management Volume 37 ; 37 >
 
       }
 
@@ -3349,7 +3349,7 @@
         au < doNotProcess ; 2009 ; Behavior Modification Volume 33 ; 33 >
         au < released ; 2010 ; Behavior Modification Volume 34 ; 34 >
         au < released ; 2011 ; Behavior Modification Volume 35 ; 35 >
-        au < testing ; 2012 ; Behavior Modification Volume 36 ; 36 >
+        au < ready ; 2012 ; Behavior Modification Volume 36 ; 36 >
 
       }
       
@@ -3460,7 +3460,7 @@
         au < doNotProcess ; 2009 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 39 ; 39 >
         au < released ; 2010 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 40 ; 40 >
         au < released ; 2011 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 41 ; 41 >
-        au < testing ; 2012 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 42 ; 42 >
+        au < ready ; 2012 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 42 ; 42 >
 
       }
 
@@ -3520,7 +3520,7 @@
         au < doNotProcess ; 2009 ; Biological Research For Nursing Volume 11 ; 11 >
         au < released ; 2010 ; Biological Research For Nursing Volume 12 ; 12 >
         au < released ; 2011 ; Biological Research For Nursing Volume 13 ; 13 >
-        au < testing ; 2012 ; Biological Research For Nursing Volume 14 ; 14 >
+        au < ready ; 2012 ; Biological Research For Nursing Volume 14 ; 14 >
 
       }
 
@@ -3542,7 +3542,7 @@
 
         au < released ; 2010 ; BioScope: South Asian Screen Studies Volume 1 ; 1 >
         au < released ; 2011 ; BioScope: South Asian Screen Studies Volume 2 ; 2 >
-        au < testing ; 2012 ; BioScope: South Asian Screen Studies Volume 3 ; 3 >
+        au < ready ; 2012 ; BioScope: South Asian Screen Studies Volume 3 ; 3 >
 
       }
 
@@ -3605,7 +3605,7 @@
         au < doNotProcess ; 2009 ; Body & Society Volume 15 ; 15 >
         au < released ; 2010 ; Body & Society Volume 16 ; 16 >
         au < released ; 2011 ; Body & Society Volume 17 ; 17 >
-        au < testing ; 2012 ; Body & Society Volume 18 ; 18 >
+        au < ready ; 2012 ; Body & Society Volume 18 ; 18 >
 
       }
 
@@ -3648,7 +3648,7 @@
         au < doNotProcess ; 2009 ; The British Journal of Diabetes & Vascular Disease Volume 9 ; 9 >
         au < released ; 2010 ; The British Journal of Diabetes & Vascular Disease Volume 10 ; 10 >
         au < released ; 2011 ; The British Journal of Diabetes & Vascular Disease Volume 11 ; 11 >
-        au < testing ; 2012 ; The British Journal of Diabetes & Vascular Disease Volume 12 ; 12 >
+        au < ready ; 2012 ; The British Journal of Diabetes & Vascular Disease Volume 12 ; 12 >
 
       }
 
@@ -3717,7 +3717,7 @@
         au < manifest ; 2009 ; British Journal of Pain Volume 3 ; 3 >
         au < released ; 2010 ; British Journal of Pain Volume 4 ; 4 >
         au < released ; 2011 ; British Journal of Pain Volume 5 ; 5 >
-        au < testing ; 2012 ; British Journal of Pain Volume 6 ; 6 >
+        au < ready ; 2012 ; British Journal of Pain Volume 6 ; 6 >
 
       }
 
@@ -3781,7 +3781,7 @@
         au < doNotProcess ; 2009 ; British Journal of Visual Impairment Volume 27 ; 27 >
         au < released ; 2010 ; British Journal of Visual Impairment Volume 28 ; 28 >
         au < released ; 2011 ; British Journal of Visual Impairment Volume 29 ; 29 >
-        au < testing ; 2012 ; British Journal of Visual Impairment Volume 30 ; 30 >
+        au < ready ; 2012 ; British Journal of Visual Impairment Volume 30 ; 30 >
 
       }
 
@@ -3838,7 +3838,7 @@
         au < doNotProcess ; 2009 ; British Journalism Review Volume 20 ; 20 >
         au < released ; 2010 ; British Journalism Review Volume 21 ; 21 >
         au < released ; 2011 ; British Journalism Review Volume 22 ; 22 >
-        au < testing ; 2012 ; British Journalism Review Volume 23 ; 23 >
+        au < ready ; 2012 ; British Journalism Review Volume 23 ; 23 >
 
       }
 
@@ -3904,7 +3904,7 @@
         au < doNotProcess ; 2009 ; Building Services Engineering Research and Technology Volume 30 ; 30 >
         au < released ; 2010 ; Building Services Engineering Research and Technology Volume 31 ; 31 >
         au < released ; 2011 ; Building Services Engineering Research and Technology Volume 32 ; 32 >
-        au < testing ; 2012 ; Building Services Engineering Research and Technology Volume 33 ; 33 >
+        au < ready ; 2012 ; Building Services Engineering Research and Technology Volume 33 ; 33 >
 
       }
 
@@ -3982,7 +3982,7 @@
         au < doNotProcess ; 2009 ; Bulletin of Science, Technology & Society Volume 29 ; 29 >
         au < released ; 2010 ; Bulletin of Science, Technology & Society Volume 30 ; 30 >
         au < released ; 2011 ; Bulletin of Science, Technology & Society Volume 31 ; 31 >
-        au < testing ; 2012 ; Bulletin of Science, Technology & Society Volume 32 ; 32 >
+        au < ready ; 2012 ; Bulletin of Science, Technology & Society Volume 32 ; 32 >
 
       }
 
@@ -4114,9 +4114,9 @@
         au < released ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 110 ; 110 >
         au < released ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 111 ; 111 >
         au < released ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 112 ; 112 >
-        au < testing ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 113 ; 113 >
-        au < testing ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 114 ; 114 >
-        au < testing ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 115 ; 115 >
+        au < ready ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 113 ; 113 >
+        au < ready ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 114 ; 114 >
+        au < ready ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 115 ; 115 >
         au < manifest ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 116 ; 116 >
 
       }
@@ -4245,7 +4245,7 @@
         au < doNotProcess ; 2009 ; Business & Society Volume 48 ; 48 >
         au < released ; 2010 ; Business & Society Volume 49 ; 49 >
         au < released ; 2011 ; Business & Society Volume 50 ; 50 >
-        au < testing ; 2012 ; Business & Society Volume 51 ; 51 >
+        au < ready ; 2012 ; Business & Society Volume 51 ; 51 >
         
       }
 
@@ -4324,7 +4324,7 @@
         au < doNotProcess ; 2009 ; Business Communication Quarterly Volume 72 ; 72 >
         au < released ; 2010 ; Business Communication Quarterly Volume 73 ; 73 >
         au < released ; 2011 ; Business Communication Quarterly Volume 74 ; 74 >
-        au < testing ; 2012 ; Business Communication Quarterly Volume 75 ; 75 >
+        au < ready ; 2012 ; Business Communication Quarterly Volume 75 ; 75 >
 
       }
 
@@ -4387,7 +4387,7 @@
         au < doNotProcess ; 2009 ; Business Information Review Volume 26 ; 26 >
         au < released ; 2010 ; Business Information Review Volume 27 ; 27 >
         au < released ; 2011 ; Business Information Review Volume 28 ; 28 >
-        au < testing ; 2012 ; Business Information Review Volume 29 ; 29 >
+        au < ready ; 2012 ; Business Information Review Volume 29 ; 29 >
 
       }
 
@@ -4441,7 +4441,7 @@
         au < doNotProcess ; 2009 ; Canadian Journal of School Psychology Volume 24 ; 24 >
         au < released ; 2010 ; Canadian Journal of School Psychology Volume 25 ; 25 >
         au < released ; 2011 ; Canadian Journal of School Psychology Volume 26 ; 26 >
-        au < testing ; 2012 ; Canadian Journal of School Psychology Volume 27 ; 27 >
+        au < ready ; 2012 ; Canadian Journal of School Psychology Volume 27 ; 27 >
 
       }
 
@@ -4496,7 +4496,7 @@
         au < released ; 2009 ; Capital & Class Volume 33 ; 33 >
         au < released ; 2010 ; Capital & Class Volume 34 ; 34 >
         au < released ; 2011 ; Capital & Class Volume 35 ; 35 >
-        au < testing ; 2012 ; Capital & Class Volume 36 ; 36 >
+        au < ready ; 2012 ; Capital & Class Volume 36 ; 36 >
 
       }
 
@@ -4581,7 +4581,7 @@
         au < doNotProcess ; 2009 ; Career Development for Exceptional Individuals Volume 32 ; 32 >
         au < released ; 2010 ; Career Development for Exceptional Individuals Volume 33 ; 33 >
         au < released ; 2011 ; Career Development for Exceptional Individuals Volume 34 ; 34 >
-        au < testing ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 >
+        au < ready ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 >
 
       }
 
@@ -4614,7 +4614,7 @@
 
         au < doNotProcess ; 2009-2010 ; Cartilage Volume 1 ; 1 >
         au < released ; 2011 ; Cartilage Volume 2 ; 2 >
-        au < testing ; 2012 ; Cartilage Volume 3 ; 3 >
+        au < ready ; 2012 ; Cartilage Volume 3 ; 3 >
 
       }
 
@@ -4665,7 +4665,7 @@
         au < released ; 2009 ; Cephalalgia Volume 29 ; 29 >
         au < released ; 2010 ; Cephalalgia Volume 30 ; 30 >
         au < released ; 2011 ; Cephalalgia Volume 31 ; 31 >
-        au < testing ; 2012 ; Cephalalgia Volume 32 ; 32 >
+        au < ready ; 2012 ; Cephalalgia Volume 32 ; 32 >
 
       }
 
