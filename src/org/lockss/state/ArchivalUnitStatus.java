@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.110 2012-07-17 22:15:06 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.110.2.1 2012-10-15 04:20:52 tlipkis Exp $
  */
 
 /*
@@ -606,41 +606,45 @@ public class ArchivalUnitStatus
     }
 
     private Map makeRow(StatusTable table, CachedUrl cu) {
-      HashMap rowMap = new HashMap();
-      ArchivalUnit au = cu.getArchivalUnit();
-      rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
-
-
-      long size = cu.getContentSize();
-      Object val =
-	new StatusTable.SrvLink(cu.getContentSize(),
-				AdminServletManager.SERVLET_DISPLAY_CONTENT,
-				PropUtil.fromArgs("auid", au.getAuId(),
-						  "url", cu.getUrl()));
-      rowMap.put("Size", val);
-
-      int version = cu.getVersion();
-      Object versionObj = new Long(version);
-      if (version > 1) {
-	CachedUrl[] cuVersions = cu.getCuVersions(2);
-	if (cuVersions.length > 1) {
-	  StatusTable.Reference verLink =
-	    new StatusTable.Reference(versionObj,
-				      FILE_VERSIONS_TABLE_NAME, au.getAuId());
-	  verLink.setProperty("url", cu.getUrl());
-	  versionObj = verLink;
-	}
-      }
-      rowMap.put("Versions", versionObj);
-      Properties props = cu.getProperties();
       try {
-	long cdate =
-	  Long.parseLong(props.getProperty(CachedUrl.PROPERTY_FETCH_TIME));
-	rowMap.put("CollectedDate",
-		   ServletUtil.headerDf.format(new Date(cdate)));
-      } catch (NumberFormatException ignore) {
+	HashMap rowMap = new HashMap();
+	ArchivalUnit au = cu.getArchivalUnit();
+	rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
+
+
+	long size = cu.getContentSize();
+	Object val =
+	  new StatusTable.SrvLink(cu.getContentSize(),
+				  AdminServletManager.SERVLET_DISPLAY_CONTENT,
+				  PropUtil.fromArgs("auid", au.getAuId(),
+						    "url", cu.getUrl()));
+	rowMap.put("Size", val);
+
+	int version = cu.getVersion();
+	Object versionObj = new Long(version);
+	if (version > 1) {
+	  CachedUrl[] cuVersions = cu.getCuVersions(2);
+	  if (cuVersions.length > 1) {
+	    StatusTable.Reference verLink =
+	      new StatusTable.Reference(versionObj,
+					FILE_VERSIONS_TABLE_NAME, au.getAuId());
+	    verLink.setProperty("url", cu.getUrl());
+	    versionObj = verLink;
+	  }
+	}
+	rowMap.put("Versions", versionObj);
+	Properties props = cu.getProperties();
+	try {
+	  long cdate =
+	    Long.parseLong(props.getProperty(CachedUrl.PROPERTY_FETCH_TIME));
+	  rowMap.put("CollectedDate",
+		     ServletUtil.headerDf.format(new Date(cdate)));
+	} catch (NumberFormatException ignore) {
+	}
+	return rowMap;
+      } finally {
+	AuUtil.safeRelease(cu);
       }
-      return rowMap;
     }
 
     private List getNoMatchSummaryInfo() {
