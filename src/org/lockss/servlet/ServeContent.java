@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.67.2.1 2012-09-27 18:50:27 fergaloy-sf Exp $
+ * $Id: ServeContent.java,v 1.67.2.2 2012-10-15 04:20:40 tlipkis Exp $
  */
 
 /*
@@ -1011,24 +1011,34 @@ public class ServeContent extends LockssServlet {
     
 
     // copy connection response headers to servlet response
-    int h = 0;
-    String hdr = conn.getResponseHeaderFieldKey(h);
-    String val = conn.getResponseHeaderFieldVal(h);
-    while ((hdr != null) || (val != null)) {
-
-      if (  (hdr!=null) && (val!=null) 
-	    // Don't copy the following headers:
-	    // Content-Encoding conditionally copied below
-         && !HttpFields.__ContentEncoding.equalsIgnoreCase(hdr)
-         && !HttpFields.__KeepAlive.equalsIgnoreCase(hdr)
-         && !HttpFields.__Connection.equalsIgnoreCase(hdr)) {
-        resp.addHeader(hdr, val);
+    for (int i = 0; true; i++) {
+      String key = conn.getResponseHeaderFieldKey(i);
+      String val = conn.getResponseHeaderFieldVal(i);
+      if ((key == null) && (val == null)) {
+	break;
       }
-      h++;
-      hdr=conn.getResponseHeaderFieldKey(h);
-      val=conn.getResponseHeaderFieldVal(h);
+      if ((key == null) || (val == null)) {
+	// XXX Here to ensure complete compatibility with previous
+	// code. Not sure it's necessary or desirable.
+	continue;
+      }
+      // Content-Encoding processed below
+      // Don't copy the following headers:
+      if (HttpFields.__ContentEncoding.equalsIgnoreCase(key) ||
+	  HttpFields.__KeepAlive.equalsIgnoreCase(key) ||
+	  HttpFields.__Connection.equalsIgnoreCase(key)) {
+	continue;
+      }
+      if (HttpFields.__ContentType.equalsIgnoreCase(key)) {
+	// Must use setContentType() for Content-Type, both to replace the
+	// default that LockssServlet stored, and to ensure proper charset
+	// processing
+	resp.setContentType(val);
+      } else {
+	resp.addHeader(key, val);
+      }
     }
-    
+
     String contentEncoding = conn.getResponseContentEncoding();
     long responseContentLength = conn.getResponseContentLength();
 
