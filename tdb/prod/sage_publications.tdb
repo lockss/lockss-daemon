@@ -637,25 +637,25 @@
         param[base_url] = http://adr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1987 ; Advances in Dental Research Volume 1 ; 1 >
-        au < manifest ; 1988 ; Advances in Dental Research Volume 2 ; 2 >
-        au < manifest ; 1989 ; Advances in Dental Research Volume 3 ; 3 >
-        au < manifest ; 1990 ; Advances in Dental Research Volume 4 ; 4 >
-        au < manifest ; 1991 ; Advances in Dental Research Volume 5 ; 5 >
-        au < manifest ; 1992 ; Advances in Dental Research Volume 6 ; 6 >
-        au < manifest ; 1993 ; Advances in Dental Research Volume 7 ; 7 >
-        au < manifest ; 1994 ; Advances in Dental Research Volume 8 ; 8 >
-        au < manifest ; 1995 ; Advances in Dental Research Volume 9 ; 9 >
-        au < manifest ; 1996 ; Advances in Dental Research Volume 10 ; 10 >
-        au < manifest ; 1997 ; Advances in Dental Research Volume 11 ; 11 >
-        au < manifest ; 1998 ; Advances in Dental Research Volume 12 ; 12 >
-        au < manifest ; 1999 ; Advances in Dental Research Volume 13 ; 13 >
-        au < manifest ; 2000 ; Advances in Dental Research Volume 14 ; 14 >
-        au < manifest ; 2001 ; Advances in Dental Research Volume 15 ; 15 >
-        au < manifest ; 2002 ; Advances in Dental Research Volume 16 ; 16 >
-        au < manifest ; 2003 ; Advances in Dental Research Volume 17 ; 17 >
-        au < manifest ; 2005 ; Advances in Dental Research Volume 18 ; 18 >
-        au < manifest ; 2006 ; Advances in Dental Research Volume 19 ; 19 >
+        au < testing ; 1987 ; Advances in Dental Research Volume 1 ; 1 >
+        au < testing ; 1988 ; Advances in Dental Research Volume 2 ; 2 >
+        au < testing ; 1989 ; Advances in Dental Research Volume 3 ; 3 >
+        au < testing ; 1990 ; Advances in Dental Research Volume 4 ; 4 >
+        au < testing ; 1991 ; Advances in Dental Research Volume 5 ; 5 >
+        au < testing ; 1992 ; Advances in Dental Research Volume 6 ; 6 >
+        au < testing ; 1993 ; Advances in Dental Research Volume 7 ; 7 >
+        au < testing ; 1994 ; Advances in Dental Research Volume 8 ; 8 >
+        au < testing ; 1995 ; Advances in Dental Research Volume 9 ; 9 >
+        au < testing ; 1996 ; Advances in Dental Research Volume 10 ; 10 >
+        au < testing ; 1997 ; Advances in Dental Research Volume 11 ; 11 >
+        au < testing ; 1998 ; Advances in Dental Research Volume 12 ; 12 >
+        au < testing ; 1999 ; Advances in Dental Research Volume 13 ; 13 >
+        au < testing ; 2000 ; Advances in Dental Research Volume 14 ; 14 >
+        au < testing ; 2001 ; Advances in Dental Research Volume 15 ; 15 >
+        au < testing ; 2002 ; Advances in Dental Research Volume 16 ; 16 >
+        au < testing ; 2003 ; Advances in Dental Research Volume 17 ; 17 >
+        au < testing ; 2005 ; Advances in Dental Research Volume 18 ; 18 >
+        au < testing ; 2006 ; Advances in Dental Research Volume 19 ; 19 >
         au < released ; 2008 ; Advances in Dental Research Volume 20 ; 20 >
         au < doNotProcess ; 2009 ; Advances in Dental Research Volume 21 ; 21 >
         au < released ; 2010 ; Advances in Dental Research Volume 22 ; 22 >
@@ -706,12 +706,12 @@
         param[base_url] = http://adh.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1999 ; Advances in Developing Human Resources Volume 1 ; 1 >
-        au < manifest ; 2000 ; Advances in Developing Human Resources Volume 2 ; 2 >
-        au < manifest ; 2001 ; Advances in Developing Human Resources Volume 3 ; 3 >
-        au < manifest ; 2002 ; Advances in Developing Human Resources Volume 4 ; 4 >
-        au < manifest ; 2003 ; Advances in Developing Human Resources Volume 5 ; 5 >
-        au < manifest ; 2004 ; Advances in Developing Human Resources Volume 6 ; 6 >
+        au < testing ; 1999 ; Advances in Developing Human Resources Volume 1 ; 1 >
+        au < testing ; 2000 ; Advances in Developing Human Resources Volume 2 ; 2 >
+        au < testing ; 2001 ; Advances in Developing Human Resources Volume 3 ; 3 >
+        au < testing ; 2002 ; Advances in Developing Human Resources Volume 4 ; 4 >
+        au < testing ; 2003 ; Advances in Developing Human Resources Volume 5 ; 5 >
+        au < testing ; 2004 ; Advances in Developing Human Resources Volume 6 ; 6 >
         au < doNotProcess ; 2005 ; Advances in Developing Human Resources Volume 7 ; 7 >
         au < doNotProcess ; 2006 ; Advances in Developing Human Resources Volume 8 ; 8 >
         au < doNotProcess ; 2007 ; Advances in Developing Human Resources Volume 9 ; 9 >
@@ -739,19 +739,19 @@
         param[base_url] = http://aes.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 >
-        au < manifest ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 >
-        au < manifest ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 >
-        au < manifest ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 >
-        au < manifest ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 >
-        au < manifest ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 >
-        au < manifest ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 >
-        au < manifest ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 >
-        au < manifest ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 >
-        au < manifest ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 >
-        au < manifest ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 >
-        au < manifest ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 >
-        au < manifest ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 >
+        au < testing ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 >
+        au < testing ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 >
+        au < testing ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 >
+        au < testing ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 >
+        au < testing ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 >
+        au < testing ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 >
+        au < testing ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 >
+        au < testing ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 >
+        au < testing ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 >
+        au < testing ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 >
+        au < testing ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 >
+        au < testing ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 >
+        au < testing ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 >
         au < released ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 >
         au < released ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 >
         au < released ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 >
