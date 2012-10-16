@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>testing-audrey, cynthia</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -70,28 +70,33 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;GPO FDSys Bulk Data Plugin, Base URL %s, Collection ID %s, Year %d&quot;, base_url, collection_id, year</string>
+    <string>"GPO FDSys Bulk Data Plugin, Base URL %s, Collection ID %s, Year %d", base_url, collection_id, year</string>
   </entry>
   <entry>
     <string>au_manifest</string>
-    <string>&quot;%sfdsys/bulkdata/%s/resources/lockss.html&quot;, base_url, collection_id</string>
+    <string>"%sfdsys/bulkdata/%s/resources/lockss.html", base_url, collection_id</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sfdsys/bulkdata/getdata.action?docid=/bulkdata/%s&quot;, base_url, collection_id</string>
+    <string>"%sfdsys/bulkdata/getdata.action?docid=/bulkdata/%s", base_url, collection_id</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sfdsys/bulkdata/.*%s/%d&quot;, base_url, collection_id, year</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sfdsys/bulkdata/.*%s/%d", base_url, collection_id, year</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%sfdsys/bulkdata/%s/%d&quot;, base_url, collection_id, year</string>
+      <!-- default is that in the case of redirecting URLs, only the last URL 
+           to retrieve the data is considerd "substantive".. this expression
+           catches the redirected url.
+        -->
+      <string>"^%sfdsys/bulkdata/getdata.action\?docid=/bulkdata/%s/%d/([/\d]{1,6})?(%s-%d[-\w]{2,8})?.(xml|zip)?", base_url, collection_id, year, collection_id, year</string>    
+      <string>"^%sfdsys/bulkdata/%s/%d/([/\d]{3-6})?(%s-%d[-\d]{2,8}.(xml|zip))?", base_url, collection_id, year, collection_id, year</string>
     </list>
   </entry>
   <entry>
@@ -99,11 +104,11 @@
     <map>
       <entry>
         <string>au_title</string>
-        <string>&quot;%sfdsys/bulkdata/%s&quot;, base_url, collection_id</string>
+        <string>"%sfdsys/bulkdata/%s", base_url, collection_id</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>&quot;%sfdsys/bulkdata/%s/%d&quot;, base_url, collection_id, year</string>
+        <string>"%sfdsys/bulkdata/%s/%d", base_url, collection_id, year</string>
       </entry>
     </map>
   </entry>
