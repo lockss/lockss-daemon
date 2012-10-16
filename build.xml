@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.323 2012-09-18 19:07:27 tlipkis Exp $
+ $Id: build.xml,v 1.324 2012-10-16 18:59:55 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -62,7 +62,7 @@ Args:
   -Dlogtarget=Class        Set default log target.
   -Dnonetwork=true         Skip tests that require a working network
   -Dnowarn=true            Turn off compiler warnings.
-  -Dpapersize=latter       The medium to pass to a2ps for index and print.
+  -Dpapersize=letter       The medium to pass to a2ps for index and print.
   -Dshowoutput=yes         With test-one, show System.err output as it happens.
   -Dsuite=suite-name       Specify stf suite name.
   -Dtimeout=msecs          Override the default test failure timeout.
