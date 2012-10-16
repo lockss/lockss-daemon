@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExportFilter.java,v 1.13 2012-09-03 16:39:09 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.14 2012-10-16 11:55:26 easyonthemayo Exp $
  */
 
 /*
@@ -670,7 +670,7 @@ public class KbartExportFilter {
       /*return ListUtil.fromArray(StringUtils.split(orderStr.toLowerCase(),
           CUSTOM_ORDERING_FIELD_SEPARATOR));*/
       // Also trim whitespace from field strings, and omit empties
-      String[] arr = orderStr.toLowerCase().split(CUSTOM_ORDERING_FIELD_SEPARATOR_REGEX);
+      String[] arr = orderStr.split(CUSTOM_ORDERING_FIELD_SEPARATOR_REGEX);
       List<String> list = new ArrayList<String>();
       for (String s : arr) {
         s = s.trim();

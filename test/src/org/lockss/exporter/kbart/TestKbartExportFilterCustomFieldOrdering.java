@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartExportFilterCustomFieldOrdering.java,v 1.1 2011-08-19 10:36:18 easyonthemayo Exp $
+ * $Id: TestKbartExportFilterCustomFieldOrdering.java,v 1.2 2012-10-16 11:55:26 easyonthemayo Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class TestKbartExportFilterCustomFieldOrdering extends TestCase {
   );
   String someFieldsStr = StringUtils.join(
       someFields, CustomFieldOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR
-  );
+  ).toLowerCase();
   
   CustomFieldOrdering cfo, cfoStr;
 
@@ -77,7 +77,7 @@ public class TestKbartExportFilterCustomFieldOrdering extends TestCase {
     List<Field> fs = cfoStr.getOrdering();
     assertEquals(someFields, new ArrayList<Field>(fs));
     assertEquals(someFieldsStr, 
-	StringUtils.join(fs, CustomFieldOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR)
+	StringUtils.join(fs, CustomFieldOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR).toLowerCase()
     );
   }
 

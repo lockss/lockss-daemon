@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.43 2012-08-06 17:46:59 pgust Exp $
+ * $Id: ListHoldings.java,v 1.44 2012-10-16 11:55:26 easyonthemayo Exp $
  */
 
 /*
@@ -203,7 +203,6 @@ public class ListHoldings extends LockssServlet {
   private FieldOrdering customFieldOrdering;
   /** Whether to do an export - set based on the submitted parameters. */
   private boolean doExport = false;
-
   // --------------------------------------------------------------------------
   // --------------------------------------------------------------------------
 
@@ -387,6 +386,7 @@ public class ListHoldings extends LockssServlet {
       // in the session.
       customOpts = new KbartCustomOptions(omitEmptyColumns, omitHeader,
           showHealthRatings, customFieldOrdering);
+
       putSessionCustomOpts(customOpts);
     }
     // If this is not a valid custom or one-per-line output, reset the
@@ -416,10 +416,10 @@ public class ListHoldings extends LockssServlet {
     // Do the export
     doExport(kexp);
   }
-  
+
   /**
    * Attempt to set the custom field ordering using the given ordering string. If
-   * the set fails, the errMsg is set and the doExport variable is set to false;
+   * the set fails, the errMsg is set and the doExport variable is set to false.
    * @param ordering
    * @return whether the set succeeded
    */
@@ -1112,7 +1112,9 @@ public class ListHoldings extends LockssServlet {
 
 
   /**
-   * Turn the selected ordering into a string containing a separated list of fields. 
+   * Turn the selected ordering into a string containing a separated list of
+   * fields. Includes any custom constant field, as it uses the string labels
+   * rather than the Field list.
    * @return
    */
   private static String getOrderingAsCustomFieldList(FieldOrdering fo) {
