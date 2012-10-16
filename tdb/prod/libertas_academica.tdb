@@ -652,12 +652,10 @@
       
     >
 
-    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
-    
     param[journal_id] = 164
 
-    au < notReady ; 2009 ; Clinical Medicine Reviews in Cardiology Volume 1 ; 2009 >
-    au < notReady ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2010 >
+    au < manifest ; 2009 ; Clinical Medicine Reviews in Cardiology Volume 1 ; 2009 >
+    au < manifest ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2010 >
 
   }
   
@@ -669,14 +667,12 @@
       
     >
     
-    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
-
     param[journal_id] = 163
 
-    au < notReady ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 2009 >
-    au < notReady ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2010 >
-    au < notReady ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 2011 >
-    au < notReady ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 2012 >
+    au < manifest ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 2009 >
+    au < manifest ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2010 >
+    au < manifest ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 2011 >
+    au < manifest ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 2012 >
 
   }
   
@@ -688,12 +684,10 @@
       
     >
 
-    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
-
     param[journal_id] = 167
 
-    au < notReady ; 2009 ; Clinical Medicine Reviews in Patient Care Volume 1 ; 2009 >
-    au < notReady ; 2011 ; Clinical Medicine Reviews in Patient Care Volume 2 ; 2011 >
+    au < manifest ; 2009 ; Clinical Medicine Reviews in Patient Care Volume 1 ; 2009 >
+    au < manifest ; 2011 ; Clinical Medicine Reviews in Patient Care Volume 2 ; 2011 >
 
   }
   
@@ -704,14 +698,12 @@
       issn = 1179-2558
       
     >
-    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12    
-    
     param[journal_id] = 166
 
-    au < notReady ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 2009 >
-    au < notReady ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2010 >
-    au < notReady ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 2011 >
-    au < notReady ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 2012 >
+    au < manifest ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 2009 >
+    au < manifest ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2010 >
+    au < manifest ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 2011 >
+    au < manifest ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 2012 >
 
   }
   
@@ -723,14 +715,12 @@
       
     >
 
-    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
-    
     param[journal_id] = 165
 
-    au < notReady ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 2009 >
-    au < notReady ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2010 >
-    au < notReady ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 2011 >
-    au < notReady ; 2012 ; Clinical Medicine Reviews in Vascular Health Volume 4 ; 2012 >
+    au < manifest ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 2009 >
+    au < manifest ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2010 >
+    au < manifest ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 2011 >
+    au < manifest ; 2012 ; Clinical Medicine Reviews in Vascular Health Volume 4 ; 2012 >
 
   }
   
@@ -744,12 +734,10 @@
 
     param[journal_id] = 162
 
-    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
-    
-    au < notReady ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 2009 >
-    au < notReady ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2010 >
-    au < notReady ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 2011 >
-    au < notReady ; 2012 ; Clinical Medicine Reviews in Women's Health Volume 4 ; 2012 >
+    au < manifest ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 2009 >
+    au < manifest ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2010 >
+    au < manifest ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 2011 >
+    au < manifest ; 2012 ; Clinical Medicine Reviews in Women's Health Volume 4 ; 2012 >
 
   }
   
@@ -1169,10 +1157,8 @@
 
     param[journal_id] = 173
     
-    comment[notReady] = no link or journal title on manifest page to existing content on publisher site -MD 06/18/12
-    
-    au < notReady ; 2010 ; Journal of Genomics and Exomics Volume 1 ; 2010 >
-    au < notReady ; 2011 ; Journal of Genomics and Exomics Volume 2 ; 2011 >
+    au < manifest ; 2010 ; Journal of Genomics and Exomics Volume 1 ; 2010 >
+    au < manifest ; 2011 ; Journal of Genomics and Exomics Volume 2 ; 2011 >
     au < manifest ; 2012 ; Journal of Genomics and Exomics Volume 3 ; 2012 >
 
 
