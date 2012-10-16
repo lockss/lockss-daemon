@@ -61,10 +61,10 @@
     param[journal_id] = aitj 
     param[journal_issn] = 1756-1310
 
-    au < testing ; 2009 ; Art In Translation Volume 1 ; 1 >
+    au < ready ; 2009 ; Art In Translation Volume 1 ; 1 >
     au < testing ; 2010 ; Art In Translation Volume 2 ; 2 >
     au < testing ; 2011 ; Art In Translation Volume 3 ; 3 >
-    au < testing ; 2012 ; Art In Translation Volume 4 ; 4 >
+    au < ready ; 2012 ; Art In Translation Volume 4 ; 4 >
     
   }
 
@@ -79,15 +79,15 @@
     param[journal_id] = cash
     param[journal_issn] = 1478-0038
 
-    au < testing ; 2004 ; Cultural and Social History Volume 1 ; 1 >
-    au < testing ; 2005 ; Cultural and Social History Volume 2 ; 2 >
-    au < testing ; 2006 ; Cultural and Social History Volume 3 ; 3 >
-    au < testing ; 2007 ; Cultural and Social History Volume 4 ; 4 >
-    au < testing ; 2008 ; Cultural and Social History Volume 5 ; 5 >
-    au < testing ; 2009 ; Cultural and Social History Volume 6 ; 6 >
-    au < testing ; 2010 ; Cultural and Social History Volume 7 ; 7 >
+    au < ready ; 2004 ; Cultural and Social History Volume 1 ; 1 >
+    au < ready ; 2005 ; Cultural and Social History Volume 2 ; 2 >
+    au < ready ; 2006 ; Cultural and Social History Volume 3 ; 3 >
+    au < ready ; 2007 ; Cultural and Social History Volume 4 ; 4 >
+    au < ready ; 2008 ; Cultural and Social History Volume 5 ; 5 >
+    au < ready ; 2009 ; Cultural and Social History Volume 6 ; 6 >
+    au < ready ; 2010 ; Cultural and Social History Volume 7 ; 7 >
     au < testing ; 2011 ; Cultural and Social History Volume 8 ; 8 >
-    au < testing ; 2012 ; Cultural and Social History Volume 9 ; 9 >
+    au < ready ; 2012 ; Cultural and Social History Volume 9 ; 9 >
    
   }
 
@@ -125,10 +125,10 @@
     param[journal_issn] = 1754-7075
 
 
-    au < testing ; 2009 ; Design and Culture Volume 1 ; 1 >
-    au < testing ; 2010 ; Design and Culture Volume 2 ; 2 >
-    au < testing ; 2011 ; Design and Culture Volume 3 ; 3 >
-    au < testing ; 2012 ; Design and Culture Volume 4 ; 4 >
+    au < ready ; 2009 ; Design and Culture Volume 1 ; 1 >
+    au < ready ; 2010 ; Design and Culture Volume 2 ; 2 >
+    au < ready ; 2011 ; Design and Culture Volume 3 ; 3 >
+    au < ready ; 2012 ; Design and Culture Volume 4 ; 4 >
     
   }
 
