@@ -1,0 +1,161 @@
+<map>
+  <!-- NOTE: if you update this plugin, you may also need to update 
+       and re-release other plugins who use this one as a parent.
+  -->  
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.ojs2.ClockssOJS2Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>21</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>6</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>4</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>3</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Open Journals System Plugin (OJS 2.x) (CLOCKSS), Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Open Journals System Plugin (OJS 2.x) (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%sindex\.php/%s/gateway/lockss\?year=%d$&quot;, base_url, journal_id, year</string>
+      <string>2,&quot;^%sindex\.php/%s/(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:&quot;, base_url, journal_id</string>
+      <string>1,&quot;^%sindex\.php/%s/(article|issue)/(download|downloadSuppFile|view|viewArticle|viewDownloadInterstitial|viewFile|viewPDFInterstitial|viewRST)/&quot;, base_url, journal_id</string>
+      <string>2,&quot;^%sindex\.php/%s/rt/(captureCite)/&quot;, base_url, journal_id</string>
+      <string>1,&quot;^%sindex\.php/%s/rt/bio(/[0-9]+)*$&quot;, base_url, journal_id</string>
+      <string>1,&quot;^%sindex\.php/%s/rt/(metadata|printerFriendly|suppFileMetadata|suppFiles)(/[0-9]+)*$&quot;, base_url, journal_id</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sindex.php/%s/gateway/lockss?year=%d&quot;, base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>&quot;%sabout/editorialPolicies&quot;, base_url</string>
+  </entry>
+  <entry>
+  <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>&quot;%sindex.php/%s&quot;, base_url, journal_id</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>&quot;%sindex.php/%s/gateway/lockss?year=%d&quot;, base_url, journal_id, year</string>
+    </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.ojs2.OJS2HtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.ojs2.OJS2HtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>&quot;%sindex\.php/%s/login\?&quot;, base_url, journal_id</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.ojs2.OJS2ArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.ojs2.OJS2ArticleIteratorFactory</string>
+  </entry>
+ <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.ojs2.OJS2HtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+        <string>&quot;^%sindex\.php/%s/article/view/[0-9]+/[0-9]+$&quot;, base_url, journal_id</string>
+        <string>&quot;^%sindex\.php/%s/article/download/[0-9]+/[0-9]+$&quot;, base_url, journal_id</string>
+      </list>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+</map>
