@@ -101,14 +101,15 @@
     >    
     param[journal_id] = cpij
     param[journal_issn] = 1743-2197
+    comment[down] = Now published by Duke University Press
 
-    au < testing ; 2005 ; Cultural Politics Volume 1 ; 1 >
-    au < testing ; 2006 ; Cultural Politics Volume 2 ; 2 >
-    au < testing ; 2007 ; Cultural Politics Volume 3 ; 3 >
-    au < testing ; 2008 ; Cultural Politics Volume 4 ; 4 >
-    au < testing ; 2009 ; Cultural Politics Volume 5 ; 5 >
-    au < testing ; 2010 ; Cultural Politics Volume 6 ; 6 >
-    au < testing ; 2011 ; Cultural Politics Volume 7 ; 7 >
+    au < notReady ; 2005 ; Cultural Politics Volume 1 ; 1 >
+    au < notReady ; 2006 ; Cultural Politics Volume 2 ; 2 >
+    au < notReady ; 2007 ; Cultural Politics Volume 3 ; 3 >
+    au < notReady ; 2008 ; Cultural Politics Volume 4 ; 4 >
+    au < notReady ; 2009 ; Cultural Politics Volume 5 ; 5 >
+    au < notReady ; 2010 ; Cultural Politics Volume 6 ; 6 >
+    au < notReady ; 2011 ; Cultural Politics Volume 7 ; 7 >
     au < expected ; 2012 ; Cultural Politics Volume 8 ; 8 >
     
   }
@@ -144,21 +145,21 @@
     param[journal_issn] = 1460-6925
 
 
-    au < manifest ; 1997-1998 ; The Design Journal Volume 1 ; 1 >
-    au < manifest ; 1999 ; The Design Journal Volume 2 ; 2 >
-    au < manifest ; 2000 ; The Design Journal Volume 3 ; 3 >
-    au < manifest ; 2001 ; The Design Journal Volume 4 ; 4 >
-    au < manifest ; 2002 ; The Design Journal Volume 5 ; 5 >
-    au < manifest ; 2003 ; The Design Journal Volume 6 ; 6 >
-    au < manifest ; 2004 ; The Design Journal Volume 7 ; 7 >
-    au < manifest ; 2005 ; The Design Journal Volume 8 ; 8 >
-    au < manifest ; 2006 ; The Design Journal Volume 9 ; 9 >
-    au < manifest ; 2007 ; The Design Journal Volume 10 ; 10 >
-    au < manifest ; 2008 ; The Design Journal Volume 11 ; 11 >
-    au < manifest ; 2009 ; The Design Journal Volume 12 ; 12 >
-    au < manifest ; 2010 ; The Design Journal Volume 13 ; 13 >
-    au < manifest ; 2011 ; The Design Journal Volume 14 ; 14 >
-    au < manifest ; 2012 ; The Design Journal Volume 15 ; 15 >
+    au < testing ; 1997-1998 ; The Design Journal Volume 1 ; 1 >
+    au < testing ; 1999 ; The Design Journal Volume 2 ; 2 >
+    au < testing ; 2000 ; The Design Journal Volume 3 ; 3 >
+    au < testing ; 2001 ; The Design Journal Volume 4 ; 4 >
+    au < testing ; 2002 ; The Design Journal Volume 5 ; 5 >
+    au < testing ; 2003 ; The Design Journal Volume 6 ; 6 >
+    au < testing ; 2004 ; The Design Journal Volume 7 ; 7 >
+    au < testing ; 2005 ; The Design Journal Volume 8 ; 8 >
+    au < testing ; 2006 ; The Design Journal Volume 9 ; 9 >
+    au < testing ; 2007 ; The Design Journal Volume 10 ; 10 >
+    au < testing ; 2008 ; The Design Journal Volume 11 ; 11 >
+    au < testing ; 2009 ; The Design Journal Volume 12 ; 12 >
+    au < testing ; 2010 ; The Design Journal Volume 13 ; 13 >
+    au < testing ; 2011 ; The Design Journal Volume 14 ; 14 >
+    au < testing ; 2012 ; The Design Journal Volume 15 ; 15 >
     
   }
 
@@ -174,10 +175,10 @@
     param[journal_issn] = 1756-9370
 
 
-    au < manifest ; 2009 ; Fashion Practice Volume 1 ; 1 >
-    au < manifest ; 2010 ; Fashion Practice Volume 2 ; 2 >
-    au < manifest ; 2011 ; Fashion Practice Volume 3 ; 3 >
-    au < manifest ; 2012 ; Fashion Practice Volume 4 ; 4 >
+    au < testing ; 2009 ; Fashion Practice Volume 1 ; 1 >
+    au < testing ; 2010 ; Fashion Practice Volume 2 ; 2 >
+    au < testing ; 2011 ; Fashion Practice Volume 3 ; 3 >
+    au < testing ; 2012 ; Fashion Practice Volume 4 ; 4 >
     
   }
 
@@ -193,22 +194,22 @@
     param[journal_issn] = 1362-704X
 
 
-    au < manifest ; 1997 ; Fashion Theory Volume 1 ; 1 >
-    au < manifest ; 1998 ; Fashion Theory Volume 2 ; 2 >
-    au < manifest ; 1999 ; Fashion Theory Volume 3 ; 3 >
-    au < manifest ; 2000 ; Fashion Theory Volume 4 ; 4 >
-    au < manifest ; 2001 ; Fashion Theory Volume 5 ; 5 >
-    au < manifest ; 2002 ; Fashion Theory Volume 6 ; 6 >
-    au < manifest ; 2003 ; Fashion Theory Volume 7 ; 7 >
-    au < manifest ; 2004 ; Fashion Theory Volume 8 ; 8 >
-    au < manifest ; 2005 ; Fashion Theory Volume 9 ; 9 >
-    au < manifest ; 2006 ; Fashion Theory Volume 10 ; 10 >
-    au < manifest ; 2007 ; Fashion Theory Volume 11 ; 11 >
-    au < manifest ; 2008 ; Fashion Theory Volume 12 ; 12 >
-    au < manifest ; 2009 ; Fashion Theory Volume 13 ; 13 >
-    au < manifest ; 2010 ; Fashion Theory Volume 14 ; 14 >
-    au < manifest ; 2011 ; Fashion Theory Volume 15 ; 15 >
-    au < manifest ; 2012 ; Fashion Theory Volume 16 ; 16 >
+    au < testing ; 1997 ; Fashion Theory Volume 1 ; 1 >
+    au < testing ; 1998 ; Fashion Theory Volume 2 ; 2 >
+    au < testing ; 1999 ; Fashion Theory Volume 3 ; 3 >
+    au < testing ; 2000 ; Fashion Theory Volume 4 ; 4 >
+    au < testing ; 2001 ; Fashion Theory Volume 5 ; 5 >
+    au < testing ; 2002 ; Fashion Theory Volume 6 ; 6 >
+    au < testing ; 2003 ; Fashion Theory Volume 7 ; 7 >
+    au < testing ; 2004 ; Fashion Theory Volume 8 ; 8 >
+    au < testing ; 2005 ; Fashion Theory Volume 9 ; 9 >
+    au < testing ; 2006 ; Fashion Theory Volume 10 ; 10 >
+    au < testing ; 2007 ; Fashion Theory Volume 11 ; 11 >
+    au < testing ; 2008 ; Fashion Theory Volume 12 ; 12 >
+    au < testing ; 2009 ; Fashion Theory Volume 13 ; 13 >
+    au < testing ; 2010 ; Fashion Theory Volume 14 ; 14 >
+    au < testing ; 2011 ; Fashion Theory Volume 15 ; 15 >
+    au < testing ; 2012 ; Fashion Theory Volume 16 ; 16 >
     
   }
 
@@ -224,15 +225,15 @@
     param[journal_issn] = 1552-8014
 
 
-    au < manifest ; 2004 ; Food, Culture and Society Volume 7 ; 7 >
-    au < manifest ; 2005 ; Food, Culture and Society Volume 8 ; 8 >
-    au < manifest ; 2006 ; Food, Culture and Society Volume 9 ; 97 >
-    au < manifest ; 2007 ; Food, Culture and Society Volume 10 ; 10 >
-    au < manifest ; 2008 ; Food, Culture and Society Volume 11 ; 11 >
-    au < manifest ; 2009 ; Food, Culture and Society Volume 12 ; 12 >
-    au < manifest ; 2010 ; Food, Culture and Society Volume 13 ; 13 >
-    au < manifest ; 2011 ; Food, Culture and Society Volume 14 ; 14 >
-    au < manifest ; 2012 ; Food, Culture and Society Volume 15 ; 15 >
+    au < testing ; 2004 ; Food, Culture and Society Volume 7 ; 7 >
+    au < testing ; 2005 ; Food, Culture and Society Volume 8 ; 8 >
+    au < testing ; 2006 ; Food, Culture and Society Volume 9 ; 97 >
+    au < testing ; 2007 ; Food, Culture and Society Volume 10 ; 10 >
+    au < testing ; 2008 ; Food, Culture and Society Volume 11 ; 11 >
+    au < testing ; 2009 ; Food, Culture and Society Volume 12 ; 12 >
+    au < testing ; 2010 ; Food, Culture and Society Volume 13 ; 13 >
+    au < testing ; 2011 ; Food, Culture and Society Volume 14 ; 14 >
+    au < testing ; 2012 ; Food, Culture and Society Volume 15 ; 15 >
     
   }
 
