@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.324 2012-10-16 18:59:55 thib_gc Exp $
+ $Id: build.xml,v 1.325 2012-10-16 21:22:51 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -236,13 +236,13 @@ Args:
   <property name="commons.logging.jar"
   				  value="${lib}/commons-logging-1.1.1.jar"/>
   <property name="commons.codec.jar"
-  				  value="${lib}/commons-codec-1.6.jar"/>
+  				  value="${lib}/commons-codec-1.7.jar"/>
   <property name="commons.compress.jar"
   				  value="${lib}/commons-compress-1.4.1p1.jar"/>
   <property name="commons.httpclient.jar"
   			value="${lib}/commons-httpclient-3.0-rc4.jar"/>
   <property name="commons.io.jar"
-	        value="${lib}/commons-io-2.2.jar" />
+	        value="${lib}/commons-io-2.4.jar" />
   <property name="commons.jxpath.jar"
 				  value="${lib}/commons-jxpath-1.3.jar"/>
   <property name="commons.beanutils.jar"
@@ -294,15 +294,18 @@ Args:
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
 
   <!-- PDFBox -->
-  <property name="pdfbox.jar" value="${lib}/pdfbox-1.6.0.jar" />
-  <!-- Next 7 needed by PDFBox: -->
-  <property name="fontbox.jar" value="${lib}/fontbox-1.6.0.jar" />
-  <property name="jempbox.jar" value="${lib}/jempbox-1.6.0.jar" />
-  <property name="bouncycastle-provider.jar" value="${lib}/bcprov-jdk15on-147.jar" />
-  <property name="bouncycastle-mail.jar" value="${lib}/bcmail-jdk15on-147.jar" />
-  <property name="icu4j.jar" value="${lib}/icu4j-49_1.jar" />
-  <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-49_1.jar" />
-  <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-49_1.jar" />
+  <property name="pdfbox.version" value="1.6.0" />
+  <property name="pdfbox.jar" value="${lib}/pdfbox-${pdfbox.version}.jar" />
+  <!-- Next 7 JARs needed by PDFBox: -->
+  <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
+  <property name="jempbox.jar" value="${lib}/jempbox-${pdfbox.version}.jar" />
+  <property name="bouncycastle.version" value="jdk15on-147" />
+  <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.version}.jar" />
+  <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.version}.jar" />
+  <property name="icu4j.version" value="49_1" />
+  <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
+  <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
+  <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
 	
   <!-- PDFBox 0.7.3 -->
   <property name="pdfbox-old.jar" value="${lib}/PDFBox-0.7.3.jar" />
