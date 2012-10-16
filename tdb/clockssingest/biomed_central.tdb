@@ -1597,6 +1597,36 @@
     }
 
     {
+
+      title <
+        name = Addiction Science & Clinical Practice ;
+        issn = 1940-0640 ;
+        issnl = 1940-0640
+      >
+
+      param[base_url] = http://www.ascpjournal.org/
+      param[journal_issn] = 1940-0640
+
+      au < manifest ; exists ; 2012 ; Addiction Science & Clinical Practice Volume 7 ; 7 >
+
+    }
+
+    {
+
+      title <
+        name = Agriculture & Food Security ;
+        issn = 2048-7010 ;
+        issnl = 2048-7010
+      >
+
+      param[base_url] = http://www.agricultureandfoodsecurity.com/
+      param[journal_issn] = 2048-7010
+
+      au < manifest ; exists ; 2012 ; Agriculture & Food Security Volume 1 ; 1 >
+
+    }
+
+    {
       title <
         name = AIDS Research and Therapy ;
         issn = 1742-6405 ;
@@ -1706,6 +1736,61 @@
       au < released ; crawling ; 2010 ; Annals of Surgical Innovation and Research Volume 4 ; 4 >
       au < released ; manifest ; 2011 ; Annals of Surgical Innovation and Research Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Annals of Surgical Innovation and Research Volume 6 ; 6 >
+
+    }
+
+    {
+
+      title <
+        name = Antimicrobial Resistance and Infection Control ;
+        issn = 2048-7010 ;
+        issnl = 2048-7010
+      >
+
+      param[base_url] = http://www.aricjournal.com/
+      param[journal_issn] = 2048-7010
+
+      au < manifest ; exists ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Aquatic Biosystems ;
+        issn = 2046-9063 ;
+        issnl = 2046-9063
+      >
+
+      param[base_url] = http://www.aquaticbiosystems.org/
+      param[journal_issn] = 2046-9063
+
+      au < manifest ; exists ; 2005 ; Aquatic Biosystems Volume 1 ; 1 >
+      au < manifest ; exists ; 2006 ; Aquatic Biosystems Volume 2 ; 2 >
+      au < manifest ; exists ; 2007 ; Aquatic Biosystems Volume 3 ; 3 >
+      au < manifest ; exists ; 2008 ; Aquatic Biosystems Volume 4 ; 4 >
+      au < manifest ; exists ; 2009 ; Aquatic Biosystems Volume 5 ; 5 >
+      au < manifest ; exists ; 2010 ; Aquatic Biosystems Volume 6 ; 6 >
+      au < manifest ; exists ; 2011 ; Aquatic Biosystems Volume 7 ; 7 >
+      au < manifest ; exists ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
+
+    }
+
+    {
+
+      title <
+        name = Archives of Public Health ;
+        issn = 0778-7367 ;
+        issnl = 0778-7367
+      >
+
+      param[base_url] = http://www.archpublichealth.com/
+      param[journal_issn] = 0778-7367
+
+      au < manifest ; exists ; 2009-2010 ; Archives of Public Health Volume 67 ; 67 >
+      au < manifest ; exists ; 2010-2011 ; Archives of Public Health Volume 68 ; 68 >
+      au < manifest ; exists ; 2011 ; Archives of Public Health Volume 69 ; 69 >
+      au < manifest ; exists ; 2012 ; Archives of Public Health Volume 70 ; 70 >
 
     }
 
