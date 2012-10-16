@@ -672,9 +672,9 @@
     au < manifest ; 2007 ; Central Europe Volume 5 ; 5 > 
     au < manifest ; 2008 ; Central Europe Volume 6 ; 6 > 
     au < manifest ; 2009 ; Central Europe Volume 7 ; 7 > 
-    au < manifest ; 2010 ; Central Europe Volume 8 ; 8 > 
-    au < manifest ; 2011 ; Central Europe Volume 9 ; 9 > 
-    au < manifest ; 2012 ; Central Europe Volume 10 ; 10 > 
+    au < ready ; 2010 ; Central Europe Volume 8 ; 8 > 
+    au < ready ; 2011 ; Central Europe Volume 9 ; 9 > 
+    au < ready ; 2012 ; Central Europe Volume 10 ; 10 > 
 
   }
 
@@ -762,7 +762,7 @@
     au < manifest ; 2008 ; Comparative American Studies Volume 6 ; 6 > 
     au < manifest ; 2009 ; Comparative American Studies Volume 7 ; 7 > 
     au < ready ; 2010 ; Comparative American Studies Volume 8 ; 8 > 
-    au < manifest ; 2011 ; Comparative American Studies Volume 9 ; 9 > 
+    au < ready ; 2011 ; Comparative American Studies Volume 9 ; 9 > 
     au < ready ; 2012 ; Comparative American Studies Volume 10 ; 10 > 
     
 
@@ -794,9 +794,9 @@
     au < manifest ; 2007 ; Competition & Change Volume 11 ; 11 > 
     au < manifest ; 2008 ; Competition & Change Volume 12 ; 12 > 
     au < manifest ; 2009 ; Competition & Change Volume 13 ; 13 > 
-    au < manifest ; 2010 ; Competition & Change Volume 14 ; 14 > 
-    au < manifest ; 2011 ; Competition & Change Volume 15 ; 15 > 
-    au < manifest ; 2012 ; Competition & Change Volume 16 ; 16 > 
+    au < ready ; 2010 ; Competition & Change Volume 14 ; 14 > 
+    au < ready ; 2011 ; Competition & Change Volume 15 ; 15 > 
+    au < ready ; 2012 ; Competition & Change Volume 16 ; 16 > 
 
   }
 
@@ -829,8 +829,8 @@
     au < manifest ; 2007 ; Conservation and Management of Archaeological Sites Volume 9 ; 9 > 
     au < manifest ; 2008 ; Conservation and Management of Archaeological Sites Volume 10 ; 10 > 
     au < manifest ; 2009 ; Conservation and Management of Archaeological Sites Volume 11 ; 11 > 
-    au < manifest ; 2010 ; Conservation and Management of Archaeological Sites Volume 12 ; 12 > 
-    au < manifest ; 2011 ; Conservation and Management of Archaeological Sites Volume 13 ; 13 > 
+    au < ready ; 2010 ; Conservation and Management of Archaeological Sites Volume 12 ; 12 > 
+    au < ready ; 2011 ; Conservation and Management of Archaeological Sites Volume 13 ; 13 > 
     au < expected ; 2012 ; Conservation and Management of Archaeological Sites Volume 14 ; 14 > 
 
   }
@@ -861,9 +861,9 @@
     au < manifest ; 2007 ; Corrosion Engineering, Science and Technology Volume 42 ; 42 > 
     au < manifest ; 2008 ; Corrosion Engineering, Science and Technology Volume 43 ; 43 > 
     au < manifest ; 2009 ; Corrosion Engineering, Science and Technology Volume 44 ; 44 > 
-    au < manifest ; 2010 ; Corrosion Engineering, Science and Technology Volume 45 ; 45 > 
+    au < ready ; 2010 ; Corrosion Engineering, Science and Technology Volume 45 ; 45 > 
     au < manifest ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 ; 46 > 
-    au < manifest ; 2012 ; Corrosion Engineering, Science and Technology Volume 47 ; 47 > 
+    au < ready ; 2012 ; Corrosion Engineering, Science and Technology Volume 47 ; 47 > 
 
   }
 
@@ -928,9 +928,9 @@
     au < manifest ; 2007 ; Costume Volume 41 ; 41 > 
     au < manifest ; 2008 ; Costume Volume 42 ; 42 > 
     au < manifest ; 2009 ; Costume Volume 43 ; 43 > 
-    au < manifest ; 2010 ; Costume Volume 44 ; 44 > 
-    au < manifest ; 2011 ; Costume Volume 45 ; 2011 > 
-    au < manifest ; 2012 ; Costume Volume 46 ; 46 > 
+    au < ready ; 2010 ; Costume Volume 44 ; 44 > 
+    au < ready ; 2011 ; Costume Volume 45 ; 2011 > 
+    au < ready ; 2012 ; Costume Volume 46 ; 46 > 
 
   }
 
@@ -999,9 +999,9 @@
     au < manifest ; 2008 ; Dix-Neuf Volume 11 ; 11 > 
     au < manifest ; 2009 ; Dix-Neuf Volume 12 ; 12 > 
     au < manifest ; 2009 ; Dix-Neuf Volume 13 ; 13 > 
-    au < manifest ; 2010 ; Dix-Neuf Volume 14 ; 14 > 
-    au < manifest ; 2011 ; Dix-Neuf Volume 15 ; 15 > 
-    au < manifest ; 2012 ; Dix-Neuf Volume 16 ; 16 > 
+    au < ready ; 2010 ; Dix-Neuf Volume 14 ; 14 > 
+    au < ready ; 2011 ; Dix-Neuf Volume 15 ; 15 > 
+    au < ready ; 2012 ; Dix-Neuf Volume 16 ; 16 > 
 
   }
 
@@ -1023,8 +1023,8 @@
     param[journal_issn] = 0361-2112
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2010 ; Dress Volume 36 ; 36 > 
-	au < manifest ; 2011 ; Dress Volume 37 ; 37 > 
+    au < ready ; 2010 ; Dress Volume 36 ; 36 > 
+	au < ready ; 2011 ; Dress Volume 37 ; 37 > 
 	au < expected ; 2012 ; Dress Volume 38 ; 38 > 
 
   }
@@ -1048,7 +1048,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2009 ; Dutch Crossing: Journal of Low Countries Studies Volume 33 ; 33 > 
-    au < manifest ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 > 
+    au < ready ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 > 
     au < manifest ; 2011 ; Dutch Crossing: Journal of Low Countries Studies Volume 35 ; 35 > 
     au < manifest ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 > 
 
