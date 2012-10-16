@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.13 2011-12-20 09:59:35 thib_gc Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.14 2012-10-16 20:07:13 alexandraohlson Exp $
  */
 
 /*
@@ -33,12 +33,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.nature;
 
 import java.io.InputStream;
+import java.io.Reader;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ReaderInputStream;
 
 /**
  * <p>Normalizes HTML pages from Nature Publishing Group journals.</p>
@@ -93,10 +97,14 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "baseline-wrapper"),
         // Variability unknown; institution-dependent or time-dependent
         HtmlNodeFilters.tagWithAttribute("meta", "name", "WT.site_id"),
+        // breadcrumb horiz menu at top varies when current issue becomes archived version
+        HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
+        
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    InputStream filtered =  new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    
+    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
 
 }
