@@ -20,7 +20,7 @@
     <map>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -84,7 +84,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
       <list>
-        <string>&quot;^%s%s/fulltext/[^/]/[^/].pdf$&quot;, base_url, journal_code</string>
+        <string>&quot;^%s%s/fulltext/[^/]+/[^/]+.pdf$&quot;, base_url, journal_code</string>
       </list>
   </entry>
   <entry>
