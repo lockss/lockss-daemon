@@ -234,16 +234,16 @@
       comment[changed_publisher] = http://www.oldcitypublishing.com/index.html, 2008-2012, vols. 37-41
       
 
-      au < crawling ; exists ; 1995-1996 ; High Temperatures - High Pressures Volume 27/28 ; 27-28 ; 27 >
-      au < crawling ; exists ; 1997 ; High Temperatures - High Pressures Volume 29 ; 29 ; 29 >
-      au < crawling ; exists ; 1998 ; High Temperatures - High Pressures Volume 30 ; 30 ; 30 >
-      au < crawling ; exists ; 1999 ; High Temperatures - High Pressures Volume 31 ; 32 ; 31 >
-      au < crawling ; exists ; 2000 ; High Temperatures - High Pressures Volume 32 ; 32 ; 32 >
-      au < crawling ; exists ; 2001 ; High Temperatures - High Pressures Volume 33 ; 33 ; 33 >
-      au < crawling ; exists ; 2002 ; High Temperatures - High Pressures Volume 34 ; 34 ; 34 >
-      au < crawling ; exists ; 2003-2007 ; High Temperatures - High Pressures Volume 35/36 ; 35-36 ; 35 >
-      au < crawling ; exists ; 2008 ; High Temperatures - High Pressures Volume 37 ; 37 ; 37 >
-      au < crawling ; exists ; 2009 ; High Temperatures - High Pressures Volume 38 ; 38 ; 38 >
+      au < testing ; exists ; 1995-1996 ; High Temperatures - High Pressures Volume 27/28 ; 27-28 ; 27 >
+      au < testing ; exists ; 1997 ; High Temperatures - High Pressures Volume 29 ; 29 ; 29 >
+      au < testing ; exists ; 1998 ; High Temperatures - High Pressures Volume 30 ; 30 ; 30 >
+      au < testing ; exists ; 1999 ; High Temperatures - High Pressures Volume 31 ; 32 ; 31 >
+      au < testing ; exists ; 2000 ; High Temperatures - High Pressures Volume 32 ; 32 ; 32 >
+      au < testing ; exists ; 2001 ; High Temperatures - High Pressures Volume 33 ; 33 ; 33 >
+      au < testing ; exists ; 2002 ; High Temperatures - High Pressures Volume 34 ; 34 ; 34 >
+      au < testing ; exists ; 2003-2007 ; High Temperatures - High Pressures Volume 35/36 ; 35-36 ; 35 >
+      au < testing ; exists ; 2008 ; High Temperatures - High Pressures Volume 37 ; 37 ; 37 >
+      au < testing ; exists ; 2009 ; High Temperatures - High Pressures Volume 38 ; 38 ; 38 >
       au < zapped ; down ; 2010 ; High Temperatures - High Pressures Volume 39 ; 39 ; 39 >
       au < zapped ; down ; 2011 ; High Temperatures - High Pressures Volume 40 ; 40 ; 40 >
       au < testing ; exists ; 2012 ; High Temperatures - High Pressures Volume 41 ; 41 ; 41 >
@@ -263,44 +263,44 @@
       param[journal_code] = perception
       param[short_journal_code] = P
   
-      au < crawling ; exists ; 1972 ; Perception Volume 1 ; 1 >
-      au < crawling ; exists ; 1973 ; Perception Volume 2 ; 2 >
-      au < crawling ; exists ; 1974 ; Perception Volume 3 ; 3 >
-      au < crawling ; exists ; 1975 ; Perception Volume 4 ; 4 >
-      au < crawling ; exists ; 1976 ; Perception Volume 5 ; 5 >
-      au < crawling ; exists ; 1977 ; Perception Volume 6 ; 6 >
-      au < crawling ; exists ; 1978 ; Perception Volume 7 ; 7 >
-      au < crawling ; exists ; 1979 ; Perception Volume 8 ; 8 >
-      au < crawling ; exists ; 1980 ; Perception Volume 9 ; 9 >
-      au < crawling ; exists ; 1981 ; Perception Volume 10 ; 10 >
-      au < crawling ; exists ; 1982 ; Perception Volume 11 ; 11 >
-      au < crawling ; exists ; 1983 ; Perception Volume 12 ; 12 >
-      au < crawling ; exists ; 1984 ; Perception Volume 13 ; 13 >
-      au < crawling ; exists ; 1985 ; Perception Volume 14 ; 14 >
-      au < crawling ; exists ; 1986 ; Perception Volume 15 ; 15 >
-      au < crawling ; exists ; 1987 ; Perception Volume 16 ; 16 >
-      au < crawling ; exists ; 1988 ; Perception Volume 17 ; 17 >
-      au < crawling ; exists ; 1989 ; Perception Volume 18 ; 18 >
-      au < crawling ; exists ; 1990 ; Perception Volume 19 ; 19 >
-      au < crawling ; exists ; 1991 ; Perception Volume 20 ; 20 >
-      au < crawling ; exists ; 1992 ; Perception Volume 21 ; 21 >
-      au < crawling ; exists ; 1993 ; Perception Volume 22 ; 22 >
-      au < crawling ; exists ; 1994 ; Perception Volume 23 ; 23 >
-      au < crawling ; exists ; 1995 ; Perception Volume 24 ; 24 >
-      au < crawling ; exists ; 1996 ; Perception Volume 25 ; 25 >
-      au < crawling ; exists ; 1997 ; Perception Volume 26 ; 26 >
-      au < crawling ; exists ; 1998 ; Perception Volume 27 ; 27 >
-      au < crawling ; exists ; 1999 ; Perception Volume 28 ; 28 >
-      au < crawling ; exists ; 2000 ; Perception Volume 29 ; 29 >
-      au < crawling ; exists ; 2001 ; Perception Volume 30 ; 30 >
-      au < crawling ; exists ; 2002 ; Perception Volume 31 ; 31 >
-      au < crawling ; exists ; 2003 ; Perception Volume 32 ; 32 >
-      au < crawling ; exists ; 2004 ; Perception Volume 33 ; 33 >
-      au < crawling ; exists ; 2005 ; Perception Volume 34 ; 34 >
-      au < crawling ; exists ; 2006 ; Perception Volume 35 ; 35 >
-      au < crawling ; exists ; 2007 ; Perception Volume 36 ; 36 >
-      au < crawling ; exists ; 2008 ; Perception Volume 37 ; 37 >
-      au < crawling ; exists ; 2009 ; Perception Volume 38 ; 38 >
+      au < testing ; exists ; 1972 ; Perception Volume 1 ; 1 >
+      au < testing ; exists ; 1973 ; Perception Volume 2 ; 2 >
+      au < testing ; exists ; 1974 ; Perception Volume 3 ; 3 >
+      au < testing ; exists ; 1975 ; Perception Volume 4 ; 4 >
+      au < testing ; exists ; 1976 ; Perception Volume 5 ; 5 >
+      au < testing ; exists ; 1977 ; Perception Volume 6 ; 6 >
+      au < testing ; exists ; 1978 ; Perception Volume 7 ; 7 >
+      au < testing ; exists ; 1979 ; Perception Volume 8 ; 8 >
+      au < testing ; exists ; 1980 ; Perception Volume 9 ; 9 >
+      au < testing ; exists ; 1981 ; Perception Volume 10 ; 10 >
+      au < testing ; exists ; 1982 ; Perception Volume 11 ; 11 >
+      au < testing ; exists ; 1983 ; Perception Volume 12 ; 12 >
+      au < testing ; exists ; 1984 ; Perception Volume 13 ; 13 >
+      au < testing ; exists ; 1985 ; Perception Volume 14 ; 14 >
+      au < testing ; exists ; 1986 ; Perception Volume 15 ; 15 >
+      au < testing ; exists ; 1987 ; Perception Volume 16 ; 16 >
+      au < testing ; exists ; 1988 ; Perception Volume 17 ; 17 >
+      au < testing ; exists ; 1989 ; Perception Volume 18 ; 18 >
+      au < testing ; exists ; 1990 ; Perception Volume 19 ; 19 >
+      au < testing ; exists ; 1991 ; Perception Volume 20 ; 20 >
+      au < testing ; exists ; 1992 ; Perception Volume 21 ; 21 >
+      au < testing ; exists ; 1993 ; Perception Volume 22 ; 22 >
+      au < testing ; exists ; 1994 ; Perception Volume 23 ; 23 >
+      au < testing ; exists ; 1995 ; Perception Volume 24 ; 24 >
+      au < testing ; exists ; 1996 ; Perception Volume 25 ; 25 >
+      au < testing ; exists ; 1997 ; Perception Volume 26 ; 26 >
+      au < testing ; exists ; 1998 ; Perception Volume 27 ; 27 >
+      au < testing ; exists ; 1999 ; Perception Volume 28 ; 28 >
+      au < testing ; exists ; 2000 ; Perception Volume 29 ; 29 >
+      au < testing ; exists ; 2001 ; Perception Volume 30 ; 30 >
+      au < testing ; exists ; 2002 ; Perception Volume 31 ; 31 >
+      au < testing ; exists ; 2003 ; Perception Volume 32 ; 32 >
+      au < testing ; exists ; 2004 ; Perception Volume 33 ; 33 >
+      au < testing ; exists ; 2005 ; Perception Volume 34 ; 34 >
+      au < testing ; exists ; 2006 ; Perception Volume 35 ; 35 >
+      au < testing ; exists ; 2007 ; Perception Volume 36 ; 36 >
+      au < testing ; exists ; 2008 ; Perception Volume 37 ; 37 >
+      au < testing ; exists ; 2009 ; Perception Volume 38 ; 38 >
       au < zapped ; down ; 2010 ; Perception Volume 39 ; 39 >
       au < released ; crawling ; 2011 ; Perception Volume 40 ; 40 >
       au < testing ; exists ; 2012 ; Perception Volume 41 ; 41 >
