@@ -25,11 +25,11 @@
     param[journal_id] = ajec
     param[journal_issn] = 1755-2923
     
-    au < manifest ; 2008 ; Anthropological Journal of European Cultures Volume 17 ; 17 >
-    au < manifest ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 >
-    au < manifest ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 >
-    au < manifest ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 >
-    au < manifest ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 >
+    au < testing ; 2008 ; Anthropological Journal of European Cultures Volume 17 ; 17 >
+    au < testing ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 >
+    au < testing ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 >
+    au < testing ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 >
+    au < testing ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 >
     
   }
 
@@ -45,14 +45,14 @@
     param[journal_id] = antiac
     param[journal_issn] = 0967-201X
      
-    au < manifest ; 2005 ; Anthropology in Action Volume 12 ; 12 >
-    au < manifest ; 2006 ; Anthropology in Action Volume 13 ; 13 >
-    au < manifest ; 2007 ; Anthropology in Action Volume 14 ; 14 >
-    au < manifest ; 2008 ; Anthropology in Action Volume 15 ; 15 >
-    au < manifest ; 2009 ; Anthropology in Action Volume 16 ; 16 >
-    au < manifest ; 2010 ; Anthropology in Action Volume 17 ; 17 >
-    au < manifest ; 2011 ; Anthropology in Action Volume 18 ; 18 >
-    au < manifest ; 2012 ; Anthropology in Action Volume 19 ; 19 >
+    au < testing ; 2005 ; Anthropology in Action Volume 12 ; 12 >
+    au < testing ; 2006 ; Anthropology in Action Volume 13 ; 13 >
+    au < testing ; 2007 ; Anthropology in Action Volume 14 ; 14 >
+    au < testing ; 2008 ; Anthropology in Action Volume 15 ; 15 >
+    au < testing ; 2009 ; Anthropology in Action Volume 16 ; 16 >
+    au < testing ; 2010 ; Anthropology in Action Volume 17 ; 17 >
+    au < testing ; 2011 ; Anthropology in Action Volume 18 ; 18 >
+    au < testing ; 2012 ; Anthropology in Action Volume 19 ; 19 >
     
   }
 
@@ -68,13 +68,13 @@
     param[journal_id] = antmid
     param[journal_issn] = 1746-0719
     
-    au < manifest ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 >
-    au < manifest ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 >
-    au < manifest ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 >
-    au < manifest ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 >
-    au < manifest ; 2010 ; Anthropology of the Middle East Volume 5 ; 5 >
-    au < manifest ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 >
-    au < manifest ; 2012 ; Anthropology of the Middle East Volume 7 ; 7 >
+    au < testing ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 >
+    au < testing ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 >
+    au < testing ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 >
+    au < testing ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 >
+    au < testing ; 2010 ; Anthropology of the Middle East Volume 5 ; 5 >
+    au < testing ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 >
+    au < testing ; 2012 ; Anthropology of the Middle East Volume 7 ; 7 >
     
   }
 
@@ -90,9 +90,9 @@
     param[journal_id] = apw
     param[journal_issn] = 2042-6143
            
-    au < manifest ; 2010 ; Asia Pacific World Volume 1 ; 1 >
-    au < manifest ; 2011 ; Asia Pacific World Volume 2 ; 2 >
-    au < manifest ; 2012 ; Asia Pacific World Volume 3 ; 3 >
+    au < testing ; 2010 ; Asia Pacific World Volume 1 ; 1 >
+    au < testing ; 2011 ; Asia Pacific World Volume 2 ; 2 >
+    au < testing ; 2012 ; Asia Pacific World Volume 3 ; 3 >
     
   }
 
@@ -107,12 +107,12 @@
     param[journal_id] = aspa
     param[journal_issn] = 1933-2882   
        
-    au < manifest ; 2007 ; Aspasia Volume 1 ; 1 >
-    au < manifest ; 2008 ; Aspasia Volume 2 ; 2 >
-    au < manifest ; 2009 ; Aspasia Volume 3 ; 3 >
-    au < manifest ; 2010 ; Aspasia Volume 4 ; 4 >
-    au < manifest ; 2011 ; Aspasia Volume 5 ; 5 >
-    au < manifest ; 2012 ; Aspasia Volume 6 ; 6 >
+    au < testing ; 2007 ; Aspasia Volume 1 ; 1 >
+    au < testing ; 2008 ; Aspasia Volume 2 ; 2 >
+    au < testing ; 2009 ; Aspasia Volume 3 ; 3 >
+    au < testing ; 2010 ; Aspasia Volume 4 ; 4 >
+    au < testing ; 2011 ; Aspasia Volume 5 ; 5 >
+    au < testing ; 2012 ; Aspasia Volume 6 ; 6 >
     
   }
 
