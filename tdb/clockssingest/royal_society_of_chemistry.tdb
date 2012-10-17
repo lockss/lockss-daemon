@@ -12,6 +12,7 @@
   implicit < status ; status2 ; year ; name ; param[volume_name] ; param[year] >
   comment[moved] = Moved to RSC platform, requires plugin -- AJAX issue
   comment[RUissue] = Roundup 3637, needs plugin work
+
   
   {
   
@@ -51,9 +52,9 @@
 
     param[journal_code] = ac
 
-    au < doesNotExist ; doesNotExist ; 1997 ; Analytical Communications Volume 34 ; 34 ; 1997 >
-    au < doesNotExist ; doesNotExist ; 1998 ; Analytical Communications Volume 35 ; 35 ; 1998 >
-    au < doesNotExist ; doesNotExist ; 1999 ; Analytical Communications Volume 36 ; 36 ; 1999 >
+    au < exists ; exists ; 1997 ; Analytical Communications Volume 34 ; 34 ; 1997 >
+    au < exists ; exists ; 1998 ; Analytical Communications Volume 35 ; 35 ; 1998 >
+    au < exists ; exists ; 1999 ; Analytical Communications Volume 36 ; 36 ; 1999 >
 
   }
 
@@ -200,7 +201,10 @@
 
     param[journal_code] = co
 
-    au < doesNotExist ; doesNotExist ; 1997 ; Contemporary Organic Synthesis Volume 4 ; 4 ; 1997 >
+    au < exists ; exists ; 1994 ; Contemporary Organic Synthesis Volume 1 ; 1 ; 1994 >
+    au < exists ; exists ; 1995 ; Contemporary Organic Synthesis Volume 2 ; 2 ; 1995 >
+    au < exists ; exists ; 1996 ; Contemporary Organic Synthesis Volume 3 ; 3 ; 1996 >
+    au < exists ; exists ; 1997 ; Contemporary Organic Synthesis Volume 4 ; 4 ; 1997 >
 
   }
 
@@ -308,11 +312,10 @@
 
     param[journal_code] = gt
 
-    au < doesNotExist ; doesNotExist ; 2000 ; Geochemical Transactions Volume 1 ; 1 ; 2000 >
-    au < doesNotExist ; doesNotExist ; 2001 ; Geochemical Transactions Volume 2 (2001) ; 2 ; 2001 >
-    au < doesNotExist ; doesNotExist ; 2002 ; Geochemical Transactions Volume 2 (2002) ; 2 ; 2002 >
-    au < doesNotExist ; doesNotExist ; 2002 ; Geochemical Transactions Volume 3 ; 3 ; 2002 >
-    au < doesNotExist ; doesNotExist ; 2003 ; Geochemical Transactions Volume 4 ; 4 ; 2003 >
+    au < exists ; exists ; 2001 ; Geochemical Transactions Volume 2 ; 2 ; 2001 >
+    au < exists ; exists ; 2002 ; Geochemical Transactions Volume 2 ; 2 ; 2002 >
+    au < exists ; exists ; 2002 ; Geochemical Transactions Volume 3 ; 3 ; 2002 >
+    au < exists ; exists ; 2003 ; Geochemical Transactions Volume 4 ; 4 ; 2003 >
 
   }
 
@@ -396,9 +399,9 @@
 
     param[journal_code] = jc
 
-    au < doesNotExist ; doesNotExist ; 1997 ; Journal of Chemical Research, Synopses 1997 ; 0 ; 1997 >
-    au < doesNotExist ; doesNotExist ; 1998 ; Journal of Chemical Research, Synopses 1998 ; 0 ; 1998 >
-    au < doesNotExist ; doesNotExist ; 1999 ; Journal of Chemical Research, Synopses 1999 ; 0 ; 1999 >
+    au < exists ; exists ; 1997 ; Journal of Chemical Research, Synopses 1997 ; 0 ; 1997 >
+    au < exists ; exists ; 1998 ; Journal of Chemical Research, Synopses 1998 ; 0 ; 1998 >
+    au < exists ; exists ; 1999 ; Journal of Chemical Research, Synopses 1999 ; 0 ; 1999 >
 
   }
 
@@ -411,8 +414,14 @@
 
     param[journal_code] = ft
 
-    au < doesNotExist ; doesNotExist ; 1997 ; Journal of the Chemical Society, Faraday Transactions Volume 93 ; 93 ; 1997 >
-    au < doesNotExist ; doesNotExist ; 1998 ; Journal of the Chemical Society, Faraday Transactions Volume 94 ; 94 ; 1998 >
+    au < exists ; exists ; 1991 ; Journal of the Chemical Society, Faraday Transactions Volume 87 ; 87 ; 1991 >
+    au < exists ; exists ; 1992 ; Journal of the Chemical Society, Faraday Transactions Volume 88 ; 88 ; 1992 >
+    au < exists ; exists ; 1993 ; Journal of the Chemical Society, Faraday Transactions Volume 89 ; 89 ; 1993 >
+    au < exists ; exists ; 1994 ; Journal of the Chemical Society, Faraday Transactions Volume 90 ; 90 ; 1994 >
+    au < exists ; exists ; 1995 ; Journal of the Chemical Society, Faraday Transactions Volume 91 ; 91 ; 1995 >
+    au < exists ; exists ; 1996 ; Journal of the Chemical Society, Faraday Transactions Volume 92 ; 92 ; 1996 >
+    au < exists ; exists ; 1997 ; Journal of the Chemical Society, Faraday Transactions Volume 93 ; 93 ; 1997 >
+    au < exists ; exists ; 1998 ; Journal of the Chemical Society, Faraday Transactions Volume 94 ; 94 ; 1998 >
 
   }
 
@@ -427,12 +436,8 @@
 
     param[journal_code] = p1
 
-    au < doesNotExist ; doesNotExist ; 1997 ; Journal of the Chemical Society, Perkin Transactions 1 1997 ; 0 ; 1997 >
-    au < doesNotExist ; doesNotExist ; 1998 ; Journal of the Chemical Society, Perkin Transactions 1 1998 ; 0 ; 1998 >
-    au < doesNotExist ; doesNotExist ; 1999 ; Journal of the Chemical Society, Perkin Transactions 1 1999 ; 0 ; 1999 >
-    au < doesNotExist ; doesNotExist ; 2000 ; Journal of the Chemical Society, Perkin Transactions 1 2000 ; 0 ; 2000 >
-    au < doesNotExist ; doesNotExist ; 2001 ; Journal of the Chemical Society, Perkin Transactions 1 2001 ; 0 ; 2001 >
-    au < doesNotExist ; doesNotExist ; 2002 ; Journal of the Chemical Society, Perkin Transactions 1 2002 ; 0 ; 2002 >
+    au < exists ; exists ; 2001 ; Journal of the Chemical Society, Perkin Transactions 1 2001 ; 0 ; 2001 >
+    au < exists ; exists ; 2002 ; Journal of the Chemical Society, Perkin Transactions 1 2002 ; 0 ; 2002 >
 
   }
 
@@ -447,12 +452,8 @@
 
     param[journal_code] = p2
 
-    au < doesNotExist ; doesNotExist ; 1997 ; Journal of the Chemical Society, Perkin Transactions 2 1997 ; 0 ; 1997 >
-    au < doesNotExist ; doesNotExist ; 1998 ; Journal of the Chemical Society, Perkin Transactions 2 1998 ; 0 ; 1998 >
-    au < doesNotExist ; doesNotExist ; 1999 ; Journal of the Chemical Society, Perkin Transactions 2 1999 ; 0 ; 1999 >
-    au < doesNotExist ; doesNotExist ; 2000 ; Journal of the Chemical Society, Perkin Transactions 2 2000 ; 0 ; 2000 >
-    au < doesNotExist ; doesNotExist ; 2001 ; Journal of the Chemical Society, Perkin Transactions 2 2001 ; 0 ; 2001 >
-    au < doesNotExist ; doesNotExist ; 2002 ; Journal of the Chemical Society, Perkin Transactions 2 2002 ; 0 ; 2002 >
+    au < exists ; exists ; 2001 ; Journal of the Chemical Society, Perkin Transactions 2 2001 ; 0 ; 2001 >
+    au < exists ; exists ; 2002 ; Journal of the Chemical Society, Perkin Transactions 2 2002 ; 0 ; 2002 >
 
   }
 
@@ -672,10 +673,9 @@
 
     param[journal_code] = po
 
-    au < doesNotExist ; doesNotExist ; 2000 ; Pesticide Outlook Volume 11 ; 11 ; 2000 >
-    au < doesNotExist ; doesNotExist ; 2001 ; Pesticide Outlook Volume 12 ; 12 ; 2001 >
-    au < doesNotExist ; doesNotExist ; 2002 ; Pesticide Outlook Volume 13 ; 13 ; 2002 >
-    au < doesNotExist ; doesNotExist ; 2003 ; Pesticide Outlook Volume 14 ; 14 ; 2003 >
+    au < exists ; exists ; 2001 ; Pesticide Outlook Volume 12 ; 12 ; 2001 >
+    au < exists ; exists ; 2002 ; Pesticide Outlook Volume 13 ; 13 ; 2002 >
+    au < exists ; exists ; 2003 ; Pesticide Outlook Volume 14 ; 14 ; 2003 >
 
   }
 
@@ -710,12 +710,9 @@
 
     param[journal_code] = qu
 
-    au < doesNotExist ; doesNotExist ; 1998 ; PhysChemComm Volume 1 ; 1 ; 1998 >
-    au < doesNotExist ; doesNotExist ; 1999 ; PhysChemComm Volume 2 ; 2 ; 1999 >
-    au < doesNotExist ; doesNotExist ; 2000 ; PhysChemComm Volume 3 ; 3 ; 2000 >
-    au < doesNotExist ; doesNotExist ; 2001 ; PhysChemComm Volume 4 ; 4 ; 2001 >
-    au < doesNotExist ; doesNotExist ; 2002 ; PhysChemComm Volume 5 ; 5 ; 2002 >
-    au < doesNotExist ; doesNotExist ; 2003 ; PhysChemComm Volume 6 ; 6 ; 2003 >
+    au < exists ; exists ; 2001 ; PhysChemComm Volume 4 ; 4 ; 2001 >
+    au < exists ; exists ; 2002 ; PhysChemComm Volume 5 ; 5 ; 2002 >
+    au < exists ; exists ; 2003 ; PhysChemComm Volume 6 ; 6 ; 2003 >
 
   }
 
@@ -754,13 +751,10 @@
 
     param[journal_code] = rc
 
-    au < doesNotExist ; doesNotExist ; 1998 ; Russian Chemical Reviews Volume 67 ; 67 ; 1998 >
-    au < doesNotExist ; doesNotExist ; 1999 ; Russian Chemical Reviews Volume 68 ; 68 ; 1999 >
-    au < doesNotExist ; doesNotExist ; 2000 ; Russian Chemical Reviews Volume 69 ; 69 ; 2000 >
-    au < doesNotExist ; doesNotExist ; 2001 ; Russian Chemical Reviews Volume 70 ; 70 ; 2001 >
-    au < doesNotExist ; doesNotExist ; 2002 ; Russian Chemical Reviews Volume 71 ; 71 ; 2002 >
-    au < doesNotExist ; doesNotExist ; 2003 ; Russian Chemical Reviews Volume 72 ; 72 ; 2003 >
-    au < doesNotExist ; doesNotExist ; 2004 ; Russian Chemical Reviews Volume 73 ; 73 ; 2004 >
+    au < exists ; exists ; 2001 ; Russian Chemical Reviews Volume 70 ; 70 ; 2001 >
+    au < exists ; exists ; 2002 ; Russian Chemical Reviews Volume 71 ; 71 ; 2002 >
+    au < exists ; exists ; 2003 ; Russian Chemical Reviews Volume 72 ; 72 ; 2003 >
+    au < exists ; exists ; 2004 ; Russian Chemical Reviews Volume 73 ; 73 ; 2004 >
 
   }
 
