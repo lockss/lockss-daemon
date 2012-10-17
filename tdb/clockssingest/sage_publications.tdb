@@ -477,8 +477,8 @@
         au < testing ; exists ; 1998-1999 ; Adult Learning Volume 10 ; 10 ; >
         au < testing ; exists ; 1999-2000 ; Adult Learning Volume 11 ; 11 ; >
         au < testing ; exists ; 2001 ; Adult Learning Volume 12 ; 12 ; >
-        au < testing ; exists ; 2001-2002 ; Adult Learning Volume 13 ; 13 ; >
-        au < testing ; exists ; 2003 ; Adult Learning Volume 14 ; 14 ; >
+        au < released ; manifest ; 2001-2002 ; Adult Learning Volume 13 ; 13 ; >
+        au < released ; manifest ; 2003 ; Adult Learning Volume 14 ; 14 ; >
         au < testing ; exists ; 2004 ; Adult Learning Volume 15 ; 15 ; >
         au < testing ; exists ; 2005 ; Adult Learning Volume 16 ; 16 ; >
         au < testing ; exists ; 2006 ; Adult Learning Volume 17 ; 17 ; >
@@ -604,13 +604,13 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < testing ; exists ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 ; >
-      au < testing ; exists ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 ; >
-      au < testing ; exists ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 ; >
-      au < testing ; exists ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 ; >
+      au < released ; manifest ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 ; >
+      au < released ; manifest ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 ; >
+      au < released ; manifest ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 ; >
       au < testing ; exists ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 ; >
       au < testing ; exists ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 ; >
-      au < testing ; exists ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 ; >
-      au < testing ; exists ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 ; >
+      au < released ; manifest ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 ; >
+      au < released ; manifest ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 ; >
       au < testing ; exists ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 ; >
       au < testing ; exists ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 ; >
       au < testing ; exists ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 ; >
@@ -713,7 +713,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < testing ; exists ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 ; >
-      au < testing ; exists ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 ; >
+      au < released ; manifest ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 ; >
       au < testing ; exists ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 ; >
       au < released ; crawling ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 ; >
       au < released ; crawling ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 ; >
