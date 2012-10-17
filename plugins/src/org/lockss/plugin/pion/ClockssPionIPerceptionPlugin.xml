@@ -9,7 +9,16 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -63,6 +72,12 @@
         <string>&quot;%sjournal/%s/volume/%s&quot;, base_url, journal_code, volume_name</string>
         <string>&quot;%slockss.txt&quot;, base_url2</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+        <string>&quot;^%sfulltext/[^/]+/[^/]+.pdf$&quot;, base_url</string>
+      </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
