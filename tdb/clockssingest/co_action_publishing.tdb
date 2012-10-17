@@ -212,8 +212,8 @@
     au < manifest ; exists ; 2005 ; International Journal of Circumpolar Health Volume 64 ; 64 ; 2005 >
     au < manifest ; exists ; 2006 ; International Journal of Circumpolar Health Volume 65 ; 65 ; 2006 >
     au < manifest ; exists ; 2007 ; International Journal of Circumpolar Health Volume 66 ; 66 ; 2007 >
-    au < testing ; exists ; 2008 ; International Journal of Circumpolar Health Volume 67 ; 67 ; 2008 >
-    au < testing ; exists ; 2009 ; International Journal of Circumpolar Health Volume 68 ; 68 ; 2009 >
+    au < released ; manifest ; 2008 ; International Journal of Circumpolar Health Volume 67 ; 67 ; 2008 >
+    au < released ; manifest ; 2009 ; International Journal of Circumpolar Health Volume 68 ; 68 ; 2009 >
     au < released ; crawling ; 2010 ; International Journal of Circumpolar Health Volume 69 ; 69 ; 2010 >
     au < released ; crawling ; 2011 ; International Journal of Circumpolar Health Volume 70 ; 70 ; 2011 >
     au < released ; manifest ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
@@ -235,8 +235,8 @@
 
     au < manifest ; exists ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 ; 2006 >
     au < manifest ; exists ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2 ; 2007 >
-    au < testing ; exists ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 >
-    au < testing ; exists ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 >
+    au < released ; manifest ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 >
+    au < released ; manifest ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 >
     au < released ; crawling ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 >
     au < released ; crawling ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 >
     au < released ; crawling ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 ; 2012 >
@@ -288,7 +288,7 @@
     param[base_url] = http://www.journaloforalmicrobiology.net/
     param[journal_id] = jom
 
-    au < testing ; exists ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2009 >
+    au < released ; manifest ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2009 >
     au < released ; crawling ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 ; 2010 >
     au < released ; crawling ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 >
     au < released ; crawling ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 >
@@ -330,7 +330,7 @@
 
     au < released ; crawling ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 >
     au < released ; crawling ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 >
-    au < testing ; exists ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; 2012 >
+    au < released ; manifest ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; 2012 >
 
   }
 
@@ -492,7 +492,7 @@
     au < manifest ; exists ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
     au < released ; crawling ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
     au < released ; crawling ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
-    au < testing ; exists ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
+    au < released ; manifest ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
 
 
   }
@@ -589,7 +589,7 @@
     param[journal_id] = snp
 
     au < released ; crawling ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 >
-    au < testing ; exists ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 >
+    au < released ; manifest ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 >
 
   }
 
