@@ -710,9 +710,9 @@
 
     param[journal_code] = qu
 
-    au < exists ; exists ; 2001 ; PhysChemComm Volume 4 ; 4 ; 2001 >
-    au < exists ; exists ; 2002 ; PhysChemComm Volume 5 ; 5 ; 2002 >
-    au < exists ; exists ; 2003 ; PhysChemComm Volume 6 ; 6 ; 2003 >
+    au < manifest ; exists ; 2001 ; PhysChemComm Volume 4 ; 4 ; 2001 >
+    au < manifest ; exists ; 2002 ; PhysChemComm Volume 5 ; 5 ; 2002 >
+    au < manifest ; exists ; 2003 ; PhysChemComm Volume 6 ; 6 ; 2003 >
 
   }
 
@@ -751,10 +751,10 @@
 
     param[journal_code] = rc
 
-    au < exists ; exists ; 2001 ; Russian Chemical Reviews Volume 70 ; 70 ; 2001 >
-    au < exists ; exists ; 2002 ; Russian Chemical Reviews Volume 71 ; 71 ; 2002 >
-    au < exists ; exists ; 2003 ; Russian Chemical Reviews Volume 72 ; 72 ; 2003 >
-    au < exists ; exists ; 2004 ; Russian Chemical Reviews Volume 73 ; 73 ; 2004 >
+    au < manifest ; exists ; 2001 ; Russian Chemical Reviews Volume 70 ; 70 ; 2001 >
+    au < manifest ; exists ; 2002 ; Russian Chemical Reviews Volume 71 ; 71 ; 2002 >
+    au < manifest ; exists ; 2003 ; Russian Chemical Reviews Volume 72 ; 72 ; 2003 >
+    au < manifest ; exists ; 2004 ; Russian Chemical Reviews Volume 73 ; 73 ; 2004 >
 
   }
 
