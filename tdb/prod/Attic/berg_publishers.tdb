@@ -145,21 +145,21 @@
     param[journal_issn] = 1460-6925
 
 
-    au < testing ; 1997-1998 ; The Design Journal Volume 1 ; 1 >
-    au < testing ; 1999 ; The Design Journal Volume 2 ; 2 >
-    au < testing ; 2000 ; The Design Journal Volume 3 ; 3 >
-    au < testing ; 2001 ; The Design Journal Volume 4 ; 4 >
+    au < ready ; 1997-1998 ; The Design Journal Volume 1 ; 1 >
+    au < ready ; 1999 ; The Design Journal Volume 2 ; 2 >
+    au < ready ; 2000 ; The Design Journal Volume 3 ; 3 >
+    au < ready ; 2001 ; The Design Journal Volume 4 ; 4 >
     au < testing ; 2002 ; The Design Journal Volume 5 ; 5 >
     au < testing ; 2003 ; The Design Journal Volume 6 ; 6 >
     au < testing ; 2004 ; The Design Journal Volume 7 ; 7 >
     au < testing ; 2005 ; The Design Journal Volume 8 ; 8 >
     au < testing ; 2006 ; The Design Journal Volume 9 ; 9 >
-    au < testing ; 2007 ; The Design Journal Volume 10 ; 10 >
-    au < testing ; 2008 ; The Design Journal Volume 11 ; 11 >
+    au < ready ; 2007 ; The Design Journal Volume 10 ; 10 >
+    au < ready ; 2008 ; The Design Journal Volume 11 ; 11 >
     au < testing ; 2009 ; The Design Journal Volume 12 ; 12 >
     au < testing ; 2010 ; The Design Journal Volume 13 ; 13 >
     au < testing ; 2011 ; The Design Journal Volume 14 ; 14 >
-    au < testing ; 2012 ; The Design Journal Volume 15 ; 15 >
+    au < ready ; 2012 ; The Design Journal Volume 15 ; 15 >
     
   }
 
@@ -178,7 +178,7 @@
     au < testing ; 2009 ; Fashion Practice Volume 1 ; 1 >
     au < testing ; 2010 ; Fashion Practice Volume 2 ; 2 >
     au < testing ; 2011 ; Fashion Practice Volume 3 ; 3 >
-    au < testing ; 2012 ; Fashion Practice Volume 4 ; 4 >
+    au < ready ; 2012 ; Fashion Practice Volume 4 ; 4 >
     
   }
 
@@ -195,15 +195,15 @@
 
 
     au < testing ; 1997 ; Fashion Theory Volume 1 ; 1 >
-    au < testing ; 1998 ; Fashion Theory Volume 2 ; 2 >
-    au < testing ; 1999 ; Fashion Theory Volume 3 ; 3 >
+    au < ready ; 1998 ; Fashion Theory Volume 2 ; 2 >
+    au < ready ; 1999 ; Fashion Theory Volume 3 ; 3 >
     au < testing ; 2000 ; Fashion Theory Volume 4 ; 4 >
-    au < testing ; 2001 ; Fashion Theory Volume 5 ; 5 >
+    au < ready ; 2001 ; Fashion Theory Volume 5 ; 5 >
     au < testing ; 2002 ; Fashion Theory Volume 6 ; 6 >
     au < testing ; 2003 ; Fashion Theory Volume 7 ; 7 >
     au < testing ; 2004 ; Fashion Theory Volume 8 ; 8 >
-    au < testing ; 2005 ; Fashion Theory Volume 9 ; 9 >
-    au < testing ; 2006 ; Fashion Theory Volume 10 ; 10 >
+    au < ready ; 2005 ; Fashion Theory Volume 9 ; 9 >
+    au < ready ; 2006 ; Fashion Theory Volume 10 ; 10 >
     au < testing ; 2007 ; Fashion Theory Volume 11 ; 11 >
     au < testing ; 2008 ; Fashion Theory Volume 12 ; 12 >
     au < testing ; 2009 ; Fashion Theory Volume 13 ; 13 >
@@ -225,15 +225,15 @@
     param[journal_issn] = 1552-8014
 
 
-    au < testing ; 2004 ; Food, Culture and Society Volume 7 ; 7 >
+    au < ready ; 2004 ; Food, Culture and Society Volume 7 ; 7 >
     au < testing ; 2005 ; Food, Culture and Society Volume 8 ; 8 >
     au < testing ; 2006 ; Food, Culture and Society Volume 9 ; 97 >
     au < testing ; 2007 ; Food, Culture and Society Volume 10 ; 10 >
-    au < testing ; 2008 ; Food, Culture and Society Volume 11 ; 11 >
-    au < testing ; 2009 ; Food, Culture and Society Volume 12 ; 12 >
-    au < testing ; 2010 ; Food, Culture and Society Volume 13 ; 13 >
+    au < ready ; 2008 ; Food, Culture and Society Volume 11 ; 11 >
+    au < ready ; 2009 ; Food, Culture and Society Volume 12 ; 12 >
+    au < ready ; 2010 ; Food, Culture and Society Volume 13 ; 13 >
     au < testing ; 2011 ; Food, Culture and Society Volume 14 ; 14 >
-    au < testing ; 2012 ; Food, Culture and Society Volume 15 ; 15 >
+    au < ready ; 2012 ; Food, Culture and Society Volume 15 ; 15 >
     
   }
 
