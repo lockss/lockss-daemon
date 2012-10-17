@@ -4658,7 +4658,7 @@
         au < ready ; 2002 ; Cephalalgia Volume 22 ; 22 >
         au < ready ; 2003 ; Cephalalgia Volume 23 ; 23 >
         au < ready ; 2004 ; Cephalalgia Volume 24 ; 24 >
-        au < testing ; 2005 ; Cephalalgia Volume 25 ; 25 >
+        au < ready ; 2005 ; Cephalalgia Volume 25 ; 25 >
         au < released ; 2006 ; Cephalalgia Volume 26 ; 26 >
         au < released ; 2007 ; Cephalalgia Volume 27 ; 27 >
         au < released ; 2008 ; Cephalalgia Volume 28 ; 28 >
@@ -5523,7 +5523,7 @@
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://cpd.sagepub.com/
 
-        au < testing ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 >
+        au < ready ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 >
 
       }
       
