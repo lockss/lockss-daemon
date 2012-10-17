@@ -307,10 +307,10 @@
     param[base_url] = http://www.libyanjournalofmedicine.net/
     param[journal_id] = ljm
 
-    au < crawling ; exists ; 2006 ; Libyan Journal of Medicine Volume 1 ; 1 ; 2006 >
-    au < crawling ; exists ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2 ; 2007 >
-    au < crawling ; exists ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 >
-    au < crawling ; exists ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 >
+    au < testing ; exists ; 2006 ; Libyan Journal of Medicine Volume 1 ; 1 ; 2006 >
+    au < testing ; exists ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2 ; 2007 >
+    au < testing ; exists ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 >
+    au < testing ; exists ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 >
     au < released ; crawling ; 2010 ; Libyan Journal of Medicine [including Supplements] Volume 5 ; 5 ; 2010 >
     au < released ; crawling ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; 2011 >
     au < released ; manifest ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; 2012 >
@@ -365,11 +365,11 @@
       au < manifest ; exists ; 2002 ; Medical Education Online Volume 7 ; 7 ; 2002 >
       au < manifest ; exists ; 2003 ; Medical Education Online Volume 8 ; 8 ; 2003 >
       au < manifest ; exists ; 2004 ; Medical Education Online Volume 9 ; 9 ; 2004 >
-      au < crawling ; exists ; 2005 ; Medical Education Online Volume 10 ; 10 ; 2005 >
-      au < crawling ; exists ; 2006 ; Medical Education Online Volume 11 ; 11 ; 2006 >
-      au < crawling ; exists ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
-      au < crawling ; exists ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
-      au < crawling ; exists ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
+      au < testing ; exists ; 2005 ; Medical Education Online Volume 10 ; 10 ; 2005 >
+      au < testing ; exists ; 2006 ; Medical Education Online Volume 11 ; 11 ; 2006 >
+      au < testing ; exists ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
+      au < testing ; exists ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
+      au < testing ; exists ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
       au < released ; crawling ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
       au < released ; crawling ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
       au < released ; manifest ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
@@ -404,12 +404,12 @@
     au < manifest ; exists ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
     au < manifest ; exists ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; 2001 >
     au < manifest ; exists ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 ; 2002 >
-    au < crawling ; exists ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 >
-    au < crawling ; exists ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; 2004 >
-    au < crawling ; exists ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 ; 2005 >
-    au < crawling ; exists ; 2006 ; Microbial Ecology in Health and Disease Volume 18 ; 18 ; 2006 >
-    au < crawling ; exists ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 ; 2007 >
-    au < crawling ; exists ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 >
+    au < testing ; exists ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 >
+    au < testing ; exists ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; 2004 >
+    au < testing ; exists ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 ; 2005 >
+    au < testing ; exists ; 2006 ; Microbial Ecology in Health and Disease Volume 18 ; 18 ; 2006 >
+    au < testing ; exists ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 ; 2007 >
+    au < testing ; exists ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 >
     au < released ; crawling ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 >
     au < released ; crawling ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
     au < released ; manifest ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
@@ -485,11 +485,11 @@
     au < manifest ; exists ; 2002 ; Polar Research Volume 21 ; 21 ; 2002 >
     au < manifest ; exists ; 2003 ; Polar Research Volume 22 ; 22 ; 2003 >
     au < manifest ; exists ; 2004 ; Polar Research Volume 23 ; 23 ; 2004 >
-    au < crawling ; exists ; 2005 ; Polar Research Volume 24 ; 24 ; 2005 >
-    au < crawling ; exists ; 2006 ; Polar Research Volume 25 ; 25 ; 2006 >
-    au < crawling ; exists ; 2007 ; Polar Research Volume 26 ; 26 ; 2007 >
-    au < crawling ; exists ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
-    au < crawling ; exists ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
+    au < testing ; exists ; 2005 ; Polar Research Volume 24 ; 24 ; 2005 >
+    au < testing ; exists ; 2006 ; Polar Research Volume 25 ; 25 ; 2006 >
+    au < testing ; exists ; 2007 ; Polar Research Volume 26 ; 26 ; 2007 >
+    au < testing ; exists ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
+    au < testing ; exists ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
     au < released ; crawling ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
     au < released ; crawling ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
     au < released ; manifest ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
@@ -522,10 +522,10 @@
     au < manifest ; exists ; 2003 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 11 ; 11 ; 2003 >
     au < manifest ; exists ; 2004 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 12 ; 12 ; 2004 >
     au < manifest ; exists ; 2005 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 13 ; 13 ; 2005 >
-    au < crawling ; exists ; 2006 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 14 ; 14 ; 2006 >
-    au < crawling ; exists ; 2007 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 15 ; 15 ; 2007 >
-    au < crawling ; exists ; 2008 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 16 ; 16 ; 2008 >
-    au < crawling ; exists ; 2009 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 17 ; 17 ; 2009 >
+    au < testing ; exists ; 2006 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 14 ; 14 ; 2006 >
+    au < testing ; exists ; 2007 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 15 ; 15 ; 2007 >
+    au < testing ; exists ; 2008 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 16 ; 16 ; 2008 >
+    au < testing ; exists ; 2009 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 17 ; 17 ; 2009 >
     au < released ; crawling ; 2010 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 18 ; 18 ; 2010 >
     au < released ; crawling ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 ; 2011 >
     au < released ; manifest ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 >
