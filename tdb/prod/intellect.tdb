@@ -23,7 +23,7 @@
       param[journal_id] = ap3
       param[journal_issn] = 2042-7875
       
-      au < testing ; 2011 ; Animation Practice, Production & Process Volume 1 ; 1 >
+      au < notReady ; 2011 ; Animation Practice, Production & Process Volume 1 ; 1 >
 
     }
 
@@ -37,7 +37,7 @@
       param[journal_id] = aps
       param[journal_issn] = 2042-793X
       
-      au < testing ; 2011 ; Art & the Public Sphere Volume 1 ; 1 >
+      au < notReady ; 2011 ; Art & the Public Sphere Volume 1 ; 1 >
 
     }
 
@@ -73,7 +73,7 @@
       param[journal_id] = ajpc
       param[journal_issn] = 2045-5852
       
-      au < testing ; 2011 ; The Australasian Journal of Popular Culture Volume 1 ; 1 >
+      au < notReady ; 2011 ; The Australasian Journal of Popular Culture Volume 1 ; 1 >
 
     }
     
@@ -114,7 +114,7 @@
       param[journal_id] = btwo
       param[journal_issn] = 2042-8022
 
-      au < testing ; 2012 ; Book 2.0 Volume 1 ; 1 >
+      au < notReady ; 2012 ; Book 2.0 Volume 1 ; 1 >
 
     }
 
@@ -138,7 +138,7 @@
 	  param[journal_id] = cjcs
       param[journal_issn] = 1757-1898
 
-      au < notReady ; 2009 ; Catalan Journal of Communication & Cultural Studies Volume 1 ; 1 >
+      au < testing ; 2009 ; Catalan Journal of Communication & Cultural Studies Volume 1 ; 1 >
       au < notReady ; 2010 ; Catalan Journal of Communication & Cultural Studies Volume 2 ; 2 >
       au < notReady ; 2011 ; Catalan Journal of Communication & Cultural Studies Volume 3 ; 3 >
 
@@ -154,7 +154,7 @@
 	  param[journal_id] = chor
       param[journal_issn] = 2040-5669
 
-      au < notReady ; 2011 ; Choreographic Practices Volume 1 ; 1 >
+      au < testing ; 2011 ; Choreographic Practices Volume 1 ; 1 >
 
     }
 
@@ -168,7 +168,7 @@
 	  param[journal_id] = ctl
       param[journal_issn] = 1751-1917
       
-      au < notReady ; 2010-2011 ; Citizenship Teaching and Learning Volume 6 ; 6 >
+      au < testing ; 2010-2011 ; Citizenship Teaching and Learning Volume 6 ; 6 >
       au < notReady ; 2011 ; Citizenship Teaching and Learning Volume 7 ; 7 >
 
     }
