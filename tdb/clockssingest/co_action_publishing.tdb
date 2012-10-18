@@ -125,10 +125,9 @@
     param[base_url] = http://www.eurojnlofpsychotraumatol.net/
     param[journal_id] = ejpt
     comment[0] = includes supplements
-    comment[notReady] = 403 Forbidden error
 
-    au < notReady; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
-    au < notReady ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
+    au < manifest ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
     au < released ; crawling ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
 
   }
