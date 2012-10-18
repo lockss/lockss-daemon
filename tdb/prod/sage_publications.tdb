@@ -740,13 +740,13 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < testing ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 >
-        au < testing ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 >
-        au < testing ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 >
-        au < testing ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 >
+        au < ready ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 >
+        au < ready ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 >
+        au < ready ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 >
         au < testing ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 >
         au < testing ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 >
-        au < testing ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 >
-        au < testing ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 >
+        au < ready ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 >
+        au < ready ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 >
         au < testing ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 >
         au < testing ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 >
         au < testing ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 >
@@ -865,7 +865,7 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 >
-        au < manifest ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 >
+        au < ready ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 >
         au < manifest ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 >
         au < released ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 >
         au < released ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 >
@@ -30747,7 +30747,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 50 ; 50 >
         au < manifest ; 2007 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 51 ; 51 >
         au < released ; 2008 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 52 ; 52 >
-        au < manifest ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 >
+        au < ready ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 >
         au < released ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 >
         au < ready ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 >
         au < expected ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 56 ; 56 >
