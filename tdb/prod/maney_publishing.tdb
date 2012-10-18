@@ -1049,8 +1049,8 @@
 
     au < manifest ; 2009 ; Dutch Crossing: Journal of Low Countries Studies Volume 33 ; 33 > 
     au < ready ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 > 
-    au < manifest ; 2011 ; Dutch Crossing: Journal of Low Countries Studies Volume 35 ; 35 > 
-    au < manifest ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 > 
+    au < ready ; 2011 ; Dutch Crossing: Journal of Low Countries Studies Volume 35 ; 35 > 
+    au < ready ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 > 
 
   }
 
@@ -1088,9 +1088,9 @@
     au < manifest ; 2007 ; Early Medieval China Volume 2007 ; 2007 > 
     au < manifest ; 2008 ; Early Medieval China Volume 2008 ; 2008 > 
     au < manifest ; 2009 ; Early Medieval China Volume 2009 ; 2009 > 
-    au < manifest ; 2010 ; Early Medieval China Volume 2010 ; 2010 > 
-    au < manifest ; 2011 ; Early Medieval China Volume 2011 ; 2011 > 
-    au < manifest ; 2012 ; Early Medieval China Volume 2012 ; 2012 > 
+    au < ready ; 2010 ; Early Medieval China Volume 2010 ; 2010 > 
+    au < ready ; 2011 ; Early Medieval China Volume 2011 ; 2011 > 
+    au < ready ; 2012 ; Early Medieval China Volume 2012 ; 2012 > 
 
   }
 
@@ -1141,7 +1141,7 @@
     au < manifest ; 2007 ; English Heritage Historical Review Volume 2 ; 2 >
     au < manifest ; 2008 ; English Heritage Historical Review Volume 3 ; 3 >     
     au < manifest ; 2009 ; English Heritage Historical Review Volume 4 ; 4 >   
-    au < manifest ; 2010 ; English Heritage Historical Review Volume 5 ; 5 > 
+    au < ready ; 2010 ; English Heritage Historical Review Volume 5 ; 5 > 
     au < expected ; 2011 ; English Heritage Historical Review Volume 6 ; 6 > 
     au < expected ; 2012 ; English Heritage Historical Review Volume 7 ; 7 >
    
@@ -1179,9 +1179,9 @@
     au < manifest ; 2007 ; Environmental Archaeology Volume 12 ; 12 > 
     au < manifest ; 2008 ; Environmental Archaeology Volume 13 ; 13 > 
     au < manifest ; 2009 ; Environmental Archaeology Volume 14 ; 14 > 
-    au < manifest ; 2010 ; Environmental Archaeology Volume 15 ; 15 > 
-    au < manifest ; 2011 ; Environmental Archaeology Volume 16 ; 16 > 
-    au < manifest ; 2012 ; Environmental Archaeology Volume 17 ; 17 > 
+    au < ready ; 2010 ; Environmental Archaeology Volume 15 ; 15 > 
+    au < ready ; 2011 ; Environmental Archaeology Volume 16 ; 16 > 
+    au < ready ; 2012 ; Environmental Archaeology Volume 17 ; 17 > 
 
   }
 
@@ -1203,8 +1203,8 @@
     param[journal_issn] = 1461-9571
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
-    au < manifest ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
+    au < ready ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
+    au < ready ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
     
   }
 
@@ -1247,9 +1247,9 @@
     au < manifest ; 2007 ; Exemplaria Volume 19 ; 19 > 
     au < manifest ; 2008 ; Exemplaria Volume 20 ; 20 > 
     au < manifest ; 2009 ; Exemplaria Volume 21 ; 21 > 
-    au < manifest ; 2010 ; Exemplaria Volume 22 ; 22 > 
-    au < manifest ; 2011 ; Exemplaria Volume 23 ; 23 > 
-    au < manifest ; 2012 ; Exemplaria Volume 24 ; 24 > 
+    au < ready ; 2010 ; Exemplaria Volume 22 ; 22 > 
+    au < ready ; 2011 ; Exemplaria Volume 23 ; 23 > 
+    au < ready ; 2012 ; Exemplaria Volume 24 ; 24 > 
 
   }
 
@@ -1275,9 +1275,9 @@
     au < manifest ; 2007 ; Family & Community History Volume 10 ; 10 > 
     au < manifest ; 2008 ; Family & Community History Volume 11 ; 11 > 
     au < manifest ; 2009 ; Family & Community History Volume 12 ; 12 > 
-    au < manifest ; 2010 ; Family & Community History Volume 13 ; 13 > 
-    au < manifest ; 2011 ; Family & Community History Volume 14 ; 14 > 
-    au < manifest ; 2012 ; Family & Community History Volume 15 ; 15 > 
+    au < ready ; 2010 ; Family & Community History Volume 13 ; 13 > 
+    au < ready ; 2011 ; Family & Community History Volume 14 ; 14 > 
+    au < ready ; 2012 ; Family & Community History Volume 15 ; 15 > 
 
   }
 
@@ -4057,9 +4057,9 @@
     au < manifest ; 2007 ; Seventeenth-Century French Studies Volume 29 ; 29 > 
     au < manifest ; 2008 ; Seventeenth-Century French Studies Volume 30 ; 30 > 
     au < manifest ; 2009 ; Seventeenth-Century French Studies Volume 31 ; 31 > 
-    au < manifest ; 2010 ; Seventeenth-Century French Studies Volume 32 ; 32 > 
-    au < manifest ; 2011 ; Seventeenth-Century French Studies Volume 33 ; 33 > 
-    au < manifest ; 2012 ; Seventeenth-Century French Studies Volume 34 ; 34 >
+    au < ready ; 2010 ; Seventeenth-Century French Studies Volume 32 ; 32 > 
+    au < ready ; 2011 ; Seventeenth-Century French Studies Volume 33 ; 33 > 
+    au < ready ; 2012 ; Seventeenth-Century French Studies Volume 34 ; 34 >
 
   }
 
