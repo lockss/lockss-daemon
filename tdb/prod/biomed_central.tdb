@@ -1606,7 +1606,7 @@
       param[base_url] = http://www.ascpjournal.org/
       param[journal_issn] = 1940-0640
 
-      au < testing ; 2012 ; Addiction Science & Clinical Practice Volume 7 ; 7 >
+      au < ready ; 2012 ; Addiction Science & Clinical Practice Volume 7 ; 7 >
 
     }
 
@@ -1771,7 +1771,7 @@
       au < testing ; 2009 ; Aquatic Biosystems Volume 5 ; 5 >
       au < testing ; 2010 ; Aquatic Biosystems Volume 6 ; 6 >
       au < testing ; 2011 ; Aquatic Biosystems Volume 7 ; 7 >
-      au < testing ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
+      au < ready ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
 
     }
 
@@ -1786,10 +1786,10 @@
       param[base_url] = http://www.archpublichealth.com/
       param[journal_issn] = 0778-7367
 
-      au < testing ; 2009-2010 ; Archives of Public Health Volume 67 ; 67 >
-      au < testing ; 2010-2011 ; Archives of Public Health Volume 68 ; 68 >
+      au < ready ; 2009-2010 ; Archives of Public Health Volume 67 ; 67 >
+      au < ready ; 2010-2011 ; Archives of Public Health Volume 68 ; 68 >
       au < testing ; 2011 ; Archives of Public Health Volume 69 ; 69 >
-      au < testing ; 2012 ; Archives of Public Health Volume 70 ; 70 >
+      au < ready ; 2012 ; Archives of Public Health Volume 70 ; 70 >
 
     }
 
@@ -1878,7 +1878,7 @@
       au < released ; 2009 ; Biological Procedures Online Volume 11 ; 11 >
       au < released ; 2009-2010 ; Biological Procedures Online Volume 12 ; 12 >
       au < released ; 2010-2011 ; Biological Procedures Online Volume 13 ; 13 >
-      au < testing ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
+      au < ready ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
 
     }
 
@@ -1983,7 +1983,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2009 ; BioPsychoSocial Medicine Volume 3 ; 3 >
       au < released ; 2010 ; BioPsychoSocial Medicine Volume 4 ; 4 >
       au < released ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
-      au < testing ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
+      au < ready ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
       
     }
 
@@ -2077,7 +2077,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2009 ; Carbon Balance and Management Volume 4 ; 4 >
       au < released ; 2010 ; Carbon Balance and Management Volume 5 ; 5 >
       au < released ; 2011 ; Carbon Balance and Management Volume 6 ; 6 >
-      au < testing ; 2012 ; Carbon Balance and Management Volume 7 ; 7 >
+      au < ready ; 2012 ; Carbon Balance and Management Volume 7 ; 7 >
 
     }
 
