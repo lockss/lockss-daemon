@@ -1763,6 +1763,7 @@
 
       param[base_url] = http://www.aquaticbiosystems.org/
       param[journal_issn] = 2046-9063
+      comment[complete] = Only Volume 8 has a complete run. This may cause the substance check fails?
 
       au < testing ; 2005 ; Aquatic Biosystems Volume 1 ; 1 >
       au < testing ; 2006 ; Aquatic Biosystems Volume 2 ; 2 >
