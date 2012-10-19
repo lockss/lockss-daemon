@@ -1607,7 +1607,7 @@
       param[base_url] = http://www.ascpjournal.org/
       param[journal_issn] = 1940-0640
 
-      au < manifest ; exists ; 2012 ; Addiction Science & Clinical Practice Volume 7 ; 7 >
+      au < crawling ; exists ; 2012 ; Addiction Science & Clinical Practice Volume 7 ; 7 >
 
     }
 
@@ -1622,7 +1622,7 @@
       param[base_url] = http://www.agricultureandfoodsecurity.com/
       param[journal_issn] = 2048-7010
 
-      au < manifest ; exists ; 2012 ; Agriculture & Food Security Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Agriculture & Food Security Volume 1 ; 1 >
 
     }
 
@@ -1750,7 +1750,7 @@
       param[base_url] = http://www.aricjournal.com/
       param[journal_issn] = 2048-7010
 
-      au < manifest ; exists ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
 
     }
 
@@ -1772,7 +1772,7 @@
       au < manifest ; exists ; 2009 ; Aquatic Biosystems Volume 5 ; 5 >
       au < manifest ; exists ; 2010 ; Aquatic Biosystems Volume 6 ; 6 >
       au < manifest ; exists ; 2011 ; Aquatic Biosystems Volume 7 ; 7 >
-      au < manifest ; exists ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
+      au < crawling ; exists ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
 
     }
 
@@ -1790,7 +1790,7 @@
       au < manifest ; exists ; 2009-2010 ; Archives of Public Health Volume 67 ; 67 >
       au < manifest ; exists ; 2010-2011 ; Archives of Public Health Volume 68 ; 68 >
       au < manifest ; exists ; 2011 ; Archives of Public Health Volume 69 ; 69 >
-      au < manifest ; exists ; 2012 ; Archives of Public Health Volume 70 ; 70 >
+      au < crawling ; exists ; 2012 ; Archives of Public Health Volume 70 ; 70 >
 
     }
 
