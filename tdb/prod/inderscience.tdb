@@ -84,7 +84,7 @@
       
       au < released ; 2005-2007 ; Atoms for Peace: an International Journal Volume 1 ; 1 >
       au < released ; 2008-2009 ; Atoms for Peace: an International Journal Volume 2 ; 2 >
-      au < manifest ; 2010 ; Atoms for Peace: an International Journal Volume 3 ; 3 >      
+      au < testing ; 2010 ; Atoms for Peace: an International Journal Volume 3 ; 3 >      
 
     }
 
@@ -303,7 +303,7 @@
 
       param[journal_issn] = 1740-2115
       
-      au < manifest ; 2009-2010 ; International Journal of Adaptive and Innovative Systems Volume 1 ; 1 >
+      au < testing ; 2009-2010 ; International Journal of Adaptive and Innovative Systems Volume 1 ; 1 >
 
     }
 
@@ -357,7 +357,7 @@
       au < released ; 2005-2007 ; International Journal of Advanced Media and Communication Volume 1 ; 1 >
       au < released ; 2008 ; International Journal of Advanced Media and Communication Volume 2 ; 2 >
       au < released ; 2009 ; International Journal of Advanced Media and Communication Volume 3 ; 3 >
-      au < manifest ; 2010 ; International Journal of Advanced Media and Communication Volume 4 ; 4 >
+      au < testing ; 2010 ; International Journal of Advanced Media and Communication Volume 4 ; 4 >
 
     }
 
@@ -1349,7 +1349,7 @@
 
       param[journal_issn] = 1745-0047
       
-      au < manifest ; 2009 ; International Journal of Collaborative Engineering Volume 1 ; 1 >
+      au < testing ; 2009 ; International Journal of Collaborative Engineering Volume 1 ; 1 >
 
     }
 
@@ -1482,7 +1482,7 @@
 
       param[journal_issn] = 1755-8042
       
-      au < manifest ; 2009-2010 ; International Journal of Computational Intelligence in Bioinformatics and Systems Biology Volume 1 ; 1 >
+      au < testing ; 2009-2010 ; International Journal of Computational Intelligence in Bioinformatics and Systems Biology Volume 1 ; 1 >
 
     }
 
@@ -1497,7 +1497,7 @@
 
       param[journal_issn] = 1755-4985
       
-      au < manifest ; 2009-2010 ; International Journal of Computational Intelligence Studies Volume 1 ; 1 >
+      au < testing ; 2009-2010 ; International Journal of Computational Intelligence Studies Volume 1 ; 1 >
 
     }
 
@@ -1694,7 +1694,7 @@
       
       au < released ; 2007 ; International Journal of Computing Science and Mathematics Volume 1 ; 1 >
       au < released ; 2008-2009 ; International Journal of Computing Science and Mathematics Volume 2 ; 2 >
-      au < manifest ; 2010 ; International Journal of Computing Science and Mathematics Volume 3 ; 3 >
+      au < testing ; 2010 ; International Journal of Computing Science and Mathematics Volume 3 ; 3 >
 
     }
 
@@ -2137,7 +2137,7 @@
 
       param[journal_issn] = 1753-5247
       
-      au < manifest ; 2008 ; International Journal of Electronic Banking Volume 1 ; 1 >
+      au < testing ; 2008 ; International Journal of Electronic Banking Volume 1 ; 1 >
 
     }
 
@@ -2577,7 +2577,7 @@
 
       param[journal_issn] = 1741-5101
       
-      au < manifest ; 1991 ; International Journal of Environment and Pollution Volume 1 ; 1 >
+      au < testing ; 1991 ; International Journal of Environment and Pollution Volume 1 ; 1 >
       au < exists ; 1992 ; International Journal of Environment and Pollution Volume 2 ; 2 >
       au < exists ; 1993 ; International Journal of Environment and Pollution Volume 3 ; 3 >
       au < exists ; 1994 ; International Journal of Environment and Pollution Volume 4 ; 4 >
@@ -2720,7 +2720,7 @@
 
       param[journal_issn] = 1752-6914
       
-      au < manifest ; 2010 ; International Journal of Environmental Policy and Decision Making Volume 1 ; 1 >
+      au < testing ; 2010 ; International Journal of Environmental Policy and Decision Making Volume 1 ; 1 >
 
     }
 
@@ -2963,7 +2963,7 @@
       au < exists ; 1998 ; International Journal of Global Energy Issues Volume 11 ; 11 >
       au < exists ; 1999 ; International Journal of Global Energy Issues Volume 12 ; 12 >
       au < exists ; 2000 ; International Journal of Global Energy Issues Volume 13 ; 13 >
-      au < manifest ; 2000 ; International Journal of Global Energy Issues Volume 14 ; 14 >
+      au < testing ; 2000 ; International Journal of Global Energy Issues Volume 14 ; 14 >
       au < exists ; 2001 ; International Journal of Global Energy Issues Volume 15 ; 15 >
       au < exists ; 2002 ; International Journal of Global Energy Issues Volume 16 ; 16 >
       au < released ; 2002 ; International Journal of Global Energy Issues Volume 17 ; 17 >
@@ -3940,7 +3940,7 @@
       au < released ; 2009 ; International Journal of Knowledge and Learning Volume 5 ; 5 >
       au < released ; 2010 ; International Journal of Knowledge and Learning Volume 6 ; 6 >
       au < released ; 2011 ; International Journal of Knowledge and Learning Volume 7 ; 7 >
-      au < manifest ; 2012 ; International Journal of Knowledge and Learning Volume 8 ; 8 >
+      au < testing ; 2012 ; International Journal of Knowledge and Learning Volume 8 ; 8 >
 
     }
 
@@ -4559,7 +4559,7 @@
       au < exists ; 1999 ; International Journal of Materials and Product Technology Volume 14 ; 14 >
       au < released ; 2000 ; International Journal of Materials and Product Technology Volume 15 ; 15 >
       au < released ; 2001 ; International Journal of Materials and Product Technology Volume 16 ; 16 >
-      au < testing ; 2002 ; International Journal of Materials and Product Technology Volume 17 ; 17 >
+      au < notReady ; 2002 ; International Journal of Materials and Product Technology Volume 17 ; 17 >
       au < released ; 2003 ; International Journal of Materials and Product Technology Volume 18 ; 18 >
       au < released ; 2003 ; International Journal of Materials and Product Technology Volume 19 ; 19 >
       au < released ; 2004 ; International Journal of Materials and Product Technology Volume 20 ; 20 >
@@ -4605,7 +4605,7 @@
       au < released ; 2009 ; International Journal of Materials and Structural Integrity Volume 3 ; 3 >
       au < released ; 2010 ; International Journal of Materials and Structural Integrity Volume 4 ; 4 >
       au < released ; 2011 ; International Journal of Materials and Structural Integrity Volume 5 ; 5 >
-      au < manifest ; 2012 ; International Journal of Materials and Structural Integrity Volume 6 ; 6 >
+      au < testing ; 2012 ; International Journal of Materials and Structural Integrity Volume 6 ; 6 >
 
     }
 
@@ -4622,7 +4622,7 @@
       
       au < released ; 2009-2010 ; International Journal of Materials Engineering Innovation Volume 1 ; 1 >
       au < released ; 2011 ; International Journal of Materials Engineering Innovation Volume 2 ; 2 >
-      au < manifest ; 2012 ; International Journal of Materials Engineering Innovation Volume 3 ; 3 > 
+      au < testing ; 2012 ; International Journal of Materials Engineering Innovation Volume 3 ; 3 > 
 
     }
 
@@ -4639,7 +4639,7 @@
       
       au < released ; 2009-2010 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 1 ; 1 >
       au < released ; 2011 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 2 ; 2 >
-      au < manifest ; 2012 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 3 ; 3 >
+      au < testing ; 2012 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 3 ; 3 >
 
     }
 
@@ -4657,7 +4657,7 @@
       au < released ; 2009 ; International Journal of Mathematics in Operational Research Volume 1 ; 1 >
       au < released ; 2010 ; International Journal of Mathematics in Operational Research Volume 2 ; 2 >
       au < released ; 2011 ; International Journal of Mathematics in Operational Research Volume 3 ; 3 >
-      au < manifest ; 2012 ; International Journal of Mathematics in Operational Research Volume 4 ; 4 >
+      au < testing ; 2012 ; International Journal of Mathematics in Operational Research Volume 4 ; 4 >
 
     }
 
@@ -4688,7 +4688,7 @@
       param[journal_issn] = 2045-1067
       
       au < released ; 2011 ; International Journal of Mechatronics and Automation Volume 1 ; 1 >
-      au < manifest ; 2012 ; International Journal of Mechatronics and Automation Volume 2 ; 2 >
+      au < testing ; 2012 ; International Journal of Mechatronics and Automation Volume 2 ; 2 >
 
     }
 
@@ -4707,7 +4707,7 @@
       au < released ; 2009 ; International Journal of Mechatronics and Manufacturing Systems Volume 2 ; 2 >
       au < released ; 2010 ; International Journal of Mechatronics and Manufacturing Systems Volume 3 ; 3 >
       au < released ; 2011 ; International Journal of Mechatronics and Manufacturing Systems Volume 4 ; 4 >
-      au < manifest ; 2012 ; International Journal of Mechatronics and Manufacturing Systems Volume 5 ; 5 >
+      au < testing ; 2012 ; International Journal of Mechatronics and Manufacturing Systems Volume 5 ; 5 >
 
     }
 
@@ -4725,7 +4725,7 @@
       au < released ; 2008-2009 ; International Journal of Medical Engineering and Informatics Volume 1 ; 1 >
       au < released ; 2010 ; International Journal of Medical Engineering and Informatics Volume 2 ; 2 >
       au < released ; 2011 ; International Journal of Medical Engineering and Informatics Volume 3 ; 3 >
-      au < manifest ; 2012 ; International Journal of Medical Engineering and Informatics Volume 4 ; 4 >
+      au < testing ; 2012 ; International Journal of Medical Engineering and Informatics Volume 4 ; 4 >
 
     }
 
@@ -4781,7 +4781,7 @@
       au < released ; 2009 ; International Journal of Microstructure and Materials Properties Volume 4 ; 4 >
       au < released ; 2010 ; International Journal of Microstructure and Materials Properties Volume 5 ; 5 >
       au < released ; 2011 ; International Journal of Microstructure and Materials Properties Volume 6 ; 6 >
-      au < manifest ; 2012 ; International Journal of Microstructure and Materials Properties Volume 7 ; 7 >
+      au < testing ; 2012 ; International Journal of Microstructure and Materials Properties Volume 7 ; 7 >
 
     }
 
@@ -4799,7 +4799,7 @@
       au < released ; 2008-2009 ; International Journal of Mining and Mineral Engineering Volume 1 ; 1 >
       au < released ; 2010 ; International Journal of Mining and Mineral Engineering Volume 2 ; 2 >
       au < released ; 2011 ; International Journal of Mining and Mineral Engineering Volume 3 ; 3 >
-      au < manifest ; 2012 ; International Journal of Mining and Mineral Engineering Volume 4 ; 4 >
+      au < testing ; 2012 ; International Journal of Mining and Mineral Engineering Volume 4 ; 4 >
 
     }
 
@@ -4823,7 +4823,7 @@
       au < released ; 2009 ; International Journal of Mobile Communications Volume 7 ; 7 >
       au < released ; 2010 ; International Journal of Mobile Communications Volume 8 ; 8 >
       au < released ; 2011 ; International Journal of Mobile Communications Volume 9 ; 9 >
-      au < manifest ; 2012 ; International Journal of Mobile Communications Volume 10 ; 10 >
+      au < testing ; 2012 ; International Journal of Mobile Communications Volume 10 ; 10 >
 
     }
 
@@ -4843,7 +4843,7 @@
       au < released ; 2009 ; International Journal of Mobile Learning and Organisation Volume 3 ; 3 >
       au < released ; 2010 ; International Journal of Mobile Learning and Organisation Volume 4 ; 4 >
       au < released ; 2011 ; International Journal of Mobile Learning and Organisation Volume 5 ; 5 >
-      au < manifest ; 2012 ; International Journal of Mobile Learning and Organisation Volume 6 ; 6 >
+      au < testing ; 2012 ; International Journal of Mobile Learning and Organisation Volume 6 ; 6 >
 
     }
 
@@ -4861,7 +4861,7 @@
       au < released ; 2005-2006 ; International Journal of Mobile Network Design and Innovation Volume 1 ; 1 >
       au < released ; 2007 ; International Journal of Mobile Network Design and Innovation Volume 2 ; 2 >
       au < released ; 2009-2011 ; International Journal of Mobile Network Design and Innovation Volume 3 ; 3 >
-      au < manifest ; 2012 ; International Journal of Mobile Network Design and Innovation Volume 4 ; 4 >
+      au < testing ; 2012 ; International Journal of Mobile Network Design and Innovation Volume 4 ; 4 >
 
     }
 
@@ -4877,7 +4877,7 @@
       param[journal_issn] = 2042-4108
       
       au < released ; 2010-2011 ; International Journal of Modelling in Operations Management Volume 1 ; 1 >
-      au < manifest ; 2012 ; International Journal of Modelling in Operations Management Volume 2 ; 2 >
+      au < testing ; 2012 ; International Journal of Modelling in Operations Management Volume 2 ; 2 >
 
     }
 
@@ -4906,8 +4906,8 @@
       au < released ; 2011 ; International Journal of Modelling, Identification and Control Volume 12 ; 12 >
       au < released ; 2011 ; International Journal of Modelling, Identification and Control Volume 13 ; 13 >
       au < released ; 2011 ; International Journal of Modelling, Identification and Control Volume 14 ; 14 >
-      au < manifest ; 2012 ; International Journal of Modelling, Identification and Control Volume 15 ; 15 >
-      au < manifest ; 2012 ; International Journal of Modelling, Identification and Control Volume 16 ; 16 >
+      au < testing ; 2012 ; International Journal of Modelling, Identification and Control Volume 15 ; 15 >
+      au < testing ; 2012 ; International Journal of Modelling, Identification and Control Volume 16 ; 16 >
 
     }
 
@@ -4941,7 +4941,7 @@
       au < released ; 2009 ; International Journal of Monetary Economics and Finance Volume 2 ; 2 >
       au < released ; 2010 ; International Journal of Monetary Economics and Finance Volume 3 ; 3 >
       au < released ; 2011 ; International Journal of Monetary Economics and Finance Volume 4 ; 4 >
-      au < manifest ; 2012 ; International Journal of Monetary Economics and Finance Volume 5 ; 5 >
+      au < testing ; 2012 ; International Journal of Monetary Economics and Finance Volume 5 ; 5 >
 
     }
 
@@ -4957,7 +4957,7 @@
       param[journal_issn] = 2040-1078
       
       au < released ; 2010-2011 ; International Journal of Multicriteria Decision Making Volume 1 ; 1 >
-      au < manifest ; 2012 ; International Journal of Multicriteria Decision Making Volume 2 ; 2 >
+      au < testing ; 2012 ; International Journal of Multicriteria Decision Making Volume 2 ; 2 >
 
     }
 
@@ -5012,7 +5012,7 @@
       au < released ; 2010 ; International Journal of Nanomanufacturing Volume 5 ; 5 >
       au < released ; 2010 ; International Journal of Nanomanufacturing Volume 6 ; 6 >
       au < released ; 2011 ; International Journal of Nanomanufacturing Volume 7 ; 7 >
-      au < manifest ; 2012 ; International Journal of Nanomanufacturing Volume 8 ; 8 >
+      au < testing ; 2012 ; International Journal of Nanomanufacturing Volume 8 ; 8 >
 
     }
 
