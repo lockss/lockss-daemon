@@ -1,6 +1,7 @@
 {
   publisher <
-    name = Johns Hopkins University Press
+    name = Johns Hopkins University Press ;
+    info[tester] = 3
   >
 
   implicit < status ; year ; name ; param[volume] >
