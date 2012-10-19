@@ -1418,7 +1418,7 @@
 
     param[journal_id] = ki
     
-    comment[notReady] = ingest3 Rice doesn't have permission to crawl http://www.nature.com/ki/journal/v79/n12/full/ki201153a.html
+    comment[notReady] = ingest3 Rice doesn't have permission to crawl http://www.nature.com/ki/journal/v79/n12/full/ki201153a.html see RU 3924
 
     au < exists ; exists ; 1972 ; Kidney International Volume 1 (1972) ; 1972 ; 1 >
     au < exists ; exists ; 1972 ; Kidney International Volume 2 (1972) ; 1972 ; 2 >
@@ -1571,6 +1571,7 @@
     >
 
     param[journal_id] = modpathol
+    comment[notReady] = fetch error on ingest3 unauthorized access see RU 3924
 
     au < exists ; exists ; 2000 ; Modern Pathology Volume 13 ; 2000 ; 13 >
     au < exists ; exists ; 2000 ; Modern Pathology Volume 14 (2000) ; 2000 ; 14 >
@@ -1583,9 +1584,9 @@
     au < exists ; exists ; 2007 ; Modern Pathology Volume 20 ; 2007 ; 20 >
     au < testing ; exists ; 2008 ; Modern Pathology Volume 21 ; 2008 ; 21 >
     au < released ; crawling ; 2009 ; Modern Pathology Volume 22 ; 2009 ; 22 >
-    au < testing ; exists ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 >
-    au < testing ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
-    au < testing ; exists ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
+    au < notReady ; exists ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 >
+    au < notReady ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
+    au < notReady ; exists ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
 
   }
 
@@ -3140,6 +3141,7 @@
     >
 
     param[journal_id] = oby
+    comment[notReady] = fetch errors 502 and 500 see RU
 
     au < exists ; exists ; 2000 ; Obesity Volume 8 ; 2000 ; 8 >
     au < exists ; exists ; 2001 ; Obesity Volume 9 ; 2001 ; 9 >
@@ -3150,7 +3152,7 @@
     au < exists ; exists ; 2006 ; Obesity Volume 14 ; 2006 ; 14 >
     au < exists ; exists ; 2007 ; Obesity Volume 15 ; 2007 ; 15 >
     au < released ; manifest ; 2008 ; Obesity Volume 16 ; 2008 ; 16 >
-    au < testing ; exists ; 2009 ; Obesity Volume 17 ; 2009 ; 17 >
+    au < notReady ; exists ; 2009 ; Obesity Volume 17 ; 2009 ; 17 >
     au < released ; crawling ; 2010 ; Obesity Volume 18 ; 2010 ; 18 >
     au < notReady ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
     au < crawling ; exists ; 2012 ; Obesity Volume 20 ; 2012 ; 20 >
