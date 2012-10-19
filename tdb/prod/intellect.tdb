@@ -138,9 +138,9 @@
 	  param[journal_id] = cjcs
       param[journal_issn] = 1757-1898
 
-      au < testing ; 2009 ; Catalan Journal of Communication & Cultural Studies Volume 1 ; 1 >
-      au < notReady ; 2010 ; Catalan Journal of Communication & Cultural Studies Volume 2 ; 2 >
-      au < notReady ; 2011 ; Catalan Journal of Communication & Cultural Studies Volume 3 ; 3 >
+      au < ready ; 2009 ; Catalan Journal of Communication & Cultural Studies Volume 1 ; 1 >
+      au < ready ; 2010 ; Catalan Journal of Communication & Cultural Studies Volume 2 ; 2 >
+      au < ready ; 2011 ; Catalan Journal of Communication & Cultural Studies Volume 3 ; 3 >
 
     }
 
@@ -154,7 +154,7 @@
 	  param[journal_id] = chor
       param[journal_issn] = 2040-5669
 
-      au < testing ; 2011 ; Choreographic Practices Volume 1 ; 1 >
+      au < ready ; 2011 ; Choreographic Practices Volume 1 ; 1 >
 
     }
 
@@ -168,8 +168,8 @@
 	  param[journal_id] = ctl
       param[journal_issn] = 1751-1917
       
-      au < testing ; 2010-2011 ; Citizenship Teaching and Learning Volume 6 ; 6 >
-      au < notReady ; 2011 ; Citizenship Teaching and Learning Volume 7 ; 7 >
+      au < ready ; 2010-2011 ; Citizenship Teaching and Learning Volume 6 ; 6 >
+      au < ready ; 2011 ; Citizenship Teaching and Learning Volume 7 ; 7 >
 
     }
 
@@ -183,8 +183,8 @@
       param[journal_id] = cost
       param[journal_issn] = 2040-610X
       
-      au < notReady ; 2010 ; Comedy Studies Volume 1 ; 1 >
-      au < notReady ; 2011 ; Comedy Studies Volume 2 ; 2 >
+      au < ready ; 2010 ; Comedy Studies Volume 1 ; 1 >
+      au < ready ; 2011 ; Comedy Studies Volume 2 ; 2 >
 
     }
 
@@ -198,8 +198,8 @@
       param[journal_id] = crre
       param[journal_issn] = 2040-4689
       
-      au < notReady ; 2010 ; Craft Research Volume 1 ; 1 >
-      au < notReady ; 2011 ; Craft Research Volume 2 ; 2 >
+      au < ready ; 2010 ; Craft Research Volume 1 ; 1 >
+      au < ready ; 2011 ; Craft Research Volume 2 ; 2 >
 
     }
 
@@ -213,10 +213,10 @@
       param[journal_id] = cij
       param[journal_issn] = 1751-0694
       
-      au < notReady ; 2008-2009 ; Creative Industries Journal Volume 1 ; 1 >
-      au < notReady ; 2009 ; Creative Industries Journal Volume 2 ; 2 >
-      au < notReady ; 2010-2011 ; Creative Industries Journal Volume 3 ; 3 >
-      au < notReady ; 2011 ; Creative Industries Journal Volume 4 ; 4 >
+      au < testing ; 2008-2009 ; Creative Industries Journal Volume 1 ; 1 >
+      au < testing ; 2009 ; Creative Industries Journal Volume 2 ; 2 >
+      au < testing ; 2010-2011 ; Creative Industries Journal Volume 3 ; 3 >
+      au < testing ; 2011 ; Creative Industries Journal Volume 4 ; 4 >
 
     }
 
@@ -230,7 +230,7 @@
       param[journal_id] = csfb
       param[journal_issn] = 2040-4417
       
-      au < notReady ; 2010 ; Critical Studies in Fashion & Beauty Volume 1 ; 1 >
+      au < ready ; 2010 ; Critical Studies in Fashion & Beauty Volume 1 ; 1 >
 
     }
 
@@ -244,8 +244,8 @@
       param[journal_id] = cjmc
       param[journal_issn] = 2040-4344
       
-      au < notReady ; 2010 ; Crossings: Journal of Migration & Culture Volume 1 ; 1 >
-      au < notReady ; 2011 ; Crossings: Journal of Migration & Culture Volume 2 ; 2 >
+      au < ready ; 2010 ; Crossings: Journal of Migration & Culture Volume 1 ; 1 >
+      au < ready ; 2011 ; Crossings: Journal of Migration & Culture Volume 2 ; 2 >
 
     }
 
@@ -259,7 +259,7 @@
       param[journal_id] = des
       param[journal_issn] = 2043-068X
       
-      au < notReady ; 2011 ; Design Ecologies Volume 1 ; 1 >
+      au < testing ; 2011 ; Design Ecologies Volume 1 ; 1 >
 
     }
 
@@ -273,8 +273,8 @@
       param[journal_id] = ejpc
       param[journal_issn] = 1757-1952
       
-      au < notReady ; 2009-2010 ; Empedocles: European Journal for the Philosophy of Communication Volume 1 ; 1 >
-      au < notReady ; 2011 ; Empedocles: European Journal for the Philosophy of Communication Volume 2 ; 2 >
+      au < testing ; 2009-2010 ; Empedocles: European Journal for the Philosophy of Communication Volume 1 ; 1 >
+      au < testing ; 2011 ; Empedocles: European Journal for the Philosophy of Communication Volume 2 ; 2 >
 
     }
 
@@ -288,17 +288,17 @@
       param[journal_id] = ejac
       param[journal_issn] = 1466-0407
       
-      au < notReady ; 2001-2002 ; European Journal of American Culture Volume 20 ; 20 >
-      au < notReady ; 2002 ; European Journal of American Culture Volume 21 ; 21 >
-      au < notReady ; 2003 ; European Journal of American Culture Volume 22 ; 22 >
-      au < notReady ; 2004 ; European Journal of American Culture Volume 23 ; 23 >
-      au < notReady ; 2005 ; European Journal of American Culture Volume 24 ; 24 >
-      au < notReady ; 2005-2007 ; European Journal of American Culture Volume 25 ; 25 >
-      au < notReady ; 2007-2008 ; European Journal of American Culture Volume 26 ; 26 >
-      au < notReady ; 2008 ; European Journal of American Culture Volume 27 ; 27 >
-      au < notReady ; 2009 ; European Journal of American Culture Volume 28 ; 28 >
-      au < notReady ; 2010-2011 ; European Journal of American Culture Volume 29 ; 29 >
-      au < notReady ; 2011 ; European Journal of American Culture Volume 30 ; 30 >
+      au < testing ; 2001-2002 ; European Journal of American Culture Volume 20 ; 20 >
+      au < testing ; 2002 ; European Journal of American Culture Volume 21 ; 21 >
+      au < testing ; 2003 ; European Journal of American Culture Volume 22 ; 22 >
+      au < testing ; 2004 ; European Journal of American Culture Volume 23 ; 23 >
+      au < testing ; 2005 ; European Journal of American Culture Volume 24 ; 24 >
+      au < testing ; 2005-2007 ; European Journal of American Culture Volume 25 ; 25 >
+      au < testing ; 2007-2008 ; European Journal of American Culture Volume 26 ; 26 >
+      au < testing ; 2008 ; European Journal of American Culture Volume 27 ; 27 >
+      au < testing ; 2009 ; European Journal of American Culture Volume 28 ; 28 >
+      au < testing ; 2010-2011 ; European Journal of American Culture Volume 29 ; 29 >
+      au < testing ; 2011 ; European Journal of American Culture Volume 30 ; 30 >
 
     }
     
