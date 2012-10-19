@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Emerald Group Publishing
+    name = Emerald Group Publishing ;
+    info[tester] = 5
   >
 
   plugin = org.lockss.plugin.emerald.EmeraldPlugin
