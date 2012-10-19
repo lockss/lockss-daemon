@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.41 2012-10-10 18:03:52 ldoan Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.42 2012-10-19 23:31:55 alexandraohlson Exp $
  */
 
 /*
@@ -35,9 +35,13 @@ package org.lockss.plugin.highwire;
 import java.io.IOException;
 import java.io.InputStream;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.Div;
+import org.htmlparser.tags.HeadingTag;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
@@ -156,7 +160,20 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         //The following is also for jultrasoundmed.org  - possibly also need whitespace filter
         HtmlNodeFilters.tagWithAttribute("span", "id", "related-urls"),  
         // For American Journal of Epidemiology
-        HtmlNodeFilters.tagWithAttribute("li", "id", "nav_current_issue")
+        HtmlNodeFilters.tagWithAttribute("li", "id", "nav_current_issue"),
+        // There is an "Impact factor" but it is only ctext in an H3 tag
+        // and the parent <div> is generic. Use a combination of the grandparent <div> plus the ctext
+        // It's not ideal, but there is no better solution. Seen in occmed.oxfordjournals.org
+        new NodeFilter() {
+          @Override public boolean accept(Node node) {
+            if (!(node instanceof Div)) return false;
+            if (!("features".equals(((CompositeTag)node).getAttribute("class")))) return false;
+            String allText = ((CompositeTag)node).toPlainTextString();
+            //using regex for case insensitive match on "Impact factor"
+            // the "i" is for case insensitivity; the "s" is for accepting newlines
+            return allText.matches("(?is).*impact factor.*");
+            }
+        }
     };
     
     // HTML transform to remove uniqueness from microtagging attributes

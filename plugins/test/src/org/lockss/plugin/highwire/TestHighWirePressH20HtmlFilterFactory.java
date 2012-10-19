@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.10 2012-10-10 21:59:12 ldoan Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.11 2012-10-19 23:31:55 alexandraohlson Exp $
  */
 
 /*
@@ -194,7 +194,38 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "/span></div>";
   private static final String withoutRelatedURLs =
       "<div></div>";
-
+  
+ // occmed.oxfordjournals - impact factor is nested as text with no id tag - use smart combination filtering
+  private static final String textIndexFactor =
+      "<div id=\"second\">" +
+          "<h2 id=\"read_this_journal\" title=\"Read This Journal\"><span>Read This Journal</span></h2>" +
+          "<div class=\"features\">" +
+          "<div class=\"feature separator_after first\">" +
+          "<h2 id=\"the_journal\" title=\"The Journal\"><span>The Journal</span></h2>" +
+          "<ul class=\"emphasised\">" +
+          "<li><a>About this journal</a></li>" +
+          "</ul>" +
+          "<p><a>Occupational Medicine Podcasts</a></p>" +
+          "</div>" +
+          "<div class=\"feature separator_after\">" +
+          "<h3>Impact factor:  1.136</h3>" +
+          "</div>" +
+          "<div class=\"feature\">" +
+          "<h3>Honorary Editor</h3>" +
+          "</div>" +
+          "</div>" +
+          "<div class=\"features\">" +
+          "<h2 id=\"KEEP THIS\"><span>KEEP THIS BIT</span></h2>" +
+          "</div>" +
+          "</div>";
+  private static final String textIndexFactorFiltered =
+      "<div id=\"second\">" +
+          "<h2 id=\"read_this_journal\" title=\"Read This Journal\"><span>Read This Journal</span></h2>" +
+          "<div class=\"features\">" +
+          "<h2 id=\"KEEP THIS\"><span>KEEP THIS BIT</span></h2>" +
+          "</div>" +
+          "</div>";
+   
   public void testFiltering() throws Exception {
     assertFilterToSame(inst1, inst2);
     assertFilterToSame(withAds, withoutAds);
@@ -208,6 +239,8 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(withNavCurrentIssue, withoutNavCurrentIssue);
     assertFilterToSame(withCol4SquareAds, withoutCol4SquareAds);
     assertFilterToSame(withCol4TowerAds, withoutCol4TowerAds);
+    
+    assertFilterToString(textIndexFactor, textIndexFactorFiltered);
   }
 
   private void assertFilterToSame(String str1, String Str2) throws Exception {
@@ -220,6 +253,16 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
         StringUtil.fromInputStream(inB));
   }
 
+//Don't put the 2nd string through the filter - use it as a constant
+  private void assertFilterToString(String orgString, String finalString) throws Exception {
+
+    InputStream inA = fact.createFilteredInputStream(mau, new StringInputStream(orgString),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(finalString,StringUtil.fromInputStream(inA));
+  }
+  
+  
   public void testHeadFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(headHtml),
