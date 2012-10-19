@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Berghahn Journals
+    name = Berghahn Journals ;
+    info[tester] = 4
   >
 
   plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
