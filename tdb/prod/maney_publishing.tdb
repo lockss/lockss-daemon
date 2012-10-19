@@ -1300,9 +1300,9 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2009 ; Folk Life: Journal of Ethnological Studies Volume 47 ; 47 > 
-    au < manifest ; 2010 ; Folk Life: Journal of Ethnological Studies Volume 48 ; 48 > 
-    au < manifest ; 2011 ; Folk Life: Journal of Ethnological Studies Volume 49 ; 49 > 
-    au < manifest ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 > 
+    au < ready ; 2010 ; Folk Life: Journal of Ethnological Studies Volume 48 ; 48 > 
+    au < ready ; 2011 ; Folk Life: Journal of Ethnological Studies Volume 49 ; 49 > 
+    au < ready ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 > 
 
   }
 
@@ -1327,8 +1327,8 @@
     au < manifest ; 2007 ; The Hardy Review Volume 9 ; 9 > 
     au < manifest ; 2008 ; The Hardy Review Volume 10 ; 10 > 
     au < manifest ; 2009 ; The Hardy Review Volume 11 ; 11 > 
-    au < manifest ; 2010 ; The Hardy Review Volume 12 ; 12 > 
-    au < manifest ; 2011 ; The Hardy Review Volume 13 ; 13 > 
+    au < ready ; 2010 ; The Hardy Review Volume 12 ; 12 > 
+    au < ready ; 2011 ; The Hardy Review Volume 13 ; 13 > 
     au < manifest ; 2012 ; The Hardy Review Volume 14 ; 14 > 
 
   }
@@ -1394,9 +1394,9 @@
     au < manifest ; 2007 ; Hispanic Research Journal Volume 8 ; 8 > 
     au < manifest ; 2008 ; Hispanic Research Journal Volume 9 ; 9 > 
     au < manifest ; 2009 ; Hispanic Research Journal Volume 10 ; 10 > 
-    au < manifest ; 2010 ; Hispanic Research Journal Volume 11 ; 11 > 
-    au < manifest ; 2011 ; Hispanic Research Journal Volume 12 ; 12 > 
-    au < manifest ; 2012 ; Hispanic Research Journal Volume 13 ; 13 > 
+    au < ready ; 2010 ; Hispanic Research Journal Volume 11 ; 11 > 
+    au < ready ; 2011 ; Hispanic Research Journal Volume 12 ; 12 > 
+    au < ready ; 2012 ; Hispanic Research Journal Volume 13 ; 13 > 
 
   }
 
@@ -1418,9 +1418,9 @@
     param[journal_issn] = 1756-7505
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2010 ; The Historic Environment: Policy & Practice Volume 1 ; 1 > 
-    au < manifest ; 2011 ; The Historic Environment: Policy & Practice Volume 2 ; 2 > 
-    au < manifest ; 2012 ; The Historic Environment: Policy & Practice Volume 3 ; 3 > 
+    au < ready ; 2010 ; The Historic Environment: Policy & Practice Volume 1 ; 1 > 
+    au < ready ; 2011 ; The Historic Environment: Policy & Practice Volume 2 ; 2 > 
+    au < ready ; 2012 ; The Historic Environment: Policy & Practice Volume 3 ; 3 > 
 
   }
 
@@ -1504,8 +1504,8 @@
     au < manifest ; 2007 ; Industrial Archaeology Review Volume 29 ; 29 > 
     au < manifest ; 2008 ; Industrial Archaeology Review Volume 30 ; 30 > 
     au < manifest ; 2009 ; Industrial Archaeology Review Volume 31 ; 31 > 
-    au < manifest ; 2010 ; Industrial Archaeology Review Volume 32 ; 32 > 
-    au < manifest ; 2011 ; Industrial Archaeology Review Volume 33 ; 33 > 
+    au < ready ; 2010 ; Industrial Archaeology Review Volume 32 ; 32 > 
+    au < ready ; 2011 ; Industrial Archaeology Review Volume 33 ; 33 > 
     au < expected ; 2012 ; Industrial Archaeology Review Volume 34 ; 34 > 
 
   }
@@ -1593,7 +1593,7 @@
     au < doNotProcess ; 2009 ; International Heat Treatment & Surface Engineering Volume 3 ; 3 > 
     au < doNotProcess ; 2010 ; International Heat Treatment & Surface Engineering Volume 4 ; 4 > 
     au < doNotProcess ; 2011 ; International Heat Treatment & Surface Engineering Volume 5 ; 5 > 
-    au < manifest ; 2012 ; International Heat Treatment & Surface Engineering Volume 6 ; 6 > 
+    au < ready ; 2012 ; International Heat Treatment & Surface Engineering Volume 6 ; 6 > 
 
   }
 
@@ -1617,9 +1617,9 @@
     comment[continues] = 0372-0187
 
     au < manifest ; 2009 ; International Journal for the History of Engineering & Technology Volume 79 ; 79 > 
-    au < manifest ; 2010 ; International Journal for the History of Engineering & Technology Volume 80 ; 80 > 
-    au < manifest ; 2011 ; International Journal for the History of Engineering & Technology Volume 81 ; 81 > 
-    au < manifest ; 2012 ; International Journal for the History of Engineering & Technology Volume 82 ; 82 > 
+    au < ready ; 2010 ; International Journal for the History of Engineering & Technology Volume 80 ; 80 > 
+    au < ready ; 2011 ; International Journal for the History of Engineering & Technology Volume 81 ; 81 > 
+    au < ready ; 2012 ; International Journal for the History of Engineering & Technology Volume 82 ; 82 > 
 
   }
 
@@ -2032,9 +2032,9 @@
     au < manifest ; 2007 ; The Italianist Volume 27 ; 27 > 
     au < manifest ; 2008 ; The Italianist Volume 28 ; 28 > 
     au < manifest ; 2009 ; The Italianist Volume 29 ; 29 > 
-    au < manifest ; 2010 ; The Italianist Volume 30 ; 30 > 
-    au < manifest ; 2011 ; The Italianist Volume 31 ; 31 > 
-    au < manifest ; 2012 ; The Italianist Volume 32 ; 32 > 
+    au < ready ; 2010 ; The Italianist Volume 30 ; 30 > 
+    au < ready ; 2011 ; The Italianist Volume 31 ; 31 > 
+    au < ready ; 2012 ; The Italianist Volume 32 ; 32 > 
 
   }
 
