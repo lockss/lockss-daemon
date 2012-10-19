@@ -1,6 +1,7 @@
 {
   publisher <
-    name = Inderscience
+    name = Inderscience ;
+    info[tester] = 4
   >
   
     plugin = org.lockss.plugin.metapress.MetaPressPlugin
