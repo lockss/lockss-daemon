@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = BMJ Group
+    name = BMJ Group ;
+    info[tester] = 8
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
