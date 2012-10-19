@@ -1,0 +1,34 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.orbit.ClockssOrbitWritingAboutPynchonPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_status</string>
+    <string>development -- ly</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.ojs2.OJS2Plugin</string>
+  </entry>
+   <entry>
+    <string>plugin_parent_version</string>
+    <string>21</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Orbit: Writing Around Pynchon (CLOCKSS)</string>
+  </entry>
+   <entry>
+     <string>au_name</string>
+    <string>"Orbit: Writing Around Pynchon Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+   </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%sindex.php/%s/about/editorialPolicies", base_url, journal_id</string>
+  </entry>
+</map>
