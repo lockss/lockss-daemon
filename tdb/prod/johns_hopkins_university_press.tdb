@@ -36,7 +36,7 @@
     au < released ; 2008 ; American Imago Volume 65 ; 65 >
     au < released ; 2009 ; American Imago Volume 66 ; 66 >
     au < released ; 2010 ; American Imago Volume 67 ; 67 >
-    au < testing ; 2011 ; American Imago Volume 68 ; 68 >
+    au < ready ; 2011 ; American Imago Volume 68 ; 68 >
     
   }
 
@@ -153,9 +153,9 @@
     au < released ; 2007 ; American Quarterly Volume 59 ; 59 >
     au < released ; 2008 ; American Quarterly Volume 60 ; 60 >
     au < released ; 2009 ; American Quarterly Volume 61 ; 61 >
-    au < testing ; 2010 ; American Quarterly Volume 62 ; 62 >
-    au < testing ; 2011 ; American Quarterly Volume 63 ; 63 >
-    au < testing ; 2012 ; American Quarterly Volume 64 ; 64 >
+    au < ready ; 2010 ; American Quarterly Volume 62 ; 62 >
+    au < ready ; 2011 ; American Quarterly Volume 63 ; 63 >
+    au < ready ; 2012 ; American Quarterly Volume 64 ; 64 >
 
   }
 
@@ -317,9 +317,9 @@
     au < released ; 2007 ; Callaloo Volume 30 ; 30 >
     au < released ; 2008 ; Callaloo Volume 31 ; 31 >
     au < released ; 2009 ; Callaloo Volume 32 ; 32 >
-    au < testing ; 2010 ; Callaloo Volume 33 ; 33 >
+    au < ready ; 2010 ; Callaloo Volume 33 ; 33 >
     au < testing ; 2011 ; Callaloo Volume 34 ; 34 >
-    au < testing ; 2012 ; Callaloo Volume 35 ; 35 >
+    au < ready ; 2012 ; Callaloo Volume 35 ; 35 >
     
   }
 
@@ -371,9 +371,9 @@
     au < released ; 2007 ; Children's Literature Volume 35 ; 35 >
     au < released ; 2008 ; Children's Literature Volume 36 ; 36 >
     au < released ; 2009 ; Children's Literature Volume 37 ; 37 >
-    au < testing ; 2010 ; Children's Literature Volume 38 ; 38 >
+    au < ready ; 2010 ; Children's Literature Volume 38 ; 38 >
     au < ready ; 2011 ; Children's Literature Volume 39 ; 39 >
-    au < testing ; 2012 ; Children's Literature Volume 40 ; 40 >
+    au < ready ; 2012 ; Children's Literature Volume 40 ; 40 >
     
   }
 
@@ -446,8 +446,8 @@
     au < released ; 2005 ; Configurations Volume 13 ; 13 >
     au < released ; 2006 ; Configurations Volume 14 ; 14 >
     au < released ; 2007 ; Configurations Volume 15 ; 15 >
-    au < testing ; 2008 ; Configurations Volume 16 ; 16 >
-    au < testing ; 2009 ; Configurations Volume 17 ; 17 >
+    au < ready ; 2008 ; Configurations Volume 16 ; 16 >
+    au < ready ; 2009 ; Configurations Volume 17 ; 17 >
     au < testing ; 2010 ; Configurations Volume 18 ; 18 >
     au < ready ; 2011 ; Configurations Volume 19 ; 19 >
     
@@ -476,7 +476,7 @@
     au < released ; 2005 ; diacritics Volume 35 ; 35 >
     au < released ; 2006 ; diacritics Volume 36 ; 36 >
     au < released ; 2007 ; diacritics Volume 37 ; 37 >
-    au < testing ; 2008 ; diacritics Volume 38 ; 38 >
+    au < ready ; 2008 ; diacritics Volume 38 ; 38 >
     au < testing ; 2009 ; diacritics Volume 39 ; 39 >
     
   }
@@ -522,7 +522,7 @@
     au < released ; 2007-2008 ; Eighteenth-Century Studies Volume 41 ; 41 >
     au < released ; 2008-2009 ; Eighteenth-Century Studies Volume 42 ; 42 >
     au < testing ; 2009-2010 ; Eighteenth-Century Studies Volume 43 ; 43 >
-    au < testing ; 2010-2011 ; Eighteenth-Century Studies Volume 44 ; 44 >
+    au < ready ; 2010-2011 ; Eighteenth-Century Studies Volume 44 ; 44 >
     au < testing ; 2011-2012 ; Eighteenth-Century Studies Volume 45 ; 45 >
     
   }
@@ -555,7 +555,7 @@
     au < released ; 2007 ; ELH Volume 74 ; 74 >
     au < released ; 2008 ; ELH Volume 75 ; 75 >
     au < released ; 2009 ; ELH Volume 76 ; 76 >
-    au < testing ; 2010 ; ELH Volume 77 ; 77 >
+    au < ready ; 2010 ; ELH Volume 77 ; 77 >
     au < ready ; 2011 ; ELH Volume 78 ; 78 >
     au < testing ; 2012 ; ELH Volume 79 ; 79 >
 
@@ -577,7 +577,7 @@
     
     au < released ; 2010 ; Feminist Formations Volume 22 ; 22 >
     au < testing ; 2011 ; Feminist Formations Volume 23 ; 23 >
-    au < testing ; 2012 ; Feminist Formations Volume 24 ; 24 >
+    au < ready ; 2012 ; Feminist Formations Volume 24 ; 24 >
 
   }
 
@@ -611,8 +611,8 @@
     attr[journal_id] = hpn
     
     au < released ; 2010 ; Hispania Volume 93 ; 93 >
-    au < testing ; 2011 ; Hispania Volume 94 ; 94 >
-    au < testing ; 2012 ; Hispania Volume 95 ; 95 >
+    au < ready ; 2011 ; Hispania Volume 94 ; 94 >
+    au < ready ; 2012 ; Hispania Volume 95 ; 95 >
 
   }
 
@@ -681,7 +681,7 @@
     au < released ; 2007 ; Human Rights Quarterly Volume 29 ; 29 >
     au < released ; 2008 ; Human Rights Quarterly Volume 30 ; 30 >
     au < released ; 2009 ; Human Rights Quarterly Volume 31 ; 31 >
-    au < testing ; 2010 ; Human Rights Quarterly Volume 32 ; 32 >
+    au < ready ; 2010 ; Human Rights Quarterly Volume 32 ; 32 >
     au < testing ; 2011 ; Human Rights Quarterly Volume 33 ; 33 >
     au < testing ; 2012 ; Human Rights Quarterly Volume 34 ; 34 >
 
@@ -710,8 +710,8 @@
     au < released ; 2007 ; Journal of Asian American Studies Volume 10 ; 10 >
     au < released ; 2008 ; Journal of Asian American Studies Volume 11 ; 11 >
     au < testing ; 2009 ; Journal of Asian American Studies Volume 12 ; 12 >
-    au < testing ; 2010 ; Journal of Asian American Studies Volume 13 ; 13 >
-    au < testing ; 2011 ; Journal of Asian American Studies Volume 14 ; 14 >
+    au < ready ; 2010 ; Journal of Asian American Studies Volume 13 ; 13 >
+    au < ready ; 2011 ; Journal of Asian American Studies Volume 14 ; 14 >
     au < testing ; 2012 ; Journal of Asian American Studies Volume 15 ; 15 >
 
   }
@@ -734,7 +734,7 @@
     au < released ; 2007 ; Journal of College Student Development Volume 48 ; 48 >
     au < released ; 2008 ; Journal of College Student Development Volume 49 ; 49 >
     au < released ; 2009 ; Journal of College Student Development Volume 50 ; 50 >
-    au < testing ; 2010 ; Journal of College Student Development Volume 51 ; 51 >
+    au < ready ; 2010 ; Journal of College Student Development Volume 51 ; 51 >
     au < testing ; 2011 ; Journal of College Student Development Volume 52 ; 52 >
     au < testing ; 2012 ; Journal of College Student Development Volume 53 ; 53 >
 
