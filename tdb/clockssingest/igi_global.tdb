@@ -44,7 +44,7 @@
     au < manifest ; exists ; 2008 ; Information Resources Management Journal (IRMJ) Volume 21 ; 21 > 
     au < manifest ; exists ; 2009 ; Information Resources Management Journal (IRMJ) Volume 22 ; 22 > 
     au < manifest ; exists ; 2010 ; Information Resources Management Journal (IRMJ) Volume 23 ; 23 > 
-    au < testing ; exists ; 2011 ; Information Resources Management Journal (IRMJ) Volume 24 ; 24 > 
+    au < released ; manifest ; 2011 ; Information Resources Management Journal (IRMJ) Volume 24 ; 24 > 
     au < crawling ; exists ; 2012 ; Information Resources Management Journal (IRMJ) Volume 25 ; 25 > 
 
   }
@@ -1224,7 +1224,7 @@
     >
 	param[journal_issn] = 2155-6377
 	
-    au < testing ; exists ; 2011 ; International Journal of Information Retrieval Research (IJIRR) Volume 1 ; 1 > 
+    au < released ; manifest ; 2011 ; International Journal of Information Retrieval Research (IJIRR) Volume 1 ; 1 > 
     au < crawling ; exists ; 2012 ; International Journal of Information Retrieval Research (IJIRR) Volume 2 ; 2 > 
 
   }
@@ -1418,7 +1418,7 @@
     au < manifest ; exists ; 2008 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 4 ; 4 > 
     au < manifest ; exists ; 2009 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 5 ; 5 > 
     au < manifest ; exists ; 2010 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 6 ; 6 > 
-    au < testing ; exists ; 2011 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 7 ; 7 > 
+    au < released ; manifest ; 2011 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 7 ; 7 > 
     au < crawling ; exists ; 2012 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 8 ; 8 > 
 
   }
@@ -1652,7 +1652,7 @@
 	
     au < manifest ; exists ; 2009 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 2 ; 2 > 
-    au < testing ; exists ; 2011 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 3 ; 3 > 
+    au < released ; manifest ; 2011 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 3 ; 3 > 
     au < crawling ; exists ; 2012 ; International Journal of Mobile Computing and Multimedia Communications (IJMCMC) Volume 4 ; 4 > 
 
   }
@@ -1715,7 +1715,7 @@
 	
     au < manifest ; exists ; 2009 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 > 
     au < crawling ; exists ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 > 
-    au < testing ; exists ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 > 
+    au < released ; manifest ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 > 
     au < notReady ; exists ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 > 
 
   }
@@ -1882,7 +1882,7 @@
     >
 	param[journal_issn] = 2155-6423
 	
-    au < testing ; exists ; 2011 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 1 ; 1 > 
+    au < released ; manifest ; 2011 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 1 ; 1 > 
     au < crawling ; exists ; 2012 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 2 ; 2 > 
 
   }
@@ -1897,7 +1897,7 @@
     >
 	param[journal_issn] = 2155-496X
 	
-    au < testing ; exists ; 2011 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 1 ; 1 > 
+    au < released ; manifest ; 2011 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 1 ; 1 > 
     au < crawling ; exists ; 2012 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 2 ; 2 > 
 
   }
@@ -1953,7 +1953,7 @@
 	param[journal_issn] = 1947-3036
 	
     au < manifest ; exists ; 2010 ; International Journal of Secure Software Engineering (IJSSE) Volume 1 ; 1 > 
-    au < testing ; exists ; 2011 ; International Journal of Secure Software Engineering (IJSSE) Volume 2 ; 2 > 
+    au < released ; manifest ; 2011 ; International Journal of Secure Software Engineering (IJSSE) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Secure Software Engineering (IJSSE) Volume 3 ; 3 > 
 
   }
@@ -1969,7 +1969,7 @@
 	param[journal_issn] = 1947-959X
 	
     au < manifest ; exists ; 2010 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 1 ; 1 > 
-    au < testing ; exists ; 2011 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 2 ; 2 > 
+    au < released ; manifest ; 2011 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 3 ; 3 > 
 
   }
@@ -1999,7 +1999,7 @@
     >
 	param[journal_issn] = 2155-6334
 	
-    au < testing ; exists ; 2011 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 1 ; 1 > 
+    au < released ; manifest ; 2011 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 1 ; 1 > 
     au < crawling ; exists ; 2012 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 2 ; 2 > 
 
   }
@@ -2032,7 +2032,7 @@
 	
     au < manifest ; exists ; 2009 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 2 ; 2 > 
-    au < testing ; exists ; 2011 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 3 ; 3 > 
+    au < released ; manifest ; 2011 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 3 ; 3 > 
     au < crawling ; exists ; 2012 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 4 ; 4 > 
 
   }
