@@ -147,7 +147,7 @@
 
 	comment[fnr2008] = 502 Proxy Error
 
-    au < testing ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
+    au < ready ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
     au < released ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
     au < released ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 >
     au < released ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
@@ -492,7 +492,7 @@
     au < released ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
     au < released ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
     au < ready ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
-    au < testing ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
+    au < ready ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
 
   }
 
@@ -683,8 +683,8 @@
     param[base_url] = http://www.tellusb.net/
     param[journal_id] = tellusb  
 
-    au < testing ; 1949 ; Tellus B: Chemical and Physical Meteorology Volume 1 ; 1 ; 1949 >
-    au < testing ; 1950 ; Tellus B: Chemical and Physical Meteorology Volume 2 ; 2 ; 1950 >
+    au < ready ; 1949 ; Tellus B: Chemical and Physical Meteorology Volume 1 ; 1 ; 1949 >
+    au < ready ; 1950 ; Tellus B: Chemical and Physical Meteorology Volume 2 ; 2 ; 1950 >
     au < released ; 1951 ; Tellus B: Chemical and Physical Meteorology Volume 3 ; 3 ; 1951 >
     au < released ; 1952 ; Tellus B: Chemical and Physical Meteorology Volume 4 ; 4 ; 1952 >
     au < released ; 1953 ; Tellus B: Chemical and Physical Meteorology Volume 5 ; 5 ; 1953 >
