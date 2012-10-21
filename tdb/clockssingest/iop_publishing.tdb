@@ -2790,7 +2790,7 @@
     au < released ; crawling ; 2009 ; Plasma Science and Technology Volume 11 ; 11 > 
     au < released ; crawling ; 2010 ; Plasma Science and Technology Volume 12 ; 12 > 
     au < released ; crawling ; 2011 ; Plasma Science and Technology Volume 13 ; 13 > 
-    au < testing ; exists ; 2012 ; Plasma Science and Technology Volume 14 ; 14 > 
+    au < released ; manifest ; 2012 ; Plasma Science and Technology Volume 14 ; 14 > 
 
   }
 
@@ -2826,7 +2826,7 @@
     au < released ; crawling ; 2009 ; Plasma Sources Science and Technology Volume 18 ; 18 > 
     au < released ; crawling ; 2010 ; Plasma Sources Science and Technology Volume 19 ; 19 > 
     au < released ; crawling ; 2011 ; Plasma Sources Science and Technology Volume 20 ; 20 > 
-    au < testing ; exists ; 2012 ; Plasma Sources Science and Technology Volume 21 ; 21 > 
+    au < released ; manifest ; 2012 ; Plasma Sources Science and Technology Volume 21 ; 21 > 
 
   }
 
@@ -3146,7 +3146,7 @@
     au < released ; crawling ; 2009 ; Reports on Progress in Physics Volume 72 ; 72  > 
     au < released ; crawling ; 2010 ; Reports on Progress in Physics Volume 73 ; 73  > 
     au < released ; crawling ; 2011 ; Reports on Progress in Physics Volume 74 ; 74  > 
-    au < testing ; exists ; 2012 ; Reports on Progress in Physics Volume 75 ; 75  > 
+    au < released ; manifest ; 2012 ; Reports on Progress in Physics Volume 75 ; 75  > 
 
   }
 
@@ -3163,7 +3163,7 @@
     au < released ; crawling ; 2009 ; Research in Astronomy and Astrophysics Volume 9 ; 9 > 
     au < released ; crawling ; 2010 ; Research in Astronomy and Astrophysics Volume 10 ; 10 > 
     au < released ; crawling ; 2011 ; Research in Astronomy and Astrophysics Volume 11 ; 11 > 
-    au < testing ; exists ; 2012 ; Research in Astronomy and Astrophysics Volume 12 ; 12 > 
+    au < released ; manifest ; 2012 ; Research in Astronomy and Astrophysics Volume 12 ; 12 > 
 
   }
 
@@ -3207,7 +3207,7 @@
     au < released ; crawling ; 2009 ; Science and Technology of Advanced Materials Volume 10 ; 10 > 
     au < released ; crawling ; 2010 ; Science and Technology of Advanced Materials Volume 11 ; 11 > 
     au < released ; crawling ; 2011 ; Science and Technology of Advanced Materials Volume 12 ; 12 > 
-    au < testing ; exists ; 2012 ; Science and Technology of Advanced Materials Volume 13 ; 13 > 
+    au < released ; manifest ; 2012 ; Science and Technology of Advanced Materials Volume 13 ; 13 > 
 
   }
 
@@ -3222,6 +3222,7 @@
 
     param[journal_issn] = 0268-1242
     comment[param] = print issn preferred
+    comment[notReady] = low agreement
 
     au < manifest ; exists ; 1986 ; Semiconductor Science and Technology Volume 1 ; 1 > 
     au < manifest ; exists ; 1987 ; Semiconductor Science and Technology Volume 2 ; 2 > 
@@ -3249,7 +3250,7 @@
     au < released ; crawling ; 2009 ; Semiconductor Science and Technology Volume 24 ; 24 > 
     au < released ; crawling ; 2010 ; Semiconductor Science and Technology Volume 25 ; 25 > 
     au < released ; crawling ; 2011 ; Semiconductor Science and Technology Volume 26 ; 26 > 
-    au < testing ; exists ; 2012 ; Semiconductor Science and Technology Volume 27 ; 27 > 
+    au < notReady ; exists ; 2012 ; Semiconductor Science and Technology Volume 27 ; 27 > 
 
   }
 
@@ -3264,6 +3265,7 @@
 
     param[journal_issn] = 0964-1726
     comment[param] = print issn preferred
+    comment[notReady] = low agreement
 
     au < manifest ; exists ; 1992 ; Smart Materials and Structures Volume 1 ; 1 > 
     au < manifest ; exists ; 1993 ; Smart Materials and Structures Volume 2 ; 2 > 
@@ -3285,7 +3287,7 @@
     au < released ; crawling ; 2009 ; Smart Materials and Structures Volume 18 ; 18 > 
     au < released ; crawling ; 2010 ; Smart Materials and Structures Volume 19 ; 19 > 
     au < released ; crawling ; 2011 ; Smart Materials and Structures Volume 20 ; 20 > 
-    au < testing ; exists ; 2012 ; Smart Materials and Structures Volume 21 ; 21 > 
+    au < notReady ; exists ; 2012 ; Smart Materials and Structures Volume 21 ; 21 > 
 
   }
 
@@ -3300,6 +3302,7 @@
 
     param[journal_issn] = 0953-2048
     comment[param] = print issn preferred
+    comment[notReady] = low agreement
 
     au < manifest ; exists ; 1988 ; Superconductor Science and Technology Volume 1 ; 1 > 
     au < manifest ; exists ; 1989 ; Superconductor Science and Technology Volume 2 ; 2 > 
@@ -3325,7 +3328,7 @@
     au < released ; crawling ; 2009 ; Superconductor Science and Technology Volume 22 ; 22 > 
     au < released ; crawling ; 2010 ; Superconductor Science and Technology Volume 23 ; 23 > 
     au < released ; crawling ; 2011 ; Superconductor Science and Technology Volume 24 ; 24 > 
-    au < testing ; exists ; 2012 ; Superconductor Science and Technology Volume 25 ; 25 > 
+    au < notReady ; exists ; 2012 ; Superconductor Science and Technology Volume 25 ; 25 > 
 	    
   }
 
