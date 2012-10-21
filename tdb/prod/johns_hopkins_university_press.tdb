@@ -122,9 +122,9 @@
     au < released ; 2007 ; American Journal of Philology Volume Volume 128 ; 128 >
     au < released ; 2008 ; American Journal of Philology Volume Volume 129 ; 129 >
     au < released ; 2009 ; American Journal of Philology Volume Volume 130 ; 130 >
-    au < testing ; 2010 ; American Journal of Philology Volume Volume 131 ; 131 >
+    au < ready ; 2010 ; American Journal of Philology Volume Volume 131 ; 131 >
     au < ready ; 2011 ; American Journal of Philology Volume Volume 132 ; 132 >
-    au < testing ; 2012 ; American Journal of Philology Volume Volume 133 ; 133 >
+    au < ready ; 2012 ; American Journal of Philology Volume Volume 133 ; 133 >
     
   }
 
@@ -215,7 +215,7 @@
     au < released ; 2009 ; Book History Volume 12 ; 12 >
     au < ready ; 2010 ; Book History Volume 13 ; 13 >
     au < ready ; 2011 ; Book History Volume 14 ; 14 >
-    au < testing ; 2012 ; Book History Volume 15 ; 15 >
+    au < ready ; 2012 ; Book History Volume 15 ; 15 >
     
   }
 
@@ -234,8 +234,8 @@
     au < released ; 2008 ; Bookbird: A Journal of International Children's Literature Volume 46 ; 46 >
     au < released ; 2009 ; Bookbird: A Journal of International Children's Literature Volume 47 ; 47 >
     au < released ; 2010 ; Bookbird: A Journal of International Children's Literature Volume 48 ; 48 >
-    au < testing ; 2011 ; Bookbird: A Journal of International Children's Literature Volume 49 ; 49 >
-    au < testing ; 2012 ; Bookbird: A Journal of International Children's Literature Volume 50 ; 50 >
+    au < ready ; 2011 ; Bookbird: A Journal of International Children's Literature Volume 49 ; 49 >
+    au < ready ; 2012 ; Bookbird: A Journal of International Children's Literature Volume 50 ; 50 >
 
   }
 
@@ -256,7 +256,7 @@
     au < released ; 2008 ; Bulletin of the Center for Children's Books Volume 62 ; 62 >
     au < released ; 2009 ; Bulletin of the Center for Children's Books Volume 63 ; 63 >
     au < testing ; 2010-2012 ; Bulletin of the Center for Children's Books Volume 64 ; 64 >
-    au < testing ; 2011-2012 ; Bulletin of the Center for Children's Books Volume 65 ; 65 >
+    au < ready ; 2011-2012 ; Bulletin of the Center for Children's Books Volume 65 ; 65 >
     
   }
 
@@ -318,7 +318,7 @@
     au < released ; 2008 ; Callaloo Volume 31 ; 31 >
     au < released ; 2009 ; Callaloo Volume 32 ; 32 >
     au < ready ; 2010 ; Callaloo Volume 33 ; 33 >
-    au < testing ; 2011 ; Callaloo Volume 34 ; 34 >
+    au < ready ; 2011 ; Callaloo Volume 34 ; 34 >
     au < ready ; 2012 ; Callaloo Volume 35 ; 35 >
     
   }
@@ -576,7 +576,7 @@
     attr[journal_id] = ff
     
     au < released ; 2010 ; Feminist Formations Volume 22 ; 22 >
-    au < testing ; 2011 ; Feminist Formations Volume 23 ; 23 >
+    au < ready ; 2011 ; Feminist Formations Volume 23 ; 23 >
     au < ready ; 2012 ; Feminist Formations Volume 24 ; 24 >
 
   }
@@ -651,7 +651,7 @@
     au < released ; 2009 ; The Hopkins Review Volume 2 ; 2 >
     au < released ; 2010 ; The Hopkins Review Volume 3 ; 3 >
     au < ready ; 2011 ; The Hopkins Review Volume 4 ; 4 >
-    au < testing ; 2012 ; The Hopkins Review Volume 5 ; 5 >
+    au < ready ; 2012 ; The Hopkins Review Volume 5 ; 5 >
 
   }
   
@@ -682,8 +682,8 @@
     au < released ; 2008 ; Human Rights Quarterly Volume 30 ; 30 >
     au < released ; 2009 ; Human Rights Quarterly Volume 31 ; 31 >
     au < ready ; 2010 ; Human Rights Quarterly Volume 32 ; 32 >
-    au < testing ; 2011 ; Human Rights Quarterly Volume 33 ; 33 >
-    au < testing ; 2012 ; Human Rights Quarterly Volume 34 ; 34 >
+    au < ready ; 2011 ; Human Rights Quarterly Volume 33 ; 33 >
+    au < ready ; 2012 ; Human Rights Quarterly Volume 34 ; 34 >
 
   }
 
@@ -709,10 +709,10 @@
     au < released ; 2006 ; Journal of Asian American Studies Volume 9 ; 9 >
     au < released ; 2007 ; Journal of Asian American Studies Volume 10 ; 10 >
     au < released ; 2008 ; Journal of Asian American Studies Volume 11 ; 11 >
-    au < testing ; 2009 ; Journal of Asian American Studies Volume 12 ; 12 >
+    au < ready ; 2009 ; Journal of Asian American Studies Volume 12 ; 12 >
     au < ready ; 2010 ; Journal of Asian American Studies Volume 13 ; 13 >
     au < ready ; 2011 ; Journal of Asian American Studies Volume 14 ; 14 >
-    au < testing ; 2012 ; Journal of Asian American Studies Volume 15 ; 15 >
+    au < ready ; 2012 ; Journal of Asian American Studies Volume 15 ; 15 >
 
   }
 
@@ -735,7 +735,7 @@
     au < released ; 2008 ; Journal of College Student Development Volume 49 ; 49 >
     au < released ; 2009 ; Journal of College Student Development Volume 50 ; 50 >
     au < ready ; 2010 ; Journal of College Student Development Volume 51 ; 51 >
-    au < testing ; 2011 ; Journal of College Student Development Volume 52 ; 52 >
+    au < ready ; 2011 ; Journal of College Student Development Volume 52 ; 52 >
     au < testing ; 2012 ; Journal of College Student Development Volume 53 ; 53 >
 
   }
