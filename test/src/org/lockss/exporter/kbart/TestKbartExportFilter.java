@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartExportFilter.java,v 1.4 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id: TestKbartExportFilter.java,v 1.5 2012-10-22 15:07:10 easyonthemayo Exp $
  */
 
 /*
@@ -40,11 +40,11 @@ import java.util.List;
 import java.util.Vector;
 
 import org.lockss.config.TdbTestUtil;
-import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering;
-import org.lockss.exporter.kbart.KbartExportFilter.PredefinedFieldOrdering;
+import org.lockss.exporter.kbart.KbartExportFilter.CustomColumnOrdering;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.test.LockssTestCase;
 import org.lockss.util.CollectionUtil;
+import org.lockss.exporter.kbart.KbartExportFilter.PredefinedColumnOrdering;
 
 /**
  * Test various types of export filter. Note that the testing includes a level of randomness 
@@ -118,8 +118,8 @@ public class TestKbartExportFilter extends LockssTestCase {
     log.info(String.format("Randomised setup:\n ordering: %s \n omitEmptyFields: %s\n", customOrder, omitEmptyFields));
     // Setup filters
     this.identityFilter = KbartExportFilter.identityFilter(titles);
-    this.filterIssnOnly = new KbartExportFilter(titles, PredefinedFieldOrdering.ISSN_ONLY, omitEmptyFields, showHealthRatings);
-    this.customFilter = new KbartExportFilter(titles, new CustomFieldOrdering(customOrder), omitEmptyFields, showHealthRatings);
+    this.filterIssnOnly = new KbartExportFilter(titles, KbartExportFilter.PredefinedColumnOrdering.ISSN_ONLY, omitEmptyFields, showHealthRatings);
+    this.customFilter = new KbartExportFilter(titles, CustomColumnOrdering.create(customOrder), omitEmptyFields, showHealthRatings);
     // Add filters to array
     this.testFilters = new KbartExportFilter[] {identityFilter, filterIssnOnly, customFilter};
   }
@@ -128,24 +128,24 @@ public class TestKbartExportFilter extends LockssTestCase {
   protected void tearDown() throws Exception {
     //super.tearDown();
   }
-  
-  
+
   public void testGetVisibleFieldOrder() {
     for (KbartExportFilter filter: testFilters) {
       // Calculate the visible fields (be careful to *copy* the field set)
       // Visible fields
-      EnumSet<Field> visFields = EnumSet.copyOf(filter.getFieldOrdering().getFields());
+      EnumSet<Field> visFields = EnumSet.copyOf(filter.getColumnOrdering().getFields());
       if (filter.isOmitEmptyFields()) {
 	//visFields.retainAll(filledFields);
 	visFields.removeAll(emptyFields);
       }
     
       // Calculate the ordered fields (be careful to *copy* the ordering)
-      List<Field> expectedVisibleFieldOrder = new Vector<Field>(filter.getFieldOrdering().getOrdering());
+      List<Field> expectedVisibleFieldOrder = new Vector<Field>(filter.getColumnOrdering().getOrderedFields());
       expectedVisibleFieldOrder.retainAll(visFields);
 
       // Test the order
-      assertEqualContent(expectedVisibleFieldOrder, filter.getVisibleFieldOrder());
+      assertEqualContent(expectedVisibleFieldOrder,
+          filter.getVisibleColumnOrdering().getOrderedFields());
     }
   }
 
@@ -167,7 +167,7 @@ public class TestKbartExportFilter extends LockssTestCase {
 
   public void testOmittedFieldsManually() {
     for (KbartExportFilter filter: testFilters) {
-      boolean notAllFields = filter.getFieldOrdering().getFields().size() != Field.getFieldSet().size();
+      boolean notAllFields = filter.getColumnOrdering().getFields().size() != Field.getFieldSet().size();
       assertEquals(notAllFields, filter.omittedFieldsManually());
     }
     // More specific tests
@@ -184,7 +184,7 @@ public class TestKbartExportFilter extends LockssTestCase {
 	continue;
       }
       // If any of the filter's ordering fields are in the emptyFields set, it should omit them.
-      EnumSet<Field> flds = EnumSet.copyOf(filter.getFieldOrdering().getFields());
+      EnumSet<Field> flds = EnumSet.copyOf(filter.getColumnOrdering().getFields());
       flds.retainAll(emptyFields);
       assertEquals(flds.size() > 0, filter.omittedEmptyFields());
     }
@@ -198,7 +198,7 @@ public class TestKbartExportFilter extends LockssTestCase {
     for (KbartExportFilter filter: testFilters) {
       List<String> vals = filter.getVisibleFieldValues(title1);
       // Expected order - that of the filter minus omittable fields
-      List<Field> order = new Vector<Field>( filter.getFieldOrdering().getOrdering() );
+      List<Field> order = new Vector<Field>( filter.getColumnOrdering().getOrderedFields() );
       if (filter.isOmitEmptyFields()) order.removeAll(emptyFields);
       // Check sizes
       assertEquals(order.size(), vals.size());
@@ -240,13 +240,15 @@ public class TestKbartExportFilter extends LockssTestCase {
    * @return
    */
   private boolean shouldOutputTitle(KbartTitle title, KbartExportFilter filter) {
+    EnumSet<Field> fields = filter.getVisibleColumnOrdering().getFields();
     // Does this filter include a field which differs between the titles?
-    boolean titlesDiffer = !CollectionUtil.isDisjoint(differingFields, filter.getVisibleFieldOrder());
+    boolean titlesDiffer = !CollectionUtil.isDisjoint(differingFields, fields);
     // Are range field included in the output?
-    boolean rangeFieldsIncluded = !CollectionUtil.isDisjoint(Field.rangeFields, filter.getVisibleFieldOrder());
+    boolean rangeFieldsIncluded = !CollectionUtil.isDisjoint(Field.rangeFields, fields);
     // Are id field included in the output?
-    boolean idFieldsIncluded= !CollectionUtil.isDisjoint(Field.idFields, filter.getVisibleFieldOrder());
-    return title==title1  || titlesDiffer || rangeFieldsIncluded || (!rangeFieldsIncluded && !idFieldsIncluded);
+    boolean idFieldsIncluded= !CollectionUtil.isDisjoint(Field.idFields, fields);
+    return title==title1  || titlesDiffer || rangeFieldsIncluded ||
+        (!rangeFieldsIncluded && !idFieldsIncluded);
   }
   
   

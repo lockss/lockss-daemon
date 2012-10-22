@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.24 2012-09-03 16:39:09 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.25 2012-10-22 15:07:09 easyonthemayo Exp $
  */
 
 /*
@@ -212,19 +212,17 @@ public abstract class KbartExporter {
     // Use the filter to sort the titles for custom output
     filter.sortTitlesByFirstTwoFields();
     // Set cols based on filter
-    KbartExportFilter.FieldOrdering ordering = filter.getFieldOrdering();
+    KbartExportFilter.ColumnOrdering ordering = filter.getColumnOrdering();
   }
 
   /**
-   * Return a list of field labels post-filtering. This will not include
-   * the labels of omitted fields, but will include any label of a custom
-   * constant column.
-   * @return a list of field labels
+   * Return a list of column labels post-filtering. This will not include
+   * the labels of omitted fields, but will include any labels of custom
+   * constant columns.
+   * @return a list of column labels
    */
-  protected List<String> getFieldLabels() {
-    List<String> labs = Field.getLabels(filter.getVisibleFieldOrder());
-    // If there is a custom column, insert it
-    filter.addConstantFieldIfPresent(labs);
+  protected List<String> getColumnLabels() {
+    List<String> labs = filter.getVisibleColumnOrdering().getOrderedLabels();
     return labs;
   }
 
@@ -288,7 +286,7 @@ public abstract class KbartExporter {
       }
       exportCount++;
       emitRecord(filter.getVisibleFieldValues(title));
-    } 
+    }
     // flush writer and all its underlying streams
     printWriter.flush();
   }
@@ -498,7 +496,7 @@ public abstract class KbartExporter {
     return filter.omittedFieldsManually() ?
         String.format("Manually omitted columns: (%s)",
             StringUtil.separatedString(
-                EnumSet.complementOf(filter.getFieldOrdering().getFields()), ", "
+                EnumSet.complementOf(filter.getColumnOrdering().getFields()), ", "
             )
         ) : "";
   }
@@ -564,9 +562,9 @@ public abstract class KbartExporter {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, 
           KbartExportFilter filter) {
-	KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this,
+        KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this,
             SeparatedValuesKbartExporter.SEPARATOR_TAB);
-	kbe.setFilter(filter);
+        kbe.setFilter(filter);
 	return kbe;
       }
     },
@@ -579,7 +577,7 @@ public abstract class KbartExporter {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, 
           KbartExportFilter filter) {
-        KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this, 
+        KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this,
             SeparatedValuesKbartExporter.SEPARATOR_COMMA);
         kbe.setFilter(filter);
         return kbe;

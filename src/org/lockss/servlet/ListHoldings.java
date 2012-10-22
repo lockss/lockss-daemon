@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.44 2012-10-16 11:55:26 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.45 2012-10-22 15:07:09 easyonthemayo Exp $
  */
 
 /*
@@ -50,9 +50,7 @@ import org.lockss.exporter.kbart.*;
 import org.lockss.exporter.kbart.KbartExporter.OutputFormat;
 import org.lockss.exporter.kbart.ReportFormat.ReportDataFormat;
 import org.lockss.exporter.kbart.CoverageNotesFormat;
-import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering;
-import org.lockss.exporter.kbart.KbartExportFilter.FieldOrdering;
-import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering.CustomFieldOrderingException;
+import static org.lockss.exporter.kbart.KbartExportFilter.*;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
@@ -177,7 +175,7 @@ public class ListHoldings extends LockssServlet {
   static final CoverageNotesFormat COVERAGE_NOTES_DEFAULT = CoverageNotesFormat.YEAR_VOLUME;
 
   /** Default field selection and ordering is KBART. */
-  static final FieldOrdering FIELD_ORDERING_DEFAULT = CustomFieldOrdering.getDefaultOrdering();
+  static final ColumnOrdering FIELD_ORDERING_DEFAULT = CustomColumnOrdering.getDefaultOrdering();
   /** Default approach to omitting empty fields - inherited from the exporter base class. */
   static final Boolean OMIT_EMPTY_COLUMNS_BY_DEFAULT = KbartExporter.omitEmptyFieldsByDefault;
   /** Default approach to omitting header row is false (do not omit). */
@@ -200,7 +198,7 @@ public class ListHoldings extends LockssServlet {
    * maintained while the servlet is handling a request. */
   private String lastManualOrdering;
   /** Manually specified custom field list. */
-  private FieldOrdering customFieldOrdering;
+  private ColumnOrdering customColumnOrdering;
   /** Whether to do an export - set based on the submitted parameters. */
   private boolean doExport = false;
   // --------------------------------------------------------------------------
@@ -219,7 +217,7 @@ public class ListHoldings extends LockssServlet {
     errMsg = null;
     statusMsg = null;
     lastManualOrdering = null;
-    customFieldOrdering = null;
+    customColumnOrdering = null;
     doExport = false;
     // Reset export parameters to defaults
     selectedScope = ContentScope.DEFAULT_SCOPE;
@@ -334,7 +332,7 @@ public class ListHoldings extends LockssServlet {
     // Set lastManualOrdering unless a reset was requested, in which case we need the old value.
     //if (!action.equals(ACTION_CUSTOM_RESET)) lastManualOrdering = manualOrdering;
     // Set custom ordering to default
-    this.customFieldOrdering = FIELD_ORDERING_DEFAULT;
+    this.customColumnOrdering = FIELD_ORDERING_DEFAULT;
     
     // ---------- Interpret parameters ----------
     // Is this a custom output? Show custom options or apply to an export.
@@ -364,28 +362,28 @@ public class ListHoldings extends LockssServlet {
       } else if (action.equals(ACTION_CUSTOM) ||
                  action.equals(ACTION_CUSTOM_OK)) {
         // Try and parse the manual ordering into a list of valid field names
-        setCustomFieldOrdering(manualOrdering);
+        setCustomColumnOrdering(manualOrdering);
         if (doExport) lastManualOrdering = manualOrdering;
       }
       // Cancel the customisation and set the ordering to the previously
       // applied value (from the session)
       else if (action.equals(ACTION_CUSTOM_CANCEL)) {
-        setCustomFieldOrdering(manualOrdering);
+        setCustomColumnOrdering(manualOrdering);
         if (doExport) manualOrdering = lastManualOrdering;
         omitEmptyColumns = customOpts.isOmitEmptyColumns();
         omitHeader = customOpts.isOmitHeader();
       }
       // Reset the ordering customisation to the previous value
       else if (action.equals(ACTION_CUSTOM_RESET)) {
-        //customFieldOrdering = FIELD_ORDERING_DEFAULT;
-        setCustomFieldOrdering(lastManualOrdering);
+        //customFieldOrdering = COLUMN_ORDERING_DEFAULT;
+        setCustomColumnOrdering(lastManualOrdering);
         //omitEmptyColumns = OMIT_EMPTY_COLUMNS_BY_DEFAULT;
       }
       
       // Create an object encapsulating the custom HTML options, and store it
       // in the session.
       customOpts = new KbartCustomOptions(omitEmptyColumns, omitHeader,
-          showHealthRatings, customFieldOrdering);
+          showHealthRatings, customColumnOrdering);
 
       putSessionCustomOpts(customOpts);
     }
@@ -423,12 +421,12 @@ public class ListHoldings extends LockssServlet {
    * @param ordering
    * @return whether the set succeeded
    */
-  private boolean setCustomFieldOrdering(String ordering) {
+  private boolean setCustomColumnOrdering(String ordering) {
     boolean success = false;
     try {
-      this.customFieldOrdering = new CustomFieldOrdering(ordering);
+      this.customColumnOrdering = new CustomColumnOrdering(ordering);
       success = true;
-    } catch (CustomFieldOrderingException e) {
+    } catch (CustomColumnOrdering.CustomColumnOrderingException e) {
       errMsg = e.getLocalizedMessage();
       success = false;
       doExport = false;
@@ -452,8 +450,7 @@ public class ListHoldings extends LockssServlet {
                                        ContentScope scope, ContentType type,
                                        ReportDataFormat reportDataFormat,
                                        CoverageNotesFormat coverageNotesFormat) {
-
-    // The following counts the number of TdbTitles informing the export, by 
+    // The following counts the number of TdbTitles informing the export, by
     // processing the list of AUs in the given scope. It is provided as 
     // information in the export, but is actually a little meaningless and 
     // should probably be omitted.
@@ -494,7 +491,7 @@ public class ListHoldings extends LockssServlet {
     // Create a filter
     KbartExportFilter filter;
     if (opts !=null) {
-      filter = new KbartExportFilter(titles, opts.getFieldOrdering(),
+      filter = new KbartExportFilter(titles, opts.getColumnOrdering(),
           opts.isOmitEmptyColumns(), opts.isOmitHeader(),
           opts.isShowHealthRatings());
     } else {
@@ -510,8 +507,7 @@ public class ListHoldings extends LockssServlet {
     if (kexp.getOutputFormat().isHtml()) {
       kexp.setHtmlCustomForm(makeHtmlCustomForm());
     }
-
-    return kexp;    
+    return kexp;
   }
   
   /**
@@ -536,7 +532,7 @@ public class ListHoldings extends LockssServlet {
       // Whether the output will include any range fields; if there is no custom 
       // ordering, then the default will be used, which will include range fields
       boolean rangeFieldsIncluded = KbartExportFilter.includesRangeFields(
-	  getSessionCustomOpts().getFieldOrdering().getOrdering());
+	  getSessionCustomOpts().getColumnOrdering().getOrderedFields());
       Collection<ArchivalUnit> aus = TdbUtil.getAus(scope);
       Map<TdbTitle, List<ArchivalUnit>> map = TdbUtil.mapTitlesToAus(aus);
       return KbartTitleIterator.getKbartTitleIterator(map.values().iterator(),
@@ -573,7 +569,7 @@ public class ListHoldings extends LockssServlet {
       // Whether the output will include any range fields; if there is no custom
       // ordering, then the default will be used, which will include range fields
       boolean rangeFieldsIncluded = KbartExportFilter.includesRangeFields(
-          getSessionCustomOpts().getFieldOrdering().getOrdering());
+          getSessionCustomOpts().getColumnOrdering().getFields());
       if (scope == ContentScope.COLLECTED && useMetadataForPreserved()) {
         // try listing collected content from the metadata database first;
         // list of bibliographic items is assumed to be sorted by ISSN
@@ -1045,10 +1041,10 @@ public class ListHoldings extends LockssServlet {
     /*
     form.add("<br/>Choose a field set:<br/>");
     // Field ordering options (radio buttons)
-    for (PredefinedFieldOrdering order: PredefinedFieldOrdering.values()) {
+    for (PredefinedColumnOrdering order: PredefinedColumnOrdering.values()) {
       form.add( 
 	  ServletUtil.radioButton(this, KEY_CUSTOM_ORDERING, order.name(), 
-	      order.displayName+" <span style=\"font-style:italic;font-size:small\">("+order.description+")</span><br/>", order==FIELD_ORDERING_DEFAULT)
+	      order.displayName+" <span style=\"font-style:italic;font-size:small\">("+order.description+")</span><br/>", order==COLUMN_ORDERING_DEFAULT)
       );
     }
      */
@@ -1070,7 +1066,7 @@ public class ListHoldings extends LockssServlet {
     int taLines = Field.values().length+1;
     tab.add(i18n.tr("Field ordering")+"<br/>");
     tab.add(new TextArea(KEY_CUSTOM_ORDERING_LIST, 
-        getOrderingAsCustomFieldList(opts.getFieldOrdering())).setSize(taCols, taLines));
+        getOrderingAsCustomFieldList(opts.getColumnOrdering())).setSize(taCols, taLines));
     // Omit empty columns option
     tab.add("<br/>");
     tab.add(ServletUtil.checkbox(this, KEY_OMIT_EMPTY_COLS,
@@ -1110,18 +1106,17 @@ public class ListHoldings extends LockssServlet {
   }
 
 
-
   /**
    * Turn the selected ordering into a string containing a separated list of
    * fields. Includes any custom constant field, as it uses the string labels
    * rather than the Field list.
    * @return
    */
-  private static String getOrderingAsCustomFieldList(FieldOrdering fo) {
-    return StringUtils.join(fo.getOrderedLabels(), 
-	CustomFieldOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR);
-    /*return StringUtils.join(fo.getOrdering(), 
-	CustomFieldOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR);*/
+  private static String getOrderingAsCustomFieldList(ColumnOrdering fo) {
+    return StringUtils.join(fo.getFields(),
+	CustomColumnOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR);
+    /*return StringUtils.join(fo.getOrderedFields(),
+	CustomColumnOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR);*/
   }
   
   /**
@@ -1175,7 +1170,7 @@ public class ListHoldings extends LockssServlet {
     form.add(new Input(Input.Hidden, KEY_TITLE_SCOPE, selectedScope.name()));
     form.add(new Input(Input.Hidden, KEY_TITLE_TYPE, selectedType.name()));
     form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST,
-        getOrderingAsCustomFieldList(opts.getFieldOrdering())));
+        getOrderingAsCustomFieldList(opts.getColumnOrdering())));
     form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS,
         htmlInputTruthValue(opts.isOmitEmptyColumns())));
     form.add(new Input(Input.Hidden, KEY_OMIT_HEADER,

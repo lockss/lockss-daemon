@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.12 2012-01-16 17:46:10 pgust Exp $
+ * $Id: TdbPublisher.java,v 1.13 2012-10-22 15:07:09 easyonthemayo Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.12 2012-01-16 17:46:10 pgust Exp $
+ * @version $Id: TdbPublisher.java,v 1.13 2012-10-22 15:07:09 easyonthemayo Exp $
  */
 public class TdbPublisher {
   /**
@@ -268,7 +268,7 @@ public class TdbPublisher {
   /**
    * Return a collection of TdbAus for this publisher that match the ISBN.
    * 
-   * @return a colleciton of TdbAus for this publisher that match the ISBN
+   * @return a collection of TdbAus for this publisher that match the ISBN
    */
   public Collection<TdbAu> getTdbAusByIsbn(String isbn) {
     Collection<TdbAu> tdbAus = new ArrayList<TdbAu>();

@@ -1,5 +1,5 @@
 /*
- * $Id: ReportFormat.java,v 1.6 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: ReportFormat.java,v 1.7 2012-10-22 15:07:09 easyonthemayo Exp $
  */
 
 /*
@@ -257,29 +257,29 @@ public class ReportFormat {
         "coverage_notes field.", true),
     // SFX is a special variation on the one_per_line, with a specific coverage_notes format
     SFX("SFX DataLoader", "Suitable for import into ExLibris SFX.", true,
-        KbartExportFilter.PredefinedFieldOrdering.SFX,
+        KbartExportFilter.PredefinedColumnOrdering.SFX,
         CoverageNotesFormat.SFX, KbartExporter.OutputFormat.TSV) {
       @Override
       public void overrideCustomOptions(KbartCustomOptions opts) {
         opts.setOmitHeader(true);
-        opts.setFieldOrdering(getFieldOrdering());
+        opts.setColumnOrdering(getColumnOrdering());
       }
     }
     ;
 
     private ReportDataFormat(String label, String footnote, boolean oneLinePerTitle) {
        this(label, footnote, oneLinePerTitle, null, null, null);
-      //KbartExportFilter.CustomFieldOrdering.getDefaultOrdering()
+      //KbartExportFilter.CustomColumnOrdering.getDefaultOrdering()
     }
     private ReportDataFormat(String label, String footnote,
                              boolean oneLinePerTitle,
-                             KbartExportFilter.FieldOrdering fieldOrdering,
+                             KbartExportFilter.ColumnOrdering columnOrdering,
                              CoverageNotesFormat preferredCoverageNotesFormat,
                              KbartExporter.OutputFormat preferredOutputFormat) {
       this.label = label;
       this.footnote = footnote;
       this.oneLinePerTitle = oneLinePerTitle;
-      this.fieldOrdering = fieldOrdering;
+      this.columnOrdering = columnOrdering;
       this.preferredCoverageNotesFormat = preferredCoverageNotesFormat;
       this.preferredOutputFormat = preferredOutputFormat;
     }
@@ -292,7 +292,7 @@ public class ReportFormat {
     private final boolean oneLinePerTitle;
     /** A definition of a field list and ordering to be enforced for this report
      * format.The default is the export filter's default field ordering. */
-    private final KbartExportFilter.FieldOrdering fieldOrdering;
+    private final KbartExportFilter.ColumnOrdering columnOrdering;
 
     private final CoverageNotesFormat preferredCoverageNotesFormat;
     private final KbartExporter.OutputFormat preferredOutputFormat;
@@ -303,10 +303,10 @@ public class ReportFormat {
     protected boolean isOneLinePerTitle() { return oneLinePerTitle;}
     /** Whether the format has a predefined field ordering which should be
      * respected. */
-    public boolean hasFieldOrdering() { return fieldOrdering!=null; }
+    public boolean hasFieldOrdering() { return columnOrdering !=null; }
 
     /** Return the predefined field ordering of the format; null if there is none. */
-    public KbartExportFilter.FieldOrdering getFieldOrdering() { return fieldOrdering; }
+    public KbartExportFilter.ColumnOrdering getColumnOrdering() { return columnOrdering; }
     /** Whether the format has a preferred coverage notes format which should be
      * respected. */
     public boolean hasCoverageNotesFormat() { return preferredCoverageNotesFormat!=null; }

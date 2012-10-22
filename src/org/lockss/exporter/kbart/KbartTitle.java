@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitle.java,v 1.16 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.17 2012-10-22 15:07:09 easyonthemayo Exp $
  */
 
 /*
@@ -534,14 +534,35 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
 	for (Field f: fields) add(f.label);
       }};
     }
-        
+
     /**
      * Return the EnumSet containing all enums from first to last.
-     * 
+     *
      * @return an EnumSet
      */
     public static EnumSet<Field> getFieldSet() {
       return EnumSet.allOf(Field.class);
+    }
+
+    /**
+     * Return a collection containing all the named enums. If any names don't
+     * match fields, they will be silently ignored. Case is unimportant.
+     *
+     * @return a collection of fields
+     */
+    public static Collection<Field> getFields(final Collection<String> fieldNames) {
+      return new ArrayList<Field>() {{
+        for (String s: fieldNames)
+          try { add(valueOf(s.toUpperCase())); } catch (Exception e) {/*Don't add anything*/}
+      }};
+    }
+
+    /**
+     * Return the Field's lower case label as the string representation.
+     * @return
+     */
+    public String toString() {
+      return label;
     }
 
     /**

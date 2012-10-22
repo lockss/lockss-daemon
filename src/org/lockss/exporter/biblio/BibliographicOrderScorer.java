@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicOrderScorer.java,v 1.4 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id: BibliographicOrderScorer.java,v 1.5 2012-10-22 15:07:09 easyonthemayo Exp $
  */
 
 /*
@@ -636,6 +636,11 @@ public final class BibliographicOrderScorer {
    * For example, "s1-4" and "s1-15" are considered to be generally increasing.
    * The final token can be Roman or Arabic as we use
    * {@link NumberUtil.areIntegersConsecutive}.
+   * <p>
+   * XXX Note: This method can throw NPEs and index out of bounds Exceptions if the
+   * servlet is interrupted in the browser and then resubmitted. It seems the
+   * matcher gets confused.
+   * </p>
    *
    * @param first a String representing the first volume
    * @param second a String representing the subsequent volume
@@ -661,9 +666,21 @@ public final class BibliographicOrderScorer {
         return mr1.group(1).equals(mr2.group(1)) &&
             mr1.group(3).equals(mr2.group(3)) &&
             areValuesIncreasing(mr1.group(2), mr2.group(2));
+
+        /*try {
+        // If the outer tokens match, test the consecutivity of the number tokens
+        return mr1.group(1).equals(mr2.group(1)) &&
+            mr1.group(3).equals(mr2.group(3)) &&
+            areValuesIncreasing(mr1.group(2), mr2.group(2));
+        } catch (NullPointerException e) {
+          // Record and rethrow
+          log.debug("NPE while using matcher: "+matcher);
+          log.debug("Match result 1: "+mr1+" groups "+mr1.groups());
+          log.debug("Match result 2: "+mr2+" groups "+mr2.groups());
+          throw e;
+        }*/
       }
     }
-
     // At least one string doesn't match
     return false;
   }

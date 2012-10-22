@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartExporter.java,v 1.5 2011-08-19 10:36:18 easyonthemayo Exp $
+ * $Id: TestKbartExporter.java,v 1.6 2012-10-22 15:07:10 easyonthemayo Exp $
  */
 
 /*
@@ -39,9 +39,6 @@ import java.util.Vector;
 
 import org.apache.commons.io.output.NullOutputStream;
 import org.lockss.config.TdbTestUtil;
-import org.lockss.exporter.kbart.KbartExportFilter.PredefinedFieldOrdering;
-import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering;
-import org.lockss.exporter.kbart.KbartExporter.OutputFormat;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.test.LockssTestCase;
 import org.lockss.util.StringUtil;
@@ -100,7 +97,7 @@ public class TestKbartExporter extends LockssTestCase {
     this.omitEmptyFields = false;
     this.showHealthRatings = false;
     this.filter = new KbartExportFilter(titles, 
-	PredefinedFieldOrdering.ISSN_ONLY, omitEmptyFields, showHealthRatings);
+	KbartExportFilter.PredefinedColumnOrdering.ISSN_ONLY, omitEmptyFields, showHealthRatings);
     kb.setFilter(filter);
     kb.export(new NullOutputStream());
     assertEquals("Number of titles does not match export count.", 
@@ -117,7 +114,7 @@ public class TestKbartExporter extends LockssTestCase {
     this.omitEmptyFields = true;
     this.showHealthRatings = false;
     this.filter = new KbartExportFilter(titles, 
-	new CustomFieldOrdering(ordering), omitEmptyFields, showHealthRatings);
+        KbartExportFilter.CustomColumnOrdering.create(ordering), omitEmptyFields, showHealthRatings);
     kb.setFilter(filter);
     kb.export(new NullOutputStream());
     assertEquals("Number of titles does not match export count.", 
@@ -176,13 +173,13 @@ public class TestKbartExporter extends LockssTestCase {
 
     // Should have same num of values as the ordering without the empties,
     // if omitEmptyFields is on
-    EnumSet<Field> flds = EnumSet.copyOf(filter.getFieldOrdering().getFields());
+    EnumSet<Field> flds = EnumSet.copyOf(filter.getColumnOrdering().getFields());
     if (omitEmptyFields) flds.removeAll(filter.getEmptyFields());
     assertEquals(showHealthRatings ? flds.size()+1 : flds.size(), vals.size());
     
     // Check the field values in the order specified in the filter
     int i = 0;
-    for (Field f : filter.getFieldOrdering().getOrdering()) {
+    for (Field f : filter.getColumnOrdering().getOrderedFields()) {
       String s = title.getField(f);
       if (omitEmptyFields && StringUtil.isNullString(s)) continue;
       assertEquals(vals.get(i++), s);

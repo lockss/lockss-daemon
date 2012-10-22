@@ -1,5 +1,5 @@
 /*
- * $Id: KbartCustomOptions.java,v 1.4 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: KbartCustomOptions.java,v 1.5 2012-10-22 15:07:09 easyonthemayo Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class KbartCustomOptions implements Serializable {
   private boolean omitHeader;
   private boolean showHealthRatings;
   //private boolean oneTitlePerLine;
-  private KbartExportFilter.FieldOrdering fieldOrdering;
+  private KbartExportFilter.ColumnOrdering columnOrdering;
   //private static boolean DEFAULT_oneTitlePerLine = false; // title-per-line is not KBART
 
   /*public KbartCustomOptions(boolean omit, boolean health, boolean titlePerLine,
@@ -58,11 +58,11 @@ public class KbartCustomOptions implements Serializable {
 
   public KbartCustomOptions(boolean omitEmptyColumns, boolean omitHeader,
                             boolean health,
-                            KbartExportFilter.FieldOrdering ord) {
+                            KbartExportFilter.ColumnOrdering ord) {
     this.omitEmptyColumns = omitEmptyColumns;
     this.omitHeader = omitHeader;
     this.showHealthRatings = health;
-    this.fieldOrdering = ord;
+    this.columnOrdering = ord;
   }
 
   public static KbartCustomOptions getDefaultOptions() {
@@ -71,7 +71,7 @@ public class KbartCustomOptions implements Serializable {
         KbartExporter.omitHeaderRowByDefault,
         KbartExporter.showHealthRatingsByDefault,
         //DEFAULT_oneTitlePerLine,
-        KbartExportFilter.CustomFieldOrdering.getDefaultOrdering()
+        KbartExportFilter.CustomColumnOrdering.getDefaultOrdering()
     );
   }
 
@@ -107,12 +107,12 @@ public class KbartCustomOptions implements Serializable {
     this.oneTitlePerLine= titlePerLine;
   }*/
 
-  public KbartExportFilter.FieldOrdering getFieldOrdering() {
-    return fieldOrdering;
+  public KbartExportFilter.ColumnOrdering getColumnOrdering() {
+    return columnOrdering;
   }
 
-  public void setFieldOrdering(KbartExportFilter.FieldOrdering fieldOrdering) {
-    this.fieldOrdering = fieldOrdering;
+  public void setColumnOrdering(KbartExportFilter.ColumnOrdering columnOrdering) {
+    this.columnOrdering = columnOrdering;
   }
 
 }

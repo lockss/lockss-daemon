@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartExportFilterCustomFieldOrdering.java,v 1.2 2012-10-16 11:55:26 easyonthemayo Exp $
+ * $Id: TestKbartExportFilterCustomFieldOrdering.java,v 1.3 2012-10-22 15:07:10 easyonthemayo Exp $
  */
 
 /*
@@ -34,31 +34,47 @@ package org.lockss.exporter.kbart;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.EnumSet;
 import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
-import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering;
+import static org.lockss.exporter.kbart.KbartExportFilter.*;
 import org.lockss.exporter.kbart.KbartTitle.Field;
+import static org.lockss.exporter.kbart.KbartTitle.Field.*;
 
-import junit.framework.TestCase;
+import org.lockss.test.LockssTestCase;
 
-public class TestKbartExportFilterCustomFieldOrdering extends TestCase {
+public class TestKbartExportFilterCustomFieldOrdering extends LockssTestCase {
 
+  // ------------------------------------------------
+  // Some fields
   List<Field> someFields = Arrays.asList(
 	Field.COVERAGE_NOTES, Field.PUBLISHER_NAME, Field.ONLINE_IDENTIFIER
   );
+
+  // ------------------------------------------------
+  // Some fields represented as strings, with a quoted constant column
   String someFieldsStr = StringUtils.join(
-      someFields, CustomFieldOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR
+      someFields, CustomColumnOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR
   ).toLowerCase();
-  
-  CustomFieldOrdering cfo, cfoStr;
+
+  // ------------------------------------------------
+  // Some strings and columns, with the same contents
+  List<String> someStrings = Arrays.asList(
+      ONLINE_IDENTIFIER.toString(),
+      TITLE_URL.toString(),
+      "\"QUOTED\""
+  );
+  List<ReportColumn> someColumns = ReportColumn.fromStrings(someStrings);
+
+  CustomColumnOrdering cfo, cfoOneStr, cfoStr, cfoCol;
 
   @Override
   protected void setUp() throws Exception {
     super.setUp();
-    cfo = new CustomFieldOrdering(someFields);
-    cfoStr = new CustomFieldOrdering(someFieldsStr);
+    cfo = CustomColumnOrdering.create(someFields) ;
+    cfoOneStr = new CustomColumnOrdering(someFieldsStr);
+    cfoStr = CustomColumnOrdering.createUnchecked(someStrings);
+    cfoCol = new CustomColumnOrdering(someColumns, ReportColumn.getFields(someColumns));
   }
 
   @Override
@@ -66,42 +82,57 @@ public class TestKbartExportFilterCustomFieldOrdering extends TestCase {
     super.tearDown();
   }
 
-  
+
   public final void testCustomFieldOrderingListOfField() {
     // Check the fields by converting back
-    assertEquals(someFields, cfo.getOrdering());
+    assertEquals(someFields, cfo.getOrderedFields());
+    assertSameElements(someFields, cfo.getFields());
+  }
+
+  public final void testCustomFieldOrderingListOfStrings() {
+    // XXX cfoStr: Converting fields back to the string?
+    //assertIsomorphic(someStrings, cfoStr.getOrderedColumns());
+    assertIsomorphic(Field.getFields(someStrings), cfoStr.getOrderedFields());
+    assertIsomorphic(someColumns, ReportColumn.fromStrings(cfoStr.getOrderedLabels()));
+    // Check that the fields present in the labels match the set of fields
+    assertSameElements(Field.getFields(cfoStr.getOrderedLabels()), cfoStr.getFields());
+  }
+
+  public final void testCustomFieldOrderingListOfColumns() {
+    assertIsomorphic(someColumns, cfoCol.getOrderedColumns());
+    assertIsomorphic(Field.getFields(someStrings), cfoCol.getOrderedFields());
+    assertIsomorphic(someColumns, ReportColumn.fromStrings(cfoCol.getOrderedLabels()));
+    // Check that the fields present in the labels match the set of fields
+    assertSameElements(Field.getFields(cfoCol.getOrderedLabels()), cfoCol.getFields());
   }
 
   public final void testCustomFieldOrderingString() {
     // Check the fields by converting back
-    List<Field> fs = cfoStr.getOrdering();
+    List<Field> fs = cfoOneStr.getOrderedFields();
     assertEquals(someFields, new ArrayList<Field>(fs));
-    assertEquals(someFieldsStr, 
-	StringUtils.join(fs, CustomFieldOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR).toLowerCase()
-    );
   }
 
   public final void testGetFields() {
     // Check that the orderings created in different ways contain 
     // the same fields in the same order.
-    assertEquals(cfo.getFields(), cfoStr.getFields());
+    assertEquals(cfo.getFields(), cfoOneStr.getFields());
   }
 
   public final void testGetOrdering() {
     // Check that the orderings created in different ways contain 
     // the same fields in the same order.
-    assertEquals(cfo.getOrdering(), cfoStr.getOrdering());
+    assertEquals(cfo.getOrderedFields(), cfoOneStr.getOrderedFields());
   }
 
   public final void testGetOrderedLabels() {
     // Check that the orderings created in different ways contain 
     // the same fields in the same order.
-    assertEquals(cfo.getOrderedLabels(), cfoStr.getOrderedLabels());    
+    assertEquals(cfo.getOrderedLabels(), cfoOneStr.getOrderedLabels());
   }
 
   public final void testToString() {
     // Check that the orderings created in different ways resolve to the same strings
-    assertEquals(cfo.toString(), cfoStr.toString());
+    assertEquals(cfo.toString(), cfoOneStr.toString());
   }
 
 }

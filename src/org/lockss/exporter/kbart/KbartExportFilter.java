@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExportFilter.java,v 1.14 2012-10-16 11:55:26 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.15 2012-10-22 15:07:09 easyonthemayo Exp $
  */
 
 /*
@@ -35,15 +35,12 @@ package org.lockss.exporter.kbart;
 import java.util.*;
 
 import org.apache.commons.collections.comparators.ComparatorChain;
-import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
-import org.apache.derby.iapi.services.io.ArrayUtil;
 import org.lockss.config.TdbUtil.ContentScope;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import static org.lockss.exporter.kbart.KbartTitle.Field.*;
 
 import org.lockss.util.CollectionUtil;
-import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
@@ -94,11 +91,11 @@ public class KbartExportFilter {
       KbartExporter.omitHeaderRowByDefault;
   public static final boolean SHOW_HEALTH_RATINGS_DEFAULT =
       KbartExporter.showHealthRatingsByDefault;
-  public static final PredefinedFieldOrdering FIELD_ORDERING_DEFAULT =
-      PredefinedFieldOrdering.KBART;
+  public static final PredefinedColumnOrdering COLUMN_ORDERING_DEFAULT =
+      PredefinedColumnOrdering.KBART;
 
   public static final String HEALTH_FIELD_LABEL = "Health";
-  
+
   /** 
    * A list of the fields that indicate range information. If any of these is 
    * visible it is sensible to show multiple ranges for a title. 
@@ -131,8 +128,8 @@ public class KbartExportFilter {
    */
   private boolean idFieldsIncludedInDisplay = true;
   
-  /** An ordering of the fields that should be displayed. */
-  private final FieldOrdering fieldOrdering;
+  /** An ordering of the columns that should be displayed. */
+  private final ColumnOrdering columnOrdering;
   /** The titles which will be filtered. */  
   private final List<KbartTitle> titles;
 
@@ -152,8 +149,14 @@ public class KbartExportFilter {
    * The filtered list of fields which will be shown. This is the field 
    * ordering of this filter, minus any empty fields if 
    * <code>omitEmptyFields</code> is set.
-   */  
-  private final List<Field> visibleFieldOrder;
+   */
+
+  /**
+   * The filtered list of columns which will be shown. This is the specified
+   * ordering of this filter, minus any empty fields if
+   * <code>omitEmptyFields</code> is set.
+   */
+  private ColumnOrdering visibleColumnOrdering;
 
   /**
    * Make an identity filter on the title set. This uses the default KBART 
@@ -162,17 +165,17 @@ public class KbartExportFilter {
    * @return a filter with pure KBART settings
    */
   public static KbartExportFilter identityFilter(List<KbartTitle> titles) {
-    return new KbartExportFilter(titles, PredefinedFieldOrdering.KBART, false, false);
+    return new KbartExportFilter(titles, PredefinedColumnOrdering.KBART, false, false);
   }
  
   /**
-   * Whether there are fields included in the given list which provide
+   * Whether there are fields included in the given set which provide
    * range information for a title. 
-   * @param fields a list of the fields to check  
+   * @param fields a set of fields to check
    * @return whether the list includes any range fields
    */
-  public static boolean includesRangeFields(List<Field> fields) {
-    return !CollectionUtil.isDisjoint(fields, rangeFields); 
+  public static boolean includesRangeFields(Set<Field> fields) {
+    return !CollectionUtil.isDisjoint(fields, rangeFields);
   }
 
   /**
@@ -182,7 +185,7 @@ public class KbartExportFilter {
    * @return a filter with default settings
    */
   public KbartExportFilter(List<KbartTitle> titles) {
-    this(titles, FIELD_ORDERING_DEFAULT, OMIT_EMPTY_FIELDS_DEFAULT,
+    this(titles, COLUMN_ORDERING_DEFAULT, OMIT_EMPTY_FIELDS_DEFAULT,
         OMIT_HEADER_ROW_BY_DEFAULT, SHOW_HEALTH_RATINGS_DEFAULT);
   }
   
@@ -198,7 +201,7 @@ public class KbartExportFilter {
    * @param titles the titles to be exported
    * @param ordering an ordering to impose on the fields of each title
    */
-  public KbartExportFilter(List<KbartTitle> titles, FieldOrdering ordering) {
+  public KbartExportFilter(List<KbartTitle> titles, ColumnOrdering ordering) {
     this(titles, ordering, OMIT_EMPTY_FIELDS_DEFAULT,
         OMIT_HEADER_ROW_BY_DEFAULT, SHOW_HEALTH_RATINGS_DEFAULT);
   }
@@ -210,10 +213,10 @@ public class KbartExportFilter {
    * ratings.
    *
    * @param titles the titles to be exported
-   * @param ordering an ordering to impose on the fields of each title
+   * @param ordering an ordering to impose on the columns of each title
    * @param omitEmptyFields whether to omit empty field columns from the output
    */
-  public KbartExportFilter(List<KbartTitle> titles, FieldOrdering ordering,
+  public KbartExportFilter(List<KbartTitle> titles, ColumnOrdering ordering,
                            boolean omitEmptyFields, boolean omitHeader) {
     this(titles, ordering, omitEmptyFields, omitHeader, SHOW_HEALTH_RATINGS_DEFAULT);
   }
@@ -232,11 +235,11 @@ public class KbartExportFilter {
    * @param ordering an ordering to impose on the fields of each title
    * @param omitEmptyFields whether to omit empty field columns from the output
    */
-  public KbartExportFilter(List<KbartTitle> titles, FieldOrdering ordering,
+  public KbartExportFilter(List<KbartTitle> titles, ColumnOrdering ordering,
                            boolean omitEmptyFields, boolean omitHeader,
                            boolean showHealthRatings) {
     this.titles = titles;
-    this.fieldOrdering = ordering;
+    this.columnOrdering = ordering;
     this.omitEmptyFields = omitEmptyFields;
     this.omitHeaderRow = omitHeader;
     this.showHealthRatings = showHealthRatings;
@@ -244,23 +247,22 @@ public class KbartExportFilter {
     this.emptyFields = omitEmptyFields ? findEmptyFields() : 
         EnumSet.noneOf(Field.class);
     // Create a list of the visible (non-omitted) fields out of the supplied ordering
-    this.visibleFieldOrder = new Vector<Field>(fieldOrdering.getOrdering());
-    this.visibleFieldOrder.removeAll(emptyFields);
-    this.rangeFieldsIncludedInDisplay = 
-        !CollectionUtil.isDisjoint(visibleFieldOrder, rangeFields);
+    this.visibleColumnOrdering = CustomColumnOrdering.copy(columnOrdering).removeFields(emptyFields);
+    this.rangeFieldsIncludedInDisplay =
+        !CollectionUtil.isDisjoint(visibleColumnOrdering.getFields(), rangeFields);
     this.idFieldsIncludedInDisplay = 
-        !CollectionUtil.isDisjoint(visibleFieldOrder, idFields);
+        !CollectionUtil.isDisjoint(visibleColumnOrdering.getFields(), idFields);
   } 
 
   public void sortTitlesByFirstTwoFields() {
-    // Sort on just the first 2 columns (max):
+    // Sort on just the first 2 field columns (max):
     StringBuilder sb = new StringBuilder("Sort by ");
-    sb.append(visibleFieldOrder.get(0));
-    if (visibleFieldOrder.size() > 1)
-      sb.append(" | ").append(visibleFieldOrder.get(1));
+    List<Field> fields = visibleColumnOrdering.getOrderedFields();
+    sb.append(fields.get(0));
+    if (fields.size() > 1) sb.append(" | ").append(fields.get(1));
     log.debug(sb.toString());
     sortTitlesByFields( 
-        visibleFieldOrder.subList(0, Math.min(2, visibleFieldOrder.size()))
+        fields.subList(0, Math.min(2, fields.size()))
     );
   }
 
@@ -313,22 +315,20 @@ public class KbartExportFilter {
    * 
    * @return the field order produced by this filter  
    */
-  public List<Field> getVisibleFieldOrder() {
-    return this.visibleFieldOrder;
+  public ColumnOrdering getVisibleColumnOrdering() {
+    return this.visibleColumnOrdering;
   }
   
   /**
    * Get a list of strings representing the labels for display columns. This
    * will include all the labels of visible fields, plus any extra columns 
-   * such as health rating. It does not include custom constant field
+   * such as health rating.
    * 
    * @param scope the scope of the export
    * @return a list of labels for the exported columns of data
    */
   public List<String> getColumnLabels(ContentScope scope) {
-    List<String> l = new ArrayList<String>() {{
-      for (Field f : visibleFieldOrder) add(f.getLabel());
-    }};
+    List<String> l = visibleColumnOrdering.getOrderedLabels();
     // Health rating is only added if showHealthRatings is true and the scope
     // is not ALL - neither of these should be true when processing external
     // data.
@@ -367,8 +367,8 @@ public class KbartExportFilter {
    * Get the field ordering with which this filter is configured.
    * @return the filter's field ordering 
    */
-  public FieldOrdering getFieldOrdering() {
-    return fieldOrdering; 
+  public ColumnOrdering getColumnOrdering() {
+    return columnOrdering;
   }
   
   /**
@@ -385,7 +385,7 @@ public class KbartExportFilter {
    * @return the set of empty fields which were omitted from the ordering
    */
   public Set<Field> getOmittedEmptyFields() {
-    Set<Field> empties = EnumSet.copyOf(fieldOrdering.getFields());
+    Set<Field> empties = EnumSet.copyOf(columnOrdering.getFields());
     empties.retainAll(emptyFields);
     return empties;
   }
@@ -396,7 +396,7 @@ public class KbartExportFilter {
    * @return whether empty fields were omitted.
    */
   public boolean omittedFieldsManually() {
-    return fieldOrdering.getOrdering().size() < Field.values().length; 
+    return columnOrdering.getFields().size() < Field.values().length;
   }
   
   /**
@@ -420,8 +420,13 @@ public class KbartExportFilter {
    * @param title the title whose fields to extract
    * @return field values produced by this filter for the title  
    */
-  public List<String> getVisibleFieldValues(KbartTitle title) {
-    List<String> res = title.fieldValues(getVisibleFieldOrder());
+  public List<String> getVisibleFieldValues(final KbartTitle title) {
+    //List<String> res = title.fieldValues(getVisibleColumnOrdering().getOrderedFields());
+    List<String> res = new ArrayList<String>() {{
+      for (ReportColumn col : getVisibleColumnOrdering().getOrderedColumns()) {
+        add(col.getValue(title));
+      }
+    }};
     //if (showHealthRatings) res.add(HEALTH_FIELD_LABEL);
     return res;
   }
@@ -462,7 +467,7 @@ public class KbartExportFilter {
       // At this point there are no range fields and this is not the first title
       // Show the title if any visible idField differs between titles  
       for (Field f : idFields) {
-        if (visibleFieldOrder.contains(f) &&
+        if (visibleColumnOrdering.getFields().contains(f) &&
             !lastOutputTitle.getField(f).equals(currentTitle.getField(f))) {
           isOutput = true;
           break;
@@ -475,83 +480,86 @@ public class KbartExportFilter {
   }
 
 
+  //////////////////////////////////////////////////////////////////////////////
   /**
-   * If there is a custom field, add its value in the appropriate place in the
-   * given list of values.
-   * @param values a list of string values
-   */
-  protected void addConstantFieldIfPresent(List<String> values) {
-    if (fieldOrdering instanceof CustomFieldOrdering) {
-      if (hasCustomColumn(fieldOrdering)) {
-        CustomFieldOrdering cfo = (CustomFieldOrdering) fieldOrdering;
-        if (cfo.getConstantColumnInd() < values.size())
-          values.add(cfo.getConstantColumnInd(), cfo.getConstantColumnStr());
-        else values.add(cfo.getConstantColumnStr());
-      }
-    }
-  }
-
-  /**
-   * Whether a custom column is defined, which requires a CustomFieldOrdering.
-   * @return whether a custom column is defined.
-   */
-  public final static boolean hasCustomColumn(FieldOrdering fo) {
-    if (fo instanceof CustomFieldOrdering) {
-      return !StringUtil.isNullString(
-          ((CustomFieldOrdering)fo).getConstantColumnStr()
-      );
-    }
-    else return false;
-  }
-
-
-  /**
-   * A convenient way of storing a field ordering as both an ordered list and 
-   * an unordered but more efficient set. This is to save converting between them
-   * unnecessarily. The list and the set must contain the same elements.
+   * A convenient way of storing the Fields in a column ordering as both an
+   * ordered list and an unordered but more efficient set. This is to save
+   * converting between them unnecessarily. The list and the set must contain
+   * the same elements.
    * <p>
    * Setting an order implies a list of fields. The output will include all of the 
    * fields in the ordering unless they are omitted via <code>omitEmptyField</code>. 
    * Fields not mentioned in the ordering will be omitted.
+   * </p>
    * 
    * @author Neil Mayo
    */
   public static interface FieldOrdering {
-    public abstract EnumSet<Field> getFields();
-    public abstract List<Field> getOrdering();
-    //public abstract FieldOrdering getDefaultOrdering();
-    /** Return an ordered list of labels for the ordering; this will include
-     * any additional custom column with constant value, and therefore does not
-     * necessarily match the list of KbartTitle.Fields which are in the ordering. */
-    public abstract List<String> getOrderedLabels();
+    /**
+     * Get all the Fields involved in the ordering. This may not be the full set
+     * of ReportColumns.
+     * @return an EnumSet of Fields from the ordering
+     */
+    public EnumSet<Field> getFields();
+    /**
+     * Get an ordered list of Fields in the ordering; this will not include any
+     * custom columns.
+     * @return
+     */
+    public List<Field> getOrderedFields();
   }
-  
+
+
   /**
-   * A custom field ordering allows an arbitrary order of Fields to be 
-   * specified at construction.
+   * Extends the FieldOrdering representation to support the ordering of more
+   * generic columns, represented as ReportColumn objects. This interface adds
+   * accessors for the full list of ordered columns, and of column labels.
+   * <p>
+   * This way it is possible to include extra string values in the ordering
+   * which are not Fields. It is up to implementing classes whether to allow this
+   * and how to mediate the discrepancy between Fields and labels. The inherited
+   * methods getFields() and getOrderedFields() should be used to inform reasoning
+   * about the Fields that are involved, and should not be taken to represent
+   * all the columns that may appear in the output.
+   * </p>
+   *
+   * @author Neil Mayo
+   */
+  public static interface ColumnOrdering extends FieldOrdering {
+    /**
+     * Get all the Columns in the ordering, as an ordered list.
+     * @return
+     */
+    public List<ReportColumn> getOrderedColumns();
+    /**
+     * Return an ordered list of labels for the ordering; this will include
+     * any additional custom column with constant value, and therefore does not
+     * necessarily match the list of KbartTitle.Fields which are in the ordering.
+     * @return a List of Strings representing the ordered labels for all columns
+     */
+    public List<String> getOrderedLabels();
+
+  }
+
+
+  //////////////////////////////////////////////////////////////////////////////
+  /**
+   * A custom column ordering allows an arbitrary order of ReportColumns to be
+   * specified at construction. This can include a limited number of
+   * constant-valued columns. It will also allow duplicated Field columns.
    * 
    * @author Neil Mayo
    */
-  public static class CustomFieldOrdering implements FieldOrdering {
+  public static class CustomColumnOrdering implements ColumnOrdering {
     /** A set of fields included in this ordering. */
-    public final EnumSet<Field> fields;
-    /** 
-     * An ordered list of Fields in this ordering. 
-     */
-    public final List<Field> ordering;
+    protected final EnumSet<Field> fields;
+    /** An ordered list of ReportColumns in this ordering. */
+    protected final List<ReportColumn> ordering;
+    /** An ordered list of Fields in this ordering. */
+    protected final List<Field> fieldOrdering;
     /** An ordered list of labels for the fields. */ 
-    public final List<String> orderedLabels;
-
-    /** A string to be inserted in every row under a custom column. */
-    private String constantColumnStr;
-    /** The index of that column if the string is non-empty (zero-based). */
-    private int constantColumnInd;
-
-    /** The standard KBART field ordering. */
-    private static final FieldOrdering KBART_ORDERING = 
-        new CustomFieldOrdering(new ArrayList<Field>(Field.getFieldSet()));
-    
-    /** 
+    protected final List<String> orderedLabels;
+    /**
      * A separator used to separate field names in the specification of a 
      * custom ordering. This may be any combination of whitespace. 
      */
@@ -562,37 +570,130 @@ public class KbartExportFilter {
      * carriage return.
      */
     private static final String CUSTOM_ORDERING_FIELD_SEPARATOR_REGEX = "[\n\r]+";
-    
-    //private static final CustomFieldOrdering defaultOrdering = new CustomFieldOrdering(Arrays.asList(Field.values()));
-    
-    //public static final CustomFieldOrdering getDefaultOrdering() {
-    //public final CustomFieldOrdering getDefaultOrdering() { return defaultOrdering; }
-    
-    /** A mapping of labels to fields, for interpreting a user-supplied ordering. */
-    private static final Map<String, Field> labelFields = 
-        new HashMap<String, Field>() {{
-          for (Field f : Field.values()) put(f.getLabel(), f);
-        }};
-      
-    public static FieldOrdering getDefaultOrdering() {
-      return KBART_ORDERING;
-    }
-    
     /**
-     * Create a custom field ordering from a list of fields. 
-     * @param ordering the ordering which will be used
+     * The maximum allowable number of columns from a user-defined list; when
+     * splitting the list, any tokens beyond this number will be discarded.
+     * Practically, this means it is possible to have up to MAX_COLUMNS-1
+     * user-defined constant value columns (as there must be one id column).
      */
-    public CustomFieldOrdering(final List<Field> ordering) {
-      this.ordering = ordering;
-      this.fields = EnumSet.copyOf(ordering);
-      this.orderedLabels = new ArrayList<String>() {{
-        for (Field f : ordering) add(f.getLabel());
-      }};
+    private static final int MAX_COLUMNS = Field.values().length*2;
+
+    public static ColumnOrdering getDefaultOrdering() {
+      return PredefinedColumnOrdering.KBART;
+    }
+    // Getters
+    public List<ReportColumn> getOrderedColumns() { return ordering; }
+    public EnumSet<Field> getFields() { return this.fields; }
+    public List<Field> getOrderedFields() { return this.fieldOrdering; }
+    public List<String> getOrderedLabels() { return orderedLabels; }
+
+    /**
+     * Convenience method to create a custom field ordering from an array of
+     * Fields.
+     * @param ordering an ordered array of Fields
+     */
+    public static CustomColumnOrdering create(final Field[] ordering) {
+      return create(Arrays.asList(ordering));
+    }
+    /**
+     * Convenience method to create a custom field ordering from a list of
+     * Fields.
+     * @param fieldOrdering an ordered list of Fields
+     */
+    public static CustomColumnOrdering create(final List<Field> fieldOrdering) {
+      final List<ReportColumn> ordering = ReportColumn.fromFields(fieldOrdering);
+      return new CustomColumnOrdering(ordering, fieldOrdering);
     }
 
     /**
-     * Create a custom field ordering from a string containing a list of field 
-     * labels separated by whitespace (specifically the 
+     * Create a custom column ordering from the columns in another column
+     * ordering.
+     * @param other
+     * @return
+     */
+    public static CustomColumnOrdering copy(ColumnOrdering other) {
+      return createUnchecked(other.getOrderedLabels());
+    }
+
+    /**
+     * Create an ordering from predefined lists of Fields and columns. This is
+     * enough information from which to interpolate the other final members.
+     * Because there is no String interpretation, there is no need to generate
+     * or catch exceptions. This version includes the ordered list of labels,
+     * to save processing for those cases where the caller has already generated
+     * the list.
+     * @param fieldOrdering
+     * @param ordering
+     * @param orderedLabels
+     */
+    private CustomColumnOrdering(final List<ReportColumn> ordering,
+                                 final List<Field> fieldOrdering,
+                                 final List<String> orderedLabels) {
+      this.ordering = ordering;
+      this.fieldOrdering = fieldOrdering;
+      this.orderedLabels = orderedLabels;
+      this.fields = EnumSet.copyOf(fieldOrdering);
+    }
+
+    /**
+     * Create an ordering from predefined lists of Fields and columns. This is
+     * enough information from which to interpolate the other final members.
+     * Because there is no String interpretation, there is no need to generate
+     * or catch exceptions. It is possible to get the list of fields from the
+     * list of ReportColumns, but there is already a constructor with a single
+     * List argument.
+     * @param fieldOrdering
+     * @param ordering
+     */
+    protected CustomColumnOrdering(final List<ReportColumn> ordering,
+                                 final List<Field> fieldOrdering) {
+      this(ordering, fieldOrdering, new ArrayList<String>() {{
+        for (ReportColumn rc : ordering) add(rc.getLabel());
+      }});
+    }
+
+    /**
+     * Create a custom field ordering from a list of strings representing field
+     * labels. There may also be one or more optionally-quoted strings, each
+     * indicating a value to be inserted into a constant-valued column.
+     * @param labels a list of field labels and optionally constant string values
+     * @throws CustomColumnOrderingException if there is an unrecognised field name or no id fields
+     */
+    public CustomColumnOrdering(List<String> labels) throws CustomColumnOrderingException {
+      this.ordering = ReportColumn.fromStrings(labels);
+      // Note we regenerate the labels from the ReportColumns so constant-valued
+      // columns are consistently unquoted.
+      this.orderedLabels = ReportColumn.getLabels(ordering);
+
+      // Create the Field ordering
+      this.fieldOrdering = new ArrayList<Field>() {{
+        for (ReportColumn c : ordering) {
+          if (c.isField()) add(c.field);
+        }
+      }};
+
+      // Sanity checks
+      // Are there any fields included?
+      if (this.fieldOrdering.isEmpty())
+        throw new CustomColumnOrderingException("", "No valid fields specified.");
+      // Are there id fields included?
+      if (!Field.idFields.clone().removeAll(this.fieldOrdering)) {
+        String idFieldStr = String.format("(%s)",
+            StringUtils.join(Field.getLabels(Field.idFields), ", ")
+        );
+        throw new CustomColumnOrderingException("", String.format(
+            "No identifying fields specified. You must include one of %s.",
+            idFieldStr
+        ));
+      }
+      // Set the field set if all is okay
+      this.fields = EnumSet.copyOf(this.fieldOrdering);
+    }
+
+
+    /**
+     * Create a custom field ordering from a string containing a list of field
+     * labels separated by whitespace (specifically the
      * <code>CUSTOM_ORDERING_FIELD_SEPARATOR_REGEX</code>).
      * <p>
      * The ordering string must contain only valid field names separated by line
@@ -600,78 +701,62 @@ public class KbartExportFilter {
      * quoted string on its own line, an extra column will be created in that
      * position, containing only that string in every position including the
      * header row. The string can include escaped characters.
-
      * @param orderStr a string of field labels separated by whitespace
      */
-    public CustomFieldOrdering(String orderStr) throws CustomFieldOrderingException {
-      // First set the orderedLabels, which will include Fields plus any constant column
-      this.orderedLabels = splitCustomOrderingString(orderStr);
-      // If there is a quote, there is a constant field; record it separately
-      // from the rest of the field ordering, and remove it.
-      String quote= "\"";
-      String quotedString = null;
-      if (orderStr.indexOf(quote) > -1) {
-        for (String s : orderedLabels) {
-          // If we have found the string with the quote, first try and process it,
-          // then remove it and rebuild the custom ordering string.
-          if (s.startsWith(quote)) {
-            quotedString = s;
-            // If it holds a valid quoted string, process that
-            if (s.endsWith(quote) && s.length()>2) {
-              constantColumnStr = s.substring(1, s.length()-1);
-              constantColumnInd = orderedLabels.indexOf(s);
-              // Replace the quoted string
-              //orderedLabels.add(constantColumnInd, constantColumnStr);
-              break;
-            }
-          }
-        }
-      }
-      //System.out.format("Custom string \"%s\" index %s \n", constantColumnStr, constantColumnInd);
+    public CustomColumnOrdering(String orderStr) throws CustomColumnOrderingException {
+      this(splitCustomOrderingString(orderStr));
+    }
 
-      // Create the Field ordering
-      this.ordering = new ArrayList<Field>();
-      for (String s : orderedLabels) {
-        s = s.trim();
-        // Ignore white space lines and constant value fields
-        if (s.isEmpty() || s.equals(quote+constantColumnStr+quote)) continue;
-        Field f = labelFields.get(s);
-        // Throw exception if the label is not valid
-        if (f==null) throw new CustomFieldOrderingException(s,
-            "String '"+s+"' does not refer to a valid field.");
-        this.ordering.add(labelFields.get(s));
-      }
-      // Sanity checks
-      if (this.ordering.isEmpty()) 
-        throw new CustomFieldOrderingException("", "No valid fields specified.");
-      
-      if (!Field.idFields.clone().removeAll(this.ordering)) {
-        String idFieldStr = String.format("(%s)",
-            StringUtils.join(Field.getLabels(Field.idFields), ", ")
-        );
-        throw new CustomFieldOrderingException("", String.format(
-            "No identifying fields specified. You must include one of %s.",
-            idFieldStr
-        ));
-      }
-      this.fields = EnumSet.copyOf(this.ordering);
+    /**
+     * Create a custom ordering without generating exceptions on invalid
+     * specification. This method will create a custom ordering as per the list
+     * of labels. Labels that do not match fields will be included as
+     * constant-valued columns, and there are no restrictions on whether id
+     * fields are included (allowing for the creation of orderings leading to
+     * useless reports); nor are there limits on the number of columns which
+     * can be included. This method should therefore only be used in creating
+     * enumerated PredefinedFieldOrderings, or user-defined orderings defined
+     * through the LOCKSS user interface.
+     * @param labels
+     * @return
+     */
+    protected static CustomColumnOrdering createUnchecked(List<String> labels) {
+      final List<ReportColumn> ordering = ReportColumn.fromStrings(labels);
+      List<Field> fieldOrdering = new ArrayList<Field>() {{
+        for (ReportColumn c : ordering) {
+          if (c.isField()) add(c.field);
+        }
+      }};
+      return new CustomColumnOrdering(ordering, fieldOrdering, labels);
+    }
+
+    /**
+     * Convenience method delegating to createUnchecked(). Takes a list of
+     * objects to make it easier to specify predefined lists with a mix of
+     * string and field columns.
+     * @param columns a list of objects whose string representation will define the ordering
+     * @return
+     */
+    protected static CustomColumnOrdering createUnchecked(final Object... columns) {
+      return createUnchecked(
+          new ArrayList<String>() {{
+            for (Object o : columns) add(o.toString());
+          }}
+      );
     }
 
     /**
      * Split a CustomOrdering string, like those supplied via the user interface,
      * into individual strings. This does not check whether those strings are
-     * valid field names. It is just a convenience method for ListHoldings.
+     * valid field names; it is just a convenience method. Individual tokens
+     * are stripped of whitespace, and empty strings are omitted.
      * @param orderStr
      * @return
      */
     public static List<String> splitCustomOrderingString(String orderStr) {
-      // Use ListUtil to make list, so we get an ArrayList which implements
-      // both add() methods
-      /*return ListUtil.fromArray(StringUtils.split(orderStr.toLowerCase(),
-          CUSTOM_ORDERING_FIELD_SEPARATOR));*/
-      // Also trim whitespace from field strings, and omit empties
-      String[] arr = orderStr.split(CUSTOM_ORDERING_FIELD_SEPARATOR_REGEX);
+      String[] arr = orderStr.split(CUSTOM_ORDERING_FIELD_SEPARATOR_REGEX, MAX_COLUMNS);
       List<String> list = new ArrayList<String>();
+      // Trim whitespace, and omit empties
       for (String s : arr) {
         s = s.trim();
         if (s.length()!=0) list.add(s);
@@ -679,47 +764,63 @@ public class KbartExportFilter {
       return list;
     }
 
-    
-    public EnumSet<Field> getFields() {
-      return this.fields;
-    }
-    public List<Field> getOrdering() {
-      return this.ordering;
-    }
-    public List<String> getOrderedLabels() {
-      return orderedLabels;
-    }
-    public String getConstantColumnStr() {
-      return constantColumnStr;
-    }
-    public int getConstantColumnInd() {
-      return constantColumnInd;
-    }
-
     public String toString() {
       return "" + StringUtil.separatedString(orderedLabels, 
-          "CustomFieldOrdering(", " | ", ")");
+          "CustomColumnOrdering(", " | ", ")");
     }
-    
-    /** 
-     * A custom exception caused when an invalid custom ordering string is 
-     * passed to the constructor of the CustomFieldOrdering.
+
+    /**
+     * Remove the named columns from the ordering. Returns the ordering for
+     * convenience.
+     *
+     * @param columns a collection of labels
+     * @return
      */
-    public class CustomFieldOrderingException extends Exception {
+    protected CustomColumnOrdering remove(Collection<String> columns) {
+      this.ordering.removeAll(ReportColumn.fromStrings(columns));
+      this.orderedLabels.removeAll(columns);
+      Collection<Field> flds = Field.getFields(columns);
+      this.fieldOrdering.removeAll(flds);
+      this.fields.removeAll(flds);
+      return this;
+    }
+
+    /**
+     * Remove the named Fields from the ordering. Returns the ordering for
+     * convenience.
+     *
+     * @param fieldsToRemove a collection of fields
+     * @return
+     */
+    protected CustomColumnOrdering removeFields(Collection<Field> fieldsToRemove) {
+      List<ReportColumn> cols = ReportColumn.fromFields(fieldsToRemove);
+      this.ordering.removeAll(cols);
+      this.orderedLabels.removeAll(ReportColumn.getLabels(cols));
+      this.fieldOrdering.removeAll(fieldsToRemove);
+      this.fields.removeAll(fieldsToRemove);
+      return this;
+    }
+
+    /**
+     * A custom exception caused when an invalid custom ordering string is 
+     * passed to the constructor of the CustomColumnOrdering.
+     */
+    public static class CustomColumnOrderingException extends Exception {
       /** A record of the string label for which a field could not be found. */
       private final String errorLabel;
-      public CustomFieldOrderingException(String s) {
+      public CustomColumnOrderingException(String s) {
         super();
         this.errorLabel = s;
       }
-      public CustomFieldOrderingException(String s, String msg) {
+      public CustomColumnOrderingException(String s, String msg) {
         super(msg);
         this.errorLabel = s;
       }
       public String getErrorLabel() { return errorLabel; }
     }
   }
-      
+
+  //////////////////////////////////////////////////////////////////////////////
   /**
    * An enum for specifying a variety of <code>FieldOrdering</code>s. It is 
    * possible to specify an incomplete list of fields, and other fields will 
@@ -727,7 +828,7 @@ public class KbartExportFilter {
    * 
    * @author Neil Mayo
    */
-  public static enum PredefinedFieldOrdering implements FieldOrdering {
+  public static enum PredefinedColumnOrdering implements ColumnOrdering {
         
     // Default KBART ordering
     KBART("KBART Default",
@@ -796,59 +897,227 @@ public class KbartExportFilter {
 
     // ISSN only (will have duplicates)
     ISSN_ONLY("ISSN only", "Produce a list of ISSNs",
-        new Field[] {PRINT_IDENTIFIER}
+        PRINT_IDENTIFIER
     ),
 
     // TITLE_ID only - should have an id for every record
     TITLE_ID_ONLY("Title ID only", "Produce a list of unique identifiers",
-        new Field[] {TITLE_ID}
+        TITLE_ID
     ),
 
     // SFX fields only
     SFX("SFX Fields", "Produce a list of fields for SFX DataLoader",
-        new Field[] {TITLE_ID, COVERAGE_NOTES}
+        TITLE_ID,
+        "ACTIVATE",
+        COVERAGE_NOTES
     ),
-
-    // SFX DataLoader format only requires title_id and coverage_notes
-    /*SFX_DATALOADER("SFX DataLoader", "SFX DataLoader (title_id and coverage_notes)",
-        new Field[] {
-            TITLE_ID,
-            COVERAGE_NOTES
-        }
-    )*/
     ;
+
+    /** Store the field ordering internally as a CustomColumnOrdering. */
+    private CustomColumnOrdering customColumnOrdering;
 
     // These are used in an interface to describe the ordering. */
     /** A name to identify the ordering. */
     public final String displayName;
     /** A description of the ordering. */
     public final String description;
-    /** A set of fields included in this ordering. */
-    public final EnumSet<Field> fields;
-    /** An ordered list of fields in this ordering. */
-    public final List<Field> ordering;
-    /** An ordered list of labels for the fields. */ 
-    public final List<String> orderedLabels;
 
-    public EnumSet<Field> getFields() { return this.fields; }
-    public List<Field> getOrdering() { return this.ordering; }
-    public List<String> getOrderedLabels() { return this.orderedLabels; }
+    public EnumSet<Field> getFields() { return customColumnOrdering.getFields(); }
+    public List<Field> getOrderedFields() { return customColumnOrdering.getOrderedFields(); }
+    public List<String> getOrderedLabels() { return customColumnOrdering.getOrderedLabels(); }
+    public List<ReportColumn> getOrderedColumns() { return customColumnOrdering.getOrderedColumns(); }
+    public String toString() {
+      return "" + StringUtil.separatedString(getOrderedLabels(),
+          "PredefinedColumnOrdering(", " | ", ")"
+      );
+    }
 
-    PredefinedFieldOrdering(String displayName, String description, Field[] fieldOrder) {
-      this.displayName = displayName;      
-      this.description = description;      
-      ordering = Arrays.asList(fieldOrder);
-      fields = EnumSet.copyOf(ordering);
-      this.orderedLabels = new ArrayList<String>() {{
-        for (Field f : ordering) add(f.getLabel());
+    /**
+     * Return a list of the column labels which do not refer to a Field.
+     * @return
+     */
+    public List<String> getNonFieldColumnLabels() {
+      return new ArrayList<String>() {{
+        for (ReportColumn rc : getOrderedColumns()) {
+          if (!rc.isField()) add(rc.getLabel());
+        }
       }};
     }
 
-    public String toString() {
-      return "" + StringUtil.separatedString(orderedLabels, 
-          "PredefinedFieldOrdering(", " | ", ")"
-      );
+    /**
+     * Make a predefined ordering from a list of objects. This is a convenience
+     * method to make it easier to specify predefined lists in this enum with
+     * mixed string/field columns.
+     * @param displayName the display name of the ordering
+     * @param description a description for the ordering
+     * @param columns a list of objects whose string representation will define the ordering
+     * @throws org.lockss.exporter.kbart.KbartExportFilter.CustomColumnOrdering.CustomColumnOrderingException if there is a problem creating the internal ColumnOrdering
+     */
+    private PredefinedColumnOrdering(final String displayName, final String description,
+                                     final Object... columns) {
+      this(displayName, description, CustomColumnOrdering.createUnchecked(columns));
     }
+
+    /**
+     * Constructor for ordering based on aan array of Fields. This is the safest
+     * constructor as it uses enums and therefore needs no checking.
+     * @param displayName
+     * @param description
+     * @param fieldOrder
+     */
+    PredefinedColumnOrdering(final String displayName, final String description,
+                             final Field[] fieldOrder) {
+      this(displayName, description, CustomColumnOrdering.create(fieldOrder));
+    }
+
+    /**
+     * Create an ordering with a name, description, and a pre-built
+     * CustomColumnOrdering.
+     * @param displayName the display name of the ordering
+     * @param description a description for the ordering
+     * @param customColumnOrdering the custom ordering
+     */
+    private PredefinedColumnOrdering(final String displayName, final String description,
+                                     final CustomColumnOrdering customColumnOrdering) {
+      this.displayName = displayName;
+      this.description = description;
+      this.customColumnOrdering = customColumnOrdering;
+    }
+
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  /**
+   * A class to represent a column in a report. The column is represented either
+   * by a Field column, or by an optionally-quoted String.
+   * <p>
+   * We may want to provide extensions of this class that allow it to define
+   * for example where to get the value for each row in the column.
+   */
+  public static class ReportColumn {
+    // Exactly one of the following will be set; the other will be null:
+    /** The Field for the column, if applicable. */
+    private Field field;
+    /** The label for a constant-valued column, if applicable. */
+    private String label;
+
+    /**
+     * Create a ReportColumn directly from a Field.
+     * @param field
+     */
+    public ReportColumn(Field field) {
+      this.field = field;
+    }
+
+    /**
+     * Create a column from the name, treating it as a Field if the name matches
+     * a field name, or a custom string otherwise. If it is a custom string, it
+     * is automatically unquoted.
+     * @param name the label of a Field, or a String with or without quotes
+     */
+    public ReportColumn(String name) {
+      name = name.trim();
+      try {
+        this.field = Field.valueOf(name.toUpperCase());
+        this.label = null;
+      } catch (IllegalArgumentException e) {
+        this.field = null;
+        this.label = unquote(name);
+      }
+    }
+
+    /**
+     * Remove quotes from the start and end of the string if they are both
+     * present. Otherwise return the original string.
+     * @param s the string to unquote
+     * @return the string without surrounding quotes if both were present, or the original string
+     */
+    private String unquote(String s) {
+      if (s.startsWith(quote) && s.endsWith(quote)) {
+        return s.substring(quote.length(), s.length()-quote.length());
+      }
+      return s;
+    }
+    private static final String quote = "\"";
+
+    @Override
+    public boolean equals(Object o) {
+      return this.getLabel().equals(((ReportColumn)o).getLabel());
+    }
+
+    /** Whether the stored column is a Field. */
+    public boolean isField() { return field!=null; }
+    /** Return the field of the column, which may be null. */
+    //public Field getField() { return field;}
+    /** Return the label of the column, or the constant value. */
+    public String getLabel() { return isField() ? field.getLabel() : label;}
+
+    /**
+     * Get the value for a particular column, which is either the value of a
+     * field of the title, or a constant column value.
+     * @param title a KbartTitle providing values for the current row
+     * @return the value of a field in the title, or the label of a constant column
+     */
+    public String getValue(KbartTitle title) {
+      return isField() ? title.getField(field) : label;
+    }
+
+    /**
+     * Generate a list of ReportColumns from a list of Fields.
+     * Items in the returned list will be in the same order as provided by the
+     * iterator of the argument list.
+     * @param fieldOrdering
+     * @return
+     */
+    public static List<ReportColumn> fromFields(final Collection<Field> fieldOrdering) {
+      return new ArrayList<ReportColumn>() {{
+        for (Field f : fieldOrdering) add(new ReportColumn(f));
+      }};
+    }
+
+    /**
+     * Generate a list of ReportColumns from a list of columns named by Strings.
+     * This may include any number of Fields and constant-valued columns.
+     * Items in the returned list will be in the same order as provided by the
+     * iterator of the argument list.
+     * @param columnOrdering a list of strings
+     * @return a list of ReportColumns
+     */
+    public static List<ReportColumn> fromStrings(final Collection<String> columnOrdering)
+    /*throws CustomColumnOrdering.CustomColumnOrderingException*/ {
+      return new ArrayList<ReportColumn>() {{
+        int constantCols = 0;
+        for (String s: columnOrdering) {
+          ReportColumn col = new ReportColumn(s);
+          add(col);
+        }
+      }};
+    }
+
+    public static List<ReportColumn> fromObjects(final Object ... columnOrdering)
+      /*throws CustomColumnOrdering.CustomColumnOrderingException*/ {
+      return new ArrayList<ReportColumn>() {{
+        for (Object s: columnOrdering) {
+          ReportColumn col = new ReportColumn(s.toString());
+          add(col);
+        }
+      }};
+    }
+
+    public static List<String> getLabels(final List<ReportColumn> columns) {
+      return new ArrayList<String>() {{
+        for (ReportColumn rc : columns) add(rc.getLabel());
+      }};
+    }
+
+    public static List<Field> getFields(final List<ReportColumn> columns) {
+      return new ArrayList<Field>() {{
+        for (ReportColumn rc : columns) {
+          if (rc.isField()) add(rc.field);
+        }
+      }};
+    }
+
 
   }
 

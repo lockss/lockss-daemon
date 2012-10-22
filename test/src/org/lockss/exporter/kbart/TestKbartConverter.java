@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartConverter.java,v 1.16 2011-12-19 11:14:27 easyonthemayo Exp $
+ * $Id: TestKbartConverter.java,v 1.17 2012-10-22 15:07:10 easyonthemayo Exp $
  */
 
 /*
@@ -538,6 +538,9 @@ public class TestKbartConverter extends LockssTestCase {
         "1999a",
         "3000",
         "notdate",
+        "1st September 200",
+        "01/01/1950a",
+        "200",
         ""+(now+1+KbartConverter.MAX_FUTURE_PUB_DATE)
     };
     for (String d : invalidDates) {
@@ -547,6 +550,8 @@ public class TestKbartConverter extends LockssTestCase {
         ""+KbartConverter.MIN_PUB_DATE,
         "1999",
         "2000",
+        //"1st September 2000",
+        //"01/01/1950",
         ""+now,
         ""+(now-1),
         ""+(now+KbartConverter.MAX_FUTURE_PUB_DATE)

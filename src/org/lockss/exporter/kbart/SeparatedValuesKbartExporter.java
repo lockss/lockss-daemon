@@ -1,5 +1,5 @@
 /*
- * $Id: SeparatedValuesKbartExporter.java,v 1.9 2012-09-03 16:39:09 easyonthemayo Exp $
+ * $Id: SeparatedValuesKbartExporter.java,v 1.10 2012-10-22 15:07:09 easyonthemayo Exp $
  */
 
 /*
@@ -104,8 +104,6 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
    * @return a properly formatted CSV row representing the data
    */
   protected String constructRecord(List<String> values) {
-    // Add custom field value if present
-    filter.addConstantFieldIfPresent(values);
     // If using a comma, encode as CSV with appropriate quoting and escaping
     if (SEPARATOR == SEPARATOR_COMMA) {
       StringBuilder sb = new StringBuilder();

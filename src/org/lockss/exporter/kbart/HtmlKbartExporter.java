@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.23 2012-09-03 16:39:09 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.24 2012-10-22 15:07:09 easyonthemayo Exp $
  */
 
 /*
@@ -151,9 +151,6 @@ public class HtmlKbartExporter extends KbartExporter {
     // Add an index column at the start
     printWriter.printf("<td>%s</td>", this.exportCount);
 
-    // Add custom field value if present
-    filter.addConstantFieldIfPresent(values);
-
     for (int i=0; i<values.size(); i++) {
       String val = values.get(i);
       if (StringUtil.isNullString(val)) val = "&nbsp;";
@@ -228,7 +225,7 @@ public class HtmlKbartExporter extends KbartExporter {
     this.issnlFieldIndex = findFieldIndex(Field.TITLE_ID);
     this.covNotesFieldIndex = findFieldIndex(Field.COVERAGE_NOTES);
     // The health field index will be one bigger than the last field index
-    this.healthFieldIndex = getFieldLabels().size();
+    this.healthFieldIndex = getColumnLabels().size();
     // Write html and head tags, including a metatag declaring the content type UTF-8
     printWriter.println("<html><head><meta http-equiv=\"Content-Type\" " +
 	"content=\"text/html; charset="+DEFAULT_ENCODING+"\"/>");
@@ -249,7 +246,7 @@ public class HtmlKbartExporter extends KbartExporter {
    * @return the index of the named field, or -1
    */
   private int findFieldIndex(Field field) {
-    List<String> labs = getFieldLabels();
+    List<String> labs = getColumnLabels();
     String name = field.getLabel();
     for (int i=0; i<labs.size(); i++) {
       if (labs.get(i).equals(name)) return i;
@@ -264,8 +261,6 @@ public class HtmlKbartExporter extends KbartExporter {
   private String makeHeader() {
     StringBuilder sb = new StringBuilder("<tr><th>index</th>");
     List<String> labels = filter.getColumnLabels(scope);
-    // If there is a custom column, insert it into the labels list
-    filter.addConstantFieldIfPresent(labels);
     // Combine all the column labels
     for (int i=0; i<labels.size(); i++) {
       sb.append("<th>").append(labels.get(i)).append("</th>");

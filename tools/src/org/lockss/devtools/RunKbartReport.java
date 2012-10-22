@@ -1,5 +1,5 @@
 /*
- * $Id: RunKbartReport.java,v 1.3 2012-07-10 16:29:29 easyonthemayo Exp $
+ * $Id: RunKbartReport.java,v 1.4 2012-10-22 15:07:10 easyonthemayo Exp $
  */
 
 /*
@@ -39,10 +39,10 @@ import org.lockss.exporter.biblio.BibliographicItemImpl;
 import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.exporter.kbart.KbartConverter;
 import org.lockss.exporter.kbart.KbartExportFilter;
+import static org.lockss.exporter.kbart.KbartExportFilter.*;
 import org.lockss.exporter.kbart.KbartExporter;
 import org.lockss.exporter.kbart.KbartTitle;
 import org.lockss.exporter.kbart.KbartTitle.Field;
-import static org.lockss.exporter.kbart.KbartExportFilter.PredefinedFieldOrdering;
 import com.csvreader.CsvReader;
 import org.lockss.util.StringUtil;
 
@@ -98,7 +98,7 @@ public class RunKbartReport {
   // Settings from the command line
   private final boolean hideEmptyColumns;
   private final boolean showTdbStatus;
-  private KbartExportFilter.FieldOrdering fieldOrdering;
+  private KbartExportFilter.ColumnOrdering columnOrdering;
 
   //private static final String DATA_FORMATS_CONFIG_FILE = "data-formats.xml";
   /*  data-formats.xml
@@ -108,13 +108,13 @@ public class RunKbartReport {
       desc
       cols
   */
-  /*private static List<KbartExportFilter.FieldOrdering> dataFormats;
+  /*private static List<KbartExportFilter.ColumnOrdering> dataFormats;
   static {
     InputStream file = ClassLoader.getSystemClassLoader().getResourceAsStream(DATA_FORMATS_CONFIG_FILE);
   }*/
-  /*private static List<KbartExportFilter.FieldOrdering> dataFormats =
-      new ArrayList<KbartExportFilter.FieldOrdering>() {{
-        KbartExportFilter.PredefinedFieldOrdering.values();
+  /*private static List<KbartExportFilter.ColumnOrdering> dataFormats =
+      new ArrayList<KbartExportFilter.ColumnOrdering>() {{
+        KbartExportFilter.PredefinedColumnOrdering.values();
       }};*/
 
   // ---------------------------------------------------------------------------
@@ -123,18 +123,18 @@ public class RunKbartReport {
    * Construct an instance of this class with the supplied properties.
    * @param hideEmptyColumns
    * @param showTdbStatus
-   * @param fieldOrdering
+   * @param columnOrdering
    * @param inputStream
    * @param outputStream
    */
   protected RunKbartReport(boolean hideEmptyColumns,
                            boolean showTdbStatus,
-                           KbartExportFilter.PredefinedFieldOrdering fieldOrdering,
+                           PredefinedColumnOrdering columnOrdering,
                            InputStream inputStream, OutputStream outputStream) {
     this.hideEmptyColumns = hideEmptyColumns;
     this.showTdbStatus = showTdbStatus;
     this.inputStream = inputStream;
-    this.fieldOrdering = fieldOrdering;
+    this.columnOrdering = columnOrdering;
 
     long s = System.currentTimeMillis();
     // Now we are doing an export - create the exporter
@@ -178,7 +178,7 @@ public class RunKbartReport {
     }
 
     // Create a filter
-    KbartExportFilter filter = new KbartExportFilter(titles, fieldOrdering,
+    KbartExportFilter filter = new KbartExportFilter(titles, columnOrdering,
         hideEmptyColumns, false);
 
     // Create and configure a CSV exporter
@@ -484,8 +484,8 @@ public class RunKbartReport {
   private static final KbartExporter.OutputFormat defaultOutput =
       KbartExporter.OUTPUT_FORMAT_DEFAULT;
 
-  private static final PredefinedFieldOrdering defaultFieldOrdering =
-      KbartExportFilter.FIELD_ORDERING_DEFAULT;
+  private static final PredefinedColumnOrdering DEFAULT_COLUMN_ORDERING =
+      KbartExportFilter.COLUMN_ORDERING_DEFAULT;
 
 
   /**
@@ -603,13 +603,12 @@ public class RunKbartReport {
     // Show defaults
     System.err.println("");
     //System.err.println("Default output format is "+defaultOutput);
-    //System.err.println("Default data format is "+defaultFieldOrdering);
+    //System.err.println("Default data format is "+DEFAULT_COLUMN_ORDERING);
 
     // Print data format options
     System.err.format("Data format argument must be one of the following " +
-        "identifiers (default %s):\n", defaultFieldOrdering.name());
-    for (KbartExportFilter.PredefinedFieldOrdering ord :
-        KbartExportFilter.PredefinedFieldOrdering.values()) {
+        "identifiers (default %s):\n", DEFAULT_COLUMN_ORDERING.name());
+    for (PredefinedColumnOrdering ord : PredefinedColumnOrdering.values()) {
       System.err.format("  %s (%s)\n", ord.name(), ord.description);
     }
     System.err.format("\nInput file should be UTF-8 encoded and include a " +
@@ -636,13 +635,13 @@ public class RunKbartReport {
     if (cl==null || cl.hasOption(SOPT_HELP)) usage(false);
 
     // Determine the ordering for the output data
-    PredefinedFieldOrdering ordering;
+    PredefinedColumnOrdering ordering;
     try {
-      ordering = KbartExportFilter.PredefinedFieldOrdering.valueOf(
+      ordering = PredefinedColumnOrdering.valueOf(
           cl.getOptionValue(SOPT_DATA)
       );
     } catch (Exception e) {
-      ordering = defaultFieldOrdering;
+      ordering = DEFAULT_COLUMN_ORDERING;
     }
 
     // Create an instance

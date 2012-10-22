@@ -1,5 +1,5 @@
 /*
- * $Id: TestRunKbartReport.java,v 1.4 2012-06-13 17:49:44 easyonthemayo Exp $
+ * $Id: TestRunKbartReport.java,v 1.5 2012-10-22 15:07:10 easyonthemayo Exp $
  */
 
 /*
@@ -33,11 +33,11 @@ package org.lockss.devtools;
 
 import org.apache.commons.lang.StringUtils;
 import org.lockss.exporter.biblio.BibliographicItem;
-import org.lockss.exporter.kbart.KbartExportFilter;
+import org.lockss.exporter.kbart.KbartExportFilter.PredefinedColumnOrdering;
 import org.lockss.exporter.kbart.KbartTitle;
+import static org.lockss.exporter.kbart.KbartTitle.Field.*;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.StringInputStream;
-import org.lockss.exporter.kbart.KbartExportFilter.PredefinedFieldOrdering;
 import org.lockss.util.MetadataUtil;
 import org.lockss.util.StringUtil;
 import static org.lockss.devtools.RunKbartReport.*;
@@ -59,11 +59,25 @@ public class TestRunKbartReport extends LockssTestCase {
   // - empty lines
   // - all final column empty
   static String emptyColumnLabel = "NUM_FIRST_VOL_ONLINE";
+
   // Note that we have to add title_id to the header list - although we don't
   // specify any values, they are generated from the available ISSNs, so the
   // column name will be in the header!
   static String header =
       "PUBLISHER_NAME,  publication_title, PRINT_IDENTIFIER, ONLINE_identifier, NUM_FIRST_VOL_ONLINE, TITLE_ID";
+
+  // The expected output header is the list of col names we specify for the input,
+  // plus any constant-valued cols specified in the Ordering.
+  /*static EnumSet<KbartTitle.Field> headerFields = EnumSet.of(
+      PUBLISHER_NAME,
+      PUBLICATION_TITLE,
+      PRINT_IDENTIFIER,
+      ONLINE_IDENTIFIER,
+      NUM_FIRST_VOL_ONLINE,
+      TITLE_ID
+  );*/
+
+  // Lines forming the input document
   static String[] lines = new String[] {
       "",
       "",
@@ -80,7 +94,7 @@ public class TestRunKbartReport extends LockssTestCase {
   /** There are 5 fields in the data lines. */
   int numberOfFields = 5;
   /** Settings */
-  KbartExportFilter.PredefinedFieldOrdering fieldOrdering;
+  PredefinedColumnOrdering columnOrdering;
   boolean hideEmptyColumns = false;
   boolean showTdbStatus = false;
   File outputFile;
@@ -96,18 +110,18 @@ public class TestRunKbartReport extends LockssTestCase {
     for (boolean b : new boolean[]{true, false}) {
       hideEmptyColumns = b;
       showTdbStatus = b;
-      for (PredefinedFieldOrdering fo : PredefinedFieldOrdering.values()) {
-        //System.err.println("Testing report with ordering "+fo.displayName);
+      for (PredefinedColumnOrdering fo : PredefinedColumnOrdering.values()) {
+        System.err.println("Testing report with ordering "+fo.displayName);
         runTestWithFieldOrdering(fo);
       }
     }
   }
 
-  private void runTestWithFieldOrdering(PredefinedFieldOrdering fo)
-      throws FileNotFoundException, IOException {
-    this.fieldOrdering = fo;
+  private void runTestWithFieldOrdering(PredefinedColumnOrdering co)
+      throws IOException {
+    this.columnOrdering = co;
     // Set up the class
-    new RunKbartReport(hideEmptyColumns, showTdbStatus, fieldOrdering,
+    new RunKbartReport(hideEmptyColumns, showTdbStatus, columnOrdering,
         new StringInputStream(StringUtils.join(lines, "\n").toString()),
         new FileOutputStream(outputFile));
 
@@ -270,16 +284,24 @@ public class TestRunKbartReport extends LockssTestCase {
     assertEquals(lines.length - numEmptyLines - numDuplicateLines, numberLines);
 
     // Setup the expected output header line
-    Vector<String> labels = new Vector<String>(fieldOrdering.getOrderedLabels());
+    Vector<String> labels = new Vector<String>(columnOrdering.getOrderedLabels());
     if (hideEmptyColumns) {
+      // The expected output header is the list of col names from input header,
+      // plus any constant-valued cols specified in the Ordering.
+
       // Only keep the columns specified in the input, as the rest will be
       // empty. The list of input cols comes from splitting the original
       // header on commas and trimming each token.
       // Additionally, expect a missing column from the original inputs.
       labels.retainAll(
           new ArrayList<String>() {{
+            // retain labels from the input header
             for (String s : Arrays.asList(StringUtils.split(header, ","))) {
               add(StringUtils.trim(s).toLowerCase());
+            }
+            // retain non-field labels from the ordering
+            for (String s : columnOrdering.getNonFieldColumnLabels()) {
+              add(s);
             }
             // Also add title_url as it is filled in automatically by the exporter
             add(KbartTitle.Field.TITLE_URL.getLabel());
