@@ -1,5 +1,5 @@
 /*
- * $Id: KbartCustomOptions.java,v 1.5 2012-10-22 15:07:09 easyonthemayo Exp $
+ * $Id: KbartCustomOptions.java,v 1.6 2012-10-22 17:28:17 easyonthemayo Exp $
  */
 
 /*
@@ -43,24 +43,18 @@ public class KbartCustomOptions implements Serializable {
 
   private boolean omitEmptyColumns;
   private boolean omitHeader;
+  private boolean excludeNoIdTitles;
   private boolean showHealthRatings;
-  //private boolean oneTitlePerLine;
   private KbartExportFilter.ColumnOrdering columnOrdering;
-  //private static boolean DEFAULT_oneTitlePerLine = false; // title-per-line is not KBART
 
-  /*public KbartCustomOptions(boolean omit, boolean health, boolean titlePerLine,
-                            KbartExportFilter.FieldOrdering ord) {
-    this.omitEmptyColumns = omit;
-    this.showHealthRatings = health;
-    this.oneTitlePerLine = titlePerLine;
-    this.fieldOrdering = ord;
-  }*/
-
-  public KbartCustomOptions(boolean omitEmptyColumns, boolean omitHeader,
+  public KbartCustomOptions(boolean omitEmptyColumns,
+                            boolean omitHeader,
+                            boolean excludeNoIdTitles,
                             boolean health,
                             KbartExportFilter.ColumnOrdering ord) {
     this.omitEmptyColumns = omitEmptyColumns;
     this.omitHeader = omitHeader;
+    this.excludeNoIdTitles = excludeNoIdTitles;
     this.showHealthRatings = health;
     this.columnOrdering = ord;
   }
@@ -69,8 +63,8 @@ public class KbartCustomOptions implements Serializable {
     return new KbartCustomOptions(
         KbartExporter.omitEmptyFieldsByDefault,
         KbartExporter.omitHeaderRowByDefault,
+        KbartExporter.excludeNoIdTitlesByDefault,
         KbartExporter.showHealthRatingsByDefault,
-        //DEFAULT_oneTitlePerLine,
         KbartExportFilter.CustomColumnOrdering.getDefaultOrdering()
     );
   }
@@ -91,6 +85,14 @@ public class KbartCustomOptions implements Serializable {
     this.omitHeader = omitHeader;
   }
 
+  public boolean isExcludeNoIdTitles() {
+    return excludeNoIdTitles;
+  }
+
+  public void setExcludeNoIdTitles(boolean excludeNoIdTitles) {
+    this.excludeNoIdTitles = excludeNoIdTitles;
+  }
+
   public boolean isShowHealthRatings() {
     return showHealthRatings;
   }
@@ -98,14 +100,6 @@ public class KbartCustomOptions implements Serializable {
   public void setShowHealthRatings(boolean showHealthRatings) {
     this.showHealthRatings = showHealthRatings;
   }
-
-  /*public boolean isOneTitlePerLine() {
-    return oneTitlePerLine;
-  }*/
-
-  /*public void setOneTitlePerLine(boolean titlePerLine) {
-    this.oneTitlePerLine= titlePerLine;
-  }*/
 
   public KbartExportFilter.ColumnOrdering getColumnOrdering() {
     return columnOrdering;

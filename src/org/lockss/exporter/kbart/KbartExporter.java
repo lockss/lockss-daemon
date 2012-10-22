@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.25 2012-10-22 15:07:09 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.26 2012-10-22 17:28:17 easyonthemayo Exp $
  */
 
 /*
@@ -166,6 +166,9 @@ public abstract class KbartExporter {
    * By default, we show the header row.
    */
   public static final boolean omitHeaderRowByDefault = false;
+
+  /** By default, we don't exclude titles with no identifier. */
+  public static boolean excludeNoIdTitlesByDefault = false;
 
   /** Default encoding for output. */
   public static final String DEFAULT_ENCODING = "UTF-8";
