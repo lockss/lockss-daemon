@@ -1,5 +1,5 @@
 /*
- * $Id: RunKbartReport.java,v 1.4 2012-10-22 15:07:10 easyonthemayo Exp $
+ * $Id: RunKbartReport.java,v 1.5 2012-10-22 17:24:06 easyonthemayo Exp $
  */
 
 /*
@@ -179,7 +179,7 @@ public class RunKbartReport {
 
     // Create a filter
     KbartExportFilter filter = new KbartExportFilter(titles, columnOrdering,
-        hideEmptyColumns, false);
+        hideEmptyColumns, false, false);
 
     // Create and configure a CSV exporter
     KbartExporter kexp = KbartExporter.OutputFormat.CSV.makeExporter(titles, filter);

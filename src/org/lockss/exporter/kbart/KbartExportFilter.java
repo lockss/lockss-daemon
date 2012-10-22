@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExportFilter.java,v 1.15 2012-10-22 15:07:09 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.16 2012-10-22 17:24:06 easyonthemayo Exp $
  */
 
 /*
@@ -89,6 +89,8 @@ public class KbartExportFilter {
       KbartExporter.omitEmptyFieldsByDefault;
   public static final boolean OMIT_HEADER_ROW_BY_DEFAULT =
       KbartExporter.omitHeaderRowByDefault;
+  public static final boolean EXCLUDE_NOID_TITLES_BY_DEFAULT =
+      KbartExporter.excludeNoIdTitlesByDefault;
   public static final boolean SHOW_HEALTH_RATINGS_DEFAULT =
       KbartExporter.showHealthRatingsByDefault;
   public static final PredefinedColumnOrdering COLUMN_ORDERING_DEFAULT =
@@ -137,6 +139,8 @@ public class KbartExportFilter {
   private final boolean omitHeaderRow;
   /** Whether to omit empty field columns from the output. False by default. */
   private final boolean omitEmptyFields;
+  /** Whether to exclude id-less titles from the output. False by default. */
+  private final boolean excludeNoIdTitles;
   /**
    * A set of fields which have no entries in any of the titles. This will 
    * be filled in if omitEmptyFields is true. 
@@ -160,12 +164,14 @@ public class KbartExportFilter {
 
   /**
    * Make an identity filter on the title set. This uses the default KBART 
-   * field set and ordering and does not omit empty fields or header.
+   * field set and ordering and does not omit empty fields or header, nor does
+   * it exclude identifier-less titles.
    * @param titles the titles to be exported
    * @return a filter with pure KBART settings
    */
   public static KbartExportFilter identityFilter(List<KbartTitle> titles) {
-    return new KbartExportFilter(titles, PredefinedColumnOrdering.KBART, false, false);
+    return new KbartExportFilter(titles, PredefinedColumnOrdering.KBART,
+        false, false, false);
   }
  
   /**
@@ -186,7 +192,8 @@ public class KbartExportFilter {
    */
   public KbartExportFilter(List<KbartTitle> titles) {
     this(titles, COLUMN_ORDERING_DEFAULT, OMIT_EMPTY_FIELDS_DEFAULT,
-        OMIT_HEADER_ROW_BY_DEFAULT, SHOW_HEALTH_RATINGS_DEFAULT);
+        OMIT_HEADER_ROW_BY_DEFAULT, EXCLUDE_NOID_TITLES_BY_DEFAULT,
+        SHOW_HEALTH_RATINGS_DEFAULT);
   }
   
   /**
@@ -203,7 +210,8 @@ public class KbartExportFilter {
    */
   public KbartExportFilter(List<KbartTitle> titles, ColumnOrdering ordering) {
     this(titles, ordering, OMIT_EMPTY_FIELDS_DEFAULT,
-        OMIT_HEADER_ROW_BY_DEFAULT, SHOW_HEALTH_RATINGS_DEFAULT);
+        OMIT_HEADER_ROW_BY_DEFAULT, EXCLUDE_NOID_TITLES_BY_DEFAULT,
+        SHOW_HEALTH_RATINGS_DEFAULT);
   }
 
 
@@ -217,8 +225,10 @@ public class KbartExportFilter {
    * @param omitEmptyFields whether to omit empty field columns from the output
    */
   public KbartExportFilter(List<KbartTitle> titles, ColumnOrdering ordering,
-                           boolean omitEmptyFields, boolean omitHeader) {
-    this(titles, ordering, omitEmptyFields, omitHeader, SHOW_HEALTH_RATINGS_DEFAULT);
+                           boolean omitEmptyFields, boolean omitHeader,
+                           boolean excludeNoIdTitles) {
+    this(titles, ordering, omitEmptyFields, omitHeader, excludeNoIdTitles,
+        SHOW_HEALTH_RATINGS_DEFAULT);
   }
 
   /**
@@ -237,11 +247,13 @@ public class KbartExportFilter {
    */
   public KbartExportFilter(List<KbartTitle> titles, ColumnOrdering ordering,
                            boolean omitEmptyFields, boolean omitHeader,
+                           boolean excludeNoIdTitles,
                            boolean showHealthRatings) {
     this.titles = titles;
     this.columnOrdering = ordering;
     this.omitEmptyFields = omitEmptyFields;
     this.omitHeaderRow = omitHeader;
+    this.excludeNoIdTitles = excludeNoIdTitles;
     this.showHealthRatings = showHealthRatings;
     // Work out the list of empty fields if necessary
     this.emptyFields = omitEmptyFields ? findEmptyFields() : 
@@ -355,6 +367,15 @@ public class KbartExportFilter {
   }
 
   /**
+   * Whether this filter is set to omit titles lacking unique identifiers.
+   *
+   * @return whether this filter is set to exclude identifier-less titles
+   */
+  public boolean isExcludeNoIdTitles() {
+    return excludeNoIdTitles;
+  }
+
+  /**
    * Whether this filter is set to show health ratings.
    * 
    * @return whether this filter should show health ratings 
@@ -391,25 +412,25 @@ public class KbartExportFilter {
   }
   
   /**
-   * Whether fields were omitted manually. That is, the specified field
-   * ordering is shorter than the available number of fields. 
-   * @return whether empty fields were omitted.
-   */
-  public boolean omittedFieldsManually() {
-    return columnOrdering.getFields().size() < Field.values().length;
-  }
-  
-  /**
-   * Whether empty fields were omitted. That is, <code>omitEmptyFields</code> 
-   * is set and there were empty fields in the ordering. 
+   * Whether empty fields were omitted. That is, <code>omitEmptyFields</code>
+   * is set and there were empty fields in the ordering.
    * @return whether empty fields were omitted.
    */
   public boolean omittedEmptyFields() {
     if (!omitEmptyFields) return false;
     Set<Field> omittableFields = getOmittedEmptyFields();
-    return omitEmptyFields && omittableFields.size() > 0; 
+    return omitEmptyFields && omittableFields.size() > 0;
   }
-  
+
+  /**
+   * Whether fields were omitted manually. That is, the specified field
+   * ordering is shorter than the available number of fields.
+   * @return whether empty fields were omitted.
+   */
+  public boolean omittedFieldsManually() {
+    return columnOrdering.getFields().size() < Field.values().length;
+  }
+
   /**
    * Extract a title's field values based on the definitive field ordering. 
    * This is the list of values matching the fields specified by 
@@ -430,7 +451,7 @@ public class KbartExportFilter {
     //if (showHealthRatings) res.add(HEALTH_FIELD_LABEL);
     return res;
   }
-  
+
   /**
    * Decide whether the current title record should be displayed, based on 
    * whether it is a duplicate of the previous record, given the combination 
@@ -474,6 +495,12 @@ public class KbartExportFilter {
         }
       }
     }
+    // Finally, we refuse to output the title if it has no id and
+    // excludeNoIdTitles is true.
+    if (excludeNoIdTitles &&
+        StringUtil.isNullString(currentTitle.getField(Field.TITLE_ID)))
+      isOutput = false;
+
     // Record the previous title
     if (isOutput) lastOutputTitle = currentTitle;
     return isOutput;
@@ -908,7 +935,7 @@ public class KbartExportFilter {
     // SFX fields only
     SFX("SFX Fields", "Produce a list of fields for SFX DataLoader",
         TITLE_ID,
-        "ACTIVATE",
+        "ACTIVE",
         COVERAGE_NOTES
     ),
     ;

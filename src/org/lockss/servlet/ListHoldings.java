@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.45 2012-10-22 15:07:09 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.46 2012-10-22 17:24:05 easyonthemayo Exp $
  */
 
 /*
@@ -151,6 +151,7 @@ public class ListHoldings extends LockssServlet {
   public static final String KEY_COMPRESS = "compress";
   public static final String KEY_OMIT_EMPTY_COLS = "omitEmptyCols";
   public static final String KEY_OMIT_HEADER = "omitHeader";
+  public static final String KEY_EXCLUDE_NOID_TITLES = "excludeNoIdTitles";
   public static final String KEY_SHOW_HEALTH = "showHealthRatings";
   public static final String KEY_CUSTOM = "isCustom";
   public static final String KEY_CUSTOM_ORDERING = "ordering";
@@ -180,6 +181,8 @@ public class ListHoldings extends LockssServlet {
   static final Boolean OMIT_EMPTY_COLUMNS_BY_DEFAULT = KbartExporter.omitEmptyFieldsByDefault;
   /** Default approach to omitting header row is false (do not omit). */
   static final Boolean OMIT_HEADER_ROW_BY_DEFAULT = KbartExporter.omitHeaderRowByDefault;
+  /** Default approach to excluding id-less titles. */
+  static final Boolean EXCLUDE_NOID_TITLES_BY_DEFAULT = KbartExporter.excludeNoIdTitlesByDefault;
   /** Default approach to showing health ratings - inherited from the exporter base class. */
   static final Boolean SHOW_HEALTH_RATINGS_BY_DEFAULT = KbartExporter.showHealthRatingsByDefault;
 
@@ -315,6 +318,11 @@ public class ListHoldings extends LockssServlet {
         params.getProperty(KEY_OMIT_HEADER,
             OMIT_HEADER_ROW_BY_DEFAULT.toString())
     );
+    // Omit header - use the option supplied from the form, or the default
+    boolean excludeNoIdTitles = Boolean.valueOf(
+        params.getProperty(KEY_EXCLUDE_NOID_TITLES,
+            EXCLUDE_NOID_TITLES_BY_DEFAULT.toString())
+    );
     // Show health ratings - use the option supplied from the form, or the
     // default if one of the other outputs was chosen
     boolean showHealthRatings = Boolean.valueOf( 
@@ -372,6 +380,7 @@ public class ListHoldings extends LockssServlet {
         if (doExport) manualOrdering = lastManualOrdering;
         omitEmptyColumns = customOpts.isOmitEmptyColumns();
         omitHeader = customOpts.isOmitHeader();
+        excludeNoIdTitles = customOpts.isExcludeNoIdTitles();
       }
       // Reset the ordering customisation to the previous value
       else if (action.equals(ACTION_CUSTOM_RESET)) {
@@ -383,6 +392,7 @@ public class ListHoldings extends LockssServlet {
       // Create an object encapsulating the custom HTML options, and store it
       // in the session.
       customOpts = new KbartCustomOptions(omitEmptyColumns, omitHeader,
+          excludeNoIdTitles,
           showHealthRatings, customColumnOrdering);
 
       putSessionCustomOpts(customOpts);
@@ -493,6 +503,7 @@ public class ListHoldings extends LockssServlet {
     if (opts !=null) {
       filter = new KbartExportFilter(titles, opts.getColumnOrdering(),
           opts.isOmitEmptyColumns(), opts.isOmitHeader(),
+          opts.isExcludeNoIdTitles(),
           opts.isShowHealthRatings());
     } else {
       filter = new KbartExportFilter(titles);
@@ -841,6 +852,8 @@ public class ListHoldings extends LockssServlet {
           htmlInputTruthValue(false)));
       form.add(new Input(Input.Hidden, KEY_OMIT_HEADER,
           htmlInputTruthValue(false)));
+      form.add(new Input(Input.Hidden, KEY_EXCLUDE_NOID_TITLES,
+          htmlInputTruthValue(false)));
       // Add the submit at the bottom
       ServletUtil.layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_EXPORT,
           I18N_ACTION_EXPORT);
@@ -1077,6 +1090,11 @@ public class ListHoldings extends LockssServlet {
     tab.add(ServletUtil.checkbox(this, KEY_OMIT_HEADER,
         Boolean.TRUE.toString(), i18n.tr("Omit header row")+"<br/>",
         opts.isOmitHeader()));
+    // Exclude no-id titles option
+    tab.add("<br/>");
+    tab.add(ServletUtil.checkbox(this, KEY_EXCLUDE_NOID_TITLES,
+        Boolean.TRUE.toString(), i18n.tr("Exclude titles with no title_id")+"<br/>",
+        opts.isExcludeNoIdTitles()));
     // Show health option if available
     if (isEnablePreserved() && getShowHealthRatings()) {
       tab.add(ServletUtil.checkbox(this, KEY_SHOW_HEALTH,
@@ -1175,6 +1193,8 @@ public class ListHoldings extends LockssServlet {
         htmlInputTruthValue(opts.isOmitEmptyColumns())));
     form.add(new Input(Input.Hidden, KEY_OMIT_HEADER,
         htmlInputTruthValue(opts.isOmitHeader())));
+    form.add(new Input(Input.Hidden, KEY_EXCLUDE_NOID_TITLES,
+        htmlInputTruthValue(opts.isExcludeNoIdTitles())));
     form.add(new Input(Input.Hidden, KEY_SHOW_HEALTH,
         htmlInputTruthValue(opts.isShowHealthRatings())));
     form.add(new Input(Input.Hidden, KEY_REPORT_FORMAT, reportDataFormat.name()));
@@ -1265,8 +1285,8 @@ public class ListHoldings extends LockssServlet {
     Object o = getSession().getAttribute(SESSION_KEY_CUSTOM_OPTS);
     if (o==null && createIfAbsent) {
       KbartCustomOptions opts = KbartCustomOptions.getDefaultOptions();
-     putSessionCustomOpts(opts);
-     return opts;
+      putSessionCustomOpts(opts);
+      return opts;
     }
     return o==null ? null : (KbartCustomOptions)o;
   }

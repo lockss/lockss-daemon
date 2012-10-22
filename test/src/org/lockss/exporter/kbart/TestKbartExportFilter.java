@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartExportFilter.java,v 1.5 2012-10-22 15:07:10 easyonthemayo Exp $
+ * $Id: TestKbartExportFilter.java,v 1.6 2012-10-22 17:24:06 easyonthemayo Exp $
  */
 
 /*
@@ -47,8 +47,9 @@ import org.lockss.util.CollectionUtil;
 import org.lockss.exporter.kbart.KbartExportFilter.PredefinedColumnOrdering;
 
 /**
- * Test various types of export filter. Note that the testing includes a level of randomness 
- * to produce custom orderings, so there may be obscure failures which are not immediately reproducible.
+ * Test various types of export filter. Note that the testing includes a level
+ * of randomness to produce custom orderings, so there may be obscure failures
+ * which are not immediately reproducible.
  * 
  * 
  * @author Neil Mayo
@@ -65,6 +66,8 @@ public class TestKbartExportFilter extends LockssTestCase {
   //FieldOrdering ordering;
   List<Field> customOrder;
   boolean omitEmptyFields;
+  boolean omitHeader;
+  boolean excludeNoIdTitles;
   boolean showHealthRatings;
  
   // Shared ID fields
@@ -114,12 +117,29 @@ public class TestKbartExportFilter extends LockssTestCase {
     this.customOrder = getRandomFieldOrder();
     // Random choice of omit empty fields
     this.omitEmptyFields = rand.nextBoolean();
+    this.omitHeader = rand.nextBoolean();
+    this.excludeNoIdTitles = rand.nextBoolean();
     this.showHealthRatings = false;
-    log.info(String.format("Randomised setup:\n ordering: %s \n omitEmptyFields: %s\n", customOrder, omitEmptyFields));
+    log.info(String.format(
+        "Randomised setup:\n ordering: %s \n omitEmptyFields: %b\n omitHeader: %b\n excludeNoIdTitles: %b\n",
+        customOrder, omitEmptyFields, omitHeader, excludeNoIdTitles
+    ));
     // Setup filters
     this.identityFilter = KbartExportFilter.identityFilter(titles);
-    this.filterIssnOnly = new KbartExportFilter(titles, KbartExportFilter.PredefinedColumnOrdering.ISSN_ONLY, omitEmptyFields, showHealthRatings);
-    this.customFilter = new KbartExportFilter(titles, CustomColumnOrdering.create(customOrder), omitEmptyFields, showHealthRatings);
+    this.filterIssnOnly = new KbartExportFilter(
+        titles,
+        KbartExportFilter.PredefinedColumnOrdering.ISSN_ONLY,
+        omitEmptyFields,
+        omitHeader,
+        excludeNoIdTitles
+    );
+    this.customFilter = new KbartExportFilter(
+        titles,
+        CustomColumnOrdering.create(customOrder),
+        omitEmptyFields,
+        omitHeader,
+        excludeNoIdTitles
+    );
     // Add filters to array
     this.testFilters = new KbartExportFilter[] {identityFilter, filterIssnOnly, customFilter};
   }
@@ -227,13 +247,16 @@ public class TestKbartExportFilter extends LockssTestCase {
   }
 
   /**
-   * Decide if the title should be shown under this filter. The title is shown if:
+   * Decide if the title should be shown under this filter. The title is shown
+   * if any of the following hold:
    * <ul>
    *   <li>It is the first title.</li>
    *   <li>The filter includes range fields.</li>
    *   <li>The filter includes neither range nor id fields (meaning we can't decide if titles differ).</li>
    *   <li>The filter includes a field which differs between titles.</li>
    * </ul>
+   * It is not shown if the filter is set to exclude identifier-less
+   * titles, includes the title_id field, and the title has no identifier.
    * 
    * @param title the title under consideration for output
    * @param filter the output filter in effect
@@ -247,8 +270,15 @@ public class TestKbartExportFilter extends LockssTestCase {
     boolean rangeFieldsIncluded = !CollectionUtil.isDisjoint(Field.rangeFields, fields);
     // Are id field included in the output?
     boolean idFieldsIncluded= !CollectionUtil.isDisjoint(Field.idFields, fields);
-    return title==title1  || titlesDiffer || rangeFieldsIncluded ||
-        (!rangeFieldsIncluded && !idFieldsIncluded);
+    boolean excludedForLackingId = filter.isExcludeNoIdTitles() &&
+        filter.getColumnOrdering().getFields().contains(Field.TITLE_ID) &&
+        !title.hasFieldValue(Field.TITLE_ID);
+    return !excludedForLackingId && (
+        title==title1  ||
+            titlesDiffer ||
+            rangeFieldsIncluded ||
+            (!rangeFieldsIncluded && !idFieldsIncluded)
+    );
   }
   
   

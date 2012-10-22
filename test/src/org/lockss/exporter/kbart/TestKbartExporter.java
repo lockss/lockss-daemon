@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartExporter.java,v 1.6 2012-10-22 15:07:10 easyonthemayo Exp $
+ * $Id: TestKbartExporter.java,v 1.7 2012-10-22 17:24:06 easyonthemayo Exp $
  */
 
 /*
@@ -55,6 +55,8 @@ public class TestKbartExporter extends LockssTestCase {
   KbartExporter basicKb;
   KbartExportFilter filter;
   boolean omitEmptyFields = false;
+  boolean omitHeader = false;
+  boolean excludeNoIdTitles = false;
   boolean showHealthRatings = false;
   
   protected void setUp() throws Exception {
@@ -97,7 +99,11 @@ public class TestKbartExporter extends LockssTestCase {
     this.omitEmptyFields = false;
     this.showHealthRatings = false;
     this.filter = new KbartExportFilter(titles, 
-	KbartExportFilter.PredefinedColumnOrdering.ISSN_ONLY, omitEmptyFields, showHealthRatings);
+	KbartExportFilter.PredefinedColumnOrdering.ISSN_ONLY,
+        omitEmptyFields,
+        omitHeader,
+        excludeNoIdTitles
+    );
     kb.setFilter(filter);
     kb.export(new NullOutputStream());
     assertEquals("Number of titles does not match export count.", 
@@ -114,7 +120,11 @@ public class TestKbartExporter extends LockssTestCase {
     this.omitEmptyFields = true;
     this.showHealthRatings = false;
     this.filter = new KbartExportFilter(titles, 
-        KbartExportFilter.CustomColumnOrdering.create(ordering), omitEmptyFields, showHealthRatings);
+        KbartExportFilter.CustomColumnOrdering.create(ordering),
+        omitEmptyFields,
+        omitHeader,
+        excludeNoIdTitles
+    );
     kb.setFilter(filter);
     kb.export(new NullOutputStream());
     assertEquals("Number of titles does not match export count.", 

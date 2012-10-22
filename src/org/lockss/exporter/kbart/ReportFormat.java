@@ -1,5 +1,5 @@
 /*
- * $Id: ReportFormat.java,v 1.7 2012-10-22 15:07:09 easyonthemayo Exp $
+ * $Id: ReportFormat.java,v 1.8 2012-10-22 17:24:06 easyonthemayo Exp $
  */
 
 /*
@@ -262,6 +262,7 @@ public class ReportFormat {
       @Override
       public void overrideCustomOptions(KbartCustomOptions opts) {
         opts.setOmitHeader(true);
+        opts.setExcludeNoIdTitles(true);
         opts.setColumnOrdering(getColumnOrdering());
       }
     }
