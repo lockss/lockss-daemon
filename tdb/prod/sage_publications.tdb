@@ -638,10 +638,10 @@
         param[base_url] = http://adr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 1987 ; Advances in Dental Research Volume 1 ; 1 >
+        au < ready ; 1987 ; Advances in Dental Research Volume 1 ; 1 >
         au < testing ; 1988 ; Advances in Dental Research Volume 2 ; 2 >
         au < ready ; 1989 ; Advances in Dental Research Volume 3 ; 3 >
-        au < testing ; 1990 ; Advances in Dental Research Volume 4 ; 4 >
+        au < ready ; 1990 ; Advances in Dental Research Volume 4 ; 4 >
         au < testing ; 1991 ; Advances in Dental Research Volume 5 ; 5 >
         au < ready ; 1992 ; Advances in Dental Research Volume 6 ; 6 >
         au < ready ; 1993 ; Advances in Dental Research Volume 7 ; 7 >
@@ -652,8 +652,8 @@
         au < testing ; 1998 ; Advances in Dental Research Volume 12 ; 12 >
         au < ready ; 1999 ; Advances in Dental Research Volume 13 ; 13 >
         au < testing ; 2000 ; Advances in Dental Research Volume 14 ; 14 >
-        au < testing ; 2001 ; Advances in Dental Research Volume 15 ; 15 >
-        au < testing ; 2002 ; Advances in Dental Research Volume 16 ; 16 >
+        au < ready ; 2001 ; Advances in Dental Research Volume 15 ; 15 >
+        au < ready ; 2002 ; Advances in Dental Research Volume 16 ; 16 >
         au < ready ; 2003 ; Advances in Dental Research Volume 17 ; 17 >
         au < ready ; 2005 ; Advances in Dental Research Volume 18 ; 18 >
         au < ready ; 2006 ; Advances in Dental Research Volume 19 ; 19 >
