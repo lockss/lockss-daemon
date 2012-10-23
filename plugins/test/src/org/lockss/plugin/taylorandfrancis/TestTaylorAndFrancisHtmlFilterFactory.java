@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.5 2012-10-12 18:15:11 ldoan Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.6 2012-10-23 21:09:52 thib_gc Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
         "";
     
     private static final String brandingHtmlHash = 
-        "<div id=\"branding\"></div>";
+        "<div id=\"hd\">\n<div id=\"branding\">XYZ</div>\n</div>";
     private static final String brandingHtmlHashFiltered = 
         "";
     
@@ -105,7 +105,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
         "";
     
     private static final String creditsHtmlHash = 
-          "<div class=\"re-creditss-due\"></div>";
+          "<div id=\"ft\">\n<div class=\"credits\">\n<p>(c) 2012</p>\n</div>\n</div>";
     private static final String creditsHtmlHashFiltered = 
           "";
     
@@ -370,6 +370,34 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
                                                                              Constants.DEFAULT_ENCODING)));
     }
     
+    public void testHd() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<div id=\"hd\">\n" + rand() + "\n</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testFt() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<div id=\"ft\">\n" + rand() + "\n</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testRelatedLink() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<a class=\"relatedLink\" href=\"/action/doSearch?target=related&amp;doi=10.0000/123456789\">" + rand() + "</a>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+
+    public void testDoiMeta() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<div class=\"doiMeta " + rand() + "\">\n" + rand() + "\n</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+  
   }
 
   public static Test suite() {

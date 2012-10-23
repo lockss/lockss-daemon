@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.7 2012-10-12 18:15:10 ldoan Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.8 2012-10-23 21:09:52 thib_gc Exp $
  */
 
 /*
@@ -73,14 +73,18 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         new TagNameFilter("script"),
         // Can change over time
         new TagNameFilter("style"),
+        // Header contains institution-dependent markup, can contain
+        // temporary site warnings (e.g. "Librarians' administration
+        // tools are temporarily unavailable. We are working to
+        // restore these as soon as possible and apologize for any
+        // inconvenience caused."), etc.
+        HtmlNodeFilters.tagWithAttribute("div", "id", "hd"),
+        // Footer contains copyright year and other potentially variable items
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ft"),
         // Contains site-specific SFX markup
         HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
-        // Contains institution-specific markup
-        HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
         // Contains a cookie or session ID
         HtmlNodeFilters.tagWithAttribute("link", "type", "application/rss+xml"),
-        // Contains the current year in a copyright statement
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "credits"),
         // Contains a cookie or session ID
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "&feed=rss"),
         // Contains a variant phrase "Full access" or "Free access"
@@ -105,9 +109,14 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         // These two sections are newer placeholders
         HtmlNodeFilters.tagWithAttribute("li", "id", "citationsTab"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "citationsPanel"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "articleUsage"),
         // Some <h4> tags had/have a 'class' attribute
         new TagNameFilter("h4"),
+        // Contains an article view count
+        HtmlNodeFilters.tagWithAttribute("div", "class", "articleUsage"),
+        // This feature was added later (search related articles)
+        HtmlNodeFilters.tagWithAttribute("a", "class", "relatedLink"),
+        // Too much subtly variable markup to keep
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^doiMeta"),
     };
     
     HtmlTransform xform = new HtmlTransform() {
