@@ -22,8 +22,8 @@
       au < released ; 2008 ; Archives of Asian Art Volume 58 ; 58 >
       au < released ; 2009 ; Archives of Asian Art Volume 59 ; 59 >
       au < released ; 2010 ; Archives of Asian Art Volume 60 ; 60 >
-      au < manifest ; 2011 ; Archives of Asian Art Volume 61 ; 61 >
-      au < manifest ; 2012 ; Archives of Asian Art Volume 62 ; 62 >
+      au < testing ; 2011 ; Archives of Asian Art Volume 61 ; 61 >
+      au < testing ; 2012 ; Archives of Asian Art Volume 62 ; 62 >
       
     }
 
@@ -87,8 +87,8 @@
       au < released ; 2008 ; Asian Theatre Journal Volume 25 ; 25 >
       au < released ; 2009 ; Asian Theatre Journal Volume 26 ; 26 >
       au < released ; 2010 ; Asian Theatre Journal Volume 27 ; 27 >
-      au < released ; 2011 ; Asian Theatre Journal Volume 28 ; 28 >    
-      au < manifest ; 2012 ; Asian Theatre Journal Volume 29 ; 29 >
+      au < released ; 2011 ; Asian Theatre Journal Volume 28 ; 28 >
+      au < testing ; 2012 ; Asian Theatre Journal Volume 29 ; 29 >
 
     }
 
@@ -113,7 +113,7 @@
       au < released ; 2008 ; Azalea: Journal of Korean Literature & Culture Volume 2 ; 2 >
       au < released ; 2010 ; Azalea: Journal of Korean Literature & Culture Volume 3 ; 3 >
       au < released ; 2011 ; Azalea: Journal of Korean Literature & Culture Volume 4 ; 4 >
-      au < manifest ; 2012 ; Azalea: Journal of Korean Literature & Culture Volume 5 ; 5 >
+      au < testing ; 2012 ; Azalea: Journal of Korean Literature & Culture Volume 5 ; 5 >
 
     }
 
@@ -168,7 +168,7 @@
       au < released ; 2009 ; Biography Volume 32 ; 32 >
       au < released ; 2010 ; Biography Volume 33 ; 33 >
       au < released ; 2011 ; Biography Volume 34 ; 34 >
-      au < manifest ; 2012 ; Biography Volume 35 ; 35 >
+      au < testing ; 2012 ; Biography Volume 35 ; 35 >
 
     }
   }
@@ -200,8 +200,8 @@
       au < released ; 2008 ; Buddhist-Christian Studies Volume 28 ; 28 >
       au < released ; 2009 ; Buddhist-Christian Studies Volume 29 ; 29 >
       au < released ; 2010 ; Buddhist-Christian Studies Volume 30 ; 30 >
-      au < manifest ; 2011 ; Buddhist-Christian Studies Volume 31 ; 31 >
-      au < manifest ; 2012 ; Buddhist-Christian Studies Volume 32 ; 32 >
+      au < testing ; 2011 ; Buddhist-Christian Studies Volume 31 ; 31 >
+      au < testing ; 2012 ; Buddhist-Christian Studies Volume 32 ; 32 >
 
     }      
   }
@@ -237,8 +237,8 @@
       au < released ; 2007 ; China Review International Volume 14 ; 14 >
       au < released ; 2008 ; China Review International Volume 15 ; 15 >
       au < released ; 2009 ; China Review International Volume 16 ; 16 >
-      au < manifest ; 2010 ; China Review International Volume 17 ; 17 >
-      au < manifest ; 2011 ; China Review International Volume 18 ; 18 >
+      au < testing ; 2010 ; China Review International Volume 17 ; 17 >
+      au < testing ; 2011 ; China Review International Volume 18 ; 18 >
       
     }
   }
@@ -270,7 +270,7 @@
       au < released ; 2009 ; The Contemporary Pacific Volume 21 ; 21 >
       au < released ; 2010 ; The Contemporary Pacific Volume 22 ; 22 >
       au < released ; 2011 ; The Contemporary Pacific Volume 23 ; 23 >
-      au < manifest ; 2012 ; The Contemporary Pacific Volume 24 ; 24 >
+      au < testing ; 2012 ; The Contemporary Pacific Volume 24 ; 24 >
     
     }
   }
@@ -289,7 +289,7 @@
       param[journal_dir] = cross_currents_east_asian_history_and_culture_review
       attr[journal_id] = ach
       
-      au < manifest ; 2012 ; Cross-Currents: East Asian History and Culture Review Volume 1 ; 1 >
+      au < testing ; 2012 ; Cross-Currents: East Asian History and Culture Review Volume 1 ; 1 >
  
     }  
   }
@@ -307,8 +307,9 @@
       param[journal_dir] = journal_of_korean_religions
       attr[journal_id] = jkr
  
-      au < manifest ; 2010 ; Journal of Korean Religions Volume 1 ; 1 >
-      au < manifest ; 2011 ; Journal of Korean Religions Volume 2 ; 2 >
+      au < testing ; 2010 ; Journal of Korean Religions Volume 1 ; 1 >
+      au < testing ; 2011 ; Journal of Korean Religions Volume 2 ; 2 >
+      au < testing ; 2012 ; Journal of Korean Religions Volume 3 ; 3 >
  
     }  
   }
@@ -344,7 +345,7 @@
       au < released ; 2007 ; Journal of World History Volume 18 ; 18 >
       au < released ; 2008 ; Journal of World History Volume 19 ; 19 >
       au < released ; 2009 ; Journal of World History Volume 20 ; 20 >
-      au < released ; 2010 ; Journal of World History Volume 21 ; 21 >    
+      au < released ; 2010 ; Journal of World History Volume 21 ; 21 >
       au < released ; 2011 ; Journal of World History Volume 22 ; 22 >
       au < notReady ; 2012 ; Journal of World History Volume 23 ; 23 >
 
@@ -412,7 +413,7 @@
       au < released ; 1996 ; Korean Studies Volume 20 ; 20 >
       au < released ; 1997 ; Korean Studies Volume 21 ; 21 >
       au < released ; 1998 ; Korean Studies Volume 22 ; 22 >
-      au < released ; 1999 ; Korean Studies Volume 23 ; 23 >      
+      au < released ; 1999 ; Korean Studies Volume 23 ; 23 >
       au < released ; 2000 ; Korean Studies Volume 24 ; 24 >
       au < released ; 2001 ; Korean Studies Volume 25 ; 25 >
       au < released ; 2002 ; Korean Studies Volume 26 ; 26 >
@@ -424,7 +425,7 @@
       au < released ; 2008 ; Korean Studies Volume 32 ; 32 >
       au < released ; 2009 ; Korean Studies Volume 33 ; 33 >
       au < released ; 2010 ; Korean Studies Volume 34 ; 34 >
-      au < manifest ; 2011 ; Korean Studies Volume 35 ; 35 >
+      au < testing ; 2011 ; Korean Studies Volume 35 ; 35 >
       au < expected ; 2012 ; Korean Studies Volume 36 ; 36 >
     
     }
@@ -460,7 +461,7 @@ comment[mn20] = URL with 403 Forbidden error
       au < released ; 2009 ; Manoa Volume 21 ; 21 >
       au < released ; 2010 ; Manoa Volume 22 ; 22 >
       au < released ; 2011 ; Manoa Volume 23 ; 23 >
-      au < manifest ; 2012 ; Manoa Volume 24 ; 24 >
+      au < testing ; 2012 ; Manoa Volume 24 ; 24 >
     
     }
   }
@@ -493,7 +494,7 @@ comment[mn20] = URL with 403 Forbidden error
       au < released ; 2009 ; Oceanic Linguistics Volume 48 ; 48 >
       au < released ; 2010 ; Oceanic Linguistics Volume 49 ; 49 >
       au < released ; 2011 ; Oceanic Linguistics Volume 50 ; 50 >
-      au < manifest ; 2012 ; Oceanic Linguistics Volume 51 ; 51 >
+      au < testing ; 2012 ; Oceanic Linguistics Volume 51 ; 51 >
     
     }
   }
@@ -572,7 +573,7 @@ comment[mn20] = URL with 403 Forbidden error
       au < released ; 2009 ; Philosophy East and West Volume 59 ; 59 >
       au < released ; 2010 ; Philosophy East and West Volume 60 ; 60 >
       au < released ; 2011 ; Philosophy East and West Volume 61 ; 61 >
-      au < manifest ; 2012 ; Philosophy East and West Volume 62 ; 62 >
+      au < testing ; 2012 ; Philosophy East and West Volume 62 ; 62 >
     
     }
   }
@@ -600,7 +601,7 @@ comment[mn20] = URL with 403 Forbidden error
       au < released ; 2009 ; Yearbook of the Association of Pacific Coast Geographers Volume 71 ; 71 >
       au < released ; 2010 ; Yearbook of the Association of Pacific Coast Geographers Volume 72 ; 72 >
       au < released ; 2011 ; Yearbook of the Association of Pacific Coast Geographers Volume 73 ; 73 >
-      au < manifest ; 2012 ; Yearbook of the Association of Pacific Coast Geographers Volume 74 ; 74 >
+      au < testing ; 2012 ; Yearbook of the Association of Pacific Coast Geographers Volume 74 ; 74 >
     
     }
 
