@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.6 2012-10-23 21:09:52 thib_gc Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.7 2012-10-23 22:27:08 thib_gc Exp $
  */
 
 /*
@@ -395,6 +395,32 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
       assertEquals("",
                    StringUtil.fromInputStream(fact.createFilteredInputStream(null,
                                                                              new StringInputStream("<div class=\"doiMeta " + rand() + "\">\n" + rand() + "\n</div>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+  
+    public void testSingleHighlightColor() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<input type=\"hidden\" id=\"singleHighlightColor\" value=\"true\" />"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+  
+    public void testDivSpacing() throws Exception {
+      assertEquals("</div> <div class=\"foo\">",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("</div><div class=\"foo\">"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("</div> <div class=\"foo\">",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("</div> <div class=\"foo\">"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("</div> <div class=\"foo\">",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("</div>\n<div class=\"foo\">"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("</div> <div class=\"foo\">",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("</div>   \n\n\n   <div class=\"foo\">"),
                                                                              Constants.DEFAULT_ENCODING)));
     }
   

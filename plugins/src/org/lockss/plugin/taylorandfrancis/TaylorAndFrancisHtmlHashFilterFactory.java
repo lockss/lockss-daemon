@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.8 2012-10-23 21:09:52 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.9 2012-10-23 22:27:08 thib_gc Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -117,6 +118,8 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("a", "class", "relatedLink"),
         // Too much subtly variable markup to keep
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^doiMeta"),
+        // Added later
+        HtmlNodeFilters.tagWithAttribute("input", "id", "singleHighlightColor"),
     };
     
     HtmlTransform xform = new HtmlTransform() {
@@ -200,7 +203,9 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         // some comments contain an opaque hash or timestamp
         new TagPair("<!--", "-->")
     ));
-    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
+    // Artifact of whitespace filter
+    Reader stringFilter = new StringFilter(tagFilter, "</div><div", "</div> <div");
+    return new ReaderInputStream(new WhiteSpaceFilter(stringFilter));
   }
 
 }
