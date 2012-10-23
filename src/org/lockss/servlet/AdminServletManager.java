@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.29 2012-10-23 21:13:22 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.30 2012-10-23 21:16:23 tlipkis Exp $
  */
 
 /*
@@ -189,8 +189,8 @@ public class AdminServletManager extends BaseServletManager {
   }
 
   /** List of MIME-type prefixes for content that should be displayed
-   * inline in a frame.  Content of other types will be offered for
-   * download. */
+   * inline in a frame in ViewContent.  Content of other types will be
+   * offered for download. */
   static final String PARAM_INFRAME_CONTENT_TYPES =
     PREFIX + "view.inFrameTypes";
   static final String DEFAULT_INFRAME_CONTENT_TYPES =
