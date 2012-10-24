@@ -1,5 +1,35 @@
 #!/usr/bin/env python
 
+# $Id: commdatamatrix.py,v 1.2 2012-10-24 21:18:43 thib_gc Exp $
+
+__copyright__ = '''\
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+'''
+
+__version__ = '0.5.1'
+
 import fileinput
 import optparse
 
@@ -45,13 +75,16 @@ def compute_results(data, options):
         s = '%s' % (p1,)
         for p2 in peerids:
             s = s + '\t'
+            if p1 == p2:
+                s = s + '.'
+                continue
             v2 = v1.get(p2)
-            if v2 is None: continue
+            if v2 is None:
+                continue
             s = s + lamb(p1, p2, v2)
         print s
 
 def foo(p1, p2, d):
-    if p1 == p2: return '.'
     if d[ACCEPT] > 0:
         if d[ORIGIN] > 0 and d[ORIGIN] > d[FAIL] + 1: return 'X'
         else: return '<'

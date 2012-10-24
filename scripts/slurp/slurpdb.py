@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurpdb.py,v 1.8 2012-10-24 00:10:19 thib_gc Exp $
+# $Id: slurpdb.py,v 1.9 2012-10-24 21:18:43 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,13 +28,17 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.5.1'
+__version__ = '0.5.2'
 
 from datetime import datetime
-import MySQLdb
 import optparse
 import os
 import sys
+
+try:
+    import MySQLdb
+except ImportError:
+    print >> sys.stderr, 'Warning: module MySQLdb not found, database operations will fail'
 
 class SlurpDb(object):
 
