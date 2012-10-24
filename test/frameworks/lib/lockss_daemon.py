@@ -1,5 +1,33 @@
 """LOCKSS daemon interface library."""
 
+# $Id: lockss_daemon.py,v 1.36 2012-10-24 20:53:26 thib_gc Exp $
+
+__copyright__ = '''\
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+'''
+
 import glob
 import hashlib
 import os
@@ -719,10 +747,10 @@ class Client:
         return dict( ( row[ 'Box' ], row.get( key, '0' ).split( '%', 1 )[ 0 ] ) for row in self._getStatusTable( 'PeerRepair', AU.auId )[ 1 ] )
 
     def getAllAuRepairerInfo(self, auid):
-        """Returns a map from peers to a map, which maps from keys in
+        '''Returns a map from peers to a map, which maps from keys in
         the PeerRepair table to the corresponding data. Unlike in
         getAuRepairerInfo(), the argument is an AUID (not an AU object)
-        and the percentages are converted to float."""
+        and the percentages are converted to float.'''
         tab = self._getStatusTable('PeerRepair', auid)[1]
         ret = dict()
         for row in tab:
@@ -735,6 +763,28 @@ class Client:
                 if v is not None: v = float(v[0:-1])
                 d[k] = v
             ret[row['Box']] = d
+        return ret
+
+    def getAllCommPeerData(self):
+        '''Returns the (summary, table) pair for the Comm Peer Data
+        status table (SCommPeers).'''
+        return self._getStatusTable('SCommPeers')
+
+    def getCommPeerData(self):
+        '''Returns the tabular data of the Comm Peer Data status table
+        (SCommPeers). Return a dictionary from peer to a map of the data
+        for that peer.'''
+        tab = self.getAllCommPeerData()[1]
+        ret = dict()
+        for row in tab:
+            d = dict()
+            for k in ['Orig', 'Fail', 'Accept', 'Sent', 'Rcvd', 'SendQ']:
+                v = row.get(k)
+                if v is not None: v = int(v)
+                d[k] = v
+            for k in ['Chan', 'LastRetry', 'NextRetry']:
+                d[k] = row.get(k)
+            ret[row['Peer']] = d
         return ret
 
     def getNoAuPeers( self, AU ):
