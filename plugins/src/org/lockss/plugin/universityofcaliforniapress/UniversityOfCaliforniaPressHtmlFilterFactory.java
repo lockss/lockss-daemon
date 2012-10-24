@@ -1,10 +1,10 @@
 /*
- * $Id: UniversityOfCaliforniaPressHtmlFilterFactory.java,v 1.1 2008-06-03 00:32:31 thib_gc Exp $
+ * $Id: UniversityOfCaliforniaPressHtmlFilterFactory.java,v 1.2 2012-10-24 22:05:14 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,12 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.universityofcaliforniapress;
 
-import java.io.InputStream;
+import java.io.*;
 
-import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.*;
+import org.lockss.filter.StringFilter;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.*;
 
 public class UniversityOfCaliforniaPressHtmlFilterFactory implements FilterFactory {
 
@@ -45,37 +50,54 @@ public class UniversityOfCaliforniaPressHtmlFilterFactory implements FilterFacto
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    HtmlTransform[] transforms = new HtmlTransform[] {
-        // Filter out <table class="identitiesBar">...</table>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("table",
-                                                                         "class",
-                                                                         "identitiesBar")),
-//        // Filter out <div class="CitedBySectionContent">...</div>
-//        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-//                                                                         "class",
-//                                                                         "CitedBySectionContent")),
-//        // Filter out <table class="articleEntry">...</table>
-//        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("table",
-//                                                                         "class",
-//                                                                         "articleEntry")),
-        // Filter out <div class="footerAd">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "class",
-                                                                         "footerAd")),
-        // Filter out <link type="application/rss+xml">...</link>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("link",
-                                                                         "type",
-                                                                         "application/rss+xml")),
-        // Filter out <a href="...">...</a> where the href value matches a regular exception
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("a",
-                                                                              "href",
-                                                                              "/action/showFeed\\?(.*&)?mi=")),
-        // Filter out <script>...</script>
-        HtmlNodeFilterTransform.exclude(new TagNameFilter("script")),
+    NodeFilter[] filters = new NodeFilter[] {
+        // Variable scripting contents
+        new TagNameFilter("script"),
+        // Too many variants
+        new TagNameFilter("head"),
+        // Switched from <input>...</input> to <input />
+        // Hard to express as a combination of HTML filter and string filters
+        new TagNameFilter("form"),
+        // Institution-dependent
+        HtmlNodeFilters.tagWithAttribute("table", "class", "identitiesBar"),
+        // Advertising
+        HtmlNodeFilters.tagWithAttribute("div", "class", "footerAd"),
+        // Next two for versioned RSS feed links
+        HtmlNodeFilters.tagWithAttribute("link", "type", "application/rss+xml"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/action/showFeed\\?(.*&)?mi="),
+        // Variable file size
+        HtmlNodeFilters.tagWithAttribute("span", "class", "fileSize"),
+        // The URL structure of the <img> within changed
+        HtmlNodeFilters.tagWithAttribute("div", "id", "firstPage"),
+        // Significantly different variant
+        HtmlNodeFilters.tagWithAttributeRegex("table", "class", "footer"),
+        // Javascript specifics changed
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^javascript:RightslinkPopUp"),
+        // Some article views were added or removed over time
+        HtmlNodeFilters.tagWithAttribute("div", "class", "article_link"),
+        // Reverse citations feature added later
+        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
+        // Link to the latest issues
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/toc/"),
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     new HtmlCompoundTransform(transforms));
+
+    InputStream filtered = new HtmlFilterInputStream(in,
+                                                     encoding,
+                                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    
+    Reader reader = FilterUtil.getReader(filtered, encoding);
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader,
+                                                      ListUtil.list(
+        // Comments that appeared or disappeared over time                                                                    
+        new TagPair("<!-- placeholder", "-->"),
+        // Contains a hard to characterize block of metadata (e.g. DOI)
+        // whose formatting changed
+        new TagPair("<!-- Start title of page and review -->",
+                    "<!-- End title of page and review -->")
+    ));
+    // Use of "&nbsp;" or " " inconsistent over time
+    Reader stringFilter = new StringFilter(tagFilter, "&nbsp;", " ");
+    return new ReaderInputStream(new WhiteSpaceFilter(stringFilter));
   }
 
 }
