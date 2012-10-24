@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - collin/thib. Needs AI ME RU4287.</string>
+    <string>testing - collin. Needs AI ME RU4287.</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.47.0</string>
+    <string>1.57.4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -140,5 +140,9 @@
     <list>
       <string>&quot;^%scontent/[A-Za-z0-9]{16}/fulltext\.(html|pdf)$&quot;, base_url</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_http_cookie</string>
+    <string>MUD=MP</string>
   </entry>
 </map>
