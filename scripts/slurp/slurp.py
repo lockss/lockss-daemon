@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurp.py,v 1.10 2012-10-12 22:59:01 thib_gc Exp $
+# $Id: slurp.py,v 1.11 2012-10-24 00:10:19 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.5.0'
+__version__ = '0.5.1'
 
 from datetime import datetime
 import optparse
@@ -70,18 +70,21 @@ def slurp_option_parser():
                       type='int',
                       default=60,
                       help='Daemon UI requests time out after SECS seconds. Default: %default')
-    parser.add_option('--auids',
+    parser.add_option('-a', '--auids',
                       action='store_true',                     
-                      help='Gathers the active AUIDS')
-    parser.add_option('--auid-regex',
-                      metavar='REGEX',                     
-                      help='Only processes AUIDs that match REGEX')
+                      help='Gathers the active AUIDs')
     parser.add_option('--aus',
                       action='store_true',                     
-                      help='Gathers data about the active AUs. Implies --auids')
-    parser.add_option('--agreement',
+                      help='Gathers data about the active AUs. Implies -a/--auids')
+    parser.add_option('-c', '--commdata',
                       action='store_true',                     
-                      help='Gathers data about peer agreement for the active AUs. Implies --auids')
+                      help='Gathers data about peer communication')
+    parser.add_option('-g', '--agreement',
+                      action='store_true',                     
+                      help='Gathers data about peer agreement for the active AUs. Implies -a/--auids')
+    parser.add_option('-r', '--auid-regex',
+                      metavar='REGEX',                     
+                      help='Only processes AUIDs that match REGEX')
     return parser
 
 class SlurpThread(threading.Thread):
@@ -95,10 +98,12 @@ class SlurpThread(threading.Thread):
         self.__make_db_connection()
         self.__make_ui_connection()
         self.__dispatch()
-        self.__db.end_session(self.__sid)
-        self.__db.close_connection()
+        if not self.__options.db_ignore:
+            self.__db.end_session(self.__sid)
+            self.__db.close_connection()
 
     def __make_db_connection(self):
+        if self.__options.db_ignore: return
         self.__db = slurpdb.SlurpDb()
         db_host, db_port_str = self.__options.db_host_port.split(':')
         self.__db.set_db_host(db_host)
@@ -124,6 +129,7 @@ class SlurpThread(threading.Thread):
         if self.__options.auids: self.__slurp_auids()
         if self.__options.aus: self.__slurp_aus()
         if self.__options.agreement: self.__slurp_agreement()
+        if self.__options.commdata: self.__slurp_commdata()
 
     def __slurp_auids(self):
         flag = slurpdb.SESSIONS_FLAGS_AUIDS
@@ -191,14 +197,35 @@ class SlurpThread(threading.Thread):
                 continue # Go on to the next AUID ###FIXME
 
             for peer, vals in agreement_table.iteritems():
-                ha = vals['HighestPercentAgreement']
-                la = vals['LastPercentAgreement']
-                hah = vals['HighestPercentAgreementHint']
-                lah = vals['LastPercentAgreementHint']
-                con = vals['Last']
-                lcon = ui_to_datetime(vals['LastAgree'])
-                self.__db.make_agreement(aid, peer, ha, la, hah, lah, con, lcon)
+                self.__db.make_agreement(aid, peer, vals['HighestPercentAgreement'],
+                       vals['LastPercentAgreement'], vals['HighestPercentAgreementHint'],
+                       vals['LastPercentAgreementHint'], vals['Last'],
+                       ui_to_datetime(vals['LastAgree']))
         self.__db.or_session_flags(self.__sid, slurpdb.SESSIONS_FLAGS_AGREEMENT)
+
+    def __slurp_commdata(self):
+        retries = 0
+        while retries <= self.__options.daemon_ui_retries:
+            try:
+                table = self.__ui.getCommPeerData()
+                break
+            except URLError:
+                retries = retries + 1
+        else:
+            raise RuntimeError, 'Could not retrieve comm peer data from %s' % (self.__options.daemon_ui_host_port,)
+        lot = [(p, v['Orig'], v['Fail'], v['Accept'], v['Sent'],
+                v['Rcvd'], v['Chan'], v['SendQ'], v['LastRetry'],
+                v['NextRetry']) for p, v in table.iteritems()]
+        lot = [(p, v['Orig'], v['Fail'], v['Accept'], v['Sent'],
+                v['Rcvd'], v['Chan'], v['SendQ'],
+                ui_to_datetime(v['LastRetry']),
+                ui_to_datetime(v['NextRetry'])) \
+                        for p, v in table.iteritems()]
+        if self.__options.db_ignore:
+            for tup in lot: print '\t'.join([str(x) for x in tup])
+        else:
+            self.__db.make_many_commdata(self.__sid, lot)
+            self.__db.or_session_flags(self.__sid, slurpdb.SESSIONS_FLAGS_COMMDATA)
 
 def slurp_validate_options(parser, options):
     slurpdb.slurpdb_validate_options(parser, options)
@@ -208,8 +235,8 @@ def slurp_validate_options(parser, options):
     if options.agreement is not None: setattr(parser.values, parser.get_option('--auids').dest, True)
     if options.auid_regex:
         try: r = re.compile(options.auid_regex)
-        except: parser.error('--auid-regex regular expression is invalid: %s' % (options.auid_regex,))
-    if options.auids is None: parser.error('No action specified')
+        except: parser.error('-r/--auid-regex regular expression is invalid: %s' % (options.auid_regex,))
+    if options.auids is None and options.commdata is None: parser.error('No action specified')
 
 def slurp_validate_args(parser, options, args):
     for daemon_ui_host_port in args:

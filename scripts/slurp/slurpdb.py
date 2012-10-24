@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurpdb.py,v 1.7 2012-10-12 22:59:01 thib_gc Exp $
+# $Id: slurpdb.py,v 1.8 2012-10-24 00:10:19 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.5.0'
+__version__ = '0.5.1'
 
 from datetime import datetime
 import MySQLdb
@@ -160,7 +160,7 @@ class SlurpDb(object):
     def make_auid(self, sid, auid):
         self.make_many_auids(sid, [auid])
 
-    def make_many_auids(self, sid, list_of_auids):
+    def make_many_auids(self, list_of_auids):
         self.__raise_if_closed()
         cursor = self.__cursor()
         cursor.executemany('''\
@@ -169,7 +169,7 @@ class SlurpDb(object):
                 VALUES (%%s, %%s)
         ''' % (AUIDS,
                AUIDS_SID, AUIDS_AUID),
-        [(sid, auid) for auid in list_of_auids])
+        [(sid, self.__str_to_db(auid, AUIDS_AUID)) for auid in list_of_auids])
         cursor.close()
         self.__commit()
 
@@ -208,43 +208,45 @@ class SlurpDb(object):
                 disk_usage,
                 title):
         self.__raise_if_closed()
-        # Normalize
-        name = self.__str_to_db(name, AUS_NAME)
-        publisher = self.__str_to_db(publisher, AUS_PUBLISHER)
-        repository = self.__str_to_db(repository, AUS_REPOSITORY)
-        creation_date = self.__datetime_to_db(creation_date)
-        status = self.__str_to_db(status, AUS_STATUS)
-        last_crawl = self.__datetime_to_db(last_crawl)
-        last_crawl_result = self.__str_to_db(last_crawl_result, AUS_LAST_CRAWL_RESULT)
-        last_completed_crawl = self.__datetime_to_db(last_completed_crawl)
-        last_poll = self.__datetime_to_db(last_poll)
-        last_poll_result = self.__str_to_db(last_poll_result, AUS_LAST_POLL_RESULT)
-        last_completed_poll = self.__datetime_to_db(last_completed_poll)
-        title = self.__str_to_db(title, AUS_TITLE)
-        # Insert
         cursor = self.__cursor()
         cursor.execute('''\
                 INSERT INTO %s
-                (%s, %s, %s, %s,
-                    %s, %s, %s, %s,
-                    %s, %s, %s, %s,
-                    %s, %s, %s, %s,
+                (%s, %s,
+                    %s, %s,
+                    %s, %s,
+                    %s, %s,
+                    %s, %s,
+                    %s, %s,
+                    %s, %s,
+                    %s, %s,
                     %s)
-                VALUES (%%s, %%s, %%s, %%s,
-                    %%s, %%s, %%s, %%s,
-                    %%s, %%s, %%s, %%s,
-                    %%s, %%s, %%s, %%s,
+                VALUES (%%s, %%s,
+                    %%s, %%s,
+                    %%s, %%s,
+                    %%s, %%s,
+                    %%s, %%s,
+                    %%s, %%s,
+                    %%s, %%s,
+                    %%s, %%s,
                     %%s)
         ''' % (AUS,
-               AUS_AID, AUS_NAME, AUS_PUBLISHER, AUS_YEAR,
-               AUS_REPOSITORY, AUS_CREATION_DATE, AUS_STATUS, AUS_AVAILABLE,
-               AUS_LAST_CRAWL, AUS_LAST_CRAWL_RESULT, AUS_LAST_COMPLETED_CRAWL, AUS_LAST_POLL,
-               AUS_LAST_POLL_RESULT, AUS_LAST_COMPLETED_POLL, AUS_CONTENT_SIZE, AUS_DISK_USAGE,
+               AUS_AID, AUS_NAME,
+               AUS_PUBLISHER, AUS_YEAR,
+               AUS_REPOSITORY, AUS_CREATION_DATE,
+               AUS_STATUS, AUS_AVAILABLE,
+               AUS_LAST_CRAWL, AUS_LAST_CRAWL_RESULT,
+               AUS_LAST_COMPLETED_CRAWL, AUS_LAST_POLL,
+               AUS_LAST_POLL_RESULT, AUS_LAST_COMPLETED_POLL,
+               AUS_CONTENT_SIZE, AUS_DISK_USAGE,
                AUS_TITLE),
-        (aid, name, publisher, year,
-         repository, creation_date, status, available,
-         last_crawl, last_crawl_result, last_completed_crawl, last_poll,
-         last_poll_result, last_completed_poll, content_size, disk_usage,
+        (aid, self.__str_to_db(name, AUS_NAME),
+         self.__str_to_db(publisher, AUS_PUBLISHER), year,
+         self.__str_to_db(repository, AUS_REPOSITORY), self.__datetime_to_db(creation_date),
+         self.__str_to_db(status, AUS_STATUS), available,
+         self.__datetime_to_db(last_crawl), self.__str_to_db(last_crawl_result, AUS_LAST_CRAWL_RESULT),
+         self.__datetime_to_db(last_completed_crawl), self.__datetime_to_db(last_poll),
+         self.__str_to_db(last_poll_result, AUS_LAST_POLL_RESULT), self.__datetime_to_db(last_completed_poll),
+         content_size, disk_usage,
          title))
         cursor.close()
         self.__commit()
@@ -258,23 +260,68 @@ class SlurpDb(object):
                        last_agreement_hint,
                        consensus,
                        last_consensus):
-        # Normalize
-        peer = self.__str_to_db(peer, AGREEMENT_PEER)
-        consensus = bool(consensus.lower() == 'yes')
-        last_consensus = self.__datetime_to_db(last_consensus)
-        # Insert
+        self.__raise_if_closed()
         cursor = self.__cursor()
         cursor.execute('''\
                 INSERT INTO %s
-                (%s, %s, %s, %s,
-                    %s, %s, %s, %s)
-                VALUES (%%s, %%s, %%s, %%s,
-                    %%s, %%s, %%s, %%s)
+                (%s, %s,
+                    %s, %s,
+                    %s, %s,
+                    %s, %s)
+                VALUES (%%s, %%s,
+                    %%s, %%s,
+                    %%s, %%s,
+                    %%s, %%s)
         ''' % (AGREEMENT,
-               AGREEMENT_AID, AGREEMENT_PEER, AGREEMENT_HIGHEST_AGREEMENT, AGREEMENT_LAST_AGREEMENT,
-               AGREEMENT_HIGHEST_AGREEMENT_HINT, AGREEMENT_LAST_AGREEMENT_HINT, AGREEMENT_CONSENSUS, AGREEMENT_LAST_CONSENSUS),
-        (aid, peer, highest_agreement, last_agreement,
-         highest_agreement_hint, last_agreement_hint, consensus, last_consensus))
+               AGREEMENT_AID, AGREEMENT_PEER,
+               AGREEMENT_HIGHEST_AGREEMENT, AGREEMENT_LAST_AGREEMENT,
+               AGREEMENT_HIGHEST_AGREEMENT_HINT, AGREEMENT_LAST_AGREEMENT_HINT,
+               AGREEMENT_CONSENSUS, AGREEMENT_LAST_CONSENSUS),
+        (aid, self.__str_to_db(peer, AGREEMENT_PEER),
+         highest_agreement, last_agreement,
+         highest_agreement_hint, last_agreement_hint,
+         bool(consensus.lower() == 'yes'), self.__datetime_to_db(last_consensus)))
+        cursor.close()
+        self.__commit()
+
+    def make_commdata(self,
+                      sid,
+                      peer,
+                      origin,
+                      fail,
+                      accept,
+                      sent,
+                      received,
+                      channel,
+                      send_queue,
+                      last_attempt,
+                      next_retry):
+        self.make_many_commdata(sid, [(peer, origin, fail, accept, sent,
+        received, channel, send_queue, last_attempt, next_retry)])
+
+    def make_many_commdata(self, sid, list_of_commdata):
+        '''Tuples in list_of_commdata are expected to have the same
+        order as the arguments of make_commdata, namely: (peer, origin,
+        fail, accept, sent, received, channel, send_queue, last_attempt,
+        next_retry).'''
+        self.__raise_if_closed()
+        cursor = self.__cursor()
+        cursor.executemany('''\
+                INSERT INTO %s
+                (%s, %s, %s, %s,
+                    %s, %s, %s, %s,
+                    %s, %s, %s)
+                VALUES (%%s, %%s, %%s, %%s,
+                    %%s, %%s, %%s, %%s,
+                    %%s, %%s, %%s)
+        ''' % (COMMDATA,
+               COMMDATA_SID, COMMDATA_PEER, COMMDATA_ORIGIN, COMMDATA_FAIL,
+               COMMDATA_ACCEPT, COMMDATA_SENT, COMMDATA_RECEIVED, COMMDATA_CHANNEL,
+               COMMDATA_SEND_QUEUE, COMMDATA_LAST_ATTEMPT, COMMDATA_NEXT_RETRY),
+        [(sid, self.__str_to_db(cd[0], COMMDATA_PEER), cd[1], cd[2],
+         cd[3], cd[4], cd[5], self.__str_to_db(cd[6], COMMDATA_CHANNEL),
+         cd[7], self.__datetime_to_db(cd[8]), self.__datetime_to_db(cd[9])) \
+                 for cd in list_of_commdata])
         cursor.close()
         self.__commit()
 
@@ -432,6 +479,7 @@ SESSIONS_FLAGS_AUIDS = 0x1
 SESSIONS_FLAGS_AUS = 0x2
 SESSIONS_FLAGS_AGREEMENT = 0x4
 SESSIONS_FLAGS_AUIDS_REGEX = 0x8
+SESSIONS_FLAGS_COMMDATA = 0x10
 
 AUIDS = Table('auids', 1)
 AUIDS_ID = Column(AUIDS, 'id')
@@ -469,22 +517,39 @@ AGREEMENT_LAST_AGREEMENT_HINT = Column(AGREEMENT, 'last_agreement_hint')
 AGREEMENT_CONSENSUS = Column(AGREEMENT, 'consensus')
 AGREEMENT_LAST_CONSENSUS = Column(AGREEMENT, 'last_consensus')
 
+COMMDATA = Table('commdata', 1)
+COMMDATA_ID = Column(COMMDATA, 'id')
+COMMDATA_SID = Column(COMMDATA, 'sid')
+COMMDATA_SID = Column(COMMDATA, 'sid')
+COMMDATA_PEER = Column(COMMDATA, 'peer', 31)
+COMMDATA_ORIGIN = Column(COMMDATA, 'origin')
+COMMDATA_FAIL = Column(COMMDATA, 'fail')
+COMMDATA_ACCEPT = Column(COMMDATA, 'accept')
+COMMDATA_SENT = Column(COMMDATA, 'sent')
+COMMDATA_RECEIVED = Column(COMMDATA, 'received')
+COMMDATA_CHANNEL = Column(COMMDATA, 'channel', 15)
+COMMDATA_SEND_QUEUE = Column(COMMDATA, 'send_queue')
+COMMDATA_LAST_ATTEMPT = Column(COMMDATA, 'last_attempt')
+COMMDATA_NEXT_RETRY = Column(COMMDATA, 'next_retry')
+
 ALL_TABLES = [TABLES,
               SESSIONS,
               AUIDS,
               AUS,
-              AGREEMENT]
+              AGREEMENT,
+              COMMDATA]
 
 def slurpdb_option_parser(parser=None):
     if parser is None:
         container = optparse.OptionParser(version=__version__,
-                                          description='Initializes or updates a Slurp database.')
+                                          description='Initializes or updates a Slurp database',
+                                          usage='Usage: %prog [options]')
     else:
         container = optparse.OptionGroup(parser,
                                          'slurpdb %s' % (__version__,),
                                          'Database connection and management')
     container.add_option('-d', '--db-host-port',
-                         metavar='HOSTPORT',
+                         metavar='HOST:PORT',
                          default='localhost:3306',
                          help='Database host and port. Default: %default')
     container.add_option('-u', '--db-user',
@@ -496,6 +561,9 @@ def slurpdb_option_parser(parser=None):
     container.add_option('-n', '--db-name',
                          metavar='NAME',
                          help='Database name')
+    container.add_option('-i', '--db-ignore',
+                         action='store_true',                     
+                         help='Ignore the database completely')
     if parser is None:
         return container
     else:
@@ -503,6 +571,7 @@ def slurpdb_option_parser(parser=None):
         return parser
 
 def slurpdb_validate_options(parser, options):
+    if options.db_ignore: return
     if options.db_host_port is None: parser.error('-d/--db-host-port is required')
     if ':' not in options.db_host_port: parser.error('-d/--db-host-port does not specify a port')
     if options.db_user is None: parser.error('-u/--db-user is required')
