@@ -2563,8 +2563,8 @@
     au < manifest ; 2007 ; Labour History Review Volume 72 ; 72 > 
     au < manifest ; 2008 ; Labour History Review Volume 73 ; 73 > 
     au < manifest ; 2009 ; Labour History Review Volume 74 ; 74 > 
-    au < manifest ; 2010 ; Labour History Review Volume 75 ; 75 > 
-    au < manifest ; 2011 ; Labour History Review Volume 76 ; 76 > 
+    au < ready ; 2010 ; Labour History Review Volume 75 ; 75 > 
+    au < ready ; 2011 ; Labour History Review Volume 76 ; 76 > 
     au < expected ; 2012 ; Labour History Review Volume 77 ; 77 > 
 
   }
@@ -2588,9 +2588,9 @@
     implicit < status ; year ; name ; param[volume_name] >
  
     au < manifest ; 2009 ; Language & History Volume 52 ; 52 > 
-    au < manifest ; 2010 ; Language & History Volume 53 ; 53 > 
-    au < manifest ; 2011 ; Language & History Volume 54 ; 54 > 
-    au < manifest ; 2012 ; Language & History Volume 55 ; 55 > 
+    au < ready ; 2010 ; Language & History Volume 53 ; 53 > 
+    au < ready ; 2011 ; Language & History Volume 54 ; 54 > 
+    au < ready ; 2012 ; Language & History Volume 55 ; 55 > 
 
   }
 
@@ -2655,7 +2655,7 @@
     au < manifest ; 2009 ; Levant Volume 41 ; 41 > 
     au < ready ; 2010 ; Levant Volume 42 ; 42 > 
     au < manifest ; 2011 ; Levant Volume 43 ; 43 > 
-    au < manifest ; 2012 ; Levant Volume 44 ; 44 > 
+    au < ready ; 2012 ; Levant Volume 44 ; 44 > 
 
   }
 
@@ -2703,9 +2703,9 @@
     comment[continues] = 0024-2306
 
     au < manifest ; 2009 ; Library & Information History Volume 25 ; 25 > 
-    au < manifest ; 2010 ; Library & Information History Volume 26 ; 26 > 
-    au < manifest ; 2011 ; Library & Information History Volume 27 ; 27 > 
-    au < manifest ; 2012 ; Library & Information History Volume 28 ; 28 > 
+    au < ready ; 2010 ; Library & Information History Volume 26 ; 26 > 
+    au < ready ; 2011 ; Library & Information History Volume 27 ; 27 > 
+    au < ready ; 2012 ; Library & Information History Volume 28 ; 28 > 
 
   }
 
@@ -2904,7 +2904,7 @@
     au < manifest ; 2007 ; Medieval Archaeology Volume 51 ; 51 > 
     au < manifest ; 2008 ; Medieval Archaeology Volume 52 ; 52 > 
     au < manifest ; 2009 ; Medieval Archaeology Volume 53 ; 53 > 
-    au < manifest ; 2010 ; Medieval Archaeology Volume 54 ; 54 > 
+    au < ready ; 2010 ; Medieval Archaeology Volume 54 ; 54 > 
 
   }
 
@@ -3061,9 +3061,9 @@
     au < manifest ; 2007 ; Midland History Volume 32 ; 32 > 
     au < manifest ; 2008 ; Midland History Volume 33 ; 33 > 
     au < manifest ; 2009 ; Midland History Volume 34 ; 34 > 
-    au < manifest ; 2010 ; Midland History Volume 35 ; 35 > 
-    au < manifest ; 2011 ; Midland History Volume 36 ; 36 > 
-    au < manifest ; 2012 ; Midland History Volume 37 ; 37 > 
+    au < ready ; 2010 ; Midland History Volume 35 ; 35 > 
+    au < ready ; 2011 ; Midland History Volume 36 ; 36 > 
+    au < ready ; 2012 ; Midland History Volume 37 ; 37 > 
 
   }
 
@@ -3155,9 +3155,9 @@
     au < manifest ; 2007 ; Ming Studies Volume 2007 ; 2007 > 
     au < manifest ; 2008 ; Ming Studies Volume 2008 ; 2008 > 
     au < manifest ; 2009 ; Ming Studies Volume 2009 ; 2009 > 
-    au < manifest ; 2010 ; Ming Studies Volume 2010 ; 2010 > 
-    au < manifest ; 2011 ; Ming Studies Volume 2011 ; 2011 > 
-    au < manifest ; 2012 ; Ming Studies Volume 2012 ; 2012 > 
+    au < ready ; 2010 ; Ming Studies Volume 2010 ; 2010 > 
+    au < ready ; 2011 ; Ming Studies Volume 2011 ; 2011 > 
+    au < ready ; 2012 ; Ming Studies Volume 2012 ; 2012 > 
 
   }
 
@@ -3216,9 +3216,9 @@
 
     au < manifest ; 2008 ; Names: A Journal of Onomastics Volume 56 ; 56 > 
     au < manifest ; 2009 ; Names: A Journal of Onomastics Volume 57 ; 57 > 
-    au < manifest ; 2010 ; Names: A Journal of Onomastics Volume 58 ; 58 > 
-    au < manifest ; 2011 ; Names: A Journal of Onomastics Volume 59 ; 59 > 
-    au < manifest ; 2012 ; Names: A Journal of Onomastics Volume 60 ; 60 > 
+    au < ready ; 2010 ; Names: A Journal of Onomastics Volume 58 ; 58 > 
+    au < ready ; 2011 ; Names: A Journal of Onomastics Volume 59 ; 59 > 
+    au < ready ; 2012 ; Names: A Journal of Onomastics Volume 60 ; 60 > 
 
   }
 
@@ -3341,7 +3341,7 @@
     au < manifest ; 2007 ; Northern History Volume 44 ; 44 > 
     au < manifest ; 2008 ; Northern History Volume 45 ; 45 > 
     au < manifest ; 2009 ; Northern History Volume 46 ; 46 > 
-    au < manifest ; 2010 ; Northern History Volume 47 ; 47 > 
+    au < ready ; 2010 ; Northern History Volume 47 ; 47 > 
     au < manifest ; 2011 ; Northern History Volume 48 ; 48 > 
     au < manifest ; 2012 ; Northern History Volume 49 ; 49 > 
 
