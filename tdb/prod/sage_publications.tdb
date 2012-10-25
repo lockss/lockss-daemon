@@ -639,17 +639,17 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < ready ; 1987 ; Advances in Dental Research Volume 1 ; 1 >
-        au < testing ; 1988 ; Advances in Dental Research Volume 2 ; 2 >
+        au < ready ; 1988 ; Advances in Dental Research Volume 2 ; 2 >
         au < ready ; 1989 ; Advances in Dental Research Volume 3 ; 3 >
         au < ready ; 1990 ; Advances in Dental Research Volume 4 ; 4 >
-        au < testing ; 1991 ; Advances in Dental Research Volume 5 ; 5 >
+        au < readyg ; 1991 ; Advances in Dental Research Volume 5 ; 5 >
         au < ready ; 1992 ; Advances in Dental Research Volume 6 ; 6 >
         au < ready ; 1993 ; Advances in Dental Research Volume 7 ; 7 >
         au < ready ; 1994 ; Advances in Dental Research Volume 8 ; 8 >
         au < ready ; 1995 ; Advances in Dental Research Volume 9 ; 9 >
         au < ready ; 1996 ; Advances in Dental Research Volume 10 ; 10 >
         au < ready ; 1997 ; Advances in Dental Research Volume 11 ; 11 >
-        au < testing ; 1998 ; Advances in Dental Research Volume 12 ; 12 >
+        au < ready ; 1998 ; Advances in Dental Research Volume 12 ; 12 >
         au < ready ; 1999 ; Advances in Dental Research Volume 13 ; 13 >
         au < testing ; 2000 ; Advances in Dental Research Volume 14 ; 14 >
         au < ready ; 2001 ; Advances in Dental Research Volume 15 ; 15 >
@@ -708,10 +708,10 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < ready ; 1999 ; Advances in Developing Human Resources Volume 1 ; 1 >
-        au < testing ; 2000 ; Advances in Developing Human Resources Volume 2 ; 2 >
+        au < ready ; 2000 ; Advances in Developing Human Resources Volume 2 ; 2 >
         au < ready ; 2001 ; Advances in Developing Human Resources Volume 3 ; 3 >
         au < ready ; 2002 ; Advances in Developing Human Resources Volume 4 ; 4 >
-        au < testing ; 2003 ; Advances in Developing Human Resources Volume 5 ; 5 >
+        au < ready ; 2003 ; Advances in Developing Human Resources Volume 5 ; 5 >
         au < ready ; 2004 ; Advances in Developing Human Resources Volume 6 ; 6 >
         au < doNotProcess ; 2005 ; Advances in Developing Human Resources Volume 7 ; 7 >
         au < doNotProcess ; 2006 ; Advances in Developing Human Resources Volume 8 ; 8 >
