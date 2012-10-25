@@ -9,18 +9,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -78,7 +78,7 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sfdsys/bulkdata/getdata.action?docid=/bulkdata/%s", base_url, collection_id</string>
+    <string>"%sfdsys/bulkdata/%s", base_url, collection_id</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -91,12 +91,12 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <!-- default is that in the case of redirecting URLs, only the last URL 
-           to retrieve the data is considerd "substantive".. this expression
-           catches the redirected url.
+      <!-- examples:
+           http://www.gpo.gov/fdsys/bulkdata/PPP/2009/PPP-2009-book1.xml
+           http://www.gpo.gov/fdsys/bulkdata/CFR/1996/CFR-1996.zip
+           http://www.gpo.gov/fdsys/bulkdata/FR/2011/12/FR-2011-12-28.xml
         -->
-      <string>"^%sfdsys/bulkdata/getdata.action\?docid=/bulkdata/%s/%d/([/\d]{1,6})?(%s-%d[-\w]{2,8})?.(xml|zip)?", base_url, collection_id, year, collection_id, year</string>    
-      <string>"^%sfdsys/bulkdata/%s/%d/([/\d]{3-6})?(%s-%d[-\d]{2,8}.(xml|zip))?", base_url, collection_id, year, collection_id, year</string>
+      <string>"^%sfdsys/bulkdata/%s/%d/([/\d]{3,6})?(%s-%d([-\w]{2,8})?.(xml|zip))?", base_url, collection_id, year, collection_id, year</string>
     </list>
   </entry>
   <entry>
