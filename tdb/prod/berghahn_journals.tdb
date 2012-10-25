@@ -250,15 +250,15 @@
     param[journal_id] = focaal
     param[journal_issn] = 0920-1297
    
-    au < testing ; 2004 ; Focaal Volume 2004 ; 2004 >
+    au < ready ; 2004 ; Focaal Volume 2004 ; 2004 >
     au < testing ; 2005 ; Focaal Volume 2005 ; 2005 >
-    au < testing ; 2006 ; Focaal Volume 2006 ; 2006 >
-    au < testing ; 2007 ; Focaal Volume 2007 ; 2007 >
-    au < testing ; 2008 ; Focaal Volume 2008 ; 2008 >
-    au < testing ; 2009 ; Focaal Volume 2009 ; 2009 >
-    au < testing ; 2010 ; Focaal Volume 2010 ; 2010 >
-    au < testing ; 2011 ; Focaal Volume 2011 ; 2011 >
-    au < testing ; 2012 ; Focaal Volume 2012 ; 2012 >
+    au < ready ; 2006 ; Focaal Volume 2006 ; 2006 >
+    au < ready ; 2007 ; Focaal Volume 2007 ; 2007 >
+    au < ready ; 2008 ; Focaal Volume 2008 ; 2008 >
+    au < ready ; 2009 ; Focaal Volume 2009 ; 2009 >
+    au < ready ; 2010 ; Focaal Volume 2010 ; 2010 >
+    au < ready ; 2011 ; Focaal Volume 2011 ; 2011 >
+    au < ready ; 2012 ; Focaal Volume 2012 ; 2012 >
     
   }
 
@@ -333,11 +333,11 @@
     param[journal_id] = gs
     param[journal_issn] = 1938-8209
 
-    au < testing ; 2008 ; Girlhood Studies Volume 1 ; 1 >
-    au < testing ; 2009 ; Girlhood Studies Volume 2 ; 2 >
+    au < ready ; 2008 ; Girlhood Studies Volume 1 ; 1 >
+    au < ready ; 2009 ; Girlhood Studies Volume 2 ; 2 >
     au < testing ; 2010 ; Girlhood Studies Volume 3 ; 3 >
     au < testing ; 2011 ; Girlhood Studies Volume 4 ; 4 >
-    au < testing ; 2012 ; Girlhood Studies Volume 5 ; 5 >
+    au < ready ; 2012 ; Girlhood Studies Volume 5 ; 5 >
     
   }
 
@@ -354,8 +354,8 @@
     param[journal_issn] = 0315-7997
       
     au < testing ; 2008 ; Historical Reflections/Reflexions Historiques Volume 34 ; 34 >
-    au < testing ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 >
-    au < testing ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 >
+    au < ready ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 >
+    au < ready ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 >
     au < testing ; 2011 ; Historical Reflections/Reflexions Historiques Volume 37 ; 37 >
     au < testing ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 >
     
@@ -373,8 +373,8 @@
     param[journal_id] = isr
     param[journal_issn] = 2159-0389  
     
-    au < testing ; 2011 ; Israel Studies Review Volume 26 ; 26 >
-    au < testing ; 2012 ; Israel Studies Review Volume 27 ; 27 >
+    au < ready ; 2011 ; Israel Studies Review Volume 26 ; 26 >
+    au < ready ; 2012 ; Israel Studies Review Volume 27 ; 27 >
     
   }
 
