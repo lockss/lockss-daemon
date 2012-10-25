@@ -554,7 +554,7 @@
 
     au < manifest ; exists ; 2008 ; Clinical Medicine Insights: Psychiatry Volume 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Clinical Medicine Insights: Psychiatry Volume 2 ; 2009 >
-    au < testing ; exists ; 2011 ; Clinical Medicine Insights: Psychiatry Volume 3 ; 2011 >
+    au < released ; manifest ; 2011 ; Clinical Medicine Insights: Psychiatry Volume 3 ; 2011 >
 
   }
   
@@ -571,7 +571,7 @@
     au < manifest ; exists ; 2008 ; Clinical Medicine Insights: Reproductive Health Volume 1-2 ; 2008 >
     au < manifest ; exists ; 2009 ; Clinical Medicine Insights: Reproductive Health Volume 3 ; 2009 >
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Reproductive Health Volume 4 ; 2010 >
-    au < testing ; exists ; 2011 ; Clinical Medicine Insights: Reproductive Health Volume 5 ; 2011 >
+    au < released ; manifest ; 2011 ; Clinical Medicine Insights: Reproductive Health Volume 5 ; 2011 >
     au < released ; manifest ; 2012 ; Clinical Medicine Insights: Reproductive Health Volume 6 ; 2012 >
 
   }
@@ -588,7 +588,7 @@
 
     au < manifest ; exists ; 2009 ; Clinical Medicine Insights: Therapeutics Volume 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Therapeutics Volume 2 ; 2010 >
-    au < testing ; exists ; 2011 ; Clinical Medicine Insights: Therapeutics Volume 3 ; 2011 >
+    au < released ; manifest ; 2011 ; Clinical Medicine Insights: Therapeutics Volume 3 ; 2011 >
     au < released ; manifest ; 2012 ; Clinical Medicine Insights: Therapeutics Volume 4 ; 2012 >
 
   }
@@ -622,7 +622,7 @@
     au < manifest ; exists ; 2008 ; Clinical Medicine Insights: Urology Volume 1-2 ; 2008 >
     au < manifest ; exists ; 2009 ; Clinical Medicine Insights: Urology Volume 3 ; 2009 >
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Urology Volume 4 ; 2010 >
-    au < testing ; exists ; 2011 ; Clinical Medicine Insights: Urology Volume 5 ; 2011 >
+    au < released ; manifest ; 2011 ; Clinical Medicine Insights: Urology Volume 5 ; 2011 >
     au < released ; manifest ; 2012 ; Clinical Medicine Insights: Urology Volume 6 ; 2012 >
 
   }
@@ -640,7 +640,7 @@
     au < manifest ; exists ; 2008 ; Clinical Medicine Insights: Women's Health Volume 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Clinical Medicine Insights: Women's Health Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Women's Health Volume 3 ; 2010 >
-    au < testing ; exists ; 2011 ; Clinical Medicine Insights: Women's Health Volume 4 ; 2011 >
+    au < released ; manifest ; 2011 ; Clinical Medicine Insights: Women's Health Volume 4 ; 2011 >
     au < released ; manifest ; 2012 ; Clinical Medicine Insights: Women's Health Volume 5 ; 2012 >
 
   }
@@ -672,7 +672,7 @@
 
     au < manifest ; exists ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2010 >
-    au < testing ; exists ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 2011 >
+    au < released ; manifest ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 2011 >
     au < released ; manifest ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 2012 >
 
   }
@@ -688,7 +688,7 @@
     param[journal_id] = 167
 
     au < manifest ; exists ; 2009 ; Clinical Medicine Reviews in Patient Care Volume 1 ; 2009 >
-    au < testing ; exists ; 2011 ; Clinical Medicine Reviews in Patient Care Volume 2 ; 2011 >
+    au < released ; manifest ; 2011 ; Clinical Medicine Reviews in Patient Care Volume 2 ; 2011 >
 
   }
   
@@ -704,7 +704,7 @@
 
     au < manifest ; exists ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2010 >
-    au < testing ; exists ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 2011 >
+    au < released ; manifest ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 2011 >
     au < released ; manifest ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 2012 >
 
   }
@@ -721,7 +721,7 @@
 
     au < manifest ; exists ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2010 >
-    au < testing ; exists ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 2011 >
+    au < released ; manifest ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 2011 >
     au < released ; manifest ; 2012 ; Clinical Medicine Reviews in Vascular Health Volume 4 ; 2012 >
 
   }
@@ -738,7 +738,7 @@
 
     au < manifest ; exists ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2010 >
-    au < testing ; exists ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 2011 >
+    au < released ; manifest ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 2011 >
     au < released ; manifest ; 2012 ; Clinical Medicine Reviews in Women's Health Volume 4 ; 2012 >
 
   }
@@ -757,7 +757,7 @@
     au < manifest ; exists ; 2007 ; Drug Target Insights Volume 2 ; 2007 >
     au < manifest ; exists ; 2008 ; Drug Target Insights Volume 3 ; 2008 >
     au < manifest ; exists ; 2009 ; Drug Target Insights Volume 4 ; 2009 >
-    au < testing ; exists ; 2011 ; Drug Target Insights Volume 5 ; 2011 >
+    au < released ; manifest ; 2011 ; Drug Target Insights Volume 5 ; 2011 >
     au < released ; manifest ; 2012 ; Drug Target Insights Volume 6 ; 2012 >
 
   }
@@ -775,7 +775,7 @@
     au < manifest ; exists ; 2008 ; Environmental Health Insights Volume 1-2 ; 2008 >
     au < manifest ; exists ; 2009 ; Environmental Health Insights Volume 3 ; 2009 >
     au < manifest ; exists ; 2010 ; Environmental Health Insights Volume 4 ; 2010 >
-    au < testing ; exists ; 2011 ; Environmental Health Insights Volume 5 ; 2011 >
+    au < released ; manifest ; 2011 ; Environmental Health Insights Volume 5 ; 2011 >
     au < released ; manifest ; 2012 ; Environmental Health Insights Volume 6 ; 2012 >
 
   }
@@ -796,7 +796,7 @@
     au < manifest ; exists ; 2008 ; Evolutionary Bioinformatics Volume 4 ; 2008 >
     au < manifest ; exists ; 2009 ; Evolutionary Bioinformatics Volume 5 ; 2009 >
     au < manifest ; exists ; 2010 ; Evolutionary Bioinformatics Volume 6 ; 2010 >
-    au < testing ; exists ; 2011 ; Evolutionary Bioinformatics Volume 7 ; 2011 >
+    au < released ; manifest ; 2011 ; Evolutionary Bioinformatics Volume 7 ; 2011 >
     au < released ; manifest ; 2012 ; Evolutionary Bioinformatics Volume 8 ; 2012 >
 
   }
@@ -831,7 +831,7 @@
     au < manifest ; exists ; 2008 ; Gene Regulation and Systems Biology Volume 2 ; 2008 >
     au < manifest ; exists ; 2009 ; Gene Regulation and Systems Biology Volume 3 ; 2009 >
     au < manifest ; exists ; 2010 ; Gene Regulation and Systems Biology Volume 4 ; 2010 >
-    au < testing ; exists ; 2011 ; Gene Regulation and Systems Biology Volume 5 ; 2011 >
+    au < released ; manifest ; 2011 ; Gene Regulation and Systems Biology Volume 5 ; 2011 >
     au < released ; manifest ; 2012 ; Gene Regulation and Systems Biology Volume 6 ; 2012 >
 
   }
@@ -867,7 +867,7 @@
     au < manifest ; exists ; 2008 ; Genomics Insights Volume 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Genomics Insights Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Genomics Insights Volume 3 ; 2010 >
-    au < testing ; exists ; 2011 ; Genomics Insights Volume 4 ; 2011 >
+    au < released ; manifest ; 2011 ; Genomics Insights Volume 4 ; 2011 >
     au < released ; manifest ; 2012 ; Genomics Insights Volume 5 ; 2012 >
 
 
@@ -903,7 +903,7 @@
     au < manifest ; exists ; 2008 ; Health Services Insights Volume 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Health Services Insights Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Health Services Insights Volume 3 ; 2010 >
-    au < testing ; exists ; 2011 ; Health Services Insights Volume 4 ; 2011 >
+    au < released ; manifest ; 2011 ; Health Services Insights Volume 4 ; 2011 >
     au < released ; manifest ; 2012 ; Health Services Insights Volume 5 ; 2012 >
 
 
@@ -921,7 +921,7 @@
     
     au < manifest ; exists ; 2008 ; Healthy Aging & Clinical Care in the Elderly Volume 1 ; 2008 >
     au < manifest ; exists ; 2010 ; Healthy Aging & Clinical Care in the Elderly Volume 2 ; 2010 >
-    au < testing ; exists ; 2011 ; Healthy Aging & Clinical Care in the Elderly Volume 3 ; 2011 >
+    au < released ; manifest ; 2011 ; Healthy Aging & Clinical Care in the Elderly Volume 3 ; 2011 >
     au < released ; manifest ; 2012 ; Healthy Aging & Clinical Care in the Elderly Volume 4 ; 2012 >
 
 
@@ -939,7 +939,7 @@
     
     au < manifest ; exists ; 2009 ; Human Parasitic Diseases Volume 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Human Parasitic Diseases Volume 2 ; 2010 >
-    au < testing ; exists ; 2011 ; Human Parasitic Diseases Volume 3 ; 2011 >
+    au < released ; manifest ; 2011 ; Human Parasitic Diseases Volume 3 ; 2011 >
 
 
   }
@@ -956,7 +956,7 @@
     
     au < manifest ; exists ; 2009 ; Immunology and Immunogenetics Insights Volume 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Immunology and Immunogenetics Insights Volume 2 ; 2010 >
-    au < testing ; exists ; 2011 ; Immunology and Immunogenetics Insights Volume 3 ; 2011 >
+    au < released ; manifest ; 2011 ; Immunology and Immunogenetics Insights Volume 3 ; 2011 >
     au < released ; manifest ; 2012 ; Immunology and Immunogenetics Insights Volume 4 ; 2012 >
 
   }
@@ -972,7 +972,7 @@
     param[journal_id] = 150
     
     au < manifest ; exists ; 2009 ; Immunotherapy Insights Volume 1 ; 2009 >
-    au < testing ; exists ; 2011 ; Immunotherapy Insights Volume 1 ; 2011 >
+    au < released ; manifest ; 2011 ; Immunotherapy Insights Volume 1 ; 2011 >
 
   }
   
