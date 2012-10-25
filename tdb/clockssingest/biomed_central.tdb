@@ -2159,7 +2159,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2008 ; Cell Communication and Signaling Volume 6 ; 6 >
       au < crawling ; exists ; 2009 ; Cell Communication and Signaling Volume 7 ; 7 >
       au < released ; crawling ; 2010 ; Cell Communication and Signaling Volume 8 ; 8 >
-      au < testing ; exists ; 2011 ; Cell Communication and Signaling Volume 9 ; 9 >
+      au < released ; manifest ; 2011 ; Cell Communication and Signaling Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Cell Communication and Signaling Volume 10 ; 10 >
 
     }
@@ -3892,7 +3892,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < crawling ; exists ; 2008 ; Molecular Cytogenetics Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; Molecular Cytogenetics Volume 2 ; 2 >
-      au < testing ; exists ; 2010 ; Molecular Cytogenetics Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; Molecular Cytogenetics Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; Molecular Cytogenetics Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Molecular Cytogenetics Volume 5 ; 5 >
 
@@ -4130,7 +4130,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2007 ; Patient Safety in Surgery Volume 1 ; 1 >
       au < crawling ; exists ; 2008 ; Patient Safety in Surgery Volume 2 ; 2 >
       au < crawling ; exists ; 2009 ; Patient Safety in Surgery Volume 3 ; 3 >
-      au < testing ; exists ; 2010 ; Patient Safety in Surgery Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; Patient Safety in Surgery Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; Patient Safety in Surgery Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Patient Safety in Surgery Volume 6 ; 6 >
 
@@ -4598,7 +4598,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2008 ; World Journal of Emergency Surgery Volume 3 ; 3 >
       au < crawling ; exists ; 2009 ; World Journal of Emergency Surgery Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; World Journal of Emergency Surgery Volume 5 ; 5 >
-      au < testing ; exists ; 2011 ; World Journal of Emergency Surgery Volume 6 ; 6 >
+      au < released ; manifest ; 2011 ; World Journal of Emergency Surgery Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; World Journal of Emergency Surgery Volume 7 ; 7 >
 
     }
