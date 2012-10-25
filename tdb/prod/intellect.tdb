@@ -312,10 +312,10 @@
       param[journal_id] = eme
       param[journal_issn] = 1539-7785
       
-      au < testing ; 2007 ; Explorations in Media Ecology Volume 6 ; 6 >
-      au < testing ; 2008 ; Explorations in Media Ecology Volume 7 ; 7 >
-      au < testing ; 2009 ; Explorations in Media Ecology Volume 8 ; 8 >
-      au < testing ; 2010 ; Explorations in Media Ecology Volume 9 ; 9 >
+      au < ready ; 2007 ; Explorations in Media Ecology Volume 6 ; 6 >
+      au < ready ; 2008 ; Explorations in Media Ecology Volume 7 ; 7 >
+      au < ready ; 2009 ; Explorations in Media Ecology Volume 8 ; 8 >
+      au < ready ; 2010 ; Explorations in Media Ecology Volume 9 ; 9 >
 
     }
     
@@ -329,15 +329,15 @@
       param[journal_id] = fint
       param[journal_issn] = 1651-6826
       
-      au < testing ; 2003 ; Film International Volume 1 ; 1 >
-      au < testing ; 2004 ; Film International Volume 2 ; 2 >
-      au < testing ; 2005 ; Film International Volume 3 ; 3 >
-      au < testing ; 2006 ; Film International Volume 4 ; 4 >
-      au < testing ; 2007 ; Film International Volume 5 ; 5 >
-      au < testing ; 2008 ; Film International Volume 6 ; 6 >
-      au < testing ; 2009 ; Film International Volume 7 ; 7 >
-      au < testing ; 2010 ; Film International Volume 8 ; 8 >
-      au < testing ; 2011 ; Film International Volume 9 ; 9 >
+      au < ready ; 2003 ; Film International Volume 1 ; 1 >
+      au < ready ; 2004 ; Film International Volume 2 ; 2 >
+      au < ready ; 2005 ; Film International Volume 3 ; 3 >
+      au < ready ; 2006 ; Film International Volume 4 ; 4 >
+      au < ready ; 2007 ; Film International Volume 5 ; 5 >
+      au < ready ; 2008 ; Film International Volume 6 ; 6 >
+      au < ready ; 2009 ; Film International Volume 7 ; 7 >
+      au < ready ; 2010 ; Film International Volume 8 ; 8 >
+      au < ready ; 2011 ; Film International Volume 9 ; 9 >
 
     }
 
@@ -351,8 +351,8 @@
       param[journal_id] = fm
       param[journal_issn] = 2042-1869
       
-      au < testing ; 2010-2011 ; Film Matters Volume 1 ; 1 >
-      au < testing ; 2011 ; Film Matters Volume 2 ; 2 >
+      au < ready ; 2010-2011 ; Film Matters Volume 1 ; 1 >
+      au < ready ; 2011 ; Film Matters Volume 2 ; 2 >
 
     }
 
@@ -366,7 +366,7 @@
       param[journal_id] = ffc
       param[journal_issn] = 2044-2823
       
-      au < testing ; 2011 ; Film, Fashion & Consumption Volume 1 ; 1 >
+      au < ready ; 2011 ; Film, Fashion & Consumption Volume 1 ; 1 >
       
     }
 
@@ -379,8 +379,8 @@
       param[journal_id] = host
       param[journal_issn] = 2040-3275
 
-      au < testing ; 2010 ; Horror Studies Volume 1 ; 1 >
-      au < testing ; 2011 ; Horror Studies Volume 2 ; 2 >
+      au < ready ; 2010 ; Horror Studies Volume 1 ; 1 >
+      au < ready ; 2011 ; Horror Studies Volume 2 ; 2 >
  
     }
 
@@ -393,7 +393,7 @@
       param[journal_id] = hosp
       param[journal_issn] = 2042-7913
 
-      au < testing ; 2011 ; Hospitality & Society Volume 1 ; 1 >
+      au < ready ; 2011 ; Hospitality & Society Volume 1 ; 1 >
  
     }
 
@@ -406,7 +406,7 @@
       param[journal_id] = iscc
       param[journal_issn] = 1757-2681
 
-      au < testing ; 2009-2011 ; Interactions: Studies in Communication & Culture Volume 1 ; 1 >
+      au < ready ; 2009-2011 ; Interactions: Studies in Communication & Culture Volume 1 ; 1 >
  
     }
 
@@ -419,10 +419,10 @@
       param[journal_id] = ijcm
       param[journal_issn] = 1752-6299
 
-      au < testing ; 2007-2009 ; International Journal of Community Music Volume 1 ; 1 >
-      au < testing ; 2009 ; International Journal of Community Music Volume 2 ; 2 >
-      au < testing ; 2010 ; International Journal of Community Music Volume 3 ; 3 >
-      au < testing ; 2011 ; International Journal of Community Music Volume 4 ; 4 >
+      au < ready ; 2007-2009 ; International Journal of Community Music Volume 1 ; 1 >
+      au < ready ; 2009 ; International Journal of Community Music Volume 2 ; 2 >
+      au < ready ; 2010 ; International Journal of Community Music Volume 3 ; 3 >
+      au < ready ; 2011 ; International Journal of Community Music Volume 4 ; 4 >
 
     }
 
@@ -435,11 +435,11 @@
       param[journal_id] = ijcis
       param[journal_issn] = 1751-2867
 
-      au < notReady ; 2006-2007 ; International Journal of Contemporary Iraqi Studies Volume 1 ; 1 >
-      au < notReady ; 2008-2009 ; International Journal of Contemporary Iraqi Studies Volume 2 ; 2 >
-      au < notReady ; 2009 ; International Journal of Contemporary Iraqi Studies Volume 3 ; 3 >
-      au < notReady ; 2010 ; International Journal of Contemporary Iraqi Studies Volume 4 ; 4 >
-      au < notReady ; 2011 ; International Journal of Contemporary Iraqi Studies Volume 5 ; 5 >
+      au < testing ; 2006-2007 ; International Journal of Contemporary Iraqi Studies Volume 1 ; 1 >
+      au < testing ; 2008-2009 ; International Journal of Contemporary Iraqi Studies Volume 2 ; 2 >
+      au < testing ; 2009 ; International Journal of Contemporary Iraqi Studies Volume 3 ; 3 >
+      au < testing ; 2010 ; International Journal of Contemporary Iraqi Studies Volume 4 ; 4 >
+      au < testing ; 2011 ; International Journal of Contemporary Iraqi Studies Volume 5 ; 5 >
 
     }
 
@@ -452,8 +452,8 @@
       param[journal_id] = jdtv
       param[journal_issn] = 2040-4182
 
-      au < notReady ; 2010 ; International Journal of Digital Television Volume 1 ; 1 >
-      au < notReady ; 2011 ; International Journal of Digital Television Volume 2 ; 2 >
+      au < testing ; 2010 ; International Journal of Digital Television Volume 1 ; 1 >
+      au < testing ; 2011 ; International Journal of Digital Television Volume 2 ; 2 >
  
     }
 
@@ -466,13 +466,13 @@
       param[journal_id] = eta
       param[journal_issn] = 1743-5234
 
-      au < notReady ; 2005 ; International Journal of Education through Art Volume 1 ; 1 >
-      au < notReady ; 2006 ; International Journal of Education through Art Volume 2 ; 2 >
-      au < notReady ; 2007-2008 ; International Journal of Education through Art Volume 3 ; 3 >
-      au < notReady ; 2008 ; International Journal of Education through Art Volume 4 ; 4 >
-      au < notReady ; 2009 ; International Journal of Education through Art Volume 5 ; 5 >
-      au < notReady ; 2010 ; International Journal of Education through Art Volume 6 ; 6 >
-      au < notReady ; 2011 ; International Journal of Education through Art Volume 7 ; 7 >
+      au < testing ; 2005 ; International Journal of Education through Art Volume 1 ; 1 >
+      au < testing ; 2006 ; International Journal of Education through Art Volume 2 ; 2 >
+      au < testing ; 2007-2008 ; International Journal of Education through Art Volume 3 ; 3 >
+      au < testing ; 2008 ; International Journal of Education through Art Volume 4 ; 4 >
+      au < testing ; 2009 ; International Journal of Education through Art Volume 5 ; 5 >
+      au < testing ; 2010 ; International Journal of Education through Art Volume 6 ; 6 >
+      au < testing ; 2011 ; International Journal of Education through Art Volume 7 ; 7 >
 
     }
     
