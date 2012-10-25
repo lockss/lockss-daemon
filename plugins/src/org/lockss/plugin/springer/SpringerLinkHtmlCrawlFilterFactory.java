@@ -1,10 +1,10 @@
 /*
- * $Id: SpringerLinkHtmlCrawlFilterFactory.java,v 1.1 2010-10-16 01:02:00 thib_gc Exp $
+ * $Id: SpringerLinkHtmlCrawlFilterFactory.java,v 1.2 2012-10-25 08:29:08 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,7 +49,7 @@ public class SpringerLinkHtmlCrawlFilterFactory implements FilterFactory {
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
         // Contains cross-links to other articles in other journals/volumes
-        HtmlNodeFilters.tagWithAttribute("div", "id", "RelatedSection"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ContentSecondary"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

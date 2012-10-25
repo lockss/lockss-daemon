@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.20 2012-06-28 18:59:19 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.21 2012-10-25 08:29:08 thib_gc Exp $
  */
 
 /*
@@ -37,15 +37,19 @@ import java.io.*;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.*;
+import org.htmlparser.util.*;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.ReaderInputStream;
+import org.lockss.util.*;
 
 public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
 
+  protected static final Logger logger = Logger.getLogger(SpringerLinkHtmlHashFilterFactory.class);
+  
   public static class FilteringException extends PluginException {
     public FilteringException() { super(); }
     public FilteringException(String msg, Throwable cause) { super(msg, cause); }
@@ -64,20 +68,25 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
          * Crawl filter
          */
         // Contains cross-links to other articles in other journals/volumes
-        HtmlNodeFilters.tagWithAttribute("div", "id", "RelatedSection"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ContentSecondary"),
         /*
          * Hash filter
          */
-        // Contains ad-specific cookies
+        // Contains ad-specific cookies and other variable content
         new TagNameFilter("script"),
+        // Order of <meta> tags, <title> contents, etc.
+        new TagNameFilter("head"),
+        // Eventually changed from <h1 lang="en" class="title"> to <h1>
+        new TagNameFilter("h1"),
+        // Tiles around the main content, whose content gets re-arranged
+        HtmlNodeFilters.tagWithAttribute("div", "id", "Header"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ContentHeading"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ContentToolbar"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ShareToolbar"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ContentFooter"),
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "Footer"),
         // Contains ads
         HtmlNodeFilters.tagWithAttribute("div", "class", "advertisement"),
-        // Contains a lot of variable elements; institution name, gensyms for tag IDs or names, etc.
-        HtmlNodeFilters.tagWithAttribute("div", "id", "Header"),
-        // Contains account and user agent information
-        HtmlNodeFilters.tagWithAttribute("ul", "id", "Footer"),
-        // Contains the name and year of the latest known volume
-        HtmlNodeFilters.tagWithAttributeRegex("p", "class", "coverage"),
         // Contains SFX links
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "linkoutView"),
         // Has a session cookie
@@ -90,44 +99,11 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("img", "src", "^/images/"),
         // Contains ASP state blob
         HtmlNodeFilters.tagWithAttribute("input", "id", "__VIEWSTATE"),
-        // Contains ASP state blob
         HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
-        // Contains ever-updated information e.g. most recent issue
-        HtmlNodeFilters.tagWithAttribute("div", "id", "AboutSection"),
-        // Contains ever-updated information e.g. list of all issues
-        HtmlNodeFilters.tagWithAttribute("div", "id", "Modes"),
         // Text includes number of reverse citations
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/referrers/$"),
         
-        // The end volume and year of a journal's coverage keeps moving forward
-        new NodeFilter() {
-          @Override public boolean accept(Node node) {
-            if (node instanceof DefinitionListBullet) {
-              Tag tag = (Tag)node;
-              if ("DD".equals(tag.getTagName())) {
-                Node prevNode = tag.getPreviousSibling();
-                while (prevNode != null && !(prevNode instanceof DefinitionListBullet)) {
-                  prevNode = prevNode.getPreviousSibling();
-                }
-                if (prevNode != null && prevNode instanceof DefinitionListBullet) {
-                  CompositeTag prevTag = (CompositeTag)prevNode;
-                  return "Coverage".equals(prevTag.getStringText());
-                }
-              }
-            }
-            return false;
-          }
-        },
-        
         // MAINTENANCE
-        
-        // Alas, the <title> tag switched from "SpringerLink - Foo" to
-        // "Foo - SpringerLink", and the order/number of <meta> tags
-        // changes over time
-        new TagNameFilter("head"),
-        
-        // Eventually changed from <h1 lang="en" class="title"> to <h1>
-        new TagNameFilter("h1"),
         
         // Over time, <span class="...toolbarSprite..."></span>
         // became <a class="...toolbarSprite...">...</a>
@@ -142,25 +118,39 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
           }
         },
         
-        // The back link to the issue TOC contained in this <div>
-        // now has the year parenthesized after the back link
-        HtmlNodeFilters.tagWithAttribute("div", "id", "ContentHeading"),
-        
         // The inline styling of this <div> has changed from
         // <div class="coverImage" title="Cover Image" style="background-image: url(...)">
         // to
         // <div class="coverImage" title="Cover Image" style="background-image: url(...); background-size: contain;">
         HtmlNodeFilters.tagWithAttribute("div", "class", "coverImage"),
 
-        // Switched from
-        // <a title="Frequently Asked Questions" ...>FAQ</a> to
-        // <a title="Frequently Asked Questions" ...>Frequently Asked Questions</a>
-        HtmlNodeFilters.tagWithAttribute("a", "title", "Frequently Asked Questions"),
-        
     };
+    
+    HtmlTransform xform = new HtmlTransform() {
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              if (tag instanceof FormTag) {
+                // Top-level <form> tag's 'action' has been changing from words to numbers
+                tag.removeAttribute("action");
+              }
+            }
+          });
+        }
+        catch (ParserException pe) {
+          logger.debug2("Internal error (parser)", pe);
+        }
+        return nodeList;
+      }
+    };
+    
     InputStream filteredStream = new HtmlFilterInputStream(in,
                                                            encoding,
-                                                           HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+                                                           new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),
+                                                                                     xform));
 
     // Then apply Reader-based transformations
     try {
