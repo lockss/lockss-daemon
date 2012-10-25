@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.75 2011-10-02 05:49:58 tlipkis Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.76 2012-10-25 18:16:55 aishizaki Exp $
  */
 
 /*
@@ -176,9 +176,9 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
       }
       Plugin pl = getPlugin();
       if (pl instanceof SimulatedPlugin) {
-        ret = ((SimulatedPlugin)pl).getContentGenerator(cf, fileRoot);
+        ret = ((SimulatedPlugin)pl).getContentGenerator(cf, root);
       } else {
-	ret = SimulatedContentGenerator.getInstance(fileRoot);
+	ret = SimulatedContentGenerator.getInstance(root);
       }
       scgen = ret;
     }
