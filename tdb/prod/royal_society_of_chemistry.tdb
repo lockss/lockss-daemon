@@ -8,6 +8,7 @@
   param[base_url] = http://www.rsc.org/
   param[resolver_url] = http://xlink.rsc.org/
   implicit < status ; year ; name ; param[volume_name] ; param[year] >
+  comment[moved] = Moved to RSC platform, requires plugin -- AJAX issue
   comment[notReady] = Roundup 3637, needs plugin work
 
   {
@@ -202,6 +203,9 @@
 
     param[journal_code] = co
 
+    au < doNotProcess ; 1994 ; Contemporary Organic Synthesis Volume 1 ; 1 ; 1994 >
+    au < doNotProcess ; 1995 ; Contemporary Organic Synthesis Volume 2 ; 2 ; 1995 >
+    au < doNotProcess ; 1996 ; Contemporary Organic Synthesis Volume 3 ; 3 ; 1996 >
     au < doNotProcess ; 1997 ; Contemporary Organic Synthesis Volume 4 ; 4 ; 1997 >
 
   }
@@ -414,6 +418,12 @@
 
     param[journal_code] = ft
 
+    au < doNotProcess ; 1991 ; Journal of the Chemical Society, Faraday Transactions Volume 87 ; 87 ; 1991 >
+    au < doNotProcess ; 1992 ; Journal of the Chemical Society, Faraday Transactions Volume 88 ; 88 ; 1992 >
+    au < doNotProcess ; 1993 ; Journal of the Chemical Society, Faraday Transactions Volume 89 ; 89 ; 1993 >
+    au < doNotProcess ; 1994 ; Journal of the Chemical Society, Faraday Transactions Volume 90 ; 90 ; 1994 >
+    au < doNotProcess ; 1995 ; Journal of the Chemical Society, Faraday Transactions Volume 91 ; 91 ; 1995 >
+    au < doNotProcess ; 1996 ; Journal of the Chemical Society, Faraday Transactions Volume 92 ; 92 ; 1996 >
     au < down ; 1997 ; Journal of the Chemical Society, Faraday Transactions Volume 93 ; 93 ; 1997 >
     au < doNotProcess ; 1998 ; Journal of the Chemical Society, Faraday Transactions Volume 94 ; 94 ; 1998 >
 
