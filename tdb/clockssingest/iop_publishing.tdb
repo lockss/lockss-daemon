@@ -701,10 +701,10 @@
     comment[param] = eissn preferred
     comment[au_start_url] = redirects to issue toc, permission statement found in page source
 
-    au < testing ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 1 ; 1 > 
-    au < testing ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 2 ; 2 > 
-    au < testing ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 3 ; 3 > 
-    au < testing ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 4 ; 4 > 
+    au < released ; manifest ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 1 ; 1 > 
+    au < released ; manifest ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 2 ; 2 > 
+    au < released ; manifest ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 3 ; 3 > 
+    au < released ; manifest ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 4 ; 4 > 
     au < released ; manifest ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 5 ; 5 > 
     au < released ; crawling ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 6 ; 6 > 
     au < released ; crawling ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 7 ; 7 > 
@@ -1475,6 +1475,7 @@
 
     param[journal_issn] = 0953-8984
     comment[param] = print issn preferred
+    comment[notReady] = low agreement
 
     au < manifest ; exists ; 1989 ; Journal of Physics: Condensed Matter Volume 1 ; 1 > 
     au < manifest ; exists ; 1990 ; Journal of Physics: Condensed Matter Volume 2 ; 2 > 
@@ -1495,7 +1496,7 @@
     au < manifest ; exists ; 2005 ; Journal of Physics: Condensed Matter Volume 17 ; 17 > 
     au < manifest ; exists ; 2006 ; Journal of Physics: Condensed Matter Volume 18 ; 18 > 
     au < manifest ; exists ; 2007 ; Journal of Physics: Condensed Matter Volume 19 ; 19 > 
-    au < testing ; exists ; 2008 ; Journal of Physics: Condensed Matter Volume 20 ; 20 > 
+    au < notReady ; exists ; 2008 ; Journal of Physics: Condensed Matter Volume 20 ; 20 > 
     au < released ; crawling ; 2009 ; Journal of Physics: Condensed Matter Volume 21 ; 21 > 
     au < released ; crawling ; 2010 ; Journal of Physics: Condensed Matter Volume 22 ; 22 > 
     au < released ; crawling ; 2011 ; Journal of Physics: Condensed Matter Volume 23 ; 23 > 
@@ -1610,11 +1611,11 @@
     au < manifest ; exists ; 2007 ; Journal of Physics: Conference Series Volume 91 ; 91 >
     au < manifest ; exists ; 2007 ; Journal of Physics: Conference Series Volume 92 ; 92 >
     au < manifest ; exists ; 2007 ; Journal of Physics: Conference Series Volume 93 ; 93 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 94 ; 94 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 95 ; 95 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 96 ; 96 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 97 ; 97 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 98 ; 98 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 94 ; 94 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 95 ; 95 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 96 ; 96 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 97 ; 97 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 98 ; 98 >
     au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 99 ; 99 >
     au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 100 ; 100 >
     au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 101 ; 101 >
