@@ -571,7 +571,7 @@
     au < manifest ; 2008 ; Clinical Medicine Insights: Reproductive Health Volume 1-2 ; 2008 >
     au < manifest ; 2009 ; Clinical Medicine Insights: Reproductive Health Volume 3 ; 2009 >
     au < manifest ; 2010 ; Clinical Medicine Insights: Reproductive Health Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Reproductive Health Volume 5 ; 2011 >
+    au < ready ; 2011 ; Clinical Medicine Insights: Reproductive Health Volume 5 ; 2011 >
     au < ready ; 2012 ; Clinical Medicine Insights: Reproductive Health Volume 6 ; 2012 >
 
   }
@@ -588,7 +588,7 @@
 
     au < manifest ; 2009 ; Clinical Medicine Insights: Therapeutics Volume 1 ; 2009 >
     au < manifest ; 2010 ; Clinical Medicine Insights: Therapeutics Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Therapeutics Volume 3 ; 2011 >
+    au < ready ; 2011 ; Clinical Medicine Insights: Therapeutics Volume 3 ; 2011 >
     au < ready ; 2012 ; Clinical Medicine Insights: Therapeutics Volume 4 ; 2012 >
 
   }
@@ -672,7 +672,7 @@
 
     au < manifest ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 2009 >
     au < manifest ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 2011 >
+    au < ready ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 2011 >
     au < ready ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 2012 >
 
   }
@@ -720,7 +720,7 @@
 
     au < manifest ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 2009 >
     au < manifest ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 2011 >
+    au < ready ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 2011 >
     au < ready ; 2012 ; Clinical Medicine Reviews in Vascular Health Volume 4 ; 2012 >
 
   }
@@ -737,7 +737,7 @@
 
     au < manifest ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 2009 >
     au < manifest ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 2011 >
+    au < ready ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 2011 >
     au < ready ; 2012 ; Clinical Medicine Reviews in Women's Health Volume 4 ; 2012 >
 
   }
@@ -774,7 +774,7 @@
     au < manifest ; 2008 ; Environmental Health Insights Volume 1-2 ; 2008 >
     au < manifest ; 2009 ; Environmental Health Insights Volume 3 ; 2009 >
     au < manifest ; 2010 ; Environmental Health Insights Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Environmental Health Insights Volume 5 ; 2011 >
+    au < ready ; 2011 ; Environmental Health Insights Volume 5 ; 2011 >
     au < ready ; 2012 ; Environmental Health Insights Volume 6 ; 2012 >
 
   }
@@ -868,7 +868,7 @@
     au < manifest ; 2008 ; Genomics Insights Volume 1 ; 2008 >
     au < manifest ; 2009 ; Genomics Insights Volume 2 ; 2009 >
     au < manifest ; 2010 ; Genomics Insights Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Genomics Insights Volume 4 ; 2011 >
+    au < ready ; 2011 ; Genomics Insights Volume 4 ; 2011 >
     au < ready ; 2012 ; Genomics Insights Volume 5 ; 2012 >
 
 
@@ -904,7 +904,7 @@
     au < manifest ; 2008 ; Health Services Insights Volume 1 ; 2008 >
     au < manifest ; 2009 ; Health Services Insights Volume 2 ; 2009 >
     au < manifest ; 2010 ; Health Services Insights Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Health Services Insights Volume 4 ; 2011 >
+    au < ready ; 2011 ; Health Services Insights Volume 4 ; 2011 >
     au < ready ; 2012 ; Health Services Insights Volume 5 ; 2012 >
 
 
@@ -922,7 +922,7 @@
     
     au < manifest ; 2008 ; Healthy Aging & Clinical Care in the Elderly Volume 1 ; 2008 >
     au < manifest ; 2010 ; Healthy Aging & Clinical Care in the Elderly Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Healthy Aging & Clinical Care in the Elderly Volume 3 ; 2011 >
+    au < ready ; 2011 ; Healthy Aging & Clinical Care in the Elderly Volume 3 ; 2011 >
     au < ready ; 2012 ; Healthy Aging & Clinical Care in the Elderly Volume 4 ; 2012 >
 
 
@@ -940,7 +940,7 @@
     
     au < manifest ; 2009 ; Human Parasitic Diseases Volume 1 ; 2009 >
     au < manifest ; 2010 ; Human Parasitic Diseases Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Human Parasitic Diseases Volume 3 ; 2011 >
+    au < ready ; 2011 ; Human Parasitic Diseases Volume 3 ; 2011 >
 
 
   }
@@ -957,7 +957,7 @@
     
     au < manifest ; 2009 ; Immunology and Immunogenetics Insights Volume 1 ; 2009 >
     au < manifest ; 2010 ; Immunology and Immunogenetics Insights Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Immunology and Immunogenetics Insights Volume 3 ; 2011 >
+    au < ready ; 2011 ; Immunology and Immunogenetics Insights Volume 3 ; 2011 >
     au < ready ; 2012 ; Immunology and Immunogenetics Insights Volume 4 ; 2012 >
 
 
@@ -974,7 +974,7 @@
     param[journal_id] = 150
     
     au < manifest ; 2009 ; Immunotherapy Insights Volume 1 ; 2009 >
-    au < manifest ; 2011 ; Immunotherapy Insights Volume 1 ; 2011 >
+    au < ready ; 2011 ; Immunotherapy Insights Volume 1 ; 2011 >
 
 
   }
@@ -1009,7 +1009,7 @@
     au < manifest ; 2008 ; Infectious Diseases: Research and Treatment Volume 1 ; 2008 >
     au < manifest ; 2009 ; Infectious Diseases: Research and Treatment Volume 2 ; 2009 >
     au < manifest ; 2010 ; Infectious Diseases: Research and Treatment Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Infectious Diseases: Research and Treatment Volume 4 ; 2011 >
+    au < ready ; 2011 ; Infectious Diseases: Research and Treatment Volume 4 ; 2011 >
     au < ready ; 2012 ; Infectious Diseases: Research and Treatment Volume 5 ; 2012 >
 
 
@@ -1050,7 +1050,7 @@
     
     au < manifest ; 2009 ; International Journal of Insect Science Volume 1 ; 2009 >
     au < manifest ; 2010 ; International Journal of Insect Science Volume 2 ; 2010 >
-    au < manifest ; 2011 ; International Journal of Insect Science Volume 3 ; 2011 >
+    au < ready ; 2011 ; International Journal of Insect Science Volume 3 ; 2011 >
     au < ready ; 2012 ; International Journal of Insect Science Volume 4 ; 2012 >
 
 
@@ -1105,7 +1105,7 @@
     au < manifest ; 2008 ; Journal of Cell Death Volume 1 ; 2008 >
     au < manifest ; 2009 ; Journal of Cell Death Volume 2 ; 2009 >
     au < manifest ; 2010 ; Journal of Cell Death Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Journal of Cell Death Volume 4 ; 2011 >
+    au < ready ; 2011 ; Journal of Cell Death Volume 4 ; 2011 >
     au < ready ; 2012 ; Journal of Cell Death Volume 5 ; 2012 >
 
 
@@ -1123,7 +1123,7 @@
     
     au < manifest ; 2009 ; Journal of Central Nervous System Disease Volume 1 ; 2009 >
     au < manifest ; 2010 ; Journal of Central Nervous System Disease Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Journal of Central Nervous System Disease Volume 3 ; 2011 >
+    au < ready ; 2011 ; Journal of Central Nervous System Disease Volume 3 ; 2011 >
     au < ready ; 2012 ; Journal of Central Nervous System Disease Volume 4 ; 2012 >
 
 
@@ -1142,7 +1142,7 @@
     au < manifest ; 2008 ; Journal of Experimental Neuroscience Volume 1 ; 2008 >
     au < manifest ; 2009 ; Journal of Experimental Neuroscience Volume 2-3 ; 2009 >
     au < manifest ; 2010 ; Journal of Experimental Neuroscience Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Journal of Experimental Neuroscience Volume 5 ; 2011 >
+    au < ready ; 2011 ; Journal of Experimental Neuroscience Volume 5 ; 2011 >
     au < ready ; 2012 ; Journal of Experimental Neuroscience Volume 6 ; 2012 >
 
 
@@ -1177,7 +1177,7 @@
     
     au < manifest ; 2008 ; Lipid Insights Volume 1-2 ; 2008 >
     au < manifest ; 2010 ; Lipid Insights Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Lipid Insights Volume 4 ; 2011 >
+    au < ready ; 2011 ; Lipid Insights Volume 4 ; 2011 >
     au < ready ; 2012 ; Lipid Insights Volume 5 ; 2012 >
 
 
@@ -1278,7 +1278,7 @@
     au < manifest ; 2008 ; Open Journal of Cardiovascular Surgery Volume 1 ; 2008 >
     au < manifest ; 2009 ; Open Journal of Cardiovascular Surgery Volume 2 ; 2009 >
     au < manifest ; 2010 ; Open Journal of Cardiovascular Surgery Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Open Journal of Cardiovascular Surgery Volume 4 ; 2011 >
+    au < ready ; 2011 ; Open Journal of Cardiovascular Surgery Volume 4 ; 2011 >
     au < ready ; 2012 ; Open Journal of Cardiovascular Surgery Volume 5 ; 2012 >
 
   }
@@ -1498,7 +1498,7 @@
     au < manifest ; 2008 ; Tobacco Use Insights Volume 1 ; 2008 >
     au < manifest ; 2009 ; Tobacco Use Insights Volume 2 ; 2009 >
     au < manifest ; 2010 ; Tobacco Use Insights Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Tobacco Use Insights Volume 4 ; 2011 >
+    au < ready ; 2011 ; Tobacco Use Insights Volume 4 ; 2011 >
     au < ready ; 2012 ; Tobacco Use Insights Volume 5 ; 2012 >
     
   }
