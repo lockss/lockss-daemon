@@ -355,9 +355,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2005 ; Administrative Science Quarterly Volume 50 ; 50 ; >
-      au < testing ; exists ; 2006 ; Administrative Science Quarterly Volume 51 ; 51 ; >
-      au < testing ; exists ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 ; >
+      au < released ; manifest ; 2005 ; Administrative Science Quarterly Volume 50 ; 50 ; >
+      au < released ; manifest ; 2006 ; Administrative Science Quarterly Volume 51 ; 51 ; >
+      au < released ; manifest ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 ; >
       au < released ; crawling ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 ; >
       au < released ; crawling ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 ; >
       au < released ; crawling ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 ; >
@@ -474,13 +474,13 @@
       
         pluginSuffix = ClockssHighWirePressH20Plugin
         
-        au < testing ; exists ; 1998-1999 ; Adult Learning Volume 10 ; 10 ; >
-        au < testing ; exists ; 1999-2000 ; Adult Learning Volume 11 ; 11 ; >
-        au < testing ; exists ; 2001 ; Adult Learning Volume 12 ; 12 ; >
+        au < released ; manifest ; 1998-1999 ; Adult Learning Volume 10 ; 10 ; >
+        au < released ; manifest ; 1999-2000 ; Adult Learning Volume 11 ; 11 ; >
+        au < treleased ; manifest ; 2001 ; Adult Learning Volume 12 ; 12 ; >
         au < released ; manifest ; 2001-2002 ; Adult Learning Volume 13 ; 13 ; >
         au < released ; manifest ; 2003 ; Adult Learning Volume 14 ; 14 ; >
-        au < testing ; exists ; 2004 ; Adult Learning Volume 15 ; 15 ; >
-        au < testing ; exists ; 2005 ; Adult Learning Volume 16 ; 16 ; >
+        au < released ; manifest ; 2004 ; Adult Learning Volume 15 ; 15 ; >
+        au < released ; manifest ; 2005 ; Adult Learning Volume 16 ; 16 ; >
         au < testing ; exists ; 2006 ; Adult Learning Volume 17 ; 17 ; >
         au < testing ; exists ; 2007 ; Adult Learning Volume 18 ; 18 ; >
         au < released ; crawling ; 2008 ; Adult Learning Volume 19 ; 19 ; >
@@ -608,11 +608,11 @@
       au < released ; manifest ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 ; >
       au < released ; manifest ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 ; >
       au < released ; manifest ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 ; >
-      au < testing ; exists ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 ; >
+      au < released ; manifest ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 ; >
       au < released ; manifest ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 ; >
       au < released ; manifest ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 ; >
       au < released ; manifest ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 ; >
-      au < testing ; exists ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 ; >
+      au < released ; manifest ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 ; >
       au < released ; manifest ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 ; >
       au < released ; manifest ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 ; >
       au < released ; manifest ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 ; >
@@ -714,7 +714,7 @@
 
       au < testing ; exists ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 ; >
       au < released ; manifest ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 ; >
-      au < testing ; exists ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 ; >
+      au < released ; manifest ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 ; >
       au < released ; crawling ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 ; >
       au < released ; crawling ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 ; >
       au < released ; crawling ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 ; >
@@ -2184,7 +2184,7 @@
       au < released ; crawling ; 2011 ; The Annals of the American Academy of Political and Social Science Volume 638 ; 638 ; >
       au < testing ; exists ; 2012 ; The Annals of the American Academy of Political and Social Science Volume 639 ; 639 ; >
       au < released ; manifest ; 2012 ; The Annals of the American Academy of Political and Social Science Volume 640 ; 640 ; >
-      au < testing ; exists ; 2012 ; The Annals of the American Academy of Political and Social Science Volume 641 ; 641 ; >
+      au < released ; manifest ; 2012 ; The Annals of the American Academy of Political and Social Science Volume 641 ; 641 ; >
       au < released ; manifest ; 2012 ; The Annals of the American Academy of Political and Social Science Volume 642 ; 642 ; >
       au < released ; manifest ; 2012 ; The Annals of the American Academy of Political and Social Science Volume 643 ; 643 ; >
       au < released ; manifest ; 2012 ; The Annals of the American Academy of Political and Social Science Volume 644 ; 644 ; >
@@ -3238,7 +3238,7 @@
         au < testing ; exists ; 2009 ; British Journal of Pain Volume 3 ; 3 ; >
         au < released ; crawling ; 2010 ; British Journal of Pain Volume 4 ; 4 ; >
         au < released ; crawling ; 2011 ; British Journal of Pain Volume 5 ; 5 ; >
-        au < testing ; exists ; 2012 ; British Journal of Pain Volume 6 ; 6 ; >
+        au < released ; manifest ; 2012 ; British Journal of Pain Volume 6 ; 6 ; >
 
       }
       
@@ -18381,7 +18381,7 @@
       au < manifest ; exists ; 2006 ; Journal of Feline Medicine and Surgery Volume 8 ; 8 ; >
       au < manifest ; exists ; 2007 ; Journal of Feline Medicine and Surgery Volume 9 ; 9 ; >
       au < released ; crawling ; 2008 ; Journal of Feline Medicine and Surgery Volume 10 ; 10 ; >
-      au < testing ; exists ; 2009 ; Journal of Feline Medicine and Surgery Volume 11 ; 11 ; >
+      au < released ; manifest ; 2009 ; Journal of Feline Medicine and Surgery Volume 11 ; 11 ; >
       au < released ; crawling ; 2010 ; Journal of Feline Medicine and Surgery Volume 12 ; 12 ; >
       au < released ; crawling ; 2011 ; Journal of Feline Medicine and Surgery Volume 13 ; 13 ; >
       au < crawling ; exists ; 2012 ; Journal of Feline Medicine and Surgery Volume 14 ; 14 ; >
@@ -28505,7 +28505,7 @@
       au < manifest ; exists ; 2005 ; Prosthetics and Orthotics International Volume 29 ; 29 ; >
       au < manifest ; exists ; 2006 ; Prosthetics and Orthotics International Volume 30 ; 30 ; >
       au < manifest ; exists ; 2007 ; Prosthetics and Orthotics International Volume 31 ; 31 ; >
-      au < testing ; exists ; 2008 ; Prosthetics and Orthotics International Volume 32 ; 32 ; >
+      au < released ; manifest ; 2008 ; Prosthetics and Orthotics International Volume 32 ; 32 ; >
       au < released ; crawling ; 2009 ; Prosthetics and Orthotics International Volume 33 ; 33 ; >
       au < released ; crawling ; 2010 ; Prosthetics and Orthotics International Volume 34 ; 34 ; >
       au < released ; crawling ; 2011 ; Prosthetics and Orthotics International Volume 35 ; 35 ; >
@@ -35248,11 +35248,11 @@
 
       au < manifest ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 ; >
       au < manifest ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 ; >
-      au < testing ; exists ; 2008 ; World Policy Journal Volume 25 ; 25 ; >
+      au < released ; manifest ; 2008 ; World Policy Journal Volume 25 ; 25 ; >
       au < released ; crawling ; 2009 ; World Policy Journal Volume 26 ; 26 ; >
       au < released ; crawling ; 2010 ; World Policy Journal Volume 27 ; 27 ; >
       au < released ; crawling ; 2011 ; World Policy Journal Volume 28 ; 28 ; >
-      au < testing ; exists ; 2012 ; World Policy Journal Volume 29 ; 29 ; >
+      au < released ; manifest ; 2012 ; World Policy Journal Volume 29 ; 29 ; >
 
     }
 
@@ -35309,7 +35309,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Written Communication Volume 26 ; 26 ; >
       au < released ; crawling ; 2010 ; Written Communication Volume 27 ; 27 ; >
       au < released ; crawling ; 2011 ; Written Communication Volume 28 ; 28 ; >
-      au < testing ; exists ; 2012 ; Written Communication Volume 29 ; 29 ; >
+      au < released ; manifest ; 2012 ; Written Communication Volume 29 ; 29 ; >
 
     }
 
@@ -35357,7 +35357,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Young Volume 17 ; 17 ; >
       au < released ; crawling ; 2010 ; Young Volume 18 ; 18 ; >
       au < released ; crawling ; 2011 ; Young Volume 19 ; 19 ; >
-      au < testing ; exists ; 2012 ; Young Volume 20 ; 20 ; >
+      au < released ; manifest ; 2012 ; Young Volume 20 ; 20 ; >
 
     }
 
@@ -35390,7 +35390,7 @@
       au < released ; crawling ; 2008-2009 ; Young Exceptional Children Volume 12 ; 12 ; >
       au < released ; crawling ; 2009-2010 ; Young Exceptional Children Volume 13 ; 13 ; >
       au < released ; crawling ; 2011 ; Young Exceptional Children Volume 14 ; 14 ; >
-      au < testing ; exists ; 2012 ; Young Exceptional Children Volume 15 ; 15 ; >
+      au < released ; manifest ; 2012 ; Young Exceptional Children Volume 15 ; 15 ; >
 
     }
 
@@ -35462,7 +35462,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Youth & Society Volume 41 ; 41 ; >
       au < released ; crawling ; 2010 ; Youth & Society Volume 42 ; 42 ; >
       au < released ; crawling ; 2011 ; Youth & Society Volume 43 ; 43 ; >
-      au < testing ; exists ; 2012 ; Youth & Society Volume 44 ; 44 ; >
+      au < released ; manifest ; 2012 ; Youth & Society Volume 44 ; 44 ; >
 
     }
 
