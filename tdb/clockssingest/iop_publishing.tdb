@@ -1516,6 +1516,7 @@
     param[journal_issn] = 1742-6596
     comment[param] = eissn preferred
     comment[notReady] = low agreement
+    comment[notReady125] = crawl failure
     comment[notReady170] = crawl failure
 
     au < manifest ; exists ; 2004 ; Journal of Physics: Conference Series Volume 1 ; 1 >
@@ -1636,16 +1637,16 @@
     au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 116 ; 116 >
     au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 117 ; 117 >
     au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 118 ; 118 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 119 ; 119 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 120 ; 120 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 121 ; 121 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 122 ; 122 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 123 ; 123 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 124 ; 124 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 125 ; 125 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 126 ; 126 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 127 ; 127 >
-    au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 128 ; 128 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 119 ; 119 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 120 ; 120 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 121 ; 121 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 122 ; 122 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 123 ; 123 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 124 ; 124 >
+    au < notReady ; exists ; 2008 ; Journal of Physics: Conference Series Volume 125 ; 125 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 126 ; 126 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 127 ; 127 >
+    au < released ; manifest ; 2008 ; Journal of Physics: Conference Series Volume 128 ; 128 >
     au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 129 ; 129 >
     au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 130 ; 130 >
     au < testing ; exists ; 2008 ; Journal of Physics: Conference Series Volume 131 ; 131 >
