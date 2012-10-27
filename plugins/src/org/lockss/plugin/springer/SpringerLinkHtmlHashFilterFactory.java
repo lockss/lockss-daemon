@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.21 2012-10-25 08:29:08 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.22 2012-10-27 01:11:20 thib_gc Exp $
  */
 
 /*
@@ -102,6 +102,27 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
         // Text includes number of reverse citations
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/referrers/$"),
+        
+        // The end volume and year of a journal's coverage keeps moving forward
+        // This needs to stay in for '/about' pages, it's not only in <div id="ContentSecondary">
+        new NodeFilter() {
+          @Override public boolean accept(Node node) {
+            if (node instanceof DefinitionListBullet) {
+              Tag tag = (Tag)node;
+              if ("DD".equals(tag.getTagName())) {
+                Node prevNode = tag.getPreviousSibling();
+                while (prevNode != null && !(prevNode instanceof DefinitionListBullet)) {
+                  prevNode = prevNode.getPreviousSibling();
+                }
+                if (prevNode != null && prevNode instanceof DefinitionListBullet) {
+                  CompositeTag prevTag = (CompositeTag)prevNode;
+                  return "Coverage".equals(prevTag.getStringText());
+                }
+              }
+            }
+            return false;
+          }
+        },
         
         // MAINTENANCE
         
