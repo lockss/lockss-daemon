@@ -18298,6 +18298,26 @@
   {
 
     title <
+      name = Uniform Law Review ;
+      issn = 1124-3694 ;
+      eissn = 2050-9065 ;
+      issnl = 1124-3694
+    >
+
+    {
+
+    param[base_url] = http://ulr.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2013 ; Uniform Law Review Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = The World Bank Economic Review ;
       issn = 0258-6770 ;
       eissn = 1564-698X ;
