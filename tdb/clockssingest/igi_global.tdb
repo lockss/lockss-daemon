@@ -658,7 +658,7 @@
     au < manifest ; exists ; 2008 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 4 ; 4 > 
     au < manifest ; exists ; 2009 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 5 ; 5 > 
     au < manifest ; exists ; 2010 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 6 ; 6 > 
-    au < testing ; exists ; 2011 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 7 ; 7 > 
+    au < released ; manifest ; 2011 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 7 ; 7 > 
     au < crawling ; exists ; 2012 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 8 ; 8 > 
 
   }
@@ -708,7 +708,7 @@
 		
     au < manifest ; exists ; 2009 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 2 ; 2 > 
-    au < testing ; exists ; 2011 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 3 ; 3 > 
+    au < released ; manifest ; 2011 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 3 ; 3 > 
     au < crawling ; exists ; 2012 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 4 ; 4 > 
 
   }
@@ -725,7 +725,7 @@
 	comment[0] = no links on manifest page
 	
     au < manifest ; exists ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 > 
-    au < testing ; exists ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 > 
+    au < released ; manifest ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 > 
     au < notReady ; exists ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 > 
 
   }
@@ -764,7 +764,7 @@
     au < manifest ; exists ; 2008 ; International Journal of Distance Education Technologies (IJDET) Volume 6 ; 6 > 
     au < manifest ; exists ; 2009 ; International Journal of Distance Education Technologies (IJDET) Volume 7 ; 7 > 
     au < manifest ; exists ; 2010 ; International Journal of Distance Education Technologies (IJDET) Volume 8 ; 8 > 
-    au < testing ; exists ; 2011 ; International Journal of Distance Education Technologies (IJDET) Volume 9 ; 9 > 
+    au < released ; manifest ; 2011 ; International Journal of Distance Education Technologies (IJDET) Volume 9 ; 9 > 
     au < crawling ; exists ; 2012 ; International Journal of Distance Education Technologies (IJDET) Volume 10 ; 10 > 
 
   }
@@ -780,7 +780,7 @@
 	param[journal_issn] = 1947-3532
 	
     au < manifest ; exists ; 2010 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 1 ; 1 > 
-    au < testing ; exists ; 2011 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 2 ; 2 > 
+    au < released ; manifest ; 2011 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 3 ; 3 > 
 
   }
@@ -818,7 +818,7 @@
     au < manifest ; exists ; 2008 ; International Journal of E-Business Research (IJEBR) Volume 4 ; 4 > 
     au < manifest ; exists ; 2009 ; International Journal of E-Business Research (IJEBR) Volume 5 ; 5 > 
     au < manifest ; exists ; 2010 ; International Journal of E-Business Research (IJEBR) Volume 6 ; 6 > 
-    au < testing ; exists ; 2011 ; International Journal of E-Business Research (IJEBR) Volume 7 ; 7 > 
+    au < released ; manifest ; 2011 ; International Journal of E-Business Research (IJEBR) Volume 7 ; 7 > 
     au < crawling ; exists ; 2012 ; International Journal of E-Business Research (IJEBR) Volume 8 ; 8 > 
 
   }
@@ -839,7 +839,7 @@
     au < manifest ; exists ; 2008 ; International Journal of e-Collaboration (IJeC) Volume 4 ; 4 > 
     au < manifest ; exists ; 2009 ; International Journal of e-Collaboration (IJeC) Volume 5 ; 5 > 
     au < manifest ; exists ; 2010 ; International Journal of e-Collaboration (IJeC) Volume 6 ; 6 > 
-    au < testing ; exists ; 2011 ; International Journal of e-Collaboration (IJeC) Volume 7 ; 7 > 
+    au < released ; manifest ; 2011 ; International Journal of e-Collaboration (IJeC) Volume 7 ; 7 > 
     au < crawling ; exists ; 2012 ; International Journal of e-Collaboration (IJeC) Volume 8 ; 8 > 
 
   }
@@ -855,7 +855,7 @@
 	param[journal_issn] = 1947-8585
 		
     au < manifest ; exists ; 2010 ; International Journal of E-Entrepreneurship and Innovation (IJEEI) Volume 1 ; 1 > 
-    au < testing ; exists ; 2011 ; International Journal of E-Entrepreneurship and Innovation (IJEEI) Volume 2 ; 2 > 
+    au < released ; manifest ; 2011 ; International Journal of E-Entrepreneurship and Innovation (IJEEI) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of E-Entrepreneurship and Innovation (IJEEI) Volume 3 ; 3 > 
 
   }
@@ -871,7 +871,7 @@
 	param[journal_issn] = 1947-315X
 	
     au < manifest ; exists ; 2010 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 1 ; 1 > 
-    au < testing ; exists ; 2011 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 2 ; 2 > 
+    au < released ; manifest ; 2011 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 3 ; 3 > 
 
   }
