@@ -114,7 +114,7 @@
 
     au < manifest ; exists ; 2009 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 1 ; 1 > 
     au < released ; manifest ; 2010 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 2 ; 2 > 
-    au < testing ; exists ; 2011 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 3 ; 3 > 
+    au < released ; manifest ; 2011 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 3 ; 3 > 
     au < crawling ; exists ; 2012 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 4 ; 4 > 
 
   }
@@ -468,7 +468,7 @@
     >
 	param[journal_issn] = 2155-4110
 	
-    au < testing ; exists ; 2011 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 1 ; 1 > 
+    au < released ; manifest ; 2011 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 1 ; 1 > 
     au < released ; crawling ; 2012 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 2 ; 2 > 
 
   }
@@ -502,7 +502,7 @@
     au < manifest ; exists ; 2008 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 2 ; 2 > 
     au < manifest ; exists ; 2009 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 3 ; 3 > 
     au < manifest ; exists ; 2010 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 4 ; 4 > 
-    au < testing ; exists ; 2011 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 5 ; 5 > 
+    au < released ; manifest ; 2011 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 5 ; 5 > 
     au < crawling ; exists ; 2012 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 6 ; 6 > 
 
   }
@@ -518,7 +518,7 @@
 	param[journal_issn] = 1947-3133
 		
     au < manifest ; exists ; 2010 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 1 ; 1 > 
-    au < testing ; exists ; 2011 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 2 ; 2 > 
+    au < released ; manifest ; 2011 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 3 ; 3 > 
 
   }
@@ -533,7 +533,7 @@
     >
 	param[journal_issn] = 2155-6997
 		
-    au < testing ; exists ; 2011 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 1 ; 1 > 
+    au < released ; manifest ; 2011 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 1 ; 1 > 
     au < crawling ; exists ; 2012 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 2 ; 2 > 
 
   }
@@ -548,7 +548,7 @@
     >
 	param[journal_issn] = 2155-7098
 		
-    au < testing ; exists ; 2011 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 1 ; 1 > 
+    au < released ; manifest ; 2011 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 1 ; 1 > 
     au < crawling ; exists ; 2012 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 2 ; 2 > 
 
   }
@@ -576,7 +576,7 @@
 	param[journal_issn] = 1947-3117
 		
     au < manifest ; exists ; 2010 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 1 ; 1 > 
-    au < testing ; exists ; 2011 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 2 ; 2 > 
+    au < released ; manifest ; 2011 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 3 ; 3 > 
 
   }
@@ -592,7 +592,7 @@
 	param[journal_issn] = 1947-9247
 		
     au < manifest ; exists ; 2010 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 1 ; 1 > 
-    au < testing ; exists ; 2011 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 2 ; 2 > 
+    au < released ; manifest ; 2011 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 3 ; 3 > 
 
   }
@@ -607,7 +607,7 @@
     >
 	param[journal_issn] = 2155-7136
 	
-    au < testing ; exists ; 2011 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 1 ; 1 > 
+    au < released ; manifest ; 2011 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 1 ; 1 > 
     au < crawling ; exists ; 2012 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 2 ; 2 > 
 
   }
@@ -637,7 +637,7 @@
     >
 	param[journal_issn] = 1947-3435
 	
-    au < testing ; exists ; 2011 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 1 ; 1 > 
+    au < released ; manifest ; 2011 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 1 ; 1 > 
     au < crawling ; exists ; 2012 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 2 ; 2 > 
 
   }
