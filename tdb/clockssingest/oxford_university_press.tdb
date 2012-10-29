@@ -7085,6 +7085,26 @@
 
   {
 
+    title >
+      name = ILAR Journal ;
+      issn = 1084-2020 ;
+      eissn = 1930-6180 ;
+      issnl = 1084-2020
+    >
+
+    {
+
+    param[base_url] = http://ilarjournal.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2013 ; ILAR Journal Volume 1 ; 1 >
+
+    {
+
+  }
+
+  {
+
     title <
       name = IMA Journal of Applied Mathematics ;
       issn = 0272-4960 ;
