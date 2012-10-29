@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.98 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.99 2012-10-29 22:17:14 fergaloy-sf Exp $
  */
 
 /*
@@ -154,6 +154,9 @@ public class TestPluginManager extends LockssTestCase {
   }
 
   public void testDefaultDisableURLConnCache() throws IOException {
+    ConfigurationUtil.addFromArgs(PluginManager.PARAM_DISABLE_URL_CONNECTION_CACHE,
+	"false");
+    assertFalse(PluginManager.DEFAULT_DISABLE_URL_CONNECTION_CACHE);
     mgr.startService();
     URLConnection bar = new URL("http://foo.com/").openConnection();
     assertTrue(bar.getDefaultUseCaches());
