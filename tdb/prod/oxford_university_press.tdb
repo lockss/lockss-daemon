@@ -7365,7 +7365,8 @@
     {
 
     param[base_url] = http://ilarjournal.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWirePlugin
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < expected ; 2013 ; ILAR Journal Volume 1 ; 1 >
 
@@ -18794,7 +18795,8 @@
     {
 
     param[base_url] = http://ulr.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWirePlugin
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < expected ; 2013 ; Uniform Law Review Volume 1 ; 1 >
 
