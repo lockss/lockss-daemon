@@ -12090,6 +12090,25 @@
   }
 
   {
+
+    title <
+      name = IIM Kozhikode Society & Management Review ;
+      issn = 2277-9752 ;
+      issnl = 2277-9752
+    >
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://ksm.sagepub.com/
+
+      au < exists ; exists ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Improving Schools ;
