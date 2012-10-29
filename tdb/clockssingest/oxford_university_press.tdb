@@ -4111,7 +4111,7 @@
     au < released ; crawling ; 2009 ; Current Legal Problems Volume 62 ; 62 ; >
     au < released ; crawling ; 2010 ; Current Legal Problems Volume 63 ; 63 ; >
     au < released ; crawling ; 2011 ; Current Legal Problems Volume 64 ; 64 ; >
-    au < expected ; exists ; 2012 ; Current Legal Problems Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2012 ; Current Legal Problems Volume 65 ; 65 ; >
 
   }
 
@@ -7080,26 +7080,6 @@
     au < down ; crawling ; 2008 ; IEICE Transactions on Information and Systems Volume E91-D ; E91-D ; >
 
     }
-
-  }
-
-  {
-
-    title >
-      name = ILAR Journal ;
-      issn = 1084-2020 ;
-      eissn = 1930-6180 ;
-      issnl = 1084-2020
-    >
-
-    {
-
-    param[base_url] = http://ilarjournal.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
-
-    au < expected ; exists ; 2013 ; ILAR Journal Volume 1 ; 1 >
-
-    {
 
   }
 
@@ -14418,7 +14398,7 @@
     au < released ; crawling ; 2009 ; The Opera Quarterly Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; The Opera Quarterly Volume 26 ; 26 ; >
     au < released ; crawling ; 2011 ; The Opera Quarterly Volume 27 ; 27 ; >
-    au < expected ; exists ; 2012 ; The Opera Quarterly Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2012 ; The Opera Quarterly Volume 28 ; 28 ; >
 
     }
 
@@ -18210,7 +18190,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Tree Physiology Volume 29 ; 29 ; >
     au < released ; crawling ; 2010 ; Tree Physiology Volume 30 ; 30 ; >
     au < released ; crawling ; 2011 ; Tree Physiology Volume 31 ; 31 ; >
-    au < released ; manifest ; 2012 ; Tree Physiology Volume 32 ; 32 ; >
+    au < testing ; exists ; 2012 ; Tree Physiology Volume 32 ; 32 ; >
 
     }
 
@@ -18257,7 +18237,7 @@
     au < released ; crawling ; 2009 ; Trusts & Trustees Volume 15 ; 15 ; >
     au < zapped ; down ; 2010 ; Trusts & Trustees Volume 16 ; 16 ; >
     au < released ; crawling ; 2011 ; Trusts & Trustees Volume 17 ; 17 ; >
-    au < released ; manifest ; 2012 ; Trusts & Trustees Volume 18 ; 18 ; >
+    au < testing ; exists ; 2012 ; Trusts & Trustees Volume 18 ; 18 ; >
 
     }
 
@@ -18309,27 +18289,7 @@
     au < zapped ; down ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; >
     au < released ; crawling ; 2010 ; Twentieth Century British History Volume 21 ; 21 ; >
     au < released ; crawling ; 2011 ; Twentieth Century British History Volume 22 ; 22 ; >
-    au < released ; manifest ; 2012 ; Twentieth Century British History Volume 23 ; 23 ; >
-
-    }
-
-  }
-
-  {
-
-    title <
-      name = Uniform Law Review ;
-      issn = 1124-3694 ;
-      eissn = 2050-9065 ;
-      issnl = 1124-3694
-    >
-
-    {
-
-    param[base_url] = http://ulr.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
-
-    au < expected ; exists ; 2013 ; Uniform Law Review Volume 1 ; 1 >
+    au < testing ; exists ; 2012 ; Twentieth Century British History Volume 23 ; 23 ; >
 
     }
 
@@ -18440,7 +18400,7 @@
     au < released ; crawling ; 2009 ; The World Bank Research Observer Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; The World Bank Research Observer Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; The World Bank Research Observer Volume 26 ; 26 ; >
-    au < released ; manifest ; 2012 ; The World Bank Research Observer Volume 27 ; 27 ; >
+    au < testing ; exists ; 2012 ; The World Bank Research Observer Volume 27 ; 27 ; >
 
     }
 
@@ -18573,7 +18533,7 @@
     au < released ; crawling ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; The Year's Work in Critical and Cultural Theory Volume 18 ; 18 ; >
     au < released ; crawling ; 2011 ; The Year's Work in Critical and Cultural Theory Volume 19 ; 19 ; >
-    au < released ; manifest ; 2012 ; The Year's Work in Critical and Cultural Theory Volume 20 ; 20 ; >
+    au < testing ; exists ; 2012 ; The Year's Work in Critical and Cultural Theory Volume 20 ; 20 ; >
 
     }
 
@@ -18692,7 +18652,7 @@
     au < released ; crawling ; 2009 ; The Year's Work in English Studies Volume 88 ; 88 ; >
     au < released ; crawling ; 2010 ; The Year's Work in English Studies Volume 89 ; 89 ; >
     au < released ; crawling ; 2011 ; The Year's Work in English Studies Volume 90 ; 90 ; >
-    au < released ; manifest ; 2012 ; The Year's Work in English Studies Volume 91 ; 91 ; >
+    au < testing ; exists ; 2012 ; The Year's Work in English Studies Volume 91 ; 91 ; >
 
     }
 
