@@ -3243,6 +3243,7 @@
 
     param[base_url] = http://cardiovascres.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[notReady] = See RU4166 for author-index 503 error due to publisher database timing out
 
     au < manifest ; exists ; 1967 ; Cardiovascular Research Volume 1 ; 1 ; >
     au < manifest ; exists ; 1968 ; Cardiovascular Research Volume 2 ; 2 ; >
@@ -3336,7 +3337,7 @@
     au < released ; crawling ; 2011 ; Cardiovascular Research Volume 90 ; 90 ; >
     au < released ; crawling ; 2011 ; Cardiovascular Research Volume 91 ; 91 ; >
     au < released ; crawling ; 2011 ; Cardiovascular Research Volume 92 ; 92 ; >
-    au < testing ; exists ; 2012 ; Cardiovascular Research Volume 93 ; 93 ; >
+    au < notReady ; exists ; 2012 ; Cardiovascular Research Volume 93 ; 93 ; >
     au < released ; manifest ; 2012 ; Cardiovascular Research Volume 94 ; 94 ; >
     au < released ; manifest ; 2012 ; Cardiovascular Research Volume 95 ; 95 ; >
     au < released ; manifest ; 2012 ; Cardiovascular Research Volume 96 ; 96 ; >
