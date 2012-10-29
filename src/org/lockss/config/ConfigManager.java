@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.92 2012-08-08 07:11:11 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.93 2012-10-29 23:42:00 tlipkis Exp $
  */
 
 /*
@@ -121,13 +121,13 @@ public class ConfigManager implements LockssManager {
     HashService.PREFIX + "use.scheduler";
   static final boolean DEFAULT_NEW_SCHEDULER = true;
 
-  /** Root of TitleDB definitions.  */
+  /** Maximum number of AU config changes to to save up during a batch add
+   * or remove operation, before writing them to au.txt  */
   public static final String PARAM_MAX_DEFERRED_AU_BATCH_SIZE =
     MYPREFIX + "maxDeferredAuBatchSize";
   public static final int DEFAULT_MAX_DEFERRED_AU_BATCH_SIZE = 100;
 
-  /** Maximum number of AU config changes to to save up during a batch add
-   * or remove operation, before writing them to au.txt  */
+  /** Root of TitleDB definitions.  */
   public static final String PARAM_TITLE_DB = Configuration.PREFIX + "title";
   /** Prefix of TitleDB definitions.  */
   public static final String PREFIX_TITLE_DB = PARAM_TITLE_DB + ".";
