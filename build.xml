@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.325 2012-10-16 21:22:51 thib_gc Exp $
+ $Id: build.xml,v 1.326 2012-10-29 23:41:47 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -768,6 +768,33 @@ The target you have selected requires compiling under JDK 1.7.
    description="Delete generated tdbxml files" >
     <delete dir="${tdb.xml.dir}" quiet="true"/>
   </target>
+
+  <target name="clean-tmp" depends="prepare,check.contrib"
+   description="Delete leftover temp files." >
+    <delete quiet="false" includeEmptyDirs="true">
+      <fileset dir="${java.io.tmpdir}">
+	<include name="java??????/"/>
+	<include name="locksstest*.tmp/"/>
+	<include name="MetadataManager*md"/>
+      </fileset>
+    </delete>
+    <if>
+      <not>
+	<equals arg1="${tmpdir}" arg2="${java.io.tmpdir}"/>
+      </not>
+      <then>
+	<echo message="deleting ${tmpdir}"/>
+	<delete quiet="false" includeEmptyDirs="true">
+	  <fileset dir="${tmpdir}">
+	    <include name="java??????/"/>
+	    <include name="**/locksstest*.tmp/"/>
+	    <include name="MetadataManager*md"/>
+	  </fileset>
+	</delete>
+      </then>
+    </if>
+  </target>
+
 
   <!-- ==================================================================== -->
   <target name="depend-lockss" depends="prepare"
