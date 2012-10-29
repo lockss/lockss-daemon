@@ -18109,7 +18109,7 @@
     au < released ; crawling ; 2011 ; Toxicological Sciences Volume 122 ; 122 ; >
     au < released ; crawling ; 2011 ; Toxicological Sciences Volume 123 ; 123 ; >
     au < released ; crawling ; 2011 ; Toxicological Sciences Volume 124 ; 124 ; >
-    au < testing ; exists ; 2012 ; Toxicological Sciences Volume 125 ; 125 ; >
+    au < released ; manifest ; 2012 ; Toxicological Sciences Volume 125 ; 125 ; >
     au < released ; manifest ; 2012 ; Toxicological Sciences Volume 126 ; 126 ; >
     au < released ; manifest ; 2012 ; Toxicological Sciences Volume 127 ; 127 ; >
     au < released ; manifest ; 2012 ; Toxicological Sciences Volume 128 ; 128 ; >
@@ -18318,6 +18318,7 @@
 
     param[base_url] = http://wber.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[notReady] = No permission from publisher in crawl on ingest4.clockss.org
 
     au < manifest ; exists ; 1986-1987 ; The World Bank Economic Review Volume 1 ; 1 ; >
     au < manifest ; exists ; 1988 ; The World Bank Economic Review Volume 2 ; 2 ; >
@@ -18344,7 +18345,7 @@
     au < zapped ; down ; 2009 ; The World Bank Economic Review Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; The World Bank Economic Review Volume 24 ; 24 ; >
     au < released ; crawling ; 2011 ; The World Bank Economic Review Volume 25 ; 25 ; >
-    au < testing ; exists ; 2012 ; The World Bank Economic Review Volume 26 ; 26 ; >
+    au < notReady ; exists ; 2012 ; The World Bank Economic Review Volume 26 ; 26 ; >
 
     }
 
