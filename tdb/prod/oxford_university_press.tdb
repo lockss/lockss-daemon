@@ -4165,7 +4165,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Current Legal Problems Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Current Legal Problems Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Current Legal Problems Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; Current Legal Problems Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Current Legal Problems Volume 65 ; 65 >
 
   }
 
@@ -7349,13 +7349,13 @@
     au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Information and Systems Volume E89-D ; E89-D >
     au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Information and Systems Volume E90-D ; E90-D >
 
-    }
+   }
 
   }
 
   {
-
-    title >
+  
+    title <
       name = ILAR Journal ;
       issn = 1084-2020 ;
       eissn = 1930-6180 ;
@@ -7370,7 +7370,7 @@
 
     au < expected ; 2013 ; ILAR Journal Volume 1 ; 1 >
 
-    {
+   }
 
   }
 
