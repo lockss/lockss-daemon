@@ -1297,10 +1297,12 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = spectrum
-      attr[journal_id] = 
+      attr[journal_id] = spe
       implicit < status ; year ; name ; param[volume] >
     
       comment[0] = upcoming title with no content online yet
+
+      au < exists ; 2012 ; Spectrum: The Journal on Black Men Volume 1 ; 1 >
 
     }
     
