@@ -1,5 +1,5 @@
 /*
- * $Id: PrintStreamTarget.java,v 1.7 2012-03-20 17:40:11 tlipkis Exp $
+ * $Id: PrintStreamTarget.java,v 1.8 2012-10-30 00:12:52 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.util;
 import java.text.*;
 import java.io.PrintStream;
 import java.util.Date;
+
+import org.lockss.config.ConfigManager;
 
 /** A <code>LogTarget</code> implementation that outputs to a PrintStream
  */
@@ -73,12 +75,19 @@ public class PrintStreamTarget implements LogTarget {
   }
 
   protected void emitTimestamp(Logger log) {
-    writeMessage(log, "Timestamp", TimeBase.nowDate().toString());
+    StringBuilder sb = new StringBuilder();
+    sb.append(TimeBase.nowDate().toString());
+    DaemonVersion dver = ConfigManager.getDaemonVersion();
+    if (dver != null) {
+      sb.append("   Daemon ");
+      sb.append(dver.displayString());
+    }
+    writeMessage(log, "Timestamp", sb.toString());
   }
 
   /** Write the message to stdout */
   void writeMessage(Logger log, String msgLevel, String message) {
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     sb.append(log.getTimeStampFormat().format(new Date()));
     if (TimeBase.isSimulated()) {
       sb.append("(sim ");

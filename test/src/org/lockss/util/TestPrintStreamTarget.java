@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrintStreamTarget.java,v 1.7 2012-09-18 19:09:21 tlipkis Exp $
+ * $Id: TestPrintStreamTarget.java,v 1.8 2012-10-30 00:12:52 tlipkis Exp $
  */
 
 /*
@@ -72,7 +72,8 @@ public class TestPrintStreamTarget extends LockssTestCase {
     }
 
     // Should have one Timestamp: message followed by two copies of the message
-    String line1 = timestampRE + "Timestamp: .*"+Constants.EOL_RE;
+    String line1 = timestampRE + "Timestamp: .* Daemon \\d+\\.\\d+\\.\\d+.*"
+      + Constants.EOL_RE;
     String line2 = timestampRE + "Error: "+errorMessage+Constants.EOL_RE;
     String re = line1 + line2 + line2;
     String debugString = baos.toString();
