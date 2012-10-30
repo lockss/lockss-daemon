@@ -3097,7 +3097,7 @@
       issnl = 0893-133X
     >
 
-    comment[issn] = corrected publisher eissn 1470-634X.
+    comment[notReady] = fetch error on ingest 3 and 4 (401 unauthorized)
 
     param[journal_id] = npp
 
@@ -3124,10 +3124,10 @@
     au < exists ; exists ; 2006 ; Neuropsychopharmacology Volume 31 ; 2006 ; 31 >
     au < exists ; exists ; 2007 ; Neuropsychopharmacology Volume 32 ; 2007 ; 32 >
     au < released ; crawling ; 2008 ; Neuropsychopharmacology Volume 33 ; 2008 ; 33 >
-    au < testing ; exists ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 >
-    au < testing ; exists ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
-    au < testing ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
-    au < testing ; exists ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
+    au < notReady ; exists ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 >
+    au < notReady ; exists ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
+    au < notReady ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
+    au < notReady ; exists ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
 
   }
 
