@@ -892,7 +892,7 @@
     au < manifest ; exists ; 2008 ; International Journal of Electronic Government Research (IJEGR) Volume 4 ; 4 > 
     au < manifest ; exists ; 2009 ; International Journal of Electronic Government Research (IJEGR) Volume 5 ; 5 > 
     au < manifest ; exists ; 2010 ; International Journal of Electronic Government Research (IJEGR) Volume 6 ; 6 > 
-    au < testing ; exists ; 2011 ; International Journal of Electronic Government Research (IJEGR) Volume 7 ; 7 > 
+    au < released ; manifest ; 2011 ; International Journal of Electronic Government Research (IJEGR) Volume 7 ; 7 > 
     au < crawling ; exists ; 2012 ; International Journal of Electronic Government Research (IJEGR) Volume 8 ; 8 > 
 
   }
@@ -1275,7 +1275,7 @@
 	param[journal_issn] = 1941-868X
 	
     au < manifest ; exists ; 2010 ; International Journal of Information Systems and Social Change (IJISSC) Volume 1 ; 1 > 
-    au < testing ; exists ; 2011 ; International Journal of Information Systems and Social Change (IJISSC) Volume 2 ; 2 > 
+    au < released ; manifest ; 2011 ; International Journal of Information Systems and Social Change (IJISSC) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Information Systems and Social Change (IJISSC) Volume 3 ; 3 > 
 
   }
@@ -1310,7 +1310,7 @@
 	
     au < manifest ; exists ; 2009 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 2 ; 2 > 
-    au < testing ; exists ; 2011 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 3 ; 3 > 
+    au < released ; manifest ; 2011 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 3 ; 3 > 
     au < crawling ; exists ; 2012 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 4 ; 4 > 
 
   }
@@ -1345,7 +1345,7 @@
     au < manifest ; exists ; 2008 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 1 ; 1 > 
     au < manifest ; exists ; 2009 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 2 ; 2 > 
     au < manifest ; exists ; 2010 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 3 ; 3 > 
-    au < testing ; exists ; 2011 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 4 ; 4 > 
+    au < released ; manifest ; 2011 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 4 ; 4 > 
     au < crawling ; exists ; 2012 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 5 ; 5 > 
 
   }
@@ -1448,7 +1448,7 @@
     >
 	param[journal_issn] = 2155-4218
 	
-    au < testing ; exists ; 2011 ; International Journal of Interactive Communication Systems and Technologies (IJICST) Volume 1 ; 1 > 
+    au < released ; manifest ; 2011 ; International Journal of Interactive Communication Systems and Technologies (IJICST) Volume 1 ; 1 > 
     au < crawling ; exists ; 2012 ; International Journal of Interactive Communication Systems and Technologies (IJICST) Volume 2 ; 2 > 
 
   }
@@ -1488,7 +1488,7 @@
     au < manifest ; exists ; 2008 ; International Journal of IT Standards and Standardization Research (IJITSR) Volume 6 ; 6 > 
     au < manifest ; exists ; 2009 ; International Journal of IT Standards and Standardization Research (IJITSR) Volume 7 ; 7 > 
     au < manifest ; exists ; 2010 ; International Journal of IT Standards and Standardization Research (IJITSR) Volume 8 ; 8 > 
-    au < testing ; exists ; 2011 ; International Journal of IT Standards and Standardization Research (IJITSR) Volume 9 ; 9 > 
+    au < released ; manifest ; 2011 ; International Journal of IT Standards and Standardization Research (IJITSR) Volume 9 ; 9 > 
     au < crawling ; exists ; 2012 ; International Journal of IT Standards and Standardization Research (IJITSR) Volume 10 ; 10 > 
 
   }
@@ -1811,7 +1811,7 @@
 	param[journal_issn] = 1947-9344
 	
     au < manifest ; exists ; 2010 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 1 ; 1 > 
-    au < testing ; exists ; 2011 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 2 ; 2 > 
+    au < released ; manifest ; 2011 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 3 ; 3 > 
 
   }
@@ -2064,7 +2064,7 @@
     >
 	param[journal_issn] = 2155-6350
 	
-    au < testing ; exists ; 2011 ; International Journal of Space Technology Management and Innovation (IJSTMI) Volume 1 ; 1 > 
+    au < released ; manifest ; 2011 ; International Journal of Space Technology Management and Innovation (IJSTMI) Volume 1 ; 1 > 
     au < crawling ; exists ; 2012 ; International Journal of Space Technology Management and Innovation (IJSTMI) Volume 2 ; 2 > 
 
   }
@@ -2096,7 +2096,7 @@
 	param[journal_issn] = 1947-3095
 	
     au < manifest ; exists ; 2010 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 1 ; 1 > 
-    au < crawling ; exists ; 2011 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 2 ; 2 > 
+    au < testing ; exists ; 2011 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 3 ; 3 > 
 
   }
@@ -2140,7 +2140,7 @@
 	param[journal_issn] = 1947-9263
 	
     au < manifest ; exists ; 2010 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 1 ; 1 > 
-    au < crawling ; exists ; 2011 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 2 ; 2 > 
+    au < testing ; exists ; 2011 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 3 ; 3 > 
 
   }
@@ -2156,7 +2156,7 @@
 	param[journal_issn] = 1947-9093
 	
     au < manifest ; exists ; 2010 ; International Journal of Synthetic Emotions (IJSE) Volume 1 ; 1 > 
-    au < crawling ; exists ; 2011 ; International Journal of Synthetic Emotions (IJSE) Volume 2 ; 2 > 
+    au < testing ; exists ; 2011 ; International Journal of Synthetic Emotions (IJSE) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Synthetic Emotions (IJSE) Volume 3 ; 3 > 
 
   }
@@ -2186,7 +2186,7 @@
 	param[journal_issn] = 1947-3052
 	
     au < manifest ; exists ; 2010 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 1 ; 1 > 
-    au < crawling ; exists ; 2011 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 2 ; 2 > 
+    au < testing ; exists ; 2011 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 3 ; 3 > 
 
   }
@@ -2217,7 +2217,7 @@
 	param[journal_issn] = 1947-3451
 	
     au < manifest ; exists ; 2010 ; International Journal of Technoethics (IJT) Volume 1 ; 1 > 
-    au < crawling ; exists ; 2011 ; International Journal of Technoethics (IJT) Volume 2 ; 2 > 
+    au < testing ; exists ; 2011 ; International Journal of Technoethics (IJT) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Technoethics (IJT) Volume 3 ; 3 > 
 
   }
@@ -2232,7 +2232,7 @@
     >
 	param[journal_issn] = 2155-5605
 	
-    au < crawling ; exists ; 2011 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 1 ; 1 > 
+    au < testing ; exists ; 2011 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 1 ; 1 > 
     au < crawling ; exists ; 2012 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 2 ; 2 > 
 
   }
@@ -2253,7 +2253,7 @@
     au < manifest ; exists ; 2008 ; International Journal of Technology and Human Interaction (IJTHI) Volume 4 ; 4 > 
     au < manifest ; exists ; 2009 ; International Journal of Technology and Human Interaction (IJTHI) Volume 5 ; 5 > 
     au < manifest ; exists ; 2010 ; International Journal of Technology and Human Interaction (IJTHI) Volume 6 ; 6 > 
-    au < crawling ; exists ; 2011 ; International Journal of Technology and Human Interaction (IJTHI) Volume 7 ; 7 > 
+    au < testing ; exists ; 2011 ; International Journal of Technology and Human Interaction (IJTHI) Volume 7 ; 7 > 
     au < crawling ; exists ; 2012 ; International Journal of Technology and Human Interaction (IJTHI) Volume 8 ; 8 > 
 
   }
@@ -2269,7 +2269,7 @@
 	param[journal_issn] = 1947-9301
 	
     au < manifest ; exists ; 2010 ; International Journal of Technology Diffusion (IJTD) Volume 1 ; 1 > 
-    au < crawling ; exists ; 2011 ; International Journal of Technology Diffusion (IJTD) Volume 2 ; 2 > 
+    au < testing ; exists ; 2011 ; International Journal of Technology Diffusion (IJTD) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Technology Diffusion (IJTD) Volume 3 ; 3 > 
 
   }
@@ -2297,7 +2297,7 @@
     >
 	param[journal_issn] = 2156-1818
 	
-    au < crawling ; exists ; 2011 ; International Journal of User-Driven Healthcare (IJUDH) Volume 1 ; 1 > 
+    au < testing ; exists ; 2011 ; International Journal of User-Driven Healthcare (IJUDH) Volume 1 ; 1 > 
     au < crawling ; exists ; 2012 ; International Journal of User-Driven Healthcare (IJUDH) Volume 2 ; 2 > 
 
   }
@@ -2313,7 +2313,7 @@
 	param[journal_issn] = 1947-8518
 	
     au < manifest ; exists ; 2010 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 1 ; 1 > 
-    au < crawling ; exists ; 2011 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 2 ; 2 > 
+    au < testing ; exists ; 2011 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 3 ; 3 > 
 
   }
