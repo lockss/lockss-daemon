@@ -19,8 +19,8 @@
     param[journal_dir] = hebrew_studies
     attr[journal_id] = hbr
 
-    au < ready ; 2010 ; Hebrew Studies Volume 51 ; 51 >
-    au < ready ; 2011 ; Hebrew Studies Volume 52 ; 52 >
+    au < releasing ; 2010 ; Hebrew Studies Volume 51 ; 51 >
+    au < releasing ; 2011 ; Hebrew Studies Volume 52 ; 52 >
     au < expected ; 2012 ; Hebrew Studies Volume 53 ; 53 >
 
   }
