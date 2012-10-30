@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.234 2012-10-08 21:33:43 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.235 2012-10-30 00:11:44 tlipkis Exp $
  */
 
 /*
@@ -766,7 +766,7 @@ public class PluginManager
 	configureAu(plugin, auConf, auId);
 	inactiveAuIds.remove(generateAuId(pluginKey, auKey));
       } catch (ArchivalUnit.ConfigurationException e) {
-	log.error("Failed to configure AU " + auKey, e);
+	log.error("Failed to configure AU " + auId, e);
       } catch (Exception e) {
 	log.error("Unexpected exception configuring AU " + auKey, e);
       }

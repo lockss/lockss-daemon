@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.263 2012-10-02 20:32:40 tlipkis Exp $
+ * $Id: PollManager.java,v 1.264 2012-10-30 00:11:44 tlipkis Exp $
  */
 
 /*
@@ -2069,7 +2069,7 @@ public class PollManager
             // Check to see if this poll has expired.
             boolean expired = psb.getPollDeadline() <= TimeBase.nowMs();
             if (expired) {
-              theLog.debug("Discarding expires poll in directory " + dirs[ix]);
+              theLog.debug("Discarding expired poll in directory " + dirs[ix]);
               FileUtil.delTree(dirs[ix]);
               continue;
             }

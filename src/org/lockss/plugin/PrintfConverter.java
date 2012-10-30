@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfConverter.java,v 1.4 2011-06-20 07:04:57 tlipkis Exp $
+ * $Id: PrintfConverter.java,v 1.5 2012-10-30 00:11:44 tlipkis Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public abstract class PrintfConverter {
 	interpArg(key, val, descr);
       } else {
 	missingArgs = true;
-	log.warning("missing argument for : " + key);
+	log.warning("missing argument for: " + key);
 	interpNullArg(key, val, descr);
       }
     }
