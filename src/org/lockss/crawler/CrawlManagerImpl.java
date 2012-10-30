@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.144 2012-07-11 18:53:44 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.145 2012-10-30 00:11:05 tlipkis Exp $
  */
 
 /*
@@ -231,13 +231,17 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "historySize";
   static final int DEFAULT_HISTORY_MAX = 500;
 
-  /** Map of regexp to priority.  If set, AUIDs are assigned the
-   * corresponding crawl priority of the first regexp they match.  Priority
-   * must be an integer greater than -10000.  A priority &lt;= 10000
-   * disables matching AUs from crawling at all.  */
+  /** Map of AUID regexp to priority.  If set, AUs are assigned the
+   * corresponding priority of the first regexp that their AUID matches.
+   * Priority must be an integer; priorities <= -10000 mean "do not crawl
+   * matching AUs", priorities <= -20000 mean "abort running crawls of
+   * matching AUs".  */
   static final String PARAM_CRAWL_PRIORITY_AUID_MAP =
     PREFIX + "crawlPriorityAuidMap";
   static final List DEFAULT_CRAWL_PRIORITY_AUID_MAP = null;
+
+  static final int MIN_CRAWL_PRIORITY = -10000;
+  static final int ABORT_CRAWL_PRIORITY = -20000;
 
   /** Map of concurrent pool name to pool size.  By default all pools are
    * of size 1; to enable 2 concurrent crawls in pool FOO, add FOO,2 to
@@ -245,8 +249,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   static final String PARAM_CONCURRENT_CRAWL_LIMIT_MAP = PREFIX +
     "concurrentCrawlLimitMap";
   static final List DEFAULT_CONCURRENT_CRAWL_LIMIT_MAP = null;
-
-  static final int MIN_CRAWL_PRIORITY = -10000;
 
   /** Regexp matching URLs we never want to collect.  Intended to stop
    * runaway crawls by catching recursive URLS */
@@ -303,7 +305,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   /** Note that this is an Apache ORO Pattern, not a Java Pattern */
   private Pattern globallyExcludedUrlPattern;
   
-  private Map<Pattern,Integer> crawlPriorityAuidMap;
+  private PatternIntMap crawlPriorityAuidMap;
+
   private Map<String,Integer> concurrentCrawlLimitMap;
 
   private int histSize = DEFAULT_HISTORY_MAX;
@@ -486,10 +489,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	config.getTimeInterval(PARAM_START_CRAWLS_INITIAL_DELAY,
 			       DEFAULT_START_CRAWLS_INITIAL_DELAY);
       if (changedKeys.contains(PARAM_CRAWL_PRIORITY_AUID_MAP)) {
-	crawlPriorityAuidMap =
-	  makeCrawlPriorityAuidMap(config.getList(PARAM_CRAWL_PRIORITY_AUID_MAP,
-						  DEFAULT_CRAWL_PRIORITY_AUID_MAP));
+	installCrawlPriorityAuidMap(config.getList(PARAM_CRAWL_PRIORITY_AUID_MAP,
+						   DEFAULT_CRAWL_PRIORITY_AUID_MAP));
+
 	if (areAusStarted()) {
+ 	  processAbortPriorities();
 	  rebuildQueueSoon();
 	}
       }
@@ -604,7 +608,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   /** Info about all the crawls running in a crawl pool.  Ensures that they
-   * all use the same set of rate limiters. */
+   * all use the same set of rate limiters.  All methods that access the
+   * crawlers or rate limiters must be called within a <code>synchronized
+   * (runningCrawlersLock) block.</code> */
   class PoolCrawlers {
     String poolKey;
     int max;
@@ -632,7 +638,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
     /** Add a crawler and assign it a CrawlRateLimiter from the available
      * pool */
-    synchronized void addCrawler(Crawler crawler) {
+    void addCrawler(Crawler crawler) {
       if (crlMap.containsKey(crawler)) {
 	logger.warning("Adding redundant crawler: " + crawler.getAu() + ", " +
 		       crawler, new Throwable());
@@ -649,12 +655,19 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       crlMap.put(crawler, crl);
     }
 
-    synchronized boolean isEmpty() {
+    boolean isEmpty() {
       return crlMap.isEmpty();
     }
 
+    /** Return collection of all active crawlers in this pool.  Result
+     * must be obtained and used inside <code>synchronized
+     * (runningCrawlersLock)</code> */
+    Collection<Crawler> getCrawlers() {
+      return crlMap.keySet();
+    }
+
     /** Remove a crawler, inform the CrawlRateLimiter */
-    synchronized void removeCrawler(Crawler crawler) {
+    void removeCrawler(Crawler crawler) {
       CrawlRateLimiter crl = crlMap.get(crawler);
       if (crl != null) {
 	crl.removeCrawler(crawler);
@@ -758,7 +771,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  private void setRunningNCCrawl(ArchivalUnit au, boolean val) {
+  void setRunningNCCrawl(ArchivalUnit au, boolean val) {
     if (val) {
       runningNCCrawls.add(au);
     } else {
@@ -791,7 +804,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     removeAuFromQueues(au);
     synchronized(runningCrawlersLock) {
       for (PoolCrawlers pc : poolMap.values()) {
-	for (Crawler crawler : pc.crlMap.keySet()) {
+	for (Crawler crawler : pc.getCrawlers()) {
 	  if (au == crawler.getAu()) {
 	    crawler.abortCrawl();
 	  }
@@ -801,6 +814,28 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     // Notify CrawlerStatus objects to discard any pointer to this AU
     for (CrawlerStatus status : cmStatus.getCrawlerStatusList()) {
       status.auDeleted(au);
+    }
+  }
+
+  /** For all running crawls, collect those whose AU's priority is <=
+   * ABORT_CRAWL_PRIORITY, then abort all those crawls  */
+  void processAbortPriorities() {
+    List<Crawler> abortCrawlers = new ArrayList<Crawler>();
+    for (PoolCrawlers pc : poolMap.values()) {
+      for (Crawler crawler : pc.getCrawlers()) {
+	ArchivalUnit au = crawler.getAu();
+	int pri = crawlPriorityAuidMap.getMatch(au.getAuId(), 0,
+						ABORT_CRAWL_PRIORITY);
+	if (pri <= ABORT_CRAWL_PRIORITY) {
+	  abortCrawlers.add(crawler);
+	}
+      }
+    }
+    synchronized(runningCrawlersLock) {
+      for (Crawler crawler : abortCrawlers) {
+	logger.info("Aborting crawl: " + crawler.getAu());
+	crawler.abortCrawl();
+      }
     }
   }
 
@@ -818,34 +853,20 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   /** Set up crawl priority map. */
-  Map<Pattern,Integer> makeCrawlPriorityAuidMap(Collection<String> patternPairs) {
-    if (patternPairs != null) {
-      Map<Pattern,Integer> map = new LinkedMap();
-      for (String pair : patternPairs) {
-	// Find the last occurrence of comma to avoid regexp quoting
-	int pos = pair.lastIndexOf(',');
-	if (pos < 0) {
-	  logger.error("Malformed auid-regexp,priority pair, ignored: " + pair);
-	  continue;
-	}
-	String regexp = pair.substring(0, pos);
-	String pristr = pair.substring(pos + 1);
-	int pri;
-	Pattern pat;
-	try {
-	  pri = Integer.parseInt(pristr);
-	  int flags = Perl5Compiler.READ_ONLY_MASK;
-	  pat = RegexpUtil.getCompiler().compile(regexp, flags);
-	  logger.info("Crawl priority " + pri +
-		      ", auid pattern: " + pat.getPattern());
-	  map.put(pat, pri);
-	} catch (MalformedPatternException e) {
-	  logger.error("Illegal crawl priority pattern, ignored: " + regexp, e);
-	}
+  void installCrawlPriorityAuidMap(List<String> patternPairs) {
+    if (patternPairs == null) {
+      logger.debug("Installing empty crawl priority map");
+      crawlPriorityAuidMap = PatternIntMap.EMPTY;
+    } else {
+      try {
+	crawlPriorityAuidMap = new PatternIntMap(patternPairs);
+	logger.debug("Installing crawl priority map: " + crawlPriorityAuidMap);
+      } catch (IllegalArgumentException e) {
+	logger.error("Illegal crawl priority map, ignoring", e);
+	logger.error("Crawl priority map unchanged, still: " +
+		     crawlPriorityAuidMap);
       }
-      return map;
     }
-    return null;
   }
 
   /** Set up crawl pool size map. */
@@ -962,33 +983,60 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     return au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
   }
 
-  public boolean isEligibleForNewContentCrawl(ArchivalUnit au) {
+  /** Used to convey to clients the reason an AU is ineligible to be
+   * crawled (for logging/display) */
+  public static class NotEligibleException extends Exception {
+    public NotEligibleException(String msg) {
+      super(msg);
+    }
+
+    public static class RateLimiter extends NotEligibleException {
+      public RateLimiter(String msg) {
+	super(msg);
+      }
+    }
+  }
+
+  public void checkEligibleToQueueNewContentCrawl(ArchivalUnit au)
+      throws NotEligibleException {
     if (isRunningNCCrawl(au)) {
-      return false;
+      throw new NotEligibleException("AU is crawling now.");
     }
     if (au instanceof ExplodedArchivalUnit) {
-      logger.debug("Can't crawl ExplodedArchivalUnit");
-      return false;
+      throw new NotEligibleException("Can't crawl ExplodedArchivalUnit");
     }
+    RateLimiter limiter = getNewContentRateLimiter(au);
+    if (limiter != null && !limiter.isEventOk()) {
+      throw new NotEligibleException.RateLimiter("Exceeds crawl-start rate: " +
+						 limiter.getRate());
+    }
+  }
+
+  public void checkEligibleForNewContentCrawl(ArchivalUnit au)
+      throws NotEligibleException {
     CrawlSpec spec;
     try {
       spec = au.getCrawlSpec();
     } catch (RuntimeException e) {
       // not clear this can ever happen in real use, but some tests force
       // getCrawlSpec() to throw
-      logger.error("Couldn't get CrawlSpec: " + au, e);
-      return false;
+      String msg = "Couldn't get CrawlSpec for: " + au.getName();
+      logger.error(msg, e);
+      throw new NotEligibleException(msg);
     }
     if (spec != null && !windowOkToStart(spec.getCrawlWindow())) {
-      logger.debug3("Not crawlable: crawl window: " + au);
+      throw new NotEligibleException("Crawl window is closed");
+    }
+    checkEligibleToQueueNewContentCrawl(au);
+  }
+
+  public boolean isEligibleForNewContentCrawl(ArchivalUnit au) {
+    try {
+      checkEligibleForNewContentCrawl(au);
+      return true;
+    } catch (NotEligibleException e) {
       return false;
     }
-    RateLimiter limiter = getNewContentRateLimiter(au);
-    if (limiter != null && !limiter.isEventOk()) {
-      logger.debug3("Not crawlable: rate limiter: " + au);
-      return false;
-    }
-    return true;
   }
 
   public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
@@ -1019,6 +1067,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (paramOdc) {
       enqueueHighPriorityCrawl(req);
     } else {
+      if (!isEligibleForNewContentCrawl(au)) {
+	callCallback(cb, cookie, false, null);
+	return;
+      }
       handReqToPool(req);
     }
   }
@@ -1029,10 +1081,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     Object cookie = req.cookie;
     ActivityRegulator.Lock lock = req.lock;
 
-    if (!isEligibleForNewContentCrawl(au)) {
-      callCallback(cb, cookie, false, null);
-      return;
-    }
     if ((lock==null) || (lock.isExpired())) {
       lock = getNewContentLock(au);
     } else {
@@ -1703,20 +1751,21 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   void setReqPriority(CrawlReq req) {
-    if (crawlPriorityAuidMap != null) {
-      Perl5Matcher matcher = RegexpUtil.getMatcher();
-      String auid = req.getAu().getAuId();
-      for (Map.Entry<Pattern,Integer> ent : crawlPriorityAuidMap.entrySet()) {
-	if (matcher.contains(auid, ent.getKey())) {
-	  if (logger.isDebug3()) {
-	    logger.debug3("Crawl priority " + ent.getValue() +
-			  ": " + req.getAu().getName());
-	  }
-	  req.setPriority(ent.getValue());
-	  return;
-	}
+    int pri = getAuPriority(req.getAu());
+    if (pri != 0) {
+      if (logger.isDebug3()) {
+	logger.debug3("Crawl priority: " + pri + ": " + req.getAu().getName());
       }
+      req.setPriority(pri);
     }
+  }
+
+  int getAuPriority(ArchivalUnit au) {
+    Integer res = null;
+    if (crawlPriorityAuidMap != null) {
+      res = crawlPriorityAuidMap.getMatch(au.getAuId());
+    }
+    return res != null ? res : 0;
   }
 
   /** Orders AUs (wrapped in CrawlReq) by crawl priority:<ol>

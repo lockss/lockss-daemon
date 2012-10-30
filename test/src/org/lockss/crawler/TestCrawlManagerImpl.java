@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.92 2012-08-01 21:32:07 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.93 2012-10-30 00:11:05 tlipkis Exp $
 */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.exploded.*;
 import org.lockss.daemon.*;
 import org.lockss.alert.*;
 
@@ -146,6 +147,14 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
   }
 
+    MockArchivalUnit[] makeMockAus(int n) {
+      MockArchivalUnit[] res = new MockArchivalUnit[n];
+      for (int ix = 0; ix < n; ix++) {
+	res[ix] = newMockArchivalUnit("mau" + ix);
+      }
+      return res;
+    }
+
   public static class TestsWithAutoStart extends TestCrawlManagerImpl {
     public void setUp() throws Exception {
       super.setUp();
@@ -242,6 +251,59 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
 
+    class AbortRecordingCrawler extends MockCrawler {
+      List<ArchivalUnit> abortedCrawls = new ArrayList<ArchivalUnit>();
+
+      public AbortRecordingCrawler(List<ArchivalUnit> abortedCrawlsList) {
+	super();
+	this.abortedCrawls = abortedCrawlsList;
+      }
+
+      public AbortRecordingCrawler(List<ArchivalUnit> abortedCrawlsList,
+				   ArchivalUnit au) {
+	super(au);
+	this.abortedCrawls = abortedCrawlsList;
+      }
+
+      public void abortCrawl() {
+	abortedCrawls.add(getAu());
+	super.abortCrawl();
+	crawlManager.removeFromRunningCrawls(this);
+      }
+
+      List<ArchivalUnit> getAbortedCrawls() {
+	return abortedCrawls;
+      }
+
+    }
+
+    public void testAbortCrawl() {
+      theDaemon.setAusStarted(true);
+      List<ArchivalUnit> abortLst = new ArrayList<ArchivalUnit>();
+      MockArchivalUnit[] aus = makeMockAus(5);
+
+      for (ArchivalUnit au : aus) {
+	MockCrawler mc = new AbortRecordingCrawler(abortLst, au);
+	crawlManager.addToRunningCrawls(au, mc);
+      }
+      assertEmpty(abortLst);
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AUID_MAP,
+				    "(4|5),3");
+      assertEmpty(abortLst);
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AUID_MAP,
+				    "(4|5),-25000");
+      assertEquals(ListUtil.list(aus[4]), abortLst);
+      crawlManager.addToRunningCrawls(aus[4],
+				      new AbortRecordingCrawler(abortLst,
+								aus[4]));
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AUID_MAP,
+				    "(3|4|5),-25000");
+      assertEquals(ListUtil.list(aus[4], aus[3], aus[4]), abortLst);
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AUID_MAP,
+				    "(3|4|5),-25000;(xx|yy),-26000");
+      assertEquals(ListUtil.list(aus[4], aus[3], aus[4]), abortLst);
+    }
+
     private void setNewContentRateLimit(String rate, String startRate,
 					String pluginRate) {
       cprops.put(CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_RATE, rate);
@@ -296,6 +358,101 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       waitForCrawlToFinish(sem);
       assertFalse("doCrawl() called at time " + TimeBase.nowMs(),
 		  crawler.doCrawlCalled());
+    }
+
+    void assertEligible(ArchivalUnit au)
+	throws CrawlManagerImpl.NotEligibleException {
+      assertTrue(crawlManager.isEligibleForNewContentCrawl(au));
+      crawlManager.checkEligibleForNewContentCrawl(au);
+    } 
+
+    void assertNotEligible(String expectedExceptionMessageRE,
+			   ArchivalUnit au) {
+      assertNotEligible(CrawlManagerImpl.NotEligibleException.class,
+			expectedExceptionMessageRE,
+			au);
+    }
+
+    void assertNotEligible(Class expectedExceptionClass,
+			   String expectedExceptionMessageRE,
+			   ArchivalUnit au) {
+      assertFalse(crawlManager.isEligibleForNewContentCrawl(au));
+      try {
+	crawlManager.checkEligibleForNewContentCrawl(au);
+      } catch (Exception e) {
+	assertClass(expectedExceptionClass, e);
+	assertMatchesRE(expectedExceptionMessageRE, e.getMessage());
+      }
+    } 
+
+    void assertQueueable(ArchivalUnit au)
+	throws CrawlManagerImpl.NotEligibleException {
+      crawlManager.checkEligibleToQueueNewContentCrawl(au);
+    } 
+
+    void assertNotQueueable(String expectedExceptionMessageRE,
+			    ArchivalUnit au) {
+      assertNotQueueable(CrawlManagerImpl.NotEligibleException.class,
+			 expectedExceptionMessageRE,
+			 au);
+    }
+
+    void assertNotQueueable(Class expectedExceptionClass,
+			    String expectedExceptionMessageRE,
+			    ArchivalUnit au) {
+      try {
+	crawlManager.checkEligibleToQueueNewContentCrawl(au);
+      } catch (Exception e) {
+	assertClass(expectedExceptionClass, e);
+	assertMatchesRE(expectedExceptionMessageRE, e.getMessage());
+      }
+    } 
+
+    void makeRateLimiterReturn(RateLimiter limiter, boolean val) {
+      if (val) {
+	while (!limiter.isEventOk()) {
+	  limiter.unevent();
+	}
+      } else {
+	while (limiter.isEventOk()) {
+	  limiter.event();
+	}
+      }
+    }
+
+    public void testIsEligibleForNewContentCrawl() throws Exception {
+      assertQueueable(mau);
+      assertEligible(mau);
+      crawlManager.setRunningNCCrawl(mau, true);
+      assertNotQueueable("is crawling now", mau);
+      assertNotEligible("is crawling now", mau);
+      crawlManager.setRunningNCCrawl(mau, false);
+      assertQueueable(mau);
+      assertEligible(mau);
+      crawlSpec.setCrawlWindow(new CrawlWindows.Never());
+      assertQueueable(mau);
+      assertNotEligible("window.*closed", mau);
+      crawlSpec.setCrawlWindow(new CrawlWindows.Always());
+      assertQueueable(mau);
+      assertEligible(mau);
+
+      assertNotEligible("Can't crawl ExplodedArchivalUnit",
+			new ExplodedArchivalUnit(new ExplodedPlugin(),
+						 new ExternalizableMap()));
+
+      assertNotQueueable("Can't crawl ExplodedArchivalUnit",
+			 new ExplodedArchivalUnit(new ExplodedPlugin(),
+						  new ExternalizableMap()));
+
+      RateLimiter limit = crawlManager.getNewContentRateLimiter(mau);
+      makeRateLimiterReturn(limit, false);
+      assertNotQueueable(CrawlManagerImpl.NotEligibleException.RateLimiter.class,
+			 "Exceeds crawl-start rate", mau);
+      assertNotEligible(CrawlManagerImpl.NotEligibleException.RateLimiter.class,
+			"Exceeds crawl-start rate", mau);
+      makeRateLimiterReturn(limit, true);
+      assertQueueable(mau);
+      assertEligible(mau);
     }
 
     public void testDoesNCCrawl() {
@@ -1100,14 +1257,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     // ODC tests
 
-    MockArchivalUnit[] makeMockAus(int n) {
-      MockArchivalUnit[] res = new MockArchivalUnit[n];
-      for (int ix = 0; ix < n; ix++) {
-	res[ix] = newMockArchivalUnit("mau" + ix);
-      }
-      return res;
-    }
-
     CrawlReq[] makeReqs(int n) {
       CrawlReq[] res = new CrawlReq[n];
       for (int ix = 0; ix < n; ix++) {
@@ -1763,6 +1912,11 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       MockCrawler mc = new MockCrawler();
       mc.setAu(au);
       mc.setIsWholeAU(isWholeAU);
+      return addToRunningRateKeys(au, mc);
+    }
+
+    MockCrawler addToRunningRateKeys(ArchivalUnit au, MockCrawler mc) {
+      mc.setAu(au);
       addToRunningCrawls(au, mc);
       auCrawlerMap.put(au, mc);
       highPriorityCrawlRequests.remove(au);
@@ -1775,11 +1929,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	removeFromRunningCrawls(crawler);
 	auCrawlerMap.remove(au);
       }
-    }
-
-    // Suppress this mechinism - just testing pool queues
-    protected boolean isRunningNCCrawl(ArchivalUnit au) {
-      return false;
     }
 
     int rebuildCount = 0;

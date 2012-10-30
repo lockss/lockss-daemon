@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawler.java,v 1.15 2012-03-15 08:20:25 tlipkis Exp $
+ * $Id: MockCrawler.java,v 1.16 2012-10-30 00:11:05 tlipkis Exp $
  */
 
 /*
@@ -57,6 +57,13 @@ public class MockCrawler extends NullCrawler {
 
   boolean wasAborted = false;
 
+
+  public MockCrawler() {
+  }
+
+  public MockCrawler(ArchivalUnit au) {
+    this.au = au;
+  }
 
   public void abortCrawl() {
     wasAborted = true;

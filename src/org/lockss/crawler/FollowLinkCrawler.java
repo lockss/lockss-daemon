@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.92 2012-09-06 03:59:41 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.93 2012-10-30 00:11:05 tlipkis Exp $
  */
 
 /*
@@ -564,7 +564,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	}
 	if (ex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
 	  logger.error("Found a fatal error with "+uc+". Aborting crawl");
-	  crawlAborted = true;
+	  abortCrawl();
 	  return false;
 	}
       } catch (Exception ex) {
@@ -645,7 +645,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       crawlStatus.signalErrorForUrl(uc.getUrl(), ex);
       if (ex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
 	logger.error("Fatal error parsing "+uc, ex);
-	crawlAborted = true;
+	abortCrawl();
 	return false;
       } else if (ex.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
 	logger.siteError("Couldn't parse "+uc+". continuing", ex);
