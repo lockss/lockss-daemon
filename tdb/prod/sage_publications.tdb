@@ -3715,7 +3715,7 @@
 
         au < testing ; 2007-2008 ; British Journal of Pain Volume 1 ; 1 >
         au < released ; 2008 ; British Journal of Pain Volume 2 ; 2 >
-        au < testing ; 2009 ; British Journal of Pain Volume 3 ; 3 >
+        au < ready ; 2009 ; British Journal of Pain Volume 3 ; 3 >
         au < released ; 2010 ; British Journal of Pain Volume 4 ; 4 >
         au < released ; 2011 ; British Journal of Pain Volume 5 ; 5 >
         au < ready ; 2012 ; British Journal of Pain Volume 6 ; 6 >
@@ -4100,9 +4100,9 @@
         au < manifest ; 2007 ; Bulletin de Méthodologie Sociologique Volume 95 ; 95 >
         au < manifest ; 2007 ; Bulletin de Méthodologie Sociologique Volume 96 ; 96 >
         au < released ; 2008 ; Bulletin de Méthodologie Sociologique Volume 97 ; 97 >
-        au < testing ; 2008 ; Bulletin de Méthodologie Sociologique Volume 98 ; 98 >
+        au < ready ; 2008 ; Bulletin de Méthodologie Sociologique Volume 98 ; 98 >
         au < released ; 2008 ; Bulletin de Méthodologie Sociologique Volume 99 ; 99 >
-        au < testing ; 2008 ; Bulletin de Méthodologie Sociologique Volume 100 ; 100 >
+        au < ready ; 2008 ; Bulletin de Méthodologie Sociologique Volume 100 ; 100 >
         au < released ; 2009 ; Bulletin de Méthodologie Sociologique Volume 101 ; 101 >
         au < released ; 2009 ; Bulletin de Méthodologie Sociologique Volume 102 ; 102 >
         au < released ; 2009 ; Bulletin de Méthodologie Sociologique Volume 103 ; 103 >
@@ -4146,7 +4146,7 @@
         au < manifest ; 2005 ; Bulletin of the Atomic Scientists Volume 61 ; 61 >
         au < manifest ; 2006 ; Bulletin of the Atomic Scientists Volume 62 ; 62 >
         au < manifest ; 2007 ; Bulletin of the Atomic Scientists Volume 63 ; 63 >
-        au < manifest ; 2008 ; Bulletin of the Atomic Scientists Volume 64 ; 64 >
+        au < ready ; 2008 ; Bulletin of the Atomic Scientists Volume 64 ; 64 >
         au < released ; 2009 ; Bulletin of the Atomic Scientists Volume 65 ; 65 >
         au < released ; 2010 ; Bulletin of the Atomic Scientists Volume 66 ; 66 >
         au < released ; 2011 ; Bulletin of the Atomic Scientists Volume 67 ; 67 >
@@ -6299,7 +6299,7 @@
         au < manifest ; 2005 ; Contemporary Sociology: A Journal of Reviews Volume 34 ; 34 >
         au < manifest ; 2006 ; Contemporary Sociology: A Journal of Reviews Volume 35 ; 35 >
         au < manifest ; 2007 ; Contemporary Sociology: A Journal of Reviews Volume 36 ; 36 >
-        au < manifest ; 2008 ; Contemporary Sociology: A Journal of Reviews Volume 37 ; 37 >
+        au < ready ; 2008 ; Contemporary Sociology: A Journal of Reviews Volume 37 ; 37 >
         au < released ; 2009 ; Contemporary Sociology: A Journal of Reviews Volume 38 ; 38 >
         au < released ; 2010 ; Contemporary Sociology: A Journal of Reviews Volume 39 ; 39 >
         au < released ; 2011 ; Contemporary Sociology: A Journal of Reviews Volume 40 ; 40 >
@@ -11828,7 +11828,7 @@
         param[base_url] = http://gos.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2010 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 1 ; 1 >
+        au < ready ; 2010 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 1 ; 1 >
         au < released ; 2011 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 2 ; 2 >
         au < testing ; 2012 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 3 ; 3 >
 
@@ -14371,7 +14371,7 @@
         au < manifest ; 2005 ; Humanity & Society Volume 29 ; 29 >
         au < manifest ; 2006 ; Humanity & Society Volume 30 ; 30 >
         au < manifest ; 2007 ; Humanity & Society Volume 31 ; 31 >
-        au < manifest ; 2008 ; Humanity & Society Volume 32 ; 32 >
+        au < ready ; 2008 ; Humanity & Society Volume 32 ; 32 >
         au < released ; 2009 ; Humanity & Society Volume 33 ; 33 >
         au < released ; 2010 ; Humanity & Society Volume 34 ; 34 >
         au < released ; 2011 ; Humanity & Society Volume 35 ; 35 >
@@ -14610,7 +14610,7 @@
         au < manifest ; 2005 ; International Area Studies Review Volume 8 ; 8 >
         au < manifest ; 2006 ; International Area Studies Review Volume 9 ; 9 >
         au < manifest ; 2007 ; International Area Studies Review Volume 10 ; 10 >
-        au < manifest ; 2008 ; International Area Studies Review Volume 11 ; 11 >
+        au < ready ; 2008 ; International Area Studies Review Volume 11 ; 11 >
         au < released ; 2009 ; International Area Studies Review Volume 12 ; 12 >
         au < released ; 2010 ; International Area Studies Review Volume 13 ; 13 >
         au < released ; 2011 ; International Area Studies Review Volume 14 ; 14 >
@@ -29567,7 +29567,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Otolaryngology -- Head and Neck Surgery Volume 135 ; 135 >
         au < manifest ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 136 ; 136 >
         au < manifest ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 137 ; 137 >
-        au < manifest ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 138 ; 138 >
+        au < ready ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 138 ; 138 >
         au < ready ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 139 ; 139 >
         au < released ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 140 ; 140 >
         au < released ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 141 ; 141 >
@@ -30965,7 +30965,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 219 ; 219 >
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 221 ; 221 >
-        au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 222 ; 222 >
+        au < ready ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 222 ; 222 >
         au < released ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 225 ; 225 >
@@ -31137,7 +31137,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 219 ; 219 >
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 221 ; 221 >
-        au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 222 ; 222 >
+        au < ready ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 222 ; 222 >
         au < released ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 225 ; 225 >
@@ -31250,7 +31250,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 219 ; 219 >
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 221 ; 221 >
-        au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 222 ; 222 >
+        au < ready ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 222 ; 222 >
         au < released ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 225 ; 225 >
@@ -31283,7 +31283,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 219 ; 219 >
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 221 ; 221 >
-        au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 222 ; 222 >
+        au < ready ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 222 ; 222 >
         au < released ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 225 ; 225 >
@@ -31367,11 +31367,11 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 220 ; 220 >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 221 ; 221 >
-        au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 222 ; 222 >
+        au < ready ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 222 ; 222 >
         au < released ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 225 ; 225 >
-        au < testing ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 226 ; 226 >
+        au < ready ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 226 ; 226 >
 
       }
 
@@ -31395,7 +31395,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 223 ; 223 >
         au < released ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 224 ; 224 >
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 225 ; 225 >
-        au < testing ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 226 ; 226 >
+        au < ready ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 226 ; 226 >
 
       }
 
@@ -31439,7 +31439,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Progress in Development Studies Volume 9 ; 9 >
         au < released ; 2010 ; Progress in Development Studies Volume 10 ; 10 >
         au < released ; 2011 ; Progress in Development Studies Volume 11 ; 11 >
-        au < testing ; 2012 ; Progress in Development Studies Volume 12 ; 12 >
+        au < ready ; 2012 ; Progress in Development Studies Volume 12 ; 12 >
 
       }
 
@@ -31508,7 +31508,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Progress in Human Geography Volume 33 ; 33 >
         au < released ; 2010 ; Progress in Human Geography Volume 34 ; 34 >
         au < released ; 2011 ; Progress in Human Geography Volume 35 ; 35 >
-        au < testing ; 2012 ; Progress in Human Geography Volume 36 ; 36 >
+        au < ready ; 2012 ; Progress in Human Geography Volume 36 ; 36 >
 
       }
 
@@ -31576,7 +31576,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Progress in Physical Geography Volume 33 ; 33 >
         au < released ; 2010 ; Progress in Physical Geography Volume 34 ; 34 >
         au < released ; 2011 ; Progress in Physical Geography Volume 35 ; 35 >
-        au < testing ; 2012 ; Progress in Physical Geography Volume 36 ; 36 >
+        au < ready ; 2012 ; Progress in Physical Geography Volume 36 ; 36 >
 
       }
 
@@ -31632,7 +31632,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; Prosthetics and Orthotics International Volume 33 ; 33 >
         au < released ; 2010 ; Prosthetics and Orthotics International Volume 34 ; 34 >
         au < released ; 2011 ; Prosthetics and Orthotics International Volume 35 ; 35 >
-        au < testing ; 2012 ; Prosthetics and Orthotics International Volume 36 ; 36 >
+        au < ready ; 2012 ; Prosthetics and Orthotics International Volume 36 ; 36 >
 
       }
 
