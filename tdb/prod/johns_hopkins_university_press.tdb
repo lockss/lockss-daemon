@@ -1722,6 +1722,23 @@
 
   {
     title <
+      name = Studies in American Fiction ;
+      issn = 0091-8083 ;
+      eissn = 2158-415X
+     >
+     
+     param[journal_dir] = studies_in_american_fiction
+     attr[journal_id] = saf
+
+    au < exists ; 2010 ; Studies in American Fiction Volume 37 ; 37 >     
+    au < exists ; 2011 ; Studies in American Fiction Volume 38 ; 38 >          
+    au < exists ; 2012 ; Studies in American Fiction Volume 39 ; 39 >     
+     
+     
+  }
+  
+  {
+    title <
       name = Studies in Eighteenth Century Culture ;
       issn = 0360-2370 ;
       eissn = 1938-6133 ;
