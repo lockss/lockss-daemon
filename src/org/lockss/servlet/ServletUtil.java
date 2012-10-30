@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.79 2012-08-29 21:11:45 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.80 2012-10-30 00:12:33 tlipkis Exp $
  */
 
 /*
@@ -1669,7 +1669,7 @@ public class ServletUtil {
     comp.add("<li value=\"" + nth + "\">");
     comp.add("<a name=\"foottag" + nth + "\">");
     comp.add(footnote);
-    comp.add("</a>");
+    comp.add("</a></li>");
   }
 
   private static void layoutIpAllowDenyErrors(Composite composite,
