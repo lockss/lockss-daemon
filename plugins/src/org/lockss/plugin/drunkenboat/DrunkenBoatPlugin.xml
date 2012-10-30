@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -33,7 +33,7 @@
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%slockss\.txt$", base_url</string>
-      <string>2,"%sdb%s/rotate\.php", base_url, volume_name</string>   
+      <string>2,"^%sdb%s/rotate\.php", base_url, volume_name</string>   
       <string>1,"^%s(www/)?db%s[-/]", base_url, volume_name</string>
       <string>1,"^%sdb%s$", base_url, volume_name</string>
     </list>
