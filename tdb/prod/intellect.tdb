@@ -435,11 +435,11 @@
       param[journal_id] = ijcis
       param[journal_issn] = 1751-2867
 
-      au < testing ; 2006-2007 ; International Journal of Contemporary Iraqi Studies Volume 1 ; 1 >
-      au < testing ; 2008-2009 ; International Journal of Contemporary Iraqi Studies Volume 2 ; 2 >
-      au < testing ; 2009 ; International Journal of Contemporary Iraqi Studies Volume 3 ; 3 >
-      au < testing ; 2010 ; International Journal of Contemporary Iraqi Studies Volume 4 ; 4 >
-      au < testing ; 2011 ; International Journal of Contemporary Iraqi Studies Volume 5 ; 5 >
+      au < ready ; 2006-2007 ; International Journal of Contemporary Iraqi Studies Volume 1 ; 1 >
+      au < ready ; 2008-2009 ; International Journal of Contemporary Iraqi Studies Volume 2 ; 2 >
+      au < ready ; 2009 ; International Journal of Contemporary Iraqi Studies Volume 3 ; 3 >
+      au < ready ; 2010 ; International Journal of Contemporary Iraqi Studies Volume 4 ; 4 >
+      au < ready ; 2011 ; International Journal of Contemporary Iraqi Studies Volume 5 ; 5 >
 
     }
 
@@ -452,8 +452,8 @@
       param[journal_id] = jdtv
       param[journal_issn] = 2040-4182
 
-      au < testing ; 2010 ; International Journal of Digital Television Volume 1 ; 1 >
-      au < testing ; 2011 ; International Journal of Digital Television Volume 2 ; 2 >
+      au < ready ; 2010 ; International Journal of Digital Television Volume 1 ; 1 >
+      au < ready ; 2011 ; International Journal of Digital Television Volume 2 ; 2 >
  
     }
 
@@ -466,13 +466,13 @@
       param[journal_id] = eta
       param[journal_issn] = 1743-5234
 
-      au < testing ; 2005 ; International Journal of Education through Art Volume 1 ; 1 >
-      au < testing ; 2006 ; International Journal of Education through Art Volume 2 ; 2 >
-      au < testing ; 2007-2008 ; International Journal of Education through Art Volume 3 ; 3 >
-      au < testing ; 2008 ; International Journal of Education through Art Volume 4 ; 4 >
-      au < testing ; 2009 ; International Journal of Education through Art Volume 5 ; 5 >
-      au < testing ; 2010 ; International Journal of Education through Art Volume 6 ; 6 >
-      au < testing ; 2011 ; International Journal of Education through Art Volume 7 ; 7 >
+      au < ready ; 2005 ; International Journal of Education through Art Volume 1 ; 1 >
+      au < ready ; 2006 ; International Journal of Education through Art Volume 2 ; 2 >
+      au < ready ; 2007-2008 ; International Journal of Education through Art Volume 3 ; 3 >
+      au < ready ; 2008 ; International Journal of Education through Art Volume 4 ; 4 >
+      au < ready ; 2009 ; International Journal of Education through Art Volume 5 ; 5 >
+      au < ready ; 2010 ; International Journal of Education through Art Volume 6 ; 6 >
+      au < ready ; 2011 ; International Journal of Education through Art Volume 7 ; 7 >
 
     }
     
@@ -485,17 +485,17 @@
       param[journal_id] = ijfs
       param[journal_issn] = 1368-2679
 
-      au < notReady ; 2002 ; International Journal of Francophone Studies Volume 4 ; 4 >
-      au < notReady ; 2003 ; International Journal of Francophone Studies Volume 5 ; 5 >
-      au < notReady ; 2003 ; International Journal of Francophone Studies Volume 6 ; 6 >
-      au < notReady ; 2004 ; International Journal of Francophone Studies Volume 7 ; 7 >
-      au < notReady ; 2005 ; International Journal of Francophone Studies Volume 8 ; 8 >
-      au < notReady ; 2006 ; International Journal of Francophone Studies Volume 9 ; 9 >
-      au < notReady ; 2007 ; International Journal of Francophone Studies Volume 10 ; 10 >
-      au < notReady ; 2008 ; International Journal of Francophone Studies Volume 11 ; 11 >
-      au < notReady ; 2009 ; International Journal of Francophone Studies Volume 12 ; 12 >
-      au < notReady ; 2010-2011 ; International Journal of Francophone Studies Volume 13 ; 13 >
-      au < notReady ; 2011 ; International Journal of Francophone Studies Volume 14 ; 14 >
+      au < testing ; 2002 ; International Journal of Francophone Studies Volume 4 ; 4 >
+      au < testing ; 2003 ; International Journal of Francophone Studies Volume 5 ; 5 >
+      au < testing ; 2003 ; International Journal of Francophone Studies Volume 6 ; 6 >
+      au < testing ; 2004 ; International Journal of Francophone Studies Volume 7 ; 7 >
+      au < testing ; 2005 ; International Journal of Francophone Studies Volume 8 ; 8 >
+      au < testing ; 2006 ; International Journal of Francophone Studies Volume 9 ; 9 >
+      au < testing ; 2007 ; International Journal of Francophone Studies Volume 10 ; 10 >
+      au < testing ; 2008 ; International Journal of Francophone Studies Volume 11 ; 11 >
+      au < testing ; 2009 ; International Journal of Francophone Studies Volume 12 ; 12 >
+      au < testing ; 2010-2011 ; International Journal of Francophone Studies Volume 13 ; 13 >
+      au < testing ; 2011 ; International Journal of Francophone Studies Volume 14 ; 14 >
 
     }
     
@@ -508,17 +508,17 @@
       param[journal_id] = ijis
       param[journal_issn] = 1364-971X
 
-      au < notReady ; 2001 ; International Journal of Iberian Studies Volume 14 ; 14 >
-      au < notReady ; 2002-2003 ; International Journal of Iberian Studies Volume 15 ; 15 >
-      au < notReady ; 2003-2004 ; International Journal of Iberian Studies Volume 16 ; 16 >
-      au < notReady ; 2004 ; International Journal of Iberian Studies Volume 17 ; 17 >
-      au < notReady ; 2005 ; International Journal of Iberian Studies Volume 18 ; 18 >
-      au < notReady ; 2006-2007 ; International Journal of Iberian Studies Volume 19 ; 19 >
-      au < notReady ; 2007 ; International Journal of Iberian Studies Volume 20 ; 20 >
-      au < notReady ; 2008 ; International Journal of Iberian Studies Volume 21 ; 21 >
-      au < notReady ; 2009 ; International Journal of Iberian Studies Volume 22 ; 22 >
-      au < notReady ; 2010 ; International Journal of Iberian Studies Volume 23 ; 23 >
-      au < notReady ; 2011 ; International Journal of Iberian Studies Volume 24 ; 24 >
+      au < testing ; 2001 ; International Journal of Iberian Studies Volume 14 ; 14 >
+      au < testing ; 2002-2003 ; International Journal of Iberian Studies Volume 15 ; 15 >
+      au < testing ; 2003-2004 ; International Journal of Iberian Studies Volume 16 ; 16 >
+      au < testing ; 2004 ; International Journal of Iberian Studies Volume 17 ; 17 >
+      au < testing ; 2005 ; International Journal of Iberian Studies Volume 18 ; 18 >
+      au < testing ; 2006-2007 ; International Journal of Iberian Studies Volume 19 ; 19 >
+      au < testing ; 2007 ; International Journal of Iberian Studies Volume 20 ; 20 >
+      au < testing ; 2008 ; International Journal of Iberian Studies Volume 21 ; 21 >
+      au < testing ; 2009 ; International Journal of Iberian Studies Volume 22 ; 22 >
+      au < testing ; 2010 ; International Journal of Iberian Studies Volume 23 ; 23 >
+      au < testing ; 2011 ; International Journal of Iberian Studies Volume 24 ; 24 >
 
     }
     
