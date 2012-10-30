@@ -65,9 +65,9 @@
       param[base_url] = http://diabeticfootandankle.net/
       param[journal_id] = dfa
 
-      au < releasing ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
-      au < releasing ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
-      au < releasing ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+      au < released ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
+      au < released ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
+      au < released ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
     }
   }
 
@@ -147,7 +147,7 @@
 
 	comment[fnr2008] = 502 Proxy Error
 
-    au < releasing ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
+    au < released ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
     au < released ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
     au < released ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 >
     au < released ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
@@ -214,7 +214,7 @@
     au < released ; 2009 ; International Journal of Circumpolar Health Volume 68 ; 68 ; 2009 >
     au < released ; 2010 ; International Journal of Circumpolar Health Volume 69 ; 69 ; 2010 >
     au < released ; 2011 ; International Journal of Circumpolar Health Volume 70 ; 70 ; 2011 >
-    au < releasing ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
+    au < released ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
 
   }
 
@@ -306,11 +306,11 @@
 
     au < released ; 2006 ; Libyan Journal of Medicine Volume 1 ; 1 ; 2006 >
     au < released ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2 ; 2007 >
-    au < releasing ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 >
+    au < released ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 >
     au < released ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 >
     au < released ; 2010 ; Libyan Journal of Medicine [including Supplements] Volume 5 ; 5 ; 2010 >
     au < released ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; 2011 >
-    au < releasing ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; 2012 >
+    au < released ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; 2012 >
 
   }
 
@@ -356,23 +356,23 @@
     param[base_url] = http://med-ed-online.net/
     param[journal_id] = meo
 
-    au < releasing ; 1996 ; Medical Education Online Volume 1 ; 1 ; 1996 >
-    au < releasing ; 1997 ; Medical Education Online Volume 2 ; 2 ; 1997 >
-    au < releasing ; 1998 ; Medical Education Online Volume 3 ; 3 ; 1998 >
-    au < releasing ; 1999 ; Medical Education Online Volume 4 ; 4 ; 1999 >
-    au < releasing ; 2000 ; Medical Education Online Volume 5 ; 5 ; 2000 >
-    au < releasing ; 2001 ; Medical Education Online Volume 6 ; 6 ; 2001 >
-    au < releasing ; 2002 ; Medical Education Online Volume 7 ; 7 ; 2002 >
-    au < releasing ; 2003 ; Medical Education Online Volume 8 ; 8 ; 2003 >
-    au < releasing ; 2004 ; Medical Education Online Volume 9 ; 9 ; 2004 >
-    au < releasing ; 2005 ; Medical Education Online Volume 10 ; 10 ; 2005 >
-    au < releasing ; 2006 ; Medical Education Online Volume 11 ; 11 ; 2006 >
-    au < releasing ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
-    au < releasing ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
-    au < releasing ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
-    au < releasing ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
-    au < releasing ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
-    au < releasing ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
+    au < released ; 1996 ; Medical Education Online Volume 1 ; 1 ; 1996 >
+    au < released ; 1997 ; Medical Education Online Volume 2 ; 2 ; 1997 >
+    au < released ; 1998 ; Medical Education Online Volume 3 ; 3 ; 1998 >
+    au < released ; 1999 ; Medical Education Online Volume 4 ; 4 ; 1999 >
+    au < released ; 2000 ; Medical Education Online Volume 5 ; 5 ; 2000 >
+    au < released ; 2001 ; Medical Education Online Volume 6 ; 6 ; 2001 >
+    au < released ; 2002 ; Medical Education Online Volume 7 ; 7 ; 2002 >
+    au < released ; 2003 ; Medical Education Online Volume 8 ; 8 ; 2003 >
+    au < released ; 2004 ; Medical Education Online Volume 9 ; 9 ; 2004 >
+    au < released ; 2005 ; Medical Education Online Volume 10 ; 10 ; 2005 >
+    au < released ; 2006 ; Medical Education Online Volume 11 ; 11 ; 2006 >
+    au < released ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
+    au < released ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
+    au < released ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
+    au < released ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
+    au < released ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
+    au < released ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
 
     }
 
@@ -412,7 +412,7 @@
     au < released ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 >
     au < released ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 >
     au < released ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
-    au < releasing ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
+    au < released ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
     
 
   }
@@ -430,7 +430,7 @@
 
     au < released ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 >
     au < released ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
-    au < releasing ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
+    au < released ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
 
   }
 
@@ -446,7 +446,7 @@
     param[journal_id] = pba
 
     au < released ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; 2011 >
-    au < releasing ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 21 ; 2012 >
+    au < released ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 21 ; 2012 >
 
   }
 
@@ -491,8 +491,8 @@
     au < released ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
     au < released ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
     au < released ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
-    au < releasing ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
-    au < releasing ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
+    au < released ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
+    au < released ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
 
   }
 
@@ -523,11 +523,11 @@
     au < released ; 2005 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 13 ; 13 ; 2005 >
     au < released ; 2006 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 14 ; 14 ; 2006 >
     au < released ; 2007 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 15 ; 15 ; 2007 >
-    au < releasing ; 2008 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 16 ; 16 ; 2008 >
+    au < released ; 2008 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 16 ; 16 ; 2008 >
     au < released ; 2009 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 17 ; 17 ; 2009 >
     au < released ; 2010 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 18 ; 18 ; 2010 >
     au < released ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 ; 2011 >
-    au < releasing ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 >
+    au < released ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 >
 
   }
 
@@ -588,7 +588,7 @@
       param[journal_id] = snp
 
       au < released ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 >
-      au < releasing ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 >
+      au < released ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 >
 
   }
   
@@ -605,7 +605,7 @@
     param[journal_id] = tellusa
     
     au < testing ; 1949 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1 ; 1 ; 1949 >
-    au < releasing ; 1950 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2 ; 2 ; 1950 >
+    au < released ; 1950 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2 ; 2 ; 1950 >
     au < released ; 1951 ; Tellus A: Dynamic Meteorology and Oceanography Volume 3 ; 3 ; 1951 >
     au < released ; 1952 ; Tellus A: Dynamic Meteorology and Oceanography Volume 4 ; 4 ; 1952 >
     au < released ; 1953 ; Tellus A: Dynamic Meteorology and Oceanography Volume 5 ; 5 ; 1953 >
@@ -619,13 +619,13 @@
     au < released ; 1961 ; Tellus A: Dynamic Meteorology and Oceanography Volume 13 ; 13 ; 1961 >
     au < released ; 1962 ; Tellus A: Dynamic Meteorology and Oceanography Volume 14 ; 14 ; 1962 >
     au < released ; 1963 ; Tellus A: Dynamic Meteorology and Oceanography Volume 15 ; 15 ; 1963 >
-    au < releasing ; 1964 ; Tellus A: Dynamic Meteorology and Oceanography Volume 16 ; 16 ; 1964 >
-    au < releasing ; 1965 ; Tellus A: Dynamic Meteorology and Oceanography Volume 17 ; 17 ; 1965 >
-    au < releasing ; 1966 ; Tellus A: Dynamic Meteorology and Oceanography Volume 18 ; 18 ; 1966 >
-    au < releasing ; 1967 ; Tellus A: Dynamic Meteorology and Oceanography Volume 19 ; 19 ; 1967 >
-    au < releasing ; 1968 ; Tellus A: Dynamic Meteorology and Oceanography Volume 20 ; 20 ; 1968 >
-    au < releasing ; 1969 ; Tellus A: Dynamic Meteorology and Oceanography Volume 21 ; 21 ; 1969 >
-    au < releasing ; 1970 ; Tellus A: Dynamic Meteorology and Oceanography Volume 22 ; 22 ; 1970 >
+    au < released ; 1964 ; Tellus A: Dynamic Meteorology and Oceanography Volume 16 ; 16 ; 1964 >
+    au < released ; 1965 ; Tellus A: Dynamic Meteorology and Oceanography Volume 17 ; 17 ; 1965 >
+    au < released ; 1966 ; Tellus A: Dynamic Meteorology and Oceanography Volume 18 ; 18 ; 1966 >
+    au < released ; 1967 ; Tellus A: Dynamic Meteorology and Oceanography Volume 19 ; 19 ; 1967 >
+    au < released ; 1968 ; Tellus A: Dynamic Meteorology and Oceanography Volume 20 ; 20 ; 1968 >
+    au < released ; 1969 ; Tellus A: Dynamic Meteorology and Oceanography Volume 21 ; 21 ; 1969 >
+    au < released ; 1970 ; Tellus A: Dynamic Meteorology and Oceanography Volume 22 ; 22 ; 1970 >
     au < released ; 1971 ; Tellus A: Dynamic Meteorology and Oceanography Volume 23 ; 23 ; 1971 >
     au < released ; 1972 ; Tellus A: Dynamic Meteorology and Oceanography Volume 24 ; 24 ; 1972 >
     au < released ; 1973 ; Tellus A: Dynamic Meteorology and Oceanography Volume 25 ; 25 ; 1973 >
@@ -667,7 +667,7 @@
     au < released ; 2009 ; Tellus A: Dynamic Meteorology and Oceanography Volume 61 ; 61 ; 2009 >
     au < released ; 2010 ; Tellus A: Dynamic Meteorology and Oceanography Volume 62 ; 62 ; 2010 >
     au < released ; 2011 ; Tellus A: Dynamic Meteorology and Oceanography Volume 63 ; 63 ; 2011 >
-    au < releasing ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 ; 2012 >
+    au < released ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 ; 2012 >
 
   }
 
@@ -683,8 +683,8 @@
     param[base_url] = http://www.tellusb.net/
     param[journal_id] = tellusb  
 
-    au < releasing ; 1949 ; Tellus B: Chemical and Physical Meteorology Volume 1 ; 1 ; 1949 >
-    au < releasing ; 1950 ; Tellus B: Chemical and Physical Meteorology Volume 2 ; 2 ; 1950 >
+    au < released ; 1949 ; Tellus B: Chemical and Physical Meteorology Volume 1 ; 1 ; 1949 >
+    au < released ; 1950 ; Tellus B: Chemical and Physical Meteorology Volume 2 ; 2 ; 1950 >
     au < released ; 1951 ; Tellus B: Chemical and Physical Meteorology Volume 3 ; 3 ; 1951 >
     au < released ; 1952 ; Tellus B: Chemical and Physical Meteorology Volume 4 ; 4 ; 1952 >
     au < released ; 1953 ; Tellus B: Chemical and Physical Meteorology Volume 5 ; 5 ; 1953 >
@@ -698,13 +698,13 @@
     au < released ; 1961 ; Tellus B: Chemical and Physical Meteorology Volume 13 ; 13 ; 1961 >
     au < released ; 1962 ; Tellus B: Chemical and Physical Meteorology Volume 14 ; 14 ; 1962 >
     au < released ; 1963 ; Tellus B: Chemical and Physical Meteorology Volume 15 ; 15 ; 1963 >
-    au < releasing ; 1964 ; Tellus B: Chemical and Physical Meteorology Volume 16 ; 16 ; 1964 >
-    au < releasing ; 1965 ; Tellus B: Chemical and Physical Meteorology Volume 17 ; 17 ; 1965 >
-    au < releasing ; 1966 ; Tellus B: Chemical and Physical Meteorology Volume 18 ; 18 ; 1966 >
-    au < releasing ; 1967 ; Tellus B: Chemical and Physical Meteorology Volume 19 ; 19 ; 1967 >
-    au < releasing ; 1968 ; Tellus B: Chemical and Physical Meteorology Volume 20 ; 20 ; 1968 >
-    au < releasing ; 1969 ; Tellus B: Chemical and Physical Meteorology Volume 21 ; 21 ; 1969 >
-    au < releasing ; 1970 ; Tellus B: Chemical and Physical Meteorology Volume 22 ; 22 ; 1970 >
+    au < released ; 1964 ; Tellus B: Chemical and Physical Meteorology Volume 16 ; 16 ; 1964 >
+    au < released ; 1965 ; Tellus B: Chemical and Physical Meteorology Volume 17 ; 17 ; 1965 >
+    au < released ; 1966 ; Tellus B: Chemical and Physical Meteorology Volume 18 ; 18 ; 1966 >
+    au < released ; 1967 ; Tellus B: Chemical and Physical Meteorology Volume 19 ; 19 ; 1967 >
+    au < released ; 1968 ; Tellus B: Chemical and Physical Meteorology Volume 20 ; 20 ; 1968 >
+    au < released ; 1969 ; Tellus B: Chemical and Physical Meteorology Volume 21 ; 21 ; 1969 >
+    au < released ; 1970 ; Tellus B: Chemical and Physical Meteorology Volume 22 ; 22 ; 1970 >
     au < released ; 1971 ; Tellus B: Chemical and Physical Meteorology Volume 23 ; 23 ; 1971 >
     au < released ; 1972 ; Tellus B: Chemical and Physical Meteorology Volume 24 ; 24 ; 1972 >
     au < released ; 1973 ; Tellus B: Chemical and Physical Meteorology Volume 25 ; 25 ; 1973 >
@@ -746,7 +746,7 @@
     au < released ; 2009 ; Tellus B: Chemical and Physical Meteorology Volume 61 ; 61 ; 2009 >
     au < released ; 2010 ; Tellus B: Chemical and Physical Meteorology Volume 62 ; 62 ; 2010 >
     au < released ; 2011 ; Tellus B: Chemical and Physical Meteorology Volume 63 ; 63 ; 2011 >
-    au < releasing ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 ; 2012 >
+    au < released ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 ; 2012 >
 
   }
 

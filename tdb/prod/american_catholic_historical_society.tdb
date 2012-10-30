@@ -21,8 +21,8 @@
     attr[journal_id] = acs
     implicit < status ; year ; name ; param[volume] >
 
-    au < releasing ; 2011 ; American Catholic Studies Volume 122 ; 122 >
-    au < releasing ; 2012 ; American Catholic Studies Volume 123 ; 123 >
+    au < released ; 2011 ; American Catholic Studies Volume 122 ; 122 >
+    au < released ; 2012 ; American Catholic Studies Volume 123 ; 123 >
 
     }
   

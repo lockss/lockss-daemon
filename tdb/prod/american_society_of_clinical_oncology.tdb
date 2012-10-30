@@ -33,8 +33,8 @@
       au < ready ; 1996 ; Journal of Clinical Oncology Volume 14 ; 14 >
       au < testing ; 1997 ; Journal of Clinical Oncology Volume 15 ; 15 >
       au < testing ; 1998 ; Journal of Clinical Oncology Volume 16 ; 16 >
-      au < releasing ; 1999 ; Journal of Clinical Oncology Volume 17 ; 17 >
-      au < releasing ; 1999 ; Journal of Clinical Oncology Volume 18 ; 18 >
+      au < released ; 1999 ; Journal of Clinical Oncology Volume 17 ; 17 >
+      au < released ; 1999 ; Journal of Clinical Oncology Volume 18 ; 18 >
       au < released ; 2000 ; Journal of Clinical Oncology Volume 19 ; 19 >
       au < released ; 2001 ; Journal of Clinical Oncology Volume 20 ; 20 >
       au < released ; 2002 ; Journal of Clinical Oncology Volume 21 ; 21 >
@@ -66,13 +66,13 @@
       param[base_url] = http://jop.ascopubs.org/ 
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < releasing ; 2005 ; Journal of Oncology Practice Volume 1 ; 1 >
-      au < releasing ; 2006 ; Journal of Oncology Practice Volume 2 ; 2 >
-      au < releasing ; 2007 ; Journal of Oncology Practice Volume 3 ; 3 >
-      au < releasing ; 2008 ; Journal of Oncology Practice Volume 4 ; 4 >
-      au < releasing ; 2009 ; Journal of Oncology Practice Volume 5 ; 5 >
-      au < releasing ; 2010 ; Journal of Oncology Practice Volume 6 ; 6 >
-      au < releasing ; 2011 ; Journal of Oncology Practice Volume 7 ; 7 >
+      au < released ; 2005 ; Journal of Oncology Practice Volume 1 ; 1 >
+      au < released ; 2006 ; Journal of Oncology Practice Volume 2 ; 2 >
+      au < released ; 2007 ; Journal of Oncology Practice Volume 3 ; 3 >
+      au < released ; 2008 ; Journal of Oncology Practice Volume 4 ; 4 >
+      au < released ; 2009 ; Journal of Oncology Practice Volume 5 ; 5 >
+      au < released ; 2010 ; Journal of Oncology Practice Volume 6 ; 6 >
+      au < released ; 2011 ; Journal of Oncology Practice Volume 7 ; 7 >
       au < testing ; 2012 ; Journal of Oncology Practice Volume 8 ; 8 >
 
     }
