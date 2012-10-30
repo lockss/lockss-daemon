@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.31 2012-08-06 03:33:52 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.32 2012-10-30 00:12:24 tlipkis Exp $
  */
 
 /*
@@ -164,10 +164,10 @@ public class DebugPanel extends LockssServlet {
       forceV3Poll();
     }
     if (ACTION_START_CRAWL.equals(action)) {
-      doCrawl();
+      doCrawl(false);
     }
     if (ACTION_FORCE_START_CRAWL.equals(action)) {
-      forceCrawl();
+      doCrawl(true);
     }
     if (ACTION_CRAWL_PLUGINS.equals(action)) {
       crawlPluginRegistries();
@@ -225,57 +225,40 @@ public class DebugPanel extends LockssServlet {
     }
   }
 
-  private void doCrawl() {
+  private void doCrawl(boolean force) {
     ArchivalUnit au = getAu();
     if (au == null) return;
     try {
-      if (startCrawl(au, false)) {
-      } else {
- 	errMsg = "Not eligible for crawl.  Click again to override rate limiter.";
- 	showForceCrawl = true;
- 	return;
-      }
-    } catch (Exception e) {
-      log.error("Can't start crawl", e);
-      errMsg = "Error: " + e.toString();
-    }
-  }
-
-  private void forceCrawl() {
-    ArchivalUnit au = getAu();
-    if (au == null) return;
-    try {
-      if (!startCrawl(au, true)) {
- 	errMsg = "Sorry, crawl still won't start, see log.";
-      }
-    } catch (RuntimeException e) {
-      log.error("Can't start crawl", e);
-      errMsg = "Error: " + e.toString();
+      startCrawl(au, force);
+    } catch (CrawlManagerImpl.NotEligibleException.RateLimiter e) {
+      errMsg = "AU has crawled recently (" + e.getMessage()
+	+ ").  Click again to override.";
+      showForceCrawl = true;
+      return;
+    } catch (CrawlManagerImpl.NotEligibleException e) {
+      errMsg = "Can't enqueue crawl: " + e.getMessage();
     }
   }
 
   private void crawlPluginRegistries() {
     StringBuilder sb = new StringBuilder();
     for (ArchivalUnit au : pluginMgr.getAllRegistryAus()) {
+      sb.append(au.getName());
+      sb.append(": ");
       try {
-	sb.append(au.getName());
-	sb.append(": ");
-	if (startCrawl(au, true)) {
-	  sb.append("Queued.");
-	} else {
-	  sb.append("Failed, see log.");
-	}
-      } catch (RuntimeException e) {
-	log.error("Can't start crawl", e);
-	sb.append("Error: ");
-	sb.append(e.toString());
+	startCrawl(au, true);
+	sb.append("Queued.");
+      } catch (CrawlManagerImpl.NotEligibleException e) {
+	sb.append("Failed: ");
+	sb.append(e.getMessage());
       }
       sb.append("\n");
     }
     statusMsg = sb.toString();
   }
 
-  private boolean startCrawl(ArchivalUnit au, boolean force) {
+  private boolean startCrawl(ArchivalUnit au, boolean force)
+      throws CrawlManagerImpl.NotEligibleException {
     CrawlManagerImpl cmi = (CrawlManagerImpl)crawlMgr;
     if (force) {
       RateLimiter limit = cmi.getNewContentRateLimiter(au);
@@ -283,17 +266,20 @@ public class DebugPanel extends LockssServlet {
 	limit.unevent();
       }
     }
-    if (cmi.isEligibleForNewContentCrawl(au)) {
-      Configuration config = cfgMgr.getCurrentConfig();
-      int pri = config.getInt(PARAM_CRAWL_PRIORITY, DEFAULT_CRAWL_PRIORITY);
-      crawlMgr.startNewContentCrawl(au, pri, null, null, null);
-      statusMsg = "Crawl requested for " + au.getName();
-      return true;
-    } else {
-      return false;
+    cmi.checkEligibleToQueueNewContentCrawl(au);
+    String delayMsg = "";
+    try {
+      cmi.checkEligibleForNewContentCrawl(au);
+    } catch (CrawlManagerImpl.NotEligibleException e) {
+      delayMsg = ", Start delayed due to: " + e.getMessage();
     }
+    Configuration config = cfgMgr.getCurrentConfig();
+    int pri = config.getInt(PARAM_CRAWL_PRIORITY, DEFAULT_CRAWL_PRIORITY);
+    crawlMgr.startNewContentCrawl(au, pri, null, null, null);
+    statusMsg = "Crawl requested for " + au.getName() + delayMsg;
+    return true;
   }
-  
+
   private boolean startReindexingMetadata(ArchivalUnit au, boolean force) {
     if (metadataMgr == null) {
       errMsg = "Metadata processing is not enabled.";
