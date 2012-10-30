@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.49 2011-08-09 03:59:23 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.50 2012-10-30 00:12:03 tlipkis Exp $
  */
 
 /*
@@ -134,13 +134,19 @@ public class ProxyManager extends BaseProxyManager {
     PREFIX + "disallowedMethods";
   static final String DEFAULT_DISALLOWED_METHODS = HttpRequest.__CONNECT;
 
+  /** Maximum total outgoing connections to publisher sites, from Proxy or
+   * ServeContent.  Should be larger than max total Proxy or ServeContent
+   * threads */
   public static final String PARAM_PROXY_MAX_TOTAL_CONN =
     PREFIX + "connectionPool.max";
-  public static final int DEFAULT_PROXY_MAX_TOTAL_CONN = 15;
+  public static final int DEFAULT_PROXY_MAX_TOTAL_CONN = 20;
 
+  /** Maximum per-host outgoing connections to publisher sites, from Proxy
+   * or ServeContent.  Should be larger than max total Proxy or
+   * ServeContent threads */
   public static final String PARAM_PROXY_MAX_CONN_PER_HOST =
     PREFIX + "connectionPool.maxPerHost";
-  public static final int DEFAULT_PROXY_MAX_CONN_PER_HOST = 2;
+  public static final int DEFAULT_PROXY_MAX_CONN_PER_HOST = 10;
 
   // See comments regarding connect timeouts in HttpClientUrlConnection
   public static final String PARAM_PROXY_CONNECT_TIMEOUT =
