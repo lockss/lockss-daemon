@@ -7085,6 +7085,26 @@
   }
 
   {
+  
+    title <
+      name = ILAR Journal ;
+      issn = 1084-2020 ;
+      eissn = 1930-6180 ;
+      issnl = 1084-2020
+    >
+
+    {
+
+    param[base_url] = http://ilarjournal.oxfordjournals.org/
+    pluginSuffix = HighWirePressH20Plugin
+
+    au < expected ; exists ; 2013 ; ILAR Journal Volume 1 ; 1 ; >
+
+    }
+
+  }
+
+  {
 
     title <
       name = IMA Journal of Applied Mathematics ;
@@ -18291,6 +18311,26 @@
     au < released ; crawling ; 2010 ; Twentieth Century British History Volume 21 ; 21 ; >
     au < released ; crawling ; 2011 ; Twentieth Century British History Volume 22 ; 22 ; >
     au < testing ; exists ; 2012 ; Twentieth Century British History Volume 23 ; 23 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Uniform Law Review ;
+      issn = 1124-3694 ;
+      eissn = 2050-9065 ;
+      issnl = 1124-3694
+    >
+
+    {
+
+    param[base_url] = http://ulr.oxfordjournals.org/
+    pluginSuffix = HighWirePressH20Plugin
+
+    au < expected ; exists ; 2013 ; Uniform Law Review Volume 1 ; 1 ; >
 
     }
 
