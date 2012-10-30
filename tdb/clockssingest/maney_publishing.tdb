@@ -2738,7 +2738,7 @@
     au < manifest ; exists ; 2008 ; Levant Volume 40 ; 40 > 
     au < manifest ; exists ; 2009 ; Levant Volume 41 ; 41 > 
     au < released ; manifest ; 2010 ; Levant Volume 42 ; 42 > 
-    au < boost ; exists ; 2011 ; Levant Volume 43 ; 43 > 
+    au < notReady ; exists ; 2011 ; Levant Volume 43 ; 43 > 
     au < released ; manifest ; 2012 ; Levant Volume 44 ; 44 > 
 
   }
@@ -3736,7 +3736,7 @@
 
     au < manifest ; exists ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 > 
     au < manifest ; exists ; 2009 ; Pharmaceutical Programming Volume 2 ; 2 > 
-    au < boost ; exists ; 2010 ; Pharmaceutical Programming Volume 3 ; 3 >  
+    au < released ; manifest ; 2010 ; Pharmaceutical Programming Volume 3 ; 3 >  
     au < notReady ; exists ; 2011 ; Pharmaceutical Programming Volume 4 ; 4 > 
     au < expected ; exists ; 2012 ; Pharmaceutical Programming Volume 5 ; 5 >
 
