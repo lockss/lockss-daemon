@@ -533,7 +533,7 @@
       param[journal_id] = ijia
       param[journal_issn] = 2045-5895
 
-      au < manifest ; 2012 ; International Journal of Islamic Architecture Volume 1 ; 1 >
+      au < testing ; 2012 ; International Journal of Islamic Architecture Volume 1 ; 1 >
     }
     
     {
@@ -546,13 +546,13 @@
       param[journal_id] = mpc
       param[journal_issn] = 1740-8296
 
-      au < manifest ; 2005 ; International Journal of Media & Cultural Politics Volume 1 ; 1 >
-      au < manifest ; 2006-2007 ; International Journal of Media & Cultural Politics Volume 2 ; 2 >
-      au < manifest ; 2007 ; International Journal of Media & Cultural Politics Volume 3 ; 3 >
-      au < manifest ; 2008 ; International Journal of Media & Cultural Politics Volume 4 ; 4 >
-      au < manifest ; 2009 ; International Journal of Media & Cultural Politics Volume 5 ; 5 >
-      au < manifest ; 2010-2011 ; International Journal of Media & Cultural Politics Volume 6 ; 6 >
-      au < manifest ; 2011 ; International Journal of Media & Cultural Politics Volume 7 ; 7 >
+      au < testing ; 2005 ; International Journal of Media & Cultural Politics Volume 1 ; 1 >
+      au < testing ; 2006-2007 ; International Journal of Media & Cultural Politics Volume 2 ; 2 >
+      au < testing ; 2007 ; International Journal of Media & Cultural Politics Volume 3 ; 3 >
+      au < testing ; 2008 ; International Journal of Media & Cultural Politics Volume 4 ; 4 >
+      au < testing ; 2009 ; International Journal of Media & Cultural Politics Volume 5 ; 5 >
+      au < testing ; 2010-2011 ; International Journal of Media & Cultural Politics Volume 6 ; 6 >
+      au < testing ; 2011 ; International Journal of Media & Cultural Politics Volume 7 ; 7 >
 
     }
 
@@ -574,14 +574,14 @@
       param[journal_id] = jotsc
       param[journal_issn] = 1477-9633
 
-      au < manifest ; 2004 ; Journal of Organisation Transformation & Social Change Volume 1 ; 1 >
-      au < manifest ; 2005 ; Journal of Organisation Transformation & Social Change Volume 2 ; 2 >
-      au < manifest ; 2006-2007 ; Journal of Organisation Transformation & Social Change Volume 3 ; 3 >
-      au < manifest ; 2007 ; Journal of Organisation Transformation & Social Change Volume 4 ; 4 >
-      au < manifest ; 2008 ; Journal of Organisation Transformation & Social Change Volume 5 ; 5 >
-      au < manifest ; 2009 ; Journal of Organisation Transformation & Social Change Volume 6 ; 6 >
-      au < manifest ; 2010 ; Journal of Organisation Transformation & Social Change Volume 7 ; 7 >
-      au < manifest ; 2011 ; Journal of Organisation Transformation & Social Change Volume 8 ; 8 >
+      au < testing ; 2004 ; Journal of Organisation Transformation & Social Change Volume 1 ; 1 >
+      au < testing ; 2005 ; Journal of Organisation Transformation & Social Change Volume 2 ; 2 >
+      au < testing ; 2006-2007 ; Journal of Organisation Transformation & Social Change Volume 3 ; 3 >
+      au < testing ; 2007 ; Journal of Organisation Transformation & Social Change Volume 4 ; 4 >
+      au < testing ; 2008 ; Journal of Organisation Transformation & Social Change Volume 5 ; 5 >
+      au < testing ; 2009 ; Journal of Organisation Transformation & Social Change Volume 6 ; 6 >
+      au < testing ; 2010 ; Journal of Organisation Transformation & Social Change Volume 7 ; 7 >
+      au < testing ; 2011 ; Journal of Organisation Transformation & Social Change Volume 8 ; 8 >
 
     }
 
@@ -594,7 +594,7 @@
       param[journal_id] = jsca
       param[journal_issn] = 2042-7891
 
-      au < manifest ; 2010-11 ; Journal of Scandinavian Cinema Volume 1 ; 1 >
+      au < testing ; 2010-11 ; Journal of Scandinavian Cinema Volume 1 ; 1 >
 
     }
 
@@ -607,9 +607,9 @@
       param[journal_id] = josc
       param[journal_issn] = 1759-7137
 
-      au < manifest ; 2010 ; Journal of Screenwriting Volume 1 ; 1 >
-      au < manifest ; 2011 ; Journal of Screenwriting Volume 2 ; 2 >
-      au < manifest ; 2011 ; Journal of Screenwriting Volume 3 ; 3 >
+      au < testing ; 2010 ; Journal of Screenwriting Volume 1 ; 1 >
+      au < testing ; 2011 ; Journal of Screenwriting Volume 2 ; 2 >
+      au < testing ; 2011 ; Journal of Screenwriting Volume 3 ; 3 >
 
     }
 
