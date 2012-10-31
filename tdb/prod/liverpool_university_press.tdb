@@ -331,7 +331,9 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_literary_and_cultural_disability_studies
       attr[journal_id] = jlc
-      
+
+       au < manifest ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
+      au < manifest ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >      
       au < released ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
       au < released ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
       au < released ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
