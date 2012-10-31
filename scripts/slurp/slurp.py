@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurp.py,v 1.11 2012-10-24 00:10:19 thib_gc Exp $
+# $Id: slurp.py,v 1.12 2012-10-31 21:02:06 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.5.1'
+__version__ = '0.5.2'
 
 from datetime import datetime
 import optparse
@@ -122,7 +122,7 @@ class SlurpThread(threading.Thread):
                                          opt.daemon_ui_user,
                                          opt.daemon_ui_pass)
         if not self.__ui.waitForDaemonReady(self.__options.daemon_ui_timeout):
-            raise RuntimeError, '%s is not ready after %d seconds' % (self.__options.daemon_ui_host_port,
+            raise RuntimeError, '%s is not ready after %d seconds' % (self.__daemon_ui_host_port,
                                                                       self.__options.daemon_ui_timeout)
 
     def __dispatch(self):

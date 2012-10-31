@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurpdb.py,v 1.9 2012-10-24 21:18:43 thib_gc Exp $
+# $Id: slurpdb.py,v 1.10 2012-10-31 21:02:06 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.5.2'
+__version__ = '0.5.3'
 
 from datetime import datetime
 import optparse
@@ -164,7 +164,7 @@ class SlurpDb(object):
     def make_auid(self, sid, auid):
         self.make_many_auids(sid, [auid])
 
-    def make_many_auids(self, list_of_auids):
+    def make_many_auids(self, sid, list_of_auids):
         self.__raise_if_closed()
         cursor = self.__cursor()
         cursor.executemany('''\
