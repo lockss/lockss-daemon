@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>down - ldoan - Issue4360</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -28,10 +28,10 @@
       </entry>
     </map>
   </entry>
-  <entry>
+<!--  <entry>  //in discussions for the solution
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.orbit.OrbitUrlNormalizer</string>
-  </entry>
+  </entry> -->
   <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.ojs2.OJS2Plugin</string>
