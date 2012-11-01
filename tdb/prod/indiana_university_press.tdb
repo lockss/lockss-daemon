@@ -1300,9 +1300,7 @@
       attr[journal_id] = spe
       implicit < status ; year ; name ; param[volume] >
     
-      comment[0] = upcoming title with no content online yet
-
-      au < exists ; 2012 ; Spectrum: The Journal on Black Men Volume 1 ; 1 >
+      au < manifest ; 2012 ; Spectrum: The Journal on Black Men Volume 1 ; 1 >
 
     }
     
