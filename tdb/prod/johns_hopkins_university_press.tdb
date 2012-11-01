@@ -1730,9 +1730,9 @@
      param[journal_dir] = studies_in_american_fiction
      attr[journal_id] = saf
 
-    au < testing ; 2010 ; Studies in American Fiction Volume 37 ; 37 >     
-    au < testing ; 2011 ; Studies in American Fiction Volume 38 ; 38 >          
-    au < testing ; 2012 ; Studies in American Fiction Volume 39 ; 39 >     
+    au < ready ; 2010 ; Studies in American Fiction Volume 37 ; 37 >     
+    au < ready ; 2011 ; Studies in American Fiction Volume 38 ; 38 >          
+    au < ready ; 2012 ; Studies in American Fiction Volume 39 ; 39 >     
      
      
   }
@@ -1781,8 +1781,8 @@
     au < released ; 2008 ; Technology and Culture Volume 49 ; 49 >
     au < released ; 2009 ; Technology and Culture Volume 50 ; 50 >
     au < testing ; 2010 ; Technology and Culture Volume 51 ; 51 >
-    au < testing ; 2011 ; Technology and Culture Volume 52 ; 52 >
-    au < testing ; 2012 ; Technology and Culture Volume 53 ; 53 >
+    au < ready ; 2011 ; Technology and Culture Volume 52 ; 52 >
+    au < ready ; 2012 ; Technology and Culture Volume 53 ; 53 >
 
   }
 
@@ -1810,10 +1810,10 @@
     au < released ; 1994 ; The Emily Dickinson Journal Volume 15 ; 15 >
     au < released ; 1995 ; The Emily Dickinson Journal Volume 16 ; 16 >
     au < released ; 1996 ; The Emily Dickinson Journal Volume 17 ; 17 >
-    au < testing ; 1997 ; The Emily Dickinson Journal Volume 18 ; 18 >
+    au < ready ; 1997 ; The Emily Dickinson Journal Volume 18 ; 18 >
     au < testing ; 1998 ; The Emily Dickinson Journal Volume 19 ; 19 >
-    au < testing ; 1999 ; The Emily Dickinson Journal Volume 20 ; 20 >
-    au < testing ; 2000 ; The Emily Dickinson Journal Volume 21 ; 21 >
+    au < ready ; 1999 ; The Emily Dickinson Journal Volume 20 ; 20 >
+    au < ready ; 2000 ; The Emily Dickinson Journal Volume 21 ; 21 >
     au < testing ; 2001 ; The Emily Dickinson Journal Volume 22 ; 22 >
     au < testing ; 2002 ; The Emily Dickinson Journal Volume 23 ; 23 >
     au < testing ; 2003 ; The Emily Dickinson Journal Volume 24 ; 24 >
@@ -2003,7 +2003,7 @@
     au < released ; 2007 ; Theatre Topics Volume 17 ; 17 >
     au < released ; 2008 ; Theatre Topics Volume 18 ; 18 >
     au < released ; 2009 ; Theatre Topics Volume 19 ; 19 >
-    au < testing ; 2010 ; Theatre Topics Volume 20 ; 20 >
+    au < ready ; 2010 ; Theatre Topics Volume 20 ; 20 >
     au < testing ; 2011 ; Theatre Topics Volume 21 ; 21 >
     au < testing ; 2012 ; Theatre Topics Volume 22 ; 22 >
 
@@ -2031,9 +2031,9 @@
     au < released ; 2007 ; Theory and Event Volume 10 ; 10 >
     au < released ; 2008 ; Theory and Event Volume 11 ; 11 >
     au < testing ; 2009 ; Theory and Event Volume 12 ; 12 >
-    au < testing ; 2010 ; Theory and Event Volume 13 ; 13 >
+    au < ready ; 2010 ; Theory and Event Volume 13 ; 13 >
     au < testing ; 2011 ; Theory and Event Volume 14 ; 14 >
-    au < testing ; 2012 ; Theory and Event Volume 15 ; 15 >
+    au < ready ; 2012 ; Theory and Event Volume 15 ; 15 >
 
   }
 
@@ -2057,9 +2057,9 @@
     au < released ; 2006 ; Transactions of the American Philological Association Volume 136 ; 136 >
     au < released ; 2007 ; Transactions of the American Philological Association Volume 137 ; 137 >
     au < released ; 2008 ; Transactions of the American Philological Association Volume 138 ; 138 >
-    au < testing ; 2009 ; Transactions of the American Philological Association Volume 139 ; 139 >
-    au < testing ; 2010 ; Transactions of the American Philological Association Volume 140 ; 140 >
-    au < testing ; 2011 ; Transactions of the American Philological Association Volume 141 ; 141 >
+    au < ready ; 2009 ; Transactions of the American Philological Association Volume 139 ; 139 >
+    au < ready ; 2010 ; Transactions of the American Philological Association Volume 140 ; 140 >
+    au < ready ; 2011 ; Transactions of the American Philological Association Volume 141 ; 141 >
     au < testing ; 2012 ; Transactions of the American Philological Association Volume 142 ; 142 >
 
   }
@@ -2081,8 +2081,8 @@
     au < released ; 2008 ; Victorian Periodicals Review Volume 41 ; 41 >
     au < released ; 2009 ; Victorian Periodicals Review Volume 42 ; 42 >
     au < testing ; 2010 ; Victorian Periodicals Review Volume 43 ; 43 >
-    au < testing ; 2011 ; Victorian Periodicals Review Volume 44 ; 44 >
-    au < testing ; 2012 ; Victorian Periodicals Review Volume 45 ; 45 >
+    au < ready ; 2011 ; Victorian Periodicals Review Volume 44 ; 44 >
+    au < ready ; 2012 ; Victorian Periodicals Review Volume 45 ; 45 >
 
   }
   
@@ -2098,7 +2098,7 @@
     attr[journal_id] = wsj
 
     au < released ; 2011 ; Wallace Stevens Journal Volume 35 ; 35 >
-    au < testing ; 2012 ; Wallace Stevens Journal Volume 36 ; 36 >
+    au < ready ; 2012 ; Wallace Stevens Journal Volume 36 ; 36 >
 
   }  
   
