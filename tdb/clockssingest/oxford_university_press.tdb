@@ -2315,6 +2315,7 @@
 
     param[base_url] = http://bjaesthetics.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[notReady] = needs hash filter RU 4470
 
     au < manifest ; exists ; 1960-1961 ; The British Journal of Aesthetics Volume 1 ; 1 ; >
     au < manifest ; exists ; 1962 ; The British Journal of Aesthetics Volume 2 ; 2 ; >
@@ -2367,7 +2368,7 @@
     au < zapped ; down ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; >
     au < zapped ; down ; 2010 ; The British Journal of Aesthetics Volume 50 ; 50 ; >
     au < released ; crawling ; 2011 ; The British Journal of Aesthetics Volume 51 ; 51 ; >
-    au < testing ; exists ; 2012 ; The British Journal of Aesthetics Volume 52 ; 52 ; >
+    au < notReady; exists ; 2012 ; The British Journal of Aesthetics Volume 52 ; 52 ; >
 
     }
 
@@ -4962,6 +4963,7 @@
 
     param[base_url] = http://europace.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[notReady] = needs hash filter RU 4470
 
     au < manifest ; exists ; 1999 ; Europace Volume 1 ; 1 ; >
     au < manifest ; exists ; 2000 ; Europace Volume 2 ; 2 ; >
@@ -4976,7 +4978,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Europace Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; Europace Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; Europace Volume 13 ; 13 ; >
-    au < testing ; exists ; 2012 ; Europace Volume 14 ; 14 ; >
+    au < notReady ; exists ; 2012 ; Europace Volume 14 ; 14 ; >
 
     }
 
@@ -5005,6 +5007,7 @@
 
     param[base_url] = http://eurheartj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[notReady] = needs hash filter RU 4470
 
     au < manifest ; exists ; 1980 ; European Heart Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 1981 ; European Heart Journal Volume 2 ; 2 ; >
@@ -5038,7 +5041,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; European Heart Journal Volume 30 ; 30 ; >
     au < released ; crawling ; 2010 ; European Heart Journal Volume 31 ; 31 ; >
     au < released ; crawling ; 2011 ; European Heart Journal Volume 32 ; 32 ; >
-    au < testing ; exists ; 2012 ; European Heart Journal Volume 33 ; 33 ; >
+    au < notReady ; exists ; 2012 ; European Heart Journal Volume 33 ; 33 ; >
 
     }
 
@@ -9778,7 +9781,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Environmental Law Volume 21 ; 21 ; >
     au < released ; crawling ; 2010 ; Journal of Environmental Law Volume 22 ; 22 ; >
     au < released ; crawling ; 2011 ; Journal of Environmental Law Volume 23 ; 23 ; >
-    au < testing ; exists ; 2012 ; Journal of Environmental Law Volume 24 ; 24 ; >
+    au < released ; manifest ; 2012 ; Journal of Environmental Law Volume 24 ; 24 ; >
 
     }
 
