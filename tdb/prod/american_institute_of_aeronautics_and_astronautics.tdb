@@ -6,8 +6,13 @@
 
   plugin = org.lockss.plugin.aiaa.AIAAPlugin
   param[base_url] = http://aiaa.org/
-
-comment[aiaa] = plugin is incomplete, pending testing
+  implicit < status ; year; name ; param[volume] >
+  
+comment[aiaa] = plugin in development: platform is Atypon
+comment[todo_1] = review and update list of titles
+comment[todo_2] = add journal_id param for all journals
+comment[todo_3] = add AUs for all journals
+comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/lockss/ja/49
 
   {
 
@@ -38,6 +43,7 @@ comment[aiaa] = plugin is incomplete, pending testing
       eissn = 1533-3868 ;
       issnl = 0021-8669
     >
+    param[journal_id] = ja
     
   }
 
