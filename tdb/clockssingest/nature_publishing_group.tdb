@@ -1571,7 +1571,6 @@
     >
 
     param[journal_id] = modpathol
-    comment[notReady] = fetch error on ingest3 unauthorized access see RU 3924
 
     au < exists ; exists ; 2000 ; Modern Pathology Volume 13 ; 2000 ; 13 >
     au < exists ; exists ; 2000 ; Modern Pathology Volume 14 (2000) ; 2000 ; 14 >
@@ -1584,7 +1583,7 @@
     au < exists ; exists ; 2007 ; Modern Pathology Volume 20 ; 2007 ; 20 >
     au < released ; manifest ; 2008 ; Modern Pathology Volume 21 ; 2008 ; 21 >
     au < released ; crawling ; 2009 ; Modern Pathology Volume 22 ; 2009 ; 22 >
-    au < notReady ; exists ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 >
+    au < released ; manifest ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 >
     au < testing ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
     au < notReady ; exists ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
 
@@ -2307,7 +2306,6 @@
     >
 
     param[journal_id] = ncb
-    comment[notReady] = fetch error RT 4106
 
     au < exists ; exists ; 1999 ; Nature Cell Biology Volume 1 ; 1999 ; 1 >
     au < exists ; exists ; 2000 ; Nature Cell Biology Volume 2 ; 2000 ; 2 >
@@ -2321,7 +2319,7 @@
     au < zapped ; down ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
     au < zapped ; down ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
     au < released ; crawling ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 >
-    au < testing ; exists ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 >
+    au < released ; manifest ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 >
     au < crawling ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 >
 
   }
