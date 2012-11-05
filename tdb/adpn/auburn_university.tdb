@@ -98,8 +98,9 @@
     {
   
       param[base_url] = http://digdata1.lib.auburn.edu/CivilWar_Documents/
+      attr[approvedForRemoval] = True
     
-      au < down ; Auburn University Civil War Documents Digital Collection: Diaries [superseded] ; Diaries >
+      au < superseded ; Auburn University Civil War Documents Digital Collection: Diaries [approved for removal] ; Diaries >
 
     }
   
@@ -256,10 +257,14 @@
     plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
     param[base_url] = http://digdata1.lib.auburn.edu/HistoricCatalogs/
     implicit < status ; name ; param[directory] >
-  
+
     au < released ; Auburn University Historic Catalogs Digital Collection: 19th. Century ; 19thCentury >
-    au < down ; Auburn University Historic Catalogs Digital Collection: 20th. Century [superseded] ; 20thCentury >
     au < released ; Auburn University Historic Catalogs Digital Collection: 20th. Century ; 20thCenturyA >
+
+    {
+      attr[approvedForRemoval] = True
+      au < superseded ; Auburn University Historic Catalogs Digital Collection: 20th. Century [approved for removal] ; 20thCentury >
+    }
 
   }
   
@@ -289,9 +294,10 @@
     {
 
       param[base_url] = http://digdata1.lib.auburn.edu/PianoBenchCollection/
+      attr[approvedForRemoval] = True
     
-      au < down ; Auburn University Piano Bench Sheet Music Digital Collection: 2006 Scans [superseded] ; PianoBench_2006 >
-      au < down ; Auburn University Piano Bench Sheet Music Digital Collection: 2010 Scans [superseded] ; PianoBench_2010 >
+      au < superseded ; Auburn University Piano Bench Sheet Music Digital Collection: 2006 Scans [approved for removal] ; PianoBench_2006 >
+      au < superseded ; Auburn University Piano Bench Sheet Music Digital Collection: 2010 Scans [approved for removal] ; PianoBench_2010 >
 
     }
   

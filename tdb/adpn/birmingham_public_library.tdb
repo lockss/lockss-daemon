@@ -28,8 +28,10 @@
     au < released ; Birmingham Public Library Cartography Collection: Maps (001800-001999) ; 001800-001999 >
   
     {
-      attr[approvedForRemoval] = False
-      au < superseded ; Birmingham Public Library Photography Collection: Charles A. Preston (Coll.98) [superseded] ; Coll.98 >
+    
+      attr[approvedForRemoval] = True
+      au < superseded ; Birmingham Public Library Photography Collection: Charles A. Preston (Coll.98) [approved for removal] ; Coll.98 >
+
     }
     
   }  
