@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldHtmlFilterFactory.java,v 1.7 2012-11-05 23:01:23 thib_gc Exp $ 
+ * $Id: EmeraldHtmlFilterFactory.java,v 1.8 2012-11-05 23:37:51 thib_gc Exp $ 
  */
 
 /*
@@ -35,28 +35,39 @@ package org.lockss.plugin.emerald;
 import java.io.*;
 import java.util.List;
 
-import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.OrFilter;
+import org.htmlparser.*;
+import org.htmlparser.filters.*;
+import org.htmlparser.tags.LinkTag;
+import org.htmlparser.util.*;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
-import org.lockss.filter.html.HtmlFilterInputStream;
-import org.lockss.filter.html.HtmlNodeFilterTransform;
-import org.lockss.filter.html.HtmlNodeFilters;
+import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 public class EmeraldHtmlFilterFactory implements FilterFactory {
 
+  protected static final Logger logger = Logger.getLogger(EmeraldHtmlFilterFactory.class);
+  
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
+        // Contains changing <meta> tags
+        new TagNameFilter("head"),
+        // <br> vs. <br />
+        new TagNameFilter("br"),
+        // <img> vs. <img />
+        new TagNameFilter("img"),
         // Has number of article download in row
         HtmlNodeFilters.tagWithAttribute("td", "headers", "tocopy"),
         // Has related articles download list
         HtmlNodeFilters.tagWithAttribute("td", "headers", "releatedlist"),
         // Alternate related articles download list
-        HtmlNodeFilters.tagWithAttribute("table", "class", "articlePrintTable")
+        HtmlNodeFilters.tagWithAttribute("table", "class", "articlePrintTable"),
+        // Added later
+        HtmlNodeFilters.tagWithAttribute("div", "id", "printJournalHead"),
     };
                     
     // First filter with HtmlParser
@@ -64,6 +75,46 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
                                                            encoding,
                                                            HtmlNodeFilterTransform.exclude(new OrFilter(filters)));  
         
+    HtmlTransform xform = new HtmlTransform() {
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              String tagName = tag.getTagName().toLowerCase();
+              if ("abbr".equals(tagName)) {
+                // <... title="..."> vs. <... title= "..."> 
+                String title = tag.getAttribute("title");
+                if (title != null) {
+                  tag.removeAttribute("title");
+                  tag.setAttribute("title", title);
+                }
+              }
+              else if (tag instanceof LinkTag) {
+                // Some wrong internal links got fixed
+                if (tag.getAttribute("href").startsWith("#")) {
+                  tag.removeAttribute("href");
+                }
+                // <... title="..."> vs. <... title= "..."> 
+                String title = tag.getAttribute("title");
+                if (title != null) {
+                  tag.removeAttribute("title");
+                  tag.setAttribute("title", title);
+                }
+              }
+            }
+          });
+        }
+        catch (Exception exc) {
+          logger.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+        }
+        return nodeList;
+      }
+    };
+          
+
+    
     Reader reader = FilterUtil.getReader(filteredStream, encoding);
     Reader filtReader = makeFilteredReader(reader);
     return new ReaderInputStream(filtReader);
@@ -71,7 +122,9 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
 
   static Reader makeFilteredReader(Reader reader) {
     List tagList = ListUtil.list(
-        new TagPair("<p>Printed from:", "Emerald Group Publishing Limited</p>", false, false)
+        new TagPair("<p>Printed from:", "Emerald Group Publishing Limited</p>", false, false),
+        // Variable Javascript between intended </body> and a redundant </body>
+        new TagPair("</body>", "</html>", false, false)
     );
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
     return new WhiteSpaceFilter(tagFilter);
