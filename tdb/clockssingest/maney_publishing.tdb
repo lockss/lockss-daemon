@@ -1050,7 +1050,7 @@
 
     au < released ; manifest ; 2010 ; Dress Volume 36 ; 36 > 
     au < released ; manifest ; 2011 ; Dress Volume 37 ; 37 > 
-    au < testing ; exists ; 2012 ; Dress Volume 38 ; 38 > 
+    au < released ; manifest ; 2012 ; Dress Volume 38 ; 38 > 
 
   }
 
@@ -2501,6 +2501,7 @@
     param[journal_issn] = 0068-1288
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    comment[notReady] = crawl failure
 
     au < manifest ; exists ; 1980 ; Journal of the British Archaeological Association Volume 133 ; 133 > 
     au < manifest ; exists ; 1981 ; Journal of the British Archaeological Association Volume 134 ; 134 > 
@@ -2534,7 +2535,7 @@
     au < manifest ; exists ; 2009 ; Journal of the British Archaeological Association Volume 162 ; 162 > 
     au < released ; manifest ; 2010 ; Journal of the British Archaeological Association Volume 163 ; 163 >  
     au < released ; manifest ; 2011 ; Journal of the British Archaeological Association Volume 164 ; 164 >  
-    au < testing ; exists ; 2012 ; Journal of the British Archaeological Association Volume 165 ; 165 > 
+    au < notReady ; exists ; 2012 ; Journal of the British Archaeological Association Volume 165 ; 165 > 
 
   }
 
