@@ -8,13 +8,43 @@ echo "-----------------------------"
 tpath="/home/$LOGNAME/tmp"
 mkdir -p $tpath
 numdiffAUs=20
+opt_tdb_file=""
+USAGE="Usage: `basename $0` [-hv] [-t tdb_file]"
 
-echo "springer_science_business_media.tdb" > $tpath/pairs
-ls ../../tdb/clockssingest | grep .tdb > $tpath/ci
-ls ../../tdb/prod | grep .tdb > $tpath/gln
-diff $tpath/ci $tpath/gln | grep "> " | sed 's/..//' > $tpath/notgln
-diff $tpath/gln $tpath/notgln | grep "< " | sed 's/..//' >> $tpath/pairs
-diff $tpath/gln $tpath/notgln | grep "< " | wc -l
+while getopts hvt: OPT; do
+    case "$OPT" in
+        h)
+            echo $USAGE
+            exit 0
+            ;;
+        v)
+            echo "`basename $0` version 0.1"
+            exit 0
+            ;;
+        t)
+            opt_tdb_file=$OPTARG
+            ;;
+        \?)
+            # getopts issues an error message
+            echo $USAGE >&2
+            exit 1
+            ;;
+    esac
+done
+# Remove the switches we parsed above.
+shift `expr $OPTIND - 1`
+
+if [[ $opt_tdb_file == "" ]]
+then
+  echo "springer_science_business_media.tdb" > $tpath/pairs
+  ls ../../tdb/clockssingest | grep .tdb > $tpath/ci
+  ls ../../tdb/prod | grep .tdb > $tpath/gln
+  diff $tpath/ci $tpath/gln | grep "> " | sed 's/..//' > $tpath/notgln
+  diff $tpath/gln $tpath/notgln | grep "< " | sed 's/..//' >> $tpath/pairs
+  diff $tpath/gln $tpath/notgln | grep "< " | wc -l
+else
+  echo $opt_tdb_file > $tpath/pairs
+fi
 
 for file in `cat $tpath/pairs`
 do
@@ -85,10 +115,15 @@ then
     # if the AUs are identical, then compare the statuses.
       maxnumAUsA=$numdiffAUs
       echo "No AU differences"
+      # Find AUs in the gln marked expected, exists, ready, released, superseded (these will be eleminated from the list)
       ./tdbout -EXYRS -c auid,name -i ../../tdb/prod/$file | grep -vf gvc_gln.txt > $tpath/done_gln_exyrs.txt
+      # Find AUs in the gln marked down
       ./tdbout -D -c auid,name -i ../../tdb/prod/$file | grep -vf gvc_gln.txt | sed -e 's/HighWirePressPlugin/HighWirePressH20Plugin/' | sed -e 's/HighWireStrVolPlugin/HighWirePressH20Plugin/' > $tpath/done_gln_d.txt
+      # Find AUs in the gln marked doNotProcess
       ./tdbout -c auid,name -Q 'status is "doNotProcess"' -i ../../tdb/prod/$file | grep -vf gvc_gln.txt > $tpath/done_gln_dnp.txt
+      # Merge all AUs to eliminate from list and sort
       cat $tpath/done_gln_exyrs.txt $tpath/done_gln_d.txt $tpath/done_gln_dnp.txt | sort > $tpath/done_gln.txt
+      # Find AUs in clockss marked released, filter for odd cases, filter plugin name, and sort.
       ./tdbout -R -c auid,name -i ../../tdb/clockssingest/$file | grep -vf gvc_clockss.txt | sed -e 's/Clockss//' | sort > $tpath/done_cks.txt
       if ! diff $tpath/done_cks.txt $tpath/done_gln.txt > $tpath/done_diff.txt
       then
