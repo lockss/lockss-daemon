@@ -130,7 +130,7 @@
 	param[journal_issn] = 1947-9220
 
     au < ready ; 2010 ; International Journal of Adaptive, Resilient and Autonomic Systems (IJARAS) Volume 1 ; 1 > 
-    au < testing ; 2011 ; International Journal of Adaptive, Resilient and Autonomic Systems (IJARAS) Volume 2 ; 2 > 
+    au < ready ; 2011 ; International Journal of Adaptive, Resilient and Autonomic Systems (IJARAS) Volume 2 ; 2 > 
     au < manifest ; 2012 ; International Journal of Adaptive, Resilient and Autonomic Systems (IJARAS) Volume 3 ; 3 > 
 
   }
@@ -307,7 +307,7 @@
 	
     au < manifest ; 2010 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 1 ; 1 > 
     au < ready ; 2011 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 2 ; 2 > 
-    au < manifest; 2012 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 3 ; 3 > 
+    au < ready ; 2012 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 3 ; 3 > 
 
   }
 
@@ -339,7 +339,7 @@
 	
     au < manifest ; 2010 ; International Journal of Artificial Life Research (IJALR) Volume 1 ; 1 > 
     au < ready ; 2011 ; International Journal of Artificial Life Research (IJALR) Volume 2 ; 2 > 
-    au < manifest ; 2012 ; International Journal of Artificial Life Research (IJALR) Volume 3 ; 3 > 
+    au < ready ; 2012 ; International Journal of Artificial Life Research (IJALR) Volume 3 ; 3 > 
 
   }
 
@@ -422,7 +422,7 @@
     au < manifest ; 2009 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 5 ; 5 > 
     au < manifest ; 2010 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 6 ; 6 > 
     au < ready ; 2011 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 7 ; 7 > 
-    au < manifest ; 2012 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 8 ; 8 > 
+    au < ready ; 2012 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 8 ; 8 > 
 
   }
 
@@ -438,7 +438,7 @@
 	
     au < manifest ; 2010 ; International Journal of Business Intelligence Research (IJBIR) Volume 1 ; 1 > 
     au < ready ; 2011 ; International Journal of Business Intelligence Research (IJBIR) Volume 2 ; 2 > 
-    au < manifest ; 2012 ; International Journal of Business Intelligence Research (IJBIR) Volume 3 ; 3 > 
+    au < ready ; 2012 ; International Journal of Business Intelligence Research (IJBIR) Volume 3 ; 3 > 
 
   }
 
@@ -502,7 +502,7 @@
     au < manifest ; 2009 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 3 ; 3 > 
     au < manifest ; 2010 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 4 ; 4 > 
     au < ready ; 2011 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 5 ; 5 > 
-    au < manifest ; 2012 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 6 ; 6 > 
+    au < ready ; 2012 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 6 ; 6 > 
 
   }
 
@@ -576,7 +576,7 @@
 	
     au < manifest ; 2010 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 1 ; 1 > 
     au < ready ; 2011 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 2 ; 2 > 
-    au < manifest ; 2012 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 3 ; 3 > 
+    au < ready ; 2012 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 3 ; 3 > 
 
   }
 
@@ -724,7 +724,7 @@
 	comment[0] = no links on manifest page
 	
     au < manifest ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 > 
-    au < manifest ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 > 
+    au < ready ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 > 
     au < notReady ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 > 
 
   }
@@ -979,7 +979,7 @@
 	param[journal_issn] = 1947-9131
 		
     au < manifest ; 2010 ; International Journal of E-Politics (IJEP) Volume 1 ; 1 > 
-    au < manifest ; 2011 ; International Journal of E-Politics (IJEP) Volume 2 ; 2 > 
+    au < ready ; 2011 ; International Journal of E-Politics (IJEP) Volume 2 ; 2 > 
     au < manifest ; 2012 ; International Journal of E-Politics (IJEP) Volume 3 ; 3 > 
 
 
@@ -1110,7 +1110,7 @@
 	param[journal_issn] = 1947-9158
 	
     au < manifest ; 2010 ; International Journal of Handheld Computing Research (IJHCR) Volume 1 ; 1 > 
-    au < manifest ; 2011 ; International Journal of Handheld Computing Research (IJHCR) Volume 2 ; 2 > 
+    au < ready ; 2011 ; International Journal of Handheld Computing Research (IJHCR) Volume 2 ; 2 > 
     au < manifest ; 2012 ; International Journal of Handheld Computing Research (IJHCR) Volume 3 ; 3 > 
 
 
@@ -1555,7 +1555,7 @@
 	param[journal_issn] = 1947-9115
 	
     au < manifest ; 2010 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 1 ; 1 > 
-    au < manifest ; 2011 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 2 ; 2 > 
+    au < ready ; 2011 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 2 ; 2 > 
     au < manifest ; 2012 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 3 ; 3 > 
 
 
@@ -2183,7 +2183,7 @@
 	param[journal_issn] = 1947-9093
 	
     au < manifest ; 2010 ; International Journal of Synthetic Emotions (IJSE) Volume 1 ; 1 > 
-    au < manifest ; 2011 ; International Journal of Synthetic Emotions (IJSE) Volume 2 ; 2 > 
+    au < ready ; 2011 ; International Journal of Synthetic Emotions (IJSE) Volume 2 ; 2 > 
     au < manifest ; 2012 ; International Journal of Synthetic Emotions (IJSE) Volume 3 ; 3 > 
 
   }
@@ -2244,7 +2244,7 @@
 	param[journal_issn] = 1947-3451
 	    
     au < manifest ; 2010 ; International Journal of Technoethics (IJT) Volume 1 ; 1 > 
-    au < manifest ; 2011 ; International Journal of Technoethics (IJT) Volume 2 ; 2 > 
+    au < ready ; 2011 ; International Journal of Technoethics (IJT) Volume 2 ; 2 > 
     au < manifest ; 2012 ; International Journal of Technoethics (IJT) Volume 3 ; 3 > 
 
 
