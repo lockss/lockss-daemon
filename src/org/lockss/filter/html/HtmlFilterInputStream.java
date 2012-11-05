@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.14 2012-05-17 17:58:40 tlipkis Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.15 2012-11-05 23:37:33 clairegriffin Exp $
  */
 
 /*
@@ -32,15 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.filter.html;
 
-import java.io.*;
-
+import org.apache.commons.io.*;
 import org.htmlparser.*;
 import org.htmlparser.lexer.*;
 import org.htmlparser.util.*;
-
 import org.lockss.config.*;
 import org.lockss.util.*;
-import org.lockss.util.ReaderInputStream;
+
+import java.io.*;
 
 /**
  * InputStream that parses HTML input, applies a user-supplied
@@ -115,6 +114,14 @@ public class HtmlFilterInputStream extends InputStream {
     Configuration.PREFIX + "filter.html.verbatim";
   public static final boolean DEFAULT_VERBATIM = true;
 
+  public static final String PARAM_WRFILE_THRESH =
+    Configuration.PREFIX + "filter.html.wrFileThresh";
+  public static final int DEFAULT_WRFILE_THRESH = 4*1024;
+
+  public static final String PARAM_USE_FILE =
+    Configuration.PREFIX + "filter.html.useFile";
+  public static final boolean DEFAULT_USE_FILE = true;
+
   private FeedbackLogger fl = new FeedbackLogger();
 
   private InputStream in;
@@ -127,6 +134,9 @@ public class HtmlFilterInputStream extends InputStream {
   private int markSize;
   private int rdrBufSize;
   private boolean verbatim;
+  private int wrFileThresh;
+  private boolean useFile;
+  private File outFile;
 
   /**
    * Create an HtmlFilterInputStream that applies the given transform
@@ -178,6 +188,8 @@ public class HtmlFilterInputStream extends InputStream {
     setEncodingMatchRange(config.getInt(PARAM_ENCODING_MATCH_RANGE,
 					DEFAULT_ENCODING_MATCH_RANGE));
     verbatim = config.getBoolean(PARAM_VERBATIM, DEFAULT_VERBATIM);
+    wrFileThresh = config.getInt(PARAM_WRFILE_THRESH, DEFAULT_WRFILE_THRESH);
+    useFile = config.getBoolean(PARAM_USE_FILE, DEFAULT_USE_FILE);
   }
 
   /** Parse the input, apply the transform, generate output string and
@@ -188,20 +200,25 @@ public class HtmlFilterInputStream extends InputStream {
       Parser parser = makeParser(markSize, rdrBufSize);
       NodeList nl = parser.parse(null);
       if (nl.size() <= 0) {
-	log.warning("nl.size(): " + nl.size());
-	out = new ReaderInputStream(new StringReader(""));
+        log.warning("nl.size(): " + nl.size());
+        out = new ReaderInputStream(new StringReader(""));
       }
       if (log.isDebug3()) log.debug3("parsed (" + nl.size() + "):\n" +
-				     nodeString(nl));
+                                       nodeString(nl));
       nl = xform.transform(nl);
       if (log.isDebug3()) log.debug3("xformed (" + nl.size() + "):\n" +
-				     nodeString(nl));
-      String h = nl.toHtml(verbatim);
-      // 
-      if (outCharset != null) {
-	out = new ReaderInputStream(new StringReader(h), outCharset);
-      } else {
-	out = new ReaderInputStream(new StringReader(h));
+                                       nodeString(nl));
+      if(useFile) {
+        try {
+          setOutToFileInputStream(nl);
+        }
+        catch (IOException ioe)
+        {
+          setOutToReaderInputStream(nl);
+        }
+      }
+      else {
+        setOutToReaderInputStream(nl);
       }
     } catch (ParserException e) {
       IOException ioe = new IOException(e.toString());
@@ -209,6 +226,53 @@ public class HtmlFilterInputStream extends InputStream {
       throw ioe;
     }
   }
+
+  void setOutToReaderInputStream(NodeList nl)
+  {
+    String h = nl.toHtml(verbatim);
+    //
+    if (outCharset != null) {
+      out = new ReaderInputStream(new StringReader(h), outCharset);
+    } else {
+      out = new ReaderInputStream(new StringReader(h));
+    }
+  }
+
+  void setOutToFileInputStream(NodeList nl)
+      throws IOException {
+    DeferredTempFileOutputStream dtfos =
+      new DeferredTempFileOutputStream(wrFileThresh);
+    // write the data to file or into a buffer by using the same reader
+    // we formally used to read in the entire tree
+    for(int i=0; i < nl.size(); i++)
+    {
+      int                 ch;
+      ReaderInputStream ris;
+      Reader r = new StringReader(nl.elementAt(i).toHtml(verbatim));
+      if (outCharset != null) {
+        ris = new ReaderInputStream(r, outCharset);
+      } else {
+        ris = new ReaderInputStream(r);
+      }
+      while ((ch = ris.read()) != -1)
+      {
+        dtfos.write(ch);
+      }
+      dtfos.flush();
+    }
+    dtfos.close();
+
+    // return an input stream of either the in memory bytes
+    // or the file
+    if(dtfos.isInMemory()) {
+      out = new ByteArrayInputStream(dtfos.getData());
+    }
+    else {
+      outFile = dtfos.getFile();
+      out = new BufferedInputStream(new FileInputStream(outFile));
+    }
+  }
+
 
   /** Make a parser, register our extra nodes */
   Parser makeParser(int marksize, int rdrBufSize)
@@ -290,6 +354,7 @@ public class HtmlFilterInputStream extends InputStream {
   public void reset() throws IOException {
     getOut().reset();
   }
+
   public boolean markSupported() {
     try {
       return getOut().markSupported();
@@ -301,6 +366,11 @@ public class HtmlFilterInputStream extends InputStream {
   public void close() throws IOException {
     in.close();
     in = null;
+    if(outFile != null)
+    {
+      FileUtils.deleteQuietly(outFile);
+      outFile = null;
+    }
   }
 
   static class FeedbackLogger implements ParserFeedback{
