@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = American Society for Pharmacology and Experimental Therapeutics
+    name = American Society for Pharmacology and Experimental Therapeutics ;
+    info[tester] = 5
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
