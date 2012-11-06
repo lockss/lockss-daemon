@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldHtmlFilterFactory.java,v 1.8 2012-11-05 23:37:51 thib_gc Exp $ 
+ * $Id: EmeraldHtmlFilterFactory.java,v 1.9 2012-11-06 01:27:07 thib_gc Exp $ 
  */
 
 /*
@@ -56,6 +56,8 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         // Contains changing <meta> tags
         new TagNameFilter("head"),
+        // Changing scripts
+        new TagNameFilter("script"),
         // <br> vs. <br />
         new TagNameFilter("br"),
         // <img> vs. <img />
@@ -70,11 +72,6 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "printJournalHead"),
     };
                     
-    // First filter with HtmlParser
-    InputStream filteredStream = new HtmlFilterInputStream(in,
-                                                           encoding,
-                                                           HtmlNodeFilterTransform.exclude(new OrFilter(filters)));  
-        
     HtmlTransform xform = new HtmlTransform() {
       @Override
       public NodeList transform(NodeList nodeList) throws IOException {
@@ -88,19 +85,24 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
                 String title = tag.getAttribute("title");
                 if (title != null) {
                   tag.removeAttribute("title");
-                  tag.setAttribute("title", title);
+                  tag.setAttribute("title", title, '"');
                 }
               }
               else if (tag instanceof LinkTag) {
-                // Some wrong internal links got fixed
-                if (tag.getAttribute("href").startsWith("#")) {
+                String href = tag.getAttribute("href");
+                if (href != null) {
+                  // Some wrong internal links got fixed
                   tag.removeAttribute("href");
+                  if (!href.startsWith("#")) {
+                    // <... href="..."> vs. <... href= "...">
+                    tag.setAttribute("href", href, '"');
+                  }
                 }
                 // <... title="..."> vs. <... title= "..."> 
                 String title = tag.getAttribute("title");
                 if (title != null) {
                   tag.removeAttribute("title");
-                  tag.setAttribute("title", title);
+                  tag.setAttribute("title", title, '"');
                 }
               }
             }
@@ -113,6 +115,13 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
       }
     };
           
+
+    // First filter with HtmlParser
+    InputStream filteredStream = new HtmlFilterInputStream(in,
+                                                           encoding,
+                                                           new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),
+                                                                                     xform));
+        
 
     
     Reader reader = FilterUtil.getReader(filteredStream, encoding);

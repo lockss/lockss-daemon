@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmeraldHtmlFilterFactory.java,v 1.4 2012-11-06 00:25:53 thib_gc Exp $
+ * $Id: TestEmeraldHtmlFilterFactory.java,v 1.5 2012-11-06 01:27:07 thib_gc Exp $
  */
 
 /*
@@ -144,6 +144,37 @@ public class TestEmeraldHtmlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
 
     assertEquals(articlePrintTableHtmlFiltered, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testNormalizeLinks() throws Exception {
+    assertEquals(
+        "<a href=\"foo\">bar</a>",
+        StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                  new StringInputStream("<a href=\"foo\">bar</a>"),
+                                                                  Constants.DEFAULT_ENCODING)));
+    assertEquals(
+        "<a href=\"foo\">bar</a>",
+        StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                  new StringInputStream("<a href= \"foo\">bar</a>"),
+                                                                  Constants.DEFAULT_ENCODING)));
+    assertEquals(
+        "<a >bar</a>", // Note the trailing space
+        StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                  new StringInputStream("<a href=\"#foo\">bar</a>"),
+                                                                  Constants.DEFAULT_ENCODING)));
+  }
+  
+  public void testNormalizeAbbr() throws Exception {
+    assertEquals(
+        "<abbr title=\"foo\">bar</abbr>",
+        StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                  new StringInputStream("<abbr title=\"foo\">bar</abbr>"),
+                                                                  Constants.DEFAULT_ENCODING)));
+    assertEquals(
+        "<abbr title=\"foo\">bar</abbr>",
+        StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                  new StringInputStream("<abbr title= \"foo\">bar</abbr>"),
+                                                                  Constants.DEFAULT_ENCODING)));
   }
 
 }
