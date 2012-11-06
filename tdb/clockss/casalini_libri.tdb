@@ -2,19 +2,17 @@
 
   publisher <
     name = Casalini Libri ;
-    info[contract] = 2011 ;
-    info[tester] = 0
+    info[contract] = 2011
   >
   
-  plugin = needs.plugin
   
   {
   
     title <
-      name = Placeholder ;
-      issn = 
+      name = Casalini Libri Source Content
     >
-   } 
-}     
 
- 
+    
+  }
+
+}
