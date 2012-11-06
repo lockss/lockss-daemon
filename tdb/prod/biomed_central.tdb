@@ -1765,13 +1765,13 @@
       param[journal_issn] = 2046-9063
       comment[complete] = Only Volume 8 has a complete run. This may cause the substance check fails?
 
-      au < testing ; 2005 ; Aquatic Biosystems Volume 1 ; 1 >
-      au < testing ; 2006 ; Aquatic Biosystems Volume 2 ; 2 >
-      au < testing ; 2007 ; Aquatic Biosystems Volume 3 ; 3 >
-      au < testing ; 2008 ; Aquatic Biosystems Volume 4 ; 4 >
-      au < testing ; 2009 ; Aquatic Biosystems Volume 5 ; 5 >
-      au < testing ; 2010 ; Aquatic Biosystems Volume 6 ; 6 >
-      au < testing ; 2011 ; Aquatic Biosystems Volume 7 ; 7 >
+      au < notReady ; 2005 ; Aquatic Biosystems Volume 1 ; 1 >
+      au < notReady ; 2006 ; Aquatic Biosystems Volume 2 ; 2 >
+      au < notReady ; 2007 ; Aquatic Biosystems Volume 3 ; 3 >
+      au < notReady ; 2008 ; Aquatic Biosystems Volume 4 ; 4 >
+      au < notReady ; 2009 ; Aquatic Biosystems Volume 5 ; 5 >
+      au < notReady ; 2010 ; Aquatic Biosystems Volume 6 ; 6 >
+      au < notReady ; 2011 ; Aquatic Biosystems Volume 7 ; 7 >
       au < ready ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
 
     }
