@@ -7,8 +7,17 @@ BEGIN {
 }
 
 {
-# add a loop to add line only if first 4 char or last 4 char of year are gt or eq to contract
-if ((substr($4,1,4) >= $3) || ((length($4) == 9) && (substr($4,6,4) >= $3))) {
+# add a loop to add line only if ending year is gt or eq to contract year
+end = 0
+if ((length($4) == 9) {
+  end = substr($4,6,4)
+} else if ((length($4) == 4 {
+  end = substr($4,1,4)
+}
+if (end >= $3) incontract = 1
+else incontract = 0
+
+if (incontract == 1) {
     nn = split($2,na,/\./)
     lp2 = na[nn]
   if (!(($1,lp2,$3,$4) in b)) {
@@ -41,17 +50,17 @@ END {
   s[10] = "zapped"
   sn = 11
   
-  sc[0] = "expe"
-  sc[1] = "exis"
-  sc[2] = "mani"
-  sc[3] = "want"
-  sc[4] = "craw"
-  sc[5] = "test"
-  sc[6] = "notR"
-  sc[7] = "rele"
-  sc[8] = "down"
-  sc[9] = "supe"
-  sc[10] = "zapp"
+  sc[0] = "X"
+  sc[1] = "E"
+  sc[2] = "M"
+  sc[3] = "W"
+  sc[4] = "C"
+  sc[5] = "T"
+  sc[6] = "N"
+  sc[7] = "R"
+  sc[8] = "D"
+  sc[9] = "S"
+  sc[10] = "Z"
   scn = 11
 
   #print out header
