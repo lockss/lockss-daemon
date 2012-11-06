@@ -6,7 +6,7 @@
 
   implicit < status ; year ; name ; param[volume_name] >
 
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.iumj.IUMJPlugin
   param[base_url] = http://www.iumj.indiana.edu/
 
   {
