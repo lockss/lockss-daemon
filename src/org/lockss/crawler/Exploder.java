@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.21 2012-11-06 01:27:05 tlipkis Exp $
+ * $Id: Exploder.java,v 1.22 2012-11-06 16:57:48 fergaloy-sf Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.PluginManager.CuContentReq;;
+import org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.exploded.*;
