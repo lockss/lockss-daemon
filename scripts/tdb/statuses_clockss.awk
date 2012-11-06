@@ -8,14 +8,12 @@ BEGIN {
 
 {
   # add a loop to add line only if ending year is gt or eq to contract year
-  end = 0
+  end_year = 0
   incontract = 0
-  if ((length($4) == 9) {
-    end = substr($4,6,4)
-  } else {
-    end = substr($4,1,4)
-  }
-  if (end >= $3) {
+  if ((length($4) > 3) {
+    end_year = substr($4,length($4)-3,4)
+  } 
+  if (end_year >= $3) {
     incontract = 1
   } 
 
@@ -68,7 +66,7 @@ END {
   #print out header
   printf "Publisher\tPlugin\tContr\tYear\tT\tTotal"
   for (j = 0 ; j < scn ; j++) {
-  	if (x[s[j]] > 0) {
+    if (x[s[j]] > 0) {
     printf "\t%s", sc[j]
     }
   }
@@ -91,8 +89,8 @@ END {
     #print out bottom line sums
     printf "Publisher\tPlugin\tContr\tYear\tT\t%d", tt
     for (j = 0 ; j < sn ; j++) {
-    	if (x[s[j]] > 0) {
-    		printf "\t%d", x[s[j]]
+      if (x[s[j]] > 0) {
+        printf "\t%d", x[s[j]]
       }
     }
 
