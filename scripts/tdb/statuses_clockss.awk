@@ -14,8 +14,11 @@ if ((length($4) == 9) {
 } else if ((length($4) == 4 {
   end = substr($4,1,4)
 }
-if (end >= $3) incontract = 1
-else incontract = 0
+if (end >= $3) {
+  incontract = 1
+} else {
+  incontract = 0
+}
 
 if (incontract == 1) {
     nn = split($2,na,/\./)
