@@ -7,36 +7,35 @@ BEGIN {
 }
 
 {
-# add a loop to add line only if ending year is gt or eq to contract year
-end = 0
-if ((length($4) == 9) {
-  end = substr($4,6,4)
-} else if ((length($4) == 4 {
-  end = substr($4,1,4)
-}
-if (end >= $3) {
-  incontract = 1
-} else {
+  # add a loop to add line only if ending year is gt or eq to contract year
+  end = 0
   incontract = 0
-}
-
-if (incontract == 1) {
-    nn = split($2,na,/\./)
-    lp2 = na[nn]
-  if (!(($1,lp2,$3,$4) in b)) {
-    p[pn] = $1
-    n[pn] = lp2
-#    n[pn] = $2
-    t[pn] = $3
-    d[pn] = $4
-    r[pn] = $5
-    pn++
+  if ((length($4) == 9) {
+    end = substr($4,6,4)
+  } else {
+    end = substr($4,1,4)
   }
-  b[$1,lp2,$3,$4]++
-  c[$1,lp2,$3,$4,$6]++
-  x[$6]++
-  tt++
-}
+  if (end >= $3) {
+    incontract = 1
+  } 
+
+  if (incontract == 1) {
+      nn = split($2,na,/\./)
+      lp2 = na[nn]
+    if (!(($1,lp2,$3,$4) in b)) {
+      p[pn] = $1
+      n[pn] = lp2
+  #    n[pn] = $2
+      t[pn] = $3
+      d[pn] = $4
+      r[pn] = $5
+      pn++
+    }
+    b[$1,lp2,$3,$4]++
+    c[$1,lp2,$3,$4,$6]++
+    x[$6]++
+    tt++
+  }
 }
 
 END {
