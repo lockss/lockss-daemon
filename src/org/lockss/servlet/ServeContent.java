@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.68 2012-10-15 04:22:10 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.69 2012-11-06 01:27:37 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.plugin.*;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
 import org.lockss.plugin.base.BaseUrlCacher;
+import static org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.state.*;
 import org.lockss.rewriter.*;
@@ -514,9 +515,9 @@ public class ServeContent extends LockssServlet {
 
         }
       } else if (!isMementoRequest()) {
-      	// Find CU if belongs to any configured AU even if has no content,
-      	// so can rewrite from publisher
-      	cu = pluginMgr.findCachedUrl(url, false);
+      	// Find a CU with content if possible.  If none, find an AU where
+      	// it would fit so can rewrite content from publisher if necessary.
+      	cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
       	if (cu != null) {
       	  au = cu.getArchivalUnit();
           if (log.isDebug3()) log.debug3("cu: " + cu + " au: " + au);
@@ -536,7 +537,6 @@ public class ServeContent extends LockssServlet {
       }
 
       if (au != null) {
-        AuProxyInfo info = AuUtil.getAuProxyInfo(au);
         handleAuRequest();
       } else {
         handleMissingUrlRequest(url, PubState.Unknown);
@@ -630,14 +630,15 @@ public class ServeContent extends LockssServlet {
   protected void handleOpenUrlInfo(OpenUrlInfo info) throws IOException {
     log.debug2("resolvedTo: " + info.getResolvedTo() + " url: " + url);
     try {
-      // Get the CachedUrl for the URL, only if it has content.
+      // If we resolved to a URL, get the CachedUrl 
       if (url != null) {
         if (au != null) {
+	  // AU specified explicitly
           cu = au.makeCachedUrl(url);
         } else {
-          // Find CU if belongs to any configured AU even if has no content,
-          // so can rewrite from publisher
-          cu = pluginMgr.findCachedUrl(url, true);
+          // Find a CU with content if possible.  If none, find an AU where
+          // it would fit so can rewrite content from publisher if necessary.
+          cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
           if (cu != null) {
             if (log.isDebug3()) log.debug3("cu: " + cu);
             au = cu.getArchivalUnit();
