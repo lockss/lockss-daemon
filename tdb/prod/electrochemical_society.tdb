@@ -35,6 +35,7 @@
 
     param[base_url] = http://esl.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[notReady] = login needed
 
     au < HighWirePressH20Plugin ; exists ; 1998 ; Electrochemical and Solid State Letters Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1999 ; Electrochemical and Solid State Letters Volume 2 ; 2 >
