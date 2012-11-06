@@ -17,9 +17,10 @@
 
     param[base_url] = http://jes.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[notReady] = login needed
 
     au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of the Electrochemical Society Volume 158 ; 158 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Journal of the Electrochemical Society Volume 159 ; 159 >
+    au < HighWirePressH20Plugin ; notReady ; 2012 ; Journal of the Electrochemical Society Volume 159 ; 159 >
     
   }
 
@@ -49,7 +50,7 @@
     au < HighWirePressH20Plugin ; exists ; 2009 ; Electrochemical and Solid State Letters Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; exists ; 2010 ; Electrochemical and Solid State Letters Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; exists ; 2011 ; Electrochemical and Solid State Letters Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Electrochemical and Solid State Letters Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; notReady ; 2012 ; Electrochemical and Solid State Letters Volume 15 ; 15 >
     
   }
   
@@ -65,7 +66,7 @@
     param[base_url] = http://ssl.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; testing ; 2012 ; ECS Solid State Letters Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Solid State Letters Volume 1 ; 1 >
     
   }
 
@@ -97,7 +98,7 @@
     param[base_url] = http://jss.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; testing ; 2012 ; ECS Journal of Solid State Science and Technology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Journal of Solid State Science and Technology Volume 1 ; 1 >
     
   }
 
@@ -205,11 +206,11 @@
     au < HighWirePressH20Plugin ; exists ; 2011 ; ECS Transactions Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; exists ; 2011 ; ECS Transactions Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; exists ; 2011 ; ECS Transactions Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; ECS Transactions Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; ECS Transactions Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; ECS Transactions Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; ECS Transactions Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; ECS Transactions Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; ECS Transactions Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; ECS Transactions Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; ECS Transactions Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Transactions Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Transactions Volume 45 ; 45 >
     
   }
 
