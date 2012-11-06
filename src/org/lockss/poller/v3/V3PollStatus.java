@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.43 2012-10-04 02:13:48 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.44 2012-11-06 01:26:21 tlipkis Exp $
  */
 
 /*
@@ -608,8 +608,11 @@ public class V3PollStatus {
     private static final List<String> defaultCols =
       ListUtil.list("identity",
 		    "peerStatus",
-		    "state",
-		    "when");
+		    "agreement",
+		    "numagree",
+		    "numdisagree",
+		    "numpolleronly",
+		    "numvoteronly");
 
 
     public V3PollerStatusDetail(PollManager pollManager) {
@@ -635,16 +638,13 @@ public class V3PollStatus {
     }
 
     private List<String> getDefaultCols(StatusTable table, V3Poller poll) {
-      boolean includeState =
-	table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
-      List<String> res = new ArrayList<String>(6);
-      res.add("identity");
-      res.add("peerStatus");
+      List<String> res = new ArrayList<String>();
+      res.addAll(defaultCols);
       if (poll.isEnableHashStats()) {
 	res.add("byteshashed");
 	res.add("bytesread");
       }
-      if (includeState) {
+      if (table.getOptions().get(StatusTable.OPTION_DEBUG_USER)) {
 	res.add("state");
 	res.add("when");
       }
