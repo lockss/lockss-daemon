@@ -105,7 +105,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://ijs.sgmjournals.org/
       comment[ijs61] = no permission from publisher
-      comment[notReady] = Can't fetch permission page
+      comment[notReady] = Can't fetch permission page, RU4464
 
       au < manifest ; exists ; 2000 ; International Journal of Systematic and Evolutionary Microbiology Volume 50 ; 50 >
       au < manifest ; exists ; 2001 ; International Journal of Systematic and Evolutionary Microbiology Volume 51 ; 51 >
@@ -394,7 +394,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://jmm.sgmjournals.org/
-      comment[notReady] = No permission from publisher
+      comment[notReady] = No permission from publisher, RU4464
 
       au < manifest ; exists ; 1968 ; Journal of Medical Microbiology Volume 1 ; 1 >
       au < manifest ; exists ; 1969 ; Journal of Medical Microbiology Volume 2 ; 2 >
