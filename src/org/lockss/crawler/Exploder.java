@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.20 2012-02-16 10:39:47 tlipkis Exp $
+ * $Id: Exploder.java,v 1.21 2012-11-06 01:27:05 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.PluginManager.CuContentReq;;
 import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.exploded.*;
@@ -144,7 +145,8 @@ public abstract class Exploder {
     ArchivalUnit au = null;
     String baseUrl = ae.getBaseUrl();
     String restOfUrl = ae.getRestOfUrl();
-    CachedUrl cu = pluginMgr.findCachedUrl(baseUrl + restOfUrl, false);
+    CachedUrl cu = pluginMgr.findCachedUrl(baseUrl + restOfUrl,
+					   CuContentReq.DontCare);
     if (cu != null) {
       au = cu.getArchivalUnit();
       logger.debug(baseUrl + restOfUrl + " old au " + au.getAuId());
@@ -294,7 +296,7 @@ public abstract class Exploder {
 	String url = (String) en.nextElement();
 	String text = (String) addTextTo.get(url);
 
-	CachedUrl cu = pluginMgr.findCachedUrl(url, false);
+	CachedUrl cu = pluginMgr.findCachedUrl(url, CuContentReq.DontCare);
 	if (cu == null) {
 	  logger.error("Trying to update page outside AU" +
 		       url);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.99 2012-10-29 22:17:14 fergaloy-sf Exp $
+ * $Id: TestPluginManager.java,v 1.100 2012-11-06 01:27:05 tlipkis Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
+import static org.lockss.plugin.PluginManager.CuContentReq;
 
 /**
  * Test class for org.lockss.plugin.PluginManager
@@ -1020,6 +1021,28 @@ public class TestPluginManager extends LockssTestCase {
   }
 
 
+  public void testCuContentReq() throws Exception {
+//     assertTrue(CuContentReq.MostRecentContent.satisfies(CuContentReq.MostRecentContent));
+//     assertTrue(CuContentReq.MostRecentContent.satisfies(CuContentReq.HasContent));
+//     assertTrue(CuContentReq.MostRecentContent.satisfies(CuContentReq.PreferContent));
+//     assertTrue(CuContentReq.MostRecentContent.satisfies(CuContentReq.DontCare));
+
+//     assertFalse(CuContentReq.HasContent.satisfies(CuContentReq.MostRecentContent));
+    assertTrue(CuContentReq.HasContent.satisfies(CuContentReq.HasContent));
+    assertTrue(CuContentReq.HasContent.satisfies(CuContentReq.PreferContent));
+    assertTrue(CuContentReq.HasContent.satisfies(CuContentReq.DontCare));
+
+//     assertFalse(CuContentReq.PreferContent.satisfies(CuContentReq.MostRecentContent));
+    assertFalse(CuContentReq.PreferContent.satisfies(CuContentReq.HasContent));
+    assertTrue(CuContentReq.PreferContent.satisfies(CuContentReq.PreferContent));
+    assertTrue(CuContentReq.PreferContent.satisfies(CuContentReq.DontCare));
+
+//     assertFalse(CuContentReq.DontCare.satisfies(CuContentReq.MostRecentContent));
+    assertFalse(CuContentReq.DontCare.satisfies(CuContentReq.HasContent));
+    assertFalse(CuContentReq.DontCare.satisfies(CuContentReq.PreferContent));
+    assertTrue(CuContentReq.DontCare.satisfies(CuContentReq.DontCare));
+  }
+
   public void testFindCachedUrl() throws Exception {
     mgr.startService();
     String url1 = "http://foo.bar/baz";
@@ -1040,57 +1063,79 @@ public class TestPluginManager extends LockssTestCase {
     assertNull(mgr.findCachedUrl(url2));
     assertEquals(2, mgr.getRecentCuMisses());
     assertEquals(0, mgr.getRecentCuHits());
-    CachedUrl cu1 = au1.addUrl(url1, true, true, null);
+    CachedUrl cu1 = au1.addUrl(url1, false, true, null);
     CachedUrl cu2 = au2.addUrl(url2, true, true, null);
-    CachedUrl cu31 = au1.addUrl(url3, true, true, null);
+    CachedUrl cu31 = au1.addUrl(url3, false, true, null);
     CachedUrl cu32 = au2.addUrl(url3, true, true, null);
-    CachedUrl cu = mgr.findCachedUrl(url1);
-    assertEquals(url1, cu.getUrl());
-    assertSame(au1, cu.getArchivalUnit());
-    assertEquals(3, mgr.getRecentCuMisses());
-    assertEquals(0, mgr.getRecentCuHits());
-    CachedUrl cuSave = cu;
-    cu = mgr.findCachedUrl(url1a);
+    assertNull(mgr.findCachedUrl(url1, CuContentReq.HasContent));
+    CachedUrl cu = mgr.findCachedUrl(url1, CuContentReq.DontCare);
     assertEquals(url1, cu.getUrl());
     assertSame(au1, cu.getArchivalUnit());
     assertEquals(4, mgr.getRecentCuMisses());
     assertEquals(0, mgr.getRecentCuHits());
+    CachedUrl cupref = mgr.findCachedUrl(url1, CuContentReq.PreferContent);
+    assertEquals(url1, cupref.getUrl());
+    assertSame(au1, cupref.getArchivalUnit());
+    assertEquals(5, mgr.getRecentCuMisses());
+    assertEquals(0, mgr.getRecentCuHits());
+
+    assertNull(mgr.findCachedUrl(url1, CuContentReq.HasContent));
+    ((MockCachedUrl)cu).setContent("abc");
+    cu = mgr.findCachedUrl(url1);
+    assertEquals(url1, cu.getUrl());
+    assertSame(au1, cu.getArchivalUnit());
+    assertEquals(7, mgr.getRecentCuMisses());
+    assertEquals(0, mgr.getRecentCuHits());
+    cu = mgr.findCachedUrl(url1a);
+    assertEquals(url1, cu.getUrl());
+    assertSame(au1, cu.getArchivalUnit());
+    assertEquals(8, mgr.getRecentCuMisses());
+    assertEquals(0, mgr.getRecentCuHits());
     cu = mgr.findCachedUrl(url1b);
     assertEquals(url1, cu.getUrl());
     assertSame(au1, cu.getArchivalUnit());
-    assertEquals(5, mgr.getRecentCuMisses());
+    assertEquals(9, mgr.getRecentCuMisses());
     assertEquals(0, mgr.getRecentCuHits());
 
     cu = mgr.findCachedUrl(url2);
     assertEquals(url2, cu.getUrl());
     assertSame(au2, cu.getArchivalUnit());
-    assertEquals(6, mgr.getRecentCuMisses());
+    assertEquals(10, mgr.getRecentCuMisses());
     assertEquals(0, mgr.getRecentCuHits());
 
     // url1 should be in cache
     cu = mgr.findCachedUrl(url1);
-    assertSame(cuSave, cu);
     assertEquals(url1, cu.getUrl());
     assertSame(au1, cu.getArchivalUnit());
-    assertEquals(6, mgr.getRecentCuMisses());
+    assertEquals(10, mgr.getRecentCuMisses());
     assertEquals(1, mgr.getRecentCuHits());
 
-    cu = mgr.findCachedUrl(url3);
+    // Test PreferContent
+    cu = mgr.findCachedUrl(url3, CuContentReq.PreferContent);
     assertEquals(url3, cu.getUrl());
-    assertEquals(7, mgr.getRecentCuMisses());
+    assertTrue(cu.hasContent());
+    assertSame(au2, cu.getArchivalUnit());
+    assertEquals(11, mgr.getRecentCuMisses());
     assertEquals(1, mgr.getRecentCuHits());
 
-    // Test version that returns all matches
+    // Test findCachedUrls() (returns list)
     assertEquals(ListUtil.list(cu1), mgr.findCachedUrls(url1));
     assertEquals(ListUtil.list(cu2), mgr.findCachedUrls(url2));
-    assertSameElements(ListUtil.list(cu31, cu32), mgr.findCachedUrls(url3));
+    assertSameElements(ListUtil.list(cu32),
+		       mgr.findCachedUrls(url3));
+    assertSameElements(ListUtil.list(cu32),
+		       mgr.findCachedUrls(url3, CuContentReq.HasContent));
+    assertSameElements(ListUtil.list(cu31, cu32),
+		       mgr.findCachedUrls(url3, CuContentReq.PreferContent));
+    ((MockCachedUrl)cu31).setContent("cba");
+    assertSameElements(ListUtil.list(cu31, cu32),
+		       mgr.findCachedUrls(url3, CuContentReq.HasContent));
 
     // url1 should still be in cache
     cu = mgr.findCachedUrl(url1);
-    assertSame(cuSave, cu);
     assertEquals(url1, cu.getUrl());
     assertSame(au1, cu.getArchivalUnit());
-    assertEquals(7, mgr.getRecentCuMisses());
+    assertEquals(11, mgr.getRecentCuMisses());
     assertEquals(2, mgr.getRecentCuHits());
     Plugin plug1 = au1.getPlugin();
     Configuration au1conf = au1.getConfiguration();
@@ -1106,9 +1151,8 @@ public class TestPluginManager extends LockssTestCase {
     cu = mgr.findCachedUrl(url1);
     assertEquals(url1, cu.getUrl());
     assertSame(xmau1, cu.getArchivalUnit());
-    assertEquals(8, mgr.getRecentCuMisses());
+    assertEquals(12, mgr.getRecentCuMisses());
     assertEquals(2, mgr.getRecentCuHits());
-    assertNotSame(cuSave, cu);
   }
 
   AuState setUpAuState(MockArchivalUnit mau) {

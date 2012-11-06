@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchiveMembers.java,v 1.7 2012-09-20 03:46:27 tlipkis Exp $
+ * $Id: TestArchiveMembers.java,v 1.8 2012-11-06 01:27:05 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import junit.framework.*;
 import de.schlichtherle.truezip.file.*;
 
 import org.lockss.plugin.*;
+import org.lockss.plugin.PluginManager.CuContentReq;;
 import org.lockss.plugin.simulated.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -473,13 +474,15 @@ public class TestArchiveMembers extends LockssTestCase {
     cu = pluginMgr.findCachedUrl(arcUrl + "!/no/such/member");
     assertNull(cu);
 
-    cu = pluginMgr.findCachedUrl(arcUrl + "!/no/such/member", false);
+    cu = pluginMgr.findCachedUrl(arcUrl + "!/no/such/member",
+				 CuContentReq.DontCare);
     assertFalse(cu.hasContent());
 
     cu = pluginMgr.findCachedUrl(arcUrl + "nofile!/no/such/member");
     assertNull(cu);
 
-    cu = pluginMgr.findCachedUrl(arcUrl + "nofile!/no/such/member", false);
+    cu = pluginMgr.findCachedUrl(arcUrl + "nofile!/no/such/member",
+				 CuContentReq.DontCare);
     assertFalse(cu.hasContent());
 
     // If AU has no archive file types, currently CU will still be a Member
@@ -489,7 +492,8 @@ public class TestArchiveMembers extends LockssTestCase {
     cu = pluginMgr.findCachedUrl(arcUrl + "!/002file.html");
     assertNull(cu);
 
-    cu = pluginMgr.findCachedUrl(arcUrl + "!/002file.html", false);
+    cu = pluginMgr.findCachedUrl(arcUrl + "!/002file.html",
+				 CuContentReq.DontCare);
     assertNotClass(BaseCachedUrl.Member.class, cu);
     assertFalse(cu.hasContent());
   }    

@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.36 2012-09-06 16:47:50 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.37 2012-11-06 01:27:05 tlipkis Exp $
  */
 
 /*
@@ -918,7 +918,7 @@ public class OpenUrlResolver {
       
       for (int i = 0; i < MAX_REDIRECTS; i++) {
         // no need to look further if content already cached
-        if (pluginMgr.findCachedUrl(url,true) != null) {
+        if (pluginMgr.findCachedUrl(url) != null) {
           return url;
         }
         
@@ -1341,7 +1341,7 @@ public class OpenUrlResolver {
       OpenUrlInfo aResolved = 
           getJournalUrl(tdbau, aYear, aVolume, anIssue, spage);
       if (aResolved.resolvedUrl != null) {
-        if  ( pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
+        if  ( pluginMgr.findCachedUrl(aResolved.resolvedUrl) != null) {
           // found the URL if in cache
           return aResolved;
         }
@@ -1834,7 +1834,7 @@ public class OpenUrlResolver {
       OpenUrlInfo aResolved = getBookUrl(tdbau, year, aVolume, anEdition, spage);
       if (aResolved.resolvedUrl != null) {
         // found the URL if in cache
-        if  (pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
+        if  (pluginMgr.findCachedUrl(aResolved.resolvedUrl) != null) {
           return aResolved;
         }
         // not a viable URL if the AU is down

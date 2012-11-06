@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.235 2012-10-30 00:11:44 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.236 2012-11-06 01:27:05 tlipkis Exp $
  */
 
 /*
@@ -1678,27 +1678,6 @@ public class PluginManager
     return au.getAuCachedUrlSet();
   }
 
-  /**
-   * Searches for an AU that contains the URL and returns the corresponding
-   * CachedUrl.
-   * @param url The URL to search for.
-   * @return a CachedUrl, or null if URL not present in any AU
-   */
-  public CachedUrl findCachedUrl(String url) {
-    return findTheCachedUrl(url, true);
-  }
-
-  /**
-   * Searches for an AU that contains the URL and returns the corresponding
-   * CachedUrl.
-   * @param url The URL to search for.
-   * @param withContent true if the CachedUrl must have content
-   * @return a CachedUrl, or null if URL not present in any AU
-   */
-  public CachedUrl findCachedUrl(String url, boolean withContent) {
-    return findTheCachedUrl(url, withContent);
-  }
-
   /** Return a collection of all AUs that have content on the host of this
    * url, sorted in AU title order.  */
   // This method needs to copy the list anyway, to avoid CME, so this is as
@@ -1745,7 +1724,58 @@ public class PluginManager
     }
   }
 
-  private Map recentCuMap = new LRUMap(20);
+  /** Content requirements of the CU being searched for.  Some callers
+   * (proxy) are only interested in CUs with content, some (ServeContent)
+   * prefer one with content, some (exploders) don't care. */
+  public enum CuContentReq {
+
+//       /** Find the CU with the most recent content */
+//       MostRecentContent,
+
+	/** Find a CU with content */
+	HasContent,
+
+	/** Find a CU with content if possible, else one without */
+	PreferContent,
+
+	/** Find a CU regardless of content */
+	DontCare;
+
+      /** Return true if this requirement implies that the specified
+       * requirement is met */
+      boolean satisfies(CuContentReq req) {
+	return compareTo(req) <= 0;
+      }
+
+      /** Return true if the presence of content is relevant for this
+       * requirement */
+      boolean wantsContent() {
+	switch (this) {
+	case DontCare: return false;
+	default: return true;
+	}
+      }
+  }
+
+  /** A CU in the recentCu cache, along with a record of the content
+   * requirement it satisfies */
+  class RecentCu {
+    CachedUrl cu;
+    CuContentReq contentReq;
+
+    RecentCu(CachedUrl cu, CuContentReq contentReq) {
+      this.cu = cu;
+      this.contentReq = contentReq;
+    }
+
+    /** Return true if this CU satisfies the specified content
+     * requirement */
+    boolean satisfiesReq(CuContentReq req) {
+      return contentReq.satisfies(req);
+    }
+  }
+
+  private Map<String,RecentCu> recentCuMap = new LRUMap(20);
   private int recentCuHits = 0;
   private int recentCuMisses = 0;
 
@@ -1757,51 +1787,77 @@ public class PluginManager
     return recentCuMisses;
   }
 
+  /**
+   * Searches for an AU that contains content for the URL and returns the
+   * corresponding CachedUrl.
+   * @param url The URL to search for.
+   * @return a CachedUrl, or null if URL not present in any AU
+   */
+  public CachedUrl findCachedUrl(String url) {
+    return findTheCachedUrl(url, CuContentReq.HasContent);
+  }
+
+  /**
+   * Searches for an AU that contains the URL and returns the corresponding
+   * CachedUrl.
+   * @param url The URL to search for.
+   * @param contentReq selects the requirements for the CU having content
+   * @return a CachedUrl, or null if no CU meeting the requirements exists
+   * in any AU
+   */
+  public CachedUrl findCachedUrl(String url, CuContentReq contentReq) {
+    return findTheCachedUrl(url, contentReq);
+  }
+
   /** Find a CachedUrl for the URL.  
    */
-  private CachedUrl findTheCachedUrl(String url, boolean withContent) {
+  private CachedUrl findTheCachedUrl(String url, CuContentReq contentReq) {
     // Maintain a small cache of URL -> CU.  When ICP is in use, each URL
     // will likely be looked up twice in quick succession
 
     CachedUrl res;
     synchronized (recentCuMap) {
-      res = (CachedUrl)recentCuMap.get(url);
-      if (res != null) {
+      RecentCu rcu = recentCuMap.get(url);
+      if (rcu != null) {
 	// Ensure we flush CUs belonging to stale AUs.  (The test is cheap,
 	// and handling this with AuEvent handler would require a search as
 	// map is keyed by CU, not AU.)
-	if (isActiveAu(res.getArchivalUnit())) {
-	  if (log.isDebug3()) {
-	    log.debug3("cache hit " + res.toString() +
-		       (res.hasContent() ? "with" : "without") + " content.");
-	  }
-	  recentCuHits++;
-	} else {
-	  log.debug3("cache hit " + res.toString() + " in stale AU: " +
-		     res.getArchivalUnit() + ", flushed");
+	if (!isActiveAu(rcu.cu.getArchivalUnit())) {
+	  log.debug3("cache hit " + rcu.cu.toString() + " in stale AU: " +
+		     rcu.cu.getArchivalUnit() + ", flushed");
 	  recentCuMap.remove(url);
-	  res = null;
-	  recentCuMisses++;
+	  rcu = null;
 	}
+      }
+      if (rcu != null && !rcu.satisfiesReq(contentReq)) {
+	log.debug3("cache hit " + rcu.cu.toString() +
+		   " but doesn't satisfy content requirement: " +
+		   rcu.contentReq + " vs. " + contentReq);
+	rcu = null;
+      }
+      if (rcu != null) {
+	if (log.isDebug3()) {
+	  log.debug3("cache hit " + rcu.cu.toString() + ", " + rcu.contentReq);
+	}
+	recentCuHits++;
+	return rcu.cu;
       } else {
 	log.debug3("cache miss for " + url);
 	recentCuMisses++;
       }
     }
-    // Don't nood to hold lock while searching.
-    if (res == null || (withContent && !res.hasContent())) {
-      res = findTheCachedUrl0(url, withContent);
-      if (res != null) {
-	synchronized (recentCuMap) {
-	  recentCuMap.put(url, res);
-	}
+    CachedUrl cu = findTheCachedUrl0(url, contentReq);
+    if (cu != null) {
+      synchronized (recentCuMap) {
+	recentCuMap.put(url, new RecentCu(cu, contentReq));
       }
+      return cu;
     }
-    return res;
+    return null;
   }
 
-  private CachedUrl findTheCachedUrl0(String url, boolean withContent) {
-    List<CachedUrl> lst = findCachedUrls0(url, withContent, true);    
+  private CachedUrl findTheCachedUrl0(String url, CuContentReq contentReq) {
+    List<CachedUrl> lst = findCachedUrls0(url, contentReq, true);    
     if (!lst.isEmpty()) {
       return lst.get(0);
     } else {
@@ -1810,11 +1866,11 @@ public class PluginManager
   }
 
   public List<CachedUrl> findCachedUrls(String url) {
-    return findCachedUrls0(url, true, false);
+    return findCachedUrls0(url, CuContentReq.HasContent, false);
   }
 
-  public List<CachedUrl> findCachedUrls(String url, boolean withContent) {
-    return findCachedUrls0(url, withContent, false);
+  public List<CachedUrl> findCachedUrls(String url, CuContentReq contentReq) {
+    return findCachedUrls0(url, contentReq, false);
   }
 
   /* Return either a list of all CUs with the given URL, or the best choice
@@ -1822,7 +1878,7 @@ public class PluginManager
    */
   // XXX refactor into CU generator & two consumers.
 
-  private List<CachedUrl> findCachedUrls0(String url, boolean withContent,
+  private List<CachedUrl> findCachedUrls0(String url, CuContentReq contentReq,
 					  boolean bestOnly) {
     // We don't know what AU it might be in, so can't do plugin-dependent
     // normalization yet.  But only need to do generic normalization once.
@@ -1884,25 +1940,43 @@ public class PluginManager
 	    if (isTrace) {
 	      log.debug3("findCachedUrls(" + siteUrl + ") = " + cu);
 	    }
-	    if (cu != null && (!withContent || cu.hasContent())) {
-	      if (bestOnly) {
-		int score = score(au, cu);
-		if (score == 0) {
-		  makeFirstCandidate(candidateAus, auIx);
-		  if (isTrace) log.debug3("findCachedUrls: ret: " + siteUrl);
-		  res.add(cu);
-		  return res;
-		}
-		if (score < bestScore) {
+	    if (cu == null) {
+	      // can this happen?
+	      continue;
+	    }
+	    boolean hasCont = false;
+	    if (contentReq.wantsContent()) {
+	      hasCont = cu.hasContent();
+	    }
+	    if (bestOnly) {
+	      int auScore = auScore(au, cu, contentReq, hasCont);
+	      switch (action(contentReq, hasCont)) {
+	      case Ignore:
+		break;
+	      case RetCu:
+		makeFirstCandidate(candidateAus, auIx);
+		if (isTrace) log.debug3("findCachedUrls: ret: " + siteUrl);
+		res.add(cu);
+		return res;
+	      case UpdateBest:
+		if (bestCu == null || auScore < bestScore) {
 		  AuUtil.safeRelease(bestCu);
 		  bestCu = cu;
 		  bestAuIx = auIx;
-		  bestScore = score;
+		  bestScore = auScore;
 		} else {
-		  cu.release();
+		  AuUtil.safeRelease(cu);
 		}
-	      } else {
-		res.add(cu);
+		break;
+	      }
+	    } else {
+	      switch (action(contentReq, hasCont)) {
+	      case Ignore:
+		break;
+	      case RetCu:
+	      case UpdateBest:
+	      res.add(cu);
+	      break;
 	      }
 	    }
 	  } catch (MalformedURLException ignore) {
@@ -1913,10 +1987,13 @@ public class PluginManager
 	}
       }
       if (bestOnly) {
-	makeFirstCandidate(candidateAus, bestAuIx);
-	if (isTrace) {
-	  log.debug3("bestCu was " +
-		     (bestCu == null ? "null" : bestCu.toString()));
+	if (bestCu != null) {
+	  res.add(bestCu);
+	  makeFirstCandidate(candidateAus, bestAuIx);
+	  if (isTrace) {
+	    log.debug3("bestCu was " +
+		       (bestCu == null ? "null" : bestCu.toString()));
+	  }
 	}
       }
       return res;
@@ -1933,11 +2010,40 @@ public class PluginManager
     }
   }
 
+  enum FindUrlAction {Ignore, RetCu, UpdateBest}
+
+  FindUrlAction action(CuContentReq req, boolean hasContent) {
+    switch (req) {
+    case DontCare: // doret
+      return FindUrlAction.RetCu;
+    case PreferContent:
+      if (hasContent) {
+	return FindUrlAction.RetCu;
+      } else {
+	return FindUrlAction.UpdateBest;
+      }
+//     case MostRecentContent:
+    case HasContent:
+      if (hasContent) {
+	return FindUrlAction.RetCu;
+      } else {
+	return FindUrlAction.Ignore;
+      }
+    }
+    return FindUrlAction.Ignore;
+  }
+
+
   // Combine the various elements of desirability into a single score;
   // lower is better, zero is best.
-  private int score(ArchivalUnit au, CachedUrl cu) {
-    if (cu == null) return 4;
+  private int auScore(ArchivalUnit au, CachedUrl cu,
+		      CuContentReq contentReq,
+		      boolean hasContent) {
+    if (cu == null) return 16;
     int res = 0;
+    if (contentReq.wantsContent() && !hasContent) {
+      res += 8;
+    }
     if (isUnsubscribed(au)) res += 2;
     if (isDamaged(cu)) res += 1;
     return res;
