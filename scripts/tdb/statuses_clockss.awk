@@ -17,7 +17,8 @@ BEGIN {
     incontract = 1
   } 
 
-  if (incontract == 1) {
+  if ((substr($4,1,4) >= $3) || ((length($4) == 9) && (substr($4,6,4) >= $3))) {
+  #if (incontract == 1) {
       nn = split($2,na,/\./)
       lp2 = na[nn]
     if (!(($1,lp2,$3,$4) in b)) {
