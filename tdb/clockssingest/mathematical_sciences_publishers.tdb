@@ -14,8 +14,9 @@
   
     title < 
       name = Algebraic & Geometric Topology ;
-      issn =  
-    >
+      issn = 1472-2747 ;
+      eissn = 1472-2739
+     >
     
       param[journal_code] = agt
     
@@ -39,8 +40,9 @@
   
     title < 
       name = Algebra & Number Theory ;
-      issn =  
-    >
+      issn = 1937-0652 ;
+      eissn = 1944-7833
+     >
     
       param[journal_code] = ant
     
@@ -58,8 +60,9 @@
   
     title < 
       name = Analysis & PDE  ;
-      issn =  
-    >
+      issn = 2157-5045 ;
+      eissn = 1948-206X
+     >
     
       param[journal_code] = apde
 
@@ -75,8 +78,9 @@
   
     title < 
       name = Communications in Applied Mathematics and Computational Science ;
-      issn =  
-    >
+      issn = 1559-3940 ;
+      eissn = 2157-5452
+     >
 
       param[journal_code] = camcos
  
@@ -93,9 +97,10 @@
   {
   
     title < 
-      name = Geometry & Topology ;
-      issn =  
-    >
+     name = Geometry & Topology ;
+     issn = 1465-3060 ;
+     eissn = 1364-0380 
+     >
     
       param[journal_code] = gt
 
@@ -121,9 +126,10 @@
   {
   
     title < 
-      name = Involve, a journal of mathematics ;
-      issn =  
-    >
+     name = Involve, a journal of mathematics ;
+     issn = 1944-4176 ;
+     eissn = 1944-4184
+     >
     
       param[journal_code] = involve
  
@@ -137,8 +143,9 @@
    
    {
     title < 
-      name = Journal of Mechanics of Materials and Structures ;
-      issn =  
+     name = Journal of Mechanics of Materials and Structures ;
+     issn = 1559-3959 ;
+     eissn = 1559-3959
     >
     
       param[journal_code] = jomms
@@ -156,7 +163,7 @@
    {
     title < 
       name = Seismic Isolation and Protection Systems ;
-      issn =  
+      eissn = 2150-7902 
     >
     
      param[journal_code] = siaps
@@ -171,7 +178,8 @@
   
      title <
        name = Pacific Journal of Mathematics ;
-       issn = 
+       issn = 0030-8730 ;
+       eissn = 0030-8730
        >
        
      param[journal_code] = pjm
@@ -214,7 +222,7 @@
      au < doNotProcess ; exists ; 1986 ; Pacific Journal of Mathematics Volume 36 ; 36 >
      au < doNotProcess ; exists ; 1987 ; Pacific Journal of Mathematics Volume 37 ; 37 >
      au < doNotProcess ; exists ; 1988 ; Pacific Journal of Mathematics Volume 38 ; 38 >
-     au < doNotProcess ; exists ; 1989 ; Pacific Journal of Mathematics Volume 39 ; 39  >
+     au < doNotProcess ; exists ; 1989 ; Pacific Journal of Mathematics Volume 39 ; 39 >
      au < doNotProcess ; exists ; 1990 ; Pacific Journal of Mathematics Volume 40 ; 40 >
      au < doNotProcess ; exists ; 1991 ; Pacific Journal of Mathematics Volume 41 ; 41 >
      au < doNotProcess ; exists ; 1992 ; Pacific Journal of Mathematics Volume 42 ; 42 >
