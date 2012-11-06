@@ -110,7 +110,7 @@
     >
     
     {
-    
+      comment[0] = no manifest pages as of 11/6/2012
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://hosppeds.aappublications.org/
       implicit < status ; year ; name ; param[volume_name] >
