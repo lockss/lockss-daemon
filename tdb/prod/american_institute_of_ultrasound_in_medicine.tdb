@@ -17,22 +17,22 @@
       param[base_url] = http://www.jultrasoundmed.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1982 ; Journal of Ultrasound in Medicine Volume 1 ; 1 >
-      au < testing ; 1983 ; Journal of Ultrasound in Medicine Volume 2 ; 2 >
-      au < testing ; 1984 ; Journal of Ultrasound in Medicine Volume 3 ; 3 >
-      au < testing ; 1985 ; Journal of Ultrasound in Medicine Volume 4 ; 4 >
-      au < testing ; 1986 ; Journal of Ultrasound in Medicine Volume 5 ; 5 >
-      au < testing ; 1987 ; Journal of Ultrasound in Medicine Volume 6 ; 6 >
-      au < testing ; 1988 ; Journal of Ultrasound in Medicine Volume 7 ; 7 >
-      au < testing ; 1989 ; Journal of Ultrasound in Medicine Volume 8 ; 8 >
-      au < testing ; 1990 ; Journal of Ultrasound in Medicine Volume 9 ; 9 >
-      au < testing ; 1991 ; Journal of Ultrasound in Medicine Volume 10 ; 10 >
-      au < testing ; 1992 ; Journal of Ultrasound in Medicine Volume 11 ; 11 >
-      au < testing ; 1993 ; Journal of Ultrasound in Medicine Volume 12 ; 12 >
-      au < testing ; 1994 ; Journal of Ultrasound in Medicine Volume 13 ; 13 >
-      au < testing ; 1995 ; Journal of Ultrasound in Medicine Volume 14 ; 14 >
-      au < testing ; 1996 ; Journal of Ultrasound in Medicine Volume 15 ; 15 >
-      au < testing ; 1997 ; Journal of Ultrasound in Medicine Volume 16 ; 16 >
+      au < testing ; 1982 ; Journal of Ultrasound in Medicine Volume 1 [abstracts only] ; 1 >
+      au < testing ; 1983 ; Journal of Ultrasound in Medicine Volume 2 [abstracts only] ; 2 >
+      au < testing ; 1984 ; Journal of Ultrasound in Medicine Volume 3 [abstracts only] ; 3 >
+      au < testing ; 1985 ; Journal of Ultrasound in Medicine Volume 4 [abstracts only] ; 4 >
+      au < testing ; 1986 ; Journal of Ultrasound in Medicine Volume 5 [abstracts only] ; 5 >
+      au < testing ; 1987 ; Journal of Ultrasound in Medicine Volume 6 [abstracts only] ; 6 >
+      au < testing ; 1988 ; Journal of Ultrasound in Medicine Volume 7 [abstracts only] ; 7 >
+      au < testing ; 1989 ; Journal of Ultrasound in Medicine Volume 8 [abstracts only] ; 8 >
+      au < testing ; 1990 ; Journal of Ultrasound in Medicine Volume 9 [abstracts only] ; 9 >
+      au < testing ; 1991 ; Journal of Ultrasound in Medicine Volume 10 [abstracts only] ; 10 >
+      au < testing ; 1992 ; Journal of Ultrasound in Medicine Volume 11 [abstracts only] ; 11 >
+      au < testing ; 1993 ; Journal of Ultrasound in Medicine Volume 12 [abstracts only] ; 12 >
+      au < testing ; 1994 ; Journal of Ultrasound in Medicine Volume 13 [abstracts only] ; 13 >
+      au < testing ; 1995 ; Journal of Ultrasound in Medicine Volume 14 [abstracts only] ; 14 >
+      au < testing ; 1996 ; Journal of Ultrasound in Medicine Volume 15 [abstracts only] ; 15 >
+      au < testing ; 1997 ; Journal of Ultrasound in Medicine Volume 16 [abstracts only] ; 16 >
       au < ready ; 1998 ; Journal of Ultrasound in Medicine Volume 17 ; 17 >
       au < ready ; 1999 ; Journal of Ultrasound in Medicine Volume 18 ; 18 >
       au < ready ; 2000 ; Journal of Ultrasound in Medicine Volume 19 ; 19 >
