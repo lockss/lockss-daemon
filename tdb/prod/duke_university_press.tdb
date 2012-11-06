@@ -46,7 +46,7 @@
       comment[years1] = .long links still go to the year indicated (i.e. vol2009 manifest links to 2009, not 2011)
       
       au < HighWirePressH20Plugin ; testing ; 2000 ; American Literary Scholarship 2000 ; 1998 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; American Literary Scholarship 2001 ; 1999 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; American Literary Scholarship 2001 ; 1999 >
       au < HighWirePressH20Plugin ; released ; 2002 ; American Literary Scholarship 2002 ; 2000 >
       au < HighWirePressH20Plugin ; released ; 2003 ; American Literary Scholarship 2003 ; 2001 >
       au < HighWirePressH20Plugin ; released ; 2004 ; American Literary Scholarship 2004 ; 2002 >
@@ -57,7 +57,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; American Literary Scholarship 2009 ; 2007 >
       au < HighWirePressH20Plugin ; released ; 2010 ; American Literary Scholarship 2010 ; 2008 >
       au < HighWirePressH20Plugin ; released ; 2011 ; American Literary Scholarship 2011 ; 2009 >
-      au < HighWirePressH20Plugin ; testing ; 2012 ; American Literary Scholarship 2012 ; 2010 >
+      au < HighWirePressH20Plugin ; ready ; 2012 ; American Literary Scholarship 2012 ; 2010 >
       
     }
     
@@ -340,7 +340,7 @@
       au < released ; 2009 ; Common Knowledge Volume 15 ; 15 >
       au < released ; 2010 ; Common Knowledge Volume 16 ; 16 >
       au < released ; 2011 ; Common Knowledge Volume 17 ; 17 >
-      au < testing ; 2012 ; Common Knowledge Volume 18 ; 18 >
+      au < ready ; 2012 ; Common Knowledge Volume 18 ; 18 >
       
     }
   
@@ -444,7 +444,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; testing ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; ready ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 ; 32 >
       
     }
     
@@ -466,7 +466,7 @@
       param[journal_dir] = cultural_politics
       attr[journal_id] = cup
 
-      au < testing ; 2012 ; Cultural Politics Volume 8 ; 8 >
+      au < ready ; 2012 ; Cultural Politics Volume 8 ; 8 >
 
     }
     
