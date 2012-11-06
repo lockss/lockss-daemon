@@ -58,7 +58,7 @@
     comment[0] = content not online yet
     comment[1] = publisher rep Justin North says this is a newsletter and should not be included. July 2012.
     comment[2] = manifest pages exist but have no links because there will not be online content, re publisher July 2012.
-    param[journal_issn] = 1080-286x
+    param[journal_issn] = 1080-286X
     
     au < manifest ; 1988 ; Information Technology Management Volume 1 ; 1 > 
     au < manifest ; 1989 ; Information Technology Management Volume 2 ; 2 > 
@@ -111,7 +111,7 @@
       eissn = 1942-5368 ;
       issnl = 1942-535X
     >
-	param[journal_issn] = 1942-535x
+	param[journal_issn] = 1942-535X
 	
     au < ready ; 2009 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 1 ; 1 > 
     au < ready ; 2010 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 2 ; 2 > 
@@ -160,7 +160,7 @@
       eissn = 1937-9668 ;
       issnl = 1937-965X
     >
-	param[journal_issn] = 1937-965x
+	param[journal_issn] = 1937-965X
 	    
     au < manifest ; 2009 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 1 ; 1 > 
     au < manifest ; 2010 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 2 ; 2 > 
@@ -872,7 +872,7 @@
       eissn = 1947-3168 ;
       issnl = 1947-315X
     >
-	param[journal_issn] = 1947-315x
+	param[journal_issn] = 1947-315X
 	
      au < manifest ; 2010 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 1 ; 1 > 
      au < ready ; 2011 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 2 ; 2 > 
@@ -994,7 +994,7 @@
       eissn = 1941-6288 ;
       issnl = 1941-627X
     >
-	    param[journal_issn] = 1941-627x
+	    param[journal_issn] = 1941-627X
 	      
         au < manifest ; 2009 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 1 ; 1 > 
         au < manifest ; 2010 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 2 ; 2 > 
