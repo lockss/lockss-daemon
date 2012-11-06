@@ -13,7 +13,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://aja.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -53,7 +53,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://ajslp.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -112,7 +112,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jshd.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
       comment[continued_by] = 1092-4388
@@ -187,7 +187,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jslhr.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
       comment[continued_from] = 0022-4677
@@ -262,7 +262,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://lshss.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
