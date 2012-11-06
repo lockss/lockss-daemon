@@ -1,6 +1,10 @@
 /*
+ * $Id: TestEmeraldHtmlFilterFactory.java,v 1.4 2012-11-06 00:25:53 thib_gc Exp $
+ */
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,14 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.emerald;
 
-import java.io.*;
+import java.io.InputStream;
 
-import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.TagNameFilter;
-import org.lockss.util.*;
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.test.*;
+import org.lockss.util.*;
 
 public class TestEmeraldHtmlFilterFactory extends LockssTestCase {
   private EmeraldHtmlFilterFactory fact;
@@ -73,6 +73,7 @@ public class TestEmeraldHtmlFilterFactory extends LockssTestCase {
       "";
   
   private static final String whiteSpaceHtml =
+      "<html>\n\n" +
       "<body>" +
          "\n" +
          "\n" +
@@ -81,9 +82,11 @@ public class TestEmeraldHtmlFilterFactory extends LockssTestCase {
       "<img src=\"journalcover.gif\" alt=\"Journal cover: Advances in Medecine\" width=\"90\" border=\"0\" align=\"left\" />" +
                       "</div>\n"                 +
                  "</div>\n" +
-      "</body>";
+      "</body>\n\n" +
+      "</html>";
   private static final String whiteSpaceHtmlFiltered =
-      "<body> <div id=\"pgContainer\" class=\"rounded\"> <div id=\"pgHead\"><img src=\"journalcover.gif\" alt=\"Journal cover: Advances in Medecine\" width=\"90\" border=\"0\" align=\"left\" /></div> </div> </body>";
+      "<html> <body> <div id=\"pgContainer\" class=\"rounded\"> <div id=\"pgHead\"></div> </div> ";
+      // Note the trailing space
 
   private static final String articlePrintTableHtml =
     "<div id=\"printJournalHead\"><h1>Article Title</h1> <table summary=\"" +
@@ -101,7 +104,7 @@ public class TestEmeraldHtmlFilterFactory extends LockssTestCase {
     "</th></tr><tr></tr></td></tr> </tbody> </table> </div>";
   
   private static final String articlePrintTableHtmlFiltered =
-    "<div id=\"printJournalHead\"><h1>Article Title</h1> </div>";
+    "";
   
   public void testToCopyFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
