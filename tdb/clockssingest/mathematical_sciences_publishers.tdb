@@ -158,22 +158,8 @@
      au < doNotProcess ; exists ; 2011 ; Journal of Mechanics of Materials and Structures Volume 6 ; 6 >
      au < doNotProcess ; exists ; 2012 ; Journal of Mechanics of Materials and Structures Volume 7 ; 7 >
  
-   }
-   
-   {
-    title < 
-      name = Seismic Isolation and Protection Systems ;
-      eissn = 2150-7902 
-    >
-    
-     param[journal_code] = siaps
-
-     au < doNotProcess ; exists ; 2010 ; Seismic Isolation and Protection Systems Volume 1 ; 1 >
-     au < doNotProcess ; exists ; 2011 ; Seismic Isolation and Protection Systems Volume 2 ; 2 >
-     au < doNotProcess ; exists ; 2012 ; Seismic Isolation and Protection Systems Volume 3 ; 3 >
-
   }
-  
+   
   {
   
      title <
@@ -247,6 +233,21 @@
      au < doNotProcess ; exists ; 2011 ; Pacific Journal of Mathematics Volume 61 ; 61 >
      au < doNotProcess ; exists ; 2012 ; Pacific Journal of Mathematics Volume 62 ; 62 >
      
+  }   
+   {
+    title < 
+      name = Seismic Isolation and Protection Systems ;
+      eissn = 2150-7902 
+    >
+    
+     param[journal_code] = siaps
+
+     au < doNotProcess ; exists ; 2010 ; Seismic Isolation and Protection Systems Volume 1 ; 1 >
+     au < doNotProcess ; exists ; 2011 ; Seismic Isolation and Protection Systems Volume 2 ; 2 >
+     au < doNotProcess ; exists ; 2012 ; Seismic Isolation and Protection Systems Volume 3 ; 3 >
+
   }
+  
+
   
 }
