@@ -733,12 +733,12 @@
       attr[journal_id] = east
       implicit < status ; year ; name ; param[volume] >
 
-      au < manifest ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 ; 1 >
-      au < manifest ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 ; 2 >
-      au < manifest ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 ; 3 >
-      au < manifest ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 ; 4 >
-      au < manifest ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 ; 5 >
-      au < manifest ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
+      au < testing ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 ; 1 >
+      au < testing ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 ; 2 >
+      au < testing ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 ; 3 >
+      au < testing ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 ; 4 >
+      au < testing ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 ; 5 >
+      au < testing ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
       
     }
     
@@ -753,7 +753,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; East Asian Science, Technology and Society: an International Journal Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; released ; 2010 ; East Asian Science, Technology and Society: an International Journal Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; released ; 2011 ; East Asian Science, Technology and Society: an International Journal Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; East Asian Science, Technology and Society: an International Journal Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 2012 ; East Asian Science, Technology and Society: an International Journal Volume 6 ; 6 >
 
     }
     
@@ -814,7 +814,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; Eighteenth-Century Life Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; testing ; 2012 ; Eighteenth-Century Life Volume 36 ; 36 >
 
     }
     
@@ -863,7 +863,7 @@
      au < HighWirePressH20Plugin ; released ; 2009 ; Ethnohistory Volume 56 ; 56 >
      au < HighWirePressH20Plugin ; released ; 2010 ; Ethnohistory Volume 57 ; 57 >
      au < HighWirePressH20Plugin ; released ; 2011 ; Ethnohistory Volume 58 ; 58 >
-     au < HighWirePressH20Plugin ; manifest ; 2012 ; Ethnohistory Volume 59 ; 59 >
+     au < HighWirePressH20Plugin ; testing ; 2012 ; Ethnohistory Volume 59 ; 59 >
     
     }
     
@@ -912,7 +912,7 @@
      au < HighWirePressH20Plugin ; released ; 2009 ; French Historical Studies Volume 32 ; 32 >
      au < HighWirePressH20Plugin ; released ; 2010 ; French Historical Studies Volume 33 ; 33 >
      au < HighWirePressH20Plugin ; released ; 2011 ; French Historical Studies Volume 34 ; 34 >
-     au < HighWirePressH20Plugin ; manifest ; 2012 ; French Historical Studies Volume 35 ; 35 >
+     au < HighWirePressH20Plugin ; testing ; 2012 ; French Historical Studies Volume 35 ; 35 >
     
     }
     
@@ -944,7 +944,7 @@
       au < released ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 >
       au < released ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 >
       au < released ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 >
-      au < manifest ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 >
+      au < testing ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 >
       
     }
   }
@@ -1006,7 +1006,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; testing ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 ; 18 >
 
     }
     
@@ -1055,7 +1055,7 @@
      au < HighWirePressH20Plugin ; released ; 2009 ; Hispanic American Historical Review Volume 89 ; 89 >
      au < HighWirePressH20Plugin ; released ; 2010 ; Hispanic American Historical Review Volume 90 ; 90 >
      au < HighWirePressH20Plugin ; released ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 >
-     au < HighWirePressH20Plugin ; manifest ; 2012 ; Hispanic American Historical Review Volume 92 ; 92 >
+     au < HighWirePressH20Plugin ; testing ; 2012 ; Hispanic American Historical Review Volume 92 ; 92 >
     
     }
     
@@ -1135,7 +1135,7 @@
      au < HighWirePressH20Plugin ; released ; 2009 ; History of Political Economy Volume 41 ; 41 >
      au < HighWirePressH20Plugin ; released ; 2010 ; History of Political Economy Volume 42 ; 42 >
      au < HighWirePressH20Plugin ; released ; 2011 ; History of Political Economy Volume 43 ; 43 >
-     au < HighWirePressH20Plugin ; manifest ; 2012 ; History of Political Economy Volume 44 ; 44 >
+     au < HighWirePressH20Plugin ; testing ; 2012 ; History of Political Economy Volume 44 ; 44 >
     
     }
     
