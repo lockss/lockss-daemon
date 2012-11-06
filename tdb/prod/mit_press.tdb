@@ -210,7 +210,6 @@
 
     param[journal_dir] = leonardo_music_journal
     attr[journal_id] = lmj
-    comment[notReady] = crawl Successful, but substance check failed
 
     au < released ; 2000 ; Leonardo Music Journal Volume 10 ; 10 >
     au < released ; 2001 ; Leonardo Music Journal Volume 11 ; 11 >
@@ -224,7 +223,7 @@
     au < released ; 2009 ; Leonardo Music Journal Volume 19 ; 19 >
     au < ready ; 2010 ; Leonardo Music Journal Volume 20 ; 20 >
     au < ready ; 2011 ; Leonardo Music Journal Volume 21 ; 21 >
-    au < notReady ; 2012 ; Leonardo Music Journal Volume 22 ; 22 >
+    au < ready ; 2012 ; Leonardo Music Journal Volume 22 ; 22 >
 
   }
 
