@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchiveMembers.java,v 1.8 2012-11-06 01:27:05 tlipkis Exp $
+ * $Id: TestArchiveMembers.java,v 1.9 2012-11-06 17:17:27 fergaloy-sf Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import junit.framework.*;
 import de.schlichtherle.truezip.file.*;
 
 import org.lockss.plugin.*;
-import org.lockss.plugin.PluginManager.CuContentReq;;
+import org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.plugin.simulated.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
