@@ -865,7 +865,7 @@
         param[base_url] = http://alt.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 >
+        au < ready ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 >
         au < released ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 >
         au < released ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 >
         au < released ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 >
