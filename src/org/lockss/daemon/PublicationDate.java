@@ -1,5 +1,5 @@
 /*
- * $Id: PublicationDate.java,v 1.5 2011-06-08 23:36:25 pgust Exp $
+ * $Id: PublicationDate.java,v 1.6 2012-11-07 14:25:27 easyonthemayo Exp $
  */
 
 /*
@@ -596,11 +596,22 @@ public class PublicationDate {
         }
       }
     }
-  }  
+  }
 
   /**
-   * Static for parsing a publication date string for the 
-   * default locale. 
+   * Static for checking a publication date represented as an integer year only
+   * for the default locale.
+   * @param pubDate the date as an int year
+   * @param locale the locale
+   * @return
+   */
+  static public PublicationDate parse(int pubDate) {
+    return new PublicationDate(""+pubDate);
+  }
+
+  /**
+   * Static for parsing a publication date string for the
+   * default locale.
    * @param pubDateStr the date string
    * @param locale the locale
    * @return

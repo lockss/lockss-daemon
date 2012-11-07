@@ -1,5 +1,5 @@
 /*
- * $Id: TestPublicationDate.java,v 1.11 2012-07-27 13:21:13 pgust Exp $
+ * $Id: TestPublicationDate.java,v 1.12 2012-11-07 14:25:28 easyonthemayo Exp $
  */
 
 /*
@@ -120,7 +120,13 @@ public class TestPublicationDate extends LockssTestCase {
    */
   public void testBad() {
     assertEquals("0", PublicationDate.parse("20111226").toString());
+    assertEquals("0", PublicationDate.parse(20111226).toString());
     assertEquals("0", PublicationDate.parse("funky.chicken").toString());
     assertEquals("0", PublicationDate.parse("MCM").toString());
   }
+
+  public void testYearOnly() {
+    assertEquals("2010", PublicationDate.parse(2010).toString());
+  }
+
 }
