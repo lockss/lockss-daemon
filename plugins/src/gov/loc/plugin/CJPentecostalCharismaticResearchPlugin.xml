@@ -5,7 +5,11 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>gov.loc.plugin.PCTIIPlugin</string>
+    <string>gov.loc.plugin.CJPentecostalCharismaticResearchPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -13,7 +17,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Cyberjournal for Pentecostal-Charismatic Research Issue %d&quot;, volume</string>
+    <string>&quot;Cyberjournal for Pentecostal-Charismatic Research, Base URL %s, Volume %d&quot;, base_url, volume</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -21,15 +25,15 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>PCTII</string>
+    <string>Cyberjournal for Pentecostal-Charismatic Research Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%smanifest/cyberj%d.htm&quot;, base_url, volume</string>
-      <string>1,&quot;%scyber%d.html&quot;, base_url, volume</string>
-      <string>1,&quot;^%scyberj%d/.*&quot;, base_url, volume</string>
+      <string>1,&quot;^%smanifest/cyberj%d.htm&quot;, base_url, volume</string>
+      <string>1,&quot;^%scyber%d\.html&quot;, base_url, volume</string>
+      <string>1,&quot;^%scyberj%d/&quot;, base_url, volume</string>
       <string>1,&quot;^%s_derived/.*\.gif$&quot;, base_url</string>
       <string>1,&quot;^%s_themes/expeditn/exptextb\.jpg$&quot;, base_url</string>
     </list>
