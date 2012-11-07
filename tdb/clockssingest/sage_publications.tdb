@@ -712,7 +712,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < crawling ; exists ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 ; >
+      au < testing ; exists ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 ; >
       au < released ; manifest ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 ; >
       au < released ; manifest ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 ; >
       au < released ; crawling ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 ; >
@@ -4071,7 +4071,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Cartilage Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Cartilage Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2012 ; Cartilage Volume 3 ; 3 ; >
+      au < testing ; exists ; 2012 ; Cartilage Volume 3 ; 3 ; >
 
     }
 
@@ -4122,7 +4122,7 @@
       au < released ; crawling ; 2009 ; Cephalalgia Volume 29 ; 29 ; >
       au < released ; crawling ; 2010 ; Cephalalgia Volume 30 ; 30 ; >
       au < released ; crawling ; 2011 ; Cephalalgia Volume 31 ; 31 ; >
-      au < crawling ; exists ; 2012 ; Cephalalgia Volume 32 ; 32 ; >
+      au < testing ; exists ; 2012 ; Cephalalgia Volume 32 ; 32 ; >
 
     }
 
@@ -4179,7 +4179,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Child Language Teaching and Therapy Volume 25 ; 25 ; >
       au < released ; crawling ; 2010 ; Child Language Teaching and Therapy Volume 26 ; 26 ; >
       au < released ; crawling ; 2011 ; Child Language Teaching and Therapy Volume 27 ; 27 ; >
-      au < crawling ; exists ; 2012 ; Child Language Teaching and Therapy Volume 28 ; 28 ; >
+      au < testing ; exists ; 2012 ; Child Language Teaching and Therapy Volume 28 ; 28 ; >
 
     }
 
@@ -4225,7 +4225,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Child Maltreatment Volume 14 ; 14 ; >
       au < released ; crawling ; 2010 ; Child Maltreatment Volume 15 ; 15 ; >
       au < released ; crawling ; 2011 ; Child Maltreatment Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2012 ; Child Maltreatment Volume 17 ; 17 ; >
+      au < testing ; exists ; 2012 ; Child Maltreatment Volume 17 ; 17 ; >
 
     }
 
@@ -4326,7 +4326,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; China Information Volume 23 ; 23 ; >
       au < zapped ; down ; 2010 ; China Information Volume 24 ; 24 ; >
       au < released ; crawling ; 2011 ; China Information Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2012 ; China Information Volume 26 ; 26 ; >
+      au < testing ; exists ; 2012 ; China Information Volume 26 ; 26 ; >
 
     }
 
@@ -4393,7 +4393,7 @@
       au < released ; crawling ; 2009 ; China Report Volume 45 ; 45 ; >
       au < released ; crawling ; 2010 ; China Report Volume 46 ; 46 ; >
       au < released ; crawling ; 2011 ; China Report Volume 47 ; 47 ; >
-      au < crawling ; exists ; 2012 ; China Report Volume 48 ; 48 ; >
+      au < testing ; exists ; 2012 ; China Report Volume 48 ; 48 ; >
 
 
     }
@@ -4430,7 +4430,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Chronic Illness Volume 5 ; 5 ; >
       au < released ; crawling ; 2010 ; Chronic Illness Volume 6 ; 6 ; >
       au < released ; crawling ; 2011 ; Chronic Illness Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2012 ; Chronic Illness Volume 8 ; 8 ; >
+      au < testing ; exists ; 2012 ; Chronic Illness Volume 8 ; 8 ; >
 
     }
 
@@ -4467,7 +4467,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Chronic Respiratory Disease Volume 6 ; 6 ; >
       au < released ; crawling ; 2010 ; Chronic Respiratory Disease Volume 7 ; 7 ; >
       au < released ; crawling ; 2011 ; Chronic Respiratory Disease Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2012 ; Chronic Respiratory Disease Volume 9 ; 9 ; >
+      au < testing ; exists ; 2012 ; Chronic Respiratory Disease Volume 9 ; 9 ; >
 
     }
 
@@ -4545,7 +4545,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Clin-Alert Volume 47 ; 47 ; >
       au < released ; crawling ; 2010 ; Clin-Alert Volume 48 ; 48 ; >
       au < released ; crawling ; 2011 ; Clin-Alert Volume 49 ; 49 ; >
-      au < crawling ; exists ; 2012 ; Clin-Alert Volume 50 ; 50 ; >
+      au < testing ; exists ; 2012 ; Clin-Alert Volume 50 ; 50 ; >
 
     }
 
@@ -4591,7 +4591,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Clinical and Applied Thrombosis/Hemostasis Volume 15 ; 15 ; >
       au < zapped ; down ; 2010 ; Clinical and Applied Thrombosis/Hemostasis Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; Clinical and Applied Thrombosis/Hemostasis Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2012 ; Clinical and Applied Thrombosis/Hemostasis Volume 18 ; 18 ; >
+      au < testing ; exists ; 2012 ; Clinical and Applied Thrombosis/Hemostasis Volume 18 ; 18 ; >
 
     }
 
