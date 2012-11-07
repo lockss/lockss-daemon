@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.57 2012-09-06 04:01:51 tlipkis Exp $
+ * $Id: MetadataManager.java,v 1.58 2012-11-07 20:27:36 tlipkis Exp $
  */
 
 /*
@@ -84,6 +84,7 @@ import org.lockss.util.MetadataUtil;
 import org.lockss.util.TimeBase;
 import org.lockss.util.TimeInterval;
 import org.lockss.util.StringUtil;
+import org.lockss.util.PatternIntMap;
 
 /**
  * This class implements a metadata manager that is responsible for managing an
@@ -98,7 +99,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private static Logger log = Logger.getLogger("MetadataManager");
 
   /** prefix for config properties */
-  static public final String PREFIX = "org.lockss.metadataManager.";
+  static public final String PREFIX = Configuration.PREFIX + "metadataManager.";
 
   /**
    * Determines whether MedataExtractor specified by plugin should be used if it
@@ -160,6 +161,19 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Name of metadata status table */
   public static final String METADATA_STATUS_TABLE_NAME = "metadata_status_table";
 
+  /** Map of AUID regexp to priority.  If set, AUs are assigned the
+   * corresponding priority of the first regexp that their AUID matches.
+   * Priority must be an integer; priorities <= -10000 mean "do not index
+   * matching AUs", priorities <= -20000 mean "abort running indexes of
+   * matching AUs". (Priorities are not yet implemented - only "do not
+   * index" and "abort" are supported.)  */
+  static final String PARAM_INDEX_PRIORITY_AUID_MAP =
+    PREFIX + "indexPriorityAuidMap";
+  static final List DEFAULT_INDEX_PRIORITY_AUID_MAP = null;
+
+  static final int MIN_INDEX_PRIORITY = -10000;
+  static final int ABORT_INDEX_PRIORITY = -20000;
+
   /**
    * Map of running reindexing tasks keyed and sorted by their AuIds
    */
@@ -214,6 +228,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   /** The database manager */
   private DbManager dbManager = null;
+
+  private PatternIntMap indexPriorityAuidMap;
 
   /** Name of DOI table */
   static final String DOI_TABLE = "DOI";
@@ -528,6 +544,63 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       int histSize = config.getInt(PARAM_HISTORY_MAX, DEFAULT_HISTORY_MAX);
       setMaxHistory(histSize);
     }
+    if (changedKeys.contains(PARAM_INDEX_PRIORITY_AUID_MAP)) {
+      installIndexPriorityAuidMap(config.getList(PARAM_INDEX_PRIORITY_AUID_MAP,
+						 DEFAULT_INDEX_PRIORITY_AUID_MAP));
+
+      if (isInited()) {
+	processAbortPriorities();
+	// process queued AUs in case any are newly eligible
+	startReindexing();
+      }
+    }
+  }
+
+  /** Set up index priority map. */
+  void installIndexPriorityAuidMap(List<String> patternPairs) {
+    if (patternPairs == null) {
+      log.debug("Installing empty index priority map");
+      indexPriorityAuidMap = PatternIntMap.EMPTY;
+    } else {
+      try {
+	indexPriorityAuidMap = new PatternIntMap(patternPairs);
+	log.debug("Installing index priority map: " + indexPriorityAuidMap);
+      } catch (IllegalArgumentException e) {
+	log.error("Illegal index priority map, ignoring", e);
+	log.error("Index priority map unchanged: " + indexPriorityAuidMap);
+      }
+    }
+  }
+
+  /** For all the entries in indexPriorityAuidMap whose priority is less
+   * than ABORT_INDEX_PRIORITY, collect those that are new (not in
+   * prevIndexPriorityAuidMap), then abort all indexes matching any of those
+   * patterns.
+   */
+  void processAbortPriorities() {
+    List<ArchivalUnit> abortAus = new ArrayList<ArchivalUnit>();
+    synchronized (activeReindexingTasks) {
+      for (MetadataManager.ReindexingTask task :
+	     activeReindexingTasks.values()) {
+	ArchivalUnit au = task.getAu();
+	if (indexPriorityAuidMap.getMatch(au.getAuId()) < ABORT_INDEX_PRIORITY) {
+	  abortAus.add(au);
+	}
+      }
+    }
+    for (ArchivalUnit au : abortAus) {
+      log.info("Aborting indexing: " + au);
+      cancelAuTask(au.getAuId());
+    }
+  }
+
+  boolean isEligibleForReindexing(ArchivalUnit au) {
+    return isEligibleForReindexing(au.getAuId());
+  }
+
+  boolean isEligibleForReindexing(String auId) {
+    return indexPriorityAuidMap == null
+      || indexPriorityAuidMap.getMatch(auId, 0) > MIN_INDEX_PRIORITY;
   }
 
   /**
@@ -2292,9 +2365,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           String pluginId = results.getString(1);
           String auKey = results.getString(2);
           String auId = PluginManager.generateAuId(pluginId, auKey);
-          if (!activeReindexingTasks.containsKey(auId)) {
-            auIds.add(auId);
-          }
+	  if (isEligibleForReindexing(auId)) {
+	    if (!activeReindexingTasks.containsKey(auId)) {
+	      auIds.add(auId);
+	    }
+	  }
         }
       } catch (SQLException ex) {
         log.error(ex.getMessage(), ex);

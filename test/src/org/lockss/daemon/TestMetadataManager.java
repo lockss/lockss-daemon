@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.11 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestMetadataManager.java,v 1.12 2012-11-07 20:27:36 tlipkis Exp $
  */
 
 /*
@@ -405,8 +405,23 @@ public class TestMetadataManager extends LockssTestCase {
     }
     assertEquals(0, results.size());
   }
-  
-  
+
+  public void testPriorityPatterns() {
+    ConfigurationUtil.addFromArgs(MetadataManager.PARAM_INDEX_PRIORITY_AUID_MAP,
+				  "foo(4|5),-10000;bar,5;baz,-1");
+    MockArchivalUnit mau1 = new MockArchivalUnit(new MockPlugin(theDaemon));
+    mau1.setAuId("other");
+    assertTrue(metadataManager.isEligibleForReindexing(mau1));
+    mau1.setAuId("foo4");
+    assertFalse(metadataManager.isEligibleForReindexing(mau1));
+
+    // Remove param, ensure priority map gets removed
+    ConfigurationUtil.setFromArgs("foo", "bar");
+    mau1.setAuId("foo4");
+    assertTrue(metadataManager.isEligibleForReindexing(mau1));
+
+  }
+
   public static class MySubTreeArticleIteratorFactory
       implements ArticleIteratorFactory {
     String pat;
