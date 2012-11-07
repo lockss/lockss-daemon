@@ -83,7 +83,7 @@
     param[base_url] = http://eel.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; testing ; 2012 ; ECS Electrochemistry Letters Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Electrochemistry Letters Volume 1 ; 1 >
     
   }
 
