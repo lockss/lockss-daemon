@@ -1491,22 +1491,6 @@
     au < ready ; 2012 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 6 ; 6 >
 
   }
-
-  {
-    title <
-      name = Register of the Kentucky Historical Society ;
-      issn = 0023-0243 ;
-      eissn = 2161-0355
-    >
-
-    param[journal_dir] = register_of_the_kentucky_historical_society
-    attr[journal_id] = khs
-
-    au < ready ; 2010 ; Register of the Kentucky Historical Society Volume 108 ; 108 >
-    au < ready ; 2011 ; Register of the Kentucky Historical Society Volume 109 ; 109 >
-    au < ready ; 2012 ; Register of the Kentucky Historical Society Volume 110 ; 110 >
-    
-  }
     
   {
     title <
