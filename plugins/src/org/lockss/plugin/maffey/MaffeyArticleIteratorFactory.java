@@ -1,5 +1,5 @@
 /*
- * $Id: MaffeyArticleIteratorFactory.java,v 1.1 2012-10-09 01:22:37 wkwilson Exp $
+ * $Id: MaffeyArticleIteratorFactory.java,v 1.2 2012-11-07 01:07:20 wkwilson Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.plugin.maffey;
 
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -59,6 +61,7 @@ import org.lockss.filter.html.HtmlTags;
 import org.lockss.plugin.*;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
 
 /*
  * PDF Full Text: http://www.la-press.com/redirect_file.php?fileType=pdf&fileId=4199&filename=3103-ACI-Holistic-Control-of-Herbal-Teas-and-Tinctures-Based-on-Sage-(Salvia-of.pdf&nocount=1
@@ -144,7 +147,7 @@ public class MaffeyArticleIteratorFactory implements ArticleIteratorFactory,
       try {
         if(nl != null) {
           if (nl.size() > 0) {
-            URL pdfUrl = new URL(((MetaTag)nl.elementAt(0)).getMetaContent());
+            URL pdfUrl = new URL(UrlUtil.minimallyEncodeUrl(((MetaTag)nl.elementAt(0)).getMetaContent()));
             List<String> paramList = new ArrayList<String>();
             paramList.add("fileType");
             paramList.add("fileId");
@@ -155,7 +158,7 @@ public class MaffeyArticleIteratorFactory implements ArticleIteratorFactory,
           	  pdfUrl = new URL(pdfUrl.getProtocol(), "www." + pdfUrl.getHost(), pdfUrl.getFile());
             }
             
-            CachedUrl pdfCu = au.makeCachedUrl(pdfUrl.toString());
+            CachedUrl pdfCu = au.makeCachedUrl(UrlUtil.decodeUrl(pdfUrl.toString()));
             
             if (pdfCu != null && pdfCu.hasContent()) {
         	  af.setFullTextCu(pdfCu);
@@ -164,7 +167,9 @@ public class MaffeyArticleIteratorFactory implements ArticleIteratorFactory,
           }
         }
       } catch (MalformedURLException e) {
-	log.debug("Badly formatted pdf url link", e);
+    	  log.debug("Badly formatted pdf url link", e);  
+      } catch (IllegalArgumentException e) {
+	    log.debug("Badly formatted pdf url link", e);
       }
       
       return af;

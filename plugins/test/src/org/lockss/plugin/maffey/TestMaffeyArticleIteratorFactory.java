@@ -113,7 +113,7 @@ public class TestMaffeyArticleIteratorFactory extends ArticleIteratorTestCase {
   public void testCreateArticleFiles() throws Exception {
     String[] urls = {BASE_URL + "hello-world-foo-bar-article-a12",
 		     BASE_URL + "foo-bar-hello-world-article-a1234",
-		     BASE_URL + "redirect_file.php?fileType=pdf&fileId=1111&filename=Hello-World-(Foo.pdf&nocount=1",
+		     BASE_URL + "redirect_file.php?fileType=pdf&fileId=1111&filename= Hello World ( Foo &nocount=1",
 		     BASE_URL + "redirect_file.php?fileType=pdf&fileId=2222&filename=1234-Foo-Bar-(Hello.pdf&nocount=1",
 		     BASE_URL + "bad-pdf-article-a22",
 		     BASE_URL + "lockss.php?t=lockss&pa=issue&j_id=1&year=2010"};
@@ -125,7 +125,7 @@ public class TestMaffeyArticleIteratorFactory extends ArticleIteratorTestCase {
       if(url.contains("-article-a1234")) {
 	uc.storeContent(getAbsAlteredInputStream("http://la-press.com/redirect_file.php?fileId=2222&filename=1234-Foo-Bar-(Hello.pdf&fileType=pdf"), getAbsProperties());
       } else if(url.contains("-article-a12")){
-	uc.storeContent(getAbsAlteredInputStream("http://la-press.com/redirect_file.php?fileId=1111&filename=Hello-World-(Foo.pdf&fileType=pdf"), getAbsProperties());
+	uc.storeContent(getAbsAlteredInputStream("http://la-press.com/redirect_file.php?fileType=pdf&fileId=1111&filename= Hello World ( Foo "), getAbsProperties());
       } else if(url.contains("-article-a22")) {
 	uc.storeContent(getAbsAlteredInputStream("http://la-press.com/redirect_file.php?fileId=3333&filename=Bad-PDF.pdf&fileType=pdf"), getAbsProperties());
       } else {
@@ -137,7 +137,7 @@ public class TestMaffeyArticleIteratorFactory extends ArticleIteratorTestCase {
     String [] af1 = {null,
 		     BASE_URL + "bad-pdf-article-a22"};
     
-    String [] af2 = {BASE_URL + "redirect_file.php?fileType=pdf&fileId=1111&filename=Hello-World-(Foo.pdf",
+    String [] af2 = {BASE_URL + "redirect_file.php?fileType=pdf&fileId=1111&filename= Hello World ( Foo ",
     		     BASE_URL + "hello-world-foo-bar-article-a12"};
     
     String [] af3 = {BASE_URL + "redirect_file.php?fileType=pdf&fileId=2222&filename=1234-Foo-Bar-(Hello.pdf",
