@@ -370,6 +370,7 @@ class TooCloseV3TestCase( TooCloseV3Tests ):
 
     def __init__( self, methodName = 'runTest' ):
         TooCloseV3Tests.__init__( self, methodName )
+        self.local_configuration = { 'org.lockss.poll.v3.repairFromPublisherWhenTooClose': 'false' }
             
     def _verify_poll_results( self ):
         self.assertEqual( self.victim.getPollResults( self.AU ),
@@ -378,10 +379,9 @@ class TooCloseV3TestCase( TooCloseV3Tests ):
         summary = self.victim.getPollSummary( poll )
         agreed = int( summary[ 'Agreeing URLs' ][ 'value' ] )
         too_close = int( summary[ 'Too Close URLs' ][ 'value' ] )
-        completed_repairs = int( summary[ 'Completed Repairs' ][ 'value' ] )
         self.assertEqual( agreed, 30 )
         self.assertEqual( too_close, 1 )
-        self.assertEqual( completed_repairs, 0 )
+        self.assertFalse( 'Completed Repairs' in summary )
 
 class TooCloseWithRepairV3TestCase( TooCloseV3Tests ):
     """Test a too-close V3 poll with repair from publisher"""
@@ -397,6 +397,7 @@ class TooCloseWithRepairV3TestCase( TooCloseV3Tests ):
         summary = self.victim.getPollSummary( poll )
         agreed = int( summary[ 'Agreeing URLs' ][ 'value' ] )
         too_close = int( summary[ 'Too Close URLs' ][ 'value' ] )
+        self.assertTrue( 'Completed Repairs' in summary )
         completed_repairs = int( summary[ 'Completed Repairs' ][ 'value' ] )
         self.assertEqual( agreed, 30 )
         self.assertEqual( too_close, 1 )
@@ -816,8 +817,8 @@ simpleV3Tests = unittest.TestSuite( ( FormatExpectedAgreementTestCase(),
                                       SimpleExtraFileV3TestCase(),
                                       LastFileDeleteV3TestCase(),
                                       LastFileExtraV3TestCase(),
-                                      TooCloseWithRepairV3TestCase(),
                                       TooCloseV3TestCase(),
+                                      TooCloseWithRepairV3TestCase(),
                                       VotersDontParticipateV3TestCase(),
                                       NoQuorumV3TestCase(),
                                       TotalLossRecoveryV3TestCase(),
