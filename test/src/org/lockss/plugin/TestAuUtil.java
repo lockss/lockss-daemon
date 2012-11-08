@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.17 2012-03-15 08:20:53 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.18 2012-11-08 06:18:49 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.exploded.*;
+import org.lockss.plugin.definable.*;
 
 /**
  * This is the test class for org.lockss.plugin.AuUtil
@@ -150,6 +151,18 @@ public class TestAuUtil extends LockssTestCase {
     assertFalse(AuUtil.hasCrawled(mau));
     aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, "foo");
     assertTrue(AuUtil.hasCrawled(mau));
+  }
+
+  public void testGetPluginDefinition() throws Exception {
+    ExternalizableMap map = new ExternalizableMap();
+    map.setMapElement("foo", "bar");
+    DefinablePlugin dplug = new DefinablePlugin();
+    dplug.initPlugin(getMockLockssDaemon(), "FooPlugin", map, null);
+    Plugin plug = dplug;
+    assertSame(map, AuUtil.getPluginDefinition(plug));
+
+    plug = new MockPlugin();
+    assertEquals(0, AuUtil.getPluginDefinition(plug).size());
   }
 
   public void testIsClosed() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.33 2012-09-06 04:04:12 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.34 2012-11-08 06:18:49 tlipkis Exp $
  */
 
 /*
@@ -194,6 +194,23 @@ public class AuUtil {
       }
     }
     return null;
+  }
+
+  // XXX Giving clients access to the plugin definition map allows them to
+  // modify it, should be replaced by something safer.
+
+  private static TypedEntryMap EMPTY_DEF_MAP = new TypedEntryMap();
+
+  public static TypedEntryMap getPluginDefinition(ArchivalUnit au) {
+    return getPluginDefinition(au.getPlugin());
+  }
+
+  public static TypedEntryMap getPluginDefinition(Plugin plug) {
+    if (plug instanceof DefinablePlugin) {
+      return ((DefinablePlugin)plug).getDefinitionMap();
+    } else {
+      return EMPTY_DEF_MAP;
+    }
   }
 
   public static boolean isClosed(ArchivalUnit au) {
