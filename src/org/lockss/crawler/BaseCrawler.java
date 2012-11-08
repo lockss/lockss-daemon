@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.49 2012-09-06 03:59:41 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.50 2012-11-08 06:21:40 tlipkis Exp $
  */
 
 /*
@@ -218,6 +218,7 @@ public abstract class BaseCrawler
   protected String previousContentType;
   protected int pauseCounter = 0;
   protected String crawlPoolKey;
+  protected CrawlReq req;
 
   protected BaseCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
     if (au == null) {
@@ -255,6 +256,10 @@ public abstract class BaseCrawler
 
   protected void setCrawlManager(CrawlManager crawlMgr) {
     this.crawlMgr = crawlMgr;
+  }
+
+  public void setCrawlReq(CrawlReq req) {
+    this.req = req;
   }
 
   protected void setCrawlConfig(Configuration config) {

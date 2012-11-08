@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlReq.java,v 1.2 2007-10-04 04:06:17 tlipkis Exp $
+ * $Id: CrawlReq.java,v 1.3 2012-11-08 06:21:40 tlipkis Exp $
  */
 
 /*
@@ -57,12 +57,13 @@ public class CrawlReq {
   AuState aus = null;
   Object rateKey;
   int priority = 0;
+  int refetchDepth = -1;
 
-  CrawlReq(ArchivalUnit au) {
+  public CrawlReq(ArchivalUnit au) {
     this(au, null, null, null);
   }
 
-  CrawlReq(ArchivalUnit au, CrawlManager.Callback cb,
+  public CrawlReq(ArchivalUnit au, CrawlManager.Callback cb,
 	   Object cookie, ActivityRegulator.Lock lock) {
     this.au = au;
     this.cb = cb;
@@ -112,7 +113,27 @@ public class CrawlReq {
     return priority > 0;
   }
 
+  public void setRefetchDepth(int val) {
+    refetchDepth = val;
+  }
+
+  public int getRefetchDepth() {
+    return refetchDepth;
+  }
+
   public String toString() {
-    return "[CrawlReq: " + au + ", pri: " + priority + ", cb: " + cb + "]";
+    StringBuilder sb = new StringBuilder();
+    sb.append("[CrawlReq: ");
+    sb.append(au);
+    sb.append(", pri: ");
+    sb.append(priority);
+    sb.append(", cb: ");
+    sb.append(cb);
+    if (refetchDepth >= 0) {
+      sb.append(", depth: ");
+      sb.append(refetchDepth);
+    }
+    sb.append("]");
+    return sb.toString();
   }
 }

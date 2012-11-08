@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.80 2012-07-17 08:48:25 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.81 2012-11-08 06:21:40 tlipkis Exp $
  */
 
 /*
@@ -149,6 +149,23 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   public void testShouldFollowLink() {
     assertTrue(((NewContentCrawler)crawler).shouldFollowLink());
+  }
+
+  public void testRefetchDepth() {
+    CrawlSpec spec = new SpiderCrawlSpec(startUrls,
+					 ListUtil.list(permissionPage),
+					 crawlRule,
+					 1);
+    NewContentCrawler ncc1 = new NewContentCrawler(mau, spec, aus);
+    assertEquals(1, ncc1.getRefetchDepth());
+    NewContentCrawler ncc2 = new NewContentCrawler(mau, spec, aus);
+    CrawlReq req = new CrawlReq(mau);
+    ncc2.setCrawlReq(req);
+    assertEquals(1, ncc2.getRefetchDepth());
+    req.setRefetchDepth(39);
+    NewContentCrawler ncc3 = new NewContentCrawler(mau, spec, aus);
+    ncc3.setCrawlReq(req);
+    assertEquals(39, ncc3.getRefetchDepth());
   }
 
   //Will try to fetch startUrl, content parser will return no urls,

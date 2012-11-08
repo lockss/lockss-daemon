@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.58 2012-07-09 07:50:15 tlipkis Exp $
+ * $Id: Crawler.java,v 1.59 2012-11-08 06:21:40 tlipkis Exp $
  */
 
 /*
@@ -113,6 +113,12 @@ public interface Crawler {
    */
   public void abortCrawl();
 
+
+  /**
+   * Set the CrawlReq that caused this crawl, if any.  Communicates
+   * request-specific args such as refetch depth
+   */
+  public void setCrawlReq(CrawlReq req);
 
   /**
    * Set a watchdog that should be poked periodically by the crawl

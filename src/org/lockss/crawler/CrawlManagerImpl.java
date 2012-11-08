@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.145 2012-10-30 00:11:05 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.146 2012-11-08 06:21:40 tlipkis Exp $
  */
 
 /*
@@ -1064,11 +1064,24 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       callCallback(cb, cookie, false, null);
       return;
     }
+    startNewContentCrawl(req, lock);
+  }
+
+
+  public void startNewContentCrawl(CrawlReq req, ActivityRegulator.Lock lock) {
+    if (req.getAu() == null) {
+      throw new IllegalArgumentException("Called with null AU");
+    }
+    if (!crawlerEnabled) {
+      logger.warning("Crawler disabled, not crawling: " + req.getAu());
+      callCallback(req.getCb(), req.getCookie(), false, null);
+      return;
+    }
     if (paramOdc) {
       enqueueHighPriorityCrawl(req);
     } else {
-      if (!isEligibleForNewContentCrawl(au)) {
-	callCallback(cb, cookie, false, null);
+      if (!isEligibleForNewContentCrawl(req.getAu())) {
+	callCallback(req.getCb(), req.getCookie(), false, null);
 	return;
       }
       handReqToPool(req);
@@ -1098,6 +1111,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     CrawlRunner runner = null;
     try {
       crawler = makeNewContentCrawler(au, spec);
+      crawler.setCrawlReq(req);
       runner = new CrawlRunner(crawler, spec, cb, cookie, SetUtil.set(lock),
 			       getNewContentRateLimiter(au),
 			       newContentStartRateLimiter);

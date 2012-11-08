@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.60 2012-03-15 08:20:25 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.61 2012-11-08 06:21:40 tlipkis Exp $
  */
 
 /*
@@ -63,6 +63,13 @@ public class NewContentCrawler extends FollowLinkCrawler {
 
   protected int getRefetchDepth() {
     if (refetchDepth == -1) {
+      if (req != null) {
+	int reqDepth = req.getRefetchDepth();
+	if (reqDepth >= 0) {
+	  refetchDepth = reqDepth;
+	  return refetchDepth;
+	}
+      }	  
       int refetchDepth0 = spec.getRefetchDepth();
       String key = StringUtil.replaceString(PARAM_REFETCH_DEPTH,
 					    "<auid>", au.getAuId());

@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.32 2012-10-30 00:12:24 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.33 2012-11-08 06:21:40 tlipkis Exp $
  */
 
 /*
@@ -67,13 +67,20 @@ public class DebugPanel extends LockssServlet {
     PREFIX + "crawlPriority";
   private static final int DEFAULT_CRAWL_PRIORITY = 10;
 
+  /**
+   * Priority for crawls started from the debug panel
+   */
+  public static final String PARAM_ENABLE_DEEP_CRAWL = 
+    PREFIX + "deepCrawlEnabled";
+  private static final boolean DEFAULT_ENABLE_DEEP_CRAWL = false;
+
   static final String KEY_ACTION = "action";
   static final String KEY_MSG = "msg";
   static final String KEY_NAME_SEL = "name_sel";
   static final String KEY_NAME_TYPE = "name_type";
   static final String KEY_AUID = "auid";
-  static final String KEY_TEXT = "text";
   static final String KEY_URL = "url";
+  static final String KEY_CRAWL_DEPTH = "depth";
 
   static final String ACTION_MAIL_BACKUP = "Mail Backup File";
   static final String ACTION_THROW_IOEXCEPTION = "Throw IOException";
@@ -85,6 +92,8 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_FORCE_START_V3_POLL = "Force V3 Poll";
   static final String ACTION_START_CRAWL = "Start Crawl";
   static final String ACTION_FORCE_START_CRAWL = "Force Start Crawl";
+  static final String ACTION_START_DEEP_CRAWL = "Deep Crawl";
+  static final String ACTION_FORCE_START_DEEP_CRAWL = "Force Deep Crawl";
   static final String ACTION_CRAWL_PLUGINS = "Crawl Plugins";
   static final String ACTION_RELOAD_CONFIG = "Reload Config";
 
@@ -101,20 +110,21 @@ public class DebugPanel extends LockssServlet {
   private MetadataManager metadataMgr;
   private RemoteApi rmtApi;
 
-  String auid;
-  String name;
-  String text;
   boolean showResult;
   boolean showForcePoll;
   boolean showForceCrawl;
   boolean showForceReindexMetadata;
+
+  String formAuid;
+  String formDepth = "100";
+
   protected void resetLocals() {
     resetVars();
     super.resetLocals();
   }
 
   void resetVars() {
-    auid = null;
+    formAuid = null;
     errMsg = null;
     statusMsg = null;
     showForcePoll = false;
@@ -141,11 +151,14 @@ public class DebugPanel extends LockssServlet {
     String action = getParameter(KEY_ACTION);
 
     if (!StringUtil.isNullString(action)) {
-      auid = getParameter(KEY_AUID);
+
+      formAuid = getParameter(KEY_AUID);
+      formDepth = getParameter(KEY_CRAWL_DEPTH);
+
       UserAccount acct = getUserAccount();
       if (acct != null) {
 	acct.auditableEvent("used debug panel action: " + action +
-			    " AU ID: " + auid);
+			    " AU ID: " + formAuid);
       }
     }
     if (ACTION_MAIL_BACKUP.equals(action)) {
@@ -164,10 +177,16 @@ public class DebugPanel extends LockssServlet {
       forceV3Poll();
     }
     if (ACTION_START_CRAWL.equals(action)) {
-      doCrawl(false);
+      doCrawl(false, false);
     }
     if (ACTION_FORCE_START_CRAWL.equals(action)) {
-      doCrawl(true);
+      doCrawl(true, false);
+    }
+    if (ACTION_START_DEEP_CRAWL.equals(action)) {
+      doCrawl(false, true);
+    }
+    if (ACTION_FORCE_START_DEEP_CRAWL.equals(action)) {
+      doCrawl(true, true);
     }
     if (ACTION_CRAWL_PLUGINS.equals(action)) {
       crawlPluginRegistries();
@@ -225,11 +244,11 @@ public class DebugPanel extends LockssServlet {
     }
   }
 
-  private void doCrawl(boolean force) {
+  private void doCrawl(boolean force, boolean deep) {
     ArchivalUnit au = getAu();
     if (au == null) return;
     try {
-      startCrawl(au, force);
+      startCrawl(au, force, deep);
     } catch (CrawlManagerImpl.NotEligibleException.RateLimiter e) {
       errMsg = "AU has crawled recently (" + e.getMessage()
 	+ ").  Click again to override.";
@@ -246,7 +265,7 @@ public class DebugPanel extends LockssServlet {
       sb.append(au.getName());
       sb.append(": ");
       try {
-	startCrawl(au, true);
+	startCrawl(au, true, false);
 	sb.append("Queued.");
       } catch (CrawlManagerImpl.NotEligibleException e) {
 	sb.append("Failed: ");
@@ -257,7 +276,7 @@ public class DebugPanel extends LockssServlet {
     statusMsg = sb.toString();
   }
 
-  private boolean startCrawl(ArchivalUnit au, boolean force)
+  private boolean startCrawl(ArchivalUnit au, boolean force, boolean deep)
       throws CrawlManagerImpl.NotEligibleException {
     CrawlManagerImpl cmi = (CrawlManagerImpl)crawlMgr;
     if (force) {
@@ -268,6 +287,7 @@ public class DebugPanel extends LockssServlet {
     }
     cmi.checkEligibleToQueueNewContentCrawl(au);
     String delayMsg = "";
+    String deepMsg = "";
     try {
       cmi.checkEligibleForNewContentCrawl(au);
     } catch (CrawlManagerImpl.NotEligibleException e) {
@@ -275,8 +295,31 @@ public class DebugPanel extends LockssServlet {
     }
     Configuration config = cfgMgr.getCurrentConfig();
     int pri = config.getInt(PARAM_CRAWL_PRIORITY, DEFAULT_CRAWL_PRIORITY);
-    crawlMgr.startNewContentCrawl(au, pri, null, null, null);
-    statusMsg = "Crawl requested for " + au.getName() + delayMsg;
+
+    CrawlReq req;
+    try {
+      req = new CrawlReq(au);
+      req.setPriority(pri);
+      if (deep) {
+	int d = Integer.parseInt(formDepth);
+	if (d < 0) {
+	  errMsg = "Illegal depth: " + d;
+	  return false;
+	}
+	req.setRefetchDepth(d);
+	deepMsg = "Deep (" + req.getRefetchDepth() + ") ";
+
+      }
+    } catch (NumberFormatException e) {
+      errMsg = "Illegal depth: " + formDepth;
+      return false;
+    } catch (RuntimeException e) {
+      log.error("Couldn't create CrawlReq: " + au, e);
+      errMsg = "Couldn't create CrawlReq: " + e.toString();
+      return false;
+    }
+    cmi.startNewContentCrawl(req, null);
+    statusMsg = deepMsg + "Crawl requested for " + au.getName() + delayMsg;
     return true;
   }
 
@@ -374,11 +417,11 @@ public class DebugPanel extends LockssServlet {
   }
 
   ArchivalUnit getAu() {
-    if (StringUtil.isNullString(auid)) {
+    if (StringUtil.isNullString(formAuid)) {
       errMsg = "Select an AU";
       return null;
     }
-    ArchivalUnit au = pluginMgr.getAuFromId(auid);
+    ArchivalUnit au = pluginMgr.getAuFromId(formAuid);
     if (au == null) {
       errMsg = "No such AU.  Select an AU";
       return null;
@@ -432,7 +475,7 @@ public class DebugPanel extends LockssServlet {
     frm.add("<br><center>"+thrw+" " + thmsg + "</center>");
 
     frm.add("<br><center>AU Actions: select AU</center>");
-    Composite ausel = ServletUtil.layoutSelectAu(this, KEY_AUID, auid);
+    Composite ausel = ServletUtil.layoutSelectAu(this, KEY_AUID, formAuid);
     frm.add("<br><center>"+ausel+"</center>");
     setTabOrder(ausel);
 
@@ -458,6 +501,18 @@ public class DebugPanel extends LockssServlet {
       frm.add(reindex);
     }
     frm.add("</center>");
+    if (CurrentConfig.getBooleanParam(PARAM_ENABLE_DEEP_CRAWL,
+				      DEFAULT_ENABLE_DEEP_CRAWL)) {
+      Input deepCrawl = new Input(Input.Submit, KEY_ACTION,
+				  ( showForceCrawl
+				    ? ACTION_FORCE_START_DEEP_CRAWL
+				    : ACTION_START_DEEP_CRAWL));
+      Input depthText = new Input(Input.Text, KEY_CRAWL_DEPTH, formDepth);
+      depthText.setSize(4);
+      setTabOrder(depthText);
+      frm.add("<br><center>"+deepCrawl+" " + depthText + "</center>");
+    }
+
     comp.add(frm);
     return comp;
   }
