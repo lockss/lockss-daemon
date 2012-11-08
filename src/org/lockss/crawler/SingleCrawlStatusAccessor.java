@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatusAccessor.java,v 1.11 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: SingleCrawlStatusAccessor.java,v 1.12 2012-11-08 06:22:04 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
     ListUtil.fromArray(new ColumnDescriptor[] {
       new ColumnDescriptor(MIME_TYPE_NAME, "Mime Type",
                            ColumnDescriptor.TYPE_STRING),
-      new ColumnDescriptor(MIME_TYPE_NUM_URLS, "URLs Found",
+      new ColumnDescriptor(MIME_TYPE_NUM_URLS, "URLs Fetched",
                            ColumnDescriptor.TYPE_INT,
                            "Number of pages of that mime type fetched during this crawl"),
     });
@@ -165,9 +165,21 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
 					ColumnDescriptor.TYPE_STRING,
 					sources));
     String startUrls = StringUtil.separatedString(status.getStartUrls());
-    res.add(new StatusTable.SummaryInfo("Starting Url(s)",
+    String startHead =
+      status.getStartUrls().size() > 1 ? "Start Urls" :  "Start Url";
+    res.add(new StatusTable.SummaryInfo(startHead,
 					ColumnDescriptor.TYPE_STRING,
 					startUrls));
+    if (status.getRefetchDepth() >= 0) {
+      res.add(new StatusTable.SummaryInfo("Refetch Depth",
+					  ColumnDescriptor.TYPE_INT,
+					  status.getRefetchDepth()));
+    }
+    if (status.getDepth() >= 0) {
+      res.add(new StatusTable.SummaryInfo("Link Depth",
+					  ColumnDescriptor.TYPE_INT,
+					  status.getDepth()));
+    }
     return res;
   }
 

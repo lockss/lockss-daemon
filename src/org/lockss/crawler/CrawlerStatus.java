@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.12 2012-07-17 08:48:25 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.13 2012-11-08 06:22:04 tlipkis Exp $
  */
 
 /*
@@ -171,6 +171,8 @@ public class CrawlerStatus {
   protected String auid = null;
   protected String auName = null;
   protected ArchivalUnit au = null;
+  protected int refetchDepth = -1;
+  protected int depth = -1;
 
   protected String type;
   private long contentBytesFetched = 0;
@@ -452,6 +454,22 @@ public class CrawlerStatus {
 
   public long getContentBytesFetched() {
     return contentBytesFetched;
+  }
+
+  public void setRefetchDepth(int val) {
+    refetchDepth = val;
+  }
+
+  public void setDepth(int val) {
+    depth = val;
+  }
+
+  public int getRefetchDepth() {
+    return refetchDepth;
+  }
+
+  public int getDepth() {
+    return depth;
   }
 
   // URL set stats
