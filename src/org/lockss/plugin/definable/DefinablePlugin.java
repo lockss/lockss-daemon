@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.69 2012-09-06 04:01:51 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.70 2012-11-08 06:19:22 tlipkis Exp $
  */
 
 /*
@@ -112,6 +112,9 @@ public class DefinablePlugin extends BasePlugin {
 
   public static final String KEY_ARTICLE_ITERATOR_PATTERN =
     "plugin_article_iterator_pattern";
+
+  public static final String KEY_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE =
+      "plugin_repair_from_publisher_when_too_close";
 
   public static final String DEFAULT_PLUGIN_VERSION = "1";
   public static final String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";

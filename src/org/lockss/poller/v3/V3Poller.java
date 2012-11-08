@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.126 2012-08-29 20:56:17 barry409 Exp $
+ * $Id: V3Poller.java,v 1.127 2012-11-08 06:19:22 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.PluginManager.AuEvent;
+import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.poller.*;
 import org.lockss.poller.PollManager.EventCtr;
 import org.lockss.poller.v3.V3Serializer.*;
@@ -344,6 +345,11 @@ public class V3Poller extends BasePoll {
     PREFIX + "enableRepairFromCache";
   public static final boolean DEFAULT_V3_ENABLE_REPAIR_FROM_CACHE = true;
   
+  public static final String PARAM_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE =
+    PREFIX + "repairFromPublisherWhenTooClose";
+  public static final boolean DEFAULT_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE =
+    false;
+  
   /**
    * The number of bytes to hash before saving poll status during hashing.
    */
@@ -442,6 +448,9 @@ public class V3Poller extends BasePoll {
   
   private boolean enableRepairFromCache =
     V3Poller.DEFAULT_V3_ENABLE_REPAIR_FROM_CACHE;
+
+  private boolean repairFromPublisherWhenTooClose =
+    V3Poller.DEFAULT_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE;
 
   // CR: Factor out common elements of the two constructors
   /**
@@ -583,6 +592,9 @@ public class V3Poller extends BasePoll {
 					 DEFAULT_REPAIR_HASH_ALL_VERSIONS);
     enableRepairFromCache = c.getBoolean(PARAM_V3_ENABLE_REPAIR_FROM_CACHE,
 					 DEFAULT_V3_ENABLE_REPAIR_FROM_CACHE);
+    repairFromPublisherWhenTooClose =
+      c.getBoolean(PARAM_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE,
+		   DEFAULT_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE);
     logUniqueVersions = c.getBoolean(PARAM_LOG_UNIQUE_VERSIONS,
 				     DEFAULT_LOG_UNIQUE_VERSIONS);
     enableHashStats = c.getBoolean(PARAM_V3_ENABLE_HASH_STATS,
@@ -1169,7 +1181,7 @@ public class V3Poller extends BasePoll {
   private void tallyVoterUrl(String voterUrl) {
     log.debug3("tallyVoterUrl: "+voterUrl);
     BlockTally tally = urlTallier.tallyVoterUrl(voterUrl);
-    checkTally(tally, voterUrl);
+    checkTally(tally, voterUrl, true);
   }
 
   /**
@@ -1185,7 +1197,7 @@ public class V3Poller extends BasePoll {
     log.debug3("tallyPollerUrl: "+pollerUrl);
     BlockTally tally = urlTallier.tallyPollerUrl(pollerUrl, hashBlock);
     signalNodeAgreement(tally, pollerUrl);
-    checkTally(tally, pollerUrl);
+    checkTally(tally, pollerUrl, true);
     return tally;
   }
 
@@ -1229,7 +1241,8 @@ public class V3Poller extends BasePoll {
    * @param url The target URL for any possible repairs.
    * @return The status of the tally.
    */
-  private BlockTally.Result checkTally(BlockTally tally, String url) {
+  private BlockTally.Result checkTally(BlockTally tally, String url,
+				       boolean repairIfNecessary) {
     // Should never happen -- if it does, track it down.
     if (url == null) {
       throw new NullPointerException("Passed a null url to checkTally!");
@@ -1260,7 +1273,9 @@ public class V3Poller extends BasePoll {
       case LOST:
 	tallyStatus.addDisagreedUrl(url);
 	log.debug2("Lost tally" + vMsg + ": " + url + " in poll " + getKey());
-	requestRepair(url, tally.getDisagreeVoters());
+	if (repairIfNecessary) {
+	  requestRepair(url, tally.getDisagreeVoters());
+	}
 	break;
       case LOST_POLLER_ONLY_BLOCK:
 	log.debug2("Lost tally" + vMsg + ": Removing " + url +
@@ -1268,10 +1283,13 @@ public class V3Poller extends BasePoll {
 	deleteBlock(url);
 	break;
       case LOST_VOTER_ONLY_BLOCK:
-	log.debug2("Lost tally. Requesting repair for missing block: " +
-		   url + " in poll " + getKey());
 	tallyStatus.addDisagreedUrl(url);
-	requestRepair(url, tally.getVoterOnlyBlockVoters());
+	if (repairIfNecessary) {
+	  // shouldn't happen
+	  log.debug2("Lost tally. Requesting repair for missing block: " +
+		     url + " in poll " + getKey());
+	  requestRepair(url, tally.getVoterOnlyBlockVoters());
+	}
 	break;
       case NOQUORUM:
 	tallyStatus.addNoQuorumUrl(url);
@@ -1281,6 +1299,10 @@ public class V3Poller extends BasePoll {
 	tallyStatus.addTooCloseUrl(url);
 	log.warning("Tally was inconclusive for block " + url + " in poll " +
 		    getKey());
+	if (repairIfNecessary &&
+	    AuUtil.getPluginDefinition(getAu()).getBoolean(DefinablePlugin.KEY_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE, repairFromPublisherWhenTooClose)) {
+	  requestRepairFromPublisher(url);
+	}
 	break;
       default:
 	log.warning("Unexpected results from tallying block " + url + ": "
@@ -1415,27 +1437,39 @@ public class V3Poller extends BasePoll {
      final String url,
      final Collection<ParticipantUserData> disagreeingVoters) {
 
-    PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
-    
-    // If we already have more than maxRepairs and maxRepairs is >= 0, 
-    // just return.  A value less than 0 means "unlimited repairs".
-    int len = repairQueue.size();
-    if (len > maxRepairs && maxRepairs >= 0) {
-      return;
+    if (okToQueueRepair()) {
+      PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
+      // Choose where to request the repair.
+      log.debug2("Deciding whether to repair from cache or publisher.  Repair "
+		 + "from cache probability=" + repairFromCache);
+      if (ProbabilisticChoice.choose(repairFromCache) ||
+	  (enableRepairFromCache && AuUtil.isPubDown(getAu()))) {
+	PeerIdentity peer = findPeerForRepair(disagreeingVoters);
+	log.debug2("Requesting repair from " + peer + ": " + url);
+	repairQueue.repairFromPeer(url, peer);
+      } else {
+	log.debug2("Requesting repair from publisher: " + url);
+	repairQueue.repairFromPublisher(url);
+      }
     }
-    
-    // If not, choose where to request the repair.
-    log.debug2("Deciding whether to repair from cache or publisher.  Repair " +
-               "from cache probability=" + repairFromCache);
-    if (ProbabilisticChoice.choose(repairFromCache) ||
-        (enableRepairFromCache && AuUtil.isPubDown(getAu()))) {
-      PeerIdentity peer = findPeerForRepair(disagreeingVoters);
-      log.debug2("Requesting repair for target: " + url + " from " + peer);
-      repairQueue.repairFromPeer(url, peer);
-    } else {
-      log.debug2("Requesting repair for target: " + url + " from publisher");
+  }
+
+  private void requestRepairFromPublisher(final String url) {
+    if (okToQueueRepair()) {
+      PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
+      log.debug2("Requesting repair from publisher: " + url);
       repairQueue.repairFromPublisher(url);
     }
+  }
+
+  // Return true iff we haven't queued more than the max allowed number of
+  // repairs
+  boolean okToQueueRepair() {
+    if (maxRepairs < 0) {
+      return true;
+    }
+    PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
+    return repairQueue.size() < maxRepairs;
   }
 
   /* Select a peer to attempt repair from. */
@@ -1451,8 +1485,7 @@ public class V3Poller extends BasePoll {
    * from doRepairs().
    */
   private void requestRepairFromPeer(String url, PeerIdentity peer) {
-    log.debug2("Requesting repair for URL " + url + " from "
-               + peer);
+    log.debug2("Requesting repair from " + peer + ": " + url);
     ParticipantUserData ud = getParticipant(peer);
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_REPAIR_REQ);
     msg.setTargetUrl(url);
@@ -1528,9 +1561,9 @@ public class V3Poller extends BasePoll {
       return;
     }
 
-    // If we have decided to repair from any peers, pass the set of URLs
-    // we want to repair to the RepairCrawler.  A callback handles checking
-    // each successfully fetched repair.
+    // If we have decided to repair any URLs from the publisher, pass the
+    // set of URLs we want to repair to the RepairCrawler.  A callback
+    // handles checking each successfully fetched repair.
     if (needPublisherRepairs) {
       log.debug("Starting publisher repair crawl for " + 
                 pendingPublisherRepairs.size() + " urls.");
@@ -1539,7 +1572,7 @@ public class V3Poller extends BasePoll {
         public void signalCrawlAttemptCompleted(boolean success,
                                                 Object cookie,
                                                 CrawlerStatus status) {
-	  log.debug3("Repair crawl complete: " + success + ", fethced: "
+	  log.debug3("Repair crawl complete: " + success + ", fetched: "
 		     + status.getUrlsFetched());
           if (success) {
             // Check the repairs.
@@ -1555,9 +1588,9 @@ public class V3Poller extends BasePoll {
         }
       };
 
+      queue.markActive(pendingPublisherRepairs);
       cm.startRepair(getAu(), pendingPublisherRepairs,
                      cb, null, null);
-      queue.markActive(pendingPublisherRepairs);
     }
     
     // If we have decided to repair from any caches, iterate over the list
@@ -1610,7 +1643,7 @@ public class V3Poller extends BasePoll {
 	  // ParticipantUserData.
 	  setStatus(V3Poller.POLLER_STATUS_TALLYING);
 	  signalNodeAgreement(tally, url);
-	  BlockTally.Result result = checkTally(tally, url);
+	  BlockTally.Result result = checkTally(tally, url, false);
 	  log.debug3("After-vote hash tally for repaired block " + url
 		     + ": " + result.printString);
 	  pollerState.getRepairQueue().markComplete(url);
