@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.93 2012-10-30 00:11:05 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.94 2012-11-08 06:22:50 tlipkis Exp $
  */
 
 /*
@@ -229,10 +229,12 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     if (crawlAborted) {
       return aborted();
     }
-    logger.info("Beginning depth " + maxDepth + " crawl " +
+    logger.info("Beginning crawl, refetch depth: " + getRefetchDepth() +
+		", max depth: " + maxDepth + " " +
 		(shouldFollowLink() ? "" : "(no follow) ") +
 		"of " + au);
     crawlStatus.addSource("Publisher");
+    crawlStatus.setRefetchDepth(getRefetchDepth());
     cus = au.getAuCachedUrlSet();
     processedUrls = new HashMap<String,CrawlUrlData>();
     maxDepthUrls = new HashMap<String,CrawlUrlData>();
@@ -311,6 +313,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       // check crawl window during crawl
       if (!withinCrawlWindow()) {
 	crawlStatus.setCrawlStatus(Crawler.STATUS_WINDOW_CLOSED);
+	crawlStatus.setDepth(hiDepth);
 	return false;
       }
       if (logger.isDebug3()) logger.debug3("Fetch queue: " + fetchQueue);
@@ -338,6 +341,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       } catch (RuntimeException e) {
 	if (crawlAborted) {
 	  logger.debug("Expected exception while aborting crawl: " + e);
+	  crawlStatus.setDepth(hiDepth);
 	  return aborted();
 	}
 	logger.warning("Unexpected exception processing: " + url, e);
@@ -349,6 +353,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       }
 
     }
+    crawlStatus.setDepth(hiDepth);
     if (!maxDepthUrls.isEmpty()) {
       String msg = "Site depth exceeds max crawl depth (" + maxDepth + ")";
       logger.error(msg + ". Stopped crawl of " + au.getName());
