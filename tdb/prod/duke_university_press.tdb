@@ -733,12 +733,12 @@
       attr[journal_id] = east
       implicit < status ; year ; name ; param[volume] >
 
-      au < testing ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 ; 1 >
-      au < testing ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 ; 2 >
-      au < testing ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 ; 3 >
-      au < testing ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 ; 4 >
-      au < testing ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 ; 5 >
-      au < testing ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
+      au < ready ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 ; 1 >
+      au < ready ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 ; 2 >
+      au < ready ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 ; 3 >
+      au < ready ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 ; 4 >
+      au < ready ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 ; 5 >
+      au < ready ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
       
     }
     
@@ -753,7 +753,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; East Asian Science, Technology and Society: an International Journal Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; released ; 2010 ; East Asian Science, Technology and Society: an International Journal Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; released ; 2011 ; East Asian Science, Technology and Society: an International Journal Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; testing ; 2012 ; East Asian Science, Technology and Society: an International Journal Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; ready ; 2012 ; East Asian Science, Technology and Society: an International Journal Volume 6 ; 6 >
 
     }
     
