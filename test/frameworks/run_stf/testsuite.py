@@ -238,6 +238,8 @@ class V3TestCases( LockssTestCases ):
         LockssTestCases.setUp( self )
         self.victim = self.clients[ 0 ]
         self.nonVictim = self.clients[ 1 ]
+        self.victim2 = self.clients[ 2 ]
+        self.victim3 = self.clients[ 3 ]
 
         for client in self.clients:
             extraConf = { 'org.lockss.auconfig.allowEditDefaultOnlyParams': True,
@@ -263,7 +265,9 @@ class V3TestCases( LockssTestCases ):
         log.info( 'Waiting for a V3 poll to be called...' )
         self.assert_( self.victim.waitForV3Poller( self.AU ), 'Timed out while waiting for V3 poll' )
         log.info( 'Successfully called a V3 poll' )
+        self._check_v3_result( nodes )
 
+    def _check_v3_result( self, nodes ):
         log.info( 'Waiting for V3 repair...' )
         self._await_repair( nodes )
         self._verify_repair( nodes )
@@ -314,6 +318,89 @@ class SimpleDamageV3TestCase( V3TestCases ):
         self._set_expected_agreement_from_damaged( nodes )
         return nodes
 
+
+class TooCloseV3Tests( V3TestCases ):
+    """Abstract class"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.local_configuration = { 'org.lockss.poll.v3.repairFromPublisherWhenTooClose': 'true' }
+        self.simulated_AU_parameters = { 'numFiles': 15 }
+            
+    def _damage_AU( self ):
+
+        node = self.victim.getRandomContentNode( self.AU )
+        url = node.url
+        self.victim.damageNode( node )
+        log.debug( 'damaged: ' + node.url )
+        node2 = self.victim2.getAuNode( self.AU, url )
+        self.victim2.damageNode( node2 )
+        log.debug( 'damaged: ' + node2.url )
+        node3 = self.victim3.getAuNode( self.AU, url )
+        self.victim3.damageNode( node3 )
+        log.debug( 'damaged: ' + node3.url )
+
+        nodes = [ node ]
+        self._set_expected_agreement_from_damaged( nodes )
+        return nodes
+
+    def _check_v3_result( self, nodes ):
+        log.info( 'Waiting for V3 repair...' )
+        self._await_complete( nodes )
+        self._verify_poll_results()
+        log.info( 'AU successfully repaired' )
+
+    def _await_complete( self, nodes ):
+        log.info( 'Waiting for V3 poll to report no quorum...' )
+        self.assert_( self.victim.waitForCompletedV3Poll( self.AU ), 'Timed out while waiting for poll to complete' )
+        log.info( 'Poll successfully completed' )
+
+    def _verify_poll_results( self ):
+        self.assertEqual( self.victim.getPollResults( self.AU ),
+                          (u'Complete', u'96.77% Agreement') )
+        poll = self.victim.findCompletedAuV3Poll( self.AU )
+        summary = self.victim.getPollSummary( poll )
+        agreed = int( summary[ 'Agreeing URLs' ][ 'value' ] )
+        too_close = int( summary[ 'Too Close URLs' ][ 'value' ] )
+        self.assertEqual( agreed, 30 )
+        self.assertEqual( too_close, 1 )
+
+class TooCloseV3TestCase( TooCloseV3Tests ):
+    """Test a too-close V3 poll"""
+
+    def __init__( self, methodName = 'runTest' ):
+        TooCloseV3Tests.__init__( self, methodName )
+            
+    def _verify_poll_results( self ):
+        self.assertEqual( self.victim.getPollResults( self.AU ),
+                          (u'Complete', u'96.77% Agreement') )
+        poll = self.victim.findCompletedAuV3Poll( self.AU )
+        summary = self.victim.getPollSummary( poll )
+        agreed = int( summary[ 'Agreeing URLs' ][ 'value' ] )
+        too_close = int( summary[ 'Too Close URLs' ][ 'value' ] )
+        completed_repairs = int( summary[ 'Completed Repairs' ][ 'value' ] )
+        self.assertEqual( agreed, 30 )
+        self.assertEqual( too_close, 1 )
+        self.assertEqual( completed_repairs, 0 )
+
+class TooCloseWithRepairV3TestCase( TooCloseV3Tests ):
+    """Test a too-close V3 poll with repair from publisher"""
+
+    def __init__( self, methodName = 'runTest' ):
+        TooCloseV3Tests.__init__( self, methodName )
+        self.local_configuration = { 'org.lockss.poll.v3.repairFromPublisherWhenTooClose': 'true' }
+            
+    def _verify_poll_results( self ):
+        self.assertEqual( self.victim.getPollResults( self.AU ),
+                          (u'Complete', u'96.77% Agreement') )
+        poll = self.victim.findCompletedAuV3Poll( self.AU )
+        summary = self.victim.getPollSummary( poll )
+        agreed = int( summary[ 'Agreeing URLs' ][ 'value' ] )
+        too_close = int( summary[ 'Too Close URLs' ][ 'value' ] )
+        completed_repairs = int( summary[ 'Completed Repairs' ][ 'value' ] )
+        self.assertEqual( agreed, 30 )
+        self.assertEqual( too_close, 1 )
+        self.assertEqual( completed_repairs, 1 )
 
 class RandomDamageV3TestCase( V3TestCases ):
     """Test a V3 Poll with a random number of damaged AUs"""
@@ -729,6 +816,8 @@ simpleV3Tests = unittest.TestSuite( ( FormatExpectedAgreementTestCase(),
                                       SimpleExtraFileV3TestCase(),
                                       LastFileDeleteV3TestCase(),
                                       LastFileExtraV3TestCase(),
+                                      TooCloseWithRepairV3TestCase(),
+                                      TooCloseV3TestCase(),
                                       VotersDontParticipateV3TestCase(),
                                       NoQuorumV3TestCase(),
                                       TotalLossRecoveryV3TestCase(),

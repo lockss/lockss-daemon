@@ -1,6 +1,6 @@
 """LOCKSS daemon interface library."""
 
-# $Id: lockss_daemon.py,v 1.36 2012-10-24 20:53:26 thib_gc Exp $
+# $Id: lockss_daemon.py,v 1.37 2012-11-08 06:19:48 tlipkis Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -722,6 +722,15 @@ class Client:
         # Requires a pre-quoted key
         return self._getStatusTable( 'V3VoterTable', 'AU~' + urllib.quote( AU.auId ) )[ 1 ]
 
+    def findCompletedAuV3Poll( self, au ):
+        for poll in self.getAuV3Pollers():
+            if self.isAuIdOrRef( poll[ 'auId' ], au ) and poll[ 'status' ] == 'Complete':
+                return poll
+        return None
+
+    def getPollSummary( self, poll ):
+        return self.getV3PollerDetail( poll[ 'pollId' ][ 'key' ] )[ 0 ]
+
     def getV3PollerDetail( self, key ):
         """Returns both the summary and table."""
         return self._getStatusTable( 'V3PollerDetailTable', key )
@@ -1128,6 +1137,9 @@ class Local_Client( Client ):
         """Return a list of all nodes that have children."""
         table = self._getStatusTable( 'ArchivalUnitTable', au.auId, True )[ 1 ]
         return [ self.getAuNode( au, row[ 'NodeName' ] ) for row in table if row.get( 'NodeChildCount', '-' ) != '-' ]
+
+    def getRandomContentNode( self, au ):
+        return self.__getRandomContentNode( au )
 
     def __getRandomContentNode( self, au ):
         """Raise an error if the AU has not been created or crawled."""
