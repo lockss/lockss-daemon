@@ -843,7 +843,7 @@
 
     param[base_url] = http://ajj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[0] = manifest page redirects to itself
+    comment[notReady] = manifest page redirects to itself, RU4490
     
     au < notReady ; exists ; 1956 ; The American Journal of Jurisprudence Volume 1 ; 1 ; >
     au < notReady ; exists ; 1957 ; The American Journal of Jurisprudence Volume 2 ; 2 ; >
