@@ -11,8 +11,6 @@
       issnl = 0037-1106
     >
 
-    {
-
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.bssaonline.org/
       implicit < status ; year ; name ; param[volume_name] >
@@ -124,6 +122,16 @@
 
     }
 
+    {
+    
+    title <
+      name = Seismological Research Letters ;
+      issn = 0845-0695 ;
+      eissn = 1938-2057 
+     >
+
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+    
   }
 
 }
