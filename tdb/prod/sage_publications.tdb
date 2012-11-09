@@ -13943,8 +13943,9 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://ksm.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        comment[notReady] = manifest page exists, the url is not working
 
-        au < exists ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 >
+        au < notReady ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 >
 
       }
 
