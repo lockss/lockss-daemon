@@ -13943,9 +13943,8 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://ksm.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        comment[notReady] = manifest page exists, the url is not working
 
-        au < notReady ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 >
+        au < exists ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 >
 
       }
 
@@ -37085,7 +37084,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Toxicology and Industrial Health Volume 25 ; 25 >
         au < released ; 2010 ; Toxicology and Industrial Health Volume 26 ; 26 >
         au < released ; 2011 ; Toxicology and Industrial Health Volume 27 ; 27 >
-        au < manifest ; 2012 ; Toxicology and Industrial Health Volume 28 ; 28 >
+        au < ready ; 2012 ; Toxicology and Industrial Health Volume 28 ; 28 >
 
       }
 
@@ -37209,7 +37208,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Transactions of the Institute of Measurement and Control Volume 31 ; 31 >
         au < released ; 2010 ; Transactions of the Institute of Measurement and Control Volume 32 ; 32 >
         au < released ; 2011 ; Transactions of the Institute of Measurement and Control Volume 33 ; 33 >
-        au < manifest ; 2012 ; Transactions of the Institute of Measurement and Control Volume 34 ; 34 >
+        au < ready ; 2012 ; Transactions of the Institute of Measurement and Control Volume 34 ; 34 >
 
       }
 
@@ -37291,7 +37290,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Transcultural Psychiatry Volume 46 ; 46 >
         au < released ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 >
         au < released ; 2011 ; Transcultural Psychiatry Volume 48 ; 48 >
-        au < manifest ; 2012 ; Transcultural Psychiatry Volume 49 ; 49 >
+        au < ready ; 2012 ; Transcultural Psychiatry Volume 49 ; 49 >
 
       }
 
@@ -37328,7 +37327,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; Transfer: European Review of Labour and Research Volume 15 ; 15 >
         au < released ; 2010 ; Transfer: European Review of Labour and Research Volume 16 ; 16 >
         au < released ; 2011 ; Transfer: European Review of Labour and Research Volume 17 ; 17 >
-        au < manifest ; 2012 ; Transfer: European Review of Labour and Research Volume 18 ; 18 >
+        au < ready ; 2012 ; Transfer: European Review of Labour and Research Volume 18 ; 18 >
 
       }
 
@@ -37375,7 +37374,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Transformation: An International Journal of Holistic Mission Studies Volume 26 ; 26 >
         au < released ; 2010 ; Transformation: An International Journal of Holistic Mission Studies Volume 27 ; 27 >
         au < released ; 2011 ; Transformation: An International Journal of Holistic Mission Studies Volume 28 ; 28 >
-        au < manifest ; 2012 ; Transformation: An International Journal of Holistic Mission Studies Volume 29 ; 29 >
+        au < ready ; 2012 ; Transformation: An International Journal of Holistic Mission Studies Volume 29 ; 29 >
 
       }
 
@@ -37516,7 +37515,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Traumatology Volume 15 ; 15 >
         au < released ; 2010 ; Traumatology Volume 16 ; 16 >
         au < released ; 2011 ; Traumatology Volume 17 ; 17 >
-        au < manifest ; 2012 ; Traumatology Volume 18 ; 18 >
+        au < ready ; 2012 ; Traumatology Volume 18 ; 18 >
 
       }
 
@@ -37564,7 +37563,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Trends in Amplification Volume 13 ; 13 >
         au < released ; 2010 ; Trends in Amplification Volume 14 ; 14 >
         au < released ; 2011 ; Trends in Amplification Volume 15 ; 15 >
-        au < manifest ; 2012 ; Trends in Amplification Volume 16 ; 16 >
+        au < ready ; 2012 ; Trends in Amplification Volume 16 ; 16 >
 
       }
 
@@ -37612,7 +37611,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009-2010 ; Update: Applications of Research in Music Education Volume 28 ; 28 >
         au < released ; 2010-2011 ; Update: Applications of Research in Music Education Volume 29 ; 29 >
         au < released ; 2011 ; Update: Applications of Research in Music Education Volume 30 ; 30 >
-        au < manifest ; 2012 ; Update: Applications of Research in Music Education Volume 31 ; 31 >
+        au < ready ; 2012 ; Update: Applications of Research in Music Education Volume 31 ; 31 >
 
       }
 
