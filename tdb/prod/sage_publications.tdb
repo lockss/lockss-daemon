@@ -3261,7 +3261,7 @@
         au < testing ; 2001 ; Australian Journal of Management Volume 26 ; 26 >
         au < testing ; 2002 ; Australian Journal of Management Volume 27 ; 27 >
         au < testing ; 2003 ; Australian Journal of Management Volume 28 ; 28 >
-        au < testing ; 2004 ; Australian Journal of Management Volume 29 ; 29 >
+        au < ready ; 2004 ; Australian Journal of Management Volume 29 ; 29 >
         au < testing ; 2005 ; Australian Journal of Management Volume 30 ; 30 >
         au < ready ; 2006 ; Australian Journal of Management Volume 31 ; 31 >
         au < testing ; 2007 ; Australian Journal of Management Volume 32 ; 32 >
@@ -3713,7 +3713,7 @@
         implicit < status ; year ; name ; param[volume_name] >
 
 
-        au < testing ; 2007-2008 ; British Journal of Pain Volume 1 ; 1 >
+        au < ready ; 2007-2008 ; British Journal of Pain Volume 1 ; 1 >
         au < released ; 2008 ; British Journal of Pain Volume 2 ; 2 >
         au < released ; 2009 ; British Journal of Pain Volume 3 ; 3 >
         au < released ; 2010 ; British Journal of Pain Volume 4 ; 4 >
@@ -6868,7 +6868,7 @@
         au < doNotProcess ; 2009 ; Crime & Delinquency Volume 55 ; 55 >
         au < released ; 2010 ; Crime & Delinquency Volume 56 ; 56 >
         au < released ; 2011 ; Crime & Delinquency Volume 57 ; 57 >
-        au < manifest ; 2012 ; Crime & Delinquency Volume 58 ; 58 >
+        au < testing ; 2012 ; Crime & Delinquency Volume 58 ; 58 >
 
       }
 
