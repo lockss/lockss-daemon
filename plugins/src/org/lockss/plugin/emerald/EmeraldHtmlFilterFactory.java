@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldHtmlFilterFactory.java,v 1.9 2012-11-06 01:27:07 thib_gc Exp $ 
+ * $Id: EmeraldHtmlFilterFactory.java,v 1.10 2012-11-12 20:27:36 thib_gc Exp $ 
  */
 
 /*
@@ -126,7 +126,7 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
     
     Reader reader = FilterUtil.getReader(filteredStream, encoding);
     Reader filtReader = makeFilteredReader(reader);
-    return new ReaderInputStream(filtReader);
+    return new ReaderInputStream(filtReader, encoding);
   }
 
   static Reader makeFilteredReader(Reader reader) {
@@ -138,5 +138,5 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
     return new WhiteSpaceFilter(tagFilter);
   }
-
+  
 }
