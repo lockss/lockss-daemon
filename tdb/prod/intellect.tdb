@@ -664,16 +664,16 @@
       param[journal_id] = tmsd
       param[journal_issn] = 1474-2748
 
-      au < testing ; 2002 ; International Journal of Technology Management & Sustainable Development Volume 1 ; 1 >
-      au < testing ; 2003-2004 ; International Journal of Technology Management & Sustainable Development Volume 2 ; 2 >
-      au < testing ; 2004 ; International Journal of Technology Management & Sustainable Development Volume 3 ; 3 >
-      au < testing ; 2005 ; International Journal of Technology Management & Sustainable Development Volume 4 ; 4 >
-      au < testing ; 2006 ; International Journal of Technology Management & Sustainable Development Volume 5 ; 5 >
-      au < testing ; 2007 ; International Journal of Technology Management & Sustainable Development Volume 6 ; 6 >
-      au < testing ; 2008 ; International Journal of Technology Management & Sustainable Development Volume 7 ; 7 >
-      au < testing ; 2009 ; International Journal of Technology Management & Sustainable Development Volume 8 ; 8 >
-      au < testing ; 2010-2011 ; International Journal of Technology Management & Sustainable Development Volume 9 ; 9 >
-      au < testing ; 2011 ; International Journal of Technology Management & Sustainable Development Volume 10 ; 10 >
+      au < ready ; 2002 ; International Journal of Technology Management & Sustainable Development Volume 1 ; 1 >
+      au < ready ; 2003-2004 ; International Journal of Technology Management & Sustainable Development Volume 2 ; 2 >
+      au < ready ; 2004 ; International Journal of Technology Management & Sustainable Development Volume 3 ; 3 >
+      au < ready ; 2005 ; International Journal of Technology Management & Sustainable Development Volume 4 ; 4 >
+      au < ready ; 2006 ; International Journal of Technology Management & Sustainable Development Volume 5 ; 5 >
+      au < ready ; 2007 ; International Journal of Technology Management & Sustainable Development Volume 6 ; 6 >
+      au < ready ; 2008 ; International Journal of Technology Management & Sustainable Development Volume 7 ; 7 >
+      au < ready ; 2009 ; International Journal of Technology Management & Sustainable Development Volume 8 ; 8 >
+      au < ready ; 2010-2011 ; International Journal of Technology Management & Sustainable Development Volume 9 ; 9 >
+      au < ready ; 2011 ; International Journal of Technology Management & Sustainable Development Volume 10 ; 10 >
 
     }
 
@@ -686,10 +686,10 @@
       param[journal_id] = jafp
       param[journal_issn] = 1753-6421
 
-      au < testing ; 2007-2009 ; Journal of Adaptation in Film & Performance Volume 1 ; 1 >
-      au < testing ; 2009 ; Journal of Adaptation in Film & Performance Volume 2 ; 2 >
-      au < testing ; 2010-2011 ; Journal of Adaptation in Film & Performance Volume 3 ; 3 >
-      au < testing ; 2011 ; Journal of Adaptation in Film & Performance Volume 4 ; 4 >
+      au < ready ; 2007-2009 ; Journal of Adaptation in Film & Performance Volume 1 ; 1 >
+      au < ready ; 2009 ; Journal of Adaptation in Film & Performance Volume 2 ; 2 >
+      au < ready ; 2010-2011 ; Journal of Adaptation in Film & Performance Volume 3 ; 3 >
+      au < ready ; 2011 ; Journal of Adaptation in Film & Performance Volume 4 ; 4 >
 
     }
 
@@ -702,9 +702,9 @@
       param[journal_id] = jac
       param[journal_issn] = 1754-9221
 
-      au < testing ; 2009 ; Journal of African Cinema Volume 1 ; 1 >
-      au < testing ; 2010 ; Journal of African Cinema Volume 2 ; 2 >
-      au < testing ; 2011 ; Journal of African Cinema Volume 3 ; 3 >
+      au < ready ; 2009 ; Journal of African Cinema Volume 1 ; 1 >
+      au < ready ; 2010 ; Journal of African Cinema Volume 2 ; 2 >
+      au < ready ; 2011 ; Journal of African Cinema Volume 3 ; 3 >
 
     }
 
@@ -717,9 +717,9 @@
       param[journal_id] = jams
       param[journal_issn] = 2040-199X
 
-      au < manifest ; 2009 ; Journal of African Media Studies Volume 1 ; 1 >
-      au < manifest ; 2010 ; Journal of African Media Studies Volume 2 ; 2 >
-      au < manifest ; 2011 ; Journal of African Media Studies Volume 3 ; 3 >
+      au < testing ; 2009 ; Journal of African Media Studies Volume 1 ; 1 >
+      au < testing ; 2010 ; Journal of African Media Studies Volume 2 ; 2 >
+      au < testing ; 2011 ; Journal of African Media Studies Volume 3 ; 3 >
 
     }
 
@@ -732,8 +732,8 @@
       param[journal_id] = jaah
       param[journal_issn] = 2040-2457
 
-      au < manifest ; 2010 ; Journal of Applied Arts & Health Volume 1 ; 1 >
-      au < manifest ; 2011 ; Journal of Applied Arts & Health Volume 2 ; 2 >
+      au < testing ; 2010 ; Journal of Applied Arts & Health Volume 1 ; 1 >
+      au < testing ; 2011 ; Journal of Applied Arts & Health Volume 2 ; 2 >
 
     }
 
@@ -746,10 +746,10 @@
       param[journal_id] = jammr
       param[journal_issn] = 1751-9411
 
-      au < manifest ; 2007-2009 ; Journal of Arab & Muslim Media Research Volume 1 ; 1 >
-      au < manifest ; 2009 ; Journal of Arab & Muslim Media Research Volume 2 ; 2 >
-      au < manifest ; 2010 ; Journal of Arab & Muslim Media Research Volume 3 ; 3 >
-      au < manifest ; 2011 ; Journal of Arab & Muslim Media Research Volume 4 ; 4 >
+      au < testing ; 2007-2009 ; Journal of Arab & Muslim Media Research Volume 1 ; 1 >
+      au < testing ; 2009 ; Journal of Arab & Muslim Media Research Volume 2 ; 2 >
+      au < testing ; 2010 ; Journal of Arab & Muslim Media Research Volume 3 ; 3 >
+      au < testing ; 2011 ; Journal of Arab & Muslim Media Research Volume 4 ; 4 >
 
     }
 
@@ -762,8 +762,8 @@
       param[journal_id] = jaac
       param[journal_issn] = 1757-1936
 
-      au < manifest ; 2009-2011 ; Journal of Arts & Communities Volume 1 ; 1 >
-      au < manifest ; 2011 ; Journal of Arts & Communities Volume 2 ; 2 >
+      au < testing ; 2009-2011 ; Journal of Arts & Communities Volume 1 ; 1 >
+      au < testing ; 2011 ; Journal of Arts & Communities Volume 2 ; 2 >
 
     }
 
