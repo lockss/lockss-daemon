@@ -1282,7 +1282,7 @@
       issnl = 1040-0656
     >
     
-	comment[title] = The title of the journal has changed to Feminist Formations since Vol22. Formerly NWSA Journal, through Volume 21, No. 3, Fall 2009.(E-ISSN: 1527-1889, Print ISSN: 1040-0656)
+	comment[title] = The title of the journal has changed to Feminist Formations since Volume 22. Formerly NWSA Journal, through Volume 21, No. 3, Fall 2009.(E-ISSN: 1527-1889, Print ISSN: 1040-0656)
     comment[continuity] = continued by 2151-7363
 
     param[journal_dir] = nwsa_journal
@@ -1299,8 +1299,6 @@
     au < released ; 2007 ; NWSA Journal Volume 19 ; 19 >
     au < released ; 2008 ; NWSA Journal Volume 20 ; 20 >
     au < released ; 2009 ; NWSA Journal Volume 21 ; 21 >
-    au < testing ; 2010 ; NWSA Journal Volume 22 ; 22 >
-    au < testing ; 2011 ; NWSA Journal Volume 23 ; 23 >
 
   }
   
