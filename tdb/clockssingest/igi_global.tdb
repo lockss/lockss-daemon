@@ -1382,7 +1382,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of Information Technology Project Management (IJITPM) Volume 1 ; 1 > 
     au < released ; manifest ; 2011 ; International Journal of Information Technology Project Management (IJITPM) Volume 2 ; 2 > 
-    au < testing ; exists ; 2012 ; International Journal of Information Technology Project Management (IJITPM) Volume 3 ; 3 > 
+    au < released ; manifest ; 2012 ; International Journal of Information Technology Project Management (IJITPM) Volume 3 ; 3 > 
 
   }
 
@@ -1780,7 +1780,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 2 ; 2 > 
     au < released ; manifest ; 2011 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 3 ; 3 > 
-    au < testing ; exist ; 2012 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 4 ; 4 > 
+    au < testing ; exists ; 2012 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 4 ; 4 > 
 
   }
 
@@ -1926,7 +1926,7 @@
     >
 	param[journal_issn] = 2160-9624
 	
-    au < testing ; exist ; 2012 ; International Journal of Risk and Contingency Management (IJRCM) Volume 1 ; 1 > 
+    au < released ; manifest ; 2012 ; International Journal of Risk and Contingency Management (IJRCM) Volume 1 ; 1 > 
 
   }
 
@@ -1954,7 +1954,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of Secure Software Engineering (IJSSE) Volume 1 ; 1 > 
     au < released ; manifest ; 2011 ; International Journal of Secure Software Engineering (IJSSE) Volume 2 ; 2 > 
-    au < testing ; exist ; 2012 ; International Journal of Secure Software Engineering (IJSSE) Volume 3 ; 3 > 
+    au < released ; manifest ; 2012 ; International Journal of Secure Software Engineering (IJSSE) Volume 3 ; 3 > 
 
   }
 
@@ -1970,7 +1970,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 1 ; 1 > 
     au < released ; manifest ; 2011 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 2 ; 2 > 
-    au < testing ; exist ; 2012 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 3 ; 3 > 
+    au < released ; manifest ; 2012 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 3 ; 3 > 
 
   }
 
@@ -1985,7 +1985,7 @@
 	param[journal_issn] = 2155-5028
 	
     au < released ; manifest ; 2011 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 1 ; 1 > 
-    au < testing ; exist ; 2012 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 2 ; 2 > 
+    au < released ; manifest ; 2012 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 2 ; 2 > 
 
   }
 
@@ -2016,7 +2016,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 1 ; 1 > 
     au < released ; manifest ; 2011 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 2 ; 2 > 
-    au < testing ; exist ; 2012 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 3 ; 3 > 
+    au < testing ; exists ; 2012 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 3 ; 3 > 
 
   }
 
