@@ -45,6 +45,9 @@
     param[journal_dir] = contemporary_southeast_asia_a_journal_of_international_and_strategic_affairs
     attr[journal_id] = csa
 
+    au < exists ; 2003 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 25 ; 25 >
+    au < exists ; 2004 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 26 ; 26 >
+    au < exists ; 2005 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 27 ; 27 >
     au < released ; 2006 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 28 ; 28 >
     au < released ; 2007 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 29 ; 29 >
     au < released ; 2008 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 30 ; 30 >
@@ -67,6 +70,9 @@
     param[journal_dir] = sojourn_journal_of_social_issues_in_southeast_asia
     attr[journal_id] =  soj
 
+    au < exists ; 2003 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 18 ; 18 >
+    au < exists ; 2004 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 19 ; 19 >
+    au < exists ; 2005 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 20 ; 20 >
     au < ready ; 2006 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 21 ; 21 >
     au < ready ; 2007 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 22 ; 22 >
     au < ready ; 2008 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 23 ; 23 >
