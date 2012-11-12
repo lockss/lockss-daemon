@@ -51,17 +51,17 @@ END {
   s[10] = "zapped"
   sn = 11
   
-  sc[0] = "X"
-  sc[1] = "E"
-  sc[2] = "M"
-  sc[3] = "W"
-  sc[4] = "C"
-  sc[5] = "T"
-  sc[6] = "N"
-  sc[7] = "R"
-  sc[8] = "D"
-  sc[9] = "S"
-  sc[10] = "Z"
+  sc[0] = "expe"
+  sc[1] = "exis"
+  sc[2] = "mani"
+  sc[3] = "want"
+  sc[4] = "craw"
+  sc[5] = "test"
+  sc[6] = "notR"
+  sc[7] = "rele"
+  sc[8] = "down"
+  sc[9] = "supe"
+  sc[10] = "zapp"
   scn = 11
 
   #print out header
