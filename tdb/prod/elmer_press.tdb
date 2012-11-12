@@ -23,7 +23,7 @@
 
       au < released ; 2010 ; Cardiology Research Volume 1 ; 1 ; 2010 >
       au < released ; 2011 ; Cardiology Research Volume 2 ; 2 ; 2011 >
-      au < testing ; 2012 ; Cardiology Research Volume 3 ; 3 ; 2012 >
+      au < ready ; 2012 ; Cardiology Research Volume 3 ; 3 ; 2012 >
 
     }
 
@@ -43,7 +43,7 @@
       au < testing ; 2009 ; Gastroenterology Research Volume 2 ; 2 ; 2009 >
       au < testing ; 2010 ; Gastroenterology Research Volume 3 ; 3 ; 2010 >
       au < testing ; 2011 ; Gastroenterology Research Volume 4 ; 4 ; 2011 >
-      au < testing ; 2012 ; Gastroenterology Research Volume 5 ; 5 ; 2012 >
+      au < ready ; 2012 ; Gastroenterology Research Volume 5 ; 5 ; 2012 >
 
     }
 
@@ -58,9 +58,9 @@
 
       param[base_url] = http://ijcp.elmerpress.com/
       param[journal_id] = ijcp
-      comment[0] = no content published yet--Feb 2012 launch
+      comment[notReady] = low agreement
 
-      au < testing ; 2012 ; International Journal of Clinical Pediatrics Volume 1 ; 1 ; 2012 >
+      au < notReady ; 2012 ; International Journal of Clinical Pediatrics Volume 1 ; 1 ; 2012 >
       
     }
 
@@ -75,9 +75,9 @@
 
       param[base_url] = http://jcgo.elmerpress.com/
       param[journal_id] = jcgo
-      comment[0] = no content published yet--Feb 2012 launch
+      comment[notReady] = low agreement
 
-      au < testing ; 2012 ; Journal of Clinical Gynecology and Obstetrics Volume 1 ; 1 ; 2012 >
+      au < notReady ; 2012 ; Journal of Clinical Gynecology and Obstetrics Volume 1 ; 1 ; 2012 >
       
     }
 
@@ -95,7 +95,7 @@
       au < testing ; 2009 ; Journal of Clinical Medicine Research Volume 1 ; 1 ; 2009 >
       au < testing ; 2010 ; Journal of Clinical Medicine Research Volume 2 ; 2 ; 2010 >
       au < testing ; 2011 ; Journal of Clinical Medicine Research Volume 3 ; 3 ; 2011 >
-      au < testing ; 2012 ; Journal of Clinical Medicine Research Volume 4 ; 4 ; 2012 >
+      au < ready ; 2012 ; Journal of Clinical Medicine Research Volume 4 ; 4 ; 2012 >
 
     }
 
@@ -110,9 +110,10 @@
 
       param[base_url] = http://jcs.elmerpress.com/
       param[journal_id] = jcs
+      comment[notReady] = low agreement
       
-      au < testing ; 2011 ; Journal of Current Surgery Volume 1 ; 1 ; 2011 >
-      au < testing ; 2012 ; Journal of Current Surgery Volume 2 ; 2 ; 2012 >
+      au < notReady ; 2011 ; Journal of Current Surgery Volume 1 ; 1 ; 2011 >
+      au < notReady ; 2012 ; Journal of Current Surgery Volume 2 ; 2 ; 2012 >
 
     }
 
