@@ -1768,10 +1768,10 @@
       au < manifest ; exists ; 2005 ; Aquatic Biosystems Volume 1 ; 1 >
       au < manifest ; exists ; 2006 ; Aquatic Biosystems Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; Aquatic Biosystems Volume 3 ; 3 >
-      au < manifest ; exists ; 2008 ; Aquatic Biosystems Volume 4 ; 4 >
-      au < manifest ; exists ; 2009 ; Aquatic Biosystems Volume 5 ; 5 >
-      au < manifest ; exists ; 2010 ; Aquatic Biosystems Volume 6 ; 6 >
-      au < manifest ; exists ; 2011 ; Aquatic Biosystems Volume 7 ; 7 >
+      au < crawling ; exists ; 2008 ; Aquatic Biosystems Volume 4 ; 4 >
+      au < crawling ; exists ; 2009 ; Aquatic Biosystems Volume 5 ; 5 >
+      au < crawling ; exists ; 2010 ; Aquatic Biosystems Volume 6 ; 6 >
+      au < crawling ; exists ; 2011 ; Aquatic Biosystems Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
 
     }
@@ -1787,9 +1787,9 @@
       param[base_url] = http://www.archpublichealth.com/
       param[journal_issn] = 0778-7367
 
-      au < manifest ; exists ; 2009-2010 ; Archives of Public Health Volume 67 ; 67 >
-      au < manifest ; exists ; 2010-2011 ; Archives of Public Health Volume 68 ; 68 >
-      au < manifest ; exists ; 2011 ; Archives of Public Health Volume 69 ; 69 >
+      au < crawling ; exists ; 2009-2010 ; Archives of Public Health Volume 67 ; 67 >
+      au < crawling ; exists ; 2010-2011 ; Archives of Public Health Volume 68 ; 68 >
+      au < crawling ; exists ; 2011 ; Archives of Public Health Volume 69 ; 69 >
       au < crawling ; exists ; 2012 ; Archives of Public Health Volume 70 ; 70 >
 
     }
