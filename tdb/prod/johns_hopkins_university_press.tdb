@@ -1799,23 +1799,23 @@
     param[journal_dir] = emily_dickinson_journal
     attr[journal_id] = edj
 
-    au < manifest ; 1992 ; The Emily Dickinson Journal Volume 1 ; 1 >
-    au < manifest ; 1993 ; The Emily Dickinson Journal Volume 2 ; 2 >
-    au < manifest ; 1994 ; The Emily Dickinson Journal Volume 3 ; 3 >
-    au < manifest ; 1995 ; The Emily Dickinson Journal Volume 4 ; 4 >
-    au < manifest ; 1996 ; The Emily Dickinson Journal Volume 5 ; 5 >
-    au < manifest ; 1997 ; The Emily Dickinson Journal Volume 6 ; 6 >
+    au < testing ; 1992 ; The Emily Dickinson Journal Volume 1 ; 1 >
+    au < testing ; 1993 ; The Emily Dickinson Journal Volume 2 ; 2 >
+    au < testing ; 1994 ; The Emily Dickinson Journal Volume 3 ; 3 >
+    au < testing ; 1995 ; The Emily Dickinson Journal Volume 4 ; 4 >
+    au < testing ; 1996 ; The Emily Dickinson Journal Volume 5 ; 5 >
+    au < testing ; 1997 ; The Emily Dickinson Journal Volume 6 ; 6 >
     au < released ; 1998 ; The Emily Dickinson Journal Volume 7 ; 7 >
     au < released ; 1999 ; The Emily Dickinson Journal Volume 8 ; 8 >
     au < released ; 2000 ; The Emily Dickinson Journal Volume 9 ; 9 >
     au < released ; 2001 ; The Emily Dickinson Journal Volume 10 ; 10 >
     au < released ; 2002 ; The Emily Dickinson Journal Volume 11 ; 11 >
     au < released ; 2003 ; The Emily Dickinson Journal Volume 12 ; 12 >
-    au < released ; 2004; The Emily Dickinson Journal Volume 13 ; 13 >
-    au < released ; 2005; The Emily Dickinson Journal Volume 14 ; 14 >
-    au < released ; 2006; The Emily Dickinson Journal Volume 15 ; 15 >
-    au < released ; 2007; The Emily Dickinson Journal Volume 16 ; 16 >
-    au < released ; 2008; The Emily Dickinson Journal Volume 17 ; 17 >
+    au < released ; 2004 ; The Emily Dickinson Journal Volume 13 ; 13 >
+    au < released ; 2005 ; The Emily Dickinson Journal Volume 14 ; 14 >
+    au < released ; 2006 ; The Emily Dickinson Journal Volume 15 ; 15 >
+    au < released ; 2007 ; The Emily Dickinson Journal Volume 16 ; 16 >
+    au < released ; 2008 ; The Emily Dickinson Journal Volume 17 ; 17 >
     au < ready ; 2009 ;The Emily Dickinson Journal Volume 18 ; 18 >
     au < ready ; 2010 ; The Emily Dickinson Journal Volume 19 ; 19 >
     au < ready ; 2011 ; The Emily Dickinson Journal Volume 20 ; 20 >
