@@ -15,7 +15,7 @@
       param[base_url] = http://www.bssaonline.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      comment[bssa] = missing manifest pages V1-101
+      comment[bssa] = missing manifest pages Volumes 1-101
 
       au < released ; 1911 ; Bulletin of the Seismological Society of America Volume 1 ; 1 >
       au < released ; 1912 ; Bulletin of the Seismological Society of America Volume 2 ; 2 >
