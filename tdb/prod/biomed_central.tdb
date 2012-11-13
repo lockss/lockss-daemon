@@ -1742,14 +1742,14 @@
 
       title <
         name = Antimicrobial Resistance and Infection Control ;
-        issn = 2048-7010 ;
-        issnl = 2048-7010
+        issn = 2047-2994 ;
+        issnl = 2047-2994
       >
 
       param[base_url] = http://www.aricjournal.com/
-      param[journal_issn] = 2048-7010
+      param[journal_issn] = 2047-2994
 
-      au < testing ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
+      au < exists ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
 
     }
 
