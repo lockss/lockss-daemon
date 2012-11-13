@@ -17,18 +17,18 @@
       param[base_url] = http://www.jaaha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 1995 ; Journal of the American Animal Hospital Association [abstracts only] Volume 31 ; 31 >
-      au < ready ; 1996 ; Journal of the American Animal Hospital Association [abstracts only] Volume 32 ; 32 >
-      au < ready ; 1997 ; Journal of the American Animal Hospital Association [abstracts only] Volume 33 ; 33 >
-      au < ready ; 1998 ; Journal of the American Animal Hospital Association Volume 34 ; 34 >
-      au < ready ; 1999 ; Journal of the American Animal Hospital Association Volume 35 ; 35 >
-      au < ready ; 2000 ; Journal of the American Animal Hospital Association Volume 36 ; 36 >
-      au < ready ; 2001 ; Journal of the American Animal Hospital Association Volume 37 ; 37 >
-      au < ready ; 2002 ; Journal of the American Animal Hospital Association Volume 38 ; 38 >
-      au < ready ; 2003 ; Journal of the American Animal Hospital Association Volume 39 ; 39 >
-      au < ready ; 2004 ; Journal of the American Animal Hospital Association Volume 40 ; 40 >
-      au < ready ; 2005 ; Journal of the American Animal Hospital Association Volume 41 ; 41 >
-      au < ready ; 2006 ; Journal of the American Animal Hospital Association Volume 42 ; 42 >
+      au < releasing ; 1995 ; Journal of the American Animal Hospital Association [abstracts only] Volume 31 ; 31 >
+      au < releasing ; 1996 ; Journal of the American Animal Hospital Association [abstracts only] Volume 32 ; 32 >
+      au < releasing ; 1997 ; Journal of the American Animal Hospital Association [abstracts only] Volume 33 ; 33 >
+      au < releasing ; 1998 ; Journal of the American Animal Hospital Association Volume 34 ; 34 >
+      au < releasing ; 1999 ; Journal of the American Animal Hospital Association Volume 35 ; 35 >
+      au < releasing ; 2000 ; Journal of the American Animal Hospital Association Volume 36 ; 36 >
+      au < releasing ; 2001 ; Journal of the American Animal Hospital Association Volume 37 ; 37 >
+      au < releasing ; 2002 ; Journal of the American Animal Hospital Association Volume 38 ; 38 >
+      au < releasing ; 2003 ; Journal of the American Animal Hospital Association Volume 39 ; 39 >
+      au < releasing ; 2004 ; Journal of the American Animal Hospital Association Volume 40 ; 40 >
+      au < releasing ; 2005 ; Journal of the American Animal Hospital Association Volume 41 ; 41 >
+      au < releasing ; 2006 ; Journal of the American Animal Hospital Association Volume 42 ; 42 >
       au < testing ; 2007 ; Journal of the American Animal Hospital Association Volume 43 ; 43 >
       au < ready ; 2008 ; Journal of the American Animal Hospital Association Volume 44 ; 44 >
       au < testing ; 2009 ; Journal of the American Animal Hospital Association Volume 45 ; 45 >

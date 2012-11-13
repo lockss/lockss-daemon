@@ -237,11 +237,11 @@
     au < HighWirePressH20Plugin ; ready ; 1981 ; Age and Ageing Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; ready ; 1982 ; Age and Ageing Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; testing ; 1983 ; Age and Ageing Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; ready ; 1984 ; Age and Ageing Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; ready ; 1985 ; Age and Ageing Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; ready ; 1986 ; Age and Ageing Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; ready ; 1987 ; Age and Ageing Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; ready ; 1988 ; Age and Ageing Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; releasing ; 1984 ; Age and Ageing Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; releasing ; 1985 ; Age and Ageing Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; releasing ; 1986 ; Age and Ageing Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; releasing ; 1987 ; Age and Ageing Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; releasing ; 1988 ; Age and Ageing Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 1989 ; Age and Ageing Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 1990 ; Age and Ageing Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 1991 ; Age and Ageing Volume 20 ; 20 >
@@ -5302,7 +5302,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 >
 
   }
 
@@ -5322,7 +5322,7 @@
     param[base_url] = http://ehjcimaging.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; ready ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 >
 
     }
 
@@ -5387,7 +5387,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; European Journal of Heart Failure Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; European Journal of Heart Failure Volume 14 ; 14 >
 
     }
 
@@ -5416,7 +5416,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Heart Failure Supplements Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; European Journal of Heart Failure Supplements Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; European Journal of Heart Failure Supplements Volume 11 ; 11 >
 
   }
 
@@ -5533,7 +5533,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 >
 
     }
 
@@ -5587,7 +5587,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; European Journal of Public Health Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Public Health Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Public Health Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; European Journal of Public Health Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; European Journal of Public Health Volume 22 ; 22 >
 
     }
 
@@ -5646,7 +5646,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Review of Agricultural Economics Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Review of Agricultural Economics Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; European Review of Agricultural Economics Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; European Review of Agricultural Economics Volume 39 ; 39 >
 
     }
 
@@ -5680,7 +5680,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; European Review of Economic History Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Review of Economic History Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Review of Economic History Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; European Review of Economic History Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; European Review of Economic History Volume 16 ; 16 >
 
   }
 
@@ -5738,7 +5738,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; European Sociological Review Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Sociological Review Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Sociological Review Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; European Sociological Review Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; European Sociological Review Volume 28 ; 28 >
 
     }
 
@@ -5831,7 +5831,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Family Practice Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Family Practice Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Family Practice Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Family Practice Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Family Practice Volume 29 ; 29 >
 
     }
 
@@ -6002,7 +6002,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Forestry: An International Journal of Forest Research Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Forestry: An International Journal of Forest Research Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Forestry: An International Journal of Forest Research Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Forestry: An International Journal of Forest Research Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Forestry: An International Journal of Forest Research Volume 85 ; 85 >
 
     }
 
@@ -6081,7 +6081,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Forum for Modern Language Studies Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Forum for Modern Language Studies Volume 48 ; 48 >
 
     }
 
@@ -6138,7 +6138,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; French History Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2010 ; French History Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2011 ; French History Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; French History Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; French History Volume 26 ; 26 >
 
     }
 
@@ -6234,7 +6234,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2010 ; French Studies: A Quarterly Review Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; released ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 >
 
     }
 
@@ -6308,7 +6308,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; French Studies Bulletin Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 2010 ; French Studies Bulletin Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2011 ; French Studies Bulletin Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; French Studies Bulletin Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; French Studies Bulletin Volume 33 ; 33 >
 
     }
 
@@ -6329,7 +6329,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Genome Biology and Evolution Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Genome Biology and Evolution Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Genome Biology and Evolution Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 >
 
   }
 
@@ -6394,7 +6394,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; German History Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2010 ; German History Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; released ; 2011 ; German History Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; German History Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; German History Volume 30 ; 30 >
 
     }
 
@@ -6573,7 +6573,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Health & Social Work Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Health & Social Work Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Health & Social Work Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Health & Social Work Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Health & Social Work Volume 37 ; 37 >
 
   }
 
@@ -6630,7 +6630,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Health Education Research Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Health Education Research Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Health Education Research Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Health Education Research Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Health Education Research Volume 27 ; 27 >
 
     }
 
@@ -6689,7 +6689,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Health Policy and Planning Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Health Policy and Planning Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Health Policy and Planning Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Health Policy and Planning Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Health Policy and Planning Volume 27 ; 27 >
 
     }
 
@@ -6747,7 +6747,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Health Promotion International Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Health Promotion International Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Health Promotion International Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Health Promotion International Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Health Promotion International Volume 27 ; 27 >
 
     }
 
@@ -6844,8 +6844,8 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; History Workshop Journal Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; released ; 2011 ; History Workshop Journal Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; released ; 2011 ; History Workshop Journal Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; History Workshop Journal Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; History Workshop Journal Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; History Workshop Journal Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; History Workshop Journal Volume 74 ; 74 >
 
     }
 
@@ -6917,7 +6917,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Holocaust and Genocide Studies Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Holocaust and Genocide Studies Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Holocaust and Genocide Studies Volume 26 ; 26 >
 
     }
 
@@ -7175,7 +7175,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Human Rights Law Review Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Human Rights Law Review Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Human Rights Law Review Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Human Rights Law Review Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Human Rights Law Review Volume 12 ; 12 >
 
     }
 
@@ -7310,7 +7310,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 >
 
   }
 
@@ -7589,7 +7589,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; IMA Journal of Management Mathematics Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2010 ; IMA Journal of Management Mathematics Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2011 ; IMA Journal of Management Mathematics Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; IMA Journal of Management Mathematics Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; IMA Journal of Management Mathematics Volume 23 ; 23 >
 
     }
 
@@ -7649,7 +7649,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; IMA Journal of Mathematical Control and Information Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2010 ; IMA Journal of Mathematical Control and Information Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2011 ; IMA Journal of Mathematical Control and Information Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; IMA Journal of Mathematical Control and Information Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; IMA Journal of Mathematical Control and Information Volume 29 ; 29 >
 
     }
 
@@ -7768,7 +7768,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Industrial and Corporate Change Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Industrial and Corporate Change Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Industrial and Corporate Change Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Industrial and Corporate Change Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Industrial and Corporate Change Volume 21 ; 21 >
 
     }
 
@@ -8470,7 +8470,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; International Journal of Low-Carbon Technologies Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2010 ; International Journal of Low-Carbon Technologies Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Journal of Low-Carbon Technologies Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; International Journal of Low-Carbon Technologies Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; International Journal of Low-Carbon Technologies Volume 7 ; 7 >
 
     }
 
@@ -8632,7 +8632,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; International Journal of Refugee Law Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2010 ; International Journal of Refugee Law Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Journal of Refugee Law Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; International Journal of Refugee Law Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; International Journal of Refugee Law Volume 24 ; 24 >
 
     }
 
@@ -8701,7 +8701,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; International Mathematics Research Notices Volume 2009 ; 2009 >
     au < HighWirePressH20Plugin ; released ; 2010 ; International Mathematics Research Notices Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Mathematics Research Notices Volume 2011 ; 2011 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; International Mathematics Research Notices Volume 2012 ; 2012 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; International Mathematics Research Notices Volume 2012 ; 2012 >
 
     }
 
@@ -8785,7 +8785,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; International Relations of the Asia-Pacific Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2010 ; International Relations of the Asia-Pacific Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Relations of the Asia-Pacific Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; International Relations of the Asia-Pacific Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; International Relations of the Asia-Pacific Volume 12 ; 12 >
 
     }
 
@@ -8835,7 +8835,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; ITNOW Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; released ; 2010 ; ITNOW Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; released ; 2011 ; ITNOW Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; ITNOW Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; ITNOW Volume 54 ; 54 >
 
     }
 
@@ -8911,7 +8911,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Japanese Journal of Clinical Oncology Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Japanese Journal of Clinical Oncology Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Japanese Journal of Clinical Oncology Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Japanese Journal of Clinical Oncology Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Japanese Journal of Clinical Oncology Volume 42 ; 42 >
 
     }
 
@@ -8933,7 +8933,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Jerusalem Review of Legal Studies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Jerusalem Review of Legal Studies Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 >
 
   }
 
@@ -10142,7 +10142,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Environmental Law Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Environmental Law Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Environmental Law Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Journal of Environmental Law Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Journal of Environmental Law Volume 24 ; 24 >
 
     }
 
@@ -18667,12 +18667,12 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Toxicological Sciences Volume 122 ; 122 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Toxicological Sciences Volume 123 ; 123 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Toxicological Sciences Volume 124 ; 124 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Toxicological Sciences Volume 125 ; 125 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Toxicological Sciences Volume 125 ; 125 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Toxicological Sciences Volume 126 ; 126 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Toxicological Sciences Volume 127 ; 127 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Toxicological Sciences Volume 128 ; 128 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Toxicological Sciences Volume 129 ; 129 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; Toxicological Sciences Volume 130 ; 130 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Toxicological Sciences Volume 128 ; 128 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Toxicological Sciences Volume 129 ; 129 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; Toxicological Sciences Volume 130 ; 130 >
 
     }
 

@@ -411,7 +411,7 @@
       au < released ; 2009 ; The Global South Volume 3 ; 3 >
       au < released ; 2010 ; The Global South Volume 4 ; 4 >
 	  au < released ; 2011 ; The Global South Volume 5 ; 5 >
-	  au < ready ; 2012 ; The Global South Volume 6 ; 6 >
+	  au < releasing ; 2012 ; The Global South Volume 6 ; 6 >
     }
 
   }
@@ -1300,7 +1300,7 @@
       attr[journal_id] = spe
       implicit < status ; year ; name ; param[volume] >
     
-      au < ready ; 2012 ; Spectrum: The Journal on Black Men Volume 1 ; 1 >
+      au < releasing ; 2012 ; Spectrum: The Journal on Black Men Volume 1 ; 1 >
 
     }
     

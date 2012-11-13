@@ -114,7 +114,7 @@
     au < released ; 2009 ; French Forum Volume 34 ; 34 >
     au < released ; 2010 ; French Forum Volume 35 ; 35 >
     au < released ; 2011 ; French Forum Volume 36 ; 36 >
-    au < ready ; 2012 ; French Forum Volume 37 ; 37 >
+    au < releasing ; 2012 ; French Forum Volume 37 ; 37 >
 
   }
 
@@ -180,7 +180,7 @@
     param[journal_dir] = journal_of_literature_and_trauma_studies
     attr[journal_id] = jlts
 
-    au < ready ; 2012 ; Journal of Literature and Trauma Studies Volume 1 ; 1 >
+    au < releasing ; 2012 ; Journal of Literature and Trauma Studies Volume 1 ; 1 >
     
   }
 
@@ -230,7 +230,7 @@
     au < released ; 2009 ; Legacy: A Journal of American Women Writers Volume 26 ; 26 >
     au < released ; 2010 ; Legacy: A Journal of American Women Writers Volume 27 ; 27 >
     au < released ; 2011 ; Legacy: A Journal of American Women Writers Volume 28 ; 28 >
-    au < ready ; 2012 ; Legacy: A Journal of American Women Writers Volume 29 ; 29 >
+    au < releasing ; 2012 ; Legacy: A Journal of American Women Writers Volume 29 ; 29 >
 
   }
 
@@ -250,7 +250,7 @@
     au < released ; 2009 ; Native South Volume 2 ; 2 >
     au < released ; 2010 ; Native South Volume 3 ; 3 >
     au < released ; 2011 ; Native South Volume 4 ; 4 >
-    au < ready ; 2012 ; Native South Volume 5 ; 5 >
+    au < releasing ; 2012 ; Native South Volume 5 ; 5 >
   }
 
   {
@@ -294,7 +294,7 @@
     comment[29] = issue nos. 3-4
 
     au < released ; 2001 ; Nineteenth-Century French Studies Volume 29 ; 29 >
-    au < ready ; 2001-2002 ; Nineteenth-Century French Studies Volume 30 ; 30 >
+    au < releasing ; 2001-2002 ; Nineteenth-Century French Studies Volume 30 ; 30 >
     au < released ; 2002-2003 ; Nineteenth-Century French Studies Volume 31 ; 31 >
     au < released ; 2003-2004 ; Nineteenth-Century French Studies Volume 32 ; 32 >
     au < released ; 2004-2005 ; Nineteenth-Century French Studies Volume 33 ; 33 >
@@ -305,7 +305,7 @@
     au < released ; 2009-2010 ; Nineteenth-Century French Studies Volume 38 ; 38 >
     au < released ; 2010-2011 ; Nineteenth-Century French Studies Volume 39 ; 39 >
     au < released ; 2011-2012 ; Nineteenth-Century French Studies Volume 40 ; 40 >
-    au < ready ; 2012-2013 ; Nineteenth-Century French Studies Volume 41 ; 41 >
+    au < releasing ; 2012-2013 ; Nineteenth-Century French Studies Volume 41 ; 41 >
 
   }
 
@@ -323,7 +323,7 @@
 
     au < released ; 2010 ; Nouvelles Études Francophones Volume 25 ; 25 >
     au < released ; 2011 ; Nouvelles Études Francophones Volume 26 ; 26 >
-    au < ready ; 2012 ; Nouvelles Études Francophones Volume 27 ; 27 >
+    au < releasing ; 2012 ; Nouvelles Études Francophones Volume 27 ; 27 >
 
   }
 
@@ -383,9 +383,9 @@
     attr[journal_id] = stw
 
     au < released ; 2009 ; StoryWorlds: A Journal of Narrative Studies Volume 1 ; 1 >
-    au < released ; 2010 ; StoryWorlds: A Journal of Narrative Studies 2 ; 2 >
-    au < released ; 2011 ; StoryWorlds: A Journal of Narrative Studies 3 ; 3 >
-    au < ready ; 2012 ; StoryWorlds: A Journal of Narrative Studies 4 ; 4 >
+    au < released ; 2010 ; StoryWorlds: A Journal of Narrative Studies Volume 2 ; 2 >
+    au < released ; 2011 ; StoryWorlds: A Journal of Narrative Studies Volume 3 ; 3 >
+    au < releasing ; 2012 ; StoryWorlds: A Journal of Narrative Studies Volume 4 ; 4 >
 
   }
 

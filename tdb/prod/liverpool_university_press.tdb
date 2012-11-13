@@ -353,7 +353,7 @@
       au < released ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
       au < released ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
       au < released ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
-      au < ready ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
+      au < releasing ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
 
     }
 
@@ -373,10 +373,10 @@
     implicit < status ; year ; name ; param[volume_name] >      
     param[journal_issn] = 1745-8188     
 
-	au < ready ; 2005 ; Labour History Review Volume 70 ; 70 >
-	au < ready ; 2006 ; Labour History Review Volume 71 ; 71 >
-	au < ready ; 2007 ; Labour History Review Volume 72 ; 72 >
-	au < ready ; 2008 ; Labour History Review Volume 73 ; 73 >
+	au < releasing ; 2005 ; Labour History Review Volume 70 ; 70 >
+	au < releasing ; 2006 ; Labour History Review Volume 71 ; 71 >
+	au < releasing ; 2007 ; Labour History Review Volume 72 ; 72 >
+	au < releasing ; 2008 ; Labour History Review Volume 73 ; 73 >
 	au < released ; 2009 ; Labour History Review Volume 74 ; 74 >
 	au < released ; 2010 ; Labour History Review Volume 75 ; 75 >
 	au < released ; 2011 ; Labour History Review Volume 76 ; 76 >
@@ -533,7 +533,7 @@
       au < released ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
       au < released ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
       au < released ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
-      au < ready ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
+      au < releasing ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
 
     }        
 

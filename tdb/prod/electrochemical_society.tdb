@@ -67,7 +67,7 @@
     param[base_url] = http://ssl.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Solid State Letters Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; ECS Solid State Letters Volume 1 ; 1 >
     
   }
 
@@ -83,7 +83,7 @@
     param[base_url] = http://eel.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Electrochemistry Letters Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; ECS Electrochemistry Letters Volume 1 ; 1 >
     
   }
 
@@ -99,7 +99,7 @@
     param[base_url] = http://jss.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Journal of Solid State Science and Technology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; ECS Journal of Solid State Science and Technology Volume 1 ; 1 >
     
   }
 
@@ -207,11 +207,11 @@
     au < HighWirePressH20Plugin ; exists ; 2011 ; ECS Transactions Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; exists ; 2011 ; ECS Transactions Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; exists ; 2011 ; ECS Transactions Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; ready ; 2011 ; ECS Transactions Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; ready ; 2011 ; ECS Transactions Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; ready ; 2011 ; ECS Transactions Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Transactions Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Transactions Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; releasing ; 2011 ; ECS Transactions Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; releasing ; 2011 ; ECS Transactions Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; releasing ; 2011 ; ECS Transactions Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; ECS Transactions Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; ECS Transactions Volume 45 ; 45 >
     
   }
 

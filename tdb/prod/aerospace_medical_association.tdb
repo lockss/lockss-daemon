@@ -20,13 +20,13 @@
     param[journal_issn] = 0095-6562
     implicit < status ; year ; name ; param[volume_name] >
   
-    au < ready ; 2003 ; Aviation, Space, and Environmental Medicine Volume 74 ; 74 >
-    au < ready ; 2004 ; Aviation, Space, and Environmental Medicine Volume 75 ; 75 >
-    au < ready ; 2005 ; Aviation, Space, and Environmental Medicine Volume 76 ; 76 >
-    au < ready ; 2006 ; Aviation, Space, and Environmental Medicine Volume 77 ; 77 >
-    au < ready ; 2007 ; Aviation, Space, and Environmental Medicine Volume 78 ; 78 >
-    au < ready ; 2008 ; Aviation, Space, and Environmental Medicine Volume 79 ; 79 >
-    au < ready ; 2009 ; Aviation, Space, and Environmental Medicine Volume 80 ; 80 >
+    au < releasing ; 2003 ; Aviation, Space, and Environmental Medicine Volume 74 ; 74 >
+    au < releasing ; 2004 ; Aviation, Space, and Environmental Medicine Volume 75 ; 75 >
+    au < releasing ; 2005 ; Aviation, Space, and Environmental Medicine Volume 76 ; 76 >
+    au < releasing ; 2006 ; Aviation, Space, and Environmental Medicine Volume 77 ; 77 >
+    au < releasing ; 2007 ; Aviation, Space, and Environmental Medicine Volume 78 ; 78 >
+    au < releasing ; 2008 ; Aviation, Space, and Environmental Medicine Volume 79 ; 79 >
+    au < releasing ; 2009 ; Aviation, Space, and Environmental Medicine Volume 80 ; 80 >
     au < testing ; 2010 ; Aviation, Space, and Environmental Medicine Volume 81 ; 81 >
     au < testing ; 2011 ; Aviation, Space, and Environmental Medicine Volume 82 ; 82 >
     au < ready ; 2012 ; Aviation, Space, and Environmental Medicine Volume 83 ; 83 >
