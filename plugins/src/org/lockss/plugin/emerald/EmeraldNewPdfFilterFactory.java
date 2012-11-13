@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldNewPdfFilterFactory.java,v 1.6 2012-11-13 20:01:14 thib_gc Exp $
+ * $Id: EmeraldNewPdfFilterFactory.java,v 1.7 2012-11-13 20:03:35 thib_gc Exp $
  */
 
 /*
@@ -37,8 +37,6 @@ import java.io.*;
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
-
-import com.sun.tools.internal.ws.processor.model.java.JavaException;
 
 /**
  * <p>
