@@ -39830,6 +39830,471 @@ comment[mpj] = now published by Brill
   
     }
 
+    {
+
+      title <
+        name = Australian Journal of Education ;
+        issn = 0004-9441 ;
+        issnl = 0004-9441
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://aed.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Australian Journal of Education Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Asia-Pacific Journal of Management Research and Innovation ;
+        issn = 2319-510X ;
+        issnl = 2319-510X
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://abr.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Asia-Pacific Journal of Management Research and Innovation Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Australian Journal of Career Development ;
+        issn = 1038-4162 ;
+        eissn = 2200-6974 ;
+        issnl = 1038-4162
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://acd.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Australian Journal of Career Development Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = AADE in Practice ;
+        issn = 2325-1603 ;
+        issnl = 2325-1603
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://aip.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; AADE in Practice Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Annals of the ICRP ;
+        issn = 0146-6453 ;
+        issnl = 0146-6453
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://ani.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Annals of the ICRP Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Jindal Journal of Business Research ;
+        issn = 2278-6821 ;
+        issnl = 2278-6821
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://brj.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Jindal Journal of Business Research Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Canadian Journal of Occupational Therapy ;
+        issn = 0008-4174 ;
+        eissn = 1911-9828 ;
+        issnl = 0008-4174
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://cjo.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Canadian Journal of Occupational Therapy Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Communication and Sport ;
+        issn = 2167-4795 ;
+        eissn = 2167-4809 ;
+        issnl = 2167-4795
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://com.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Communication and Sport Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Critical Research on Religion ;
+        issn = 2050-3032 ;
+        eissn = 2050-3040 ;
+        issnl = 2050-3032
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://crr.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Critical Research on Religion Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Drug Science, Policy and Law
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://dsp.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Drug Science, Policy and Law Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Emerging Adulthood ;
+        issn = 2167-6968 ;
+        eissn = 2167-6984 ;
+        issnl = 2167-6968
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://eax.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Emerging Adulthood Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Foot & Ankle International ;
+        issn = 1071-1007 ;
+        eissn = 1944-7876 ;
+        issnl = 1071-1007
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://fai.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Foot & Ankle International Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Forum Italicum: A Journal of Italian Studies ;
+        issn = 0014-5858 ;
+        eissn = 2168-989X ;
+        issnl = 0014-5858
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://foi.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Investigative Medicine High Impact Case Reports ;
+        issn = 2324-7096 ;
+        eissn = 2324-7096 ;
+        issnl = 2324-7096
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://hic.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Journal of Investigative Medicine High Impact Case Reports Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of International Medical Research ;
+        issn = 0300-0605 ;
+        eissn = 1473-2300 ;
+        issnl = 0300-0605
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://imr.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Journal of International Medical Research Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = InnovAiT: The RCGP Journal for Associates in Training ;
+        issn = 1755-7380 ;
+        eissn = 1755-739 ;
+        issnl = 1755-7380
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://ino.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Missiology: An International Review ;
+        issn = 0091-8296 ;
+        eissn = 2051-3623 ;
+        issnl = 0091-8296
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://mis.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Missiology: An International Review Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Mobile Media & Communication ;
+        issn = 2050-1579 ;
+        eissn = 2050-1587 ;
+        issnl = 2050-1579
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://mmc.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Mobile Media & Communication Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Pacifica: Australasian Theological Studies ;
+        issn = 1030-570X ;
+        eissn = 1839-2598 ;
+        issnl = 1030-570X
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://paa.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Pacifica: Australasian Theological Studies Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = SAGE Open Medical Case Reports
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://sco.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; SAGE Open Medical Case Reports Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = SAGE Open Engineering
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://seo.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; SAGE Open Engineering Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = SAGE Open Medicine
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://smo.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; SAGE Open Medicine Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = South Asian Journal of Macroeconomics and Public Finance ;
+        issn = 2277-9787 ;
+        issnl = 2277-9787
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://smp.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; South Asian Journal of Macroeconomics and Public Finance Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Infectious Disease ;
+        issn = 2049-9361 ;
+        eissn = 2049-937X ;
+        issnl = 2049-9361
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://tai.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Therapeutic Advances in Infectious Disease Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = United European Gastroenterology Journal ;
+        issn = 2050-6406 ;
+        eissn = 2050-6414 ;
+        issnl = 2050-6406
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://ueg.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; United European Gastroenterology Journal Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Clinical Urology
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://uro.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Journal of Clinical Urology Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = World Future Review ;
+        issn = 1946-7567 ;
+        eissn = 2169-279 ;
+        issnl = 1946-7567
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://wfr.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; World Future Review Volume 1 ; 1 >
+
+    }
+
   }
 
 }
