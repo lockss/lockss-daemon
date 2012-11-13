@@ -973,7 +973,7 @@
 
     param[journal_id] = 150
     
-    au < manifest ; 2009 ; Immunotherapy Insights Volume 1 ; 2009 >
+    au < testing ; 2009 ; Immunotherapy Insights Volume 1 ; 2009 >
     au < ready ; 2011 ; Immunotherapy Insights Volume 2 ; 2011 >
 
 
@@ -989,7 +989,7 @@
 
     param[journal_id] = 171
     
-    au < manifest ; 2010 ; Indian Journal of Clinical Medicine Volume 1 ; 2010 >
+    au < testing ; 2010 ; Indian Journal of Clinical Medicine Volume 1 ; 2010 >
     au < ready ; 2011 ; Indian Journal of Clinical Medicine Volume 2 ; 2011 >
     au < ready ; 2012 ; Indian Journal of Clinical Medicine Volume 3 ; 2012 >
 
@@ -1006,9 +1006,9 @@
 
     param[journal_id] = 112
     
-    au < manifest ; 2008 ; Infectious Diseases: Research and Treatment Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Infectious Diseases: Research and Treatment Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Infectious Diseases: Research and Treatment Volume 3 ; 2010 >
+    au < testing ; 2008 ; Infectious Diseases: Research and Treatment Volume 1 ; 2008 >
+    au < testing ; 2009 ; Infectious Diseases: Research and Treatment Volume 2 ; 2009 >
+    au < testing ; 2010 ; Infectious Diseases: Research and Treatment Volume 3 ; 2010 >
     au < ready ; 2011 ; Infectious Diseases: Research and Treatment Volume 4 ; 2011 >
     au < ready ; 2012 ; Infectious Diseases: Research and Treatment Volume 5 ; 2012 >
 
@@ -1025,11 +1025,11 @@
 
     param[journal_id] = 21
     
-    au < manifest ; 2006 ; Integrative Medicine Insights Volume 1 ; 2006 >
-    au < manifest ; 2007 ; Integrative Medicine Insights Volume 2 ; 2007 >
-    au < manifest ; 2008 ; Integrative Medicine Insights Volume 3 ; 2008 >
-    au < manifest ; 2009 ; Integrative Medicine Insights Volume 4 ; 2009 >
-    au < manifest ; 2010 ; Integrative Medicine Insights Volume 5 ; 2010 >
+    au < testing ; 2006 ; Integrative Medicine Insights Volume 1 ; 2006 >
+    au < testing ; 2007 ; Integrative Medicine Insights Volume 2 ; 2007 >
+    au < testing ; 2008 ; Integrative Medicine Insights Volume 3 ; 2008 >
+    au < testing ; 2009 ; Integrative Medicine Insights Volume 4 ; 2009 >
+    au < testing ; 2010 ; Integrative Medicine Insights Volume 5 ; 2010 >
     au < ready ; 2011 ; Integrative Medicine Insights Volume 6 ; 2011 >
     au < ready ; 2012 ; Integrative Medicine Insights Volume 7 ; 2012 >
     
@@ -1048,8 +1048,8 @@
 
     param[journal_id] = 129
     
-    au < manifest ; 2009 ; International Journal of Insect Science Volume 1 ; 2009 >
-    au < manifest ; 2010 ; International Journal of Insect Science Volume 2 ; 2010 >
+    au < testing ; 2009 ; International Journal of Insect Science Volume 1 ; 2009 >
+    au < testing ; 2010 ; International Journal of Insect Science Volume 2 ; 2010 >
     au < ready ; 2011 ; International Journal of Insect Science Volume 3 ; 2011 >
     au < ready ; 2012 ; International Journal of Insect Science Volume 4 ; 2012 >
 
