@@ -4,6 +4,10 @@
     <string>org.lockss.plugin.emc.EarlyModernCulturePlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>&quot;Early Modern Culture %d&quot;, volume</string>
   </entry>
