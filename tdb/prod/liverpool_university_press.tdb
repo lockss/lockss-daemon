@@ -332,12 +332,12 @@
       param[journal_dir] = journal_of_literary_and_cultural_disability_studies
       attr[journal_id] = jlc
 
-      au < testing ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
-      au < testing ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >      
+      au < doesNotExist ; 0 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
+      au < doesNotExist ; 0 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >      
       au < released ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
       au < released ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
       au < released ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
-      au < testing ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
+      au < ready ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
     
     }
     
@@ -373,10 +373,10 @@
     implicit < status ; year ; name ; param[volume_name] >      
     param[journal_issn] = 1745-8188     
 
-	au < testing ; 2005 ; Labour History Review Volume 70 ; 70 >
-	au < testing ; 2006 ; Labour History Review Volume 71 ; 71 >
-	au < testing ; 2007 ; Labour History Review Volume 72 ; 72 >
-	au < testing ; 2008 ; Labour History Review Volume 73 ; 73 >
+	au < ready ; 2005 ; Labour History Review Volume 70 ; 70 >
+	au < ready ; 2006 ; Labour History Review Volume 71 ; 71 >
+	au < ready ; 2007 ; Labour History Review Volume 72 ; 72 >
+	au < ready ; 2008 ; Labour History Review Volume 73 ; 73 >
 	au < released ; 2009 ; Labour History Review Volume 74 ; 74 >
 	au < released ; 2010 ; Labour History Review Volume 75 ; 75 >
 	au < released ; 2011 ; Labour History Review Volume 76 ; 76 >
