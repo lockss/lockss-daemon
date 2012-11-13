@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldNewPdfFilterFactory.java,v 1.5 2012-07-19 09:57:37 thib_gc Exp $
+ * $Id: EmeraldNewPdfFilterFactory.java,v 1.6 2012-11-13 20:01:14 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,8 @@ import java.io.*;
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
+
+import com.sun.tools.internal.ws.processor.model.java.JavaException;
 
 /**
  * <p>
@@ -143,6 +145,18 @@ public class EmeraldNewPdfFilterFactory extends ExtractingPdfFilterFactory {
         this.pdfDocument = pdfDocument;
         for (PdfPage pdfPage : pdfDocument.getPages()) {
           outputPage(pdfPage);
+        }
+      }
+      @Override
+      public void outputPage(PdfPage pdfPage) throws PdfException {
+        try {
+          super.outputPage(pdfPage);
+        } catch (java.lang.Error error) {
+          // In PDFBox 1.6.0, TIFFFaxDecoder throws java.lang.Error
+          // in various unimplemented cases. I'm not kidding.
+          if (!error.getMessage().startsWith("TIFFFaxDecoder")) {
+            throw error;
+          }
         }
       }
     };
