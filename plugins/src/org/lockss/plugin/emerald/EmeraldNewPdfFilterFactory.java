@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldNewPdfFilterFactory.java,v 1.7 2012-11-13 20:03:35 thib_gc Exp $
+ * $Id: EmeraldNewPdfFilterFactory.java,v 1.8 2012-11-13 20:18:34 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.io.*;
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 /**
  * <p>
@@ -52,6 +53,8 @@ import org.lockss.plugin.*;
  */
 public class EmeraldNewPdfFilterFactory extends ExtractingPdfFilterFactory {
 
+  protected static final Logger logger = Logger.getLogger(EmeraldNewPdfFilterFactory.class); 
+  
   public static class FrontPageWorker extends PdfTokenStreamWorker {
 
     protected boolean result;
@@ -150,9 +153,12 @@ public class EmeraldNewPdfFilterFactory extends ExtractingPdfFilterFactory {
         try {
           super.outputPage(pdfPage);
         } catch (java.lang.Error error) {
-          // In PDFBox 1.6.0, TIFFFaxDecoder throws java.lang.Error
-          // in various unimplemented cases. I'm not kidding.
-          if (!error.getMessage().startsWith("TIFFFaxDecoder")) {
+          if (error.getMessage().startsWith("TIFFFaxDecoder")) {
+            // In PDFBox 1.6.0, TIFFFaxDecoder throws java.lang.Error
+            // in various unimplemented cases. I'm not kidding.
+            logger.debug("TIFFFaxDecoder threw java.lang.Error, skipping page", error);
+          }
+          else {
             throw error;
           }
         }
