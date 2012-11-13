@@ -1189,10 +1189,10 @@
       param[journal_id] = ts
       param[journal_issn] = 1751-4193
     
-      au < manifest ; 2007-2008 ; The Soundtrack Volume 1 ; 1 >
-      au < manifest ; 2009 ; The Soundtrack Volume 2 ; 2 >
-      au < manifest ; 2010 ; The Soundtrack Volume 3 ; 3 >
-      au < manifest ; 2011 ; The Soundtrack Volume 4 ; 4 >
+      au < testing ; 2007-2008 ; The Soundtrack Volume 1 ; 1 >
+      au < testing ; 2009 ; The Soundtrack Volume 2 ; 2 >
+      au < testing ; 2010 ; The Soundtrack Volume 3 ; 3 >
+      au < testing ; 2011 ; The Soundtrack Volume 4 ; 4 >
 
     }
 
