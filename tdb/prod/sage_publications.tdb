@@ -160,7 +160,7 @@
         au < released ; 1999 ; Acta Sociologica Volume 42 ; 42 >
         au < released ; 2000 ; Acta Sociologica Volume 43 ; 43 >
         au < doesNotExist ; 0 ; Acta Sociologica Volume 44 ; 44 >
-        au < releasing ; 2002 ; Acta Sociologica Volume 45 ; 45 >
+        au < released ; 2002 ; Acta Sociologica Volume 45 ; 45 >
         au < released ; 2003 ; Acta Sociologica Volume 46 ; 46 >
         au < released ; 2004 ; Acta Sociologica Volume 47 ; 47 >
         au < doNotProcess ; 2005 ; Acta Sociologica Volume 48 ; 48 >
@@ -651,7 +651,7 @@
         au < released ; 1997 ; Advances in Dental Research Volume 11 ; 11 >
         au < released ; 1998 ; Advances in Dental Research Volume 12 ; 12 >
         au < released ; 1999 ; Advances in Dental Research Volume 13 ; 13 >
-        au < releasing ; 2000 ; Advances in Dental Research Volume 14 ; 14 >
+        au < released ; 2000 ; Advances in Dental Research Volume 14 ; 14 >
         au < released ; 2001 ; Advances in Dental Research Volume 15 ; 15 >
         au < released ; 2002 ; Advances in Dental Research Volume 16 ; 16 >
         au < released ; 2003 ; Advances in Dental Research Volume 17 ; 17 >
@@ -847,7 +847,7 @@
         param[base_url] = http://ags.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < releasing ; 2012 ; Agrarian South: Journal of Political Economy Volume 1 ; 1 >
+        au < released ; 2012 ; Agrarian South: Journal of Political Economy Volume 1 ; 1 >
 
       }
 
@@ -865,7 +865,7 @@
         param[base_url] = http://alt.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < releasing ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 >
+        au < released ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 >
         au < released ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 >
         au < released ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 >
         au < released ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 >
@@ -1186,7 +1186,7 @@
         au < doNotProcess ; 2009 ; American Journal of Evaluation Volume 30 ; 30 >
         au < released ; 2010 ; American Journal of Evaluation Volume 31 ; 31 >
         au < released ; 2011 ; American Journal of Evaluation Volume 32 ; 32 >
-        au < releasing ; 2012 ; American Journal of Evaluation Volume 33 ; 33 >
+        au < released ; 2012 ; American Journal of Evaluation Volume 33 ; 33 >
 
       }
 
@@ -1597,11 +1597,11 @@
         au < manifest ; 1997 ; The American Review of Public Administration Volume 27 ; 27 >
         au < manifest ; 1998 ; The American Review of Public Administration Volume 28 ; 28 >
         au < manifest ; 1999 ; The American Review of Public Administration Volume 29 ; 29 >
-        au < releasing ; 2000 ; The American Review of Public Administration Volume 30 ; 30 >
-        au < releasing ; 2001 ; The American Review of Public Administration Volume 31 ; 31 >
-        au < releasing ; 2002 ; The American Review of Public Administration Volume 32 ; 32 >
+        au < released ; 2000 ; The American Review of Public Administration Volume 30 ; 30 >
+        au < released ; 2001 ; The American Review of Public Administration Volume 31 ; 31 >
+        au < released ; 2002 ; The American Review of Public Administration Volume 32 ; 32 >
         au < testing ; 2003 ; The American Review of Public Administration Volume 33 ; 33 >
-        au < releasing ; 2004 ; The American Review of Public Administration Volume 34 ; 34 >
+        au < released ; 2004 ; The American Review of Public Administration Volume 34 ; 34 >
         au < doNotProcess ; 2005 ; The American Review of Public Administration Volume 35 ; 35 >
         au < doNotProcess ; 2006 ; The American Review of Public Administration Volume 36 ; 36 >
         au < doNotProcess ; 2007 ; The American Review of Public Administration Volume 37 ; 37 >
@@ -1631,8 +1631,8 @@
 
         au < testing ; 2004 ; American Sociological Review Volume 69 ; 69 >
         au < testing ; 2005 ; American Sociological Review Volume 70 ; 70 >
-        au < releasing ; 2006 ; American Sociological Review Volume 71 ; 71 >
-        au < releasing ; 2007 ; American Sociological Review Volume 72 ; 72 >
+        au < released ; 2006 ; American Sociological Review Volume 71 ; 71 >
+        au < released ; 2007 ; American Sociological Review Volume 72 ; 72 >
         au < released ; 2008 ; American Sociological Review Volume 73 ; 73 >
         au < released ; 2009 ; American Sociological Review Volume 74 ; 74 >
         au < released ; 2010 ; American Sociological Review Volume 75 ; 75 >
@@ -3036,7 +3036,7 @@
         au < doNotProcess ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 >
         au < released ; 2010-2011 ; Assessment for Effective Intervention Volume 36 ; 36 >
         au < released ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 >
-        au < releasing ; 2012-2013 ; Assessment for Effective Intervention Volume 38 ; 38 >
+        au < released ; 2012-2013 ; Assessment for Effective Intervention Volume 38 ; 38 >
 
      }
 
@@ -3713,7 +3713,7 @@
         implicit < status ; year ; name ; param[volume_name] >
 
 
-        au < releasing ; 2007-2008 ; British Journal of Pain Volume 1 ; 1 >
+        au < released ; 2007-2008 ; British Journal of Pain Volume 1 ; 1 >
         au < released ; 2008 ; British Journal of Pain Volume 2 ; 2 >
         au < released ; 2009 ; British Journal of Pain Volume 3 ; 3 >
         au < released ; 2010 ; British Journal of Pain Volume 4 ; 4 >
@@ -4118,7 +4118,7 @@
         au < released ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 113 ; 113 >
         au < released ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 114 ; 114 >
         au < released ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 115 ; 115 >
-        au < releasing ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 116 ; 116 >
+        au < released ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 116 ; 116 >
 
       }
 
@@ -5249,7 +5249,7 @@
         au < doNotProcess ; 2009 ; Clinical Case Studies Volume 8 ; 8 >
         au < released ; 2010 ; Clinical Case Studies Volume 9 ; 9 >
         au < released ; 2011 ; Clinical Case Studies Volume 10 ; 10 >
-        au < releasing ; 2012 ; Clinical Case Studies Volume 11 ; 11 >
+        au < released ; 2012 ; Clinical Case Studies Volume 11 ; 11 >
 
       }
 
@@ -5602,7 +5602,7 @@
         au < doNotProcess ; 2009 ; Clinical Rehabilitation Volume 23 ; 23 >
         au < released ; 2010 ; Clinical Rehabilitation Volume 24 ; 24 >
         au < released ; 2011 ; Clinical Rehabilitation Volume 25 ; 25 >
-        au < releasing ; 2012 ; Clinical Rehabilitation Volume 26 ; 26 >
+        au < released ; 2012 ; Clinical Rehabilitation Volume 26 ; 26 >
 
       }
 
@@ -6248,7 +6248,7 @@
         au < manifest ; 2009 ; Conflict Management and Peace Science Volume 26 ; 26 >
         au < released ; 2010 ; Conflict Management and Peace Science Volume 27 ; 27 >
         au < released ; 2011 ; Conflict Management and Peace Science Volume 28 ; 28 >
-        au < releasing ; 2012 ; Conflict Management and Peace Science Volume 29 ; 29 >
+        au < released ; 2012 ; Conflict Management and Peace Science Volume 29 ; 29 >
 
       }
       
@@ -6488,7 +6488,7 @@
         au < doNotProcess ; 2009 ; Convergence: The International Journal of Research into New Media Technologies Volume 15 ; 15 >
         au < released ; 2010 ; Convergence: The International Journal of Research into New Media Technologies Volume 16 ; 16 >
         au < released ; 2011 ; Convergence: The International Journal of Research into New Media Technologies Volume 17 ; 17 >
-        au < releasing ; 2012 ; Convergence: The International Journal of Research into New Media Technologies Volume 18 ; 18 >
+        au < released ; 2012 ; Convergence: The International Journal of Research into New Media Technologies Volume 18 ; 18 >
 
       }
 
@@ -6776,7 +6776,7 @@
         au < doNotProcess ; 2009 ; The Counseling Psychologist Volume 37 ; 37 >
         au < released ; 2010 ; The Counseling Psychologist Volume 38 ; 38 >
         au < released ; 2011 ; The Counseling Psychologist Volume 39 ; 39 >
-        au < releasing ; 2012 ; The Counseling Psychologist Volume 40 ; 40 >
+        au < released ; 2012 ; The Counseling Psychologist Volume 40 ; 40 >
 
       }
 
@@ -6868,7 +6868,7 @@
         au < doNotProcess ; 2009 ; Crime & Delinquency Volume 55 ; 55 >
         au < released ; 2010 ; Crime & Delinquency Volume 56 ; 56 >
         au < released ; 2011 ; Crime & Delinquency Volume 57 ; 57 >
-        au < releasing ; 2012 ; Crime & Delinquency Volume 58 ; 58 >
+        au < released ; 2012 ; Crime & Delinquency Volume 58 ; 58 >
 
       }
 
@@ -6910,7 +6910,7 @@
         au < doNotProcess ; 2009 ; Crime, Media, Culture Volume 5 ; 5 >
         au < released ; 2010 ; Crime, Media, Culture Volume 6 ; 6 >
         au < released ; 2011 ; Crime, Media, Culture Volume 7 ; 7 >
-        au < releasing ; 2012 ; Crime, Media, Culture Volume 8 ; 8 >
+        au < released ; 2012 ; Crime, Media, Culture Volume 8 ; 8 >
 
       }
 
@@ -6956,7 +6956,7 @@
         au < doNotProcess ; 2009 ; Criminology and Criminal Justice Volume 9 ; 9 >
         au < released ; 2010 ; Criminology and Criminal Justice Volume 10 ; 10 >
         au < released ; 2011 ; Criminology and Criminal Justice Volume 11 ; 11 >
-        au < releasing ; 2012 ; Criminology and Criminal Justice Volume 12 ; 12 >
+        au < released ; 2012 ; Criminology and Criminal Justice Volume 12 ; 12 >
 
       }
 
@@ -7029,7 +7029,7 @@
         au < doNotProcess ; 2009 ; Criminal Justice and Behavior Volume 36 ; 36 >
         au < released ; 2010 ; Criminal Justice and Behavior Volume 37 ; 37 >
         au < released ; 2011 ; Criminal Justice and Behavior Volume 38 ; 38 >
-        au < releasing ; 2012 ; Criminal Justice and Behavior Volume 39 ; 39 >
+        au < released ; 2012 ; Criminal Justice and Behavior Volume 39 ; 39 >
 
       }
 
@@ -7097,7 +7097,7 @@
         au < doNotProcess ; 2009 ; Criminal Justice Policy Review Volume 20 ; 20 >
         au < released ; 2010 ; Criminal Justice Policy Review Volume 21 ; 21 >
         au < released ; 2011 ; Criminal Justice Policy Review Volume 22 ; 22 >
-        au < releasing ; 2012 ; Criminal Justice Policy Review Volume 23 ; 23 >
+        au < released ; 2012 ; Criminal Justice Policy Review Volume 23 ; 23 >
 
       }
 
@@ -7168,7 +7168,7 @@
         au < doNotProcess ; 2009 ; Criminal Justice Review Volume 34 ; 34 >
         au < released ; 2010 ; Criminal Justice Review Volume 35 ; 35 >
         au < released ; 2011 ; Criminal Justice Review Volume 36 ; 36 >
-        au < releasing ; 2012 ; Criminal Justice Review Volume 37 ; 37 >
+        au < released ; 2012 ; Criminal Justice Review Volume 37 ; 37 >
 
       }
 
@@ -7270,7 +7270,7 @@
         au < doNotProcess ; 2009 ; Critical Social Policy Volume 29 ; 29 >
         au < released ; 2010 ; Critical Social Policy Volume 30 ; 30 >
         au < released ; 2011 ; Critical Social Policy Volume 31 ; 31 >
-        au < releasing ; 2012 ; Critical Social Policy Volume 32 ; 32 >
+        au < released ; 2012 ; Critical Social Policy Volume 32 ; 32 >
 
       }
 
@@ -7326,7 +7326,7 @@
         au < manifest ; 2009 ; Critical Sociology Volume 35 ; 35 >
         au < released ; 2010 ; Critical Sociology Volume 36 ; 36 >
         au < released ; 2011 ; Critical Sociology Volume 37 ; 37 >
-        au < releasing ; 2012 ; Critical Sociology Volume 38 ; 38 >
+        au < released ; 2012 ; Critical Sociology Volume 38 ; 38 >
 
       }
     
@@ -7403,7 +7403,7 @@
         au < doNotProcess ; 2009 ; Critique of Anthropology Volume 29 ; 29 >
         au < released ; 2010 ; Critique of Anthropology Volume 30 ; 30 >
         au < released ; 2011 ; Critique of Anthropology Volume 31 ; 31 >
-        au < releasing ; 2012 ; Critique of Anthropology Volume 32 ; 32 >
+        au < released ; 2012 ; Critique of Anthropology Volume 32 ; 32 >
 
       }
 
@@ -7494,7 +7494,7 @@
         au < doNotProcess ; 2009 ; Cross-Cultural Research Volume 43 ; 43 >
         au < released ; 2010 ; Cross-Cultural Research Volume 44 ; 44 >
         au < released ; 2011 ; Cross-Cultural Research Volume 45 ; 45 >
-        au < releasing ; 2012 ; Cross-Cultural Research Volume 46 ; 46 >
+        au < released ; 2012 ; Cross-Cultural Research Volume 46 ; 46 >
 
       }
 
@@ -7552,7 +7552,7 @@
         au < doNotProcess ; 2009 ; Cultural Dynamics Volume 21 ; 21 >
         au < released ; 2010 ; Cultural Dynamics Volume 22 ; 22 >
         au < released ; 2011 ; Cultural Dynamics Volume 23 ; 23 >
-        au < releasing ; 2012 ; Cultural Dynamics Volume 24 ; 24 >
+        au < released ; 2012 ; Cultural Dynamics Volume 24 ; 24 >
 
       }
 
@@ -18000,7 +18000,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         au < released ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 >
         au < released ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 >
-        au < releasing ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 >
+        au < released ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 >
         
       }
       
@@ -18738,50 +18738,50 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         param[base_url] = http://jcp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < releasing ; 1961 ; The Journal of Clinical Pharmacology Volume 1 ; 1 >
-        au < releasing ; 1962 ; The Journal of Clinical Pharmacology Volume 2 ; 2 >
-        au < releasing ; 1963 ; The Journal of Clinical Pharmacology Volume 3 ; 3 >
-        au < releasing ; 1964 ; The Journal of Clinical Pharmacology Volume 4 ; 4 >
-        au < releasing ; 1965 ; The Journal of Clinical Pharmacology Volume 5 ; 5 >
-        au < releasing ; 1966 ; The Journal of Clinical Pharmacology Volume 6 ; 6 >
-        au < releasing ; 1967 ; The Journal of Clinical Pharmacology Volume 7 ; 7 >
-        au < releasing ; 1968 ; The Journal of Clinical Pharmacology Volume 8 ; 8 >
-        au < releasing ; 1969 ; The Journal of Clinical Pharmacology Volume 9 ; 9 >
-        au < releasing ; 1970 ; The Journal of Clinical Pharmacology Volume 10 ; 10 >
-        au < releasing ; 1971 ; The Journal of Clinical Pharmacology Volume 11 ; 11 >
-        au < releasing ; 1972 ; The Journal of Clinical Pharmacology Volume 12 ; 12 >
-        au < releasing ; 1973 ; The Journal of Clinical Pharmacology Volume 13 ; 13 >
-        au < releasing ; 1974 ; The Journal of Clinical Pharmacology Volume 14 ; 14 >
-        au < releasing ; 1975 ; The Journal of Clinical Pharmacology Volume 15 ; 15 >
-        au < releasing ; 1976 ; The Journal of Clinical Pharmacology Volume 16 ; 16 >
-        au < releasing ; 1977 ; The Journal of Clinical Pharmacology Volume 17 ; 17 >
-        au < releasing ; 1978 ; The Journal of Clinical Pharmacology Volume 18 ; 18 >
-        au < releasing ; 1979 ; The Journal of Clinical Pharmacology Volume 19 ; 19 >
-        au < releasing ; 1980 ; The Journal of Clinical Pharmacology Volume 20 ; 20 >
-        au < releasing ; 1981 ; The Journal of Clinical Pharmacology Volume 21 ; 21 >
-        au < releasing ; 1982 ; The Journal of Clinical Pharmacology Volume 22 ; 22 >
-        au < releasing ; 1983 ; The Journal of Clinical Pharmacology Volume 23 ; 23 >
-        au < releasing ; 1984 ; The Journal of Clinical Pharmacology Volume 24 ; 24 >
-        au < releasing ; 1985 ; The Journal of Clinical Pharmacology Volume 25 ; 25 >
-        au < releasing ; 1986 ; The Journal of Clinical Pharmacology Volume 26 ; 26 >
-        au < releasing ; 1987 ; The Journal of Clinical Pharmacology Volume 27 ; 27 >
-        au < releasing ; 1988 ; The Journal of Clinical Pharmacology Volume 28 ; 28 >
-        au < releasing ; 1989 ; The Journal of Clinical Pharmacology Volume 29 ; 29 >
-        au < releasing ; 1990 ; The Journal of Clinical Pharmacology Volume 30 ; 30 >
-        au < releasing ; 1991 ; The Journal of Clinical Pharmacology Volume 31 ; 31 >
-        au < releasing ; 1992 ; The Journal of Clinical Pharmacology Volume 32 ; 32 >
-        au < releasing ; 1993 ; The Journal of Clinical Pharmacology Volume 33 ; 33 >
-        au < releasing ; 1994 ; The Journal of Clinical Pharmacology Volume 34 ; 34 >
-        au < releasing ; 1995 ; The Journal of Clinical Pharmacology Volume 35 ; 35 >
-        au < releasing ; 1996 ; The Journal of Clinical Pharmacology Volume 36 ; 36 >
-        au < releasing ; 1997 ; The Journal of Clinical Pharmacology Volume 37 ; 37 >
-        au < releasing ; 1998 ; The Journal of Clinical Pharmacology Volume 38 ; 38 >
-        au < releasing ; 1999 ; The Journal of Clinical Pharmacology Volume 39 ; 39 >
-        au < releasing ; 2000 ; The Journal of Clinical Pharmacology Volume 40 ; 40 >
-        au < releasing ; 2001 ; The Journal of Clinical Pharmacology Volume 41 ; 41 >
-        au < releasing ; 2002 ; The Journal of Clinical Pharmacology Volume 42 ; 42 >
-        au < releasing ; 2003 ; The Journal of Clinical Pharmacology Volume 43 ; 43 >
-        au < releasing ; 2004 ; The Journal of Clinical Pharmacology Volume 44 ; 44 >
+        au < released ; 1961 ; The Journal of Clinical Pharmacology Volume 1 ; 1 >
+        au < released ; 1962 ; The Journal of Clinical Pharmacology Volume 2 ; 2 >
+        au < released ; 1963 ; The Journal of Clinical Pharmacology Volume 3 ; 3 >
+        au < released ; 1964 ; The Journal of Clinical Pharmacology Volume 4 ; 4 >
+        au < released ; 1965 ; The Journal of Clinical Pharmacology Volume 5 ; 5 >
+        au < released ; 1966 ; The Journal of Clinical Pharmacology Volume 6 ; 6 >
+        au < released ; 1967 ; The Journal of Clinical Pharmacology Volume 7 ; 7 >
+        au < released ; 1968 ; The Journal of Clinical Pharmacology Volume 8 ; 8 >
+        au < released ; 1969 ; The Journal of Clinical Pharmacology Volume 9 ; 9 >
+        au < released ; 1970 ; The Journal of Clinical Pharmacology Volume 10 ; 10 >
+        au < released ; 1971 ; The Journal of Clinical Pharmacology Volume 11 ; 11 >
+        au < released ; 1972 ; The Journal of Clinical Pharmacology Volume 12 ; 12 >
+        au < released ; 1973 ; The Journal of Clinical Pharmacology Volume 13 ; 13 >
+        au < released ; 1974 ; The Journal of Clinical Pharmacology Volume 14 ; 14 >
+        au < released ; 1975 ; The Journal of Clinical Pharmacology Volume 15 ; 15 >
+        au < released ; 1976 ; The Journal of Clinical Pharmacology Volume 16 ; 16 >
+        au < released ; 1977 ; The Journal of Clinical Pharmacology Volume 17 ; 17 >
+        au < released ; 1978 ; The Journal of Clinical Pharmacology Volume 18 ; 18 >
+        au < released ; 1979 ; The Journal of Clinical Pharmacology Volume 19 ; 19 >
+        au < released ; 1980 ; The Journal of Clinical Pharmacology Volume 20 ; 20 >
+        au < released ; 1981 ; The Journal of Clinical Pharmacology Volume 21 ; 21 >
+        au < released ; 1982 ; The Journal of Clinical Pharmacology Volume 22 ; 22 >
+        au < released ; 1983 ; The Journal of Clinical Pharmacology Volume 23 ; 23 >
+        au < released ; 1984 ; The Journal of Clinical Pharmacology Volume 24 ; 24 >
+        au < released ; 1985 ; The Journal of Clinical Pharmacology Volume 25 ; 25 >
+        au < released ; 1986 ; The Journal of Clinical Pharmacology Volume 26 ; 26 >
+        au < released ; 1987 ; The Journal of Clinical Pharmacology Volume 27 ; 27 >
+        au < released ; 1988 ; The Journal of Clinical Pharmacology Volume 28 ; 28 >
+        au < released ; 1989 ; The Journal of Clinical Pharmacology Volume 29 ; 29 >
+        au < released ; 1990 ; The Journal of Clinical Pharmacology Volume 30 ; 30 >
+        au < released ; 1991 ; The Journal of Clinical Pharmacology Volume 31 ; 31 >
+        au < released ; 1992 ; The Journal of Clinical Pharmacology Volume 32 ; 32 >
+        au < released ; 1993 ; The Journal of Clinical Pharmacology Volume 33 ; 33 >
+        au < released ; 1994 ; The Journal of Clinical Pharmacology Volume 34 ; 34 >
+        au < released ; 1995 ; The Journal of Clinical Pharmacology Volume 35 ; 35 >
+        au < released ; 1996 ; The Journal of Clinical Pharmacology Volume 36 ; 36 >
+        au < released ; 1997 ; The Journal of Clinical Pharmacology Volume 37 ; 37 >
+        au < released ; 1998 ; The Journal of Clinical Pharmacology Volume 38 ; 38 >
+        au < released ; 1999 ; The Journal of Clinical Pharmacology Volume 39 ; 39 >
+        au < released ; 2000 ; The Journal of Clinical Pharmacology Volume 40 ; 40 >
+        au < released ; 2001 ; The Journal of Clinical Pharmacology Volume 41 ; 41 >
+        au < released ; 2002 ; The Journal of Clinical Pharmacology Volume 42 ; 42 >
+        au < released ; 2003 ; The Journal of Clinical Pharmacology Volume 43 ; 43 >
+        au < released ; 2004 ; The Journal of Clinical Pharmacology Volume 44 ; 44 >
         au < doNotProcess ; 2005 ; The Journal of Clinical Pharmacology Volume 45 ; 45 >
         au < doNotProcess ; 2006 ; The Journal of Clinical Pharmacology Volume 46 ; 46 >
         au < doNotProcess ; 2007 ; The Journal of Clinical Pharmacology Volume 47 ; 47 >
@@ -18789,7 +18789,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2009 ; The Journal of Clinical Pharmacology Volume 49 ; 49 >
         au < released ; 2010 ; The Journal of Clinical Pharmacology Volume 50 ; 50 >
         au < released ; 2011 ; The Journal of Clinical Pharmacology Volume 51 ; 51 >
-        au < releasing ; 2012 ; The Journal of Clinical Pharmacology Volume 52 ; 52 >
+        au < released ; 2012 ; The Journal of Clinical Pharmacology Volume 52 ; 52 >
 
       }
 
@@ -18902,7 +18902,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2009 ; The Journal of Commonwealth Literature Volume 44 ; 44 >
         au < released ; 2010 ; The Journal of Commonwealth Literature Volume 45 ; 45 >
         au < released ; 2011 ; The Journal of Commonwealth Literature Volume 46 ; 46 >
-        au < releasing ; 2012 ; The Journal of Commonwealth Literature Volume 47 ; 47 >
+        au < released ; 2012 ; The Journal of Commonwealth Literature Volume 47 ; 47 >
 
       }
 
@@ -18982,7 +18982,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2009 ; Journal of Communication Inquiry Volume 33 ; 33 >
         au < released ; 2010 ; Journal of Communication Inquiry Volume 34 ; 34 >
         au < released ; 2011 ; Journal of Communication Inquiry Volume 35 ; 35 >
-        au < releasing ; 2012 ; Journal of Communication Inquiry Volume 36 ; 36 >
+        au < released ; 2012 ; Journal of Communication Inquiry Volume 36 ; 36 >
 
       }
       
@@ -19073,7 +19073,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2009 ; Journal of Composite Materials Volume 43 ; 43 >
         au < released ; 2010 ; Journal of Composite Materials Volume 44 ; 44 >
         au < released ; 2011 ; Journal of Composite Materials Volume 45 ; 45 >
-        au < releasing ; 2012 ; Journal of Composite Materials Volume 46 ; 46 >
+        au < released ; 2012 ; Journal of Composite Materials Volume 46 ; 46 >
 
       }
 
@@ -19174,7 +19174,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2009 ; Journal of Conflict Resolution Volume 53 ; 53 >
         au < released ; 2010 ; Journal of Conflict Resolution Volume 54 ; 54 >
         au < released ; 2011 ; Journal of Conflict Resolution Volume 55 ; 55 >
-        au < releasing ; 2012 ; Journal of Conflict Resolution Volume 56 ; 56 >
+        au < released ; 2012 ; Journal of Conflict Resolution Volume 56 ; 56 >
 
       }
 
@@ -19220,7 +19220,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2009 ; Journal of Consumer Culture Volume 9 ; 9 >
         au < released ; 2010 ; Journal of Consumer Culture Volume 10 ; 10 >
         au < released ; 2011 ; Journal of Consumer Culture Volume 11 ; 11 >
-        au < releasing ; 2012 ; Journal of Consumer Culture Volume 12 ; 12 >
+        au < released ; 2012 ; Journal of Consumer Culture Volume 12 ; 12 >
 
       }
 
@@ -19293,7 +19293,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2009 ; Journal of Contemporary Criminal Justice Volume 25 ; 25 >
         au < released ; 2010 ; Journal of Contemporary Criminal Justice Volume 26 ; 26 >
         au < released ; 2011 ; Journal of Contemporary Criminal Justice Volume 27 ; 27 >
-        au < releasing ; 2012 ; Journal of Contemporary Criminal Justice Volume 28 ; 28 >
+        au < released ; 2012 ; Journal of Contemporary Criminal Justice Volume 28 ; 28 >
 
       }
 
@@ -19368,7 +19368,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2009 ; Journal of Contemporary Ethnography Volume 38 ; 38 >
         au < released ; 2010 ; Journal of Contemporary Ethnography Volume 39 ; 39 >
         au < released ; 2011 ; Journal of Contemporary Ethnography Volume 40 ; 40 >
-        au < releasing ; 2012 ; Journal of Contemporary Ethnography Volume 41 ; 41 >
+        au < released ; 2012 ; Journal of Contemporary Ethnography Volume 41 ; 41 >
 
       }
 
@@ -19460,7 +19460,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2009 ; Journal of Contemporary History Volume 44 ; 44 >
         au < released ; 2010 ; Journal of Contemporary History Volume 45 ; 45 >
         au < released ; 2011 ; Journal of Contemporary History Volume 46 ; 46 >
-        au < releasing ; 2012 ; Journal of Contemporary History Volume 47 ; 47 >
+        au < released ; 2012 ; Journal of Contemporary History Volume 47 ; 47 >
 
       }
 
@@ -26947,7 +26947,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Latin American Perspectives Volume 36 ; 36 >
         au < released ; 2010 ; Latin American Perspectives Volume 37 ; 37 >
         au < released ; 2011 ; Latin American Perspectives Volume 38 ; 38 >
-        au < releasing ; 2012 ; Latin American Perspectives Volume 39 ; 39 >
+        au < released ; 2012 ; Latin American Perspectives Volume 39 ; 39 >
 
       }
 
@@ -26988,7 +26988,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Law, Culture and the Humanities Volume 5 ; 5 >
         au < released ; 2010 ; Law, Culture and the Humanities Volume 6 ; 6 >
         au < released ; 2011 ; Law, Culture and the Humanities Volume 7 ; 7 >
-        au < releasing ; 2012 ; Law, Culture and the Humanities Volume 8 ; 8 >
+        au < released ; 2012 ; Law, Culture and the Humanities Volume 8 ; 8 >
 
       }
 
@@ -27030,7 +27030,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Leadership Volume 5 ; 5 >
         au < released ; 2010 ; Leadership Volume 6 ; 6 >
         au < released ; 2011 ; Leadership Volume 7 ; 7 >
-        au < releasing ; 2012 ; Leadership Volume 8 ; 8 >
+        au < released ; 2012 ; Leadership Volume 8 ; 8 >
 
       }
 
@@ -27106,7 +27106,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Lighting Research and Technology Volume 41 ; 41 >
         au < released ; 2010 ; Lighting Research and Technology Volume 42 ; 42 >
         au < released ; 2011 ; Lighting Research and Technology Volume 43 ; 43 >
-        au < releasing ; 2012 ; Lighting Research and Technology Volume 44 ; 44 >
+        au < released ; 2012 ; Lighting Research and Technology Volume 44 ; 44 >
 
       }
 
@@ -27151,7 +27151,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 24 ; 24 >
         au < released ; 2010 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 25 ; 25 >
         au < released ; 2011 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 26 ; 26 >
-        au < releasing ; 2012 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 27 ; 27 >
+        au < released ; 2012 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 27 ; 27 >
 
       }
 
@@ -27205,7 +27205,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Lupus Volume 18 ; 18 >
         au < released ; 2010 ; Lupus Volume 19 ; 19 >
         au < released ; 2011 ; Lupus Volume 20 ; 20 >
-        au < releasing ; 2012 ; Lupus Volume 21 ; 21 >
+        au < released ; 2012 ; Lupus Volume 21 ; 21 >
 
       }
 
@@ -27238,7 +27238,7 @@ comment[mpj] = now published by Brill
         au <  released ; 2009 ; Management and Labour Studies Volume 34 ; 34 >
         au <  released ; 2010 ; Management and Labour Studies Volume 35 ; 35 >
         au <  released ; 2011 ; Management and Labour Studies Volume 36 ; 36 >
-        au <  releasing ; 2012 ; Management and Labour Studies Volume 37 ; 37 >
+        au <  released ; 2012 ; Management and Labour Studies Volume 37 ; 37 >
 
       }
 
@@ -27278,7 +27278,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Management & Organizational History Volume 4 ; 4 >
         au < released ; 2010 ; Management & Organizational History Volume 5 ; 5 >
         au < released ; 2011 ; Management & Organizational History Volume 6 ; 6 >
-        au < releasing ; 2012 ; Management & Organizational History Volume 7 ; 7 >
+        au < released ; 2012 ; Management & Organizational History Volume 7 ; 7 >
 
       }
 
@@ -27338,7 +27338,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Management Communication Quarterly Volume 23 ; 23 >
         au < released ; 2010 ; Management Communication Quarterly Volume 24 ; 24 >
         au < released ; 2011 ; Management Communication Quarterly Volume 25 ; 25 >
-        au < releasing ; 2012 ; Management Communication Quarterly Volume 26 ; 26 >
+        au < released ; 2012 ; Management Communication Quarterly Volume 26 ; 26 >
 
       }
 
@@ -31675,7 +31675,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; Psychological Science Volume 20 ; 20 >
         au < released ; 2010 ; Psychological Science Volume 21 ; 21 >
         au < released ; 2011 ; Psychological Science Volume 22 ; 22 >
-        au < releasing ; 2012 ; Psychological Science Volume 23 ; 23 >
+        au < released ; 2012 ; Psychological Science Volume 23 ; 23 >
 
       }
 
@@ -31707,7 +31707,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; Psychological Science in the Public Interest Volume 10 ; 10 >
         au < released ; 2010 ; Psychological Science in the Public Interest Volume 11 ; 11 >
         au < released ; 2011 ; Psychological Science in the Public Interest Volume 12 ; 12 >
-        au < releasing ; 2012 ; Psychological Science in the Public Interest Volume 13 ; 13 >
+        au < released ; 2012 ; Psychological Science in the Public Interest Volume 13 ; 13 >
 
       }
 
@@ -31837,7 +31837,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Psychology of Music Volume 37 ; 37 >
         au < released ; 2010 ; Psychology of Music Volume 38 ; 38 >
         au < released ; 2011 ; Psychology of Music Volume 39 ; 39 >
-        au < releasing ; 2012 ; Psychology of Music Volume 40 ; 40 >
+        au < released ; 2012 ; Psychology of Music Volume 40 ; 40 >
 
       }
 
@@ -31886,11 +31886,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2005 ; Psychology of Women Quarterly Volume 29 ; 29 >
         au < manifest ; 2006 ; Psychology of Women Quarterly Volume 30 ; 30 >
         au < manifest ; 2007 ; Psychology of Women Quarterly Volume 31 ; 31 >
-        au < releasing ; 2008 ; Psychology of Women Quarterly Volume 32 ; 32 >
+        au < released ; 2008 ; Psychology of Women Quarterly Volume 32 ; 32 >
         au < released ; 2009 ; Psychology of Women Quarterly Volume 33 ; 33 >
         au < released ; 2010 ; Psychology of Women Quarterly Volume 34 ; 34 >
         au < released ; 2011 ; Psychology of Women Quarterly Volume 35 ; 35 >
-        au < releasing ; 2012 ; Psychology of Women Quarterly Volume 36 ; 36 >
+        au < released ; 2012 ; Psychology of Women Quarterly Volume 36 ; 36 >
 
       }
 
@@ -31962,7 +31962,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Public Finance Review Volume 37 ; 37 >
         au < released ; 2010 ; Public Finance Review Volume 38 ; 38 >
         au < released ; 2011 ; Public Finance Review Volume 39 ; 39 >
-        au < releasing ; 2012 ; Public Finance Review Volume 40 ; 40 >
+        au < released ; 2012 ; Public Finance Review Volume 40 ; 40 >
 
       }
 
@@ -32022,7 +32022,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Public Policy and Administration Volume 24 ; 24 >
         au < manifest ; 2010 ; Public Policy and Administration Volume 25 ; 25 >
         au < released ; 2011 ; Public Policy and Administration Volume 26 ; 26 >
-        au < releasing ; 2012 ; Public Policy and Administration Volume 27 ; 27 >
+        au < released ; 2012 ; Public Policy and Administration Volume 27 ; 27 >
 
       }
 
@@ -32099,7 +32099,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Public Understanding of Science Volume 18 ; 18 >
         au < released ; 2010 ; Public Understanding of Science Volume 19 ; 19 >
         au < released ; 2011 ; Public Understanding of Science Volume 20 ; 20 >
-        au < releasing ; 2012 ; Public Understanding of Science Volume 21 ; 21 >
+        au < released ; 2012 ; Public Understanding of Science Volume 21 ; 21 >
 
       }
 
@@ -32151,7 +32151,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Public Works Management & Policy Volume 14 ; 14 >
         au < released ; 2010 ; Public Works Management & Policy Volume 15 ; 15 >
         au < released ; 2011 ; Public Works Management & Policy Volume 16 ; 16 >
-        au < releasing ; 2012 ; Public Works Management & Policy Volume 17 ; 17 >
+        au < released ; 2012 ; Public Works Management & Policy Volume 17 ; 17 >
 
       }
 
@@ -32199,7 +32199,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Punishment & Society Volume 11 ; 11 >
         au < released ; 2010 ; Punishment & Society Volume 12 ; 12 >
         au < released ; 2011 ; Punishment & Society Volume 13 ; 13 >
-        au < releasing ; 2012 ; Punishment & Society Volume 14 ; 14 >
+        au < released ; 2012 ; Punishment & Society Volume 14 ; 14 >
 
       }
 
@@ -32255,7 +32255,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Qualitative Health Research Volume 19 ; 19 >
         au < released ; 2010 ; Qualitative Health Research Volume 20 ; 20 >
         au < released ; 2011 ; Qualitative Health Research Volume 21 ; 21 >
-        au < releasing ; 2012 ; Qualitative Health Research Volume 22 ; 22 >
+        au < released ; 2012 ; Qualitative Health Research Volume 22 ; 22 >
 
       }
 
@@ -32307,7 +32307,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Qualitative Inquiry Volume 15 ; 15 >
         au < released ; 2010 ; Qualitative Inquiry Volume 16 ; 16 >
         au < released ; 2011 ; Qualitative Inquiry Volume 17 ; 17 >
-        au < releasing ; 2012 ; Qualitative Inquiry Volume 18 ; 18 >
+        au < released ; 2012 ; Qualitative Inquiry Volume 18 ; 18 >
 
       }
 
@@ -32395,7 +32395,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Qualitative Social Work Volume 8 ; 8 >
         au < released ; 2010 ; Qualitative Social Work Volume 9 ; 9 >
         au < released ; 2011 ; Qualitative Social Work Volume 10 ; 10 >
-        au < releasing ; 2012 ; Qualitative Social Work Volume 11 ; 11 >
+        au < released ; 2012 ; Qualitative Social Work Volume 11 ; 11 >
 
       }
 
@@ -32483,7 +32483,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Race & Class Volume 51 ; 51 >
         au < released ; 2010 ; Race & Class Volume 52 ; 52 >
         au < released ; 2011 ; Race & Class Volume 53 ; 53 >
-        au < releasing ; 2012 ; Race & Class Volume 54 ; 54 >
+        au < released ; 2012 ; Race & Class Volume 54 ; 54 >
 
       }
 
@@ -32502,7 +32502,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < released ; 2011 ; Race and Justice Volume 1 ; 1 >
-        au < releasing ; 2012 ; Race and Justice Volume 2 ; 2 >
+        au < released ; 2012 ; Race and Justice Volume 2 ; 2 >
 
       }
 
@@ -32559,7 +32559,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Rationality and Society Volume 21 ; 21 >
         au < released ; 2010 ; Rationality and Society Volume 22 ; 22 >
         au < released ; 2011 ; Rationality and Society Volume 23 ; 23 >
-        au < releasing ; 2012 ; Rationality and Society Volume 24 ; 24 >
+        au < released ; 2012 ; Rationality and Society Volume 24 ; 24 >
 
       }
 
@@ -32592,7 +32592,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009-2010 ; Rehabilitation Counseling Bulletin Volume 53 ; 53 >
         au < released ; 2010-2011 ; Rehabilitation Counseling Bulletin Volume 54 ; 54 >
         au < released ; 2011-2012 ; Rehabilitation Counseling Bulletin Volume 55 ; 55 >
-        au < releasing ; 2012 ; Rehabilitation Counseling Bulletin Volume 56 ; 56 >
+        au < released ; 2012 ; Rehabilitation Counseling Bulletin Volume 56 ; 56 >
 
       }
 
@@ -32668,7 +32668,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; RELC Journal Volume 40 ; 40 >
         au < released ; 2010 ; RELC Journal Volume 41 ; 41 >
         au < released ; 2011 ; RELC Journal Volume 42 ; 42 >
-        au < releasing ; 2012 ; RELC Journal Volume 43 ; 43 >
+        au < released ; 2012 ; RELC Journal Volume 43 ; 43 >
 
       }
 
@@ -32716,7 +32716,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Remedial and Special Education Volume 30 ; 30 >
         au < released ; 2010 ; Remedial and Special Education Volume 31 ; 31 >
         au < released ; 2011 ; Remedial and Special Education Volume 32 ; 32 >
-        au < releasing ; 2012 ; Remedial and Special Education Volume 33 ; 33 >
+        au < released ; 2012 ; Remedial and Special Education Volume 33 ; 33 >
 
       }
 
@@ -32766,7 +32766,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Reproductive Sciences Volume 16 ; 16 >
         au < released ; 2010 ; Reproductive Sciences Volume 17 ; 17 >
         au < released ; 2011 ; Reproductive Sciences Volume 18 ; 18 >
-        au < releasing ; 2012 ; Reproductive Sciences Volume 19 ; 19 >
+        au < released ; 2012 ; Reproductive Sciences Volume 19 ; 19 >
 
       }
 
@@ -32793,7 +32793,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; Research Ethics Volume 5 ; 5 >
         au < released ; 2010 ; Research Ethics Volume 6 ; 6 >
         au < released ; 2011 ; Research Ethics Volume 7 ; 7 >
-        au < releasing ; 2012 ; Research Ethics Volume 8 ; 8 >
+        au < released ; 2012 ; Research Ethics Volume 8 ; 8 >
   
       }
   
@@ -32915,7 +32915,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Research on Social Work Practice Volume 19 ; 19 >
         au < released ; 2010 ; Research on Social Work Practice Volume 20 ; 20 >
         au < released ; 2011 ; Research on Social Work Practice Volume 21 ; 21 >
-        au < releasing ; 2012 ; Research on Social Work Practice Volume 22 ; 22 >
+        au < released ; 2012 ; Research on Social Work Practice Volume 22 ; 22 >
 
       }
 
@@ -32979,7 +32979,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Research Studies in Music Education Volume 31 ; 31 >
         au < released ; 2010 ; Research Studies in Music Education Volume 32 ; 32 >
         au < released ; 2011 ; Research Studies in Music Education Volume 33 ; 33 >
-        au < releasing ; 2012 ; Research Studies in Music Education Volume 34 ; 34 >
+        au < released ; 2012 ; Research Studies in Music Education Volume 34 ; 34 >
 
       }
 
@@ -33125,7 +33125,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Review of Educational Research Volume 79 ; 79 >
         au < released ; 2010 ; Review of Educational Research Volume 80 ; 80 >
         au < released ; 2011 ; Review of Educational Research Volume 81 ; 81 >
-        au < releasing ; 2012 ; Review of Educational Research Volume 82 ; 82 >
+        au < released ; 2012 ; Review of Educational Research Volume 82 ; 82 >
 
       }
 
@@ -33148,7 +33148,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; Review of Market Integration Volume 1 ; 1 >
         au < released ; 2010 ; Review of Market Integration Volume 2 ; 2 >
         au < released ; 2011 ; Review of Market Integration Volume 3 ; 3 >
-        au < releasing ; 2012 ; Review of Market Integration Volume 4 ; 4 >
+        au < released ; 2012 ; Review of Market Integration Volume 4 ; 4 >
 
       }
 
@@ -34469,7 +34469,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 >
         au < manifest ; 2007 ; Social Psychology Quarterly Volume 70 ; 70 >
         au < released ; 2008 ; Social Psychology Quarterly Volume 71 ; 71 >
-        au < releasing ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 >
+        au < released ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 >
         au < released ; 2010 ; Social Psychology Quarterly Volume 73 ; 73 >
         au < released ; 2011 ; Social Psychology Quarterly Volume 74 ; 74 >
         au < manifest ; 2012 ; Social Psychology Quarterly Volume 75 ; 75 >
@@ -37085,7 +37085,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Toxicology and Industrial Health Volume 25 ; 25 >
         au < released ; 2010 ; Toxicology and Industrial Health Volume 26 ; 26 >
         au < released ; 2011 ; Toxicology and Industrial Health Volume 27 ; 27 >
-        au < releasing ; 2012 ; Toxicology and Industrial Health Volume 28 ; 28 >
+        au < released ; 2012 ; Toxicology and Industrial Health Volume 28 ; 28 >
 
       }
 
@@ -37209,7 +37209,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Transactions of the Institute of Measurement and Control Volume 31 ; 31 >
         au < released ; 2010 ; Transactions of the Institute of Measurement and Control Volume 32 ; 32 >
         au < released ; 2011 ; Transactions of the Institute of Measurement and Control Volume 33 ; 33 >
-        au < releasing ; 2012 ; Transactions of the Institute of Measurement and Control Volume 34 ; 34 >
+        au < released ; 2012 ; Transactions of the Institute of Measurement and Control Volume 34 ; 34 >
 
       }
 
@@ -37291,7 +37291,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Transcultural Psychiatry Volume 46 ; 46 >
         au < released ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 >
         au < released ; 2011 ; Transcultural Psychiatry Volume 48 ; 48 >
-        au < releasing ; 2012 ; Transcultural Psychiatry Volume 49 ; 49 >
+        au < released ; 2012 ; Transcultural Psychiatry Volume 49 ; 49 >
 
       }
 
@@ -37328,7 +37328,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; Transfer: European Review of Labour and Research Volume 15 ; 15 >
         au < released ; 2010 ; Transfer: European Review of Labour and Research Volume 16 ; 16 >
         au < released ; 2011 ; Transfer: European Review of Labour and Research Volume 17 ; 17 >
-        au < releasing ; 2012 ; Transfer: European Review of Labour and Research Volume 18 ; 18 >
+        au < released ; 2012 ; Transfer: European Review of Labour and Research Volume 18 ; 18 >
 
       }
 
@@ -37375,7 +37375,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Transformation: An International Journal of Holistic Mission Studies Volume 26 ; 26 >
         au < released ; 2010 ; Transformation: An International Journal of Holistic Mission Studies Volume 27 ; 27 >
         au < released ; 2011 ; Transformation: An International Journal of Holistic Mission Studies Volume 28 ; 28 >
-        au < releasing ; 2012 ; Transformation: An International Journal of Holistic Mission Studies Volume 29 ; 29 >
+        au < released ; 2012 ; Transformation: An International Journal of Holistic Mission Studies Volume 29 ; 29 >
 
       }
 
@@ -37422,7 +37422,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Trauma Volume 11 ; 11 >
         au < released ; 2010 ; Trauma Volume 12 ; 12 >
         au < released ; 2011 ; Trauma Volume 13 ; 13 >
-        au < releasing ; 2012 ; Trauma Volume 14 ; 14 >
+        au < released ; 2012 ; Trauma Volume 14 ; 14 >
 
       }
 
@@ -37467,7 +37467,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Trauma, Violence, & Abuse Volume 10 ; 10 >
         au < released ; 2010 ; Trauma, Violence, & Abuse Volume 11 ; 11 >
         au < released ; 2011 ; Trauma, Violence, & Abuse Volume 12 ; 12 >
-        au < releasing ; 2012 ; Trauma, Violence, & Abuse Volume 13 ; 13 >
+        au < released ; 2012 ; Trauma, Violence, & Abuse Volume 13 ; 13 >
 
       }
 
@@ -37516,7 +37516,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Traumatology Volume 15 ; 15 >
         au < released ; 2010 ; Traumatology Volume 16 ; 16 >
         au < released ; 2011 ; Traumatology Volume 17 ; 17 >
-        au < releasing ; 2012 ; Traumatology Volume 18 ; 18 >
+        au < released ; 2012 ; Traumatology Volume 18 ; 18 >
 
       }
 
@@ -37564,7 +37564,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Trends in Amplification Volume 13 ; 13 >
         au < released ; 2010 ; Trends in Amplification Volume 14 ; 14 >
         au < released ; 2011 ; Trends in Amplification Volume 15 ; 15 >
-        au < releasing ; 2012 ; Trends in Amplification Volume 16 ; 16 >
+        au < released ; 2012 ; Trends in Amplification Volume 16 ; 16 >
 
       }
 
@@ -37612,7 +37612,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009-2010 ; Update: Applications of Research in Music Education Volume 28 ; 28 >
         au < released ; 2010-2011 ; Update: Applications of Research in Music Education Volume 29 ; 29 >
         au < released ; 2011 ; Update: Applications of Research in Music Education Volume 30 ; 30 >
-        au < releasing ; 2012 ; Update: Applications of Research in Music Education Volume 31 ; 31 >
+        au < released ; 2012 ; Update: Applications of Research in Music Education Volume 31 ; 31 >
 
       }
 
