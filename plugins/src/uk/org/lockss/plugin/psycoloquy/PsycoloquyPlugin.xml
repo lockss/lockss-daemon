@@ -4,6 +4,10 @@
     <string>uk.org.lockss.plugin.psycoloquy.PsycoloquyPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
     <string>text/html_filter</string>
     <string>uk.org.lockss.plugin.psycoloquy.PsycoloquyFilterRule</string>
   </entry>

@@ -4,6 +4,10 @@
     <string>org.lockss.plugin.rlg.RLGDigiNewsPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>

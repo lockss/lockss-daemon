@@ -4,6 +4,10 @@
     <string>za.ac.nlsa.lockss.plugin.WaterSAPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>&quot;Water SA Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>

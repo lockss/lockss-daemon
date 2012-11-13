@@ -4,6 +4,10 @@
     <string>uk.org.lockss.plugin.jelit.JeLitPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
     <string>text/html_filter</string>
     <string>uk.org.lockss.plugin.jelit.JeLitFilterRule</string>
   </entry>

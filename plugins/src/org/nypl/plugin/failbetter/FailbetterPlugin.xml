@@ -4,6 +4,10 @@
     <string>org.nypl.plugin.failbetter.FailbetterPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>&quot;Failbetter %d&quot;, year</string>
   </entry>
