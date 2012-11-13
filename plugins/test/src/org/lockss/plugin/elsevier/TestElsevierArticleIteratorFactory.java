@@ -1,5 +1,5 @@
 /*
- * $Id: TestElsevierArticleIteratorFactory.java,v 1.3 2012-08-08 07:19:52 tlipkis Exp $
+ * $Id: TestElsevierArticleIteratorFactory.java,v 1.4 2012-11-13 22:49:40 alexandraohlson Exp $
  */
 
 /*
@@ -89,8 +89,8 @@ public class TestElsevierArticleIteratorFactory extends LockssTestCase {
     conf.put("depth", "2");
     conf.put("branch", "2");
     conf.put("numFiles", "4");
-    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
-				SimulatedContentGenerator.FILE_TYPE_XML +
+    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF |
+				SimulatedContentGenerator.FILE_TYPE_XML |
 				SimulatedContentGenerator.FILE_TYPE_HTML));
     conf.put("binFileSize", ""+fileSize);
     return conf;

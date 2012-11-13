@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpringerArticleIteratorFactory.java,v 1.4 2011-10-05 05:57:51 tlipkis Exp $
+ * $Id: TestSpringerArticleIteratorFactory.java,v 1.5 2012-11-13 22:49:40 alexandraohlson Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class TestSpringerArticleIteratorFactory
     conf.put("depth", "1");
     conf.put("branch", "3");
     conf.put("numFiles", "7");
-    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
+    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF |
 				SimulatedContentGenerator.FILE_TYPE_XML));
     return conf;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArticleIteratorFactory.java,v 1.9 2012-08-08 07:19:52 tlipkis Exp $
+ * $Id: TestHighWireArticleIteratorFactory.java,v 1.10 2012-11-13 22:49:40 alexandraohlson Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class TestHighWireArticleIteratorFactory extends ArticleIteratorTestCase 
     conf.put("depth", "2");
     conf.put("branch", "2");
     conf.put("numFiles", "4");
-    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
+    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF |
 				SimulatedContentGenerator.FILE_TYPE_HTML));
     conf.put("binFileSize", "7");
     return conf;

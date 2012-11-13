@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.36 2011-05-09 02:34:01 tlipkis Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.37 2012-11-13 22:49:40 alexandraohlson Exp $
  */
 
 /*
@@ -369,14 +369,14 @@ public class SimulatedContentGenerator {
   }
   /**
    * Gets the file types which will be generated.
-   * Uses a bitwise AND technique to store the various file types
+   * Uses a bitwise OR technique to store the various file types
    * in a single int (i.e. FILE_TYPE_TXT + FILE_TYPE_JPEG)
    * @return file types to be created
    */
   public int getFileTypes() { return fileTypes; }
   /**
    * Sets the file types to be generated.
-   * Uses a bitwise AND technique to store the various file types
+   * Uses a bitwise OR technique to store the various file types
    * in a single int (i.e. FILE_TYPE_TXT + FILE_TYPE_JPEG)
    * @param types file types to be created
    */
