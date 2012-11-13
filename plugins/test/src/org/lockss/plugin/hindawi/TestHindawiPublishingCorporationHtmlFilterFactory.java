@@ -121,7 +121,17 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
 			  
   private static final String eventValidation2HtmlFiltered =
 		  "";
+  
+  private static final String cleaningUpHeaderStuffHtml = 
+      "<!DOCTYPE html PUBLIC \"-//W3C//DTD MathML 2.0//EN\" \"http://www.w3.org/Math/DTD/mathml2/mathml2.dtd\">" +
+          "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:mml=\"http://www.w3.org/1998/Math/MathML\">" +
+          "<head id=\"ctl00_Header\">" +
+          "<title>Commentary: Personal computers&#x2013;valuable tools or expensive luxuries? </title>\">" +
+          "</head></html>";
 
+  private static final String cleaningUpHeaderStuffHtmlFiltered = 
+          "<html>" +
+          "</html>";
   
   public void testScriptFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
@@ -189,6 +199,14 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
         Constants.DEFAULT_ENCODING);
     assertEquals(eventValidation2HtmlFiltered, StringUtil.fromInputStream(actIn));
 
+  }
+  
+  public void testHeaderFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(cleaningUpHeaderStuffHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(cleaningUpHeaderStuffHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
 
 }

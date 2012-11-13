@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.9 2012-06-12 00:11:13 kendrayee Exp $
+ * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.10 2012-11-13 22:51:50 alexandraohlson Exp $
  */
 
 /*
@@ -32,17 +32,29 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.hindawi;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.Reader;
+import java.util.List;
+import java.util.Vector;
 
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ListUtil;
+import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
 public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFactory {
+  
+  protected static final Logger logger = Logger.getLogger(HindawiPublishingCorporationHtmlFilterFactory.class);
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -50,24 +62,60 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
                                                
       throws PluginException {
         NodeFilter[] filters = new NodeFilter[] {
-        // Filter out <script> tags that seem to be edited often
-	    new TagNameFilter("script"),
-        // Filter out <div id="left_column">...</div>
-        HtmlNodeFilters.tagWithAttribute("div", "id", "left_column"),
-        // ASP cookies; once without '__', now with  
-        HtmlNodeFilters.tagWithAttribute("input", "id", "VIEWSTATE"),
-        HtmlNodeFilters.tagWithAttribute("input", "id", "__VIEWSTATE"),
-        // ASP cookies; once without '__', now with  
-        HtmlNodeFilters.tagWithAttribute("input", "id", "EVENTVALIDATION"),
-        HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
-    };
+            // Contains changing <meta> tags
+            new TagNameFilter("head"),
+            // Filter out <script> tags that seem to be edited often
+            new TagNameFilter("script"),
+            // Filter out <div id="left_column">...</div>
+            HtmlNodeFilters.tagWithAttribute("div", "id", "left_column"),
+            // ASP cookies; once without '__', now with  
+            HtmlNodeFilters.tagWithAttribute("input", "id", "VIEWSTATE"),
+            HtmlNodeFilters.tagWithAttribute("input", "id", "__VIEWSTATE"),
+            // ASP cookies; once without '__', now with  
+            HtmlNodeFilters.tagWithAttribute("input", "id", "EVENTVALIDATION"),
+            HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
 
+    };
+        HtmlTransform xform = new HtmlTransform() {
+          @Override
+          public NodeList transform(NodeList nodeList) throws IOException {
+            try {
+              nodeList.visitAllNodesWith(new NodeVisitor() {
+                @Override
+                public void visitTag(Tag tag) {
+                  String tagName = tag.getTagName().toLowerCase();
+                  // An issue with variable amounts of attributes following the <html ....> 
+                  if ("html".equals(tagName)) {
+                    tag.setAttributesEx(new Vector()); //empty attribs Vector. Even clears out tag name
+                    tag.setTagName("html");
+                  }
+                }
+              });
+            }
+            catch (Exception exc) {
+              logger.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+            }
+            return nodeList;
+          }
+        };
 
     InputStream htmlFilter = new HtmlFilterInputStream(in,
                                                        encoding,
-                                                       HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+                                                       new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),
+                                                           xform));
 
-    return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(htmlFilter, encoding)));
+    Reader reader = FilterUtil.getReader(htmlFilter, encoding);
+    Reader filtReader = makeFilteredReader(reader);
+    return new ReaderInputStream(filtReader);
+  }
+
+  static Reader makeFilteredReader(Reader reader) {
+    List tagList = ListUtil.list(
+        // Remove DOCTYPE declaration which seems to vary but is not a node in the DOM
+        new TagPair("<!DOCTYPE", ">", false, false)
+    );
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
+    return new WhiteSpaceFilter(tagFilter);
   }
 
 }
