@@ -1407,7 +1407,7 @@
     au < ready ; 2009 ; Philosophy, Psychiatry, & Psychology Volume 16 ; 16 >
     au < ready ; 2010 ; Philosophy, Psychiatry, & Psychology Volume 17 ; 17 >
     au < ready ; 2011 ; Philosophy, Psychiatry, & Psychology Volume 18 ; 18 >
-    au < testing ; 2012 ; Philosophy, Psychiatry, & Psychology Volume 19 ; 19 >
+    au < ready ; 2012 ; Philosophy, Psychiatry, & Psychology Volume 19 ; 19 >
 
   }
 
@@ -1797,12 +1797,12 @@
     param[journal_dir] = emily_dickinson_journal
     attr[journal_id] = edj
 
-    au < testing ; 1992 ; The Emily Dickinson Journal Volume 1 ; 1 >
-    au < testing ; 1993 ; The Emily Dickinson Journal Volume 2 ; 2 >
-    au < testing ; 1994 ; The Emily Dickinson Journal Volume 3 ; 3 >
-    au < testing ; 1995 ; The Emily Dickinson Journal Volume 4 ; 4 >
-    au < testing ; 1996 ; The Emily Dickinson Journal Volume 5 ; 5 >
-    au < testing ; 1997 ; The Emily Dickinson Journal Volume 6 ; 6 >
+    au < ready ; 1992 ; The Emily Dickinson Journal Volume 1 ; 1 >
+    au < ready ; 1993 ; The Emily Dickinson Journal Volume 2 ; 2 >
+    au < ready ; 1994 ; The Emily Dickinson Journal Volume 3 ; 3 >
+    au < ready ; 1995 ; The Emily Dickinson Journal Volume 4 ; 4 >
+    au < ready ; 1996 ; The Emily Dickinson Journal Volume 5 ; 5 >
+    au < ready ; 1997 ; The Emily Dickinson Journal Volume 6 ; 6 >
     au < released ; 1998 ; The Emily Dickinson Journal Volume 7 ; 7 >
     au < released ; 1999 ; The Emily Dickinson Journal Volume 8 ; 8 >
     au < released ; 2000 ; The Emily Dickinson Journal Volume 9 ; 9 >
