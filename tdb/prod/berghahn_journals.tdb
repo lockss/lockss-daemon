@@ -336,8 +336,8 @@
 
     au < ready ; 2008 ; Girlhood Studies Volume 1 ; 1 >
     au < ready ; 2009 ; Girlhood Studies Volume 2 ; 2 >
-    au < testing ; 2010 ; Girlhood Studies Volume 3 ; 3 >
-    au < testing ; 2011 ; Girlhood Studies Volume 4 ; 4 >
+    au < ready ; 2010 ; Girlhood Studies Volume 3 ; 3 >
+    au < ready ; 2011 ; Girlhood Studies Volume 4 ; 4 >
     au < ready ; 2012 ; Girlhood Studies Volume 5 ; 5 >
     
   }
@@ -358,7 +358,7 @@
     au < released ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 >
     au < released ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 >
     au < released ; 2011 ; Historical Reflections/Reflexions Historiques Volume 37 ; 37 >
-    au < testing ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 >
+    au < ready ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 >
     
   }
 
@@ -391,10 +391,10 @@
     param[journal_id] = emms
     param[journal_issn] = 2041-6938
        
-    au < testing ; 2009 ; Journal of Educational Memory, Media, and Society Volume 1 ; 1 >
-    au < testing ; 2010 ; Journal of Educational Memory, Media, and Society Volume 2 ; 2 >
-    au < testing ; 2011 ; Journal of Educational Memory, Media, and Society Volume 3 ; 3 >
-    au < testing ; 2012 ; Journal of Educational Memory, Media, and Society Volume 4 ; 4 >
+    au < ready ; 2009 ; Journal of Educational Memory, Media, and Society Volume 1 ; 1 >
+    au < ready ; 2010 ; Journal of Educational Memory, Media, and Society Volume 2 ; 2 >
+    au < ready ; 2011 ; Journal of Educational Memory, Media, and Society Volume 3 ; 3 >
+    au < ready ; 2012 ; Journal of Educational Memory, Media, and Society Volume 4 ; 4 >
     
   }
 
@@ -411,18 +411,18 @@
     param[journal_id] = romance
     param[journal_issn] = 1473-3536
        
-    au < testing ; 2001 ; Journal of Romance Studies Volume 1 ; 1 >
-    au < testing ; 2002 ; Journal of Romance Studies Volume 2 ; 2 >
-    au < testing ; 2003 ; Journal of Romance Studies Volume 3 ; 3 >
-    au < testing ; 2004 ; Journal of Romance Studies Volume 4 ; 4 >
-    au < testing ; 2005 ; Journal of Romance Studies Volume 5 ; 5 >
-    au < testing ; 2006 ; Journal of Romance Studies Volume 6 ; 6 >
-    au < testing ; 2007 ; Journal of Romance Studies Volume 7 ; 7 >
-    au < testing ; 2008 ; Journal of Romance Studies Volume 8 ; 8 >
-    au < testing ; 2009 ; Journal of Romance Studies Volume 9 ; 9 >
-    au < testing ; 2010 ; Journal of Romance Studies Volume 10 ; 10 >
-    au < testing ; 2011 ; Journal of Romance Studies Volume 11 ; 11 >
-    au < testing ; 2012 ; Journal of Romance Studies Volume 12 ; 12 >
+    au < ready ; 2001 ; Journal of Romance Studies Volume 1 ; 1 >
+    au < ready ; 2002 ; Journal of Romance Studies Volume 2 ; 2 >
+    au < ready ; 2003 ; Journal of Romance Studies Volume 3 ; 3 >
+    au < ready ; 2004 ; Journal of Romance Studies Volume 4 ; 4 >
+    au < ready ; 2005 ; Journal of Romance Studies Volume 5 ; 5 >
+    au < ready ; 2006 ; Journal of Romance Studies Volume 6 ; 6 >
+    au < ready ; 2007 ; Journal of Romance Studies Volume 7 ; 7 >
+    au < ready ; 2008 ; Journal of Romance Studies Volume 8 ; 8 >
+    au < ready ; 2009 ; Journal of Romance Studies Volume 9 ; 9 >
+    au < ready ; 2010 ; Journal of Romance Studies Volume 10 ; 10 >
+    au < ready ; 2011 ; Journal of Romance Studies Volume 11 ; 11 >
+    au < ready ; 2012 ; Journal of Romance Studies Volume 12 ; 12 >
     
   }
 
