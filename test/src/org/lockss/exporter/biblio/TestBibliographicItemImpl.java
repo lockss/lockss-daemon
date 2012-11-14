@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicItemImpl.java,v 1.2 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: TestBibliographicItemImpl.java,v 1.3 2012-11-14 12:05:10 easyonthemayo Exp $
  */
 
 /*
@@ -71,17 +71,19 @@ public class TestBibliographicItemImpl extends LockssTestCase {
   private final static String eIssue2 = "i9";
 
   // A BibliographicItem constructed using vol/year/issue convenience strings
-  private BibliographicItem bibItem1 = new BibliographicItemImpl(
+  private BibliographicItemImpl bibItem1 = new BibliographicItemImpl(
       pIsbn, pIssn, title, publisher, name, volume, year, issue
   );
   // A BibliographicItem constructed using vol/year/issue start and end strings
-  private BibliographicItem bibItem2 = new BibliographicItemImpl(
+  private BibliographicItemImpl bibItem2 = new BibliographicItemImpl(
       pIsbn, pIssn, title,
       publisher, name,
       sVol, eVol,
       sYear, eYear,
       sIssue, eIssue
   );
+  private BibliographicItemImpl bibItemCopy  = new BibliographicItemImpl(bibItem1);
+  private BibliographicItemImpl bibItemClone = bibItem1.clone();
 
   /**
    * Check that the constructors have set appropriate dependent variables.
@@ -100,6 +102,19 @@ public class TestBibliographicItemImpl extends LockssTestCase {
     assertNull(bibItem2.getVolume());
     assertNull(bibItem2.getYear());
     assertNull(bibItem2.getIssue());
+
+    // Check that all the fields have been transferred, by checking generated
+    // hashCode and equals methods. If these tests fail, you probably need to
+    // regenerate the methods to account for new fields.
+    assertEquals(bibItem1, bibItemCopy);
+    assertEquals(bibItem1, bibItemClone);
+    assertEquals(bibItemCopy, bibItemClone);
+    assertTrue(bibItem1.equals(bibItemCopy));
+    assertTrue(bibItem1.equals(bibItemClone));
+    assertTrue(bibItemCopy.equals(bibItemClone));
+    assertEquals(bibItem1.hashCode(), bibItemCopy.hashCode());
+    assertEquals(bibItem1.hashCode(), bibItemClone.hashCode());
+    assertEquals(bibItemCopy.hashCode(), bibItemClone.hashCode());
   }
 
   /**

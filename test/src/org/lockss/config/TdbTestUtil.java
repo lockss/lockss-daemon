@@ -135,7 +135,8 @@ public class TdbTestUtil {
 
   /**
    * Create and fill a title with ranged AUs, and add it to the supplied publisher.
-   * Contains 1 title with 3 AUs, which should split into 2 title ranges for KBART.
+   * Contains 1 title with 3 AUs, which should remain as a single range due to a
+   * consistent volume ordering.
    *
    * @param withVols whether to include volume ranges or just years
    * @return a TdbTitle
@@ -166,7 +167,6 @@ public class TdbTestUtil {
     rangeTitleAu2b.setAttr("year", RANGE_2_END);
     if (withVols) rangeTitleAu2b.setAttr(DEFAULT_VOLUME_KEY, RANGE_2_END_VOL);
     rangeTitle.addTdbAu(rangeTitleAu2b);
-
     return rangeTitle;
   }
 

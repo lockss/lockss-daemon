@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartConverter.java,v 1.17 2012-10-22 15:07:10 easyonthemayo Exp $
+ * $Id: TestKbartConverter.java,v 1.18 2012-11-14 12:05:10 easyonthemayo Exp $
  */
 
 /*
@@ -483,9 +483,7 @@ public class TestKbartConverter extends LockssTestCase {
       assertEquals(TdbTestUtil.DEFAULT_EISSN_2, t.getField(Field.ONLINE_IDENTIFIER));
       // Title 2
       t = titles.get(1);
-      log.critical("first issue: " + t.getField(Field.DATE_FIRST_ISSUE_ONLINE));
-      log.critical("last issue: " + t.getField(Field.DATE_LAST_ISSUE_ONLINE));
-      assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_2_START), 
+      assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_2_START),
           t.getField(Field.DATE_FIRST_ISSUE_ONLINE));
       assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_2_END),
           t.getField(Field.DATE_LAST_ISSUE_ONLINE));

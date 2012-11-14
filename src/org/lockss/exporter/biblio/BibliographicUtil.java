@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicUtil.java,v 1.6 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: BibliographicUtil.java,v 1.7 2012-11-14 12:05:09 easyonthemayo Exp $
  */
 
 /*
@@ -52,8 +52,6 @@ import org.lockss.util.StringUtil;
  */
 public class BibliographicUtil {
 
-
-
   /**
    * Range sets can contain ranges delimited by either comma or semicolon.
    * Multiple separators are ignored.
@@ -95,11 +93,6 @@ public class BibliographicUtil {
       );*/
 
 
-  /** A thread-local perl matcher. */
-  private static Perl5Matcher volTokenMatcher = RegexpUtil.getMatcher();
-
-
-
   /**
    * Sort a set of {@link BibliographicItem} objects for a single title by
    * start date, volume and finally name. There is no guaranteed way to order
@@ -125,7 +118,7 @@ public class BibliographicUtil {
    * chronologically due to the frequent problem of missing or inconsistent
    * metadata, but in general sorting by volumes tends to give the most correct
    * ordering.
-   * 
+   *
    * @param items a list of <code>BibliographicItem</code>s
    */
   public static void sortByVolumeYear(List<? extends BibliographicItem> items) {
@@ -137,55 +130,71 @@ public class BibliographicUtil {
   }
 
   /**
+   * Sort a set of {@link BibliographicItem} objects for a single title by
+   * issn, name, volume, and finally start date. This yields an ordering that
+   * should be appropriate for identifying title changes.
+   *
+   * @param items a list of <code>BibliographicItem</code>s
+   */
+  public static void sortByIdentifiers(List<? extends BibliographicItem> items) {
+    ComparatorChain cc = new ComparatorChain();
+    cc.addComparator(BibliographicComparatorFactory.getIssnComparator());
+    cc.addComparator(BibliographicComparatorFactory.getNameComparator());
+    cc.addComparator(BibliographicComparatorFactory.getVolumeComparator());
+    cc.addComparator(BibliographicComparatorFactory.getStartDateComparator());
+    Collections.sort(items, cc);
+  }
+
+  /**
    * Check whether two <code>BibliographicItem</code>s are equivalent, that is
    * they share the same values for their primary fields. The fields that are
    * checked are:
-   * <code>year</code>, <code>volume</code>, <code>name</code> and 
-   * <code>issn</code>. The method will return <code>false</code> if
-   * any field is null.
-   * 
+   * <code>year</code>, <code>volume</code>, <code>name</code>,
+   * <code>journalTitle</code>,<code>issn</code> and <code>isbn</code>.
+   *
    * @param item1 a BibliographicItem
    * @param item2 another BibliographicItem
-   * @return <code>true</code> if they have equivalent primary fields
+   * @return <code>true</code> if they have equivalent primary fields; false if any differ or either item is null
    */
   public static boolean areEquivalent(BibliographicItem item1,
                                       BibliographicItem item2) {
-    try {
-      return 
-      item1.getIssn().equals(item2.getIssn()) &&
-      item1.getYear().equals(item2.getYear()) &&
-      item1.getName().equals(item2.getName()) &&
-      BibliographicUtil.normaliseIdentifier(item1.getVolume()).equals(
-          BibliographicUtil.normaliseIdentifier(item2.getVolume())
-      ); // Normalise the volumes
-
-    } catch (NullPointerException e) {
-      return false; 
-    }
+    if (item1==null || item2==null) return false;
+    return
+        StringUtil.equalStrings(item1.getPrintIssn(), item2.getPrintIssn()) &&
+            StringUtil.equalStrings(item1.getYear(), item2.getYear()) &&
+            StringUtil.equalStrings(item1.getJournalTitle(), item2.getJournalTitle()) &&
+            StringUtil.equalStrings(item1.getName(), item2.getName()) &&
+            StringUtil.equalStrings(
+                BibliographicUtil.normaliseIdentifier(item1.getVolume()),
+                BibliographicUtil.normaliseIdentifier(item2.getVolume())
+            ); // Normalise the volumes before comparison
   }
 
   /**
    * Compares two <code>BibliographicItem</code>s to see if they appear to come
-   * from the same title, by comparing their identifying fields. If the ISSNs
-   * are both non-empty, returns whether they match; otherwise returns
-   * <code>true</code> if the publication titles are equal and non-empty.
+   * from the same title, by comparing their identifying fields. If the ISSNs,
+   * eISSNs, ISBNs, eISBNs, ISSN-Ls, journal titles and publishers all match,
+   * returns <code>true</code>.
    * <p>
-   * If either argument is null, an exception will be thrown.
+   * Note that matching values can both be null, so even BibliographicItems
+   * with no field values will be considered to be from the same title. This
+   * may not be desirable.
+   * Note also that the method specifically checks the ISSNs and ISBNs,,
+   * not the best "best available info" methods such as getIssn() and getIsbn().
    *
    * @param au1 a BibliographicItem
    * @param au2 another BibliographicItem
-   * @return <code>true</code> if they have the same issn, or no issn and same title
+   * @return <code>true</code> if they have the same issn and journal title
    */
   public static boolean areFromSameTitle(BibliographicItem au1, BibliographicItem au2) {
-    String au1issn = au1.getIssn();
-    String au2issn = au2.getIssn();
-    String au1title = au1.getJournalTitle();
-    String au2title = au2.getJournalTitle();
-    if (!StringUtil.isNullString(au1issn) && !StringUtil.isNullString(au2issn))
-      return au1issn.equals(au2issn);
-    else
-      return !StringUtil.isNullString(au1title) &&
-          !StringUtil.isNullString(au2title) && au1title.equals(au2title);
+    return StringUtil.equalStrings(au1.getPrintIssn(), au2.getPrintIssn())
+        && StringUtil.equalStrings(au1.getPrintIsbn(), au2.getPrintIsbn())
+        && StringUtil.equalStrings(au1.getEissn(), au2.getEissn())
+        && StringUtil.equalStrings(au1.getEisbn(), au2.getEisbn())
+        && StringUtil.equalStrings(au1.getIssnL(), au2.getIssnL())
+        && StringUtil.equalStrings(au1.getJournalTitle(), au2.getJournalTitle())
+        && StringUtil.equalStrings(au1.getPublisherName(), au2.getPublisherName())
+        ;
   }
 
   /**
@@ -808,6 +817,7 @@ public class BibliographicUtil {
     StringBuilder sb = new StringBuilder();
     PatternMatcherInput input = new PatternMatcherInput(s);
     try {
+      Perl5Matcher volTokenMatcher = RegexpUtil.getMatcher();
       while (volTokenMatcher.contains(input, VOL_TOK_DELIM_PTN)) {
         // Check if the string is normalised Roman when it is upper cased;
         // if so it is converted to Arabic to normalise the string
@@ -1020,10 +1030,8 @@ public class BibliographicUtil {
    * @author Neil Mayo
    */
   protected static class AlphanumericTokenisation {
-
-    /** A thread-local perl matcher. */
-    private Perl5Matcher matcher = RegexpUtil.getMatcher();
-
+    /** A thread-local and non-static perl matcher. */
+    Perl5Matcher matcher = RegexpUtil.getMatcher();
     /** The string that was tokenised. */
     String originalString;
     /** An ordered list of tokens parsed from the string. */

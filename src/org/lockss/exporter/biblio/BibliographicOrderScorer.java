@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicOrderScorer.java,v 1.5 2012-10-22 15:07:09 easyonthemayo Exp $
+ * $Id: BibliographicOrderScorer.java,v 1.6 2012-11-14 12:05:09 easyonthemayo Exp $
  */
 
 /*
@@ -337,7 +337,37 @@ public final class BibliographicOrderScorer {
    * on how consistent the full list of field values is.
    */
   public static class ConsistencyScore {
+    /**
+     * The minimum overall consistency score for an ordering to be used
+     * without consulting the rival ordering.
+     */
+    static final float TOTAL_SCORE_THRESHOLD = 1f;
+    /**
+     * The minimum acceptable consistency score for the volume values in a
+     * volume-first ordering, such that the ordering can be used without first
+     * comparing it to a year ordering.
+     */
+    static final float VOLUME_SCORE_THRESHOLD = 0.95f;
+
+
     public final float volScore, yearScore, volListScore, yearListScore, score;
+
+    /**
+     * Create a ConsistencyScore from the values in a Calculator object.
+     * @param calc a calculator that has performed the calculations
+     */
+    public ConsistencyScore(Calculator calc) {
+      this(calc.volumeRangeConsistency, calc.yearRangeConsistency, 
+          calc.volumeListConsistency, calc.yearListConsistency);
+    }
+
+    /**
+     * Create a ConsistencyScore from explicitly defined values.
+     * @param volScore
+     * @param yearScore
+     * @param volListScore
+     * @param yearListScore
+     */
     public ConsistencyScore(float volScore, float yearScore,
                             float volListScore, float yearListScore) {
       this.volScore = volScore;
@@ -346,12 +376,106 @@ public final class BibliographicOrderScorer {
       this.yearListScore = yearListScore;
       // Overall score is the sum of the products of the range scores and
       // full sequence scores. This measure might be improved.
-      this.score = yearScore * volScore + yearListScore * volListScore;
+      this.score = (yearScore * volScore + yearListScore * volListScore)/2;
     }
+
+    /**
+     * Whether the volumes are fully consistent under this ordering. That is,
+     * the volume score and volume list score are both 1.
+     * @return
+     */
+    public boolean volumesAreFullyConsistent() {
+      return volScore==1 && volListScore==1;
+    }
+    /**
+     * Whether the years are fully consistent under this ordering. That is,
+     * the year score and year list score are both 1.
+     * @return
+     */
+    public boolean yearsAreFullyConsistent() {
+      return yearScore==1 && yearListScore==1;
+    }
+
+    /**
+     * The volume score is satisfactory if the overall score meets the
+     * TOTAL_SCORE_THRESHOLD, or the individual volume scores both meet the
+     * VOLUME_SCORE_THRESHOLD. This method should be used to check whether a
+     * volume ordering yields a 'good enough' set of scores for the volume field.
+     * <p>
+     * The point of this is to prevent an algorithm from having to check the
+     * year ordering. In some cases the year ordering can yield a slightly
+     * better score than volume because the years look more complete when
+     * ordered although the volumes become more seriously messed up.
+     * See for example Springer titles "Bulletin Géodésique (1946 - 1975)" and
+     * "Journal of Economics".
+     * Another approach would be to discount the year scores slightly or to
+     * take account of the size of breaks in an ordering as well as their
+     * presence and direction (see countProportionOf(Negative)Breaks methods).
+     * <p>
+     * Note that volume is the preferred indicator as years can be far more
+     * unreliable and harder to interpret.
+     * @return
+     */
+    public boolean isVolumeScoreSatisfactory() {
+      return score >= TOTAL_SCORE_THRESHOLD
+          || (volScore >=VOLUME_SCORE_THRESHOLD && volListScore >=VOLUME_SCORE_THRESHOLD)
+          ;
+    }
+
+    /**
+     * Pretty print the contributing scores for this ConsistencyScore.
+     * @return
+     */
     public String toString() {
       return String.format("ConsistencyScore vol %f \t year %f \t " +
           "volList %f \t yearList %f \t Overall %s",
           volScore, yearScore, volListScore, yearListScore, score);
+    }
+
+
+    // XXX Default implementations of equals and hashcode, to support the test
+    // class comparing the results of old algorithms against new parallelised
+    // versions.
+    @Override
+    public boolean equals(Object o) {
+      if (this == o) return true;
+      if (o == null || getClass() != o.getClass()) return false;
+      ConsistencyScore that = (ConsistencyScore) o;
+      if (Float.compare(that.score, score) != 0) return false;
+      if (Float.compare(that.volListScore, volListScore) != 0) return false;
+      if (Float.compare(that.volScore, volScore) != 0) return false;
+      if (Float.compare(that.yearListScore, yearListScore) != 0) return false;
+      if (Float.compare(that.yearScore, yearScore) != 0) return false;
+      return true;
+    }
+
+    @Override
+    public int hashCode() {
+      int result = (volScore != +0.0f ? Float.floatToIntBits(volScore) : 0);
+      result = 31 * result + (yearScore != +0.0f ? Float.floatToIntBits(yearScore) : 0);
+      result = 31 * result + (volListScore != +0.0f ? Float.floatToIntBits(volListScore) : 0);
+      result = 31 * result + (yearListScore != +0.0f ? Float.floatToIntBits(yearListScore) : 0);
+      result = 31 * result + (score != +0.0f ? Float.floatToIntBits(score) : 0);
+      return result;
+    }
+  }
+
+  /**
+   * A convenience object to hold consistency scores along with the ranges which
+   * result from the ordering that gave rise to the scores.
+   */
+  public static class ConsistencyScoreWithRanges extends ConsistencyScore {
+    public final List<TitleRange> ranges;
+    public ConsistencyScoreWithRanges(Calculator calc) {
+      super(calc);
+      this.ranges = calc.ranges;
+    }
+
+    public ConsistencyScoreWithRanges(float volScore, float yearScore,
+                                      float volListScore, float yearListScore,
+                                      List<TitleRange> ranges) {
+      super(volScore, yearScore, volListScore, yearListScore);
+      this.ranges = ranges;
     }
   }
 
@@ -666,19 +790,6 @@ public final class BibliographicOrderScorer {
         return mr1.group(1).equals(mr2.group(1)) &&
             mr1.group(3).equals(mr2.group(3)) &&
             areValuesIncreasing(mr1.group(2), mr2.group(2));
-
-        /*try {
-        // If the outer tokens match, test the consecutivity of the number tokens
-        return mr1.group(1).equals(mr2.group(1)) &&
-            mr1.group(3).equals(mr2.group(3)) &&
-            areValuesIncreasing(mr1.group(2), mr2.group(2));
-        } catch (NullPointerException e) {
-          // Record and rethrow
-          log.debug("NPE while using matcher: "+matcher);
-          log.debug("Match result 1: "+mr1+" groups "+mr1.groups());
-          log.debug("Match result 2: "+mr2+" groups "+mr2.groups());
-          throw e;
-        }*/
       }
     }
     // At least one string doesn't match
@@ -928,6 +1039,77 @@ public final class BibliographicOrderScorer {
   }
 
   /**
+   * Calculate the proportion of value pairs in the range that have a break
+   * between them, for both volume and year. Note that if this method is
+   * passed a sequence which represents a gapless range, the result will be
+   * zero on the primary field informing the ordering.
+   *
+   * @param aus a list of BibliographicItems
+   * @return a pair of decimal values between 0 and 1
+   */
+  static final Score countProportionOfBreaksInRange(
+      List<? extends BibliographicItem> aus) {
+    int numPairs = aus.size() - 1;
+    if (numPairs<1) return new Score(0, 0);
+    float volScore = 0, yearScore = 0;
+    boolean volDone = false, yearDone = false;
+    int totalv = 0, totaly = 0;
+    for (int i=1; i<=numPairs; i++) {
+      BibliographicItem lastAu = aus.get(i-1);
+      BibliographicItem thisAu = aus.get(i);
+      // ----------------------------------------------------------------------
+      // Calculate for vols
+      if (!volDone) {
+        // If there is not a full set of field values, return a high value
+        if (!SORT_FIELD.VOLUME.hasValue(lastAu) || !SORT_FIELD.VOLUME.hasValue(thisAu)) {
+          volScore = 1f;
+          volDone = true;
+        } else {
+          // Compare the values to see if there is a break.
+          try {
+            if (!SORT_FIELD.VOLUME.areAppropriatelyConsecutive(lastAu, thisAu)) {
+              totalv++;
+            }
+          } catch (NumberFormatException e) {
+            // There's something funny about the field values, so issue a warning
+            // and carry on without counting a break.
+            log.warning("Could not check if "+SORT_FIELD.VOLUME+
+                " values are appropriately consecutive: "+e.getMessage());
+          }
+        }
+      }
+      // ----------------------------------------------------------------------
+      // Calculate for years
+      if (!yearDone) {
+        // If there is not a full set of field values, return a high value
+        if (!SORT_FIELD.YEAR.hasValue(lastAu) || !SORT_FIELD.YEAR.hasValue(thisAu)) {
+          yearScore = 1f;
+          yearDone = true;
+        } else {
+          // Compare the values to see if there is a break.
+          try {
+            if (!SORT_FIELD.YEAR.areAppropriatelyConsecutive(lastAu, thisAu)) {
+              totaly++;
+            }
+          } catch (NumberFormatException e) {
+            // There's something funny about the field values, so issue a warning
+            // and carry on without counting a break.
+            log.warning("Could not check if "+SORT_FIELD.YEAR+
+                " values are appropriately consecutive: "+e.getMessage());
+          }
+        }
+      }
+      // Break the loop if we have vals for both vol and year because
+      // neither has a full set of field values
+      if (volDone && yearDone) break;
+    }
+    return new Score(
+        (float)totalv/(float)numPairs,
+        (float)totaly/(float)numPairs
+    );
+  }
+
+  /**
    * Calculate the proportion of year pairs in the range that have a break
    * between them which is not also apparent in the volume field. When
    * there is a parallel break in volumes, the break is less likely to indicate
@@ -1013,6 +1195,84 @@ public final class BibliographicOrderScorer {
     return (float)total/(float)numPairs;
   }
 
+
+  /**
+   * Calculate the proportion of value pairs in the range that have a break
+   * between them which represents decreasing values. We do this for both
+   * volume and year. Note that breaks are identified using the
+   * {@link SORT_FIELD.areAppropriatelyConsecutive()}
+   * method, and descending year values may actually be appropriately
+   * consecutive. To count towards the proportion, years must be both
+   * non-consecutive by that measure, and also decreasing.
+   *
+   * @param aus a list of BibliographicItems
+   * @return a pair of decimal values between 0 and 1
+   */
+  static final Score countProportionOfNegativeBreaksInRange(
+      List<? extends BibliographicItem> aus) {
+    float volScore = 0, yearScore = 0;
+    boolean volDone = false, yearDone = false;
+    int numPairs = aus.size() - 1;
+    if (numPairs<1) return new Score(0, 0);
+    int totalv = 0, totaly = 0;
+    for (int i=1; i<=numPairs; i++) {
+      BibliographicItem lastAu = aus.get(i-1);
+      BibliographicItem thisAu = aus.get(i);
+      // ----------------------------------------------------------------------
+      // Calculate for volume
+      if (!volDone) {
+        String lastValVol = SORT_FIELD.VOLUME.getValueForComparisonAsPrevious(lastAu);
+        String thisValVol = SORT_FIELD.VOLUME.getValueForComparisonAsCurrent(thisAu);
+        // If there is not a full set of field values, return a high value
+        if (lastValVol==null || thisValVol==null) {
+          volScore = 1f;
+          volDone = true;
+        }
+        // Record a negative break
+        else try {
+          if (SORT_FIELD.VOLUME.areDecreasing(lastValVol, thisValVol)) {
+            totalv++;
+        }
+        } catch (NumberFormatException e) {
+          // There's something funny about the field values, so issue a
+          // warning and carry on without counting a negative break.
+          log.warning("Could not check if " + SORT_FIELD.VOLUME +
+              " values constitute a negative break. " + e.getMessage());
+        }
+      }
+      // ----------------------------------------------------------------------
+      // Calculate for year
+      if (!yearDone) {
+        String lastValYear = SORT_FIELD.YEAR.getValueForComparisonAsPrevious(lastAu);
+        String thisValYear = SORT_FIELD.YEAR.getValueForComparisonAsCurrent(thisAu);
+        // If there is not a full set of field values, return a high value
+        if (lastValYear==null || thisValYear==null) {
+          yearScore = 1f;
+          yearDone = true;
+        }
+        // Record a negative break
+        if (!yearDone) try {
+          if (SORT_FIELD.YEAR.areDecreasing(lastValYear, thisValYear)) {
+            totaly++;
+        }
+        } catch (NumberFormatException e) {
+          // There's something funny about the field values, so issue a
+          // warning and carry on without counting a negative break.
+          log.warning("Could not check if " + SORT_FIELD.YEAR +
+            " values constitute a negative break. " + e.getMessage());
+        }
+      }
+      // Break the loop if we have vals for both vol and year because
+      // neither has a full set of field values
+      if (volDone && yearDone) break;
+    }
+    // ----------------------------------------------------------------------
+    // Calculate scores if not already done
+    if (!volDone) volScore = (float)totalv/(float)numPairs;
+    if (!yearDone) yearScore = (float)totaly/(float)numPairs;
+    return new Score(volScore, yearScore);
+  }
+
   /**
    * How much redundancy there is in the values of the range. <s>For volumes,
    * which should not have duplicates (but do), this is the proportion of values
@@ -1046,6 +1306,64 @@ public final class BibliographicOrderScorer {
       lastValue = value;
     }
     return (float)redundantEntries / (float)numVals;
+  }
+
+  /**
+   * How much redundancy there is in the values of the range. <s>For volumes,
+   * which should not have duplicates (but do), this is the proportion of values
+   * which are repeated. For years, which can have duplicates that should be
+   * consecutive, this is the proportion of values which duplicate earlier
+   * values but not their preceding value.</s>
+   * <p>
+   * Duplicates can appear in both year and volume fields. For volumes, this is
+   * mostly because of duplicate records due to something like a publisher
+   * moving to a different platform. It should not (but does) occur within the
+   * volume fields of a single journal run. For this reason, a duplicate value
+   * is not counted if it duplicates only the preceding value.
+   *
+   * @param aus a list of BibliographicItems
+   * @return a pair of decimal values between 0 and 1
+   */
+  static final Score countProportionOfRedundancyInRange(
+      List<? extends BibliographicItem> aus) {
+    float volScore = 0, yearScore = 0;
+    boolean volDone = false, yearDone = false;
+    int numVals = aus.size();
+    if (numVals<2) return new Score(0,0);
+    Set<String> uniqueValsVol = new HashSet<String>();
+    Set<String> uniqueValsYear = new HashSet<String>();
+    String lastValueVol = null;
+    String lastValueYear = null;
+    int redundantEntriesVol = 0,redundantEntriesYear = 0;
+    for (BibliographicItem au : aus) {
+      // If there is not a full set of field values, return a high value
+      // If the value is a duplicate and different from the last value, record it
+      if (!SORT_FIELD.VOLUME.hasValue(au)) {
+        volScore = 1f;
+        volDone = true;
+      } else {
+        String valueVol = SORT_FIELD.VOLUME.getValue(au);
+        if (!uniqueValsVol.add(valueVol) && !valueVol.equals(lastValueVol)) redundantEntriesVol++;
+        lastValueVol = valueVol;
+      }
+      // Year calcs
+      if (!SORT_FIELD.YEAR.hasValue(au)) {
+        yearScore = 1f;
+        yearDone = true;
+      } else {
+        String valueYear = SORT_FIELD.YEAR.getValue(au);
+        if (!uniqueValsYear.add(valueYear) && !valueYear.equals(lastValueYear)) redundantEntriesYear++;
+        lastValueYear = valueYear;
+      }
+      // Break the loop if we have vals for both vol and year because 
+      // neither has a full set of field values
+      if (volDone && yearDone) break;
+    }
+    // ----------------------------------------------------------------------
+    // Calculate scores if not already done
+    if (!volDone) volScore = (float)redundantEntriesVol / (float)numVals;
+    if (!yearDone) yearScore = (float)redundantEntriesYear / (float)numVals;
+    return new Score(volScore, yearScore);
   }
 
   /**
@@ -1173,15 +1491,9 @@ public final class BibliographicOrderScorer {
    * each range and then averaged. Finally a discount is applied based on the
    * frequency of coverage gaps (ranges) in the full sequence. In general,
    * a good ordering should produce less coverage gaps.
-   * <p>
-   * Contributing measures include the proportion of redundancy, the number of
-   * breaks, and the number of negative breaks. These are calculated for each
-   * range and then averaged. Finally a discount is applied based on the
-   * frequency of coverage gaps (ranges) in the full sequence. In general,
-   * a good ordering should produce less coverage gaps.
    *
    * @param ranges a list of ranges calculated from an ordering
-   * @return a consistency score for the calculated rangesx
+   * @return a consistency score for the calculated ranges
    */
   static final float getVolumeRangeConsistency(List<TitleRange> ranges) {
     SORT_FIELD sf = SORT_FIELD.VOLUME;
@@ -1206,6 +1518,54 @@ public final class BibliographicOrderScorer {
   }
 
   /**
+   * Get a consistency score for both volumes and years in a set of coverage
+   * ranges, performing both calculations in the same iteration over the ranges.
+   * <p>
+   * Contributing measures include the proportion of redundancy, the proportion
+   * of breaks, and the proportion of negative breaks. These are calculated for
+   * each range and then averaged. Finally a discount is applied based on the
+   * frequency of coverage gaps (ranges) in the full sequence. In general,
+   * a good ordering should produce less coverage gaps.
+   *
+   * @param ranges a list of ranges calculated from an ordering
+   * @return vol/year consistency scores for the calculated ranges
+   */
+  static final Score getRangeConsistency(List<TitleRange> ranges) {
+    float totalAus = 0;
+    float totalRedVol = 0, totalBrkVol = 0, totalNegbrkVol = 0;
+    float totalRedYear = 0, totalBrkYear = 0, totalNegbrkYear = 0;
+    for (TitleRange rng : ranges) {
+      totalAus += rng.items.size();
+      // Use new methods
+      Score redScore = countProportionOfRedundancyInRange(rng.items);
+      Score brkScore = countProportionOfBreaksInRange(rng.items);
+      Score negbrkScore = countProportionOfNegativeBreaksInRange(rng.items);
+      // Vols
+      totalRedVol += redScore.volScore;
+      totalBrkVol += brkScore.volScore;
+      totalNegbrkVol += negbrkScore.volScore;
+      // Years
+      totalRedYear += redScore.yearScore;
+      totalBrkYear += brkScore.yearScore;
+      totalNegbrkYear += negbrkScore.yearScore;
+    }
+    float numRanges = (float)ranges.size();
+    // Discount for large number of ranges - prefer less ranges
+    float gfs = getCoverageGapFrequencyDiscount((float)totalAus, numRanges);
+    // Average the redundancy and break scores for vol and year
+    float redv = totalRedVol/numRanges;
+    float brkv = totalBrkVol/numRanges;
+    float negbrkv = totalNegbrkVol/numRanges;
+    float redy = totalRedYear/numRanges;
+    float brky = totalBrkYear/numRanges;
+    float negbrky = totalNegbrkYear/numRanges;
+    return new Score(
+        (1-redv) * (1-brkv) * (1-gfs) * (1-negbrkv),
+        (1-redy) * (1-brky) * (1-gfs) * (1-negbrky)
+    );
+  }
+
+  /**
    * The more frequently coverage gaps occur, the lower the score. Sometimes
    * there are genuinely lots of coverage gaps, but in general we prefer an
    * ordering which produces fewer gaps.
@@ -1223,16 +1583,29 @@ public final class BibliographicOrderScorer {
    * Calculate a consistency score for the given list of calculated ranges.
    *
    * @param aus the full list of aus ordered by the sortField
-   * @param rangesByVol an ordered list of title ranges derived from an ordering
+   * @param ranges an ordered list of title ranges derived from an ordering
    * @return a score between 0 and 1
    */
-  public static final ConsistencyScore getConsistencyScore(List<? extends BibliographicItem> aus,
-                                                           List<TitleRange> rangesByVol) {
-    float volScore = getVolumeRangeConsistency(rangesByVol);
-    float yearScore = getYearRangeConsistency(rangesByVol);
+  public static final ConsistencyScoreWithRanges getConsistencyScore(
+      List<? extends BibliographicItem> aus,
+      List<TitleRange> ranges) {
+    return new ConsistencyScoreWithRanges(new Calculator(aus, ranges));
+  }
+
+  // This is the original getConsistencyScore, which used to call individual
+  // methods for volume and year.
+  // The newer approach which calls combined methods appears to be no faster,
+  // and in fact slightly slower for the very small numbers of AUs in titles
+  protected static final ConsistencyScoreWithRanges getConsistencyScoreOld(
+      List<? extends BibliographicItem> aus,
+      List<TitleRange> ranges) {
+    //long s = System.currentTimeMillis();
+    float volScore = getVolumeRangeConsistency(ranges);
+    float yearScore = getYearRangeConsistency(ranges);
     float volListScore  = BibliographicOrderScorer.getVolumeListConsistency(aus);
     float yearListScore = BibliographicOrderScorer.getYearListConsistency(aus);
-    return new ConsistencyScore(volScore, yearScore, volListScore, yearListScore);
+    return new ConsistencyScoreWithRanges(volScore, yearScore,
+        volListScore, yearListScore, ranges);
   }
 
   /**
@@ -1298,6 +1671,88 @@ public final class BibliographicOrderScorer {
     // Relative benefit of second ordering to full ordered year sequence
     //float secondOrdYearListBen = firstScore.yearListScore - secondScore.yearListScore;
     //return secondOrdYearBen + secondOrdYearListBen;
+  }
+
+  /**
+   * A class for grouping together the calculations associated with consistency
+   * scoring; this allows a range of metrics to be calculated on the AUs in a
+   * reduced number of iterations over the list. It is supported by a set of new
+   * BibliographicOrderScorer methods which provide combined functionality,
+   * returning multiple values in a Score object.
+   */
+  protected static class Calculator {
+
+    final List<? extends BibliographicItem> aus;
+    final List<TitleRange> ranges;
+    
+    // Calculate all the figures
+    float volumeRangeConsistency = 0;
+    float yearRangeConsistency = 0;
+    float volumeListConsistency = 0;
+    float yearListConsistency = 0;
+
+    /**
+     * Create a score calculator over the given set of AUs and the ordered
+     * ranges. The calculations are done immediately.
+     * @param aus
+     * @param ranges
+     */
+    protected Calculator(List<? extends BibliographicItem> aus, List<TitleRange> ranges) {
+      this.aus = aus;
+      this.ranges = ranges;
+      calculateAll();
+    }
+
+    /**
+     * Calculate all the metrics. The calls use new version of the methods which
+     * perform calculations simultaneously for both volume and year, thereby
+     * reducing the number of iterations over the ranges and lists, and return
+     * both scores in a Score object.
+     */
+    private void calculateAll() {
+      // Calculate range consistency scores
+      Score rangeConsistency = getRangeConsistency(ranges);
+      this.volumeRangeConsistency = rangeConsistency.volScore;
+      this.yearRangeConsistency = rangeConsistency.yearScore;
+      // Calculate list consistency scores
+      Score redScore = countProportionOfRedundancyInRange(aus);
+      Score brkScore = countBreaksInRange(aus);
+      Score negbrkScore = countProportionOfNegativeBreaksInRange(aus);
+      this.volumeListConsistency = (1-redScore.volScore) * (1-brkScore.volScore) * (1-negbrkScore.volScore);
+      this.yearListConsistency = (1-redScore.yearScore) * (1-brkScore.yearScore) * (1-negbrkScore.yearScore);
+    }
+
+    /**
+     * Volume and year have different metrics for breaks and so are calculated
+     * separately within this method; it would be nice to have a static method
+     * in BibliographicOrderScorer which combines the algorithms in one
+     * iteration over the list, if possible.
+     * @param aus
+     * @return
+     */
+    private Score countBreaksInRange(List<? extends BibliographicItem> aus) {
+      return new Score(
+          countProportionOfBreaksInRange(aus, SORT_FIELD.VOLUME),
+          countProportionOfUniquelyYearBreaks(aus)
+      );
+    }
+
+  }
+  
+
+  /**
+   * A simple wrapper for a pair of float-valued scores for volume and year.
+   */
+  protected static class Score {
+    final float volScore;
+    final float yearScore;
+    
+    public Score(float volScore, float yearScore) {
+      super();
+      this.volScore = volScore;
+      this.yearScore = yearScore;
+    }
+
   }
 
 }

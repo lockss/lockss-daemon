@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicUtil.java,v 1.6 2012-10-09 00:20:50 pgust Exp $
+ * $Id: TestBibliographicUtil.java,v 1.7 2012-11-14 12:05:10 easyonthemayo Exp $
  */
 
 /*
@@ -44,11 +44,13 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.concurrent.*;
 import java.util.regex.Pattern;
 
 /**
- * Testing is performed using TdbAu objects, though perhaps the more generic
+ * Many tests are performed using TdbAu objects, though perhaps the more generic
  * BibliographicItemImpl should be used.
+ * // XXX NOTE: we don't incorporate test for ISBNs or ISSN-Ls or eIS[BS]Ns yet
  */
 public class TestBibliographicUtil extends LockssTestCase {
 
@@ -71,10 +73,9 @@ public class TestBibliographicUtil extends LockssTestCase {
   
   // AUs for the equivalence tests
   private BibliographicItem afrTod, afrTodEquiv, afrTodDiffVol, afrTodDiffYear,
-      afrTodDiffName, afrTodDiffUrl, afrTodNullYear;
-  private List<BibliographicItem> afrTodAus = Arrays.asList(afrTod, afrTodEquiv,
-      afrTodDiffVol, afrTodDiffYear, afrTodDiffName, afrTodDiffUrl,
-      afrTodNullYear);
+      afrTodDiffName, afrTodDiffJournalTitle, afrTodDiffIssn, afrTodDiffPublisher, afrTodNullYear;
+  private List<BibliographicItem> afrTodAus;
+
 
   // OUP's "The Library..." has consecutive volumes with different identifier formats
   private BibliographicItem theLib1 = new BibliographicItemImpl()
@@ -95,23 +96,43 @@ public class TestBibliographicUtil extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
     // Set up some AUs for the equivalence tests
-    try {
-      // 2 equivalent AUs
-      afrTod         = TdbTestUtil.createBasicAu("Africa Today",     "1999", "46");
-      afrTodEquiv    = TdbTestUtil.createBasicAu("Africa Today",     "1999", "46");
-      // 2 AUs differing from the previous 2 by one field each
-      afrTodDiffVol  = TdbTestUtil.createBasicAu("Africa Today",     "1999", "47");
-      afrTodDiffYear = TdbTestUtil.createBasicAu("Africa Today",     "2000", "46");
-      afrTodDiffName = TdbTestUtil.createBasicAu("Africa Yesterday", "1999", "46");
-      // An AU differing from the first pair on a non-primary field
-      TdbAu au = TdbTestUtil.createBasicAu("Africa Today",     "1999", "46");
-      TdbTestUtil.setParam(au, "base_url", "http://whocares.com");
-      afrTodDiffUrl  = au;
-      // An AU with a null year
-      afrTodNullYear = TdbTestUtil.createBasicAu("Africa Today", null, "46");
-    } catch (TdbException e) {
-      fail("Error setting up test TdbAus.");
-    }
+    // Basic cloneable AU
+    afrTod = new BibliographicItemImpl()
+        .setJournalTitle("Africa Today")
+        .setName("Africa Today")
+        .setYear("1999").setVolume("46")
+            // Note we have to set these default ISSN/EISSN for compatibility with Tdb created below
+        .setPrintIssn(TdbTestUtil.DEFAULT_ISSN_1)
+        .setEissn(TdbTestUtil.DEFAULT_EISSN_1);
+    // equivalent AU
+    afrTodEquiv = new BibliographicItemImpl(afrTod);
+    // 2 AUs differing from the previous 2 by one field each
+    afrTodDiffVol  = new BibliographicItemImpl(afrTod).setVolume("47");
+    afrTodDiffYear = new BibliographicItemImpl(afrTod).setYear("2000");
+    afrTodDiffName = new BibliographicItemImpl(afrTod).setName("Africa Yesterday");
+    afrTodDiffJournalTitle = new BibliographicItemImpl(afrTod).setJournalTitle("Africa Yesterday");
+    afrTodDiffIssn = new BibliographicItemImpl(afrTod).setPrintIssn(TdbTestUtil.DEFAULT_ISSN_4);
+    afrTodDiffPublisher = new BibliographicItemImpl(afrTod).setPublisherName(TdbTestUtil.DEFAULT_PUBLISHER);
+
+    // ----------------------------------------------------------------------
+    // The following is not equivalent to BibItems as it is a TdbAu,
+    // having a null journal title by default, dependent on title.
+    // Instead all BibItems are now created as fully comparable BibItemImpl;
+    // it is up to implementors to provide appropriate values, and test them
+    // separately against the BibliographicItem interface.
+    // ----------------------------------------------------------------------
+    // An AU differing from the first pair on a non-primary field
+    /*TdbAu auDiffUrl = TdbTestUtil.createBasicAu("Africa Today", "1999", "46");
+      TdbTestUtil.setParam(auDiffUrl, "base_url", "http://whocares.com");
+      afrTodDiffUrl  = auDiffUrl;*/
+    // ----------------------------------------------------------------------
+
+    // An AU with a null year
+    afrTodNullYear = new BibliographicItemImpl(afrTod).setYear(null);
+
+    afrTodAus = Arrays.asList(afrTod, afrTodEquiv,
+        afrTodDiffVol, afrTodDiffYear, afrTodDiffName, afrTodDiffJournalTitle,
+        afrTodDiffIssn, afrTodDiffPublisher, afrTodNullYear);
   }
 
   /**
@@ -155,11 +176,11 @@ public class TestBibliographicUtil extends LockssTestCase {
   public void testAreEquivalent() {
     assertTrue(BibliographicUtil.areEquivalent(afrTod, afrTod));
     assertTrue(BibliographicUtil.areEquivalent(afrTod, afrTodEquiv));
-    assertTrue(BibliographicUtil.areEquivalent(afrTod, afrTodDiffUrl));
-    assertTrue(BibliographicUtil.areEquivalent(afrTodDiffUrl, afrTod));
+    assertTrue(BibliographicUtil.areEquivalent(afrTod, afrTodDiffPublisher));
+    assertTrue(BibliographicUtil.areEquivalent(afrTodDiffPublisher, afrTod));
     assertTrue(BibliographicUtil.areEquivalent(theLib1, theLib2));
 
-    // Should return false if any field or arg is null
+    // Should return false if any arg is null or one of the fields is null
     assertFalse(BibliographicUtil.areEquivalent(null, null));
     assertFalse(BibliographicUtil.areEquivalent(afrTod, afrTodNullYear));
     assertFalse(BibliographicUtil.areEquivalent(afrTodNullYear, afrTod));
@@ -168,6 +189,7 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertFalse(BibliographicUtil.areEquivalent(afrTod, afrTodDiffYear));
 
     assertFalse(BibliographicUtil.areEquivalent(afrTod, afrTodDiffName));
+    assertFalse(BibliographicUtil.areEquivalent(afrTod, afrTodDiffJournalTitle));
   }
 
   /**
@@ -175,13 +197,27 @@ public class TestBibliographicUtil extends LockssTestCase {
    * fields. If either argument is null, an exception should be thrown.
    */
   public void testAreFromSameTitle() throws Exception {
-    // All Africa Today example titles should be from same title except afrTodDiffName
+    // All titles should be from the same title as themselves
+    for (BibliographicItem au : afrTodAus) {
+      assertTrue(BibliographicUtil.areFromSameTitle(au, au));
+    }
+    assertTrue(BibliographicUtil.areFromSameTitle(theLib1, theLib2));
+
+    // All Africa Today example titles should be from same title
+    // except afrTodDiffJournalTitle, afrTodDiffIssn, afrTodDiffPublisher
     List<BibliographicItem> sameTitleAfrTodAus = Arrays.asList(afrTod,
-        afrTodEquiv, afrTodDiffVol, afrTodDiffYear, afrTodDiffUrl, afrTodNullYear);
+        afrTodEquiv, afrTodDiffVol, afrTodDiffYear, afrTodNullYear);
+    // XXX NOTE: we don;t incorporate test for ISBNs or ISSN-Ls or eIS[BS]Ns yet
 
     for (BibliographicItem bi1 : sameTitleAfrTodAus) {
-      // Should differ from item with diff name
+      // Should be same as item with diff name
       assertTrue(BibliographicUtil.areFromSameTitle(bi1, afrTodDiffName));
+      // Should differ from item with diff journal title
+      assertFalse(BibliographicUtil.areFromSameTitle(bi1, afrTodDiffJournalTitle));
+      // Should differ from item with diff ISSN
+      assertFalse(BibliographicUtil.areFromSameTitle(bi1, afrTodDiffIssn));
+      // Should differ from item with diff publisher
+      assertFalse(BibliographicUtil.areFromSameTitle(bi1, afrTodDiffPublisher));
       // Should match all other items
       for (BibliographicItem bi2 : sameTitleAfrTodAus) {
         assertTrue(BibliographicUtil.areFromSameTitle(bi1, bi2));
@@ -205,7 +241,7 @@ public class TestBibliographicUtil extends LockssTestCase {
   public void testHaveSameIdentity() {
     assertTrue(BibliographicUtil.haveSameIdentity(afrTod, afrTod));
     assertTrue(BibliographicUtil.haveSameIdentity(afrTod, afrTodEquiv));
-    assertTrue(BibliographicUtil.haveSameIdentity(afrTod, afrTodDiffUrl));
+    assertTrue(BibliographicUtil.haveSameIdentity(afrTod, afrTodDiffPublisher));
     // Should return false if any arg is null
     try {
       BibliographicUtil.haveSameIdentity(null, null);
@@ -217,10 +253,12 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertTrue(BibliographicUtil.haveSameIdentity(afrTod, afrTodNullYear));
     // These have the same ISSN, despite the other difference
     assertTrue(BibliographicUtil.haveSameIdentity(afrTod, afrTodDiffName));
+    assertTrue(BibliographicUtil.haveSameIdentity(afrTod, afrTodDiffJournalTitle));
     assertTrue(BibliographicUtil.haveSameIdentity(afrTod, afrTodDiffVol));
     assertTrue(BibliographicUtil.haveSameIdentity(afrTod, afrTodDiffYear));
     assertTrue(BibliographicUtil.haveSameIdentity(afrTodDiffYear, afrTodDiffVol));
     assertTrue(BibliographicUtil.haveSameIdentity(afrTodDiffName, afrTodDiffYear));
+    assertTrue(BibliographicUtil.haveSameIdentity(afrTodDiffJournalTitle, afrTodDiffYear));
     // Null field discounts year; issns still match
     assertTrue(BibliographicUtil.haveSameIdentity(afrTodNullYear, afrTodDiffYear));
     assertTrue(BibliographicUtil.haveSameIdentity(afrTodNullYear, afrTodDiffVol));
@@ -232,7 +270,7 @@ public class TestBibliographicUtil extends LockssTestCase {
   public void testHaveSameIndex() {
     assertTrue(BibliographicUtil.haveSameIndex(afrTod, afrTod));
     assertTrue(BibliographicUtil.haveSameIndex(afrTod, afrTodEquiv));
-    assertTrue(BibliographicUtil.haveSameIndex(afrTod, afrTodDiffUrl));
+    assertTrue(BibliographicUtil.haveSameIndex(afrTod, afrTodDiffPublisher));
     // Should throw exception if any arg is null
     try {
       BibliographicUtil.haveSameIndex(null, null);
@@ -244,12 +282,14 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertTrue(BibliographicUtil.haveSameIndex(afrTod, afrTodNullYear));
     // These only differ on id fields
     assertTrue(BibliographicUtil.haveSameIndex(afrTod, afrTodDiffName));
+    assertTrue(BibliographicUtil.haveSameIndex(afrTod, afrTodDiffJournalTitle));
     // These differ on one of the two available index fields
     assertFalse(BibliographicUtil.haveSameIndex(afrTod, afrTodDiffVol));
     assertFalse(BibliographicUtil.haveSameIndex(afrTod, afrTodDiffYear));
     // These differ on available fields
     assertFalse(BibliographicUtil.haveSameIndex(afrTodDiffYear, afrTodDiffVol));
     assertFalse(BibliographicUtil.haveSameIndex(afrTodDiffName, afrTodDiffYear));
+    assertFalse(BibliographicUtil.haveSameIndex(afrTodDiffJournalTitle, afrTodDiffYear));
     // Null fields discount year; volumes match
     assertTrue(BibliographicUtil.haveSameIndex(afrTodNullYear, afrTodDiffYear));
     // Null fields discount year; volumes differ
@@ -261,10 +301,10 @@ public class TestBibliographicUtil extends LockssTestCase {
    * available (non-null) must match.
    */
   public void testAreApparentlyEquivalent() {
-    assertTrue(BibliographicUtil.areEquivalent(theLib1, theLib2));
+    assertTrue(BibliographicUtil.areApparentlyEquivalent(theLib1, theLib2));
     assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTod));
     assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodEquiv));
-    assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodDiffUrl));
+    assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodDiffPublisher));
     // Should throw exception if any arg is null
     try {
       BibliographicUtil.areApparentlyEquivalent(null, null);
@@ -274,14 +314,16 @@ public class TestBibliographicUtil extends LockssTestCase {
     }
     // The null field should be omitted from the comparison
     assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodNullYear));
-    // These have the same ISSN, despite the name difference
+    // These have the same ISSN, despite the name/title difference
     assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodDiffName));
+    assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodDiffJournalTitle));
     // These differ on one of the two available index fields
     assertFalse(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodDiffVol));
     assertFalse(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodDiffYear));
     // These differ on available fields
     assertFalse(BibliographicUtil.areApparentlyEquivalent(afrTodDiffYear, afrTodDiffVol));
     assertFalse(BibliographicUtil.areApparentlyEquivalent(afrTodDiffName, afrTodDiffYear));
+    assertFalse(BibliographicUtil.areApparentlyEquivalent(afrTodDiffJournalTitle, afrTodDiffYear));
     // Null field discounts year; issn and volume match
     assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTodNullYear, afrTodDiffYear));
     // Null field discounts year; vols differ
@@ -744,6 +786,10 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertEquals("", BibliographicUtil.translateRomanTokens(""));
     assertEquals("6", BibliographicUtil.translateRomanTokens("6"));
     assertEquals("-", BibliographicUtil.translateRomanTokens("-"));
+
+    checkPerl5MatcherUsageWithTask(new Runnable() {
+      public void run() { BibliographicUtil.translateRomanTokens("s1-II"); }
+    });
   }
 
 
@@ -847,6 +893,29 @@ public class TestBibliographicUtil extends LockssTestCase {
 
     // The method does not currently distinguish tokens based on case
     checkAlphanumericTokenisation("aIV", 1);
+
+    checkPerl5MatcherUsageWithTask(new Runnable() {
+      public void run() { checkAlphanumericTokenisation("a1-2 - b2-4", 9); }
+    });
+  }
+
+  /**
+   * Try parallel usage of a class or method that uses Perl5Matcher, via an
+   * ExecutorService; the thread-local Perl5Matcher should be used carefully,
+   * and not shared among threads (for example, by making it static).
+   * @param r
+   */
+  public final void checkPerl5MatcherUsageWithTask(Runnable r) {
+    ExecutorService executorService = Executors.newFixedThreadPool(3);
+    List<Future> futures = new ArrayList<Future>();
+    for (int i=0; i < 100; i++) futures.add( executorService.submit(r) );
+    try {
+      for (Future f : futures) f.get();
+    } catch (InterruptedException e) {
+      fail("Thread should not be interrupted "+e);
+    } catch (ExecutionException e) {
+      fail("Runnable task should not throw exception "+e);
+    }
   }
 
   /**

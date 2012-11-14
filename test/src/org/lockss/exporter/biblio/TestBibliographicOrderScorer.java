@@ -27,7 +27,8 @@ public class TestBibliographicOrderScorer extends TestCase {
     
     ---------------------------------------------------------------------------
     (1) Mixed volume identifier formats
-    
+
+    au < manifest ; 2005-2006 ; T'ang Studies Volume 2005 ; 2005 >
     au < manifest ; 2007 ; T'ang Studies Volume 2007 ; 2007 >
     au < manifest ; 2008 ; T'ang Studies Volume 2008 ; 2008 >
     au < manifest ; 2009 ; T'ang Studies Volume 27 ; 27 >
@@ -246,7 +247,7 @@ public class TestBibliographicOrderScorer extends TestCase {
   // Record all the test AU sequences which are consistent
   List<List<BibliographicItem>> consistentSequences;
 
-    // Make immutable copies of the canonical orderings and store in a list
+  // Make immutable copies of the canonical orderings and store in a list
   List<List<BibliographicItem>> allCanonicalLists;
 
 
@@ -330,26 +331,30 @@ public class TestBibliographicOrderScorer extends TestCase {
 
     // ----------------------------------------------------------------------
     BibliographicItem tang1 = new BibliographicItemImpl()
+        .setName("T'ang Studies Volume 2005")
+        .setYear("2005-2006")
+        .setVolume("2005");
+    BibliographicItem tang2 = new BibliographicItemImpl()
         .setName("T'ang Studies Volume 2007")
         .setYear("2007")
         .setVolume("2007");
-    BibliographicItem tang2 = new BibliographicItemImpl()
+    BibliographicItem tang3 = new BibliographicItemImpl()
         .setName("T'ang Studies Volume 2008")
         .setYear("2008")
         .setVolume("2008");
-    BibliographicItem tang3 = new BibliographicItemImpl()
+    BibliographicItem tang4 = new BibliographicItemImpl()
         .setName("T'ang Studies Volume 27")
         .setYear("2009")
         .setVolume("27");
-    BibliographicItem tang4 = new BibliographicItemImpl()
+    BibliographicItem tang5 = new BibliographicItemImpl()
         .setName("T'ang Studies Volume 2010")
         .setYear("2010")
         .setVolume("2010");
-    tang = Arrays.asList(tang1, tang2, tang3, tang4);
+    tang = Arrays.asList(tang1, tang2, tang3, tang4, tang5);
     problemTitles.add(tang);
     allCanonicalLists.add(Collections.unmodifiableList(tang));
     tangYearRanges = Arrays.asList(
-        new TitleRange(Arrays.asList(tang1, tang2, tang3, tang4))
+        new TitleRange(Arrays.asList(tang1, tang2, tang3, tang4, tang5))
     );
     tangVolRanges = Arrays.asList(
         new TitleRange(Arrays.asList(tang3)),
@@ -1639,8 +1644,8 @@ public class TestBibliographicOrderScorer extends TestCase {
   public final void testCountProportionOfBreaksInRange() {
 
     // tang
-    checkCountProportionOfBreaksInRange(VOL, tang, 2, 2);
-    checkCountProportionOfBreaksInRange(YR,  tang, 2, 0);
+    checkCountProportionOfBreaksInRange(VOL, tang, 3, 2);
+    checkCountProportionOfBreaksInRange(YR,  tang, 3, 0);
 
     // oxEcPap
     checkCountProportionOfBreaksInRange(VOL, oxEcPap, 1, 3);
@@ -2011,8 +2016,9 @@ public class TestBibliographicOrderScorer extends TestCase {
 
   /**
    * Test that we get better consistency scores on the field that was used for
-   * ordering. This is essentially a repeat of the tests of 
+   * ordering. This is essentially a repeat of the tests of
    * get[Year|Volume]RangeConsistency.
+   * Also test that scores are btw 0 and 1.
    */
   public final void testGetConsistencyScore() {
     for (int i=0; i<allYearRanges.size(); i++) {
@@ -2020,20 +2026,39 @@ public class TestBibliographicOrderScorer extends TestCase {
       // Consistency score based on volume ordering
       orderVolYear(aus);
       ConsistencyScore csVol = BibliographicOrderScorer.getConsistencyScore(aus, allVolRanges.get(i));
+      ConsistencyScore csVolOld  =
+          BibliographicOrderScorer.getConsistencyScoreOld(aus, allVolRanges.get(i));
       // Consistency score based on year ordering
       orderYearVol(aus);
       ConsistencyScore csYear = BibliographicOrderScorer.getConsistencyScore(aus, allYearRanges.get(i));
+      ConsistencyScore csYearOld  =
+          BibliographicOrderScorer.getConsistencyScoreOld(aus, allYearRanges.get(i));
       // Scores should be better for the field which was used in ordering
+      assertTrue(csYearOld.yearScore > csVolOld.yearScore);
+      assertTrue(csVolOld.volScore > csYearOld.volScore);
+      assertEquals(csYearOld.volScore, csYear.volScore);
+      assertEquals(csYearOld.yearScore, csYear.yearScore);
+      assertEquals(csVolOld.volScore, csVol.volScore);
+      assertEquals(csVolOld.yearScore, csVol.yearScore);
       assertTrue(csYear.yearScore > csVol.yearScore);
       assertTrue(csVol.volScore > csYear.volScore);
       //assertTrue(csVol.volListScore > csYear.yearListScore);
+      // Consistency scores should fall between 0 and 1 inclusive
+      assertValidProportion(csVolOld.score);
+      assertValidProportion(csVol.score);
+      assertValidProportion(csYearOld.score);
+      assertValidProportion(csYear.score);
     }
     // Consistent sequence - single range
     List<TitleRange> ranges = Arrays.asList(new TitleRange(fullyConsistentAus));
     orderVolYear(fullyConsistentAus);
     ConsistencyScore csVol  = BibliographicOrderScorer.getConsistencyScore(fullyConsistentAus, ranges);
+    ConsistencyScore csVolOld  =
+        BibliographicOrderScorer.getConsistencyScoreOld(fullyConsistentAus, ranges);
     orderYearVol(fullyConsistentAus);
     ConsistencyScore csYear = BibliographicOrderScorer.getConsistencyScore(fullyConsistentAus, ranges);
+    ConsistencyScore csYearOld =
+        BibliographicOrderScorer.getConsistencyScoreOld(fullyConsistentAus, ranges);
     // Should all be equal to 1
     assertEquals(csVol.yearScore, csVol.volScore);
     assertEquals(1f, csVol.yearScore);
@@ -2041,6 +2066,12 @@ public class TestBibliographicOrderScorer extends TestCase {
     assertEquals(csYear.yearScore, csYear.volScore);
     assertEquals(1f, csYear.yearScore);
     assertEquals(1f, csYear.volScore);
+
+    // Compare the old and new consistency scores
+    assertEquals(csVol.yearScore, csVolOld.yearScore);
+    assertEquals(csVol.volScore, csVolOld.volScore);
+    assertEquals(csYear.yearScore, csYearOld.yearScore);
+    assertEquals(csYear.volScore, csYearOld.volScore);
   }
 
   /**
@@ -2122,9 +2153,14 @@ public class TestBibliographicOrderScorer extends TestCase {
       // Order by volume/year and get a score
       orderVolYear(aus);
       ConsistencyScore csVol = BibliographicOrderScorer.getConsistencyScore(aus, allVolRanges.get(i));
+      ConsistencyScore csVolOld = BibliographicOrderScorer.getConsistencyScoreOld(aus, allVolRanges.get(i));
       // Order by year/volume and get a score
       orderYearVol(aus);
       ConsistencyScore csYear = BibliographicOrderScorer.getConsistencyScore(aus, allYearRanges.get(i));
+      ConsistencyScore csYearOld = BibliographicOrderScorer.getConsistencyScoreOld(aus, allYearRanges.get(i));
+
+      assertEquals(csVolOld, csVol);
+      assertEquals(csYearOld, csYear);
 
       // Do these scores lead us to prefer volume?
       boolean preferVolume = BibliographicOrderScorer.preferVolume(csVol, csYear);
@@ -2150,6 +2186,74 @@ public class TestBibliographicOrderScorer extends TestCase {
     }
   }
 
+  /**
+   * Ensure that the new combined iteration methods yield the same results as
+   * the original methods.
+   */
+  public final void testCombinedMethods() {
+    BibliographicOrderScorer.Score score;
+    float v, y;
+    // For each list of lists of BibItems (problemTitles, consistentSequences)
+    for (List<List<BibliographicItem>> list :
+        new ArrayList<List<List<BibliographicItem>>>() {{
+          add(problemTitles);
+          add(consistentSequences);
+        }}
+        ) {
+      // For each list of BibItems
+      for (List<BibliographicItem> items : list) {
+        // For vol/yr, yr/vol orderings
+        boolean vy=false;
+        for (int i=0; i<2; i++) {
+          vy = !vy;
+          if (vy) orderVolYear(items);
+          else orderYearVol(items);
+          // countProportionOfBreaksInRange
+          checkVolYearScores(
+              BibliographicOrderScorer.countProportionOfBreaksInRange(items),
+              BibliographicOrderScorer.countProportionOfBreaksInRange(items, SORT_FIELD.VOLUME),
+              BibliographicOrderScorer.countProportionOfBreaksInRange(items, SORT_FIELD.YEAR)
+          );
+          // countProportionOfNegativeBreaksInRange
+          checkVolYearScores(
+              BibliographicOrderScorer.countProportionOfNegativeBreaksInRange(items),
+              BibliographicOrderScorer.countProportionOfNegativeBreaksInRange(items, SORT_FIELD.VOLUME),
+              BibliographicOrderScorer.countProportionOfNegativeBreaksInRange(items, SORT_FIELD.YEAR)
+          );
+          // countProportionOfRedundancyInRange
+          checkVolYearScores(
+              BibliographicOrderScorer.countProportionOfRedundancyInRange(items),
+              BibliographicOrderScorer.countProportionOfRedundancyInRange(items, SORT_FIELD.VOLUME),
+              BibliographicOrderScorer.countProportionOfRedundancyInRange(items, SORT_FIELD.YEAR)
+          );
+        }
+      }
+    }
+    // For each list of lists of TitleRanges (allVolRanges, allYearRanges)
+    for (List<List<TitleRange>> list : new ArrayList<List<List<TitleRange>>>() {{
+      add(allVolRanges);
+      add(allYearRanges);
+    }}) {
+      // For each list of TitleRanges, compare the scores for both shuffled and unshuffled
+      for (List<TitleRange> items : list) {
+        for (int i=0; i<2; i++) {
+          // Shuffle the list secon time through
+          if (i==1) Collections.shuffle(list);
+          // getRangeConsistency uses the combined methods and combines scores previously calculated separately
+          checkVolYearScores(
+              BibliographicOrderScorer.getRangeConsistency(items),
+              BibliographicOrderScorer.getVolumeRangeConsistency(items),
+              BibliographicOrderScorer.getYearRangeConsistency(items)
+          );
+        }
+      }
+    }
+  }
+
+  private final void checkVolYearScores(BibliographicOrderScorer.Score score, float v, float y) {
+    assertEquals(v, score.volScore);
+    assertEquals(y, score.yearScore);
+  }
 
 
   //--------------------------------------------------------------------------

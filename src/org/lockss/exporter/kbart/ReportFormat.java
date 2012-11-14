@@ -1,5 +1,5 @@
 /*
- * $Id: ReportFormat.java,v 1.8 2012-10-22 17:24:06 easyonthemayo Exp $
+ * $Id: ReportFormat.java,v 1.9 2012-11-14 12:05:10 easyonthemayo Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class ReportFormat {
    * title according to the specified coverage notes format, and return a new
    * list. Note that the coverage notes format can change the expected output;
    * for example if the data format is SFX but the coverage notes format is
-   * something ither than SFX, the output will not be pure SFX.
+   * something other than SFX, the output will not be pure SFX.
    * @param titles
    * @param coverageNotesFormat
    * @param reportDataFormat

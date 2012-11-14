@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicComparatorFactory.java,v 1.2 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id: BibliographicComparatorFactory.java,v 1.3 2012-11-14 12:05:09 easyonthemayo Exp $
  */
 
 /*
@@ -62,6 +62,19 @@ public class BibliographicComparatorFactory {
       @Override
       protected String getBibliographicComparisonString(BibliographicItem item) {
         return item.getName();
+      }
+    };
+  }
+
+  /**
+   * Create a BibliographicItem comparator which sorts by the item's volume.
+   * @return a BibliographicItem volume comparator
+   */
+  public static Comparator<BibliographicItem> getIssnComparator() {
+    return new BibliographicComparator() {
+      @Override
+      protected String getBibliographicComparisonString(BibliographicItem item) {
+        return item.getIssn();
       }
     };
   }

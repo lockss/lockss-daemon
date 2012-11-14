@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.5 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.6 2012-11-14 12:05:09 easyonthemayo Exp $
  */
 
 /*
@@ -285,4 +285,75 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     return this;
   }
 
+  //////////////////////////////////////////////////////////////////////////////
+  // Automatically generated equals and hashCode methods.
+  // These should be regerenerated if more fields are added.
+  //////////////////////////////////////////////////////////////////////////////
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+
+    BibliographicItemAdapter that = (BibliographicItemAdapter) o;
+
+    if (eIsbn != null ? !eIsbn.equals(that.eIsbn) : that.eIsbn != null)
+      return false;
+    if (eIssn != null ? !eIssn.equals(that.eIssn) : that.eIssn != null)
+      return false;
+    if (endIssue != null ? !endIssue.equals(that.endIssue) : that.endIssue != null)
+      return false;
+    if (endVolume != null ? !endVolume.equals(that.endVolume) : that.endVolume != null)
+      return false;
+    if (endYear != null ? !endYear.equals(that.endYear) : that.endYear != null)
+      return false;
+    if (issnL != null ? !issnL.equals(that.issnL) : that.issnL != null)
+      return false;
+    if (issue != null ? !issue.equals(that.issue) : that.issue != null)
+      return false;
+    if (journalTitle != null ? !journalTitle.equals(that.journalTitle) : that.journalTitle != null)
+      return false;
+    if (name != null ? !name.equals(that.name) : that.name != null)
+      return false;
+    if (printIsbn != null ? !printIsbn.equals(that.printIsbn) : that.printIsbn != null)
+      return false;
+    if (printIssn != null ? !printIssn.equals(that.printIssn) : that.printIssn != null)
+      return false;
+    if (publisherName != null ? !publisherName.equals(that.publisherName) : that.publisherName != null)
+      return false;
+    if (startIssue != null ? !startIssue.equals(that.startIssue) : that.startIssue != null)
+      return false;
+    if (startVolume != null ? !startVolume.equals(that.startVolume) : that.startVolume != null)
+      return false;
+    if (startYear != null ? !startYear.equals(that.startYear) : that.startYear != null)
+      return false;
+    if (volume != null ? !volume.equals(that.volume) : that.volume != null)
+      return false;
+    if (year != null ? !year.equals(that.year) : that.year != null)
+      return false;
+
+    return true;
+  }
+
+  @Override
+  public int hashCode() {
+    int result = printIsbn != null ? printIsbn.hashCode() : 0;
+    result = 31 * result + (eIsbn != null ? eIsbn.hashCode() : 0);
+    result = 31 * result + (printIssn != null ? printIssn.hashCode() : 0);
+    result = 31 * result + (eIssn != null ? eIssn.hashCode() : 0);
+    result = 31 * result + (issnL != null ? issnL.hashCode() : 0);
+    result = 31 * result + (journalTitle != null ? journalTitle.hashCode() : 0);
+    result = 31 * result + (publisherName != null ? publisherName.hashCode() : 0);
+    result = 31 * result + (name != null ? name.hashCode() : 0);
+    result = 31 * result + (volume != null ? volume.hashCode() : 0);
+    result = 31 * result + (year != null ? year.hashCode() : 0);
+    result = 31 * result + (issue != null ? issue.hashCode() : 0);
+    result = 31 * result + (startVolume != null ? startVolume.hashCode() : 0);
+    result = 31 * result + (endVolume != null ? endVolume.hashCode() : 0);
+    result = 31 * result + (startYear != null ? startYear.hashCode() : 0);
+    result = 31 * result + (endYear != null ? endYear.hashCode() : 0);
+    result = 31 * result + (startIssue != null ? startIssue.hashCode() : 0);
+    result = 31 * result + (endIssue != null ? endIssue.hashCode() : 0);
+    return result;
+  }
 }

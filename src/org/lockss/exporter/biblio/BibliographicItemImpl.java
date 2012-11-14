@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemImpl.java,v 1.3 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: BibliographicItemImpl.java,v 1.4 2012-11-14 12:05:09 easyonthemayo Exp $
  */
 
 /*
@@ -106,5 +106,41 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
     setStartIssue(startIssue);
     setEndIssue(endIssue);
   }
+
+  /**
+   * Create a BibliographicItem by copying all the field values from the
+   * supplied BibliographicItem. Values may be null. Values are copied for both
+   * year and volume strings and their start and end values.
+   * @param other another BibliographicItem
+   */
+  public BibliographicItemImpl(BibliographicItem other) {
+    setPrintIsbn(other.getPrintIsbn());
+    setEisbn(other.getEisbn());
+    setPrintIssn(other.getPrintIssn());
+    setEissn(other.getEissn());
+    setIssnL(other.getIssnL());
+    setJournalTitle(other.getJournalTitle());
+    setPublisherName(other.getPublisherName());
+    setName(other.getName());
+    setVolume(other.getVolume());
+    setStartVolume(other.getStartVolume());
+    setEndVolume(other.getEndVolume());
+    setYear(other.getYear());
+    setStartYear(other.getStartYear());
+    setEndYear(other.getEndYear());
+    setIssue(other.getIssue());
+    setStartIssue(other.getStartIssue());
+    setEndIssue(other.getEndIssue());
+  }
+
+  /**
+   * Clone all the fields of this item and into a new item and return it.
+   * @return
+   */
+  public BibliographicItemImpl clone() {
+    return new BibliographicItemImpl(this);
+  }
+
+
 
 }

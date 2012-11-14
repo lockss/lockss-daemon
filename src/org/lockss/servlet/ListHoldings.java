@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.46 2012-10-22 17:24:05 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.47 2012-11-14 12:05:10 easyonthemayo Exp $
  */
 
 /*
@@ -401,7 +401,6 @@ public class ListHoldings extends LockssServlet {
     // session customisation
     else resetSessionOptions();
 
-
     // Just display the page if there is no export happening
     if (!doExport) {
       log.debug("No export requested; showing "+(isCustom?"custom":"main")+" options");
@@ -410,6 +409,8 @@ public class ListHoldings extends LockssServlet {
       return;
     }
 
+    // Start timing the export here, as more happens in createExporter than in doExport!
+    long s = TimeBase.nowMs();
     // Now we are doing an export - create the exporter
     KbartExporter kexp = createExporter(outputFormat, selectedScope,
         selectedType, reportDataFormat, coverageNotesFormat);
@@ -423,6 +424,8 @@ public class ListHoldings extends LockssServlet {
 
     // Do the export
     doExport(kexp);
+    log.debug("Export took approximately "
+        + StringUtil.timeIntervalToString(TimeBase.msSince(s)));
   }
 
   /**
@@ -564,6 +567,7 @@ public class ListHoldings extends LockssServlet {
   private List<KbartTitle> getKbartTitlesForExport(ContentScope scope,
                                                    ContentType type) {
 
+    long s = System.currentTimeMillis();
     List<KbartTitle> titles;
     Iterator<KbartTitle> titleIterator;
     // If we are exporting in a scope where ArchivalUnits are not available,
@@ -629,13 +633,13 @@ public class ListHoldings extends LockssServlet {
       // list content from the title database
       Collection<ArchivalUnit> aus = TdbUtil.getAus(scope, type);
       Map<TdbTitle, List<ArchivalUnit>> map = TdbUtil.mapTitlesToAus(aus);
-      titles = KbartConverter.convertTitleAus(map.values(), getShowHealthRatings(),
-        rangeFieldsIncluded);
+      titles = KbartConverter.convertTitleAus(map.values(), getShowHealthRatings(), rangeFieldsIncluded);
       //TODO titleIterator = new KbartConverter.AuKbartTitleIterator(
       // map.values().iterator(), getShowHealthRatings(), rangeFieldsIncluded);
 
     }
     // TODO Sort here if not performed in KbartConverter
+    log.debug(String.format("getKbartTitlesForExport took a total %sms", System.currentTimeMillis()-s));
     return titles;
   }
 
@@ -657,10 +661,7 @@ public class ListHoldings extends LockssServlet {
    * @throws IOException
    */
   public void doExport(KbartExporter kexp, OutputStream out) throws IOException {
-    long s = TimeBase.nowMs();
     kexp.export(out);
-    log.debug("Export took approximately "
-	      + StringUtil.timeIntervalToString(TimeBase.msSince(s)));
     out.flush();
     out.close();
   }
