@@ -18,8 +18,12 @@
       issnl = 0009-8558
     >
     
-    param[base_url] = http://claymin.geoscienceworld.org/
- 
+    param[base_url] = http://www.minersoc.org
+
+    au < manifest ; exists ; 1947-1950 ; Clay Minerals Volume 0 ; 0 >
+    au < manifest ; exists ; 1951-1952 ; Clay Minerals Volume 1 ; 1 >
+
+    au < manifest ; exists ; 1971-1972 ; Clay Minerals Volume 9 [abstracts only] ; 9 > 
     au < manifest ; exists ; 1975 ; Clay Minerals Volume 10 [abstracts only] ; 10 >
     au < manifest ; exists ; 1976 ; Clay Minerals Volume 11 [abstracts only] ; 11 >
     au < manifest ; exists ; 1977 ; Clay Minerals Volume 12 [abstracts only] ; 12 >
