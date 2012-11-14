@@ -149,7 +149,7 @@ We are pleased to announce that %s additional archival %s now available for pres
 
   s = s + '''Please add these AUs to your LOCKSS box by logging in to the Web-based user interface and selecting Journal Configuration, then Add Titles.
 
-If you encounter any problem in the process or have any question, do not reply to this messsage; instead please send a help request to lockss-support@lockss.org for assistance.
+If you encounter any problem in the process or have any question, do not reply to this message; instead please send a help request to lockss-support@lockss.org for assistance.
 
 As always, thank you for working with us.
 
@@ -200,7 +200,7 @@ We are pleased to announce that %s additional archival %s now available for pres
 
 See the instructions for how to select these archival units for preservation in your LOCKSS box below.
 
-If you encounter any problem in the process or have any question, do not reply to this messsage; instead please send a help request to lockss-support@lockss.org for assistance.
+If you encounter any problem in the process or have any question, do not reply to this message; instead please send a help request to lockss-support@lockss.org for assistance.
 
 As always, thank you for working with us.
 
