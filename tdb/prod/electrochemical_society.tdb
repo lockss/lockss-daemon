@@ -116,7 +116,7 @@
     
     param[base_url] = http://www.electrochem.org/dl/ma/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[notReady] = base url is not working properly
+    comment[notReady] = base url is not working properly, RU4504
 
     au < HighWirePressH20Plugin ; notReady ; 2002 ; ECS Meeting Abstracts Volume MA2002-01 ; MA2002-01 >
     au < HighWirePressH20Plugin ; notReady ; 2002 ; ECS Meeting Abstracts Volume MA2002-02 ; MA2002-02 >
@@ -131,6 +131,7 @@
   
     param[base_url] = http://ma.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[notReady] = RU4503, hash filter needed for "viewspecificaccesscheck"
 
     au < HighWirePressH20Plugin ; exists ; 2005 ; ECS Meeting Abstracts Volume MA2005-01 ; MA2005-01 >
     au < HighWirePressH20Plugin ; exists ; 2005 ; ECS Meeting Abstracts Volume MA2005-02 ; MA2005-02 >
@@ -148,8 +149,8 @@
     au < HighWirePressH20Plugin ; exists ; 2010 ; ECS Meeting Abstracts Volume MA2010-03 ; MA2010-03 >
     au < HighWirePressH20Plugin ; exists ; 2011 ; ECS Meeting Abstracts Volume MA2011-01 ; MA2011-01 >
     au < HighWirePressH20Plugin ; exists ; 2011 ; ECS Meeting Abstracts Volume MA2011-02 ; MA2011-02 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; ECS Meeting Abstracts Volume MA2012-01 ; MA2012-01 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; ECS Meeting Abstracts Volume MA2012-02 ; MA2012-02 >
+    au < HighWirePressH20Plugin ; notReady ; 2012 ; ECS Meeting Abstracts Volume MA2012-01 ; MA2012-01 >
+    au < HighWirePressH20Plugin ; notReady ; 2012 ; ECS Meeting Abstracts Volume MA2012-02 ; MA2012-02 >
     
     }
     
