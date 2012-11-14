@@ -1,0 +1,131 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.jstor.JstorPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>JSTOR Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;JSTOR Plugin, Base URL %s, Journal ID %s, Volume Name %s&quot;, base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%slockss/%s/%s&quot;, base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.+)?$", base_url</string>
+      <string>4,"^%s", base_url</string>
+      <!-- Issue TOC: http://www.jstor.org/action/showToc?journalCode=19thcenturymusic&issue=3&volume=11 -->
+      <string>1,"^%saction/showToc\?journalCode=%s&amp;issue=[^&amp;]+&amp;volume=%s", base_url, journal_id, volume_name</string>
+      <!-- Opaque Issue TOC: http://www.jstor.org/stable/i249413 -->
+      <string>1,"^%sstable/i[0-9]+$", base_url</string>
+      <!-- Issue TOC: http://www.jstor.org/stable/10.1525/abt.2010.72.issue-9, Article Pages: http://www.jstor.org/stable/10.1525/abt.2010.72.9.1 -->
+      <string>1,"^%sstable/((view|pdfplus|info|full|pdf|media|select)/)?[\.0-9]+/%s\.[0-9]{4}\.%s\.", base_url, journal_id, volume_name</string>
+      <!-- Opaque Article Pages: http://www.jstor.org/stable/746318 -->
+      <string>1,"^%sstable/((view|pdfplus|info|full|pdf|media|select)/)?[0-9]+(\.pdf)?$", base_url</string>
+      <!-- Opaque Article Thumbnails: http://www.jstor.org/stable/select/4436970?seq=1&thumbView=thumbs&thumbPager=one -->
+      <string>1,"^%sstable/(select/)?[0-9]+\?[^#]+", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>(viewtitle\.aspx\?titleid=|gateway/article/full-text-html/)[0-9]+$
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal ID</displayName>
+        <description>Journal Identifier</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <description>Volume Identifier</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+     <string>au_substance_url_pattern</string>
+     <string>&quot;^%s&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.jstor.JstorHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.jstor.JstorHtmlCrawlFilterFactory</string>
+  </entry>
+  <!--
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.jstor.JstorArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.jstor.JstorArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.jstor.JstorHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  -->
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+</map>
