@@ -208,16 +208,16 @@
     param[journal_issn] = 0371-7453
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
-    au < manifest ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
-    au < manifest ; 2002 ; Applied Earth Science: IMM Transactions section B Volume 111 ; 111 > 
-    au < manifest ; 2003 ; Applied Earth Science: IMM Transactions section B Volume 112 ; 112 > 
-    au < manifest ; 2004 ; Applied Earth Science: IMM Transactions section B Volume 113 ; 113 > 
-    au < manifest ; 2005 ; Applied Earth Science: IMM Transactions section B Volume 114 ; 114 > 
-    au < manifest ; 2006 ; Applied Earth Science: IMM Transactions section B Volume 115 ; 115 > 
-    au < manifest ; 2007 ; Applied Earth Science: IMM Transactions section B Volume 116 ; 116 > 
-    au < manifest ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
-    au < manifest ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
+    au < testing ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
+    au < testing ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
+    au < testing ; 2002 ; Applied Earth Science: IMM Transactions section B Volume 111 ; 111 > 
+    au < testing ; 2003 ; Applied Earth Science: IMM Transactions section B Volume 112 ; 112 > 
+    au < testing ; 2004 ; Applied Earth Science: IMM Transactions section B Volume 113 ; 113 > 
+    au < testing ; 2005 ; Applied Earth Science: IMM Transactions section B Volume 114 ; 114 > 
+    au < testing ; 2006 ; Applied Earth Science: IMM Transactions section B Volume 115 ; 115 > 
+    au < testing ; 2007 ; Applied Earth Science: IMM Transactions section B Volume 116 ; 116 > 
+    au < testing ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
+    au < testing ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
     au < released ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
     au < released ; 2011 ; Applied Earth Science: IMM Transactions section B Volume 120 ; 120 > 
     au < expected ; 2012 ; Applied Earth Science: IMM Transactions section B Volume 121 ; 121 > 
@@ -243,12 +243,12 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2004 ; Arms & Armour Volume 1 ; 1 > 
-    au < manifest ; 2005 ; Arms & Armour Volume 2 ; 2 > 
-    au < manifest ; 2006 ; Arms & Armour Volume 3 ; 3 > 
-    au < manifest ; 2007 ; Arms & Armour Volume 4 ; 4 > 
-    au < manifest ; 2008 ; Arms & Armour Volume 5 ; 5 > 
-    au < manifest ; 2009 ; Arms & Armour Volume 6 ; 6 > 
+    au < testing ; 2004 ; Arms & Armour Volume 1 ; 1 > 
+    au < testing ; 2005 ; Arms & Armour Volume 2 ; 2 > 
+    au < testing ; 2006 ; Arms & Armour Volume 3 ; 3 > 
+    au < testing ; 2007 ; Arms & Armour Volume 4 ; 4 > 
+    au < testing ; 2008 ; Arms & Armour Volume 5 ; 5 > 
+    au < testing ; 2009 ; Arms & Armour Volume 6 ; 6 > 
     au < released ; 2010 ; Arms & Armour Volume 7 ; 7 > 
     au < released ; 2011 ; Arms & Armour Volume 8 ; 8 > 
     au < released ; 2012 ; Arms & Armour Volume 9 ; 9 > 
