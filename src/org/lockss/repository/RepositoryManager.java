@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.15 2012-09-05 23:31:36 clairegriffin Exp $
+ * $Id: RepositoryManager.java,v 1.16 2012-11-14 23:03:21 tlipkis Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class RepositoryManager
    * component are encodes are multiple levels of directories */
   public static final String PARAM_ENABLE_LONG_COMPONENTS =
     PREFIX + "enableLongComponents";
-  public static final boolean DEFAULT_ENABLE_LONG_COMPONENTS = false;
+  public static final boolean DEFAULT_ENABLE_LONG_COMPONENTS = true;
 
   /** Maximum length of a filesystem path component. */
   public static final String PARAM_MAX_COMPONENT_LENGTH =
