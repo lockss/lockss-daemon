@@ -175,11 +175,13 @@
     param[base_url] = http://liverpool.metapress.com/
     implicit < status ; year ; name ; param[volume_name] >     
     param[journal_issn] = 2049-3355
+    comment[notReady] = RU4501, manifest page missing permission statement
     
-    au < testing ; 2004 ; Comma Volume 2004 ; 2004 >
-    au < testing ; 2006 ; Comma Volume 2006 ; 2006 >
-    au < testing ; 2007 ; Comma Volume 2007 ; 2007 >
-    au < testing ; 2008 ; Comma Volume 2008 ; 2008 >
+    au < notReady ; 2004 ; Comma Volume 2004 ; 2004 >
+    au < exists ; 2005 ; Comma Volume 2006 ; 2006 >
+    au < notReady ; 2006 ; Comma Volume 2006 ; 2006 >
+    au < notReady ; 2007 ; Comma Volume 2007 ; 2007 >
+    au < notReady ; 2008 ; Comma Volume 2008 ; 2008 >
     au < released ; 2009 ; Comma Volume 2009 ; 2009 >
     au < released ; 2010 ; Comma Volume 2010 ; 2010 >
     
@@ -198,8 +200,8 @@
     implicit < status ; year ; name ; param[volume_name] > 
     param[journal_issn] = 0147-9156 
     
-    au < testing ; 2005 ; Contemporary French Civilization Volume 29 ; 29 >
-    au < testing ; 2006 ; Contemporary French Civilization Volume 30 ; 30 >
+    au < ready ; 2005 ; Contemporary French Civilization Volume 29 ; 29 >
+    au < ready ; 2006 ; Contemporary French Civilization Volume 30 ; 30 >
     au < released ; 2007 ; Contemporary French Civilization Volume 31 ; 31 >
     au < released ; 2008 ; Contemporary French Civilization Volume 32 ; 32 >
     au < released ; 2009 ; Contemporary French Civilization Volume 33 ; 33 >
@@ -479,15 +481,15 @@
 
       param[journal_issn] = 1757-2274 
      
-      au < manifest ; 2000 ; Romani Studies Volume 10 ; 10 >
-      au < manifest ; 2001 ; Romani Studies Volume 11 ; 11 >
-      au < manifest ; 2002 ; Romani Studies Volume 12 ; 12 >
-      au < manifest ; 2003 ; Romani Studies Volume 13 ; 13 >
-      au < manifest ; 2004 ; Romani Studies Volume 14 ; 14 >
-      au < manifest ; 2005 ; Romani Studies Volume 15 ; 15 >
-      au < manifest ; 2006 ; Romani Studies Volume 16 ; 16 >
-      au < manifest ; 2007 ; Romani Studies Volume 17 ; 17 >
-      au < manifest ; 2008 ; Romani Studies Volume 18 ; 18 >
+      au < testing ; 2000 ; Romani Studies Volume 10 ; 10 >
+      au < testing ; 2001 ; Romani Studies Volume 11 ; 11 >
+      au < testing ; 2002 ; Romani Studies Volume 12 ; 12 >
+      au < testing ; 2003 ; Romani Studies Volume 13 ; 13 >
+      au < testing ; 2004 ; Romani Studies Volume 14 ; 14 >
+      au < testing ; 2005 ; Romani Studies Volume 15 ; 15 >
+      au < testing ; 2006 ; Romani Studies Volume 16 ; 16 >
+      au < testing ; 2007 ; Romani Studies Volume 17 ; 17 >
+      au < testing ; 2008 ; Romani Studies Volume 18 ; 18 >
       au < released ; 2009 ; Romani Studies Volume 19 ; 19 >
       au < released ; 2010 ; Romani Studies Volume 20 ; 20 >
       au < released ; 2011 ; Romani Studies Volume 21 ; 21 >
@@ -529,7 +531,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[journal_issn] = 1754-3789 
 
-      au < manifest ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
+      au < testing ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
       au < released ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
       au < released ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
       au < released ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
@@ -553,11 +555,11 @@
     implicit < status ; year ; name ; param[volume_name] >    
     param[journal_issn] = 1756-9923 
 
-    au < manifest ; 2005 ; Sculpture Journal Volume 13 ; 13 >
-    au < manifest ; 2005 ; Sculpture Journal Volume 14 ; 14 >
-    au < manifest ; 2006 ; Sculpture Journal Volume 15 ; 15 >
-    au < manifest ; 2007 ; Sculpture Journal Volume 16 ; 16 >
-    au < manifest ; 2008 ; Sculpture Journal Volume 17 ; 17 >
+    au < testing ; 2005 ; Sculpture Journal Volume 13 ; 13 >
+    au < testing ; 2005 ; Sculpture Journal Volume 14 ; 14 >
+    au < testing ; 2006 ; Sculpture Journal Volume 15 ; 15 >
+    au < testing ; 2007 ; Sculpture Journal Volume 16 ; 16 >
+    au < testing ; 2008 ; Sculpture Journal Volume 17 ; 17 >
     au < released ; 2009 ; Sculpture Journal Volume 18 ; 18 >
     au < released ; 2010 ; Sculpture Journal Volume 19 ; 19 > 
     au < released ; 2011 ; Sculpture Journal Volume 20 ; 20 >
