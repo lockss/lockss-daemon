@@ -6,7 +6,7 @@
   >
 
     plugin = org.lockss.plugin.copernicus.CopernicusPublicationsPlugin
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < status ; param[year] ; name ; param[volume_name] >
 
   {
     title <
