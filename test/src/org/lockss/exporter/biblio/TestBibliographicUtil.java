@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicUtil.java,v 1.7 2012-11-14 12:05:10 easyonthemayo Exp $
+ * $Id: TestBibliographicUtil.java,v 1.8 2012-11-15 13:21:41 easyonthemayo Exp $
  */
 
 /*
@@ -235,8 +235,8 @@ public class TestBibliographicUtil extends LockssTestCase {
 
 
   /**
-   * Either the ISSNs or the names are the same. In this case all the ISSNs
-   * are the same.
+   * Either the ISSNs (if available) or the journal names are the same. In this
+   * case all the ISSNs are the same.
    */
   public void testHaveSameIdentity() {
     assertTrue(BibliographicUtil.haveSameIdentity(afrTod, afrTod));
@@ -265,7 +265,7 @@ public class TestBibliographicUtil extends LockssTestCase {
   }
 
   /**
-   * Check volume and year. Each available pair of non-null values must match.
+   * Check volume and year. Each available pair of values must match.
    */
   public void testHaveSameIndex() {
     assertTrue(BibliographicUtil.haveSameIndex(afrTod, afrTod));
@@ -278,8 +278,8 @@ public class TestBibliographicUtil extends LockssTestCase {
     } catch (NullPointerException e) {
       // expected
     }
-    // The null field should be omitted from the comparison
-    assertTrue(BibliographicUtil.haveSameIndex(afrTod, afrTodNullYear));
+    // The null field differs from the year which is present
+    assertFalse(BibliographicUtil.haveSameIndex(afrTod, afrTodNullYear));
     // These only differ on id fields
     assertTrue(BibliographicUtil.haveSameIndex(afrTod, afrTodDiffName));
     assertTrue(BibliographicUtil.haveSameIndex(afrTod, afrTodDiffJournalTitle));
@@ -290,15 +290,14 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertFalse(BibliographicUtil.haveSameIndex(afrTodDiffYear, afrTodDiffVol));
     assertFalse(BibliographicUtil.haveSameIndex(afrTodDiffName, afrTodDiffYear));
     assertFalse(BibliographicUtil.haveSameIndex(afrTodDiffJournalTitle, afrTodDiffYear));
-    // Null fields discount year; volumes match
-    assertTrue(BibliographicUtil.haveSameIndex(afrTodNullYear, afrTodDiffYear));
-    // Null fields discount year; volumes differ
+    // Null field differs from year; volumes match
+    assertFalse(BibliographicUtil.haveSameIndex(afrTodNullYear, afrTodDiffYear));
+    // Years and volumes differ
     assertFalse(BibliographicUtil.haveSameIndex(afrTodNullYear, afrTodDiffVol));
   }
 
   /**
-   * The names or ISSNs match, and any of the volume and year fields that are
-   * available (non-null) must match.
+   * The names or ISSNs match, and volume and year fields must match.
    */
   public void testAreApparentlyEquivalent() {
     assertTrue(BibliographicUtil.areApparentlyEquivalent(theLib1, theLib2));
@@ -313,7 +312,7 @@ public class TestBibliographicUtil extends LockssTestCase {
       // expected
     }
     // The null field should be omitted from the comparison
-    assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodNullYear));
+    assertFalse(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodNullYear));
     // These have the same ISSN, despite the name/title difference
     assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodDiffName));
     assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodDiffJournalTitle));
@@ -324,9 +323,9 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertFalse(BibliographicUtil.areApparentlyEquivalent(afrTodDiffYear, afrTodDiffVol));
     assertFalse(BibliographicUtil.areApparentlyEquivalent(afrTodDiffName, afrTodDiffYear));
     assertFalse(BibliographicUtil.areApparentlyEquivalent(afrTodDiffJournalTitle, afrTodDiffYear));
-    // Null field discounts year; issn and volume match
-    assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTodNullYear, afrTodDiffYear));
-    // Null field discounts year; vols differ
+    // Null field differs from year; issn and volume match
+    assertFalse(BibliographicUtil.areApparentlyEquivalent(afrTodNullYear, afrTodDiffYear));
+    // Years and volumes differ
     assertFalse(BibliographicUtil.areApparentlyEquivalent(afrTodNullYear, afrTodDiffVol));
   }
 

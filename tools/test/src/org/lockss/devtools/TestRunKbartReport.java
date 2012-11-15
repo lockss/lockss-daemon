@@ -1,5 +1,5 @@
 /*
- * $Id: TestRunKbartReport.java,v 1.5 2012-10-22 15:07:10 easyonthemayo Exp $
+ * $Id: TestRunKbartReport.java,v 1.6 2012-11-15 13:21:42 easyonthemayo Exp $
  */
 
 /*
@@ -82,7 +82,6 @@ public class TestRunKbartReport extends LockssTestCase {
       "",
       "",
       header,
-      "Publisher 1,     Title 1,           1939-0343,                         , ",
       "Publisher 1,     Title 1,           1939-0343,                         , ",
       "",
       "Publisher 2,     Title 2,           0003-1615,        1533-6247        , ",
@@ -172,7 +171,8 @@ public class TestRunKbartReport extends LockssTestCase {
       List<BibliographicItem> title = it.next();
       assertNotNull(title);
       assertNotEmpty(title);
-      assertNoDuplicates(title);
+      // Omitting duplicate input rows is not part of the contract
+      //assertNoDuplicates(title);
       // No null items
       for (BibliographicItem item : title) {
         assertNotNull(item);

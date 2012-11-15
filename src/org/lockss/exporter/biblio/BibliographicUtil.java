@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicUtil.java,v 1.7 2012-11-14 12:05:09 easyonthemayo Exp $
+ * $Id: BibliographicUtil.java,v 1.8 2012-11-15 13:21:42 easyonthemayo Exp $
  */
 
 /*
@@ -227,15 +227,16 @@ public class BibliographicUtil {
       return !StringUtil.isNullString(au1name) &&
           !StringUtil.isNullString(au2name) && au1name.equals(au2name);
   }
-  
+
   /**
    * Compares two <code>BibliographicItem</code>s to see if they appear to have
    * the same index metadata, by comparing their indexing fields
    * <code>volume</code> and <code>year</code>. Returns true only if every
-   * available (non-null) field pair is equal.
+   * field pair is equally valued, including null values. That is, if one item
+   * has or lacks a particular value, the other must have or lack that value too.
    * @param au1 a BibliographicItem
    * @param au2 another BibliographicItem
-   * @return <code>true</code> if each pair of non-null volume or year strings is equal 
+   * @return <code>true</code> if each pair of non-null volume or year strings is equal
    */
   public static boolean haveSameIndex(BibliographicItem au1, BibliographicItem au2) {
     String au1year = au1.getYear();
@@ -243,18 +244,9 @@ public class BibliographicUtil {
     // Volumes are normalised for Roman numerals
     String au1vol  = BibliographicUtil.normaliseIdentifier(au1.getVolume());
     String au2vol  = BibliographicUtil.normaliseIdentifier(au2.getVolume());
-
-    // Null if either year is null, otherwise whether they match
-    Boolean year = au1year!=null && au2year!=null ? au1year.equals(au2year) : null;
-    // Null if either volume is null, otherwise whether they or their values match
-    Boolean vol  = au1vol !=null && au2vol !=null ?
-        (au1vol.equals(au2vol) || NumberUtil.areEqualValue(au1vol, au2vol)) : null;
-    // Require both year and volume fields to be equal if they are available
-    if (year!=null && vol!=null) return year && vol;
-    // Otherwise return available year or volume match, or false
-    else if (year!=null) return year;
-    else if (vol!=null) return vol;
-    else return false;
+    // Are the strings equal on both fields, including null values
+    return StringUtil.equalStrings(au1year, au2year) &&
+        StringUtil.equalStrings(au1vol, au2vol);
   }
 
   /**
