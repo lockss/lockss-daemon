@@ -9,8 +9,20 @@
   param[base_url] = http://www.igsoc.org/
   plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
   implicit < status ; name ; year ; param[year] >
- 
+
   {
+  
+     title <
+       name = Annals of Glaciology ;
+       issn = 0260-3055 ;
+       eissn = 1727-5644
+      >
+     
+     
+     
+   }    
+    
+   {
   
     title < 
       name = Journal of Glaciology ;
@@ -79,15 +91,6 @@
    
   }
   
-  {
-  
-     title <
-       name = Annals of Glaciology ;
-       issn = 0260-3055 ;
-       eissn = 1727-5644
-       
-     >
-     
-   }    
+
 
 }
