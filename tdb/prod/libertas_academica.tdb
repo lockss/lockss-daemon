@@ -1066,9 +1066,9 @@
 
     param[journal_id] = 97
     
-    au < testing ; 2008 ; International Journal of Tryptophan Research Volume 1 ; 2008 >
-    au < testing ; 2009 ; International Journal of Tryptophan Research Volume 2 ; 2009 >
-    au < testing ; 2010 ; International Journal of Tryptophan Research Volume 3 ; 2010 >
+    au < ready; 2008 ; International Journal of Tryptophan Research Volume 1 ; 2008 >
+    au < ready; 2009 ; International Journal of Tryptophan Research Volume 2 ; 2009 >
+    au < ready; 2010 ; International Journal of Tryptophan Research Volume 3 ; 2010 >
     au < released ; 2011 ; International Journal of Tryptophan Research Volume 4 ; 2011 >
     au < released ; 2012 ; International Journal of Tryptophan Research Volume 5 ; 2012 >
 
@@ -1102,9 +1102,9 @@
 
     param[journal_id] = 124
     
-    au < testing ; 2008 ; Journal of Cell Death Volume 1 ; 2008 >
-    au < testing ; 2009 ; Journal of Cell Death Volume 2 ; 2009 >
-    au < testing ; 2010 ; Journal of Cell Death Volume 3 ; 2010 >
+    au < ready ; 2008 ; Journal of Cell Death Volume 1 ; 2008 >
+    au < ready ; 2009 ; Journal of Cell Death Volume 2 ; 2009 >
+    au < ready ; 2010 ; Journal of Cell Death Volume 3 ; 2010 >
     au < released ; 2011 ; Journal of Cell Death Volume 4 ; 2011 >
     au < released ; 2012 ; Journal of Cell Death Volume 5 ; 2012 >
 
@@ -1121,8 +1121,8 @@
 
     param[journal_id] = 121
     
-    au < testing ; 2009 ; Journal of Central Nervous System Disease Volume 1 ; 2009 >
-    au < testing ; 2010 ; Journal of Central Nervous System Disease Volume 2 ; 2010 >
+    au < ready ; 2009 ; Journal of Central Nervous System Disease Volume 1 ; 2009 >
+    au < ready ; 2010 ; Journal of Central Nervous System Disease Volume 2 ; 2010 >
     au < released ; 2011 ; Journal of Central Nervous System Disease Volume 3 ; 2011 >
     au < released ; 2012 ; Journal of Central Nervous System Disease Volume 4 ; 2012 >
 
@@ -1139,9 +1139,9 @@
 
     param[journal_id] = 131
     
-    au < testing ; 2008 ; Journal of Experimental Neuroscience Volume 1 ; 2008 >
-    au < testing ; 2009 ; Journal of Experimental Neuroscience Volume 2-3 ; 2009 >
-    au < testing ; 2010 ; Journal of Experimental Neuroscience Volume 4 ; 2010 >
+    au < ready ; 2008 ; Journal of Experimental Neuroscience Volume 1 ; 2008 >
+    au < ready ; 2009 ; Journal of Experimental Neuroscience Volume 2-3 ; 2009 >
+    au < ready ; 2010 ; Journal of Experimental Neuroscience Volume 4 ; 2010 >
     au < released ; 2011 ; Journal of Experimental Neuroscience Volume 5 ; 2011 >
     au < released ; 2012 ; Journal of Experimental Neuroscience Volume 6 ; 2012 >
 
