@@ -1717,7 +1717,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[continued_from] = 0969-7950
     
-    au < exists ; exists ; 2012 ; International Journal of Developmental Disabilities Volume 58 ; 58 > 
+    au < manifest ; exists ; 2012 ; International Journal of Developmental Disabilities Volume 58 ; 58 > 
 
 
   }
@@ -1740,7 +1740,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[continued_from] = 1753-3031
     
-    au < exists ; exists ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 > 
+    au < manifest ; exists ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 > 
     au < expected ; expected ; 2013 ; International Journal of Healthcare Management Volume 6 ; 6 > 
 
   }  
@@ -2431,24 +2431,24 @@
     param[journal_issn] = 1077-3525
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     
-    au < exists ; exists ; 1995 ; International Journal of Occupational and Environmental Health Volume 1 ; 1 >  
-    au < exists ; exists ; 1996 ; International Journal of Occupational and Environmental Health Volume 2 ; 2 >  
-    au < exists ; exists ; 1997 ; International Journal of Occupational and Environmental Health Volume 3 ; 3 >  
-    au < exists ; exists ; 1998 ; International Journal of Occupational and Environmental Health Volume 4 ; 4 >  
-    au < exists ; exists ; 1999 ; International Journal of Occupational and Environmental Health Volume 5 ; 5 >  
-    au < exists ; exists ; 2000 ; International Journal of Occupational and Environmental Health Volume 6 ; 6 >  
-    au < exists ; exists ; 2001 ; International Journal of Occupational and Environmental Health Volume 7 ; 7 >  
-    au < exists ; exists ; 2002 ; International Journal of Occupational and Environmental Health Volume 8 ; 8 >  
-    au < exists ; exists ; 2003 ; International Journal of Occupational and Environmental Health Volume 9 ; 9 >  
-    au < exists ; exists ; 2004 ; International Journal of Occupational and Environmental Health Volume 10 ; 10 > 
-    au < exists ; exists ; 2005 ; International Journal of Occupational and Environmental Health Volume 11 ; 11 > 
-    au < exists ; exists ; 2006 ; International Journal of Occupational and Environmental Health Volume 12 ; 12 > 
-    au < exists ; exists ; 2007 ; International Journal of Occupational and Environmental Health Volume 13 ; 13 > 
-    au < exists ; exists ; 2008 ; International Journal of Occupational and Environmental Health Volume 14 ; 14 > 
-    au < exists ; exists ; 2009 ; International Journal of Occupational and Environmental Health Volume 15 ; 15 > 
-    au < exists ; exists ; 2010 ; International Journal of Occupational and Environmental Health Volume 16 ; 16 > 
-    au < exists ; exists ; 2011 ; International Journal of Occupational and Environmental Health Volume 17 ; 17 > 
-    au < exists ; exists ; 2012 ; International Journal of Occupational and Environmental Health Volume 18 ; 18 > 
+    au < manifest ; exists ; 1995 ; International Journal of Occupational and Environmental Health Volume 1 ; 1 >  
+    au < manifest ; exists ; 1996 ; International Journal of Occupational and Environmental Health Volume 2 ; 2 >  
+    au < manifest ; exists ; 1997 ; International Journal of Occupational and Environmental Health Volume 3 ; 3 >  
+    au < manifest ; exists ; 1998 ; International Journal of Occupational and Environmental Health Volume 4 ; 4 >  
+    au < manifest ; exists ; 1999 ; International Journal of Occupational and Environmental Health Volume 5 ; 5 >  
+    au < manifest ; exists ; 2000 ; International Journal of Occupational and Environmental Health Volume 6 ; 6 >  
+    au < manifest ; exists ; 2001 ; International Journal of Occupational and Environmental Health Volume 7 ; 7 >  
+    au < manifest ; exists ; 2002 ; International Journal of Occupational and Environmental Health Volume 8 ; 8 >  
+    au < manifest ; exists ; 2003 ; International Journal of Occupational and Environmental Health Volume 9 ; 9 >  
+    au < manifest ; exists ; 2004 ; International Journal of Occupational and Environmental Health Volume 10 ; 10 > 
+    au < manifest ; exists ; 2005 ; International Journal of Occupational and Environmental Health Volume 11 ; 11 > 
+    au < manifest ; exists ; 2006 ; International Journal of Occupational and Environmental Health Volume 12 ; 12 > 
+    au < manifest ; exists ; 2007 ; International Journal of Occupational and Environmental Health Volume 13 ; 13 > 
+    au < manifest ; exists ; 2008 ; International Journal of Occupational and Environmental Health Volume 14 ; 14 > 
+    au < manifest ; exists ; 2009 ; International Journal of Occupational and Environmental Health Volume 15 ; 15 > 
+    au < manifest ; exists ; 2010 ; International Journal of Occupational and Environmental Health Volume 16 ; 16 > 
+    au < manifest ; exists ; 2011 ; International Journal of Occupational and Environmental Health Volume 17 ; 17 > 
+    au < manifest ; exists ; 2012 ; International Journal of Occupational and Environmental Health Volume 18 ; 18 > 
 
   }  
 
