@@ -26381,8 +26381,6 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jmc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[notReady] = Vol 66 has incorrect link to issue 1, jmc.sagepub.com/cgi/content/66/1.long
-
         au < manifest ; 1967 ; Journalism & Mass Communication Educator Volume 22 ; 22 >
         au < manifest ; 1968 ; Journalism & Mass Communication Educator Volume 23 ; 23 >
         au < doesNotExist ; 0 ; Journalism & Mass Communication Educator Volume 24 ; 24 >
@@ -32042,9 +32040,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pri.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[notReady] = Vol 1 has manifest page with incorrect link: http://pri.sagepub.com/cgi/content/1/1.long
-  
-        au < notReady ; 2012 ; Public Relations Inquiry Volume 1 ; 1 >
+        au < manifest ; 2012 ; Public Relations Inquiry Volume 1 ; 1 >
   
       }
   
@@ -39350,6 +39346,7 @@ comment[mpj] = now published by Brill
   
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
+        comment[notReady] = RU4506, incorrect url in manifest page http://pme.sagepub.com/content/105/1.long, instead of .toc
   
         au < exists ; 1847-1849 ; Proceedings of the Institution of Mechanical Engineers Volume 1 ; 1 >
         au < exists ; 1850-1851 ; Proceedings of the Institution of Mechanical Engineers Volume 2 ; 2 >
@@ -39455,7 +39452,7 @@ comment[mpj] = now published by Brill
         au < exists ; 1922 ; Proceedings of the Institution of Mechanical Engineers Volume 102 ; 102 >
         au < exists ; 1922 ; Proceedings of the Institution of Mechanical Engineers Volume 103 ; 103 >
         au < exists ; 1923 ; Proceedings of the Institution of Mechanical Engineers Volume 104 ; 104 >
-        au < manifest ; 1923 ; Proceedings of the Institution of Mechanical Engineers Volume 105 ; 105 >
+        au < notReady ; 1923 ; Proceedings of the Institution of Mechanical Engineers Volume 105 ; 105 >
         au < exists ; 1924 ; Proceedings of the Institution of Mechanical Engineers Volume 106 ; 106 >
         au < exists ; 1924 ; Proceedings of the Institution of Mechanical Engineers Volume 107 ; 107 >
         au < exists ; 1925 ; Proceedings of the Institution of Mechanical Engineers Volume 108 ; 108 >
