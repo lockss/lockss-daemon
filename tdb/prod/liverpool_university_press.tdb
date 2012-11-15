@@ -480,16 +480,17 @@
       implicit < status ; year ; name ; param[volume_name] >  
 
       param[journal_issn] = 1757-2274 
+      comment[notReady] = low agreement, re-test later
      
-      au < testing ; 2000 ; Romani Studies Volume 10 ; 10 >
-      au < testing ; 2001 ; Romani Studies Volume 11 ; 11 >
-      au < testing ; 2002 ; Romani Studies Volume 12 ; 12 >
-      au < testing ; 2003 ; Romani Studies Volume 13 ; 13 >
-      au < testing ; 2004 ; Romani Studies Volume 14 ; 14 >
-      au < testing ; 2005 ; Romani Studies Volume 15 ; 15 >
-      au < testing ; 2006 ; Romani Studies Volume 16 ; 16 >
-      au < testing ; 2007 ; Romani Studies Volume 17 ; 17 >
-      au < testing ; 2008 ; Romani Studies Volume 18 ; 18 >
+      au < exists ; 2000 ; Romani Studies Volume 10 ; 10 >
+      au < exists ; 2001 ; Romani Studies Volume 11 ; 11 >
+      au < ready ; 2002 ; Romani Studies Volume 12 ; 12 >
+      au < notReady ; 2003 ; Romani Studies Volume 13 ; 13 >
+      au < ready ; 2004 ; Romani Studies Volume 14 ; 14 >
+      au < ready ; 2005 ; Romani Studies Volume 15 ; 15 >
+      au < ready ; 2006 ; Romani Studies Volume 16 ; 16 >
+      au < ready ; 2007 ; Romani Studies Volume 17 ; 17 >
+      au < ready ; 2008 ; Romani Studies Volume 18 ; 18 >
       au < released ; 2009 ; Romani Studies Volume 19 ; 19 >
       au < released ; 2010 ; Romani Studies Volume 20 ; 20 >
       au < released ; 2011 ; Romani Studies Volume 21 ; 21 >
@@ -531,7 +532,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[journal_issn] = 1754-3789 
 
-      au < testing ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
+      au < ready ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
       au < released ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
       au < released ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
       au < released ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
@@ -555,11 +556,11 @@
     implicit < status ; year ; name ; param[volume_name] >    
     param[journal_issn] = 1756-9923 
 
-    au < testing ; 2005 ; Sculpture Journal Volume 13 ; 13 >
-    au < testing ; 2005 ; Sculpture Journal Volume 14 ; 14 >
-    au < testing ; 2006 ; Sculpture Journal Volume 15 ; 15 >
-    au < testing ; 2007 ; Sculpture Journal Volume 16 ; 16 >
-    au < testing ; 2008 ; Sculpture Journal Volume 17 ; 17 >
+    au < ready ; 2005 ; Sculpture Journal Volume 13 ; 13 >
+    au < ready ; 2005 ; Sculpture Journal Volume 14 ; 14 >
+    au < ready ; 2006 ; Sculpture Journal Volume 15 ; 15 >
+    au < ready ; 2007 ; Sculpture Journal Volume 16 ; 16 >
+    au < ready ; 2008 ; Sculpture Journal Volume 17 ; 17 >
     au < released ; 2009 ; Sculpture Journal Volume 18 ; 18 >
     au < released ; 2010 ; Sculpture Journal Volume 19 ; 19 > 
     au < released ; 2011 ; Sculpture Journal Volume 20 ; 20 >
@@ -580,13 +581,13 @@
     implicit < status ; year ; name ; param[volume_name] >      
     param[journal_issn] = 0142-7849 
 
-    au < manifest ; 1993 ; Third World Planning Review Volume 15 ; 15 >
-    au < manifest ; 1994 ; Third World Planning Review Volume 16 ; 16 >
-    au < manifest ; 1995 ; Third World Planning Review Volume 17 ; 17 >
-    au < manifest ; 1996 ; Third World Planning Review Volume 18 ; 18 >
-    au < manifest ; 1997 ; Third World Planning Review Volume 19 ; 19 >
-    au < manifest ; 1998 ; Third World Planning Review Volume 20 ; 20 >
-    au < manifest ; 1999 ; Third World Planning Review Volume 21 ; 21 >
+    au < testing ; 1993 ; Third World Planning Review Volume 15 ; 15 >
+    au < testing ; 1994 ; Third World Planning Review Volume 16 ; 16 >
+    au < testing ; 1995 ; Third World Planning Review Volume 17 ; 17 >
+    au < testing ; 1996 ; Third World Planning Review Volume 18 ; 18 >
+    au < testing ; 1997 ; Third World Planning Review Volume 19 ; 19 >
+    au < testing ; 1998 ; Third World Planning Review Volume 20 ; 20 >
+    au < testing ; 1999 ; Third World Planning Review Volume 21 ; 21 >
     au < released ; 2000 ; Third World Planning Review Volume 22 ; 22 >
 
   }
@@ -674,16 +675,16 @@
     au < exists ; 1996 ; Town Planning Review Volume 67 ; 67 >
     au < exists ; 1997 ; Town Planning Review Volume 68 ; 68 >
     au < exists ; 1998 ; Town Planning Review Volume 69 ; 69 >
-    au < manifest ; 1999 ; Town Planning Review Volume 70 ; 70 >
-    au < manifest ; 2000 ; Town Planning Review Volume 71 ; 71 >
+    au < testing ; 1999 ; Town Planning Review Volume 70 ; 70 >
+    au < testing ; 2000 ; Town Planning Review Volume 71 ; 71 >
     au < doesNotExist ; 0 ; Town Planning Review Volume 72 ; 72 >
-    au < manifest ; 2002 ; Town Planning Review Volume 73 ; 73 >
-    au < manifest ; 2003 ; Town Planning Review Volume 74 ; 74 >
-    au < manifest ; 2004 ; Town Planning Review Volume 75 ; 75 >
-    au < manifest ; 2005 ; Town Planning Review Volume 76 ; 76 >
-    au < manifest ; 2006 ; Town Planning Review Volume 77 ; 77 >
-    au < manifest ; 2007 ; Town Planning Review Volume 78 ; 78 >
-    au < manifest ; 2008 ; Town Planning Review Volume 79 ; 79 >
+    au < testing ; 2002 ; Town Planning Review Volume 73 ; 73 >
+    au < testing ; 2003 ; Town Planning Review Volume 74 ; 74 >
+    au < testing ; 2004 ; Town Planning Review Volume 75 ; 75 >
+    au < testing ; 2005 ; Town Planning Review Volume 76 ; 76 >
+    au < testing ; 2006 ; Town Planning Review Volume 77 ; 77 >
+    au < testing ; 2007 ; Town Planning Review Volume 78 ; 78 >
+    au < testing ; 2008 ; Town Planning Review Volume 79 ; 79 >
     au < released ; 2009 ; Town Planning Review Volume 80 ; 80 >
     au < released ; 2010 ; Town Planning Review Volume 81 ; 81 >
     au < released ; 2011 ; Town Planning Review Volume 82 ; 82 >
