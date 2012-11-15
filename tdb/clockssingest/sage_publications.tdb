@@ -28344,7 +28344,7 @@
       au < released ; crawling ; 2010 ; Progress in Development Studies Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; Progress in Development Studies Volume 11 ; 11 ; >
       au < released ; manifest ; 2012 ; Progress in Development Studies Volume 12 ; 12 ; >
-      au < exists ; exists ; 2013 ; Progress in Development Studies Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2013 ; Progress in Development Studies Volume 13 ; 13 ; >
 
     }
 
@@ -28921,9 +28921,8 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment[notReady] = Vol 1 has manifest page with incorrect link: http://pri.sagepub.com/cgi/content/1/1.long
 
-      au < notReady ; exists ; 2012 ; Public Relations Inquiry Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2012 ; Public Relations Inquiry Volume 1 ; 1 ; >
 
     }
 
@@ -35648,7 +35647,7 @@
       au < exists ; exists ; 2009 ; Gifted Child Today Volume 32 ; 32 ; >
       au < exists ; exists ; 2010 ; Gifted Child Today Volume 33 ; 33 ; >
       au < exists ; exists ; 2011 ; Gifted Child Today Volume 34 ; 34 ; >
-      au < exists ; exists ; 2012 ; Gifted Child Today Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2012 ; Gifted Child Today Volume 35 ; 35 ; >
 
     }
 
@@ -35733,7 +35732,7 @@
       au < exists ; exists ; 2009 ; Interpretation: A Journal of Bible and Theology Volume 63 ; 63 ; >
       au < exists ; exists ; 2010 ; Interpretation: A Journal of Bible and Theology Volume 64 ; 64 ; >
       au < exists ; exists ; 2011 ; Interpretation: A Journal of Bible and Theology Volume 65 ; 65 ; >
-      au < exists ; exists ; 2012 ; Interpretation: A Journal of Bible and Theology Volume 66 ; 66 ; >
+      au < manifest ; exists ; 2012 ; Interpretation: A Journal of Bible and Theology Volume 66 ; 66 ; >
 
     }
 
@@ -35751,6 +35750,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment[notReady] = RU4506, incorrect url in manifest page http://jeg.sagepub.com/content/34/1.long, instead of .toc
 
       au < exists ; exists ; 1993-1994 ; Journal for the Education of the Gifted Volume 17 ; 17 ; >
       au < exists ; exists ; 1995 ; Journal for the Education of the Gifted Volume 18 ; 18 ; >
@@ -35769,8 +35769,8 @@
       au < exists ; exists ; 2008 ; Journal for the Education of the Gifted Volume 31 ; 31 ; >
       au < exists ; exists ; 2009 ; Journal for the Education of the Gifted Volume 32 ; 32 ; >
       au < exists ; exists ; 2010 ; Journal for the Education of the Gifted Volume 33 ; 33 ; >
-      au < exists ; exists ; 2011 ; Journal for the Education of the Gifted Volume 34 ; 34 ; >
-      au < exists ; exists ; 2012 ; Journal for the Education of the Gifted Volume 35 ; 35 ; >
+      au < notReady ; exists ; 2011 ; Journal for the Education of the Gifted Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2012 ; Journal for the Education of the Gifted Volume 35 ; 35 ; >
 
     }
 
@@ -35853,6 +35853,8 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment[notReady] = RU4506, incorrect url in manifest page http://ldq.sagepub.com/content/34/3.long, instead of .toc
+      
 
       au < exists ; exists ; 1996 ; Learning Disability Quarterly Volume 19 ; 19 ; >
       au < exists ; exists ; 1997 ; Learning Disability Quarterly Volume 20 ; 20 ; >
@@ -35869,8 +35871,8 @@
       au < exists ; exists ; 2008 ; Learning Disability Quarterly Volume 31 ; 31 ; >
       au < exists ; exists ; 2009 ; Learning Disability Quarterly Volume 32 ; 32 ; >
       au < exists ; exists ; 2010 ; Learning Disability Quarterly Volume 33 ; 33 ; >
-      au < exists ; exists ; 2011 ; Learning Disability Quarterly Volume 34 ; 34 ; >
-      au < exists ; exists ; 2012 ; Learning Disability Quarterly Volume 35 ; 35 ; >
+      au < notReady ; exists ; 2011 ; Learning Disability Quarterly Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2012 ; Learning Disability Quarterly Volume 35 ; 35 ; >
 
     }
 
@@ -35889,6 +35891,8 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment[notReady61] = RU4506, incorrect url in manifest page http://pnz.sagepub.com/content/vol61/issue1/, instead of regular pattern
+      comment[notReady63] = RU4506, incorrect url in manifest page http://pnz.sagepub.com/content/63/1.long, instead of .toc
 
       au < exists ; exists ; 1948-1949 ; Political Science Volume 1 ; 1 ; >
       au < exists ; exists ; 1950 ; Political Science Volume 2 ; 2 ; >
@@ -35950,10 +35954,10 @@
       au < exists ; exists ; 2006 ; Political Science Volume 58 ; 58 ; >
       au < exists ; exists ; 2007 ; Political Science Volume 59 ; 59 ; >
       au < exists ; exists ; 2008 ; Political Science Volume 60 ; 60 ; >
-      au < exists ; exists ; 2009 ; Political Science Volume 61 ; 61 ; >
-      au < exists ; exists ; 2010 ; Political Science Volume 62 ; 62 ; >
-      au < exists ; exists ; 2011 ; Political Science Volume 63 ; 63 ; >
-      au < exists ; exists ; 2012 ; Political Science Volume 64 ; 64 ; >
+      au < notReady ; exists ; 2009 ; Political Science Volume 61 ; 61 ; >
+      au < manifest ; exists ; 2010 ; Political Science Volume 62 ; 62 ; >
+      au < notReady ; exists ; 2011 ; Political Science Volume 63 ; 63 ; >
+      au < manifest ; exists ; 2012 ; Political Science Volume 64 ; 64 ; >
 
     }
 
@@ -36030,6 +36034,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment[notReady] = RU4506, incorrect url in manifest page http://pme.sagepub.com/content/105/1.long, instead of .toc
 
       au < exists ; exists ; 1847-1849 ; Proceedings of the Institution of Mechanical Engineers Volume 1 ; 1 ; >
       au < exists ; exists ; 1850-1851 ; Proceedings of the Institution of Mechanical Engineers Volume 2 ; 2 ; >
@@ -36135,7 +36140,7 @@
       au < exists ; exists ; 1922 ; Proceedings of the Institution of Mechanical Engineers Volume 102 ; 102 ; >
       au < exists ; exists ; 1922 ; Proceedings of the Institution of Mechanical Engineers Volume 103 ; 103 ; >
       au < exists ; exists ; 1923 ; Proceedings of the Institution of Mechanical Engineers Volume 104 ; 104 ; >
-      au < exists ; exists ; 1923 ; Proceedings of the Institution of Mechanical Engineers Volume 105 ; 105 ; >
+      au < notReady ; exists ; 1923 ; Proceedings of the Institution of Mechanical Engineers Volume 105 ; 105 ; >
       au < exists ; exists ; 1924 ; Proceedings of the Institution of Mechanical Engineers Volume 106 ; 106 ; >
       au < exists ; exists ; 1924 ; Proceedings of the Institution of Mechanical Engineers Volume 107 ; 107 ; >
       au < exists ; exists ; 1925 ; Proceedings of the Institution of Mechanical Engineers Volume 108 ; 108 ; >
@@ -36211,7 +36216,7 @@
       au < exists ; exists ; 1964 ; Proceedings of the Institution of Mechanical Engineers Volume 179 ; 179 ; >
       au < exists ; exists ; 1965 ; Proceedings of the Institution of Mechanical Engineers Volume 180 ; 180 ; >
       au < exists ; exists ; 1966 ; Proceedings of the Institution of Mechanical Engineers Volume 181 ; 181 ; >
-      au < exists ; exists ; 1967 ; Proceedings of the Institution of Mechanical Engineers Volume 182 ; 182 ; >
+      au < manifest ; exists ; 1967 ; Proceedings of the Institution of Mechanical Engineers Volume 182 ; 182 ; >
       au < exists ; exists ; 1968 ; Proceedings of the Institution of Mechanical Engineers Volume 183 ; 183 ; >
       au < exists ; exists ; 1969 ; Proceedings of the Institution of Mechanical Engineers Volume 184 ; 184 ; >
       au < exists ; exists ; 1970 ; Proceedings of the Institution of Mechanical Engineers Volume 185 ; 185 ; >
@@ -36312,6 +36317,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment[notReady] = RU4506, incorrect url in manifest page http://sch.sagepub.com/content/41/1.long, instead of .toc
 
       au < exists ; exists ; 1999 ; Social Change Volume 29 ; 29 ; >
       au < exists ; exists ; 2000 ; Social Change Volume 30 ; 30 ; >
@@ -36324,9 +36330,9 @@
       au < exists ; exists ; 2007 ; Social Change Volume 37 ; 37 ; >
       au < exists ; exists ; 2008 ; Social Change Volume 38 ; 38 ; >
       au < exists ; exists ; 2009 ; Social Change Volume 39 ; 39 ; >
-      au < exists ; exists ; 2010 ; Social Change Volume 40 ; 40 ; >
-      au < exists ; exists ; 2011 ; Social Change Volume 41 ; 41 ; >
-      au < exists ; exists ; 2012 ; Social Change Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2010 ; Social Change Volume 40 ; 40 ; >
+      au < notReady ; exists ; 2011 ; Social Change Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2012 ; Social Change Volume 42 ; 42 ; >
 
     }
 
@@ -36360,7 +36366,7 @@
       au < exists ; exists ; 2009 ; Social Marketing Quarterly Volume 15 ; 15 ; >
       au < exists ; exists ; 2010 ; Social Marketing Quarterly Volume 16 ; 16 ; >
       au < exists ; exists ; 2011 ; Social Marketing Quarterly Volume 17 ; 17 ; >
-      au < exists ; exists ; 2012 ; Social Marketing Quarterly Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2012 ; Social Marketing Quarterly Volume 18 ; 18 ; >
 
     }
 
