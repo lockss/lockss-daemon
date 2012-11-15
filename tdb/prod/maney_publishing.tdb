@@ -207,17 +207,19 @@
     param[journal_id] = aes 
     param[journal_issn] = 0371-7453
     implicit < status ; year ; name ; param[volume_name] >
+    comment[notReady111] = RU4463, crawl failure of missing one article 
+    comment[notReady] = RU4507, low agreement of different FontName use in pdf file
 
-    au < testing ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
-    au < testing ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
-    au < testing ; 2002 ; Applied Earth Science: IMM Transactions section B Volume 111 ; 111 > 
-    au < testing ; 2003 ; Applied Earth Science: IMM Transactions section B Volume 112 ; 112 > 
-    au < testing ; 2004 ; Applied Earth Science: IMM Transactions section B Volume 113 ; 113 > 
-    au < testing ; 2005 ; Applied Earth Science: IMM Transactions section B Volume 114 ; 114 > 
-    au < testing ; 2006 ; Applied Earth Science: IMM Transactions section B Volume 115 ; 115 > 
+    au < notReady ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
+    au < notReady ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
+    au < notReady ; 2002 ; Applied Earth Science: IMM Transactions section B Volume 111 ; 111 > 
+    au < notReady ; 2003 ; Applied Earth Science: IMM Transactions section B Volume 112 ; 112 > 
+    au < ready ; 2004 ; Applied Earth Science: IMM Transactions section B Volume 113 ; 113 > 
+    au < ready ; 2005 ; Applied Earth Science: IMM Transactions section B Volume 114 ; 114 > 
+    au < ready ; 2006 ; Applied Earth Science: IMM Transactions section B Volume 115 ; 115 > 
     au < testing ; 2007 ; Applied Earth Science: IMM Transactions section B Volume 116 ; 116 > 
-    au < testing ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
-    au < testing ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
+    au < ready ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
+    au < ready ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
     au < released ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
     au < released ; 2011 ; Applied Earth Science: IMM Transactions section B Volume 120 ; 120 > 
     au < expected ; 2012 ; Applied Earth Science: IMM Transactions section B Volume 121 ; 121 > 
@@ -243,12 +245,12 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < testing ; 2004 ; Arms & Armour Volume 1 ; 1 > 
-    au < testing ; 2005 ; Arms & Armour Volume 2 ; 2 > 
-    au < testing ; 2006 ; Arms & Armour Volume 3 ; 3 > 
-    au < testing ; 2007 ; Arms & Armour Volume 4 ; 4 > 
-    au < testing ; 2008 ; Arms & Armour Volume 5 ; 5 > 
-    au < testing ; 2009 ; Arms & Armour Volume 6 ; 6 > 
+    au < ready ; 2004 ; Arms & Armour Volume 1 ; 1 > 
+    au < ready ; 2005 ; Arms & Armour Volume 2 ; 2 > 
+    au < ready ; 2006 ; Arms & Armour Volume 3 ; 3 > 
+    au < ready ; 2007 ; Arms & Armour Volume 4 ; 4 > 
+    au < ready ; 2008 ; Arms & Armour Volume 5 ; 5 > 
+    au < ready ; 2009 ; Arms & Armour Volume 6 ; 6 > 
     au < released ; 2010 ; Arms & Armour Volume 7 ; 7 > 
     au < released ; 2011 ; Arms & Armour Volume 8 ; 8 > 
     au < released ; 2012 ; Arms & Armour Volume 9 ; 9 > 
@@ -274,12 +276,12 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 1743-6753
 
-    au < manifest ; 1999 ; British Ceramic Transactions Volume 98 ; 98 > 
-    au < manifest ; 2000 ; British Ceramic Transactions Volume 99 ; 99 > 
-    au < manifest ; 2001 ; British Ceramic Transactions Volume 100 ; 100 > 
-    au < manifest ; 2002 ; British Ceramic Transactions Volume 101 ; 101 >
-    au < manifest ; 2003 ; British Ceramic Transactions Volume 102 ; 102 >    
-    au < manifest ; 2004 ; British Ceramic Transactions Volume 103 ; 103 >
+    au < testing ; 1999 ; British Ceramic Transactions Volume 98 ; 98 > 
+    au < testing ; 2000 ; British Ceramic Transactions Volume 99 ; 99 > 
+    au < testing ; 2001 ; British Ceramic Transactions Volume 100 ; 100 > 
+    au < testing ; 2002 ; British Ceramic Transactions Volume 101 ; 101 >
+    au < testing ; 2003 ; British Ceramic Transactions Volume 102 ; 102 >    
+    au < testing ; 2004 ; British Ceramic Transactions Volume 103 ; 103 >
 
   }
 
@@ -300,10 +302,10 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 1478-422X
 
-    au < manifest ; 1999 ; British Corrosion Journal Volume 34 ; 34 > 
-    au < manifest ; 2000 ; British Corrosion Journal Volume 35 ; 35 > 
-    au < manifest ; 2001 ; British Corrosion Journal Volume 36 ; 36 > 
-    au < manifest ; 2002 ; British Corrosion Journal Volume 37 ; 37 >
+    au < testing ; 1999 ; British Corrosion Journal Volume 34 ; 34 > 
+    au < testing ; 2000 ; British Corrosion Journal Volume 35 ; 35 > 
+    au < testing ; 2001 ; British Corrosion Journal Volume 36 ; 36 > 
+    au < testing ; 2002 ; British Corrosion Journal Volume 37 ; 37 >
 
   }
 
