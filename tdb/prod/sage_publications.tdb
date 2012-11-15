@@ -15215,19 +15215,19 @@
         implicit < status ; year ; name ; param[volume_name] >
 
 
-        au < manifest ; 2000 ; International Journal of Engine Research Volume 1 ; 1 >
-        au < manifest ; 2001 ; International Journal of Engine Research Volume 2 ; 2 >
-        au < manifest ; 2002 ; International Journal of Engine Research Volume 3 ; 3 >
-        au < manifest ; 2003 ; International Journal of Engine Research Volume 4 ; 4 >
-        au < manifest ; 2004 ; International Journal of Engine Research Volume 5 ; 5 >
-        au < manifest ; 2005 ; International Journal of Engine Research Volume 6 ; 6 >
-        au < manifest ; 2006 ; International Journal of Engine Research Volume 7 ; 7 >
-        au < manifest ; 2007 ; International Journal of Engine Research Volume 8 ; 8 >
+        au < testing ; 2000 ; International Journal of Engine Research Volume 1 ; 1 >
+        au < testing ; 2001 ; International Journal of Engine Research Volume 2 ; 2 >
+        au < testing ; 2002 ; International Journal of Engine Research Volume 3 ; 3 >
+        au < testing ; 2003 ; International Journal of Engine Research Volume 4 ; 4 >
+        au < testing ; 2004 ; International Journal of Engine Research Volume 5 ; 5 >
+        au < testing ; 2005 ; International Journal of Engine Research Volume 6 ; 6 >
+        au < testing ; 2006 ; International Journal of Engine Research Volume 7 ; 7 >
+        au < testing ; 2007 ; International Journal of Engine Research Volume 8 ; 8 >
         au < released ; 2008 ; International Journal of Engine Research Volume 9 ; 9 >
         au < released ; 2009 ; International Journal of Engine Research Volume 10 ; 10 >
         au < released ; 2010 ; International Journal of Engine Research Volume 11 ; 11 >
         au < released ; 2011 ; International Journal of Engine Research Volume 12 ; 12 >
-        au < manifest ; 2012 ; International Journal of Engine Research Volume 13 ; 13 >
+        au < testing ; 2012 ; International Journal of Engine Research Volume 13 ; 13 >
 
       }
 
@@ -15621,7 +15621,7 @@
         au < released ; 2008 ; International Journal of Rural Management Volume 4 ; 4 >
         au < released ; 2009 ; International Journal of Rural Management Volume 5 ; 5 >
         au < released ; 2010 ; International Journal of Rural Management Volume 6 ; 6 >
-        au < manifest ; 2011 ; International Journal of Rural Management Volume 7 ; 7 >
+        au < testing ; 2011 ; International Journal of Rural Management Volume 7 ; 7 >
         au < expected ; 2012 ; International Journal of Rural Management Volume 8 ; 8 >
 
       }
@@ -22630,7 +22630,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2008 ; Journal of Leadership & Organizational Studies Volume 15 ; 15 >
         au < doNotProcess ; 2009 ; Journal of Leadership & Organizational Studies Volume 16 ; 16 >
         au < released ; 2010 ; Journal of Leadership & Organizational Studies Volume 17 ; 17 >
-        au < manifest ; 2011 ; Journal of Leadership & Organizational Studies Volume 18 ; 18 >
+        au < testing ; 2011 ; Journal of Leadership & Organizational Studies Volume 18 ; 18 >
         au < manifest ; 2012 ; Journal of Leadership & Organizational Studies Volume 19 ; 19 >
 
       }
@@ -34004,7 +34004,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2008 ; Sexualities Volume 11 ; 11 >
         au < HighWirePressH20Plugin ; manifest ; 2009 ; Sexualities Volume 12 ; 12 >
         au < HighWirePressH20Plugin ; manifest ; 2010 ; Sexualities Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; manifest ; 2011 ; Sexualities Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; testing ; 2011 ; Sexualities Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Sexualities Volume 15 ; 15 >
 
       }
@@ -39083,7 +39083,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2008 ; Journal for the Education of the Gifted Volume 31 ; 31 >
         au < exists ; 2009 ; Journal for the Education of the Gifted Volume 32 ; 32 >
         au < exists ; 2010 ; Journal for the Education of the Gifted Volume 33 ; 33 >
-        au < manifest ; 2011 ; Journal for the Education of the Gifted Volume 34 ; 34 >
+        au < testing ; 2011 ; Journal for the Education of the Gifted Volume 34 ; 34 >
         au < manifest ; 2012 ; Journal for the Education of the Gifted Volume 35 ; 35 >
   
       }
@@ -39107,7 +39107,7 @@ comment[mpj] = now published by Brill
   
         au < manifest ; 2009 ; Journal of Infrastructure Development Volume 1 ; 1 >
         au < manifest ; 2010 ; Journal of Infrastructure Development Volume 2 ; 2 >
-        au < manifest ; 2011 ; Journal of Infrastructure Development Volume 3 ; 3 >
+        au < testing ; 2011 ; Journal of Infrastructure Development Volume 3 ; 3 >
         au < manifest ; 2012 ; Journal of Infrastructure Development Volume 4 ; 4 >
   
       }
@@ -39186,7 +39186,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2008 ; Learning Disability Quarterly Volume 31 ; 31 >
         au < exists ; 2009 ; Learning Disability Quarterly Volume 32 ; 32 >
         au < exists ; 2010 ; Learning Disability Quarterly Volume 33 ; 33 >
-        au < manifest ; 2011 ; Learning Disability Quarterly Volume 34 ; 34 >
+        au < testing ; 2011 ; Learning Disability Quarterly Volume 34 ; 34 >
         au < manifest ; 2012 ; Learning Disability Quarterly Volume 35 ; 35 >
   
       }
@@ -39270,7 +39270,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2008 ; Political Science Volume 60 ; 60 >
         au < manifest ; 2009 ; Political Science Volume 61 ; 61 >
         au < manifest ; 2010 ; Political Science Volume 62 ; 62 >
-        au < manifest ; 2011 ; Political Science Volume 63 ; 63 >
+        au < testing ; 2011 ; Political Science Volume 63 ; 63 >
         au < manifest ; 2012 ; Political Science Volume 64 ; 64 >
   
       }
@@ -39648,7 +39648,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2008 ; Social Change Volume 38 ; 38 >
         au < exists ; 2009 ; Social Change Volume 39 ; 39 >
         au < manifest ; 2010 ; Social Change Volume 40 ; 40 >
-        au < manifest ; 2011 ; Social Change Volume 41 ; 41 >
+        au < testing ; 2011 ; Social Change Volume 41 ; 41 >
         au < manifest ; 2012 ; Social Change Volume 42 ; 42 >
   
       }
