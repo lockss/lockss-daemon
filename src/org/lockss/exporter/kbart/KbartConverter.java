@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.36 2012-11-14 12:05:10 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.37 2012-11-16 14:32:08 easyonthemayo Exp $
  */
 
 /*
@@ -33,12 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.exporter.kbart;
 
 import java.util.*;
+import java.util.concurrent.*;
 
 import org.apache.commons.collections.comparators.ComparatorChain;
 
-import org.lockss.config.TdbAu;
-import org.lockss.config.TdbTitle;
-import org.lockss.config.TdbUtil;
+import org.lockss.config.*;
 import org.lockss.exporter.biblio.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.daemon.AuHealthMetric;
@@ -109,6 +108,23 @@ public class KbartConverter {
 
   private static Logger log = Logger.getLogger("KbartConverter");
 
+  static final String PREFIX = Configuration.PREFIX + "kbart.";
+
+  /**
+   * How many threads to provide for title conversions during KBART reporting.
+   * The change will take place when the pool is next used for reporting.
+   * To reset the pool to the default size, just remove this parameter.
+   */
+  public static final String PARAM_CONVERT_TITLES_POOL_SIZE =
+      PREFIX + "conversionThreadPoolSize";
+
+  /** The number of threads to have available in the thread pool dedicated
+   * to converting titles. By default this is one greater than the available
+   * number of processors/cores. It can be adjusted at runtime using the config
+   * param PARAM_CONVERT_TITLES_POOL_SIZE. */
+  public static final int DEFAULT_CONVERT_TITLES_POOL_SIZE =
+      Runtime.getRuntime().availableProcessors() + 1;
+
   /** 
    * The string used as a substitution parameter in the output. Occurrences of 
    * this string will be replaced in local LOCKSS boxes with the protocol, host 
@@ -125,41 +141,88 @@ public class KbartConverter {
   public static final int MAX_FUTURE_PUB_DATE = 10;
 
   /**
-   * Extract all the TdbTitles from the Tdb object, convert them into 
-   * KbartTitle objects and add them to a list. 
-   * 
-   * @return a List of KbartTitle objects representing all the TDB titles
-   * @deprecated no longer used
+   * The thread pool executor used in completion services in converting titles.
    */
-  public static List<KbartTitle> extractAllTitles() {
-    return convertTitles(TdbUtil.getAllTdbTitles());
-  }
+  private static final AdjustableFixedSizeThreadPoolExecutor CONVERT_TITLES_EXECUTOR =
+      new AdjustableFixedSizeThreadPoolExecutor(DEFAULT_CONVERT_TITLES_POOL_SIZE);
 
   /**
-   * Extract all the TdbTitles from the Tdb object, convert them into 
-   * KbartTitle objects and add them to a list. 
-   * 
-   * @return a List of KbartTitle objects representing all the TDB titles
-   * @deprecated instead use TdbUtil to get the list of TdbTitles, which can be cached, and pass it to convertTitles
+   * This method should be used to get the executor to use for convertnig titles;
+   * it first resizes the thread pool if the configuration has changed.
+   * @return
    */
-  /*public static List<KbartTitle> extractTitles(TdbUtil.ContentScope scope) {
-    return convertTitles(TdbUtil.getTdbTitles(scope));
-  }*/
-  
+  private static final AdjustableFixedSizeThreadPoolExecutor getConvertTitlesExecutor() {
+    int newSize = CurrentConfig.getIntParam(PARAM_CONVERT_TITLES_POOL_SIZE,
+        DEFAULT_CONVERT_TITLES_POOL_SIZE);
+    // Resize the pool if the param differs from the current prescribed size
+    if (newSize!=CONVERT_TITLES_EXECUTOR.getFixedPoolSize()) {
+      boolean success = CONVERT_TITLES_EXECUTOR.setFixedPoolSize(newSize);
+      log.info((success?"Resized":"Failed to resize")+" convert titles thread pool to "+newSize);
+    }
+    return CONVERT_TITLES_EXECUTOR;
+  }
+
   /**
    * Convert the given collection of TdbTitles into KbartTitles.
    * The number of KbartTitles returned is likely to be different to the number
    * of TdbTitles which was originally supplied, as KbartTitles are grouped
    * based on their coverage period rather than purely by title.
+   * <p>
+   * The KbartTitles resulting from processing the titles are returned in the
+   * same order the titles were submitted.
+   * <p>
+   * This method submits individual title conversion tasks to a thread pool,
+   * and retrieves the results in the same order the tasks were submitted.
+   * If an execution thread is interrupted or a task throws an exception, the
+   * remaining tasks are cancelled, and the exception is logged, wrapped and
+   * rethrown.
    *
    * @param titles a collection of TdbTitles
    * @return a list of KbartTitles
+   * @throws ConversionException if one of the threads is interrupted or a task throws an exception
    */
-  public static List<KbartTitle> convertTitles(Collection<TdbTitle> titles) {
+  public static List<KbartTitle> convertTitles(final Collection<TdbTitle> titles)
+      throws ConversionException {
     if (titles==null) return Collections.emptyList();
-    List<KbartTitle> list = new Vector<KbartTitle>();
-    for (TdbTitle t : titles) {
-      list.addAll( convertTitleToKbartTitles(t) );
+    final List<Future<List<KbartTitle>>> results =
+        new LinkedList<Future<List<KbartTitle>>>();
+
+    // Add all the conversion tasks to executor
+    for (final TdbTitle t : titles) {
+      Callable<List<KbartTitle>> task = new Callable<List<KbartTitle>>() {
+        public List<KbartTitle> call() {
+          return convertTitleToKbartTitles(t);
+        }
+      };
+      results.add(getConvertTitlesExecutor().submit(task));
+    }
+    return getConversionResults(results);
+  }
+
+  /**
+   * Retrieve the results in order from a list of task futures, and return them.
+   * If an execution thread is interrupted or a task throws an exception, the
+   * remaining tasks are cancelled, and the exception is logged, wrapped and
+   * rethrown.
+   * @param results a list of Futures which each return a list of KbartTitles
+   * @return a list of KbartTitles collated from all the results
+   * @throws ConversionException if one of the threads is interrupted or a task throws an exception
+   */
+  private static final List<KbartTitle> getConversionResults(
+      final List<Future<List<KbartTitle>>> results) throws ConversionException {
+    final List<KbartTitle> list = new Vector<KbartTitle>();
+    // Pick up results in the same order they were submitted
+    for (int i=0; i<results.size(); i++) {
+      try {
+        list.addAll(results.get(i).get());
+      } catch (Exception e) {
+        log.error("Title conversion problem; cancelling remaining tasks");
+        e.printStackTrace();
+        // Cancel other tasks, even if running
+        for (int j=i+1; j<results.size(); j++) results.get(j).cancel(true);
+        // Rethrow
+        throw new ConversionException(e);
+      }
     }
     return list;
   }
@@ -211,28 +274,97 @@ public class KbartConverter {
     return list;
   }*/
 
- /**
+  /**
    * Convert the given collection of lists of ArchivalUnit ranges into
    * KbartTitles representing coverage ranges. Each list should represent the
    * AUs for a single title.
+   * <p>
+   * This method submits individual title conversion tasks to a thread pool,
+   * and retrieves the results in the same order the tasks were submitted.
    *
    * @param auLists a collection of lists of AUs representing ranges
    * @param showHealth whether or not to calculate a health rating for each title
    * @param rangeFieldsIncluded whether range fields are included in the output
    * @return a list of KbartTitles
+   * @throws ConversionException if one of the threads is interrupted or a task throws an exception
    */
   public static List<KbartTitle> convertTitleAus(
-      Collection<List<ArchivalUnit>> auLists,
-      boolean showHealth, boolean rangeFieldsIncluded) {
+      final Collection<List<ArchivalUnit>> auLists,
+      final boolean showHealth, final boolean rangeFieldsIncluded) throws ConversionException {
     if (auLists==null) return Collections.emptyList();
-    List<KbartTitle> list = new Vector<KbartTitle>();
-    long s = System.currentTimeMillis();
-    for (List<ArchivalUnit> titleAus : auLists) {
-      list.addAll(convertTitleToKbartTitles(titleAus, showHealth, rangeFieldsIncluded));
+    final List<Future<List<KbartTitle>>> results =
+        new LinkedList<Future<List<KbartTitle>>>();
+    // Add all the conversion tasks to executor
+    for (final List<ArchivalUnit> titleAus : auLists) {
+      Callable<List<KbartTitle>> task = new Callable<List<KbartTitle>>() {
+        public List<KbartTitle> call() {
+          return convertTitleToKbartTitles(titleAus, showHealth, rangeFieldsIncluded);
+        }
+      };
+      results.add(getConvertTitlesExecutor().submit(task));
     }
-    log.debug(String.format("convertTitleAus took %sms", System.currentTimeMillis()-s));
-    return list;
+    return getConversionResults(results);
   }
+
+  /**
+   * Convert the given list of BibliographicItems into KbartTitles representing
+   * coverage ranges of particular titles. ISSNs are compared in order to
+   * establish the boundaries of each sequence of BibliographicItems
+   * representing a title that should be split into coverage ranges.
+   * The main application of this method is to convert BibliographicItems
+   * retrieved directly from the MetadataDatabase.
+   * <p>
+   * This method submits individual title conversion tasks to a thread pool,
+   * and retrieves the results in the same order the tasks were submitted.
+   *
+   * @param items an ordered list of BibliographicItems, not yet organised into titles
+   * @return a list of KbartTitles
+   * @throws ConversionException if one of the threads is interrupted or a task throws an exception
+   */
+  public static List<KbartTitle> convertBibliographicItems(
+      final List<? extends BibliographicItem> items) throws ConversionException {
+    final List<Future<List<KbartTitle>>> results =
+        new LinkedList<Future<List<KbartTitle>>>();
+
+    int i = 0;
+    int itemsCount = items.size();
+    if (i < itemsCount) {
+      for (int j = i+1; j <= itemsCount; j++) {
+        String issni = items.get(i).getIssn();
+        String issnj = (j<itemsCount) ? items.get(j).getIssn() : null;
+        // convert portion of bibliographic items list with same ISSN
+        if (   (j == items.size())
+            || (issni != null && !issni.equals(issnj))) {
+          if (log.isDebug3()) {
+            for (int k = i; k < j; k++) {
+              log.debug3("printIssn: " + items.get(k).getPrintIssn()
+                  + " eissn: " + items.get(k).getEissn());
+            }
+          }
+          // Add the conversion task to executor
+          final List<? extends BibliographicItem> titleItems = items.subList(i, j);
+          Callable<List<KbartTitle>> task = new Callable<List<KbartTitle>>() {
+            public List<KbartTitle> call() {
+              return KbartConverter.convertTitleToKbartTitles(titleItems);
+            }
+          };
+          results.add(getConvertTitlesExecutor().submit(task));
+          i = j;
+        }
+      }
+    }
+    List<KbartTitle> titles = getConversionResults(results);
+    if (log.isDebug3()) {
+      for (KbartTitle title : titles) {
+        log.debug3("printIssn: "
+            + title.getField(KbartTitle.Field.PRINT_IDENTIFIER)
+            + "eIssn: "
+            + title.getField(KbartTitle.Field.ONLINE_IDENTIFIER));
+      }
+    }
+    return titles;
+  }
+
 
 
   // Version that accepts and returns an iterator
@@ -255,24 +387,32 @@ public class KbartConverter {
 
 
   /**
-   * Convert the given collection of lists of BibliographicItems (each list
-   * representing a single title) into KbartTitles representing coverage ranges.
+   * Convert the given collection of lists of BibliographicItems into
+   * KbartTitles representing coverage ranges.
    * Each list should represent the AUs for a single title.
    *
    * @param bibItemLists a collection of lists of BibliographicItems representing ranges
    * @return a list of KbartTitles
+   * @throws ConversionException if one of the threads is interrupted or a task throws an exception
    */
   public static List<KbartTitle> convertTitleAus(
-      Collection<List<BibliographicItem>> bibItemLists) {
+      Collection<List<BibliographicItem>> bibItemLists) throws ConversionException {
     if (bibItemLists==null) return Collections.emptyList();
-    List<KbartTitle> list = new Vector<KbartTitle>();
-    for (List<BibliographicItem> titleItems : bibItemLists) {
-      list.addAll(convertTitleToKbartTitles(titleItems));
+    final List<Future<List<KbartTitle>>> results =
+        new LinkedList<Future<List<KbartTitle>>>();
+    // Add all the conversion tasks to executor
+    for (final List<BibliographicItem> titleItems : bibItemLists) {
+      Callable<List<KbartTitle>> task = new Callable<List<KbartTitle>>() {
+        public List<KbartTitle> call() {
+          return convertTitleToKbartTitles(titleItems);
+        }
+      };
+      results.add(getConvertTitlesExecutor().submit(task));
     }
-    return list;
+    return getConversionResults(results);
   }
 
-  // Version that accepts an iterator
+  // Version that accepts an iterator (unparallelised)
   public static List<KbartTitle> convertTitleAus(
       Iterator<List<BibliographicItem>> bibItemLists) {
     if (bibItemLists==null) return Collections.emptyList();
@@ -1238,6 +1378,15 @@ public class KbartConverter {
     // The implementation of this method should convert input titles until
     // we have a set of results or run out of input titles.
     protected abstract void updateResultsList();
+  }
+
+
+  /** Exception thrown if parallelised conversion fails due to a thread
+   * interruption or ExecutionException. */
+  public static class ConversionException extends Exception {
+    public ConversionException(Throwable throwable) {
+      super(throwable);
+    }
   }
 
 }

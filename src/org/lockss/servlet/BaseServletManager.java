@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.36 2012-06-25 14:14:55 easyonthemayo Exp $
+ * $Id: BaseServletManager.java,v 1.37 2012-11-16 14:32:08 easyonthemayo Exp $
  */
 
 /*
@@ -72,12 +72,15 @@ public abstract class BaseServletManager
   /** Prefix of doc-only parameters */
   public static final String DOC_PREFIX = Configuration.PREFIX + "<server>.";
 
-  /** A parameter to enable new UI features for testing. */
+  /** Enable new but unreleased user interface features for testing.
+   * This is for testing and feedback only.*/
   public static final String PARAM_ENABLE_NEW_UI = Configuration.PREFIX + "ui.new";
   public static final boolean DEFAULT_ENABLE_NEW_UI = false;
+  /** Enable the transitional version of the user interface. This will enable
+   * new but unreleased UI features alongside current features.
+   * This is for testing and feedback only. */
   public static final String PARAM_ENABLE_TRANSITIONAL_UI = Configuration.PREFIX + "ui.transitional";
   public static final boolean DEFAULT_ENABLE_TRANSITIONAL_UI = false;
-
 
   public static final String SUFFIX_START = "start";
   /** Start the named server */

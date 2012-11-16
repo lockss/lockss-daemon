@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.47 2012-11-14 12:05:10 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.48 2012-11-16 14:32:08 easyonthemayo Exp $
  */
 
 /*
@@ -111,7 +111,7 @@ public class ListHoldings extends LockssServlet {
   
   /** Enable "use metadata" option when "preserved" option is enabled. */
   public static final String
-    PARAM_USE_METATATA_FOR_PRESERVED_HOLDINGS = 
+    PARAM_USE_METADATA_FOR_PRESERVED_HOLDINGS =
       PREFIX + "useMetadataForPreserved";
   public static final boolean 
     DEFAULT_USE_METADATA_FOR_PRESERVED_HOLDINGS = false;
@@ -473,7 +473,13 @@ public class ListHoldings extends LockssServlet {
 
     // The list of KbartTitles to export; each title represents a TdbTitle
     // containing particular types of AU, over a particular range of coverage.
-    List<KbartTitle> titles = getKbartTitlesForExport(scope, type);
+    List<KbartTitle> titles = null;
+    try {
+      titles = getKbartTitlesForExport(scope, type);
+    } catch (KbartConverter.ConversionException e) {
+      errMsg = i18n.tr("There was an internal error converting the titles.");
+      return null;
+    }
     //KbartTitleIterator titles = getKbartTitlesForExport(scope);
  
     /*log.info(String.format("Creating exporter for %d titles in scope %s\n",
@@ -563,19 +569,20 @@ public class ListHoldings extends LockssServlet {
    * @param scope the scope of titles to create
    * @param type the type of titles to include
    * @return a list of KbartTitles
+   * @throws ConversionException if the conversion does not successfully complete
    */
   private List<KbartTitle> getKbartTitlesForExport(ContentScope scope,
-                                                   ContentType type) {
-
-    long s = System.currentTimeMillis();
+                                                   ContentType type)
+      throws KbartConverter.ConversionException {
     List<KbartTitle> titles;
     Iterator<KbartTitle> titleIterator;
-    // If we are exporting in a scope where ArchivalUnits are not available,
-    // act on a list of TdbTitles, with their full AU ranges.
+    // If we are exporting in a scope where ArchivalUnits are not available
+    // (that is, in particular, the "Available" report), act on a list of
+    // TdbTitles, with their full AU ranges.
     if (!scope.areAusAvailable) {
       Collection<TdbTitle> tdbTitles = TdbUtil.getTdbTitles(scope, type);
-      // TODO Sort the TdbTitles first if we are expecting an iterator back (??)
       titles = KbartConverter.convertTitles(tdbTitles);
+      // TODO Sort the TdbTitles first if we are expecting an iterator back (??)
       // TODO titleIterator = new KbartConverter.TdbTitleKbartTitleIterator(tdbTitles.iterator());
     }
     // Otherwise we need to look at the lists of individual AUs in order to
@@ -585,52 +592,22 @@ public class ListHoldings extends LockssServlet {
       // ordering, then the default will be used, which will include range fields
       boolean rangeFieldsIncluded = KbartExportFilter.includesRangeFields(
           getSessionCustomOpts().getColumnOrdering().getFields());
+      // If we are generating a collected report from MetadataDatabase data
       if (scope == ContentScope.COLLECTED && useMetadataForPreserved()) {
         // try listing collected content from the metadata database first;
         // list of bibliographic items is assumed to be sorted by ISSN
-        // TODO (PJG) note: should return AUs from DB and 
+        // TODO (PJG) note: should return AUs from DB and
         // show aggregate health of AU for each title
-        List<? extends BibliographicItem> items = 
+        List<? extends BibliographicItem> items =
             MetadataDatabaseUtil.getBibliographicItems();
         if (items.size() > 0) {
           log.debug2("Found bibliographic items: " + items.size());
-          titles = new ArrayList<KbartTitle>();
-          int i = 0;
-          int itemsCount = items.size();
-          if (i < itemsCount) {
-            for (int j = i+1; j <= itemsCount; j++) {
-              String issni = items.get(i).getIssn();
-              String issnj = (j<itemsCount) ? items.get(j).getIssn() : null;
-              
-              // convert portion of bibliographic items list with same ISSN
-              if (   (j == items.size()) 
-                  || (issni != null && !issni.equals(issnj))) {
-                if (log.isDebug3()) {
-                  for (int k = i; k < j; k++) {
-                    log.debug3("printIssn: " + items.get(k).getPrintIssn()
-                               + " eissn: " + items.get(k).getEissn());
-                  }
-                }
-                List<KbartTitle> currentTitles =
-                  KbartConverter.convertTitleToKbartTitles(items.subList(i, j));
-                titles.addAll(currentTitles);
-                i = j;
-              }
-            }
-          }
-          if (log.isDebug3()) {
-            for (KbartTitle title : titles) {
-              log.debug3("printIssn: " 
-                         + title.getField(KbartTitle.Field.PRINT_IDENTIFIER)
-                         + "eIssn: " 
-                         + title.getField(KbartTitle.Field.ONLINE_IDENTIFIER));
-            }
-          }
-          return titles;
+          // XXX (NM) Note I moved the conversion algorithm to KbartConverter
+          // to take advantage of paralellisation:
+          return KbartConverter.convertBibliographicItems(items);
         }
       }
-      
-      // list content from the title database
+      // list content from the TDB title database
       Collection<ArchivalUnit> aus = TdbUtil.getAus(scope, type);
       Map<TdbTitle, List<ArchivalUnit>> map = TdbUtil.mapTitlesToAus(aus);
       titles = KbartConverter.convertTitleAus(map.values(), getShowHealthRatings(), rangeFieldsIncluded);
@@ -639,13 +616,12 @@ public class ListHoldings extends LockssServlet {
 
     }
     // TODO Sort here if not performed in KbartConverter
-    log.debug(String.format("getKbartTitlesForExport took a total %sms", System.currentTimeMillis()-s));
     return titles;
   }
 
   /**
    * Assign an HTML form of custom options to the exporter if necessary.
-   * @param kexp the exporter 
+   * @param kexp the exporter
    */
   /*private void assignHtmlCustomForm(KbartExporter kexp) {
     if (kexp.getOutputFormat().isHtml()) {
@@ -731,7 +707,7 @@ public class ListHoldings extends LockssServlet {
    */
   private boolean useMetadataForPreserved() {
     return CurrentConfig.getBooleanParam(
-        PARAM_USE_METATATA_FOR_PRESERVED_HOLDINGS, 
+        PARAM_USE_METADATA_FOR_PRESERVED_HOLDINGS,
         DEFAULT_USE_METADATA_FOR_PRESERVED_HOLDINGS);
   }
 
