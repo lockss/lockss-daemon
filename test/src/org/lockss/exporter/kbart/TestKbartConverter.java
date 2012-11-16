@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartConverter.java,v 1.18 2012-11-14 12:05:10 easyonthemayo Exp $
+ * $Id: TestKbartConverter.java,v 1.19 2012-11-16 16:16:46 easyonthemayo Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class TestKbartConverter extends LockssTestCase {
    * Check that the result of the wrapper method is the same as calling
    * convertTitleToKbartTitles on a single title.
    */
-  public final void testConvertTitles() {
+  public final void testConvertTitles() throws KbartConverter.ConversionException {
     List<TdbTitle> l = Collections.emptyList();
     assertEmpty(KbartConverter.convertTitles(null));
     assertEmpty(KbartConverter.convertTitles(l));
@@ -95,7 +95,7 @@ public class TestKbartConverter extends LockssTestCase {
   /**
    * Compare results of convertTitleAus and convertTitleToKbartTitles.
    */
-  public final void testConvertAus() {
+  public final void testConvertAus() throws KbartConverter.ConversionException {
     boolean showHealth = true;
     boolean rangeFieldsIncluded = true;
 
