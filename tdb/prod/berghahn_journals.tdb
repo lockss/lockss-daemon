@@ -484,13 +484,13 @@
     param[journal_id] = natcult
     param[journal_issn] = 1558-6073
         
-    au < testing ; 2006 ; Nature and Culture Volume 1 ; 1 >
-    au < testing ; 2007 ; Nature and Culture Volume 2 ; 2 >
-    au < testing ; 2008 ; Nature and Culture Volume 3 ; 3 >
-    au < testing ; 2009 ; Nature and Culture Volume 4 ; 4 >
-    au < testing ; 2010 ; Nature and Culture Volume 5 ; 5 >
-    au < testing ; 2011 ; Nature and Culture Volume 6 ; 6 >
-    au < testing ; 2012 ; Nature and Culture Volume 7 ; 7 >
+    au < ready ; 2006 ; Nature and Culture Volume 1 ; 1 >
+    au < ready ; 2007 ; Nature and Culture Volume 2 ; 2 >
+    au < ready ; 2008 ; Nature and Culture Volume 3 ; 3 >
+    au < ready ; 2009 ; Nature and Culture Volume 4 ; 4 >
+    au < ready ; 2010 ; Nature and Culture Volume 5 ; 5 >
+    au < ready ; 2011 ; Nature and Culture Volume 6 ; 6 >
+    au < ready ; 2012 ; Nature and Culture Volume 7 ; 7 >
     
   }
 
@@ -505,21 +505,21 @@
     param[journal_id] = nomp
     param[journal_issn] = 0822-7942
         
-    au < testing ; 1997 ; Nomadic Peoples Volume 1 ; 1 >
+    au < ready ; 1997 ; Nomadic Peoples Volume 1 ; 1 >
     au < testing ; 1998 ; Nomadic Peoples Volume 2 ; 2 >
-    au < testing ; 1999 ; Nomadic Peoples Volume 3 ; 3 >
-    au < testing ; 2000 ; Nomadic Peoples Volume 4 ; 4 >
-    au < testing ; 2001 ; Nomadic Peoples Volume 5 ; 5 >
-    au < testing ; 2002 ; Nomadic Peoples Volume 6 ; 6 >
-    au < testing ; 2003 ; Nomadic Peoples Volume 7 ; 7 >
-    au < testing ; 2004 ; Nomadic Peoples Volume 8 ; 8 >
+    au < ready ; 1999 ; Nomadic Peoples Volume 3 ; 3 >
+    au < ready ; 2000 ; Nomadic Peoples Volume 4 ; 4 >
+    au < ready ; 2001 ; Nomadic Peoples Volume 5 ; 5 >
+    au < ready ; 2002 ; Nomadic Peoples Volume 6 ; 6 >
+    au < ready ; 2003 ; Nomadic Peoples Volume 7 ; 7 >
+    au < ready ; 2004 ; Nomadic Peoples Volume 8 ; 8 >
     au < testing ; 2005 ; Nomadic Peoples Volume 9 ; 9 >
-    au < testing ; 2006 ; Nomadic Peoples Volume 10 ; 10 >
-    au < testing ; 2007 ; Nomadic Peoples Volume 11 ; 11>
-    au < testing ; 2008 ; Nomadic Peoples Volume 12 ; 12 >
-    au < testing ; 2009 ; Nomadic Peoples Volume 13 ; 13 >
-    au < testing ; 2010 ; Nomadic Peoples Volume 14 ; 14 >
-    au < testing ; 2011 ; Nomadic Peoples Volume 15 ; 15 >
+    au < ready ; 2006 ; Nomadic Peoples Volume 10 ; 10 >
+    au < ready ; 2007 ; Nomadic Peoples Volume 11 ; 11>
+    au < ready ; 2008 ; Nomadic Peoples Volume 12 ; 12 >
+    au < ready ; 2009 ; Nomadic Peoples Volume 13 ; 13 >
+    au < ready ; 2010 ; Nomadic Peoples Volume 14 ; 14 >
+    au < ready ; 2011 ; Nomadic Peoples Volume 15 ; 15 >
     au < expected ; 2012 ; Nomadic Peoples Volume 16 ; 16 >
     
   }
