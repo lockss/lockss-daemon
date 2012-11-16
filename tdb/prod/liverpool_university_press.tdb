@@ -580,14 +580,15 @@
     param[base_url] = http://liverpool.metapress.com/
     implicit < status ; year ; name ; param[volume_name] >      
     param[journal_issn] = 0142-7849 
+    comment[0] = RU4501, no permission statement on manifest page
 
-    au < testing ; 1993 ; Third World Planning Review Volume 15 ; 15 >
-    au < testing ; 1994 ; Third World Planning Review Volume 16 ; 16 >
-    au < testing ; 1995 ; Third World Planning Review Volume 17 ; 17 >
-    au < testing ; 1996 ; Third World Planning Review Volume 18 ; 18 >
-    au < testing ; 1997 ; Third World Planning Review Volume 19 ; 19 >
-    au < testing ; 1998 ; Third World Planning Review Volume 20 ; 20 >
-    au < testing ; 1999 ; Third World Planning Review Volume 21 ; 21 >
+    au < exists ; 1993 ; Third World Planning Review Volume 15 ; 15 >
+    au < exists ; 1994 ; Third World Planning Review Volume 16 ; 16 >
+    au < exists ; 1995 ; Third World Planning Review Volume 17 ; 17 >
+    au < exists ; 1996 ; Third World Planning Review Volume 18 ; 18 >
+    au < exists ; 1997 ; Third World Planning Review Volume 19 ; 19 >
+    au < exists ; 1998 ; Third World Planning Review Volume 20 ; 20 >
+    au < exists ; 1999 ; Third World Planning Review Volume 21 ; 21 >
     au < released ; 2000 ; Third World Planning Review Volume 22 ; 22 >
 
   }
@@ -605,6 +606,9 @@
     param[base_url] = http://liverpool.metapress.com/
     implicit < status ; year ; name ; param[volume_name] >  
     param[journal_issn] = 1478-341X 
+    comment[70] = RU4501, no permission statement on manifest page
+    comment[notReady] = RU4508, license agreement
+    
 
     au < exists ; 1910-1911 ; Town Planning Review Volume 1 ; 1 >
     au < exists ; 1911-1912 ; Town Planning Review Volume 2 ; 2 >
@@ -675,16 +679,16 @@
     au < exists ; 1996 ; Town Planning Review Volume 67 ; 67 >
     au < exists ; 1997 ; Town Planning Review Volume 68 ; 68 >
     au < exists ; 1998 ; Town Planning Review Volume 69 ; 69 >
-    au < testing ; 1999 ; Town Planning Review Volume 70 ; 70 >
-    au < testing ; 2000 ; Town Planning Review Volume 71 ; 71 >
+    au < exists ; 1999 ; Town Planning Review Volume 70 ; 70 >
+    au < exists ; 2000 ; Town Planning Review Volume 71 ; 71 >
     au < doesNotExist ; 0 ; Town Planning Review Volume 72 ; 72 >
-    au < testing ; 2002 ; Town Planning Review Volume 73 ; 73 >
-    au < testing ; 2003 ; Town Planning Review Volume 74 ; 74 >
-    au < testing ; 2004 ; Town Planning Review Volume 75 ; 75 >
-    au < testing ; 2005 ; Town Planning Review Volume 76 ; 76 >
-    au < testing ; 2006 ; Town Planning Review Volume 77 ; 77 >
-    au < testing ; 2007 ; Town Planning Review Volume 78 ; 78 >
-    au < testing ; 2008 ; Town Planning Review Volume 79 ; 79 >
+    au < notReady ; 2002 ; Town Planning Review Volume 73 ; 73 >
+    au < notReady ; 2003 ; Town Planning Review Volume 74 ; 74 >
+    au < notReady ; 2004 ; Town Planning Review Volume 75 ; 75 >
+    au < notReady ; 2005 ; Town Planning Review Volume 76 ; 76 >
+    au < notReady ; 2006 ; Town Planning Review Volume 77 ; 77 >
+    au < notReady ; 2007 ; Town Planning Review Volume 78 ; 78 >
+    au < notReady ; 2008 ; Town Planning Review Volume 79 ; 79 >
     au < released ; 2009 ; Town Planning Review Volume 80 ; 80 >
     au < released ; 2010 ; Town Planning Review Volume 81 ; 81 >
     au < released ; 2011 ; Town Planning Review Volume 82 ; 82 >
