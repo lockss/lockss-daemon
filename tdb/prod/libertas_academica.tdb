@@ -1175,8 +1175,8 @@
 
     param[journal_id] = 109
     
-    au < testing ; 2008 ; Lipid Insights Volume 1-2 ; 2008 >
-    au < testing ; 2010 ; Lipid Insights Volume 3 ; 2010 >
+    au < ready ; 2008 ; Lipid Insights Volume 1-2 ; 2008 >
+    au < ready ; 2010 ; Lipid Insights Volume 3 ; 2010 >
     au < released ; 2011 ; Lipid Insights Volume 4 ; 2011 >
     au < released ; 2012 ; Lipid Insights Volume 5 ; 2012 >
 
@@ -1193,8 +1193,8 @@
     
     param[journal_id] = 147
 
-    au < testing ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 2009 >
-    au < testing ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2010 >
+    au < ready ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 2009 >
+    au < ready ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2010 >
 
   }
   
@@ -1208,9 +1208,9 @@
 
     param[journal_id] = 115
 
-    au < testing ; 2008 ; Magnetic Resonance Insights Volume 1-2 ; 2008 >
-    au < testing ; 2009 ; Magnetic Resonance Insights Volume 3 ; 2009 >
-    au < testing ; 2010 ; Magnetic Resonance Insights Volume 4 ; 2010 >
+    au < ready ; 2008 ; Magnetic Resonance Insights Volume 1-2 ; 2008 >
+    au < ready ; 2009 ; Magnetic Resonance Insights Volume 3 ; 2009 >
+    au < ready ; 2010 ; Magnetic Resonance Insights Volume 4 ; 2010 >
     au < released ; 2012 ; Magnetic Resonance Insights Volume 5 ; 2012 >
     
 
@@ -1226,9 +1226,9 @@
 
     param[journal_id] = 98
 
-    au < testing ; 2008 ; Medical Equipment Insights Volume 1 ; 2008 >
-    au < testing ; 2009 ; Medical Equipment Insights Volume 2 ; 2009 >
-    au < testing ; 2010 ; Medical Equipment Insights Volume 3 ; 2010 >
+    au < ready ; 2008 ; Medical Equipment Insights Volume 1 ; 2008 >
+    au < ready ; 2009 ; Medical Equipment Insights Volume 2 ; 2009 >
+    au < ready ; 2010 ; Medical Equipment Insights Volume 3 ; 2010 >
     au < released ; 2012 ; Medical Equipment Insights Volume 4 ; 2012 >
     
   }
@@ -1243,9 +1243,9 @@
 
     param[journal_id] = 108
 
-    au < testing ; 2008 ; Microbiology Insights Volume 1 ; 2008 >
-    au < testing ; 2009 ; Microbiology Insights Volume 2 ; 2009 >
-    au < testing ; 2010 ; Microbiology Insights Volume 3 ; 2010 >
+    au < ready ; 2008 ; Microbiology Insights Volume 1 ; 2008 >
+    au < ready ; 2009 ; Microbiology Insights Volume 2 ; 2009 >
+    au < ready ; 2010 ; Microbiology Insights Volume 3 ; 2010 >
     au < released ; 2012 ; Microbiology Insights Volume 4 ; 2012 >
   }     
   

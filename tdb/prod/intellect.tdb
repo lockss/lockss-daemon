@@ -899,10 +899,10 @@
       param[journal_id] = jmte
       param[journal_issn] = 1752-7066
 
-      au < testing ; 2007-2008 ; Journal of Music, Technology & Education Volume 1 ; 1 >
-      au < testing ; 2009 ; Journal of Music, Technology & Education Volume 2 ; 2 >
-      au < testing ; 2010-2011 ; Journal of Music, Technology & Education Volume 3 ; 3 >
-      au < testing ; 2011 ; Journal of Music, Technology & Education Volume 4 ; 4 >
+      au < ready ; 2007-2008 ; Journal of Music, Technology & Education Volume 1 ; 1 >
+      au < ready ; 2009 ; Journal of Music, Technology & Education Volume 2 ; 2 >
+      au < ready ; 2010-2011 ; Journal of Music, Technology & Education Volume 3 ; 3 >
+      au < ready ; 2011 ; Journal of Music, Technology & Education Volume 4 ; 4 >
 
     }
     {
@@ -926,10 +926,10 @@
       param[journal_id] = jwcs
       param[journal_issn] = 1752-6272
 
-      au < testing ; 2007-2008 ; Journal of War & Culture Studies Volume 1 ; 1 >
-      au < testing ; 2009 ; Journal of War & Culture Studies Volume 2 ; 2 >
-      au < testing ; 2010-2011 ; Journal of War & Culture Studies Volume 3 ; 3 >
-      au < testing ; 2011 ; Journal of War & Culture Studies Volume 4 ; 4 >
+      au < ready ; 2007-2008 ; Journal of War & Culture Studies Volume 1 ; 1 >
+      au < ready ; 2009 ; Journal of War & Culture Studies Volume 2 ; 2 >
+      au < ready ; 2010-2011 ; Journal of War & Culture Studies Volume 3 ; 3 >
+      au < ready ; 2011 ; Journal of War & Culture Studies Volume 4 ; 4 >
 
     }
 
@@ -943,10 +943,10 @@
       param[journal_id] = jwcp
       param[journal_issn] = 1753-5190
 
-      au < testing ; 2007-2008 ; Journal of Writing in Creative Practice Volume 1 ; 1 >
-      au < testing ; 2009 ; Journal of Writing in Creative Practice Volume 2 ; 2 >
-      au < testing ; 2010 ; Journal of Writing in Creative Practice Volume 3 ; 3 >
-      au < testing ; 2011 ; Journal of Writing in Creative Practice Volume 4 ; 4 >
+      au < ready ; 2007-2008 ; Journal of Writing in Creative Practice Volume 1 ; 1 >
+      au < ready ; 2009 ; Journal of Writing in Creative Practice Volume 2 ; 2 >
+      au < ready ; 2010 ; Journal of Writing in Creative Practice Volume 3 ; 3 >
+      au < ready ; 2011 ; Journal of Writing in Creative Practice Volume 4 ; 4 >
 
     }
 
@@ -968,7 +968,7 @@
       param[journal_id] = mecr
       param[journal_issn] = 2040-3550
 
-      au < testing ; 2010-2011 ; Metaverse Creativity Volume 1 ; 1 >
+      au < ready ; 2010-2011 ; Metaverse Creativity Volume 1 ; 1 >
 
     }
 
@@ -981,7 +981,7 @@
       param[journal_id] = miraj
       param[journal_issn] = 2045-6298
 
-      au < testing ; 2012 ; Moving Image Review & Art Journal MIRAJ Volume 1 ; 1 >
+      au < ready ; 2012 ; Moving Image Review & Art Journal MIRAJ Volume 1 ; 1 >
     }
 
     {
