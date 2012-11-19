@@ -1,5 +1,5 @@
 /*
- * $Id: CopernicusArticleIteratorFactory.java,v 1.1 2012-11-15 21:36:52 alexandraohlson Exp $
+ * $Id: CopernicusArticleIteratorFactory.java,v 1.2 2012-11-19 21:03:18 alexandraohlson Exp $
  */
 
 /*
@@ -58,7 +58,8 @@ public class CopernicusArticleIteratorFactory
   // In the pattern, the bit in parens (ending in supplement) excludes thos patterns that end in <blah>supplement.pdf, but takes other <blah>.pdf
  // protected static final String PATTERN_TEMPLATE = "\"^%s%s/[0-9]+/[0-9]+/(?![A-Za-z0-9-]+supplement\\.pdf)[A-Za-z0-9-]+\\.pdf\", base_url,volume_name";
  // pick up the abstract as the logical definition of one article
-  protected static final String PATTERN_TEMPLATE = "\"^%s%s/[0-9]+/[0-9]+/[A-Za-z0-9-]+\\.html\", base_url,volume_name";
+// although the format seems to be consistent, don't box in the alphanum sequence, just the depth
+  protected static final String PATTERN_TEMPLATE = "\"^%s%s/[^/]+/[^/]+/[^/]+\\.html\", base_url,volume_name";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -74,7 +75,7 @@ public class CopernicusArticleIteratorFactory
   protected static class CopernicusArticleIterator extends SubTreeArticleIterator {
     
 //  Use parens to group the base article URL 
-    protected Pattern ABSTRACT_PATTERN = Pattern.compile("(/[0-9]+/[0-9]+/[A-Za-z0-9-]+)\\.html$", Pattern.CASE_INSENSITIVE);
+    protected Pattern ABSTRACT_PATTERN = Pattern.compile("(/[^/]+/[^/]+/[^/]+)\\.html$", Pattern.CASE_INSENSITIVE);
 
     public CopernicusArticleIterator(ArchivalUnit au,
                                      SubTreeArticleIterator.Spec spec) {
@@ -106,31 +107,33 @@ public class CopernicusArticleIteratorFactory
     
     protected void guessAdditionalFiles(ArticleFiles af, Matcher mat) {      
       CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("$1.pdf"));
-      CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1.xml"));
       CachedUrl risCu = au.makeCachedUrl(mat.replaceFirst("$1.ris"));
       CachedUrl bibCu = au.makeCachedUrl(mat.replaceFirst("$1.bib"));
       CachedUrl supCu = au.makeCachedUrl(mat.replaceFirst("$1-supplement.pdf"));
+      //.xml file is another version of metadata plus references & abstract. ignore it.
 
+      // note that if there is no PDF you will not have a ROLE_FULL_TEXT_CU!!
       if (pdfCu != null && pdfCu.hasContent()) {
-          af.setFullTextCu(pdfCu);
-          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+        af.setFullTextCu(pdfCu);
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
       }
-          
-      if (xmlCu != null && xmlCu.hasContent()) {
-/*          af.setRoleCu(ArticleFiles.ROLE_???, xmlCu);*/
-      }
-      
+      AuUtil.safeRelease(pdfCu);
+
       if (risCu != null && risCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_CITATION + "Ris", risCu);
         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, risCu);
       }
-      
+      AuUtil.safeRelease(risCu);
+
       if (bibCu != null && bibCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_CITATION + "Bibtex", bibCu);
-    }     
+      } 
+      AuUtil.safeRelease(bibCu);
+
       if (supCu != null && supCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, supCu);
-    }     
+      }
+      AuUtil.safeRelease(supCu);
     }
   }
   

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCopernicusHtmlFilterFactory.java,v 1.1 2012-11-15 21:36:52 alexandraohlson Exp $
+ * $Id: TestCopernicusHtmlFilterFactory.java,v 1.2 2012-11-19 21:03:19 alexandraohlson Exp $
  */
 /*
 
@@ -59,14 +59,14 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
       "<div></div>";
 
   private static final String rightColumnHtml =
-      "<div><div id=\"page_colum_right\" class=\"page_colum\">" +
+      "<div><div id=\"page_colum_right\" class=\"page_colum\">\n" +
           "<div class=\"page_colum_container CMSCONTAINER\" id=\"page_colum_right_container\">" +
           "<div id=\"copernicus_publications\" class=\"cmsbox \">" +
           "<a href=\"http://publications.copernicus.org\" target=\"_blank\">" +
           "<img src=\"http://www.climate-of-the-past.net/Copernicus_Publications_Logo.jpg\" cofileid=\"154\" alt=\"\" /></a><" +
-          "/div></div></div></div>";
+          "/div></div></div>\n</div>";
   private static final String rightColumnHtmlFiltered =
-      "<div></div>";
+      "<div> </div>";
   
   private static final String scriptsAndComments =
       "</tr></table><script type=\"text/javascript\">" +

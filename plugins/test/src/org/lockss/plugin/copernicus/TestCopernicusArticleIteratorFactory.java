@@ -1,5 +1,5 @@
 /*
- * $Id: TestCopernicusArticleIteratorFactory.java,v 1.1 2012-11-15 21:36:52 alexandraohlson Exp $
+ * $Id: TestCopernicusArticleIteratorFactory.java,v 1.2 2012-11-19 21:03:19 alexandraohlson Exp $
  */
 
 /*
@@ -141,7 +141,7 @@ public class TestCopernicusArticleIteratorFactory extends ArticleIteratorTestCas
   
    
   public void testCreateArticleFiles() throws Exception {
-    int expCount = 16; // 1 depth, 4 branches, 5 files, but removing some later in test   
+    int expCount = 15; // 1 depth, 4 branches, 5 files, but removing some later in test   
     PluginTestUtil.crawlSimAu(sau);
     
  /*
@@ -161,32 +161,45 @@ public class TestCopernicusArticleIteratorFactory extends ArticleIteratorTestCas
     
     // Remove some of the URLs just created to make test more robust
     // Remove files 1file.html and 2file.pdf in each branch (and there are 3 branches)
-    int deleted = 0; 
+    int deleted = 0;
+    int pdf_deleted = 0;
     for (Iterator it = au.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
       CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
       if (cusn instanceof CachedUrl) {
         CachedUrl cu = (CachedUrl)cusn;
         String url = cu.getUrl();
-        if (url.contains("/2012/") && (url.endsWith("1file.html") || url.endsWith("2file.ris"))) {
-          deleteBlock(cu);
-          ++deleted;
+        if (url.contains("/2012/")) {
+          if (url.endsWith("1file.html") || url.endsWith("2file.ris")) {
+            deleteBlock(cu);
+            ++deleted;
+          } else if (url.endsWith("3file.pdf") && (pdf_deleted == 0)) {
+            // delete ONE pdf file to see what happens with no FULL_TEXT_CU
+            // it probably won't happen but the publisher might have an error
+            pdf_deleted = 1;
+            deleteBlock(cu);
+          }
         }
       }
     }
-    assertEquals(8, deleted); // 3 branches, 2 files removed per branch
+    assertEquals(8, deleted); // 3 branches, 2 files removed per branch - don't count PDF file
 
     Iterator<ArticleFiles> it = au.getArticleIterator();
     int count = 0;
     int countNoRis = 0;
+    int countNoPDF = 0;
     while (it.hasNext()) {
       ArticleFiles af = it.next();
       log.info(af.toString());
       CachedUrl cu = af.getFullTextCu();
-      String url = cu.getUrl();
-      assertNotNull(cu);
-      String contentType = cu.getContentType();
-      log.debug("count " + count + " url " + url + " " + contentType);
-      count++;
+      if ( cu != null) {
+         String url = cu.getUrl();
+         String contentType = cu.getContentType();
+         log.debug("count " + count + " url " + url + " " + contentType);
+         count++;
+      } else {
+        // only a PDF file is full text
+        ++countNoPDF;
+      }
       if ( af.getRoleUrl(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
         ++countNoRis; 
       }
@@ -197,6 +210,7 @@ public class TestCopernicusArticleIteratorFactory extends ArticleIteratorTestCas
     log.debug("Article count is " + count);
     assertEquals(expCount, count);
     assertEquals(4, countNoRis);
+    assertEquals(1, countNoPDF);
 }
 
 private void deleteBlock(CachedUrl cu) throws IOException {

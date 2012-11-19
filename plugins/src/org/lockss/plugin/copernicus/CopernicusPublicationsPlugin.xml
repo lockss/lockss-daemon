@@ -34,17 +34,17 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Copernicus Publications Plugin, for LOCKSS, Base URL %s, Home URL %s, Year %d, Volume %s&quot;, base_url, home_url, year, volume_name</string>
+    <string>"Copernicus Publications Plugin, Base URL %s, Home URL %s, Year %d, Volume %s", base_url, home_url, year, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%s/index.html&quot;, base_url, volume_name</string>
+    <string>"%s%s/index.html", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
       <list>
-        <string>&quot;%s%s/index.html&quot;, base_url, volume_name</string>
-        <string>&quot;%sindex.html&quot;,home_url</string> 
+        <string>"%s%s/index.html", base_url, volume_name</string>
+        <string>"%sindex.html",home_url</string> 
       </list>
   </entry>
   <entry>
@@ -52,21 +52,20 @@
     <map>
       <entry>
         <string>au_title</string>
-        <string>&quot;%s/volumes&quot;, base_url</string>
+        <string>"%svolumes", base_url</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>&quot;%s%s/index.html&quot;, base_url, volume_name</string>
+        <string>"%s%s/index.html", base_url, volume_name</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
-      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, home_url</string>      
-      <string>1,&quot;^%s%s/&quot;,base_url,volume_name</string>
-      <string>4,&quot;^%s%s/&quot;,base_url, volume_name</string>
+      <string>1,"^https?://(%s|%s).*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, home_url_host</string>
+      <string>1,"^%s%s/",base_url,volume_name</string>
+<!--  anything not explicitly collected is inherently excluded so you don't need a statement-->
     </list>
   </entry>
   <entry>
@@ -112,13 +111,12 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      	<string>"^%s%s/[0-9]+/[0-9]+/[A-Za-z0-9-]+\.(pdf|html)$", base_url, volume_name</string>
+<!--  so far these are always <base_url>/<vol>/<startpage>/<year>/zz-vol-pg-year.pdf -->
+<!--  but it is better to be defensive and just ensure depth -->
+<!--  only pdf is full text. html is just abstract -->
+      	<string>"^%s%s/[^/]+/[^/]+/[^/]+\.pdf$", base_url, volume_name</string>
     </list>
   </entry>
-<!--   <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.copernicus.CopernicusHtmlLinkExtractorFactory</string>
-  </entry>  -->
   <entry>
      <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.copernicus.CopernicusHtmlFilterFactory</string>
@@ -127,10 +125,6 @@
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.copernicus.CopernicusArticleIteratorFactory</string>
   </entry> 
-<!--   <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.copernicus.CopernicusUrlNormalizer</string>
-  </entry> -->
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.copernicus.CopernicusArticleIteratorFactory</string>
@@ -154,15 +148,6 @@
    </entry>
   </map>
   </entry>
-<!--   <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*</string>
-        <string>org.lockss.plugin.copernicus.CopernicusHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry> -->
   <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
