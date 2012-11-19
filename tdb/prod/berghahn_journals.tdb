@@ -619,16 +619,16 @@
     param[journal_id] = sibiric
     param[journal_issn] = 1361-7362
        
-    au < manifest ; 2002 ; Sibirica Volume 2 ; 2 >
-    au < manifest ; 2003 ; Sibirica Volume 3 ; 3 >
-    au < manifest ; 2004 ; Sibirica Volume 4 ; 4 >
-    au < manifest ; 2006 ; Sibirica Volume 5 ; 5 >
-    au < manifest ; 2007 ; Sibirica Volume 6 ; 6 >
-    au < manifest ; 2008 ; Sibirica Volume 7 ; 7 >
-    au < manifest ; 2009 ; Sibirica Volume 8 ; 8 >
-    au < manifest ; 2010 ; Sibirica Volume 9 ; 9 >
-    au < manifest ; 2011 ; Sibirica Volume 10 ; 10 >
-    au < manifest ; 2012 ; Sibirica Volume 11 ; 11 >
+    au < testing ; 2002 ; Sibirica Volume 2 ; 2 >
+    au < testing ; 2003 ; Sibirica Volume 3 ; 3 >
+    au < testing ; 2004 ; Sibirica Volume 4 ; 4 >
+    au < testing ; 2006 ; Sibirica Volume 5 ; 5 >
+    au < testing ; 2007 ; Sibirica Volume 6 ; 6 >
+    au < testing ; 2008 ; Sibirica Volume 7 ; 7 >
+    au < testing ; 2009 ; Sibirica Volume 8 ; 8 >
+    au < testing ; 2010 ; Sibirica Volume 9 ; 9 >
+    au < testing ; 2011 ; Sibirica Volume 10 ; 10 >
+    au < testing ; 2012 ; Sibirica Volume 11 ; 11 >
     
   }
 
@@ -643,17 +643,17 @@
     param[journal_id] = socan
     param[journal_issn] = 0155-977X
         
-    au < manifest ; 2002 ; Social Analsysis Volume 46 ; 46 >
-    au < manifest ; 2003 ; Social Analsysis Volume 47 ; 47 >
-    au < manifest ; 2004 ; Social Analsysis Volume 48 ; 48 >
-    au < manifest ; 2005 ; Social Analsysis Volume 49 ; 49 >
-    au < manifest ; 2006 ; Social Analsysis Volume 50 ; 50 >
-    au < manifest ; 2007 ; Social Analsysis Volume 51 ; 51 >
-    au < manifest ; 2008 ; Social Analsysis Volume 52 ; 52 >
-    au < manifest ; 2009 ; Social Analsysis Volume 53 ; 53 >
-    au < manifest ; 2010 ; Social Analsysis Volume 54 ; 54 >
-    au < manifest ; 2011 ; Social Analsysis Volume 55 ; 55 >
-    au < manifest ; 2012 ; Social Analsysis Volume 56 ; 56 >
+    au < testing ; 2002 ; Social Analsysis Volume 46 ; 46 >
+    au < testing ; 2003 ; Social Analsysis Volume 47 ; 47 >
+    au < testing ; 2004 ; Social Analsysis Volume 48 ; 48 >
+    au < testing ; 2005 ; Social Analsysis Volume 49 ; 49 >
+    au < testing ; 2006 ; Social Analsysis Volume 50 ; 50 >
+    au < testing ; 2007 ; Social Analsysis Volume 51 ; 51 >
+    au < testing ; 2008 ; Social Analsysis Volume 52 ; 52 >
+    au < testing ; 2009 ; Social Analsysis Volume 53 ; 53 >
+    au < testing ; 2010 ; Social Analsysis Volume 54 ; 54 >
+    au < testing ; 2011 ; Social Analsysis Volume 55 ; 55 >
+    au < testing ; 2012 ; Social Analsysis Volume 56 ; 56 >
     
   }
 
