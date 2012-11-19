@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -74,6 +74,7 @@
       <string>1,&quot;^%scontent/%s/&quot;, base_url, book_isbn</string>
       <string>2,&quot;^%scontent/[A-Za-z0-9]{16}/(export-citation|referrers)/&quot;, base_url</string>
       <string>1,&quot;^%scontent/[A-Za-z0-9]{16}/&quot;, base_url</string>
+      <string>1,&quot;^%sdynamic-file\.axd&quot;, base_url</string>
     </list>
   </entry>
   <entry>
