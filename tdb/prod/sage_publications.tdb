@@ -39916,7 +39916,24 @@ comment[mpj] = now published by Brill
     param[base_url] = http://ani.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Annals of the ICRP Volume 1 ; 1 >
+    au < exists ; 2014 ; Annals of the ICRP Volume 43 ; 43 >
+
+    }
+
+    {
+
+      title <
+        name = Sociological Perspectives ;
+        issn = 0146-6453 ;
+        issnl = 0146-6453
+      >
+
+    comment[upcoming] = online 2014, Volume 57
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://sop.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2014 ; Sociological Perspectives Volume 57 ; 57 >
 
     }
 
@@ -40243,7 +40260,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://tai.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Therapeutic Advances in Infectious Disease Volume 1 ; 1 >
+    au < exists ; 2013 ; Therapeutic Advances in Infectious Disease Volume 2 ; 2 >
 
     }
 
@@ -40285,7 +40302,6 @@ comment[mpj] = now published by Brill
       title <
         name = World Future Review ;
         issn = 1946-7567 ;
-        eissn = 2169-279 ;
         issnl = 1946-7567
       >
 
@@ -40294,7 +40310,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://wfr.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; World Future Review Volume 1 ; 1 >
+    au < exists ; 2013 ; World Future Review Volume 5 ; 5 >
 
     }
 
