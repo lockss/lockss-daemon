@@ -1730,7 +1730,7 @@
       eissn = 2047-9719
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2422,7 +2422,7 @@
       eissn = 2049-3967
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
