@@ -632,7 +632,7 @@ while (my $line = <>) {
     }
     sleep(5);
                 
-  } elsif ($plugin eq "CopernicusPublicationsPlugin") {
+  } elsif ($plugin eq "ClockssCopernicusPublicationsPlugin") {
     $url = sprintf("%s%s/index.html", 
       $param{base_url}, $param{volume_name});
     $man_url = uri_unescape($url);
