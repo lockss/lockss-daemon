@@ -36344,7 +36344,7 @@
     title <
       name = Social Marketing Quarterly ;
       issn = 1524-5004 ;
-      eissn = 1539-9409 
+      eissn = 1539-4093 
     >
 
     param[base_url] = http://smq.sagepub.com/
@@ -36522,7 +36522,24 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://aed.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Australian Journal of Education Volume 1 ; 1 ; >
+    au < exists ; exists ; 2013 ; Australian Journal of Education Volume 57 ; 57 ; >
+
+    }
+
+    {
+
+      title <
+        name = Adoption & Fostering ;
+        issn = 0308-5759 ;
+        eissn = 1740-469X ;
+        issnl = 0308-5759
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    param[base_url] = http://aaf.sagepub.com/
+
+    au < exists ; exists ; 2013 ; Adoption & Fostering Volume 37 ; 37 ; >
 
     }
 
@@ -36555,7 +36572,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://acd.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Australian Journal of Career Development Volume 1 ; 1 ; >
+    au < exists ; exists ; 2013 ; Australian Journal of Career Development Volume 22 ; 22 ; >
 
     }
 
@@ -36702,7 +36719,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://fai.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Foot & Ankle International Volume 1 ; 1 ; >
+    au < exists ; exists ; 2013 ; Foot & Ankle International Volume 34 ; 34 ; >
 
     }
 
@@ -36719,7 +36736,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://foi.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 1 ; 1 ; >
+    au < exists ; exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 47 ; 47 ; >
 
     }
 
@@ -36786,7 +36803,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://mis.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Missiology: An International Review Volume 1 ; 1 ; >
+    au < exists ; exists ; 2013 ; Missiology: An International Review Volume 41 ; 41 ; >
 
     }
 
@@ -36820,7 +36837,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://paa.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Pacifica: Australasian Theological Studies Volume 1 ; 1 ; >
+    au < exists ; exists ; 2013 ; Pacifica: Australasian Theological Studies Volume 26 ; 26 ; >
 
     }
 
@@ -36895,7 +36912,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://tai.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Therapeutic Advances in Infectious Disease Volume 1 ; 1 ; >
+    au < exists ; exists ; 2013 ; Therapeutic Advances in Infectious Disease Volume 2 ; 2 ; >
 
     }
 
@@ -36943,7 +36960,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://wfr.sagepub.com/
 
-    au < exists ; exists ; 2013 ; World Future Review Volume 1 ; 1 ; >
+    au < exists ; exists ; 2013 ; World Future Review Volume 5 ; 5 ; >
 
     }
 
