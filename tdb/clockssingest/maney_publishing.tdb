@@ -301,7 +301,7 @@
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
     param[publisher_id] = maney
-    param[journal_id] = bct 
+    param[journal_id] = bcj
     param[journal_issn] = 0007-0599
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
