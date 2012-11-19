@@ -20,7 +20,7 @@
     >
 
     param[journal_id] = aps
-    comment[notReady] = fetch error on ingest 3 RT 4106
+    comment[notReady] = fetch error on ingest1 (401 unauthorized)
 
     au < manifest ; exists ; 2005 ; Acta Pharmacologica Sinica Volume 26 ; 2005 ; 26 >
     au < manifest ; exists ; 2006 ; Acta Pharmacologica Sinica Volume 27 ; 2006 ; 27 >
@@ -73,7 +73,6 @@
     >
 
     param[journal_id] = ajh
-    comment[notReady] = fetch error on ingest 2, page not found
 
     au < exists ; exists ; 1995 ; American Journal of Hypertension Volume 8 ; 1995 ; 8 >
     au < exists ; exists ; 1996 ; American Journal of Hypertension Volume 9 ; 1996 ; 9 >
@@ -88,8 +87,8 @@
     au < exists ; exists ; 2005 ; American Journal of Hypertension Volume 18 ; 2005 ; 18 >
     au < exists ; exists ; 2006 ; American Journal of Hypertension Volume 19 ; 2006 ; 19 >
     au < exists ; exists ; 2007 ; American Journal of Hypertension Volume 20 ; 2007 ; 20 >
-    au < notReady ; exists ; 2008 ; American Journal of Hypertension Volume 21 ; 2008 ; 21 >
-    au < notReady ; exists ; 2009 ; American Journal of Hypertension Volume 22 ; 2009 ; 22 >
+    au < testing ; exists ; 2008 ; American Journal of Hypertension Volume 21 ; 2008 ; 21 >
+    au < testing ; exists ; 2009 ; American Journal of Hypertension Volume 22 ; 2009 ; 22 >
     au < released ; crawling ; 2010 ; American Journal of Hypertension Volume 23 ; 2010 ; 23 >
     au < released ; crawling ; 2011 ; American Journal of Hypertension Volume 24 ; 2011 ; 24 >
     au < released ; crawling ; 2012 ; American Journal of Hypertension Volume 25 ; 2012 ; 25 >
@@ -295,7 +294,7 @@
     >
 
     param[journal_id] = cgt
-    comment[notReady] = fetch error RT 4106
+    comment[notReady] = fetch error on ingest1 (401 unauthorized)
 
     au < manifest ; exists ; 1999 ; Cancer Gene Therapy Volume 6 ; 1999 ; 6 >
     au < manifest ; exists ; 2000 ; Cancer Gene Therapy Volume 7 ; 2000 ; 7 >
@@ -1418,8 +1417,6 @@
 
     param[journal_id] = ki
     
-    comment[notReady] = ingest3 Rice doesn't have permission to crawl http://www.nature.com/ki/journal/v79/n12/full/ki201153a.html see RU 3924
-
     au < exists ; exists ; 1972 ; Kidney International Volume 1 (1972) ; 1972 ; 1 >
     au < exists ; exists ; 1972 ; Kidney International Volume 2 (1972) ; 1972 ; 2 >
     au < exists ; exists ; 1973 ; Kidney International Volume 3 (1973) ; 1973 ; 3 >
@@ -1498,9 +1495,9 @@
     au < exists ; exists ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 >
     au < exists ; exists ; 2010 ; Kidney International Volume 77 (2010) ; 2010 ; 77 >
     au < exists ; exists ; 2010 ; Kidney International Volume 78 (2010) ; 2010 ; 78 >
-    au < notReady ; exists ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 >
-    au < notReady ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 >
-    au < notReady ; exists ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 >
+    au < testing ; exists ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 >
+    au < testing ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 >
+    au < testing ; exists ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 >
 
   }
 
@@ -1571,7 +1568,7 @@
     >
 
     param[journal_id] = modpathol
-    comment[notReady] = fetch error RT 4106
+    comment[notReady] = fetch error on ingest3 RT 4106
 
     au < exists ; exists ; 2000 ; Modern Pathology Volume 13 ; 2000 ; 13 >
     au < exists ; exists ; 2000 ; Modern Pathology Volume 14 (2000) ; 2000 ; 14 >
@@ -2808,7 +2805,7 @@
     >
 
     param[journal_id] = nrendo
-    comment[notReady] = fetch error RT 4106
+    comment[notReady] = fetch error on ingest3 RT 4106
 
     au < exists ; exists ; 2005 ; Nature Reviews Endocrinology Volume 1 ; 2005 ; 1 >
     au < exists ; exists ; 2006 ; Nature Reviews Endocrinology Volume 2 ; 2006 ; 2 >
@@ -2816,7 +2813,7 @@
     au < zapped ; down ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 2008 ; 4 >
     au < zapped ; down ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 >
-    au < testing ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
+    au < notReady ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
     au < crawling ; exists ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 >
 
   }
@@ -3029,7 +3026,7 @@
     >
 
     param[journal_id] = nrrheum
-    notReady[comment] = needs hash filter see RU 4408
+    notReady[comment] = fetch error on ingest3 (401 unauthorized) 
 
     au < exists ; exists ; 2005 ; Nature Reviews Rheumatology Volume 1 ; 2005 ; 1 >
     au < exists ; exists ; 2006 ; Nature Reviews Rheumatology Volume 2 ; 2006 ; 2 >
@@ -3107,8 +3104,6 @@
       issnl = 0893-133X
     >
 
-    comment[notReady] = fetch error on ingest 3 and 4 (401 unauthorized)
-
     param[journal_id] = npp
 
     au < manifest ; exists ; 1994 ; Neuropsychopharmacology Volume 11 ; 1994 ; 11 >
@@ -3134,10 +3129,10 @@
     au < exists ; exists ; 2006 ; Neuropsychopharmacology Volume 31 ; 2006 ; 31 >
     au < exists ; exists ; 2007 ; Neuropsychopharmacology Volume 32 ; 2007 ; 32 >
     au < released ; crawling ; 2008 ; Neuropsychopharmacology Volume 33 ; 2008 ; 33 >
-    au < notReady ; exists ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 >
-    au < notReady ; exists ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
+    au < released ; manifest ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 >
+    au < released ; manifest ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
     au < testing ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
-    au < notReady ; exists ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
+    au < testing ; exists ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
 
   }
 
@@ -3151,7 +3146,7 @@
     >
 
     param[journal_id] = oby
-    comment[notReady] = fetch errors 502 and 500 see RU
+    comment[notReady] = fetch errors 502 and 500 see RT 4106
 
     au < exists ; exists ; 2000 ; Obesity Volume 8 ; 2000 ; 8 >
     au < exists ; exists ; 2001 ; Obesity Volume 9 ; 2001 ; 9 >
@@ -3164,7 +3159,7 @@
     au < released ; manifest ; 2008 ; Obesity Volume 16 ; 2008 ; 16 >
     au < notReady ; exists ; 2009 ; Obesity Volume 17 ; 2009 ; 17 >
     au < released ; crawling ; 2010 ; Obesity Volume 18 ; 2010 ; 18 >
-    au < testing ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
+    au < notReady ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
     au < crawling ; exists ; 2012 ; Obesity Volume 20 ; 2012 ; 20 >
 
   }
