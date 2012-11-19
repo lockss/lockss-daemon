@@ -2632,15 +2632,16 @@ comment[bmr] = journal archive available, but no new volumes
     {
 
       title <
-        name = EPMA Journal ;
-        issn = 1878-5085 ;
-        issnl = 1878-5085
+        name = The EPMA Journal ;
+        issn = 1878-5077 ;
+        eissn = 1878-5085 ;
+        issnl = 1878-5077
       >
 
       param[base_url] = http://www.epmajournal.com/
-      param[journal_issn] = 1878-5085
+      param[journal_issn] = 1878-5077
 
-      au < exists ; 2012 ; EPMA Journal Volume 3 ; 3 >
+      au < exists ; 2012 ; The EPMA Journal Volume 3 ; 3 >
 
     }
 
@@ -3620,8 +3621,9 @@ comment[bmr] = journal archive available, but no new volumes
 
       title <
         name = Journal of Neurodevelopmental Disorders ;
-        issn = 1866-1955 ;
-        issnl = 1866-1955
+        issn = 1866-1947 ;
+        eissn = 1866-1955 ;
+        issnl = 1866-1947
       >
 
       param[base_url] = http://www.jneurodevdisorders.com/
