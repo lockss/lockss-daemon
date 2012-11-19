@@ -354,8 +354,8 @@
       au < HighWirePressH20Plugin ; exists ; 2003 ; Common Knowledge Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; exists ; 2004 ; Common Knowledge Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; ready ; 2005 ; Common Knowledge Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; testing ; 2006 ; Common Knowledge Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; testing ; 2007 ; Common Knowledge Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; ready ; 2006 ; Common Knowledge Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; ready ; 2007 ; Common Knowledge Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; testing ; 2008 ; Common Knowledge Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; ready ; 2009 ; Common Knowledge Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; ready ; 2010 ; Common Knowledge Volume 16 ; 16 >
@@ -1474,7 +1474,7 @@
       au < released ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
       au < released ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
       au < released ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
-      au < manifest ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
+      au < testing ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
 
     }
     
@@ -1496,7 +1496,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; testing ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
 
     }
     
@@ -1543,26 +1543,26 @@
       attr[journal_id] = mnr
       implicit < status ; year ; name ; param[volume] >
 
-      au < manifest ; 1973 ; The Minnesota Review Volume 1 ; 1 >
+      au < testing ; 1973 ; The Minnesota Review Volume 1 ; 1 >
       au < doesNotExist ; 0 ; The Minnesota Review Volume 2 ; 2 >
       au < doesNotExist ; 0 ; The Minnesota Review Volume 3 ; 3 >
-      au < manifest; 1975 ; The Minnesota Review Volume 4 ; 4 >
-      au < manifest; 1975 ; The Minnesota Review Volume 5 ; 5 >
-      au < manifest; 1976 ; The Minnesota Review Volume 6 ; 6 >
-      au < manifest; 1976 ; The Minnesota Review Volume 7 ; 7 >
-      au < manifest; 1977 ; The Minnesota Review Volume 8 ; 8 >
+      au < testing ; 1975 ; The Minnesota Review Volume 4 ; 4 >
+      au < testing ; 1975 ; The Minnesota Review Volume 5 ; 5 >
+      au < testing ; 1976 ; The Minnesota Review Volume 6 ; 6 >
+      au < testing ; 1976 ; The Minnesota Review Volume 7 ; 7 >
+      au < testing ; 1977 ; The Minnesota Review Volume 8 ; 8 >
       au < doesNotExist ; 0 ; The Minnesota Review Volume 9 ; 9 >
-      au < manifest ; 1978 ; The Minnesota Review Volume 10 ; 10 >
-      au < manifest ; 1978 ; The Minnesota Review Volume 11 ; 11 >
-      au < manifest ; 1979 ; The Minnesota Review Volume 12 ; 12 >
-      au < manifest ; 1979 ; The Minnesota Review Volume 13 ; 13 >
-      au < manifest ; 1980 ; The Minnesota Review Volume 14 ; 14 >
-      au < manifest ; 1980 ; The Minnesota Review Volume 15 ; 15 >
-      au < manifest ; 1981 ; The Minnesota Review Volume 16 ; 16 >
-      au < manifest ; 1981 ; The Minnesota Review Volume 17 ; 17 >
-      au < manifest ; 1982 ; The Minnesota Review Volume 18 ; 18 >
-      au < manifest ; 1982 ; The Minnesota Review Volume 19 ; 19 >
-      au < manifest ; 1983 ; The Minnesota Review Volume 20 ; 20 >
+      au < testing ; 1978 ; The Minnesota Review Volume 10 ; 10 >
+      au < testing ; 1978 ; The Minnesota Review Volume 11 ; 11 >
+      au < testing ; 1979 ; The Minnesota Review Volume 12 ; 12 >
+      au < testing ; 1979 ; The Minnesota Review Volume 13 ; 13 >
+      au < testing ; 1980 ; The Minnesota Review Volume 14 ; 14 >
+      au < testing ; 1980 ; The Minnesota Review Volume 15 ; 15 >
+      au < testing ; 1981 ; The Minnesota Review Volume 16 ; 16 >
+      au < testing ; 1981 ; The Minnesota Review Volume 17 ; 17 >
+      au < testing ; 1982 ; The Minnesota Review Volume 18 ; 18 >
+      au < testing ; 1982 ; The Minnesota Review Volume 19 ; 19 >
+      au < testing ; 1983 ; The Minnesota Review Volume 20 ; 20 >
       au < testing ; 1983 ; The Minnesota Review Volume 21 ; 21 >
       au < testing ; 1984 ; The Minnesota Review Volume 22 ; 22 >
       au < testing ; 1984 ; The Minnesota Review Volume 23 ; 23 >
