@@ -7155,7 +7155,7 @@
     {
 
     param[base_url] = http://ilarjournal.oxfordjournals.org/
-    pluginSuffix = HighWirePressH20Plugin
+    pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < expected ; exists ; 2013 ; ILAR Journal Volume 1 ; 1 ; >
 
@@ -18387,7 +18387,7 @@
     {
 
     param[base_url] = http://ulr.oxfordjournals.org/
-    pluginSuffix = HighWirePressH20Plugin
+    pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < expected ; exists ; 2013 ; Uniform Law Review Volume 1 ; 1 ; >
 
