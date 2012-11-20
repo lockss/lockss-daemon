@@ -1,6 +1,10 @@
 /*
+ * $Id: MassachusettsMedicalSocietyRisFilterFactory.java,v 1.2 2012-11-20 01:13:26 thib_gc Exp $
+ */
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,32 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.massachusettsmedicalsociety;
 
-import java.io.*;
-import java.util.*;
+import java.io.InputStream;
 
-import org.apache.commons.io.FileUtils;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.pdf.*;
-import org.lockss.filter.pdf.PageTransformUtil.ExtractStringsToOutputStream;
 import org.lockss.plugin.*;
-import org.lockss.plugin.highwire.ArchivalUnitDependent;
-import org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform;
-import org.lockss.plugin.highwire.HighWirePdfFilterFactory.NormalizeMetadata;
-import org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform.EraseVariableFooter;
-import org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform.EraseVariableFooter.ProcessEndTextObject;
-import org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPdfFilterFactory.FilteringException;
-import org.lockss.util.*;
-import org.pdfbox.cos.*;
-import org.pdfbox.pdfwriter.ContentStreamWriter;
-import org.pdfbox.pdmodel.*;
-import org.pdfbox.pdmodel.common.PDRectangle;
-import org.pdfbox.pdmodel.common.PDStream;
-import org.pdfbox.pdmodel.interactive.action.type.*;
-import org.pdfbox.pdmodel.interactive.annotation.*;
-import org.pdfbox.util.PDFStreamEngine.OperatorProcessorFactory;
-import org.pdfbox.util.operator.OperatorProcessor;
-
-import uk.org.lockss.plugin.annualreviews.AnnualReviewsPdfTransform;
 
 /*
  * NEJM RIS files have a line that contains the creation date of the file in the form:
@@ -61,12 +43,12 @@ import uk.org.lockss.plugin.annualreviews.AnnualReviewsPdfTransform;
  * Reads through RIS files line by line and removes the line with the start tag Y2
  */
 public class MassachusettsMedicalSocietyRisFilterFactory implements FilterFactory {
-	private static Logger log = Logger.getLogger("MassachusettsMedicalSocietyRisFilterFactory");
-	
-	public InputStream createFilteredInputStream(ArchivalUnit au,
-									             InputStream in,
-									             String encoding)
-									            		 throws PluginException {
-		return new RisFilterInputStream(in, encoding, "Y2");
-	}
+
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                                InputStream in,
+                                                String encoding)
+      throws PluginException {
+    return new RisFilterInputStream(in, encoding, "Y2");
+  }
+
 }
