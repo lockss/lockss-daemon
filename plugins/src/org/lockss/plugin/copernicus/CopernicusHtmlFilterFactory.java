@@ -1,5 +1,5 @@
 /*
-* $Id: CopernicusHtmlFilterFactory.java,v 1.2 2012-11-19 21:03:18 alexandraohlson Exp $
+* $Id: CopernicusHtmlFilterFactory.java,v 1.3 2012-11-20 22:37:33 alexandraohlson Exp $
 */
 
 /*
@@ -88,7 +88,7 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
 
     Reader reader = FilterUtil.getReader(htmlFilter, encoding);
     Reader filtReader = makeFilteredReader(reader);
-    return new ReaderInputStream(filtReader,encoding);
+    return new ReaderInputStream(filtReader);
   }
 
   static Reader makeFilteredReader(Reader reader) {
