@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.326 2012-10-29 23:41:47 tlipkis Exp $
+ $Id: build.xml,v 1.327 2012-11-20 01:39:18 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -294,7 +294,7 @@ Args:
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
 
   <!-- PDFBox -->
-  <property name="pdfbox.version" value="1.6.0" />
+  <property name="pdfbox.version" value="1.7.1" />
   <property name="pdfbox.jar" value="${lib}/pdfbox-${pdfbox.version}.jar" />
   <!-- Next 7 JARs needed by PDFBox: -->
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
@@ -302,7 +302,7 @@ Args:
   <property name="bouncycastle.version" value="jdk15on-147" />
   <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.version}.jar" />
   <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.version}.jar" />
-  <property name="icu4j.version" value="49_1" />
+  <property name="icu4j.version" value="50_1" />
   <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
   <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
   <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />

@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxPage.java,v 1.3 2012-07-19 04:01:53 thib_gc Exp $
+ * $Id: PdfBoxPage.java,v 1.4 2012-11-20 01:39:19 thib_gc Exp $
  */
 
 /*
@@ -262,26 +262,16 @@ public class PdfBoxPage implements PdfPage {
    * @since 1.56
    */
   protected PDXObject getPDXObjectByName(String name) throws PdfException {
-    try {
-      /*
-       * IMPLEMENTATION NOTE
-       * 
-       * This map contains objects of type PDXObject (PDFBox 1.6.0:
-       * see PDResources lines 157 and 160), which are null, or of
-       * type either PDXObjectForm (see PDXObject line 162) or PDJpeg
-       * (line 140) or PDCcitt (line 144) or PDPixelMap (line 153).
-       * The latter three have a common supertype, PDXObjectImage.
-       */
-      return (PDXObject)(pdPage.getResources().getXObjects().get(name));
-    }
-    catch (IOException ioe) {
-      /*
-       * getXObjects() never returns null but can throw IOException
-       * (PDFBox 1.6.0: see PDResources line 148).
-       */
-      throw new PdfException("Failed to get the XObjects for the page", ioe);
-    }
-    
+    /*
+     * IMPLEMENTATION NOTE
+     * 
+     * This map contains objects of type PDXObject (PDFBox 1.6.0:
+     * see PDResources lines 157 and 160), which are null, or of
+     * type either PDXObjectForm (see PDXObject line 162) or PDJpeg
+     * (line 140) or PDCcitt (line 144) or PDPixelMap (line 153).
+     * The latter three have a common supertype, PDXObjectImage.
+     */
+    return (PDXObject)(pdPage.getResources().getXObjects().get(name));
   }
   
 }
