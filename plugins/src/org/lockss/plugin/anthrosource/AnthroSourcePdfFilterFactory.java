@@ -1,10 +1,10 @@
 /*
- * $Id: AnthroSourcePdfFilterFactory.java,v 1.6 2012-07-10 23:55:11 thib_gc Exp $
+ * $Id: AnthroSourcePdfFilterFactory.java,v 1.7 2012-11-20 01:31:18 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,31 +32,35 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.anthrosource;
 
-import java.io.*;
-
-import org.lockss.daemon.PluginException;
 import org.lockss.filter.pdf.*;
+import org.lockss.pdf.*;
 import org.lockss.plugin.*;
-import org.lockss.util.*;
 
-@Deprecated
-public class AnthroSourcePdfFilterFactory implements FilterFactory {
+/**
+ * <p>
+ * A new-style PDF filter factory for the American Anthropological
+ * Association's former AnthroSource platform (hosted by Atypon
+ * Systems).
+ * </p>
+ * <p>
+ * Originally, this transform normalized the page token streams and
+ * the document trailer as part of a simple PDF-to-PDF filter. But the
+ * actual diversity of this content (now offline) was greater than the
+ * original sample suggested and makes a scraping filter more likely
+ * to achieve good results in the field.
+ * </p>
+ */
+public class AnthroSourcePdfFilterFactory extends ExtractingPdfFilterFactory {
 
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    try {
-      logger.debug2("PDF filter factory for: " + au.getName());
-      OutputDocumentTransform documentTransform = new AnthroSourcePdfTransform(au);
-      return PdfUtil.applyFromInputStream(documentTransform, in);
-    }
-    catch (Exception exc) {
-      logger.error("Exception in PDF transform; unfiltered", exc);
-      return in;
-    }
+  public AnthroSourcePdfFilterFactory() {
+    super();
   }
-
-  private static Logger logger = Logger.getLogger("AnthroSourcePdfFilterFactory");
-
+  
+  @Override
+  public void transform(ArchivalUnit au,
+                        PdfDocument pdfDocument)
+      throws PdfException {
+    // No transformation, just scrape
+  }
+  
 }
