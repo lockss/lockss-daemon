@@ -11,8 +11,12 @@
     <string>org.lockss.plugin.ojs2.OJS2Plugin</string>
   </entry>
   <entry>
+    <string>plugin_name</string>
+    <string>Open Journals System Plugin (OJS 2.x)</string>
+  </entry>
+  <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -32,50 +36,39 @@
     </map>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
     <string>au_name</string>
-    <string>&quot;Open Journals System Plugin (OJS 2.x), Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>Open Journals System Plugin (OJS 2.x)</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,&quot;^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sindex\.php/%s/gateway/lockss\?year=%d$&quot;, base_url, journal_id, year</string>
-      <string>2,&quot;^%sindex\.php/%s/(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:&quot;, base_url, journal_id</string>
-      <string>1,&quot;^%sindex\.php/%s/(article|issue)/(download|downloadSuppFile|view|viewArticle|viewDownloadInterstitial|viewFile|viewPDFInterstitial|viewRST)/&quot;, base_url, journal_id</string>
-      <string>2,&quot;^%sindex\.php/%s/rt/(captureCite)/&quot;, base_url, journal_id</string>
-      <string>1,&quot;^%sindex\.php/%s/rt/bio(/[0-9]+)*$&quot;, base_url, journal_id</string>
-      <string>1,&quot;^%sindex\.php/%s/rt/(metadata|printerFriendly|suppFileMetadata|suppFiles)(/[0-9]+)*$&quot;, base_url, journal_id</string>
-    </list>
+    <string>"Open Journals System Plugin (OJS 2.x), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sindex.php/%s/gateway/lockss?year=%d&quot;, base_url, journal_id, year</string>
+    <string>"%sindex.php/%s/gateway/lockss?year=%d", base_url, journal_id, year</string>
   </entry>
   <entry>
   <string>au_feature_urls</string>
     <map>
     <entry>
       <string>au_title</string>
-      <string>&quot;%sindex.php/%s&quot;, base_url, journal_id</string>
+      <string>"%sindex.php/%s", base_url, journal_id</string>
+      <string>"%sindex.php", base_url</string>
+      <string>"%s%s", base_url, journal_id</string>
+      <string>"%s", base_url</string>
     </entry>
     <entry>
       <string>au_volume</string>
-      <string>&quot;%sindex.php/%s/gateway/lockss?year=%d&quot;, base_url, journal_id, year</string>
+      <string>"%sindex.php/%s/gateway/lockss?year=%d", base_url, journal_id, year</string>
+      <string>"%sindex.php/gateway/lockss?year=%d", base_url, year</string>
+      <string>"%s%s/gateway/lockss?year=%d", base_url, journal_id, year</string>
+      <string>"%s/gateway/lockss?year=%d", base_url, year</string>
     </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -110,6 +103,26 @@
     </list>
   </entry>
   <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!-- new - making index.php and journal_id optional, removed [0-9]+ for some rules -->
+      <string>1,"^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>2,"^%s(index\.php/)?(%s/)?(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:", base_url, journal_id</string>
+      <string>1,"^%s(index\.php/)?(%s/)?(article|issue)/(download|downloadSuppFile|view|viewArticle|viewDownloadInterstitial|viewFile|viewPDFInterstitial|viewRST)/", base_url, journal_id</string>
+      <string>2,"^%s(index\.php/)?(%s/)?rt/(captureCite)/", base_url, journal_id</string>
+      <string>1,"^%s(index\.php/)?(%s/)?rt/bio/", base_url, journal_id</string>
+      <string>1,"^%s(index\.php/)?(%s/)?rt/(metadata|printerFriendly|suppFileMetadata|suppFiles)/", base_url, journal_id</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+	<!--  new - making index.php and journal_id optional -->
+        <string>"^%s(index\.php/)?(%s/)?article/(view|download)/[^/]+/[^/]+$", base_url, journal_id</string>
+      </list>
+  </entry>
+  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.ojs2.OJS2HtmlFilterFactory</string>
   </entry>
@@ -119,7 +132,7 @@
   </entry>
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
-    <string>&quot;%sindex\.php/%s/login\?&quot;, base_url, journal_id</string>
+    <string>"%s(index\.php/)?(%s/)?login\?", base_url, journal_id</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -137,13 +150,6 @@
         <string>org.lockss.plugin.ojs2.OJS2HtmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-      <list>
-        <string>&quot;^%sindex\.php/%s/article/view/[0-9]+/[0-9]+$&quot;, base_url, journal_id</string>
-        <string>&quot;^%sindex\.php/%s/article/download/[0-9]+/[0-9]+$&quot;, base_url, journal_id</string>
-      </list>
   </entry>
   <entry>
     <string>clockss_override</string>
