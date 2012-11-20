@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.7 2012-09-19 18:51:42 alexandraohlson Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.8 2012-11-20 20:33:23 ldoan Exp $
  */
 
 /*
@@ -88,6 +88,10 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("span", "id", "articles-tab"),
         // A usage counter/glif that gets updated over time
         HtmlNodeFilters.tagWithAttribute("div", "id", "impact-factor"),
+	// Contains adverstising <a class="banner-ad"
+	HtmlNodeFilters.tagWithAttribute("a", "class", "banner-ad"),
+	// Contains adverstising <a class="skyscraper-ad" 
+	HtmlNodeFilters.tagWithAttribute("a", "class", "skyscraper-ad"),
         // An open access link/glyph that may get added
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/access"),
         // A highly accessed link/glyph that may get added
