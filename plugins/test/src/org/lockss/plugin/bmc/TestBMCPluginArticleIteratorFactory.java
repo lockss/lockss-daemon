@@ -28,102 +28,98 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.bmc;
 
-import java.io.File;
+//import java.io.File;
+import java.util.Iterator;
 import java.util.regex.Pattern;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.config.TdbAu;
-import org.lockss.daemon.TitleConfig;
-import org.lockss.extractor.ArticleMetadata;
-import org.lockss.extractor.ArticleMetadataExtractor;
-import org.lockss.extractor.BaseArticleMetadataExtractor;
-import org.lockss.extractor.FileMetadataExtractor;
-import org.lockss.extractor.MetadataField;
-import org.lockss.extractor.MetadataTarget;
-import org.lockss.extractor.ArticleMetadataExtractor.Emitter;
+import org.lockss.daemon.ConfigParamDescr;
+//import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.repository.LockssRepositoryImpl;
+//import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
 public class TestBMCPluginArticleIteratorFactory extends ArticleIteratorTestCase {
 	
-        /**
-         * Simulated AU to generate content
-         */
-	private SimulatedArchivalUnit sau;
-	 private static String PLUGIN_NAME = "org.lockss.plugin.bmc.BMCPlugin";
+  /**
+   * Simulated AU to generate content
+   */
+  private SimulatedArchivalUnit sau;
+  private final String ARTICLE_FAIL_MSG = "Article files not created properly";
+  private final String PATTERN_FAIL_MSG = "Article file URL pattern changed or incorrect";
+  private static String PLUGIN_NAME = "org.lockss.plugin.bmc.BMCPlugin";
+  private static String BASE_URL = "http://www.biomedcentral.com/ ";
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String JOURNAL_ISSN_KEY = ConfigParamDescr.JOURNAL_ISSN.getKey();
+  static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  private final String VOLUME_NAME = "1";
+  private final String JOURNAL_ISSN = "1471-2253";
+  private static final int DEFAULT_FILESIZE = 3000;
+  private final Configuration AU_CONFIG = 
+	  ConfigurationUtil.fromArgs(BASE_URL_KEY, BASE_URL,
+                                      VOLUME_NAME_KEY, VOLUME_NAME,             
+                                      JOURNAL_ISSN_KEY, JOURNAL_ISSN);
 
-	  private static String BASE_URL = "http://www.biomedcentral.com/ ";
-	private static final int DEFAULT_FILESIZE = 3000;
-	protected String cuRole = null;
-	ArticleMetadataExtractor.Emitter emitter;
-	protected boolean emitDefaultIfNone = false;
-	FileMetadataExtractor me = null; 
-	MetadataTarget target;
-
-	 public void setUp() throws Exception {
-	    super.setUp();
-	    String tempDirPath = setUpDiskSpace();
-	    
-	    au = createAu();
-	    sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
-	  }
+  public void setUp() throws Exception {
+    super.setUp();
+    String tempDirPath = setUpDiskSpace();
+    au = createAu();
+    sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
+  }
 	  
-	  public void tearDown() throws Exception {
-	            sau.deleteContentTree();
-	            super.tearDown();
-	          }
+  public void tearDown() throws Exception {
+    sau.deleteContentTree();
+    super.tearDown();
+  }
+  
   protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
     return
-      PluginTestUtil.createAndStartAu(PLUGIN_NAME,
+      /* reverting temporarily to pre-nondef_param plugin (no journal_code)
+       PluginTestUtil.createAndStartAu(PLUGIN_NAME,
 			      ConfigurationUtil.fromArgs("base_url",
 							 "http://www.biomedcentral.com/ ",
 							 "volume_name", "1",
 							 "journal_code", "bmcanesthesiol",
 							 "journal_issn", "1471-2253"));
+      */
+      PluginTestUtil.createAndStartAu(PLUGIN_NAME, AU_CONFIG);
   }
   
   Configuration simAuConfig(String rootPath) {
-	    Configuration conf = ConfigManager.newConfiguration();
-	    conf.put("root", rootPath);
-	    conf.put("base_url", "http://www.biomedcentral.com/");
-	    conf.put("depth", "1");
-	    conf.put("branch", "4");
-	    conf.put("numFiles", "7");
-	    conf.put("fileTypes",
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put("base_url", BASE_URL);
+    conf.put("depth", "1");
+    conf.put("branch", "4");
+    conf.put("numFiles", "7");
+    conf.put("fileTypes",
 	             "" + (SimulatedContentGenerator.FILE_TYPE_PDF));
-	    conf.put("binFileSize", ""+DEFAULT_FILESIZE);
-	    return conf;
-	  }
-  
+    conf.put("binFileSize", ""+DEFAULT_FILESIZE);
+    return conf;
+  }
 
-/*
-  public void testRoots() throws Exception {      
+  public void _testRoots() throws Exception {      
     SubTreeArticleIterator artIter = createSubTreeIter();
-    System.out.println("root url::" + getRootUrls(artIter));
-    assertEquals(ListUtil.list("http://www.biomedcentral.com/1471-2253/1"),
+    assertEquals("Article file root URL pattern changed or incorrect", ListUtil.list("http://www.biomedcentral.com/1471-2253/1"),
 		 getRootUrls(artIter));
   }
   
-  */
-  
-  public void testUrlsWithPrefixes() throws Exception {
+  public void _testUrlsWithPrefixes() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
-    assertNotMatchesRE(pat, "http://www.biomedcentral.com/content/pdf/1471-2253-1-2.pdfll");
-    assertNotMatchesRE(pat, "http://inderscience.metapress.com/contentt/volume/1014174823t49006/j0143.pdfwrong");
-    assertMatchesRE(pat, "http://www.biomedcentral.com/content/pdf/1471-2253-1-2.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/content/");
-    assertNotMatchesRE(pat, "http://www.example.com/content/j");
-    assertNotMatchesRE(pat, "http://www.example.com/content/j0123/j383.pdfwrong");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.biomedcentral.com/content/pdf/1471-2253-1-2.pdfll");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://inderscience.metapress.com/contentt/volume/1014174823t49006/j0143.pdfwrong");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.biomedcentral.com/content/pdf/1471-2253-1-2.pdf");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.example.com/content/");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.example.com/content/j");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.example.com/content/j0123/j383.pdfwrong");
   }
   
   
-   
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
     String pat2 = "content/pdf/([^/]+)-([^/]+)-([^/]+)\\.pdf";
@@ -132,12 +128,13 @@ public class TestBMCPluginArticleIteratorFactory extends ArticleIteratorTestCase
     String url = "http://www.biomedcentral.com/content/pdf/1471-2253-1-2.pdf";
     CachedUrl cu = au.makeCachedUrl(url);
     assertNotNull(cu);
+    /* removing until we revert BMCPlugin back to nondef_params
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertNotNull(artIter);
     ArticleFiles af = createArticleFiles(artIter, cu);
-    System.out.println("article files::" +af);
     assertEquals(cu, af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF));
-      
-  }			
+    */
+  }	
+
 
 }
