@@ -1,5 +1,5 @@
 /*
- * $Id: IUMJArticleIteratorFactory.java,v 1.1 2012-09-25 02:00:15 davidecorcoran Exp $
+ * $Id: IUMJArticleIteratorFactory.java,v 1.2 2012-11-21 17:01:21 aishizaki Exp $
  */
 
 /*
@@ -48,10 +48,10 @@ public class IUMJArticleIteratorFactory
     Logger.getLogger("IUMJArticleIteratorFactory");
 
   protected static final String ROOT_TEMPLATE =
-    "\"%sIUMJ/FTDLOAD/%s/\", base_url, volume_name";
+    "\"%sIUMJ/FTDLOAD/%d/\", base_url, year";
   
   protected static final String PATTERN_TEMPLATE =
-    "\"%sIUMJ/FTDLOAD/(%s)/[^/]+/([^/]+)/pdf\", base_url, volume_name";
+    "\"%sIUMJ/FTDLOAD/(%d)/%s/([^/]+)/pdf\", base_url, year, volume_name";
 
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
