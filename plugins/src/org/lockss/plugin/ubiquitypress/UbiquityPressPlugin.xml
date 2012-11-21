@@ -1,19 +1,19 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - ly; problem with URL normalizer: see RU 3980</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.ubiquitypress.UbiquityPressPlugin</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>9</string>
+    <string>plugin_name</string>
+    <string>Ubiquity Press Plugin</string>
   </entry>
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.51.0</string>
+    <string>plugin_version</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>19</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -41,27 +41,11 @@
     </map>
   </entry>
   <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.ubiquitypress.UbiquityPressUrlNormalizer</string>
+    <string>au_name</string>
+    <string>&quot;Ubiquity Press Plugin, Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.ubiquitypress.UbiquityPressHtmlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-      <list>
-        <string>&quot;^%sindex\.php/%s/article/view/%s\.[0-9]+/[0-9]+$&quot;, base_url, journal_id, journal_id </string>
-        <string>&quot;^%sindex\.php/%s/article/download/%s\.[0-9]+/[0-9]+$&quot;, base_url, journal_id, journal_id </string>
-        <string>&quot;^%s/article/view/[^/]+/[^/]+&quot;, base_url</string>
-      </list>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>Ubiquity Press Plugin</string>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;Ubiquity Press Plugin, Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
   </entry>
 </map>
