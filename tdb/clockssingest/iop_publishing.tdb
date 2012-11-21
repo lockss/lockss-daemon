@@ -435,7 +435,7 @@
 
     param[journal_issn] = 0295-5075
     comment[param] = print issn preferred
-    comment[notReady] = low agreement
+    comment[notReady] = low agreement, different css style used
 
     au < manifest ; exists ; 1986 ; EPL (Europhysics Letters) Volume 1 ; 1 > 
     au < manifest ; exists ; 1986 ; EPL (Europhysics Letters) Volume 2 ; 2 > 
