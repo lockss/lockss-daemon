@@ -60,8 +60,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^%sIUMJ/(YEAR|ABS|FULLTEXT|FTDLOAD)/%s/", base_url, year</string>
-      <string>1,"^%sMETA/%s/([^/])+", base_url, year</string>
+      <string>1,"^%sIUMJ/(YEAR|ABS|FULLTEXT|FTDLOAD)/%d/", base_url, year</string>
+      <string>1,"^%sMETA/%d/([^/])+", base_url, year</string>
       <string>1,"^%s(Images|icons)/", base_url</string>
       <string>1,"^%sstylesheet/([^/])+\.css$", base_url</string>
       <string>1,"^%soai/%d/%s/([^/])+/([^/])+", base_url, year, volume_name</string>
