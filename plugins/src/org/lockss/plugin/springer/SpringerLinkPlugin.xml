@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -154,5 +154,9 @@
         <long>6000</long>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_crawl_url_comparator_factory</string>
+    <string>org.lockss.plugin.springer.SpringerLinkCrawlUrlComparatorFactory</string>
   </entry>
 </map>
