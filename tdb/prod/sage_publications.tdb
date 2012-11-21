@@ -39855,6 +39855,24 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Adoption & Fostering ;
+        issn = 0308-5759 ;
+        eissn = 1740-469X ;
+        issnl = 0308-5759
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    param[base_url] = http://aaf.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Adoption & Fostering Volume 37 ; 37 >
+
+    }
+
+    {
+
+      title <
         name = Asia-Pacific Journal of Management Research and Innovation ;
         issn = 2319-510X ;
         issnl = 2319-510X
@@ -39925,8 +39943,8 @@ comment[mpj] = now published by Brill
 
       title <
         name = Sociological Perspectives ;
-        issn = 0146-6453 ;
-        issnl = 0146-6453
+        issn = 0731-1214 ;
+        issnl = 0731-1214
       >
 
     comment[upcoming] = online 2014, Volume 57
