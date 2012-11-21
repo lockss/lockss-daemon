@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.94 2012-11-08 06:22:50 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.94.2.1 2012-11-21 05:25:56 tlipkis Exp $
  */
 
 /*
@@ -251,19 +251,14 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     subChecker = new SubstanceChecker(au);
     if (subChecker.isEnabledFor(SubstanceChecker.CONTEXT_CRAWL)) {
       logger.debug2("Checking AU for substance during crawl");
-      Configuration auConfig = au.getConfiguration();
-      String key = ConfigParamDescr.CRAWL_TEST_SUBSTANCE_THRESHOLD.getKey();
-      if (auConfig.containsKey(key)) {
-	try {
-	  int threshold = auConfig.getInt(key);
-	  subChecker.setSubstanceMin(threshold);
-	  isAbbreviatedCrawlTest = true;
-	  logger.debug("Performing abbreviated crawl test");
-	} catch (Configuration.InvalidParam e) {
-	  logger.error("Illegal crawl test threshold: " + auConfig.get(key)
-		       + ", performing regular crawl");
-	  isAbbreviatedCrawlTest = false;
-	}
+      int threshold = AuUtil.getSubstanceTestThreshold(au);
+      if (threshold >= 0) {
+	subChecker.setSubstanceMin(threshold);
+	isAbbreviatedCrawlTest = true;
+	logger.debug("Performing abbreviated crawl test, threshold: " +
+		     threshold);
+      } else {
+	isAbbreviatedCrawlTest = false;
       }
     } else {
       subChecker = null;

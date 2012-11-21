@@ -1,10 +1,10 @@
 /*
- * $Id: TestAuUtil.java,v 1.18 2012-11-08 06:18:49 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.18.2.1 2012-11-21 05:25:56 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -253,6 +253,31 @@ public class TestAuUtil extends LockssTestCase {
     attrs.put("foo", "bar");
     assertEquals("bar", AuUtil.getTitleAttribute(mau, "foo"));
     assertEquals("bar", AuUtil.getTitleAttribute(mau, "foo", "7"));
+  }
+
+  public void testGetSubstanceTestThreshold() throws Exception {
+    String key = ConfigParamDescr.CRAWL_TEST_SUBSTANCE_THRESHOLD.getKey();
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit();
+    assertEquals(-1, AuUtil.getSubstanceTestThreshold(mau));
+    mau.setConfiguration(ConfigurationUtil.fromArgs(key, ""));
+    assertEquals(-1, AuUtil.getSubstanceTestThreshold(mau));
+    mau.setConfiguration(ConfigurationUtil.fromArgs(key, "foo"));
+    assertEquals(-1, AuUtil.getSubstanceTestThreshold(mau));
+    mau.setConfiguration(ConfigurationUtil.fromArgs(key, "0"));
+    assertEquals(0, AuUtil.getSubstanceTestThreshold(mau));
+    mau.setConfiguration(ConfigurationUtil.fromArgs(key, "3"));
+    assertEquals(3, AuUtil.getSubstanceTestThreshold(mau));
+    // title attr should override au config
+    TitleConfig tc1 =
+      makeTitleConfig(ConfigParamDescr.BASE_URL, "http://example.com");
+    mau.setTitleConfig(tc1);
+    assertEquals(3, AuUtil.getSubstanceTestThreshold(mau));
+    tc1.setAttributes(MapUtil.map(key, "2"));
+    assertEquals(2, AuUtil.getSubstanceTestThreshold(mau));
+    tc1.setAttributes(MapUtil.map(key, "0"));
+    assertEquals(0, AuUtil.getSubstanceTestThreshold(mau));
+    tc1.setAttributes(MapUtil.map(key, "xxx"));
+    assertEquals(3, AuUtil.getSubstanceTestThreshold(mau));
   }
 
   public void testGetTitleDefault() {

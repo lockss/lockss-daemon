@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.34 2012-11-08 06:18:49 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.34.2.1 2012-11-21 05:25:56 tlipkis Exp $
  */
 
 /*
@@ -422,6 +422,29 @@ public class AuUtil {
 					 String dfault) {
     String res = getTitleAttribute(au, key);
     return (res != null) ? res : dfault;
+  }
+
+  public static int getSubstanceTestThreshold(ArchivalUnit au) {
+    String key = ConfigParamDescr.CRAWL_TEST_SUBSTANCE_THRESHOLD.getKey();
+    String thresh = getTitleAttribute(au, key);
+    if (!StringUtil.isNullString(thresh)) {
+      try {
+	return Integer.parseInt(thresh);
+      } catch (NumberFormatException e) {
+	log.error("Illegal crawl test threshold: " + thresh
+		  + ", performing regular crawl");
+      }
+    }
+    Configuration auConfig = au.getConfiguration();
+    if (auConfig.containsKey(key)) {
+      try {
+	return auConfig.getInt(key);
+      } catch (Configuration.InvalidParam e) {
+	log.error("Illegal crawl test threshold: " + auConfig.get(key)
+		  + ", performing regular crawl");
+      }
+    }
+    return -1;
   }
 
   public static boolean getBoolValue(Object value, boolean dfault) {
