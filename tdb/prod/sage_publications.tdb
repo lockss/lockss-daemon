@@ -803,25 +803,25 @@
         param[base_url] = http://aff.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1986 ; Affilia Volume 1 ; 1 >
-        au < manifest ; 1987 ; Affilia Volume 2 ; 2 >
-        au < manifest ; 1988 ; Affilia Volume 3 ; 3 >
-        au < manifest ; 1989 ; Affilia Volume 4 ; 4 >
-        au < manifest ; 1990 ; Affilia Volume 5 ; 5 >
-        au < manifest ; 1991 ; Affilia Volume 6 ; 6 >
-        au < manifest ; 1992 ; Affilia Volume 7 ; 7 >
-        au < manifest ; 1993 ; Affilia Volume 8 ; 8 >
-        au < manifest ; 1994 ; Affilia Volume 9 ; 9 >
-        au < manifest ; 1995 ; Affilia Volume 10 ; 10 >
-        au < manifest ; 1996 ; Affilia Volume 11 ; 11 >
-        au < manifest ; 1997 ; Affilia Volume 12 ; 12 >
-        au < manifest ; 1998 ; Affilia Volume 13 ; 13 >
-        au < manifest ; 1999 ; Affilia Volume 14 ; 14 >
-        au < manifest ; 2000 ; Affilia Volume 15 ; 15 >
-        au < manifest ; 2001 ; Affilia Volume 16 ; 16 >
-        au < manifest ; 2002 ; Affilia Volume 17 ; 17 >
-        au < manifest ; 2003 ; Affilia Volume 18 ; 18 >
-        au < manifest ; 2004 ; Affilia Volume 19 ; 19 >
+        au < testing ; 1986 ; Affilia Volume 1 ; 1 >
+        au < testing ; 1987 ; Affilia Volume 2 ; 2 >
+        au < testing ; 1988 ; Affilia Volume 3 ; 3 >
+        au < testing ; 1989 ; Affilia Volume 4 ; 4 >
+        au < testing ; 1990 ; Affilia Volume 5 ; 5 >
+        au < testing ; 1991 ; Affilia Volume 6 ; 6 >
+        au < testing ; 1992 ; Affilia Volume 7 ; 7 >
+        au < testing ; 1993 ; Affilia Volume 8 ; 8 >
+        au < testing ; 1994 ; Affilia Volume 9 ; 9 >
+        au < testing ; 1995 ; Affilia Volume 10 ; 10 >
+        au < testing ; 1996 ; Affilia Volume 11 ; 11 >
+        au < testing ; 1997 ; Affilia Volume 12 ; 12 >
+        au < testing ; 1998 ; Affilia Volume 13 ; 13 >
+        au < testing ; 1999 ; Affilia Volume 14 ; 14 >
+        au < testing ; 2000 ; Affilia Volume 15 ; 15 >
+        au < testing ; 2001 ; Affilia Volume 16 ; 16 >
+        au < testing ; 2002 ; Affilia Volume 17 ; 17 >
+        au < testing ; 2003 ; Affilia Volume 18 ; 18 >
+        au < testing ; 2004 ; Affilia Volume 19 ; 19 >
         au < doNotProcess ; 2005 ; Affilia Volume 20 ; 20 >
         au < doNotProcess ; 2006 ; Affilia Volume 21 ; 21 >
         au < doNotProcess ; 2007 ; Affilia Volume 22 ; 22 >
