@@ -36611,6 +36611,22 @@
     {
 
       title <
+        name = Sociological Perspectives ;
+        issn = 0731-1214 ;
+        issnl = 0731-1214
+      >
+
+    comment[upcoming] = online 2014, Volume 57
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://sop.sagepub.com/
+
+    au < exists ; exists ; 2014 ; Sociological Perspectives Volume 57 ; 57 ; >
+
+    }
+
+    {
+
+      title <
         name = Jindal Journal of Business Research ;
         issn = 2278-6821 ;
         issnl = 2278-6821
@@ -36952,7 +36968,6 @@
       title <
         name = World Future Review ;
         issn = 1946-7567 ;
-        eissn = 2169-279 ;
         issnl = 1946-7567
       >
 
