@@ -1,5 +1,5 @@
 /*
- * $Id: TestUbiquityPressArchivalUnit.java,v 1.3 2012-08-08 07:19:51 tlipkis Exp $
+ * $Id: TestUbiquityPressArchivalUnit.java,v 1.4 2012-11-21 23:38:20 ldoan Exp $
  */
 
 /*
@@ -80,26 +80,7 @@ public class TestUbiquityPressArchivalUnit extends LockssTestCase {
     return au;
   }
 
-  public void testSiteNormalizer() throws Exception {
-    URL base = new URL(ROOT_URL);
-    ArchivalUnit pmAu = makeAu(base, "pp","2003");
-    theDaemon.getLockssRepository(pmAu);
-    theDaemon.getNodeManager(pmAu);
-
-    assertEquals("http://www.google.com/ui/uo",
-                 pmAu.siteNormalizeUrl("http://www.google.com/ui/uo"));
-    assertEquals(
-        "http://www.presentpasts.info/index.php/pp/article/52/64",
-        pmAu.siteNormalizeUrl("http://www.presentpasts.info/article/52/64"));
-    assertEquals(
-        "http://www.presentpasts.info/index.php/pp/article/view/pp.52/92",
-        pmAu.siteNormalizeUrl("http://www.presentpasts.info/article/view/pp.52/92"));
-    assertEquals(
-        "http://www.presentpasts.info/index.php/pp/help.html",
-        pmAu.siteNormalizeUrl("http://www.presentpasts.info/help.html"));
-  }
-  
-  public void testConstructNullUrl() throws Exception {
+   public void testConstructNullUrl() throws Exception {
     try {
       makeAu(null, "pp","2003");
       fail("Should have thrown ArchivalUnit.ConfigurationException");
