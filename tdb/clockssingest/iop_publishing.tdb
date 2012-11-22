@@ -883,7 +883,7 @@
 
     param[journal_issn] = 0960-1317
     comment[param] = print issn preferred
-    comment[notReady] = low agreement
+    comment[notReady] = 403 Forbidden fetch error, RU4518
 
     au < manifest ; exists ; 1991 ; Journal of Micromechanics and Microengineering Volume 1 ; 1 > 
     au < manifest ; exists ; 1992 ; Journal of Micromechanics and Microengineering Volume 2 ; 2 > 
