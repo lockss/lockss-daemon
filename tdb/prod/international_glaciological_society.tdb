@@ -7,7 +7,7 @@
   >
 
   plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-  implicit < status ; name ; year ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
 
   {
   
