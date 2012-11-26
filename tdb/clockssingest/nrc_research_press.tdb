@@ -720,16 +720,18 @@
          
     param[journal_id] = cjfas
     
-    au < exists ; exists ; 1901 ; Canadian Journal of Earth Sciences Journal Volume 1 ; 1 >
-    au < exists ; exists ; 1902 ; Canadian Journal of Earth Sciences Journal Volume 2 ; 2 >
-    au < exists ; exists ; 1903 ; Canadian Journal of Earth Sciences Journal Volume 3 ; 3 >
-    au < exists ; exists ; 1904 ; Canadian Journal of Earth Sciences Journal Volume 4 ; 4 >
-    au < exists ; exists ; 1905 ; Canadian Journal of Earth Sciences Journal Volume 5 ; 5 >
-    au < exists ; exists ; 1906 ; Canadian Journal of Earth Sciences Journal Volume 6 ; 6 >
-    au < exists ; exists ; 1907 ; Canadian Journal of Earth Sciences Journal Volume 7 ; 7 >
-    au < exists ; exists ; 1908 ; Canadian Journal of Earth Sciences Journal Volume 8 ; 8 >
-    au < exists ; exists ; 1909 ; Canadian Journal of Earth Sciences Journal Volume 9 ; 9 >
-    au < exists ; exists ; 1910 ; Canadian Journal of Earth Sciences Journal Volume 10 ; 10 >
+    au < exists ; exists ; 1901 ; Canadian Journal of Earth Sciences Journal Volume a ; a >
+    au < exists ; exists ; 1906 ; Canadian Journal of Earth Sciences Journal Volume b ; b >
+    au < exists ; exists ; 1907 ; Canadian Journal of Earth Sciences Journal Volume a1 ; a1 >
+    au < exists ; exists ; 1911 ; Canadian Journal of Earth Sciences Journal Volume c ; c >
+    au < exists ; exists ; 1914 ; Canadian Journal of Earth Sciences Journal Volume d ; d >
+    au < exists ; exists ; 1915 ; Canadian Journal of Earth Sciences Journal Volume d1 ; d1 >
+    au < exists ; exists ; 1917 ; Canadian Journal of Earth Sciences Journal Volume e ; e >
+    au < exists ; exists ; 1918 ; Canadian Journal of Earth Sciences Journal Volume e1 ; e1 >
+    au < exists ; exists ; 1921 ; Canadian Journal of Earth Sciences Journal Volume f ; f >
+    
+    
+
     
 
     }
