@@ -73,35 +73,35 @@
     au < exists ; exists ; 1978 ; Biochemistry and Cell Biology Volume 56 ; 56 >
     au < exists ; exists ; 1979 ; Biochemistry and Cell Biology Volume 57 ; 57 >
     au < exists ; exists ; 1980 ; Biochemistry and Cell Biology Volume 58 ; 58 >
-    au < exists ; exists ; 1981 ; Biochemistry and Cell Biology Volume 58 ; 58 >
-    au < exists ; exists ; 1982 ; Biochemistry and Cell Biology Volume 59 ; 59 >
-    au < exists ; exists ; 1983 ; Biochemistry and Cell Biology Volume 60 ; 60 >
-    au < exists ; exists ; 1984 ; Biochemistry and Cell Biology Volume 61 ; 61 >
-    au < exists ; exists ; 1985 ; Biochemistry and Cell Biology Volume 62 ; 62 >
-    au < exists ; exists ; 1986 ; Biochemistry and Cell Biology Volume 63 ; 63 >
-    au < exists ; exists ; 1987 ; Biochemistry and Cell Biology Volume 64 ; 64 >
-    au < exists ; exists ; 1988 ; Biochemistry and Cell Biology Volume 65 ; 65 >
-    au < exists ; exists ; 1989 ; Biochemistry and Cell Biology Volume 66 ; 66 >
-    au < exists ; exists ; 1990 ; Biochemistry and Cell Biology Volume 67 ; 67 >
-    au < exists ; exists ; 1991 ; Biochemistry and Cell Biology Volume 68 ; 68 >
-    au < exists ; exists ; 1992 ; Biochemistry and Cell Biology Volume 69 ; 69 >
-    au < exists ; exists ; 1993 ; Biochemistry and Cell Biology Volume 70 ; 70 >
-    au < exists ; exists ; 1994 ; Biochemistry and Cell Biology Volume 71 ; 71 >
-    au < exists ; exists ; 1995 ; Biochemistry and Cell Biology Volume 72 ; 72 >
-    au < exists ; exists ; 1996 ; Biochemistry and Cell Biology Volume 73 ; 73 >
-    au < exists ; exists ; 1997 ; Biochemistry and Cell Biology Volume 74 ; 74 >
-    au < exists ; exists ; 1998 ; Biochemistry and Cell Biology Volume 75 ; 75 >
-    au < exists ; exists ; 1999 ; Biochemistry and Cell Biology Volume 76 ; 76 >
-    au < exists ; exists ; 2000 ; Biochemistry and Cell Biology Volume 77 ; 77 >
-    au < exists ; exists ; 2001 ; Biochemistry and Cell Biology Volume 78 ; 78 >
-    au < exists ; exists ; 2002 ; Biochemistry and Cell Biology Volume 79 ; 79 >
-    au < exists ; exists ; 2003 ; Biochemistry and Cell Biology Volume 80 ; 80 >
-    au < exists ; exists ; 2004 ; Biochemistry and Cell Biology Volume 81 ; 81 >
-    au < exists ; exists ; 2005 ; Biochemistry and Cell Biology Volume 82 ; 82 >
-    au < exists ; exists ; 2006 ; Biochemistry and Cell Biology Volume 83 ; 83 >
-    au < exists ; exists ; 2007 ; Biochemistry and Cell Biology Volume 84 ; 84 >
-    au < exists ; exists ; 2008 ; Biochemistry and Cell Biology Volume 85 ; 85 >
-    au < exists ; exists ; 2009 ; Biochemistry and Cell Biology Volume 86 ; 86 >
+    au < exists ; exists ; 1981 ; Biochemistry and Cell Biology Volume 59 ; 59 >
+    au < exists ; exists ; 1982 ; Biochemistry and Cell Biology Volume 60 ; 60 >
+    au < exists ; exists ; 1983 ; Biochemistry and Cell Biology Volume 61 ; 61 >
+    au < exists ; exists ; 1984 ; Biochemistry and Cell Biology Volume 62 ; 62 >
+    au < exists ; exists ; 1985 ; Biochemistry and Cell Biology Volume 63 ; 63 >
+    au < exists ; exists ; 1986 ; Biochemistry and Cell Biology Volume 64 ; 64 >
+    au < exists ; exists ; 1987 ; Biochemistry and Cell Biology Volume 65 ; 65 >
+    au < exists ; exists ; 1988 ; Biochemistry and Cell Biology Volume 66 ; 66 >
+    au < exists ; exists ; 1989 ; Biochemistry and Cell Biology Volume 67 ; 67 >
+    au < exists ; exists ; 1990 ; Biochemistry and Cell Biology Volume 68 ; 68 >
+    au < exists ; exists ; 1991 ; Biochemistry and Cell Biology Volume 69 ; 69 >
+    au < exists ; exists ; 1992 ; Biochemistry and Cell Biology Volume 70 ; 70 >
+    au < exists ; exists ; 1993 ; Biochemistry and Cell Biology Volume 71 ; 71 >
+    au < exists ; exists ; 1994 ; Biochemistry and Cell Biology Volume 72 ; 72 >
+    au < exists ; exists ; 1995 ; Biochemistry and Cell Biology Volume 73 ; 73 >
+    au < exists ; exists ; 1996 ; Biochemistry and Cell Biology Volume 74 ; 74 >
+    au < exists ; exists ; 1997 ; Biochemistry and Cell Biology Volume 75 ; 75 >
+    au < exists ; exists ; 1998 ; Biochemistry and Cell Biology Volume 76 ; 76 >
+    au < exists ; exists ; 1999 ; Biochemistry and Cell Biology Volume 77 ; 77 >
+    au < exists ; exists ; 2000 ; Biochemistry and Cell Biology Volume 78 ; 78 >
+    au < exists ; exists ; 2001 ; Biochemistry and Cell Biology Volume 79 ; 79 >
+    au < exists ; exists ; 2002 ; Biochemistry and Cell Biology Volume 80 ; 80 >
+    au < exists ; exists ; 2003 ; Biochemistry and Cell Biology Volume 81 ; 81 >
+    au < exists ; exists ; 2004 ; Biochemistry and Cell Biology Volume 82 ; 82 >
+    au < exists ; exists ; 2005 ; Biochemistry and Cell Biology Volume 83 ; 83 >
+    au < exists ; exists ; 2006 ; Biochemistry and Cell Biology Volume 84 ; 84 >
+    au < exists ; exists ; 2007 ; Biochemistry and Cell Biology Volume 85 ; 85 >
+    au < exists ; exists ; 2008 ; Biochemistry and Cell Biology Volume 86 ; 86 >
+    au < exists ; exists ; 2009 ; Biochemistry and Cell Biology Volume 87 ; 87 >
     au < exists ; exists ; 2010 ; Biochemistry and Cell Biology Volume 88 ; 88 >
     au < exists ; exists ; 2011 ; Biochemistry and Cell Biology Volume 89 ; 89 >
     au < exists ; exists ; 2012 ; Biochemistry and Cell Biology Volume 90 ; 90 >
@@ -117,8 +117,74 @@
       eissn = 1916-2804
     >
 
+    param[journal_id] = cjb    
     
-    
+
+
+
+    au < exists ; exists ; 1951 ; Botany Volume 29 ; 29 >
+    au < exists ; exists ; 1952 ; Botany Volume 30 ; 30>
+    au < exists ; exists ; 1953 ; Botany Volume 31 ; 31>
+    au < exists ; exists ; 1954 ; Botany Volume 32 ; 32>
+    au < exists ; exists ; 1955 ; Botany Volume 33 ; 33>
+    au < exists ; exists ; 1956 ; Botany Volume 34 ; 34>
+    au < exists ; exists ; 1957 ; Botany Volume 35 ; 35>
+    au < exists ; exists ; 1958 ; Botany Volume 36 ; 36>
+    au < exists ; exists ; 1959 ; Botany Volume 37 ; 37>
+    au < exists ; exists ; 1960 ; Botany Volume 38 ; 38>
+    au < exists ; exists ; 1961 ; Botany Volume 38 ; 38>
+    au < exists ; exists ; 1962 ; Botany Volume 39 ; 39 >
+    au < exists ; exists ; 1963 ; Botany Volume 40 ; 40 >
+    au < exists ; exists ; 1964 ; Botany Volume 42 ; 42 >
+    au < exists ; exists ; 1965 ; Botany Volume 43 ; 43 >
+    au < exists ; exists ; 1966 ; Botany Volume 44 ; 44 >
+    au < exists ; exists ; 1967 ; Botany Volume 45 ; 45 >
+    au < exists ; exists ; 1968 ; Botany Volume 46 ; 46 >
+    au < exists ; exists ; 1969 ; Botany Volume 47 ; 47 >
+    au < exists ; exists ; 1970 ; Botany Volume 48 ; 48 >
+    au < exists ; exists ; 1971 ; Botany Volume 49 ; 49 >
+    au < exists ; exists ; 1972 ; Botany Volume 50 ; 50 >
+    au < exists ; exists ; 1973 ; Botany Volume 51 ; 51 >
+    au < exists ; exists ; 1974 ; Botany Volume 52 ; 52 >
+    au < exists ; exists ; 1975 ; Botany Volume 53 ; 53 >
+    au < exists ; exists ; 1976 ; Botany Volume 54 ; 54 >
+    au < exists ; exists ; 1977 ; Botany Volume 55 ; 55 >
+    au < exists ; exists ; 1978 ; Botany Volume 56 ; 56 >
+    au < exists ; exists ; 1979 ; Botany Volume 57 ; 57 >
+    au < exists ; exists ; 1980 ; Botany Volume 58 ; 58 >
+    au < exists ; exists ; 1981 ; Botany Volume 58 ; 58 >
+    au < exists ; exists ; 1982 ; Botany Volume 59 ; 59 >
+    au < exists ; exists ; 1983 ; Botany Volume 60 ; 60 >
+    au < exists ; exists ; 1984 ; Botany Volume 61 ; 61 >
+    au < exists ; exists ; 1985 ; Botany Volume 62 ; 62 >
+    au < exists ; exists ; 1986 ; Botany Volume 63 ; 63 >
+    au < exists ; exists ; 1987 ; Botany Volume 64 ; 64 >
+    au < exists ; exists ; 1988 ; Botany Volume 65 ; 65 >
+    au < exists ; exists ; 1989 ; Botany Volume 66 ; 66 >
+    au < exists ; exists ; 1990 ; Botany Volume 67 ; 67 >
+    au < exists ; exists ; 1991 ; Botany Volume 68 ; 68 >
+    au < exists ; exists ; 1992 ; Botany Volume 69 ; 69 >
+    au < exists ; exists ; 1993 ; Botany Volume 70 ; 70 >
+    au < exists ; exists ; 1994 ; Botany Volume 71 ; 71 >
+    au < exists ; exists ; 1995 ; Botany Volume 72 ; 72 >
+    au < exists ; exists ; 1996 ; Botany Volume 73 ; 73 >
+    au < exists ; exists ; 1997 ; Botany Volume 74 ; 74 >
+    au < exists ; exists ; 1998 ; Botany Volume 75 ; 75 >
+    au < exists ; exists ; 1999 ; Botany Volume 76 ; 76 >
+    au < exists ; exists ; 2000 ; Botany Volume 77 ; 77 >
+    au < exists ; exists ; 2001 ; Botany Volume 78 ; 78 >
+    au < exists ; exists ; 2002 ; Botany Volume 79 ; 79 >
+    au < exists ; exists ; 2003 ; Botany Volume 80 ; 80 >
+    au < exists ; exists ; 2004 ; Botany Volume 81 ; 81 >
+    au < exists ; exists ; 2005 ; Botany Volume 82 ; 82 >
+    au < exists ; exists ; 2006 ; Botany Volume 83 ; 83 >
+    au < exists ; exists ; 2007 ; Botany Volume 84 ; 84 >
+    au < exists ; exists ; 2008 ; Botany Volume 85 ; 85 >
+    au < exists ; exists ; 2009 ; Botany Volume 86 ; 86 >
+    au < exists ; exists ; 2010 ; Botany Volume 88 ; 88 >
+    au < exists ; exists ; 2011 ; Botany Volume 89 ; 89 >
+    au < exists ; exists ; 2012 ; Botany Volume 90 ; 90 >
+
   }
   
   
