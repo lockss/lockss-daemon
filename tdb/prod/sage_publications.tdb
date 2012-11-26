@@ -1600,7 +1600,7 @@
         au < released ; 2000 ; The American Review of Public Administration Volume 30 ; 30 >
         au < released ; 2001 ; The American Review of Public Administration Volume 31 ; 31 >
         au < released ; 2002 ; The American Review of Public Administration Volume 32 ; 32 >
-        au < testing ; 2003 ; The American Review of Public Administration Volume 33 ; 33 >
+        au < ready ; 2003 ; The American Review of Public Administration Volume 33 ; 33 >
         au < released ; 2004 ; The American Review of Public Administration Volume 34 ; 34 >
         au < doNotProcess ; 2005 ; The American Review of Public Administration Volume 35 ; 35 >
         au < doNotProcess ; 2006 ; The American Review of Public Administration Volume 36 ; 36 >
@@ -1629,8 +1629,8 @@
         param[base_url] = http://asr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 2004 ; American Sociological Review Volume 69 ; 69 >
-        au < testing ; 2005 ; American Sociological Review Volume 70 ; 70 >
+        au < ready ; 2004 ; American Sociological Review Volume 69 ; 69 >
+        au < ready ; 2005 ; American Sociological Review Volume 70 ; 70 >
         au < released ; 2006 ; American Sociological Review Volume 71 ; 71 >
         au < released ; 2007 ; American Sociological Review Volume 72 ; 72 >
         au < released ; 2008 ; American Sociological Review Volume 73 ; 73 >
@@ -3258,13 +3258,13 @@
         au < manifest ; 1998 ; Australian Journal of Management Volume 23 ; 23 >
         au < manifest ; 1999 ; Australian Journal of Management Volume 24 ; 24 >
         au < ready ; 2000 ; Australian Journal of Management Volume 25 ; 25 >
-        au < testing ; 2001 ; Australian Journal of Management Volume 26 ; 26 >
-        au < testing ; 2002 ; Australian Journal of Management Volume 27 ; 27 >
-        au < testing ; 2003 ; Australian Journal of Management Volume 28 ; 28 >
+        au < ready ; 2001 ; Australian Journal of Management Volume 26 ; 26 >
+        au < ready ; 2002 ; Australian Journal of Management Volume 27 ; 27 >
+        au < ready ; 2003 ; Australian Journal of Management Volume 28 ; 28 >
         au < ready ; 2004 ; Australian Journal of Management Volume 29 ; 29 >
-        au < testing ; 2005 ; Australian Journal of Management Volume 30 ; 30 >
+        au < ready ; 2005 ; Australian Journal of Management Volume 30 ; 30 >
         au < ready ; 2006 ; Australian Journal of Management Volume 31 ; 31 >
-        au < testing ; 2007 ; Australian Journal of Management Volume 32 ; 32 >
+        au < ready ; 2007 ; Australian Journal of Management Volume 32 ; 32 >
         au < released ; 2008 ; Australian Journal of Management Volume 33 ; 33 >
         au < released ; 2009 ; Australian Journal of Management Volume 34 ; 34 >
         au < released ; 2010 ; Australian Journal of Management Volume 35 ; 35 >
@@ -15215,19 +15215,19 @@
         implicit < status ; year ; name ; param[volume_name] >
 
 
-        au < testing ; 2000 ; International Journal of Engine Research Volume 1 ; 1 >
-        au < testing ; 2001 ; International Journal of Engine Research Volume 2 ; 2 >
-        au < testing ; 2002 ; International Journal of Engine Research Volume 3 ; 3 >
-        au < testing ; 2003 ; International Journal of Engine Research Volume 4 ; 4 >
-        au < testing ; 2004 ; International Journal of Engine Research Volume 5 ; 5 >
-        au < testing ; 2005 ; International Journal of Engine Research Volume 6 ; 6 >
-        au < testing ; 2006 ; International Journal of Engine Research Volume 7 ; 7 >
-        au < testing ; 2007 ; International Journal of Engine Research Volume 8 ; 8 >
+        au < ready ; 2000 ; International Journal of Engine Research Volume 1 ; 1 >
+        au < ready ; 2001 ; International Journal of Engine Research Volume 2 ; 2 >
+        au < ready ; 2002 ; International Journal of Engine Research Volume 3 ; 3 >
+        au < ready ; 2003 ; International Journal of Engine Research Volume 4 ; 4 >
+        au < ready ; 2004 ; International Journal of Engine Research Volume 5 ; 5 >
+        au < ready ; 2005 ; International Journal of Engine Research Volume 6 ; 6 >
+        au < ready ; 2006 ; International Journal of Engine Research Volume 7 ; 7 >
+        au < ready ; 2007 ; International Journal of Engine Research Volume 8 ; 8 >
         au < released ; 2008 ; International Journal of Engine Research Volume 9 ; 9 >
         au < released ; 2009 ; International Journal of Engine Research Volume 10 ; 10 >
         au < released ; 2010 ; International Journal of Engine Research Volume 11 ; 11 >
         au < released ; 2011 ; International Journal of Engine Research Volume 12 ; 12 >
-        au < testing ; 2012 ; International Journal of Engine Research Volume 13 ; 13 >
+        au < ready ; 2012 ; International Journal of Engine Research Volume 13 ; 13 >
 
       }
 
@@ -22630,7 +22630,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2008 ; Journal of Leadership & Organizational Studies Volume 15 ; 15 >
         au < doNotProcess ; 2009 ; Journal of Leadership & Organizational Studies Volume 16 ; 16 >
         au < released ; 2010 ; Journal of Leadership & Organizational Studies Volume 17 ; 17 >
-        au < testing ; 2011 ; Journal of Leadership & Organizational Studies Volume 18 ; 18 >
+        au < ready ; 2011 ; Journal of Leadership & Organizational Studies Volume 18 ; 18 >
         au < manifest ; 2012 ; Journal of Leadership & Organizational Studies Volume 19 ; 19 >
 
       }
@@ -28934,14 +28934,14 @@ comment[mpj] = now published by Brill
         param[base_url] = http://nro.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 1995 ; The Neuroscientist Volume 1 ; 1 >
+        au < ready ; 1995 ; The Neuroscientist Volume 1 ; 1 >
         au < released ; 1996 ; The Neuroscientist Volume 2 ; 2 >
         au < released ; 1997 ; The Neuroscientist Volume 3 ; 3 >
         au < released ; 1998 ; The Neuroscientist Volume 4 ; 4 >
         au < released ; 1999 ; The Neuroscientist Volume 5 ; 5 >
         au < released ; 2000 ; The Neuroscientist Volume 6 ; 6 >
         au < released ; 2001 ; The Neuroscientist Volume 7 ; 7 >
-        au < testing ; 2002 ; The Neuroscientist Volume 8 ; 8 >
+        au < ready ; 2002 ; The Neuroscientist Volume 8 ; 8 >
         au < released ; 2003 ; The Neuroscientist Volume 9 ; 9 >
         au < released ; 2004 ; The Neuroscientist Volume 10 ; 10 >
         au < doNotProcess ; 2005 ; The Neuroscientist Volume 11 ; 11 >
