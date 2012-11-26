@@ -803,25 +803,25 @@
         param[base_url] = http://aff.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 1986 ; Affilia Volume 1 ; 1 >
-        au < testing ; 1987 ; Affilia Volume 2 ; 2 >
-        au < testing ; 1988 ; Affilia Volume 3 ; 3 >
-        au < testing ; 1989 ; Affilia Volume 4 ; 4 >
-        au < testing ; 1990 ; Affilia Volume 5 ; 5 >
-        au < testing ; 1991 ; Affilia Volume 6 ; 6 >
-        au < testing ; 1992 ; Affilia Volume 7 ; 7 >
-        au < testing ; 1993 ; Affilia Volume 8 ; 8 >
-        au < testing ; 1994 ; Affilia Volume 9 ; 9 >
-        au < testing ; 1995 ; Affilia Volume 10 ; 10 >
-        au < testing ; 1996 ; Affilia Volume 11 ; 11 >
-        au < testing ; 1997 ; Affilia Volume 12 ; 12 >
-        au < testing ; 1998 ; Affilia Volume 13 ; 13 >
-        au < testing ; 1999 ; Affilia Volume 14 ; 14 >
-        au < testing ; 2000 ; Affilia Volume 15 ; 15 >
-        au < testing ; 2001 ; Affilia Volume 16 ; 16 >
-        au < testing ; 2002 ; Affilia Volume 17 ; 17 >
-        au < testing ; 2003 ; Affilia Volume 18 ; 18 >
-        au < testing ; 2004 ; Affilia Volume 19 ; 19 >
+        au < ready ; 1986 ; Affilia Volume 1 ; 1 >
+        au < ready ; 1987 ; Affilia Volume 2 ; 2 >
+        au < ready ; 1988 ; Affilia Volume 3 ; 3 >
+        au < ready ; 1989 ; Affilia Volume 4 ; 4 >
+        au < ready ; 1990 ; Affilia Volume 5 ; 5 >
+        au < ready ; 1991 ; Affilia Volume 6 ; 6 >
+        au < ready ; 1992 ; Affilia Volume 7 ; 7 >
+        au < ready ; 1993 ; Affilia Volume 8 ; 8 >
+        au < ready ; 1994 ; Affilia Volume 9 ; 9 >
+        au < ready ; 1995 ; Affilia Volume 10 ; 10 >
+        au < ready ; 1996 ; Affilia Volume 11 ; 11 >
+        au < ready ; 1997 ; Affilia Volume 12 ; 12 >
+        au < ready ; 1998 ; Affilia Volume 13 ; 13 >
+        au < ready ; 1999 ; Affilia Volume 14 ; 14 >
+        au < ready ; 2000 ; Affilia Volume 15 ; 15 >
+        au < ready ; 2001 ; Affilia Volume 16 ; 16 >
+        au < ready ; 2002 ; Affilia Volume 17 ; 17 >
+        au < ready ; 2003 ; Affilia Volume 18 ; 18 >
+        au < ready ; 2004 ; Affilia Volume 19 ; 19 >
         au < doNotProcess ; 2005 ; Affilia Volume 20 ; 20 >
         au < doNotProcess ; 2006 ; Affilia Volume 21 ; 21 >
         au < doNotProcess ; 2007 ; Affilia Volume 22 ; 22 >
@@ -39848,7 +39848,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://aed.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Australian Journal of Education Volume 57 ; 57 >
+    au < exists ; 2013 ; Australian Journal of Education Volume 1 ; 1 >
 
     }
 
@@ -39901,7 +39901,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://acd.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Australian Journal of Career Development Volume 22 ; 22 >
+    au < exists ; 2013 ; Australian Journal of Career Development Volume 1 ; 1 >
 
     }
 
@@ -39944,7 +39944,6 @@ comment[mpj] = now published by Brill
       title <
         name = Sociological Perspectives ;
         issn = 0731-1214 ;
-        eissn = 1533-8673 ;
         issnl = 0731-1214
       >
 
@@ -40075,7 +40074,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://fai.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Foot & Ankle International Volume 34 ; 34 >
+    au < exists ; 2013 ; Foot & Ankle International Volume 1 ; 1 >
 
     }
 
@@ -40093,7 +40092,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://foi.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 47 ; 47 >
+    au < exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 1 ; 1 >
 
     }
 
@@ -40164,7 +40163,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://mis.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Missiology: An International Review Volume 41 ; 41 >
+    au < exists ; 2013 ; Missiology: An International Review Volume 1 ; 1 >
 
     }
 
@@ -40200,7 +40199,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://paa.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Pacifica: Australasian Theological Studies Volume 26 ; 26 >
+    au < exists ; 2013 ; Pacifica: Australasian Theological Studies Volume 1 ; 1 >
 
     }
 
