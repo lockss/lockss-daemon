@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressHashHtmlFilterFactory.java,v 1.3 2012-09-24 17:36:05 alexandraohlson Exp $
+ * $Id: EdinburghUniversityPressHashHtmlFilterFactory.java,v 1.4 2012-11-26 19:02:12 alexandraohlson Exp $
  */
 
 /*
@@ -50,7 +50,9 @@ public class EdinburghUniversityPressHashHtmlFilterFactory implements FilterFact
         // Variable identifiers
         new TagNameFilter("script"),
         // Contains name and logo of institution
-        HtmlNodeFilters.tagWithAttribute("div", "id", "institutionBanner"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^institutionBanner"),
+        // Current web site seems to do it this way...
+        HtmlNodeFilters.tagWithAttributeRegex("li", "class", "^institutionBanner"),
         // Contains "most downloaded articles" section
         HtmlNodeFilters.tagWithAttribute("div", "id", "journalSidebar"),
         // Contains the current year

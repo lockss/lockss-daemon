@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghHtmlMetadataExtractorFactory.java,v 1.1 2011-06-25 15:35:45 pgust Exp $
+ * $Id: EdinburghHtmlMetadataExtractorFactory.java,v 1.2 2012-11-26 19:02:12 alexandraohlson Exp $
  */
 
 /*
@@ -45,15 +45,15 @@ import org.lockss.plugin.*;
 
 public class EdinburghHtmlMetadataExtractorFactory 
   implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("EmeraldHtmlMetadataExtractorFactory");
+  static Logger log = Logger.getLogger("EdinburghHtmlMetadataExtractorFactory");
 
   public FileMetadataExtractor 
     createFileMetadataExtractor(MetadataTarget target, String contentType)
       throws PluginException {
-    return new EmeraldHtmlMetadataExtractor();
+    return new EdinburghHtmlMetadataExtractor();
   }
 
-  public static class EmeraldHtmlMetadataExtractor 
+  public static class EdinburghHtmlMetadataExtractor 
     implements FileMetadataExtractor {
 
     // Map Google Scholar HTML meta tag names to cooked metadata fields

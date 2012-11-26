@@ -1,5 +1,5 @@
 /*
- * $Id: TestEdinburghHashHtmlFilterFactory.java,v 1.1 2012-09-24 17:36:05 alexandraohlson Exp $
+ * $Id: TestEdinburghHashHtmlFilterFactory.java,v 1.2 2012-11-26 19:02:12 alexandraohlson Exp $
  */
 
 package org.lockss.plugin.edinburgh;
@@ -41,10 +41,29 @@ public class TestEdinburghHashHtmlFilterFactory extends LockssTestCase {
       + "alt=\"Free first page\" class=\"firstPageImage\"/>"
       + "</div>";
 
+  private static final String institutionBannerHtml ="<div id=\"mainNavContainer\">"
+      + "<ul id=\"mainNav\"> "
+    + "<li><p> <a href=\"/\">Home</a> </p></li>"
+    + "<li><p><a href=\"/page/infoZone/home\">Information Zone</a></p></li>"
+    + "<li class=\"institutionBanner institutionBannerText\"><p>\"Serials Department, Green Library\"</p></li>"
+    + "</ul> </div>";
+ 
+  private static final String institutionBannerFiltered = "<div id=\"mainNavContainer\">"
+      + "<ul id=\"mainNav\"> "
+    + "<li><p> <a href=\"/\">Home</a> </p></li>"
+    + "<li><p><a href=\"/page/infoZone/home\">Information Zone</a></p></li>"
+    + "</ul> </div>";
+  
   public void testCitationsFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau, new StringInputStream(withCitations),
         Constants.DEFAULT_ENCODING);
     assertEquals(withoutCitations, StringUtil.fromInputStream(actIn));
   }
+  
+  public void testInstitutionBannerFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau, new StringInputStream(institutionBannerHtml),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(institutionBannerFiltered, StringUtil.fromInputStream(actIn));
+  } 
 
 }
