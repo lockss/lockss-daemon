@@ -117,10 +117,9 @@
       eissn = 1916-2804
     >
 
+    comment[0] = formerly Canadian Journal of Botany (1951 - 2007)
+      
     param[journal_id] = cjb    
-    
-
-
 
     au < exists ; exists ; 1951 ; Botany Volume 29 ; 29 >
     au < exists ; exists ; 1952 ; Botany Volume 30 ; 30 >
@@ -511,17 +510,15 @@
     }
     
     {
-  
-    title < 
+    title <
       name = Canadian Journal of Botany ;
       issn = 0008-4026 ;
       eissn = 1480-3305
-  
       >
-
+      
     }
-    
-        {
+      
+    {
   
     title < 
       name = Canadian Journal of Chemistry ;
