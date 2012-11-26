@@ -22,9 +22,27 @@
 
     param[journal_id] = apnm 
 
+
+    au < exists ; exists ; 1993 ; Applied Physiology, Nutrition, and Metabolism Volume 18 ; 18 >
+    au < exists ; exists ; 1994 ; Applied Physiology, Nutrition, and Metabolism Volume 19 ; 19 >
+    au < exists ; exists ; 1995 ; Applied Physiology, Nutrition, and Metabolism Volume 20 ; 20 >
+    au < exists ; exists ; 1996 ; Applied Physiology, Nutrition, and Metabolism Volume 21 ; 21 >
+    au < exists ; exists ; 1997 ; Applied Physiology, Nutrition, and Metabolism Volume 22 ; 22 >
+    au < exists ; exists ; 1998 ; Applied Physiology, Nutrition, and Metabolism Volume 23 ; 23 >
+    au < exists ; exists ; 1999 ; Applied Physiology, Nutrition, and Metabolism Volume 24 ; 24 >
+    au < exists ; exists ; 2000 ; Applied Physiology, Nutrition, and Metabolism Volume 25 ; 25 >
+    au < exists ; exists ; 2001 ; Applied Physiology, Nutrition, and Metabolism Volume 26 ; 26 >
+    au < exists ; exists ; 2002 ; Applied Physiology, Nutrition, and Metabolism Volume 27 ; 27 >
+    au < exists ; exists ; 2003 ; Applied Physiology, Nutrition, and Metabolism Volume 28 ; 28 >
+    au < exists ; exists ; 2004 ; Applied Physiology, Nutrition, and Metabolism Volume 29 ; 29 >
+    au < exists ; exists ; 2005 ; Applied Physiology, Nutrition, and Metabolism Volume 30 ; 30 >
+    au < exists ; exists ; 2006 ; Applied Physiology, Nutrition, and Metabolism Volume 31 ; 31 >
+    au < exists ; exists ; 2007 ; Applied Physiology, Nutrition, and Metabolism Volume 32 ; 32 >
+    au < exists ; exists ; 2008 ; Applied Physiology, Nutrition, and Metabolism Volume 33 ; 33 >
+    au < exists ; exists ; 2009 ; Applied Physiology, Nutrition, and Metabolism Volume 34 ; 34 >
     au < exists ; exists ; 2010 ; Applied Physiology, Nutrition, and Metabolism Volume 35 ; 35 >
     au < exists ; exists ; 2011 ; Applied Physiology, Nutrition, and Metabolism Volume 36 ; 36 >
-    au < exists ; exists ; 2012 ; Applied Physiology, Nutrition, and Metabolism Volume 37 ; 37 >
+    au < exists ; exists ; 2012 ; Applied Physiology, Nutrition, and Metabolism Volume 36 ; 37 >
     
   }  
   
@@ -36,7 +54,7 @@
       eissn = 1208-6002
     >
 
-    param[journal_id] = bcb    
+    param[journal_id] = bcb
 
     au < exists ; exists ; 1964 ; Biochemistry and Cell Biology Volume 42 ; 42 >
     au < exists ; exists ; 1965 ; Biochemistry and Cell Biology Volume 43 ; 43 >
