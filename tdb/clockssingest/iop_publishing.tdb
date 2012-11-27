@@ -8,7 +8,7 @@
 
   plugin = org.lockss.plugin.iop.ClockssIOPSciencePlugin
   param[base_url] = http://iopscience.iop.org/
-  implicit < status ; status2 ; year; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
   comment[journal_issn] = varies between print issn and eissn (redirects to preferred issn)
   
   comment[doNotInclude0] = RT2955 do not include: 
