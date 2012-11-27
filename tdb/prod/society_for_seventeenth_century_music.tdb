@@ -28,23 +28,44 @@
     
       param[base_url] = http://sscm-jscm.press.illinois.edu/
 
-      au < released ; 1995 ; Journal of Seventeenth-Century Music Volume 1 ; 1 >
-      au < released ; 1996 ; Journal of Seventeenth-Century Music Volume 2 ; 2 >
-      au < released ; 1997 ; Journal of Seventeenth-Century Music Volume 3 ; 3 >
-      au < released ; 1998 ; Journal of Seventeenth-Century Music Volume 4 ; 4 >
-      au < released ; 1999 ; Journal of Seventeenth-Century Music Volume 5 ; 5 >
-      au < released ; 2000 ; Journal of Seventeenth-Century Music Volume 6 ; 6 >
-      au < released ; 2001 ; Journal of Seventeenth-Century Music Volume 7 ; 7 >
-      au < released ; 2002 ; Journal of Seventeenth-Century Music Volume 8 ; 8 >
-      au < released ; 2003 ; Journal of Seventeenth-Century Music Volume 9 ; 9 >
-      au < released ; 2004 ; Journal of Seventeenth-Century Music Volume 10 ; 10 >
-      au < released ; 2005 ; Journal of Seventeenth-Century Music Volume 11 ; 11 >
-      au < released ; 2006 ; Journal of Seventeenth-Century Music Volume 12 ; 12 >
-      au < released ; 2007 ; Journal of Seventeenth-Century Music Volume 13 ; 13 >
-      au < released ; 2008 ; Journal of Seventeenth-Century Music Volume 14 ; 14 >
+      au < down ; 1995 ; Journal of Seventeenth-Century Music Volume 1 ; 1 >
+      au < down ; 1996 ; Journal of Seventeenth-Century Music Volume 2 ; 2 >
+      au < down ; 1997 ; Journal of Seventeenth-Century Music Volume 3 ; 3 >
+      au < down ; 1998 ; Journal of Seventeenth-Century Music Volume 4 ; 4 >
+      au < down ; 1999 ; Journal of Seventeenth-Century Music Volume 5 ; 5 >
+      au < down ; 2000 ; Journal of Seventeenth-Century Music Volume 6 ; 6 >
+      au < down ; 2001 ; Journal of Seventeenth-Century Music Volume 7 ; 7 >
+      au < down ; 2002 ; Journal of Seventeenth-Century Music Volume 8 ; 8 >
+      au < down ; 2003 ; Journal of Seventeenth-Century Music Volume 9 ; 9 >
+      au < down ; 2004 ; Journal of Seventeenth-Century Music Volume 10 ; 10 >
+      au < down ; 2005 ; Journal of Seventeenth-Century Music Volume 11 ; 11 >
+      au < down ; 2006 ; Journal of Seventeenth-Century Music Volume 12 ; 12 >
+      au < down ; 2007 ; Journal of Seventeenth-Century Music Volume 13 ; 13 >
+      au < down ; 2008 ; Journal of Seventeenth-Century Music Volume 14 ; 14 >
   
     }
+    
+    {
+    
+      param[base_url] = http://www.sscm-jscm.org/
+
+      au < manifest ; 1995 ; Journal of Seventeenth-Century Music Volume 1 ; 1 >
+      au < manifest ; 1996 ; Journal of Seventeenth-Century Music Volume 2 ; 2 >
+      au < manifest ; 1997 ; Journal of Seventeenth-Century Music Volume 3 ; 3 >
+      au < manifest ; 1998 ; Journal of Seventeenth-Century Music Volume 4 ; 4 >
+      au < manifest ; 1999 ; Journal of Seventeenth-Century Music Volume 5 ; 5 >
+      au < manifest ; 2000 ; Journal of Seventeenth-Century Music Volume 6 ; 6 >
+      au < manifest ; 2001 ; Journal of Seventeenth-Century Music Volume 7 ; 7 >
+      au < manifest ; 2002 ; Journal of Seventeenth-Century Music Volume 8 ; 8 >
+      au < manifest ; 2003 ; Journal of Seventeenth-Century Music Volume 9 ; 9 >
+      au < manifest ; 2004 ; Journal of Seventeenth-Century Music Volume 10 ; 10 >
+      au < manifest ; 2005 ; Journal of Seventeenth-Century Music Volume 11 ; 11 >
+      au < manifest ; 2006 ; Journal of Seventeenth-Century Music Volume 12 ; 12 >
+      au < manifest ; 2007 ; Journal of Seventeenth-Century Music Volume 13 ; 13 >
+      au < manifest ; 2008 ; Journal of Seventeenth-Century Music Volume 14 ; 14 >
   
+    }
+    
   }
 
 }
