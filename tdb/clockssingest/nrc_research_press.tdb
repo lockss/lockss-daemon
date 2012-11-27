@@ -1497,7 +1497,6 @@
 
     }
     
-    
     {
   
     title < 
@@ -1506,7 +1505,11 @@
       eissn = 1925-4296
       >
      
-    param[journal_id] = 
+    param[journal_id] = cig
+
+    au < exists ; exists ; 2010 ; Environmental Reviews Volume 64 ; 64 >
+    au < exists ; exists ; 2011 ; Environmental Reviews Volume 65 ; 65 >
+    au < exists ; exists ; 2012 ; Environmental Reviews Volume 66 ; 66 >
 
     }
     
@@ -1588,7 +1591,19 @@
       eissn = 1496-256X
       >
      
-    param[journal_id] = 
+    param[journal_id] = jees
+
+    au < exists ; exists ; 2002 ; Journal of Environmental Engineering and Science Volume 1 ; 1 >
+    au < exists ; exists ; 2003 ; Journal of Environmental Engineering and Science Volume 2 ; 2 >
+    au < exists ; exists ; 2004 ; Journal of Environmental Engineering and Science Volume 3 ; 3 >
+    au < exists ; exists ; 2005 ; Journal of Environmental Engineering and Science Volume 4 ; 4 >
+    au < exists ; exists ; 2006 ; Journal of Environmental Engineering and Science Volume 5 ; 5 >
+    au < exists ; exists ; 2007 ; Journal of Environmental Engineering and Science Volume 6 ; 6 >
+    au < exists ; exists ; 2008 ; Journal of Environmental Engineering and Science Volume 7 ; 7 >
+    au < exists ; exists ; 2009 ; Journal of Environmental Engineering and Science Volume 8 ; 8 >
+    au < exists ; exists ; 2000 ; Journal of Environmental Engineering and Science Volume 9 ; 9 >
+    au < exists ; exists ; 2001 ; Journal of Environmental Engineering and Science Volume 10 ; 10 >
+    au < exists ; exists ; 2002 ; Journal of Environmental Engineering and Science Volume 11 ; 11 >
 
     }
     
