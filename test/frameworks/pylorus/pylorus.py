@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''Pylorus content validation and ingestion gateway
 Michael R Bax, 2008-2009
-$Id: pylorus.py,v 2.24 2012-10-08 21:26:02 thib_gc Exp $'''
+$Id: pylorus.py,v 2.25 2012-11-27 01:21:18 thib_gc Exp $'''
 
 
 import ConfigParser
@@ -27,12 +27,12 @@ fix_auth_failure.fix_auth_failure()
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.24 $'.split()[ 1 ]
+REVISION = '$Revision: 2.25 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 SERVER_READY_TIMEOUT = 600
-MINIMUM_SLEEP_DURATION = 15
-MAXIMUM_SLEEP_DURATION = 120
+MINIMUM_SLEEP_DURATION = 60
+MAXIMUM_SLEEP_DURATION = 300
 REMOTE_CRAWL_RETRY_TOTAL = 3
 POLL_FAILURE_RETRY_TOTAL = 3
 POLL_MISMATCH_RETRY_TOTAL = 3
@@ -76,7 +76,7 @@ class Sleeper:
         else:
             logging.info( time.strftime( 'Sleeping for %T', time.gmtime( self.duration ) ) )
             time.sleep( self.duration )
-            self.duration = min( 2*self.duration, MAXIMUM_SLEEP_DURATION )
+            self.duration = min( self.duration + 120, MAXIMUM_SLEEP_DURATION )
 
 
 class Content:
