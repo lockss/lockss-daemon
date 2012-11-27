@@ -57,7 +57,7 @@
       issnl = 1080-286X
     >
   
-    comment[0] = manifest page does not have links
+    comment[0] = None of the manifest pages have links to issues as of 11/26/2012
     param[journal_issn] = 1080-286X 
 
     au < manifest ; exists ; 1988 ; Information Technology Management Volume 1 ; 1 > 
