@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.15 2012-11-05 23:37:33 clairegriffin Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.16 2012-11-28 23:58:02 clairegriffin Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.htmlparser.*;
 import org.htmlparser.lexer.*;
 import org.htmlparser.util.*;
 import org.lockss.config.*;
+import org.lockss.repository.*;
 import org.lockss.util.*;
 
 import java.io.*;
@@ -114,10 +115,13 @@ public class HtmlFilterInputStream extends InputStream {
     Configuration.PREFIX + "filter.html.verbatim";
   public static final boolean DEFAULT_VERBATIM = true;
 
+  /** Smaller than this and the stream is kept in memory. */
   public static final String PARAM_WRFILE_THRESH =
-    Configuration.PREFIX + "filter.html.wrFileThresh";
-  public static final int DEFAULT_WRFILE_THRESH = 4*1024;
+    Configuration.PREFIX + "filter.html.tempStreamThreshold";
+  public static final int DEFAULT_WRFILE_THRESH = 1000*1024;
 
+  /** Determines if a temp file should be used if the stream exceeds a 
+    * a specific size */
   public static final String PARAM_USE_FILE =
     Configuration.PREFIX + "filter.html.useFile";
   public static final boolean DEFAULT_USE_FILE = true;
@@ -236,6 +240,10 @@ public class HtmlFilterInputStream extends InputStream {
     } else {
       out = new ReaderInputStream(new StringReader(h));
     }
+    if (CurrentConfig.getBooleanParam(RepositoryNodeImpl.PARAM_MONITOR_INPUT_STREAMS,
+   					  RepositoryNodeImpl.DEFAULT_MONITOR_INPUT_STREAMS)) {
+      out = new MonitoringInputStream(out,"HtmlFilterInputStream");
+    }
   }
 
   void setOutToFileInputStream(NodeList nl)
@@ -270,6 +278,10 @@ public class HtmlFilterInputStream extends InputStream {
     else {
       outFile = dtfos.getFile();
       out = new BufferedInputStream(new FileInputStream(outFile));
+    }
+    if (CurrentConfig.getBooleanParam(RepositoryNodeImpl.PARAM_MONITOR_INPUT_STREAMS,
+   					  RepositoryNodeImpl.DEFAULT_MONITOR_INPUT_STREAMS)) {
+      out = new MonitoringInputStream(out,"HtmlFilterInputStream");
     }
   }
 
@@ -364,8 +376,10 @@ public class HtmlFilterInputStream extends InputStream {
   }
 
   public void close() throws IOException {
-    in.close();
+    IOUtil.safeClose(in);
     in = null;
+    IOUtil.safeClose(out);
+    out = null;
     if(outFile != null)
     {
       FileUtils.deleteQuietly(outFile);
