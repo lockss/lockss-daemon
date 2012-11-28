@@ -8,89 +8,11 @@
     plugin = needs.plugin
     param[base_url] = http://www.nzcer.org.nz/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    comment[0] = books forthcoming in 2013 perhaps
 
+   {
     
-    {
-    
-     title <
-       name = A THIRD CHANCE TO LEARN
-       
-     >
-      comment[isbn] = 1-877140-08-2 
-      comment[eisbn] = 
-    
-    }
-    
-    
-{
-    
-     title <
-       name = Action Research - a Developmental Approach
-       
-     >
-      comment[isbn] = 1-877293-20-2 
-      comment[eisbn] = 
-    
-    }    
-    
-    {
-    
-     title <
-       name = Action Research in Practice 
-       
-     >
-      comment[isbn] = 978-1-877398-51-3
-      comment[eisbn] = 
-    
-    }
-    
-    {
-    
-     title <
-       name = ARE OUR STANDARDS SLIPPING?
-       
-     >
-      comment[isbn] =  	978-1-877398-63-6 
-      comment[eisbn] = 
-    
-    }
-    
-{
-    
-     title <
-       name = ASSESSING ADULT LEARNING: LITERACY AND NUMERACY COMPETENCIES
-       
-     >
-      comment[isbn] = 978-1-877293-82-5
-      comment[eisbn] = 
-    
-    }    
-
-  {
-    
-     title <
-       name = AT THE CUTTING EDGE - Second Edition
-       
-     >
-      comment[isbn] =  	1-877398-07-1 
-      comment[eisbn] = 
-    
-    }
-    
-    {
-    
-     title <
-       name = CATCHING THE KNOWLEDGE WAVE?
-       
-     >
-      comment[isbn] = 1-877398-04-7
-      comment[eisbn] = 
-    
-    }
-    
-    
-    {
-    
+ 
      title <
        name = 
        
@@ -98,5 +20,6 @@
       comment[isbn] = 
       comment[eisbn] = 
     
-    }
-}    
+  }
+
+}
