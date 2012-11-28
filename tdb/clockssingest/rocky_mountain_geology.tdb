@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Rocky Mountain Geology ;
+    info[contract] = 2012 ;
+    info[tester] = 0
+  >
+  
+  plugin = needs.plugin
+  param[base_url] = http://rmg.geoscienceworld.org
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  
+  {
+  
+    title < 
+      name = Rocky Mountain Geology ;
+      issn = 1555-7340 ;
+      eissn = 1555-7332
+    >
+    
+    comment[0] = known as Contributions to Geology from 1962-1998
+    
+    au < manifest ; exists ; 2012 ; Rocky Mountain Geology Volume 47 ; 47 >
+    
+    
+  }
+
+}
