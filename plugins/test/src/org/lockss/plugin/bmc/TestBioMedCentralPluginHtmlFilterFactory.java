@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.5 2012-09-26 20:59:28 alexandraohlson Exp $
+ * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.6 2012-11-28 22:10:39 ldoan Exp $
  */
 
 /*
@@ -63,43 +63,63 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
   private static final String whiteSpace2 = "\n\n      <li><a href=\"/content/pdf/1477-7525-8-103.pdf\">PDF</a>\n       (543KB)\n      </li>";
  
   private static final String impactFactorHtmlHash =
-		  "<div id=\"\" style=\"width:830px; height:600px\">\n" +
-  		  "<div id=\"impact-factor\" class=\"official\">\n" +
-		  "<img src=\"/images/branding/official.gif\" alt=\"official impact factor\" title=\"3.42\"/>\n" +
-          "<span id=\"impact-factor-value\">3.42</span></div>\n" +
-		  "</div>";
+    "<div id=\"\" style=\"width:830px; height:600px\">\n" +
+    "<div id=\"impact-factor\" class=\"official\">\n" +
+    "<img src=\"/images/branding/official.gif\" alt=\"official impact factor\" title=\"3.42\"/>\n" +
+    "<span id=\"impact-factor-value\">3.42</span></div>\n" +
+    "</div>";
+  
   private static final String impactFactorHtmlHashFiltered =
-		  "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
+    "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
 
   private static final String accessHtmlHash =
-		  "<div class=\"article-type\">Software <a href=\"/about/access\">\n" +
-          "<img alt=\"Open Access\" src=\"images/open-access.gif\"/></a>\n" +
-  		  "<a href=\"http://www.biomedcentral.com/about/mostviewed\">" +
-          "<img alt=\"Highly Accessed\" src=\"/images/highly-accessed.gif\"/></a>\n" +
-		  "</div>";
+    "<div class=\"article-type\">Software <a href=\"/about/access\">\n" +
+    "<img alt=\"Open Access\" src=\"images/open-access.gif\"/></a>\n" +
+    "<a href=\"http://www.biomedcentral.com/about/mostviewed\">" +
+    "<img alt=\"Highly Accessed\" src=\"/images/highly-accessed.gif\"/></a>\n" +
+    "</div>";
+
   private static final String accessHtmlHashFiltered =
-      "<div class=\"article-type\">Software </div>";
+    "<div class=\"article-type\">Software </div>";
 
   private static final String accessesBlockHtml =
-      "<div class=\"wrap\">\n" +
-          "<h2 class=\"active\" id=\"accesses\">Accesses</h2>\n" +
-          "<div class=\"wrap-in\"> <ul> <li> 30 </li> </ul> </div>\n" +
-          "</div>";
+    "<div class=\"wrap\">\n" +
+    "<h2 class=\"active\" id=\"accesses\">Accesses</h2>\n" +
+    "<div class=\"wrap-in\"> <ul> <li> 30 </li> </ul> </div>\n" +
+    "</div>";
+
   private static final String accessesBlockHtmlFiltered = 
-      "<div class=\"wrap\"> " +
-          "<h2 class=\"active\" id=\"accesses\">Accesses</h2> " +
-          "</div>";
+    "<div class=\"wrap\"> " +
+    "<h2 class=\"active\" id=\"accesses\">Accesses</h2> " +
+    "</div>";
   
   private static final String citationsBlockHtml =
-      "<div class=\"wrap\">\n" +
-          "<h2 class=\"active\" id=\"citations\">Cited by</h2>\n" +
-          "<div class=\"wrap-in\"> <ul> <li> 30 </li> </ul> </div>\n" +
-          "</div>";
+    "<div class=\"wrap\">\n" +
+    "<h2 class=\"active\" id=\"citations\">Cited by</h2>\n" +
+    "<div class=\"wrap-in\"> <ul> <li> 30 </li> </ul> </div>\n" +
+    "</div>";
   
   private static final String citationsBlockHtmlFiltered =
-      "<div class=\"wrap\"> " +
-          "<h2 class=\"active\" id=\"citations\">Cited by</h2> " +
-          "</div>";
+    "<div class=\"wrap\"> " +
+    "<h2 class=\"active\" id=\"citations\">Cited by</h2> " +
+    "</div>";
+
+  private static final String bannerAdHtmlHash =
+    "<a class=\"banner-ad\"" +
+    "href=\"http://www.biomedcentral.com/advertisers/digital_advertising\"></a>" +
+    "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
+  
+  private static final String bannerAdHtmlHashFiltered =
+    "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
+
+  private static final String SkyscraperAdHtmlHash =
+    "<a class=\"skyscraper-ad\"" +
+    "href=\"http://www.biomedcentral.com/advertisers/digital_advertising\">" +
+    "Advertisement</a>" +
+    "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
+  
+  private static final String SkyscraperAdHtmlHashFiltered =
+    "<div id=\"\" style=\"width:830px; height:600px\"> </div>";
 
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -157,6 +177,18 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
         ENC);
 
     assertEquals(citationsBlockHtmlFiltered,StringUtil.fromInputStream(inA));
+
+    /* bannerAd */     
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(bannerAdHtmlHash),
+        ENC);
+
+    assertEquals(bannerAdHtmlHashFiltered,StringUtil.fromInputStream(inA));
+
+    /* SkyscraperAd */     
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(SkyscraperAdHtmlHash),
+        ENC);
+
+    assertEquals(SkyscraperAdHtmlHashFiltered,StringUtil.fromInputStream(inA));
 
   }
 }
