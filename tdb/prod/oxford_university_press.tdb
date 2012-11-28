@@ -19240,5 +19240,437 @@
 
   }
 
+  {
+
+    title <
+      name = Journal of Antitrust Enforcement ;
+      issn = 2050-0688 ;
+      eissn = 2050-0696
+    >
+
+    param[base_url] = http://antitrust.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    {
+
+      au < expected ; 2013 ; Journal of Antitrust Enforcement Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Complex Networks ;
+      issn = 2051-1310 ;
+      eissn = 2051-1329
+    >
+
+    param[base_url] = http://comnet.oxfordjournals.org
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+
+      au < expected ; 2013 ; Journal of Complex Networks Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Gerontology ;
+      issn = 0022-1422
+    >
+
+    param[base_url] = http://geronj.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+
+      au < manifest ; 1946 ; Journal of Gerontology Volume 1 ; 1 >
+      au < manifest ; 1947 ; Journal of Gerontology Volume 2 ; 2 >
+      au < manifest ; 1948 ; Journal of Gerontology Volume 3 ; 3 >
+      au < manifest ; 1949 ; Journal of Gerontology Volume 4 ; 4 >
+      au < manifest ; 1950 ; Journal of Gerontology Volume 5 ; 5 >
+      au < manifest ; 1951 ; Journal of Gerontology Volume 6 ; 6 >
+      au < manifest ; 1952 ; Journal of Gerontology Volume 7 ; 7 >
+      au < manifest ; 1953 ; Journal of Gerontology Volume 8 ; 8 >
+      au < manifest ; 1954 ; Journal of Gerontology Volume 9 ; 9 >
+      au < manifest ; 1955 ; Journal of Gerontology Volume 10 ; 10 >
+      au < manifest ; 1956 ; Journal of Gerontology Volume 11 ; 11 >
+      au < manifest ; 1957 ; Journal of Gerontology Volume 12 ; 12 >
+      au < manifest ; 1958 ; Journal of Gerontology Volume 13 ; 13 >
+      au < manifest ; 1959 ; Journal of Gerontology Volume 14 ; 14 >
+      au < manifest ; 1960 ; Journal of Gerontology Volume 15 ; 15 >
+      au < manifest ; 1961 ; Journal of Gerontology Volume 16 ; 16 >
+      au < manifest ; 1962 ; Journal of Gerontology Volume 17 ; 17 >
+      au < manifest ; 1963 ; Journal of Gerontology Volume 18 ; 18 >
+      au < manifest ; 1964 ; Journal of Gerontology Volume 19 ; 19 >
+      au < manifest ; 1965 ; Journal of Gerontology Volume 20 ; 20 >
+      au < manifest ; 1966 ; Journal of Gerontology Volume 21 ; 21 >
+      au < manifest ; 1967 ; Journal of Gerontology Volume 22 ; 22 >
+      au < manifest ; 1968 ; Journal of Gerontology Volume 23 ; 23 >
+      au < manifest ; 1969 ; Journal of Gerontology Volume 24 ; 24 >
+      au < manifest ; 1970 ; Journal of Gerontology Volume 25 ; 25 >
+      au < manifest ; 1971 ; Journal of Gerontology Volume 26 ; 26 >
+      au < manifest ; 1972 ; Journal of Gerontology Volume 27 ; 27 >
+      au < manifest ; 1973 ; Journal of Gerontology Volume 28 ; 28 >
+      au < manifest ; 1974 ; Journal of Gerontology Volume 29 ; 29 >
+      au < manifest ; 1975 ; Journal of Gerontology Volume 30 ; 30 >
+      au < manifest ; 1976 ; Journal of Gerontology Volume 31 ; 31 >
+      au < manifest ; 1977 ; Journal of Gerontology Volume 32 ; 32 >
+      au < manifest ; 1978 ; Journal of Gerontology Volume 33 ; 33 >
+      au < manifest ; 1979 ; Journal of Gerontology Volume 34 ; 34 >
+      au < manifest ; 1980 ; Journal of Gerontology Volume 35 ; 35 >
+      au < manifest ; 1981 ; Journal of Gerontology Volume 36 ; 36 >
+      au < manifest ; 1982 ; Journal of Gerontology Volume 37 ; 37 >
+      au < manifest ; 1983 ; Journal of Gerontology Volume 38 ; 38 >
+      au < manifest ; 1984 ; Journal of Gerontology Volume 39 ; 39 >
+      au < manifest ; 1985 ; Journal of Gerontology Volume 40 ; 40 >
+      au < manifest ; 1986 ; Journal of Gerontology Volume 41 ; 41 >
+      au < manifest ; 1987 ; Journal of Gerontology Volume 42 ; 42 >
+      au < manifest ; 1988 ; Journal of Gerontology Volume 43 ; 43 >
+      au < manifest ; 1989 ; Journal of Gerontology Volume 44 ; 44 >
+      au < manifest ; 1990 ; Journal of Gerontology Volume 45 ; 45 >
+      au < manifest ; 1991 ; Journal of Gerontology Volume 46 ; 46 >
+      au < manifest ; 1992 ; Journal of Gerontology Volume 47 ; 47 >
+      au < manifest ; 1993 ; Journal of Gerontology Volume 48 ; 48 >
+      au < manifest ; 1994 ; Journal of Gerontology Volume 49 ; 49 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Survey Statistics and Methodology 
+    >
+
+    param[base_url] = http://jssam.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+
+      au < expected ; 2013 ; Journal of Survey Statistics and Methodology Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = London Review of International Law ;
+      issn = 2050-6325 ;
+      eissn = 2050-6333
+    >
+
+    param[base_url] = http://lril.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+
+      au < expected ; 2012 ; London Review of International Law Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Mathematical Medicine and Biology ;
+      issn = 1477-8599 ;
+      eissn = 1477-8602
+    >
+
+    param[base_url] = http://imammb.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+
+      au < manifest ; 1984 ; Mathematical Medicine and Biology Volume 1 ; 1 >
+      au < manifest ; 1985 ; Mathematical Medicine and Biology Volume 2 ; 2 >
+      au < manifest ; 1986 ; Mathematical Medicine and Biology Volume 3 ; 3 >
+      au < manifest ; 1987 ; Mathematical Medicine and Biology Volume 4 ; 4 >
+      au < manifest ; 1988 ; Mathematical Medicine and Biology Volume 5 ; 5 >
+      au < manifest ; 1989 ; Mathematical Medicine and Biology Volume 6 ; 6 >
+      au < manifest ; 1990 ; Mathematical Medicine and Biology Volume 7 ; 7 >
+      au < manifest ; 1991 ; Mathematical Medicine and Biology Volume 8 ; 8 >
+      au < manifest ; 1992 ; Mathematical Medicine and Biology Volume 9 ; 9 >
+      au < manifest ; 1993 ; Mathematical Medicine and Biology Volume 10 ; 10 >
+      au < manifest ; 1994 ; Mathematical Medicine and Biology Volume 11 ; 11 >
+      au < manifest ; 1995 ; Mathematical Medicine and Biology Volume 12 ; 12 >
+      au < manifest ; 1996 ; Mathematical Medicine and Biology Volume 13 ; 13 >
+      au < manifest ; 1997 ; Mathematical Medicine and Biology Volume 14 ; 14 >
+      au < manifest ; 1998 ; Mathematical Medicine and Biology Volume 15 ; 15 >
+      au < manifest ; 1999 ; Mathematical Medicine and Biology Volume 16 ; 16 >
+      au < manifest ; 2000 ; Mathematical Medicine and Biology Volume 17 ; 17 >
+      au < manifest ; 2001 ; Mathematical Medicine and Biology Volume 18 ; 18 >
+      au < manifest ; 2002 ; Mathematical Medicine and Biology Volume 19 ; 19 >
+      au < manifest ; 2003 ; Mathematical Medicine and Biology Volume 20 ; 20 >
+      au < manifest ; 2004 ; Mathematical Medicine and Biology Volume 21 ; 21 >
+      au < manifest ; 2005 ; Mathematical Medicine and Biology Volume 22 ; 22 >
+      au < manifest ; 2006 ; Mathematical Medicine and Biology Volume 23 ; 23 >
+      au < manifest ; 2007 ; Mathematical Medicine and Biology Volume 24 ; 24 >
+      au < manifest ; 2008 ; Mathematical Medicine and Biology Volume 25 ; 25 >
+      au < manifest ; 2009 ; Mathematical Medicine and Biology Volume 26 ; 26 >
+      au < manifest ; 2010 ; Mathematical Medicine and Biology Volume 27 ; 27 >
+      au < manifest ; 2011 ; Mathematical Medicine and Biology Volume 28 ; 28 >
+      au < manifest ; 2012 ; Mathematical Medicine and Biology Volume 29 ; 29 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Migration Studies ;
+      issn = 2049-5838 ;
+      eissn = 2049-5846
+    >
+
+    param[base_url] = http://migration.oxfordjournals.org
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+
+      au < expected ; 2013 ; Migration Studies Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Progress of Theoretical and Experimental Physics ;
+      eissn = 2050-3911
+    >
+
+    param[base_url] = http://ptep.oxfordjournals.org
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+
+      au < expected ; 2013 ; Progress of Theoretical and Experimental Physics Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Progress of Theoretical Physics Supplement ;
+      issn = 0375-9687 
+    >
+
+    param[base_url] = http://ptpsupp.oxfordjournals.org
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+
+      au < expected ; 2013 ; Progress of Theoretical Physics Supplement Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Quarterly Journal of Economics ;
+      issn = 0033-5533 ;
+      eissn = 1531-4650
+    >
+
+    param[base_url] = http://qje.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+
+      au < manifest ; 1886 ; The Quarterly Journal of Economics Volume 1 ; 1 >
+      au < manifest ; 1887 ; The Quarterly Journal of Economics Volume 2 ; 2 >
+      au < manifest ; 1888 ; The Quarterly Journal of Economics Volume 3 ; 3 >
+      au < manifest ; 1889 ; The Quarterly Journal of Economics Volume 4 ; 4 >
+      au < manifest ; 1890 ; The Quarterly Journal of Economics Volume 5 ; 5 >
+      au < manifest ; 1891 ; The Quarterly Journal of Economics Volume 6 ; 6 >
+      au < manifest ; 1892 ; The Quarterly Journal of Economics Volume 7 ; 7 >
+      au < manifest ; 1893 ; The Quarterly Journal of Economics Volume 8 ; 8 >
+      au < manifest ; 1894 ; The Quarterly Journal of Economics Volume 9 ; 9 >
+      au < manifest ; 1895 ; The Quarterly Journal of Economics Volume 10 ; 10 >
+      au < manifest ; 1896 ; The Quarterly Journal of Economics Volume 11 ; 11 >
+      au < manifest ; 1897 ; The Quarterly Journal of Economics Volume 12 ; 12 >
+      au < manifest ; 1898 ; The Quarterly Journal of Economics Volume 13 ; 13 >
+      au < manifest ; 1899 ; The Quarterly Journal of Economics Volume 14 ; 14 >
+      au < manifest ; 1900 ; The Quarterly Journal of Economics Volume 15 ; 15 >
+      au < manifest ; 1901 ; The Quarterly Journal of Economics Volume 16 ; 16 >
+      au < manifest ; 1902 ; The Quarterly Journal of Economics Volume 17 ; 17 >
+      au < manifest ; 1903 ; The Quarterly Journal of Economics Volume 18 ; 18 >
+      au < manifest ; 1904 ; The Quarterly Journal of Economics Volume 19 ; 19 >
+      au < manifest ; 1905 ; The Quarterly Journal of Economics Volume 20 ; 20 >
+      au < manifest ; 1906 ; The Quarterly Journal of Economics Volume 21 ; 21 >
+      au < manifest ; 1907 ; The Quarterly Journal of Economics Volume 22 ; 22 >
+      au < manifest ; 1908 ; The Quarterly Journal of Economics Volume 23 ; 23 >
+      au < manifest ; 1909 ; The Quarterly Journal of Economics Volume 24 ; 24 >
+      au < manifest ; 1910 ; The Quarterly Journal of Economics Volume 25 ; 25 >
+      au < manifest ; 1911 ; The Quarterly Journal of Economics Volume 26 ; 26 >
+      au < manifest ; 1912 ; The Quarterly Journal of Economics Volume 27 ; 27 >
+      au < manifest ; 1913 ; The Quarterly Journal of Economics Volume 28 ; 28 >
+      au < manifest ; 1914 ; The Quarterly Journal of Economics Volume 29 ; 29 >
+      au < manifest ; 1915 ; The Quarterly Journal of Economics Volume 30 ; 30 >
+      au < manifest ; 1916 ; The Quarterly Journal of Economics Volume 31 ; 31 >
+      au < manifest ; 1917 ; The Quarterly Journal of Economics Volume 32 ; 32 >
+      au < manifest ; 1918 ; The Quarterly Journal of Economics Volume 33 ; 33 >
+      au < manifest ; 1919 ; The Quarterly Journal of Economics Volume 34 ; 34 >
+      au < manifest ; 1920 ; The Quarterly Journal of Economics Volume 35 ; 35 >
+      au < manifest ; 1921 ; The Quarterly Journal of Economics Volume 36 ; 36 >
+      au < manifest ; 1922 ; The Quarterly Journal of Economics Volume 37 ; 37 >
+      au < manifest ; 1923 ; The Quarterly Journal of Economics Volume 38 ; 38 >
+      au < manifest ; 1924 ; The Quarterly Journal of Economics Volume 39 ; 39 >
+      au < manifest ; 1925 ; The Quarterly Journal of Economics Volume 40 ; 40 >
+      au < manifest ; 1926 ; The Quarterly Journal of Economics Volume 41 ; 41 >
+      au < manifest ; 1927 ; The Quarterly Journal of Economics Volume 42 ; 42 >
+      au < manifest ; 1928 ; The Quarterly Journal of Economics Volume 43 ; 43 >
+      au < manifest ; 1929 ; The Quarterly Journal of Economics Volume 44 ; 44 >
+      au < manifest ; 1930 ; The Quarterly Journal of Economics Volume 45 ; 45 >
+      au < manifest ; 1931 ; The Quarterly Journal of Economics Volume 46 ; 46 >
+      au < manifest ; 1932 ; The Quarterly Journal of Economics Volume 47 ; 47 >
+      au < manifest ; 1933 ; The Quarterly Journal of Economics Volume 48 ; 48 >
+      au < manifest ; 1934 ; The Quarterly Journal of Economics Volume 49 ; 49 >
+      au < manifest ; 1935 ; The Quarterly Journal of Economics Volume 50 ; 50 >
+      au < manifest ; 1936 ; The Quarterly Journal of Economics Volume 51 ; 51 >
+      au < manifest ; 1937 ; The Quarterly Journal of Economics Volume 52 ; 52 >
+      au < manifest ; 1938 ; The Quarterly Journal of Economics Volume 53 ; 53 >
+      au < manifest ; 1939 ; The Quarterly Journal of Economics Volume 54 ; 54 >
+      au < manifest ; 1940 ; The Quarterly Journal of Economics Volume 55 ; 55 >
+      au < manifest ; 1941 ; The Quarterly Journal of Economics Volume 56 ; 56 >
+      au < manifest ; 1942 ; The Quarterly Journal of Economics Volume 57 ; 57 >
+      au < manifest ; 1943 ; The Quarterly Journal of Economics Volume 58 ; 58 >
+      au < manifest ; 1944 ; The Quarterly Journal of Economics Volume 59 ; 59 >
+      au < manifest ; 1945 ; The Quarterly Journal of Economics Volume 60 ; 60 >
+      au < manifest ; 1946 ; The Quarterly Journal of Economics Volume 61 ; 61 >
+      au < manifest ; 1947 ; The Quarterly Journal of Economics Volume 62 ; 62 >
+      au < manifest ; 1949 ; The Quarterly Journal of Economics Volume 63 ; 63 >
+      au < manifest ; 1950 ; The Quarterly Journal of Economics Volume 64 ; 64 >
+      au < manifest ; 1951 ; The Quarterly Journal of Economics Volume 65 ; 65 >
+      au < manifest ; 1952 ; The Quarterly Journal of Economics Volume 66 ; 66 >
+      au < manifest ; 1953 ; The Quarterly Journal of Economics Volume 67 ; 67 >
+      au < manifest ; 1954 ; The Quarterly Journal of Economics Volume 68 ; 68 >
+      au < manifest ; 1955 ; The Quarterly Journal of Economics Volume 69 ; 69 >
+      au < manifest ; 1956 ; The Quarterly Journal of Economics Volume 70 ; 70 >
+      au < manifest ; 1957 ; The Quarterly Journal of Economics Volume 71 ; 71 >
+      au < manifest ; 1958 ; The Quarterly Journal of Economics Volume 72 ; 72 >
+      au < manifest ; 1959 ; The Quarterly Journal of Economics Volume 73 ; 73 >
+      au < manifest ; 1960 ; The Quarterly Journal of Economics Volume 74 ; 74 >
+      au < manifest ; 1961 ; The Quarterly Journal of Economics Volume 75 ; 75 >
+      au < manifest ; 1962 ; The Quarterly Journal of Economics Volume 76 ; 76 >
+      au < manifest ; 1963 ; The Quarterly Journal of Economics Volume 77 ; 77 >
+      au < manifest ; 1964 ; The Quarterly Journal of Economics Volume 78 ; 78 >
+      au < manifest ; 1965 ; The Quarterly Journal of Economics Volume 79 ; 79 >
+      au < manifest ; 1966 ; The Quarterly Journal of Economics Volume 80 ; 80 >
+      au < manifest ; 1967 ; The Quarterly Journal of Economics Volume 81 ; 81 >
+      au < manifest ; 1968 ; The Quarterly Journal of Economics Volume 82 ; 82 >
+      au < manifest ; 1969 ; The Quarterly Journal of Economics Volume 83 ; 83 >
+      au < manifest ; 1970 ; The Quarterly Journal of Economics Volume 84 ; 84 >
+      au < manifest ; 1971 ; The Quarterly Journal of Economics Volume 85 ; 85 >
+      au < manifest ; 1972 ; The Quarterly Journal of Economics Volume 86 ; 86 >
+      au < manifest ; 1973 ; The Quarterly Journal of Economics Volume 87 ; 87 >
+      au < manifest ; 1974 ; The Quarterly Journal of Economics Volume 88 ; 88 >
+      au < manifest ; 1975 ; The Quarterly Journal of Economics Volume 89 ; 89 >
+      au < manifest ; 1976 ; The Quarterly Journal of Economics Volume 90 ; 90 >
+      au < manifest ; 1977 ; The Quarterly Journal of Economics Volume 91 ; 91 >
+      au < manifest ; 1978 ; The Quarterly Journal of Economics Volume 92 ; 92 >
+      au < manifest ; 1979 ; The Quarterly Journal of Economics Volume 93 ; 93 >
+      au < manifest ; 1980 ; The Quarterly Journal of Economics Volume 94 ; 94 >
+      au < manifest ; 1980 ; The Quarterly Journal of Economics Volume 95 ; 95 >
+      au < manifest ; 1981 ; The Quarterly Journal of Economics Volume 96 ; 96 >
+      au < manifest ; 1982 ; The Quarterly Journal of Economics Volume 97 ; 97 >
+      au < manifest ; 1983 ; The Quarterly Journal of Economics Volume 98 ; 98 >
+      au < manifest ; 1984 ; The Quarterly Journal of Economics Volume 99 ; 99 >
+      au < manifest ; 1985 ; The Quarterly Journal of Economics Volume 100 ; 100 >
+      au < manifest ; 1986 ; The Quarterly Journal of Economics Volume 101 ; 101 >
+      au < manifest ; 1987 ; The Quarterly Journal of Economics Volume 102 ; 102 >
+      au < manifest ; 1988 ; The Quarterly Journal of Economics Volume 103 ; 103 >
+      au < manifest ; 1989 ; The Quarterly Journal of Economics Volume 104 ; 104 >
+      au < manifest ; 1990 ; The Quarterly Journal of Economics Volume 105 ; 105 >
+      au < manifest ; 1991 ; The Quarterly Journal of Economics Volume 106 ; 106 >
+      au < manifest ; 1992 ; The Quarterly Journal of Economics Volume 107 ; 107 >
+      au < manifest ; 1993 ; The Quarterly Journal of Economics Volume 108 ; 108 >
+      au < manifest ; 1994 ; The Quarterly Journal of Economics Volume 109 ; 109 >
+      au < manifest ; 1995 ; The Quarterly Journal of Economics Volume 110 ; 110 >
+      au < manifest ; 1996 ; The Quarterly Journal of Economics Volume 111 ; 111 >
+      au < manifest ; 1997 ; The Quarterly Journal of Economics Volume 112 ; 112 >
+      au < manifest ; 1998 ; The Quarterly Journal of Economics Volume 113 ; 113 >
+      au < manifest ; 1999 ; The Quarterly Journal of Economics Volume 114 ; 114 >
+      au < manifest ; 2000 ; The Quarterly Journal of Economics Volume 115 ; 115 >
+      au < manifest ; 2001 ; The Quarterly Journal of Economics Volume 116 ; 116 >
+      au < manifest ; 2002 ; The Quarterly Journal of Economics Volume 117 ; 117 >
+      au < manifest ; 2003 ; The Quarterly Journal of Economics Volume 118 ; 118 >
+      au < manifest ; 2004 ; The Quarterly Journal of Economics Volume 119 ; 119 >
+      au < manifest ; 2005 ; The Quarterly Journal of Economics Volume 120 ; 120 >
+      au < manifest ; 2006 ; The Quarterly Journal of Economics Volume 121 ; 121 >
+      au < manifest ; 2007 ; The Quarterly Journal of Economics Volume 122 ; 122 >
+      au < manifest ; 2008 ; The Quarterly Journal of Economics Volume 123 ; 123 >
+      au < manifest ; 2009 ; The Quarterly Journal of Economics Volume 124 ; 124 >
+      au < manifest ; 2010 ; The Quarterly Journal of Economics Volume 125 ; 125 >
+      au < manifest ; 2011 ; The Quarterly Journal of Economics Volume 126 ; 126 >
+      au < manifest ; 2012 ; The Quarterly Journal of Economics Volume 127 ; 127 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Social Work Research 
+    >
+
+    param[base_url] = http://swr.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+
+      au < manifest ; 1995 ; Social Work Research Volume 19 ; 19 >
+      au < manifest ; 1996 ; Social Work Research Volume 20 ; 20 >
+      au < manifest ; 1997 ; Social Work Research Volume 21 ; 21 >
+      au < manifest ; 1998 ; Social Work Research Volume 22 ; 22 >
+      au < manifest ; 1999 ; Social Work Research Volume 23 ; 23 >
+      au < manifest ; 2000 ; Social Work Research Volume 24 ; 24 >
+      au < manifest ; 2001 ; Social Work Research Volume 25 ; 25 >
+      au < manifest ; 2002 ; Social Work Research Volume 26 ; 26 >
+      au < manifest ; 2003 ; Social Work Research Volume 27 ; 27 >
+      au < manifest ; 2004 ; Social Work Research Volume 28 ; 28 >
+      au < manifest ; 2005 ; Social Work Research Volume 29 ; 29 >
+      au < manifest ; 2006 ; Social Work Research Volume 30 ; 30 >
+      au < manifest ; 2007 ; Social Work Research Volume 31 ; 31 >
+      au < manifest ; 2008 ; Social Work Research Volume 32 ; 32 >
+      au < manifest ; 2009 ; Social Work Research Volume 33 ; 33 >
+      au < manifest ; 2010 ; Social Work Research Volume 34 ; 34 >
+      au < manifest ; 2011 ; Social Work Research Volume 35 ; 35 >
+      au < manifest ; 2012 ; Social Work Research Volume 36 ; 36 >
+
+    }
+
+  }
+
 }
 
