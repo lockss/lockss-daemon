@@ -5,7 +5,22 @@
     info[contract] = 2012 ;
     info[tester] = 0
   >
+      plugin = needs.plugin
+      param[base_url] = https://www.pynchon.net/
+      param[journal_id] = owap
+      implicit < status ; status2 ; year ; param[year] ; name ; volume >
+  {
+    
+     title <
+       name = Alluvium
+       
+     >
+      issn = 2050-1560
 
+     au < manifest ; exists ; 2012 ; 2012 ; Alluvium Volume 1 ; 1 >  
+   
+    }
+    
   {
   
     title < 
@@ -13,10 +28,7 @@
       issn = 2047-2870 
     >
 
-      plugin = needs.plugin
-      param[base_url] = https://www.pynchon.net/
-      param[journal_id] = owap
-      implicit < status ; status2 ; year ; param[year] ; name ; volume >
+
 
      au < doNotProcess ; exists ; 2012 ; 2012 ; Orbit: Writing Around Pynchon Volume 1 ; 1 >  
      
