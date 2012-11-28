@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Social Behavior and Personality ;
+    info[contract] = 2012 ;
+    info[tester] = 0
+  >
+
+  plugin = ingenta
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Social Behavior and Personality: an international journal ;
+      eissn = 1179-6391 ;
+      issnl = 0301-2212 
+    >
+
+    param[base_url] = http://www.sbp-journal.com
+    param[journal_id] = sbp
+    
+    au < exists ; exists ; 2012 ; Social Behavior and Personality Volume 40 ; 40 >
+    
+  }
+  
+}
