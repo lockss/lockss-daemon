@@ -10,20 +10,6 @@
   param[base_url] = http://rmg.geoscienceworld.org
   implicit < status ; year ; name ; param[volume_name] >
   
-  {
-  
-    title < 
-      name = Rocky Mountain Geology ;
-      issn = 1555-7340 ;
-      eissn = 1555-7332
-    >
-    
-    comment[0] = known as Contributions to Geology from 1962-1998
-    
-    au < exists ; 2012 ; Rocky Mountain Geology Volume 47 ; 47 >
-    
-    
-  }
 
   {
   
@@ -46,14 +32,53 @@
     au < exists ; 1972 ; Contributions to Geology Volume 11 ; 11 >
     au < exists ; 1973 ; Contributions to Geology Volume 12 ; 12 >
     au < exists ; 1974 ; Contributions to Geology Volume 13 ; 13 >
-    au < exists ; 1975 ; Contributions to Geology Volume 14 ; 13 >
-    au < exists ; 1976 ; Contributions to Geology Volume 15 ; 13 >
-    au < exists ; 1977 ; Contributions to Geology Volume 16 ; 13 >
-    au < exists ; 1978 ; Contributions to Geology Volume 17 ; 13 >
-    au < exists ; 1979 ; Contributions to Geology Volume 18 ; 13 >
-    au < exists ; 1980 ; Contributions to Geology Volume 19 ; 13 >
+    au < exists ; 1975-1976 ; Contributions to Geology Volume 14 ; 14 >
+    au < exists ; 1977 ; Contributions to Geology Volume 15 ; 15 >
+    au < exists ; 1978 ; Contributions to Geology Volume 16 ; 16 >
+    au < exists ; 1979 ; Contributions to Geology Volume 17 ; 17 >
+    au < exists ; 1979-1980 ; Contributions to Geology Volume 18 ; 18 >
+    au < exists ; 1980 ; Contributions to Geology Volume 19 ; 19 >
+    au < exists ; 1981 ; Contributions to Geology Volume 20 ; 20 >
+    au < exists ; 1982 ; Contributions to Geology Volume 21 ; 21 >
+    au < exists ; 1983 ; Contributions to Geology Volume 22 ; 22 >
+    au < exists ; 1984-1985 ; Contributions to Geology Volume 23 ; 23 >
+    au < exists ; 1986 ; Contributions to Geology Volume 24 ; 24 >
+    au < exists ; 1987 ; Contributions to Geology Volume 25 ; 25 >
+    au < exists ; 1988 ; Contributions to Geology Volume 26 ; 26 >
+    au < exists ; 1989 ; Contributions to Geology Volume 27 ; 27 >
+    au < exists ; 1990 ; Contributions to Geology Volume 28 ; 28 >
+    au < exists ; 1991-1992 ; Contributions to Geology Volume 29 ; 29 >
+    au < exists ; 1994 ; Contributions to Geology Volume 30 ; 30 >
+    au < exists ; 1996-1997 ; Contributions to Geology Volume 31 ; 31 >
+    au < exists ; 1997-1998 ; Contributions to Geology Volume 32 ; 32 >
 
+ 
   }
 
+  {
+  
+    title < 
+      name = Rocky Mountain Geology ;
+      issn = 1555-7340 ;
+      eissn = 1555-7332
+    >
+
+    au < exists ; 1998 ; Rocky Mountain Geology Volume 33 ; 33 >
+    au < exists ; 1999 ; Rocky Mountain Geology Volume 34 ; 34 >
+    au < exists ; 2000 ; Rocky Mountain Geology Volume 35 ; 35 >
+    au < exists ; 2001 ; Rocky Mountain Geology Volume 36 ; 36 >
+    au < exists ; 2002 ; Rocky Mountain Geology Volume 37 ; 37 >
+    au < exists ; 2003 ; Rocky Mountain Geology Volume 38 ; 38 >
+    au < exists ; 2004 ; Rocky Mountain Geology Volume 39 ; 39 >
+    au < exists ; 2005 ; Rocky Mountain Geology Volume 40 ; 40 >
+    au < exists ; 2006 ; Rocky Mountain Geology Volume 41 ; 41 >
+    au < exists ; 2007 ; Rocky Mountain Geology Volume 42 ; 42 >
+    au < exists ; 2008 ; Rocky Mountain Geology Volume 43 ; 43 >
+    au < exists ; 2009 ; Rocky Mountain Geology Volume 44 ; 44 >
+    au < exists ; 2010 ; Rocky Mountain Geology Volume 45 ; 45 >
+    au < exists ; 2011 ; Rocky Mountain Geology Volume 46 ; 46 >
+    au < exists ; 2012 ; Rocky Mountain Geology Volume 47 ; 47 >
+   
+  }
 
 }
