@@ -910,7 +910,7 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < ready ; 1957 ; American Behavioral Scientist Volume 1 ; 1 >
-        au < testing ; 1958 ; American Behavioral Scientist Volume 2 ; 2 >
+        au < ready ; 1958 ; American Behavioral Scientist Volume 2 ; 2 >
         au < testing ; 1959 ; American Behavioral Scientist Volume 3 ; 3 >
         au < testing ; 1960 ; American Behavioral Scientist Volume 4 ; 4 >
         au < testing ; 1961 ; American Behavioral Scientist Volume 5 ; 5 >
@@ -933,7 +933,7 @@
         au < testing ; 1978 ; American Behavioral Scientist Volume 22 ; 22 >
         au < testing ; 1979 ; American Behavioral Scientist Volume 23 ; 23 >
         au < testing ; 1980 ; American Behavioral Scientist Volume 24 ; 24 >
-        au < testing ; 1981 ; American Behavioral Scientist Volume 25 ; 25 >
+        au < ready ; 1981 ; American Behavioral Scientist Volume 25 ; 25 >
         au < testing ; 1982 ; American Behavioral Scientist Volume 26 ; 26 >
         au < testing ; 1983 ; American Behavioral Scientist Volume 27 ; 27 >
         au < testing ; 1984 ; American Behavioral Scientist Volume 28 ; 28 >
@@ -943,7 +943,7 @@
         au < testing ; 1988 ; American Behavioral Scientist Volume 32 ; 32 >
         au < testing ; 1989 ; American Behavioral Scientist Volume 33 ; 33 >
         au < testing ; 1990 ; American Behavioral Scientist Volume 34 ; 34 >
-        au < testing ; 1991 ; American Behavioral Scientist Volume 35 ; 35 >
+        au < ready ; 1991 ; American Behavioral Scientist Volume 35 ; 35 >
         au < testing ; 1992 ; American Behavioral Scientist Volume 36 ; 36 >
         au < testing ; 1993 ; American Behavioral Scientist Volume 37 ; 37 >
         au < testing ; 1994 ; American Behavioral Scientist Volume 38 ; 38 >
