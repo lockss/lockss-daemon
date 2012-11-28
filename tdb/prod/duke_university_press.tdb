@@ -1542,6 +1542,7 @@
       param[journal_dir] = minnesota_review
       attr[journal_id] = mnr
       implicit < status ; year ; name ; param[volume] >
+      comment[notReady] = RU4525, content page missing
 
       au < testing ; 1973 ; The Minnesota Review Volume 1 ; 1 >
       au < doesNotExist ; 0 ; The Minnesota Review Volume 2 ; 2 >
@@ -1570,7 +1571,7 @@
       au < testing ; 1985 ; The Minnesota Review Volume 25 ; 25 >
       au < testing ; 1986 ; The Minnesota Review Volume 26 ; 26 >
       au < testing ; 1986 ; The Minnesota Review Volume 27 ; 27 >
-      au < testing ; 1987 ; The Minnesota Review Volume 28 ; 28 >
+      au < notReady ; 1987 ; The Minnesota Review Volume 28 ; 28 >
       au < testing ; 1987 ; The Minnesota Review Volume 29 ; 29 >
       au < testing ; 1988 ; The Minnesota Review Volume 30 and 31 ; 30 >
       au < testing ; 1989 ; The Minnesota Review Volume 32 ; 32 >
