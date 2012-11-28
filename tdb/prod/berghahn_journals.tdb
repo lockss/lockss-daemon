@@ -334,11 +334,11 @@
     param[journal_id] = gs
     param[journal_issn] = 1938-8209
 
-    au < ready ; 2008 ; Girlhood Studies Volume 1 ; 1 >
-    au < ready ; 2009 ; Girlhood Studies Volume 2 ; 2 >
-    au < ready ; 2010 ; Girlhood Studies Volume 3 ; 3 >
-    au < ready ; 2011 ; Girlhood Studies Volume 4 ; 4 >
-    au < ready ; 2012 ; Girlhood Studies Volume 5 ; 5 >
+    au < releasing ; 2008 ; Girlhood Studies Volume 1 ; 1 >
+    au < releasing ; 2009 ; Girlhood Studies Volume 2 ; 2 >
+    au < releasing ; 2010 ; Girlhood Studies Volume 3 ; 3 >
+    au < releasing ; 2011 ; Girlhood Studies Volume 4 ; 4 >
+    au < releasing ; 2012 ; Girlhood Studies Volume 5 ; 5 >
     
   }
 
@@ -358,7 +358,7 @@
     au < released ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 >
     au < released ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 >
     au < released ; 2011 ; Historical Reflections/Reflexions Historiques Volume 37 ; 37 >
-    au < ready ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 >
+    au < releasing ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 >
     
   }
 
@@ -391,10 +391,10 @@
     param[journal_id] = emms
     param[journal_issn] = 2041-6938
        
-    au < ready ; 2009 ; Journal of Educational Memory, Media, and Society Volume 1 ; 1 >
-    au < ready ; 2010 ; Journal of Educational Memory, Media, and Society Volume 2 ; 2 >
-    au < ready ; 2011 ; Journal of Educational Memory, Media, and Society Volume 3 ; 3 >
-    au < ready ; 2012 ; Journal of Educational Memory, Media, and Society Volume 4 ; 4 >
+    au < releasing ; 2009 ; Journal of Educational Memory, Media, and Society Volume 1 ; 1 >
+    au < releasing ; 2010 ; Journal of Educational Memory, Media, and Society Volume 2 ; 2 >
+    au < releasing ; 2011 ; Journal of Educational Memory, Media, and Society Volume 3 ; 3 >
+    au < releasing ; 2012 ; Journal of Educational Memory, Media, and Society Volume 4 ; 4 >
     
   }
 
@@ -411,18 +411,18 @@
     param[journal_id] = romance
     param[journal_issn] = 1473-3536
        
-    au < ready ; 2001 ; Journal of Romance Studies Volume 1 ; 1 >
-    au < ready ; 2002 ; Journal of Romance Studies Volume 2 ; 2 >
-    au < ready ; 2003 ; Journal of Romance Studies Volume 3 ; 3 >
-    au < ready ; 2004 ; Journal of Romance Studies Volume 4 ; 4 >
-    au < ready ; 2005 ; Journal of Romance Studies Volume 5 ; 5 >
-    au < ready ; 2006 ; Journal of Romance Studies Volume 6 ; 6 >
-    au < ready ; 2007 ; Journal of Romance Studies Volume 7 ; 7 >
-    au < ready ; 2008 ; Journal of Romance Studies Volume 8 ; 8 >
-    au < ready ; 2009 ; Journal of Romance Studies Volume 9 ; 9 >
-    au < ready ; 2010 ; Journal of Romance Studies Volume 10 ; 10 >
-    au < ready ; 2011 ; Journal of Romance Studies Volume 11 ; 11 >
-    au < ready ; 2012 ; Journal of Romance Studies Volume 12 ; 12 >
+    au < releasing ; 2001 ; Journal of Romance Studies Volume 1 ; 1 >
+    au < releasing ; 2002 ; Journal of Romance Studies Volume 2 ; 2 >
+    au < releasing ; 2003 ; Journal of Romance Studies Volume 3 ; 3 >
+    au < releasing ; 2004 ; Journal of Romance Studies Volume 4 ; 4 >
+    au < releasing ; 2005 ; Journal of Romance Studies Volume 5 ; 5 >
+    au < releasing ; 2006 ; Journal of Romance Studies Volume 6 ; 6 >
+    au < releasing ; 2007 ; Journal of Romance Studies Volume 7 ; 7 >
+    au < releasing ; 2008 ; Journal of Romance Studies Volume 8 ; 8 >
+    au < releasing ; 2009 ; Journal of Romance Studies Volume 9 ; 9 >
+    au < releasing ; 2010 ; Journal of Romance Studies Volume 10 ; 10 >
+    au < releasing ; 2011 ; Journal of Romance Studies Volume 11 ; 11 >
+    au < releasing ; 2012 ; Journal of Romance Studies Volume 12 ; 12 >
     
   }
 
@@ -446,11 +446,11 @@
     au < testing ; 2005 ; Journeys Volume 6 ; 6 >
     au < ready ; 2006 ; Journeys Volume 7 ; 7 >
     au < testing ; 2007 ; Journeys Volume 8 ; 8 >
-    au < ready ; 2008 ; Journeys Volume 9 ; 9 >
-    au < ready ; 2009 ; Journeys Volume 10 ; 10 >
-    au < ready ; 2010 ; Journeys Volume 11 ; 11 >
-    au < ready ; 2011 ; Journeys Volume 12 ; 12 >
-    au < ready ; 2012 ; Journeys Volume 13 ; 13 >
+    au < releasing ; 2008 ; Journeys Volume 9 ; 9 >
+    au < releasing ; 2009 ; Journeys Volume 10 ; 10 >
+    au < releasing ; 2010 ; Journeys Volume 11 ; 11 >
+    au < releasing ; 2011 ; Journeys Volume 12 ; 12 >
+    au < releasing ; 2012 ; Journeys Volume 13 ; 13 >
     
   }
 
@@ -465,10 +465,10 @@
     param[journal_id] = latiss
     param[journal_issn] = 1755-2273
        
-    au < ready ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 >
-    au < ready ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 >
-    au < ready ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 >
-    au < ready ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 >
+    au < releasing ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 >
+    au < releasing ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 >
+    au < releasing ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 >
+    au < releasing ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 >
     au < expected ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 >
     
   }
@@ -484,13 +484,13 @@
     param[journal_id] = natcult
     param[journal_issn] = 1558-6073
         
-    au < ready ; 2006 ; Nature and Culture Volume 1 ; 1 >
-    au < ready ; 2007 ; Nature and Culture Volume 2 ; 2 >
-    au < ready ; 2008 ; Nature and Culture Volume 3 ; 3 >
-    au < ready ; 2009 ; Nature and Culture Volume 4 ; 4 >
-    au < ready ; 2010 ; Nature and Culture Volume 5 ; 5 >
-    au < ready ; 2011 ; Nature and Culture Volume 6 ; 6 >
-    au < ready ; 2012 ; Nature and Culture Volume 7 ; 7 >
+    au < releasing ; 2006 ; Nature and Culture Volume 1 ; 1 >
+    au < releasing ; 2007 ; Nature and Culture Volume 2 ; 2 >
+    au < releasing ; 2008 ; Nature and Culture Volume 3 ; 3 >
+    au < releasing ; 2009 ; Nature and Culture Volume 4 ; 4 >
+    au < releasing ; 2010 ; Nature and Culture Volume 5 ; 5 >
+    au < releasing ; 2011 ; Nature and Culture Volume 6 ; 6 >
+    au < releasing ; 2012 ; Nature and Culture Volume 7 ; 7 >
     
   }
 
@@ -514,12 +514,12 @@
     au < ready ; 2003 ; Nomadic Peoples Volume 7 ; 7 >
     au < ready ; 2004 ; Nomadic Peoples Volume 8 ; 8 >
     au < testing ; 2005 ; Nomadic Peoples Volume 9 ; 9 >
-    au < ready ; 2006 ; Nomadic Peoples Volume 10 ; 10 >
-    au < ready ; 2007 ; Nomadic Peoples Volume 11 ; 11>
-    au < ready ; 2008 ; Nomadic Peoples Volume 12 ; 12 >
-    au < ready ; 2009 ; Nomadic Peoples Volume 13 ; 13 >
-    au < ready ; 2010 ; Nomadic Peoples Volume 14 ; 14 >
-    au < ready ; 2011 ; Nomadic Peoples Volume 15 ; 15 >
+    au < releasing ; 2006 ; Nomadic Peoples Volume 10 ; 10 >
+    au < releasing ; 2007 ; Nomadic Peoples Volume 11 ; 11>
+    au < releasing ; 2008 ; Nomadic Peoples Volume 12 ; 12 >
+    au < releasing ; 2009 ; Nomadic Peoples Volume 13 ; 13 >
+    au < releasing ; 2010 ; Nomadic Peoples Volume 14 ; 14 >
+    au < releasing ; 2011 ; Nomadic Peoples Volume 15 ; 15 >
     au < expected ; 2012 ; Nomadic Peoples Volume 16 ; 16 >
     
   }
@@ -536,12 +536,12 @@
     param[journal_id] = proj
     param[journal_issn] = 1934-9688
         
-    au < ready ; 2007 ; Projections Volume 1 ; 1 >
-    au < ready ; 2008 ; Projections Volume 2 ; 2 >
-    au < ready ; 2009 ; Projections Volume 3 ; 3 >
-    au < ready ; 2010 ; Projections Volume 4 ; 4 >
-    au < ready ; 2011 ; Projections Volume 5 ; 5 >
-    au < ready ; 2012 ; Projections Volume 6 ; 6 >
+    au < releasing ; 2007 ; Projections Volume 1 ; 1 >
+    au < releasing ; 2008 ; Projections Volume 2 ; 2 >
+    au < releasing ; 2009 ; Projections Volume 3 ; 3 >
+    au < releasing ; 2010 ; Projections Volume 4 ; 4 >
+    au < releasing ; 2011 ; Projections Volume 5 ; 5 >
+    au < releasing ; 2012 ; Projections Volume 6 ; 6 >
     
   }
 
@@ -574,8 +574,8 @@
     param[journal_id] = arrs
     param[journal_issn] = 2150-9298
 
-    au < ready ; 2010 ; Religion and Society Volume 1 ; 1 >
-    au < ready ; 2011 ; Religion and Society Volume 2 ; 2 >   
+    au < releasing ; 2010 ; Religion and Society Volume 1 ; 1 >
+    au < releasing ; 2011 ; Religion and Society Volume 2 ; 2 >   
   }
 
   {
@@ -598,13 +598,13 @@
     au < ready ; 2003 ; Sartre Studies International Volume 9 ; 9 >
     au < ready ; 2004 ; Sartre Studies International Volume 10 ; 10 >
     au < testing ; 2005 ; Sartre Studies International Volume 11 ; 11 >
-    au < ready ; 2006 ; Sartre Studies International Volume 12 ; 12 >
-    au < ready ; 2007 ; Sartre Studies International Volume 13 ; 13 >
-    au < ready ; 2008 ; Sartre Studies International Volume 14 ; 14 >
-    au < ready ; 2009 ; Sartre Studies International Volume 15 ; 15 >
-    au < ready ; 2010 ; Sartre Studies International Volume 16 ; 16 >
-    au < ready ; 2011 ; Sartre Studies International Volume 17 ; 17 >
-    au < ready ; 2012 ; Sartre Studies International Volume 18 ; 18 >
+    au < releasing ; 2006 ; Sartre Studies International Volume 12 ; 12 >
+    au < releasing ; 2007 ; Sartre Studies International Volume 13 ; 13 >
+    au < releasing ; 2008 ; Sartre Studies International Volume 14 ; 14 >
+    au < releasing ; 2009 ; Sartre Studies International Volume 15 ; 15 >
+    au < releasing ; 2010 ; Sartre Studies International Volume 16 ; 16 >
+    au < releasing ; 2011 ; Sartre Studies International Volume 17 ; 17 >
+    au < releasing ; 2012 ; Sartre Studies International Volume 18 ; 18 >
     
   }
 
@@ -619,16 +619,16 @@
     param[journal_id] = sibiric
     param[journal_issn] = 1361-7362
        
-    au < ready ; 2002 ; Sibirica Volume 2 ; 2 >
-    au < ready ; 2003 ; Sibirica Volume 3 ; 3 >
-    au < ready ; 2004 ; Sibirica Volume 4 ; 4 >
-    au < ready ; 2006 ; Sibirica Volume 5 ; 5 >
-    au < ready ; 2007 ; Sibirica Volume 6 ; 6 >
-    au < ready ; 2008 ; Sibirica Volume 7 ; 7 >
-    au < ready ; 2009 ; Sibirica Volume 8 ; 8 >
-    au < ready ; 2010 ; Sibirica Volume 9 ; 9 >
-    au < ready ; 2011 ; Sibirica Volume 10 ; 10 >
-    au < ready ; 2012 ; Sibirica Volume 11 ; 11 >
+    au < releasing ; 2002 ; Sibirica Volume 2 ; 2 >
+    au < releasing ; 2003 ; Sibirica Volume 3 ; 3 >
+    au < releasing ; 2004 ; Sibirica Volume 4 ; 4 >
+    au < releasing ; 2006 ; Sibirica Volume 5 ; 5 >
+    au < releasing ; 2007 ; Sibirica Volume 6 ; 6 >
+    au < releasing ; 2008 ; Sibirica Volume 7 ; 7 >
+    au < releasing ; 2009 ; Sibirica Volume 8 ; 8 >
+    au < releasing ; 2010 ; Sibirica Volume 9 ; 9 >
+    au < releasing ; 2011 ; Sibirica Volume 10 ; 10 >
+    au < releasing ; 2012 ; Sibirica Volume 11 ; 11 >
     
   }
 
@@ -643,17 +643,17 @@
     param[journal_id] = socan
     param[journal_issn] = 0155-977X
         
-    au < ready ; 2002 ; Social Analsysis Volume 46 ; 46 >
-    au < ready ; 2003 ; Social Analsysis Volume 47 ; 47 >
-    au < ready ; 2004 ; Social Analsysis Volume 48 ; 48 >
-    au < ready ; 2005 ; Social Analsysis Volume 49 ; 49 >
-    au < ready ; 2006 ; Social Analsysis Volume 50 ; 50 >
-    au < ready ; 2007 ; Social Analsysis Volume 51 ; 51 >
-    au < ready ; 2008 ; Social Analsysis Volume 52 ; 52 >
-    au < ready ; 2009 ; Social Analsysis Volume 53 ; 53 >
-    au < ready ; 2010 ; Social Analsysis Volume 54 ; 54 >
-    au < ready ; 2011 ; Social Analsysis Volume 55 ; 55 >
-    au < ready ; 2012 ; Social Analsysis Volume 56 ; 56 >
+    au < releasing ; 2002 ; Social Analsysis Volume 46 ; 46 >
+    au < releasing ; 2003 ; Social Analsysis Volume 47 ; 47 >
+    au < releasing ; 2004 ; Social Analsysis Volume 48 ; 48 >
+    au < releasing ; 2005 ; Social Analsysis Volume 49 ; 49 >
+    au < releasing ; 2006 ; Social Analsysis Volume 50 ; 50 >
+    au < releasing ; 2007 ; Social Analsysis Volume 51 ; 51 >
+    au < releasing ; 2008 ; Social Analsysis Volume 52 ; 52 >
+    au < releasing ; 2009 ; Social Analsysis Volume 53 ; 53 >
+    au < releasing ; 2010 ; Social Analsysis Volume 54 ; 54 >
+    au < releasing ; 2011 ; Social Analsysis Volume 55 ; 55 >
+    au < releasing ; 2012 ; Social Analsysis Volume 56 ; 56 >
     
   }
 

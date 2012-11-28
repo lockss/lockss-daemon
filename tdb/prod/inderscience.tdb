@@ -6730,7 +6730,7 @@
       au < released ;1997 ; International Journal of Technology Management Volume 13 ; 13 >
       au < released ;1997 ; International Journal of Technology Management Volume 14 ; 14 >
       au < released ;1998 ; International Journal of Technology Management Volume 15 ; 15 >
-      au < ready ;1998 ; International Journal of Technology Management Volume 16 ; 16 >
+      au < releasing ;1998 ; International Journal of Technology Management Volume 16 ; 16 >
       au < released ;1999 ; International Journal of Technology Management Volume 17 ; 17 >
       au < released ;1999 ; International Journal of Technology Management Volume 18 ; 18 >
       au < released ;2000 ; International Journal of Technology Management Volume 19 ; 19 >
@@ -6824,15 +6824,15 @@
 
       param[journal_issn] = 1741-5284
       
-      au < ready ; 2002 ; International Journal of Technology Transfer and Commercialisation Volume 1 ; 1 >
-      au < ready ; 2003 ; International Journal of Technology Transfer and Commercialisation Volume 2 ; 2 >
-      au < ready ; 2004 ; International Journal of Technology Transfer and Commercialisation Volume 3 ; 3 >
-      au < ready ; 2005 ; International Journal of Technology Transfer and Commercialisation Volume 4 ; 4 >
-      au < ready ; 2006 ; International Journal of Technology Transfer and Commercialisation Volume 5 ; 5 >
-      au < ready ; 2007 ; International Journal of Technology Transfer and Commercialisation Volume 6 ; 6 >
-      au < ready ; 2008 ; International Journal of Technology Transfer and Commercialisation Volume 7 ; 7 >
-      au < ready ; 2009 ; International Journal of Technology Transfer and Commercialisation Volume 8 ; 8 >
-      au < ready ; 2010 ; International Journal of Technology Transfer and Commercialisation Volume 9 ; 9 >
+      au < releasing ; 2002 ; International Journal of Technology Transfer and Commercialisation Volume 1 ; 1 >
+      au < releasing ; 2003 ; International Journal of Technology Transfer and Commercialisation Volume 2 ; 2 >
+      au < releasing ; 2004 ; International Journal of Technology Transfer and Commercialisation Volume 3 ; 3 >
+      au < releasing ; 2005 ; International Journal of Technology Transfer and Commercialisation Volume 4 ; 4 >
+      au < releasing ; 2006 ; International Journal of Technology Transfer and Commercialisation Volume 5 ; 5 >
+      au < releasing ; 2007 ; International Journal of Technology Transfer and Commercialisation Volume 6 ; 6 >
+      au < releasing ; 2008 ; International Journal of Technology Transfer and Commercialisation Volume 7 ; 7 >
+      au < releasing ; 2009 ; International Journal of Technology Transfer and Commercialisation Volume 8 ; 8 >
+      au < releasing ; 2010 ; International Journal of Technology Transfer and Commercialisation Volume 9 ; 9 >
       au < released ; 2011 ; International Journal of Technology Transfer and Commercialisation Volume 10 ; 10 >
       au < released ; 2012 ; International Journal of Technology Transfer and Commercialisation Volume 11 ; 11 >
 
@@ -6849,16 +6849,16 @@
 
       param[journal_issn] = 1741-5292
       
-      au < ready ; 2001 ; International Journal of Technology, Policy and Management Volume 1 ; 1 >
-      au < ready ; 2002 ; International Journal of Technology, Policy and Management Volume 2 ; 2 >
-      au < ready ; 2003 ; International Journal of Technology, Policy and Management Volume 3 ; 3 >
-      au < ready ; 2004 ; International Journal of Technology, Policy and Management Volume 4 ; 4 >
-      au < ready ; 2005 ; International Journal of Technology, Policy and Management Volume 5 ; 5 >
-      au < ready ; 2006 ; International Journal of Technology, Policy and Management Volume 6 ; 6 >
-      au < ready ; 2007 ; International Journal of Technology, Policy and Management Volume 7 ; 7 >
-      au < ready ; 2008 ; International Journal of Technology, Policy and Management Volume 8 ; 8 >
-      au < ready ; 2009 ; International Journal of Technology, Policy and Management Volume 9 ; 9 >
-      au < ready ; 2010 ; International Journal of Technology, Policy and Management Volume 10 ; 10 >
+      au < releasing ; 2001 ; International Journal of Technology, Policy and Management Volume 1 ; 1 >
+      au < releasing ; 2002 ; International Journal of Technology, Policy and Management Volume 2 ; 2 >
+      au < releasing ; 2003 ; International Journal of Technology, Policy and Management Volume 3 ; 3 >
+      au < releasing ; 2004 ; International Journal of Technology, Policy and Management Volume 4 ; 4 >
+      au < releasing ; 2005 ; International Journal of Technology, Policy and Management Volume 5 ; 5 >
+      au < releasing ; 2006 ; International Journal of Technology, Policy and Management Volume 6 ; 6 >
+      au < releasing ; 2007 ; International Journal of Technology, Policy and Management Volume 7 ; 7 >
+      au < releasing ; 2008 ; International Journal of Technology, Policy and Management Volume 8 ; 8 >
+      au < releasing ; 2009 ; International Journal of Technology, Policy and Management Volume 9 ; 9 >
+      au < releasing ; 2010 ; International Journal of Technology, Policy and Management Volume 10 ; 10 >
       au < released ; 2011 ; International Journal of Technology, Policy and Management Volume 11 ; 11 >
       au < released ; 2012 ; International Journal of Technology, Policy and Management Volume 12 ; 12 >
 
@@ -6890,7 +6890,7 @@
 
       param[journal_issn] = 1756-0004
       
-      au < ready ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 >
+      au < releasing ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 >
       au < released ; 2011 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 >
 
     }
@@ -6922,9 +6922,9 @@
 
       param[journal_issn] = 1750-4104
       
-      au < ready ; 2007-2008 ; International Journal of Tourism Policy Volume 1 ; 1 >
-      au < ready ; 2009 ; International Journal of Tourism Policy Volume 2 ; 2 >
-      au < ready ; 2010 ; International Journal of Tourism Policy Volume 3 ; 3 >
+      au < releasing ; 2007-2008 ; International Journal of Tourism Policy Volume 1 ; 1 >
+      au < releasing ; 2009 ; International Journal of Tourism Policy Volume 2 ; 2 >
+      au < releasing ; 2010 ; International Journal of Tourism Policy Volume 3 ; 3 >
       au < released ; 2011 ; International Journal of Tourism Policy Volume 4 ; 4 >
 
     }
@@ -6940,9 +6940,9 @@
 
       param[journal_issn] = 1742-755X
       
-      au < ready ; 2007-2008 ; International Journal of Trade and Global Markets Volume 1 ; 1 >
-      au < ready ; 2009 ; International Journal of Trade and Global Markets Volume 2 ; 2 >
-      au < ready ; 2010 ; International Journal of Trade and Global Markets Volume 3 ; 3 >
+      au < releasing ; 2007-2008 ; International Journal of Trade and Global Markets Volume 1 ; 1 >
+      au < releasing ; 2009 ; International Journal of Trade and Global Markets Volume 2 ; 2 >
+      au < releasing ; 2010 ; International Journal of Trade and Global Markets Volume 3 ; 3 >
       au < released ; 2011 ; International Journal of Trade and Global Markets Volume 4 ; 4 >
       au < released ; 2012 ; International Journal of Trade and Global Markets Volume 5 ; 5 >
 
@@ -6990,7 +6990,7 @@
 
       param[journal_issn] = 1758-7298
       
-      au < ready ; 2009-2010 ; International Journal of Ultra Wideband Communications and Systems Volume 1 ; 1 >
+      au < releasing ; 2009-2010 ; International Journal of Ultra Wideband Communications and Systems Volume 1 ; 1 >
       au < released ; 2011 ; International Journal of Ultra Wideband Communications and Systems Volume 2 ; 2 > 
 
     }
@@ -7006,10 +7006,10 @@
 
       param[journal_issn] = 1741-5365
       
-      au < ready ; 2006-2007 ; International Journal of Value Chain Management Volume 1 ; 1 >
-      au < ready ; 2008 ; International Journal of Value Chain Management Volume 2 ; 2 >
-      au < ready ; 2009 ; International Journal of Value Chain Management Volume 3 ; 3 >
-      au < ready ; 2010 ; International Journal of Value Chain Management Volume 4 ; 4 >
+      au < releasing ; 2006-2007 ; International Journal of Value Chain Management Volume 1 ; 1 >
+      au < releasing ; 2008 ; International Journal of Value Chain Management Volume 2 ; 2 >
+      au < releasing ; 2009 ; International Journal of Value Chain Management Volume 3 ; 3 >
+      au < releasing ; 2010 ; International Journal of Value Chain Management Volume 4 ; 4 >
       au < released ; 2011 ; International Journal of Value Chain Management Volume 5 ; 5 >
       au < released ; 2012 ; International Journal of Value Chain Management Volume 6 ; 6 >
 
@@ -7026,14 +7026,14 @@
 
       param[journal_issn] = 1741-5306
       
-      au < ready ; 2002-2003 ; International Journal of Vehicle Autonomous Systems Volume 1 ; 1 >
-      au < ready ; 2004 ; International Journal of Vehicle Autonomous Systems Volume 2 ; 2 >
-      au < ready ; 2005 ; International Journal of Vehicle Autonomous Systems Volume 3 ; 3 >
-      au < ready ; 2006 ; International Journal of Vehicle Autonomous Systems Volume 4 ; 4 >
-      au < ready ; 2007 ; International Journal of Vehicle Autonomous Systems Volume 5 ; 5 >
-      au < ready ; 2008 ; International Journal of Vehicle Autonomous Systems Volume 6 ; 6 >
-      au < ready ; 2009 ; International Journal of Vehicle Autonomous Systems Volume 7 ; 7 >
-      au < ready ; 2010 ; International Journal of Vehicle Autonomous Systems Volume 8 ; 8 >
+      au < releasing ; 2002-2003 ; International Journal of Vehicle Autonomous Systems Volume 1 ; 1 >
+      au < releasing ; 2004 ; International Journal of Vehicle Autonomous Systems Volume 2 ; 2 >
+      au < releasing ; 2005 ; International Journal of Vehicle Autonomous Systems Volume 3 ; 3 >
+      au < releasing ; 2006 ; International Journal of Vehicle Autonomous Systems Volume 4 ; 4 >
+      au < releasing ; 2007 ; International Journal of Vehicle Autonomous Systems Volume 5 ; 5 >
+      au < releasing ; 2008 ; International Journal of Vehicle Autonomous Systems Volume 6 ; 6 >
+      au < releasing ; 2009 ; International Journal of Vehicle Autonomous Systems Volume 7 ; 7 >
+      au < releasing ; 2010 ; International Journal of Vehicle Autonomous Systems Volume 8 ; 8 >
       au < released ; 2011 ; International Journal of Vehicle Autonomous Systems Volume 9 ; 9 >
       au < released ; 2012 ; International Journal of Vehicle Autonomous Systems Volume 10 ; 10 >
 
@@ -7050,41 +7050,41 @@
 
       param[journal_issn] = 1741-5314
       
-      au < ready ; 1998 ; International Journal of Vehicle Design Volume 20 ; 20 >
-      au < ready ; 1999 ; International Journal of Vehicle Design Volume 21 ; 21 >
-      au < ready ; 1999 ; International Journal of Vehicle Design Volume 22 ; 22 >
-      au < ready ; 2000 ; International Journal of Vehicle Design Volume 23 ; 23 >
-      au < ready ; 2000 ; International Journal of Vehicle Design Volume 24 ; 24 >
-      au < ready ; 2001 ; International Journal of Vehicle Design Volume 25 ; 25 >
-      au < ready ; 2001 ; International Journal of Vehicle Design Volume 26 ; 26 >
-      au < ready ; 2001 ; International Journal of Vehicle Design Volume 27 ; 27 >
-      au < ready ; 2002 ; International Journal of Vehicle Design Volume 28 ; 28 >
-      au < ready ; 2002 ; International Journal of Vehicle Design Volume 29 ; 29 >
-      au < ready ; 2002 ; International Journal of Vehicle Design Volume 30 ; 30 >
-      au < ready ; 2003 ; International Journal of Vehicle Design Volume 31 ; 31 >
-      au < ready ; 2003 ; International Journal of Vehicle Design Volume 32 ; 32 >
-      au < ready ; 2003 ; International Journal of Vehicle Design Volume 33 ; 33 >
-      au < ready ; 2004 ; International Journal of Vehicle Design Volume 34 ; 34 >
-      au < ready ; 2004 ; International Journal of Vehicle Design Volume 35 ; 35 >
-      au < ready ; 2004 ; International Journal of Vehicle Design Volume 36 ; 36 >
-      au < ready ; 2005 ; International Journal of Vehicle Design Volume 37 ; 37 >
-      au < ready ; 2005 ; International Journal of Vehicle Design Volume 38 ; 38 >
-      au < ready ; 2005 ; International Journal of Vehicle Design Volume 39 ; 39 >
-      au < ready ; 2006 ; International Journal of Vehicle Design Volume 40 ; 40 >
-      au < ready ; 2006 ; International Journal of Vehicle Design Volume 41 ; 41 >
-      au < ready ; 2006 ; International Journal of Vehicle Design Volume 42 ; 42 >
-      au < ready ; 2007 ; International Journal of Vehicle Design Volume 43 ; 43 >
-      au < ready ; 2007 ; International Journal of Vehicle Design Volume 44 ; 44 >
-      au < ready ; 2007 ; International Journal of Vehicle Design Volume 45 ; 45 >
-      au < ready ; 2008 ; International Journal of Vehicle Design Volume 46 ; 46 >
-      au < ready ; 2008 ; International Journal of Vehicle Design Volume 47 ; 47 >
-      au < ready ; 2008 ; International Journal of Vehicle Design Volume 48 ; 48 >
-      au < ready ; 2009 ; International Journal of Vehicle Design Volume 49 ; 49 >
-      au < ready ; 2009 ; International Journal of Vehicle Design Volume 50 ; 50 >
-      au < ready ; 2009 ; International Journal of Vehicle Design Volume 51 ; 51 >
-      au < ready ; 2010 ; International Journal of Vehicle Design Volume 52 ; 52 >
-      au < ready ; 2010 ; International Journal of Vehicle Design Volume 53 ; 53 >
-      au < ready ; 2010 ; International Journal of Vehicle Design Volume 54 ; 54 >
+      au < releasing ; 1998 ; International Journal of Vehicle Design Volume 20 ; 20 >
+      au < releasing ; 1999 ; International Journal of Vehicle Design Volume 21 ; 21 >
+      au < releasing ; 1999 ; International Journal of Vehicle Design Volume 22 ; 22 >
+      au < releasing ; 2000 ; International Journal of Vehicle Design Volume 23 ; 23 >
+      au < releasing ; 2000 ; International Journal of Vehicle Design Volume 24 ; 24 >
+      au < releasing ; 2001 ; International Journal of Vehicle Design Volume 25 ; 25 >
+      au < releasing ; 2001 ; International Journal of Vehicle Design Volume 26 ; 26 >
+      au < releasing ; 2001 ; International Journal of Vehicle Design Volume 27 ; 27 >
+      au < releasing ; 2002 ; International Journal of Vehicle Design Volume 28 ; 28 >
+      au < releasing ; 2002 ; International Journal of Vehicle Design Volume 29 ; 29 >
+      au < releasing ; 2002 ; International Journal of Vehicle Design Volume 30 ; 30 >
+      au < releasing ; 2003 ; International Journal of Vehicle Design Volume 31 ; 31 >
+      au < releasing ; 2003 ; International Journal of Vehicle Design Volume 32 ; 32 >
+      au < releasing ; 2003 ; International Journal of Vehicle Design Volume 33 ; 33 >
+      au < releasing ; 2004 ; International Journal of Vehicle Design Volume 34 ; 34 >
+      au < releasing ; 2004 ; International Journal of Vehicle Design Volume 35 ; 35 >
+      au < releasing ; 2004 ; International Journal of Vehicle Design Volume 36 ; 36 >
+      au < releasing ; 2005 ; International Journal of Vehicle Design Volume 37 ; 37 >
+      au < releasing ; 2005 ; International Journal of Vehicle Design Volume 38 ; 38 >
+      au < releasing ; 2005 ; International Journal of Vehicle Design Volume 39 ; 39 >
+      au < releasing ; 2006 ; International Journal of Vehicle Design Volume 40 ; 40 >
+      au < releasing ; 2006 ; International Journal of Vehicle Design Volume 41 ; 41 >
+      au < releasing ; 2006 ; International Journal of Vehicle Design Volume 42 ; 42 >
+      au < releasing ; 2007 ; International Journal of Vehicle Design Volume 43 ; 43 >
+      au < releasing ; 2007 ; International Journal of Vehicle Design Volume 44 ; 44 >
+      au < releasing ; 2007 ; International Journal of Vehicle Design Volume 45 ; 45 >
+      au < releasing ; 2008 ; International Journal of Vehicle Design Volume 46 ; 46 >
+      au < releasing ; 2008 ; International Journal of Vehicle Design Volume 47 ; 47 >
+      au < releasing ; 2008 ; International Journal of Vehicle Design Volume 48 ; 48 >
+      au < releasing ; 2009 ; International Journal of Vehicle Design Volume 49 ; 49 >
+      au < releasing ; 2009 ; International Journal of Vehicle Design Volume 50 ; 50 >
+      au < releasing ; 2009 ; International Journal of Vehicle Design Volume 51 ; 51 >
+      au < releasing ; 2010 ; International Journal of Vehicle Design Volume 52 ; 52 >
+      au < releasing ; 2010 ; International Journal of Vehicle Design Volume 53 ; 53 >
+      au < releasing ; 2010 ; International Journal of Vehicle Design Volume 54 ; 54 >
       au < released ; 2011 ; International Journal of Vehicle Design Volume 55 ; 55 >
       au < released ; 2011 ; International Journal of Vehicle Design Volume 56 ; 56 >
       au < released ; 2011 ; International Journal of Vehicle Design Volume 57 ; 57 >
@@ -7104,8 +7104,8 @@
 
       param[journal_issn] = 1741-8208
       
-      au < ready ; 2005-2008 ; International Journal of Vehicle Information and Communication Systems Volume 1 ; 1 >
-      au < ready ; 2009-2011 ; International Journal of Vehicle Information and Communication Systems Volume 2 ; 2 >
+      au < releasing ; 2005-2008 ; International Journal of Vehicle Information and Communication Systems Volume 1 ; 1 >
+      au < releasing ; 2009-2011 ; International Journal of Vehicle Information and Communication Systems Volume 2 ; 2 >
 
     }
 
@@ -7120,12 +7120,12 @@
 
       param[journal_issn] = 1479-1471
       
-      au < ready ; 2004-2005 ; International Journal of Vehicle Noise and Vibration Volume 1 ; 1 >
-      au < ready ; 2006 ; International Journal of Vehicle Noise and Vibration Volume 2 ; 2 >
-      au < ready ; 2007 ; International Journal of Vehicle Noise and Vibration Volume 3 ; 3 >
-      au < ready ; 2008 ; International Journal of Vehicle Noise and Vibration Volume 4 ; 4 >
-      au < ready ; 2009 ; International Journal of Vehicle Noise and Vibration Volume 5 ; 5 >
-      au < ready ; 2010 ; International Journal of Vehicle Noise and Vibration Volume 6 ; 6 >
+      au < releasing ; 2004-2005 ; International Journal of Vehicle Noise and Vibration Volume 1 ; 1 >
+      au < releasing ; 2006 ; International Journal of Vehicle Noise and Vibration Volume 2 ; 2 >
+      au < releasing ; 2007 ; International Journal of Vehicle Noise and Vibration Volume 3 ; 3 >
+      au < releasing ; 2008 ; International Journal of Vehicle Noise and Vibration Volume 4 ; 4 >
+      au < releasing ; 2009 ; International Journal of Vehicle Noise and Vibration Volume 5 ; 5 >
+      au < releasing ; 2010 ; International Journal of Vehicle Noise and Vibration Volume 6 ; 6 >
       au < released ; 2011 ; International Journal of Vehicle Noise and Vibration Volume 7 ; 7 >
 
     }
@@ -7156,10 +7156,10 @@
 
       param[journal_issn] = 1479-3113
       
-      au < ready ; 2005-2006 ; International Journal of Vehicle Safety Volume 1 ; 1 >
-      au < ready ; 2007 ; International Journal of Vehicle Safety Volume 2 ; 2 >
-      au < ready ; 2008 ; International Journal of Vehicle Safety Volume 3 ; 3 >
-      au < ready ; 2009 ; International Journal of Vehicle Safety Volume 4 ; 4 >
+      au < releasing ; 2005-2006 ; International Journal of Vehicle Safety Volume 1 ; 1 >
+      au < releasing ; 2007 ; International Journal of Vehicle Safety Volume 2 ; 2 >
+      au < releasing ; 2008 ; International Journal of Vehicle Safety Volume 3 ; 3 >
+      au < releasing ; 2009 ; International Journal of Vehicle Safety Volume 4 ; 4 >
       au < released ; 2010-2011 ; International Journal of Vehicle Safety Volume 5 ; 5 >
 
     }
@@ -7175,11 +7175,11 @@
 
       param[journal_issn] = 1745-6444
       
-      au < ready ; 2005-2006 ; International Journal of Vehicle Systems Modelling and Testing Volume 1 ; 1 >
-      au < ready ; 2007 ; International Journal of Vehicle Systems Modelling and Testing Volume 2 ; 2 >
-      au < ready ; 2008 ; International Journal of Vehicle Systems Modelling and Testing Volume 3 ; 3 >
-      au < ready ; 2009 ; International Journal of Vehicle Systems Modelling and Testing Volume 4 ; 4 >
-      au < ready ; 2010 ; International Journal of Vehicle Systems Modelling and Testing Volume 5 ; 5 >
+      au < releasing ; 2005-2006 ; International Journal of Vehicle Systems Modelling and Testing Volume 1 ; 1 >
+      au < releasing ; 2007 ; International Journal of Vehicle Systems Modelling and Testing Volume 2 ; 2 >
+      au < releasing ; 2008 ; International Journal of Vehicle Systems Modelling and Testing Volume 3 ; 3 >
+      au < releasing ; 2009 ; International Journal of Vehicle Systems Modelling and Testing Volume 4 ; 4 >
+      au < releasing ; 2010 ; International Journal of Vehicle Systems Modelling and Testing Volume 5 ; 5 >
       au < released ; 2011 ; International Journal of Vehicle Systems Modelling and Testing Volume 6 ; 6 >
       au < released ; 2012 ; International Journal of Vehicle Systems Modelling and Testing Volume 7 ; 7 >
 
@@ -7196,7 +7196,7 @@
 
       param[journal_issn] = 1741-1882
       
-      au < ready ; 2008-2010 ; International Journal of Virtual Technology and Multimedia Volume 1 ; 1 >
+      au < releasing ; 2008-2010 ; International Journal of Virtual Technology and Multimedia Volume 1 ; 1 >
 
     }
 
@@ -7211,11 +7211,11 @@
 
       param[journal_issn] = 1741-5322
       
-      au < ready ; 2000-2001 ; International Journal of Water Volume 1 ; 1 >
-      au < ready ; 2002-2004 ; International Journal of Water Volume 2 ; 2 >
-      au < ready ; 2005-2007 ; International Journal of Water Volume 3 ; 3 >
-      au < ready ; 2008 ; International Journal of Water Volume 4 ; 4 >
-      au < ready ; 2009-2010 ; International Journal of Water Volume 5 ; 5 >
+      au < releasing ; 2000-2001 ; International Journal of Water Volume 1 ; 1 >
+      au < releasing ; 2002-2004 ; International Journal of Water Volume 2 ; 2 >
+      au < releasing ; 2005-2007 ; International Journal of Water Volume 3 ; 3 >
+      au < releasing ; 2008 ; International Journal of Water Volume 4 ; 4 >
+      au < releasing ; 2009-2010 ; International Journal of Water Volume 5 ; 5 >
       au < released ; 2011 ; International Journal of Water Volume 6 ; 6 >
 
     }
@@ -7231,12 +7231,12 @@
 
       param[journal_issn] = 1741-1114
       
-      au < ready ; 2005 ; International Journal of Web and Grid Services Volume 1 ; 1 >
-      au < ready ; 2006 ; International Journal of Web and Grid Services Volume 2 ; 2 >
-      au < ready ; 2007 ; International Journal of Web and Grid Services Volume 3 ; 3 >
-      au < ready ; 2008 ; International Journal of Web and Grid Services Volume 4 ; 4 >
-      au < ready ; 2009 ; International Journal of Web and Grid Services Volume 5 ; 5 >
-      au < ready ; 2010 ; International Journal of Web and Grid Services Volume 6 ; 6 >
+      au < releasing ; 2005 ; International Journal of Web and Grid Services Volume 1 ; 1 >
+      au < releasing ; 2006 ; International Journal of Web and Grid Services Volume 2 ; 2 >
+      au < releasing ; 2007 ; International Journal of Web and Grid Services Volume 3 ; 3 >
+      au < releasing ; 2008 ; International Journal of Web and Grid Services Volume 4 ; 4 >
+      au < releasing ; 2009 ; International Journal of Web and Grid Services Volume 5 ; 5 >
+      au < releasing ; 2010 ; International Journal of Web and Grid Services Volume 6 ; 6 >
       au < released ; 2011 ; International Journal of Web and Grid Services Volume 7 ; 7 >
       au < released ; 2012 ; International Journal of Web and Grid Services Volume 8 ; 8 >
 
@@ -7253,12 +7253,12 @@
 
       param[journal_issn] = 1741-8216
       
-      au < ready ; 2004-2005 ; International Journal of Web Based Communities Volume 1 ; 1 >
-      au < ready ; 2006 ; International Journal of Web Based Communities Volume 2 ; 2 >
-      au < ready ; 2007 ; International Journal of Web Based Communities Volume 3 ; 3 >
-      au < ready ; 2008 ; International Journal of Web Based Communities Volume 4 ; 4 >
-      au < ready ; 2009 ; International Journal of Web Based Communities Volume 5 ; 5 >
-      au < ready ; 2010 ; International Journal of Web Based Communities Volume 6 ; 6 >
+      au < releasing ; 2004-2005 ; International Journal of Web Based Communities Volume 1 ; 1 >
+      au < releasing ; 2006 ; International Journal of Web Based Communities Volume 2 ; 2 >
+      au < releasing ; 2007 ; International Journal of Web Based Communities Volume 3 ; 3 >
+      au < releasing ; 2008 ; International Journal of Web Based Communities Volume 4 ; 4 >
+      au < releasing ; 2009 ; International Journal of Web Based Communities Volume 5 ; 5 >
+      au < releasing ; 2010 ; International Journal of Web Based Communities Volume 6 ; 6 >
       au < released ; 2011 ; International Journal of Web Based Communities Volume 7 ; 7 >
       au < released ; 2012 ; International Journal of Web Based Communities Volume 8 ; 8 >
 
@@ -7275,11 +7275,11 @@
 
       param[journal_issn] = 1741-9212
       
-      au < ready ; 2003-2004 ; International Journal of Web Engineering and Technology Volume 1 ; 1 >
-      au < ready ; 2005-2006 ; International Journal of Web Engineering and Technology Volume 2 ; 2 >
-      au < ready ; 2007 ; International Journal of Web Engineering and Technology Volume 3 ; 3 >
-      au < ready ; 2008 ; International Journal of Web Engineering and Technology Volume 4 ; 4 >
-      au < ready ; 2009 ; International Journal of Web Engineering and Technology Volume 5 ; 5 >
+      au < releasing ; 2003-2004 ; International Journal of Web Engineering and Technology Volume 1 ; 1 >
+      au < releasing ; 2005-2006 ; International Journal of Web Engineering and Technology Volume 2 ; 2 >
+      au < releasing ; 2007 ; International Journal of Web Engineering and Technology Volume 3 ; 3 >
+      au < releasing ; 2008 ; International Journal of Web Engineering and Technology Volume 4 ; 4 >
+      au < releasing ; 2009 ; International Journal of Web Engineering and Technology Volume 5 ; 5 >
       au < released ; 2010-2011 ; International Journal of Web Engineering and Technology Volume 6 ; 6 >
       au < released ; 2012 ; International Journal of Web Engineering and Technology Volume 7 ; 7 >
 
@@ -7311,10 +7311,10 @@
 
       param[journal_issn] = 1741-1092
       
-      au < ready ; 2005-2006 ; International Journal of Wireless and Mobile Computing Volume 1 ; 1 >
-      au < ready ; 2007 ; International Journal of Wireless and Mobile Computing Volume 2 ; 2 >
-      au < ready ; 2008-2009 ; International Journal of Wireless and Mobile Computing Volume 3 ; 3 >
-      au < ready ; 2010 ; International Journal of Wireless and Mobile Computing Volume 4 ; 4 >
+      au < releasing ; 2005-2006 ; International Journal of Wireless and Mobile Computing Volume 1 ; 1 >
+      au < releasing ; 2007 ; International Journal of Wireless and Mobile Computing Volume 2 ; 2 >
+      au < releasing ; 2008-2009 ; International Journal of Wireless and Mobile Computing Volume 3 ; 3 >
+      au < releasing ; 2010 ; International Journal of Wireless and Mobile Computing Volume 4 ; 4 >
       au < released ; 2011-2012 ; International Journal of Wireless and Mobile Computing Volume 5 ; 5 >
 
     }
@@ -7345,9 +7345,9 @@
 
       param[journal_issn] = 1740-8946
       
-      au < ready ; 2005-2006 ; International Journal of Work Organisation and Emotion Volume 1 ; 1 >
-      au < ready ; 2007-2008 ; International Journal of Work Organisation and Emotion Volume 2 ; 2 >
-      au < ready ; 2009-2010 ; International Journal of Work Organisation and Emotion Volume 3 ; 3 >
+      au < releasing ; 2005-2006 ; International Journal of Work Organisation and Emotion Volume 1 ; 1 >
+      au < releasing ; 2007-2008 ; International Journal of Work Organisation and Emotion Volume 2 ; 2 >
+      au < releasing ; 2009-2010 ; International Journal of Work Organisation and Emotion Volume 3 ; 3 >
       au < released ; 2011 ; International Journal of Work Organisation and Emotion Volume 4 ; 4 >
 
     }
@@ -7363,7 +7363,7 @@
 
       param[journal_issn] = 2042-6992
       
-      au < ready ; 2010 ; Interdisciplinary Environmental Review Volume 11 ; 11 >
+      au < releasing ; 2010 ; Interdisciplinary Environmental Review Volume 11 ; 11 >
       au < released ; 2011 ; Interdisciplinary Environmental Review Volume 12 ; 12 >
       au < released ; 2012 ; Interdisciplinary Environmental Review Volume 13 ; 13 >
 
@@ -7380,9 +7380,9 @@
 
       param[journal_issn] = 1746-9678
       
-      au < ready ; 2007-2008 ; Journal for Global Business Advancement Volume 1 ; 1 >
-      au < ready ; 2009 ; Journal for Global Business Advancement Volume 2 ; 2 >
-      au < ready ; 2010 ; Journal for Global Business Advancement Volume 3 ; 3 >
+      au < releasing ; 2007-2008 ; Journal for Global Business Advancement Volume 1 ; 1 >
+      au < releasing ; 2009 ; Journal for Global Business Advancement Volume 2 ; 2 >
+      au < releasing ; 2010 ; Journal for Global Business Advancement Volume 3 ; 3 >
       au < released ; 2011 ; Journal for Global Business Advancement Volume 4 ; 4 >
       au < released ; 2012 ; Journal for Global Business Advancement Volume 5 ; 5 >
 
@@ -7399,10 +7399,10 @@
 
       param[journal_issn] = 1747-6763
       
-      au < ready ; 2003 ; Journal for International Business and Entrepreneurship Development Volume 1 ; 1 >
-      au < ready ; 2004 ; Journal for International Business and Entrepreneurship Development Volume 2 ; 2 >
-      au < ready ; 2006-2008 ; Journal for International Business and Entrepreneurship Development Volume 3 ; 3 >
-      au < ready ; 2009 ; Journal for International Business and Entrepreneurship Development Volume 4 ; 4 >
+      au < releasing ; 2003 ; Journal for International Business and Entrepreneurship Development Volume 1 ; 1 >
+      au < releasing ; 2004 ; Journal for International Business and Entrepreneurship Development Volume 2 ; 2 >
+      au < releasing ; 2006-2008 ; Journal for International Business and Entrepreneurship Development Volume 3 ; 3 >
+      au < releasing ; 2009 ; Journal for International Business and Entrepreneurship Development Volume 4 ; 4 >
       au < released ; 2010-2011 ; Journal for International Business and Entrepreneurship Development Volume 5 ; 5 >
       au < released ; 2012 ; Journal for International Business and Entrepreneurship Development Volume 6 ; 6 >
 
@@ -7423,10 +7423,10 @@
       au < exists ; 2002 ; Journal of Design Research Volume 2 ; 2 >
       au < exists ; 2003 ; Journal of Design Research Volume 3 ; 3 >
       au < exists ; 2004 ; Journal of Design Research Volume 4 ; 4 >
-      au < ready ; 2006-2007 ; Journal of Design Research Volume 5 ; 5 >
-      au < ready ; 2007 ; Journal of Design Research Volume 6 ; 6 >
-      au < ready ; 2008 ; Journal of Design Research Volume 7 ; 7 >
-      au < ready ; 2009-2010 ; Journal of Design Research Volume 8 ; 8 >
+      au < releasing ; 2006-2007 ; Journal of Design Research Volume 5 ; 5 >
+      au < releasing ; 2007 ; Journal of Design Research Volume 6 ; 6 >
+      au < releasing ; 2008 ; Journal of Design Research Volume 7 ; 7 >
+      au < releasing ; 2009-2010 ; Journal of Design Research Volume 8 ; 8 >
       au < released ; 2011 ; Journal of Design Research Volume 9 ; 9 >
       au < released ; 2012 ; Journal of Design Research Volume 10 ; 10 >
 
@@ -7458,16 +7458,16 @@
 
       param[journal_issn] = 1741-5233
       
-      au < ready ; 2001 ; Progress in Computational Fluid Dynamics, An International Journal Volume 1 ; 1 >
-      au < ready ; 2002 ; Progress in Computational Fluid Dynamics, An International Journal Volume 2 ; 2 >
-      au < ready ; 2003 ; Progress in Computational Fluid Dynamics, An International Journal Volume 3 ; 3 >
-      au < ready ; 2004 ; Progress in Computational Fluid Dynamics, An International Journal Volume 4 ; 4 >
-      au < ready ; 2005 ; Progress in Computational Fluid Dynamics, An International Journal Volume 5 ; 5 >
-      au < ready ; 2006 ; Progress in Computational Fluid Dynamics, An International Journal Volume 6 ; 6 >
-      au < ready ; 2007 ; Progress in Computational Fluid Dynamics, An International Journal Volume 7 ; 7 >
-      au < ready ; 2008 ; Progress in Computational Fluid Dynamics, An International Journal Volume 8 ; 8 >
-      au < ready ; 2009 ; Progress in Computational Fluid Dynamics, An International Journal Volume 9 ; 9 >
-      au < ready ; 2010 ; Progress in Computational Fluid Dynamics, An International Journal Volume 10 ; 10 >
+      au < releasing ; 2001 ; Progress in Computational Fluid Dynamics, An International Journal Volume 1 ; 1 >
+      au < releasing ; 2002 ; Progress in Computational Fluid Dynamics, An International Journal Volume 2 ; 2 >
+      au < releasing ; 2003 ; Progress in Computational Fluid Dynamics, An International Journal Volume 3 ; 3 >
+      au < releasing ; 2004 ; Progress in Computational Fluid Dynamics, An International Journal Volume 4 ; 4 >
+      au < releasing ; 2005 ; Progress in Computational Fluid Dynamics, An International Journal Volume 5 ; 5 >
+      au < releasing ; 2006 ; Progress in Computational Fluid Dynamics, An International Journal Volume 6 ; 6 >
+      au < releasing ; 2007 ; Progress in Computational Fluid Dynamics, An International Journal Volume 7 ; 7 >
+      au < releasing ; 2008 ; Progress in Computational Fluid Dynamics, An International Journal Volume 8 ; 8 >
+      au < releasing ; 2009 ; Progress in Computational Fluid Dynamics, An International Journal Volume 9 ; 9 >
+      au < releasing ; 2010 ; Progress in Computational Fluid Dynamics, An International Journal Volume 10 ; 10 >
       au < released ; 2011 ; Progress in Computational Fluid Dynamics, An International Journal Volume 11 ; 11 >
       au < released ; 2012 ; Progress in Computational Fluid Dynamics, An International Journal Volume 12 ; 12 >
 
@@ -7484,13 +7484,13 @@
 
       param[journal_issn] = 1478-8764
       
-      au < ready ; 2004 ; Progress in Industrial Ecology, An International Journal Volume 1 ; 1 >
-      au < ready ; 2005 ; Progress in Industrial Ecology, An International Journal Volume 2 ; 2 >
-      au < ready ; 2006 ; Progress in Industrial Ecology, An International Journal Volume 3 ; 3 >
-      au < ready ; 2007 ; Progress in Industrial Ecology, An International Journal Volume 4 ; 4 >
-      au < ready ; 2008 ; Progress in Industrial Ecology, An International Journal Volume 5 ; 5 >
-      au < ready ; 2009 ; Progress in Industrial Ecology, An International Journal Volume 6 ; 6 >
-      au < ready ; 2010 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 >
+      au < releasing ; 2004 ; Progress in Industrial Ecology, An International Journal Volume 1 ; 1 >
+      au < releasing ; 2005 ; Progress in Industrial Ecology, An International Journal Volume 2 ; 2 >
+      au < releasing ; 2006 ; Progress in Industrial Ecology, An International Journal Volume 3 ; 3 >
+      au < releasing ; 2007 ; Progress in Industrial Ecology, An International Journal Volume 4 ; 4 >
+      au < releasing ; 2008 ; Progress in Industrial Ecology, An International Journal Volume 5 ; 5 >
+      au < releasing ; 2009 ; Progress in Industrial Ecology, An International Journal Volume 6 ; 6 >
+      au < releasing ; 2010 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 >
 
     }
 
@@ -7505,12 +7505,12 @@
 
       param[journal_issn] = 1746-0581
       
-      au < ready ; 2005 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 1 ; 1 >
-      au < ready ; 2006 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 2 ; 2 >
-      au < ready ; 2007 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 3 ; 3 >
-      au < ready ; 2008 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 4 ; 4 >
-      au < ready ; 2009 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 5 ; 5 >
-      au < ready ; 2010 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 >
+      au < releasing ; 2005 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 1 ; 1 >
+      au < releasing ; 2006 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 2 ; 2 >
+      au < releasing ; 2007 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 3 ; 3 >
+      au < releasing ; 2008 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 4 ; 4 >
+      au < releasing ; 2009 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 5 ; 5 >
+      au < releasing ; 2010 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 >
       au < released ; 2011 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 >
       au < released ; 2012 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 8 ; 8 >
 
@@ -7528,7 +7528,7 @@
       param[journal_issn] = 1749-4737
       
       au < testing ; 2006-2007 ; World Review of Intermodal Transportation Research Volume 1 ; 1 >
-      au < ready ; 2008-2009 ; World Review of Intermodal Transportation Research Volume 2 ; 2 >
+      au < releasing ; 2008-2009 ; World Review of Intermodal Transportation Research Volume 2 ; 2 >
       au < released ; 2010-2011 ; World Review of Intermodal Transportation Research Volume 3 ; 3 >
 
     }
@@ -7544,13 +7544,13 @@
 
       param[journal_issn] = 1741-2234
       
-      au < ready ; 2004 ; World Review of Science, Technology and Sustainable Development Volume 1 ; 1 >
-      au < ready ; 2005 ; World Review of Science, Technology and Sustainable Development Volume 2 ; 2 >
-      au < ready ; 2006 ; World Review of Science, Technology and Sustainable Development Volume 3 ; 3 >
-      au < ready ; 2007 ; World Review of Science, Technology and Sustainable Development Volume 4 ; 4 >
-      au < ready ; 2008 ; World Review of Science, Technology and Sustainable Development Volume 5 ; 5 >
-      au < ready ; 2009 ; World Review of Science, Technology and Sustainable Development Volume 6 ; 6 >
-      au < ready ; 2010 ; World Review of Science, Technology and Sustainable Development Volume 7 ; 7 >
+      au < releasing ; 2004 ; World Review of Science, Technology and Sustainable Development Volume 1 ; 1 >
+      au < releasing ; 2005 ; World Review of Science, Technology and Sustainable Development Volume 2 ; 2 >
+      au < releasing ; 2006 ; World Review of Science, Technology and Sustainable Development Volume 3 ; 3 >
+      au < releasing ; 2007 ; World Review of Science, Technology and Sustainable Development Volume 4 ; 4 >
+      au < releasing ; 2008 ; World Review of Science, Technology and Sustainable Development Volume 5 ; 5 >
+      au < releasing ; 2009 ; World Review of Science, Technology and Sustainable Development Volume 6 ; 6 >
+      au < releasing ; 2010 ; World Review of Science, Technology and Sustainable Development Volume 7 ; 7 >
       au < released ; 2010-2011 ; World Review of Science, Technology and Sustainable Development Volume 8 ; 8 >
       au < released ; 2012 ; World Review of Science, Technology and Sustainable Development Volume 9 ; 9 >
 

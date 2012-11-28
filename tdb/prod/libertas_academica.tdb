@@ -20,7 +20,7 @@
 
     param[journal_id] = 132
 
-    au < ready ; 2009 ; Advances in Tumor Virology Volume 1 ; 2009 >
+    au < releasing ; 2009 ; Advances in Tumor Virology Volume 1 ; 2009 >
     au < released ; 2011 ; Advances in Tumor Virology Volume 2 ; 2011 >
 
   }
@@ -35,9 +35,9 @@
 
     param[journal_id] = 99
 
-    au < ready ; 2008 ; Air, Soil & Water Research Volume 1 ; 2008 >
-    au < ready ; 2009 ; Air, Soil & Water Research Volume 2 ; 2009 >
-    au < ready ; 2010 ; Air, Soil & Water Research Volume 3 ; 2010 >
+    au < releasing ; 2008 ; Air, Soil & Water Research Volume 1 ; 2008 >
+    au < releasing ; 2009 ; Air, Soil & Water Research Volume 2 ; 2009 >
+    au < releasing ; 2010 ; Air, Soil & Water Research Volume 3 ; 2010 >
     au < released ; 2011 ; Air, Soil & Water Research Volume 4 ; 2011 >
     au < released ; 2012 ; Air, Soil & Water Research Volume 5 ; 2012 >
 
@@ -53,10 +53,10 @@
 
     param[journal_id] = 1
 
-    au < ready ; 2007 ; Analytical Chemistry Insights Volume 1-2 ; 2007 >
-    au < ready ; 2008 ; Analytical Chemistry Insights Volume 3 ; 2008 >
-    au < ready ; 2009 ; Analytical Chemistry Insights Volume 4 ; 2009 >
-    au < ready ; 2010 ; Analytical Chemistry Insights Volume 5 ; 2010 >
+    au < releasing ; 2007 ; Analytical Chemistry Insights Volume 1-2 ; 2007 >
+    au < releasing ; 2008 ; Analytical Chemistry Insights Volume 3 ; 2008 >
+    au < releasing ; 2009 ; Analytical Chemistry Insights Volume 4 ; 2009 >
+    au < releasing ; 2010 ; Analytical Chemistry Insights Volume 5 ; 2010 >
     au < released ; 2011 ; Analytical Chemistry Insights Volume 6 ; 2011 >
     au < released ; 2012 ; Analytical Chemistry Insights Volume 7 ; 2012 >
 
@@ -73,8 +73,8 @@
 
     param[journal_id] = 155
 
-    au < ready ; 2009 ; Autism Insights Volume 1 ; 2009 >
-    au < ready ; 2010 ; Autism Insights Volume 2 ; 2010 >
+    au < releasing ; 2009 ; Autism Insights Volume 1 ; 2009 >
+    au < releasing ; 2010 ; Autism Insights Volume 2 ; 2010 >
     au < released ; 2011 ; Autism Insights Volume 3 ; 2011 >
     au < released ; 2012 ; Autism Insights Volume 4 ; 2012 >
 
@@ -90,9 +90,9 @@
 
     param[journal_id] = 95
 
-    au < ready ; 2008 ; Biochemistry Insights Volume 1 ; 2008 >
-    au < ready ; 2009 ; Biochemistry Insights Volume 2 ; 2009 >
-    au < ready ; 2010 ; Biochemistry Insights Volume 3 ; 2010 >
+    au < releasing ; 2008 ; Biochemistry Insights Volume 1 ; 2008 >
+    au < releasing ; 2009 ; Biochemistry Insights Volume 2 ; 2009 >
+    au < releasing ; 2010 ; Biochemistry Insights Volume 3 ; 2010 >
     au < released ; 2011 ; Biochemistry Insights Volume 4 ; 2011 >
 
   }
@@ -973,7 +973,7 @@
 
     param[journal_id] = 150
     
-    au < ready ; 2009 ; Immunotherapy Insights Volume 1 ; 2009 >
+    au < releasing ; 2009 ; Immunotherapy Insights Volume 1 ; 2009 >
     au < released ; 2011 ; Immunotherapy Insights Volume 2 ; 2011 >
 
 
@@ -989,7 +989,7 @@
 
     param[journal_id] = 171
     
-    au < ready ; 2010 ; Indian Journal of Clinical Medicine Volume 1 ; 2010 >
+    au < releasing ; 2010 ; Indian Journal of Clinical Medicine Volume 1 ; 2010 >
     au < released ; 2011 ; Indian Journal of Clinical Medicine Volume 2 ; 2011 >
     au < released ; 2012 ; Indian Journal of Clinical Medicine Volume 3 ; 2012 >
 
@@ -1006,9 +1006,9 @@
 
     param[journal_id] = 112
     
-    au < ready ; 2008 ; Infectious Diseases: Research and Treatment Volume 1 ; 2008 >
-    au < ready ; 2009 ; Infectious Diseases: Research and Treatment Volume 2 ; 2009 >
-    au < ready ; 2010 ; Infectious Diseases: Research and Treatment Volume 3 ; 2010 >
+    au < releasing ; 2008 ; Infectious Diseases: Research and Treatment Volume 1 ; 2008 >
+    au < releasing ; 2009 ; Infectious Diseases: Research and Treatment Volume 2 ; 2009 >
+    au < releasing ; 2010 ; Infectious Diseases: Research and Treatment Volume 3 ; 2010 >
     au < released ; 2011 ; Infectious Diseases: Research and Treatment Volume 4 ; 2011 >
     au < released ; 2012 ; Infectious Diseases: Research and Treatment Volume 5 ; 2012 >
 
@@ -1025,11 +1025,11 @@
 
     param[journal_id] = 21
     
-    au < ready ; 2006 ; Integrative Medicine Insights Volume 1 ; 2006 >
-    au < ready ; 2007 ; Integrative Medicine Insights Volume 2 ; 2007 >
-    au < ready ; 2008 ; Integrative Medicine Insights Volume 3 ; 2008 >
-    au < ready ; 2009 ; Integrative Medicine Insights Volume 4 ; 2009 >
-    au < ready ; 2010 ; Integrative Medicine Insights Volume 5 ; 2010 >
+    au < releasing ; 2006 ; Integrative Medicine Insights Volume 1 ; 2006 >
+    au < releasing ; 2007 ; Integrative Medicine Insights Volume 2 ; 2007 >
+    au < releasing ; 2008 ; Integrative Medicine Insights Volume 3 ; 2008 >
+    au < releasing ; 2009 ; Integrative Medicine Insights Volume 4 ; 2009 >
+    au < releasing ; 2010 ; Integrative Medicine Insights Volume 5 ; 2010 >
     au < released ; 2011 ; Integrative Medicine Insights Volume 6 ; 2011 >
     au < released ; 2012 ; Integrative Medicine Insights Volume 7 ; 2012 >
     
@@ -1048,8 +1048,8 @@
 
     param[journal_id] = 129
     
-    au < ready ; 2009 ; International Journal of Insect Science Volume 1 ; 2009 >
-    au < ready ; 2010 ; International Journal of Insect Science Volume 2 ; 2010 >
+    au < releasing ; 2009 ; International Journal of Insect Science Volume 1 ; 2009 >
+    au < releasing ; 2010 ; International Journal of Insect Science Volume 2 ; 2010 >
     au < released ; 2011 ; International Journal of Insect Science Volume 3 ; 2011 >
     au < released ; 2012 ; International Journal of Insect Science Volume 4 ; 2012 >
 
@@ -1102,9 +1102,9 @@
 
     param[journal_id] = 124
     
-    au < ready ; 2008 ; Journal of Cell Death Volume 1 ; 2008 >
-    au < ready ; 2009 ; Journal of Cell Death Volume 2 ; 2009 >
-    au < ready ; 2010 ; Journal of Cell Death Volume 3 ; 2010 >
+    au < releasing ; 2008 ; Journal of Cell Death Volume 1 ; 2008 >
+    au < releasing ; 2009 ; Journal of Cell Death Volume 2 ; 2009 >
+    au < releasing ; 2010 ; Journal of Cell Death Volume 3 ; 2010 >
     au < released ; 2011 ; Journal of Cell Death Volume 4 ; 2011 >
     au < released ; 2012 ; Journal of Cell Death Volume 5 ; 2012 >
 
@@ -1121,8 +1121,8 @@
 
     param[journal_id] = 121
     
-    au < ready ; 2009 ; Journal of Central Nervous System Disease Volume 1 ; 2009 >
-    au < ready ; 2010 ; Journal of Central Nervous System Disease Volume 2 ; 2010 >
+    au < releasing ; 2009 ; Journal of Central Nervous System Disease Volume 1 ; 2009 >
+    au < releasing ; 2010 ; Journal of Central Nervous System Disease Volume 2 ; 2010 >
     au < released ; 2011 ; Journal of Central Nervous System Disease Volume 3 ; 2011 >
     au < released ; 2012 ; Journal of Central Nervous System Disease Volume 4 ; 2012 >
 
@@ -1139,9 +1139,9 @@
 
     param[journal_id] = 131
     
-    au < ready ; 2008 ; Journal of Experimental Neuroscience Volume 1 ; 2008 >
-    au < ready ; 2009 ; Journal of Experimental Neuroscience Volume 2-3 ; 2009 >
-    au < ready ; 2010 ; Journal of Experimental Neuroscience Volume 4 ; 2010 >
+    au < releasing ; 2008 ; Journal of Experimental Neuroscience Volume 1 ; 2008 >
+    au < releasing ; 2009 ; Journal of Experimental Neuroscience Volume 2-3 ; 2009 >
+    au < releasing ; 2010 ; Journal of Experimental Neuroscience Volume 4 ; 2010 >
     au < released ; 2011 ; Journal of Experimental Neuroscience Volume 5 ; 2011 >
     au < released ; 2012 ; Journal of Experimental Neuroscience Volume 6 ; 2012 >
 
@@ -1175,8 +1175,8 @@
 
     param[journal_id] = 109
     
-    au < ready ; 2008 ; Lipid Insights Volume 1-2 ; 2008 >
-    au < ready ; 2010 ; Lipid Insights Volume 3 ; 2010 >
+    au < releasing ; 2008 ; Lipid Insights Volume 1-2 ; 2008 >
+    au < releasing ; 2010 ; Lipid Insights Volume 3 ; 2010 >
     au < released ; 2011 ; Lipid Insights Volume 4 ; 2011 >
     au < released ; 2012 ; Lipid Insights Volume 5 ; 2012 >
 
@@ -1193,8 +1193,8 @@
     
     param[journal_id] = 147
 
-    au < ready ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 2009 >
-    au < ready ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2010 >
+    au < releasing ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 2009 >
+    au < releasing ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2010 >
 
   }
   
@@ -1208,9 +1208,9 @@
 
     param[journal_id] = 115
 
-    au < ready ; 2008 ; Magnetic Resonance Insights Volume 1-2 ; 2008 >
-    au < ready ; 2009 ; Magnetic Resonance Insights Volume 3 ; 2009 >
-    au < ready ; 2010 ; Magnetic Resonance Insights Volume 4 ; 2010 >
+    au < releasing ; 2008 ; Magnetic Resonance Insights Volume 1-2 ; 2008 >
+    au < releasing ; 2009 ; Magnetic Resonance Insights Volume 3 ; 2009 >
+    au < releasing ; 2010 ; Magnetic Resonance Insights Volume 4 ; 2010 >
     au < released ; 2012 ; Magnetic Resonance Insights Volume 5 ; 2012 >
     
 
@@ -1226,9 +1226,9 @@
 
     param[journal_id] = 98
 
-    au < ready ; 2008 ; Medical Equipment Insights Volume 1 ; 2008 >
-    au < ready ; 2009 ; Medical Equipment Insights Volume 2 ; 2009 >
-    au < ready ; 2010 ; Medical Equipment Insights Volume 3 ; 2010 >
+    au < releasing ; 2008 ; Medical Equipment Insights Volume 1 ; 2008 >
+    au < releasing ; 2009 ; Medical Equipment Insights Volume 2 ; 2009 >
+    au < releasing ; 2010 ; Medical Equipment Insights Volume 3 ; 2010 >
     au < released ; 2012 ; Medical Equipment Insights Volume 4 ; 2012 >
     
   }
@@ -1243,9 +1243,9 @@
 
     param[journal_id] = 108
 
-    au < ready ; 2008 ; Microbiology Insights Volume 1 ; 2008 >
-    au < ready ; 2009 ; Microbiology Insights Volume 2 ; 2009 >
-    au < ready ; 2010 ; Microbiology Insights Volume 3 ; 2010 >
+    au < releasing ; 2008 ; Microbiology Insights Volume 1 ; 2008 >
+    au < releasing ; 2009 ; Microbiology Insights Volume 2 ; 2009 >
+    au < releasing ; 2010 ; Microbiology Insights Volume 3 ; 2010 >
     au < released ; 2012 ; Microbiology Insights Volume 4 ; 2012 >
   }     
   
@@ -1293,7 +1293,7 @@
 
     param[journal_id] = 146
 
-    au < ready ; 2009 ; Ophthalmology and Eye Diseases Volume 1 ; 2009 >
+    au < releasing ; 2009 ; Ophthalmology and Eye Diseases Volume 1 ; 2009 >
     au < testing ; 2010 ; Ophthalmology and Eye Diseases Volume 2 ; 2010 >
     au < released ; 2011 ; Ophthalmology and Eye Diseases Volume 3 ; 2011 >
     au < released ; 2012 ; Ophthalmology and Eye Diseases Volume 4 ; 2012 >
