@@ -562,7 +562,7 @@
     au < manifest ; exists ; 2007 ; European Journal of Human Genetics Volume 15 ; 2007 ; 15 >
     au < released ; crawling ; 2008 ; European Journal of Human Genetics Volume 16 ; 2008 ; 16 >
     au < released ; crawling ; 2009 ; European Journal of Human Genetics Volume 17 ; 2009 ; 17 >
-    au < testing ; exists ; 2010 ; European Journal of Human Genetics Volume 18 ; 2010 ; 18 >
+    au < released ; manifest ; 2010 ; European Journal of Human Genetics Volume 18 ; 2010 ; 18 >
     au < released ; crawling ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 >
     au < testing ; exists ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 >
 
@@ -1664,7 +1664,7 @@
     au < exists ; exists ; 2006 ; Molecular Therapy Volume 14 (2006) ; 2006 ; 14 >
     au < exists ; exists ; 2007 ; Molecular Therapy Volume 15 ; 2007 ; 15 >
     au < released ; manifest ; 2008 ; Molecular Therapy Volume 16 ; 2008 ; 16 >
-    au < testing ; exists ; 2009 ; Molecular Therapy Volume 17 ; 2009 ; 17 >
+    au < released ; manifest ; 2009 ; Molecular Therapy Volume 17 ; 2009 ; 17 >
     au < released ; crawling ; 2010 ; Molecular Therapy Volume 18 ; 2010 ; 18 >
     au < released ; crawling ; 2011 ; Molecular Therapy Volume 19 ; 2011 ; 19 >
     au < crawling ; exists ; 2012 ; Molecular Therapy Volume 20 ; 2012 ; 20 >
@@ -1681,12 +1681,13 @@
     >
 
     param[journal_id] = mi
+    comment[notReady] = Fetch error in crawl on ingest3
 
-    au < testing ; exists ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
-    au < testing ; exists ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
+    au < notReady ; exists ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
+    au < notReady ; exists ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
     au < released ; crawling ; 2010 ; Mucosal Immunology Volume 3 ; 2010 ; 3 >
-    au < testing ; exists ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
-    au < testing ; exists ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 >
+    au < released ; manifest ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
+    au < notReady ; exists ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 >
 
   }
 
@@ -3361,7 +3362,7 @@
     au < exists ; exists ; 2006 ; Vital Volume 3 ; 2006 ; 3 >
     au < exists ; exists ; 2007 ; Vital Volume 4 ; 2007 ; 4 >
     au < released ; manifest ; 2008 ; Vital Volume 5 ; 2008 ; 5 >
-    au < testing ; exists ; 2008 ; Vital Volume 6 (2008) ; 2008 ; 6 >
+    au < released ; manifest ; 2008 ; Vital Volume 6 (2008) ; 2008 ; 6 >
     au < zapped ; down ; 2009 ; Vital Volume 6 (2009) ; 2009 ; 6 >
     au < zapped ; down ; 2009 ; Vital Volume 7 (2009) ; 2009 ; 7 >
     au < released ; crawling ; 2010 ; Vital Volume 7 (2010) ; 2010 ; 7 >
