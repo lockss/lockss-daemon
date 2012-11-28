@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - mellen - needs update</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Alaska State Documents Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
+    <string>"Alaska State Documents Plugin, Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -39,15 +39,15 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>1,&quot;^%sshippinglists/fy_%d&quot;, base_url, year</string>
-      <string>1,&quot;^%sedocs/&quot;, base_url, year</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>1,"^%sshippinglists/fy_%d", base_url, year</string>
+      <string>1,"^%sedocs/", base_url, year</string>
+      <string>4,"^%s", base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sshippinglists/fy_%d/fy_%d_shippinglists.html&quot;, base_url, year, year</string>
+    <string>"%sshippinglists/fy_%d/fy_%d_shippinglists.html", base_url, year, year</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
