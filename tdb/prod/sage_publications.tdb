@@ -39848,7 +39848,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://aed.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Australian Journal of Education Volume 1 ; 1 >
+    au < exists ; 2013 ; Australian Journal of Education Volume 57 ; 57 >
 
     }
 
@@ -39901,7 +39901,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://acd.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Australian Journal of Career Development Volume 1 ; 1 >
+    au < exists ; 2013 ; Australian Journal of Career Development Volume 22 ; 22 >
 
     }
 
@@ -40075,7 +40075,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://fai.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Foot & Ankle International Volume 1 ; 1 >
+    au < exists ; 2013 ; Foot & Ankle International Volume 34 ; 34 >
 
     }
 
