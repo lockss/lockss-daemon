@@ -200,8 +200,8 @@
     implicit < status ; year ; name ; param[volume_name] > 
     param[journal_issn] = 0147-9156 
     
-    au < releasing ; 2005 ; Contemporary French Civilization Volume 29 ; 29 >
-    au < releasing ; 2006 ; Contemporary French Civilization Volume 30 ; 30 >
+    au < released ; 2005 ; Contemporary French Civilization Volume 29 ; 29 >
+    au < released ; 2006 ; Contemporary French Civilization Volume 30 ; 30 >
     au < released ; 2007 ; Contemporary French Civilization Volume 31 ; 31 >
     au < released ; 2008 ; Contemporary French Civilization Volume 32 ; 32 >
     au < released ; 2009 ; Contemporary French Civilization Volume 33 ; 33 >
@@ -486,11 +486,11 @@
       au < exists ; 2001 ; Romani Studies Volume 11 ; 11 >
       au < ready ; 2002 ; Romani Studies Volume 12 ; 12 >
       au < notReady ; 2003 ; Romani Studies Volume 13 ; 13 >
-      au < releasing ; 2004 ; Romani Studies Volume 14 ; 14 >
-      au < releasing ; 2005 ; Romani Studies Volume 15 ; 15 >
-      au < releasing ; 2006 ; Romani Studies Volume 16 ; 16 >
-      au < releasing ; 2007 ; Romani Studies Volume 17 ; 17 >
-      au < releasing ; 2008 ; Romani Studies Volume 18 ; 18 >
+      au < released ; 2004 ; Romani Studies Volume 14 ; 14 >
+      au < released ; 2005 ; Romani Studies Volume 15 ; 15 >
+      au < released ; 2006 ; Romani Studies Volume 16 ; 16 >
+      au < released ; 2007 ; Romani Studies Volume 17 ; 17 >
+      au < released ; 2008 ; Romani Studies Volume 18 ; 18 >
       au < released ; 2009 ; Romani Studies Volume 19 ; 19 >
       au < released ; 2010 ; Romani Studies Volume 20 ; 20 >
       au < released ; 2011 ; Romani Studies Volume 21 ; 21 >
@@ -532,7 +532,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[journal_issn] = 1754-3789 
 
-      au < releasing ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
+      au < released ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
       au < released ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
       au < released ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
       au < released ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
@@ -556,11 +556,11 @@
     implicit < status ; year ; name ; param[volume_name] >    
     param[journal_issn] = 1756-9923 
 
-    au < releasing ; 2005 ; Sculpture Journal Volume 13 ; 13 >
-    au < releasing ; 2005 ; Sculpture Journal Volume 14 ; 14 >
-    au < releasing ; 2006 ; Sculpture Journal Volume 15 ; 15 >
-    au < releasing ; 2007 ; Sculpture Journal Volume 16 ; 16 >
-    au < releasing ; 2008 ; Sculpture Journal Volume 17 ; 17 >
+    au < released ; 2005 ; Sculpture Journal Volume 13 ; 13 >
+    au < released ; 2005 ; Sculpture Journal Volume 14 ; 14 >
+    au < released ; 2006 ; Sculpture Journal Volume 15 ; 15 >
+    au < released ; 2007 ; Sculpture Journal Volume 16 ; 16 >
+    au < released ; 2008 ; Sculpture Journal Volume 17 ; 17 >
     au < released ; 2009 ; Sculpture Journal Volume 18 ; 18 >
     au < released ; 2010 ; Sculpture Journal Volume 19 ; 19 > 
     au < released ; 2011 ; Sculpture Journal Volume 20 ; 20 >

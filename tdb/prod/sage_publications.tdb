@@ -803,25 +803,25 @@
         param[base_url] = http://aff.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < releasing ; 1986 ; Affilia Volume 1 ; 1 >
-        au < releasing ; 1987 ; Affilia Volume 2 ; 2 >
-        au < releasing ; 1988 ; Affilia Volume 3 ; 3 >
-        au < releasing ; 1989 ; Affilia Volume 4 ; 4 >
-        au < releasing ; 1990 ; Affilia Volume 5 ; 5 >
-        au < releasing ; 1991 ; Affilia Volume 6 ; 6 >
-        au < releasing ; 1992 ; Affilia Volume 7 ; 7 >
-        au < releasing ; 1993 ; Affilia Volume 8 ; 8 >
-        au < releasing ; 1994 ; Affilia Volume 9 ; 9 >
-        au < releasing ; 1995 ; Affilia Volume 10 ; 10 >
-        au < releasing ; 1996 ; Affilia Volume 11 ; 11 >
-        au < releasing ; 1997 ; Affilia Volume 12 ; 12 >
-        au < releasing ; 1998 ; Affilia Volume 13 ; 13 >
-        au < releasing ; 1999 ; Affilia Volume 14 ; 14 >
-        au < releasing ; 2000 ; Affilia Volume 15 ; 15 >
-        au < releasing ; 2001 ; Affilia Volume 16 ; 16 >
-        au < releasing ; 2002 ; Affilia Volume 17 ; 17 >
-        au < releasing ; 2003 ; Affilia Volume 18 ; 18 >
-        au < releasing ; 2004 ; Affilia Volume 19 ; 19 >
+        au < released ; 1986 ; Affilia Volume 1 ; 1 >
+        au < released ; 1987 ; Affilia Volume 2 ; 2 >
+        au < released ; 1988 ; Affilia Volume 3 ; 3 >
+        au < released ; 1989 ; Affilia Volume 4 ; 4 >
+        au < released ; 1990 ; Affilia Volume 5 ; 5 >
+        au < released ; 1991 ; Affilia Volume 6 ; 6 >
+        au < released ; 1992 ; Affilia Volume 7 ; 7 >
+        au < released ; 1993 ; Affilia Volume 8 ; 8 >
+        au < released ; 1994 ; Affilia Volume 9 ; 9 >
+        au < released ; 1995 ; Affilia Volume 10 ; 10 >
+        au < released ; 1996 ; Affilia Volume 11 ; 11 >
+        au < released ; 1997 ; Affilia Volume 12 ; 12 >
+        au < released ; 1998 ; Affilia Volume 13 ; 13 >
+        au < released ; 1999 ; Affilia Volume 14 ; 14 >
+        au < released ; 2000 ; Affilia Volume 15 ; 15 >
+        au < released ; 2001 ; Affilia Volume 16 ; 16 >
+        au < released ; 2002 ; Affilia Volume 17 ; 17 >
+        au < released ; 2003 ; Affilia Volume 18 ; 18 >
+        au < released ; 2004 ; Affilia Volume 19 ; 19 >
         au < doNotProcess ; 2005 ; Affilia Volume 20 ; 20 >
         au < doNotProcess ; 2006 ; Affilia Volume 21 ; 21 >
         au < doNotProcess ; 2007 ; Affilia Volume 22 ; 22 >
@@ -909,15 +909,15 @@
         param[base_url] = http://abs.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < releasing ; 1957 ; American Behavioral Scientist Volume 1 ; 1 >
+        au < released ; 1957 ; American Behavioral Scientist Volume 1 ; 1 >
         au < ready ; 1958 ; American Behavioral Scientist Volume 2 ; 2 >
         au < testing ; 1959 ; American Behavioral Scientist Volume 3 ; 3 >
         au < testing ; 1960 ; American Behavioral Scientist Volume 4 ; 4 >
         au < testing ; 1961 ; American Behavioral Scientist Volume 5 ; 5 >
         au < testing ; 1962 ; American Behavioral Scientist Volume 6 ; 6 >
-        au < releasing ; 1963 ; American Behavioral Scientist Volume 7 ; 7 >
+        au < released ; 1963 ; American Behavioral Scientist Volume 7 ; 7 >
         au < testing ; 1964 ; American Behavioral Scientist Volume 8 ; 8 >
-        au < releasing ; 1965 ; American Behavioral Scientist Volume 9 ; 9 >
+        au < released ; 1965 ; American Behavioral Scientist Volume 9 ; 9 >
         au < testing ; 1966 ; American Behavioral Scientist Volume 10 ; 10 >
         au < testing ; 1967 ; American Behavioral Scientist Volume 11 ; 11 >
         au < testing ; 1968 ; American Behavioral Scientist Volume 12 ; 12 >
@@ -927,7 +927,7 @@
         au < testing ; 1972 ; American Behavioral Scientist Volume 16 ; 16 >
         au < testing ; 1973 ; American Behavioral Scientist Volume 17 ; 17 >
         au < testing ; 1974 ; American Behavioral Scientist Volume 18 ; 18 >
-        au < releasing ; 1975 ; American Behavioral Scientist Volume 19 ; 19 >
+        au < released ; 1975 ; American Behavioral Scientist Volume 19 ; 19 >
         au < testing ; 1976 ; American Behavioral Scientist Volume 20 ; 20 >
         au < testing ; 1977 ; American Behavioral Scientist Volume 21 ; 21 >
         au < testing ; 1978 ; American Behavioral Scientist Volume 22 ; 22 >
@@ -947,7 +947,7 @@
         au < testing ; 1992 ; American Behavioral Scientist Volume 36 ; 36 >
         au < testing ; 1993 ; American Behavioral Scientist Volume 37 ; 37 >
         au < testing ; 1994 ; American Behavioral Scientist Volume 38 ; 38 >
-        au < releasing ; 1995 ; American Behavioral Scientist Volume 39 ; 39 >
+        au < released ; 1995 ; American Behavioral Scientist Volume 39 ; 39 >
         au < testing ; 1996 ; American Behavioral Scientist Volume 40 ; 40 >
         au < testing ; 1997 ; American Behavioral Scientist Volume 41 ; 41 >
         au < testing ; 1998 ; American Behavioral Scientist Volume 42 ; 42 >
@@ -1600,7 +1600,7 @@
         au < released ; 2000 ; The American Review of Public Administration Volume 30 ; 30 >
         au < released ; 2001 ; The American Review of Public Administration Volume 31 ; 31 >
         au < released ; 2002 ; The American Review of Public Administration Volume 32 ; 32 >
-        au < releasing ; 2003 ; The American Review of Public Administration Volume 33 ; 33 >
+        au < released ; 2003 ; The American Review of Public Administration Volume 33 ; 33 >
         au < released ; 2004 ; The American Review of Public Administration Volume 34 ; 34 >
         au < doNotProcess ; 2005 ; The American Review of Public Administration Volume 35 ; 35 >
         au < doNotProcess ; 2006 ; The American Review of Public Administration Volume 36 ; 36 >
@@ -1629,8 +1629,8 @@
         param[base_url] = http://asr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < releasing ; 2004 ; American Sociological Review Volume 69 ; 69 >
-        au < releasing ; 2005 ; American Sociological Review Volume 70 ; 70 >
+        au < released ; 2004 ; American Sociological Review Volume 69 ; 69 >
+        au < released ; 2005 ; American Sociological Review Volume 70 ; 70 >
         au < released ; 2006 ; American Sociological Review Volume 71 ; 71 >
         au < released ; 2007 ; American Sociological Review Volume 72 ; 72 >
         au < released ; 2008 ; American Sociological Review Volume 73 ; 73 >
@@ -3257,14 +3257,14 @@
         au < manifest ; 1997 ; Australian Journal of Management Volume 22 ; 22 >
         au < manifest ; 1998 ; Australian Journal of Management Volume 23 ; 23 >
         au < manifest ; 1999 ; Australian Journal of Management Volume 24 ; 24 >
-        au < releasing ; 2000 ; Australian Journal of Management Volume 25 ; 25 >
-        au < releasing ; 2001 ; Australian Journal of Management Volume 26 ; 26 >
-        au < releasing ; 2002 ; Australian Journal of Management Volume 27 ; 27 >
-        au < releasing ; 2003 ; Australian Journal of Management Volume 28 ; 28 >
-        au < releasing ; 2004 ; Australian Journal of Management Volume 29 ; 29 >
-        au < releasing ; 2005 ; Australian Journal of Management Volume 30 ; 30 >
-        au < releasing ; 2006 ; Australian Journal of Management Volume 31 ; 31 >
-        au < releasing ; 2007 ; Australian Journal of Management Volume 32 ; 32 >
+        au < released ; 2000 ; Australian Journal of Management Volume 25 ; 25 >
+        au < released ; 2001 ; Australian Journal of Management Volume 26 ; 26 >
+        au < released ; 2002 ; Australian Journal of Management Volume 27 ; 27 >
+        au < released ; 2003 ; Australian Journal of Management Volume 28 ; 28 >
+        au < released ; 2004 ; Australian Journal of Management Volume 29 ; 29 >
+        au < released ; 2005 ; Australian Journal of Management Volume 30 ; 30 >
+        au < released ; 2006 ; Australian Journal of Management Volume 31 ; 31 >
+        au < released ; 2007 ; Australian Journal of Management Volume 32 ; 32 >
         au < released ; 2008 ; Australian Journal of Management Volume 33 ; 33 >
         au < released ; 2009 ; Australian Journal of Management Volume 34 ; 34 >
         au < released ; 2010 ; Australian Journal of Management Volume 35 ; 35 >
@@ -7604,7 +7604,7 @@
         au < doNotProcess ; 2009 ; Cultural Geographies Volume 16 ; 16 >
         au < released ; 2010 ; Cultural Geographies Volume 17 ; 17 >
         au < released ; 2011 ; Cultural Geographies Volume 18 ; 18 >
-        au < releasing ; 2012 ; Cultural Geographies Volume 19 ; 19 >
+        au < released ; 2012 ; Cultural Geographies Volume 19 ; 19 >
 
       }
 
@@ -7642,7 +7642,7 @@
         au < doNotProcess ; 2009 ; Cultural Sociology Volume 3 ; 3 >
         au < released ; 2010 ; Cultural Sociology Volume 4 ; 4 >
         au < released ; 2011 ; Cultural Sociology Volume 5 ; 5 >
-        au < releasing ; 2012 ; Cultural Sociology Volume 6 ; 6 >
+        au < released ; 2012 ; Cultural Sociology Volume 6 ; 6 >
 
       }
 
@@ -7688,7 +7688,7 @@
         au < doNotProcess ; 2009 ; Cultural Studies <=\> Critical Methodologies Volume 9 ; 9 >
         au < released ; 2010 ; Cultural Studies <=\> Critical Methodologies Volume 10 ; 10 >
         au < released ; 2011 ; Cultural Studies <=\> Critical Methodologies Volume 11 ; 11 >
-        au < releasing ; 2012 ; Cultural Studies <=\> Critical Methodologies Volume 12 ; 12 >
+        au < released ; 2012 ; Cultural Studies <=\> Critical Methodologies Volume 12 ; 12 >
 
       }
 
@@ -7751,7 +7751,7 @@
         au < doNotProcess ; 2009 ; Culture & Psychology Volume 15 ; 15 >
         au < released ; 2010 ; Culture & Psychology Volume 16 ; 16 >
         au < released ; 2011 ; Culture & Psychology Volume 17 ; 17 >
-        au < releasing ; 2012 ; Culture & Psychology Volume 18 ; 18 >
+        au < released ; 2012 ; Culture & Psychology Volume 18 ; 18 >
 
       }
 
@@ -7791,7 +7791,7 @@
         au < released ; 2009 ; Current Directions in Psychological Science Volume 18 ; 18 >
         au < released ; 2010 ; Current Directions in Psychological Science Volume 19 ; 19 >
         au < released ; 2011 ; Current Directions in Psychological Science Volume 20 ; 20 >
-        au < releasing ; 2012 ; Current Directions in Psychological Science Volume 21 ; 21 >
+        au < released ; 2012 ; Current Directions in Psychological Science Volume 21 ; 21 >
 
       }
 
@@ -7941,7 +7941,7 @@
         au < manifest ; 2009-2010 ; Currents in Biblical Research Volume 8 ; 8 >
         au < released ; 2010-2011 ; Currents in Biblical Research Volume 9 ; 9 >
         au < released ; 2011-2012 ; Currents in Biblical Research Volume 10 ; 10 >
-        au < releasing ; 2012-2013 ; Currents in Biblical Research Volume 11 ; 11 >
+        au < released ; 2012-2013 ; Currents in Biblical Research Volume 11 ; 11 >
 
       }
 
@@ -8013,7 +8013,7 @@
         au < manifest ; 2009 ; Diabetes and Vascular Disease Research Volume 6 ; 6 >
         au < released ; 2010 ; Diabetes and Vascular Disease Research Volume 7 ; 7 >
         au < released ; 2011 ; Diabetes and Vascular Disease Research Volume 8 ; 8 >
-        au < releasing ; 2012 ; Diabetes and Vascular Disease Research Volume 9 ; 9 >
+        au < released ; 2012 ; Diabetes and Vascular Disease Research Volume 9 ; 9 >
 
       }
       
@@ -8114,7 +8114,7 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < released ; 2011 ; Dialogues in Human Geography Volume 1 ; 1 >
-        au < releasing ; 2012 ; Dialogues in Human Geography Volume 2 ; 2 >
+        au < released ; 2012 ; Dialogues in Human Geography Volume 2 ; 2 >
 
       }
 
@@ -8244,7 +8244,7 @@
         au < doNotProcess ; 2009 ; Discourse & Communication Volume 3 ; 3 >
         au < released ; 2010 ; Discourse & Communication Volume 4 ; 4 >
         au < released ; 2011 ; Discourse & Communication Volume 5 ; 5 >
-        au < releasing ; 2012 ; Discourse & Communication Volume 6 ; 6 >
+        au < released ; 2012 ; Discourse & Communication Volume 6 ; 6 >
 
       }
 
@@ -8301,7 +8301,7 @@
         au < doNotProcess ; 2009 ; Discourse & Society Volume 20 ; 20 >
         au < released ; 2010 ; Discourse & Society Volume 21 ; 21 >
         au < released ; 2011 ; Discourse & Society Volume 22 ; 22 >
-        au < releasing ; 2012 ; Discourse & Society Volume 23 ; 23 >
+        au < released ; 2012 ; Discourse & Society Volume 23 ; 23 >
 
       }
 
@@ -8349,7 +8349,7 @@
         au < doNotProcess ; 2009 ; Discourse Studies Volume 11 ; 11 >
         au < released ; 2010 ; Discourse Studies Volume 12 ; 12 >
         au < released ; 2011 ; Discourse Studies Volume 13 ; 13 >
-        au < releasing ; 2012 ; Discourse Studies Volume 14 ; 14 >
+        au < released ; 2012 ; Discourse Studies Volume 14 ; 14 >
 
       }
 
@@ -8410,7 +8410,7 @@
         au < released ; 2009 ; Drug Information Journal Volume 43 ; 43 >
         au < released ; 2010 ; Drug Information Journal Volume 44 ; 44 >
         au < released ; 2011 ; Drug Information Journal Volume 45 ; 45 >
-        au < releasing ; 2012 ; Drug Information Journal Volume 46 ; 46 >
+        au < released ; 2012 ; Drug Information Journal Volume 46 ; 46 >
   
       }
   
@@ -8470,7 +8470,7 @@
         au < doNotProcess ; 2009 ; East European Politics & Societies Volume 23 ; 23 >
         au < released ; 2010 ; East European Politics & Societies Volume 24 ; 24 >
         au < released ; 2011 ; East European Politics & Societies Volume 25 ; 25 >
-        au < releasing ; 2012 ; East European Politics & Societies Volume 26 ; 26 >
+        au < released ; 2012 ; East European Politics & Societies Volume 26 ; 26 >
 
       }
 
@@ -8563,7 +8563,7 @@
         au < doNotProcess ; 2009 ; Economic and Industrial Democracy Volume 30 ; 30 >
         au < released ; 2010 ; Economic and Industrial Democracy Volume 31 ; 31 >
         au < released ; 2011 ; Economic and Industrial Democracy Volume 32 ; 32 >
-        au < releasing ; 2012 ; Economic and Industrial Democracy Volume 33 ; 33 >
+        au < released ; 2012 ; Economic and Industrial Democracy Volume 33 ; 33 >
 
       }
 
@@ -8623,7 +8623,7 @@
         au < doNotProcess ; 2009 ; Economic Development Quarterly Volume 23 ; 23 >
         au < released ; 2010 ; Economic Development Quarterly Volume 24 ; 24 >
         au < released ; 2011 ; Economic Development Quarterly Volume 25 ; 25 >
-        au < releasing ; 2012 ; Economic Development Quarterly Volume 26 ; 26 >
+        au < released ; 2012 ; Economic Development Quarterly Volume 26 ; 26 >
 
       }
 
@@ -8712,7 +8712,7 @@
         au < doNotProcess ; 2008 ; Education and Urban Society Volume 41 ; 41 >
         au < released ; 2009 ; Education and Urban Society Volume 42 ; 42 >
         au < released ; 2011 ; Education and Urban Society Volume 43 ; 43 >
-        au < releasing ; 2012 ; Education and Urban Society Volume 44 ; 44 >
+        au < released ; 2012 ; Education and Urban Society Volume 44 ; 44 >
 
       }
 
@@ -8752,7 +8752,7 @@
         au < doNotProcess ; 2009 ; Education, Citizenship and Social Justice Volume 4 ; 4 >
         au < released ; 2010 ; Education, Citizenship and Social Justice Volume 5 ; 5 >
         au < released ; 2011 ; Education, Citizenship and Social Justice Volume 6 ; 6 >
-        au < releasing ; 2012 ; Education, Citizenship and Social Justice Volume 7 ; 7 >
+        au < released ; 2012 ; Education, Citizenship and Social Justice Volume 7 ; 7 >
 
       }
 
@@ -8845,7 +8845,7 @@
         au < doNotProcess ; 2009 ; Educational Administration Quarterly Volume 45 ; 45 >
         au < released ; 2010 ; Educational Administration Quarterly Volume 46 ; 46 >
         au < released ; 2011 ; Educational Administration Quarterly Volume 47 ; 47 >
-        au < releasing ; 2012 ; Educational Administration Quarterly Volume 48 ; 48 >
+        au < released ; 2012 ; Educational Administration Quarterly Volume 48 ; 48 >
 
       }
 
@@ -8951,7 +8951,7 @@
         au < doNotProcess ; 2009 ; Educational and Psychological Measurement Volume 69 ; 69 >
         au < released ; 2010 ; Educational and Psychological Measurement Volume 70 ; 70 >
         au < released ; 2011 ; Educational and Psychological Measurement Volume 71 ; 71 >
-        au < releasing ; 2012 ; Educational and Psychological Measurement Volume 72 ; 72 >
+        au < released ; 2012 ; Educational and Psychological Measurement Volume 72 ; 72 >
 
       }
 
@@ -9017,7 +9017,7 @@
         au < doNotProcess ; 2009 ; Educational Evaluation and Policy Analysis Volume 31 ; 31 >
         au < released ; 2010 ; Educational Evaluation and Policy Analysis Volume 32 ; 32 >
         au < released ; 2011 ; Educational Evaluation and Policy Analysis Volume 33 ; 33 >
-        au < releasing ; 2012 ; Educational Evaluation and Policy Analysis Volume 34 ; 34 >
+        au < released ; 2012 ; Educational Evaluation and Policy Analysis Volume 34 ; 34 >
 
       }
 
@@ -9102,7 +9102,7 @@
         au < doNotProcess ; 2009 ; Educational Management Administration & Leadership Volume 37 ; 37 >
         au < released ; 2010 ; Educational Management Administration & Leadership Volume 38 ; 38 >
         au < released ; 2011 ; Educational Management Administration & Leadership Volume 39 ; 39 >
-        au < releasing ; 2012 ; Educational Management Administration & Leadership Volume 40 ; 40 >
+        au < released ; 2012 ; Educational Management Administration & Leadership Volume 40 ; 40 >
 
       }
 
@@ -9162,7 +9162,7 @@
         au < doNotProcess ; 2009 ; Educational Policy Volume 23 ; 23 >
         au < released ; 2010 ; Educational Policy Volume 24 ; 24 >
         au < released ; 2011 ; Educational Policy Volume 25 ; 25 >
-        au < releasing ; 2012 ; Educational Policy Volume 26 ; 26 >
+        au < released ; 2012 ; Educational Policy Volume 26 ; 26 >
 
       }
 
@@ -9282,7 +9282,7 @@
         au < manifest ; 2009 ; Emotion Review Volume 1 ; 1 >
         au < released ; 2010 ; Emotion Review Volume 2 ; 2 >
         au < released ; 2011 ; Emotion Review Volume 3 ; 3 >
-        au < releasing ; 2012 ; Emotion Review Volume 4 ; 4 >
+        au < released ; 2012 ; Emotion Review Volume 4 ; 4 >
 
       }
 
@@ -9464,7 +9464,7 @@
         au < doNotProcess ; 2009 ; Environment and Urbanization Volume 21 ; 21 >
         au < released ; 2010 ; Environment and Urbanization Volume 22 ; 22 >
         au < released ; 2011 ; Environment and Urbanization Volume 23 ; 23 >
-        au < releasing ; 2012 ; Environment and Urbanization Volume 24 ; 24 >
+        au < released ; 2012 ; Environment and Urbanization Volume 24 ; 24 >
 
       }
 
@@ -9523,7 +9523,7 @@
         au < released ; 2009 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 17 ; 17 >
         au < released ; 2010 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 18 ; 18 >
         au < released ; 2011 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 19 ; 19 >
-        au < releasing ; 2012 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 20 ; 20 >
+        au < released ; 2012 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 20 ; 20 >
 
       }
 
@@ -15217,19 +15217,19 @@
         implicit < status ; year ; name ; param[volume_name] >
 
 
-        au < releasing ; 2000 ; International Journal of Engine Research Volume 1 ; 1 >
-        au < releasing ; 2001 ; International Journal of Engine Research Volume 2 ; 2 >
-        au < releasing ; 2002 ; International Journal of Engine Research Volume 3 ; 3 >
-        au < releasing ; 2003 ; International Journal of Engine Research Volume 4 ; 4 >
-        au < releasing ; 2004 ; International Journal of Engine Research Volume 5 ; 5 >
-        au < releasing ; 2005 ; International Journal of Engine Research Volume 6 ; 6 >
-        au < releasing ; 2006 ; International Journal of Engine Research Volume 7 ; 7 >
-        au < releasing ; 2007 ; International Journal of Engine Research Volume 8 ; 8 >
+        au < released ; 2000 ; International Journal of Engine Research Volume 1 ; 1 >
+        au < released ; 2001 ; International Journal of Engine Research Volume 2 ; 2 >
+        au < released ; 2002 ; International Journal of Engine Research Volume 3 ; 3 >
+        au < released ; 2003 ; International Journal of Engine Research Volume 4 ; 4 >
+        au < released ; 2004 ; International Journal of Engine Research Volume 5 ; 5 >
+        au < released ; 2005 ; International Journal of Engine Research Volume 6 ; 6 >
+        au < released ; 2006 ; International Journal of Engine Research Volume 7 ; 7 >
+        au < released ; 2007 ; International Journal of Engine Research Volume 8 ; 8 >
         au < released ; 2008 ; International Journal of Engine Research Volume 9 ; 9 >
         au < released ; 2009 ; International Journal of Engine Research Volume 10 ; 10 >
         au < released ; 2010 ; International Journal of Engine Research Volume 11 ; 11 >
         au < released ; 2011 ; International Journal of Engine Research Volume 12 ; 12 >
-        au < releasing ; 2012 ; International Journal of Engine Research Volume 13 ; 13 >
+        au < released ; 2012 ; International Journal of Engine Research Volume 13 ; 13 >
 
       }
 
@@ -15623,7 +15623,7 @@
         au < released ; 2008 ; International Journal of Rural Management Volume 4 ; 4 >
         au < released ; 2009 ; International Journal of Rural Management Volume 5 ; 5 >
         au < released ; 2010 ; International Journal of Rural Management Volume 6 ; 6 >
-        au < releasing ; 2011 ; International Journal of Rural Management Volume 7 ; 7 >
+        au < released ; 2011 ; International Journal of Rural Management Volume 7 ; 7 >
         au < expected ; 2012 ; International Journal of Rural Management Volume 8 ; 8 >
 
       }
@@ -22633,7 +22633,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2008 ; Journal of Leadership & Organizational Studies Volume 15 ; 15 >
         au < doNotProcess ; 2009 ; Journal of Leadership & Organizational Studies Volume 16 ; 16 >
         au < released ; 2010 ; Journal of Leadership & Organizational Studies Volume 17 ; 17 >
-        au < releasing ; 2011 ; Journal of Leadership & Organizational Studies Volume 18 ; 18 >
+        au < released ; 2011 ; Journal of Leadership & Organizational Studies Volume 18 ; 18 >
         au < manifest ; 2012 ; Journal of Leadership & Organizational Studies Volume 19 ; 19 >
 
       }
@@ -28938,14 +28938,14 @@ comment[mpj] = now published by Brill
         param[base_url] = http://nro.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < releasing ; 1995 ; The Neuroscientist Volume 1 ; 1 >
+        au < released ; 1995 ; The Neuroscientist Volume 1 ; 1 >
         au < released ; 1996 ; The Neuroscientist Volume 2 ; 2 >
         au < released ; 1997 ; The Neuroscientist Volume 3 ; 3 >
         au < released ; 1998 ; The Neuroscientist Volume 4 ; 4 >
         au < released ; 1999 ; The Neuroscientist Volume 5 ; 5 >
         au < released ; 2000 ; The Neuroscientist Volume 6 ; 6 >
         au < released ; 2001 ; The Neuroscientist Volume 7 ; 7 >
-        au < releasing ; 2002 ; The Neuroscientist Volume 8 ; 8 >
+        au < released ; 2002 ; The Neuroscientist Volume 8 ; 8 >
         au < released ; 2003 ; The Neuroscientist Volume 9 ; 9 >
         au < released ; 2004 ; The Neuroscientist Volume 10 ; 10 >
         au < doNotProcess ; 2005 ; The Neuroscientist Volume 11 ; 11 >
@@ -35114,7 +35114,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Space and Culture Volume 12 ; 12 >
         au < released ; 2010 ; Space and Culture Volume 13 ; 13 >
         au < released ; 2011 ; Space and Culture Volume 14 ; 14 >
-        au < releasing ; 2012 ; Space and Culture Volume 15 ; 15 >
+        au < released ; 2012 ; Space and Culture Volume 15 ; 15 >
 
       }
 
@@ -38827,7 +38827,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Youth Justice Volume 9 ; 9 >
         au < released ; 2010 ; Youth Justice Volume 10 ; 10 >
         au < released ; 2011 ; Youth Justice Volume 11 ; 11 >
-        au < releasing ; 2012 ; Youth Justice Volume 12 ; 12 >
+        au < released ; 2012 ; Youth Justice Volume 12 ; 12 >
 
       }
 
@@ -39086,7 +39086,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2008 ; Journal for the Education of the Gifted Volume 31 ; 31 >
         au < exists ; 2009 ; Journal for the Education of the Gifted Volume 32 ; 32 >
         au < exists ; 2010 ; Journal for the Education of the Gifted Volume 33 ; 33 >
-        au < releasing ; 2011 ; Journal for the Education of the Gifted Volume 34 ; 34 >
+        au < released ; 2011 ; Journal for the Education of the Gifted Volume 34 ; 34 >
         au < manifest ; 2012 ; Journal for the Education of the Gifted Volume 35 ; 35 >
   
       }
@@ -39109,7 +39109,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
   
         au < manifest ; 2009 ; Journal of Infrastructure Development Volume 1 ; 1 >
-        au < releasing ; 2010 ; Journal of Infrastructure Development Volume 2 ; 2 >
+        au < released ; 2010 ; Journal of Infrastructure Development Volume 2 ; 2 >
         au < testing ; 2011 ; Journal of Infrastructure Development Volume 3 ; 3 >
         au < manifest ; 2012 ; Journal of Infrastructure Development Volume 4 ; 4 >
   
@@ -39744,7 +39744,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2009 ; Sociological Theory Volume 27 ; 27 >
         au < exists ; 2010 ; Sociological Theory Volume 28 ; 28 >
         au < notReady ; 2011 ; Sociological Theory Volume 29 ; 29 >
-        au < releasing ; 2012 ; Sociological Theory Volume 30 ; 30 >
+        au < released ; 2012 ; Sociological Theory Volume 30 ; 30 >
   
       }
   
