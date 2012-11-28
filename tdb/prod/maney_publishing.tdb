@@ -304,12 +304,13 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 1478-422X
-    comment[notReady] = crawl successful with no substance
+    comment[notReady34] = RU4463, missing article pages
+    comment[notReady] = crawl failure
 
-    au < testing ; 1999 ; British Corrosion Journal Volume 34 ; 34 > 
-    au < testing ; 2000 ; British Corrosion Journal Volume 35 ; 35 > 
-    au < testing ; 2001 ; British Corrosion Journal Volume 36 ; 36 > 
-    au < testing ; 2002 ; British Corrosion Journal Volume 37 ; 37 >
+    au < notReady ; 1999 ; British Corrosion Journal Volume 34 ; 34 > 
+    au < notReady ; 2000 ; British Corrosion Journal Volume 35 ; 35 > 
+    au < notReady ; 2001 ; British Corrosion Journal Volume 36 ; 36 > 
+    au < notReady ; 2002 ; British Corrosion Journal Volume 37 ; 37 >
 
   }
 
