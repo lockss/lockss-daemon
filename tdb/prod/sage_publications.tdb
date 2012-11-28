@@ -3522,7 +3522,7 @@
         au < released ; 2010 ; Biological Research For Nursing Volume 12 ; 12 >
         au < released ; 2011 ; Biological Research For Nursing Volume 13 ; 13 >
         au < released ; 2012 ; Biological Research For Nursing Volume 14 ; 14 >
-
+        au < exists ; 2013 ; Biological Research For Nursing Volume 15 ; 15 >
       }
 
     }
@@ -11138,6 +11138,7 @@
         au < released ; 2010 ; Feminist Criminology Volume 5 ; 5 >
         au < released ; 2011 ; Feminist Criminology Volume 6 ; 6 >
         au < manifest ; 2012 ; Feminist Criminology Volume 7 ; 7 >
+        au < exists ; 2013 ; Feminist Criminology Volume 8 ; 8 >
 
       }
 
@@ -12549,7 +12550,8 @@
         au < released ; 2010 ; The International Journal of Press/Politics Volume 15 ; 15 >
         au < released ; 2011 ; The International Journal of Press/Politics Volume 16 ; 16 >
         au < manifest ; 2012 ; The International Journal of Press/Politics Volume 17 ; 17 >
-
+        au < exists ; 2013 ; The International Journal of Press/Politics Volume 18 ; 18 >
+        
       }
 
     }
@@ -16944,7 +16946,7 @@
         au < released ; 2010 ; Journal of Adolescent Research Volume 25 ; 25 >
         au < released ; 2011 ; Journal of Adolescent Research Volume 26 ; 26 >
         au < manifest ; 2012 ; Journal of Adolescent Research Volume 27 ; 27 >
-
+        au < exists ; 2013 ; Journal of Adolescent Research Volume 28 ; 28 >
       }
 
     }
@@ -21965,6 +21967,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2010 ; Journal of Humanistic Psychology Volume 50 ; 50 >
         au < released ; 2011 ; Journal of Humanistic Psychology Volume 51 ; 51 >
         au < manifest ; 2012 ; Journal of Humanistic Psychology Volume 52 ; 52 >
+        au < exists ; 2013 ; Journal of Humanistic Psychology Volume 53 ; 53 >
 
       }
 
@@ -27630,6 +27633,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Measurement and Evaluation in Counseling and Development Volume 43 ; 43 >
         au < released ; 2011 ; Measurement and Evaluation in Counseling and Development Volume 44 ; 44 >
         au < manifest ; 2012 ; Measurement and Evaluation in Counseling and Development Volume 45 ; 45 >
+        au < exists ; 2013 ; Measurement and Evaluation in Counseling and Development Volume 46 ; 46 >
 
       }
 
@@ -40093,7 +40097,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://foi.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 1 ; 1 >
+    au < exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 47 ; 47 >
 
     }
 
@@ -40164,7 +40168,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://mis.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Missiology: An International Review Volume 1 ; 1 >
+    au < exists ; 2013 ; Missiology: An International Review Volume 41 ; 41 >
 
     }
 
@@ -40200,7 +40204,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://paa.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Pacifica: Australasian Theological Studies Volume 1 ; 1 >
+    au < exists ; 2013 ; Pacifica: Australasian Theological Studies Volume 26 ; 26 >
 
     }
 
