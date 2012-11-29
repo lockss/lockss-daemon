@@ -4,7 +4,7 @@
     name = Electrochemical Society
   >
 
-    pluginPrefix = ClockssHighWirePressH20Plugin
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
 
   {
   
@@ -16,7 +16,7 @@
     >
 
     param[base_url] = http://jes.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[exists] = login needed, RU4488
 
     au <  exists ; exists ; 2011 ; Journal of the Electrochemical Society Volume 158 ; 158 >
@@ -34,7 +34,7 @@
     >
 
     param[base_url] = http://esl.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[exists] = login needed, RU4488
 
     au <  exists ; exists ; 1998 ; Electrochemical and Solid State Letters Volume 1 ; 1 >
@@ -65,7 +65,7 @@
     >
 
     param[base_url] = http://ssl.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au <  exists ; exists ; 2012 ; ECS Solid State Letters Volume 1 ; 1 >
     
@@ -81,7 +81,7 @@
     >
 
     param[base_url] = http://eel.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au <  exists ; exists ; 2012 ; ECS Electrochemistry Letters Volume 1 ; 1 >
  
@@ -97,7 +97,7 @@
     >
 
     param[base_url] = http://jss.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au <  exists ; exists ; 2012 ; ECS Journal of Solid State Science and Technology Volume 1 ; 1 >
     
@@ -115,7 +115,7 @@
     {
   
     param[base_url] = http://ma.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[exists] = RU4503, hash filter needed for "viewspecificaccesscheck"
     
     comment[previous] = 2002 through 2006 are on a non-HighWire website at http://www.electrochem.org/dl/ma/
@@ -153,7 +153,7 @@
     >
 
     param[base_url] = http://ecst.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au <  exists ; exists ;2005 ; ECS Transactions Volume 1 ; 1 >
     au <  exists ; exists ;2006 ; ECS Transactions Volume 2 ; 2 >
@@ -213,7 +213,7 @@
     >
 
     param[base_url] = http://jes.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[exists] = login needed, RU4488
 
     au <  exists ; exists ; 2011 ; Journal of the Electrochemical Society Volume 158 ; 158 >
@@ -231,7 +231,7 @@
     >
 
     param[base_url] = http://esl.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[exists] = login needed, RU4488
 
     au <  exists ; exists ; 1998 ; Electrochemical and Solid State Letters Volume 1 ; 1 >
@@ -262,7 +262,7 @@
     >
 
     param[base_url] = http://ssl.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au <  exists ; exists ; 2012 ; ECS Solid State Letters Volume 1 ; 1 >
     
@@ -278,7 +278,7 @@
     >
 
     param[base_url] = http://eel.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au <  exists ; exists ; 2012 ; ECS Electrochemistry Letters Volume 1 ; 1 >
     
@@ -294,7 +294,7 @@
     >
 
     param[base_url] = http://jss.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au <  exists ; exists ; 2012 ; ECS Journal of Solid State Science and Technology Volume 1 ; 1 >
     
@@ -312,7 +312,7 @@
     {
   
     param[base_url] = http://ma.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[exists] = RU4503, hash filter needed for "viewspecificaccesscheck"
     
     comment[previous] = 2002 through 2006 are on a non-HighWire website at http://www.electrochem.org/dl/ma/
@@ -350,7 +350,7 @@
     >
 
     param[base_url] = http://ecst.ecsdl.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au <  exists ; exists ; 2005 ; ECS Transactions Volume 1 ; 1 >
     au <  exists ; exists ; 2006 ; ECS Transactions Volume 2 ; 2 >
