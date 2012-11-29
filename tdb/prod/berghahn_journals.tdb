@@ -443,9 +443,9 @@
     au < ready ; 2002 ; Journeys Volume 3 ; 3 >
     au < ready ; 2003 ; Journeys Volume 4 ; 4 >
     au < ready ; 2004 ; Journeys Volume 5 ; 5 >
-    au < testing ; 2005 ; Journeys Volume 6 ; 6 >
+    au < ready ; 2005 ; Journeys Volume 6 ; 6 >
     au < ready ; 2006 ; Journeys Volume 7 ; 7 >
-    au < testing ; 2007 ; Journeys Volume 8 ; 8 >
+    au < ready ; 2007 ; Journeys Volume 8 ; 8 >
     au < released ; 2008 ; Journeys Volume 9 ; 9 >
     au < released ; 2009 ; Journeys Volume 10 ; 10 >
     au < released ; 2010 ; Journeys Volume 11 ; 11 >
@@ -506,7 +506,7 @@
     param[journal_issn] = 0822-7942
         
     au < ready ; 1997 ; Nomadic Peoples Volume 1 ; 1 >
-    au < testing ; 1998 ; Nomadic Peoples Volume 2 ; 2 >
+    au < ready ; 1998 ; Nomadic Peoples Volume 2 ; 2 >
     au < ready ; 1999 ; Nomadic Peoples Volume 3 ; 3 >
     au < ready ; 2000 ; Nomadic Peoples Volume 4 ; 4 >
     au < ready ; 2001 ; Nomadic Peoples Volume 5 ; 5 >
@@ -597,7 +597,7 @@
     au < ready ; 2002 ; Sartre Studies International Volume 8 ; 8 >
     au < ready ; 2003 ; Sartre Studies International Volume 9 ; 9 >
     au < ready ; 2004 ; Sartre Studies International Volume 10 ; 10 >
-    au < testing ; 2005 ; Sartre Studies International Volume 11 ; 11 >
+    au < ready ; 2005 ; Sartre Studies International Volume 11 ; 11 >
     au < released ; 2006 ; Sartre Studies International Volume 12 ; 12 >
     au < released ; 2007 ; Sartre Studies International Volume 13 ; 13 >
     au < released ; 2008 ; Sartre Studies International Volume 14 ; 14 >
@@ -669,22 +669,22 @@
     param[journal_issn] = 0040-5817
 
 
-    au < manifest ; 1997 ; Theoria Volume 44 ; 44 >
-    au < manifest ; 1998 ; Theoria Volume 45 ; 45 >
-    au < manifest ; 1999 ; Theoria Volume 46 ; 46 >
-    au < manifest ; 2000 ; Theoria Volume 47 ; 47 >
-    au < manifest ; 2001 ; Theoria Volume 48 ; 48 >
-    au < manifest ; 2002 ; Theoria Volume 49 ; 49 >
-    au < manifest ; 2003 ; Theoria Volume 50 ; 50 >
-    au < manifest ; 2004 ; Theoria Volume 51 ; 51 >
-    au < manifest ; 2005 ; Theoria Volume 52 ; 52 >
-    au < manifest ; 2006 ; Theoria Volume 53 ; 53 >
-    au < manifest ; 2007 ; Theoria Volume 54 ; 54 >
-    au < manifest ; 2008 ; Theoria Volume 55 ; 55 >
-    au < manifest ; 2009 ; Theoria Volume 56 ; 56 >
-    au < manifest ; 2010 ; Theoria Volume 57 ; 57 >
-    au < manifest ; 2011 ; Theoria Volume 58 ; 58 >
-    au < manifest ; 2012 ; Theoria Volume 59 ; 59 >
+    au < testing ; 1997 ; Theoria Volume 44 ; 44 >
+    au < testing ; 1998 ; Theoria Volume 45 ; 45 >
+    au < testing ; 1999 ; Theoria Volume 46 ; 46 >
+    au < testing ; 2000 ; Theoria Volume 47 ; 47 >
+    au < testing ; 2001 ; Theoria Volume 48 ; 48 >
+    au < testing ; 2002 ; Theoria Volume 49 ; 49 >
+    au < testing ; 2003 ; Theoria Volume 50 ; 50 >
+    au < testing ; 2004 ; Theoria Volume 51 ; 51 >
+    au < testing ; 2005 ; Theoria Volume 52 ; 52 >
+    au < testing ; 2006 ; Theoria Volume 53 ; 53 >
+    au < testing ; 2007 ; Theoria Volume 54 ; 54 >
+    au < testing ; 2008 ; Theoria Volume 55 ; 55 >
+    au < testing ; 2009 ; Theoria Volume 56 ; 56 >
+    au < testing ; 2010 ; Theoria Volume 57 ; 57 >
+    au < testing ; 2011 ; Theoria Volume 58 ; 58 >
+    au < testing ; 2012 ; Theoria Volume 59 ; 59 >
     
   }
 
@@ -700,8 +700,8 @@
     param[journal_issn] = 2045-4813
 
 
-    au < manifest ; 2011 ; Transfers Volume 1 ; 1 >
-    au < manifest ; 2012 ; Transfers Volume 2 ; 2 >
+    au < testing ; 2011 ; Transfers Volume 1 ; 1 >
+    au < testing ; 2012 ; Transfers Volume 2 ; 2 >
     
   }
 }
