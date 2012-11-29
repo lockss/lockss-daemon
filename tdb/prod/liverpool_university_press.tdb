@@ -136,8 +136,8 @@
       attr[journal_id] = byr
 
       au < released ; 2009 ; The Byron Journal Volume 37 ; 37 >
-      au < manifest ; 2010 ; The Byron Journal Volume 38 ; 38 >
-      au < manifest ; 2011 ; The Byron Journal Volume 39 ; 39 >
+      au < testing ; 2010 ; The Byron Journal Volume 38 ; 38 >
+      au < testing ; 2011 ; The Byron Journal Volume 39 ; 39 >
 
     }
 
@@ -148,11 +148,11 @@
       implicit < status ; year ; name ; param[volume_name] >  
       param[journal_issn] = 1757-0263 
       
-      au < manifest ; 2004 ; The Byron Journal Volume 32 ; 32 >
-      au < manifest ; 2005 ; The Byron Journal Volume 33 ; 33 >
-      au < manifest ; 2006 ; The Byron Journal Volume 34 ; 34 >
-      au < manifest ; 2007 ; The Byron Journal Volume 35 ; 35 >
-      au < manifest ; 2008 ; The Byron Journal Volume 36 ; 36 >
+      au < testing ; 2004 ; The Byron Journal Volume 32 ; 32 >
+      au < testing ; 2005 ; The Byron Journal Volume 33 ; 33 >
+      au < testing ; 2006 ; The Byron Journal Volume 34 ; 34 >
+      au < testing ; 2007 ; The Byron Journal Volume 35 ; 35 >
+      au < testing ; 2008 ; The Byron Journal Volume 36 ; 36 >
       au < released ; 2009 ; The Byron Journal Volume 37 ; 37 >
       au < released ; 2010 ; The Byron Journal Volume 38 ; 38 >
       au < released ; 2011 ; The Byron Journal Volume 39 ; 39 >
