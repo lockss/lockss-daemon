@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.9 2012-10-23 22:27:08 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.10 2012-11-29 01:19:33 thib_gc Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.plugin.taylorandfrancis;
 
 import java.io.*;
 
-import org.apache.commons.io.IOUtils;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.util.*;
@@ -203,8 +202,15 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         // some comments contain an opaque hash or timestamp
         new TagPair("<!--", "-->")
     ));
+    Reader stringFilter = tagFilter;
+    // Wording change
+    stringFilter = new StringFilter(stringFilter,
+                                    "<strong>Available online:</strong>",
+                                    "<strong>Version of record first published:</strong>");
     // Artifact of whitespace filter
-    Reader stringFilter = new StringFilter(tagFilter, "</div><div", "</div> <div");
+    stringFilter = new StringFilter(stringFilter,
+                                    "</div><div",
+                                    "</div> <div");
     return new ReaderInputStream(new WhiteSpaceFilter(stringFilter));
   }
 

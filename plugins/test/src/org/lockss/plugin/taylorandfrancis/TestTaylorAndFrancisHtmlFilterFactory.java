@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.7 2012-10-23 22:27:08 thib_gc Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.8 2012-11-29 01:19:33 thib_gc Exp $
  */
 
 /*
@@ -421,6 +421,17 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
       assertEquals("</div> <div class=\"foo\">",
                    StringUtil.fromInputStream(fact.createFilteredInputStream(null,
                                                                              new StringInputStream("</div>   \n\n\n   <div class=\"foo\">"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testVersionOfRecordFirstPublished() throws Exception {
+      assertEquals("<strong>Version of record first published:</strong>",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<strong>Available online:</strong>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("<strong>Version of record first published:</strong>",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<strong>Version of record first published:</strong>"),
                                                                              Constants.DEFAULT_ENCODING)));
     }
   
