@@ -2195,6 +2195,38 @@
   }
 
   {
+    
+     title <
+       name = Annals of Clinical Biochemistry ;
+       issn =  0004-5632 ;
+       eisn =  1758-1001
+     >
+     
+      param[base_url] = http://acb.rsmjournals.com/
+    
+     {
+     
+      pluginSuffix = ClockssHighWirePressH20Plugin
+    
+      au < exists ; exists ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 ; >
+      au < exists ; exists ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 ; >
+      au < exists ; exists ; 2002 ; Annals of Clinical Biochemistry Volume 39 ; 39 ; >
+      au < exists ; exists ; 2003 ; Annals of Clinical Biochemistry Volume 40 ; 40 ; >
+      au < exists ; exists ; 2004 ; Annals of Clinical Biochemistry Volume 41 ; 41 ; >
+      au < exists ; exists ; 2005 ; Annals of Clinical Biochemistry Volume 42 ; 42 ; >
+      au < exists ; exists ; 2006 ; Annals of Clinical Biochemistry Volume 43 ; 43 ; >
+      au < exists ; exists ; 2007 ; Annals of Clinical Biochemistry Volume 44 ; 44 ; >
+      au < exists ; exists ; 2008 ; Annals of Clinical Biochemistry Volume 45 ; 45 ; >
+      au < exists ; exists ; 2009 ; Annals of Clinical Biochemistry Volume 46 ; 46 ; >
+      au < exists ; exists ; 2010 ; Annals of Clinical Biochemistry Volume 47 ; 47 ; >
+      au < exists ; exists ; 2011 ; Annals of Clinical Biochemistry Volume 48 ; 48 ; >
+      au < exists ; exists ; 2012 ; Annals of Clinical Biochemistry Volume 49 ; 49 ; >
+    
+    }
+    
+    }
+    
+  {
   
     title <
       name = Anthropological Theory ;
