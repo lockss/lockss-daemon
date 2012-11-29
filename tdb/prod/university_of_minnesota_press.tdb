@@ -38,6 +38,7 @@
 
     param[journal_dir] = cultural_critique
     attr[journal_id] = cul
+    comment[notReady] = manifest page exists, but the url is broken
 
     au < released ; 2001 ; Cultural Critique 47 ; 47 >
     au < released ; 2001 ; Cultural Critique 48 ; 48 >
@@ -74,7 +75,7 @@
     au < released ; 2011 ; Cultural Critique Number 79 ; 79 >
     au < released ; 2012 ; Cultural Critique Number 80 ; 80 >
     au < released ; 2012 ; Cultural Critique Number 81 ; 81 >
-    au < expected ; 2012 ; Cultural Critique Number 82 ; 82 >
+    au < notReady ; 2012 ; Cultural Critique Number 82 ; 82 >
 
   }
 

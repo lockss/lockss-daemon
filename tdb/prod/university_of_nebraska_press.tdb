@@ -443,6 +443,7 @@
 
     param[journal_dir] = symploke
     attr[journal_id] = sym
+    comment[notReady] = manifest page exists, but url is broken
 
     au < released ; 1997 ; symploke Volume 5 ; 5 >
     au < released ; 1998 ; symploke Volume 6 ; 6 >
@@ -459,7 +460,7 @@
     au < released ; 2009 ; symploke Volume 17 ; 17 >
     au < released ; 2010 ; symploke Volume 18 ; 18 >
     au < released ; 2011 ; symploke Volume 19 ; 19 >
-    au < expected ; 2012 ; symploke Volume 20 ; 20 >
+    au < notReady ; 2012 ; symploke Volume 20 ; 20 >
 
   }
 
