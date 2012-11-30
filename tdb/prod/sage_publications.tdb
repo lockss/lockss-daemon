@@ -5384,6 +5384,29 @@
         au < released ; 2012 ; Clinical EEG and Neuroscience Volume 43 ; 43 >
       
     }
+ 
+    {
+    
+     title <
+       name = Clinical Ethics ; 
+       issn =  1477-7509 ;
+       eissn = 1758-101X 
+     >
+      pluginSuffix = HighWirePlugin
+      param[base_url] = http://ce.sagepub.com/
+      implicit < status ; year ; name ; param[volume] >
+      
+      au < exists ; 2006 ; Clinical Ethics Volume 1 ; 1 >
+      au < exists ; 2007 ; Clinical Ethics Volume 2 ; 2 >
+      au < exists ; 2008 ; Clinical Ethics Volume 3 ; 3 >
+      au < exists ; 2009 ; Clinical Ethics Volume 4 ; 4 >
+      au < exists ; 2010 ; Clinical Ethics Volume 5 ; 5 >
+      au < exists ; 2011 ; Clinical Ethics Volume 6 ; 6 >
+      au < exists ; 2012 ; Clinical Ethics Volume 7 ; 7 >
+      
+    
+    }
+ 
     
     {
 
