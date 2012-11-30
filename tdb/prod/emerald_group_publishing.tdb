@@ -39,7 +39,7 @@
     >
 
     param[journal_issn] = 0951-3574
-    comment[notReady] =RU4306
+    comment[notReady] = low agreement, will re-test
 
     au < released ; 1988 ; Accounting, Auditing & Accountability Journal Volume 1 ; 1 >
     au < released ; 1989 ; Accounting, Auditing & Accountability Journal Volume 2 ; 2 >
@@ -65,7 +65,7 @@
     au < released ; 2009 ; Accounting, Auditing & Accountability Journal Volume 22 ; 22 >
     au < released ; 2010 ; Accounting, Auditing & Accountability Journal Volume 23 ; 23 >
     au < released ; 2011 ; Accounting, Auditing & Accountability Journal Volume 24 ; 24 >
-    au < testing ; 2012 ; Accounting, Auditing & Accountability Journal Volume 25 ; 25 >
+    au < notReady ; 2012 ; Accounting, Auditing & Accountability Journal Volume 25 ; 25 >
 
   }
 
@@ -83,7 +83,7 @@
     au < released ; 2008 ; Advances in Dual Diagnosis Volume 1 ; 1 >
     au < released ; 2009 ; Advances in Dual Diagnosis Volume 2 ; 2 >
     au < released ; 2010 ; Advances in Dual Diagnosis Volume 3 ; 3 >
-    au < testing ; 2011 ; Advances in Dual Diagnosis Volume 4 ; 4 >
+    au < ready ; 2011 ; Advances in Dual Diagnosis Volume 4 ; 4 >
     au < expected ; 2012 ; Advances in Dual Diagnosis Volume 5 ; 5 >
 
   }
@@ -368,7 +368,7 @@
     au < released ; 2009 ; Anti-Corrosion Methods and Materials Volume 56 ; 56 >
     au < released ; 2010 ; Anti-Corrosion Methods and Materials Volume 57 ; 57 >
     au < released ; 2011 ; Anti-Corrosion Methods and Materials Volume 58 ; 58 >
-    au < testing ; 2012 ; Anti-Corrosion Methods and Materials Volume 59 ; 59 >
+    au < ready ; 2012 ; Anti-Corrosion Methods and Materials Volume 59 ; 59 >
 
   }
 
@@ -456,7 +456,7 @@
     au < released ; 2009 ; Asia-Pacific Journal of Business Administration Volume 1 ; 1 >
     au < released ; 2010 ; Asia-Pacific Journal of Business Administration Volume 2 ; 2 >
     au < released ; 2011 ; Asia-Pacific Journal of Business Administration Volume 3 ; 3 >
-    au < testing ; 2012 ; Asia-Pacific Journal of Business Administration Volume 4 ; 4 >
+    au < ready ; 2012 ; Asia-Pacific Journal of Business Administration Volume 4 ; 4 >
 
   }
 
@@ -545,7 +545,7 @@
     au < released ; 2009 ; Asian Review of Accounting Volume 17 ; 17 >
     au < released ; 2010 ; Asian Review of Accounting Volume 18 ; 18 >
     au < released ; 2011 ; Asian Review of Accounting Volume 19 ; 19 >
-    au < notReady ; 2012 ; Asian Review of Accounting Volume 20 ; 20 >
+    au < ready ; 2012 ; Asian Review of Accounting Volume 20 ; 20 >
 
   }
 
@@ -622,7 +622,7 @@
     au < released ; 2009 ; Aslib Proceedings: New Information Perspectives Volume 61 ; 61 >
     au < released ; 2010 ; Aslib Proceedings: New Information Perspectives Volume 62 ; 62 >
     au < released ; 2011 ; Aslib Proceedings: New Information Perspectives Volume 63 ; 63 >
-    au < manifest ; 2012 ; Aslib Proceedings: New Information Perspectives Volume 64 ; 64 >
+    au < ready ; 2012 ; Aslib Proceedings: New Information Perspectives Volume 64 ; 64 >
 
   }
 
