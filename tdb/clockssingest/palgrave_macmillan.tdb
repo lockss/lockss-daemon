@@ -17,19 +17,18 @@
         issnl = 0001-6810
       >
 
-    param[journal_id] = ap
-    comment[doNotProcess] = manifest page has bad journal url (RT4161)
- 	
- 	au < exists ; exists ; 2003 ; Acta Politica Volume 38 ; 2003 ; 38 >
-    au < exists ; exists ; 2004 ; Acta Politica Volume 39 ; 2004 ; 39 >
-    au < exists ; exists ; 2005 ; Acta Politica Volume 40 ; 2005 ; 40 >
-    au < exists ; exists ; 2006 ; Acta Politica Volume 41 ; 2006 ; 41 >
-    au < exists ; exists ; 2007 ; Acta Politica Volume 42 ; 2007 ; 42 >
-    au < exists ; exists ; 2008 ; Acta Politica Volume 43 ; 2008 ; 43 >
-    au < exists ; exists ; 2009 ; Acta Politica Volume 44 ; 2009 ; 44 >
-    au < exists ; exists ; 2010 ; Acta Politica Volume 45 ; 2010 ; 45 >
-    au < exists ; exists ; 2011 ; Acta Politica Volume 46 ; 2011 ; 46 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Acta Politica Volume 47 ; 2012 ; 47 >
+      param[journal_id] = ap
+      
+      au < exists ; exists ; 2003 ; Acta Politica Volume 38 ; 2003 ; 38 >
+      au < exists ; exists ; 2004 ; Acta Politica Volume 39 ; 2004 ; 39 >
+      au < exists ; exists ; 2005 ; Acta Politica Volume 40 ; 2005 ; 40 >
+      au < exists ; exists ; 2006 ; Acta Politica Volume 41 ; 2006 ; 41 >
+      au < exists ; exists ; 2007 ; Acta Politica Volume 42 ; 2007 ; 42 >
+      au < exists ; exists ; 2008 ; Acta Politica Volume 43 ; 2008 ; 43 >
+      au < exists ; exists ; 2009 ; Acta Politica Volume 44 ; 2009 ; 44 >
+      au < exists ; exists ; 2010 ; Acta Politica Volume 45 ; 2010 ; 45 >
+      au < exists ; exists ; 2011 ; Acta Politica Volume 46 ; 2011 ; 46 >
+      au < exists ; exists ; 2012 ; Acta Politica Volume 47 ; 2012 ; 47 >
    
     }
 
@@ -42,7 +41,19 @@
         issnl = 1472-4782
       >
 
-    param[journal_id] = abm
+      param[journal_id] = abm
+
+      au < exists ; exists ; 2002 ; Asian Business Management Volume 1 ; 2002 ; 1 >
+      au < exists ; exists ; 2003 ; Asian Business Management Volume 2 ; 2003 ; 2 >
+      au < exists ; exists ; 2004 ; Asian Business Management Volume 3 ; 2004 ; 3 >
+      au < exists ; exists ; 2005 ; Asian Business Management Volume 4 ; 2005 ; 4 >
+      au < exists ; exists ; 2006 ; Asian Business Management Volume 5 ; 2006 ; 5 >
+      au < exists ; exists ; 2007 ; Asian Business Management Volume 6 ; 2007 ; 6 >
+      au < exists ; exists ; 2008 ; Asian Business Management Volume 7 ; 2008 ; 7 >
+      au < exists ; exists ; 2009 ; Asian Business Management Volume 8 ; 2009 ; 8 >
+      au < exists ; exists ; 2010 ; Asian Business Management Volume 9 ; 2010 ; 9 >
+      au < exists ; exists ; 2011 ; Asian Business Management Volume 10 ; 2011 ; 10 >
+      au < exists ; exists ; 2012 ; Asian Business Management Volume 11 ; 2012 ; 11 >
 
     }
 
@@ -55,7 +66,15 @@
         issnl = 1746-918X
       >
 
-    param[journal_id] = bp
+      param[journal_id] = bp
+
+      au < exists ; exists ; 2006 ; British Politics Volume 1 ; 2006 ; 1 >
+      au < exists ; exists ; 2007 ; British Politics Volume 2 ; 2007 ; 2 >
+      au < exists ; exists ; 2008 ; British Politics Volume 3 ; 2008 ; 3 >
+      au < exists ; exists ; 2009 ; British Politics Volume 4 ; 2009 ; 4 >
+      au < exists ; exists ; 2010 ; British Politics Volume 5 ; 2010 ; 5 >
+      au < exists ; exists ; 2011 ; British Politics Volume 6 ; 2011 ; 6 >
+      au < exists ; exists ; 2012 ; British Politics Volume 7 ; 2012 ; 7 >
 
     }
 
@@ -68,7 +87,7 @@
         issnl = 1472-4790
       >
 
-    param[journal_id] = cep
+      param[journal_id] = cep
 
     }
 
@@ -81,7 +100,7 @@
         issnl = 1470-8914
       >
 
-    param[journal_id] = cpt
+      param[journal_id] = cpt
 
     }
 
@@ -94,7 +113,7 @@
         issnl = 1363-3589
       >
 
-    param[journal_id] = crr
+      param[journal_id] = crr
 
     }
 
@@ -107,7 +126,7 @@
         issnl = 1460-3780
       >
 
-    param[journal_id] = cpcs
+      param[journal_id] = cpcs
 
     }
 
@@ -120,7 +139,7 @@
         issnl = 1476-3419
       >
 
-    param[journal_id] = fp
+      param[journal_id] = fp
 
     }
 
@@ -133,7 +152,7 @@
         issnl = 2047-7414
       >
 
-    param[journal_id] = iga
+      param[journal_id] = iga
 
     }
 
@@ -146,7 +165,7 @@
         issnl = 1741-3591
       >
 
-    param[journal_id] = jdg
+      param[journal_id] = jdg
 
     }
 
@@ -159,7 +178,7 @@
         issnl = 1744-6503
       >
 
-    param[journal_id] = ijea
+      param[journal_id] = ijea
 
     }
 
@@ -172,7 +191,7 @@
         issnl = 1384-5748
       >
 
-    param[journal_id] = ip
+      param[journal_id] = ip
 
     }
 
@@ -185,7 +204,7 @@
         issnl = 1470-8272
       >
 
-    param[journal_id] = jam
+      param[journal_id] = jam
 
     }
 
@@ -198,7 +217,7 @@
         issnl = 1745-6452
       >
 
-    param[journal_id] = jbr
+      param[journal_id] = jbr
 
     }
 
@@ -211,7 +230,7 @@
         issnl = 1350-231X
       >
 
-    param[journal_id] = bm
+      param[journal_id] = bm
 
     }
 
@@ -224,7 +243,7 @@
         issnl = 1742-8262
       >
 
-    param[journal_id] = jba
+      param[journal_id] = jba
 
     }
 
@@ -237,7 +256,7 @@
         issnl = 1741-2439
       >
 
-    param[journal_id] = dbm
+      param[journal_id] = dbm
 
     }
 
@@ -250,7 +269,7 @@
         issnl = 1753-9641
       >
 
-    param[journal_id] = jdhf
+      param[journal_id] = jdhf
 
     }
 
@@ -263,7 +282,7 @@
         issnl = 1743-6540
       >
 
-    param[journal_id] = dam
+      param[journal_id] = dam
 
     }
 
@@ -276,7 +295,7 @@
         issnl = 1746-0166
       >
 
-    param[journal_id] = dddmp
+      param[journal_id] = dddmp
 
     }
 
@@ -289,7 +308,7 @@
         issnl = 1363-0539
       >
 
-    param[journal_id] = fsm
+      param[journal_id] = fsm
 
     }
 
@@ -302,7 +321,7 @@
         issnl = 1408-6980
       >
 
-    param[journal_id] = jird
+      param[journal_id] = jird
 
     }
 
@@ -315,7 +334,7 @@
         issnl = 0197-5897
       >
 
-    param[journal_id] = jphp
+      param[journal_id] = jphp
 
     }
 
@@ -328,7 +347,7 @@
         issnl = 1479-1110
       >
 
-    param[journal_id] = rlp
+      param[journal_id] = rlp
 
     }
 
@@ -341,7 +360,7 @@
         issnl = 1476-6930
       >
 
-    param[journal_id] = rpm
+      param[journal_id] = rpm
 
     }
 
@@ -354,7 +373,7 @@
         issnl = 0967-3237
       >
 
-    param[journal_id] = jt
+      param[journal_id] = jt
 
     }
 
@@ -367,7 +386,7 @@
         issnl = 1476-3435
       >
 
-    param[journal_id] = lst
+      param[journal_id] = lst
 
     }
 
@@ -380,7 +399,7 @@
         issnl = 1479-2931
       >
 
-    param[journal_id] = mel
+      param[journal_id] = mel
 
     }
 
@@ -393,7 +412,7 @@
         issnl = 1478-5315
       >
 
-    param[journal_id] = pm
+      param[journal_id] = pm
 
     }
 
@@ -406,7 +425,7 @@
         issnl = 1751-8040
       >
 
-    param[journal_id] = pb
+      param[journal_id] = pb
 
     }
 
@@ -419,7 +438,7 @@
         issnl = 2040-5960
       >
 
-    param[journal_id] = pmed
+      param[journal_id] = pmed
 
     }
 
@@ -432,7 +451,7 @@
         issnl = 1088-0763
       >
 
-    param[journal_id] = pcs
+      param[journal_id] = pcs
 
     }
 
@@ -445,7 +464,7 @@
         issnl = 1460-3799
       >
 
-    param[journal_id] = rm
+      param[journal_id] = rm
 
     }
 
@@ -458,7 +477,7 @@
         issnl = 0955-1662
       >
 
-    param[journal_id] = sj
+      param[journal_id] = sj
 
     }
 
@@ -471,7 +490,7 @@
         issnl = 1477-8211
       >
 
-    param[journal_id] = sth
+      param[journal_id] = sth
 
     }
 
@@ -484,7 +503,7 @@
         issnl = 1755-6341
       >
 
-    param[journal_id] = sub
+      param[journal_id] = sub
 
     }
 
@@ -497,7 +516,7 @@
         issnl = 1357-5317
       >
 
-    param[journal_id] = udi
+      param[journal_id] = udi
 
     }
 
