@@ -108,12 +108,12 @@
     param[journal_id] = aspa
     param[journal_issn] = 1933-2882   
        
-    au < manifest ; 2007 ; Aspasia Volume 1 ; 1 >
-    au < manifest ; 2008 ; Aspasia Volume 2 ; 2 >
-    au < manifest ; 2009 ; Aspasia Volume 3 ; 3 >
-    au < manifest ; 2010 ; Aspasia Volume 4 ; 4 >
-    au < manifest ; 2011 ; Aspasia Volume 5 ; 5 >
-    au < manifest ; 2012 ; Aspasia Volume 6 ; 6 >
+    au < testing ; 2007 ; Aspasia Volume 1 ; 1 >
+    au < testing ; 2008 ; Aspasia Volume 2 ; 2 >
+    au < testing ; 2009 ; Aspasia Volume 3 ; 3 >
+    au < testing ; 2010 ; Aspasia Volume 4 ; 4 >
+    au < testing ; 2011 ; Aspasia Volume 5 ; 5 >
+    au < testing ; 2012 ; Aspasia Volume 6 ; 6 >
     
   }
 
@@ -187,7 +187,7 @@
      
     au < released ; 2010 ; Environment and Society Volume 1 ; 1 >
     au < released ; 2011 ; Environment and Society Volume 2 ; 2 >
-    au < manifest ; 2012 ; Environment and Society Volume 3 ; 3 >
+    au < testing ; 2012 ; Environment and Society Volume 3 ; 3 >
     
   }
 
@@ -669,22 +669,22 @@
     param[journal_issn] = 0040-5817
 
 
-    au < testing ; 1997 ; Theoria Volume 44 ; 44 >
-    au < testing ; 1998 ; Theoria Volume 45 ; 45 >
-    au < testing ; 1999 ; Theoria Volume 46 ; 46 >
-    au < testing ; 2000 ; Theoria Volume 47 ; 47 >
-    au < testing ; 2001 ; Theoria Volume 48 ; 48 >
-    au < testing ; 2002 ; Theoria Volume 49 ; 49 >
-    au < testing ; 2003 ; Theoria Volume 50 ; 50 >
-    au < testing ; 2004 ; Theoria Volume 51 ; 51 >
-    au < testing ; 2005 ; Theoria Volume 52 ; 52 >
-    au < testing ; 2006 ; Theoria Volume 53 ; 53 >
-    au < testing ; 2007 ; Theoria Volume 54 ; 54 >
-    au < testing ; 2008 ; Theoria Volume 55 ; 55 >
-    au < testing ; 2009 ; Theoria Volume 56 ; 56 >
-    au < testing ; 2010 ; Theoria Volume 57 ; 57 >
-    au < testing ; 2011 ; Theoria Volume 58 ; 58 >
-    au < testing ; 2012 ; Theoria Volume 59 ; 59 >
+    au < ready ; 1997 ; Theoria Volume 44 ; 44 >
+    au < ready ; 1998 ; Theoria Volume 45 ; 45 >
+    au < ready ; 1999 ; Theoria Volume 46 ; 46 >
+    au < ready ; 2000 ; Theoria Volume 47 ; 47 >
+    au < ready ; 2001 ; Theoria Volume 48 ; 48 >
+    au < ready ; 2002 ; Theoria Volume 49 ; 49 >
+    au < ready ; 2003 ; Theoria Volume 50 ; 50 >
+    au < ready ; 2004 ; Theoria Volume 51 ; 51 >
+    au < ready ; 2005 ; Theoria Volume 52 ; 52 >
+    au < ready ; 2006 ; Theoria Volume 53 ; 53 >
+    au < ready ; 2007 ; Theoria Volume 54 ; 54 >
+    au < ready ; 2008 ; Theoria Volume 55 ; 55 >
+    au < ready ; 2009 ; Theoria Volume 56 ; 56 >
+    au < ready ; 2010 ; Theoria Volume 57 ; 57 >
+    au < ready ; 2011 ; Theoria Volume 58 ; 58 >
+    au < ready ; 2012 ; Theoria Volume 59 ; 59 >
     
   }
 
@@ -700,8 +700,8 @@
     param[journal_issn] = 2045-4813
 
 
-    au < testing ; 2011 ; Transfers Volume 1 ; 1 >
-    au < testing ; 2012 ; Transfers Volume 2 ; 2 >
+    au < ready ; 2011 ; Transfers Volume 1 ; 1 >
+    au < ready ; 2012 ; Transfers Volume 2 ; 2 >
     
   }
 }
