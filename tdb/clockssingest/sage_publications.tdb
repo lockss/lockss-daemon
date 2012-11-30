@@ -18792,7 +18792,32 @@
     }
 
   }
+   {
+    
+     title <
+       name = Hand Therapy ;
+       issn =  1758-9983 ;
+       eissn = 1758-9991
+     >
+      
+       pluginSuffix = ClockssHighWirePressH20Plugin
+       param[base_url] = http://ht.rsmjournals.com/
 
+      au < exists ; exists ; 2001 ; Hand Therapy Volume 6 ; 6 ; >
+      au < exists ; exists ; 2002 ; Hand Therapy Volume 7 ; 7 ; >
+      au < exists ; exists ; 2003 ; Hand Therapy Volume 8 ; 8 ; >
+      au < exists ; exists ; 2004 ; Hand Therapy Volume 9 ; 9 ; >
+      au < exists ; exists ; 2005 ; Hand Therapy Volume 10 ; 10 ; >
+      au < exists ; exists ; 2006 ; Hand Therapy Volume 11 ; 11 ; >
+      au < exists ; exists ; 2007 ; Hand Therapy Volume 12 ; 12 ; >
+      au < exists ; exists ; 2008 ; Hand Therapy Volume 13 ; 13 ; >
+      au < exists ; exists ; 2009 ; Hand Therapy Volume 14 ; 14 ; >
+      au < exists ; exists ; 2010 ; Hand Therapy Volume 15 ; 15 ; >
+      au < exists ; exists ; 2011 ; Hand Therapy Volume 16 ; 16 ; >
+      au < exists ; exists ; 2012 ; Hand Therapy Volume 17 ; 17 ; >
+
+    
+    }
   {
 
     title <
