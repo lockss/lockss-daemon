@@ -21605,6 +21605,38 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2012 ; International Journal of Care Pathways 16 ; 16 >
     
     }
+    
+     {
+    
+     title <
+       name = International Journal of STD & AIDS ;
+       issn = 0956-4624 ;
+       eissn = 1758-1052
+     >
+       pluginSuffix = HighWirePressH20Plugin
+       param[base_url] = http://ijsa.rsmjournals.com/
+       implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 1996 ; International Journal of STD & AIDS 7 ; 7 >
+      au < exists ; 1997 ; International Journal of STD & AIDS 8 ; 8 >
+      au < exists ; 1998 ; International Journal of STD & AIDS 9 ; 9 >
+      au < exists ; 1999 ; International Journal of STD & AIDS 10 ; 10 >
+      au < exists ; 2000 ; International Journal of STD & AIDS 11 ; 11 >
+      au < exists ; 2001 ; International Journal of STD & AIDS 12 ; 12 >
+      au < exists ; 2002 ; International Journal of STD & AIDS 13 ; 13 >
+      au < exists ; 2003 ; International Journal of STD & AIDS 14 ; 14 >
+      au < exists ; 2004 ; International Journal of STD & AIDS 15 ; 15 >
+      au < exists ; 2005 ; International Journal of STD & AIDS 16 ; 16 >
+      au < exists ; 2006 ; International Journal of STD & AIDS 17 ; 17 >
+      au < exists ; 2007 ; International Journal of STD & AIDS 18 ; 18 >
+      au < exists ; 2008 ; International Journal of STD & AIDS 19 ; 19 >
+      au < exists ; 2009 ; International Journal of STD & AIDS 20 ; 20 >
+      au < exists ; 2010 ; International Journal of STD & AIDS 21 ; 21 >
+      au < exists ; 2011 ; International Journal of STD & AIDS 22 ; 22 >
+      au < exists ; 2012 ; International Journal of STD & AIDS 23 ; 23 >
+    
+    }
+    
     {
 
       title <
