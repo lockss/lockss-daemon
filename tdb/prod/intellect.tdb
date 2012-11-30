@@ -1251,11 +1251,11 @@
       param[journal_id] = sdf
       param[journal_issn] = 1750-3280
     
-      au < manifest ; 2007 ; Studies in Documentary Film Volume 1 ; 1 >
-      au < manifest ; 2008 ; Studies in Documentary Film Volume 2 ; 2 >
-      au < manifest ; 2009 ; Studies in Documentary Film Volume 3 ; 3 >
-      au < manifest ; 2010 ; Studies in Documentary Film Volume 4 ; 4 >
-      au < manifest ; 2011 ; Studies in Documentary Film Volume 5 ; 5 >
+      au < testing ; 2007 ; Studies in Documentary Film Volume 1 ; 1 >
+      au < testing ; 2008 ; Studies in Documentary Film Volume 2 ; 2 >
+      au < testing ; 2009 ; Studies in Documentary Film Volume 3 ; 3 >
+      au < testing ; 2010 ; Studies in Documentary Film Volume 4 ; 4 >
+      au < testing ; 2011 ; Studies in Documentary Film Volume 5 ; 5 >
 
     }
 
@@ -1269,8 +1269,8 @@
       param[journal_id] = seec
       param[journal_issn] = 2040-350X
     
-      au < manifest ; 2010 ; Studies in Eastern European Cinema Volume 1 ; 1 >
-      au < manifest ; 2011 ; Studies in Eastern European Cinema Volume 2 ; 2 >
+      au < testing ; 2010 ; Studies in Eastern European Cinema Volume 1 ; 1 >
+      au < testing ; 2011 ; Studies in Eastern European Cinema Volume 2 ; 2 >
 
     }
 
@@ -1284,14 +1284,14 @@
       param[journal_id] = sec
       param[journal_issn] = 1471-5880
     
-      au < manifest ; 2004 ; Studies in European Cinema Volume 1 ; 1 >
-      au < manifest ; 2005 ; Studies in European Cinema Volume 2 ; 2 >
-      au < manifest ; 2006-2007 ; Studies in European Cinema Volume 3 ; 3 >
-      au < manifest ; 2007 ; Studies in European Cinema Volume 4 ; 4 >
-      au < manifest ; 2008-2009 ; Studies in European Cinema Volume 5 ; 5 >
-      au < manifest ; 2009 ; Studies in European Cinema Volume 6 ; 6 >
-      au < manifest ; 2010 ; Studies in European Cinema Volume 7 ; 7 >
-      au < manifest ; 2011 ; Studies in European Cinema Volume 8 ; 8 >
+      au < testing ; 2004 ; Studies in European Cinema Volume 1 ; 1 >
+      au < testing ; 2005 ; Studies in European Cinema Volume 2 ; 2 >
+      au < testing ; 2006-2007 ; Studies in European Cinema Volume 3 ; 3 >
+      au < testing ; 2007 ; Studies in European Cinema Volume 4 ; 4 >
+      au < testing ; 2008-2009 ; Studies in European Cinema Volume 5 ; 5 >
+      au < testing ; 2009 ; Studies in European Cinema Volume 6 ; 6 >
+      au < testing ; 2010 ; Studies in European Cinema Volume 7 ; 7 >
+      au < testing ; 2011 ; Studies in European Cinema Volume 8 ; 8 >
 
     }
 
