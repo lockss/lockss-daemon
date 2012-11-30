@@ -7861,9 +7861,21 @@
 
   {
 
-    comment[0] = International Immunology Meeting Abstracts (no ISSN) -- out of scope?
-    comment[url] = http://intimmabs.oxfordjournals.org/
-
+    title <
+    	name = International Immunology Meeting Abstracts ;
+    	issn = 0953-8178
+    >
+    
+    param[base_url] = http://intimmabs.oxfordjournals.org/
+	
+	{
+	
+		pluginSuffix = ClockssHighWirePlugin
+		
+		au < exists ; exists ; 2010 ; 14th International Congress of Immunology Kobe, Japan Supplement Volume 1 ; 1 ; >
+		
+	}
+	
   }
 
   {
