@@ -9518,7 +9518,36 @@
     }
 
   }
-
+  
+   {
+    
+     title <
+       name = Experimental Biology and Medicine ;
+       issn = 1535-3702 ;
+       eissn = 1535-3699 
+     >
+      
+       param[base_url] = http://ebm.rsmjournals.com
+       
+       pluginSuffix = ClockssHighWirePlugin
+       
+      au < exists ; exists ; 1999 ; Experimental Biology and Medicine Volume 220-222 ; 220-222 ; >
+      au < exists ; exists ; 2000 ; Experimental Biology and Medicine Volume 223-225 ; 223-225 ; >
+      au < exists ; exists ; 2001 ; Experimental Biology and Medicine Volume 226 ; 226 ; >
+      au < exists ; exists ; 2002 ; Experimental Biology and Medicine Volume 227 ; 227 ; >
+      au < exists ; exists ; 2003 ; Experimental Biology and Medicine Volume 228 ; 228 ; >
+      au < exists ; exists ; 2004 ; Experimental Biology and Medicine Volume 229 ; 229 ; >
+      au < exists ; exists ; 2005 ; Experimental Biology and Medicine Volume 230 ; 230 ; >
+      au < exists ; exists ; 2006 ; Experimental Biology and Medicine Volume 231 ; 231 ; >
+      au < exists ; exists ; 2007 ; Experimental Biology and Medicine Volume 232 ; 232 ; >
+      au < exists ; exists ; 2008 ; Experimental Biology and Medicine Volume 233 ; 233 ; >
+      au < exists ; exists ; 2009 ; Experimental Biology and Medicine Volume 234 ; 234 ; >
+      au < exists ; exists ; 2010 ; Experimental Biology and Medicine Volume 235 ; 235 ; >
+      au < exists ; exists ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 ; >
+      au < exists ; exists ; 2012 ; Experimental Biology and Medicine Volume 237 ; 237 ; >
+       
+  }
+    
   {
   
     title <
