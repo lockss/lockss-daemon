@@ -1071,8 +1071,15 @@
       param[journal_issn] = 1476-413X
     
       au < ready ; 2002-2003 ; Portuguese Journal of Social Science Volume 1 ; 1 >
-      au < testing ; 2003-2004 ; Portuguese Journal of Social Science Volume 2 ; 2 >
+      au < ready ; 2003-2004 ; Portuguese Journal of Social Science Volume 2 ; 2 >
       au < ready ; 2004 ; Portuguese Journal of Social Science Volume 3 ; 3 >
+      au < ready ; 2005 ; Portuguese Journal of Social Science Volume 4 ; 4 >
+      au < ready ; 2006-2007 ; Portuguese Journal of Social Science Volume 5 ; 5 >
+      au < ready ; 2007-2008 ; Portuguese Journal of Social Science Volume 6 ; 6 >
+      au < ready ; 2008 ; Portuguese Journal of Social Science Volume 7 ; 7 >
+      au < ready ; 2009 ; Portuguese Journal of Social Science Volume 8 ; 8 >
+      au < ready ; 2010 ; Portuguese Journal of Social Science Volume 9 ; 9 >
+      au < ready ; 2011 ; Portuguese Journal of Social Science Volume 10 ; 10 >
       au < testing ; 2005 ; Portuguese Journal of Social Science Volume 4 ; 4 >
       au < released ; 2006-2007 ; Portuguese Journal of Social Science Volume 5 ; 5 >
       au < released ; 2007-2008 ; Portuguese Journal of Social Science Volume 6 ; 6 >
@@ -1158,7 +1165,7 @@
       param[journal_id] = fict
       param[journal_issn] = 2043-0701
     
-      au < manifest ; 2011 ; Short Fiction in Theory & Practice Volume 1 ; 1 >
+      au < ready ; 2011 ; Short Fiction in Theory & Practice Volume 1 ; 1 >
 
     }
 
@@ -1171,8 +1178,8 @@
       param[journal_id] = sfs
       param[journal_issn] = 2042-7824
     
-      au < manifest ; 2010-2011 ; Short Film Studies Volume 1 ; 1 >
-      au < manifest ; 2012 ; Short Film Studies Volume 2 ; 2 >
+      au < ready ; 2010-2011 ; Short Film Studies Volume 1 ; 1 >
+      au < ready ; 2012 ; Short Film Studies Volume 2 ; 2 >
 
     }
 
@@ -1202,11 +1209,11 @@
       param[journal_id] = sac
       param[journal_issn] = 1750-3175
     
-      au < manifest ; 2007 ; Studies in Australasian Cinema Volume 1 ; 1 >
-      au < manifest ; 2008 ; Studies in Australasian Cinema Volume 2 ; 2 >
-      au < manifest ; 2009 ; Studies in Australasian Cinema Volume 3 ; 3 >
-      au < manifest ; 2010 ; Studies in Australasian Cinema Volume 4 ; 4 >
-      au < manifest ; 2011 ; Studies in Australasian Cinema Volume 5 ; 5 >
+      au < ready ; 2007 ; Studies in Australasian Cinema Volume 1 ; 1 >
+      au < ready ; 2008 ; Studies in Australasian Cinema Volume 2 ; 2 >
+      au < ready ; 2009 ; Studies in Australasian Cinema Volume 3 ; 3 >
+      au < ready ; 2010 ; Studies in Australasian Cinema Volume 4 ; 4 >
+      au < ready ; 2011 ; Studies in Australasian Cinema Volume 5 ; 5 >
 
     }
 
