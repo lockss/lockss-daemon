@@ -175,6 +175,21 @@
       }
 
     }
+    
+     {
+    
+     title <
+       name = Acta Radiologica Short Reports ;
+       eissn =  2047-9816
+     >
+       
+       pluginSuffix = HighWirePlugin
+       param[base_url] = http://ar-sr.sagepub.com/
+       implicit < status ; year ; name ; param[volume] >
+       
+       au < exists ; 2012 ; Acta Sociologica Volume 1 ; 1 >
+       
+    }
 
     {
 
