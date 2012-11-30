@@ -136,8 +136,8 @@
       attr[journal_id] = byr
 
       au < released ; 2009 ; The Byron Journal Volume 37 ; 37 >
-      au < testing ; 2010 ; The Byron Journal Volume 38 ; 38 >
-      au < testing ; 2011 ; The Byron Journal Volume 39 ; 39 >
+      au < ready ; 2010 ; The Byron Journal Volume 38 ; 38 >
+      au < ready ; 2011 ; The Byron Journal Volume 39 ; 39 >
 
     }
 
@@ -148,11 +148,11 @@
       implicit < status ; year ; name ; param[volume_name] >  
       param[journal_issn] = 1757-0263 
       
-      au < testing ; 2004 ; The Byron Journal Volume 32 ; 32 >
-      au < testing ; 2005 ; The Byron Journal Volume 33 ; 33 >
-      au < testing ; 2006 ; The Byron Journal Volume 34 ; 34 >
-      au < testing ; 2007 ; The Byron Journal Volume 35 ; 35 >
-      au < testing ; 2008 ; The Byron Journal Volume 36 ; 36 >
+      au < ready ; 2004 ; The Byron Journal Volume 32 ; 32 >
+      au < ready ; 2005 ; The Byron Journal Volume 33 ; 33 >
+      au < ready ; 2006 ; The Byron Journal Volume 34 ; 34 >
+      au < ready ; 2007 ; The Byron Journal Volume 35 ; 35 >
+      au < ready ; 2008 ; The Byron Journal Volume 36 ; 36 >
       au < released ; 2009 ; The Byron Journal Volume 37 ; 37 >
       au < released ; 2010 ; The Byron Journal Volume 38 ; 38 >
       au < released ; 2011 ; The Byron Journal Volume 39 ; 39 >
@@ -420,8 +420,8 @@
       implicit < status ; year ; name ; param[volume_name] >  
       param[journal_issn] = 1753-0776 
 
-      au < manifest ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 >
-      au < manifest ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
+      au < testing ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 >
+      au < testing ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
       au < released ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
       au < released ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
       au < released ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
@@ -486,7 +486,7 @@
       au < exists ; 2000 ; Romani Studies Volume 10 ; 10 >
       au < exists ; 2001 ; Romani Studies Volume 11 ; 11 >
       au < ready ; 2002 ; Romani Studies Volume 12 ; 12 >
-      au < notReady ; 2003 ; Romani Studies Volume 13 ; 13 >
+      au < testing ; 2003 ; Romani Studies Volume 13 ; 13 >
       au < released ; 2004 ; Romani Studies Volume 14 ; 14 >
       au < released ; 2005 ; Romani Studies Volume 15 ; 15 >
       au < released ; 2006 ; Romani Studies Volume 16 ; 16 >
