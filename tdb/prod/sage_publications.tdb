@@ -21687,9 +21687,36 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
-
+    
     {
-
+    
+     title <
+       name = Journal of Health Services Research & Policy ;
+       issn = 1355-8196 ;
+       eissn =  1758-1060 
+     >
+     
+       pluginSuffix = PressH20Plugin
+       param[base_url] = http://jhsrp.rsmjournals.com/
+       implicit < status ; year ; name ; param[volume] >
+       
+      au < exists ; 2001 ; Journal of Health Services Research & Policy 6 ; 6 >
+      au < exists ; 2002 ; Journal of Health Services Research & Policy 7 ; 7 >
+      au < exists ; 2003 ; Journal of Health Services Research & Policy 8 ; 8 >
+      au < exists ; 2004 ; Journal of Health Services Research & Policy 9 ; 9 >
+      au < exists ; 2005 ; Journal of Health Services Research & Policy 10 ; 10 >
+      au < exists ; 2006 ; Journal of Health Services Research & Policy 11 ; 11 >
+      au < exists ; 2007 ; Journal of Health Services Research & Policy 12 ; 12 >
+      au < exists ; 2008 ; Journal of Health Services Research & Policy 13 ; 13 >
+      au < exists ; 2009 ; Journal of Health Services Research & Policy 14 ; 14 >
+      au < exists ; 2010 ; Journal of Health Services Research & Policy 15 ; 15 >
+      au < exists ; 2011 ; Journal of Health Services Research & Policy 16 ; 16 >
+      au < exists ; 2012 ; Journal of Health Services Research & Policy 17 ; 17 >
+    
+    }
+    
+    {
+        
       title <
         name = Journal of Hispanic Higher Education ;
         issn = 1538-1927 ;
@@ -40579,7 +40606,6 @@ comment[mpj] = now published by Brill
     au < exists ; 2013 ; World Future Review Volume 5 ; 5 >
 
     }
-
   }
 
 }
