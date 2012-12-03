@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-	<string>2</string>
+	<string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -174,7 +174,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/[0-9]+/art[0-9]+\?crawler=true&quot;, api_url, publisher_id, journal_id, volume_name</string>
+      <string>&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/[^/]+/art[0-9]+\?crawler=true&quot;, api_url, publisher_id, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
