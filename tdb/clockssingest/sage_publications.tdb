@@ -14784,6 +14784,26 @@
   }
 
   {
+    
+     title <
+       name = JRSM Cardiovascular Disease ;
+       issn =  2048-0040 ;
+       eissn = 
+     >
+      
+       param[base_url] = http://cvd.rsmjournals.com/
+       
+       {
+
+        pluginSuffix = ClockssHighWirePlugin
+       
+      au < exists ; exists ; 2007 ; JRSM Cardiovascular Disease Volume 1 ;  ; >
+    
+    }
+    
+    }
+    
+  {
   
     title <
       name = Journal for the Study of the New Testament ;
