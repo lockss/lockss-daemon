@@ -176,14 +176,14 @@
 
     }
     
-     {
+    {
     
      title <
        name = Acta Radiologica Short Reports ;
        eissn =  2047-9816
      >
        
-       pluginSuffix = HighWirePlugin
+       pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://ar-sr.rsmjournals.com/
        implicit < status ; year ; name ; param[volume] >
        
@@ -202,7 +202,6 @@
 
       {
 
-        pluginSuffix = HighWirePlugin
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://arj.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
@@ -928,18 +927,18 @@
         au < ready ; 1958 ; American Behavioral Scientist Volume 2 ; 2 >
         au < ready ; 1959 ; American Behavioral Scientist Volume 3 ; 3 >
         au < ready ; 1960 ; American Behavioral Scientist Volume 4 ; 4 >
-        au < testing ; 1961 ; American Behavioral Scientist Volume 5 ; 5 >
+        au < ready ; 1961 ; American Behavioral Scientist Volume 5 ; 5 >
         au < ready ; 1962 ; American Behavioral Scientist Volume 6 ; 6 >
         au < released ; 1963 ; American Behavioral Scientist Volume 7 ; 7 >
-        au < testing ; 1964 ; American Behavioral Scientist Volume 8 ; 8 >
+        au < ready ; 1964 ; American Behavioral Scientist Volume 8 ; 8 >
         au < released ; 1965 ; American Behavioral Scientist Volume 9 ; 9 >
         au < ready ; 1966 ; American Behavioral Scientist Volume 10 ; 10 >
         au < ready ; 1967 ; American Behavioral Scientist Volume 11 ; 11 >
-        au < testing ; 1968 ; American Behavioral Scientist Volume 12 ; 12 >
+        au < ready ; 1968 ; American Behavioral Scientist Volume 12 ; 12 >
         au < ready ; 1969 ; American Behavioral Scientist Volume 13 ; 13 >
         au < ready ; 1970 ; American Behavioral Scientist Volume 14 ; 14 >
         au < testing ; 1971 ; American Behavioral Scientist Volume 15 ; 15 >
-        au < testing ; 1972 ; American Behavioral Scientist Volume 16 ; 16 >
+        au < ready ; 1972 ; American Behavioral Scientist Volume 16 ; 16 >
         au < ready ; 1973 ; American Behavioral Scientist Volume 17 ; 17 >
         au < ready ; 1974 ; American Behavioral Scientist Volume 18 ; 18 >
         au < released ; 1975 ; American Behavioral Scientist Volume 19 ; 19 >
@@ -949,19 +948,19 @@
         au < ready ; 1979 ; American Behavioral Scientist Volume 23 ; 23 >
         au < ready ; 1980 ; American Behavioral Scientist Volume 24 ; 24 >
         au < ready ; 1981 ; American Behavioral Scientist Volume 25 ; 25 >
-        au < testing ; 1982 ; American Behavioral Scientist Volume 26 ; 26 >
+        au < ready ; 1982 ; American Behavioral Scientist Volume 26 ; 26 >
         au < ready ; 1983 ; American Behavioral Scientist Volume 27 ; 27 >
-        au < testing ; 1984 ; American Behavioral Scientist Volume 28 ; 28 >
+        au < ready ; 1984 ; American Behavioral Scientist Volume 28 ; 28 >
         au < ready ; 1985 ; American Behavioral Scientist Volume 29 ; 29 >
         au < ready ; 1986 ; American Behavioral Scientist Volume 30 ; 30 >
         au < ready ; 1987 ; American Behavioral Scientist Volume 31 ; 31 >
-        au < testing ; 1988 ; American Behavioral Scientist Volume 32 ; 32 >
+        au < ready ; 1988 ; American Behavioral Scientist Volume 32 ; 32 >
         au < ready ; 1989 ; American Behavioral Scientist Volume 33 ; 33 >
         au < ready ; 1990 ; American Behavioral Scientist Volume 34 ; 34 >
-        au < testing ; 1991 ; American Behavioral Scientist Volume 35 ; 35 >
+        au < ready ; 1991 ; American Behavioral Scientist Volume 35 ; 35 >
         au < ready ; 1992 ; American Behavioral Scientist Volume 36 ; 36 >
-        au < testing ; 1993 ; American Behavioral Scientist Volume 37 ; 37 >
-        au < testing ; 1994 ; American Behavioral Scientist Volume 38 ; 38 >
+        au < ready ; 1993 ; American Behavioral Scientist Volume 37 ; 37 >
+        au < ready ; 1994 ; American Behavioral Scientist Volume 38 ; 38 >
         au < released ; 1995 ; American Behavioral Scientist Volume 39 ; 39 >
         au < ready ; 1996 ; American Behavioral Scientist Volume 40 ; 40 >
         au < testing ; 1997 ; American Behavioral Scientist Volume 41 ; 41 >
@@ -2518,22 +2517,23 @@
        eisn =  1758-1001
      >
      
+      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://acb.rsmjournals.com/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume] >
     
-      au < exists ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 ; >
-      au < exists ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 ; >
-      au < exists ; 2002 ; Annals of Clinical Biochemistry Volume 39 ; 39 ; >
-      au < exists ; 2003 ; Annals of Clinical Biochemistry Volume 40 ; 40 ; >
-      au < exists ; 2004 ; Annals of Clinical Biochemistry Volume 41 ; 41 ; >
-      au < exists ; 2005 ; Annals of Clinical Biochemistry Volume 42 ; 42 ; >
-      au < exists ; 2006 ; Annals of Clinical Biochemistry Volume 43 ; 43 ; >
-      au < exists ; 2007 ; Annals of Clinical Biochemistry Volume 44 ; 44 ; >
-      au < exists ; 2008 ; Annals of Clinical Biochemistry Volume 45 ; 45 ; >
-      au < exists ; 2009 ; Annals of Clinical Biochemistry Volume 46 ; 46 ; >
-      au < exists ; 2010 ; Annals of Clinical Biochemistry Volume 47 ; 47 ; >
-      au < exists ; 2011 ; Annals of Clinical Biochemistry Volume 48 ; 48 ; >
-      au < exists ; 2012 ; Annals of Clinical Biochemistry Volume 49 ; 49 ; >
+      au < exists ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 >
+      au < exists ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 >
+      au < exists ; 2002 ; Annals of Clinical Biochemistry Volume 39 ; 39 >
+      au < exists ; 2003 ; Annals of Clinical Biochemistry Volume 40 ; 40 >
+      au < exists ; 2004 ; Annals of Clinical Biochemistry Volume 41 ; 41 >
+      au < exists ; 2005 ; Annals of Clinical Biochemistry Volume 42 ; 42 >
+      au < exists ; 2006 ; Annals of Clinical Biochemistry Volume 43 ; 43 >
+      au < exists ; 2007 ; Annals of Clinical Biochemistry Volume 44 ; 44 >
+      au < exists ; 2008 ; Annals of Clinical Biochemistry Volume 45 ; 45 >
+      au < exists ; 2009 ; Annals of Clinical Biochemistry Volume 46 ; 46 >
+      au < exists ; 2010 ; Annals of Clinical Biochemistry Volume 47 ; 47 >
+      au < exists ; 2011 ; Annals of Clinical Biochemistry Volume 48 ; 48 >
+      au < exists ; 2012 ; Annals of Clinical Biochemistry Volume 49 ; 49 >
     
     }
     
@@ -5407,10 +5407,11 @@
        issn =  1477-7509 ;
        eissn = 1758-101X 
      >
-      pluginSuffix = HighWirePlugin
+     
+      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://ce.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume] >
-      
+      implicit < status ; year ; name ; param[volume_name] >
+
       au < exists ; 2006 ; Clinical Ethics Volume 1 ; 1 >
       au < exists ; 2007 ; Clinical Ethics Volume 2 ; 2 >
       au < exists ; 2008 ; Clinical Ethics Volume 3 ; 3 >
@@ -5680,6 +5681,7 @@
        issn = 1356-2622 ;
        eissn =  1758-1028
      >
+     
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://cr.rsmjournals.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -10810,17 +10812,17 @@
       }
 
     }
-   {
+    
+    {
     
      title <
        name = Experimental Biology and Medicine ;
        issn = 1535-3702 ;
        eissn = 1535-3699 
      >
-      
-       param[base_url] = http://ebm.rsmjournals.com
        
-       pluginSuffix = HighWirePlugin
+       pluginSuffix = HighWirePressH20Plugin
+       param[base_url] = http://ebm.rsmjournals.com
        implicit < status ; year ; name ; param[volume] >
        
       au < exists ; 1999 ; Experimental Biology and Medicine Volume 220-222 ; 220-222 >
@@ -10838,7 +10840,8 @@
       au < exists ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 >
       au < exists ; 2012 ; Experimental Biology and Medicine Volume 237 ; 237 >
        
-  }
+    }
+    
     {
 
       title <
@@ -21514,7 +21517,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
   
-   {
+    {
     
      title <
        name = Hand Therapy ;
@@ -21583,7 +21586,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2012 ; Health Services Management Research Volume 25 ; 25 >
     
     }
-         
+
     {
     
      title <
@@ -21591,6 +21594,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
        issn =  2040-4026 ;
        eissn =  2040-4034
      >
+     
        pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://ijcp.rsmjournals.com/
        implicit < status ; year ; name ; param[volume_name] >
@@ -21606,13 +21610,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     
     }
     
-     {
+    {
     
      title <
        name = International Journal of STD & AIDS ;
        issn = 0956-4624 ;
        eissn = 1758-1052
      >
+     
        pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://ijsa.rsmjournals.com/
        implicit < status ; year ; name ; param[volume_name] >
@@ -21695,10 +21700,11 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
        issn = 1355-8196 ;
        eissn =  1758-1060 
      >
-     
-       pluginSuffix = PressH20Plugin
+       
+       pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://jhsrp.rsmjournals.com/
-       implicit < status ; year ; name ; param[volume] >
+       implicit < status ; year ; name ; param[volume_name] >
+       
        
       au < exists ; 2001 ; Journal of Health Services Research & Policy 6 ; 6 >
       au < exists ; 2002 ; Journal of Health Services Research & Policy 7 ; 7 >
@@ -21714,15 +21720,18 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2012 ; Journal of Health Services Research & Policy 17 ; 17 >
     
     }
- {
+    
+    {
     
      title <
        name = Journal of Medical Biography ;
        issn =  0967-7720 ;
        eissn =  1758-1087
      >
-      
+     
+       pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://jmb.rsmjournals.com/
+       implicit < status ; year ; name ; param[volume_name] >
        
       au < exists ; 2005 ; Journal of Medical Biography 13 ; 13 >
       au < exists ; 2006 ; Journal of Medical Biography 14 ; 14 >
@@ -21735,7 +21744,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
        
        
     
-    }    
+    }
+     
     {
         
       title <
@@ -33222,10 +33232,9 @@ comment[mpj] = now published by Brill
       >
 
       {
-
+        pluginSuffix = HighWireStrVolPlugin
         param[base_url] = http://rsm.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
 
         au < HighWireStrVolPlugin ; down ; 2007 ; Research Studies in Music Education Volume 28 ; 28 >
 
