@@ -201,7 +201,7 @@
       >
 
       {
-
+        pluginSuffix = HighWirePlugin
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://arj.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
