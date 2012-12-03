@@ -851,11 +851,11 @@
       param[base_url] = http://ethnohistory.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWirePressH20Plugin ; exists ; 2000 ; Ethnohistory Volume 47 ; 47 >
-     au < HighWirePressH20Plugin ; exists ; 2001 ; Ethnohistory Volume 48 ; 48 >
-     au < HighWirePressH20Plugin ; exists ; 2002 ; Ethnohistory Volume 49 ; 49 >
-     au < HighWirePressH20Plugin ; exists ; 2003 ; Ethnohistory Volume 50 ; 50 >
-     au < HighWirePressH20Plugin ; exists ; 2004 ; Ethnohistory Volume 51 ; 51 >
+     au < HighWirePressH20Plugin ; manifest ; 2000 ; Ethnohistory Volume 47 ; 47 >
+     au < HighWirePressH20Plugin ; manifest ; 2001 ; Ethnohistory Volume 48 ; 48 >
+     au < HighWirePressH20Plugin ; manifest ; 2002 ; Ethnohistory Volume 49 ; 49 >
+     au < HighWirePressH20Plugin ; manifest ; 2003 ; Ethnohistory Volume 50 ; 50 >
+     au < HighWirePressH20Plugin ; manifest ; 2004 ; Ethnohistory Volume 51 ; 51 >
      au < HighWireStrVolPlugin ; down ; 2005 ; Ethnohistory Volume 52 ; 52 >
      au < HighWireStrVolPlugin ; down ; 2006 ; Ethnohistory Volume 53 ; 53 >
      au < HighWireStrVolPlugin ; down ; 2007 ; Ethnohistory Volume 54 ; 54 >
@@ -900,11 +900,11 @@
       param[base_url] = http://fhs.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWirePressH20Plugin ; exists ; 2000 ; French Historical Studies Volume 23 ; 23 >
-     au < HighWirePressH20Plugin ; exists ; 2001 ; French Historical Studies Volume 24 ; 24 >
-     au < HighWirePressH20Plugin ; exists ; 2002 ; French Historical Studies Volume 25 ; 25 >
-     au < HighWirePressH20Plugin ; exists ; 2003 ; French Historical Studies Volume 26 ; 26 >
-     au < HighWirePressH20Plugin ; exists ; 2004 ; French Historical Studies Volume 27 ; 27 >
+     au < HighWirePressH20Plugin ; manifest ; 2000 ; French Historical Studies Volume 23 ; 23 >
+     au < HighWirePressH20Plugin ; manifest ; 2001 ; French Historical Studies Volume 24 ; 24 >
+     au < HighWirePressH20Plugin ; manifest ; 2002 ; French Historical Studies Volume 25 ; 25 >
+     au < HighWirePressH20Plugin ; manifest ; 2003 ; French Historical Studies Volume 26 ; 26 >
+     au < HighWirePressH20Plugin ; manifest ; 2004 ; French Historical Studies Volume 27 ; 27 >
      au < HighWireStrVolPlugin ; down ; 2005 ; French Historical Studies Volume 28 ; 28 >
      au < HighWireStrVolPlugin ; down ; 2006 ; French Historical Studies Volume 29 ; 29 >
      au < HighWireStrVolPlugin ; down ; 2007 ; French Historical Studies Volume 30 ; 30 >      
@@ -989,17 +989,17 @@
       param[base_url] = http://glq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 1993-1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; 1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; 1996-1997 ; GLQ: A Journal of Lesbian and Gay Studies Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; 1998 ; GLQ: A Journal of Lesbian and Gay Studies Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; 2003-2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; exists ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1993-1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1996-1997 ; GLQ: A Journal of Lesbian and Gay Studies Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; GLQ: A Journal of Lesbian and Gay Studies Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 2003-2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
       au < HighWireStrVolPlugin ; down ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
       au < HighWireStrVolPlugin ; down ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >      
       au < HighWirePressH20Plugin ; released ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
@@ -1043,11 +1043,11 @@
       param[base_url] = http://hahr.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; Hispanic American Historical Review Volume 81 ; 81 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; Hispanic American Historical Review Volume 83 ; 83 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; Hispanic American Historical Review Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Hispanic American Historical Review Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Hispanic American Historical Review Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Hispanic American Historical Review Volume 84 ; 84 >
      au < HighWireStrVolPlugin ; down ; 2005 ; Hispanic American Historical Review Volume 85 ; 85 >
      au < HighWireStrVolPlugin ; down ; 2006 ; Hispanic American Historical Review Volume 86 ; 86 >
      au < HighWireStrVolPlugin ; down ; 2007 ; Hispanic American Historical Review Volume 87 ; 87 >      
@@ -1092,42 +1092,42 @@
       param[base_url] = http://hope.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWirePressH20Plugin ; exists ; 1969 ; History of Political Economy Volume 1 ; 1 >
-     au < HighWirePressH20Plugin ; exists ; 1970 ; History of Political Economy Volume 2 ; 2 >
-     au < HighWirePressH20Plugin ; exists ; 1971 ; History of Political Economy Volume 3 ; 3 >
-     au < HighWirePressH20Plugin ; exists ; 1972 ; History of Political Economy Volume 4 ; 4 >
-     au < HighWirePressH20Plugin ; exists ; 1973 ; History of Political Economy Volume 5 ; 5 >
-     au < HighWirePressH20Plugin ; exists ; 1974 ; History of Political Economy Volume 6 ; 6 >
-     au < HighWirePressH20Plugin ; exists ; 1975 ; History of Political Economy Volume 7 ; 7 >
-     au < HighWirePressH20Plugin ; exists ; 1976 ; History of Political Economy Volume 8 ; 8 >
-     au < HighWirePressH20Plugin ; exists ; 1977 ; History of Political Economy Volume 9 ; 9 >
-     au < HighWirePressH20Plugin ; exists ; 1978 ; History of Political Economy Volume 10 ; 10 >
-     au < HighWirePressH20Plugin ; exists ; 1979 ; History of Political Economy Volume 11 ; 11 >
-     au < HighWirePressH20Plugin ; exists ; 1980 ; History of Political Economy Volume 12 ; 12 >
-     au < HighWirePressH20Plugin ; exists ; 1981 ; History of Political Economy Volume 13 ; 13 >
-     au < HighWirePressH20Plugin ; exists ; 1982 ; History of Political Economy Volume 14 ; 14 >
-     au < HighWirePressH20Plugin ; exists ; 1983 ; History of Political Economy Volume 15 ; 15 >
-     au < HighWirePressH20Plugin ; exists ; 1984 ; History of Political Economy Volume 16 ; 16 >
-     au < HighWirePressH20Plugin ; exists ; 1985 ; History of Political Economy Volume 17 ; 17 >
-     au < HighWirePressH20Plugin ; exists ; 1986 ; History of Political Economy Volume 18 ; 18 >
-     au < HighWirePressH20Plugin ; exists ; 1987 ; History of Political Economy Volume 19 ; 19 >
-     au < HighWirePressH20Plugin ; exists ; 1988 ; History of Political Economy Volume 20 ; 20 >
-     au < HighWirePressH20Plugin ; exists ; 1989 ; History of Political Economy Volume 21 ; 21 >
-     au < HighWirePressH20Plugin ; exists ; 1990 ; History of Political Economy Volume 22 ; 22 >
-     au < HighWirePressH20Plugin ; exists ; 1991 ; History of Political Economy Volume 23 ; 23 >
-     au < HighWirePressH20Plugin ; exists ; 1992 ; History of Political Economy Volume 24 ; 24 >
-     au < HighWirePressH20Plugin ; exists ; 1993 ; History of Political Economy Volume 25 ; 25 >
-     au < HighWirePressH20Plugin ; exists ; 1994 ; History of Political Economy Volume 26 ; 26 >
-     au < HighWirePressH20Plugin ; exists ; 1995 ; History of Political Economy Volume 27 ; 27 >
-     au < HighWirePressH20Plugin ; exists ; 1996 ; History of Political Economy Volume 28 ; 28 >
-     au < HighWirePressH20Plugin ; exists ; 1997 ; History of Political Economy Volume 29 ; 29 >
-     au < HighWirePressH20Plugin ; exists ; 1998 ; History of Political Economy Volume 30 ; 30 >
-     au < HighWirePressH20Plugin ; exists ; 1999 ; History of Political Economy Volume 31 ; 31 >
-     au < HighWirePressH20Plugin ; exists ; 2000 ; History of Political Economy Volume 32 ; 32 >
-     au < HighWirePressH20Plugin ; exists ; 2001 ; History of Political Economy Volume 33 ; 33 >
-     au < HighWirePressH20Plugin ; exists ; 2002 ; History of Political Economy Volume 34 ; 34 >
-     au < HighWirePressH20Plugin ; exists ; 2003 ; History of Political Economy Volume 35 ; 35 >
-     au < HighWirePressH20Plugin ; exists ; 2004 ; History of Political Economy Volume 36 ; 36 >
+     au < HighWirePressH20Plugin ; manifest ; 1969 ; History of Political Economy Volume 1 ; 1 >
+     au < HighWirePressH20Plugin ; manifest ; 1970 ; History of Political Economy Volume 2 ; 2 >
+     au < HighWirePressH20Plugin ; manifest ; 1971 ; History of Political Economy Volume 3 ; 3 >
+     au < HighWirePressH20Plugin ; manifest ; 1972 ; History of Political Economy Volume 4 ; 4 >
+     au < HighWirePressH20Plugin ; manifest ; 1973 ; History of Political Economy Volume 5 ; 5 >
+     au < HighWirePressH20Plugin ; manifest ; 1974 ; History of Political Economy Volume 6 ; 6 >
+     au < HighWirePressH20Plugin ; manifest ; 1975 ; History of Political Economy Volume 7 ; 7 >
+     au < HighWirePressH20Plugin ; manifest ; 1976 ; History of Political Economy Volume 8 ; 8 >
+     au < HighWirePressH20Plugin ; manifest ; 1977 ; History of Political Economy Volume 9 ; 9 >
+     au < HighWirePressH20Plugin ; manifest ; 1978 ; History of Political Economy Volume 10 ; 10 >
+     au < HighWirePressH20Plugin ; manifest ; 1979 ; History of Political Economy Volume 11 ; 11 >
+     au < HighWirePressH20Plugin ; manifest ; 1980 ; History of Political Economy Volume 12 ; 12 >
+     au < HighWirePressH20Plugin ; manifest ; 1981 ; History of Political Economy Volume 13 ; 13 >
+     au < HighWirePressH20Plugin ; manifest ; 1982 ; History of Political Economy Volume 14 ; 14 >
+     au < HighWirePressH20Plugin ; manifest ; 1983 ; History of Political Economy Volume 15 ; 15 >
+     au < HighWirePressH20Plugin ; manifest ; 1984 ; History of Political Economy Volume 16 ; 16 >
+     au < HighWirePressH20Plugin ; manifest ; 1985 ; History of Political Economy Volume 17 ; 17 >
+     au < HighWirePressH20Plugin ; manifest ; 1986 ; History of Political Economy Volume 18 ; 18 >
+     au < HighWirePressH20Plugin ; manifest ; 1987 ; History of Political Economy Volume 19 ; 19 >
+     au < HighWirePressH20Plugin ; manifest ; 1988 ; History of Political Economy Volume 20 ; 20 >
+     au < HighWirePressH20Plugin ; manifest ; 1989 ; History of Political Economy Volume 21 ; 21 >
+     au < HighWirePressH20Plugin ; manifest ; 1990 ; History of Political Economy Volume 22 ; 22 >
+     au < HighWirePressH20Plugin ; manifest ; 1991 ; History of Political Economy Volume 23 ; 23 >
+     au < HighWirePressH20Plugin ; manifest ; 1992 ; History of Political Economy Volume 24 ; 24 >
+     au < HighWirePressH20Plugin ; manifest ; 1993 ; History of Political Economy Volume 25 ; 25 >
+     au < HighWirePressH20Plugin ; manifest ; 1994 ; History of Political Economy Volume 26 ; 26 >
+     au < HighWirePressH20Plugin ; manifest ; 1995 ; History of Political Economy Volume 27 ; 27 >
+     au < HighWirePressH20Plugin ; manifest ; 1996 ; History of Political Economy Volume 28 ; 28 >
+     au < HighWirePressH20Plugin ; manifest ; 1997 ; History of Political Economy Volume 29 ; 29 >
+     au < HighWirePressH20Plugin ; manifest ; 1998 ; History of Political Economy Volume 30 ; 30 >
+     au < HighWirePressH20Plugin ; manifest ; 1999 ; History of Political Economy Volume 31 ; 31 >
+     au < HighWirePressH20Plugin ; manifest ; 2000 ; History of Political Economy Volume 32 ; 32 >
+     au < HighWirePressH20Plugin ; manifest ; 2001 ; History of Political Economy Volume 33 ; 33 >
+     au < HighWirePressH20Plugin ; manifest ; 2002 ; History of Political Economy Volume 34 ; 34 >
+     au < HighWirePressH20Plugin ; manifest ; 2003 ; History of Political Economy Volume 35 ; 35 >
+     au < HighWirePressH20Plugin ; manifest ; 2004 ; History of Political Economy Volume 36 ; 36 >
      au < HighWireStrVolPlugin ; down ; 2005 ; History of Political Economy Volume 37 ; 37 >
      au < HighWireStrVolPlugin ; down ; 2006 ; History of Political Economy Volume 38 ; 38 >
      au < HighWireStrVolPlugin ; down ; 2007 ; History of Political Economy Volume 39 ; 39 >      
@@ -1190,35 +1190,35 @@
       param[base_url] = http://jhppl.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 1976 ; Journal of Health Politics, Policy and Law Volume 1; 1 >
-      au < HighWirePressH20Plugin ; exists ; 1977 ; Journal of Health Politics, Policy and Law Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; 1978 ; Journal of Health Politics, Policy and Law Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; 1979 ; Journal of Health Politics, Policy and Law Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; 1980 ; Journal of Health Politics, Policy and Law Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; 1981 ; Journal of Health Politics, Policy and Law Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; 1982 ; Journal of Health Politics, Policy and Law Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; 1983 ; Journal of Health Politics, Policy and Law Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; exists ; 1984 ; Journal of Health Politics, Policy and Law Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; 1985 ; Journal of Health Politics, Policy and Law Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; exists ; 1986 ; Journal of Health Politics, Policy and Law Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; exists ; 1987 ; Journal of Health Politics, Policy and Law Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; exists ; 1988 ; Journal of Health Politics, Policy and Law Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; exists ; 1989 ; Journal of Health Politics, Policy and Law Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; exists ; 1990 ; Journal of Health Politics, Policy and Law Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; exists ; 1991 ; Journal of Health Politics, Policy and Law Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; exists ; 1992 ; Journal of Health Politics, Policy and Law Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; exists ; 1993 ; Journal of Health Politics, Policy and Law Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; exists ; 1994 ; Journal of Health Politics, Policy and Law Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; exists ; 1995 ; Journal of Health Politics, Policy and Law Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of Health Politics, Policy and Law Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of Health Politics, Policy and Law Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Health Politics, Policy and Law Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of Health Politics, Policy and Law Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Health Politics, Policy and Law Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Health Politics, Policy and Law Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Health Politics, Policy and Law Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Health Politics, Policy and Law Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Health Politics, Policy and Law Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Health Politics, Policy and Law Volume 1; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Health Politics, Policy and Law Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Health Politics, Policy and Law Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Health Politics, Policy and Law Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Health Politics, Policy and Law Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Health Politics, Policy and Law Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Health Politics, Policy and Law Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Health Politics, Policy and Law Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Health Politics, Policy and Law Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Health Politics, Policy and Law Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Health Politics, Policy and Law Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Health Politics, Policy and Law Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Health Politics, Policy and Law Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Health Politics, Policy and Law Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Health Politics, Policy and Law Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of Health Politics, Policy and Law Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of Health Politics, Policy and Law Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of Health Politics, Policy and Law Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Journal of Health Politics, Policy and Law Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of Health Politics, Policy and Law Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of Health Politics, Policy and Law Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Journal of Health Politics, Policy and Law Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Journal of Health Politics, Policy and Law Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Journal of Health Politics, Policy and Law Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Health Politics, Policy and Law Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Health Politics, Policy and Law Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Health Politics, Policy and Law Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Health Politics, Policy and Law Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Health Politics, Policy and Law Volume 29 ; 29 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Health Politics, Policy and Law Volume 30 ; 30 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Health Politics, Policy and Law Volume 31 ; 31 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Health Politics, Policy and Law Volume 32 ; 32 >      
@@ -1328,11 +1328,11 @@
       param[base_url] = http://jmems.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Medieval and Early Modern Studies Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Medieval and Early Modern Studies Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 ; 34 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Medieval and Early Modern Studies Volume 36 ; 36 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 >      
