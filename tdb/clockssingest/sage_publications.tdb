@@ -139,6 +139,7 @@
     }
 
   }
+  
      {
     
      title <
@@ -147,7 +148,7 @@
      >
        
        param[base_url] = http://ar-sr.rsmjournals.com/
-      pluginSuffix = ClockssHighWirePlugin
+       pluginSuffix = ClockssHighWirePlugin
        
        au < exists ; exists ; 2012 ; Acta Sociologica Volume 1 ; 1 ; >
        
@@ -4785,7 +4786,6 @@
       au < exists ; exists ; 2011 ; Clinical Ethics Volume 6 ; 6 ; >
       au < exists ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 ; >
       
-    
     }
     
   {
