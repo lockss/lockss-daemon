@@ -21721,29 +21721,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     
     }
     
-    {
-    
-     title <
-       name = Journal of Medical Biography ;
-       issn =  0967-7720 ;
-       eissn =  1758-1087
-     >
-     
-       pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://jmb.rsmjournals.com/
-       implicit < status ; year ; name ; param[volume_name] >
-       
-      au < exists ; 2005 ; Journal of Medical Biography 13 ; 13 >
-      au < exists ; 2006 ; Journal of Medical Biography 14 ; 14 >
-      au < exists ; 2007 ; Journal of Medical Biography 15 ; 15 >
-      au < exists ; 2008 ; Journal of Medical Biography 16 ; 16 >
-      au < exists ; 2009 ; Journal of Medical Biography 17 ; 17 >
-      au < exists ; 2010 ; Journal of Medical Biography 18 ; 18 >
-      au < exists ; 2011 ; Journal of Medical Biography 19 ; 19 >
-      au < exists ; 2012 ; Journal of Medical Biography 20 ; 20 >
 
-    }
-     
     {
         
       title <
@@ -23482,7 +23460,30 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
+    
+    {
+    
+     title <
+       name = Journal of Medical Biography ;
+       issn =  0967-7720 ;
+       eissn =  1758-1087
+     >
+     
+       pluginSuffix = HighWirePressH20Plugin
+       param[base_url] = http://jmb.rsmjournals.com/
+       implicit < status ; year ; name ; param[volume_name] >
+       
+      au < exists ; 2005 ; Journal of Medical Biography 13 ; 13 >
+      au < exists ; 2006 ; Journal of Medical Biography 14 ; 14 >
+      au < exists ; 2007 ; Journal of Medical Biography 15 ; 15 >
+      au < exists ; 2008 ; Journal of Medical Biography 16 ; 16 >
+      au < exists ; 2009 ; Journal of Medical Biography 17 ; 17 >
+      au < exists ; 2010 ; Journal of Medical Biography 18 ; 18 >
+      au < exists ; 2011 ; Journal of Medical Biography 19 ; 19 >
+      au < exists ; 2012 ; Journal of Medical Biography 20 ; 20 >
 
+    }
+     
     {
       title <
         name = Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing ;
@@ -23513,6 +23514,36 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+    
+     title <
+       name = Journal of Medical Screening ;
+       issn =  0969-1413 ;
+       eissn =  1475-5793
+     >
+     
+       pluginSuffix = HighWirePressH20Plugin
+       param[base_url] = http://jms.rsmjournals.com/
+       implicit < status ; year ; name ; param[volume_name] >
+       
+        au < exists ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
+        au < exists ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
+        au < exists ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
+        au < exists ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
+        au < exists ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
+        au < exists ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
+        au < exists ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
+        au < exists ; 2005 ; Journal of Medical Screening Volume 12 ; 12 >
+        au < exists ; 2006 ; Journal of Medical Screening Volume 13 ; 13 >
+        au < exists ; 2007 ; Journal of Medical Screening Volume 14 ; 14 >
+        au < exists ; 2008 ; Journal of Medical Screening Volume 15 ; 15 >
+        au < exists ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
+        au < exists ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
+        au < exists ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
+        au < exists ; 2012 ; Journal of Medical Screening Volume 19 ; 19 >
+
+    }
+    
     {
 
       title <
