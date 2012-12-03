@@ -2115,11 +2115,11 @@
       param[base_url] = http://poeticstoday.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 2000 ; Poetics Today Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; Poetics Today Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; Poetics Today Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; Poetics Today Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; Poetics Today Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Poetics Today Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Poetics Today Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Poetics Today Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Poetics Today Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Poetics Today Volume 25 ; 25 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Poetics Today Volume 26 ; 26 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Poetics Today Volume 27 ; 27 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Poetics Today Volume 28 ; 28 >
