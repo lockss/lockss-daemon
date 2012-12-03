@@ -1038,23 +1038,23 @@
         au < manifest ; 1987 ; American Educational Research Journal Volume 24 ; 24 >
         au < manifest ; 1988 ; American Educational Research Journal Volume 25 ; 25 >
         au < manifest ; 1989 ; American Educational Research Journal Volume 26 ; 26 >
-        au < manifest ; 1990 ; American Educational Research Journal Volume 27 ; 27 >
-        au < manifest ; 1991 ; American Educational Research Journal Volume 28 ; 28 >
-        au < manifest ; 1992 ; American Educational Research Journal Volume 29 ; 29 >
-        au < manifest ; 1993 ; American Educational Research Journal Volume 30 ; 30 >
-        au < manifest ; 1994 ; American Educational Research Journal Volume 31 ; 31 >
-        au < manifest ; 1995 ; American Educational Research Journal Volume 32 ; 32 >
-        au < manifest ; 1996 ; American Educational Research Journal Volume 33 ; 33 >
-        au < manifest ; 1997 ; American Educational Research Journal Volume 34 ; 34 >
-        au < manifest ; 1998 ; American Educational Research Journal Volume 35 ; 35 >
-        au < manifest ; 1999 ; American Educational Research Journal Volume 36 ; 36 >
-        au < manifest ; 2000 ; American Educational Research Journal Volume 37 ; 37 >
-        au < manifest ; 2001 ; American Educational Research Journal Volume 38 ; 38 >
-        au < manifest ; 2002 ; American Educational Research Journal Volume 39 ; 39 >
-        au < manifest ; 2003 ; American Educational Research Journal Volume 40 ; 40 >
-        au < manifest ; 2004 ; American Educational Research Journal Volume 41 ; 41 >
-        au < manifest ; 2005 ; American Educational Research Journal Volume 42 ; 42 >
-        au < manifest ; 2006 ; American Educational Research Journal Volume 43 ; 43 >
+        au < testing ; 1990 ; American Educational Research Journal Volume 27 ; 27 >
+        au < testing ; 1991 ; American Educational Research Journal Volume 28 ; 28 >
+        au < testing ; 1992 ; American Educational Research Journal Volume 29 ; 29 >
+        au < testing ; 1993 ; American Educational Research Journal Volume 30 ; 30 >
+        au < testing ; 1994 ; American Educational Research Journal Volume 31 ; 31 >
+        au < testing ; 1995 ; American Educational Research Journal Volume 32 ; 32 >
+        au < testing ; 1996 ; American Educational Research Journal Volume 33 ; 33 >
+        au < testing ; 1997 ; American Educational Research Journal Volume 34 ; 34 >
+        au < testing ; 1998 ; American Educational Research Journal Volume 35 ; 35 >
+        au < testing ; 1999 ; American Educational Research Journal Volume 36 ; 36 >
+        au < testing ; 2000 ; American Educational Research Journal Volume 37 ; 37 >
+        au < testing ; 2001 ; American Educational Research Journal Volume 38 ; 38 >
+        au < testing ; 2002 ; American Educational Research Journal Volume 39 ; 39 >
+        au < testing ; 2003 ; American Educational Research Journal Volume 40 ; 40 >
+        au < testing ; 2004 ; American Educational Research Journal Volume 41 ; 41 >
+        au < testing ; 2005 ; American Educational Research Journal Volume 42 ; 42 >
+        au < testing ; 2006 ; American Educational Research Journal Volume 43 ; 43 >
         au < doNotProcess ; 2007 ; American Educational Research Journal Volume 44 ; 44 >
         au < doNotProcess ; 2008 ; American Educational Research Journal Volume 45 ; 45 >
         au < doNotProcess ; 2009 ; American Educational Research Journal Volume 46 ; 46 >
@@ -5685,7 +5685,7 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://cr.rsmjournals.com/
         implicit < status ; year ; name ; param[volume_name] >
- 
+
         au < exists ; 2001 ; Clinical Risk Volume 7 ; 7 >
         au < exists ; 2002 ; Clinical Risk Volume 8 ; 8 >
         au < exists ; 2003 ; Clinical Risk Volume 9 ; 9 >
@@ -21741,9 +21741,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2010 ; Journal of Medical Biography 18 ; 18 >
       au < exists ; 2011 ; Journal of Medical Biography 19 ; 19 >
       au < exists ; 2012 ; Journal of Medical Biography 20 ; 20 >
-       
-       
-    
+
     }
      
     {
@@ -33232,7 +33230,7 @@ comment[mpj] = now published by Brill
       >
 
       {
-        pluginSuffix = HighWireStrVolPlugin
+
         param[base_url] = http://rsm.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
