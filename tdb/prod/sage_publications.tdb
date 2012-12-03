@@ -14068,7 +14068,7 @@
         param[base_url] = http://ksm.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 >
+        au < manifest ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 >
 
       }
 
