@@ -16740,7 +16740,22 @@
       }
 
     }
+    
+    {
+    
+     title <
+       name = JRSM Cardiovascular Disease ;
+       eissn =  2048-0040 
+      >
 
+       pluginSuffix = HighWirePlugin
+       param[base_url] = http://cvd.rsmjournals.com/
+       implicit < status ; year ; name ; param[volume] >
+       
+      au < exists ; 2012 ; JRSM Cardiovascular Disease Volume 1 ; 1 >
+    
+    }
+    
     {
 
       title <
