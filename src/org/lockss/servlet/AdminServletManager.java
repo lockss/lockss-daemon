@@ -1,34 +1,34 @@
 /*
- * $Id: AdminServletManager.java,v 1.30 2012-10-23 21:16:23 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.31 2012-12-03 15:31:16 rwincewicz Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ all rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+ Except as contained in this notice, the name of Stanford University shall not
+ be used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.servlet;
 
@@ -59,7 +59,7 @@ public class AdminServletManager extends BaseServletManager {
   public static final String UI_REALM = "LOCKSS Admin";
   /** File holding debug user passwd */
   public static final String PASSWORD_PROPERTY_FILE =
-    "/org/lockss/servlet/admin.props";
+          "/org/lockss/servlet/admin.props";
 
   // All of the params that are defined in terms of SUFFIX_XXX are accessed
   // via the generic mechanism in BaseServletManager.setConfig().  The
@@ -81,17 +81,17 @@ public class AdminServletManager extends BaseServletManager {
   public static final boolean DEFAULT_START = true;
 
   public static final String IP_ACCESS_PREFIX =
-    PREFIX + SUFFIX_IP_ACCESS_PREFIX;
+          PREFIX + SUFFIX_IP_ACCESS_PREFIX;
   /** List of IPs or subnets to allow */
   public static final String PARAM_IP_INCLUDE =
-    IP_ACCESS_PREFIX + SUFFIX_IP_INCLUDE;
+          IP_ACCESS_PREFIX + SUFFIX_IP_INCLUDE;
   /** List of IPs or subnets to reject */
   public static final String PARAM_IP_PLATFORM_SUBNET =
-    IP_ACCESS_PREFIX + SUFFIX_IP_PLATFORM_SUBNET;
+          IP_ACCESS_PREFIX + SUFFIX_IP_PLATFORM_SUBNET;
 
   /** Log accesses from forbidden IP addresses */
   public static final String PARAM_LOG_FORBIDDEN =
-    PREFIX + SUFFIX_LOG_FORBIDDEN;
+          PREFIX + SUFFIX_LOG_FORBIDDEN;
   public static final boolean DEFAULT_LOG_FORBIDDEN = true;
 
   /** Connect to named server with https if true */
@@ -101,27 +101,27 @@ public class AdminServletManager extends BaseServletManager {
   /** Name of managed keystore to use (see
    * org.lockss.keyMgr.keystore.<i>id</i>.name) */
   public static final String PARAM_SSL_KEYSTORE_NAME =
-    PREFIX + SUFFIX_SSL_KEYSTORE_NAME;
+          PREFIX + SUFFIX_SSL_KEYSTORE_NAME;
 
   /** If set, http: connections to this port will be redirected to the
    * https: port */
   public static final String PARAM_SSL_REDIR_FROM =
-    PREFIX + SUFFIX_SSL_REDIR_FROM;
+          PREFIX + SUFFIX_SSL_REDIR_FROM;
 
   /** User authentication type: Basic or Form */
   public static final String PARAM_AUTH_TYPE = PREFIX + SUFFIX_AUTH_TYPE;
   public static final AuthType DEFAULT_AUTH_TYPE = AuthType.Basic;
 
   public static final String PARAM_RESOLVE_REMOTE_HOST =
-    PREFIX + SUFFIX_RESOLVE_REMOTE_HOST;
+          PREFIX + SUFFIX_RESOLVE_REMOTE_HOST;
   public static boolean DEFAULT_RESOLVE_REMOTE_HOST = true;
 
   public static final String PARAM_403_MSG = PREFIX + SUFFIX_403_MSG;
   public static final String DEFAULT_403_MSG =
-    "Access to the admin UI is not allowed from this IP address (%IP%)";
+          "Access to the admin UI is not allowed from this IP address (%IP%)";
 
   public static final String PARAM_ENABLE_DEBUG_USER =
-    PREFIX + SUFFIX_ENABLE_DEBUG_USER;
+          PREFIX + SUFFIX_ENABLE_DEBUG_USER;
   public static final boolean DEFAULT_ENABLE_DEBUG_USER = true;
 
   /** Path to directory holding daemon logs */
@@ -157,7 +157,7 @@ public class AdminServletManager extends BaseServletManager {
 
   public static final String PARAM_HELP_URL = PREFIX + "helpUrl";
   static final String DEFAULT_HELP_URL =
-    "http://www.lockss.org/lockss/Cache_Help";
+          "http://www.lockss.org/lockss/Cache_Help";
 
   /** If set, fetches of the UI root (http://cache:8081/) will be
    * redirected to this path (on same host and port) instead of serving the
@@ -173,7 +173,7 @@ public class AdminServletManager extends BaseServletManager {
   static final String COMPRESSOR_PREFIX = PREFIX + "compressor.";
 
   public static final String PARAM_COMPRESSOR_ENABLED =
-    COMPRESSOR_PREFIX + "enabled";
+          COMPRESSOR_PREFIX + "enabled";
   public static final boolean DEFAULT_COMPRESSOR_ENABLED = true;
 
   /** See documentation of pjl-comp-filter's CompressingFilter for legal
@@ -185,294 +185,295 @@ public class AdminServletManager extends BaseServletManager {
   static {
     COMPRESSOR_DEFAULTS.put("compressionThreshold", "4096");
     COMPRESSOR_DEFAULTS.put("includeContentTypes",
-			    "text/html,text/xml,text/plain");
+            "text/html,text/xml,text/plain");
   }
 
   /** List of MIME-type prefixes for content that should be displayed
    * inline in a frame in ViewContent.  Content of other types will be
    * offered for download. */
   static final String PARAM_INFRAME_CONTENT_TYPES =
-    PREFIX + "view.inFrameTypes";
+          PREFIX + "view.inFrameTypes";
   static final String DEFAULT_INFRAME_CONTENT_TYPES =
-    "text;image;application/pdf;application/xhtml+xml";
+          "text;image;application/pdf;application/xhtml+xml";
 
 
   // Descriptors for all admin servlets.
 
   protected static final ServletDescr SERVLET_HOME =
-    new ServletDescr("UiHome",
-		     UiHome.class,
-                     "LOCKSS Administration",
-		     "Home",
-		     ServletDescr.LARGE_LOGO);
+          new ServletDescr("UiHome",
+          UiHome.class,
+          "LOCKSS Administration",
+          "Home",
+          ServletDescr.LARGE_LOGO);
   protected static final ServletDescr SERVLET_EDIT_ACCOUNT =
-    new ServletDescr("UserEditAccount",
-		     UserEditAccount.class,
-                     "My Account",
-                     (ServletDescr.IN_NAV),
-                     "Update account info") {
-      public boolean isEnabled(LockssDaemon daemon) {
-	AccountManager acctMgr = daemon.getAccountManager();
-	return acctMgr != null && acctMgr.isEnabled();
-      }
-      public boolean isInNav(LockssServlet servlet) {
+          new ServletDescr("UserEditAccount",
+          UserEditAccount.class,
+          "My Account",
+          (ServletDescr.IN_NAV),
+          "Update account info") {
+            public boolean isEnabled(LockssDaemon daemon) {
+              AccountManager acctMgr = daemon.getAccountManager();
+              return acctMgr != null && acctMgr.isEnabled();
+            }
+            public boolean isInNav(LockssServlet servlet) {
 // 	if (servlet.doesUserHaveRole(LockssServlet.ROLE_USER_ADMIN)
 // 	    && !servlet.doesUserHaveRole(LockssServlet.ROLE_DEBUG)) {
 // 	  return false;
 // 	}
-	UserAccount acct = servlet.getUserAccount();
-	return acct != null && acct.isEditable();
-      }
-      public String getNavHeading(LockssServlet servlet) {
-	UserAccount acct = servlet.getUserAccount();
-	if (acct != null) {
-	  return super.getNavHeading(servlet) + " (" + acct.getName() + ")";
-	}
-	return super.getNavHeading(servlet);
+              UserAccount acct = servlet.getUserAccount();
+              return acct != null && acct.isEditable();
+            }
+            public String getNavHeading(LockssServlet servlet) {
+              UserAccount acct = servlet.getUserAccount();
+              if (acct != null) {
+                return super.getNavHeading(servlet) + " (" + acct.getName() + ")";
+              }
+              return super.getNavHeading(servlet);
       }};
 
   protected static final ServletDescr SERVLET_EDIT_ACCOUNTS =
-    new ServletDescr("AdminEditAccounts",
-		     AdminEditAccounts.class,
-                     "User Accounts",
-                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-		      | ServletDescr.NEED_ROLE_USER_ADMIN),
-                     "Administer user accounts") {
-      public boolean isEnabled(LockssDaemon daemon) {
-	AccountManager acctMgr = daemon.getAccountManager();
-	return acctMgr != null && acctMgr.isEnabled();
+          new ServletDescr("AdminEditAccounts",
+          AdminEditAccounts.class,
+          "User Accounts",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+          | ServletDescr.NEED_ROLE_USER_ADMIN),
+          "Administer user accounts") {
+            public boolean isEnabled(LockssDaemon daemon) {
+              AccountManager acctMgr = daemon.getAccountManager();
+              return acctMgr != null && acctMgr.isEnabled();
       }};
 
   protected static final ServletDescr SERVLET_BATCH_AU_CONFIG =
-    new ServletDescr("BatchAuConfig",
-		     BatchAuConfig.class,
-                     "Journal Configuration",
-                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-		      | ServletDescr.NEED_ROLE_AU_ADMIN),
-                     "Add or remove titles from this LOCKSS box");
+          new ServletDescr("BatchAuConfig",
+          BatchAuConfig.class,
+          "Journal Configuration",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+          | ServletDescr.NEED_ROLE_AU_ADMIN),
+          "Add or remove titles from this LOCKSS box");
   // XXXUI Development version
   protected static final ServletDescr SERVLET_BATCH_AU_CONFIG_NEW =
-      new ServletDescr("BatchAuConfigNew",
+          new ServletDescr("BatchAuConfigNew",
           BatchAuConfigNew.class,
           "Journal Configuration (New UI)",
           (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-              | ServletDescr.NEED_ROLE_AU_ADMIN),
+          | ServletDescr.NEED_ROLE_AU_ADMIN),
           "Add or remove titles from this LOCKSS box");
   protected static final ServletDescr SERVLET_AU_CONFIG =
-    new ServletDescr("AuConfig",
-		     AuConfig.class,
-                     "Manual Journal Configuration",
-		     (ServletDescr.IN_UIHOME | ServletDescr.NEED_ROLE_AU_ADMIN),
-                     "Manually edit single AU configuration");
+          new ServletDescr("AuConfig",
+          AuConfig.class,
+          "Manual Journal Configuration",
+          (ServletDescr.IN_UIHOME | ServletDescr.NEED_ROLE_AU_ADMIN),
+          "Manually edit single AU configuration");
   protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
-    new ServletDescr("AdminIpAccess",
-		     AdminIpAccess.class,
-                     "Admin Access Control",
-                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-		      | ServletDescr.NEED_ROLE_USER_ADMIN),
-                     "Control access to the administrative UI");
+          new ServletDescr("AdminIpAccess",
+          AdminIpAccess.class,
+          "Admin Access Control",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+          | ServletDescr.NEED_ROLE_USER_ADMIN),
+          "Control access to the administrative UI");
   protected static final ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
-    new ServletDescr("ProxyIpAccess",
-		     ProxyIpAccess.class,
-                     "Content Access Control",
-                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-		      | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
-                     "Control access to the preserved content");
+          new ServletDescr("ProxyIpAccess",
+          ProxyIpAccess.class,
+          "Content Access Control",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+          | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
+          "Control access to the preserved content");
   protected static final ServletDescr SERVLET_PROXY_AND_CONTENT =
-    new ServletDescr("ProxyAndContent",
-		     ProxyAndContent.class,
-                     "Content Access Options",
-                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-		      | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
-                     "Configure the audit proxy and the ICP server");
+          new ServletDescr("ProxyAndContent",
+          ProxyAndContent.class,
+          "Content Access Options",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+          | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
+          "Configure the audit proxy and the ICP server");
   protected static final ServletDescr SERVLET_PROXY_INFO =
-    new ServletDescr("ProxyConfig",
-		     ProxyConfig.class,
-                     "Proxy Info",
-                     "info/ProxyInfo",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
-                     "Info for configuring browsers and proxies"
-                     + "<br>"
-                     + "to access preserved content on this LOCKSS box");
+          new ServletDescr("ProxyConfig",
+          ProxyConfig.class,
+          "Proxy Info",
+          "info/ProxyInfo",
+          ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+          "Info for configuring browsers and proxies"
+          + "<br>"
+          + "to access preserved content on this LOCKSS box");
   protected static final ServletDescr SERVLET_EXPERT_CONFIG =
-    new ServletDescr("ExpertConfig",
-		     ExpertConfig.class,
-                     "Expert Config",
-                     (ServletDescr.IN_NAV
-		      | ServletDescr.NEED_ROLE_USER_ADMIN),
-                     "Allows arbitrary local configuration");
+          new ServletDescr("ExpertConfig",
+          ExpertConfig.class,
+          "Expert Config",
+          (ServletDescr.IN_NAV
+          | ServletDescr.NEED_ROLE_USER_ADMIN),
+          "Allows arbitrary local configuration");
   protected static final ServletDescr SERVLET_PLUGIN_CONFIG =
-    new ServletDescr("PluginConfig",
-		     PluginConfig.class,
-                     "Plugin Configuration",
-                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-		      | ServletDescr.NEED_ROLE_AU_ADMIN),
-                     "Manage plugin repositories, title databases") {
-      public boolean isInNav(LockssServlet servlet) {
-	return CurrentConfig.getBooleanParam(PARAM_ALLOW_PLUGIN_CONFIG,
-					     DEFAULT_ALLOW_PLUGIN_CONFIG);
-      }
-      public boolean isInUiHome(LockssServlet servlet) {
-	return isInNav(servlet);
+          new ServletDescr("PluginConfig",
+          PluginConfig.class,
+          "Plugin Configuration",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+          | ServletDescr.NEED_ROLE_AU_ADMIN),
+          "Manage plugin repositories, title databases") {
+            public boolean isInNav(LockssServlet servlet) {
+              return CurrentConfig.getBooleanParam(PARAM_ALLOW_PLUGIN_CONFIG,
+                      DEFAULT_ALLOW_PLUGIN_CONFIG);
+            }
+            public boolean isInUiHome(LockssServlet servlet) {
+              return isInNav(servlet);
       }};
   protected static final ServletDescr SERVLET_DAEMON_STATUS =
-      new ServletDescr("DaemonStatus",
+          new ServletDescr("DaemonStatus",
           DaemonStatus.class,
           "Daemon Status",
           ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
           "Status of LOCKSS box contents and operation");
   // XXXUI Development version
   protected static final ServletDescr SERVLET_DAEMON_STATUS_NEW =
-      new ServletDescr("DaemonStatusNew",
+          new ServletDescr("DaemonStatusNew",
           DaemonStatusNew.class,
           "Daemon Status (New UI)",
           ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
           "Status of LOCKSS box contents and operation");
+  protected static final ServletDescr SERVLET_DISPLAY_CONTENT_STATUS =
+          new ServletDescr("DisplayContentStatus",
+          DisplayContentStatus.class,
+          "Display Content Status",
+          ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+          "Status of LOCKSS box contents");
   public static final ServletDescr SERVLET_DISPLAY_CONTENT =
-      new ServletDescr("ViewContent",
+          new ServletDescr("ViewContent",
           ViewContent.class,
           "View Content",
           ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   // XXXUI New servlet
-  public static final ServletDescr SERVLET_DISPLAY_CONTENT_STATUS =
-      new ServletDescr("DisplayContentStatus",
-          DisplayContentStatus.class,
-          "Display Content Status",
-          ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   public static final ServletDescr SERVLET_SERVE_CONTENT =
-    new ServletDescr("ServeContent",
-		     ServeContent.class,
-                     "Serve Content",
-		     ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+          new ServletDescr("ServeContent",
+          ServeContent.class,
+          "Serve Content",
+          ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   public static final ServletDescr SERVLET_EXPORT_CONTENT =
-    new ServletDescr("ExportContent",
-		     ExportContent.class,
-                     "Export Content",
-		     (ServletDescr.NEED_ROLE_CONTENT_ACCESS),
-		     "Export preserved content as Zip, WARC, etc.") {
-      public boolean isEnabled(LockssDaemon daemon) {
-	return CurrentConfig.getBooleanParam(ExportContent.PARAM_ENABLE_EXPORT,
-					     ExportContent.DEFAULT_ENABLE_EXPORT);
+          new ServletDescr("ExportContent",
+          ExportContent.class,
+          "Export Content",
+          (ServletDescr.NEED_ROLE_CONTENT_ACCESS),
+          "Export preserved content as Zip, WARC, etc.") {
+            public boolean isEnabled(LockssDaemon daemon) {
+              return CurrentConfig.getBooleanParam(ExportContent.PARAM_ENABLE_EXPORT,
+                      ExportContent.DEFAULT_ENABLE_EXPORT);
       }};
   public static final ServletDescr SERVLET_LIST_OBJECTS =
-    new ServletDescr("ListObjects",
-		     ListObjects.class,
-                     "List Objects");
+          new ServletDescr("ListObjects",
+          ListObjects.class,
+          "List Objects");
   protected static final ServletDescr SERVLET_HASH_CUS =
-    new ServletDescr("HashCUS",
-		     HashCUS.class,
-                     "Hash CUS",
-                     ServletDescr.NEED_ROLE_DEBUG
-		     | ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+          new ServletDescr("HashCUS",
+          HashCUS.class,
+          "Hash CUS",
+          ServletDescr.NEED_ROLE_DEBUG
+          | ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   
   protected static final ServletDescr SERVLET_LIST_HOLDINGS =
-    new ServletDescr("TitleList",
-                     ListHoldings.class,
-                     "Title List",
-                     "Titles",
-                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
-                     "List title metadata") {
-      public boolean isEnabled(LockssDaemon daemon) {
-	return CurrentConfig.getBooleanParam(ListHoldings.PARAM_ENABLE_HOLDINGS,
-					     ListHoldings.DEFAULT_ENABLE_HOLDINGS);
+          new ServletDescr("TitleList",
+          ListHoldings.class,
+          "Title List",
+          "Titles",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
+          "List title metadata") {
+            public boolean isEnabled(LockssDaemon daemon) {
+              return CurrentConfig.getBooleanParam(ListHoldings.PARAM_ENABLE_HOLDINGS,
+                      ListHoldings.DEFAULT_ENABLE_HOLDINGS);
       }};
 
   /*protected static final ServletDescr SERVLET_OPENURL_QUERY =
-    new ServletDescr("OpenUrlQuery",
-                     OpenUrlQuery.class,
-                     "OpenURL Query",
-                     "OpenUrlQuery",
-                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
-                     "Perform an OpenURL query against the holdings.") {
-      public boolean isEnabled(LockssDaemon daemon) {
-        return CurrentConfig.getBooleanParam(OpenUrlQuery.PARAM_ENABLE_QUERY,
-          OpenUrlQuery.DEFAULT_ENABLE_QUERY);
-      }};*/
+   new ServletDescr("OpenUrlQuery",
+   OpenUrlQuery.class,
+   "OpenURL Query",
+   "OpenUrlQuery",
+   (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
+   "Perform an OpenURL query against the holdings.") {
+   public boolean isEnabled(LockssDaemon daemon) {
+   return CurrentConfig.getBooleanParam(OpenUrlQuery.PARAM_ENABLE_QUERY,
+   OpenUrlQuery.DEFAULT_ENABLE_QUERY);
+   }};*/
 
   protected static final ServletDescr LINK_LOGS =
-    new ServletDescr(null,
-		     null,
-                     "Logs",
-                     "log",
-                     ServletDescr.IN_NAV
-		     | ServletDescr.NEED_ROLE_DEBUG
-		     | ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+          new ServletDescr(null,
+          null,
+          "Logs",
+          "log",
+          ServletDescr.IN_NAV
+          | ServletDescr.NEED_ROLE_DEBUG
+          | ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   protected static final ServletDescr LINK_EXPORTS =
-    new ServletDescr(null,
-		     null,
-                     "Exports",
-                     "export",
-		     ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+          new ServletDescr(null,
+          null,
+          "Exports",
+          "export",
+          ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   // Link to ISOs only appears if there are actually any ISOs
   protected static final ServletDescr LINK_ISOS =
-    new ServletDescr(null,
-		     null,
-                     "ISOs",
-                     "iso",
-                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-		      | ServletDescr.NEED_ROLE_USER_ADMIN),
-		     "Download configured platform CD image") {
-      public boolean isInNav(LockssServlet servlet) {
-	ServletManager mgr = servlet.getServletManager();
+          new ServletDescr(null,
+          null,
+          "ISOs",
+          "iso",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+          | ServletDescr.NEED_ROLE_USER_ADMIN),
+          "Download configured platform CD image") {
+            public boolean isInNav(LockssServlet servlet) {
+              ServletManager mgr = servlet.getServletManager();
 	return (mgr instanceof AdminServletManager) &&
 	  ((AdminServletManager)mgr).hasIsoFiles();
-      }
-      public boolean isInUiHome(LockssServlet servlet) {
-	return isInNav(servlet);
+            }
+            public boolean isInUiHome(LockssServlet servlet) {
+              return isInNav(servlet);
       }};
   protected static final ServletDescr SERVLET_THREAD_DUMP =
-    new ServletDescr("ThreadDump",
-		     ThreadDump.class,
-                     "Thread Dump",
-                     ServletDescr.IN_NAV | ServletDescr.NEED_ROLE_DEBUG);
+          new ServletDescr("ThreadDump",
+          ThreadDump.class,
+          "Thread Dump",
+          ServletDescr.IN_NAV | ServletDescr.NEED_ROLE_DEBUG);
   protected static final ServletDescr SERVLET_RAISE_ALERT =
-    new ServletDescr("RaiseAlert",
-		     RaiseAlert.class,
-                     "Raise Alert",
-                     ServletDescr.NEED_ROLE_DEBUG | ServletDescr.NEED_ROLE_USER_ADMIN);
+          new ServletDescr("RaiseAlert",
+          RaiseAlert.class,
+          "Raise Alert",
+          ServletDescr.NEED_ROLE_DEBUG | ServletDescr.NEED_ROLE_USER_ADMIN);
   protected static final ServletDescr SERVLET_DEBUG_PANEL =
-    new ServletDescr("DebugPanel",
-		     DebugPanel.class,
-                     "Debug Panel",
-		     (ServletDescr.IN_NAV | ServletDescr.NEED_ROLE_DEBUG
-		      | ServletDescr.NEED_ROLE_AU_ADMIN));
+          new ServletDescr("DebugPanel",
+          DebugPanel.class,
+          "Debug Panel",
+          (ServletDescr.IN_NAV | ServletDescr.NEED_ROLE_DEBUG
+          | ServletDescr.NEED_ROLE_AU_ADMIN));
   protected static final ServletDescr LINK_CONTACT =
-    new ServletDescr(null,
-		     null,
-                     "Contact Us",
-		     mailtoUrl(DEFAULT_CONTACT_ADDR),
-                     ServletDescr.IN_NAV | ServletDescr.PATH_IS_URL);
+          new ServletDescr(null,
+          null,
+          "Contact Us",
+          mailtoUrl(DEFAULT_CONTACT_ADDR),
+          ServletDescr.IN_NAV | ServletDescr.PATH_IS_URL);
   protected static final ServletDescr LINK_HELP =
-    new ServletDescr(null,
-		     null,
-                     "Help", DEFAULT_HELP_URL,
-                     ServletDescr.PATH_IS_URL | ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
-                     "Online help, FAQs, credits");
+          new ServletDescr(null,
+          null,
+          "Help", DEFAULT_HELP_URL,
+          ServletDescr.PATH_IS_URL | ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+          "Online help, FAQs, credits");
   
-    protected static final ServletDescr LINK_LOGOUT =
-    new ServletDescr("LoginForm",
-		     null,
-                     "Logout",
-		     "LoginForm?logout=true",
-		     ServletDescr.IN_NAV) {
-      public boolean isInNav(LockssServlet servlet) {
-	ServletManager mgr = servlet.getServletManager();
-	return (mgr.getAuthenticator() instanceof LockssFormAuthenticator);
+  protected static final ServletDescr LINK_LOGOUT =
+          new ServletDescr("LoginForm",
+          null,
+          "Logout",
+          "LoginForm?logout=true",
+          ServletDescr.IN_NAV) {
+            public boolean isInNav(LockssServlet servlet) {
+              ServletManager mgr = servlet.getServletManager();
+              return (mgr.getAuthenticator() instanceof LockssFormAuthenticator);
       }};
 
   protected static final ServletDescr LOGIN_FORM =
-    new ServletDescr("LoginForm",
-		     LoginForm.class,
-                     "LOCKSS Administration",
-		     ServletDescr.NO_NAV_TABLE | ServletDescr.LARGE_LOGO);
+          new ServletDescr("LoginForm",
+          LoginForm.class,
+          "LOCKSS Administration",
+          ServletDescr.NO_NAV_TABLE | ServletDescr.LARGE_LOGO);
 		     
   protected static final ServletDescr SERVLET_COUNTER_REPORTS =
-      new ServletDescr("CounterReportsServlet",
-                       CounterReportsServlet.class,
-                       "COUNTER Reports Servlet",
-		       "CounterReports",
-                       0,
-	               "COUNTER Report generator");
+          new ServletDescr("CounterReportsServlet",
+          CounterReportsServlet.class,
+          "COUNTER Reports Servlet",
+          "CounterReports",
+          0,
+          "COUNTER Report generator");
 
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;
@@ -489,112 +490,112 @@ public class AdminServletManager extends BaseServletManager {
   // All servlets must be listed here (even if not in nav table).
   // Order of descrs determines order in nav table.
   static final ServletDescr servletDescrs[] = {
-     SERVLET_HOME,
-     SERVLET_BATCH_AU_CONFIG,
-     SERVLET_AU_CONFIG,
-     SERVLET_PLUGIN_CONFIG,
-     SERVLET_ADMIN_ACCESS_CONTROL,
-     SERVLET_PROXY_ACCESS_CONTROL,
-     SERVLET_PROXY_AND_CONTENT,
-     SERVLET_PROXY_INFO,
-     SERVLET_DAEMON_STATUS,
-     SERVLET_DISPLAY_CONTENT,
-     SERVLET_SERVE_CONTENT,
-     SERVLET_EXPORT_CONTENT,
-     SERVLET_LIST_OBJECTS,
-     SERVLET_DEBUG_PANEL,
-     SERVLET_EXPERT_CONFIG,
-     SERVLET_LIST_HOLDINGS,
-     //SERVLET_OPENURL_QUERY,
-     LINK_LOGS,
-     LINK_ISOS,
-     LINK_EXPORTS,
-     SERVLET_THREAD_DUMP,
-     SERVLET_RAISE_ALERT,
-     SERVLET_HASH_CUS,
-     LINK_CONTACT,
-     SERVLET_EDIT_ACCOUNT,
-     SERVLET_EDIT_ACCOUNTS,
-     LINK_HELP,
-     LINK_LOGOUT,
-     LOGIN_FORM,
-     SERVLET_COUNTER_REPORTS
+    SERVLET_HOME,
+    SERVLET_BATCH_AU_CONFIG,
+    SERVLET_AU_CONFIG,
+    SERVLET_PLUGIN_CONFIG,
+    SERVLET_ADMIN_ACCESS_CONTROL,
+    SERVLET_PROXY_ACCESS_CONTROL,
+    SERVLET_PROXY_AND_CONTENT,
+    SERVLET_PROXY_INFO,
+    SERVLET_DAEMON_STATUS,
+    SERVLET_DISPLAY_CONTENT,
+    SERVLET_SERVE_CONTENT,
+    SERVLET_EXPORT_CONTENT,
+    SERVLET_LIST_OBJECTS,
+    SERVLET_DEBUG_PANEL,
+    SERVLET_EXPERT_CONFIG,
+    SERVLET_LIST_HOLDINGS,
+    //SERVLET_OPENURL_QUERY,
+    LINK_LOGS,
+    LINK_ISOS,
+    LINK_EXPORTS,
+    SERVLET_THREAD_DUMP,
+    SERVLET_RAISE_ALERT,
+    SERVLET_HASH_CUS,
+    LINK_CONTACT,
+    SERVLET_EDIT_ACCOUNT,
+    SERVLET_EDIT_ACCOUNTS,
+    LINK_HELP,
+    LINK_LOGOUT,
+    LOGIN_FORM,
+    SERVLET_COUNTER_REPORTS
   };
   // XXXUI List of servlets to show in new UI: parallel main list but with new versions
   static final ServletDescr servletDescrsNew[] = {
-      SERVLET_HOME,
-      SERVLET_BATCH_AU_CONFIG_NEW,
-      SERVLET_AU_CONFIG,
-      SERVLET_PLUGIN_CONFIG,
-      SERVLET_ADMIN_ACCESS_CONTROL,
-      SERVLET_PROXY_ACCESS_CONTROL,
-      SERVLET_PROXY_AND_CONTENT,
-      SERVLET_PROXY_INFO,
-      SERVLET_DAEMON_STATUS_NEW,
-      SERVLET_DISPLAY_CONTENT_STATUS,
-      SERVLET_DISPLAY_CONTENT,
-      SERVLET_SERVE_CONTENT,
-      SERVLET_EXPORT_CONTENT,
-      SERVLET_LIST_OBJECTS,
-      SERVLET_DEBUG_PANEL,
-      SERVLET_EXPERT_CONFIG,
-      SERVLET_LIST_HOLDINGS,
-      //SERVLET_OPENURL_QUERY,
-      LINK_LOGS,
-      LINK_ISOS,
-      LINK_EXPORTS,
-      SERVLET_THREAD_DUMP,
-      SERVLET_RAISE_ALERT,
-      SERVLET_HASH_CUS,
-      LINK_CONTACT,
-      SERVLET_EDIT_ACCOUNT,
-      SERVLET_EDIT_ACCOUNTS,
-      LINK_HELP,
-      LINK_LOGOUT,
+    SERVLET_HOME,
+    SERVLET_BATCH_AU_CONFIG_NEW,
+    SERVLET_AU_CONFIG,
+    SERVLET_PLUGIN_CONFIG,
+    SERVLET_ADMIN_ACCESS_CONTROL,
+    SERVLET_PROXY_ACCESS_CONTROL,
+    SERVLET_PROXY_AND_CONTENT,
+    SERVLET_PROXY_INFO,
+    SERVLET_DAEMON_STATUS_NEW,
+    SERVLET_DISPLAY_CONTENT_STATUS,
+    SERVLET_DISPLAY_CONTENT,
+    SERVLET_SERVE_CONTENT,
+    SERVLET_EXPORT_CONTENT,
+    SERVLET_LIST_OBJECTS,
+    SERVLET_DEBUG_PANEL,
+    SERVLET_EXPERT_CONFIG,
+    SERVLET_LIST_HOLDINGS,
+    //SERVLET_OPENURL_QUERY,
+    LINK_LOGS,
+    LINK_ISOS,
+    LINK_EXPORTS,
+    SERVLET_THREAD_DUMP,
+    SERVLET_RAISE_ALERT,
+    SERVLET_HASH_CUS,
+    LINK_CONTACT,
+    SERVLET_EDIT_ACCOUNT,
+    SERVLET_EDIT_ACCOUNTS,
+    LINK_HELP,
+    LINK_LOGOUT,
       LOGIN_FORM,
   };
   // XXXUI List of servlets to show in transitional UI: combine main list with new versions
   static final ServletDescr servletDescrsTransitional[] = {
-      SERVLET_HOME,
-      SERVLET_BATCH_AU_CONFIG,
-      SERVLET_BATCH_AU_CONFIG_NEW,
-      SERVLET_AU_CONFIG,
-      SERVLET_PLUGIN_CONFIG,
-      SERVLET_ADMIN_ACCESS_CONTROL,
-      SERVLET_PROXY_ACCESS_CONTROL,
-      SERVLET_PROXY_AND_CONTENT,
-      SERVLET_PROXY_INFO,
-      SERVLET_DAEMON_STATUS,
-      SERVLET_DAEMON_STATUS_NEW,
-      SERVLET_DISPLAY_CONTENT_STATUS,
-      SERVLET_DISPLAY_CONTENT,
-      SERVLET_SERVE_CONTENT,
-      SERVLET_EXPORT_CONTENT,
-      SERVLET_LIST_OBJECTS,
-      SERVLET_DEBUG_PANEL,
-      SERVLET_EXPERT_CONFIG,
-      SERVLET_LIST_HOLDINGS,
-      //SERVLET_OPENURL_QUERY,
-      LINK_LOGS,
-      LINK_ISOS,
-      LINK_EXPORTS,
-      SERVLET_THREAD_DUMP,
-      SERVLET_RAISE_ALERT,
-      SERVLET_HASH_CUS,
-      LINK_CONTACT,
-      SERVLET_EDIT_ACCOUNT,
-      SERVLET_EDIT_ACCOUNTS,
-      LINK_HELP,
-      LINK_LOGOUT,
-      LOGIN_FORM,
+    SERVLET_HOME,
+    SERVLET_BATCH_AU_CONFIG,
+    SERVLET_BATCH_AU_CONFIG_NEW,
+    SERVLET_AU_CONFIG,
+    SERVLET_PLUGIN_CONFIG,
+    SERVLET_ADMIN_ACCESS_CONTROL,
+    SERVLET_PROXY_ACCESS_CONTROL,
+    SERVLET_PROXY_AND_CONTENT,
+    SERVLET_PROXY_INFO,
+    SERVLET_DAEMON_STATUS,
+    SERVLET_DAEMON_STATUS_NEW,
+    SERVLET_DISPLAY_CONTENT_STATUS,
+    SERVLET_DISPLAY_CONTENT,
+    SERVLET_SERVE_CONTENT,
+    SERVLET_EXPORT_CONTENT,
+    SERVLET_LIST_OBJECTS,
+    SERVLET_DEBUG_PANEL,
+    SERVLET_EXPERT_CONFIG,
+    SERVLET_LIST_HOLDINGS,
+    //SERVLET_OPENURL_QUERY,
+    LINK_LOGS,
+    LINK_ISOS,
+    LINK_EXPORTS,
+    SERVLET_THREAD_DUMP,
+    SERVLET_RAISE_ALERT,
+    SERVLET_HASH_CUS,
+    LINK_CONTACT,
+    SERVLET_EDIT_ACCOUNT,
+    SERVLET_EDIT_ACCOUNTS,
+    LINK_HELP,
+    LINK_LOGOUT,
+    LOGIN_FORM,
   };
 
   // XXXUI Show the transitional or new UI if param is enabled
   public ServletDescr[] getServletDescrs() {
     boolean newui = CurrentConfig.getBooleanParam(PARAM_ENABLE_NEW_UI,
-        DEFAULT_ENABLE_NEW_UI);
+            DEFAULT_ENABLE_NEW_UI);
     boolean transui = CurrentConfig.getBooleanParam(PARAM_ENABLE_TRANSITIONAL_UI,
-        DEFAULT_ENABLE_TRANSITIONAL_UI);
+            DEFAULT_ENABLE_TRANSITIONAL_UI);
     return transui ? servletDescrsTransitional : newui ? servletDescrsNew : servletDescrs;
   }
 
@@ -628,47 +629,47 @@ public class AdminServletManager extends BaseServletManager {
   }
 
   public void setConfig(Configuration config, Configuration prevConfig,
-			Configuration.Differences changedKeys) {
+          Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
     isodir = config.get(PARAM_ISODIR);
     logdir = config.get(PARAM_LOGDIR);
     if (changedKeys.contains(ExportContent.PREFIX)) {
       String path = config.get(ExportContent.PARAM_EXPORT_PATH);
       if (StringUtil.isNullString(path)) {
-	String tmpdir = config.get(ConfigManager.PARAM_TMPDIR);
-	exportdir = new File(tmpdir, ExportContent.DEFAULT_EXPORT_DIR);
+        String tmpdir = config.get(ConfigManager.PARAM_TMPDIR);
+        exportdir = new File(tmpdir, ExportContent.DEFAULT_EXPORT_DIR);
       } else {
-	exportdir = new File(path);
+        exportdir = new File(path);
       }
       if (!exportdir.exists()) {
-	if (!FileUtil.ensureDirExists(exportdir)) {
-	  log.error("Could not create export directory " + exportdir);
-	}
+        if (!FileUtil.ensureDirExists(exportdir)) {
+          log.error("Could not create export directory " + exportdir);
+        }
       }
     }
     if (changedKeys.contains(PREFIX)) {
       if (changedKeys.contains(PARAM_REDIRECT_ROOT)) {
-	redirectRootTo = config.get(PARAM_REDIRECT_ROOT,
-				    DEFAULT_REDIRECT_ROOT);
-	if (rootResourceHandler != null) {
-	  setRedirectRootTo(rootResourceHandler,
-			    (StringUtil.isNullString(redirectRootTo)
-			     ? null : redirectRootTo));
-	}
+        redirectRootTo = config.get(PARAM_REDIRECT_ROOT,
+                DEFAULT_REDIRECT_ROOT);
+        if (rootResourceHandler != null) {
+          setRedirectRootTo(rootResourceHandler,
+                  (StringUtil.isNullString(redirectRootTo)
+                  ? null : redirectRootTo));
+        }
       }
       setContactAddr(config.get(PARAM_CONTACT_ADDR,
-				DEFAULT_CONTACT_ADDR));
+              DEFAULT_CONTACT_ADDR));
       setHelpUrl(config.get(PARAM_HELP_URL, DEFAULT_HELP_URL));
       compressorEnabled = config.getBoolean(PARAM_COMPRESSOR_ENABLED,
-					    DEFAULT_COMPRESSOR_ENABLED);
+              DEFAULT_COMPRESSOR_ENABLED);
       exportEnabled = config.getBoolean(ExportContent.PARAM_ENABLE_EXPORT,
-					ExportContent.DEFAULT_ENABLE_EXPORT);
+              ExportContent.DEFAULT_ENABLE_EXPORT);
       if (changedKeys.contains(PARAM_INFRAME_CONTENT_TYPES)) {
-	inFrameContentTypes = config.getList(PARAM_INFRAME_CONTENT_TYPES);
-	if (inFrameContentTypes == null || inFrameContentTypes.isEmpty()) {
-	  inFrameContentTypes =
-	    StringUtil.breakAt(DEFAULT_INFRAME_CONTENT_TYPES, ';', 0, true);
-	}
+        inFrameContentTypes = config.getList(PARAM_INFRAME_CONTENT_TYPES);
+        if (inFrameContentTypes == null || inFrameContentTypes.isEmpty()) {
+          inFrameContentTypes =
+                  StringUtil.breakAt(DEFAULT_INFRAME_CONTENT_TYPES, ';', 0, true);
+        }
       }
       startOrStop();
     }
@@ -676,7 +677,7 @@ public class AdminServletManager extends BaseServletManager {
 
   private void setRedirectRootTo(LockssResourceHandler rh, String redTo) {
     rootResourceHandler.setRedirectRootTo(StringUtil.isNullString(redTo)
-					  ? null : redTo);
+            ? null : redTo);
   }
 
   List inFrameContentTypes() {
@@ -703,22 +704,22 @@ public class AdminServletManager extends BaseServletManager {
   protected void configureContexts(HttpServer server) {
     try {
       if (true || logdir != null) {
-	// Create context for serving log files and directory
-	setupLogContext(server, realm, "/log/", logdir);
+        // Create context for serving log files and directory
+        setupLogContext(server, realm, "/log/", logdir);
       }
       if (exportEnabled) {
-	// Create context for serving exported files and directory
-	setupDirContext(server, realm, "/export/", exportdir.toString(), null);
+        // Create context for serving exported files and directory
+        setupDirContext(server, realm, "/export/", exportdir.toString(), null);
       }
       if (isodir != null) {
-	// Create context for serving ISO files and directory
-	FilenameFilter filt = new FileExtensionFilter(".iso");
-	setupDirContext(server, realm, "/iso/", isodir, filt);
-	String[] isofiles = new File(isodir).list(filt);
-	if (isofiles != null) {
-	  log.debug("isofiles: " + ListUtil.fromArray(isofiles));
-	  hasIsoFiles = isofiles.length != 0;
-	}
+        // Create context for serving ISO files and directory
+        FilenameFilter filt = new FileExtensionFilter(".iso");
+        setupDirContext(server, realm, "/iso/", isodir, filt);
+        String[] isofiles = new File(isodir).list(filt);
+        if (isofiles != null) {
+          log.debug("isofiles: " + ListUtil.fromArray(isofiles));
+          hasIsoFiles = isofiles.length != 0;
+        }
       }
       // info currently has same auth as /, but could be different
 //       setupInfoContext(server);
@@ -757,9 +758,9 @@ public class AdminServletManager extends BaseServletManager {
     //addServlets(servletDescrsNew, handler);
 
     handler.addServlet("ProxyInfo", "/info/ProxyInfo",
-		       "org.lockss.servlet.ProxyConfig");
+            "org.lockss.servlet.ProxyConfig");
     addServletIfAvailable(handler, "Api", "/Api",
-			  "org.lockss.uiapi.servlet.Api");
+            "org.lockss.uiapi.servlet.Api");
     context.addHandler(handler);
 
     // ResourceHandler should come after servlets
@@ -776,7 +777,7 @@ public class AdminServletManager extends BaseServletManager {
     }
 
     handler.addServlet("Resource", "/",
-		       "org.lockss.servlet.LockssResourceServlet");
+            "org.lockss.servlet.LockssResourceServlet");
 
 //     // NotFoundHandler
 //     context.addHandler(new NotFoundHandler());
@@ -789,26 +790,26 @@ public class AdminServletManager extends BaseServletManager {
     if (compressorEnabled) {
       String filterName = "CompressingFilter";
       FilterHolder holder =
-	handler.defineFilter(filterName, CompressingFilter.class.getName());
+              handler.defineFilter(filterName, CompressingFilter.class.getName());
       // Set default compressor params unless in config
       Configuration compressorConfig = config.getConfigTree(COMPRESSOR_PREFIX);
       for (Map.Entry<String,String> ent : COMPRESSOR_DEFAULTS.entrySet()) {
-	String key = ent.getKey();
-	if (compressorConfig.get(key) == null) {
-	  holder.put(key, ent.getValue());
-	}
+        String key = ent.getKey();
+        if (compressorConfig.get(key) == null) {
+          holder.put(key, ent.getValue());
+        }
       }
       // Set compressor params from config
       for (Iterator iter = compressorConfig.nodeIterator(); iter.hasNext(); ) {
 	String key = (String)iter.next();
-	String val = compressorConfig.get(key);
-	holder.put(key, val);
+        String val = compressorConfig.get(key);
+        holder.put(key, val);
       }
       // Workaround for parseDouble() bug
       handler.defineFilter("BuggyDoubleFilter",
-			   CompressingFilterWrapper.class.getName());
+              CompressingFilterWrapper.class.getName());
       handler.addFilterPathMapping("/*", "BuggyDoubleFilter",
-				   Dispatcher.__DEFAULT);
+              Dispatcher.__DEFAULT);
 
       handler.addFilterPathMapping("/*", filterName, Dispatcher.__DEFAULT);
     }
@@ -855,8 +856,8 @@ public class AdminServletManager extends BaseServletManager {
 //   }
 
   protected void setupLogContext(HttpServer server, UserRealm realm,
-				 String contextPath, String logdir)
-      throws MalformedURLException {
+          String contextPath, String logdir)
+          throws MalformedURLException {
     setupDirContext(server, realm, contextPath, logdir, null);
   }
 

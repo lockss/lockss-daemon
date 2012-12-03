@@ -1,74 +1,80 @@
 /*
- * $Id $
+ * $Id DisplayContentStatus.java 2012/12/03 14:52:00 rwincewicz $
  */
 
 /*
 
-Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+ Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ all rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+ Except as contained in this notice, the name of Stanford University shall not
+ be used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from Stanford University.
 
-*/
-
+ */
 package org.lockss.servlet;
 
 import java.io.*;
+import java.net.URLDecoder;
 import java.text.*;
 import java.util.*;
-
+import java.util.logging.Level;
 import javax.servlet.*;
-
+import javax.xml.parsers.*;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import org.apache.commons.lang.time.FastDateFormat;
-import org.mortbay.html.*;
-import org.w3c.dom.Document;
-
 import org.lockss.config.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.PluginManager;
-import org.lockss.protocol.*;
+import org.lockss.remote.RemoteApi;
 import org.lockss.util.*;
-
+import org.mortbay.html.*;
+import org.w3c.dom.Document;
 
 /**
- * DaemonStatus servlet
+ * Display Content Status servlet
  */
 public class DisplayContentStatus extends LockssServlet {
-  protected static Logger log = Logger.getLogger("DisplayContentStatus");
 
-  /** Supported output formats */
+  public static final String AU_TO_REMOVE = "removeAu";
+  /**
+   * Supported output formats
+   */
   static final int OUTPUT_HTML = 1;
   static final int OUTPUT_TEXT = 2;
   static final int OUTPUT_XML = 3;
   static final int OUTPUT_CSV = 4;
-
   private String tableName;
   private String tableKey;
   private String sortKey;
+  private String groupKey;
   private StatusService statSvc;
   private int outputFmt;
   private java.util.List rules;
   private BitSet tableOptions;
   private PluginManager pluginMgr;
+  private RemoteApi remoteApi;
+  private String action;
+  private String auName;
 
   protected void resetLocals() {
     super.resetLocals();
@@ -79,29 +85,52 @@ public class DisplayContentStatus extends LockssServlet {
     super.init(config);
     statSvc = getLockssDaemon().getStatusService();
     pluginMgr = getLockssDaemon().getPluginManager();
+    remoteApi = getLockssDaemon().getRemoteApi();
   }
-
   static final Set fixedParams =
-    SetUtil.set("text", "output", "options", "table", "key", "sort");
+          SetUtil.set("text", "output", "options", "table", "key", "sort");
 
   /**
    * Handle a request
+   *
    * @throws IOException
    */
   public void lockssHandleRequest() throws IOException {
     if (!StringUtil.isNullString(req.getParameter("isDaemonReady"))) {
       if (pluginMgr.areAusStarted()) {
-	resp.setStatus(200);
-	PrintWriter wrtr = resp.getWriter();
-	resp.setContentType("text/plain");
-	wrtr.println("true");
+        resp.setStatus(200);
+        PrintWriter wrtr = resp.getWriter();
+        resp.setContentType("text/plain");
+        wrtr.println("true");
       } else {
-	PrintWriter wrtr = resp.getWriter();
-	resp.setContentType("text/plain");
-	wrtr.println("false");
-	resp.sendError(202, "Not ready");
+        PrintWriter wrtr = resp.getWriter();
+        resp.setContentType("text/plain");
+        wrtr.println("false");
+        resp.sendError(202, "Not ready");
       }
       return;
+    }
+
+    action = req.getParameter(ACTION_TAG);
+    auName = req.getParameter(AU_TO_REMOVE);
+
+    if (action != null && auName != null) {
+      String auString = URLDecoder.decode(auName, "UTF-8");
+      java.util.List<String> auList = new ArrayList<String>();
+      auList.add(auString);
+      doRemoveAus(auList);
+    }
+
+    if (StringUtil.isNullString(action)) {
+      try {
+        getMultiPartRequest();
+        if (multiReq != null) {
+          action = multiReq.getString(ACTION_TAG);
+        }
+      } catch (FormDataTooLongException e) {
+        errMsg = "Uploaded file too large: " + e.getMessage();
+        // leave action null, will call displayAuSummary() below
+      }
     }
 
     outputFmt = OUTPUT_HTML;	// default output is html
@@ -109,15 +138,15 @@ public class DisplayContentStatus extends LockssServlet {
     String outputParam = req.getParameter("output");
     if (!StringUtil.isNullString(outputParam)) {
       if ("html".equalsIgnoreCase(outputParam)) {
-	outputFmt = OUTPUT_HTML;
+        outputFmt = OUTPUT_HTML;
       } else if ("xml".equalsIgnoreCase(outputParam)) {
-	outputFmt = OUTPUT_XML;
+        outputFmt = OUTPUT_XML;
       } else if ("text".equalsIgnoreCase(outputParam)) {
-	outputFmt = OUTPUT_TEXT;
+        outputFmt = OUTPUT_TEXT;
       } else if ("csv".equalsIgnoreCase(outputParam)) {
-	outputFmt = OUTPUT_CSV;
+        outputFmt = OUTPUT_CSV;
       } else {
-	log.warning("Unknown output format: " + outputParam);
+        log.warning("Unknown output format: " + outputParam);
       }
     }
     String optionsParam = req.getParameter("options");
@@ -130,17 +159,17 @@ public class DisplayContentStatus extends LockssServlet {
     }
 
     for (Iterator iter = StringUtil.breakAt(optionsParam, ',').iterator();
-	 iter.hasNext(); ) {
-      String s = (String)iter.next();
+            iter.hasNext();) {
+      String s = (String) iter.next();
       if ("norows".equalsIgnoreCase(s)) {
-	tableOptions.set(StatusTable.OPTION_NO_ROWS);
+        tableOptions.set(StatusTable.OPTION_NO_ROWS);
       }
     }
 
     tableName = req.getParameter("table");
     tableKey = req.getParameter("key");
     if (StringUtil.isNullString(tableName)) {
-      tableName = statSvc.getDefaultTableName();
+      tableName = "AuOverview";
     }
     if (StringUtil.isNullString(tableKey)) {
       tableKey = null;
@@ -149,24 +178,28 @@ public class DisplayContentStatus extends LockssServlet {
     if (StringUtil.isNullString(sortKey)) {
       sortKey = null;
     }
+    groupKey = req.getParameter("group");
+    if (StringUtil.isNullString(groupKey)) {
+      groupKey = "publisher";
+    }
 
     switch (outputFmt) {
-    case OUTPUT_HTML:
-      doHtmlStatusTable();
-      break;
-    case OUTPUT_XML:
-      try {
-        doXmlStatusTable();
-      } catch (XmlDomBuilder.XmlDomException xde) {
-        throw new IOException("Error building XML", xde);
-      }
-      break;
-    case OUTPUT_TEXT:
-      doTextStatusTable();
-      break;
-    case OUTPUT_CSV:
-      doCsvStatusTable();
-      break;
+      case OUTPUT_HTML:
+        doHtmlStatusTable();
+        break;
+      case OUTPUT_XML:
+        try {
+          doXmlStatusTable();
+        } catch (Exception e) {
+          throw new IOException("Error building XML", e);
+        }
+        break;
+      case OUTPUT_TEXT:
+        doTextStatusTable();
+        break;
+      case OUTPUT_CSV:
+        doCsvStatusTable();
+        break;
     }
   }
 
@@ -185,9 +218,6 @@ public class DisplayContentStatus extends LockssServlet {
 
     // all pages but index get a select box to choose a different table
     if (!isAllTablesTable()) {
-      Block centeredBlock = new Block(Block.Center);
-      centeredBlock.add(getSelectTableForm());
-      page.add(centeredBlock);
       page.add(ServletUtil.removeElementWithId("dsSelectBox"));
     }
 
@@ -196,7 +226,13 @@ public class DisplayContentStatus extends LockssServlet {
     // 		       concatParams("text=1", req.getQueryString())));
     //       page.add("</center><br><br>");
 
+    DisplayContentTable content = new DisplayContentTable(page, groupKey);
+
     return page;
+  }
+
+  private void doRemoveAus(java.util.List aus) throws IOException {
+    remoteApi.deleteAus(aus);
   }
 
   private void doHtmlStatusTable() throws IOException {
@@ -212,92 +248,77 @@ public class DisplayContentStatus extends LockssServlet {
     String vPlatform;
     PlatformVersion pVer = ConfigManager.getPlatformVersion();
     if (pVer != null) {
-      vPlatform = ", platform=" + StringUtil.ckvEscape(pVer.displayString());
+      vPlatform = ", platform="
+              + StringUtil.ckvEscape(pVer.displayString());
     } else {
       vPlatform = "";
     }
     Date now = new Date();
     Date startDate = getLockssDaemon().getStartDate();
-    wrtr.println("host=" + getLcapIPAddr() +
-		 ",time=" + now.getTime() +
-		 ",up=" + TimeBase.msSince(startDate.getTime()) +
-		 ",version=" + BuildInfo.getBuildInfoString() +
-		 vPlatform);
+    wrtr.println("host=" + getLcapIPAddr()
+            + ",time=" + now.getTime()
+            + ",up=" + TimeBase.msSince(startDate.getTime())
+            + ",version=" + BuildInfo.getBuildInfoString()
+            + vPlatform);
     doTextStatusTable(wrtr);
   }
 
   private StatusTable makeTable() throws StatusService.NoSuchTableException {
     StatusTable table = new StatusTable(tableName, tableKey);
     table.setOptions(tableOptions);
-    for (Enumeration en = req.getParameterNames(); en.hasMoreElements(); ) {
-      String name = (String)en.nextElement();
+    for (Enumeration en = req.getParameterNames(); en.hasMoreElements();) {
+      String name = (String) en.nextElement();
       if (!fixedParams.contains(name)) {
-	table.setProperty(name, req.getParameter(name));
+        table.setProperty(name, req.getParameter(name));
       }
     }
     statSvc.fillInTable(table);
     return table;
   }
+
   // build and send an XML DOM Document of the StatusTable
-  private void doXmlStatusTable()
-      throws IOException, XmlDomBuilder.XmlDomException {
+  private void doXmlStatusTable() throws Exception {
     // By default, XmlDomBuilder will produce UTF-8.  Must set content type
     // *before* calling getWriter()
     resp.setContentType("text/xml; charset=UTF-8");
     PrintWriter wrtr = resp.getWriter();
-    try {
-      StatusTable statTable = makeTable();
-      XmlStatusTable xmlTable = new XmlStatusTable(statTable);
-      String over = req.getParameter("outputVersion");
-      if (over != null) {
-	try {
-	  int ver = Integer.parseInt(over);
-	  xmlTable.setOutputVersion(ver);
-	} catch (NumberFormatException e) {
-	  log.warning("Illegal outputVersion: " + over + ": " + e.toString());
-	}
-      }
-      Document xmlTableDoc = xmlTable.getTableDocument();
-      XmlDomBuilder.serialize(xmlTableDoc, wrtr);
-    } catch (Exception e) {
-      XmlDomBuilder xmlBuilder =
-          new XmlDomBuilder(XmlStatusConstants.NS_PREFIX,
-                            XmlStatusConstants.NS_URI,
-                            "1.0");
-      Document errorDoc = XmlDomBuilder.createDocument();
-      org.w3c.dom.Element rootElem = xmlBuilder.createRoot(errorDoc,
-          XmlStatusConstants.ERROR);
-      if (e instanceof StatusService.NoSuchTableException) {
-        XmlDomBuilder.addText(rootElem, "No such table: " + e.toString());
-      } else {
-        String emsg = e.toString();
-        StringBuilder buffer = new StringBuilder("Error getting table: ");
-        buffer.append(emsg);
-        buffer.append("\n");
-        buffer.append(StringUtil.trimStackTrace(emsg,
-                                                StringUtil.stackTraceString(e)));
-        XmlDomBuilder.addText(rootElem, buffer.toString());
-      }
-      XmlDomBuilder.serialize(errorDoc, wrtr);
-      return;
-    }
+
+    DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+    DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+
+    Document doc = docBuilder.newDocument();
+    org.w3c.dom.Element rootElement = doc.createElement("root");
+    doc.appendChild(rootElement);
+
+    org.w3c.dom.Element notImplemented = doc.createElement("notImplemented");
+    rootElement.appendChild(notImplemented);
+
+    TransformerFactory transformerFactory = TransformerFactory.newInstance();
+    javax.xml.transform.Transformer transformer = 
+            transformerFactory.newTransformer();
+    DOMSource domSource = new DOMSource(doc);
+    StringWriter stringWriter = new StringWriter();
+    StreamResult streamResult = new StreamResult(stringWriter);
+    transformer.transform(domSource, streamResult);
+
+    wrtr.append(stringWriter.toString());
   }
 
   private java.util.List getRowList(StatusTable statTable) {
     java.util.List rowList;
     if (sortKey != null) {
       try {
-	rules = makeSortRules(statTable, sortKey);
-	rowList = statTable.getSortedRows(rules);
+        rules = makeSortRules(statTable, sortKey);
+        rowList = statTable.getSortedRows(rules);
       } catch (Exception e) {
-	// There are lots of ways a user-specified sort can fail if the
-	// table creator isn't careful.  Fall back to default if that
-	// happens.
-	log.warning("Error sorting table by: " + rules, e);
-	// XXX should display some sort of error msg
-	rowList = statTable.getSortedRows();
-	rules = null;		  // prevent column titles from indicating
-				  // the sort order that didn't work
+        // There are lots of ways a user-specified sort can fail if the
+        // table creator isn't careful.  Fall back to default if that
+        // happens.
+        log.warning("Error sorting table by: " + rules, e);
+        // XXX should display some sort of error msg
+        rowList = statTable.getSortedRows();
+        rules = null;		  // prevent column titles from indicating
+        // the sort order that didn't work
       }
     } else {
       rowList = statTable.getSortedRows();
@@ -308,105 +329,7 @@ public class DisplayContentStatus extends LockssServlet {
   // Build the table, adding elements to page
   private Page doHtmlStatusTable0() throws IOException {
     Page page;
-    StatusTable statTable;
-    try {
-      statTable = makeTable();
-    } catch (StatusService.NoSuchTableException e) {
-      page = newTablePage();
-      errMsg = "No such table: " + e.getMessage();
-      layoutErrorBlock(page);
-      return page;
-    } catch (Exception e) {
-      page = newTablePage();
-      errMsg = "Error getting table: " + e.toString();
-      layoutErrorBlock(page);
-      if (isDebugUser()) {
-	page.add("<br><pre>    ");
-	page.add(StringUtil.trimStackTrace(e.toString(),
-					   StringUtil.stackTraceString(e)));
-	page.add("</pre>");
-      }
-      return page;
-    }
-    java.util.List colList = statTable.getColumnDescriptors();
-    java.util.List rowList = getRowList(statTable);
-    String title0 = statTable.getTitle();
-    String titleFoot = statTable.getTitleFootnote();
-
     page = newTablePage();
-    Table table = null;
-
-    // convert list of ColumnDescriptors to array of ColumnDescriptors
-    ColumnDescriptor cds[];
-    int cols;
-    if (colList != null) {
-      cds = (ColumnDescriptor [])colList.toArray(new ColumnDescriptor[0]);
-      cols = cds.length;
-    } else {
-      cds = new ColumnDescriptor[0];
-      cols = 1;
-    }
-    if (true || !rowList.isEmpty()) {
-      // if table not empty, output column headings
-
-      // Make the table.  Make a narrow empty column between real columns,
-      // for spacing.  Resulting table will have 2*cols-1 columns
-      table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
-      String title = title0 + addFootnote(titleFoot);
-
-      table.newRow();
-      table.addHeading(title, "ALIGN=CENTER COLSPAN=" + (cols * 2 - 1));
-      table.newRow();
-
-      addSummaryInfo(table, statTable, cols);
-
-      if (colList != null) {
-	// output column headings
-	for (int ix = 0; ix < cols; ix++) {
-	  ColumnDescriptor cd = cds[ix];
-	  table.newCell("class=\"colhead\" valign=\"bottom\" align=\"" +
-			((cols == 1) ? "center" : getColAlignment(cd)) + "\"");
-	  table.add(getColumnTitleElement(statTable, cd, rules));
-	  if (ix < (cols - 1)) {
-	    table.newCell("width=8");
-	    table.add("&nbsp;");
-	  }
-	}
-      }
-    }
-    if (rowList != null) {
-      // output rows
-      for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
-	Map rowMap = (Map)rowIter.next();
-	if (rowMap.get(StatusTable.ROW_SEPARATOR) != null) {
-	  table.newRow();
-	  table.newCell("align=center colspan=" + (cols * 2 - 1));
-	  table.add("<hr>");
-	}
-	table.newRow();
-	for (int ix = 0; ix < cols; ix++) {
-	  ColumnDescriptor cd = cds[ix];
-	  Object val = rowMap.get(cd.getColumnName());
-
-	  table.newCell("valign=\"top\" align=\"" + getColAlignment(cd) + "\"");
-	  table.add(getDisplayString(val, cd.getType()));
-	  if (ix < (cols - 1)) {
-	    table.newCell();	// empty column for spacing
-	  }
-	}
-      }
-    }
-    if (table != null) {
-      Form frm = new Form(srvURL(myServletDescr()));
-      // use GET so user can refresh in browser
-      frm.method("GET");
-      frm.add(table);
-      page.add(frm);
-      page.add("<br>");
-      String heading = getHeading();
-      // put table name in page title so appears in browser title & tabs
-      page.title("LOCKSS: " + title0 + " - " + heading);
-    }
     return page;
   }
 
@@ -430,14 +353,14 @@ public class DisplayContentStatus extends LockssServlet {
 
     java.util.List summary = statTable.getSummaryInfo();
     if (summary != null && !summary.isEmpty()) {
-      for (Iterator iter = summary.iterator(); iter.hasNext(); ) {
-	StatusTable.SummaryInfo sInfo = (StatusTable.SummaryInfo)iter.next();
-	wrtr.print(",");
-	wrtr.print(sInfo.getTitle());
-	wrtr.print("=");
-	Object dispVal = getTextDisplayString(sInfo.getValue());
-	String valStr = dispVal != null ? dispVal.toString() : "(null)";
-	wrtr.print(StringUtil.ckvEscape(valStr));
+      for (Iterator iter = summary.iterator(); iter.hasNext();) {
+        StatusTable.SummaryInfo sInfo = (StatusTable.SummaryInfo) iter.next();
+        wrtr.print(",");
+        wrtr.print(sInfo.getTitle());
+        wrtr.print("=");
+        Object dispVal = getTextDisplayString(sInfo.getValue());
+        String valStr = dispVal != null ? dispVal.toString() : "(null)";
+        wrtr.print(StringUtil.ckvEscape(valStr));
       }
     }
     wrtr.println();
@@ -445,25 +368,25 @@ public class DisplayContentStatus extends LockssServlet {
     java.util.List rowList = getRowList(statTable);
     if (rowList != null) {
       // output rows
-      for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
-	Map rowMap = (Map)rowIter.next();
-	for (Iterator iter = rowMap.keySet().iterator(); iter.hasNext(); ) {
-	  Object o = iter.next();
-	  if (!(o instanceof String)) {
-	    // ignore special markers (eg, StatusTable.ROW_SEPARATOR)
-	    continue;
-	  }
-	  String key = (String)o;
-	  Object val = rowMap.get(key);
-	  Object dispVal = getTextDisplayString(val);
-	  String valStr = dispVal != null ? dispVal.toString() : "(null)";
-	  wrtr.print(key + "=" + StringUtil.ckvEscape(valStr));
-	  if (iter.hasNext()) {
-	    wrtr.print(",");
-	  } else {
-	    wrtr.println();
-	  }
-	}
+      for (Iterator rowIter = rowList.iterator(); rowIter.hasNext();) {
+        Map rowMap = (Map) rowIter.next();
+        for (Iterator iter = rowMap.keySet().iterator(); iter.hasNext();) {
+          Object o = iter.next();
+          if (!(o instanceof String)) {
+            // ignore special markers (eg, StatusTable.ROW_SEPARATOR)
+            continue;
+          }
+          String key = (String) o;
+          Object val = rowMap.get(key);
+          Object dispVal = getTextDisplayString(val);
+          String valStr = dispVal != null ? dispVal.toString() : "(null)";
+          wrtr.print(key + "=" + StringUtil.ckvEscape(valStr));
+          if (iter.hasNext()) {
+            wrtr.print(",");
+          } else {
+            wrtr.println();
+          }
+        }
       }
     }
   }
@@ -484,62 +407,61 @@ public class DisplayContentStatus extends LockssServlet {
       return;
     }
     java.util.List<ColumnDescriptor> colList =
-      statTable.getColumnDescriptors();
+            statTable.getColumnDescriptors();
     java.util.List<Map> rowList = getRowList(statTable);
     if (colList != null) {
-      for (Iterator colIter = colList.iterator(); colIter.hasNext(); ) {
-	ColumnDescriptor cd = (ColumnDescriptor)colIter.next();
-	wrtr.print(StringUtil.csvEncode(cd.getTitle()));
-	if (colIter.hasNext()) {
-	  wrtr.print(",");
-	} else {
-	  wrtr.println();
-	}
+      for (Iterator colIter = colList.iterator(); colIter.hasNext();) {
+        ColumnDescriptor cd = (ColumnDescriptor) colIter.next();
+        wrtr.print(StringUtil.csvEncode(cd.getTitle()));
+        if (colIter.hasNext()) {
+          wrtr.print(",");
+        } else {
+          wrtr.println();
+        }
       }
       if (rowList != null) {
-	// output rows
-	for (Map rowMap : rowList) {
-	  for (Iterator colIter = colList.iterator(); colIter.hasNext(); ) {
-	    ColumnDescriptor cd = (ColumnDescriptor)colIter.next();
-	    Object val = rowMap.get(cd.getColumnName());
-	    Object dispVal = getTextDisplayString(val);
-	    String valStr = dispVal != null ? dispVal.toString() : "(null)";
-	    wrtr.print(StringUtil.csvEncode(valStr));
-	    if (colIter.hasNext()) {
-	      wrtr.print(",");
-	    } else {
-	      wrtr.println();
-	    }
-	  }
-	}
+        // output rows
+        for (Map rowMap : rowList) {
+          for (Iterator colIter = colList.iterator(); colIter.hasNext();) {
+            ColumnDescriptor cd = (ColumnDescriptor) colIter.next();
+            Object val = rowMap.get(cd.getColumnName());
+            Object dispVal = getTextDisplayString(val);
+            String valStr = dispVal != null ? dispVal.toString() : "(null)";
+            wrtr.print(StringUtil.csvEncode(valStr));
+            if (colIter.hasNext()) {
+              wrtr.print(",");
+            } else {
+              wrtr.println();
+            }
+          }
+        }
       }
     } else {
       wrtr.println("(Empty table)");
     }
   }
-
   static final Image UPARROW1 = ServletUtil.image("uparrow1blue.gif", 16, 16, 0,
-				      "Primary sort column, ascending");
+          "Primary sort column, ascending");
   static final Image UPARROW2 = ServletUtil.image("uparrow2blue.gif", 16, 16, 0,
-				      "Secondary sort column, ascending");
+          "Secondary sort column, ascending");
   static final Image DOWNARROW1 = ServletUtil.image("downarrow1blue.gif", 16, 16, 0,
-					"Primary sort column, descending");
+          "Primary sort column, descending");
   static final Image DOWNARROW2 = ServletUtil.image("downarrow2blue.gif", 16, 16, 0,
-					"Secondary sort column, descending");
+          "Secondary sort column, descending");
 
-  /** Create a column heading element:<ul>
-   *   <li> plain text if not sortable
-   *   <li> if sortable, link with sortkey set to solumn name,
-   *        descending if was previous primary ascending key
-   *   <li> plus a possible secondary sort key set to previous sort column
-   *   <li> if is current primary or secondary sort colume, display an up or
-   *        down arrow.</ul>
+  /**
+   * Create a column heading element:<ul> <li> plain text if not sortable <li>
+   * if sortable, link with sortkey set to solumn name, descending if was
+   * previous primary ascending key <li> plus a possible secondary sort key set
+   * to previous sort column <li> if is current primary or secondary sort
+   * colume, display an up or down arrow.</ul>
+   *
    * @param statTable
    * @param cd
    * @param rules the SortRules used to sort the currently displayed table
    */
   Composite getColumnTitleElement(StatusTable statTable, ColumnDescriptor cd,
-				  java.util.List rules) {
+          java.util.List rules) {
     Composite elem = new Composite();
     Image sortArrow = null;
     boolean ascending = getDefaultSortAscending(cd);
@@ -547,45 +469,45 @@ public class DisplayContentStatus extends LockssServlet {
     if (true && statTable.isResortable() && cd.isSortable()) {
       String ruleParam;
       if (rules != null && !rules.isEmpty()) {
-	StatusTable.SortRule rule1 = (StatusTable.SortRule)rules.get(0);
-	if (cd.getColumnName().equals(rule1.getColumnName())) {
-	  // This column is the current primary sort; link to reverse order
-	  ascending = !rule1.sortAscending();
-	  // and display a primary arrow
-	  sortArrow = rule1.sortAscending() ? UPARROW1 : DOWNARROW1;
-	  if (rules.size() > 1) {
-	    // keep same secondary sort key if there was one
-	    StatusTable.SortRule rule2 = (StatusTable.SortRule)rules.get(1);
-	    ruleParam = ruleParam(cd, ascending) + "," + ruleParam(rule2);
-	  } else {
-	    ruleParam = ruleParam(cd, ascending);
-	  }
-	} else {
-	  if (rules.size() > 1) {
-	    StatusTable.SortRule rule2 = (StatusTable.SortRule)rules.get(1);
-	    if (cd.getColumnName().equals(rule2.getColumnName())) {
-	      // This is the secondary sort column; display secondary arrow
-	      sortArrow = rule2.sortAscending() ? UPARROW2 : DOWNARROW2;
-	    }
-	  }
-	  // primary sort is this column, secondary is previous primary
-	  ruleParam = ruleParam(cd, ascending) + "," + ruleParam(rule1);
-	}
+        StatusTable.SortRule rule1 = (StatusTable.SortRule) rules.get(0);
+        if (cd.getColumnName().equals(rule1.getColumnName())) {
+          // This column is the current primary sort; link to reverse order
+          ascending = !rule1.sortAscending();
+          // and display a primary arrow
+          sortArrow = rule1.sortAscending() ? UPARROW1 : DOWNARROW1;
+          if (rules.size() > 1) {
+            // keep same secondary sort key if there was one
+            StatusTable.SortRule rule2 = (StatusTable.SortRule) rules.get(1);
+            ruleParam = ruleParam(cd, ascending) + "," + ruleParam(rule2);
+          } else {
+            ruleParam = ruleParam(cd, ascending);
+          }
+        } else {
+          if (rules.size() > 1) {
+            StatusTable.SortRule rule2 = (StatusTable.SortRule) rules.get(1);
+            if (cd.getColumnName().equals(rule2.getColumnName())) {
+              // This is the secondary sort column; display secondary arrow
+              sortArrow = rule2.sortAscending() ? UPARROW2 : DOWNARROW2;
+            }
+          }
+          // primary sort is this column, secondary is previous primary
+          ruleParam = ruleParam(cd, ascending) + "," + ruleParam(rule1);
+        }
       } else {
-	// no previous, sort by column
-	ruleParam = ruleParam(cd, ascending);
+        // no previous, sort by column
+        ruleParam = ruleParam(cd, ascending);
       }
       Link link = new Link(srvURL(myServletDescr(),
-				  modifyParams("sort", ruleParam)),
-			   colTitle);
+              modifyParams("sort", ruleParam)),
+              colTitle);
       link.attribute("class", "colhead");
       elem.add(link);
       String foot = cd.getFootnote();
       if (foot != null) {
-	elem.add(addFootnote(foot));
+        elem.add(addFootnote(foot));
       }
       if (sortArrow != null) {
-	elem.add(sortArrow);
+        elem.add(sortArrow);
       }
     } else {
       elem.add(colTitle);
@@ -606,25 +528,25 @@ public class DisplayContentStatus extends LockssServlet {
     Map columnDescriptorMap = statTable.getColumnDescriptorMap();
     java.util.List cols = StringUtil.breakAt(sortKey, ',');
     java.util.List res = new ArrayList();
-    for (Iterator iter = cols.iterator(); iter.hasNext(); ) {
-      String spec = (String)iter.next();
+    for (Iterator iter = cols.iterator(); iter.hasNext();) {
+      String spec = (String) iter.next();
       boolean ascending = spec.charAt(0) == 'A';
       String col = spec.substring(1);
       StatusTable.SortRule defaultRule =
-	getDefaultRuleForColumn(statTable, col);
+              getDefaultRuleForColumn(statTable, col);
       StatusTable.SortRule rule;
       Comparator comparator = null;
       if (columnDescriptorMap.containsKey(col)) {
-	ColumnDescriptor cd = (ColumnDescriptor)columnDescriptorMap.get(col);
-	comparator = cd.getComparator();
+        ColumnDescriptor cd = (ColumnDescriptor) columnDescriptorMap.get(col);
+        comparator = cd.getComparator();
       }
       if (defaultRule != null && defaultRule.getComparator() != null) {
-	comparator = defaultRule.getComparator();
+        comparator = defaultRule.getComparator();
       }
       if (comparator != null) {
-	rule = new StatusTable.SortRule(col, comparator, ascending);
+        rule = new StatusTable.SortRule(col, comparator, ascending);
       } else {
-	rule = new StatusTable.SortRule(col, ascending);
+        rule = new StatusTable.SortRule(col, ascending);
       }
       res.add(rule);
     }
@@ -633,93 +555,32 @@ public class DisplayContentStatus extends LockssServlet {
   }
 
   private StatusTable.SortRule getDefaultRuleForColumn(StatusTable statTable,
-						       String col) {
+          String col) {
     java.util.List defaults = statTable.getDefaultSortRules();
-    for (Iterator iter = defaults.iterator(); iter.hasNext(); ) {
-      StatusTable.SortRule rule = (StatusTable.SortRule)iter.next();
+    for (Iterator iter = defaults.iterator(); iter.hasNext();) {
+      StatusTable.SortRule rule = (StatusTable.SortRule) iter.next();
       if (col.equals(rule.getColumnName())) {
-	return rule;
+        return rule;
       }
     }
     return null;
   }
 
-
-  private void addSummaryInfo(Table table, StatusTable statTable, int cols) {
-    java.util.List summary = statTable.getSummaryInfo();
-    if (summary != null && !summary.isEmpty()) {
-      for (Iterator iter = summary.iterator(); iter.hasNext(); ) {
-	StatusTable.SummaryInfo sInfo =
-	  (StatusTable.SummaryInfo)iter.next();
-	table.newRow();
-	StringBuilder sb = null;
-	String stitle = sInfo.getTitle();
-	if (!StringUtil.isNullString(stitle)) {
-	  sb = new StringBuilder();
-	  sb.append("<b>");
-	  sb.append(stitle);
-	  if (sInfo.getHeaderFootnote() != null) {
-	    sb.append(addFootnote(sInfo.getHeaderFootnote()));
-	  }
-	  sb.append("</b>:&nbsp;");
-	}
-	table.newCell("COLSPAN=" + (cols * 2 - 1));
-	// make a 2 cell table for each row, so multiline values will be
-	// aligned
- 	Table itemtab = new Table(0, "align=left cellspacing=0 cellpadding=0");
-	itemtab.newRow();
-	if (sb != null) {
-	  itemtab.newCell("valign=top");
-	  itemtab.add(sb.toString());
-	}
-	Object sval = sInfo.getValue();
-	if (sval != null) {
-	  itemtab.newCell();
-	  StringBuilder valSb = new StringBuilder();
-	  valSb.append(getDisplayString(sval, sInfo.getType()));
-	  if (sInfo.getValueFootnote() != null) {
-	    valSb.append(addFootnote(sInfo.getValueFootnote()));
-	  }
-	  itemtab.add(valSb.toString());
-	}
-	table.add(itemtab);
-      }
-      table.newRow();
-    }
-  }
-
-  private String getColAlignment(ColumnDescriptor cd) {
-    switch (cd.getType()) {
-    case ColumnDescriptor.TYPE_STRING:
-    case ColumnDescriptor.TYPE_DATE:
-    case ColumnDescriptor.TYPE_IP_ADDRESS:
-    case ColumnDescriptor.TYPE_TIME_INTERVAL:
-    default:
-      return "left";
-    case ColumnDescriptor.TYPE_INT:
-    case ColumnDescriptor.TYPE_PERCENT:
-    case ColumnDescriptor.TYPE_AGREEMENT:
-    case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
-      return "right";
-    }
-  }
-
   private boolean getDefaultSortAscending(ColumnDescriptor cd) {
     switch (cd.getType()) {
-    case ColumnDescriptor.TYPE_STRING:
-    case ColumnDescriptor.TYPE_IP_ADDRESS:
-    case ColumnDescriptor.TYPE_TIME_INTERVAL:
-    default:
-      return true;
-    case ColumnDescriptor.TYPE_INT:
-    case ColumnDescriptor.TYPE_PERCENT:
-    case ColumnDescriptor.TYPE_AGREEMENT:
-    case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
-    case ColumnDescriptor.TYPE_DATE:
-      return false;
+      case ColumnDescriptor.TYPE_STRING:
+      case ColumnDescriptor.TYPE_IP_ADDRESS:
+      case ColumnDescriptor.TYPE_TIME_INTERVAL:
+      default:
+        return true;
+      case ColumnDescriptor.TYPE_INT:
+      case ColumnDescriptor.TYPE_PERCENT:
+      case ColumnDescriptor.TYPE_AGREEMENT:
+      case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
+      case ColumnDescriptor.TYPE_DATE:
+        return false;
     }
   }
-
 
   // Handle lists
   private String getTextDisplayString(Object val) {
@@ -729,8 +590,8 @@ public class DisplayContentStatus extends LockssServlet {
     }
     if (val instanceof java.util.List) {
       StringBuilder sb = new StringBuilder();
-      for (Iterator iter = ((java.util.List)val).iterator(); iter.hasNext(); ) {
-	sb.append(StatusTable.getActualValue(iter.next()));
+      for (Iterator iter = ((java.util.List) val).iterator(); iter.hasNext();) {
+        sb.append(StatusTable.getActualValue(iter.next()));
       }
       return sb.toString();
     } else {
@@ -739,13 +600,12 @@ public class DisplayContentStatus extends LockssServlet {
     }
   }
 
-
   // Handle lists
   private String getDisplayString(Object val, int type) {
     if (val instanceof java.util.List) {
       StringBuilder sb = new StringBuilder();
-      for (Iterator iter = ((java.util.List)val).iterator(); iter.hasNext(); ) {
-	sb.append(getDisplayString0(iter.next(), type));
+      for (Iterator iter = ((java.util.List) val).iterator(); iter.hasNext();) {
+        sb.append(getDisplayString0(iter.next(), type));
       }
       return sb.toString();
     } else {
@@ -756,14 +616,14 @@ public class DisplayContentStatus extends LockssServlet {
   // Process References and other links
   private String getDisplayString0(Object val, int type) {
     if (val instanceof StatusTable.Reference) {
-      return getRefString((StatusTable.Reference)val, type);
+      return getRefString((StatusTable.Reference) val, type);
     } else if (val instanceof StatusTable.SrvLink) {
       // Display as link iff user is allowed access to the target servlet
-      StatusTable.SrvLink slink = (StatusTable.SrvLink)val;
+      StatusTable.SrvLink slink = (StatusTable.SrvLink) val;
       if (isServletRunnable(slink.getServletDescr())) {
-	return getSrvLinkString(slink, type);
+        return getSrvLinkString(slink, type);
       } else {
-	return getDisplayString1(StatusTable.getActualValue(val), type);
+        return getDisplayString1(StatusTable.getActualValue(val), type);
       }
     } else if (val instanceof StatusTable.LinkValue) {
       // A LinkValue type we don't know about.  Just display its embedded
@@ -786,50 +646,50 @@ public class DisplayContentStatus extends LockssServlet {
     }
     Properties refProps = ref.getProperties();
     if (refProps != null) {
-      for (Iterator iter = refProps.entrySet().iterator(); iter.hasNext(); ) {
-	Map.Entry ent = (Map.Entry)iter.next();
-	sb.append("&");
-	sb.append(ent.getKey());
-	sb.append("=");
-	sb.append(urlEncode((String)ent.getValue()));
+      for (Iterator iter = refProps.entrySet().iterator(); iter.hasNext();) {
+        Map.Entry ent = (Map.Entry) iter.next();
+        sb.append("&");
+        sb.append(ent.getKey());
+        sb.append("=");
+        sb.append(urlEncode((String) ent.getValue()));
       }
     }
     if (ref.getPeerId() != null) {
       return srvAbsLink(ref.getPeerId(),
-			myServletDescr(),
-			getDisplayString(ref.getValue(), type),
-			sb.toString());
+              myServletDescr(),
+              getDisplayString(ref.getValue(), type),
+              sb.toString());
     } else {
       return srvLink(myServletDescr(),
-		     getDisplayString(ref.getValue(), type),
-		     sb.toString());
+              getDisplayString(ref.getValue(), type),
+              sb.toString());
     }
   }
 
   // turn UrlLink into html link
   private String getSrvLinkString(StatusTable.SrvLink link, int type) {
     return srvLink(link.getServletDescr(),
-		   getDisplayString1(link.getValue(), type),
-		   link.getArgs());
+            getDisplayString1(link.getValue(), type),
+            link.getArgs());
   }
 
   // add display attributes from a DisplayedValue
   private String getDisplayString1(Object val, int type) {
     if (val instanceof StatusTable.DisplayedValue) {
-      StatusTable.DisplayedValue aval = (StatusTable.DisplayedValue)val;
+      StatusTable.DisplayedValue aval = (StatusTable.DisplayedValue) val;
       String str = aval.hasDisplayString()
-	? HtmlUtil.htmlEncode(aval.getDisplayString())
-	: getDisplayString1(aval.getValue(), type);
+              ? HtmlUtil.htmlEncode(aval.getDisplayString())
+              : getDisplayString1(aval.getValue(), type);
       String color = aval.getColor();
       String footnote = aval.getFootnote();
       if (color != null) {
-	str = "<font color=" + color + ">" + str + "</font>";
+        str = "<font color=" + color + ">" + str + "</font>";
       }
       if (aval.getBold()) {
-	str = "<b>" + str + "</b>";
+        str = "<b>" + str + "</b>";
       }
       if (footnote != null) {
-	str = str + addFootnote(footnote);
+        str = str + addFootnote(footnote);
       }
       return str;
     } else {
@@ -840,62 +700,61 @@ public class DisplayContentStatus extends LockssServlet {
       return str;
     }
   }
-
   // Thread-safe formatters.
   // FastDateFormat is thread-safe, NumberFormat & subclasses aren't.
-
-  /** Format to display date/time in tables */
+  /**
+   * Format to display date/time in tables
+   */
   private static final Format tableDf =
-    FastDateFormat.getInstance("HH:mm:ss MM/dd/yy");
+          FastDateFormat.getInstance("HH:mm:ss MM/dd/yy");
 
 //   public static final DateFormat tableDf =
 //     DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
-
   static Format getTableDateFormat() {
     return tableDf;
   }
-
-  private static final ThreadLocal<NumberFormat> agmntFmt = 
-    new ThreadLocal<NumberFormat> () {
-    @Override protected NumberFormat initialValue() {
-      return new DecimalFormat("0.00");
-    }
-  };
+  private static final ThreadLocal<NumberFormat> agmntFmt =
+          new ThreadLocal<NumberFormat>() {
+            @Override
+            protected NumberFormat initialValue() {
+              return new DecimalFormat("0.00");
+            }
+          };
 
   static NumberFormat getAgreementFormat() {
     return agmntFmt.get();
   }
-
-  private static final ThreadLocal<NumberFormat> floatFmt = 
-    new ThreadLocal<NumberFormat> () {
-    @Override protected NumberFormat initialValue() {
-      return new DecimalFormat("0.0");
-    }
-  };
+  private static final ThreadLocal<NumberFormat> floatFmt =
+          new ThreadLocal<NumberFormat>() {
+            @Override
+            protected NumberFormat initialValue() {
+              return new DecimalFormat("0.0");
+            }
+          };
 
   static NumberFormat getFloatFormat() {
     return floatFmt.get();
   }
-
-  private static final ThreadLocal<NumberFormat> bigIntFmt = 
-    new ThreadLocal<NumberFormat> () {
-    @Override protected NumberFormat initialValue() {
-      NumberFormat fmt = NumberFormat.getInstance();
+  private static final ThreadLocal<NumberFormat> bigIntFmt =
+          new ThreadLocal<NumberFormat>() {
+            @Override
+            protected NumberFormat initialValue() {
+              NumberFormat fmt = NumberFormat.getInstance();
 //       if (fmt instanceof DecimalFormat) {
 //         ((DecimalFormat)fmt).setDecimalSeparatorAlwaysShown(true);
 //       }
-      return fmt;
-    }
-  };
+              return fmt;
+            }
+          };
 
   static NumberFormat getBigIntFormat() {
     return bigIntFmt.get();
   }
 
   /* DecimalFormat automatically applies half-even rounding to
-   * values being formatted under Java < 1.6.  This is a workaround. */ 
+   * values being formatted under Java < 1.6.  This is a workaround. */
   private static String doubleToPercent(double d) {
-    int i = (int)(d * 10000);
+    int i = (int) (d * 10000);
     double pc = i / 100.0;
     return getAgreementFormat().format(pc);
   }
@@ -907,42 +766,42 @@ public class DisplayContentStatus extends LockssServlet {
     }
     try {
       switch (type) {
-      case ColumnDescriptor.TYPE_INT:
-	if (val instanceof Number) {
-	  long lv = ((Number)val).longValue();
-	  if (lv >= 1000000) {
-	    return getBigIntFormat().format(lv);
-	  }
-	}
-	// fall thru
-      case ColumnDescriptor.TYPE_STRING:
-      default:
-	return val.toString();
-      case ColumnDescriptor.TYPE_FLOAT:
-	return getFloatFormat().format(((Number)val).doubleValue());
-      case ColumnDescriptor.TYPE_PERCENT:
-	float fv = ((Number)val).floatValue();
-	return Integer.toString(Math.round(fv * 100)) + "%";
-      case ColumnDescriptor.TYPE_AGREEMENT:
-	float av = ((Number)val).floatValue();
-	return doubleToPercent(av) + "%";
-      case ColumnDescriptor.TYPE_DATE:
-	Date d;
-	if (val instanceof Number) {
-	  d = new Date(((Number)val).longValue());
-	} else if (val instanceof Date) {
-	  d = (Date)val;
-	} else if (val instanceof Deadline) {
-	  d = ((Deadline)val).getExpiration();
-	} else {
-	  return val.toString();
-	}
-	return dateString(d);
-      case ColumnDescriptor.TYPE_IP_ADDRESS:
-	return ((IPAddr)val).getHostAddress();
-      case ColumnDescriptor.TYPE_TIME_INTERVAL:
-	long millis = ((Number)val).longValue();
-	return StringUtil.timeIntervalToString(millis);
+        case ColumnDescriptor.TYPE_INT:
+          if (val instanceof Number) {
+            long lv = ((Number) val).longValue();
+            if (lv >= 1000000) {
+              return getBigIntFormat().format(lv);
+            }
+          }
+        // fall thru
+        case ColumnDescriptor.TYPE_STRING:
+        default:
+          return val.toString();
+        case ColumnDescriptor.TYPE_FLOAT:
+          return getFloatFormat().format(((Number) val).doubleValue());
+        case ColumnDescriptor.TYPE_PERCENT:
+          float fv = ((Number) val).floatValue();
+          return Integer.toString(Math.round(fv * 100)) + "%";
+        case ColumnDescriptor.TYPE_AGREEMENT:
+          float av = ((Number) val).floatValue();
+          return doubleToPercent(av) + "%";
+        case ColumnDescriptor.TYPE_DATE:
+          Date d;
+          if (val instanceof Number) {
+            d = new Date(((Number) val).longValue());
+          } else if (val instanceof Date) {
+            d = (Date) val;
+          } else if (val instanceof Deadline) {
+            d = ((Deadline) val).getExpiration();
+          } else {
+            return val.toString();
+          }
+          return dateString(d);
+        case ColumnDescriptor.TYPE_IP_ADDRESS:
+          return ((IPAddr) val).getHostAddress();
+        case ColumnDescriptor.TYPE_TIME_INTERVAL:
+          long millis = ((Number) val).longValue();
+          return StringUtil.timeIntervalToString(millis);
       }
     } catch (NumberFormatException e) {
       log.warning("Bad number: " + val.toString(), e);
@@ -964,59 +823,10 @@ public class DisplayContentStatus extends LockssServlet {
       return getTableDateFormat().format(d);
     }
   }
-
   private static BitSet debugOptions = new BitSet();
+
   static {
     debugOptions.set(StatusTable.OPTION_DEBUG_USER);
-  }
-
-  /**
-   * Build a form with a select box that fetches a named table
-   * @return the Composite object
-   */
-  private Composite getSelectTableForm() {
-    try {
-      StatusTable statTable =
-        statSvc.getTable(StatusService.ALL_TABLES_TABLE, null,
-			 isDebugUser() ? debugOptions : null);
-      java.util.List colList = statTable.getColumnDescriptors();
-      java.util.List rowList = statTable.getSortedRows();
-      ColumnDescriptor cd = (ColumnDescriptor)colList.get(0);
-      Select sel = new Select("table", false);
-      sel.attribute("onchange", "this.form.submit()");
-      boolean foundIt = false;
-      for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
-        Map rowMap = (Map)rowIter.next();
-        Object val = rowMap.get(cd.getColumnName());
-        String display = StatusTable.getActualValue(val).toString();
-        if (val instanceof StatusTable.Reference) {
-          StatusTable.Reference ref = (StatusTable.Reference)val;
-          String key = ref.getTableName();
-          // select the current table
-          boolean isThis = (tableKey == null) && tableName.equals(key);
-          foundIt = foundIt || isThis;
-          sel.add(display, isThis, key);
-        } else {
-          sel.add(display, false);
-        }
-      }
-      // if not currently displaying a table in the list, select a blank entry
-      if (!foundIt) {
-        sel.add(" ", true, "");
-      }
-      Form frm = new Form(srvURL(myServletDescr()));
-      // use GET so user can refresh in browser
-      frm.method("GET");
-      frm.add(sel);
-      Input submit = new Input(Input.Submit, "foo", "Go");
-      submit.attribute("id", "dsSelectBox");
-      frm.add(submit);
-      return frm;
-    } catch (Exception e) {
-      // if this fails for any reason, just don't include this form
-      log.warning("Failed to build status table selector", e);
-      return new Composite();
-    }
   }
 
   protected boolean isAllTablesTable() {

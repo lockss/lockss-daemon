@@ -1,0 +1,93 @@
+.error-table {
+	border-collapse:collapse;
+	text-align:left;
+	padding:5px;
+}
+
+.error-th {
+	padding:5px;
+}
+
+.error-td {
+	text-align:center;
+	padding:1px 8px 1px 8px;
+}
+
+.au-td {
+	text-align:left;
+	padding:3px 15px 3px 15px;
+}
+
+.pub-title {
+	text-align: left;
+	padding: 1em 1.4em;
+	width: 250px;
+	white-space: nowrap;
+}
+
+.column-header {
+	padding:1em 1.4em;
+	vertical-align: middle;
+	text-align: center;
+	overflow: hidden;
+	width: 250px;
+}
+
+.au-title {
+	padding:0.5em 1.4em 0.5em 2.2em;
+	text-align: left;
+	border-left: 0.5em;
+	width: 400px;
+}
+
+.status-table {
+	table-layout: fixed;
+}
+
+.detail-table {
+	width: 350px;
+	word-wrap: break-word;
+	table-layout: fixed;
+}
+
+.title-cell {
+	width: 80px;
+	word-wrap: break-word;
+}
+
+.value-cell {
+	width: 100px;
+	word-wrap: break-word;
+}
+
+.td-status {
+	padding: 5px;
+	text-align: center;
+	width: 250px;
+}
+
+.hide-row {
+	display: none;
+}
+
+.show-row {
+	display: block;
+}
+
+.odd-row {
+	text-align: center;
+	background: #DDD;
+}
+
+.even-row {
+	text-align: center;
+	background: #FFF;
+}
+
+.title-icon {
+	padding: 0px 5px 0px 0px;
+}
+
+.agg-value {
+	text-align: right;
+}
