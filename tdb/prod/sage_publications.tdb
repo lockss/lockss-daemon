@@ -23545,6 +23545,37 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     }
     
     {
+    
+     title <
+       name = Journal of Telemedicine and Telecare ;
+       issn = 1357-633X ;
+       eissn = 1758-1109 
+     >
+       pluginSuffix = HighWirePressH20Plugin
+       param[base_url] = http://jtt.rsmjournals.com/
+       implicit < status ; year ; name ; param[volume_name] >
+       
+        au < exists ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
+        au < exists ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
+        au < exists ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
+        au < exists ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
+        au < exists ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
+        au < exists ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
+        au < exists ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
+        au < exists ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
+        au < exists ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
+        au < exists ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
+        au < exists ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
+        au < exists ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
+        au < exists ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
+        au < exists ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
+        au < exists ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
+        au < exists ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
+        au < exists ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 >
+
+    }
+    
+    {
 
       title <
         name = Journal of Mixed Methods Research ;
