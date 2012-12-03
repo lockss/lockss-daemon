@@ -381,19 +381,19 @@
       param[base_url] = http://complit.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; exists ; 2000 ; Comparative Literature Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; Comparative Literature Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; Comparative Literature Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; Comparative Literature Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; Comparative Literature Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; exists ; 2005 ; Comparative Literature Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; exists ; 2006 ; Comparative Literature Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; exists ; 2007 ; Comparative Literature Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; exists ; 2008 ; Comparative Literature Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; exists ; 2009 ; Comparative Literature Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; exists ; 2010 ; Comparative Literature Volume 62 ; 62 >
-      au < HighWirePressH20Plugin ; exists ; 2011 ; Comparative Literature Volume 63 ; 63 >
-      au < HighWirePressH20Plugin ; exists ; 2012 ; Comparative Literature Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Comparative Literature Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Comparative Literature Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Comparative Literature Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Comparative Literature Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Comparative Literature Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; manifest ; 2005 ; Comparative Literature Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; manifest ; 2006 ; Comparative Literature Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; manifest ; 2007 ; Comparative Literature Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Comparative Literature Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Comparative Literature Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Comparative Literature Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Comparative Literature Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Comparative Literature Volume 64 ; 64 >
   
     }
   
@@ -476,14 +476,14 @@
       param[base_url] = http://culturalpolitics.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; exists ; 2005 ; Cultural Politics Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; 2006 ; Cultural Politics Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; 2007 ; Cultural Politics Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; 2008 ; Cultural Politics Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; 2009 ; Cultural Politics Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; 2010 ; Cultural Politics Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; 2011 ; Cultural Politics Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; 2012 ; Cultural Politics Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 2005 ; Cultural Politics Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 2006 ; Cultural Politics Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 2007 ; Cultural Politics Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Cultural Politics Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Cultural Politics Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Cultural Politics Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Cultural Politics Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Cultural Politics Volume 8 ; 8 >
   
     }
     
@@ -520,11 +520,11 @@
       param[base_url] = http://differences.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 1999-2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 1999-2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
       au < HighWireStrVolPlugin ; down ; 2005 ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
       au < HighWireStrVolPlugin ; down ; 2006 ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >      
       au < HighWirePressH20Plugin ; released ; 2007 ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 >
@@ -802,11 +802,11 @@
       param[base_url] = http://ecl.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 2000 ; Eighteenth-Century Life Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; Eighteenth-Century Life Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; Eighteenth-Century Life Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; Eighteenth-Century Life Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Eighteenth-Century Life Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Eighteenth-Century Life Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Eighteenth-Century Life Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Eighteenth-Century Life Volume 28 ; 28 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >
