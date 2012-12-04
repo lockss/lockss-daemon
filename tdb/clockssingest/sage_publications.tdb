@@ -25785,7 +25785,7 @@
     }
 
   }
-
+    
   {
   
     title <
@@ -26643,8 +26643,29 @@
     }
 
   }
-
+  
   {
+    
+     title <
+       name = Obstetric Medicine ;
+       issn =  1753-495X ;
+       eissn =  1753-4968
+     >
+
+       param[base_url] = http://obmed.rsmjournals.com//
+       
+       
+       pluginSuffix = ClockssHighWirePressPlugin
+
+        au < exists ; exists ; 2008 ; Obstetric Medicine Volume 1 ; 1 ; >
+        au < exists ; exists ; 2009 ; Obstetric Medicine Volume 2 ; 2 ; >
+        au < exists ; exists ; 2010 ; Obstetric Medicine Volume 3 ; 3 ; >
+        au < exists ; exists ; 2011 ; Obstetric Medicine Volume 4 ; 4 ; >
+        au < exists ; exists ; 2012 ; Obstetric Medicine Volume 5 ; 5 ; >
+    
+    }
+    
+    {
   
     title <
       name = Organization ;
