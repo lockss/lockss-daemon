@@ -40990,7 +40990,30 @@ comment[mpj] = now published by Brill
       au < exists ; 2012 ; Ultrasound Volume 20 ; 20 >
 
     }
-  
+
+    {
+    
+     title <
+       name = Vascular ;
+       issn =  1708-5381 ;
+       eissn =  1708-539X 
+     >
+       
+       pluginSuffix = HighWirePressH20Plugin
+       param[base_url] = http://vascular.rsmjournals.com/
+       implicit < status ; year ; name ; param[volume] >
+       
+      au < exists ; 2004 ; Vascular Volume 12 ; 12 >
+      au < exists ; 2005 ; Vascular Volume 13 ; 13 >
+      au < exists ; 2006 ; Vascular Volume 14 ; 14 >
+      au < exists ; 2007 ; Vascular Volume 15 ; 15 >
+      au < exists ; 2008 ; Vascular Volume 16 ; 16 >
+      au < exists ; 2009 ; Vascular Volume 17 ; 17 >
+      au < exists ; 2010 ; Vascular Volume 18 ; 18 >
+      au < exists ; 2011 ; Vascular Volume 19 ; 19 >
+      au < exists ; 2012 ; Vascular Volume 20 ; 20 >
+
+    }  
     {
 
       title <

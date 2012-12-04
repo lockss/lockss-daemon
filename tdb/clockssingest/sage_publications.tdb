@@ -35377,7 +35377,30 @@
 
     }
 
-  }
+    }
+
+    {
+    
+     title <
+       name = Vascular ;
+       issn =  1708-5381 ;
+       eissn =  1708-539X 
+     >
+       
+       param[base_url] = http://vascular.rsmjournals.com/
+       pluginSuffix = ClockssHighWirePlugin
+       
+      au < exists ; exists ; 2004 ; Vascular Volume 12 ; 12 ; >
+      au < exists ; exists ; 2005 ; Vascular Volume 13 ; 13 ; >
+      au < exists ; exists ; 2006 ; Vascular Volume 14 ; 14 ; >
+      au < exists ; exists ; 2007 ; Vascular Volume 15 ; 15 ; >
+      au < exists ; exists ; 2008 ; Vascular Volume 16 ; 16 ; >
+      au < exists ; exists ; 2009 ; Vascular Volume 17 ; 17 ; >
+      au < exists ; exists ; 2010 ; Vascular Volume 18 ; 18 ; >
+      au < exists ; exists ; 2011 ; Vascular Volume 19 ; 19 ; >
+      au < exists ; exists ; 2012 ; Vascular Volume 20 ; 20 ; >
+
+    }
 
   {
   
