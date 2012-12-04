@@ -25207,6 +25207,35 @@
       }
       
     }
+
+  {
+    
+     title <
+       name = Medicine, Science and the Law ;
+       issn =  0025-8024 ;
+       eissn =  2042-1818 
+       >
+     
+      param[base_url] = http://msl.rsmjournals.com/
+      
+      {
+      
+       pluginSuffix = ClockssHighWirePressH20Plugin
+       
+        au < exists ; exists ; 2003 ; Medicine, Science and the Law Volume 43 ; 43 ; >
+        au < exists ; exists ; 2004 ; Medicine, Science and the Law Volume 44 ; 44 ; >
+        au < exists ; exists ; 2005 ; Medicine, Science and the Law Volume 45 ; 45 ; >
+        au < exists ; exists ; 2006 ; Medicine, Science and the Law Volume 46 ; 46 ; >
+        au < exists ; exists ; 2007 ; Medicine, Science and the Law Volume 47 ; 47 ; >
+        au < exists ; exists ; 2008 ; Medicine, Science and the Law Volume 48 ; 48 ; >
+        au < exists ; exists ; 2009 ; Medicine, Science and the Law Volume 49 ; 49 ; >
+        au < exists ; exists ; 2010 ; Medicine, Science and the Law Volume 50 ; 50 ; >
+        au < exists ; exists ; 2011 ; Medicine, Science and the Law Volume 51 ; 51 ; >
+        au < exists ; exists ; 2012 ; Medicine, Science and the Law Volume 52 ; 52 ; >
+    
+    }
+    
+    }
     
   {
   

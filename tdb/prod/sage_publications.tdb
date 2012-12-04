@@ -28424,7 +28424,8 @@ comment[mpj] = now published by Brill
         issnl = 0968-5332
       >
 
-      {
+     {
+      
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://mli.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -28444,6 +28445,31 @@ comment[mpj] = now published by Brill
         
       }
       
+    }
+    
+    {
+    
+     title <
+       name = Medicine, Science and the Law ;
+       issn =  0025-8024 ;
+       eissn =  2042-1818 
+     >
+      
+       pluginSuffix = HighWirePressH20Plugin
+       param[base_url] = http://msl.rsmjournals.com/
+       implicit < status ; year ; name ; param[volume_name] >
+       
+        au < exists ; 2003 ; Medical Decision Making Volume 43 ; 43 >
+        au < exists ; 2004 ; Medical Decision Making Volume 44 ; 44 >
+        au < exists ; 2005 ; Medical Decision Making Volume 45 ; 45 >
+        au < exists ; 2006 ; Medical Decision Making Volume 46 ; 46 >
+        au < exists ; 2007 ; Medical Decision Making Volume 47 ; 47 >
+        au < exists ; 2008 ; Medical Decision Making Volume 48 ; 48 >
+        au < exists ; 2009 ; Medical Decision Making Volume 49 ; 49 >
+        au < exists ; 2010 ; Medical Decision Making Volume 50 ; 50 >
+        au < exists ; 2011 ; Medical Decision Making Volume 51 ; 51 >
+        au < exists ; 2012 ; Medical Decision Making Volume 52 ; 52 >
+    
     }
     
     {
