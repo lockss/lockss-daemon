@@ -15,10 +15,11 @@
   
     title < 
       name = Contributions to Geology ;
-      issn = 1436-3542 ;
-      eissn = 
+      issn = 1436-3542
     >
-    
+
+     comment[continued_by] = [1555-7340]
+          
     au < exists ; 1962 ; Contributions to Geology Volume 1 ; 1 >
     au < exists ; 1963 ; Contributions to Geology Volume 2 ; 2 >
     au < exists ; 1964 ; Contributions to Geology Volume 3 ; 3 >
@@ -63,6 +64,8 @@
       eissn = 1555-7332
     >
 
+    comment[continued_from] = [1436-3542]
+      
     au < exists ; 1998 ; Rocky Mountain Geology Volume 33 ; 33 >
     au < exists ; 1999 ; Rocky Mountain Geology Volume 34 ; 34 >
     au < exists ; 2000 ; Rocky Mountain Geology Volume 35 ; 35 >
