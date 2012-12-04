@@ -25237,6 +25237,34 @@
     
     }
     
+    {
+    
+     title <
+       name = Medico-Legal Journal ;
+       issn =  0025-8172 ;
+       eissn =  2042-1834
+     >
+      
+        param[base_url] = http://mlj.rsmjournals.com/
+        pluginSuffix = ClockssHighWirePlugin
+
+        au < exists ; exists ; 1999 ; Medicine, Science and the Law Volume 1 ; 1 ; >
+        au < exists ; exists ; 2000 ; Medicine, Science and the Law Volume 2 ; 2 ; >
+        au < exists ; exists ; 2001 ; Medicine, Science and the Law Volume 3 ; 3 ; >
+        au < exists ; exists ; 2002 ; Medicine, Science and the Law Volume 4 ; 4 ; >
+        au < exists ; exists ; 2003 ; Medicine, Science and the Law Volume 5 ; 5 ; >
+        au < exists ; exists ; 2004 ; Medicine, Science and the Law Volume 6 ; 6 ; >
+        au < exists ; exists ; 2005 ; Medicine, Science and the Law Volume 7 ; 7 ; >
+        au < exists ; exists ; 2006 ; Medicine, Science and the Law Volume 8 ; 8 ; >
+        au < exists ; exists ; 2007 ; Medicine, Science and the Law Volume 9 ; 9 ; >
+        au < exists ; exists ; 2008 ; Medicine, Science and the Law Volume 10 ; 10 ; >
+        au < exists ; exists ; 2009 ; Medicine, Science and the Law Volume 11 ; 11 ; >
+        au < exists ; exists ; 2010 ; Medicine, Science and the Law Volume 12 ; 12 ; >
+        au < exists ; exists ; 2011 ; Medicine, Science and the Law Volume 13 ; 13 ; >
+        au < exists ; exists ; 2012 ; Medicine, Science and the Law Volume 14 ; 14 ; >
+    
+    }
+    
   {
   
     title <
