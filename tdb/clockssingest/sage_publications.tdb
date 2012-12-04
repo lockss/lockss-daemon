@@ -35046,6 +35046,28 @@
 
   }
 
+     {
+    
+     title <
+       name = Tropic Doctor ;
+       issn =  0049-4755 ;
+       eissn =  1758-1133 
+     >
+       
+       param[base_url] = http://td.rsmjournals.com
+       pluginSuffix = ClockssHighWirePlugin
+
+      au < exists ; exists ; 2005 ; Australasian Psychiatry Volume 35 ; 35 ; >
+      au < exists ; exists ; 2006 ; Australasian Psychiatry Volume 36 ; 36 ; >
+      au < exists ; exists ; 2007 ; Australasian Psychiatry Volume 37 ; 37 ; >
+      au < exists ; exists ; 2008 ; Australasian Psychiatry Volume 38 ; 38 ; >
+      au < exists ; exists ; 2009 ; Australasian Psychiatry Volume 39 ; 39 ; >
+      au < exists ; exists ; 2010 ; Australasian Psychiatry Volume 40 ; 40 ; >
+      au < exists ; exists ; 2011 ; Australasian Psychiatry Volume 41 ; 41 ; >
+      au < exists ; exists ; 2012 ; Australasian Psychiatry Volume 42 ; 42 ; >
+       
+  }
+  
   {
   
     title <

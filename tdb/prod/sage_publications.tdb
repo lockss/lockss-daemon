@@ -38213,6 +38213,21 @@ comment[mpj] = now published by Brill
     }
 
     {
+    
+     title <
+       name = Tropical Doctor ;
+       issn = 0049-4755 ;
+       eissn =  1758-1133 
+     >
+       
+       pluginSuffix = HighWirePressH20Plugin
+       param[base_url] = http://td.rsmjournals.com/
+       implicit < status ; year ; name ; param[volume] >
+       
+       au < exists ; 2012 ; Tropical Doctor Volume 1 ; 1 >
+       
+    }
+    {
 
       title <
         name = Update: Applications of Research in Music Education ;
@@ -40929,6 +40944,29 @@ comment[mpj] = now published by Brill
 
     }
 
+    {
+    
+     title <
+       name = Tropic Doctor ;
+       issn =  0049-4755 ;
+       eissn =  1758-1133 
+     >
+       
+       pluginSuffix = HighWirePressH20Plugin
+       param[base_url] = http://td.rsmjournals.com/
+       implicit < status ; year ; name ; param[volume] >
+
+      au < exists ; 2005 ; Australasian Psychiatry Volume 35 ; 35 >
+      au < exists ; 2006 ; Australasian Psychiatry Volume 36 ; 36 >
+      au < exists ; 2007 ; Australasian Psychiatry Volume 37 ; 37 >
+      au < exists ; 2008 ; Australasian Psychiatry Volume 38 ; 38 >
+      au < exists ; 2009 ; Australasian Psychiatry Volume 39 ; 39 >
+      au < exists ; 2010 ; Australasian Psychiatry Volume 40 ; 40 >
+      au < exists ; 2011 ; Australasian Psychiatry Volume 41 ; 41 >
+      au < exists ; 2012 ; Australasian Psychiatry Volume 42 ; 42 >
+
+    }
+  
     {
 
       title <
