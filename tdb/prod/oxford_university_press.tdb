@@ -225,13 +225,13 @@
     param[base_url] = http://ageing.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Age and Ageing Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Age and Ageing Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Age and Ageing Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Age and Ageing Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Age and Ageing Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Age and Ageing Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Age and Ageing Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 1972 ; Age and Ageing Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1973 ; Age and Ageing Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1974 ; Age and Ageing Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1975 ; Age and Ageing Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; testing ; 1976 ; Age and Ageing Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1977 ; Age and Ageing Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 1978 ; Age and Ageing Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 1979 ; Age and Ageing Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 1980 ; Age and Ageing Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 1981 ; Age and Ageing Volume 10 ; 10 >
