@@ -14804,6 +14804,28 @@
     }
     
   {
+    
+     title <
+       name = JRSM Short Reports ;
+       eissn = 2042-5333
+     >
+
+       param[base_url] = http://shortreports.rsmjournals.com/
+
+       {
+       
+       pluginSuffix = ClockssHighWirePlugin
+
+      au < exists ; exists ; 2010 ; JRSM Cardiovascular Disease Volume 1 ; 1 ; >
+      au < exists ; exists ; 2011 ; JRSM Cardiovascular Disease Volume 2 ; 2 ; >
+      au < exists ; exists ; 2012 ; JRSM Cardiovascular Disease Volume 3 ; 3 ; >
+    
+    }
+    
+    }
+    
+    
+  {
   
     title <
       name = Journal for the Study of the New Testament ;
