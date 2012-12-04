@@ -28621,6 +28621,36 @@ comment[mpj] = now published by Brill
 
     }
 
+  {
+    
+     title <
+       name = Menopause International ;
+       issn =  1754-0453 ;
+       eissn =  1754-0461
+     >
+      
+      pluginSuffix = HighWirePressH20Plugin      
+      param[base_url] = http://mi.rsmjournals.com/
+      implicit < status ; year ; name ; param[volume_name] >
+    
+      au < exists ; 2000 ; Menopause International Volume 6 ; 6 >
+      au < exists ; 2001 ; Menopause International Volume 7 ; 7 >
+      au < exists ; 2002 ; Menopause International Volume 8 ; 8 >
+      au < exists ; 2003 ; Menopause International Volume 9 ; 9 >
+      au < exists ; 2004 ; Menopause International Volume 10 ; 10 >
+      au < exists ; 2005 ; Menopause International Volume 11 ; 11 >
+      au < exists ; 2006 ; Menopause International Volume 12 ; 12 >
+      au < exists ; 2007 ; Menopause International Volume 13 ; 13 >
+      au < exists ; 2008 ; Menopause International Volume 14 ; 14 >
+      au < exists ; 2009 ; Menopause International Volume 15 ; 15 >
+      au < exists ; 2010 ; Menopause International Volume 16 ; 16 >
+      au < exists ; 2011 ; Menopause International Volume 17 ; 17 >
+      au < exists ; 2012 ; Menopause International Volume 18 ; 18 >
+    
+    
+    }
+
+
     {
 
       title <
