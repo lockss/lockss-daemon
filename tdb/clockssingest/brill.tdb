@@ -6,7 +6,20 @@
     info[tester] = 0
   >
   
+  plugin = needs.plugin
+  param[base_url] = http://booksandjournals.brillonline.com
   {
+    
+     title <
+       name = African Diaspora ;
+       issn =  1872-5457 ;
+       eissn =  1872-5465
+     >
+      
+    
+    }
+   
+    {
   
     title < 
       name = African and Asian Studies ;
@@ -14,8 +27,30 @@
       eissn = 1569-2108
       >
 
-    
-    
+     
   }
-
+{
+    
+     title <
+       name = African Journal of Legal Studies ;
+       issn = 2210-9730 ;
+       eissn = 1708-7384
+       
+     >
+      
+    
+    }
+    
+    {
+    
+     title <
+       name = African Yearbook of International Law Online ;
+       eissn = 2211-6176
+       
+     >
+      
+       
+    
+    }    
+    
 }
