@@ -40966,6 +40966,30 @@ comment[mpj] = now published by Brill
       au < exists ; 2012 ; Tropic Doctor Volume 42 ; 42 >
 
     }
+
+ {
+    
+     title <
+       name = Ultrasound ;
+       issn =  1742-271X ;
+       eissn =  1743-1344 
+     >
+       
+       pluginSuffix = HighWirePressH20Plugin
+       param[base_url] = http://ult.rsmjournals.com/
+       implicit < status ; year ; name ; param[volume] >
+       
+      au < exists ; 2004 ; Ultrasound Volume 12 ; 12 >
+      au < exists ; 2005 ; Ultrasound Volume 13 ; 13 >
+      au < exists ; 2006 ; Ultrasound Volume 14 ; 14 >
+      au < exists ; 2007 ; Ultrasound Volume 15 ; 15 >
+      au < exists ; 2008 ; Ultrasound Volume 16 ; 16 >
+      au < exists ; 2009 ; Ultrasound Volume 17 ; 17 >
+      au < exists ; 2010 ; Ultrasound Volume 18 ; 18 >
+      au < exists ; 2011 ; Ultrasound Volume 19 ; 19 >
+      au < exists ; 2012 ; Ultrasound Volume 20 ; 20 >
+
+    }
   
     {
 
