@@ -16755,6 +16755,23 @@
       au < exists ; 2012 ; JRSM Cardiovascular Disease Volume 1 ; 1 >
     
     }
+
+  {
+    
+     title <
+       name = JRSM Short Reports ;
+       eissn = 2042-5333
+     >
+      
+       pluginSuffix = HighWirePlugin
+       param[base_url] = http://shortreports.rsmjournals.com/
+       implicit < status ; year ; name ; param[volume] >
+       
+      au < exists ; 2010 ; JRSM Cardiovascular Disease Volume 1 ; 1 >
+      au < exists ; 2011 ; JRSM Cardiovascular Disease Volume 2 ; 2 >
+      au < exists ; 2012 ; JRSM Cardiovascular Disease Volume 3 ; 3 >
+    
+    }
     
     {
 
