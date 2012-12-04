@@ -31234,6 +31234,27 @@
   }
 
   {
+    
+     title <
+       name = Scottish Medical Journal ;
+       issn =  0036-9330 ;
+       eissn =  2045-6441
+     >
+      
+       param[base_url] = http://smj.rsmjournals.com/
+       pluginSuffix = ClockssHighWirePlugin
+    
+        au < exists ; exists ; 2006 ; Scottish Medical Journal Volume 51 ; 51 ; >
+        au < exists ; exists ; 2007 ; Scottish Medical Journal Volume 52 ; 52 ; >
+        au < exists ; exists ; 2008 ; Scottish Medical Journal Volume 53 ; 53 ; >
+        au < exists ; exists ; 2009 ; Scottish Medical Journal Volume 54 ; 54 ; >
+        au < exists ; exists ; 2010 ; Scottish Medical Journal Volume 55 ; 55 ; >
+        au < exists ; exists ; 2011 ; Scottish Medical Journal Volume 56 ; 56 ; >
+        au < exists ; exists ; 2012 ; Scottish Medical Journal Volume 57 ; 57 ; >
+
+    }
+
+  {
   
     title <
       name = Second Language Research ;
