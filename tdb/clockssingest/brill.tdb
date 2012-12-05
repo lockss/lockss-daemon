@@ -8,6 +8,18 @@
   
   plugin = needs.plugin
   param[base_url] = http://booksandjournals.brillonline.com
+  
+  
+   {
+    
+     title <
+       name = Advanced Powder Technology ;
+       eissn =  1568-5527
+     >
+      
+    
+    }  
+  
   {
     
      title <
@@ -85,6 +97,18 @@
       
     
     }
+
+   {
+    
+     title <
+       name = Annali dell'Istituto e Museo di storia della scienza di Firenze ;
+       eissn =  2210-5875
+     >
+      
+    
+    }
+
+
 
    {
     
