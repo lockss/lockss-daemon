@@ -3,12 +3,12 @@
   publisher <
     name = Copernicus Publications ;
     info[contract] = 2012 ;
-    info[tester] = 0
+    info[tester] = 5
 
   >
 
-    plugin = org.lockss.plugin.copernicus.CopernicusPublicationsPlugin
-    implicit < status1 ; status ; year ; name ; param[volume_name] >
+    plugin = org.lockss.plugin.copernicus.ClockssCopernicusPublicationsPlugin
+    implicit < status1 ; status ; param[year] ; name ; param[volume_name] >
 
   {
     title <

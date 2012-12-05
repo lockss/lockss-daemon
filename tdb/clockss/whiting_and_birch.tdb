@@ -35,6 +35,7 @@
       au < manifest ; exists ; 2009 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 19 ; 19 >
       au < manifest ; exists ; 2010 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 20 ; 20 >
       au < manifest ; exists ; 2011 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 21 ; 21 >
+      au < exists ; exists ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 22 ; 22 >
   
   }
 
@@ -84,11 +85,11 @@
       param[journal_id] = swssr
       param[journal_issn] = 0953-5225
 
-      au < manifest ; exists ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 >
-      au < manifest ; exists ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 >
-      au < manifest ; exists ; 2007-2008 ; Social Work and Social Sciences Review Volume 13 ; 13 >
-      au < manifest ; exists ; 2010-2011 ; Social Work and Social Sciences Review Volume 14 ; 14 >
-      au < testing ; exists ; 2011-2012 ; Social Work and Social Sciences Review Volume 15 ; 15 >
+      au < exists ; exists ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 >
+      au < exists ; exists ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 >
+      au < exists ; exists ; 2007-2008 ; Social Work and Social Sciences Review Volume 13 ; 13 >
+      au < exists ; exists ; 2010-2011 ; Social Work and Social Sciences Review Volume 14 ; 14 >
+      au < exists ; exists ; 2011-2012 ; Social Work and Social Sciences Review Volume 15 ; 15 >
     
   }
 

@@ -4,12 +4,14 @@
     name = Dove Medical Press ;
     info[contract] = 2012 ;
     info[tester] = 0
+    
   >
 
   plugin = needs.plugin
   param[base_url] = http://www.dovepress.com/
   implicit < status1 ; status ; year ; name ; param[year] >
-
+  comment[doNotProcess] = manifests up - waiting for plugin 
+  
   {
   
     title < 
@@ -19,14 +21,14 @@
     
     param[journal_id] = 1
 
-    au < exists ; exists ; 2005 ; Therapeutics and Clinical Risk Management Volume 1 ; 2005 >
-    au < exists ; exists ; 2006 ; Therapeutics and Clinical Risk Management Volume 2 ; 2006 >
-    au < exists ; exists ; 2007 ; Therapeutics and Clinical Risk Management Volume 3 ; 2007 >
-    au < exists ; exists ; 2008 ; Therapeutics and Clinical Risk Management Volume 4 ; 2008 >
-    au < exists ; exists ; 2009 ; Therapeutics and Clinical Risk Management Volume 5 ; 2009 >
-    au < exists ; exists ; 2010 ; Therapeutics and Clinical Risk Management Volume 6 ; 2010 >
-    au < exists ; exists ; 2011 ; Therapeutics and Clinical Risk Management Volume 7 ; 2011 >
-    au < exists ; exists ; 2012 ; Therapeutics and Clinical Risk Management Volume 8 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2005 ; Therapeutics and Clinical Risk Management Volume 1 ; 2005 >
+    au < doNotProcess ; doNotProcess ; 2006 ; Therapeutics and Clinical Risk Management Volume 2 ; 2006 >
+    au < doNotProcess ; doNotProcess ; 2007 ; Therapeutics and Clinical Risk Management Volume 3 ; 2007 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Therapeutics and Clinical Risk Management Volume 4 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Therapeutics and Clinical Risk Management Volume 5 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Therapeutics and Clinical Risk Management Volume 6 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Therapeutics and Clinical Risk Management Volume 7 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Therapeutics and Clinical Risk Management Volume 8 ; 2012 >
     
   }
 
@@ -39,14 +41,14 @@
     
     param[journal_id] = 2
 
-    au < exists ; exists ; 2005 ; Vascular Health and Risk Management Volume 1 ; 2005 >
-    au < exists ; exists ; 2006 ; Vascular Health and Risk Management Volume 2 ; 2006 >
-    au < exists ; exists ; 2007 ; Vascular Health and Risk Management Volume 3 ; 2007 >
-    au < exists ; exists ; 2008 ; Vascular Health and Risk Management Volume 4 ; 2008 >
-    au < exists ; exists ; 2009 ; Vascular Health and Risk Management Volume 5 ; 2009 >
-    au < exists ; exists ; 2010 ; Vascular Health and Risk Management Volume 6 ; 2010 >
-    au < exists ; exists ; 2011 ; Vascular Health and Risk Management Volume 7 ; 2011 >
-    au < exists ; exists ; 2012 ; Vascular Health and Risk Management Volume 8 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2005 ; Vascular Health and Risk Management Volume 1 ; 2005 >
+    au < doNotProcess ; doNotProcess ; 2006 ; Vascular Health and Risk Management Volume 2 ; 2006 >
+    au < doNotProcess ; doNotProcess ; 2007 ; Vascular Health and Risk Management Volume 3 ; 2007 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Vascular Health and Risk Management Volume 4 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Vascular Health and Risk Management Volume 5 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Vascular Health and Risk Management Volume 6 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Vascular Health and Risk Management Volume 7 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Vascular Health and Risk Management Volume 8 ; 2012 >
     
   }
 
@@ -59,14 +61,14 @@
     
     param[journal_id] = 3
 
-    au < exists ; exists ; 2005 ; Neuropsychiatric Disease and Treatment Volume 1 ; 2005 >
-    au < exists ; exists ; 2006 ; Neuropsychiatric Disease and Treatment Volume 2 ; 2006 >
-    au < exists ; exists ; 2007 ; Neuropsychiatric Disease and Treatment Volume 3 ; 2007 >
-    au < exists ; exists ; 2008 ; Neuropsychiatric Disease and Treatment Volume 4 ; 2008 >
-    au < exists ; exists ; 2009 ; Neuropsychiatric Disease and Treatment Volume 5 ; 2009 >
-    au < exists ; exists ; 2010 ; Neuropsychiatric Disease and Treatment Volume 6 ; 2010 >
-    au < exists ; exists ; 2011 ; Neuropsychiatric Disease and Treatment Volume 7 ; 2011 >
-    au < exists ; exists ; 2012 ; Neuropsychiatric Disease and Treatment Volume 8 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2005 ; Neuropsychiatric Disease and Treatment Volume 1 ; 2005 >
+    au < doNotProcess ; doNotProcess ; 2006 ; Neuropsychiatric Disease and Treatment Volume 2 ; 2006 >
+    au < doNotProcess ; doNotProcess ; 2007 ; Neuropsychiatric Disease and Treatment Volume 3 ; 2007 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Neuropsychiatric Disease and Treatment Volume 4 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Neuropsychiatric Disease and Treatment Volume 5 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Neuropsychiatric Disease and Treatment Volume 6 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Neuropsychiatric Disease and Treatment Volume 7 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Neuropsychiatric Disease and Treatment Volume 8 ; 2012 >
     
   }
 
@@ -79,13 +81,13 @@
     
     param[journal_id] = 4
 
-    au < exists ; exists ; 2006 ; Clinical Interventions in Aging Volume 1 ; 2006 >
-    au < exists ; exists ; 2007 ; Clinical Interventions in Aging Volume 2 ; 2007 >
-    au < exists ; exists ; 2008 ; Clinical Interventions in Aging Volume 3 ; 2008 >
-    au < exists ; exists ; 2009 ; Clinical Interventions in Aging Volume 4 ; 2009 >
-    au < exists ; exists ; 2010 ; Clinical Interventions in Aging Volume 5 ; 2010 >
-    au < exists ; exists ; 2011 ; Clinical Interventions in Aging Volume 6 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical Interventions in Aging Volume 7 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2006 ; Clinical Interventions in Aging Volume 1 ; 2006 >
+    au < doNotProcess ; doNotProcess ; 2007 ; Clinical Interventions in Aging Volume 2 ; 2007 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Clinical Interventions in Aging Volume 3 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Clinical Interventions in Aging Volume 4 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Clinical Interventions in Aging Volume 5 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Clinical Interventions in Aging Volume 6 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Clinical Interventions in Aging Volume 7 ; 2012 >
     
   }
 
@@ -98,13 +100,13 @@
     
     param[journal_id] = 5
 
-    au < exists ; exists ; 2006 ; International Journal of Nanomedicine Volume 1 ; 2006 >
-    au < exists ; exists ; 2007 ; International Journal of Nanomedicine Volume 2 ; 2007 >
-    au < exists ; exists ; 2008 ; International Journal of Nanomedicine Volume 3 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Nanomedicine Volume 4 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Nanomedicine Volume 5 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Nanomedicine Volume 6 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Nanomedicine Volume 7 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Nanomedicine Volume 1 ; 2006 >
+    au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Nanomedicine Volume 2 ; 2007 >
+    au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Nanomedicine Volume 3 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Nanomedicine Volume 4 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Nanomedicine Volume 5 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Nanomedicine Volume 6 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Nanomedicine Volume 7 ; 2012 >
     
   }
 
@@ -117,13 +119,13 @@
     
     param[journal_id] = 6
 
-    au < exists ; exists ; 2006 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 1 ; 2006 >
-    au < exists ; exists ; 2007 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 2 ; 2007 >
-    au < exists ; exists ; 2008 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 3 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 4 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 5 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 6 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 7 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 1 ; 2006 >
+    au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 2 ; 2007 >
+    au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 3 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 4 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 5 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 6 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 7 ; 2012 >
     
   }
 
@@ -136,11 +138,11 @@
     
     param[journal_id] = 7
 
-    au < exists ; exists ; 2008 ; Journal of Multidisciplinary Healthcare Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Journal of Multidisciplinary Healthcare Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Journal of Multidisciplinary Healthcare Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Journal of Multidisciplinary Healthcare Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Journal of Multidisciplinary Healthcare Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Journal of Multidisciplinary Healthcare Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Multidisciplinary Healthcare Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Multidisciplinary Healthcare Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Multidisciplinary Healthcare Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Multidisciplinary Healthcare Volume 5 ; 2012 >
     
   }
 
@@ -154,12 +156,12 @@
     
     param[journal_id] = 8
 
-    au < exists ; exists ; 2007 ; Biologics: Targets and Therapy Volume 1 ; 2007 >
-    au < exists ; exists ; 2008 ; Biologics: Targets and Therapy Volume 2 ; 2008 >
-    au < exists ; exists ; 2009 ; Biologics: Targets and Therapy Volume 3 ; 2009 >
-    au < exists ; exists ; 2010 ; Biologics: Targets and Therapy Volume 4 ; 2010 >
-    au < exists ; exists ; 2011 ; Biologics: Targets and Therapy Volume 5 ; 2011 >
-    au < exists ; exists ; 2012 ; Biologics: Targets and Therapy Volume 6 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2007 ; Biologics: Targets and Therapy Volume 1 ; 2007 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Biologics: Targets and Therapy Volume 2 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Biologics: Targets and Therapy Volume 3 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biologics: Targets and Therapy Volume 4 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Biologics: Targets and Therapy Volume 5 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Biologics: Targets and Therapy Volume 6 ; 2012 >
     
   }
 
@@ -172,12 +174,12 @@
     
     param[journal_id] = 9
 
-    au < exists ; exists ; 2007 ; Clinical Ophthalmology Volume 1 ; 2007 >
-    au < exists ; exists ; 2008 ; Clinical Ophthalmology Volume 2 ; 2008 >
-    au < exists ; exists ; 2009 ; Clinical Ophthalmology Volume 3 ; 2009 >
-    au < exists ; exists ; 2010 ; Clinical Ophthalmology Volume 4 ; 2010 >
-    au < exists ; exists ; 2011 ; Clinical Ophthalmology Volume 5 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical Ophthalmology Volume 6 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2007 ; Clinical Ophthalmology Volume 1 ; 2007 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Clinical Ophthalmology Volume 2 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Clinical Ophthalmology Volume 3 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Clinical Ophthalmology Volume 4 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Clinical Ophthalmology Volume 5 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Clinical Ophthalmology Volume 6 ; 2012 >
     
   }
 
@@ -190,11 +192,11 @@
     
     param[journal_id] = 18
 
-    au < exists ; exists ; 2008 ; Nanotechnology, Science and Applications Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Nanotechnology, Science and Applications Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Nanotechnology, Science and Applications Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Nanotechnology, Science and Applications Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Nanotechnology, Science and Applications Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Nanotechnology, Science and Applications Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Nanotechnology, Science and Applications Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Nanotechnology, Science and Applications Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Nanotechnology, Science and Applications Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Nanotechnology, Science and Applications Volume 5 ; 2012 >
     
   }
 
@@ -207,12 +209,12 @@
     
     param[journal_id] = 19
 
-    au < exists ; exists ; 2007 ; Drug Design, Development and Therapy Volume 1 ; 2007 >
-    au < exists ; exists ; 2008 ; Drug Design, Development and Therapy Volume 2 ; 2008 >
-    au < exists ; exists ; 2009 ; Drug Design, Development and Therapy Volume 3 ; 2009 >
-    au < exists ; exists ; 2010 ; Drug Design, Development and Therapy Volume 4 ; 2010 >
-    au < exists ; exists ; 2011 ; Drug Design, Development and Therapy Volume 5 ; 2011 >
-    au < exists ; exists ; 2012 ; Drug Design, Development and Therapy Volume 6 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2007 ; Drug Design, Development and Therapy Volume 1 ; 2007 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Drug Design, Development and Therapy Volume 2 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Drug Design, Development and Therapy Volume 3 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Drug Design, Development and Therapy Volume 4 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Drug Design, Development and Therapy Volume 5 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Drug Design, Development and Therapy Volume 6 ; 2012 >
     
   }
 
@@ -225,12 +227,12 @@
     
     param[journal_id] = 20
 
-    au < exists ; exists ; 2007 ; Patient Preference and Adherence Volume 1 ; 2007 >
-    au < exists ; exists ; 2008 ; Patient Preference and Adherence Volume 2 ; 2008 >
-    au < exists ; exists ; 2009 ; Patient Preference and Adherence Volume 3 ; 2009 >
-    au < exists ; exists ; 2010 ; Patient Preference and Adherence Volume 4 ; 2010 >
-    au < exists ; exists ; 2011 ; Patient Preference and Adherence Volume 5 ; 2011 >
-    au < exists ; exists ; 2012 ; Patient Preference and Adherence Volume 6 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2007 ; Patient Preference and Adherence Volume 1 ; 2007 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Patient Preference and Adherence Volume 2 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Patient Preference and Adherence Volume 3 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Patient Preference and Adherence Volume 4 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Patient Preference and Adherence Volume 5 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Patient Preference and Adherence Volume 6 ; 2012 >
     
   }
 
@@ -243,11 +245,11 @@
     
     param[journal_id] = 23
 
-    au < exists ; exists ; 2008 ; OncoTargets and Therapy Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; OncoTargets and Therapy Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; OncoTargets and Therapy Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; OncoTargets and Therapy Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; OncoTargets and Therapy Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; OncoTargets and Therapy Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; OncoTargets and Therapy Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; OncoTargets and Therapy Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; OncoTargets and Therapy Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; OncoTargets and Therapy Volume 5 ; 2012 >
     
   }
 
@@ -260,11 +262,11 @@
     
     param[journal_id] = 24
 
-    au < exists ; exists ; 2008 ; Medical Devices: Evidence and Research Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Medical Devices: Evidence and Research Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Medical Devices: Evidence and Research Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Medical Devices: Evidence and Research Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Medical Devices: Evidence and Research Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Medical Devices: Evidence and Research Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Medical Devices: Evidence and Research Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Medical Devices: Evidence and Research Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Medical Devices: Evidence and Research Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Medical Devices: Evidence and Research Volume 5 ; 2012 >
     
   }
 
@@ -277,11 +279,11 @@
     
     param[journal_id] = 25
 
-    au < exists ; exists ; 2008 ; Advances and Applications in Bioinformatics and Chemistry Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Advances and Applications in Bioinformatics and Chemistry Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Advances and Applications in Bioinformatics and Chemistry Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Advances and Applications in Bioinformatics and Chemistry Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Advances and Applications in Bioinformatics and Chemistry Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Advances and Applications in Bioinformatics and Chemistry Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Advances and Applications in Bioinformatics and Chemistry Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Advances and Applications in Bioinformatics and Chemistry Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Advances and Applications in Bioinformatics and Chemistry Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Advances and Applications in Bioinformatics and Chemistry Volume 5 ; 2012 >
     
   }
 
@@ -294,11 +296,11 @@
     
     param[journal_id] = 26
 
-    au < exists ; exists ; 2008 ; Stem Cells and Cloning: Advances and Applications Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Stem Cells and Cloning: Advances and Applications Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Stem Cells and Cloning: Advances and Applications Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Stem Cells and Cloning: Advances and Applications Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Stem Cells and Cloning: Advances and Applications Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Stem Cells and Cloning: Advances and Applications Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Stem Cells and Cloning: Advances and Applications Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Stem Cells and Cloning: Advances and Applications Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Stem Cells and Cloning: Advances and Applications Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Stem Cells and Cloning: Advances and Applications Volume 5 ; 2012 >
     
   }
 
@@ -311,11 +313,11 @@
     
     param[journal_id] = 27
 
-    au < exists ; exists ; 2008 ; Journal of Asthma and Allergy Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Journal of Asthma and Allergy Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Journal of Asthma and Allergy Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Journal of Asthma and Allergy Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Journal of Asthma and Allergy Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Journal of Asthma and Allergy Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Asthma and Allergy Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Asthma and Allergy Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Asthma and Allergy Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Asthma and Allergy Volume 5 ; 2012 >
     
   }
 
@@ -328,11 +330,11 @@
     
     param[journal_id] = 28
 
-    au < exists ; exists ; 2008 ; Infection and Drug Resistance Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Infection and Drug Resistance Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Infection and Drug Resistance Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Infection and Drug Resistance Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Infection and Drug Resistance Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Infection and Drug Resistance Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Infection and Drug Resistance Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Infection and Drug Resistance Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Infection and Drug Resistance Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Infection and Drug Resistance Volume 5 ; 2012 >
     
   }
 
@@ -345,10 +347,10 @@
     
     param[journal_id] = 29
 
-    au < exists ; exists ; 2009 ; ClinicoEconomics and Outcomes Research Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; ClinicoEconomics and Outcomes Research Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; ClinicoEconomics and Outcomes Research Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; ClinicoEconomics and Outcomes Research Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; ClinicoEconomics and Outcomes Research Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; ClinicoEconomics and Outcomes Research Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; ClinicoEconomics and Outcomes Research Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; ClinicoEconomics and Outcomes Research Volume 4 ; 2012 >
 	    
   }
 
@@ -361,10 +363,10 @@
     
     param[journal_id] = 30
 
-    au < exists ; exists ; 2008 ; Journal of Receptor, Ligand and Channel Research Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Journal of Receptor, Ligand and Channel Research Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Journal of Receptor, Ligand and Channel Research Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Journal of Receptor, Ligand and Channel Research Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Journal of Receptor, Ligand and Channel Research Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Receptor, Ligand and Channel Research Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Receptor, Ligand and Channel Research Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Receptor, Ligand and Channel Research Volume 4 ; 2011 >
     
   }
 
@@ -377,11 +379,11 @@
     
     param[journal_id] = 31
 
-    au < exists ; exists ; 2008 ; Local and Regional Anesthesia Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Local and Regional Anesthesia Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Local and Regional Anesthesia Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Local and Regional Anesthesia Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Local and Regional Anesthesia Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Local and Regional Anesthesia Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Local and Regional Anesthesia Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Local and Regional Anesthesia Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Local and Regional Anesthesia Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Local and Regional Anesthesia Volume 5 ; 2012 >
     
   }
 
@@ -394,11 +396,11 @@
     
     param[journal_id] = 32
 
-    au < exists ; exists ; 2008 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 5 ; 2012 >
     
   }
 
@@ -411,11 +413,11 @@
     
     param[journal_id] = 33
 
-    au < exists ; exists ; 2008 ; Clinical, Cosmetic and Investigational Dermatology Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Clinical, Cosmetic and Investigational Dermatology Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Clinical, Cosmetic and Investigational Dermatology Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Clinical, Cosmetic and Investigational Dermatology Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical, Cosmetic and Investigational Dermatology Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Clinical, Cosmetic and Investigational Dermatology Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Clinical, Cosmetic and Investigational Dermatology Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Clinical, Cosmetic and Investigational Dermatology Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Clinical, Cosmetic and Investigational Dermatology Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Clinical, Cosmetic and Investigational Dermatology Volume 5 ; 2012 >
     
   }
 
@@ -428,11 +430,11 @@
     
     param[journal_id] = 34
 
-    au < exists ; exists ; 2008 ; Clinical and Experimental Gastroenterology Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Clinical and Experimental Gastroenterology Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Clinical and Experimental Gastroenterology Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Clinical and Experimental Gastroenterology Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical and Experimental Gastroenterology Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Clinical and Experimental Gastroenterology Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Clinical and Experimental Gastroenterology Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Clinical and Experimental Gastroenterology Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Clinical and Experimental Gastroenterology Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Clinical and Experimental Gastroenterology Volume 5 ; 2012 >
     
   }
 
@@ -445,11 +447,11 @@
     
     param[journal_id] = 35
 
-    au < exists ; exists ; 2008 ; Journal of Inflammation Research Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Journal of Inflammation Research Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Journal of Inflammation Research Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Journal of Inflammation Research Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Journal of Inflammation Research Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Journal of Inflammation Research Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Inflammation Research Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Inflammation Research Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Inflammation Research Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Inflammation Research Volume 5 ; 2012 >
     
   }
 
@@ -462,11 +464,11 @@
     
     param[journal_id] = 36
 
-    au < exists ; exists ; 2008 ; The Application of Clinical Genetics Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; The Application of Clinical Genetics Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; The Application of Clinical Genetics Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; The Application of Clinical Genetics Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; The Application of Clinical Genetics Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; The Application of Clinical Genetics Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; The Application of Clinical Genetics Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; The Application of Clinical Genetics Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; The Application of Clinical Genetics Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; The Application of Clinical Genetics Volume 5 ; 2012 >
     
   }
 
@@ -479,11 +481,11 @@
     
     param[journal_id] = 37
 
-    au < exists ; exists ; 2008 ; International Journal of Nephrology and Renovascular Disease Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of Nephrology and Renovascular Disease Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Nephrology and Renovascular Disease Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Nephrology and Renovascular Disease Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Nephrology and Renovascular Disease Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Nephrology and Renovascular Disease Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Nephrology and Renovascular Disease Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Nephrology and Renovascular Disease Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Nephrology and Renovascular Disease Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Nephrology and Renovascular Disease Volume 5 ; 2012 >
     
   }
 
@@ -496,11 +498,11 @@
     
     param[journal_id] = 38
 
-    au < exists ; exists ; 2008 ; Pharmacogenomics and Personalized Medicine Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Pharmacogenomics and Personalized Medicine Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Pharmacogenomics and Personalized Medicine Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Pharmacogenomics and Personalized Medicine Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Pharmacogenomics and Personalized Medicine Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Pharmacogenomics and Personalized Medicine Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Pharmacogenomics and Personalized Medicine Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Pharmacogenomics and Personalized Medicine Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Pharmacogenomics and Personalized Medicine Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Pharmacogenomics and Personalized Medicine Volume 5 ; 2012 >
     
   }
 
@@ -513,11 +515,11 @@
     
     param[journal_id] = 39
 
-    au < exists ; exists ; 2008 ; International Journal of General Medicine Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; International Journal of General Medicine Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of General Medicine Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of General Medicine Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of General Medicine Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; International Journal of General Medicine Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; International Journal of General Medicine Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of General Medicine Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of General Medicine Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of General Medicine Volume 5 ; 2012 >
     
   }
 
@@ -530,11 +532,11 @@
     
     param[journal_id] = 40
 
-    au < exists ; exists ; 2008 ; Open Access Surgery Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Open Access Surgery Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Open Access Surgery Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Open Access Surgery Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Open Access Surgery Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Open Access Surgery Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Open Access Surgery Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Open Access Surgery Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Open Access Surgery Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Open Access Surgery Volume 5 ; 2012 >
     
   }
 
@@ -547,11 +549,11 @@
     
     param[journal_id] = 41
 
-    au < exists ; exists ; 2008 ; Journal of Pain Research Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Journal of Pain Research Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Journal of Pain Research Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Journal of Pain Research Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Journal of Pain Research Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Journal of Pain Research Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Pain Research Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Pain Research Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Pain Research Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Pain Research Volume 5 ; 2012 >
     
   }
 
@@ -564,11 +566,11 @@
     
     param[journal_id] = 42
 
-    au < exists ; exists ; 2008 ; Integrated Blood Pressure Control Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Integrated Blood Pressure Control Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Integrated Blood Pressure Control Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Integrated Blood Pressure Control Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Integrated Blood Pressure Control Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Integrated Blood Pressure Control Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Integrated Blood Pressure Control Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Integrated Blood Pressure Control Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Integrated Blood Pressure Control Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Integrated Blood Pressure Control Volume 5 ; 2012 >
     
   }
 
@@ -581,10 +583,10 @@
     
     param[journal_id] = 43
 
-    au < exists ; exists ; 2009 ; Clinical Epidemiology Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Clinical Epidemiology Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Clinical Epidemiology Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical Epidemiology Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Clinical Epidemiology Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Clinical Epidemiology Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Clinical Epidemiology Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Clinical Epidemiology Volume 4 ; 2012 >
     
   }
 
@@ -597,10 +599,10 @@
     
     param[journal_id] = 44
 
-    au < exists ; exists ; 2009 ; Drug, Healthcare and Patient Safety Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Drug, Healthcare and Patient Safety Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Drug, Healthcare and Patient Safety Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Drug, Healthcare and Patient Safety Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Drug, Healthcare and Patient Safety Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Drug, Healthcare and Patient Safety Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Drug, Healthcare and Patient Safety Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Drug, Healthcare and Patient Safety Volume 4 ; 2012 >
     
   }
 
@@ -613,10 +615,10 @@
     
     param[journal_id] = 45
 
-    au < exists ; exists ; 2009 ; International Journal of Women's Health Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Women's Health Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Women's Health Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Women's Health Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Women's Health Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Women's Health Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Women's Health Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Women's Health Volume 4 ; 2012 >
     
   }
 
@@ -629,11 +631,11 @@
     
     param[journal_id] = 46
 
-    au < exists ; exists ; 2008 ; International Medical Case Reports Journal Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; International Medical Case Reports Journal Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; International Medical Case Reports Journal Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; International Medical Case Reports Journal Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; International Medical Case Reports Journal Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; International Medical Case Reports Journal Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; International Medical Case Reports Journal Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Medical Case Reports Journal Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Medical Case Reports Journal Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Medical Case Reports Journal Volume 5 ; 2012 >
     
   }
 
@@ -646,10 +648,10 @@
     
     param[journal_id] = 47
 
-    au < exists ; exists ; 2009 ; Open Access Emergency Medicine Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Open Access Emergency Medicine Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Open Access Emergency Medicine Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Open Access Emergency Medicine Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Open Access Emergency Medicine Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Open Access Emergency Medicine Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Open Access Emergency Medicine Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Open Access Emergency Medicine Volume 4 ; 2012 >
     
   }
 
@@ -662,10 +664,10 @@
     
     param[journal_id] = 48
 
-    au < exists ; exists ; 2009 ; International Journal of Interferon, Cytokine and Mediator Research Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Interferon, Cytokine and Mediator Research Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Interferon, Cytokine and Mediator Research Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Interferon, Cytokine and Mediator Research Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Interferon, Cytokine and Mediator Research Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Interferon, Cytokine and Mediator Research Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Interferon, Cytokine and Mediator Research Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Interferon, Cytokine and Mediator Research Volume 4 ; 2012 >
     
   }
 
@@ -678,11 +680,11 @@
     
     param[journal_id] = 49
 
-    au < exists ; exists ; 2008 ; Reports in Medical Imaging Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Reports in Medical Imaging Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Reports in Medical Imaging Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Reports in Medical Imaging Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Reports in Medical Imaging Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Reports in Medical Imaging Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Reports in Medical Imaging Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Reports in Medical Imaging Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Reports in Medical Imaging Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Reports in Medical Imaging Volume 5 ; 2012 >
     
   }
 
@@ -695,10 +697,10 @@
     
     param[journal_id] = 50
 
-    au < exists ; exists ; 2009 ; Research and Reports in Urology Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Research and Reports in Urology Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Research and Reports in Urology Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Research and Reports in Urology Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Research and Reports in Urology Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Research and Reports in Urology Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Research and Reports in Urology Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Research and Reports in Urology Volume 4 ; 2012 >
     
   }
 
@@ -711,10 +713,10 @@
     
     param[journal_id] = 51
 
-    au < exists ; exists ; 2009 ; Open Access Journal of Clinical Trials Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Open Access Journal of Clinical Trials Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Open Access Journal of Clinical Trials Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Open Access Journal of Clinical Trials Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Open Access Journal of Clinical Trials Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Open Access Journal of Clinical Trials Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Open Access Journal of Clinical Trials Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Open Access Journal of Clinical Trials Volume 4 ; 2012 >
     
   }
 
@@ -727,10 +729,10 @@
     
     param[journal_id] = 52
 
-    au < exists ; exists ; 2009 ; International Journal of Wine Research Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; International Journal of Wine Research Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; International Journal of Wine Research Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Wine Research Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Wine Research Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Wine Research Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Wine Research Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Wine Research Volume 4 ; 2012 >
     
   }
 
@@ -743,11 +745,11 @@
     
     param[journal_id] = 53
 
-    au < exists ; exists ; 2008 ; Psychology Research and Behavior Management Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Psychology Research and Behavior Management Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Psychology Research and Behavior Management Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Psychology Research and Behavior Management Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Psychology Research and Behavior Management Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Psychology Research and Behavior Management Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Psychology Research and Behavior Management Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Psychology Research and Behavior Management Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Psychology Research and Behavior Management Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Psychology Research and Behavior Management Volume 5 ; 2012 >
     
   }
 
@@ -760,10 +762,10 @@
     
     param[journal_id] = 54
 
-    au < exists ; exists ; 2009 ; Clinical, Cosmetic and Investigational Dentistry Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Clinical, Cosmetic and Investigational Dentistry Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Clinical, Cosmetic and Investigational Dentistry Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical, Cosmetic and Investigational Dentistry Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Clinical, Cosmetic and Investigational Dentistry Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Clinical, Cosmetic and Investigational Dentistry Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Clinical, Cosmetic and Investigational Dentistry Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Clinical, Cosmetic and Investigational Dentistry Volume 4 ; 2012 >
     
   }
 
@@ -776,10 +778,10 @@
     
     param[journal_id] = 55
 
-    au < exists ; exists ; 2009 ; Cancer Management and Research Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Cancer Management and Research Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Cancer Management and Research Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Cancer Management and Research Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Cancer Management and Research Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Cancer Management and Research Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Cancer Management and Research Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Cancer Management and Research Volume 4 ; 2012 >
     
   }
 
@@ -792,11 +794,11 @@
     
     param[journal_id] = 56
 
-    au < exists ; exists ; 2008 ; Risk Management and Healthcare Policy Volume 1 ; 2008 >
-    au < exists ; exists ; 2009 ; Risk Management and Healthcare Policy Volume 2 ; 2009 >
-    au < exists ; exists ; 2010 ; Risk Management and Healthcare Policy Volume 3 ; 2010 >
-    au < exists ; exists ; 2011 ; Risk Management and Healthcare Policy Volume 4 ; 2011 >
-    au < exists ; exists ; 2012 ; Risk Management and Healthcare Policy Volume 5 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Risk Management and Healthcare Policy Volume 1 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Risk Management and Healthcare Policy Volume 2 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Risk Management and Healthcare Policy Volume 3 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Risk Management and Healthcare Policy Volume 4 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Risk Management and Healthcare Policy Volume 5 ; 2012 >
     
   }
 
@@ -809,10 +811,10 @@
     
     param[journal_id] = 57
 
-    au < exists ; exists ; 2009 ; Transplant Research and Risk Management Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Transplant Research and Risk Management Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Transplant Research and Risk Management Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Transplant Research and Risk Management Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Transplant Research and Risk Management Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Transplant Research and Risk Management Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Transplant Research and Risk Management Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Transplant Research and Risk Management Volume 4 ; 2012 >
     
   }
 
@@ -825,10 +827,10 @@
     
     param[journal_id] = 58
 
-    au < exists ; exists ; 2009 ; Cell Health and Cytoskeleton Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Cell Health and Cytoskeleton Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Cell Health and Cytoskeleton Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Cell Health and Cytoskeleton Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Cell Health and Cytoskeleton Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Cell Health and Cytoskeleton Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Cell Health and Cytoskeleton Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Cell Health and Cytoskeleton Volume 4 ; 2012 >
     
   }
 
@@ -841,10 +843,10 @@
     
     param[journal_id] = 59
 
-    au < exists ; exists ; 2009 ; Open Access Rheumatology: Research and Reviews Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Open Access Rheumatology: Research and Reviews Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Open Access Rheumatology: Research and Reviews Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Open Access Rheumatology: Research and Reviews Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Open Access Rheumatology: Research and Reviews Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Open Access Rheumatology: Research and Reviews Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Open Access Rheumatology: Research and Reviews Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Open Access Rheumatology: Research and Reviews Volume 4 ; 2012 >
     
   }
 
@@ -857,10 +859,10 @@
     
     param[journal_id] = 60
 
-    au < exists ; exists ; 2009 ; Virus Adaptation and Treatment Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Virus Adaptation and Treatment Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Virus Adaptation and Treatment Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Virus Adaptation and Treatment Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Virus Adaptation and Treatment Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Virus Adaptation and Treatment Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Virus Adaptation and Treatment Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Virus Adaptation and Treatment Volume 4 ; 2012 >
     
   }
 
@@ -873,10 +875,10 @@
     
     param[journal_id] = 61
 
-    au < exists ; exists ; 2009 ; Hepatic Medicine: Evidence and Research Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Hepatic Medicine: Evidence and Research Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Hepatic Medicine: Evidence and Research Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Hepatic Medicine: Evidence and Research Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Hepatic Medicine: Evidence and Research Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Hepatic Medicine: Evidence and Research Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Hepatic Medicine: Evidence and Research Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Hepatic Medicine: Evidence and Research Volume 4 ; 2012 >
     
   }
 
@@ -889,9 +891,9 @@
     
     param[journal_id] = 64
 
-    au < exists ; exists ; 2010 ; Open Access Journal of Sports Medicine Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Open Access Journal of Sports Medicine Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Open Access Journal of Sports Medicine Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Open Access Journal of Sports Medicine Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Open Access Journal of Sports Medicine Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Open Access Journal of Sports Medicine Volume 3 ; 2012 >
     
   }
 
@@ -904,10 +906,10 @@
     
     param[journal_id] = 65
 
-    au < exists ; exists ; 2009 ; Clinical Pharmacology: Advances and Applications Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Clinical Pharmacology: Advances and Applications Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Clinical Pharmacology: Advances and Applications Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical Pharmacology: Advances and Applications Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Clinical Pharmacology: Advances and Applications Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Clinical Pharmacology: Advances and Applications Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Clinical Pharmacology: Advances and Applications Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Clinical Pharmacology: Advances and Applications Volume 4 ; 2012 >
     
   }
 
@@ -920,10 +922,10 @@
     
     param[journal_id] = 66
 
-    au < exists ; exists ; 2009 ; Journal of Experimental Pharmacology Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Journal of Experimental Pharmacology Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Journal of Experimental Pharmacology Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Journal of Experimental Pharmacology Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Experimental Pharmacology Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Experimental Pharmacology Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Experimental Pharmacology Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Experimental Pharmacology Volume 4 ; 2012 >
     
   }
 
@@ -936,10 +938,10 @@
     
     param[journal_id] = 68
 
-    au < exists ; exists ; 2009 ; HIV/AIDS - Research and Palliative Care Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; HIV/AIDS - Research and Palliative Care Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; HIV/AIDS - Research and Palliative Care Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; HIV/AIDS - Research and Palliative Care Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; HIV/AIDS - Research and Palliative Care Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; HIV/AIDS - Research and Palliative Care Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; HIV/AIDS - Research and Palliative Care Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; HIV/AIDS - Research and Palliative Care Volume 4 ; 2012 >
     
   }
 
@@ -952,10 +954,10 @@
     
     param[journal_id] = 69
 
-    au < exists ; exists ; 2009 ; Breast Cancer: Targets and Therapy Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Breast Cancer: Targets and Therapy Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Breast Cancer: Targets and Therapy Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Breast Cancer: Targets and Therapy Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Breast Cancer: Targets and Therapy Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Breast Cancer: Targets and Therapy Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Breast Cancer: Targets and Therapy Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Breast Cancer: Targets and Therapy Volume 4 ; 2012 >
     
   }
 
@@ -968,10 +970,10 @@
     
     param[journal_id] = 71
 
-    au < exists ; exists ; 2009 ; Nutrition and Dietary Supplements Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Nutrition and Dietary Supplements Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Nutrition and Dietary Supplements Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Nutrition and Dietary Supplements Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Nutrition and Dietary Supplements Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Nutrition and Dietary Supplements Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Nutrition and Dietary Supplements Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Nutrition and Dietary Supplements Volume 4 ; 2012 >
     
   }
 
@@ -984,10 +986,10 @@
     
     param[journal_id] = 72
 
-    au < exists ; exists ; 2009 ; Orthopedic Research and Reviews Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Orthopedic Research and Reviews Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Orthopedic Research and Reviews Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Orthopedic Research and Reviews Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Orthopedic Research and Reviews Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Orthopedic Research and Reviews Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Orthopedic Research and Reviews Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Orthopedic Research and Reviews Volume 4 ; 2012 >
     
   }
 
@@ -1000,10 +1002,10 @@
     
     param[journal_id] = 73
 
-    au < exists ; exists ; 2009 ; Nature and Science of Sleep Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Nature and Science of Sleep Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Nature and Science of Sleep Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Nature and Science of Sleep Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Nature and Science of Sleep Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Nature and Science of Sleep Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Nature and Science of Sleep Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Nature and Science of Sleep Volume 4 ; 2012 >
     
   }
 
@@ -1016,9 +1018,9 @@
     
     param[journal_id] = 74
 
-    au < exists ; exists ; 2010 ; Open Access Journal of Contraception Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Open Access Journal of Contraception Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Open Access Journal of Contraception Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Open Access Journal of Contraception Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Open Access Journal of Contraception Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Open Access Journal of Contraception Volume 3 ; 2012 >
     
   }
 
@@ -1031,10 +1033,10 @@
     
     param[journal_id] = 75
 
-    au < exists ; exists ; 2009 ; Neurobehavioral HIV Medicine Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Neurobehavioral HIV Medicine Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Neurobehavioral HIV Medicine Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Neurobehavioral HIV Medicine Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Neurobehavioral HIV Medicine Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Neurobehavioral HIV Medicine Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Neurobehavioral HIV Medicine Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Neurobehavioral HIV Medicine Volume 4 ; 2012 >
     
   }
 
@@ -1047,10 +1049,10 @@
     
     param[journal_id] = 78
 
-    au < exists ; exists ; 2009 ; Clinical Optometry Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Clinical Optometry Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Clinical Optometry Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical Optometry Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Clinical Optometry Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Clinical Optometry Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Clinical Optometry Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Clinical Optometry Volume 4 ; 2012 >
     
   }
 
@@ -1063,10 +1065,10 @@
     
     param[journal_id] = 79
 
-    au < exists ; exists ; 2009 ; Eye and Brain Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Eye and Brain Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Eye and Brain Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Eye and Brain Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Eye and Brain Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Eye and Brain Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Eye and Brain Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Eye and Brain Volume 4 ; 2012 >
     
   }
 
@@ -1079,10 +1081,10 @@
     
     param[journal_id] = 80
 
-    au < exists ; exists ; 2009 ; Pathology and Laboratory Medicine International Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Pathology and Laboratory Medicine International Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Pathology and Laboratory Medicine International Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Pathology and Laboratory Medicine International Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Pathology and Laboratory Medicine International Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Pathology and Laboratory Medicine International Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Pathology and Laboratory Medicine International Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Pathology and Laboratory Medicine International Volume 4 ; 2012 >
     
   }
 
@@ -1095,10 +1097,10 @@
     
     param[journal_id] = 81
 
-    au < exists ; exists ; 2009 ; Open Access Bioinformatics Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Open Access Bioinformatics Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Open Access Bioinformatics Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Open Access Bioinformatics Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Open Access Bioinformatics Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Open Access Bioinformatics Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Open Access Bioinformatics Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Open Access Bioinformatics Volume 4 ; 2012 >
     
   }
 
@@ -1111,10 +1113,10 @@
     
     param[journal_id] = 82
 
-    au < exists ; exists ; 2009 ; Clinical Audit Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Clinical Audit Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Clinical Audit Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical Audit Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Clinical Audit Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Clinical Audit Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Clinical Audit Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Clinical Audit Volume 4 ; 2012 >
     
   }
 
@@ -1127,9 +1129,9 @@
     
     param[journal_id] = 83
 
-    au < exists ; exists ; 2010 ; Lung Cancer: Targets and Therapy Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Lung Cancer: Targets and Therapy Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Lung Cancer: Targets and Therapy Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Lung Cancer: Targets and Therapy Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Lung Cancer: Targets and Therapy Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Lung Cancer: Targets and Therapy Volume 3 ; 2012 >
     
   }
 
@@ -1142,9 +1144,9 @@
     
     param[journal_id] = 84
 
-    au < exists ; exists ; 2010 ; Patient Related Outcome Measures Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Patient Related Outcome Measures Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Patient Related Outcome Measures Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Patient Related Outcome Measures Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Patient Related Outcome Measures Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Patient Related Outcome Measures Volume 3 ; 2012 >
     
   }
 
@@ -1157,9 +1159,9 @@
     
     param[journal_id] = 85
 
-    au < exists ; exists ; 2010 ; Journal of Blood Medicine Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Journal of Blood Medicine Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Journal of Blood Medicine Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Blood Medicine Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Blood Medicine Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Blood Medicine Volume 3 ; 2012 >
     
   }
 
@@ -1172,10 +1174,10 @@
     
     param[journal_id] = 86
 
-    au < exists ; exists ; 2009 ; Open Access Insect Physiology Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Open Access Insect Physiology Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Open Access Insect Physiology Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Open Access Insect Physiology Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Open Access Insect Physiology Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Open Access Insect Physiology Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Open Access Insect Physiology Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Open Access Insect Physiology Volume 4 ; 2012 >
     
   }
 
@@ -1188,9 +1190,9 @@
     
     param[journal_id] = 87
 
-    au < exists ; exists ; 2010 ; Open Access Animal Physiology Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Open Access Animal Physiology Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Open Access Animal Physiology Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Open Access Animal Physiology Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Open Access Animal Physiology Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Open Access Animal Physiology Volume 3 ; 2012 >
     
   }
 
@@ -1204,14 +1206,14 @@
     
     param[journal_id] = 88
 
-    au < exists ; exists ; 2005 ; Core Evidence Volume 1 ; 2005 >
-    au < exists ; exists ; 2006 ; Core Evidence Volume 1 ; 2006 >
-    au < exists ; exists ; 2007 ; Core Evidence Volume 2 ; 2007 >
-    au < exists ; exists ; 2008 ; Core Evidence Volume 3 ; 2008 >
-    au < exists ; exists ; 2009 ; Core Evidence Volume 4 ; 2009 >
-    au < exists ; exists ; 2010 ; Core Evidence Volume 5 ; 2010 >
-    au < exists ; exists ; 2011 ; Core Evidence Volume 6 ; 2011 >
-    au < exists ; exists ; 2012 ; Core Evidence Volume 7 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2005 ; Core Evidence Volume 1 ; 2005 >
+    au < doNotProcess ; doNotProcess ; 2006 ; Core Evidence Volume 1 ; 2006 >
+    au < doNotProcess ; doNotProcess ; 2007 ; Core Evidence Volume 2 ; 2007 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Core Evidence Volume 3 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Core Evidence Volume 4 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Core Evidence Volume 5 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Core Evidence Volume 6 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Core Evidence Volume 7 ; 2012 >
     
   }
 
@@ -1224,9 +1226,9 @@
     
     param[journal_id] = 89
 
-    au < exists ; exists ; 2010 ; Adolescent Health, Medicine and Therapeutics Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Adolescent Health, Medicine and Therapeutics Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Adolescent Health, Medicine and Therapeutics Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Adolescent Health, Medicine and Therapeutics Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Adolescent Health, Medicine and Therapeutics Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Adolescent Health, Medicine and Therapeutics Volume 3 ; 2012 >
     
   }
 
@@ -1239,10 +1241,10 @@
     
     param[journal_id] = 90
 
-    au < exists ; exists ; 2009 ; Patient Intelligence Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Patient Intelligence Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Patient Intelligence Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Patient Intelligence Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Patient Intelligence Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Patient Intelligence Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Patient Intelligence Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Patient Intelligence Volume 4 ; 2012 >
     
   }
 
@@ -1255,10 +1257,10 @@
     
     param[journal_id] = 91
 
-    au < exists ; exists ; 2009 ; Journal of Healthcare Leadership Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Journal of Healthcare Leadership Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Journal of Healthcare Leadership Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Journal of Healthcare Leadership Volume 4 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Healthcare Leadership Volume 1 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Healthcare Leadership Volume 2 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Healthcare Leadership Volume 3 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Healthcare Leadership Volume 4 ; 2012 >
     
   }
 
@@ -1271,9 +1273,9 @@
     
     param[journal_id] = 92
 
-    au < exists ; exists ; 2010 ; Advances in Medical Education and Practice Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Advances in Medical Education and Practice Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Advances in Medical Education and Practice Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Advances in Medical Education and Practice Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Advances in Medical Education and Practice Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Advances in Medical Education and Practice Volume 3 ; 2012 >
     
   }
 
@@ -1286,9 +1288,9 @@
     
     param[journal_id] = 93
 
-    au < exists ; exists ; 2010 ; Research and Reports in Tropical Medicine Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Research and Reports in Tropical Medicine Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Research and Reports in Tropical Medicine Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Research and Reports in Tropical Medicine Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Research and Reports in Tropical Medicine Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Research and Reports in Tropical Medicine Volume 3 ; 2012 >
     
   }
 
@@ -1301,9 +1303,9 @@
     
     param[journal_id] = 94
 
-    au < exists ; exists ; 2010 ; Research and Reports in Biology Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Research and Reports in Biology Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Research and Reports in Biology Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Research and Reports in Biology Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Research and Reports in Biology Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Research and Reports in Biology Volume 3 ; 2012 >
     
   }
 
@@ -1316,9 +1318,9 @@
     
     param[journal_id] = 95
 
-    au < exists ; exists ; 2010 ; Pragmatic and Observational Research Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Pragmatic and Observational Research Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Pragmatic and Observational Research Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Pragmatic and Observational Research Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Pragmatic and Observational Research Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Pragmatic and Observational Research Volume 3 ; 2012 >
     
   }
 
@@ -1331,9 +1333,9 @@
     
     param[journal_id] = 96
 
-    au < exists ; exists ; 2010 ; Research Reports in Clinical Cardiology Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Research Reports in Clinical Cardiology Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Research Reports in Clinical Cardiology Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Research Reports in Clinical Cardiology Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Research Reports in Clinical Cardiology Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Research Reports in Clinical Cardiology Volume 3 ; 2012 >
     
   }
 
@@ -1346,8 +1348,8 @@
     
     param[journal_id] = 97
 
-    au < exists ; exists ; 2011 ; Comparative Effectiveness Research Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Comparative Effectiveness Research Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Comparative Effectiveness Research Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Comparative Effectiveness Research Volume 2 ; 2012 >
    
   }
 
@@ -1360,9 +1362,9 @@
     
     param[journal_id] = 98
 
-    au < exists ; exists ; 2010 ; Substance Abuse and Rehabilitation Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Substance Abuse and Rehabilitation Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Substance Abuse and Rehabilitation Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Substance Abuse and Rehabilitation Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Substance Abuse and Rehabilitation Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Substance Abuse and Rehabilitation Volume 3 ; 2012 >
     
   }
 
@@ -1375,8 +1377,8 @@
     
     param[journal_id] = 99
 
-    au < exists ; exists ; 2011 ; Degenerative Neurological and Neuromuscular Disease Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Degenerative Neurological and Neuromuscular Disease Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Degenerative Neurological and Neuromuscular Disease Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Degenerative Neurological and Neuromuscular Disease Volume 2 ; 2012 >
    
   }
 
@@ -1389,8 +1391,8 @@
     
     param[journal_id] = 100
 
-    au < exists ; exists ; 2011 ; Advances in Genomics and Genetics Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Advances in Genomics and Genetics Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Advances in Genomics and Genetics Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Advances in Genomics and Genetics Volume 2 ; 2012 >
    
   }
 
@@ -1403,8 +1405,8 @@
     
     param[journal_id] = 101
 
-    au < exists ; exists ; 2011 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 2 ; 2012 >
    
   }
 
@@ -1417,8 +1419,8 @@
     
     param[journal_id] = 102
 
-    au < exists ; exists ; 2011 ; Gastrointestinal Cancer: Targets and Therapy Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Gastrointestinal Cancer: Targets and Therapy Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Gastrointestinal Cancer: Targets and Therapy Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Gastrointestinal Cancer: Targets and Therapy Volume 2 ; 2012 >
    
   }
 
@@ -1431,9 +1433,9 @@
     
     param[journal_id] = 103
 
-    au < exists ; exists ; 2010 ; Pediatric Health, Medicine and Therapeutics Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Pediatric Health, Medicine and Therapeutics Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Pediatric Health, Medicine and Therapeutics Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Pediatric Health, Medicine and Therapeutics Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Pediatric Health, Medicine and Therapeutics Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Pediatric Health, Medicine and Therapeutics Volume 3 ; 2012 >
     
   }
 
@@ -1446,8 +1448,8 @@
     
     param[journal_id] = 104
 
-    au < exists ; exists ; 2011 ; Research and Reports in Neonatology Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Research and Reports in Neonatology Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Research and Reports in Neonatology Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Research and Reports in Neonatology Volume 2 ; 2012 >
    
   }
 
@@ -1460,8 +1462,8 @@
     
     param[journal_id] = 105
 
-    au < exists ; exists ; 2011 ; Clinical Oncology in Adolescents and Young Adults Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical Oncology in Adolescents and Young Adults Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Clinical Oncology in Adolescents and Young Adults Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Clinical Oncology in Adolescents and Young Adults Volume 2 ; 2012 >
    
   }
 
@@ -1474,8 +1476,8 @@
     
     param[journal_id] = 106
 
-    au < exists ; exists ; 2011 ; Botanics: Targets and Therapy Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Botanics: Targets and Therapy Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Botanics: Targets and Therapy Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Botanics: Targets and Therapy Volume 2 ; 2012 >
    
   }
 
@@ -1488,8 +1490,8 @@
     
     param[journal_id] = 107
 
-    au < exists ; exists ; 2011 ; ChronoPhysiology and Therapy Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; ChronoPhysiology and Therapy Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; ChronoPhysiology and Therapy Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; ChronoPhysiology and Therapy Volume 2 ; 2012 >
    
   }
 
@@ -1502,9 +1504,9 @@
     
     param[journal_id] = 108
 
-    au < exists ; exists ; 2010 ; Veterinary Medicine: Research and Reports Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Veterinary Medicine: Research and Reports Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Veterinary Medicine: Research and Reports Volume 3 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Veterinary Medicine: Research and Reports Volume 1 ; 2010 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Veterinary Medicine: Research and Reports Volume 2 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Veterinary Medicine: Research and Reports Volume 3 ; 2012 >
     
   }
 
@@ -1517,8 +1519,8 @@
     
     param[journal_id] = 109
 
-    au < exists ; exists ; 2011 ; Research and Reports in Nuclear Medicine Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Research and Reports in Nuclear Medicine Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Research and Reports in Nuclear Medicine Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Research and Reports in Nuclear Medicine Volume 2 ; 2012 >
    
   }
 
@@ -1531,8 +1533,8 @@
     
     param[journal_id] = 110
 
-    au < exists ; exists ; 2011 ; Research and Reports in Endocrine Disorders Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Research and Reports in Endocrine Disorders Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Research and Reports in Endocrine Disorders Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Research and Reports in Endocrine Disorders Volume 2 ; 2012 >
    
   }
 
@@ -1545,8 +1547,8 @@
     
     param[journal_id] = 111
 
-    au < exists ; exists ; 2011 ; Vaccine: Development and Therapy Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Vaccine: Development and Therapy Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Vaccine: Development and Therapy Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Vaccine: Development and Therapy Volume 2 ; 2012 >
    
   }
 
@@ -1559,8 +1561,8 @@
     
     param[journal_id] = 112
 
-    au < exists ; exists ; 2011 ; Medicolegal and Bioethics Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Medicolegal and Bioethics Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Medicolegal and Bioethics Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Medicolegal and Bioethics Volume 2 ; 2012 >
    
   }
 
@@ -1573,8 +1575,8 @@
     
     param[journal_id] = 113
 
-    au < exists ; exists ; 2011 ; Biosimilars Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Biosimilars Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Biosimilars Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Biosimilars Volume 2 ; 2012 >
    
   }
 
@@ -1587,8 +1589,8 @@
     
     param[journal_id] = 114
 
-    au < exists ; exists ; 2011 ; Research and Reports in Forensic Medical Science Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Research and Reports in Forensic Medical Science Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Research and Reports in Forensic Medical Science Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Research and Reports in Forensic Medical Science Volume 2 ; 2012 >
    
   }
 
@@ -1601,7 +1603,7 @@
     
     param[journal_id] = 115
 
-    au < exists ; exists ; 2011 ; Research and Reports in Biodiversity Studies Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Research and Reports in Biodiversity Studies Volume 1 ; 2011 >
    
   }
 
@@ -1614,8 +1616,8 @@
     
     param[journal_id] = 116
 
-    au < exists ; exists ; 2011 ; Current Biomarker Findings Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Current Biomarker Findings Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Current Biomarker Findings Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Current Biomarker Findings Volume 2 ; 2012 >
    
   }
 
@@ -1628,8 +1630,8 @@
     
     param[journal_id] = 117
 
-    au < exists ; exists ; 2011 ; Reports in Parasitology Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Reports in Parasitology Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Reports in Parasitology Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Reports in Parasitology Volume 2 ; 2012 >
    
   }
 
@@ -1642,8 +1644,8 @@
     
     param[journal_id] = 118
 
-    au < exists ; exists ; 2011 ; Research and Reports in Biochemistry Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Research and Reports in Biochemistry Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Research and Reports in Biochemistry Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Research and Reports in Biochemistry Volume 2 ; 2012 >
    
   }
 
@@ -1656,7 +1658,7 @@
     
     param[journal_id] = 119
 
-    au < exists ; exists ; 2011 ; Antibody Technology Journal Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Antibody Technology Journal Volume 1 ; 2011 >
     au < exists ; 
     exists ; 2012 ; Antibody Technology Journal Volume 2 ; 2012 >
    
@@ -1671,8 +1673,8 @@
     
     param[journal_id] = 120
 
-    au < exists ; exists ; 2011 ; Open Access Medical Statistics Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Open Access Medical Statistics Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Open Access Medical Statistics Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Open Access Medical Statistics Volume 2 ; 2012 >
    
   }
 
@@ -1685,8 +1687,8 @@
     
     param[journal_id] = 121
 
-    au < exists ; exists ; 2011 ; Psoriasis: Targets and Therapy Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Psoriasis: Targets and Therapy Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Psoriasis: Targets and Therapy Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Psoriasis: Targets and Therapy Volume 2 ; 2012 >
    
   }
 
@@ -1699,7 +1701,7 @@
     
     param[journal_id] = 125
 
-    au < exists ; exists ; 2012 ; Neuroscience and Neuroeconomics Volume 1 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Neuroscience and Neuroeconomics Volume 1 ; 2012 >
    
   }
 
@@ -1712,8 +1714,8 @@
     
     param[journal_id] = 127
 
-    au < exists ; exists ; 2011 ; Reports in Electrochemistry Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Reports in Electrochemistry Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Reports in Electrochemistry Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Reports in Electrochemistry Volume 2 ; 2012 >
    
   }
 
@@ -1726,7 +1728,7 @@
     
     param[journal_id] = 129
 
-    au < exists ; exists ; 2012 ; Reports in Theoretical Chemistry Volume 1 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Reports in Theoretical Chemistry Volume 1 ; 2012 >
    
   }
 
@@ -1739,8 +1741,8 @@
     
     param[journal_id] = 131
 
-    au < exists ; exists ; 2011 ; Nursing: Research and Reviews Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Nursing: Research and Reviews Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Nursing: Research and Reviews Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Nursing: Research and Reviews Volume 2 ; 2012 >
    
   }
 
@@ -1753,8 +1755,8 @@
     
     param[journal_id] = 133
 
-    au < exists ; exists ; 2011 ; Research and Reports in Medicinal Chemistry Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Research and Reports in Medicinal Chemistry Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Research and Reports in Medicinal Chemistry Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Research and Reports in Medicinal Chemistry Volume 2 ; 2012 >
    
   }
 
@@ -1767,8 +1769,8 @@
     
     param[journal_id] = 134
 
-    au < exists ; exists ; 2011 ; Reports in Organic Chemistry Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Reports in Organic Chemistry Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Reports in Organic Chemistry Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Reports in Organic Chemistry Volume 2 ; 2012 >
    
   }
 
@@ -1781,7 +1783,7 @@
     
     param[journal_id] = 135
 
-    au < exists ; exists ; 2012 ; Integrated Pharmacy Research and Practice Volume 1 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Integrated Pharmacy Research and Practice Volume 1 ; 2012 >
    
   }
 
@@ -1794,8 +1796,8 @@
     
     param[journal_id] = 136
 
-    au < exists ; exists ; 2011 ; Orphan Drugs: Research and Reviews Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Orphan Drugs: Research and Reviews Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Orphan Drugs: Research and Reviews Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Orphan Drugs: Research and Reviews Volume 2 ; 2012 >
    
   }
 
@@ -1808,7 +1810,7 @@
     
     param[journal_id] = 137
 
-    au < exists ; exists ; 2012 ; Nanobiosensors in Disease Diagnosis Volume 1 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Nanobiosensors in Disease Diagnosis Volume 1 ; 2012 >
    
   }
 
@@ -1821,7 +1823,7 @@
     
     param[journal_id] = 138
 
-    au < exists ; exists ; 2012 ; ImmunoTargets and Therapy Volume 1 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2012 ; ImmunoTargets and Therapy Volume 1 ; 2012 >
    
   }
 
@@ -1834,7 +1836,7 @@
     
     param[journal_id] = 141
 
-    au < exists ; exists ; 2012 ; Oncolytic Virotherapy Volume 1 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Oncolytic Virotherapy Volume 1 ; 2012 >
    
   }
 
@@ -1847,7 +1849,7 @@
     
     param[journal_id] = 142
 
-    au < exists ; exists ; 2012 ; Research and Reports in Transdermal Drug Delivery Volume 1 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Research and Reports in Transdermal Drug Delivery Volume 1 ; 2012 >
    
   }
 
@@ -1860,7 +1862,7 @@
     
     param[journal_id] = 143
 
-    au < exists ; exists ; 2012 ; Journal of Biorepository Science for Applied Medicine Volume 1 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Biorepository Science for Applied Medicine Volume 1 ; 2012 >
    
   }
 
@@ -1873,8 +1875,8 @@
     
     param[journal_id] = 147
 
-    au < exists ; exists ; 2011 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 2 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 1 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 2 ; 2012 >
    
   }
 
