@@ -148,7 +148,7 @@
      >
        
        param[base_url] = http://ar-sr.rsmjournals.com/
-       pluginSuffix = ClockssHighWireH20Plugin
+       pluginSuffix = ClockssHighWirePressH20Plugin
        
        au < exists ; exists ; 2012 ; Acta Sociologica Volume 1 ; 1 ; >
        
@@ -2217,9 +2217,6 @@
      >
      
       param[base_url] = http://acb.rsmjournals.com/
-    
-     {
-     
       pluginSuffix = ClockssHighWirePressH20Plugin
     
       au < exists ; exists ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 ; >
@@ -2235,8 +2232,6 @@
       au < exists ; exists ; 2010 ; Annals of Clinical Biochemistry Volume 47 ; 47 ; >
       au < exists ; exists ; 2011 ; Annals of Clinical Biochemistry Volume 48 ; 48 ; >
       au < exists ; exists ; 2012 ; Annals of Clinical Biochemistry Volume 49 ; 49 ; >
-    
-    }
     
     }
     
@@ -4775,7 +4770,7 @@
        issn =  1477-7509 ;
        eissn = 1758-101X 
      >
-      pluginSuffix = ClockssHighWireH20Plugin
+      pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://ce.rsmjournals.com/
       
       au < exists ; exists ; 2006 ; Clinical Ethics Volume 1 ; 1 ; >
@@ -5021,7 +5016,7 @@
        issn = 1356-2622 ;
        eissn =  1758-1028
      >
-        pluginSuffix = ClockssHighWireH20Plugin
+        pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://cr.rsmjournals.com/
  
         au < exists ; exists ; 2001 ; Clinical Risk Volume 7 ; 7 ; >
@@ -9528,8 +9523,7 @@
      >
       
        param[base_url] = http://ebm.rsmjournals.com
-       
-       pluginSuffix = ClockssHighWireH20Plugin
+       pluginSuffix = ClockssHighWirePressH20Plugin
        
       au < exists ; exists ; 1999 ; Experimental Biology and Medicine Volume 220-222 ; 220-222 ; >
       au < exists ; exists ; 2000 ; Experimental Biology and Medicine Volume 223-225 ; 223-225 ; >
@@ -14792,7 +14786,7 @@
      >
       
        param[base_url] = http://cvd.rsmjournals.com/
-       pluginSuffix = ClockssHighWireH20Plugin
+       pluginSuffix = ClockssHighWirePressH20Plugin
        
       au < exists ; exists ; 2012 ; JRSM Cardiovascular Disease Volume 1 ; 1 ; >
     
@@ -14806,10 +14800,7 @@
      >
 
        param[base_url] = http://shortreports.rsmjournals.com/
-
-       {
-       
-       pluginSuffix = ClockssHighWireH20Plugin
+       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2010 ; JRSM Short Reports Volume 1 ; 1 ; >
       au < exists ; exists ; 2011 ; JRSM Short Reports Volume 2 ; 2 ; >
@@ -14817,10 +14808,7 @@
     
     }
     
-    }
-    
-    
-  {
+    {
   
     title <
       name = Journal for the Study of the New Testament ;
@@ -25188,7 +25176,7 @@
      >
       
         param[base_url] = http://mlj.rsmjournals.com/
-        pluginSuffix = ClockssHighWireH20Plugin
+        pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < exists ; exists ; 1999 ; Medico-Legal Journal Volume 1 ; 1 ; >
         au < exists ; exists ; 2000 ; Medico-Legal Journal Volume 2 ; 2 ; >
@@ -25337,7 +25325,7 @@
      >
       
       param[base_url] = http://mi.rsmjournals.com/
-      pluginSuffix = ClockssHighWireH20Plugin
+      pluginSuffix = ClockssHighWirePressH20Plugin
     
       au < exists ; exists ; 2000 ; Menopause International Volume 6 ; 6 ; >
       au < exists ; exists ; 2001 ; Menopause International Volume 7 ; 7 ; >
@@ -26593,7 +26581,7 @@
      >
 
        param[base_url] = http://obmed.rsmjournals.com//
-       pluginSuffix = ClockssHighWireH20Plugin
+       pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < exists ; exists ; 2008 ; Obstetric Medicine Volume 1 ; 1 ; >
         au < exists ; exists ; 2009 ; Obstetric Medicine Volume 2 ; 2 ; >
@@ -27640,7 +27628,7 @@
      >
       
        param[base_url] = http://phleb.rsmjournals.com/
-       pluginSuffix = ClockssHighWireH20Plugin
+       pluginSuffix = ClockssHighWirePressH20Plugin
        
 
       au < exists ; exists ; 2003 ; Phlebology Volume 18 ; 18 ; >
@@ -31175,7 +31163,7 @@
      >
       
        param[base_url] = http://smj.rsmjournals.com/
-       pluginSuffix = ClockssHighWireH20Plugin
+       pluginSuffix = ClockssHighWirePressH20Plugin
     
         au < exists ; exists ; 2006 ; Scottish Medical Journal Volume 51 ; 51 ; >
         au < exists ; exists ; 2007 ; Scottish Medical Journal Volume 52 ; 52 ; >
@@ -34988,7 +34976,7 @@
      >
        
        param[base_url] = http://td.rsmjournals.com
-       pluginSuffix = ClockssHighWireH20Plugin
+       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2005 ; Tropic Doctor Volume 35 ; 35 ; >
       au < exists ; exists ; 2006 ; Tropic Doctor Volume 36 ; 36 ; >
@@ -35010,7 +34998,7 @@
      >
        
        param[base_url] = http://ult.rsmjournals.com/
-       pluginSuffix = ClockssHighWireH20Plugin
+       pluginSuffix = ClockssHighWirePressH20Plugin
        
       au < exists ; exists ; 2004 ; Ultrasound Volume 12 ; 12 ; >
       au < exists ; exists ; 2005 ; Ultrasound Volume 13 ; 13 ; >
@@ -35321,7 +35309,7 @@
      >
        
        param[base_url] = http://vascular.rsmjournals.com/
-       pluginSuffix = ClockssHighWireH20Plugin
+       pluginSuffix = ClockssHighWirePressH20Plugin
        
       au < exists ; exists ; 2004 ; Vascular Volume 12 ; 12 ; >
       au < exists ; exists ; 2005 ; Vascular Volume 13 ; 13 ; >
