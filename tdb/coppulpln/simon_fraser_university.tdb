@@ -375,10 +375,10 @@
     param[base_url] = http://lib-general.lib.sfu.ca/ 
     implicit < status ; name ; param[collection_alias] >
     
-    au < down ; BC Multicultural Photograph Collection at the Vancouver Public Library [sample CONTENTdm collection] ; /vpl >
-    au < down ; CCICED Collection [sample CONTENTdm collection] ; /cciced >
-    au < down ; Chinatown News [sample CONTENTdm collection] ; /ubcCtn >
-    au < down ; Indo-Canadian Oral History Collection [sample CONTENTdm collection] ; /icohc >
+    au < released ; BC Multicultural Photograph Collection at the Vancouver Public Library [sample CONTENTdm collection] ; /vpl >
+    au < released ; CCICED Collection [sample CONTENTdm collection] ; /cciced >
+    au < released ; Chinatown News [sample CONTENTdm collection] ; /ubcCtn >
+    au < released ; Indo-Canadian Oral History Collection [sample CONTENTdm collection] ; /icohc >
 
   }
 
