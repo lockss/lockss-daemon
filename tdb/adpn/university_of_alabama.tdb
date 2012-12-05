@@ -10,43 +10,43 @@
   
     {
     
-        title <
-            name = University of Alabama: Cunningham Photos and Journal
-        >
+      title <
+        name = University of Alabama: Cunningham Photos and Journal
+      >
         
-        plugin = edu.ua.adpn.cunningham.CunninghamPlugin
-        param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/     
-        implicit < status ; name >
+      plugin = edu.ua.adpn.cunningham.CunninghamPlugin
+      param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/     
+      implicit < status ; name >
 
-        au < superseded ; University of Alabama: Cunningham Photos and Journal [approved for removal] >
+      au < superseded ; University of Alabama: Cunningham Photos and Journal [approved for removal] >
 
     }
     
     {
 
-        title <
-            name = University of Alabama: Emphasis, 1967-1971: Symposium on Contemporary Issues
-        >
+      title <
+        name = University of Alabama: Emphasis, 1967-1971: Symposium on Contemporary Issues
+      >
         
-        plugin = edu.ua.adpn.emphasis68.Emphasis68RecordingsPlugin
-        param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/     
-        implicit < status ; name >
+      plugin = edu.ua.adpn.emphasis68.Emphasis68RecordingsPlugin
+      param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/     
+      implicit < status ; name >
         
-        au < superseded ; University of Alabama: Emphasis, 1967-1971: Symposium on Contemporary Issues [approved for removal] >
+      au < superseded ; University of Alabama: Emphasis, 1967-1971: Symposium on Contemporary Issues [approved for removal] >
 
     }
     
     {
     
-        title <
-            name = University of Alabama: Publishers Bindings Online
-        >
+      title <
+        name = University of Alabama: Publishers Bindings Online
+      >
         
-        plugin = edu.ua.adpn.pboconfederate.PboConfederateImprintsPlugin
-        param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/     
-        implicit < status ; name >
+      plugin = edu.ua.adpn.pboconfederate.PboConfederateImprintsPlugin
+      param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/     
+      implicit < status ; name >
 
-        au < superseded ; University of Alabama: Publishers Bindings Online [approved for removal] >
+      au < superseded ; University of Alabama: Publishers Bindings Online [approved for removal] >
 
     }
 
@@ -64,7 +64,7 @@
         name = University of Alabama Collections: Libraries Research Collections (u0015)
       >
 
-      au < manifest ; University of Alabama: The University of Alabama Electronic Theses and Dissertations (u0015/0000001) ; u0015/0000001 >
+      au < testing ; University of Alabama: The University of Alabama Electronic Theses and Dissertations (u0015/0000001) ; u0015/0000001 >
 
     }
 
@@ -377,17 +377,17 @@
       au < released ; University of Alabama: Isaac Milner Civil War Pass from British Government (u0003/0001958) ; u0003/0001958 >
       au < released ; University of Alabama: A.T. Goodloe Postcard (u0003/0001962) ; u0003/0001962 >
       au < released ; University of Alabama: A.W. Dwight Letter (u0003/0001964) ; u0003/0001964 >
-      au < manifest ; University of Alabama: Robert K. Webb Letter (u0003/0001967) ; u0003/0001967 >
+      au < testing ; University of Alabama: Robert K. Webb Letter (u0003/0001967) ; u0003/0001967 >
       au < released ; University of Alabama: Alban W. Storehalder Postcard (u0003/0001970) ; u0003/0001970 >
       au < released ; University of Alabama: Walter R. Way Letter (u0003/0001977) ; u0003/0001977 >
       au < released ; University of Alabama: Jones Family Letters (u0003/0001980) ; u0003/0001980 >
       au < released ; University of Alabama: Guide to the Weir _____ Letters (u0003/0001981) ; u0003/0001981 >
       au < released ; University of Alabama: A.T. Baumgarten Letters (u0003/0001982) ; u0003/0001982 >
       au < released ; University of Alabama: Porter B. Rudolf, Jr. and Roy P. Rudolf Letters (u0003/0001983) ; u0003/0001983 >
-      au < manifest ; University of Alabama: Walter M. Voll Letter (u0003/0001987) ; u0003/0001987 >
-      au < manifest ; University of Alabama: Richard Young Letters (u0003/0001988) ; u0003/0001988 >
-      au < manifest ; University of Alabama: Earl Elmer Stewart Letters (u0003/0001989) ; u0003/0001989 >
-      au < manifest ; University of Alabama: Jolley Family Letters (u0003/0001990) ; u0003/0001990 >
+      au < testing ; University of Alabama: Walter M. Voll Letter (u0003/0001987) ; u0003/0001987 >
+      au < testing ; University of Alabama: Richard Young Letters (u0003/0001988) ; u0003/0001988 >
+      au < testing ; University of Alabama: Earl Elmer Stewart Letters (u0003/0001989) ; u0003/0001989 >
+      au < testing ; University of Alabama: Jolley Family Letters (u0003/0001990) ; u0003/0001990 >
       au < released ; University of Alabama: Joseph Forney Johnston Letters (u0003/0002015) ; u0003/0002015 >
       au < released ; University of Alabama: Maclin R. Milner Letter (u0003/0002016) ; u0003/0002016 >
       au < released ; University of Alabama: Adam M. Mummey Letters (u0003/0002017) ; u0003/0002017 >
@@ -420,7 +420,7 @@
       au < released ; University of Alabama: Francis S. Lyon Letter (u0003/0002051) ; u0003/0002051 >
       au < released ; University of Alabama: Andrew B. Moore Letter and Clipping (u0003/0002055) ; u0003/0002055 >
       au < released ; University of Alabama: Nathaniel H. Hood Letter (u0003/0002061) ; u0003/0002061 >
-      au < manifest ; University of Alabama: Henry T. Stoner Letters (u0003/0002068) ; u0003/0002068 >
+      au < testing ; University of Alabama: Henry T. Stoner Letters (u0003/0002068) ; u0003/0002068 >
       au < released ; University of Alabama: E.J. Clarke Letter (u0003/0002091) ; u0003/0002091 >
       au < released ; University of Alabama: James Harry Deems Letter (u0003/0002092) ; u0003/0002092 >
       au < released ; University of Alabama: Joel Maxon Letter (u0003/0002095) ; u0003/0002095 >
@@ -442,14 +442,14 @@
       au < released ; University of Alabama: Letter from Caroline to her cousin Glenn (u0003/0002131) ; u0003/0002131 >
       au < released ; University of Alabama: Kolb Family Papers (u0003/0002132) ; u0003/0002132 >
       au < released ; University of Alabama: Nathan Crosby Letters (u0003/0002133) ; u0003/0002133 >
-      au < manifest ; University of Alabama: J. C. Faulkner Family Papers (u0003/0002134) ; u0003/0002134 >
-      au < manifest ; University of Alabama: A. T. Patrick Letters (u0003/0002136) ; u0003/0002136 >
-      au < manifest ; University of Alabama: Alfred H. Johnson Letters (u0003/0002151) ; u0003/0002151 >
-      au < manifest ; University of Alabama: Alfred H. Johnson Letters (u0003/0002152) ; u0003/0002152 >
-      au < manifest ; University of Alabama: Michel Family Papers (u0003/0002159) ; u0003/0002159 >
-      au < manifest ; University of Alabama: Letters from Lolie to a Union Soldier (u0003/0002161) ; u0003/0002161 >
+      au < testing ; University of Alabama: J. C. Faulkner Family Papers (u0003/0002134) ; u0003/0002134 >
+      au < testing ; University of Alabama: A. T. Patrick Letters (u0003/0002136) ; u0003/0002136 >
+      au < testing ; University of Alabama: Alfred H. Johnson Letters (u0003/0002151) ; u0003/0002151 >
+      au < testing ; University of Alabama: Alfred H. Johnson Letters (u0003/0002152) ; u0003/0002152 >
+      au < testing ; University of Alabama: Michel Family Papers (u0003/0002159) ; u0003/0002159 >
+      au < testing ; University of Alabama: Letters from Lolie to a Union Soldier (u0003/0002161) ; u0003/0002161 >
       au < released ; University of Alabama: letter from Ken to his mother, Mrs. W.C. Caufield (u0003/0002184) ; u0003/0002184 >
-      au < manifest ; University of Alabama: Helen Cline Papers (u0003/0002190) ; u0003/0002190 >
+      au < testing ; University of Alabama: Helen Cline Papers (u0003/0002190) ; u0003/0002190 >
       au < released ; University of Alabama: Sperry and Willard Family Papers (u0003/0002191) ; u0003/0002191 >
       au < released ; University of Alabama: Letters to Alice Comstock (u0003/0002192) ; u0003/0002192 >
       au < released ; University of Alabama: Meriwether Family Papers (u0003/0002217) ; u0003/0002217 >
