@@ -726,7 +726,7 @@
   {
   
     title <
-      name = JRSM ;
+      name = Journal of the Royal Society of Medicine ;
       issn = 0141-0768 ;
       eissn = 1758-1095 ;
       issnl = 0141-0768
@@ -738,54 +738,54 @@
       param[base_url] = http://jrsm.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressPlugin ; down ; 1965 ; JRSM Volume 58 ; 58 >
-      au < HighWirePressPlugin ; down ; 1966 ; JRSM Volume 59 ; 59 >
-      au < HighWirePressPlugin ; down ; 1967 ; JRSM Volume 60 ; 60 >
-      au < HighWirePressPlugin ; down ; 1968 ; JRSM Volume 61 ; 61 >
-      au < HighWirePressPlugin ; down ; 1969 ; JRSM Volume 62 ; 62 >
-      au < HighWirePressPlugin ; down ; 1970 ; JRSM Volume 63 ; 63 >
-      au < HighWirePressPlugin ; down ; 1971 ; JRSM Volume 64 ; 64 >
-      au < HighWirePressPlugin ; down ; 1972 ; JRSM Volume 65 ; 65 >
-      au < HighWirePressPlugin ; down ; 1973 ; JRSM Volume 66 ; 66 >
-      au < HighWirePressPlugin ; down ; 1974 ; JRSM Volume 67 ; 67 >
-      au < HighWirePressPlugin ; down ; 1975 ; JRSM Volume 68 ; 68 >
-      au < HighWirePressPlugin ; down ; 1976 ; JRSM Volume 69 ; 69 >
-      au < HighWirePressPlugin ; down ; 1977 ; JRSM Volume 70 ; 70 >
-      au < HighWirePressPlugin ; down ; 1978 ; JRSM Volume 71 ; 71 >
-      au < HighWirePressPlugin ; down ; 1979 ; JRSM Volume 72 ; 72 >
-      au < HighWirePressPlugin ; down ; 1980 ; JRSM Volume 73 ; 73 >
-      au < HighWirePressPlugin ; down ; 1981 ; JRSM Volume 74 ; 74 >
-      au < HighWirePressPlugin ; down ; 1982 ; JRSM Volume 75 ; 75 >
-      au < HighWirePressPlugin ; down ; 1983 ; JRSM Volume 76 ; 76 >
-      au < HighWirePressPlugin ; down ; 1984 ; JRSM Volume 77 ; 77 >
-      au < HighWirePressPlugin ; down ; 1985 ; JRSM Volume 78 ; 78 >
-      au < HighWirePressPlugin ; down ; 1986 ; JRSM Volume 79 ; 79 >
-      au < HighWirePressPlugin ; down ; 1987 ; JRSM Volume 80 ; 80 >
-      au < HighWirePressPlugin ; down ; 1988 ; JRSM Volume 81 ; 81 >
-      au < HighWirePressPlugin ; down ; 1989 ; JRSM Volume 82 ; 82 >
-      au < HighWirePressPlugin ; down ; 1990 ; JRSM Volume 83 ; 83 >
-      au < HighWirePressPlugin ; down ; 1991 ; JRSM Volume 84 ; 84 >
-      au < HighWirePressPlugin ; down ; 1992 ; JRSM Volume 85 ; 85 >
-      au < HighWirePressPlugin ; down ; 1993 ; JRSM Volume 86 ; 86 >
-      au < HighWirePressPlugin ; down ; 1994 ; JRSM Volume 87 ; 87 >
-      au < HighWirePressPlugin ; down ; 1995 ; JRSM Volume 88 ; 88 >
-      au < HighWirePressPlugin ; down ; 1996 ; JRSM Volume 89 ; 89 >
-      au < HighWirePressPlugin ; down ; 1997 ; JRSM Volume 90 ; 90 >
-      au < HighWirePressPlugin ; down ; 1998 ; JRSM Volume 91 ; 91 >
-      au < HighWirePressPlugin ; down ; 1999 ; JRSM Volume 92 ; 92 >
-      au < HighWirePressPlugin ; down ; 2000 ; JRSM Volume 93 ; 93 >
-      au < HighWirePressPlugin ; down ; 2001 ; JRSM Volume 94 ; 94 >
-      au < HighWirePressPlugin ; down ; 2002 ; JRSM Volume 95 ; 95 >
-      au < HighWirePressPlugin ; down ; 2003 ; JRSM Volume 96 ; 96 >
-      au < HighWirePressPlugin ; down ; 2004 ; JRSM Volume 97 ; 97 >
-      au < HighWirePressPlugin ; down ; 2005 ; JRSM Volume 98 ; 98 >
-      au < HighWirePressPlugin ; down ; 2006 ; JRSM Volume 99 ; 99 >
-      au < HighWirePressPlugin ; down ; 2007 ; JRSM Volume 100 ; 100 >
-      au < HighWirePressPlugin ; down ; 2008 ; JRSM Volume 101 ; 101 >
-      au < HighWirePressPlugin ; down ; 2009 ; JRSM Volume 102 ; 102 >
-      au < HighWirePressPlugin ; down ; 2010 ; JRSM Volume 103 ; 103 >
-      au < HighWirePressPlugin ; down ; 2011 ; JRSM Volume 104 ; 104 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; JRSM Volume 105 ; 105 >
+      au < HighWirePressPlugin ; down ; 1965 ; Journal of the Royal Society of Medicine Volume 58 ; 58 >
+      au < HighWirePressPlugin ; down ; 1966 ; Journal of the Royal Society of Medicine Volume 59 ; 59 >
+      au < HighWirePressPlugin ; down ; 1967 ; Journal of the Royal Society of Medicine Volume 60 ; 60 >
+      au < HighWirePressPlugin ; down ; 1968 ; Journal of the Royal Society of Medicine Volume 61 ; 61 >
+      au < HighWirePressPlugin ; down ; 1969 ; Journal of the Royal Society of Medicine Volume 62 ; 62 >
+      au < HighWirePressPlugin ; down ; 1970 ; Journal of the Royal Society of Medicine Volume 63 ; 63 >
+      au < HighWirePressPlugin ; down ; 1971 ; Journal of the Royal Society of Medicine Volume 64 ; 64 >
+      au < HighWirePressPlugin ; down ; 1972 ; Journal of the Royal Society of Medicine Volume 65 ; 65 >
+      au < HighWirePressPlugin ; down ; 1973 ; Journal of the Royal Society of Medicine Volume 66 ; 66 >
+      au < HighWirePressPlugin ; down ; 1974 ; Journal of the Royal Society of Medicine Volume 67 ; 67 >
+      au < HighWirePressPlugin ; down ; 1975 ; Journal of the Royal Society of Medicine Volume 68 ; 68 >
+      au < HighWirePressPlugin ; down ; 1976 ; Journal of the Royal Society of Medicine Volume 69 ; 69 >
+      au < HighWirePressPlugin ; down ; 1977 ; Journal of the Royal Society of Medicine Volume 70 ; 70 >
+      au < HighWirePressPlugin ; down ; 1978 ; Journal of the Royal Society of Medicine Volume 71 ; 71 >
+      au < HighWirePressPlugin ; down ; 1979 ; Journal of the Royal Society of Medicine Volume 72 ; 72 >
+      au < HighWirePressPlugin ; down ; 1980 ; Journal of the Royal Society of Medicine Volume 73 ; 73 >
+      au < HighWirePressPlugin ; down ; 1981 ; Journal of the Royal Society of Medicine Volume 74 ; 74 >
+      au < HighWirePressPlugin ; down ; 1982 ; Journal of the Royal Society of Medicine Volume 75 ; 75 >
+      au < HighWirePressPlugin ; down ; 1983 ; Journal of the Royal Society of Medicine Volume 76 ; 76 >
+      au < HighWirePressPlugin ; down ; 1984 ; Journal of the Royal Society of Medicine Volume 77 ; 77 >
+      au < HighWirePressPlugin ; down ; 1985 ; Journal of the Royal Society of Medicine Volume 78 ; 78 >
+      au < HighWirePressPlugin ; down ; 1986 ; Journal of the Royal Society of Medicine Volume 79 ; 79 >
+      au < HighWirePressPlugin ; down ; 1987 ; Journal of the Royal Society of Medicine Volume 80 ; 80 >
+      au < HighWirePressPlugin ; down ; 1988 ; Journal of the Royal Society of Medicine Volume 81 ; 81 >
+      au < HighWirePressPlugin ; down ; 1989 ; Journal of the Royal Society of Medicine Volume 82 ; 82 >
+      au < HighWirePressPlugin ; down ; 1990 ; Journal of the Royal Society of Medicine Volume 83 ; 83 >
+      au < HighWirePressPlugin ; down ; 1991 ; Journal of the Royal Society of Medicine Volume 84 ; 84 >
+      au < HighWirePressPlugin ; down ; 1992 ; Journal of the Royal Society of Medicine Volume 85 ; 85 >
+      au < HighWirePressPlugin ; down ; 1993 ; Journal of the Royal Society of Medicine Volume 86 ; 86 >
+      au < HighWirePressPlugin ; down ; 1994 ; Journal of the Royal Society of Medicine Volume 87 ; 87 >
+      au < HighWirePressPlugin ; down ; 1995 ; Journal of the Royal Society of Medicine Volume 88 ; 88 >
+      au < HighWirePressPlugin ; down ; 1996 ; Journal of the Royal Society of Medicine Volume 89 ; 89 >
+      au < HighWirePressPlugin ; down ; 1997 ; Journal of the Royal Society of Medicine Volume 90 ; 90 >
+      au < HighWirePressPlugin ; down ; 1998 ; Journal of the Royal Society of Medicine Volume 91 ; 91 >
+      au < HighWirePressPlugin ; down ; 1999 ; Journal of the Royal Society of Medicine Volume 92 ; 92 >
+      au < HighWirePressPlugin ; down ; 2000 ; Journal of the Royal Society of Medicine Volume 93 ; 93 >
+      au < HighWirePressPlugin ; down ; 2001 ; Journal of the Royal Society of Medicine Volume 94 ; 94 >
+      au < HighWirePressPlugin ; down ; 2002 ; Journal of the Royal Society of Medicine Volume 95 ; 95 >
+      au < HighWirePressPlugin ; down ; 2003 ; Journal of the Royal Society of Medicine Volume 96 ; 96 >
+      au < HighWirePressPlugin ; down ; 2004 ; Journal of the Royal Society of Medicine Volume 97 ; 97 >
+      au < HighWirePressPlugin ; down ; 2005 ; Journal of the Royal Society of Medicine Volume 98 ; 98 >
+      au < HighWirePressPlugin ; down ; 2006 ; Journal of the Royal Society of Medicine Volume 99 ; 99 >
+      au < HighWirePressPlugin ; down ; 2007 ; Journal of the Royal Society of Medicine Volume 100 ; 100 >
+      au < HighWirePressPlugin ; down ; 2008 ; Journal of the Royal Society of Medicine Volume 101 ; 101 >
+      au < HighWirePressPlugin ; down ; 2009 ; Journal of the Royal Society of Medicine Volume 102 ; 102 >
+      au < HighWirePressPlugin ; down ; 2010 ; Journal of the Royal Society of Medicine Volume 103 ; 103 >
+      au < HighWirePressPlugin ; down ; 2011 ; Journal of the Royal Society of Medicine Volume 104 ; 104 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of the Royal Society of Medicine Volume 105 ; 105 >
 
     }
 
