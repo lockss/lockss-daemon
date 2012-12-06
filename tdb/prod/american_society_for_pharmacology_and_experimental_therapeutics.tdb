@@ -571,6 +571,7 @@
     >
 
     param[base_url] = http://pharmrev.aspetjournals.org/
+    comment[notReady] = RU4536, filter for ad banner of mobile device
 
     au < HighWirePressH20Plugin ; manifest ; 1949 ; Pharmacological Reviews Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1950 ; Pharmacological Reviews Volume 2 ; 2 >
@@ -588,26 +589,26 @@
     au < HighWirePressH20Plugin ; manifest ; 1962 ; Pharmacological Reviews Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; manifest ; 1963 ; Pharmacological Reviews Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 1964 ; Pharmacological Reviews Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; testing ; 1965 ; Pharmacological Reviews Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; 1966 ; Pharmacological Reviews Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; 1967 ; Pharmacological Reviews Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; 1968 ; Pharmacological Reviews Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 1969 ; Pharmacological Reviews Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; testing ; 1970 ; Pharmacological Reviews Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; testing ; 1971 ; Pharmacological Reviews Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; testing ; 1972 ; Pharmacological Reviews Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; testing ; 1973 ; Pharmacological Reviews Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; testing ; 1974 ; Pharmacological Reviews Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; testing ; 1975 ; Pharmacological Reviews Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; 1976 ; Pharmacological Reviews Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; testing ; 1977 ; Pharmacological Reviews Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; testing ; 1978 ; Pharmacological Reviews Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; testing ; 1979 ; Pharmacological Reviews Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; testing ; 1980 ; Pharmacological Reviews Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; testing ; 1981 ; Pharmacological Reviews Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; testing ; 1982 ; Pharmacological Reviews Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; testing ; 1983 ; Pharmacological Reviews Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; Pharmacological Reviews Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; notReady ; 1965 ; Pharmacological Reviews Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; notReady ; 1966 ; Pharmacological Reviews Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; notReady ; 1967 ; Pharmacological Reviews Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; notReady ; 1968 ; Pharmacological Reviews Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; notReady ; 1969 ; Pharmacological Reviews Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; notReady ; 1970 ; Pharmacological Reviews Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; notReady ; 1971 ; Pharmacological Reviews Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; notReady ; 1972 ; Pharmacological Reviews Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; notReady ; 1973 ; Pharmacological Reviews Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; notReady ; 1974 ; Pharmacological Reviews Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; notReady ; 1975 ; Pharmacological Reviews Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; notReady ; 1976 ; Pharmacological Reviews Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; notReady ; 1977 ; Pharmacological Reviews Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; notReady ; 1978 ; Pharmacological Reviews Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; notReady ; 1979 ; Pharmacological Reviews Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; notReady ; 1980 ; Pharmacological Reviews Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; notReady ; 1981 ; Pharmacological Reviews Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; notReady ; 1982 ; Pharmacological Reviews Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; notReady ; 1983 ; Pharmacological Reviews Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; notReady ; 1984 ; Pharmacological Reviews Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; ready ; 1985 ; Pharmacological Reviews Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; ready ; 1986 ; Pharmacological Reviews Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; ready ; 1987 ; Pharmacological Reviews Volume 39 ; 39 >
