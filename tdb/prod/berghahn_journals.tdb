@@ -108,12 +108,12 @@
     param[journal_id] = aspa
     param[journal_issn] = 1933-2882   
        
-    au < testing ; 2007 ; Aspasia Volume 1 ; 1 >
-    au < testing ; 2008 ; Aspasia Volume 2 ; 2 >
-    au < testing ; 2009 ; Aspasia Volume 3 ; 3 >
-    au < testing ; 2010 ; Aspasia Volume 4 ; 4 >
-    au < testing ; 2011 ; Aspasia Volume 5 ; 5 >
-    au < testing ; 2012 ; Aspasia Volume 6 ; 6 >
+    au < notReady ; 2007 ; Aspasia Volume 1 ; 1 >
+    au < notReady ; 2008 ; Aspasia Volume 2 ; 2 >
+    au < notReady ; 2009 ; Aspasia Volume 3 ; 3 >
+    au < notReady ; 2010 ; Aspasia Volume 4 ; 4 >
+    au < notReady ; 2011 ; Aspasia Volume 5 ; 5 >
+    au < notReady ; 2012 ; Aspasia Volume 6 ; 6 >
     
   }
 
@@ -187,7 +187,7 @@
      
     au < released ; 2010 ; Environment and Society Volume 1 ; 1 >
     au < released ; 2011 ; Environment and Society Volume 2 ; 2 >
-    au < testing ; 2012 ; Environment and Society Volume 3 ; 3 >
+    au < ready ; 2012 ; Environment and Society Volume 3 ; 3 >
     
   }
 
@@ -513,14 +513,14 @@
     au < ready ; 2002 ; Nomadic Peoples Volume 6 ; 6 >
     au < ready ; 2003 ; Nomadic Peoples Volume 7 ; 7 >
     au < ready ; 2004 ; Nomadic Peoples Volume 8 ; 8 >
-    au < testing ; 2005 ; Nomadic Peoples Volume 9 ; 9 >
+    au < ready ; 2005 ; Nomadic Peoples Volume 9 ; 9 >
     au < released ; 2006 ; Nomadic Peoples Volume 10 ; 10 >
     au < released ; 2007 ; Nomadic Peoples Volume 11 ; 11>
     au < released ; 2008 ; Nomadic Peoples Volume 12 ; 12 >
     au < released ; 2009 ; Nomadic Peoples Volume 13 ; 13 >
     au < released ; 2010 ; Nomadic Peoples Volume 14 ; 14 >
     au < released ; 2011 ; Nomadic Peoples Volume 15 ; 15 >
-    au < manifest ; 2012 ; Nomadic Peoples Volume 16 ; 16 >
+    au < testing ; 2012 ; Nomadic Peoples Volume 16 ; 16 >
     
   }
 
