@@ -184,7 +184,7 @@
      >
        
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://ar-sr.rsmjournals.com/
+       param[base_url] = http://ar-sr.sagepub.com/
        implicit < status ; year ; name ; param[volume] >
        
        au < exists ; 2012 ; Acta Sociologica Volume 1 ; 1 >
@@ -2518,7 +2518,7 @@
      >
      
       pluginSuffix = HighWirePressH20Plugin
-      param[base_url] = http://acb.rsmjournals.com/
+      param[base_url] = http://acb.sagepub.com/
       implicit < status ; year ; name ; param[volume] >
     
       au < exists ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 >
@@ -5409,7 +5409,7 @@
      >
      
       pluginSuffix = HighWirePressH20Plugin
-      param[base_url] = http://ce.rsmjournals.com/
+      param[base_url] = http://ce.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2006 ; Clinical Ethics Volume 1 ; 1 >
@@ -5683,7 +5683,7 @@
      >
      
         pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://cr.rsmjournals.com/
+        param[base_url] = http://cr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
         au < exists ; 2001 ; Clinical Risk Volume 7 ; 7 >
@@ -10822,7 +10822,7 @@
      >
        
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://ebm.rsmjournals.com
+       param[base_url] = http://ebm.sagepub.com/
        implicit < status ; year ; name ; param[volume] >
        
       au < exists ; 1999 ; Experimental Biology and Medicine Volume 220-222 ; 220-222 >
@@ -16749,7 +16749,7 @@
       >
 
        pluginSuffix = HighWirePlugin
-       param[base_url] = http://cvd.rsmjournals.com/
+       param[base_url] = http://cvd.sagepub.com/
        implicit < status ; year ; name ; param[volume] >
        
       au < exists ; 2012 ; JRSM Cardiovascular Disease Volume 1 ; 1 >
@@ -16764,7 +16764,7 @@
      >
       
        pluginSuffix = HighWirePlugin
-       param[base_url] = http://shortreports.rsmjournals.com/
+       param[base_url] = http://shortreports.sagepub.com/
        implicit < status ; year ; name ; param[volume] >
        
       au < exists ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
@@ -21558,7 +21558,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
      >
       
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://ht.rsmjournals.com/
+       param[base_url] = http://ht.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2001 ; Hand Therapy Volume 6 ; 6 >
@@ -21584,7 +21584,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
      >
      
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://hpm.rsmjournals.com/
+       param[base_url] = http://hpm.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
      
       au < exists ; 2009 ; Handbook of Practice Management Volume 71 ; 71 >
@@ -21600,7 +21600,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
      >
       
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://hsmr.rsmjournals.com/
+       param[base_url] = http://hsmr.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2001 ; Health Services Management Research Volume 14 ; 14 >
@@ -21627,7 +21627,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
      >
      
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://ijcp.rsmjournals.com/
+       param[base_url] = http://ijcp.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2005 ; International Journal of Care Pathways 9 ; 9 >
@@ -21650,7 +21650,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
      >
      
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://ijsa.rsmjournals.com/
+       param[base_url] = http://ijsa.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 1996 ; International Journal of STD & AIDS 7 ; 7 >
@@ -21733,7 +21733,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
      >
        
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://jhsrp.rsmjournals.com/
+       param[base_url] = http://jhsrp.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
        
        
@@ -23501,7 +23501,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
      >
      
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://jmb.rsmjournals.com/
+       param[base_url] = http://jmb.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
        
       au < exists ; 2005 ; Journal of Medical Biography 13 ; 13 >
@@ -23554,7 +23554,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
      >
      
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://jms.rsmjournals.com/
+       param[base_url] = http://jms.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
        
         au < exists ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
@@ -23583,7 +23583,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
        eissn = 1758-1109 
      >
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://jtt.rsmjournals.com/
+       param[base_url] = http://jtt.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
        
         au < exists ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
@@ -25966,7 +25966,7 @@ comment[mpj] = now published by Brill
      >
      
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://jrsm.rsmjournals.com/
+       param[base_url] = http://jrsm.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
 
 
@@ -27104,7 +27104,7 @@ comment[mpj] = now published by Brill
        eissn = 1758-1117
      >
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://la.rsmjournals.com
+       param[base_url] = http://la.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
     
         au < exists ; 1967 ; Laboratory Animals Volume 1 ; 1 >
@@ -28455,7 +28455,7 @@ comment[mpj] = now published by Brill
      >
       
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://msl.rsmjournals.com/
+       param[base_url] = http://msl.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
        
         au < exists ; 2003 ; Medicine, Science and the Law Volume 43 ; 43 >
@@ -28480,7 +28480,7 @@ comment[mpj] = now published by Brill
      >
      
       pluginSuffix = HighWirePressH20Plugin      
-      param[base_url] = http://mlj.rsmjournals.com/
+      param[base_url] = http://mlj.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 1999 ; Medico-Legal Journal Volume 1 ; 1 >
@@ -28629,7 +28629,7 @@ comment[mpj] = now published by Brill
      >
       
       pluginSuffix = HighWirePressH20Plugin      
-      param[base_url] = http://mi.rsmjournals.com/
+      param[base_url] = http://mi.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
     
       au < exists ; 2000 ; Menopause International Volume 6 ; 6 >
@@ -29888,7 +29888,7 @@ comment[mpj] = now published by Brill
      >
 
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://obmed.rsmjournals.com//
+       param[base_url] = http://obmed.sagepub.com/
        implicit < status ; year ; name ; param[volume] >
        
     
@@ -34351,7 +34351,7 @@ comment[mpj] = now published by Brill
      >
       
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://smj.rsmjournals.com/
+       param[base_url] = http://smj.sagepub.com/
        implicit < status ; year ; name ; param[volume] >
     
         au < exists ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
@@ -40937,7 +40937,7 @@ comment[mpj] = now published by Brill
      >
        
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://td.rsmjournals.com/
+       param[base_url] = http://td.sagepub.com/
        implicit < status ; year ; name ; param[volume] >
 
       au < exists ; 2005 ; Tropical Doctor Volume 35 ; 35 >
@@ -40960,7 +40960,7 @@ comment[mpj] = now published by Brill
      >
        
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://ult.rsmjournals.com/
+       param[base_url] = http://ult.sagepub.com/
        implicit < status ; year ; name ; param[volume] >
        
       au < exists ; 2004 ; Ultrasound Volume 12 ; 12 >
@@ -40984,7 +40984,7 @@ comment[mpj] = now published by Brill
      >
        
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://vascular.rsmjournals.com/
+       param[base_url] = http://vascular.sagepub.com/
        implicit < status ; year ; name ; param[volume] >
        
       au < exists ; 2004 ; Vascular Volume 12 ; 12 >
