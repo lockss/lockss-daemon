@@ -107,10 +107,10 @@
 
     param[journal_id] = 39
 
-    au < manifest ; 2007 ; Bioinformatics and Biology Insights Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Bioinformatics and Biology Insights Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Bioinformatics and Biology Insights Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Bioinformatics and Biology Insights Volume 4 ; 2010 >
+    au < testing ; 2007 ; Bioinformatics and Biology Insights Volume 1 ; 2007 >
+    au < testing ; 2008 ; Bioinformatics and Biology Insights Volume 2 ; 2008 >
+    au < testing ; 2009 ; Bioinformatics and Biology Insights Volume 3 ; 2009 >
+    au < testing ; 2010 ; Bioinformatics and Biology Insights Volume 4 ; 2010 >
     au < released ; 2011 ; Bioinformatics and Biology Insights Volume 5 ; 2011 >
     au < released ; 2012 ; Bioinformatics and Biology Insights Volume 6 ; 2012 >
 
@@ -126,11 +126,11 @@
 
     param[journal_id] = 4
 
-    au < manifest ; 2006 ; Biomarker Insights Volume 1 ; 2006 >
-    au < manifest ; 2007 ; Biomarker Insights Volume 2 ; 2007 >
-    au < manifest ; 2008 ; Biomarker Insights Volume 3 ; 2008 >
-    au < manifest ; 2009 ; Biomarker Insights Volume 4 ; 2009 >
-    au < manifest ; 2010 ; Biomarker Insights Volume 5 ; 2010 >
+    au < testing ; 2006 ; Biomarker Insights Volume 1 ; 2006 >
+    au < testing ; 2007 ; Biomarker Insights Volume 2 ; 2007 >
+    au < testing ; 2008 ; Biomarker Insights Volume 3 ; 2008 >
+    au < testing ; 2009 ; Biomarker Insights Volume 4 ; 2009 >
+    au < testing ; 2010 ; Biomarker Insights Volume 5 ; 2010 >
     au < released ; 2011 ; Biomarker Insights Volume 6 ; 2011 >
     au < released ; 2012 ; Biomarker Insights Volume 7 ; 2012 >
 
