@@ -290,8 +290,8 @@
     param[journal_id] = ah
 
     au < ready ; Advances in Hematology Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Advances in Hematology Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Advances in Hematology Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; Advances in Hematology Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Advances in Hematology Volume 2011 ; 2011 ; 2011 ; 2011 >
     au < testing ; Advances in Hematology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
@@ -329,7 +329,7 @@
     au < released ; Advances in Human-Computer Interaction Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Human-Computer Interaction Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Human-Computer Interaction Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Human-Computer Interaction Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < ready ; Advances in Human-Computer Interaction Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -399,7 +399,7 @@
     
     au < testing ; Advances in Meteorology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < testing ; Advances in Meteorology Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Advances in Meteorology Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; Advances in Meteorology Volume 2011 ; 2011 ; 2011 ; 2011 >
     au < testing ; Advances in Meteorology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
 
@@ -3467,19 +3467,19 @@
     au < ready ; Journal of Analytical Methods in Chemistry Volume 8 (1987) ; 1987 ; 8 ; 1987 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 9 (1988) ; 1988 ; 9 ; 1988 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 10 (1989) ; 1989 ; 10 ; 1989 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 11 (1990) ; 1990 ; 11 ; 1990 >
+    au < ready ; Journal of Analytical Methods in Chemistry Volume 11 (1990) ; 1990 ; 11 ; 1990 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 12 (1991) ; 1991 ; 12 ; 1991 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 13 (1992) ; 1992 ; 13 ; 1992 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 14 (1993) ; 1993 ; 14 ; 1993 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 15 (1994) ; 1994 ; 15 ; 1994 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 16 (1995) ; 1995 ; 16 ; 1995 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 17 (1996) ; 1996 ; 17 ; 1996 >
+    au < ready ; Journal of Analytical Methods in Chemistry Volume 17 (1996) ; 1996 ; 17 ; 1996 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 18 (1997) ; 1997 ; 18 ; 1997 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 19 (1998) ; 1998 ; 19 ; 1998 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 20 (1999) ; 1999 ; 20 ; 1999 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 21 (2000) ; 2000 ; 21 ; 2000 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 22 (2001) ; 2001 ; 22 ; 2001 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 23 (2002) ; 2002 ; 23 ; 2002 >
+    au < ready ; Journal of Analytical Methods in Chemistry Volume 23 (2002) ; 2002 ; 23 ; 2002 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 24 (2003) ; 2003 ; 24 ; 2003 >
     au < testing ; Journal of Analytical Methods in Chemistry Volume 25 (2004) ; 2004 ; 25 ; 2004 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 2005 ; 2005 ; 2005 ; 2005 >
@@ -3487,8 +3487,8 @@
     au < ready ; Journal of Analytical Methods in Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < ready ; Journal of Analytical Methods in Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Analytical Methods in Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Analytical Methods in Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
     au < manifest ; Journal of Analytical Methods in Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
@@ -3913,7 +3913,7 @@
 
     au < ready ; Journal of Function Spaces and Applications Volume 2003 ; 2003 ; 2003 ; 2003 >
     au < ready ; Journal of Function Spaces and Applications Volume 2004 ; 2004 ; 2004 ; 2004 >
-    au < testing ; Journal of Function Spaces and Applications Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < ready ; Journal of Function Spaces and Applications Volume 2005 ; 2005 ; 2005 ; 2005 >
     au < ready ; Journal of Function Spaces and Applications Volume 2006 ; 2006 ; 2006 ; 2006 >
     au < ready ; Journal of Function Spaces and Applications Volume 2007 ; 2007 ; 2007 ; 2007 >
     au < ready ; Journal of Function Spaces and Applications Volume 2008 ; 2008 ; 2008 ; 2008 >
