@@ -18938,25 +18938,6 @@
   {
 
     title <
-      name = Progress of Theoretical and Experimental Physics ;
-      eissn = 2050-3911
-    >
-
-    param[base_url] = http://ptep.oxfordjournals.org
-
-    {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < expected ; exists ; 2013 ; Progress of Theoretical and Experimental Physics Volume 1 ; 1 ; >
-
-    }
-
-  }
-
-  {
-
-    title <
       name = Progress of Theoretical Physics Supplement ;
       issn = 0375-9687 
     >
