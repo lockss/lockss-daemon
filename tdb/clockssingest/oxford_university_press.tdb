@@ -7862,20 +7862,19 @@
   {
 
     title <
-    	name = International Immunology Meeting Abstracts ;
-    	issn = 0953-8178
+      name = International Immunology Meeting Abstracts 
     >
     
     param[base_url] = http://intimmabs.oxfordjournals.org/
-	
-	{
-	
-		pluginSuffix = ClockssHighWirePlugin
-		
-		au < exists ; exists ; 2010 ; 14th International Congress of Immunology Kobe, Japan Supplement Volume 1 ; 1 ; >
-		
-	}
-	
+
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < exists ; exists ; 2010 ; 14th International Congress of Immunology Kobe, Japan Supplement Volume 1 ; 1 ; >
+
+    }
+
   }
 
   {
