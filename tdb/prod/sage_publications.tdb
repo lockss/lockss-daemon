@@ -185,7 +185,7 @@
        
        pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://ar-sr.sagepub.com/
-       implicit < status ; year ; name ; param[volume] >
+       implicit < status ; year ; name ; param[volume_name] >
        
        au < exists ; 2012 ; Acta Sociologica Volume 1 ; 1 >
        
@@ -2519,7 +2519,7 @@
      
       pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://acb.sagepub.com/
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume_name] >
     
       au < exists ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 >
       au < exists ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 >
@@ -10823,7 +10823,7 @@
        
        pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://ebm.sagepub.com/
-       implicit < status ; year ; name ; param[volume] >
+       implicit < status ; year ; name ; param[volume_name] >
        
       au < exists ; 1999 ; Experimental Biology and Medicine Volume 220-222 ; 220-222 >
       au < exists ; 2000 ; Experimental Biology and Medicine Volume 223-225 ; 223-225 >
@@ -29889,7 +29889,7 @@ comment[mpj] = now published by Brill
 
        pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://obmed.sagepub.com/
-       implicit < status ; year ; name ; param[volume] >
+       implicit < status ; year ; name ; param[volume_name] >
        
     
         au < exists ; 2008 ; Obstetric Medicine Volume 1 ; 1 >
@@ -34377,7 +34377,7 @@ comment[mpj] = now published by Brill
       
        pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://smj.sagepub.com/
-       implicit < status ; year ; name ; param[volume] >
+       implicit < status ; year ; name ; param[volume_name] >
     
         au < exists ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
         au < exists ; 2007 ; Scottish Medical Journal Volume 52 ; 52 >
@@ -40963,7 +40963,7 @@ comment[mpj] = now published by Brill
        
        pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://td.sagepub.com/
-       implicit < status ; year ; name ; param[volume] >
+       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2005 ; Tropical Doctor Volume 35 ; 35 >
       au < exists ; 2006 ; Tropical Doctor Volume 36 ; 36 >
@@ -40986,7 +40986,7 @@ comment[mpj] = now published by Brill
        
        pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://ult.sagepub.com/
-       implicit < status ; year ; name ; param[volume] >
+       implicit < status ; year ; name ; param[volume_name] >
        
       au < exists ; 2004 ; Ultrasound Volume 12 ; 12 >
       au < exists ; 2005 ; Ultrasound Volume 13 ; 13 >
@@ -41010,7 +41010,7 @@ comment[mpj] = now published by Brill
        
        pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://vascular.sagepub.com/
-       implicit < status ; year ; name ; param[volume] >
+       implicit < status ; year ; name ; param[volume_name] >
        
       au < exists ; 2004 ; Vascular Volume 12 ; 12 >
       au < exists ; 2005 ; Vascular Volume 13 ; 13 >
