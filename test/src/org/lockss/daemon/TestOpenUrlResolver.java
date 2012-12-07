@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.24 2012-09-06 03:14:22 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.25 2012-12-07 07:27:05 fergaloy-sf Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
+import static org.lockss.db.DbManager.*;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -45,6 +46,7 @@ import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
@@ -207,7 +209,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
        */
       protected void notifyFinishReindexingAu(ArchivalUnit au, ReindexingStatus status) {
         log.debug("Finished reindexing au (" + status + ") " + au);
-        if (status != ReindexingStatus.rescheduled) {
+        if (status != ReindexingStatus.Rescheduled) {
           synchronized (ausReindexed) {
             ausReindexed.add(au.getAuId());
             ausReindexed.notifyAll();
@@ -279,18 +281,17 @@ public class TestOpenUrlResolver extends LockssTestCase {
     int ausCount = waitForReindexing(expectedAuCount, maxWaitTime);
     assertEquals(expectedAuCount, ausCount);
     
-    assertEquals(0, metadataManager.activeReindexingTasks.size());
-    assertEquals(0, metadataManager.getAuIdsToReindex(con, Integer.MAX_VALUE).size());
+    assertEquals(0, metadataManager.getActiveReindexingCount());
+    assertEquals(0, metadataManager.getPrioritizedAuIdsToReindex(con, Integer.MAX_VALUE).size());
 
-    String query =           
-      "select access_url from " + MetadataManager.METADATA_TABLE; 
+    String query = "select " + URL_COLUMN + " from " + URL_TABLE; 
     Statement stmt = con.createStatement();
     ResultSet resultSet = stmt.executeQuery(query);
     if (!resultSet.next()) {
-      fail("No entries in metadata table");
+      fail("No entries in " + URL_TABLE + " table");
     }
     String url = resultSet.getString(1);
-    log.debug("url from metadata table: " + url);
+    log.debug("url from " + URL_TABLE + " table: " + url);
 
     con.rollback();
     con.commit();
@@ -382,6 +383,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
           throws IOException, PluginException {
           ArticleMetadata md = new ArticleMetadata();
           articleNumber++;
+          md.put(MetadataField.FIELD_PUBLISHER,"Publisher 0");
           md.put(MetadataField.FIELD_ISSN,"0740-2783");
           md.put(MetadataField.FIELD_VOLUME,"XI");
           if (articleNumber < 10) {
@@ -427,6 +429,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
           throws IOException, PluginException {
           articleNumber++;
           ArticleMetadata md = new ArticleMetadata();
+          md.put(MetadataField.FIELD_PUBLISHER,"Publisher One");
           md.put(MetadataField.FIELD_ISSN,"1144-875X");
           md.put(MetadataField.FIELD_EISSN, "7744-6521");
           md.put(MetadataField.FIELD_VOLUME,"42");
@@ -479,6 +482,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
           org.lockss.extractor.ArticleMetadata md = new ArticleMetadata();
           articleNumber++;
           String doi = "10.1357/9781585623174." + articleNumber; 
+          md.put(MetadataField.FIELD_PUBLISHER,"Publisher Dos");
           md.put(MetadataField.FIELD_DOI,doi);
           md.put(MetadataField.FIELD_ISBN,"978-1-58562-317-4");
           md.put(MetadataField.FIELD_DATE,"1993");
@@ -509,6 +513,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
           throws IOException, PluginException {
           org.lockss.extractor.ArticleMetadata md = new ArticleMetadata();
           articleNumber++;
+          md.put(MetadataField.FIELD_PUBLISHER,"Publisher Trois");
           String doiPrefix = "10.0135/12345678.1999-11.12";
           String doi = doiPrefix + "." + articleNumber; 
           md.put(MetadataField.FIELD_DOI,doi);
@@ -565,7 +570,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
 
     // from SimulatedPlugin2 with ISBN and start page
     // expect url for specified chapter of the book
-    params.clear();
+    //params.clear();
     params.put("rft.isbn", "978-1-58562-317-4");
     params.put("rft.spage", "4");
     resolved = openUrlResolver.resolveOpenUrl(params);
@@ -668,12 +673,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
        return;
     }
 
-    Map<String,String> params;
+    Map<String,String> params = new HashMap<String,String>();
     OpenUrlInfo resolved;
 	
     // from SimulatedPlugin2 with book publisher, title with start page
     // expect url for chapter on specified page
-    params = new HashMap<String,String>();
     params.put("rft.pub", "Publisher[Manual of Clinical Psychopharmacology]");
     params.put("rft.btitle", "Title[Manual of Clinical Psychopharmacology]");
     params.put("rft.spage", "1");

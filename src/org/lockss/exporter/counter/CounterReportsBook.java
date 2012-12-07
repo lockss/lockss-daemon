@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsBook.java,v 1.1 2012-08-16 22:19:14 fergaloy-sf Exp $
+ * $Id: CounterReportsBook.java,v 1.2 2012-12-07 07:27:05 fergaloy-sf Exp $
  */
 
 /*
@@ -62,33 +62,13 @@ public class CounterReportsBook extends BaseCounterReportsTitle {
    *           if the name of the title is empty.
    * @throws SQLException
    *           if there are problems accessing the database.
-   * @throws Exception
-   *           if there are problems computing the LOCKSS identifier.
    */
   protected CounterReportsBook(String name, String publisherName,
       String publishingPlatform, String doi, String proprietaryId, String isbn,
-      String issn) throws IllegalArgumentException, SQLException, Exception {
+      String issn) throws IllegalArgumentException, SQLException {
     super(name, publisherName, publishingPlatform, doi, proprietaryId);
 
     this.isbn = isbn;
     this.issn = issn;
-  }
-
-  public String getLockssIdPayload() throws SQLException {
-    StringBuilder sb =
-	new StringBuilder(getName()).append(getPublisherName())
-	    .append(getPublishingPlatform()).append(getDoi())
-	    .append(getProprietaryId()).append(isbn).append(issn);
-
-    return sb.toString();
-  }
-
-  /**
-   * Provides an indication of whether the title is a book.
-   * 
-   * @return a boolean with the indication.
-   */
-  public boolean isBook() {
-    return true;
   }
 }

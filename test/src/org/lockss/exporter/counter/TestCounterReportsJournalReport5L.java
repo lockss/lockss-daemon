@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport5L.java,v 1.3 2012-09-28 00:13:23 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport5L.java,v 1.4 2012-12-07 07:27:04 fergaloy-sf Exp $
  */
 
 /*
@@ -38,23 +38,21 @@
  */
 package org.lockss.exporter.counter;
 
-import static org.lockss.exporter.counter.CounterReportsManager.*;
-
+import static org.lockss.db.DbManager.*;
+import static org.lockss.plugin.ArticleFiles.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsJournalReport5L;
 import org.lockss.exporter.counter.CounterReportsManager;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
@@ -63,23 +61,13 @@ import org.lockss.util.IOUtil;
 import org.lockss.util.TimeBase;
 
 public class TestCounterReportsJournalReport5L extends LockssTestCase {
-  // Query to add a type aggregation.
-  private static final String SQL_QUERY_PUBYEAR_AGGREGATION_INSERT = "insert "
-      + "into " + SQL_TABLE_PUBYEAR_AGGREGATES
-      + " (" + SQL_COLUMN_LOCKSS_ID
-      + "," + SQL_COLUMN_IS_PUBLISHER_INVOLVED
-      + "," + SQL_COLUMN_REQUEST_YEAR
-      + "," + SQL_COLUMN_REQUEST_MONTH
-      + "," + SQL_COLUMN_PUBLICATION_YEAR
-      + "," + SQL_COLUMN_REQUEST_COUNT
-      + ") values (?,?,?,?,?,?)";
-
-  // Query to delete a type aggregation.
-  private static final String SQL_QUERY_PUBYEAR_AGGREGATION_DELETE =
-      "delete from " + SQL_TABLE_PUBYEAR_AGGREGATES;
+  private static final String JOURNAL_URL = "http://example.com/journal.url";
+  private static final String HTML_URL = "http://example.com/html.url";
+  private static final String PDF_URL = "http://example.com/pdf.url";
 
   private MockLockssDaemon theDaemon;
   private DbManager dbManager;
+  private MetadataManager metadataManager;
   private CounterReportsManager counterReportsManager;
 
   @Override
@@ -108,6 +96,11 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
     dbManager.initService(theDaemon);
     dbManager.startService();
 
+    metadataManager = new MetadataManager();
+    theDaemon.setMetadataManager(metadataManager);
+    metadataManager.initService(theDaemon);
+    metadataManager.startService();
+
     Cron cron = new Cron();
     theDaemon.setCron(cron);
     cron.initService(theDaemon);
@@ -129,6 +122,20 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
   public void testAll() throws Exception {
     runTestValidation();
     runTestEmptyReport();
+
+    initializeJournalMetadata();
+
+    counterReportsManager.persistRequest(JOURNAL_URL, false);
+    counterReportsManager.persistRequest(JOURNAL_URL, true);
+    counterReportsManager.persistRequest(HTML_URL, false);
+    counterReportsManager.persistRequest(HTML_URL, true);
+    counterReportsManager.persistRequest(PDF_URL, false);
+    counterReportsManager.persistRequest(PDF_URL, true);
+
+    CounterReportsRequestAggregator aggregator =
+	new CounterReportsRequestAggregator(theDaemon);
+    aggregator.getCronTask().execute();
+
     runTestDefaultPeriodReport();
     runTestCustomPeriodReport();
   }
@@ -239,32 +246,76 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
   }
 
   /**
+   * Creates a journal for which to aggregate requests.
+   * 
+   * @return a Long with the identifier of the created journal.
+   * @throws SQLException
+   */
+  private Long initializeJournalMetadata() throws SQLException {
+    Long publicationSeq = null;
+    Connection conn = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      // Add the publisher.
+      Long publisherSeq =
+	  metadataManager.findOrCreatePublisher(conn, "publisher");
+
+      // Add the publication.
+      publicationSeq =
+	  metadataManager.findOrCreatePublication(conn, "12345678", "98765432",
+						  null, null, publisherSeq,
+						  "JOURNAL", "2010-01-01", null,
+						  null);
+
+      // Add the plugin.
+      Long pluginSeq =
+	  metadataManager.findOrCreatePlugin(conn, "pluginId", "platform");
+
+      // Add the AU.
+      Long auSeq =
+	  metadataManager.findOrCreateAu(conn, pluginSeq, "auKey");
+
+      // Add the AU metadata.
+      Long auMdSeq = metadataManager.addAuMd(conn, auSeq, 1, 0L);
+
+      Long parentSeq =
+	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
+
+      metadataManager.addMdItemDoi(conn, parentSeq, "10.1000/182");
+
+      Long mdItemTypeSeq =
+	  metadataManager.findMetadataItemType(conn,
+	                                       MD_ITEM_TYPE_JOURNAL_ARTICLE);
+
+      Long mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
+                                            auMdSeq, "2010-01-01",
+	  				    "htmlArticle", null);
+
+      metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
+                                   HTML_URL);
+
+      mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
+                                            auMdSeq, "2010-01-01", "pdfArticle",
+                                            null);
+
+      metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
+                                   PDF_URL);
+    } finally {
+      conn.commit();
+      DbManager.safeCloseConnection(conn);
+    }
+    
+    return publicationSeq;
+  }
+
+  /**
    * Tests a report for the default period.
    * 
    * @throws Exception
    */
   public void runTestDefaultPeriodReport() throws Exception {
-
-    CounterReportsJournal journal =
-	new CounterReportsJournal("Journal1", "Publisher1", null, null, null,
-	    "1234-5678", "9876-5432");
-    journal.identify();
-
-    Calendar calendar = Calendar.getInstance();
-    calendar.setTime(TimeBase.nowDate());
-    calendar.add(Calendar.MONTH, -15);
-
-    Map<String, Object> requestData = new HashMap<String, Object>();
-    requestData.put(SQL_COLUMN_IS_PUBLISHER_INVOLVED, Boolean.FALSE);
-    requestData.put(SQL_COLUMN_REQUEST_YEAR,
-	Short.valueOf((short) calendar.get(Calendar.YEAR)));
-    requestData.put(SQL_COLUMN_REQUEST_MONTH,
-	Short.valueOf((short) calendar.get(Calendar.MONTH)));
-    requestData.put(SQL_COLUMN_PUBLICATION_YEAR, "2008");
-    requestData.put(SQL_COLUMN_REQUEST_COUNT, Integer.valueOf(4));
-
-    persistPublicationYearAggregation(journal, requestData);
-
     CounterReportsJournalReport5L report =
 	new CounterReportsJournalReport5L(theDaemon);
 
@@ -285,11 +336,7 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
     }
 
     assertEquals(
-	"\"Total for all journals\",,,,,,,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0",
-	line);
-    line = reader.readLine();
-    assertEquals(
-	"Journal1,Publisher1,,,,1234-5678,9876-5432,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0",
+	"\"Total for all journals\",,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
 	line);
     assertNull(reader.readLine());
 
@@ -311,11 +358,7 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
     }
 
     assertEquals(
-	"Total for all journals\t\t\t\t\t\t\t0\t0\t0\t0\t0\t4\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
-	line);
-    line = reader.readLine();
-    assertEquals(
-	"Journal1\tPublisher1\t\t\t\t1234-5678\t9876-5432\t0\t0\t0\t0\t0\t4\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
+	"Total for all journals\t\t\t\t\t\t\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
 	line);
     assertNull(reader.readLine());
 
@@ -325,111 +368,18 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
   }
 
   /**
-   * Persists a publication year aggregation.
-   * 
-   * @param book
-   *          A CounterReportsJournal with the Journal data for which the
-   *          request is persisted.
-   * @param requestData
-   *          A Map<String, Object> with properties of the request to be
-   *          persisted.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  public void persistPublicationYearAggregation(CounterReportsJournal journal,
-      Map<String, Object> requestData) throws SQLException {
-    Connection conn = null;
-    boolean success = false;
-
-    PreparedStatement deleteAggregation = null;
-    PreparedStatement insertAggregation = null;
-
-    try {
-      conn = dbManager.getConnection();
-
-      String sql = SQL_QUERY_PUBYEAR_AGGREGATION_DELETE;
-      deleteAggregation = conn.prepareStatement(sql);
-      deleteAggregation.executeUpdate();
-
-      sql = SQL_QUERY_PUBYEAR_AGGREGATION_INSERT;
-      insertAggregation = conn.prepareStatement(sql);
-
-      short index = 1;
-      insertAggregation.setLong(index++, journal.getLockssId());
-      insertAggregation.setBoolean(index++,
-	  (Boolean) requestData.get(SQL_COLUMN_IS_PUBLISHER_INVOLVED));
-      insertAggregation.setShort(index++,
-	  (Short) requestData.get(SQL_COLUMN_REQUEST_YEAR));
-      insertAggregation.setShort(index++,
-	  (Short) requestData.get(SQL_COLUMN_REQUEST_MONTH));
-      insertAggregation.setString(index++,
-	  (String) requestData.get(SQL_COLUMN_PUBLICATION_YEAR));
-      insertAggregation.setInt(index++,
-	  (Integer) requestData.get(SQL_COLUMN_REQUEST_COUNT));
-
-      insertAggregation.executeUpdate();
-      DbManager.safeCloseStatement(insertAggregation);
-      insertAggregation = conn.prepareStatement(sql);
-
-      index = 1;
-      insertAggregation.setLong(index++,
-	  counterReportsManager.getAllJournalsLockssId());
-      insertAggregation.setBoolean(index++,
-	  (Boolean) requestData.get(SQL_COLUMN_IS_PUBLISHER_INVOLVED));
-      insertAggregation.setShort(index++,
-	  (Short) requestData.get(SQL_COLUMN_REQUEST_YEAR));
-      insertAggregation.setShort(index++,
-	  (Short) requestData.get(SQL_COLUMN_REQUEST_MONTH));
-      insertAggregation.setString(index++,
-	  (String) requestData.get(SQL_COLUMN_PUBLICATION_YEAR));
-      insertAggregation.setInt(index++,
-	  (Integer) requestData.get(SQL_COLUMN_REQUEST_COUNT));
-
-      insertAggregation.executeUpdate();
-      success = true;
-    } finally {
-      DbManager.safeCloseStatement(insertAggregation);
-      if (success) {
-	conn.commit();
-	DbManager.safeCloseConnection(conn);
-      } else {
-	DbManager.safeRollbackAndClose(conn);
-      }
-    }
-  }
-
-  /**
    * Tests a report for a custom period.
    * 
    * @throws Exception
    */
   public void runTestCustomPeriodReport() throws Exception {
-
-    CounterReportsJournal journal =
-	new CounterReportsJournal("Journal1", "Publisher1", null, null, null,
-	    "1234-5678", "9876-5432");
-    journal.identify();
-
     Calendar calendar = Calendar.getInstance();
     calendar.setTime(TimeBase.nowDate());
     int endYear = calendar.get(Calendar.YEAR);
-    int endMonth = calendar.get(Calendar.MONTH);
+    int endMonth = calendar.get(Calendar.MONTH) + 1;
     calendar.add(Calendar.MONTH, -4);
     int startYear = calendar.get(Calendar.YEAR);
-    int startMonth = calendar.get(Calendar.MONTH);
-
-    calendar.add(Calendar.MONTH, 2);
-
-    Map<String, Object> requestData = new HashMap<String, Object>();
-    requestData.put(SQL_COLUMN_IS_PUBLISHER_INVOLVED, Boolean.TRUE);
-    requestData.put(SQL_COLUMN_REQUEST_YEAR,
-	Short.valueOf((short) calendar.get(Calendar.YEAR)));
-    requestData.put(SQL_COLUMN_REQUEST_MONTH,
-	Short.valueOf((short) calendar.get(Calendar.MONTH)));
-    requestData.put(SQL_COLUMN_PUBLICATION_YEAR, "2008");
-    requestData.put(SQL_COLUMN_REQUEST_COUNT, Integer.valueOf(4));
-
-    persistPublicationYearAggregation(journal, requestData);
+    int startMonth = calendar.get(Calendar.MONTH) + 1;
 
     CounterReportsJournalReport5L report =
 	new CounterReportsJournalReport5L(theDaemon, startMonth, startYear,
@@ -452,11 +402,11 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
     }
 
     assertEquals(
-	"\"Total for all journals\",,,,,,,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0",
+	"\"Total for all journals\",,,,,,,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0",
 	line);
     line = reader.readLine();
     assertEquals(
-	"Journal1,Publisher1,,,,1234-5678,9876-5432,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0",
+	"JOURNAL,publisher,platform,10.1000/182,,1234-5678,9876-5432,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0",
 	line);
     assertNull(reader.readLine());
 
@@ -478,11 +428,11 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
     }
 
     assertEquals(
-	"Total for all journals\t\t\t\t\t\t\t0\t0\t0\t0\t0\t4\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
+	"Total for all journals\t\t\t\t\t\t\t0\t0\t0\t4\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
 	line);
     line = reader.readLine();
     assertEquals(
-	"Journal1\tPublisher1\t\t\t\t1234-5678\t9876-5432\t0\t0\t0\t0\t0\t4\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
+	"JOURNAL\tpublisher\tplatform\t10.1000/182\t\t1234-5678\t9876-5432\t0\t0\t0\t4\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
 	line);
     assertNull(reader.readLine());
 

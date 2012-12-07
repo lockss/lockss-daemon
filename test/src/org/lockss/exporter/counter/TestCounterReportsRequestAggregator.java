@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestAggregator.java,v 1.3 2012-09-28 00:13:23 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestAggregator.java,v 1.4 2012-12-07 07:27:04 fergaloy-sf Exp $
  */
 
 /*
@@ -38,23 +38,21 @@
  */
 package org.lockss.exporter.counter;
 
-import static org.lockss.exporter.counter.CounterReportsManager.*;
+import static org.lockss.db.DbManager.*;
+import static org.lockss.plugin.ArticleFiles.*;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
 import org.lockss.db.DbManager;
-import org.lockss.exporter.counter.CounterReportsBook;
-import org.lockss.exporter.counter.CounterReportsJournal;
 import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.exporter.counter.CounterReportsRequestAggregator;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
@@ -62,60 +60,82 @@ import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.TimeBase;
 
 public class TestCounterReportsRequestAggregator extends LockssTestCase {
+  private static final String FULL_URL = "http://example.com/full.url";
+  private static final String SECTION_URL = "http://example.com/section.url";
+  private static final String HTML_URL = "http://example.com/html.url";
+  private static final String PDF_URL = "http://example.com/pdf.url";
+
   // Query to count all the request rows.
   private static final String SQL_QUERY_REQUEST_COUNT = "select count(*) from "
-      + SQL_TABLE_REQUESTS;
+      + COUNTER_REQUEST_TABLE;
 
-  // Query to count all the rows of type aggregated totals.
-  private static final String SQL_QUERY_TYPE_AGGREGATED_TOTAL_COUNT =
-      "select count(*) from " + SQL_TABLE_TYPE_AGGREGATES;
+  // Query to count all the rows of book type aggregated totals.
+  private static final String SQL_QUERY_BOOK_TYPE_AGGREGATED_TOTAL_COUNT =
+      "select count(*) from " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE;
 
-  // Query to count monthly rows of type aggregated totals.
-  private static final String SQL_QUERY_TYPE_AGGREGATED_MONTH_COUNT = "select "
-      + "count(*) "
-      + "from " + SQL_TABLE_TYPE_AGGREGATES
-      + " where " + SQL_COLUMN_REQUEST_YEAR + " = ? "
-      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
-      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ?";
+  // Query to count all the rows of journal type aggregated totals.
+  private static final String SQL_QUERY_JOURNAL_TYPE_AGGREGATED_TOTAL_COUNT =
+      "select count(*) from " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE;
+
+  // Query to count monthly rows of book type aggregated totals.
+  private static final String SQL_QUERY_BOOK_TYPE_AGGREGATED_MONTH_COUNT =
+      "select count(*) "
+      + "from " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+      + " where " + REQUEST_YEAR_COLUMN + " = ? "
+      + "and " + REQUEST_MONTH_COLUMN + " = ? "
+      + "and " + IS_PUBLISHER_INVOLVED_COLUMN + " = ?";
+
+  // Query to count monthly rows of journal type aggregated totals.
+  private static final String SQL_QUERY_JOURNAL_TYPE_AGGREGATED_MONTH_COUNT =
+      "select count(*) "
+      + "from " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+      + " where " + REQUEST_YEAR_COLUMN + " = ? "
+      + "and " + REQUEST_MONTH_COLUMN + " = ? "
+      + "and " + IS_PUBLISHER_INVOLVED_COLUMN + " = ?";
 
   // Query to get aggregated type book request counts for a month.
-  private static final String SQL_QUERY_TYPE_AGGREGATED_MONTH_BOOK_SELECT = "select "
-      + SQL_COLUMN_FULL_BOOK_REQUESTS + ","
-      + SQL_COLUMN_SECTION_BOOK_REQUESTS
-      + " from " + SQL_TABLE_TYPE_AGGREGATES
-      + " where " + SQL_COLUMN_LOCKSS_ID + " = ? "
-      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
-      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
-      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ?";
+  private static final String SQL_QUERY_TYPE_AGGREGATED_MONTH_BOOK_SELECT =
+      "select "
+      + FULL_REQUESTS_COLUMN + ","
+      + SECTION_REQUESTS_COLUMN
+      + " from " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+      + " where " + PUBLICATION_SEQ_COLUMN + " = ? "
+      + "and " + REQUEST_YEAR_COLUMN + " = ? "
+      + "and " + REQUEST_MONTH_COLUMN + " = ? "
+      + "and " + IS_PUBLISHER_INVOLVED_COLUMN + " = ?";
 
   // Query to get aggregated type journal request counts for a month.
-  private static final String SQL_QUERY_TYPE_AGGREGATED_MONTH_JOURNAL_SELECT = "select "
-      + SQL_COLUMN_HTML_JOURNAL_REQUESTS + ","
-      + SQL_COLUMN_PDF_JOURNAL_REQUESTS + ","
-      + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS
-      + " from " + SQL_TABLE_TYPE_AGGREGATES
-      + " where " + SQL_COLUMN_LOCKSS_ID + " = ? "
-      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
-      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
-      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ?";
+  private static final String SQL_QUERY_TYPE_AGGREGATED_MONTH_JOURNAL_SELECT =
+      "select "
+      + HTML_REQUESTS_COLUMN + ","
+      + PDF_REQUESTS_COLUMN + ","
+      + TOTAL_REQUESTS_COLUMN
+      + " from " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+      + " where " + PUBLICATION_SEQ_COLUMN + " = ? "
+      + "and " + REQUEST_YEAR_COLUMN + " = ? "
+      + "and " + REQUEST_MONTH_COLUMN + " = ? "
+      + "and " + IS_PUBLISHER_INVOLVED_COLUMN + " = ?";
 
   // Query to count all the rows of publication year aggregated totals.
-  private static final String SQL_QUERY_PUBYEAR_AGGREGATED_TOTAL_COUNT =
-      "select count(*) from " + SQL_TABLE_PUBYEAR_AGGREGATES;
+  private static final String SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATED_TOTAL_COUNT =
+      "select count(*) from " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE;
 
   // Query to get aggregated publication year journal request counts for a
   // month.
-  private static final String SQL_QUERY_PUBYEAR_AGGREGATED_MONTH_JOURNAL_SELECT = "select "
-      + SQL_COLUMN_PUBLICATION_YEAR + ","
-      + SQL_COLUMN_REQUEST_COUNT
-      + " from " + SQL_TABLE_PUBYEAR_AGGREGATES
-      + " where " + SQL_COLUMN_LOCKSS_ID + " = ? "
-      + "and " + SQL_COLUMN_REQUEST_YEAR + " = ? "
-      + "and " + SQL_COLUMN_REQUEST_MONTH + " = ? "
-      + "and " + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = ?";
+  private static final String SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATED_MONTH_SELECT =
+      "select "
+      + PUBLICATION_YEAR_COLUMN + ","
+      + REQUESTS_COLUMN
+      + " from " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+      + " where " + PUBLICATION_SEQ_COLUMN + " = ? "
+      + "and " + REQUEST_YEAR_COLUMN + " = ? "
+      + "and " + REQUEST_MONTH_COLUMN + " = ? "
+      + "and " + IS_PUBLISHER_INVOLVED_COLUMN + " = ?";
 
   private MockLockssDaemon theDaemon;
   private DbManager dbManager;
+  private MetadataManager metadataManager;
+  private CounterReportsManager counterReportsManager;
 
   @Override
   public void setUp() throws Exception {
@@ -147,12 +167,17 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     dbManager.initService(theDaemon);
     dbManager.startService();
 
+    metadataManager = new MetadataManager();
+    theDaemon.setMetadataManager(metadataManager);
+    metadataManager.initService(theDaemon);
+    metadataManager.startService();
+
     Cron cron = new Cron();
     theDaemon.setCron(cron);
     cron.initService(theDaemon);
     cron.startService();
 
-    CounterReportsManager counterReportsManager = new CounterReportsManager();
+    counterReportsManager = new CounterReportsManager();
     theDaemon.setCounterReportsManager(counterReportsManager);
     counterReportsManager.initService(theDaemon);
     counterReportsManager.startService();
@@ -166,7 +191,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * @throws Exception
    */
   public void testAll() throws Exception {
-    runTestEmptyAggregation();
+    runTestEmptyAggregations();
     runTestMonthBookAggregation();
     runTestMonthJournalAggregation();
     runTestNextTime();
@@ -177,28 +202,62 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void runTestEmptyAggregation() throws Exception {
+  public void runTestEmptyAggregations() throws Exception {
     CounterReportsRequestAggregator aggregator =
 	new CounterReportsRequestAggregator(theDaemon);
     aggregator.getCronTask().execute();
 
-    checkTypeAggregatedRowCount(0);
-    checkPublicationYearAggregatedRowCount(0);
+    checkBookTypeAggregatedRowCount(0);
+    checkJournalTypeAggregatedRowCount(0);
+    checkJournalPublicationYearAggregatedRowCount(0);
   }
 
   /**
-   * Checks the expected count of rows in the aggregation by type table.
+   * Checks the expected count of rows in the book aggregation by type table.
    * 
    * @param expected
    *          An int with the expected number of rows in the table.
    * @throws SQLException
    */
-  private void checkTypeAggregatedRowCount(int expected) throws SQLException {
+  private void checkBookTypeAggregatedRowCount(int expected)
+      throws SQLException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
     int count = -1;
-    String sql = SQL_QUERY_TYPE_AGGREGATED_TOTAL_COUNT;
+    String sql = SQL_QUERY_BOOK_TYPE_AGGREGATED_TOTAL_COUNT;
+
+    try {
+      conn = dbManager.getConnection();
+
+      statement = conn.prepareStatement(sql);
+      resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+	count = resultSet.getInt(1);
+      }
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(statement);
+    }
+
+    assertEquals(expected, count);
+  }
+
+  /**
+   * Checks the expected count of rows in the journal aggregation by type table.
+   * 
+   * @param expected
+   *          An int with the expected number of rows in the table.
+   * @throws SQLException
+   */
+  private void checkJournalTypeAggregatedRowCount(int expected)
+      throws SQLException {
+    Connection conn = null;
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    int count = -1;
+    String sql = SQL_QUERY_JOURNAL_TYPE_AGGREGATED_TOTAL_COUNT;
 
     try {
       conn = dbManager.getConnection();
@@ -225,13 +284,13 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    *          An int with the expected number of rows in the table.
    * @throws SQLException
    */
-  private void checkPublicationYearAggregatedRowCount(int expected)
+  private void checkJournalPublicationYearAggregatedRowCount(int expected)
       throws SQLException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
     int count = -1;
-    String sql = SQL_QUERY_PUBYEAR_AGGREGATED_TOTAL_COUNT;
+    String sql = SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATED_TOTAL_COUNT;
 
     try {
       conn = dbManager.getConnection();
@@ -256,61 +315,154 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * @throws Exception
    */
   public void runTestMonthBookAggregation() throws Exception {
-    Map<String, Object> requestData = new HashMap<String, Object>();
-    requestData.put(CounterReportsBook.IS_SECTION_KEY, Boolean.TRUE);
-    requestData.put(CounterReportsBook.IS_PUBLISHER_INVOLVED_KEY, Boolean.TRUE);
+    Long fullPublicationSeq = initializeFullBookMetadata();
+    Long sectionPublicationSeq = initializeSectionBookMetadata();
 
-    CounterReportsBook book =
-	new CounterReportsBook("Book1", "Publisher1", null, null, null,
-			       "123-456789-0123", "9876-5432");
-    book.identify();
+    counterReportsManager.persistRequest(FULL_URL, false);
+    counterReportsManager.persistRequest(FULL_URL, true);
+    counterReportsManager.persistRequest(SECTION_URL, false);
+    counterReportsManager.persistRequest(SECTION_URL, true);
+
+    checkRequestRowCount(4);
+
+    CounterReportsRequestAggregator aggregator =
+	new CounterReportsRequestAggregator(theDaemon);
+    aggregator.getCronTask().execute();
+
+    checkBookTypeAggregatedRowCount(6);
 
     Calendar cal = Calendar.getInstance();
     cal.setTime(TimeBase.nowDate());
 
     int requestMonth = cal.get(Calendar.MONTH) + 1;
     int requestYear = cal.get(Calendar.YEAR);
+
+    checkBookTypeAggregatedRowCount(requestYear, requestMonth, Boolean.TRUE, 3);
+    checkBookTypeAggregatedRowCount(requestYear, requestMonth, Boolean.FALSE,
+                                    3);
+    checkBookMonthlyTypeRequests(fullPublicationSeq, requestYear, requestMonth,
+                                 Boolean.TRUE, 1, 0);
+    checkBookMonthlyTypeRequests(sectionPublicationSeq, requestYear,
+                                 requestMonth, Boolean.TRUE, 0, 1);
+    checkBookMonthlyTypeRequests(fullPublicationSeq, requestYear, requestMonth,
+                                 Boolean.FALSE, 1, 0);
+    checkBookMonthlyTypeRequests(sectionPublicationSeq, requestYear,
+                                 requestMonth, Boolean.FALSE, 0, 1);
+
+    checkRequestRowCount(0);
+  }
+
+  /**
+   * Creates a full book for which to aggregate requests.
+   * 
+   * @return a Long with the identifier of the created book.
+   * @throws SQLException
+   */
+  private Long initializeFullBookMetadata() throws SQLException {
+    Long publicationSeq = null;
     Connection conn = null;
-    boolean success = false;
 
     try {
       conn = dbManager.getConnection();
-      book.persistRequest(requestData, conn);
-      book.persistRequest(requestData, conn);
-      book.persistRequest(requestData, conn);
-      book.persistRequest(requestData, conn);
-      book.persistRequest(requestData, conn);
-      book.persistRequest(requestData, conn);
 
-      success = true;
+      // Add the publisher.
+      Long publisherSeq =
+	  metadataManager.findOrCreatePublisher(conn, "publisher");
+
+      // Add the publication.
+      publicationSeq =
+	  metadataManager.findOrCreatePublication(conn, null, null, "FULLPISBN",
+						  "FULLEISBN", publisherSeq,
+						  "Full Name", "2010-01-01",
+						  null, null);
+
+      // Add the plugin.
+      Long pluginSeq =
+	  metadataManager.findOrCreatePlugin(conn, "fullPluginId",
+	      "fullPlatform");
+
+      // Add the AU.
+      Long auSeq =
+	  metadataManager.findOrCreateAu(conn, pluginSeq, "fullAuKey");
+
+      // Add the AU metadata.
+      Long auMdSeq = metadataManager.addAuMd(conn, auSeq, 1, 0L);
+
+      Long parentSeq =
+	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
+
+      Long mdItemTypeSeq =
+	  metadataManager.findMetadataItemType(conn, MD_ITEM_TYPE_BOOK);
+
+      Long mdItemSeq =
+	  metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq,
+	                            "2010-01-01", "Full Name", null);
+
+      metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
+                                   FULL_URL);
     } finally {
-      if (success) {
-	try {
-	  conn.commit();
-	  DbManager.safeCloseConnection(conn);
-	} catch (SQLException sqle) {
-	  success = false;
-	  log.error("Exception caught committing the connection", sqle);
-	  DbManager.safeRollbackAndClose(conn);
-	}
-      } else {
-	DbManager.safeRollbackAndClose(conn);
-      }
+      conn.commit();
+      DbManager.safeCloseConnection(conn);
     }
+    
+    return publicationSeq;
+  }
 
-    assertEquals(true, success);
-    checkRequestRowCount(6);
+  /**
+   * Creates a book section for which to aggregate requests.
+   * 
+   * @return a Long with the identifier of the created book.
+   * @throws SQLException
+   */
+  private Long initializeSectionBookMetadata() throws SQLException {
+    Long publicationSeq = null;
+    Connection conn = null;
 
-    CounterReportsRequestAggregator aggregator =
-	new CounterReportsRequestAggregator(theDaemon);
-    aggregator.getCronTask().execute();
+    try {
+      conn = dbManager.getConnection();
 
-    checkTypeAggregatedRowCount(5);
-    checkTypeAggregatedRowCount(requestYear, requestMonth, Boolean.TRUE, 3);
-    checkRequestRowCount(0);
-    checkBookMonthlyTypeRequests(book.getLockssId(), requestYear, requestMonth,
-				 Boolean.TRUE, 0, 6);
-    checkPublicationYearAggregatedRowCount(0);
+      // Add the publisher.
+      Long publisherSeq =
+	  metadataManager.findOrCreatePublisher(conn, "publisher");
+
+      // Add the publication.
+      publicationSeq =
+	  metadataManager.findOrCreatePublication(conn, null, null,
+	                                          "SECTIONPISBN",
+	                                          "SECTIONEISBN", publisherSeq,
+						  "Section Name", "2010-01-01",
+						  null, null);
+
+      // Add the plugin.
+      Long pluginSeq =
+	  metadataManager.findOrCreatePlugin(conn, "secPluginId",
+	      "secPlatform");
+
+      // Add the AU.
+      Long auSeq =
+	  metadataManager.findOrCreateAu(conn, pluginSeq, "secAuKey");
+
+      // Add the AU metadata.
+      Long auMdSeq = metadataManager.addAuMd(conn, auSeq, 1, 0L);
+
+      Long parentSeq =
+	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
+
+      Long mdItemTypeSeq =
+	  metadataManager.findMetadataItemType(conn, MD_ITEM_TYPE_BOOK_CHAPTER);
+
+      Long mdItemSeq =
+	  metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq,
+	                            "2010-01-01", "Chapter Name", null);
+
+      metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
+                                   SECTION_URL);
+    } finally {
+      conn.commit();
+      DbManager.safeCloseConnection(conn);
+    }
+    
+    return publicationSeq;
   }
 
   /**
@@ -345,7 +497,8 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
   }
 
   /**
-   * Checks the expected count of monthly rows in the aggregation by type table.
+   * Checks the expected count of monthly rows in the book aggregation by type
+   * table.
    * 
    * @param requestYear
    *          An int with the year of the month to check.
@@ -358,13 +511,14 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    *          An int with the expected number of monthly rows in the table.
    * @throws SQLException
    */
-  private void checkTypeAggregatedRowCount(int requestYear, int requestMonth,
-      Boolean isPublisherInvolved, int expected) throws SQLException {
+  private void checkBookTypeAggregatedRowCount(int requestYear,
+      int requestMonth, Boolean isPublisherInvolved, int expected)
+	  throws SQLException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
     int count = -1;
-    String sql = SQL_QUERY_TYPE_AGGREGATED_MONTH_COUNT;
+    String sql = SQL_QUERY_BOOK_TYPE_AGGREGATED_MONTH_COUNT;
 
     try {
       conn = dbManager.getConnection();
@@ -389,8 +543,8 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
   /**
    * Checks the expected type counts of monthly requests for a book.
    * 
-   * @param lockssId
-   *          An long with the LOCKSS identifier of the book.
+   * @param apublicationSeq
+   *          A Long with the identifier of the book.
    * @param requestYear
    *          An int with the year of the month to check.
    * @param requestMonth
@@ -404,9 +558,9 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    *          An int with the expected number of section requests.
    * @throws SQLException
    */
-  private void checkBookMonthlyTypeRequests(long lockssId, int requestYear,
-      int requestMonth, Boolean isPublisherInvolved, int expectedFull,
-      int expectedSection) throws SQLException {
+  private void checkBookMonthlyTypeRequests(Long publicationSeq,
+      int requestYear, int requestMonth, Boolean isPublisherInvolved,
+      int expectedFull, int expectedSection) throws SQLException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -418,15 +572,15 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
       conn = dbManager.getConnection();
 
       statement = conn.prepareStatement(sql);
-      statement.setLong(1, lockssId);
+      statement.setLong(1, publicationSeq);
       statement.setInt(2, requestYear);
       statement.setInt(3, requestMonth);
       statement.setBoolean(4, isPublisherInvolved);
       resultSet = statement.executeQuery();
 
       if (resultSet.next()) {
-	fullCount = resultSet.getInt(SQL_COLUMN_FULL_BOOK_REQUESTS);
-	sectionCount = resultSet.getInt(SQL_COLUMN_SECTION_BOOK_REQUESTS);
+	fullCount = resultSet.getInt(FULL_REQUESTS_COLUMN);
+	sectionCount = resultSet.getInt(SECTION_REQUESTS_COLUMN);
       }
     } finally {
       DbManager.safeCloseResultSet(resultSet);
@@ -443,74 +597,154 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * @throws Exception
    */
   public void runTestMonthJournalAggregation() throws Exception {
-    Map<String, Object> requestData = new HashMap<String, Object>();
-    requestData.put(CounterReportsJournal.IS_HTML_KEY, Boolean.FALSE);
-    requestData.put(CounterReportsJournal.IS_PDF_KEY, Boolean.TRUE);
-    requestData.put(CounterReportsJournal.IS_PUBLISHER_INVOLVED_KEY,
-		    Boolean.TRUE);
-    requestData.put(CounterReportsJournal.PUBLICATION_YEAR_KEY, "2007");
+    Long publicationSeq = initializeJournalMetadata();
 
-    CounterReportsJournal journal =
-	new CounterReportsJournal("Journal1", "Publisher1", null, null, null,
-				  "9876-5432", "1234-5678");
-    journal.identify();
+    counterReportsManager.persistRequest(HTML_URL, false);
+    counterReportsManager.persistRequest(HTML_URL, true);
+    counterReportsManager.persistRequest(PDF_URL, false);
+    counterReportsManager.persistRequest(PDF_URL, true);
+
+    checkRequestRowCount(4);
+
+    CounterReportsRequestAggregator aggregator =
+	new CounterReportsRequestAggregator(theDaemon);
+    aggregator.getCronTask().execute();
+
+    checkJournalTypeAggregatedRowCount(4);
 
     Calendar cal = Calendar.getInstance();
     cal.setTime(TimeBase.nowDate());
 
     int requestMonth = cal.get(Calendar.MONTH) + 1;
     int requestYear = cal.get(Calendar.YEAR);
-    Connection conn = null;
-    boolean success = false;
 
-    try {
-      conn = dbManager.getConnection();
-      journal.persistRequest(requestData, conn);
-      journal.persistRequest(requestData, conn);
-      journal.persistRequest(requestData, conn);
-      journal.persistRequest(requestData, conn);
-      journal.persistRequest(requestData, conn);
-      journal.persistRequest(requestData, conn);
-
-      success = true;
-    } finally {
-      if (success) {
-	try {
-	  conn.commit();
-	  DbManager.safeCloseConnection(conn);
-	} catch (SQLException sqle) {
-	  success = false;
-	  log.error("Exception caught committing the connection", sqle);
-	  DbManager.safeRollbackAndClose(conn);
-	}
-      } else {
-	DbManager.safeRollbackAndClose(conn);
-      }
-    }
-
-    assertEquals(true, success);
-    checkRequestRowCount(6);
-
-    CounterReportsRequestAggregator aggregator =
-	new CounterReportsRequestAggregator(theDaemon);
-    aggregator.getCronTask().execute();
-
-    checkTypeAggregatedRowCount(6);
-    checkTypeAggregatedRowCount(requestYear, requestMonth, Boolean.TRUE, 4);
-    checkJournalMonthlyTypeRequests(journal.getLockssId(), requestYear,
-				    requestMonth, Boolean.TRUE, 0, 6, 6);
-    checkPublicationYearAggregatedRowCount(1);
-    checkJournalMonthlyPublicationYearRequests(journal.getLockssId(),
-					       requestYear, requestMonth,
-					       Boolean.TRUE, "2007", 6);
+    checkJournalTypeAggregatedRowCount(requestYear, requestMonth, Boolean.TRUE,
+                                       2);
+    checkJournalTypeAggregatedRowCount(requestYear, requestMonth, Boolean.FALSE,
+                                       2);
+    checkJournalMonthlyTypeRequests(publicationSeq, requestYear, requestMonth,
+                                    Boolean.TRUE, 1, 1, 2);
+    checkJournalMonthlyTypeRequests(publicationSeq, requestYear, requestMonth,
+                                    Boolean.FALSE, 1, 1, 2);
+    checkJournalPublicationYearAggregatedRowCount(2);
+    checkJournalMonthlyPublicationYearRequests(publicationSeq, requestYear,
+                                               requestMonth, Boolean.TRUE,
+                                               "2009", 2);
+    checkJournalMonthlyPublicationYearRequests(publicationSeq, requestYear,
+                                               requestMonth, Boolean.FALSE,
+                                               "2009", 2);
     checkRequestRowCount(0);
   }
 
   /**
-   * Checks the expected type counts of monthly requests for a journal.
+   * Creates a journal for which to aggregate requests.
    * 
-   * @param lockssId
-   *          An long with the LOCKSS identifier of the journal.
+   * @return a Long with the identifier of the created journal.
+   * @throws SQLException
+   */
+  private Long initializeJournalMetadata() throws SQLException {
+    Long publicationSeq = null;
+    Connection conn = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      // Add the publisher.
+      Long publisherSeq =
+	  metadataManager.findOrCreatePublisher(conn, "publisher");
+
+      // Add the publication.
+      publicationSeq =
+	  metadataManager.findOrCreatePublication(conn, "PISSN", "EISSN",
+						  null, null, publisherSeq,
+						  "JOURNAL", "2009-01-01", null,
+						  null);
+
+      // Add the plugin.
+      Long pluginSeq =
+	  metadataManager.findOrCreatePlugin(conn, "pluginId", "platform");
+
+      // Add the AU.
+      Long auSeq = metadataManager.findOrCreateAu(conn, pluginSeq, "auKey");
+
+      // Add the AU metadata.
+      Long auMdSeq = metadataManager.addAuMd(conn, auSeq, 1, 0L);
+
+      Long parentSeq =
+	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
+
+      Long mdItemTypeSeq = metadataManager
+	  .findMetadataItemType(conn, MD_ITEM_TYPE_JOURNAL_ARTICLE);
+
+      Long mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
+                                            auMdSeq, "2009-01-01", "html",
+                                            null);
+
+      metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
+                                   HTML_URL);
+
+      mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
+                                            auMdSeq, "2009-01-01", "pdf", null);
+
+      metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
+                                   PDF_URL);
+    } finally {
+      conn.commit();
+      DbManager.safeCloseConnection(conn);
+    }
+    
+    return publicationSeq;
+  }
+
+  /**
+   * Checks the expected count of monthly rows in the journal aggregation by
+   * type table.
+   * 
+   * @param requestYear
+   *          An int with the year of the month to check.
+   * @param requestMonth
+   *          An int with the month to check.
+   * @param isPublisherInvolved
+   *          A Boolean with the indication of whether a publisher is involved
+   *          in the requests to check.
+   * @param expected
+   *          An int with the expected number of monthly rows in the table.
+   * @throws SQLException
+   */
+  private void checkJournalTypeAggregatedRowCount(int requestYear,
+      int requestMonth, Boolean isPublisherInvolved, int expected)
+	  throws SQLException {
+    Connection conn = null;
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    int count = -1;
+    String sql = SQL_QUERY_JOURNAL_TYPE_AGGREGATED_MONTH_COUNT;
+
+    try {
+      conn = dbManager.getConnection();
+
+      statement = conn.prepareStatement(sql);
+      statement.setInt(1, requestYear);
+      statement.setInt(2, requestMonth);
+      statement.setBoolean(3, isPublisherInvolved);
+      resultSet = statement.executeQuery();
+
+      if (resultSet.next()) {
+	count = resultSet.getInt(1);
+      }
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(statement);
+    }
+
+    assertEquals(expected, count);
+  }
+
+  /**
+   * Checks the expected type counts of monthly requests for journals.
+   * 
+   * @param publicationSeq
+   *          An Long with the identifier of the journal.
    * @param requestYear
    *          An int with the year of the month to check.
    * @param requestMonth
@@ -526,9 +760,10 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    *          An int with the expected number of total requests.
    * @throws SQLException
    */
-  private void checkJournalMonthlyTypeRequests(long lockssId, int requestYear,
-      int requestMonth, Boolean isPublisherInvolved, int expectedHtml,
-      int expectedPdf, int expectedTotal) throws SQLException {
+  private void checkJournalMonthlyTypeRequests(Long publicationSeq,
+      int requestYear, int requestMonth, Boolean isPublisherInvolved,
+      int expectedHtml, int expectedPdf, int expectedTotal)
+	  throws SQLException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -541,16 +776,16 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
       conn = dbManager.getConnection();
 
       statement = conn.prepareStatement(sql);
-      statement.setLong(1, lockssId);
+      statement.setLong(1, publicationSeq);
       statement.setInt(2, requestYear);
       statement.setInt(3, requestMonth);
       statement.setBoolean(4, isPublisherInvolved);
       resultSet = statement.executeQuery();
 
       if (resultSet.next()) {
-	htmlCount = resultSet.getInt(SQL_COLUMN_HTML_JOURNAL_REQUESTS);
-	pdfCount = resultSet.getInt(SQL_COLUMN_PDF_JOURNAL_REQUESTS);
-	totalCount = resultSet.getInt(SQL_COLUMN_TOTAL_JOURNAL_REQUESTS);
+	htmlCount = resultSet.getInt(HTML_REQUESTS_COLUMN);
+	pdfCount = resultSet.getInt(PDF_REQUESTS_COLUMN);
+	totalCount = resultSet.getInt(TOTAL_REQUESTS_COLUMN);
       }
     } finally {
       DbManager.safeCloseResultSet(resultSet);
@@ -566,8 +801,8 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * Checks the expected publication year count of monthly requests for a
    * journal.
    * 
-   * @param lockssId
-   *          An long with the LOCKSS identifier of the journal.
+   * @param publicationSeq
+   *          An Long with the identifier of the journal.
    * @param requestYear
    *          An int with the year of the month to check.
    * @param requestMonth
@@ -581,7 +816,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    *          An int with the expected count of requests.
    * @throws SQLException
    */
-  private void checkJournalMonthlyPublicationYearRequests(long lockssId,
+  private void checkJournalMonthlyPublicationYearRequests(Long publicationSeq,
       int requestYear, int requestMonth, Boolean isPublisherInvolved,
       String expectedPublicationYear, int expectedCount) throws SQLException {
     Connection conn = null;
@@ -589,21 +824,21 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     ResultSet resultSet = null;
     String pubYear = null;
     int count = -1;
-    String sql = SQL_QUERY_PUBYEAR_AGGREGATED_MONTH_JOURNAL_SELECT;
+    String sql = SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATED_MONTH_SELECT;
 
     try {
       conn = dbManager.getConnection();
 
       statement = conn.prepareStatement(sql);
-      statement.setLong(1, lockssId);
+      statement.setLong(1, publicationSeq);
       statement.setInt(2, requestYear);
       statement.setInt(3, requestMonth);
       statement.setBoolean(4, isPublisherInvolved);
       resultSet = statement.executeQuery();
 
       if (resultSet.next()) {
-	pubYear = resultSet.getString(SQL_COLUMN_PUBLICATION_YEAR);
-	count = resultSet.getInt(SQL_COLUMN_REQUEST_COUNT);
+	pubYear = resultSet.getString(PUBLICATION_YEAR_COLUMN);
+	count = resultSet.getInt(REQUESTS_COLUMN);
       }
     } finally {
       DbManager.safeCloseResultSet(resultSet);

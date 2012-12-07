@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsJournalReport5L.java,v 1.1 2012-08-28 17:36:49 fergaloy-sf Exp $
+ * $Id: CounterReportsJournalReport5L.java,v 1.2 2012-12-07 07:27:04 fergaloy-sf Exp $
  */
 
 /*
@@ -32,71 +32,93 @@
 
 /**
  * The COUNTER Journal Report 5L.
- * 
- * @version 1.0
- * 
  */
 package org.lockss.exporter.counter;
 
+import static org.lockss.db.DbManager.*;
 import static org.lockss.exporter.counter.CounterReportsManager.*;
+import static org.lockss.metadata.MetadataManager.*;
 import org.lockss.app.LockssDaemon;
 
-public class CounterReportsJournalReport5L extends CounterReportsJournalReport5 {
+public class CounterReportsJournalReport5L
+	extends CounterReportsJournalReport5 {
   // Query to get the journals to be included in the report.
   // This the same query used for Journal Report 5, except for the fact that in
   // this one the publisher involvement is not considered as a filtering
   // criteria.
   private static final String SQL_QUERY_REPORT_JOURNALS_5L_SELECT = "select "
-      + "distinct a." + SQL_COLUMN_LOCKSS_ID
-      + ", t." + SQL_COLUMN_TITLE_NAME
-      + ", t." + SQL_COLUMN_PUBLISHER_NAME
-      + ", t." + SQL_COLUMN_PLATFORM_NAME
-      + ", t." + SQL_COLUMN_DOI
-      + ", t." + SQL_COLUMN_PROPRIETARY_ID
-      + ", t." + SQL_COLUMN_PRINT_ISSN
-      + ", t." + SQL_COLUMN_ONLINE_ISSN
-      + " from " + SQL_TABLE_PUBYEAR_AGGREGATES + " a,"
-      + SQL_TABLE_TITLES + " t "
-      + "where (t." + SQL_COLUMN_TITLE_NAME + " != '" + ALL_JOURNALS_TITLE_NAME
-      + "' or t." + SQL_COLUMN_PUBLISHER_NAME + " != '" + ALL_PUBLISHERS_NAME
-      + "') "
-      + "and t." + SQL_COLUMN_IS_BOOK + " = false "
-      + "and ((a." + SQL_COLUMN_REQUEST_MONTH + " >= ? "
-      + "and a." + SQL_COLUMN_REQUEST_YEAR + " = ?) "
-      + "or a." + SQL_COLUMN_REQUEST_YEAR + " > ?) "
-      + "and ((a." + SQL_COLUMN_REQUEST_MONTH + " <= ? "
-      + "and a." + SQL_COLUMN_REQUEST_YEAR + " = ?) "
-      + "or a." + SQL_COLUMN_REQUEST_YEAR + " < ?) "
-      + "and a." + SQL_COLUMN_LOCKSS_ID + " = t." + SQL_COLUMN_LOCKSS_ID
-      + " order by t." + SQL_COLUMN_TITLE_NAME + " asc";
+      + "distinct a." + PUBLICATION_SEQ_COLUMN
+      + ", m1." + PRIMARY_NAME_COLUMN
+      + ", p." + PUBLICATION_ID_COLUMN
+      + ", pu." + PUBLISHER_NAME_COLUMN
+      + ", pl." + PLATFORM_COLUMN
+      + ", d." + DOI_COLUMN
+      + ", i1." + ISSN_COLUMN + " as " + P_ISSN_TYPE
+      + ", i2." + ISSN_COLUMN + " as " + E_ISSN_TYPE
+      + " from " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE + " a"
+      + "," + PUBLICATION_TABLE + " p"
+      + "," + PUBLISHER_TABLE + " pu"
+      + "," + MD_ITEM_TABLE + " m2"
+      + "," + AU_MD_TABLE + " am"
+      + "," + AU_TABLE + " au"
+      + "," + PLUGIN_TABLE + " pl"
+      + "," + MD_ITEM_TABLE + " m1"
+      + " left outer join " + ISSN_TABLE + " i1"
+      + " on m1." + MD_ITEM_SEQ_COLUMN + " = i1." + MD_ITEM_SEQ_COLUMN
+      + " and i1." + ISSN_TYPE_COLUMN + " = '" + P_ISSN_TYPE + "'"
+      + " left outer join " + ISSN_TABLE + " i2"
+      + " on m1." + MD_ITEM_SEQ_COLUMN + " = i2." + MD_ITEM_SEQ_COLUMN
+      + " and i2." + ISSN_TYPE_COLUMN + " = '" + E_ISSN_TYPE + "'"
+      + " left outer join " + DOI_TABLE + " d"
+      + " on m1." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " where "
+      + "((a." + REQUEST_MONTH_COLUMN + " >= ?"
+      + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
+      + " or a." + REQUEST_YEAR_COLUMN + " > ?)"
+      + " and ((a." + REQUEST_MONTH_COLUMN + " <= ?"
+      + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
+      + " or a." + REQUEST_YEAR_COLUMN + " < ?)"
+      + " and a." + PUBLICATION_SEQ_COLUMN + " = p." + PUBLICATION_SEQ_COLUMN
+      + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
+      + " and pu." + PUBLISHER_NAME_COLUMN + " != '" + ALL_PUBLISHERS_NAME + "'"
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = m1." + MD_ITEM_SEQ_COLUMN
+      + " and m1." + PRIMARY_NAME_COLUMN + " != '" + ALL_JOURNALS_NAME + "'"
+      + " and m1." + MD_ITEM_SEQ_COLUMN + " = m2." + PARENT_SEQ_COLUMN
+      + " and m2." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
+      + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+      + " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
+      + " order by m1." + PRIMARY_NAME_COLUMN + " asc";
 
   // Query to get the journal request counts to be included in the report.
   // This the same query used for Journal Report 5, except for the fact that in
   // this one the publisher involvement is not considered as a filtering
   // criteria.
   private static final String SQL_QUERY_REPORT_REQUESTS_5L_SELECT = "select "
-      + "t." + SQL_COLUMN_TITLE_NAME
-      + ", a." + SQL_COLUMN_LOCKSS_ID
-      + ", a." + SQL_COLUMN_PUBLICATION_YEAR
-      + ", sum(a." + SQL_COLUMN_REQUEST_COUNT + ") as " + SQL_RESULT_YEAR_COUNT
-      + " from " + SQL_TABLE_PUBYEAR_AGGREGATES + " a,"
-      + SQL_TABLE_TITLES + " t "
-      + "where (t." + SQL_COLUMN_TITLE_NAME + " != '" + ALL_JOURNALS_TITLE_NAME
-      + "' or t." + SQL_COLUMN_PUBLISHER_NAME + " != '" + ALL_PUBLISHERS_NAME
-      + "') "
-      + "and t." + SQL_COLUMN_IS_BOOK + " = false "
-      + "and ((a." + SQL_COLUMN_REQUEST_MONTH + " >= ? "
-      + "and a." + SQL_COLUMN_REQUEST_YEAR + " = ?) "
-      + "or a." + SQL_COLUMN_REQUEST_YEAR + " > ?) "
-      + "and ((a." + SQL_COLUMN_REQUEST_MONTH + " <= ? "
-      + "and a." + SQL_COLUMN_REQUEST_YEAR + " = ?) "
-      + "or a." + SQL_COLUMN_REQUEST_YEAR + " < ?) "
-      + "and a." + SQL_COLUMN_LOCKSS_ID + " = t." + SQL_COLUMN_LOCKSS_ID
-      + " group by t." + SQL_COLUMN_TITLE_NAME
-      + ", a." + SQL_COLUMN_LOCKSS_ID
-      + ", a." + SQL_COLUMN_PUBLICATION_YEAR
-      + " order by t." + SQL_COLUMN_TITLE_NAME + " asc, "
-      + "a." + SQL_COLUMN_PUBLICATION_YEAR + " desc";
+      + "a." + PUBLICATION_SEQ_COLUMN
+      + ", m1." + PRIMARY_NAME_COLUMN
+      + ", a." + PUBLICATION_YEAR_COLUMN
+      + ", sum(a." + REQUESTS_COLUMN + ") as " + REQUESTS_COLUMN
+      + " from " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE + " a"
+      + "," + PUBLICATION_TABLE + " p"
+      + "," + PUBLISHER_TABLE + " pu"
+      + "," + MD_ITEM_TABLE + " m1"
+      + " where "
+      + "((a." + REQUEST_MONTH_COLUMN + " >= ?"
+      + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
+      + " or a." + REQUEST_YEAR_COLUMN + " > ?)"
+      + " and ((a." + REQUEST_MONTH_COLUMN + " <= ?"
+      + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
+      + " or a." + REQUEST_YEAR_COLUMN + " < ?)"
+      + " and a." + PUBLICATION_SEQ_COLUMN + " = p." + PUBLICATION_SEQ_COLUMN
+      + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
+      + " and pu." + PUBLISHER_NAME_COLUMN + " != '" + ALL_PUBLISHERS_NAME + "'"
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = m1." + MD_ITEM_SEQ_COLUMN
+      + " and m1." + PRIMARY_NAME_COLUMN + " != '" + ALL_JOURNALS_NAME + "'"
+      + " group by m1." + PRIMARY_NAME_COLUMN
+      + ", a." + PUBLICATION_SEQ_COLUMN
+      + ", a." + PUBLICATION_YEAR_COLUMN
+      + " order by m1." + PRIMARY_NAME_COLUMN + " asc"
+      + ", a." + PUBLICATION_YEAR_COLUMN + " desc";
 
   /**
    * Constructor for the default report period.
@@ -129,7 +151,8 @@ public class CounterReportsJournalReport5L extends CounterReportsJournalReport5 
    *           if the period specified is not valid.
    */
   public CounterReportsJournalReport5L(LockssDaemon daemon, int startMonth,
-      int startYear, int endMonth, int endYear) throws IllegalArgumentException {
+      int startYear, int endMonth, int endYear)
+	  throws IllegalArgumentException {
     super(daemon, startMonth, startYear, endMonth, endYear);
   }
 

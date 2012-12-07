@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsBookReport1.java,v 1.3 2012-09-28 00:13:23 fergaloy-sf Exp $
+ * $Id: TestCounterReportsBookReport1.java,v 1.4 2012-12-07 07:27:04 fergaloy-sf Exp $
  */
 
 /*
@@ -34,26 +34,24 @@
  * Test class for org.lockss.exporter.counter.CounterReportsBookReport1.
  * 
  * @author Fernando Garcia-Loygorri
- * @version 1.0
  */
 package org.lockss.exporter.counter;
 
-import static org.lockss.exporter.counter.CounterReportsManager.*;
+import static org.lockss.db.DbManager.*;
+import static org.lockss.plugin.ArticleFiles.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsBookReport1;
 import org.lockss.exporter.counter.CounterReportsManager;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
@@ -62,23 +60,12 @@ import org.lockss.util.IOUtil;
 import org.lockss.util.TimeBase;
 
 public class TestCounterReportsBookReport1 extends LockssTestCase {
-  // Query to add a type aggregation.
-  private static final String SQL_QUERY_TYPE_AGGREGATION_INSERT = "insert into "
-      + SQL_TABLE_TYPE_AGGREGATES
-      + " (" + SQL_COLUMN_LOCKSS_ID
-      + "," + SQL_COLUMN_IS_PUBLISHER_INVOLVED
-      + "," + SQL_COLUMN_REQUEST_YEAR
-      + "," + SQL_COLUMN_REQUEST_MONTH
-      + "," + SQL_COLUMN_FULL_BOOK_REQUESTS
-      + "," + SQL_COLUMN_SECTION_BOOK_REQUESTS
-      + ") values (?,?,?,?,?,?)";
-
-  // Query to delete a type aggregation.
-  private static final String SQL_QUERY_TYPE_AGGREGATION_DELETE =
-      "delete from " + SQL_TABLE_TYPE_AGGREGATES;
+  private static final String FULL_URL = "http://example.com/full.url";
+  private static final String SECTION_URL = "http://example.com/section.url";
 
   private MockLockssDaemon theDaemon;
   private DbManager dbManager;
+  private MetadataManager metadataManager;
   private CounterReportsManager counterReportsManager;
 
   @Override
@@ -107,6 +94,11 @@ public class TestCounterReportsBookReport1 extends LockssTestCase {
     dbManager.initService(theDaemon);
     dbManager.startService();
 
+    metadataManager = new MetadataManager();
+    theDaemon.setMetadataManager(metadataManager);
+    metadataManager.initService(theDaemon);
+    metadataManager.startService();
+
     Cron cron = new Cron();
     theDaemon.setCron(cron);
     cron.initService(theDaemon);
@@ -128,9 +120,21 @@ public class TestCounterReportsBookReport1 extends LockssTestCase {
   public void testAll() throws Exception {
     runTestValidation();
     runTestEmptyReport();
+
+    initializeFullBookMetadata();
+    initializeSectionBookMetadata();
+
+    counterReportsManager.persistRequest(FULL_URL, false);
+    counterReportsManager.persistRequest(FULL_URL, true);
+    counterReportsManager.persistRequest(SECTION_URL, false);
+    counterReportsManager.persistRequest(SECTION_URL, true);
+
+    CounterReportsRequestAggregator aggregator =
+	new CounterReportsRequestAggregator(theDaemon);
+    aggregator.getCronTask().execute();
+
     runTestDefaultPeriodReport();
     runTestCustomPeriodReport();
-    runTestIgnorePublisherInvolvedRequestsReport();
   }
 
   /**
@@ -238,32 +242,127 @@ public class TestCounterReportsBookReport1 extends LockssTestCase {
   }
 
   /**
+   * Creates a full book for which to aggregate requests.
+   * 
+   * @return a Long with the identifier of the created book.
+   * @throws SQLException
+   */
+  private Long initializeFullBookMetadata() throws SQLException {
+    Long publicationSeq = null;
+    Connection conn = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      // Add the publisher.
+      Long publisherSeq =
+	  metadataManager.findOrCreatePublisher(conn, "Full Book Publisher");
+
+      // Add the publication.
+      publicationSeq =
+	  metadataManager.findOrCreatePublication(conn, null, null,
+						  "9876543210987",
+						  "9876543210123", publisherSeq,
+						  "The Full Book", "2010-01-01",
+						  null, null);
+
+      // Add the plugin.
+      Long pluginSeq =
+	  metadataManager.findOrCreatePlugin(conn, "fullPluginId",
+	      "fullPlatform");
+
+      // Add the AU.
+      Long auSeq =
+	  metadataManager.findOrCreateAu(conn, pluginSeq, "fullAuKey");
+
+      // Add the AU metadata.
+      Long auMdSeq = metadataManager.addAuMd(conn, auSeq, 1, 0L);
+
+      Long parentSeq =
+	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
+
+      metadataManager.addMdItemDoi(conn, parentSeq, "10.1000/182");
+
+      Long mdItemTypeSeq =
+	  metadataManager.findMetadataItemType(conn, MD_ITEM_TYPE_BOOK);
+
+      Long mdItemSeq =
+	  metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq,
+				    "2010-01-01", "The Full Book", null);
+
+      metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
+                                   FULL_URL);
+    } finally {
+      conn.commit();
+      DbManager.safeCloseConnection(conn);
+    }
+    
+    return publicationSeq;
+  }
+
+  /**
+   * Creates a book section for which to aggregate requests.
+   * 
+   * @return a Long with the identifier of the created book.
+   * @throws SQLException
+   */
+  private Long initializeSectionBookMetadata() throws SQLException {
+    Long publicationSeq = null;
+    Connection conn = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      // Add the publisher.
+      Long publisherSeq =
+	  metadataManager.findOrCreatePublisher(conn, "Section Book Publisher");
+
+      // Add the publication.
+      publicationSeq =
+	  metadataManager.findOrCreatePublication(conn, null, null,
+						  "9876543210234",
+						  "9876543210345", publisherSeq,
+						  "The Book In Sections",
+						  "2010-02-02", null, null);
+
+      // Add the plugin.
+      Long pluginSeq =
+	  metadataManager.findOrCreatePlugin(conn, "secPluginId",
+	      "secPlatform");
+
+      // Add the AU.
+      Long auSeq =
+	  metadataManager.findOrCreateAu(conn, pluginSeq, "secAuKey");
+
+      // Add the AU metadata.
+      Long auMdSeq = metadataManager.addAuMd(conn, auSeq, 1, 0L);
+
+      Long parentSeq =
+	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
+
+      Long mdItemTypeSeq =
+	  metadataManager.findMetadataItemType(conn, MD_ITEM_TYPE_BOOK_CHAPTER);
+
+      Long mdItemSeq =
+	  metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq,
+				    "2010-02-02", "Chapter Name", null);
+
+      metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
+                                   SECTION_URL);
+    } finally {
+      conn.commit();
+      DbManager.safeCloseConnection(conn);
+    }
+    
+    return publicationSeq;
+  }
+
+  /**
    * Tests a report for the default period.
    * 
    * @throws Exception
    */
   public void runTestDefaultPeriodReport() throws Exception {
-
-    CounterReportsBook book =
-	new CounterReportsBook("Book1", "Publisher1", null, null, null,
-	    "987-654321-0987", "1234-5678");
-    book.identify();
-
-    Calendar calendar = Calendar.getInstance();
-    calendar.setTime(TimeBase.nowDate());
-    calendar.add(Calendar.MONTH, -15);
-
-    Map<String, Object> requestData = new HashMap<String, Object>();
-    requestData.put(SQL_COLUMN_IS_PUBLISHER_INVOLVED, Boolean.FALSE);
-    requestData.put(SQL_COLUMN_REQUEST_YEAR,
-	Short.valueOf((short) calendar.get(Calendar.YEAR)));
-    requestData.put(SQL_COLUMN_REQUEST_MONTH,
-	Short.valueOf((short) calendar.get(Calendar.MONTH)));
-    requestData.put(SQL_COLUMN_FULL_BOOK_REQUESTS, Integer.valueOf(10));
-    requestData.put(SQL_COLUMN_SECTION_BOOK_REQUESTS, Integer.valueOf(6));
-
-    persistTypeAggregation(book, requestData);
-
     CounterReportsBookReport1 report = new CounterReportsBookReport1(theDaemon);
 
     report.logReport();
@@ -283,11 +382,7 @@ public class TestCounterReportsBookReport1 extends LockssTestCase {
     }
 
     assertEquals(
-	"\"Total for all books\",,,,,,,10,0,0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-	line);
-    line = reader.readLine();
-    assertEquals(
-	"Book1,Publisher1,,,,987-654321-0987,1234-5678,10,0,0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+	"\"Total for all books\",,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
 	line);
     assertNull(reader.readLine());
 
@@ -309,11 +404,7 @@ public class TestCounterReportsBookReport1 extends LockssTestCase {
     }
 
     assertEquals(
-	"Total for all books\t\t\t\t\t\t\t10\t0\t0\t0\t0\t0\t0\t0\t0\t10\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
-	line);
-    line = reader.readLine();
-    assertEquals(
-	"Book1\tPublisher1\t\t\t\t987-654321-0987\t1234-5678\t10\t0\t0\t0\t0\t0\t0\t0\t0\t10\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
+	"Total for all books\t\t\t\t\t\t\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
 	line);
     assertNull(reader.readLine());
 
@@ -323,111 +414,18 @@ public class TestCounterReportsBookReport1 extends LockssTestCase {
   }
 
   /**
-   * Persists a type aggregation.
-   * 
-   * @param book
-   *          A CounterReportsBook with the book data for which the request is
-   *          persisted.
-   * @param requestData
-   *          A Map<String, Object> with properties of the request to be
-   *          persisted.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  public void persistTypeAggregation(CounterReportsBook book,
-      Map<String, Object> requestData) throws SQLException {
-    Connection conn = null;
-    boolean success = false;
-
-    PreparedStatement deleteAggregation = null;
-    PreparedStatement insertAggregation = null;
-
-    try {
-      conn = dbManager.getConnection();
-
-      String sql = SQL_QUERY_TYPE_AGGREGATION_DELETE;
-      deleteAggregation = conn.prepareStatement(sql);
-      deleteAggregation.executeUpdate();
-
-      sql = SQL_QUERY_TYPE_AGGREGATION_INSERT;
-      insertAggregation = conn.prepareStatement(sql);
-
-      short index = 1;
-      insertAggregation.setLong(index++, book.getLockssId());
-      insertAggregation.setBoolean(index++,
-	  (Boolean) requestData.get(SQL_COLUMN_IS_PUBLISHER_INVOLVED));
-      insertAggregation.setShort(index++,
-	  (Short) requestData.get(SQL_COLUMN_REQUEST_YEAR));
-      insertAggregation.setShort(index++,
-	  (Short) requestData.get(SQL_COLUMN_REQUEST_MONTH));
-      insertAggregation.setInt(index++,
-	  (Integer) requestData.get(SQL_COLUMN_FULL_BOOK_REQUESTS));
-      insertAggregation.setInt(index++,
-	  (Integer) requestData.get(SQL_COLUMN_SECTION_BOOK_REQUESTS));
-
-      insertAggregation.executeUpdate();
-      DbManager.safeCloseStatement(insertAggregation);
-      insertAggregation = conn.prepareStatement(sql);
-
-      index = 1;
-      insertAggregation.setLong(index++,
-	  counterReportsManager.getAllBooksLockssId());
-      insertAggregation.setBoolean(index++,
-	  (Boolean) requestData.get(SQL_COLUMN_IS_PUBLISHER_INVOLVED));
-      insertAggregation.setShort(index++,
-	  (Short) requestData.get(SQL_COLUMN_REQUEST_YEAR));
-      insertAggregation.setShort(index++,
-	  (Short) requestData.get(SQL_COLUMN_REQUEST_MONTH));
-      insertAggregation.setInt(index++,
-	  (Integer) requestData.get(SQL_COLUMN_FULL_BOOK_REQUESTS));
-      insertAggregation.setInt(index++,
-	  (Integer) requestData.get(SQL_COLUMN_SECTION_BOOK_REQUESTS));
-
-      insertAggregation.executeUpdate();
-      success = true;
-    } finally {
-      DbManager.safeCloseStatement(insertAggregation);
-      if (success) {
-	conn.commit();
-	DbManager.safeCloseConnection(conn);
-      } else {
-	DbManager.safeRollbackAndClose(conn);
-      }
-    }
-  }
-
-  /**
    * Tests a report for a custom period.
    * 
    * @throws Exception
    */
   public void runTestCustomPeriodReport() throws Exception {
-
-    CounterReportsBook book =
-	new CounterReportsBook("Book1", "Publisher1", null, null, null,
-	    "987-654321-0987", "1234-5678");
-    book.identify();
-
     Calendar calendar = Calendar.getInstance();
     calendar.setTime(TimeBase.nowDate());
     int endYear = calendar.get(Calendar.YEAR);
-    int endMonth = calendar.get(Calendar.MONTH);
+    int endMonth = calendar.get(Calendar.MONTH) + 1;
     calendar.add(Calendar.MONTH, -4);
     int startYear = calendar.get(Calendar.YEAR);
-    int startMonth = calendar.get(Calendar.MONTH);
-
-    calendar.add(Calendar.MONTH, 2);
-
-    Map<String, Object> requestData = new HashMap<String, Object>();
-    requestData.put(SQL_COLUMN_IS_PUBLISHER_INVOLVED, Boolean.FALSE);
-    requestData.put(SQL_COLUMN_REQUEST_YEAR,
-	Short.valueOf((short) calendar.get(Calendar.YEAR)));
-    requestData.put(SQL_COLUMN_REQUEST_MONTH,
-	Short.valueOf((short) calendar.get(Calendar.MONTH)));
-    requestData.put(SQL_COLUMN_FULL_BOOK_REQUESTS, Integer.valueOf(10));
-    requestData.put(SQL_COLUMN_SECTION_BOOK_REQUESTS, Integer.valueOf(6));
-
-    persistTypeAggregation(book, requestData);
+    int startMonth = calendar.get(Calendar.MONTH) + 1;
 
     CounterReportsBookReport1 report =
 	new CounterReportsBookReport1(theDaemon, startMonth, startYear,
@@ -449,9 +447,9 @@ public class TestCounterReportsBookReport1 extends LockssTestCase {
       line = reader.readLine();
     }
 
-    assertEquals("\"Total for all books\",,,,,,,10,0,0,10,0,0", line);
+    assertEquals("\"Total for all books\",,,,,,,1,0,0,0,0,1", line);
     line = reader.readLine();
-    assertEquals("Book1,Publisher1,,,,987-654321-0987,1234-5678,10,0,0,10,0,0",
+    assertEquals("\"The Full Book\",\"Full Book Publisher\",fullPlatform,10.1000/182,,987-654321-0987,987-654321-0123,1,0,0,0,0,1",
 	line);
     assertNull(reader.readLine());
 
@@ -472,92 +470,11 @@ public class TestCounterReportsBookReport1 extends LockssTestCase {
       line = reader.readLine();
     }
 
-    assertEquals("Total for all books\t\t\t\t\t\t\t10\t0\t0\t10\t0\t0", line);
+    assertEquals("Total for all books\t\t\t\t\t\t\t1\t0\t0\t0\t0\t1", line);
     line = reader.readLine();
     assertEquals(
-	"Book1\tPublisher1\t\t\t\t987-654321-0987\t1234-5678\t10\t0\t0\t10\t0\t0",
+	"The Full Book\tFull Book Publisher\tfullPlatform\t10.1000/182\t\t987-654321-0987\t987-654321-0123\t1\t0\t0\t0\t0\t1",
 	line);
-    assertNull(reader.readLine());
-
-    IOUtil.safeClose(reader);
-    reportFile.delete();
-    assertEquals(false, reportFile.exists());
-  }
-
-  /**
-   * Tests that publisher involved requests are ignored.
-   * 
-   * @throws Exception
-   */
-  public void runTestIgnorePublisherInvolvedRequestsReport() throws Exception {
-
-    CounterReportsBook book =
-	new CounterReportsBook("Book1", "Publisher1", null, null, null,
-	    "1234-5678", "9876-5432");
-    book.identify();
-
-    Calendar calendar = Calendar.getInstance();
-    calendar.setTime(TimeBase.nowDate());
-    int endYear = calendar.get(Calendar.YEAR);
-    int endMonth = calendar.get(Calendar.MONTH);
-    calendar.add(Calendar.MONTH, -4);
-    int startYear = calendar.get(Calendar.YEAR);
-    int startMonth = calendar.get(Calendar.MONTH);
-
-    calendar.add(Calendar.MONTH, 2);
-
-    Map<String, Object> requestData = new HashMap<String, Object>();
-    requestData.put(SQL_COLUMN_IS_PUBLISHER_INVOLVED, Boolean.TRUE);
-    requestData.put(SQL_COLUMN_REQUEST_YEAR,
-	Short.valueOf((short) calendar.get(Calendar.YEAR)));
-    requestData.put(SQL_COLUMN_REQUEST_MONTH,
-	Short.valueOf((short) calendar.get(Calendar.MONTH)));
-    requestData.put(SQL_COLUMN_FULL_BOOK_REQUESTS, Integer.valueOf(10));
-    requestData.put(SQL_COLUMN_SECTION_BOOK_REQUESTS, Integer.valueOf(6));
-
-    persistTypeAggregation(book, requestData);
-
-    CounterReportsBookReport1 report =
-	new CounterReportsBookReport1(theDaemon, startMonth, startYear,
-	    endMonth, endYear);
-
-    report.logReport();
-    report.saveCsvReport();
-    File reportFile =
-	new File(counterReportsManager.getOutputDir(),
-	    report.getReportFileName("csv"));
-    assertEquals(true, reportFile.exists());
-
-    report.populateReportHeaderEntries();
-
-    BufferedReader reader = new BufferedReader(new FileReader(reportFile));
-    String line = reader.readLine();
-
-    for (int i = 0; i < 8; i++) {
-      line = reader.readLine();
-    }
-
-    assertEquals("\"Total for all books\",,,,,,,0,0,0,0,0,0", line);
-    assertNull(reader.readLine());
-
-    IOUtil.safeClose(reader);
-    reportFile.delete();
-    assertEquals(false, reportFile.exists());
-
-    report.saveTsvReport();
-    reportFile =
-	new File(counterReportsManager.getOutputDir(),
-	    report.getReportFileName("txt"));
-    assertEquals(true, reportFile.exists());
-
-    reader = new BufferedReader(new FileReader(reportFile));
-    line = reader.readLine();
-
-    for (int i = 0; i < 8; i++) {
-      line = reader.readLine();
-    }
-
-    assertEquals("Total for all books\t\t\t\t\t\t\t0\t0\t0\t0\t0\t0", line);
     assertNull(reader.readLine());
 
     IOUtil.safeClose(reader);

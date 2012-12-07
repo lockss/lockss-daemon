@@ -1,5 +1,5 @@
 /*
- * $Id: TestDbManager.java,v 1.1 2012-08-17 16:13:38 fergaloy-sf Exp $
+ * $Id: TestDbManager.java,v 1.2 2012-12-07 07:27:05 fergaloy-sf Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ import java.io.File;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
-
 import org.lockss.config.ConfigManager;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.ConfigurationUtil;
@@ -199,6 +198,7 @@ public class TestDbManager extends LockssTestCase {
     }
   }
 
+  @Override
   public void tearDown() throws Exception {
     dbManager.stopService();
     theDaemon.stopDaemon();
@@ -235,5 +235,183 @@ public class TestDbManager extends LockssTestCase {
     theDaemon.setDbManager(dbManager);
     dbManager.initService(theDaemon);
     dbManager.startService();
+  }
+
+  /**
+   * Tests an empty database before updating.
+   * 
+   * @throws Exception
+   */
+  public void testEmptyDbSetup() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    dbManager = new DbManager();
+    theDaemon.setDbManager(dbManager);
+    dbManager.initService(theDaemon);
+    assertTrue(dbManager.setUpDatabase(0));
+    dbManager.setTargetDatabaseVersion(0);
+    dbManager.startService();
+    assertTrue(dbManager.isReady());
+
+    Connection conn = dbManager.getConnection();
+    assertNotNull(conn);
+    assertFalse(dbManager.tableExists(conn, DbManager.OBSOLETE_METADATA_TABLE));
+  }
+
+  /**
+   * Tests version 1 set up.
+   * 
+   * @throws Exception
+   */
+  public void testV1Setup() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    dbManager = new DbManager();
+    theDaemon.setDbManager(dbManager);
+    dbManager.initService(theDaemon);
+    assertTrue(dbManager.setUpDatabase(1));
+    dbManager.setTargetDatabaseVersion(1);
+    dbManager.startService();
+    assertTrue(dbManager.isReady());
+
+    Connection conn = dbManager.getConnection();
+    assertNotNull(conn);
+    assertTrue(dbManager.tableExists(conn, DbManager.OBSOLETE_METADATA_TABLE));
+  }
+
+  /**
+   * Tests an attempt to update the database to a lower version.
+   * 
+   * @throws Exception
+   */
+  public void testV1ToV0Update() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    dbManager = new DbManager();
+    theDaemon.setDbManager(dbManager);
+    dbManager.initService(theDaemon);
+    assertTrue(dbManager.setUpDatabase(1));
+    dbManager.setTargetDatabaseVersion(0);
+    dbManager.startService();
+    assertFalse(dbManager.isReady());
+  }
+
+  /**
+   * Tests the update of the database from version 0 to version 1.
+   * 
+   * @throws Exception
+   */
+  public void testV0ToV1Update() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    dbManager = new DbManager();
+    theDaemon.setDbManager(dbManager);
+    dbManager.initService(theDaemon);
+    assertTrue(dbManager.setUpDatabase(0));
+    dbManager.setTargetDatabaseVersion(1);
+    dbManager.startService();
+    assertTrue(dbManager.isReady());
+
+    Connection conn = dbManager.getConnection();
+    assertNotNull(conn);
+    assertTrue(dbManager.tableExists(conn, DbManager.OBSOLETE_METADATA_TABLE));
+  }
+
+  /**
+   * Tests the update of the database from version 0 to version 2.
+   * 
+   * @throws Exception
+   */
+  public void testV0ToV2Update() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    dbManager = new DbManager();
+    theDaemon.setDbManager(dbManager);
+    dbManager.initService(theDaemon);
+    assertTrue(dbManager.setUpDatabase(0));
+    dbManager.setTargetDatabaseVersion(2);
+    dbManager.startService();
+    assertTrue(dbManager.isReady());
+
+    Connection conn = dbManager.getConnection();
+    assertNotNull(conn);
+    assertFalse(dbManager.tableExists(conn, DbManager.OBSOLETE_METADATA_TABLE));
+    assertTrue(dbManager.tableExists(conn, DbManager.VERSION_TABLE));
+  }
+
+  /**
+   * Tests the update of the database from version 1 to version 2.
+   * 
+   * @throws Exception
+   */
+  public void testV1ToV2Update() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    dbManager = new DbManager();
+    theDaemon.setDbManager(dbManager);
+    dbManager.initService(theDaemon);
+    assertTrue(dbManager.setUpDatabase(1));
+    dbManager.setTargetDatabaseVersion(2);
+    dbManager.startService();
+    assertTrue(dbManager.isReady());
+
+    Connection conn = dbManager.getConnection();
+    assertNotNull(conn);
+    assertFalse(dbManager.tableExists(conn, DbManager.OBSOLETE_METADATA_TABLE));
+    assertTrue(dbManager.tableExists(conn, DbManager.VERSION_TABLE));
+  }
+
+  /**
+   * Tests text truncation.
+   * 
+   * @throws Exception
+   */
+  public void testTruncation() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    startService();
+
+    String original = "Total characters = 21";
+
+    String truncated = DbManager.truncateVarchar(original, 30);
+    assertTrue(original.equals(truncated));
+    assertFalse(DbManager.isTruncatedVarchar(truncated));
+
+    truncated = DbManager.truncateVarchar(original, original.length());
+    assertTrue(original.equals(truncated));
+    assertFalse(DbManager.isTruncatedVarchar(truncated));
+
+    truncated = DbManager.truncateVarchar(original, original.length() - 3);
+    assertFalse(original.equals(truncated));
+    assertTrue(DbManager.isTruncatedVarchar(truncated));
+    assertTrue(truncated.length() == original.length() - 3);
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestRecorder.java,v 1.3 2012-09-28 00:13:23 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestRecorder.java,v 1.4 2012-12-07 07:27:04 fergaloy-sf Exp $
  */
 
 /*
@@ -38,99 +38,43 @@
  */
 package org.lockss.exporter.counter;
 
-import static org.lockss.exporter.counter.CounterReportsManager.*;
+import static org.lockss.db.DbManager.*;
+import static org.lockss.plugin.ArticleFiles.*;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
-
 import org.lockss.config.ConfigManager;
-import org.lockss.config.TdbAu;
 import org.lockss.daemon.Cron;
-import org.lockss.daemon.TitleConfig;
 import org.lockss.db.DbManager;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.Plugin;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockArchivalUnit;
-import org.lockss.test.MockCachedUrl;
 import org.lockss.test.MockLockssDaemon;
-import org.lockss.test.MockPlugin;
-import org.lockss.util.Constants;
-import org.lockss.util.TimeBase;
 
 public class TestCounterReportsRequestRecorder extends LockssTestCase {
-  // A URL that exists in the metadata table.
+  // A URL that exists in the URL metadata table.
   private static final String RECORDABLE_URL =
       "http://example.com/fulltext.url";
 
-  // A URL that does not exist in the metadata table.
+  // A URL that does not exist in the URL metadata table.
   private static final String IGNORABLE_URL = "http://example.com/index.html";
-
-  // Query to create the metadata table.
-  private static final String SQL_QUERY_METADATA_CREATE =
-      "create table metadata ("
-	  + "md_id bigint primary key generated always as identity,"
-	  + "access_url varchar(4096) not null)";
-
-  // Query to populate metadata.
-  private static final String SQL_QUERY_METADATA_INSERT =
-      "insert into metadata (access_url) values (?)";
-
-  // Query to count all the rows of titles.
-  private static final String SQL_QUERY_TITLE_COUNT = "select count(*) from "
-      + SQL_TABLE_TITLES;
 
   // Query to count all the rows of requests.
   private static final String SQL_QUERY_REQUEST_COUNT = "select count(*) from "
-      + SQL_TABLE_REQUESTS;
+      + COUNTER_REQUEST_TABLE;
 
-  // Query to count the rows of requests for a LOCKSS identifier.
-  private static final String SQL_QUERY_REQUEST_BY_ID_COUNT =
-      "select count(*) from " + SQL_TABLE_REQUESTS + " where "
-	  + SQL_COLUMN_LOCKSS_ID + " = ?";
-
-  // Query to get the properties of a book.
-  private static final String SQL_QUERY_BOOK_SELECT = "select "
-      + SQL_COLUMN_TITLE_NAME + "," + SQL_COLUMN_PUBLISHER_NAME + ","
-      + SQL_COLUMN_PLATFORM_NAME + "," + SQL_COLUMN_DOI + ","
-      + SQL_COLUMN_PROPRIETARY_ID + "," + SQL_COLUMN_IS_BOOK + ","
-      + SQL_COLUMN_ISBN + "," + SQL_COLUMN_BOOK_ISSN + " from "
-      + SQL_TABLE_TITLES + " where " + SQL_COLUMN_LOCKSS_ID + " = ?";
-
-  // Query to get the properties of a journal.
-  private static final String SQL_QUERY_JOURNAL_SELECT = "select "
-      + SQL_COLUMN_TITLE_NAME + "," + SQL_COLUMN_PUBLISHER_NAME + ","
-      + SQL_COLUMN_PLATFORM_NAME + "," + SQL_COLUMN_DOI + ","
-      + SQL_COLUMN_PROPRIETARY_ID + "," + SQL_COLUMN_IS_BOOK + ","
-      + SQL_COLUMN_PRINT_ISSN + "," + SQL_COLUMN_ONLINE_ISSN + " from "
-      + SQL_TABLE_TITLES + " where " + SQL_COLUMN_LOCKSS_ID + " = ?";
-
-  // Query to get the properties of a book request.
-  private static final String SQL_QUERY_BOOK_REQUEST_SELECT = "select "
-      + SQL_COLUMN_IS_SECTION + "," + SQL_COLUMN_IS_PUBLISHER_INVOLVED + ","
-      + SQL_COLUMN_REQUEST_YEAR + "," + SQL_COLUMN_REQUEST_MONTH + ","
-      + SQL_COLUMN_REQUEST_DAY + " from " + SQL_TABLE_REQUESTS + " where "
-      + SQL_COLUMN_LOCKSS_ID + " = ?";
-
-  // Query to get the properties of a journal request.
-  private static final String SQL_QUERY_JOURNAL_REQUEST_SELECT = "select "
-      + SQL_COLUMN_PUBLICATION_YEAR + "," + SQL_COLUMN_IS_HTML + ","
-      + SQL_COLUMN_IS_PDF + "," + SQL_COLUMN_IS_PUBLISHER_INVOLVED + ","
-      + SQL_COLUMN_REQUEST_YEAR + "," + SQL_COLUMN_REQUEST_MONTH + ","
-      + SQL_COLUMN_REQUEST_DAY + " from " + SQL_TABLE_REQUESTS + " where "
-      + SQL_COLUMN_LOCKSS_ID + " = ?";
+  // Query to count all the rows of requests for a given publisher involvement.
+  private static final String SQL_QUERY_REQUEST_BY_INVOLVEMENT_COUNT = "select "
+      + "count(*) from " + COUNTER_REQUEST_TABLE
+      + " where " + IS_PUBLISHER_INVOLVED_COLUMN + " = ?";
 
   private MockLockssDaemon theDaemon;
   private DbManager dbManager;
+  private MetadataManager metadataManager;
   private CounterReportsManager counterReportsManager;
 
   @Override
@@ -151,10 +95,9 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
     props.setProperty(CounterReportsManager.PARAM_COUNTER_ENABLED, "true");
     props.setProperty(CounterReportsManager.PARAM_REPORT_BASEDIR_PATH,
 	tempDirPath);
-    props
-	.setProperty(
-	    CounterReportsRequestAggregator.PARAM_COUNTER_REQUEST_AGGREGATION_TASK_FREQUENCY,
-	    "hourly");
+    props.setProperty(CounterReportsRequestAggregator
+                      .PARAM_COUNTER_REQUEST_AGGREGATION_TASK_FREQUENCY,
+	"hourly");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();
@@ -164,6 +107,11 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
     theDaemon.setDbManager(dbManager);
     dbManager.initService(theDaemon);
     dbManager.startService();
+
+    metadataManager = new MetadataManager();
+    theDaemon.setMetadataManager(metadataManager);
+    metadataManager.initService(theDaemon);
+    metadataManager.startService();
 
     Cron cron = new Cron();
     theDaemon.setCron(cron);
@@ -180,160 +128,150 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 
   private void initializeMetadata() throws SQLException {
     Connection conn = null;
-    PreparedStatement statement = null;
 
     try {
       conn = dbManager.getConnection();
-      statement = conn.prepareStatement(SQL_QUERY_METADATA_CREATE);
-      statement.executeUpdate();
-      DbManager.safeCloseStatement(statement);
 
-      statement = conn.prepareStatement(SQL_QUERY_METADATA_INSERT);
-      statement.setString(1, RECORDABLE_URL);
-      statement.executeUpdate();
+      // Add the publisher.
+      Long publisherSeq =
+	  metadataManager.findOrCreatePublisher(conn, "publisher");
+
+      // Add the publication.
+      Long publicationSeq =
+	  metadataManager.findOrCreatePublication(conn, null, null,
+						  "9876543210987",
+						  "9876543210123", publisherSeq,
+						  "The Full Book", "2009-01-01",
+						  null, null);
+
+      // Add the plugin.
+      Long pluginSeq =
+	  metadataManager.findOrCreatePlugin(conn, "fullPluginId",
+	      "fullPlatform");
+
+      // Add the AU.
+      Long auSeq = metadataManager.findOrCreateAu(conn, pluginSeq, "fullAuKey");
+
+      // Add the AU metadata.
+      Long auMdSeq = metadataManager.addAuMd(conn, auSeq, 1, 0L);
+
+      Long parentSeq =
+	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
+
+      metadataManager.addMdItemDoi(conn, parentSeq, "10.1000/182");
+
+      Long mdItemTypeSeq =
+	  metadataManager.findMetadataItemType(conn, MD_ITEM_TYPE_BOOK);
+
+      Long mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
+                                                 auMdSeq, "2009-01-01", "TOC",
+                                                 null);
+
+      metadataManager.addMdItemUrl(conn, mdItemSeq, "", IGNORABLE_URL);
+
+      mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
+                                            auMdSeq, "2009-01-01",
+	  				    "The Full Book", null);
+
+      metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
+                                   RECORDABLE_URL);
     } finally {
-      DbManager.safeCloseStatement(statement);
       conn.commit();
       DbManager.safeCloseConnection(conn);
     }
   }
 
   /**
-   * Runs all the tests.
-   * <br />
-   * This avoids unnecessary set up and tear down of the database.
+   * Tests the recording of multiple requests.
    * 
    * @throws Exception
    */
-  public void testAll() throws Exception {
-    runTestRecordBookRequest();
-    runTestJournalRecordRequest();
-    runTestRecordMultipleRequests();
-  }
-
-  /**
-   * Tests the recording of a book request.
-   * 
-   * @throws Exception
-   */
-  public void runTestRecordBookRequest() throws Exception {
-    CounterReportsBook book =
-	new CounterReportsBook("Book1", "Publisher1", "Platform1", null, null,
-	    "987-654321-0987", "1234-5678");
-
-    ArchivalUnit bookAu = new MyMockBookArchivalUnit(book, "1234");
+  public void testRecordMultipleRequests() throws Exception {
 
     CounterReportsRequestRecorder recorder =
 	CounterReportsRequestRecorder.getInstance();
-    recorder.recordRequest(IGNORABLE_URL, bookAu,
+
+    recorder.recordRequest(IGNORABLE_URL,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
-    checkTitleRowCount(2);
     checkRequestRowCount(0);
 
-    recorder.recordRequest(RECORDABLE_URL, bookAu,
+    recorder.recordRequest(RECORDABLE_URL,
 	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
 
-    checkTitleRowCount(3);
     checkRequestRowCount(1);
-  }
+    checkRequestByPublisherInvolvementRowCount(false, 1);
+    checkRequestByPublisherInvolvementRowCount(true, 0);
 
-  private class MyMockBookArchivalUnit extends MockArchivalUnit {
-    private String platform = null;
-    private String auId = null;
-    private String doi = null;
-    private String isbn = null;
-    private String issn = null;
-    private String publisherName = null;
+    recorder.recordRequest(IGNORABLE_URL,
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
 
-    public MyMockBookArchivalUnit(CounterReportsBook book, String auId) {
-      setName(book.getName());
-      this.platform = book.getPublishingPlatform();
-      this.auId = auId;
-      this.doi = book.getDoi();
-      this.isbn = book.getIsbn();
-      this.issn = book.getIssn();
-      this.publisherName = book.getPublisherName();
-    }
+    checkRequestRowCount(1);
+    checkRequestByPublisherInvolvementRowCount(false, 1);
+    checkRequestByPublisherInvolvementRowCount(true, 0);
 
-    public Plugin getPlugin() {
-      return new MyMockPlugin();
-    }
+    recorder.recordRequest(RECORDABLE_URL,
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
 
-    public TitleConfig getTitleConfig() {
-      return new MockBookConfig("displayName", "pluginName");
-    }
+    checkRequestRowCount(2);
+    checkRequestByPublisherInvolvementRowCount(false, 1);
+    checkRequestByPublisherInvolvementRowCount(true, 1);
 
-    private class MyMockPlugin extends MockPlugin {
-      public String getPublishingPlatform() {
-	return platform;
-      }
-    }
+    recorder.recordRequest(IGNORABLE_URL,
+	CounterReportsRequestRecorder.PublisherContacted.FALSE, 304);
 
-    private class MockBookConfig extends TitleConfig {
-      public MockBookConfig(String displayName, String pluginName) {
-	super(displayName, pluginName);
-      }
+    checkRequestRowCount(2);
+    checkRequestByPublisherInvolvementRowCount(false, 1);
+    checkRequestByPublisherInvolvementRowCount(true, 1);
 
-      public TdbAu getTdbAu() {
-	return new MockTdbAu("displayName", "pluginId");
-      }
+    recorder.recordRequest(RECORDABLE_URL,
+	CounterReportsRequestRecorder.PublisherContacted.FALSE, 304);
 
-      private class MockTdbAu extends TdbAu {
-	public MockTdbAu(String displayName, String pluginId) {
-	  super(displayName, pluginId);
-	  setAuId(auId);
-	}
+    checkRequestRowCount(3);
+    checkRequestByPublisherInvolvementRowCount(false, 2);
+    checkRequestByPublisherInvolvementRowCount(true, 1);
 
-	public String getDoi() {
-	  return doi;
-	}
+    recorder.recordRequest(IGNORABLE_URL,
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 304);
 
-	public String getIsbn() {
-	  return isbn;
-	}
+    checkRequestRowCount(3);
+    checkRequestByPublisherInvolvementRowCount(false, 2);
+    checkRequestByPublisherInvolvementRowCount(true, 1);
 
-	public String getIssn() {
-	  return issn;
-	}
+    recorder.recordRequest(RECORDABLE_URL,
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 304);
 
-	public String getPublisherName() {
-	  return publisherName;
-	}
-      }
-    }
-  }
+    checkRequestRowCount(4);
+    checkRequestByPublisherInvolvementRowCount(false, 2);
+    checkRequestByPublisherInvolvementRowCount(true, 2);
 
-  /**
-   * Checks the expected count of rows in the title table.
-   * 
-   * @param expected
-   *          An int with the expected number of rows in the table.
-   * @throws SQLException
-   */
-  private void checkTitleRowCount(int expected) throws SQLException {
-    Connection conn = null;
-    PreparedStatement statement = null;
-    ResultSet resultSet = null;
-    int count = -1;
-    String sql = SQL_QUERY_TITLE_COUNT;
+    recorder.recordRequest(IGNORABLE_URL,
+	CounterReportsRequestRecorder.PublisherContacted.FALSE, 404);
 
-    try {
-      conn = dbManager.getConnection();
+    checkRequestRowCount(4);
+    checkRequestByPublisherInvolvementRowCount(false, 2);
+    checkRequestByPublisherInvolvementRowCount(true, 2);
 
-      statement = conn.prepareStatement(sql);
-      resultSet = statement.executeQuery();
+    recorder.recordRequest(RECORDABLE_URL,
+	CounterReportsRequestRecorder.PublisherContacted.FALSE, 404);
 
-      if (resultSet.next()) {
-	count = resultSet.getInt(1);
-      }
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(statement);
-      DbManager.safeRollbackAndClose(conn);
-    }
+    checkRequestRowCount(5);
+    checkRequestByPublisherInvolvementRowCount(false, 3);
+    checkRequestByPublisherInvolvementRowCount(true, 2);
 
-    assertEquals(expected, count);
+    recorder.recordRequest(IGNORABLE_URL,
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 404);
+
+    checkRequestRowCount(5);
+    checkRequestByPublisherInvolvementRowCount(false, 3);
+    checkRequestByPublisherInvolvementRowCount(true, 2);
+
+    recorder.recordRequest(RECORDABLE_URL,
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 404);
+
+    checkRequestRowCount(6);
+    checkRequestByPublisherInvolvementRowCount(false, 4);
+    checkRequestByPublisherInvolvementRowCount(true, 2);
   }
 
   /**
@@ -369,26 +307,29 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
   }
 
   /**
-   * Checks the expected count of rows in the request table for a given LOCKSS
-   * identifier.
+   * Checks the expected count of rows in the request table for a given
+   * publisher involvement.
    * 
+   * @param isPublisherInvolved
+   *          A boolean with the indication of whether the publisher is
+   *          involved.
    * @param expected
    *          An int with the expected number of rows in the table.
    * @throws SQLException
    */
-  private void checkRequestRowCountById(long lockssId, int expected)
-      throws SQLException {
+  private void checkRequestByPublisherInvolvementRowCount(
+      boolean isPublisherInvolved, int expected) throws SQLException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
     int count = -1;
-    String sql = SQL_QUERY_REQUEST_BY_ID_COUNT;
+    String sql = SQL_QUERY_REQUEST_BY_INVOLVEMENT_COUNT;
 
     try {
       conn = dbManager.getConnection();
 
       statement = conn.prepareStatement(sql);
-      statement.setLong(1, lockssId);
+      statement.setBoolean(1, isPublisherInvolved);
       resultSet = statement.executeQuery();
 
       if (resultSet.next()) {
@@ -401,652 +342,5 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
     }
 
     assertEquals(expected, count);
-  }
-
-  /**
-   * Checks the expected properties of a book in the database.
-   * 
-   * @param book
-   *          A CounterReportsBook with the book to be checked.
-   * @throws SQLException
-   */
-  private void checkBook(CounterReportsBook book) throws SQLException {
-    Connection conn = null;
-    PreparedStatement statement = null;
-    ResultSet resultSet = null;
-    String sql = SQL_QUERY_BOOK_SELECT;
-
-    try {
-      conn = dbManager.getConnection();
-
-      statement = conn.prepareStatement(sql);
-      statement.setLong(1, book.getLockssId());
-      resultSet = statement.executeQuery();
-
-      assertEquals(true, resultSet.next());
-      assertEquals(book.getName(), resultSet.getString(SQL_COLUMN_TITLE_NAME));
-      assertEquals(book.getPublisherName(),
-	  resultSet.getString(SQL_COLUMN_PUBLISHER_NAME));
-      assertEquals(book.getPublishingPlatform(),
-	  resultSet.getString(SQL_COLUMN_PLATFORM_NAME));
-      assertEquals(book.getDoi(), resultSet.getString(SQL_COLUMN_DOI));
-      assertEquals(book.getProprietaryId(),
-	  resultSet.getString(SQL_COLUMN_PROPRIETARY_ID));
-      assertEquals(true, resultSet.getBoolean(SQL_COLUMN_IS_BOOK));
-      assertEquals(book.getIsbn(), resultSet.getString(SQL_COLUMN_ISBN));
-      assertEquals(book.getIssn(), resultSet.getString(SQL_COLUMN_BOOK_ISSN));
-      assertEquals(false, resultSet.next());
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(statement);
-      DbManager.safeRollbackAndClose(conn);
-    }
-  }
-
-  /**
-   * Checks the expected properties of a book in the database.
-   * 
-   * @param book
-   *          A CounterReportsBook with the book to be checked.
-   * @param requestData
-   *          A Map<String, Object> with the data of the request to be checked.
-   * @throws SQLException
-   */
-  private void checkBookRequest(CounterReportsBook book,
-      Map<String, Object> requestData) throws SQLException {
-    if (requestData == null) {
-      requestData = new HashMap<String, Object>();
-    }
-
-    Calendar cal = Calendar.getInstance();
-    cal.setTime(TimeBase.nowDate());
-
-    Connection conn = null;
-    PreparedStatement statement = null;
-    ResultSet resultSet = null;
-    String sql = SQL_QUERY_BOOK_REQUEST_SELECT;
-
-    try {
-      conn = dbManager.getConnection();
-
-      statement = conn.prepareStatement(sql);
-      statement.setLong(1, book.getLockssId());
-      resultSet = statement.executeQuery();
-
-      assertEquals(true, resultSet.next());
-
-      if (requestData.get(CounterReportsBook.IS_SECTION_KEY) != null) {
-	assertEquals(
-	    ((Boolean) requestData.get(CounterReportsBook.IS_SECTION_KEY))
-		.booleanValue(),
-	    resultSet.getBoolean(SQL_COLUMN_IS_SECTION));
-      } else {
-	assertEquals(false, resultSet.getBoolean(SQL_COLUMN_IS_SECTION));
-      }
-
-      if (requestData.get(CounterReportsBook.IS_PUBLISHER_INVOLVED_KEY) != null) {
-	assertEquals(
-	    ((Boolean) requestData.get(CounterReportsBook.IS_PUBLISHER_INVOLVED_KEY))
-		.booleanValue(), resultSet
-		.getBoolean(SQL_COLUMN_IS_PUBLISHER_INVOLVED));
-      } else {
-	assertEquals(false,
-	    resultSet.getBoolean(SQL_COLUMN_IS_PUBLISHER_INVOLVED));
-      }
-
-      assertEquals(cal.get(Calendar.YEAR),
-	  resultSet.getShort(SQL_COLUMN_REQUEST_YEAR));
-      assertEquals(cal.get(Calendar.MONTH) + 1,
-	  resultSet.getShort(SQL_COLUMN_REQUEST_MONTH));
-      assertEquals(cal.get(Calendar.DAY_OF_MONTH),
-	  resultSet.getShort(SQL_COLUMN_REQUEST_DAY));
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(statement);
-      DbManager.safeRollbackAndClose(conn);
-    }
-  }
-
-  /**
-   * Tests the recording of a journal request.
-   * 
-   * @throws Exception
-   */
-  public void runTestJournalRecordRequest() throws Exception {
-    CounterReportsJournal journal =
-	new CounterReportsJournal("Journal1", "Publisher1", "Platform1", null,
-	    null, "1234-5678", "9876-5432");
-
-    ArchivalUnit journalAu =
-	new MyMockJournalArchivalUnit(journal, "1234", "1954",
-	    Constants.MIME_TYPE_HTML);
-
-    CounterReportsRequestRecorder recorder =
-	CounterReportsRequestRecorder.getInstance();
-    recorder.recordRequest(IGNORABLE_URL, journalAu,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(3);
-    checkRequestRowCount(1);
-
-    recorder.recordRequest(RECORDABLE_URL, journalAu,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(4);
-    checkRequestRowCount(2);
-
-    Map<String, Object> requestData = new HashMap<String, Object>();
-    requestData.put(CounterReportsJournal.PUBLICATION_YEAR_KEY, "1954");
-    requestData.put(CounterReportsJournal.IS_HTML_KEY, Boolean.TRUE);
-    requestData.put(CounterReportsJournal.IS_PDF_KEY, Boolean.FALSE);
-    requestData.put(CounterReportsJournal.IS_PUBLISHER_INVOLVED_KEY,
-	Boolean.FALSE);
-  }
-
-  private class MyMockJournalArchivalUnit extends MockArchivalUnit {
-    private String journalTitle;
-    private String platform = null;
-    private String auId = null;
-    private String doi = null;
-    private String printIssn = null;
-    private String onlineIssn = null;
-    private String publisherName = null;
-    private String year = null;
-    private String contentType = null;
-
-    public MyMockJournalArchivalUnit(CounterReportsJournal journal,
-	String auId, String year, String contentType) {
-      this.journalTitle = journal.getName();
-      this.platform = journal.getPublishingPlatform();
-      this.auId = auId;
-      this.doi = journal.getDoi();
-      this.printIssn = journal.getPrintIssn();
-      this.onlineIssn = journal.getOnlineIssn();
-      this.publisherName = journal.getPublisherName();
-      this.year = year;
-      this.contentType = contentType;
-    }
-
-    public Plugin getPlugin() {
-      return new MyMockPlugin();
-    }
-
-    public TitleConfig getTitleConfig() {
-      return new MockJournalConfig("displayName", "pluginName");
-    }
-
-    public CachedUrl makeCachedUrl(String url) {
-      return new MyMockCachedUrl(url);
-    }
-
-    private class MockJournalConfig extends TitleConfig {
-      public MockJournalConfig(String displayName, String pluginName) {
-	super(displayName, pluginName);
-      }
-
-      public TdbAu getTdbAu() {
-	return new MockTdbAu("displayName", "pluginId");
-      }
-
-      private class MockTdbAu extends TdbAu {
-	public MockTdbAu(String displayName, String pluginId) {
-	  super(displayName, pluginId);
-	  setAuId(auId);
-	}
-
-	public String getEissn() {
-	  return onlineIssn;
-	}
-
-	public String getIsbn() {
-	  return null;
-	}
-
-	public String getJournalDoi() {
-	  return doi;
-	}
-
-	public String getJournalId() {
-	  return auId;
-	}
-
-	public String getJournalTitle() {
-	  return journalTitle;
-	}
-
-	public String getPrintIssn() {
-	  return printIssn;
-	}
-
-	public String getPublisherName() {
-	  return publisherName;
-	}
-
-	public String getYear() {
-	  return year;
-	}
-      }
-    }
-
-    private class MyMockPlugin extends MockPlugin {
-      public String getPublishingPlatform() {
-	return platform;
-      }
-    }
-
-    private class MyMockCachedUrl extends MockCachedUrl {
-      public MyMockCachedUrl(String url) {
-	super(url);
-      }
-
-      @Override
-      public String getContentType() {
-	return contentType;
-      }
-    }
-  }
-
-  /**
-   * Checks the expected properties of a journal in the database.
-   * 
-   * @param journal
-   *          A CounterReportsJournal with the journal to be checked.
-   * @throws SQLException
-   */
-  private void checkJournal(CounterReportsJournal journal) throws SQLException {
-    Connection conn = null;
-    PreparedStatement statement = null;
-    ResultSet resultSet = null;
-    String sql = SQL_QUERY_JOURNAL_SELECT;
-
-    try {
-      conn = dbManager.getConnection();
-
-      statement = conn.prepareStatement(sql);
-      statement.setLong(1, journal.getLockssId());
-      resultSet = statement.executeQuery();
-
-      assertEquals(true, resultSet.next());
-      assertEquals(journal.getName(),
-	  resultSet.getString(SQL_COLUMN_TITLE_NAME));
-      assertEquals(journal.getPublisherName(),
-	  resultSet.getString(SQL_COLUMN_PUBLISHER_NAME));
-      assertEquals(journal.getPublishingPlatform(),
-	  resultSet.getString(SQL_COLUMN_PLATFORM_NAME));
-      assertEquals(journal.getDoi(), resultSet.getString(SQL_COLUMN_DOI));
-      assertEquals(journal.getProprietaryId(),
-	  resultSet.getString(SQL_COLUMN_PROPRIETARY_ID));
-      assertEquals(false, resultSet.getBoolean(SQL_COLUMN_IS_BOOK));
-      assertEquals(journal.getPrintIssn(),
-	  resultSet.getString(SQL_COLUMN_PRINT_ISSN));
-      assertEquals(journal.getOnlineIssn(),
-	  resultSet.getString(SQL_COLUMN_ONLINE_ISSN));
-      assertEquals(false, resultSet.next());
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(statement);
-      DbManager.safeRollbackAndClose(conn);
-    }
-  }
-
-  /**
-   * Checks the expected properties of a journal in the database.
-   * 
-   * @param book
-   *          A CounterReportsJournal with the journal to be checked.
-   * @param requestData
-   *          A Map<String, Object> with the data of the request to be checked.
-   * @throws SQLException
-   */
-  private void checkJournalRequest(CounterReportsJournal journal,
-      Map<String, Object> requestData) throws SQLException {
-    if (requestData == null) {
-      requestData = new HashMap<String, Object>();
-    }
-
-    Calendar cal = Calendar.getInstance();
-    cal.setTime(TimeBase.nowDate());
-
-    Connection conn = null;
-    PreparedStatement statement = null;
-    ResultSet resultSet = null;
-    String sql = SQL_QUERY_JOURNAL_REQUEST_SELECT;
-
-    try {
-      conn = dbManager.getConnection();
-
-      statement = conn.prepareStatement(sql);
-      statement.setLong(1, journal.getLockssId());
-      resultSet = statement.executeQuery();
-
-      assertEquals(true, resultSet.next());
-      if (requestData.get(CounterReportsJournal.PUBLICATION_YEAR_KEY) != null) {
-	assertEquals(
-	    ((String) requestData
-		.get(CounterReportsJournal.PUBLICATION_YEAR_KEY)),
-	    resultSet.getString(SQL_COLUMN_PUBLICATION_YEAR));
-      } else {
-	assertNull(resultSet.getString(SQL_COLUMN_PUBLICATION_YEAR));
-      }
-
-      if (requestData.get(CounterReportsJournal.IS_HTML_KEY) != null) {
-	assertEquals(
-	    ((Boolean) requestData.get(CounterReportsJournal.IS_HTML_KEY))
-		.booleanValue(),
-	    resultSet.getBoolean(SQL_COLUMN_IS_HTML));
-      } else {
-	assertEquals(false, resultSet.getBoolean(SQL_COLUMN_IS_HTML));
-      }
-
-      if (requestData.get(CounterReportsJournal.IS_PDF_KEY) != null) {
-	assertEquals(
-	    ((Boolean) requestData.get(CounterReportsJournal.IS_PDF_KEY))
-		.booleanValue(),
-	    resultSet.getBoolean(SQL_COLUMN_IS_PDF));
-      } else {
-	assertEquals(false, resultSet.getBoolean(SQL_COLUMN_IS_PDF));
-      }
-
-      if (requestData.get(CounterReportsBook.IS_PUBLISHER_INVOLVED_KEY) != null) {
-	assertEquals(
-	    ((Boolean) requestData.get(CounterReportsBook.IS_PUBLISHER_INVOLVED_KEY))
-		.booleanValue(), resultSet
-		.getBoolean(SQL_COLUMN_IS_PUBLISHER_INVOLVED));
-      } else {
-	assertEquals(false,
-	    resultSet.getBoolean(SQL_COLUMN_IS_PUBLISHER_INVOLVED));
-      }
-
-      assertEquals(cal.get(Calendar.YEAR),
-	  resultSet.getShort(SQL_COLUMN_REQUEST_YEAR));
-      assertEquals(cal.get(Calendar.MONTH) + 1,
-	  resultSet.getShort(SQL_COLUMN_REQUEST_MONTH));
-      assertEquals(cal.get(Calendar.DAY_OF_MONTH),
-	  resultSet.getShort(SQL_COLUMN_REQUEST_DAY));
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(statement);
-      DbManager.safeRollbackAndClose(conn);
-    }
-  }
-
-  /**
-   * Tests the recording of requests for multiple book.
-   * 
-   * @throws Exception
-   */
-  public void runTestRecordMultipleRequests() throws Exception {
-    CounterReportsBook book1 =
-	new CounterReportsBook("Book1", "Publisher1", "Platform1", null, null,
-	    "987-654321-0987", "1234-5678");
-
-    ArchivalUnit bookAu1 = new MyMockBookArchivalUnit(book1, "1234");
-
-    CounterReportsBook book2 =
-	new CounterReportsBook("Book2", "Publisher2", "Platform2", null, null,
-	    "987-654322-0987", "2234-5678");
-
-    ArchivalUnit bookAu2 = new MyMockBookArchivalUnit(book2, "2234");
-
-    CounterReportsBook book3 =
-	new CounterReportsBook("Book3", "Publisher3", "Platform3", null, null,
-	    "987-654323-0987", "3234-5678");
-
-    ArchivalUnit bookAu3 = new MyMockBookArchivalUnit(book3, "3234");
-
-    CounterReportsBook book4 =
-	new CounterReportsBook("Book4", "Publisher4", "Platform4", null, null,
-	    "987-654324-0987", "4234-5678");
-
-    ArchivalUnit bookAu4 = new MyMockBookArchivalUnit(book4, "4234");
-
-    CounterReportsJournal journal1 =
-	new CounterReportsJournal("Journal1", "Publisher1", "Platform1", null,
-	    null, "1234-5678", "9876-5432");
-
-    ArchivalUnit journalAu1 =
-	new MyMockJournalArchivalUnit(journal1, "1234", "1954",
-	    Constants.MIME_TYPE_HTML);
-
-    CounterReportsJournal journal2 =
-	new CounterReportsJournal("Journal2", "Publisher2", "Platform2", null,
-	    null, "2234-5678", "9876-5433");
-
-    ArchivalUnit journalAu2 =
-	new MyMockJournalArchivalUnit(journal2, "2234", "1964",
-	    Constants.MIME_TYPE_PDF);
-
-    CounterReportsJournal journal3 =
-	new CounterReportsJournal("Journal3", "Publisher3", "Platform3", null,
-	    null, "3234-5678", "9876-5434");
-
-    ArchivalUnit journalAu3 =
-	new MyMockJournalArchivalUnit(journal3, "3234", "1974",
-	    Constants.MIME_TYPE_HTML);
-
-    CounterReportsJournal journal4 =
-	new CounterReportsJournal("Journal4", "Publisher4", "Platform4", null,
-	    null, "4234-5678", "9876-5435");
-
-    ArchivalUnit journalAu4 =
-	new MyMockJournalArchivalUnit(journal4, "4234", "1984",
-	    Constants.MIME_TYPE_PDF);
-
-    CounterReportsRequestRecorder recorder =
-	CounterReportsRequestRecorder.getInstance();
-
-    recorder.recordRequest(IGNORABLE_URL, bookAu1,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(4);
-    checkRequestRowCount(2);
-
-    recorder.recordRequest(RECORDABLE_URL, bookAu1,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(4);
-    checkRequestRowCount(3);
-
-    Map<String, Object> requestData = new HashMap<String, Object>();
-    requestData.put(CounterReportsBook.IS_SECTION_KEY, Boolean.FALSE);
-    requestData
-	.put(CounterReportsBook.IS_PUBLISHER_INVOLVED_KEY, Boolean.FALSE);
-
-    recorder.recordRequest(IGNORABLE_URL, bookAu2,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(4);
-    checkRequestRowCount(3);
-
-    recorder.recordRequest(RECORDABLE_URL, bookAu2,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(5);
-    checkRequestRowCount(4);
-
-    requestData = new HashMap<String, Object>();
-    requestData.put(CounterReportsBook.IS_SECTION_KEY, Boolean.FALSE);
-    requestData.put(CounterReportsBook.IS_PUBLISHER_INVOLVED_KEY, Boolean.TRUE);
-
-    recorder.recordRequest(RECORDABLE_URL, bookAu2,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(5);
-    checkRequestRowCount(5);
-
-    recorder.recordRequest(IGNORABLE_URL, bookAu3,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(5);
-    checkRequestRowCount(5);
-
-    recorder.recordRequest(RECORDABLE_URL, bookAu3,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(6);
-    checkRequestRowCount(6);
-
-    requestData = new HashMap<String, Object>();
-    requestData.put(CounterReportsBook.IS_SECTION_KEY, Boolean.FALSE);
-    requestData.put(CounterReportsBook.IS_PUBLISHER_INVOLVED_KEY, Boolean.TRUE);
-
-    recorder.recordRequest(RECORDABLE_URL, bookAu3,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(6);
-    checkRequestRowCount(7);
-
-    recorder.recordRequest(RECORDABLE_URL, bookAu3,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(6);
-    checkRequestRowCount(8);
-
-    recorder.recordRequest(IGNORABLE_URL, journalAu1,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(6);
-    checkRequestRowCount(8);
-
-    recorder.recordRequest(RECORDABLE_URL, journalAu1,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(6);
-    checkRequestRowCount(9);
-
-    requestData = new HashMap<String, Object>();
-    requestData.put(CounterReportsJournal.PUBLICATION_YEAR_KEY, "1954");
-    requestData.put(CounterReportsJournal.IS_HTML_KEY, Boolean.TRUE);
-    requestData.put(CounterReportsJournal.IS_PDF_KEY, Boolean.FALSE);
-    requestData.put(CounterReportsJournal.IS_PUBLISHER_INVOLVED_KEY,
-	Boolean.FALSE);
-
-    recorder.recordRequest(RECORDABLE_URL, journalAu1,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(6);
-    checkRequestRowCount(10);
-
-    recorder.recordRequest(RECORDABLE_URL, journalAu1,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(6);
-    checkRequestRowCount(11);
-
-    recorder.recordRequest(RECORDABLE_URL, journalAu1,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(6);
-    checkRequestRowCount(12);
-
-    recorder.recordRequest(IGNORABLE_URL, bookAu4,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(6);
-    checkRequestRowCount(12);
-
-    recorder.recordRequest(RECORDABLE_URL, bookAu4,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(7);
-    checkRequestRowCount(13);
-
-    requestData = new HashMap<String, Object>();
-    requestData.put(CounterReportsBook.IS_SECTION_KEY, Boolean.FALSE);
-    requestData
-	.put(CounterReportsBook.IS_PUBLISHER_INVOLVED_KEY, Boolean.FALSE);
-
-    recorder.recordRequest(RECORDABLE_URL, bookAu4,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(7);
-    checkRequestRowCount(14);
-
-    recorder.recordRequest(RECORDABLE_URL, bookAu4,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(7);
-    checkRequestRowCount(15);
-
-    recorder.recordRequest(RECORDABLE_URL, bookAu4,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(7);
-    checkRequestRowCount(16);
-
-    recorder.recordRequest(IGNORABLE_URL, journalAu2,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(7);
-    checkRequestRowCount(16);
-
-    recorder.recordRequest(RECORDABLE_URL, journalAu2,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(8);
-    checkRequestRowCount(17);
-
-    requestData = new HashMap<String, Object>();
-    requestData.put(CounterReportsJournal.PUBLICATION_YEAR_KEY, "1964");
-    requestData.put(CounterReportsJournal.IS_HTML_KEY, Boolean.FALSE);
-    requestData.put(CounterReportsJournal.IS_PDF_KEY, Boolean.TRUE);
-    requestData.put(CounterReportsJournal.IS_PUBLISHER_INVOLVED_KEY,
-	Boolean.TRUE);
-
-    recorder.recordRequest(RECORDABLE_URL, journalAu2,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(8);
-    checkRequestRowCount(18);
-
-    recorder.recordRequest(RECORDABLE_URL, journalAu2,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(8);
-    checkRequestRowCount(19);
-
-    recorder.recordRequest(IGNORABLE_URL, journalAu3,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(8);
-    checkRequestRowCount(19);
-
-    recorder.recordRequest(RECORDABLE_URL, journalAu3,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(9);
-    checkRequestRowCount(20);
-
-    requestData = new HashMap<String, Object>();
-    requestData.put(CounterReportsJournal.PUBLICATION_YEAR_KEY, "1974");
-    requestData.put(CounterReportsJournal.IS_HTML_KEY, Boolean.TRUE);
-    requestData.put(CounterReportsJournal.IS_PDF_KEY, Boolean.FALSE);
-    requestData.put(CounterReportsJournal.IS_PUBLISHER_INVOLVED_KEY,
-	Boolean.TRUE);
-
-    recorder.recordRequest(RECORDABLE_URL, journalAu3,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
-
-    checkTitleRowCount(9);
-    checkRequestRowCount(21);
-
-    recorder.recordRequest(IGNORABLE_URL, journalAu4,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(9);
-    checkRequestRowCount(21);
-
-    recorder.recordRequest(RECORDABLE_URL, journalAu4,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
-
-    checkTitleRowCount(10);
-    checkRequestRowCount(22);
-
-    requestData = new HashMap<String, Object>();
-    requestData.put(CounterReportsJournal.PUBLICATION_YEAR_KEY, "1984");
-    requestData.put(CounterReportsJournal.IS_HTML_KEY, Boolean.FALSE);
-    requestData.put(CounterReportsJournal.IS_PDF_KEY, Boolean.TRUE);
-    requestData.put(CounterReportsJournal.IS_PUBLISHER_INVOLVED_KEY,
-	Boolean.FALSE);
   }
 }

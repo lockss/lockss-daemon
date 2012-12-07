@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.72 2012-08-02 03:09:44 clairegriffin Exp $
+ * $Id: ProxyHandler.java,v 1.73 2012-12-07 07:27:05 fergaloy-sf Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.72 2012-08-02 03:09:44 clairegriffin Exp $
+// $Id: ProxyHandler.java,v 1.73 2012-12-07 07:27:05 fergaloy-sf Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -41,25 +41,24 @@ import java.io.*;
 import java.net.*;
 import java.net.HttpURLConnection;
 import java.util.*;
-
 import org.apache.commons.collections.SetUtils;
 import org.apache.commons.httpclient.util.*;
 import org.apache.commons.logging.Log;
+import org.lockss.app.LockssDaemon;
+import org.lockss.config.*;
+import org.lockss.daemon.CuUrl;
+import org.lockss.exporter.counter.CounterReportsRequestRecorder;
+import org.lockss.plugin.*;
+import org.lockss.state.AuState;
+import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
+import org.lockss.servlet.ServletUtil;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.AbstractHttpHandler;
 import org.mortbay.log.LogFactory;
 import org.mortbay.util.*;
 import org.mortbay.util.URI;
 import org.mortbay.html.*;
-
-import org.lockss.app.LockssDaemon;
-import org.lockss.config.*;
-import org.lockss.daemon.CuUrl;
-import org.lockss.plugin.*;
-import org.lockss.state.AuState;
-import org.lockss.util.*;
-import org.lockss.util.urlconn.*;
-import org.lockss.servlet.ServletUtil;
 
 /* ------------------------------------------------------------ */
 /** Proxy request handler.  A HTTP/1.1 Proxy with special handling for
@@ -71,6 +70,7 @@ import org.lockss.servlet.ServletUtil;
  * @author Greg Wilkins (gregw)
  * @author tal
  */
+@SuppressWarnings("serial")
 public class ProxyHandler extends AbstractHttpHandler {
   private static Logger log = Logger.getLogger("ProxyHandler");
   private static Log jlog = LogFactory.getLog(ProxyHandler.class);
@@ -405,6 +405,12 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  serveFromCache(pathInContext, pathParams, request,
 			 response, cu);
 	  logAccess(request, "200 from cache");
+	  // Record the necessary information required for COUNTER reports.
+	  CounterReportsRequestRecorder
+	      .getInstance()
+	      .recordRequest(urlString,
+			     CounterReportsRequestRecorder.PublisherContacted.FALSE,
+			     200);
 	  return;
 	} else {
 	  // Not found on cache and told not to forward request
@@ -620,6 +626,12 @@ public class ProxyHandler extends AbstractHttpHandler {
 	if (log.isDebug2()) log.debug2("Nopub: " + cu.getUrl());
 	serveFromCache(pathInContext, pathParams, request, response, cu);
 	logAccess(request, "200 from cache");
+	// Record the necessary information required for COUNTER reports.
+	CounterReportsRequestRecorder
+	    .getInstance()
+	    .recordRequest(urlString,
+			   CounterReportsRequestRecorder.PublisherContacted.FALSE,
+			   200);
 	return;
       }
       if (isPubNever(cu)) {
@@ -763,6 +775,12 @@ public class ProxyHandler extends AbstractHttpHandler {
 	// if we get any error and it's in the cache, serve it from there
 	if (isInCache) {
 	  serveFromCache(pathInContext, pathParams, request, response, cu);
+	  // Record the necessary information required for COUNTER reports.
+	  CounterReportsRequestRecorder
+	      .getInstance()
+	      .recordRequest(urlString,
+			     CounterReportsRequestRecorder.PublisherContacted.TRUE,
+			     conn.getResponseCode());
 	} else {
 	  // else generate an error page
 	  sendProxyErrorPage(e, request, response,
@@ -788,6 +806,12 @@ public class ProxyHandler extends AbstractHttpHandler {
 
 	serveFromCache(pathInContext, pathParams, request,
 		       response, cu);
+	// Record the necessary information required for COUNTER reports.
+	CounterReportsRequestRecorder
+	    .getInstance()
+	    .recordRequest(urlString,
+			   CounterReportsRequestRecorder.PublisherContacted.TRUE,
+			   conn.getResponseCode());
 	return;
       }
 

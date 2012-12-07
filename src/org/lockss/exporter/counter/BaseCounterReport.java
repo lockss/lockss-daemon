@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCounterReport.java,v 1.2 2012-10-01 21:08:50 fergaloy-sf Exp $
+ * $Id: BaseCounterReport.java,v 1.3 2012-12-07 07:27:05 fergaloy-sf Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ import org.lockss.util.Logger;
 import org.lockss.util.TimeBase;
 
 public abstract class BaseCounterReport implements CounterReport {
-  private static final Logger log = Logger.getLogger("BaseCounterReport");
+  private static final Logger log = Logger.getLogger(BaseCounterReport.class);
 
   // The reports separators.
   protected static final String COMMA = ",";
@@ -75,10 +75,10 @@ public abstract class BaseCounterReport implements CounterReport {
       "Inconsistent data set - First result is not ALL JOURNALS data";
 
   protected static final String ERROR_UNEXPECTED_IDENTIFIER =
-      "Inconsistent data set - Unexpected additional LOCKSS identifier";
+      "Inconsistent data set - Unexpected additional identifier";
 
   protected static final String ERROR_WRONG_SORTING =
-      "Inconsistent data set - Wrong LOCKSS identifier sorting";
+      "Inconsistent data set - Wrong identifier sorting";
 
   // The format of a date as required by the report.
   protected static final SimpleDateFormat dateFormat = new SimpleDateFormat(
@@ -216,10 +216,10 @@ public abstract class BaseCounterReport implements CounterReport {
    * @return a File with the report output file.
    * @throws SQLException
    * @throws IOException
-   * @throws Exception
+   * @throws CounterReportsException
    */
   private File saveReport(String separator, String extension)
-      throws SQLException, IOException, Exception {
+      throws SQLException, IOException, CounterReportsException {
     // Determine the report file name.
     CounterReportsManager reportManager = daemon.getCounterReportsManager();
     String fileName = getReportFileName(extension);
@@ -232,7 +232,42 @@ public abstract class BaseCounterReport implements CounterReport {
     if (writer != null) {
       // Yes: Get the report data, if not available already.
       if (!ready) {
-        compileReportData();
+	try {
+	  compileReportData();
+	} catch (SQLException sqle) {
+	  writer.close();
+
+	  // Delete the partially-written file.
+	  if (reportManager.deleteReportOutputFile(fileName)) {
+	    log.error("Failed to delete invalid " + extension.toUpperCase()
+		+ " report file.");
+	  }
+
+	  // Notify the caller.
+	  throw sqle;
+	} catch (CounterReportsException cre) {
+	  writer.close();
+
+	  // Delete the partially-written file.
+	  if (reportManager.deleteReportOutputFile(fileName)) {
+	    log.error("Failed to delete invalid " + extension.toUpperCase()
+		+ " report file.");
+	  }
+
+	  // Notify the caller.
+	  throw cre;
+	} catch (Exception e) {
+	  writer.close();
+
+	  // Delete the partially-written file.
+	  if (reportManager.deleteReportOutputFile(fileName)) {
+	    log.error("Failed to delete invalid " + extension.toUpperCase()
+		+ " report file.");
+	  }
+
+	  // Notify the caller.
+	  throw new CounterReportsException(e);
+	}
       }
 
       // Loop through all the lines in the report.
@@ -270,9 +305,9 @@ public abstract class BaseCounterReport implements CounterReport {
    * Compiles the data needed by the report.
    * 
    * @throws SQLException
-   * @throws Exception
+   * @throws CounterReportsException
    */
-  private void compileReportData() throws SQLException, Exception {
+  private void compileReportData() throws SQLException, CounterReportsException {
     final String DEBUG_HEADER = "compileReportData(): ";
 
     DbManager dbManager = daemon.getDbManager();
@@ -340,7 +375,7 @@ public abstract class BaseCounterReport implements CounterReport {
    * @throws SQLException
    */
   protected abstract void initializeReportRows(Connection conn)
-      throws SQLException, Exception;
+      throws SQLException;
 
   /**
    * Adds the request counts to the rows to be included in the report.
@@ -348,10 +383,10 @@ public abstract class BaseCounterReport implements CounterReport {
    * @param conn
    *          A Connection with a connection to the database.
    * @throws SQLException
-   * @throws Exception
+   * @throws CounterReportsException
    */
   protected abstract void addReportRequestCounts(Connection conn)
-      throws SQLException, Exception;
+      throws SQLException, CounterReportsException;
 
   /**
    * Provides the name of the report to be used in the report file name.
@@ -642,6 +677,42 @@ public abstract class BaseCounterReport implements CounterReport {
   }
 
   /**
+   * Formats an ISBN for display.
+   * 
+   * @param unformatted
+   *          A String with the ISBN without punctuation.
+   * @return a String with the formatted ISBN.
+   */
+  protected String formatIsbn(String unformatted) {
+    String formatted = unformatted;
+    
+    if (unformatted != null && unformatted.length() > 9) {
+      formatted =
+	  unformatted.substring(0, 3) + "-" + unformatted.substring(3, 9) + "-"
+	      + unformatted.substring(9);
+    }
+
+    return formatted;
+  }
+
+  /**
+   * Formats an ISSN for display.
+   * 
+   * @param unformatted
+   *          A String with the ISSN without punctuation.
+   * @return a String with the formatted ISSN.
+   */
+  protected String formatIssn(String unformatted) {
+    String formatted = unformatted;
+    
+    if (unformatted != null && unformatted.length() > 4) {
+      formatted = unformatted.substring(0,4) + "-" + unformatted.substring(4);
+    }
+
+    return formatted;
+  }
+
+  /**
    * Representation of the report header.
    * 
    * A report has a 7-line header. Each line has one or two columns.
@@ -695,8 +766,8 @@ public abstract class BaseCounterReport implements CounterReport {
    * report, there will be n+1 rows in the request data set of the report.
    */
   protected class Row {
-    // The LOCKSS identifier of the row title.
-    private long lockssId;
+    // The identifier of the row title.
+    private Long titleId;
 
     // The title properties.
     private CounterReportsTitle title;
@@ -708,36 +779,36 @@ public abstract class BaseCounterReport implements CounterReport {
     /**
      * Constructor.
      * 
-     * @param lockssId
-     *          A long with the LOCKSS identifier of the row title.
+     * @param titleId
+     *          A Long with the identifier of the row title.
      * @param title
      *          A CounterReportsTitle with the title properties.
      */
-    public Row(long lockssId, CounterReportsTitle title) {
-      this.lockssId = lockssId;
+    public Row(Long titleId, CounterReportsTitle title) {
+      this.titleId = titleId;
       this.title = title;
     }
 
     /**
-     * Provides the LOCKSS identifier of the row title.
+     * Provides the identifier of the row title.
      * 
-     * @return a long with the LOCKSS identifier of the row title.
+     * @return a Long with the identifier of the row title.
      */
-    public long getLockssId() {
-      return lockssId;
+    public long getTitleId() {
+      return titleId;
     }
 
     /**
      * Provides the title properties.
      * 
-     * @return a String with the title properties.
+     * @return a CounterReportsTitle with the title properties.
      */
     public CounterReportsTitle getTitle() {
       return title;
     }
 
     /**
-     * Provides the request counts title associated to a row.
+     * Provides the request counts associated to a row.
      * 
      * @return a List<ItemCounts> with the request counts for the row title.
      */

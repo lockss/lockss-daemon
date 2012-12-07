@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.13 2012-08-09 17:59:36 pgust Exp $
+ * $Id: MetadataField.java,v 1.14 2012-12-07 07:27:05 fergaloy-sf Exp $
  */
 
 /*
@@ -33,7 +33,6 @@
 package org.lockss.extractor;
 
 import java.util.*;
-
 import org.lockss.util.*;
 import org.apache.commons.lang.StringUtils;
 import java.util.regex.Matcher;
@@ -198,6 +197,10 @@ public class MetadataField {
   public static final String KEY_ACCESS_URL = "access.url";
   public static final MetadataField FIELD_ACCESS_URL = new MetadataField(
       KEY_ACCESS_URL, Cardinality.Single);
+  
+  public static final String KEY_FEATURED_URL_MAP = "featured.url.map";
+  public static final MetadataField FIELD_FEATURED_URL_MAP = new MetadataField(
+    KEY_FEATURED_URL_MAP, Cardinality.Single);
 
   public static final String KEY_KEYWORDS = "keywords";
   public static final MetadataField FIELD_KEYWORDS = new MetadataField(
@@ -427,6 +430,19 @@ public class MetadataField {
   public static final MetadataField DC_FIELD_TYPE = new MetadataField(
       DC_KEY_TYPE, Cardinality.Single);
 
+  public static final String KEY_COVERAGE = "coverage";
+  public static final MetadataField FIELD_COVERAGE =
+      new MetadataField(KEY_COVERAGE, Cardinality.Single);
+
+  public static final String KEY_ITEM_NUMBER = "item_number";
+  public static final MetadataField FIELD_ITEM_NUMBER =
+      new MetadataField(KEY_ITEM_NUMBER, Cardinality.Single);
+
+  public static final String KEY_PROPRIETARY_IDENTIFIER =
+      "propietary_identifier";
+  public static final MetadataField FIELD_PROPRIETARY_IDENTIFIER =
+      new MetadataField(KEY_PROPRIETARY_IDENTIFIER, Cardinality.Single);
+
   private static MetadataField[] fields = { 
     FIELD_VOLUME, 
     FIELD_ISSUE,
@@ -437,10 +453,14 @@ public class MetadataField {
     FIELD_AUTHOR,
     FIELD_ACCESS_URL,
     FIELD_KEYWORDS,
-    DC_FIELD_IDENTIFIER.
+    DC_FIELD_IDENTIFIER,
     DC_FIELD_DATE,
     DC_FIELD_CONTRIBUTOR, 
-    };
+    FIELD_COVERAGE,
+    FIELD_ITEM_NUMBER,
+    FIELD_PROPRIETARY_IDENTIFIER,
+    FIELD_FEATURED_URL_MAP
+  };
 
   // maps keys to fields
   private static Map<String, MetadataField> fieldMap = new HashMap<String, 

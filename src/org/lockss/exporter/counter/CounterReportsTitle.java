@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsTitle.java,v 1.1 2012-08-16 22:19:14 fergaloy-sf Exp $
+ * $Id: CounterReportsTitle.java,v 1.2 2012-12-07 07:27:04 fergaloy-sf Exp $
  */
 
 /*
@@ -33,15 +33,10 @@
 /**
  * Representation of a title used in COUNTER reports.
  * 
- * @author Fernando Garcia-Loygorri
  * @version 1.0
  * 
  */
 package org.lockss.exporter.counter;
-
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.Map;
 
 public interface CounterReportsTitle {
 
@@ -65,15 +60,6 @@ public interface CounterReportsTitle {
    * @return a String with the ISSN of the title.
    */
   String getIssn();
-
-  /**
-   * Provides the LOCKSS identifier of the title.
-   * 
-   * @return a long with the LOCKSS identifier of the title.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  long getLockssId() throws SQLException;
 
   /**
    * Provides the name of the title.
@@ -116,33 +102,4 @@ public interface CounterReportsTitle {
    * @return a String with the publishing platform name of the title.
    */
   String getPublishingPlatform();
-
-  /**
-   * Computes the LOCKSS identifier of the title and persists the title if
-   * necessary.
-   * 
-   * @throws SQLException
-   */
-  void identify() throws SQLException;
-
-  /**
-   * Provides an indication of whether the title is a book.
-   * 
-   * @return a boolean with the indication.
-   */
-  boolean isBook();
-
-  /**
-   * Persists a title request.
-   * 
-   * @param requestData
-   *          A Map<String, Object> with properties of the request to be
-   *          persisted.
-   * @param conn
-   *          A Connection representing the database connection.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  void persistRequest(Map<String, Object> requestData, Connection conn)
-      throws SQLException;
 }

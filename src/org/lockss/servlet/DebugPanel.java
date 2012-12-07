@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.33 2012-11-08 06:21:40 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.34 2012-12-07 07:27:04 fergaloy-sf Exp $
  */
 
 /*
@@ -32,30 +32,23 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
-import java.util.*;
-import java.net.*;
-import java.text.*;
-import java.security.*;
 import org.mortbay.html.*;
-import org.mortbay.util.B64Code;
 import org.lockss.app.*;
 import org.lockss.util.*;
-import org.lockss.mail.*;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.poller.*;
 import org.lockss.crawler.*;
 import org.lockss.state.*;
 import org.lockss.config.*;
 import org.lockss.remote.*;
 import org.lockss.plugin.*;
-import org.lockss.daemon.*;
 import org.lockss.account.*;
-import org.lockss.daemon.status.*;
 
 /** UI to invoke various daemon actions
  */
+@SuppressWarnings("serial")
 public class DebugPanel extends LockssServlet {
 
   public static final String PREFIX = Configuration.PREFIX + "debugPanel.";
@@ -96,6 +89,7 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_FORCE_START_DEEP_CRAWL = "Force Deep Crawl";
   static final String ACTION_CRAWL_PLUGINS = "Crawl Plugins";
   static final String ACTION_RELOAD_CONFIG = "Reload Config";
+  static final String ACTION_DISABLE_METADATA_INDEXING = "Disable Indexing";
 
   static final String COL2 = "colspan=2";
   static final String COL2CENTER = COL2 + " align=center";
@@ -200,6 +194,9 @@ public class DebugPanel extends LockssServlet {
     if (ACTION_FORCE_REINDEX_METADATA.equals(action)) {
       forceReindexMetadata();
     }
+    if (ACTION_DISABLE_METADATA_INDEXING.equals(action)) {
+      doDisableMetadataIndexing();
+    }
     if (showForm) {
       displayPage();
     }
@@ -240,6 +237,17 @@ public class DebugPanel extends LockssServlet {
       startReindexingMetadata(au, true);
     } catch (RuntimeException e) {
       log.error("Can't reindex metadata", e);
+      errMsg = "Error: " + e.toString();
+    }
+  }
+
+  private void doDisableMetadataIndexing() {
+    ArchivalUnit au = getAu();
+    if (au == null) return;
+    try {
+      disableMetadataIndexing(au, false);
+    } catch (RuntimeException e) {
+      log.error("Can't disable metadata indexing", e);
       errMsg = "Error: " + e.toString();
     }
   }
@@ -293,7 +301,7 @@ public class DebugPanel extends LockssServlet {
     } catch (CrawlManagerImpl.NotEligibleException e) {
       delayMsg = ", Start delayed due to: " + e.getMessage();
     }
-    Configuration config = cfgMgr.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     int pri = config.getInt(PARAM_CRAWL_PRIORITY, DEFAULT_CRAWL_PRIORITY);
 
     CrawlReq req;
@@ -363,6 +371,19 @@ public class DebugPanel extends LockssServlet {
     return false;
   }
 
+  private boolean disableMetadataIndexing(ArchivalUnit au, boolean force) {
+    if (metadataMgr == null) {
+      errMsg = "Metadata processing is not enabled.";
+      return false;
+    }
+    
+    if (metadataMgr.disableAuIndexing(au)) {
+      statusMsg = "Disabled metadata indexing for " + au.getName();
+      return true;
+    }
+      errMsg = "Cannot reindex metadata for " + au.getName();
+    return false;
+  }
 
   private void doV3Poll() {
     ArchivalUnit au = getAu();
@@ -499,6 +520,10 @@ public class DebugPanel extends LockssServlet {
                                   : ACTION_REINDEX_METADATA));
       frm.add(" ");
       frm.add(reindex);
+      Input disableIndexing = new Input(Input.Submit, KEY_ACTION,
+                                        ACTION_DISABLE_METADATA_INDEXING);
+      frm.add(" ");
+      frm.add(disableIndexing);
     }
     frm.add("</center>");
     if (CurrentConfig.getBooleanParam(PARAM_ENABLE_DEEP_CRAWL,

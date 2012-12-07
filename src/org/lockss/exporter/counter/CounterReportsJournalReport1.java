@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsJournalReport1.java,v 1.1 2012-08-28 17:36:49 fergaloy-sf Exp $
+ * $Id: CounterReportsJournalReport1.java,v 1.2 2012-12-07 07:27:04 fergaloy-sf Exp $
  */
 
 /*
@@ -32,13 +32,12 @@
 
 /**
  * The COUNTER Journal Report 1.
- * 
- * @version 1.0
- * 
  */
 package org.lockss.exporter.counter;
 
+import static org.lockss.db.DbManager.*;
 import static org.lockss.exporter.counter.CounterReportsManager.*;
+import static org.lockss.metadata.MetadataManager.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -54,69 +53,87 @@ import org.lockss.util.StringUtil;
 
 public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
   private static final Logger log = Logger
-      .getLogger("CounterReportsJournalReport1");
+      .getLogger(CounterReportsJournalReport1.class);
 
-  // Query to get the journals to be included in the report.
-  //
-  // It joins the Titles and Aggregates tables to get the titles that are not
-  // books with requests that did not involve the publisher during the period
-  // of the report.
+  // Query to get the journals to be included in the report: titles that are not
+  // books with requests that did not involve the publisher during the period of
+  // the report.
   private static final String SQL_QUERY_REPORT_JOURNALS_SELECT = "select "
-      + "distinct a." + SQL_COLUMN_LOCKSS_ID
-      + ", t." + SQL_COLUMN_TITLE_NAME
-      + ", t." + SQL_COLUMN_PUBLISHER_NAME
-      + ", t." + SQL_COLUMN_PLATFORM_NAME
-      + ", t." + SQL_COLUMN_DOI
-      + ", t." + SQL_COLUMN_PROPRIETARY_ID
-      + ", t." + SQL_COLUMN_PRINT_ISSN
-      + ", t." + SQL_COLUMN_ONLINE_ISSN
-      + " from " + SQL_TABLE_TYPE_AGGREGATES + " a,"
-      + SQL_TABLE_TITLES + " t "
-      + "where "
-      + "(t." + SQL_COLUMN_TITLE_NAME + " != '" + ALL_JOURNALS_TITLE_NAME
-      + "' or t." + SQL_COLUMN_PUBLISHER_NAME + " != '"
-      + ALL_PUBLISHERS_NAME + "') "
-      + "and t." + SQL_COLUMN_IS_BOOK + " = false "
-      + "and a." + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = false "
-      + "and ((a." + SQL_COLUMN_REQUEST_MONTH + " >= ? "
-      + "and a." + SQL_COLUMN_REQUEST_YEAR + " = ?) "
-      + "or a." + SQL_COLUMN_REQUEST_YEAR + " > ?) "
-      + "and ((a." + SQL_COLUMN_REQUEST_MONTH + " <= ? "
-      + "and a." + SQL_COLUMN_REQUEST_YEAR + " = ?) "
-      + "or a." + SQL_COLUMN_REQUEST_YEAR + " < ?) "
-      + "and a." + SQL_COLUMN_LOCKSS_ID + " = t." + SQL_COLUMN_LOCKSS_ID
-      + " order by t." + SQL_COLUMN_TITLE_NAME + " asc";
+      + "distinct a." + PUBLICATION_SEQ_COLUMN
+      + ", m1." + PRIMARY_NAME_COLUMN
+      + ", p." + PUBLICATION_ID_COLUMN
+      + ", pu." + PUBLISHER_NAME_COLUMN
+      + ", pl." + PLATFORM_COLUMN
+      + ", d." + DOI_COLUMN
+      + ", i1." + ISSN_COLUMN + " as " + P_ISSN_TYPE
+      + ", i2." + ISSN_COLUMN + " as " + E_ISSN_TYPE
+      + " from " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE + " a"
+      + "," + PUBLICATION_TABLE + " p"
+      + "," + PUBLISHER_TABLE + " pu"
+      + "," + MD_ITEM_TABLE + " m2"
+      + "," + AU_MD_TABLE + " am"
+      + "," + AU_TABLE + " au"
+      + "," + PLUGIN_TABLE + " pl"
+      + "," + MD_ITEM_TABLE + " m1"
+      + " left outer join " + ISSN_TABLE + " i1"
+      + " on m1." + MD_ITEM_SEQ_COLUMN + " = i1." + MD_ITEM_SEQ_COLUMN
+      + " and i1." + ISSN_TYPE_COLUMN + " = '" + P_ISSN_TYPE + "'"
+      + " left outer join " + ISSN_TABLE + " i2"
+      + " on m1." + MD_ITEM_SEQ_COLUMN + " = i2." + MD_ITEM_SEQ_COLUMN
+      + " and i2." + ISSN_TYPE_COLUMN + " = '" + E_ISSN_TYPE + "'"
+      + " left outer join " + DOI_TABLE + " d"
+      + " on m1." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " where "
+      + "a." + IS_PUBLISHER_INVOLVED_COLUMN + " = false"
+      + " and ((a." + REQUEST_MONTH_COLUMN + " >= ?"
+      + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
+      + " or a." + REQUEST_YEAR_COLUMN + " > ?)"
+      + " and ((a." + REQUEST_MONTH_COLUMN + " <= ?"
+      + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
+      + " or a." + REQUEST_YEAR_COLUMN + " < ?)"
+      + " and a." + PUBLICATION_SEQ_COLUMN + " = p." + PUBLICATION_SEQ_COLUMN
+      + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
+      + " and pu." + PUBLISHER_NAME_COLUMN + " != '" + ALL_PUBLISHERS_NAME + "'"
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = m1." + MD_ITEM_SEQ_COLUMN
+      + " and m1." + PRIMARY_NAME_COLUMN + " != '" + ALL_JOURNALS_NAME + "'"
+      + " and m1." + MD_ITEM_SEQ_COLUMN + " = m2." + PARENT_SEQ_COLUMN
+      + " and m2." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
+      + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+      + " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
+      + " order by m1." + PRIMARY_NAME_COLUMN + " asc";
 
   // Query to get the journal request counts to be included in the report.
   //
   // It uses the same selection criteria and the same sorting as the query
   // above, so as to be able to synchronize the result sets of both queries.
   private static final String SQL_QUERY_REPORT_REQUESTS_SELECT = "select "
-      + "t." + SQL_COLUMN_TITLE_NAME
-      + ", a." + SQL_COLUMN_LOCKSS_ID
-      + ", a." + SQL_COLUMN_REQUEST_YEAR
-      + ", a." + SQL_COLUMN_REQUEST_MONTH
-      + ", a." + SQL_COLUMN_TOTAL_JOURNAL_REQUESTS
-      + ", a." + SQL_COLUMN_HTML_JOURNAL_REQUESTS
-      + ", a." + SQL_COLUMN_PDF_JOURNAL_REQUESTS
-      + " from " + SQL_TABLE_TYPE_AGGREGATES + " a,"
-      + SQL_TABLE_TITLES + " t "
-      + "where "
-      + "(t." + SQL_COLUMN_TITLE_NAME  + " != '" + ALL_JOURNALS_TITLE_NAME
-      + "' or t." + SQL_COLUMN_PUBLISHER_NAME + " != '" + ALL_PUBLISHERS_NAME
-      + "') "
-      + "and t." + SQL_COLUMN_IS_BOOK + " = false "
-      + "and a."  + SQL_COLUMN_IS_PUBLISHER_INVOLVED + " = false "
-      + "and ((a." + SQL_COLUMN_REQUEST_MONTH + " >= ? "
-      + "and a." + SQL_COLUMN_REQUEST_YEAR + " = ?) "
-      + "or a." + SQL_COLUMN_REQUEST_YEAR + " > ?) "
-      + "and ((a." + SQL_COLUMN_REQUEST_MONTH + " <= ? "
-      + "and a." + SQL_COLUMN_REQUEST_YEAR + " = ?) "
-      + "or a." + SQL_COLUMN_REQUEST_YEAR + " < ?) "
-      + "and a." + SQL_COLUMN_LOCKSS_ID + " = t." + SQL_COLUMN_LOCKSS_ID
-      + " order by t." + SQL_COLUMN_TITLE_NAME
-      + ", a." + SQL_COLUMN_REQUEST_YEAR
-      + ", a." + SQL_COLUMN_REQUEST_MONTH + " asc";
+      + "a." + PUBLICATION_SEQ_COLUMN
+      + ", m1." + PRIMARY_NAME_COLUMN
+      + ", a." + REQUEST_YEAR_COLUMN
+      + ", a." + REQUEST_MONTH_COLUMN
+      + ", a." + TOTAL_REQUESTS_COLUMN
+      + ", a." + HTML_REQUESTS_COLUMN
+      + ", a." + PDF_REQUESTS_COLUMN
+      + " from " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE + " a"
+      + "," + PUBLICATION_TABLE + " p"
+      + "," + PUBLISHER_TABLE + " pu"
+      + "," + MD_ITEM_TABLE + " m1"
+      + " where "
+      + "a." + IS_PUBLISHER_INVOLVED_COLUMN + " = false"
+      + " and ((a." + REQUEST_MONTH_COLUMN + " >= ?"
+      + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
+      + " or a." + REQUEST_YEAR_COLUMN + " > ?)"
+      + " and ((a." + REQUEST_MONTH_COLUMN + " <= ?"
+      + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
+      + " or a." + REQUEST_YEAR_COLUMN + " < ?)"
+      + " and a." + PUBLICATION_SEQ_COLUMN + " = p." + PUBLICATION_SEQ_COLUMN
+      + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
+      + " and pu." + PUBLISHER_NAME_COLUMN + " != '" + ALL_PUBLISHERS_NAME + "'"
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = m1." + MD_ITEM_SEQ_COLUMN
+      + " and m1." + PRIMARY_NAME_COLUMN + " != '" + ALL_JOURNALS_NAME + "'"
+      + " order by m1." + PRIMARY_NAME_COLUMN
+      + ", a." + REQUEST_YEAR_COLUMN
+      + ", a." + REQUEST_MONTH_COLUMN + " asc";
 
   // The count of months included in the report.
   private int monthCount = 0;
@@ -133,7 +150,8 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
     // Count the months included in the report.
     monthCount = getMonthIndex(endMonth, endYear);
 
-    if (monthCount > CounterReportsRequestAggregator.MAX_NUMBER_OF_AGGREGATE_MONTHS) {
+    if (monthCount > CounterReportsRequestAggregator
+	.MAX_NUMBER_OF_AGGREGATE_MONTHS) {
       throw new IllegalArgumentException("The report period cannot exceed "
 	  + CounterReportsRequestAggregator.MAX_NUMBER_OF_AGGREGATE_MONTHS
 	  + " months.");
@@ -161,13 +179,15 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
    *           if the period specified is not valid.
    */
   public CounterReportsJournalReport1(LockssDaemon daemon, int startMonth,
-      int startYear, int endMonth, int endYear) throws IllegalArgumentException {
+      int startYear, int endMonth, int endYear)
+	  throws IllegalArgumentException {
     super(daemon, startMonth, startYear, endMonth, endYear);
 
     // Count the months included in the report.
     monthCount = getMonthIndex(endMonth, endYear);
 
-    if (monthCount > CounterReportsRequestAggregator.MAX_NUMBER_OF_AGGREGATE_MONTHS) {
+    if (monthCount > CounterReportsRequestAggregator
+	.MAX_NUMBER_OF_AGGREGATE_MONTHS) {
       throw new IllegalArgumentException("The report period cannot exceed "
 	  + CounterReportsRequestAggregator.MAX_NUMBER_OF_AGGREGATE_MONTHS
 	  + " months.");
@@ -190,18 +210,17 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
    * @return a List<Row> with the initialized rows to be included in the report.
    * @throws SQLException
    */
-  protected void initializeReportRows(Connection conn)
-      throws SQLException, Exception {
+  protected void initializeReportRows(Connection conn) throws SQLException {
     final String DEBUG_HEADER = "initializeReportRows(): ";
     log.debug2(DEBUG_HEADER + "Starting...");
-    long lockssId = 0L;
+    Long titleId = 0L;
 
     // The first row is a placeholder for the totals for all journals.
     CounterReportsJournal journal =
 	new CounterReportsJournal(TOTAL_LABEL, null, null, null, null, null,
 	                          null);
     List<Row> rows = new ArrayList<Row>();
-    rows.add(new Row(lockssId, journal));
+    rows.add(new Row(titleId, journal));
 
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -225,27 +244,40 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
 
       // Loop through all the journals to be included in the report.
       while (resultSet.next()) {
-	// Get the LOCKSS identifier for the journal.
-	lockssId = resultSet.getLong(SQL_COLUMN_LOCKSS_ID);
-	log.debug2(DEBUG_HEADER + "lockssId = " + lockssId + ".");
+	// Check whether this journal is the same as the previous one.
+	if (resultSet.getLong(PUBLICATION_SEQ_COLUMN) == titleId) {
+	  // Yes: This means that the publication has multiple values for some
+	  // attributes. Ignore the copy.
+	  log.debug2(DEBUG_HEADER + "Skipping repeated titleId = " + titleId
+	             + ".");
+	  continue;
+	}
+
+	// Get the identifier for the journal.
+	titleId = resultSet.getLong(PUBLICATION_SEQ_COLUMN);
+	log.debug2(DEBUG_HEADER + "titleId = " + titleId + ".");
 
 	// Get the journal properties.
 	journal =
-	    new CounterReportsJournal(
-		resultSet.getString(SQL_COLUMN_TITLE_NAME),
-		resultSet.getString(SQL_COLUMN_PUBLISHER_NAME),
-		resultSet.getString(SQL_COLUMN_PLATFORM_NAME),
-		resultSet.getString(SQL_COLUMN_DOI),
-		resultSet.getString(SQL_COLUMN_PROPRIETARY_ID),
-		resultSet.getString(SQL_COLUMN_PRINT_ISSN),
-		resultSet.getString(SQL_COLUMN_ONLINE_ISSN));
+	    new CounterReportsJournal(resultSet.getString(PRIMARY_NAME_COLUMN),
+	                              resultSet
+	                              	.getString(PUBLISHER_NAME_COLUMN),
+	                              resultSet.getString(PLATFORM_COLUMN),
+	                              resultSet.getString(DOI_COLUMN),
+	                              resultSet
+	                              	.getString(PUBLICATION_ID_COLUMN),
+	                              formatIssn(resultSet
+	                                         .getString(P_ISSN_TYPE)),
+	                              formatIssn(resultSet
+	                                         .getString(E_ISSN_TYPE)));
 	log.debug2(DEBUG_HEADER + "Journal = [" + journal + "].");
 
 	// Add the row to the results.
-	rows.add(new Row(lockssId, journal));
+	rows.add(new Row(titleId, journal));
       }
     } catch (SQLException sqle) {
-      log.error("Cannot retrieve the journals to be included in a report", sqle);
+      log.error("Cannot retrieve the journals to be included in a report",
+                sqle);
       log.error("StartMonth = " + startMonth + ", StartYear = " + startYear
 	  + ", EndMonth = " + endMonth + ", EndYear = " + endYear);
       log.error("SQL = '" + sql + "'.");
@@ -256,6 +288,7 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
     }
 
     // Remember the data rows in the report.
+    log.debug2(DEBUG_HEADER + "rows.size() = " + rows.size() + ".");
     setRows(rows);
     log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -343,7 +376,7 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
 
     int month;
     int year;
-    long lockssId;
+    Long titleId;
     ItemCounts counts = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -373,12 +406,12 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
       // items for a journal have been processed, the rowIterator will be
       // advanced.
       while (resultSet.next()) {
-	// Get the LOCKSS identifier for this item.
-	lockssId = resultSet.getLong(SQL_COLUMN_LOCKSS_ID);
-	log.debug2(DEBUG_HEADER + "lockssId = " + lockssId + ".");
+	// Get the identifier for this item.
+	titleId = resultSet.getLong(PUBLICATION_SEQ_COLUMN);
+	log.debug2(DEBUG_HEADER + "titleId = " + titleId + ".");
 
 	// Check whether this item is for a row different than the current one.
-	if (currentRow.getLockssId() != lockssId) {
+	if (currentRow.getTitleId() != titleId) {
 	  // Yes: This means that all the items for the current row have been
 	  // processed. Verify that there are more rows in the report.
 	  if (!rowIterator.hasNext()) {
@@ -390,19 +423,18 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
 	  currentRow = rowIterator.next();
 
 	  // Check whether this row is not in sync with this item.
-	  if (currentRow.getLockssId() != lockssId) {
+	  if (currentRow.getTitleId() != titleId) {
 	    throw new CounterReportsException(BaseCounterReport
 	                                      .ERROR_WRONG_SORTING);
 	  }
 	    
 	  // Initialize the period request counts of the current row.
-	  currentRowMonthRequestCounts =
-	      initializeRowRequestCounts(currentRow);
+	  currentRowMonthRequestCounts = initializeRowRequestCounts(currentRow);
 	}
 
 	// Get the month for this item.
-	month = resultSet.getShort(SQL_COLUMN_REQUEST_MONTH);
-	year = resultSet.getShort(SQL_COLUMN_REQUEST_YEAR);
+	month = resultSet.getShort(REQUEST_MONTH_COLUMN);
+	year = resultSet.getShort(REQUEST_YEAR_COLUMN);
 	log.debug2(DEBUG_HEADER + "Month = " + month + ", Year = " + year);
 
 	// Retrieve and save the request counts for this row during this month.
@@ -428,8 +460,8 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
 	accumulateRequestCounts(itemKeys, counts,
 	    allJournalsRowMonthRequestCounts.get(getMonthIndex(month, year)));
 
-	// Update the request counts for all the books during the report period
-	// by accumulating the request counts for this item.
+	// Update the request counts for all the journals during the report
+	// period by accumulating the request counts for this item.
 	accumulateRequestCounts(totalKeys, counts,
 	    allJournalsRowMonthRequestCounts.get(0));
       }
@@ -554,8 +586,8 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
    * @return a String[] with the keys used to populate the total columns.
    */
   protected String[] getTotalColumnKeys() {
-    return new String[] { SQL_COLUMN_TOTAL_JOURNAL_REQUESTS,
-	SQL_COLUMN_HTML_JOURNAL_REQUESTS, SQL_COLUMN_PDF_JOURNAL_REQUESTS };
+    return new String[] { TOTAL_REQUESTS_COLUMN,
+	HTML_REQUESTS_COLUMN, PDF_REQUESTS_COLUMN };
   }
 
   /**
@@ -564,6 +596,6 @@ public class CounterReportsJournalReport1 extends CounterReportsJournalReport {
    * @return a String[] with the keys used to populate the item columns.
    */
   protected String[] getItemColumnKeys() {
-    return new String[] { SQL_COLUMN_TOTAL_JOURNAL_REQUESTS };
+    return new String[] { TOTAL_REQUESTS_COLUMN };
   }
 }

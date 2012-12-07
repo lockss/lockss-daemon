@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.69 2012-11-06 01:27:37 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.70 2012-12-07 07:27:04 fergaloy-sf Exp $
  */
 
 /*
@@ -694,7 +694,7 @@ public class ServeContent extends LockssServlet {
         serveFromCache();
         logAccess("200 from cache");
 	// Record the necessary information required for COUNTER reports.
-	CounterReportsRequestRecorder.getInstance().recordRequest(url, au,
+	CounterReportsRequestRecorder.getInstance().recordRequest(url,
 	    CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
       } else {
 	/*
@@ -771,7 +771,7 @@ public class ServeContent extends LockssServlet {
 	    logAccess(present(isInCache, "200 from publisher"));
 	    // Record the necessary information required for COUNTER reports.
 	    CounterReportsRequestRecorder.getInstance()
-		.recordRequest(url, au,
+		.recordRequest(url,
 		    CounterReportsRequestRecorder.PublisherContacted.TRUE,
 		    response);
 	    return;
@@ -793,7 +793,7 @@ public class ServeContent extends LockssServlet {
       serveFromCache();
       logAccess("present, 200 from cache");
       // Record the necessary information required for COUNTER reports.
-      CounterReportsRequestRecorder.getInstance().recordRequest(url, au,
+      CounterReportsRequestRecorder.getInstance().recordRequest(url,
 	  CounterReportsRequestRecorder.PublisherContacted.TRUE, response);
     } else {
       log.debug2("No content for: " + url);

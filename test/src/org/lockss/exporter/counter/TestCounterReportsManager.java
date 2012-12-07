@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsManager.java,v 1.3 2012-09-28 00:13:23 fergaloy-sf Exp $
+ * $Id: TestCounterReportsManager.java,v 1.4 2012-12-07 07:27:04 fergaloy-sf Exp $
  */
 
 /*
@@ -38,18 +38,14 @@
  */
 package org.lockss.exporter.counter;
 
-import static org.lockss.exporter.counter.CounterReportsManager.*;
 import java.io.File;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsManager;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
@@ -57,16 +53,9 @@ import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.IOUtil;
 
 public class TestCounterReportsManager extends LockssTestCase {
-  // Query to count all the rows of titles.
-  private static final String SQL_QUERY_TITLE_COUNT = "select count(*) from "
-      + SQL_TABLE_TITLES;
-
-  // Query to count all the rows of requests.
-  private static final String SQL_QUERY_REQUEST_COUNT = "select count(*) from "
-      + SQL_TABLE_REQUESTS;
-
   private MockLockssDaemon theDaemon;
   private DbManager dbManager;
+  private MetadataManager metadataManager;
   private CounterReportsManager counterReportsManager;
 
   @Override
@@ -95,6 +84,11 @@ public class TestCounterReportsManager extends LockssTestCase {
     dbManager.initService(theDaemon);
     dbManager.startService();
 
+    metadataManager = new MetadataManager();
+    theDaemon.setMetadataManager(metadataManager);
+    metadataManager.initService(theDaemon);
+    metadataManager.startService();
+
     Cron cron = new Cron();
     theDaemon.setCron(cron);
     cron.initService(theDaemon);
@@ -113,7 +107,6 @@ public class TestCounterReportsManager extends LockssTestCase {
     runTestReady();
     runTestAllBooksAllJournalsTitles();
     runTestOutputDir();
-    runTestRequestPersistence();
     runTestWriteDeleteReportFile();
     runTestNotReady();
   }
@@ -145,10 +138,10 @@ public class TestCounterReportsManager extends LockssTestCase {
    * @throws Exception
    */
   public void runTestAllBooksAllJournalsTitles() throws Exception {
-    assertEquals(4796129050038543734L,
-	counterReportsManager.getAllBooksLockssId());
-    assertEquals(3570692956966825695L,
-	counterReportsManager.getAllJournalsLockssId());
+    assertEquals(1L,
+	counterReportsManager.getAllBooksPublicationSeq().longValue());
+    assertEquals(2L,
+	counterReportsManager.getAllJournalsPublicationSeq().longValue());
   }
 
   /**
@@ -158,86 +151,6 @@ public class TestCounterReportsManager extends LockssTestCase {
    */
   public void runTestOutputDir() throws Exception {
     assertEquals(true, counterReportsManager.getOutputDir().exists());
-  }
-
-  /**
-   * Tests the persistence of a title request.
-   * 
-   * @throws Exception
-   */
-  public void runTestRequestPersistence() throws Exception {
-    CounterReportsBook book =
-	new CounterReportsBook("Book1", "Publisher1", null, "02468", null,
-	    "987-654321-0987", "1234-5678");
-    book.identify();
-
-    counterReportsManager.persistRequest(book, null);
-    checkTitleRowCount(3);
-    checkRequestRowCount(1);
-  }
-
-  /**
-   * Checks the expected count of rows in the title table.
-   * 
-   * @param expected
-   *          An int with the expected number of rows in the table.
-   * @throws SQLException
-   */
-  private void checkTitleRowCount(int expected) throws SQLException {
-    Connection conn = null;
-    PreparedStatement statement = null;
-    ResultSet resultSet = null;
-    int count = -1;
-    String sql = SQL_QUERY_TITLE_COUNT;
-
-    try {
-      conn = dbManager.getConnection();
-
-      statement = conn.prepareStatement(sql);
-      resultSet = statement.executeQuery();
-
-      if (resultSet.next()) {
-	count = resultSet.getInt(1);
-      }
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(statement);
-      DbManager.safeRollbackAndClose(conn);
-    }
-
-    assertEquals(expected, count);
-  }
-
-  /**
-   * Checks the expected count of rows in the request table.
-   * 
-   * @param expected
-   *          An int with the expected number of rows in the table.
-   * @throws SQLException
-   */
-  private void checkRequestRowCount(int expected) throws SQLException {
-    Connection conn = null;
-    PreparedStatement statement = null;
-    ResultSet resultSet = null;
-    int count = -1;
-    String sql = SQL_QUERY_REQUEST_COUNT;
-
-    try {
-      conn = dbManager.getConnection();
-
-      statement = conn.prepareStatement(sql);
-      resultSet = statement.executeQuery();
-
-      if (resultSet.next()) {
-	count = resultSet.getInt(1);
-      }
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(statement);
-      DbManager.safeRollbackAndClose(conn);
-    }
-
-    assertEquals(expected, count);
   }
 
   /**

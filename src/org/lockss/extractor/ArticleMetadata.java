@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.8 2012-08-15 03:34:36 tlipkis Exp $
+ * $Id: ArticleMetadata.java,v 1.9 2012-12-07 07:27:05 fergaloy-sf Exp $
  */
 
 /*
@@ -32,17 +32,10 @@
 
 package org.lockss.extractor;
 
-import java.io.*;
 import java.util.*;
-
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.map.*;
-
-import org.lockss.app.*;
-import org.lockss.config.*;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
-import static org.lockss.extractor.MetadataField.*;
 
 /**
  * Collection of metadata about a single article or other feature. Consists of
@@ -52,7 +45,7 @@ import static org.lockss.extractor.MetadataField.*;
  * associated with well-known keys.
  */
 public class ArticleMetadata {
-  private static Logger log = Logger.getLogger("Metadata");
+  private static Logger log = Logger.getLogger("ArticleMetadata");
 
   private MultiValueMap rawMap = new MultiValueMap();
   private MultiValueMap cookedmap = new MultiValueMap();
@@ -106,10 +99,35 @@ public class ArticleMetadata {
   }
 
   /**
+   * Set the value associated with the key in the raw metadata map.
+   */
+  public void putRaw(String key, Map<String, String> value) {
+    rawMap.put(key.toLowerCase(), value);
+  }
+
+  /**
    * Return the list of raw values associated with a key, or an empty list.
    */
   public List<String> getRawList(String key) {
     return getRawCollection(key);
+  }
+
+  /**
+   * Return the map of raw values associated with a key, or an empty map if none.
+   */
+  public Map<String, String> getRawMap(MetadataField field) {
+    return getRawMap(field.getKey());
+  }
+
+  /**
+   * Return the map of raw values associated with a key, or an empty map if none.
+   */
+  public Map<String, String> getRawMap(String key) {
+    List<Map<String, String>> lst = (List<Map<String, String>>)rawMap.get(key);
+    if (lst == null || lst.isEmpty()) {
+      return Collections.<String, String> emptyMap();
+    }
+      return lst.get(0);
   }
 
   /**
