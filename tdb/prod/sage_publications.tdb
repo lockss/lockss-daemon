@@ -30700,6 +30700,31 @@ comment[mpj] = now published by Brill
 
     }
 
+  {
+    
+     title <
+       name = Phlebology ;
+       issn = 0268-3555 ;
+       eissn = 1758-1125 
+     >
+      
+       param[base_url] = http://phleb.sagepub.com/
+       pluginSuffix = HighWirePressH20Plugin
+       implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2003 ; Phlebology Volume 18 ; 18 >
+      au < exists ; 2004 ; Phlebology Volume 19 ; 19 >
+      au < exists ; 2005 ; Phlebology Volume 20 ; 20 >
+      au < exists ; 2006 ; Phlebology Volume 21 ; 21 >
+      au < exists ; 2007 ; Phlebology Volume 22 ; 22 >
+      au < exists ; 2008 ; Phlebology Volume 23 ; 23 >
+      au < exists ; 2009 ; Phlebology Volume 24 ; 24 >
+      au < exists ; 2010 ; Phlebology Volume 25 ; 25 >
+      au < exists ; 2011 ; Phlebology Volume 26 ; 26 >
+      au < exists ; 2012 ; Phlebology Volume 27 ; 27 >
+    
+    }
+
     {
 
       title <
