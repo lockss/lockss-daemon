@@ -1,10 +1,10 @@
 /*
- * $Id: ListHoldings.java,v 1.48 2012-11-16 14:32:08 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.49 2012-12-07 07:40:58 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2010-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,16 +35,13 @@ package org.lockss.servlet;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.*;
-
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-
 import org.apache.commons.lang.StringUtils;
 import org.lockss.config.*;
 import org.lockss.config.TdbUtil.ContentScope;
 import org.lockss.config.TdbUtil.ContentType;
 import org.lockss.daemon.AuHealthMetric;
-import org.lockss.daemon.MetadataDatabaseUtil;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.exporter.kbart.*;
 import org.lockss.exporter.kbart.KbartExporter.OutputFormat;
@@ -52,6 +49,7 @@ import org.lockss.exporter.kbart.ReportFormat.ReportDataFormat;
 import org.lockss.exporter.kbart.CoverageNotesFormat;
 import static org.lockss.exporter.kbart.KbartExportFilter.*;
 import org.lockss.exporter.kbart.KbartTitle.Field;
+import org.lockss.metadata.MetadataDatabaseUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
@@ -575,7 +573,6 @@ public class ListHoldings extends LockssServlet {
                                                    ContentType type)
       throws KbartConverter.ConversionException {
     List<KbartTitle> titles;
-    Iterator<KbartTitle> titleIterator;
     // If we are exporting in a scope where ArchivalUnits are not available
     // (that is, in particular, the "Available" report), act on a list of
     // TdbTitles, with their full AU ranges.
@@ -1220,7 +1217,7 @@ public class ListHoldings extends LockssServlet {
    * Add a summary of the LOCKSS box providing the data, to an HTML table.
    * @param tab the table to which to add the summary
    */
-  private void addBoxSummary(Table tab) {
+  /*private void addBoxSummary(Table tab) {
     tab.newRow();
     tab.newCell("align=\"center\"");
     tab.add(i18n.tr("This is the KBART Metadata Exporter for {0}",
@@ -1231,7 +1228,7 @@ public class ListHoldings extends LockssServlet {
     tab.add(i18n.tr("The permanent KBART output URL for this server is:")+
         "<br/><b><font color=\"navy\">"+getDefaultUpdateUrl()+"</font></b>");
     addBlankRow(tab);
-  }
+  }*/
 
   
   protected boolean getShowHealthRatings() {
