@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.31 2012-12-03 15:31:16 rwincewicz Exp $
+ * $Id: AdminServletManager.java,v 1.32 2012-12-07 18:58:36 fergaloy-sf Exp $
  */
 
 /*
@@ -181,7 +181,8 @@ public class AdminServletManager extends BaseServletManager {
       4096<br>includeContentTypes = text/html,text/xml,text/plain</code> */
   static final String PARAM_DOC_ONLY = COMPRESSOR_PREFIX + "<key>=<val>";
 
-  static final Map<String,String> COMPRESSOR_DEFAULTS = new HashMap();
+  static final Map<String, String> COMPRESSOR_DEFAULTS =
+      new HashMap<String, String>();
   static {
     COMPRESSOR_DEFAULTS.put("compressionThreshold", "4096");
     COMPRESSOR_DEFAULTS.put("includeContentTypes",
@@ -468,12 +469,12 @@ public class AdminServletManager extends BaseServletManager {
           ServletDescr.NO_NAV_TABLE | ServletDescr.LARGE_LOGO);
 		     
   protected static final ServletDescr SERVLET_COUNTER_REPORTS =
-          new ServletDescr("CounterReportsServlet",
-          CounterReportsServlet.class,
-          "COUNTER Reports Servlet",
-          "CounterReports",
-          0,
-          "COUNTER Report generator");
+      new ServletDescr("CounterReportsServlet",
+                       CounterReportsServlet.class,
+                       "COUNTER Reports",
+		       "CounterReports",
+		       (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
+		       "COUNTER Report generator");
 
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;
@@ -506,6 +507,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DEBUG_PANEL,
     SERVLET_EXPERT_CONFIG,
     SERVLET_LIST_HOLDINGS,
+    SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
     LINK_LOGS,
     LINK_ISOS,
@@ -518,9 +520,9 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_EDIT_ACCOUNTS,
     LINK_HELP,
     LINK_LOGOUT,
-    LOGIN_FORM,
-    SERVLET_COUNTER_REPORTS
+    LOGIN_FORM
   };
+
   // XXXUI List of servlets to show in new UI: parallel main list but with new versions
   static final ServletDescr servletDescrsNew[] = {
     SERVLET_HOME,
@@ -540,6 +542,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DEBUG_PANEL,
     SERVLET_EXPERT_CONFIG,
     SERVLET_LIST_HOLDINGS,
+    SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
     LINK_LOGS,
     LINK_ISOS,
