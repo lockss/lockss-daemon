@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.116 2012-08-21 08:34:11 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.117 2012-12-07 07:22:12 fergaloy-sf Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.account.*;
 import org.lockss.hasher.*;
 import org.lockss.scheduler.*;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.truezip.*;
 import org.lockss.poller.*;
@@ -176,7 +177,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     // start database manager before any manager that uses it.
     new ManagerDesc(DB_MANAGER, "org.lockss.db.DbManager"),
     // start metadata manager after pluggin manager and database manager.
-    new ManagerDesc(METADATA_MANAGER, "org.lockss.daemon.MetadataManager"),
+    new ManagerDesc(METADATA_MANAGER, "org.lockss.metadata.MetadataManager"),
     // start proxy and servlets after plugin manager
     new ManagerDesc(REMOTE_API, "org.lockss.remote.RemoteApi"),
     new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.AdminServletManager"),

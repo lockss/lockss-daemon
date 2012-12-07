@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.72 2012-08-17 16:12:31 fergaloy-sf Exp $
+ * $Id: MockLockssDaemon.java,v 1.73 2012-12-07 07:22:11 fergaloy-sf Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.hasher.HashService;
 import org.lockss.mail.MailService;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.truezip.*;
 import org.lockss.poller.PollManager;
@@ -107,7 +108,7 @@ public class MockLockssDaemon extends LockssDaemon {
     this(null);
   }
 
-  private MockLockssDaemon(List urls) {
+  private MockLockssDaemon(List<String> urls) {
     super(urls);
     ConfigManager mgr = ConfigManager.getConfigManager();
     mgr.registerConfigurationCallback(new Configuration.Callback() {
