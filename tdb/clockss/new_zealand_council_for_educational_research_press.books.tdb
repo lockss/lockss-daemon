@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = New Zealand Council for Educational Research Press ;
+    info[contract] = 2012 ;
+    info[tester] = 0
+  >
+  
+    plugin = needs.plugin
+    param[base_url] = http://www.nzcer.org.nz/
+    implicit < status1 ; status ; year ; name ; param[volume_name] >
+    comment[0] = books forthcoming in 2013 perhaps
+
+   {
+    
+ 
+     title <
+       name = 
+       
+     >
+      comment[isbn] = 
+      comment[eisbn] = 
+    
+  }
+
+}

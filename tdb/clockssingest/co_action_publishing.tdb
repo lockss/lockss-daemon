@@ -71,7 +71,7 @@
 
       au < released ; crawling ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
       au < released ; crawling ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
-      au < released ; manifest ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+      au < released ; crawling ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
     }
   }
    
@@ -87,8 +87,8 @@
     param[journal_id] = ehtj
     comment[0] = vol. 4 includes Supplements 1
 
-    au < released ; manifest ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
-    au < released ; manifest ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
+    au < released ; crawling ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
+    au < released ; crawling ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
     au < released ; crawling ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
     au < released ; crawling ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
     au < released ; crawling ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
@@ -107,11 +107,11 @@
     param[base_url] = http://www.ethicsandglobalpolitics.net/
     param[journal_id] = egp
 
-    au < released ; manifest ; 2008 ; Ethics & Global Politics Volume 1 ; 1 ; 2008 >
-    au < released ; manifest ; 2009 ; Ethics & Global Politics Volume 2 ; 2 ; 2009 >
+    au < released ; crawling ; 2008 ; Ethics & Global Politics Volume 1 ; 1 ; 2008 >
+    au < released ; crawling ; 2009 ; Ethics & Global Politics Volume 2 ; 2 ; 2009 >
     au < released ; crawling ; 2010 ; Ethics & Global Politics Volume 3 ; 3 ; 2010 >
     au < released ; crawling ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; 2011 >
-    au < released ; manifest ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; 2012 >
+    au < released ; crawling ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; 2012 >
 
   }
     
@@ -148,8 +148,8 @@
     param[journal_id] = fnr
     comment[issn] = for supplements
 
-    au < released ; manifest ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
-    au < released ; manifest ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
+    au < released ; crawling ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
+    au < released ; crawling ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
     au < released ; crawling ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 >
     au < released ; crawling ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
     au < released ; crawling ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 >
@@ -169,8 +169,8 @@
     param[journal_id] = gha
     comment[issn] = for supplements
     
-    au < released ; manifest ; 2008 ; Global Health Action Volume 1 ; 1 ; 2008 >
-    au < released ; manifest ; 2009 ; Global Health Action [including Supplements] Volume 2 ; 2 ; 2009 >
+    au < released ; crawling ; 2008 ; Global Health Action Volume 1 ; 1 ; 2008 >
+    au < released ; crawling ; 2009 ; Global Health Action [including Supplements] Volume 2 ; 2 ; 2009 >
     au < released ; crawling ; 2010 ; Global Health Action [including Supplements] Volume 3 ; 3 ; 2010 >
     au < released ; crawling ; 2011 ; Global Health Action [including Supplements] Volume 4 ; 4 ; 2011 >
     au < released ; crawling ; 2012 ; Global Health Action [including Supplements] Volume 5 ; 5 ; 2012 >
@@ -213,11 +213,11 @@
     au < manifest ; exists ; 2005 ; International Journal of Circumpolar Health Volume 64 ; 64 ; 2005 >
     au < manifest ; exists ; 2006 ; International Journal of Circumpolar Health Volume 65 ; 65 ; 2006 >
     au < manifest ; exists ; 2007 ; International Journal of Circumpolar Health Volume 66 ; 66 ; 2007 >
-    au < released ; manifest ; 2008 ; International Journal of Circumpolar Health Volume 67 ; 67 ; 2008 >
-    au < released ; manifest ; 2009 ; International Journal of Circumpolar Health Volume 68 ; 68 ; 2009 >
+    au < released ; crawling ; 2008 ; International Journal of Circumpolar Health Volume 67 ; 67 ; 2008 >
+    au < released ; crawling ; 2009 ; International Journal of Circumpolar Health Volume 68 ; 68 ; 2009 >
     au < released ; crawling ; 2010 ; International Journal of Circumpolar Health Volume 69 ; 69 ; 2010 >
     au < released ; crawling ; 2011 ; International Journal of Circumpolar Health Volume 70 ; 70 ; 2011 >
-    au < released ; manifest ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
+    au < released ; crawling ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
 
   }
 
@@ -236,8 +236,8 @@
 
     au < manifest ; exists ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 ; 2006 >
     au < manifest ; exists ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2 ; 2007 >
-    au < released ; manifest ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 >
-    au < released ; manifest ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 >
+    au < released ; crawling ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 >
+    au < released ; crawling ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 >
     au < released ; crawling ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 >
     au < released ; crawling ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 >
     au < released ; crawling ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 ; 2012 >
@@ -255,7 +255,7 @@
     param[base_url] = http://www.aestheticsandculture.net/
     param[journal_id] = jac
 
-    au < released ; manifest ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; 2009 >
+    au < released ; crawling ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; 2009 >
     au < released ; crawling ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; 2010 >
     au < released ; crawling ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
     au < released ; crawling ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 ; 2012 >
@@ -289,7 +289,7 @@
     param[base_url] = http://www.journaloforalmicrobiology.net/
     param[journal_id] = jom
 
-    au < released ; manifest ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2009 >
+    au < released ; crawling ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2009 >
     au < released ; crawling ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 ; 2010 >
     au < released ; crawling ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 >
     au < released ; crawling ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 >
@@ -308,13 +308,13 @@
     param[base_url] = http://www.libyanjournalofmedicine.net/
     param[journal_id] = ljm
 
-    au < released ; manifest ; 2006 ; Libyan Journal of Medicine Volume 1 ; 1 ; 2006 >
-    au < released ; manifest ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2 ; 2007 >
-    au < released ; manifest ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 >
-    au < released ; manifest ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 >
+    au < released ; crawling ; 2006 ; Libyan Journal of Medicine Volume 1 ; 1 ; 2006 >
+    au < released ; crawling ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2 ; 2007 >
+    au < released ; crawling ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 >
+    au < released ; crawling ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 >
     au < released ; crawling ; 2010 ; Libyan Journal of Medicine [including Supplements] Volume 5 ; 5 ; 2010 >
     au < released ; crawling ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; 2011 >
-    au < released ; manifest ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; 2012 >
+    au < released ; crawling ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; 2012 >
 
   }
 
@@ -331,7 +331,7 @@
 
     au < released ; crawling ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 >
     au < released ; crawling ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 >
-    au < released ; manifest ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; 2012 >
+    au < released ; crawling ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; 2012 >
 
   }
 
@@ -366,14 +366,14 @@
       au < manifest ; exists ; 2002 ; Medical Education Online Volume 7 ; 7 ; 2002 >
       au < manifest ; exists ; 2003 ; Medical Education Online Volume 8 ; 8 ; 2003 >
       au < manifest ; exists ; 2004 ; Medical Education Online Volume 9 ; 9 ; 2004 >
-      au < released ; manifest ; 2005 ; Medical Education Online Volume 10 ; 10 ; 2005 >
-      au < released ; manifest ; 2006 ; Medical Education Online Volume 11 ; 11 ; 2006 >
-      au < released ; manifest ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
-      au < released ; manifest ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
-      au < released ; manifest ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
+      au < released ; crawling ; 2005 ; Medical Education Online Volume 10 ; 10 ; 2005 >
+      au < released ; crawling ; 2006 ; Medical Education Online Volume 11 ; 11 ; 2006 >
+      au < released ; crawling ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
+      au < released ; crawling ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
+      au < released ; crawling ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
       au < released ; crawling ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
       au < released ; crawling ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
-      au < released ; manifest ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
+      au < released ; crawling ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
     }
   }
 
@@ -405,15 +405,15 @@
     au < manifest ; exists ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
     au < manifest ; exists ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; 2001 >
     au < manifest ; exists ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 ; 2002 >
-    au < released ; manifest ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 >
-    au < released ; manifest ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; 2004 >
-    au < released ; manifest ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 ; 2005 >
-    au < released ; manifest ; 2006 ; Microbial Ecology in Health and Disease Volume 18 ; 18 ; 2006 >
-    au < released ; manifest ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 ; 2007 >
-    au < released ; manifest ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 >
+    au < released ; crawling ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 >
+    au < released ; crawling ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; 2004 >
+    au < released ; crawling ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 ; 2005 >
+    au < released ; crawling ; 2006 ; Microbial Ecology in Health and Disease Volume 18 ; 18 ; 2006 >
+    au < released ; crawling ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 ; 2007 >
+    au < released ; crawling ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 >
     au < released ; crawling ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 >
     au < released ; crawling ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
-    au < released ; manifest ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
+    au < released ; crawling ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
 
   }
 
@@ -430,7 +430,7 @@
 
     au < released ; crawling ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 >
     au < released ; crawling ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
-    au < released ; manifest ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
+    au < released ; crawling ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
 
   }
 
@@ -446,7 +446,7 @@
     param[journal_id] = pba
 
     au < released ; crawling ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; 2011 >
-    au < released ; manifest ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 ; 2012 >
+    au < released ; crawling ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 ; 2012 >
 
   }
 
@@ -486,14 +486,14 @@
     au < manifest ; exists ; 2002 ; Polar Research Volume 21 ; 21 ; 2002 >
     au < manifest ; exists ; 2003 ; Polar Research Volume 22 ; 22 ; 2003 >
     au < manifest ; exists ; 2004 ; Polar Research Volume 23 ; 23 ; 2004 >
-    au < released ; manifest ; 2005 ; Polar Research Volume 24 ; 24 ; 2005 >
-    au < released ; manifest ; 2006 ; Polar Research Volume 25 ; 25 ; 2006 >
-    au < released ; manifest ; 2007 ; Polar Research Volume 26 ; 26 ; 2007 >
-    au < released ; manifest ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
-    au < released ; manifest ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
+    au < released ; crawling ; 2005 ; Polar Research Volume 24 ; 24 ; 2005 >
+    au < released ; crawling ; 2006 ; Polar Research Volume 25 ; 25 ; 2006 >
+    au < released ; crawling ; 2007 ; Polar Research Volume 26 ; 26 ; 2007 >
+    au < released ; crawling ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
+    au < released ; crawling ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
     au < released ; crawling ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
     au < released ; crawling ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
-    au < released ; manifest ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
+    au < released ; crawling ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
 
 
   }
@@ -523,13 +523,13 @@
     au < manifest ; exists ; 2003 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 11 ; 11 ; 2003 >
     au < manifest ; exists ; 2004 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 12 ; 12 ; 2004 >
     au < manifest ; exists ; 2005 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 13 ; 13 ; 2005 >
-    au < released ; manifest ; 2006 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 14 ; 14 ; 2006 >
-    au < released ; manifest ; 2007 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 15 ; 15 ; 2007 >
-    au < released ; manifest ; 2008 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 16 ; 16 ; 2008 >
-    au < released ; manifest ; 2009 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 17 ; 17 ; 2009 >
+    au < released ; crawling ; 2006 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 14 ; 14 ; 2006 >
+    au < released ; crawling ; 2007 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 15 ; 15 ; 2007 >
+    au < released ; crawling ; 2008 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 16 ; 16 ; 2008 >
+    au < released ; crawling ; 2009 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 17 ; 17 ; 2009 >
     au < released ; crawling ; 2010 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 18 ; 18 ; 2010 >
     au < released ; crawling ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 ; 2011 >
-    au < released ; manifest ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 >
+    au < released ; crawling ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 >
 
   }
 
@@ -565,16 +565,16 @@
     param[base_url] = http://www.foodandnutritionresearch.net/
     param[journal_id] = fnr
 
-    au < released ; manifest ; 1996 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 40 ; 40 ; 1996 >
-    au < released ; manifest ; 1997 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 41 ; 41 ; 1997 >
-    au < released ; manifest ; 1998 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 42 ; 42 ; 1998 >
-    au < released ; manifest ; 1999 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 43 ; 43 ; 1999 >
-    au < released ; manifest ; 2000 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 44 ; 44 ; 2000 >
-    au < released ; manifest ; 2001 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 45 ; 45 ; 2001 >
-    au < released ; manifest ; 2002 ; Scandinavian Journal of Nutrition Volume 46 ; 46 ; 2002 >
-    au < released ; manifest ; 2003 ; Scandinavian Journal of Nutrition Volume 47 ; 47 ; 2003 >
-    au < released ; manifest ; 2004 ; Scandinavian Journal of Nutrition Volume 48 ; 48 ; 2004 >
-    au < released ; manifest ; 2005 ; Scandinavian Journal of Nutrition Volume 49 ; 49 ; 2005 >
+    au < released ; crawling ; 1996 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 40 ; 40 ; 1996 >
+    au < released ; crawling ; 1997 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 41 ; 41 ; 1997 >
+    au < released ; crawling ; 1998 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 42 ; 42 ; 1998 >
+    au < released ; crawling ; 1999 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 43 ; 43 ; 1999 >
+    au < released ; crawling ; 2000 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 44 ; 44 ; 2000 >
+    au < released ; crawling ; 2001 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 45 ; 45 ; 2001 >
+    au < released ; crawling ; 2002 ; Scandinavian Journal of Nutrition Volume 46 ; 46 ; 2002 >
+    au < released ; crawling ; 2003 ; Scandinavian Journal of Nutrition Volume 47 ; 47 ; 2003 >
+    au < released ; crawling ; 2004 ; Scandinavian Journal of Nutrition Volume 48 ; 48 ; 2004 >
+    au < released ; crawling ; 2005 ; Scandinavian Journal of Nutrition Volume 49 ; 49 ; 2005 >
 
   }
 
@@ -590,7 +590,7 @@
     param[journal_id] = snp
 
     au < released ; crawling ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 >
-    au < released ; manifest ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 >
+    au < released ; crawling ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 >
 
   }
 
@@ -657,19 +657,19 @@
     au < manifest ; exists ; 1997 ; Tellus A: Dynamic Meteorology and Oceanography Volume 49 ; 49 ; 1997 >
     au < manifest ; exists ; 1998 ; Tellus A: Dynamic Meteorology and Oceanography Volume 50 ; 50 ; 1998 >
     au < manifest ; exists ; 1999 ; Tellus A: Dynamic Meteorology and Oceanography Volume 51 ; 51 ; 1999 >
-    au < released ; manifest ; 2000 ; Tellus A: Dynamic Meteorology and Oceanography Volume 52 ; 52 ; 2000 >
-    au < released ; manifest ; 2001 ; Tellus A: Dynamic Meteorology and Oceanography Volume 53 ; 53 ; 2001 >
-    au < released ; manifest ; 2002 ; Tellus A: Dynamic Meteorology and Oceanography Volume 54 ; 54 ; 2002 >
-    au < released ; manifest ; 2003 ; Tellus A: Dynamic Meteorology and Oceanography Volume 55 ; 55 ; 2003 >
-    au < released ; manifest ; 2004 ; Tellus A: Dynamic Meteorology and Oceanography Volume 56 ; 56 ; 2004 >
-    au < released ; manifest ; 2005 ; Tellus A: Dynamic Meteorology and Oceanography Volume 57 ; 57 ; 2005 >
-    au < released ; manifest ; 2006 ; Tellus A: Dynamic Meteorology and Oceanography Volume 58 ; 58 ; 2006 >
-    au < released ; manifest ; 2007 ; Tellus A: Dynamic Meteorology and Oceanography Volume 59 ; 59 ; 2007 >
-    au < released ; manifest ; 2008 ; Tellus A: Dynamic Meteorology and Oceanography Volume 60 ; 60 ; 2008 >
-    au < released ; manifest ; 2009 ; Tellus A: Dynamic Meteorology and Oceanography Volume 61 ; 61 ; 2009 >
+    au < released ; crawling ; 2000 ; Tellus A: Dynamic Meteorology and Oceanography Volume 52 ; 52 ; 2000 >
+    au < released ; crawling ; 2001 ; Tellus A: Dynamic Meteorology and Oceanography Volume 53 ; 53 ; 2001 >
+    au < released ; crawling ; 2002 ; Tellus A: Dynamic Meteorology and Oceanography Volume 54 ; 54 ; 2002 >
+    au < released ; crawling ; 2003 ; Tellus A: Dynamic Meteorology and Oceanography Volume 55 ; 55 ; 2003 >
+    au < released ; crawling ; 2004 ; Tellus A: Dynamic Meteorology and Oceanography Volume 56 ; 56 ; 2004 >
+    au < released ; crawling ; 2005 ; Tellus A: Dynamic Meteorology and Oceanography Volume 57 ; 57 ; 2005 >
+    au < released ; crawling ; 2006 ; Tellus A: Dynamic Meteorology and Oceanography Volume 58 ; 58 ; 2006 >
+    au < released ; crawling ; 2007 ; Tellus A: Dynamic Meteorology and Oceanography Volume 59 ; 59 ; 2007 >
+    au < released ; crawling ; 2008 ; Tellus A: Dynamic Meteorology and Oceanography Volume 60 ; 60 ; 2008 >
+    au < released ; crawling ; 2009 ; Tellus A: Dynamic Meteorology and Oceanography Volume 61 ; 61 ; 2009 >
     au < released ; crawling ; 2010 ; Tellus A: Dynamic Meteorology and Oceanography Volume 62 ; 62 ; 2010 >
     au < released ; crawling ; 2011 ; Tellus A: Dynamic Meteorology and Oceanography Volume 63 ; 63 ; 2011 >
-    au < released ; manifest ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 ; 2012 >
+    au < released ; crawling ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 ; 2012 >
 
   }
   
@@ -736,19 +736,19 @@
     au < manifest ; exists ; 1997 ; Tellus B: Chemical and Physical Meteorology Volume 49 ; 49 ; 1997 >
     au < manifest ; exists ; 1998 ; Tellus B: Chemical and Physical Meteorology Volume 50 ; 50 ; 1998 >
     au < manifest ; exists ; 1999 ; Tellus B: Chemical and Physical Meteorology Volume 51 ; 51 ; 1999 >
-    au < released ; manifest ; 2000 ; Tellus B: Chemical and Physical Meteorology Volume 52 ; 52 ; 2000 >
-    au < released ; manifest ; 2001 ; Tellus B: Chemical and Physical Meteorology Volume 53 ; 53 ; 2001 >
-    au < released ; manifest ; 2002 ; Tellus B: Chemical and Physical Meteorology Volume 54 ; 54 ; 2002 >
-    au < released ; manifest ; 2003 ; Tellus B: Chemical and Physical Meteorology Volume 55 ; 55 ; 2003 >
-    au < released ; manifest ; 2004 ; Tellus B: Chemical and Physical Meteorology Volume 56 ; 56 ; 2004 >
-    au < released ; manifest ; 2005 ; Tellus B: Chemical and Physical Meteorology Volume 57 ; 57 ; 2005 >
-    au < released ; manifest ; 2006 ; Tellus B: Chemical and Physical Meteorology Volume 58 ; 58 ; 2006 >
-    au < released ; manifest ; 2007 ; Tellus B: Chemical and Physical Meteorology Volume 59 ; 59 ; 2007 >
-    au < released ; manifest ; 2008 ; Tellus B: Chemical and Physical Meteorology Volume 60 ; 60 ; 2008 >
-    au < released ; manifest ; 2009 ; Tellus B: Chemical and Physical Meteorology Volume 61 ; 61 ; 2009 >
+    au < released ; crawling ; 2000 ; Tellus B: Chemical and Physical Meteorology Volume 52 ; 52 ; 2000 >
+    au < released ; crawling ; 2001 ; Tellus B: Chemical and Physical Meteorology Volume 53 ; 53 ; 2001 >
+    au < released ; crawling ; 2002 ; Tellus B: Chemical and Physical Meteorology Volume 54 ; 54 ; 2002 >
+    au < released ; crawling ; 2003 ; Tellus B: Chemical and Physical Meteorology Volume 55 ; 55 ; 2003 >
+    au < released ; crawling ; 2004 ; Tellus B: Chemical and Physical Meteorology Volume 56 ; 56 ; 2004 >
+    au < released ; crawling ; 2005 ; Tellus B: Chemical and Physical Meteorology Volume 57 ; 57 ; 2005 >
+    au < released ; crawling ; 2006 ; Tellus B: Chemical and Physical Meteorology Volume 58 ; 58 ; 2006 >
+    au < released ; crawling ; 2007 ; Tellus B: Chemical and Physical Meteorology Volume 59 ; 59 ; 2007 >
+    au < released ; crawling ; 2008 ; Tellus B: Chemical and Physical Meteorology Volume 60 ; 60 ; 2008 >
+    au < released ; crawling ; 2009 ; Tellus B: Chemical and Physical Meteorology Volume 61 ; 61 ; 2009 >
     au < released ; crawling ; 2010 ; Tellus B: Chemical and Physical Meteorology Volume 62 ; 62 ; 2010 >
     au < released ; crawling ; 2011 ; Tellus B: Chemical and Physical Meteorology Volume 63 ; 63 ; 2011 >
-    au < released ; manifest ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 ; 2012 >
+    au < released ; crawling ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 ; 2012 >
 
   }
 

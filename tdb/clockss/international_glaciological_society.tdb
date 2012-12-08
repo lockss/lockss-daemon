@@ -23,6 +23,7 @@
     param[publisher_id] = igsoc
     param[journal_id] = agl 
     param[journal_issn] = 0260-3055
+    comment[notReady] = extra string added in URL, similar case to RU4494
 
     au < exists ; exists ; 1981 ; Annals of Glaciology Volume 1 ; 1 >
     au < manifest ; exists ; 1994 ; Annals of Glaciology Volume 20 ; 20 >
@@ -51,7 +52,7 @@
     au < manifest ; exists ; 2009-2010 ; Annals of Glaciology Volume 50 ; 50 >
     au < manifest ; exists ; 2010 ; Annals of Glaciology Volume 51 ; 51 >
     au < manifest ; exists ; 2011 ; Annals of Glaciology Volume 52 ; 52 >
-    au < exists ; exists ; 2012 ; Annals of Glaciology Volume 53 ; 53 >
+    au < notReady ; exists ; 2012 ; Annals of Glaciology Volume 53 ; 53 >
     au < exists ; exists ; 2013 ; Annals of Glaciology Volume 54 ; 54 >
     
   }
@@ -62,8 +63,7 @@
       name = Journal of Glaciology ;
       issn = 0022-1430 ;
       eissn = 1727-5652
-    
-    >
+     >
 
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
@@ -129,7 +129,7 @@
     au < manifest ; exists ; 2009 ; Journal of Glaciology Volume 55 ; 55 >
     au < manifest ; exists ; 2010 ; Journal of Glaciology Volume 56 ; 56 >
     au < manifest ; exists ; 2011 ; Journal of Glaciology Volume 57 ; 57 >
-    au < crawling ; exists ; 2012 ; Journal of Glaciology Volume 58 ; 58 >
+    au < released ; crawling ; 2012 ; Journal of Glaciology Volume 58 ; 58 >
     
   }
   

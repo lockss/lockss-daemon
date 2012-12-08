@@ -8,7 +8,7 @@
 
   plugin = needs.plugin
   param[base_url] = http://www.igi-global.com/
-  implicit < status1 ; status ; year; name ; param[volume] >
+  implicit < status1 ; status ; year ; name ; param[volume] >
   
    {
   

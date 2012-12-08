@@ -13,7 +13,7 @@
     param[graphics_url] = http://graphics.ingentaconnect.com/
     param[publisher_id] = wab
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.WhitingAndBirchPdfTransform
-    implicit < status1 ; status ; year; name ; param[volume_name] >
+    implicit < status1 ; status ; year ; name ; param[volume_name] >
 
   {
   

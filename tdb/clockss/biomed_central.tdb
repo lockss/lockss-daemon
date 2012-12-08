@@ -1645,7 +1645,7 @@
       au < crawling ; exists ; 2008 ; AIDS Research and Therapy Volume 5 ; 5 >
       au < crawling ; exists ; 2009 ; AIDS Research and Therapy Volume 6 ; 6 >
       au < released ; crawling ; 2010 ; AIDS Research and Therapy Volume 7 ; 7 >
-      au < testing ; exists ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 >
+      au < released ; crawling ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; AIDS Research and Therapy Volume 9 ; 9 >
 
     }
@@ -1691,7 +1691,7 @@
       au < crawling ; exists ; 2008 ; Annals of Clinical Microbiology and Antimicrobials Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 >
       au < released ; crawling ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
-      au < released ; manifest ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
+      au < released ; crawling ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
 
     }
@@ -1734,7 +1734,7 @@
       au < crawling ; exists ; 2008 ; Annals of Surgical Innovation and Research Volume 2 ; 2 >
       au < crawling ; exists ; 2009 ; Annals of Surgical Innovation and Research Volume 3 ; 3 >
       au < released ; crawling ; 2010 ; Annals of Surgical Innovation and Research Volume 4 ; 4 >
-      au < released ; manifest ; 2011 ; Annals of Surgical Innovation and Research Volume 5 ; 5 >
+      au < released ; crawling ; 2011 ; Annals of Surgical Innovation and Research Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Annals of Surgical Innovation and Research Volume 6 ; 6 >
 
     }
@@ -1750,7 +1750,7 @@
       param[base_url] = http://www.aricjournal.com/
       param[journal_issn] = 2047-2994
 
-      au < manifest ; exists ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
 
     }
 
@@ -1861,7 +1861,7 @@
       au < crawling ; exists ; 2008 ; Behavioral and Brain Functions Volume 4 ; 4 >
       au < crawling ; exists ; 2009 ; Behavioral and Brain Functions Volume 5 ; 5 >
       au < released ; crawling ; 2010 ; Behavioral and Brain Functions Volume 6 ; 6 >
-      au < released ; manifest ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 >
+      au < released ; crawling ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 >
 
     }
@@ -1963,7 +1963,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2008 ; BioMedical Engineering OnLine Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; BioMedical Engineering OnLine Volume 8 ; 8 >
       au < released ; crawling ; 2010 ; BioMedical Engineering OnLine Volume 9 ; 9 >
-      au < testing ; exists ; 2011 ; BioMedical Engineering OnLine Volume 10 ; 10 >
+      au < released ; crawling ; 2011 ; BioMedical Engineering OnLine Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; BioMedical Engineering OnLine Volume 11 ; 11 >
 
     }
@@ -2072,7 +2072,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2008 ; Carbon Balance and Management Volume 3 ; 3 >
       au < crawling ; exists ; 2009 ; Carbon Balance and Management Volume 4 ; 4 >
       au < released ; crawling ; 2010 ; Carbon Balance and Management Volume 5 ; 5 >
-      au < released ; manifest ; 2011 ; Carbon Balance and Management Volume 6 ; 6 >
+      au < released ; crawling ; 2011 ; Carbon Balance and Management Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Carbon Balance and Management Volume 7 ; 7 >
 
     }
@@ -2096,7 +2096,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2008 ; Cardiovascular Diabetology Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; Cardiovascular Diabetology Volume 8 ; 8 >
       au < released ; crawling ; 2010 ; Cardiovascular Diabetology Volume 9 ; 9 >
-      au < testing ; exists ; 2011 ; Cardiovascular Diabetology Volume 10 ; 10 >
+      au < released ; crawling ; 2011 ; Cardiovascular Diabetology Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Cardiovascular Diabetology Volume 11 ; 11 >
 
     }
@@ -2159,7 +2159,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2008 ; Cell Communication and Signaling Volume 6 ; 6 >
       au < crawling ; exists ; 2009 ; Cell Communication and Signaling Volume 7 ; 7 >
       au < released ; crawling ; 2010 ; Cell Communication and Signaling Volume 8 ; 8 >
-      au < released ; manifest ; 2011 ; Cell Communication and Signaling Volume 9 ; 9 >
+      au < released ; crawling ; 2011 ; Cell Communication and Signaling Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Cell Communication and Signaling Volume 10 ; 10 >
 
     }
@@ -2234,7 +2234,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2008 ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 >
       au < crawling ; exists ; 2009 ; Child and Adolescent Psychiatry and Mental Health Volume 3 ; 3 >
       au < released ; crawling ; 2010 ; Child and Adolescent Psychiatry and Mental Health Volume 4 ; 4 >
-      au < testing ; exists ; 2011 ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 >
+      au < released ; crawling ; 2011 ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 >
 
     }
@@ -2576,15 +2576,16 @@ comment[bmr] = journal archive available, but no new volumes
     {
 
       title <
-        name = EPMA Journal ;
-        issn = 1878-5085 ;
-        issnl = 1878-5085
+        name = The EPMA Journal ;
+        issn = 1878-5077 ;
+        eissn = 1878-5085 ;
+        issnl = 1878-5077
       >
 
       param[base_url] = http://www.epmajournal.com/
       param[journal_issn] = 1878-5085
 
-      au < exists ; exists ; 2012 ; EPMA Journal Volume 3 ; 3 >
+      au < exists ; exists ; 2012 ; The EPMA Journal Volume 3 ; 3 >
 
     }
 
@@ -3563,8 +3564,9 @@ comment[bmr] = journal archive available, but no new volumes
 
       title <
         name = Journal of Neurodevelopmental Disorders ;
-        issn = 1866-1955 ;
-        issnl = 1866-1955
+        issn = 1866-1947 ;
+        eissn = 1866-1955 ;
+        issnl = 1866-1947
       >
 
       param[base_url] = http://www.jneurodevdisorders.com/
@@ -3791,7 +3793,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2007 ; Malaria Journal Volume 6 ; 6 >
       au < crawling ; exists ; 2008 ; Malaria Journal Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; Malaria Journal Volume 8 ; 8 >
-      au < released ; manifest ; 2010 ; Malaria Journal Volume 9 ; 9 >
+      au < released ; crawling ; 2010 ; Malaria Journal Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Malaria Journal Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Malaria Journal Volume 11 ; 11 >
 
@@ -3906,7 +3908,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < crawling ; exists ; 2008 ; Molecular Cytogenetics Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; Molecular Cytogenetics Volume 2 ; 2 >
-      au < released ; manifest ; 2010 ; Molecular Cytogenetics Volume 3 ; 3 >
+      au < released ; crawling ; 2010 ; Molecular Cytogenetics Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; Molecular Cytogenetics Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Molecular Cytogenetics Volume 5 ; 5 >
 
@@ -3947,7 +3949,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2007 ; Molecular Pain Volume 3 ; 3 >
       au < crawling ; exists ; 2008 ; Molecular Pain Volume 4 ; 4 >
       au < crawling ; exists ; 2009 ; Molecular Pain Volume 5 ; 5 >
-      au < released ; manifest ; 2010 ; Molecular Pain Volume 6 ; 6 >
+      au < released ; crawling ; 2010 ; Molecular Pain Volume 6 ; 6 >
       au < released ; crawling ; 2011 ; Molecular Pain Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Molecular Pain Volume 8 ; 8 >
 
@@ -4048,7 +4050,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2007 ; Nutrition Journal Volume 6 ; 6 >
       au < crawling ; exists ; 2008 ; Nutrition Journal Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; Nutrition Journal Volume 8 ; 8 >
-      au < released ; manifest ; 2010 ; Nutrition Journal Volume 9 ; 9 >      
+      au < released ; crawling ; 2010 ; Nutrition Journal Volume 9 ; 9 >      
       au < released ; crawling ; 2011 ; Nutrition Journal Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Nutrition Journal Volume 11 ; 11 >
       
@@ -4144,7 +4146,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2007 ; Patient Safety in Surgery Volume 1 ; 1 >
       au < crawling ; exists ; 2008 ; Patient Safety in Surgery Volume 2 ; 2 >
       au < crawling ; exists ; 2009 ; Patient Safety in Surgery Volume 3 ; 3 >
-      au < released ; manifest ; 2010 ; Patient Safety in Surgery Volume 4 ; 4 >
+      au < released ; crawling ; 2010 ; Patient Safety in Surgery Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; Patient Safety in Surgery Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Patient Safety in Surgery Volume 6 ; 6 >
 
@@ -4612,7 +4614,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2008 ; World Journal of Emergency Surgery Volume 3 ; 3 >
       au < crawling ; exists ; 2009 ; World Journal of Emergency Surgery Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; World Journal of Emergency Surgery Volume 5 ; 5 >
-      au < released ; manifest ; 2011 ; World Journal of Emergency Surgery Volume 6 ; 6 >
+      au < released ; crawling ; 2011 ; World Journal of Emergency Surgery Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; World Journal of Emergency Surgery Volume 7 ; 7 >
 
     }
