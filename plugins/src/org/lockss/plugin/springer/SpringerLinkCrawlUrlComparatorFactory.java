@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkCrawlUrlComparatorFactory.java,v 1.1 2012-11-21 00:32:26 thib_gc Exp $
+ * $Id: SpringerLinkCrawlUrlComparatorFactory.java,v 1.2 2012-12-08 01:21:04 thib_gc Exp $
  */
 
 /*
@@ -41,7 +41,9 @@ import org.lockss.plugin.*;
 /**
  * <p>A crawl URL comparator factory for the SpringerLink platform powered by
  * MetaPress. Substance-bearing URLs (ending in fulltext.html or
- * fulltext.pdf) are prioritized over all others.</p>
+ * fulltext.pdf) are prioritized over all others, except for a few important
+ * URLs containing most of the styles and scripts that weren't collected until
+ * recently.</p>
  * @author Thib Guicherd-Callin
  */
 public class SpringerLinkCrawlUrlComparatorFactory implements CrawlUrlComparatorFactory {
@@ -49,31 +51,31 @@ public class SpringerLinkCrawlUrlComparatorFactory implements CrawlUrlComparator
   @Override
   public Comparator<CrawlUrl> createCrawlUrlComparator(ArchivalUnit au) throws LinkageError {
     return new Comparator<CrawlUrl>() {
+      private int characterize(String url) {
+        if (url.contains("/dynamic-file.axd?")) {          
+          return 0;
+        }
+        else if (url.endsWith("/fulltext.pdf") || url.endsWith("/fulltext.html")) {
+          return 1;
+        }
+        else {
+          return 2;
+        }
+      }
       @Override
       public int compare(CrawlUrl o1, CrawlUrl o2) {
         String url1 = o1.getUrl();
-        boolean bool1 = url1.endsWith("/fulltext.pdf") || url1.endsWith("/fulltext.html"); 
+        int prio1 = characterize(url1);
         String url2 = o2.getUrl();
-        boolean bool2 = url2.endsWith("/fulltext.pdf") || url2.endsWith("/fulltext.html"); 
-        if (bool1) {
-          if (bool2) {
-            // Both url1 and url2 are urgent; compare them together
-            return url1.compareTo(url2);
-          }
-          else {
-            // url1 is urgent; it wins
-            return -1;
-          }
+        int prio2 = characterize(url2);
+        if (prio1 < prio2) {
+          return -1;
+        }
+        else if (prio1 > prio2) {
+          return 1;
         }
         else {
-          if (bool2) {
-            // url2 is urgent; it wins
-            return 1;
-          }
-          else {
-            // Neither url1 nor url2 are urgent; compare them together
-            return url1.compareTo(url2);
-          }
+          return url1.compareTo(url2);
         }
       }
     };
