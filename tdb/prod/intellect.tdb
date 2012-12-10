@@ -1016,11 +1016,11 @@
       param[journal_id] = nl
       param[journal_issn] = 1601-829X
 
-      au < manifest ; 2007 ; Northern Lights: Film and Media Studies Yearbook Volume 5 ; 5 >
-      au < manifest ; 2008 ; Northern Lights: Film and Media Studies Yearbook Volume 6 ; 6 >
-      au < manifest ; 2009 ; Northern Lights: Film and Media Studies Yearbook Volume 7 ; 7 >
-      au < manifest ; 2010 ; Northern Lights: Film and Media Studies Yearbook Volume 8 ; 8 >
-      au < manifest ; 2011 ; Northern Lights: Film and Media Studies Yearbook Volume 9 ; 9 >
+      au < testing ; 2007 ; Northern Lights: Film and Media Studies Yearbook Volume 5 ; 5 >
+      au < testing ; 2008 ; Northern Lights: Film and Media Studies Yearbook Volume 6 ; 6 >
+      au < testing ; 2009 ; Northern Lights: Film and Media Studies Yearbook Volume 7 ; 7 >
+      au < testing ; 2010 ; Northern Lights: Film and Media Studies Yearbook Volume 8 ; 8 >
+      au < testing ; 2011 ; Northern Lights: Film and Media Studies Yearbook Volume 9 ; 9 >
 
     }
 
@@ -1057,7 +1057,7 @@
       param[journal_issn] = 2040-3682
     
       au < released ; 2010 ; Philosophy of Photography Volume 1 ; 1 >
-      au < manifest ; 2011 ; Philosophy of Photography Volume 2 ; 2 >
+      au < testing ; 2011 ; Philosophy of Photography Volume 2 ; 2 >
     }
 
     {
@@ -1221,8 +1221,8 @@
       param[journal_id] = stic
       param[journal_issn] = 2040-3232
     
-      au < manifest ; 2010 ; Studies in Comics Volume 1 ; 1 >
-      au < manifest ; 2011-2012 ; Studies in Comics Volume 2 ; 2 >
+      au < testing ; 2010 ; Studies in Comics Volume 1 ; 1 >
+      au < testing ; 2011-2012 ; Studies in Comics Volume 2 ; 2 >
 
     }
 
@@ -1344,11 +1344,11 @@
       param[journal_id] = smt
       param[journal_issn] = 1750-3167
       
-      au < manifest ; 2006-2007 ; Studies in Musical Theatre Volume 1 ; 1 >
-      au < manifest ; 2008 ; Studies in Musical Theatre Volume 2 ; 2 >
-      au < manifest ; 2009 ; Studies in Musical Theatre Volume 3 ; 3 >
-      au < manifest ; 2010 ; Studies in Musical Theatre Volume 4 ; 4 >
-      au < manifest ; 2011 ; Studies in Musical Theatre Volume 5 ; 5 >
+      au < testing ; 2006-2007 ; Studies in Musical Theatre Volume 1 ; 1 >
+      au < testing ; 2008 ; Studies in Musical Theatre Volume 2 ; 2 >
+      au < testing ; 2009 ; Studies in Musical Theatre Volume 3 ; 3 >
+      au < testing ; 2010 ; Studies in Musical Theatre Volume 4 ; 4 >
+      au < testing ; 2011 ; Studies in Musical Theatre Volume 5 ; 5 >
 
     }
 
@@ -1362,11 +1362,11 @@
       param[journal_id] = srcs
       param[journal_issn] = 1750-3132
       
-      au < manifest ; 2007 ; Studies in Russian & Soviet Cinema Volume 1 ; 1 >
-      au < manifest ; 2008 ; Studies in Russian & Soviet Cinema Volume 2 ; 2 >
-      au < manifest ; 2009 ; Studies in Russian & Soviet Cinema Volume 3 ; 3 >
-      au < manifest ; 2010 ; Studies in Russian & Soviet Cinema Volume 4 ; 4 >
-      au < manifest ; 2011 ; Studies in Russian & Soviet Cinema Volume 5 ; 5 >
+      au < testing ; 2007 ; Studies in Russian & Soviet Cinema Volume 1 ; 1 >
+      au < testing ; 2008 ; Studies in Russian & Soviet Cinema Volume 2 ; 2 >
+      au < testing ; 2009 ; Studies in Russian & Soviet Cinema Volume 3 ; 3 >
+      au < testing ; 2010 ; Studies in Russian & Soviet Cinema Volume 4 ; 4 >
+      au < testing ; 2011 ; Studies in Russian & Soviet Cinema Volume 5 ; 5 >
 
     }
 
@@ -1464,7 +1464,7 @@
       param[journal_id] = viq
       param[journal_issn] = 2045-5879
       
-      au < manifest ; 2011 ; Visual Inquiry: Learning & Teaching Art Volume 1 ; 1 >
+      au < testing ; 2011 ; Visual Inquiry: Learning & Teaching Art Volume 1 ; 1 >
 
     }
 
