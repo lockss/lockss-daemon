@@ -45,7 +45,7 @@
       comment[years] = years in web addresses are two years behind the publishing year as of 20110912
       comment[years1] = .long links still go to the year indicated (i.e. vol2009 manifest links to 2009, not 2011)
       
-      au < HighWirePressH20Plugin ; testing ; 2000 ; American Literary Scholarship 2000 ; 1998 >
+      au < HighWirePressH20Plugin ; ready ; 2000 ; American Literary Scholarship 2000 ; 1998 >
       au < HighWirePressH20Plugin ; released ; 2001 ; American Literary Scholarship 2001 ; 1999 >
       au < HighWirePressH20Plugin ; released ; 2002 ; American Literary Scholarship 2002 ; 2000 >
       au < HighWirePressH20Plugin ; released ; 2003 ; American Literary Scholarship 2003 ; 2001 >
@@ -1544,26 +1544,26 @@
       implicit < status ; year ; name ; param[volume] >
       comment[notReady] = RU4525, content page missing
 
-      au < testing ; 1973 ; The Minnesota Review Volume 1 ; 1 >
+      au < ready ; 1973 ; The Minnesota Review Volume 1 ; 1 >
       au < doesNotExist ; 0 ; The Minnesota Review Volume 2 ; 2 >
       au < doesNotExist ; 0 ; The Minnesota Review Volume 3 ; 3 >
-      au < testing ; 1975 ; The Minnesota Review Volume 4 ; 4 >
-      au < testing ; 1975 ; The Minnesota Review Volume 5 ; 5 >
-      au < testing ; 1976 ; The Minnesota Review Volume 6 ; 6 >
-      au < testing ; 1976 ; The Minnesota Review Volume 7 ; 7 >
-      au < testing ; 1977 ; The Minnesota Review Volume 8 ; 8 >
+      au < ready ; 1975 ; The Minnesota Review Volume 4 ; 4 >
+      au < ready ; 1975 ; The Minnesota Review Volume 5 ; 5 >
+      au < ready ; 1976 ; The Minnesota Review Volume 6 ; 6 >
+      au < ready ; 1976 ; The Minnesota Review Volume 7 ; 7 >
+      au < ready ; 1977 ; The Minnesota Review Volume 8 ; 8 >
       au < doesNotExist ; 0 ; The Minnesota Review Volume 9 ; 9 >
-      au < testing ; 1978 ; The Minnesota Review Volume 10 ; 10 >
-      au < testing ; 1978 ; The Minnesota Review Volume 11 ; 11 >
-      au < testing ; 1979 ; The Minnesota Review Volume 12 ; 12 >
-      au < testing ; 1979 ; The Minnesota Review Volume 13 ; 13 >
-      au < testing ; 1980 ; The Minnesota Review Volume 14 ; 14 >
-      au < testing ; 1980 ; The Minnesota Review Volume 15 ; 15 >
-      au < testing ; 1981 ; The Minnesota Review Volume 16 ; 16 >
-      au < testing ; 1981 ; The Minnesota Review Volume 17 ; 17 >
-      au < testing ; 1982 ; The Minnesota Review Volume 18 ; 18 >
-      au < testing ; 1982 ; The Minnesota Review Volume 19 ; 19 >
-      au < testing ; 1983 ; The Minnesota Review Volume 20 ; 20 >
+      au < ready ; 1978 ; The Minnesota Review Volume 10 ; 10 >
+      au < ready ; 1978 ; The Minnesota Review Volume 11 ; 11 >
+      au < ready ; 1979 ; The Minnesota Review Volume 12 ; 12 >
+      au < ready ; 1979 ; The Minnesota Review Volume 13 ; 13 >
+      au < ready ; 1980 ; The Minnesota Review Volume 14 ; 14 >
+      au < ready ; 1980 ; The Minnesota Review Volume 15 ; 15 >
+      au < ready ; 1981 ; The Minnesota Review Volume 16 ; 16 >
+      au < ready ; 1981 ; The Minnesota Review Volume 17 ; 17 >
+      au < ready ; 1982 ; The Minnesota Review Volume 18 ; 18 >
+      au < ready ; 1982 ; The Minnesota Review Volume 19 ; 19 >
+      au < ready ; 1983 ; The Minnesota Review Volume 20 ; 20 >
       au < ready ; 1983 ; The Minnesota Review Volume 21 ; 21 >
       au < ready ; 1984 ; The Minnesota Review Volume 22 ; 22 >
       au < ready ; 1984 ; The Minnesota Review Volume 23 ; 23 >
@@ -2026,7 +2026,7 @@
       au < released ; 2009 ; Pedagogy Volume 9 ; 9 >
       au < released ; 2010 ; Pedagogy Volume 10 ; 10 >
       au < released ; 2011 ; Pedagogy Volume 11 ; 11 >
-      au < testing ; 2012 ; Pedagogy Volume 12 ; 12 >
+      au < ready ; 2012 ; Pedagogy Volume 12 ; 12 >
     
     }
 
