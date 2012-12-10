@@ -146,8 +146,8 @@
 
     param[journal_id] = 154
 
-    au < manifest ; 2009 ; Biomarkers in Cancer Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Biomarkers in Cancer Volume 2 ; 2010 >
+    au < testing ; 2009 ; Biomarkers in Cancer Volume 1 ; 2009 >
+    au < testing ; 2010 ; Biomarkers in Cancer Volume 2 ; 2010 >
     au < released ; 2011 ; Biomarkers in Cancer Volume 3 ; 2011 >
     au < released ; 2012 ; Biomarkers in Cancer Volume 4 ; 2012 >
 
@@ -163,8 +163,8 @@
 
     param[journal_id] = 170
 
-    au < manifest ; 2009 ; Biomedical Engineering and Computational Biology Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Biomedical Engineering and Computational Biology Volume 2 ; 2010 >
+    au < testing ; 2009 ; Biomedical Engineering and Computational Biology Volume 1 ; 2009 >
+    au < testing ; 2010 ; Biomedical Engineering and Computational Biology Volume 2 ; 2010 >
     au < released ; 2011 ; Biomedical Engineering and Computational Biology Volume 3 ; 2011 >
 
   }
@@ -179,9 +179,9 @@
 
     param[journal_id] = 82
 
-    au < manifest ; 2008 ; Biomedical Informatics Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Biomedical Informatics Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Biomedical Informatics Insights Volume 3 ; 2010 >
+    au < testing ; 2008 ; Biomedical Informatics Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Biomedical Informatics Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Biomedical Informatics Insights Volume 3 ; 2010 >
     au < released ; 2011 ; Biomedical Informatics Insights Volume 4 ; 2011 >
     au < released ; 2012 ; Biomedical Informatics Insights Volume 5 (Suppl. 1) ; 2012 >
 
@@ -197,9 +197,9 @@
 
     param[journal_id] = 120
 
-    au < manifest ; 2008 ; Bone and Tissue Regeneration Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Bone and Tissue Regeneration Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Bone and Tissue Regeneration Insights Volume 3 ; 2010 >
+    au < testing ; 2008 ; Bone and Tissue Regeneration Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Bone and Tissue Regeneration Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Bone and Tissue Regeneration Insights Volume 3 ; 2010 >
     
 
   }
@@ -214,9 +214,9 @@
 
     param[journal_id] = 84
 
-    au < manifest ; 2008 ; Breast Cancer: Basic and Clinical Research Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Breast Cancer: Basic and Clinical Research Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Breast Cancer: Basic and Clinical Research Volume 4 ; 2010 >
+    au < testing ; 2008 ; Breast Cancer: Basic and Clinical Research Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Breast Cancer: Basic and Clinical Research Volume 3 ; 2009 >
+    au < testing ; 2010 ; Breast Cancer: Basic and Clinical Research Volume 4 ; 2010 >
     au < released ; 2011 ; Breast Cancer: Basic and Clinical Research Volume 5 ; 2011 >
     au < released ; 2012 ; Breast Cancer: Basic and Clinical Research Volume 6 ; 2012 >
 
@@ -232,9 +232,9 @@
 
     param[journal_id] = 122
 
-    au < manifest ; 2008 ; Cancer Growth and Metastasis Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Cancer Growth and Metastasis Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Cancer Growth and Metastasis Volume 3 ; 2010 >
+    au < testing ; 2008 ; Cancer Growth and Metastasis Volume 1 ; 2008 >
+    au < testing ; 2009 ; Cancer Growth and Metastasis Volume 2 ; 2009 >
+    au < testing ; 2010 ; Cancer Growth and Metastasis Volume 3 ; 2010 >
     au < released ; 2011 ; Cancer Growth and Metastasis Volume 4 ; 2011 >
     au < released ; 2012 ; Cancer Growth and Metastasis Volume 5 ; 2012 >
 
@@ -250,12 +250,12 @@
 
     param[journal_id] = 10
 
-    au < manifest ; 2005 ; Cancer Informatics Volume 1 ; 2005 >
-    au < manifest ; 2006 ; Cancer Informatics Volume 2 ; 2006 >
-    au < manifest ; 2007 ; Cancer Informatics Volume 3-5 ; 2007 >
-    au < manifest ; 2008 ; Cancer Informatics Volume 6 ; 2008 >
-    au < manifest ; 2009 ; Cancer Informatics Volume 7-8 ; 2009 >
-    au < manifest ; 2010 ; Cancer Informatics Volume 9 ; 2010 >
+    au < testing ; 2005 ; Cancer Informatics Volume 1 ; 2005 >
+    au < testing ; 2006 ; Cancer Informatics Volume 2 ; 2006 >
+    au < testing ; 2007 ; Cancer Informatics Volume 3-5 ; 2007 >
+    au < testing ; 2008 ; Cancer Informatics Volume 6 ; 2008 >
+    au < testing ; 2009 ; Cancer Informatics Volume 7-8 ; 2009 >
+    au < testing ; 2010 ; Cancer Informatics Volume 9 ; 2010 >
     au < released ; 2011 ; Cancer Informatics Volume 10 ; 2011 >
     au < released ; 2012 ; Cancer Informatics Volume 11 ; 2012 >
     
