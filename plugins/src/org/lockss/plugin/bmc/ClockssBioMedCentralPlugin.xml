@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
       <string>Substance</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -93,9 +93,14 @@
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
+      <!-- examples of substance
+          http://www.infectagentscancer.com/content/pdf/1750-9378-5-9.pdf
+          http://breast-cancer-research.com/content/pdf/bcr3224.pdf
+       -->
       <list>
          <string>"^%scontent/%s/[\w]{1,4}[\d]{1,4}.pdf$", base_url, volume_name</string>
          <string>"^%scontent/pdf/%s-%s-[-\d]{1,7}(.pdf)?$", base_url, journal_issn, volume_name</string>
+         <string>"^%scontent/pdf/[-\w]{1,20}(.pdf)?$", base_url</string>      
       </list>
   </entry>
   <entry>
