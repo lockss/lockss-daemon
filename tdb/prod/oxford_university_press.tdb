@@ -1678,6 +1678,22 @@
     param[base_url] = http://astrogeo.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 1997 ; Astronomy & Geophysics Volume 38 ; 38 >
+    au < exists ; 1998 ; Astronomy & Geophysics Volume 39 ; 39 >
+    au < exists ; 1999 ; Astronomy & Geophysics Volume 40 ; 40 >
+    au < exists ; 2000 ; Astronomy & Geophysics Volume 41 ; 41 >
+    au < exists ; 2001 ; Astronomy & Geophysics Volume 42 ; 42 >
+    au < exists ; 2002 ; Astronomy & Geophysics Volume 43 ; 43 >
+    au < exists ; 2003 ; Astronomy & Geophysics Volume 44 ; 44 >
+    au < exists ; 2004 ; Astronomy & Geophysics Volume 45 ; 45 >
+    au < exists ; 2005 ; Astronomy & Geophysics Volume 46 ; 46 >
+    au < exists ; 2006 ; Astronomy & Geophysics Volume 47 ; 47 >
+    au < exists ; 2007 ; Astronomy & Geophysics Volume 48 ; 48 >
+    au < exists ; 2008 ; Astronomy & Geophysics Volume 49 ; 49 >
+    au < exists ; 2009 ; Astronomy & Geophysics Volume 50 ; 50 >
+    au < exists ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 >
+    au < exists ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 >
+    au < exists ; 2012 ; Astronomy & Geophysics Volume 53 ; 53 >
     au < expected ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 >
 
   }
