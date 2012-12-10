@@ -355,13 +355,13 @@
       param[base_url] = http://commonknowledge.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Common Knowledge Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Common Knowledge Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Common Knowledge Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Common Knowledge Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Common Knowledge Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Common Knowledge Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Common Knowledge Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; released ; 2006 ; Common Knowledge Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Common Knowledge Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; testing ; 2008 ; Common Knowledge Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; ready ; 2008 ; Common Knowledge Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Common Knowledge Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Common Knowledge Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Common Knowledge Volume 17 ; 17 >
@@ -1116,7 +1116,7 @@
      au < HighWirePressH20Plugin ; manifest ; 1977 ; History of Political Economy Volume 9 ; 9 >
      au < HighWirePressH20Plugin ; manifest ; 1978 ; History of Political Economy Volume 10 ; 10 >
      au < HighWirePressH20Plugin ; manifest ; 1979 ; History of Political Economy Volume 11 ; 11 >
-     au < HighWirePressH20Plugin ; manifest ; 1980 ; History of Political Economy Volume 12 ; 12 >
+     au < HighWirePressH20Plugin ; manifest ; 1980 ; History of manifestPolitical Economy Volume 12 ; 12 >
      au < HighWirePressH20Plugin ; manifest ; 1981 ; History of Political Economy Volume 13 ; 13 >
      au < HighWirePressH20Plugin ; manifest ; 1982 ; History of Political Economy Volume 14 ; 14 >
      au < HighWirePressH20Plugin ; manifest ; 1983 ; History of Political Economy Volume 15 ; 15 >
@@ -1428,7 +1428,7 @@
       param[base_url] = http://labor.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-     au < HighWirePressH20Plugin ; manifest ; 2004 ; Labor: Studies in Working-Class History of the Americas Volume 1 ; 1 >
+     au < HighWirePressH20Plugin ; testing ; 2004 ; Labor: Studies in Working-Class History of the Americas Volume 1 ; 1 >
      au < HighWireStrVolPlugin ; down ; 2005 ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
      au < HighWireStrVolPlugin ; down ; 2006 ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 >
      au < HighWireStrVolPlugin ; down ; 2007 ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 >
@@ -1452,7 +1452,7 @@
       param[base_url] = http://lofe.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; ready ; 2012 ; Limnology and Oceanography: Fluids and Environments Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Limnology and Oceanography: Fluids and Environments Volume 3 ; 3 >
 
@@ -2186,7 +2186,7 @@
       au < released ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 >
       au < released ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
       au < released ; 2011 ; positions: east asia cultures critique Volume 19 ; 19 >
-      au < testing ; 2012 ; positions: east asia cultures critique Volume 20 ; 20 >
+      au < ready ; 2012 ; positions: east asia cultures critique Volume 20 ; 20 >
 
     }
     
@@ -2425,7 +2425,7 @@
       au < released ; 2009 ; Small Axe Volume 13 ; 13 >
       au < released ; 2010 ; Small Axe Volume 14 ; 14 >
       au < released ; 2011 ; Small Axe Volume 15 ; 15 >
-      au < testing ; 2012 ; Small Axe Volume 16 ; 16 >
+      au < ready ; 2012 ; Small Axe Volume 16 ; 16 >
     }
     
     {
@@ -2704,7 +2704,7 @@
     param[journal_dir] = tikkun
     attr[journal_id] = tik
     
-    au < testing ; 2012 ; Tikkun Volume 27 ; 27 >
+    au < ready ; 2012 ; Tikkun Volume 27 ; 27 >
     
     }
    
