@@ -8775,7 +8775,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://acc.sagepub.com/
 
-      au < crawling ; exists ; 2012 ; European Heart Journal: Acute Cardiovascular Care Volume 1 ; 1 ; >
+      au < testing ; exists ; 2012 ; European Heart Journal: Acute Cardiovascular Care Volume 1 ; 1 ; >
       au < expected ; exists ; 2013 ; European Heart Journal: Acute Cardiovascular Care Volume 2 ; 2 ; >
 
   }
@@ -8846,7 +8846,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European History Quarterly Volume 39 ; 39 ; >
       au < zapped ; down ; 2010 ; European History Quarterly Volume 40 ; 40 ; >
       au < released ; crawling ; 2011 ; European History Quarterly Volume 41 ; 41 ; >
-      au < crawling ; exists ; 2012 ; European History Quarterly Volume 42 ; 42 ; >
+      au < testing ; exists ; 2012 ; European History Quarterly Volume 42 ; 42 ; >
       au < expected ; exists ; 2013 ; European History Quarterly Volume 43 ; 43 ; >
 
     }
@@ -8919,7 +8919,7 @@
       au < released ; crawling ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; European Journal of Cardiovascular Nursing Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 11 ; >
+      au < testing ; exists ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 11 ; >
       au < expected ; exists ; 2013 ; European Journal of Cardiovascular Nursing Volume 12 ; 12 ; >
 
     }
@@ -8983,7 +8983,7 @@
         comment[0] = Previous issues are at the same url.
         
         au < doesNotExist ; doesNotExist ; 0 ; European Journal of Preventive Cardiology Volume 18 ; 18 ; >
-        au < crawling ; exists ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 ; >
+        au < testing ; exists ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 ; >
         au < expected ; exists ; 2013 ; European Journal of Preventive Cardiology Volume 20 ; 20 ; >
 
       }
@@ -9040,7 +9040,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Communication Volume 24 ; 24 ; >
       au < zapped ; down ; 2010 ; European Journal of Communication Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; European Journal of Communication Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2012 ; European Journal of Communication Volume 27 ; 27 ; >
+      au < testing ; exists ; 2012 ; European Journal of Communication Volume 27 ; 27 ; >
       au < expected ; exists ; 2013 ; European Journal of Communication Volume 28 ; 28 ; >
 
     }
@@ -9079,7 +9079,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Criminology Volume 6 ; 6 ; >
       au < released ; crawling ; 2010 ; European Journal of Criminology Volume 7 ; 7 ; >
       au < released ; crawling ; 2011 ; European Journal of Criminology Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2012 ; European Journal of Criminology Volume 9 ; 9 ; >
+      au < testing ; exists ; 2012 ; European Journal of Criminology Volume 9 ; 9 ; >
       au < expected ; exists ; 2013 ; European Journal of Criminology Volume 10 ; 10 ; >
 
     }
@@ -9124,7 +9124,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Cultural Studies Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; European Journal of Cultural Studies Volume 13 ; 13 ; >
       au < released ; crawling ; 2011 ; European Journal of Cultural Studies Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2012 ; European Journal of Cultural Studies Volume 15 ; 15 ; >
+      au < testing ; exists ; 2012 ; European Journal of Cultural Studies Volume 15 ; 15 ; >
       au < expected ; exists ; 2013 ; European Journal of Cultural Studies Volume 16 ; 16 ; >
 
     }
@@ -9172,7 +9172,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Industrial Relations Volume 15 ; 15 ; >
       au < zapped ; down ; 2010 ; European Journal of Industrial Relations Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; European Journal of Industrial Relations Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2012 ; European Journal of Industrial Relations Volume 18 ; 18 ; >
+      au < testing ; exists ; 2012 ; European Journal of Industrial Relations Volume 18 ; 18 ; >
       au < expected ; exists ; 2013 ; European Journal of Industrial Relations Volume 19 ; 19 ; >
 
     }
@@ -9220,7 +9220,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of International Relations Volume 15 ; 15 ; >
       au < released ; crawling ; 2010 ; European Journal of International Relations Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; European Journal of International Relations Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2012 ; European Journal of International Relations Volume 18 ; 18 ; >
+      au < testing ; exists ; 2012 ; European Journal of International Relations Volume 18 ; 18 ; >
       au < expected ; exists ; 2013 ; European Journal of International Relations Volume 19 ; 19 ; >
 
     }
@@ -37851,7 +37851,7 @@
       au < exists ; exists ; 2009 ; Ultrasonic Imaging Volume 31 ; 31 ; >
       au < exists ; exists ; 2010 ; Ultrasonic Imaging Volume 32 ; 32 ; >
       au < exists ; exists ; 2011 ; Ultrasonic Imaging Volume 33 ; 33 ; >
-      au < crawling ; exists ; 2012 ; Ultrasonic Imaging Volume 34 ; 34 ; >
+      au < testing ; exists ; 2012 ; Ultrasonic Imaging Volume 34 ; 34 ; >
       au < expected ; exists ; 2013 ; Ultrasonic Imaging Volume 35 ; 35 ; >
 
     }
