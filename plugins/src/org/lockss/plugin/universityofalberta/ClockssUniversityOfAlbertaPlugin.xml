@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -25,14 +25,14 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>University Of Alberta Plugin (CLOCKSS)</string>
+    <string>University of Alberta Plugin (CLOCKSS)</string>
   </entry>
    <entry>
      <string>au_name</string>
-    <string>&quot;University Of Alberta Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
+    <string>&quot;University of Alberta Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
    </entry>
   <entry>
-    <string>au_manifest</string>
+    <string>au_permission_url</string>
     <string>&quot;%sindex.php/%s/about/editorialPolicies&quot;, base_url, journal_id</string>
   </entry>
 </map>
