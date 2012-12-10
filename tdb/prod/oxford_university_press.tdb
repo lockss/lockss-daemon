@@ -4458,7 +4458,7 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
+    param[base_url] = http://.jhu.edu/
     param[journal_dir] = early_music
     attr[journal_id] = emu
     implicit < status ; year ; name ; param[volume] >
