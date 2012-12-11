@@ -17,38 +17,39 @@
     
       param[base_url] = http://www.adv-geosci.net/
       param[home_url] = http://www.advances-in-geosciences.net/
+      comment[notReady] = low agreement, Library Search/Full Text Search difference
 
-      au < testing ; 2003 ; 2003 ; Advances in Geosciences (ADGEO) Volume 1 ; 1 >
-      au < testing ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 2 ; 2 >
-      au < testing ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 3 ; 3 >
-      au < testing ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 4 ; 4 >
-      au < testing ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 5 ; 5 >
-      au < testing ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 6 ; 6 >
-      au < testing ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 7 ; 7 >
-      au < testing ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 8 ; 8 >
-      au < testing ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 9 ; 9 >
-      au < testing ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 10 ; 10 >
-      au < testing ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 11 ; 11 >
-      au < testing ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 12 ; 12 >
-      au < testing ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 13 ; 13 >
-      au < testing ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 14 ; 14 >
-      au < testing ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 15 ; 15 >
-      au < testing ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 16 ; 16 >
-      au < testing ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 17 ; 17 >
-      au < testing ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 18 ; 18 >
-      au < testing ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 19 ; 19 >
-      au < testing ; 2009 ; 2009 ; Advances in Geosciences (ADGEO) Volume 20 ; 20 >
-      au < testing ; 2009 ; 2009 ; Advances in Geosciences (ADGEO) Volume 21 ; 21 >
-      au < testing ; 2009 ; 2009 ; Advances in Geosciences (ADGEO) Volume 22 ; 22 >
-      au < testing ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 23 ; 23 >
-      au < testing ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 24 ; 24 >
-      au < testing ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 25 ; 25 >
-      au < testing ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 26 ; 26 >
-      au < testing ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 27 ; 27 >
-      au < testing ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 28 ; 28 >
-      au < testing ; 2011 ; 2011 ; Advances in Geosciences (ADGEO) Volume 29 ; 29 >
-      au < testing ; 2011 ; 2011 ; Advances in Geosciences (ADGEO) Volume 30 ; 30 >
-      au < testing ; 2012 ; 2012 ; Advances in Geosciences (ADGEO) Volume 31 ; 31 >
+      au < notReady ; 2003 ; 2003 ; Advances in Geosciences (ADGEO) Volume 1 ; 1 >
+      au < notReady ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 2 ; 2 >
+      au < notReady ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 3 ; 3 >
+      au < notReady ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 4 ; 4 >
+      au < notReady ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 5 ; 5 >
+      au < ready ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 6 ; 6 >
+      au < notReady ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 7 ; 7 >
+      au < notReady ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 8 ; 8 >
+      au < notReady ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 9 ; 9 >
+      au < notReady ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 10 ; 10 >
+      au < notReady ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 11 ; 11 >
+      au < notReady ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 12 ; 12 >
+      au < notReady ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 13 ; 13 >
+      au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 14 ; 14 >
+      au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 15 ; 15 >
+      au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 16 ; 16 >
+      au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 17 ; 17 >
+      au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 18 ; 18 >
+      au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 19 ; 19 >
+      au < notReady ; 2009 ; 2009 ; Advances in Geosciences (ADGEO) Volume 20 ; 20 >
+      au < ready ; 2009 ; 2009 ; Advances in Geosciences (ADGEO) Volume 21 ; 21 >
+      au < notReady ; 2009 ; 2009 ; Advances in Geosciences (ADGEO) Volume 22 ; 22 >
+      au < ready ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 23 ; 23 >
+      au < notReady ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 24 ; 24 >
+      au < notReady ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 25 ; 25 >
+      au < notReady ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 26 ; 26 >
+      au < ready ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 27 ; 27 >
+      au < ready ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 28 ; 28 >
+      au < notReady ; 2011 ; 2011 ; Advances in Geosciences (ADGEO) Volume 29 ; 29 >
+      au < notReady ; 2011 ; 2011 ; Advances in Geosciences (ADGEO) Volume 30 ; 30 >
+      au < notReady ; 2012 ; 2012 ; Advances in Geosciences (ADGEO) Volume 31 ; 31 >
     
    }
     
@@ -538,14 +539,15 @@
     
       param[base_url] = http://www.soc-geogr.net/
       param[home_url] = http://www.social-geography.net/
+      comment[notReady] = low agreement, iframe
 
-      au < testing ; 2005 ; 2005 ; Social Geography (SG) Volume 1 ; 1 >
-      au < testing ; 2007 ; 2007 ; Social Geography (SG) Volume 2 ; 2 >
-      au < testing ; 2008 ; 2008 ; Social Geography (SG) Volume 3 ; 3 >
-      au < testing ; 2009 ; 2009 ; Social Geography (SG) Volume 4 ; 4 >
-      au < testing ; 2010 ; 2010 ; Social Geography (SG) Volume 5 ; 5 >
-      au < testing ; 2011 ; 2011 ; Social Geography (SG) Volume 6 ; 6 >
-      au < testing ; 2012 ; 2012 ; Social Geography (SG) Volume 7 ; 7 >
+      au < notReady ; 2005 ; 2005 ; Social Geography (SG) Volume 1 ; 1 >
+      au < notReady ; 2007 ; 2007 ; Social Geography (SG) Volume 2 ; 2 >
+      au < notReady ; 2008 ; 2008 ; Social Geography (SG) Volume 3 ; 3 >
+      au < notReady ; 2009 ; 2009 ; Social Geography (SG) Volume 4 ; 4 >
+      au < notReady ; 2010 ; 2010 ; Social Geography (SG) Volume 5 ; 5 >
+      au < notReady ; 2011 ; 2011 ; Social Geography (SG) Volume 6 ; 6 >
+      au < notReady ; 2012 ; 2012 ; Social Geography (SG) Volume 7 ; 7 >
     
    }
     
@@ -558,10 +560,11 @@
     
       param[base_url] = http://www.solid-earth.net/
       param[home_url] = http://www.solid-earth.net/
+      comment[notReady] = low agreement, iframe
 
-      au < testing ; 2010 ; 2010 ; Solid Earth (SE) Volume 1 ; 1 >
-      au < testing ; 2011 ; 2011 ; Solid Earth (SE) Volume 2 ; 2 >
-      au < testing ; 2012 ; 2012 ; Solid Earth (SE) Volume 3 ; 3 >
+      au < notReady ; 2010 ; 2010 ; Solid Earth (SE) Volume 1 ; 1 >
+      au < notReady ; 2011 ; 2011 ; Solid Earth (SE) Volume 2 ; 2 >
+      au < notReady ; 2012 ; 2012 ; Solid Earth (SE) Volume 3 ; 3 >
     
    }
     
@@ -574,11 +577,12 @@
     
       param[base_url] = http://www.stephan-mueller-spec-publ-ser.net/
       param[home_url] = http://www.stephan-mueller-special-publication-series.net/
+      comment[notReady] = low agreement, iframe
 
-      au < testing ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 1 ; 1 >
-      au < testing ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 2 ; 2 >
-      au < testing ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 3 ; 3 >
-      au < testing ; 2009 ; 2009 ; Stephan Mueller Special Publication Series (SMSPS) Volume 4 ; 4 >
+      au < notReady ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 1 ; 1 >
+      au < notReady ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 2 ; 2 >
+      au < notReady ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 3 ; 3 >
+      au < notReady ; 2009 ; 2009 ; Stephan Mueller Special Publication Series (SMSPS) Volume 4 ; 4 >
     
    }
     
@@ -590,8 +594,9 @@
     
       param[base_url] = http://www.surv-perspect-integr-environ-soc.net/
       param[home_url] = http://www.surveys-and-perspectives-integrating-environment-and-society.net/
+      comment[notReady] = low agreement, iframe
 
-      au < testing ; 2008 ; 2008 ; Surveys and Perspectives Integrating Environment and Society (SAPIENS) Volume 1 ; 1 >
+      au < notReady ; 2008 ; 2008 ; Surveys and Perspectives Integrating Environment and Society (SAPIENS) Volume 1 ; 1 >
     
    }
     
@@ -623,6 +628,7 @@
     
       param[base_url] = http://www.web-ecol.net/
       param[home_url] = http://www.web-ecology.net/
+      comment[notReady] = low agreement, iframe
 
       au < ready ; 2000 ; 2000 ; Web Ecology (WE) Volume 1 ; 1 >
       au < ready ; 2001 ; 2001 ; Web Ecology (WE) Volume 2 ; 2 >
@@ -635,7 +641,7 @@
       au < ready ; 2009 ; 2009 ; Web Ecology (WE) Volume 9 ; 9 >
       au < ready ; 2010 ; 2010 ; Web Ecology (WE) Volume 10 ; 10 >
       au < ready ; 2011 ; 2011 ; Web Ecology (WE) Volume 11 ; 11 >
-      au < testing ; 2012 ; 2012 ; Web Ecology (WE) Volume 12 ; 12 >
+      au < notReady ; 2012 ; 2012 ; Web Ecology (WE) Volume 12 ; 12 >
     
    }
     
