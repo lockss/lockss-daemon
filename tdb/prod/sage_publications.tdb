@@ -940,52 +940,52 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < released ; 1957 ; American Behavioral Scientist Volume 1 ; 1 >
-        au < ready ; 1958 ; American Behavioral Scientist Volume 2 ; 2 >
-        au < ready ; 1959 ; American Behavioral Scientist Volume 3 ; 3 >
-        au < ready ; 1960 ; American Behavioral Scientist Volume 4 ; 4 >
-        au < ready ; 1961 ; American Behavioral Scientist Volume 5 ; 5 >
-        au < ready ; 1962 ; American Behavioral Scientist Volume 6 ; 6 >
+        au < releasing ; 1958 ; American Behavioral Scientist Volume 2 ; 2 >
+        au < releasing ; 1959 ; American Behavioral Scientist Volume 3 ; 3 >
+        au < releasing ; 1960 ; American Behavioral Scientist Volume 4 ; 4 >
+        au < releasing ; 1961 ; American Behavioral Scientist Volume 5 ; 5 >
+        au < releasing ; 1962 ; American Behavioral Scientist Volume 6 ; 6 >
         au < released ; 1963 ; American Behavioral Scientist Volume 7 ; 7 >
-        au < ready ; 1964 ; American Behavioral Scientist Volume 8 ; 8 >
+        au < releasing ; 1964 ; American Behavioral Scientist Volume 8 ; 8 >
         au < released ; 1965 ; American Behavioral Scientist Volume 9 ; 9 >
-        au < ready ; 1966 ; American Behavioral Scientist Volume 10 ; 10 >
-        au < ready ; 1967 ; American Behavioral Scientist Volume 11 ; 11 >
-        au < ready ; 1968 ; American Behavioral Scientist Volume 12 ; 12 >
-        au < ready ; 1969 ; American Behavioral Scientist Volume 13 ; 13 >
-        au < ready ; 1970 ; American Behavioral Scientist Volume 14 ; 14 >
-        au < ready ; 1971 ; American Behavioral Scientist Volume 15 ; 15 >
-        au < ready ; 1972 ; American Behavioral Scientist Volume 16 ; 16 >
-        au < ready ; 1973 ; American Behavioral Scientist Volume 17 ; 17 >
-        au < ready ; 1974 ; American Behavioral Scientist Volume 18 ; 18 >
+        au < releasing ; 1966 ; American Behavioral Scientist Volume 10 ; 10 >
+        au < releasing ; 1967 ; American Behavioral Scientist Volume 11 ; 11 >
+        au < releasing ; 1968 ; American Behavioral Scientist Volume 12 ; 12 >
+        au < releasing ; 1969 ; American Behavioral Scientist Volume 13 ; 13 >
+        au < releasing ; 1970 ; American Behavioral Scientist Volume 14 ; 14 >
+        au < releasing ; 1971 ; American Behavioral Scientist Volume 15 ; 15 >
+        au < releasing ; 1972 ; American Behavioral Scientist Volume 16 ; 16 >
+        au < releasing ; 1973 ; American Behavioral Scientist Volume 17 ; 17 >
+        au < releasing ; 1974 ; American Behavioral Scientist Volume 18 ; 18 >
         au < released ; 1975 ; American Behavioral Scientist Volume 19 ; 19 >
-        au < ready ; 1976 ; American Behavioral Scientist Volume 20 ; 20 >
-        au < ready ; 1977 ; American Behavioral Scientist Volume 21 ; 21 >
-        au < ready ; 1978 ; American Behavioral Scientist Volume 22 ; 22 >
-        au < ready ; 1979 ; American Behavioral Scientist Volume 23 ; 23 >
-        au < ready ; 1980 ; American Behavioral Scientist Volume 24 ; 24 >
-        au < ready ; 1981 ; American Behavioral Scientist Volume 25 ; 25 >
-        au < ready ; 1982 ; American Behavioral Scientist Volume 26 ; 26 >
-        au < ready ; 1983 ; American Behavioral Scientist Volume 27 ; 27 >
-        au < ready ; 1984 ; American Behavioral Scientist Volume 28 ; 28 >
-        au < ready ; 1985 ; American Behavioral Scientist Volume 29 ; 29 >
-        au < ready ; 1986 ; American Behavioral Scientist Volume 30 ; 30 >
-        au < ready ; 1987 ; American Behavioral Scientist Volume 31 ; 31 >
-        au < ready ; 1988 ; American Behavioral Scientist Volume 32 ; 32 >
-        au < ready ; 1989 ; American Behavioral Scientist Volume 33 ; 33 >
-        au < ready ; 1990 ; American Behavioral Scientist Volume 34 ; 34 >
-        au < ready ; 1991 ; American Behavioral Scientist Volume 35 ; 35 >
-        au < ready ; 1992 ; American Behavioral Scientist Volume 36 ; 36 >
-        au < ready ; 1993 ; American Behavioral Scientist Volume 37 ; 37 >
-        au < ready ; 1994 ; American Behavioral Scientist Volume 38 ; 38 >
+        au < releasing ; 1976 ; American Behavioral Scientist Volume 20 ; 20 >
+        au < releasing ; 1977 ; American Behavioral Scientist Volume 21 ; 21 >
+        au < releasing ; 1978 ; American Behavioral Scientist Volume 22 ; 22 >
+        au < releasing ; 1979 ; American Behavioral Scientist Volume 23 ; 23 >
+        au < releasing ; 1980 ; American Behavioral Scientist Volume 24 ; 24 >
+        au < releasing ; 1981 ; American Behavioral Scientist Volume 25 ; 25 >
+        au < releasing ; 1982 ; American Behavioral Scientist Volume 26 ; 26 >
+        au < releasing ; 1983 ; American Behavioral Scientist Volume 27 ; 27 >
+        au < releasing ; 1984 ; American Behavioral Scientist Volume 28 ; 28 >
+        au < releasing ; 1985 ; American Behavioral Scientist Volume 29 ; 29 >
+        au < releasing ; 1986 ; American Behavioral Scientist Volume 30 ; 30 >
+        au < releasing ; 1987 ; American Behavioral Scientist Volume 31 ; 31 >
+        au < releasing ; 1988 ; American Behavioral Scientist Volume 32 ; 32 >
+        au < releasing ; 1989 ; American Behavioral Scientist Volume 33 ; 33 >
+        au < releasing ; 1990 ; American Behavioral Scientist Volume 34 ; 34 >
+        au < releasing ; 1991 ; American Behavioral Scientist Volume 35 ; 35 >
+        au < releasing ; 1992 ; American Behavioral Scientist Volume 36 ; 36 >
+        au < releasing ; 1993 ; American Behavioral Scientist Volume 37 ; 37 >
+        au < releasing ; 1994 ; American Behavioral Scientist Volume 38 ; 38 >
         au < released ; 1995 ; American Behavioral Scientist Volume 39 ; 39 >
-        au < ready ; 1996 ; American Behavioral Scientist Volume 40 ; 40 >
-        au < ready ; 1997 ; American Behavioral Scientist Volume 41 ; 41 >
-        au < ready ; 1998 ; American Behavioral Scientist Volume 42 ; 42 >
-        au < ready ; 1999 ; American Behavioral Scientist Volume 43 ; 43 >
-        au < ready ; 2000 ; American Behavioral Scientist Volume 44 ; 44 >
-        au < ready ; 2001 ; American Behavioral Scientist Volume 45 ; 45 >
-        au < ready ; 2002 ; American Behavioral Scientist Volume 46 ; 46 >
-        au < ready ; 2003 ; American Behavioral Scientist Volume 47 ; 47 >
+        au < releasing ; 1996 ; American Behavioral Scientist Volume 40 ; 40 >
+        au < releasing ; 1997 ; American Behavioral Scientist Volume 41 ; 41 >
+        au < releasing ; 1998 ; American Behavioral Scientist Volume 42 ; 42 >
+        au < releasing ; 1999 ; American Behavioral Scientist Volume 43 ; 43 >
+        au < releasing ; 2000 ; American Behavioral Scientist Volume 44 ; 44 >
+        au < releasing ; 2001 ; American Behavioral Scientist Volume 45 ; 45 >
+        au < releasing ; 2002 ; American Behavioral Scientist Volume 46 ; 46 >
+        au < releasing ; 2003 ; American Behavioral Scientist Volume 47 ; 47 >
         au < doNotProcess ; 2004 ; American Behavioral Scientist Volume 48 ; 48 >
         au < doNotProcess ; 2005 ; American Behavioral Scientist Volume 49 ; 49 >
         au < doNotProcess ; 2006 ; American Behavioral Scientist Volume 50 ; 50 >
@@ -1055,23 +1055,23 @@
         au < manifest ; 1987 ; American Educational Research Journal Volume 24 ; 24 >
         au < manifest ; 1988 ; American Educational Research Journal Volume 25 ; 25 >
         au < manifest ; 1989 ; American Educational Research Journal Volume 26 ; 26 >
-        au < ready ; 1990 ; American Educational Research Journal Volume 27 ; 27 >
-        au < ready ; 1991 ; American Educational Research Journal Volume 28 ; 28 >
-        au < ready ; 1992 ; American Educational Research Journal Volume 29 ; 29 >
-        au < ready ; 1993 ; American Educational Research Journal Volume 30 ; 30 >
-        au < ready ; 1994 ; American Educational Research Journal Volume 31 ; 31 >
-        au < ready ; 1995 ; American Educational Research Journal Volume 32 ; 32 >
-        au < ready ; 1996 ; American Educational Research Journal Volume 33 ; 33 >
-        au < ready ; 1997 ; American Educational Research Journal Volume 34 ; 34 >
-        au < ready ; 1998 ; American Educational Research Journal Volume 35 ; 35 >
-        au < ready ; 1999 ; American Educational Research Journal Volume 36 ; 36 >
-        au < ready ; 2000 ; American Educational Research Journal Volume 37 ; 37 >
-        au < ready ; 2001 ; American Educational Research Journal Volume 38 ; 38 >
-        au < ready ; 2002 ; American Educational Research Journal Volume 39 ; 39 >
-        au < ready ; 2003 ; American Educational Research Journal Volume 40 ; 40 >
-        au < ready ; 2004 ; American Educational Research Journal Volume 41 ; 41 >
-        au < ready ; 2005 ; American Educational Research Journal Volume 42 ; 42 >
-        au < ready ; 2006 ; American Educational Research Journal Volume 43 ; 43 >
+        au < releasing ; 1990 ; American Educational Research Journal Volume 27 ; 27 >
+        au < releasing ; 1991 ; American Educational Research Journal Volume 28 ; 28 >
+        au < releasing ; 1992 ; American Educational Research Journal Volume 29 ; 29 >
+        au < releasing ; 1993 ; American Educational Research Journal Volume 30 ; 30 >
+        au < releasing ; 1994 ; American Educational Research Journal Volume 31 ; 31 >
+        au < releasing ; 1995 ; American Educational Research Journal Volume 32 ; 32 >
+        au < releasing ; 1996 ; American Educational Research Journal Volume 33 ; 33 >
+        au < releasing ; 1997 ; American Educational Research Journal Volume 34 ; 34 >
+        au < releasing ; 1998 ; American Educational Research Journal Volume 35 ; 35 >
+        au < releasing ; 1999 ; American Educational Research Journal Volume 36 ; 36 >
+        au < releasing ; 2000 ; American Educational Research Journal Volume 37 ; 37 >
+        au < releasing ; 2001 ; American Educational Research Journal Volume 38 ; 38 >
+        au < releasing ; 2002 ; American Educational Research Journal Volume 39 ; 39 >
+        au < releasing ; 2003 ; American Educational Research Journal Volume 40 ; 40 >
+        au < releasing ; 2004 ; American Educational Research Journal Volume 41 ; 41 >
+        au < releasing ; 2005 ; American Educational Research Journal Volume 42 ; 42 >
+        au < releasing ; 2006 ; American Educational Research Journal Volume 43 ; 43 >
         au < doNotProcess ; 2007 ; American Educational Research Journal Volume 44 ; 44 >
         au < doNotProcess ; 2008 ; American Educational Research Journal Volume 45 ; 45 >
         au < doNotProcess ; 2009 ; American Educational Research Journal Volume 46 ; 46 >
@@ -40442,7 +40442,7 @@ comment[mpj] = now published by Brill
   
         au < manifest ; 2009 ; Journal of Infrastructure Development Volume 1 ; 1 >
         au < released ; 2010 ; Journal of Infrastructure Development Volume 2 ; 2 >
-        au < ready ; 2011 ; Journal of Infrastructure Development Volume 3 ; 3 >
+        au < releasing ; 2011 ; Journal of Infrastructure Development Volume 3 ; 3 >
         au < manifest ; 2012 ; Journal of Infrastructure Development Volume 4 ; 4 >
         au < expected ; 2013 ; Journal of Infrastructure Development Volume 5 ; 5 >
   
@@ -40522,7 +40522,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2008 ; Learning Disability Quarterly Volume 31 ; 31 >
         au < exists ; 2009 ; Learning Disability Quarterly Volume 32 ; 32 >
         au < exists ; 2010 ; Learning Disability Quarterly Volume 33 ; 33 >
-        au < ready ; 2011 ; Learning Disability Quarterly Volume 34 ; 34 >
+        au < releasing ; 2011 ; Learning Disability Quarterly Volume 34 ; 34 >
         au < manifest ; 2012 ; Learning Disability Quarterly Volume 35 ; 35 >
         au < expected ; 2013 ; Learning Disability Quarterly Volume 36 ; 36 >
   
@@ -40605,10 +40605,10 @@ comment[mpj] = now published by Brill
         au < exists ; 2006 ; Political Science Volume 58 ; 58 >
         au < exists ; 2007 ; Political Science Volume 59 ; 59 >
         au < exists ; 2008 ; Political Science Volume 60 ; 60 >
-        au < ready ; 2009 ; Political Science Volume 61 ; 61 >
-        au < ready ; 2010 ; Political Science Volume 62 ; 62 >
-        au < ready ; 2011 ; Political Science Volume 63 ; 63 >
-        au < ready ; 2012 ; Political Science Volume 64 ; 64 >
+        au < releasing ; 2009 ; Political Science Volume 61 ; 61 >
+        au < releasing ; 2010 ; Political Science Volume 62 ; 62 >
+        au < releasing ; 2011 ; Political Science Volume 63 ; 63 >
+        au < releasing ; 2012 ; Political Science Volume 64 ; 64 >
         au < expected ; 2013 ; Political Science Volume 65 ; 65 >
   
       }
@@ -40986,9 +40986,9 @@ comment[mpj] = now published by Brill
         au < exists ; 2007 ; Social Change Volume 37 ; 37 >
         au < exists ; 2008 ; Social Change Volume 38 ; 38 >
         au < exists ; 2009 ; Social Change Volume 39 ; 39 >
-        au < ready ; 2010 ; Social Change Volume 40 ; 40 >
-        au < ready ; 2011 ; Social Change Volume 41 ; 41 >
-        au < ready ; 2012 ; Social Change Volume 42 ; 42 >
+        au < releasing ; 2010 ; Social Change Volume 40 ; 40 >
+        au < releasing ; 2011 ; Social Change Volume 41 ; 41 >
+        au < releasing ; 2012 ; Social Change Volume 42 ; 42 >
         au < expected ; 2013 ; Social Change Volume 43 ; 43 >
   
       }

@@ -345,7 +345,7 @@
       au < released ; 2009 ; Common Knowledge Volume 15 ; 15 >
       au < released ; 2010 ; Common Knowledge Volume 16 ; 16 >
       au < released ; 2011 ; Common Knowledge Volume 17 ; 17 >
-      au < ready ; 2012 ; Common Knowledge Volume 18 ; 18 >
+      au < releasing ; 2012 ; Common Knowledge Volume 18 ; 18 >
       au < expected ; 2013 ; Common Knowledge Volume 19 ; 19 >
 
     }
@@ -475,7 +475,7 @@
       param[journal_dir] = cultural_politics
       attr[journal_id] = cup
 
-      au < ready ; 2012 ; Cultural Politics Volume 8 ; 8 >
+      au < releasing ; 2012 ; Cultural Politics Volume 8 ; 8 >
       au < expected ; 2013 ; Cultural Politics Volume 9 ; 9 >
 
     }
@@ -746,12 +746,12 @@
       attr[journal_id] = east
       implicit < status ; year ; name ; param[volume] >
 
-      au < ready ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 ; 1 >
-      au < ready ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 ; 2 >
-      au < ready ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 ; 3 >
-      au < ready ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 ; 4 >
-      au < ready ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 ; 5 >
-      au < ready ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
+      au < releasing ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 ; 1 >
+      au < releasing ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 ; 2 >
+      au < releasing ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 ; 3 >
+      au < releasing ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 ; 4 >
+      au < releasing ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 ; 5 >
+      au < releasing ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
       au < expected ; 2013 ; East Asian Science, Technology and Society: An International Journal Volume 7 ; 7 >
 
     }
@@ -1503,7 +1503,7 @@
       au < released ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
       au < released ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
       au < released ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
-      au < ready ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
+      au < releasing ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
       au < expected ; 2013 ; Mediterranean Quarterly Volume 24 ; 24 >
 
     }
@@ -1575,45 +1575,45 @@
       implicit < status ; year ; name ; param[volume] >
       comment[notReady] = RU4525, content page missing
 
-      au < ready ; 1973 ; The Minnesota Review Volume 1 ; 1 >
+      au < releasing ; 1973 ; The Minnesota Review Volume 1 ; 1 >
       au < doesNotExist ; 0 ; The Minnesota Review Volume 2 ; 2 >
       au < doesNotExist ; 0 ; The Minnesota Review Volume 3 ; 3 >
-      au < ready ; 1975 ; The Minnesota Review Volume 4 ; 4 >
-      au < ready ; 1975 ; The Minnesota Review Volume 5 ; 5 >
-      au < ready ; 1976 ; The Minnesota Review Volume 6 ; 6 >
-      au < ready ; 1976 ; The Minnesota Review Volume 7 ; 7 >
-      au < ready ; 1977 ; The Minnesota Review Volume 8 ; 8 >
+      au < releasing ; 1975 ; The Minnesota Review Volume 4 ; 4 >
+      au < releasing ; 1975 ; The Minnesota Review Volume 5 ; 5 >
+      au < releasing ; 1976 ; The Minnesota Review Volume 6 ; 6 >
+      au < releasing ; 1976 ; The Minnesota Review Volume 7 ; 7 >
+      au < releasing ; 1977 ; The Minnesota Review Volume 8 ; 8 >
       au < doesNotExist ; 0 ; The Minnesota Review Volume 9 ; 9 >
-      au < ready ; 1978 ; The Minnesota Review Volume 10 ; 10 >
-      au < ready ; 1978 ; The Minnesota Review Volume 11 ; 11 >
-      au < ready ; 1979 ; The Minnesota Review Volume 12 ; 12 >
-      au < ready ; 1979 ; The Minnesota Review Volume 13 ; 13 >
-      au < ready ; 1980 ; The Minnesota Review Volume 14 ; 14 >
-      au < ready ; 1980 ; The Minnesota Review Volume 15 ; 15 >
-      au < ready ; 1981 ; The Minnesota Review Volume 16 ; 16 >
-      au < ready ; 1981 ; The Minnesota Review Volume 17 ; 17 >
-      au < ready ; 1982 ; The Minnesota Review Volume 18 ; 18 >
-      au < ready ; 1982 ; The Minnesota Review Volume 19 ; 19 >
+      au < releasing ; 1978 ; The Minnesota Review Volume 10 ; 10 >
+      au < releasing ; 1978 ; The Minnesota Review Volume 11 ; 11 >
+      au < releasing ; 1979 ; The Minnesota Review Volume 12 ; 12 >
+      au < releasing ; 1979 ; The Minnesota Review Volume 13 ; 13 >
+      au < releasing ; 1980 ; The Minnesota Review Volume 14 ; 14 >
+      au < releasing ; 1980 ; The Minnesota Review Volume 15 ; 15 >
+      au < releasing ; 1981 ; The Minnesota Review Volume 16 ; 16 >
+      au < releasing ; 1981 ; The Minnesota Review Volume 17 ; 17 >
+      au < releasing ; 1982 ; The Minnesota Review Volume 18 ; 18 >
+      au < releasing ; 1982 ; The Minnesota Review Volume 19 ; 19 >
       au < testing ; 1983 ; The Minnesota Review Volume 20 ; 20 >
-      au < ready ; 1983 ; The Minnesota Review Volume 21 ; 21 >
-      au < ready ; 1984 ; The Minnesota Review Volume 22 ; 22 >
-      au < ready ; 1984 ; The Minnesota Review Volume 23 ; 23 >
-      au < ready ; 1985 ; The Minnesota Review Volume 24 ; 24 >
-      au < ready ; 1985 ; The Minnesota Review Volume 25 ; 25 >
-      au < ready ; 1986 ; The Minnesota Review Volume 26 ; 26 >
-      au < ready ; 1986 ; The Minnesota Review Volume 27 ; 27 >
+      au < releasing ; 1983 ; The Minnesota Review Volume 21 ; 21 >
+      au < releasing ; 1984 ; The Minnesota Review Volume 22 ; 22 >
+      au < releasing ; 1984 ; The Minnesota Review Volume 23 ; 23 >
+      au < releasing ; 1985 ; The Minnesota Review Volume 24 ; 24 >
+      au < releasing ; 1985 ; The Minnesota Review Volume 25 ; 25 >
+      au < releasing ; 1986 ; The Minnesota Review Volume 26 ; 26 >
+      au < releasing ; 1986 ; The Minnesota Review Volume 27 ; 27 >
       au < notReady ; 1987 ; The Minnesota Review Volume 28 ; 28 >
-      au < ready ; 1987 ; The Minnesota Review Volume 29 ; 29 >
-      au < ready ; 1988 ; The Minnesota Review Volume 30 and 31 ; 30 >
-      au < ready ; 1989 ; The Minnesota Review Volume 32 ; 32 >
-      au < ready ; 1989 ; The Minnesota Review Volume 33 ; 33 >
-      au < ready ; 1990 ; The Minnesota Review Volume 34 and 35 ; 34 >
-      au < ready ; 1991 ; The Minnesota Review Volume 36 ; 36 >
-      au < ready ; 1991 ; The Minnesota Review Volume 37 ; 37 >
-      au < ready ; 1992 ; The Minnesota Review Volume 38 ; 38 >
-      au < ready ; 1995-1996 ; The Minnesota Review Volume 45 and 46 ; 45 >
-      au < ready ; 1996 ; The Minnesota Review Volume 47 ; 47 >
-      au < ready ; 1997 ; The Minnesota Review Volume 48 and 49 ; 48 >
+      au < releasing ; 1987 ; The Minnesota Review Volume 29 ; 29 >
+      au < releasing ; 1988 ; The Minnesota Review Volume 30 and 31 ; 30 >
+      au < releasing ; 1989 ; The Minnesota Review Volume 32 ; 32 >
+      au < releasing ; 1989 ; The Minnesota Review Volume 33 ; 33 >
+      au < releasing ; 1990 ; The Minnesota Review Volume 34 and 35 ; 34 >
+      au < releasing ; 1991 ; The Minnesota Review Volume 36 ; 36 >
+      au < releasing ; 1991 ; The Minnesota Review Volume 37 ; 37 >
+      au < releasing ; 1992 ; The Minnesota Review Volume 38 ; 38 >
+      au < releasing ; 1995-1996 ; The Minnesota Review Volume 45 and 46 ; 45 >
+      au < releasing ; 1996 ; The Minnesota Review Volume 47 ; 47 >
+      au < releasing ; 1997 ; The Minnesota Review Volume 48 and 49 ; 48 >
 
     }
     
@@ -2064,7 +2064,7 @@
       au < released ; 2009 ; Pedagogy Volume 9 ; 9 >
       au < released ; 2010 ; Pedagogy Volume 10 ; 10 >
       au < released ; 2011 ; Pedagogy Volume 11 ; 11 >
-      au < ready ; 2012 ; Pedagogy Volume 12 ; 12 >
+      au < releasing ; 2012 ; Pedagogy Volume 12 ; 12 >
       au < expected ; 2013 ; Pedagogy Volume 13 ; 13 >
 
     }
@@ -2205,7 +2205,7 @@
       au < released ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 >
       au < released ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
       au < released ; 2011 ; positions: east asia cultures critique Volume 19 ; 19 >
-      au < ready ; 2012 ; positions: east asia cultures critique Volume 20 ; 20 >
+      au < releasing ; 2012 ; positions: east asia cultures critique Volume 20 ; 20 >
       au < expected ; 2013 ; positions: east asia cultures critique Volume 21 ; 21 >
 
     }
@@ -2445,7 +2445,7 @@
       au < released ; 2009 ; Small Axe Volume 13 ; 13 >
       au < released ; 2010 ; Small Axe Volume 14 ; 14 >
       au < released ; 2011 ; Small Axe Volume 15 ; 15 >
-      au < ready ; 2012 ; Small Axe Volume 16 ; 16 >
+      au < releasing ; 2012 ; Small Axe Volume 16 ; 16 >
     }
     
     {
@@ -2724,7 +2724,7 @@
     param[journal_dir] = tikkun
     attr[journal_id] = tik
     
-    au < ready ; 2012 ; Tikkun Volume 27 ; 27 >
+    au < releasing ; 2012 ; Tikkun Volume 27 ; 27 >
     au < expected ; 2013 ; Tikkun Volume 28 ; 28 >
 
     }
