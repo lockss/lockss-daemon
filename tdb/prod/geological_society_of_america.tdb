@@ -181,41 +181,41 @@
     param[base_url] = http://geology.gsapubs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 1973 ; Geology Volume 1 ; 1 >
-    au < manifest ; 1974 ; Geology Volume 2 ; 2 >
-    au < manifest ; 1975 ; Geology Volume 3 ; 3 >
-    au < manifest ; 1976 ; Geology Volume 4 ; 4 >
-    au < manifest ; 1977 ; Geology Volume 5 ; 5 >
-    au < manifest ; 1978 ; Geology Volume 6 ; 6 >
-    au < manifest ; 1979 ; Geology Volume 7 ; 7 >
-    au < manifest ; 1980 ; Geology Volume 8 ; 8 >
-    au < manifest ; 1981 ; Geology Volume 9 ; 9 >
-    au < manifest ; 1982 ; Geology Volume 10 ; 10 >
-    au < manifest ; 1983 ; Geology Volume 11 ; 11 >
-    au < manifest ; 1984 ; Geology Volume 12 ; 12 >
-    au < manifest ; 1985 ; Geology Volume 13 ; 13 >
-    au < manifest ; 1986 ; Geology Volume 14 ; 14 >
-    au < manifest ; 1987 ; Geology Volume 15 ; 15 >
-    au < manifest ; 1988 ; Geology Volume 16 ; 16 >
-    au < manifest ; 1989 ; Geology Volume 17 ; 17 >
-    au < manifest ; 1990 ; Geology Volume 18 ; 18 >
-    au < manifest ; 1991 ; Geology Volume 19 ; 19 >
-    au < manifest ; 1992 ; Geology Volume 20 ; 20 >
-    au < manifest ; 1993 ; Geology Volume 21 ; 21 >
-    au < manifest ; 1994 ; Geology Volume 22 ; 22 >
-    au < manifest ; 1995 ; Geology Volume 23 ; 23 >
-    au < manifest ; 1996 ; Geology Volume 24 ; 24 >
-    au < manifest ; 1997 ; Geology Volume 25 ; 25 >
-    au < manifest ; 1998 ; Geology Volume 26 ; 26 >
-    au < manifest ; 1999 ; Geology Volume 27 ; 27 >
-    au < manifest ; 2000 ; Geology Volume 28 ; 28 >
-    au < manifest ; 2001 ; Geology Volume 29 ; 29 >
-    au < manifest ; 2002 ; Geology Volume 30 ; 30 >
-    au < manifest ; 2003 ; Geology Volume 31 ; 31 >
-    au < manifest ; 2004 ; Geology Volume 32 ; 32 >
-    au < manifest ; 2005 ; Geology Volume 33 ; 33 >
-    au < manifest ; 2006 ; Geology Volume 34 ; 34 >
-    au < manifest ; 2007 ; Geology Volume 35 ; 35 >
+    au < testing ; 1973 ; Geology Volume 1 ; 1 >
+    au < testing ; 1974 ; Geology Volume 2 ; 2 >
+    au < testing ; 1975 ; Geology Volume 3 ; 3 >
+    au < testing ; 1976 ; Geology Volume 4 ; 4 >
+    au < testing ; 1977 ; Geology Volume 5 ; 5 >
+    au < testing ; 1978 ; Geology Volume 6 ; 6 >
+    au < testing ; 1979 ; Geology Volume 7 ; 7 >
+    au < testing ; 1980 ; Geology Volume 8 ; 8 >
+    au < testing ; 1981 ; Geology Volume 9 ; 9 >
+    au < testing ; 1982 ; Geology Volume 10 ; 10 >
+    au < testing ; 1983 ; Geology Volume 11 ; 11 >
+    au < testing ; 1984 ; Geology Volume 12 ; 12 >
+    au < testing ; 1985 ; Geology Volume 13 ; 13 >
+    au < testing ; 1986 ; Geology Volume 14 ; 14 >
+    au < testing ; 1987 ; Geology Volume 15 ; 15 >
+    au < testing ; 1988 ; Geology Volume 16 ; 16 >
+    au < testing ; 1989 ; Geology Volume 17 ; 17 >
+    au < testing ; 1990 ; Geology Volume 18 ; 18 >
+    au < testing ; 1991 ; Geology Volume 19 ; 19 >
+    au < testing ; 1992 ; Geology Volume 20 ; 20 >
+    au < testing ; 1993 ; Geology Volume 21 ; 21 >
+    au < testing ; 1994 ; Geology Volume 22 ; 22 >
+    au < testing ; 1995 ; Geology Volume 23 ; 23 >
+    au < testing ; 1996 ; Geology Volume 24 ; 24 >
+    au < testing ; 1997 ; Geology Volume 25 ; 25 >
+    au < testing ; 1998 ; Geology Volume 26 ; 26 >
+    au < testing ; 1999 ; Geology Volume 27 ; 27 >
+    au < testing ; 2000 ; Geology Volume 28 ; 28 >
+    au < testing ; 2001 ; Geology Volume 29 ; 29 >
+    au < testing ; 2002 ; Geology Volume 30 ; 30 >
+    au < testing ; 2003 ; Geology Volume 31 ; 31 >
+    au < testing ; 2004 ; Geology Volume 32 ; 32 >
+    au < testing ; 2005 ; Geology Volume 33 ; 33 >
+    au < testing ; 2006 ; Geology Volume 34 ; 34 >
+    au < testing ; 2007 ; Geology Volume 35 ; 35 >
     au < released ; 2008 ; Geology Volume 36 ; 36 >
     au < released ; 2009 ; Geology Volume 37 ; 37 >
     au < released ; 2010 ; Geology Volume 38 ; 38 >
@@ -235,9 +235,9 @@
     param[base_url] = http://geosphere.gsapubs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2005 ; Geosphere Volume 1 ; 1 >
-    au < manifest ; 2006 ; Geosphere Volume 2 ; 2 >
-    au < manifest ; 2007 ; Geosphere Volume 3 ; 3 >
+    au < testing ; 2005 ; Geosphere Volume 1 ; 1 >
+    au < testing ; 2006 ; Geosphere Volume 2 ; 2 >
+    au < testing ; 2007 ; Geosphere Volume 3 ; 3 >
     au < released ; 2008 ; Geosphere Volume 4 ; 4 >
     au < released ; 2009 ; Geosphere Volume 5 ; 5 >
     au < released ; 2010 ; Geosphere Volume 6 ; 6 >
