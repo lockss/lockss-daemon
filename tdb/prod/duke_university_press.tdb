@@ -346,7 +346,8 @@
       au < released ; 2010 ; Common Knowledge Volume 16 ; 16 >
       au < released ; 2011 ; Common Knowledge Volume 17 ; 17 >
       au < ready ; 2012 ; Common Knowledge Volume 18 ; 18 >
-      
+      au < expected ; 2013 ; Common Knowledge Volume 19 ; 19 >
+
     }
   
     {
@@ -475,6 +476,7 @@
       attr[journal_id] = cup
 
       au < ready ; 2012 ; Cultural Politics Volume 8 ; 8 >
+      au < expected ; 2013 ; Cultural Politics Volume 9 ; 9 >
 
     }
     
@@ -723,6 +725,7 @@
       au < exists ; 2011 ; Duke Mathematical Journal Volume 159 ; 159 >
       au < exists ; 2011 ; Duke Mathematical Journal Volume 160 ; 160 >
       au < exists ; 2012 ; Duke Mathematical Journal Volume 161 ; 161 >
+      au < expected ; 2013 ; Duke Mathematical Journal Volume 162 ; 162 >
 
     }
   }
@@ -749,7 +752,8 @@
       au < ready ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 ; 4 >
       au < ready ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 ; 5 >
       au < ready ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
-      
+      au < expected ; 2013 ; East Asian Science, Technology and Society: An International Journal Volume 7 ; 7 >
+
     }
     
     {
@@ -804,6 +808,7 @@
       au < released ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
       au < released ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
       au < released ; 2012 ; Eighteenth-Century Life Volume 36 ; 36 >
+      au < expected ; 2013 ; Eighteenth-Century Life Volume 37 ; 37 >
 
     }
 
@@ -876,6 +881,7 @@
      au < HighWirePressH20Plugin ; released ; 2010 ; Ethnohistory Volume 57 ; 57 >
      au < HighWirePressH20Plugin ; released ; 2011 ; Ethnohistory Volume 58 ; 58 >
      au < HighWirePressH20Plugin ; released ; 2012 ; Ethnohistory Volume 59 ; 59 >
+     au < HighWirePressH20Plugin ; expected ; 2013 ; Ethnohistory Volume 60 ; 60 >
     
     }
     
@@ -925,6 +931,7 @@
      au < HighWirePressH20Plugin ; released ; 2010 ; French Historical Studies Volume 33 ; 33 >
      au < HighWirePressH20Plugin ; released ; 2011 ; French Historical Studies Volume 34 ; 34 >
      au < HighWirePressH20Plugin ; released ; 2012 ; French Historical Studies Volume 35 ; 35 >
+     au < HighWirePressH20Plugin ; expected ; 2013 ; French Historical Studies Volume 36 ; 36 >
     
     }
     
@@ -957,6 +964,7 @@
       au < released ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 >
       au < released ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 >
       au < released ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 >
+      au < expected ; 2013 ; Genre: Forms of Discourse and Culture Volume 46 ; 46 >
       
     }
   }
@@ -992,6 +1000,7 @@
       au < released ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
       au < released ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
       au < released ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 ; 18 >
+      au < expected ; 2013 ; GLQ: A Journal of Lesbian and Gay Studies Volume 19 ; 19 >
       
     }
 
@@ -1069,6 +1078,7 @@
      au < HighWirePressH20Plugin ; released ; 2010 ; Hispanic American Historical Review Volume 90 ; 90 >
      au < HighWirePressH20Plugin ; released ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 >
      au < HighWirePressH20Plugin ; released ; 2012 ; Hispanic American Historical Review Volume 92 ; 92 >
+     au < HighWirePressH20Plugin ; expected ; 2013 ; Hispanic American Historical Review Volume 93 ; 93 >
     
     }
     
@@ -1116,7 +1126,7 @@
      au < HighWirePressH20Plugin ; manifest ; 1977 ; History of Political Economy Volume 9 ; 9 >
      au < HighWirePressH20Plugin ; manifest ; 1978 ; History of Political Economy Volume 10 ; 10 >
      au < HighWirePressH20Plugin ; manifest ; 1979 ; History of Political Economy Volume 11 ; 11 >
-     au < HighWirePressH20Plugin ; manifest ; 1980 ; History of manifestPolitical Economy Volume 12 ; 12 >
+     au < HighWirePressH20Plugin ; manifest ; 1980 ; History of Political Economy Volume 12 ; 12 >
      au < HighWirePressH20Plugin ; manifest ; 1981 ; History of Political Economy Volume 13 ; 13 >
      au < HighWirePressH20Plugin ; manifest ; 1982 ; History of Political Economy Volume 14 ; 14 >
      au < HighWirePressH20Plugin ; manifest ; 1983 ; History of Political Economy Volume 15 ; 15 >
@@ -1149,7 +1159,8 @@
      au < HighWirePressH20Plugin ; released ; 2010 ; History of Political Economy Volume 42 ; 42 >
      au < HighWirePressH20Plugin ; released ; 2011 ; History of Political Economy Volume 43 ; 43 >
      au < HighWirePressH20Plugin ; released ; 2012 ; History of Political Economy Volume 44 ; 44 >
-    
+     au < HighWirePressH20Plugin ; expected ; 2013 ; History of Political Economy Volume 45 ; 45 >
+
     }
     
   }
@@ -1413,6 +1424,7 @@
       au < exists ; 2010 ; Kyoto Journal of Mathematics Volume 50 ; 50 >
       au < exists ; 2011 ; Kyoto Journal of Mathematics Volume 51 ; 50 >
       au < exists ; 2012 ; Kyoto Journal of Mathematics Volume 52 ; 52 >
+      au < expected ; 2013 ; Kyoto Journal of Mathematics Volume 53 ; 53 >
 
    }
     
@@ -1437,7 +1449,8 @@
      au < HighWirePressH20Plugin ; released ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
      au < HighWirePressH20Plugin ; released ; 2011 ; Labor: Studies in Working-Class History of the Americas Volume 8 ; 8 >
      au < HighWirePressH20Plugin ; released ; 2012 ; Labor: Studies in Working-Class History of the Americas Volume 9 ; 9 >
-     
+     au < HighWirePressH20Plugin ; expected ; 2013 ; Labor: Studies in Working-Class History of the Americas Volume 10 ; 10 >
+
     }
 
   {
@@ -1491,6 +1504,7 @@
       au < released ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
       au < released ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
       au < ready ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
+      au < expected ; 2013 ; Mediterranean Quarterly Volume 24 ; 24 >
 
     }
     
@@ -1617,7 +1631,8 @@
       au < released ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
       au < released ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
       au < released ; 2012 ; The Minnesota Review Volume 2012 ; 2012 >
-      
+      au < expected ; 2013 ; The Minnesota Review Volume 2013 ; 2013 >
+
     }
     
   }
@@ -1805,6 +1820,7 @@
       au < exists ; 2010 ; Nagoya Mathematical Journal Volume 61 ; 61 >
       au < exists ; 2011 ; Nagoya Mathematical Journal Volume 62 ; 62 >
       au < exists ; 2012 ; Nagoya Mathematical Journal Volume 63 ; 63 >
+      au < expected ; 2013 ; Nagoya Mathematical Journal Volume 64 ; 64 >
 
     }
         
@@ -1988,6 +2004,7 @@
       au < exists ; 2010 ; Notre Dame Journal of Formal Logic Volume 51 ; 51 >
       au < exists ; 2011 ; Notre Dame Journal of Formal Logic Volume 52 ; 52 >
       au < exists ; 2012 ; Notre Dame Journal of Formal Logic Volume 53 ; 53 >
+      au < expected ; 2013 ; Notre Dame Journal of Formal Logic Volume 54 ; 54 >
 
     }
   
@@ -2016,6 +2033,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Novel: A Forum on Fiction Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Novel: A Forum on Fiction Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Novel: A Forum on Fiction Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; expected ; 2013 ; Novel: A Forum on Fiction Volume 47 ; 47 >
 
   }
 
@@ -2047,7 +2065,8 @@
       au < released ; 2010 ; Pedagogy Volume 10 ; 10 >
       au < released ; 2011 ; Pedagogy Volume 11 ; 11 >
       au < ready ; 2012 ; Pedagogy Volume 12 ; 12 >
-    
+      au < expected ; 2013 ; Pedagogy Volume 13 ; 13 >
+
     }
 
     {
@@ -2187,6 +2206,7 @@
       au < released ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
       au < released ; 2011 ; positions: east asia cultures critique Volume 19 ; 19 >
       au < ready ; 2012 ; positions: east asia cultures critique Volume 20 ; 20 >
+      au < expected ; 2013 ; positions: east asia cultures critique Volume 21 ; 21 >
 
     }
     
@@ -2705,7 +2725,8 @@
     attr[journal_id] = tik
     
     au < ready ; 2012 ; Tikkun Volume 27 ; 27 >
-    
+    au < expected ; 2013 ; Tikkun Volume 28 ; 28 >
+
     }
    
     {
