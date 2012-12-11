@@ -228,13 +228,13 @@
     param[base_url] = http://ageing.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; releasing ; 1972 ; Age and Ageing Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; releasing ; 1973 ; Age and Ageing Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; releasing ; 1974 ; Age and Ageing Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; releasing ; 1975 ; Age and Ageing Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; releasing ; 1976 ; Age and Ageing Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; releasing ; 1977 ; Age and Ageing Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; releasing ; 1978 ; Age and Ageing Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; released ; 1972 ; Age and Ageing Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 1973 ; Age and Ageing Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 1974 ; Age and Ageing Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 1975 ; Age and Ageing Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; released ; 1976 ; Age and Ageing Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; released ; 1977 ; Age and Ageing Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; released ; 1978 ; Age and Ageing Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 1979 ; Age and Ageing Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 1980 ; Age and Ageing Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 1981 ; Age and Ageing Volume 10 ; 10 >
@@ -8114,24 +8114,24 @@
     au < HighWirePressH20Plugin ; manifest ; 1992 ; Integrative and Comparative Biology Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Integrative and Comparative Biology Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 1994 ; Integrative and Comparative Biology Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; releasing ; 1995 ; Integrative and Comparative Biology Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; releasing ; 1996 ; Integrative and Comparative Biology Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; releasing ; 1997 ; Integrative and Comparative Biology Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; releasing ; 1998 ; Integrative and Comparative Biology Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; released ; 1995 ; Integrative and Comparative Biology Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; released ; 1996 ; Integrative and Comparative Biology Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; released ; 1997 ; Integrative and Comparative Biology Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; released ; 1998 ; Integrative and Comparative Biology Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; released ; 1999 ; Integrative and Comparative Biology Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; releasing ; 2000 ; Integrative and Comparative Biology Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; releasing ; 2001 ; Integrative and Comparative Biology Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; releasing ; 2002 ; Integrative and Comparative Biology Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; releasing ; 2003 ; Integrative and Comparative Biology Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; releasing ; 2004 ; Integrative and Comparative Biology Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; released ; 2000 ; Integrative and Comparative Biology Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; released ; 2001 ; Integrative and Comparative Biology Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; released ; 2002 ; Integrative and Comparative Biology Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; released ; 2003 ; Integrative and Comparative Biology Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; released ; 2004 ; Integrative and Comparative Biology Volume 44 ; 44 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Integrative and Comparative Biology Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Integrative and Comparative Biology Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Integrative and Comparative Biology Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; releasing ; 2008 ; Integrative and Comparative Biology Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; releasing ; 2009 ; Integrative and Comparative Biology Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Integrative and Comparative Biology Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Integrative and Comparative Biology Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Integrative and Comparative Biology Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Integrative and Comparative Biology Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; releasing ; 2012 ; Integrative and Comparative Biology Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Integrative and Comparative Biology Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Integrative and Comparative Biology Volume 53 ; 53 >
 
     }
@@ -8159,16 +8159,16 @@
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Interdisciplinary Studies in Literature and Environment Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Interdisciplinary Studies in Literature and Environment Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Interdisciplinary Studies in Literature and Environment Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; releasing ; 2000 ; Interdisciplinary Studies in Literature and Environment Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; releasing ; 2001 ; Interdisciplinary Studies in Literature and Environment Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; releasing ; 2002 ; Interdisciplinary Studies in Literature and Environment Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; releasing ; 2003 ; Interdisciplinary Studies in Literature and Environment Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; releasing ; 2004 ; Interdisciplinary Studies in Literature and Environment Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; releasing ; 2005 ; Interdisciplinary Studies in Literature and Environment Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; releasing ; 2006 ; Interdisciplinary Studies in Literature and Environment Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; releasing ; 2007 ; Interdisciplinary Studies in Literature and Environment Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; releasing ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; releasing ; 2009 ; Interdisciplinary Studies in Literature and Environment Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; released ; 2000 ; Interdisciplinary Studies in Literature and Environment Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; released ; 2001 ; Interdisciplinary Studies in Literature and Environment Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; released ; 2002 ; Interdisciplinary Studies in Literature and Environment Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 2003 ; Interdisciplinary Studies in Literature and Environment Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; released ; 2004 ; Interdisciplinary Studies in Literature and Environment Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; released ; 2005 ; Interdisciplinary Studies in Literature and Environment Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; released ; 2006 ; Interdisciplinary Studies in Literature and Environment Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; Interdisciplinary Studies in Literature and Environment Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Interdisciplinary Studies in Literature and Environment Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Interdisciplinary Studies in Literature and Environment Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Interdisciplinary Studies in Literature and Environment Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Interdisciplinary Studies in Literature and Environment Volume 19 ; 19 >

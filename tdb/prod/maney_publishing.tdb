@@ -214,12 +214,12 @@
     au < notReady ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
     au < notReady ; 2002 ; Applied Earth Science: IMM Transactions section B Volume 111 ; 111 > 
     au < notReady ; 2003 ; Applied Earth Science: IMM Transactions section B Volume 112 ; 112 > 
-    au < releasing ; 2004 ; Applied Earth Science: IMM Transactions section B Volume 113 ; 113 > 
-    au < releasing ; 2005 ; Applied Earth Science: IMM Transactions section B Volume 114 ; 114 > 
-    au < releasing ; 2006 ; Applied Earth Science: IMM Transactions section B Volume 115 ; 115 > 
+    au < released ; 2004 ; Applied Earth Science: IMM Transactions section B Volume 113 ; 113 > 
+    au < released ; 2005 ; Applied Earth Science: IMM Transactions section B Volume 114 ; 114 > 
+    au < released ; 2006 ; Applied Earth Science: IMM Transactions section B Volume 115 ; 115 > 
     au < notReady ; 2007 ; Applied Earth Science: IMM Transactions section B Volume 116 ; 116 > 
-    au < releasing ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
-    au < releasing ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
+    au < released ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
+    au < released ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
     au < released ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
     au < released ; 2011 ; Applied Earth Science: IMM Transactions section B Volume 120 ; 120 > 
     au < manifest ; 2012 ; Applied Earth Science: IMM Transactions section B Volume 121 ; 121 > 
@@ -245,12 +245,12 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < releasing ; 2004 ; Arms & Armour Volume 1 ; 1 > 
-    au < releasing ; 2005 ; Arms & Armour Volume 2 ; 2 > 
-    au < releasing ; 2006 ; Arms & Armour Volume 3 ; 3 > 
-    au < releasing ; 2007 ; Arms & Armour Volume 4 ; 4 > 
-    au < releasing ; 2008 ; Arms & Armour Volume 5 ; 5 > 
-    au < releasing ; 2009 ; Arms & Armour Volume 6 ; 6 > 
+    au < released ; 2004 ; Arms & Armour Volume 1 ; 1 > 
+    au < released ; 2005 ; Arms & Armour Volume 2 ; 2 > 
+    au < released ; 2006 ; Arms & Armour Volume 3 ; 3 > 
+    au < released ; 2007 ; Arms & Armour Volume 4 ; 4 > 
+    au < released ; 2008 ; Arms & Armour Volume 5 ; 5 > 
+    au < released ; 2009 ; Arms & Armour Volume 6 ; 6 > 
     au < released ; 2010 ; Arms & Armour Volume 7 ; 7 > 
     au < released ; 2011 ; Arms & Armour Volume 8 ; 8 > 
     au < released ; 2012 ; Arms & Armour Volume 9 ; 9 > 
@@ -450,7 +450,7 @@
     au < manifest ; 2009 ; Bulletin of the Council for British Research in the Levant Volume 4 ; 4 > 
     au < released ; 2010 ; Bulletin of the Council for British Research in the Levant Volume 5 ; 5 > 
     au < released ; 2011 ; Bulletin of the Council for British Research in the Levant Volume 6 ; 6 > 
-    au < releasing ; 2012 ; Bulletin of the Council for British Research in the Levant Volume 7 ; 7 > 
+    au < released ; 2012 ; Bulletin of the Council for British Research in the Levant Volume 7 ; 7 > 
 
   }
 
@@ -1035,7 +1035,7 @@
 
     au < released ; 2010 ; Dress Volume 36 ; 36 > 
 	au < released ; 2011 ; Dress Volume 37 ; 37 > 
-	au < releasing ; 2012 ; Dress Volume 38 ; 38 > 
+	au < released ; 2012 ; Dress Volume 38 ; 38 > 
 
   }
 
@@ -1683,7 +1683,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_from] = 0969-7950
     
-    au < releasing ; 2012 ; International Journal of Developmental Disabilities Volume 58 ; 58 > 
+    au < released ; 2012 ; International Journal of Developmental Disabilities Volume 58 ; 58 > 
 
   }  
 
@@ -1705,7 +1705,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_from] = 1753-3031
     
-    au < releasing ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 > 
+    au < released ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 > 
     au < expected ; 2013 ; International Journal of Healthcare Management Volume 6 ; 6 > 
 
   }  
@@ -1742,8 +1742,8 @@
     au < manifest ; 2007 ; International Journal of Occupational and Environmental Health Volume 13 ; 13 > 
     au < manifest ; 2008 ; International Journal of Occupational and Environmental Health Volume 14 ; 14 > 
     au < manifest ; 2009 ; International Journal of Occupational and Environmental Health Volume 15 ; 15 > 
-    au < releasing ; 2010 ; International Journal of Occupational and Environmental Health Volume 16 ; 16 > 
-    au < releasing ; 2011 ; International Journal of Occupational and Environmental Health Volume 17 ; 17 > 
+    au < released ; 2010 ; International Journal of Occupational and Environmental Health Volume 16 ; 16 > 
+    au < released ; 2011 ; International Journal of Occupational and Environmental Health Volume 17 ; 17 > 
     au < manifest ; 2012 ; International Journal of Occupational and Environmental Health Volume 18 ; 18 > 
 
   }  
