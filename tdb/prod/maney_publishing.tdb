@@ -450,7 +450,7 @@
     au < manifest ; 2009 ; Bulletin of the Council for British Research in the Levant Volume 4 ; 4 > 
     au < released ; 2010 ; Bulletin of the Council for British Research in the Levant Volume 5 ; 5 > 
     au < released ; 2011 ; Bulletin of the Council for British Research in the Levant Volume 6 ; 6 > 
-    au < manifest ; 2012 ; Bulletin of the Council for British Research in the Levant Volume 7 ; 7 > 
+    au < ready ; 2012 ; Bulletin of the Council for British Research in the Levant Volume 7 ; 7 > 
 
   }
 
@@ -1683,7 +1683,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_from] = 0969-7950
     
-    au < manifest ; 2012 ; International Journal of Developmental Disabilities Volume 58 ; 58 > 
+    au < ready ; 2012 ; International Journal of Developmental Disabilities Volume 58 ; 58 > 
 
   }  
 
@@ -1705,7 +1705,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_from] = 1753-3031
     
-    au < manifest ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 > 
+    au < ready ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 > 
     au < expected ; 2013 ; International Journal of Healthcare Management Volume 6 ; 6 > 
 
   }  
@@ -1742,8 +1742,8 @@
     au < manifest ; 2007 ; International Journal of Occupational and Environmental Health Volume 13 ; 13 > 
     au < manifest ; 2008 ; International Journal of Occupational and Environmental Health Volume 14 ; 14 > 
     au < manifest ; 2009 ; International Journal of Occupational and Environmental Health Volume 15 ; 15 > 
-    au < manifest ; 2010 ; International Journal of Occupational and Environmental Health Volume 16 ; 16 > 
-    au < manifest ; 2011 ; International Journal of Occupational and Environmental Health Volume 17 ; 17 > 
+    au < ready ; 2010 ; International Journal of Occupational and Environmental Health Volume 16 ; 16 > 
+    au < ready ; 2011 ; International Journal of Occupational and Environmental Health Volume 17 ; 17 > 
     au < manifest ; 2012 ; International Journal of Occupational and Environmental Health Volume 18 ; 18 > 
 
   }  
