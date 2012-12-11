@@ -2954,6 +2954,8 @@
         au < released ; 2010 ; Asia-Pacific Journal of Public Health Volume 22 ; 22 >
         au < released ; 2011 ; Asia-Pacific Journal of Public Health Volume 23 ; 23 >
         au < released ; 2012 ; Asia-Pacific Journal of Public Health Volume 24 ; 24 >
+        au < expected ; 2013 ; Asia-Pacific Journal of Public Health Volume 25 ; 25 >
+
       }
 
     }
@@ -3210,6 +3212,8 @@
         au < released ; 2010 ; Australasian Psychiatry Volume 18 ; 18 >
         au < released ; 2011 ; Australasian Psychiatry Volume 19 ; 19 >
         au < released ; 2012 ; Australasian Psychiatry Volume 20 ; 20 >
+        au < expected ; 2013 ; Australasian Psychiatry Volume 21 ; 21 >
+
       }
       
     }
@@ -3611,6 +3615,7 @@
         au < released ; 2011 ; Biological Research For Nursing Volume 13 ; 13 >
         au < released ; 2012 ; Biological Research For Nursing Volume 14 ; 14 >
         au < manifest ; 2013 ; Biological Research For Nursing Volume 15 ; 15 >
+
       }
 
     }
@@ -17008,9 +17013,9 @@
        eissn =  2048-0040 
       >
 
-       pluginSuffix = HighWirePlugin
+       pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://cvd.sagepub.com/
-       implicit < status ; year ; name ; param[volume] >
+       implicit < status ; year ; name ; param[volume_name] >
        
       au < exists ; 2012 ; JRSM Cardiovascular Disease Volume 1 ; 1 >
       au < expected ; 2013 ; JRSM Cardiovascular Disease Volume 2 ; 2 >
@@ -17024,7 +17029,7 @@
        eissn = 2042-5333
      >
       
-       pluginSuffix = HighWirePlugin
+       pluginSuffix = HighWirePressH20Plugin
        param[base_url] = http://shortreports.sagepub.com/
        implicit < status ; year ; name ; param[volume] >
        
@@ -17367,6 +17372,7 @@
         au < released ; 2011 ; Journal of Adolescent Research Volume 26 ; 26 >
         au < manifest ; 2012 ; Journal of Adolescent Research Volume 27 ; 27 >
         au < manifest ; 2013 ; Journal of Adolescent Research Volume 28 ; 28 >
+
       }
 
     }
@@ -41273,7 +41279,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://ani.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2014 ; Annals of the ICRP Volume 43 ; 43 >
+    au < exists ; 2013 ; Annals of the ICRP Volume 43 ; 43 >
 
     }
 
