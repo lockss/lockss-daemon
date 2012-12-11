@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressHtmlHashFilterFactory.java,v 1.3 2012-06-19 00:13:23 davidecorcoran Exp $
+ * $Id: MetaPressHtmlHashFilterFactory.java,v 1.4 2012-12-11 01:20:20 mellen22 Exp $
  */
 
 /*
@@ -114,7 +114,11 @@ public class MetaPressHtmlHashFilterFactory implements FilterFactory {
          */
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "[?&amp;]p="),
         // Institution-specific greeting
-        HtmlNodeFilters.tagWithAttribute("div", "class", "MetaPress_Products_Reader_Web_UI_Controls_RecognizedAsControlBody")
+        HtmlNodeFilters.tagWithAttribute("div", "class", "MetaPress_Products_Reader_Web_UI_Controls_RecognizedAsControlBody"),
+        // Remote address and user agent
+        HtmlNodeFilters.tagWithAttribute("div", "class", "MetaPress_Products_Reader_Web_UI_Controls_FooterControlUserDetails"),
+        // Personalized features
+        HtmlNodeFilters.tagWithAttribute("div", "class", "MetaPress_Products_Reader_Web_UI_Controls_LoggedInAsControlBody")
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
@@ -122,3 +126,16 @@ public class MetaPressHtmlHashFilterFactory implements FilterFactory {
   }
   
 }
+/*  See RU4472 for html source as attachment
+        HtmlNodeFilters.tagWithAttribute("div", "class", "MetaPress_Products_Reader_Web_UI_Controls_FooterControlUserDetails")
+   <div class="MetaPress_Products_Reader_Web_UI_Controls_FooterControlUserDetails">
+    Remote Address:&nbsp;128.42.174.11&nbsp;"&nbsp;Server:&nbsp;MPSHQWBRDR04P<br>HTTP User Agent:&nbsp;LOCKSS cache<br><br>
+  </div>
+  
+        HtmlNodeFilters.tagWithAttribute("div", "class", "MetaPress_Products_Reader_Web_UI_Controls_LoggedInAsControlBody")
+</div><div class="MetaPress_Products_Reader_Web_UI_Controls_LoggedInAsControlBody">
+    To use the personalized features of this site, please <b><a href="https://multiscience.metapress.com/identities/me/?sid=01wiv3h1cq3xtif2mwcx3d3w&amp;sh=multi-science.metapress.com">log in</a></b> or <b><a href="/identities/registration/">register</a></b>.
+  </div><div class="MetaPress_Products_Reader_Web_UI_Controls_LoggedInAsControlBody">
+    If you have forgotten your username or password, we can <b><a href="https://multiscience.metapress.com/identities/help/?sid=01wiv3h1cq3xtif2mwcx3d3w&amp;sh=multi-science.metapress.com">help</a></b>.
+  </div>
+*/
