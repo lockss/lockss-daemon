@@ -9993,7 +9993,7 @@
     param[base_url] = http://jxb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < manifest ; exists ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
+    au < notReady ; exists ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
     au < down ; crawling ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
 
     }
