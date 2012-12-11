@@ -147,7 +147,7 @@
     param[journal_id] = 154
 
     au < testing ; 2009 ; Biomarkers in Cancer Volume 1 ; 2009 >
-    au < testing ; 2010 ; Biomarkers in Cancer Volume 2 ; 2010 >
+    au < ready ; 2010 ; Biomarkers in Cancer Volume 2 ; 2010 >
     au < released ; 2011 ; Biomarkers in Cancer Volume 3 ; 2011 >
     au < released ; 2012 ; Biomarkers in Cancer Volume 4 ; 2012 >
 
@@ -199,7 +199,7 @@
 
     au < testing ; 2008 ; Bone and Tissue Regeneration Insights Volume 1 ; 2008 >
     au < testing ; 2009 ; Bone and Tissue Regeneration Insights Volume 2 ; 2009 >
-    au < testing ; 2010 ; Bone and Tissue Regeneration Insights Volume 3 ; 2010 >
+    au < ready ; 2010 ; Bone and Tissue Regeneration Insights Volume 3 ; 2010 >
     
 
   }
@@ -234,7 +234,7 @@
 
     au < testing ; 2008 ; Cancer Growth and Metastasis Volume 1 ; 2008 >
     au < testing ; 2009 ; Cancer Growth and Metastasis Volume 2 ; 2009 >
-    au < testing ; 2010 ; Cancer Growth and Metastasis Volume 3 ; 2010 >
+    au < ready ; 2010 ; Cancer Growth and Metastasis Volume 3 ; 2010 >
     au < released ; 2011 ; Cancer Growth and Metastasis Volume 4 ; 2011 >
     au < released ; 2012 ; Cancer Growth and Metastasis Volume 5 ; 2012 >
 
@@ -1260,7 +1260,7 @@
     param[journal_id] = 101
 
     au < testing ; 2008 ; Nutrition and Metabolic Insights Volume 1 ; 2008 >
-    au < testing ; 2009 ; Nutrition and Metabolic Insights Volume 2 ; 2009 >
+    au < ready ; 2009 ; Nutrition and Metabolic Insights Volume 2 ; 2009 >
     au < testing ; 2010 ; Nutrition and Metabolic Insights Volume 3 ; 2010 >
     au < released ; 2012 ; Nutrition and Metabolic Insights Volume 4 ; 2012 >
   }
