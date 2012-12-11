@@ -14088,28 +14088,7 @@
 
   }
 
-  {
-
-    title <
-      name = Multimedia Manual of Cardio-Thoracic Surgery ;
-      eissn = 1813-9175 ;
-      issnl = 1813-9175
-    >
-
-	{
-	
-    pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://mmcts.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    comment[mmcts] = New journal to OUP in 2012
-
-    au < HighWirePressH20Plugin ; expected ; 2012 ; Multimedia Manual of Cardio-Thoracic Surgery Volume 1 ; 1 >
-    }
-
-  }
-
-  {
+   {
 
     title <
       name = Music and Letters ;
