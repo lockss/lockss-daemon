@@ -1,5 +1,5 @@
 /*
- * $Id: TestCopernicusHtmlFilterFactory.java,v 1.2 2012-11-19 21:03:19 alexandraohlson Exp $
+ * $Id: TestCopernicusHtmlFilterFactory.java,v 1.3 2012-12-12 22:03:56 alexandraohlson Exp $
  */
 /*
 
@@ -86,7 +86,39 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
 
   private static final String scriptsAndCommentsFiltered =
       "</tr></table> </body></html>";
-
+  
+  private static final String iFrameHtml =
+      "<div id=\"page_colum_left\" class=\"page_colum\">" +
+          "<iframe " +
+          "frameborder=\"0\" id=\"co_auth_check_authiframecontainer\" " +
+          "style=\"width: 179px; height: 57px; margin: 0; margin-bottom: 5px; margin-left: 10px; margin-top: -15px; padding: 0; border: none; overflow: hidden; background-color: transparent; display: none;\"" +
+          " src=\"\"></iframe>" +
+          "<div class=\"page_colum_container CMSCONTAINER\">";
+  private static final String iFrameFiltered =
+      "<div id=\"page_colum_left\" class=\"page_colum\">" +
+          "<div class=\"page_colum_container CMSCONTAINER\">";
+  
+  private static final String leftColumnHtml =
+      "<div class=\"page_colum_container CMSCONTAINER\" id=\"page_colum_left_container\">" +
+          "<div id=\"page_navigation_left\" class=\"cmsbox \">" +
+          "<ul class=\"co_function_get_navigation get_navigation farbe_auf_hauptnavigation\">" +
+          "<li class=\"hintergrundfarbe_journal_hervorgehoben co_function_get_navigation_is_no_parent co_function_get_navigation_is_open\" id=\"co_getnavigation_page_home\">" +
+          "<a href=\"http://www.advances-in-geosciences.net/home.html\" pageid=\"1211\" class=\"hintergrundfarbe_journal active_menuitem\">Home</a>" +
+          "</li>" +
+          "<li class=\"active_menuitem hintergrundfarbe_journal_hervorgehoben\">" +
+          "<a href=\"/volumes.html\" class=\"hintergrundfarbe_journal\">Online Library </a></li>" +
+          "<ul class=\"subbox_background\">" +
+          "<li><a href=\"/recent_papers.html\">Recent Papers</a></li>" +
+          "<li><a href=\"/volumes.html\" class=\"active_menuitem\">Volumes</a></li>" +
+          "<li><a href=\"/library_search.html\">Library Search</a></li>" +
+          "<li><a href=\"/title_and_author_search.html\">Title and Author Search</a></li>" +
+          "</ul>" +
+          "<li class=\"hintergrundfarbe_journal_hervorgehoben co_function_get_navigation_is_no_parent co_function_get_navigation_is_closed\" id=\"co_getnavigation_page_alerts_and_rss_feeds\">" +
+          "<a href=\"http://www.advances-in-geosciences.net/rss_feeds.html\" pageid=\"1212\" class=\"hintergrundfarbe_journal \">RSS Feeds</a></li>" +
+          "</ul></div>";
+  private static final String leftColumnFiltered =
+      "<div class=\"page_colum_container CMSCONTAINER\" id=\"page_colum_left_container\">";
+  
   public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
@@ -109,5 +141,18 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
 
     assertEquals(scriptsAndCommentsFiltered,StringUtil.fromInputStream(inA));
 
+    /* remove iFrame */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(iFrameHtml),
+        ENC);
+
+    assertEquals(iFrameFiltered,StringUtil.fromInputStream(inA));    
+    /* remove left column search area */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(leftColumnHtml),
+        ENC);
+
+    assertEquals(leftColumnFiltered,StringUtil.fromInputStream(inA));
+    
+    
   }
 }
+

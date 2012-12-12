@@ -1,5 +1,5 @@
 /*
-* $Id: CopernicusHtmlFilterFactory.java,v 1.3 2012-11-20 22:37:33 alexandraohlson Exp $
+* $Id: CopernicusHtmlFilterFactory.java,v 1.4 2012-12-12 22:03:56 alexandraohlson Exp $
 */
 
 /*
@@ -80,6 +80,8 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "page_colum_right"),
         // Journal metrics block - variable values
         HtmlNodeFilters.tagWithAttribute("div", "id", "journal_metrics"),
+        HtmlNodeFilters.tagWithAttribute("iframe", "id", "co_auth_check_authiframecontainer"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "page_navigation_left"),    
         
     };    
     InputStream htmlFilter = new HtmlFilterInputStream(in,
