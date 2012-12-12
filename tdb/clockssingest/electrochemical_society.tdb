@@ -17,7 +17,7 @@
 
     param[base_url] = http://jes.ecsdl.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[exists] = login needed, RU4488
+    comment[v159] = login needed, RU4488
 
     au <  exists ; exists ; 2011 ; Journal of the Electrochemical Society Volume 158 ; 158 >
     au <  manifest ; exists ; 2012 ; Journal of the Electrochemical Society Volume 159 ; 159 >
@@ -118,7 +118,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[exists] = RU4503, hash filter needed for "viewspecificaccesscheck"
     
-    comment[previous] = 2002 through 2006 are on a non-HighWire website at http://www.electrochem.org/dl/ma/
+    comment[previous] = also 2002 through 2006 are on a non-HighWire website at http://www.electrochem.org/dl/ma/
 
     au <  exists ; exists ; 2005 ; ECS Meeting Abstracts Volume MA2005-01 ; MA2005-01 >
     au <  exists ; exists ; 2005 ; ECS Meeting Abstracts Volume MA2005-02 ; MA2005-02 >
