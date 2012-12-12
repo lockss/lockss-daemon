@@ -373,9 +373,9 @@
 
     param[journal_id] = 91
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Case Reports Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Case Reports Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Case Reports Volume 3 ; 2010 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Case Reports Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Case Reports Volume 2 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Case Reports Volume 3 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Insights: Case Reports Volume 4 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Insights: Case Reports Volume 5 ; 2012 >
 
@@ -391,10 +391,10 @@
 
     param[journal_id] = 44
 
-    au < manifest ; 2007 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 4 ; 2010 >
+    au < testing ; 2007 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 1 ; 2007 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 2 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 3 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 4 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 5 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 6 ; 2012 >
 
@@ -410,9 +410,9 @@
 
     param[journal_id] = 69
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Dermatology Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Dermatology Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Dermatology Volume 3 ; 2010 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Dermatology Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Dermatology Volume 2 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Dermatology Volume 3 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Insights: Dermatology Volume 4 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Insights: Dermatology Volume 5 ; 2012 >
 
@@ -428,9 +428,9 @@
 
     param[journal_id] = 61
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 3 ; 2010 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 2 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 3 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 4 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 5 ; 2012 >
 
@@ -446,9 +446,9 @@
 
     param[journal_id] = 65
 
-    au < manifest; 2008 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 1 ; 2008 >
-    au < manifest; 2009 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 2 ; 2009 >
-    au < manifest; 2010 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 3 ; 2010 >
+    au < testing; 2008 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 1 ; 2008 >
+    au < testing; 2009 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 2 ; 2009 >
+    au < testing; 2010 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 3 ; 2010 >
     au < ready; 2011 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 4 ; 2011 >
     au < ready; 2012 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 5 ; 2012 >
 
@@ -1513,10 +1513,10 @@
 
     param[journal_id] = 19
 
-    au < manifest ; 2006 ; Translational Oncogenomics Volume 1 ; 2006 >
-    au < manifest ; 2007 ; Translational Oncogenomics Volume 2 ; 2007 >
-    au < manifest ; 2008 ; Translational Oncogenomics Volume 3 ; 2008 >
-    au < manifest ; 2010 ; Translational Oncogenomics Volume 4 ; 2010 >
+    au < testing ; 2006 ; Translational Oncogenomics Volume 1 ; 2006 >
+    au < testing ; 2007 ; Translational Oncogenomics Volume 2 ; 2007 >
+    au < testing ; 2008 ; Translational Oncogenomics Volume 3 ; 2008 >
+    au < testing ; 2010 ; Translational Oncogenomics Volume 4 ; 2010 >
     au < released ; 2012 ; Translational Oncogenomics Volume 5 ; 2012 >
     
     
