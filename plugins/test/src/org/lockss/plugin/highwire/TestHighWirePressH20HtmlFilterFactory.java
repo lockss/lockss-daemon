@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.11 2012-10-19 23:31:55 alexandraohlson Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.12 2012-12-12 21:33:48 alexandraohlson Exp $
  */
 
 /*
@@ -225,7 +225,72 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "<h2 id=\"KEEP THIS\"><span>KEEP THIS BIT</span></h2>" +
           "</div>" +
           "</div>";
-   
+  
+  private static final String hiddenInputHtml = 
+      "<form action=\"http://www.example.org/search\" class=\"searchbox\" method=\"get\">" +
+          "<input value=\"\" type=\"text\" name=\"fulltext\" id=\"header-qs-input\" maxlength=\"80\" width=\"60\" class=\"field\" />" +
+          " <input type=\"hidden\" name=\"submit\" value=\"yes\" /><input type=\"image\" value=\"GO\" alt=\"Link: Go\" id=\"header-qs-search-go\"" +
+          "src=\"/publisher/img/go.gif\" />" +
+          "<input type=\"hidden\" name=\"qs\" value=\"yes\" /><p>                        " +                        
+          "<input type=\"hidden\" name=\"domain\" value=\"highwire\" /></p>" +
+          "<input type=\"hidden\" name=\"group-code\" value=\"gsw\" /><input type=\"hidden\" name=\"resourcetype\" value=\"HWCIT\" /></form>";
+  private static final String hiddenInputFiltered =
+      "<form action=\"http://www.example.org/search\" class=\"searchbox\" method=\"get\">" +
+          "<input value=\"\" type=\"text\" name=\"fulltext\" id=\"header-qs-input\" maxlength=\"80\" width=\"60\" class=\"field\" />" +
+          " <input type=\"image\" value=\"GO\" alt=\"Link: Go\" id=\"header-qs-search-go\"" +
+          "src=\"/publisher/img/go.gif\" />" +
+          "<p> " +                        
+          "</p>" +
+          "</form>";
+
+  private static final String accessCheckHtml =
+      "     <div class=\"cb-section cb-views\">" +
+          "<ol>" +
+          "<li class=\"abstract-view-link primary\"><span class=\"viewspecificaccesscheck gsclaymin;47/1/1 abstract\"></span></li>" +
+          "<li><a href=\"/content/47/1/1.figures-only\" rel=\"view-figures-only\">Figures Only</a><span class=\"viewspecificaccesscheck gsclaymin;47/1/1 figsonly\"></span></li>" +
+          "<li class=\"notice full-text-view-link primary\"><a href=\"/content/47/1/1.full\" rel=\"view-full-text\">Full Text</a><span class=\"viewspecificaccesscheck gsclaymin;47/1/1 full\"></span></li>" +
+          "<li class=\"notice full-text-pdf-view-link primary\"><a href=\"/content/47/1/1.full.pdf+html\" rel=\"view-full-text.pdf\">Full Text (PDF)</a><span class=\"viewspecificaccesscheck gsclaymin;47/1/1 reprint\"></span></li>" +
+          "</ol>" +
+          "</div>";
+ 
+  private static final String accessCheckFiltered=
+      " <div class=\"cb-section cb-views\">" +
+          "<ol>" +
+          "<li class=\"abstract-view-link primary\"></li>" +
+          "<li><a href=\"/content/47/1/1.figures-only\" rel=\"view-figures-only\">Figures Only</a></li>" +
+          "<li class=\"notice full-text-view-link primary\"><a href=\"/content/47/1/1.full\" rel=\"view-full-text\">Full Text</a></li>" +
+          "<li class=\"notice full-text-pdf-view-link primary\"><a href=\"/content/47/1/1.full.pdf+html\" rel=\"view-full-text.pdf\">Full Text (PDF)</a></li>" +
+          "</ol>" +
+          "</div>";
+
+  private static final String institutionLogoHtml =
+      "        <div id=\"col-3\">" +
+          "<img alt=\"Stanford University\"" +
+          "src=\"/userimage/891eef32-7e9f-4198-9886-31192686655e-20120118\"" +
+          "class=\"hwac-institutional-logo\" />" +
+          "<div id=\"sidebar-global-nav\">";
+  
+  private static final String institutionLogoFiltered = 
+      " <div id=\"col-3\">" +
+          "<div id=\"sidebar-global-nav\">";
+  
+  
+  private static final String tocBannerAdHtml =
+      "   <div id=\"content-block\">" +
+      "<ul class=\"toc-banner-ads\">" +
+      " <li><a href=\"/cgi/adclick/?ad=35482&amp;adclick=true&amp;url=http%3A%2F%2Fwww.aspetjournals.org%2Fsite%2Fmisc%2Fmobile_announce.xhtml\"><img class=\"adborder1\" title=\"ASPET Journals Now Available for Mobile Devices\"" +
+      "    width=\"195\"" +
+      "    height=\"195\"" +
+      "    src=\"http://pharmrev.aspetjournals.org/adsystem/graphics/932368436242021/pharmrev/Mobile%20Versions%20195x195%20Banner%20Ad.gif?ad=35482&amp;adview=true\"" +
+      "    alt=\"ASPET Journals Now Available for Mobile Devices\" /></a></li>" +
+      "</ul> " +
+      " <div id=\"toc-header\">   " +
+      " <h1>Table of Contents</h1><cite>";
+  private static final String tocBannerAdFiltered =
+      " <div id=\"content-block\">" +
+      " <div id=\"toc-header\">" +
+      " <h1>Table of Contents</h1><cite>";
+
   public void testFiltering() throws Exception {
     assertFilterToSame(inst1, inst2);
     assertFilterToSame(withAds, withoutAds);
@@ -241,6 +306,10 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(withCol4TowerAds, withoutCol4TowerAds);
     
     assertFilterToString(textIndexFactor, textIndexFactorFiltered);
+    assertFilterToString(hiddenInputHtml, hiddenInputFiltered);
+    assertFilterToString(accessCheckHtml, accessCheckFiltered);
+    assertFilterToString(institutionLogoHtml, institutionLogoFiltered);
+    assertFilterToString(tocBannerAdHtml, tocBannerAdFiltered);
   }
 
   private void assertFilterToSame(String str1, String Str2) throws Exception {

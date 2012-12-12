@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.42 2012-10-19 23:31:55 alexandraohlson Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.43 2012-12-12 21:33:48 alexandraohlson Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.highwire;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Reader;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
@@ -46,9 +47,12 @@ import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
 public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
 
@@ -147,6 +151,13 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "status"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "AdSkyscraper"),
         
+        //claymin.geoscienceworld.org
+        HtmlNodeFilters.tagWithAttribute("img", "class", "hwac-institutional-logo"),
+        HtmlNodeFilters.tagWithAttribute("input", "type", "hidden"),
+        HtmlNodeFilters.tagWithAttributeRegex("span", "class", "^viewspecificaccesscheck"),   
+        
+        //parmrev.aspetjournals.org
+        HtmlNodeFilters.tagWithAttribute("ul", "class", "toc-banner-ads"),
         
         // The following four filters are needed on jultrasoundmed.org:
         // Empty and sporadic <div id="fragment-reference-display">
@@ -218,10 +229,14 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         return nodeList;
       }
     };
-    
-    return new HtmlFilterInputStream(in,
+ 
+    InputStream filtered =  new HtmlFilterInputStream(in,
         encoding,
         new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform));
+    
+    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
+
   }
 
 }
