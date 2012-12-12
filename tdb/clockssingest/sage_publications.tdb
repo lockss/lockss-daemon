@@ -7395,7 +7395,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The Diabetes Educator Volume 35 ; 35 ; >
       au < released ; crawling ; 2010 ; The Diabetes Educator Volume 36 ; 36 ; >
       au < released ; crawling ; 2011 ; The Diabetes Educator Volume 37 ; 37 ; >
-      au < testing ; exists ; 2012 ; The Diabetes Educator Volume 38 ; 38 ; >
+      au < released ; manifest ; 2012 ; The Diabetes Educator Volume 38 ; 38 ; >
       au < expected ; exists ; 2013 ; The Diabetes Educator Volume 39 ; 39 ; >
 
     }
@@ -8453,7 +8453,7 @@
       au < released ; crawling ; 2009 ; Electronic News Volume 3 ; 3 ; >
       au < released ; crawling ; 2010 ; Electronic News Volume 4 ; 4 ; >
       au < released ; crawling ; 2011 ; Electronic News Volume 5 ; 5 ; >
-      au < testing ; exists ; 2012 ; Electronic News Volume 6 ; 6 ; >
+      au < released ; manifest ; 2012 ; Electronic News Volume 6 ; 6 ; >
       au < expected ; exists ; 2013 ; Electronic News Volume 7 ; 7 ; >
 
     }
@@ -8777,7 +8777,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://acc.sagepub.com/
 
-      au < testing ; exists ; 2012 ; European Heart Journal: Acute Cardiovascular Care Volume 1 ; 1 ; >
+      au < released ; manifest ; 2012 ; European Heart Journal: Acute Cardiovascular Care Volume 1 ; 1 ; >
       au < expected ; exists ; 2013 ; European Heart Journal: Acute Cardiovascular Care Volume 2 ; 2 ; >
 
   }
@@ -8921,7 +8921,7 @@
       au < released ; crawling ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; European Journal of Cardiovascular Nursing Volume 10 ; 10 ; >
-      au < testing ; exists ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 11 ; >
+      au < released ; manifest ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 11 ; >
       au < expected ; exists ; 2013 ; European Journal of Cardiovascular Nursing Volume 12 ; 12 ; >
 
     }
@@ -8962,7 +8962,7 @@
       au < released ; crawling ; 2009 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 17 ; 17 ; >
       au < released ; crawling ; 2011 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 18 ; 18 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 19 ; 19 ; >
+      au < released ; manifest ; 2012 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 19 ; 19 ; >
 
     }
 
@@ -9042,7 +9042,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Communication Volume 24 ; 24 ; >
       au < zapped ; down ; 2010 ; European Journal of Communication Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; European Journal of Communication Volume 26 ; 26 ; >
-      au < testing ; exists ; 2012 ; European Journal of Communication Volume 27 ; 27 ; >
+      au < released ; manifest ; 2012 ; European Journal of Communication Volume 27 ; 27 ; >
       au < expected ; exists ; 2013 ; European Journal of Communication Volume 28 ; 28 ; >
 
     }
@@ -9081,7 +9081,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Criminology Volume 6 ; 6 ; >
       au < released ; crawling ; 2010 ; European Journal of Criminology Volume 7 ; 7 ; >
       au < released ; crawling ; 2011 ; European Journal of Criminology Volume 8 ; 8 ; >
-      au < testing ; exists ; 2012 ; European Journal of Criminology Volume 9 ; 9 ; >
+      au < released ; manifest ; 2012 ; European Journal of Criminology Volume 9 ; 9 ; >
       au < expected ; exists ; 2013 ; European Journal of Criminology Volume 10 ; 10 ; >
 
     }
@@ -9126,7 +9126,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Cultural Studies Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; European Journal of Cultural Studies Volume 13 ; 13 ; >
       au < released ; crawling ; 2011 ; European Journal of Cultural Studies Volume 14 ; 14 ; >
-      au < testing ; exists ; 2012 ; European Journal of Cultural Studies Volume 15 ; 15 ; >
+      au < released ; manifest ; 2012 ; European Journal of Cultural Studies Volume 15 ; 15 ; >
       au < expected ; exists ; 2013 ; European Journal of Cultural Studies Volume 16 ; 16 ; >
 
     }
@@ -9174,7 +9174,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Industrial Relations Volume 15 ; 15 ; >
       au < zapped ; down ; 2010 ; European Journal of Industrial Relations Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; European Journal of Industrial Relations Volume 17 ; 17 ; >
-      au < testing ; exists ; 2012 ; European Journal of Industrial Relations Volume 18 ; 18 ; >
+      au < released ; manifest ; 2012 ; European Journal of Industrial Relations Volume 18 ; 18 ; >
       au < expected ; exists ; 2013 ; European Journal of Industrial Relations Volume 19 ; 19 ; >
 
     }
@@ -9222,7 +9222,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of International Relations Volume 15 ; 15 ; >
       au < released ; crawling ; 2010 ; European Journal of International Relations Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; European Journal of International Relations Volume 17 ; 17 ; >
-      au < testing ; exists ; 2012 ; European Journal of International Relations Volume 18 ; 18 ; >
+      au < released ; manifest ; 2012 ; European Journal of International Relations Volume 18 ; 18 ; >
       au < expected ; exists ; 2013 ; European Journal of International Relations Volume 19 ; 19 ; >
 
     }
@@ -34653,7 +34653,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < released ; crawling ; 2011 ; Therapeutic Advances in Psychopharmacology Volume 1 ; 1 ; >
-      au < testing ; exists ; 2012 ; Therapeutic Advances in Psychopharmacology Volume 2 ; 2 ; >
+      au < released ; manifest ; 2012 ; Therapeutic Advances in Psychopharmacology Volume 2 ; 2 ; >
       au < expected ; exists ; 2013 ; Therapeutic Advances in Psychopharmacology Volume 3 ; 3 ; >
 
     }
@@ -34864,9 +34864,9 @@
       au < released ; crawling ; 2011 ; Thesis Eleven Volume 107 ; 107 ; >
       au < released ; manifest ; 2012 ; Thesis Eleven Volume 108 ; 108 ; >
       au < released ; manifest ; 2012 ; Thesis Eleven Volume 109 ; 109 ; >
-      au < testing ; exists ; 2012 ; Thesis Eleven Volume 110 ; 110 ; >
+      au < released ; manifest ; 2012 ; Thesis Eleven Volume 110 ; 110 ; >
       au < released ; crawling ; 2012 ; Thesis Eleven Volume 111 ; 111 ; >
-      au < testing ; exists ; 2012 ; Thesis Eleven Volume 112 ; 112 ; >
+      au < released ; manifest ; 2012 ; Thesis Eleven Volume 112 ; 112 ; >
       au < expected ; exists ; 2013 ; Thesis Eleven Volume 113 ; 113 ; >
       au < expected ; exists ; 2013 ; Thesis Eleven Volume 114 ; 114 ; >
       au < expected ; exists ; 2013 ; Thesis Eleven Volume 115 ; 115 ; >
@@ -37854,7 +37854,7 @@
       au < exists ; exists ; 2009 ; Ultrasonic Imaging Volume 31 ; 31 ; >
       au < exists ; exists ; 2010 ; Ultrasonic Imaging Volume 32 ; 32 ; >
       au < exists ; exists ; 2011 ; Ultrasonic Imaging Volume 33 ; 33 ; >
-      au < testing ; exists ; 2012 ; Ultrasonic Imaging Volume 34 ; 34 ; >
+      au < released ; manifest ; 2012 ; Ultrasonic Imaging Volume 34 ; 34 ; >
       au < expected ; exists ; 2013 ; Ultrasonic Imaging Volume 35 ; 35 ; >
 
     }
