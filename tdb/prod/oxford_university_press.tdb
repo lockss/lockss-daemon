@@ -8308,20 +8308,6 @@
   {
 
     title <
-      name = International Immunology Meeting Abstracts 
-    >
-    
-      param[base_url] = http://intimmabs.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < exists ; 2010 ; 14th International Congress of Immunology Kobe, Japan Supplement Volume 1 ; 1 >
-
-  }
-
-  {
-
-    title <
       name = International Journal of Constitutional Law ;
       issn = 1474-2640 ;
       eissn = 1474-2659 ;
@@ -19908,7 +19894,7 @@
   {
 
     title <
-      name = Intimm Meeting Abstracts 
+      name = International Immunology Meeting Abstracts 
     >
 
     param[base_url] = http://intimmabs.oxfordjournals.org/
@@ -19917,8 +19903,8 @@
 
     {
 
-      au < exists ; 2010 ; Intimm Meeting Abstracts Volume 22 ; 22 >
-      au < expected ; 2011 ; Intimm Meeting Abstracts Volume 23 ; 23 >
+      au < exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 >
+      au < expected ; 2011 ; International Immunology Meeting Abstracts Volume 23 ; 23 >
 
     }
 
