@@ -1379,8 +1379,8 @@
       param[journal_id] = safm
       param[journal_issn] = 1756-4921
     
-      au < manifest ; 2009 ; Studies in South Asian Film & Media Volume 1 ; 1 >
-      au < manifest ; 2010-2011 ; Studies in South Asian Film & Media Volume 2 ; 2 >
+      au < testing ; 2009 ; Studies in South Asian Film & Media Volume 1 ; 1 >
+      au < testing ; 2010-2011 ; Studies in South Asian Film & Media Volume 2 ; 2 >
     
     }
 
@@ -1393,17 +1393,17 @@
       param[journal_id] = stp
       param[journal_issn] = 1468-2761
     
-      au < manifest ; 2001-2002 ; Studies in Theater & Performance Volume 21 ; 21 >
-      au < manifest ; 2002-2003 ; Studies in Theater & Performance Volume 22 ; 22 >
-      au < manifest ; 2003-2004 ; Studies in Theater & Performance Volume 23 ; 23 >
-      au < manifest ; 2004 ; Studies in Theater & Performance Volume 24 ; 24 >
-      au < manifest ; 2005 ; Studies in Theater & Performance Volume 25 ; 25 >
-      au < manifest ; 2006 ; Studies in Theater & Performance Volume 26 ; 26 >
-      au < manifest ; 2007 ; Studies in Theater & Performance Volume 27 ; 27 >
-      au < manifest ; 2007-2008 ; Studies in Theater & Performance Volume 28 ; 28 >
-      au < manifest ; 2009 ; Studies in Theater & Performance Volume 29 ; 29 >
-      au < manifest ; 2010 ; Studies in Theater & Performance Volume 30 ; 30 >
-      au < manifest ; 2011 ; Studies in Theater & Performance Volume 31 ; 31 >
+      au < testing ; 2001-2002 ; Studies in Theater & Performance Volume 21 ; 21 >
+      au < testing ; 2002-2003 ; Studies in Theater & Performance Volume 22 ; 22 >
+      au < testing ; 2003-2004 ; Studies in Theater & Performance Volume 23 ; 23 >
+      au < testing ; 2004 ; Studies in Theater & Performance Volume 24 ; 24 >
+      au < testing ; 2005 ; Studies in Theater & Performance Volume 25 ; 25 >
+      au < testing ; 2006 ; Studies in Theater & Performance Volume 26 ; 26 >
+      au < testing ; 2007 ; Studies in Theater & Performance Volume 27 ; 27 >
+      au < testing ; 2007-2008 ; Studies in Theater & Performance Volume 28 ; 28 >
+      au < testing ; 2009 ; Studies in Theater & Performance Volume 29 ; 29 >
+      au < testing ; 2010 ; Studies in Theater & Performance Volume 30 ; 30 >
+      au < testing ; 2011 ; Studies in Theater & Performance Volume 31 ; 31 >
 
     }
 
@@ -1417,15 +1417,15 @@
       param[journal_id] = ta
       param[journal_issn] = 1477-965X
       
-      au < manifest ; 2003 ; Technoetic Arts Volume 1 ; 1 >
-      au < manifest ; 2004 ; Technoetic Arts Volume 2 ; 2 >
-      au < manifest ; 2005 ; Technoetic Arts Volume 3 ; 3 >
-      au < manifest ; 2006 ; Technoetic Arts Volume 4 ; 4 >
-      au < manifest ; 2007 ; Technoetic Arts Volume 5 ; 5 >
-      au < manifest ; 2008-2009 ; Technoetic Arts Volume 6 ; 6 >
-      au < manifest ; 2009 ; Technoetic Arts Volume 7 ; 7 >
-      au < manifest ; 2010-2011 ; Technoetic Arts Volume 8 ; 8 >
-      au < manifest ; 2011 ; Technoetic Arts Volume 9 ; 9 >
+      au < testing ; 2003 ; Technoetic Arts Volume 1 ; 1 >
+      au < testing ; 2004 ; Technoetic Arts Volume 2 ; 2 >
+      au < testing ; 2005 ; Technoetic Arts Volume 3 ; 3 >
+      au < testing ; 2006 ; Technoetic Arts Volume 4 ; 4 >
+      au < testing ; 2007 ; Technoetic Arts Volume 5 ; 5 >
+      au < testing ; 2008-2009 ; Technoetic Arts Volume 6 ; 6 >
+      au < testing ; 2009 ; Technoetic Arts Volume 7 ; 7 >
+      au < testing ; 2010-2011 ; Technoetic Arts Volume 8 ; 8 >
+      au < testing ; 2011 ; Technoetic Arts Volume 9 ; 9 >
 
     }
 
@@ -1439,8 +1439,8 @@
       param[journal_id] = trac
       param[journal_issn] = 2040-3526
       
-      au < manifest ; 2010 ; Transnational Cinemas Volume 1 ; 1 >
-      au < manifest ; 2011 ; Transnational Cinemas Volume 2 ; 2 >
+      au < testing ; 2010 ; Transnational Cinemas Volume 1 ; 1 >
+      au < testing ; 2011 ; Transnational Cinemas Volume 2 ; 2 >
 
     }
 
