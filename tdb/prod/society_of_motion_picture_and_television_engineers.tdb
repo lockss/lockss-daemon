@@ -16,41 +16,41 @@
       param[base_url] = http://journal.smpte.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1916 ; SMPTE Motion Imaging Journal Volume 1 ; 1 >
-      au < manifest ; 1917-1918 ; SMPTE Motion Imaging Journal Volume 2 ; 2 >
-      au < manifest ; 1919 ; SMPTE Motion Imaging Journal Volume 3 ; 3 >
-      au < manifest ; 1920 ; SMPTE Motion Imaging Journal Volume 4 ; 4 >
-      au < manifest ; 1921 ; SMPTE Motion Imaging Journal Volume 5 ; 5 >
-      au < manifest ; 1922 ; SMPTE Motion Imaging Journal Volume 6 ; 6 >
-      au < manifest ; 1923 ; SMPTE Motion Imaging Journal Volume 7 ; 7 >
-      au < manifest ; 1924 ; SMPTE Motion Imaging Journal Volume 8 ; 8 >
-      au < manifest ; 1925 ; SMPTE Motion Imaging Journal Volume 9 ; 9 >
-      au < manifest ; 1926 ; SMPTE Motion Imaging Journal Volume 10 ; 10 >
-      au < manifest ; 1927 ; SMPTE Motion Imaging Journal Volume 11 ; 11 >
-      au < manifest ; 1928 ; SMPTE Motion Imaging Journal Volume 12 ; 12 >
-      au < manifest ; 1929 ; SMPTE Motion Imaging Journal Volume 13 ; 13 >
-      au < manifest ; 1930 ; SMPTE Motion Imaging Journal Volume 14 ; 14 >
-      au < manifest ; 1930 ; SMPTE Motion Imaging Journal Volume 15 ; 15 >
-      au < manifest ; 1931 ; SMPTE Motion Imaging Journal Volume 16 ; 16 >
-      au < manifest ; 1931 ; SMPTE Motion Imaging Journal Volume 17 ; 17 >
-      au < manifest ; 1932 ; SMPTE Motion Imaging Journal Volume 18 ; 18 >
-      au < manifest ; 1932 ; SMPTE Motion Imaging Journal Volume 19 ; 19 >
-      au < manifest ; 1933 ; SMPTE Motion Imaging Journal Volume 20 ; 20 >
-      au < manifest ; 1933 ; SMPTE Motion Imaging Journal Volume 21 ; 21 >
-      au < manifest ; 1934 ; SMPTE Motion Imaging Journal Volume 22 ; 22 >
-      au < manifest ; 1934 ; SMPTE Motion Imaging Journal Volume 23 ; 23 >
-      au < manifest ; 1935 ; SMPTE Motion Imaging Journal Volume 24 ; 24 >
-      au < manifest ; 1935 ; SMPTE Motion Imaging Journal Volume 25 ; 25 >
-      au < manifest ; 1936 ; SMPTE Motion Imaging Journal Volume 26 ; 26 >
-      au < manifest ; 1936 ; SMPTE Motion Imaging Journal Volume 27 ; 27 >
-      au < manifest ; 1937 ; SMPTE Motion Imaging Journal Volume 28 ; 28 >
-      au < manifest ; 1937 ; SMPTE Motion Imaging Journal Volume 29 ; 29 >
-      au < manifest ; 1938 ; SMPTE Motion Imaging Journal Volume 30 ; 30 >
-      au < manifest ; 1938 ; SMPTE Motion Imaging Journal Volume 31 ; 31 >
-      au < manifest ; 1939 ; SMPTE Motion Imaging Journal Volume 32 ; 32 >
-      au < manifest ; 1939 ; SMPTE Motion Imaging Journal Volume 33 ; 33 >
-      au < manifest ; 1940 ; SMPTE Motion Imaging Journal Volume 34 ; 34 >
-      au < manifest ; 1940 ; SMPTE Motion Imaging Journal Volume 35 ; 35 >
+      au < testing ; 1916 ; SMPTE Motion Imaging Journal Volume 1 ; 1 >
+      au < testing ; 1917-1918 ; SMPTE Motion Imaging Journal Volume 2 ; 2 >
+      au < testing ; 1919 ; SMPTE Motion Imaging Journal Volume 3 ; 3 >
+      au < testing ; 1920 ; SMPTE Motion Imaging Journal Volume 4 ; 4 >
+      au < testing ; 1921 ; SMPTE Motion Imaging Journal Volume 5 ; 5 >
+      au < testing ; 1922 ; SMPTE Motion Imaging Journal Volume 6 ; 6 >
+      au < testing ; 1923 ; SMPTE Motion Imaging Journal Volume 7 ; 7 >
+      au < testing ; 1924 ; SMPTE Motion Imaging Journal Volume 8 ; 8 >
+      au < testing ; 1925 ; SMPTE Motion Imaging Journal Volume 9 ; 9 >
+      au < testing ; 1926 ; SMPTE Motion Imaging Journal Volume 10 ; 10 >
+      au < testing ; 1927 ; SMPTE Motion Imaging Journal Volume 11 ; 11 >
+      au < testing ; 1928 ; SMPTE Motion Imaging Journal Volume 12 ; 12 >
+      au < testing ; 1929 ; SMPTE Motion Imaging Journal Volume 13 ; 13 >
+      au < testing ; 1930 ; SMPTE Motion Imaging Journal Volume 14 ; 14 >
+      au < testing ; 1930 ; SMPTE Motion Imaging Journal Volume 15 ; 15 >
+      au < testing ; 1931 ; SMPTE Motion Imaging Journal Volume 16 ; 16 >
+      au < testing ; 1931 ; SMPTE Motion Imaging Journal Volume 17 ; 17 >
+      au < testing ; 1932 ; SMPTE Motion Imaging Journal Volume 18 ; 18 >
+      au < testing ; 1932 ; SMPTE Motion Imaging Journal Volume 19 ; 19 >
+      au < testing ; 1933 ; SMPTE Motion Imaging Journal Volume 20 ; 20 >
+      au < testing ; 1933 ; SMPTE Motion Imaging Journal Volume 21 ; 21 >
+      au < testing ; 1934 ; SMPTE Motion Imaging Journal Volume 22 ; 22 >
+      au < testing ; 1934 ; SMPTE Motion Imaging Journal Volume 23 ; 23 >
+      au < testing ; 1935 ; SMPTE Motion Imaging Journal Volume 24 ; 24 >
+      au < testing ; 1935 ; SMPTE Motion Imaging Journal Volume 25 ; 25 >
+      au < testing ; 1936 ; SMPTE Motion Imaging Journal Volume 26 ; 26 >
+      au < testing ; 1936 ; SMPTE Motion Imaging Journal Volume 27 ; 27 >
+      au < testing ; 1937 ; SMPTE Motion Imaging Journal Volume 28 ; 28 >
+      au < testing ; 1937 ; SMPTE Motion Imaging Journal Volume 29 ; 29 >
+      au < testing ; 1938 ; SMPTE Motion Imaging Journal Volume 30 ; 30 >
+      au < testing ; 1938 ; SMPTE Motion Imaging Journal Volume 31 ; 31 >
+      au < testing ; 1939 ; SMPTE Motion Imaging Journal Volume 32 ; 32 >
+      au < testing ; 1939 ; SMPTE Motion Imaging Journal Volume 33 ; 33 >
+      au < testing ; 1940 ; SMPTE Motion Imaging Journal Volume 34 ; 34 >
+      au < testing ; 1940 ; SMPTE Motion Imaging Journal Volume 35 ; 35 >
       au < manifest ; 1941 ; SMPTE Motion Imaging Journal Volume 36 ; 36 >
       au < manifest ; 1941 ; SMPTE Motion Imaging Journal Volume 37 ; 37 >
       au < manifest ; 1942 ; SMPTE Motion Imaging Journal Volume 38 ; 38 >
