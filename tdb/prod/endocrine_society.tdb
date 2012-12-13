@@ -73,36 +73,36 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; testing ; 1917 ; Endocrinology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 1918 ; Endocrinology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; testing ; 1919 ; Endocrinology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; testing ; 1920 ; Endocrinology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; ready ; 1918 ; Endocrinology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 1919 ; Endocrinology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; ready ; 1920 ; Endocrinology Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; testing ; 1921 ; Endocrinology Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; testing ; 1922 ; Endocrinology Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; testing ; 1923 ; Endocrinology Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; testing ; 1924 ; Endocrinology Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; testing ; 1925 ; Endocrinology Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; testing ; 1926 ; Endocrinology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; testing ; 1927 ; Endocrinology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; testing ; 1928 ; Endocrinology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; testing ; 1929 ; Endocrinology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; ready ; 1927 ; Endocrinology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; ready ; 1928 ; Endocrinology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; ready ; 1929 ; Endocrinology Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; testing ; 1930 ; Endocrinology Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; testing ; 1931 ; Endocrinology Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; testing ; 1932 ; Endocrinology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; testing ; 1933 ; Endocrinology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; testing ; 1934 ; Endocrinology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; testing ; 1935 ; Endocrinology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; testing ; 1936 ; Endocrinology Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; testing ; 1937 ; Endocrinology Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; testing ; 1938 ; Endocrinology Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; testing ; 1938 ; Endocrinology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; ready ; 1933 ; Endocrinology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; ready ; 1934 ; Endocrinology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; ready ; 1935 ; Endocrinology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; ready ; 1936 ; Endocrinology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; ready ; 1937 ; Endocrinology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; ready ; 1938 ; Endocrinology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; ready ; 1938 ; Endocrinology Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; testing ; 1939 ; Endocrinology Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; testing ; 1939 ; Endocrinology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; ready ; 1939 ; Endocrinology Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; testing ; 1940 ; Endocrinology Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; testing ; 1940 ; Endocrinology Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; testing ; 1941 ; Endocrinology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; testing ; 1941 ; Endocrinology Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; testing ; 1942 ; Endocrinology Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; testing ; 1942 ; Endocrinology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; ready ; 1941 ; Endocrinology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; ready ; 1942 ; Endocrinology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; ready ; 1942 ; Endocrinology Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; released ; 1943 ; Endocrinology Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; released ; 1943 ; Endocrinology Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 1944 ; Endocrinology Volume 34 ; 34 >
@@ -116,7 +116,7 @@
       au < HighWirePressH20Plugin ; released ; 1948 ; Endocrinology Volume 42 ; 42 >
       au < HighWirePressH20Plugin ; released ; 1948 ; Endocrinology Volume 43 ; 43 >
       au < HighWirePressH20Plugin ; released ; 1949 ; Endocrinology Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; manifest ; 1949 ; Endocrinology Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; testing ; 1949 ; Endocrinology Volume 45 ; 45 >
       au < HighWirePressH20Plugin ; released ; 1950 ; Endocrinology Volume 46 ; 46 >
       au < HighWirePressH20Plugin ; released ; 1950 ; Endocrinology Volume 47 ; 47 >
       au < HighWirePressH20Plugin ; released ; 1951 ; Endocrinology Volume 48 ; 48 >
@@ -176,7 +176,7 @@
       au < HighWirePressH20Plugin ; released ; 1978 ; Endocrinology Volume 102 ; 102 >
       au < HighWirePressH20Plugin ; released ; 1978 ; Endocrinology Volume 103 ; 103 >
       au < HighWirePressH20Plugin ; released ; 1979 ; Endocrinology Volume 104 ; 104 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Endocrinology Volume 105 ; 105 >
+      au < HighWirePressH20Plugin ; testing ; 1979 ; Endocrinology Volume 105 ; 105 >
       au < HighWirePressH20Plugin ; released ; 1980 ; Endocrinology Volume 106 ; 106 >
       au < HighWirePressH20Plugin ; released ; 1980 ; Endocrinology Volume 107 ; 107 >
       au < HighWirePressH20Plugin ; released ; 1981 ; Endocrinology Volume 108 ; 108 >
@@ -245,26 +245,26 @@
       param[base_url] = http://jcem.endojournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; manifest ; 1941 ; Journal of Clinical Endocrinology & Metabolism Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1942 ; Journal of Clinical Endocrinology & Metabolism Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1943 ; Journal of Clinical Endocrinology & Metabolism Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1944 ; Journal of Clinical Endocrinology & Metabolism Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1945 ; Journal of Clinical Endocrinology & Metabolism Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1946 ; Journal of Clinical Endocrinology & Metabolism Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1947 ; Journal of Clinical Endocrinology & Metabolism Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1948 ; Journal of Clinical Endocrinology & Metabolism Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 1949 ; Journal of Clinical Endocrinology & Metabolism Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 1950 ; Journal of Clinical Endocrinology & Metabolism Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 1951 ; Journal of Clinical Endocrinology & Metabolism Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 1952 ; Journal of Clinical Endocrinology & Metabolism Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 1953 ; Journal of Clinical Endocrinology & Metabolism Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 1954 ; Journal of Clinical Endocrinology & Metabolism Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 1955 ; Journal of Clinical Endocrinology & Metabolism Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; manifest ; 1956 ; Journal of Clinical Endocrinology & Metabolism Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 1957 ; Journal of Clinical Endocrinology & Metabolism Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 1958 ; Journal of Clinical Endocrinology & Metabolism Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; manifest ; 1959 ; Journal of Clinical Endocrinology & Metabolism Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; manifest ; 1960 ; Journal of Clinical Endocrinology & Metabolism Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; testing ; 1941 ; Journal of Clinical Endocrinology & Metabolism Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 1942 ; Journal of Clinical Endocrinology & Metabolism Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 1943 ; Journal of Clinical Endocrinology & Metabolism Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 1944 ; Journal of Clinical Endocrinology & Metabolism Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1945 ; Journal of Clinical Endocrinology & Metabolism Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 1946 ; Journal of Clinical Endocrinology & Metabolism Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 1947 ; Journal of Clinical Endocrinology & Metabolism Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 1948 ; Journal of Clinical Endocrinology & Metabolism Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 1949 ; Journal of Clinical Endocrinology & Metabolism Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 1950 ; Journal of Clinical Endocrinology & Metabolism Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 1951 ; Journal of Clinical Endocrinology & Metabolism Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; testing ; 1952 ; Journal of Clinical Endocrinology & Metabolism Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; testing ; 1953 ; Journal of Clinical Endocrinology & Metabolism Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; testing ; 1954 ; Journal of Clinical Endocrinology & Metabolism Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; testing ; 1955 ; Journal of Clinical Endocrinology & Metabolism Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; testing ; 1956 ; Journal of Clinical Endocrinology & Metabolism Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; testing ; 1957 ; Journal of Clinical Endocrinology & Metabolism Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; testing ; 1958 ; Journal of Clinical Endocrinology & Metabolism Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; testing ; 1959 ; Journal of Clinical Endocrinology & Metabolism Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; testing ; 1960 ; Journal of Clinical Endocrinology & Metabolism Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; manifest ; 1961 ; Journal of Clinical Endocrinology & Metabolism Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; manifest ; 1962 ; Journal of Clinical Endocrinology & Metabolism Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; manifest ; 1963 ; Journal of Clinical Endocrinology & Metabolism Volume 23 ; 23 >
