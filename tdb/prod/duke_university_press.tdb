@@ -356,9 +356,9 @@
       param[base_url] = http://commonknowledge.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; testing ; 2002 ; Common Knowledge Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; testing ; 2003 ; Common Knowledge Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; testing ; 2004 ; Common Knowledge Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; ready ; 2002 ; Common Knowledge Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; ready ; 2003 ; Common Knowledge Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; ready ; 2004 ; Common Knowledge Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Common Knowledge Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; released ; 2006 ; Common Knowledge Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Common Knowledge Volume 13 ; 13 >
@@ -1442,7 +1442,7 @@
       param[base_url] = http://labor.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-     au < HighWirePressH20Plugin ; testing ; 2004 ; Labor: Studies in Working-Class History of the Americas Volume 1 ; 1 >
+     au < HighWirePressH20Plugin ; ready ; 2004 ; Labor: Studies in Working-Class History of the Americas Volume 1 ; 1 >
      au < HighWireStrVolPlugin ; down ; 2005 ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
      au < HighWireStrVolPlugin ; down ; 2006 ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 >
      au < HighWireStrVolPlugin ; down ; 2007 ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 >
@@ -1466,8 +1466,9 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://lofe.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      comment[notReady] = RU4548, different site-date
       
-      au < HighWirePressH20Plugin ; testing ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; notReady ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; ready ; 2012 ; Limnology and Oceanography: Fluids and Environments Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Limnology and Oceanography: Fluids and Environments Volume 3 ; 3 >
 
