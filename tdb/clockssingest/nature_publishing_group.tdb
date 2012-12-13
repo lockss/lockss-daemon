@@ -1633,7 +1633,7 @@
     au < exists ; exists ; 2009 ; Molecular Systems Biology Volume 5 ; 2009 ; 5 >
     au < exists ; exists ; 2010 ; Molecular Systems Biology Volume 6 ; 2010 ; 6 >
     au < exists ; exists ; 2011 ; Molecular Systems Biology Volume 7 ; 2011 ; 7 >
-    au < expected ; exists ; 2012 ; Molecular Systems Biology Volume 8 ; 2012 ; 8 >
+    au < exists ; exists ; 2012 ; Molecular Systems Biology Volume 8 ; 2012 ; 8 >
 
   }
 
@@ -2809,6 +2809,7 @@
     au < released ; crawling ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 >
     au < notReady ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
     au < crawling ; exists ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 >
+    au < exists ; exists ; 2013 ; Nature Reviews Endocrinology Volume 9 ; 2013 ; 9 >
 
   }
 
@@ -3141,6 +3142,7 @@
 
     param[journal_id] = oby
     comment[notReady] = fetch errors 502 and 500 see RT 4106
+    comment[2] = Starting January 2013 Nature will no longer be publishing this title.
 
     au < exists ; exists ; 2000 ; Obesity Volume 8 ; 2000 ; 8 >
     au < exists ; exists ; 2001 ; Obesity Volume 9 ; 2001 ; 9 >
@@ -3260,7 +3262,7 @@
     au < exists ; exists ; 2009 ; SciBX: Science-Business eXchange Volume 2 ; 2009 ; 2 >
     au < exists ; exists ; 2010 ; SciBX: Science-Business eXchange Volume 3 ; 2010 ; 3 >
     au < exists ; exists ; 2011 ; SciBX: Science-Business eXchange Volume 4 ; 2011 ; 4 >
-    au < expected ; exists ; 2012 ; SciBX: Science-Business eXchange Volume 5 ; 2012 ; 5 >
+    au < exists ; exists ; 2012 ; SciBX: Science-Business eXchange Volume 5 ; 2012 ; 5 >
 
   }
 
