@@ -464,9 +464,9 @@
 
     param[journal_id] = 56
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Gastroenterology Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Gastroenterology Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Gastroenterology Volume 3 ; 2010 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Gastroenterology Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Gastroenterology Volume 2 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Gastroenterology Volume 3 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Insights: Gastroenterology Volume 4 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Insights: Gastroenterology Volume 5 ; 2012 >
   }
@@ -481,8 +481,8 @@
 
     param[journal_id] = 73
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Geriatrics Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Geriatrics Volume 3 ; 2009 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Geriatrics Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Geriatrics Volume 3 ; 2009 >
     au < released ; 2011 ; Clinical Medicine Insights: Geriatrics Volume 4 ; 2011 >
 
   }
@@ -497,10 +497,10 @@
 
     param[journal_id] = 42
 
-    au < manifest ; 2007 ; Clinical Medicine Insights: Oncology Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Clinical Medicine Insights: Oncology Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Oncology Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Oncology Volume 4 ; 2010 >
+    au < testing ; 2007 ; Clinical Medicine Insights: Oncology Volume 1 ; 2007 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Oncology Volume 2 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Oncology Volume 3 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Oncology Volume 4 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Insights: Oncology Volume 5 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Insights: Oncology Volume 6 ; 2012 >
 
@@ -516,9 +516,9 @@
 
     param[journal_id] = 54
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Pathology Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Pathology Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Pathology Volume 3 ; 2010 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Pathology Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Pathology Volume 2 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Pathology Volume 3 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Insights: Pathology Volume 4 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Insights: Pathology Volume 5 ; 2012 >
 
@@ -534,9 +534,9 @@
 
     param[journal_id] = 78
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Pediatrics Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Pediatrics Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Pediatrics Volume 4 ; 2010 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Pediatrics Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Pediatrics Volume 3 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Pediatrics Volume 4 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Insights: Pediatrics Volume 5 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Insights: Pediatrics Volume 6 ; 2012 >
 
@@ -552,8 +552,8 @@
 
     param[journal_id] = 88
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Psychiatry Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Psychiatry Volume 2 ; 2009 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Psychiatry Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Psychiatry Volume 2 ; 2009 >
     au < released ; 2011 ; Clinical Medicine Insights: Psychiatry Volume 3 ; 2011 >
 
   }
@@ -568,9 +568,9 @@
 
     param[journal_id] = 114
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Reproductive Health Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Reproductive Health Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Reproductive Health Volume 4 ; 2010 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Reproductive Health Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Reproductive Health Volume 3 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Reproductive Health Volume 4 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Insights: Reproductive Health Volume 5 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Insights: Reproductive Health Volume 6 ; 2012 >
 
@@ -1476,9 +1476,9 @@
 
     param[journal_id] = 80
 
-    au < manifest ; 2008 ; Substance Abuse: Research and Treatment Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Substance Abuse: Research and Treatment Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Substance Abuse: Research and Treatment Volume 4 ; 2010 >
+    au < testing ; 2008 ; Substance Abuse: Research and Treatment Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Substance Abuse: Research and Treatment Volume 3 ; 2009 >
+    au < testing ; 2010 ; Substance Abuse: Research and Treatment Volume 4 ; 2010 >
     au < released ; 2011 ; Substance Abuse: Research and Treatment Volume 5 ; 2011 >
     au < released ; 2012 ; Substance Abuse: Research and Treatment Volume 6 ; 2012 >
     
@@ -1495,9 +1495,9 @@
 
     param[journal_id] = 139
 
-    au < manifest ; 2008 ; Tobacco Use Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Tobacco Use Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Tobacco Use Insights Volume 3 ; 2010 >
+    au < testing ; 2008 ; Tobacco Use Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Tobacco Use Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Tobacco Use Insights Volume 3 ; 2010 >
     au < released ; 2011 ; Tobacco Use Insights Volume 4 ; 2011 >
     au < released ; 2012 ; Tobacco Use Insights Volume 5 ; 2012 >
     
