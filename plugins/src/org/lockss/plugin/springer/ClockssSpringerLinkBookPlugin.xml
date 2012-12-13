@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -150,5 +150,9 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.springer.SpringerLinkHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.springer.SpringerLinkUrlNormalizer</string>
   </entry>
 </map>
