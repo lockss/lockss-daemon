@@ -39,7 +39,7 @@
     au < ready ; 2005 ; Information Resources Management Journal (IRMJ) Volume 18 ; 18 > 
     au < ready ; 2006 ; Information Resources Management Journal (IRMJ) Volume 19 ; 19 > 
     au < ready ; 2007 ; Information Resources Management Journal (IRMJ) Volume 20 ; 20 > 
-    au < testing ; 2008 ; Information Resources Management Journal (IRMJ) Volume 21 ; 21 > 
+    au < ready ; 2008 ; Information Resources Management Journal (IRMJ) Volume 21 ; 21 > 
     au < released ; 2009 ; Information Resources Management Journal (IRMJ) Volume 22 ; 22 > 
     au < released ; 2010 ; Information Resources Management Journal (IRMJ) Volume 23 ; 23 > 
     au < released ; 2011 ; Information Resources Management Journal (IRMJ) Volume 24 ; 24 > 
@@ -499,9 +499,9 @@
 	param[journal_issn] = 1557-3958
 	
     au < manifest ; 2007 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 1 ; 1 > 
-    au < testing ; 2008 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 2 ; 2 > 
-    au < testing ; 2009 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 3 ; 3 > 
-    au < testing ; 2010 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 4 ; 4 > 
+    au < ready ; 2008 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 2 ; 2 > 
+    au < ready ; 2009 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 3 ; 3 > 
+    au < ready ; 2010 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 4 ; 4 > 
     au < released ; 2011 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 5 ; 5 > 
     au < released ; 2012 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 6 ; 6 > 
 
@@ -517,7 +517,7 @@
     >
 	param[journal_issn] = 1947-3133
 	
-    au < testing ; 2010 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 1 ; 1 > 
+    au < ready ; 2010 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 3 ; 3 > 
 
@@ -575,7 +575,7 @@
     >
 	param[journal_issn] = 1947-3117
 	
-    au < testing ; 2010 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 1 ; 1 > 
+    au < ready ; 2010 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 3 ; 3 > 
 
@@ -591,7 +591,7 @@
     >
 	param[journal_issn] = 1947-9247
 	
-    au < testing ; 2010 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 1 ; 1 > 
+    au < ready ; 2010 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 3 ; 3 > 
 
@@ -652,12 +652,12 @@
     >
 	param[journal_issn] = 1548-3924
 
-    au < testing ; 2005 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 1 ; 1 > 
-    au < testing ; 2006 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 2 ; 2 > 
+    au < ready ; 2005 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 1 ; 1 > 
+    au < ready ; 2006 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 2 ; 2 > 
     au < testing ; 2007 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 3 ; 3 > 
-    au < testing ; 2008 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 4 ; 4 > 
-    au < testing ; 2009 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 5 ; 5 > 
-    au < testing ; 2010 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 6 ; 6 > 
+    au < ready ; 2008 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 4 ; 4 > 
+    au < ready ; 2009 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 5 ; 5 > 
+    au < ready ; 2010 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 6 ; 6 > 
     au < released ; 2011 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 7 ; 7 > 
     au < released ; 2012 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 8 ; 8 > 
 
@@ -673,8 +673,8 @@
     >
 	param[journal_issn] = 1941-6296
 	
-    au < testing ; 2009 ; International Journal of Decision Support System Technology (IJDSST) Volume 1 ; 1 > 
-    au < testing ; 2010 ; International Journal of Decision Support System Technology (IJDSST) Volume 2 ; 2 > 
+    au < ready ; 2009 ; International Journal of Decision Support System Technology (IJDSST) Volume 1 ; 1 > 
+    au < ready ; 2010 ; International Journal of Decision Support System Technology (IJDSST) Volume 2 ; 2 > 
     au < released ; 2011 ; International Journal of Decision Support System Technology (IJDSST) Volume 3 ; 3 > 
     au < released ; 2012 ; International Journal of Decision Support System Technology (IJDSST) Volume 4 ; 4 > 
 
@@ -690,7 +690,7 @@
     >
 	param[journal_issn] = 1947-9050
 	
-    au < testing ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 > 
+    au < ready ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 3 ; 3 > 
 
@@ -706,8 +706,8 @@
     >
 	param[journal_issn] = 1941-6210
 	
-    au < testing ; 2009 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 1 ; 1 > 
-    au < testing ; 2010 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 2 ; 2 > 
+    au < ready ; 2009 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 1 ; 1 > 
+    au < ready ; 2010 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 2 ; 2 > 
     au < released ; 2011 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 3 ; 3 > 
     au < released ; 2012 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 4 ; 4 > 
 
@@ -724,7 +724,7 @@
 	param[journal_issn] = 1947-9077
 	comment[0] = no links on manifest page
 	
-    au < testing ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 > 
+    au < ready ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 > 
     au < notReady ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 > 
 
