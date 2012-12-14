@@ -72,22 +72,22 @@
       param[base_url] = http://endo.endojournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; testing ; 1917 ; Endocrinology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; ready ; 1917 ; Endocrinology Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; ready ; 1918 ; Endocrinology Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; ready ; 1919 ; Endocrinology Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; ready ; 1920 ; Endocrinology Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; ready ; 1921 ; Endocrinology Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; testing ; 1922 ; Endocrinology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; testing ; 1923 ; Endocrinology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; ready ; 1923 ; Endocrinology Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; testing ; 1924 ; Endocrinology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; testing ; 1925 ; Endocrinology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; testing ; 1926 ; Endocrinology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; ready ; 1925 ; Endocrinology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; ready ; 1926 ; Endocrinology Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; ready ; 1927 ; Endocrinology Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; ready ; 1928 ; Endocrinology Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; ready ; 1929 ; Endocrinology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; testing ; 1930 ; Endocrinology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; testing ; 1931 ; Endocrinology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; testing ; 1932 ; Endocrinology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; ready ; 1930 ; Endocrinology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; ready ; 1931 ; Endocrinology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; ready ; 1932 ; Endocrinology Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; ready ; 1933 ; Endocrinology Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; ready ; 1934 ; Endocrinology Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; ready ; 1935 ; Endocrinology Volume 19 ; 19 >
@@ -95,7 +95,7 @@
       au < HighWirePressH20Plugin ; ready ; 1937 ; Endocrinology Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; ready ; 1938 ; Endocrinology Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; ready ; 1938 ; Endocrinology Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; testing ; 1939 ; Endocrinology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; ready ; 1939 ; Endocrinology Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; ready ; 1939 ; Endocrinology Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; testing ; 1940 ; Endocrinology Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; ready ; 1940 ; Endocrinology Volume 27 ; 27 >
