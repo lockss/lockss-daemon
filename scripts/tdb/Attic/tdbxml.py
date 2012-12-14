@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.33 2012-09-27 18:34:21 pgust Exp $
+# $Id: tdbxml.py,v 1.34 2012-12-14 21:06:17 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.6'
+__version__ = '0.4.7'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -212,6 +212,8 @@ def __process_au(au, options):
       if val is not None: austr.append(__do_attr(au, st, val))
     if au.rights() == 'openaccess':
         austr.append(__do_attr(au, 'rights', 'openaccess'))
+    if au.status() == AU.Status.ZAPPED:
+        austr.append(__do_attr(au, 'status', 'zapped'))
     austr.append('''\
   </property>
 ''')
