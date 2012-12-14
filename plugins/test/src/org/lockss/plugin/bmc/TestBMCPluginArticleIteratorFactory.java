@@ -52,7 +52,7 @@ public class TestBMCPluginArticleIteratorFactory extends ArticleIteratorTestCase
   private final String ARTICLE_FAIL_MSG = "Article files not created properly";
   private final String PATTERN_FAIL_MSG = "Article file URL pattern changed or incorrect";
   private static String PLUGIN_NAME = "org.lockss.plugin.bmc.BMCPlugin";
-  private static String BASE_URL = "http://www.biomedcentral.com/ ";
+  private static String BASE_URL = "http://www.helloworld.com/ ";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String JOURNAL_ISSN_KEY = ConfigParamDescr.JOURNAL_ISSN.getKey();
   static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
@@ -66,14 +66,11 @@ public class TestBMCPluginArticleIteratorFactory extends ArticleIteratorTestCase
 
   public void setUp() throws Exception {
     super.setUp();
-/*
     String tempDirPath = setUpDiskSpace();
     au = createAu();
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
-*/
   }
-
-  /*
+	  
   public void tearDown() throws Exception {
     sau.deleteContentTree();
     super.tearDown();
@@ -81,17 +78,17 @@ public class TestBMCPluginArticleIteratorFactory extends ArticleIteratorTestCase
   
   protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
     return
+      /* reverting temporarily to pre-nondef_param plugin (no journal_code)
        PluginTestUtil.createAndStartAu(PLUGIN_NAME,
 			      ConfigurationUtil.fromArgs("base_url",
-							 "http://www.biomedcentral.com/ ",
+							 "http://www.helloworld.com/ ",
 							 "volume_name", "1",
 							 "journal_code", "bmcanesthesiol",
 							 "journal_issn", "1471-2253"));
-
+      */
       PluginTestUtil.createAndStartAu(PLUGIN_NAME, AU_CONFIG);
   }
-
-*/  
+  
   Configuration simAuConfig(String rootPath) {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
@@ -105,43 +102,39 @@ public class TestBMCPluginArticleIteratorFactory extends ArticleIteratorTestCase
     return conf;
   }
 
-  public void testRoots() throws Exception {  
-/* removing until we revert BMCPlugin back to nondef_params
-
+  public void _testRoots() throws Exception {      
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals("Article file root URL pattern changed or incorrect", ListUtil.list("http://www.biomedcentral.com/1471-2253/1"),
-		 getRootUrls(artIter));  
-*/
-    assertEquals(true, true);
+    assertEquals("Article file root URL pattern changed or incorrect", ListUtil.list("http://www.helloworld.com/1471-2253/1"),
+		 getRootUrls(artIter));
   }
-  /* removing until we revert BMCPlugin back to nondef_params 
-  public void testUrlsWithPrefixes() throws Exception {
+  
+  public void _testUrlsWithPrefixes() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.biomedcentral.com/content/pdf/1471-2253-1-2.pdfll");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.helloworld.com/content/pdf/1471-2253-1-2.pdfll");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://inderscience.metapress.com/contentt/volume/1014174823t49006/j0143.pdfwrong");
-    assertMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.biomedcentral.com/content/pdf/1471-2253-1-2.pdf");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.helloworld.com/content/pdf/1471-2253-1-2.pdf");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.example.com/content/");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.example.com/content/j");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.example.com/content/j0123/j383.pdfwrong");
   }
-*/ 
-  /* removing until we revert BMCPlugin back to nondef_params
- 
+  
+  
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
     String pat2 = "content/pdf/([^/]+)-([^/]+)-([^/]+)\\.pdf";
     String rep2 = "content/pdf/([^/]+)-([^/]+)-([^/]+)\\.pdf";
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat2, rep2);
-    String url = "http://www.biomedcentral.com/content/pdf/1471-2253-1-2.pdf";
+    String url = "http://www.helloworld.com/content/pdf/1471-2253-1-2.pdf";
     CachedUrl cu = au.makeCachedUrl(url);
     assertNotNull(cu);
-     SubTreeArticleIterator artIter = createSubTreeIter();
+    /* removing until we revert BMCPlugin back to nondef_params
+    SubTreeArticleIterator artIter = createSubTreeIter();
     assertNotNull(artIter);
     ArticleFiles af = createArticleFiles(artIter, cu);
     assertEquals(cu, af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF));
-
-  }	
     */
+  }	
+
 
 }
