@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.16 2012-11-28 23:58:02 clairegriffin Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.17 2012-12-14 18:50:51 clairegriffin Exp $
  */
 
 /*
@@ -224,6 +224,8 @@ public class HtmlFilterInputStream extends InputStream {
       else {
         setOutToReaderInputStream(nl);
       }
+      IOUtil.safeClose(in);
+      in = null;
     } catch (ParserException e) {
       IOException ioe = new IOException(e.toString());
       ioe.initCause(e);
@@ -323,10 +325,10 @@ public class HtmlFilterInputStream extends InputStream {
   }
 
   InputStream getOut() throws IOException {
+    if (out == null) {
     if (in == null) {
       throw new IOException("Attempting to read from a closed InputStream");
     }
-    if (out == null) {
       parse();
     }
     return out;

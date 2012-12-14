@@ -33,15 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.html;
 
 import java.io.*;
-import java.util.*;
 
-import org.lockss.filter.html.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.htmlparser.*;
 import org.htmlparser.util.*;
-import org.htmlparser.filters.*;
-import org.htmlparser.lexer.InputStreamSource;
 
 public class TestHtmlFilterInputStream extends LockssTestCase {
 
@@ -69,6 +65,7 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     }
     assertEquals(-1, filt.read());
     filt.close();
+    System.gc();
     try {
       filt.read();
       fail("closed InputStream should throw");
