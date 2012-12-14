@@ -425,7 +425,7 @@
     param[base_url] = http://hpm.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
     
-    au < exists ; 2009 ; Handbook of Practice Management Volume 71 ; 71 >
+    au < manifest ; 2009 ; Handbook of Practice Management Volume 71 ; 71 >
 
   }
 
