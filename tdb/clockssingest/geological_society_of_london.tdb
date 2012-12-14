@@ -6,7 +6,7 @@
     info[tester] = 4
   >
   
-    plugin = org.lockss.plugin.ClockssHighWirePressH20Plugin
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
   {
