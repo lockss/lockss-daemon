@@ -1104,7 +1104,7 @@
     au < released ; 2009 ; China Agricultural Economic Review Volume 1 ; 1 >
     au < released ; 2010 ; China Agricultural Economic Review Volume 2 ; 2 >
     au < released ; 2011 ; China Agricultural Economic Review Volume 3 ; 3 >
-    au < testing ; 2012 ; China Agricultural Economic Review Volume 4 ; 4 >
+    au < ready ; 2012 ; China Agricultural Economic Review Volume 4 ; 4 >
 
   }
 
@@ -2380,7 +2380,7 @@
     au < released ; 2008 ; Housing, Care and Support: A journal on policy, research and practice Volume 11 ; 11 >    
     au < released ; 2009 ; Housing, Care and Support: A journal on policy, research and practice Volume 12 ; 12 >
     au < released ; 2010 ; Housing, Care and Support: A journal on policy, research and practice Volume 13 ; 13 >
-    au < testing ; 2011 ; Housing, Care and Support: A journal on policy, research and practice Volume 14 ; 14 >
+    au < ready ; 2011 ; Housing, Care and Support: A journal on policy, research and practice Volume 14 ; 14 >
     
   }
 
@@ -2404,8 +2404,8 @@
     au < released ; 2008 ; Human Resource Management International Digest Volume 16 ; 16 >
     au < released ; 2009 ; Human Resource Management International Digest Volume 17 ; 17 >
     au < released ; 2010 ; Human Resource Management International Digest Volume 18 ; 18 >
-    au < testing ; 2011 ; Human Resource Management International Digest Volume 19 ; 19 >
-    au < testing ; 2012 ; Human Resource Management International Digest Volume 20 ; 20 >
+    au < ready ; 2011 ; Human Resource Management International Digest Volume 19 ; 19 >
+    au < ready ; 2012 ; Human Resource Management International Digest Volume 20 ; 20 >
 
   }
 
@@ -2443,7 +2443,7 @@
     au < released ; 2009 ; Humanomics Volume 25 ; 25 >
     au < released ; 2010 ; Humanomics Volume 26 ; 26 >
     au < released ; 2011 ; Humanomics Volume 27 ; 27 >
-    au < testing ; 2012 ; Humanomics Volume 28 ; 28 >
+    au < ready ; 2012 ; Humanomics Volume 28 ; 28 >
 
   }
 
@@ -2518,7 +2518,7 @@
     au < released ; 2009 ; Industrial and Commercial Training Volume 41 ; 41 >
     au < released ; 2010 ; Industrial and Commercial Training Volume 42 ; 42 >
     au < released ; 2011 ; Industrial and Commercial Training Volume 43 ; 43 >
-    au < testing ; 2012 ; Industrial and Commercial Training Volume 44 ; 44 >
+    au < ready ; 2012 ; Industrial and Commercial Training Volume 44 ; 44 >
 
   }
 
@@ -2596,7 +2596,7 @@
     au < released ; 2009 ; Industrial Lubrication and Tribology Volume 61 ; 61 >
     au < released ; 2010 ; Industrial Lubrication and Tribology Volume 62 ; 62 >
     au < released ; 2011 ; Industrial Lubrication and Tribology Volume 63 ; 63 >
-    au < testing ; 2012 ; Industrial Lubrication and Tribology Volume 64 ; 64 >
+    au < ready ; 2012 ; Industrial Lubrication and Tribology Volume 64 ; 64 >
 
   }
 
@@ -2653,7 +2653,7 @@
     au < released ; 2009 ; Industrial Management & Data Systems Volume 109 ; 109 >
     au < released ; 2010 ; Industrial Management & Data Systems Volume 110 ; 110 >
     au < released ; 2011 ; Industrial Management & Data Systems Volume 111 ; 111 >
-    au < testing ; 2012 ; Industrial Management & Data Systems Volume 112 ; 112 >
+    au < ready ; 2012 ; Industrial Management & Data Systems Volume 112 ; 112 >
 
   }
 
@@ -2734,7 +2734,7 @@
     au < released ; 2009 ; info Volume 11 ; 11 >
     au < released ; 2010 ; info Volume 12 ; 12 >
     au < released ; 2011 ; info Volume 13 ; 13 >
-    au < testing ; 2012 ; info Volume 14 ; 14 >
+    au < ready ; 2012 ; info Volume 14 ; 14 >
 
   }
 
@@ -2768,7 +2768,7 @@
     au < released ; 2009 ; Information Management & Computer Security Volume 17 ; 17 >
     au < released ; 2010 ; Information Management & Computer Security Volume 18 ; 18 >
     au < released ; 2011 ; Information Management & Computer Security Volume 19 ; 19 >
-    au < testing ; 2012 ; Information Management & Computer Security Volume 20 ; 20 >
+    au < ready ; 2012 ; Information Management & Computer Security Volume 20 ; 20 >
 
   }
 
@@ -2806,7 +2806,7 @@
     au < released ; 2009 ; Information Technology & People Volume 22 ; 22 >
     au < released ; 2010 ; Information Technology & People Volume 23 ; 23 >
     au < released ; 2011 ; Information Technology & People Volume 24 ; 24 >
-    au < testing ; 2012 ; Information Technology & People Volume 25 ; 25 >
+    au < ready ; 2012 ; Information Technology & People Volume 25 ; 25 >
 
   }
 
@@ -2909,7 +2909,7 @@
     au < released ; 2009 ; Interlending & Document Supply Volume 37 ; 37 >
     au < released ; 2010 ; Interlending & Document Supply Volume 38 ; 38 >
     au < released ; 2011 ; Interlending & Document Supply Volume 39 ; 39 >
-    au < testing ; 2012 ; Interlending & Document Supply Volume 40 ; 40 >
+    au < ready ; 2012 ; Interlending & Document Supply Volume 40 ; 40 >
 
   }
 
@@ -2921,9 +2921,7 @@
 
     param[journal_issn] = 2046-8253
 
-    comment[0] = forthcoming
-    
-    au < testing ; 2012 ; International Journal for Lesson and Learning Studies Volume 1 ; 1 >
+    au < ready ; 2012 ; International Journal for Lesson and Learning Studies Volume 1 ; 1 >
     
   }
 
@@ -2956,7 +2954,7 @@
     au < released ; 2009 ; International Journal of Accounting & Information Management Volume 17 ; 17 >
     au < released ; 2010 ; International Journal of Accounting & Information Management Volume 18 ; 18 >
     au < released ; 2011 ; International Journal of Accounting & Information Management Volume 19 ; 19 >
-    au < testing ; 2012 ; International Journal of Accounting & Information Management Volume 20 ; 20 >
+    au < ready ; 2012 ; International Journal of Accounting & Information Management Volume 20 ; 20 >
 
   }
 
@@ -3015,7 +3013,7 @@
     au < released ; 2009 ; International Journal of Bank Marketing Volume 27 ; 27 >
     au < released ; 2010 ; International Journal of Bank Marketing Volume 28 ; 28 >
     au < released ; 2011 ; International Journal of Bank Marketing Volume 29 ; 29 >
-    au < testing ; 2012 ; International Journal of Bank Marketing Volume 30 ; 30 >
+    au < ready ; 2012 ; International Journal of Bank Marketing Volume 30 ; 30 >
 
   }
 
@@ -3053,7 +3051,7 @@
     au < released ; 2009 ; International Journal of Climate Change Strategies and Management Volume 1 ; 1 >
     au < released ; 2010 ; International Journal of Climate Change Strategies and Management Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Climate Change Strategies and Management Volume 3 ; 3 >
-    au < testing ; 2012 ; International Journal of Climate Change Strategies and Management Volume 4 ; 4 >    
+    au < ready ; 2012 ; International Journal of Climate Change Strategies and Management Volume 4 ; 4 >    
 
   }
 
@@ -3090,7 +3088,7 @@
     au < released ; 2009 ; International Journal of Clothing Science and Technology Volume 21 ; 21 >
     au < released ; 2010 ; International Journal of Clothing Science and Technology Volume 22 ; 22 >
     au < released ; 2011 ; International Journal of Clothing Science and Technology Volume 23 ; 23 >
-    au < testing ; 2012 ; International Journal of Clothing Science and Technology Volume 24 ; 24 >
+    au < ready ; 2012 ; International Journal of Clothing Science and Technology Volume 24 ; 24 >
 
   }
 
@@ -3125,7 +3123,7 @@
     au < released ; 2009 ; International Journal of Commerce and Management Volume 19 ; 19 >
     au < released ; 2010 ; International Journal of Commerce and Management Volume 20 ; 20 >
     au < released ; 2011 ; International Journal of Commerce and Management Volume 21 ; 21 >
-    au < testing ; 2012 ; International Journal of Commerce and Management Volume 22 ; 22 >
+    au < ready ; 2012 ; International Journal of Commerce and Management Volume 22 ; 22 >
 
   }
 
@@ -3161,7 +3159,7 @@
     au < released ; 2009 ; International Journal of Conflict Management Volume 20 ; 20 >
     au < released ; 2010 ; International Journal of Conflict Management Volume 21 ; 21 >
     au < released ; 2011 ; International Journal of Conflict Management Volume 22 ; 22 >
-    au < testing ; 2012 ; International Journal of Conflict Management Volume 23 ; 23 >
+    au < ready ; 2012 ; International Journal of Conflict Management Volume 23 ; 23 >
 
   }
 
@@ -3198,7 +3196,7 @@
     au < released ; 2009 ; International Journal of Contemporary Hospitality Management Volume 21 ; 21 >
     au < released ; 2010 ; International Journal of Contemporary Hospitality Management Volume 22 ; 22 >
     au < released ; 2011 ; International Journal of Contemporary Hospitality Management Volume 23 ; 23 >
-    au < testing ; 2012 ; International Journal of Contemporary Hospitality Management Volume 24 ; 24 >
+    au < ready ; 2012 ; International Journal of Contemporary Hospitality Management Volume 24 ; 24 >
 
   }
 
@@ -3217,7 +3215,7 @@
     au < released ; 2009 ; International Journal of Culture, Tourism and Hospitality Research Volume 3 ; 3 >
     au < released ; 2010 ; International Journal of Culture, Tourism and Hospitality Research Volume 4 ; 4 >
     au < released ; 2011 ; International Journal of Culture, Tourism and Hospitality Research Volume 5 ; 5 >
-    au < testing ; 2012 ; International Journal of Culture, Tourism and Hospitality Research Volume 6 ; 6 >
+    au < ready ; 2012 ; International Journal of Culture, Tourism and Hospitality Research Volume 6 ; 6 >
 
   }
 
@@ -3241,7 +3239,7 @@
     au < released ; 2009 ; International Journal of Development Issues Volume 8 ; 8 >
     au < released ; 2010 ; International Journal of Development Issues Volume 9 ; 9 >
     au < released ; 2011 ; International Journal of Development Issues Volume 10 ; 10 >
-    au < testing ; 2012 ; International Journal of Development Issues Volume 11 ; 11 >
+    au < ready ; 2012 ; International Journal of Development Issues Volume 11 ; 11 >
 
   }
 
@@ -3258,7 +3256,7 @@
     
     au < released ; 2010 ; International Journal of Disaster Resilience in the Built Environment Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Disaster Resilience in the Built Environment Volume 2 ; 2 >
-    au < testing ; 2012 ; International Journal of Disaster Resilience in the Built Environment Volume 3 ; 3 >
+    au < ready ; 2012 ; International Journal of Disaster Resilience in the Built Environment Volume 3 ; 3 >
 
   }
 
@@ -3297,7 +3295,7 @@
     au < released ; 2009 ; International Journal of Educational Management Volume 23 ; 23 >
     au < released ; 2010 ; International Journal of Educational Management Volume 24 ; 24 >
     au < released ; 2011 ; International Journal of Educational Management Volume 25 ; 25 >
-    au < testing ; 2012 ; International Journal of Educational Management Volume 26 ; 26 >
+    au < ready ; 2012 ; International Journal of Educational Management Volume 26 ; 26 >
 
   }
 
@@ -3329,7 +3327,7 @@
     au < released ; 2009 ; International Journal of Emerging Markets Volume 4 ; 4 >
     au < released ; 2010 ; International Journal of Emerging Markets Volume 5 ; 5 >
     au < released ; 2011 ; International Journal of Emerging Markets Volume 6 ; 6 >
-    au < testing ; 2012 ; International Journal of Emerging Markets Volume 7 ; 7 >
+    au < ready ; 2012 ; International Journal of Emerging Markets Volume 7 ; 7 >
 
   }
 
@@ -3380,7 +3378,7 @@
     au < released ; 2009 ; International Journal of Entrepreneurial Behaviour & Research Volume 15 ; 15 >
     au < released ; 2010 ; International Journal of Entrepreneurial Behaviour & Research Volume 16 ; 16 >
     au < released ; 2011 ; International Journal of Entrepreneurial Behaviour & Research Volume 17 ; 17 >
-    au < testing ; 2012 ; International Journal of Entrepreneurial Behaviour & Research Volume 18 ; 18 >
+    au < ready ; 2012 ; International Journal of Entrepreneurial Behaviour & Research Volume 18 ; 18 >
 
   }
 
@@ -3394,7 +3392,7 @@
 
     au < released ; 2010 ; International Journal of Event and Festival Management Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Event and Festival Management Volume 2 ; 2 >
-    au < testing ; 2012 ; International Journal of Event and Festival Management Volume 3 ; 3 >
+    au < ready ; 2012 ; International Journal of Event and Festival Management Volume 3 ; 3 >
 
   }
 
@@ -3411,7 +3409,7 @@
     au < released ; 2009 ; International Journal of Gender and Entrepreneurship Volume 1 ; 1 >
     au < released ; 2010 ; International Journal of Gender and Entrepreneurship Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Gender and Entrepreneurship Volume 3 ; 3 >
-    au < testing ; 2012 ; International Journal of Gender and Entrepreneurship Volume 4 ; 4 >
+    au < ready ; 2012 ; International Journal of Gender and Entrepreneurship Volume 4 ; 4 >
 
   }
 
@@ -3449,7 +3447,7 @@
     au < released ; 2009 ; International Journal of Health Care Quality Assurance Volume 22 ; 22 >
     au < released ; 2010 ; International Journal of Health Care Quality Assurance Volume 23 ; 23 >
     au < released ; 2011 ; International Journal of Health Care Quality Assurance Volume 24 ; 24 >
-    au < testing ; 2012 ; International Journal of Health Care Quality Assurance Volume 25 ; 25 >
+    au < ready ; 2012 ; International Journal of Health Care Quality Assurance Volume 25 ; 25 >
 
   }
 
@@ -3467,7 +3465,7 @@
     au < released ; 2009 ; International Journal of Housing Markets and Analysis Volume 2 ; 2 >
     au < released ; 2010 ; International Journal of Housing Markets and Analysis Volume 3 ; 3 >
     au < released ; 2011 ; International Journal of Housing Markets and Analysis Volume 4 ; 4 >
-    au < testing ; 2012 ; International Journal of Housing Markets and Analysis Volume 5 ; 5 >
+    au < ready ; 2012 ; International Journal of Housing Markets and Analysis Volume 5 ; 5 >
 
   }
 
@@ -3484,7 +3482,7 @@
     au < released ; 2009 ; International Journal of Intelligent Computing and Cybernetics Volume 2 ; 2 >
     au < released ; 2010 ; International Journal of Intelligent Computing and Cybernetics Volume 3 ; 3 >
     au < released ; 2011 ; International Journal of Intelligent Computing and Cybernetics Volume 4 ; 4 >
-    au < testing ; 2012 ; International Journal of Intelligent Computing and Cybernetics Volume 5 ; 5 >
+    au < ready ; 2012 ; International Journal of Intelligent Computing and Cybernetics Volume 5 ; 5 >
     
   }
     
@@ -3502,7 +3500,7 @@
     au < released ; 2009 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 2 ; 2 >
     au < released ; 2010 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 3 ; 3 >
     au < released ; 2011 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 4 ; 4 >
-    au < testing ; 2012 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 5 ; 5 >
+    au < ready ; 2012 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 5 ; 5 >
 
   }
 
@@ -3521,7 +3519,7 @@
     au < released ; 2009 ; International Journal of Law and Management Volume 51 ; 51 >
     au < released ; 2010 ; International Journal of Law and Management Volume 52 ; 52 >
     au < released ; 2011 ; International Journal of Law and Management Volume 53 ; 53 >
-    au < testing ; 2012 ; International Journal of Law and Management Volume 54 ; 54 >
+    au < ready ; 2012 ; International Journal of Law and Management Volume 54 ; 54 >
 
   }
 
@@ -3538,7 +3536,7 @@
     au < released ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 >
     au < released ; 2010 ; International Journal of Law in the Built Environment Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Law in the Built Environment Volume 3 ; 3 >
-    au < testing ; 2012 ; International Journal of Law in the Built Environment Volume 4 ; 4 >
+    au < ready ; 2012 ; International Journal of Law in the Built Environment Volume 4 ; 4 >
 
   }
 
@@ -3574,7 +3572,7 @@
 
     au < released ; 2010 ; International Journal of Lean Six Sigma Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Lean Six Sigma Volume 2 ; 2 >
-    au < testing ; 2012 ; International Journal of Lean Six Sigma Volume 3 ; 3 >
+    au < ready ; 2012 ; International Journal of Lean Six Sigma Volume 3 ; 3 >
 
   }
 
@@ -3610,7 +3608,7 @@
     au < released ; 2009 ; The International Journal of Logistics Management Volume 20 ; 20 >
     au < released ; 2010 ; The International Journal of Logistics Management Volume 21 ; 21 >
     au < released ; 2011 ; The International Journal of Logistics Management Volume 22 ; 22 >
-    au < testing ; 2012 ; The International Journal of Logistics Management Volume 23 ; 23 >
+    au < ready ; 2012 ; The International Journal of Logistics Management Volume 23 ; 23 >
 
   }
 
@@ -3649,7 +3647,7 @@
     au < released ; 2009 ; International Journal of Managing Projects in Business Volume 2 ; 2 >
     au < released ; 2010 ; International Journal of Managing Projects in Business Volume 3 ; 3 >
     au < released ; 2011 ; International Journal of Managing Projects in Business Volume 4 ; 4 >
-    au < testing ; 2012 ; International Journal of Managing Projects in Business Volume 5 ; 5 >
+    au < ready ; 2012 ; International Journal of Managing Projects in Business Volume 5 ; 5 >
 
   }
 
@@ -3695,7 +3693,7 @@
     au < released ; 2009 ; International Journal of Manpower Volume 30 ; 30 >
     au < released ; 2010 ; International Journal of Manpower Volume 31 ; 31 >
     au < released ; 2011 ; International Journal of Manpower Volume 32 ; 32 >
-    au < testing ; 2012 ; International Journal of Manpower Volume 33 ; 33 >
+    au < ready ; 2012 ; International Journal of Manpower Volume 33 ; 33 >
 
   }
 
@@ -3707,9 +3705,7 @@
 
     param[journal_issn] = 2046-6854
 
-    comment[0] = forthcoming
-    
-    au < testing ; 2012 ; International Journal of Mentoring and Coaching in Education Volume 1 ; 1 >
+    au < ready ; 2012 ; International Journal of Mentoring and Coaching in Education Volume 1 ; 1 >
     
 
   }
@@ -3731,7 +3727,7 @@
     au < released ; 2008 ; International Journal of Migration, Health and Social Care Volume 4 ; 4 >
     au < released ; 2009 ; International Journal of Migration, Health and Social Care Volume 5 ; 5 >
     au < released ; 2010 ; International Journal of Migration, Health and Social Care Volume 6 ; 6 >
-    au < testing ; 2011 ; International Journal of Migration, Health and Social Care Volume 7 ; 7 >
+    au < ready ; 2011 ; International Journal of Migration, Health and Social Care Volume 7 ; 7 >
 
   }
   
@@ -3813,7 +3809,7 @@
     au < released ; 2009 ; International Journal of Operations & Production Management Volume 29 ; 29 >
     au < released ; 2010 ; International Journal of Operations & Production Management Volume 30 ; 30 >
     au < released ; 2011 ; International Journal of Operations & Production Management Volume 31 ; 31 >
-    au < testing ; 2012 ; International Journal of Operations & Production Management Volume 32 ; 32 >
+    au < ready ; 2012 ; International Journal of Operations & Production Management Volume 32 ; 32 >
 
   }
 
@@ -3846,7 +3842,7 @@
     au < released ; 2009 ; International Journal of Organizational Analysis Volume 17 ; 17 >
     au < released ; 2010 ; International Journal of Organizational Analysis Volume 18 ; 18 >
     au < released ; 2011 ; International Journal of Organizational Analysis Volume 19 ; 19 >
-    au < testing ; 2012 ; International Journal of Organizational Analysis Volume 20 ; 20 >
+    au < ready ; 2012 ; International Journal of Organizational Analysis Volume 20 ; 20 >
 
   }
 
@@ -3867,7 +3863,7 @@
     au < released ; 2009 ; International Journal of Pervasive Computing and Communications Volume 5 ; 5 >
     au < released ; 2010 ; International Journal of Pervasive Computing and Communications Volume 6 ; 6 >
     au < released ; 2011 ; International Journal of Pervasive Computing and Communications Volume 7 ; 7 >
-    au < manifest ; 2012 ; International Journal of Pervasive Computing and Communications Volume 8 ; 8 >
+    au < testing ; 2012 ; International Journal of Pervasive Computing and Communications Volume 8 ; 8 >
 
   }
 
@@ -3886,7 +3882,7 @@
     au < released ; 2009 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 3 ; 3 >
     au < released ; 2010 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 4 ; 4 >
     au < released ; 2011 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 5 ; 5 >
-    au < manifest ; 2012 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 6 ; 6 >
+    au < testing ; 2012 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 6 ; 6 >
 
   }
 
@@ -3940,7 +3936,7 @@
     au < released ; 2009 ; International Journal of Physical Distribution & Logistics Management Volume 39 ; 39 >
     au < released ; 2010 ; International Journal of Physical Distribution & Logistics Management Volume 40 ; 40 >
     au < released ; 2011 ; International Journal of Physical Distribution & Logistics Management Volume 41 ; 41 >
-    au < manifest ; 2012 ; International Journal of Physical Distribution & Logistics Management Volume 42 ; 42 >
+    au < testing ; 2012 ; International Journal of Physical Distribution & Logistics Management Volume 42 ; 42 >
 
   }
   
@@ -3977,7 +3973,7 @@
     au < released ; 2009 ; International Journal of Productivity and Performance Management Volume 58 ; 58 >
     au < released ; 2010 ; International Journal of Productivity and Performance Management Volume 59 ; 59 >
     au < released ; 2011 ; International Journal of Productivity and Performance Management Volume 60 ; 60 >
-    au < manifest ; 2012 ; International Journal of Productivity and Performance Management Volume 61 ; 61 >
+    au < testing ; 2012 ; International Journal of Productivity and Performance Management Volume 61 ; 61 >
 
   }
 
@@ -4015,7 +4011,7 @@
     au < released ; 2009 ; International Journal of Public Sector Management Volume 22 ; 22 >
     au < released ; 2010 ; International Journal of Public Sector Management Volume 23 ; 23 >
     au < released ; 2011 ; International Journal of Public Sector Management Volume 24 ; 24 >
-    au < manifest ; 2012 ; International Journal of Public Sector Management Volume 25 ; 25 >
+    au < testing ; 2012 ; International Journal of Public Sector Management Volume 25 ; 25 >
 
   }
 
@@ -4057,7 +4053,7 @@
     au < released ; 2009 ; International Journal of Quality & Reliability Management Volume 26 ; 26 >
     au < released ; 2010 ; International Journal of Quality & Reliability Management Volume 27 ; 27 >
     au < released ; 2011 ; International Journal of Quality & Reliability Management Volume 28 ; 28 >
-    au < manifest ; 2012 ; International Journal of Quality & Reliability Management Volume 29 ; 29 >
+    au < testing ; 2012 ; International Journal of Quality & Reliability Management Volume 29 ; 29 >
 
   }
 
@@ -4074,7 +4070,7 @@
     au < released ; 2009 ; International Journal of Quality and Service Sciences Volume 1 ; 1 >
     au < released ; 2010 ; International Journal of Quality and Service Sciences Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Quality and Service Sciences Volume 3 ; 3 >
-    au < manifest ; 2012 ; International Journal of Quality and Service Sciences Volume 4 ; 4 >
+    au < testing ; 2012 ; International Journal of Quality and Service Sciences Volume 4 ; 4 >
 
   }
 
@@ -4144,7 +4140,7 @@
     au < released ; 2009 ; International Journal of Retail & Distribution Management Volume 37 ; 37 >
     au < released ; 2010 ; International Journal of Retail & Distribution Management Volume 38 ; 38 >
     au < released ; 2011 ; International Journal of Retail & Distribution Management Volume 39 ; 39 >
-    au < manifest ; 2012 ; International Journal of Retail & Distribution Management Volume 40 ; 40 >
+    au < testing ; 2012 ; International Journal of Retail & Distribution Management Volume 40 ; 40 >
     
   }
 
@@ -4228,7 +4224,7 @@
     au < released ; 2009 ; International Journal of Social Economics Volume 36 ; 36 >
     au < released ; 2010 ; International Journal of Social Economics Volume 37 ; 37 >
     au < released ; 2011 ; International Journal of Social Economics Volume 38 ; 38 >
-    au < manifest ; 2012 ; International Journal of Social Economics Volume 39 ; 39 >
+    au < testing ; 2012 ; International Journal of Social Economics Volume 39 ; 39 >
 
   }
 
@@ -4273,7 +4269,7 @@
     au < released ; 2009 ; International Journal of Sociology and Social Policy Volume 29 ; 29 >
     au < released ; 2010 ; International Journal of Sociology and Social Policy Volume 30 ; 30 >
     au < released ; 2011 ; International Journal of Sociology and Social Policy Volume 31 ; 31 >
-    au < manifest ; 2012; International Journal of Sociology and Social Policy Volume 32 ; 32 >
+    au < testing ; 2012; International Journal of Sociology and Social Policy Volume 32 ; 32 >
 
   }
 
@@ -4289,7 +4285,7 @@
    
     au < released ; 2010 ; International Journal of Structural Integrity Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Structural Integrity Volume 2 ; 2 >
-    au < manifest ; 2012 ; International Journal of Structural Integrity Volume 3 ; 3 >
+    au < testing ; 2012 ; International Journal of Structural Integrity Volume 3 ; 3 >
 
   }
 
@@ -4315,7 +4311,7 @@
     au < released ; 2009 ; International Journal of Sustainability in Higher Education Volume 10 ; 10 >
     au < released ; 2010 ; International Journal of Sustainability in Higher Education Volume 11 ; 11 >
     au < released ; 2011 ; International Journal of Sustainability in Higher Education Volume 12 ; 12 >
-    au < manifest ; 2012 ; International Journal of Sustainability in Higher Education Volume 13 ; 13 >
+    au < testing ; 2012 ; International Journal of Sustainability in Higher Education Volume 13 ; 13 >
 
   }
     
@@ -4336,7 +4332,7 @@
     au < released ; 2009 ; International Journal of Web Information Systems Volume 5 ; 5 >
     au < released ; 2010 ; International Journal of Web Information Systems Volume 6 ; 6 >
     au < released ; 2011 ; International Journal of Web Information Systems Volume 7 ; 7 >
-    au < manifest ; 2012 ; International Journal of Web Information Systems Volume 8 ; 8 >
+    au < testing ; 2012 ; International Journal of Web Information Systems Volume 8 ; 8 >
 
   }
 
@@ -4356,7 +4352,7 @@
     au < released ; 2009 ; International Journal of Wine Business Research Volume 21 ; 21 >
     au < released ; 2010 ; International Journal of Wine Business Research Volume 22 ; 22 >
     au < released ; 2011 ; International Journal of Wine Business Research Volume 23 ; 23 >
-    au < manifest ; 2012 ; International Journal of Wine Business Research Volume 24 ; 24 >
+    au < testing ; 2012 ; International Journal of Wine Business Research Volume 24 ; 24 >
 
   }
 
@@ -4406,7 +4402,7 @@
     au < released ; 2009 ; International Journal of Workplace Health Management Volume 2 ; 2 >
     au < released ; 2010 ; International Journal of Workplace Health Management Volume 3 ; 3 >
     au < released ; 2011 ; International Journal of Workplace Health Management Volume 4 ; 4 >
-    au < manifest ; 2012 ; International Journal of Workplace Health Management Volume 5 ; 5 >
+    au < testing ; 2012 ; International Journal of Workplace Health Management Volume 5 ; 5 >
 
   }
 
@@ -4462,7 +4458,7 @@
     au < released ; 2009 ; International Marketing Review Volume 26 ; 26 >
     au < released ; 2010 ; International Marketing Review Volume 27 ; 27 >
     au < released ; 2011 ; International Marketing Review Volume 28 ; 28 >
-    au < manifest ; 2012 ; International Marketing Review Volume 29 ; 29 >
+    au < testing ; 2012 ; International Marketing Review Volume 29 ; 29 >
 
   }
 
@@ -4496,7 +4492,7 @@
     au < released ; 2009 ; Internet Research Volume 19 ; 19 >
     au < released ; 2010 ; Internet Research Volume 20 ; 20 >
     au < released ; 2011 ; Internet Research Volume 21 ; 21 >
-    au < manifest ; 2012 ; Internet Research Volume 22 ; 22 >
+    au < testing ; 2012 ; Internet Research Volume 22 ; 22 >
 
   }
 
@@ -4516,7 +4512,7 @@
     au < released ; 2009 ; Journal of Accounting & Organizational Change Volume 5 ; 5 >
     au < released ; 2010 ; Journal of Accounting & Organizational Change Volume 6 ; 6 >
     au < released ; 2011 ; Journal of Accounting & Organizational Change Volume 7 ; 7 >
-    au < manifest ; 2012 ; Journal of Accounting & Organizational Change Volume 8 ; 8 >
+    au < testing ; 2012 ; Journal of Accounting & Organizational Change Volume 8 ; 8 >
   }
 
   {
@@ -4529,7 +4525,7 @@
     param[journal_issn] = 2042-1168
     
     au < released ; 2011 ; Journal of Accounting in Emerging Economies Volume 1 ; 1 >
-    au < manifest ; 2012 ; Journal of Accounting in Emerging Economies Volume 2 ; 2 >
+    au < testing ; 2012 ; Journal of Accounting in Emerging Economies Volume 2 ; 2 >
 
   }
 
@@ -4556,7 +4552,7 @@
     au < released ; 2009 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 11 ; 11 >    
     au < released ; 2010 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 12 ; 12 > 
     au < released ; 2011 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 13 ; 13 >
-    au < manifest ; 2012 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 14 ; 14 >  
+    au < testing ; 2012 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 14 ; 14 >  
 
   }
 
