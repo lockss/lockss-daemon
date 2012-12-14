@@ -28,14 +28,14 @@
       au < exists ; exists ; 2009 ; Acta Politica Volume 44 ; 2009 ; 44 >
       au < exists ; exists ; 2010 ; Acta Politica Volume 45 ; 2010 ; 45 >
       au < exists ; exists ; 2011 ; Acta Politica Volume 46 ; 2011 ; 46 >
-      au < exists ; exists ; 2012 ; Acta Politica Volume 47 ; 2012 ; 47 >
+      au < manifest ; exists ; 2012 ; Acta Politica Volume 47 ; 2012 ; 47 >
    
     }
 
     {
 
       title <
-        name = Asian Business Management;
+        name = Asian Business & Management;
         issn = 1472-4782;
         eissn = 1476-9328;
         issnl = 1472-4782
@@ -43,17 +43,17 @@
 
       param[journal_id] = abm
 
-      au < exists ; exists ; 2002 ; Asian Business Management Volume 1 ; 2002 ; 1 >
-      au < exists ; exists ; 2003 ; Asian Business Management Volume 2 ; 2003 ; 2 >
-      au < exists ; exists ; 2004 ; Asian Business Management Volume 3 ; 2004 ; 3 >
-      au < exists ; exists ; 2005 ; Asian Business Management Volume 4 ; 2005 ; 4 >
-      au < exists ; exists ; 2006 ; Asian Business Management Volume 5 ; 2006 ; 5 >
-      au < exists ; exists ; 2007 ; Asian Business Management Volume 6 ; 2007 ; 6 >
-      au < exists ; exists ; 2008 ; Asian Business Management Volume 7 ; 2008 ; 7 >
-      au < exists ; exists ; 2009 ; Asian Business Management Volume 8 ; 2009 ; 8 >
-      au < exists ; exists ; 2010 ; Asian Business Management Volume 9 ; 2010 ; 9 >
-      au < exists ; exists ; 2011 ; Asian Business Management Volume 10 ; 2011 ; 10 >
-      au < exists ; exists ; 2012 ; Asian Business Management Volume 11 ; 2012 ; 11 >
+      au < exists ; exists ; 2002 ; Asian Business & Management Volume 1 ; 2002 ; 1 >
+      au < exists ; exists ; 2003 ; Asian Business & Management Volume 2 ; 2003 ; 2 >
+      au < exists ; exists ; 2004 ; Asian Business & Management Volume 3 ; 2004 ; 3 >
+      au < exists ; exists ; 2005 ; Asian Business & Management Volume 4 ; 2005 ; 4 >
+      au < exists ; exists ; 2006 ; Asian Business & Management Volume 5 ; 2006 ; 5 >
+      au < exists ; exists ; 2007 ; Asian Business & Management Volume 6 ; 2007 ; 6 >
+      au < exists ; exists ; 2008 ; Asian Business & Management Volume 7 ; 2008 ; 7 >
+      au < exists ; exists ; 2009 ; Asian Business & Management Volume 8 ; 2009 ; 8 >
+      au < exists ; exists ; 2010 ; Asian Business & Management Volume 9 ; 2010 ; 9 >
+      au < exists ; exists ; 2011 ; Asian Business & Management Volume 10 ; 2011 ; 10 >
+      au < manifest ; exists ; 2012 ; Asian Business & Management Volume 11 ; 2012 ; 11 >
 
     }
 
@@ -72,9 +72,9 @@
       au < exists ; exists ; 2007 ; British Politics Volume 2 ; 2007 ; 2 >
       au < exists ; exists ; 2008 ; British Politics Volume 3 ; 2008 ; 3 >
       au < exists ; exists ; 2009 ; British Politics Volume 4 ; 2009 ; 4 >
-      au < exists ; exists ; 2010 ; British Politics Volume 5 ; 2010 ; 5 >
+      au < manifest ; exists ; 2010 ; British Politics Volume 5 ; 2010 ; 5 >
       au < exists ; exists ; 2011 ; British Politics Volume 6 ; 2011 ; 6 >
-      au < exists ; exists ; 2012 ; British Politics Volume 7 ; 2012 ; 7 >
+      au < manifest ; exists ; 2012 ; British Politics Volume 7 ; 2012 ; 7 >
 
     }
 

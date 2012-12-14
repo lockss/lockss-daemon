@@ -1138,16 +1138,14 @@
   {
 
     title <
-      name = Journal of Genomics and Exomics ;
-      issn = 
+      name = Journal of Genomes and Exomes ;
+      issn = 2253-5004
       
     >
 
     param[journal_id] = 173
     
-    au < manifest ; exists ; 2010 ; Journal of Genomics and Exomics Volume 1 ; 2010 >
-    au < testing ; exists ; 2011 ; Journal of Genomics and Exomics Volume 2 ; 2011 >
-    au < released ; crawling ; 2012 ; Journal of Genomics and Exomics Volume 3 ; 2012 >
+    au < released ; crawling ; 2012 ; Journal of Genomics and Exomics Volume 1 ; 2012 >
 
   }
   
