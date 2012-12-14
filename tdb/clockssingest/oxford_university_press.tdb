@@ -7996,13 +7996,13 @@
       name = International Immunology Meeting Abstracts 
     >
     
-    param[base_url] = http://.oxfordjournals.org/
+    param[base_url] = http://intimmabs.oxfordjournals.org/
 
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
+      au < exists ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
       au < expected ; exists ; 2011 ; International Immunology Meeting Abstracts Volume 23 ; 23 ; >
 
     }
