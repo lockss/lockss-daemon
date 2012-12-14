@@ -8962,7 +8962,6 @@
       au < released ; crawling ; 2009 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 17 ; 17 ; >
       au < released ; crawling ; 2011 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 18 ; 18 ; >
-      au < released ; manifest ; 2012 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 19 ; 19 ; >
 
     }
 
@@ -8985,7 +8984,7 @@
         comment[0] = Previous issues are at the same url.
         
         au < doesNotExist ; doesNotExist ; 0 ; European Journal of Preventive Cardiology Volume 18 ; 18 ; >
-        au < testing ; exists ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 ; >
+        au < released ; manifest ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 ; >
         au < expected ; exists ; 2013 ; European Journal of Preventive Cardiology Volume 20 ; 20 ; >
 
       }
