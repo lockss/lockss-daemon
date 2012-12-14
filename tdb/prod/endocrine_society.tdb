@@ -79,7 +79,7 @@
       au < HighWirePressH20Plugin ; ready ; 1921 ; Endocrinology Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; testing ; 1922 ; Endocrinology Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; ready ; 1923 ; Endocrinology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; testing ; 1924 ; Endocrinology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; ready ; 1924 ; Endocrinology Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; ready ; 1925 ; Endocrinology Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; ready ; 1926 ; Endocrinology Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; ready ; 1927 ; Endocrinology Volume 11 ; 11 >
@@ -246,15 +246,15 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; testing ; 1941 ; Journal of Clinical Endocrinology & Metabolism Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 1942 ; Journal of Clinical Endocrinology & Metabolism Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 1942 ; Journal of Clinical Endocrinology & Metabolism Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; testing ; 1943 ; Journal of Clinical Endocrinology & Metabolism Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; testing ; 1944 ; Journal of Clinical Endocrinology & Metabolism Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; ready ; 1944 ; Journal of Clinical Endocrinology & Metabolism Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; testing ; 1945 ; Journal of Clinical Endocrinology & Metabolism Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; testing ; 1946 ; Journal of Clinical Endocrinology & Metabolism Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; testing ; 1947 ; Journal of Clinical Endocrinology & Metabolism Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; testing ; 1948 ; Journal of Clinical Endocrinology & Metabolism Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; testing ; 1949 ; Journal of Clinical Endocrinology & Metabolism Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; testing ; 1950 ; Journal of Clinical Endocrinology & Metabolism Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; ready ; 1950 ; Journal of Clinical Endocrinology & Metabolism Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; testing ; 1951 ; Journal of Clinical Endocrinology & Metabolism Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; testing ; 1952 ; Journal of Clinical Endocrinology & Metabolism Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; testing ; 1953 ; Journal of Clinical Endocrinology & Metabolism Volume 13 ; 13 >
