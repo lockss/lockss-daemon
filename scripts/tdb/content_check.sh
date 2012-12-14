@@ -29,7 +29,7 @@ diff $tpath/ab.txt $tpath/ac.txt | grep "^> "
 cd ../../scripts/tdb
 #
 # Find duplicates in the gln title database
-cat ../../tdb/prod/*.tdb | ./tdbout -Aa | sort > $tpath/allAUs
+cat ../../tdb/prod/*.tdb | ./tdbout -AXEa | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
@@ -41,7 +41,7 @@ diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 echo " "
 #
 # Find duplicates in the clockss title database
-cat ../../tdb/clockssingest/*.tdb | ./tdbout -Aa | sort > $tpath/allAUs
+cat ../../tdb/clockssingest/*.tdb | ./tdbout -AXEa | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
