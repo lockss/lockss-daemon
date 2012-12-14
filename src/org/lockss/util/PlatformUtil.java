@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.22 2012-09-05 23:31:36 clairegriffin Exp $
+ * $Id: PlatformUtil.java,v 1.23 2012-12-14 18:54:04 clairegriffin Exp $
  */
 
 /*
@@ -231,7 +231,6 @@ public class PlatformUtil {
       log.warning("DU(" + path + ")", e);
       return -1;
     }
-
   }
 
   public DF getJavaDF(String path)
@@ -252,18 +251,14 @@ public class PlatformUtil {
     df.path = path;
     df.size = f.getTotalSpace() / 1024;
     df.avail = f.getUsableSpace() / 1024;
-
     df.used = df.size - (f.getFreeSpace() /1024);
-    df.percent = Math.ceil(df.used * 100.00 / df.size);
-
+    df.percent = Math.ceil(df.used * 100.00 / df.avail);
     df.percentString =  String.valueOf(Math.round(df.percent)) + "%";
     df.percent /= 100.00;
-
     df.fs = null;
     df.mnt = longestRootFile(f);
     if (log.isDebug2()) log.debug2(df.toString());
     return df;
-
   }
 
   public static String longestRootFile(File file)
@@ -289,7 +284,6 @@ public class PlatformUtil {
   public DF getDF(String path) throws UnsupportedException {
     return getDF(path, "-k -P");
   }
-
 
   public DF getDF(String path, String dfArgs) throws UnsupportedException {
     String cmd = "df " + dfArgs + " " + path;
@@ -326,7 +320,6 @@ public class PlatformUtil {
       log.warning("DF(" + path + ")", e);
       return null;
     }
-
   }
 
   DF makeDFFromLine(String path, String line) {
