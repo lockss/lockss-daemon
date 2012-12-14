@@ -4593,7 +4593,7 @@
     au < released ; 2008 ; Journal of Aggression, Conflict and Peace Research Volume 1 ; 1 >
     au < released ; 2009 ; Journal of Aggression, Conflict and Peace Research Volume 2 ; 2 >
     au < released ; 2010 ; Journal of Aggression, Conflict and Peace Research Volume 3 ; 3 >
-    au < manifest ; 2012 ; Journal of Aggression, Conflict and Peace Research Volume 4 ; 4 >
+    au < testing ; 2012 ; Journal of Aggression, Conflict and Peace Research Volume 4 ; 4 >
         
   }
   
@@ -4606,10 +4606,8 @@
 
     param[journal_issn] = 2044-0839
 
-    comment[0] = forthcoming
-    
-    au < manifest ; 2011 ; Journal of Agribusiness in Developing and Emerging Economies Volume 1 ; 1 >
-    au < manifest ; 2012 ; Journal of Agribusiness in Developing and Emerging Economies Volume 2 ; 2 >
+    au < testing ; 2011 ; Journal of Agribusiness in Developing and Emerging Economies Volume 1 ; 1 >
+    au < testing ; 2012 ; Journal of Agribusiness in Developing and Emerging Economies Volume 2 ; 2 >
          
   }
 
@@ -4633,7 +4631,7 @@
     au < released ; 2009 ; Journal of Applied Accounting Research Volume 10 ; 10 >
     au < released ; 2010 ; Journal of Applied Accounting Research Volume 11 ; 11 >
     au < released ; 2011 ; Journal of Applied Accounting Research Volume 12 ; 12 >
-    au < manifest ; 2012 ; Journal of Applied Accounting Research Volume 13 ; 13 >
+    au < testing ; 2012 ; Journal of Applied Accounting Research Volume 13 ; 13 >
 
   }
 
@@ -4668,7 +4666,7 @@
     au < released ; 2009 ; Journal of Asia Business Studies Volume 3 ; 3 >
     au < released ; 2010 ; Journal of Asia Business Studies Volume 4 ; 4 >
     au < released ; 2011 ; Journal of Asia Business Studies Volume 5 ; 5 >
-    au < manifest ; 2012 ; Journal of Asia Business Studies Volume 6 ; 6 >
+    au < testing ; 2012 ; Journal of Asia Business Studies Volume 6 ; 6 >
 
   }
 
@@ -4687,7 +4685,7 @@
     au < released ; 2009 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 3 ; 3 >
     au < released ; 2010 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 4 ; 4 >    
     au < released ; 2011 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 5 ; 5 >
-    au < manifest ; 2012 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 6 ; 6 >
+    au < testing ; 2012 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 6 ; 6 >
 
   }   
 
@@ -4726,7 +4724,7 @@
     au < released ; 2009 ; Journal of Business & Industrial Marketing Volume 24 ; 24 >
     au < released ; 2010 ; Journal of Business & Industrial Marketing Volume 25 ; 25 >
     au < released ; 2011 ; Journal of Business & Industrial Marketing Volume 26 ; 26 >
-    au < manifest ; 2012 ; Journal of Business & Industrial Marketing Volume 27 ; 27 >
+    au < testing ; 2012 ; Journal of Business & Industrial Marketing Volume 27 ; 27 >
 
   }
 
@@ -4771,7 +4769,7 @@
     au < released ; 2009 ; Journal of Business Strategy Volume 30 ; 30 >
     au < released ; 2010 ; Journal of Business Strategy Volume 31 ; 31 >
     au < released ; 2011 ; Journal of Business Strategy Volume 32 ; 32 >
-    au < manifest ; 2012 ; Journal of Business Strategy Volume 33 ; 33 >
+    au < testing ; 2012 ; Journal of Business Strategy Volume 33 ; 33 >
 
   }
 
@@ -4791,7 +4789,7 @@
     au < released ; 2009 ; Journal of Children’s Services: Research informing policy and practice Volume 4 ; 4 >
     au < released ; 2010 ; Journal of Children’s Services: Research informing policy and practice Volume 5 ; 5 >
     au < released ; 2011 ; Journal of Children’s Services: Research informing policy and practice Volume 6 ; 6 >
-    au < manifest ; 2012 ; Journal of Children’s Services: Research informing policy and practice Volume 7 ; 7 >
+    au < testing ; 2012 ; Journal of Children’s Services: Research informing policy and practice Volume 7 ; 7 >
 
   }
 
@@ -4809,7 +4807,7 @@
     au < released ; 2009 ; Journal of Chinese Economics and Foreign Trade Studies Volume 2 ; 2 >
     au < released ; 2010 ; Journal of Chinese Economics and Foreign Trade Studies Volume 3 ; 3 >
     au < released ; 2011 ; Journal of Chinese Economics and Foreign Trade Studies Volume 4 ; 4 >
-    au < manifest ; 2012 ; Journal of Chinese Economics and Foreign Trade Studies Volume 5 ; 5 >
+    au < testing ; 2012 ; Journal of Chinese Economics and Foreign Trade Studies Volume 5 ; 5 >
 
   }
 
@@ -4826,7 +4824,7 @@
     au < released ; 2009 ; Journal of Chinese Entrepreneurship Volume 1 ; 1 >
     au < released ; 2010 ; Journal of Chinese Entrepreneurship Volume 2 ; 2 >
     au < released ; 2011 ; Journal of Chinese Entrepreneurship Volume 3 ; 3 >
-    au < manifest ; 2012 ; Journal of Chinese Entrepreneurship Volume 4 ; 4 >
+    au < testing ; 2012 ; Journal of Chinese Entrepreneurship Volume 4 ; 4 >
 
   }
 
@@ -4839,11 +4837,10 @@
     >
 
     param[journal_issn] = 2040-8005
-    comment[2] = fetch error on 8084
-    
+
     au < released ; 2010 ; Journal of Chinese Human Resource Management Volume 1 ; 1 >
     au < released ; 2011 ; Journal of Chinese Human Resource Management Volume 2 ; 2 >
-    au < manifest ; 2012 ; Journal of Chinese Human Resource Management Volume 3 ; 3 >
+    au < testing ; 2012 ; Journal of Chinese Human Resource Management Volume 3 ; 3 >
 
   }
 
@@ -4872,7 +4869,7 @@
     au < released ; 2009 ; Journal of Communication Management Volume 13 ; 13 >
     au < released ; 2010 ; Journal of Communication Management Volume 14 ; 14 >
     au < released ; 2011 ; Journal of Communication Management Volume 15 ; 15 >
-    au < manifest ; 2012 ; Journal of Communication Management Volume 16 ; 16 >
+    au < testing ; 2012 ; Journal of Communication Management Volume 16 ; 16 >
 
   }
 
@@ -4913,7 +4910,7 @@
     au < released ; 2009 ; Journal of Consumer Marketing Volume 26 ; 26 >
     au < released ; 2010 ; Journal of Consumer Marketing Volume 27 ; 27 >
     au < released ; 2011 ; Journal of Consumer Marketing Volume 28 ; 28 >
-    au < manifest ; 2012 ; Journal of Consumer Marketing Volume 29 ; 29 >
+    au < testing ; 2012 ; Journal of Consumer Marketing Volume 29 ; 29 >
 
   }
 
@@ -4953,7 +4950,7 @@
     param[journal_issn] = 2009-3829
     
     au < released ; 2011 ; Journal of Criminal Psychology Volume 1 ; 1 >
-    au < manifest ; 2012 ; Journal of Criminal Psychology Volume 2 ; 2 >
+    au < testing ; 2012 ; Journal of Criminal Psychology Volume 2 ; 2 >
 
   }
 
@@ -4967,7 +4964,7 @@
     param[journal_issn] = 2044-1266
     
     au < released ; 2011 ; Journal of Cultural Heritage Management and Sustainable Development Volume 1 ; 1 >
-    au < manifest ; 2012 ; Journal of Cultural Heritage Management and Sustainable Development Volume 2 ; 2 >
+    au < testing ; 2012 ; Journal of Cultural Heritage Management and Sustainable Development Volume 2 ; 2 >
 
   }
 
@@ -5048,7 +5045,7 @@
     au < released ; 2009 ; Journal of Documentation Volume 65 ; 65 >
     au < released ; 2010 ; Journal of Documentation Volume 66 ; 66 >
     au < released ; 2011 ; Journal of Documentation Volume 67 ; 67 >
-    au < manifest ; 2012 ; Journal of Documentation Volume 69 ; 68 >
+    au < testing ; 2012 ; Journal of Documentation Volume 69 ; 68 >
 
   }
 
@@ -5121,7 +5118,7 @@
     au < released ; 2009 ; Journal of Economic Studies Volume 36 ; 36 >
     au < released ; 2010 ; Journal of Economic Studies Volume 37 ; 37 >
     au < released ; 2011 ; Journal of Economic Studies Volume 38 ; 38 >
-    au < manifest ; 2012 ; Journal of Economic Studies Volume 39 ; 39 >
+    au < testing ; 2012 ; Journal of Economic Studies Volume 39 ; 39 >
 
   }
 
@@ -5184,7 +5181,7 @@
     au < released ; 2009 ; Journal of Educational Administration Volume 47 ; 47 >
     au < released ; 2010 ; Journal of Educational Administration Volume 48 ; 48 >
     au < released ; 2011 ; Journal of Educational Administration Volume 49 ; 49 >
-    au < manifest ; 2012 ; Journal of Educational Administration Volume 50 ; 50 >
+    au < testing ; 2012 ; Journal of Educational Administration Volume 50 ; 50 >
 
   }
 
@@ -5207,7 +5204,7 @@
     au < released ; 2009 ; Journal of Engineering, Design and Technology Volume 7 ; 7 >
     au < released ; 2010 ; Journal of Engineering, Design and Technology Volume 8 ; 8 >
     au < released ; 2011 ; Journal of Engineering, Design and Technology Volume 9 ; 9 >
-    au < manifest ; 2012 ; Journal of Engineering, Design and Technology Volume 10 ; 10 >
+    au < testing ; 2012 ; Journal of Engineering, Design and Technology Volume 10 ; 10 >
 
   }
 
