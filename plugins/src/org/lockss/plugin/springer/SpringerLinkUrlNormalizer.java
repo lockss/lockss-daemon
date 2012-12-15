@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkUrlNormalizer.java,v 1.3 2012-12-13 00:08:56 thib_gc Exp $
+ * $Id: SpringerLinkUrlNormalizer.java,v 1.4 2012-12-15 01:34:17 thib_gc Exp $
  */
 
 /*
@@ -89,8 +89,8 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
     put("d25b4bf4-02b3-47f8-8cb5-9bdebf5da452", CURRENT_ID_CSS); // 00:51:44 02/06/12 - 07:21:29 03/04/12
     put("b4a7f886-a7e7-4dfa-8942-6c13eacc7c38", CURRENT_ID_CSS); // 07:04:14 03/06/12 - 12:02:03 04/18/12
     put("555b8adc-82b5-49e4-a40b-5cae3355208c", CURRENT_ID_CSS); // 16:06:47 04/19/12 - 11:45:02 05/03/12
-    put("be38f38c-6e9c-41c8-8f24-616ce62a7f94", CURRENT_ID_CSS); // 15:38:55 05/17/12 - 10:39:22 06/12/12
-    put(CURRENT_ID_CSS, CURRENT_ID_CSS); // 14:17:03 07/03/12 - 17:36:00 12/11/12
+    put("be38f38c-6e9c-41c8-8f24-616ce62a7f94", CURRENT_ID_CSS); // 21:10:20 05/15/12 - 10:39:22 06/12/12
+    put(CURRENT_ID_CSS, CURRENT_ID_CSS); // 07:55:36 06/19/12 - 17:36:00 12/11/12
     // Javascript 1
     // No such links: 22:52:00 11/22/10 - 01:30:26 05/20/11
     put("cf0e16f3-cd2d-4cbc-b366-efdc9ec5c6f2", CURRENT_ID_JAVASCRIPT_1); // 10:14:29 01/03/12 - 05:17:00 01/17/12
@@ -101,10 +101,11 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
     put("48e4d99e-0f75-417e-8e54-611005af3a10", CURRENT_ID_JAVASCRIPT_1); // 16:06:47 04/19/12
     put("f7790a4f-b0eb-4bfe-93e8-70470325fb27", CURRENT_ID_JAVASCRIPT_1); // 12:58:11 04/22/12 - 09:30:16 04/23/12
     put("36b4f92d-dee2-442e-992a-36dceaccb4c6", CURRENT_ID_JAVASCRIPT_1); // 05:38:03 04/28/12 - 11:45:02 05/03/12
-    put("d149bcb2-d576-4cb0-9761-ac538aef6037", CURRENT_ID_JAVASCRIPT_1); // 15:38:55 05/17/12
+    put("d149bcb2-d576-4cb0-9761-ac538aef6037", CURRENT_ID_JAVASCRIPT_1); // 21:10:20 05/15/12 - 15:38:55 05/17/12
     put("e907c3f2-74ac-4f1f-8529-e9497606323b", CURRENT_ID_JAVASCRIPT_1); // 07:43:37 05/29/12
     put("50bd5442-ad0a-4578-9372-c92b928fe728", CURRENT_ID_JAVASCRIPT_1); // 23:09:11 06/07/12 - 09:05:32 06/08/12
     put("d7e19a36-2ce1-4691-95a4-866a4381977e", CURRENT_ID_JAVASCRIPT_1); // 10:39:22 06/12/12
+    put("3975407c-2da1-455a-99ae-a066f8d78a8c", CURRENT_ID_JAVASCRIPT_1); // 07:55:36 06/19/12
     put("e408ae52-e310-4f94-839d-e1dad4df509f", CURRENT_ID_JAVASCRIPT_1); // 14:17:03 07/03/12 - 19:06:26 07/31/12
     put(CURRENT_ID_JAVASCRIPT_1, CURRENT_ID_JAVASCRIPT_1); // 22:02:30 10/28/12 - 17:36:00 12/11/12
     // Javascript 2
@@ -113,6 +114,7 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
     put("b0622fd9-cdd1-41f5-9b63-533c6c2421c6", CURRENT_ID_JAVASCRIPT_2); // 07:21:29 03/04/12
     put("5120b55b-99e7-41ca-9657-bd9fd6eec7e6", CURRENT_ID_JAVASCRIPT_2); // 07:04:14 03/06/12 - 12:02:03 04/18/12
     put("0f9d5a7b-28ef-4e86-98e4-e5fafc71dd75", CURRENT_ID_JAVASCRIPT_2); // 16:06:47 04/19/12 - 10:39:22 06/12/12
+    put("54b6894c-8544-45e8-9ca9-333567e5add3", CURRENT_ID_JAVASCRIPT_2); // 07:55:36 06/19/12
     put(CURRENT_ID_JAVASCRIPT_2, CURRENT_ID_JAVASCRIPT_2); // 14:17:03 07/03/12 - 17:36:00 12/11/12
   }};
   
