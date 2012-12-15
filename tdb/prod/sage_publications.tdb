@@ -23931,7 +23931,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
      >
      
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://jms.sagepub.com/
+       param[base_url] = http://jmsrsm.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
        
         au < exists ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
