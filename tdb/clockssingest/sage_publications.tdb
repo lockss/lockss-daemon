@@ -1221,7 +1221,7 @@
       au < released ; crawling ; 2010 ; American Journal of Men's Health Volume 4 ; 4 ; >
       au < released ; crawling ; 2011 ; American Journal of Men's Health Volume 5 ; 5 ; >
       au < released ; crawling ; 2012 ; American Journal of Men's Health Volume 6 ; 6 ; >
-      au < expected ; exists ; 2013 ; American Journal of Men's Health Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2013 ; American Journal of Men's Health Volume 7 ; 7 ; >
 
     }
 
@@ -1513,7 +1513,7 @@
       au < released ; crawling ; 2010 ; Angiology Volume 61 ; 61 ; >
       au < released ; crawling ; 2011 ; Angiology Volume 62 ; 62 ; >
       au < released ; crawling ; 2012 ; Angiology Volume 63 ; 63 ; >
-      au < expected ; exists ; 2013 ; Angiology Volume 64 ; 64 ; >
+      au < manifest ; exists ; 2013 ; Angiology Volume 64 ; 64 ; >
 
     }
 
@@ -2436,7 +2436,7 @@
       au < released ; crawling ; 2009-2010 ; Armed Forces & Society Volume 36 ; 36 ; >
       au < released ; crawling ; 2011 ; Armed Forces & Society Volume 37 ; 37 ; >
       au < released ; crawling ; 2012 ; Armed Forces & Society Volume 38 ; 38 ; >
-      au < expected ; exists ; 2013 ; Armed Forces & Society Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2013 ; Armed Forces & Society Volume 39 ; 39 ; >
 
     }
 
@@ -3056,7 +3056,7 @@
       au < zapped ; down ; 2010 ; Behavior Modification Volume 34 ; 34 ; >
       au < released ; crawling ; 2011 ; Behavior Modification Volume 35 ; 35 ; >
       au < released ; crawling ; 2012 ; Behavior Modification Volume 36 ; 36 ; >
-      au < expected ; exists ; 2013 ; Behavior Modification Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2013 ; Behavior Modification Volume 37 ; 37 ; >
 
     }
 
@@ -4180,7 +4180,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Cartilage Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Cartilage Volume 2 ; 2 ; >
       au < released ; crawling ; 2012 ; Cartilage Volume 3 ; 3 ; >
-      au < expected ; exists ; 2013 ; Cartilage Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2013 ; Cartilage Volume 4 ; 4 ; >
 
     }
 
@@ -4232,7 +4232,7 @@
       au < released ; crawling ; 2010 ; Cephalalgia Volume 30 ; 30 ; >
       au < released ; crawling ; 2011 ; Cephalalgia Volume 31 ; 31 ; >
       au < released ; crawling ; 2012 ; Cephalalgia Volume 32 ; 32 ; >
-      au < expected ; exists ; 2013 ; Cephalalgia Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2013 ; Cephalalgia Volume 33 ; 33 ; >
 
     }
 
@@ -5025,16 +5025,15 @@
       issn = 2167-7026 ;
       eissn = 2167-7034
     >
-	
+
       param[base_url] = http://cpx.sagepub.com/
 
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2012 ; Clinical Psychological Science Volume OnlineFirst ; 1 ; >
-      au < expected ; exists ; 2013 ; Clinical Psychological Science Volume OnlineFirst ; 2 ; >
-	
+      au < manifest ; exists ; 2013 ; Clinical Psychological Science Volume 1 ; 1 ; >
+
     }
 
   }
@@ -6386,7 +6385,7 @@
       au < released ; crawling ; 2010 ; Criminal Justice and Behavior Volume 37 ; 37 ; >
       au < released ; crawling ; 2011 ; Criminal Justice and Behavior Volume 38 ; 38 ; >
       au < released ; crawling ; 2012 ; Criminal Justice and Behavior Volume 39 ; 39 ; >
-      au < expected ; exists ; 2013 ; Criminal Justice and Behavior Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2013 ; Criminal Justice and Behavior Volume 40 ; 40 ; >
 
     }
 
@@ -6712,7 +6711,7 @@
       au < zapped ; down ; 2010 ; Critical Sociology Volume 36 ; 36 ; >
       au < released ; crawling ; 2011 ; Critical Sociology Volume 37 ; 37 ; >
       au < released ; crawling ; 2012 ; Critical Sociology Volume 38 ; 38 ; >
-      au < expected ; exists ; 2013 ; Critical Sociology Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2013 ; Critical Sociology Volume 39 ; 39 ; >
 
     }
 
@@ -7210,7 +7209,7 @@
       au < released ; crawling ; 2010 ; Current Sociology Volume 58 ; 58 ; >
       au < released ; crawling ; 2011 ; Current Sociology Volume 59 ; 59 ; >
       au < testing ; exists ; 2012 ; Current Sociology Volume 60 ; 60 ; >
-      au < expected ; exists ; 2013 ; Current Sociology Volume 61 ; 61 ; >
+      au < manifest ; exists ; 2013 ; Current Sociology Volume 61 ; 61 ; >
 
     }
 
@@ -8167,7 +8166,7 @@
       au < released ; crawling ; 2010 ; Educational and Psychological Measurement Volume 70 ; 70 ; >
       au < released ; crawling ; 2011 ; Educational and Psychological Measurement Volume 71 ; 71 ; >
       au < released ; crawling ; 2012 ; Educational and Psychological Measurement Volume 72 ; 72 ; >
-      au < expected ; exists ; 2013 ; Educational and Psychological Measurement Volume 73 ; 73 ; >
+      au < manifest ; exists ; 2013 ; Educational and Psychological Measurement Volume 73 ; 73 ; >
 
     }
 
@@ -9977,7 +9976,7 @@
       au < zapped ; down ; 2010 ; The Family Journal Volume 18 ; 18 ; >
       au < released ; crawling ; 2011 ; The Family Journal Volume 19 ; 19 ; >
       au < released ; manifest ; 2012 ; The Family Journal Volume 20 ; 20 ; >
-      au < expected ; exists ; 2013 ; The Family Journal Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2013 ; The Family Journal Volume 21 ; 21 ; >
 
     }
 
@@ -11422,7 +11421,7 @@
       au < zapped ; down ; 2010 ; Health Education Journal Volume 69 ; 69 ; >
       au < released ; crawling ; 2011 ; Health Education Journal Volume 70 ; 70 ; >
       au < crawling ; exists ; 2012 ; Health Education Journal Volume 71 ; 71 ; >
-      au < expected ; exists ; 2013 ; Health Education Journal Volume 72 ; 72 ; >
+      au < manifest ; exists ; 2013 ; Health Education Journal Volume 72 ; 72 ; >
 
     }
 
@@ -11703,7 +11702,7 @@
       au < released ; crawling ; 2010 ; History and Sociology of South Asia Volume 4 ; 4 ; >
       au < released ; crawling ; 2011 ; History and Sociology of South Asia Volume 5 ; 5 ; >
       au < crawling ; exists ; 2012 ; History and Sociology of South Asia Volume 6 ; 6 ; >
-      au < expected ; exists ; 2013 ; History and Sociology of South Asia Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2013 ; History and Sociology of South Asia Volume 7 ; 7 ; >
 
     }
 
@@ -13251,7 +13250,7 @@
       au < released ; crawling ; 2010 ; International Journal of Behavioral Development Volume 34 ; 34 ; >
       au < released ; crawling ; 2011 ; International Journal of Behavioral Development Volume 35 ; 35 ; >
       au < crawling ; exists ; 2012 ; International Journal of Behavioral Development Volume 36 ; 36 ; >
-      au < expected ; exists ; 2013 ; International Journal of Behavioral Development Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2013 ; International Journal of Behavioral Development Volume 37 ; 37 ; >
 
     }
 
@@ -14741,7 +14740,7 @@
       au < zapped ; down ; 2010 ; International Social Work Volume 53 ; 53 ; >
       au < released ; crawling ; 2011 ; International Social Work Volume 54 ; 54 ; >
       au < crawling ; exists ; 2012 ; International Social Work Volume 55 ; 55 ; >
-      au < expected ; exists ; 2013 ; International Social Work Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2013 ; International Social Work Volume 56 ; 56 ; >
 
     }
 
@@ -15294,7 +15293,7 @@
       au < released ; crawling ; 2010 ; Journal of Accounting, Auditing & Finance Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; Journal of Accounting, Auditing & Finance Volume 26 ; 26 ; >
       au < crawling ; exists ; 2012 ; Journal of Accounting, Auditing & Finance Volume 27 ; 27 ; >
-      au < expected ; exists ; 2013 ; Journal of Accounting, Auditing & Finance Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2013 ; Journal of Accounting, Auditing & Finance Volume 28 ; 28 ; >
 
     }
 
@@ -16106,7 +16105,7 @@
       au < released ; crawling ; 2010 ; Journal of Black Studies Volume 41 ; 41 ; >
       au < released ; crawling ; 2011 ; Journal of Black Studies Volume 42 ; 42 ; >
       au < crawling ; exists ; 2012 ; Journal of Black Studies Volume 43 ; 43 ; >
-      au < expected ; exists ; 2013 ; Journal of Black Studies Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2013 ; Journal of Black Studies Volume 44 ; 44 ; >
 
     }
 
@@ -16353,7 +16352,7 @@
       au < released ; crawling ; 2010 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 15 ; 15 ; >
       au < released ; crawling ; 2011 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 16 ; 16 ; >
       au < crawling ; exists ; 2012 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 17 ; 17 ; >
-      au < expected ; exists ; 2013 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2013 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 18 ; 18 ; >
 
     }
 
@@ -17300,7 +17299,7 @@
       au < released ; crawling ; 2010 ; Journal of Contemporary Ethnography Volume 39 ; 39 ; >
       au < released ; crawling ; 2011 ; Journal of Contemporary Ethnography Volume 40 ; 40 ; >
       au < released ; crawling ; 2012 ; Journal of Contemporary Ethnography Volume 41 ; 41 ; >
-      au < expected ; exists ; 2013 ; Journal of Contemporary Ethnography Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2013 ; Journal of Contemporary Ethnography Volume 42 ; 42 ; >
 
     }
 
@@ -17714,7 +17713,7 @@
       au < released ; crawling ; 2010 ; Journal of Dental Research Volume 89 ; 89 ; >
       au < released ; crawling ; 2011 ; Journal of Dental Research Volume 90 ; 90 ; >
       au < crawling ; exists ; 2012 ; Journal of Dental Research Volume 91 ; 91 ; >
-      au < expected ; exists ; 2013 ; Journal of Dental Research Volume 92 ; 92 ; >
+      au < manifest ; exists ; 2013 ; Journal of Dental Research Volume 92 ; 92 ; >
 
     }
 
@@ -17961,7 +17960,7 @@
       au < released ; crawling ; 2010 ; The Journal of Early Adolescence Volume 30 ; 30 ; >
       au < released ; crawling ; 2011 ; The Journal of Early Adolescence Volume 31 ; 31 ; >
       au < crawling ; exists ; 2012 ; The Journal of Early Adolescence Volume 32 ; 32 ; >
-      au < expected ; exists ; 2013 ; The Journal of Early Adolescence Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2013 ; The Journal of Early Adolescence Volume 33 ; 33 ; >
 
     }
 
@@ -18285,7 +18284,7 @@
       au < released ; crawling ; 2010 ; Journal of Elastomers and Plastics Volume 42 ; 42 ; >
       au < released ; crawling ; 2011 ; Journal of Elastomers and Plastics Volume 43 ; 43 ; >
       au < crawling ; exists ; 2012 ; Journal of Elastomers and Plastics Volume 44 ; 44 ; >
-      au < expected ; exists ; 2013 ; Journal of Elastomers and Plastics Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2013 ; Journal of Elastomers and Plastics Volume 45 ; 45 ; >
 
     }
 
@@ -20943,7 +20942,7 @@
       au < released ; crawling ; 2010 ; Journal of Management Inquiry Volume 19 ; 19 ; >
       au < released ; crawling ; 2011 ; Journal of Management Inquiry Volume 20 ; 20 ; >
       au < crawling ; exists ; 2012 ; Journal of Management Inquiry Volume 21 ; 21 ; >
-      au < expected ; exists ; 2013 ; Journal of Management Inquiry Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2013 ; Journal of Management Inquiry Volume 22 ; 22 ; >
 
     }
 
@@ -21824,7 +21823,7 @@
       au < released ; crawling ; 2010 ; Journal of Positive Behavior Interventions Volume 12 ; 12 ; >
       au < released ; crawling ; 2011 ; Journal of Positive Behavior Interventions Volume 13 ; 13 ; >
       au < crawling ; exists ; 2012 ; Journal of Positive Behavior Interventions Volume 14 ; 14 ; >
-      au < expected ; exists ; 2013 ; Journal of Positive Behavior Interventions Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2013 ; Journal of Positive Behavior Interventions Volume 15 ; 15 ; >
 
     }
 
@@ -21847,7 +21846,7 @@
       au < released ; crawling ; 2010 ; Journal of Primary Care & Community Health Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Journal of Primary Care & Community Health Volume 2 ; 2 ; >
       au < crawling ; exists ; 2012 ; Journal of Primary Care & Community Health Volume 3 ; 3 ; >
-      au < expected ; exists ; 2013 ; Journal of Primary Care & Community Health Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2013 ; Journal of Primary Care & Community Health Volume 4 ; 4 ; >
 
     }
 
@@ -23622,7 +23621,7 @@
       au < released ; crawling ; 2010 ; Journal of Transcultural Nursing Volume 21 ; 21 ; >
       au < released ; crawling ; 2011 ; Journal of Transcultural Nursing Volume 22 ; 22 ; >
       au < crawling ; exists ; 2012 ; Journal of Transcultural Nursing Volume 23 ; 23 ; >
-      au < expected ; exists ; 2013 ; Journal of Transcultural Nursing Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2013 ; Journal of Transcultural Nursing Volume 24 ; 24 ; >
 
     }
 
@@ -27354,7 +27353,7 @@
       au < released ; crawling ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 145 ; 145 ; >
       au < crawling ; exists ; 2012 ; Otolaryngology -- Head and Neck Surgery Volume 146 ; 146 ; >
       au < crawling ; exists ; 2012 ; Otolaryngology -- Head and Neck Surgery Volume 147 ; 147 ; >
-      au < expected ; exists ; 2013 ; Otolaryngology -- Head and Neck Surgery Volume 148 ; 148 ; >
+      au < manifest ; exists ; 2013 ; Otolaryngology -- Head and Neck Surgery Volume 148 ; 148 ; >
 
     }
 
@@ -30055,7 +30054,7 @@
       au < notReady ; exists ; 2010 ; Public Policy and Administration Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; Public Policy and Administration Volume 26 ; 26 ; >
       au < released ; crawling ; 2012 ; Public Policy and Administration Volume 27 ; 27 ; >
-      au < expected ; exists ; 2013 ; Public Policy and Administration Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2013 ; Public Policy and Administration Volume 28 ; 28 ; >
 
     }
 
@@ -30928,7 +30927,7 @@
       au < released ; crawling ; 2010 ; Research on Social Work Practice Volume 20 ; 20 ; >
       au < released ; crawling ; 2011 ; Research on Social Work Practice Volume 21 ; 21 ; >
       au < released ; crawling ; 2012 ; Research on Social Work Practice Volume 22 ; 22 ; >
-      au < expected ; exists ; 2013 ; Research on Social Work Practice Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2013 ; Research on Social Work Practice Volume 23 ; 23 ; >
 
     }
 
@@ -31964,7 +31963,7 @@
       au < released ; crawling ; 2010 ; Sexual Abuse: A Journal of Research and Treatment Volume 22 ; 22 ; >
       au < released ; crawling ; 2011 ; Sexual Abuse: A Journal of Research and Treatment Volume 23 ; 23 ; >
       au < crawling ; exists ; 2012 ; Sexual Abuse: A Journal of Research and Treatment Volume 24 ; 24 ; >
-      au < expected ; exists ; 2013 ; Sexual Abuse: A Journal of Research and Treatment Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2013 ; Sexual Abuse: A Journal of Research and Treatment Volume 25 ; 25 ; >
 
     }
 
@@ -34058,7 +34057,7 @@
       au < released ; crawling ; 2010 ; Theology Volume 113 ; 113 ; >
       au < released ; crawling ; 2011 ; Theology Volume 114 ; 114 ; >
       au < crawling ; exists ; 2012 ; Theology Volume 115 ; 115 ; >
-      au < expected ; exists ; 2013 ; Theology Volume 116 ; 116 ; >
+      au < manifest ; exists ; 2013 ; Theology Volume 116 ; 116 ; >
 
     }
 
@@ -35857,7 +35856,7 @@
       au < released ; crawling ; 2010 ; Urban Education Volume 45 ; 45 ; >
       au < released ; crawling ; 2011 ; Urban Education Volume 46 ; 46 ; >
       au < crawling ; exists ; 2012 ; Urban Education Volume 47 ; 47 ; >
-      au < expected ; exists ; 2013 ; Urban Education Volume 48 ; 48 ; >
+      au < manifest ; exists ; 2013 ; Urban Education Volume 48 ; 48 ; >
 
     }
 
@@ -37020,7 +37019,7 @@
       au < exists ; exists ; 2010 ; Gifted Child Today Volume 33 ; 33 ; >
       au < exists ; exists ; 2011 ; Gifted Child Today Volume 34 ; 34 ; >
       au < crawling ; exists ; 2012 ; Gifted Child Today Volume 35 ; 35 ; >
-      au < expected ; exists ; 2013 ; Gifted Child Today Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2013 ; Gifted Child Today Volume 36 ; 36 ; >
 
     }
 
