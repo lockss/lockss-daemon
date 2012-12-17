@@ -1,0 +1,63 @@
+{
+
+  publisher <
+    name = International Union Against Tuberculosis and Lung Disease ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+  plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+  param[base_url] = http://www.ingentaconnect.com/
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
+  param[publisher_id] = iuatld
+  
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+  {
+    title <
+      name = International Journal of Tuberculosis and Lung Disease ;
+      issn = 1027-3719 ;
+      eissn = 1815-7920 ;
+      issnl = 1027-3719
+    >
+
+    param[journal_id] = ijtld
+    param[journal_issn] = 1027-3719
+
+    au < exists ; exists ; 1997 ; International Journal of Tuberculosis and Lung Disease Volume 1 ; 1 >
+    au < exists ; exists ; 1998 ; International Journal of Tuberculosis and Lung Disease Volume 2 ; 2 >
+    au < exists ; exists ; 1999 ; International Journal of Tuberculosis and Lung Disease Volume 3 ; 3 >
+    au < exists ; exists ; 2000 ; International Journal of Tuberculosis and Lung Disease Volume 4 ; 4 >
+    au < exists ; exists ; 2001 ; International Journal of Tuberculosis and Lung Disease Volume 5 ; 5 >
+    au < exists ; exists ; 2002 ; International Journal of Tuberculosis and Lung Disease Volume 6 ; 6 >
+    au < exists ; exists ; 2003 ; International Journal of Tuberculosis and Lung Disease Volume 7 ; 7 >
+    au < exists ; exists ; 2004 ; International Journal of Tuberculosis and Lung Disease Volume 8 ; 8 >
+    au < exists ; exists ; 2005 ; International Journal of Tuberculosis and Lung Disease Volume 9 ; 9 >
+    au < exists ; exists ; 2006 ; International Journal of Tuberculosis and Lung Disease Volume 10 ; 10 >
+    au < exists ; exists ; 2007 ; International Journal of Tuberculosis and Lung Disease Volume 11 ; 11 >
+    au < exists ; exists ; 2008 ; International Journal of Tuberculosis and Lung Disease Volume 12 ; 12 >
+    au < exists ; exists ; 2009 ; International Journal of Tuberculosis and Lung Disease Volume 13 ; 13 >
+    au < exists ; exists ; 2010 ; International Journal of Tuberculosis and Lung Disease Volume 14 ; 14 >
+    au < exists ; exists ; 2011 ; International Journal of Tuberculosis and Lung Disease Volume 15 ; 15 >
+    au < exists ; exists ; 2012 ; International Journal of Tuberculosis and Lung Disease Volume 16 ; 16 >
+    au < exists ; exists ; 2013 ; International Journal of Tuberculosis and Lung Disease Volume 17 ; 17 >
+
+  }
+
+  {
+    title <
+      name = Public Health Action ;
+      eissn = 2220-8372 ;
+      issnl = 2220-8372
+    >
+
+    param[journal_id] = pha
+    param[journal_issn] = 2220-8372
+
+    au < exists ; exists ; 2011 ; Public Health Action Volume 1 ; 1 >
+    au < exists ; exists ; 2012 ; Public Health Action Volume 2 ; 2 >
+
+  }
+
+}
