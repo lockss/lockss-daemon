@@ -7,7 +7,6 @@
   implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
-  comment[0] = upcoming journals in 2012 with no content online yet
 
   {
 
@@ -18,6 +17,13 @@
     >
 
     param[journal_dir] = alabama_review
+    
+    au < exists ; 2007 ; Alabama Review Volume 60 ; 60 >
+    au < exists ; 2008 ; Alabama Review Volume 61 ; 61 >
+    au < exists ; 2009 ; Alabama Review Volume 62 ; 62 >
+    au < exists ; 2010 ; Alabama Review Volume 63 ; 63 >
+    au < exists ; 2011 ; Alabama Review Volume 64 ; 64 >
+    au < exists ; 2012 ; Alabama Review Volume 65 ; 65 >
     
 
   }
