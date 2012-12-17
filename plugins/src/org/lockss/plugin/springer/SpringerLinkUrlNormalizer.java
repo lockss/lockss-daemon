@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkUrlNormalizer.java,v 1.4 2012-12-15 01:34:17 thib_gc Exp $
+ * $Id: SpringerLinkUrlNormalizer.java,v 1.5 2012-12-17 22:12:05 thib_gc Exp $
  */
 
 /*
@@ -107,6 +107,8 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
     put("d7e19a36-2ce1-4691-95a4-866a4381977e", CURRENT_ID_JAVASCRIPT_1); // 10:39:22 06/12/12
     put("3975407c-2da1-455a-99ae-a066f8d78a8c", CURRENT_ID_JAVASCRIPT_1); // 07:55:36 06/19/12
     put("e408ae52-e310-4f94-839d-e1dad4df509f", CURRENT_ID_JAVASCRIPT_1); // 14:17:03 07/03/12 - 19:06:26 07/31/12
+    put("8272bab5-29b3-4aea-8c03-d6be1e65a7c5", CURRENT_ID_JAVASCRIPT_1); // 12:10:57 09/24/12
+    put("448d74db-3a49-47cd-a22e-30f88ad429c7", CURRENT_ID_JAVASCRIPT_1); // 00:55:48 10/16/12 - 04:36:15 10/25/12
     put(CURRENT_ID_JAVASCRIPT_1, CURRENT_ID_JAVASCRIPT_1); // 22:02:30 10/28/12 - 17:36:00 12/11/12
     // Javascript 2
     // No such links: 22:52:00 11/22/10 - 01:30:26 05/20/11
