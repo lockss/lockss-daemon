@@ -5,25 +5,25 @@
     info[contract] = 2012 ;
     info[tester] = 4
   >
-  
+
   {
-  
+
     title <
       name = American Literary Scholarship ;
       issn = 0065-9142 ;
       eissn = 1527-2125 ;
       issnl = 0065-9142
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://als.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
-      
+
       comment[years] = years in web addresses are two years behind the publishing year as of 20110912
       comment[years1] = .long links still go to the year indicated (i.e. vol2009 manifest links to 2009, not 2011)
-      
+
 
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; American Literary Scholarship 2000 ; 1998 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; American Literary Scholarship 2001 ; 1999 >
@@ -41,18 +41,18 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; American Literary Scholarship 2013 ; 2011 >
 
     }
-  
+
   }
-  
+
   {
-  
+
     title <
       name = American Literature ;
       issn = 0002-9831 ;
       eissn = 1527-2117 ;
       issnl = 0002-9831
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -75,18 +75,18 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; American Literature Volume 85 ; 85 >
 
     }
-  
+
   }
-  
+
   {
-  
+
     title <
       name = American Speech ;
       issn = 0003-1283 ;
       eissn = 1527-2133 ;
       issnl = 0003-1283
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -109,18 +109,18 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; American Speech Volume 88 ; 88 >
 
     }
-  
+
   }
-  
+
   {
-  
+
      title <
       name = boundary 2 ;
       issn = 0190-3659 ;
       eissn = 1527-2141 ;
       issnl = 0190-3659
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -134,7 +134,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; boundary 2 Volume 31 ; 31 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; boundary 2 Volume 32 ; 32 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; boundary 2 Volume 33 ; 33 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; boundary 2 Volume 34 ; 34 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; boundary 2 Volume 34 ; 34 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; boundary 2 Volume 35 ; 35 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; boundary 2 Volume 36 ; 36 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; boundary 2 Volume 37 ; 37 >
@@ -143,18 +143,18 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; boundary 2 Volume 40 ; 40 >
 
     }
-  
+
   }
-  
+
   {
-  
+
     title <
       name = Camera Obscura: Feminism, Culture, and Media Studies ;
       issn = 0270-5346 ;
       eissn = 1529-1510 ;
       issnl = 0270-5346
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -163,7 +163,7 @@
 
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 23 ; 23 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 >
@@ -172,18 +172,18 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 28 ; 28 >
 
     }
-  
+
   }
-  
+
   {
-  
+
     title <
       name = The Carlyle Letters Online ;
       issn = 1532-0928 ;
       eissn = 1940-1795 ;
       issnl = 0002-9831
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -225,20 +225,20 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1858 ; The Carlyle Letters Online Volume 34 ; 34 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1859 ; The Carlyle Letters Online Volume 35 ; 35 >
- 
+
    }
-  
+
   }
-  
+
   {
-  
+
     title <
       name = Common Knowledge ;
       issn = 0961-754X ;
       eissn = 1538-4578 ;
       issnl = 0961-754X
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -259,18 +259,18 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Common Knowledge Volume 19 ; 19 >
 
     }
-  
+
   }
-  
+
   {
-  
+
     title <
       name = Comparative Literature ;
       issn = 0010-4124 ;
       eissn = 1945-8517 ;
       issnl = 0010-4124
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -293,18 +293,18 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Comparative Literature Volume 65 ; 65 >
 
     }
-  
+
   }
-  
+
   {
-  
+
     title <
       name = Comparative Studies of South Asia, Africa and the Middle East ;
       issn = 1089-201X ;
       eissn = 1548-226X ;
       issnl = 1089-201X
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -313,7 +313,7 @@
 
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
@@ -322,18 +322,18 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Comparative Studies of South Asia, Africa and the Middle East Volume 33 ; 33 >
 
     }
-  
+
   }
-  
+
   {
-  
+
      title <
       name = Cultural Politics ;
       issn = 1743-2197 ;
       eissn = 1751-7435 ;
       issnl = 1743-2197
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -351,18 +351,18 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Cultural Politics Volume 9 ; 9 >
 
     }
-  
+
   }
-  
+
   {
-  
+
     title <
       name = differences: A Journal of Feminist Cultural Studies ;
       issn = 1040-7391 ;
       eissn = 1527-1986 ;
       issnl = 1040-7391
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -385,23 +385,23 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; differences: A Journal of Feminist Cultural Studies Volume 24 ; 24 >
 
     }
-  
+
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = Duke Mathematical Journal ;
       issn = 0012-7094 ;
       eissn = 1547-7398
     >
-    
+
     {
-    
+
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/dmj
+      param[base_url] = http://projecteuclid.org/dmj/
       implicit < status ; status2 ; year ; name ; param[volume_name] >
-      
+
       au < exists ; exists ; 1935 ; Duke Mathematical Journal Volume 1 ; 1 >
       au < exists ; exists ; 1936 ; Duke Mathematical Journal Volume 2 ; 2 >
       au < exists ; exists ; 1937 ; Duke Mathematical Journal Volume 3 ; 3 >
@@ -567,16 +567,16 @@
 
     }
   }
-      
+
   {
-  
+
     title <
       name = East Asian Science, Technology and Society: An International Journal ;
       issn = 1875-2160 ;
       eissn = 1875-2152 ;
       issnl = 1875-2160
     >
-    
+
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
@@ -592,18 +592,18 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; East Asian Science, Technology and Society: An International Journal Volume 7 ; 7 >
 
     }
-  
+
   }
-  
+
   {
-  
+
     title <
       name = Eighteenth-Century Life ;
       issn =  0098-2601 ;
       eissn = 1086-3192 ;
       issnl = 0098-2601
     >
-    
+
    {
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ecl.dukejournals.org/
@@ -616,7 +616,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Eighteenth-Century Life Volume 28 ; 28 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 > 
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Eighteenth-Century Life Volume 32 ; 32 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
@@ -625,18 +625,18 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Eighteenth-Century Life Volume 37 ; 37 >
 
     }
-  
+
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = Ethnohistory ;
       issn = 0014-1801 ;
       eissn = 1527-5477
-      
+
     >
-    
+
    {
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ethnohistory.dukejournals.org/
@@ -658,24 +658,24 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Ethnohistory Volume 60 ; 60 >
 
     }
-  
+
   }
-  
-  
+
+
   {
-  
-    title < 
+
+    title <
       name = French Historical Studies ;
       issn = 0016-1071 ;
       eissn =  1527-5493
-      
+
     >
-    
+
    {
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://fhs.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
-      
+
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; French Historical Studies Volume 23 ; 23 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; French Historical Studies Volume 24 ; 24 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; French Historical Studies Volume 25 ; 25 >
@@ -692,18 +692,18 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; French Historical Studies Volume 36 ; 36 >
 
   }
-  
+
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = Genre: Forms of Discourse and Culture ;
       issn = 0016-6928 ;
       eissn =  2160-0228
-  
+
   >
-  
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://genre.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
@@ -727,17 +727,17 @@
 
 
   {
-  
-    title < 
+
+    title <
       name = GLQ: A Journal of Lesbian and Gay Studies ;
       issn = 1064-2684 ;
       eissn = 1527-9375
-  
+
 >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://glq.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
-      
+
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1993-1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 1 ; 1 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 2 ; 2 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1996-1997 ; GLQ: A Journal of Lesbian and Gay Studies Volume 3 ; 3 >
@@ -759,10 +759,10 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; GLQ: A Journal of Lesbian and Gay Studies Volume 19 ; 19 >
 
     }
-          
+
     {
-  
-    title < 
+
+    title <
       name = Hispanic American Historical Review ;
       issn = 0018-2168 ;
       eissn = 1527-1900
@@ -790,17 +790,17 @@
     }
 
     {
-  
-    title < 
+
+    title <
       name = History of Political Economy ;
       issn = 0018-2702 ;
       eissn = 1527-1919
-  
+
    >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://hope.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
-      
+
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1969 ; History of Political Economy Volume 1 ; 1 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1970 ; History of Political Economy Volume 2 ; 2 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1971 ; History of Political Economy Volume 3 ; 3 >
@@ -848,14 +848,14 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; History of Political Economy Volume 45 ; 45 >
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = Journal of Health Politics, Policy and Law ;
       issn = 0361-6878 ;
       eissn = 1527-1927
-  
+
 >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jhppl.dukejournals.org/
@@ -901,17 +901,18 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Journal of Health Politics, Policy and Law Volume 38 ; 38 >
 
     }
-    
+
         {
-  
-    title < 
+
+    title <
       name = The Journal of Mathematics of Kyoto University ;
       issn = 0023-608X ;
       comment[continued_by] = 2156-2261 ;
       comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
 >
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/kjm
+      param[base_url] = http://projecteuclid.org/kjm/
+      parm[journal_id] = kjm_2
       implicit < status ; status2 ; year ; name ; param[volume_name] >
 
 
@@ -922,8 +923,8 @@
       au < exists ; exists ; 1965 ; The Journal of Mathematics of Kyoto University Volume 5 ; 5 >
       au < exists ; exists ; 1966 ; The Journal of Mathematics of Kyoto University Volume 5 ; 5 >
       au < exists ; exists ; 1967 ; The Journal of Mathematics of Kyoto University Volume 7 ; 7 >
-      au < exists ; exists ; 1968 ; The Journal of Mathematics of Kyoto University Volume 8 ; 8 >      
-      au < exists ; exists ; 1969 ; The Journal of Mathematics of Kyoto University Volume 9 ; 9 >      
+      au < exists ; exists ; 1968 ; The Journal of Mathematics of Kyoto University Volume 8 ; 8 >
+      au < exists ; exists ; 1969 ; The Journal of Mathematics of Kyoto University Volume 9 ; 9 >
       au < exists ; exists ; 1970 ; The Journal of Mathematics of Kyoto University Volume 10 ; 10 >
       au < exists ; exists ; 1971 ; The Journal of Mathematics of Kyoto University Volume 11 ; 11 >
       au < exists ; exists ; 1972 ; The Journal of Mathematics of Kyoto University Volume 12 ; 12 >
@@ -932,7 +933,7 @@
       au < exists ; exists ; 1975 ; The Journal of Mathematics of Kyoto University Volume 15 ; 15 >
       au < exists ; exists ; 1976 ; The Journal of Mathematics of Kyoto University Volume 16 ; 16 >
       au < exists ; exists ; 1977 ; The Journal of Mathematics of Kyoto University Volume 17 ; 17 >
-      au < exists ; exists ; 1978 ; The Journal of Mathematics of Kyoto University Volume 18 ; 18 >      
+      au < exists ; exists ; 1978 ; The Journal of Mathematics of Kyoto University Volume 18 ; 18 >
       au < exists ; exists ; 1979 ; The Journal of Mathematics of Kyoto University Volume 19 ; 19 >
       au < exists ; exists ; 1980 ; The Journal of Mathematics of Kyoto University Volume 20 ; 20 >
       au < exists ; exists ; 1981 ; The Journal of Mathematics of Kyoto University Volume 21 ; 21 >
@@ -942,8 +943,8 @@
       au < exists ; exists ; 1985 ; The Journal of Mathematics of Kyoto University Volume 25 ; 25 >
       au < exists ; exists ; 1986 ; The Journal of Mathematics of Kyoto University Volume 26 ; 26 >
       au < exists ; exists ; 1987 ; The Journal of Mathematics of Kyoto University Volume 27 ; 27 >
-      au < exists ; exists ; 1988 ; The Journal of Mathematics of Kyoto University Volume 28 ; 28 >      
-      au < exists ; exists ; 1989 ; The Journal of Mathematics of Kyoto University Volume 29 ; 29 >      
+      au < exists ; exists ; 1988 ; The Journal of Mathematics of Kyoto University Volume 28 ; 28 >
+      au < exists ; exists ; 1989 ; The Journal of Mathematics of Kyoto University Volume 29 ; 29 >
       au < exists ; exists ; 1990 ; The Journal of Mathematics of Kyoto University Volume 30 ; 30 >
       au < exists ; exists ; 1991 ; The Journal of Mathematics of Kyoto University Volume 31 ; 31 >
       au < exists ; exists ; 1992 ; The Journal of Mathematics of Kyoto University Volume 32 ; 32 >
@@ -964,16 +965,16 @@
       au < exists ; exists ; 2007 ; The Journal of Mathematics of Kyoto University Volume 47 ; 47 >
       au < exists ; exists ; 2008 ; The Journal of Mathematics of Kyoto University Volume 48 ; 48 >
       au < exists ; exists ; 2009 ; The Journal of Mathematics of Kyoto University Volume 49 ; 49 >
-      
+
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = Journal of Medieval and Early Modern Studies ;
       issn = 1082-9636 ;
       eissn = 1527-8263
-  
+
 >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jmems.dukejournals.org/
@@ -995,14 +996,14 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Journal of Medieval and Early Modern Studies Volume 43 ; 43 >
 
    }
-   
+
    {
-  
-    title < 
+
+    title <
       name = Journal of Music Theory ;
       issn = 0022-2909 ;
       eissn = 1941-7497
-  
+
    >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jmt.dukejournals.org/
@@ -1025,18 +1026,19 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Journal of Music Theory Volume 57 ; 57 >
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = Kyoto Journal of Mathematics ;
       issn =  2156-2261 ;
       eissn = 2154-3321 ;
       comment[continued_from] = 0023-608X
-  
+
       >
       plugin = needs.plugin
-      param[base_url] =  http://ProjectEuclid.org/kjm
+      param[base_url] =  http://projecteuclid.org/kjm/
+      param[journal_id] = kjm-3
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       comment[0] = formerly The Journal of Mathematics of Kyoto University, 1961-2009
       comment[1] = formerly Memoirs of the College of Science, University of Kyoto. Series A: Mathematics, 1950-1961
@@ -1049,14 +1051,14 @@
 
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = Labor: Studies in Working-Class History of the Americas ;
       issn = 1547-6715 ;
       eissn = 1558-1454
-  
+
 >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://labor.dukejournals.org/
@@ -1076,11 +1078,11 @@
     }
 
     {
-  
-    title < 
+
+    title <
       name = Limnology and Oceanography: Fluids and Environments ;
       eissn = 2157-3689
-  
+
     >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://lofe.dukejournals.org/
@@ -1093,12 +1095,12 @@
     }
 
     {
-  
-    title < 
+
+    title <
       name = Mediterranean Quarterly ;
       issn = 1047-4552 ;
       eissn = 1527-1935
-  
+
     >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mq.dukejournals.org/
@@ -1120,18 +1122,19 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Mediterranean Quarterly Volume 24 ; 24 >
 
      }
-     
+
     {
-  
-    title < 
+
+    title <
       name = Memoirs of the College of Science, University of Kyoto. Series A: Mathematics ;
       issn = 0368-8887 ;
       comment[continued_by] = 2156-2261 ;
       comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
-       
+
       >
       plugin = needs.plugin
-      param[base_url] = http://ProjectEuclid.org/kjm
+      param[base_url] = http://projecteuclid.org/kjm/
+      param[journal_id] = kjm_1
       implicit < status ; status2 ; year ; name ; param[volume_name] >
 
 
@@ -1143,16 +1146,16 @@
       au < exists ; exists ; 1958 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 31 ; 31 >
       au < exists ; exists ; 1959-1960 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 32 ; 32 >
       au < exists ; exists ; 1960-1961 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 33 ; 33 >
-    
+
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = The Minnesota Review ;
       issn = 0026-5667 ;
       eissn = 2157-4189
-  
+
 >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://minnesotareview.dukejournals.org/
@@ -1169,14 +1172,14 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; The Minnesota Review Volume 2013 ; 2013 >
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = Modern Language Quarterly ;
       issn = 0026-7929 ;
       eissn = 1527-1943
-  
+
      >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mlq.dukejournals.org/
@@ -1260,17 +1263,17 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Modern Language Quarterly Volume 74 ; 74 >
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = Nagoya Mathematical Journal ;
       issn = 0027-7630 ;
       eissn = 2152-6842
-  
+
      >
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/nmj
+      param[base_url] = http://projecteuclid.org/nmj/
       implicit < status ; status2 ; year ; name ; param[volume_name] >
 
       au < exists ; exists ; 1950 ; Nagoya Mathematical Journal Volume 1 ; 1 >
@@ -1281,8 +1284,8 @@
       au < exists ; exists ; 1955 ; Nagoya Mathematical Journal Volume 6 ; 6 >
       au < exists ; exists ; 1956 ; Nagoya Mathematical Journal Volume 7 ; 7 >
       au < exists ; exists ; 1957 ; Nagoya Mathematical Journal Volume 8 ; 8 >
-      au < exists ; exists ; 1958 ; Nagoya Mathematical Journal Volume 9 ; 9 >     
-      au < exists ; exists ; 1959 ; Nagoya Mathematical Journal Volume 10 ; 10 >      
+      au < exists ; exists ; 1958 ; Nagoya Mathematical Journal Volume 9 ; 9 >
+      au < exists ; exists ; 1959 ; Nagoya Mathematical Journal Volume 10 ; 10 >
       au < exists ; exists ; 1960 ; Nagoya Mathematical Journal Volume 11 ; 11 >
       au < exists ; exists ; 1961 ; Nagoya Mathematical Journal Volume 12 ; 12 >
       au < exists ; exists ; 1962 ; Nagoya Mathematical Journal Volume 13 ; 13 >
@@ -1291,8 +1294,8 @@
       au < exists ; exists ; 1965 ; Nagoya Mathematical Journal Volume 16 ; 16 >
       au < exists ; exists ; 1966 ; Nagoya Mathematical Journal Volume 17 ; 17 >
       au < exists ; exists ; 1967 ; Nagoya Mathematical Journal Volume 18 ; 18 >
-      au < exists ; exists ; 1968 ; Nagoya Mathematical Journal Volume 19 ; 19 >      
-      au < exists ; exists ; 1969 ; Nagoya Mathematical Journal Volume 20 ; 20 >      
+      au < exists ; exists ; 1968 ; Nagoya Mathematical Journal Volume 19 ; 19 >
+      au < exists ; exists ; 1969 ; Nagoya Mathematical Journal Volume 20 ; 20 >
       au < exists ; exists ; 1970 ; Nagoya Mathematical Journal Volume 21 ; 21 >
       au < exists ; exists ; 1971 ; Nagoya Mathematical Journal Volume 22 ; 22 >
       au < exists ; exists ; 1972 ; Nagoya Mathematical Journal Volume 23 ; 23 >
@@ -1301,7 +1304,7 @@
       au < exists ; exists ; 1975 ; Nagoya Mathematical Journal Volume 26 ; 26 >
       au < exists ; exists ; 1976 ; Nagoya Mathematical Journal Volume 27 ; 27 >
       au < exists ; exists ; 1977 ; Nagoya Mathematical Journal Volume 28 ; 28 >
-      au < exists ; exists ; 1978 ; Nagoya Mathematical Journal Volume 29 ; 29 >      
+      au < exists ; exists ; 1978 ; Nagoya Mathematical Journal Volume 29 ; 29 >
       au < exists ; exists ; 1979 ; Nagoya Mathematical Journal Volume 30 ; 30 >
       au < exists ; exists ; 1980 ; Nagoya Mathematical Journal Volume 31 ; 31 >
       au < exists ; exists ; 1981 ; Nagoya Mathematical Journal Volume 32 ; 32 >
@@ -1311,8 +1314,8 @@
       au < exists ; exists ; 1985 ; Nagoya Mathematical Journal Volume 36 ; 36 >
       au < exists ; exists ; 1986 ; Nagoya Mathematical Journal Volume 37 ; 37 >
       au < exists ; exists ; 1987 ; Nagoya Mathematical Journal Volume 38 ; 38 >
-      au < exists ; exists ; 1988 ; Nagoya Mathematical Journal Volume 39 ; 39 >      
-      au < exists ; exists ; 1989 ; Nagoya Mathematical Journal Volume 40 ; 40 >      
+      au < exists ; exists ; 1988 ; Nagoya Mathematical Journal Volume 39 ; 39 >
+      au < exists ; exists ; 1989 ; Nagoya Mathematical Journal Volume 40 ; 40 >
       au < exists ; exists ; 1990 ; Nagoya Mathematical Journal Volume 41 ; 41 >
       au < exists ; exists ; 1991 ; Nagoya Mathematical Journal Volume 42 ; 42 >
       au < exists ; exists ; 1992 ; Nagoya Mathematical Journal Volume 43 ; 43 >
@@ -1339,14 +1342,14 @@
       au < exists ; exists ; 2013 ; Nagoya Mathematical Journal Volume 64 ; 64 >
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = New German Critique ;
       issn = 0094-033X ;
       eissn = 1558-1462
-  
+
      >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ngc.dukejournals.org/
@@ -1362,14 +1365,14 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; New German Critique Volume 40 ; 40 >
 
      }
-     
+
     {
-  
-    title < 
+
+    title <
       name = Nka: Journal of Contemporary African Art ;
       issn = 1075-7163 ;
       eissn = 2152-7792
-  
+
      >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://nka.dukejournals.org/
@@ -1399,15 +1402,15 @@
     }
 
     {
-  
-    title < 
+
+    title <
       name = Notre Dame Journal of Formal Logic ;
       issn = 0029-4527 ;
       eissn = 1939-0726
-  
+
 >
       plugin = needs.plugin
-      param[base_url] = http://projecteuclid.org/ndjfl
+      param[base_url] = http://projecteuclid.org/ndjfl/
       implicit < status ; status2 ; year ; name ; param[volume_name] >
 
       au < exists ; exists ; 1960 ; Notre Dame Journal of Formal Logic Volume 1 ; 1 >
@@ -1418,8 +1421,8 @@
       au < exists ; exists ; 1965 ; Notre Dame Journal of Formal Logic Volume 6 ; 6 >
       au < exists ; exists ; 1966 ; Notre Dame Journal of Formal Logic Volume 7 ; 7 >
       au < exists ; exists ; 1967 ; Notre Dame Journal of Formal Logic Volume 8 ; 8 >
-      au < exists ; exists ; 1968 ; Notre Dame Journal of Formal Logic Volume 9 ; 9 >      
-      au < exists ; exists ; 1969 ; Notre Dame Journal of Formal Logic Volume 10 ; 10 >      
+      au < exists ; exists ; 1968 ; Notre Dame Journal of Formal Logic Volume 9 ; 9 >
+      au < exists ; exists ; 1969 ; Notre Dame Journal of Formal Logic Volume 10 ; 10 >
       au < exists ; exists ; 1970 ; Notre Dame Journal of Formal Logic Volume 11 ; 11 >
       au < exists ; exists ; 1971 ; Notre Dame Journal of Formal Logic Volume 12 ; 12 >
       au < exists ; exists ; 1972 ; Notre Dame Journal of Formal Logic Volume 13 ; 13 >
@@ -1428,7 +1431,7 @@
       au < exists ; exists ; 1975 ; Notre Dame Journal of Formal Logic Volume 16 ; 16 >
       au < exists ; exists ; 1976 ; Notre Dame Journal of Formal Logic Volume 17 ; 17 >
       au < exists ; exists ; 1977 ; Notre Dame Journal of Formal Logic Volume 18 ; 18 >
-      au < exists ; exists ; 1978 ; Notre Dame Journal of Formal Logic Volume 19 ; 19 >      
+      au < exists ; exists ; 1978 ; Notre Dame Journal of Formal Logic Volume 19 ; 19 >
       au < exists ; exists ; 1979 ; Notre Dame Journal of Formal Logic Volume 20 ; 20 >
       au < exists ; exists ; 1980 ; Notre Dame Journal of Formal Logic Volume 21 ; 21 >
       au < exists ; exists ; 1981 ; Notre Dame Journal of Formal Logic Volume 22 ; 22 >
@@ -1438,8 +1441,8 @@
       au < exists ; exists ; 1985 ; Notre Dame Journal of Formal Logic Volume 26 ; 26 >
       au < exists ; exists ; 1986 ; Notre Dame Journal of Formal Logic Volume 27 ; 27 >
       au < exists ; exists ; 1987 ; Notre Dame Journal of Formal Logic Volume 28 ; 28 >
-      au < exists ; exists ; 1988 ; Notre Dame Journal of Formal Logic Volume 29 ; 29 >      
-      au < exists ; exists ; 1989 ; Notre Dame Journal of Formal Logic Volume 30 ; 30 >      
+      au < exists ; exists ; 1988 ; Notre Dame Journal of Formal Logic Volume 29 ; 29 >
+      au < exists ; exists ; 1989 ; Notre Dame Journal of Formal Logic Volume 30 ; 30 >
       au < exists ; exists ; 1990 ; Notre Dame Journal of Formal Logic Volume 31 ; 31 >
       au < exists ; exists ; 1991 ; Notre Dame Journal of Formal Logic Volume 32 ; 32 >
       au < exists ; exists ; 1992 ; Notre Dame Journal of Formal Logic Volume 33 ; 33 >
@@ -1468,12 +1471,12 @@
     }
 
     {
-  
-    title < 
+
+    title <
       name = Novel: A Forum on Fiction ;
       issn = 0029-5132 ;
       eissn = 1945-8509
-  
+
      >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://novel.dukejournals.org/
@@ -1498,12 +1501,12 @@
     }
 
     {
-  
-    title < 
+
+    title <
       name = Pedagogy ;
       issn = 1531-4200 ;
       eissn =  1533-6255
-  
+
       >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://pedagogy.dukejournals.org/
@@ -1526,12 +1529,12 @@
     }
 
     {
-  
-    title < 
+
+    title <
       name = Philosophical Review ;
       issn = 0031-8108 ;
       eissn = 1558-1470
-  
+
       >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://philreview.dukejournals.org/
@@ -1553,15 +1556,15 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Philosophical Review Volume 122 ; 122 >
 
   }
-  
-  
+
+
       {
-  
-    title < 
+
+    title <
       name = Poetics Today ;
       issn =  0333-5372 ;
       eissn = 1527-5507
-  
+
      >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://poeticstoday.dukejournals.org/
@@ -1583,15 +1586,15 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Poetics Today Volume 34 ; 34 >
 
      }
-     
-     
+
+
          {
-  
-    title < 
+
+    title <
       name = positions: asia critique ;
       issn = 1067-9847 ;
       eissn = 1527-8271
-  
+
 >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://positions.dukejournals.org/
@@ -1628,13 +1631,13 @@
       eissn = 0002-8207
 
     >
-    
+
     {
-    
+
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://pads.dukejournals.org/
-      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >  
-      
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
@@ -1652,16 +1655,16 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Publication of the American Dialect Society Volume 98 ; 98 >
 
     }
-  
+
   }
- 
+
     {
-  
-    title < 
+
+    title <
       name = Public Culture ;
       issn = 0899-2363 ;
       eissn = 1527-8018
-  
+
       >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://publicculture.dukejournals.org/
@@ -1694,14 +1697,14 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Public Culture Volume 25 ; 25 >
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = Radical History Review ;
       issn = 0163-6545 ;
       eissn = 1534-1453
-  
+
 >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://rhr.dukejournals.org/
@@ -1748,14 +1751,14 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Radical History Review Volume 2013 ; 2013 >
 
       }
-      
+
      {
-  
-    title < 
+
+    title <
       name = Small Axe ;
       issn = 0799-0537 ;
       eissn = 1534-6714
-  
+
       >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://smallaxe.dukejournals.org/
@@ -1776,14 +1779,14 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Small Axe Volume 17 ; 17 >
 
     }
-    
+
     {
-  
-    title < 
+
+    title <
       name = Social Science History ;
       issn = 0145-5532 ;
       eissn = 1527-8034
-  
+
       >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ssh.dukejournals.org/
@@ -1805,14 +1808,14 @@
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Social Science History Volume 37 ; 37 >
 
      }
-   
+
      {
-  
-    title < 
+
+    title <
       name = Social Text ;
       issn = 0164-2472 ;
       eissn = 1527-1951
-  
+
       >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://socialtext.dukejournals.org/
@@ -1833,15 +1836,15 @@
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; Social Text Volume 30 ; 30 >
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Social Text Volume 31 ; 31 >
 
-     }  
-     
+     }
+
      {
-   
-    title < 
+
+    title <
       name = The South Atlantic Quarterly ;
       issn = 0038-2876 ;
       eissn = 1527-8026
-  
+
       >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://saq.dukejournals.org/
@@ -1862,15 +1865,15 @@
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; The South Atlantic Quarterly Volume 111 ; 111 >
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; The South Atlantic Quarterly Volume 112 ; 112 >
 
-     }  
-     
+     }
+
      {
-  
-    title < 
+
+    title <
       name = Theater ;
       issn = 0161-0775 ;
       eissn = 1527-196X
-  
+
       >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://theater.dukejournals.org/
@@ -1920,15 +1923,15 @@
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; Theater Volume 42 ; 42 >
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Theater Volume 43 ; 43 >
 
-    } 
-    
+    }
+
     {
-  
-    title < 
+
+    title <
       name = Tikkun ;
       issn = 0887-9982 ;
       eissn = 2164-0041
-  
+
 >
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://tikkun.dukejournals.org/
@@ -1938,5 +1941,5 @@
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; Tikkun Volume 27 ; 27 >
       au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Tikkun Volume 28 ; 28 >
 
-  }   
+  }
      }
