@@ -586,8 +586,8 @@
 
     param[journal_id] = 133
 
-    au < manifest ; 2009 ; Clinical Medicine Insights: Therapeutics Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Therapeutics Volume 2 ; 2010 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Therapeutics Volume 1 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Therapeutics Volume 2 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Insights: Therapeutics Volume 3 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Insights: Therapeutics Volume 4 ; 2012 >
 
@@ -604,7 +604,7 @@
     param[journal_id] = 71
 
     au < manifest ; 2008 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 2 ; 2009 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 2 ; 2009 >
     au < manifest ; 2010 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 3 ; 2010 >
 
   }
@@ -619,9 +619,9 @@
 
     param[journal_id] = 75
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Urology Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Urology Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Urology Volume 4 ; 2010 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Urology Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Urology Volume 3 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Urology Volume 4 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Insights: Urology Volume 5 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Insights: Urology Volume 6 ; 2012 >
 
@@ -637,9 +637,9 @@
 
     param[journal_id] = 77
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Women's Health Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Women's Health Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Women's Health Volume 3 ; 2010 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Women's Health Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Women's Health Volume 2 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Women's Health Volume 3 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Insights: Women's Health Volume 4 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Insights: Women's Health Volume 5 ; 2012 >
 
@@ -655,8 +655,8 @@
 
     param[journal_id] = 164
 
-    au < manifest ; 2009 ; Clinical Medicine Reviews in Cardiology Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2010 >
+    au < testing ; 2009 ; Clinical Medicine Reviews in Cardiology Volume 1 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2010 >
 
   }
   
@@ -670,8 +670,8 @@
     
     param[journal_id] = 163
 
-    au < manifest ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2010 >
+    au < testing ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 2012 >
 
@@ -687,7 +687,7 @@
 
     param[journal_id] = 167
 
-    au < manifest ; 2009 ; Clinical Medicine Reviews in Patient Care Volume 1 ; 2009 >
+    au < testing ; 2009 ; Clinical Medicine Reviews in Patient Care Volume 1 ; 2009 >
     au < released ; 2011 ; Clinical Medicine Reviews in Patient Care Volume 2 ; 2011 >
 
   }
@@ -701,8 +701,8 @@
     >
     param[journal_id] = 166
 
-    au < manifest ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2010 >
+    au < testing ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 2012 >
 
@@ -718,8 +718,8 @@
 
     param[journal_id] = 165
 
-    au < manifest ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2010 >
+    au < testing ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Reviews in Vascular Health Volume 4 ; 2012 >
 
@@ -735,8 +735,8 @@
 
     param[journal_id] = 162
 
-    au < manifest ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2010 >
+    au < testing ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2010 >
     au < released ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 2011 >
     au < released ; 2012 ; Clinical Medicine Reviews in Women's Health Volume 4 ; 2012 >
 
@@ -752,10 +752,10 @@
 
     param[journal_id] = 23
 
-    au < manifest ; 2006 ; Drug Target Insights Volume 1 ; 2006 >
+    au < testing ; 2006 ; Drug Target Insights Volume 1 ; 2006 >
     au < manifest ; 2007 ; Drug Target Insights Volume 2 ; 2007 >
-    au < manifest ; 2008 ; Drug Target Insights Volume 3 ; 2008 >
-    au < manifest ; 2009 ; Drug Target Insights Volume 4 ; 2009 >
+    au < testing ; 2008 ; Drug Target Insights Volume 3 ; 2008 >
+    au < testing ; 2009 ; Drug Target Insights Volume 4 ; 2009 >
     au < released ; 2011 ; Drug Target Insights Volume 5 ; 2011 >
     au < released ; 2012 ; Drug Target Insights Volume 6 ; 2012 >
 
@@ -771,9 +771,9 @@
 
     param[journal_id] = 110
 
-    au < manifest ; 2008 ; Environmental Health Insights Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Environmental Health Insights Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Environmental Health Insights Volume 4 ; 2010 >
+    au < testing ; 2008 ; Environmental Health Insights Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Environmental Health Insights Volume 3 ; 2009 >
+    au < testing ; 2010 ; Environmental Health Insights Volume 4 ; 2010 >
     au < released ; 2011 ; Environmental Health Insights Volume 5 ; 2011 >
     au < released ; 2012 ; Environmental Health Insights Volume 6 ; 2012 >
 
