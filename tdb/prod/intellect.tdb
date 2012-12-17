@@ -541,17 +541,16 @@
         eissn = 2040-0918  
       >
       
-      param[journal_id] = mpc
+      param[journal_id] = mcp
       param[journal_issn] = 1740-8296
-      comment[notReady] = RU4494, incorrect URLs in manifest pages
 
-      au < notReady ; 2005 ; International Journal of Media & Cultural Politics Volume 1 ; 1 >
-      au < notReady ; 2006-2007 ; International Journal of Media & Cultural Politics Volume 2 ; 2 >
-      au < notReady ; 2007 ; International Journal of Media & Cultural Politics Volume 3 ; 3 >
-      au < notReady ; 2008 ; International Journal of Media & Cultural Politics Volume 4 ; 4 >
-      au < notReady ; 2009 ; International Journal of Media & Cultural Politics Volume 5 ; 5 >
-      au < notReady ; 2010-2011 ; International Journal of Media & Cultural Politics Volume 6 ; 6 >
-      au < notReady ; 2011 ; International Journal of Media & Cultural Politics Volume 7 ; 7 >
+      au < ready ; 2005 ; International Journal of Media & Cultural Politics Volume 1 ; 1 >
+      au < ready ; 2006-2007 ; International Journal of Media & Cultural Politics Volume 2 ; 2 >
+      au < ready ; 2007 ; International Journal of Media & Cultural Politics Volume 3 ; 3 >
+      au < ready ; 2008 ; International Journal of Media & Cultural Politics Volume 4 ; 4 >
+      au < ready ; 2009 ; International Journal of Media & Cultural Politics Volume 5 ; 5 >
+      au < ready ; 2010-2011 ; International Journal of Media & Cultural Politics Volume 6 ; 6 >
+      au < ready ; 2011 ; International Journal of Media & Cultural Politics Volume 7 ; 7 >
 
     }
 
