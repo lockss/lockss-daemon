@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.23 2012-12-14 18:54:04 clairegriffin Exp $
+ * $Id: PlatformUtil.java,v 1.24 2012-12-17 23:48:45 clairegriffin Exp $
  */
 
 /*
@@ -252,7 +252,7 @@ public class PlatformUtil {
     df.size = f.getTotalSpace() / 1024;
     df.avail = f.getUsableSpace() / 1024;
     df.used = df.size - (f.getFreeSpace() /1024);
-    df.percent = Math.ceil(df.used * 100.00 / df.avail);
+    df.percent = Math.ceil((df.size -df.avail) * 100.00 / df.size);
     df.percentString =  String.valueOf(Math.round(df.percent)) + "%";
     df.percent /= 100.00;
     df.fs = null;

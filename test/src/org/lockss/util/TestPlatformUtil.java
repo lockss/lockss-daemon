@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformUtil.java,v 1.11 2012-09-05 23:31:36 clairegriffin Exp $
+ * $Id: TestPlatformUtil.java,v 1.12 2012-12-17 23:48:45 clairegriffin Exp $
  */
 
 /*
@@ -123,7 +123,7 @@ public class TestPlatformUtil extends LockssTestCase {
     assertEquals(df.getAvail(), jdf.getAvail());
     assertEquals(df.getSize(), jdf.getSize());
     assertEquals(df.getUsed(), jdf.getUsed());
-//    assertEquals(df.getPercent(), jdf.getPercent());
+    assertEquals(df.getPercent(), jdf.getPercent(), 1.0);
     assertEquals(df.getPath(), jdf.getPath());
   }
 
