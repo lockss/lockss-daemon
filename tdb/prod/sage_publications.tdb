@@ -35689,7 +35689,7 @@ comment[mpj] = now published by Brill
 
         au < released ; 2010 ; Social Psychological and Personality Science Volume 1 ; 1 >
         au < released ; 2011 ; Social Psychological and Personality Science Volume 2 ; 2 >
-        au < testing ; 2012 ; Social Psychological and Personality Science Volume 3 ; 3 >
+        au < ready ; 2012 ; Social Psychological and Personality Science Volume 3 ; 3 >
         au < manifest ; 2013 ; Social Psychological and Personality Science Volume 4 ; 4 >
 
       }
@@ -35751,7 +35751,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://ssc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 1983 ; Social Science Computer Review Volume 1 ; 1 >
+        au < ready ; 1983 ; Social Science Computer Review Volume 1 ; 1 >
         au < manifest ; 1984 ; Social Science Computer Review Volume 2 ; 2 >
         au < manifest ; 1985 ; Social Science Computer Review Volume 3 ; 3 >
         au < manifest ; 1986 ; Social Science Computer Review Volume 4 ; 4 >
@@ -35963,7 +35963,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < released ; 2011 ; Society and Mental Health Volume 1 ; 1 >
-        au < testing ; 2012 ; Society and Mental Health Volume 2 ; 2 >
+        au < ready ; 2012 ; Society and Mental Health Volume 2 ; 2 >
         au < expected ; 2013 ; Society and Mental Health Volume 3 ; 3 >
 
       }
@@ -36138,9 +36138,9 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < ready ; 2004 ; Sociology of Education Volume 77 ; 77 >
-        au < testing ; 2005 ; Sociology of Education Volume 78 ; 78 >
+        au < ready ; 2005 ; Sociology of Education Volume 78 ; 78 >
         au < ready ; 2006 ; Sociology of Education Volume 79 ; 79 >
-        au < testing ; 2007 ; Sociology of Education Volume 80 ; 80 >
+        au < ready ; 2007 ; Sociology of Education Volume 80 ; 80 >
         au < released ; 2008 ; Sociology of Education Volume 81 ; 81 >
         au < released ; 2009 ; Sociology of Education Volume 82 ; 82 >
         au < released ; 2010 ; Sociology of Education Volume 83 ; 83 >
@@ -36176,14 +36176,14 @@ comment[mpj] = now published by Brill
         param[base_url] = http://sae.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 2000 ; South Asia Economic Journal Volume 1 ; 1 >
-        au < testing ; 2001 ; South Asia Economic Journal Volume 2 ; 2 >
+        au < ready ; 2000 ; South Asia Economic Journal Volume 1 ; 1 >
+        au < ready ; 2001 ; South Asia Economic Journal Volume 2 ; 2 >
         au < ready ; 2002 ; South Asia Economic Journal Volume 3 ; 3 >
-        au < testing ; 2003 ; South Asia Economic Journal Volume 4 ; 4 >
-        au < testing ; 2004 ; South Asia Economic Journal Volume 5 ; 5 >
-        au < testing ; 2005 ; South Asia Economic Journal Volume 6 ; 6 >
-        au < testing ; 2006 ; South Asia Economic Journal Volume 7 ; 7 >
-        au < testing ; 2007 ; South Asia Economic Journal Volume 8 ; 8 >
+        au < ready ; 2003 ; South Asia Economic Journal Volume 4 ; 4 >
+        au < ready ; 2004 ; South Asia Economic Journal Volume 5 ; 5 >
+        au < ready ; 2005 ; South Asia Economic Journal Volume 6 ; 6 >
+        au < ready ; 2006 ; South Asia Economic Journal Volume 7 ; 7 >
+        au < ready ; 2007 ; South Asia Economic Journal Volume 8 ; 8 >
         au < doNotProcess ; 2008 ; South Asia Economic Journal Volume 9 ; 9 >
         au < released ; 2009 ; South Asia Economic Journal Volume 10 ; 10 >
         au < released ; 2010 ; South Asia Economic Journal Volume 11 ; 11 >
