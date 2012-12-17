@@ -30969,22 +30969,22 @@ comment[mpj] = now published by Brill
         param[base_url] = http://psr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1997 ; Personality and Social Psychology Review Volume 1 ; 1 >
-        au < manifest ; 1998 ; Personality and Social Psychology Review Volume 2 ; 2 >
-        au < manifest ; 1999 ; Personality and Social Psychology Review Volume 3 ; 3 >
-        au < manifest ; 2000 ; Personality and Social Psychology Review Volume 4 ; 4 >
-        au < manifest ; 2001 ; Personality and Social Psychology Review Volume 5 ; 5 >
-        au < manifest ; 2002 ; Personality and Social Psychology Review Volume 6 ; 6 >
-        au < manifest ; 2003 ; Personality and Social Psychology Review Volume 7 ; 7 >
-        au < manifest ; 2004 ; Personality and Social Psychology Review Volume 8 ; 8 >
-        au < manifest ; 2005 ; Personality and Social Psychology Review Volume 9 ; 9 >
-        au < manifest ; 2006 ; Personality and Social Psychology Review Volume 10 ; 10 >
+        au < testing ; 1997 ; Personality and Social Psychology Review Volume 1 ; 1 >
+        au < testing ; 1998 ; Personality and Social Psychology Review Volume 2 ; 2 >
+        au < testing ; 1999 ; Personality and Social Psychology Review Volume 3 ; 3 >
+        au < testing ; 2000 ; Personality and Social Psychology Review Volume 4 ; 4 >
+        au < testing ; 2001 ; Personality and Social Psychology Review Volume 5 ; 5 >
+        au < testing ; 2002 ; Personality and Social Psychology Review Volume 6 ; 6 >
+        au < testing ; 2003 ; Personality and Social Psychology Review Volume 7 ; 7 >
+        au < testing ; 2004 ; Personality and Social Psychology Review Volume 8 ; 8 >
+        au < testing ; 2005 ; Personality and Social Psychology Review Volume 9 ; 9 >
+        au < testing ; 2006 ; Personality and Social Psychology Review Volume 10 ; 10 >
         au < doNotProcess ; 2007 ; Personality and Social Psychology Review Volume 11 ; 11 >
         au < doNotProcess ; 2008 ; Personality and Social Psychology Review Volume 12 ; 12 >
         au < doNotProcess ; 2009 ; Personality and Social Psychology Review Volume 13 ; 13 >
         au < released ; 2010 ; Personality and Social Psychology Review Volume 14 ; 14 >
         au < released ; 2011 ; Personality and Social Psychology Review Volume 15 ; 15 >
-        au < manifest ; 2012 ; Personality and Social Psychology Review Volume 16 ; 16 >
+        au < testing ; 2012 ; Personality and Social Psychology Review Volume 16 ; 16 >
         au < expected ; 2013 ; Personality and Social Psychology Review Volume 17 ; 17 >
 
       }
