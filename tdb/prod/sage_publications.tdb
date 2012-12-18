@@ -23574,36 +23574,36 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         param[base_url] = http://jom.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1975 ; Journal of Management Volume 1 ; 1 >
-        au < manifest ; 1976 ; Journal of Management Volume 2 ; 2 >
-        au < manifest ; 1977 ; Journal of Management Volume 3 ; 3 >
-        au < manifest ; 1978 ; Journal of Management Volume 4 ; 4 >
-        au < manifest ; 1979 ; Journal of Management Volume 5 ; 5 >
-        au < manifest ; 1980 ; Journal of Management Volume 6 ; 6 >
-        au < manifest ; 1981 ; Journal of Management Volume 7 ; 7 >
-        au < manifest ; 1982 ; Journal of Management Volume 8 ; 8 >
-        au < manifest ; 1983 ; Journal of Management Volume 9 ; 9 >
-        au < manifest ; 1984 ; Journal of Management Volume 10 ; 10 >
-        au < manifest ; 1985 ; Journal of Management Volume 11 ; 11 >
-        au < manifest ; 1986 ; Journal of Management Volume 12 ; 12 >
-        au < manifest ; 1987 ; Journal of Management Volume 13 ; 13 >
-        au < manifest ; 1988 ; Journal of Management Volume 14 ; 14 >
-        au < manifest ; 1989 ; Journal of Management Volume 15 ; 15 >
-        au < manifest ; 1990 ; Journal of Management Volume 16 ; 16 >
-        au < manifest ; 1991 ; Journal of Management Volume 17 ; 17 >
-        au < manifest ; 1992 ; Journal of Management Volume 18 ; 18 >
-        au < manifest ; 1993 ; Journal of Management Volume 19 ; 19 >
-        au < manifest ; 1994 ; Journal of Management Volume 20 ; 20 >
-        au < manifest ; 1995 ; Journal of Management Volume 21 ; 21 >
-        au < manifest ; 1996 ; Journal of Management Volume 22 ; 22 >
-        au < manifest ; 1997 ; Journal of Management Volume 23 ; 23 >
-        au < manifest ; 1998 ; Journal of Management Volume 24 ; 24 >
-        au < manifest ; 1999 ; Journal of Management Volume 25 ; 25 >
-        au < manifest ; 2000 ; Journal of Management Volume 26 ; 26 >
+        au < testing ; 1975 ; Journal of Management Volume 1 ; 1 >
+        au < testing ; 1976 ; Journal of Management Volume 2 ; 2 >
+        au < testing ; 1977 ; Journal of Management Volume 3 ; 3 >
+        au < testing ; 1978 ; Journal of Management Volume 4 ; 4 >
+        au < testing ; 1979 ; Journal of Management Volume 5 ; 5 >
+        au < testing ; 1980 ; Journal of Management Volume 6 ; 6 >
+        au < testing ; 1981 ; Journal of Management Volume 7 ; 7 >
+        au < testing ; 1982 ; Journal of Management Volume 8 ; 8 >
+        au < testing ; 1983 ; Journal of Management Volume 9 ; 9 >
+        au < testing ; 1984 ; Journal of Management Volume 10 ; 10 >
+        au < testing ; 1985 ; Journal of Management Volume 11 ; 11 >
+        au < testing ; 1986 ; Journal of Management Volume 12 ; 12 >
+        au < testing ; 1987 ; Journal of Management Volume 13 ; 13 >
+        au < testing ; 1988 ; Journal of Management Volume 14 ; 14 >
+        au < testing ; 1989 ; Journal of Management Volume 15 ; 15 >
+        au < testing ; 1990 ; Journal of Management Volume 16 ; 16 >
+        au < testing ; 1991 ; Journal of Management Volume 17 ; 17 >
+        au < testing ; 1992 ; Journal of Management Volume 18 ; 18 >
+        au < testing ; 1993 ; Journal of Management Volume 19 ; 19 >
+        au < testing ; 1994 ; Journal of Management Volume 20 ; 20 >
+        au < testing ; 1995 ; Journal of Management Volume 21 ; 21 >
+        au < testing ; 1996 ; Journal of Management Volume 22 ; 22 >
+        au < testing ; 1997 ; Journal of Management Volume 23 ; 23 >
+        au < testing ; 1998 ; Journal of Management Volume 24 ; 24 >
+        au < testing ; 1999 ; Journal of Management Volume 25 ; 25 >
+        au < testing ; 2000 ; Journal of Management Volume 26 ; 26 >
         au < doNotProcess ; 2001 ; Journal of Management Volume 27 ; 27 >
-        au < manifest ; 2002 ; Journal of Management Volume 28 ; 28 >
-        au < manifest ; 2003 ; Journal of Management Volume 29 ; 29 >
-        au < manifest ; 2004 ; Journal of Management Volume 30 ; 30 >
+        au < testing ; 2002 ; Journal of Management Volume 28 ; 28 >
+        au < testing ; 2003 ; Journal of Management Volume 29 ; 29 >
+        au < testing ; 2004 ; Journal of Management Volume 30 ; 30 >
         au < doNotProcess ; 2005 ; Journal of Management Volume 31 ; 31 >
         au < doNotProcess ; 2006 ; Journal of Management Volume 32 ; 32 >
         au < doNotProcess ; 2007 ; Journal of Management Volume 33 ; 33 >
@@ -23611,8 +23611,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2009 ; Journal of Management Volume 35 ; 35 >
         au < released ; 2010 ; Journal of Management Volume 36 ; 36 >
         au < released ; 2011 ; Journal of Management Volume 37 ; 37 >
-        au < manifest ; 2012 ; Journal of Management Volume 38 ; 38 >
-        au < manifest ; 2013 ; Journal of Management Volume 39 ; 39 >
+        au < testing ; 2012 ; Journal of Management Volume 38 ; 38 >
+        au < testing ; 2013 ; Journal of Management Volume 39 ; 39 >
 
       }
 
@@ -26630,13 +26630,13 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pps.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2006 ; Perspectives on Psychological Science Volume 1 ; 1 >
-        au < manifest ; 2007 ; Perspectives on Psychological Science Volume 2 ; 2 >
+        au < testing ; 2006 ; Perspectives on Psychological Science Volume 1 ; 1 >
+        au < testing ; 2007 ; Perspectives on Psychological Science Volume 2 ; 2 >
         au < released ; 2008 ; Perspectives on Psychological Science Volume 3 ; 3 >
         au < released ; 2009 ; Perspectives on Psychological Science Volume 4 ; 4 >
         au < released ; 2010 ; Perspectives on Psychological Science Volume 5 ; 5 >
         au < released ; 2011 ; Perspectives on Psychological Science Volume 6 ; 6 >
-        au < manifest ; 2012 ; Perspectives on Psychological Science Volume 7 ; 7 >
+        au < testing ; 2012 ; Perspectives on Psychological Science Volume 7 ; 7 >
         au < expected ; 2013 ; Perspectives on Psychological Science Volume 8 ; 8 >
 
       }
