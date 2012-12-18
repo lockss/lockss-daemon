@@ -15,10 +15,11 @@
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = 
+      param[journal_dir] = comitatus/
+      param[journal_id] = cjm
       implicit < status ; year ; name ; param[volume] >
       
-      comment[0] = content not online yet
+      au < exists ; 2012 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 43 ; 43 >
       
 
     }
