@@ -1261,12 +1261,15 @@
   
     title < 
       name = The Journal of Mathematics of Kyoto University ;
-      issn = 0023-608X ;
-      comment[continued_by] = 2156-2261 ;
+      issn = 0023-608X 
+    >
+    
+      comment[continued_by] = 2156-2261 
       comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
->
+
       plugin = needs.plugin
       param[base_url] = http://projecteuclid.org/kjm/
+      parm[journal_id] = kjm_2
       implicit < status ; year ; name ; param[volume_name] >
 
 
@@ -1409,15 +1412,16 @@
     
     {
   
-    title < 
+    title <
       name = Kyoto Journal of Mathematics ;
       issn =  2156-2261 ;
-      eissn = 2154-3321 ;
+      eissn = 2154-3321
+    >
+      
       comment[continued_from] = 0023-608X
-  
-      >
       plugin = needs.plugin
       param[base_url] =  http://projecteuclid.org/kjm/
+      param[journal_id] = kjm_3
       implicit < status ; year ; name ; param[volume_name] >
       comment[0] = formerly The Journal of Mathematics of Kyoto University, 1961-2009
       comment[1] = formerly Memoirs of the College of Science, University of Kyoto. Series A: Mathematics, 1950-1961
@@ -1540,13 +1544,15 @@
   
     title < 
       name = Memoirs of the College of Science, University of Kyoto. Series A: Mathematics ;
-      issn = 0368-8887 ;
-      comment[continued_by] = 2156-2261 ;
-      comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
-       >
+      issn = 0368-8887 
+    >
   
+      comment[continued_by] = 2156-2261 
+      comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
+
       plugin = needs.plugin
       param[base_url] = http://projecteuclid.org/kjm/
+      parm[journal_id] = kjm_1
       implicit < status ; year ; name ; param[volume_name] >
 
 
