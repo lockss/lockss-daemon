@@ -9,34 +9,30 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.HighWirePressH20Plugin</string>
+    <string>org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin</string>
   </entry>
-   <entry>
+  <entry>
     <string>plugin_parent_version</string>
     <string>65</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>HighWirePressH20Plugin (LOCKSS Triggered Content)</string>
-  </entry>
-   <entry>
-    <string>au_name</string>
-    <string>&quot;HighWire Press Plugin (H20 Triggered Content), Base URL %s, Volume %s&quot;, base_url, volume_name</string>
+    <string>HighWire Press Plugin (H20 for CLOCKSS Triggered Content)</string>
   </entry>
   <entry>
-  <string>au_permission_url</string>
-  <string>&quot;%slockss-permission.html&quot;,base_url</string>
+    <string>au_name</string>
+    <string>"HighWire Press Plugin (H20 for CLOCKSS Triggered Content), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
-   <entry>
-  <string>au_start_url</string>
-  <string>&quot;%sclockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%slockss-permission.html",base_url</string>
   </entry>
   <entry>
     <string>au_permission_checker_factory</string>
-    <string>org.lockss.plugin.highwire.TriggeredHighWirePermissionCheckerFactory</string>
+    <org.lockss.util.Default />
   </entry>
 </map>
