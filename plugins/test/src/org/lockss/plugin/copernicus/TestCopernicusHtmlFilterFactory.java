@@ -1,5 +1,5 @@
 /*
- * $Id: TestCopernicusHtmlFilterFactory.java,v 1.3 2012-12-12 22:03:56 alexandraohlson Exp $
+ * $Id: TestCopernicusHtmlFilterFactory.java,v 1.4 2012-12-18 21:12:17 alexandraohlson Exp $
  */
 /*
 
@@ -119,6 +119,70 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
   private static final String leftColumnFiltered =
       "<div class=\"page_colum_container CMSCONTAINER\" id=\"page_colum_left_container\">";
   
+  private static final String whiteSpacesV1 = 
+      "<a href=\"/1/1/2003/adgeo-1-1-2003.pdf\" >" +
+          "Full Article in PDF</a>" +
+          " (PDF, 131 KB)&nbsp;&nbsp;&nbsp;<br />" +
+          "<br />" +
+          "<b>" +
+          "Citation:</b>" +
+          " Howe,&nbsp;E., Stenseng,&nbsp;L., and Tscherning,&nbsp;C.&nbsp;C.: Analysis of one month of CHAMP state vector and accelerometer data for the recovery of the gravity potential, Adv. Geosci., 1, 1-4, doi:10.5194/adgeo-1-1-2003, 2003.&nbsp;&nbsp;&nbsp;<a href=\"/1/1/2003/adgeo-1-1-2003.bib\">" +
+          "Bibtex</a>" +
+          "&nbsp;&nbsp;&nbsp;<a href=\"/1/1/2003/adgeo-1-1-2003.ris\">" +
+          "EndNote</a>" +
+          "&nbsp;&nbsp;&nbsp;<a href=\"/1/1/2003/adgeo-1-1-2003.ris\">" +
+          "Reference Manager </a>" +
+          "&nbsp;&nbsp;&nbsp;<a href=\"/1/1/2003/adgeo-1-1-2003.xml\">" +
+          "XML</a>" +
+          "</span>" +
+          "<div style=\"padding-top: 150px;\">" +
+          "&nbsp;</div>" +
+          "</div>" +
+          "</div>" +
+          " </div>" +
+          " <div style=\"height: 1px; width: 622px;\">" +
+          "</div>" +
+          " </td>" +
+          " <td class=\"hintergrundfarbe_spalten page_columntable_colum\" style=\"border-right: none;\">" +
+          " </td>" +
+          " </tr>" +
+          "</table>" +
+          " </body>" +
+          "</html>";
+
+  private static final String whiteSpacesV2 = 
+      "<a href=\"/1/1/2003/adgeo-1-1-2003.pdf\" >" +
+          "Full Article in PDF</a>" +
+          " (PDF, 131 KB)" +
+          "&nbsp; &nbsp;<br />" +
+          "<br />" +
+          "<b>" +
+          "Citation:</b>" +
+          " Howe,&nbsp;E., Stenseng,&nbsp;L., and Tscherning,&nbsp;C.&nbsp;C.: Analysis of one month of CHAMP state vector and accelerometer data for the recovery of the gravity potential, Adv. Geosci., 1, 1-4, doi:10.5194/adgeo-1-1-2003, 2003.&nbsp; &nbsp;<a href=\"/1/1/2003/adgeo-1-1-2003.bib\">" +
+          "Bibtex</a>" +
+          "&nbsp; &nbsp;<a href=\"/1/1/2003/adgeo-1-1-2003.ris\">" +
+          "EndNote</a>" +
+          "&nbsp; &nbsp;<a href=\"/1/1/2003/adgeo-1-1-2003.ris\">" +
+          "Reference Manager </a>" +
+          "&nbsp; &nbsp;<a href=\"/1/1/2003/adgeo-1-1-2003.xml\">" +
+          "XML</a>" +
+          "</span>" +
+          "<div style=\"padding-top: 150px;\">" +
+          "&nbsp;</div>" +
+          "</div>" +
+          "</div>" +
+          " </div>" +
+          " <div style=\"height: 1px; width: 622px;\">" +
+          "</div>" +
+          " </td>" +
+          " <td class=\"hintergrundfarbe_spalten page_columntable_colum\" style=\"border-right: none;\">" +
+          " </td>" +
+          " </tr>" +
+          "</table>" +
+          " </body>" +
+          "</html>";
+
+  
   public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
@@ -152,7 +216,14 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
 
     assertEquals(leftColumnFiltered,StringUtil.fromInputStream(inA));
     
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpacesV1),
+        ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpacesV2),
+        ENC);
+    assertEquals(StringUtil.fromInputStream(inA),
+        StringUtil.fromInputStream(inB));
     
   }
 }
+
 

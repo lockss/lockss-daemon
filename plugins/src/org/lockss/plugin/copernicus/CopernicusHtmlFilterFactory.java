@@ -1,5 +1,5 @@
 /*
-* $Id: CopernicusHtmlFilterFactory.java,v 1.4 2012-12-12 22:03:56 alexandraohlson Exp $
+* $Id: CopernicusHtmlFilterFactory.java,v 1.5 2012-12-18 21:12:17 alexandraohlson Exp $
 */
 
 /*
@@ -44,6 +44,7 @@ import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
@@ -89,16 +90,14 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
         new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters))));
 
     Reader reader = FilterUtil.getReader(htmlFilter, encoding);
-    Reader filtReader = makeFilteredReader(reader);
-    return new ReaderInputStream(filtReader);
-  }
-
-  static Reader makeFilteredReader(Reader reader) {
-    List tagList = ListUtil.list(
-        // some comments contain a timestamp
-        new TagPair("<!--", "-->")
-        );
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
-    return new WhiteSpaceFilter(tagFilter);
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader,
+        ListUtil.list(   
+            // some comments contain a timestamp
+            new TagPair("<!--", "-->")
+            ));   
+    // Use of "&nbsp;" or " " inconsistent over time
+    Reader stringFilter = new StringFilter(tagFilter, "&nbsp;", " ");
+    return new ReaderInputStream(new WhiteSpaceFilter(stringFilter));   
+    
   }
 }
