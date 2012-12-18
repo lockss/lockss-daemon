@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Mid-American Studies Association
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  param[base_url] = http://muse.jhu.edu/
+  param[journal_dir] = american_studies
+  attr[journal_id] = ams
+
+  {
+    title <
+      name = American Studies ;
+      issn = 0026-3079 ;
+      eissn = 2153-6856 ;
+      issnl = 0026-3079
+    >
+
+    au < manifest ; 2007 ; American Studies Volume 48 ; 48 >
+    au < manifest ; 2008 ; American Studies Volume 49 ; 49 >
+    au < manifest ; 2009 ; American Studies Volume 50 ; 50 >
+    au < manifest ; 2010 ; American Studies Volume 51 ; 51 >
+
+  }
+
+}
