@@ -23,7 +23,7 @@
       au < notReady ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 2 ; 2 >
       au < notReady ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 3 ; 3 >
       au < notReady ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 4 ; 4 >
-      au < notReady ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 5 ; 5 >
+      au < ready ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 5 ; 5 >
       au < ready ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 6 ; 6 >
       au < notReady ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 7 ; 7 >
       au < notReady ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 8 ; 8 >
@@ -541,12 +541,12 @@
       param[home_url] = http://www.social-geography.net/
       comment[notReady] = low agreement, iframe
 
-      au < notReady ; 2005 ; 2005 ; Social Geography (SG) Volume 1 ; 1 >
+      au < ready ; 2005 ; 2005 ; Social Geography (SG) Volume 1 ; 1 >
       au < notReady ; 2007 ; 2007 ; Social Geography (SG) Volume 2 ; 2 >
       au < notReady ; 2008 ; 2008 ; Social Geography (SG) Volume 3 ; 3 >
-      au < notReady ; 2009 ; 2009 ; Social Geography (SG) Volume 4 ; 4 >
-      au < notReady ; 2010 ; 2010 ; Social Geography (SG) Volume 5 ; 5 >
-      au < notReady ; 2011 ; 2011 ; Social Geography (SG) Volume 6 ; 6 >
+      au < ready ; 2009 ; 2009 ; Social Geography (SG) Volume 4 ; 4 >
+      au < ready ; 2010 ; 2010 ; Social Geography (SG) Volume 5 ; 5 >
+      au < ready ; 2011 ; 2011 ; Social Geography (SG) Volume 6 ; 6 >
       au < notReady ; 2012 ; 2012 ; Social Geography (SG) Volume 7 ; 7 >
     
    }
@@ -562,8 +562,8 @@
       param[home_url] = http://www.solid-earth.net/
       comment[notReady] = low agreement, iframe
 
-      au < notReady ; 2010 ; 2010 ; Solid Earth (SE) Volume 1 ; 1 >
-      au < notReady ; 2011 ; 2011 ; Solid Earth (SE) Volume 2 ; 2 >
+      au < ready ; 2010 ; 2010 ; Solid Earth (SE) Volume 1 ; 1 >
+      au < ready ; 2011 ; 2011 ; Solid Earth (SE) Volume 2 ; 2 >
       au < notReady ; 2012 ; 2012 ; Solid Earth (SE) Volume 3 ; 3 >
     
    }
@@ -580,8 +580,8 @@
       comment[notReady] = low agreement, iframe
 
       au < notReady ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 1 ; 1 >
-      au < notReady ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 2 ; 2 >
-      au < notReady ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 3 ; 3 >
+      au < ready ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 2 ; 2 >
+      au < ready ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 3 ; 3 >
       au < notReady ; 2009 ; 2009 ; Stephan Mueller Special Publication Series (SMSPS) Volume 4 ; 4 >
     
    }
@@ -594,9 +594,8 @@
     
       param[base_url] = http://www.surv-perspect-integr-environ-soc.net/
       param[home_url] = http://www.surveys-and-perspectives-integrating-environment-and-society.net/
-      comment[notReady] = low agreement, iframe
 
-      au < notReady ; 2008 ; 2008 ; Surveys and Perspectives Integrating Environment and Society (SAPIENS) Volume 1 ; 1 >
+      au < ready ; 2008 ; 2008 ; Surveys and Perspectives Integrating Environment and Society (SAPIENS) Volume 1 ; 1 >
     
    }
     
