@@ -114,6 +114,8 @@
       <string>2,&quot;^%s(content|lookup/volpage)/%s/.*(cited-by|patientinform-links|related-urls)=yes&quot;, base_url, volume_name</string>
       <string>2,&quot;^%scontent/%s/.*/href/?$&quot;, base_url, volume_name</string>
       <string>2,&quot;^%slookup/volpage/%s(/[^/]+)?$&quot;, base_url, volume_name</string>
+      <!-- RU4166: exclude oxford supplement author-index pages, e.g.: http://humrep.oxfordjournals.org/content/26/suppl_1.author-index -->
+      <string>2,&quot;^%scontent/%s/suppl_[0-9]*\.author-index$&quot;, base_url, volume_name</string>
       <string>1,&quot;^%s(content|lookup/volpage)/%s(/|\.)&quot;, base_url, volume_name</string>
       <string>1,&quot;^%s(cgi/content/[^/]+/%s|content/vol%s)/&quot;, base_url, volume_name, volume_name</string>
       <string>1,&quot;^%s[^?]*DC(Supplemental|[0-9])&quot;, base_url</string>
