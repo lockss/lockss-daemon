@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsServlet.java,v 1.2 2012-10-03 18:04:27 fergaloy-sf Exp $
+ * $Id: CounterReportsServlet.java,v 1.3 2012-12-18 20:05:24 fergaloy-sf Exp $
  */
 
 /*
@@ -160,7 +160,12 @@ public class CounterReportsServlet extends LockssServlet {
     if (!counterReportsManager.isReady()) {
       // Yes: Report the problem.
       errMsg = "COUNTER reports are not enabled.";
-      displayForm();
+      Page page = newPage();
+      addJavaScript(page);
+      ServletUtil.layoutExplanationBlock(page, EXPLANATION);
+      layoutErrorBlock(page);
+      endPage(page);
+      return;
     }
 
     // The form needs to be shown when no parameters have been passed.
