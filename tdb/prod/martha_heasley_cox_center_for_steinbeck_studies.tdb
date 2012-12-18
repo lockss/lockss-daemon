@@ -24,4 +24,20 @@
  
   }
 
+  {
+    title <
+      name = Steinbeck Review ;
+      issn = 1546-007X ;
+      eissn = 1938-6214 ;
+      issnl = 1546-007X
+    >
+
+    param[journal_dir] = steinbeck_review
+    attr[journal_id] = str
+
+    au < manifest ; 2006 ; Steinbeck Review Volume 3 ; 3 >
+    au < manifest ; 2007 ; Steinbeck Review Volume 4 ; 4 >
+
+  }
+
 }
