@@ -2,6 +2,7 @@
 
   publisher <
     name = Whiting and Birch ;
+    info[back] = 2011 ;
     info[contract] = 2012 ;
     info[tester] = 7
     
@@ -103,7 +104,7 @@
       comment[status] = New journal in production first issue expected 2012
       param[journal_issn] = 1987-8710
 
-      au < doesNotExist ; doesNotExist ; 0 ; Journal of Social Policy and Social Work in Transition Volume 1 ; 1 >
+      au < exists ; exists ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 1 ; 1 >
     
   }
 
