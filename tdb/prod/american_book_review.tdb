@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = American Book Review
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  param[base_url] = http://muse.jhu.edu/
+  param[journal_dir] = radical_history_review
+  attr[journal_id] = rhr
+
+  {
+    title <
+      name = American Book Review ;
+      issn = 0149-9408 ;
+      eissn = 2153-4578 ;
+      issnl = 0149-9408
+    >
+
+    au < manifest ; 2009-2010 ; American Book Review Volume 31 ; 31 >
+    au < manifest ; 2010-2011 ; American Book Review Volume 32 ; 32 >
+    au < manifest ; 2011-2012 ; American Book Review Volume 33 ; 33 >
+
+  }
+
+}
