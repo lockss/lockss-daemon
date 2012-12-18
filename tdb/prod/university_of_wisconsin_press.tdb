@@ -280,6 +280,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = land_economics
+      attr[journal_id] = lde
       implicit < status ; year ; name ; param[volume] >
       
       au < exists ; 2008 ; Land Economics Volume 84 ; 84 >

@@ -17,6 +17,7 @@
     >
 
     param[journal_dir] = alabama_review
+    attr[journal_id] = ala
     
     au < exists ; 2007 ; Alabama Review Volume 60 ; 60 >
     au < exists ; 2008 ; Alabama Review Volume 61 ; 61 >
