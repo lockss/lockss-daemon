@@ -101,9 +101,11 @@
       
     >
       comment[status] = New journal in production first issue expected 2012
+      comment[doesNotExist] = volume 1 pdf available in http://www.whitingbirch.net/
       param[journal_issn] = 1987-8710
 
-      au < doesNotExist ; 0 ; Journal of Social Policy and Social Work in Transition Volume 1 ; 1 >
+      au < doesNotExist ; 2010 ; Journal of Social Policy and Social Work in Transition Volume 1 ; 1 >
+      au < exists ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
     
   }
 
