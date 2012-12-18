@@ -570,11 +570,14 @@
       eissn = 1205-7533
       >
 
-    comment[0] = formerly Journal of the Fisheries Research Board of Canada (1938 - 1979)
-    comment[1] = formerly Journal of the Biological Board of Canada (1934 - 1937)
-    comment[2] = formerly Contributions to Canadian Biology and Fisheries (1901 - 1933)
-         
-    param[journal_id] = cjfas
+    comment[0] = formerly Contributions to Canadian Biology and Fisheries (1901 - 1933) journal_id = ccbf
+    comment[1] = formerly Journal of the Biological Board of Canada (1934 - 1937) journal_id = jbbc
+    comment[2] = formerly Journal of the Fisheries Research Board of Canada (1938 - 1979) journal_id = jfrbc
+    comment[3] = now journal_id = cjfas
+    
+    {
+    
+    param[journal_id] = ccbf
     
     au < exists ; exists ; 1901 ; Canadian Journal of Fisheries and Aquatic Sciences Volume a ; a >
     au < exists ; exists ; 1906 ; Canadian Journal of Fisheries and Aquatic Sciences Volume b ; b >
@@ -595,9 +598,23 @@
     au < exists ; exists ; 1931 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 6 ; 6 >
     au < exists ; exists ; 1932 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 7 ; 7 >
     au < exists ; exists ; 1933 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 8 ; 8 >
+    
+    }
+    
+    {
+    
+    param[journal_id] = jbbc
+    
     au < exists ; exists ; 1934-1935 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 1 ; 1 >
     au < exists ; exists ; 1936 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 2 ; 2 >
     au < exists ; exists ; 1937 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 3 ; 3 >
+    
+    }
+    
+    {
+    
+    param[journal_id] = jfrbc
+    
     au < exists ; exists ; 1938 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 4a ; 4a >
     au < exists ; exists ; 1939 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 4b ; 4b >
     au < exists ; exists ; 1940 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 5a ; 5a >
@@ -640,6 +657,13 @@
     au < exists ; exists ; 1977 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 34 ; 34 >
     au < exists ; exists ; 1978 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 35 ; 35 >
     au < exists ; exists ; 1979 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 36 ; 36 >
+
+    }
+    
+    {
+    
+    param[journal_id] = cjfas
+    
     au < exists ; exists ; 1980 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 37 ; 37 >
     au < exists ; exists ; 1981 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 38 ; 38 >
     au < exists ; exists ; 1982 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 39 ; 39 >
@@ -673,6 +697,8 @@
     au < exists ; exists ; 2010 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 67 ; 67 >
     au < exists ; exists ; 2011 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 68 ; 68 >
     au < exists ; exists ; 2012 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 69 ; 69 >
+    
+    }
 
     }
     

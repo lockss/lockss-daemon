@@ -1,0 +1,676 @@
+{
+
+  publisher <
+    name = Geological Society of London ;
+    info[contract] = 2013 ;
+    info[tester] = 4
+  >
+  
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    implicit < status1 ; status ; year ; name ; param[volume_name] >
+
+  {
+  
+    title <
+      name = Engineering Geology Special Publications ;
+      issn = 0267-9914 ;
+      eissn = 2041-4730 ;
+      issnl = 0267-9914
+    >
+    param[base_url] = http://egsp.lyellcollection.org/
+
+    au < exists ; exists ; 1986 ; Engineering Geology Special Publications Volume 1 ; 1 >
+    au < exists ; exists ; 1986 ; Engineering Geology Special Publications Volume 2 ; 2 >
+    au < exists ; exists ; 1986 ; Engineering Geology Special Publications Volume 3 ; 3 >
+    au < exists ; exists ; 1987 ; Engineering Geology Special Publications Volume 4 ; 4 >
+    au < exists ; exists ; 1988 ; Engineering Geology Special Publications Volume 5 ; 5 >
+    au < exists ; exists ; 1990 ; Engineering Geology Special Publications Volume 6 ; 6 >
+    au < exists ; exists ; 1991 ; Engineering Geology Special Publications Volume 7 ; 7 >
+    au < doesNotExist ; doesNotExist ; 0 ; Engineering Geology Special Publications Volume 8 ; 8 >
+    au < doesNotExist ; doesNotExist ; 0 ; Engineering Geology Special Publications Volume 9 ; 9 >
+    au < exists ; exists ; 1995 ; Engineering Geology Special Publications Volume 10 ; 10 >
+    au < exists ; exists ; 1996 ; Engineering Geology Special Publications Volume 11 ; 11 >
+    au < exists ; exists ; 1997 ; Engineering Geology Special Publications Volume 12 ; 12 >
+    au < exists ; exists ; 1998 ; Engineering Geology Special Publications Volume 13 ; 13 >
+    au < exists ; exists ; 1998 ; Engineering Geology Special Publications Volume 14 ; 14 >
+    au < exists ; exists ; 1998 ; Engineering Geology Special Publications Volume 15 ; 15 >
+    au < exists ; exists ; 1999 ; Engineering Geology Special Publications Volume 16 ; 16 >
+    au < exists ; exists ; 2001 ; Engineering Geology Special Publications Volume 17 ; 17 >
+    au < exists ; exists ; 2001 ; Engineering Geology Special Publications Volume 18 ; 18 >
+    au < exists ; exists ; 2002 ; Engineering Geology Special Publications Volume 19 ; 19 >
+    au < exists ; exists ; 2004 ; Engineering Geology Special Publications Volume 20 ; 20 >
+    au < exists ; exists ; 2006 ; Engineering Geology Special Publications Volume 21 ; 21 >
+    au < exists ; exists ; 2009 ; Engineering Geology Special Publications Volume 22 ; 22 >
+    au < exists ; exists ; 2010 ; Engineering Geology Special Publications Volume 23 ; 23 >
+    au < exists ; exists ; 2011 ; Engineering Geology Special Publications Volume 24 ; 24 >
+    au < exists ; exists ; 2012 ; Engineering Geology Special Publications Volume 25 ; 25 >
+    au < exists ; exists ; 2012 ; Engineering Geology Special Publications Volume 26 ; 26 >
+    
+  }
+
+  {
+  
+    title <
+      name = Geochemistry: Exploration, Environment, Analysis ;
+      issn = 1467-7873 ;
+      eissn = 2041-4943 ;
+      issnl = 1467-7873
+    >
+    param[base_url] = http://geea.lyellcollection.org/
+
+    au < exists ; exists ; 2001 ; Geochemistry: Exploration, Environment, Analysis Volume 1 ; 1 >
+    au < exists ; exists ; 2002 ; Geochemistry: Exploration, Environment, Analysis Volume 2 ; 2 >
+    au < exists ; exists ; 2003 ; Geochemistry: Exploration, Environment, Analysis Volume 3 ; 3 >
+    au < exists ; exists ; 2004 ; Geochemistry: Exploration, Environment, Analysis Volume 4 ; 4 >
+    au < exists ; exists ; 2005 ; Geochemistry: Exploration, Environment, Analysis Volume 5 ; 5 >
+    au < exists ; exists ; 2006 ; Geochemistry: Exploration, Environment, Analysis Volume 6 ; 6 >
+    au < exists ; exists ; 2007 ; Geochemistry: Exploration, Environment, Analysis Volume 7 ; 7 >
+    au < exists ; exists ; 2008 ; Geochemistry: Exploration, Environment, Analysis Volume 8 ; 8 >
+    au < exists ; exists ; 2009 ; Geochemistry: Exploration, Environment, Analysis Volume 9 ; 9 >
+    au < exists ; exists ; 2010 ; Geochemistry: Exploration, Environment, Analysis Volume 10 ; 10 >
+    au < exists ; exists ; 2011 ; Geochemistry: Exploration, Environment, Analysis Volume 11 ; 11 >
+    au < exists ; exists ; 2012 ; Geochemistry: Exploration, Environment, Analysis Volume 12 ; 12 >
+
+  }
+
+  {
+  
+    title <
+      name = Geological Society of London Memoirs ;
+      issn = 0435-4052 ;
+      eissn = 2041-4722 ;
+      issnl = 0435-4052
+    >
+    param[base_url] = http://mem.lyellcollection.org/
+
+    au < exists ; exists ; 1958 ; Geological Society of London Memoirs Volume 1 ; 1 >
+    au < exists ; exists ; 1960 ; Geological Society of London Memoirs Volume 2 ; 2 >
+    au < exists ; exists ; 1962 ; Geological Society of London Memoirs Volume 3 ; 3 >
+    au < exists ; exists ; 1968 ; Geological Society of London Memoirs Volume 4 ; 4 >
+    au < exists ; exists ; 1971 ; Geological Society of London Memoirs Volume 5 ; 5 >
+    au < exists ; exists ; 1971 ; Geological Society of London Memoirs Volume 6 ; 6 >
+    au < exists ; exists ; 1973 ; Geological Society of London Memoirs Volume 7 ; 7 >
+    au < exists ; exists ; 1978 ; Geological Society of London Memoirs Volume 8 ; 8 >
+    au < exists ; exists ; 1985 ; Geological Society of London Memoirs Volume 9 ; 9 >
+    au < exists ; exists ; 1985 ; Geological Society of London Memoirs Volume 10 ; 10 >
+    au < exists ; exists ; 1986 ; Geological Society of London Memoirs Volume 11 ; 11 >
+    au < exists ; exists ; 1990 ; Geological Society of London Memoirs Volume 12 ; 12 >
+    au < exists ; exists ; 1992 ; Geological Society of London Memoirs Volume 13 ; 13 >
+    au < exists ; exists ; 1991 ; Geological Society of London Memoirs Volume 14 ; 14 >
+    au < exists ; exists ; 1994 ; Geological Society of London Memoirs Volume 15 ; 15 >
+    au < exists ; exists ; 1995 ; Geological Society of London Memoirs Volume 16 ; 16 >
+    au < exists ; exists ; 1997 ; Geological Society of London Memoirs Volume 17 ; 17 >
+    au < exists ; exists ; 1999 ; Geological Society of London Memoirs Volume 18 ; 18 >
+    au < exists ; exists ; 1999 ; Geological Society of London Memoirs Volume 19 ; 19 >
+    au < exists ; exists ; 2003 ; Geological Society of London Memoirs Volume 20 ; 20 >
+    au < exists ; exists ; 2002 ; Geological Society of London Memoirs Volume 21 ; 21 >
+    au < exists ; exists ; 2002 ; Geological Society of London Memoirs Volume 22 ; 22 >
+    au < exists ; exists ; 2002 ; Geological Society of London Memoirs Volume 23 ; 23 >
+    au < exists ; exists ; 2002 ; Geological Society of London Memoirs Volume 24 ; 24 >
+    au < exists ; exists ; 2002 ; Geological Society of London Memoirs Volume 25 ; 25 >
+    au < exists ; exists ; 2002 ; Geological Society of London Memoirs Volume 26 ; 26 >
+    au < exists ; exists ; 2003 ; Geological Society of London Memoirs Volume 27 ; 27 >
+    au < exists ; exists ; 2003 ; Geological Society of London Memoirs Volume 28 ; 28 >
+    au < exists ; exists ; 2004 ; Geological Society of London Memoirs Volume 29 ; 29 >
+    au < exists ; exists ; 2004 ; Geological Society of London Memoirs Volume 30 ; 30 >
+    au < exists ; exists ; 2005 ; Geological Society of London Memoirs Volume 31 ; 31 >
+    au < exists ; exists ; 2006 ; Geological Society of London Memoirs Volume 32 ; 32 >
+    au < exists ; exists ; 2008 ; Geological Society of London Memoirs Volume 33 ; 33 >
+    au < exists ; exists ; 2011 ; Geological Society of London Memoirs Volume 34 ; 34 >
+    au < exists ; exists ; 2011 ; Geological Society of London Memoirs Volume 35 ; 35 >
+    au < exists ; exists ; 2012 ; Geological Society of London Memoirs Volume 36 ; 36 >
+
+  }
+
+  {
+  
+    title <
+      name = Geological Society of London Special Publications ;
+      issn = 0305-8719 ;
+      eissn = 2041-4927 ;
+      issnl = 0305-8719
+    >
+    param[base_url] = http://sp.lyellcollection.org/
+
+    au < exists ; exists ; 1964 ; Geological Society of London Special Publications Volume 1 ; 1 >
+    au < exists ; exists ; 1967 ; Geological Society of London Special Publications Volume 2 ; 2 >
+    au < exists ; exists ; 1969 ; Geological Society of London Special Publications Volume 3 ; 3 >
+    au < exists ; exists ; 1974 ; Geological Society of London Special Publications Volume 4 ; 4 >
+    au < exists ; exists ; 1971 ; Geological Society of London Special Publications Volume 5 ; 5 >
+    au < exists ; exists ; 1978 ; Geological Society of London Special Publications Volume 6 ; 6 >
+    au < exists ; exists ; 1977 ; Geological Society of London Special Publications Volume 7 ; 7 >
+    au < exists ; exists ; 1979 ; Geological Society of London Special Publications Volume 8 ; 8 >
+    au < exists ; exists ; 1981 ; Geological Society of London Special Publications Volume 9 ; 9 >
+    au < exists ; exists ; 1982 ; Geological Society of London Special Publications Volume 10 ; 10 >
+    au < exists ; exists ; 1983 ; Geological Society of London Special Publications Volume 11 ; 11 >
+    au < exists ; exists ; 1983 ; Geological Society of London Special Publications Volume 12 ; 12 >
+    au < exists ; exists ; 1984 ; Geological Society of London Special Publications Volume 13 ; 13 >
+    au < exists ; exists ; 1984 ; Geological Society of London Special Publications Volume 14 ; 14 >
+    au < exists ; exists ; 1984 ; Geological Society of London Special Publications Volume 15 ; 15 >
+    au < exists ; exists ; 1984 ; Geological Society of London Special Publications Volume 16 ; 16 >
+    au < exists ; exists ; 1984 ; Geological Society of London Special Publications Volume 17 ; 17 >
+    au < exists ; exists ; 1985 ; Geological Society of London Special Publications Volume 18 ; 18 >
+    au < exists ; exists ; 1986 ; Geological Society of London Special Publications Volume 19 ; 19 >
+    au < exists ; exists ; 1986 ; Geological Society of London Special Publications Volume 20 ; 20 >
+    au < exists ; exists ; 1986 ; Geological Society of London Special Publications Volume 21 ; 21 >
+    au < exists ; exists ; 1986 ; Geological Society of London Special Publications Volume 22 ; 22 >
+    au < exists ; exists ; 1986 ; Geological Society of London Special Publications Volume 23 ; 23 >
+    au < exists ; exists ; 1986 ; Geological Society of London Special Publications Volume 24 ; 24 >
+    au < exists ; exists ; 1986 ; Geological Society of London Special Publications Volume 25 ; 25 >
+    au < exists ; exists ; 1987 ; Geological Society of London Special Publications Volume 26 ; 26 >
+    au < exists ; exists ; 1987 ; Geological Society of London Special Publications Volume 27 ; 27 >
+    au < exists ; exists ; 1987 ; Geological Society of London Special Publications Volume 28 ; 28 >
+    au < exists ; exists ; 1987 ; Geological Society of London Special Publications Volume 29 ; 29 >
+    au < exists ; exists ; 1987 ; Geological Society of London Special Publications Volume 30 ; 30 >
+    au < exists ; exists ; 1987 ; Geological Society of London Special Publications Volume 31 ; 31 >
+    au < exists ; exists ; 1987 ; Geological Society of London Special Publications Volume 32 ; 32 >
+    au < exists ; exists ; 1987 ; Geological Society of London Special Publications Volume 33 ; 33 >
+    au < exists ; exists ; 1987 ; Geological Society of London Special Publications Volume 34 ; 34 >
+    au < exists ; exists ; 1987 ; Geological Society of London Special Publications Volume 35 ; 35 >
+    au < exists ; exists ; 1987 ; Geological Society of London Special Publications Volume 36 ; 36 >
+    au < exists ; exists ; 1988 ; Geological Society of London Special Publications Volume 37 ; 37 >
+    au < exists ; exists ; 1988 ; Geological Society of London Special Publications Volume 38 ; 38 >
+    au < exists ; exists ; 1988 ; Geological Society of London Special Publications Volume 39 ; 39 >
+    au < exists ; exists ; 1988 ; Geological Society of London Special Publications Volume 40 ; 40 >
+    au < exists ; exists ; 1989 ; Geological Society of London Special Publications Volume 41 ; 41 >
+    au < exists ; exists ; 1989 ; Geological Society of London Special Publications Volume 42 ; 42 >
+    au < exists ; exists ; 1989 ; Geological Society of London Special Publications Volume 43 ; 43 >
+    au < exists ; exists ; 1989 ; Geological Society of London Special Publications Volume 44 ; 44 >
+    au < exists ; exists ; 1989 ; Geological Society of London Special Publications Volume 45 ; 45 >
+    au < exists ; exists ; 1989 ; Geological Society of London Special Publications Volume 46 ; 46 >
+    au < exists ; exists ; 1989 ; Geological Society of London Special Publications Volume 47 ; 47 >
+    au < exists ; exists ; 1990 ; Geological Society of London Special Publications Volume 48 ; 48 >
+    au < exists ; exists ; 1990 ; Geological Society of London Special Publications Volume 49 ; 49 >
+    au < exists ; exists ; 1990 ; Geological Society of London Special Publications Volume 50 ; 50 >
+    au < exists ; exists ; 1990 ; Geological Society of London Special Publications Volume 51 ; 51 >
+    au < exists ; exists ; 1990 ; Geological Society of London Special Publications Volume 52 ; 52 >
+    au < exists ; exists ; 1990 ; Geological Society of London Special Publications Volume 53 ; 53 >
+    au < exists ; exists ; 1990 ; Geological Society of London Special Publications Volume 54 ; 54 >
+    au < exists ; exists ; 1990 ; Geological Society of London Special Publications Volume 55 ; 55 >
+    au < exists ; exists ; 1991 ; Geological Society of London Special Publications Volume 56 ; 56 >
+    au < exists ; exists ; 1991 ; Geological Society of London Special Publications Volume 57 ; 57 >
+    au < exists ; exists ; 1991 ; Geological Society of London Special Publications Volume 58 ; 58 >
+    au < exists ; exists ; 1991 ; Geological Society of London Special Publications Volume 59 ; 59 >
+    au < exists ; exists ; 1992 ; Geological Society of London Special Publications Volume 60 ; 60 >
+    au < exists ; exists ; 1992 ; Geological Society of London Special Publications Volume 61 ; 61 >
+    au < exists ; exists ; 1992 ; Geological Society of London Special Publications Volume 62 ; 62 >
+    au < exists ; exists ; 1992 ; Geological Society of London Special Publications Volume 63 ; 63 >
+    au < exists ; exists ; 1992 ; Geological Society of London Special Publications Volume 64 ; 64 >
+    au < exists ; exists ; 1992 ; Geological Society of London Special Publications Volume 65 ; 65 >
+    au < exists ; exists ; 1992 ; Geological Society of London Special Publications Volume 66 ; 66 >
+    au < exists ; exists ; 1992 ; Geological Society of London Special Publications Volume 67 ; 67 >
+    au < exists ; exists ; 1992 ; Geological Society of London Special Publications Volume 68 ; 68 >
+    au < exists ; exists ; 1992 ; Geological Society of London Special Publications Volume 69 ; 69 >
+    au < exists ; exists ; 1993 ; Geological Society of London Special Publications Volume 70 ; 70 >
+    au < exists ; exists ; 1993 ; Geological Society of London Special Publications Volume 71 ; 71 >
+    au < exists ; exists ; 1993 ; Geological Society of London Special Publications Volume 72 ; 72 >
+    au < exists ; exists ; 1993 ; Geological Society of London Special Publications Volume 73 ; 73 >
+    au < exists ; exists ; 1993 ; Geological Society of London Special Publications Volume 74 ; 74 >
+    au < exists ; exists ; 1993 ; Geological Society of London Special Publications Volume 75 ; 75 >
+    au < exists ; exists ; 1993 ; Geological Society of London Special Publications Volume 76 ; 76 >
+    au < exists ; exists ; 1994 ; Geological Society of London Special Publications Volume 77 ; 77 >
+    au < exists ; exists ; 1994 ; Geological Society of London Special Publications Volume 78 ; 78 >
+    au < exists ; exists ; 1994 ; Geological Society of London Special Publications Volume 79 ; 79 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 80 ; 80 >
+    au < exists ; exists ; 1994 ; Geological Society of London Special Publications Volume 81 ; 81 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 82 ; 82 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 83 ; 83 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 84 ; 84 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 85 ; 85 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 86 ; 86 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 87 ; 87 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 88 ; 88 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 89 ; 89 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 90 ; 90 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 91 ; 91 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 92 ; 92 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 93 ; 93 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 94 ; 94 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 95 ; 95 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 96 ; 96 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 97 ; 97 >
+    au < exists ; exists ; 1995 ; Geological Society of London Special Publications Volume 98 ; 98 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 99 ; 99 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 100 ; 100 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 101 ; 101 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 102 ; 102 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 103 ; 103 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 104 ; 104 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 105 ; 105 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 106 ; 106 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 107 ; 107 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 108 ; 108 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 109 ; 109 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 110 ; 110 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 111 ; 111 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 112 ; 112 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 113 ; 113 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 114 ; 114 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 115 ; 115 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 116 ; 116 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 117 ; 117 >
+    au < exists ; exists ; 1996 ; Geological Society of London Special Publications Volume 118 ; 118 >
+    au < exists ; exists ; 1997 ; Geological Society of London Special Publications Volume 119 ; 119 >
+    au < exists ; exists ; 1997 ; Geological Society of London Special Publications Volume 120 ; 120 >
+    au < exists ; exists ; 1997 ; Geological Society of London Special Publications Volume 121 ; 121 >
+    au < exists ; exists ; 1997 ; Geological Society of London Special Publications Volume 122 ; 122 >
+    au < exists ; exists ; 1997 ; Geological Society of London Special Publications Volume 123 ; 123 >
+    au < exists ; exists ; 1997 ; Geological Society of London Special Publications Volume 124 ; 124 >
+    au < exists ; exists ; 1997 ; Geological Society of London Special Publications Volume 125 ; 125 >
+    au < exists ; exists ; 1997 ; Geological Society of London Special Publications Volume 126 ; 126 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 127 ; 127 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 128 ; 128 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 129 ; 129 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 130 ; 130 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 131 ; 131 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 132 ; 132 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 133 ; 133 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 134 ; 134 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 135 ; 135 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 136 ; 136 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 137 ; 137 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 138 ; 138 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 139 ; 139 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 140 ; 140 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 141 ; 141 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 142 ; 142 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 143 ; 143 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 144 ; 144 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 145 ; 145 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 146 ; 146 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 147 ; 147 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 148 ; 148 >
+    au < exists ; exists ; 1998 ; Geological Society of London Special Publications Volume 149 ; 149 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 150 ; 150 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 151 ; 151 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 152 ; 152 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 153 ; 153 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 154 ; 154 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 155 ; 155 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 156 ; 156 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 157 ; 157 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 158 ; 158 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 159 ; 159 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 160 ; 160 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 161 ; 161 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 162 ; 162 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 163 ; 163 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 164 ; 164 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 165 ; 165 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 166 ; 166 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 167 ; 167 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 168 ; 168 >
+    au < exists ; exists ; 1999 ; Geological Society of London Special Publications Volume 169 ; 169 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 170 ; 170 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 171 ; 171 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 172 ; 172 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 173 ; 173 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 174 ; 174 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 175 ; 175 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 176 ; 176 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 177 ; 177 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 178 ; 178 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 179 ; 179 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 180 ; 180 >
+    au < exists ; exists ; 2000 ; Geological Society of London Special Publications Volume 181 ; 181 >
+    au < exists ; exists ; 2001 ; Geological Society of London Special Publications Volume 182 ; 182 >
+    au < exists ; exists ; 2001 ; Geological Society of London Special Publications Volume 183 ; 183 >
+    au < exists ; exists ; 2001 ; Geological Society of London Special Publications Volume 184 ; 184 >
+    au < exists ; exists ; 2001 ; Geological Society of London Special Publications Volume 185 ; 185 >
+    au < exists ; exists ; 2001 ; Geological Society of London Special Publications Volume 186 ; 186 >
+    au < exists ; exists ; 2001 ; Geological Society of London Special Publications Volume 187 ; 187 >
+    au < exists ; exists ; 2001 ; Geological Society of London Special Publications Volume 188 ; 188 >
+    au < exists ; exists ; 2001 ; Geological Society of London Special Publications Volume 189 ; 189 >
+    au < exists ; exists ; 2001 ; Geological Society of London Special Publications Volume 190 ; 190 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 191 ; 191 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 192 ; 192 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 193 ; 193 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 194 ; 194 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 195 ; 195 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 196 ; 196 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 197 ; 197 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 198 ; 198 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 199 ; 199 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 200 ; 200 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 201 ; 201 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 202 ; 202 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 203 ; 203 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 204 ; 204 >
+    au < exists ; exists ; 2002 ; Geological Society of London Special Publications Volume 205 ; 205 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 206 ; 206 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 207 ; 207 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 208 ; 208 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 209 ; 209 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 210 ; 210 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 211 ; 211 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 212 ; 212 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 213 ; 213 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 214 ; 214 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 215 ; 215 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 216 ; 216 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 217 ; 217 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 218 ; 218 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 219 ; 219 >
+    au < exists ; exists ; 2003 ; Geological Society of London Special Publications Volume 220 ; 220 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 221 ; 221 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 222 ; 222 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 223 ; 223 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 224 ; 224 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 225 ; 225 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 226 ; 226 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 227 ; 227 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 228 ; 228 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 229 ; 229 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 230 ; 230 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 231 ; 231 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 232 ; 232 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 233 ; 233 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 234 ; 234 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 235 ; 235 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 236 ; 236 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 237 ; 237 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 238 ; 238 >
+    au < exists ; exists ; 2004 ; Geological Society of London Special Publications Volume 239 ; 239 >
+    au < exists ; exists ; 2005 ; Geological Society of London Special Publications Volume 240 ; 240 >
+    au < exists ; exists ; 2005 ; Geological Society of London Special Publications Volume 241 ; 241 >
+    au < exists ; exists ; 2005 ; Geological Society of London Special Publications Volume 242 ; 242 >
+    au < exists ; exists ; 2005 ; Geological Society of London Special Publications Volume 243 ; 243 >
+    au < exists ; exists ; 2005 ; Geological Society of London Special Publications Volume 244 ; 244 >
+    au < exists ; exists ; 2005 ; Geological Society of London Special Publications Volume 245 ; 245 >
+    au < exists ; exists ; 2005 ; Geological Society of London Special Publications Volume 246 ; 246 >
+    au < exists ; exists ; 2005 ; Geological Society of London Special Publications Volume 247 ; 247 >
+    au < exists ; exists ; 2005 ; Geological Society of London Special Publications Volume 248 ; 248 >
+    au < exists ; exists ; 2005 ; Geological Society of London Special Publications Volume 249 ; 249 >
+    au < exists ; exists ; 2005 ; Geological Society of London Special Publications Volume 250 ; 250 >
+    au < exists ; exists ; 2005 ; Geological Society of London Special Publications Volume 251 ; 251 >
+    au < exists ; exists ; 2005 ; Geological Society of London Special Publications Volume 252 ; 252 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 253 ; 253 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 254 ; 254 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 255 ; 255 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 256 ; 256 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 257 ; 257 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 258 ; 258 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 259 ; 259 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 260 ; 260 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 261 ; 261 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 262 ; 262 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 263 ; 263 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 264 ; 264 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 265 ; 265 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 266 ; 266 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 267 ; 267 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 268 ; 268 >
+    au < exists ; exists ; 2006 ; Geological Society of London Special Publications Volume 269 ; 269 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 270 ; 270 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 271 ; 271 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 272 ; 272 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 273 ; 273 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 274 ; 274 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 275 ; 275 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 276 ; 276 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 277 ; 277 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 278 ; 278 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 279 ; 279 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 280 ; 280 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 281 ; 281 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 282 ; 282 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 283 ; 283 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 284 ; 284 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 285 ; 285 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 286 ; 286 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 287 ; 287 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 288 ; 288 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 289 ; 289 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 290 ; 290 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 291 ; 291 >
+    au < exists ; exists ; 2007 ; Geological Society of London Special Publications Volume 292 ; 292 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 293 ; 293 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 294 ; 294 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 295 ; 295 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 296 ; 296 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 297 ; 297 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 298 ; 298 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 299 ; 299 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 300 ; 300 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 301 ; 301 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 302 ; 302 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 303 ; 303 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 304 ; 304 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 305 ; 305 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 306 ; 306 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 307 ; 307 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 308 ; 308 >
+    au < exists ; exists ; 2008 ; Geological Society of London Special Publications Volume 309 ; 309 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 310 ; 310 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 311 ; 311 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 312 ; 312 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 313 ; 313 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 314 ; 314 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 315 ; 315 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 316 ; 316 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 317 ; 317 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 318 ; 318 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 319 ; 319 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 320 ; 320 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 321 ; 321 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 322 ; 322 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 323 ; 323 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 324 ; 324 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 325 ; 325 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 326 ; 326 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 327 ; 327 >
+    au < exists ; exists ; 2009 ; Geological Society of London Special Publications Volume 328 ; 328 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 329 ; 329 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 330 ; 330 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 331 ; 331 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 332 ; 332 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 333 ; 333 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 334 ; 334 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 335 ; 335 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 336 ; 336 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 337 ; 337 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 338 ; 338 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 339 ; 339 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 340 ; 340 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 341 ; 341 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 342 ; 342 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 343 ; 343 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 344 ; 344 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 345 ; 345 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 346 ; 346 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 347 ; 347 >
+    au < exists ; exists ; 2010 ; Geological Society of London Special Publications Volume 348 ; 348 >
+    au < exists ; exists ; 2011 ; Geological Society of London Special Publications Volume 349 ; 349 >
+    au < exists ; exists ; 2011 ; Geological Society of London Special Publications Volume 350 ; 350 >
+    au < exists ; exists ; 2011 ; Geological Society of London Special Publications Volume 351 ; 351 >
+    au < exists ; exists ; 2011 ; Geological Society of London Special Publications Volume 352 ; 352 >
+    au < exists ; exists ; 2011 ; Geological Society of London Special Publications Volume 353 ; 353 >
+    au < exists ; exists ; 2011 ; Geological Society of London Special Publications Volume 354 ; 354 >
+    au < exists ; exists ; 2011 ; Geological Society of London Special Publications Volume 355 ; 355 >
+    au < exists ; exists ; 2011 ; Geological Society of London Special Publications Volume 356 ; 356 >
+    au < exists ; exists ; 2011 ; Geological Society of London Special Publications Volume 357 ; 357 >
+    au < exists ; exists ; 2011 ; Geological Society of London Special Publications Volume 358 ; 358 >
+    au < exists ; exists ; 2011 ; Geological Society of London Special Publications Volume 359 ; 359 >
+    au < exists ; exists ; 2011 ; Geological Society of London Special Publications Volume 360 ; 360 >
+    au < exists ; exists ; 2012 ; Geological Society of London Special Publications Volume 361 ; 361 >
+    au < exists ; exists ; 2012 ; Geological Society of London Special Publications Volume 362 ; 362 >
+    au < exists ; exists ; 2012 ; Geological Society of London Special Publications Volume 363 ; 363 >
+    au < exists ; exists ; 2012 ; Geological Society of London Special Publications Volume 364 ; 364 >
+    au < exists ; exists ; 2012 ; Geological Society of London Special Publications Volume 365 ; 365 >
+    au < doesNotExist ; doesNotExist ; 2012 ; Geological Society of London Special Publications Volume 366 ; 366 >
+    au < exists ; exists ; 2012 ; Geological Society of London Special Publications Volume 367 ; 367 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of the Geological Society of London ;
+      issn = 0016-7649 ;
+      eissn = 2041-479X ;
+      issnl = 0016-7649
+    >
+
+    param[base_url] = http://jgs.lyellcollection.org/
+
+    au < exists ; exists ; 1971 ; Journal of the Geological Society of London Volume 127 ; 127 >
+    au < exists ; exists ; 1972 ; Journal of the Geological Society of London Volume 128 ; 128 >
+    au < exists ; exists ; 1973 ; Journal of the Geological Society of London Volume 129 ; 129 >
+    au < exists ; exists ; 1974 ; Journal of the Geological Society of London Volume 130 ; 130 >
+    au < exists ; exists ; 1975 ; Journal of the Geological Society of London Volume 131 ; 131 >
+    au < exists ; exists ; 1976 ; Journal of the Geological Society of London Volume 132 ; 132 >
+    au < exists ; exists ; 1977 ; Journal of the Geological Society of London Volume 133 ; 133 >
+    au < exists ; exists ; 1977 ; Journal of the Geological Society of London Volume 134 ; 134 >
+    au < exists ; exists ; 1978 ; Journal of the Geological Society of London Volume 135 ; 135 >
+    au < exists ; exists ; 1979 ; Journal of the Geological Society of London Volume 136 ; 136 >
+    au < exists ; exists ; 1980 ; Journal of the Geological Society of London Volume 137 ; 137 >
+    au < exists ; exists ; 1981 ; Journal of the Geological Society of London Volume 138 ; 138 >
+    au < exists ; exists ; 1982 ; Journal of the Geological Society of London Volume 139 ; 139 >
+    au < exists ; exists ; 1983 ; Journal of the Geological Society of London Volume 140 ; 140 >
+    au < exists ; exists ; 1984 ; Journal of the Geological Society of London Volume 141 ; 141 >
+    au < exists ; exists ; 1985 ; Journal of the Geological Society of London Volume 142 ; 142 >
+    au < exists ; exists ; 1986 ; Journal of the Geological Society of London Volume 143 ; 143 >
+    au < exists ; exists ; 1987 ; Journal of the Geological Society of London Volume 144 ; 144 >
+    au < exists ; exists ; 1988 ; Journal of the Geological Society of London Volume 145 ; 145 >
+    au < exists ; exists ; 1989 ; Journal of the Geological Society of London Volume 146 ; 146 >
+    au < exists ; exists ; 1990 ; Journal of the Geological Society of London Volume 147 ; 147 >
+    au < exists ; exists ; 1991 ; Journal of the Geological Society of London Volume 148 ; 148 >
+    au < exists ; exists ; 1992 ; Journal of the Geological Society of London Volume 149 ; 149 >
+    au < exists ; exists ; 1993 ; Journal of the Geological Society of London Volume 150 ; 150 >
+    au < exists ; exists ; 1994 ; Journal of the Geological Society of London Volume 151 ; 151 >
+    au < exists ; exists ; 1995 ; Journal of the Geological Society of London Volume 152 ; 152 >
+    au < exists ; exists ; 1996 ; Journal of the Geological Society of London Volume 153 ; 153 >
+    au < exists ; exists ; 1997 ; Journal of the Geological Society of London Volume 154 ; 154 >
+    au < exists ; exists ; 1998 ; Journal of the Geological Society of London Volume 155 ; 155 >
+    au < exists ; exists ; 1999 ; Journal of the Geological Society of London Volume 156 ; 156 >
+    au < exists ; exists ; 2000 ; Journal of the Geological Society of London Volume 157 ; 157 >
+    au < exists ; exists ; 2001 ; Journal of the Geological Society of London Volume 158 ; 158 >
+    au < exists ; exists ; 2002 ; Journal of the Geological Society of London Volume 159 ; 159 >
+    au < exists ; exists ; 2003 ; Journal of the Geological Society of London Volume 160 ; 160 >
+    au < exists ; exists ; 2004 ; Journal of the Geological Society of London Volume 161 ; 161 >
+    au < exists ; exists ; 2005 ; Journal of the Geological Society of London Volume 162 ; 162 >
+    au < exists ; exists ; 2006 ; Journal of the Geological Society of London Volume 163 ; 163 >
+    au < exists ; exists ; 2007 ; Journal of the Geological Society of London Volume 164 ; 164 >
+    au < exists ; exists ; 2008 ; Journal of the Geological Society of London Volume 165 ; 165 >
+    au < exists ; exists ; 2009 ; Journal of the Geological Society of London Volume 166 ; 166 >
+    au < exists ; exists ; 2010 ; Journal of the Geological Society of London Volume 167 ; 167 >
+    au < exists ; exists ; 2011 ; Journal of the Geological Society of London Volume 168 ; 168 >
+    au < exists ; exists ; 2012 ; Journal of the Geological Society of London Volume 169 ; 169 >
+
+  }
+
+  {
+  
+    title <
+      name = Petroleum Geoscience ;
+      issn = 1354-0793 ;
+      eissn = 2041-496X
+    >
+
+      param[base_url] = http://pg.lyellcollection.org/
+
+      au < exists ; exists ; 1995 ; Petroleum Geoscience Volume 1 ; 1 >
+      au < exists ; exists ; 1996 ; Petroleum Geoscience Volume 2 ; 2 >
+      au < exists ; exists ; 1997 ; Petroleum Geoscience Volume 3 ; 3 >
+      au < exists ; exists ; 1998 ; Petroleum Geoscience Volume 4 ; 4 >
+      au < exists ; exists ; 1999 ; Petroleum Geoscience Volume 5 ; 5 >
+      au < exists ; exists ; 2000 ; Petroleum Geoscience Volume 6 ; 6 >
+      au < exists ; exists ; 2001 ; Petroleum Geoscience Volume 7 ; 7 >
+      au < exists ; exists ; 2002 ; Petroleum Geoscience Volume 8 ; 8 >
+      au < exists ; exists ; 2003 ; Petroleum Geoscience Volume 9 ; 9 >
+      au < exists ; exists ; 2004 ; Petroleum Geoscience Volume 10 ; 10 >
+      au < exists ; exists ; 2005 ; Petroleum Geoscience Volume 11 ; 11 >
+      au < exists ; exists ; 2006 ; Petroleum Geoscience Volume 12 ; 12 >
+      au < exists ; exists ; 2007 ; Petroleum Geoscience Volume 13 ; 13 >
+      au < exists ; exists ; 2008 ; Petroleum Geoscience Volume 14 ; 14 >
+      au < exists ; exists ; 2009 ; Petroleum Geoscience Volume 15 ; 15 >
+      au < exists ; exists ; 2010 ; Petroleum Geoscience Volume 16 ; 16 >
+      au < exists ; exists ; 2011 ; Petroleum Geoscience Volume 17 ; 17 >
+      au < exists ; exists ; 2012 ; Petroleum Geoscience Volume 18 ; 18 >
+    
+  }
+
+  {
+  
+    title <
+      name = Quarterly Journal of Engineering Geology and Hydrogeology ;
+      issn = 1470-9236 ;
+      eissn = 2041-4803 ;
+      issnl = 1470-9236
+    >
+
+    param[base_url] = http://qjegh.lyellcollection.org/
+
+    au < exists ; exists ; 1967-1969 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 1 ; 1 >
+    au < exists ; exists ; 1969-1970 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 2 ; 2 >
+    au < exists ; exists ; 1970 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 3 ; 3 >
+    au < exists ; exists ; 1971 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 4 ; 4 >
+    au < exists ; exists ; 1972 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 5 ; 5 >
+    au < exists ; exists ; 1973 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 6 ; 6 >
+    au < exists ; exists ; 1974 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 7 ; 7 >
+    au < exists ; exists ; 1975 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 8 ; 8 >
+    au < exists ; exists ; 1976 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 9 ; 9 >
+    au < exists ; exists ; 1977 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 10 ; 10 >
+    au < exists ; exists ; 1978 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 11 ; 11 >
+    au < exists ; exists ; 1979 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 12 ; 12 >
+    au < exists ; exists ; 1980 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 13 ; 13 >
+    au < exists ; exists ; 1981 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 14 ; 14 >
+    au < exists ; exists ; 1982 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 15 ; 15 >
+    au < exists ; exists ; 1983 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 16 ; 16 >
+    au < exists ; exists ; 1984 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 17 ; 17 >
+    au < exists ; exists ; 1985 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 18 ; 18 >
+    au < exists ; exists ; 1986 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 19 ; 19 >
+    au < exists ; exists ; 1987 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 20 ; 20 >
+    au < exists ; exists ; 1988 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 21 ; 21 >
+    au < exists ; exists ; 1989 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 22 ; 22 >
+    au < exists ; exists ; 1990 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 23 ; 23 >
+    au < exists ; exists ; 1991 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 24 ; 24 >
+    au < exists ; exists ; 1992 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 25 ; 25 >
+    au < exists ; exists ; 1993 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 26 ; 26 >
+    au < exists ; exists ; 1994 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 27 ; 27 >
+    au < exists ; exists ; 1995 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 28 ; 28 >
+    au < exists ; exists ; 1996 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 29 ; 29 >
+    au < exists ; exists ; 1997 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 30 ; 30 >
+    au < exists ; exists ; 1998 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 31 ; 31 >
+    au < exists ; exists ; 1999 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 32 ; 32 >
+    au < exists ; exists ; 2000 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 33 ; 33 >
+    au < exists ; exists ; 2001 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 34 ; 34 >
+    au < exists ; exists ; 2002 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 35 ; 35 >
+    au < exists ; exists ; 2003 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 36 ; 36 >
+    au < exists ; exists ; 2004 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 37 ; 37 >
+    au < exists ; exists ; 2005 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 38 ; 38 >
+    au < exists ; exists ; 2006 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 39 ; 39 >
+    au < exists ; exists ; 2007 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 40 ; 40 >
+    au < exists ; exists ; 2008 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 41 ; 41 >
+    au < exists ; exists ; 2009 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 42 ; 42 >
+    au < exists ; exists ; 2010 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 43 ; 43 >
+    au < exists ; exists ; 2011 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 44 ; 44 >
+    au < exists ; exists ; 2012 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 45 ; 45 >
+      
+  }
+
+  {
+
+    title <
+      name = Transactions of the Geological Society of London ;
+      eissn = 2042-5295 
+    >
+    param[base_url] = http://trn.lyellcollection.org/
+
+    au < exists ; exists ; 1811 ; Transactions of the Geological Society of London Series 1 Volume 1 ; s1-1 >
+    au < exists ; exists ; 1814 ; Transactions of the Geological Society of London Series 1 Volume 2 ; s1-2 >
+    au < exists ; exists ; 1816 ; Transactions of the Geological Society of London Series 1 Volume 3 ; s1-3 >
+    au < exists ; exists ; 1817 ; Transactions of the Geological Society of London Series 1 Volume 4 ; s1-4 >
+    au < exists ; exists ; 1821 ; Transactions of the Geological Society of London Series 1 Volume 5 ; s1-5 >
+    au < exists ; exists ; 1822-1824 ; Transactions of the Geological Society of London Series 2 Volume 1 ; s2-1 >
+    au < exists ; exists ; 1826-1828 ; Transactions of the Geological Society of London Series 2 Volume 2 ; s2-2 >
+    au < exists ; exists ; 1829-1835 ; Transactions of the Geological Society of London Series 2 Volume 3 ; s2-3 >
+    au < exists ; exists ; 1835-1836 ; Transactions of the Geological Society of London Series 2 Volume 4 ; s2-4 >
+    au < exists ; exists ; 1837-1840 ; Transactions of the Geological Society of London Series 2 Volume 5 ; s2-5 >
+    au < exists ; exists ; 1841-1842 ; Transactions of the Geological Society of London Series 2 Volume 6 ; s2-6 >
+    au < exists ; exists ; 1845-1856 ; Transactions of the Geological Society of London Series 2 Volume 7 ; s2-7 >
+
+  }
+
+}
+

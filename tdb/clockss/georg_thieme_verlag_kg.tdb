@@ -666,20 +666,20 @@
     >
     param[journal_id] = 10.1055/s-00000097
     comment[years] = 2001-current
+    comment[continued_from] = 1432-2919 
 
-   au < exists ; exists ; Deutsche Zeitschrift für Akupunktur 2000 ; 2000 ; 2000 >
-   au < exists ; exists ; Deutsche Zeitschrift für Akupunktur 2001 ; 2001 ; 2001 >
-   au < exists ; exists ; Deutsche Zeitschrift für Akupunktur 2002 ; 2002 ; 2002 >
-   au < exists ; exists ; Deutsche Zeitschrift für Akupunktur 2003 ; 2003 ; 2003 >
-   au < exists ; exists ; Deutsche Zeitschrift für Akupunktur 2004 ; 2004 ; 2004 >
-   au < exists ; exists ; Deutsche Zeitschrift für Akupunktur 2005 ; 2005 ; 2005 >
-   au < exists ; exists ; Deutsche Zeitschrift für Akupunktur 2006 ; 2006 ; 2006 >
-   au < exists ; exists ; Deutsche Zeitschrift für Akupunktur 2007 ; 2007 ; 2007 >
-   au < exists ; exists ; Deutsche Zeitschrift für Akupunktur 2008 ; 2008 ; 2008 >
-   au < exists ; exists ; Deutsche Zeitschrift für Akupunktur 2009 ; 2009 ; 2009 >
-   au < exists ; exists ; Deutsche Zeitschrift für Akupunktur 2010 ; 2010 ; 2010 >
-   au < exists ; exists ; Deutsche Zeitschrift für Akupunktur 2011 ; 2011 ; 2011 >
-   au < exists ; exists ; Deutsche Zeitschrift für Akupunktur 2012 ; 2012 ; 2012 >
+   au < exists ; exists ; Deutsche Zeitschrift für Onkologie 2001 ; 2001 ; 2001 >
+   au < exists ; exists ; Deutsche Zeitschrift für Onkologie 2002 ; 2002 ; 2002 >
+   au < exists ; exists ; Deutsche Zeitschrift für Onkologie 2003 ; 2003 ; 2003 >
+   au < exists ; exists ; Deutsche Zeitschrift für Onkologie 2004 ; 2004 ; 2004 >
+   au < exists ; exists ; Deutsche Zeitschrift für Onkologie 2005 ; 2005 ; 2005 >
+   au < exists ; exists ; Deutsche Zeitschrift für Onkologie 2006 ; 2006 ; 2006 >
+   au < exists ; exists ; Deutsche Zeitschrift für Onkologie 2007 ; 2007 ; 2007 >
+   au < exists ; exists ; Deutsche Zeitschrift für Onkologie 2008 ; 2008 ; 2008 >
+   au < exists ; exists ; Deutsche Zeitschrift für Onkologie 2009 ; 2009 ; 2009 >
+   au < exists ; exists ; Deutsche Zeitschrift für Onkologie 2010 ; 2010 ; 2010 >
+   au < exists ; exists ; Deutsche Zeitschrift für Onkologie 2011 ; 2011 ; 2011 >
+   au < exists ; exists ; Deutsche Zeitschrift für Onkologie 2012 ; 2012 ; 2012 >
 
 
   }
@@ -692,21 +692,10 @@
 
     >
     param[journal_id] = 10.1055/s-00000097
-    comment[years] = 2000
+    comment[years] = 2000 only - journal published 1996-2000
+    comment[continued_by] = 1617-5891 Deutsche Zeitschrift fur Onkologie
 
    au < exists ; exists ; Zeitschrift für Onkologie 2000 ; 2000 ; 2000 >
-   au < exists ; exists ; Zeitschrift für Onkologie 2001 ; 2001 ; 2001 >
-   au < exists ; exists ; Zeitschrift für Onkologie 2002 ; 2002 ; 2002 >
-   au < exists ; exists ; Zeitschrift für Onkologie 2003 ; 2003 ; 2003 >
-   au < exists ; exists ; Zeitschrift für Onkologie 2004 ; 2004 ; 2004 >
-   au < exists ; exists ; Zeitschrift für Onkologie 2005 ; 2005 ; 2005 >
-   au < exists ; exists ; Zeitschrift für Onkologie 2006 ; 2006 ; 2006 >
-   au < exists ; exists ; Zeitschrift für Onkologie 2007 ; 2007 ; 2007 >
-   au < exists ; exists ; Zeitschrift für Onkologie 2008 ; 2008 ; 2008 >
-   au < exists ; exists ; Zeitschrift für Onkologie 2009 ; 2009 ; 2009 >
-   au < exists ; exists ; Zeitschrift für Onkologie 2010 ; 2010 ; 2010 >
-   au < exists ; exists ; Zeitschrift für Onkologie 2011 ; 2011 ; 2011 >
-   au < exists ; exists ; Zeitschrift für Onkologie 2012 ; 2012 ; 2012 >
 
   }
 
@@ -787,9 +776,9 @@
    au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1875 ; 1875 ; 1875 >
    au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1876 ; 1876 ; 1876 >
    au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1877 ; 1877 ; 1877 >
-   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1878 ; 1878 ; 1898 >
-   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1879 ; 1879 ; 1899 >
-   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1870 ; 1880 ; 1880 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1878 ; 1878 ; 1878 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1879 ; 1879 ; 1879 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1880 ; 1880 ; 1880 >
    au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1881 ; 1881 ; 1881 >
    au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1882 ; 1882 ; 1882 >
    au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1883 ; 1883 ; 1883 >
@@ -2135,64 +2124,27 @@
 
     >
     param[journal_id] = 10.1055/s-00000032
-    comment[years] = 1998
-
-    au < exists ; exists ; Klinische Neurophysiologie 1998 ; 1998 ; 1998 >
-    au < exists ; exists ; Klinische Neurophysiologie 1999 ; 1999 ; 1999 >
-    au < exists ; exists ; Klinische Neurophysiologie 2000 ; 2000 ; 2000 >
-    au < exists ; exists ; Klinische Neurophysiologie 2001 ; 2001 ; 2001 >
-    au < exists ; exists ; Klinische Neurophysiologie 2002 ; 2002 ; 2002 >
-    au < exists ; exists ; Klinische Neurophysiologie 2003 ; 2003 ; 2003 >
-    au < exists ; exists ; Klinische Neurophysiologie 2004 ; 2004 ; 2004 >
-    au < exists ; exists ; Klinische Neurophysiologie 2005 ; 2005 ; 2005 >
-    au < exists ; exists ; Klinische Neurophysiologie 2006 ; 2006 ; 2006 >
-    au < exists ; exists ; Klinische Neurophysiologie 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; Klinische Neurophysiologie 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; Klinische Neurophysiologie 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; Klinische Neurophysiologie 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; Klinische Neurophysiologie 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; Klinische Neurophysiologie 2012 ; 2012 ; 2012 >
-
-  }
-
-  {
-
-    title <
-      name = Klinische Monatsblätter für Augenheilkunde ;
-      issn = 0023-2165 ;
-      eissn = 1439-3999 ;
-      doi = 10.1055/s-00000031
-
-    >
-    param[journal_id] = 10.1055/s-00000031
-    comment[years] = 2003-current
-
-    au < exists ; exists ; Klinische Monatsblätter für Augenheilkunde  2003 ; 2003 ; 2003 >
-    au < exists ; exists ; Klinische Monatsblätter für Augenheilkunde  2004 ; 2004 ; 2004 >
-    au < exists ; exists ; Klinische Monatsblätter für Augenheilkunde  2005 ; 2005 ; 2005 >
-    au < exists ; exists ; Klinische Monatsblätter für Augenheilkunde  2006 ; 2006 ; 2006 >
-    au < exists ; exists ; Klinische Monatsblätter für Augenheilkunde  2007 ; 2007 ; 2007 >
-    au < exists ; exists ; Klinische Monatsblätter für Augenheilkunde  2008 ; 2008 ; 2008 >
-    au < exists ; exists ; Klinische Monatsblätter für Augenheilkunde  2009 ; 2009 ; 2009 >
-    au < exists ; exists ; Klinische Monatsblätter für Augenheilkunde  2010 ; 2010 ; 2010 >
-    au < exists ; exists ; Klinische Monatsblätter für Augenheilkunde  2011 ; 2011 ; 2011 >
-    au < exists ; exists ; Klinische Monatsblätter für Augenheilkunde  2012 ; 2012 ; 2012 >
-
-  }
-
-  {
-    title <
-      name = Klinische Neurophysiologie ;
-      issn = 1434-0275 ;
-      eissn = 1439-4081 ;
-      doi = 10.1055/s-00000032
-
-    >
-    param[journal_id] = 10.1055/s-00000032
-    comment[years] = 1997-current
+    comment[years] = 1980-2012
     comment[0] = this journal shares its eissn with EEG, EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete
     comment[1] = EEG, EMG published from 1980-1997 under the same eissn
 
+    au < exists ; exists ; Klinische Neurophysiologie 1980 ; 1980 ; 1980 >
+    au < exists ; exists ; Klinische Neurophysiologie 1981 ; 1981 ; 1981 >
+    au < exists ; exists ; Klinische Neurophysiologie 1982 ; 1982 ; 1982 >
+    au < exists ; exists ; Klinische Neurophysiologie 1983 ; 1983 ; 1983 >
+    au < exists ; exists ; Klinische Neurophysiologie 1984 ; 1984 ; 1984 >
+    au < exists ; exists ; Klinische Neurophysiologie 1985 ; 1985 ; 1985 >
+    au < exists ; exists ; Klinische Neurophysiologie 1986 ; 1986 ; 1986 >
+    au < exists ; exists ; Klinische Neurophysiologie 1987 ; 1987 ; 1987 >
+    au < exists ; exists ; Klinische Neurophysiologie 1988 ; 1988 ; 1988 >
+    au < exists ; exists ; Klinische Neurophysiologie 1989 ; 1989 ; 1989 >
+    au < exists ; exists ; Klinische Neurophysiologie 1990 ; 1990 ; 1990 >
+    au < exists ; exists ; Klinische Neurophysiologie 1991 ; 1991 ; 1991 >
+    au < exists ; exists ; Klinische Neurophysiologie 1992 ; 1992 ; 1992 >
+    au < exists ; exists ; Klinische Neurophysiologie 1993 ; 1993 ; 1993 >
+    au < exists ; exists ; Klinische Neurophysiologie 1994 ; 1994 ; 1994 >
+    au < exists ; exists ; Klinische Neurophysiologie 1995 ; 1995 ; 1995 >
+    au < exists ; exists ; Klinische Neurophysiologie 1996 ; 1996 ; 1996 >
     au < exists ; exists ; Klinische Neurophysiologie 1997 ; 1997 ; 1997 >
     au < exists ; exists ; Klinische Neurophysiologie 1998 ; 1998 ; 1998 >
     au < exists ; exists ; Klinische Neurophysiologie 1999 ; 1999 ; 1999 >
@@ -2742,17 +2694,6 @@
     au < exists ; exists ; Perspectives in Plastic Surgery 1999 ; 1999 ; 1999 >
     au < exists ; exists ; Perspectives in Plastic Surgery 2000 ; 2000 ; 2000 >
     au < exists ; exists ; Perspectives in Plastic Surgery 2001 ; 2001 ; 2001 >
-    au < exists ; exists ; Perspectives in Plastic Surgery 2002 ; 2002 ; 2002 >
-    au < exists ; exists ; Perspectives in Plastic Surgery 2003 ; 2003 ; 2003 >
-    au < exists ; exists ; Perspectives in Plastic Surgery 2004 ; 2004 ; 2004 >
-    au < exists ; exists ; Perspectives in Plastic Surgery 2005 ; 2005 ; 2005 >
-    au < exists ; exists ; Perspectives in Plastic Surgery 2006 ; 2006 ; 2006 >
-    au < exists ; exists ; Perspectives in Plastic Surgery 2007 ; 2007 ; 2007 >
-    au < exists ; exists ; Perspectives in Plastic Surgery 2008 ; 2008 ; 2008 >
-    au < exists ; exists ; Perspectives in Plastic Surgery 2009 ; 2009 ; 2009 >
-    au < exists ; exists ; Perspectives in Plastic Surgery 2010 ; 2010 ; 2010 >
-    au < exists ; exists ; Perspectives in Plastic Surgery 2011 ; 2011 ; 2011 >
-    au < exists ; exists ; Perspectives in Plastic Surgery 2012 ; 2012 ; 2012 >
 
   }
 

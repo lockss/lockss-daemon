@@ -230,7 +230,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Age and Ageing Volume 37 ; 37 ; >
-    au < down ; crawling ; 2009 ; Age and Ageing Volume 38 ; 38 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; Age and Ageing Volume 38 ; 38 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -630,8 +630,8 @@
 
     au < down ; crawling ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 ; >
     au < down ; crawling ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 ; >
-    au < down ; crawling ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; reingest3.clockss.org:8083 >
-    au < down ; crawling ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -1024,7 +1024,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Analysis Volume 68 ; 68 ; >
-    au < down ; crawling ; 2009 ; Analysis Volume 69 ; 69 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; Analysis Volume 69 ; 69 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -1318,7 +1318,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Annals of Occupational Hygiene Volume 52 ; 52 ; >
-    au < down ; crawling ; 2009 ; The Annals of Occupational Hygiene Volume 53 ; 53 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; The Annals of Occupational Hygiene Volume 53 ; 53 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -1404,7 +1404,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Annals of Oncology Volume 19 ; 19 ; >
-    au < down ; crawling ; 2009 ; Annals of Oncology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; Annals of Oncology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -1521,7 +1521,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Applied Linguistics Volume 29 ; 29 ; >
-    au < down ; crawling ; 2009 ; Applied Linguistics Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; Applied Linguistics Volume 30 ; 30 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -1726,7 +1726,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Behavioral Ecology Volume 19 ; 19 ; >
-    au < down ; crawling ; 2009 ; Behavioral Ecology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; Behavioral Ecology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -1779,7 +1779,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Bioinformatics Volume 24 ; 24 ; >
-    au < down ; crawling ; 2009 ; Bioinformatics Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; Bioinformatics Volume 25 ; 25 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -2043,7 +2043,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Brain Volume 131 ; 131 ; >
-    au < down ; crawling ; 2009 ; Brain Volume 132 ; 132 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; Brain Volume 132 ; 132 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -2283,7 +2283,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
-    au < down ; down ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8[*] ; 8 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8[*] ; 8 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -2816,7 +2816,7 @@
     au < down ; crawling ; 2008 ; British Medical Bulletin Volume 87 ; 87 ; >
     au < down ; crawling ; 2008 ; British Medical Bulletin Volume 88 ; 88 ; >
     au < zapped ; down ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; reingest2.clockss.org:8085 >
-    au < down ; crawling ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; reingest2.clockss.org:8085 >
     au < zapped ; down ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; reingest2.clockss.org:8085 >
 
     }
@@ -2996,7 +2996,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
-    au < down ; crawling ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3070,7 +3070,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Cambridge Journal of Economics Volume 32 ; 32 ; >
-    au < down ; crawling ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3171,7 +3171,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 ; >
-    au < down ; crawling ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3242,7 +3242,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Capital Markets Law Journal Volume 3 ; 3 ; >
-    au < down ; crawling ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3279,7 +3279,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Carcinogenesis Volume 29 ; 29 ; >
-    au < down ; crawling ; 2009 ; Carcinogenesis Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Carcinogenesis Volume 30 ; 30 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3475,7 +3475,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
-    au < down ; crawling ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3527,7 +3527,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; CESifo Economic Studies Volume 54 ; 54 ; >
-    au < down ; crawling ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3567,7 +3567,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Chemical Senses Volume 33 ; 33 ; >
-    au < down ; crawling ; 2009 ; Chemical Senses Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Chemical Senses Volume 34 ; 34 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3661,7 +3661,7 @@
     au < manifest ; exists ; 2007 ; Children & Schools Volume 29 ; 29 ; >
     au < crawling ; exists ; 2008 ; Children & Schools Volume 30 ; 30 ; >
     au < released ; crawling ; 2009 ; Children & Schools Volume 31 ; 31 ; >
-    au < released ; crawling ; 2010 ; Children & Schools Volume 32 ; 32 ; >
+    au < zapped ; down ; 2010 ; Children & Schools Volume 32 ; 32 ; >
     au < released ; crawling ; 2011 ; Children & Schools Volume 33 ; 33 ; >
     au < released ; crawling ; 2012 ; Children & Schools Volume 34 ; 34 ; >
     au < expected ; exists ; 2013 ; Children & Schools Volume 35 ; 35 ; >
@@ -3683,7 +3683,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Chinese Journal of International Law Volume 7 ; 7 ; >
-    au < down ; crawling ; 2009 ; Chinese Journal of International Law Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Chinese Journal of International Law Volume 8 ; 8 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3922,8 +3922,8 @@
     param[base_url] = http://cdj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Community Development Journal Volume 43 ; 43 ; >
-    au < down ; crawling ; 2009 ; Community Development Journal Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; Community Development Journal Volume 43 ; 43 ; >
+    au < zapped ; down ; 2009 ; Community Development Journal Volume 44 ; 44 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -4000,7 +4000,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; The Computer Journal Volume 51 ; 51 ; >
-    au < down ; crawling ; 2009 ; The Computer Journal Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; The Computer Journal Volume 52 ; 52 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -4084,7 +4084,7 @@
     param[base_url] = http://cww.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Contemporary Women's Writing Volume 2 ; 2 ; >
+    au < zapped ; down ; 2008 ; Contemporary Women's Writing Volume 2 ; 2 ; >
     au < zapped ; down ; 2009 ; Contemporary Women's Writing Volume 3 ; 3 ; reingest4.clockss.org:8082 >
 
     }
@@ -4097,7 +4097,7 @@
     au < manifest ; exists ; 2007 ; Contemporary Women's Writing Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Contemporary Women's Writing Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Contemporary Women's Writing Volume 3 ; 3 ; >
-    au < released ; crawling ; 2010 ; Contemporary Women's Writing Volume 4 ; 4 ; >
+    au < zapped ; down ; 2010 ; Contemporary Women's Writing Volume 4 ; 4 ; >
     au < released ; crawling ; 2011 ; Contemporary Women's Writing Volume 5 ; 5 ; >
     au < crawling ; exists ; 2012 ; Contemporary Women's Writing Volume 6 ; 6 ; >
     au < expected ; exists ; 2013 ; Contemporary Women's Writing Volume 7 ; 7 ; >
@@ -4163,7 +4163,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Contributions to Political Economy Volume 27 ; 27 ; >
-    au < down ; crawling ; 2009 ; Contributions to Political Economy Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Contributions to Political Economy Volume 28 ; 28 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4238,7 +4238,7 @@
     au < manifest ; exists ; 2006 ; Current Legal Problems Volume 59 ; 59 ; >
     au < manifest ; exists ; 2007 ; Current Legal Problems Volume 60 ; 60 ; >
     au < crawling ; exists ; 2008 ; Current Legal Problems Volume 61 ; 61 ; >
-    au < released ; crawling ; 2009 ; Current Legal Problems Volume 62 ; 62 ; >
+    au < zapped ; down ; 2009 ; Current Legal Problems Volume 62 ; 62 ; >
     au < released ; crawling ; 2010 ; Current Legal Problems Volume 63 ; 63 ; >
     au < released ; crawling ; 2011 ; Current Legal Problems Volume 64 ; 64 ; >
     au < crawling ; exists ; 2012 ; Current Legal Problems Volume 65 ; 65 ; >
@@ -4345,7 +4345,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Early Music Volume 36 ; 36 ; >
-    au < down ; crawling ; 2009 ; Early Music Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Early Music Volume 37 ; 37 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4640,7 +4640,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; ELT Journal Volume 62 ; 62 ; >
-    au < down ; crawling ; 2009 ; ELT Journal Volume 63 ; 63 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; ELT Journal Volume 63 ; 63 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4736,7 +4736,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Enterprise & Society: The International Journal of Business History Volume 9 ; 9 ; >
-    au < down ; crawling ; 2009 ; Enterprise & Society: The International Journal of Business History Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Enterprise & Society: The International Journal of Business History Volume 10 ; 10 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -5039,7 +5039,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Europace Volume 10 ; 10 ; >
-    au < down ; crawling ; 2009 ; Europace Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Europace Volume 11 ; 11 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -5084,7 +5084,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
-    au < down ; crawling ; 2009 ; European Heart Journal Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; European Heart Journal Volume 30 ; 30 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -5277,7 +5277,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
-    au < down ; crawling ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -5307,7 +5307,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < notReady ; exists ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
-    au < down ; crawling ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -5378,7 +5378,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; European Journal of International Law Volume 19 ; 19 ; >
-    au < down ; crawling ; 2009 ; European Journal of International Law Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; European Journal of International Law Volume 20 ; 20 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -5708,7 +5708,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Evidence-based Complementary and Alternative Medicine Volume 5 ; 5 ; >
-    au < down ; crawling ; 2009 ; Evidence-based Complementary and Alternative Medicine Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; Evidence-based Complementary and Alternative Medicine Volume 6 ; 6 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -5729,7 +5729,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Family Practice Volume 25 ; 25 ; >
-    au < down ; crawling ; 2009 ; Family Practice Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; Family Practice Volume 26 ; 26 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -5841,7 +5841,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Forestry: An International Journal of Forest Research Volume 81 ; 81 ; >
-    au < down ; crawling ; 2009 ; Forestry: An International Journal of Forest Research Volume 82 ; 82 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Forestry: An International Journal of Forest Research Volume 82 ; 82 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -5956,7 +5956,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 ; >
-    au < down ; crawling ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -6034,7 +6034,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; French History Volume 22 ; 22 ; >
-    au < down ; crawling ; 2009 ; French History Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; French History Volume 23 ; 23 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -6089,8 +6089,8 @@
     param[base_url] = http://fs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 ; >
-    au < down ; crawling ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 ; >
+    au < zapped ; down ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -6413,8 +6413,8 @@
     param[base_url] = http://glycob.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Glycobiology Volume 18 ; 18 ; >
-    au < down ; crawling ; 2009 ; Glycobiology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; Glycobiology Volume 18 ; 18 ; >
+    au < zapped ; down ; 2009 ; Glycobiology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -6497,7 +6497,7 @@
     au < manifest ; exists ; 2007 ; Health & Social Work Volume 32 ; 32 ; >
     au < manifest ; exists ; 2008 ; Health & Social Work Volume 33 ; 33 ; >
     au < released ; crawling ; 2009 ; Health & Social Work Volume 34 ; 34 ; >
-    au < released ; crawling ; 2010 ; Health & Social Work Volume 35 ; 35 ; >
+    au < zapped ; down ; 2010 ; Health & Social Work Volume 35 ; 35 ; >
     au < released ; crawling ; 2011 ; Health & Social Work Volume 36 ; 36 ; >
     au < released ; crawling ; 2012 ; Health & Social Work Volume 37 ; 37 ; >
     au < expected ; exists ; 2013 ; Health & Social Work Volume 38 ; 38 ; >
@@ -6519,7 +6519,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Health Education Research Volume 23 ; 23 ; >
-    au < down ; crawling ; 2009 ; Health Education Research Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Health Education Research Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -6576,7 +6576,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Health Policy and Planning Volume 23 ; 23 ; >
-    au < down ; crawling ; 2009 ; Health Policy and Planning Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Health Policy and Planning Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -6633,7 +6633,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
-    au < down ; crawling ; 2009 ; Health Promotion International Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Health Promotion International Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -6691,8 +6691,8 @@
 
     au < zapped ; down ; 2008 ; History Workshop Journal Volume 65 ; 65 ; >
     au < zapped ; down ; 2008 ; History Workshop Journal Volume 66 ; 66 ; >
-    au < down ; crawling ; 2009 ; History Workshop Journal Volume 67 ; 67 ; reingest3.clockss.org:8083 >
-    au < down ; crawling ; 2009 ; History Workshop Journal Volume 68 ; 68 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; History Workshop Journal Volume 67 ; 67 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; History Workshop Journal Volume 68 ; 68 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -6846,7 +6846,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
-    au < down ; crawling ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -7003,7 +7003,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Human Rights Law Review Volume 8 ; 8 ; >
-    au < down ; crawling ; 2009 ; Human Rights Law Review Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; Human Rights Law Review Volume 9 ; 9 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -7021,7 +7021,7 @@
     au < manifest ; exists ; 2007 ; Human Rights Law Review Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Human Rights Law Review Volume 8 ; 8 ; >
     au < released ; crawling ; 2009 ; Human Rights Law Review Volume 9 ; 9 ; >
-    au < released ; crawling ; 2010 ; Human Rights Law Review Volume 10 ; 10 ; >
+    au < zapped ; down ; 2010 ; Human Rights Law Review Volume 10 ; 10 ; >
     au < released ; crawling ; 2011 ; Human Rights Law Review Volume 11 ; 11 ; >
     au < released ; crawling ; 2012 ; Human Rights Law Review Volume 12 ; 12 ; >
     au < expected ; exists ; 2013 ; Human Rights Law Review Volume 13 ; 13 ; >
@@ -7045,7 +7045,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; ICES Journal of Marine Science: Journal du Conseil Volume 65 ; 65 ; >
-    au < down ; crawling ; 2009 ; ICES Journal of Marine Science: Journal du Conseil Volume 66 ; 66 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; ICES Journal of Marine Science: Journal du Conseil Volume 66 ; 66 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -7165,7 +7165,7 @@
     au < manifest ; exists ; 2006 ; ICSID Review: Foreign Investment Law Journal Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; ICSID Review: Foreign Investment Law Journal Volume 22 ; 22 ; >
     au < manifest ; exists ; 2008 ; ICSID Review: Foreign Investment Law Journal Volume 23 ; 23 ; >
-    au < released ; crawling ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ; >
+    au < zapped ; down ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 ; >
     au < released ; crawling ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ; >
@@ -7296,7 +7296,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; IMA Journal of Applied Mathematics Volume 73 ; 73 ; >
-    au < down ; crawling ; 2009 ; IMA Journal of Applied Mathematics Volume 74 ; 74 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; IMA Journal of Applied Mathematics Volume 74 ; 74 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -7403,7 +7403,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; IMA Journal of Management Mathematics Volume 19 ; 19 ; >
-    au < down ; crawling ; 2009 ; IMA Journal of Management Mathematics Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; IMA Journal of Management Mathematics Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -7455,8 +7455,8 @@
     param[base_url] = http://imamci.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; IMA Journal of Mathematical Control and Information Volume 25 ; 25 ; >
-    au < down ; crawling ; 2009 ; IMA Journal of Mathematical Control and Information Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2008 ; IMA Journal of Mathematical Control and Information Volume 25 ; 25 ; >
+    au < zapped ; down ; 2009 ; IMA Journal of Mathematical Control and Information Volume 26 ; 26 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -7893,7 +7893,7 @@
     au < manifest ; exists ; 2007 ; Interdisciplinary Studies in Literature and Environment Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Interdisciplinary Studies in Literature and Environment Volume 16 ; 16 ; >
-    au < released ; crawling ; 2010 ; Interdisciplinary Studies in Literature and Environment Volume 17 ; 17 ; >
+    au < zapped ; down ; 2010 ; Interdisciplinary Studies in Literature and Environment Volume 17 ; 17 ; >
     au < released ; crawling ; 2011 ; Interdisciplinary Studies in Literature and Environment Volume 18 ; 18 ; >
     au < released ; crawling ; 2012 ; Interdisciplinary Studies in Literature and Environment Volume 19 ; 19 ; >
     au < expected ; exists ; 2013 ; Interdisciplinary Studies in Literature and Environment Volume 20 ; 20 ; >
@@ -7951,7 +7951,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Immunology Volume 20 ; 20 ; >
-    au < down ; crawling ; 2009 ; International Immunology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; International Immunology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -8002,7 +8002,8 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2010 ; 14th International Congress of Immunology Kobe, Japan Supplement Volume 1 ; 1 ; >
+      au < exists ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
+      au < expected ; exists ; 2011 ; International Immunology Meeting Abstracts Volume 23 ; 23 ; >
 
     }
 
@@ -8023,7 +8024,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; International Journal of Constitutional Law Volume 6 ; 6 ; >
-    au < down ; crawling ; 2009 ; International Journal of Constitutional Law Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; International Journal of Constitutional Law Volume 7 ; 7 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -8063,7 +8064,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Journal of Epidemiology Volume 37 ; 37 ; >
-    au < down ; crawling ; 2009 ; International Journal of Epidemiology Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; International Journal of Epidemiology Volume 38 ; 38 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -8241,7 +8242,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; International Journal of Lexicography Volume 21 ; 21 ; >
-    au < down ; crawling ; 2009 ; International Journal of Lexicography Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; International Journal of Lexicography Volume 22 ; 22 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -8495,7 +8496,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; International Journal of Transitional Justice Volume 2 ; 2 ; >
-    au < down ; crawling ; 2009 ; International Journal of Transitional Justice Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; International Journal of Transitional Justice Volume 3 ; 3 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -8530,7 +8531,7 @@
     param[base_url] = http://imrn.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2009 ; International Mathematics Research Notices Volume 2009 ; 2009 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; International Mathematics Research Notices Volume 2009 ; 2009 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -8662,7 +8663,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; ITNOW Volume 50 ; 50 ; >
-    au < down ; crawling ; 2009 ; ITNOW Volume 51 ; 51 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; ITNOW Volume 51 ; 51 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -9168,7 +9169,7 @@
     param[base_url] = http://jac.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 61 ; 61 ; >
+    au < zapped ; down ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 61 ; 61 ; >
     au < down ; crawling ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 ; >
     au < down ; crawling ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 63 ; 63 ; >
     au < down ; crawling ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 ; >
@@ -10155,7 +10156,7 @@
     au < released ; crawling ; 2010 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 65A ; 65A ; >
     au < released ; crawling ; 2011 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 66A ; 66A ; >
     au < released ; crawling ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A ; >
-    au < manifest ; exists ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A ; >
+    au < manifest ; exists ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68A ; 68A ; >
 
     }
 
@@ -10201,9 +10202,9 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 64B ; 64B ; >
     au < released ; crawling ; 2010 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 65B ; 65B ; >
     au < released ; crawling ; 2011 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 66B ; 66B ; >
-	au < testing ; exists ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67B ; 67B ; >
-	au < manifest ; exists ; 2013 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67B ; 67B ; >
-	
+    au < testing ; exists ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67B ; 67B ; >
+    au < expected ; exists ; 2013 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 68B ; 68B ; >
+
     }
 
   }
@@ -10807,7 +10808,7 @@
     param[base_url] = http://jiplp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Intellectual Property Law & Practice Volume 3 ; 3 ; >
+    au < zapped ; down ; 2008 ; Journal of Intellectual Property Law & Practice Volume 3 ; 3 ; >
     au < zapped ; down ; 2009 ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 ; >
 
     }
@@ -10845,7 +10846,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 ; >
-    au < down ; crawling ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 ; >
+    au < zapped ; down ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 ; >
 
     }
 
@@ -11060,7 +11061,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < released ; crawling ; 2009 ; Journal of Legal Analysis Volume 1 ; 1 ; >
-    au < released ; crawling ; 2010 ; Journal of Legal Analysis Volume 2 ; 2 ; >
+    au < zapped ; down ; 2010 ; Journal of Legal Analysis Volume 2 ; 2 ; >
     au < released ; crawling ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Journal of Legal Analysis Volume 4 ; 4 ; >
     au < expected ; exists ; 2013 ; Journal of Legal Analysis Volume 5 ; 5 ; >
@@ -11083,7 +11084,7 @@
     param[base_url] = http://logcom.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Logic and Computation Volume 18 ; 18 ; >
+    au < zapped ; down ; 2008 ; Journal of Logic and Computation Volume 18 ; 18 ; >
     au < down ; crawling ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 ; >
 
     }
@@ -11852,7 +11853,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Plankton Research Volume 30 ; 30 ; >
-    au < down ; crawling ; 2009 ; Journal of Plankton Research Volume 31 ; 31 ; >
+    au < zapped ; down ; 2009 ; Journal of Plankton Research Volume 31 ; 31 ; >
 
     }
 
@@ -12315,7 +12316,7 @@
     au < manifest ; exists ; 2007-2008 ; Journal of Social History Volume 41 ; 41 ; >
     au < released ; crawling ; 2008-2009 ; Journal of Social History Volume 42 ; 42 ; >
     au < released ; crawling ; 2009-2010 ; Journal of Social History Volume 43 ; 43 ; >
-    au < released ; crawling ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ; >
+    au < zapped ; down ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ; >
     au < released ; crawling ; 2011-2012 ; Journal of Social History Volume 45 ; 45 ; >
     au < crawling ; exists ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ; >
     au < expected ; exists ; 2013-2014 ; Journal of Social History Volume 47 ; 47 ; >
@@ -12509,7 +12510,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Topology Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Topology Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Journal of Topology Volume 3 ; 3 ; >
-    au < released ; crawling ; 2011 ; Journal of Topology Volume 4 ; 4 ; >
+    au < zapped ; down ; 2011 ; Journal of Topology Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; Journal of Topology Volume 5 ; 5 ; >
     au < expected ; exists ; 2013 ; Journal of Topology Volume 6 ; 6 ; >
 
@@ -12673,7 +12674,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Law, Probability and Risk Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Law, Probability and Risk Volume 8 ; 8 ; >
     au < released ; crawling ; 2010 ; Law, Probability and Risk Volume 9 ; 9 ; >
-    au < released ; crawling ; 2011 ; Law, Probability and Risk Volume 10 ; 10 ; >
+    au < zapped ; down ; 2011 ; Law, Probability and Risk Volume 10 ; 10 ; >
     au < crawling ; exists ; 2012 ; Law, Probability and Risk Volume 11 ; 11 ; >
     au < expected ; exists ; 2013 ; Law, Probability and Risk Volume 12 ; 12 ; >
 
@@ -13140,7 +13141,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 ; >
-    au < released ; crawling ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 ; >
+    au < zapped ; down ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 ; >
     au < crawling ; exists ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 ; >
     au < expected ; exists ; 2013 ; Logic Journal of the IGPL Volume 21 ; 21 ; >
 
@@ -13162,7 +13163,7 @@
     param[base_url] = http://imammb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 25 ; 25 ; >
+    au < zapped ; down ; 2008 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 25 ; 25 ; >
     au < down ; crawling ; 2009 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 26 ; 26 ; >
 
     }
@@ -13446,7 +13447,7 @@
     param[base_url] = http://molehr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 ; >
+    au < zapped ; down ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 ; >
     au < zapped ; down ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 ; >
 
     }
@@ -13670,7 +13671,7 @@
     param[base_url] = http://ml.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Music and Letters Volume 89 ; 89 ; >
+    au < zapped ; down ; 2008 ; Music and Letters Volume 89 ; 89 ; >
     au < zapped ; down ; 2009 ; Music and Letters Volume 90 ; 90 ; >
 
     }
@@ -13968,7 +13969,7 @@
     param[base_url] = http://ndtplus.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; NDT Plus Volume 1 ; 1 ; >
+    au < zapped ; down ; 2008 ; NDT Plus Volume 1 ; 1 ; >
     au < down ; crawling ; 2009 ; NDT Plus Volume 2 ; 2 ; >
 
     }
@@ -15888,7 +15889,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Proceedings of the London Mathematical Society Volume 99 ; 99 ; >
     au < released ; crawling ; 2010 ; Proceedings of the London Mathematical Society Volume 100 ; 100 ; >
     au < released ; crawling ; 2010 ; Proceedings of the London Mathematical Society Volume 101 ; 101 ; >
-    au < released ; crawling ; 2011 ; Proceedings of the London Mathematical Society Volume 102 ; 102 ; >
+    au < zapped ; down ; 2011 ; Proceedings of the London Mathematical Society Volume 102 ; 102 ; >
     au < released ; crawling ; 2011 ; Proceedings of the London Mathematical Society Volume 103 ; 103 ; >
     au < crawling ; exists ; 2012 ; Proceedings of the London Mathematical Society Volume 104 ; 104 ; >
     au < crawling ; exists ; 2012 ; Proceedings of the London Mathematical Society Volume 105 ; 105 ; >
@@ -15932,7 +15933,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Protein Engineering, Design & Selection : PEDS Volume 21 ; 21 ; >
-    au < down ; crawling ; 2009 ; Protein Engineering, Design & Selection : PEDS Volume 22 ; 22 ; >
+    au < zapped ; down ; 2009 ; Protein Engineering, Design & Selection : PEDS Volume 22 ; 22 ; >
 
     }
 
@@ -16022,7 +16023,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Public Opinion Quarterly Volume 72 ; 72 ; >
-    au < down ; crawling ; 2009 ; Public Opinion Quarterly Volume 73 ; 73 ; >
+    au < zapped ; down ; 2009 ; Public Opinion Quarterly Volume 73 ; 73 ; >
 
     }
 
@@ -16573,7 +16574,7 @@
     au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
     au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
     au < zapped ; down ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; reingest2.clockss.org:8085 >
-    au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -16916,7 +16917,7 @@
     param[base_url] = http://raps.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < released ; crawling ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 ; >
+    au < zapped ; down ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 ; >
     au < crawling ; exists ; 2012 ; The Review of Asset Pricing Studies Volume 2 ; 2 ; >
     au < expected ; exists ; 2013 ; The Review of Asset Pricing Studies Volume 3 ; 3 ; >
 
@@ -17241,7 +17242,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Review of Financial Studies Volume 21 ; 21 ; >
-    au < down ; crawling ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -17296,7 +17297,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Rheumatology Volume 47 ; 47 ; >
-    au < down ; crawling ; 2009 ; Rheumatology Volume 48 ; 48 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; Rheumatology Volume 48 ; 48 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -17486,7 +17487,7 @@
     au < manifest ; exists ; 2008 ; Science and Public Policy Volume 35 ; 35 ; >
     au < released ; crawling ; 2009 ; Science and Public Policy Volume 36 ; 36 ; >
     au < released ; crawling ; 2010 ; Science and Public Policy Volume 37 ; 37 ; >
-    au < released ; crawling ; 2011 ; Science and Public Policy Volume 38 ; 38 ; >
+    au < zapped ; down ; 2011 ; Science and Public Policy Volume 38 ; 38 ; >
     au < crawling ; exists ; 2012 ; Science and Public Policy Volume 39 ; 39 ; >
     au < expected ; exists ; 2013 ; Science and Public Policy Volume 40 ; 40 ; >
 	
@@ -17804,7 +17805,7 @@
     au < manifest ; exists ; 2006 ; Social Politics Volume 13 ; 13 ; >
     au < manifest ; exists ; 2007 ; Social Politics Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Social Politics Volume 15 ; 15 ; >
-    au < released ; crawling ; 2009 ; Social Politics Volume 16 ; 16 ; >
+    au < zapped ; down ; 2009 ; Social Politics Volume 16 ; 16 ; >
     au < released ; crawling ; 2010 ; Social Politics Volume 17 ; 17 ; >
     au < released ; crawling ; 2011 ; Social Politics Volume 18 ; 18 ; >
     au < crawling ; exists ; 2012 ; Social Politics Volume 19 ; 19 ; >
@@ -17829,7 +17830,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Social Science Japan Journal Volume 11 ; 11 ; >
-    au < down ; crawling ; 2009 ; Social Science Japan Journal Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Social Science Japan Journal Volume 12 ; 12 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -17926,7 +17927,7 @@
     au < manifest ; exists ; 2007 ; Social Work Volume 52 ; 52 ; >
     au < manifest ; exists ; 2008 ; Social Work Volume 53 ; 53 ; >
     au < released ; crawling ; 2009 ; Social Work Volume 54 ; 54 ; >
-    au < released ; crawling ; 2010 ; Social Work Volume 55 ; 55 ; >
+    au < zapped ; down ; 2010 ; Social Work Volume 55 ; 55 ; >
     au < released ; crawling ; 2011 ; Social Work Volume 56 ; 56 ; >
     au < crawling ; exists ; 2012 ; Social Work Volume 57 ; 57 ; >
     au < expected ; exists ; 2013 ; Social Work Volume 58 ; 58 ; >
@@ -17960,8 +17961,8 @@
     au < manifest ; exists ; 2006 ; Social Work Research Volume 30 ; 30 ; >
     au < manifest ; exists ; 2007 ; Social Work Research Volume 31 ; 31 ; >
     au < manifest ; exists ; 2008 ; Social Work Research Volume 32 ; 32 ; >
-    au < released ; crawling ; 2009 ; Social Work Research Volume 33 ; 33 ; >
-    au < released ; crawling ; 2010 ; Social Work Research Volume 34 ; 34 ; >
+    au < zapped ; down ; 2009 ; Social Work Research Volume 33 ; 33 ; >
+    au < zapped ; down ; 2010 ; Social Work Research Volume 34 ; 34 ; >
     au < released ; crawling ; 2011 ; Social Work Research Volume 35 ; 35 ; >
     au < crawling ; exists ; 2012 ; Social Work Research Volume 36 ; 36 ; >
     au < expected ; exists ; 2013 ; Social Work Research Volume 37 ; 37 ; >
@@ -18139,7 +18140,7 @@
     au < manifest ; exists ; 2006 ; Statute Law Review Volume 27 ; 27 ; >
     au < manifest ; exists ; 2007 ; Statute Law Review Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Statute Law Review Volume 29 ; 29 ; >
-    au < released ; crawling ; 2009 ; Statute Law Review Volume 30 ; 30 ; >
+    au < zapped ; down ; 2009 ; Statute Law Review Volume 30 ; 30 ; >
     au < released ; crawling ; 2010 ; Statute Law Review Volume 31 ; 31 ; >
     au < released ; crawling ; 2011 ; Statute Law Review Volume 32 ; 32 ; >
     au < crawling ; exists ; 2012 ; Statute Law Review Volume 33 ; 33 ; >
@@ -18164,7 +18165,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; Systematic Biology Volume 57 ; 57 ; >
-    au < down ; crawling ; 2009 ; Systematic Biology Volume 58 ; 58 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Systematic Biology Volume 58 ; 58 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -18740,7 +18741,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
-    au < down ; crawling ; 2009 ; The World Bank Research Observer Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; The World Bank Research Observer Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -18859,7 +18860,7 @@
     au < manifest ; exists ; 2006 ; Yearbook of International Environmental Law Volume 16 ; 16 ; >
     au < manifest ; exists ; 2007 ; Yearbook of International Environmental Law Volume 17 ; 17 ; >
     au < manifest ; exists ; 2008 ; Yearbook of International Environmental Law Volume 18 ; 18 ; >
-    au < released ; crawling ; 2009 ; Yearbook of International Environmental Law Volume 19 ; 19 ; >
+    au < zapped ; down ; 2009 ; Yearbook of International Environmental Law Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Yearbook of International Environmental Law Volume 20 ; 20 ; >
     au < released ; crawling ; 2011 ; Yearbook of International Environmental Law Volume 21 ; 21 ; >
     au < expected ; exists ; 2012 ; Yearbook of International Environmental Law Volume 22 ; 22 ; >
@@ -18882,7 +18883,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; down ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 ; >
-    au < down ; crawling ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -19419,25 +19420,6 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < expected ; exists ; 2013 ; Geophysical Supplements to Monthly Notices of Royal Astronomical Society Volume 1 ; 1 ; >
-
-    }
-
-  }
-
-  {
-
-    title <
-      name = International Immunology Meeting Abstracts 
-    >
-
-    param[base_url] = http://intimmabs.oxfordjournals.org/
-
-    {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < manifest ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
-      au < expected ; exists ; 2011 ; International Immunology Meeting Abstracts Volume 23 ; 23 ; >
 
     }
 
