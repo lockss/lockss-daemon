@@ -19,29 +19,17 @@
       issn = 1715-5312 ;
       eissn = 1715-5320
       >
-
+    
+    comment[0] = As of 2006, name changed from Canadian Journal of Applied Physiology
     param[journal_id] = apnm 
 
-    au < exists ; exists ; 1993 ; Applied Physiology, Nutrition, and Metabolism Volume 18 ; 18 >
-    au < exists ; exists ; 1994 ; Applied Physiology, Nutrition, and Metabolism Volume 19 ; 19 >
-    au < exists ; exists ; 1995 ; Applied Physiology, Nutrition, and Metabolism Volume 20 ; 20 >
-    au < exists ; exists ; 1996 ; Applied Physiology, Nutrition, and Metabolism Volume 21 ; 21 >
-    au < exists ; exists ; 1997 ; Applied Physiology, Nutrition, and Metabolism Volume 22 ; 22 >
-    au < exists ; exists ; 1998 ; Applied Physiology, Nutrition, and Metabolism Volume 23 ; 23 >
-    au < exists ; exists ; 1999 ; Applied Physiology, Nutrition, and Metabolism Volume 24 ; 24 >
-    au < exists ; exists ; 2000 ; Applied Physiology, Nutrition, and Metabolism Volume 25 ; 25 >
-    au < exists ; exists ; 2001 ; Applied Physiology, Nutrition, and Metabolism Volume 26 ; 26 >
-    au < exists ; exists ; 2002 ; Applied Physiology, Nutrition, and Metabolism Volume 27 ; 27 >
-    au < exists ; exists ; 2003 ; Applied Physiology, Nutrition, and Metabolism Volume 28 ; 28 >
-    au < exists ; exists ; 2004 ; Applied Physiology, Nutrition, and Metabolism Volume 29 ; 29 >
-    au < exists ; exists ; 2005 ; Applied Physiology, Nutrition, and Metabolism Volume 30 ; 30 >
     au < exists ; exists ; 2006 ; Applied Physiology, Nutrition, and Metabolism Volume 31 ; 31 >
     au < exists ; exists ; 2007 ; Applied Physiology, Nutrition, and Metabolism Volume 32 ; 32 >
     au < exists ; exists ; 2008 ; Applied Physiology, Nutrition, and Metabolism Volume 33 ; 33 >
     au < exists ; exists ; 2009 ; Applied Physiology, Nutrition, and Metabolism Volume 34 ; 34 >
     au < exists ; exists ; 2010 ; Applied Physiology, Nutrition, and Metabolism Volume 35 ; 35 >
     au < exists ; exists ; 2011 ; Applied Physiology, Nutrition, and Metabolism Volume 36 ; 36 >
-    au < exists ; exists ; 2012 ; Applied Physiology, Nutrition, and Metabolism Volume 36 ; 37 >
+    au < exists ; exists ; 2012 ; Applied Physiology, Nutrition, and Metabolism Volume 37 ; 37 >
     
   }  
   
@@ -135,23 +123,23 @@
     au < exists ; exists ; 1960 ; Botany Volume 38 ; 38 >
     au < exists ; exists ; 1961 ; Botany Volume 39 ; 39 >
     au < exists ; exists ; 1962 ; Botany Volume 40 ; 40 >
-    au < exists ; exists ; 1963 ; Botany Volume 42 ; 42 >
-    au < exists ; exists ; 1964 ; Botany Volume 43 ; 43 >
-    au < exists ; exists ; 1965 ; Botany Volume 44 ; 44 >
-    au < exists ; exists ; 1966 ; Botany Volume 45 ; 45 >
-    au < exists ; exists ; 1967 ; Botany Volume 46 ; 46 >
-    au < exists ; exists ; 1968 ; Botany Volume 47 ; 47 >
-    au < exists ; exists ; 1969 ; Botany Volume 48 ; 48 >
-    au < exists ; exists ; 1970 ; Botany Volume 49 ; 49 >
-    au < exists ; exists ; 1971 ; Botany Volume 50 ; 50 >
-    au < exists ; exists ; 1972 ; Botany Volume 51 ; 51 >
-    au < exists ; exists ; 1973 ; Botany Volume 52 ; 52 >
-    au < exists ; exists ; 1974 ; Botany Volume 53 ; 53 >
-    au < exists ; exists ; 1975 ; Botany Volume 54 ; 54 >
-    au < exists ; exists ; 1976 ; Botany Volume 55 ; 55 >
-    au < exists ; exists ; 1977 ; Botany Volume 56 ; 56 >
-    au < exists ; exists ; 1978 ; Botany Volume 57 ; 57 >
-    au < exists ; exists ; 1979 ; Botany Volume 58 ; 58 >
+    au < exists ; exists ; 1963 ; Botany Volume 41 ; 41 >
+    au < exists ; exists ; 1964 ; Botany Volume 42 ; 42 >
+    au < exists ; exists ; 1965 ; Botany Volume 43 ; 43 >
+    au < exists ; exists ; 1966 ; Botany Volume 44 ; 44 >
+    au < exists ; exists ; 1967 ; Botany Volume 45 ; 45 >
+    au < exists ; exists ; 1968 ; Botany Volume 46 ; 46 >
+    au < exists ; exists ; 1969 ; Botany Volume 47 ; 47 >
+    au < exists ; exists ; 1970 ; Botany Volume 48 ; 48 >
+    au < exists ; exists ; 1971 ; Botany Volume 49 ; 49 >
+    au < exists ; exists ; 1972 ; Botany Volume 50 ; 50 >
+    au < exists ; exists ; 1973 ; Botany Volume 51 ; 51 >
+    au < exists ; exists ; 1974 ; Botany Volume 52 ; 52 >
+    au < exists ; exists ; 1975 ; Botany Volume 53 ; 53 >
+    au < exists ; exists ; 1976 ; Botany Volume 54 ; 54 >
+    au < exists ; exists ; 1977 ; Botany Volume 55 ; 55 >
+    au < exists ; exists ; 1978 ; Botany Volume 56 ; 56 >
+    au < exists ; exists ; 1979 ; Botany Volume 57 ; 57 >
     au < exists ; exists ; 1980 ; Botany Volume 58 ; 58 >
     au < exists ; exists ; 1981 ; Botany Volume 59 ; 59 >
     au < exists ; exists ; 1982 ; Botany Volume 60 ; 60 >
@@ -349,7 +337,9 @@
       issn = 1066-7814 ;
       eissn = 1543-2718
       >
-    param[journal_id] = apnm
+      
+    comment[0] = published through 2005, changed name to Applied Physiology, Nutrition, and Metabolism
+    param[journal_id] = cjap
     
     au < exists ; exists ; 1993 ; Canadian Journal of Applied Physiology Volume 18 ; 18 >
     au < exists ; exists ; 1994 ; Canadian Journal of Applied Physiology Volume 19 ; 19 >
@@ -364,13 +354,6 @@
     au < exists ; exists ; 2003 ; Canadian Journal of Applied Physiology Volume 28 ; 28 >
     au < exists ; exists ; 2004 ; Canadian Journal of Applied Physiology Volume 29 ; 29 >
     au < exists ; exists ; 2005 ; Canadian Journal of Applied Physiology Volume 30 ; 30 >
-    au < exists ; exists ; 2006 ; Canadian Journal of Applied Physiology Volume 31 ; 31 >
-    au < exists ; exists ; 2007 ; Canadian Journal of Applied Physiology Volume 32 ; 32 >
-    au < exists ; exists ; 2008 ; Canadian Journal of Applied Physiology Volume 33 ; 33 >
-    au < exists ; exists ; 2009 ; Canadian Journal of Applied Physiology Volume 34 ; 34 >
-    au < exists ; exists ; 2010 ; Canadian Journal of Applied Physiology Volume 35 ; 35 >
-    au < exists ; exists ; 2011 ; Canadian Journal of Applied Physiology Volume 36 ; 36 >
-    au < exists ; exists ; 2012 ; Canadian Journal of Applied Physiology Volume 37 ; 37 >
     
     }
 
@@ -384,9 +367,9 @@
       
     param[journal_id] = cjc
 
-    au < exists ; exists ; 1951 ; Canadian Journal of Chemistry Volume 31 ; 31 >
-    au < exists ; exists ; 1952 ; Canadian Journal of Chemistry Volume 32 ; 32 >
-    au < exists ; exists ; 1953 ; Canadian Journal of Chemistry Volume 33 ; 33 >
+    au < exists ; exists ; 1951 ; Canadian Journal of Chemistry Volume 29 ; 29 >
+    au < exists ; exists ; 1952 ; Canadian Journal of Chemistry Volume 30 ; 30 >
+    au < exists ; exists ; 1953 ; Canadian Journal of Chemistry Volume 31 ; 31 >
     au < exists ; exists ; 1954 ; Canadian Journal of Chemistry Volume 32 ; 32 >
     au < exists ; exists ; 1955 ; Canadian Journal of Chemistry Volume 33 ; 33 >
     au < exists ; exists ; 1956 ; Canadian Journal of Chemistry Volume 34 ; 34 >
