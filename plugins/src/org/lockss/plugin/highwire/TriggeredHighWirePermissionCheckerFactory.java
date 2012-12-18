@@ -1,5 +1,5 @@
 /*
- * $Id: TriggeredHighWirePermissionCheckerFactory.java,v 1.2 2012-07-12 21:50:45 pgust Exp $
+ * $Id: TriggeredHighWirePermissionCheckerFactory.java,v 1.3 2012-12-18 16:15:08 pgust Exp $
  */
 
 /*
@@ -54,23 +54,16 @@ import org.lockss.plugin.*;
 public class TriggeredHighWirePermissionCheckerFactory implements
     PermissionCheckerFactory {
 
-  public List createPermissionCheckers(ArchivalUnit au) {
-    List list = new ArrayList(1);
-    list.add(new TriggeredPermissionChecker(new HighWireLoginPageChecker(), au));
+  public List<PermissionChecker> createPermissionCheckers(ArchivalUnit au) {
+    List<PermissionChecker> list = 
+      Collections.<PermissionChecker>singletonList(
+        new PermissionChecker() {
+          @Override public boolean checkPermission (
+            Crawler.PermissionHelper pHelper, Reader rdr, String url) {
+            return true;
+          }
+        }
+      );
     return list;
-  }
-
-  private class TriggeredPermissionChecker implements PermissionChecker {
-
-    ArchivalUnit au;
-
-    public TriggeredPermissionChecker(LoginPageChecker checker, ArchivalUnit au) {
-      this.au = au;
-    }
-
-    public boolean checkPermission(Crawler.PermissionHelper pHelper,
-        Reader inputReader, String url) {
-      return true;
-    }
   }
 }
