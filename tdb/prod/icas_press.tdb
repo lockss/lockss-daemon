@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = ICAS Press
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  param[base_url] = http://muse.jhu.edu/
+  param[journal_dir] = journal_of_shia_islamic_studies
+  attr[journal_id] = isl
+
+  {
+    title <
+      name = Journal of Shi'a Islamic Studies
+      issn = 1748-9423 ;
+      eissn = 2051-557X ;
+      issnl = 1748-9423
+    >
+
+    au < manifest ; 2012 ; Journal of Shi'a Islamic Studies Volume 5 ; 5 >
+
+  }
+
+}
