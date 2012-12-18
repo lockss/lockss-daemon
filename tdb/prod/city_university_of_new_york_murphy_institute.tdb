@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = City University of New York - The Murphy Institute
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  param[base_url] = http://muse.jhu.edu/
+  param[journal_dir] = new_labor_forum
+  attr[journal_id] = nlf
+
+  {
+    title <
+      name = New Labor Forum ;
+      issn = 1095-7960 ;
+      eissn = 1557-2978 ;
+      issnl = 1095-7960
+    >
+
+    au < manifest ; 2010 ; New Labor Forum Volume 19 ; 19 >
+    au < manifest ; 2011 ; New Labor Forum Volume 20 ; 20 >
+    au < manifest ; 2012 ; New Labor Forum Volume 21 ; 21 >
+
+  }
+
+}
