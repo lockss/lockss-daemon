@@ -1,0 +1,32 @@
+{
+  publisher <
+    name = The Centre for Research in Young People's Texts and Cultures, University of Winnipeg
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+
+  param[journal_dir] = jeunesse
+  attr[journal_id] = jeu
+
+    {
+
+    title <
+      name = Jeunesse: Young People, Texts, Cultures ;
+      issn = 1920-2601 ;
+      eissn = 1920-261X ;
+      issnl = 1920-2601
+    >
+
+    au < manifest ; 2009 ; Jeunesse: Young People, Texts, Cultures Volume 1 ; 1 >
+    au < manifest ; 2010 ; Jeunesse: Young People, Texts, Cultures Volume 2 ; 2 >
+    au < manifest ; 2011 ; Jeunesse: Young People, Texts, Cultures Volume 3 ; 3 >
+    au < manifest ; 2012 ; Jeunesse: Young People, Texts, Cultures Volume 4 ; 4 >
+
+    }
+
+  }
+
+}
