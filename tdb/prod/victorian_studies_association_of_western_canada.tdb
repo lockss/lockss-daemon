@@ -1,0 +1,31 @@
+{
+  publisher <
+    name = Victorian Studies Association of Western Canada
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+
+  param[journal_dir] = victorian_review
+  attr[journal_id] = vcr
+
+    {
+
+    title <
+      name = Victorian Review ;
+      issn = 0848-1512 ;
+      eissn = 1923-3280 ;
+      issnl = 0848-1512
+    >
+
+    au < manifest ; 2009 ; Victorian Review Volume 35 ; 35 >
+    au < manifest ; 2010 ; Victorian Review Volume 36 ; 36 >
+    au < manifest ; 2011 ; Victorian Review Volume 37 ; 37 >
+
+    }
+
+  }
+
+}

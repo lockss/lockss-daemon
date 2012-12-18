@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = African Studies Program, University of Wisconsin-Madison
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+
+  param[journal_dir] = african_economic_history
+  attr[journal_id] = aeh
+
+    {
+
+    title <
+      name = African Economic History ;
+      issn = 0145-2258 ;
+      eissn = 2163-9108 ;
+      issnl = 0145-2258
+    >
+
+    au < manifest ; 2008 ; African Economic History Volume 36 ; 36 >
+    au < manifest ; 2010 ; African Economic History Volume 38 ; 38 >
+
+    }
+
+  }
+
+}
