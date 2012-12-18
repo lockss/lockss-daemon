@@ -32,6 +32,29 @@
 
     }
 
+     {
+
+    title <
+      name = Philip Roth Studies ;
+      issn = 1547-3929 ;
+      eissn = 1940-5278 ;
+      issnl = 1547-3929
+    >
+
+    param[journal_dir] = philip_roth_studies
+    attr[journal_id] = prs
+
+    au < manifest ; 2005 ; Philip Roth Studies Volume 1 ; 1 >
+    au < manifest ; 2006 ; Philip Roth Studies Volume 2 ; 2 >
+    au < manifest ; 2007 ; Philip Roth Studies Volume 3 ; 3 >
+    au < manifest ; 2008 ; Philip Roth Studies Volume 4 ; 4 >
+    au < manifest ; 2009 ; Philip Roth Studies Volume 5 ; 5 >
+    au < manifest ; 2010 ; Philip Roth Studies Volume 6 ; 6 >
+    au < manifest ; 2011 ; Philip Roth Studies Volume 7 ; 7 >
+    au < manifest ; 2012 ; Philip Roth Studies Volume 8 ; 8 >
+
+    }
+
     {
 
       title <
