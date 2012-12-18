@@ -25,4 +25,21 @@
 
   }
 
+  {
+  
+    title <
+      name = philoSOPHIA ;
+      issn = 2155-0891 ;
+      eissn = 2155-0905 ;
+      issnl = 2155-0891
+    >
+
+    param[journal_dir] = philosophia
+    attr[journal_id] = phi
+
+    au < manifest ; 2011 ; philoSOPHIA Volume 1 ; 1 >
+    au < manifest ; 2012 ; philoSOPHIA Volume 2 ; 2 >
+
+  }
+
 }
