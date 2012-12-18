@@ -5695,8 +5695,7 @@
         param[base_url] = http://cpx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2012 ; Clinical Psychological Science Volume OnlineFirst ; 1 >
-        au < expected ; 2013 ; Clinical Psychological Science Volume OnlineFirst ; 2 >
+        au < exists ; 2013 ; Clinical Psychological Science Volume 1 ; 1 >
 
       }
 
