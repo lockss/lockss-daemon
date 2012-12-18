@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.37 2012-11-16 14:32:08 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.38 2012-12-18 11:38:31 easyonthemayo Exp $
  */
 
 /*
@@ -113,7 +113,8 @@ public class KbartConverter {
   /**
    * How many threads to provide for title conversions during KBART reporting.
    * The change will take place when the pool is next used for reporting.
-   * To reset the pool to the default size, just remove this parameter.
+   * To reset the pool to the default size, just remove this parameter or set
+   * it to zero.
    */
   public static final String PARAM_CONVERT_TITLES_POOL_SIZE =
       PREFIX + "conversionThreadPoolSize";
@@ -147,13 +148,15 @@ public class KbartConverter {
       new AdjustableFixedSizeThreadPoolExecutor(DEFAULT_CONVERT_TITLES_POOL_SIZE);
 
   /**
-   * This method should be used to get the executor to use for convertnig titles;
+   * This method should be used to get the executor to use for converting titles;
    * it first resizes the thread pool if the configuration has changed.
    * @return
    */
   private static final AdjustableFixedSizeThreadPoolExecutor getConvertTitlesExecutor() {
     int newSize = CurrentConfig.getIntParam(PARAM_CONVERT_TITLES_POOL_SIZE,
         DEFAULT_CONVERT_TITLES_POOL_SIZE);
+    // Set the new size to default if user specified 0
+    if (newSize==0) newSize = DEFAULT_CONVERT_TITLES_POOL_SIZE;
     // Resize the pool if the param differs from the current prescribed size
     if (newSize!=CONVERT_TITLES_EXECUTOR.getFixedPoolSize()) {
       boolean success = CONVERT_TITLES_EXECUTOR.setFixedPoolSize(newSize);
