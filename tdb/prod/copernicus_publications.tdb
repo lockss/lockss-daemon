@@ -86,14 +86,14 @@
       param[base_url] = http://www.adv-sci-res.net/
       param[home_url] = http://www.advances-in-science-and-research.net/
 
-      au < manifest ; 2007 ; 2007 ; Advances in Science and Research (ASR) 2006 Volume 1 ; 1 >
-      au < manifest ; 2008 ; 2008 ; Advances in Science and Research (ASR) 2007 Volume 2 ; 2 >
-      au < manifest ; 2009 ; 2009 ; Advances in Science and Research (ASR) 2008 Volume 3 ; 3 >
-      au < manifest ; 2010 ; 2010 ; Advances in Science and Research (ASR) 2009 Volume 4 ; 4 >
-      au < manifest ; 2010 ; 2010 ; Advances in Science and Research (ASR) 2010 Volume 5 ; 5 >
-      au < manifest ; 2011 ; 2011 ; Advances in Science and Research (ASR) 2010 Volume 6 ; 6 >
-      au < manifest ; 2011 ; 2011 ; Advances in Science and Research (ASR) 2011 Volume 7 ; 7 >
-      au < manifest ; 2012 ; 2012 ; Advances in Science and Research (ASR) 2011 Volume 8 ; 8 >
+      au < testing ; 2007 ; 2007 ; Advances in Science and Research (ASR) 2006 Volume 1 ; 1 >
+      au < testing ; 2008 ; 2008 ; Advances in Science and Research (ASR) 2007 Volume 2 ; 2 >
+      au < testing ; 2009 ; 2009 ; Advances in Science and Research (ASR) 2008 Volume 3 ; 3 >
+      au < testing ; 2010 ; 2010 ; Advances in Science and Research (ASR) 2009 Volume 4 ; 4 >
+      au < testing ; 2010 ; 2010 ; Advances in Science and Research (ASR) 2010 Volume 5 ; 5 >
+      au < testing ; 2011 ; 2011 ; Advances in Science and Research (ASR) 2010 Volume 6 ; 6 >
+      au < testing ; 2011 ; 2011 ; Advances in Science and Research (ASR) 2011 Volume 7 ; 7 >
+      au < testing ; 2012 ; 2012 ; Advances in Science and Research (ASR) 2011 Volume 8 ; 8 >
     
    }
     
@@ -107,25 +107,25 @@
       param[base_url] = http://www.ann-geophys.net/
       param[home_url] = http://www.annales-geophysicae.net/
 
-      au < manifest ; 1994 ; 1994 ; Annales Geophysicae Volume 12 ; 12 >
-      au < manifest ; 1995 ; 1995 ; Annales Geophysicae Volume 13 ; 13 >
-      au < manifest ; 1996 ; 1996 ; Annales Geophysicae Volume 14 ; 14 >
-      au < manifest ; 1997 ; 1997 ; Annales Geophysicae Volume 15 ; 15 >
-      au < manifest ; 1998 ; 1998 ; Annales Geophysicae Volume 16 ; 16 >
-      au < manifest ; 1999 ; 1999 ; Annales Geophysicae Volume 17 ; 17 >
-      au < manifest ; 2000 ; 2000 ; Annales Geophysicae Volume 18 ; 18 >
-      au < manifest ; 2001 ; 2001 ; Annales Geophysicae Volume 19 ; 19 >
-      au < manifest ; 2002 ; 2002 ; Annales Geophysicae Volume 20 ; 20 >
-      au < manifest ; 2003 ; 2003 ; Annales Geophysicae Volume 21 ; 21 >
-      au < manifest ; 2004 ; 2004 ; Annales Geophysicae Volume 22 ; 22 >
-      au < manifest ; 2005 ; 2005 ; Annales Geophysicae Volume 23 ; 23 >
-      au < manifest ; 2006 ; 2006 ; Annales Geophysicae Volume 24 ; 24 >
-      au < manifest ; 2007 ; 2007 ; Annales Geophysicae Volume 25 ; 25 >
-      au < manifest ; 2008 ; 2008 ; Annales Geophysicae Volume 26 ; 26 >
-      au < manifest ; 2009 ; 2009 ; Annales Geophysicae Volume 27 ; 27 >
-      au < manifest ; 2010 ; 2010 ; Annales Geophysicae Volume 28 ; 28 >
-      au < manifest ; 2011 ; 2011 ; Annales Geophysicae Volume 29 ; 29 >
-      au < manifest ; 2012 ; 2012 ; Annales Geophysicae Volume 30 ; 30 >
+      au < testing ; 1994 ; 1994 ; Annales Geophysicae Volume 12 ; 12 >
+      au < testing ; 1995 ; 1995 ; Annales Geophysicae Volume 13 ; 13 >
+      au < testing ; 1996 ; 1996 ; Annales Geophysicae Volume 14 ; 14 >
+      au < testing ; 1997 ; 1997 ; Annales Geophysicae Volume 15 ; 15 >
+      au < testing ; 1998 ; 1998 ; Annales Geophysicae Volume 16 ; 16 >
+      au < testing ; 1999 ; 1999 ; Annales Geophysicae Volume 17 ; 17 >
+      au < testing ; 2000 ; 2000 ; Annales Geophysicae Volume 18 ; 18 >
+      au < testing ; 2001 ; 2001 ; Annales Geophysicae Volume 19 ; 19 >
+      au < testing ; 2002 ; 2002 ; Annales Geophysicae Volume 20 ; 20 >
+      au < testing ; 2003 ; 2003 ; Annales Geophysicae Volume 21 ; 21 >
+      au < testing ; 2004 ; 2004 ; Annales Geophysicae Volume 22 ; 22 >
+      au < testing ; 2005 ; 2005 ; Annales Geophysicae Volume 23 ; 23 >
+      au < testing ; 2006 ; 2006 ; Annales Geophysicae Volume 24 ; 24 >
+      au < testing ; 2007 ; 2007 ; Annales Geophysicae Volume 25 ; 25 >
+      au < testing ; 2008 ; 2008 ; Annales Geophysicae Volume 26 ; 26 >
+      au < testing ; 2009 ; 2009 ; Annales Geophysicae Volume 27 ; 27 >
+      au < testing ; 2010 ; 2010 ; Annales Geophysicae Volume 28 ; 28 >
+      au < testing ; 2011 ; 2011 ; Annales Geophysicae Volume 29 ; 29 >
+      au < testing ; 2012 ; 2012 ; Annales Geophysicae Volume 30 ; 30 >
     
    }
     
@@ -139,14 +139,14 @@
       param[base_url] = http://www.astrophys-space-sci-trans.net/
       param[home_url] = http://www.astrophysics-and-space-sciences-transactions.net/
 
-      au < manifest ; 2005 ; 2005 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 1 ; 1 >
-      au < manifest ; 2006 ; 2006 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 2 ; 2 >
-      au < manifest ; 2007 ; 2007 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 3 ; 3 >
-      au < manifest ; 2008 ; 2008 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 4 ; 4 >
-      au < manifest ; 2009 ; 2009 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 5 ; 5 >
-      au < manifest ; 2010 ; 2010 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 6 ; 6 >
-      au < manifest ; 2011 ; 2011 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 7 ; 7 >
-      au < manifest ; 2012 ; 2012 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 8 ; 8 >
+      au < testing ; 2005 ; 2005 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 1 ; 1 >
+      au < testing ; 2006 ; 2006 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 2 ; 2 >
+      au < testing ; 2007 ; 2007 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 3 ; 3 >
+      au < testing ; 2008 ; 2008 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 4 ; 4 >
+      au < testing ; 2009 ; 2009 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 5 ; 5 >
+      au < testing ; 2010 ; 2010 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 6 ; 6 >
+      au < testing ; 2011 ; 2011 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 7 ; 7 >
+      au < testing ; 2012 ; 2012 ; Astrophysics and Space Sciences Transactions (ASTRA) Volume 8 ; 8 >
     
    }
     
