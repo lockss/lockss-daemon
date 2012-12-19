@@ -224,6 +224,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 3 ; 3 > 
     au < released ; crawling ; 2012 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 4 ; 4 > 
+    au < expected ; exists ; 2013 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 5 ; 5 > 
 
   }
 
@@ -236,8 +237,9 @@
       issnl = 2160-9802
     >
 	param[journal_issn] = 2160-9802
-	
+
     au < released ; crawling ; 2012 ; International Journal of Applied Behavioral Economics (IJABE) Volume 1 ; 1 > 
+    au < expected ; exists ; 2013 ; International Journal of Applied Behavioral Economics (IJABE) Volume 2 ; 2 > 
 
   }
 
@@ -254,6 +256,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 3 ; 3 > 
+    au < expected ; exists ; 2013 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 4 ; 4 > 
 
   }
 
@@ -270,6 +273,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Applied Geospatial Research (IJAGR) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Applied Geospatial Research (IJAGR) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Applied Geospatial Research (IJAGR) Volume 3 ; 3 > 
+    au < expected ; exists ; 2013 ; International Journal of Applied Geospatial Research (IJAGR) Volume 4 ; 4 > 
 
   }
 
@@ -284,6 +288,7 @@
 	param[journal_issn] = 2155-4153
 	
     au < released ; crawling ; 2012 ; International Journal of Applied Industrial Engineering (IJAIE) Volume 1 ; 1 > 
+    au < expected ; exists ; 2013 ; International Journal of Applied Industrial Engineering (IJAIE) Volume 2 ; 2 > 
 
   }
 
