@@ -1269,7 +1269,7 @@
 
       plugin = needs.plugin
       param[base_url] = http://projecteuclid.org/kjm/
-      parm[journal_id] = kjm_2
+      param[journal_id] = kjm_2
       implicit < status ; year ; name ; param[volume_name] >
 
 
@@ -1552,7 +1552,7 @@
 
       plugin = needs.plugin
       param[base_url] = http://projecteuclid.org/kjm/
-      parm[journal_id] = kjm_1
+      param[journal_id] = kjm_1
       implicit < status ; year ; name ; param[volume_name] >
 
 
