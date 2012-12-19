@@ -8314,7 +8314,7 @@
         au < doNotProcess ; 2009 ; The Diabetes Educator Volume 35 ; 35 >
         au < released ; 2010 ; The Diabetes Educator Volume 36 ; 36 >
         au < released ; 2011 ; The Diabetes Educator Volume 37 ; 37 >
-        au < manifest ; 2012 ; The Diabetes Educator Volume 38 ; 38 >
+        au < ready ; 2012 ; The Diabetes Educator Volume 38 ; 38 >
         au < expected ; 2013 ; The Diabetes Educator Volume 39 ; 39 >
 
       }
@@ -37848,7 +37848,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Therapeutic Advances in Medical Oncology Volume 1 ; 1 >
         au < released ; 2010 ; Therapeutic Advances in Medical Oncology Volume 2 ; 2 >
         au < released ; 2011 ; Therapeutic Advances in Medical Oncology Volume 3 ; 3 >
-        au < manifest ; 2012 ; Therapeutic Advances in Medical Oncology Volume 4 ; 4 >
+        au < ready ; 2012 ; Therapeutic Advances in Medical Oncology Volume 4 ; 4 >
         au < expected ; 2013 ; Therapeutic Advances in Medical Oncology Volume 5 ; 5 >
 
       }
@@ -37897,7 +37897,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Therapeutic Advances in Neurological Disorders Volume 2 ; 2 >
         au < released ; 2010 ; Therapeutic Advances in Neurological Disorders Volume 3 ; 3 >
         au < released ; 2011 ; Therapeutic Advances in Neurological Disorders Volume 4 ; 4 >
-        au < manifest ; 2012 ; Therapeutic Advances in Neurological Disorders Volume 5 ; 5 >
+        au < ready ; 2012 ; Therapeutic Advances in Neurological Disorders Volume 5 ; 5 >
         au < manifest ; 2013 ; Therapeutic Advances in Neurological Disorders Volume 6 ; 6 >
 
       }
@@ -37918,7 +37918,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < released ; 2011 ; Therapeutic Advances in Psychopharmacology Volume 1 ; 1 >
-        au < manifest ; 2012 ; Therapeutic Advances in Psychopharmacology Volume 2 ; 2 >
+        au < ready ; 2012 ; Therapeutic Advances in Psychopharmacology Volume 2 ; 2 >
         au < expected ; 2013 ; Therapeutic Advances in Psychopharmacology Volume 3 ; 3 >
         
       }
@@ -37956,7 +37956,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Therapeutic Advances in Respiratory Disease Volume 3 ; 3 >
         au < released ; 2010 ; Therapeutic Advances in Respiratory Disease Volume 4 ; 4 >
         au < released ; 2011 ; Therapeutic Advances in Respiratory Disease Volume 5 ; 5 >
-        au < manifest ; 2012 ; Therapeutic Advances in Respiratory Disease Volume 6 ; 6 >
+        au < ready ; 2012 ; Therapeutic Advances in Respiratory Disease Volume 6 ; 6 >
         au < expected ; 2013 ; Therapeutic Advances in Respiratory Disease Volume 7 ; 7 >
 
       }
@@ -37980,7 +37980,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Therapeutic Advances in Urology Volume 1 ; 1 >
         au < released ; 2010 ; Therapeutic Advances in Urology Volume 2 ; 2 >
         au < released ; 2011 ; Therapeutic Advances in Urology Volume 3 ; 3 >
-        au < manifest ; 2012 ; Therapeutic Advances in Urology Volume 4 ; 4 >
+        au < ready ; 2012 ; Therapeutic Advances in Urology Volume 4 ; 4 >
         au < expected ; 2013 ; Therapeutic Advances in Urology Volume 5 ; 5 >
 
       }
@@ -38131,11 +38131,11 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Thesis Eleven Volume 105 ; 105 >
         au < released ; 2011 ; Thesis Eleven Volume 106 ; 106 >
         au < released ; 2011 ; Thesis Eleven Volume 107 ; 107 >
-        au < manifest ; 2012 ; Thesis Eleven Volume 108 ; 108 >
-        au < manifest ; 2012 ; Thesis Eleven Volume 109 ; 109 >
-        au < manifest ; 2012 ; Thesis Eleven Volume 110 ; 110 >
-        au < manifest ; 2012 ; Thesis Eleven Volume 111 ; 111 >
-        au < manifest ; 2012 ; Thesis Eleven Volume 112 ; 112 >
+        au < ready ; 2012 ; Thesis Eleven Volume 108 ; 108 >
+        au < ready ; 2012 ; Thesis Eleven Volume 109 ; 109 >
+        au < ready ; 2012 ; Thesis Eleven Volume 110 ; 110 >
+        au < ready ; 2012 ; Thesis Eleven Volume 111 ; 111 >
+        au < ready ; 2012 ; Thesis Eleven Volume 112 ; 112 >
         au < expected ; 2013 ; Thesis Eleven Volume 113 ; 113 >
         au < expected ; 2013 ; Thesis Eleven Volume 114 ; 114 >
         au < expected ; 2013 ; Thesis Eleven Volume 115 ; 115 >
@@ -41136,7 +41136,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2009 ; Ultrasonic Imaging Volume 31 ; 31 >
         au < exists ; 2010 ; Ultrasonic Imaging Volume 32 ; 32 >
         au < exists ; 2011 ; Ultrasonic Imaging Volume 33 ; 33 >
-        au < manifest ; 2012 ; Ultrasonic Imaging Volume 34 ; 34 >
+        au < ready ; 2012 ; Ultrasonic Imaging Volume 34 ; 34 >
         au < expected ; 2013 ; Ultrasonic Imaging Volume 35 ; 35 >
   
       }
