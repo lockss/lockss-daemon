@@ -1765,7 +1765,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 3 ; 3 > 
     au < released ; crawling ; 2012 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 4 ; 4 > 
-    au < expected ; exists ; 2013 ; International Journal of Mobile Human Computer Interaction (IJMHCI Volume 5 ; 5 > 
+    au < expected ; exists ; 2013 ; International Journal of Mobile Human Computer Interaction (IJMHCI) Volume 5 ; 5 > 
 
   }
 
@@ -1778,6 +1778,8 @@
     >
     
     comment[0] = forthcoming 2013 as of 9-6-2012
+
+    au < expected ; exists ; 2013 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 1 ; 1 > 
     
   }
 
@@ -1812,6 +1814,7 @@
     au < crawling ; exists ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 > 
     au < notReady ; exists ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 > 
+    au < expected ; exists ; 2013 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 5 ; 5 > 
 
   }
 
@@ -1829,6 +1832,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 3 ; 3 > 
     au < notReady ; exists ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
+    au < expected ; exists ; 2013 ; International Journal of Natural Computing Research (IJNCR) Volume 5 ; 5 > 
 
   }
 
@@ -1844,6 +1848,7 @@
 	
     au < released ; crawling ; 2011 ; International Journal of Online Marketing (IJOM) Volume 1 ; 1 > 
     au < released ; crawling ; 2012 ; International Journal of Online Marketing (IJOM) Volume 2 ; 2 > 
+    au < expected ; exists ; 2013 ; International Journal of Online Marketing (IJOM) Volume 3 ; 3 > 
 
   }
 
@@ -1859,6 +1864,7 @@
 	
     au < released ; crawling ; 2011 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 1 ; 1 > 
     au < released ; crawling ; 2012 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 2 ; 2 > 
+    au < expected ; exists ; 2013 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 3 ; 3 > 
 
   }
 
@@ -1876,6 +1882,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 3 ; 3 > 
     au < released ; crawling ; 2012 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 4 ; 4 > 
+    au < expected ; exists ; 2013 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 5 ; 5 > 
 
   }
 
@@ -1892,6 +1899,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Operations Research and Information Systems (IJORIS) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Operations Research and Information Systems (IJORIS) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Operations Research and Information Systems (IJORIS) Volume 3 ; 3 > 
+    au < expected ; exists ; 2013 ; International Journal of Operations Research and Information Systems (IJORIS) Volume 4 ; 4 > 
 
   }
 
@@ -1908,6 +1916,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 3 ; 3 > 
+    au < expected ; exists ; 2013 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 4 ; 4 > 
 
   }
 
@@ -1923,6 +1932,7 @@
 	
     au < released ; crawling ; 2011 ; International Journal of People-Oriented Programming (IJPOP) Volume 1 ; 1 > 
     au < released ; crawling ; 2012 ; International Journal of People-Oriented Programming (IJPOP) Volume 2 ; 2 > 
+    au < expected ; exists ; 2013 ; International Journal of People-Oriented Programming (IJPOP) Volume 3 ; 3 > 
 
   }
 
@@ -1935,6 +1945,8 @@
     >
 
     comment[0] = forthcoming in 2013 as of 9-6-2012
+
+    au < expected ; exists ; 2013 ; International Journal of Pharmacology and Pharmaceutical Technology (IJPPT Volume 1 ; 1 > 
 
   }
 
@@ -1950,6 +1962,9 @@
     comment[0] = forthcoming as of 9-6-2012
 	param[journal_issn] = 2155-5621
 	
+    au < expected ; exists ; 2013 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 1 ; 1 > 
+
+	
   }
 
   {
@@ -1964,7 +1979,8 @@
     comment[notReady] = bad manifest page, no url
 	param[journal_issn] = 2160-9837
 	
-	    au < notReady ; exists ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
+	au < notReady ; exists ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
+    au < expected ; exists ; 2013 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 3 ; 3 > 
 	
   }
 
