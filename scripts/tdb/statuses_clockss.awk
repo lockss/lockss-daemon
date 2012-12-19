@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# input: publisher\tplugin\tcontract_year\tyear\ttester\tstatus
+# cat *.tdb | tdbout -t publisher,plugin,publisher:info[contract],year,publisher:info[tester],status,publisher:info[back]
 
 BEGIN {
   FS="\t"
@@ -10,10 +10,15 @@ BEGIN {
   # add a loop to add line only if ending year is gt or eq to contract year
   end_year = 0
   incontract = 0
+  if ($7 > 1900) {
+    test_year = $7
+  } else {
+    test_year = $3
+  }
   if (length($4) > 3) {
     end_year = substr($4,length($4)-3,4)
   } 
-  if (end_year >= $3) {
+  if (end_year >= test_year) {
     incontract = 1
   } 
 
@@ -21,17 +26,18 @@ BEGIN {
   if (incontract == 1) {
       nn = split($2,na,/\./)
       lp2 = na[nn]
-    if (!(($1,lp2,$3,$4) in b)) {
+    if (!(($1,lp2,$3,$7,$4) in b)) {
       p[pn] = $1
       n[pn] = lp2
   #    n[pn] = $2
       t[pn] = $3
+      k[pn] = $7
       d[pn] = $4
       r[pn] = $5
       pn++
     }
-    b[$1,lp2,$3,$4]++
-    c[$1,lp2,$3,$4,$6]++
+    b[$1,lp2,$3,$7,$4]++
+    c[$1,lp2,$3,$7,$4,$6]++
     x[$6]++
     tt++
   }
@@ -65,7 +71,7 @@ END {
   scn = 11
 
   #print out header
-  printf "Publisher\tPlugin\tContr\tYear\tT\tTotal"
+  printf "Publisher\tPlugin\tContr\tBack\tYear\tT\tTotal"
   for (j = 0 ; j < scn ; j++) {
     if (x[s[j]] > 0) {
     printf "\t%s", sc[j]
@@ -73,22 +79,22 @@ END {
   }
   printf "\n"
 
-  #print out publisher, plugin, contract year, year, total aus
+  #print out publisher, plugin, contract year, back, year, tester, total aus
   for (i = 0 ; i < pn ; i++) {
-    printf "%s\t%s\t%s\t%s\t%s\t%d", p[i], n[i], t[i], d[i], r[i], b[p[i],n[i],t[i],d[i]]
+    printf "%s\t%s\t%s\t%s\t%s\t%d", p[i], n[i], t[i], k[i], d[i], r[i], b[p[i],n[i],t[i],d[i]]
     for (j = 0 ; j < sn ; j++) {
       if (x[s[j]] > 0){
-      if (c[p[i],n[i],t[i],d[i],s[j]] == 0) {
+      if (c[p[i],n[i],t[i],k[i],d[i],s[j]] == 0) {
       printf "\t.." 
     } else {
-        printf "\t%d", c[p[i],n[i],t[i],d[i],s[j]]
+        printf "\t%d", c[p[i],n[i],t[i],k[i],d[i],s[j]]
       }
     }
     }
     printf "\n"
   }
     #print out bottom line sums
-    printf "Publisher\tPlugin\tContr\tYear\tT\t%d", tt
+    printf "Publisher\tPlugin\tContr\tBack\tYear\tT\t%d", tt
     for (j = 0 ; j < sn ; j++) {
       if (x[s[j]] > 0) {
         printf "\t%d", x[s[j]]
