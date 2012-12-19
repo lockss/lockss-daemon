@@ -7,11 +7,9 @@
   plugin = org.lockss.plugin.metapress.MetaPressPlugin
   param[base_url] = http://multi-science.metapress.com/
   implicit < status ; year ; name ; param[volume_name] >
-  
-  comment[notReady] = RU4472, hash filter needed for remote access and sid
 
   {
-  
+
     title <
       name = Adsorption Science & Technology ;
       issn = 0263-6174
@@ -19,24 +17,25 @@
 
     param[journal_issn] = 0263-6174
 
-    au < notReady ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 >
-    au < notReady ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 >
-    au < notReady ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 >
-    au < notReady ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 >
-    au < notReady ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 >
-    au < notReady ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 >
-    au < notReady ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 >
-    au < notReady ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 >
-    au < notReady ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 >
-    au < notReady ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 >
-    au < notReady ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 >
-    au < notReady ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 >
-    au < notReady ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 >
+    au < manifest ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 >
+    au < manifest ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 >
+    au < manifest ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 >
+    au < manifest ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 >
+    au < manifest ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 >
+    au < manifest ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 >
+    au < manifest ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 >
+    au < manifest ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 >
+    au < manifest ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 >
+    au < manifest ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 >
+    au < manifest ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 >
+    au < manifest ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 >
+    au < manifest ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 >
+    au < expected ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 >
 
   }
 
   {
-  
+
     title <
       name = Advances in Structural Engineering ;
       issn = 1369-4332
@@ -44,24 +43,25 @@
 
     param[journal_issn] = 1369-4332
 
-    au < manifest ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 > 
-    au < manifest ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 > 
-    au < manifest ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 > 
-    au < manifest ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 > 
-    au < manifest ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 >     
-    au < manifest ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 > 
-    au < manifest ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 > 
-    au < manifest ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 > 
-    au < manifest ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 > 
-    au < manifest ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 > 
-    au < manifest ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 >     
+    au < manifest ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 >
+    au < manifest ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 >
+    au < manifest ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 >
+    au < manifest ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 >
+    au < manifest ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 >
+    au < manifest ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 >
+    au < manifest ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 >
+    au < manifest ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 >
+    au < manifest ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 >
+    au < manifest ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 >
+    au < manifest ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 >
     au < manifest ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 >
     au < manifest ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 >
+    au < expected ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 >
 
   }
 
   {
-  
+
     title <
       name = Building Acoustics ;
       issn = 1351-010X
@@ -69,30 +69,31 @@
 
     param[journal_issn] = 1351-010X
 
-    au < manifest ; 1999 ; Building Acoustics Volume 6 ; 6 > 
-    au < manifest ; 2000 ; Building Acoustics Volume 7 ; 7 >     
-    au < manifest ; 2001 ; Building Acoustics Volume 8 ; 8 > 
-    au < manifest ; 2002 ; Building Acoustics Volume 9 ; 9 > 
-    au < manifest ; 2003 ; Building Acoustics Volume 10 ; 10 > 
-    au < manifest ; 2004 ; Building Acoustics Volume 11 ; 11 > 
-    au < manifest ; 2005 ; Building Acoustics Volume 12 ; 12 > 
-    au < manifest ; 2006 ; Building Acoustics Volume 13 ; 13 >     
-    au < manifest ; 2007 ; Building Acoustics Volume 14 ; 14 > 
+    au < manifest ; 1999 ; Building Acoustics Volume 6 ; 6 >
+    au < manifest ; 2000 ; Building Acoustics Volume 7 ; 7 >
+    au < manifest ; 2001 ; Building Acoustics Volume 8 ; 8 >
+    au < manifest ; 2002 ; Building Acoustics Volume 9 ; 9 >
+    au < manifest ; 2003 ; Building Acoustics Volume 10 ; 10 >
+    au < manifest ; 2004 ; Building Acoustics Volume 11 ; 11 >
+    au < manifest ; 2005 ; Building Acoustics Volume 12 ; 12 >
+    au < manifest ; 2006 ; Building Acoustics Volume 13 ; 13 >
+    au < manifest ; 2007 ; Building Acoustics Volume 14 ; 14 >
     au < manifest ; 2008 ; Building Acoustics Volume 15 ; 15 >
     au < manifest ; 2009 ; Building Acoustics Volume 16 ; 16 >
     au < manifest ; 2010 ; Building Acoustics Volume 17 ; 17 >
     au < manifest ; 2011 ; Building Acoustics Volume 18 ; 18 >
     au < manifest ; 2012 ; Building Acoustics Volume 19 ; 19 >
-    
+    au < expected ; 2013 ; Building Acoustics Volume 20 ; 20 >
+
   }
 
   {
-  
+
     title <
       name = Energy & Environment ;
       issn = 0958-305X
     >
-    
+
     param[journal_issn] = 0958-305X
 
     au < manifest ; 1999 ; Energy & Environment Volume 10 ; 10 >
@@ -109,18 +110,19 @@
     au < manifest ; 2010 ; Energy & Environment Volume 21 ; 21 >
     au < manifest ; 2011 ; Energy & Environment Volume 22 ; 22 >
     au < manifest ; 2012 ; Energy & Environment Volume 23 ; 23 >
+    au < expected ; 2013 ; Energy & Environment Volume 24 ; 24 >
 
   }
 
   {
-  
+
     title <
       name = Energy, Exploration & Exploitation ;
       issn = 0144-5987
     >
 
     param[journal_issn] = 0144-5987
-    
+
     au < manifest ; 2000 ; Energy, Exploration & Exploitation Volume 18 ; 18 >
     au < manifest ; 2001 ; Energy, Exploration & Exploitation Volume 19 ; 19 >
     au < manifest ; 2002 ; Energy, Exploration & Exploitation Volume 20 ; 20 >
@@ -134,11 +136,12 @@
     au < manifest ; 2010 ; Energy, Exploration & Exploitation Volume 28 ; 28 >
     au < manifest ; 2011 ; Energy, Exploration & Exploitation Volume 29 ; 29 >
     au < manifest ; 2012 ; Energy, Exploration & Exploitation Volume 30 ; 30 >
+    au < expected ; 2013 ; Energy, Exploration & Exploitation Volume 31 ; 31 >
 
   }
 
   {
-  
+
     title <
       name = International Journal of Aeroacoustics ;
       issn = 1475-472X
@@ -157,12 +160,13 @@
     au < manifest ; 2010 ; International Journal of Aeroacoustics Volume 9 ; 9 >
     au < manifest ; 2011 ; International Journal of Aeroacoustics Volume 10 ; 10 >
     au < manifest ; 2012 ; International Journal of Aeroacoustics Volume 11 ; 11 >
+    au < expected ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 >
 
   }
 
 
   {
-  
+
     title <
       name = International Journal of Aerospace Innovations ;
       issn = 1757-2258
@@ -174,12 +178,13 @@
     au < manifest ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
     au < manifest ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
     au < manifest ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
+    au < expected ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 >
 
   }
 
 
   {
-  
+
     title <
       name = International Journal of Architectural Computing ;
       issn = 1478-0771
@@ -197,12 +202,13 @@
     au < manifest ; 2010 ; International Journal of Architectural Computing Volume 8 ; 8 >
     au < manifest ; 2011 ; International Journal of Architectural Computing Volume 9 ; 9 >
     au < manifest ; 2012 ; International Journal of Architectural Computing Volume 10 ; 10 >
+    au < expected ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 >
 
   }
 
 
   {
-  
+
     title <
       name = International Journal of Emerging Multidisciplinary Fluid Sciences ;
       issn = 1756-8315
@@ -214,12 +220,13 @@
     au < manifest ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
     au < manifest ; 2011 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 >
     au < exists ; 2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 4 ; 4 >
+    au < expected ; 2013 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 5 ; 5 >
 
   }
 
 
   {
-  
+
     title <
       name = International Journal of Flow Control ;
       issn = 1756-8250
@@ -231,12 +238,13 @@
     au < manifest ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
     au < manifest ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
     au < expected ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
+    au < expected ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
 
   }
 
 
   {
-  
+
     title <
       name = International Journal of Hypersonics ;
       issn = 1759-3107
@@ -250,7 +258,7 @@
 
 
   {
-  
+
     title <
       name = International Journal of Innovation Science ;
       issn = 1757-2223
@@ -262,12 +270,13 @@
     au < manifest ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 >
     au < manifest ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 >
     au < manifest ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 >
+    au < expected ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 >
 
   }
 
 
   {
-  
+
     title <
       name = International Journal of Micro Air Vehicles ;
       issn = 1756-8293
@@ -279,12 +288,13 @@
     au < manifest ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 >
     au < manifest ; 2011 ; International Journal of Micro Air Vehicles Volume 3 ; 3 >
     au < manifest ; 2012 ; International Journal of Micro Air Vehicles Volume 4 ; 4 >
+    au < expected ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 >
 
   }
 
 
   {
-  
+
     title <
       name = International Journal of Micro-Nano Scale Transport ;
       issn = 1759-3093
@@ -295,12 +305,13 @@
     au < manifest ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
     au < manifest ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
     au < expected ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
+    au < expected ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
 
   }
 
 
   {
-  
+
     title <
       name = International Journal of Protective Structures ;
       issn = 2041-4196
@@ -311,12 +322,13 @@
     au < manifest ; 2010 ; International Journal of Protective Structures Volume 1 ; 1 >
     au < manifest ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 >
     au < manifest ; 2012 ; International Journal of Protective Structures Volume 3 ; 3 >
+    au < expected ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 >
 
   }
 
 
   {
-  
+
     title <
       name = International Journal of Space Structures ;
       issn = 0266-3511
@@ -338,12 +350,13 @@
     au < manifest ; 2010 ; International Journal of Space Structures Volume 25 ; 25 >
     au < manifest ; 2011 ; International Journal of Space Structures Volume 26 ; 26 >
     au < manifest ; 2012 ; International Journal of Space Structures Volume 27 ; 27 >
+    au < expected ; 2013 ; International Journal of Space Structures Volume 28 ; 28 >
 
   }
 
 
   {
-  
+
     title <
       name = International Journal of Sport Science and Coaching ;
       issn = 1747-9541
@@ -358,12 +371,13 @@
     au < manifest ; 2010 ; International Journal of Sport Science and Coaching Volume 5 ; 5 >
     au < manifest ; 2011 ; International Journal of Sport Science and Coaching Volume 6 ; 6 >
     au < manifest ; 2012 ; International Journal of Sport Science and Coaching Volume 7 ; 7 >
+    au < expected ; 2013 ; International Journal of Sport Science and Coaching Volume 8 ; 8 >
 
   }
 
 
   {
-  
+
     title <
       name = International Journal of Spray and Combustion Dynamics ;
       issn = 1756-8277
@@ -375,12 +389,13 @@
     au < manifest ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 >
     au < manifest ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 ; 3 >
     au < manifest ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 ; 4 >
+    au < expected ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 >
 
   }
 
 
   {
-  
+
     title <
       name = Journal of Algorithms & Computational Technology ;
       issn = 1748-3018
@@ -394,12 +409,13 @@
     au < manifest ; 2010 ; Journal of Algorithms & Computational Technology Volume 4 ; 4 >
     au < manifest ; 2011 ; Journal of Algorithms & Computational Technology Volume 5 ; 5 >
     au < manifest ; 2012 ; Journal of Algorithms & Computational Technology Volume 6 ; 6 >
+    au < expected ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 >
 
   }
 
 
   {
-  
+
     title <
       name = Journal of Healthcare Engineering ;
       issn = 2040-2295
@@ -410,12 +426,13 @@
     au < manifest ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 >
     au < manifest ; 2011 ; Journal of Healthcare Engineering Volume 2 ; 2 >
     au < manifest ; 2012 ; Journal of Healthcare Engineering Volume 3 ; 3 >
+    au < expected ; 2013 ; Journal of Healthcare Engineering Volume 4 ; 4 >
 
   }
 
 
   {
-  
+
     title <
       name = Journal of Structural Fire Engineering ;
       issn = 2040-2317
@@ -426,12 +443,13 @@
     au < manifest ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 >
     au < manifest ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 >
     au < manifest ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 >
+    au < expected ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 >
 
   }
 
 
   {
-  
+
     title <
       name = Low Frequency Noise & Vibration and Active Control ;
       issn = 0263-0923
@@ -452,12 +470,13 @@
     au < manifest ; 2010 ; Low Frequency Noise & Vibration and Active Control Volume 29 ; 29 >
     au < manifest ; 2011 ; Low Frequency Noise & Vibration and Active Control Volume 30 ; 30 >
     au < manifest ; 2012 ; Low Frequency Noise & Vibration and Active Control Volume 31 ; 31 >
+    au < expected ; 2013 ; Low Frequency Noise & Vibration and Active Control Volume 32 ; 32 >
 
   }
 
 
   {
-  
+
     title <
       name = Noise & Vibration Worldwide ;
       issn = 0957-4565
@@ -467,12 +486,13 @@
 
     au < manifest ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 >
     au < manifest ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 >
+    au < expected ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 >
 
   }
 
 
   {
-  
+
     title <
       name = Noise Notes ;
       issn = 1475-4738
@@ -485,7 +505,7 @@
 
 
   {
-  
+
     title <
       name = Sports Science Handbook Vol. 1 A-H ;
       type = book ;
@@ -493,12 +513,12 @@
     >
 
     param[journal_issn] = rg4462
-    
+
   }
 
 
   {
-  
+
     title <
       name = Sports Science Handbook Vol. 2 I-Z ;
       type = book ;
@@ -509,7 +529,7 @@
 
 
   {
-  
+
     title <
       name = The International Journal of Multiphysics ;
       issn = 1750-9548
@@ -523,12 +543,13 @@
     au < manifest ; 2010 ; The International Journal of Multiphysics Volume 4 ; 4 >
     au < manifest ; 2011 ; The International Journal of Multiphysics Volume 5 ; 5 >
     au < manifest ; 2012 ; The International Journal of Multiphysics Volume 6 ; 6 >
+    au < expected ; 2013 ; The International Journal of Multiphysics Volume 7 ; 7 >
 
   }
 
 
   {
-  
+
     title <
       name = The International Journal of Ocean and Climate Systems ;
       issn = 1759-3131
@@ -539,12 +560,13 @@
     au < manifest ; 2010 ; The International Journal of Ocean and Climate Systems Volume 1 ; 1 >
     au < manifest ; 2011 ; The International Journal of Ocean and Climate Systems Volume 2 ; 2 >
     au < manifest ; 2012 ; The International Journal of Ocean and Climate Systems Volume 3 ; 3 >
+    au < expected ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 >
 
   }
 
 
   {
-  
+
     title <
       name = The Journal of Computational Multiphase Flows ;
       issn = 1757-482X
@@ -556,12 +578,13 @@
     au < manifest ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 >
     au < manifest ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 >
     au < manifest ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 >
+    au < expected ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 >
 
   }
 
 
   {
-  
+
     title <
       name = Wind Engineering ;
       issn = 0309-524X
@@ -569,33 +592,35 @@
 
     param[journal_issn] = 0309-524X
 
-    au < notReady ; 2000 ; Wind Engineering Volume 24 ; 24 >
-    au < notReady ; 2001 ; Wind Engineering Volume 25 ; 25 >
-    au < notReady ; 2002 ; Wind Engineering Volume 26 ; 26 >
-    au < notReady ; 2003 ; Wind Engineering Volume 27 ; 27 >
-    au < notReady ; 2004 ; Wind Engineering Volume 28 ; 28 >
-    au < notReady ; 2005 ; Wind Engineering Volume 29 ; 29 >
-    au < notReady ; 2006 ; Wind Engineering Volume 30 ; 30 >
-    au < notReady ; 2007 ; Wind Engineering Volume 31 ; 31 >
-    au < notReady ; 2008 ; Wind Engineering Volume 32 ; 32 >
-    au < notReady ; 2009 ; Wind Engineering Volume 33 ; 33 >
-    au < notReady ; 2010 ; Wind Engineering Volume 34 ; 34 >
-    au < notReady ; 2011 ; Wind Engineering Volume 35 ; 35 >
-    au < notReady ; 2012 ; Wind Engineering Volume 36 ; 36 >
+    au < manifest ; 2000 ; Wind Engineering Volume 24 ; 24 >
+    au < manifest ; 2001 ; Wind Engineering Volume 25 ; 25 >
+    au < manifest ; 2002 ; Wind Engineering Volume 26 ; 26 >
+    au < manifest ; 2003 ; Wind Engineering Volume 27 ; 27 >
+    au < manifest ; 2004 ; Wind Engineering Volume 28 ; 28 >
+    au < manifest ; 2005 ; Wind Engineering Volume 29 ; 29 >
+    au < manifest ; 2006 ; Wind Engineering Volume 30 ; 30 >
+    au < manifest ; 2007 ; Wind Engineering Volume 31 ; 31 >
+    au < manifest ; 2008 ; Wind Engineering Volume 32 ; 32 >
+    au < manifest ; 2009 ; Wind Engineering Volume 33 ; 33 >
+    au < manifest ; 2010 ; Wind Engineering Volume 34 ; 34 >
+    au < manifest ; 2011 ; Wind Engineering Volume 35 ; 35 >
+    au < manifest ; 2012 ; Wind Engineering Volume 36 ; 36 >
+    au < expected ; 2013 ; Wind Engineering Volume 37 ; 37 >
 
   }
 
   {
-  
+
     title <
       name = World Journal of Engineering ;
       issn = 1708-5284
     >
 
     param[journal_issn] = 1708-5284
-    
-    au < notReady ; 2011 ; World Journal of Engineering Volume 8 ; 8 >
-    au < notReady ; 2012 ; World Journal of Engineering Volume 9 ; 9 >
+
+    au < manifest ; 2011 ; World Journal of Engineering Volume 8 ; 8 >
+    au < manifest ; 2012 ; World Journal of Engineering Volume 9 ; 9 >
+    au < expected ; 2013 ; World Journal of Engineering Volume 10 ; 10 >
 
   }
 
