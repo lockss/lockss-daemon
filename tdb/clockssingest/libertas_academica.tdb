@@ -242,6 +242,7 @@
     au < manifest ; exists ; 2010 ; Cancer Growth and Metastasis Volume 3 ; 2010 >
     au < released ; crawling ; 2011 ; Cancer Growth and Metastasis Volume 4 ; 2011 >
     au < released ; crawling ; 2012 ; Cancer Growth and Metastasis Volume 5 ; 2012 >
+    au < expected ; exists ; 2013 ; Cancer Growth and Metastasis Volume 6 ; 2013 >
 
   }
   
@@ -263,6 +264,7 @@
     au < manifest ; exists ; 2010 ; Cancer Informatics Volume 9 ; 2010 >
     au < released ; crawling ; 2011 ; Cancer Informatics Volume 10 ; 2011 >
     au < released ; crawling ; 2012 ; Cancer Informatics Volume 11 ; 2012 >
+    au < expected ; exists ; 2013 ; Cancer Informatics Volume 12 ; 2013 >
     
 
   }
@@ -328,6 +330,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 3 ; 2010 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 4 ; 2011 >
     au < released ; crawling ; 2012 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 5 ; 2012 >
+    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 6 ; 2013 >
 
   }
   
@@ -346,6 +349,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Blood Disorders Volume 3 ; 2010 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Blood Disorders Volume 4 ; 2011 >
     au < released ; crawling ; 2012 ; Clinical Medicine Insights: Blood Disorders Volume 5 ; 2012 >
+    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Blood Disorders Volume 6 ; 2013 >
 
   }
   
@@ -365,6 +369,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Cardiology Volume 4 ; 2010 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Cardiology Volume 5 ; 2011 >
     au < released ; crawling ; 2012 ; Clinical Medicine Insights: Cardiology Volume 6 ; 2012 >
+    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Cardiology Volume 7 ; 2013 >
 
   }
   
@@ -383,6 +388,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Case Reports Volume 3 ; 2010 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Case Reports Volume 4 ; 2011 >
     au < released ; crawling ; 2012 ; Clinical Medicine Insights: Case Reports Volume 5 ; 2012 >
+    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Case Report Volume 6 ; 2013 >
 
   }
   
@@ -402,6 +408,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 4 ; 2010 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 5 ; 2011 >
     au < released ; crawling ; 2012 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 6 ; 2012 >
+    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 7 ; 2013 >
 
   }
   
@@ -420,6 +427,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Dermatology Volume 3 ; 2010 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Dermatology Volume 4 ; 2011 >
     au < released ; crawling ; 2012 ; Clinical Medicine Insights: Dermatology Volume 5 ; 2012 >
+    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Dermatology Volume 6 ; 2013 >
 
   }
   
@@ -438,6 +446,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 3 ; 2010 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 4 ; 2011 >
     au < released ; crawling ; 2012 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 5 ; 2012 >
+    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 6 ; 2013 >
 
   }
   
@@ -456,6 +465,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 3 ; 2010 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 4 ; 2011 >
     au < released ; crawling ; 2012 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 5 ; 2012 >
+    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 6 ; 2013 >
 
   }
   
@@ -474,6 +484,9 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Gastroenterology Volume 3 ; 2010 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Gastroenterology Volume 4 ; 2011 >
     au < released ; crawling ; 2012 ; Clinical Medicine Insights: Gastroenterology Volume 5 ; 2012 >
+    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Gastroenterology Volume 6 ; 2013 >
+    
+    
   }
   
   {
@@ -489,6 +502,7 @@
     au < manifest ; exists ; 2008 ; Clinical Medicine Insights: Geriatrics Volume 1-2 ; 2008 >
     au < manifest ; exists ; 2009 ; Clinical Medicine Insights: Geriatrics Volume 3 ; 2009 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Geriatrics Volume 4 ; 2011 >
+    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Geriatricsy Volume 5 ; 2013 >
 
   }
   
