@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlLinkExtractor.java,v 1.1 2012-12-13 00:08:56 thib_gc Exp $
+ * $Id: SpringerLinkHtmlLinkExtractor.java,v 1.2 2012-12-19 01:06:38 thib_gc Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class SpringerLinkHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
         candidate = getAttributeValue("src", link);
       }
       if (candidate != null && candidate.contains("/dynamic-file.axd?id=")) {
-        logger.debug3(String.format("Found %s in %s", candidate, au.getName()));
+        logger.debug3(String.format("Found: AU %s, source URL %s, target link %s", au.getName(), srcUrl, candidate));
       }
     }
     return super.extractLinkFromTag(link, au, cb);
