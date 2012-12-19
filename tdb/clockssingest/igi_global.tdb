@@ -529,7 +529,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 4 ; 4 > 
     au < released ; crawling ; 2011 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 5 ; 5 > 
     au < released ; crawling ; 2012 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 6 ; 6 > 
-
+    au < expected ; exists ; 2013 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 7 ; 7  > 
   }
 
   {
@@ -545,6 +545,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 3 ; 3 > 
+    au < expected ; exists ; 2013 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 4 ; 4 > 
 
   }
 
@@ -560,6 +561,7 @@
 		
     au < released ; crawling ; 2011 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 1 ; 1 > 
     au < released ; crawling ; 2012 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 2 ; 2 > 
+    au < expected ; exists ; 2013 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 3 ; 3 > 
 
   }
 
@@ -575,6 +577,7 @@
 		
     au < released ; crawling ; 2011 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 1 ; 1 > 
     au < released ; crawling ; 2012 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 2 ; 2 > 
+    au < expected ; exists ; 2013 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 3 ; 3 > 
 
   }
 
@@ -587,6 +590,8 @@
     >
 
     comment[0] = forthcoming in 2013 as of 9-6-12
+    
+    au < expected ; exists ; 2013 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 1 ; 1 > 
 
   }
 
@@ -603,6 +608,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 3 ; 3 > 
+    au < expected ; exists ; 2013 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 4 ; 4 > 
 
   }
 
@@ -619,6 +625,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 3 ; 3 > 
+    au < expected ; exists ; 2013 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 4 ; 4 > 
 
   }
 
@@ -634,6 +641,7 @@
 	
     au < released ; crawling ; 2011 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 1 ; 1 > 
     au < released ; crawling ; 2012 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 2 ; 2 > 
+    au < expected ; exists ; 2013 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 3 ; 3 > 
 
   }
 
@@ -1723,7 +1731,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 2 ; 2 > 
-    au < released ; crawling ; 2012 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 3 ; 3 > 
+    au < expected ; exists ; 2013 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 3 ; 3 > 
 
   }
 
