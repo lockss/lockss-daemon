@@ -354,15 +354,15 @@
     comment[continued_by] = 1474-8932
  
     au < testing ; 1976-1980 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 17 ; 17 >   
-    au < testing ; 1981-1985 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 18 ; 18 > 
-    au < testing ; 1986-1989 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 19 ; 19 > 
+    au < ready ; 1981-1985 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 18 ; 18 > 
+    au < ready ; 1986-1989 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 19 ; 19 > 
     au < testing ; 1990-1993 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 20 ; 20 > 
-    au < testing ; 1993-1996 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 21 ; 21 > 
-    au < testing ; 1997 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 22 ; 22 > 
-    au < testing ; 1998 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 23 ; 23 > 
-    au < testing ; 1999 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 24 ; 24 > 
-    au < testing ; 2000 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 25 ; 25 > 
-    au < testing ; 2001 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 26 ; 26 > 
+    au < ready ; 1993-1996 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 21 ; 21 > 
+    au < ready ; 1997 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 22 ; 22 > 
+    au < ready ; 1998 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 23 ; 23 > 
+    au < ready ; 1999 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 24 ; 24 > 
+    au < ready ; 2000 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 25 ; 25 > 
+    au < ready ; 2001 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 26 ; 26 > 
 
   }
 
@@ -385,14 +385,15 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 0309-7765
+    comment[notReady] = RU4463, missing article page
 
-    au < testing ; 2002 ; Bronte Studies Volume 27 ; 27 > 
+    au < ready ; 2002 ; Bronte Studies Volume 27 ; 27 > 
     au < doesNotExist ; 2003 ; Bronte Studies Volume 28 ; 28 > 
     au < doesNotExist ; 2004 ; Bronte Studies Volume 29 ; 29 > 
-    au < testing ; 2005 ; Bronte Studies Volume 30 ; 30 > 
-    au < testing ; 2006 ; Bronte Studies Volume 31 ; 31 > 
-    au < testing ; 2007 ; Bronte Studies Volume 32 ; 32 > 
-    au < testing ; 2008 ; Bronte Studies Volume 33 ; 33 > 
+    au < notReady ; 2005 ; Bronte Studies Volume 30 ; 30 > 
+    au < notReady ; 2006 ; Bronte Studies Volume 31 ; 31 > 
+    au < notReady ; 2007 ; Bronte Studies Volume 32 ; 32 > 
+    au < ready ; 2008 ; Bronte Studies Volume 33 ; 33 > 
     au < testing ; 2009 ; Bronte Studies Volume 34 ; 34 > 
     au < released ; 2010 ; Bronte Studies Volume 35 ; 35 > 
     au < released ; 2011 ; Bronte Studies Volume 36 ; 36 > 
@@ -444,10 +445,10 @@
     param[journal_issn] = 1752-7260
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < testing ; 2006 ; Bulletin of the Council for British Research in the Levant Volume 1 ; 1 > 
-    au < testing ; 2007 ; Bulletin of the Council for British Research in the Levant Volume 2 ; 2 > 
-    au < testing ; 2008 ; Bulletin of the Council for British Research in the Levant Volume 3 ; 3 > 
-    au < testing ; 2009 ; Bulletin of the Council for British Research in the Levant Volume 4 ; 4 > 
+    au < ready ; 2006 ; Bulletin of the Council for British Research in the Levant Volume 1 ; 1 > 
+    au < ready ; 2007 ; Bulletin of the Council for British Research in the Levant Volume 2 ; 2 > 
+    au < ready ; 2008 ; Bulletin of the Council for British Research in the Levant Volume 3 ; 3 > 
+    au < ready ; 2009 ; Bulletin of the Council for British Research in the Levant Volume 4 ; 4 > 
     au < released ; 2010 ; Bulletin of the Council for British Research in the Levant Volume 5 ; 5 > 
     au < released ; 2011 ; Bulletin of the Council for British Research in the Levant Volume 6 ; 6 > 
     au < released ; 2012 ; Bulletin of the Council for British Research in the Levant Volume 7 ; 7 > 
@@ -473,39 +474,39 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 1975 ; Byzantine and Modern Greek Studies Volume 1 ; 1 >
-    au < manifest ; 1976 ; Byzantine and Modern Greek Studies Volume 2 ; 2 >
-    au < manifest ; 1977 ; Byzantine and Modern Greek Studies Volume 3 ; 3 >
-    au < manifest ; 1978 ; Byzantine and Modern Greek Studies Volume 4 ; 4 >
-    au < manifest ; 1979 ; Byzantine and Modern Greek Studies Volume 5 ; 5 >
-    au < manifest ; 1980 ; Byzantine and Modern Greek Studies Volume 6 ; 6 >
-    au < manifest ; 1981 ; Byzantine and Modern Greek Studies Volume 7 ; 7 >
-    au < manifest ; 1982 ; Byzantine and Modern Greek Studies Volume 8 ; 8 >
-    au < manifest ; 1984 ; Byzantine and Modern Greek Studies Volume 9 ; 9 >
-    au < manifest ; 1986 ; Byzantine and Modern Greek Studies Volume 10 ; 10 >
-    au < manifest ; 1987 ; Byzantine and Modern Greek Studies Volume 11 ; 11 >
-    au < manifest ; 1988 ; Byzantine and Modern Greek Studies Volume 12 ; 12 >
-    au < manifest ; 1989 ; Byzantine and Modern Greek Studies Volume 13 ; 13 >
-    au < manifest ; 1990 ; Byzantine and Modern Greek Studies Volume 14 ; 14 >
-    au < manifest ; 1991 ; Byzantine and Modern Greek Studies Volume 15 ; 15 >
-    au < manifest ; 1992 ; Byzantine and Modern Greek Studies Volume 16 ; 16 >
-    au < manifest ; 1993 ; Byzantine and Modern Greek Studies Volume 17 ; 17 >
-    au < manifest ; 1994 ; Byzantine and Modern Greek Studies Volume 18 ; 18 >
-    au < manifest ; 1995 ; Byzantine and Modern Greek Studies Volume 19 ; 19 >
-    au < manifest ; 1996 ; Byzantine and Modern Greek Studies Volume 20 ; 20 >
-    au < manifest ; 1997 ; Byzantine and Modern Greek Studies Volume 21 ; 21 >
-    au < manifest ; 1998 ; Byzantine and Modern Greek Studies Volume 22 ; 22 >
-    au < manifest ; 1999 ; Byzantine and Modern Greek Studies Volume 23 ; 23 >
-    au < manifest ; 2000 ; Byzantine and Modern Greek Studies Volume 24 ; 24 >
-    au < manifest ; 2001 ; Byzantine and Modern Greek Studies Volume 25 ; 25 >
-    au < manifest ; 2002 ; Byzantine and Modern Greek Studies Volume 26 ; 26 >
-    au < manifest ; 2003 ; Byzantine and Modern Greek Studies Volume 27 ; 27 >
-    au < manifest ; 2004 ; Byzantine and Modern Greek Studies Volume 28 ; 28 >
-    au < manifest ; 2005 ; Byzantine and Modern Greek Studies Volume 29 ; 29 >
-    au < manifest ; 2006 ; Byzantine and Modern Greek Studies Volume 30 ; 30 >
-    au < manifest ; 2007 ; Byzantine and Modern Greek Studies Volume 31 ; 31 >
-    au < manifest ; 2008 ; Byzantine and Modern Greek Studies Volume 32 ; 32 >
-    au < manifest ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 >
+    au < testing ; 1975 ; Byzantine and Modern Greek Studies Volume 1 ; 1 >
+    au < testing ; 1976 ; Byzantine and Modern Greek Studies Volume 2 ; 2 >
+    au < testing ; 1977 ; Byzantine and Modern Greek Studies Volume 3 ; 3 >
+    au < testing ; 1978 ; Byzantine and Modern Greek Studies Volume 4 ; 4 >
+    au < testing ; 1979 ; Byzantine and Modern Greek Studies Volume 5 ; 5 >
+    au < testing ; 1980 ; Byzantine and Modern Greek Studies Volume 6 ; 6 >
+    au < testing ; 1981 ; Byzantine and Modern Greek Studies Volume 7 ; 7 >
+    au < testing ; 1982 ; Byzantine and Modern Greek Studies Volume 8 ; 8 >
+    au < testing ; 1984 ; Byzantine and Modern Greek Studies Volume 9 ; 9 >
+    au < testing ; 1986 ; Byzantine and Modern Greek Studies Volume 10 ; 10 >
+    au < testing ; 1987 ; Byzantine and Modern Greek Studies Volume 11 ; 11 >
+    au < testing ; 1988 ; Byzantine and Modern Greek Studies Volume 12 ; 12 >
+    au < testing ; 1989 ; Byzantine and Modern Greek Studies Volume 13 ; 13 >
+    au < testing ; 1990 ; Byzantine and Modern Greek Studies Volume 14 ; 14 >
+    au < testing ; 1991 ; Byzantine and Modern Greek Studies Volume 15 ; 15 >
+    au < testing ; 1992 ; Byzantine and Modern Greek Studies Volume 16 ; 16 >
+    au < testing ; 1993 ; Byzantine and Modern Greek Studies Volume 17 ; 17 >
+    au < testing ; 1994 ; Byzantine and Modern Greek Studies Volume 18 ; 18 >
+    au < testing ; 1995 ; Byzantine and Modern Greek Studies Volume 19 ; 19 >
+    au < testing ; 1996 ; Byzantine and Modern Greek Studies Volume 20 ; 20 >
+    au < testing ; 1997 ; Byzantine and Modern Greek Studies Volume 21 ; 21 >
+    au < testing ; 1998 ; Byzantine and Modern Greek Studies Volume 22 ; 22 >
+    au < testing ; 1999 ; Byzantine and Modern Greek Studies Volume 23 ; 23 >
+    au < testing ; 2000 ; Byzantine and Modern Greek Studies Volume 24 ; 24 >
+    au < testing ; 2001 ; Byzantine and Modern Greek Studies Volume 25 ; 25 >
+    au < testing ; 2002 ; Byzantine and Modern Greek Studies Volume 26 ; 26 >
+    au < testing ; 2003 ; Byzantine and Modern Greek Studies Volume 27 ; 27 >
+    au < testing ; 2004 ; Byzantine and Modern Greek Studies Volume 28 ; 28 >
+    au < testing ; 2005 ; Byzantine and Modern Greek Studies Volume 29 ; 29 >
+    au < testing ; 2006 ; Byzantine and Modern Greek Studies Volume 30 ; 30 >
+    au < testing ; 2007 ; Byzantine and Modern Greek Studies Volume 31 ; 31 >
+    au < testing ; 2008 ; Byzantine and Modern Greek Studies Volume 32 ; 32 >
+    au < testing ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 >
     au < released ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
     au < released ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
     au < released ; 2012 ; Byzantine and Modern Greek Studies Volume 36 ; 36 >
