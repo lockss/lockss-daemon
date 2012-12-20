@@ -1229,18 +1229,12 @@
 
       param[journal_issn] = 1471-2210
       nondefparam[journal_code] = bmcpharmacol
+      comment[0] = Journal stopped at the end of 2012, merged with BMC Clinical Parmacology, and became BMC Pharmacology & Toxicology
 
-      au < manifest ; exists ; 2001 ; BMC Pharmacology Volume 1 ; 1 >
-      au < manifest ; exists ; 2002 ; BMC Pharmacology Volume 2 ; 2 >
-      au < manifest ; exists ; 2003 ; BMC Pharmacology Volume 3 ; 3 >
-      au < manifest ; exists ; 2004 ; BMC Pharmacology Volume 4 ; 4 >
-      au < manifest ; exists ; 2005 ; BMC Pharmacology Volume 5 ; 5 >
-      au < manifest ; exists ; 2006 ; BMC Pharmacology Volume 6 ; 6 >
-      au < manifest ; exists ; 2007 ; BMC Pharmacology Volume 7 ; 7 >
-      au < crawling ; exists ; 2008 ; BMC Pharmacology Volume 8 ; 8 >
-      au < crawling ; exists ; 2009 ; BMC Pharmacology Volume 9 ; 9 >
-      au < released ; crawling ; 2010 ; BMC Pharmacology Volume 10 ; 10 >
-      au < released ; crawling ; 2011 ; BMC Pharmacology Volume 11 ; 11 >
+      au < down ; exists ; 2008 ; BMC Pharmacology Volume 8 ; 8 >
+      au < down ; exists ; 2009 ; BMC Pharmacology Volume 9 ; 9 >
+      au < down ; crawling ; 2010 ; BMC Pharmacology Volume 10 ; 10 >
+      au < down ; crawling ; 2011 ; BMC Pharmacology Volume 11 ; 11 >
 
     }
 
