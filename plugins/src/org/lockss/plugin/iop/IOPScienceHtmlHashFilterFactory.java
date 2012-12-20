@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.4 2012-10-02 00:37:50 thib_gc Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.5 2012-12-20 19:09:14 janicecheng Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.filters.TagNameFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.html.*;
@@ -59,6 +60,10 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "banner"),
         // Contains this year in the copyright notice
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        // Contains style sheet
+        HtmlNodeFilters.tagWithAttribute("link", "type", "text/css"),
+        // Contains script
+        new TagNameFilter("script"),
         // Contains a jsessionid
         HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid"),
         // Contains variable ads, promos, etc.
