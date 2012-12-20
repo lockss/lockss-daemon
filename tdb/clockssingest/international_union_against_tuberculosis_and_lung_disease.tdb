@@ -25,23 +25,23 @@
     param[journal_id] = ijtld
     param[journal_issn] = 1027-3719
 
-    au < exists ; exists ; 1997 ; International Journal of Tuberculosis and Lung Disease Volume 1 ; 1 >
-    au < exists ; exists ; 1998 ; International Journal of Tuberculosis and Lung Disease Volume 2 ; 2 >
-    au < exists ; exists ; 1999 ; International Journal of Tuberculosis and Lung Disease Volume 3 ; 3 >
-    au < exists ; exists ; 2000 ; International Journal of Tuberculosis and Lung Disease Volume 4 ; 4 >
-    au < exists ; exists ; 2001 ; International Journal of Tuberculosis and Lung Disease Volume 5 ; 5 >
-    au < exists ; exists ; 2002 ; International Journal of Tuberculosis and Lung Disease Volume 6 ; 6 >
-    au < exists ; exists ; 2003 ; International Journal of Tuberculosis and Lung Disease Volume 7 ; 7 >
-    au < exists ; exists ; 2004 ; International Journal of Tuberculosis and Lung Disease Volume 8 ; 8 >
-    au < exists ; exists ; 2005 ; International Journal of Tuberculosis and Lung Disease Volume 9 ; 9 >
-    au < exists ; exists ; 2006 ; International Journal of Tuberculosis and Lung Disease Volume 10 ; 10 >
-    au < exists ; exists ; 2007 ; International Journal of Tuberculosis and Lung Disease Volume 11 ; 11 >
-    au < exists ; exists ; 2008 ; International Journal of Tuberculosis and Lung Disease Volume 12 ; 12 >
-    au < exists ; exists ; 2009 ; International Journal of Tuberculosis and Lung Disease Volume 13 ; 13 >
-    au < exists ; exists ; 2010 ; International Journal of Tuberculosis and Lung Disease Volume 14 ; 14 >
-    au < exists ; exists ; 2011 ; International Journal of Tuberculosis and Lung Disease Volume 15 ; 15 >
-    au < exists ; exists ; 2012 ; International Journal of Tuberculosis and Lung Disease Volume 16 ; 16 >
-    au < exists ; exists ; 2013 ; International Journal of Tuberculosis and Lung Disease Volume 17 ; 17 >
+    au < manifest ; exists ; 1997 ; International Journal of Tuberculosis and Lung Disease Volume 1 ; 1 >
+    au < manifest ; exists ; 1998 ; International Journal of Tuberculosis and Lung Disease Volume 2 ; 2 >
+    au < manifest ; exists ; 1999 ; International Journal of Tuberculosis and Lung Disease Volume 3 ; 3 >
+    au < manifest ; exists ; 2000 ; International Journal of Tuberculosis and Lung Disease Volume 4 ; 4 >
+    au < manifest ; exists ; 2001 ; International Journal of Tuberculosis and Lung Disease Volume 5 ; 5 >
+    au < manifest ; exists ; 2002 ; International Journal of Tuberculosis and Lung Disease Volume 6 ; 6 >
+    au < manifest ; exists ; 2003 ; International Journal of Tuberculosis and Lung Disease Volume 7 ; 7 >
+    au < manifest ; exists ; 2004 ; International Journal of Tuberculosis and Lung Disease Volume 8 ; 8 >
+    au < manifest ; exists ; 2005 ; International Journal of Tuberculosis and Lung Disease Volume 9 ; 9 >
+    au < manifest ; exists ; 2006 ; International Journal of Tuberculosis and Lung Disease Volume 10 ; 10 >
+    au < manifest ; exists ; 2007 ; International Journal of Tuberculosis and Lung Disease Volume 11 ; 11 >
+    au < manifest ; exists ; 2008 ; International Journal of Tuberculosis and Lung Disease Volume 12 ; 12 >
+    au < manifest ; exists ; 2009 ; International Journal of Tuberculosis and Lung Disease Volume 13 ; 13 >
+    au < manifest ; exists ; 2010 ; International Journal of Tuberculosis and Lung Disease Volume 14 ; 14 >
+    au < manifest ; exists ; 2011 ; International Journal of Tuberculosis and Lung Disease Volume 15 ; 15 >
+    au < manifest ; exists ; 2012 ; International Journal of Tuberculosis and Lung Disease Volume 16 ; 16 >
+    au < manifest ; exists ; 2013 ; International Journal of Tuberculosis and Lung Disease Volume 17 ; 17 >
 
   }
 
@@ -55,8 +55,8 @@
     param[journal_id] = pha
     param[journal_issn] = 2220-8372
 
-    au < exists ; exists ; 2011 ; Public Health Action Volume 1 ; 1 >
-    au < exists ; exists ; 2012 ; Public Health Action Volume 2 ; 2 >
+    au < manifest ; exists ; 2011 ; Public Health Action Volume 1 ; 1 >
+    au < manifest ; exists ; 2012 ; Public Health Action Volume 2 ; 2 >
 
   }
 
