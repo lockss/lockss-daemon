@@ -946,6 +946,7 @@
         au < manifest ; 2010 ; International Journal of Electronic Government Research (IJEGR) Volume 6 ; 6 > 
         au < released ; 2011 ; International Journal of Electronic Government Research (IJEGR) Volume 7 ; 7 > 
         au < released ; 2012 ; International Journal of Electronic Government Research (IJEGR) Volume 8 ; 8 > 
+        au < expected ; 2013 ; International Journal of Electronic Government Research (IJEGR) Volume 9 ; 9 > 
         
    }
 
@@ -962,6 +963,7 @@
     au < manifest ; 2010 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 4 ; 4 > 
 
 
   }
@@ -977,6 +979,7 @@
 	param[journal_issn] = 2160-9500
 		
     au < released ; 2012 ; International Journal of Energy Optimization and Engineering (IJEOE) Volume 1 ; 1 > 
+    au < expected ; 2013 ; International Journal of Energy Optimization and Engineering (IJEOE) Volume 2 ; 2 > 
 
 
   }
@@ -999,6 +1002,7 @@
     au < manifest ; 2010 ; International Journal of Enterprise Information Systems (IJEIS) Volume 6 ; 6 > 
     au < released ; 2011 ; International Journal of Enterprise Information Systems (IJEIS) Volume 7 ; 7 > 
     au < released ; 2012 ; International Journal of Enterprise Information Systems (IJEIS) Volume 8 ; 8 > 
+    au < expected ; 2013 ; International Journal of Enterprise Information Systems (IJEIS) Volume 9 ; 9 > 
 
   }
 
@@ -1013,6 +1017,7 @@
 	param[journal_issn] = 2160-9918
 	
     au < released ; 2012 ; International Journal of E-Planning Research (IJEPR) Volume 1 ; 1 > 
+    au < expected ; 2013 ; International Journal of E-Planning Research (IJEPR) Volume 2 ; 2 > 
 
 
   }
@@ -1030,6 +1035,7 @@
     au < manifest ; 2010 ; International Journal of E-Politics (IJEP) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of E-Politics (IJEP) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of E-Politics (IJEP) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of E-Politics (IJEP)) Volume 4 ; 4 > 
 
 
   }
@@ -1048,6 +1054,7 @@
         au < manifest ; 2010 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 2 ; 2 > 
         au < released ; 2011 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 3 ; 3 > 
         au < released ; 2012 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 4 ; 4 > 
+        au < expected ; 2013 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 5 ; 5 > 
 
 
    } 
@@ -1064,6 +1071,7 @@
 	
     au < released ; 2011 ; International Journal of Fuzzy System Applications (IJFSA) Volume 1 ; 1 > 
     au < released ; 2012 ; International Journal of Fuzzy System Applications (IJFSA) Volume 2 ; 2 > 
+    au < expected ; 2013 ; International Journal of Fuzzy System Applications (IJFSA) Volume 3 ; 3 > 
 
 
   }
@@ -1079,7 +1087,10 @@
 	param[journal_issn] = 2155-6849
 		
     au < released ; 2011 ; International Journal of Game-Based Learning (IJGBL) Volume 1 ; 1 > 
-    au < released ; 2012 ; International Journal of Game-Based Learning (IJGBL) Volume 2 ; 2 >   }
+    au < released ; 2012 ; International Journal of Game-Based Learning (IJGBL) Volume 2 ; 2 >   
+    au < expected ; 2013 ; International Journal of Game-Based Learning (IJGBL) Volume 3 ; 3 > 
+    
+  }
 
   {
 
@@ -1095,6 +1106,7 @@
     au < manifest ; 2010 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 2 ; 2 > 
     au < released ; 2011 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 3 ; 3 > 
     au < released ; 2012 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 4 ; 4 > 
+    au < expected ; 2013 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 5 ; 5 > 
 
   }
   
@@ -1111,6 +1123,7 @@
     au < manifest ; 2010 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 4 ; 4 > 
 
 
   }
@@ -1128,6 +1141,7 @@
     au < manifest ; 2010 ; International Journal of Green Computing (IJGC) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Green Computing (IJGC) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Green Computing (IJGC) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Green Computing (IJGC) Volume 4 ; 4 > 
     
   }
 
@@ -1145,6 +1159,7 @@
     au < manifest ; 2010 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 2 ; 2 > 
     au < released ; 2011 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 3 ; 3 > 
     au < released ; 2012 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 4 ; 4 > 
+    au < expected ; 2013 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 5 ; 5 > 
     
   }
   
@@ -1160,8 +1175,8 @@
 	
     au < manifest ; 2010 ; International Journal of Handheld Computing Research (IJHCR) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Handheld Computing Research (IJHCR) Volume 2 ; 2 > 
-    au < ready
-     ; 2012 ; International Journal of Handheld Computing Research (IJHCR) Volume 3 ; 3 > 
+    au < ready ; 2012 ; International Journal of Handheld Computing Research (IJHCR) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Handheld Computing Research (IJHCR) Volume 4 ; 4 > 
 
 
   }
@@ -1180,6 +1195,7 @@
     au < manifest ; 2010 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 2 ; 2 > 
     au < released ; 2011 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 3 ; 3 > 
     au < released ; 2012 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 4 ; 4 > 
+    au < expected ; 2013 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 5 ; 5 > 
     
   }
     
