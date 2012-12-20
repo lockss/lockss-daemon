@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.1 2012-12-07 07:16:06 fergaloy-sf Exp $
+ * $Id: TestMetadataManager.java,v 1.2 2012-12-20 18:38:47 fergaloy-sf Exp $
  */
 
 /*
@@ -46,7 +46,6 @@ import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
-import org.lockss.plugin.PluginManager.AuEvent;
 import org.lockss.plugin.simulated.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -60,7 +59,7 @@ import org.lockss.test.*;
 public class TestMetadataManager extends LockssTestCase {
   static Logger log = Logger.getLogger(TestMetadataManager.class);
 
-  private SimulatedArchivalUnit sau0, sau1, sau2, sau3;
+  private SimulatedArchivalUnit sau0, sau1, sau2, sau3, sau4;
   private MockLockssDaemon theDaemon;
   private MetadataManager metadataManager;
   private PluginManager pluginManager;
@@ -104,12 +103,15 @@ public class TestMetadataManager extends LockssTestCase {
     sau2 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin2.class,
                                               simAuConfig(tempDirPath + "/2"));
     sau3 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin3.class,
-                                          simAuConfig(tempDirPath + "/3"));
+                                              simAuConfig(tempDirPath + "/3"));
+    sau4 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
+                                              simAuConfig(tempDirPath + "/4"));
     PluginTestUtil.crawlSimAu(sau0);
     PluginTestUtil.crawlSimAu(sau1);
     PluginTestUtil.crawlSimAu(sau2);
     PluginTestUtil.crawlSimAu(sau3);
-    
+    PluginTestUtil.crawlSimAu(sau4);
+
     // reset set of reindexed aus
     ausReindexed.clear();
 
@@ -163,7 +165,7 @@ public class TestMetadataManager extends LockssTestCase {
 
     theDaemon.setAusStarted(true);
     
-    int expectedAuCount = 4;
+    int expectedAuCount = 5;
     assertEquals(expectedAuCount, pluginManager.getAllAus().size());
     
     long maxWaitTime = expectedAuCount * 10000; // 10 sec. per au
@@ -216,6 +218,7 @@ public class TestMetadataManager extends LockssTestCase {
 
   public void testAll() throws Exception {
     runCreateMetadataTest();
+    runTestPendingAusBatch();
     runModifyMetadataTest();
     runDeleteMetadataTest();
     runTestPriorityPatterns();
@@ -237,7 +240,7 @@ public class TestMetadataManager extends LockssTestCase {
     while (resultSet.next()) {
       count++;
     }
-    final int metadataRowCount = 84;
+    final int metadataRowCount = 105;
     assertEquals(metadataRowCount, count);
 
     // check unique plugin IDs
@@ -332,7 +335,88 @@ public class TestMetadataManager extends LockssTestCase {
     con.rollback();
     con.commit();
   }
-  
+
+  private void runTestPendingAusBatch() throws Exception {
+    // Set to 2 the batch size for adding pending AUs.
+    ConfigurationUtil
+	.addFromArgs(MetadataManager.PARAM_MAX_PENDING_TO_REINDEX_AU_BATCH_SIZE,
+		     "2");
+
+    // We are only testing here the addition of AUs to the table of pending AUs,
+    // so disable re-indexing.
+    metadataManager.setIndexingEnabled(false);
+
+    // Add one AU.
+    metadataManager.addAuToReindex(sau0, true);
+
+    Connection con = dbManager.getConnection();
+    
+    // Check that nothing has been added yet.
+    String query = "select count(*) from " + PENDING_AU_TABLE;
+    Statement stmt = con.createStatement();
+    ResultSet resultSet = stmt.executeQuery(query);
+    int count = -1;
+    if (resultSet.next()) {
+      count = resultSet.getInt(1);
+    }
+    assertEquals(0, count);
+
+    // Add the second AU.
+    metadataManager.addAuToReindex(sau1, true);
+    
+    // Check that one batch has been executed.
+    resultSet = stmt.executeQuery(query);
+    count = -1;
+    if (resultSet.next()) {
+      count = resultSet.getInt(1);
+    }
+    assertEquals(2, count);
+
+    // Add the third AU.
+    metadataManager.addAuToReindex(sau2, true);
+
+    // Check that the third AU has not been added yet.
+    resultSet = stmt.executeQuery(query);
+    count = -1;
+    if (resultSet.next()) {
+      count = resultSet.getInt(1);
+    }
+    assertEquals(2, count);
+
+    // Add the fourth AU.
+    metadataManager.addAuToReindex(sau3, true);
+    
+    // Check that the second batch has been executed.
+    resultSet = stmt.executeQuery(query);
+    count = -1;
+    if (resultSet.next()) {
+      count = resultSet.getInt(1);
+    }
+    assertEquals(4, count);
+
+    // Add the last AU.
+    metadataManager.addAuToReindex(sau4, false);
+
+    // Check that all the AUs have been added.
+    resultSet = stmt.executeQuery(query);
+    count = -1;
+    if (resultSet.next()) {
+      count = resultSet.getInt(1);
+    }
+    assertEquals(5, count);
+
+    // Clear the table of pending AUs.
+    query = "delete from " + PENDING_AU_TABLE;
+    stmt = con.createStatement();
+    count = stmt.executeUpdate(query);
+    assertEquals(5, count);
+
+    con.commit();
+
+    // Re-enable re-indexing.
+    metadataManager.setIndexingEnabled(true);
+  }
+
   private void runModifyMetadataTest() throws Exception {
     Connection con = dbManager.getConnection();
     
@@ -360,7 +444,7 @@ public class TestMetadataManager extends LockssTestCase {
       results.add(resultSet.getString(1));
     }
     final int count = results.size();
-    assertEquals(21, count);
+    assertEquals(42, count);
 
     // reset set of reindexed aus
     ausReindexed.clear();
@@ -372,8 +456,8 @@ public class TestMetadataManager extends LockssTestCase {
 	    new AuEventHandler.ChangeInfo();
 	  chInfo.setAu(sau0);        // reindex simulated AU
 	  chInfo.setComplete(true);   // crawl was complete
-	  hand.auContentChanged(AuEvent.ContentChanged,
-				sau0, chInfo);
+	  hand.auContentChanged(new AuEvent(AuEvent.Type.ContentChanged, false),
+	                        sau0, chInfo);
 	}
       });
     
@@ -389,7 +473,7 @@ public class TestMetadataManager extends LockssTestCase {
     while (resultSet.next()) {
       results.add(resultSet.getString(1));
     }
-    assertEquals(21, results.size());
+    assertEquals(42, results.size());
   }
   
   private void runDeleteMetadataTest() throws Exception {
@@ -419,13 +503,13 @@ public class TestMetadataManager extends LockssTestCase {
       results.add(resultSet.getString(1));
     }
     final int count = results.size();
-    assertEquals(21, count);
+    assertEquals(42, count);
 
     // reset set of reindexed aus
     ausReindexed.clear();
 
     // delete AU
-    pluginManager.stopAu(sau0, AuEvent.Delete);
+    pluginManager.stopAu(sau0, new AuEvent(AuEvent.Type.Delete, false));
 
     int maxWaitTime = 10000; // 10 sec. per au
     int articleCount = waitForDeleted(1, maxWaitTime);
@@ -437,7 +521,7 @@ public class TestMetadataManager extends LockssTestCase {
     while (resultSet.next()) {
       results.add(resultSet.getString(1));
     }
-    assertEquals(0, results.size());
+    assertEquals(21, results.size());
   }
 
   /**

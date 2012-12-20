@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.100 2012-11-06 01:27:05 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.101 2012-12-20 18:38:48 fergaloy-sf Exp $
  */
 
 /*
@@ -40,14 +40,12 @@ import junit.framework.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.PluginManager.AuEvent;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.poller.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
-import org.lockss.repository.*;
 import org.lockss.state.*;
 import static org.lockss.plugin.PluginManager.CuContentReq;
 
@@ -451,7 +449,8 @@ public class TestPluginManager extends LockssTestCase {
     assertNotNull(mpi);
     mgr.registerAuEventHandler(new MyAuEventHandler());
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
-    ArchivalUnit au = mgr.createAu(mpi, config, PluginManager.AuEvent.Create);
+    ArchivalUnit au = mgr.createAu(mpi, config,
+                                   new AuEvent(AuEvent.Type.Create, false));
 
     // verify put in PluginManager map
     String auid = au.getAuId();
@@ -473,7 +472,7 @@ public class TestPluginManager extends LockssTestCase {
     mpi.setCfgEx(new ArchivalUnit.ConfigurationException("should be thrown"));
     try {
       ArchivalUnit au2 = mgr.createAu(mpi, config,
-				      PluginManager.AuEvent.Create);
+                                      new AuEvent(AuEvent.Type.Create, false));
       fail("createAU should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
@@ -481,7 +480,7 @@ public class TestPluginManager extends LockssTestCase {
     mpi.setRtEx(new ExpectedRuntimeException("Ok if in log"));
     try {
       ArchivalUnit au2 = mgr.createAu(mpi, config,
-				      PluginManager.AuEvent.Create);
+                                      new AuEvent(AuEvent.Type.Create, false));
       fail("createAU should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
       // this is what's expected
@@ -501,7 +500,8 @@ public class TestPluginManager extends LockssTestCase {
     assertNotNull(mpi);
     mgr.registerAuEventHandler(new MyAuEventHandler());
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
-    ArchivalUnit au = mgr.createAu(mpi, config, PluginManager.AuEvent.Create);
+    ArchivalUnit au = mgr.createAu(mpi, config,
+                                   new AuEvent(AuEvent.Type.Create, false));
 
     String auid = au.getAuId();
     ArchivalUnit aux = mgr.getAuFromId(auid);
@@ -571,7 +571,8 @@ public class TestPluginManager extends LockssTestCase {
     ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
     assertNotNull(mpi);
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
-    ArchivalUnit au = mgr.createAu(mpi, config, PluginManager.AuEvent.Create);
+    ArchivalUnit au = mgr.createAu(mpi, config,
+                                   new AuEvent(AuEvent.Type.Create, false));
     assertNotNull(au);
     assertTrue(mgr.isActiveAu(au));
     String auId = au.getAuId();
@@ -592,7 +593,8 @@ public class TestPluginManager extends LockssTestCase {
       fail("Deactivating au should not have thrown", ex);
     }
     // Recreate the AU, will get a new instance
-    ArchivalUnit au2 = mgr.createAu(mpi, config, PluginManager.AuEvent.Create);
+    ArchivalUnit au2 = mgr.createAu(mpi, config,
+                                    new AuEvent(AuEvent.Type.Create, false));
     assertNotNull(au2);
     assertFalse(mgr.isActiveAu(au));
     assertTrue(mgr.isActiveAu(au2));
@@ -632,7 +634,7 @@ public class TestPluginManager extends LockssTestCase {
     // Test setAndSaveAuConfiguration
     ArchivalUnit au3 = mgr.createAu(mpi,
 				    ConfigurationUtil.fromArgs("foo", "bar"),
-				    PluginManager.AuEvent.Create);
+				    new AuEvent(AuEvent.Type.Create, false));
     try {
       mgr.setAndSaveAuConfiguration(au3, props);
 
@@ -1141,9 +1143,11 @@ public class TestPluginManager extends LockssTestCase {
     Configuration au1conf = au1.getConfiguration();
 
     // stop and start AU1
-    mgr.stopAu(au1, AuEvent.Deactivate);
+    mgr.stopAu(au1, new AuEvent(AuEvent.Type.Deactivate, false));
     MockArchivalUnit xmau1 =
-      (MockArchivalUnit)mgr.createAu(plug1, au1conf, AuEvent.RestartCreate);
+      (MockArchivalUnit)mgr.createAu(plug1, au1conf,
+                                     new AuEvent(AuEvent.Type.RestartCreate,
+                                                 false));
     CachedUrl xcu1 = xmau1.addUrl(url1, true, true, null);
     CachedUrl xcu31 = xmau1.addUrl(url3, true, true, null);
 
@@ -1595,7 +1599,7 @@ public class TestPluginManager extends LockssTestCase {
 						      ,"year", "1942");
 //     theDaemon.setStartAuManagers(true);
     ArchivalUnit au1 = mgr.createAu(plugin1, config,
-				    PluginManager.AuEvent.Create);
+                                    new AuEvent(AuEvent.Type.Create, false));
     String auid = au1.getAuId();
     assertNotNull(au1);
     assertSame(plugin1, au1.getPlugin());
@@ -1641,7 +1645,8 @@ public class TestPluginManager extends LockssTestCase {
     chInfo.setComplete(true);
     mgr.applyAuEvent(new PluginManager.AuEventClosure() {
 	public void execute(AuEventHandler hand) {
-	  hand.auContentChanged(AuEvent.ContentChanged, au, chInfo);
+	  hand.auContentChanged(new AuEvent(AuEvent.Type.ContentChanged, false),
+	                        au, chInfo);
 	}
       });
   }

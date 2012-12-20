@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.1 2012-12-07 07:16:06 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.2 2012-12-20 18:38:49 fergaloy-sf Exp $
  */
 
 /*
@@ -154,6 +154,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   static final int MIN_INDEX_PRIORITY = -10000;
   static final int ABORT_INDEX_PRIORITY = -20000;
+
+  /** Maximum number of AUs to be re-indexed to batch before writing them to the
+   * database. */
+  public static final String PARAM_MAX_PENDING_TO_REINDEX_AU_BATCH_SIZE =
+    PREFIX + "maxPendingToReindexAuBatchSize";
+  public static final int DEFAULT_MAX_PENDING_TO_REINDEX_AU_BATCH_SIZE = 1000;
 
   private static final int UNKNOWN_VERSION = -1;
 
@@ -634,6 +640,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   private PatternIntMap indexPriorityAuidMap;
 
+  private int maxPendingAuBatchSize =
+      DEFAULT_MAX_PENDING_TO_REINDEX_AU_BATCH_SIZE;
+
+  private int pendingAuBatchCurrentSize = 0;
+
+  private Connection pendingAusBatchConnection = null;
+  private PreparedStatement insertPendingAuBatchStatement = null;
+
   /** enumeration status for reindexing tasks */
   public enum ReindexingStatus {
     Running, // if the reindexing task is running
@@ -793,6 +807,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	  startReindexing();
 	}
       }
+
+      if (changedKeys.contains(PARAM_MAX_PENDING_TO_REINDEX_AU_BATCH_SIZE)) {
+	maxPendingAuBatchSize =
+	    config.getInt(PARAM_MAX_PENDING_TO_REINDEX_AU_BATCH_SIZE,
+			  DEFAULT_MAX_PENDING_TO_REINDEX_AU_BATCH_SIZE);
+      }
     }
   }
 
@@ -802,7 +822,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @param enable
    *          A boolean with the new enabled state of this manager.
    */
-  private void setIndexingEnabled(boolean enable) {
+  void setIndexingEnabled(boolean enable) {
     final String DEBUG_HEADER = "setIndexingEnabled(): ";
     boolean wasEnabled = reindexingEnabled;
     reindexingEnabled = enable;
@@ -896,6 +916,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     try {
       conn = dbManager.getConnection();
       count = startReindexing(conn);
+      conn.commit();
     } catch (SQLException sqle) {
       log.error("Cannot start reindexing", sqle);
     } finally {
@@ -1127,8 +1148,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     // Remove pending reindexing operations for this AU.
     removeFromPendingAus(conn, auId);
-
-    conn.commit();
 
     notifyDeletedAu(auId, articleCount);
 
@@ -3311,46 +3330,68 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return <code>true</code> if au was added for reindexing
    */
   public boolean addAuToReindex(ArchivalUnit au) {
-    final String DEBUG_HEADER = "enableAndAddToReindex(): ";
+    return addAuToReindex(au, false);
+  }
+
+  /**
+   * Adds an AU to the list of AUs to be reindexed.
+   * 
+   * @param au
+   *          An ArchivalUnit with the AU to be reindexed.
+   * @param inBatch
+   *          A boolean indicating whether the reindexing of this AU should be
+   *          performed as part of a batch.
+   * @return <code>true</code> if au was added for reindexing
+   */
+  public boolean addAuToReindex(ArchivalUnit au, boolean inBatch) {
+    final String DEBUG_HEADER = "addAuToReindex(): ";
 
     synchronized (activeReindexingTasks) {
-      Connection conn = null;
 
       try {
-        log.debug2(DEBUG_HEADER + "Adding AU to reindex: " + au.getName());
-        conn = dbManager.getConnection();
-
-        if (conn == null) {
-          log.error("Cannot connect to database"
-              + " -- cannot add aus to pending aus");
-          return false;
-        }
-
         // If disabled crawl completion rescheduling
         // a running task, have this function report false;
         if (disableCrawlRescheduleTask
             && activeReindexingTasks.containsKey(au.getAuId())) {
+          log.debug2(DEBUG_HEADER + "Not adding AU to reindex: "
+              + au.getName());
           return false;
         }
 
+        log.debug2(DEBUG_HEADER + "Adding AU to reindex: " + au.getName());
+        
+        if (pendingAusBatchConnection == null) {
+          pendingAusBatchConnection = dbManager.getConnection();
+
+          if (pendingAusBatchConnection == null) {
+            log.error("Cannot connect to database"
+                + " -- cannot add aus to pending aus");
+            return false;
+          }
+        }
+
         // Remove it from the list if it was marked as disabled.
-        removeDisabledFromPendingAus(conn, au.getAuId());
+        removeDisabledFromPendingAus(pendingAusBatchConnection, au.getAuId());
 
         // If it's not possible to reschedule the current task, add the AU to
         // the pending list.
         if (!rescheduleAuTask(au.getAuId())) {
-          addToPendingAus(conn, Collections.singleton(au));
+          addToPendingAus(pendingAusBatchConnection, Collections.singleton(au),
+                          inBatch);
         }
 
-        conn.commit();
-        startReindexing(conn);
+        startReindexing(pendingAusBatchConnection);
+        pendingAusBatchConnection.commit();
 
         return true;
       } catch (SQLException ex) {
         log.error("Cannot add au to pending AUs: " + au.getName(), ex);
         return false;
       } finally {
-        DbManager.safeRollbackAndClose(conn);
+	if (!inBatch) {
+	  DbManager.safeRollbackAndClose(pendingAusBatchConnection);
+	  pendingAusBatchConnection = null;
+	}
       }
     }
   }
@@ -3481,13 +3522,35 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   void addToPendingAus(Connection conn, Collection<ArchivalUnit> aus)
       throws SQLException {
+    addToPendingAus(conn, aus, false);
+  }
+
+  /**
+   * Adds AUs to the list of pending AUs to reindex.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param aus
+   *          A Collection<ArchivalUnit> with the AUs to add.
+   * @param inBatch
+   *          A boolean indicating whether adding these AUs to the list of
+   *          pending AUs to reindex should be performed as part of a batch.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void addToPendingAus(Connection conn, Collection<ArchivalUnit> aus,
+      boolean inBatch) throws SQLException {
     final String DEBUG_HEADER = "addToPendingAus(): ";
     PreparedStatement selectPendingAu =
 	conn.prepareStatement(FIND_PENDING_AU_QUERY);
-    PreparedStatement insertPendingAu =
+
+    if (insertPendingAuBatchStatement == null) {
+      insertPendingAuBatchStatement =
 	conn.prepareStatement(INSERT_ENABLED_PENDING_AU_QUERY);
+    }
 
     ResultSet results = null;
+    log.debug2(DEBUG_HEADER + "maxPendingAuBatchSize = " + maxPendingAuBatchSize);
     log.debug2(DEBUG_HEADER + "Number of pending aus to add: " + aus.size());
 
     try {
@@ -3511,9 +3574,22 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             // Only insert if entry does not exist.
 	    log.debug3(DEBUG_HEADER + "Adding au " + au.getName()
 		+ " to pending list");
-            insertPendingAu.setString(1, pluginId);
-            insertPendingAu.setString(2, auKey);
-            insertPendingAu.addBatch();
+            insertPendingAuBatchStatement.setString(1, pluginId);
+            insertPendingAuBatchStatement.setString(2, auKey);
+            insertPendingAuBatchStatement.addBatch();
+            pendingAuBatchCurrentSize++;
+	    log.debug3(DEBUG_HEADER + "pendingAuBatchCurrentSize = "
+		+ pendingAuBatchCurrentSize);
+
+	    // Check whether the maximum batch size has been reached.
+	    if (pendingAuBatchCurrentSize >= maxPendingAuBatchSize) {
+	      // Yes: Perform the insertion of all the AUs in the batch.
+	      log.debug3(DEBUG_HEADER + "Executing batch...");
+	      insertPendingAuBatchStatement.executeBatch();
+	      pendingAuBatchCurrentSize = 0;
+	      log.debug3(DEBUG_HEADER + "pendingAuBatchCurrentSize = "
+		  + pendingAuBatchCurrentSize);
+	    }
           } else {
             log.debug3(DEBUG_HEADER+ "Not adding au " + au.getName()
                        + " to pending list becuase it is already on the list");
@@ -3523,10 +3599,26 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	}
       }
 
-      insertPendingAu.executeBatch();
+      // Check whether there are no more AUs to be batched and the batch is not
+      // empty.
+      if (!inBatch && pendingAuBatchCurrentSize > 0) {
+	// Yes: Perform the insertion of all the AUs in the batch.
+	log.debug3(DEBUG_HEADER + "Executing batch...");
+	insertPendingAuBatchStatement.executeBatch();
+	pendingAuBatchCurrentSize = 0;
+	log.debug3(DEBUG_HEADER + "pendingAuBatchCurrentSize = "
+	    + pendingAuBatchCurrentSize);
+      }
     } finally {
       DbManager.safeCloseResultSet(results);
-      DbManager.safeCloseStatement(insertPendingAu);
+
+      // Check whether there are no more AUs to be batched.
+      if (!inBatch) {
+	// Yes: Perform the insertion of all the AUs in the batch.
+	DbManager.safeCloseStatement(insertPendingAuBatchStatement);
+	insertPendingAuBatchStatement = null;
+      }
+
       DbManager.safeCloseStatement(selectPendingAu);
     }
 
@@ -3607,10 +3699,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         }
 
         deleteAu(conn, au.getAuId());
-        conn.commit();
 
         // Force reindexing to start next task.
         startReindexing(conn);
+        conn.commit();
+
         return true;
       } catch (SQLException ex) {
         log.error("Cannot remove au to pending AUs: " + au.getName(), ex);

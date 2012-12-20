@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.264 2012-10-30 00:11:44 tlipkis Exp $
+ * $Id: PollManager.java,v 1.265 2012-12-20 18:38:47 fergaloy-sf Exp $
  */
 
 /*
@@ -30,23 +30,20 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-
 package org.lockss.poller;
 
+import static org.lockss.poller.v3.V3Poller.*;
+import static org.lockss.poller.v3.V3Voter.*;
+import static org.lockss.poller.v3.V3PollFactory.*;
 import static org.lockss.util.Constants.SECOND;
 import static org.lockss.util.Constants.MINUTE;
 import static org.lockss.util.Constants.HOUR;
 import static org.lockss.util.Constants.DAY;
 import static org.lockss.util.Constants.WEEK;
-
 import java.io.*;
 import java.util.*;
-
-import EDU.oswego.cs.dl.util.concurrent.*;
 import org.apache.commons.collections.map.*;
-import org.apache.commons.lang.builder.CompareToBuilder;
 import org.apache.commons.lang.mutable.MutableInt;
-
 import org.lockss.alert.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
@@ -61,11 +58,6 @@ import org.lockss.protocol.psm.*;
 import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.state.*;
 import org.lockss.util.*;
-
-import static org.lockss.poller.v3.V3Poller.*;
-import static org.lockss.poller.v3.V3Voter.*;
-import static org.lockss.poller.v3.V3PollFactory.*;
-
 
 /**
  * <p>Class that manages the polling process.</p>
@@ -1004,12 +996,10 @@ public class PollManager
 
     // register our AU event handler
     auEventHandler = new AuEventHandler.Base() {
-	@Override public void auCreated(PluginManager.AuEvent event,
-					ArchivalUnit au) {
+	@Override public void auCreated(AuEvent event, ArchivalUnit au) {
  	  restoreAuPolls(au);
 	}
-	@Override public void auDeleted(PluginManager.AuEvent event,
-					ArchivalUnit au) {
+	@Override public void auDeleted(AuEvent event, ArchivalUnit au) {
 	  cancelAuPolls(au);
 	}};
     pluginMgr.registerAuEventHandler(auEventHandler);

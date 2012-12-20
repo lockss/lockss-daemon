@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.127 2012-11-08 06:19:22 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.128 2012-12-20 18:38:48 fergaloy-sf Exp $
  */
 
 /*
@@ -36,16 +36,13 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.security.*;
 import java.util.*;
-
 import org.apache.commons.collections.*;
-
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.PluginManager.AuEvent;
 import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.poller.*;
 import org.lockss.poller.PollManager.EventCtr;
@@ -1735,7 +1732,9 @@ public class V3Poller extends BasePoll {
       PluginManager plugMgr = theDaemon.getPluginManager();
       plugMgr.applyAuEvent(new PluginManager.AuEventClosure() {
 			     public void execute(AuEventHandler hand) {
-			       hand.auContentChanged(AuEvent.ContentChanged,
+			       hand.auContentChanged(new AuEvent(AuEvent.Type.
+			                                         ContentChanged,
+			                                         false),
 						     au, chInfo);
 			     }
 	});

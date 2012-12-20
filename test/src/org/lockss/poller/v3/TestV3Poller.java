@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.49 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.50 2012-12-20 18:38:48 fergaloy-sf Exp $
  */
 
 /*
@@ -37,22 +37,16 @@ import java.util.*;
 import java.security.*;
 import org.lockss.app.*;
 import org.lockss.config.ConfigManager;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.IdentityManager.IdentityAgreement;
-import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
 import org.lockss.poller.*;
-import org.lockss.poller.v3.FuncV3Poller.MyV3Poller;
 import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.test.*;
 import org.lockss.hasher.*;
-import org.lockss.repository.LockssRepositoryImpl;
-import org.mortbay.util.B64Code;
 
 import static org.lockss.util.Constants.*;
-
 
 public class TestV3Poller extends LockssTestCase {
 
@@ -818,8 +812,7 @@ public class TestV3Poller extends LockssTestCase {
   List<AuEventHandler.ChangeInfo> changeEvents = new ArrayList();
 
   class MyAuEventHandler extends AuEventHandler.Base {
-    @Override public void auContentChanged(PluginManager.AuEvent event,
-					   ArchivalUnit au,
+    @Override public void auContentChanged(AuEvent event, ArchivalUnit au,
 					   AuEventHandler.ChangeInfo info) {
       changeEvents.add(info);
     }

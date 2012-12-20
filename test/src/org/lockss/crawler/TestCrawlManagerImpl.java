@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.93 2012-10-30 00:11:05 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.94 2012-12-20 18:38:49 fergaloy-sf Exp $
 */
 
 /*
@@ -32,12 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
-import java.io.*;
 import java.util.*;
 import junit.framework.Test;
 import org.lockss.util.*;
 import org.lockss.test.*;
-import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.daemon.*;
@@ -204,7 +202,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       //we know that doCrawl started
 
       // stopping AU should run AuEventHandler, which should cancel crawl
-      pluginMgr.stopAu(mau, PluginManager.AuEvent.Delete);
+      pluginMgr.stopAu(mau, new AuEvent(AuEvent.Type.Delete, false));
 
       assertTrue(crawler.wasAborted());
     }
@@ -646,8 +644,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     SimpleBinarySemaphore eventSem = new SimpleBinarySemaphore();
 
     class MyAuEventHandler extends AuEventHandler.Base {
-      @Override public void auContentChanged(PluginManager.AuEvent event,
-					     ArchivalUnit au,
+      @Override public void auContentChanged(AuEvent event, ArchivalUnit au,
 					     AuEventHandler.ChangeInfo info) {
 	changeEvents.add(info);
 	eventSem.give();

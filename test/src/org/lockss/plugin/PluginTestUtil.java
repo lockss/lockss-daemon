@@ -1,8 +1,8 @@
 /*
- * $Id: PluginTestUtil.java,v 1.4 2011-01-25 07:14:00 tlipkis Exp $
+ * $Id: PluginTestUtil.java,v 1.5 2012-12-20 18:38:48 fergaloy-sf Exp $
  *
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,14 +30,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
-import java.io.IOException;
 import java.util.*;
 import java.util.regex.*;
 import java.lang.reflect.*;
-
 import org.lockss.test.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
@@ -137,7 +134,7 @@ public class PluginTestUtil {
       tp.unregisterArchivalUnit(au);
       aulist.remove(au);
     }
-    mgr.stopAu(au, PluginManager.AuEvent.Delete);
+    mgr.stopAu(au, new AuEvent(AuEvent.Type.Delete, false));
   }
 
   public static void unregisterAllArchivalUnits() {
@@ -163,14 +160,15 @@ public class PluginTestUtil {
 				      Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     return getPluginManager().createAu(plugin, auConfig,
-				       PluginManager.AuEvent.Create);
+                                       new AuEvent(AuEvent.Type.Create, false));
   }
 
   public static ArchivalUnit createAndStartAu(Plugin plugin,
 					      Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
-    ArchivalUnit au = getPluginManager().createAu(plugin, auConfig,
-						  PluginManager.AuEvent.Create);
+    ArchivalUnit au =
+	getPluginManager().createAu(plugin, auConfig,
+	                            new AuEvent(AuEvent.Type.Create, false));
     LockssDaemon daemon = plugin.getDaemon();
     daemon.getHistoryRepository(au).startService();
     daemon.getLockssRepository(au).startService();

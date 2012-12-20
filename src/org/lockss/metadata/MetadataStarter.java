@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataStarter.java,v 1.1 2012-12-07 07:20:01 fergaloy-sf Exp $
+ * $Id: MetadataStarter.java,v 1.2 2012-12-20 18:38:48 fergaloy-sf Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.db.DbManager;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuEvent;
 import org.lockss.plugin.AuEventHandler;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.PluginManager;
@@ -170,9 +171,9 @@ public class MetadataStarter extends LockssRunnable {
 
     /** Called after the AU is created. */
     @Override
-    public void auCreated(PluginManager.AuEvent event, ArchivalUnit au) {
+    public void auCreated(AuEvent event, ArchivalUnit au) {
       final String DEBUG_HEADER = "auCreated(): ";
-      switch (event) {
+      switch (event.getType()) {
 	case StartupCreate:
 	  log.debug2(DEBUG_HEADER + "StartupCreate for au: " + au);
 
@@ -183,7 +184,7 @@ public class MetadataStarter extends LockssRunnable {
 	  // database now. Otherwise it will be added through auContentChanged()
 	  // once the crawl has been completed.
 	  if (AuUtil.hasCrawled(au)) {
-	    mdManager.addAuToReindex(au);
+	    mdManager.addAuToReindex(au, event.isInBatch());
 	  }
 
 	  break;
@@ -195,7 +196,7 @@ public class MetadataStarter extends LockssRunnable {
 	  // it to be added to the metadata database now. Otherwise it will be
 	  // added through auContentChanged() once the crawl has been completed.
 	  if (AuUtil.hasCrawled(au)) {
-	    mdManager.addAuToReindex(au);
+	    mdManager.addAuToReindex(au, event.isInBatch());
 	  }
 
 	  break;
@@ -205,7 +206,7 @@ public class MetadataStarter extends LockssRunnable {
 	  // A new version of the plugin has been loaded. Refresh the metadata
 	  // only if the feature version of the metadata extractor increased.
 	  if (mdManager.isAuMetadataForObsoletePlugin(au)) {
-	    mdManager.addAuToReindex(au);
+	    mdManager.addAuToReindex(au, event.isInBatch());
 	  }
 
 	  break;
@@ -214,9 +215,9 @@ public class MetadataStarter extends LockssRunnable {
 
     /** Called for AU deleted events. */
     @Override
-    public void auDeleted(PluginManager.AuEvent event, ArchivalUnit au) {
+    public void auDeleted(AuEvent event, ArchivalUnit au) {
       final String DEBUG_HEADER = "auDeleted(): ";
-      switch (event) {
+      switch (event.getType()) {
 	case Delete:
 	  log.debug2(DEBUG_HEADER + "Delete for au: " + au);
 
@@ -234,16 +235,16 @@ public class MetadataStarter extends LockssRunnable {
 
     /** Called for AU changed events */
     @Override
-    public void auContentChanged(PluginManager.AuEvent event, ArchivalUnit au,
+    public void auContentChanged(AuEvent event, ArchivalUnit au,
 	ChangeInfo info) {
-      switch (event) {
+      switch (event.getType()) {
 	case ContentChanged:
 	  // This case occurs after a change to the AU's content after a crawl.
 	  // This code assumes that a new crawl will simply add new metadata and
 	  // not change existing metadata. Otherwise,
 	  // deleteOrRestartAu(au, true) should be called.
 	  if (info.isComplete()) {
-	    mdManager.addAuToReindex(au);
+	    mdManager.addAuToReindex(au, event.isInBatch());
 	  }
       }
     }

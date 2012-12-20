@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.236 2012-11-06 01:27:05 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.237 2012-12-20 18:38:49 fergaloy-sf Exp $
  */
 
 /*
@@ -813,11 +813,11 @@ public class PluginManager
       }
       if (oldAu != null) {
 	log.debug("Reconfigured AU " + au);
-	signalAuEvent(au, AuEvent.Reconfig, oldConfig);
+	signalAuEvent(au, new AuEvent(AuEvent.Type.Reconfig, false), oldConfig);
       } else {
 	log.debug("Configured AU " + au);
 	putAuInMap(au);
-	signalAuEvent(au, AuEvent.StartupCreate, null);
+	signalAuEvent(au, new AuEvent(AuEvent.Type.StartupCreate, false), null);
       }
     } catch (ArchivalUnit.ConfigurationException e) {
       throw e;
@@ -915,30 +915,6 @@ public class PluginManager
     return auid != null && auMap.get(auid) == au;
   }
 
-  /** Describes the event that caused the AuEventHandler to be invoked.
-   * May provide more detail than the AuEventHandler method name. */
-  public enum AuEvent {
-    /** AU created via UI. */
-    Create,
-      /** AU deleted via UI. */
-      Delete,
-      /** Previously created AU started at daemon startup. */
-      StartupCreate,
-      /** AU deactivated via UI. */
-      Deactivate,
-      /** AU reactivated via UI.  (Not currently used.) */
-      Reactivate,
-      /** AU briefly deleted as part of a restart operation. */
-      RestartDelete,
-      /** AU recreated as part of a restart operation. */
-      RestartCreate,
-      /** AU config changed (non-def params only, doesn't happen in normal
-       * use. */
-      Reconfig,
-      /** AU's content chaged. */
-      ContentChanged,
-      };
-
   /**
    * Register a handler for AU events: create, delete, reconfigure.  May be
    * called after this manager's initService() (before startService()).
@@ -971,7 +947,7 @@ public class PluginManager
 		     final Configuration oldAuConfig) {
     if (log.isDebug2()) log.debug2("AuEvent " + how + ": " + au);
 
-    switch (how) {
+    switch (how.getType()) {
     case Create:
       raiseAlert(Alert.auAlert(Alert.AU_CREATED, au), "AU created");
       // falls through
@@ -1176,7 +1152,8 @@ public class PluginManager
       throws ArchivalUnit.ConfigurationException, IOException {
     synchronized (auAddDelLock) {
       auConf.put(AU_PARAM_DISABLED, "false");
-      ArchivalUnit au = createAu(plugin, auConf, AuEvent.Create);
+      ArchivalUnit au = createAu(plugin, auConf,
+                                 new AuEvent(AuEvent.Type.Create, false));
       updateAuConfigFile(au, auConf);
       return au;
     }
@@ -1236,7 +1213,7 @@ public class PluginManager
     synchronized (auAddDelLock) {
       deleteAuConfiguration(au);
       if (isRemoveStoppedAus()) {
-	stopAu(au, AuEvent.Delete);
+	stopAu(au, new AuEvent(AuEvent.Type.Delete, false));
       }
     }
   }
@@ -1251,7 +1228,7 @@ public class PluginManager
       deactivateAuConfiguration(au);
       if (isRemoveStoppedAus()) {
 	String auid = au.getAuId();
-	stopAu(au, AuEvent.Deactivate);
+	stopAu(au, new AuEvent(AuEvent.Type.Deactivate, false));
 	inactiveAuIds.add(auid);
       }
     }
@@ -1270,29 +1247,66 @@ public class PluginManager
     if (paramRestartAus) {
       log.info("Restarting " + aus.size() + " AUs to use updated plugins.  Exiting processes may log errors; they should be harmless");
       synchronized (auAddDelLock) {
-	Map<String, Configuration> configMap = new HashMap();
+	Map<String, Configuration> configMap =
+	    new HashMap<String, Configuration>();
 	for (ArchivalUnit au : aus) {
 	  String auid = au.getAuId();
 	  Configuration auConf = au.getConfiguration();
 	  configMap.put(auid, auConf);
 	  numAusRestarting++;
-	  stopAu(au, AuEvent.RestartDelete);
+	  stopAu(au, new AuEvent(AuEvent.Type.RestartDelete, false));
 	}
 	try {
 	  Deadline.in(auRestartSleep(aus.size())).sleep();
 	} catch (InterruptedException ex) {
 	}
-    
+
+	// The number of remaining AUs to be processed.
+	int remainingAus = configMap.entrySet().size();
+
+	// The event used to signal that an AU needs to be added to the batch of
+	// AUs to be marked for re-indexing.
+	AuEvent batchEvent = new AuEvent(AuEvent.Type.RestartCreate, true);
+
+	// The event used to signal that an AU needs to be added to the batch of
+	// AUs to be marked for re-indexing and the current batch needs to be
+	// executed afterwards.
+	AuEvent executeEvent = new AuEvent(AuEvent.Type.RestartCreate, false);
+
+	AuEvent auEvent = null;
+	ArchivalUnit newAu = null;
+	    
 	for (Map.Entry<String,Configuration> ent : configMap.entrySet()) {
 	  String auid = ent.getKey();
 	  Configuration auConf = ent.getValue();
 	  String pkey = pluginKeyFromId(pluginIdFromAuId(auid));
 	  Plugin plug = getPlugin(pkey);
+
+	  // To find the last AU.
+	  remainingAus--;
+
+	  // Check whether this is the last AU and therefore the batch of AUs to
+	  // be marked for re-indexing needs to be executed.
+	  if (remainingAus <= 0) {
+	    // Yes.
+	    auEvent = executeEvent;
+	  } else {
+	    // No.
+	    auEvent = batchEvent;
+	  }
+
 	  try {
-	    ArchivalUnit newAu = createAu(plug, auConf, AuEvent.RestartCreate);
+	    newAu = createAu(plug, auConf, auEvent);
 	    numAusRestarting--;
 	  } catch (ArchivalUnit.ConfigurationException e) {
 	    log.error("Failed to restart: " + auid);
+
+	    // Check whether the failure happened when trying to execute the
+	    // batch.
+	    if (!auEvent.isInBatch()) {
+	      // Yes: Execute the batch with the last successfully-created AU.
+	      signalAuEvent(newAu, auEvent, null);
+	    }
 	  }
 	}
 	numFailedAuRestarts += numAusRestarting;

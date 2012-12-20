@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.146 2012-11-08 06:21:40 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.147 2012-12-20 18:38:47 fergaloy-sf Exp $
  */
 
 /*
@@ -37,21 +37,18 @@ import org.apache.commons.lang.builder.CompareToBuilder;
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.map.*;
 import org.apache.commons.collections.bag.HashBag; // needed to disambiguate
-import org.apache.commons.collections.set.ListOrderedSet;
 import org.apache.oro.text.regex.*;
 import EDU.oswego.cs.dl.util.concurrent.*;
-
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
-import org.lockss.state.NodeState;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.alert.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.exploded.*;
-import org.lockss.plugin.PluginManager.AuEvent;
+import org.lockss.plugin.AuEvent;
 
 /**
  * This is the interface for the object that will sit between the crawler
@@ -1369,7 +1366,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     chInfo.setComplete(!cs.isCrawlError());
     pluginMgr.applyAuEvent(new PluginManager.AuEventClosure() {
 			     public void execute(AuEventHandler hand) {
-			       hand.auContentChanged(AuEvent.ContentChanged,
+			       hand.auContentChanged(new AuEvent(AuEvent.Type.
+			                                         ContentChanged,
+			                                         false),
 						     au, chInfo);
 			     }
 			   });
