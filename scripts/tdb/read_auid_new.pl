@@ -9,6 +9,7 @@ use HTTP::Cookies;
 my $lockss_tag  = "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 my $oa_tag      = "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
 my $clockss_tag = "CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit";
+my $bmc_tag = "<span>Archive</span>";
 my $cc_tag = "rel..license";
 my $total_manifests = 0;
 my $total_missing = 0;
@@ -667,6 +668,30 @@ while (my $line = <>) {
       my $man_contents = $resp->content;
       if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
         if ($man_contents =~ m/farbe_auf_journalhintergrund.>\s*(.*)\s*<\/h1>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(5);
+  } elsif ($plugin eq "BMCPlugin") {
+    $url = sprintf("%s%s/%s", 
+      $param{base_url}, $param{journal_issn}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$bmc_tag/)) {
+        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
           if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
