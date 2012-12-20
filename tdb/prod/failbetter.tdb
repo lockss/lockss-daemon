@@ -17,8 +17,8 @@
 
     rights = openaccess
 
-comment[fb1] = the website changed, manifest pages are gone
-comment[fb2] = it needs either new manifest pages or a statement on the "archive" page + new plugin with AUs grouped by issue
+comment[fb1] = the website changed, manifest pages have moved.  See RT4886
+comment[fb2] = needs either new manifest pages or a statement on the "archive" page + new plugin with AUs grouped by issue
     
     au < down ; Failbetter 2000 ; 2000 >
     au < down ; Failbetter 2001 ; 2001 >
