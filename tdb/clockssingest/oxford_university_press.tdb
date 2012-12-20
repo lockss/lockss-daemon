@@ -280,7 +280,7 @@
     au < released ; crawling ; 2010 ; Age and Ageing Volume 39 ; 39 ; >
     au < released ; crawling ; 2011 ; Age and Ageing Volume 40 ; 40 ; >
     au < released ; crawling ; 2012 ; Age and Ageing Volume 41 ; 41 ; >
-    au < expected ; exists ; 2013 ; Age and Ageing Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2013 ; Age and Ageing Volume 42 ; 42 ; >
 
     }
 
@@ -357,7 +357,7 @@
     au < released ; crawling ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
     au < released ; crawling ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
     au < released ; crawling ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
-    au < expected ; exists ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ; >
 
     }
 
@@ -608,7 +608,7 @@
     au < released ; crawling ; 2010 ; American Journal of Agricultural Economics Volume 92 ; 92 ; >
     au < released ; crawling ; 2011 ; American Journal of Agricultural Economics Volume 93 ; 93 ; >
     au < released ; crawling ; 2012 ; American Journal of Agricultural Economics Volume 94 ; 94 ; >
-    au < expected ; exists ; 2013 ; American Journal of Agricultural Economics Volume 95 ; 95 ; >
+    au < manifest ; exists ; 2013 ; American Journal of Agricultural Economics Volume 95 ; 95 ; >
 
     }
 
@@ -1297,7 +1297,7 @@
     au < released ; crawling ; 2011 ; Annals of Botany Volume 108 ; 108 ; >
     au < released ; crawling ; 2012 ; Annals of Botany Volume 109 ; 109 ; >
     au < released ; crawling ; 2012 ; Annals of Botany Volume 110 ; 110 ; >
-    au < expected ; exists ; 2013 ; Annals of Botany Volume 111 ; 111 ; >
+    au < manifest ; exists ; 2013 ; Annals of Botany Volume 111 ; 111 ; >
 
     }
 
@@ -1436,7 +1436,7 @@
     au < released ; crawling ; 2010 ; Annals of Oncology Volume 21 ; 21 ; >
     au < released ; crawling ; 2011 ; Annals of Oncology Volume 22 ; 22 ; >
     au < testing ; exists ; 2012 ; Annals of Oncology Volume 23 ; 23 ; >
-    au < expected ; exists ; 2013 ; Annals of Oncology Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2013 ; Annals of Oncology Volume 24 ; 24 ; >
 
     }
 
@@ -1691,22 +1691,22 @@
     param[base_url] = http://astrogeo.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1997 ; Astronomy & Geophysics Volume 38 ; 38 ; >
-    au < exists ; exists ; 1998 ; Astronomy & Geophysics Volume 39 ; 39 ; >
-    au < exists ; exists ; 1999 ; Astronomy & Geophysics Volume 40 ; 40 ; >
-    au < exists ; exists ; 2000 ; Astronomy & Geophysics Volume 41 ; 41 ; >
-    au < exists ; exists ; 2001 ; Astronomy & Geophysics Volume 42 ; 42 ; >
-    au < exists ; exists ; 2002 ; Astronomy & Geophysics Volume 43 ; 43 ; >
-    au < exists ; exists ; 2003 ; Astronomy & Geophysics Volume 44 ; 44 ; >
-    au < exists ; exists ; 2004 ; Astronomy & Geophysics Volume 45 ; 45 ; >
-    au < exists ; exists ; 2005 ; Astronomy & Geophysics Volume 46 ; 46 ; >
-    au < exists ; exists ; 2006 ; Astronomy & Geophysics Volume 47 ; 47 ; >
-    au < exists ; exists ; 2007 ; Astronomy & Geophysics Volume 48 ; 48 ; >
-    au < exists ; exists ; 2008 ; Astronomy & Geophysics Volume 49 ; 49 ; >
-    au < exists ; exists ; 2009 ; Astronomy & Geophysics Volume 50 ; 50 ; >
-    au < exists ; exists ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 ; >
-    au < exists ; exists ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 ; >
-    au < exists ; exists ; 2012 ; Astronomy & Geophysics Volume 53 ; 53 ; >
+    au < manifest ; exists ; 1997 ; Astronomy & Geophysics Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1998 ; Astronomy & Geophysics Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1999 ; Astronomy & Geophysics Volume 40 ; 40 ; >
+    au < manifest ; exists ; 2000 ; Astronomy & Geophysics Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2001 ; Astronomy & Geophysics Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2002 ; Astronomy & Geophysics Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2003 ; Astronomy & Geophysics Volume 44 ; 44 ; >
+    au < manifest ; exists ; 2004 ; Astronomy & Geophysics Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2005 ; Astronomy & Geophysics Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2006 ; Astronomy & Geophysics Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2007 ; Astronomy & Geophysics Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2008 ; Astronomy & Geophysics Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2009 ; Astronomy & Geophysics Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2012 ; Astronomy & Geophysics Volume 53 ; 53 ; >
     au < expected ; exists ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 ; >
 
   }
@@ -1758,7 +1758,7 @@
     au < released ; crawling ; 2010 ; Behavioral Ecology Volume 21 ; 21 ; >
     au < released ; crawling ; 2011 ; Behavioral Ecology Volume 22 ; 22 ; >
     au < testing ; exists ; 2012 ; Behavioral Ecology Volume 23 ; 23 ; >
-    au < expected ; exists ; 2013 ; Behavioral Ecology Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2013 ; Behavioral Ecology Volume 24 ; 24 ; >
 
     }
 
@@ -2022,7 +2022,7 @@
     au < released ; crawling ; 2010 ; Biostatistics Volume 11 ; 11 ; >
     au < released ; crawling ; 2011 ; Biostatistics Volume 12 ; 12 ; >
     au < released ; crawling ; 2012 ; Biostatistics Volume 13 ; 13 ; >
-    au < expected ; exists ; 2013 ; Biostatistics Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2013 ; Biostatistics Volume 14 ; 14 ; >
 
     }
 
@@ -2544,7 +2544,7 @@
     au < released ; crawling ; 2011 ;  British Journal of Anaesthesia Volume 107 ; 107 ; >
     au < released ; crawling ; 2012 ;  British Journal of Anaesthesia Volume 108 ; 108 ; >
     au < released ; crawling ; 2012 ;  British Journal of Anaesthesia Volume 109 ; 109 ; >
-    au < expected ; exists ; 2013 ; British Journal of Anaesthesia Volume 110 ; 110 ; >
+    au < manifest ; exists ; 2013 ; British Journal of Anaesthesia Volume 110 ; 110 ; >
 
     }
 
@@ -2924,7 +2924,7 @@
     au < released ; crawling ; 2012 ; British Medical Bulletin Volume 101 ; 101 ; >
     au < released ; crawling ; 2012 ; British Medical Bulletin Volume 102 ; 102 ; >
     au < released ; crawling ; 2012 ; British Medical Bulletin Volume 103 ; 103 ; >
-    au < expected ; exists ; 2012 ; British Medical Bulletin Volume 104 ; 104 ; >
+    au < manifest ; exists ; 2012 ; British Medical Bulletin Volume 104 ; 104 ; >
     au < expected ; exists ; 2013 ; British Medical Bulletin Volume 105 ; 105 ; >
     au < expected ; exists ; 2013 ; British Medical Bulletin Volume 106 ; 106 ; >
     au < expected ; exists ; 2013 ; British Medical Bulletin Volume 107 ; 107 ; >
@@ -3616,7 +3616,7 @@
     au < released ; crawling ; 2010 ; Chemical Senses Volume 35 ; 35 ; >
     au < released ; crawling ; 2011 ; Chemical Senses Volume 36 ; 36 ; >
     au < released ; crawling ; 2012 ; Chemical Senses Volume 37 ; 37 ; >
-    au < expected ; exists ; 2013 ; Chemical Senses Volume 38 ; 38 ; >
+    au < manifest ; exists ; 2013 ; Chemical Senses Volume 38 ; 38 ; >
 
     }
 
@@ -3883,7 +3883,7 @@
     au < released ; crawling ; 2011 ; Clinical Infectious Diseases Volume 53 ; 53 ; >
     au < crawling ; exists ; 2012 ; Clinical Infectious Diseases Volume 54 ; 54 ; >
     au < crawling ; exists ; 2012 ; Clinical Infectious Diseases Volume 55 ; 55 ; >
-    au < expected ; exists ; 2013 ; Clinical Infectious Diseases Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2013 ; Clinical Infectious Diseases Volume 56 ; 56 ; >
     au < expected ; exists ; 2013 ; Clinical Infectious Diseases Volume 57 ; 57 ; >
 
     }
@@ -4281,7 +4281,7 @@
     param[base_url] = http://dh.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; exists ; 2013 ; Diplomatic History Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; Diplomatic History Volume 1 ; 1 ; >
 
   }
 
@@ -4719,7 +4719,7 @@
     au < released ; crawling ; 2010 ; ELT Journal Volume 64 ; 64 ; >
     au < released ; crawling ; 2011 ; ELT Journal Volume 65 ; 65 ; >
     au < released ; crawling ; 2012 ; ELT Journal Volume 66 ; 66 ; >
-    au < expected ; exists ; 2013 ; ELT Journal Volume 67 ; 67 ; >
+    au < manifest ; exists ; 2013 ; ELT Journal Volume 67 ; 67 ; >
 
     }
 
@@ -4797,7 +4797,7 @@
     au < released ; crawling ; 2010 ; Environmental History Volume 15 ; 15 ; >
     au < released ; crawling ; 2011 ; Environmental History Volume 16 ; 16 ; >
     au < released ; crawling ; 2012 ; Environmental History Volume 17 ; 17 ; >
-    au < expected ; exists ; 2013 ; Environmental History Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2013 ; Environmental History Volume 18 ; 18 ; >
 
   }
 
@@ -5067,7 +5067,7 @@
     au < released ; crawling ; 2010 ; Europace Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; Europace Volume 13 ; 13 ; >
     au < notReady ; exists ; 2012 ; Europace Volume 14 ; 14 ; >
-    au < expected ; exists ; 2013 ; Europace Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2013 ; Europace Volume 15 ; 15 ; >
 
     }
 
@@ -5223,7 +5223,7 @@
     au < released ; crawling ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 ; >
     au < released ; crawling ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 41 ; 41 ; >
     au < released ; crawling ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 ; >
-    au < expected ; exists ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 43 ; 43 ; >
 
   }
 
@@ -5257,7 +5257,7 @@
     au < down ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
     au < released ; crawling ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
     au < released ; crawling ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 ; >
-    au < expected ; exists ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 ; >
 
     }
 
@@ -5334,7 +5334,7 @@
     au < released ; crawling ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 ; >
     au < released ; crawling ; 2012 ; European Journal of Heart Failure Volume 14 ; 14 ; >
-    au < expected ; exists ; 2013 ; European Journal of Heart Failure Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2013 ; European Journal of Heart Failure Volume 15 ; 15 ; >
 
     }
 
@@ -6880,7 +6880,7 @@
     au < released ; crawling ; 2010 ; Human Molecular Genetics Volume 19 ; 19 ; >
     au < released ; crawling ; 2011 ; Human Molecular Genetics Volume 20 ; 20 ; >
     au < testing ; exists ; 2012 ; Human Molecular Genetics Volume 21 ; 21 ; >
-    au < expected ; exists ; 2013 ; Human Molecular Genetics Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2013 ; Human Molecular Genetics Volume 22 ; 22 ; >
 
     }
 
@@ -6938,7 +6938,7 @@
     au < released ; crawling ; 2010 ; Human Reproduction Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
     au < testing ; exists ; 2012 ; Human Reproduction Volume 27 ; 27 ; >
-    au < expected ; exists ; 2013 ; Human Reproduction Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2013 ; Human Reproduction Volume 28 ; 28 ; >
 
     }
 
@@ -7128,7 +7128,7 @@
     au < released ; crawling ; 2010 ; ICES Journal of Marine Science Volume 67 ; 67 ; >
     au < released ; crawling ; 2011 ; ICES Journal of Marine Science Volume 68 ; 68 ; >
     au < released ; crawling ; 2012 ; ICES Journal of Marine Science Volume 69 ; 69 ; >
-    au < expected ; exists ; 2013 ; ICES Journal of Marine Science Volume 70 ; 70 ; >
+    au < manifest ; exists ; 2013 ; ICES Journal of Marine Science Volume 70 ; 70 ; >
 
     }
 
@@ -7439,7 +7439,7 @@
     au < released ; crawling ; 2010 ; IMA Journal of Management Mathematics Volume 21 ; 21 ; >
     au < released ; crawling ; 2011 ; IMA Journal of Management Mathematics Volume 22 ; 22 ; >
     au < released ; crawling ; 2012 ; IMA Journal of Management Mathematics Volume 23 ; 23 ; >
-    au < expected ; exists ; 2013 ; IMA Journal of Management Mathematics Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2013 ; IMA Journal of Management Mathematics Volume 24 ; 24 ; >
 
     }
 
@@ -7768,8 +7768,8 @@
     au < released ; crawling ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 13 ; 13 ; >
     au < released ; crawling ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 14 ; 14 ; >
-	au < released ; crawling ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 15 ; 15 ; >
-	au < expected ; exists ; 2013 ; Interactive Cardiovascular and Thoracic Surgery Volume 16 ; 16 ; >
+    au < released ; crawling ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2013 ; Interactive Cardiovascular and Thoracic Surgery Volume 16 ; 16 ; >
    
   }
 
@@ -8006,7 +8006,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
       au < expected ; exists ; 2011 ; International Immunology Meeting Abstracts Volume 23 ; 23 ; >
 
     }
@@ -8870,7 +8870,7 @@
     au < released ; crawling ; 2010 ; Journal of African Economies Volume 19 ; 19 ; >
     au < released ; crawling ; 2011 ; Journal of African Economies Volume 20 ; 20 ; >
     au < crawling ; exists ; 2012 ; Journal of African Economies Volume 21 ; 21 ; >
-    au < expected ; exists ; 2013 ; Journal of African Economies Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2013 ; Journal of African Economies Volume 22 ; 22 ; >
 
     }
 
@@ -9252,7 +9252,7 @@
     au < released ; crawling ; 2010 ; Journal of Antimicrobial Chemotherapy Volume 65 ; 65 ; >
     au < released ; crawling ; 2011 ; Journal of Antimicrobial Chemotherapy Volume 66 ; 66 ; >
     au < released ; crawling ; 2012 ; Journal of Antimicrobial Chemotherapy Volume 67 ; 67 ; >
-    au < expected ; exists ; 2013 ; Journal of Antimicrobial Chemotherapy Volume 68 ; 68 ; >
+    au < manifest ; exists ; 2013 ; Journal of Antimicrobial Chemotherapy Volume 68 ; 68 ; >
 
     }
 
@@ -9504,7 +9504,7 @@
     au < released ; crawling ; 2010 ; Journal of Chromatographic Science Volume 48 ; 48 ; >
     au < released ; crawling ; 2011 ; Journal of Chromatographic Science Volume 49 ; 49 ; >
     au < released ; crawling ; 2012 ; Journal of Chromatographic Science Volume 50 ; 50 ; >
-    au < expected ; exists ; 2013 ; Journal of Chromatographic Science Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2013 ; Journal of Chromatographic Science Volume 51 ; 51 ; >
 
   }
 
@@ -9717,7 +9717,7 @@
     au < released ; crawling ; 2010 ; Journal of Deaf Studies and Deaf Education Volume 15 ; 15 ; >
     au < released ; crawling ; 2011 ; Journal of Deaf Studies and Deaf Education Volume 16 ; 16 ; >
     au < released ; crawling ; 2012 ; Journal of Deaf Studies and Deaf Education Volume 17 ; 17 ; >
-    au < expected ; exists ; 2013 ; Journal of Deaf Studies and Deaf Education Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2013 ; Journal of Deaf Studies and Deaf Education Volume 18 ; 18 ; >
 
     }
 
@@ -9814,7 +9814,7 @@
     au < released ; crawling ; 2010 ; Journal of Economic Geography Volume 10 ; 10 ; >
     au < released ; crawling ; 2011 ; Journal of Economic Geography Volume 11 ; 11 ; >
     au < released ; crawling ; 2012 ; Journal of Economic Geography Volume 12 ; 12 ; >
-    au < expected ; exists ; 2013 ; Journal of Economic Geography Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2013 ; Journal of Economic Geography Volume 13 ; 13 ; >
 
     }
 
@@ -10113,7 +10113,7 @@
     au < released ; crawling ; 2010 ; Journal of Financial Econometrics Volume 8 ; 8 ; >
     au < released ; crawling ; 2011 ; Journal of Financial Econometrics Volume 9 ; 9 ; >
     au < released ; crawling ; 2012 ; Journal of Financial Econometrics Volume 10 ; 10 ; >
-    au < expected ; exists ; 2013 ; Journal of Financial Econometrics Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2013 ; Journal of Financial Econometrics Volume 11 ; 11 ; >
 
     }
 
@@ -10533,7 +10533,7 @@
     au < released ; crawling ; 2010 ; Journal of the History of Medicine and Allied Sciences Volume 65 ; 65 ; >
     au < released ; crawling ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 ; 66 ; >
     au < crawling ; exists ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 ; 67 ; >
-    au < expected ; exists ; 2013 ; Journal of the History of Medicine and Allied Sciences Volume 68 ; 68 ; >
+    au < manifest ; exists ; 2013 ; Journal of the History of Medicine and Allied Sciences Volume 68 ; 68 ; >
 
     }
 
@@ -10792,7 +10792,7 @@
     au < released ; crawling ; 2011 ; Journal of Infectious Diseases Volume 204 ; 204 ; >
     au < crawling ; exists ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 ; >
     au < crawling ; exists ; 2012 ; Journal of Infectious Diseases Volume 206 ; 206 ; >
-    au < expected ; exists ; 2013 ; Journal of Infectious Diseases Volume 207 ; 207 ; >
+    au < manifest ; exists ; 2013 ; Journal of Infectious Diseases Volume 207 ; 207 ; >
 
     }
 
@@ -11977,7 +11977,7 @@
     au < released ; crawling ; 2010 ; Journal of Public Administration Research and Theory Volume 20 ; 20 ; >
     au < released ; crawling ; 2011 ; Journal of Public Administration Research and Theory Volume 21 ; 21 ; >
     au < crawling ; exists ; 2012 ; Journal of Public Administration Research and Theory Volume 22 ; 22 ; >
-    au < expected ; exists ; 2013 ; Journal of Public Administration Research and Theory Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2013 ; Journal of Public Administration Research and Theory Volume 23 ; 23 ; >
 
     }
 
@@ -13479,7 +13479,7 @@
     au < released ; crawling ; 2010 ; MHR: Basic science of reproductive medicine Volume 16 ; 16 ; >
     au < released ; crawling ; 2011 ; MHR: Basic science of reproductive medicine Volume 17 ; 17 ; >
     au < crawling ; exists ; 2012 ; MHR: Basic science of reproductive medicine Volume 18 ; 18 ; >
-    au < expected ; exists ; 2013 ; MHR: Basic science of reproductive medicine Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2013 ; MHR: Basic science of reproductive medicine Volume 19 ; 19 ; >
 
     }
 
@@ -13600,7 +13600,7 @@
     au < released ; crawling ; 2010 ; Molecular Biology and Evolution Volume 27 ; 27 ; >
     au < released ; crawling ; 2011 ; Molecular Biology and Evolution Volume 28 ; 28 ; >
     au < crawling ; exists ; 2012 ; Molecular Biology and Evolution Volume 29 ; 29 ; >
-    au < expected ; exists ; 2013 ; Molecular Biology and Evolution Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2013 ; Molecular Biology and Evolution Volume 30 ; 30 ; >
 
     }
 
@@ -13951,7 +13951,7 @@
     au < released ; crawling ; 2010 ; Mutagenesis Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; Mutagenesis Volume 26 ; 26 ; >
     au < crawling ; exists ; 2012 ; Mutagenesis Volume 27 ; 27 ; >
-    au < expected ; exists ; 2013 ; Mutagenesis Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2013 ; Mutagenesis Volume 28 ; 28 ; >
 
     }
 
@@ -14106,7 +14106,7 @@
     au < released ; crawling ; 2010 ; Nicotine and Tobacco Research Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; Nicotine and Tobacco Research Volume 13 ; 13 ; >
     au < released ; crawling ; 2012 ; Nicotine and Tobacco Research Volume 14 ; 14 ; >
-    au < expected ; exists ; 2013 ; Nicotine and Tobacco Research Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2013 ; Nicotine and Tobacco Research Volume 15 ; 15 ; >
 
 
     }
@@ -14476,7 +14476,7 @@
     au < released ; crawling ; 2010 ; Nucleic Acids Research Volume 38 ; 38 ; >
     au < released ; crawling ; 2011 ; Nucleic Acids Research Volume 39 ; 39 ; >
     au < released ; crawling ; 2012 ; Nucleic Acids Research Volume 40 ; 40 ; >
-    au < expected ; exists ; 2013 ; Nucleic Acids Research Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2013 ; Nucleic Acids Research Volume 41 ; 41 ; >
 
     }
 
@@ -14941,7 +14941,7 @@
     au < released ; crawling ; 2010 ; Oxford Economic Papers Volume 62 ; 62 ; >
     au < released ; crawling ; 2011 ; Oxford Economic Papers Volume 63 ; 63 ; >
     au < crawling ; exists ; 2012 ; Oxford Economic Papers Volume 64 ; 64 ; >
-    au < expected ; exists ; 2013 ; Oxford Economic Papers Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2013 ; Oxford Economic Papers Volume 65 ; 65 ; >
 
     }
 
@@ -15177,7 +15177,7 @@
     au < released ; crawling ; 2010 ; Parliamentary Affairs Volume 63 ; 63 ; >
     au < released ; crawling ; 2011 ; Parliamentary Affairs Volume 64 ; 64 ; >
     au < crawling ; exists ; 2012 ; Parliamentary Affairs Volume 65 ; 65 ; >
-    au < expected ; exists ; 2013 ; Parliamentary Affairs Volume 66 ; 66 ; >
+    au < manifest ; exists ; 2013 ; Parliamentary Affairs Volume 66 ; 66 ; >
 
     }
 
@@ -15971,7 +15971,7 @@
     au < released ; crawling ; 2010 ; Protein Engineering, Design & Selection : PEDS Volume 23 ; 23 ; >
     au < released ; crawling ; 2011 ; Protein Engineering, Design & Selection : PEDS Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; Protein Engineering, Design & Selection : PEDS Volume 25 ; 25 ; >
-    au < expected ; exists ; 2013 ; Protein Engineering, Design & Selection : PEDS Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2013 ; Protein Engineering, Design & Selection : PEDS Volume 26 ; 26 ; >
 
     }
 
@@ -16184,7 +16184,7 @@
     au < released ; crawling ; 2010 ; Publius: The Journal of Federalism Volume 40 ; 40 ; >
     au < released ; crawling ; 2011 ; Publius: The Journal of Federalism Volume 41 ; 41 ; >
     au < crawling ; exists ; 2012 ; Publius: The Journal of Federalism Volume 42 ; 42 ; >
-    au < expected ; exists ; 2013 ; Publius: The Journal of Federalism Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2013 ; Publius: The Journal of Federalism Volume 43 ; 43 ; >
 
     }
 
@@ -17225,7 +17225,7 @@
     au < released ; crawling ; 2010 ; Review of Finance Volume 14 ; 14 ; >
     au < released ; crawling ; 2011 ; Review of Finance Volume 15 ; 15 ; >
     au < crawling ; exists ; 2012 ; Review of Finance Volume 16 ; 16 ; >
-    au < expected ; exists ; 2013 ; Review of Finance Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2013 ; Review of Finance Volume 17 ; 17 ; >
 
     }
 
@@ -17280,7 +17280,7 @@
     au < released ; crawling ; 2010 ; The Review of Financial Studies Volume 23 ; 23 ; >
     au < released ; crawling ; 2011 ; The Review of Financial Studies Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; The Review of Financial Studies Volume 25 ; 25 ; >
-    au < expected ; exists ; 2013 ; The Review of Financial Studies Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2013 ; The Review of Financial Studies Volume 26 ; 26 ; >
 
     }
 
@@ -17368,7 +17368,7 @@
     au < released ; crawling ; 2010 ; Rheumatology Volume 49 ; 49 ; >
     au < released ; crawling ; 2011 ; Rheumatology Volume 50 ; 50 ; >
     au < crawling ; exists ; 2012 ; Rheumatology Volume 51 ; 51 ; >
-    au < expected ; exists ; 2013 ; Rheumatology Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2013 ; Rheumatology Volume 52 ; 52 ; >
 
     }
 
@@ -17436,7 +17436,7 @@
     au < released ; crawling ; 2010 ; Schizophrenia Bulletin Volume 36 ; 36 ; >
     au < released ; crawling ; 2011 ; Schizophrenia Bulletin Volume 37 ; 37 ; >
     au < crawling ; exists ; 2012 ; Schizophrenia Bulletin Volume 38 ; 38 ; >
-    au < expected ; exists ; 2013 ; Schizophrenia Bulletin Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2013 ; Schizophrenia Bulletin Volume 39 ; 39 ; >
 
     }
 
