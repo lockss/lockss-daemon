@@ -8,7 +8,9 @@
   
     rights = openaccess
     plugin = needs.plugin
-  
+    param[base_url] = http://www.pensoft.net/
+    implicit < status ; status2 ; year ; name ;  param[num_issue_range] >
+
   {
 
     title <
@@ -18,11 +20,15 @@
       issnl = 1313-2644
     >
     
-    plugin = needs.plugin
-    param[base_url] = http://www.pensoft.net/journals/biorisk/
-    implicit < status ; status2 ; year ; name ; param[year] >
+    param[journal_name] = biorisk
     
-    au < exists ; exists ; 2011 ; BioRisk 2011 ; 2011 >
+    au < exists ; exists ; 2008 ; BioRisk Issue 1 ; 1 >
+    au < exists ; exists ; 2009 ; BioRisk Issue 2 ; 2 >
+    au < exists ; exists ; 2009 ; BioRisk Issue 3 ; 3 >
+    au < exists ; exists ; 2010 ; BioRisk Issue 4 ; 4 >
+    au < exists ; exists ; 2010 ; BioRisk Issue 5 ; 5 >
+    au < exists ; exists ; 2011 ; BioRisk Issue 6 ; 6 >
+    au < exists ; exists ; 2012 ; BioRisk Issue 7 ; 7 >
   
   }
   
@@ -35,12 +41,12 @@
       issnl = 1993-0771
     >
     
-    plugin = needs.plugin
-    param[base_url] = http://www.pensoft.net/journals/compcytogen/
-    implicit < status ; status2 ; year ; name ; param[year] >
+    param[journal_name] = compcytogen
     
-    au < exists ; exists ; 2011 ; Comparative Cytogenetics 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Comparative Cytogenetics 2012 ; 2012 >
+    au < exists ; exists ; 2009 ; Comparative Cytogenetics Volume 3 ; 3 >
+    au < exists ; exists ; 2010 ; Comparative Cytogenetics Volume 4 ; 4 >
+    au < exists ; exists ; 2011 ; Comparative Cytogenetics Volume 5 ; 5 >
+    au < exists ; exists ; 2012 ; Comparative Cytogenetics Volume 6 ; 6 >
   
   }
   
@@ -53,12 +59,13 @@
       issnl = 1875-2535
     >
     
-    plugin = needs.plugin
-    param[base_url] = http://www.pensoft.net/journals/ijm/
-    implicit < status ; status2 ; year ; name ; param[year] >
+    param[journal_name] = ijm
     
-    au < exists ; exists ; 2011 ; International Journal of Myriapodology 2011 ; 2011 >
-  
+    au < exists ; exists ; 2011 ; International Journal of Myriapodology Issue 4 ; 4 >
+    au < exists ; exists ; 2011 ; International Journal of Myriapodology Issue 5 ; 5 >
+    au < exists ; exists ; 2011 ; International Journal of Myriapodology Issue 6 ; 6 >
+    au < exists ; exists ; 2012 ; International Journal of Myriapodology Issue 7 ; 7 >
+
   }
   
   {
@@ -70,12 +77,10 @@
       issnl = 1070-9428
     >
     
-    plugin = needs.plugin
-    param[base_url] = http://www.pensoft.net/journals/jhr/
-    implicit < status ; status2 ; year ; name ; param[year] >
+    param[journal_name] = jhr
     
-    au < exists ; exists ; 2011 ; Journal of Hymenoptera Research 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Journal of Hymenoptera Research 2012 ; 2012 >
+    au < exists ; exists ; 2011 ; Journal of Hymenoptera Research Issues 20-23 ; 20-23 >
+    au < exists ; exists ; 2012 ; Journal of Hymenoptera Research Issues 24-29 ; 24-29 >
   
   }
   
@@ -88,12 +93,13 @@
       issnl = 1314-4057
     >
     
-    plugin = needs.plugin
-    param[base_url] = http://www.pensoft.net/journals/mycokeys/
-    implicit < status ; status2 ; year ; name ; param[year] >
+    param[base_url] = mycokeys
     
-    au < exists ; exists ; 2011 ; MycoKeys 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; MycoKeys 2012 ; 2012 >
+    au < exists ; exists ; 2011 ; MycoKeys Issue 1 ; 1 >
+    au < exists ; exists ; 2012 ; MycoKeys Issue 2 ; 2 >
+    au < exists ; exists ; 2012 ; MycoKeys Issue 3 ; 3 >
+    au < exists ; exists ; 2012 ; MycoKeys Issue 4 ; 4 >
+    au < exists ; exists ; 2012 ; MycoKeys Issue 5 ; 5 >
   
   }
   
@@ -104,12 +110,11 @@
       eissn = 1314-3301
     >
     
-    plugin = needs.plugin
-    param[base_url] = http://www.pensoft.net/journals/natureconservation/
-    implicit < status ; status2 ; year ; name ; param[year] >
+    param[journal_name] = natureconservation
     
-    au < exists ; exists ; 2011 ;  Nature Conservation 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; Nature Conservation 2012 ; 2012 >
+    au < exists ; exists ; 2012 ; Nature Conservation Issue 1 ; 1 >
+    au < exists ; exists ; 2012 ; Nature Conservation Issue 2 ; 2 >
+    au < exists ; exists ; 2012 ; Nature Conservation Issue 3 ; 3 >
   
   }
   
@@ -122,12 +127,10 @@
       issnl = 1619-0033
     >
     
-    plugin = needs.plugin
-    param[base_url] = http://www.pensoft.net/journals/neobiota/
-    implicit < status ; status2 ; year ; name ; param[year] >
+    param[journal_name] = neobiota
     
-    au < exists ; exists ; 2011 ; NeoBiota 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; NeoBiota 2012 ; 2012 >
+    au < exists ; exists ; 2011 ; NeoBiota Issues 9-11 ; 9-11 >
+    au < exists ; exists ; 2012 ; NeoBiota Issues 12-15 ; 12-15 >
   
   }
   
@@ -140,12 +143,11 @@
       issnl = 1314-2011
     >
     
-    plugin = needs.plugin
-    param[base_url] = http://www.pensoft.net/journals/phytokeys/
-    implicit < status ; status2 ; year ; name ; param[year] >
+    param[journal_name] = phytokeys
     
-    au < exists ; exists ; 2011 ; PhytoKeys 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; PhytoKeys 2012 ; 2012 >
+    au < exists ; exists ; 2010 ; PhytoKeys Issue 1 ; 1 >
+    au < exists ; exists ; 2011 ; PhytoKeys Issues 2-7 ; 2-7 >
+    au < exists ; exists ; 2012 ; PhytoKeys Issues 8-19 ; 8-19 >
   
   }
   
@@ -158,12 +160,10 @@
       issnl = 1768-1448
     >
     
-    plugin = needs.plugin
-    param[base_url] = http://www.pensoft.net/journals/subtbiol/
-    implicit < status ; status2 ; year ; name ; param[year] >
+    param[journal_name] = subtbiol
     
-    au < exists ; exists ; 2011 ; Subterranean Biology 2011 ; 2011 >
-    au < expected ; exists ; 2012 ; Subterranean Biology 2012 ; 2012 >
+    au < exists ; exists ; 2011 ; Subterranean Biology Issue 8 ; 8 >
+    au < exists ; exists ; 2011 ; Subterranean Biology Issue 9 ; 9 >
   
   }
   
@@ -176,12 +176,13 @@
       issnl = 1313-2970
     >
     
-    plugin = needs.plugin
-    param[base_url] = http://www.pensoft.net/journals/zookeys/
-    implicit < status ; status2 ; year ; name ; param[year] >
+    param[journal_name] = zookeys
     
-    au < exists ; exists ; 2011 ; ZooKeys 2011 ; 2011 >
-    au < exists ; exists ; 2012 ; ZooKeys 2012 ; 2012 >
+    au < exists ; exists ; 2008 ; ZooKeys Issues 1-4 ; 1-4 >
+    au < exists ; exists ; 2009 ; ZooKeys Issues 5-31 ; 5-31 >
+    au < exists ; exists ; 2010 ; ZooKeys Issues 32-73 ; 32-73 >
+    au < exists ; exists ; 2011 ; ZooKeys Issues 74-160 ; 74-160 >
+    au < exists ; exists ; 2012 ; ZooKeys Issues 161-252 ; 161-252 >
   
   }
   
