@@ -590,7 +590,8 @@
     >
 
     comment[0] = forthcoming in 2013 as of 9-6-12
-    
+    param[journal_issn] = 2166-7292
+
     au < expected ; exists ; 2013 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 1 ; 1 > 
 
   }
@@ -1945,6 +1946,7 @@
     >
 
     comment[0] = forthcoming in 2013 as of 9-6-2012
+    param[journal_issn] = 2166-7276
 
     au < expected ; exists ; 2013 ; International Journal of Pharmacology and Pharmaceutical Technology (IJPPT Volume 1 ; 1 > 
 
@@ -2239,6 +2241,7 @@
     >
 
     comment[0] = forthcoming in 2013 as of 9-6-2012
+    param[journal_issn] = 2166-7225
 
     au < expected ; exists ; 2013 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 1 ; 1 > 
 
