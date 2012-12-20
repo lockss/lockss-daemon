@@ -298,7 +298,25 @@
       >
 
       param[journal_issn] = 1472-6904
+      
+    {
+      
+      comment[0] = This journal stopped publishing after Vol 12, in 2012. The journal merged with another and the journal_code changed.
       nondefparam[journal_code] = bmcclinpharmacol
+
+      au < down ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 ; 8 >
+      au < down ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
+      au < down ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
+      au < down ; crawling ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
+      au < down ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
+      
+    }
+
+    {
+      
+      nondefparam[journal_code] = bmcpharmacoltoxicol
+      comment[0] = This journal stopped publishing after Vol 12 in 2012. 
+      comment[1] = This journal merged with another and is available through this journal_code and issn.
 
       au < manifest ; exists ; 2001 ; BMC Clinical Pharmacology Volume 1 ; 1 >
       au < manifest ; exists ; 2002 ; BMC Clinical Pharmacology Volume 2 ; 2 >
@@ -307,11 +325,13 @@
       au < manifest ; exists ; 2005 ; BMC Clinical Pharmacology Volume 5 ; 5 >
       au < manifest ; exists ; 2006 ; BMC Clinical Pharmacology Volume 6 ; 6 >
       au < manifest ; exists ; 2007 ; BMC Clinical Pharmacology Volume 7 ; 7 >
-      au < crawling ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 ; 8 >
-      au < crawling ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
-      au < crawling ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
-      au < released ; crawling ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
-      au < crawling ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
+      au < manifest ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 ; 8 >
+      au < manifest ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
+      au < manifest ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
+      au < manifest ; exists ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
+      au < manifest ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
+      
+    }
 
     }
 
@@ -1247,19 +1267,8 @@
 
       param[journal_issn] = 2050-6511
       nondefparam[journal_code] = bmcpharmacoltoxicol
+      comment[0] = This journal and issn start at Volume 13 in 2012, other volumes use another issn
 
-      au < manifest ; exists ; 2001 ; BMC Pharmacology and Toxicology Volume 1 ; 1 >
-      au < manifest ; exists ; 2002 ; BMC Pharmacology and Toxicology Volume 2 ; 2 >
-      au < manifest ; exists ; 2003 ; BMC Pharmacology and Toxicology Volume 3 ; 3 >
-      au < manifest ; exists ; 2004 ; BMC Pharmacology and Toxicology Volume 4 ; 4 >
-      au < manifest ; exists ; 2005 ; BMC Pharmacology and Toxicology Volume 5 ; 5 >
-      au < manifest ; exists ; 2006 ; BMC Pharmacology and Toxicology Volume 6 ; 6 >
-      au < manifest ; exists ; 2007 ; BMC Pharmacology and Toxicology Volume 7 ; 7 >
-      au < crawling ; exists ; 2008 ; BMC Pharmacology and Toxicology Volume 8 ; 8 >
-      au < crawling ; exists ; 2009 ; BMC Pharmacology and Toxicology Volume 9 ; 9 >
-      au < crawling ; exists ; 2010 ; BMC Pharmacology and Toxicology Volume 10 ; 10 >
-      au < testing ; exists ; 2011 ; BMC Pharmacology and Toxicology Volume 11 ; 11 >
-      au < crawling ; exists ; 2012 ; BMC Pharmacology and Toxicology Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Pharmacology and Toxicology Volume 13 ; 13 >
 
     }
