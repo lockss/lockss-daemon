@@ -77,6 +77,7 @@ comment[lo] = we're not preserving the last ~4 volumes of the run due to a movin
     au < exists ; 2010 ; Limnology and Oceanography Volume 55 ; 55 >
     au < exists ; 2011 ; Limnology and Oceanography Volume 56 ; 56 >
     au < exists ; 2012 ; Limnology and Oceanography Volume 57 ; 57 >
+    au < expected ; 2013 ; Limnology and Oceanography Volume 58 ; 58 >
 
   }
   
@@ -92,17 +93,18 @@ comment[lo] = we're not preserving the last ~4 volumes of the run due to a movin
     
 comment[methods] = we're not preserving the last ~4 volumes of the run due to a moving paywall
     
-    au < released ; Limnology and Oceanography: Methods Volume 1 ; 1 ; 2003 >   
-    au < released ; Limnology and Oceanography: Methods Volume 2 ; 2 ; 2004 >   
-    au < released ; Limnology and Oceanography: Methods Volume 3 ; 3 ; 2005 >   
-    au < released ; Limnology and Oceanography: Methods Volume 4 ; 4 ; 2006 >   
-    au < released ; Limnology and Oceanography: Methods Volume 5 ; 5 ; 2007 >   
-    au < released ; Limnology and Oceanography: Methods Volume 6 ; 6 ; 2008 >   
-    au < exists ; Limnology and Oceanography: Methods Volume 7 ; 7 ; 2009 >   
-    au < exists ; Limnology and Oceanography: Methods Volume 8 ; 8 ; 2010 >   
+    au < released ; Limnology and Oceanography: Methods Volume 1 ; 1 ; 2003 >
+    au < released ; Limnology and Oceanography: Methods Volume 2 ; 2 ; 2004 >
+    au < released ; Limnology and Oceanography: Methods Volume 3 ; 3 ; 2005 >
+    au < released ; Limnology and Oceanography: Methods Volume 4 ; 4 ; 2006 >
+    au < released ; Limnology and Oceanography: Methods Volume 5 ; 5 ; 2007 >
+    au < released ; Limnology and Oceanography: Methods Volume 6 ; 6 ; 2008 >
+    au < exists ; Limnology and Oceanography: Methods Volume 7 ; 7 ; 2009 >
+    au < exists ; Limnology and Oceanography: Methods Volume 8 ; 8 ; 2010 >
     au < exists ; Limnology and Oceanography: Methods Volume 9 ; 9 ; 2011 >
-    au < exists ; Limnology and Oceanography: Methods Volume 10 ; 10 ; 2012 >   
-        
+    au < exists ; Limnology and Oceanography: Methods Volume 10 ; 10 ; 2012 >
+    au < expected ; Limnology and Oceanography: Methods Volume 11 ; 11 ; 2013 >
+       
   }
   
 }
