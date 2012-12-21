@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.2 2012-12-20 18:38:49 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.3 2012-12-21 00:25:53 fergaloy-sf Exp $
  */
 
 /*
@@ -291,158 +291,79 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "," + ISBN_TYPE_COLUMN
       + ") values (?,?,?)";
 
-  // Query to find a publication by its ISSNs, ISBNs or names.
-  private static final String FIND_PUBLICATION_BY_ISSNS_OR_ISBNS_OR_NAME_QUERY =
-      "select"
-      + " p." + PUBLICATION_SEQ_COLUMN
-      + " from " + PUBLICATION_TABLE + " p,"
-      + ISSN_TABLE + " i,"
-      + ISBN_TABLE + " ib,"
-      + MD_ITEM_TABLE + " m"
-      + " where p." + PUBLISHER_SEQ_COLUMN + " = ?"
-      + " and m." + AU_MD_SEQ_COLUMN + " is null"
-      + " and ((p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
-      + " and m." + PRIMARY_NAME_COLUMN + " = ?)"
-      + " or (p." + MD_ITEM_SEQ_COLUMN + " = i." + MD_ITEM_SEQ_COLUMN
-      + " and (i." + ISSN_COLUMN + " = ?"
-      + " or i." + ISSN_COLUMN + " = ?))"
-      + " or (p." + MD_ITEM_SEQ_COLUMN + " = ib." + MD_ITEM_SEQ_COLUMN
-      + " and (ib." + ISBN_COLUMN + " = ?"
-      + " or ib." + ISBN_COLUMN + " = ?))"
-      + ")"
-      + " union"
-      + " select"
-      + " p." + PUBLICATION_SEQ_COLUMN
-      + " from " + PUBLICATION_TABLE + " p,"
-      + ISSN_TABLE + " i,"
-      + ISBN_TABLE + " ib,"
-      + MD_ITEM_TABLE + " m,"
-      + MD_ITEM_NAME_TABLE + " n"
-      + " where p." + PUBLISHER_SEQ_COLUMN + " = ?"
-      + " and m." + AU_MD_SEQ_COLUMN + " is null"
-      + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
-      + " and ((p." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
-      + " and n." + NAME_COLUMN + " = ?)"
-      + " or (p." + MD_ITEM_SEQ_COLUMN + " = i." + MD_ITEM_SEQ_COLUMN
-      + " and (i." + ISSN_COLUMN + " = ?"
-      + " or i." + ISSN_COLUMN + " = ?))"
-      + " or (p." + MD_ITEM_SEQ_COLUMN + " = ib." + MD_ITEM_SEQ_COLUMN
-      + " and (ib." + ISBN_COLUMN + " = ?"
-      + " or ib." + ISBN_COLUMN + " = ?))"
-      + ")";
-
-  // Query to find a publication by its ISSNs or names.
-  private static final String FIND_PUBLICATION_BY_ISSNS_OR_NAME_QUERY = "select"
-      + " p." + PUBLICATION_SEQ_COLUMN
-      + " from " + PUBLICATION_TABLE + " p,"
-      + ISSN_TABLE + " i,"
-      + MD_ITEM_TABLE + " m"
-      + " where p." + PUBLISHER_SEQ_COLUMN + " = ?"
-      + " and m." + AU_MD_SEQ_COLUMN + " is null"
-      + " and ((p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
-      + " and m." + PRIMARY_NAME_COLUMN + " = ?)"
-      + " or (p." + MD_ITEM_SEQ_COLUMN + " = i." + MD_ITEM_SEQ_COLUMN
-      + " and (i." + ISSN_COLUMN + " = ?"
-      + " or i." + ISSN_COLUMN + " = ?))"
-      + ")"
-      + " union"
-      + " select"
-      + " p." + PUBLICATION_SEQ_COLUMN
-      + " from " + PUBLICATION_TABLE + " p,"
-      + ISSN_TABLE + " i,"
-      + MD_ITEM_TABLE + " m,"
-      + MD_ITEM_NAME_TABLE + " n"
-      + " where p." + PUBLISHER_SEQ_COLUMN + " = ?"
-      + " and m." + AU_MD_SEQ_COLUMN + " is null"
-      + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
-      + " and ((p." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
-      + " and n." + NAME_COLUMN + " = ?)"
-      + " or (p." + MD_ITEM_SEQ_COLUMN + " = i." + MD_ITEM_SEQ_COLUMN
-      + " and (i." + ISSN_COLUMN + " = ?"
-      + " or i." + ISSN_COLUMN + " = ?))"
-      + ")";
-
-  // Query to find a publication by its ISBNs or names.
-  private static final String FIND_PUBLICATION_BY_ISBNS_OR_NAME_QUERY = "select"
-      + " p." + PUBLICATION_SEQ_COLUMN
-      + " from " + PUBLICATION_TABLE + " p,"
-      + ISBN_TABLE + " i,"
-      + MD_ITEM_TABLE + " m"
-      + " where p." + PUBLISHER_SEQ_COLUMN + " = ?"
-      + " and m." + AU_MD_SEQ_COLUMN + " is null"
-      + " and ((p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
-      + " and m." + PRIMARY_NAME_COLUMN + " = ?)"
-      + " or (p." + MD_ITEM_SEQ_COLUMN + " = i." + MD_ITEM_SEQ_COLUMN
-      + " and (i." + ISBN_COLUMN + " = ?"
-      + " or i." + ISBN_COLUMN + " = ?))"
-      + ")"
-      + " union"
-      + " select"
-      + " p." + PUBLICATION_SEQ_COLUMN
-      + " from " + PUBLICATION_TABLE + " p,"
-      + ISBN_TABLE + " i,"
-      + MD_ITEM_TABLE + " m,"
-      + MD_ITEM_NAME_TABLE + " n"
-      + " where p." + PUBLISHER_SEQ_COLUMN + " = ?"
-      + " and m." + AU_MD_SEQ_COLUMN + " is null"
-      + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
-      + " and ((p." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
-      + " and n." + NAME_COLUMN + " = ?)"
-      + " or (p." + MD_ITEM_SEQ_COLUMN + " = i." + MD_ITEM_SEQ_COLUMN
-      + " and (i." + ISBN_COLUMN + " = ?"
-      + " or i." + ISBN_COLUMN + " = ?))"
-      + ")";
-
   // Query to find a publication by its ISSNs.
   private static final String FIND_PUBLICATION_BY_ISSNS_QUERY = "select"
       + " p." + PUBLICATION_SEQ_COLUMN
       + " from " + PUBLICATION_TABLE + " p,"
       + ISSN_TABLE + " i,"
-      + MD_ITEM_TABLE + " m"
+      + MD_ITEM_TABLE + " m,"
+      + MD_ITEM_TYPE_TABLE + " t"
       + " where p." + PUBLISHER_SEQ_COLUMN + " = ?"
       + " and m." + AU_MD_SEQ_COLUMN + " is null"
       + " and p." + MD_ITEM_SEQ_COLUMN + " = i." + MD_ITEM_SEQ_COLUMN
       + " and (i." + ISSN_COLUMN + " = ?"
-      + " or i." + ISSN_COLUMN + " = ?)";
+      + " or i." + ISSN_COLUMN + " = ?)"
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
+      + " and m." + MD_ITEM_TYPE_SEQ_COLUMN + " = t." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " and t." + TYPE_NAME_COLUMN + " = ?";
 
   // Query to find a publication by its ISBNs.
   private static final String FIND_PUBLICATION_BY_ISBNS_QUERY = "select"
       + " p." + PUBLICATION_SEQ_COLUMN
       + " from " + PUBLICATION_TABLE + " p,"
       + ISBN_TABLE + " i,"
-      + MD_ITEM_TABLE + " m"
+      + MD_ITEM_TABLE + " m,"
+      + MD_ITEM_TYPE_TABLE + " t"
       + " where p." + PUBLISHER_SEQ_COLUMN + " = ?"
       + " and m." + AU_MD_SEQ_COLUMN + " is null"
       + " and p." + MD_ITEM_SEQ_COLUMN + " = i." + MD_ITEM_SEQ_COLUMN
       + " and (i." + ISBN_COLUMN + " = ?"
-      + " or i." + ISBN_COLUMN + " = ?)";
+      + " or i." + ISBN_COLUMN + " = ?)"
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
+      + " and m." + MD_ITEM_TYPE_SEQ_COLUMN + " = t." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " and t." + TYPE_NAME_COLUMN + " = ?";
 
-  // Query to find a publication by its names.
-  private static final String FIND_PUBLICATION_BY_NAME_QUERY = "select"
+  // Query to find a publication by its primary name.
+  private static final String FIND_PUBLICATION_BY_PRIMARY_NAME_QUERY = "select"
       + " p." + PUBLICATION_SEQ_COLUMN
       + " from " + PUBLICATION_TABLE + " p,"
-      + MD_ITEM_TABLE + " m"
+      + MD_ITEM_TABLE + " m,"
+      + MD_ITEM_TYPE_TABLE + " t"
       + " where p." + PUBLISHER_SEQ_COLUMN + " = ?"
       + " and m." + AU_MD_SEQ_COLUMN + " is null"
       + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
       + " and m." + PRIMARY_NAME_COLUMN + " = ?"
-      + " union"
-      + " select"
-      + " p." + PUBLICATION_SEQ_COLUMN
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
+      + " and m." + MD_ITEM_TYPE_SEQ_COLUMN + " = t." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " and t." + TYPE_NAME_COLUMN + " = ?";
+
+  // Query to find a publication by its names.
+  private static final String FIND_PUBLICATION_BY_ALTERNATE_NAME_QUERY =
+      "select p." + PUBLICATION_SEQ_COLUMN
       + " from " + PUBLICATION_TABLE + " p,"
       + MD_ITEM_TABLE + " m,"
-      + MD_ITEM_NAME_TABLE + " n"
+      + MD_ITEM_NAME_TABLE + " n,"
+      + MD_ITEM_TYPE_TABLE + " t"
       + " where p." + PUBLISHER_SEQ_COLUMN + " = ?"
       + " and m." + AU_MD_SEQ_COLUMN + " is null"
       + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
       + " and p." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
-      + " and n." + NAME_COLUMN + " = ?";
+      + " and n." + NAME_COLUMN + " = ?"
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
+      + " and m." + MD_ITEM_TYPE_SEQ_COLUMN + " = t." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " and t." + TYPE_NAME_COLUMN + " = ?";
 
   // Query to find the metadata item of a publication.
   private static final String FIND_PUBLICATION_METADATA_ITEM_QUERY = "select "
       + MD_ITEM_SEQ_COLUMN
       + " from " + PUBLICATION_TABLE
       + " where " + PUBLICATION_SEQ_COLUMN + " = ?";
+
+  // Query to find the primary name of a metadata item.
+  private static final String FIND_MD_ITEM_PRIMARY_NAME_QUERY = "select "
+      + PRIMARY_NAME_COLUMN
+      + " from " + MD_ITEM_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
 
   // Query to find the secondary names of a metadata item.
   private static final String FIND_MD_ITEM_NAME_QUERY = "select "
@@ -1923,6 +1844,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // Check whether it is a book series.
     if (isBookSeries(pIssn, eIssn, pIsbn, eIsbn, volume)) {
       // Yes: Find or create the book series.
+      log.debug3(DEBUG_HEADER + "is book series.");
       publicationSeq =
 	  findOrCreateBookInBookSeries(conn, pIssn, eIssn, pIsbn, eIsbn,
 	                                publisherSeq, name, date, proprietaryId,
@@ -1930,11 +1852,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // No: Check whether it is a book.
     } else if (isBook(pIsbn, eIsbn)) {
       // Yes: Find or create the book.
+      log.debug3(DEBUG_HEADER + "is book.");
       publicationSeq =
 	  findOrCreateBook(conn, pIsbn, eIsbn, publisherSeq, title, null, date,
 	                   proprietaryId);
     } else {
       // No, it is a journal article: Find or create the journal.
+      log.debug3(DEBUG_HEADER + "is journal.");
       publicationSeq =
 	  findOrCreateJournal(conn, pIssn, eIssn, publisherSeq, title, date,
 	                      proprietaryId);
@@ -2022,7 +1946,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     // Find the book series.
     bookSeriesSeq =
-	findPublication(conn, title, publisherSeq, pIssn, eIssn, pIsbn, eIsbn);
+	findPublication(conn, title, publisherSeq, pIssn, eIssn, pIsbn, eIsbn,
+			MD_ITEM_TYPE_BOOK_SERIES);
     log.debug3(DEBUG_HEADER + "bookSeriesSeq = " + bookSeriesSeq);
 
     // Check whether it is a new book series.
@@ -2146,7 +2071,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     // Find the book.
     publicationSeq =
-	findPublication(conn, title, publisherSeq, null, null, pIsbn, eIsbn);
+	findPublication(conn, title, publisherSeq, null, null, pIsbn, eIsbn,
+			MD_ITEM_TYPE_BOOK);
     log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
     // Check whether it is a new book.
@@ -2229,7 +2155,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     // Find the journal.
     publicationSeq =
-	findPublication(conn, title, publisherSeq, pIssn, eIssn, null, null);
+	findPublication(conn, title, publisherSeq, pIssn, eIssn, null, null,
+			MD_ITEM_TYPE_JOURNAL);
     log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
     // Check whether it is a new journal.
@@ -2290,12 +2217,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the print ISBN of the publication.
    * @param eIsbn
    *          A String with the electronic ISBN of the publication.
+   * @param mdItemType
+   *          A String with the type of publication to be identified.
    * @return a Long with the identifier of the publication.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
   private Long findPublication(Connection conn, String title, Long publisherSeq,
-      String pIssn, String eIssn, String pIsbn, String eIsbn)
+      String pIssn, String eIssn, String pIsbn, String eIsbn, String mdItemType)
 	  throws SQLException {
     final String DEBUG_HEADER = "findPublication(): ";
     Long publicationSeq = null;
@@ -2315,53 +2244,24 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (hasIssns && hasIsbns && hasName) {
       publicationSeq =
 	  findPublicationByIssnsOrIsbnsOrName(conn, title, publisherSeq, pIssn,
-					      eIssn, pIsbn, eIsbn);
-
-      if (publicationSeq == null) {
-	publicationSeq =
-	    findPublicationByIssns(conn, publisherSeq, pIssn, eIssn);
-      }
-
-      if (publicationSeq == null) {
-	publicationSeq =
-	    findPublicationByIsbns(conn, publisherSeq, pIsbn, eIsbn);
-      }
-
-      if (publicationSeq == null) {
-	publicationSeq = findPublicationByName(conn, title, publisherSeq);
-      }
+					      eIssn, pIsbn, eIsbn, mdItemType);
     } else if (hasIssns && hasName) {
       publicationSeq =
-	  findPublicationByIssnsOrName(conn, title, publisherSeq, pIsbn, eIsbn);
-
-      if (publicationSeq == null) {
-	publicationSeq =
-	    findPublicationByIssns(conn, publisherSeq, pIssn, eIssn);
-      }
-
-      if (publicationSeq == null) {
-	publicationSeq = findPublicationByName(conn, title, publisherSeq);
-      }
+	  findPublicationByIssnsOrName(conn, title, publisherSeq, pIsbn, eIsbn,
+				       mdItemType);
     } else if (hasIsbns && hasName) {
       publicationSeq =
-	  findPublicationByIsbnsOrName(conn, title, publisherSeq, pIsbn, eIsbn);
-
-      if (publicationSeq == null) {
-	publicationSeq =
-	    findPublicationByIsbns(conn, publisherSeq, pIsbn, eIsbn);
-      }
-
-      if (publicationSeq == null) {
-	publicationSeq = findPublicationByName(conn, title, publisherSeq);
-      }
+	  findPublicationByIsbnsOrName(conn, title, publisherSeq, pIsbn, eIsbn,
+				       mdItemType);
     } else if (hasIssns) {
-	publicationSeq =
-	    findPublicationByIssns(conn, publisherSeq, pIssn, eIssn);
+      publicationSeq =
+	  findPublicationByIssns(conn, publisherSeq, pIssn, eIssn, mdItemType);
     } else if (hasIsbns) {
-	publicationSeq =
-	    findPublicationByIsbns(conn, publisherSeq, pIsbn, eIsbn);
+      publicationSeq =
+	  findPublicationByIsbns(conn, publisherSeq, pIsbn, eIsbn, mdItemType);
     } else if (hasName) {
-	publicationSeq = findPublicationByName(conn, title, publisherSeq);
+      publicationSeq =
+	  findPublicationByName(conn, title, publisherSeq, mdItemType);
     }
 
     return publicationSeq;
@@ -2511,6 +2411,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     try {
       if (pIssn != null) {
+	log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
 	insertIssn.setLong(1, mdItemSeq);
 	insertIssn.setString(2, pIssn);
 	insertIssn.setString(3, P_ISSN_TYPE);
@@ -2523,6 +2424,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       }
 
       if (eIssn != null) {
+	log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
 	insertIssn.setLong(1, mdItemSeq);
 	insertIssn.setString(2, eIssn);
 	insertIssn.setString(3, E_ISSN_TYPE);
@@ -2564,6 +2466,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     try {
       if (pIsbn != null) {
+	log.debug3(DEBUG_HEADER + "pIsbn = " + pIsbn);
 	insertIsbn.setLong(1, mdItemSeq);
 	insertIsbn.setString(2, pIsbn);
 	insertIsbn.setString(3, P_ISBN_TYPE);
@@ -2576,6 +2479,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       }
 
       if (eIsbn != null) {
+	log.debug3(DEBUG_HEADER + "eIsbn = " + eIsbn);
 	insertIsbn.setLong(1, mdItemSeq);
 	insertIsbn.setString(2, eIsbn);
 	insertIsbn.setString(3, E_ISBN_TYPE);
@@ -2610,6 +2514,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     if (mdItemName == null) {
       return;
+    }
+
+    String primaryName = getMdItemPrimaryName(conn, mdItemSeq);
+    log.debug3(DEBUG_HEADER + "primaryName = " + primaryName);
+
+    if (mdItemName.equals(primaryName)) {
+	log.debug3(DEBUG_HEADER + "Primary title name = " + mdItemName
+	    + " already exists.");
+	return;
     }
 
     Map<String, String> titleNames = getMdItemNames(conn, mdItemSeq);
@@ -2741,54 +2654,90 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the print ISBN of the publication.
    * @param eIsbn
    *          A String with the electronic ISBN of the publication.
+   * @param mdItemType
+   *          A String with the type of publication to be identified.
    * @return a Long with the identifier of the publication.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
   private Long findPublicationByIssnsOrIsbnsOrName(Connection conn,
       String title, Long publisherSeq, String pIssn, String eIssn, String pIsbn,
-      String eIsbn) throws SQLException {
-    final String DEBUG_HEADER = "findPublicationByIssnsOrIsbnsOrName(): ";
-    Long publicationSeq = null;
-    ResultSet resultSet = null;
-    log.debug3(DEBUG_HEADER + "SQL = '"
-	+ FIND_PUBLICATION_BY_ISSNS_OR_ISBNS_OR_NAME_QUERY + "'.");
-    PreparedStatement findPublicationByIssnsOrIsbnsOrName =
-	conn.prepareStatement(FIND_PUBLICATION_BY_ISSNS_OR_ISBNS_OR_NAME_QUERY);
+      String eIsbn, String mdItemType) throws SQLException {
+    Long publicationSeq =
+	findPublicationByIssns(conn, publisherSeq, pIssn, eIssn, mdItemType);
 
-    try {
-      findPublicationByIssnsOrIsbnsOrName.setLong(1, publisherSeq);
-      findPublicationByIssnsOrIsbnsOrName.setString(2, title);
-      findPublicationByIssnsOrIsbnsOrName.setString(3, pIssn);
-      findPublicationByIssnsOrIsbnsOrName.setString(4, eIssn);
-      findPublicationByIssnsOrIsbnsOrName.setString(5, pIsbn);
-      findPublicationByIssnsOrIsbnsOrName.setString(6, eIsbn);
-      findPublicationByIssnsOrIsbnsOrName.setLong(7, publisherSeq);
-      findPublicationByIssnsOrIsbnsOrName.setString(8, title);
-      findPublicationByIssnsOrIsbnsOrName.setString(9, pIssn);
-      findPublicationByIssnsOrIsbnsOrName.setString(10, eIssn);
-      findPublicationByIssnsOrIsbnsOrName.setString(11, pIsbn);
-      findPublicationByIssnsOrIsbnsOrName.setString(12, eIsbn);
+    if (publicationSeq == null) {
+      publicationSeq =
+	  findPublicationByIsbnsOrName(conn, title, publisherSeq, pIsbn, eIsbn,
+				       mdItemType);
+    }
 
-      resultSet = findPublicationByIssnsOrIsbnsOrName.executeQuery();
-      if (resultSet.next()) {
-	publicationSeq = resultSet.getLong(PUBLICATION_SEQ_COLUMN);
-	log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-      }
-    } catch (SQLException sqle) {
-      log.error("Cannot find publication", sqle);
-      log.error("publisherSeq = '" + publisherSeq + "'.");
-      log.error("pIsbn = " + pIsbn);
-      log.error("eIsbn = " + eIsbn);
-      log.error("pIssn = " + pIssn);
-      log.error("eIssn = " + eIssn);
-      log.error("title = " + title);
-      log.error("SQL = '" + FIND_PUBLICATION_BY_ISSNS_OR_ISBNS_OR_NAME_QUERY
-                + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findPublicationByIssnsOrIsbnsOrName);
+    return publicationSeq;
+  }
+
+  /**
+   * Provides the identifier of a publication by its publisher and title or
+   * ISSNs.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param title
+   *          A String with the title of the publication.
+   * @param publisherSeq
+   *          A Long with the publisher identifier.
+   * @param pIssn
+   *          A String with the print ISSN of the publication.
+   * @param eIssn
+   *          A String with the electronic ISSN of the publication.
+   * @param mdItemType
+   *          A String with the type of publication to be identified.
+   * @return a Long with the identifier of the publication.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findPublicationByIssnsOrName(Connection conn, String title,
+      Long publisherSeq, String pIssn, String eIssn, String mdItemType)
+	  throws SQLException {
+    Long publicationSeq =
+	findPublicationByIssns(conn, publisherSeq, pIssn, eIssn, mdItemType);
+
+    if (publicationSeq == null) {
+      publicationSeq =
+	  findPublicationByName(conn, title, publisherSeq, mdItemType);
+    }
+
+    return publicationSeq;
+  }
+
+  /**
+   * Provides the identifier of a publication by its publisher and title or
+   * ISBNs.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param title
+   *          A String with the title of the publication.
+   * @param publisherSeq
+   *          A Long with the publisher identifier.
+   * @param pIsbn
+   *          A String with the print ISBN of the publication.
+   * @param eIsbn
+   *          A String with the electronic ISBN of the publication.
+   * @param mdItemType
+   *          A String with the type of publication to be identified.
+   * @return a Long with the identifier of the publication.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findPublicationByIsbnsOrName(Connection conn, String title,
+      Long publisherSeq, String pIsbn, String eIsbn, String mdItemType)
+      throws SQLException {
+    Long publicationSeq =
+	findPublicationByIsbns(conn, publisherSeq, pIsbn, eIsbn, mdItemType);
+
+    if (publicationSeq == null) {
+      publicationSeq =
+	  findPublicationByName(conn, title, publisherSeq, mdItemType);
     }
 
     return publicationSeq;
@@ -2805,12 +2754,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the print ISSN of the publication.
    * @param eIssn
    *          A String with the electronic ISSN of the publication.
+   * @param mdItemType
+   *          A String with the type of publication to be identified.
    * @return a Long with the identifier of the publication.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
   private Long findPublicationByIssns(Connection conn, Long publisherSeq,
-      String pIssn, String eIssn) throws SQLException {
+      String pIssn, String eIssn, String mdItemType) throws SQLException {
     final String DEBUG_HEADER = "findPublicationByIssns(): ";
     Long publicationSeq = null;
     ResultSet resultSet = null;
@@ -2823,6 +2774,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       findPublicationByIssns.setLong(1, publisherSeq);
       findPublicationByIssns.setString(2, pIssn);
       findPublicationByIssns.setString(3, eIssn);
+      findPublicationByIssns.setString(4, mdItemType);
 
       resultSet = findPublicationByIssns.executeQuery();
       if (resultSet.next()) {
@@ -2855,12 +2807,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the print ISBN of the publication.
    * @param eIsbn
    *          A String with the electronic ISBN of the publication.
+   * @param mdItemType
+   *          A String with the type of publication to be identified.
    * @return a Long with the identifier of the publication.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
   private Long findPublicationByIsbns(Connection conn, Long publisherSeq,
-      String pIsbn, String eIsbn) throws SQLException {
+      String pIsbn, String eIsbn, String mdItemType) throws SQLException {
     final String DEBUG_HEADER = "findPublicationByIsbns(): ";
     Long publicationSeq = null;
     ResultSet resultSet = null;
@@ -2873,6 +2827,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       findPublicationByIsbns.setLong(1, publisherSeq);
       findPublicationByIsbns.setString(2, pIsbn);
       findPublicationByIsbns.setString(3, eIsbn);
+      findPublicationByIsbns.setString(4, mdItemType);
 
       resultSet = findPublicationByIsbns.executeQuery();
       if (resultSet.next()) {
@@ -2903,25 +2858,55 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the title of the publication.
    * @param publisherSeq
    *          A Long with the publisher identifier.
+   * @param mdItemType
+   *          A String with the type of publication to be identified.
    * @return a Long with the identifier of the publication.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
   private Long findPublicationByName(Connection conn, String title,
-      Long publisherSeq) throws SQLException {
-    final String DEBUG_HEADER = "findPublicationByName(): ";
+      Long publisherSeq, String mdItemType) throws SQLException {
+    Long publicationSeq =
+	findPublicationByPrimaryName(conn, title, publisherSeq, mdItemType);
+
+    if (publicationSeq == null) {
+      publicationSeq =
+	  findPublicationByAlternateName(conn, title, publisherSeq, mdItemType);
+    }
+
+    return publicationSeq;
+  }
+
+  /**
+   * Provides the identifier of a publication by its primary title and
+   * publisher.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param title
+   *          A String with the title of the publication.
+   * @param publisherSeq
+   *          A Long with the publisher identifier.
+   * @param mdItemType
+   *          A String with the type of publication to be identified.
+   * @return a Long with the identifier of the publication.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findPublicationByPrimaryName(Connection conn, String title,
+      Long publisherSeq, String mdItemType) throws SQLException {
+    final String DEBUG_HEADER = "findPublicationByPrimaryName(): ";
     Long publicationSeq = null;
     ResultSet resultSet = null;
-    log.debug3(DEBUG_HEADER + "SQL = '" + FIND_PUBLICATION_BY_NAME_QUERY
+    log.debug3(DEBUG_HEADER + "SQL = '" + FIND_PUBLICATION_BY_PRIMARY_NAME_QUERY
                + "'.");
     PreparedStatement findPublicationByName =
-	conn.prepareStatement(FIND_PUBLICATION_BY_NAME_QUERY);
+	conn.prepareStatement(FIND_PUBLICATION_BY_PRIMARY_NAME_QUERY);
 
     try {
       findPublicationByName.setLong(1, publisherSeq);
       findPublicationByName.setString(2, title);
-      findPublicationByName.setLong(3, publisherSeq);
-      findPublicationByName.setString(4, title);
+      findPublicationByName.setString(3, mdItemType);
 
       resultSet = findPublicationByName.executeQuery();
       if (resultSet.next()) {
@@ -2932,7 +2917,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.error("Cannot find publication", sqle);
       log.error("publisherSeq = '" + publisherSeq + "'.");
       log.error("title = " + title);
-      log.error("SQL = '" + FIND_PUBLICATION_BY_NAME_QUERY + "'.");
+      log.error("SQL = '" + FIND_PUBLICATION_BY_PRIMARY_NAME_QUERY + "'.");
       throw sqle;
     } finally {
       DbManager.safeCloseResultSet(resultSet);
@@ -2943,8 +2928,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Provides the identifier of a publication by its publisher and title or
-   * ISSNs.
+   * Provides the identifier of a publication by its alternate title and
+   * publisher.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
@@ -2952,36 +2937,28 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the title of the publication.
    * @param publisherSeq
    *          A Long with the publisher identifier.
-   * @param pIssn
-   *          A String with the print ISSN of the publication.
-   * @param eIssn
-   *          A String with the electronic ISSN of the publication.
+   * @param mdItemType
+   *          A String with the type of publication to be identified.
    * @return a Long with the identifier of the publication.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private Long findPublicationByIssnsOrName(Connection conn, String title,
-      Long publisherSeq, String pIssn, String eIssn)
-	  throws SQLException {
-    final String DEBUG_HEADER = "findPublicationByIssnsOrName(): ";
+  private Long findPublicationByAlternateName(Connection conn, String title,
+      Long publisherSeq, String mdItemType) throws SQLException {
+    final String DEBUG_HEADER = "findPublicationByAlternateName(): ";
     Long publicationSeq = null;
     ResultSet resultSet = null;
     log.debug3(DEBUG_HEADER + "SQL = '"
-	+ FIND_PUBLICATION_BY_ISSNS_OR_NAME_QUERY + "'.");
-    PreparedStatement findPublicationByIssnsOrName =
-	conn.prepareStatement(FIND_PUBLICATION_BY_ISSNS_OR_NAME_QUERY);
+	+ FIND_PUBLICATION_BY_ALTERNATE_NAME_QUERY + "'.");
+    PreparedStatement findPublicationByName =
+	conn.prepareStatement(FIND_PUBLICATION_BY_ALTERNATE_NAME_QUERY);
 
     try {
-      findPublicationByIssnsOrName.setLong(1, publisherSeq);
-      findPublicationByIssnsOrName.setString(2, title);
-      findPublicationByIssnsOrName.setString(3, pIssn);
-      findPublicationByIssnsOrName.setString(4, eIssn);
-      findPublicationByIssnsOrName.setLong(5, publisherSeq);
-      findPublicationByIssnsOrName.setString(6, title);
-      findPublicationByIssnsOrName.setString(7, pIssn);
-      findPublicationByIssnsOrName.setString(8, eIssn);
+      findPublicationByName.setLong(1, publisherSeq);
+      findPublicationByName.setString(2, title);
+      findPublicationByName.setString(3, mdItemType);
 
-      resultSet = findPublicationByIssnsOrName.executeQuery();
+      resultSet = findPublicationByName.executeQuery();
       if (resultSet.next()) {
 	publicationSeq = resultSet.getLong(PUBLICATION_SEQ_COLUMN);
 	log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
@@ -2989,73 +2966,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     } catch (SQLException sqle) {
       log.error("Cannot find publication", sqle);
       log.error("publisherSeq = '" + publisherSeq + "'.");
-      log.error("pIssn = " + pIssn);
-      log.error("eIssn = " + eIssn);
       log.error("title = " + title);
-      log.error("SQL = '" + FIND_PUBLICATION_BY_ISSNS_OR_NAME_QUERY + "'.");
+      log.error("SQL = '" + FIND_PUBLICATION_BY_ALTERNATE_NAME_QUERY + "'.");
       throw sqle;
     } finally {
       DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findPublicationByIssnsOrName);
-    }
-
-    return publicationSeq;
-  }
-
-  /**
-   * Provides the identifier of a publication by its publisher and title or
-   * ISBNs.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param title
-   *          A String with the title of the publication.
-   * @param publisherSeq
-   *          A Long with the publisher identifier.
-   * @param pIsbn
-   *          A String with the print ISBN of the publication.
-   * @param eIsbn
-   *          A String with the electronic ISBN of the publication.
-   * @return a Long with the identifier of the publication.
-   * @throws SQLException
-   *           if any problem occurred accessing the database.
-   */
-  private Long findPublicationByIsbnsOrName(Connection conn, String title,
-      Long publisherSeq, String pIsbn, String eIsbn) throws SQLException {
-    final String DEBUG_HEADER = "findPublicationByIsbnsOrName(): ";
-    Long publicationSeq = null;
-    ResultSet resultSet = null;
-    log.debug3(DEBUG_HEADER + "SQL = '"
-	+ FIND_PUBLICATION_BY_ISBNS_OR_NAME_QUERY + "'.");
-    PreparedStatement findPublicationByIsbnsOrName =
-	conn.prepareStatement(FIND_PUBLICATION_BY_ISBNS_OR_NAME_QUERY);
-
-    try {
-      findPublicationByIsbnsOrName.setLong(1, publisherSeq);
-      findPublicationByIsbnsOrName.setString(2, title);
-      findPublicationByIsbnsOrName.setString(3, pIsbn);
-      findPublicationByIsbnsOrName.setString(4, eIsbn);
-      findPublicationByIsbnsOrName.setLong(5, publisherSeq);
-      findPublicationByIsbnsOrName.setString(6, title);
-      findPublicationByIsbnsOrName.setString(7, pIsbn);
-      findPublicationByIsbnsOrName.setString(8, eIsbn);
-
-      resultSet = findPublicationByIsbnsOrName.executeQuery();
-      if (resultSet.next()) {
-	publicationSeq = resultSet.getLong(PUBLICATION_SEQ_COLUMN);
-	log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-      }
-    } catch (SQLException sqle) {
-      log.error("Cannot find publication", sqle);
-      log.error("publisherSeq = '" + publisherSeq + "'.");
-      log.error("pIsbn = " + pIsbn);
-      log.error("eIsbn = " + eIsbn);
-      log.error("title = " + title);
-      log.error("SQL = '" + FIND_PUBLICATION_BY_ISBNS_OR_NAME_QUERY + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findPublicationByIsbnsOrName);
+      DbManager.safeCloseStatement(findPublicationByName);
     }
 
     return publicationSeq;
@@ -3175,6 +3091,40 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
+   * Provides the primary name of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @return a String with the primary name of the metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private String getMdItemPrimaryName(Connection conn, Long mdItemSeq)
+      throws SQLException {
+    final String DEBUG_HEADER = "getMdItemPrimaryName(): ";
+    String name = null;
+    PreparedStatement getName =
+	conn.prepareStatement(FIND_MD_ITEM_PRIMARY_NAME_QUERY);
+    ResultSet resultSet = null;
+
+    try {
+      getName.setLong(1, mdItemSeq);
+      resultSet = getName.executeQuery();
+      if (resultSet.next()) {
+	name = resultSet.getString(PRIMARY_NAME_COLUMN);
+	log.debug3(DEBUG_HEADER + "name = '" + name);
+      }
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(getName);
+    }
+
+    return name;
+  }
+
+  /**
    * Provides the names of a metadata item.
    * 
    * @param conn
@@ -3188,7 +3138,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private Map<String, String> getMdItemNames(Connection conn, Long mdItemSeq)
       throws SQLException {
-    final String DEBUG_HEADER = "getTitleNames(): ";
+    final String DEBUG_HEADER = "getMdItemNames(): ";
     Map<String, String> names = new HashMap<String, String>();
     PreparedStatement getNames = conn.prepareStatement(FIND_MD_ITEM_NAME_QUERY);
     ResultSet resultSet = null;
