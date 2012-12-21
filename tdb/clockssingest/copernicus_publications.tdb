@@ -107,9 +107,10 @@
     
       param[base_url] = http://www.ann-geophys.net/
       param[home_url] = http://www.annales-geophysicae.net/
+      comment[0] = volume 12 & 13 contain abstracts only
 
-      au < manifest ; exists ; 1994 ; 1994 ; Annales Geophysicae Volume 12 ; 12 >
-      au < manifest ; exists ; 1995 ; 1995 ; Annales Geophysicae Volume 13 ; 13 >
+      au < manifest ; exists ; 1994 ; 1994 ; Annales Geophysicae Volume 12 [abstracts only] ; 12 >
+      au < manifest ; exists ; 1995 ; 1995 ; Annales Geophysicae Volume 13 [abstracts only] ; 13 >
       au < manifest ; exists ; 1996 ; 1996 ; Annales Geophysicae Volume 14 ; 14 >
       au < manifest ; exists ; 1997 ; 1997 ; Annales Geophysicae Volume 15 ; 15 >
       au < manifest ; exists ; 1998 ; 1998 ; Annales Geophysicae Volume 16 ; 16 >
