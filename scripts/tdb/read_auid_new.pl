@@ -10,6 +10,7 @@ my $lockss_tag  = "LOCKSS system has permission to collect, preserve, and serve 
 my $oa_tag      = "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
 my $clockss_tag = "CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit";
 my $bmc_tag = "<span>Archive</span>";
+my $igi_tag = "/gateway/issue/";
 my $cc_tag = "rel..license";
 my $total_manifests = 0;
 my $total_missing = 0;
@@ -541,7 +542,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/$igi_tag/)) {
         if ($man_contents =~ m/<TITLE>\s*(.*)\s*<\/TITLE>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
