@@ -4336,7 +4336,7 @@
     param[base_url] = http://dh.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Diplomatic History Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Diplomatic History Volume 1 ; 1 >
 
   }
 
@@ -5481,7 +5481,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2012 ; European Journal of Heart Failure Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; European Journal of Heart Failure Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; European Journal of Heart Failure Volume 15 ; 15 >
 
     }
 
@@ -7144,7 +7144,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Human Molecular Genetics Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Human Molecular Genetics Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Human Molecular Genetics Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Human Molecular Genetics Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Human Molecular Genetics Volume 22 ; 22 >
 
     }
 
@@ -7204,7 +7204,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Human Reproduction Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Human Reproduction Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Human Reproduction Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Human Reproduction Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Human Reproduction Volume 28 ; 28 >
 
     }
 
@@ -7661,7 +7661,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; IMA Journal of Applied Mathematics Volume 75 ; 75 >
     au < HighWirePressH20Plugin ; released ; 2011 ; IMA Journal of Applied Mathematics Volume 76 ; 76 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; IMA Journal of Applied Mathematics Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; IMA Journal of Applied Mathematics Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; IMA Journal of Applied Mathematics Volume 78 ; 78 >
 
     }
 
@@ -8053,7 +8053,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Interactive CardioVascular and Thoracic Surgery Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Interactive Cardiovascular and Thoracic Surgery Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Interactive Cardiovascular and Thoracic Surgery Volume 16 ; 16 >
 
   }
 
@@ -8136,7 +8136,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Integrative and Comparative Biology Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Integrative and Comparative Biology Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Integrative and Comparative Biology Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Integrative and Comparative Biology Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Integrative and Comparative Biology Volume 53 ; 53 >
 
     }
 
@@ -8844,7 +8844,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Mathematics Research Notices Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Mathematics Research Notices Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; released ; 2012 ; International Mathematics Research Notices Volume 2012 ; 2012 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; International Mathematics Research Notices Volume 2013 ; 2013 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; International Mathematics Research Notices Volume 2013 ; 2013 >
 
     }
 
@@ -9167,7 +9167,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of African Economies Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of African Economies Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of African Economies Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of African Economies Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of African Economies Volume 22 ; 22 >
 
     }
 
@@ -9561,7 +9561,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Antimicrobial Chemotherapy Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Antimicrobial Chemotherapy Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Antimicrobial Chemotherapy Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Antimicrobial Chemotherapy Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Antimicrobial Chemotherapy Volume 68 ; 68 >
 
     }
 
@@ -10058,7 +10058,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Deaf Studies and Deaf Education Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Deaf Studies and Deaf Education Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Deaf Studies and Deaf Education Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Deaf Studies and Deaf Education Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Deaf Studies and Deaf Education Volume 18 ; 18 >
 
     }
 
@@ -10157,7 +10157,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Economic Geography Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Economic Geography Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Economic Geography Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Economic Geography Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Economic Geography Volume 13 ; 13 >
 
     }
 
@@ -11178,7 +11178,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Infectious Diseases Volume 204 ; 204 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Infectious Diseases Volume 206 ; 206 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Infectious Diseases Volume 207 ; 207 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Infectious Diseases Volume 207 ; 207 >
 
     }
 
@@ -12156,7 +12156,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Petrology Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Petrology Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Petrology Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Petrology Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Petrology Volume 54 ; 54 >
 
     }
 
@@ -12300,7 +12300,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Public Administration Research and Theory Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Public Administration Research and Theory Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Public Administration Research and Theory Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Public Administration Research and Theory Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Public Administration Research and Theory Volume 23 ; 23 >
 
     }
 
@@ -13973,7 +13973,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Molecular Biology and Evolution Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Molecular Biology and Evolution Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Molecular Biology and Evolution Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Molecular Biology and Evolution Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Molecular Biology and Evolution Volume 30 ; 30 >
 
     }
 
@@ -14402,7 +14402,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Mutagenesis Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Mutagenesis Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Mutagenesis Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Mutagenesis Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Mutagenesis Volume 28 ; 28 >
 
     }
 
@@ -14551,7 +14551,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Nicotine and Tobacco Research Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Nicotine and Tobacco Research Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Nicotine and Tobacco Research Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Nicotine and Tobacco Research Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Nicotine and Tobacco Research Volume 15 ; 15 >
 
     }
 
@@ -14921,7 +14921,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Nucleic Acids Research Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Nucleic Acids Research Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Nucleic Acids Research Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Nucleic Acids Research Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Nucleic Acids Research Volume 41 ; 41 >
 
     }
 
@@ -15434,7 +15434,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Oxford Economic Papers Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Oxford Economic Papers Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Oxford Economic Papers Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Oxford Economic Papers Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Oxford Economic Papers Volume 65 ; 65 >
 
     }
 
@@ -15675,7 +15675,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Parliamentary Affairs Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Parliamentary Affairs Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Parliamentary Affairs Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Parliamentary Affairs Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Parliamentary Affairs Volume 66 ; 66 >
 
     }
 
@@ -16018,7 +16018,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Philosophia Mathematica Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Philosophia Mathematica Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Philosophia Mathematica Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Philosophia Mathematica Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Philosophia Mathematica Volume 21 ; 21 >
 
     }
 
@@ -16678,7 +16678,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Publius: The Journal of Federalism Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Publius: The Journal of Federalism Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Publius: The Journal of Federalism Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Publius: The Journal of Federalism Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Publius: The Journal of Federalism Volume 43 ; 43 >
 
     }
 
@@ -17695,7 +17695,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Review of Finance Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Review of Finance Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Review of Finance Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Review of Finance Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Review of Finance Volume 17 ; 17 >
 
     }
 
@@ -17751,7 +17751,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; The Review of Financial Studies Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Review of Financial Studies Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Review of Financial Studies Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; The Review of Financial Studies Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; The Review of Financial Studies Volume 26 ; 26 >
 
     }
 
