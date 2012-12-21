@@ -353,10 +353,10 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 1474-8932
  
-    au < testing ; 1976-1980 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 17 ; 17 >   
+    au < ready ; 1976-1980 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 17 ; 17 >   
     au < ready ; 1981-1985 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 18 ; 18 > 
     au < ready ; 1986-1989 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 19 ; 19 > 
-    au < testing ; 1990-1993 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 20 ; 20 > 
+    au < ready ; 1990-1993 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 20 ; 20 > 
     au < ready ; 1993-1996 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 21 ; 21 > 
     au < ready ; 1997 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 22 ; 22 > 
     au < ready ; 1998 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 23 ; 23 > 
@@ -386,6 +386,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 0309-7765
     comment[notReady] = RU4463, missing article page
+    comment[notReady34] = various pdf font used, will re-test later
 
     au < ready ; 2002 ; Bronte Studies Volume 27 ; 27 > 
     au < doesNotExist ; 2003 ; Bronte Studies Volume 28 ; 28 > 
@@ -394,7 +395,7 @@
     au < notReady ; 2006 ; Bronte Studies Volume 31 ; 31 > 
     au < notReady ; 2007 ; Bronte Studies Volume 32 ; 32 > 
     au < ready ; 2008 ; Bronte Studies Volume 33 ; 33 > 
-    au < testing ; 2009 ; Bronte Studies Volume 34 ; 34 > 
+    au < notReady ; 2009 ; Bronte Studies Volume 34 ; 34 > 
     au < released ; 2010 ; Bronte Studies Volume 35 ; 35 > 
     au < released ; 2011 ; Bronte Studies Volume 36 ; 36 > 
     au < released ; 2012 ; Bronte Studies Volume 37 ; 37 > 
