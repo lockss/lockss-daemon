@@ -95,6 +95,7 @@
     au < released ; 2010 ; American Journal of Mathematics Volume 132 ; 132 >
     au < released ; 2011 ; American Journal of Mathematics Volume 133 ; 133 >
     au < released ; 2012 ; American Journal of Mathematics Volume 134 ; 134 >
+    au < expected ; 2013 ; American Journal of Mathematics Volume 135 ; 135 >
     
   }
 
@@ -126,6 +127,7 @@
     au < released ; 2010 ; American Journal of Philology Volume Volume 131 ; 131 >
     au < released ; 2011 ; American Journal of Philology Volume Volume 132 ; 132 >
     au < released ; 2012 ; American Journal of Philology Volume Volume 133 ; 133 >
+    au < expected ; 2013 ; American Journal of Philology Volume Volume 134 ; 134 >
     
   }
 
@@ -157,6 +159,7 @@
     au < released ; 2010 ; American Quarterly Volume 62 ; 62 >
     au < released ; 2011 ; American Quarterly Volume 63 ; 63 >
     au < released ; 2012 ; American Quarterly Volume 64 ; 64 >
+    au < expected ; 2013 ; American Quarterly Volume 65 ; 65 >
 
   }
 
@@ -188,6 +191,7 @@
     au < released ; 2010 ; Arethusa Volume 43 ; 43 >
     au < released ; 2011 ; Arethusa Volume 44 ; 44 >
     au < released ; 2012 ; Arethusa Volume 45 ; 45 >
+    au < expected ; 2013 ; Arethusa Volume 46 ; 46 >
     
   }
 
@@ -217,6 +221,7 @@
     au < released ; 2010 ; Book History Volume 13 ; 13 >
     au < released ; 2011 ; Book History Volume 14 ; 14 >
     au < released ; 2012 ; Book History Volume 15 ; 15 >
+    au < expected ; 2013 ; Book History Volume 16 ; 16 >
     
   }
 
@@ -237,6 +242,7 @@
     au < released ; 2010 ; Bookbird: A Journal of International Children's Literature Volume 48 ; 48 >
     au < released ; 2011 ; Bookbird: A Journal of International Children's Literature Volume 49 ; 49 >
     au < released ; 2012 ; Bookbird: A Journal of International Children's Literature Volume 50 ; 50 >
+    au < expected ; 2013 ; Bookbird: A Journal of International Children's Literature Volume 51 ; 51 >
 
   }
 
@@ -258,6 +264,7 @@
     au < released ; 2009 ; Bulletin of the Center for Children's Books Volume 63 ; 63 >
     au < released ; 2010-2012 ; Bulletin of the Center for Children's Books Volume 64 ; 64 >
     au < released ; 2011-2012 ; Bulletin of the Center for Children's Books Volume 65 ; 65 >
+    au < released ; 2012-2012 ; Bulletin of the Center for Children's Books Volume 66 ; 66 >
     
   }
 
@@ -289,6 +296,7 @@
     au < released ; 2010 ; Bulletin of the History of Medicine Volume 84 ; 84 >
     au < released ; 2011 ; Bulletin of the History of Medicine Volume 85 ; 85 >
     au < released ; 2012 ; Bulletin of the History of Medicine Volume 86 ; 86 >
+    au < expected ; 2013 ; Bulletin of the History of Medicine Volume 87 ; 87 >
     
   }
   
@@ -321,6 +329,7 @@
     au < released ; 2010 ; Callaloo Volume 33 ; 33 >
     au < released ; 2011 ; Callaloo Volume 34 ; 34 >
     au < released ; 2012 ; Callaloo Volume 35 ; 35 >
+    au < expected ; 2013 ; Callaloo Volume 36 ; 36 >
     
   }
 
@@ -375,6 +384,7 @@
     au < released ; 2010 ; Children's Literature Volume 38 ; 38 >
     au < released ; 2011 ; Children's Literature Volume 39 ; 39 >
     au < released ; 2012 ; Children's Literature Volume 40 ; 40 >
+    au < expected ; 2013 ; Children's Literature Volume 41 ; 41 >
     
   }
 
@@ -397,6 +407,7 @@
     au < released ; 2010 ; Children's Literature Association Quarterly Volume 35 ; 35 >
     au < released ; 2011 ; Children's Literature Association Quarterly Volume 36 ; 36 >
     au < released ; 2012 ; Children's Literature Association Quarterly Volume 37 ; 37 >
+    au < expected ; 2013 ; Children's Literature Association Quarterly Volume 38 ; 38 >
 
   }
 
@@ -493,7 +504,8 @@
     param[journal_dir] = digital_philology
     attr[journal_id] = dph
 
-	au < released ; 2012 ; Digital Philology: A Journal of Medieval Cultures Volume 1 ; 1 >
+    au < released ; 2012 ; Digital Philology: A Journal of Medieval Cultures Volume 1 ; 1 >
+    au < expected ; 2013 ; Digital Philology: A Journal of Medieval Cultures Volume 2 ; 2 >
     
   }
   
@@ -525,6 +537,7 @@
     au < released ; 2009-2010 ; Eighteenth-Century Studies Volume 43 ; 43 >
     au < released ; 2010-2011 ; Eighteenth-Century Studies Volume 44 ; 44 >
     au < released ; 2011-2012 ; Eighteenth-Century Studies Volume 45 ; 45 >
+    au < released ; 2012-2013 ; Eighteenth-Century Studies Volume 46 ; 46 >
     
   }
 
@@ -559,6 +572,7 @@
     au < released ; 2010 ; ELH Volume 77 ; 77 >
     au < released ; 2011 ; ELH Volume 78 ; 78 >
     au < released ; 2012 ; ELH Volume 79 ; 79 >
+    au < expected ; 2013 ; ELH Volume 80 ; 80 >
 
   }
 
@@ -579,6 +593,7 @@
     au < released ; 2010 ; Feminist Formations Volume 22 ; 22 >
     au < released ; 2011 ; Feminist Formations Volume 23 ; 23 >
     au < released ; 2012 ; Feminist Formations Volume 24 ; 24 >
+    au < expected ; 2013 ; Feminist Formations Volume 25 ; 25 >
 
   }
 
@@ -596,6 +611,7 @@
     
     
     au < released ; 2012 ; German Studies Review Volume 35 ; 35 >
+    au < expected ; 2013 ; German Studies Review Volume 36 ; 36 >
 
   }
   
@@ -614,6 +630,7 @@
     au < released ; 2010 ; Hispania Volume 93 ; 93 >
     au < released ; 2011 ; Hispania Volume 94 ; 94 >
     au < released ; 2012 ; Hispania Volume 95 ; 95 >
+    au < expected ; 2013 ; Hispania Volume 96 ; 96 >
 
   }
 
