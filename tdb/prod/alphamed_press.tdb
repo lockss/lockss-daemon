@@ -27,6 +27,7 @@
       au < HighWirePressH20Plugin ; released ; 2010 ; The Oncologist Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2011 ; The Oncologist Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2012 ; The Oncologist Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; expected ; 2013 ; The Oncologist Volume 18 ; 18 >
       
     }
 
@@ -49,6 +50,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2012 ; Stem Cells: Translational Medicine Volume 1 ; 1 >
+    au < expected ; 2013 ; Stem Cells: Translational Medicine Volume 2 ; 2 >
 
   }
   
