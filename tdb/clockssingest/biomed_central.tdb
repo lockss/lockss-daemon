@@ -1102,6 +1102,7 @@
 
       param[journal_issn] = 1471-2385
       nondefparam[journal_code] = bmcmedphys
+      comment[0] = This journal terminated at the end of 2007. Continued by BMC Medical Physics
 
       au < manifest ; exists ; 2001 ; BMC Nuclear Medicine Volume 1 ; 1 >
       au < manifest ; exists ; 2002 ; BMC Nuclear Medicine Volume 2 ; 2 >
@@ -1110,11 +1111,30 @@
       au < manifest ; exists ; 2005 ; BMC Nuclear Medicine Volume 5 ; 5 >
       au < manifest ; exists ; 2006 ; BMC Nuclear Medicine Volume 6 ; 6 >
       au < manifest ; exists ; 2007 ; BMC Nuclear Medicine Volume 7 ; 7 >
-      au < crawling ; exists ; 2008 ; BMC Nuclear Medicine Volume 8 ; 8 >
-      au < crawling ; exists ; 2009 ; BMC Nuclear Medicine Volume 9 ; 9 >
-      au < crawling ; exists ; 2010 ; BMC Nuclear Medicine Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Nuclear Medicine Volume 11 ; 11 >
-      au < crawling ; exists ; 2012 ; BMC Nuclear Medicine Volume 12 ; 12 >
+      au < superseded ; exists ; 2008 ; BMC Nuclear Medicine Volume 8 [superseded] ; 8 >
+      au < superseded ; exists ; 2009 ; BMC Nuclear Medicine Volume 9 [superseded] ; 9 >
+      au < superseded ; exists ; 2010 ; BMC Nuclear Medicine Volume 10 [superseded] ; 10 >
+      au < superseded ; exists ; 2011 ; BMC Nuclear Medicine Volume 11 [superseded] ; 11 >
+      au < superseded ; exists ; 2012 ; BMC Nuclear Medicine Volume 12 [superseded] ; 12 >
+
+    }
+
+    {
+      title <
+        name = BMC Medical Physics ;
+        issn = 1756-6649 ;
+        issnl = 1756-6649
+      >
+
+      param[journal_issn] = 1756-6649
+      nondefparam[journal_code] = bmcmedphys
+      comment[0] = This journal started at start of 2008. Continuation of BMC Nuclear Medicine
+
+      au < manifest ; exists ; 2008 ; BMC Nuclear Medicine Volume 8 ; 8 >
+      au < manifest ; exists ; 2009 ; BMC Nuclear Medicine Volume 9 ; 9 >
+      au < manifest ; exists ; 2010 ; BMC Nuclear Medicine Volume 10 ; 10 >
+      au < manifest ; exists ; 2011 ; BMC Nuclear Medicine Volume 11 ; 11 >
+      au < manifest ; exists ; 2012 ; BMC Nuclear Medicine Volume 12 ; 12 >
 
     }
 
