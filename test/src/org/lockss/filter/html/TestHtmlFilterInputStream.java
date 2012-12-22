@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.html;
 
 import java.io.*;
+import java.util.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -158,6 +159,17 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_VERBATIM,
 				  "false");
     assertIdentityXform(exp, in);
+  }
+
+  public void testregisterTag() throws Exception {
+    InputStream in = new StringInputStream("text<a>inner</a>end");
+    HtmlFilterInputStream filt =
+      new HtmlFilterInputStream(in, new IdentityXform());
+    List lst = new ArrayList();
+    MyLinkTag tag = new MyLinkTag(lst);
+    filt.registerTag(tag);
+    assertInputStreamMatchesString("text<a>inner</a>end", filt);
+    assertEquals(ListUtil.list("s4", "e7"), tag.lst);
   }
 
   public void testCharset() throws Exception {
@@ -349,4 +361,32 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
       return nl;
     }
   }
+
+  static class MyLinkTag extends org.htmlparser.tags.LinkTag {
+    private static final String[] mEnders = new String[] {"A", "P", "DIV", "TD", "TR", "FORM", "LI"};
+
+    private static final String[] mEndTagEnders = new String[] {"P", "DIV", "TD", "TR", "FORM", "LI", "BODY", "HTML"};
+
+    List lst;
+
+    public MyLinkTag(List lst) {
+      this.lst = lst;
+    }
+
+    public String[] getEnders () {
+      return mEnders;
+    }
+
+    public String[] getEndTagEnders() {
+      return mEndTagEnders;
+    }
+
+    public void setStartPosition(int start) {
+      lst.add("s"+start);
+    }
+    public void setEndPosition(int end) {
+      lst.add("e"+end);
+    }
+  }
+
 }

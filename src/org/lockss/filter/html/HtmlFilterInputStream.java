@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.17 2012-12-14 18:50:51 clairegriffin Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.18 2012-12-22 21:18:19 tlipkis Exp $
  */
 
 /*
@@ -141,6 +141,7 @@ public class HtmlFilterInputStream extends InputStream {
   private int wrFileThresh;
   private boolean useFile;
   private File outFile;
+  private PrototypicalNodeFactory nodeFact;
 
   /**
    * Create an HtmlFilterInputStream that applies the given transform
@@ -201,7 +202,7 @@ public class HtmlFilterInputStream extends InputStream {
   void parse() throws IOException {
     try {
 
-      Parser parser = makeParser(markSize, rdrBufSize);
+      Parser parser = makeParser();
       NodeList nl = parser.parse(null);
       if (nl.size() <= 0) {
         log.warning("nl.size(): " + nl.size());
@@ -289,12 +290,12 @@ public class HtmlFilterInputStream extends InputStream {
 
 
   /** Make a parser, register our extra nodes */
-  Parser makeParser(int marksize, int rdrBufSize)
+  protected Parser makeParser()
       throws UnsupportedEncodingException {
     // InputStreamSource may reset() the stream if it encounters a charset
     // change.  It expects the stream already to have been mark()ed.
-    if (marksize > 0) {
-      in.mark(marksize);
+    if (markSize > 0) {
+      in.mark(markSize);
     }
     InputStreamSource is = new InputStreamSource(in, charset, rdrBufSize);
     if(encodingMatchRange > 0) {
@@ -306,13 +307,31 @@ public class HtmlFilterInputStream extends InputStream {
     Lexer lx = new Lexer(pg);
     Parser parser = new Parser(lx, fl);
 
+    NodeFactory factory = getNodeFactory();
+    parser.setNodeFactory(factory);
+    return parser;
+  }
+
+  protected PrototypicalNodeFactory makeNodeFactory() {
     PrototypicalNodeFactory factory = new PrototypicalNodeFactory();
     factory.registerTag(new HtmlTags.Iframe());
     factory.registerTag(new HtmlTags.Noscript());
     factory.registerTag(new HtmlTags.Font());
     factory.registerTag(new HtmlTags.MyTableRow());
-    parser.setNodeFactory(factory);
-    return parser;
+    return factory;
+  }
+
+  protected PrototypicalNodeFactory getNodeFactory() {
+    if (nodeFact == null) {
+      nodeFact = makeNodeFactory();
+    }
+    return nodeFact;
+  }
+
+  /** Register the tag in this filter's Parser */
+  public HtmlFilterInputStream registerTag(Tag tag) {
+    getNodeFactory().registerTag(tag);
+    return this;
   }
 
   void setupHtmlParser() {
