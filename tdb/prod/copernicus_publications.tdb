@@ -266,9 +266,9 @@
       param[base_url] = http://www.earth-syst-dynam.net/
       param[home_url] = http://www.earth-system-dynamics.net/
 
-      au < manifest ; 2010 ; 2010 ; Earth System Dynamics (ESD) Volume 1 ; 1 >
-      au < manifest ; 2011 ; 2011 ; Earth System Dynamics (ESD) Volume 2 ; 2 >
-      au < manifest ; 2012 ; 2012 ; Earth System Dynamics (ESD) Volume 3 ; 3 >
+      au < testing ; 2010 ; 2010 ; Earth System Dynamics (ESD) Volume 1 ; 1 >
+      au < testing ; 2011 ; 2011 ; Earth System Dynamics (ESD) Volume 2 ; 2 >
+      au < testing ; 2012 ; 2012 ; Earth System Dynamics (ESD) Volume 3 ; 3 >
     
    }
     
@@ -282,10 +282,10 @@
       param[base_url] = http://www.earth-syst-sci-data.net/
       param[home_url] = http://www.earth-system-science-data.net/
 
-      au < manifest ; 2009 ; 2009 ; Earth System Science Data (ESSD) Volume 1 ; 1 >
-      au < manifest ; 2010 ; 2010 ; Earth System Science Data (ESSD) Volume 2 ; 2 >
-      au < manifest ; 2011 ; 2011 ; Earth System Science Data (ESSD) Volume 3 ; 3 >
-      au < manifest ; 2012 ; 2012 ; Earth System Science Data (ESSD) Volume 4 ; 4 >
+      au < testing ; 2009 ; 2009 ; Earth System Science Data (ESSD) Volume 1 ; 1 >
+      au < testing ; 2010 ; 2010 ; Earth System Science Data (ESSD) Volume 2 ; 2 >
+      au < testing ; 2011 ; 2011 ; Earth System Science Data (ESSD) Volume 3 ; 3 >
+      au < testing ; 2012 ; 2012 ; Earth System Science Data (ESSD) Volume 4 ; 4 >
     
    }
     
@@ -299,11 +299,11 @@
       param[base_url] = http://www.electronic-earth.net/
       param[home_url] = http://www.electronic-earth.net/
 
-      au < manifest ; 2006 ; 2006 ; eEarth (eE) Volume 1 ; 1 >
-      au < manifest ; 2007 ; 2007 ; eEarth (eE) Volume 2 ; 2 >
-      au < manifest ; 2008 ; 2008 ; eEarth (eE) Volume 3 ; 3 >
-      au < manifest ; 2009 ; 2009 ; eEarth (eE) Volume 4 ; 4 >
-      au < manifest ; 2010 ; 2010 ; eEarth (eE) Volume 5 ; 5 >
+      au < testing ; 2006 ; 2006 ; eEarth (eE) Volume 1 ; 1 >
+      au < testing ; 2007 ; 2007 ; eEarth (eE) Volume 2 ; 2 >
+      au < testing ; 2008 ; 2008 ; eEarth (eE) Volume 3 ; 3 >
+      au < testing ; 2009 ; 2009 ; eEarth (eE) Volume 4 ; 4 >
+      au < testing ; 2010 ; 2010 ; eEarth (eE) Volume 5 ; 5 >
     
    }
     
@@ -316,8 +316,8 @@
       param[base_url] = http://www.field-actions-sci-rep.net/
       param[home_url] = http://www.field-actions-science-reports.net/
 
-      au < manifest ; 2008 ; 2008 ; Field Actions Science Reports (FACTS) Volume 1 ; 1 >
-      au < manifest ; 2009 ; 2009 ; Field Actions Science Reports (FACTS) Volume 2 ; 2 >
+      au < testing ; 2008 ; 2008 ; Field Actions Science Reports (FACTS) Volume 1 ; 1 >
+      au < testing ; 2009 ; 2009 ; Field Actions Science Reports (FACTS) Volume 2 ; 2 >
     
    }
     

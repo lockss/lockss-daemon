@@ -366,24 +366,24 @@
       param[base_url] = http://mend.endojournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; Molecular Endocrinology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Molecular Endocrinology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1989 ; Molecular Endocrinology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1990 ; Molecular Endocrinology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1991 ; Molecular Endocrinology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Molecular Endocrinology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Molecular Endocrinology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Molecular Endocrinology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Molecular Endocrinology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Molecular Endocrinology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 1997 ; Molecular Endocrinology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 1998 ; Molecular Endocrinology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Molecular Endocrinology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Molecular Endocrinology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Molecular Endocrinology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Molecular Endocrinology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Molecular Endocrinology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Molecular Endocrinology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; testing ; 1987 ; Molecular Endocrinology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 1988 ; Molecular Endocrinology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 1989 ; Molecular Endocrinology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 1990 ; Molecular Endocrinology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1991 ; Molecular Endocrinology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 1992 ; Molecular Endocrinology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 1993 ; Molecular Endocrinology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 1994 ; Molecular Endocrinology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 1995 ; Molecular Endocrinology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 1996 ; Molecular Endocrinology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 1997 ; Molecular Endocrinology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; testing ; 1998 ; Molecular Endocrinology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; testing ; 1999 ; Molecular Endocrinology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; Molecular Endocrinology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Molecular Endocrinology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Molecular Endocrinology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Molecular Endocrinology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Molecular Endocrinology Volume 18 ; 18 >
       au < HighWirePressPlugin ; down ; 2005 ; Molecular Endocrinology Volume 19 ; 19 >
       au < HighWirePressPlugin ; down ; 2006 ; Molecular Endocrinology Volume 20 ; 20 >
       au < HighWirePressPlugin ; down ; 2007 ; Molecular Endocrinology Volume 21 ; 21 >
