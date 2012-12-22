@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.21 2011-09-14 05:03:07 tlipkis Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.22 2012-12-22 14:15:50 pgust Exp $
  */
 
 /*
@@ -35,18 +35,13 @@ package org.lockss.rewriter;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-import java.text.*;
 
-import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.filter.*;
 import org.lockss.filter.html.*;
-import org.lockss.config.*;
 import org.lockss.servlet.*;
 import org.htmlparser.*;
-import org.htmlparser.tags.*;
 import org.htmlparser.nodes.*;
 import org.htmlparser.filters.*;
 
@@ -86,23 +81,32 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     // "data",     // object
   };
 
-  // Legal start to relative path (in relative URL).  Maybe this should be
-  // (not "^/")?
-  static String relChar = "[-a-zA-Z0-9$_@.&+!*\"\'(),%?]";
+  // Legal start to non-server relative path in relative URL  
+  static final String relChar = "[-a-zA-Z0-9$_@.&+!*\"\'(),%?#]";
+  
+  // Matches protocol pattern (e.g. "http://")
+  static final String protocolPat = "[^:/?#]+://+";
+  
+  // Matches protocol prefix of a URL (e.g. "http://")
+  static final String protocolPrefixPat = "^" + protocolPat;
+  
+  // Matches HTML refresh attribute 
+  static final String refreshPat = ";[ \\t\\n\\f\\r\\x0b]*url=";
 
-
+  // Matches HTML refresh attribute with a relative URL (no protocol pattern)
+  static final String relRefreshPat = refreshPat + "(?!" + protocolPat + ")";
 
   public InputStream createLinkRewriter(String mimeType,
-					ArchivalUnit au,
-					InputStream in,
-					String encoding,
-					String url,
-					final ServletUtil.LinkTransform srvLink)
+                                        ArchivalUnit au,
+                                        InputStream in,
+                                        String encoding,
+                                        String url,
+                                        final ServletUtil.LinkTransform srvLink)
       throws PluginException {
     logger.debug2("Rewriting " + url + " in AU " + au);
     final String targetStem = srvLink.rewrite("");  // XXX - should have better xform
     logger.debug2("targetStem: " + targetStem);
-    Collection urlStems = au.getUrlStems();
+    Collection<String> urlStems = au.getUrlStems();
     int nUrlStem = urlStems.size();
     String defUrlStem = null;
     int l = nUrlStem;
@@ -112,17 +116,16 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     String[] rwTarget1 = new String[l];
     // Rewrite absolute links to urlStem/... to targetStem + urlStem/...
     int i = 0;
-    for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
-      String urlStem = (String)it.next();
+    for (String urlStem : urlStems) {
       if (defUrlStem == null) {
-	defUrlStem = urlStem;
+        defUrlStem = urlStem;
       }
       linkRegex1[i] = "^" + urlStem;
       ignCase1[i] = true;
       rwRegex1[i] = urlStem;
       rwTarget1[i] = targetStem + urlStem;
       logger.debug3("if link match " + linkRegex1[i] + " replace " +
-		    rwRegex1[i] + " by " + rwTarget1[i]);
+                    rwRegex1[i] + " by " + rwTarget1[i]);
       i++;
     }
     if (defUrlStem == null) {
@@ -131,37 +134,30 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     // Create a LinkRegexXform pipeline
     NodeFilter absLinkXform =
       HtmlNodeFilters.linkRegexYesXforms(linkRegex1, ignCase1, rwRegex1,
-					 rwTarget1, attrs);
-    String urlSub = url.substring(7);
-    int p = urlSub.lastIndexOf("/");
-    if (p < 0) {
-      logger.debug(url + " has no last /");
-      p = urlSub.length() - 1;
-    }
-    final String urlPrefix = "http://" + urlSub.substring(0, p);
-    logger.debug3("urlPrefix: " + urlPrefix);
+                                         rwTarget1, attrs);
 
     HtmlBaseProcessor base = new HtmlBaseProcessor();
     List<RelXform> relXforms = new ArrayList<RelXform>();
 
     // Rewrite relative links
+    @SuppressWarnings("serial")
     RelLinkRegexXform relLinkXforms[] = {
-      new RelLinkRegexXform("^http://", true,
-			    "^/",
-			    targetStem + defUrlStem,
-			    attrs) {
-	public void setBaseUrl(String baseUrl)
-	    throws MalformedURLException {
-	  setReplace(srvLink.rewrite(UrlUtil.getUrlPrefix(baseUrl)));
-	}},
-      new RelLinkRegexXform("^http://", true,
-			    "^(" + relChar + ")",
-			    targetStem + urlPrefix + "/$1",
-			    attrs) {
-	public void setBaseUrl(String baseUrl)
-	    throws MalformedURLException {
-	  setReplace(srvLink.rewrite(UrlUtil.resolveUri(baseUrl, "$1")));
-	}}
+      // transforms site-relative link URLs
+      new RelLinkRegexXform(protocolPrefixPat, // negated, matches relative URL
+                            true, "^/", attrs) {
+        /** Specify the "replace" property using the baseUrl param */
+        public void setBaseUrl(String baseUrl)
+            throws MalformedURLException {
+          setReplace(srvLink.rewrite(UrlUtil.getUrlPrefix(baseUrl)));
+        }},
+      // transforms path-relative link URLs
+      new RelLinkRegexXform(protocolPrefixPat, // negated, matches relative URL
+                            true, "^(" + relChar + ")", attrs) {
+        /** Specify the "replace" property using the baseUrl param */
+        public void setBaseUrl(String baseUrl)
+            throws MalformedURLException {
+          setReplace(srvLink.rewrite(UrlUtil.resolveUri(baseUrl, "$1")));
+        }}
     };
     for (RelLinkRegexXform xform : relLinkXforms) {
       xform.setNegateFilter(true);
@@ -184,48 +180,48 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     String[] rwTarget5 = new String[l];
     // Rewrite absolute links to urlStem/... to targetStem + urlStem/...
     i = 0;
-    for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
-      String urlStem = (String)it.next();
-      linkRegex5[i] = ";[ \\t\\n\\f\\r\\x0b]*url=" + urlStem;
+    for (String urlStem : urlStems) {
+      linkRegex5[i] = refreshPat + urlStem;
       ignCase5[i] = true;
       rwRegex5[i] = "url=" + urlStem;
       rwTarget5[i] = "url=" + targetStem + urlStem;
       logger.debug3("if meta match " + linkRegex1[i] + " replace " +
-		    rwRegex1[i] + " by " + rwTarget1[i]);
+                    rwRegex1[i] + " by " + rwTarget1[i]);
       i++;
     }
     NodeFilter absRefreshXform =
       HtmlNodeFilters.refreshRegexYesXforms(linkRegex5, ignCase5,
-					    rwRegex5, rwTarget5);
+                                            rwRegex5, rwTarget5);
 
+    @SuppressWarnings("serial")
     RelRefreshRegexXform[] relRefreshXforms = {
-      new RelRefreshRegexXform(";[ \\t\\n\\f\\r\\x0b]*url=http://", true,
-			       "url=/",
-			       "url=" + targetStem + defUrlStem) {
-	public void setBaseUrl(String baseUrl)
-	    throws MalformedURLException {
-	  setReplace("url=" + srvLink.rewrite(UrlUtil.getUrlPrefix(baseUrl)));
-	}},
-      new RelRefreshRegexXform(";[ \\t\\n\\f\\r\\x0b]*url=http://", true,
-			       "url=(" + relChar + ")",
-			       "url=" + targetStem + urlPrefix + "/$1") {
-	public void setBaseUrl(String baseUrl)
-	    throws MalformedURLException {
-	  setReplace("url=" +
-		     srvLink.rewrite(UrlUtil.resolveUri(baseUrl, "$1")));
-	}},
+      // transforms site relative HTML refresh URLs
+      new RelRefreshRegexXform(relRefreshPat, 
+                               true, "(" + refreshPat + ")/") { 
+        /** Specify the "replace" property using the baseUrl param */
+        public void setBaseUrl(String baseUrl)
+            throws MalformedURLException {
+          setReplace("$1" + srvLink.rewrite(UrlUtil.getUrlPrefix(baseUrl)));
+        }},
+        // transforms path-relative HTML refresh URLs
+        new RelRefreshRegexXform(relRefreshPat, 
+                                 true, "("+refreshPat+")(" + relChar + ")") {
+        /** Specify the "replace" property using the baseUrl param */
+        public void setBaseUrl(String baseUrl)
+            throws MalformedURLException {
+          setReplace("$1"+srvLink.rewrite(UrlUtil.resolveUri(baseUrl, "$2")));
+        }},
     };
     for (RelRefreshRegexXform xform : relRefreshXforms) {
-      xform.setNegateFilter(true);
       relXforms.add(xform);
     }
     NodeFilter relRefreshXform = new OrFilter(relRefreshXforms);
 
     for (RelXform xform : relXforms) {
       try {
-	xform.setBaseUrl(url);
+        xform.setBaseUrl(url);
       } catch (MalformedURLException e) {
-	throw new IllegalArgumentException(e);
+        throw new IllegalArgumentException(e);
       }
     }
     base.setXforms(relXforms);
@@ -245,9 +241,9 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     // Create a transform to apply them
     HtmlTransform htmlXform = HtmlNodeFilterTransform.exclude(linkXform);
     InputStream result = new HtmlFilterInputStream(in,
-						   encoding,
-						   encoding,
-						   htmlXform);
+                                                   encoding,
+                                                   encoding,
+                                                   htmlXform);
     return result;
   }
 
@@ -264,19 +260,18 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
 
     public boolean accept(Node node) {
       if (!super.accept(node)) {
-	return false;
+        return false;
       }
-      TagNode tnode = (TagNode)node;
       Attribute attr = ((TagNode)node).getAttributeEx("href");
       if (attr != null) {
-	String newbase = attr.getValue();
-	for (RelXform xform : xforms) {
-	  try {
-	    xform.setBaseUrl(newbase);
-	  } catch (MalformedURLException e) {
-	    logger.warning("Not resetting rewriter's base URL", e);
-	  }
-	}
+        String newbase = attr.getValue();
+        for (RelXform xform : xforms) {
+          try {
+            xform.setBaseUrl(newbase);
+          } catch (MalformedURLException e) {
+            logger.warning("Not resetting rewriter's base URL", e);
+          }
+        }
       }
       return false;
     }
@@ -286,31 +281,37 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     void setBaseUrl(String baseUrl) throws MalformedURLException;
   }
 
+  @SuppressWarnings("serial")
   abstract class RelLinkRegexXform extends HtmlNodeFilters.LinkRegexXform
     implements RelXform {
 
     RelLinkRegexXform(String regex, boolean ignoreCase,
-		      String target, String replace, String[] attrs) {
+                      String target, String[] attrs) {
       super(regex, ignoreCase, target, null, attrs);
     }
   }
 
+  @SuppressWarnings("serial")
   abstract class RelStyleRegexXform extends HtmlNodeFilters.StyleRegexXform
     implements RelXform {
 
     public RelStyleRegexXform(String regex, boolean ignoreCase,
-			      String target, String replace) {
+                              String target, String replace) {
       super(regex, ignoreCase, target, null);
     }
+
+    abstract public void setBaseUrl(String baseUrl)
+      throws MalformedURLException;
   }
 
+  @SuppressWarnings("serial")
   class StyleXform extends HtmlNodeFilters.StyleXformDispatch
     implements RelXform {
 
     public StyleXform(ArchivalUnit au,
-		      String charset,
-		      String baseUrl,
-		      ServletUtil.LinkTransform xform) {
+                      String charset,
+                      String baseUrl,
+                      ServletUtil.LinkTransform xform) {
       super(au, charset, baseUrl, xform);
     }
 
@@ -319,13 +320,14 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     }
   }
 
+  @SuppressWarnings("serial")
   class ScriptXform extends HtmlNodeFilters.ScriptXformDispatch
     implements RelXform {
 
     public ScriptXform(ArchivalUnit au,
-		       String charset,
-		       String baseUrl,
-		       ServletUtil.LinkTransform xform) {
+                       String charset,
+                       String baseUrl,
+                       ServletUtil.LinkTransform xform) {
       super(au, charset, baseUrl, xform);
     }
 
@@ -334,13 +336,17 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     }
   }
 
+  @SuppressWarnings("serial")
   abstract class RelRefreshRegexXform extends HtmlNodeFilters.RefreshRegexXform
     implements RelXform {
 
     public RelRefreshRegexXform(String regex, boolean ignoreCase,
-				String target, String replace) {
+                                String target) {
       super(regex, ignoreCase, target, null);
     }
+
+    abstract public void setBaseUrl(String baseUrl)
+      throws MalformedURLException;
   }
 
 }
