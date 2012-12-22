@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkUrlNormalizer.java,v 1.6 2012-12-19 01:06:38 thib_gc Exp $
+ * $Id: SpringerLinkUrlNormalizer.java,v 1.7 2012-12-22 01:39:38 thib_gc Exp $
  */
 
 /*
@@ -69,7 +69,8 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
         METAPRESS.setAccessIndicatorsClass();
       </script>
    */
-  protected static final String CURRENT_ID_JAVASCRIPT_1 = "f0b3b809-2b0c-4996-b73e-3b855bcbdafa";
+  protected static final String CURRENT_ID_JAVASCRIPT_1 = "695015e5-1327-447b-b711-8224b68bd201";
+  // 695015e5-1327-447b-b711-8224b68bd201
   
   /*
 <div>
@@ -105,6 +106,7 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
     put("74466dca-978b-4c51-bbb6-02378a4905e1", CURRENT_ID_JAVASCRIPT_1); // 07:04:14 03/06/12 - 21:00:47 04/04/12
     put("99381f0b-4327-49b7-afa4-de3fc33ad947", CURRENT_ID_JAVASCRIPT_1); // 15:00:33 04/06/12 - 12:02:03 04/18/12
     put("48e4d99e-0f75-417e-8e54-611005af3a10", CURRENT_ID_JAVASCRIPT_1); // 16:06:47 04/19/12
+    put("17d72427-be38-4c61-a23c-d723395cac64", CURRENT_ID_JAVASCRIPT_1); // 22:00:23 04/21/12
     put("f7790a4f-b0eb-4bfe-93e8-70470325fb27", CURRENT_ID_JAVASCRIPT_1); // 12:58:11 04/22/12 - 09:30:16 04/23/12
     put("36b4f92d-dee2-442e-992a-36dceaccb4c6", CURRENT_ID_JAVASCRIPT_1); // 05:38:03 04/28/12 - 11:45:02 05/03/12
     put("23c7edb8-0e91-47b4-8385-5728f0b0e2d5", CURRENT_ID_JAVASCRIPT_1); // 22:45:26 05/10/12
@@ -114,9 +116,10 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
     put("d7e19a36-2ce1-4691-95a4-866a4381977e", CURRENT_ID_JAVASCRIPT_1); // 10:39:22 06/12/12
     put("3975407c-2da1-455a-99ae-a066f8d78a8c", CURRENT_ID_JAVASCRIPT_1); // 07:55:36 06/19/12
     put("e408ae52-e310-4f94-839d-e1dad4df509f", CURRENT_ID_JAVASCRIPT_1); // 14:17:03 07/03/12 - 13:25:16 08/10/12
-    put("8272bab5-29b3-4aea-8c03-d6be1e65a7c5", CURRENT_ID_JAVASCRIPT_1); // 12:10:57 09/24/12
+    put("8272bab5-29b3-4aea-8c03-d6be1e65a7c5", CURRENT_ID_JAVASCRIPT_1); // 19:24:39 09/17/12 - 12:10:57 09/24/12
     put("448d74db-3a49-47cd-a22e-30f88ad429c7", CURRENT_ID_JAVASCRIPT_1); // 00:55:48 10/16/12 - 04:36:15 10/25/12
-    put(CURRENT_ID_JAVASCRIPT_1, CURRENT_ID_JAVASCRIPT_1); // 22:02:30 10/28/12 - 17:36:00 12/11/12
+    put("f0b3b809-2b0c-4996-b73e-3b855bcbdafa", CURRENT_ID_JAVASCRIPT_1); // 22:02:30 10/28/12 - 17:36:00 12/11/12 
+    put(CURRENT_ID_JAVASCRIPT_1, CURRENT_ID_JAVASCRIPT_1); // 03:31:11 12/21/12
     // Javascript 2
     // No such links: 00:51:43 11/11/10 - 01:30:26 05/20/11
     put("40594b26-7aa9-4e22-b8b8-c1d26d21b52a", CURRENT_ID_JAVASCRIPT_2); // 12:06:11 09/26/11 - 07:10:22 12/07/11
