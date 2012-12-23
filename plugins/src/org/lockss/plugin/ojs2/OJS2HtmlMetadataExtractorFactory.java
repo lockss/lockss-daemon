@@ -1,5 +1,6 @@
 /*
- * $Id: OJS2HtmlMetadataExtractorFactory.java,v 1.2 2012-02-10 23:43:47 akanshab01 Exp $
+
+ * $Id: OJS2HtmlMetadataExtractorFactory.java,v 1.3 2012-12-23 21:05:59 ldoan Exp $
  */
 
 /*
@@ -43,18 +44,22 @@ import org.lockss.plugin.*;
 
 public class OJS2HtmlMetadataExtractorFactory implements
     FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("OJS2MetadataExtractorFactory");
+  
+  static Logger log = Logger.getLogger(OJS2HtmlMetadataExtractorFactory.class);
 
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType) throws PluginException {
+    
     return new OJS2HtmlMetadataExtractor();
-  }
+    
+  } // createFileMetadataExtractor
 
   public static class OJS2HtmlMetadataExtractor 
     extends SimpleHtmlMetaTagMetadataExtractor {
 
     // Map BePress-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
+    
     static {
        //general pattern for capturing start and end page number. 
       String pagenumpattern = "[pP\\. ]*([^-]+)(?:-(.+))?";
@@ -84,15 +89,21 @@ public class OJS2HtmlMetadataExtractorFactory implements
       // tagMap.put("prism.issn", MetadataField.FIELD_ISSN);
       // <meta name="prism.eIssn" content="1476-5489" />
       tagMap.put("citation_issn", MetadataField.FIELD_EISSN);
-    }
+    } // static
 
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
       throws IOException {
+      
+      log.debug3("Metadata - cachedurl cu:" + cu.getUrl());
+      
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
       return am;
-    }
-  }
-}
+      
+    } // extract
+    
+  } // OJS2HtmlMetadataExtractor
+  
+} // OJS2HtmlMetadataExtractorFactory
  
