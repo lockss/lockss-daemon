@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.3 2012-06-18 23:20:38 thib_gc Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.4 2012-12-23 21:05:58 ldoan Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.ojs2;
 
 import java.io.*;
+
 import java.net.MalformedURLException;
 import java.util.*;
 import java.util.regex.*;
@@ -48,6 +49,26 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.ojs2.OJS2ArticleIteratorFactory.OJS2ArticleIterator.LoggerAdapter;
 import org.lockss.util.*;
 
+
+/*
+ * OJS2ArticleIterator processes the table of contents collected for
+ * an AU (Archival Unit).  It chooses a full text content, then
+ * outputs these full text URLs.
+ * 
+ * OJS2 issues page or the table of contents typically has the following
+ * URL's format:
+ * 
+ * Issues page or TOC URL:
+ * <base_url/>index.php/<journal_id>/issue/view/<[^/]+>
+ * Example: http://www.ojs2articleiteratortest.com/index.php/lq/issue/view/478
+ * 
+ * Articles URL:
+ * <base_url>/index.php/<journal_id>/article/view/<[^/]+>/<[^/]+>
+ * Example: http://www.ojs2articleiteratortest.com/index.php/lq/article/view/8110/8514
+ * 
+ * Index.php and journal_id are optional.
+ */
+
 public class OJS2ArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
@@ -56,8 +77,8 @@ public class OJS2ArticleIteratorFactory
     public static final String FULL_TEXT_EPUB = "FullTextEpub";
     public static final String SOURCE_XML = "SourceXml";
   }
-  
-  protected static Logger log = Logger.getLogger("OJS2ArticleIteratorFactory");
+ 
+  protected static Logger log = Logger.getLogger(OJS2ArticleIteratorFactory.class);
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -65,25 +86,37 @@ public class OJS2ArticleIteratorFactory
       throws PluginException {
     String base_url = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
     String journal_id = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
+
+    // Added possible cases to roots list to cover optional 'index.php'
+    // and journal_id
+    // e.g., Ubiquity Press has neither index.php nor journal_id
+    // http://www.ancient-asia-journal.com/article/view/aa.10202/33
+    // Biologic Institute has both index.php and journal_id (main)
+    // http://bio-complexity.org/ojs/index.php/main/article/view/BIO-C.2011.3
     List roots = ListUtil.list(String.format("%sindex.php/%s/issue/view", base_url, journal_id.toLowerCase()),
-                               String.format("%sindex.php/%s/issue/view", base_url, journal_id.toUpperCase()));
+                               String.format("%sindex.php/%s/issue/view", base_url, journal_id.toUpperCase()),
+                               String.format("%s%s/issue/view", base_url, journal_id.toLowerCase()),
+                               String.format("%s%s/issue/view", base_url, journal_id.toUpperCase()),
+                               String.format("%sindex.php/issue/view", base_url),
+			       String.format("%sissue/view", base_url));
     return new OJS2ArticleIterator(au,
                                    new SubTreeArticleIterator.Spec()
                                        .setTarget(target)
                                        .setRoots(roots),
-                                   target);
-  }
+                                       target);
+    
+  } // createArticleIterator
 
+  
   protected static class OJS2ArticleIterator extends SubTreeArticleIterator {
 
     protected Pattern SHOW_TOC_PATTERN = Pattern.compile("/issue/view/([^/]+)/showToc$", Pattern.CASE_INSENSITIVE);
-    
     protected Pattern PLAIN_TOC_PATTERN = Pattern.compile("/issue/view/([^/]+)$", Pattern.CASE_INSENSITIVE);
     
     protected MetadataTarget target;
-    
     protected Set<String> alreadyEmitted;
     
+    // Constructor
     public OJS2ArticleIterator(ArchivalUnit au,
                                SubTreeArticleIterator.Spec spec,
                                MetadataTarget target) {
@@ -111,7 +144,8 @@ public class OJS2ArticleIteratorFactory
 
       log.warning("Mismatch between article iterator factory and article iterator: " + url);
       return null;
-    }
+      
+    } // createArticleFiles
     
     protected void processShowToc(CachedUrl tocCu, Matcher tocMat) {
       processToc(tocCu.getUnfilteredInputStream(), tocCu.getEncoding(), tocCu.getUrl());
@@ -127,12 +161,14 @@ public class OJS2ArticleIteratorFactory
     }
     
     protected void processToc(InputStream in, String encoding, String url) {
+      
       try {
         Lexer.STRICT_REMARKS = false; // Accept common variants of HTML comments
         InputStreamSource source = new InputStreamSource(in, encoding);
         Parser parser = new Parser(new Lexer(new Page(source)), new LoggerAdapter(url));
         NodeList nodeList = parser.extractAllNodesThatMatch(HtmlNodeFilters.tagWithAttribute("table", "class", "tocArticle"));
         SimpleNodeIterator iter = nodeList.elements();
+        
         log.debug3("Processing articles");
         while (iter.hasMoreNodes()) {
           log.debug3("Processing one article");
@@ -145,16 +181,19 @@ public class OJS2ArticleIteratorFactory
       catch (ParserException e) {
         e.printStackTrace();
       }
-    }
+      
+    } // processToc
 
     protected void processArticle(Node node) {
       Map<String, CachedUrl> map = new HashMap<String, CachedUrl>();
       NodeList links = new NodeList();
       node.collectInto(links, HtmlNodeFilters.tagWithAttribute("a", "href"));
       SimpleNodeIterator iter = links.elements();
+      
       while (iter.hasMoreNodes()) {
         LinkTag link = (LinkTag)iter.nextNode();
         CachedUrl linkCu = null;
+        
         try {
           linkCu = au.makeCachedUrl(UrlUtil.normalizeUrl(link.extractLink(), au));
         }
@@ -166,6 +205,7 @@ public class OJS2ArticleIteratorFactory
           log.debug3("Malformed URL exception", mue);
           continue; // Ignore
         }
+        
         if (linkCu != null) {
           if (linkCu.hasContent()) {
             String linkUrl = linkCu.getUrl();
@@ -185,13 +225,13 @@ public class OJS2ArticleIteratorFactory
           else {
             AuUtil.safeRelease(linkCu);
           }
-        }
-      }
+        } // if
+      } // while
       
       ArticleFiles af = new ArticleFiles();
       guessAbstract(af, map);
+      guessFullTextHtml(af, map); // cover both label HTML and Full Text
       guessFullTextPdf(af, map);
-      doGuess(af, map, "html", ArticleFiles.ROLE_FULL_TEXT_HTML, "Full-text HTML");
       doGuess(af, map, "epub", Role.FULL_TEXT_EPUB, "Full-text EPUB");
       doGuess(af, map, "xml", Role.SOURCE_XML, "Source XML");
       chooseFullTextCu(af);
@@ -199,7 +239,9 @@ public class OJS2ArticleIteratorFactory
       // Emit
       CachedUrl cu = af.getFullTextCu();
       if (cu != null) {
-        if (!alreadyEmitted.contains(cu.getUrl())) {
+        log.debug3("getfulltextcu url: " + cu.getUrl());
+        
+          if (!alreadyEmitted.contains(cu.getUrl())) {
           alreadyEmitted.add(cu.getUrl());
           emitArticleFiles(af);
         }
@@ -209,7 +251,8 @@ public class OJS2ArticleIteratorFactory
       for (CachedUrl releaseCu : map.values()) {
         AuUtil.safeRelease(releaseCu);
       }
-    }
+      
+    } // processArticle
 
     protected void guessAbstract(ArticleFiles af, Map<String, CachedUrl> map) {
       // Try labels
@@ -218,25 +261,65 @@ public class OJS2ArticleIteratorFactory
                                            "abstract",
                                            "r\u00e9sum\u00e9",
                                        });
-      if (cu != null) {
-        log.debug2("Abstract: " + cu.getUrl());
-        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, cu);
+      
+     if (cu != null) {
+       log.debug2("Abstract url: " + cu.getUrl());
+       af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, cu);
+       return;
+     } // if
+      
+     // Find a single undecorated link
+     cu = doGuessSingleUrl(map, "/article/view/[^/]+$");
+     if (cu == null) {
+       // Alternatively, try a single full link
+       cu = doGuessSingleUrl(map, "/article/view/[^/]+/[^/]+$");
+     }         
+      
+     if (cu != null) {
+       log.debug2("Abstract candidate: " + cu.getUrl());
+       af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, cu);
+       
+       // handles html with framset
+       // e.g., http://bio-complexity.org/ojs/index.php/main/article/view/BIO-C.2011.3
+       // does not contain metadata, but its frame src does
+       // http://bio-complexity.org/ojs/index.php/main/article/viewArticle/BIO-C.2011.3
+       String url = cu.getUrl();
+       String modifiedUrl = url.replaceFirst("/view/", "/viewArticle/");
+       log.debug3("guessAbstract() : url: " + url);
+       log.debug3("guessAbstract() modifiedUrl: " + modifiedUrl);
+       
+       // if modified url (one with viewArticle has content
+       // then use it for metadata
+       CachedUrl modifiedCu = au.makeCachedUrl(modifiedUrl);
+       if ((modifiedCu != null) && modifiedCu.hasContent()) {
+         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, modifiedCu);
+         modifiedCu.release();      
+       } else {
+         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
+       }
+        
+       return;
+      } // if
+     
+    } // guessAbstract
+
+    // This method handles full text urls with both labels 'HTML' or 'Full Text'
+    protected void guessFullTextHtml(ArticleFiles af, Map<String, CachedUrl> map) {
+      // Try labels
+      CachedUrl cu = doGuessFromLabels(map,
+                                       new String[] {
+                                           "html",
+                                           "full text",
+                                       });
+      
+      if (cu != null && cu.hasContent()) {
+        log.debug2("Full text html: " + cu.getUrl());
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, cu);
         return;
       }
       
-      // Find a single undecorated link
-      cu = doGuessSingleUrl(map, "/article/view/[^/]+$");
-      if (cu == null) {
-        // Alternatively, try a single full link
-        cu = doGuessSingleUrl(map, "/article/view/[^/]+/[^/]+$");
-      }
-      if (cu != null) {
-        log.debug2("Abstract candidate: " + cu.getUrl());
-        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, cu);
-        return;
-      }
-    }
-
+    } // guessFullTextHtml
+        
     protected void guessFullTextPdf(ArticleFiles af, Map<String, CachedUrl> map) {
       // Try labels
       CachedUrl cu = doGuessFromLabels(map,
@@ -264,6 +347,7 @@ public class OJS2ArticleIteratorFactory
       // Pick the largest "PDF (2.3MB)" (or whatever) label if applicable
       Pattern pat = Pattern.compile("^pdf *\\(([0-9]+(\\.[0-9]+)?) *[a-z]+\\)$", Pattern.CASE_INSENSITIVE);
       float largestFloat = 0.0f;
+      
       for (String str : map.keySet()) {
         Matcher mat = pat.matcher(str);
         if (mat.find()) {
@@ -278,8 +362,9 @@ public class OJS2ArticleIteratorFactory
             // Just move on
             log.debug3("Bad float conversion in: " + str);
           }
-        }
-      }
+        } // if
+      } // for
+      
       if (cu != null) {
         log.debug2("Full-text PDF candidate: " + cu.getUrl());
         guessPdfLanding(af, cu);
@@ -292,9 +377,11 @@ public class OJS2ArticleIteratorFactory
         guessPdfLanding(af, cu);
         return;
       }
-    }
+      
+    } // guessFullTextPdf
 
     protected void guessPdfLanding(ArticleFiles af, CachedUrl cu) {
+      
       if (cu.getContentType().startsWith("application/pdf")) {
         af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
         return;
@@ -302,29 +389,35 @@ public class OJS2ArticleIteratorFactory
       
       Pattern pat = Pattern.compile("/article/view/([^/]+)/(pdf_)?([^/]+)$", Pattern.CASE_INSENSITIVE);
       Matcher mat = pat.matcher(cu.getUrl());
+      
       if (mat.find()) {
         CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/article/view/$1/$3"));
+        
         if (pdfCu != null && pdfCu.hasContent() && pdfCu.getContentType().startsWith("application/pdf")) {
           af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, cu);
           af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
         }
+        
         if (pdfCu != null) {
           AuUtil.safeRelease(pdfCu);
         }
         return;
-      }
+      } // if
 
       // Ideally this doesn't happen
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
-    }
+      
+    } // guessPdfLanding
     
     protected void doGuess(ArticleFiles af,
                            Map<String, CachedUrl> map,
                            String label,
                            String role,
                            String debugWords) {
+      
       // Find the right label
       CachedUrl labelCu = map.get(label);
+      
       if (labelCu != null) {
         log.debug2(debugWords + ": " + labelCu.getUrl());
         af.setRoleCu(role, labelCu);
@@ -334,6 +427,7 @@ public class OJS2ArticleIteratorFactory
       // Alternatively, find a single link decorated with correct suffix
       Pattern pat = Pattern.compile("/article/view/[^/]+/" + label + "(_[^/]+)?$", Pattern.CASE_INSENSITIVE);
       CachedUrl candidate = null;
+      
       for (CachedUrl cu : map.values()) {
         if (pat.matcher(cu.getUrl()).find()) {
           if (candidate == null) {
@@ -345,12 +439,14 @@ public class OJS2ArticleIteratorFactory
             break; // Bail
           }
         }
-      }
+      } // for
+      
       if (candidate != null) {
         log.debug2(debugWords + " candidate: " + candidate.getUrl());
         af.setRoleCu(role, candidate);
       }
-    }
+      
+    } // doGuess
       
     protected CachedUrl doGuessFromLabels(Map<String, CachedUrl> map,
                                          String[] labels) {
@@ -362,13 +458,16 @@ public class OJS2ArticleIteratorFactory
         }
       }
       return null;
-    }
+      
+    } // doGuessFromLabels
     
     protected CachedUrl doGuessSingleUrl(Map<String, CachedUrl> map,
                                          String patternString) {
       CachedUrl candidate = null;
       Pattern pat = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
+      
       for (CachedUrl cu : map.values()) {
+        
         if (pat.matcher(cu.getUrl()).find()) {
           if (candidate == null) {
             log.debug3("Found candidate: " + cu.getUrl());
@@ -379,21 +478,25 @@ public class OJS2ArticleIteratorFactory
             return null; // Bail
           }
         }
-      }
+      } // for
+      
       if (candidate != null) {
         log.debug3("Final candidate: " + candidate.getUrl());
         return candidate;
       }
       return null; // No candidate found
-    }
+      
+    } // doGuessSingleUrl
     
     protected void chooseFullTextCu(ArticleFiles af) {
+      
       final String[] ORDER = new String[] {
           ArticleFiles.ROLE_FULL_TEXT_HTML,
           ArticleFiles.ROLE_FULL_TEXT_PDF,
           ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
           ArticleFiles.ROLE_ABSTRACT,
       };
+      
       for (String role : ORDER) {
         CachedUrl cu = af.getRoleCu(role);
         if (cu != null) {
@@ -401,10 +504,13 @@ public class OJS2ArticleIteratorFactory
           return;
         }
       }
+      
       log.debug2("No full-text CU");
-    }
+      
+    } // chooseFullTextCu
     
     protected static class LoggerAdapter implements ParserFeedback {
+      
       protected String url;
       public LoggerAdapter(String url) {
         this.url = url;
@@ -421,26 +527,32 @@ public class OJS2ArticleIteratorFactory
       public void warning(String msg) {
         log.warning(String.format("While processing %s: %s", url, msg));
       }
-    }
+      
+    } // LoggerAdapter
   
-  }
+  } // OJS2ArticleIterator 
 
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
-  }
+    
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+  } // createArticleMetadataExtractor
 
   public static void main(String[] args) throws Exception {
+    
     Lexer.STRICT_REMARKS = false;
     InputStreamSource source = new InputStreamSource(new FileInputStream("/tmp/h0"), "UTF-8");
     Parser parser = new Parser(new Lexer(new Page(source)), new OJS2ArticleIterator.LoggerAdapter("http://www.nano-reviews.net/index.php/nano/issue/view/431"));
-//    NodeList nodeList = parser.extractAllNodesThatMatch(HtmlNodeFilters.tagWithAttribute("table", "class", "tocArticle"));
+    // NodeList nodeList = parser.extractAllNodesThatMatch(HtmlNodeFilters.tagWithAttribute("table", "class", "tocArticle"));
+
     for (SimpleNodeIterator iter = parser.extractAllNodesThatMatch(HtmlNodeFilters.tagWithAttribute("table", "class", "tocArticle")).elements() ; iter.hasMoreNodes() ; ) {
       NodeList links = new NodeList();
       ((Node)iter.nextNode()).collectInto(links, HtmlNodeFilters.tagWithAttribute("a", "href"));
       System.out.println(links);
     }
-  }
+    
+  } // main
   
-}
+} // OJS2ArticleIteratorFactory
