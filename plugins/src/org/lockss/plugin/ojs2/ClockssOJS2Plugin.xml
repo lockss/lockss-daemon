@@ -1,0 +1,35 @@
+<map>
+  <!-- ClockssPlugin.xml inherited from OJS2Plugin.xml. -->  
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.ojs2.ClockssOJS2Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Open Journals System Plugin (OJS 2.x for CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.ojs2.OJS2Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>22</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Open Journals System Plugin (OJS 2.x for CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>100</long>
+  </entry>
+</map>
