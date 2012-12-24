@@ -1,5 +1,5 @@
 /*
- * $Id: TestOJS2ArticleIteratorFactory.java,v 1.1 2012-12-23 21:55:54 ldoan Exp $
+ * $Id: TestOJS2ArticleIteratorFactory.java,v 1.2 2012-12-24 00:31:56 ldoan Exp $
  */
 
 /*
@@ -129,10 +129,10 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
   } // storeTestContent
   
   
-  // Use Assert statements in class TestArticle 
+  // Use Assert statements in class ArticleTester 
   public void passOrFailArticle(ArticleFiles af) {
     
-    TestArticle testArticleObj = new TestArticle(af);
+    ArticleTester testArticleObj = new ArticleTester(af);
     
     // example: http://www.ojs2articleiteratortest.com/index.php/lq/article/view/8110
     if (testArticleObj.testAbstract("8110") != null) {
