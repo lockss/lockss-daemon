@@ -12,7 +12,7 @@
 
     >
     
-    plugin = org.lockss.plugin.liberquarterly.LiberQuarterlyPlugin
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://liber.library.uu.nl/
     implicit < status ; year ; name ; param[year] >
     
