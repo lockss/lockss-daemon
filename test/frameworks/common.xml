@@ -61,7 +61,6 @@
         <value>org.lockss.plugin.hispanicissuesonline.HispanicIssuesOnLinePlugin</value>
         <value>org.lockss.plugin.hindawi.HindawiPublishingCorporationPlugin</value>
         <value>org.lockss.plugin.anthrosource.AnthroSourcePlugin</value>
-        <value>uk.org.lockss.plugin.liberquarterly.LiberQuarterlyPlugin</value>
         <value>uk.org.lockss.plugin.jelit.JeLitPlugin</value>
         <value>uk.org.lockss.plugin.psycoloquy.PsycoloquyPlugin</value>
         <value>uk.org.lockss.plugin.museumandsociety.MuseumAndSocietyPlugin</value>
@@ -118,6 +117,8 @@
         <value>org.molvis.plugin.MolVisPlugin</value>
         <value>org.lockss.plugin.ojs.OJSPlugin</value>
         <value>org.lockss.plugin.ojs2.OJS2Plugin</value>
+	<value>org.lockss.plugin.ojs2.ClockssOJS2Plugin</value>
+	<value>org.lockss.plugin.biologicinstitute.ClockssBiologicInstitutePlugin</value>
         <value>edu.upenn.library.plugin.clcweb.CLCWebPlugin</value>
         <value>edu.wisc.library.plugin.CortlandReviewPlugin</value>
         <value>edu.wisc.library.plugin.CortlandReview00Plugin</value>
