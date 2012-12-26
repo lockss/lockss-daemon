@@ -61,6 +61,7 @@
       au < HighWirePressH20Plugin ; released ; 2010 ; RadioGraphics Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 2011 ; RadioGraphics Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; ready ; 2012 ; RadioGraphics Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; expected ; 2013 ; RadioGraphics Volume 33 ; 33 >
 
     }
 
@@ -86,7 +87,6 @@
     {
 
       param[base_url] = http://radiology.rsna.org/
-      comment[notReady] = RU4130
 
       au < HighWirePressH20Plugin ; manifest ; 1923 ; Radiology Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; manifest ; 1924 ; Radiology Volume 2 ; 2 >
@@ -353,6 +353,10 @@
       au < HighWirePressH20Plugin ; released ; 2012 ; Radiology Volume 263 ; 263 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Radiology Volume 264 ; 264 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Radiology Volume 265 ; 265 >
+      au < HighWirePressH20Plugin ; manifest ; 2013 ; Radiology Volume 266 ; 266 >
+      au < HighWirePressH20Plugin ; expected ; 2013 ; Radiology Volume 267 ; 267 >
+      au < HighWirePressH20Plugin ; expected ; 2013 ; Radiology Volume 268 ; 268 >
+      au < HighWirePressH20Plugin ; expected ; 2013 ; Radiology Volume 269 ; 269 >
         
     }
 
