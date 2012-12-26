@@ -1679,7 +1679,21 @@
   
   {
     plugin = org.lockss.plugin.bmc.BioMedCentralPlugin
-    
+
+    {
+      title <
+        name = Acta Neuropathologica Communications ;
+        issn = 2051-5960 ;
+        issnl = 2051-5960
+      >
+
+      param[base_url] = http://www.actaneurocomms.org/
+      param[journal_issn] = 2051-5960
+
+      au < expected ; 2013 ; Acta Neuropathologica Communications Volume 1 ; 1 >
+
+    }
+
     {
       title <
         name = Acta Veterinaria Scandinavica ;
@@ -1777,6 +1791,60 @@
       au < released ; 2010 ; Algorithms for Molecular Biology Volume 5 ; 5 >
       au < released ; 2011 ; Algorithms for Molecular Biology Volume 6 ; 6 >
       au < ready ; 2012 ; Algorithms for Molecular Biology Volume 7 ; 7 >
+
+    }
+
+    {
+      title <
+        name = Allergy, Asthma & Clinical Immunology ;
+        issn = 1710-1492 ;
+        issnl = 1710-1492
+      >
+
+      param[base_url] = http://www.aacijournal.com/
+      param[journal_issn] = 1710-1492
+
+      au < manifest ; 2004-2005 ; Allergy, Asthma & Clinical Immunology Volume 1 ; 1 >
+      au < manifest ; 2006 ; Allergy, Asthma & Clinical Immunology Volume 2 ; 2 >
+      au < manifest ; 2007 ; Allergy, Asthma & Clinical Immunology Volume 3 ; 3 >
+      au < manifest ; 2008 ; Allergy, Asthma & Clinical Immunology Volume 4 ; 4 >
+      au < manifest ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 >
+      au < manifest ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 >
+      au < manifest ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 >
+      au < manifest ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 >
+      au < expected ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 >
+
+    }
+
+    {
+      title <
+        name = Alzheimer's Research & Therapy ;
+        issn = 1758-9193 ;
+        issnl = 1758-9193
+      >
+
+      param[base_url] = http://alzres.com/
+      param[journal_issn] = 1758-9193
+
+      au < manifest ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
+      au < manifest ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
+      au < manifest ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
+      au < manifest ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
+      au < expected ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
+
+    }
+
+    {
+      title <
+        name = Animal Biotelemetry ;
+        issn = 2050-3385 ;
+        issnl = 2050-3385
+      >
+
+      param[base_url] = http://www.animalbiotelemetry.com/
+      param[journal_issn] = 2050-3385
+
+      au < expected ; 2013 ; Animal Biotelemetry Volume 1 ; 1 >
 
     }
 
