@@ -1873,6 +1873,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Critical Accounting Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Critical Accounting Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Critical Accounting Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; International Journal of Critical Accounting Volume 5 ; 5 >
 
     }
 
@@ -1890,6 +1891,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Critical Computer-Based Systems Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Critical Computer-Based Systems Volume 2 ; 2 >
       au < released ; crawling ; 2012 ; International Journal of Critical Computer-Based Systems Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; International Journal of Critical Computer-Based Systems Volume 4 ; 4 >
 
     }
 
@@ -1912,6 +1914,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Critical Infrastructures Volume 6 ; 6 > 
       au < released ; crawling ; 2011 ; International Journal of Critical Infrastructures Volume 7 ; 7 > 
       au < released ; crawling ; 2012 ; International Journal of Critical Infrastructures Volume 8 ; 8 >
+      au < expected ; exists ; 2013 ; International Journal of Critical Infrascructures Volume 9 ; 9 >
 
     }
 
@@ -1960,6 +1963,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Data Analysis Techniques and Strategies Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Data Analysis Techniques and Strategies Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Data Analysis Techniques and Strategies Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; International Journal of Data Analysis Techniques and Strategies Volume 5 ; 5 >
 
     }
 
@@ -1980,6 +1984,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Data Mining and Bioinformatics Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; International Journal of Data Mining and Bioinformatics Volume 5 ; 5 >
       au < released ; crawling ; 2012 ; International Journal of Data Mining and Bioinformatics Volume 6 ; 6 >
+      au < expected ; exists ; 2013 ; International Journal of Data Mining and Bioinformatics Volume 7 ; 7 >
 
     }
 
@@ -1998,6 +2003,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Data Mining, Modelling and Management Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Data Mining, Modelling and Management Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Data Mining, Modelling and Management Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; International Journal of Data Mining, Modelling and Management Volume 5 ; 5 >
 
     }
 
@@ -2016,6 +2022,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Decision Sciences, Risk and Management Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Decision Sciences, Risk and Management Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Decision Sciences, Risk and Management Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; International Journal of Decision Sciences, Risk and Management Volume 5 ; 5 >
 
     }
 
@@ -2030,10 +2037,11 @@
 
       param[journal_issn] = 1751-5882
       
-	      au < manifest ; exists ; 2007-2008 ; International Journal of Design Engineering Volume 1 ; 1 >
-	      au < manifest ; exists ; 2009 ; International Journal of Design Engineering Volume 2 ; 2 >
-	      au < manifest ; exists ; 2010 ; International Journal of Design Engineering Volume 3 ; 3 >
-	      au < released ; crawling ; 2011 ; International Journal of Design Engineering Volume 4 ; 4 >
+      au < manifest ; exists ; 2007-2008 ; International Journal of Design Engineering Volume 1 ; 1 >
+      au < manifest ; exists ; 2009 ; International Journal of Design Engineering Volume 2 ; 2 >
+      au < manifest ; exists ; 2010 ; International Journal of Design Engineering Volume 3 ; 3 >
+      au < released ; crawling ; 2011 ; International Journal of Design Engineering Volume 4 ; 4 >
+      au < expected ; exists ; 2012 ; International Journal of Design Engineering Volume 5 ; 5 >
 
     }
 
@@ -2094,6 +2102,7 @@
       param[journal_issn] = 2049-0895
       
       au < released ; crawling ; 2012 ; International Journal of Diplomacy and Economy Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; International Journal of Diplomacy and Economy Volume 2 ; 2 >
 
     }
 
@@ -2112,6 +2121,7 @@
       au < manifest ; exists ; 2009;  International Journal of Dynamical Systems and Differential Equations Volume 2 ; 2 >
       au < released ; crawling ; 2011;  International Journal of Dynamical Systems and Differential Equations Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Dynamical Systems and Differential Equations Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; International Journal of Dynamical Systems and Differential Equations Volume 5 ; 5 >
 
     }
 
@@ -2131,6 +2141,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Economic Policy in Emerging Economies Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; International Journal of Economic Policy in Emerging Economies Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Economic Policy in Emerging Economies Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; International Journal of Economic Policy in Emerging Economies Volume 6 ; 6 >
 
     }
 
@@ -2148,6 +2159,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Economics and Accounting Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Economics and Accounting Volume 2 ; 2 >
       au < released ; crawling ; 2012 ; International Journal of Economics and Accounting Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; International Journal of Economics and Accounting Volume 4 ; 4 >
 
     }
 
@@ -2166,6 +2178,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Economics and Business Research Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Economics and Business Research Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Economics and Business Research Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; International Journal of Economics and Business Research Volume 5 ; 5 >
 
     }
 
