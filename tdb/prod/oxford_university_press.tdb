@@ -4336,7 +4336,43 @@
     param[base_url] = http://dh.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; Diplomatic History Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; Diplomatic History Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; Diplomatic History Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1979 ; Diplomatic History Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; Diplomatic History Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; Diplomatic History Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; Diplomatic History Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; Diplomatic History Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; Diplomatic History Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; Diplomatic History Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; Diplomatic History Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; Diplomatic History Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; Diplomatic History Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; Diplomatic History Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; Diplomatic History Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; Diplomatic History Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; Diplomatic History Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; Diplomatic History Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; Diplomatic History Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; Diplomatic History Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; Diplomatic History Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Diplomatic History Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Diplomatic History Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Diplomatic History Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Diplomatic History Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Diplomatic History Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Diplomatic History Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Diplomatic History Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Diplomatic History Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Diplomatic History Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; Diplomatic History Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; Diplomatic History Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; Diplomatic History Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; Diplomatic History Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; Diplomatic History Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; Diplomatic History Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; Diplomatic History Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; expected ; 2013 ; Diplomatic History Volume 37 ; 37 >
 
   }
 
@@ -6455,7 +6491,7 @@
     param[base_url] = http://gji.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2013 ; Geophysical Journal International Volume 191 ; 191 >
+    au < manifest ; 2013 ; Geophysical Journal International Volume 192 ; 192 >
 
   }
 
