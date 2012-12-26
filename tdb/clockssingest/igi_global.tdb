@@ -1779,6 +1779,7 @@
     >
     
     comment[0] = forthcoming 2013 as of 9-6-2012
+    param[journal_issn] = 2166-7241
 
     au < expected ; exists ; 2013 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 1 ; 1 > 
     
@@ -2056,7 +2057,8 @@
       issn = 2166-7195 ;
       eissn = 2166-7209
     >
-
+    
+    param[journal_issn] = 2166-7195
     comment[0] = forthcoming in 2013 as of 9-6-2012
 
     au < expected ; exists ; 2013 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 1 ; 1 > 
