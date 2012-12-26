@@ -1942,7 +1942,7 @@
         issnl = 1477-044X
       >
 
-comment[bmr] = journal archive available, but no new volumes
+      comment[bmr] = journal archive available, but no new volumes
 
       param[base_url] = http://www.biomagres.com/
       param[journal_issn] = 1477-044X
@@ -2583,6 +2583,21 @@ comment[bmr] = journal archive available, but no new volumes
     }
 
     {
+
+      title < 
+        name = Environmental Evidence ;
+        issn = 2047-2382 ;
+        issnl = 2047-2382
+      >
+
+      param[base_url] = http://www.environmentalevidencejournal.org/
+      param[journal_issn] = 2047-2382
+
+      au < exists ; 2011-2012 ; Environmental Evidence Volume 1 ; 1 >
+
+    }
+
+    {
       title <
         name = Environmental Health ;
         issn = 1476-069X ;
@@ -2603,21 +2618,6 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2010 ; Environmental Health Volume 9 ; 9 >
       au < released ; 2011 ; Environmental Health Volume 10 ; 10 >
       au < manifest ; 2012 ; Environmental Health Volume 11 ; 11 >
-
-    }
-
-    {
-
-      title < 
-        name = Environmental Evidence ;
-        issn = 2047-2382 ;
-        issnl = 2047-2382
-      >
-
-      param[base_url] = http://www.environmentalevidencejournal.org/
-      param[journal_issn] = 2047-2382
-
-      au < exists ; 2011-2012 ; Environmental Evidence Volume 1 ; 1 >
 
     }
 
