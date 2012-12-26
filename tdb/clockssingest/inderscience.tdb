@@ -2734,6 +2734,8 @@
       au < released ; crawling ; 2011 ; International Journal of Environment and Pollution Volume 45 ; 45 >
       au < released ; crawling ; 2011 ; International Journal of Environment and Pollution Volume 46 ; 46 >
       au < released ; crawling ; 2011 ; International Journal of Environment and Pollution Volume 47 ; 47 >
+      au < expected ; exists ;2012 ; International Journal of Environment and Pollution Volume 48 ; 48 >
+      au < expected ; exists ; 2012 ; International Journal of Environment and Pollution Volume 49 ; 49 >
 
     }
 
@@ -2758,6 +2760,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Environment and Sustainable Development Volume 8 ; 8 >
       au < manifest ; exists ; 2010 ; International Journal of Environment and Sustainable Development Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; International Journal of Environment and Sustainable Development Volume 10 ; 10 >
+      au < expected ; exists ; 2012 ; International Journal of Environment and Sustainable Development Volume 11 ; 11 >
 
     }
 
@@ -2781,6 +2784,7 @@
       au < released ; crawling ; 2011 ; International Journal of Environment and Waste Management Volume 7 ; 7 >
       au < released ; crawling ; 2011 ; International Journal of Environment and Waste Management Volume 8 ; 8 >
       au < released ; crawling ; 2012 ; International Journal of Environment and Waste Management Volume 9 ; 9 >
+      au < expected ; exists ; 2013 ; International Journal of Environment and Waste Management Volume 10 ; 10 >
 
     }
 
@@ -2816,6 +2820,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Environmental Engineering Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Environmental Engineering Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Environmental Engineering Volume 3 ; 3 >
+      au < expected ; exists ; 2012 ; International Journal of Environmental Engineering Volume 4 ; 4 >
 
     }
 
@@ -2860,6 +2865,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Environmental Technology and Management Volume 13 ; 13 >
       au < released ; crawling ; 2011 ; International Journal of Environmental Technology and Management Volume 14 ; 14 >
       au < released ; crawling ; 2012 ; International Journal of Environmental Technology and Management Volume 15 ; 15 >
+      au < expected ; exists ; 2013 ; International Journal of Environmental Technology and Management Volume 16 ; 16 >
 
     }
 
@@ -2884,6 +2890,7 @@
       au < released ; crawling ; 2011 ; International Journal of Exergy Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; International Journal of Exergy Volume 9 ; 9 >
       au < released ; crawling ; 2012 ; International Journal of Exergy Volume 10 ; 10 >
+      au < expected ; exists ; 2013 ; International Journal of Exergy Volume 11 ; 11 >
 
     }
 
@@ -2899,6 +2906,7 @@
       param[journal_issn] = 1755-8743
       
       au < released ; crawling ; 2009-2011 ; International Journal of Experimental and Computational Biomechanics Volume 1 ; 1 >
+      au < expected ; exists ; 2012 ; International Journal of Experimental and Computational Biomechanics Volume 2 ; 2 >
 
     }
 
@@ -2916,6 +2924,7 @@
       au < manifest ; exists ; 2009-2010 ; International Journal of Experimental Design and Process Optimisation Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Experimental Design and Process Optimisation Volume 2 ; 2 >
       au < released ; crawling ; 2012 ; International Journal of Experimental Design and Process Optimisation Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; International Journal of Experimental Design and Process Optimisation Volume 4 ; 4 >
 
     }
 
@@ -2928,7 +2937,7 @@
         issnl = 2049-0909
       >
 
-	comment[0] = no journal page as of Apr 23, 2012. journal_issn may be issn or eissn
+      comment[0] = no journal page as of Apr 23, 2012. journal_issn may be issn or eissn
 
     }
 
@@ -2945,6 +2954,7 @@
       
       au < manifest ; exists ; 2009-2010 ; International Journal of Financial Markets and Derivatives Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Financial Markets and Derivatives Volume 2 ; 2 >
+      au < expected ; exists ; 2012 ; International Journal of Financial Markets and Derivatives Volume 3 ; 3 >
 
     }
 
@@ -2964,6 +2974,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Financial Services Management Volume 3 ; 3 >
       au < manifest ; exists ; 2009-2010 ; International Journal of Financial Services Management Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; International Journal of Financial Services Management Volume 5 ; 5 >
+      au < expected ; exists ; 2012 ; International Journal of Financial Services Management Volume 6 ; 6 >
 
     }
 
@@ -2982,6 +2993,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Food Safety, Nutrition and Public Health Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Food Safety, Nutrition and Public Health Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; International Journal of Food Safety, Nutrition and Public Health Volume 4 ; 4 >
+      au < expected ; exists ; 2012 ; International Journal of Food Safety, Nutrition and Public Health Volume 5 ; 5 >
 
     }
 
@@ -2997,6 +3009,7 @@
       param[journal_issn] = 1744-9952
 
       au < released ; crawling ; 2012 ; International Journal of Forensic Engineering Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; International Journal of Forensic Engineering Volume 2 ; 2 >
 
     }
 
