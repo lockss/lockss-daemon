@@ -30899,13 +30899,13 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < testing ; 1974 ; Personality and Social Psychology Bulletin Volume 1 ; 1 >
-        au < testing ; 1976 ; Personality and Social Psychology Bulletin Volume 2 ; 2 >
-        au < testing ; 1976 ; Personality and Social Psychology Bulletin Volume 3 ; 3 >
+        au < ready ; 1976 ; Personality and Social Psychology Bulletin Volume 2 ; 2 >
+        au < ready ; 1976 ; Personality and Social Psychology Bulletin Volume 3 ; 3 >
         au < testing ; 1978 ; Personality and Social Psychology Bulletin Volume 4 ; 4 >
         au < testing ; 1979 ; Personality and Social Psychology Bulletin Volume 5 ; 5 >
         au < ready ; 1980 ; Personality and Social Psychology Bulletin Volume 6 ; 6 >
         au < testing ; 1981 ; Personality and Social Psychology Bulletin Volume 7 ; 7 >
-        au < testing ; 1982 ; Personality and Social Psychology Bulletin Volume 8 ; 8 >
+        au < ready ; 1982 ; Personality and Social Psychology Bulletin Volume 8 ; 8 >
         au < ready ; 1983 ; Personality and Social Psychology Bulletin Volume 9 ; 9 >
         au < testing ; 1984 ; Personality and Social Psychology Bulletin Volume 10 ; 10 >
         au < manifest ; 1985 ; Personality and Social Psychology Bulletin Volume 11 ; 11 >
@@ -30913,7 +30913,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1987 ; Personality and Social Psychology Bulletin Volume 13 ; 13 >
         au < manifest ; 1988 ; Personality and Social Psychology Bulletin Volume 14 ; 14 >
         au < manifest ; 1989 ; Personality and Social Psychology Bulletin Volume 15 ; 15 >
-        au < testing ; 1990 ; Personality and Social Psychology Bulletin Volume 16 ; 16 >
+        au < ready ; 1990 ; Personality and Social Psychology Bulletin Volume 16 ; 16 >
         au < manifest ; 1991 ; Personality and Social Psychology Bulletin Volume 17 ; 17 >
         au < manifest ; 1992 ; Personality and Social Psychology Bulletin Volume 18 ; 18 >
         au < manifest ; 1993 ; Personality and Social Psychology Bulletin Volume 19 ; 19 >
@@ -35710,15 +35710,15 @@ comment[mpj] = now published by Brill
         param[base_url] = http://spq.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 2004 ; Social Psychology Quarterly Volume 67 ; 67 >
+        au < ready ; 2004 ; Social Psychology Quarterly Volume 67 ; 67 >
         au < testing ; 2005 ; Social Psychology Quarterly Volume 68 ; 68 >
         au < testing ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 >
-        au < testing ; 2007 ; Social Psychology Quarterly Volume 70 ; 70 >
+        au < ready ; 2007 ; Social Psychology Quarterly Volume 70 ; 70 >
         au < released ; 2008 ; Social Psychology Quarterly Volume 71 ; 71 >
         au < released ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 >
         au < released ; 2010 ; Social Psychology Quarterly Volume 73 ; 73 >
         au < released ; 2011 ; Social Psychology Quarterly Volume 74 ; 74 >
-        au < testing ; 2012 ; Social Psychology Quarterly Volume 75 ; 75 >
+        au < ready ; 2012 ; Social Psychology Quarterly Volume 75 ; 75 >
         au < expected ; 2013 ; Social Psychology Quarterly Volume 76 ; 76 >
 
       }
@@ -36693,7 +36693,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2006 ; Studies in Christian Ethics Volume 19 ; 19 >
         au < doNotProcess ; 2007 ; Studies in Christian Ethics Volume 20 ; 20 >
         au < doNotProcess ; 2008 ; Studies in Christian Ethics Volume 21 ; 21 >
-        au < testing ; 2009 ; Studies in Christian Ethics Volume 22 ; 22 >
+        au < ready ; 2009 ; Studies in Christian Ethics Volume 22 ; 22 >
         au < released ; 2010 ; Studies in Christian Ethics Volume 23 ; 23 >
         au < released ; 2011 ; Studies in Christian Ethics Volume 24 ; 24 >
         au < manifest ; 2012 ; Studies in Christian Ethics Volume 25 ; 25 >
