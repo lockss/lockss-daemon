@@ -2017,7 +2017,26 @@
       au < released ; 2009 ; Arthritis Research & Therapy Volume 11 ; 11 >
       au < released ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
       au < released ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
-      au < testing ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
+      au < ready ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
+
+    }
+
+    {
+      title <
+        name = Asia Pacific Family Medicine ;
+        issn = 1447-056X ;
+        issnl = 1447-056X
+      >
+
+      param[base_url] = http://www.apfmj.com/
+      param[journal_issn] = 1447-056X
+
+      au < manifest ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
+      au < manifest ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
+      au < manifest ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
+      au < manifest ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
+      au < manifest ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
+      au < expected ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
 
     }
 
@@ -2044,6 +2063,20 @@
 
     {
       title <
+        name = Basic and Clinical Andrology ;
+        issn = 2051-4190 ;
+        issnl = 2051-4190
+      >
+
+      param[base_url] = http://www.bacandrology.com/
+      param[journal_issn] = 2051-4190
+
+      au < expected; 2013 ; Basic and Clinical Andrology Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Behavioral and Brain Functions ;
         issn = 1744-9081 ;
         issnl = 1744-9081
@@ -2060,6 +2093,25 @@
       au < released ; 2010 ; Behavioral and Brain Functions Volume 6 ; 6 >
       au < released ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 >
       au < ready ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 >
+
+    }
+
+    {
+      title <
+        name = BioData Mining ;
+        issn = 1756-0381 ;
+        issnl = 1756-0381
+      >
+
+      param[base_url] = http://www.biodatamining.org/
+      param[journal_issn] = 1756-0381
+
+      au < manifest ; 2008 ; BioData Mining Volume 1 ; 1 >
+      au < manifest ; 2009 ; BioData Mining Volume 2 ; 2 >
+      au < manifest ; 2010 ; BioData Mining Volume 3 ; 3 >
+      au < manifest ; 2011 ; BioData Mining Volume 4 ; 4 >
+      au < manifest ; 2012 ; BioData Mining Volume 5 ; 5 >
+      au < expected ; 2013 ; BioData Mining Volume 6 ; 6 >
 
     }
 
@@ -2115,6 +2167,39 @@
 
       au < exists ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 >
       au < exists ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Biology of Sex Differences ;
+        issn = 2042-6410 ;
+        issnl = 2042-6410
+      >
+
+      param[base_url] = http://www.bsd-journal.com/
+      param[journal_issn] = 2042-6410
+
+      au < manifest ; 2010 ; Biology of Sex Differences Volume 1 ; 1 >
+      au < manifest ; 2011 ; Biology of Sex Differences Volume 2 ; 2 >
+      au < manifest ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
+      au < expected ; 2013 ; Biology of Sex Differences Volume 4 ; 4 >
+
+    }
+
+    {
+
+      title <
+        name = Biomarker Research ;
+        issn = 2050-7771 ;
+        issnl = 2050-7771
+      >
+
+      param[base_url] = http://www.biomarkerres.org/
+      param[journal_issn] = 2050-7771
+
+      au < expected ; 2013 ; Biomarker Research Volume 1 ; 1 >
 
     }
 
@@ -2228,7 +2313,21 @@
       au < released ; 2009 ; Breast Cancer Research Volume 11 ; 11 >
       au < released ; 2010 ; Breast Cancer Research Volume 12 ; 12 >
       au < released ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
-      au < testing ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
+      au < ready ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
+
+    }
+
+    {
+      title <
+        name = Cancer & Metabolism ;
+        issn = 2049-3002 ;
+        issnl = 2049-3002
+      >
+
+      param[base_url] = http://www.cancerandmetabolism.com/
+      param[journal_issn] = 2049-3002
+
+      au < expected ; 2013 ; Cancer & Metabolism Volume 1 ; 1 >
 
     }
 
@@ -2344,6 +2443,22 @@
       au < released ; 2009 ; Cases Journal Volume 2 ; 2 >
       au < released ; 2010 ; Cases Journal Volume 3 ; 3 >
       au < released ; 2011 ; Cases Journal Volume 4 ; 4 >
+
+    }
+
+    {
+      title <
+        name = Cell & Bioscience ;
+        issn = 2045-3701 ;
+        issnl = 2045-3701
+      >
+
+      param[base_url] = http://www.cellandbioscience.com/
+      param[journal_issn] = 2045-3701
+
+      au < manifest ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
+      au < manifest ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
+      au < expected ; 2013 ; Cell & Bioscience Volume 3 ; 3 >
 
     }
 
@@ -2467,7 +2582,7 @@
       au < released ; 2009 ; Child and Adolescent Psychiatry and Mental Health Volume 3 ; 3 >
       au < released ; 2010 ; Child and Adolescent Psychiatry and Mental Health Volume 4 ; 4 >
       au < released ; 2011 ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 >
-      au < testing ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 >
+      au < ready ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 >
 
     }
 
@@ -2586,6 +2701,23 @@
     {
 
       title <
+        name = Clinical and Translational Allergy ;
+        issn = 2045-7022 ;
+        issnl = 2045-7022
+      >
+
+      param[base_url] = http://www.ctajournal.com/
+      param[journal_issn] = 2045-7022
+
+      au < manifest ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
+      au < manifest ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
+      au < expected ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
+
+    }
+
+    {
+
+      title <
         name = Clinical Epigenetics ;
         issn = 1868-7083 ;
         issnl = 1868-7083
@@ -2630,6 +2762,75 @@
 
       au < exists ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
       au < exists ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
+
+    }
+
+    {
+      title <
+        name = Comparative Hepatology ;
+        issn = 1476-5926 ;
+        issnl = 1476-5926
+      >
+
+      param[base_url] = http://www.comparative-hepatology.com/
+      param[journal_issn] = 1476-5926
+
+      au < manifest ; 2002 ; Comparative Hepatology Volume 1 ; 1 >
+      au < manifest ; 2003 ; Comparative Hepatology Volume 2 ; 2 >
+      au < manifest ; 2004 ; Comparative Hepatology Volume 3 ; 3 >
+      au < manifest ; 2005 ; Comparative Hepatology Volume 4 ; 4 >
+      au < manifest ; 2006 ; Comparative Hepatology Volume 5 ; 5 >
+      au < manifest ; 2007 ; Comparative Hepatology Volume 6 ; 6 >
+      au < manifest ; 2008 ; Comparative Hepatology Volume 7 ; 7 >
+      au < manifest ; 2009 ; Comparative Hepatology Volume 8 ; 8 >
+      au < manifest ; 2010 ; Comparative Hepatology Volume 9 ; 9 >
+      au < manifest ; 2011 ; Comparative Hepatology Volume 10 ; 10 >
+      au < manifest ; 2012 ; Comparative Hepatology Volume 11 ; 11 >
+      au < expected ; 2013 ; Comparative Hepatology Volume 12 ; 12 >
+
+    }
+
+    {
+      title <
+        name = Conflict and Health ;
+        issn = 1752-1505 ;
+        issnl = 1752-1505
+      >
+
+      param[base_url] = http://www.conflictandhealth.com/
+      param[journal_issn] = 1752-1505
+
+      au < manifest ; 2007 ; Conflict and Health Volume 1 ; 1 >
+      au < manifest ; 2008 ; Conflict and Health Volume 2 ; 2 >
+      au < manifest ; 2009 ; Conflict and Health Volume 3 ; 3 >
+      au < manifest ; 2010 ; Conflict and Health Volume 4 ; 4 >
+      au < manifest ; 2011 ; Conflict and Health Volume 5 ; 5 >
+      au < manifest ; 2012 ; Conflict and Health Volume 6 ; 6 >
+      au < expected ; 2013 ; Conflict and Health Volume 7 ; 7 >
+
+    }
+
+    {
+      title <
+        name = Cost Effectiveness and Resource Allocation ;
+        issn = 1478-7547 ;
+        issnl = 1478-7547
+      >
+
+      param[base_url] = http://www.resource-allocation.com/
+      param[journal_issn] = 1478-7547
+
+      au < manifest ; 2003 ; Cost Effectiveness and Resource Allocation Volume 1 ; 1 >
+      au < manifest ; 2004 ; Cost Effectiveness and Resource Allocation Volume 2 ; 2 >
+      au < manifest ; 2005 ; Cost Effectiveness and Resource Allocation Volume 3 ; 3 >
+      au < manifest ; 2006 ; Cost Effectiveness and Resource Allocation Volume 4 ; 4 >
+      au < manifest ; 2007 ; Cost Effectiveness and Resource Allocation Volume 5 ; 5 >
+      au < manifest ; 2008 ; Cost Effectiveness and Resource Allocation Volume 6 ; 6 >
+      au < manifest ; 2009 ; Cost Effectiveness and Resource Allocation Volume 7 ; 7 >
+      au < manifest ; 2010 ; Cost Effectiveness and Resource Allocation Volume 8 ; 8 >
+      au < manifest ; 2011 ; Cost Effectiveness and Resource Allocation Volume 9 ; 9 >
+      au < manifest ; 2012 ; Cost Effectiveness and Resource Allocation Volume 10 ; 10 >
+      au < expected ; 2013 ; Cost Effectiveness and Resource Allocation Volume 11 ; 11 >
 
     }
 
@@ -2697,7 +2898,25 @@
 
       au < exists ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 1 ; 1 >
 
-    
+    }
+
+    {
+  
+    title < 
+      name = Diabetology & Metabolic Syndrome ;
+      issn = 1758-5996 ;
+      issnl = 1758-5996
+    >
+
+      param[base_url] = http://www.dmsjournal.com/
+      param[journal_issn] = 1758-5996
+
+      au < manifest ; 2009 ; Diabetology & Metabolic Syndrome Volume 1 ; 1 >
+      au < manifest ; 2010 ; Diabetology & Metabolic Syndrome Volume 2 ; 2 >
+      au < manifest ; 2011 ; Diabetology & Metabolic Syndrome Volume 3 ; 3 >
+      au < manifest ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
+      au < expected ; 2013 ; Diabetology & Metabolic Syndrome Volume 5 ; 5 >
+
     }
 
     {
@@ -2829,6 +3048,26 @@
     {
 
       title <
+        name = Epigenetics & Chromatin ;
+        issn = 1756-8935 ;
+        issnl = 1756-8935
+      >
+
+      param[base_url] = http://www.epigeneticsandchromatin.com/
+      param[journal_issn] = 1756-8935
+
+      au < manifest ; 2008 ; Epigenetics & Chromatin Volume 1 ; 1 >
+      au < manifest ; 2009 ; Epigenetics & Chromatin Volume 2 ; 2 >
+      au < manifest ; 2010 ; Epigenetics & Chromatin Volume 3 ; 3 >
+      au < manifest ; 2011 ; Epigenetics & Chromatin Volume 4 ; 4 >
+      au < manifest ; 2012 ; Epigenetics & Chromatin Volume 5 ; 5 >
+      au < expected ; 2013 ; Epigenetics & Chromatin Volume 6 ; 6 >
+
+    }
+
+    {
+
+      title <
         name = The EPMA Journal ;
         issn = 1878-5077 ;
         eissn = 1878-5085 ;
@@ -2844,14 +3083,117 @@
 
     {
       title <
+        name = European Journal of Medical Research ;
+        issn = 2047-783X ;
+        issnl = 2047-783X
+      >
+      
+      param[base_url] = http://www.eurjmedres.com/
+      param[journal_issn] = 2047-783X
+
+      au < manifest ; 2009 ; European Journal of Medical Research Volume 14 ; 14 >
+      au < manifest ; 2010 ; European Journal of Medical Research Volume 15 ; 15 >
+      au < manifest ; 2011 ; European Journal of Medical Research Volume 16 ; 16 >
+      au < manifest ; 2012 ; European Journal of Medical Research Volume 17 ; 17 >
+      au < expected ; 2013 ; European Journal of Medical Research Volume 18 ; 18 >
+
+    }
+
+    {
+      title <
+        name = EvoDevo ;
+        issn = 2041-9139 ;
+        issnl = 2041-9139
+      >
+      
+      param[base_url] = http://www.evodevojournal.com/
+      param[journal_issn] = 2041-9139
+
+      au < manifest ; 2010 ; EvoDevo Volume 1 ; 1 >
+      au < manifest ; 2011 ; EvoDevo Volume 2 ; 2 >
+      au < manifest ; 2012 ; EvoDevo Volume 3 ; 3 >
+      au < expected ; 2013 ; EvoDevo Volume 4 ; 4 >
+
+    }
+
+    {
+      title <
+        name = Experimental & Translational Stroke Medicine ;
+        issn = 2040-7378 ;
+        issnl = 2040-7378
+      >
+      
+      param[base_url] = http://www.etsmjournal.com/
+      param[journal_issn] = 2040-7378
+
+      au < manifest ; 2009 ; Experimental & Translational Stroke Medicine Volume 1 ; 1 >
+      au < manifest ; 2010 ; Experimental & Translational Stroke Medicine Volume 2 ; 2 >
+      au < manifest ; 2011 ; Experimental & Translational Stroke Medicine Volume 3 ; 3 >
+      au < manifest ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
+      au < expected ; 2013 ; Experimental & Translational Stroke Medicine Volume 5 ; 5 >
+
+    }
+
+    {
+      title <
+        name = Experimental Hematology & Oncology ;
+        issn = 2162-3619 ;
+        issnl = 2162-3619
+      >
+      
+      param[base_url] = http://www.ehoonline.org/
+      param[journal_issn] = 2162-3619
+
+      au < manifest ; 2012 ; Experimental Hematology & Oncology Volume 1 ; 1 >
+      au < expected ; 2013 ; Experimental Hematology & Oncology Volume 2 ; 2 >
+
+    }
+
+    {
+      title <
         name = Extreme Physiology & Medicine ;
-        issn = 2046-7648
+        issn = 2046-7648 ;
+        issnl = 2046-7648
       >
       
       param[base_url] = http://www.extremephysiolmed.com/
       param[journal_issn] = 2046-7648
 
       au < exists ; 2012 ; Extreme Physiology & Medicine Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Fibrogenesis & Tissue Repair ;
+        issn = 1755-1536 ;
+        issnl = 1755-1536
+      >
+      
+      param[base_url] = http://www.fibrogenesis.com/
+      param[journal_issn] = 1755-1536
+
+      au < manifest ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 >
+      au < manifest ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
+      au < manifest ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
+      au < manifest ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
+      au < manifest ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
+      au < expected ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 >
+
+    }
+
+    {
+      title <
+        name = Flavour ;
+        issn = 2044-7248 ;
+        issnl = 2044-7248
+      >
+      
+      param[base_url] = http://www.flavourjournal.com/
+      param[journal_issn] = 2044-7248
+
+      au < manifest ; 2012 ; Flavour Volume 1 ; 1 >
+      au < expected ; 2013 ; Flavour Volume 2 ; 2 >
 
     }
 
@@ -2918,6 +3260,64 @@
 
     {
       title <
+        name = Genetics Selection Evolution ;
+        issn = 1297-9686 ;
+        issnl = 1297-9686
+      >
+
+      param[base_url] = http://www.gsejournal.org/
+      param[journal_issn] = 1297-9686
+
+      au < manifest ; 1969 ; Genetics Selection Evolution Volume 1 ; 1 >
+      au < manifest ; 1970 ; Genetics Selection Evolution Volume 2 ; 2 >
+      au < manifest ; 1971 ; Genetics Selection Evolution Volume 3 ; 3 >
+      au < manifest ; 1972 ; Genetics Selection Evolution Volume 4 ; 4 >
+      au < manifest ; 1973 ; Genetics Selection Evolution Volume 5 ; 5 >
+      au < manifest ; 1974 ; Genetics Selection Evolution Volume 6 ; 6 >
+      au < manifest ; 1975 ; Genetics Selection Evolution Volume 7 ; 7 >
+      au < manifest ; 1976 ; Genetics Selection Evolution Volume 8 ; 8 >
+      au < manifest ; 1977 ; Genetics Selection Evolution Volume 9 ; 9 >
+      au < manifest ; 1978 ; Genetics Selection Evolution Volume 10 ; 10 >
+      au < manifest ; 1979 ; Genetics Selection Evolution Volume 11 ; 11 >
+      au < manifest ; 1980 ; Genetics Selection Evolution Volume 12 ; 12 >
+      au < manifest ; 1981 ; Genetics Selection Evolution Volume 13 ; 13 >
+      au < manifest ; 1982 ; Genetics Selection Evolution Volume 14 ; 14 >
+      au < manifest ; 1983 ; Genetics Selection Evolution Volume 15 ; 15 >
+      au < manifest ; 1984 ; Genetics Selection Evolution Volume 16 ; 16 >
+      au < manifest ; 1985 ; Genetics Selection Evolution Volume 17 ; 17 >
+      au < manifest ; 1986 ; Genetics Selection Evolution Volume 18 ; 18 >
+      au < manifest ; 1987 ; Genetics Selection Evolution Volume 19 ; 19 >
+      au < manifest ; 1988 ; Genetics Selection Evolution Volume 20 ; 20 >
+      au < manifest ; 1989 ; Genetics Selection Evolution Volume 21 ; 21 >
+      au < manifest ; 1990 ; Genetics Selection Evolution Volume 22 ; 22 >
+      au < manifest ; 1991 ; Genetics Selection Evolution Volume 23 ; 23 >
+      au < manifest ; 1992 ; Genetics Selection Evolution Volume 24 ; 24 >
+      au < manifest ; 1993 ; Genetics Selection Evolution Volume 25 ; 25 >
+      au < manifest ; 1994 ; Genetics Selection Evolution Volume 26 ; 26 >
+      au < manifest ; 1995 ; Genetics Selection Evolution Volume 27 ; 27 >
+      au < manifest ; 1996 ; Genetics Selection Evolution Volume 28 ; 28 >
+      au < manifest ; 1997 ; Genetics Selection Evolution Volume 29 ; 29 >
+      au < manifest ; 1998 ; Genetics Selection Evolution Volume 30 ; 30 >
+      au < manifest ; 1999 ; Genetics Selection Evolution Volume 31 ; 31 >
+      au < manifest ; 2000 ; Genetics Selection Evolution Volume 32 ; 32 >
+      au < manifest ; 2001 ; Genetics Selection Evolution Volume 33 ; 33 >
+      au < manifest ; 2002 ; Genetics Selection Evolution Volume 34 ; 34 >
+      au < manifest ; 2003 ; Genetics Selection Evolution Volume 35 ; 35 >
+      au < manifest ; 2004 ; Genetics Selection Evolution Volume 36 ; 36 >
+      au < manifest ; 2005 ; Genetics Selection Evolution Volume 37 ; 37 >
+      au < manifest ; 2006 ; Genetics Selection Evolution Volume 38 ; 38 >
+      au < manifest ; 2007 ; Genetics Selection Evolution Volume 39 ; 39 >
+      au < manifest ; 2008 ; Genetics Selection Evolution Volume 40 ; 40 >
+      au < manifest ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 >
+      au < manifest ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 >
+      au < manifest ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
+      au < manifest ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
+      au < expected ; 2013 ; Genetics Selection Evolution Volume 45 ; 45 >
+
+    }
+
+    {
+      title <
         name = Genome Biology ;
         issn = 1465-6906 ;
         issnl = 1465-6906
@@ -2957,7 +3357,25 @@
       au < manifest ; 2012 ; Genome Integrity Volume 3 ; 3 >
       
     }
-      
+
+    {
+      title <
+        name = Genome Medicine ;
+        issn = 1756-994X ;
+        issnl = 1756-994X
+      >
+
+      param[base_url] = http://genomemedicine.com/
+      param[journal_issn] = 1756-994X
+
+      au < exists ; 2009 ; Genome Medicine Volume 1 ; 1 >
+      au < exists ; 2010 ; Genome Medicine Volume 2 ; 2 >
+      au < exists ; 2011 ; Genome Medicine Volume 3 ; 3 >
+      au < exists ; 2012 ; Genome Medicine Volume 4 ; 4 >
+      au < expected ; 2013 ; Genome Medicine Volume 5 ; 5 >
+
+    }
+
     {
       title <
         name = Geochemical Transactions ;
@@ -2986,6 +3404,21 @@
 
     {
       title <
+        name = GigaScience ;
+        issn = 2047-217X ;
+        issnl = 2047-217X
+      >
+
+      param[base_url] = http://www.gigasciencejournal.com/
+      param[journal_issn] = 2047-217X
+
+      au < manifest ; 2012 ; GigaScience Volume 1 ; 1 >
+      au < expected ; 2013 ; GigaScience Volume 2 ; 2 >
+
+    }
+
+    {
+      title <
         name = Globalization and Health ;
         issn = 1744-8603 ;
         issnl = 1744-8603
@@ -3002,6 +3435,24 @@
       au < released ; 2010 ; Globalization and Health Volume 6 ; 6 >
       au < released ; 2011 ; Globalization and Health Volume 7 ; 7 >
       au < manifest ; 2012 ; Globalization and Health Volume 8 ; 8 >
+
+    }
+
+    {
+      title <
+        name = Gut Pathogens ;
+        issn = 1757-4749 ;
+        issnl = 1757-4749
+      >
+
+      param[base_url] = http://www.gutpathogens.com/
+      param[journal_issn] = 1757-4749
+
+      au < manifest ; 2009 ; Gut Pathogens Volume 1 ; 1 >
+      au < manifest ; 2010 ; Gut Pathogens Volume 2 ; 2 >
+      au < manifest ; 2011 ; Gut Pathogens Volume 3 ; 3 >
+      au < manifest ; 2012 ; Gut Pathogens Volume 4 ; 4 >
+      au < expected ; 2013 ; Gut Pathogens Volume 5 ; 5 >
 
     }
 
@@ -3073,6 +3524,20 @@
 
     {
       title <
+        name = Health Information Science and Systems ;
+        issn = 2047-2501 ;
+        issnl = 2047-2501
+      >
+
+      param[base_url] = http://www.hissjournal.com/
+      param[journal_issn] = 2047-2501
+
+      au < expected ; 2013 ; Health Information Science and Systems Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Health Research Policy and Systems ;
         issn = 1478-4505 ;
         issnl = 1478-4505
@@ -3097,7 +3562,47 @@
     }
 
     {
+      title <
+        name = Hereditary Cancer in Clinical Practice ;
+        issn = 1897-4287 ;
+        issnl = 1897-4287
+      >
 
+      param[base_url] = http://www.hccpjournal.com/
+      param[journal_issn] = 1897-4287
+
+      au < manifest ; 2003 ; Hereditary Cancer in Clinical Practice Volume 1 ; 1 >
+      au < manifest ; 2004 ; Hereditary Cancer in Clinical Practice Volume 2 ; 2 >
+      au < manifest ; 2005 ; Hereditary Cancer in Clinical Practice Volume 3 ; 3 >
+      au < manifest ; 2006 ; Hereditary Cancer in Clinical Practice Volume 4 ; 4 >
+      au < manifest ; 2007 ; Hereditary Cancer in Clinical Practice Volume 5 ; 5 >
+      au < manifest ; 2008 ; Hereditary Cancer in Clinical Practice Volume 6 ; 6 >
+      au < manifest ; 2009 ; Hereditary Cancer in Clinical Practice Volume 7 ; 7 >
+      au < manifest ; 2010 ; Hereditary Cancer in Clinical Practice Volume 8 ; 8 >
+      au < manifest ; 2011 ; Hereditary Cancer in Clinical Practice Volume 9 ; 9 >
+      au < manifest ; 2012 ; Hereditary Cancer in Clinical Practice Volume 10 ; 10 >
+      au < expected ; 2013 ; Hereditary Cancer in Clinical Practice Volume 11 ; 11 >
+
+    }
+
+    {
+      title <
+        name = Herpesviridae ;
+        issn = 2042-4280 ;
+        issnl = 2042-4280
+      >
+
+      param[base_url] = http://www.herpesviridae.org/
+      param[journal_issn] = 2042-4280
+
+      au < manifest ; 2010 ; Herpesviridae Volume 1 ; 1 >
+      au < manifest ; 2011 ; Herpesviridae Volume 2 ; 2 >
+      au < manifest ; 2012 ; Herpesviridae Volume 3 ; 3 >
+      au < expected ; 2013 ; Herpesviridae Volume 4 ; 4 >
+
+    }
+
+    {
       title <
         name = Human Genomics ;
         issn = 1479-7364 ;
