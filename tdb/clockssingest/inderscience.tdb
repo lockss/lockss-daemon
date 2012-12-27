@@ -5900,6 +5900,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Public Policy Volume 6 ; 6 >
       au < released ; crawling ; 2011 ; International Journal of Public Policy Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; International Journal of Public Policy Volume 8 ; 8 >
+      au < expected ; exists ; 2013 ; International Journal of Public Policy Volume 9 ; 9 >
 
     }
 
@@ -5947,6 +5948,7 @@
       au < manifest ; exists ; 2009-2010 ; International Journal of Quality Engineering and Technology Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Quality Engineering and Technology Volume 2 ; 2 >
       au < released ; crawling ; 2012 ; International Journal of Quality Engineering and Technology Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; International Journal of Quality Engineering and Technology Volume 4 ; 4 >
 
     }
 
@@ -5980,6 +5982,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Radio Frequency Identification Technology and Applications Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Radio Frequency Identification Technology and Applications Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Radio Frequency Identification Technology and Applications Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; International Journal of Radio Frequency Identification Technology and Applications Volume 5 ; 5 >
       
 
     }
@@ -5998,6 +6001,7 @@
       au < manifest ; exists ; 2009-2010 ; International Journal of Rapid Manufacturing Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Rapid Manufacturing Volume 2 ; 2 >
       au < released ; crawling ; 2012 ; International Journal of Rapid Manufacturing Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; International Journal of Rapid Manufacturing Volume 4 ; 4 >
 
     }
 
@@ -6016,6 +6020,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Reasoning-based Intelligent Systems Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Reasoning-based Intelligent Systems Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Reasoning-based Intelligent Systems Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; International Journal of Reasoning-based Intelligent Systems Volume 5 ; 5 >
 
     }
 
@@ -6036,6 +6041,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Reliability and Safety Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; International Journal of Reliability and Safety Volume 5 ; 5 >
       au < released ; crawling ; 2012 ; International Journal of Reliability and Safety Volume 6 ; 6 >
+      au < expected ; exists ; 2013 ; International Journal of Reliability and Safety Volume 7 ; 7 >
 
     }
 
@@ -6068,6 +6074,7 @@
       au < manifest ; exists ; 2009-2010 ; International Journal of Renewable Energy Technology Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Renewable Energy Technology Volume 2 ; 2 >
       au < released ; crawling ; 2012 ; International Journal of Renewable Energy Technology Volume 3 ; 3 >
+      au < manifest ; exists ; 2013 ; International Journal of Renewable Energy Technology Volume 4 ; 4 >
 
     }
 
@@ -6088,6 +6095,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Revenue Management Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; International Journal of Revenue Management Volume 5 ; 5 >
       au < released ; crawling ; 2012 ; International Journal of Revenue Management Volume 6 ; 6 >
+      au < expected ; exists ; 2013 ; International Journal of Revenue Management Volume 7 ; 7 >
 
     }
 
@@ -6118,6 +6126,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Risk Assessment and Management Volume 14 ; 14 >
       au < released ; crawling ; 2011 ; International Journal of Risk Assessment and Management Volume 15 ; 15 >
       au < released ; crawling ; 2012 ; International Journal of Risk Assessment and Management Volume 16 ; 16 >
+      au < expected ; exists ; 2013 ; International Journal of Risk Assessment and Management Volume 17 ; 17 >
 
     }
 
@@ -6133,6 +6142,7 @@
       param[journal_issn] = 1742-7576
       
       au < released ; crawling ; 2011 ; International Journal of Satellite Communications Policy and Management Volume 1 ; 1 >
+      au < expected ; exists ; 2012 ; International Journal of Satellite Communications Policy and Management Volume 2 ; 2 >
 
     }
 
@@ -6153,6 +6163,8 @@
       au < manifest ; exists ; 2009 ; International Journal of Security and Networks Volume 4 ; 4 >
       au < manifest ; exists ; 2010 ; International Journal of Security and Networks Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; International Journal of Security and Networks Volume 6 ; 6 >
+      au < exists ; exists ; 2012 ; International Journal of Security and Networks Volume 7 ; 7 >
+      au < expected ; exists ; 2013 ; International Journal of Security and Networks Volume 8 ; 8 >
 
     }
 
@@ -6178,6 +6190,7 @@
       au < released ; crawling ; 2011 ; International Journal of Sensor Networks Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; International Journal of Sensor Networks Volume 10 ; 10 >
       au < released ; crawling ; 2012 ; International Journal of Sensor Networks Volume 11 ; 11 >
+      au < expected ; exists ; 2013 ; International Journal of Sensor Networks Volume 14 ; 14 >
 
     }
 
