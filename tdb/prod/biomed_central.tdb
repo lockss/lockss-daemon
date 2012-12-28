@@ -943,14 +943,8 @@
 
       param[journal_issn] = 1756-6649
       nondefparam[journal_code] = bmcmedphys
+      comment[0] = This journal started at start of 2008. Continuation of BMC Nuclear Medicine
 
-      au < manifest ; 2001 ; BMC Medical Physics Volume 1 ; 1 >
-      au < manifest ; 2002 ; BMC Medical Physics Volume 2 ; 2 >
-      au < manifest ; 2003 ; BMC Medical Physics Volume 3 ; 3 >
-      au < manifest ; 2004 ; BMC Medical Physics Volume 4 ; 4 >
-      au < manifest ; 2005 ; BMC Medical Physics Volume 5 ; 5 >
-      au < manifest ; 2006 ; BMC Medical Physics Volume 6 ; 6 >
-      au < manifest ; 2007 ; BMC Medical Physics Volume 7 ; 7 >
       au < manifest ; 2008 ; BMC Medical Physics Volume 8 ; 8 >
       au < manifest ; 2009 ; BMC Medical Physics Volume 9 ; 9 >
       au < manifest ; 2010 ; BMC Medical Physics Volume 10 ; 10 >
@@ -1183,25 +1177,6 @@
       au < superseded ; 2008 ; BMC Nuclear Medicine Volume 8 [superseded] ; 8 >
       au < superseded ; 2009 ; BMC Nuclear Medicine Volume 9 [superseded] ; 9 >
       au < superseded ; 2010 ; BMC Nuclear Medicine Volume 10 [superseded] ; 10 >
-
-    }
-
-    {
-      title <
-        name = BMC Medical Physics ;
-        issn = 1756-6649 ;
-        issnl = 1756-6649
-      >
-
-      param[journal_issn] = 1756-6649
-      nondefparam[journal_code] = bmcmedphys
-      comment[0] = This journal started at start of 2008. Continuation of BMC Nuclear Medicine
-
-      au < manifest ; 2008 ; BMC Medical Physics Volume 8 ; 8 >
-      au < manifest ; 2009 ; BMC Medical Physics Volume 9 ; 9 >
-      au < manifest ; 2010 ; BMC Medical Physics Volume 10 ; 10 >
-      au < manifest ; 2011 ; BMC Medical Physics Volume 11 ; 11 >
-      au < manifest ; 2012 ; BMC Medical Physics Volume 12 ; 12 >
 
     }
 
