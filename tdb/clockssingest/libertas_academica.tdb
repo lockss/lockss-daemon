@@ -78,7 +78,7 @@
     au < manifest ; exists ; 2010 ; Autism Insights Volume 2 ; 2010 >
     au < released ; crawling ; 2011 ; Autism Insights Volume 3 ; 2011 >
     au < released ; crawling ; 2012 ; Autism Insights Volume 4 ; 2012 >
-    au < expected ; exists ; 2013 ; Autism Insight Volume 5 ; 2013 >
+    au < expected ; exists ; 2013 ; Autism Insights Volume 5 ; 2013 >
   }
   
   {
@@ -168,7 +168,8 @@
     au < manifest ; exists ; 2009 ; Biomedical Engineering and Computational Biology Volume 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Biomedical Engineering and Computational Biology Volume 2 ; 2010 >
     au < released ; crawling ; 2011 ; Biomedical Engineering and Computational Biology Volume 3 ; 2011 >
-    au < expected ; exists ; 2013 ; Biomedical Engineering and Computational Biology Volume 4 ; 2013 >
+    au < expected ; exists ; 2012 ; Biomedical Engineering and Computational Biology Volume 4 ; 2012 >
+    au < expected ; exists ; 2013 ; Biomedical Engineering and Computational Biology Volume 5 ; 2013 >
 
   }
   
@@ -388,7 +389,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Case Reports Volume 3 ; 2010 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Case Reports Volume 4 ; 2011 >
     au < released ; crawling ; 2012 ; Clinical Medicine Insights: Case Reports Volume 5 ; 2012 >
-    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Case Report Volume 6 ; 2013 >
+    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Case Reports Volume 6 ; 2013 >
 
   }
   
@@ -540,7 +541,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Pathology Volume 3 ; 2010 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Pathology Volume 4 ; 2011 >
     au < released ; crawling ; 2012 ; Clinical Medicine Insights: Pathology Volume 5 ; 2012 >
-    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Patholog Volume 6 ; 2013 >
+    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Pathology Volume 6 ; 2013 >
 
   }
   
@@ -613,7 +614,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Therapeutics Volume 2 ; 2010 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Therapeutics Volume 3 ; 2011 >
     au < released ; crawling ; 2012 ; Clinical Medicine Insights: Therapeutics Volume 4 ; 2012 >
-    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Therapeutic Volume 5 ; 2013 >
+    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Therapeutics Volume 5 ; 2013 >
 
   }
   
@@ -1394,7 +1395,8 @@
     au < manifest ; exists ; 2009 ; Particle Physics Insights Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Particle Physics Insights Volume 3 ; 2010 >
     au < released ; crawling ; 2011 ; Particle Physics Insights Volume 4 ; 2011 >
-    au < expected ; exists ; 2013 ; Particle Physics Insights Volume 5 ; 2013 >
+    au < exists ; exists ; 2012 ; Particle Physics Insights Volume 5 ; 2012 >
+    au < expected ; exists ; 2013 ; Particle Physics Insights Volume 6 ; 2013 >
 
   }
   
