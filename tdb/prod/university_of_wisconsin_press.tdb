@@ -293,11 +293,11 @@
       attr[journal_id] = lde
       implicit < status ; year ; name ; param[volume] >
       
-      au < exists ; 2008 ; Land Economics Volume 84 ; 84 >
-      au < exists ; 2009 ; Land Economics Volume 85 ; 85 >
-      au < exists ; 2010 ; Land Economics Volume 86 ; 86 >
-      au < exists ; 2011 ; Land Economics Volume 87 ; 87 >
-      au < exists ; 2012 ; Land Economics Volume 88 ; 88 >
+      au < manifest ; 2008 ; Land Economics Volume 84 ; 84 >
+      au < manifest ; 2009 ; Land Economics Volume 85 ; 85 >
+      au < manifest ; 2010 ; Land Economics Volume 86 ; 86 >
+      au < manifest ; 2011 ; Land Economics Volume 87 ; 87 >
+      au < manifest ; 2012 ; Land Economics Volume 88 ; 88 >
       au < expected ; 2013 ; Land Economics Volume 89 ; 89 >
 
     }
