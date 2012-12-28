@@ -115,6 +115,25 @@
 
     {
       title <
+        name = BMC Biophysics ;
+        issn = 2046-1682 ;
+        issnl = 2046-1682
+      >
+
+      param[journal_issn] = 2046-1682
+      nondefparam[journal_code] = bmcbiophys
+
+      au < manifest ; exists ; 2008 ; BMC Biophysics Volume 1 ; 1 >
+      au < manifest ; exists ; 2009 ; BMC Biophysics Volume 2 ; 2 >
+      au < manifest ; exists ; 2010 ; BMC Biophysics Volume 3 ; 3 >
+      au < manifest ; exists ; 2011 ; BMC Biophysics Volume 4 ; 4 >
+      au < manifest ; exists ; 2012 ; BMC Biophysics Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; BMC Biophysics Volume 6 ; 6 >
+
+    }
+
+    {
+      title <
         name = BMC Biotechnology ;
         issn = 1472-6750 ;
         issnl = 1472-6750
@@ -843,6 +862,25 @@
 
     {
       title <
+        name = BMC Medical Genomics ;
+        issn = 1755-8794 ;
+        issnl = 1755-8794
+      >
+
+      param[journal_issn] = 1755-8794
+      nondefparam[journal_code] = bmcmedgenomics
+
+      au < manifest ; exists ; 2008 ; BMC Medical Genomics Volume 1 ; 1 >
+      au < manifest ; exists ; 2009 ; BMC Medical Genomics Volume 2 ; 2 >
+      au < manifest ; exists ; 2010 ; BMC Medical Genomics Volume 3 ; 3 >
+      au < manifest ; exists ; 2011 ; BMC Medical Genomics Volume 4 ; 4 >
+      au < manifest ; exists ; 2012 ; BMC Medical Genomics Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; BMC Medical Genomics Volume 6 ; 6 >
+
+    }
+
+    {
+      title <
         name = BMC Medical Imaging ;
         issn = 1471-2342 ;
         issnl = 1471-2342
@@ -891,6 +929,8 @@
 
     }
 
+
+
     {
       title <
         name = BMC Medical Research Methodology ;
@@ -913,6 +953,26 @@
       au < crawling ; exists ; 2010 ; BMC Medical Research Methodology Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; BMC Medical Research Methodology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Medical Research Methodology Volume 12 ; 12 >
+
+    }
+
+    {
+      title <
+        name = BMC Medical Physics ;
+        issn = 1756-6649 ;
+        issnl = 1756-6649
+      >
+
+      param[journal_issn] = 1756-6649
+      nondefparam[journal_code] = bmcmedphys
+      comment[0] = This journal started at start of 2008. Continuation of BMC Nuclear Medicine
+
+      au < manifest ; exists ; 2008 ; BMC Medical Physics Volume 8 ; 8 >
+      au < manifest ; exists ; 2009 ; BMC Medical Physics Volume 9 ; 9 >
+      au < manifest ; exists ; 2010 ; BMC Medical Physics Volume 10 ; 10 >
+      au < manifest ; exists ; 2011 ; BMC Medical Physics Volume 11 ; 11 >
+      au < manifest ; exists ; 2012 ; BMC Medical Physics Volume 12 ; 12 >
+      au < expected ; exists ; 2013 ; BMC Medical Physics Volume 13 ; 13 >
 
     }
 
@@ -1395,6 +1455,20 @@
 
     {
       title <
+        name = BMC Psychology ;
+        issn = 2050-7283 ;
+        issnl = 2050-7283
+      >
+
+      param[journal_issn] = 2050-7283
+      nondefparam[journal_code] = bmcpsychology
+
+      au < expected ; exists ; 2013 ; BMC Psychology Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = BMC Public Health ;
         issn = 1471-2458 ;
         issnl = 1471-2458
@@ -1440,6 +1514,25 @@
       au < crawling ; exists ; 2010 ; BMC Pulmonary Medicine Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; BMC Pulmonary Medicine Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Pulmonary Medicine Volume 12 ; 12 >
+
+    }
+
+    {
+      title <
+        name = BMC Research Notes ;
+        issn = 1756-0500 ;
+        issnl = 1756-0500
+      >
+
+      param[journal_issn] = 1756-0500
+      nondefparam[journal_code] = bmcresnotes
+
+      au < manifest ; exists ; 2008 ; BMC Research Notes Volume 1 ; 1 >
+      au < manifest ; exists ; 2009 ; BMC Research Notes Volume 2 ; 2 >
+      au < manifest ; exists ; 2010 ; BMC Research Notes Volume 3 ; 3 >
+      au < manifest ; exists ; 2011 ; BMC Research Notes Volume 4 ; 4 >
+      au < manifest ; exists ; 2012 ; BMC Research Notes Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; BMC Research Notes Volume 6 ; 6 >
 
     }
 
@@ -1592,7 +1685,21 @@
   
   {
     plugin = org.lockss.plugin.bmc.ClockssBioMedCentralPlugin
-    
+
+    {
+      title <
+        name = Acta Neuropathologica Communications ;
+        issn = 2051-5960 ;
+        issnl = 2051-5960
+      >
+
+      param[base_url] = http://www.actaneurocomms.org/
+      param[journal_issn] = 2051-5960
+
+      au < expected ; exists ; 2013 ; Acta Neuropathologica Communications Volume 1 ; 1 >
+
+    }
+
     {
       title <
         name = Acta Veterinaria Scandinavica ;
@@ -1690,6 +1797,60 @@
       au < released ; crawling ; 2010 ; Algorithms for Molecular Biology Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Algorithms for Molecular Biology Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Algorithms for Molecular Biology Volume 7 ; 7 >
+
+    }
+
+    {
+      title <
+        name = Allergy, Asthma & Clinical Immunology ;
+        issn = 1710-1492 ;
+        issnl = 1710-1492
+      >
+
+      param[base_url] = http://www.aacijournal.com/
+      param[journal_issn] = 1710-1492
+
+      au < manifest ; exists ; 2004-2005 ; Allergy, Asthma & Clinical Immunology Volume 1 ; 1 >
+      au < manifest ; exists ; 2006 ; Allergy, Asthma & Clinical Immunology Volume 2 ; 2 >
+      au < manifest ; exists ; 2007 ; Allergy, Asthma & Clinical Immunology Volume 3 ; 3 >
+      au < manifest ; exists ; 2008 ; Allergy, Asthma & Clinical Immunology Volume 4 ; 4 >
+      au < manifest ; exists ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 >
+      au < manifest ; exists ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 >
+      au < manifest ; exists ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 >
+      au < manifest ; exists ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 >
+      au < expected ; exists ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 >
+
+    }
+
+    {
+      title <
+        name = Alzheimer's Research & Therapy ;
+        issn = 1758-9193 ;
+        issnl = 1758-9193
+      >
+
+      param[base_url] = http://alzres.com/
+      param[journal_issn] = 1758-9193
+
+      au < manifest ; exists ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
+      au < manifest ; exists ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
+      au < manifest ; exists ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
+      au < manifest ; exists ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
+
+    }
+
+    {
+      title <
+        name = Animal Biotelemetry ;
+        issn = 2050-3385 ;
+        issnl = 2050-3385
+      >
+
+      param[base_url] = http://www.animalbiotelemetry.com/
+      param[journal_issn] = 2050-3385
+
+      au < expected ; exists ; 2013 ; Animal Biotelemetry Volume 1 ; 1 >
 
     }
 
@@ -1849,6 +2010,25 @@
 
     {
       title <
+        name = Asia Pacific Family Medicine ;
+        issn = 1447-056X ;
+        issnl = 1447-056X
+      >
+
+      param[base_url] = http://www.apfmj.com/
+      param[journal_issn] = 1447-056X
+
+      au < manifest ; exists ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
+      au < manifest ; exists ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
+      au < manifest ; exists ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
+      au < manifest ; exists ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
+      au < manifest ; exists ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
+      au < expected ; exists ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
+
+    }
+
+    {
+      title <
         name = Australia and New Zealand Health Policy ;
         issn = 1743-8462 ;
         issnl = 1743-8462
@@ -1870,6 +2050,20 @@
 
     {
       title <
+        name = Basic and Clinical Andrology ;
+        issn = 2051-4190 ;
+        issnl = 2051-4190
+      >
+
+      param[base_url] = http://www.bacandrology.com/
+      param[journal_issn] = 2051-4190
+
+      au < expected ; exists ; 2013 ; Basic and Clinical Andrology Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Behavioral and Brain Functions ;
         issn = 1744-9081 ;
         issnl = 1744-9081
@@ -1886,6 +2080,25 @@
       au < released ; crawling ; 2010 ; Behavioral and Brain Functions Volume 6 ; 6 >
       au < released ; crawling ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 >
+
+    }
+
+    {
+      title <
+        name = BioData Mining ;
+        issn = 1756-0381 ;
+        issnl = 1756-0381
+      >
+
+      param[base_url] = http://www.biodatamining.org/
+      param[journal_issn] = 1756-0381
+
+      au < manifest ; exists ; 2008 ; BioData Mining Volume 1 ; 1 >
+      au < manifest ; exists ; 2009 ; BioData Mining Volume 2 ; 2 >
+      au < manifest ; exists ; 2010 ; BioData Mining Volume 3 ; 3 >
+      au < manifest ; exists ; 2011 ; BioData Mining Volume 4 ; 4 >
+      au < manifest ; exists ; 2012 ; BioData Mining Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; BioData Mining Volume 6 ; 6 >
 
     }
 
@@ -1942,6 +2155,39 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
 
       au < exists ; exists ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Biology of Sex Differences ;
+        issn = 2042-6410 ;
+        issnl = 2042-6410
+      >
+
+      param[base_url] = http://www.bsd-journal.com/
+      param[journal_issn] = 2042-6410
+
+      au < manifest ; exists ; 2010 ; Biology of Sex Differences Volume 1 ; 1 >
+      au < manifest ; exists ; 2011 ; Biology of Sex Differences Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; Biology of Sex Differences Volume 4 ; 4 >
+
+    }
+
+    {
+
+      title <
+        name = Biomarker Research ;
+        issn = 2050-7771 ;
+        issnl = 2050-7771
+      >
+
+      param[base_url] = http://www.biomarkerres.org/
+      param[journal_issn] = 2050-7771
+
+      au < expected ; exists ; 2013 ; Biomarker Research Volume 1 ; 1 >
 
     }
 
@@ -2057,6 +2303,20 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Cancer & Metabolism ;
+        issn = 2049-3002 ;
+        issnl = 2049-3002
+      >
+
+      param[base_url] = http://www.cancerandmetabolism.com/
+      param[journal_issn] = 2049-3002
+
+      au < expected ; exists ; 2013 ; Cancer & Metabolism Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Cancer Cell International ;
         issn = 1475-2867 ;
         issnl = 1475-2867
@@ -2161,6 +2421,22 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2009 ; Cases Journal Volume 2 ; 2 >
       au < released ; crawling ; 2010 ; Cases Journal Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; Cases Journal Volume 4 ; 4 >
+
+    }
+
+    {
+      title <
+        name = Cell & Bioscience ;
+        issn = 2045-3701 ;
+        issnl = 2045-3701
+      >
+
+      param[base_url] = http://www.cellandbioscience.com/
+      param[journal_issn] = 2045-3701
+
+      au < manifest ; exists ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
+      au < manifest ; exists ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
+      au < expected ; exists ; 2013 ; Cell & Bioscience Volume 3 ; 3 >
 
     }
 
@@ -2358,6 +2634,22 @@ comment[bmr] = journal archive available, but no new volumes
     {
 
       title <
+        name = Clinical and Translational Allergy ;
+        issn = 2045-7022 ;
+        issnl = 2045-7022
+      >
+
+      param[base_url] = http://www.ctajournal.com/
+      param[journal_issn] = 2045-7022
+
+      au < manifest ; exists ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
+      au < manifest ; exists ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
+      au < expected ; exists ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
+
+    }
+
+    {
+      title <
         name = Clinical Epigenetics ;
         issn = 1868-7083 ;
         issnl = 1868-7083
@@ -2402,6 +2694,75 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < exists ; exists ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
+
+    }
+
+    {
+      title <
+        name = Comparative Hepatology ;
+        issn = 1476-5926 ;
+        issnl = 1476-5926
+      >
+
+      param[base_url] = http://www.comparative-hepatology.com/
+      param[journal_issn] = 1476-5926
+
+      au < manifest ; exists ; 2002 ; Comparative Hepatology Volume 1 ; 1 >
+      au < manifest ; exists ; 2003 ; Comparative Hepatology Volume 2 ; 2 >
+      au < manifest ; exists ; 2004 ; Comparative Hepatology Volume 3 ; 3 >
+      au < manifest ; exists ; 2005 ; Comparative Hepatology Volume 4 ; 4 >
+      au < manifest ; exists ; 2006 ; Comparative Hepatology Volume 5 ; 5 >
+      au < manifest ; exists ; 2007 ; Comparative Hepatology Volume 6 ; 6 >
+      au < manifest ; exists ; 2008 ; Comparative Hepatology Volume 7 ; 7 >
+      au < manifest ; exists ; 2009 ; Comparative Hepatology Volume 8 ; 8 >
+      au < manifest ; exists ; 2010 ; Comparative Hepatology Volume 9 ; 9 >
+      au < manifest ; exists ; 2011 ; Comparative Hepatology Volume 10 ; 10 >
+      au < manifest ; exists ; 2012 ; Comparative Hepatology Volume 11 ; 11 >
+      au < expected ; exists ; 2013 ; Comparative Hepatology Volume 12 ; 12 >
+
+    }
+
+    {
+      title <
+        name = Conflict and Health ;
+        issn = 1752-1505 ;
+        issnl = 1752-1505
+      >
+
+      param[base_url] = http://www.conflictandhealth.com/
+      param[journal_issn] = 1752-1505
+
+      au < manifest ; exists ; 2007 ; Conflict and Health Volume 1 ; 1 >
+      au < manifest ; exists ; 2008 ; Conflict and Health Volume 2 ; 2 >
+      au < manifest ; exists ; 2009 ; Conflict and Health Volume 3 ; 3 >
+      au < manifest ; exists ; 2010 ; Conflict and Health Volume 4 ; 4 >
+      au < manifest ; exists ; 2011 ; Conflict and Health Volume 5 ; 5 >
+      au < manifest ; exists ; 2012 ; Conflict and Health Volume 6 ; 6 >
+      au < expected ; exists ; 2013 ; Conflict and Health Volume 7 ; 7 >
+
+    }
+
+    {
+      title <
+        name = Cost Effectiveness and Resource Allocation ;
+        issn = 1478-7547 ;
+        issnl = 1478-7547
+      >
+
+      param[base_url] = http://www.resource-allocation.com/
+      param[journal_issn] = 1478-7547
+
+      au < manifest ; exists ; 2003 ; Cost Effectiveness and Resource Allocation Volume 1 ; 1 >
+      au < manifest ; exists ; 2004 ; Cost Effectiveness and Resource Allocation Volume 2 ; 2 >
+      au < manifest ; exists ; 2005 ; Cost Effectiveness and Resource Allocation Volume 3 ; 3 >
+      au < manifest ; exists ; 2006 ; Cost Effectiveness and Resource Allocation Volume 4 ; 4 >
+      au < manifest ; exists ; 2007 ; Cost Effectiveness and Resource Allocation Volume 5 ; 5 >
+      au < manifest ; exists ; 2008 ; Cost Effectiveness and Resource Allocation Volume 6 ; 6 >
+      au < manifest ; exists ; 2009 ; Cost Effectiveness and Resource Allocation Volume 7 ; 7 >
+      au < manifest ; exists ; 2010 ; Cost Effectiveness and Resource Allocation Volume 8 ; 8 >
+      au < manifest ; exists ; 2011 ; Cost Effectiveness and Resource Allocation Volume 9 ; 9 >
+      au < manifest ; exists ; 2012 ; Cost Effectiveness and Resource Allocation Volume 10 ; 10 >
+      au < expected ; exists ; 2013 ; Cost Effectiveness and Resource Allocation Volume 11 ; 11 >
 
     }
 
@@ -2471,6 +2832,25 @@ comment[bmr] = journal archive available, but no new volumes
     }
 
     {
+  
+    title < 
+      name = Diabetology & Metabolic Syndrome ;
+      issn = 1758-5996 ;
+      issnl = 1758-5996
+    >
+
+      param[base_url] = http://www.dmsjournal.com/
+      param[journal_issn] = 1758-5996
+
+      au < manifest ; exists ; 2009 ; Diabetology & Metabolic Syndrome Volume 1 ; 1 >
+      au < manifest ; exists ; 2010 ; Diabetology & Metabolic Syndrome Volume 2 ; 2 >
+      au < manifest ; exists ; 2011 ; Diabetology & Metabolic Syndrome Volume 3 ; 3 >
+      au < manifest ; exists ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; Diabetology & Metabolic Syndrome Volume 5 ; 5 >
+
+    }
+
+    {
       title <
         name = Diagnostic Pathology ;
         issn = 1746-1596 ;
@@ -2536,6 +2916,21 @@ comment[bmr] = journal archive available, but no new volumes
     }
 
     {
+
+      title < 
+        name = Environmental Evidence ;
+        issn = 2047-2382 ;
+        issnl = 2047-2382
+      >
+
+      param[base_url] = http://www.environmentalevidencejournal.org/
+      param[journal_issn] = 2047-2382
+
+      au < exists ; exists ; 2011-2012 ; Environmental Evidence Volume 1 ; 1 >
+
+    }
+
+    {
       title <
         name = Environmental Health ;
         issn = 1476-069X ;
@@ -2556,21 +2951,6 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; crawling ; 2010 ; Environmental Health Volume 9 ; 9 >
       au < crawling ; exists ; 2011 ; Environmental Health Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Environmental Health Volume 11 ; 11 >
-
-    }
-
-    {
-
-      title < 
-        name = Environmental Evidence ;
-        issn = 2047-2382 ;
-        issnl = 2047-2382
-      >
-
-      param[base_url] = http://www.environmentalevidencejournal.org/
-      param[journal_issn] = 2047-2382
-
-      au < exists ; exists ; 2011-2012 ; Environmental Evidence Volume 1 ; 1 >
 
     }
 
@@ -2597,7 +2977,25 @@ comment[bmr] = journal archive available, but no new volumes
     }
 
     {
+      title <
+        name = Epigenetics & Chromatin ;
+        issn = 1756-8935 ;
+        issnl = 1756-8935
+      >
 
+      param[base_url] = http://www.epigeneticsandchromatin.com/
+      param[journal_issn] = 1756-8935
+
+      au < manifest ; exists ; 2008 ; Epigenetics & Chromatin Volume 1 ; 1 >
+      au < manifest ; exists ; 2009 ; Epigenetics & Chromatin Volume 2 ; 2 >
+      au < manifest ; exists ; 2010 ; Epigenetics & Chromatin Volume 3 ; 3 >
+      au < manifest ; exists ; 2011 ; Epigenetics & Chromatin Volume 4 ; 4 >
+      au < manifest ; exists ; 2012 ; Epigenetics & Chromatin Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; Epigenetics & Chromatin Volume 6 ; 6 >
+
+    }
+
+    {
       title <
         name = The EPMA Journal ;
         issn = 1878-5077 ;
@@ -2614,6 +3012,74 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = European Journal of Medical Research ;
+        issn = 2047-783X ;
+        issnl = 2047-783X
+      >
+      
+      param[base_url] = http://www.eurjmedres.com/
+      param[journal_issn] = 2047-783X
+
+      au < manifest ; exists ; 2009 ; European Journal of Medical Research Volume 14 ; 14 >
+      au < manifest ; exists ; 2010 ; European Journal of Medical Research Volume 15 ; 15 >
+      au < manifest ; exists ; 2011 ; European Journal of Medical Research Volume 16 ; 16 >
+      au < manifest ; exists ; 2012 ; European Journal of Medical Research Volume 17 ; 17 >
+      au < expected ; exists ; 2013 ; European Journal of Medical Research Volume 18 ; 18 >
+
+    }
+
+    {
+      title <
+        name = EvoDevo ;
+        issn = 2041-9139 ;
+        issnl = 2041-9139
+      >
+      
+      param[base_url] = http://www.evodevojournal.com/
+      param[journal_issn] = 2041-9139
+
+      au < manifest ; exists ; 2010 ; EvoDevo Volume 1 ; 1 >
+      au < manifest ; exists ; 2011 ; EvoDevo Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; EvoDevo Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; EvoDevo Volume 4 ; 4 >
+
+    }
+
+    {
+      title <
+        name = Experimental & Translational Stroke Medicine ;
+        issn = 2040-7378 ;
+        issnl = 2040-7378
+      >
+      
+      param[base_url] = http://www.etsmjournal.com/
+      param[journal_issn] = 2040-7378
+
+      au < manifest ; exists ; 2009 ; Experimental & Translational Stroke Medicine Volume 1 ; 1 >
+      au < manifest ; exists ; 2010 ; Experimental & Translational Stroke Medicine Volume 2 ; 2 >
+      au < manifest ; exists ; 2011 ; Experimental & Translational Stroke Medicine Volume 3 ; 3 >
+      au < manifest ; exists ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; Experimental & Translational Stroke Medicine Volume 5 ; 5 >
+
+    }
+
+    {
+      title <
+        name = Experimental Hematology & Oncology ;
+        issn = 2162-3619 ;
+        issnl = 2162-3619
+      >
+      
+      param[base_url] = http://www.ehoonline.org/
+      param[journal_issn] = 2162-3619
+
+      au < manifest ; exists ; 2012 ; Experimental Hematology & Oncology Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; Experimental Hematology & Oncology Volume 2 ; 2 >
+
+    }
+
+    {
+      title <
         name = Extreme Physiology & Medicine ;
         issn = 2046-7648
       >
@@ -2622,6 +3088,40 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2046-7648
 
       au < exists ; exists ; 2012 ; Extreme Physiology & Medicine Volume 1 ; 1 >
+
+    }
+
+   {
+      title <
+        name = Fibrogenesis & Tissue Repair ;
+        issn = 1755-1536 ;
+        issnl = 1755-1536
+      >
+      
+      param[base_url] = http://www.fibrogenesis.com/
+      param[journal_issn] = 1755-1536
+
+      au < manifest ; exists ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 >
+      au < manifest ; exists ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
+      au < manifest ; exists ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
+      au < manifest ; exists ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
+      au < manifest ; exists ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 >
+
+    }
+
+    {
+      title <
+        name = Flavour ;
+        issn = 2044-7248 ;
+        issnl = 2044-7248
+      >
+      
+      param[base_url] = http://www.flavourjournal.com/
+      param[journal_issn] = 2044-7248
+
+      au < manifest ; exists ; 2012 ; Flavour Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; Flavour Volume 2 ; 2 >
 
     }
 
@@ -2688,6 +3188,64 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Genetics Selection Evolution ;
+        issn = 1297-9686 ;
+        issnl = 1297-9686
+      >
+
+      param[base_url] = http://www.gsejournal.org/
+      param[journal_issn] = 1297-9686
+
+      au < manifest ; exists ; 1969 ; Genetics Selection Evolution Volume 1 ; 1 >
+      au < manifest ; exists ; 1970 ; Genetics Selection Evolution Volume 2 ; 2 >
+      au < manifest ; exists ; 1971 ; Genetics Selection Evolution Volume 3 ; 3 >
+      au < manifest ; exists ; 1972 ; Genetics Selection Evolution Volume 4 ; 4 >
+      au < manifest ; exists ; 1973 ; Genetics Selection Evolution Volume 5 ; 5 >
+      au < manifest ; exists ; 1974 ; Genetics Selection Evolution Volume 6 ; 6 >
+      au < manifest ; exists ; 1975 ; Genetics Selection Evolution Volume 7 ; 7 >
+      au < manifest ; exists ; 1976 ; Genetics Selection Evolution Volume 8 ; 8 >
+      au < manifest ; exists ; 1977 ; Genetics Selection Evolution Volume 9 ; 9 >
+      au < manifest ; exists ; 1978 ; Genetics Selection Evolution Volume 10 ; 10 >
+      au < manifest ; exists ; 1979 ; Genetics Selection Evolution Volume 11 ; 11 >
+      au < manifest ; exists ; 1980 ; Genetics Selection Evolution Volume 12 ; 12 >
+      au < manifest ; exists ; 1981 ; Genetics Selection Evolution Volume 13 ; 13 >
+      au < manifest ; exists ; 1982 ; Genetics Selection Evolution Volume 14 ; 14 >
+      au < manifest ; exists ; 1983 ; Genetics Selection Evolution Volume 15 ; 15 >
+      au < manifest ; exists ; 1984 ; Genetics Selection Evolution Volume 16 ; 16 >
+      au < manifest ; exists ; 1985 ; Genetics Selection Evolution Volume 17 ; 17 >
+      au < manifest ; exists ; 1986 ; Genetics Selection Evolution Volume 18 ; 18 >
+      au < manifest ; exists ; 1987 ; Genetics Selection Evolution Volume 19 ; 19 >
+      au < manifest ; exists ; 1988 ; Genetics Selection Evolution Volume 20 ; 20 >
+      au < manifest ; exists ; 1989 ; Genetics Selection Evolution Volume 21 ; 21 >
+      au < manifest ; exists ; 1990 ; Genetics Selection Evolution Volume 22 ; 22 >
+      au < manifest ; exists ; 1991 ; Genetics Selection Evolution Volume 23 ; 23 >
+      au < manifest ; exists ; 1992 ; Genetics Selection Evolution Volume 24 ; 24 >
+      au < manifest ; exists ; 1993 ; Genetics Selection Evolution Volume 25 ; 25 >
+      au < manifest ; exists ; 1994 ; Genetics Selection Evolution Volume 26 ; 26 >
+      au < manifest ; exists ; 1995 ; Genetics Selection Evolution Volume 27 ; 27 >
+      au < manifest ; exists ; 1996 ; Genetics Selection Evolution Volume 28 ; 28 >
+      au < manifest ; exists ; 1997 ; Genetics Selection Evolution Volume 29 ; 29 >
+      au < manifest ; exists ; 1998 ; Genetics Selection Evolution Volume 30 ; 30 >
+      au < manifest ; exists ; 1999 ; Genetics Selection Evolution Volume 31 ; 31 >
+      au < manifest ; exists ; 2000 ; Genetics Selection Evolution Volume 32 ; 32 >
+      au < manifest ; exists ; 2001 ; Genetics Selection Evolution Volume 33 ; 33 >
+      au < manifest ; exists ; 2002 ; Genetics Selection Evolution Volume 34 ; 34 >
+      au < manifest ; exists ; 2003 ; Genetics Selection Evolution Volume 35 ; 35 >
+      au < manifest ; exists ; 2004 ; Genetics Selection Evolution Volume 36 ; 36 >
+      au < manifest ; exists ; 2005 ; Genetics Selection Evolution Volume 37 ; 37 >
+      au < manifest ; exists ; 2006 ; Genetics Selection Evolution Volume 38 ; 38 >
+      au < manifest ; exists ; 2007 ; Genetics Selection Evolution Volume 39 ; 39 >
+      au < manifest ; exists ; 2008 ; Genetics Selection Evolution Volume 40 ; 40 >
+      au < manifest ; exists ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 >
+      au < manifest ; exists ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 >
+      au < manifest ; exists ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
+      au < manifest ; exists ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
+      au < expected ; exists ; 2013 ; Genetics Selection Evolution Volume 45 ; 45 >
+
+    }
+
+    {
+      title <
         name = Genome Biology ;
         issn = 1465-6906 ;
         issnl = 1465-6906
@@ -2727,7 +3285,25 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2012 ; Genome Integrity Volume 3 ; 3 >
       
     }
-      
+
+    {
+      title <
+        name = Genome Medicine ;
+        issn = 1756-994X ;
+        issnl = 1756-994X
+      >
+
+      param[base_url] = http://genomemedicine.com/
+      param[journal_issn] = 1756-994X
+
+      au < exists ; exists ; 2009 ; Genome Medicine Volume 1 ; 1 >
+      au < exists ; exists ; 2010 ; Genome Medicine Volume 2 ; 2 >
+      au < exists ; exists ; 2011 ; Genome Medicine Volume 3 ; 3 >
+      au < exists ; exists ; 2012 ; Genome Medicine Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; Genome Medicine Volume 5 ; 5 >
+
+    }
+
     {
       title <
         name = Geochemical Transactions ;
@@ -2756,6 +3332,21 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = GigaScience ;
+        issn = 2047-217X ;
+        issnl = 2047-217X
+      >
+
+      param[base_url] = http://www.gigasciencejournal.com/
+      param[journal_issn] = 2047-217X
+
+      au < manifest ; exists ; 2012 ; GigaScience Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; GigaScience Volume 2 ; 2 >
+
+    }
+
+    {
+      title <
         name = Globalization and Health ;
         issn = 1744-8603 ;
         issnl = 1744-8603
@@ -2772,6 +3363,24 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; crawling ; 2010 ; Globalization and Health Volume 6 ; 6 >
       au < crawling ; exists ; 2011 ; Globalization and Health Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Globalization and Health Volume 8 ; 8 >
+
+    }
+
+    {
+      title <
+        name = Gut Pathogens ;
+        issn = 1757-4749 ;
+        issnl = 1757-4749
+      >
+
+      param[base_url] = http://www.gutpathogens.com/
+      param[journal_issn] = 1757-4749
+
+      au < manifest ; exists ; 2009 ; Gut Pathogens Volume 1 ; 1 >
+      au < manifest ; exists ; 2010 ; Gut Pathogens Volume 2 ; 2 >
+      au < manifest ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 >
+      au < manifest ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; Gut Pathogens Volume 5 ; 5 >
 
     }
 
@@ -2843,6 +3452,20 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Health Information Science and Systems ;
+        issn = 2047-2501 ;
+        issnl = 2047-2501
+      >
+
+      param[base_url] = http://www.hissjournal.com/
+      param[journal_issn] = 2047-2501
+
+      au < expected ; exists ; 2013 ; Health Information Science and Systems Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Health Research Policy and Systems ;
         issn = 1478-4505 ;
         issnl = 1478-4505
@@ -2867,7 +3490,47 @@ comment[bmr] = journal archive available, but no new volumes
     }
 
     {
+      title <
+        name = Hereditary Cancer in Clinical Practice ;
+        issn = 1897-4287 ;
+        issnl = 1897-4287
+      >
 
+      param[base_url] = http://www.hccpjournal.com/
+      param[journal_issn] = 1897-4287
+
+      au < manifest ; exists ; 2003 ; Hereditary Cancer in Clinical Practice Volume 1 ; 1 >
+      au < manifest ; exists ; 2004 ; Hereditary Cancer in Clinical Practice Volume 2 ; 2 >
+      au < manifest ; exists ; 2005 ; Hereditary Cancer in Clinical Practice Volume 3 ; 3 >
+      au < manifest ; exists ; 2006 ; Hereditary Cancer in Clinical Practice Volume 4 ; 4 >
+      au < manifest ; exists ; 2007 ; Hereditary Cancer in Clinical Practice Volume 5 ; 5 >
+      au < manifest ; exists ; 2008 ; Hereditary Cancer in Clinical Practice Volume 6 ; 6 >
+      au < manifest ; exists ; 2009 ; Hereditary Cancer in Clinical Practice Volume 7 ; 7 >
+      au < manifest ; exists ; 2010 ; Hereditary Cancer in Clinical Practice Volume 8 ; 8 >
+      au < manifest ; exists ; 2011 ; Hereditary Cancer in Clinical Practice Volume 9 ; 9 >
+      au < manifest ; exists ; 2012 ; Hereditary Cancer in Clinical Practice Volume 10 ; 10 >
+      au < expected ; exists ; 2013 ; Hereditary Cancer in Clinical Practice Volume 11 ; 11 >
+
+    }
+
+    {
+      title <
+        name = Herpesviridae ;
+        issn = 2042-4280 ;
+        issnl = 2042-4280
+      >
+
+      param[base_url] = http://www.herpesviridae.org/
+      param[journal_issn] = 2042-4280
+
+      au < manifest ; exists ; 2010 ; Herpesviridae Volume 1 ; 1 >
+      au < manifest ; exists ; 2011 ; Herpesviridae Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; Herpesviridae Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; Herpesviridae Volume 4 ; 4 >
+
+    }
+
+    {
       title <
         name = Human Genomics ;
         issn = 1479-7364 ;
@@ -3153,6 +3816,23 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Investigative Genetics ;
+        issn = 2041-2223 ;
+        issnl = 2041-2223
+      >
+
+      param[base_url] = http://www.investigativegenetics.com/
+      param[journal_issn] = 2041-2223
+
+      au < manifest ; exists ; 2010 ; Investigative Genetics Volume 1 ; 1 >
+      au < manifest ; exists ; 2011 ; Investigative Genetics Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; Investigative Genetics Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; Investigative Genetics Volume 4 ; 4 >
+
+    }
+
+    {
+      title <
         name = Iranian Journal of Environmental Health Science & Engineering ;
         eissn = 1735-1979
       >
@@ -3202,7 +3882,39 @@ comment[bmr] = journal archive available, but no new volumes
     }
 
     {
+      title <
+        name = Italian Journal of Pediatrics ;
+        issn = 1824-7288 ;
+        issnl = 1824-7288
+      >
 
+      param[base_url] = http://www.ijponline.net/
+      param[journal_issn] = 1824-7288
+
+      au < manifest ; exists ; 2008 ; Italian Journal of Pediatrics Volume 34 ; 34 >
+      au < manifest ; exists ; 2009 ; Italian Journal of Pediatrics Volume 35 ; 35 >
+      au < manifest ; exists ; 2010 ; Italian Journal of Pediatrics Volume 36 ; 36 >
+      au < manifest ; exists ; 2011 ; Italian Journal of Pediatrics Volume 37 ; 37 >
+      au < manifest ; exists ; 2012 ; Italian Journal of Pediatrics Volume 38 ; 38 >
+      au < expected ; exists ; 2013 ; Italian Journal of Pediatrics Volume 39 ; 39 >
+
+    }
+
+    {
+      title <
+        name = Journal for ImmunoTherapy of Cancer ;
+        issn = 2051-1426 ;
+        issnl = 2051-1426
+      >
+
+      param[base_url] = http://www.immunotherapyofcancer.org/
+      param[journal_issn] = 2051-1426
+
+      au < expected ; exists ; 2013 ; Journal for ImmunoTherapy of Cancer Volume 1 ; 1 >
+
+    }
+
+    {
       title <
         name = Journal of Animal Science and Biotechnology ;
         issn = 2049-1891 ;
@@ -3290,6 +4002,55 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2007 ; Journal of Biomedical Discovery and Collaboration Volume 2 ; 2 >
       au < crawling ; exists ; 2008 ; Journal of Biomedical Discovery and Collaboration Volume 3 ; 3 >
       au < crawling ; exists ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 >
+
+    }
+
+    {
+      title <
+        name = Journal of Biomedical Science ;
+        issn = 1749-7221 ;
+        issnl = 1749-7221
+      >
+
+      param[base_url] = http://www.jbiomedsci.com/
+      param[journal_issn] = 1749-7221
+
+      au < manifest ; exists ; 2009 ; Journal of Biomedical Science Volume 16 ; 16 >
+      au < manifest ; exists ; 2010 ; Journal of Biomedical Science Volume 17 ; 17 >
+      au < manifest ; exists ; 2011 ; Journal of Biomedical Science Volume 18 ; 18 >
+      au < manifest ; exists ; 2012 ; Journal of Biomedical Science Volume 19 ; 19 >
+      au < expected ; exists ; 2013 ; Journal of Biomedical Science Volume 20 ; 20 >
+
+    }
+
+    {
+      title <
+        name = Journal of Biomedical Semantics ;
+        issn = 2041-1480 ;
+        issnl = 2041-1480
+      >
+
+      param[base_url] = http://www.jbiomedsem.com/
+      param[journal_issn] = 2041-1480
+
+      au < manifest ; exists ; 2010 ; Journal of Biomedical Semantics Volume 1 ; 1 >
+      au < manifest ; exists ; 2011 ; Journal of Biomedical Semantics Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; Journal of Biomedical Semantics Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; Journal of Biomedical Semantics Volume 4 ; 4 >
+
+    }
+
+    {
+      title <
+        name = Journal of Bioscience and Medicine ;
+        issn = 2161-2625 ;
+        issnl = 2161-2625
+      >
+
+      param[base_url] = http://www.jbioscimed.com/
+      param[journal_issn] = 2161-2625
+
+      au < expected ; exists ; 2013 ; Journal of Bioscience and Medicine Volume 1 ; 1 >
 
     }
 
@@ -3414,6 +4175,20 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Journal of Eating Disorders ;
+        issn = 2050-2974 ;
+        issnl = 2050-2974
+      >
+
+      param[base_url] = http://www.jeatdisord.com/
+      param[journal_issn] = 2050-2974
+
+      au < expected ; exists ; 2013 ; Journal of Eating Disorders Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Journal of Ethnobiology and Ethnomedicine ;
         issn = 1746-4269 ;
         issnl = 1746-4269
@@ -3448,6 +4223,24 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of Experimental & Clinical Cancer Research Volume 29 ; 29 >
       au < crawling ; exists ; 2011 ; Journal of Experimental & Clinical Cancer Research Volume 30 ; 30 >
       au < crawling ; exists ; 2012 ; Journal of Experimental & Clinical Cancer Research Volume 31 ; 31 >
+
+    }
+
+    {
+      title <
+        name = Journal of Foot and Ankle Research ;
+        issn = 1757-1146 ;
+        issnl = 1757-1146
+      >
+
+      param[base_url] = http://www.jfootankleres.com/
+      param[journal_issn] = 1757-1146
+
+      au < manifest ; exists ; 2008 ; Journal of Foot and Ankle Research Volume 1 ; 1 >
+      au < manifest ; exists ; 2009 ; Journal of Foot and Ankle Research Volume 2 ; 2 >
+      au < manifest ; exists ; 2010 ; Journal of Foot and Ankle Research Volume 3 ; 3 >
+      au < manifest ; exists ; 2011 ; Journal of Foot and Ankle Research Volume 4 ; 4 >
+      au < manifest ; exists ; 2012 ; Journal of Foot and Ankle Research Volume 5 ; 5 >
 
     }
 
@@ -3515,6 +4308,39 @@ comment[bmr] = journal archive available, but no new volumes
       
     }
 
+    {
+      title <
+        name = Journal of Medical Case Reports ;
+        issn = 1752-1947 ;
+        issnl = 1752-1947
+      >
+
+      param[base_url] = http://www.jmedicalcasereports.com/
+      param[journal_issn] = 1752-1947
+
+      au < manifest ; exists ; 2007 ; Journal of Medical Case Reports Volume 1 ; 1 >
+      au < manifest ; exists ; 2008 ; Journal of Medical Case Reports Volume 2 ; 2 >
+      au < manifest ; exists ; 2009 ; Journal of Medical Case Reports Volume 3 ; 3 >
+      au < manifest ; exists ; 2010 ; Journal of Medical Case Reports Volume 4 ; 4 >
+      au < manifest ; exists ; 2011 ; Journal of Medical Case Reports Volume 5 ; 5 >
+      au < manifest ; exists ; 2012 ; Journal of Medical Case Reports Volume 6 ; 6 >
+      au < expected ; exists ; 2013 ; Journal of Medical Case Reports Volume 7 ; 7 >
+
+    }
+
+    {
+      title <
+        name = Journal of Molecular Psychiatry;
+        issn = 2049-9256 ;
+        issnl = 2049-9256
+      >
+
+      param[base_url] = http://www.jmolecularpsychiatry.com/
+      param[journal_issn] = 2049-9256
+
+      au < expected ; exists ; 2013 ; Journal of Molecular Psychiatry Volume 1 ; 1 >
+
+    }
 
     {
       title <
@@ -3699,6 +4525,25 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Journal of Ovarian Research ;
+        issn = 1757-2215 ;
+        issnl = 1757-2215
+      >
+
+      param[base_url] = http://www.ovarianresearch.com/
+      param[journal_issn] = 1757-2215
+
+      au < manifest ; exists ; 2008 ; Journal of Ovarian Research Volume 1 ; 1 >
+      au < manifest ; exists ; 2009 ; Journal of Ovarian Research Volume 2 ; 2 >
+      au < manifest ; exists ; 2010 ; Journal of Ovarian Research Volume 3 ; 3 >
+      au < manifest ; exists ; 2011 ; Journal of Ovarian Research Volume 4 ; 4 >
+      au < manifest ; exists ; 2012 ; Journal of Ovarian Research Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; Journal of Ovarian Research Volume 6 ; 6 >
+
+    }
+
+    {
+      title <
         name = Journal of Physiological Anthropology ;
         issn = 1880-6805 ;
         issnl = 1880-6805
@@ -3730,6 +4575,20 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of the International Society of Sports Nutrition Volume 7 ; 7 >
       au < crawling ; exists ; 2011 ; Journal of the International Society of Sports Nutrition Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Journal of the International Society of Sports Nutrition Volume 9 ; 9 >
+
+    }
+
+    {
+      title <
+        name = Journal of Therapeutic Ultrasound ;
+        issn = 2050-5736 ;
+        issnl = 2050-5736
+      >
+
+      param[base_url] = http://www.jtultrasound.com/
+      param[journal_issn] = 2050-5736
+
+      au < expected ; exists ; 2013 ; Journal of Therapeutic Ultrasound Volume 1 ; 1 >
 
     }
 
@@ -3772,6 +4631,20 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of Trauma Management & Outcomes Volume 4 ; 4 >
       au < crawling ; exists ; 2011 ; Journal of Trauma Management & Outcomes Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Journal of Trauma Management & Outcomes Volume 6 ; 6 >
+
+    }
+
+    {
+      title <
+        name = Journal of Venomous Animals and Toxins including Tropical Diseases ;
+        issn = 1678-9199 ;
+        issnl = 1678-9199
+      >
+
+      param[base_url] = http://www.jvat.org/
+      param[journal_issn] = 1678-9199
+
+      au < expected ; exists ; 2013 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 1 ; 1 >
 
     }
 
@@ -3890,6 +4763,53 @@ comment[bmr] = journal archive available, but no new volumes
 
     }
 
+    {
+      title <
+        name = Microbiome ;
+        issn = 2049-2618 ;
+        issnl = 2049-2618
+      >
+
+      param[base_url] = http://www.microbiomejournal.com/
+      param[journal_issn] = 2049-2618
+
+      au < expected ; exists ; 2013 ; Microbiome Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Mobile DNA ;
+        issn = 1759-8753 ;
+        issnl = 1759-8753
+      >
+
+      param[base_url] = http://www.mobilednajournal.com/
+      param[journal_issn] = 1759-8753
+
+      au < manifest ; exists ; 2010 ; Mobile DNA Volume 1 ; 1 >
+      au < manifest ; exists ; 2011 ; Mobile DNA Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; Mobile DNA Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; Mobile DNA Volume 4 ; 4 >
+
+    }
+
+    {
+      title <
+        name = Molecular Autism ;
+        issn = 2040-2392 ;
+        issnl = 2040-2392
+      >
+
+      param[base_url] = http://www.molecularautism.com/
+      param[journal_issn] = 2040-2392
+
+      au < manifest ; exists ; 2010 ; Molecular Autism Volume 1 ; 1 >
+      au < manifest ; exists ; 2011 ; Molecular Autism Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; Molecular Autism Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; Molecular Autism Volume 4 ; 4 >
+
+    }
 
     {
       title <
@@ -3994,6 +4914,20 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title < 
+      name = Movement Ecology ;
+      issn = 2051-3933 ;
+      issnl = 2051-3933
+    >
+
+      param[base_url] = http://www.movementecologyjournal.com/
+      param[journal_issn] = 2051-3933
+
+      au < expected ; exists ; 2013 ; Movement Ecology Volume 1 ; 1 >
+
+    }
+
+    {
+      title < 
       name = Multidisciplinary Respiratory Medicine ;
       issn = 2049-6958 ;
       issnl = 2049-6958
@@ -4049,6 +4983,20 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Neuroglia ;
+        issn = 2050-3997 ;
+        issnl = 2050-3997
+      >
+
+      param[base_url] = http://www.neurogliajournal.com/
+      param[journal_issn] = 2050-3997
+
+      au < expected ; exists ; 2013 ; Neuroglia Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Nutrition & Metabolism ;
         issn = 1743-7075 ;
         issnl = 1743-7075
@@ -4091,6 +5039,20 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; crawling ; 2011 ; Nutrition Journal Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Nutrition Journal Volume 11 ; 11 >
       
+    }
+
+    {
+      title <
+        name = Open Network Biology ;
+        issn = 2046-7826 ;
+        issnl = 2046-7826
+      >
+
+      param[base_url] = http://www.opennetworkbiology.com/
+      param[journal_issn] = 2046-7826
+
+      au < expected ; exists ; 2013 ; Open Network Biology Volume 1 ; 1 >
+
     }
 
     {
@@ -4336,6 +5298,20 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Regenerative Medicine Research ;
+        issn = 2050-490X ;
+        issnl = 2050-490X
+      >
+
+      param[base_url] = http://www.regenmedres.com
+      param[journal_issn] = 2050-490X
+
+      au < expected ; exists ; 2013 ; Regenerative Medicine Research Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Reproductive Biology and Endocrinology ;
         issn = 1477-7827 ;
         issnl = 1477-7827
@@ -4376,6 +5352,33 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Reproductive Health Volume 7 ; 7 >
       au < released ; crawling ; 2011 ; Reproductive Health Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Reproductive Health Volume 9 ; 9 >
+
+    }
+
+    {
+      title <
+        name = Respiratory Research ;
+        issn = 1465-9921 ;
+        issnl = 1465-9921
+      >
+
+      param[base_url] = http://respiratory-research.com/
+      param[journal_issn] = 1465-9921
+
+      au < manifest ; exists ; 2000 ; Respiratory Research Volume 1 ; 1 >
+      au < manifest ; exists ; 2001 ; Respiratory Research Volume 2 ; 2 >
+      au < manifest ; exists ; 2002 ; Respiratory Research Volume 3 ; 3 >
+      au < manifest ; exists ; 2003 ; Respiratory Research Volume 4 ; 4 >
+      au < manifest ; exists ; 2004 ; Respiratory Research Volume 5 ; 5 >
+      au < manifest ; exists ; 2005 ; Respiratory Research Volume 6 ; 6 >
+      au < manifest ; exists ; 2006 ; Respiratory Research Volume 7 ; 7 >
+      au < manifest ; exists ; 2007 ; Respiratory Research Volume 8 ; 8 >
+      au < manifest ; exists ; 2008 ; Respiratory Research Volume 9 ; 9 >
+      au < manifest ; exists ; 2009 ; Respiratory Research Volume 10 ; 10 >
+      au < manifest ; exists ; 2010 ; Respiratory Research Volume 11 ; 11 >
+      au < manifest ; exists ; 2011 ; Respiratory Research Volume 12 ; 12 >
+      au < manifest ; exists ; 2012 ; Respiratory Research Volume 13 ; 13 >
+      au < expected ; exists ; 2013 ; Respiratory Research Volume 14 ; 14 >
 
     }
 
@@ -4425,6 +5428,25 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine  ;
+        issn = 1757-7241 ;
+        issnl = 1757-7241
+      >
+
+      param[base_url] = http://www.sjtrem.com/
+      param[journal_issn] = 1757-7241
+
+      au < manifest ; exists ; 2008 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 16 ; 16 >
+      au < manifest ; exists ; 2009 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 17 ; 17 >
+      au < manifest ; exists ; 2010 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 18 ; 18 >
+      au < manifest ; exists ; 2011 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 19 ; 19 >
+      au < manifest ; exists ; 2012 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 20 ; 20 >
+      au < expected ; exists ; 2013 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 21 ; 21 >
+
+    }
+
+    {
+      title <
         name = Scoliosis ;
         issn = 1748-7161 ;
         issnl = 1748-7161
@@ -4445,6 +5467,39 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Silence ;
+        issn = 1751-0473 ;
+        issnl = 1751-0473
+      >
+
+      param[base_url] = http://www.silencejournal.com/
+      param[journal_issn] = 1751-0473
+
+      au < manifest ; exists ; 2010 ; Silence Volume 1 ; 1 >
+      au < manifest ; exists ; 2011 ; Silence Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; Silence Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; Silence Volume 4 ; 4 >
+
+    }
+
+    {
+      title <
+        name = Skeletal Muscle ;
+        issn = 2044-5040 ;
+        issnl = 2044-5040
+      >
+
+      param[base_url] = http://www.skeletalmusclejournal.com/
+      param[journal_issn] = 2044-5040
+
+      au < manifest ; exists ; 2011 ; Skeletal Muscle Volume 1 ; 1 >
+      au < manifest ; exists ; 2012 ; Skeletal Muscle Volume 2 ; 2 >
+      au < expected ; exists ; 2013 ; Skeletal Muscle Volume 3 ; 3 >
+
+    }
+
+    {
+      title <
         name = Source Code for Biology and Medicine ;
         issn = 1751-0473 ;
         issnl = 1751-0473
@@ -4460,6 +5515,41 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Source Code for Biology and Medicine Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Source Code for Biology and Medicine Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 >
+
+    }
+
+    {
+      title <
+        name = Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology ;
+        issn = 1758-2555 ;
+        issnl = 1758-2555
+      >
+
+      param[base_url] = http://www.substanceabusepolicy.com/
+      param[journal_issn] = 1758-2555
+
+      au < manifest ; exists ; 2009 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
+      au < manifest ; exists ; 2010 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
+      au < manifest ; exists ; 2011 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
+      au < manifest ; exists ; 2012 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 5 ; 5 >
+
+    }
+
+    {
+      title <
+        name = Stem Cell Research & Therapy ;
+        issn = 1757-6512 ;
+        issnl = 1757-6512
+      >
+
+      param[base_url] = http://stemcellres.com/
+      param[journal_issn] = 1757-6512
+
+      au < exists ; exists ; 2010 ; Stem Cell Research & Therapy Volume 1 ; 1 >
+      au < exists ; exists ; 2011 ; Stem Cell Research & Therapy Volume 2 ; 2 >
+      au < exists ; exists ; 2012 ; Stem Cell Research & Therapy Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; Stem Cell Research & Therapy Volume 4 ; 4 >
 
     }
 
@@ -4544,7 +5634,47 @@ comment[bmr] = journal archive available, but no new volumes
     }
 
     {
+      title <
+        name = Thyroid Research ;
+        issn = 1756-6614 ;
+        issnl = 1756-6614
+      >
 
+      param[base_url] = http://www.thyroidresearchjournal.com/
+      param[journal_issn] = 1756-6614
+
+      au < manifest ; exists ; 2008 ; Thyroid Research Volume 1 ; 1 >
+      au < manifest ; exists ; 2009 ; Thyroid Research Volume 2 ; 2 >
+      au < manifest ; exists ; 2010 ; Thyroid Research Volume 3 ; 3 >
+      au < manifest ; exists ; 2011 ; Thyroid Research Volume 4 ; 4 >
+      au < manifest ; exists ; 2012 ; Thyroid Research Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; Thyroid Research Volume 6 ; 6 >
+
+    }
+
+    {
+      title <
+        name = Tobacco Induced Diseases ;
+        issn = 1617-9625 ;
+        issnl = 1617-9625
+      >
+
+      param[base_url] = http://www.tobaccoinduceddiseases.com/
+      param[journal_issn] = 1617-9625
+
+      au < manifest ; exists ; 2002-2003 ; Tobacco Induced Diseases Volume 1 ; 1 >
+      au < manifest ; exists ; 2004 ; Tobacco Induced Diseases Volume 2 ; 2 >
+      au < manifest ; exists ; 2005-2007 ; Tobacco Induced Diseases Volume 3 ; 3 >
+      au < manifest ; exists ; 2008 ; Tobacco Induced Diseases Volume 4 ; 4 >
+      au < manifest ; exists ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 >
+      au < manifest ; exists ; 2010 ; Tobacco Induced Diseases Volume 6 ; 6 >
+      au < manifest ; exists ; 2011 ; Tobacco Induced Diseases Volume 7 ; 7 >
+      au < manifest ; exists ; 2012 ; Tobacco Induced Diseases Volume 8 ; 8 >
+      au < expected ; exists ; 2013 ; Tobacco Induced Diseases Volume 9 ; 9 >
+
+    }
+
+    {
       title <
         name = Translational Neurodegeneration ;
         issn = 2047-9158 ;
@@ -4601,6 +5731,24 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Vascular Cell ;
+        issn = 2045-824X ;
+        issnl = 2045-824X
+      >
+      
+      param[base_url] = http://www.vascularcell.com/
+      param[journal_issn] = 2045-824X
+
+      au < manifest ; exists ; 2009 ; Vascular Cell Volume 1 ; 1 >
+      au < manifest ; exists ; 2010 ; Vascular Cell Volume 2 ; 2 >
+      au < manifest ; exists ; 2011 ; Vascular Cell Volume 3 ; 3 >
+      au < manifest ; exists ; 2012 ; Vascular Cell Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; Vascular Cell Volume 5 ; 5 >
+
+    }
+
+    {
+      title <
         name = Veterinary Research ;
         issn = 1297-9716 ;
         issnl = 1297-9716
@@ -4611,6 +5759,20 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; crawling ; 2011 ; Veterinary Research Volume 42 ; 42 >
       au < crawling ; exists ; 2012 ; Veterinary Research Volume 43 ; 43 >
+
+    }
+
+    {
+      title <
+        name = Video Journal of Endoscopic Surgery and Interventional Techniques ;
+        issn = 2050-7410 ;
+        issnl = 2050-7410
+      >
+
+      param[base_url] = http://www.vjoes.org/
+      param[journal_issn] = 2050-7410
+
+      au < expected ; exists ; 2013 ; Video Journal of Endoscopic Surgery and Interventional Techniques Volume 1 ; 1 >
 
     }
 
@@ -4633,6 +5795,20 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Virology Journal Volume 7 ; 7 >      
       au < testing ; exists ; 2011 ; Virology Journal Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Virology Journal Volume 9 ; 9>
+
+    }
+
+    {
+      title <
+        name = World Allergy Organization Journal ;
+        issn = 1939-4551 ;
+        issnl = 1939-4551
+      >
+
+      param[base_url] = http://new.waojournal.org/
+      param[journal_issn] = 1939-4551
+
+      au < expected ; exists ; 2013 ; World Allergy Organization Journal Volume 1 ; 1 >
 
     }
 
