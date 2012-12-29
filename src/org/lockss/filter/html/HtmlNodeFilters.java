@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.20 2011-09-14 05:03:07 tlipkis Exp $
+ * $Id: HtmlNodeFilters.java,v 1.21 2012-12-29 04:04:25 pgust Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.html;
 
 import java.io.*;
-import java.util.regex.*;
 
 import org.htmlparser.*;
 import org.htmlparser.nodes.*;
@@ -55,6 +54,12 @@ public class HtmlNodeFilters {
 
   /** No instances */
   private HtmlNodeFilters() {
+  }
+
+  /** Create a NodeFilter that matches tags. Equivalant to
+   * <pre>new TagNameFilter(tag)</pre> */
+  public static NodeFilter tag(String tag) {
+    return new TagNameFilter(tag);
   }
 
   /** Create a NodeFilter that matches tags with a specified tagname and
