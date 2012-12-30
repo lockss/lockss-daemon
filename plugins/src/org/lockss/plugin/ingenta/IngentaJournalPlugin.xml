@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -53,7 +53,6 @@
     <list>
       <string>1,&quot;^https?://(%s|%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host, api_url_host, graphics_url_host</string>
       <string>4,&quot;^(%s|%s|%s)&quot;, base_url, api_url, graphics_url</string>
-      <string>1,&quot;^(%s|%s)content/%s\?format=lockss&amp;volume=%s$&quot;, base_url, api_url, journal_issn, volume_name</string>
       <string>2,&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}$&quot;, api_url, publisher_id, journal_id, volume_name</string>
       <string>2,&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}/.{8}$&quot;, api_url, publisher_id, journal_id, volume_name</string>
       <string>2,&quot;^(%s|%s)content/%s/%s/[0-9]{4}/0*%s/.*(/trial|/citations|\?format=rss)$&quot;, base_url, api_url, publisher_id, journal_id, volume_name</string>
@@ -172,13 +171,8 @@
     <string>org.lockss.plugin.ingenta.IngentaUrlNormalizer</string>
   </entry>
   <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;DublinCore</string>
-        <string>org.lockss.plugin.ingenta.IngentaHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaHtmlLinkRewriterFactory</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
@@ -193,5 +187,14 @@
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.ingenta.IngentaArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.ingenta.IngentaHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
 </map>
