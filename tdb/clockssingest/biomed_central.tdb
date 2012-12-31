@@ -4009,12 +4009,12 @@ comment[bmr] = journal archive available, but no new volumes
     {
       title <
         name = Journal of Biomedical Science ;
-        issn = 1749-7221 ;
-        issnl = 1749-7221
+        issn = 1423-0127 ;
+        issnl = 1423-0127
       >
 
       param[base_url] = http://www.jbiomedsci.com/
-      param[journal_issn] = 1749-7221
+      param[journal_issn] = 1423-0127
 
       au < manifest ; exists ; 2009 ; Journal of Biomedical Science Volume 16 ; 16 >
       au < manifest ; exists ; 2010 ; Journal of Biomedical Science Volume 17 ; 17 >
@@ -5469,12 +5469,12 @@ comment[bmr] = journal archive available, but no new volumes
     {
       title <
         name = Silence ;
-        issn = 1751-0473 ;
-        issnl = 1751-0473
+        issn = 1758-907X ;
+        issnl = 1758-907X
       >
 
       param[base_url] = http://www.silencejournal.com/
-      param[journal_issn] = 1751-0473
+      param[journal_issn] = 1758-907X
 
       au < manifest ; exists ; 2010 ; Silence Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; Silence Volume 2 ; 2 >
