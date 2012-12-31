@@ -2269,6 +2269,7 @@
     au < manifest ; 2010 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 4 ; 4 > 
 
   }
 
@@ -2285,6 +2286,7 @@
     au < manifest ; 2010 ; International Journal of Synthetic Emotions (IJSE) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Synthetic Emotions (IJSE) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Synthetic Emotions (IJSE) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Synthetic Emotions (IJSE) Volume 4 ; 4 > 
 
   }
 
@@ -2296,9 +2298,10 @@
       eissn = 2160-9799 ;
       issnl = 2160-9772
     >
-	param[journal_issn] = 2160-9772
-	
+    param[journal_issn] = 2160-9772
+
     au < released ; 2012 ; International Journal of System Dynamics Applications (IJSDA) Volume 1 ; 1 > 
+    au < expected ; 2013 ; International Journal of System Dynamics Applications (IJSDA) Volume 2 ; 2 > 
 
   }
 
