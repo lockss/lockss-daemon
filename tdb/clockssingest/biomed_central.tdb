@@ -347,7 +347,7 @@
       au < manifest ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
-      au < manifest ; exists ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
+      au < doNotProcess ; doNotProcess ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
       
     }
@@ -1176,26 +1176,6 @@
       au < superseded ; exists ; 2010 ; BMC Nuclear Medicine Volume 10 [superseded] ; 10 >
       au < superseded ; exists ; 2011 ; BMC Nuclear Medicine Volume 11 [superseded] ; 11 >
       au < superseded ; exists ; 2012 ; BMC Nuclear Medicine Volume 12 [superseded] ; 12 >
-
-    }
-
-    {
-      title <
-        name = BMC Medical Physics ;
-        issn = 1756-6649 ;
-        issnl = 1756-6649
-      >
-
-      param[journal_issn] = 1756-6649
-      nondefparam[journal_code] = bmcmedphys
-      comment[0] = This journal started at start of 2008. Continuation of BMC Nuclear Medicine
-
-      au < manifest ; exists ; 2008 ; BMC Nuclear Medicine Volume 8 ; 8 >
-      au < manifest ; exists ; 2009 ; BMC Nuclear Medicine Volume 9 ; 9 >
-      au < manifest ; exists ; 2010 ; BMC Nuclear Medicine Volume 10 ; 10 >
-      au < manifest ; exists ; 2011 ; BMC Nuclear Medicine Volume 11 ; 11 >
-      au < manifest ; exists ; 2012 ; BMC Nuclear Medicine Volume 12 ; 12 >
-      au < expected ; exists ; 2013 ; BMC Nuclear Medicine Volume 13 ; 13 >
 
     }
 
