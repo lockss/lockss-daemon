@@ -2086,6 +2086,7 @@
     au < manifest ; 2010 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 4 ; 4 > 
 
   }
 
@@ -2101,6 +2102,7 @@
 	
     au < released ; 2011 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 1 ; 1 > 
     au < released ; 2012 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 2 ; 2 > 
+    au < expected ; 2013 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 3 ; 3 > 
 
 
   }
@@ -2113,10 +2115,11 @@
       eissn = 2155-6342 ;
       issnl = 2155-6334
     >
-	param[journal_issn] = 2155-6334
-	
+     param[journal_issn] = 2155-6334
+
     au < released ; 2011 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 1 ; 1 > 
     au < released ; 2012 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 2 ; 2 > 
+    au < expected ; 2013 ; International Journal of Social and Organizational Dynamics in IT (IJSODIT) Volume 3 ; 3 > 
 
   }
 
@@ -2133,6 +2136,7 @@
     au < manifest ; 2010 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 4 ; 4 > 
 
   }
 
@@ -2150,6 +2154,7 @@
      au < manifest ; 2010 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 2 ; 2 >
      au < released ; 2011 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 3 ; 3 > 
      au < released ; 2012 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 4 ; 4 >
+     au < expected ;  2013 ; International Journal of Sociotechnology and Knowledge Development (IJSKD)) Volume 5 ; 5 > 
      
   }
   
@@ -2167,6 +2172,7 @@
     au < manifest ; 2010 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 2 ; 2 >   
     au < released ; 2011 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 3 ; 3 > 
     au < released ; 2012 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 4 ; 4 >   
+    au < expected ; 2013 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 5 ; 5 > 
     
     }
     
@@ -2182,6 +2188,7 @@
 	
     au < released ; 2011 ; International Journal of Space Technology Management and Innovation (IJSTMI) Volume 1 ; 1 > 
     au < released ; 2012 ; International Journal of Space Technology Management and Innovation (IJSTMI) Volume 2 ; 2 > 
+    au < expected ; 2013 ; International Journal of Space Technology Management and Innovation (IJSTMI)) Volume 3 ; 3 > 
 
   }
 
@@ -2198,6 +2205,7 @@
     au < manifest ; 2010 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 4 ; 4 > 
 
   }
 
@@ -2214,6 +2222,7 @@
     au < manifest ; 2010 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 4 ; 4 > 
 
   }
 
@@ -2226,6 +2235,8 @@
     >
 
     comment[0] = forthcoming in 2013
+    
+    au < expected ; 2013 ; International Journal of Surface Engineering and Interdisciplinary Materials Science (IJSEIMS) Volume 1 ; 1 > 
 
   }
 
@@ -2238,8 +2249,9 @@
       issnl = 2160-9659
     >
 	param[journal_issn] = 2160-9659
-	
+
     au < released ; 2012 ; International Journal of Sustainable Economies Management (IJSEM) Volume 1 ; 1 > 
+    au < expected ; 2013 ; International Journal of Sustainable Economies Management (IJSEM)) Volume 2 ; 2 > 
 
 
   }
