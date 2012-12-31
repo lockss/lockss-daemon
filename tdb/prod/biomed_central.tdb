@@ -1797,14 +1797,14 @@
       param[base_url] = http://www.aacijournal.com/
       param[journal_issn] = 1710-1492
 
-      au < testing ; 2004-2005 ; Allergy, Asthma & Clinical Immunology Volume 1 ; 1 >
-      au < testing ; 2006 ; Allergy, Asthma & Clinical Immunology Volume 2 ; 2 >
-      au < testing ; 2007 ; Allergy, Asthma & Clinical Immunology Volume 3 ; 3 >
+      au < ready ; 2004-2005 ; Allergy, Asthma & Clinical Immunology Volume 1 ; 1 >
+      au < ready ; 2006 ; Allergy, Asthma & Clinical Immunology Volume 2 ; 2 >
+      au < ready ; 2007 ; Allergy, Asthma & Clinical Immunology Volume 3 ; 3 >
       au < testing ; 2008 ; Allergy, Asthma & Clinical Immunology Volume 4 ; 4 >
-      au < testing ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 >
-      au < testing ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 >
+      au < ready ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 >
+      au < ready ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 >
       au < testing ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 >
-      au < testing ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 >
+      au < ready ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 >
       au < expected ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 >
 
     }
@@ -1819,8 +1819,8 @@
       param[base_url] = http://alzres.com/
       param[journal_issn] = 1758-9193
 
-      au < testing ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
-      au < testing ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
+      au < ready ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
+      au < ready ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
       au < testing ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
       au < testing ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
       au < expected ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
