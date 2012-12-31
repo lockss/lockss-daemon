@@ -1974,8 +1974,9 @@
 
     param[journal_issn] = 2160-9837
 
-        au < manifest ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
-  
+    au < manifest ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
+    au < expected ; 2013 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 3 ; 3 > 
+    
   }
 
   {
@@ -1990,6 +1991,7 @@
 	
     au < released ; 2011 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 1 ; 1 > 
     au < released ; 2012 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 2 ; 2 > 
+    au < expected ; 2013 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 3 ; 3 > 
 
   }
 
@@ -2005,6 +2007,7 @@
 	
     au < released ; 2011 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 1 ; 1 > 
     au < released ; 2012 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 2 ; 2 > 
+    au < expected ; 2013 ; International Journal of Quality Assurance in Engineering and Technology Education (IJQAETE) Volume 3 ; 3 > 
 
 
   }
@@ -2020,6 +2023,7 @@
 	param[journal_issn] = 2160-9551
 	
     au < released ; 2012 ; International Journal of Reliable and Quality E-Healthcare (IJRQEH) Volume 1 ; 1 > 
+    au < expected ; 2013 ; International Journal of Reliable and Quality E-Healthcare (IJRQEH) Volume 2 ; 2 > 
 
   }
 
@@ -2034,6 +2038,7 @@
 	param[journal_issn] = 2160-9624
 	
     au <ready ; 2012 ; International Journal of Risk and Contingency Management (IJRCM) Volume 1 ; 1 > 
+    au < expected ; 2013 ; International Journal of Risk and Contingency Management (IJRCM) Volume 2 ; 2 > 
 
   }
 
@@ -2045,7 +2050,9 @@
       eissn = 2166-7209
     >
 
-    comment[0] = forthcoming 2013 
+    comment[0] = forthcoming 2013
+    
+    au < expected ; 2013 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 1 ; 1 > 
 
   }
 
@@ -2062,6 +2069,7 @@
     au < manifest ; 2010 ; International Journal of Secure Software Engineering (IJSSE) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Secure Software Engineering (IJSSE) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Secure Software Engineering (IJSSE) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Secure Software Engineering (IJSSE) Volume 4 ; 4 > 
 
   }
 
