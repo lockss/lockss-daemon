@@ -1806,6 +1806,7 @@
     au < manifest ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 > 
     au < released ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 > 
     au < manifest ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 > 
+    au < expected ; 2013 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 5 ; 5 > 
 
   }
 
@@ -1825,6 +1826,7 @@
     au < manifest ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 > 
     au < released ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 3 ; 3 > 
     au < notReady ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
+    au < expected ; 2013 ; International Journal of Natural Computing Research (IJNCR) Volume 5 ; 5 > 
 
 
   }
@@ -1841,6 +1843,7 @@
 	
     au < released ; 2011 ; International Journal of Online Marketing (IJOM) Volume 1 ; 1 > 
     au < released ; 2012 ; International Journal of Online Marketing (IJOM) Volume 2 ; 2 > 
+    au < expected ; 2013 ; International Journal of Online Marketing (IJOM) Volume 3 ; 3 > 
 
   }
 
@@ -1856,6 +1859,7 @@
 	
     au < released ; 2011 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 1 ; 1 > 
     au < released ; 2012 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 2 ; 2 > 
+    au < expected ; 2013 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 3 ; 3 > 
 
 
   }
@@ -1874,6 +1878,7 @@
     au < manifest ; 2010 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 2 ; 2 > 
     au < released ; 2011 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 3 ; 3 > 
     au < released ; 2012 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 4 ; 4 > 
+    au < expected ; 2013 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 5 ; 5 > 
 
   }
 
@@ -1890,6 +1895,7 @@
     au < manifest ; 2010 ; International Journal of Operations Research and Information Systems (IJORIS) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Operations Research and Information Systems (IJORIS) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Operations Research and Information Systems (IJORIS) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Operations Research and Information Systems (IJORIS) Volume 4 ; 4 > 
 
   }
 
@@ -1906,6 +1912,7 @@
     au < manifest ; 2010 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 2 ; 2 > 
     au < released ; 2012 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 4 ; 4 > 
 
   }
 
@@ -1921,6 +1928,7 @@
 	
     au < released ; 2011 ; International Journal of People-Oriented Programming (IJPOP) Volume 1 ; 1 > 
     au < released ; 2012 ; International Journal of People-Oriented Programming (IJPOP) Volume 2 ; 2 > 
+    au < expected ; 2013 ; International Journal of People-Oriented Programming (IJPOP) Volume 3 ; 3 > 
 
   }
 
@@ -1933,6 +1941,8 @@
     >
 
     comment[0] = forthcoming in 2013
+    
+    au < expected ; 2013 ; International Journal of Pharmacology and Pharmaceutical Technology (IJPPT Volume 1 ; 1 > 
 
   }
 
@@ -1946,7 +1956,11 @@
     >
 
     comment[0] = forthcoming in 2012
-	param[journal_issn] = 2155-5621
+    param[journal_issn] = 2155-5621
+    
+    au < expected ;  2013 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 1 ; 1 > 
+    
+    
   }
 
   {
