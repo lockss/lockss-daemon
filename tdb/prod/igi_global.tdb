@@ -2438,6 +2438,7 @@
 	
     au < released ; 2011 ; International Journal of User-Driven Healthcare (IJUDH) Volume 1 ; 1 > 
     au < released ; 2012 ; International Journal of User-Driven Healthcare (IJUDH) Volume 2 ; 2 > 
+    au < expected ; 2013 ; International Journal of User-Driven Healthcare (IJUDH) Volume 3 ; 3 > 
 
   }
 
@@ -2449,12 +2450,15 @@
       eissn = 1947-8526 ;
       issnl = 1947-8518
     >
-	param[journal_issn] = 1947-8518
-	    
+    param[journal_issn] = 1947-8518
+
     au < manifest ; 2010 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 1 ; 1 > 
     au < released ; 2011 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 2 ; 2 > 
-    au < released ; 2012 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 3 ; 3 >   }
+    au < released ; 2012 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 3 ; 3 > 
+    au < expected ; 2013 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 4 ; 4 > 
 
+  }
+  
   {
 
     title <
@@ -2469,6 +2473,7 @@
     au < manifest ; 2010 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 2 ; 2 > 
     au < released ; 2011 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 3 ; 3 > 
     au < released ; 2012 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 4 ; 4 > 
+    au < expected ; 2013 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 5 ; 5 > 
 
   }
 
@@ -2486,6 +2491,7 @@
     au < manifest ; 2010 ; International Journal of Web Portals (IJWP) Volume 2 ; 2 > 
     au < released ; 2011 ; International Journal of Web Portals (IJWP) Volume 3 ; 3 > 
     au < released ; 2012 ; International Journal of Web Portals (IJWP) Volume 4 ; 4 > 
+    au < expected ; 2013 ; International Journal of Web Portals (IJWP) Volume 5 ; 5 > 
 
   }
 
@@ -2508,6 +2514,7 @@
     au < manifest ; 2010 ; International Journal of Web Services Research (IJWSR) Volume 7 ; 7 > 
     au < released ; 2011 ; International Journal of Web Services Research (IJWSR) Volume 8 ; 8 > 
     au < released ; 2012 ; International Journal of Web Services Research (IJWSR) Volume 9 ; 9 > 
+    au < expected ; 2013 ; International Journal of Web Services Research (IJWSR) Volume 10 ; 10 > 
 
   }
 
@@ -2528,6 +2535,7 @@
     au < manifest ; 2010 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 5 ; 5 > 
     au < released ; 2011 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 6 ; 6 > 
     au < released ; 2012 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 7 ; 7 > 
+    au < expected ; 2013 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 8 ; 8 > 
 
 
   }
@@ -2540,10 +2548,11 @@
       eissn = 2155-627X ;
       issnl = 2155-6261
     >
-	param[journal_issn] = 2155-6261
-	
+    param[journal_issn] = 2155-6261
+
     au < released ; 2011 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 1 ; 1 > 
     au < manifest ; 2012 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 2 ; 2 > 
+    au < expected ; 2013 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 3 ; 3 > 
 
   }
 
@@ -2555,8 +2564,8 @@
       eissn = 1552-6291 ;
       issnl = 1552-6283
     >
-	param[journal_issn] = 1552-6283
-	
+    param[journal_issn] = 1552-6283
+
     au < manifest ; 2005 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 1 ; 1 > 
     au < manifest ; 2006 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 2 ; 2 > 
     au < manifest ; 2007 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 3 ; 3 > 
@@ -2565,6 +2574,7 @@
     au < manifest ; 2010 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 6 ; 6 > 
     au < released ; 2011 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 7 ; 7 > 
     au < released ; 2012 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 8 ; 8 > 
+    au < expected ; 2013 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 9 ; 9 > 
 
   }
 
