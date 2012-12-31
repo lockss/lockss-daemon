@@ -1921,7 +1921,7 @@
       param[base_url] = http://www.aricjournal.com/
       param[journal_issn] = 2047-2994
 
-      au < exists ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
+      au < testing ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
 
     }
 
@@ -2081,11 +2081,11 @@
       param[base_url] = http://www.biodatamining.org/
       param[journal_issn] = 1756-0381
 
-      au < manifest ; 2008 ; BioData Mining Volume 1 ; 1 >
-      au < manifest ; 2009 ; BioData Mining Volume 2 ; 2 >
-      au < manifest ; 2010 ; BioData Mining Volume 3 ; 3 >
-      au < manifest ; 2011 ; BioData Mining Volume 4 ; 4 >
-      au < manifest ; 2012 ; BioData Mining Volume 5 ; 5 >
+      au < testing ; 2008 ; BioData Mining Volume 1 ; 1 >
+      au < testing ; 2009 ; BioData Mining Volume 2 ; 2 >
+      au < testing ; 2010 ; BioData Mining Volume 3 ; 3 >
+      au < testing ; 2011 ; BioData Mining Volume 4 ; 4 >
+      au < testing ; 2012 ; BioData Mining Volume 5 ; 5 >
       au < expected ; 2013 ; BioData Mining Volume 6 ; 6 >
 
     }
@@ -2140,8 +2140,8 @@
       param[base_url] = http://www.biolmoodanxietydisord.com/
       param[journal_issn] = 2045-5380
 
-      au < exists ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 >
-      au < exists ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
+      au < testing ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 >
+      au < testing ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
 
     }
 
@@ -2156,9 +2156,9 @@
       param[base_url] = http://www.bsd-journal.com/
       param[journal_issn] = 2042-6410
 
-      au < manifest ; 2010 ; Biology of Sex Differences Volume 1 ; 1 >
-      au < manifest ; 2011 ; Biology of Sex Differences Volume 2 ; 2 >
-      au < manifest ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
+      au < testing ; 2010 ; Biology of Sex Differences Volume 1 ; 1 >
+      au < testing ; 2011 ; Biology of Sex Differences Volume 2 ; 2 >
+      au < testing ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
       au < expected ; 2013 ; Biology of Sex Differences Volume 4 ; 4 >
 
     }
