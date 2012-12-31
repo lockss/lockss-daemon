@@ -68,6 +68,7 @@
       au < released ; crawling ; 2010 ; Environment and Planning A Volume 42 ; 42 >
       au < released ; crawling ; 2011 ; Environment and Planning A Volume 43 ; 43 >
       au < released ; crawling ; 2012 ; Environment and Planning A Volume 44 ; 44 >
+      au < expected ; exists ; 2013 ; Environment and Planning A Volume 45 ; 45 >
     
     }
   
@@ -123,6 +124,7 @@
       au < zapped ; down ; 2010 ; Environment and Planning B: Planning and Design Volume 37 ; 37 >
       au < released ; crawling ; 2011 ; Environment and Planning B: Planning and Design Volume 38 ; 38 >
       au < released ; crawling ; 2012 ; Environment and Planning B: Planning and Design Volume 39 ; 39 >
+      au < expected ; exists ; 2013 ; Environment and Planning B: Planning and Design Volume 40 ; 40 >
   
     }
   
@@ -169,6 +171,7 @@
       au < zapped ; down ; 2010 ; Environment and Planning C: Government and Policy Volume 28 ; 28 >
       au < released ; crawling ; 2011 ; Environment and Planning C: Government and Policy Volume 29 ; 29 >
       au < released ; crawling ; 2012 ; Environment and Planning C: Government and Policy Volume 30 ; 30 >
+      au < expected ; exists ; 2013 ; Environment and Planning C: Government and Policy Volume 31 ; 31 >
   
     }
   
@@ -215,6 +218,7 @@
       au < released ; crawling ; 2010 ; Environment and Planning D: Society and Space Volume 28 ; 28 >
       au < released ; crawling ; 2011 ; Environment and Planning D: Society and Space Volume 29 ; 29 >
       au < released ; crawling ; 2012 ; Environment and Planning D: Society and Space Volume 30 ; 30 >
+      au < expected ; exists ; 2013 ; Environment and Planning D: Society and Space Volume 31 ; 31 >
   
     }
   
@@ -248,6 +252,7 @@
       au < zapped ; down ; 2010 ; High Temperatures - High Pressures Volume 39 ; 39 ; 39 >
       au < zapped ; down ; 2011 ; High Temperatures - High Pressures Volume 40 ; 40 ; 40 >
       au < doNotProcess ; exists ; 2012 ; High Temperatures - High Pressures Volume 41 ; 41 ; 41 >
+      au < expected ; exists ; 2013 ; High Temperatures - High Pressures Volume 42 ; 42 ; 42 >
   
     }
   
@@ -305,7 +310,8 @@
       au < zapped ; down ; 2010 ; Perception Volume 39 ; 39 >
       au < released ; crawling ; 2011 ; Perception Volume 40 ; 40 >
       au < released ; crawling ; 2012 ; Perception Volume 41 ; 41 >
-   
+      au < expected ; exists ; 2013 ; Perception Volume 42 ; 42 >
+    
     }
   
   }
@@ -327,7 +333,8 @@
     
     au < released ; crawling ; 2010 ; i-Perception Volume 1 ; 1 >
     au < released ; crawling ; 2011 ; i-Perception Volume 2 ; 2 >
-    au < released ; crawling ; 2012 ; i-Perception Volume 3 ; 3 >
+    au < expected ; exists ; 2012 ; i-Perception Volume 3 ; 3 >
+    au < expected ; exists ; 2013 ; i-Perception Volume 4 ; 4 >
   
   }
         
