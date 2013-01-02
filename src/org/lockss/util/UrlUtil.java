@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.58 2012-02-16 10:40:11 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.59 2013-01-02 20:55:27 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -99,12 +99,22 @@ public class UrlUtil {
     PREFIX + "normalizeAkamaiUrl";
   public static final boolean DEFAULT_NORMALIZE_AKAMAI_URL = false;
 
+  /** Prior to daemon 1.59, plugin-supplied URL normalizers were not
+   * allowed to change the URL scheme, host or port.  As of daemon 1.59
+   * such changes are allowed, unless this is set false.
+   */
+  public static final String PARAM_UNRESTRICTED_SITE_NORMALIZE =
+    PREFIX + "unrestrictedSiteNormalize";
+  public static final boolean DEFAULT_UNRESTRICTED_SITE_NORMALIZE = true;
+
   private static boolean useHttpClient = DEFAULT_USE_HTTPCLIENT;
   private static int pathTraversalAction = DEFAULT_PATH_TRAVERSAL_ACTION;
   private static boolean normalizeUrlEncodingCase =
     DEFAULT_NORMALIZE_URL_ENCODING_CASE;
   private static boolean normalizeEmptyQuery = DEFAULT_NORMALIZE_EMPTY_QUERY;
   private static boolean normalizeAkamaiUrl = DEFAULT_NORMALIZE_AKAMAI_URL;
+  private static boolean unrestrictedSiteNormalize =
+    DEFAULT_UNRESTRICTED_SITE_NORMALIZE;
 
 
   /** Called by org.lockss.config.MiscConfig
@@ -124,6 +134,10 @@ public class UrlUtil {
 					      DEFAULT_NORMALIZE_EMPTY_QUERY);
       normalizeAkamaiUrl = config.getBoolean(PARAM_NORMALIZE_AKAMAI_URL,
 					     DEFAULT_NORMALIZE_AKAMAI_URL);
+      unrestrictedSiteNormalize =
+	config.getBoolean(PARAM_UNRESTRICTED_SITE_NORMALIZE,
+			  DEFAULT_UNRESTRICTED_SITE_NORMALIZE);
+
     }
   }
 
@@ -276,7 +290,7 @@ public class UrlUtil {
 	if (site.equals(url)) {
 	  // ensure return arg if equal
 	  site = url;
-	} else {
+	} else if (!unrestrictedSiteNormalize) {
 	  // illegal normalization if changed proto, host or port
 	  URL origUrl = new URL(url);
 	  URL siteUrl = new URL(site);

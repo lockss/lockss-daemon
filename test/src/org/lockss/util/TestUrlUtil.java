@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.41 2012-02-16 10:40:11 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.42 2013-01-02 20:55:27 tlipkis Exp $
  */
 
 /*
@@ -379,8 +379,6 @@ public class TestUrlUtil extends LockssTestCase {
 	{"http://a.com/spurious/file", "http://a.com/file"},
 	{"http://a.com:80/path/file", "http://a.com/path/file"},
 	{"http://a.com/path/file", "http://a.com:80/path/file"},
-	{"http://a.com:8080/path/file", "http://a.com/path/file"},
-	{"http://a.com/path2/file", "http://a.com:8080/path2/file"},
 	{"https://a.com:443/path/file", "https://a.com/path/file"},
 	{"https://a.com/path3/file", "https://a.com:443/path/file"},
       });
@@ -404,6 +402,37 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("http://a.com/file",
 		 UrlUtil.normalizeUrl("http://a.com/spurious/file", mau));
 
+
+    // These normalizations are illegal unless
+    // o.l.unrestrictedSiteNormalize is true
+    Map normMap2 = org.apache.commons.lang.ArrayUtils.toMap(new String[][] {
+	{"http://host1.com/path/file", "http://host2.com/path/file"},
+	{"http://a.com:8080/path/file", "http://a.com/path/file"},
+	{"http://a.com/path2/file", "http://a.com:8080/path2/file"},
+	{"http://scheme.com/path/file", "https://scheme.com/path/file"},
+	// one legal one to ensure setting the param false doesn't prevent
+	// all site normalization
+	{"http://a.com/spurious/file", "http://a.com/file"},
+      });
+
+    mau.setUrlNormalizeMap(normMap2);
+
+    assertEquals("http://host2.com/path/file",
+		 UrlUtil.normalizeUrl("http://host1.com/path/file", mau));
+    assertEquals("http://a.com:8080/path2/file",
+		 UrlUtil.normalizeUrl("http://a.com/path2/file", mau));
+    assertEquals("http://a.com/path/file",
+		 UrlUtil.normalizeUrl("http://a.com:8080/path/file", mau));
+    assertEquals("http://a.com/file",
+		 UrlUtil.normalizeUrl("http://a.com/spurious/file", mau));
+
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_UNRESTRICTED_SITE_NORMALIZE,
+				  "false");
+    try {
+      UrlUtil.normalizeUrl("http://host1.com/path/file", mau);
+      fail("siteNormalizeUrl() shouldn't allow adding a non-default port");
+    } catch (PluginBehaviorException e) {
+    }
     try {
       UrlUtil.normalizeUrl("http://a.com/path2/file", mau);
       fail("siteNormalizeUrl() shouldn't allow adding a non-default port");
@@ -414,6 +443,13 @@ public class TestUrlUtil extends LockssTestCase {
       fail("siteNormalizeUrl() shouldn't allow removing a non-default port");
     } catch (PluginBehaviorException e) {
     }
+    try {
+      UrlUtil.normalizeUrl("http://a.com:8080/path/file", mau);
+      fail("siteNormalizeUrl() shouldn't allow adding a non-default port");
+    } catch (PluginBehaviorException e) {
+    }
+    assertEquals("http://a.com/file",
+		 UrlUtil.normalizeUrl("http://a.com/spurious/file", mau));
   }
 
   public void testNormalizeAkamai() throws MalformedURLException {
