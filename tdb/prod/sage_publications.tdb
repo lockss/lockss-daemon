@@ -23575,36 +23575,36 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         param[base_url] = http://jom.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 1975 ; Journal of Management Volume 1 ; 1 >
-        au < testing ; 1976 ; Journal of Management Volume 2 ; 2 >
-        au < testing ; 1977 ; Journal of Management Volume 3 ; 3 >
-        au < testing ; 1978 ; Journal of Management Volume 4 ; 4 >
-        au < testing ; 1979 ; Journal of Management Volume 5 ; 5 >
-        au < testing ; 1980 ; Journal of Management Volume 6 ; 6 >
-        au < testing ; 1981 ; Journal of Management Volume 7 ; 7 >
-        au < testing ; 1982 ; Journal of Management Volume 8 ; 8 >
-        au < testing ; 1983 ; Journal of Management Volume 9 ; 9 >
-        au < testing ; 1984 ; Journal of Management Volume 10 ; 10 >
-        au < testing ; 1985 ; Journal of Management Volume 11 ; 11 >
-        au < testing ; 1986 ; Journal of Management Volume 12 ; 12 >
-        au < testing ; 1987 ; Journal of Management Volume 13 ; 13 >
-        au < testing ; 1988 ; Journal of Management Volume 14 ; 14 >
-        au < testing ; 1989 ; Journal of Management Volume 15 ; 15 >
-        au < testing ; 1990 ; Journal of Management Volume 16 ; 16 >
-        au < testing ; 1991 ; Journal of Management Volume 17 ; 17 >
-        au < testing ; 1992 ; Journal of Management Volume 18 ; 18 >
-        au < testing ; 1993 ; Journal of Management Volume 19 ; 19 >
-        au < testing ; 1994 ; Journal of Management Volume 20 ; 20 >
-        au < testing ; 1995 ; Journal of Management Volume 21 ; 21 >
-        au < testing ; 1996 ; Journal of Management Volume 22 ; 22 >
-        au < testing ; 1997 ; Journal of Management Volume 23 ; 23 >
-        au < testing ; 1998 ; Journal of Management Volume 24 ; 24 >
-        au < testing ; 1999 ; Journal of Management Volume 25 ; 25 >
-        au < testing ; 2000 ; Journal of Management Volume 26 ; 26 >
+        au < manifest ; 1975 ; Journal of Management Volume 1 ; 1 >
+        au < manifest ; 1976 ; Journal of Management Volume 2 ; 2 >
+        au < manifest ; 1977 ; Journal of Management Volume 3 ; 3 >
+        au < manifest ; 1978 ; Journal of Management Volume 4 ; 4 >
+        au < manifest ; 1979 ; Journal of Management Volume 5 ; 5 >
+        au < manifest ; 1980 ; Journal of Management Volume 6 ; 6 >
+        au < manifest ; 1981 ; Journal of Management Volume 7 ; 7 >
+        au < manifest ; 1982 ; Journal of Management Volume 8 ; 8 >
+        au < manifest ; 1983 ; Journal of Management Volume 9 ; 9 >
+        au < manifest ; 1984 ; Journal of Management Volume 10 ; 10 >
+        au < manifest ; 1985 ; Journal of Management Volume 11 ; 11 >
+        au < manifest ; 1986 ; Journal of Management Volume 12 ; 12 >
+        au < manifest ; 1987 ; Journal of Management Volume 13 ; 13 >
+        au < manifest ; 1988 ; Journal of Management Volume 14 ; 14 >
+        au < manifest ; 1989 ; Journal of Management Volume 15 ; 15 >
+        au < manifest ; 1990 ; Journal of Management Volume 16 ; 16 >
+        au < manifest ; 1991 ; Journal of Management Volume 17 ; 17 >
+        au < manifest ; 1992 ; Journal of Management Volume 18 ; 18 >
+        au < manifest ; 1993 ; Journal of Management Volume 19 ; 19 >
+        au < manifest ; 1994 ; Journal of Management Volume 20 ; 20 >
+        au < manifest ; 1995 ; Journal of Management Volume 21 ; 21 >
+        au < manifest ; 1996 ; Journal of Management Volume 22 ; 22 >
+        au < manifest ; 1997 ; Journal of Management Volume 23 ; 23 >
+        au < manifest ; 1998 ; Journal of Management Volume 24 ; 24 >
+        au < manifest ; 1999 ; Journal of Management Volume 25 ; 25 >
+        au < manifest ; 2000 ; Journal of Management Volume 26 ; 26 >
         au < doNotProcess ; 2001 ; Journal of Management Volume 27 ; 27 >
-        au < testing ; 2002 ; Journal of Management Volume 28 ; 28 >
-        au < testing ; 2003 ; Journal of Management Volume 29 ; 29 >
-        au < testing ; 2004 ; Journal of Management Volume 30 ; 30 >
+        au < manifest ; 2002 ; Journal of Management Volume 28 ; 28 >
+        au < manifest ; 2003 ; Journal of Management Volume 29 ; 29 >
+        au < manifest ; 2004 ; Journal of Management Volume 30 ; 30 >
         au < doNotProcess ; 2005 ; Journal of Management Volume 31 ; 31 >
         au < doNotProcess ; 2006 ; Journal of Management Volume 32 ; 32 >
         au < doNotProcess ; 2007 ; Journal of Management Volume 33 ; 33 >
@@ -23613,7 +23613,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2010 ; Journal of Management Volume 36 ; 36 >
         au < released ; 2011 ; Journal of Management Volume 37 ; 37 >
         au < ready ; 2012 ; Journal of Management Volume 38 ; 38 >
-        au < testing ; 2013 ; Journal of Management Volume 39 ; 39 >
+        au < manifest ; 2013 ; Journal of Management Volume 39 ; 39 >
 
       }
 
@@ -26631,13 +26631,13 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pps.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 2006 ; Perspectives on Psychological Science Volume 1 ; 1 >
-        au < testing ; 2007 ; Perspectives on Psychological Science Volume 2 ; 2 >
+        au < manifest ; 2006 ; Perspectives on Psychological Science Volume 1 ; 1 >
+        au < manifest ; 2007 ; Perspectives on Psychological Science Volume 2 ; 2 >
         au < released ; 2008 ; Perspectives on Psychological Science Volume 3 ; 3 >
         au < released ; 2009 ; Perspectives on Psychological Science Volume 4 ; 4 >
         au < released ; 2010 ; Perspectives on Psychological Science Volume 5 ; 5 >
         au < released ; 2011 ; Perspectives on Psychological Science Volume 6 ; 6 >
-        au < testing ; 2012 ; Perspectives on Psychological Science Volume 7 ; 7 >
+        au < manifest ; 2012 ; Perspectives on Psychological Science Volume 7 ; 7 >
         au < expected ; 2013 ; Perspectives on Psychological Science Volume 8 ; 8 >
 
       }
@@ -30898,16 +30898,16 @@ comment[mpj] = now published by Brill
         param[base_url] = http://psp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 1974 ; Personality and Social Psychology Bulletin Volume 1 ; 1 >
+        au < manifest ; 1974 ; Personality and Social Psychology Bulletin Volume 1 ; 1 >
         au < ready ; 1976 ; Personality and Social Psychology Bulletin Volume 2 ; 2 >
         au < ready ; 1976 ; Personality and Social Psychology Bulletin Volume 3 ; 3 >
-        au < testing ; 1978 ; Personality and Social Psychology Bulletin Volume 4 ; 4 >
-        au < testing ; 1979 ; Personality and Social Psychology Bulletin Volume 5 ; 5 >
+        au < manifest ; 1978 ; Personality and Social Psychology Bulletin Volume 4 ; 4 >
+        au < manifest ; 1979 ; Personality and Social Psychology Bulletin Volume 5 ; 5 >
         au < ready ; 1980 ; Personality and Social Psychology Bulletin Volume 6 ; 6 >
-        au < testing ; 1981 ; Personality and Social Psychology Bulletin Volume 7 ; 7 >
+        au < manifest ; 1981 ; Personality and Social Psychology Bulletin Volume 7 ; 7 >
         au < ready ; 1982 ; Personality and Social Psychology Bulletin Volume 8 ; 8 >
         au < ready ; 1983 ; Personality and Social Psychology Bulletin Volume 9 ; 9 >
-        au < testing ; 1984 ; Personality and Social Psychology Bulletin Volume 10 ; 10 >
+        au < manifest ; 1984 ; Personality and Social Psychology Bulletin Volume 10 ; 10 >
         au < manifest ; 1985 ; Personality and Social Psychology Bulletin Volume 11 ; 11 >
         au < manifest ; 1986 ; Personality and Social Psychology Bulletin Volume 12 ; 12 >
         au < manifest ; 1987 ; Personality and Social Psychology Bulletin Volume 13 ; 13 >
@@ -30972,13 +30972,13 @@ comment[mpj] = now published by Brill
         au < ready ; 1997 ; Personality and Social Psychology Review Volume 1 ; 1 >
         au < ready ; 1998 ; Personality and Social Psychology Review Volume 2 ; 2 >
         au < ready ; 1999 ; Personality and Social Psychology Review Volume 3 ; 3 >
-        au < testing ; 2000 ; Personality and Social Psychology Review Volume 4 ; 4 >
-        au < testing ; 2001 ; Personality and Social Psychology Review Volume 5 ; 5 >
+        au < manifest ; 2000 ; Personality and Social Psychology Review Volume 4 ; 4 >
+        au < manifest ; 2001 ; Personality and Social Psychology Review Volume 5 ; 5 >
         au < ready ; 2002 ; Personality and Social Psychology Review Volume 6 ; 6 >
-        au < testing ; 2003 ; Personality and Social Psychology Review Volume 7 ; 7 >
+        au < manifest ; 2003 ; Personality and Social Psychology Review Volume 7 ; 7 >
         au < ready ; 2004 ; Personality and Social Psychology Review Volume 8 ; 8 >
         au < ready ; 2005 ; Personality and Social Psychology Review Volume 9 ; 9 >
-        au < testing ; 2006 ; Personality and Social Psychology Review Volume 10 ; 10 >
+        au < manifest ; 2006 ; Personality and Social Psychology Review Volume 10 ; 10 >
         au < doNotProcess ; 2007 ; Personality and Social Psychology Review Volume 11 ; 11 >
         au < doNotProcess ; 2008 ; Personality and Social Psychology Review Volume 12 ; 12 >
         au < doNotProcess ; 2009 ; Personality and Social Psychology Review Volume 13 ; 13 >
@@ -35243,7 +35243,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2008 ; Sexualities Volume 11 ; 11 >
         au < HighWirePressH20Plugin ; manifest ; 2009 ; Sexualities Volume 12 ; 12 >
         au < HighWirePressH20Plugin ; manifest ; 2010 ; Sexualities Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; testing ; 2011 ; Sexualities Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; Sexualities Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Sexualities Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; expected ; 2013 ; Sexualities Volume 16 ; 16 >
 
@@ -35712,7 +35712,7 @@ comment[mpj] = now published by Brill
 
         au < ready ; 2004 ; Social Psychology Quarterly Volume 67 ; 67 >
         au < ready ; 2005 ; Social Psychology Quarterly Volume 68 ; 68 >
-        au < testing ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 >
+        au < manifest ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 >
         au < ready ; 2007 ; Social Psychology Quarterly Volume 70 ; 70 >
         au < released ; 2008 ; Social Psychology Quarterly Volume 71 ; 71 >
         au < released ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 >
@@ -36207,7 +36207,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://bmc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 2012 ; South Asian Journal of Business and Management Cases Volume 1 ; 1 >
+        au < manifest ; 2012 ; South Asian Journal of Business and Management Cases Volume 1 ; 1 >
         au < expected ; 2013 ; South Asian Journal of Business and Management Cases Volume 2 ; 2 >
 
       }
@@ -36394,7 +36394,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; Sports Health: A Multidisciplinary Approach Volume 1 ; 1 >
         au < released ; 2010 ; Sports Health: A Multidisciplinary Approach Volume 2 ; 2 >
         au < released ; 2011 ; Sports Health: A Multidisciplinary Approach Volume 3 ; 3 >
-        au < testing ; 2012 ; Sports Health: A Multidisciplinary Approach Volume 4 ; 4 >
+        au < manifest ; 2012 ; Sports Health: A Multidisciplinary Approach Volume 4 ; 4 >
         au < manifest ; 2013 ; Sports Health: A Multidisciplinary Approach Volume 5 ; 5 >
 
       }
@@ -36430,7 +36430,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; State and Local Government Review Volume 41 ; 41 >
         au < released ; 2010 ; State and Local Government Review Volume 42 ; 42 >
         au < released ; 2011 ; State and Local Government Review Volume 43 ; 43 >
-        au < testing ; 2012 ; State and Local Government Review Volume 44 ; 44 >
+        au < manifest ; 2012 ; State and Local Government Review Volume 44 ; 44 >
         au < expected ; 2013 ; State and Local Government Review Volume 45 ; 45 >
 
       }
@@ -36462,7 +36462,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; State Politics and Policy Quarterly Volume 9 ; 9 >
         au < released ; 2010 ; State Politics and Policy Quarterly Volume 10 ; 10 >
         au < released ; 2011 ; State Politics and Policy Quarterly Volume 11 ; 11 >
-        au < testing ; 2012 ; State Politics and Policy Quarterly Volume 12 ; 12 >
+        au < manifest ; 2012 ; State Politics and Policy Quarterly Volume 12 ; 12 >
         au < expected ; 2013 ; State Politics and Policy Quarterly Volume 13 ; 13 >
 
       }
@@ -36513,7 +36513,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2006 ; Statistical Methods in Medical Research Volume 15 ; 15 >
         au < doNotProcess ; 2007 ; Statistical Methods in Medical Research Volume 16 ; 16 >
         au < doNotProcess ; 2008 ; Statistical Methods in Medical Research Volume 17 ; 17 >
-        au < testing ; 2009 ; Statistical Methods in Medical Research Volume 18 ; 18 >
+        au < manifest ; 2009 ; Statistical Methods in Medical Research Volume 18 ; 18 >
         au < released ; 2010 ; Statistical Methods in Medical Research Volume 19 ; 19 >
         au < released ; 2011 ; Statistical Methods in Medical Research Volume 20 ; 20 >
         au < manifest ; 2012 ; Statistical Methods in Medical Research Volume 21 ; 21 >
@@ -36589,7 +36589,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2006 ; Strategic Organization Volume 4 ; 4 >
         au < doNotProcess ; 2007 ; Strategic Organization Volume 5 ; 5 >
         au < doNotProcess ; 2008 ; Strategic Organization Volume 6 ; 6 >
-        au < testing ; 2009 ; Strategic Organization Volume 7 ; 7 >
+        au < manifest ; 2009 ; Strategic Organization Volume 7 ; 7 >
         au < released ; 2010 ; Strategic Organization Volume 8 ; 8 >
         au < released ; 2011 ; Strategic Organization Volume 9 ; 9 >
         au < manifest ; 2012 ; Strategic Organization Volume 10 ; 10 >
@@ -36869,7 +36869,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2006 ; Surgical Innovation Volume 13 ; 13 >
         au < doNotProcess ; 2007 ; Surgical Innovation Volume 14 ; 14 >
         au < doNotProcess ; 2008 ; Surgical Innovation Volume 15 ; 15 >
-        au < testing ; 2009 ; Surgical Innovation Volume 16 ; 16 >
+        au < manifest ; 2009 ; Surgical Innovation Volume 16 ; 16 >
         au < released ; 2010 ; Surgical Innovation Volume 17 ; 17 >
         au < released ; 2011 ; Surgical Innovation Volume 18 ; 18 >
         au < manifest ; 2012 ; Surgical Innovation Volume 19 ; 19 >
@@ -36924,7 +36924,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 29 ; 29 >
         au < manifest ; 2007 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 30 ; 30 >
         au < manifest ; 2008 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 31 ; 31 >
-        au < testing ; 2009 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 32 ; 32 >
+        au < manifest ; 2009 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 32 ; 32 >
         au < released ; 2010 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 33 ; 33 >
         au < released ; 2011 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 34 ; 34 >
         au < ready ; 2012 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 35 ; 35 >
