@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.60 2012-07-17 08:49:04 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.61 2013-01-02 20:52:55 tlipkis Exp $
  */
 
 /*
@@ -200,7 +200,7 @@ public class StatusTable {
    * @return list of {@link ColumnDescriptor}s the columns in
    * the table in the preferred display order
    */
-  public List getColumnDescriptors() {
+  public List<ColumnDescriptor> getColumnDescriptors() {
     return columnDescriptors;
   }
 
@@ -225,7 +225,7 @@ public class StatusTable {
    * preferred display order for this table
    */
   public void setColumnDescriptors(List columnDescriptors) {
-    setColumnDescriptors(columnDescriptors, null);
+    setColumnDescriptors(columnDescriptors, null, null);
   }
 
   /**
@@ -240,7 +240,41 @@ public class StatusTable {
    */
   public void setColumnDescriptors(List columnDescriptors,
 				   List<String>defaultCols) {
-    this.columnDescriptors = filterColDescs(columnDescriptors, defaultCols);
+    setColumnDescriptors(columnDescriptors, defaultCols, null);
+  }
+
+  /**
+   * Sets a list of {@link ColumnDescriptor}s in their preferred display
+   * order for this table
+   * @param columnDescriptors List of {@link ColumnDescriptor}s in their
+   * preferred display order for this table.  Will be filtered by the
+   * table's <code>columns</code> property, if any, or the default list, if
+   * not null.
+   * @param defaultColProp Default columns property (query arg):
+   * semicolon-separated list of column names, optionally preceded by "-"
+   * (negation).
+   */
+  public void setColumnDescriptors(List columnDescriptors,
+				   String defaultColProp) {
+    setColumnDescriptors(columnDescriptors, null, defaultColProp);
+  }
+
+  /**
+   * Sets a list of {@link ColumnDescriptor}s in their preferred display
+   * order for this table
+   * @param columnDescriptors List of {@link ColumnDescriptor}s in their
+   * preferred display order for this table.  Will be filtered by the
+   * table's <code>columns</code> property, if any, or the default list, if
+   * not null.
+   * @param defaultColProp Default columns property (query arg):
+   * semicolon-separated list of column names, optionally preceded by "-"
+   * (negation).
+   */
+  public void setColumnDescriptors(List columnDescriptors,
+				   List<String>defaultCols,
+				   String defaultColProp) {
+    this.columnDescriptors =
+      filterColDescs(columnDescriptors, defaultCols, defaultColProp);
     columnDescriptorMap = null;
   }
 
@@ -249,33 +283,82 @@ public class StatusTable {
    * specfied by the <code>columns</code> property of the table, if any,
    * else the default list, if any.
    * @param colDescs List of {@link ColumnDescriptor}s in their preferred
-   * display order for this table, or &quot;All&quot; for all possible
-   * columns.
+   * display order for this table.
    * @param defaultCols Default list of column names if not specified in
    * table, or null for no default filter.
    */
   public List<ColumnDescriptor> filterColDescs(List<ColumnDescriptor>colDescs,
 					       List<String>defaultCols) {
+    return filterColDescs(colDescs, defaultCols, null);
+  }
+
+  /**
+   * Filter the list of {@link ColumnDescriptor}s by the list of names
+   * specfied by the <code>columns</code> property of the table, if any,
+   * else the default list, if any.
+   * @param colDescs List of {@link ColumnDescriptor}s in their preferred
+   * display order for this table.
+   * @param defaultColProp Default columns property (query arg):
+   * semicolon-separated list of column names, optionally preceded by "-"
+   * (negation).
+   */
+  public List<ColumnDescriptor> filterColDescs(List<ColumnDescriptor>colDescs,
+					       String defaultColProp) {
+    return filterColDescs(colDescs, null, defaultColProp);
+  }
+
+  /**
+   * Filter the list of {@link ColumnDescriptor}s by the list of names
+   * specfied by the <code>columns</code> property of the table, if any,
+   * else the default list, if any.
+   * @param colDescs List of {@link ColumnDescriptor}s in their preferred
+   * display order for this table.
+   * @param defaultCols Default list of column names if not specified in
+   * table, or null for no default filter.
+   * @param defaultColProp Default columns property (query arg):
+   * semicolon-separated list of column names, optionally preceded by "-"
+   * (negation).
+   */
+    List<ColumnDescriptor> filterColDescs(List<ColumnDescriptor>colDescs,
+					  List<String>defaultCols,
+					  String defaultColProp) {
     List<String> cols = defaultCols;
     String colprop = getProperty(PROP_COLUMNS);
+    if (colprop == null) {
+      colprop = defaultColProp;
+    }
+    boolean neg = false;
     if (!StringUtil.isNullString(colprop)) {
       if ("*".equals(colprop) || "All".equalsIgnoreCase(colprop)) {
 	return colDescs;
+      }
+      neg = colprop.startsWith("-");
+      if (neg) {
+	colprop = colprop.substring(1);
       }
       cols = (List<String>)StringUtil.breakAt(colprop, ";");
     }
     if (cols == null) {
       return colDescs;
     }
-    Map<String,ColumnDescriptor> map = new HashMap<String,ColumnDescriptor>();
-    for (ColumnDescriptor col : colDescs) {
-      map.put(col.getColumnName(), col);
-    }
     List<ColumnDescriptor> res = new ArrayList<ColumnDescriptor>();
-    for (String colName : cols) {
-      ColumnDescriptor desc = map.get(colName);
-      if (desc != null) {
-	res.add(desc);
+    if (neg) {
+      Set excl = new HashSet(cols);
+      for (ColumnDescriptor desc : colDescs) {
+	if (!excl.contains(desc.getColumnName())) {
+	  res.add(desc);
+	}
+      }
+    } else {
+      Map<String,ColumnDescriptor> map = new HashMap<String,ColumnDescriptor>();
+      for (ColumnDescriptor col : colDescs) {
+	map.put(col.getColumnName(), col);
+      }
+      for (String colName : cols) {
+	ColumnDescriptor desc = map.get(colName);
+	if (desc != null) {
+	  res.add(desc);
+	}
       }
     }
     return res;

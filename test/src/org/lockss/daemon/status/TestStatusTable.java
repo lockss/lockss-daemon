@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusTable.java,v 1.15 2011-03-18 09:55:36 tlipkis Exp $
+ * $Id: TestStatusTable.java,v 1.16 2013-01-02 20:52:55 tlipkis Exp $
  */
 
 /*
@@ -144,6 +144,33 @@ public class TestStatusTable extends LockssTestCase {
 		 table.filterColDescs(cols, def));
     table.setColumnDescriptors(cols);
     assertEquals(ListUtil.list(cols.get(2), cols.get(1)),
+		 table.getColumnDescriptors());
+  }
+
+  public void testFilterColDescsNegated() {
+    List cols =
+      ListUtil.list (
+		     new ColumnDescriptor("col1", "Column 1 Title",
+					  ColumnDescriptor.TYPE_STRING),
+		     new ColumnDescriptor("col2", "Column 2 Title",
+					  ColumnDescriptor.TYPE_INT,
+					  "Column 2 footnote"),
+		     new ColumnDescriptor("col3", "Column 2 Title",
+					  ColumnDescriptor.TYPE_STRING)
+		     );
+    List def = ListUtil.list("col1", "col3");
+    table.setColumnDescriptors(cols);
+    assertEquals(ListUtil.list(cols.get(0), cols.get(1), cols.get(2)),
+		 table.getColumnDescriptors());
+    table.setProperty("columns", "-");
+    assertEquals(ListUtil.list(cols.get(0), cols.get(1), cols.get(2)),
+		 table.filterColDescs(cols, def));
+    table.setProperty("columns", "-col3;col2");
+    assertEquals(ListUtil.list(cols.get(0)),
+		 table.filterColDescs(cols, def));
+    table.setProperty("columns", "-col3");
+    table.setColumnDescriptors(cols);
+    assertEquals(ListUtil.list(cols.get(0), cols.get(1)),
 		 table.getColumnDescriptors());
   }
 
