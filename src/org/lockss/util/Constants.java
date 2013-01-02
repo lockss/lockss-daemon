@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.26 2012-07-10 23:44:29 thib_gc Exp $
+ * $Id: Constants.java,v 1.27 2013-01-02 20:54:30 tlipkis Exp $
  */
 
 /*
@@ -109,6 +109,17 @@ public interface Constants {
 
   /** Header used in props fetches to supply version info */
   public static String X_LOCKSS_INFO = "X-Lockss-Info";
+
+  /** Header used with proxy to request content from publisher or cache */
+  public static String X_LOCKSS_SOURCE = "X-Lockss-Source";
+
+  /** Value of {@value #X_LOCKSS_SOURCE} header that requests content only
+   * from the publisher */
+  public static String X_LOCKSS_SOURCE_PUBLISHER = "publisher";
+
+  /** Value of {@value #X_LOCKSS_SOURCE} header that requests content only
+   * from the cache */
+  public static String X_LOCKSS_SOURCE_CACHE = "cache";
 
   /** The real identity of a repairer sending a request to localhost, for
    * testing */

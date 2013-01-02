@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.73 2012-12-07 07:27:05 fergaloy-sf Exp $
+ * $Id: ProxyHandler.java,v 1.74 2013-01-02 20:54:30 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.73 2012-12-07 07:27:05 fergaloy-sf Exp $
+// $Id: ProxyHandler.java,v 1.74 2013-01-02 20:54:30 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -396,7 +396,10 @@ public class ProxyHandler extends AbstractHttpHandler {
       if (log.isDebug2()) {
 	log.debug2("cu: " + (isRepairRequest ? "(repair) " : "") + cu);
       }
+      String source = request.getField(Constants.X_LOCKSS_SOURCE);
+
       if (isRepairRequest || neverProxy ||
+	  Constants.X_LOCKSS_SOURCE_CACHE.equals(source) ||
 	  (isInCache && proxyMgr.isHostDown(uri.getHost()))) {
 	if (isInCache) {
 	  if (isRepairRequest && log.isDebug()) {
@@ -433,6 +436,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
 
       if (!isInCache
+	  && !Constants.X_LOCKSS_SOURCE_PUBLISHER.equals(source)
 	  && (proxyMgr.getHostDownAction() ==
 	      ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504)
 	  && proxyMgr.isHostDown(uri.getHost())) {
@@ -616,6 +620,21 @@ public class ProxyHandler extends AbstractHttpHandler {
     boolean isInCache = cu != null && cu.hasContent();
 
     LockssUrlConnection conn = null;
+    String source = request.getField(Constants.X_LOCKSS_SOURCE);
+    boolean alwaysProxy = Constants.X_LOCKSS_SOURCE_PUBLISHER.equals(source);
+
+    if (alwaysProxy) {
+      if (isPubNever(cu)) {
+	sendErrorPage(request, response, 504,
+		      hostMsg("Can't connect to", request.getURI().getHost(),
+			      "Not ermitted by configuration"));
+	return;
+      } else {
+	// Force following to forward to publisher
+	isInCache = false;
+      }
+    }
+
     try {
       // If we recently served this url from the cache, don't check with
       // publisher for newer content.
