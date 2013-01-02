@@ -1,10 +1,10 @@
 /*
- * $Id $
+ * $Id: TestCoverageNotesFormat.java,v 1.4 2013-01-02 21:38:10 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -103,7 +103,7 @@ public class TestCoverageNotesFormat extends LockssTestCase {
         .setField(Field.DATE_LAST_ISSUE_ONLINE, "2007");
     trng2b = new KbartTitle(trng2a)
         .setField(Field.DATE_FIRST_ISSUE_ONLINE, ""+(2007+gap-1))
-        .setField(Field.DATE_LAST_ISSUE_ONLINE, "2012");
+        .setField(Field.DATE_LAST_ISSUE_ONLINE, ""+BibliographicUtil.getThisYear());
     // Not close enough
     trng3 = new KbartTitle(trng2a)
         .setField(Field.DATE_FIRST_ISSUE_ONLINE, ""+(2012+gap+3))
