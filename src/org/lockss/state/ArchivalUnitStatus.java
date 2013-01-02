@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.111 2012-10-15 04:22:20 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.112 2013-01-02 20:55:05 tlipkis Exp $
  */
 
 /*
@@ -163,6 +163,10 @@ public class ArchivalUnitStatus
   }
 
 
+  /** By default the AuSummary table omits the size columns.  Specify
+   * columns=* to include them */
+  static final String DEFAULT_AU_SUMMARY_COLUMNS = "-AuSize;DiskUsage";
+
   static class AuSummary implements StatusAccessor {
     static final String TABLE_TITLE = "Archival Units";
 
@@ -213,6 +217,10 @@ public class ArchivalUnitStatus
       return TABLE_TITLE;
     }
 
+    public boolean requiresKey() {
+      return false;
+    }
+
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
       List cols = columnDescriptors;
@@ -222,18 +230,18 @@ public class ArchivalUnitStatus
 	cols.add(new ColumnDescriptor("Subscribed", "Subscribed",
 				      ColumnDescriptor.TYPE_STRING));
       }
-      table.setColumnDescriptors(cols);
+      table.setColumnDescriptors(cols, DEFAULT_AU_SUMMARY_COLUMNS);
       table.setDefaultSortRules(sortRules);
+      Set<String> inclCols = new HashSet<String>();
+      for (ColumnDescriptor cd : table.getColumnDescriptors()) {
+	inclCols.add(cd.getColumnName());
+      }
       Stats stats = new Stats();
-      table.setRows(getRows(table, stats));
-      table.setSummaryInfo(getSummaryInfo(stats));
+      table.setRows(getRows(table, inclCols, stats));
+      table.setSummaryInfo(getSummaryInfo(table, inclCols, stats));
     }
 
-    public boolean requiresKey() {
-      return false;
-    }
-
-    private List getRows(StatusTable table, Stats stats) {
+    private List getRows(StatusTable table, Set<String> inclCols, Stats stats) {
       PluginManager pluginMgr = theDaemon.getPluginManager();
 
       String key = table.getKey();
@@ -264,7 +272,7 @@ public class ArchivalUnitStatus
 	}
 	try {
 	  NodeManager nodeMan = theDaemon.getNodeManager(au);
-	  rowL.add(makeRow(au, nodeMan));
+	  rowL.add(makeRow(au, nodeMan, inclCols));
 	  stats.aus++;
 	} catch (Exception e) {
 	  logger.warning("Unexpected expection building row", e);
@@ -274,7 +282,7 @@ public class ArchivalUnitStatus
       return rowL;
     }
 
-    private Map makeRow(ArchivalUnit au, NodeManager nodeMan) {
+    private Map makeRow(ArchivalUnit au, NodeManager nodeMan, Set inclCols) {
       AuState auState = nodeMan.getAuState();
       HashMap rowMap = new HashMap();
       PollManager.V3PollStatusAccessor v3status =
@@ -286,13 +294,17 @@ public class ArchivalUnitStatus
       //"AuID"
       rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
 //       rowMap.put("AuNodeCount", new Integer(-1));
-      long contentSize = AuUtil.getAuContentSize(au, false);
-      if (contentSize != -1) {
-	rowMap.put("AuSize", new Long(contentSize));
+      if (inclCols.contains("AuSize")) {
+	long contentSize = AuUtil.getAuContentSize(au, false);
+	if (contentSize != -1) {
+	  rowMap.put("AuSize", new Long(contentSize));
+	}
       }
-      long du = AuUtil.getAuDiskUsage(au, false);
-      if (du != -1) {
-	rowMap.put("DiskUsage", new Double(((double)du) / (1024*1024)));
+      if (inclCols.contains("DiskUsage")) {
+	long du = AuUtil.getAuDiskUsage(au, false);
+	if (du != -1) {
+	  rowMap.put("DiskUsage", new Double(((double)du) / (1024*1024)));
+	}
       }
       long lastCrawl = auState.getLastCrawlTime();
       long lastAttempt = auState.getLastCrawlAttempt();
@@ -408,7 +420,8 @@ public class ArchivalUnitStatus
 				       au.getAuId());
     }
 
-    private List getSummaryInfo(Stats stats) {
+    private List getSummaryInfo(StatusTable table, Set<String> inclCols,
+				Stats stats) {
       List res = new ArrayList();
       String numaus = StringUtil.numberOfUnits(stats.aus, "Archival Unit",
 					       "Archival Units");
@@ -420,11 +433,29 @@ public class ArchivalUnitStatus
 					    ColumnDescriptor.TYPE_STRING,
 					    stats.restarting + " restarting"));
       }
-      int n = repoMgr.sizeCalcQueueLen();
-      if (n != 0) {
+      if (inclCols.contains("AuSize") || inclCols.contains("DiskUsage")) {
+	int n = repoMgr.sizeCalcQueueLen();
+	if (n != 0) {
+	  res.add(new StatusTable.SummaryInfo(null,
+					      ColumnDescriptor.TYPE_STRING,
+					      n + " awaiting recalc"));
+	}
+	StatusTable.Reference hideSize = 
+	  new StatusTable.Reference("Hide AU Sizes",
+				    ArchivalUnitStatus.SERVICE_STATUS_TABLE_NAME,
+				    table.getKey());
 	res.add(new StatusTable.SummaryInfo(null,
 					    ColumnDescriptor.TYPE_STRING,
-					    n + " awaiting recalc"));
+					    hideSize));
+      } else {
+	StatusTable.Reference showSize = 
+	  new StatusTable.Reference("Show AU Sizes",
+				    ArchivalUnitStatus.SERVICE_STATUS_TABLE_NAME,
+				    table.getKey());
+	showSize.setProperty("columns", "*");
+	res.add(new StatusTable.SummaryInfo(null,
+					    ColumnDescriptor.TYPE_STRING,
+					    showSize));
       }
       return res;
     }
@@ -461,6 +492,10 @@ public class ArchivalUnitStatus
       return TABLE_TITLE;
     }
 
+    public boolean requiresKey() {
+      return false;
+    }
+
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
       table.setColumnDescriptors(columnDescriptors, defaultCols);
@@ -468,10 +503,6 @@ public class ArchivalUnitStatus
       Stats stats = new Stats();
       table.setRows(getRows(table, stats));
       table.setSummaryInfo(getSummaryInfo(stats));
-    }
-
-    public boolean requiresKey() {
-      return false;
     }
 
     private List getRows(StatusTable table,
