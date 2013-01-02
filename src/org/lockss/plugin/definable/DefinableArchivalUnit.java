@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.93 2012-09-25 22:59:56 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.94 2013-01-02 20:53:54 tlipkis Exp $
  */
 
 /*
@@ -145,6 +145,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   public static final String KEY_AU_FEATURE_URL_MAP = "au_feature_urls";
 
   public static final String AU_FEATURE_SELECTION_ATTR = "au_feature_key";
+  public static final String AU_COVERAGE_DEPTH_ATTR = "au_coverage_depth";
 
   protected ExternalizableMap definitionMap;
 
@@ -316,12 +317,16 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   public List<Pattern> makeNonSubstanceUrlPatterns()
       throws ArchivalUnit.ConfigurationException {
     return compileRegexpList(KEY_AU_NON_SUBSTANCE_URL_PATTERN,
+			     AuUtil.getTitleAttribute(this,
+						      AU_COVERAGE_DEPTH_ATTR),
 			     RegexpContext.Url);
   }
 
   public List<Pattern> makeSubstanceUrlPatterns()
       throws ArchivalUnit.ConfigurationException {
     return compileRegexpList(KEY_AU_SUBSTANCE_URL_PATTERN,
+			     AuUtil.getTitleAttribute(this,
+						      AU_COVERAGE_DEPTH_ATTR),
 			     RegexpContext.Url);
   }
 
@@ -399,8 +404,19 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return compileRegexpList(lst, key);
   }
 
+  List<Pattern> compileRegexpList(String key, String mapkey,
+				  RegexpContext context)
+      throws ArchivalUnit.ConfigurationException {
+    List<String> pats = getElementList(key, mapkey);
+    return compileRegexpList(convertRegexpList(pats, key, RegexpContext.Url),
+			     key);
+  }
+
   List<Pattern> compileRegexpList(List<String> regexps, String key)
       throws ArchivalUnit.ConfigurationException {
+    if (regexps == null) {
+      return null;
+    }
     List<Pattern> res = new ArrayList<Pattern>(regexps.size());
     Perl5Compiler comp = RegexpUtil.getCompiler();
     int flags = Perl5Compiler.READ_ONLY_MASK;
@@ -412,6 +428,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 	res.add(comp.compile(re, flags));
       } catch (MalformedPatternException e) {
 	String msg = "Can't compile URL pattern: " + re;
+	if (key != null) {
+	  msg = "In " + key + ": " + msg;
+	}
 	log.error(msg + ": " + e.toString());
 	throw new ArchivalUnit.ConfigurationException(msg, e);
       }
@@ -690,6 +709,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected List<String> getElementList(String key) {
     return getDefinablePlugin().getElementList(key);
+  }
+
+  protected List<String> getElementList(String key, String mapkey) {
+    return getDefinablePlugin().getElementList(key, mapkey);
   }
 
   CrawlRule convertRule(String ruleString, boolean ignoreCase)

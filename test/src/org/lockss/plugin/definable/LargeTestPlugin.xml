@@ -168,6 +168,26 @@
     <string>org.lockss.plugin.definable.MockFactories$SubstancePredicateFactory</string>
   </entry>
   <entry>
+    <string>au_substance_url_pattern</string>
+    <map>
+      <entry>
+        <string>ABSTRACT</string>
+	<string>"%sabstract/.*\.html", base_url</string>
+      </entry>
+      <entry>
+        <string>*;FULLTEXT</string>
+	<list>
+	  <string>"%sarticle/.*\.pdf", base_url</string>
+	  <string>"%sletters/.*\.html", base_url</string>
+	</list>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_non_substance_url_pattern</string>
+    <string>"%sfluff/", base_url</string>
+  </entry>
+  <entry>
     <!-- Crawl window open from midnight to 6:00AM EST -->
     <string>au_crawlwindow_ser</string>
     <org.lockss.daemon.CrawlWindows-Interval>

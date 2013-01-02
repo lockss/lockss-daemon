@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.45 2012-05-17 18:00:40 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.46 2013-01-02 20:53:54 tlipkis Exp $
  */
 
 /*
@@ -57,14 +57,16 @@ import org.lockss.util.urlconn.*;
 public class TestDefinablePlugin extends LockssTestCase {
   static final String DEFAULT_PLUGIN_VERSION = "1";
 
+  private MockLockssDaemon daemon;
   private MyDefinablePlugin definablePlugin = null;
   ExternalizableMap defMap;
 
   protected void setUp() throws Exception {
     super.setUp();
+    daemon = getMockLockssDaemon();
     definablePlugin = new MyDefinablePlugin();
     defMap = new ExternalizableMap();
-    definablePlugin.initPlugin(getMockLockssDaemon(), defMap);
+    definablePlugin.initPlugin(daemon, defMap);
   }
 
   protected void tearDown() throws Exception {
@@ -72,10 +74,33 @@ public class TestDefinablePlugin extends LockssTestCase {
     super.tearDown();
   }
 
+  public void testGetElementList() throws Exception {
+    defMap.putString("str", "one");
+    defMap.putCollection("list", ListUtil.list("un", "deux"));
+    defMap.putMap("map", MapUtil.map("k1", ListUtil.list("1", "2", "3"),
+				     "k2", "42"));
+    definablePlugin.initPlugin(daemon, defMap);
+    assertSameElements(ListUtil.list("one"),
+		       definablePlugin.getElementList("str"));
+    assertSameElements(ListUtil.list("un", "deux"),
+		       definablePlugin.getElementList("list"));
+    assertNull(definablePlugin.getElementList("map"));
+
+    assertSameElements(ListUtil.list(ListUtil.list("one")),
+		       definablePlugin.getElementLists("str"));
+    assertSameElements(ListUtil.list(ListUtil.list("un", "deux")),
+		       definablePlugin.getElementLists("list"));
+    assertSameElements(ListUtil.list(ListUtil.list("1", "2", "3"),
+				     ListUtil.list("42")),
+		       definablePlugin.getElementLists("map"));
+
+    assertEmpty(definablePlugin.getElementLists("nonesuch"));
+  }
+
   public void testInitMimeMapDefault() throws Exception {
     // 2nd plugin to verify changes to 1st don't effect global mime map
     MyDefinablePlugin p2 = new MyDefinablePlugin();
-    p2.initPlugin(getMockLockssDaemon(), new ExternalizableMap());
+    p2.initPlugin(daemon, new ExternalizableMap());
     MimeTypeInfo mti;
 
     mti = definablePlugin.getMimeTypeInfo("text/html");
@@ -113,15 +138,13 @@ public class TestDefinablePlugin extends LockssTestCase {
     defMap.putMap(  ("text/html"
 		     + DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP),
                   factMap);
-    definablePlugin.initPlugin(getMockLockssDaemon(), defMap);
+    definablePlugin.initPlugin(daemon, defMap);
 
     mti = definablePlugin.getMimeTypeInfo("text/html");
-    System.err.println("fact: " + mti.getLinkExtractorFactory());
     assertTrue(mti.getLinkExtractorFactory()
 	       instanceof LinkExtractorFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(mti.getLinkExtractorFactory())
 	       instanceof MockLinkExtractorFactory);
-    System.err.println("fact: " + mti.getLinkRewriterFactory());
     assertTrue(mti.getLinkRewriterFactory()
 	       instanceof LinkRewriterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(mti.getLinkRewriterFactory())
@@ -161,9 +184,6 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertNull(mti.getHashFilterFactory());
     assertNull(mti.getCrawlFilterFactory());
     assertNull(mti.getLinkRewriterFactory()); // XXX 
-  }
-
-  public void testInitMimeMap() {
   }
 
   public void testCreateAu() throws ArchivalUnit.ConfigurationException {
@@ -232,7 +252,6 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertEquals(null, definablePlugin.getFeatureVersion(Plugin.Feature.Poll));
 
     String extMapName = "org.lockss.plugin.definable.GoodPlugin";
-    LockssDaemon daemon = getMockLockssDaemon();
     definablePlugin.initPlugin(daemon, extMapName);
 
     assertEquals("Poll_2",
@@ -244,7 +263,6 @@ public class TestDefinablePlugin extends LockssTestCase {
   }
 
   public void testGetPluginId() throws Exception {
-    LockssDaemon daemon = getMockLockssDaemon();
     String extMapName = "org.lockss.test.MockConfigurablePlugin";
     definablePlugin.initPlugin(daemon, extMapName);
     assertEquals("org.lockss.test.MockConfigurablePlugin",
@@ -273,7 +291,6 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   public void testInitPlugin() throws Exception {
     definablePlugin = null; //   ensure don't accidentally use wrong veriable
-    LockssDaemon daemon = getMockLockssDaemon();
     DefinablePlugin plug = new DefinablePlugin();
     try {
       plug.initPlugin(daemon, (String)null);
@@ -301,7 +318,6 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   public void testGoodPlugin() throws Exception {
     String prefix = "org.lockss.plugin.definable.";
-    LockssDaemon daemon = getMockLockssDaemon();
     String extMapName = prefix + "GoodPlugin";
     definablePlugin.initPlugin(daemon, extMapName);
     assertEquals(prefix + "GoodPlugin", definablePlugin.getPluginId());
@@ -329,7 +345,6 @@ public class TestDefinablePlugin extends LockssTestCase {
     ConfigurationUtil.addFromArgs("org.lockss.daemon.testingMode",
 				  "content-testing");
     String prefix = "org.lockss.plugin.definable.";
-    LockssDaemon daemon = getMockLockssDaemon();
     String extMapName = prefix + "GoodPlugin";
     definablePlugin.initPlugin(daemon, extMapName);
     assertEquals(prefix + "GoodPlugin", definablePlugin.getPluginId());
@@ -351,7 +366,6 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   public void testInherit() throws Exception {
     String prefix = "org.lockss.plugin.definable.";
-    LockssDaemon daemon = getMockLockssDaemon();
     String extMapName = prefix + "ChildPlugin";
     definablePlugin.initPlugin(daemon, extMapName);
     assertEquals(prefix + "ChildPlugin", definablePlugin.getPluginId());
@@ -380,7 +394,6 @@ public class TestDefinablePlugin extends LockssTestCase {
     ConfigurationUtil.addFromArgs("org.lockss.daemon.testingMode",
 				  "content-testing");
     String prefix = "org.lockss.plugin.definable.";
-    LockssDaemon daemon = getMockLockssDaemon();
     String extMapName = prefix + "ChildPlugin";
     definablePlugin.initPlugin(daemon, extMapName);
     assertEquals(prefix + "ChildPlugin", definablePlugin.getPluginId());
@@ -406,7 +419,6 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   public void testIllInherit() throws Exception {
     String prefix = "org.lockss.plugin.definable.";
-    LockssDaemon daemon = getMockLockssDaemon();
     String extMapName = prefix + "ChildPluginNoParent";
     try {
       definablePlugin.initPlugin(daemon, extMapName);
@@ -417,7 +429,6 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   public void testInheritLoop() throws Exception {
     String prefix = "org.lockss.plugin.definable.";
-    LockssDaemon daemon = getMockLockssDaemon();
     String extMapName = prefix + "ChildPluginParentLoop";
     try {
       definablePlugin.initPlugin(daemon, extMapName);
@@ -587,6 +598,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     "BadPluginIllArg5",
     "BadPluginIllArg6",
     "BadPluginIllArg7",
+    "BadPluginIllArg8",
   };
 
   public void testLoadBadPlugin() throws Exception {
@@ -606,7 +618,7 @@ public class TestDefinablePlugin extends LockssTestCase {
   }
 
   private boolean attemptToLoadPlugin(String pname)  {
-    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    PluginManager pmgr = daemon.getPluginManager();
     String key = PluginManager.pluginKeyFromId(pname);
     return pmgr.ensurePluginLoaded(key);
   }

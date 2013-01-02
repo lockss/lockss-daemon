@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.70 2012-11-08 06:19:22 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.71 2013-01-02 20:53:54 tlipkis Exp $
  */
 
 /*
@@ -114,7 +114,10 @@ public class DefinablePlugin extends BasePlugin {
     "plugin_article_iterator_pattern";
 
   public static final String KEY_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE =
-      "plugin_repair_from_publisher_when_too_close";
+    "plugin_repair_from_publisher_when_too_close";
+
+  public static final String KEY_PLUGIN_DELETE_EXTRA_FILES =
+    "plugin_delete_extra_files";
 
   public static final String DEFAULT_PLUGIN_VERSION = "1";
   public static final String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
@@ -166,6 +169,8 @@ public class DefinablePlugin extends BasePlugin {
     initMimeMap();
     initFeatureVersions();
     initAuFeatureMap();
+    initSubstancePatterns(DefinableArchivalUnit.KEY_AU_SUBSTANCE_URL_PATTERN);
+    initSubstancePatterns(DefinableArchivalUnit.KEY_AU_NON_SUBSTANCE_URL_PATTERN);
     initArchiveFileTypes();
     checkParamAgreement();
   }
@@ -307,42 +312,44 @@ public class DefinablePlugin extends BasePlugin {
   }
 
   void checkParamAgreement(String key, PrintfContext context) {
-    List<String> printfList = getElementList(key);
-    if (printfList == null) {
+    List<List<String>> lists = getElementLists(key);
+    if (lists == null) {
       return;
     }
-    for (String printf : printfList) {
-      if (StringUtil.isNullString(printf)) {
-	log.warning("Null printf string in " + key);
-	continue;
-      }
-      PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printf);
-      Collection<String> p_args = p_data.getArguments();
-      for (String arg : p_args) {
-	ConfigParamDescr descr = findAuConfigDescr(arg);
-	if (descr == null) {
-	  throw new
-	    PluginException.InvalidDefinition("Not a declared parameter: " +
-					      arg + " in " + printf + " in " +
-					      getPluginName());
+    for (List<String> printfList : lists) {
+      for (String printf : printfList) {
+	if (StringUtil.isNullString(printf)) {
+	  log.warning("Null printf string in " + key);
+	  continue;
 	}
-	// ensure range and set params used only in legal context
-	switch (context) {
-	case Regexp:
-	case Display:
-	  // everything is legal in a regexp or a display string
-	  break;
-	case URL:
-	  // NUM_RANGE and SET legal because can enumerate.  Can't
-	  // enumerate RANGE
-	  switch (descr.getType()) {
-	  case ConfigParamDescr.TYPE_RANGE:
-	  throw new
-	    PluginException.InvalidDefinition("Range parameter (" + arg +
-					      ") used in illegal context in " +
-					      getPluginName() + ": "
-					      + key + ": " + printf);
-	  default:
+	PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printf);
+	Collection<String> p_args = p_data.getArguments();
+	for (String arg : p_args) {
+	  ConfigParamDescr descr = findAuConfigDescr(arg);
+	  if (descr == null) {
+	    throw new
+	      PluginException.InvalidDefinition("Not a declared parameter: " +
+						arg + " in " + printf + " in " +
+						getPluginName());
+	  }
+	  // ensure range and set params used only in legal context
+	  switch (context) {
+	  case Regexp:
+	  case Display:
+	    // everything is legal in a regexp or a display string
+	    break;
+	  case URL:
+	    // NUM_RANGE and SET legal because can enumerate.  Can't
+	    // enumerate RANGE
+	    switch (descr.getType()) {
+	    case ConfigParamDescr.TYPE_RANGE:
+	      throw new
+		PluginException.InvalidDefinition("Range parameter (" + arg +
+						  ") used in illegal context in " +
+						  getPluginName() + ": "
+						  + key + ": " + printf);
+	    default:
+	    }
 	  }
 	}
       }
@@ -401,13 +408,47 @@ public class DefinablePlugin extends BasePlugin {
   }
 
   public List<String> getElementList(String key) {
-    Object element = definitionMap.getMapElement(key);
-    List<String> lst;
+    return coerceToList(definitionMap.getMapElement(key));
+  }
 
-    if (element instanceof String) {
-      return Collections.singletonList((String)element);
-    } else if (element instanceof List) {
-      return (List)element;
+  public List<String> getElementList(String key, String mapkey) {
+    Object val = definitionMap.getMapElement(key);
+    if (val instanceof Map) {
+      if (mapkey == null) {
+	mapkey = "*";
+      }
+      Object mapval = ((Map)val).get(mapkey);
+      if (mapval == null && !mapkey.equals("*")) {
+	mapval = ((Map)val).get("*");
+      }
+      if (mapval == null) {
+	return null;
+      }
+      return coerceToList(mapval);
+    }
+    return coerceToList(val);
+  }
+
+  public List<List<String>> getElementLists(String key) {
+    final Object val = definitionMap.getMapElement(key);
+    if (val instanceof Map) {
+      return new ArrayList<List<String>>() {{
+	  for (Map.Entry ent: ((Map<?,?>)val).entrySet()) {
+	    add(coerceToList(ent.getValue()));
+	  }
+	}};
+    }      
+    if (val != null) {
+      return Collections.singletonList(coerceToList(val));
+    }
+    return Collections.EMPTY_LIST;
+  }
+
+  public List<String> coerceToList(Object val) {
+    if (val instanceof String) {
+      return Collections.singletonList((String)val);
+    } else if (val instanceof List) {
+      return (List)val;
     } else {
       return null;
     }
@@ -669,6 +710,17 @@ public class DefinablePlugin extends BasePlugin {
     }
   }
 
+  // If substance patterns is a map, expand any multiple keys
+  protected void initSubstancePatterns(String key) {
+    if (definitionMap.containsKey(key)) {
+      Object obj = definitionMap.getMapElement(key);
+      if (obj instanceof Map) {
+	definitionMap.setMapElement(key,
+				    MapUtil.expandAlternativeKeyLists((Map)obj));
+      }
+    }
+  }
+
   protected void initArchiveFileTypes () {
     if (definitionMap.containsKey(KEY_PLUGIN_ARCHIVE_FILE_TYPES)) {
       Object obj = 
@@ -873,24 +925,24 @@ public class DefinablePlugin extends BasePlugin {
     return articleMetadataFact;
   }
 
-  protected SubstancePredicateFactory substancePredFast = null;
+  protected SubstancePredicateFactory substancePredFact = null;
 
   /**
    * Returns the plugin's substance predicate factory, if any
    * @return the SubstancePredicateFactory
    */
   public SubstancePredicateFactory getSubstancePredicateFactory() {
-    if (substancePredFast == null) {
+    if (substancePredFact == null) {
       String factClass =
 	definitionMap.getString(KEY_PLUGIN_SUBSTANCE_PREDICATE_FACTORY,
 				null);
       if (factClass != null) {
-	substancePredFast =
+	substancePredFact =
 	  (SubstancePredicateFactory)newAuxClass(factClass,
 						 SubstancePredicateFactory.class);
       }
     }
-    return substancePredFast;
+    return substancePredFact;
   }
 
   public String getPluginId() {

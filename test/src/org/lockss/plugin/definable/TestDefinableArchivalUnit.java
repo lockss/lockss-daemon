@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.60 2012-09-25 22:59:55 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.61 2013-01-02 20:53:54 tlipkis Exp $
  */
 
 /*
@@ -1310,9 +1310,6 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testFeatureUrls() throws Exception {
-    ConfigurationUtil.addFromArgs(DefinableArchivalUnit.PARAM_CRAWL_RULES_INCLUDE_START,
-				  "false");
-
     MyDefinablePlugin defplug = loadLargePlugin();
     // Configure and create an AU
     Properties p = new Properties();
@@ -1359,6 +1356,83 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 			       "http://base.foo/base_path/333/1",
 			       "http://base.foo/base_path/333/2"),
 		 au3.getAuFeatureUrls("au_feat_map"));
+  }
+
+  List<String> getPatterns(final List<Pattern> pats) {
+    return new ArrayList<String>() {{
+	for (Pattern pat : pats) {
+	  add(pat.getPattern());
+	}
+      }};
+  }
+
+  public void testSubstanceMap() throws Exception {
+    MyDefinablePlugin defplug = loadLargePlugin();
+    // Configure and create an AU
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("resolver_url", "http://resolv.er/path/");
+    p.put("journal_code", "J47");
+    p.put("year", "1984");
+//     p.put("issue_set", "1,2,3,3a");
+    p.put("issue_set", "1,2");
+    p.put("num_issue_range", "3-3");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+
+    String substPatFull1 =
+      "http\\:\\/\\/base\\.foo\\/base_path\\/article/.*\\.pdf";
+    String substPatFull2 =
+      "http\\:\\/\\/base\\.foo\\/base_path\\/letters/.*\\.html";
+    String substPatAbs =
+      "http\\:\\/\\/base\\.foo\\/base_path\\/abstract/.*\\.html";
+    String nonSubstPat = "http\\:\\/\\/base\\.foo\\/base_path\\/fluff/";
+
+    // Test AU with no tdb entry
+
+    DefinableArchivalUnit au =
+      (DefinableArchivalUnit)defplug.createAu(auConfig);
+
+    assertEquals(ListUtil.list(substPatFull1, substPatFull2),
+		 getPatterns(au.makeSubstanceUrlPatterns()));
+    assertEquals(ListUtil.list(nonSubstPat),
+		 getPatterns(au.makeNonSubstanceUrlPatterns()));
+
+    // Test AU coverage depth = abstract
+
+    MyDefinableArchivalUnit au2 =
+      (MyDefinableArchivalUnit)defplug.createAu(auConfig);
+    TitleConfig tc2 = new TitleConfig("Foo", defplug);
+    tc2.setAttributes(MapUtil.map("au_coverage_depth", "ABSTRACT"));
+    au2.setTitleConfig(tc2);
+    assertEquals(ListUtil.list(substPatAbs),
+		 getPatterns(au2.makeSubstanceUrlPatterns()));
+    assertEquals(ListUtil.list(nonSubstPat),
+		 getPatterns(au2.makeNonSubstanceUrlPatterns()));
+
+    // Test AU coverage depth = fulltext
+
+    MyDefinableArchivalUnit au3 =
+      (MyDefinableArchivalUnit)defplug.createAu(auConfig);
+    TitleConfig tc3 = new TitleConfig("Foo", defplug);
+    tc3.setAttributes(MapUtil.map("au_coverage_depth", "FULLTEXT"));
+    au3.setTitleConfig(tc3);
+    assertEquals(ListUtil.list(substPatFull1, substPatFull2),
+		 getPatterns(au3.makeSubstanceUrlPatterns()));
+    assertEquals(ListUtil.list(nonSubstPat),
+		 getPatterns(au3.makeNonSubstanceUrlPatterns()));
+
+    // Test AU with unknown coverage depth
+
+    MyDefinableArchivalUnit au4 =
+      (MyDefinableArchivalUnit)defplug.createAu(auConfig);
+    TitleConfig tc4 = new TitleConfig("Foo", defplug);
+    tc4.setAttributes(MapUtil.map("au_coverage_depth", "6 fathoms"));
+    au4.setTitleConfig(tc4);
+    assertEquals(ListUtil.list(substPatFull1, substPatFull2),
+		 getPatterns(au4.makeSubstanceUrlPatterns()));
+    assertEquals(ListUtil.list(nonSubstPat),
+		 getPatterns(au4.makeNonSubstanceUrlPatterns()));
+
   }
 
   public void testOaiDefaultDC() throws Exception {
