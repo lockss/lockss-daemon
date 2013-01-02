@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusTable.java,v 1.16 2013-01-02 20:52:55 tlipkis Exp $
+ * $Id: TestStatusTable.java,v 1.17 2013-01-02 21:01:23 tlipkis Exp $
  */
 
 /*
@@ -130,9 +130,12 @@ public class TestStatusTable extends LockssTestCase {
 					  ColumnDescriptor.TYPE_STRING)
 		     );
     List def = ListUtil.list("col1", "col3");
-    assertEquals(cols, table.filterColDescs(cols, null));
+    String defstr = "col1;col3";
+    assertEquals(cols, table.filterColDescs(cols, null, null));
     assertEquals(ListUtil.list(cols.get(0), cols.get(2)),
 		 table.filterColDescs(cols, def));
+    assertEquals(ListUtil.list(cols.get(0), cols.get(2)),
+		 table.filterColDescs(cols, defstr));
     table.setColumnDescriptors(cols);
     assertEquals(ListUtil.list(cols.get(0), cols.get(1), cols.get(2)),
 		 table.getColumnDescriptors());
@@ -142,6 +145,8 @@ public class TestStatusTable extends LockssTestCase {
     table.setProperty("columns", "col3;col2");
     assertEquals(ListUtil.list(cols.get(2), cols.get(1)),
 		 table.filterColDescs(cols, def));
+    assertEquals(ListUtil.list(cols.get(2), cols.get(1)),
+		 table.filterColDescs(cols, defstr));
     table.setColumnDescriptors(cols);
     assertEquals(ListUtil.list(cols.get(2), cols.get(1)),
 		 table.getColumnDescriptors());
