@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.35 2012-11-21 04:09:14 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.36 2013-01-02 20:53:09 tlipkis Exp $
  */
 
 /*
@@ -227,14 +227,27 @@ public class AuUtil {
     return getAuState(au).getLastCrawlTime() >= 0;
   }
 
+  public static boolean okDeleteExtraFiles(ArchivalUnit au) {
+    return !(au instanceof ExplodedArchivalUnit);
+  }
+
+  public static boolean isDeleteExtraFiles(ArchivalUnit au,
+					   boolean dfault) {
+    return getPluginDefinition(au)
+      .getBoolean(DefinablePlugin.KEY_PLUGIN_DELETE_EXTRA_FILES, dfault);
+  }
+
+  public static boolean isRepairFromPublisherWhenTooClose(ArchivalUnit au,
+							  boolean dfault) {
+    return getPluginDefinition(au)
+      .getBoolean(DefinablePlugin.KEY_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE,
+		  dfault);
+  }
+
   public static boolean isPubDown(ArchivalUnit au) {
     return isPubNever(au) ||
       getBoolValue(getAuParamOrTitleDefault(au, ConfigParamDescr.PUB_DOWN),
 		   false);
-  }
-
-  public static boolean okDeleteExtraFiles(ArchivalUnit au) {
-    return !(au instanceof ExplodedArchivalUnit);
   }
 
   public static boolean isPubNever(ArchivalUnit au) {

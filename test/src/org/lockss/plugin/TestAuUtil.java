@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.19 2012-11-21 04:09:13 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.20 2013-01-02 20:53:09 tlipkis Exp $
  */
 
 /*
@@ -234,6 +234,19 @@ public class TestAuUtil extends LockssTestCase {
 						  "false")));
     assertFalse(AuUtil.isPubNever(makeTitleConfig(ConfigParamDescr.BASE_URL,
 						  "http://foo.bar/")));
+  }
+
+  public void testIsDeleteExtraFiles() throws Exception {
+    ExternalizableMap map = new ExternalizableMap();
+    DefinablePlugin dplug = new DefinablePlugin();
+    dplug.initPlugin(getMockLockssDaemon(), "FooPlugin", map, null);
+    DefinableArchivalUnit au = new LocalDefinableArchivalUnit(dplug, map);
+    assertFalse(AuUtil.isDeleteExtraFiles(au, false));
+    assertTrue(AuUtil.isDeleteExtraFiles(au, true));
+    map.putBoolean(DefinablePlugin.KEY_PLUGIN_DELETE_EXTRA_FILES, true);
+    assertTrue(AuUtil.isDeleteExtraFiles(au, false));
+    map.putBoolean(DefinablePlugin.KEY_PLUGIN_DELETE_EXTRA_FILES, false);
+    assertFalse(AuUtil.isDeleteExtraFiles(au, true));
   }
 
   public void testGetTitleAttribute() {
@@ -473,6 +486,15 @@ public class TestAuUtil extends LockssTestCase {
 
     public List<ConfigParamDescr> getLocalAuConfigDescrs() {
       return configDescrs;
+    }
+  }
+
+  private static class LocalDefinableArchivalUnit
+    extends DefinableArchivalUnit {
+
+    protected LocalDefinableArchivalUnit(DefinablePlugin plugin,
+					 ExternalizableMap definitionMap) {
+      super(plugin, definitionMap);
     }
   }
 }
