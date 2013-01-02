@@ -1707,7 +1707,10 @@
     param[journal_issn] = 2156-1680
 
     au < released ; 2011 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 1 ; 1 >
-    au < released ; 2012 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 2 ; 2 >   }
+    au < released ; 2012 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 2 ; 2 >
+    au < expected ; 2013 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 3 ; 3 >
+
+  }
 
   {
 
@@ -1788,6 +1791,9 @@
     >
 
     comment[0] = forthcoming 2013
+    param[journal_issn] = 2166-7241
+
+    au < expected ; 2013 ; International Journal of Monitoring and Surveillance Technologies Research (IJMSTR) Volume 1 ; 1 > 
 
   }
 
