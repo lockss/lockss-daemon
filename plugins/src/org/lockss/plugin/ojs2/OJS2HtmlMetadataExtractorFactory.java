@@ -1,6 +1,6 @@
 /*
 
- * $Id: OJS2HtmlMetadataExtractorFactory.java,v 1.3 2012-12-23 21:05:59 ldoan Exp $
+ * $Id: OJS2HtmlMetadataExtractorFactory.java,v 1.4 2013-01-02 22:22:05 ldoan Exp $
  */
 
 /*
@@ -39,9 +39,11 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.extractor.MetadataField.Extractor;
 import org.lockss.plugin.*;
 
+/*
+ * OJS2HtmlMetadataExtractorFactory extracts metadata from each article.
+ */
 public class OJS2HtmlMetadataExtractorFactory implements
     FileMetadataExtractorFactory {
   
@@ -57,38 +59,36 @@ public class OJS2HtmlMetadataExtractorFactory implements
   public static class OJS2HtmlMetadataExtractor 
     extends SimpleHtmlMetaTagMetadataExtractor {
 
-    // Map BePress-specific HTML meta tag names to cooked metadata fields
+    // Map OJS2-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     
     static {
-       //general pattern for capturing start and end page number. 
-      String pagenumpattern = "[pP\\. ]*([^-]+)(?:-(.+))?";
-      // tagMap.put("dc.creator", MetadataField.DC_FIELD_CONTRIBUTOR);
-      // <meta name="citation_authors"
-      // content="G Poelmans, J K Buitelaar, D L Pauls, B Franke" />
-      tagMap.put("citation_authors", new MetadataField(
-          MetadataField.FIELD_AUTHOR, MetadataField.splitAt(";")));
-     // <meta name="DC.Date.issued" scheme="ISO860pp\\.[ ]+.*-(.*)1" content="2009-12-29" />
-      tagMap.put("DC.Date.issued", MetadataField.FIELD_DATE);
-      // <meta name="citation_title" 
-      // content="Altered arachidonic acid cascade enzymes in postmortem 
-      //brain from bipolar disorder patients"/>
-      tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
-      // <meta name="citation_journal_title" content="Molecular Psychiatry" />
+      
+      tagMap.put("DC.Format", MetadataField.DC_FIELD_FORMAT);
+      tagMap.put("DC.Language", MetadataField.DC_FIELD_LANGUAGE);
+      tagMap.put("DC.Title", MetadataField.DC_FIELD_TITLE);
+      tagMap.put("DC.Identifier", MetadataField.DC_FIELD_IDENTIFIER);
+      tagMap.put("DC.Date", MetadataField.DC_FIELD_DATE);
+      tagMap.put("DC.Publisher", MetadataField.DC_FIELD_PUBLISHER);
+      tagMap.put("DC.Publisher", MetadataField.FIELD_PUBLISHER);
+      tagMap.put("DC.Contributor", MetadataField.DC_FIELD_CONTRIBUTOR);
       tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
-      // <meta name="citation_volume" content="19" />
+      tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put("citation_date", MetadataField.FIELD_DATE);
+      tagMap.put("citation_authors",
+          new MetadataField(MetadataField.FIELD_AUTHOR,
+              MetadataField.splitAt(";")));
+      tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
-      // <meta name="citation_issue" content="2" />
+      tagMap.put("citation_volume", MetadataField.DC_FIELD_CITATION_VOLUME);
       tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
-      // <meta name="citation_firstpage" content="pp. 12-13|p24|13-14" />
-      tagMap.put("citation_firstpage", new MetadataField(
-                 MetadataField.FIELD_START_PAGE,
-                 MetadataField.groupExtractor(pagenumpattern, 1)));
+      tagMap.put("citation_issue", MetadataField.DC_FIELD_CITATION_ISSUE);
+      tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
+      tagMap.put("citation_firstpage", MetadataField.DC_FIELD_CITATION_SPAGE);
+      tagMap.put("citation_lastpage", MetadataField.DC_FIELD_CITATION_EPAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
-      // <meta name="prism.issn" content="0955-9930" />
-      // tagMap.put("prism.issn", MetadataField.FIELD_ISSN);
-      // <meta name="prism.eIssn" content="1476-5489" />
-      tagMap.put("citation_issn", MetadataField.FIELD_EISSN);
+      tagMap.put("citation_public_url", MetadataField.FIELD_ACCESS_URL);
+            
     } // static
 
     @Override
