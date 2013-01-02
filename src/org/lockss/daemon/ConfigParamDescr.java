@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.49 2012-07-09 07:50:15 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.50 2013-01-02 20:52:18 tlipkis Exp $
  */
 
 /*
@@ -516,14 +516,14 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     switch (type) {
       case TYPE_INT:
         try {
-          ret_val = new Integer(val);
+          ret_val = Integer.valueOf(val);
         } catch (NumberFormatException nfe) {
           throw new InvalidFormatException("Invalid Int: " + val);
         }
         break;
       case TYPE_POS_INT:
           try {
-            ret_val = new Integer(val);
+            ret_val = Integer.valueOf(val);
             if(((Integer)ret_val).intValue() < 0) {
               throw new InvalidFormatException("Invalid Positive Int: " + val);
             }
@@ -534,7 +534,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
 
       case TYPE_LONG:
         try {
-          ret_val = new Long(val);
+          ret_val = Long.valueOf(val);
         } catch (NumberFormatException nfe) {
           throw new InvalidFormatException("Invalid Long: " + val);
         }
@@ -567,7 +567,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
           try {
             int i_val = Integer.parseInt(val);
             if (i_val >= 0) {
-              ret_val = new Integer(val);
+              ret_val = Integer.valueOf(val);
             }
           }
           catch (NumberFormatException fe) {
@@ -673,7 +673,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   /** Returns a short string suitable for error messages.  Includes the key
    * and the display name if present */
   public String shortString() {
-    StringBuffer sb = new StringBuffer(40);
+    StringBuilder sb = new StringBuilder(40);
     sb.append(getDisplayName());
     if (!key.equals(displayName)) {
       sb.append("(");
@@ -684,7 +684,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   }
 
   public String toString() {
-    StringBuffer sb = new StringBuffer(40);
+    StringBuilder sb = new StringBuilder(40);
     sb.append("[CPD: key: ");
     sb.append(getKey());
     sb.append("]");
@@ -794,7 +794,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   }
 
   public String toDetailedString() {
-    StringBuffer buffer = new StringBuffer(100);
+    StringBuilder buffer = new StringBuilder(100);
     buffer.append("[");
     buffer.append(getClass().getName());
     buffer.append(";key=");
