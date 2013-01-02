@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.128 2012-12-20 18:38:48 fergaloy-sf Exp $
+ * $Id: V3Poller.java,v 1.129 2013-01-02 20:54:11 tlipkis Exp $
  */
 
 /*
@@ -1297,7 +1297,8 @@ public class V3Poller extends BasePoll {
 	log.warning("Tally was inconclusive for block " + url + " in poll " +
 		    getKey());
 	if (repairIfNecessary &&
-	    AuUtil.getPluginDefinition(getAu()).getBoolean(DefinablePlugin.KEY_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE, repairFromPublisherWhenTooClose)) {
+	    AuUtil.isRepairFromPublisherWhenTooClose(getAu(),
+						     repairFromPublisherWhenTooClose)) {
 	  requestRepairFromPublisher(url);
 	}
 	break;
@@ -1502,7 +1503,11 @@ public class V3Poller extends BasePoll {
    */
   private void deleteBlock(String url) {
     try {
-      if (deleteExtraFiles && AuUtil.okDeleteExtraFiles(getAu())) {
+      // Delete or don't according to plugin wishes.  If plugin doesn't
+      // specify follow global setting for AUs for which it's appropriate
+      if (AuUtil.isDeleteExtraFiles(getAu(),
+				    (deleteExtraFiles &&
+				     AuUtil.okDeleteExtraFiles(getAu())))) {
         CachedUrlSetSpec cuss =
           new SingleNodeCachedUrlSetSpec(url);
         CachedUrlSet cus = getAu().makeCachedUrlSet(cuss);
@@ -2402,7 +2407,7 @@ public class V3Poller extends BasePoll {
 			new HashingCompleteCallback(),
 			new BlockEventHandler())) {
 	long hashEst = cus.estimatedHashDuration();
-	String msg = "No time for" + 
+	String msg = "No time for " + 
 	  StringUtil.timeIntervalToString(hashEst) + " hash between " +
 	  TimeBase.nowDate() + " and " + Deadline.at(tallyEnd);
 	log.error(msg + ": " + pollerState.getPollKey());
