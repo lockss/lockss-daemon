@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.30 2007-08-22 06:45:15 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.31 2013-01-02 20:54:50 tlipkis Exp $
  */
 
 /*
@@ -112,10 +112,12 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
+      String key = table.getKey();
+      table.setTitle(getTitle(key));
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
       Stats stats = new Stats();
-      table.setRows(getRows(table, stats));
+      table.setRows(getRows(table, key, stats));
       table.setSummaryInfo(getSummaryInfo(stats));
     }
 
@@ -123,20 +125,24 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
       return false;
     }
 
-    private List getRows(StatusTable table, Stats stats) {
+    private List getRows(StatusTable table, String key, Stats stats) {
       boolean includeInternalAus =
 	table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       List rows = new ArrayList();
       TreeSet roots = new TreeSet();
-      List repos = daemon.getRepositoryManager().getRepositoryList();
-      for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
-	String repoSpec = (String)iter.next();
+      Collection<String> specs;
+      if (!StringUtil.isNullString(key)) {
+	specs = StringUtil.breakAt(key, ";");
+      } else {
+	specs = daemon.getRepositoryManager().getRepositoryList();
+	roots.add(getDefaultRepositoryLocation());
+      }
+      for (String repoSpec : specs) {
 	String path = LockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
 	if (path != null) {
 	  roots.add(path);
 	}
       }
-      roots.add(getDefaultRepositoryLocation());
       for (Iterator iter = roots.iterator(); iter.hasNext(); ) {
 	String root = (String)iter.next();
 	addRows(rows, LockssRepositoryImpl.extendCacheLocation(root),
@@ -295,8 +301,12 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
       }
     }
 
-    private String getTitle(String key) {
-      return "Repositories";
+    protected String getTitle(String key) {
+      if (StringUtil.isNullString(key)) {
+	return "Repositories";
+      } else {
+	return "Repositories on " + key;
+      }
     }
 
     private List getSummaryInfo(Stats stats) {
@@ -364,7 +374,9 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	Map row = new HashMap();
 	String repo = (String)iter.next();
 	PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
-	row.put("repo", repo);
+	row.put("repo", new StatusTable.Reference(repo,
+						  SERVICE_STATUS_TABLE_NAME,
+						  repo));
 	if (df != null) {
 	  row.put("size", orderedKBObj(df.getSize()));
 	  row.put("used", orderedKBObj(df.getUsed()));
