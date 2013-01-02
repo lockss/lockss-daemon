@@ -1,10 +1,10 @@
 /*
- * $Id: TestCounterReportsJournalReport5.java,v 1.4 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport5.java,v 1.5 2013-01-02 21:14:05 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,8 +44,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
@@ -64,6 +66,18 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
   private static final String JOURNAL_URL = "http://example.com/journal.url";
   private static final String HTML_URL = "http://example.com/html.url";
   private static final String PDF_URL = "http://example.com/pdf.url";
+
+  // Query to clean up the publication year aggregated request rows.
+  private static final String SQL_QUERY_PUBYEAR_REQUEST_DELETE = "delete from "
+      + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE;
+
+  // Query to clean up the type aggregated request rows.
+  private static final String SQL_QUERY_TYPE_REQUEST_DELETE = "delete from "
+      + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE;
+
+  // Query to clean up the test journal rows.
+  private static final String SQL_QUERY_JOURNAL_DELETE = "delete from "
+      + PUBLICATION_TABLE + " where publication_seq > 2";
 
   private MockLockssDaemon theDaemon;
   private DbManager dbManager;
@@ -121,23 +135,47 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
    */
   public void testAll() throws Exception {
     runTestValidation();
-    runTestEmptyReport();
 
-    initializeJournalMetadata();
+    // Today's date.
+    Calendar calendar = new GregorianCalendar();
+    calendar.setTime(TimeBase.nowDate());
+    int year = calendar.get(Calendar.YEAR);
+    int month = calendar.get(Calendar.MONTH) + 1;
+    int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-    counterReportsManager.persistRequest(JOURNAL_URL, false);
-    counterReportsManager.persistRequest(JOURNAL_URL, true);
-    counterReportsManager.persistRequest(HTML_URL, false);
-    counterReportsManager.persistRequest(HTML_URL, true);
-    counterReportsManager.persistRequest(PDF_URL, false);
-    counterReportsManager.persistRequest(PDF_URL, true);
+    // Run the tests for days in the next 10 years.
+    for (int runYear = 0; runYear < 10; runYear++) {
+      runTestEmptyReport(year);
 
-    CounterReportsRequestAggregator aggregator =
-	new CounterReportsRequestAggregator(theDaemon);
-    aggregator.getCronTask().execute();
+      initializeJournalMetadata(year);
 
-    runTestDefaultPeriodReport();
-    runTestCustomPeriodReport();
+      counterReportsManager.persistRequest(JOURNAL_URL, false);
+      counterReportsManager.persistRequest(JOURNAL_URL, true);
+      counterReportsManager.persistRequest(HTML_URL, false);
+      counterReportsManager.persistRequest(HTML_URL, true);
+      counterReportsManager.persistRequest(PDF_URL, false);
+      counterReportsManager.persistRequest(PDF_URL, true);
+
+      CounterReportsRequestAggregator aggregator =
+	  new CounterReportsRequestAggregator(theDaemon);
+      aggregator.getCronTask().execute();
+
+      runTestDefaultPeriodReport(year);
+      runTestCustomPeriodReport(year);
+
+      cleanUpAggregatesAndJournals();
+
+      // Point to the next year.
+      year++;
+
+      // Handle leap years.
+      if (month == 2 && day == 29 && year % 4 != 0) {
+	day = 28;
+      }
+
+      TimeBase.setSimulated(year + "/" + month + "/" + day + " " + month
+	  + ":" + day + ":" + day);
+    }
   }
 
   /**
@@ -191,9 +229,11 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
   /**
    * Tests an empty report.
    * 
+   * @param year
+   *          An int with the year when the test is run.
    * @throws Exception
    */
-  public void runTestEmptyReport() throws Exception {
+  public void runTestEmptyReport(int year) throws Exception {
     CounterReportsJournalReport5 report =
 	new CounterReportsJournalReport5(theDaemon);
 
@@ -213,9 +253,18 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
       line = reader.readLine();
     }
 
-    assertEquals(
-	"\"Total for all journals\",,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-	line);
+    StringBuilder expected =
+	new StringBuilder("\"Total for all journals\",,,,,,,0,");
+
+    int columnCount = 11 + year % 10;
+
+    for (int i = 0; i < columnCount; i++) {
+      expected.append("0,");
+    }
+
+    expected.append("0,0");
+
+    assertEquals(expected.toString(), line);
     assertNull(reader.readLine());
 
     IOUtil.safeClose(reader);
@@ -235,9 +284,15 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
       line = reader.readLine();
     }
 
-    assertEquals(
-	"Total for all journals\t\t\t\t\t\t\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
-	line);
+    expected = new StringBuilder("Total for all journals\t\t\t\t\t\t\t0\t");
+
+    for (int i = 0; i < columnCount; i++) {
+      expected.append("0\t");
+    }
+
+    expected.append("0\t0");
+
+    assertEquals(expected.toString(), line);
     assertNull(reader.readLine());
 
     IOUtil.safeClose(reader);
@@ -248,10 +303,12 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
   /**
    * Creates a journal for which to aggregate requests.
    * 
+   * @param year
+   *          An int with the year when the test is run.
    * @return a Long with the identifier of the created journal.
    * @throws SQLException
    */
-  private Long initializeJournalMetadata() throws SQLException {
+  private Long initializeJournalMetadata(int year) throws SQLException {
     Long publicationSeq = null;
     Connection conn = null;
 
@@ -262,12 +319,15 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
       Long publisherSeq =
 	  metadataManager.findOrCreatePublisher(conn, "publisher");
 
+      // The publication date is a couple of years ago.
+      String publicationDate = (year-2) + "-01-01";
+
       // Add the publication.
       publicationSeq =
 	  metadataManager.findOrCreatePublication(conn, "12345678", "98765432",
 						  null, null, publisherSeq,
-						  "JOURNAL", "2010-01-01", null,
-						  null);
+						  "JOURNAL", publicationDate,
+						  null, null);
 
       // Add the plugin.
       Long pluginSeq =
@@ -290,15 +350,15 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
 	                                       MD_ITEM_TYPE_JOURNAL_ARTICLE);
 
       Long mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                            auMdSeq, "2010-01-01",
+                                            auMdSeq, publicationDate,
 	  				    "htmlArticle", null);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
                                    HTML_URL);
 
       mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                            auMdSeq, "2010-01-01", "pdfArticle",
-                                            null);
+                                            auMdSeq, publicationDate,
+                                            "pdfArticle", null);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
                                    PDF_URL);
@@ -313,9 +373,11 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
   /**
    * Tests a report for the default period.
    * 
+   * @param year
+   *          An int with the year when the test is run.
    * @throws Exception
    */
-  public void runTestDefaultPeriodReport() throws Exception {
+  public void runTestDefaultPeriodReport(int year) throws Exception {
     CounterReportsJournalReport5 report =
 	new CounterReportsJournalReport5(theDaemon);
 
@@ -335,9 +397,18 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
       line = reader.readLine();
     }
 
-    assertEquals(
-	"\"Total for all journals\",,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-	line);
+    StringBuilder expected =
+	new StringBuilder("\"Total for all journals\",,,,,,,0,");
+
+    int columnCount = 11 + year % 10;
+
+    for (int i = 0; i < columnCount; i++) {
+      expected.append("0,");
+    }
+
+    expected.append("0,0");
+
+    assertEquals(expected.toString(), line);
     assertNull(reader.readLine());
 
     IOUtil.safeClose(reader);
@@ -357,9 +428,15 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
       line = reader.readLine();
     }
 
-    assertEquals(
-	"Total for all journals\t\t\t\t\t\t\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
-	line);
+    expected = new StringBuilder("Total for all journals\t\t\t\t\t\t\t0\t");
+
+    for (int i = 0; i < columnCount; i++) {
+      expected.append("0\t");
+    }
+
+    expected.append("0\t0");
+
+    assertEquals(expected.toString(), line);
     assertNull(reader.readLine());
 
     IOUtil.safeClose(reader);
@@ -370,9 +447,11 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
   /**
    * Tests a report for a custom period.
    * 
+   * @param year
+   *          An int with the year when the test is run.
    * @throws Exception
    */
-  public void runTestCustomPeriodReport() throws Exception {
+  public void runTestCustomPeriodReport(int year) throws Exception {
     Calendar calendar = Calendar.getInstance();
     calendar.setTime(TimeBase.nowDate());
     int endYear = calendar.get(Calendar.YEAR);
@@ -401,13 +480,30 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
       line = reader.readLine();
     }
 
-    assertEquals(
-	"\"Total for all journals\",,,,,,,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0",
-	line);
+    StringBuilder expected =
+	new StringBuilder("\"Total for all journals\",,,,,,,0,0,0,2,");
+
+    int columnCount = 8 + year % 10;
+
+    for (int i = 0; i < columnCount; i++) {
+      expected.append("0,");
+    }
+
+    expected.append("0,0");
+
+    assertEquals(expected.toString(), line);
     line = reader.readLine();
-    assertEquals(
-	"JOURNAL,publisher,platform,10.1000/182,,1234-5678,9876-5432,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0",
-	line);
+
+    expected =
+	new StringBuilder("JOURNAL,publisher,platform,10.1000/182,,1234-5678,9876-5432,0,0,0,2,");
+
+    for (int i = 0; i < columnCount; i++) {
+      expected.append("0,");
+    }
+
+    expected.append("0,0");
+
+    assertEquals(expected.toString(), line);
     assertNull(reader.readLine());
 
     IOUtil.safeClose(reader);
@@ -427,17 +523,62 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
       line = reader.readLine();
     }
 
-    assertEquals(
-	"Total for all journals\t\t\t\t\t\t\t0\t0\t0\t2\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
-	line);
+    expected =
+	new StringBuilder("Total for all journals\t\t\t\t\t\t\t0\t0\t0\t2\t");
+
+    for (int i = 0; i < columnCount; i++) {
+      expected.append("0\t");
+    }
+
+    expected.append("0\t0");
+
+    assertEquals(expected.toString(), line);
     line = reader.readLine();
-    assertEquals(
-	"JOURNAL\tpublisher\tplatform\t10.1000/182\t\t1234-5678\t9876-5432\t0\t0\t0\t2\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0",
-	line);
+
+    expected =
+	new StringBuilder("JOURNAL\tpublisher\tplatform\t10.1000/182\t\t1234-5678\t9876-5432\t0\t0\t0\t2\t");
+
+    for (int i = 0; i < columnCount; i++) {
+      expected.append("0\t");
+    }
+
+    expected.append("0\t0");
+
+    assertEquals(expected.toString(), line);
     assertNull(reader.readLine());
 
     IOUtil.safeClose(reader);
     reportFile.delete();
     assertEquals(false, reportFile.exists());
+  }
+
+  /**
+   * Deletes the existing journals.
+   * 
+   * @throws SQLException
+   */
+  private void cleanUpAggregatesAndJournals() throws SQLException {
+    Connection conn = null;
+    PreparedStatement statement = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      statement = conn.prepareStatement(SQL_QUERY_PUBYEAR_REQUEST_DELETE);
+      statement.executeUpdate();
+      DbManager.safeCloseStatement(statement);
+
+      statement = conn.prepareStatement(SQL_QUERY_TYPE_REQUEST_DELETE);
+      statement.executeUpdate();
+      DbManager.safeCloseStatement(statement);
+
+      statement = conn.prepareStatement(SQL_QUERY_JOURNAL_DELETE);
+      statement.executeUpdate();
+
+      conn.commit();
+    } finally {
+      DbManager.safeCloseStatement(statement);
+      DbManager.safeRollbackAndClose(conn);
+    }
   }
 }
