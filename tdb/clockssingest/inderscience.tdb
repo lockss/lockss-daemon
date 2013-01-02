@@ -650,7 +650,8 @@
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Artificial Intelligence and Soft Computing Volume 1 ; 1 >
       au < released ; crawling ; 2010-2011 ; International Journal of Artificial Intelligence and Soft Computing Volume 2 ; 2 >
-      au < expected ; exists ; 2012 ; International Journal of Artificial Intelligence and Soft Computing Volume 3 ; 3 >
+      au < manifest ; exists ; 2012 ; International Journal of Artificial Intelligence and Soft Computing Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; International Journal of Artificial Intelligence and Soft Computing Volume 4 ; 4 >
 
     }
 
@@ -1588,7 +1589,8 @@
       au < manifest ; exists ; 2009 ; International Journal of Computational Materials Science and Surface Engineering Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Computational Materials Science and Surface Engineering Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; International Journal of Computational Materials Science and Surface Engineering Volume 4 ; 4 >
-      au < expected ; exists ; 2012 ; International Journal of Computational Materials Science and Surface Engineering Volume 5 ; 5 >
+      au < manifest ; exists ; 2012 ; International Journal of Computational Materials Science and Surface Engineering Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; International Journal of Computational Materials Science and Surface Engineering Volume 6 ; 6 >
 
     }
 
@@ -2047,7 +2049,8 @@
       au < manifest ; exists ; 2009 ; International Journal of Design Engineering Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Design Engineering Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; International Journal of Design Engineering Volume 4 ; 4 >
-      au < expected ; exists ; 2012 ; International Journal of Design Engineering Volume 5 ; 5 >
+      au < manifest ; exists ; 2012 ; International Journal of Design Engineering Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; International Journal of Design Engineering Volume 6 ; 6 >
 
     }
 
@@ -2927,7 +2930,8 @@
       param[journal_issn] = 1755-8743
       
       au < released ; crawling ; 2009-2011 ; International Journal of Experimental and Computational Biomechanics Volume 1 ; 1 >
-      au < expected ; exists ; 2012 ; International Journal of Experimental and Computational Biomechanics Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; International Journal of Experimental and Computational Biomechanics Volume 2 ; 2 >
+      au < expected ; exists ; 2013 ; International Journal of Experimental and Computational Biomechanics Volume 3 ; 3 >
 
     }
 
@@ -4444,7 +4448,7 @@
       au < released ; crawling ; 2012 ; International Journal of Logistics Systems and Management Volume 12 ; 12 >
       au < manifest ; exists ; 2012 ; International Journal of Logistics Systems and Management Volume 13 ; 13 >
       au < expected ; exists ; 2013 ; International Journal of Logistics Systems and Management Volume 14 ; 14 >
-      au < expected ; exists ; 2012 ; International Journal of Logistics Systems and Management Volume 15 ; 15 >
+      au < expected ; exists ; 2013 ; International Journal of Logistics Systems and Management Volume 15 ; 15 >
 
     }
 
@@ -4509,6 +4513,7 @@
       au < released ; crawling ; 2011 ; International Journal of Machining and Machinability of Materials Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; International Journal of Machining and Machinability of Materials Volume 10 ; 10 >
       au < released ; crawling ; 2012 ; International Journal of Machining and Machinability of Materials Volume 11 ; 11 >
+      au < manifest ; exists ; 2012 ; International Journal of Machining and Machinability of Materials Volume 12 ; 12 >
       au < expected ; exists ; 2013 ; International Journal of Machining and Machinability of Materials Volume 13 ; 13 >
 
     }
@@ -5719,7 +5724,8 @@
       param[journal_issn] = 1755-2079
       
       au < manifest ; exists ; 2007-2010 ; International Journal of Precision Technology Volume 1 ; 1 >
-      au < released ; crawling ; 2011-2012 ; International Journal of Precision Technology Volume 2 ; 2 >
+      au < released ; crawling ; 2011 ; International Journal of Precision Technology Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; International Journal of Precision Technology Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; International Journal of Precision Technology Volume 4 ; 4 >
 
     }
@@ -6351,6 +6357,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Services Sciences Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Services Sciences Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; International Journal of Services Sciences Volume 4 ; 4 >
+      au < expected ; exists ; 2012 ; International Journal of Services Sciences Volume 5 ; 5 >
 
     }
 
@@ -6403,6 +6410,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Services, Economics and Management Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Services, Economics and Management Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Services, Economics and Management Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; International Journal of Services, Economics and Management Volume 5 ; 5 >
 
     }
 
@@ -6563,6 +6571,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Society Systems Science Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Society Systems Science Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Society Systems Science Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; International Journal of Society Systems Science Volume 5 ; 5 >
 
     }
 
@@ -6723,6 +6732,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Surface Science and Engineering Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; International Journal of Surface Science and Engineering Volume 5 ; 5 >
       au < released ; crawling ; 2012 ; International Journal of Surface Science and Engineering Volume 6 ; 6 >
+      au < expected ; exists ; 2013 ; International Journal of Surface Science and Engineering Volume 7 ; 7 >
 
     }
 
@@ -6854,6 +6864,7 @@
       au < manifest ; exists ; 2008-2009 ; International Journal of Sustainable Strategic Management Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Sustainable Strategic Management Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Sustainable Strategic Management Volume 3 ; 3 >
+      au < expected ; exists ; 2012 ; International Journal of Sustainable Strategic Management Volume 4 ; 4 >
 
     }
 
@@ -6920,6 +6931,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Systems, Control and Communications Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Systems, Control and Communications Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Systems, Control and Communications Volume 4 ; 4 >
+      au < expected ; exists ; 2013 ; International Journal of Systems, Control and Communications Volume 5 ; 5 >
 
     }
 
@@ -6937,6 +6949,7 @@
       au < manifest ; exists ; 2007-2008 ; International Journal of Teaching and Case Studies Volume 1 ; 1 >
       au < manifest ; exists ; 2009-2010 ; International Journal of Teaching and Case Studies Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Teaching and Case Studies Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; International Journal of Teaching and Case Studies Volume 4 ; 4 >
 
     }
 
@@ -6973,6 +6986,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Technological Learning, Innovation and Development Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; International Journal of Technological Learning, Innovation and Development Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Technological Learning, Innovation and Development Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; International Journal of Technological Learning, Innovation and Development Volume 6 ; 6 >
 
     }
 
@@ -7011,6 +7025,7 @@
       au < manifest ; exists ; 2008-2009 ; International Journal of Technology Enhanced Learning Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Technology Enhanced Learning Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Technology Enhanced Learning Volume 3 ; 3 >
+      au < expected ; exists ; 2012 ; International Journal of Technology Enhanced Learning Volume 4 ; 4 >
 
     }
 
@@ -7232,6 +7247,7 @@
       
       au < manifest ; exists ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 >
+      au < expected ; exists ; 2012 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 3 ; 3 >
 
     }
 
@@ -7266,6 +7282,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Tourism Policy Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Tourism Policy Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; International Journal of Tourism Policy Volume 4 ; 4 >
+      au < expected ; exists ; 2012 ; International Journal of Tourism Policy Volume 5 ; 5 >
 
     }
 
@@ -7893,6 +7910,7 @@
       au < manifest ; exists ; 2006-2007 ; World Review of Intermodal Transportation Research Volume 1 ; 1 >
       au < manifest ; exists ; 2008-2009 ; World Review of Intermodal Transportation Research Volume 2 ; 2 >
       au < released ; crawling ; 2010-2011 ; World Review of Intermodal Transportation Research Volume 3 ; 3 >
+      au < expected ; exists ; 2012 ; World Review of Intermodal Transportation Research Volume 4 ; 4 >
 
     }
 
