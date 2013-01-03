@@ -26,7 +26,7 @@ BEGIN {
   if (incontract == 1) {
       nn = split($2,na,/\./)
       lp2 = na[nn]
-    if (!(($1,lp2,$3,$7,$4) in b)) {
+    if (!(($1,lp2,$4) in b)) {
       p[pn] = $1
       n[pn] = lp2
   #    n[pn] = $2
@@ -36,8 +36,8 @@ BEGIN {
       r[pn] = $5
       pn++
     }
-    b[$1,lp2,$3,$7,$4]++
-    c[$1,lp2,$3,$7,$4,$6]++
+    b[$1,lp2,$4]++
+    c[$1,lp2,$4,$6]++
     x[$6]++
     tt++
   }
@@ -81,13 +81,13 @@ END {
 
   #print out publisher, plugin, contract year, back, year, tester, total aus
   for (i = 0 ; i < pn ; i++) {
-    printf "%s\t%s\t%s\t%s\t%s\t%s\t%d", p[i], n[i], t[i], k[i], d[i], r[i], b[p[i],n[i],t[i],k[i],d[i]]
+    printf "%s\t%s\t%s\t%s\t%s\t%s\t%d", p[i], n[i], t[i], k[i], d[i], r[i], b[p[i],n[i],d[i]]
     for (j = 0 ; j < sn ; j++) {
       if (x[s[j]] > 0){
-      if (c[p[i],n[i],t[i],k[i],d[i],s[j]] == 0) {
+      if (c[p[i],n[i],d[i],s[j]] == 0) {
       printf "\t.." 
     } else {
-        printf "\t%d", c[p[i],n[i],t[i],k[i],d[i],s[j]]
+        printf "\t%d", c[p[i],n[i],d[i],s[j]]
       }
     }
     }
