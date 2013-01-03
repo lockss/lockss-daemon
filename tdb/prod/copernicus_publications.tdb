@@ -407,6 +407,7 @@
     
       param[base_url] = http://www.hydrol-earth-syst-sci.net/
       param[home_url] = http://www.hydrology-and-earth-system-sciences.net/
+      comment[notReady] = pdf difference
 
       au < ready ; 1997 ; 1997 ; Hydrology and Earth System Sciences (HESS) Volume 1 ; 1 >
       au < ready ; 1998 ; 1998 ; Hydrology and Earth System Sciences (HESS) Volume 2 ; 2 >
@@ -422,7 +423,7 @@
       au < ready ; 2008 ; 2008 ; Hydrology and Earth System Sciences (HESS) Volume 12 ; 12 >
       au < ready ; 2009 ; 2009 ; Hydrology and Earth System Sciences (HESS) Volume 13 ; 13 >
       au < ready ; 2010 ; 2010 ; Hydrology and Earth System Sciences (HESS) Volume 14 ; 14 >
-      au < testing ; 2011 ; 2011 ; Hydrology and Earth System Sciences (HESS) Volume 15 ; 15 >
+      au < notReady ; 2011 ; 2011 ; Hydrology and Earth System Sciences (HESS) Volume 15 ; 15 >
       au < ready ; 2012 ; 2012 ; Hydrology and Earth System Sciences (HESS) Volume 16 ; 16 >
     
    }
@@ -471,7 +472,7 @@
       au < ready ; 2001 ; 2001 ; Natural Hazards and Earth System Sciences (NHESS) Volume 1 ; 1 >
       au < ready ; 2002 ; 2002 ; Natural Hazards and Earth System Sciences (NHESS) Volume 2 ; 2 >
       au < ready ; 2003 ; 2003 ; Natural Hazards and Earth System Sciences (NHESS) Volume 3 ; 3 >
-      au < testing ; 2004 ; 2004 ; Natural Hazards and Earth System Sciences (NHESS) Volume 4 ; 4 >
+      au < notReady ; 2004 ; 2004 ; Natural Hazards and Earth System Sciences (NHESS) Volume 4 ; 4 >
       au < ready ; 2005 ; 2005 ; Natural Hazards and Earth System Sciences (NHESS) Volume 5 ; 5 >
       au < ready ; 2006 ; 2006 ; Natural Hazards and Earth System Sciences (NHESS) Volume 6 ; 6 >
       au < ready ; 2007 ; 2007 ; Natural Hazards and Earth System Sciences (NHESS) Volume 7 ; 7 >
