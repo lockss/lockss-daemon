@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = IGI Global ;
-    info[tester] = 3
+    name = IGI Global
   >
 
   plugin = org.lockss.plugin.igiglobal.IgiGlobalPlugin
@@ -25,16 +24,16 @@
     au < ready ; 1991 ; Information Resources Management Journal (IRMJ) Volume 4 ; 4 >
     au < ready ; 1992 ; Information Resources Management Journal (IRMJ) Volume 5 ; 5 >
     au < ready ; 1993 ; Information Resources Management Journal (IRMJ) Volume 6 ; 6 >
-    au < testing ; 1994 ; Information Resources Management Journal (IRMJ) Volume 7 ; 7 >
+    au < manifest ; 1994 ; Information Resources Management Journal (IRMJ) Volume 7 ; 7 >
     au < ready ; 1995 ; Information Resources Management Journal (IRMJ) Volume 8 ; 8 >
     au < ready ; 1996 ; Information Resources Management Journal (IRMJ) Volume 9 ; 9 >
     au < ready ; 1997 ; Information Resources Management Journal (IRMJ) Volume 10 ; 10 >
-    au < testing ; 1998 ; Information Resources Management Journal (IRMJ) Volume 11 ; 11 >
+    au < manifest ; 1998 ; Information Resources Management Journal (IRMJ) Volume 11 ; 11 >
     au < ready ; 1999 ; Information Resources Management Journal (IRMJ) Volume 12 ; 12 >
     au < ready ; 2000 ; Information Resources Management Journal (IRMJ) Volume 13 ; 13 >
     au < ready ; 2001 ; Information Resources Management Journal (IRMJ) Volume 14 ; 14 >
     au < ready ; 2002 ; Information Resources Management Journal (IRMJ) Volume 15 ; 15 >
-    au < testing ; 2003 ; Information Resources Management Journal (IRMJ) Volume 16 ; 16 >
+    au < manifest ; 2003 ; Information Resources Management Journal (IRMJ) Volume 16 ; 16 >
     au < ready ; 2004 ; Information Resources Management Journal (IRMJ) Volume 17 ; 17 >
     au < ready ; 2005 ; Information Resources Management Journal (IRMJ) Volume 18 ; 18 >
     au < ready ; 2006 ; Information Resources Management Journal (IRMJ) Volume 19 ; 19 >
