@@ -81,7 +81,7 @@ END {
 
   #print out publisher, plugin, contract year, back, year, tester, total aus
   for (i = 0 ; i < pn ; i++) {
-    printf "%s\t%s\t%s\t%s\t%s\t%s\t%d", p[i], n[i], t[i], k[i], d[i], r[i], b[p[i],n[i],t[i],d[i]]
+    printf "%s\t%s\t%s\t%s\t%s\t%s\t%d", p[i], n[i], t[i], k[i], d[i], r[i], b[p[i],n[i],t[i],k[i],d[i]]
     for (j = 0 ; j < sn ; j++) {
       if (x[s[j]] > 0){
       if (c[p[i],n[i],t[i],k[i],d[i],s[j]] == 0) {
