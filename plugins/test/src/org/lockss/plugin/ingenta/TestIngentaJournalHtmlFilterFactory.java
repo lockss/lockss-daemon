@@ -158,4 +158,53 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
       assertEquals(filteredHtml, StringUtil.fromInputStream(htmlIn));
     }
   }
+  
+    //test some straight html strings with explicit tests
+    private static final String expireChecksumHtml =
+        "<p>The chickens were decidedly cold.</p>" +
+            "<p xmlns:f=\"http://www.example.org/functions\">" +
+            "<a name=\"g002\"></a>" +
+            "<div class=\"figure\">" +
+            "<div class=\"image\">" +
+            "<a class=\"table-popup\" href=\"javascript:popupImage('s4-ft1401-0065-g002.gif.html?expires=1355962274&id=72080579&titleid=6312&accname=Stanford+University&checksum=FA59636C74DD0E40E92BA6EFECB866E7')\">" +
+            "<img alt=\"Figure 1\" border=\"0\" src=\"s4-ft1401-0065-g002_thmb.gif\">" +
+           "<p>Figure 1<br>Click to view</p>" +
+           "</a>" +
+            "</div>" +
+            "<div class=\"caption\">" +
+            "<span class=\"captionLabel\"><span class=\"label\">The Chickens.</span></span>" +
+            "</div>";
+    
+
+// NOTE - the two following lines below:
+//   "<p>Figure 1<br>Click to view</p>" +
+//   "</a>" +  
+// need to be included in the filtered result because 
+// the <a> tag hashing will stop when it finds an embedded composite tag,
+// (in this case, <p>).  Once we update the daemon to allow modifying this in a subclass
+// then we'll need to make the change for this plugin & update this test.
+// HOWEVER - this still solves the hash problems since the item to remove is
+// before the <p> tag
+//
+    private static final String expireChecksumFiltered =
+        "<p>The chickens were decidedly cold.</p>" +
+            "<p xmlns:f=\"http://www.example.org/functions\">" +
+            "<a name=\"g002\"></a>" +
+            "<div class=\"figure\">" +
+            "<div class=\"image\">" +            
+            "<p>Figure 1<br>Click to view</p>" +
+            "</a>" +            
+            "</div>" +
+            "<div class=\"caption\">" +
+            "<span class=\"captionLabel\"><span class=\"label\">The Chickens.</span></span>" +
+            "</div>";
+    public void testFiltering() throws Exception {
+        InputStream inA;  
+       
+        inA = fact.createFilteredInputStream(mau, new StringInputStream(expireChecksumHtml),
+            Constants.DEFAULT_ENCODING);
+
+        assertEquals(expireChecksumFiltered,StringUtil.fromInputStream(inA));
+      
+    }
 }

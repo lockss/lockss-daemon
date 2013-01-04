@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.18 2012-09-19 17:50:24 pgust Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.19 2013-01-04 19:05:11 alexandraohlson Exp $
  */ 
 
 /*
@@ -102,7 +102,11 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         // Filter out <input name="exitTargetId">
         HtmlNodeFilters.tagWithAttribute("input", "name", "exitTargetId"),
         // Icon on article reference page
-        HtmlNodeFilters.tagWithAttribute("span", "class", "access-icon")
+        HtmlNodeFilters.tagWithAttribute("span", "class", "access-icon"),
+        // javascript for embedded figure has checksum & expires that changes
+        //NOTE - at the moment this does not go beyond nested <p></p> pairs to the closing </a>
+        //when possible in the daemon, must subclass and do this for <a> tag
+        HtmlNodeFilters.tagWithAttribute("a", "class", "table-popup"),
     };
     
     HtmlTransform xform = new HtmlTransform() {
@@ -141,3 +145,5 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
   }
 
 }
+
+
