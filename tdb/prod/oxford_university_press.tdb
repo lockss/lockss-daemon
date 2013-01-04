@@ -3338,7 +3338,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Carcinogenesis Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Carcinogenesis Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Carcinogenesis Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Carcinogenesis Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Carcinogenesis Volume 34 ; 34 >
 
     }
 
@@ -5328,7 +5328,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; European Heart Journal Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Heart Journal Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; European Heart Journal Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; European Heart Journal Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; European Heart Journal Volume 34 ; 34 >
 
     }
 
@@ -8030,7 +8030,7 @@
 
     {
     
-    au < HighWirePressH20Plugin ; exists ; 2012 ; Information and Inference: A Journal of the IMA Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Information and Inference: A Journal of the IMA Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Information and Inference: A Journal of the IMA Volume 2 ; 2 >
     
     }
@@ -8343,7 +8343,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Immunology Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Immunology Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2012 ; International Immunology Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; International Immunology Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; International Immunology Volume 25 ; 25 >
 
     }
 
@@ -11246,7 +11246,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Intellectual Property Law & Practice Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Intellectual Property Law & Practice Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Intellectual Property Law & Practice Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Intellectual Property Law & Practice Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Intellectual Property Law & Practice Volume 8 ; 8 >
 
     }
 
@@ -12425,7 +12425,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Radiation Research Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Radiation Research Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Radiation Research Volume 54 ; 54 >
     
   }
 
@@ -14558,7 +14558,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Neuro-Oncology Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Neuro-Oncology Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Neuro-Oncology Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Neuro-Oncology Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Neuro-Oncology Volume 15 ; 15 >
 
   }
 
