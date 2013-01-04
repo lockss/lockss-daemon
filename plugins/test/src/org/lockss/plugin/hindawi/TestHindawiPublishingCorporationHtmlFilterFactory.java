@@ -133,6 +133,22 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
           "<html>" +
           "</html>";
   
+  private static final String svgContentHtml = 
+      "</a></div><div class=\"groupcaption\"><b>Figure 10: </b>" +
+      "Coherency caption goes here" +
+      "<svg style=\"vertical-align:-3.39066pt;width:30.025px;\" " +
+      "id=\"M47\" height=\"16.299999\" version=\"1.1\" viewBox=\"0 0 30.025 16.299999\" width=\"30.025\" " +     
+      "xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns=\"http://www.w3.org/2000/svg\">" +
+      "<g transform=\"matrix(.017,0,0,-.017,.062,12.013)\"><use xlink:href=\"#x1D463\"/></g>" +
+      "<g transform=\"matrix(.012,0,0,-.012,8.225,16.088)\"><use xlink:href=\"#x1D460\"/></g>" +
+      "" +
+      "<g transform=\"matrix(.017,0,0,-.017,13.313,12.013)\"><use xlink:href=\"#x2F\"/></g><g transform=\"matrix(.017,0,0,-.017,20.316,12.013)\">" +
+      "<use xlink:href=\"#x1D6FC\"/></g></svg>"; 
+  
+ private static final String svgContentFiltered =
+     "</a></div><div class=\"groupcaption\"><b>Figure 10: </b>" +
+     "Coherency caption goes here";     
+  
   public void testScriptFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(scriptHtml),
@@ -208,5 +224,14 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
 
     assertEquals(cleaningUpHeaderStuffHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
+  
+  public void testSVGContent() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(svgContentHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(svgContentFiltered, StringUtil.fromInputStream(actIn));
+  }
 
 }
+

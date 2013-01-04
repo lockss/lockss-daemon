@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.10 2012-11-13 22:51:50 alexandraohlson Exp $
+ * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.11 2013-01-04 19:08:20 alexandraohlson Exp $
  */
 
 /*
@@ -74,7 +74,6 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
             // ASP cookies; once without '__', now with  
             HtmlNodeFilters.tagWithAttribute("input", "id", "EVENTVALIDATION"),
             HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
-
     };
         HtmlTransform xform = new HtmlTransform() {
           @Override
@@ -112,7 +111,8 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
   static Reader makeFilteredReader(Reader reader) {
     List tagList = ListUtil.list(
         // Remove DOCTYPE declaration which seems to vary but is not a node in the DOM
-        new TagPair("<!DOCTYPE", ">", false, false)
+        new TagPair("<!DOCTYPE", ">", false, false),
+        new TagPair("<svg", "/svg>", true, false)
     );
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
     return new WhiteSpaceFilter(tagFilter);
