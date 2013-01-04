@@ -1924,7 +1924,7 @@
       param[base_url] = http://www.aricjournal.com/
       param[journal_issn] = 2047-2994
 
-      au < testing ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
+      au < ready ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
 
     }
 
@@ -2084,11 +2084,11 @@
       param[base_url] = http://www.biodatamining.org/
       param[journal_issn] = 1756-0381
 
-      au < testing ; 2008 ; BioData Mining Volume 1 ; 1 >
-      au < testing ; 2009 ; BioData Mining Volume 2 ; 2 >
-      au < testing ; 2010 ; BioData Mining Volume 3 ; 3 >
-      au < testing ; 2011 ; BioData Mining Volume 4 ; 4 >
-      au < testing ; 2012 ; BioData Mining Volume 5 ; 5 >
+      au < ready ; 2008 ; BioData Mining Volume 1 ; 1 >
+      au < ready ; 2009 ; BioData Mining Volume 2 ; 2 >
+      au < ready ; 2010 ; BioData Mining Volume 3 ; 3 >
+      au < ready ; 2011 ; BioData Mining Volume 4 ; 4 >
+      au < ready ; 2012 ; BioData Mining Volume 5 ; 5 >
       au < expected ; 2013 ; BioData Mining Volume 6 ; 6 >
 
     }
@@ -2143,8 +2143,8 @@
       param[base_url] = http://www.biolmoodanxietydisord.com/
       param[journal_issn] = 2045-5380
 
-      au < testing ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 >
-      au < testing ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
+      au < ready ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 >
+      au < ready ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
 
     }
 
@@ -2159,9 +2159,9 @@
       param[base_url] = http://www.bsd-journal.com/
       param[journal_issn] = 2042-6410
 
-      au < testing ; 2010 ; Biology of Sex Differences Volume 1 ; 1 >
-      au < testing ; 2011 ; Biology of Sex Differences Volume 2 ; 2 >
-      au < testing ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
+      au < ready ; 2010 ; Biology of Sex Differences Volume 1 ; 1 >
+      au < ready ; 2011 ; Biology of Sex Differences Volume 2 ; 2 >
+      au < ready ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
       au < expected ; 2013 ; Biology of Sex Differences Volume 4 ; 4 >
 
     }
@@ -2434,8 +2434,8 @@
       param[base_url] = http://www.cellandbioscience.com/
       param[journal_issn] = 2045-3701
 
-      au < manifest ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
-      au < manifest ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
+      au < testing ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
+      au < testing ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
       au < expected ; 2013 ; Cell & Bioscience Volume 3 ; 3 >
 
     }
@@ -2580,7 +2580,7 @@
       au < released ; 2009 ; Chinese Medicine Volume 4 ; 4 >
       au < released ; 2010 ; Chinese Medicine Volume 5 ; 5 >
       au < released ; 2011 ; Chinese Medicine Volume 6 ; 6 >
-      au < manifest ; 2012 ; Chinese Medicine Volume 7 ; 7 >
+      au < testing ; 2012 ; Chinese Medicine Volume 7 ; 7 >
 
     }
 
@@ -2597,7 +2597,7 @@
       param[journal_issn] = 2045-709X
   
       au < released ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
-      au < manifest ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
+      au < testing ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
       
     }
     
@@ -2672,7 +2672,7 @@
       au < released ; 2009 ; Clinical and Molecular Allergy Volume 7 ; 7 >
       au < released ; 2010 ; Clinical and Molecular Allergy Volume 8 ; 8 >
       au < released ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 >
-      au < manifest ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
+      au < testing ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
       
     }
 
@@ -2687,8 +2687,8 @@
       param[base_url] = http://www.ctajournal.com/
       param[journal_issn] = 2045-7022
 
-      au < manifest ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
-      au < manifest ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
+      au < testing ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
+      au < testing ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
       au < expected ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
 
     }
@@ -2753,17 +2753,17 @@
       param[base_url] = http://www.comparative-hepatology.com/
       param[journal_issn] = 1476-5926
 
-      au < manifest ; 2002 ; Comparative Hepatology Volume 1 ; 1 >
-      au < manifest ; 2003 ; Comparative Hepatology Volume 2 ; 2 >
-      au < manifest ; 2004 ; Comparative Hepatology Volume 3 ; 3 >
-      au < manifest ; 2005 ; Comparative Hepatology Volume 4 ; 4 >
-      au < manifest ; 2006 ; Comparative Hepatology Volume 5 ; 5 >
-      au < manifest ; 2007 ; Comparative Hepatology Volume 6 ; 6 >
-      au < manifest ; 2008 ; Comparative Hepatology Volume 7 ; 7 >
-      au < manifest ; 2009 ; Comparative Hepatology Volume 8 ; 8 >
-      au < manifest ; 2010 ; Comparative Hepatology Volume 9 ; 9 >
-      au < manifest ; 2011 ; Comparative Hepatology Volume 10 ; 10 >
-      au < manifest ; 2012 ; Comparative Hepatology Volume 11 ; 11 >
+      au < testing ; 2002 ; Comparative Hepatology Volume 1 ; 1 >
+      au < testing ; 2003 ; Comparative Hepatology Volume 2 ; 2 >
+      au < testing ; 2004 ; Comparative Hepatology Volume 3 ; 3 >
+      au < testing ; 2005 ; Comparative Hepatology Volume 4 ; 4 >
+      au < testing ; 2006 ; Comparative Hepatology Volume 5 ; 5 >
+      au < testing ; 2007 ; Comparative Hepatology Volume 6 ; 6 >
+      au < testing ; 2008 ; Comparative Hepatology Volume 7 ; 7 >
+      au < testing ; 2009 ; Comparative Hepatology Volume 8 ; 8 >
+      au < testing ; 2010 ; Comparative Hepatology Volume 9 ; 9 >
+      au < testing ; 2011 ; Comparative Hepatology Volume 10 ; 10 >
+      au < testing ; 2012 ; Comparative Hepatology Volume 11 ; 11 >
       au < expected ; 2013 ; Comparative Hepatology Volume 12 ; 12 >
 
     }
