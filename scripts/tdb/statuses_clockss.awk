@@ -10,6 +10,7 @@ BEGIN {
   # add a loop to add line only if ending year is gt or eq to contract year
   end_year = 0
   incontract = 0
+  test_year = ""
   if ($7 == "") {
     test_year = $3
   } else {
@@ -18,11 +19,11 @@ BEGIN {
   if (length($4) > 3) {
     end_year = substr($4,length($4)-3,4)
   }
+  #printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\n", $1,$2,$3,$4,$7,end_year,test_year
   if (end_year >= test_year) {
     incontract = 1
   } 
 
-  #if ((substr($4,1,4) >= $3) || ((length($4) == 9) && (substr($4,6,4) >= $3))) {
   if (incontract == 1) {
       nn = split($2,na,/\./)
       lp2 = na[nn]
