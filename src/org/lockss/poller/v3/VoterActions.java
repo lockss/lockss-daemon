@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.28 2012-09-21 20:55:15 barry409 Exp $
+ * $Id: VoterActions.java,v 1.28.6.1 2013-01-04 19:50:46 dshr Exp $
  */
 
 /*
@@ -95,6 +95,7 @@ public class VoterActions {
     // Accept the poll and set status
     ud.setStatus(V3Voter.STATUS_ACCEPTED_POLL);
     msg.setVoterNonce(ud.getVoterNonce());
+    msg.setVoterNonce2(ud.getVoterNonce2());
     msg.setExpiration(ud.getVoter().getHashStartTime());
     msg.setRetryMax(1);
 

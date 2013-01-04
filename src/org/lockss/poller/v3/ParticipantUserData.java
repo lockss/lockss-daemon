@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.29 2012-07-02 16:21:01 tlipkis Exp $
+ * $Id: ParticipantUserData.java,v 1.29.10.1 2013-01-04 19:50:45 dshr Exp $
  */
 
 /*
@@ -143,6 +143,7 @@ public class ParticipantUserData implements LockssSerializable {
   private List nominees;
   private byte[] pollerNonce;
   private byte[] voterNonce;
+  private byte[] voterNonce2;
   // XXX: Effort proofs may eventually not be byte arrays.
   private byte[] introEffortProof;
   private byte[] pollAckEffortProof;
@@ -277,6 +278,16 @@ public class ParticipantUserData implements LockssSerializable {
 
   public void setVoterNonce(byte[] voterNonce) {
     this.voterNonce = voterNonce;
+  }
+
+  public byte[] getVoterNonce2() {
+    return voterNonce2;
+  }
+
+  public void setVoterNonce2(byte[] voterNonce2) {
+    if (voterNonce2 != null && voterNonce2 != LcapMessage.EMPTY_BYTE_ARRAY) {
+      this.voterNonce2 = voterNonce2;
+    }
   }
 
   public void setIntroEffortProof(byte[] b) {
@@ -497,8 +508,8 @@ public class ParticipantUserData implements LockssSerializable {
    */
   public V3LcapMessage makeMessage(int opcode) {
     return new V3LcapMessage(getAuId(), getKey(), getPluginVersion(),
-                             getPollerNonce(), getVoterNonce(), opcode,
-                             getDeadline(), getPollerId(), messageDir,
+                             getPollerNonce(), getVoterNonce(), getVoterNonce2(),
+			     opcode,getDeadline(), getPollerId(), messageDir,
                              poller.getLockssDaemon());
   }
   

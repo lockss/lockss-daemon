@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.24 2012-08-03 19:08:12 barry409 Exp $
+ * $Id: VoterUserData.java,v 1.24.8.1 2013-01-04 19:50:46 dshr Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public class VoterUserData
   private List nominees;
   private byte[] pollerNonce;
   private byte[] voterNonce;
+  private byte[] voterNonce2;
   private byte[] introEffortProof;
   private byte[] pollAckEffortProof;
   private byte[] remainingEffortProof;
@@ -95,7 +96,7 @@ public class VoterUserData
 
   public VoterUserData(PollSpec spec, V3Voter voter, PeerIdentity pollerId,
                        String pollKey, long duration, String hashAlgorithm,
-                       byte[] pollerNonce, byte[] voterNonce,
+                       byte[] pollerNonce, byte[] voterNonce, byte[] voterNonce2,
                        byte[] introEffortProof, File messageDir) throws IOException {
     log.debug3("Creating V3 Voter User Data for poll " + pollKey + ", " + spec);
     this.spec = spec;
@@ -111,6 +112,7 @@ public class VoterUserData
     this.deadline = Deadline.in(duration).getExpirationTime();
     this.hashAlgorithm = hashAlgorithm;
     this.voterNonce = voterNonce;
+    this.voterNonce2 = voterNonce2;
     this.pollerNonce = pollerNonce;
     this.introEffortProof = introEffortProof;
     this.createTime = TimeBase.nowMs();
@@ -314,6 +316,14 @@ public class VoterUserData
     this.voterNonce = voterNonce;
   }
 
+  public byte[] getVoterNonce2() {
+    return voterNonce;
+  }
+
+  public void setVoterNonce2(byte[] voterNonce) {
+    this.voterNonce2 = voterNonce2;
+  }
+
   public synchronized void hashingDone(boolean hashingDone) {
     this.hashingDone = hashingDone;
   }
@@ -418,8 +428,8 @@ public class VoterUserData
    */
   public V3LcapMessage makeMessage(int opcode) {
     return new V3LcapMessage(getAuId(), getPollKey(), getPluginVersion(),
-                             getPollerNonce(), getVoterNonce(), opcode,
-                             getDeadline(), getPollerId(), messageDir,
+                             getPollerNonce(), getVoterNonce(), getVoterNonce2(),
+			     opcode, getDeadline(), getPollerId(), messageDir,
                              voter.getLockssDaemon());
   }
 

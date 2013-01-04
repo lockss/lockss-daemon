@@ -212,6 +212,7 @@ public class TestV3Serializer extends LockssTestCase {
     blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file2.html"));
     ud.setVoteBlocks(blocks);
     ud.setVoterNonce(ByteArray.makeRandomBytes(20));
+    ud.setVoterNonce2(ByteArray.makeRandomBytes(20));
     return ud;
   }
 
@@ -239,6 +240,7 @@ public class TestV3Serializer extends LockssTestCase {
     blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file2.html"));
     ud.setVoteBlocks(blocks);
     ud.setVoterNonce(ByteArray.makeRandomBytes(20));
+    ud.setVoterNonce2(ByteArray.makeRandomBytes(20));
     return ud;
   }
 

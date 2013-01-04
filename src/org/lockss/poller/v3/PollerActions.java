@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.30 2010-09-01 07:54:33 tlipkis Exp $
+ * $Id: PollerActions.java,v 1.30.32.1 2013-01-04 19:50:45 dshr Exp $
  */
 
 /*
@@ -119,11 +119,16 @@ public class PollerActions {
       return V3Events.evtDeclinePoll;
     } else {
       ud.setVoterNonce(voterNonce);
+      byte[] voterNonce2 = msg.getVoterNonce2();
       ud.setStatus(V3Poller.PEER_STATUS_ACCEPTED_POLL);
       log.info("Peer " + ud.getVoterId() + " accepted invitation for poll " + 
                ud.getKey() + " and sent voter nonce " +
                ByteArray.toBase64(voterNonce));
-      
+      if (voterNonce2 != null && voterNonce2.length > 0) {
+	log.info("Peer " + ud.getVoterId() + " also sent voter nonce 2 " +
+               ByteArray.toBase64(voterNonce2));
+	ud.setVoterNonce2(voterNonce2);
+      }
       // Update the peer status.
       PeerIdentityStatus status = ud.getPoller().getIdentityManager().
                                   getPeerIdentityStatus(msg.getOriginatorId());
