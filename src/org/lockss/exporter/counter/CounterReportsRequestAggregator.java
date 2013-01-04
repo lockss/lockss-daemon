@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsRequestAggregator.java,v 1.5 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestAggregator.java,v 1.6 2013-01-04 21:57:37 fergaloy-sf Exp $
  */
 
 /*
@@ -424,7 +424,8 @@ public class CounterReportsRequestAggregator {
       + " and " + REQUEST_MONTH_COLUMN + " = ? "
       + " and " + IN_AGGREGATION_COLUMN + " = true";
 
-  private LockssDaemon daemon;
+  private final LockssDaemon daemon;
+  private final DbManager dbManager;
 
   /**
    * Constructor.
@@ -434,6 +435,7 @@ public class CounterReportsRequestAggregator {
    */
   public CounterReportsRequestAggregator(LockssDaemon daemon) {
     this.daemon = daemon;
+    dbManager = daemon.getDbManager();
   }
 
   /**
@@ -521,7 +523,7 @@ public class CounterReportsRequestAggregator {
       markRequests = conn.prepareStatement(sql);
 
       // Mark the requests.
-      int count = markRequests.executeUpdate();
+      int count = dbManager.executeUpdate(markRequests);
       log.debug2(DEBUG_HEADER + "count = " + count);
 
       success = true;
@@ -576,7 +578,7 @@ public class CounterReportsRequestAggregator {
       statement = conn.prepareStatement(sql);
 
       // Get the year/month pairs.
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       while (resultSet.next()) {
 	year = resultSet.getInt(REQUEST_YEAR_COLUMN);
@@ -836,7 +838,7 @@ public class CounterReportsRequestAggregator {
       statement.setBoolean(index++, publisherInvolved);
 
       // Get the books requested during the month.
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       // Save them.
       while (resultSet.next()) {
@@ -955,7 +957,7 @@ public class CounterReportsRequestAggregator {
       // Populate the publisher involvement indicator.
       statement.setBoolean(index++, publisherInvolved);
 
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	count = resultSet.getInt(1);
@@ -1029,7 +1031,7 @@ public class CounterReportsRequestAggregator {
       // Populate the publisher involvement indicator.
       statement.setBoolean(index++, publisherInvolved);
 
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	count = resultSet.getInt(1);
@@ -1106,7 +1108,7 @@ public class CounterReportsRequestAggregator {
       // Populate the month of the request.
       statement.setInt(index++, month);
 
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	aggregates = new HashMap<String, Integer>();
@@ -1201,7 +1203,7 @@ public class CounterReportsRequestAggregator {
       updateAggregate.setShort(index++, (short) month);
 
       // Update the record.
-      int count = updateAggregate.executeUpdate();
+      int count = dbManager.executeUpdate(updateAggregate);
       log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot update the month book request counts", sqle);
@@ -1283,7 +1285,7 @@ public class CounterReportsRequestAggregator {
       insertAggregate.setInt(index++, sectionCount);
 
       // Insert the record.
-      int count = insertAggregate.executeUpdate();
+      int count = dbManager.executeUpdate(insertAggregate);
       log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot insert the month book request counts", sqle);
@@ -1620,7 +1622,7 @@ public class CounterReportsRequestAggregator {
       statement.setBoolean(index++, publisherInvolved);
 
       // Get the journals requested during the month.
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       // Save them.
       while (resultSet.next()) {
@@ -1700,7 +1702,7 @@ public class CounterReportsRequestAggregator {
       statement.setBoolean(index++, publisherInvolved);
 
       // Get the total request count.
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	totalCount = resultSet.getInt(1);
@@ -1740,7 +1742,7 @@ public class CounterReportsRequestAggregator {
       statement.setBoolean(index++, publisherInvolved);
 
       // Get the HTML request count.
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	htmlCount = resultSet.getInt(1);
@@ -1780,7 +1782,7 @@ public class CounterReportsRequestAggregator {
       statement.setBoolean(index++, publisherInvolved);
 
       // Get the PDF request count.
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	pdfCount = resultSet.getInt(1);
@@ -1862,7 +1864,7 @@ public class CounterReportsRequestAggregator {
       statement.setInt(index++, month);
 
       // Get the existing requests counts.
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	aggregates = new HashMap<String, Integer>();
@@ -1968,7 +1970,7 @@ public class CounterReportsRequestAggregator {
       updateAggregate.setShort(index++, (short) month);
 
       // Update the record.
-      int count = updateAggregate.executeUpdate();
+      int count = dbManager.executeUpdate(updateAggregate);
       log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot update the month journal request counts", sqle);
@@ -2058,7 +2060,7 @@ public class CounterReportsRequestAggregator {
       insertAggregate.setInt(index++, pdfCount);
 
       // Insert the record.
-      int count = insertAggregate.executeUpdate();
+      int count = dbManager.executeUpdate(insertAggregate);
       log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot insert the month journal request counts", sqle);
@@ -2134,7 +2136,7 @@ public class CounterReportsRequestAggregator {
       statement.setBoolean(index++, publisherInvolved);
 
       // Get the aggregations of requests by publication year.
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       while (resultSet.next()) {
 	date = resultSet.getString(DATE_COLUMN);
@@ -2224,7 +2226,7 @@ public class CounterReportsRequestAggregator {
       statement.setInt(index++, publicationYear);
 
       // Get the existing requests count.
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	count = resultSet.getInt(REQUESTS_COLUMN);
@@ -2312,7 +2314,7 @@ public class CounterReportsRequestAggregator {
       updateAggregate.setShort(index++, (short) publicationYear);
 
       // Insert the record.
-      int count = updateAggregate.executeUpdate();
+      int count = dbManager.executeUpdate(updateAggregate);
       log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot update the month journal request counts", sqle);
@@ -2392,7 +2394,7 @@ public class CounterReportsRequestAggregator {
       insertAggregate.setInt(index++, requestCount);
 
       // Insert the record.
-      int count = insertAggregate.executeUpdate();
+      int count = dbManager.executeUpdate(insertAggregate);
       log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot insert the month journal request counts", sqle);
@@ -2535,7 +2537,7 @@ public class CounterReportsRequestAggregator {
       deleteAggregate.setShort(index++, (short) month);
 
       // Delete the record.
-      int count = deleteAggregate.executeUpdate();
+      int count = dbManager.executeUpdate(deleteAggregate);
       log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot delete the book month requests", sqle);
@@ -2598,7 +2600,7 @@ public class CounterReportsRequestAggregator {
       deleteAggregate.setShort(index++, (short) month);
 
       // Delete the record.
-      int count = deleteAggregate.executeUpdate();
+      int count = dbManager.executeUpdate(deleteAggregate);
       log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot delete the journal month requests", sqle);

@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsRequestRecorder.java,v 1.5 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestRecorder.java,v 1.6 2013-01-04 21:57:37 fergaloy-sf Exp $
  */
 
 /*
@@ -165,7 +165,7 @@ public class CounterReportsRequestRecorder {
       getUrlMdItemId.setString(1, url);
 
       // Get any results.
-      results = getUrlMdItemId.executeQuery();
+      results = dbManager.executeQuery(getUrlMdItemId);
 
       // Get the metadata item identifier.
       if (results.next()) {

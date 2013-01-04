@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.1 2012-12-07 07:16:06 fergaloy-sf Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.2 2013-01-04 21:57:37 fergaloy-sf Exp $
  */
 
 /*
@@ -34,9 +34,9 @@ package org.lockss.metadata;
 
 import static org.lockss.db.DbManager.*;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import org.lockss.app.LockssDaemon;
@@ -332,22 +332,26 @@ final public class MetadataDatabaseUtil {
     List<BibliographicItem> items = new ArrayList<BibliographicItem>();
     Connection conn = null;
     DbManager dbManager = null;
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+
     try {
       dbManager = getDaemon().getDbManager();
       conn = dbManager.getConnection();
-      Statement statement = conn.createStatement();
-      if (statement.execute(bibliographicItemsQuery)) {
-	ResultSet resultSet = statement.getResultSet();
-	while (resultSet.next()) {
-	  BibliographicItem item = new BibliographicDatabaseItem(resultSet);
-	  items.add(item);
-	}
+      statement = conn.prepareStatement(bibliographicItemsQuery);
+      resultSet = dbManager.executeQuery(statement);
+
+      while (resultSet.next()) {
+	BibliographicItem item = new BibliographicDatabaseItem(resultSet);
+	items.add(item);
       }
     } catch (IllegalArgumentException ex) {
       log.warning(ex.getMessage());
     } catch (SQLException ex) {
       log.warning(ex.getMessage());
     } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(statement);
       DbManager.safeRollbackAndClose(conn);
     }
     return items;

@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsManager.java,v 1.6 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: CounterReportsManager.java,v 1.7 2013-01-04 21:57:37 fergaloy-sf Exp $
  */
 
 /*
@@ -488,7 +488,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
         insertRequest.setShort(index++, (short) requestDay);
 
         // Insert the record.
-        int count = insertRequest.executeUpdate();
+        int count = dbManager.executeUpdate(insertRequest);
         log.debug2(DEBUG_HEADER + "count = " + count);
       } catch (SQLException sqle) {
         log.error("Cannot persist URL request", sqle);

@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsBookReport2.java,v 1.2 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: CounterReportsBookReport2.java,v 1.3 2013-01-04 21:57:37 fergaloy-sf Exp $
  */
 
 /*
@@ -219,7 +219,7 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
       statement.setInt(index++, endYear);
       statement.setInt(index++, endYear);
 
-      resultSet = statement.executeQuery();
+      resultSet = daemon.getDbManager().executeQuery(statement);
 
       // Loop through all the books to be included in the report.
       while (resultSet.next()) {
@@ -349,7 +349,7 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
       statement.setInt(index++, endYear);
       statement.setInt(index++, endYear);
 
-      resultSet = statement.executeQuery();
+      resultSet = daemon.getDbManager().executeQuery(statement);
 
       // Loop through all the request counts to be included in the report.
       while (resultSet.next()) {

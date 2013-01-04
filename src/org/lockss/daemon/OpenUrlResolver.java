@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.38 2012-12-07 07:27:05 fergaloy-sf Exp $
+ * $Id: OpenUrlResolver.java,v 1.39 2013-01-04 21:57:37 fergaloy-sf Exp $
  */
 
 /*
@@ -1064,7 +1064,7 @@ public class OpenUrlResolver {
       
       PreparedStatement stmt = conn.prepareStatement(query);
       stmt.setString(1, doi.toUpperCase());
-      ResultSet resultSet = stmt.executeQuery();
+      ResultSet resultSet = dbMgr.executeQuery(stmt);
       if (resultSet.next()) {
         url = resultSet.getString(1);
       }
@@ -1292,7 +1292,7 @@ public class OpenUrlResolver {
       stmt.setString(i+1, args.get(i));
     }
     stmt.setMaxRows(2);  // only need 2 to to determine if unique
-    ResultSet resultSet = stmt.executeQuery();
+    ResultSet resultSet = daemon.getDbManager().executeQuery(stmt);
     String url = null;
     if (resultSet.next()) {
       url = resultSet.getString(1);

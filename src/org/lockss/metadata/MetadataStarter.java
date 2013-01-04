@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataStarter.java,v 1.2 2012-12-20 18:38:48 fergaloy-sf Exp $
+ * $Id: MetadataStarter.java,v 1.3 2013-01-04 21:57:37 fergaloy-sf Exp $
  */
 
 /*
@@ -223,7 +223,7 @@ public class MetadataStarter extends LockssRunnable {
 
 	  // This case occurs when the AU is being deleted, so delete its
 	  // metadata.
-	  mdManager.removeAuForReindex(au);
+	  mdManager.deleteAuAndReindex(au);
 	  break;
 	case RestartDelete:
 	  // This case occurs when the plugin is about to restart. There is

@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.1 2012-12-07 07:20:01 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.2 2013-01-04 21:57:37 fergaloy-sf Exp $
  */
 
 /*
@@ -151,6 +151,9 @@ public class AuMetadataRecorder {
   // The metadata manager.
   private final MetadataManager mdManager;
 
+  // The database manager.
+  private final DbManager dbManager;
+
   // The archival unit.
   private final ArchivalUnit au;
 
@@ -178,6 +181,7 @@ public class AuMetadataRecorder {
       ArchivalUnit au) {
     this.task = task;
     this.mdManager = mdManager;
+    dbManager = mdManager.getDbManager();
     this.au = au;
 
     plugin = au.getPlugin();
@@ -620,7 +624,7 @@ public class AuMetadataRecorder {
     try {
       updateAu.setShort(1, (short) version);
       updateAu.setLong(2, auMdSeq);
-      int count = updateAu.executeUpdate();
+      int count = dbManager.executeUpdate(updateAu);
 
       if (log.isDebug3()) {
 	log.debug3(DEBUG_HEADER + "count = " + count);
@@ -845,7 +849,7 @@ public class AuMetadataRecorder {
 
     try {
       getMdItemTypeName.setLong(1, mdItemSeq);
-      resultSet = getMdItemTypeName.executeQuery();
+      resultSet = dbManager.executeQuery(getMdItemTypeName);
 
       if (resultSet.next()) {
 	typeName = resultSet.getString(TYPE_NAME_COLUMN);
@@ -887,7 +891,7 @@ public class AuMetadataRecorder {
       findMdItem.setLong(2, auMdSeq);
       findMdItem.setString(3, primaryName);
 
-      resultSet = findMdItem.executeQuery();
+      resultSet = dbManager.executeQuery(findMdItem);
       if (resultSet.next()) {
 	mdItemSeq = resultSet.getLong(MD_ITEM_SEQ_COLUMN);
       }
@@ -1004,7 +1008,7 @@ public class AuMetadataRecorder {
 	insertMdItemAuthor.setLong(1, mdItemSeq);
 	insertMdItemAuthor.setString(2, author);
 	insertMdItemAuthor.setLong(3, mdItemSeq);
-	int count = insertMdItemAuthor.executeUpdate();
+	int count = dbManager.executeUpdate(insertMdItemAuthor);
 
 	if (log.isDebug3()) {
 	  log.debug3(DEBUG_HEADER + "count = " + count);
@@ -1043,7 +1047,7 @@ public class AuMetadataRecorder {
       for (String keyword : keywords) {
 	insertMdItemKeyword.setLong(1, mdItemSeq);
 	insertMdItemKeyword.setString(2, keyword);
-	int count = insertMdItemKeyword.executeUpdate();
+	int count = dbManager.executeUpdate(insertMdItemKeyword);
 
 	if (log.isDebug3()) {
 	  log.debug3(DEBUG_HEADER + "count = " + count);
@@ -1092,7 +1096,7 @@ public class AuMetadataRecorder {
     try {
       // Get the existing URLs.
       findMdItemFeaturedUrl.setLong(1, mdItemSeq);
-      resultSet = findMdItemFeaturedUrl.executeQuery();
+      resultSet = dbManager.executeQuery(findMdItemFeaturedUrl);
 
       // Loop through all the URLs already linked to the metadata item.
       while (resultSet.next()) {
@@ -1148,7 +1152,7 @@ public class AuMetadataRecorder {
     try {
       // Get the existing authors.
       findMdItemAuthor.setLong(1, mdItemSeq);
-      resultSet = findMdItemAuthor.executeQuery();
+      resultSet = dbManager.executeQuery(findMdItemAuthor);
 
       List<String> oldAuthors = new ArrayList<String>();
 
@@ -1198,7 +1202,7 @@ public class AuMetadataRecorder {
     try {
       // Get the existing keywords.
       findMdItemKeyword.setLong(1, mdItemSeq);
-      resultSet = findMdItemKeyword.executeQuery();
+      resultSet = dbManager.executeQuery(findMdItemKeyword);
 
       List<String> oldKeywords = new ArrayList<String>();
 
@@ -1244,7 +1248,7 @@ public class AuMetadataRecorder {
 
     try {
       findMdItemDoi.setLong(1, mdItemSeq);
-      resultSet = findMdItemDoi.executeQuery();
+      resultSet = dbManager.executeQuery(findMdItemDoi);
 
       if (!resultSet.next()) {
 	mdManager.addMdItemDoi(conn, mdItemSeq, doi);
@@ -1291,7 +1295,7 @@ public class AuMetadataRecorder {
       updateBibItem.setString(4, endPage);
       updateBibItem.setString(5, itemNo);
       updateBibItem.setLong(6, mdItemSeq);
-      updatedCount = updateBibItem.executeUpdate();
+      updatedCount = dbManager.executeUpdate(updateBibItem);
     } finally {
       DbManager.safeCloseStatement(updateBibItem);
     }
@@ -1336,7 +1340,7 @@ public class AuMetadataRecorder {
       insertBibItem.setString(4, startPage);
       insertBibItem.setString(5, endPage);
       insertBibItem.setString(6, itemNo);
-      addedCount = insertBibItem.executeUpdate();
+      addedCount = dbManager.executeUpdate(insertBibItem);
     } finally {
       DbManager.safeCloseStatement(insertBibItem);
     }
