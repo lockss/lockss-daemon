@@ -383,7 +383,8 @@
 	au < released ; 2009 ; Labour History Review Volume 74 ; 74 >
 	au < released ; 2010 ; Labour History Review Volume 75 ; 75 >
 	au < released ; 2011 ; Labour History Review Volume 76 ; 76 >
-	au < exists ; 2012 ; Labour History Review Volume 77 ; 77 >
+	au < manifest ; 2012 ; Labour History Review Volume 77 ; 77 >
+	au < expected ; 2013 ; Labour History Review Volume 78 ; 78 >
 
   }
 
@@ -481,10 +482,9 @@
       implicit < status ; year ; name ; param[volume_name] >  
 
       param[journal_issn] = 1757-2274 
-      comment[notReady] = low agreement, re-test later
      
-      au < exists ; 2000 ; Romani Studies Volume 10 ; 10 >
-      au < exists ; 2001 ; Romani Studies Volume 11 ; 11 >
+      au < manifest ; 2000 ; Romani Studies Volume 10 ; 10 >
+      au < manifest ; 2001 ; Romani Studies Volume 11 ; 11 >
       au < released ; 2002 ; Romani Studies Volume 12 ; 12 >
       au < released ; 2003 ; Romani Studies Volume 13 ; 13 >
       au < released ; 2004 ; Romani Studies Volume 14 ; 14 >
