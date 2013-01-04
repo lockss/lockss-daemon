@@ -6,7 +6,7 @@
     info[tester] = 3
   >
 
-  comment[notReady] = RU issue 3836, RT 976
+  comment[notReady] = RU issue 3836, RT 976, RU 4449
   plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
   implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
@@ -403,7 +403,6 @@
     param[base_url] = http://www.microbecolhealthdis.net/
     param[journal_id] = mehd
     comment[issn] = volumes 1-21
-    comment[notReady] = 500 internal service error
 
     au < manifest ; exists ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; 1988 >
     au < manifest ; exists ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; 1989 >
@@ -476,7 +475,6 @@
 
     param[base_url] = http://www.polarresearch.net/
     param[journal_id] = polar
-    comment[notReady] = 500 internal service error
 
     au < manifest ; exists ; 1982 ; Polar Research Volume 1982 ; 1982 ; 1982 >
     au < manifest ; exists ; 1983 ; Polar Research Volume 1 ; 1 ; 1983 >
