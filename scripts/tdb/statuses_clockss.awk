@@ -10,10 +10,10 @@ BEGIN {
   # add a loop to add line only if ending year is gt or eq to contract year
   end_year = 0
   incontract = 0
-  if ($7 != "") {
-    test_year = $7
-  } else {
+  if ($7 == "") {
     test_year = $3
+  } else {
+    test_year = $7
   }
   if (length($4) > 3) {
     end_year = substr($4,length($4)-3,4)
