@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = Libertas Academica 
+    name = Libertas Academica
   >
 
   plugin = org.lockss.plugin.maffey.MaffeyPlugin
@@ -13,9 +13,9 @@
     title <
       name = Advances in Tumor Virology ;
       issn = 1179-5654
-      
+
     >
-   
+
 
     param[journal_id] = 132
 
@@ -23,13 +23,13 @@
     au < released ; 2011 ; Advances in Tumor Virology Volume 2 ; 2011 >
 
   }
-  
+
   {
 
     title <
       name = Air, Soil & Water Research ;
       issn = 1178-6221
-      
+
     >
 
     param[journal_id] = 99
@@ -42,13 +42,13 @@
     au < expected ; 2013 ; Air, Soil & Water Research Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Analytical Chemistry Insights ;
       issn = 1177-3901
-      
+
     >
 
     param[journal_id] = 1
@@ -62,13 +62,13 @@
     au < expected ; 2013 ; Analytical Chemistry Insights Volume 8 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Autism Insights ;
       issn = 1179-5964
-      
+
     >
 
 
@@ -81,13 +81,13 @@
     au < expected ; 2013 ; Autism Insights Volume 5 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Biochemistry Insights ;
       issn = 1178-6264
-      
+
     >
 
     param[journal_id] = 95
@@ -100,13 +100,13 @@
     au < expected ; 2013 ; Biochemistry Insights Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Bioinformatics and Biology Insights ;
       issn = 1177-9322
-      
+
     >
 
     param[journal_id] = 39
@@ -120,13 +120,13 @@
     au < expected ; 2013 ; Bioinformatics and Biology Insights Volume 7 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Biomarker Insights ;
       issn = 1177-2719
-      
+
     >
 
     param[journal_id] = 4
@@ -141,13 +141,13 @@
     au < expected ; 2013 ; Biomarker Insights Volume 8 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Biomarkers in Cancer ;
       issn = 1179-299X
-      
+
     >
 
     param[journal_id] = 154
@@ -159,13 +159,13 @@
     au < expected ; 2013 ; Biomarkers in Cancer Volume 5 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Biomedical Engineering and Computational Biology ;
       issn = 1179-5972
-      
+
     >
 
     param[journal_id] = 170
@@ -177,13 +177,13 @@
     au < expected ; 2013 ; Biomedical Engineering and Computational Biology Volume 5 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Biomedical Informatics Insights ;
       issn = 1178-2226
-      
+
     >
 
     param[journal_id] = 82
@@ -196,13 +196,13 @@
     au < expected ; 2013 ; Biomedical Informatics Insights Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Bone and Tissue Regeneration Insights ;
       issn = 1179-061X
-      
+
     >
 
     param[journal_id] = 120
@@ -210,16 +210,16 @@
     au < ready ; 2008 ; Bone and Tissue Regeneration Insights Volume 1 ; 2008 >
     au < ready ; 2009 ; Bone and Tissue Regeneration Insights Volume 2 ; 2009 >
     au < ready ; 2010 ; Bone and Tissue Regeneration Insights Volume 3 ; 2010 >
-    
+
 
   }
-  
+
   {
 
     title <
       name = Breast Cancer: Basic and Clinical Research ;
       issn = 1178-2234
-      
+
     >
 
     param[journal_id] = 84
@@ -232,13 +232,13 @@
     au < expected ; 2013 ; Breast Cancer: Basic and Clinical Research Volume 7 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Cancer Growth and Metastasis ;
       issn = 1179-0644
-      
+
     >
 
     param[journal_id] = 122
@@ -251,13 +251,13 @@
     au < expected ; 2013 ; Cancer Growth and Metastasis Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Cancer Informatics ;
       issn = 1176-9351
-      
+
     >
 
     param[journal_id] = 10
@@ -271,16 +271,16 @@
     au < released ; 2011 ; Cancer Informatics Volume 10 ; 2011 >
     au < released ; 2012 ; Cancer Informatics Volume 11 ; 2012 >
     au < expected ; 2013 ; Cancer Informatics Volume 12 ; 2013 >
-    
+
 
   }
-  
+
   {
 
     title <
       name = Cell & Tissue Transplantation & Therapy ;
       issn = 1179-0687
-      
+
     >
 
     param[journal_id] = 125
@@ -290,13 +290,13 @@
     au < ready ; 2010 ; Cell & Tissue Transplantation & Therapy Volume 3 ; 2010 >
 
   }
-  
+
   {
 
     title <
       name = Cell Biology Insights ;
       issn = 1178-6272
-      
+
     >
 
     param[journal_id] = 96
@@ -304,13 +304,13 @@
     au < ready ; 2008 ; Cell Biology Insights Volume 1 ; 2008 >
 
   }
-  
+
   {
 
     title <
       name = Cell Communication Insights ;
       issn = 1179-5689
-      
+
     >
 
     param[journal_id] = 140
@@ -320,13 +320,13 @@
     au < ready ; 2010 ; Cell Communication Insights Volume 3 ; 2010 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders ;
       issn = 1179-5441
-      
+
     >
 
     param[journal_id] = 46
@@ -339,13 +339,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Blood Disorders ;
       issn = 1179-545X
-      
+
     >
 
     param[journal_id] = 63
@@ -358,13 +358,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Blood Disorders Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Cardiology ;
       issn = 1179-5468
-      
+
     >
 
     param[journal_id] = 48
@@ -378,13 +378,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Cardiology Volume 7 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Case Reports ;
       issn = 1179-5476
-      
+
     >
 
     param[journal_id] = 91
@@ -397,13 +397,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Case Reports Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine ;
       issn = 1179-5484
-      
+
     >
 
     param[journal_id] = 44
@@ -417,13 +417,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 7 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Dermatology ;
       issn = 1179-5492
-      
+
     >
 
     param[journal_id] = 69
@@ -436,13 +436,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Dermatology Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Ear, Nose and Throat ;
       issn = 1179-5506
-      
+
     >
 
     param[journal_id] = 61
@@ -455,13 +455,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Endocrinology and Diabetes ;
       issn = 1179-5514
-      
+
     >
 
     param[journal_id] = 65
@@ -471,16 +471,16 @@
     au < ready; 2010 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 3 ; 2010 >
     au < ready; 2011 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 4 ; 2011 >
     au < ready; 2012 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 5 ; 2012 >
-    au < expected ; 2013 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume  6 ; 2013 >
+    au < expected ; 2013 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Gastroenterology ;
       issn = 1179-5522
-      
+
     >
 
     param[journal_id] = 56
@@ -492,13 +492,13 @@
     au < released ; 2012 ; Clinical Medicine Insights: Gastroenterology Volume 5 ; 2012 >
     au < expected ; 2013 ; Clinical Medicine Insights: Gastroenterology Volume 6 ; 2013 >
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Geriatrics ;
       issn = 1179-5530
-      
+
     >
 
     param[journal_id] = 73
@@ -508,13 +508,13 @@
     au < released ; 2011 ; Clinical Medicine Insights: Geriatrics Volume 4 ; 2011 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Oncology ;
       issn = 1179-5549
-      
+
     >
 
     param[journal_id] = 42
@@ -528,13 +528,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Oncology Volume 7 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Pathology ;
       issn = 1179-5557
-      
+
     >
 
     param[journal_id] = 54
@@ -547,13 +547,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Pathology Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Pediatrics ;
       issn = 1179-5565
-      
+
     >
 
     param[journal_id] = 78
@@ -566,13 +566,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Pediatrics Volume 7 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Psychiatry ;
       issn = 1179-5573
-      
+
     >
 
     param[journal_id] = 88
@@ -583,13 +583,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Psychiatry Volume 4 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Reproductive Health ;
       issn = 1179-5581
-      
+
     >
 
     param[journal_id] = 114
@@ -602,13 +602,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Reproductive Health Volume 7 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Therapeutics ;
       issn = 1179-559X
-      
+
     >
 
     param[journal_id] = 133
@@ -620,13 +620,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Therapeutics Volume 5 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Trauma and Intensive Medicine ;
       issn = 1179-5603
-      
+
     >
 
     param[journal_id] = 71
@@ -636,13 +636,13 @@
     au < manifest ; 2010 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 3 ; 2010 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Urology ;
       issn = 1179-5611
-      
+
     >
 
     param[journal_id] = 75
@@ -655,13 +655,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Urology Volume 7 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Insights: Women's Health ;
       issn = 1179-562X
-      
+
     >
 
     param[journal_id] = 77
@@ -674,13 +674,13 @@
     au < expected ; 2013 ; Clinical Medicine Insights: Women's Health Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Reviews in Cardiology ;
       issn = 1179-2523
-      
+
     >
 
     param[journal_id] = 164
@@ -689,15 +689,15 @@
     au < manifest ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2010 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Reviews in Oncology ;
       issn = 1179-2531
-      
+
     >
-    
+
     param[journal_id] = 163
 
     au < manifest ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 2009 >
@@ -707,13 +707,13 @@
     au < expected ; 2013 ; Clinical Medicine Reviews in Oncology Volume 5 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Reviews in Patient Care ;
       issn = 1179-254X
-      
+
     >
 
     param[journal_id] = 167
@@ -722,13 +722,13 @@
     au < released ; 2011 ; Clinical Medicine Reviews in Patient Care Volume 2 ; 2011 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Reviews in Therapeutics ;
       issn = 1179-2558
-      
+
     >
     param[journal_id] = 166
 
@@ -739,13 +739,13 @@
     au < expected ; 2013 ; Clinical Medicine Reviews in Therapeutics Volume 5 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Reviews in Vascular Health ;
       issn = 1179-2566
-      
+
     >
 
     param[journal_id] = 165
@@ -757,13 +757,13 @@
     au < expected ; 2013 ; Clinical Medicine Reviews in Vascular Health Volume 5 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Clinical Medicine Reviews in Women's Health ;
       issn = 1179-2574
-      
+
     >
 
     param[journal_id] = 162
@@ -775,13 +775,13 @@
     au < expected ; 2013 ; Clinical Medicine Reviews in Women's Health Volume 5 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Drug Target Insights ;
       issn = 1177-3928
-      
+
     >
 
     param[journal_id] = 23
@@ -795,13 +795,13 @@
     au < expected ; 2013 ; Drug Target Insights Volume 7 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Environmental Health Insights ;
       issn = 1178-6302
-      
+
     >
 
     param[journal_id] = 110
@@ -814,13 +814,13 @@
     au < expected ; 2013 ; Environmental Health Insights Volume 7 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Evolutionary Bioinformatics ;
       issn = 1176-9343
-      
+
     >
 
     param[journal_id] = 17
@@ -836,13 +836,13 @@
     au < expected ; 2013 ; Evolutionary Bioinformatics Volume 9 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Gene Expression to Genetical Genomics ;
       issn = 1179-5697
-      
+
     >
 
     param[journal_id] = 137
@@ -851,16 +851,16 @@
     au < manifest ; 2009 ; Gene Expression to Genetical Genomics Volume 2 ; 2009 >
     au < manifest ; 2010 ; Gene Expression to Genetical Genomics Volume 3 ; 2010 >
 
-    
+
 
   }
-  
+
   {
 
     title <
       name = Gene Regulation and Systems Biology ;
       issn = 1177-6250
-      
+
     >
 
     param[journal_id] = 26
@@ -874,17 +874,17 @@
     au < expected ; 2013 ; Gene Regulation and Systems Biology Volume 7 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Genetics & Epigenetics ;
       issn = 1179-237X
-      
+
     >
 
     param[journal_id] = 127
-    
+
     au < manifest ; 2008 ; Genetics & Epigenetics Volume 1 ; 2008 >
     au < manifest ; 2009 ; Genetics & Epigenetics Volume 2 ; 2009 >
     au < manifest ; 2010 ; Genetics & Epigenetics Volume 3 ; 2010 >
@@ -892,17 +892,17 @@
 
 
   }
-  
+
   {
 
     title <
       name = Genomics Insights ;
       issn = 1178-6310
-      
+
     >
 
     param[journal_id] = 103
-    
+
     au < manifest ; 2008 ; Genomics Insights Volume 1 ; 2008 >
     au < manifest ; 2009 ; Genomics Insights Volume 2 ; 2009 >
     au < manifest ; 2010 ; Genomics Insights Volume 3 ; 2010 >
@@ -913,34 +913,34 @@
 
 
   }
-  
+
   {
 
     title <
       name = Glycobiology Insights ;
       issn = 1179-2515
-      
+
     >
 
     param[journal_id] = 153
-    
+
     au < manifest ; 2009 ; Glycobiology Insights Volume 1 ; 2009 >
     au < manifest ; 2010 ; Glycobiology Insights Volume 2 ; 2010 >
     au < released ; 2012 ; Glycobiology Insights Volume 3 ; 2012 >
     au < expected ; 2013 ; Glycobiology Insights Volume 4 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Health Services Insights ;
       issn = 1178-6329
-      
+
     >
 
     param[journal_id] = 117
-    
+
     au < manifest ; 2008 ; Health Services Insights Volume 1 ; 2008 >
     au < manifest ; 2009 ; Health Services Insights Volume 2 ; 2009 >
     au < manifest ; 2010 ; Health Services Insights Volume 3 ; 2010 >
@@ -950,17 +950,17 @@
 
 
   }
-  
+
   {
 
     title <
       name = Healthy Aging & Clinical Care in the Elderly ;
       issn = 1179-0601
-      
+
     >
 
     param[journal_id] = 119
-    
+
     au < manifest ; 2008 ; Healthy Aging & Clinical Care in the Elderly Volume 1 ; 2008 >
     au < manifest ; 2010 ; Healthy Aging & Clinical Care in the Elderly Volume 2 ; 2010 >
     au < released ; 2011 ; Healthy Aging & Clinical Care in the Elderly Volume 3 ; 2011 >
@@ -969,34 +969,34 @@
 
 
   }
-  
+
   {
 
     title <
       name = Human Parasitic Diseases ;
       issn = 1179-5700
-      
+
     >
 
     param[journal_id] = 142
-    
+
     au < manifest ; 2009 ; Human Parasitic Diseases Volume 1 ; 2009 >
     au < manifest ; 2010 ; Human Parasitic Diseases Volume 2 ; 2010 >
     au < released ; 2011 ; Human Parasitic Diseases Volume 3 ; 2011 >
 
 
   }
-  
+
   {
 
     title <
       name = Immunology and Immunogenetics Insights ;
       issn = 1178-6345
-      
+
     >
 
     param[journal_id] = 100
-    
+
     au < manifest ; 2009 ; Immunology and Immunogenetics Insights Volume 1 ; 2009 >
     au < manifest ; 2010 ; Immunology and Immunogenetics Insights Volume 2 ; 2010 >
     au < released ; 2011 ; Immunology and Immunogenetics Insights Volume 3 ; 2011 >
@@ -1005,33 +1005,33 @@
 
 
   }
-  
+
   {
 
     title <
       name = Immunotherapy Insights ;
       issn = 1179-1756
-      
+
     >
 
     param[journal_id] = 150
-    
+
     au < released ; 2009 ; Immunotherapy Insights Volume 1 ; 2009 >
     au < released ; 2011 ; Immunotherapy Insights Volume 2 ; 2011 >
 
 
   }
-  
+
   {
 
     title <
       name = Indian Journal of Clinical Medicine ;
       issn = 1179-9161
-      
+
     >
 
     param[journal_id] = 171
-    
+
     au < released ; 2010 ; Indian Journal of Clinical Medicine Volume 1 ; 2010 >
     au < released ; 2011 ; Indian Journal of Clinical Medicine Volume 2 ; 2011 >
     au < released ; 2012 ; Indian Journal of Clinical Medicine Volume 3 ; 2012 >
@@ -1039,17 +1039,17 @@
 
 
   }
-  
+
   {
 
     title <
       name = Infectious Diseases: Research and Treatment ;
       issn = 1178-6337
-      
+
     >
 
     param[journal_id] = 112
-    
+
     au < released ; 2008 ; Infectious Diseases: Research and Treatment Volume 1 ; 2008 >
     au < released ; 2009 ; Infectious Diseases: Research and Treatment Volume 2 ; 2009 >
     au < released ; 2010 ; Infectious Diseases: Research and Treatment Volume 3 ; 2010 >
@@ -1059,17 +1059,17 @@
 
 
   }
-  
+
   {
 
     title <
       name = Integrative Medicine Insights ;
       issn = 1177-3936
-      
+
     >
 
     param[journal_id] = 21
-    
+
     au < released ; 2006 ; Integrative Medicine Insights Volume 1 ; 2006 >
     au < released ; 2007 ; Integrative Medicine Insights Volume 2 ; 2007 >
     au < released ; 2008 ; Integrative Medicine Insights Volume 3 ; 2008 >
@@ -1078,22 +1078,22 @@
     au < released ; 2011 ; Integrative Medicine Insights Volume 6 ; 2011 >
     au < released ; 2012 ; Integrative Medicine Insights Volume 7 ; 2012 >
     au < expected ; 2013 ; Integrative Medicine Insights Volume 8 ; 2013 >
-    
-    
+
+
 
 
   }
-  
+
   {
 
     title <
       name = International Journal of Insect Science ;
       issn = 1179-5433
-      
+
     >
 
     param[journal_id] = 129
-    
+
     au < released ; 2009 ; International Journal of Insect Science Volume 1 ; 2009 >
     au < released ; 2010 ; International Journal of Insect Science Volume 2 ; 2010 >
     au < released ; 2011 ; International Journal of Insect Science Volume 3 ; 2011 >
@@ -1102,17 +1102,17 @@
 
 
   }
-  
+
   {
 
     title <
       name = International Journal of Tryptophan Research ;
       issn = 1178-6469
-      
+
     >
 
     param[journal_id] = 97
-    
+
     au < ready; 2008 ; International Journal of Tryptophan Research Volume 1 ; 2008 >
     au < ready; 2009 ; International Journal of Tryptophan Research Volume 2 ; 2009 >
     au < ready; 2010 ; International Journal of Tryptophan Research Volume 3 ; 2010 >
@@ -1122,17 +1122,17 @@
 
 
   }
-  
+
   {
 
     title <
       name = Japanese Clinical Medicine ;
       issn = 1179-6707
-      
+
     >
 
     param[journal_id] = 172
-    
+
     au < manifest ; 2010 ; Japanese Clinical Medicine Volume 1 ; 2010 >
     au < released ; 2011 ; Japanese Clinical Medicine Volume 2 ; 2011 >
     au < released ; 2012 ; Japanese Clinical Medicine Volume 3 ; 2012 >
@@ -1140,17 +1140,17 @@
 
 
   }
-  
+
   {
 
     title <
       name = Journal of Cell Death ;
       issn = 1179-0660
-      
+
     >
 
     param[journal_id] = 124
-    
+
     au < released ; 2008 ; Journal of Cell Death Volume 1 ; 2008 >
     au < released ; 2009 ; Journal of Cell Death Volume 2 ; 2009 >
     au < released ; 2010 ; Journal of Cell Death Volume 3 ; 2010 >
@@ -1160,17 +1160,17 @@
 
 
   }
-  
+
   {
 
     title <
       name = Journal of Central Nervous System Disease ;
       issn = 1179-5735
-      
+
     >
 
     param[journal_id] = 121
-    
+
     au < released ; 2009 ; Journal of Central Nervous System Disease Volume 1 ; 2009 >
     au < released ; 2010 ; Journal of Central Nervous System Disease Volume 2 ; 2010 >
     au < released ; 2011 ; Journal of Central Nervous System Disease Volume 3 ; 2011 >
@@ -1179,17 +1179,17 @@
 
 
   }
-  
+
   {
 
     title <
       name = Journal of Experimental Neuroscience ;
       issn = 1179-0695
-      
+
     >
 
     param[journal_id] = 131
-    
+
     au < released ; 2008 ; Journal of Experimental Neuroscience Volume 1 ; 2008 >
     au < released ; 2009 ; Journal of Experimental Neuroscience Volume 2-3 ; 2009 >
     au < released ; 2010 ; Journal of Experimental Neuroscience Volume 4 ; 2010 >
@@ -1199,17 +1199,17 @@
 
 
   }
-  
+
   {
 
     title <
       name = Journal of Genomes and Exomes ;
       issn = 2253-5004
-      
+
     >
 
     param[journal_id] = 173
-    
+
     au < released ; 2010 ; Journal of Genomes and Exomes Volume 1 ; 2010 >
     au < released ; 2011 ; Journal of Genomes and Exomes Volume 2 ; 2011 >
     au < released ; 2012 ; Journal of Genomes and Exomes Volume 3 ; 2012 >
@@ -1217,17 +1217,17 @@
 
 
   }
-  
+
   {
 
     title <
       name = Lipid Insights ;
       issn = 1178-6353
-      
+
     >
 
     param[journal_id] = 109
-    
+
     au < released ; 2008 ; Lipid Insights Volume 1-2 ; 2008 >
     au < released ; 2010 ; Lipid Insights Volume 3 ; 2010 >
     au < released ; 2011 ; Lipid Insights Volume 4 ; 2011 >
@@ -1236,28 +1236,28 @@
 
 
   }
-  
+
   {
 
     title <
       name = Lymphoma and Chronic Lymphocytic Leukemias ;
       issn = 1179-2361
-      
+
     >
-    
+
     param[journal_id] = 147
 
     au < released ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 2009 >
     au < released ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2010 >
 
   }
-  
+
   {
 
     title <
       name = Magnetic Resonance Insights ;
       issn = 1178-623X
-      
+
     >
 
     param[journal_id] = 115
@@ -1267,16 +1267,16 @@
     au < released ; 2010 ; Magnetic Resonance Insights Volume 4 ; 2010 >
     au < released ; 2012 ; Magnetic Resonance Insights Volume 5 ; 2012 >
     au < expected ; 2013 ; Magnetic Resonance Insights Volume 6 ; 2013 >
-    
+
 
   }
-  
+
   {
 
     title <
       name = Medical Equipment Insights ;
       issn = 1178-637X
-      
+
     >
 
     param[journal_id] = 98
@@ -1286,15 +1286,15 @@
     au < released ; 2010 ; Medical Equipment Insights Volume 3 ; 2010 >
     au < released ; 2012 ; Medical Equipment Insights Volume 4 ; 2012 >
     au < expected ; 2013 ; Medical Equipment Insights Volume 5 ; 2013 >
-    
+
   }
-  
+
   {
 
     title <
       name = Microbiology Insights ;
       issn = 1178-6361
-      
+
     >
 
     param[journal_id] = 108
@@ -1304,14 +1304,14 @@
     au < released ; 2010 ; Microbiology Insights Volume 3 ; 2010 >
     au < released ; 2012 ; Microbiology Insights Volume 4 ; 2012 >
     au < expected ; 2013 ; Microbiology Insights Volume 5 ; 2013 >
-  }     
-  
+  }
+
   {
 
     title <
       name = Nutrition and Metabolic Insights ;
       issn = 1178-6388
-      
+
     >
 
     param[journal_id] = 101
@@ -1322,13 +1322,13 @@
     au < released ; 2012 ; Nutrition and Metabolic Insights Volume 4 ; 2012 >
     au < expected ; 2013 ; Nutrition and Metabolic Insights Volume 5 ; 2013 >
   }
-  
+
   {
 
     title <
       name = Open Journal of Cardiovascular Surgery ;
       issn = 1179-0652
-      
+
     >
 
     param[journal_id] = 123
@@ -1341,13 +1341,13 @@
     au < expected ; 2013 ; Open Journal of Cardiovascular Surgery Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Ophthalmology and Eye Diseases ;
       issn = 1179-1721
-      
+
     >
 
     param[journal_id] = 146
@@ -1358,13 +1358,13 @@
     au < released ; 2012 ; Ophthalmology and Eye Diseases Volume 4 ; 2012 >
     au < expected ; 2013 ; Ophthalmology and Eye Diseases Volume 5 ; 2013 >
   }
-  
+
   {
 
     title <
       name = Organic Chemistry Insights ;
       issn = 1178-6396
-      
+
     >
 
     param[journal_id] = 104
@@ -1375,13 +1375,13 @@
     au < released ; 2012 ; Organic Chemistry Insights Volume 4 ; 2012 >
     au < expected ; 2013 ; Organic Chemistry Insights Volume 5 ; 2013 >
   }
-  
+
   {
 
     title <
       name = Palliative Care: Research and Treatment ;
       issn = 1178-2242
-      
+
     >
 
     param[journal_id] = 86
@@ -1394,13 +1394,13 @@
     au < expected ; 2013 ; Palliative Care: Research and Treatment Volume 7 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Particle Physics Insights ;
       issn = 1178-640X
-      
+
     >
 
     param[journal_id] = 105
@@ -1413,46 +1413,46 @@
     au < expected ; 2013 ; Particle Physics Insights Volume 6 ; 2013 >
 
   }
-  
+
   {
 
     title <
       name = Perspectives in Medicinal Chemistry ;
       issn = 1177-391X
-      
+
     >
 
     param[journal_id] = 25
-    
+
     au < manifest ; 2007 ; Perspectives in Medicinal Chemistry Volume 1 ; 2007 >
     au < manifest ; 2008 ; Perspectives in Medicinal Chemistry Volume 2 ; 2008 >
     au < manifest ; 2009 ; Perspectives in Medicinal Chemistry Volume 3 ; 2009 >
     au < manifest ; 2010 ; Perspectives in Medicinal Chemistry Volume 4 ; 2010 >
     au < released ; 2011 ; Perspectives in Medicinal Chemistry Volume 5 ; 2011 >
-    
+
   }
-  
+
   {
 
     title <
       name = Primary Prevention Insights ;
       issn = 1179-1748
-      
+
     >
 
     param[journal_id] = 135
 
     au < manifest ; 2009 ; Primary Prevention Insights Volume 1 ; 2009 >
     au < manifest ; 2010 ; Primary Prevention Insights Volume 2 ; 2010 >
-    
+
   }
-  
+
   {
 
     title <
       name = Proteomics Insights ;
       issn = 1178-6418
-      
+
     >
 
     param[journal_id] = 106
@@ -1463,31 +1463,31 @@
     au < released ; 2011 ; Proteomics Insights Volume 4 ; 2011 >
     au < released ; 2012 ; Proteomics Insights Volume 5 ; 2012 >
     au < expected ; 2013 ; Proteomics Insights Volume 6 ; 2013 >
-    
-    
+
+
   }
-  
+
   {
 
     title <
       name = Rehabilitation Process and Outcome ;
       issn = 1179-5727
-      
+
     >
 
     param[journal_id] = 134
 
     au < manifest ; 2008 ; Rehabilitation Process and Outcome Volume 1 ; 2008 >
     au < manifest ; 2010 ; Rehabilitation Process and Outcome Volume 3 ; 2010 >
-    
+
   }
-  
+
   {
 
     title <
       name = Reproductive Biology Insights ;
       issn = 1178-6426
-      
+
     >
 
     param[journal_id] = 111
@@ -1496,15 +1496,15 @@
     au < manifest ; 2009 ; Reproductive Biology Insights Volume 2 ; 2009 >
     au < manifest ; 2010 ; Reproductive Biology Insights Volume 3 ; 2010 >
     au < released ; 2011 ; Reproductive Biology Insights Volume 4 ; 2011 >
-    
+
   }
-  
+
   {
 
     title <
       name = Retrovirology: Research and Treatment  ;
       issn = 1178-1238
-      
+
     >
 
     param[journal_id] = 52
@@ -1512,15 +1512,15 @@
     au < manifest ; 2008 ; Retrovirology: Research and Treatment Volume 1-2 ; 2008 >
     au < manifest ; 2010 ; Retrovirology: Research and Treatment Volume 3 ; 2010 >
 
-    
+
   }
-  
+
   {
 
     title <
       name = Signal Transduction Insights ;
       issn = 1178-6434
-      
+
     >
 
     param[journal_id] = 102
@@ -1528,15 +1528,15 @@
     au < manifest ; 2008 ; Signal Transduction Insights Volume 1 ; 2008 >
     au < manifest ; 2010 ; Signal Transduction Insights Volume 2 ; 2010 >
 
-    
+
   }
-  
+
   {
 
     title <
       name = Substance Abuse: Research and Treatment ;
       issn = 1178-2218
-      
+
     >
 
     param[journal_id] = 80
@@ -1547,16 +1547,16 @@
     au < released ; 2011 ; Substance Abuse: Research and Treatment Volume 5 ; 2011 >
     au < released ; 2012 ; Substance Abuse: Research and Treatment Volume 6 ; 2012 >
     au < expected ; 2013 ; Substance Abuse: Research and Treatment Volume 7 ; 2013 >
-    
-    
+
+
   }
-  
+
   {
 
     title <
       name = Tobacco Use Insights ;
       issn = 1179-173X
-      
+
     >
 
     param[journal_id] = 139
@@ -1567,15 +1567,15 @@
     au < released ; 2011 ; Tobacco Use Insights Volume 4 ; 2011 >
     au < released ; 2012 ; Tobacco Use Insights Volume 5 ; 2012 >
     au < expected ; 2013 ; Tobacco Use Insights Volume 6 ; 2013 >
-    
+
   }
-  
+
   {
 
     title <
       name = Translational Oncogenomics ;
       issn = 1177-2727
-      
+
     >
 
     param[journal_id] = 19
@@ -1586,16 +1586,16 @@
     au < ready ; 2010 ; Translational Oncogenomics Volume 4 ; 2010 >
     au < released ; 2012 ; Translational Oncogenomics Volume 5 ; 2012 >
     au < expected ; 2013 ; Translational Oncogenomics Volume 6 ; 2013 >
-    
-    
+
+
   }
-  
+
   {
 
     title <
       name = Virology: Research and Treatment ;
       issn = 1178-122X
-      
+
     >
 
     param[journal_id] = 50
@@ -1603,7 +1603,7 @@
     au < ready ; 2008 ; Virology: Research and Treatment Volume 1 ; 2008 >
     au < ready ; 2010 ; Virology: Research and Treatment Volume 2 ; 2010 >
 
-    
+
   }
 
 }
