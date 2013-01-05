@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.112 2013-01-02 20:55:05 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.113 2013-01-05 05:24:04 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.definable.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.crawler.*;
@@ -1034,6 +1035,14 @@ public class ArchivalUnitStatus
 	// ignore
       }
 
+      String coverageDepth =
+	AuUtil.getTitleAttribute(au,
+				 DefinableArchivalUnit.AU_COVERAGE_DEPTH_ATTR);
+      if (!StringUtil.isNullString(coverageDepth)) {
+	res.add(new StatusTable.SummaryInfo("Coverage Depth",
+					    ColumnDescriptor.TYPE_STRING,
+					    coverageDepth));
+      }
       if (debug) {
 	if (hasSubstancePatterns) {
 	  res.add(new StatusTable.SummaryInfo("Has Substance",
