@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.38 2012-12-18 11:38:31 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.39 2013-01-05 04:43:40 tlipkis Exp $
  */
 
 /*
@@ -144,8 +144,15 @@ public class KbartConverter {
   /**
    * The thread pool executor used in completion services in converting titles.
    */
-  private static final AdjustableFixedSizeThreadPoolExecutor CONVERT_TITLES_EXECUTOR =
-      new AdjustableFixedSizeThreadPoolExecutor(DEFAULT_CONVERT_TITLES_POOL_SIZE);
+  private static AdjustableFixedSizeThreadPoolExecutor CONVERT_TITLES_EXECUTOR = null;
+
+  private static AdjustableFixedSizeThreadPoolExecutor getThreadPoolExecutor() {
+    if (CONVERT_TITLES_EXECUTOR == null) {
+      CONVERT_TITLES_EXECUTOR =
+	new AdjustableFixedSizeThreadPoolExecutor(DEFAULT_CONVERT_TITLES_POOL_SIZE);
+    }
+    return CONVERT_TITLES_EXECUTOR;
+  }
 
   /**
    * This method should be used to get the executor to use for converting titles;
@@ -153,16 +160,17 @@ public class KbartConverter {
    * @return
    */
   private static final AdjustableFixedSizeThreadPoolExecutor getConvertTitlesExecutor() {
+    AdjustableFixedSizeThreadPoolExecutor executor = getThreadPoolExecutor();
     int newSize = CurrentConfig.getIntParam(PARAM_CONVERT_TITLES_POOL_SIZE,
         DEFAULT_CONVERT_TITLES_POOL_SIZE);
     // Set the new size to default if user specified 0
     if (newSize==0) newSize = DEFAULT_CONVERT_TITLES_POOL_SIZE;
     // Resize the pool if the param differs from the current prescribed size
-    if (newSize!=CONVERT_TITLES_EXECUTOR.getFixedPoolSize()) {
-      boolean success = CONVERT_TITLES_EXECUTOR.setFixedPoolSize(newSize);
+    if (newSize!=executor.getFixedPoolSize()) {
+      boolean success = executor.setFixedPoolSize(newSize);
       log.info((success?"Resized":"Failed to resize")+" convert titles thread pool to "+newSize);
     }
-    return CONVERT_TITLES_EXECUTOR;
+    return executor;
   }
 
   /**
