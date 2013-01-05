@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.4 2013-01-04 21:57:37 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.5 2013-01-05 20:00:48 pgust Exp $
  */
 
 /*
@@ -3327,17 +3327,19 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   /**
    * Adds an AU to the list of AUs to be reindexed.
+   * Does incremental reindexing if possible.
    * 
    * @param au
    *          An ArchivalUnit with the AU to be reindexed.
    * @return <code>true</code> if au was added for reindexing
    */
   public boolean addAuToReindex(ArchivalUnit au) {
-    return addAuToReindex(au, false);
+    return addAuToReindex(au, false, false);
   }
 
   /**
    * Adds an AU to the list of AUs to be reindexed.
+   * Does incremental reindexing if possible.
    * 
    * @param au
    *          An ArchivalUnit with the AU to be reindexed.
@@ -3347,6 +3349,24 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return <code>true</code> if au was added for reindexing
    */
   public boolean addAuToReindex(ArchivalUnit au, boolean inBatch) {
+    return addAuToReindex(au, inBatch, false);
+  }
+  
+  /**
+   * Adds an AU to the list of AUs to be reindexed. Optionally causes
+   * full reindexing by removing the AU from the database.
+   * 
+   * @param au
+   *          An ArchivalUnit with the AU to be reindexed.
+   * @param inBatch
+   *          A boolean indicating whether the reindexing of this AU should be
+   *          performed as part of a batch.
+   * @param fullReindex
+   *          Causes a full reindex by removing that AU from the database. 
+   * @return <code>true</code> if au was added for reindexing
+   */
+  public boolean addAuToReindex(
+      ArchivalUnit au, boolean inBatch, boolean fullReindex) {
     final String DEBUG_HEADER = "addAuToReindex(): ";
 
     synchronized (activeReindexingTasks) {
@@ -3383,10 +3403,21 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                           inBatch);
         }
 
+        // force a full reindex by removing the AU metadata from the database
+        if (fullReindex) {
+          removeAu(pendingAusBatchConnection, au.getAuId());
+        }
+        
         startReindexing(pendingAusBatchConnection);
         pendingAusBatchConnection.commit();
 
+        // once transaction has committed, resync AU count with database
+        if (fullReindex) {
+          metadataArticleCount = getArticleCount(pendingAusBatchConnection);
+        }
+        
         return true;
+
       } catch (SQLException ex) {
         log.error("Cannot add au to pending AUs: " + au.getName(), ex);
         return false;
