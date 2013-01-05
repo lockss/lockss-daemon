@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.39 2013-01-04 21:57:37 fergaloy-sf Exp $
+ * $Id: OpenUrlResolver.java,v 1.40 2013-01-05 19:58:48 pgust Exp $
  */
 
 /*
@@ -1259,6 +1259,12 @@ public class OpenUrlResolver {
         where.append(")");
       }
 
+      // select the 'Access' url
+      // (what if there is no access url?)
+      where.append(" and u." + FEATURE_COLUMN + " = ");
+      where.append("'Access'");
+
+
       String url =
 	  resolveFromQuery(conn, query.toString() + " from " + from.toString()
 	      + " where " + where.toString(), args);
@@ -2118,8 +2124,7 @@ public class OpenUrlResolver {
     where.append("aut." + MD_ITEM_SEQ_COLUMN + " and (");
 
     String authorUC = author.toUpperCase();
-	// match single author
-    // (last, first name separated by ',')
+    // match single author
     where.append("upper(");
     where.append(AUTHOR_NAME_COLUMN);
     where.append(") = ?");
@@ -2128,32 +2133,20 @@ public class OpenUrlResolver {
     // escape escape character and then wildcard characters
     String authorEsc = authorUC.replace("\\", "\\\\").replace("%","\\%");
             
-    for (int i = 0; i < 5; i++) {
-      where.append(" or upper(");
-      where.append(AUTHOR_NAME_COLUMN);
-      where.append(") like ? escape '\\'");
-    }
+    // match last name of author 
+    // (last, first name separated by ',')
+    where.append(" or upper(");
+    where.append(AUTHOR_NAME_COLUMN);
+    where.append(") like ? escape '\\'");
+    args.add(authorEsc+",%");
+    
+    // match last name of author
+    // (first last name separated by ' ')
+    where.append(" or upper(");
+    where.append(AUTHOR_NAME_COLUMN);
+    where.append(") like ? escape '\\'");
+    args.add("% " + authorEsc);    
     
     where.append(")");
-
-    // match last name of first author 
-    // (last, first name separated by ',')
-    args.add(authorEsc+",%");
-            
-    // match entire first author 
-    // (authors separated by ';', last, first name separated by ',')
-    args.add(authorEsc+";%");
-            
-    // match last name of middle or last author 
-    // (authors separated by ';', last, first name separated by ',')
-    args.add("%;" + authorEsc + ",%");
-            
-    // match entire middle author 
-    // (authors separated by ';')
-    args.add("%;" + authorEsc + ";%");
-            
-    // match entire last author 
-    // (authors separated by ';')
-    args.add("%;" + authorEsc);
   }
 }
