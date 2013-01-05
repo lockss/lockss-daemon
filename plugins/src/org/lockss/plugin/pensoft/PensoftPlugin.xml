@@ -1,0 +1,147 @@
+ <map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing - audrey</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.pensoft.PensoftPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Pensoft Plugin </string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.53.0</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <!-- when using "num_issue_range", use '%s' in the au_name (becomes "min-max") -->
+    <string>"Pensoft Publishers Plugin, Base URL %s, Journal %s, Issues %s", base_url, journal_name, num_issue_range</string>
+  </entry>
+  <entry>
+    <!-- when using "num_issue_range", use '%d' in the au_start_url (separates into max-min start_urls)-->
+    <string>au_start_url</string>
+    <string>"%sjournals/%s/issue/%d/", base_url, journal_name, num_issue_range</string>
+  </entry>
+  
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%sjournals/%s", base_url, journal_name</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%sjournals/%s", base_url, journal_name</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!-- when using "num_issue_range", use '%s' (becomes string "\d+" in the crawl rules -->
+      <string>1,"^%sjournals/%s/issue/%s(-\d)?/", base_url, journal_name, num_issue_range</string>
+      <!-- example of pdfs: http://www.pensoft.net/inc/journals/download.php?fileId=3070&fileTable=J_GALLEYS 
+           http://www.pensoft.net/J_FILES/10/articles/1100/1100-G-3-layout.pdf  -->
+      <string>1,"^%sinc/journals/", base_url</string> 
+      <!-- example of abstract|article: 
+      http://www.pensoft.net/journals/compcytogen/article/1141/abstract/cytogenetic-characterization-of-three-balistoidea-fish-species-from-the-atlantic-with-inferences-on-chromosomal-evolutio -->
+      <string>1,"^%sjournals/%s/article/", base_url, journal_name</string>
+      <!-- example of jpg: http://www.pensoft.net/J_FILES/1317222993JHR-22-cover-temp-110.jpg -->
+      <string>1, "^%sJ_FILES/", base_url</string>
+      <string>4,"^%s", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- pdf example: 
+      http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=2297
+      -->
+      <string>"^%sinc/journals/download.php\?fileId=[\d]+&amp;fileTable=J_GALLEYS", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>       
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_name</key>
+        <displayName>Journal Name</displayName>
+        <type>1</type>
+        <size>30</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>num_issue_range</key>
+        <displayName>Numeric Issue Range</displayName>
+        <description>A Range of issues in the form: min-max</description>
+        <type>8</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_html_crawlfilter_factory</string>
+    <string>org.lockss.plugin.pensoft.PensoftHtmlCrawlFilterFactory</string>
+  </entry>
+
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.pensoft.PensoftArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.pensoft.PensoftArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.pensoft.PensoftHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+
+</map>

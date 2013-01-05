@@ -1,0 +1,54 @@
+<map>
+  <!-- ClockssPensoftPlugin.xml inherited from PensoftPlugin.xml.
+       The main differences are names, version.
+  -->  
+  <entry>
+    <string>plugin_status</string>
+    <string>testing - audrey</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.pensoft.ClockssPensoftPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Pensoft Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.pensoft.PensoftPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+ <!-- only add version numbers if CLOCKSS version adds different
+      substance/metadata/poll rules  
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+-->
+  <entry>
+    <string>au_name</string>
+    <string>"Pensoft Plugin (CLOCKSS), Base URL %s, Journal %s, Issues %s", base_url, journal_name, num_issue_range</string>
+  </entry>
+
+</map>
