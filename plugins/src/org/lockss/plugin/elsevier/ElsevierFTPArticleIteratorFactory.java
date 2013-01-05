@@ -46,6 +46,8 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
   
   protected static final String PATTERN_TEMPLATE = "\"%s%d/[^/]+/[\\d]+[^/]+/[\\d]+/[\\d]+/main.pdf$\",base_url,year";
 
+  protected static final String INCLUDE_SUBTREE_TEMPLATE = "\"%s%d/[^/]+/[\\d]+[^/]+/[\\d]+/[\\d]+/main.pdf$\",base_url,year";
+
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
@@ -54,6 +56,7 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
                                        .setTarget(target)
                                        .setRootTemplate(ROOT_TEMPLATE)
                                        .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
+//                                       .setIncludeSubTreePatternTemplate(INCLUDE_SUBTREE_TEMPLATE, Pattern.CASE_INSENSITIVE));
   }
   
   protected static class ElsevierFTPArticleIterator extends SubTreeArticleIterator {
@@ -66,6 +69,9 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
       spec.setVisitArchiveMembers(true);
     }
     
+    // Duplicate of definition in ArticleFiles for use here until 1.59 is ready (PJG).
+    private static final String ROLE_FULL_TEXT_XML = "FullTextXML";
+
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
@@ -82,7 +88,7 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(cu);
       
-      if(spec.getTarget() != MetadataTarget.Article)
+      if(spec.getTarget() != MetadataTarget.Article())
       {
 		af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
 		guessXml(af,mat);
@@ -95,7 +101,7 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
         CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1xml"));
         
         if (xmlCu != null && xmlCu.hasContent()) {
-          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, xmlCu);
+          af.setRoleCu(ROLE_FULL_TEXT_XML, xmlCu);
         }
       } 
   }
