@@ -16,9 +16,6 @@ else
     exit 1
 fi
 
-MIN_JAVA_HEAP_IN_MB=200
-MAX_JAVA_HEAP_IN_MB=1536
-DEFAULT_JAVA_HEAP_IN_MB=500
 DEFAULT_TEST_GROUP=prod
 
 if [ "X${1}" = Xwait ]; then
@@ -56,12 +53,31 @@ else
     exit 1
 fi
 
-# Set LOCKSS_JAVA_HEAP iff it wasn't set in config.dat
-if [ "${LOCKSS_JAVA_HEAP}X" = X ] ; then
-    set_java_heap
-fi
+# Capture output of 'java -version', extract language version
+# and address width (64/32)
 
-JAVA_VERSION=`${LOCKSS_JAVA_CMD} -version 2>&1 | head -1 | sed -e 's/.* "\(.*\)"/\1/'`
+OLD_IFS="${IFS}"
+IFS=""
+JAVA_VERSTR=`${LOCKSS_JAVA_CMD} -version 2>&1`
+JAVA_VERSION=`echo "${JAVA_VERSTR}" | head -1 | sed -e 's/.* "\(.*\)"/\1/'`
+JAVA_BITS=32
+echo "${JAVA_VERSTR}" | grep -qi '64[- ]?bit' && JAVA_BITS=64 >/dev/null 2>&1
+IFS="${OLD_IFS}"
+
+# 64-bit JVM can handle (and requires) much larger heap
+case "X${JAVA_BITS}" in
+  X64)
+    MIN_JAVA_HEAP_IN_MB=1024
+    MAX_JAVA_HEAP_IN_MB=12288
+    DEFAULT_JAVA_HEAP_IN_MB=4096
+    ;;
+  X*)
+    MIN_JAVA_HEAP_IN_MB=200
+    MAX_JAVA_HEAP_IN_MB=1536
+    DEFAULT_JAVA_HEAP_IN_MB=500
+    ;;
+esac
+
 case "X${JAVA_VERSION}" in
 X1.[6789]*)
     ;;
@@ -70,6 +86,12 @@ X1.[6789]*)
     exit 1
     ;;
 esac
+
+# Set LOCKSS_JAVA_HEAP iff it wasn't set in config.dat
+if [ "${LOCKSS_JAVA_HEAP}X" = X ] ; then
+    set_java_heap
+fi
+
 CLASSPATH=@CLASSPATH@
 DAEMON_CLASS=org.lockss.app.LockssDaemon
 if [ "X${LOCKSS_JAVA_SWITCHES}" = "X" ]; then
