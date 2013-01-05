@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.15 2012-10-09 07:59:37 tlipkis Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.16 2013-01-05 19:47:24 pgust Exp $
  */
 
 /*
@@ -100,20 +100,24 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
   protected void addTdbDefaults(ArticleFiles af,
 				CachedUrl cu, ArticleMetadata am) {
     if (log.isDebug3()) log.debug3("addTdbDefaults("+af+", "+cu+", "+am+")");
-    TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
-    if (log.isDebug3()) log.debug3("tc; "+tc);
-    TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
-    if (log.isDebug3()) log.debug3("tdbau; "+tdbau);
-    if (tdbau != null) {
-      if (log.isDebug3()) log.debug3("Adding data from " + tdbau + " to " + am);
-      am.putIfBetter(MetadataField.FIELD_ISBN, tdbau.getPrintIsbn());
-      am.putIfBetter(MetadataField.FIELD_EISBN, tdbau.getEisbn());
-      am.putIfBetter(MetadataField.FIELD_ISSN, tdbau.getPrintIssn());
-      am.putIfBetter(MetadataField.FIELD_EISSN, tdbau.getEissn());
-      am.putIfBetter(MetadataField.FIELD_DATE, tdbau.getStartYear());
-      am.putIfBetter(MetadataField.FIELD_VOLUME, tdbau.getStartVolume());
-      am.putIfBetter(MetadataField.FIELD_ISSUE, tdbau.getStartIssue());
-      am.putIfBetter(MetadataField.FIELD_JOURNAL_TITLE,tdbau.getJournalTitle());
+    if (!cu.getArchivalUnit().isBulkContent()) {
+      // Fill in missing values rom TDB if TDB entries reflect bibliographic
+      // information for the content. This is not the case for bulk data
+      TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
+      if (log.isDebug3()) log.debug3("tc; "+tc);
+      TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
+      if (log.isDebug3()) log.debug3("tdbau; "+tdbau);
+      if (tdbau != null) {
+        if (log.isDebug3()) log.debug3("Adding data from " + tdbau + " to " + am);
+        am.putIfBetter(MetadataField.FIELD_ISBN, tdbau.getPrintIsbn());
+        am.putIfBetter(MetadataField.FIELD_EISBN, tdbau.getEisbn());
+        am.putIfBetter(MetadataField.FIELD_ISSN, tdbau.getPrintIssn());
+        am.putIfBetter(MetadataField.FIELD_EISSN, tdbau.getEissn());
+        am.putIfBetter(MetadataField.FIELD_DATE, tdbau.getStartYear());
+        am.putIfBetter(MetadataField.FIELD_VOLUME, tdbau.getStartVolume());
+        am.putIfBetter(MetadataField.FIELD_ISSUE, tdbau.getStartIssue());
+        am.putIfBetter(MetadataField.FIELD_JOURNAL_TITLE,tdbau.getJournalTitle());
+      }
     }
     if (log.isDebug3()) log.debug3("adding("+af.getFullTextCu());
     am.putIfBetter(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
