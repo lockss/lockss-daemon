@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.34 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: DebugPanel.java,v 1.35 2013-01-05 20:10:18 pgust Exp $
  */
 
 /*
@@ -359,7 +359,8 @@ public class DebugPanel extends LockssServlet {
       }
     }
     
-    if (metadataMgr.addAuToReindex(au)) {
+    // fully reindex metadata
+    if (metadataMgr.addAuToReindex(au, false, true)) {
       statusMsg = "Reindexing metadata for " + au.getName();
       return true;
     }
