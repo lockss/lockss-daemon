@@ -1,0 +1,20 @@
+{
+
+  publisher <
+    name = Society for Judgment and Decision Making
+  >
+
+  {
+
+    title <
+      name = Judgment and Decision Making ;
+      issn = 1930-2975 
+    >
+
+    plugin = needs.plugin
+    rights = openaccess
+    param[base_url] = http://journal.sjdm.org/
+
+  }
+
+}
