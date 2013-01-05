@@ -30,18 +30,18 @@
     au < HighWirePressH20Plugin ; ready ; 1980 ; Drug Metabolism and Disposition Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; notReady ; 1981 ; Drug Metabolism and Disposition Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; ready ; 1982 ; Drug Metabolism and Disposition Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 1983 ; Drug Metabolism and Disposition Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 1983 ; Drug Metabolism and Disposition Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; ready ; 1984 ; Drug Metabolism and Disposition Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; ready ; 1985 ; Drug Metabolism and Disposition Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; ready ; 1986 ; Drug Metabolism and Disposition Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; ready ; 1987 ; Drug Metabolism and Disposition Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; ready ; 1988 ; Drug Metabolism and Disposition Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; testing ; 1989 ; Drug Metabolism and Disposition Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 1989 ; Drug Metabolism and Disposition Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; ready ; 1990 ; Drug Metabolism and Disposition Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; ready ; 1991 ; Drug Metabolism and Disposition Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; ready ; 1992 ; Drug Metabolism and Disposition Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; ready ; 1993 ; Drug Metabolism and Disposition Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; testing ; 1994 ; Drug Metabolism and Disposition Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 1994 ; Drug Metabolism and Disposition Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; ready ; 1995 ; Drug Metabolism and Disposition Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; ready ; 1996 ; Drug Metabolism and Disposition Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; testing ; 1997 ; Drug Metabolism and Disposition Volume 25 ; 25 >
@@ -76,7 +76,7 @@
     param[base_url] = http://jpet.aspetjournals.org/
     comment[notReady] = low agreement 0%, re-test later
 
-    au < HighWirePressH20Plugin ; testing ; 1909-1910 ; Journal of Pharmacology and Experimental Therapeutics Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1909-1910 ; Journal of Pharmacology and Experimental Therapeutics Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; ready ; 1910-1911 ; Journal of Pharmacology and Experimental Therapeutics Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; ready ; 1911-1912 ; Journal of Pharmacology and Experimental Therapeutics Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 1912-1913 ; Journal of Pharmacology and Experimental Therapeutics Volume 4 ; 4 >
@@ -90,7 +90,7 @@
     au < HighWirePressH20Plugin ; ready ; 1918-1919 ; Journal of Pharmacology and Experimental Therapeutics Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; ready ; 1919 ; Journal of Pharmacology and Experimental Therapeutics Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; notReady ; 1919 ; Journal of Pharmacology and Experimental Therapeutics Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; testing ; 1920 ; Journal of Pharmacology and Experimental Therapeutics Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1920 ; Journal of Pharmacology and Experimental Therapeutics Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; ready ; 1920 ; Journal of Pharmacology and Experimental Therapeutics Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; testing ; 1921 ; Journal of Pharmacology and Experimental Therapeutics Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; ready ; 1921 ; Journal of Pharmacology and Experimental Therapeutics Volume 18 ; 18 >
@@ -111,7 +111,7 @@
     au < HighWirePressH20Plugin ; ready ; 1928 ; Journal of Pharmacology and Experimental Therapeutics Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; notReady ; 1928 ; Journal of Pharmacology and Experimental Therapeutics Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; notReady ; 1929 ; Journal of Pharmacology and Experimental Therapeutics Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; testing ; 1929 ; Journal of Pharmacology and Experimental Therapeutics Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; 1929 ; Journal of Pharmacology and Experimental Therapeutics Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; ready ; 1929 ; Journal of Pharmacology and Experimental Therapeutics Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; ready ; 1930 ; Journal of Pharmacology and Experimental Therapeutics Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; notReady ; 1930 ; Journal of Pharmacology and Experimental Therapeutics Volume 39 ; 39 >
@@ -131,7 +131,7 @@
     au < HighWirePressH20Plugin ; notReady ; 1935 ; Journal of Pharmacology and Experimental Therapeutics Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; ready ; 1935 ; Journal of Pharmacology and Experimental Therapeutics Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; notReady ; 1935 ; Journal of Pharmacology and Experimental Therapeutics Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; testing ; 1936 ; Journal of Pharmacology and Experimental Therapeutics Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; ready ; 1936 ; Journal of Pharmacology and Experimental Therapeutics Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; ready ; 1936 ; Journal of Pharmacology and Experimental Therapeutics Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; ready ; 1936 ; Journal of Pharmacology and Experimental Therapeutics Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; ready ; 1937 ; Journal of Pharmacology and Experimental Therapeutics Volume 59 ; 59 >
@@ -145,7 +145,7 @@
     au < HighWirePressH20Plugin ; notReady ; 1939 ; Journal of Pharmacology and Experimental Therapeutics Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; notReady ; 1940 ; Journal of Pharmacology and Experimental Therapeutics Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; notReady ; 1940 ; Journal of Pharmacology and Experimental Therapeutics Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; testing ; 1940 ; Journal of Pharmacology and Experimental Therapeutics Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; ready ; 1940 ; Journal of Pharmacology and Experimental Therapeutics Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; ready ; 1941 ; Journal of Pharmacology and Experimental Therapeutics Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; ready ; 1941 ; Journal of Pharmacology and Experimental Therapeutics Volume 72 ; 72 >
     au < HighWirePressH20Plugin ; ready ; 1941 ; Journal of Pharmacology and Experimental Therapeutics Volume 73 ; 73 >
@@ -176,16 +176,16 @@
     au < HighWirePressH20Plugin ; ready ; 1950 ; Journal of Pharmacology and Experimental Therapeutics Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; ready ; 1950 ; Journal of Pharmacology and Experimental Therapeutics Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; ready ; 1950 ; Journal of Pharmacology and Experimental Therapeutics Volume 100 ; 100 >
-    au < HighWirePressH20Plugin ; testing ; 1951 ; Journal of Pharmacology and Experimental Therapeutics Volume 101 ; 101 >
-    au < HighWirePressH20Plugin ; testing ; 1951 ; Journal of Pharmacology and Experimental Therapeutics Volume 102 ; 102 >
+    au < HighWirePressH20Plugin ; ready ; 1951 ; Journal of Pharmacology and Experimental Therapeutics Volume 101 ; 101 >
+    au < HighWirePressH20Plugin ; ready ; 1951 ; Journal of Pharmacology and Experimental Therapeutics Volume 102 ; 102 >
     au < HighWirePressH20Plugin ; ready ; 1951 ; Journal of Pharmacology and Experimental Therapeutics Volume 103 ; 103 >
     au < HighWirePressH20Plugin ; ready ; 1952 ; Journal of Pharmacology and Experimental Therapeutics Volume 104 ; 104 >
     au < HighWirePressH20Plugin ; ready ; 1952 ; Journal of Pharmacology and Experimental Therapeutics Volume 105 ; 105 >
-    au < HighWirePressH20Plugin ; testing ; 1952 ; Journal of Pharmacology and Experimental Therapeutics Volume 106 ; 106 >
+    au < HighWirePressH20Plugin ; ready ; 1952 ; Journal of Pharmacology and Experimental Therapeutics Volume 106 ; 106 >
     au < HighWirePressH20Plugin ; ready ; 1953 ; Journal of Pharmacology and Experimental Therapeutics Volume 107 ; 107 >
     au < HighWirePressH20Plugin ; ready ; 1953 ; Journal of Pharmacology and Experimental Therapeutics Volume 108 ; 108 >
     au < HighWirePressH20Plugin ; ready ; 1953 ; Journal of Pharmacology and Experimental Therapeutics Volume 109 ; 109 >
-    au < HighWirePressH20Plugin ; testing ; 1954 ; Journal of Pharmacology and Experimental Therapeutics Volume 110 ; 110 >
+    au < HighWirePressH20Plugin ; ready ; 1954 ; Journal of Pharmacology and Experimental Therapeutics Volume 110 ; 110 >
     au < HighWirePressH20Plugin ; ready ; 1954 ; Journal of Pharmacology and Experimental Therapeutics Volume 111 ; 111 >
     au < HighWirePressH20Plugin ; notReady ; 1954 ; Journal of Pharmacology and Experimental Therapeutics Volume 112 ; 112 >
     au < HighWirePressH20Plugin ; ready ; 1955 ; Journal of Pharmacology and Experimental Therapeutics Volume 113 ; 113 >
@@ -254,48 +254,48 @@
     au < HighWirePressH20Plugin ; ready ; 1971 ; Journal of Pharmacology and Experimental Therapeutics Volume 176 ; 176 >
     au < HighWirePressH20Plugin ; ready ; 1971 ; Journal of Pharmacology and Experimental Therapeutics Volume 177 ; 177 >
     au < HighWirePressH20Plugin ; notReady ; 1971 ; Journal of Pharmacology and Experimental Therapeutics Volume 178 ; 178 >
-    au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of Pharmacology and Experimental Therapeutics Volume 179 ; 179 >
+    au < HighWirePressH20Plugin ; ready ; 1971 ; Journal of Pharmacology and Experimental Therapeutics Volume 179 ; 179 >
     au < HighWirePressH20Plugin ; ready ; 1972 ; Journal of Pharmacology and Experimental Therapeutics Volume 180 ; 180 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of Pharmacology and Experimental Therapeutics Volume 181 ; 181 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of Pharmacology and Experimental Therapeutics Volume 182 ; 182 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of Pharmacology and Experimental Therapeutics Volume 183 ; 183 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Pharmacology and Experimental Therapeutics Volume 184 ; 184 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Pharmacology and Experimental Therapeutics Volume 185 ; 185 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Pharmacology and Experimental Therapeutics Volume 186 ; 186 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Pharmacology and Experimental Therapeutics Volume 187 ; 187 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Pharmacology and Experimental Therapeutics Volume 188 ; 188 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Pharmacology and Experimental Therapeutics Volume 189 ; 189 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Pharmacology and Experimental Therapeutics Volume 190 ; 190 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Pharmacology and Experimental Therapeutics Volume 191 ; 191 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Pharmacology and Experimental Therapeutics Volume 192 ; 192 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Pharmacology and Experimental Therapeutics Volume 193 ; 193 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Pharmacology and Experimental Therapeutics Volume 194 ; 194 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Pharmacology and Experimental Therapeutics Volume 195 ; 195 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Pharmacology and Experimental Therapeutics Volume 196 ; 196 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Pharmacology and Experimental Therapeutics Volume 197 ; 197 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Pharmacology and Experimental Therapeutics Volume 198 ; 198 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Pharmacology and Experimental Therapeutics Volume 199 ; 199 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Pharmacology and Experimental Therapeutics Volume 200 ; 200 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Pharmacology and Experimental Therapeutics Volume 201 ; 201 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Pharmacology and Experimental Therapeutics Volume 202 ; 202 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Pharmacology and Experimental Therapeutics Volume 203 ; 203 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Pharmacology and Experimental Therapeutics Volume 204 ; 204 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Pharmacology and Experimental Therapeutics Volume 205 ; 205 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Pharmacology and Experimental Therapeutics Volume 206 ; 206 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Pharmacology and Experimental Therapeutics Volume 207 ; 207 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Pharmacology and Experimental Therapeutics Volume 208 ; 208 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Pharmacology and Experimental Therapeutics Volume 209 ; 209 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Pharmacology and Experimental Therapeutics Volume 210 ; 210 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Pharmacology and Experimental Therapeutics Volume 211 ; 211 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Pharmacology and Experimental Therapeutics Volume 212 ; 212 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Pharmacology and Experimental Therapeutics Volume 213 ; 213 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Pharmacology and Experimental Therapeutics Volume 214 ; 214 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Pharmacology and Experimental Therapeutics Volume 215 ; 215 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Pharmacology and Experimental Therapeutics Volume 216 ; 216 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Pharmacology and Experimental Therapeutics Volume 217 ; 217 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Pharmacology and Experimental Therapeutics Volume 218 ; 218 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Pharmacology and Experimental Therapeutics Volume 219 ; 219 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Pharmacology and Experimental Therapeutics Volume 220 ; 220 >
+    au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of Pharmacology and Experimental Therapeutics Volume 181 ; 181 >
+    au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of Pharmacology and Experimental Therapeutics Volume 182 ; 182 >
+    au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of Pharmacology and Experimental Therapeutics Volume 183 ; 183 >
+    au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of Pharmacology and Experimental Therapeutics Volume 184 ; 184 >
+    au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of Pharmacology and Experimental Therapeutics Volume 185 ; 185 >
+    au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of Pharmacology and Experimental Therapeutics Volume 186 ; 186 >
+    au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of Pharmacology and Experimental Therapeutics Volume 187 ; 187 >
+    au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of Pharmacology and Experimental Therapeutics Volume 188 ; 188 >
+    au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of Pharmacology and Experimental Therapeutics Volume 189 ; 189 >
+    au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of Pharmacology and Experimental Therapeutics Volume 190 ; 190 >
+    au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of Pharmacology and Experimental Therapeutics Volume 191 ; 191 >
+    au < HighWirePressH20Plugin ; testing ; 1975 ; Journal of Pharmacology and Experimental Therapeutics Volume 192 ; 192 >
+    au < HighWirePressH20Plugin ; testing ; 1975 ; Journal of Pharmacology and Experimental Therapeutics Volume 193 ; 193 >
+    au < HighWirePressH20Plugin ; testing ; 1975 ; Journal of Pharmacology and Experimental Therapeutics Volume 194 ; 194 >
+    au < HighWirePressH20Plugin ; testing ; 1975 ; Journal of Pharmacology and Experimental Therapeutics Volume 195 ; 195 >
+    au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Pharmacology and Experimental Therapeutics Volume 196 ; 196 >
+    au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Pharmacology and Experimental Therapeutics Volume 197 ; 197 >
+    au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Pharmacology and Experimental Therapeutics Volume 198 ; 198 >
+    au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Pharmacology and Experimental Therapeutics Volume 199 ; 199 >
+    au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of Pharmacology and Experimental Therapeutics Volume 200 ; 200 >
+    au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of Pharmacology and Experimental Therapeutics Volume 201 ; 201 >
+    au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of Pharmacology and Experimental Therapeutics Volume 202 ; 202 >
+    au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of Pharmacology and Experimental Therapeutics Volume 203 ; 203 >
+    au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of Pharmacology and Experimental Therapeutics Volume 204 ; 204 >
+    au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of Pharmacology and Experimental Therapeutics Volume 205 ; 205 >
+    au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of Pharmacology and Experimental Therapeutics Volume 206 ; 206 >
+    au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of Pharmacology and Experimental Therapeutics Volume 207 ; 207 >
+    au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Pharmacology and Experimental Therapeutics Volume 208 ; 208 >
+    au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Pharmacology and Experimental Therapeutics Volume 209 ; 209 >
+    au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Pharmacology and Experimental Therapeutics Volume 210 ; 210 >
+    au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Pharmacology and Experimental Therapeutics Volume 211 ; 211 >
+    au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of Pharmacology and Experimental Therapeutics Volume 212 ; 212 >
+    au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of Pharmacology and Experimental Therapeutics Volume 213 ; 213 >
+    au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of Pharmacology and Experimental Therapeutics Volume 214 ; 214 >
+    au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of Pharmacology and Experimental Therapeutics Volume 215 ; 215 >
+    au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of Pharmacology and Experimental Therapeutics Volume 216 ; 216 >
+    au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of Pharmacology and Experimental Therapeutics Volume 217 ; 217 >
+    au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of Pharmacology and Experimental Therapeutics Volume 218 ; 218 >
+    au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of Pharmacology and Experimental Therapeutics Volume 219 ; 219 >
+    au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of Pharmacology and Experimental Therapeutics Volume 220 ; 220 >
     au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Pharmacology and Experimental Therapeutics Volume 221 ; 221 >
     au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Pharmacology and Experimental Therapeutics Volume 222 ; 222 >
     au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Pharmacology and Experimental Therapeutics Volume 223 ; 223 >
