@@ -36,6 +36,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.daemon.TitleConfig;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
@@ -46,97 +47,95 @@ import org.lockss.util.Logger;
 
 public class ElsevierSourceArticleMetadataExtractor implements ArticleMetadataExtractor{
 
-	private ElsevierEmitter emit = null;
-	private static Logger log = Logger.getLogger("ElsevierSourceArticleMetadataExtractor");
-	
-	public ElsevierSourceArticleMetadataExtractor() 
-	{
-		super();
-	}
-	
-	 protected void addAccessUrl(ArticleMetadata am, ArticleFiles af) 
-	 {
-		    if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL)) 
-		      am.put(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
-	 }
-	
-	@Override
-	public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
-			throws IOException, PluginException {
-		if(emit == null)
-			emit = new ElsevierEmitter(af,emitter);
-		if(emit.hasEmitted(af.getFullTextUrl()))
-			return;
-		
-		CachedUrl cu = af.getFullTextCu();
-		FileMetadataExtractor me = null;
-	    
-		if(cu != null)
-		{
-			try{
-				me = cu.getFileMetadataExtractor(target);
-				
-				if(me != null)
-					me.extract(target, cu, emit);
-				else
-					emit.emitMetadata(cu, getDefaultArticleMetadata(cu));
+  private ElsevierEmitter emit = null;
+  private static Logger log = Logger.getLogger("ElsevierSourceArticleMetadataExtractor");
 
-			} catch (RuntimeException e) {
-				log.debug("for af (" + af + ")", e);
-				
-				if(me != null)
-					try{
-						emit.emitMetadata(cu, getDefaultArticleMetadata(cu));
-					}
-					catch (RuntimeException e2) {
-						log.debug("retry with default metadata for af (" + af + ")", e2);
-					}
-			} finally {
-				AuUtil.safeRelease(cu);
-			}
-		}
-	  }
-	
-	ArticleMetadata getDefaultArticleMetadata(CachedUrl cu) {
-	    TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
-	    TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
-	    String year = (tdbau == null) ? null : tdbau.getStartYear();
-	    String journalTitle = (tdbau == null) ? null : tdbau.getJournalTitle();
+  public ElsevierSourceArticleMetadataExtractor() 
+  {
+    super();
+  }
 
-	    ArticleMetadata md = new ArticleMetadata();
-	    md.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
-	    if (year != null) md.put(MetadataField.FIELD_DATE, year);
-	    if (journalTitle != null) md.put(MetadataField.FIELD_JOURNAL_TITLE,
-	                                       journalTitle);
-	    return md;
-	  }
-	
-	class ElsevierEmitter implements FileMetadataExtractor.Emitter {
-	    private Emitter parent;
-	    private ArticleFiles af;
-	    private HashSet<String> collectedArticles;
+  protected void addAccessUrl(ArticleMetadata am, ArticleFiles af) 
+  {
+    if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL)) 
+      am.put(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
+  }
 
-	    ElsevierEmitter(ArticleFiles af, Emitter parent) {
-	      this.af = af;
-	      this.parent = parent;
-	      collectedArticles = new HashSet<String>();
-	    }
+  @Override
+  public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
+      throws IOException, PluginException {
+    if(emit == null)
+      emit = new ElsevierEmitter(af,emitter);
+    if(emit.hasEmitted(af.getFullTextUrl()))
+      return;
 
-	    public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
-	    	if(collectedArticles.contains(cu.getUrl()))
-	    		return;
-	    	collectedArticles.add(cu.getUrl());
-	      addAccessUrl(am, af);
-	      parent.emitMetadata(af, am);
-	    }
+    CachedUrl cu = af.getFullTextCu();
+    FileMetadataExtractor me = null;
 
-	    void setParentEmitter(Emitter parent) {
-	      this.parent = parent;
-	    }
-	    
-	    public boolean hasEmitted(String url)
-	    {
-	    	return collectedArticles.contains(url);
-	    }
-	  }
+    if(cu != null) {
+      try{
+        me = cu.getFileMetadataExtractor(target);
+
+        if (me != null)
+          me.extract(target, cu, emit);
+        else
+          emit.emitMetadata(cu, getDefaultArticleMetadata(af, cu));
+
+      } catch (RuntimeException e) {
+        log.debug("for af (" + af + ")", e);
+
+        if (me != null) 
+          try{
+            emit.emitMetadata(cu, getDefaultArticleMetadata(af, cu));
+          } catch (RuntimeException e2) {
+            log.debug("retry with default metadata for af (" + af + ")", e2);
+          }
+      } finally {
+        AuUtil.safeRelease(cu);
+      }
+    }
+  }
+
+  ArticleMetadata getDefaultArticleMetadata(ArticleFiles af, CachedUrl cu) {
+    TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
+    TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
+    String year = (tdbau == null) ? null : tdbau.getStartYear();
+
+    ArticleMetadata md = new ArticleMetadata();
+    md.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+    if (year != null) md.put(MetadataField.FIELD_DATE, year);
+    return md;
+  }
+
+  class ElsevierEmitter implements FileMetadataExtractor.Emitter {
+    private Emitter parent;
+    private ArticleFiles af;
+    private HashSet<String> collectedArticles;
+
+    ElsevierEmitter(ArticleFiles af, Emitter parent) {
+      this.af = af;
+      this.parent = parent;
+      collectedArticles = new HashSet<String>();
+    }
+
+    public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
+      if (collectedArticles.contains(cu.getUrl()))
+        return;
+      collectedArticles.add(cu.getUrl());
+      addAccessUrl(am, af);
+      if (log.isDebug3()) {
+        log.debug3("emitMetadata():\n" + am.ppString(0));
+      }
+      parent.emitMetadata(af, am);
+    }
+
+    void setParentEmitter(Emitter parent) {
+      this.parent = parent;
+    }
+
+    public boolean hasEmitted(String url)
+    {
+      return collectedArticles.contains(url);
+    }
+  }
 }
