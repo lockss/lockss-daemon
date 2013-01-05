@@ -20,8 +20,6 @@
 
     param[base_url] = http://erj.ersjournals.com/
 
-    comment[erj38] = found a login page
-  
     au < manifest ; exists ; 1988 ; European Respiratory Journal Volume 1 [abstracts only] ; 1 >
     au < manifest ; exists ; 1989 ; European Respiratory Journal Volume 2 [abstracts only] ; 2 >
     au < manifest ; exists ; 1990 ; European Respiratory Journal Volume 3 [abstracts only] ; 3 >
