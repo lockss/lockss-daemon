@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.1 2012-12-07 07:20:01 fergaloy-sf Exp $
+ * $Id: ReindexingTask.java,v 1.2 2013-01-05 20:05:12 pgust Exp $
  */
 
 /*
@@ -399,6 +399,11 @@ public class ReindexingTask extends StepTask {
     @Override
     public void emitMetadata(ArticleFiles af, ArticleMetadata md) {
       final String DEBUG_HEADER = "emitMetadata(): ";
+      
+      if (log.isDebug3()) {
+        log.debug3(DEBUG_HEADER+"\n"+md.ppString(2));
+      }
+
       Map<String, String> roles = new HashMap<String, String>();
 
       for (String key : af.getRoleMap().keySet()) {
@@ -425,7 +430,7 @@ public class ReindexingTask extends StepTask {
 	validateDataAgainstTdb(new ArticleMetadataInfo(md), au);
 	articleMetadataInfoBuffer.add(md);
       } catch (IOException ex) {
-	throw new RuntimeException(ex);
+        throw new RuntimeException(ex);
       }
 
       extractedCount++;
@@ -658,7 +663,7 @@ public class ReindexingTask extends StepTask {
       startClockTime = currentClockTime;
 
       if (log.isDebug2()) {
-	log.debug2(DEBUG_HEADER + "Reindexing task starte for AU: "
+	log.debug2(DEBUG_HEADER + "Reindexing task start for AU: "
 	    + au.getName() + " startCpuTime: " + startCpuTime / 1.0e9
 	    + ", startUserTime: " + startUserTime / 1.0e9
 	    + ", startClockTime: " + startClockTime / 1.0e3);
