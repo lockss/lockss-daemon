@@ -24,9 +24,9 @@
     param[journal_abbr] = jss
     implicit < status ; year ; name ; param[volume] >
     
-    comment[notReady] = RT3894 host has crawler trap
+    comment[notReady] = RT3894 host may have crawler trap?
 
-    au < notReady ; 2008 ; Journal of Strategic Security (JSS) Volume 1 ; 1 >
+    au < testing ; 2008 ; Journal of Strategic Security (JSS) Volume 1 ; 1 >
     au < notReady ; 2009 ; Journal of Strategic Security (JSS) Volume 2 ; 2 >
     au < notReady ; 2010 ; Journal of Strategic Security (JSS) Volume 3 ; 3 >
     au < notReady ; 2011 ; Journal of Strategic Security (JSS) Volume 4 ; 4 >
