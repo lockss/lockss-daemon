@@ -100,10 +100,12 @@ public class ElsevierSourceArticleMetadataExtractor implements ArticleMetadataEx
     TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
     TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
     String year = (tdbau == null) ? null : tdbau.getStartYear();
+    String publisher = (tdbau == null) ? "Elsevier" : tdbau.getPublisherName();
 
     ArticleMetadata md = new ArticleMetadata();
     md.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
     if (year != null) md.put(MetadataField.FIELD_DATE, year);
+    if (publisher != null) md.put(MetadataField.FIELD_PUBLISHER, publisher);
     return md;
   }
 

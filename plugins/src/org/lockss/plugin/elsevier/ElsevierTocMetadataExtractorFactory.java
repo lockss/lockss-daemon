@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.9 2013-01-05 20:21:23 pgust Exp $
+ * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.10 2013-01-06 14:39:58 pgust Exp $
  */
 
 /*
@@ -319,10 +319,13 @@ implements FileMetadataExtractorFactory {
     /**
      * Stores the gathered MetadataField values in the ArticleMetadata
      * so it can be emitted
-     * @param am
+     * @param am the ArticleMetadata to populate
      */
     private void putMetadataIn(ArticleMetadata am)
     {   
+      // metadata does not include publisher name
+      am.put(MetadataField.FIELD_PUBLISHER, "Elsevier");
+      
       for (int i = 0; i < articleTags.size(); ++i) {
         if (articleValues[i] != null) {
           if ((i == AUTHOR_INDEX) || (i == KEYWORD_INDEX)) {

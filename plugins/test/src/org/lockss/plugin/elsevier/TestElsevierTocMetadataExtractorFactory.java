@@ -255,6 +255,7 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
   String testKeywords = null;
   String testStart = "6A";
   String testEnd = "19A";
+  String testPublisher = "Elsevier";
   
   public void testExtractFromTestContent() throws Exception {
     String url = "OXH26350 02726386 005901S1 11016325";
@@ -269,7 +270,7 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -289,6 +290,7 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
     assertEquals(testIssue, md.get(MetadataField.FIELD_ISSUE));
     assertEquals(testTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(testEnd, md.get(MetadataField.FIELD_END_PAGE));
+    assertEquals(testPublisher, md.get(MetadataField.FIELD_PUBLISHER));
   }
 
   String badContent =
