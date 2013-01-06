@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.46 2013-01-02 20:53:54 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.47 2013-01-06 02:56:02 tlipkis Exp $
  */
 
 /*
@@ -603,7 +603,9 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   public void testLoadBadPlugin() throws Exception {
     String prefix = "org.lockss.plugin.definable.";
-    // first ensure that the canonical good plugin does load
+    // first ensure that a missing file is properly detected
+    assertFalse(doesPluginExist(prefix + "NoPluginWithThisName"));
+    // and that the canonical good plugin does load
     assertTrue("Control (good) plugin didn't load",
 	       attemptToLoadPlugin(prefix + "GoodPlugin"));
     // then try various perturbations of it, which should all fail
@@ -613,8 +615,25 @@ public class TestDefinablePlugin extends LockssTestCase {
   }
 
   public void testLoadBadPlugin(String pname) throws Exception {
+    assertTrue(doesPluginExist(pname));
     assertFalse("Bad plugin " + pname + " should not have loaded successfully",
 		attemptToLoadPlugin(pname));
+  }
+
+  public boolean doesPluginExist(String pname) {
+    try {
+      log.critical("pname: " + pname);
+      URL u = this.getClass().getClassLoader().getResource(pluginFilename(pname));
+      log.critical("u: " + u);
+      return u != null;
+    } catch (Exception ex) {
+      log.debug2("No XML plugin: " + pname, ex);
+      return false;
+    }
+  }
+
+  String pluginFilename(String pname) {
+    return pname.replace('.', '/') + ".xml";
   }
 
   private boolean attemptToLoadPlugin(String pname)  {
