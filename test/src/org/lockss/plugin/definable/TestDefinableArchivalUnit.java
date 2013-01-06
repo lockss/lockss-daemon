@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.61 2013-01-02 20:53:54 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.62 2013-01-06 02:54:49 tlipkis Exp $
  */
 
 /*
@@ -683,6 +683,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertNull(au.getPerHostPermissionPath());
 
     assertEmpty(au.getHttpCookies());
+    assertEmpty(au.getHttpRequestHeaders());
 
     assertNull(au.makeNonSubstanceUrlPatterns());
     assertNull(au.makeSubstanceUrlPatterns());
@@ -1307,6 +1308,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertTrue(au.isBulkContent());
     assertEquals(ListUtil.list("uid=gingerbread", "s_vi=[CS]v1|26-60[CE]"),
 		 au.getHttpCookies());
+    assertEquals(ListUtil.list("Accept-Language:Klingon",
+			       "Expect 5 misformatted request header errors",
+			        "", "foo:", ":bar",
+			       "no_colon", "An:other"),
+		 au.getHttpRequestHeaders());
   }
 
   public void testFeatureUrls() throws Exception {

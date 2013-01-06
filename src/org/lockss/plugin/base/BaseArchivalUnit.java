@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.160 2012-09-25 22:59:56 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.161 2013-01-06 02:54:50 tlipkis Exp $
  */
 
 /*
@@ -562,6 +562,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public List<String> getHttpCookies() {
+    return Collections.EMPTY_LIST;
+  }
+
+  public List<String> getHttpRequestHeaders() {
     return Collections.EMPTY_LIST;
   }
 

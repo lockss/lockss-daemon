@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssUrlConnection.java,v 1.9 2012-09-25 23:01:42 tlipkis Exp $
+ * $Id: MockLockssUrlConnection.java,v 1.10 2013-01-06 02:54:49 tlipkis Exp $
  */
 
 /*
@@ -91,6 +91,10 @@ public class MockLockssUrlConnection extends BaseLockssUrlConnection {
 
   public String getRequestProperty(String key) {
     return reqHeaders.getProperty(key.toLowerCase());
+  }
+
+  public Properties getRequestProperties() {
+    return reqHeaders;
   }
 
   public int getResponseCode() {

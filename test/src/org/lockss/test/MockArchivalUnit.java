@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.103 2012-09-25 22:59:55 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.104 2013-01-06 02:54:49 tlipkis Exp $
  */
 
 /*
@@ -90,6 +90,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private String fetchRateLimiterKey;
   private RateLimiterInfo rateInfo = new RateLimiterInfo("foo", "unlimited");
   private List<String> cookies = new ArrayList<String>();
+  private List<String> requestHeaders = new ArrayList<String>();
 
   private String perHostPermissionPath;
   private Comparator<CrawlUrl> crawlUrlCmp;
@@ -231,8 +232,16 @@ public class MockArchivalUnit implements ArchivalUnit {
     return cookies;
   }
 
-  public void setCookies(List<String> cookies) {
+  public void setHttpCookies(List<String> cookies) {
     this.cookies = cookies;
+  }
+
+  public List<String> getHttpRequestHeaders() {
+    return requestHeaders;
+  }
+
+  public void setHttpRequestHeaders(List<String> requestHeaders) {
+    this.requestHeaders = requestHeaders;
   }
 
   public CachedUrlSet makeCachedUrlSet( CachedUrlSetSpec spec) {

@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.115 2012-09-25 22:59:55 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.116 2013-01-06 02:54:49 tlipkis Exp $
  */
 
 /*
@@ -477,6 +477,10 @@ public class NullPlugin {
     }
 
     public List<String> getHttpCookies() {
+      return Collections.EMPTY_LIST;
+    }
+
+    public List<String> getHttpRequestHeaders() {
       return Collections.EMPTY_LIST;
     }
 

@@ -135,6 +135,18 @@
     </list>
   </entry>
   <entry>
+    <string>au_http_request_header</string>
+    <list>
+      <string>Accept-Language:Klingon</string>
+      <string>Expect 5 misformatted request header errors</string>
+      <string></string>
+      <string>foo:</string>
+      <string>:bar</string>
+      <string>no_colon</string>
+      <string>An:other</string>
+    </list>
+  </entry>
+  <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.definable.MockFactories$ArtIterFact</string>
   </entry>

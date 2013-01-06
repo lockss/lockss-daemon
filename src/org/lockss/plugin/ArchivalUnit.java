@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.64 2012-09-25 22:59:56 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.65 2013-01-06 02:54:50 tlipkis Exp $
  */
 
 /*
@@ -216,6 +216,12 @@ public interface ArchivalUnit {
    * request, or an empty list if none.
    */
   public List<String> getHttpCookies();
+
+  /**
+   * Return the list of HTTP request headers that should be sent along with
+   * every request, or an empty list if none.
+   */
+  public List<String> getHttpRequestHeaders();
 
   /**
    * Construct a list of Patterns of non-substance URLs.  Used to determine

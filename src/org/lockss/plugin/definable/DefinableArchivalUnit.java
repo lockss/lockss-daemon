@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.94 2013-01-02 20:53:54 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.95 2013-01-06 02:54:50 tlipkis Exp $
  */
 
 /*
@@ -91,6 +91,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   public static final String KEY_AU_MANIFEST_OBSOLESCENT = "au_manifest";
 
   public static final String KEY_AU_HTTP_COOKIES = "au_http_cookie";
+  /** List of HTTP request headers <hdr>:<val> to be sent with each fetch */
+  public static final String KEY_AU_HTTP_REQUEST_HEADERS =
+    "au_http_request_header";
 
   //public static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
   public static final String KEY_AU_EXPLODER_HELPER = "au_exploder_helper";
@@ -197,6 +200,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   public List<String> getHttpCookies() {
     return listOrEmpty(getElementList(KEY_AU_HTTP_COOKIES));
+  }
+
+  public List<String> getHttpRequestHeaders() {
+    return listOrEmpty(getElementList(KEY_AU_HTTP_REQUEST_HEADERS));
   }
 
   /** Use rate limiter source specified in AU, if any, then in plugin, then

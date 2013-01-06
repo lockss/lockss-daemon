@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.92 2012-09-25 22:59:56 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.93 2013-01-06 02:54:50 tlipkis Exp $
  */
 
 /*
@@ -697,6 +697,7 @@ public class BaseUrlCacher implements UrlCacher {
 	  conn.setCredentials(lst.get(0), lst.get(1));
 	}
       }
+      addPluginRequestHeaders();
       if (reqProps != null) {
 	for (Iterator iter = reqProps.keySet().iterator(); iter.hasNext(); ) {
 	  String key = (String)iter.next();
@@ -722,6 +723,15 @@ public class BaseUrlCacher implements UrlCacher {
       throw e;
     }
     checkConnectException(conn);
+  }
+
+  protected void addPluginRequestHeaders() {
+    for (String hdr : au.getHttpRequestHeaders()) {
+      int pos = hdr.indexOf(":");
+      if (pos > 0 && pos < hdr.length() - 1) {
+	setRequestProperty(hdr.substring(0, pos), hdr.substring(pos + 1));
+      }
+    }
   }
 
   private void releaseConnection() {

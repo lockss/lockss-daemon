@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.69 2012-09-25 22:59:56 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.70 2013-01-06 02:54:49 tlipkis Exp $
  */
 
 /*
@@ -404,7 +404,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   public void testCookies() throws IOException {
     TimeBase.setSimulated(555666);
-    mau.setCookies(ListUtil.list("foo=bar"));
+    mau.setHttpCookies(ListUtil.list("foo=bar"));
 
     MockConnectionMockBaseUrlCacher muc =
       new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
@@ -414,6 +414,24 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertEquals(ListUtil.list(ListUtil.list("www.example.com", "/",
 					     "foo", "bar")),
 		 mconn.getCookies());
+  }
+
+  public void testRequestHeaders() throws IOException {
+    TimeBase.setSimulated(555666);
+    mau.setHttpRequestHeaders(ListUtil.list("foo:bar",
+					    "Accept-Languege:da, en-gb;q=0.8, en;q=0.7",
+					    "a:b",
+					    "illegal"));
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muc.addConnection(mconn);
+    muc.getUncachedInputStream();
+    assertEquals(PropUtil.fromArgs("user-agent", "LOCKSS cache",
+				   "accept-languege", "da, en-gb;q=0.8, en;q=0.7",
+				   "a", "b",
+				   "foo", "bar"),
+		 mconn.getRequestProperties());
   }
 
   public void testGetUncachedProperties() throws IOException {
@@ -1506,7 +1524,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
       super(url);
     }
 
-  public void setProxy(String host, int port) {
+    public void setProxy(String host, int port) {
       proxyHost = host;
       proxyPort = port;
     }
