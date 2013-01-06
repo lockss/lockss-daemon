@@ -109,9 +109,10 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
 	String goodIssue = "Issue";
 	String goodRights = "Rights";
 	String goodTitle = "This tests a title which spans two lines";
-	String goodAuthors = "Author, A.; Author, B.; Author, C.; Author, D.; Author, E.";
+	List<?> goodAuthors = 
+	    ListUtil.list("Author, A.","Author, B.", "Author, C.", "Author, D.", "Author, E.");
 	String goodSummary = "This summary also spans several lines";
-	String goodKeywords = "testing1; testing2; testing3";
+	List<?> goodKeywords = ListUtil.list("testing1", "testing2",  "testing3");
 	String goodStart = "10";
 	String goodEnd = "20";
  
@@ -203,9 +204,9 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodJournal, md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
     assertEquals(goodLanguage, md.get(MetadataField.DC_FIELD_LANGUAGE));
-    assertEquals(goodAuthors, md.get(MetadataField.FIELD_AUTHOR));
+    assertEquals(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodSummary, md.get(MetadataField.DC_FIELD_DESCRIPTION));
-    assertEquals(goodKeywords, md.get(MetadataField.FIELD_KEYWORDS));
+    assertEquals(goodKeywords,  md.getList(MetadataField.FIELD_KEYWORDS));
     assertEquals(goodStart, md.get(MetadataField.FIELD_START_PAGE));
     assertEquals(goodRights, md.get(MetadataField.DC_FIELD_RIGHTS));
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
