@@ -1,5 +1,5 @@
 /*
- * $Id: SqlStoredProcedures.java,v 1.9 2012-08-09 22:51:39 pgust Exp $
+ * $Id: SqlStoredProcedures.java,v 1.10 2013-01-06 06:36:32 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ import org.lockss.config.TdbAu;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbUtil;
-import org.lockss.daemon.TitleConfig;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
@@ -123,13 +122,12 @@ public class SqlStoredProcedures {
     ArchivalUnit au = cu.getArchivalUnit();
     
     // return the TdbAu from the AU
-    TitleConfig tc = au.getTitleConfig();
-    if (tc == null) {
-      log.debug2("no titleconfig for au " + au.toString());
+    TdbAu tau = au.getTdbAu();
+    if (tau == null) {
+      log.debug2("no TdbAu for au " + au.toString());
       return null;
     }
-
-    return tc.getTdbAu();
+    return tau;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.65 2013-01-06 02:54:50 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.66 2013-01-06 06:36:32 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.plugin;
 import java.util.*;
 
 import org.apache.oro.text.regex.*;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 import org.lockss.daemon.*;
@@ -379,6 +379,13 @@ public interface ArchivalUnit {
    * match any TitleCOnfig in the title db.
    */
   public TitleConfig getTitleConfig();
+
+  /**
+   * Return the {@link TdbAu} corresponding to this AU.
+   * @return the TdbAu, or null if this AU's configuration does not
+   * match any TdbAu in the Tdb.
+   */
+  public TdbAu getTdbAu();
 
   /**
    * Returns a list of URLs that may contain the desired feature (e.g.,

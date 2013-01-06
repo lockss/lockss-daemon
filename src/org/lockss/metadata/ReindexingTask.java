@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.2 2013-01-05 20:05:12 pgust Exp $
+ * $Id: ReindexingTask.java,v 1.3 2013-01-06 06:36:32 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,6 @@ import java.util.Map;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
-import org.lockss.daemon.TitleConfig;
 import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
@@ -467,8 +466,7 @@ public class ReindexingTask extends StepTask {
 	issns.add(mdinfo.eissn);
       }
 
-      TitleConfig tc = au.getTitleConfig();
-      TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
+      TdbAu tdbau = au.getTdbAu();
       boolean isTitleInTdb = !au.isBulkContent();
       String tdbauName = (tdbau == null) ? null : tdbau.getName();
       String tdbauStartYear =

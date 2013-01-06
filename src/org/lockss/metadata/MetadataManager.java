@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.5 2013-01-05 20:00:48 pgust Exp $
+ * $Id: MetadataManager.java,v 1.6 2013-01-06 06:36:32 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,6 @@ import org.lockss.app.ConfigurableManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.Configuration.Differences;
 import org.lockss.daemon.LockssRunnable;
-import org.lockss.daemon.TitleConfig;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadataExtractor;
@@ -3681,9 +3680,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       }
     }
 
-    // Otherwise, it has metadata if it can be created from TitleConfig's TdbAu.
-    TitleConfig tc = au.getTitleConfig();
-    return (tc != null) && (tc.getTdbAu() != null);
+    // Otherwise, it has metadata if it can be created from the TdbAu.
+    return (au.getTdbAu() != null);
   }
 
   /**

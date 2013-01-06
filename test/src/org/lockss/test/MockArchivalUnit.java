@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.104 2013-01-06 02:54:49 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.105 2013-01-06 06:36:32 tlipkis Exp $
  */
 
 /*
@@ -193,6 +193,10 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public TitleConfig getTitleConfig() {
     return tc;
+  }
+
+  public TdbAu getTdbAu() {
+    return tc == null ? null : tc.getTdbAu();
   }
 
   public void setTitleConfig(TitleConfig tc) {

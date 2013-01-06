@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.113 2013-01-05 05:24:04 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.114 2013-01-06 06:36:32 tlipkis Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ import java.util.*;
 import java.text.*;
 import java.net.MalformedURLException;
 
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
@@ -978,9 +978,9 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo("Volume",
 					  ColumnDescriptor.TYPE_STRING,
 					  au.getName()));
-      TitleConfig tc = au.getTitleConfig();
-      if (tc != null) {
-	addStringIfNotNull(res, tc.getJournalTitle(), "Journal Title");
+      TdbAu tau = au.getTdbAu();
+      if (tau != null) {
+	addStringIfNotNull(res, tau.getJournalTitle(), "Journal Title");
       }
       Plugin plugin = au.getPlugin();
       res.add(new StatusTable.SummaryInfo("Plugin",

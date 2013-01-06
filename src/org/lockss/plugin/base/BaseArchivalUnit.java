@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.161 2013-01-06 02:54:50 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.162 2013-01-06 06:36:32 tlipkis Exp $
  */
 
 /*
@@ -356,6 +356,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public TitleConfig getTitleConfig() {
     return titleConfig;
+  }
+
+  public TdbAu getTdbAu() {
+    return titleConfig == null ? null : titleConfig.getTdbAu();
   }
 
   /** AUs have no feature URLs by default */

@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.116 2013-01-06 02:54:49 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.117 2013-01-06 06:36:32 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import java.util.*;
 import org.apache.oro.text.regex.*;
 
 import org.lockss.app.*;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -517,6 +517,10 @@ public class NullPlugin {
     }
 
     public TitleConfig getTitleConfig() {
+      return null;
+    }
+
+    public TdbAu getTdbAu() {
       return null;
     }
 
