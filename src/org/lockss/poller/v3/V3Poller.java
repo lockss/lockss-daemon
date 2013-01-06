@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.129.2.1 2013-01-04 19:50:45 dshr Exp $
+ * $Id: V3Poller.java,v 1.129.2.2 2013-01-06 01:27:33 dshr Exp $
  */
 
 /*
@@ -1113,6 +1113,10 @@ public class V3Poller extends BasePoll {
 
     tallyVoterUrls(pollerUrl);
     BlockTally tally = tallyPollerUrl(pollerUrl, hashBlock);
+    // Handle any symmetric poll hashes
+    if (symmetricParticipants != null) {
+      processSymmetricHashes(pollerUrl, hashBlock);
+    }
 
     // Check to see if it's time to checkpoint the poll.
     bytesHashedSinceLastCheckpoint += hashBlock.getTotalHashedBytes();
@@ -1120,6 +1124,65 @@ public class V3Poller extends BasePoll {
       checkpointPoll();
     }
     return tally;
+  }
+
+  /**
+   * Add any symmetric hash values to the corresponding VoteBlock.
+   * See V3Voter.blockHashComplete.
+   */
+  private void processSymmetricHashes(String url, HashBlock block) {
+    // XXX DSHR
+    // Add each hash block version to this vote block.
+    VoteBlock[] vba = new VoteBlock[getPollSize() + symmetricPollSize() +1];
+    Iterator hashVersionIter = block.versionIterator();
+    while(hashVersionIter.hasNext()) {
+      HashBlock.Version ver = (HashBlock.Version)hashVersionIter.next();
+      byte[] plainDigest = ver.getHashes()[0];
+      for (int i = getPollSize(); i < vba.length - 1; i++) {
+	byte[] symmetricDigest = ver.getHashes()[i];
+	if (symmetricDigest != null) {
+	  // The voter requested a symmetric poll
+	  VoteBlock vb;
+	  if (vba[i] == null) {
+	    vba[i] = new VoteBlock(block.getUrl());
+	  }
+	  vb = vba[i];
+	  vb.addVersion(ver.getFilteredOffset(),
+			ver.getFilteredLength(),
+			ver.getUnfilteredOffset(),
+			ver.getUnfilteredLength(),
+			plainDigest,
+			symmetricDigest,
+			ver.getHashError() != null);
+	  // Find this voter's hash block container
+	  PeerIdentity voter = symmetricParticipants.get(i - getPollSize());
+	  ParticipantUserData ud = getParticipant(voter);
+	  VoteBlocks blocks = ud.getSymmetricVoteBlocks();
+	  if (blocks == null) try {
+	      // None - create it
+	      blocks = new DiskVoteBlocks(getStateDir());
+	      ud.setSymmetricVoteBlocks(blocks);
+	    } catch (IOException ex) {
+	      log.critical("Creating VoteBlocks fails for " + getKey() + " " +
+			   ex);
+	      abortPoll();
+	      return;
+	    }
+	  // Add this vote block to the hash block container.
+	  try {
+	    blocks.addVoteBlock(vb);
+	  } catch (IOException ex) {
+	    log.error("Unexpected IO Exception trying to add vote block " +
+		      vb.getUrl() + " in poll " + getKey(), ex);
+	    if (++blockErrorCount > maxBlockErrorCount) {
+	      log.critical("Too many errors while trying to create my vote blocks, " +
+			   "aborting participation in poll " + getKey());
+	      abortPoll(); // XXX DSHR not a good response - abort voter
+	    }
+	  }
+	}
+      }
+    }
   }
 
   /**
@@ -1196,6 +1259,7 @@ public class V3Poller extends BasePoll {
     BlockTally tally = urlTallier.tallyPollerUrl(pollerUrl, hashBlock);
     signalNodeAgreement(tally, pollerUrl);
     checkTally(tally, pollerUrl, true);
+    // XXX DSHR - need to do something with any votes that have nonce2
     return tally;
   }
 

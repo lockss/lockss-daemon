@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.29.10.1 2013-01-04 19:50:45 dshr Exp $
+ * $Id: ParticipantUserData.java,v 1.29.10.2 2013-01-06 01:27:33 dshr Exp $
  */
 
 /*
@@ -140,6 +140,7 @@ public class ParticipantUserData implements LockssSerializable {
   private PeerIdentity voterId;
   private String hashAlgorithm;
   private VoteBlocks voteBlocks;
+  private VoteBlocks symmetricVoteBlocks;
   private List nominees;
   private byte[] pollerNonce;
   private byte[] voterNonce;
@@ -336,6 +337,14 @@ public class ParticipantUserData implements LockssSerializable {
 
   public VoteBlocks getVoteBlocks() {
     return voteBlocks;
+  }
+
+  public void setSymmetricVoteBlocks(VoteBlocks blocks) {
+    symmetricVoteBlocks = blocks;
+  }
+
+  public VoteBlocks getSymmetricVoteBlocks() {
+    return symmetricVoteBlocks;
   }
 
   public void addHashStats(VoteBlock vb) {

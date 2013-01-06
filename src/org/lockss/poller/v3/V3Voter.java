@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.77.8.1 2013-01-04 19:50:45 dshr Exp $
+ * $Id: V3Voter.java,v 1.77.8.2 2013-01-06 01:27:33 dshr Exp $
  */
 
 /*
@@ -204,6 +204,12 @@ public class V3Voter extends BasePoll {
   public static final String DEFAULT_VOTE_RETRY_INTERVAL_DURATION_CURVE =
     "[5m,2m],[20m,4m],[1d,5h]";
 
+  /** If true, always request a symmetric poll */
+  public static final String PARAM_ALL_SYMMETRIC_POLLS =
+    PREFIX + "allSymmetricPolls";
+  // XXX DSHR default true for testing, false eventually
+  public static final boolean DEFAULT_ALL_SYMMETRIC_POLLS = true; // XXX DSHR
+
 
   private PsmInterp stateMachine;
   private VoterUserData voterUserData;
@@ -252,6 +258,13 @@ public class V3Voter extends BasePoll {
       CurrentConfig.getIntParam(V3Poller.PARAM_MAX_BLOCK_ERROR_COUNT,
                                 V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT);
 
+    byte[] maybeNonce2 = LcapMessage.EMPTY_BYTE_ARRAY;
+    // XXX DSHR there needs to be a policy here not just a param
+    if (CurrentConfig.getBooleanParam(PARAM_ALL_SYMMETRIC_POLLS,
+				      DEFAULT_ALL_SYMMETRIC_POLLS)) {
+      // Create a second nonce to request a symmetric poll
+      maybeNonce2 = PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH);
+    }
     try {
       this.voterUserData = new VoterUserData(new PollSpec(msg), this,
                                              msg.getOriginatorId(), 
@@ -260,7 +273,7 @@ public class V3Voter extends BasePoll {
                                              msg.getHashAlgorithm(),
                                              msg.getPollerNonce(),
                                              PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH),
-					     LcapMessage.EMPTY_BYTE_ARRAY, //XXX
+					     maybeNonce2,
                                              msg.getEffortProof(),
                                              stateDir);
       voterUserData.setPollMessage(msg);
@@ -806,29 +819,46 @@ public class V3Voter extends BasePoll {
 
   /**
    * Create an array of byte arrays containing hasher initializer bytes for
-   * this voter.  The result will be an array of two byte arrays:  The first
+   * this voter.  The result will be an array of 2 or 3 byte arrays:  The first
    * has no initializing bytes, and will be used for the plain hash.  The
    * second is constructed by concatenating the poller nonce and voter nonce,
-   * and will be used for the challenge hash.
+   * and will be used for the challenge hash. If the voter is requesting a
+   * symmetric poll the third will be the concatenation of the poller hash
+   * and the second voter hash.
    *
    * @return Block hasher initialization bytes.
    */
   private byte[][] initHasherByteArrays() {
-    return new byte[][] {
+    byte[] nonce2 = voterUserData.getVoterNonce2();
+    if (nonce2 == null || nonce2 == LcapMessage.EMPTY_BYTE_ARRAY) {
+      return new byte[][] {
         {}, // Plain Hash
         ByteArray.concat(voterUserData.getPollerNonce(),
                          voterUserData.getVoterNonce()) // Challenge Hash
-    };
+      };
+    } else {
+      return new byte[][] {
+        {}, // Plain Hash
+        ByteArray.concat(voterUserData.getPollerNonce(),
+                         voterUserData.getVoterNonce()), // Challenge Hash
+        ByteArray.concat(voterUserData.getPollerNonce(),
+                         nonce2) // Symmetric Poll Hash
+      };
+    }
   }
 
   /**
    * Create the message digesters for this voter's hasher -- one for
-   * the plain hash, one for the challenge hash.
+   * the plain hash, one for the challenge hash, and if necessary one for
+   * the symmetric poll.
    *
    * @return An array of MessageDigest objects to be used by the BlockHasher.
    */
   private MessageDigest[] initHasherDigests() throws NoSuchAlgorithmException {
-    return PollUtil.createMessageDigestArray(2, getHashAlgorithm());
+    byte[] nonce2 = voterUserData.getVoterNonce2();
+    boolean symPoll = nonce2 != null && nonce2 != LcapMessage.EMPTY_BYTE_ARRAY;
+    return PollUtil.createMessageDigestArray(symPoll ? 3 : 2,
+					     getHashAlgorithm());
   }
 
   private String getHashAlgorithm() {
@@ -896,6 +926,11 @@ public class V3Voter extends BasePoll {
     String errmsg = "State machine error";
     stateMachine.enqueueEvent(V3Events.evtHashingDone,
 			      ehAbortPoll(errmsg));
+    byte[] nonce2 = voterUserData.getVoterNonce2();
+    if (nonce2 != null && nonce2 != LcapMessage.EMPTY_BYTE_ARRAY) {
+      // XXX DSHR - do something with the symmetric poll hashes.
+      log.debug("Poll " + voterUserData.getPollKey() + " is symmetric");
+    }
   }
 
   /*
@@ -920,6 +955,12 @@ public class V3Voter extends BasePoll {
                     plainDigest,
                     challengeDigest,
                     ver.getHashError() != null);
+      if (ver.getHashes().length > 2) {
+	byte[] symmetricDigest = ver.getHashes()[2];
+	// XXX DSHR now do something with the symmetric poll hash
+	log.debug("Poll " + voterUserData.getPollKey() + " is symmetric:" +
+		  block.getUrl());
+      }
     }
     
     // Add this vote block to our hash block container.
