@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.70 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: ServeContent.java,v 1.71 2013-01-06 06:34:53 tlipkis Exp $
  */
 
 /*
@@ -149,6 +149,12 @@ public class ServeContent extends LockssServlet {
     PREFIX + "rewriteMementoResponses";
   public static final boolean DEFAULT_REWRITE_MEMENTO_RESPONSES = false;
 
+  /** If true, the url arg to ServeContent will be minimally encoded before
+   * being looked up. */
+  static final String PARAM_MINIMALLY_ENCODE_URLS =
+    PREFIX + "minimallyEncodeUrlArg";
+  static final boolean DEFAULT_MINIMALLY_ENCODE_URLS = true;
+
   /** If true, the url arg to ServeContent will be normalized before being
    * looked up. */
   public static final String PARAM_NORMALIZE_URL_ARG =
@@ -191,6 +197,7 @@ public class ServeContent extends LockssServlet {
   private static boolean absoluteLinks = DEFAULT_ABSOLUTE_LINKS;
   private static boolean rewriteMementoResponses = DEFAULT_REWRITE_MEMENTO_RESPONSES;
   private static boolean normalizeUrl = DEFAULT_NORMALIZE_URL_ARG;
+  private static boolean minimallyEncodeUrl = DEFAULT_MINIMALLY_ENCODE_URLS;
   private static List<String> excludePlugins = DEFAULT_EXCLUDE_PLUGINS;
   private static List<String> includePlugins = DEFAULT_INCLUDE_PLUGINS;
   private static boolean includeInternalAus = DEFAULT_INCLUDE_INTERNAL_AUS;
@@ -262,6 +269,8 @@ public class ServeContent extends LockssServlet {
 					DEFAULT_ABSOLUTE_LINKS);
       normalizeUrl = config.getBoolean(PARAM_NORMALIZE_URL_ARG,
 					DEFAULT_NORMALIZE_URL_ARG);
+      minimallyEncodeUrl = config.getBoolean(PARAM_MINIMALLY_ENCODE_URLS,
+					     DEFAULT_MINIMALLY_ENCODE_URLS);
       neverProxy = config.getBoolean(PARAM_NEVER_PROXY,
 				     DEFAULT_NEVER_PROXY);
       maxBufferedRewrite = config.getInt(PARAM_MAX_BUFFERED_REWRITE,
@@ -371,6 +380,14 @@ public class ServeContent extends LockssServlet {
       url = StringEscapeUtils.unescapeHtml(url);
       requestType = AccessLogType.Url;
       
+      if (minimallyEncodeUrl) {
+      	String unencUrl = url;
+	url = UrlUtil.minimallyEncodeUrl(url);
+	if (!url.equals(unencUrl)) {
+	  log.debug2("Encoded " + unencUrl + " to " + url);
+	}
+      }
+
       if (normalizeUrl) {
       	String normUrl;
       	if (au != null) {
@@ -384,7 +401,7 @@ public class ServeContent extends LockssServlet {
       	  normUrl = UrlUtil.normalizeUrl(url);
       	}
       	if (normUrl != url) {
-      	  log.debug2(url + " normalized to " + normUrl);
+	  log.debug2("Normalized " + url + " to " + normUrl);
       	  url = normUrl;
       	}
       }

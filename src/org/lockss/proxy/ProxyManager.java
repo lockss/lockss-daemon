@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.50 2012-10-30 00:12:03 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.51 2013-01-06 06:34:53 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,11 @@ public class ProxyManager extends BaseProxyManager {
    * To disable set to <tt>none</tt>. */
   static final String PARAM_ACCESS_LOG_LEVEL = PREFIX + "accessLogLevel";
   static final String DEFAULT_ACCESS_LOG_LEVEL = "info";
+
+  /** If true, all incoming URLs will be minimally encoded */
+  static final String PARAM_MINIMALLY_ENCODE_URLS =
+    PREFIX + "minimallyEncodeUrls";
+  static final boolean DEFAULT_MINIMALLY_ENCODE_URLS = true;
 
   /** If true, successive accesses to recently accessed content on the
    * cache does not trigger a request to the publisher */
@@ -205,6 +210,7 @@ public class ProxyManager extends BaseProxyManager {
   private LockssUrlConnectionPool connPool = null;
   private LockssUrlConnectionPool quickConnPool = null;
   private int paramAccessLogLevel = -1;
+  private boolean paramMinimallyEncodeUrls = DEFAULT_MINIMALLY_ENCODE_URLS;
 
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
@@ -224,6 +230,9 @@ public class ProxyManager extends BaseProxyManager {
       port = config.getInt(PARAM_PORT, DEFAULT_PORT);
       start = config.getBoolean(PARAM_START, DEFAULT_START);
 
+      paramMinimallyEncodeUrls =
+	config.getBoolean(PARAM_MINIMALLY_ENCODE_URLS,
+			  DEFAULT_MINIMALLY_ENCODE_URLS);
       if (start) {
 	bindAddrs = config.getList(PARAM_BIND_ADDRS, Collections.EMPTY_LIST);
 	paramCloseIdleConnectionsInterval =
@@ -489,6 +498,10 @@ public class ProxyManager extends BaseProxyManager {
     catch (Exception exc) {
       return false;
     }
+  }
+
+  public boolean isMinimallyEncodeUrls() {
+    return paramMinimallyEncodeUrls;
   }
 
   public boolean showManifestIndexForResponse(int status) {

@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.74 2013-01-02 20:54:30 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.75 2013-01-06 06:34:53 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.74 2013-01-02 20:54:30 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.75 2013-01-06 06:34:53 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -361,6 +361,14 @@ public class ProxyHandler extends AbstractHttpHandler {
       logAccess(request, "200 index page");
       return;
     }
+    String unencUrl = urlString;
+    if (proxyMgr.isMinimallyEncodeUrls()) {
+      urlString = UrlUtil.minimallyEncodeUrl(urlString);
+      if (!urlString.equals(unencUrl)) {
+	log.debug("Encoded " + unencUrl + " to " + urlString);
+      }
+    }
+
     // Does the URL point to a resolver rather than a
     // server?
 /* PJG: DOIs now resolved by ServeContent
@@ -627,7 +635,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       if (isPubNever(cu)) {
 	sendErrorPage(request, response, 504,
 		      hostMsg("Can't connect to", request.getURI().getHost(),
-			      "Not ermitted by configuration"));
+			      "Not permitted by configuration"));
 	return;
       } else {
 	// Force following to forward to publisher
