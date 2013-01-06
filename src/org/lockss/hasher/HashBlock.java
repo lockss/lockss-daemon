@@ -1,5 +1,5 @@
 /*
- * $Id: HashBlock.java,v 1.10 2012-07-02 16:21:01 tlipkis Exp $
+ * $Id: HashBlock.java,v 1.11 2013-01-06 06:35:17 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.LockssSerializable;
  * HashBlockCallback.  A block contains multiple versions, which can be
  * iterated over or returned as an array.  This array is sorted and iterated
  * in the order <i>newest</i> to <i>oldest</i> version. */
-public class HashBlock implements LockssSerializable {
+public class HashBlock {
 
   String url;
   TreeSet versions;
