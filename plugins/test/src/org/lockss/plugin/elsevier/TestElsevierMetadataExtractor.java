@@ -1,5 +1,5 @@
 /*
- * $Id: TestElsevierMetadataExtractor.java,v 1.6 2012-08-08 07:19:52 tlipkis Exp $
+ * $Id: TestElsevierMetadataExtractor.java,v 1.7 2013-01-06 14:42:32 pgust Exp $
  */
 
 /*
@@ -32,14 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.elsevier;
 
-import java.io.*;
 import java.util.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.repository.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.extractor.*;
@@ -51,9 +48,7 @@ public class TestElsevierMetadataExtractor extends LockssTestCase {
   private ArchivalUnit eau;		// Elsevier AU
   private MockLockssDaemon theDaemon;
   private PluginManager pluginMgr;
-  private static final int DEFAULT_FILESIZE = 3000;
-  private static int fileSize = DEFAULT_FILESIZE;
-
+  
   private static String PLUGIN_NAME =
     "org.lockss.plugin.elsevier.ClockssElsevierExplodedPlugin";
 
@@ -109,11 +104,11 @@ public class TestElsevierMetadataExtractor extends LockssTestCase {
     Plugin plugin = eau.getPlugin();
     String articleMimeType = "application/pdf";
     ArticleMetadataExtractor me =
-      plugin.getArticleMetadataExtractor(MetadataTarget.Any, eau);
+      plugin.getArticleMetadataExtractor(MetadataTarget.Any(), eau);
     ArticleMetadataListExtractor mle =
       new ArticleMetadataListExtractor(me);
     int count = 0;
-    Set foundDoiSet = new HashSet();
+    Set<String> foundDoiSet = new HashSet<String>();
     for (Iterator<ArticleFiles> it = eau.getArticleIterator(); it.hasNext(); ) {
       ArticleFiles af = it.next();
       assertNotNull(af);
@@ -128,7 +123,7 @@ public class TestElsevierMetadataExtractor extends LockssTestCase {
       assertTrue("XML cu is " + contentType + " (" + xcu + ")",
 		 contentType.toLowerCase().startsWith("text/xml"));
       count++;
-      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, af);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), af);
       assertNotEmpty(mdlist);
       ArticleMetadata md = mdlist.get(0);
       assertNotNull(md);
