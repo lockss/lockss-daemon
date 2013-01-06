@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.129 2013-01-02 20:54:11 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.130 2013-01-06 02:55:20 tlipkis Exp $
  */
 
 /*
@@ -208,8 +208,7 @@ public class V3Poller extends BasePoll {
    */
   public static final String PARAM_DELETE_EXTRA_FILES =
     PREFIX + "deleteExtraFiles";
-  public static final boolean DEFAULT_DELETE_EXTRA_FILES =
-    true;
+  public static final boolean DEFAULT_DELETE_EXTRA_FILES = false;
   
   /**
    * Relative path to v3 state dir (from 1st element of diskSpacePaths)
