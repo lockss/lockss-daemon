@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.71 2013-01-02 20:53:54 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.72 2013-01-06 02:55:09 tlipkis Exp $
  */
 
 /*
@@ -173,6 +173,7 @@ public class DefinablePlugin extends BasePlugin {
     initSubstancePatterns(DefinableArchivalUnit.KEY_AU_NON_SUBSTANCE_URL_PATTERN);
     initArchiveFileTypes();
     checkParamAgreement();
+    validate();
   }
 
   private ExternalizableMap loadMap(String extMapName, ClassLoader loader)
@@ -270,6 +271,40 @@ public class DefinablePlugin extends BasePlugin {
 		    + key + " with " + val);
 	  map.setMapElement(key, val);
 // 	}
+      }
+    }
+  }
+
+  // Currently just logs errors for illegal constructs.
+  private void validate() {
+    validateRequestCookies();
+    validateRequestHeaders();
+  }
+
+  private void validateRequestCookies() {
+    List<String> cookies =
+      getElementList(DefinableArchivalUnit.KEY_AU_HTTP_COOKIES);
+    if (cookies == null) {
+      return;
+    }
+    for (String cookie : cookies) {
+      int pos = cookie.indexOf("=");
+      if (pos <= 0 || pos >= cookie.length() - 1) {
+	log.error("Misformatted HTTP cookie: " + cookie);
+      }
+    }
+  }
+
+  private void validateRequestHeaders() {
+    List<String> hdrs =
+      getElementList(DefinableArchivalUnit.KEY_AU_HTTP_REQUEST_HEADERS);
+    if (hdrs == null) {
+      return;
+    }
+    for (String hdr : hdrs) {
+      int pos = hdr.indexOf(":");
+      if (pos <= 0 || pos >= hdr.length() - 1) {
+	log.error("Misformatted HTTP request header: " + hdr);
       }
     }
   }
