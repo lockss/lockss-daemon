@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -38,13 +38,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <!-- when using "num_issue_range", use '%s' in the au_name (becomes "min-max") -->
-    <string>"Pensoft Publishers Plugin, Base URL %s, Journal %s, Issues %s", base_url, journal_name, num_issue_range</string>
+    <string>"Pensoft Publishers Plugin, Base URL %s, Journal %s, Issues %s", base_url, journal_name, issue_set</string>
   </entry>
   <entry>
-    <!-- when using "num_issue_range", use '%d' in the au_start_url (separates into max-min start_urls)-->
     <string>au_start_url</string>
-    <string>"%sjournals/%s/issue/%d/", base_url, journal_name, num_issue_range</string>
+    <string>"%sjournals/%s/issue/%s/", base_url, journal_name, issue_set</string>
   </entry>
   
   <entry>
@@ -67,8 +65,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <!-- when using "num_issue_range", use '%s' (becomes string "\d+" in the crawl rules -->
-      <string>1,"^%sjournals/%s/issue/%s(-\d)?/", base_url, journal_name, num_issue_range</string>
+      <string>1,"^%sjournals/%s/issue/%s/", base_url, journal_name, issue_set</string>
       <!-- example of pdfs: http://www.pensoft.net/inc/journals/download.php?fileId=3070&fileTable=J_GALLEYS 
            http://www.pensoft.net/J_FILES/10/articles/1100/1100-G-3-layout.pdf  -->
       <string>1,"^%sinc/journals/", base_url</string> 
@@ -110,6 +107,16 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
+        <key>issue_set</key>
+        <displayName>Issue Set</displayName>
+        <description>A comma delimited list of issues. (eg issue1, issue2)</description>
+        <type>9</type>
+        <size>100</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+ <!--     
+      <org.lockss.daemon.ConfigParamDescr>
         <key>num_issue_range</key>
         <displayName>Numeric Issue Range</displayName>
         <description>A Range of issues in the form: min-max</description>
@@ -118,7 +125,7 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
-      
+ -->     
     </list>
   </entry>
   <entry>

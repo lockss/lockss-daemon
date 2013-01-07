@@ -20,7 +20,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -48,7 +48,7 @@
 -->
   <entry>
     <string>au_name</string>
-    <string>"Pensoft Plugin (CLOCKSS), Base URL %s, Journal %s, Issues %s", base_url, journal_name, num_issue_range</string>
+    <string>"Pensoft Plugin (CLOCKSS), Base URL %s, Journal %s, Issues %s", base_url, journal_name, issue_set</string>
   </entry>
 
 </map>
