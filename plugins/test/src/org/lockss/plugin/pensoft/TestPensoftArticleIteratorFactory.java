@@ -70,24 +70,24 @@ public class TestPensoftArticleIteratorFactory extends ArticleIteratorTestCase {
     .setDisplayName("Journal Name")
     .setType(ConfigParamDescr.TYPE_STRING)
     .setSize(20);
-  private static final ConfigParamDescr N_ISSUE_RANGE =
+  private static final ConfigParamDescr ISSUE_SET =
     new ConfigParamDescr()
-    .setKey("num_issue_range")
-    .setDisplayName("Number Issue Range")
-    .setType(ConfigParamDescr.TYPE_NUM_RANGE)
+    .setKey("issue_set")
+    .setDisplayName("Issue Set")
+    .setType(ConfigParamDescr.TYPE_SET)
     .setSize(10);
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
   static final String JOURNAL_NAME_KEY = J_NAME.getKey();
-  static final String NUM_ISSUE_RANGE_KEY = N_ISSUE_RANGE.getKey();
+  static final String ISSUE_SET_KEY = ISSUE_SET.getKey();
   private final String BASE_URL = "http://www.pensoft-ex-base.net/";
   private final String JOURNAL_NAME = "abc";
   private final String YEAR = "2011";
-  private final String ISSUE_RANGE = "5-7";
+  private final String ISSUE_SET_STR = "5-7";
   private final Configuration AU_CONFIG = 
           ConfigurationUtil.fromArgs(BASE_URL_KEY, BASE_URL,
                                       JOURNAL_NAME_KEY, JOURNAL_NAME,
-                                      NUM_ISSUE_RANGE_KEY, ISSUE_RANGE);
+                                      ISSUE_SET_KEY, ISSUE_SET_STR);
   private static final int DEFAULT_FILESIZE = 3000;
 
   protected String cuRole = null;
