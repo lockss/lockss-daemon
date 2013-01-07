@@ -21,7 +21,7 @@
 
       param[base_url] = http://radiographics.rsnajnls.org/
 
-      au < HighWireStrVolPlugin ; down ; 2006 ; RadioGraphics Volume 26 ; 26 >
+      au < HighWireStrVolPlugin ; superseded ; 2006 ; RadioGraphics Volume 26 [superseded] ; 26 >
 
     }
 
@@ -54,7 +54,7 @@
       au < HighWirePressH20Plugin ; released ; 2003 ; RadioGraphics Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; released ; 2004 ; RadioGraphics Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 2005 ; RadioGraphics Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; RadioGraphics Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 2006 ; RadioGraphics Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; released ; 2007 ; RadioGraphics Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; released ; 2008 ; RadioGraphics Volume 28 ; 28 >
       au < HighWirePressH20Plugin ; released ; 2009 ; RadioGraphics Volume 29 ; 29 >
