@@ -41509,7 +41509,8 @@ comment[mpj] = now published by Brill
     param[base_url] = http://mis.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Missiology: An International Review Volume 41 ; 41 >
+    au < manifest ; 2012 ; Missiology: An International Review Volume 40 ; 40 >
+    au < expected ; 2013 ; Missiology: An International Review Volume 41 ; 41 >
 
     }
 
