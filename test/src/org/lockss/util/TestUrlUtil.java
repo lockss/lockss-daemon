@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.42 2013-01-02 20:55:27 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.43 2013-01-07 02:37:33 pgust Exp $
  */
 
 /*
@@ -869,6 +869,7 @@ public class TestUrlUtil extends LockssTestCase {
     assertTrue(UrlUtil.isAbsoluteUrl("http://www.example.com/blah/"));
     assertFalse(UrlUtil.isAbsoluteUrl("www.example.com/"));
     assertFalse(UrlUtil.isAbsoluteUrl("blah/blah"));
+    assertTrue(UrlUtil.isAbsoluteUrl("https://www.example.com/"));
   }
 
   public void testIsSameHost() {
