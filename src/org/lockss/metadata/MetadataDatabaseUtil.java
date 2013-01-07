@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.2 2013-01-04 21:57:37 fergaloy-sf Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.3 2013-01-07 02:21:47 pgust Exp $
  */
 
 /*
@@ -213,115 +213,115 @@ final public class MetadataDatabaseUtil {
   }
 
   /**
-   * The metadata database query generates rows of:
-   *   publisher, title, printissn, eissn, volume, year
-   * for each AU with an ISSN in the table.
+   * This query generates a table of publication_seq keys and their
+   * corresponding publication names, p_issns, e_issns, p_isbns, and e_isbns.
+   * It can be embedded in other queries to provide item-level lists that
+   * include this information. 
    * <p>
-   * The title comes from the title table, or from the title database if the
-   * AU does not have a title in the title table. Entries in the title table
-   * only exist if the title database title is not the journal title.
-   * <p>
-   * Both printissn and eissn should come from the issn table, however there
-   * is no marker to identify which is which, and the title may only have one
-   * or the other. If there are both, the printissn is the "smaller" of the
-   * two. If there is only one there is no way to determine which it is.
-   * <p>
-   * The printissn comes from the title database if it exists. Otherwise,
-   * it is the smaller issn in the issn table if there are two entries,
-   * or null otherwise.
-   * <p>
-   * The eissn comes from the title database if it exists. Otherwise it is
-   * the larger issn in the issn table if it is different than the printissn
-   * in the title database, or null otherwise.
-   * <p>
-   * The year comes from the date field if it exists, or from the start year
-   * in the title database otherwise. This is because the start year in the
-   * title database may indicate the year of ingest rather than the year of
-   * publication. Note, however, that this relies on the date field being
-   * the actual publication date rather than an earlier date such as the
-   * on-line date, which may be the previous year for an early-year issue.
+   * Here is the original SQL query:
+   *<pre>
+    select 
+      primary_name publication_name, publication_seq, 
+      (select formatissn(issn) from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'p_issn') p_issn, 
+      (select formatissn(issn) from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'e_issn') e_issn,
+      (select formatisbn(isbn) from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'p_isbn') p_isbn, 
+      (select formatisbn(isbn) from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'e_isbn') e_isbn,
+      yearfromdate(date) pub_year
+     from publisher, publication, md_item 
+     where publisher.publisher_seq = publication.publisher_seq and publication.md_item_seq = md_item.md_item_seq
+   *</pre>
    */
-  static final String bibliographicItemsQuery;
-
-  static {
-    StringBuilder sb = new StringBuilder();
-    sb.append("select distinct ");
-    sb.append(" publisherFromAuid(plugin_id,au_key) as \"publisher\",");
-    sb.append(" coalesce(");
-    sb.append("  (select ");
-    sb.append(      MD_ITEM_TABLE);
-    sb.append(        ".");
-    sb.append(      PRIMARY_NAME_COLUMN);
-    sb.append("   from ");
-    sb.append(      MD_ITEM_TABLE);
-    sb.append("  ),");
-    sb.append("  titleFromAuid(plugin_id,au_key)) as \"title\", ");
-    sb.append(" printISSNFromAuid(plugin_id,au_key) as \"printissn\",");
-    sb.append(" coalesce(");
-    sb.append("  eISSNFromAuid(plugin_id,au_key),");
-    sb.append("  nullif(");
-    sb.append("    (select formatIssn(max(");
-    sb.append(        ISSN_TABLE);
-    sb.append(          ".");
-    sb.append(        ISSN_COLUMN);
-    sb.append("  )) from ");
-    sb.append(        ISSN_TABLE);
-    sb.append(          ", ");
-    sb.append(        MD_ITEM_TABLE);
-    sb.append("     where ");
-    sb.append(        ISSN_TABLE);
-    sb.append(          ".");
-    sb.append(        MD_ITEM_SEQ_COLUMN);
-    sb.append(        "=");
-    sb.append(        MD_ITEM_TABLE);
-    sb.append(          ".");
-    sb.append(        MD_ITEM_SEQ_COLUMN);
-    sb.append("    ),");
-    sb.append("    printISSNFromAuid(plugin_id,au_key))) as \"eissn\", ");
-    sb.append(" printISBNFromAuid(plugin_id,au_key) as \"printisbn\",");
-    sb.append(" coalesce(");
-    sb.append("  eISBNFromAuid(plugin_id,au_key),");
-    sb.append("  nullif(");
-    sb.append("    (select formatIsbn(max(");
-    sb.append(        ISBN_COLUMN);
-    sb.append("  )) from ");
-    sb.append(        ISBN_TABLE);
-    sb.append(          ", ");
-    sb.append(        MD_ITEM_TABLE);
-    sb.append("     where ");
-    sb.append(        ISBN_TABLE);
-    sb.append(          ".");
-    sb.append(        MD_ITEM_SEQ_COLUMN);
-    sb.append(        "=");
-    sb.append(        MD_ITEM_TABLE);
-    sb.append(          ".");
-    sb.append(        MD_ITEM_SEQ_COLUMN);
-    sb.append("    ),");
-    sb.append("    printISBNFromAuid(plugin_id,au_key))) as \"eisbn\", ");
-    sb.append(   BIB_ITEM_TABLE);
-    sb.append(     ".");
-    sb.append(   VOLUME_COLUMN);
-    sb.append(" from ");
-    sb.append(    BIB_ITEM_TABLE);
-    sb.append(      ", ");
-    sb.append(    MD_ITEM_TABLE);
-    sb.append(" where ");
-    sb.append(    BIB_ITEM_TABLE);
-    sb.append(      ".");
-    sb.append(    MD_ITEM_SEQ_COLUMN);
-    sb.append(    "=");
-    sb.append(    MD_ITEM_TABLE);
-    sb.append(      ".");
-    sb.append(    MD_ITEM_SEQ_COLUMN);
-    sb.append(" ,");
-    sb.append(" coalesce(");
-    sb.append("  yearFromDate(date),");
-    sb.append("  startYearFromAuid(plugin_id,au_key)) as \"year\" ");
-    sb.append("from " + MD_ITEM_TABLE + " ");
-    sb.append(" order by 1,2,8");  // publisher, title, date
-
-    bibliographicItemsQuery = sb.toString();
-  }
+  static final String PUBINFO_QUERY =
+        "select "
+      +    PUBLICATION_SEQ_COLUMN + ", "
+      +    PRIMARY_NAME_COLUMN + " publication_name, " 
+      +   "(select formatissn(" + ISSN_COLUMN + ") from " + ISSN_TABLE
+      +   " where " 
+      +      MD_ITEM_SEQ_COLUMN 
+      +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
+      +      ISSN_TABLE + "." + ISSN_TYPE_COLUMN
+      +      " = 'p_issn') p_issn, "
+      +   "(select formatissn(" + ISSN_COLUMN + ") from " + ISSN_TABLE
+      +   " where " 
+      +      MD_ITEM_SEQ_COLUMN 
+      +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
+      +      ISSN_TABLE + "." + ISSN_TYPE_COLUMN
+      +      " = 'e_issn') e_issn, "
+      +   "(select formatisbn(" + ISBN_COLUMN + ") from " + ISBN_TABLE
+      +   " where " 
+      +      MD_ITEM_SEQ_COLUMN 
+      +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
+      +      ISBN_TABLE + "." + ISBN_TYPE_COLUMN
+      +      " = 'p_isbn') p_isbn, "
+      +   "(select formatisbn(" + ISBN_COLUMN + ") from " + ISBN_TABLE
+      +   " where " 
+      +      MD_ITEM_SEQ_COLUMN 
+      +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
+      +      ISBN_TABLE + "." + ISBN_TYPE_COLUMN
+      +      " = 'e_isbn') e_isbn "
+      + "from " 
+      +   PUBLISHER_TABLE + ", " + PUBLICATION_TABLE + ", " + MD_ITEM_TABLE
+      + " where "
+      +   PUBLISHER_TABLE + "." + PUBLISHER_SEQ_COLUMN
+      +   " = " + PUBLICATION_TABLE + "." + PUBLISHER_SEQ_COLUMN + " and "
+      +   PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN
+      +   " = " + MD_ITEM_TABLE + "." + MD_ITEM_SEQ_COLUMN;
+          
+  /**
+   * This query generates a table of publisher_names, publication_names, 
+   * p_issns, e_issns, p_isbns, e_isbns, volumes, and years. The query
+   * incorporates PUBINFO_QUERY as an additional table for accessing
+   * publication level values.
+   * <p>
+   * Here is the original SQL query:
+   *<pre>
+    select distinct
+      publisher_name, 
+      publication_name,
+      p_issn, e_issn, p_isbn, e_isbn,
+      pub_year, volume
+    from 
+      bib_item, 
+      md_item, 
+      publication, 
+      publisher, 
+      (select 
+         primary_name publication_name, publication_seq, 
+        (select formatissn(issn) from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'p_issn') p_issn, 
+        (select formatissn(issn) from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'e_issn') e_issn,
+        (select formatisbn(isbn) from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'p_isbn') p_isbn, 
+        (select formatisbn(isbn) from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'e_isbn') e_isbn,
+        yearfromdate(date) pub_year
+       from publisher, publication, md_item 
+       where publisher.publisher_seq = publication.publisher_seq and publication.md_item_seq = md_item.md_item_seq) pubinfo
+    where 
+      (bib_item.md_item_seq = md_item.md_item_seq) and
+      (publication.md_item_seq = md_item.parent_seq) and
+      (publication.publisher_seq = publisher.publisher_seq) and
+      (pubinfo.publication_seq = publication.publication_seq)
+    order by 1,2,8;
+   *</pre>
+   */
+  static final String bibliographicItemsQuery =
+        "select distinct "
+      +   "publisher_name, publication_name, "
+      +   "p_issn, e_issn, p_isbn, e_isbn, "
+      +   "volume, yearfromdate(" + DATE_COLUMN + ") "
+      + "from "
+      +    BIB_ITEM_TABLE + ", "
+      +    MD_ITEM_TABLE + ", "
+      +    PUBLICATION_TABLE + ", " 
+      +    PUBLISHER_TABLE + ","
+      +    "(" + PUBINFO_QUERY + ") pubinfo "
+      + "where "
+      +   BIB_ITEM_TABLE + "." + MD_ITEM_SEQ_COLUMN 
+      +     " = " + MD_ITEM_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
+      +   PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN
+      +     " = " + MD_ITEM_TABLE + "." + PARENT_SEQ_COLUMN + " and "
+      +   PUBLICATION_TABLE + "." + PUBLISHER_SEQ_COLUMN
+      +     " = " + PUBLISHER_TABLE + "." + PUBLISHER_SEQ_COLUMN + " and "
+      +   "pubinfo." + PUBLICATION_SEQ_COLUMN
+      +     " = " + PUBLICATION_TABLE + "." + PUBLICATION_SEQ_COLUMN;
 
   /**
    * Returns a list of BibliographicItems from the metadata database.
@@ -334,7 +334,7 @@ final public class MetadataDatabaseUtil {
     DbManager dbManager = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
-
+    
     try {
       dbManager = getDaemon().getDbManager();
       conn = dbManager.getConnection();
