@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArticleMetadataExtractor.java,v 1.8 2012-08-21 08:37:32 tlipkis Exp $
+ * $Id: TestBaseArticleMetadataExtractor.java,v 1.9 2013-01-07 02:31:16 pgust Exp $
  */
 
 /*
@@ -82,6 +82,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
 		  "isbn", "976-1-58562-317-7",
 		  "volume", "vol16",
 		  "journal.title", "Air and Space",
+		  "publisher", "Publisher[10.0135/12345678]",
 		  "access.url", "fullurl");
 
 
@@ -114,6 +115,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
 		  "volume", "vol16",
 		  "journal.title", "Air and Space",
 		  "date", "1943",
+		  "publisher", "Publisher[10.0135/12345678]",
 		  "access.url", "fullurl");
   }
 
@@ -199,7 +201,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     // Add/replace explicit md values 
     exp.put("volume", "vol16");
     Map<String,String> actual = getMap(mdlist.get(0));
-    assertEquals(exp, getMap(mdlist.get(0)));
+    assertEquals(exp, actual);
   }
 
   public void testTdbComplete() throws Exception {
@@ -215,7 +217,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     // Add/replace explicit md values 
     exp.putAll(stringMap(map));
     Map<String,String> actual = getMap(mdlist.get(0));
-    assertEquals(exp, getMap(mdlist.get(0)));
+    assertEquals(exp, actual);
   }
 
   Map<String,String> getMap(final ArticleMetadata am) {
