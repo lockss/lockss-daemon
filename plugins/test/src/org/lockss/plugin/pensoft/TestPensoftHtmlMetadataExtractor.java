@@ -148,7 +148,7 @@ public class TestPensoftHtmlMetadataExtractor extends LockssTestCase {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
     conf.put("journal_name", "abc");
-    conf.put("num_issue_range", "4-6");
+    conf.put("issue_set", "4-6, 4-7, 4-8");
     return conf;
   }
 
