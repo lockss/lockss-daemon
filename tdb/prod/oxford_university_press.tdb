@@ -290,18 +290,18 @@
     param[base_url] = http://alcalc.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; testing ; 1963-1964 ; Alcohol and Alcoholism Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 1965-1967 ; Alcohol and Alcoholism Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 1968 ; Alcohol and Alcoholism Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; testing ; 1969 ; Alcohol and Alcoholism Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 1963-1964 ; Alcohol and Alcoholism Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1965-1967 ; Alcohol and Alcoholism Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1968 ; Alcohol and Alcoholism Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1969 ; Alcohol and Alcoholism Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; ready ; 1970 ; Alcohol and Alcoholism Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; ready ; 1971 ; Alcohol and Alcoholism Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; 1972 ; Alcohol and Alcoholism Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1972 ; Alcohol and Alcoholism Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; ready ; 1973 ; Alcohol and Alcoholism Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; ready ; 1974 ; Alcohol and Alcoholism Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; ready ; 1975 ; Alcohol and Alcoholism Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; ready ; 1976 ; Alcohol and Alcoholism Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 1977 ; Alcohol and Alcoholism Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 1977 ; Alcohol and Alcoholism Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; ready ; 1978 ; Alcohol and Alcoholism Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; ready ; 1979 ; Alcohol and Alcoholism Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; ready ; 1980 ; Alcohol and Alcoholism Volume 15 ; 15 >
@@ -462,14 +462,14 @@
     au < HighWirePressH20Plugin ; manifest ; 1997 ; The American Historical Review Volume 102 ; 102 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; The American Historical Review Volume 103 ; 103 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; The American Historical Review Volume 104 ; 104 >
-    au < HighWirePressH20Plugin ; testing ; 2000 ; The American Historical Review Volume 105 ; 105 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; The American Historical Review Volume 106 ; 106 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; The American Historical Review Volume 107 ; 107 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; The American Historical Review Volume 108 ; 108 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; The American Historical Review Volume 109 ; 109 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; The American Historical Review Volume 110 ; 110 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; The American Historical Review Volume 111 ; 111 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; The American Historical Review Volume 112 ; 112 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; The American Historical Review Volume 105 ; 105 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; The American Historical Review Volume 106 ; 106 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; The American Historical Review Volume 107 ; 107 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; The American Historical Review Volume 108 ; 108 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; The American Historical Review Volume 109 ; 109 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; The American Historical Review Volume 110 ; 110 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; The American Historical Review Volume 111 ; 111 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; The American Historical Review Volume 112 ; 112 >
     au < HighWirePressH20Plugin ; released ; 2008 ; The American Historical Review Volume 113 ; 113 >
     au < HighWirePressH20Plugin ; released ; 2009 ; The American Historical Review Volume 114 ; 114 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The American Historical Review Volume 115 ; 115 >
