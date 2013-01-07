@@ -2434,8 +2434,8 @@
       param[base_url] = http://www.cellandbioscience.com/
       param[journal_issn] = 2045-3701
 
-      au < testing ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
-      au < testing ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
+      au < ready ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
+      au < ready ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
       au < expected ; 2013 ; Cell & Bioscience Volume 3 ; 3 >
 
     }
@@ -2580,7 +2580,7 @@
       au < released ; 2009 ; Chinese Medicine Volume 4 ; 4 >
       au < released ; 2010 ; Chinese Medicine Volume 5 ; 5 >
       au < released ; 2011 ; Chinese Medicine Volume 6 ; 6 >
-      au < testing ; 2012 ; Chinese Medicine Volume 7 ; 7 >
+      au < ready ; 2012 ; Chinese Medicine Volume 7 ; 7 >
 
     }
 
@@ -2672,7 +2672,7 @@
       au < released ; 2009 ; Clinical and Molecular Allergy Volume 7 ; 7 >
       au < released ; 2010 ; Clinical and Molecular Allergy Volume 8 ; 8 >
       au < released ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 >
-      au < testing ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
+      au < ready ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
       
     }
 
@@ -2687,8 +2687,8 @@
       param[base_url] = http://www.ctajournal.com/
       param[journal_issn] = 2045-7022
 
-      au < testing ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
-      au < testing ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
+      au < ready ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
+      au < ready ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
       au < expected ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
 
     }
@@ -2753,17 +2753,17 @@
       param[base_url] = http://www.comparative-hepatology.com/
       param[journal_issn] = 1476-5926
 
-      au < testing ; 2002 ; Comparative Hepatology Volume 1 ; 1 >
-      au < testing ; 2003 ; Comparative Hepatology Volume 2 ; 2 >
+      au < ready ; 2002 ; Comparative Hepatology Volume 1 ; 1 >
+      au < ready ; 2003 ; Comparative Hepatology Volume 2 ; 2 >
       au < testing ; 2004 ; Comparative Hepatology Volume 3 ; 3 >
-      au < testing ; 2005 ; Comparative Hepatology Volume 4 ; 4 >
-      au < testing ; 2006 ; Comparative Hepatology Volume 5 ; 5 >
-      au < testing ; 2007 ; Comparative Hepatology Volume 6 ; 6 >
-      au < testing ; 2008 ; Comparative Hepatology Volume 7 ; 7 >
-      au < testing ; 2009 ; Comparative Hepatology Volume 8 ; 8 >
-      au < testing ; 2010 ; Comparative Hepatology Volume 9 ; 9 >
-      au < testing ; 2011 ; Comparative Hepatology Volume 10 ; 10 >
-      au < testing ; 2012 ; Comparative Hepatology Volume 11 ; 11 >
+      au < ready ; 2005 ; Comparative Hepatology Volume 4 ; 4 >
+      au < ready ; 2006 ; Comparative Hepatology Volume 5 ; 5 >
+      au < ready ; 2007 ; Comparative Hepatology Volume 6 ; 6 >
+      au < ready ; 2008 ; Comparative Hepatology Volume 7 ; 7 >
+      au < ready ; 2009 ; Comparative Hepatology Volume 8 ; 8 >
+      au < ready ; 2010 ; Comparative Hepatology Volume 9 ; 9 >
+      au < ready ; 2011 ; Comparative Hepatology Volume 10 ; 10 >
+      au < ready ; 2012 ; Comparative Hepatology Volume 11 ; 11 >
       au < expected ; 2013 ; Comparative Hepatology Volume 12 ; 12 >
 
     }
