@@ -104,7 +104,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Journal of Solid State Science and Technology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; ECS Journal of Solid State Science and Technology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; ECS Journal of Solid State Science and Technology Volume 2 ; 2 >
     
   }
 
