@@ -6,7 +6,7 @@
     info[tester] = 3
   >
 
-  comment[notReady] = RU issue 3836, RT 976, RU 4449
+  comment[notReady] = RU 4449
   plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
   implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
@@ -60,9 +60,9 @@
       comment[0] = includes supplements
       comment[1] = AUs mistakenly released with 'www': ingested content has no substance
 
-      au < down ; crawling ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
-      au < down ; crawling ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
-      au < down ; crawling ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+      au < superseded ; crawling ; 2010 ; Diabetic Foot & Ankle Volume 1 [superseded] ; 1 ; 2010 >
+      au < superseded ; crawling ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 [superseded] ; 2 ; 2011 >
+      au < superseded ; crawling ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 [superseded] ; 3 ; 2012 >
     }
     
     {
@@ -195,9 +195,8 @@
 
     param[base_url] = http://www.infectionecologyandepidemiology.net/
     param[journal_id] = iee
-    comment[notReady] = crawl failure -- no permission?
 
-    au < notReady ; exists ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
+    au < crawling ; exists ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
     au < released ; crawling ; 2012 ; Infection Ecology & Epidemiology [including Supplements] Volume 2 ; 2 ; 2012 >
     au < expected ; exists ; 2013 ; Infection Ecology & Epidemiology [including Supplements] Volume 3 ; 3 ; 2013 >
   }
@@ -212,7 +211,6 @@
 
     param[base_url] = http://www.circumpolarhealthjournal.net/
     param[journal_id] = ijch
-    comment[issn] = volume 71, 2012
         
     au < manifest ; exists ; 2001 ; International Journal of Circumpolar Health [including Supplements] Volume 60 ; 60 ; 2001 >
     au < manifest ; exists ; 2002 ; International Journal of Circumpolar Health [including Supplements] Volume 61 ; 61 ; 2002 >
