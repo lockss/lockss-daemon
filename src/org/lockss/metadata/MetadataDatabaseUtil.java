@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.3 2013-01-07 02:21:47 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.4 2013-01-08 06:28:43 pgust Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.db.DbManager;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
+import org.lockss.util.SqlStoredProcedures;
 
 /**
  * This class contains a set of static methods for returning metadata database
@@ -102,8 +103,8 @@ final public class MetadataDatabaseUtil {
       eisbn = MetadataUtil.formatIssn(resultSet.getString(6));
       startvolume = resultSet.getString(7);
       endvolume = resultSet.getString(7);
-      startyear = resultSet.getString(8);
-      endyear = resultSet.getString(8);
+      startyear = MetadataUtil.getYearFromDate(resultSet.getString(8));
+      endyear = MetadataUtil.getYearFromDate(resultSet.getString(8));
     }
 
     @Override
@@ -222,11 +223,10 @@ final public class MetadataDatabaseUtil {
    *<pre>
     select 
       primary_name publication_name, publication_seq, 
-      (select formatissn(issn) from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'p_issn') p_issn, 
-      (select formatissn(issn) from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'e_issn') e_issn,
-      (select formatisbn(isbn) from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'p_isbn') p_isbn, 
-      (select formatisbn(isbn) from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'e_isbn') e_isbn,
-      yearfromdate(date) pub_year
+      (select issn from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'p_issn') p_issn, 
+      (select issn from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'e_issn') e_issn,
+      (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'p_isbn') p_isbn, 
+      (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'e_isbn') e_isbn,
      from publisher, publication, md_item 
      where publisher.publisher_seq = publication.publisher_seq and publication.md_item_seq = md_item.md_item_seq
    *</pre>
@@ -279,7 +279,7 @@ final public class MetadataDatabaseUtil {
       publisher_name, 
       publication_name,
       p_issn, e_issn, p_isbn, e_isbn,
-      pub_year, volume
+      volume, date
     from 
       bib_item, 
       md_item, 
@@ -287,11 +287,10 @@ final public class MetadataDatabaseUtil {
       publisher, 
       (select 
          primary_name publication_name, publication_seq, 
-        (select formatissn(issn) from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'p_issn') p_issn, 
-        (select formatissn(issn) from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'e_issn') e_issn,
-        (select formatisbn(isbn) from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'p_isbn') p_isbn, 
-        (select formatisbn(isbn) from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'e_isbn') e_isbn,
-        yearfromdate(date) pub_year
+        (select issn from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'p_issn') p_issn, 
+        (select issn from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'e_issn') e_issn,
+        (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'p_isbn') p_isbn, 
+        (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'e_isbn') e_isbn,
        from publisher, publication, md_item 
        where publisher.publisher_seq = publication.publisher_seq and publication.md_item_seq = md_item.md_item_seq) pubinfo
     where 
@@ -306,8 +305,8 @@ final public class MetadataDatabaseUtil {
         "select distinct "
       +   "publisher_name, publication_name, "
       +   "p_issn, e_issn, p_isbn, e_isbn, "
-      +   "volume, yearfromdate(" + DATE_COLUMN + ") "
-      + "from "
+      +   "volume, " + DATE_COLUMN
+      + " from "
       +    BIB_ITEM_TABLE + ", "
       +    MD_ITEM_TABLE + ", "
       +    PUBLICATION_TABLE + ", " 

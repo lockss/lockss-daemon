@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.16 2012-02-25 08:34:05 pgust Exp $
+ * $Id: MetadataUtil.java,v 1.17 2013-01-08 06:28:44 pgust Exp $
  */
 
 /*
@@ -828,4 +828,27 @@ public class MetadataUtil {
     Matcher m = AUTHOR_PAT.matcher(author);
     return (m.matches());
   }
+  
+  /**
+   * Return the year from an ISO formatted date string of the form
+   * yyyy or yyyy-mm or yyyy-mm-dd
+   * @param dateStr the date string
+   * @return the year
+   */
+  static public String getYearFromDate(String dateStr) {
+    if (dateStr != null) {
+      int i = dateStr.indexOf('-');
+      String year = (i > 0) ? dateStr.substring(0,i) : dateStr;
+      try {
+        if (Integer.parseInt(year) > 0) {
+          return year;
+        }
+      } catch (NumberFormatException ex) {
+        log.debug2("Year field of date is not a number: " + dateStr);
+      }
+    }
+    return null;
+  }
+  
+
 }

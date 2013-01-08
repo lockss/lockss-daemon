@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.8 2013-01-04 21:57:37 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.9 2013-01-08 06:28:43 pgust Exp $
  */
 
 /*
@@ -1175,7 +1175,7 @@ public class DbManager extends BaseLockssDaemonManager {
 
         "create function yearFromDate(date varchar(16)) returns varchar(4) "
     	+ "language java external name "
-    	+ "'org.lockss.util.SqlStoredProcedures.getYearFromDate' "
+    	+ "'org.lockss.util.MetadataUtil.getYearFromDate' "
     	+ "parameter style java no sql", };
 
   // SQL statements that drop the obsolete version 1 functions.
@@ -1426,7 +1426,7 @@ public class DbManager extends BaseLockssDaemonManager {
 
     "create function yearFromDate(date varchar(16)) returns varchar(4) "
 	+ "language java external name "
-	+ "'org.lockss.util.SqlStoredProcedures.getYearFromDate' "
+	+ "'org.lockss.util.MetadataUtil.getYearFromDate' "
 	+ "parameter style java no sql", };
 
   // Database metadata keys.

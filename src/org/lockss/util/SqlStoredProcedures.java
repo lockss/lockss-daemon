@@ -1,5 +1,5 @@
 /*
- * $Id: SqlStoredProcedures.java,v 1.10 2013-01-06 06:36:32 tlipkis Exp $
+ * $Id: SqlStoredProcedures.java,v 1.11 2013-01-08 06:30:57 pgust Exp $
  */
 
 /*
@@ -477,27 +477,6 @@ public class SqlStoredProcedures {
   }
 
   /**
-   * Return the year from an ISO formatted date string of the form
-   * yyyy or yyyy-mm or yyyy-mm-dd
-   * @param dateStr the date string
-   * @return the year
-   */
-  static public String getYearFromDate(String dateStr) {
-    if (dateStr != null) {
-      int i = dateStr.indexOf('-');
-      String year = (i > 0) ? dateStr.substring(0,i) : dateStr;
-      try {
-        if (Integer.parseInt(year) > 0) {
-          return year;
-        }
-      } catch (NumberFormatException ex) {
-        queryLog.debug2("Year field of date is not a number: " + dateStr);
-      }
-    }
-    return null;
-  }
-  
-  /**
    * Return the ingest year from the daemon that corresponds
    * to the URL of an article in that publisher.
    * 
@@ -506,7 +485,7 @@ public class SqlStoredProcedures {
    */
   static public String getIngestYearFromArticleUrl(String articleUrl) {
     String ingestDate = getIngestDateFromArticleUrl(articleUrl);
-    String ingestYear = getYearFromDate(ingestDate);
+    String ingestYear = MetadataUtil.getYearFromDate(ingestDate);
     return ingestYear;
   }
   
@@ -735,7 +714,7 @@ public class SqlStoredProcedures {
       return null;
     }
     String ingestDate = getIngestDateFromAuId(pluginId, auKey);
-    String ingestYear = getYearFromDate(ingestDate);
+    String ingestYear = MetadataUtil.getYearFromDate(ingestDate);
     return ingestYear;
   }
   
