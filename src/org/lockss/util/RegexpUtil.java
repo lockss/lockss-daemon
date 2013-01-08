@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpUtil.java,v 1.9 2012-03-15 08:52:39 tlipkis Exp $
+ * $Id: RegexpUtil.java,v 1.10 2013-01-08 21:12:17 tlipkis Exp $
  */
 
 /*
@@ -158,6 +158,10 @@ public class RegexpUtil {
       return false;
     }
     return p1.flags() == p2.flags() && p1.pattern().equals(p2.pattern());
+  }
+
+  public static String quotemeta(String val) {
+    return Perl5Compiler.quotemeta(val);
   }
 
 }
