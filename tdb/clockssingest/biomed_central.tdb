@@ -127,7 +127,7 @@
       au < manifest ; exists ; 2009 ; BMC Biophysics Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; BMC Biophysics Volume 3 ; 3 >
       au < manifest ; exists ; 2011 ; BMC Biophysics Volume 4 ; 4 >
-      au < manifest ; exists ; 2012 ; BMC Biophysics Volume 5 ; 5 >
+      au < crawling ; exists ; 2012 ; BMC Biophysics Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; BMC Biophysics Volume 6 ; 6 >
 
     }
@@ -348,7 +348,7 @@
       au < manifest ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
       au < doNotProcess ; doNotProcess ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
-      au < manifest ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
+      au < crawling ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
       
     }
 
@@ -874,7 +874,7 @@
       au < manifest ; exists ; 2009 ; BMC Medical Genomics Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; BMC Medical Genomics Volume 3 ; 3 >
       au < manifest ; exists ; 2011 ; BMC Medical Genomics Volume 4 ; 4 >
-      au < manifest ; exists ; 2012 ; BMC Medical Genomics Volume 5 ; 5 >
+      au < crawling ; exists ; 2012 ; BMC Medical Genomics Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; BMC Medical Genomics Volume 6 ; 6 >
 
     }
@@ -971,7 +971,7 @@
       au < manifest ; exists ; 2009 ; BMC Medical Physics Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Medical Physics Volume 10 ; 10 >
       au < manifest ; exists ; 2011 ; BMC Medical Physics Volume 11 ; 11 >
-      au < manifest ; exists ; 2012 ; BMC Medical Physics Volume 12 ; 12 >
+      au < crawling ; exists ; 2012 ; BMC Medical Physics Volume 12 ; 12 >
       au < expected ; exists ; 2013 ; BMC Medical Physics Volume 13 ; 13 >
 
     }
@@ -1519,7 +1519,7 @@
       au < manifest ; exists ; 2009 ; BMC Research Notes Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; BMC Research Notes Volume 3 ; 3 >
       au < manifest ; exists ; 2011 ; BMC Research Notes Volume 4 ; 4 >
-      au < manifest ; exists ; 2012 ; BMC Research Notes Volume 5 ; 5 >
+      au < crawling ; exists ; 2012 ; BMC Research Notes Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; BMC Research Notes Volume 6 ; 6 >
 
     }
@@ -1805,7 +1805,7 @@
       au < manifest ; exists ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 >
       au < manifest ; exists ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 >
       au < manifest ; exists ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 >
-      au < manifest ; exists ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 >
+      au < crawling ; exists ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 >
       au < expected ; exists ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 >
 
     }
@@ -1823,7 +1823,7 @@
       au < manifest ; exists ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
       au < manifest ; exists ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
-      au < manifest ; exists ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
+      au < crawling ; exists ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
       au < expected ; exists ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
 
     }
@@ -2010,7 +2010,7 @@
       au < manifest ; exists ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
       au < manifest ; exists ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
       au < manifest ; exists ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
-      au < manifest ; exists ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
+      au < crawling ; exists ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
       au < expected ; exists ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
 
     }
@@ -2085,7 +2085,7 @@
       au < manifest ; exists ; 2009 ; BioData Mining Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; BioData Mining Volume 3 ; 3 >
       au < manifest ; exists ; 2011 ; BioData Mining Volume 4 ; 4 >
-      au < manifest ; exists ; 2012 ; BioData Mining Volume 5 ; 5 >
+      au < crawling ; exists ; 2012 ; BioData Mining Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; BioData Mining Volume 6 ; 6 >
 
     }
@@ -2159,7 +2159,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
 
       au < manifest ; exists ; 2010 ; Biology of Sex Differences Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; Biology of Sex Differences Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; Biology of Sex Differences Volume 4 ; 4 >
 
     }
@@ -2423,7 +2423,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2045-3701
 
       au < manifest ; exists ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
-      au < manifest ; exists ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
+      au < crawling ; exists ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
       au < expected ; exists ; 2013 ; Cell & Bioscience Volume 3 ; 3 >
 
     }
@@ -2631,7 +2631,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2045-7022
 
       au < manifest ; exists ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
-      au < manifest ; exists ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
+      au < crawling ; exists ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
       au < expected ; exists ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
 
     }
@@ -2705,7 +2705,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Comparative Hepatology Volume 8 ; 8 >
       au < manifest ; exists ; 2010 ; Comparative Hepatology Volume 9 ; 9 >
       au < manifest ; exists ; 2011 ; Comparative Hepatology Volume 10 ; 10 >
-      au < manifest ; exists ; 2012 ; Comparative Hepatology Volume 11 ; 11 >
+      au < crawling ; exists ; 2012 ; Comparative Hepatology Volume 11 ; 11 >
       au < expected ; exists ; 2013 ; Comparative Hepatology Volume 12 ; 12 >
 
     }
@@ -2725,7 +2725,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Conflict and Health Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; Conflict and Health Volume 4 ; 4 >
       au < manifest ; exists ; 2011 ; Conflict and Health Volume 5 ; 5 >
-      au < manifest ; exists ; 2012 ; Conflict and Health Volume 6 ; 6 >
+      au < crawling ; exists ; 2012 ; Conflict and Health Volume 6 ; 6 >
       au < expected ; exists ; 2013 ; Conflict and Health Volume 7 ; 7 >
 
     }
@@ -2749,7 +2749,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Cost Effectiveness and Resource Allocation Volume 7 ; 7 >
       au < manifest ; exists ; 2010 ; Cost Effectiveness and Resource Allocation Volume 8 ; 8 >
       au < manifest ; exists ; 2011 ; Cost Effectiveness and Resource Allocation Volume 9 ; 9 >
-      au < manifest ; exists ; 2012 ; Cost Effectiveness and Resource Allocation Volume 10 ; 10 >
+      au < crawling ; exists ; 2012 ; Cost Effectiveness and Resource Allocation Volume 10 ; 10 >
       au < expected ; exists ; 2013 ; Cost Effectiveness and Resource Allocation Volume 11 ; 11 >
 
     }
@@ -2833,7 +2833,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Diabetology & Metabolic Syndrome Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; Diabetology & Metabolic Syndrome Volume 2 ; 2 >
       au < manifest ; exists ; 2011 ; Diabetology & Metabolic Syndrome Volume 3 ; 3 >
-      au < manifest ; exists ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
+      au < crawling ; exists ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
       au < expected ; exists ; 2013 ; Diabetology & Metabolic Syndrome Volume 5 ; 5 >
 
     }
@@ -2978,7 +2978,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Epigenetics & Chromatin Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; Epigenetics & Chromatin Volume 3 ; 3 >
       au < manifest ; exists ; 2011 ; Epigenetics & Chromatin Volume 4 ; 4 >
-      au < manifest ; exists ; 2012 ; Epigenetics & Chromatin Volume 5 ; 5 >
+      au < crawling ; exists ; 2012 ; Epigenetics & Chromatin Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; Epigenetics & Chromatin Volume 6 ; 6 >
 
     }
@@ -3011,7 +3011,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; European Journal of Medical Research Volume 14 ; 14 >
       au < manifest ; exists ; 2010 ; European Journal of Medical Research Volume 15 ; 15 >
       au < manifest ; exists ; 2011 ; European Journal of Medical Research Volume 16 ; 16 >
-      au < manifest ; exists ; 2012 ; European Journal of Medical Research Volume 17 ; 17 >
+      au < crawling ; exists ; 2012 ; European Journal of Medical Research Volume 17 ; 17 >
       au < expected ; exists ; 2013 ; European Journal of Medical Research Volume 18 ; 18 >
 
     }
@@ -3028,7 +3028,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2010 ; EvoDevo Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; EvoDevo Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; EvoDevo Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; EvoDevo Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; EvoDevo Volume 4 ; 4 >
 
     }
@@ -3046,7 +3046,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Experimental & Translational Stroke Medicine Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; Experimental & Translational Stroke Medicine Volume 2 ; 2 >
       au < manifest ; exists ; 2011 ; Experimental & Translational Stroke Medicine Volume 3 ; 3 >
-      au < manifest ; exists ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
+      au < crawling ; exists ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
       au < expected ; exists ; 2013 ; Experimental & Translational Stroke Medicine Volume 5 ; 5 >
 
     }
@@ -3061,7 +3061,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.ehoonline.org/
       param[journal_issn] = 2162-3619
 
-      au < manifest ; exists ; 2012 ; Experimental Hematology & Oncology Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Experimental Hematology & Oncology Volume 1 ; 1 >
       au < expected ; exists ; 2013 ; Experimental Hematology & Oncology Volume 2 ; 2 >
 
     }
@@ -3093,7 +3093,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
       au < manifest ; exists ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
-      au < manifest ; exists ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
+      au < crawling ; exists ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 >
 
     }
@@ -3108,7 +3108,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.flavourjournal.com/
       param[journal_issn] = 2044-7248
 
-      au < manifest ; exists ; 2012 ; Flavour Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Flavour Volume 1 ; 1 >
       au < expected ; exists ; 2013 ; Flavour Volume 2 ; 2 >
 
     }
@@ -3227,7 +3227,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 >
       au < manifest ; exists ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 >
       au < manifest ; exists ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
-      au < manifest ; exists ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
+      au < crawling ; exists ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
       au < expected ; exists ; 2013 ; Genetics Selection Evolution Volume 45 ; 45 >
 
     }
@@ -3328,7 +3328,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.gigasciencejournal.com/
       param[journal_issn] = 2047-217X
 
-      au < manifest ; exists ; 2012 ; GigaScience Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; GigaScience Volume 1 ; 1 >
       au < expected ; exists ; 2013 ; GigaScience Volume 2 ; 2 >
 
     }
@@ -3367,7 +3367,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Gut Pathogens Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; Gut Pathogens Volume 2 ; 2 >
       au < manifest ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 >
-      au < manifest ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 >
+      au < crawling ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 >
       au < expected ; exists ; 2013 ; Gut Pathogens Volume 5 ; 5 >
 
     }
@@ -3496,7 +3496,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Hereditary Cancer in Clinical Practice Volume 7 ; 7 >
       au < manifest ; exists ; 2010 ; Hereditary Cancer in Clinical Practice Volume 8 ; 8 >
       au < manifest ; exists ; 2011 ; Hereditary Cancer in Clinical Practice Volume 9 ; 9 >
-      au < manifest ; exists ; 2012 ; Hereditary Cancer in Clinical Practice Volume 10 ; 10 >
+      au < crawling ; exists ; 2012 ; Hereditary Cancer in Clinical Practice Volume 10 ; 10 >
       au < expected ; exists ; 2013 ; Hereditary Cancer in Clinical Practice Volume 11 ; 11 >
 
     }
@@ -3513,7 +3513,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2010 ; Herpesviridae Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; Herpesviridae Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; Herpesviridae Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; Herpesviridae Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; Herpesviridae Volume 4 ; 4 >
 
     }
@@ -3814,7 +3814,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2010 ; Investigative Genetics Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; Investigative Genetics Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; Investigative Genetics Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; Investigative Genetics Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; Investigative Genetics Volume 4 ; 4 >
 
     }
@@ -3883,7 +3883,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Italian Journal of Pediatrics Volume 35 ; 35 >
       au < manifest ; exists ; 2010 ; Italian Journal of Pediatrics Volume 36 ; 36 >
       au < manifest ; exists ; 2011 ; Italian Journal of Pediatrics Volume 37 ; 37 >
-      au < manifest ; exists ; 2012 ; Italian Journal of Pediatrics Volume 38 ; 38 >
+      au < crawling ; exists ; 2012 ; Italian Journal of Pediatrics Volume 38 ; 38 >
       au < expected ; exists ; 2013 ; Italian Journal of Pediatrics Volume 39 ; 39 >
 
     }
@@ -4006,7 +4006,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Journal of Biomedical Science Volume 16 ; 16 >
       au < manifest ; exists ; 2010 ; Journal of Biomedical Science Volume 17 ; 17 >
       au < manifest ; exists ; 2011 ; Journal of Biomedical Science Volume 18 ; 18 >
-      au < manifest ; exists ; 2012 ; Journal of Biomedical Science Volume 19 ; 19 >
+      au < crawling ; exists ; 2012 ; Journal of Biomedical Science Volume 19 ; 19 >
       au < expected ; exists ; 2013 ; Journal of Biomedical Science Volume 20 ; 20 >
 
     }
@@ -4023,7 +4023,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2010 ; Journal of Biomedical Semantics Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; Journal of Biomedical Semantics Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; Journal of Biomedical Semantics Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; Journal of Biomedical Semantics Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; Journal of Biomedical Semantics Volume 4 ; 4 >
 
     }
@@ -4228,7 +4228,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Journal of Foot and Ankle Research Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; Journal of Foot and Ankle Research Volume 3 ; 3 >
       au < manifest ; exists ; 2011 ; Journal of Foot and Ankle Research Volume 4 ; 4 >
-      au < manifest ; exists ; 2012 ; Journal of Foot and Ankle Research Volume 5 ; 5 >
+      au < crawling ; exists ; 2012 ; Journal of Foot and Ankle Research Volume 5 ; 5 >
 
     }
 
@@ -4311,7 +4311,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Journal of Medical Case Reports Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; Journal of Medical Case Reports Volume 4 ; 4 >
       au < manifest ; exists ; 2011 ; Journal of Medical Case Reports Volume 5 ; 5 >
-      au < manifest ; exists ; 2012 ; Journal of Medical Case Reports Volume 6 ; 6 >
+      au < crawling ; exists ; 2012 ; Journal of Medical Case Reports Volume 6 ; 6 >
       au < expected ; exists ; 2013 ; Journal of Medical Case Reports Volume 7 ; 7 >
 
     }
@@ -4525,7 +4525,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Journal of Ovarian Research Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; Journal of Ovarian Research Volume 3 ; 3 >
       au < manifest ; exists ; 2011 ; Journal of Ovarian Research Volume 4 ; 4 >
-      au < manifest ; exists ; 2012 ; Journal of Ovarian Research Volume 5 ; 5 >
+      au < crawling ; exists ; 2012 ; Journal of Ovarian Research Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; Journal of Ovarian Research Volume 6 ; 6 >
 
     }
@@ -4777,7 +4777,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2010 ; Mobile DNA Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; Mobile DNA Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; Mobile DNA Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; Mobile DNA Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; Mobile DNA Volume 4 ; 4 >
 
     }
@@ -4794,7 +4794,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2010 ; Molecular Autism Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; Molecular Autism Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; Molecular Autism Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; Molecular Autism Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; Molecular Autism Volume 4 ; 4 >
 
     }
@@ -5365,7 +5365,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Respiratory Research Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; Respiratory Research Volume 11 ; 11 >
       au < manifest ; exists ; 2011 ; Respiratory Research Volume 12 ; 12 >
-      au < manifest ; exists ; 2012 ; Respiratory Research Volume 13 ; 13 >
+      au < crawling ; exists ; 2012 ; Respiratory Research Volume 13 ; 13 >
       au < expected ; exists ; 2013 ; Respiratory Research Volume 14 ; 14 >
 
     }
@@ -5428,7 +5428,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 17 ; 17 >
       au < manifest ; exists ; 2010 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 18 ; 18 >
       au < manifest ; exists ; 2011 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 19 ; 19 >
-      au < manifest ; exists ; 2012 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 20 ; 20 >
+      au < crawling ; exists ; 2012 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 20 ; 20 >
       au < expected ; exists ; 2013 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 21 ; 21 >
 
     }
@@ -5465,7 +5465,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2010 ; Silence Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; Silence Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; Silence Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; Silence Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; Silence Volume 4 ; 4 >
 
     }
@@ -5481,7 +5481,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2044-5040
 
       au < manifest ; exists ; 2011 ; Skeletal Muscle Volume 1 ; 1 >
-      au < manifest ; exists ; 2012 ; Skeletal Muscle Volume 2 ; 2 >
+      au < crawling ; exists ; 2012 ; Skeletal Muscle Volume 2 ; 2 >
       au < expected ; exists ; 2013 ; Skeletal Muscle Volume 3 ; 3 >
 
     }
@@ -5519,7 +5519,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
       au < manifest ; exists ; 2011 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
-      au < manifest ; exists ; 2012 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
+      au < crawling ; exists ; 2012 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
       au < expected ; exists ; 2013 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 5 ; 5 >
 
     }
@@ -5635,7 +5635,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Thyroid Research Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; Thyroid Research Volume 3 ; 3 >
       au < manifest ; exists ; 2011 ; Thyroid Research Volume 4 ; 4 >
-      au < manifest ; exists ; 2012 ; Thyroid Research Volume 5 ; 5 >
+      au < crawling ; exists ; 2012 ; Thyroid Research Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; Thyroid Research Volume 6 ; 6 >
 
     }
@@ -5657,7 +5657,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 >
       au < manifest ; exists ; 2010 ; Tobacco Induced Diseases Volume 6 ; 6 >
       au < manifest ; exists ; 2011 ; Tobacco Induced Diseases Volume 7 ; 7 >
-      au < manifest ; exists ; 2012 ; Tobacco Induced Diseases Volume 8 ; 8 >
+      au < crawling ; exists ; 2012 ; Tobacco Induced Diseases Volume 8 ; 8 >
       au < expected ; exists ; 2013 ; Tobacco Induced Diseases Volume 9 ; 9 >
 
     }
@@ -5730,7 +5730,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Vascular Cell Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; Vascular Cell Volume 2 ; 2 >
       au < manifest ; exists ; 2011 ; Vascular Cell Volume 3 ; 3 >
-      au < manifest ; exists ; 2012 ; Vascular Cell Volume 4 ; 4 >
+      au < crawling ; exists ; 2012 ; Vascular Cell Volume 4 ; 4 >
       au < expected ; exists ; 2013 ; Vascular Cell Volume 5 ; 5 >
 
     }
