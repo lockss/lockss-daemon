@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.16 2012-03-07 00:07:37 thib_gc Exp $
+ * $Id: TestConfigParamDescr.java,v 1.17 2013-01-08 21:08:02 tlipkis Exp $
  */
 
 /*
@@ -267,6 +267,24 @@ public class TestConfigParamDescr extends LockssTestCase {
     catch (InvalidFormatException expected) {
       // all is well
     }
+  }
+
+  public void testGetValueOfTypeSet() throws Exception {
+    ConfigParamDescr set = ConfigParamDescr.ISSUE_SET;
+    
+    assertEquals(ListUtil.list("1"), set.getValueOfType("1"));
+    assertEquals(ListUtil.list("1", "apple", "bear"),
+		 set.getValueOfType("1,apple , bear"));
+    assertEquals(ListUtil.list("1", "1b", "2", "3", "4", "5", "6", "6A", "6B",
+			       "7000", "7001", "7002"),
+		 set.getValueOfType(" 1, 1b, {2-6} , 6A,6B ,{7000-7002}"));
+    assertEquals(ListUtil.list("1", "2", "3", "5", "6", "8", "9", "11"),
+		 set.getValueOfType(" { 1 - 3 }, {5-6} , {  8-9  } ,{11-11}"));
+    assertEquals(ListUtil.list("1", "{-2}"), set.getValueOfType("1,{-2}"));
+    assertEquals(ListUtil.list("1"), set.getValueOfType("1,"));
+
+    Object largeSet = set.getValueOfType("1,{0-100000}");
+    assertEquals(10000, ((Collection)largeSet).size());
   }
 
   /**

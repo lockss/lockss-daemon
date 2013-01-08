@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.50 2013-01-02 20:52:18 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.51 2013-01-08 21:08:02 tlipkis Exp $
  */
 
 /*
@@ -33,11 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.net.*;
+import java.util.*;
+import java.util.regex.*;
 
 import org.apache.commons.lang.math.NumberUtils;
 import org.lockss.app.LockssApp;
 import org.lockss.util.*;
-import java.util.*;
 
 /**
  * Descriptor for a configuration parameter, and instances of descriptors
@@ -45,6 +46,9 @@ import java.util.*;
  * of their displayName.
  */
 public class ConfigParamDescr implements Comparable, LockssSerializable {
+
+  private static Logger log = Logger.getLogger("ConfigParamDescr");
+
   /** Value is any string */
   public static final int TYPE_STRING = 1;
   /** Value is an integer */
@@ -70,6 +74,9 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   /** Value is a time interval string */
   public static final int TYPE_TIME_INTERVAL = 12;
 
+  /** Largest set allowed by TYPE_SET */
+  public static final int MAX_SET_SIZE = 10000;
+
   public static final String[] TYPE_STRINGS = {
       "String", "Integer", "URL", "Year", "Boolean", "Positive Integer",
       "Range", "Numeric Range", "Set", "User:Passwd String", "Long"};
@@ -89,6 +96,11 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     SAMPLE_VALUES.put(TYPE_LONG, "1099511627776");
     SAMPLE_VALUES.put(TYPE_TIME_INTERVAL, "10d");
   };
+
+  /** An element of a set that's a brace-enclosed integer range will be
+   * expanded into multiple set elements.  */
+  public static final String SET_RANGE_OPEN = "{";
+  public static final String SET_RANGE_CLOSE = "}";
 
   public static final ConfigParamDescr VOLUME_NUMBER =
     new ConfigParamDescr()
@@ -646,13 +658,65 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
         throw new InvalidFormatException("Invalid Numeric Range: " + val);
       } // end case block
       case TYPE_SET:
-        ret_val = StringUtil.breakAt(val,',', 50, true, true);
+        ret_val = expandSetMacros(val);
         break;
       default:
         throw new InvalidFormatException("Unknown type: " + type);
     }
 
     return ret_val;
+  }
+
+  // Pattern matches an integer range macro within a set
+  private static final String SET_MACRO_RANGE =
+    RegexpUtil.quotemeta(SET_RANGE_OPEN) +
+    "\\s*(\\d+)\\s*-\\s*(\\d+)\\s*" +
+    RegexpUtil.quotemeta(SET_RANGE_CLOSE);
+
+  private static Pattern SET_MACRO_RANGE_PAT =
+    Pattern.compile(SET_MACRO_RANGE);
+
+  List<String> expandSetMacros(String setSpec) {
+    List<String> raw = StringUtil.breakAt(setSpec,',', MAX_SET_SIZE,
+					  true, true);
+    // Avoid cost of pattern matches and list copy in the usual case of no
+    // range macros
+    for (String ele : raw) {
+      if (ele.startsWith(SET_RANGE_OPEN) && ele.endsWith(SET_RANGE_CLOSE)) {
+	return expandSetMacros0(raw);
+      }
+    }
+    return raw;
+  }
+
+  private List<String> expandSetMacros0(List<String> raw) {
+    int size = raw.size();
+    List<String> res = new ArrayList<String>(size + 50);
+    for (String ele : raw) {
+      Matcher m1 = SET_MACRO_RANGE_PAT.matcher(ele);
+      if (m1.matches()) {
+	try {
+	  int beg = Integer.valueOf(m1.group(1));
+	  int end = Integer.valueOf(m1.group(2));
+	  for (int ix = beg; ix <= end; ix++) {
+	    if (size++ > MAX_SET_SIZE) {
+	      log.warning("Set value has more than " + MAX_SET_SIZE +
+			  " elements; only the first " + MAX_SET_SIZE +
+			  " will be used: " + raw);
+	      return res;
+	    }
+	    res.add(Integer.toString(ix));
+	  }
+	} catch (RuntimeException e) {
+	  log.warning("Suspicious Set range macro: " + ele + " not expanded",
+		      e);
+	  res.add(ele);
+	}
+      } else {
+	res.add(ele);
+      }
+    }
+    return res;
   }
 
   /** Return a legal value for the parameter.  Useful for generic plugin
