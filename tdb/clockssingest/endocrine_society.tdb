@@ -7,7 +7,7 @@
   >
 
   implicit < status ; status2 ; year ; name ; param[volume_name] >
-  comment[0] = checked for manifests 10-15-2012 - none found
+  comment[0] = Permissions not ready. AUs notReady. See RT 4487.
 
   {
 
@@ -55,7 +55,7 @@
       au < manifest ; exists ; 2009 ; Endocrine Reviews Volume 30 ; 30 >
       au < manifest ; exists ; 2010 ; Endocrine Reviews Volume 31 ; 31 >
       au < manifest ; exists ; 2011 ; Endocrine Reviews Volume 32 ; 32 >
-      au < crawling ; exists ; 2012 ; Endocrine Reviews Volume 33 ; 33 >
+      au < notReady ; exists ; 2012 ; Endocrine Reviews Volume 33 ; 33 >
       au < expected ; exists ; 2013 ; Endocrine Reviews Volume 34 ; 34 >
 
     }
@@ -345,7 +345,7 @@
       au < manifest ; exists ; 2009 ; Journal of Clinical Endocrinology & Metabolism Volume 94 ; 94 >
       au < manifest ; exists ; 2010 ; Journal of Clinical Endocrinology & Metabolism Volume 95 ; 95 >
       au < manifest ; exists ; 2011 ; Journal of Clinical Endocrinology & Metabolism Volume 96 ; 96 >
-      au < crawling ; exists ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 >
+      au < notReady ; exists ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 >
       au < manifest ; exists ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 ; 98 >
 
     }
