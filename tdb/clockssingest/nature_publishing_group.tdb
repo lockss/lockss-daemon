@@ -1681,13 +1681,12 @@
     >
 
     param[journal_id] = mi
-    comment[notReady] = Fetch error in crawl on ingest3
 
-    au < notReady ; exists ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
-    au < notReady ; exists ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
+    au < testing ; exists ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
+    au < released ; manifest ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
     au < released ; crawling ; 2010 ; Mucosal Immunology Volume 3 ; 2010 ; 3 >
     au < released ; crawling ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
-    au < notReady ; exists ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 >
+    au < testing ; exists ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 >
 
   }
 
