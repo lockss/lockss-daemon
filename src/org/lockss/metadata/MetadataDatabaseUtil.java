@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.4 2013-01-08 06:28:43 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.5 2013-01-08 06:35:15 pgust Exp $
  */
 
 /*
@@ -44,7 +44,6 @@ import org.lockss.db.DbManager;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
-import org.lockss.util.SqlStoredProcedures;
 
 /**
  * This class contains a set of static methods for returning metadata database
