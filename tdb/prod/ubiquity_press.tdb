@@ -37,6 +37,7 @@
     au < manifest ; 2007-2008 ; Archaeology International Volume 11 ; 11 ; 2007 >
     au < manifest ; 2008-2009 ; Archaeology International Volume 12 ; 12 ; 2008 >
     au < ready ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 >
+    au < manifest ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2011 >
     
   }
   
@@ -72,6 +73,7 @@
     au < manifest ; 2009 ; The Bulletin of the History of Archaeology Volume 19 ; 19 ; 2009 >
     au < manifest ; 2010 ; The Bulletin of the History of Archaeology Volume 20 ; 20 ; 2010 >
     au < manifest ; 2011 ; The Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 >
+    au < manifest ; 2012 ; The Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 >
     
   }
   
@@ -106,7 +108,7 @@
     param[base_url] = http://openarchaeologydata.metajnl.com/
     param[journal_id] = joad
     
-    comment[0] = Doesn't have volumes or manifest pages. Doesn't seem to be OJS2. 
+    au < manifest ; 2012 ; The Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
 
   }
   
