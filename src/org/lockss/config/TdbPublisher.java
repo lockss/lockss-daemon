@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.13 2012-10-22 15:07:09 easyonthemayo Exp $
+ * $Id: TdbPublisher.java,v 1.14 2013-01-09 09:37:43 tlipkis Exp $
  */
 
 /*
@@ -13,7 +13,7 @@ in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
-n
+
 The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
 
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.13 2012-10-22 15:07:09 easyonthemayo Exp $
+ * @version $Id: TdbPublisher.java,v 1.14 2013-01-09 09:37:43 tlipkis Exp $
  */
 public class TdbPublisher {
   /**
