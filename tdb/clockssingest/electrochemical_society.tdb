@@ -24,6 +24,7 @@
 
     au <  exists ; exists ; 2011 ; Journal of the Electrochemical Society Volume 158 ; 158 >
     au <  manifest ; exists ; 2012 ; Journal of the Electrochemical Society Volume 159 ; 159 >
+    au <  expected ; exists ; 2013 ; Journal of the Electrochemical Society Volume 160 ; 160 >
     
   }
 
@@ -55,6 +56,7 @@
     au <  exists ; exists ; 2010 ; Electrochemical and Solid State Letters Volume 13 ; 13 >
     au <  exists ; exists ; 2011 ; Electrochemical and Solid State Letters Volume 14 ; 14 >
     au <  exists ; exists ; 2012 ; Electrochemical and Solid State Letters Volume 15 ; 15 >
+    au <  expected ; exists ; 2013 ; Electrochemical and Solid State Letters Volume 16 ; 16 >
     
   }
   
@@ -71,6 +73,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au <  manifest ; exists ; 2012 ; ECS Solid State Letters Volume 1 ; 1 >
+    au <  expected ; exists ; 2013 ; ECS Solid State Letters Volume 2 ; 2 >
     
   }
 
@@ -87,6 +90,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au <  manifest ; exists ; 2012 ; ECS Electrochemistry Letters Volume 1 ; 1 >
+    au <  expected ; exists ; 2013 ; ECS Electrochemistry Letters Volume 2 ; 2 >
  
   }
 
@@ -103,6 +107,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au <  manifest ; exists ; 2012 ; ECS Journal of Solid State Science and Technology Volume 1 ; 1 >
+    au <  expected ; exists ; 2013 ; ECS Journal of Solid State Science and Technology Volume 2 ; 2 >
     
   }
 
@@ -141,6 +146,8 @@
     au <  exists ; exists ; 2011 ; ECS Meeting Abstracts Volume MA2011-02 ; MA2011-02 >
     au <  exists ; exists ; 2012 ; ECS Meeting Abstracts Volume MA2012-01 ; MA2012-01 >
     au <  exists ; exists ; 2012 ; ECS Meeting Abstracts Volume MA2012-02 ; MA2012-02 >
+    au <  expected ; exists ; 2013 ; ECS Meeting Abstracts Volume MA2013-01 ; MA2013-01 >
+    au <  expected ; exists ; 2013 ; ECS Meeting Abstracts Volume MA2013-02 ; MA2013-02 >
     
     }
     
@@ -203,6 +210,7 @@
     au <  exists ; exists ; 2011 ; ECS Transactions Volume 43 ; 43 >
     au <  exists ; exists ; 2012 ; ECS Transactions Volume 44 ; 44 >
     au <  exists ; exists ; 2012 ; ECS Transactions Volume 45 ; 45 >
+    au <  exists ; exists ; 2012 ; ECS Transactions Volume 46 ; 46 >
     
   }
 
