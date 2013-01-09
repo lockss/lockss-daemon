@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.42 2013-01-09 13:11:01 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.43 2013-01-09 20:11:45 pgust Exp $
  */
 
 /*
@@ -968,7 +968,7 @@ public class OpenUrlResolver {
    */
   public OpenUrlInfo resolveFromDOI(String doi) {
     if (!MetadataUtil.isDoi(doi)) {
-      return null;
+      return noOpenUrlInfo;
     }
     OpenUrlInfo resolved = noOpenUrlInfo;
     try {
@@ -1952,7 +1952,7 @@ public class OpenUrlResolver {
         ? Collections.<TdbAu>emptySet() : tdb.getTdbAusByIsbn(isbn); 
       if (tdbAus.isEmpty()) {
         log.debug3("No TdbAus for isbn " + isbn);
-        return null;
+        return noOpenUrlInfo;
       }
       resolved = resolveBookFromTdbAus(tdbAus, date, volume, edition, spage);
     }
