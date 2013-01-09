@@ -161,8 +161,8 @@
       param[journal_id] = jmc
 
       au < notReady ; 2010 ; Journal of Medical Cases Volume 1 ; 1 ; 2010 >
-      au < notReady ; 2011 ; Journal of Medical Cases Volume 1 ; 1 ; 2011 >
-      au < notReady ; 2012 ; Journal of Medical Cases Volume 1 ; 1 ; 2012 >
+      au < notReady ; 2011 ; Journal of Medical Cases Volume 2 ; 2 ; 2011 >
+      au < notReady ; 2012 ; Journal of Medical Cases Volume 3 ; 3 ; 2012 >
 
     }
 
@@ -177,8 +177,8 @@
       param[base_url] = http://www.neurores.org/
       param[journal_id] = neurores
 
-      au < notReady ; 2011 ; Journal of Medical Cases Volume 1 ; 1 ; 2011 >
-      au < manifest ; 2012 ; Journal of Medical Cases Volume 2 ; 2 ; 2012 >
+      au < notReady ; 2011 ; Journal of Neurology Research Volume 1 ; 1 ; 2011 >
+      au < manifest ; 2012 ; Journal of Neurology Research Volume 2 ; 2 ; 2012 >
 
     }
 
