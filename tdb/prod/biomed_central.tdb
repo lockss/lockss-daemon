@@ -2055,11 +2055,11 @@
       param[base_url] = http://www.apfmj.com/
       param[journal_issn] = 1447-056X
 
-      au < manifest ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
-      au < manifest ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
-      au < manifest ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
-      au < manifest ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
-      au < manifest ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
+      au < testing ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
+      au < testing ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
+      au < testing ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
+      au < testing ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
+      au < testing ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
       au < expected ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
 
     }
@@ -2768,9 +2768,9 @@
       param[journal_issn] = 1542-6416
       comment[moved_from] = Springer Science+Business Media in 2011
       
-      au < manifest ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
-      au < manifest ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
-      au < manifest ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
+      au < testing ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
+      au < testing ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
+      au < testing ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
       au < exists ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
 
     }
@@ -2804,7 +2804,7 @@
 
       au < ready ; 2002 ; Comparative Hepatology Volume 1 ; 1 >
       au < ready ; 2003 ; Comparative Hepatology Volume 2 ; 2 >
-      au < testing ; 2004 ; Comparative Hepatology Volume 3 ; 3 >
+      au < ready ; 2004 ; Comparative Hepatology Volume 3 ; 3 >
       au < ready ; 2005 ; Comparative Hepatology Volume 4 ; 4 >
       au < ready ; 2006 ; Comparative Hepatology Volume 5 ; 5 >
       au < ready ; 2007 ; Comparative Hepatology Volume 6 ; 6 >
@@ -2827,12 +2827,12 @@
       param[base_url] = http://www.conflictandhealth.com/
       param[journal_issn] = 1752-1505
 
-      au < testing ; 2007 ; Conflict and Health Volume 1 ; 1 >
-      au < testing ; 2008 ; Conflict and Health Volume 2 ; 2 >
-      au < testing ; 2009 ; Conflict and Health Volume 3 ; 3 >
-      au < testing ; 2010 ; Conflict and Health Volume 4 ; 4 >
-      au < testing ; 2011 ; Conflict and Health Volume 5 ; 5 >
-      au < testing ; 2012 ; Conflict and Health Volume 6 ; 6 >
+      au < ready ; 2007 ; Conflict and Health Volume 1 ; 1 >
+      au < ready ; 2008 ; Conflict and Health Volume 2 ; 2 >
+      au < ready ; 2009 ; Conflict and Health Volume 3 ; 3 >
+      au < ready ; 2010 ; Conflict and Health Volume 4 ; 4 >
+      au < ready ; 2011 ; Conflict and Health Volume 5 ; 5 >
+      au < ready ; 2012 ; Conflict and Health Volume 6 ; 6 >
       au < expected ; 2013 ; Conflict and Health Volume 7 ; 7 >
 
     }
@@ -2847,16 +2847,16 @@
       param[base_url] = http://www.resource-allocation.com/
       param[journal_issn] = 1478-7547
 
-      au < testing ; 2003 ; Cost Effectiveness and Resource Allocation Volume 1 ; 1 >
-      au < testing ; 2004 ; Cost Effectiveness and Resource Allocation Volume 2 ; 2 >
-      au < testing ; 2005 ; Cost Effectiveness and Resource Allocation Volume 3 ; 3 >
-      au < testing ; 2006 ; Cost Effectiveness and Resource Allocation Volume 4 ; 4 >
-      au < testing ; 2007 ; Cost Effectiveness and Resource Allocation Volume 5 ; 5 >
-      au < testing ; 2008 ; Cost Effectiveness and Resource Allocation Volume 6 ; 6 >
-      au < testing ; 2009 ; Cost Effectiveness and Resource Allocation Volume 7 ; 7 >
-      au < testing ; 2010 ; Cost Effectiveness and Resource Allocation Volume 8 ; 8 >
-      au < testing ; 2011 ; Cost Effectiveness and Resource Allocation Volume 9 ; 9 >
-      au < testing ; 2012 ; Cost Effectiveness and Resource Allocation Volume 10 ; 10 >
+      au < ready ; 2003 ; Cost Effectiveness and Resource Allocation Volume 1 ; 1 >
+      au < ready ; 2004 ; Cost Effectiveness and Resource Allocation Volume 2 ; 2 >
+      au < ready ; 2005 ; Cost Effectiveness and Resource Allocation Volume 3 ; 3 >
+      au < ready ; 2006 ; Cost Effectiveness and Resource Allocation Volume 4 ; 4 >
+      au < ready ; 2007 ; Cost Effectiveness and Resource Allocation Volume 5 ; 5 >
+      au < ready ; 2008 ; Cost Effectiveness and Resource Allocation Volume 6 ; 6 >
+      au < ready ; 2009 ; Cost Effectiveness and Resource Allocation Volume 7 ; 7 >
+      au < ready ; 2010 ; Cost Effectiveness and Resource Allocation Volume 8 ; 8 >
+      au < ready ; 2011 ; Cost Effectiveness and Resource Allocation Volume 9 ; 9 >
+      au < ready ; 2012 ; Cost Effectiveness and Resource Allocation Volume 10 ; 10 >
       au < expected ; 2013 ; Cost Effectiveness and Resource Allocation Volume 11 ; 11 >
 
     }
@@ -2878,7 +2878,7 @@
       au < released ; 2009 ; Cough Volume 5 ; 5 >
       au < released ; 2010 ; Cough Volume 6 ; 6 >
       au < released ; 2011 ; Cough Volume 7 ; 7 >
-      au < testing ; 2012 ; Cough Volume 8 ; 8 >
+      au < ready ; 2012 ; Cough Volume 8 ; 8 >
       au < expected ; 2013 ; Cough Volume 9 ; 9 >
 
     }
@@ -2908,7 +2908,7 @@
       au < released ; 2009 ; Critical Care Volume 13 ; 13 >
       au < released ; 2010 ; Critical Care Volume 14 ; 14 >
       au < released ; 2011 ; Critical Care Volume 15 ; 15 >
-      au < manifest ; 2012 ; Critical Care Volume 16 ; 16 >
+      au < testing ; 2012 ; Critical Care Volume 16 ; 16 >
       au < expected ; 2013 ; Critical Care Volume 17 ; 17 >
 
     }
@@ -2941,10 +2941,10 @@
       param[base_url] = http://www.dmsjournal.com/
       param[journal_issn] = 1758-5996
 
-      au < manifest ; 2009 ; Diabetology & Metabolic Syndrome Volume 1 ; 1 >
-      au < manifest ; 2010 ; Diabetology & Metabolic Syndrome Volume 2 ; 2 >
-      au < manifest ; 2011 ; Diabetology & Metabolic Syndrome Volume 3 ; 3 >
-      au < manifest ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
+      au < testing ; 2009 ; Diabetology & Metabolic Syndrome Volume 1 ; 1 >
+      au < testing ; 2010 ; Diabetology & Metabolic Syndrome Volume 2 ; 2 >
+      au < testing ; 2011 ; Diabetology & Metabolic Syndrome Volume 3 ; 3 >
+      au < testing ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
       au < expected ; 2013 ; Diabetology & Metabolic Syndrome Volume 5 ; 5 >
 
     }
@@ -2965,7 +2965,7 @@
       au < released ; 2009 ; Diagnostic Pathology Volume 4 ; 4 >
       au < released ; 2010 ; Diagnostic Pathology Volume 5 ; 5 >
       au < released ; 2011 ; Diagnostic Pathology Volume 6 ; 6 >
-      au < manifest ; 2012 ; Diagnostic Pathology Volume 7 ; 7 >
+      au < testing ; 2012 ; Diagnostic Pathology Volume 7 ; 7 >
       au < expected ; 2013 ; Diagnostic Pathology Volume 8 ; 8 >
 
     }
