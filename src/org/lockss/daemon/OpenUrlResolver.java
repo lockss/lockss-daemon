@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.41 2013-01-09 04:05:12 fergaloy-sf Exp $
+ * $Id: OpenUrlResolver.java,v 1.42 2013-01-09 13:11:01 pgust Exp $
  */
 
 /*
@@ -1295,7 +1295,7 @@ public class OpenUrlResolver {
    */
   private String resolveFromQuery(Connection conn, String query,
       List<String> args) throws SQLException {
-    final String DEBUG_HEADER = "resolveFromIsbn(): ";
+    final String DEBUG_HEADER = "resolveFromQuery(): ";
     log.debug3(DEBUG_HEADER + "query: " + query);
     PreparedStatement stmt = conn.prepareStatement(query.toString());
     for (int i = 0; i < args.size(); i++) {
