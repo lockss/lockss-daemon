@@ -78,7 +78,9 @@
 
     au < released ; crawling ; 2010 ; American University Intellectual Property Brief Issue 1 ; 1 >
     au < released ; crawling ; 2010 ; American University Intellectual Property Brief Issue 2 ; 2 >
-    au < released ; crawling ; 2010 ; American University Intellectual Property Brief Issue 3 ; 3 >
+    au < released ; crawling ; 2012 ; American University Intellectual Property Brief Issue 3 ; 3 >
+    au < exists ; exists ; 2012 ; American University Intellectual Property Brief Issue 4 ; 4 >
+    au < expected ; exists ; 2013 ; American University Intellectual Property Brief Issue 5 ; 5 >
 
   }
 
@@ -146,8 +148,8 @@
     au < released ; crawling ; 1998 ; The Journal of Gender, Social Policy & the Law Volume 6 ; 6 >
     au < released ; crawling ; 1999 ; The Journal of Gender, Social Policy & the Law Volume 7 ; 7 >
     au < released ; crawling ; 2000 ; The Journal of Gender, Social Policy & the Law Volume 8 ; 8 >
-    au < doesNotExist ; doesNotExist ; 0 ; The Journal of Gender, Social Policy & the Law Volume 9 ; 9 >
-    au < doesNotExist ; doesNotExist ; 0 ; The Journal of Gender, Social Policy & the Law Volume 10 ; 10 >
+    au < crawling ; exists ; 2001 ; The Journal of Gender, Social Policy & the Law Volume 9 ; 9 >
+    au < crawling ; exists ; 2002 ; The Journal of Gender, Social Policy & the Law Volume 10 ; 10 >
     au < released ; crawling ; 2003 ; The Journal of Gender, Social Policy & the Law Volume 11 ; 11 >
     au < released ; crawling ; 2004 ; The Journal of Gender, Social Policy & the Law Volume 12 ; 12 >
     au < released ; crawling ; 2005 ; The Journal of Gender, Social Policy & the Law Volume 13 ; 13 >
