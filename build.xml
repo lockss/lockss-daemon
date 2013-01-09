@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.327 2012-11-20 01:39:18 thib_gc Exp $
+ $Id: build.xml,v 1.328 2013-01-09 09:37:31 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -845,6 +845,13 @@ The target you have selected requires compiling under JDK 1.7.
        <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
      </javacelem>
     </dojavac>
+    <!-- Compile the test .tdb file(s) in test/src/org/lockss/daemon.
+	 XXX Should invoke tdbxml script directly (perhaps via macro), not
+	 via antcall, so can apply to whole tree fileset -->
+    <antcall target="tdb-xml-dir">
+      <param name="indir" value="${test.src}/org/lockss/daemon"/>
+      <param name="outdir" value="${test.classes}/org/lockss/daemon"/>
+    </antcall>
     <copy todir="${test.classes}" >
        <fileset dir="${test.src}" >
           <include name="**/*.xml"/>   <!-- mapping files and test files -->
@@ -1101,12 +1108,24 @@ The target you have selected requires compiling under JDK 1.7.
     <fail unless="plnname">
 Must specify PLN name with -Dplnname=name
     </fail>
-
-    <property name="indir" value="${tdb.src.dir}/${plnname}"/>
-    <property name="outdir" value="${tdb.xml.dir}/${plnname}"/>
-    <mkdir dir="${outdir}" />
-
     <echo message="Generating tdb xml for ${plnname}" />
+    <antcall target="tdb-xml-dir">
+      <param name="indir" value="${tdb.src.dir}/${plnname}"/>
+      <param name="outdir" value="${tdb.xml.dir}/${plnname}"/>
+    </antcall>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="tdb-xml-dir"
+	  description="Process .tdb files in indir into .xml files in outdir">
+    <fail unless="indir">
+Must specify input dir with -Dindir=dir
+    </fail>
+    <fail unless="outdir">
+Must specify output dir with -Doutdir=dir
+    </fail>
+
+    <mkdir dir="${outdir}" />
     <apply executable="scripts/tdb/tdbxml" dir="${basedir}"
            addsourcefile="true"
            dest="${outdir}"
