@@ -15,7 +15,7 @@
     >
     
     param[journal_id] = mwna
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume_name] >
     
     au < manifest ; 2002 ; Monographs of the Western North American Naturalist Volume 1 ; 1 >
     au < manifest ; 2004 ; Monographs of the Western North American Naturalist Volume 2 ; 2 >
