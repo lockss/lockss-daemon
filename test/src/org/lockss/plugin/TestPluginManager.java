@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.101 2012-12-20 18:38:48 fergaloy-sf Exp $
+ * $Id: TestPluginManager.java,v 1.102 2013-01-09 09:39:13 tlipkis Exp $
  */
 
 /*
@@ -1290,6 +1290,20 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(expected, actual);
   }
 
+  public void testGenerateAuIdUniqueInstance() throws Exception {
+    mgr.startService();
+
+    String pluginId = "org|lockss|plugin|Blah";
+    Properties props = PropUtil.fromArgs("a", "b");
+
+    ConfigurationUtil.addFromArgs(PluginManager.PARAM_USE_AUID_POOL, "true");
+    String id = PluginManager.generateAuId(pluginId, props);
+    assertEquals("org|lockss|plugin|Blah&a~b", id);
+    assertSame(id, PluginManager.generateAuId(pluginId, props));
+
+    ConfigurationUtil.addFromArgs(PluginManager.PARAM_USE_AUID_POOL, "false");
+    assertNotSame(id, PluginManager.generateAuId(pluginId, props));
+  }
 
   public void testConfigKeyFromAuId() {
     mgr.startService();

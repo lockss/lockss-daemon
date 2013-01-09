@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.237 2012-12-20 18:38:49 fergaloy-sf Exp $
+ * $Id: PluginManager.java,v 1.238 2013-01-09 09:39:13 tlipkis Exp $
  */
 
 /*
@@ -89,6 +89,11 @@ public class PluginManager
   /** List of user-specified plugin registry URLs. */
   public static final String PARAM_USER_PLUGIN_REGISTRIES =
     PREFIX + "userRegistries";
+
+  /** If true, intern AUIDs in a string pool to save space */
+  public static final String PARAM_USE_AUID_POOL =
+    PREFIX + "useAuIdStringPool";
+  public static final boolean DEFAULT_USE_AUID_POOL = true;
 
   /** If true, default list of plugin registries from prop server is used
    * in addition to user-specified registries */
@@ -219,6 +224,8 @@ public class PluginManager
   static final String DEFAULT_CONFIGURABLE_PLUGIN_NAME =
     DefinablePlugin.class.getName();
 
+  static StringPool AUID_POOL = new StringPool("AU IDs");
+
   private static Logger log = Logger.getLogger("PluginMgr");
 
   private boolean useDefaultPluginRegistries =
@@ -283,6 +290,7 @@ public class PluginManager
   private boolean preferLoadablePlugin = DEFAULT_PREFER_LOADABLE_PLUGIN;
   private long registryTimeout = DEFAULT_PLUGIN_LOAD_TIMEOUT;
   private boolean paramRestartAus = DEFAULT_RESTART_AUS_WITH_NEW_PLUGIN;
+  private static boolean paramUseAuidPool = DEFAULT_USE_AUID_POOL;
   private boolean paramAllowGlobalAuConfig = DEFAULT_ALLOW_GLOBAL_AU_CONFIG;
   private long paramAuRestartMaxSleep = DEFAULT_AU_RESTART_MAX_SLEEP;
   private long paramPerAuRestartSleep = DEFAULT_PER_AU_RESTART_SLEEP;
@@ -342,6 +350,7 @@ public class PluginManager
 	log.warning("Couldn't disable URLConnection cache", e);
       }
     }
+    triggerTitleSort();
   }
 
   /**
@@ -418,6 +427,9 @@ public class PluginManager
       paramAuRestartMaxSleep =
 	config.getTimeInterval(PARAM_AU_RESTART_MAX_SLEEP,
 			       DEFAULT_AU_RESTART_MAX_SLEEP);
+
+      paramUseAuidPool =
+	config.getBoolean(PARAM_USE_AUID_POOL, DEFAULT_USE_AUID_POOL);
 
       preferLoadablePlugin = config.getBoolean(PARAM_PREFER_LOADABLE_PLUGIN,
 					       DEFAULT_PREFER_LOADABLE_PLUGIN);
@@ -666,7 +678,12 @@ public class PluginManager
   }
 
   public static String generateAuId(String pluginId, String auKey) {
-    return pluginKeyFromId(pluginId)+"&"+auKey;
+    String id = pluginKeyFromId(pluginId)+"&"+auKey;
+    if (paramUseAuidPool) {
+      return AUID_POOL.intern(id);
+    } else {
+      return id;
+    }
   }
 
   public static String auKeyFromAuId(String auid) {
@@ -1612,6 +1629,10 @@ public class PluginManager
     return pluginMap.get(pluginKey);
   }
 
+  public Plugin getPluginFromId(String pluginId) {
+    return getPlugin(pluginKeyFromId(pluginId));
+  }
+
   protected void setPlugin(String pluginKey, Plugin plugin) {
     if (log.isDebug3()) {
       log.debug3("PluginManager.setPlugin(" + pluginKey + ", " +
@@ -2132,6 +2153,24 @@ public class PluginManager
    * of getAllAus() */
   public Collection<ArchivalUnit> getAllRegistryAus() {
     return getRegistryPlugin().getAllAus();
+  }
+
+  /** Start a thread to fetch the title list (after AUs are started),
+   * causing the keys to be computed and an initial sort */
+  void triggerTitleSort() {
+    LockssRunnable run = 
+	new LockssRunnable("Title Sorter") {
+	  public void lockssRun() {
+	    try {
+	      getDaemon().waitUntilAusStarted();
+	      findAllTitles();
+	    } catch (InterruptedException e) {
+	      // just exit
+	    }	      
+	  }
+	};
+    Thread th = new Thread(run);
+    th.start();
   }
 
   /** Return all the known titles from the title db, sorted by title */
