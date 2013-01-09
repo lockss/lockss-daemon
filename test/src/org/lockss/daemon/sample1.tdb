@@ -1,0 +1,71 @@
+{
+
+  publisher <
+    name = Springfield Free Press
+  >
+
+  plugin = org.lockss.daemon.TitlesetTestPlugin
+  implicit < status ; year ; name ; volume ; param[year] >
+
+    {
+
+      title <
+        name = Homerian Research ;
+        issn = 1234-4321 ;
+        eissn = 4321-1234
+      >
+
+      param[base_url] =  http://homer.example.com/
+
+      au < released ; 2010 ; Homerian Research Volume 1 ; 1 ; 2010 >
+      au < released ; 2011 ; Homerian Research Volume 2 ; 2 ; 2011 >
+      au < ready ; 2012 ; Homerian Research Volume 3 ; 3 ; 2012 >
+
+    }
+
+    {
+
+      title <
+        name = Margarine Journal ;
+        issn = 1234-1234 ;
+        eissn = 4321-4321
+      >
+
+      param[base_url] = http://marge.example.com/
+      
+      au < released ; 2008 ; Margarine Journal Volume 1 ; 1 ; 2008 >
+      au < ready ; 2009 ; Margarine Journal Volume 2 ; 2 ; 2009 >
+      au < ready ; 2010 ; Margarine Journal Volume 3 ; 3 ; 2010 >
+      au < ready ; 2011 ; Margarine Journal Volume 4 ; 4 ; 2011 >
+      au < ready ; 2012 ; Margarine Journal Volume 5 ; 5 ; 2012 >
+
+    }
+
+}
+
+{
+  publisher <
+    name = Shelbyville Jaundice Press
+  >
+
+  plugin = org.lockss.daemon.TitlesetTestPlugin
+  implicit < status ; year ; name ; volume ; param[year] >
+
+    {
+
+      title <
+        name = Bart's Boards ;
+        issn = 1111-1111 ;
+        eissn = 1112-1112
+      >
+
+      param[base_url] =  http://bart.example.com/
+
+      au < released ; 2010 ; Bart's Boards Volume 1 ; 1 ; 2010 >
+      au < released ; 2011 ; Bart's Boards Volume 2 ; 2 ; 2011 >
+      au < ready ; 2012 ; Bart's Boards Volume 3 ; 3 ; 2012 >
+
+    }
+
+    
+}

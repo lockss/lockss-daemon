@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSet.java,v 1.5 2012-08-29 21:11:45 tlipkis Exp $
+ * $Id: TitleSet.java,v 1.6 2013-01-09 09:38:56 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,12 @@ public interface TitleSet extends Comparable {
 
   /** Return the titles in the set.
    * @return a collection of {@link TitleConfig} */
-  Collection getTitles();
+  Collection<TitleConfig> getTitles();
+
+  /** Return the number of titles in the set that can be
+   * added/deleted/reactivated.
+   * @return number of titles for which the action can be performed */
+  int countTitles(int action);
 
   /** return true iff set appropriate for specified action */
   boolean isSetActionable(int action);

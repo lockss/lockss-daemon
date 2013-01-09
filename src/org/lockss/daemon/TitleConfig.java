@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.19 2012-09-06 04:04:41 tlipkis Exp $
+ * $Id: TitleConfig.java,v 1.20 2013-01-09 09:38:56 tlipkis Exp $
  */
 
 /*
@@ -354,6 +354,28 @@ public class TitleConfig {
       }
     }
     return true;
+  }
+
+  /** Return true if the AU named by this TitleConfig is a suitable target
+   * for the action
+   * @param action the action that would be applied to the AU
+   */
+  public boolean isActionable(PluginManager pluginMgr, int action) {
+    try {
+      switch (action) {
+      case TitleSet.SET_ADDABLE:
+	// addable if doesn't exist and pub not down
+	return (pluginMgr.getAuFromId(getAuId(pluginMgr)) == null
+		&& !AuUtil.isPubDown(this));
+      case TitleSet.SET_REACTABLE:
+      case TitleSet.SET_DELABLE:
+	return pluginMgr.getAuFromId(getAuId(pluginMgr)) != null;
+      }
+    } catch (RuntimeException e) {
+      log.error("TC: " + displayName, e);
+      return false;
+    }
+    return false;
   }
 
   public ConfigParamAssignment findCpa(ConfigParamDescr descr) {

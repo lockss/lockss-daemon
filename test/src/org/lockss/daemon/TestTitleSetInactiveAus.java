@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetInactiveAus.java,v 1.7 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestTitleSetInactiveAus.java,v 1.8 2013-01-09 09:38:56 tlipkis Exp $
  */
 
 /*
@@ -111,9 +111,13 @@ public class TestTitleSetInactiveAus extends LockssTestCase {
     mau2.setTitleConfig(tc2);
     pluginMgr.updateAuConfigFile(mau1.getAuId(), mau1.getConfiguration());
     pluginMgr.deactivateAu(mau1);
-    Collection<TitleConfig> set =
-      new TitleSetInactiveAus(getMockLockssDaemon()).getTitles();
+    TitleSet ts = new TitleSetInactiveAus(getMockLockssDaemon());
+    Collection set = ts.getTitles();
     assertSameElements(SetUtil.set(tc1), set);
+    assertEquals(1, ts.countTitles(TitleSet.SET_REACTABLE));
+    assertEquals(0, ts.countTitles(TitleSet.SET_ADDABLE));
+    assertEquals(0, ts.countTitles(TitleSet.SET_DELABLE));
+
     TitleConfig fromSet = new ArrayList<TitleConfig>(set).get(0);
     assertSame(tc1, fromSet);
   }

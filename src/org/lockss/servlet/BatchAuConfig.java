@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.46 2012-04-03 01:38:51 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.47 2013-01-09 09:38:56 tlipkis Exp $
  */
 
 /*
@@ -685,6 +685,19 @@ public class BatchAuConfig extends LockssServlet {
 	return remoteApi.findAusInSetsToActivate(sets);
       }
       return null;
+    }
+
+    int countAusInSetForVerb(RemoteApi remoteApi, TitleSet ts) {
+      switch (val) {
+      case VV_ADD:
+	return ts.countTitles(TitleSet.SET_ADDABLE);
+      case VV_DEL:
+      case VV_DEACT:
+	return ts.countTitles(TitleSet.SET_DELABLE);
+      case VV_REACT:
+	return ts.countTitles(TitleSet.SET_REACTABLE);
+      }
+      return 0;
     }
 
     String action() {

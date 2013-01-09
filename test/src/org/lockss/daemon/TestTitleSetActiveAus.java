@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetActiveAus.java,v 1.4 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestTitleSetActiveAus.java,v 1.5 2013-01-09 09:38:56 tlipkis Exp $
  */
 
 /*
@@ -98,10 +98,12 @@ public class TestTitleSetActiveAus extends LockssTestCase {
     rau.setTitleConfig(tc2);
     pluginMgr.addAu(mau1);
     pluginMgr.addAu(rau);
-    Collection set =
-      new TitleSetActiveAus(getMockLockssDaemon()).getTitles();
-    System.err.println(set.getClass().toString());
+    TitleSet ts = new TitleSetActiveAus(getMockLockssDaemon());
+    Collection set = ts.getTitles();
     assertEquals(SetUtil.set(tc1), SetUtil.theSet(set));
+    assertEquals(1, ts.countTitles(TitleSet.SET_DELABLE));
+    assertEquals(0, ts.countTitles(TitleSet.SET_ADDABLE));
+    assertEquals(0, ts.countTitles(TitleSet.SET_REACTABLE));
 
     List lst = new ArrayList(set);
     assertSame(tc1, lst.get(0));

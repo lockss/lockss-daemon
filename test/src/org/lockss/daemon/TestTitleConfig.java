@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleConfig.java,v 1.12 2011-01-08 15:41:06 pgust Exp $
+ * $Id: TestTitleConfig.java,v 1.13 2013-01-09 09:38:56 tlipkis Exp $
  */
 
 /*
@@ -47,8 +47,12 @@ import org.lockss.plugin.*;
 
 public class TestTitleConfig extends LockssTestCase {
 
+  private PluginManager pmgr;
+
   public void setUp() throws Exception {
     super.setUp();
+    pmgr = getMockLockssDaemon().getPluginManager();
+    setUpDiskSpace();
   }
 
   public void testConstructors() {
@@ -169,7 +173,6 @@ public class TestTitleConfig extends LockssTestCase {
   }
 
   public void testGetAuId() {
-    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
     MockPlugin mp = new MockPlugin();
     mp.setPluginId("pid");
     ConfigParamDescr d1 = new ConfigParamDescr("base_url");
@@ -181,6 +184,29 @@ public class TestTitleConfig extends LockssTestCase {
     String auid = tc1.getAuId(pmgr, mp);
     assertEquals("pid&base_url~a&volume~foo", auid);
     assertSame(auid, tc1.getAuId(pmgr, mp));
+  }
+
+  public void testIsActionable() throws Exception {
+    MockPlugin mp = new MockPlugin();
+    ConfigParamDescr d1 = new ConfigParamDescr("base_url");
+    ConfigParamDescr d2 = new ConfigParamDescr("volume");
+    ConfigParamAssignment a1 = new ConfigParamAssignment(d1, "a");
+    ConfigParamAssignment a2 = new ConfigParamAssignment(d2, "foo");
+    TitleConfig tc1 = new TitleConfig("a", "b");
+    tc1.setParams(ListUtil.list(a1, a2));
+    String auid = tc1.getAuId(pmgr, mp);
+    assertTrue(tc1.isActionable(pmgr, TitleSet.SET_ADDABLE));
+    assertFalse(tc1.isActionable(pmgr, TitleSet.SET_DELABLE));
+    assertFalse(tc1.isActionable(pmgr, TitleSet.SET_REACTABLE));
+
+    // Create an AU matching this TitleConfig
+    ArchivalUnit au =
+      PluginTestUtil.createAndStartAu(mp.getPluginId(), tc1.getConfig());
+    assertEquals(tc1.getAuId(pmgr, mp), au.getAuId());
+
+    assertFalse(tc1.isActionable(pmgr, TitleSet.SET_ADDABLE));
+    assertTrue(tc1.isActionable(pmgr, TitleSet.SET_DELABLE));
+    assertTrue(tc1.isActionable(pmgr, TitleSet.SET_REACTABLE));
   }
 
   public void testEqualsHashWithNulls() {

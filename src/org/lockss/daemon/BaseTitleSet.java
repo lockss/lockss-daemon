@@ -1,5 +1,5 @@
 /*
- * $Id: BaseTitleSet.java,v 1.10 2012-08-29 21:11:45 tlipkis Exp $
+ * $Id: BaseTitleSet.java,v 1.11 2013-01-09 09:38:56 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.plugin.PluginManager;
 
 /** Base class for TitleSet implementations */
 public abstract class BaseTitleSet implements TitleSet {
@@ -69,8 +70,28 @@ public abstract class BaseTitleSet implements TitleSet {
 
   /** Return the titles in the set.
    * @return a collection of TitleConfig */
-  public Collection getTitles() {
+
+  // XXX Change to take 'action' arg like countTitles, and generate from
+  // Tdb where possible.  Move actionable logic from RemoteApi to
+  // TitleConfig/TdbAu
+
+  public Collection<TitleConfig> getTitles() {
     return filterTitles(daemon.getPluginManager().findAllTitleConfigs());
+  }
+
+  /** Return the number of titles in the set that can be
+   * added/deleted/reactivated.  Default implementation executes the filter
+   * and counts the result
+   * @return number of titles for which the action can be performed */
+  public int countTitles(int action) {
+    PluginManager pluginMgr = daemon.getPluginManager();
+    int res = 0;
+    for (TitleConfig tc : getTitles()) {
+      if (tc.isActionable(pluginMgr, action)) {
+	res++;
+      }
+    }
+    return res;
   }
 
   /** Filter a collection of titles by the xpath predicate

@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetInactiveAus.java,v 1.9 2012-07-10 04:35:42 tlipkis Exp $
+ * $Id: TitleSetInactiveAus.java,v 1.10 2013-01-09 09:38:56 tlipkis Exp $
  */
 
 /*
@@ -60,6 +60,18 @@ public class TitleSetInactiveAus extends BaseTitleSet {
     }
     res.trimToSize();
     return res;
+  }
+
+  /** Return the number of titles in the set that can be reactivated. */
+  public int countTitles(int action) {
+    switch (action) {
+    case TitleSet.SET_REACTABLE:
+      return daemon.getRemoteApi().getInactiveAus().size();
+    case TitleSet.SET_ADDABLE:
+    case TitleSet.SET_DELABLE:
+      return 0;
+    }
+    return 0;
   }
 
   /** Return a TitleConfig for the AU.  Returns matching entry from the

@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.80 2012-10-30 00:12:33 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.81 2013-01-09 09:38:56 tlipkis Exp $
  */
 
 /*
@@ -1258,11 +1258,7 @@ public class ServletUtil {
     while (titleSetIterator.hasNext()) {
       TitleSet set = (TitleSet)titleSetIterator.next();
       if (verb.isTsAppropriateFor(set)) {
-        BatchAuStatus bas = verb.findAusInSetForVerb(remoteApi, set);
-        int numOk = 0;
-        for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
-          if (((BatchAuStatus.Entry)iter.next()).isOk()) { numOk++; }
-        }
+        int numOk = verb.countAusInSetForVerb(remoteApi, set);
         if (numOk > 0 || doGray) {
           ++actualRows;
           tbl.newRow();

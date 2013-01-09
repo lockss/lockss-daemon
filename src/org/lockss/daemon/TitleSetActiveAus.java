@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetActiveAus.java,v 1.13 2012-06-20 18:58:46 thib_gc Exp $
+ * $Id: TitleSetActiveAus.java,v 1.14 2013-01-09 09:38:56 tlipkis Exp $
  */
 
 /*
@@ -54,14 +54,33 @@ public class TitleSetActiveAus extends BaseTitleSet {
     PluginManager pmgr = daemon.getPluginManager();
     List<ArchivalUnit> aus = pmgr.getAllAus();
     ArrayList<TitleConfig> res = new ArrayList<TitleConfig>(aus.size());
-    for (Iterator iter = aus.iterator(); iter.hasNext();) {
-      ArchivalUnit au = (ArchivalUnit)iter.next();
+    for (ArchivalUnit au : aus) {
       if (!pmgr.isInternalAu(au)) {
 	res.add(titleConfigFromAu(au));
       }
     }
     res.trimToSize();
     return res;
+  }
+
+  /** Return the number of titles in the set that can be
+   * delated/deactivated. */
+  public int countTitles(int action) {
+    switch (action) {
+    case TitleSet.SET_DELABLE:
+      PluginManager pmgr = daemon.getPluginManager();
+      int res = 0;
+      for (ArchivalUnit au : pmgr.getAllAus()) {
+	if (!pmgr.isInternalAu(au)) {
+	  res++;
+	}
+      }
+      return res;
+    case TitleSet.SET_REACTABLE:
+    case TitleSet.SET_ADDABLE:
+      return 0;
+    }
+    return 0;
   }
 
   /** Return a TitleConfig for the AU.  Returns matching entry from the

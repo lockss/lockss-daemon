@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetXpath.java,v 1.8 2011-06-30 19:06:00 tlipkis Exp $
+ * $Id: TitleSetXpath.java,v 1.9 2013-01-09 09:38:56 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.regex.*;
 import org.apache.commons.jxpath.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.lockss.plugin.*;
 
 /**
@@ -132,15 +133,15 @@ public class TitleSetXpath extends BaseTitleSet {
 
   /** Special case for xpath: <code>[pluginName='plugname']</code>,
    * optimized to avoid evaluating zpath expression */
-  static class Plugin extends TitleSetXpath {
+  static class TSPlugin extends TitleSetXpath {
 
     private String pluginName;
 
     /** Create a TitleSet that consists of all known AUs using the named plugin
      * @param pluginName plugin name
      */
-    public Plugin(LockssDaemon daemon, String name,
-		  String xpath, String pluginName) {
+    public TSPlugin(LockssDaemon daemon, String name,
+		    String xpath, String pluginName) {
       super(daemon, name, xpath);
       this.pluginName = pluginName;
     }
@@ -170,7 +171,7 @@ public class TitleSetXpath extends BaseTitleSet {
   /** Special case for xpath:
    * <code>[attributes/publisher='pubname']</code>, optimized to avoid
    * evaluating zpath expression */
-  static class Attr extends TitleSetXpath {
+  static class TSAttr extends TitleSetXpath {
 
     private String attr;
     private String val;
@@ -180,8 +181,8 @@ public class TitleSetXpath extends BaseTitleSet {
      * @param attribute attribute name
      * @param val attribute value
      */
-    public Attr(LockssDaemon daemon, String name,
-		String xpath, String attribute, String value) {
+    public TSAttr(LockssDaemon daemon, String name,
+		  String xpath, String attribute, String value) {
       super(daemon, name, xpath);
       this.attr = attribute;
       this.val = value;
@@ -198,6 +199,48 @@ public class TitleSetXpath extends BaseTitleSet {
       }
       res.trimToSize();
       return res;
+    }
+    
+    /** Return the number of titles in the set that can be
+     * added/delated/reactivated. */
+    public int countTitles(int action) {
+      if ("publisher".equals(attr)) {
+	// Publisher titlesets are efficiently represented as TdbPublisher
+
+	PluginManager pmgr = daemon.getPluginManager();
+	ConfigManager cmgr = daemon.getConfigManager();
+	Tdb tdb = cmgr.getCurrentConfig().getTdb();
+	TdbPublisher pub = tdb.getTdbPublisher(val);
+	if (pub == null) {
+	  return 0;
+	}
+	int res = 0;
+	for (TdbTitle title : pub.getTdbTitles()) {
+	  Plugin plug = null;
+	  for (TdbAu tau : title.getTdbAus()) {
+	    if (plug == null || !plug.getPluginId().equals(tau.getPluginId())) {
+	      plug = pmgr.getPluginFromId(tau.getPluginId());
+	    }
+	    if (plug == null) {
+	      continue;
+	    }
+	    // For now, find the TitleConfig from the plugin's name->tc map
+	    // XXX not guaranteed to find the right TitleConfig if there's
+	    // more than one with the same name (as in one set down,
+	    // another not)
+	    TitleConfig tc = plug.getTitleConfig(tau.getName());
+	    if (tc == null) {
+	      continue;
+	    }
+	    if (tc.isActionable(pmgr, action)) {
+	      res++;
+	    }
+	  }
+	}
+	return res;
+      }
+      
+      return super.countTitles(action);
     }
 
     public String toString() {
@@ -233,12 +276,12 @@ public class TitleSetXpath extends BaseTitleSet {
 
     Matcher mplug = XPATH_PLUGIN.matcher(xpathPred);
     if (mplug.matches()) {
-      return new Plugin(daemon, name, xpathPred,
-			or(mplug.group(1), mplug.group(2)));
+      return new TSPlugin(daemon, name, xpathPred,
+			  or(mplug.group(1), mplug.group(2)));
     }
     Matcher mattr = XPATH_ATTR.matcher(xpathPred);
     if (mattr.matches()) {
-      return new Attr(daemon, name, xpathPred, mattr.group(1),
+      return new TSAttr(daemon, name, xpathPred, mattr.group(1),
 			or(mattr.group(2), mattr.group(3)));
     }
     return new TitleSetXpath(daemon, name, xpathPred);

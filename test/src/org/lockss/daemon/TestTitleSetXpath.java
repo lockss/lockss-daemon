@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetXpath.java,v 1.5 2011-06-30 19:06:00 tlipkis Exp $
+ * $Id: TestTitleSetXpath.java,v 1.6 2013-01-09 09:38:56 tlipkis Exp $
  */
 
 /*
@@ -32,11 +32,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
+import java.io.*;
+import java.net.*;
 import java.util.*;
+
 import org.apache.commons.jxpath.*;
 import org.lockss.config.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.app.*;
+import org.lockss.plugin.*;
 
 /**
  * This is the test class for org.lockss.daemon.TitleSetXpath
@@ -45,6 +50,7 @@ import org.lockss.util.*;
 public class TestTitleSetXpath extends LockssTestCase {
   private static Logger log = Logger.getLogger("TestTitleSetXpath");
 
+  PluginManager pluginMgr;
   MockPlugin mp1;
   MockPlugin mp2;
   TitleConfig tc1, tc2, tc3, tc4, tc5, tc6;
@@ -52,6 +58,7 @@ public class TestTitleSetXpath extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    pluginMgr = getMockLockssDaemon().getPluginManager();
     makeTitles();
   }
 
@@ -210,11 +217,11 @@ public class TestTitleSetXpath extends LockssTestCase {
 
   public void testOptimizedPlugin() {
     TitleSetXpath tsp1 = newSet("[pluginName='o.l.plug2']");
-    assertClass(TitleSetXpath.Plugin.class, tsp1);
+    assertClass(TitleSetXpath.TSPlugin.class, tsp1);
     TitleSetXpath tsp2 = newSet("[pluginName=\"o.l.plug2\"]");
-    assertClass(TitleSetXpath.Plugin.class, tsp2);
+    assertClass(TitleSetXpath.TSPlugin.class, tsp2);
     TitleSetXpath tsp3 = newSet("[pluginName='o.l.plug2' or attributes/X='Y']");
-    assertNotClass(TitleSetXpath.Plugin.class, tsp3);
+    assertNotClass(TitleSetXpath.TSPlugin.class, tsp3);
 
     assertSameElements(ListUtil.list(tc4, tc5, tc6), tsp1.filterTitles(titles));
     assertSameElements(ListUtil.list(tc4, tc5, tc6), tsp2.filterTitles(titles));
@@ -223,15 +230,51 @@ public class TestTitleSetXpath extends LockssTestCase {
 
   public void testOptimizedAttr() {
     TitleSetXpath tsa1 = newSet("[attributes/key1='val1']");
-    assertClass(TitleSetXpath.Attr.class, tsa1);
+    assertClass(TitleSetXpath.TSAttr.class, tsa1);
     TitleSetXpath tsa2 = newSet("[attributes/key1=\"val1\"]");
-    assertClass(TitleSetXpath.Attr.class, tsa2);
+    assertClass(TitleSetXpath.TSAttr.class, tsa2);
     TitleSetXpath tsa3 = newSet("[attributes/key1='val1' or false]");
-    assertNotClass(TitleSetXpath.Attr.class, tsa3);
+    assertNotClass(TitleSetXpath.TSAttr.class, tsa3);
 
     assertSameElements(ListUtil.list(tc5), tsa1.filterTitles(titles));
+    assertEquals(0, tsa1.countTitles(TitleSet.SET_ADDABLE));
     assertSameElements(ListUtil.list(tc5), tsa2.filterTitles(titles));
     assertSameElements(ListUtil.list(tc5), tsa3.filterTitles(titles));
+  }
+
+  public void testFoo() throws Exception {
+    TdbTestUtil.makeTestTdb().prettyPrint(System.out);
+  }
+
+  void installConfigFromResource(String name) throws IOException {
+    URL url = getClass().getResource(name);
+    ConfigurationUtil.setCurrentConfigFromUrlList(ListUtil.list(url));
+  }
+
+  String pname = "org.lockss.daemon.TitlesetTestPlugin";
+
+  public void testBar() throws Exception {
+    pluginMgr.ensurePluginLoaded(pluginMgr.pluginKeyFromName(pname));
+    final Plugin plug = pluginMgr.getPluginFromId(pname);
+
+    installConfigFromResource("sample1.xml");
+    ConfigManager.getCurrentConfig().getTdb().prettyPrint(System.out);
+
+    TitleSetXpath tsa1 =
+      newSet("[attributes/publisher='Springfield Free Press']");
+    assertEquals(8, tsa1.countTitles(TitleSet.SET_ADDABLE));
+    assertEquals(8, tsa1.getTitles().size());
+    final List<String> ptitles = plug.getSupportedTitles();
+    List<TitleConfig> lst = new ArrayList<TitleConfig>() {{
+	for (String t : ptitles) {
+	  TitleConfig tc = plug.getTitleConfig(t);
+	  if (tc.getAttributes().get("publisher").startsWith("Springfield")) {
+	    add(tc);
+	  }
+	}
+      }};
+    assertEquals(8, lst.size());
+    assertSameElements(lst, tsa1.getTitles());
   }
 
 }
