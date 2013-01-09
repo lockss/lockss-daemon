@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegexpUtil.java,v 1.5 2012-03-15 08:52:39 tlipkis Exp $
+ * $Id: TestRegexpUtil.java,v 1.6 2013-01-09 09:39:27 tlipkis Exp $
  */
 
 /*
@@ -111,4 +111,9 @@ public class TestRegexpUtil extends LockssTestCase {
     assertFalse(RegexpUtil.patEquals(comp("[abc]+"), comp("[abc]*")));
   }
 
+  public void testQuotemeta() {
+    assertEquals("", RegexpUtil.quotemeta(""));
+    assertEquals("foo", RegexpUtil.quotemeta("foo"));
+    assertEquals("foo\\.b\\[a\\]\\ r", RegexpUtil.quotemeta("foo.b[a] r"));
+  }
 }
