@@ -28,27 +28,51 @@ cat ../../tdb/*/*.tdb | ../../scripts/tdb/tdbout -t plugin | sort -u | sed 's/\.
 diff $tpath/ab.txt $tpath/ac.txt | grep "^> "
 cd ../../scripts/tdb
 #
-# Find duplicates in the gln title database
+# Find duplicate auids in the gln title database
 cat ../../tdb/prod/*.tdb | ./tdbout -AXEa | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
 echo "---------------------"
 echo "---------------------"
-echo "GLN. AUs with all duplicates = $allAUs"
-echo "GLN. AUs without duplicates = $uniqAUs"
+echo "GLN. All AUids = $allAUs"
+echo "GLN. AUids without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 echo " "
 #
-# Find duplicates in the clockss title database
+# Find duplicate auids in the clockss title database
 cat ../../tdb/clockssingest/*.tdb | ./tdbout -AXEa | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
 echo "---------------------"
 echo "---------------------"
-echo "CLOCKSS. AUs with all duplicates = $allAUs"
-echo "CLOCKSS. AUs without duplicates = $uniqAUs"
+echo "CLOCKSS. All AUids = $allAUs"
+echo "CLOCKSS. AUids without duplicates = $uniqAUs"
+diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+echo " "
+#
+# Find duplicate name/plugin pairs in the gln title database
+cat ../../tdb/prod/*.tdb | ./tdbout -AXE -c plugin,name | sort > $tpath/allAUs
+uniq $tpath/allAUs > $tpath/dedupedAUs
+allAUs=`cat $tpath/allAUs | wc -l`
+uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+echo "---------------------"
+echo "---------------------"
+echo "GLN. All plugin/names = $allAUs"
+echo "GLN. Plugin/names without duplicates = $uniqAUs"
+diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+echo " "
+#
+# Find duplicate name/plugin pairs in the clockss title database
+cat ../../tdb/clockssingest/*.tdb | ./tdbout -AXE -c plugin,name | sort > $tpath/allAUs
+uniq $tpath/allAUs > $tpath/dedupedAUs
+allAUs=`cat $tpath/allAUs | wc -l`
+uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+echo "---------------------"
+echo "---------------------"
+echo "CLOCKSS. All plugin/names = $allAUs"
+echo "CLOCKSS. Plugin/names without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 echo " "
 #
