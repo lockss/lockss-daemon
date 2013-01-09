@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.24.8.1 2013-01-04 19:50:46 dshr Exp $
+ * $Id: VoterUserData.java,v 1.24.8.2 2013-01-09 03:45:49 dshr Exp $
  */
 
 /*
@@ -60,6 +60,7 @@ public class VoterUserData
   private long voteDeadline;
   private String hashAlgorithm;
   private VoteBlocks voteBlocks;
+  private VoteBlocks symmetricVoteBlocks;
   private String url;
   private List nominees;
   private byte[] pollerNonce;
@@ -118,6 +119,9 @@ public class VoterUserData
     this.createTime = TimeBase.nowMs();
     this.messageDir = messageDir;
     this.voteBlocks = new DiskVoteBlocks(voter.getStateDir());
+    if (voterNonce2 != null && voterNonce2 != V3LcapMessage.EMPTY_BYTE_ARRAY) {
+      this.symmetricVoteBlocks = new DiskVoteBlocks(voter.getStateDir());
+    }
   }
 
   public void setPollMessage(LcapMessage msg) {
@@ -292,6 +296,14 @@ public class VoterUserData
     this.voteBlocks = voteBlocks;
   }
 
+  public VoteBlocks getSymmetricVoteBlocks() {
+    return symmetricVoteBlocks;
+  }
+
+  public void setSymmetricVoteBlocks(VoteBlocks voteBlocks) {
+    this.symmetricVoteBlocks = voteBlocks;
+  }
+
   public V3Voter getVoter() {
     return voter;
   }
@@ -454,5 +466,6 @@ public class VoterUserData
     pollMessage = null;
     psmState = null;
     voteBlocks = null;
+    symmetricVoteBlocks = null;
   }
 }

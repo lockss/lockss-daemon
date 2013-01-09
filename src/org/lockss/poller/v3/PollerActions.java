@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.30.32.1 2013-01-04 19:50:45 dshr Exp $
+ * $Id: PollerActions.java,v 1.30.32.2 2013-01-09 03:45:48 dshr Exp $
  */
 
 /*
@@ -319,6 +319,11 @@ public class PollerActions {
     msg.setAgreementHint(ud.getPercentAgreement());
     msg.setExpiration(ud.getPoller().getPollExpiration());
     msg.setRetryMax(1);
+    byte[] nonce2 = ud.getVoterNonce2();
+    if (nonce2 != null && nonce2 != V3LcapMessage.EMPTY_BYTE_ARRAY) {
+      msg.setVoterNonce2(nonce2);
+      msg.setVoteBlocks(ud.getVoteBlocks());
+    }
     try {
       ud.sendMessageTo(msg, ud.getVoterId());
       ud.setStatus(V3Poller.PEER_STATUS_COMPLETE);

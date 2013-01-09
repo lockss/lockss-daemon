@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.77.8.2 2013-01-06 01:27:33 dshr Exp $
+ * $Id: V3Voter.java,v 1.77.8.3 2013-01-09 03:45:48 dshr Exp $
  */
 
 /*
@@ -943,6 +943,11 @@ public class V3Voter extends BasePoll {
   public void blockHashComplete(HashBlock block) {
     // Add each hash block version to this vote block.
     VoteBlock vb = new VoteBlock(block.getUrl());
+    VoteBlock svb = null;
+    byte[] nonce2 = voterUserData.getVoterNonce2();
+    if (nonce2 != null && nonce2 != LcapMessage.EMPTY_BYTE_ARRAY) {
+      svb = new VoteBlock(block.getUrl());
+    }
     Iterator hashVersionIter = block.versionIterator();
     while(hashVersionIter.hasNext()) {
       HashBlock.Version ver = (HashBlock.Version)hashVersionIter.next();
@@ -955,18 +960,29 @@ public class V3Voter extends BasePoll {
                     plainDigest,
                     challengeDigest,
                     ver.getHashError() != null);
-      if (ver.getHashes().length > 2) {
+      if (svb != null && ver.getHashes().length > 2) {
 	byte[] symmetricDigest = ver.getHashes()[2];
-	// XXX DSHR now do something with the symmetric poll hash
+	// Add a VoteBlock for the symmetric poll hashes
 	log.debug("Poll " + voterUserData.getPollKey() + " is symmetric:" +
 		  block.getUrl());
+	svb.addVersion(ver.getFilteredOffset(),
+		       ver.getFilteredLength(),
+		       ver.getUnfilteredOffset(),
+		       ver.getUnfilteredLength(),
+		       plainDigest,
+		       symmetricDigest,
+		       ver.getHashError() != null);
       }
     }
     
-    // Add this vote block to our hash block container.
+    // Add this vote block to our hash block containers.
     VoteBlocks blocks = voterUserData.getVoteBlocks();
+    VoteBlocks symmetricBlocks = voterUserData.getSymmetricVoteBlocks();
     try {
       blocks.addVoteBlock(vb);
+      if (symmetricBlocks != null && svb != null) {
+	symmetricBlocks.addVoteBlock(svb);
+      }
     } catch (IOException ex) {
       log.error("Unexpected IO Exception trying to add vote block " +
                 vb.getUrl() + " in poll " + getKey(), ex);
