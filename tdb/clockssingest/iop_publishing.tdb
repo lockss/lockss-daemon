@@ -1012,6 +1012,11 @@
     comment[param] = eissn preferred
     comment[continues] = 1464-4258
  
+    au < exists ; exists ; 2005 ; Journal of Optics Volume 7 ; 7 > 
+    au < exists ; exists ; 2006 ; Journal of Optics Volume 8 ; 8 > 
+    au < exists ; exists ; 2007 ; Journal of Optics Volume 9 ; 9 > 
+    au < exists ; exists ; 2008 ; Journal of Optics Volume 10 ; 10 > 
+    au < exists ; exists ; 2009 ; Journal of Optics Volume 11 ; 11 > 
     au < released ; crawling ; 2010 ; Journal of Optics Volume 12 ; 12 > 
     au < released ; crawling ; 2011 ; Journal of Optics Volume 13 ; 13 > 
     au < released ; crawling ; 2012 ; Journal of Optics Volume 14 ; 14 > 
@@ -1022,35 +1027,42 @@
   {
 
     title <
-      name = Journal of Optics ;
+      name = Journal of Optics (1970-1998) ;
       issn = 0150-536X
     >
 
     param[journal_issn] = 0150-536X
     comment[continues] = 0335-7368
 
-    au < manifest ; exists ; 1977 ; Journal of Optics Volume 8 ; 8 > 
-    au < manifest ; exists ; 1978 ; Journal of Optics Volume 9 ; 9 > 
-    au < manifest ; exists ; 1979 ; Journal of Optics Volume 10 ; 10 > 
-    au < manifest ; exists ; 1980 ; Journal of Optics Volume 11 ; 11 > 
-    au < manifest ; exists ; 1981 ; Journal of Optics Volume 12 ; 12 > 
-    au < manifest ; exists ; 1982 ; Journal of Optics Volume 13 ; 13 > 
-    au < manifest ; exists ; 1983 ; Journal of Optics Volume 14 ; 14 > 
-    au < manifest ; exists ; 1984 ; Journal of Optics Volume 15 ; 15 > 
-    au < manifest ; exists ; 1985 ; Journal of Optics Volume 16 ; 16 > 
-    au < manifest ; exists ; 1986 ; Journal of Optics Volume 17 ; 17 > 
-    au < manifest ; exists ; 1987 ; Journal of Optics Volume 18 ; 18 > 
-    au < manifest ; exists ; 1988 ; Journal of Optics Volume 19 ; 19 > 
-    au < manifest ; exists ; 1989 ; Journal of Optics Volume 20 ; 20 > 
-    au < manifest ; exists ; 1990 ; Journal of Optics Volume 21 ; 21 > 
-    au < manifest ; exists ; 1991 ; Journal of Optics Volume 22 ; 22 > 
-    au < manifest ; exists ; 1992 ; Journal of Optics Volume 23 ; 23 > 
-    au < manifest ; exists ; 1993 ; Journal of Optics Volume 24 ; 24 > 
-    au < manifest ; exists ; 1994 ; Journal of Optics Volume 25 ; 25 > 
-    au < manifest ; exists ; 1995 ; Journal of Optics Volume 26 ; 26 > 
-    au < manifest ; exists ; 1996 ; Journal of Optics Volume 27 ; 27 > 
-    au < manifest ; exists ; 1997 ; Journal of Optics Volume 28 ; 28 > 
-    au < manifest ; exists ; 1998 ; Journal of Optics Volume 29 ; 29 > 
+    au < exists ; exists ; 1970 ; Journal of Optics (1970-1998) Volume 1 ; 1 > 
+    au < exists ; exists ; 1971 ; Journal of Optics (1970-1998) Volume 2 ; 2 > 
+    au < exists ; exists ; 1972 ; Journal of Optics (1970-1998) Volume 3 ; 3 > 
+    au < exists ; exists ; 1973 ; Journal of Optics (1970-1998) Volume 4 ; 4 > 
+    au < exists ; exists ; 1974 ; Journal of Optics (1970-1998) Volume 5 ; 5 > 
+    au < exists ; exists ; 1975 ; Journal of Optics (1970-1998) Volume 6 ; 6 > 
+    au < exists ; exists ; 1976 ; Journal of Optics (1970-1998) Volume 7 ; 7 > 
+    au < manifest ; exists ; 1977 ; Journal of Optics (1970-1998) Volume 8 ; 8 > 
+    au < manifest ; exists ; 1978 ; Journal of Optics (1970-1998) Volume 9 ; 9 > 
+    au < manifest ; exists ; 1979 ; Journal of Optics (1970-1998) Volume 10 ; 10 > 
+    au < manifest ; exists ; 1980 ; Journal of Optics (1970-1998) Volume 11 ; 11 > 
+    au < manifest ; exists ; 1981 ; Journal of Optics (1970-1998) Volume 12 ; 12 > 
+    au < manifest ; exists ; 1982 ; Journal of Optics (1970-1998) Volume 13 ; 13 > 
+    au < manifest ; exists ; 1983 ; Journal of Optics (1970-1998) Volume 14 ; 14 > 
+    au < manifest ; exists ; 1984 ; Journal of Optics (1970-1998) Volume 15 ; 15 > 
+    au < manifest ; exists ; 1985 ; Journal of Optics (1970-1998) Volume 16 ; 16 > 
+    au < manifest ; exists ; 1986 ; Journal of Optics (1970-1998) Volume 17 ; 17 > 
+    au < manifest ; exists ; 1987 ; Journal of Optics (1970-1998) Volume 18 ; 18 > 
+    au < manifest ; exists ; 1988 ; Journal of Optics (1970-1998) Volume 19 ; 19 > 
+    au < manifest ; exists ; 1989 ; Journal of Optics (1970-1998) Volume 20 ; 20 > 
+    au < manifest ; exists ; 1990 ; Journal of Optics (1970-1998) Volume 21 ; 21 > 
+    au < manifest ; exists ; 1991 ; Journal of Optics (1970-1998) Volume 22 ; 22 > 
+    au < manifest ; exists ; 1992 ; Journal of Optics (1970-1998) Volume 23 ; 23 > 
+    au < manifest ; exists ; 1993 ; Journal of Optics (1970-1998) Volume 24 ; 24 > 
+    au < manifest ; exists ; 1994 ; Journal of Optics (1970-1998) Volume 25 ; 25 > 
+    au < manifest ; exists ; 1995 ; Journal of Optics (1970-1998) Volume 26 ; 26 > 
+    au < manifest ; exists ; 1996 ; Journal of Optics (1970-1998) Volume 27 ; 27 > 
+    au < manifest ; exists ; 1997 ; Journal of Optics (1970-1998) Volume 28 ; 28 > 
+    au < manifest ; exists ; 1998 ; Journal of Optics (1970-1998) Volume 29 ; 29 > 
 
   }
 
