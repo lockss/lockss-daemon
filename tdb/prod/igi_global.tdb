@@ -18,27 +18,27 @@
     >
     param[journal_issn] = 1040-1628
 
-    au < ready ; 1988 ; Information Resources Management Journal (IRMJ) Volume 1 ; 1 >
-    au < ready ; 1989 ; Information Resources Management Journal (IRMJ) Volume 2 ; 2 >
-    au < ready ; 1990 ; Information Resources Management Journal (IRMJ) Volume 3 ; 3 >
-    au < ready ; 1991 ; Information Resources Management Journal (IRMJ) Volume 4 ; 4 >
-    au < ready ; 1992 ; Information Resources Management Journal (IRMJ) Volume 5 ; 5 >
-    au < ready ; 1993 ; Information Resources Management Journal (IRMJ) Volume 6 ; 6 >
+    au < releasing ; 1988 ; Information Resources Management Journal (IRMJ) Volume 1 ; 1 >
+    au < releasing ; 1989 ; Information Resources Management Journal (IRMJ) Volume 2 ; 2 >
+    au < releasing ; 1990 ; Information Resources Management Journal (IRMJ) Volume 3 ; 3 >
+    au < releasing ; 1991 ; Information Resources Management Journal (IRMJ) Volume 4 ; 4 >
+    au < releasing ; 1992 ; Information Resources Management Journal (IRMJ) Volume 5 ; 5 >
+    au < releasing ; 1993 ; Information Resources Management Journal (IRMJ) Volume 6 ; 6 >
     au < manifest ; 1994 ; Information Resources Management Journal (IRMJ) Volume 7 ; 7 >
-    au < ready ; 1995 ; Information Resources Management Journal (IRMJ) Volume 8 ; 8 >
-    au < ready ; 1996 ; Information Resources Management Journal (IRMJ) Volume 9 ; 9 >
-    au < ready ; 1997 ; Information Resources Management Journal (IRMJ) Volume 10 ; 10 >
+    au < releasing ; 1995 ; Information Resources Management Journal (IRMJ) Volume 8 ; 8 >
+    au < releasing ; 1996 ; Information Resources Management Journal (IRMJ) Volume 9 ; 9 >
+    au < releasing ; 1997 ; Information Resources Management Journal (IRMJ) Volume 10 ; 10 >
     au < manifest ; 1998 ; Information Resources Management Journal (IRMJ) Volume 11 ; 11 >
-    au < ready ; 1999 ; Information Resources Management Journal (IRMJ) Volume 12 ; 12 >
-    au < ready ; 2000 ; Information Resources Management Journal (IRMJ) Volume 13 ; 13 >
-    au < ready ; 2001 ; Information Resources Management Journal (IRMJ) Volume 14 ; 14 >
-    au < ready ; 2002 ; Information Resources Management Journal (IRMJ) Volume 15 ; 15 >
+    au < releasing ; 1999 ; Information Resources Management Journal (IRMJ) Volume 12 ; 12 >
+    au < releasing ; 2000 ; Information Resources Management Journal (IRMJ) Volume 13 ; 13 >
+    au < releasing ; 2001 ; Information Resources Management Journal (IRMJ) Volume 14 ; 14 >
+    au < releasing ; 2002 ; Information Resources Management Journal (IRMJ) Volume 15 ; 15 >
     au < manifest ; 2003 ; Information Resources Management Journal (IRMJ) Volume 16 ; 16 >
-    au < ready ; 2004 ; Information Resources Management Journal (IRMJ) Volume 17 ; 17 >
-    au < ready ; 2005 ; Information Resources Management Journal (IRMJ) Volume 18 ; 18 >
-    au < ready ; 2006 ; Information Resources Management Journal (IRMJ) Volume 19 ; 19 >
-    au < ready ; 2007 ; Information Resources Management Journal (IRMJ) Volume 20 ; 20 >
-    au < ready ; 2008 ; Information Resources Management Journal (IRMJ) Volume 21 ; 21 >
+    au < releasing ; 2004 ; Information Resources Management Journal (IRMJ) Volume 17 ; 17 >
+    au < releasing ; 2005 ; Information Resources Management Journal (IRMJ) Volume 18 ; 18 >
+    au < releasing ; 2006 ; Information Resources Management Journal (IRMJ) Volume 19 ; 19 >
+    au < releasing ; 2007 ; Information Resources Management Journal (IRMJ) Volume 20 ; 20 >
+    au < releasing ; 2008 ; Information Resources Management Journal (IRMJ) Volume 21 ; 21 >
     au < released ; 2009 ; Information Resources Management Journal (IRMJ) Volume 22 ; 22 >
     au < released ; 2010 ; Information Resources Management Journal (IRMJ) Volume 23 ; 23 >
     au < released ; 2011 ; Information Resources Management Journal (IRMJ) Volume 24 ; 24 >
@@ -228,7 +228,7 @@
     >
     param[journal_issn] = 1942-3594
 
-    au < ready ; 2010 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 4 ; 4 >
@@ -245,7 +245,7 @@
     >
     param[journal_issn] = 1947-9654
 
-    au < ready ; 2010 ; International Journal of Applied Geospatial Research (IJAGR) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Applied Geospatial Research (IJAGR) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Applied Geospatial Research (IJAGR) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Applied Geospatial Research (IJAGR) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Applied Geospatial Research (IJAGR) Volume 4 ; 4 >
@@ -277,7 +277,7 @@
     >
     param[journal_issn] = 1947-9573
 
-    au < ready ; 2010 ; International Journal of Applied Logistics (IJAL) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Applied Logistics (IJAL) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Applied Logistics (IJAL) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Applied Logistics (IJAL) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Applied Logistics (IJAL) Volume 4 ; 4 >
@@ -294,7 +294,7 @@
     >
     param[journal_issn] = 1947-8283
 
-    au < ready ; 2010 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 4 ; 4 >
@@ -328,7 +328,7 @@
     >
     param[journal_issn] = 1947-3087
 
-    au < ready ; 2010 ; International Journal of Artificial Life Research (IJALR) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Artificial Life Research (IJALR) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Artificial Life Research (IJALR) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Artificial Life Research (IJALR) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Artificial Life Research (IJALR) Volume 4 ; 4 >
@@ -345,7 +345,7 @@
     >
     param[journal_issn] = 1947-9638
 
-    au < ready ; 2010 ; International Journal of Asian Business and Information Management (IJABIM) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Asian Business and Information Management (IJABIM) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Asian Business and Information Management (IJABIM) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Asian Business and Information Management (IJABIM) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Asian Business and Information Management (IJABIM) Volume 4 ; 4 >
@@ -410,12 +410,12 @@
     >
     param[journal_issn] = 1548-0631
 
-    au < ready ; 2005 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 1 ; 1 >
-    au < ready ; 2006 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 2 ; 2 >
-    au < ready ; 2007 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 3 ; 3 >
-    au < ready ; 2008 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 4 ; 4 >
-    au < ready ; 2009 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 5 ; 5 >
-    au < ready ; 2010 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 6 ; 6 >
+    au < releasing ; 2005 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 1 ; 1 >
+    au < releasing ; 2006 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 2 ; 2 >
+    au < releasing ; 2007 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 3 ; 3 >
+    au < releasing ; 2008 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 4 ; 4 >
+    au < releasing ; 2009 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 5 ; 5 >
+    au < releasing ; 2010 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 6 ; 6 >
     au < released ; 2011 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 7 ; 7 >
     au < released ; 2012 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 8 ; 8 >
     au < expected ; 2013 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 9 ; 9 >
@@ -432,7 +432,7 @@
     >
     param[journal_issn] = 1947-3591
 
-    au < ready ; 2010 ; International Journal of Business Intelligence Research (IJBIR) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Business Intelligence Research (IJBIR) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Business Intelligence Research (IJBIR) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Business Intelligence Research (IJBIR) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Business Intelligence Research (IJBIR) Volume 4 ; 4 >
@@ -448,9 +448,9 @@
     >
     param[journal_issn] = 1548-0623
 
-    au < ready ; 2005 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 1 ; 1 >
-    au < ready ; 2006 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 2 ; 2 >
-    au < ready ; 2007 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 3 ; 3 >
+    au < releasing ; 2005 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 1 ; 1 >
+    au < releasing ; 2006 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 2 ; 2 >
+    au < releasing ; 2007 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 3 ; 3 >
 
   }
 
@@ -497,9 +497,9 @@
     param[journal_issn] = 1557-3958
 
     au < manifest ; 2007 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 1 ; 1 >
-    au < ready ; 2008 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 2 ; 2 >
-    au < ready ; 2009 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 3 ; 3 >
-    au < ready ; 2010 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 4 ; 4 >
+    au < releasing ; 2008 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 2 ; 2 >
+    au < releasing ; 2009 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 3 ; 3 >
+    au < releasing ; 2010 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 4 ; 4 >
     au < released ; 2011 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 5 ; 5 >
     au < released ; 2012 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 6 ; 6 >
     au < expected ; 2013 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 7 ; 7  >
@@ -516,7 +516,7 @@
     >
     param[journal_issn] = 1947-3133
 
-    au < ready ; 2010 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 4 ; 4 >
@@ -580,7 +580,7 @@
     >
     param[journal_issn] = 1947-3117
 
-    au < ready ; 2010 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 4 ; 4 >
@@ -597,7 +597,7 @@
     >
     param[journal_issn] = 1947-9247
 
-    au < ready ; 2010 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 4 ; 4 >
@@ -662,12 +662,12 @@
     >
     param[journal_issn] = 1548-3924
 
-    au < ready ; 2005 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 1 ; 1 >
-    au < ready ; 2006 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 2 ; 2 >
-    au < ready ; 2007 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 3 ; 3 >
-    au < ready ; 2008 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 4 ; 4 >
-    au < ready ; 2009 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 5 ; 5 >
-    au < ready ; 2010 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 6 ; 6 >
+    au < releasing ; 2005 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 1 ; 1 >
+    au < releasing ; 2006 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 2 ; 2 >
+    au < releasing ; 2007 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 3 ; 3 >
+    au < releasing ; 2008 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 4 ; 4 >
+    au < releasing ; 2009 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 5 ; 5 >
+    au < releasing ; 2010 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 6 ; 6 >
     au < released ; 2011 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 7 ; 7 >
     au < released ; 2012 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 8 ; 8 >
     au < expected ; 2013 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 9 ; 9 >
@@ -684,8 +684,8 @@
     >
     param[journal_issn] = 1941-6296
 
-    au < ready ; 2009 ; International Journal of Decision Support System Technology (IJDSST) Volume 1 ; 1 >
-    au < ready ; 2010 ; International Journal of Decision Support System Technology (IJDSST) Volume 2 ; 2 >
+    au < releasing ; 2009 ; International Journal of Decision Support System Technology (IJDSST) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Decision Support System Technology (IJDSST) Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Decision Support System Technology (IJDSST) Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of Decision Support System Technology (IJDSST) Volume 4 ; 4 >
     au < expected ; 2013 ; International Journal of Decision Support System Technology (IJDSST) Volume 5 ; 5 >
@@ -702,7 +702,7 @@
     >
     param[journal_issn] = 1947-9050
 
-    au < ready ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 4 ; 4 >
@@ -719,8 +719,8 @@
     >
     param[journal_issn] = 1941-6210
 
-    au < ready ; 2009 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 1 ; 1 >
-    au < ready ; 2010 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 2 ; 2 >
+    au < releasing ; 2009 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 4 ; 4 >
     au < expected ; 2013 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 5 ; 5 >
@@ -738,7 +738,7 @@
     param[journal_issn] = 1947-9077
     comment[0] = no links on manifest page
 
-    au < ready ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 >
     au < notReady ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Digital Library Systems (IJDLS) Volume 4 ; 4 >
@@ -1150,7 +1150,7 @@
 
     au < manifest ; 2010 ; International Journal of Handheld Computing Research (IJHCR) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Handheld Computing Research (IJHCR) Volume 2 ; 2 >
-    au < ready ; 2012 ; International Journal of Handheld Computing Research (IJHCR) Volume 3 ; 3 >
+    au < releasing ; 2012 ; International Journal of Handheld Computing Research (IJHCR) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Handheld Computing Research (IJHCR) Volume 4 ; 4 >
 
 
