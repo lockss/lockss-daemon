@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -28,13 +28,13 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Association for Computing Machinery Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
+    <string>"Association for Computing Machinery Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
