@@ -69,19 +69,19 @@
     param[journal_id] = csb
     param[journal_issn] = 0954-2299
 
-    au < releasing ; 1998 ; Chemical Speciation & Bioavailability Volume 10 ; 10 >
-    au < releasing ; 1999 ; Chemical Speciation & Bioavailability Volume 11 ; 11 >
-    au < releasing ; 2000 ; Chemical Speciation & Bioavailability Volume 12 ; 12 >
-    au < releasing ; 2001 ; Chemical Speciation & Bioavailability Volume 13 ; 13 >
-    au < releasing ; 2002 ; Chemical Speciation & Bioavailability Volume 14 ; 14 >
-    au < releasing ; 2003 ; Chemical Speciation & Bioavailability Volume 15 ; 15 >
-    au < releasing ; 2004 ; Chemical Speciation & Bioavailability Volume 16 ; 16 >
-    au < releasing ; 2005 ; Chemical Speciation & Bioavailability Volume 17 ; 17 >
-    au < releasing ; 2006 ; Chemical Speciation & Bioavailability Volume 18 ; 18 >
-    au < releasing ; 2007 ; Chemical Speciation & Bioavailability Volume 19 ; 19 >
-    au < releasing ; 2008 ; Chemical Speciation & Bioavailability Volume 20 ; 20 >
-    au < releasing ; 2009 ; Chemical Speciation & Bioavailability Volume 21 ; 21 >
-    au < releasing ; 2010 ; Chemical Speciation & Bioavailability Volume 22 ; 22 >
+    au < released ; 1998 ; Chemical Speciation & Bioavailability Volume 10 ; 10 >
+    au < released ; 1999 ; Chemical Speciation & Bioavailability Volume 11 ; 11 >
+    au < released ; 2000 ; Chemical Speciation & Bioavailability Volume 12 ; 12 >
+    au < released ; 2001 ; Chemical Speciation & Bioavailability Volume 13 ; 13 >
+    au < released ; 2002 ; Chemical Speciation & Bioavailability Volume 14 ; 14 >
+    au < released ; 2003 ; Chemical Speciation & Bioavailability Volume 15 ; 15 >
+    au < released ; 2004 ; Chemical Speciation & Bioavailability Volume 16 ; 16 >
+    au < released ; 2005 ; Chemical Speciation & Bioavailability Volume 17 ; 17 >
+    au < released ; 2006 ; Chemical Speciation & Bioavailability Volume 18 ; 18 >
+    au < released ; 2007 ; Chemical Speciation & Bioavailability Volume 19 ; 19 >
+    au < released ; 2008 ; Chemical Speciation & Bioavailability Volume 20 ; 20 >
+    au < released ; 2009 ; Chemical Speciation & Bioavailability Volume 21 ; 21 >
+    au < released ; 2010 ; Chemical Speciation & Bioavailability Volume 22 ; 22 >
     au < released ; 2011 ; Chemical Speciation & Bioavailability Volume 23 ; 23 >
     au < released ; 2012 ; Chemical Speciation & Bioavailability Volume 24 ; 24 >
 
@@ -99,17 +99,17 @@
     param[journal_issn] = 1747-5198
 
 
-    au < releasing ; 2000 ; Journal of Chemical Research Volume 2000 ; 2000 >
+    au < released ; 2000 ; Journal of Chemical Research Volume 2000 ; 2000 >
     au < testing ; 2001 ; Journal of Chemical Research Volume 2001 ; 2001 >
     au < testing ; 2002 ; Journal of Chemical Research Volume 2002 ; 2002 >
-    au < releasing ; 2003 ; Journal of Chemical Research Volume 2003 ; 2003 >
-    au < releasing ; 2004 ; Journal of Chemical Research Volume 2004 ; 2004 >
-    au < releasing ; 2005 ; Journal of Chemical Research Volume 2005 ; 2005 >
-    au < releasing ; 2006 ; Journal of Chemical Research Volume 2006 ; 2006 >
-    au < releasing ; 2007 ; Journal of Chemical Research Volume 2007 ; 2007 >
-    au < releasing ; 2008 ; Journal of Chemical Research Volume 2008 ; 2008 >
-    au < releasing ; 2009 ; Journal of Chemical Research Volume 2009 ; 2009 >
-    au < releasing ; 2010 ; Journal of Chemical Research Volume 34 ; 34 >
+    au < released ; 2003 ; Journal of Chemical Research Volume 2003 ; 2003 >
+    au < released ; 2004 ; Journal of Chemical Research Volume 2004 ; 2004 >
+    au < released ; 2005 ; Journal of Chemical Research Volume 2005 ; 2005 >
+    au < released ; 2006 ; Journal of Chemical Research Volume 2006 ; 2006 >
+    au < released ; 2007 ; Journal of Chemical Research Volume 2007 ; 2007 >
+    au < released ; 2008 ; Journal of Chemical Research Volume 2008 ; 2008 >
+    au < released ; 2009 ; Journal of Chemical Research Volume 2009 ; 2009 >
+    au < released ; 2010 ; Journal of Chemical Research Volume 34 ; 34 >
     au < testing ; 2011 ; Journal of Chemical Research Volume 35 ; 35 >
     au < testing ; 2012 ; Journal of Chemical Research Volume 36 ; 36 >
 
@@ -128,7 +128,7 @@
     param[journal_issn] = 0308-2350
     comment[jcrm] = not on publisher site but still on Ingenta
 
-    au < releasing ; 2003 ; Journal of Chemical Research (Miniprint) Volume 2003 ; 2003 >
+    au < released ; 2003 ; Journal of Chemical Research (Miniprint) Volume 2003 ; 2003 >
 
   }
 
@@ -144,20 +144,20 @@
     param[journal_id] = maht
     param[journal_issn] = 0960-3409
 
-    au < releasing ; 1999 ; Materials at High Temperatures Volume 16 ; 16 >
-    au < releasing ; 2000 ; Materials at High Temperatures Volume 17 ; 17 >
-    au < releasing ; 2001 ; Materials at High Temperatures Volume 18 ; 18 >
-    au < releasing ; 2002 ; Materials at High Temperatures Volume 19 ; 19 >
-    au < releasing ; 2003 ; Materials at High Temperatures Volume 20 ; 20 >
-    au < releasing ; 2004 ; Materials at High Temperatures Volume 21 ; 21 >
-    au < releasing ; 2005 ; Materials at High Temperatures Volume 22 ; 22 >
-    au < releasing ; 2006 ; Materials at High Temperatures Volume 23 ; 23 >
-    au < releasing ; 2007 ; Materials at High Temperatures Volume 24 ; 24 >
-    au < releasing ; 2008 ; Materials at High Temperatures Volume 25 ; 25 >
-    au < releasing ; 2009 ; Materials at High Temperatures Volume 26 ; 26 >
-    au < releasing ; 2010 ; Materials at High Temperatures Volume 27 ; 27 >
-    au < releasing ; 2011 ; Materials at High Temperatures Volume 28 ; 28 >
-    au < releasing ; 2012 ; Materials at High Temperatures Volume 29 ; 29 >
+    au < released ; 1999 ; Materials at High Temperatures Volume 16 ; 16 >
+    au < released ; 2000 ; Materials at High Temperatures Volume 17 ; 17 >
+    au < released ; 2001 ; Materials at High Temperatures Volume 18 ; 18 >
+    au < released ; 2002 ; Materials at High Temperatures Volume 19 ; 19 >
+    au < released ; 2003 ; Materials at High Temperatures Volume 20 ; 20 >
+    au < released ; 2004 ; Materials at High Temperatures Volume 21 ; 21 >
+    au < released ; 2005 ; Materials at High Temperatures Volume 22 ; 22 >
+    au < released ; 2006 ; Materials at High Temperatures Volume 23 ; 23 >
+    au < released ; 2007 ; Materials at High Temperatures Volume 24 ; 24 >
+    au < released ; 2008 ; Materials at High Temperatures Volume 25 ; 25 >
+    au < released ; 2009 ; Materials at High Temperatures Volume 26 ; 26 >
+    au < released ; 2010 ; Materials at High Temperatures Volume 27 ; 27 >
+    au < released ; 2011 ; Materials at High Temperatures Volume 28 ; 28 >
+    au < released ; 2012 ; Materials at High Temperatures Volume 29 ; 29 >
 
   }
 
@@ -173,22 +173,22 @@
     param[journal_id] = prk
     param[journal_issn] = 1468-6783
 
-    au < releasing ; 1997 ; Progress in Reaction Kinetics & Mechanism Volume 22 ; 22 >
-    au < releasing ; 1998 ; Progress in Reaction Kinetics & Mechanism Volume 23 ; 23 >
-    au < releasing ; 1999 ; Progress in Reaction Kinetics & Mechanism Volume 24 ; 24 >
-    au < releasing ; 2000 ; Progress in Reaction Kinetics & Mechanism Volume 25 ; 25 >
-    au < releasing ; 2001 ; Progress in Reaction Kinetics & Mechanism Volume 26 ; 26 >
+    au < released ; 1997 ; Progress in Reaction Kinetics & Mechanism Volume 22 ; 22 >
+    au < released ; 1998 ; Progress in Reaction Kinetics & Mechanism Volume 23 ; 23 >
+    au < released ; 1999 ; Progress in Reaction Kinetics & Mechanism Volume 24 ; 24 >
+    au < released ; 2000 ; Progress in Reaction Kinetics & Mechanism Volume 25 ; 25 >
+    au < released ; 2001 ; Progress in Reaction Kinetics & Mechanism Volume 26 ; 26 >
     au < testing ; 2002 ; Progress in Reaction Kinetics & Mechanism Volume 27 ; 27 >
-    au < releasing ; 2003 ; Progress in Reaction Kinetics & Mechanism Volume 28 ; 28 >
-    au < releasing ; 2004 ; Progress in Reaction Kinetics & Mechanism Volume 29 ; 29 >
-    au < releasing ; 2005 ; Progress in Reaction Kinetics & Mechanism Volume 30 ; 30 >
-    au < releasing ; 2006 ; Progress in Reaction Kinetics & Mechanism Volume 31 ; 31 >
-    au < releasing ; 2007 ; Progress in Reaction Kinetics & Mechanism Volume 32 ; 32 >
-    au < releasing ; 2008 ; Progress in Reaction Kinetics & Mechanism Volume 33 ; 33 >
-    au < releasing ; 2009 ; Progress in Reaction Kinetics & Mechanism Volume 34 ; 34 >
-    au < releasing ; 2010 ; Progress in Reaction Kinetics & Mechanism Volume 35 ; 35 >
-    au < releasing ; 2011 ; Progress in Reaction Kinetics & Mechanism Volume 36 ; 36 >
-    au < releasing ; 2012 ; Progress in Reaction Kenetics & Mechanism Volume 37 ; 37 >
+    au < released ; 2003 ; Progress in Reaction Kinetics & Mechanism Volume 28 ; 28 >
+    au < released ; 2004 ; Progress in Reaction Kinetics & Mechanism Volume 29 ; 29 >
+    au < released ; 2005 ; Progress in Reaction Kinetics & Mechanism Volume 30 ; 30 >
+    au < released ; 2006 ; Progress in Reaction Kinetics & Mechanism Volume 31 ; 31 >
+    au < released ; 2007 ; Progress in Reaction Kinetics & Mechanism Volume 32 ; 32 >
+    au < released ; 2008 ; Progress in Reaction Kinetics & Mechanism Volume 33 ; 33 >
+    au < released ; 2009 ; Progress in Reaction Kinetics & Mechanism Volume 34 ; 34 >
+    au < released ; 2010 ; Progress in Reaction Kinetics & Mechanism Volume 35 ; 35 >
+    au < released ; 2011 ; Progress in Reaction Kinetics & Mechanism Volume 36 ; 36 >
+    au < released ; 2012 ; Progress in Reaction Kenetics & Mechanism Volume 37 ; 37 >
 
   }
 
@@ -203,18 +203,18 @@
     param[journal_id] = sciprg
     param[journal_issn] = 0036-8504
 
-    au < releasing ; 2001 ; Science Progress Volume 84 ; 84 >
-    au < releasing ; 2002 ; Science Progress Volume 85 ; 85 >
-    au < releasing ; 2003 ; Science Progress Volume 86 ; 86 >
-    au < releasing ; 2004 ; Science Progress Volume 87 ; 87 >
-    au < releasing ; 2005 ; Science Progress Volume 88 ; 88 >
-    au < releasing ; 2006 ; Science Progress Volume 89 ; 89 >
-    au < releasing ; 2007 ; Science Progress Volume 90 ; 90 >
-    au < releasing ; 2008 ; Science Progress Volume 91 ; 91 >
-    au < releasing ; 2009 ; Science Progress Volume 92 ; 92 >
-    au < releasing ; 2010 ; Science Progress Volume 93 ; 93 >
-    au < releasing ; 2011 ; Science Progress Volume 94 ; 94 >
-    au < releasing ; 2012 ; Science Progress Volume 95 ; 95 >
+    au < released ; 2001 ; Science Progress Volume 84 ; 84 >
+    au < released ; 2002 ; Science Progress Volume 85 ; 85 >
+    au < released ; 2003 ; Science Progress Volume 86 ; 86 >
+    au < released ; 2004 ; Science Progress Volume 87 ; 87 >
+    au < released ; 2005 ; Science Progress Volume 88 ; 88 >
+    au < released ; 2006 ; Science Progress Volume 89 ; 89 >
+    au < released ; 2007 ; Science Progress Volume 90 ; 90 >
+    au < released ; 2008 ; Science Progress Volume 91 ; 91 >
+    au < released ; 2009 ; Science Progress Volume 92 ; 92 >
+    au < released ; 2010 ; Science Progress Volume 93 ; 93 >
+    au < released ; 2011 ; Science Progress Volume 94 ; 94 >
+    au < released ; 2012 ; Science Progress Volume 95 ; 95 >
 
   }
 

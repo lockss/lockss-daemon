@@ -353,16 +353,16 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 1474-8932
  
-    au < releasing ; 1976-1980 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 17 ; 17 >   
-    au < releasing ; 1981-1985 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 18 ; 18 > 
-    au < releasing ; 1986-1989 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 19 ; 19 > 
-    au < releasing ; 1990-1993 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 20 ; 20 > 
-    au < releasing ; 1993-1996 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 21 ; 21 > 
-    au < releasing ; 1997 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 22 ; 22 > 
-    au < releasing ; 1998 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 23 ; 23 > 
-    au < releasing ; 1999 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 24 ; 24 > 
-    au < releasing ; 2000 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 25 ; 25 > 
-    au < releasing ; 2001 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 26 ; 26 > 
+    au < released ; 1976-1980 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 17 ; 17 >   
+    au < released ; 1981-1985 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 18 ; 18 > 
+    au < released ; 1986-1989 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 19 ; 19 > 
+    au < released ; 1990-1993 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 20 ; 20 > 
+    au < released ; 1993-1996 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 21 ; 21 > 
+    au < released ; 1997 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 22 ; 22 > 
+    au < released ; 1998 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 23 ; 23 > 
+    au < released ; 1999 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 24 ; 24 > 
+    au < released ; 2000 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 25 ; 25 > 
+    au < released ; 2001 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 26 ; 26 > 
 
   }
 
@@ -446,10 +446,10 @@
     param[journal_issn] = 1752-7260
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < releasing ; 2006 ; Bulletin of the Council for British Research in the Levant Volume 1 ; 1 > 
-    au < releasing ; 2007 ; Bulletin of the Council for British Research in the Levant Volume 2 ; 2 > 
-    au < releasing ; 2008 ; Bulletin of the Council for British Research in the Levant Volume 3 ; 3 > 
-    au < releasing ; 2009 ; Bulletin of the Council for British Research in the Levant Volume 4 ; 4 > 
+    au < released ; 2006 ; Bulletin of the Council for British Research in the Levant Volume 1 ; 1 > 
+    au < released ; 2007 ; Bulletin of the Council for British Research in the Levant Volume 2 ; 2 > 
+    au < released ; 2008 ; Bulletin of the Council for British Research in the Levant Volume 3 ; 3 > 
+    au < released ; 2009 ; Bulletin of the Council for British Research in the Levant Volume 4 ; 4 > 
     au < released ; 2010 ; Bulletin of the Council for British Research in the Levant Volume 5 ; 5 > 
     au < released ; 2011 ; Bulletin of the Council for British Research in the Levant Volume 6 ; 6 > 
     au < released ; 2012 ; Bulletin of the Council for British Research in the Levant Volume 7 ; 7 > 
@@ -476,39 +476,39 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[notReady] = RU4463, missing article page
 
-    au < releasing ; 1975 ; Byzantine and Modern Greek Studies Volume 1 ; 1 >
-    au < releasing ; 1976 ; Byzantine and Modern Greek Studies Volume 2 ; 2 >
-    au < releasing ; 1977 ; Byzantine and Modern Greek Studies Volume 3 ; 3 >
-    au < releasing ; 1978 ; Byzantine and Modern Greek Studies Volume 4 ; 4 >
+    au < released ; 1975 ; Byzantine and Modern Greek Studies Volume 1 ; 1 >
+    au < released ; 1976 ; Byzantine and Modern Greek Studies Volume 2 ; 2 >
+    au < released ; 1977 ; Byzantine and Modern Greek Studies Volume 3 ; 3 >
+    au < released ; 1978 ; Byzantine and Modern Greek Studies Volume 4 ; 4 >
     au < notReady ; 1979 ; Byzantine and Modern Greek Studies Volume 5 ; 5 >
-    au < releasing ; 1980 ; Byzantine and Modern Greek Studies Volume 6 ; 6 >
-    au < releasing ; 1981 ; Byzantine and Modern Greek Studies Volume 7 ; 7 >
-    au < releasing ; 1982 ; Byzantine and Modern Greek Studies Volume 8 ; 8 >
-    au < releasing ; 1984 ; Byzantine and Modern Greek Studies Volume 9 ; 9 >
-    au < releasing ; 1986 ; Byzantine and Modern Greek Studies Volume 10 ; 10 >
-    au < releasing ; 1987 ; Byzantine and Modern Greek Studies Volume 11 ; 11 >
-    au < releasing ; 1988 ; Byzantine and Modern Greek Studies Volume 12 ; 12 >
-    au < releasing ; 1989 ; Byzantine and Modern Greek Studies Volume 13 ; 13 >
-    au < releasing ; 1990 ; Byzantine and Modern Greek Studies Volume 14 ; 14 >
-    au < releasing ; 1991 ; Byzantine and Modern Greek Studies Volume 15 ; 15 >
-    au < releasing ; 1992 ; Byzantine and Modern Greek Studies Volume 16 ; 16 >
-    au < releasing ; 1993 ; Byzantine and Modern Greek Studies Volume 17 ; 17 >
-    au < releasing ; 1994 ; Byzantine and Modern Greek Studies Volume 18 ; 18 >
-    au < releasing ; 1995 ; Byzantine and Modern Greek Studies Volume 19 ; 19 >
-    au < releasing ; 1996 ; Byzantine and Modern Greek Studies Volume 20 ; 20 >
-    au < releasing ; 1997 ; Byzantine and Modern Greek Studies Volume 21 ; 21 >
-    au < releasing ; 1998 ; Byzantine and Modern Greek Studies Volume 22 ; 22 >
-    au < releasing ; 1999 ; Byzantine and Modern Greek Studies Volume 23 ; 23 >
-    au < releasing ; 2000 ; Byzantine and Modern Greek Studies Volume 24 ; 24 >
-    au < releasing ; 2001 ; Byzantine and Modern Greek Studies Volume 25 ; 25 >
-    au < releasing ; 2002 ; Byzantine and Modern Greek Studies Volume 26 ; 26 >
-    au < releasing ; 2003 ; Byzantine and Modern Greek Studies Volume 27 ; 27 >
-    au < releasing ; 2004 ; Byzantine and Modern Greek Studies Volume 28 ; 28 >
-    au < releasing ; 2005 ; Byzantine and Modern Greek Studies Volume 29 ; 29 >
-    au < releasing ; 2006 ; Byzantine and Modern Greek Studies Volume 30 ; 30 >
-    au < releasing ; 2007 ; Byzantine and Modern Greek Studies Volume 31 ; 31 >
-    au < releasing ; 2008 ; Byzantine and Modern Greek Studies Volume 32 ; 32 >
-    au < releasing ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 >
+    au < released ; 1980 ; Byzantine and Modern Greek Studies Volume 6 ; 6 >
+    au < released ; 1981 ; Byzantine and Modern Greek Studies Volume 7 ; 7 >
+    au < released ; 1982 ; Byzantine and Modern Greek Studies Volume 8 ; 8 >
+    au < released ; 1984 ; Byzantine and Modern Greek Studies Volume 9 ; 9 >
+    au < released ; 1986 ; Byzantine and Modern Greek Studies Volume 10 ; 10 >
+    au < released ; 1987 ; Byzantine and Modern Greek Studies Volume 11 ; 11 >
+    au < released ; 1988 ; Byzantine and Modern Greek Studies Volume 12 ; 12 >
+    au < released ; 1989 ; Byzantine and Modern Greek Studies Volume 13 ; 13 >
+    au < released ; 1990 ; Byzantine and Modern Greek Studies Volume 14 ; 14 >
+    au < released ; 1991 ; Byzantine and Modern Greek Studies Volume 15 ; 15 >
+    au < released ; 1992 ; Byzantine and Modern Greek Studies Volume 16 ; 16 >
+    au < released ; 1993 ; Byzantine and Modern Greek Studies Volume 17 ; 17 >
+    au < released ; 1994 ; Byzantine and Modern Greek Studies Volume 18 ; 18 >
+    au < released ; 1995 ; Byzantine and Modern Greek Studies Volume 19 ; 19 >
+    au < released ; 1996 ; Byzantine and Modern Greek Studies Volume 20 ; 20 >
+    au < released ; 1997 ; Byzantine and Modern Greek Studies Volume 21 ; 21 >
+    au < released ; 1998 ; Byzantine and Modern Greek Studies Volume 22 ; 22 >
+    au < released ; 1999 ; Byzantine and Modern Greek Studies Volume 23 ; 23 >
+    au < released ; 2000 ; Byzantine and Modern Greek Studies Volume 24 ; 24 >
+    au < released ; 2001 ; Byzantine and Modern Greek Studies Volume 25 ; 25 >
+    au < released ; 2002 ; Byzantine and Modern Greek Studies Volume 26 ; 26 >
+    au < released ; 2003 ; Byzantine and Modern Greek Studies Volume 27 ; 27 >
+    au < released ; 2004 ; Byzantine and Modern Greek Studies Volume 28 ; 28 >
+    au < released ; 2005 ; Byzantine and Modern Greek Studies Volume 29 ; 29 >
+    au < released ; 2006 ; Byzantine and Modern Greek Studies Volume 30 ; 30 >
+    au < released ; 2007 ; Byzantine and Modern Greek Studies Volume 31 ; 31 >
+    au < released ; 2008 ; Byzantine and Modern Greek Studies Volume 32 ; 32 >
+    au < released ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 >
     au < released ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
     au < released ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
     au < released ; 2012 ; Byzantine and Modern Greek Studies Volume 36 ; 36 >
