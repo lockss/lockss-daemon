@@ -2549,21 +2549,21 @@
      >
      
       pluginSuffix = HighWirePressH20Plugin
-      param[base_url] = http://acb.sagepub.com/
+      param[base_url] = http://acbrsm.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
     
-      au < exists ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 >
-      au < exists ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 >
-      au < exists ; 2002 ; Annals of Clinical Biochemistry Volume 39 ; 39 >
-      au < exists ; 2003 ; Annals of Clinical Biochemistry Volume 40 ; 40 >
-      au < exists ; 2004 ; Annals of Clinical Biochemistry Volume 41 ; 41 >
-      au < exists ; 2005 ; Annals of Clinical Biochemistry Volume 42 ; 42 >
-      au < exists ; 2006 ; Annals of Clinical Biochemistry Volume 43 ; 43 >
-      au < exists ; 2007 ; Annals of Clinical Biochemistry Volume 44 ; 44 >
-      au < exists ; 2008 ; Annals of Clinical Biochemistry Volume 45 ; 45 >
-      au < exists ; 2009 ; Annals of Clinical Biochemistry Volume 46 ; 46 >
-      au < exists ; 2010 ; Annals of Clinical Biochemistry Volume 47 ; 47 >
-      au < exists ; 2011 ; Annals of Clinical Biochemistry Volume 48 ; 48 >
+      au < doNotProcess ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 >
+      au < doNotProcess ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 >
+      au < doNotProcess ; 2002 ; Annals of Clinical Biochemistry Volume 39 ; 39 >
+      au < doNotProcess ; 2003 ; Annals of Clinical Biochemistry Volume 40 ; 40 >
+      au < doNotProcess ; 2004 ; Annals of Clinical Biochemistry Volume 41 ; 41 >
+      au < doNotProcess ; 2005 ; Annals of Clinical Biochemistry Volume 42 ; 42 >
+      au < doNotProcess ; 2006 ; Annals of Clinical Biochemistry Volume 43 ; 43 >
+      au < doNotProcess ; 2007 ; Annals of Clinical Biochemistry Volume 44 ; 44 >
+      au < doNotProcess ; 2008 ; Annals of Clinical Biochemistry Volume 45 ; 45 >
+      au < doNotProcess ; 2009 ; Annals of Clinical Biochemistry Volume 46 ; 46 >
+      au < doNotProcess ; 2010 ; Annals of Clinical Biochemistry Volume 47 ; 47 >
+      au < doNotProcess ; 2011 ; Annals of Clinical Biochemistry Volume 48 ; 48 >
       au < exists ; 2012 ; Annals of Clinical Biochemistry Volume 49 ; 49 >
       au < expected ; 2013 ; Annals of Clinical Biochemistry Volume 50 ; 50 >
     
