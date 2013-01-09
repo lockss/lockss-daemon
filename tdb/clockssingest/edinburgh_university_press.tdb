@@ -655,7 +655,7 @@
     param[journal_id] = sound
 
     au < released ; crawling ; 2011 ; The New Soundtrack Volume 1 ; 1 >
-    au < crawling ; exists ; 2012 ; The New Soundtrack Volume 2 ; 2 >
+    au < released ; manifest ; 2012 ; The New Soundtrack Volume 2 ; 2 >
 
 
   }
@@ -673,7 +673,7 @@
 
     au < released ; crawling ; 2010 ; Northern Scotland Volume 1 ; 1 >
     au < released ; crawling ; 2011 ; Northern Scotland Volume 2 ; 2 >
-    au < crawling ; exists ; 2012 ; Northern Scotland Volume 3 ; 3 >
+    au < released ; manifest ; 2012 ; Northern Scotland Volume 3 ; 3 >
 
 
   }
@@ -691,7 +691,7 @@
 
       param[journal_id] = nfs
       
-      au < crawling ; exists ; 2012 ; Nottingham French Studies Volume 50 ; 50 >
+      au < released ; manifest ; 2012 ; Nottingham French Studies Volume 50 ; 50 >
   
     }
   
@@ -713,7 +713,7 @@
     au < released ; crawling ; 2009 ; Oxford Literary Review Volume 31 ; 31 >
     au < released ; crawling ; 2010 ; Oxford Literary Review Volume 32 ; 32 >
     au < released ; crawling ; 2011 ; Oxford Literary Review Volume 33 ; 33 >
-    au < crawling ; exists ; 2012 ; Oxford Literary Review Volume 34 ; 34 >
+    au < released ; manifest ; 2012 ; Oxford Literary Review Volume 34 ; 34 >
 
   }
 
@@ -739,7 +739,7 @@
     au < released ; crawling ; 2009 ; Paragraph Volume 32 ; 32 >
     au < released ; crawling ; 2010 ; Paragraph Volume 33 ; 33 >
     au < released ; crawling ; 2011 ; Paragraph Volume 34 ; 34 >
-    au < crawling ; exists ; 2012 ; Paragraph Volume 35 ; 35 >
+    au < released ; manifest ; 2012 ; Paragraph Volume 35 ; 35 >
 
   }
 
@@ -767,7 +767,7 @@
     au < released ; crawling ; 2009 ; Psychoanalysis and History Volume 11 ; 11 >
     au < released ; crawling ; 2010 ; Psychoanalysis and History Volume 12 ; 12 >
     au < released ; crawling ; 2011 ; Psychoanalysis and History Volume 13 ; 13 >
-    au < crawling ; exists ; 2012 ; Psychoanalysis and History Volume 14 ; 14 >
+    au < released ; manifest ; 2012 ; Psychoanalysis and History Volume 14 ; 14 >
 
   }
 
@@ -793,7 +793,7 @@
     au < released ; crawling ; 2009 ; Romanticism Volume 15 ; 15 >
     au < released ; crawling ; 2010 ; Romanticism Volume 16 ; 16 >
     au < released ; crawling ; 2011 ; Romanticism Volume 17 ; 17 >
-    au < crawling ; exists ; 2012 ; Romanticism Volume 18 ; 18 >
+    au < released ; manifest ; 2012 ; Romanticism Volume 18 ; 18 >
 
   }
 
@@ -866,7 +866,7 @@
     au < released ; crawling ; 2009 ; Scottish Historical Review Volume 88 ; 88 >
     au < released ; crawling ; 2010 ; Scottish Historical Review Volume 89 ; 89 >
     au < released ; crawling ; 2011 ; Scottish Historical Review Volume 90 ; 90 >
-    au < crawling ; exists ; 2012 ; Scottish Historical Review Volume 91 ; 91 >
+    au < released ; manifest ; 2012 ; Scottish Historical Review Volume 91 ; 91 >
 
   }
 
@@ -892,7 +892,7 @@
     au < released ; crawling ; 2009 ; Studies in World Christianity Volume 15 ; 15 >
     au < released ; crawling ; 2010 ; Studies in World Christianity Volume 16 ; 16 >
     au < released ; crawling ; 2011 ; Studies in World Christianity Volume 17 ; 17 >
-    au < crawling ; exists ; 2012 ; Studies in World Christianity Volume 18 ; 18 >
+    au < testing ; exists ; 2012 ; Studies in World Christianity Volume 18 ; 18 >
 
   }
 
@@ -917,7 +917,7 @@
     au < released ; crawling ; 2009 ; Translation and Literature Volume 18 ; 18 >
     au < released ; crawling ; 2010 ; Translation and Literature Volume 19 ; 19 >
     au < released ; crawling ; 2011 ; Translation and Literature Volume 20 ; 20 >
-    au < crawling ; exists ; 2012 ; Translation and Literature Volume 21 ; 21 >
+    au < testing ; exists ; 2012 ; Translation and Literature Volume 21 ; 21 >
 
   }
 
@@ -936,7 +936,7 @@
     au < released ; crawling ; 2009 ; Word Structure Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; Word Structure Volume 3 ; 3 >
     au < released ; crawling ; 2011 ; Word Structure Volume 4 ; 4 >
-    au < crawling ; exists ; 2012 ; Word Structure Volume 5 ; 5 >
+    au < testing ; exists ; 2012 ; Word Structure Volume 5 ; 5 >
 
   }
 
