@@ -21,9 +21,9 @@
     
     param[base_url] = http://www.leeds.ac.uk/classics/lics
   
-    au < down ; 1 ; Leeds International Classical Studies 2002 ; 2002 ; 2002 >
-    au < down ; 2 ; Leeds International Classical Studies 2003 ; 2003 ; 2003 >
-    au < down ; 3 ; Leeds International Classical Studies 2003-2004 ; 2004 ; 200304 >
+    au < superseded ; 1 ; Leeds International Classical Studies 2002 [superseded] ; 2002 ; 2002 >
+    au < superseded ; 2 ; Leeds International Classical Studies 2003 [superseded] ; 2003 ; 2003 >
+    au < superseded ; 3 ; Leeds International Classical Studies 2003-2004 [superseded] ; 2004 ; 200304 >
     
     }
     

@@ -21983,7 +21983,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2010 ; International Journal of Care Pathways 14 ; 14 >
       au < exists ; 2011 ; International Journal of Care Pathways 15 ; 15 >
       au < exists ; 2012 ; International Journal of Care Pathways 16 ; 16 >
-      au < expected ; 2013 ; International Journal of Care Pathways 16 ; 17 >
+      au < expected ; 2013 ; International Journal of Care Pathways 17 ; 17 >
     
     }
     
@@ -22016,7 +22016,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2010 ; International Journal of STD & AIDS 21 ; 21 >
       au < exists ; 2011 ; International Journal of STD & AIDS 22 ; 22 >
       au < exists ; 2012 ; International Journal of STD & AIDS 23 ; 23 >
-      au < expected ; 2013 ; International Journal of STD & AIDS 23 ; 24 >
+      au < expected ; 2013 ; International Journal of STD & AIDS 24 ; 24 >
     
     }
     
@@ -22097,7 +22097,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2010 ; Journal of Health Services Research & Policy 15 ; 15 >
       au < exists ; 2011 ; Journal of Health Services Research & Policy 16 ; 16 >
       au < exists ; 2012 ; Journal of Health Services Research & Policy 17 ; 17 >
-      au < expected ; 2013 ; Journal of Health Services Research & Policy 17 ; 18 >
+      au < expected ; 2013 ; Journal of Health Services Research & Policy 18 ; 18 >
     
     }
     
@@ -35204,22 +35204,7 @@ comment[mpj] = now published by Brill
         
         comment[base_url] = Use sexualities.sagepub.com.  Both sex.sagepub.com and sexualities.sagepub.com will work.
 
-        au < doNotProcess ; 1998 ; Sexualities Volume 1 ; 1 >
-        au < doNotProcess ; 1999 ; Sexualities Volume 2 ; 2 >
-        au < doNotProcess ; 2000 ; Sexualities Volume 3 ; 3 >
-        au < doNotProcess ; 2001 ; Sexualities Volume 4 ; 4 >
-        au < doNotProcess ; 2002 ; Sexualities Volume 5 ; 5 >
-        au < doNotProcess ; 2003 ; Sexualities Volume 6 ; 6 >
-        au < doNotProcess ; 2004 ; Sexualities Volume 7 ; 7 >
-        au < doNotProcess ; 2005 ; Sexualities Volume 8 ; 8 >
-        au < doNotProcess ; 2006 ; Sexualities Volume 9 ; 9 >
-        au < doNotProcess ; 2007 ; Sexualities Volume 10 ; 10 >
-        au < doNotProcess ; 2008 ; Sexualities Volume 11 ; 11 >
-        au < doNotProcess ; 2009 ; Sexualities Volume 12 ; 12 >
-        au < doNotProcess ; 2010 ; Sexualities Volume 13 ; 13 >
-        au < released ; 2011 ; Sexualities Volume 14 ; 14 >
-        au < doNotProcess ; 2012 ; Sexualities Volume 15 ; 15 >
-        au < expected ; 2013 ; Sexualities Volume 16 ; 16 >
+        au < superseded ; 2011 ; Sexualities Volume 14 [superseded] ; 14 >
 
       }
 
@@ -41486,12 +41471,34 @@ comment[mpj] = now published by Brill
         issnl = 1755-7380
       >
 
-    comment[upcoming] = online 2013
-    pluginSuffix = HighWirePressH20Plugin
-    param[base_url] = http://ino.sagepub.com/
-    implicit < status ; year ; name ; param[volume_name] >
+      {
 
-    au < exists ; 2013 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 ; 1 >
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://rcgp-innovait.oxfordjournals.org/
+        implicit < status ; year ; name ; param[volume_name] >
+    
+        au < superseded ; 2008 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 [superseded] ; 1 >
+        au < superseded ; 2009 ; InnovAiT: The RCGP Journal for Associates in Training Volume 2 [superseded] ; 2 >
+        au < superseded ; 2010 ; InnovAiT: The RCGP Journal for Associates in Training Volume 3 [superseded] ; 3 >
+        au < superseded ; 2011 ; InnovAiT: The RCGP Journal for Associates in Training Volume 4 [superseded] ; 4 >
+        au < superseded ; 2012 ; InnovAiT: The RCGP Journal for Associates in Training Volume 5 [superseded] ; 5 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ino.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2008 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 ; 1 >
+        au < exists ; 2009 ; InnovAiT: The RCGP Journal for Associates in Training Volume 2 ; 2 >
+        au < exists ; 2010 ; InnovAiT: The RCGP Journal for Associates in Training Volume 3 ; 3 >
+        au < exists ; 2011 ; InnovAiT: The RCGP Journal for Associates in Training Volume 4 ; 4 >
+        au < exists ; 2012 ; InnovAiT: The RCGP Journal for Associates in Training Volume 5 ; 5 >
+        au < expected ; 2013 ; InnovAiT: The RCGP Journal for Associates in Training Volume 6 ; 6 >
+        
+      }
 
     }
 

@@ -209,12 +209,12 @@
       param[base_url] = http://journals.sfu.ca/pocol/
       param[journal_id] = pct
       
-      au < down ; 2005 ; Postcolonial Text Volume 1 ; 1 ; 2005 >
-      au < down ; 2006 ; Postcolonial Text Volume 2 ; 2 ; 2006 >
-      au < down ; 2007 ; Postcolonial Text Volume 3 ; 3 ; 2007 >
-      au < doNotProcess ; 2008 ; Postcolonial Text Volume 4 ; 4 ; 2008 >
-      au < down ; 2009 ; Postcolonial Text Volume 5 ; 5 ; 2009 >
-      au < down ; 2011 ; Postcolonial Text Volume 6 ; 6 ; 2011 >
+      au < down ; 2005 ; Postcolonial Text Volume 1 [superseded] ; 1 ; 2005 >
+      au < down ; 2006 ; Postcolonial Text Volume 2 [superseded] ; 2 ; 2006 >
+      au < down ; 2007 ; Postcolonial Text Volume 3 [superseded] ; 3 ; 2007 >
+      au < doNotProcess ; 2008 ; Postcolonial Text Volume 4 [superseded] ; 4 ; 2008 >
+      au < down ; 2009 ; Postcolonial Text Volume 5 [superseded] ; 5 ; 2009 >
+      au < down ; 2011 ; Postcolonial Text Volume 6 [superseded] ; 6 ; 2011 >
       
       }
       
