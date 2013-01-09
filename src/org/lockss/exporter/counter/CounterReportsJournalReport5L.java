@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsJournalReport5L.java,v 1.2 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: CounterReportsJournalReport5L.java,v 1.3 2013-01-09 04:05:12 fergaloy-sf Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class CounterReportsJournalReport5L
   // criteria.
   private static final String SQL_QUERY_REPORT_JOURNALS_5L_SELECT = "select "
       + "distinct a." + PUBLICATION_SEQ_COLUMN
-      + ", m1." + PRIMARY_NAME_COLUMN
+      + ", n." + NAME_COLUMN
       + ", p." + PUBLICATION_ID_COLUMN
       + ", pu." + PUBLISHER_NAME_COLUMN
       + ", pl." + PLATFORM_COLUMN
@@ -71,6 +71,8 @@ public class CounterReportsJournalReport5L
       + " and i2." + ISSN_TYPE_COLUMN + " = '" + E_ISSN_TYPE + "'"
       + " left outer join " + DOI_TABLE + " d"
       + " on m1." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " left outer join " + MD_ITEM_NAME_TABLE + " n"
+      + " on m1." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
       + " where "
       + "((a." + REQUEST_MONTH_COLUMN + " >= ?"
       + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
@@ -82,12 +84,12 @@ public class CounterReportsJournalReport5L
       + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
       + " and pu." + PUBLISHER_NAME_COLUMN + " != '" + ALL_PUBLISHERS_NAME + "'"
       + " and p." + MD_ITEM_SEQ_COLUMN + " = m1." + MD_ITEM_SEQ_COLUMN
-      + " and m1." + PRIMARY_NAME_COLUMN + " != '" + ALL_JOURNALS_NAME + "'"
+      + " and n." + NAME_COLUMN + " != '" + ALL_JOURNALS_NAME + "'"
       + " and m1." + MD_ITEM_SEQ_COLUMN + " = m2." + PARENT_SEQ_COLUMN
       + " and m2." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
       + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
       + " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
-      + " order by m1." + PRIMARY_NAME_COLUMN + " asc";
+      + " order by n." + NAME_COLUMN + " asc";
 
   // Query to get the journal request counts to be included in the report.
   // This the same query used for Journal Report 5, except for the fact that in
@@ -95,13 +97,15 @@ public class CounterReportsJournalReport5L
   // criteria.
   private static final String SQL_QUERY_REPORT_REQUESTS_5L_SELECT = "select "
       + "a." + PUBLICATION_SEQ_COLUMN
-      + ", m1." + PRIMARY_NAME_COLUMN
+      + ", n." + NAME_COLUMN
       + ", a." + PUBLICATION_YEAR_COLUMN
       + ", sum(a." + REQUESTS_COLUMN + ") as " + REQUESTS_COLUMN
       + " from " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE + " a"
       + "," + PUBLICATION_TABLE + " p"
       + "," + PUBLISHER_TABLE + " pu"
       + "," + MD_ITEM_TABLE + " m1"
+      + " left outer join " + MD_ITEM_NAME_TABLE + " n"
+      + " on m1." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
       + " where "
       + "((a." + REQUEST_MONTH_COLUMN + " >= ?"
       + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
@@ -113,11 +117,11 @@ public class CounterReportsJournalReport5L
       + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
       + " and pu." + PUBLISHER_NAME_COLUMN + " != '" + ALL_PUBLISHERS_NAME + "'"
       + " and p." + MD_ITEM_SEQ_COLUMN + " = m1." + MD_ITEM_SEQ_COLUMN
-      + " and m1." + PRIMARY_NAME_COLUMN + " != '" + ALL_JOURNALS_NAME + "'"
-      + " group by m1." + PRIMARY_NAME_COLUMN
+      + " and n." + NAME_COLUMN + " != '" + ALL_JOURNALS_NAME + "'"
+      + " group by n." + NAME_COLUMN
       + ", a." + PUBLICATION_SEQ_COLUMN
       + ", a." + PUBLICATION_YEAR_COLUMN
-      + " order by m1." + PRIMARY_NAME_COLUMN + " asc"
+      + " order by n." + NAME_COLUMN
       + ", a." + PUBLICATION_YEAR_COLUMN + " desc";
 
   /**

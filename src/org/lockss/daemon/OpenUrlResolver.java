@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.40 2013-01-05 19:58:48 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.41 2013-01-09 04:05:12 fergaloy-sf Exp $
  */
 
 /*
@@ -1240,9 +1240,14 @@ public class OpenUrlResolver {
           if (spage != null) {
             where.append(" or ");
           }
-          where.append("upper(");
-          where.append("m." + PRIMARY_NAME_COLUMN);
-          where.append(") like ? escape '\\'");
+
+          from.append("," + MD_ITEM_NAME_TABLE + " name");
+
+          where.append("(m." + MD_ITEM_SEQ_COLUMN + " = ");
+          where.append("name." + MD_ITEM_SEQ_COLUMN + " and ");
+          where.append("upper(name." + NAME_COLUMN);
+          where.append(") like ? escape '\\')");
+
           args.add(atitle.toUpperCase().replace("%","\\%") + "%");
         }
         if ( author != null) {
@@ -2077,9 +2082,15 @@ public class OpenUrlResolver {
           if (spage != null) {
             where.append(" or ");
           }
-          where.append("m." + PRIMARY_NAME_COLUMN);
-          where.append(" like ? escape '\\'");
-          args.add(atitle.replace("%","\\%") + "%");
+
+          from.append("," + MD_ITEM_NAME_TABLE + " name");
+
+          where.append("(m." + MD_ITEM_SEQ_COLUMN + " = ");
+          where.append("name." + MD_ITEM_SEQ_COLUMN + " and ");
+          where.append("upper(name." + NAME_COLUMN);
+          where.append(") like ? escape '\\')");
+
+          args.add(atitle.toUpperCase().replace("%","\\%") + "%");
         }
 
         if (author != null) {

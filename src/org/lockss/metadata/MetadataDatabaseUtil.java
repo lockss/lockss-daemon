@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.5 2013-01-08 06:35:15 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.6 2013-01-09 04:05:12 fergaloy-sf Exp $
  */
 
 /*
@@ -33,6 +33,7 @@
 package org.lockss.metadata;
 
 import static org.lockss.db.DbManager.*;
+import static org.lockss.metadata.MetadataManager.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -233,7 +234,12 @@ final public class MetadataDatabaseUtil {
   static final String PUBINFO_QUERY =
         "select "
       +    PUBLICATION_SEQ_COLUMN + ", "
-      +    PRIMARY_NAME_COLUMN + " publication_name, " 
+      +   "(select " + NAME_COLUMN + " from " + MD_ITEM_NAME_TABLE
+      +   " where " 
+      +      MD_ITEM_SEQ_COLUMN 
+      +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
+      +      NAME_TYPE_COLUMN
+      +      " = '" + PRIMARY_NAME_TYPE + "') publication_name, "
       +   "(select formatissn(" + ISSN_COLUMN + ") from " + ISSN_TABLE
       +   " where " 
       +      MD_ITEM_SEQ_COLUMN 

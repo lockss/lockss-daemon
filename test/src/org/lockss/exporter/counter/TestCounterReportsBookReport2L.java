@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsBookReport2L.java,v 1.4 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: TestCounterReportsBookReport2L.java,v 1.5 2013-01-09 04:05:12 fergaloy-sf Exp $
  */
 
 /*
@@ -39,6 +39,7 @@
 package org.lockss.exporter.counter;
 
 import static org.lockss.db.DbManager.*;
+import static org.lockss.metadata.MetadataManager.PRIMARY_NAME_TYPE;
 import static org.lockss.plugin.ArticleFiles.*;
 import java.io.BufferedReader;
 import java.io.File;
@@ -289,8 +290,10 @@ public class TestCounterReportsBookReport2L extends LockssTestCase {
 	  metadataManager.findMetadataItemType(conn, MD_ITEM_TYPE_BOOK);
 
       mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                            auMdSeq, "2010-01-01",
-	  				    "The Full Book", null);
+                                            auMdSeq, "2010-01-01", null);
+
+	  metadataManager.addMdItemName(conn, mdItemSeq, "The Full Book",
+					PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
                                    FULL_URL);
@@ -346,8 +349,10 @@ public class TestCounterReportsBookReport2L extends LockssTestCase {
 	  metadataManager.findMetadataItemType(conn, MD_ITEM_TYPE_BOOK_CHAPTER);
 
       mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                            auMdSeq, "2010-02-02",
-	  				    "Chapter Name", null);
+                                            auMdSeq, "2010-02-02", null);
+
+	  metadataManager.addMdItemName(conn, mdItemSeq, "Chapter Name",
+					PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
                                    SECTION_URL);

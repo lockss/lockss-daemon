@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsBookReport2.java,v 1.3 2013-01-04 21:57:37 fergaloy-sf Exp $
+ * $Id: CounterReportsBookReport2.java,v 1.4 2013-01-09 04:05:12 fergaloy-sf Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
   // Query to get the books to be included in the report.
   private static final String SQL_QUERY_REPORT_BOOKS_SELECT = "select "
       + "distinct a." + PUBLICATION_SEQ_COLUMN
-      + ", m1." + PRIMARY_NAME_COLUMN
+      + ", n." + NAME_COLUMN
       + ", p." + PUBLICATION_ID_COLUMN
       + ", pu." + PUBLISHER_NAME_COLUMN
       + ", pl." + PLATFORM_COLUMN
@@ -81,6 +81,8 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
       + " and i2." + ISBN_TYPE_COLUMN + " = '" + E_ISBN_TYPE + "'"
       + " left outer join " + DOI_TABLE + " d"
       + " on m1." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " left outer join " + MD_ITEM_NAME_TABLE + " n"
+      + " on m1." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
       + " where "
       + "a." + IS_PUBLISHER_INVOLVED_COLUMN + " = false"
       + " and a." + SECTION_REQUESTS_COLUMN + " > 0"
@@ -94,17 +96,17 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
       + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
       + " and pu." + PUBLISHER_NAME_COLUMN + " != '" + ALL_PUBLISHERS_NAME + "'"
       + " and p." + MD_ITEM_SEQ_COLUMN + " = m1." + MD_ITEM_SEQ_COLUMN
-      + " and m1." + PRIMARY_NAME_COLUMN + " != '" + ALL_BOOKS_NAME + "'"
+      + " and n." + NAME_COLUMN + " != '" + ALL_BOOKS_NAME + "'"
       + " and m1." + MD_ITEM_SEQ_COLUMN + " = m2." + PARENT_SEQ_COLUMN
       + " and m2." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
       + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
       + " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
-      + " order by m1." + PRIMARY_NAME_COLUMN + " asc";
+      + " order by n." + NAME_COLUMN + " asc";
 
   // Query to get the book request counts to be included in the report.
   private static final String SQL_QUERY_REPORT_REQUESTS_SELECT = "select "
       + "a." + PUBLICATION_SEQ_COLUMN
-      + ", m1." + PRIMARY_NAME_COLUMN
+      + ", n." + NAME_COLUMN
       + ", a." + REQUEST_YEAR_COLUMN
       + ", a." + REQUEST_MONTH_COLUMN
       + ", a." + SECTION_REQUESTS_COLUMN
@@ -112,6 +114,8 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
       + "," + PUBLICATION_TABLE + " p"
       + "," + PUBLISHER_TABLE + " pu"
       + "," + MD_ITEM_TABLE + " m1"
+      + " left outer join " + MD_ITEM_NAME_TABLE + " n"
+      + " on m1." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
       + " where "
       + "a." + IS_PUBLISHER_INVOLVED_COLUMN + " = false"
       + " and a." + SECTION_REQUESTS_COLUMN + " > 0"
@@ -125,8 +129,8 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
       + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
       + " and pu." + PUBLISHER_NAME_COLUMN + " != '" + ALL_PUBLISHERS_NAME + "'"
       + " and p." + MD_ITEM_SEQ_COLUMN + " = m1." + MD_ITEM_SEQ_COLUMN
-      + " and m1." + PRIMARY_NAME_COLUMN + " != '" + ALL_BOOKS_NAME + "'"
-      + " order by m1." + PRIMARY_NAME_COLUMN
+      + " and n." + NAME_COLUMN + " != '" + ALL_BOOKS_NAME + "'"
+      + " order by n." + NAME_COLUMN
       + ", a." + REQUEST_YEAR_COLUMN
       + ", a." + REQUEST_MONTH_COLUMN + " asc";
 
@@ -238,7 +242,7 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
 
 	// Get the book properties.
 	book =
-	    new CounterReportsBook(resultSet.getString(PRIMARY_NAME_COLUMN),
+	    new CounterReportsBook(resultSet.getString(NAME_COLUMN),
 	                           resultSet.getString(PUBLISHER_NAME_COLUMN),
 	                           resultSet.getString(PLATFORM_COLUMN),
 	                           resultSet.getString(DOI_COLUMN),

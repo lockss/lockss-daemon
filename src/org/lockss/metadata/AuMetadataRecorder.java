@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.2 2013-01-04 21:57:37 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.3 2013-01-09 04:05:12 fergaloy-sf Exp $
  */
 
 /*
@@ -74,13 +74,16 @@ public class AuMetadataRecorder {
       + " where m." + MD_ITEM_SEQ_COLUMN + " = ?"
       + " and m." + MD_ITEM_TYPE_SEQ_COLUMN + " = t." + MD_ITEM_TYPE_SEQ_COLUMN;
 
-  // Query to find a metadata item by its type, Archival Unit and primary name.
+  // Query to find a metadata item by its type, Archival Unit and access URL.
   private static final String FIND_MD_ITEM_QUERY = "select "
-      + MD_ITEM_SEQ_COLUMN
-      + " from " + MD_ITEM_TABLE
-      + " where " + MD_ITEM_TYPE_SEQ_COLUMN + " = ?"
-      + " and " + AU_MD_SEQ_COLUMN + " = ?"
-      + " and " + PRIMARY_NAME_COLUMN + " = ?";
+      + "m." + MD_ITEM_SEQ_COLUMN
+      + " from " + MD_ITEM_TABLE + " m"
+      + "," + URL_TABLE + " u"
+      + " where m." + MD_ITEM_TYPE_SEQ_COLUMN + " = ?"
+      + " and m." + AU_MD_SEQ_COLUMN + " = ?"
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = u." + MD_ITEM_SEQ_COLUMN
+      + " and u." + FEATURE_COLUMN + " = '" + ACCESS_URL_FEATURE + "'"
+      + " and u." + URL_COLUMN + " = ?";
 
   // Query to find the featured URLs of a metadata item.
   private static final String FIND_MD_ITEM_FEATURED_URL_QUERY = "select "
@@ -743,13 +746,15 @@ public class AuMetadataRecorder {
       // Yes: Create the new metadata item in the database.
       mdItemSeq =
 	  mdManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq, date,
-			      itemTitle, coverage);
+			      coverage);
       log.debug3(DEBUG_HEADER + "new mdItemSeq = " + mdItemSeq);
+
+	  mdManager.addMdItemName(conn, mdItemSeq, itemTitle, PRIMARY_NAME_TYPE);
 
       newMdItem = true;
     } else {
       // No: Find the metadata item in the database.
-      mdItemSeq = findMdItem(conn, mdItemTypeSeq, auMdSeq, itemTitle);
+      mdItemSeq = findMdItem(conn, mdItemTypeSeq, auMdSeq, accessUrl);
       log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
 
       // Check whether it is a new metadata item.
@@ -757,8 +762,10 @@ public class AuMetadataRecorder {
 	// Yes: Create it.
 	mdItemSeq =
 	    mdManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq, date,
-				itemTitle, coverage);
+				coverage);
 	log.debug3(DEBUG_HEADER + "new mdItemSeq = " + mdItemSeq);
+
+	  mdManager.addMdItemName(conn, mdItemSeq, itemTitle, PRIMARY_NAME_TYPE);
 
 	newMdItem = true;
       }
@@ -872,14 +879,14 @@ public class AuMetadataRecorder {
    *          A Long with the identifier of the metadata item type.
    * @param auMdSeq
    *          A Long with the identifier of the archival unit metadata.
-   * @param primaryName
-   *          A String with the primary name of the metadata item.
+   * @param accessUrl
+   *          A String with the access URL of the metadata item.
    * @return a Long with the identifier of the metadata item.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
   private Long findMdItem(Connection conn, Long mdItemTypeSeq, Long auMdSeq,
-      String primaryName) throws SQLException {
+      String accessUrl) throws SQLException {
     final String DEBUG_HEADER = "findMdItem(): ";
     Long mdItemSeq = null;
     ResultSet resultSet = null;
@@ -889,7 +896,7 @@ public class AuMetadataRecorder {
     try {
       findMdItem.setLong(1, mdItemTypeSeq);
       findMdItem.setLong(2, auMdSeq);
-      findMdItem.setString(3, primaryName);
+      findMdItem.setString(3, accessUrl);
 
       resultSet = dbManager.executeQuery(findMdItem);
       if (resultSet.next()) {

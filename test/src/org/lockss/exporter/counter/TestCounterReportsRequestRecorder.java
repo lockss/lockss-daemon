@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestRecorder.java,v 1.4 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestRecorder.java,v 1.5 2013-01-09 04:05:12 fergaloy-sf Exp $
  */
 
 /*
@@ -39,6 +39,7 @@
 package org.lockss.exporter.counter;
 
 import static org.lockss.db.DbManager.*;
+import static org.lockss.metadata.MetadataManager.PRIMARY_NAME_TYPE;
 import static org.lockss.plugin.ArticleFiles.*;
 import java.io.File;
 import java.sql.Connection;
@@ -164,14 +165,17 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 	  metadataManager.findMetadataItemType(conn, MD_ITEM_TYPE_BOOK);
 
       Long mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                                 auMdSeq, "2009-01-01", "TOC",
-                                                 null);
+                                                 auMdSeq, "2009-01-01", null);
+
+	  metadataManager.addMdItemName(conn, mdItemSeq, "TOC", PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, "", IGNORABLE_URL);
 
       mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                            auMdSeq, "2009-01-01",
-	  				    "The Full Book", null);
+                                            auMdSeq, "2009-01-01", null);
+
+	  metadataManager.addMdItemName(conn, mdItemSeq, "The Full Book",
+					PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
                                    RECORDABLE_URL);

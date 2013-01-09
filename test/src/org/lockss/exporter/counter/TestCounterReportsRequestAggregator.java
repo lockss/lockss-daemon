@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestAggregator.java,v 1.4 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestAggregator.java,v 1.5 2013-01-09 04:05:12 fergaloy-sf Exp $
  */
 
 /*
@@ -39,6 +39,7 @@
 package org.lockss.exporter.counter;
 
 import static org.lockss.db.DbManager.*;
+import static org.lockss.metadata.MetadataManager.PRIMARY_NAME_TYPE;
 import static org.lockss.plugin.ArticleFiles.*;
 import java.io.File;
 import java.sql.Connection;
@@ -396,7 +397,10 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 
       Long mdItemSeq =
 	  metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq,
-	                            "2010-01-01", "Full Name", null);
+	                            "2010-01-01", null);
+
+	  metadataManager.addMdItemName(conn, mdItemSeq, "Full Name",
+					PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
                                    FULL_URL);
@@ -453,7 +457,10 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 
       Long mdItemSeq =
 	  metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq,
-	                            "2010-01-01", "Chapter Name", null);
+	                            "2010-01-01", null);
+
+	  metadataManager.addMdItemName(conn, mdItemSeq, "Chapter Name",
+					PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
                                    SECTION_URL);
@@ -677,14 +684,17 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 	  .findMetadataItemType(conn, MD_ITEM_TYPE_JOURNAL_ARTICLE);
 
       Long mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                            auMdSeq, "2009-01-01", "html",
-                                            null);
+                                            auMdSeq, "2009-01-01", null);
+
+	  metadataManager.addMdItemName(conn, mdItemSeq, "html", PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
                                    HTML_URL);
 
       mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                            auMdSeq, "2009-01-01", "pdf", null);
+                                            auMdSeq, "2009-01-01", null);
+
+	  metadataManager.addMdItemName(conn, mdItemSeq, "pdf", PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
                                    PDF_URL);

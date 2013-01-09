@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.6 2013-01-06 06:36:32 tlipkis Exp $
+ * $Id: MetadataManager.java,v 1.7 2013-01-09 04:05:12 fergaloy-sf Exp $
  */
 
 /*
@@ -169,6 +169,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   public static final long NEVER_EXTRACTED_EXTRACTION_TIME = 0L;
 
   /**
+   * The standard type of a name that is primary.
+   */
+  public static final String PRIMARY_NAME_TYPE = "primary";
+
+  /**
    * The standard type of a name that is not primary.
    */
   public static final String NOT_PRIMARY_NAME_TYPE = "not_primary";
@@ -253,9 +258,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "," + MD_ITEM_TYPE_SEQ_COLUMN
       + "," + AU_MD_SEQ_COLUMN
       + "," + DATE_COLUMN
-      + "," + PRIMARY_NAME_COLUMN
       + "," + COVERAGE_COLUMN
-      + ") values (default,?,?,?,?,?,?)";
+      + ") values (default,?,?,?,?,?)";
 
   // Query to add a publication.
   private static final String INSERT_PUBLICATION_QUERY = "insert into "
@@ -322,22 +326,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + " and m." + MD_ITEM_TYPE_SEQ_COLUMN + " = t." + MD_ITEM_TYPE_SEQ_COLUMN
       + " and t." + TYPE_NAME_COLUMN + " = ?";
 
-  // Query to find a publication by its primary name.
-  private static final String FIND_PUBLICATION_BY_PRIMARY_NAME_QUERY = "select"
-      + " p." + PUBLICATION_SEQ_COLUMN
-      + " from " + PUBLICATION_TABLE + " p,"
-      + MD_ITEM_TABLE + " m,"
-      + MD_ITEM_TYPE_TABLE + " t"
-      + " where p." + PUBLISHER_SEQ_COLUMN + " = ?"
-      + " and m." + AU_MD_SEQ_COLUMN + " is null"
-      + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
-      + " and m." + PRIMARY_NAME_COLUMN + " = ?"
-      + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
-      + " and m." + MD_ITEM_TYPE_SEQ_COLUMN + " = t." + MD_ITEM_TYPE_SEQ_COLUMN
-      + " and t." + TYPE_NAME_COLUMN + " = ?";
-
-  // Query to find a publication by its names.
-  private static final String FIND_PUBLICATION_BY_ALTERNATE_NAME_QUERY =
+  // Query to find a publication by its name.
+  private static final String FIND_PUBLICATION_BY_NAME_QUERY =
       "select p." + PUBLICATION_SEQ_COLUMN
       + " from " + PUBLICATION_TABLE + " p,"
       + MD_ITEM_TABLE + " m,"
@@ -357,12 +347,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + MD_ITEM_SEQ_COLUMN
       + " from " + PUBLICATION_TABLE
       + " where " + PUBLICATION_SEQ_COLUMN + " = ?";
-
-  // Query to find the primary name of a metadata item.
-  private static final String FIND_MD_ITEM_PRIMARY_NAME_QUERY = "select "
-      + PRIMARY_NAME_COLUMN
-      + " from " + MD_ITEM_TABLE
-      + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
 
   // Query to find the secondary names of a metadata item.
   private static final String FIND_MD_ITEM_NAME_QUERY = "select "
@@ -2355,13 +2339,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     Long mdItemSeq =
-	addMdItem(conn, parentSeq, mdItemTypeSeq, null, date, title, null);
+	addMdItem(conn, parentSeq, mdItemTypeSeq, null, date, null);
     log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
 
     if (mdItemSeq == null) {
 	log.error("Unable to create metadata item table row.");
 	return null;
     }
+
+    addMdItemName(conn, mdItemSeq, title, PRIMARY_NAME_TYPE);
 
     ResultSet resultSet = null;
 
@@ -2566,15 +2552,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     if (mdItemName == null) {
       return;
-    }
-
-    String primaryName = getMdItemPrimaryName(conn, mdItemSeq);
-    log.debug3(DEBUG_HEADER + "primaryName = " + primaryName);
-
-    if (mdItemName.equals(primaryName)) {
-	log.debug3(DEBUG_HEADER + "Primary title name = " + mdItemName
-	    + " already exists.");
-	return;
     }
 
     Map<String, String> titleNames = getMdItemNames(conn, mdItemSeq);
@@ -2918,42 +2895,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private Long findPublicationByName(Connection conn, String title,
       Long publisherSeq, String mdItemType) throws SQLException {
-    Long publicationSeq =
-	findPublicationByPrimaryName(conn, title, publisherSeq, mdItemType);
-
-    if (publicationSeq == null) {
-      publicationSeq =
-	  findPublicationByAlternateName(conn, title, publisherSeq, mdItemType);
-    }
-
-    return publicationSeq;
-  }
-
-  /**
-   * Provides the identifier of a publication by its primary title and
-   * publisher.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param title
-   *          A String with the title of the publication.
-   * @param publisherSeq
-   *          A Long with the publisher identifier.
-   * @param mdItemType
-   *          A String with the type of publication to be identified.
-   * @return a Long with the identifier of the publication.
-   * @throws SQLException
-   *           if any problem occurred accessing the database.
-   */
-  private Long findPublicationByPrimaryName(Connection conn, String title,
-      Long publisherSeq, String mdItemType) throws SQLException {
-    final String DEBUG_HEADER = "findPublicationByPrimaryName(): ";
+    final String DEBUG_HEADER = "findPublicationByName(): ";
     Long publicationSeq = null;
     ResultSet resultSet = null;
-    log.debug3(DEBUG_HEADER + "SQL = '" + FIND_PUBLICATION_BY_PRIMARY_NAME_QUERY
-               + "'.");
+    log.debug3(DEBUG_HEADER + "SQL = '" + FIND_PUBLICATION_BY_NAME_QUERY
+    		+ "'.");
     PreparedStatement findPublicationByName =
-	conn.prepareStatement(FIND_PUBLICATION_BY_PRIMARY_NAME_QUERY);
+	conn.prepareStatement(FIND_PUBLICATION_BY_NAME_QUERY);
 
     try {
       findPublicationByName.setLong(1, publisherSeq);
@@ -2969,57 +2917,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.error("Cannot find publication", sqle);
       log.error("publisherSeq = '" + publisherSeq + "'.");
       log.error("title = " + title);
-      log.error("SQL = '" + FIND_PUBLICATION_BY_PRIMARY_NAME_QUERY + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findPublicationByName);
-    }
-
-    return publicationSeq;
-  }
-
-  /**
-   * Provides the identifier of a publication by its alternate title and
-   * publisher.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param title
-   *          A String with the title of the publication.
-   * @param publisherSeq
-   *          A Long with the publisher identifier.
-   * @param mdItemType
-   *          A String with the type of publication to be identified.
-   * @return a Long with the identifier of the publication.
-   * @throws SQLException
-   *           if any problem occurred accessing the database.
-   */
-  private Long findPublicationByAlternateName(Connection conn, String title,
-      Long publisherSeq, String mdItemType) throws SQLException {
-    final String DEBUG_HEADER = "findPublicationByAlternateName(): ";
-    Long publicationSeq = null;
-    ResultSet resultSet = null;
-    log.debug3(DEBUG_HEADER + "SQL = '"
-	+ FIND_PUBLICATION_BY_ALTERNATE_NAME_QUERY + "'.");
-    PreparedStatement findPublicationByName =
-	conn.prepareStatement(FIND_PUBLICATION_BY_ALTERNATE_NAME_QUERY);
-
-    try {
-      findPublicationByName.setLong(1, publisherSeq);
-      findPublicationByName.setString(2, title);
-      findPublicationByName.setString(3, mdItemType);
-
-      resultSet = dbManager.executeQuery(findPublicationByName);
-      if (resultSet.next()) {
-	publicationSeq = resultSet.getLong(PUBLICATION_SEQ_COLUMN);
-	log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-      }
-    } catch (SQLException sqle) {
-      log.error("Cannot find publication", sqle);
-      log.error("publisherSeq = '" + publisherSeq + "'.");
-      log.error("title = " + title);
-      log.error("SQL = '" + FIND_PUBLICATION_BY_ALTERNATE_NAME_QUERY + "'.");
+      log.error("SQL = '" + FIND_PUBLICATION_BY_NAME_QUERY + "'.");
       throw sqle;
     } finally {
       DbManager.safeCloseResultSet(resultSet);
@@ -3083,8 +2981,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A Long with the identifier of the type of metadata item.
    * @param date
    *          A String with the publication date of the metadata item.
-   * @param primaryName
-   *          A String with the primary name of the metadata item.
    * @param coverage
    *          A String with the metadata item coverage.
    * @return a Long with the identifier of the metadata item just added.
@@ -3092,7 +2988,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *           if any problem occurred accessing the database.
    */
   public Long addMdItem(Connection conn, Long parentSeq,
-      Long mdItemTypeSeq, Long auMdSeq, String date, String primaryName,
+      Long mdItemTypeSeq, Long auMdSeq, String date,
       String coverage) throws SQLException {
     final String DEBUG_HEADER = "addMdItem(): ";
     PreparedStatement insertMdItem =
@@ -3116,14 +3012,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	insertMdItem.setNull(3, BIGINT);
       }
       insertMdItem.setString(4, date);
-      insertMdItem.setString(5, primaryName);
-      insertMdItem.setString(6, coverage);
+      insertMdItem.setString(5, coverage);
       dbManager.executeUpdate(insertMdItem);
       resultSet = insertMdItem.getGeneratedKeys();
 
       if (!resultSet.next()) {
-	log.error("Unable to create metadata item table row for primary name "
-	    + primaryName);
+    log.error("Unable to create metadata item table row.");
 	return null;
       }
 
@@ -3131,7 +3025,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.debug3(DEBUG_HEADER + "Added mdItemSeq = " + mdItemSeq);
     } catch (SQLException sqle) {
       log.error("Cannot insert metadata item", sqle);
-      log.error("primaryName = '" + primaryName + "'.");
       log.error("SQL = '" + INSERT_MD_ITEM_QUERY + "'.");
       throw sqle;
     } finally {
@@ -3140,40 +3033,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     return mdItemSeq;
-  }
-
-  /**
-   * Provides the primary name of a metadata item.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param mdItemSeq
-   *          A Long with the metadata item identifier.
-   * @return a String with the primary name of the metadata item.
-   * @throws SQLException
-   *           if any problem occurred accessing the database.
-   */
-  private String getMdItemPrimaryName(Connection conn, Long mdItemSeq)
-      throws SQLException {
-    final String DEBUG_HEADER = "getMdItemPrimaryName(): ";
-    String name = null;
-    PreparedStatement getName =
-	conn.prepareStatement(FIND_MD_ITEM_PRIMARY_NAME_QUERY);
-    ResultSet resultSet = null;
-
-    try {
-      getName.setLong(1, mdItemSeq);
-      resultSet = dbManager.executeQuery(getName);
-      if (resultSet.next()) {
-	name = resultSet.getString(PRIMARY_NAME_COLUMN);
-	log.debug3(DEBUG_HEADER + "name = '" + name);
-      }
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(getName);
-    }
-
-    return name;
   }
 
   /**
@@ -3227,7 +3086,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private void addMdItemName(Connection conn, Long mdItemSeq, String name,
+  public void addMdItemName(Connection conn, Long mdItemSeq, String name,
       String type) throws SQLException {
     final String DEBUG_HEADER = "addMdItemName(): ";
 

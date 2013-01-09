@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.9 2013-01-08 06:28:43 pgust Exp $
+ * $Id: DbManager.java,v 1.10 2013-01-09 04:05:12 fergaloy-sf Exp $
  */
 
 /*
@@ -343,9 +343,6 @@ public class DbManager extends BaseLockssDaemonManager {
 
   /** Date column. */
   public static final String DATE_COLUMN = "date";
-
-  /** Primary name column. */
-  public static final String PRIMARY_NAME_COLUMN = "primary_name";
 
   /** Name of the coverage column. */
   public static final String COVERAGE_COLUMN = "coverage";
@@ -719,7 +716,6 @@ public class DbManager extends BaseLockssDaemonManager {
       + AU_MD_SEQ_COLUMN + " bigint references " + AU_MD_TABLE
       + " (" + AU_MD_SEQ_COLUMN + ") on delete cascade,"
       + DATE_COLUMN + " varchar(" + MAX_DATE_COLUMN + "),"
-      + PRIMARY_NAME_COLUMN + " varchar(" + MAX_NAME_COLUMN + ") not null,"
       + COVERAGE_COLUMN + " varchar(" + MAX_COVERAGE_COLUMN + ")"
       + ")";
 

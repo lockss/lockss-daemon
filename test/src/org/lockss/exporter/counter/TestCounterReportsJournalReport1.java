@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport1.java,v 1.4 2012-12-07 07:27:04 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport1.java,v 1.5 2013-01-09 04:05:12 fergaloy-sf Exp $
  */
 
 /*
@@ -38,6 +38,7 @@
 package org.lockss.exporter.counter;
 
 import static org.lockss.db.DbManager.*;
+import static org.lockss.metadata.MetadataManager.PRIMARY_NAME_TYPE;
 import static org.lockss.plugin.ArticleFiles.*;
 import java.io.BufferedReader;
 import java.io.File;
@@ -289,15 +290,19 @@ public class TestCounterReportsJournalReport1 extends LockssTestCase {
 	                                       MD_ITEM_TYPE_JOURNAL_ARTICLE);
 
       Long mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                            auMdSeq, "2010-01-01",
-                                            "htmlArticle", null);
+                                            auMdSeq, "2010-01-01", null);
+
+	  metadataManager.addMdItemName(conn, mdItemSeq, "htmlArticle",
+					PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
                                    HTML_URL);
 
       mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                            auMdSeq, "2010-01-01", "pdfArticle",
-                                            null);
+                                            auMdSeq, "2010-01-01", null);
+
+	  metadataManager.addMdItemName(conn, mdItemSeq, "pdfArticle",
+					PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
                                    PDF_URL);
