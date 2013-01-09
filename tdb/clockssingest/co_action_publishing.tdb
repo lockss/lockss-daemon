@@ -60,7 +60,7 @@
       comment[0] = includes supplements
       comment[1] = AUs mistakenly released with 'www': ingested content has no substance
 
-      au < superseded ; crawling ; 2010 ; Diabetic Foot & Ankle Volume 1 [superseded] ; 1 ; 2010 >
+      au < superseded ; crawling ; 2010 ; Diabetic Foot & Ankle [including Supplements] Volume 1 [superseded] ; 1 ; 2010 >
       au < superseded ; crawling ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 [superseded] ; 2 ; 2011 >
       au < superseded ; crawling ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 [superseded] ; 3 ; 2012 >
     }
@@ -70,10 +70,10 @@
       param[journal_id] = dfa
       comment[0] = includes supplements
 
-      au < released ; crawling ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
-      au < released ; crawling ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
-      au < released ; crawling ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
-      au < expected ; exists ; 2013 ; Diabetic Foot & Ankle [including Supplements] Volume 4 ; 4 ; 2013 >
+      au < released ; crawling ; 2010 ; Diabetic Foot & Ankle Volume 1 [including Supplements] ; 1 ; 2010 >
+      au < released ; crawling ; 2011 ; Diabetic Foot & Ankle Volume 2 [including Supplements] ; 2 ; 2011 >
+      au < released ; crawling ; 2012 ; Diabetic Foot & Ankle Volume 3 [including Supplements] ; 3 ; 2012 >
+      au < expected ; exists ; 2013 ; Diabetic Foot & Ankle Volume 4 [including Supplements] ; 4 ; 2013 >
 
 
     }
