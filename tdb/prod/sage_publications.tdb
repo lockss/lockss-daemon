@@ -189,8 +189,8 @@
        param[base_url] = http://ar-sr.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
        
-       au < exists ; 2012 ; Acta Sociologica Volume 1 ; 1 >
-       au < expected ; 2013 ; Acta Sociologica Volume 2 ; 2 >
+       au < exists ; 2012 ; Acta Sociologica Short Reports Volume 1 ; 1 >
+       au < expected ; 2013 ; Acta Sociologica Short Reports Volume 2 ; 2 >
        
     }
 
