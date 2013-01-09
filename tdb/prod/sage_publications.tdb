@@ -10087,6 +10087,7 @@
         implicit < status ; year ; name ; param[volume_name] >
         
         comment[continued_by] = European Journal of Preventive Cardiology, 2047-4873
+        comment[need_review] = This needs review, see the metadata in articles from say volume 1
 
 
         au < manifest ; 1994 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 1 ; 1 >
@@ -10130,7 +10131,6 @@
         comment[continued_from] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
         comment[0] = Previous issues are at the same url.
         
-        au < doesNotExist ; 0 ; European Journal of Preventive Cardiology Volume 18 ; 18 >
         au < ready ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 >
         au < manifest ; 2013 ; European Journal of Preventive Cardiology Volume 20 ; 20 >
 
