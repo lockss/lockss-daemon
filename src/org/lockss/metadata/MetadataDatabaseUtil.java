@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.6 2013-01-09 04:05:12 fergaloy-sf Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.7 2013-01-09 12:59:59 pgust Exp $
  */
 
 /*
@@ -222,11 +222,12 @@ final public class MetadataDatabaseUtil {
    * Here is the original SQL query:
    *<pre>
     select 
-      primary_name publication_name, publication_seq, 
+      publication_seq,
+      (select name from md_item_name where md_item_seq = publication.md_item_seq and name_type = 'primary') publication_name, 
       (select issn from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'p_issn') p_issn, 
       (select issn from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'e_issn') e_issn,
       (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'p_isbn') p_isbn, 
-      (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'e_isbn') e_isbn,
+      (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'e_isbn') e_isbn
      from publisher, publication, md_item 
      where publisher.publisher_seq = publication.publisher_seq and publication.md_item_seq = md_item.md_item_seq
    *</pre>
@@ -291,11 +292,12 @@ final public class MetadataDatabaseUtil {
       publication, 
       publisher, 
       (select 
-         primary_name publication_name, publication_seq, 
+         publication_seq, 
+        (select name from md_item_name where md_item_seq = publication.md_item_seq and name_type = 'primary') publication_name, 
         (select issn from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'p_issn') p_issn, 
         (select issn from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'e_issn') e_issn,
         (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'p_isbn') p_isbn, 
-        (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'e_isbn') e_isbn,
+        (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'e_isbn') e_isbn
        from publisher, publication, md_item 
        where publisher.publisher_seq = publication.publisher_seq and publication.md_item_seq = md_item.md_item_seq) pubinfo
     where 
