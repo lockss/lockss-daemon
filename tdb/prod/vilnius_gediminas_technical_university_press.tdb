@@ -1,0 +1,40 @@
+{
+
+  publisher <
+    name = Vilnius Gediminas Technical University Press
+    info[tester] = 0
+  >
+
+  {
+
+    plugin = needs.new.plugin
+
+    {
+      title <
+        name = The Baltic Journal of Road and Bridge Engineering ;
+        issn = 1822-427X ;
+        eissn = 1822-4288 ;
+        issnl = 1822-427X
+      >
+
+    }
+
+  }
+
+  {
+
+    plugin = OJS of some kind
+
+    {
+      title <
+        name = Business: Theory and Practice ;
+        issn = 1648-0627 ;
+        eissn = 1822-4202 ;
+        issnl = 1648-0627
+      >
+
+    }
+
+  }
+
+}
