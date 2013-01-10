@@ -6,7 +6,7 @@
   >
 
   comment[notReady] = RU issue 3836, RT 976
-  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  plugin = org.lockss.plugin.coactionpublishing.CoActionPublishingPlugin
   implicit < status ; year ; name ; volume ;  param[year] >
 
   {
