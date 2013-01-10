@@ -33,6 +33,6 @@
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>&quot;%sindex.php/%s/about/editorialPolicies&quot;, base_url, journal_id</string>
+    <string>"%sindex.php/%s/about/editorialPolicies", base_url, journal_id</string>
   </entry>
 </map>
