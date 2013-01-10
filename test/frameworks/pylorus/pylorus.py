@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''Pylorus content validation and ingestion gateway
 Michael R Bax, 2008-2009
-$Id: pylorus.py,v 2.25 2012-11-27 01:21:18 thib_gc Exp $'''
+$Id: pylorus.py,v 2.26 2013-01-10 23:32:24 thib_gc Exp $'''
 
 
 import ConfigParser
@@ -27,7 +27,7 @@ fix_auth_failure.fix_auth_failure()
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.25 $'.split()[ 1 ]
+REVISION = '$Revision: 2.26 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 SERVER_READY_TIMEOUT = 600
@@ -43,8 +43,8 @@ CONFIGURATION_DEFAULTS = {
     'remote_servers':   '',
     'username':         'lockss-u',
     'password':         'lockss-p',
-    'agreement':        95,
-    'fix':              10,
+    'agreement':        100,
+    'fix':              0,
     'expiration':       168,
     'verbosity':        1,
     'delete':           'no',
@@ -329,21 +329,26 @@ class Content:
         if not self.client.waitForCompletedV3Poll( self.AU, self.past_poll_keys, 0 ):
             return
         logging.debug( self.status_message( 'Completed poll of %s on %s' ) )
-        result, status = self.client.getPollResults( self.AU )
-        if result == 'Complete':
-            self.poll_agreement = int( status.split( '.', 1 )[ 0 ] )
-            if self.poll_agreement >= configuration.getint( PROGRAM, 'agreement' ):
-                logging.info( self.status_message( 'Poll match for %s on %s' ) )
+        key = self.client.getV3PollKey(self.AU, self.past_poll_keys)
+        summary, table = self.client.getV3PollerDetail(key)
+        if summary['Status'] == 'Complete':
+            # Overall poll result is meaningless; can be 100% if the poller
+            # agreed with enough (but not all) voters for each URL. Compute an
+            # average.
+            complete = [float(row['agreement'].rstrip('%')) for row in table if row['peerStatus'] == 'Complete']
+            self.poll_agreement = int(sum(complete) / len(complete))
+            if self.poll_agreement >= configuration.getint(PROGRAM, 'agreement'):
+                logging.info(self.status_message('Poll match for %s on %s'))
                 self.state = Content.State.POLL_MATCH
             else:
-                logging.warn( self.status_message( 'Poll mismatch for %s on %s' ) )
+                logging.warn( self.status_message('Poll mismatch for %s on %s'))
                 self.poll_mismatch_retries -= 1
                 if self.poll_mismatch_retries:
                     self.state = Content.State.REPAIR
                     return
                 self.state = Content.State.POLL_MISMATCH
         else:
-            logging.warn( self.status_message( 'Poll failed (' + result + ') for %s on %s' ) )
+            logging.warn( self.status_message( 'Poll failed (' + summary['Status'] + ') for %s on %s' ) )
             self.poll_failure_retries -= 1
             if self.poll_failure_retries:
                 self.state = Content.State.POLL
@@ -353,18 +358,21 @@ class Content:
 
     def repair( self ):
         '''Restrict the next poll to the most divergent candidates if poll disagreement varies too much'''
-        repairer_info = self.client.getAuRepairerInfo( self.AU, 'LastPercentAgreement' )
-        for repairer in repairer_info.keys():
-            if repairer not in V3_clients_lookup:
-                logging.warn( 'No known client corresponding to V3 identity %s' % repairer )
-                del repairer_info[ repairer ]
-        agreement_minimum = min( float( agreement ) for agreement in repairer_info.itervalues() )
-        agreement_maximum = max( float( agreement ) for agreement in repairer_info.itervalues() )
-        logging.debug( 'Poll agreement range: %.02f%% to %.02f%%' % ( agreement_minimum, agreement_maximum ) )
-        if agreement_maximum - agreement_minimum >= configuration.getint( PROGRAM, 'fix' ):
-            self.poll_clients = [ V3_clients_lookup[ repairer ] for repairer, agreement in repairer_info.iteritems() if float(agreement) == agreement_minimum ]
+        key = self.client.getV3PollKey(self.AU, self.past_poll_keys)
+        summary, table = self.client.getV3PollerDetail(key)
+        complete = [row for row in table if row['peerStatus'] == 'Complete']
+        for index, row in enumerate(complete):
+            peer = self.client.valueOfRef(row['identity'])
+            if peer not in V3_clients_lookup:
+                logging.warn('No known client corresponding to V3 identity %s' % peer)
+                del complete[index]
+        agreement_min = min([float(row['agreement'].rstrip('%')) for row in complete])
+        agreement_max = max([float(row['agreement'].rstrip('%')) for row in complete])
+        logging.debug('Poll agreement range: %.02f%% to %.02f%%' % (agreement_min, agreement_max))
+        if agreement_max - agreement_min >= configuration.getint(PROGRAM, 'fix'):
+            self.poll_clients = [V3_clients_lookup[self.client.valueOfRef(row['identity'])] for row in complete if float(row['agreement'].rstrip('%')) == agreement_min]
         else:
-            self.poll_clients = self.crawl_successes[ : 2 ]
+            self.poll_clients = self.crawl_successes[:2]
         self.state = Content.State.POLL
 
     def process( self ):
