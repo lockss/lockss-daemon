@@ -1454,7 +1454,7 @@
     param[base_url] = http://aobpla.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < released ; crawling ; 2009 ; AoB PLANTS Volume 2009 ; 2009 ; >
+    au < zapped ; down ; 2009 ; AoB PLANTS Volume 2009 ; 2009 ; >
     au < released ; crawling ; 2010 ; AoB PLANTS Volume 2010 ; 2010 ; >
     au < released ; crawling ; 2011 ; AoB PLANTS Volume 2011 ; 2011 ; >
     au < released ; crawling ; 2012 ; AoB PLANTS Volume 2012 ; 2012 ; >
@@ -1979,7 +1979,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 4 ; 4 ; >
-    au < released ; crawling ; 2012 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 5 ; 5 ; >
+    au < zapped ; down ; 2012 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 5 ; 5 ; >
     au < expected ; exists ; 2013 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 6 ; 6 ; >
 
     }
@@ -12358,7 +12358,7 @@
     au < manifest ; exists ; 2005-2006 ; Journal of Social History Volume 39 ; 39 ; >
     au < manifest ; exists ; 2006-2007 ; Journal of Social History Volume 40 ; 40 ; >
     au < manifest ; exists ; 2007-2008 ; Journal of Social History Volume 41 ; 41 ; >
-    au < released ; crawling ; 2008-2009 ; Journal of Social History Volume 42 ; 42 ; >
+    au < zapped ; down ; 2008-2009 ; Journal of Social History Volume 42 ; 42 ; >
     au < released ; crawling ; 2009-2010 ; Journal of Social History Volume 43 ; 43 ; >
     au < zapped ; down ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ; >
     au < released ; crawling ; 2011-2012 ; Journal of Social History Volume 45 ; 45 ; >
@@ -18819,7 +18819,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; The World Bank Research Observer Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; The World Bank Research Observer Volume 25 ; 25 ; >
-    au < released ; crawling ; 2011 ; The World Bank Research Observer Volume 26 ; 26 ; >
+    au < zapped ; down ; 2011 ; The World Bank Research Observer Volume 26 ; 26 ; >
     au < testing ; exists ; 2012 ; The World Bank Research Observer Volume 27 ; 27 ; >
     au < expected ; exists ; 2013 ; The World Bank Research Observer Volume 28 ; 28 ; >
 
