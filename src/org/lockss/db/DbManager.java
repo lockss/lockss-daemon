@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.11 2013-01-10 03:34:31 tlipkis Exp $
+ * $Id: DbManager.java,v 1.12 2013-01-10 19:42:17 fergaloy-sf Exp $
  */
 
 /*
@@ -809,7 +809,7 @@ public class DbManager extends BaseLockssDaemonManager
       + PUBLISHER_TABLE + " ("
       + PUBLISHER_SEQ_COLUMN
       + " bigint primary key generated always as identity,"
-      + PUBLISHER_NAME_COLUMN + " varchar(" + MAX_NAME_COLUMN + ")"
+      + PUBLISHER_NAME_COLUMN + " varchar(" + MAX_NAME_COLUMN + ") not null"
       + ")";
 
   // Query to create the table for recording publications.
