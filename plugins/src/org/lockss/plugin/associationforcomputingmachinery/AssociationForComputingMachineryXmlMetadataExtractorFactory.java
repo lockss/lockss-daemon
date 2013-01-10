@@ -1,5 +1,5 @@
 /*
- * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.8 2013-01-09 23:07:13 pgust Exp $
+ * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.9 2013-01-10 19:47:49 pgust Exp $
  */
 
 /*
@@ -307,7 +307,8 @@ implements FileMetadataExtractorFactory {
             new XmlDomMetadataExtractor(nodeMap).extract(target, cu);
         am.cook(xpathMap);
         
-        // just not present, add "ACM" publisher name
+        // If not present, add "ACM" publisher name (shouldn't happen!)
+        am.putIfBetter(MetadataField.FIELD_PUBLISHER, "ACM");
         emitAllMetadata(am, emit);
         return am;
       } catch (XPathExpressionException ex) {
