@@ -2431,7 +2431,7 @@
       au < manifest ; exists ; 2004-2005 ; Armed Forces & Society Volume 31 ; 31 ; >
       au < manifest ; exists ; 2005-2006 ; Armed Forces & Society Volume 32 ; 32 ; >
       au < manifest ; exists ; 2006-2007 ; Armed Forces & Society Volume 33 ; 33 ; >
-      au < testing ; exists ; 2007-2008 ; Armed Forces & Society Volume 34 ; 34 ; >
+      au < released ; manifest ; 2007-2008 ; Armed Forces & Society Volume 34 ; 34 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Armed Forces & Society Volume 35 ; 35 ; >
       au < released ; crawling ; 2009-2010 ; Armed Forces & Society Volume 36 ; 36 ; >
       au < released ; crawling ; 2011 ; Armed Forces & Society Volume 37 ; 37 ; >
@@ -2755,7 +2755,7 @@
       au < manifest ; exists ; 2004-2005 ; Assessment for Effective Intervention Volume 30 ; 30 ; >
       au < manifest ; exists ; 2005-2006 ; Assessment for Effective Intervention Volume 31 ; 31 ; >
       au < manifest ; exists ; 2006-2007 ; Assessment for Effective Intervention Volume 32 ; 32 ; >
-      au < testing ; exists ; 2007-2008 ; Assessment for Effective Intervention Volume 33 ; 33 ; >
+      au < released ; manifest ; 2007-2008 ; Assessment for Effective Intervention Volume 33 ; 33 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Assessment for Effective Intervention Volume 34 ; 34 ; >
       au < zapped ; down ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 ; >
       au < released ; crawling ; 2010-2011 ; Assessment for Effective Intervention Volume 36 ; 36 ; >
@@ -3327,7 +3327,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://bjp.sagepub.com/
 
-        au < testing ; exists ; 2007-2008 ; British Journal of Pain Volume 1 ; 1 ; >
+        au < released ; manifest ; 2007-2008 ; British Journal of Pain Volume 1 ; 1 ; >
         au < released ; crawling ; 2008 ; British Journal of Pain Volume 2 ; 2 ; >
         au < released ; crawling ; 2009 ; British Journal of Pain Volume 3 ; 3 ; >
         au < released ; crawling ; 2010 ; British Journal of Pain Volume 4 ; 4 ; >
@@ -9842,7 +9842,7 @@
       au < manifest ; exists ; 2004-2005 ; The Expository Times Volume 116 ; 116 ; >
       au < manifest ; exists ; 2005-2006 ; The Expository Times Volume 117 ; 117 ; >
       au < manifest ; exists ; 2006-2007 ; The Expository Times Volume 118 ; 118 ; >
-      au < testing ; exists ; 2007-2008 ; The Expository Times Volume 119 ; 119 ; >
+      au < released ; manifest ; 2007-2008 ; The Expository Times Volume 119 ; 119 ; >
       au < released ; crawling ; 2008-2009 ; The Expository Times Volume 120 ; 120 ; >
       au < released ; crawling ; 2009-2010 ; The Expository Times Volume 121 ; 121 ; >
       au < released ; crawling ; 2010-2011 ; The Expository Times Volume 122 ; 122 ; >
@@ -10110,7 +10110,7 @@
       au < manifest ; exists ; 2004-2005 ; Feminist Theology Volume 13 ; 13 ; >
       au < manifest ; exists ; 2005-2006 ; Feminist Theology Volume 14 ; 14 ; >
       au < manifest ; exists ; 2006-2007 ; Feminist Theology Volume 15 ; 15 ; >
-      au < testing ; exists ; 2007-2008 ; Feminist Theology Volume 16 ; 16 ; >
+      au < released ; manifest ; 2007-2008 ; Feminist Theology Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Feminist Theology Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Feminist Theology Volume 18 ; 18 ; >
       au < zapped ; down ; 2010-2011 ; Feminist Theology Volume 19 ; 19 ; >
@@ -10651,7 +10651,7 @@
       au < manifest ; exists ; 2004-2005 ; General Music Today Volume 18 ; 18 ; >
       au < manifest ; exists ; 2005-2006 ; General Music Today Volume 19 ; 19 ; >
       au < manifest ; exists ; 2006-2007 ; General Music Today Volume 20 ; 20 ; >
-      au < testing ; exists ; 2007-2008 ; General Music Today Volume 21 ; 21 ; >
+      au < released ; manifest ; 2007-2008 ; General Music Today Volume 21 ; 21 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; General Music Today Volume 22 ; 22 ; >
       au < released ; crawling ; 2009-2010 ; General Music Today Volume 23 ; 23 ; >
       au < zapped ; down ; 2010-2011 ; General Music Today Volume 24 ; 24 ; >
@@ -11910,7 +11910,7 @@
       au < manifest ; exists ; 2004-2005 ; Home Health Care Management & Practice Volume 17 ; 17 ; >
       au < manifest ; exists ; 2005-2006 ; Home Health Care Management & Practice Volume 18 ; 18 ; >
       au < manifest ; exists ; 2006-2007 ; Home Health Care Management & Practice Volume 19 ; 19 ; >
-      au < testing ; exists ; 2007-2008 ; Home Health Care Management & Practice Volume 20 ; 20 ; >
+      au < released ; manifest ; 2007-2008 ; Home Health Care Management & Practice Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Home Health Care Management & Practice Volume 21 ; 21 ; >
       au < released ; crawling ; 2009-2010 ; Home Health Care Management & Practice Volume 22 ; 22 ; >
       au < released ; crawling ; 2011 ; Home Health Care Management & Practice Volume 23 ; 23 ; >
@@ -13543,7 +13543,7 @@
         au < manifest ; exists ; 2003-2005 ; International Journal of Discrimination and the Law Volume 6 ; 6 ; >
         au < manifest ; exists ; 2005 ; International Journal of Discrimination and the Law Volume 7 ; 7 ; >
         au < manifest ; exists ; 2005-2007 ; International Journal of Discrimination and the Law Volume 8 ; 8 ; >
-        au < crawling ; exists ; 2007-2008 ; International Journal of Discrimination and the Law Volume 9 ; 9 ; >
+        au < released ; manifest ; 2007-2008 ; International Journal of Discrimination and the Law Volume 9 ; 9 ; >
         au < released ; crawling ; 2009 ; International Journal of Discrimination and the Law Volume 10 ; 10 ; >
         au < released ; crawling ; 2011 ; International Journal of Discrimination and the Law Volume 11 ; 11 ; >
         au < released ; manifest ; 2012 ; International Journal of Discrimination and the Law Volume 12 ; 12 ; >
@@ -14943,7 +14943,7 @@
       au < manifest ; exists ; 2004-2005 ; Intervention in School and Clinic Volume 40 ; 40 ; >
       au < manifest ; exists ; 2005-2006 ; Intervention in School and Clinic Volume 41 ; 41 ; >
       au < manifest ; exists ; 2006-2007 ; Intervention in School and Clinic Volume 42 ; 42 ; >
-      au < crawling ; exists ; 2007-2008 ; Intervention in School and Clinic Volume 43 ; 43 ; >
+      au < released ; manifest ; 2007-2008 ; Intervention in School and Clinic Volume 43 ; 43 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Intervention in School and Clinic Volume 44 ; 44 ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Intervention in School and Clinic Volume 45 ; 45 ; >
       au < released ; crawling ; 2010-2011 ; Intervention in School and Clinic Volume 46 ; 46 ; >
@@ -15122,7 +15122,7 @@
       au < manifest ; exists ; 2004-2005 ; Journal for the Study of the New Testament Volume 27 ; 27 ; >
       au < manifest ; exists ; 2005-2006 ; Journal for the Study of the New Testament Volume 28 ; 28 ; >
       au < manifest ; exists ; 2006-2007 ; Journal for the Study of the New Testament Volume 29 ; 29 ; >
-      au < crawling ; exists ; 2007-2008 ; Journal for the Study of the New Testament Volume 30 ; 30 ; >
+      au < released ; manifest ; 2007-2008 ; Journal for the Study of the New Testament Volume 30 ; 30 ; >
       au < manifest ; exists ; 2008-2009 ; Journal for the Study of the New Testament Volume 31 ; 31 ; >
       au < zapped ; down ; 2009-2010 ; Journal for the Study of the New Testament Volume 32 ; 32 ; >
       au < released ; crawling ; 2010-2011 ; Journal for the Study of the New Testament Volume 33 ; 33 ; >
@@ -15188,7 +15188,7 @@
       au < manifest ; exists ; 2004-2005 ; Journal for the Study of the Old Testament Volume 29 ; 29 ; >
       au < manifest ; exists ; 2005-2006 ; Journal for the Study of the Old Testament Volume 30 ; 30 ; >
       au < manifest ; exists ; 2006-2007 ; Journal for the Study of the Old Testament Volume 31 ; 31 ; >
-      au < crawling ; exists ; 2007-2008 ; Journal for the Study of the Old Testament Volume 32 ; 32 ; >
+      au < released ; manifest ; 2007-2008 ; Journal for the Study of the Old Testament Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Journal for the Study of the Old Testament Volume 33 ; 33 ; >
       au < released ; crawling ; 2009-2010 ; Journal for the Study of the Old Testament Volume 34 ; 34 ; >
       au < released ; crawling ; 2010-2011 ; Journal for the Study of the Old Testament Volume 35 ; 35 ; >
@@ -15239,7 +15239,7 @@
       au < manifest ; exists ; 2004-2005 ; Journal for the Study of the Pseudepigrapha Volume 14 ; 14 ; >
       au < manifest ; exists ; 2005-2006 ; Journal for the Study of the Pseudepigrapha Volume 15 ; 15 ; >
       au < manifest ; exists ; 2006-2007 ; Journal for the Study of the Pseudepigrapha Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2007-2008 ; Journal for the Study of the Pseudepigrapha Volume 17 ; 17 ; >
+      au < released ; manifest ; 2007-2008 ; Journal for the Study of the Pseudepigrapha Volume 17 ; 17 ; >
       au < manifest ; exists ; 2008-2009 ; Journal for the Study of the Pseudepigrapha Volume 18 ; 18 ; >
       au < released ; crawling ; 2009-2010 ; Journal for the Study of the Pseudepigrapha Volume 19 ; 19 ; >
       au < released ; crawling ; 2010-2011 ; Journal for the Study of the Pseudepigrapha Volume 20 ; 20 ; >
@@ -15380,7 +15380,7 @@
         au < manifest ; exists ; 2004-2005 ; Journal of Advanced Academics Volume 16 ; 16 ; >
         au < manifest ; exists ; 2005-2006 ; Journal of Advanced Academics Volume 17 ; 17 ; >
         au < manifest ; exists ; 2006-2007 ; Journal of Advanced Academics Volume 18 ; 18 ; >
-        au < crawling ; exists ; 2007-2008 ; Journal of Advanced Academics Volume 19 ; 19 ; >
+        au < released ; manifest ; 2007-2008 ; Journal of Advanced Academics Volume 19 ; 19 ; >
         au < released ; crawling ; 2008-2009 ; Journal of Advanced Academics Volume 20 ; 20 ; >
         au < released ; crawling ; 2009-2010 ; Journal of Advanced Academics Volume 21 ; 21 ; >
         au < released ; crawling ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 ; >
@@ -15910,7 +15910,7 @@
       au < manifest ; exists ; 2004-2005 ; Journal of Biomaterials Applications Volume 19 ; 19 ; >
       au < manifest ; exists ; 2005-2006 ; Journal of Biomaterials Applications Volume 20 ; 20 ; >
       au < manifest ; exists ; 2006-2007 ; Journal of Biomaterials Applications Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2007-2008 ; Journal of Biomaterials Applications Volume 22 ; 22 ; >
+      au < released ; manifest ; 2007-2008 ; Journal of Biomaterials Applications Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Journal of Biomaterials Applications Volume 23 ; 23 ; >
       au < manifest ; exists ; 2009-2010 ; Journal of Biomaterials Applications Volume 24 ; 24 ; >
       au < released ; crawling ; 2010-2011 ; Journal of Biomaterials Applications Volume 25 ; 25 ; >
@@ -16097,7 +16097,7 @@
       au < manifest ; exists ; 2004-2005 ; Journal of Black Studies Volume 35 ; 35 ; >
       au < manifest ; exists ; 2005-2006 ; Journal of Black Studies Volume 36 ; 36 ; >
       au < manifest ; exists ; 2006-2007 ; Journal of Black Studies Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2007-2008 ; Journal of Black Studies Volume 38 ; 38 ; >
+      au < released ; manifest ; 2007-2008 ; Journal of Black Studies Volume 38 ; 38 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Journal of Black Studies Volume 39 ; 39 ; >
       au < released ; crawling ; 2009-2010 ; Journal of Black Studies Volume 40 ; 40 ; >
       au < released ; crawling ; 2010 ; Journal of Black Studies Volume 41 ; 41 ; >
@@ -16162,7 +16162,7 @@
       au < manifest ; exists ; 2004-2005 ; Journal of Building Physics Volume 28 ; 28 ; >
       au < manifest ; exists ; 2005-2006 ; Journal of Building Physics Volume 29 ; 29 ; >
       au < manifest ; exists ; 2006-2007 ; Journal of Building Physics Volume 30 ; 30 ; >
-      au < crawling ; exists ; 2007-2008 ; Journal of Building Physics Volume 31 ; 31 ; >
+      au < released ; manifest ; 2007-2008 ; Journal of Building Physics Volume 31 ; 31 ; >
       au < released ; crawling ; 2008-2009 ; Journal of Building Physics Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Journal of Building Physics Volume 33 ; 33 ; >
       au < released ; crawling ; 2010-2011 ; Journal of Building Physics Volume 34 ; 34 ; >
@@ -16463,7 +16463,7 @@
       au < manifest ; exists ; 2004-2005 ; Journal of Career Development Volume 31 ; 31 ; >
       au < manifest ; exists ; 2005-2006 ; Journal of Career Development Volume 32 ; 32 ; >
       au < manifest ; exists ; 2006-2007 ; Journal of Career Development Volume 33 ; 33 ; >
-      au < crawling ; exists ; 2007-2008 ; Journal of Career Development Volume 34 ; 34 ; >
+      au < released ; manifest ; 2007-2008 ; Journal of Career Development Volume 34 ; 34 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Journal of Career Development Volume 35 ; 35 ; >
       au < manifest ; exists ; 2009-2010 ; Journal of Career Development Volume 36 ; 36 ; >
       au < released ; crawling ; 2010 ; Journal of Career Development Volume 37 ; 37 ; >
@@ -18100,7 +18100,7 @@
       au < manifest ; exists ; 2004-2005 ; Journal of Early Intervention Volume 27 ; 27 ; >
       au < manifest ; exists ; 2005-2006 ; Journal of Early Intervention Volume 28 ; 28 ; >
       au < manifest ; exists ; 2006-2007 ; Journal of Early Intervention Volume 29 ; 29 ; >
-      au < crawling ; exists ; 2007-2008 ; Journal of Early Intervention Volume 30 ; 30 ; >
+      au < released ; manifest ; 2007-2008 ; Journal of Early Intervention Volume 30 ; 30 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Journal of Early Intervention Volume 31 ; 31 ; >
       au < released ; crawling ; 2009-2010 ; Journal of Early Intervention Volume 32 ; 32 ; >
       au < released ; crawling ; 2011 ; Journal of Early Intervention Volume 33 ; 33 ; >
@@ -19017,7 +19017,7 @@
       au < manifest ; exists ; 2004-2005 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 2 ; 2 ; >
       au < manifest ; exists ; 2005-2006 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 3 ; 3 ; >
       au < manifest ; exists ; 2006-2007 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2007-2008 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 5 ; 5 ; >
+      au < released ; manifest ; 2007-2008 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 5 ; 5 ; >
       au < released ; crawling ; 2008-2009 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 6 ; 6 ; >
       au < released ; crawling ; 2009-2010 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 7 ; 7 ; >
       au < released ; crawling ; 2010-2011 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 8 ; 8 ; >
@@ -20001,7 +20001,7 @@
       au < manifest ; exists ; 2004-2005 ; Journal of Industrial Textiles Volume 34 ; 34 ; >
       au < manifest ; exists ; 2005-2006 ; Journal of Industrial Textiles Volume 35 ; 35 ; >
       au < manifest ; exists ; 2006-2007 ; Journal of Industrial Textiles Volume 36 ; 36 ; >
-      au < crawling ; exists ; 2007-2008 ; Journal of Industrial Textiles Volume 37 ; 37 ; >
+      au < released ; manifest ; 2007-2008 ; Journal of Industrial Textiles Volume 37 ; 37 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Journal of Industrial Textiles Volume 38 ; 38 ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Journal of Industrial Textiles Volume 39 ; 39 ; >
       au < released ; crawling ; 2010-2011 ; Journal of Industrial Textiles Volume 40 ; 40 ; >
@@ -22388,7 +22388,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Sandwich Structures and Materials Volume 11 ; 11 ; >
       au < released ; crawling ; 2010 ; Journal of Sandwich Structures and Materials Volume 12 ; 12 ; >
       au < released ; crawling ; 2011 ; Journal of Sandwich Structures and Materials Volume 13 ; 13 ; >
-      au < crawling ; exists ; 2012 ; Journal of Sandwich Structures and Materials Volume 14 ; 14 ; >
+      au < testing ; exists ; 2012 ; Journal of Sandwich Structures and Materials Volume 14 ; 14 ; >
       au < expected ; exists ; 2013 ; Journal of Sandwich Structures and Materials Volume 15 ; 15 ; >
 
     }
@@ -23729,7 +23729,7 @@
       au < manifest ; exists ; 2004-2005 ; Journal of Travel Research Volume 43 ; 43 ; >
       au < manifest ; exists ; 2005-2006 ; Journal of Travel Research Volume 44 ; 44 ; >
       au < manifest ; exists ; 2006-2007 ; Journal of Travel Research Volume 45 ; 45 ; >
-      au < crawling ; exists ; 2007-2008 ; Journal of Travel Research Volume 46 ; 46 ; >
+      au < released ; manifest ; 2007-2008 ; Journal of Travel Research Volume 46 ; 46 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Journal of Travel Research Volume 47 ; 47 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Travel Research Volume 48 ; 48 ; >
       au < released ; crawling ; 2010 ; Journal of Travel Research Volume 49 ; 49 ; >
@@ -23797,7 +23797,7 @@
       au < manifest ; exists ; 2004-2005 ; Journal of Urban History Volume 31 ; 31 ; >
       au < manifest ; exists ; 2005-2006 ; Journal of Urban History Volume 32 ; 32 ; >
       au < manifest ; exists ; 2006-2007 ; Journal of Urban History Volume 33 ; 33 ; >
-      au < crawling ; exists ; 2007-2008 ; Journal of Urban History Volume 34 ; 34 ; >
+      au < released ; manifest ; 2007-2008 ; Journal of Urban History Volume 34 ; 34 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Journal of Urban History Volume 35 ; 35 ; >
       au < released ; crawling ; 2010 ; Journal of Urban History Volume 36 ; 36 ; >
       au < released ; crawling ; 2011 ; Journal of Urban History Volume 37 ; 37 ; >
@@ -26619,7 +26619,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < released ; crawling ; 2011 ; The Neurohospitalist Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2012 ; The Neurohospitalist Volume 2 ; 2 ; >
+      au < testing ; exists ; 2012 ; The Neurohospitalist Volume 2 ; 2 ; >
       au < manifest ; exists ; 2013 ; The Neurohospitalist Volume 3 ; 3 ; >
 
     }
@@ -26675,7 +26675,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Neurorehabilitation and Neural Repair Volume 23 ; 23 ; >
       au < released ; crawling ; 2010 ; Neurorehabilitation and Neural Repair Volume 24 ; 24 ; >
       au < released ; crawling ; 2011 ; Neurorehabilitation and Neural Repair Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2012 ; Neurorehabilitation and Neural Repair Volume 26 ; 26 ; >
+      au < testing ; exists ; 2012 ; Neurorehabilitation and Neural Repair Volume 26 ; 26 ; >
       au < manifest ; exists ; 2013 ; Neurorehabilitation and Neural Repair Volume 27 ; 27 ; >
 
     }
@@ -26723,7 +26723,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The Neuroscientist Volume 15 ; 15 ; >
       au < released ; crawling ; 2010 ; The Neuroscientist Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; The Neuroscientist Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2012 ; The Neuroscientist Volume 18 ; 18 ; >
+      au < testing ; exists ; 2012 ; The Neuroscientist Volume 18 ; 18 ; >
       au < manifest ; exists ; 2013 ; The Neuroscientist Volume 19 ; 19 ; >
 
     }
@@ -26767,7 +26767,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; New Media & Society Volume 11 ; 11 ; >
       au < released ; crawling ; 2010 ; New Media & Society Volume 12 ; 12 ; >
       au < released ; crawling ; 2011 ; New Media & Society Volume 13 ; 13 ; >
-      au < crawling ; exists ; 2012 ; New Media & Society Volume 14 ; 14 ; >
+      au < testing ; exists ; 2012 ; New Media & Society Volume 14 ; 14 ; >
       au < expected ; exists ; 2013 ; New Media & Society Volume 15 ; 15 ; >
 
     }
@@ -26838,7 +26838,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Nonprofit and Voluntary Sector Quarterly Volume 38 ; 38 ; >
       au < released ; crawling ; 2010 ; Nonprofit and Voluntary Sector Quarterly Volume 39 ; 39 ; >
       au < released ; crawling ; 2011 ; Nonprofit and Voluntary Sector Quarterly Volume 40 ; 40 ; >
-      au < crawling ; exists ; 2012 ; Nonprofit and Voluntary Sector Quarterly Volume 41 ; 41 ; >
+      au < testing ; exists ; 2012 ; Nonprofit and Voluntary Sector Quarterly Volume 41 ; 41 ; >
       au < expected ; exists ; 2013 ; Nonprofit and Voluntary Sector Quarterly Volume 42 ; 42 ; >
 
     }
@@ -26887,7 +26887,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Nursing Ethics Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; Nursing Ethics Volume 17 ; 17 ; >
       au < released ; crawling ; 2011 ; Nursing Ethics Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2012 ; Nursing Ethics Volume 19 ; 19 ; >
+      au < testing ; exists ; 2012 ; Nursing Ethics Volume 19 ; 19 ; >
       au < expected ; exists ; 2013 ; Nursing Ethics Volume 20 ; 20 ; >
 
     }
@@ -26942,7 +26942,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Nursing Science Quarterly Volume 22 ; 22 ; >
       au < released ; crawling ; 2010 ; Nursing Science Quarterly Volume 23 ; 23 ; >
       au < released ; crawling ; 2011 ; Nursing Science Quarterly Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2012 ; Nursing Science Quarterly Volume 25 ; 25 ; >
+      au < testing ; exists ; 2012 ; Nursing Science Quarterly Volume 25 ; 25 ; >
       au < manifest ; exists ; 2013 ; Nursing Science Quarterly Volume 26 ; 26 ; >
 
     }
@@ -26981,9 +26981,9 @@
       au < manifest ; exists ; 2002 ; Nutrition and Health Volume 16 ; 16 ; >
       au < manifest ; exists ; 2003-2004 ; Nutrition and Health Volume 17 ; 17 ; >
       au < manifest ; exists ; 2004-2007 ; Nutrition and Health Volume 18 ; 18 ; >
-      au < testing ; exists ; 2007-2008 ; Nutrition and Health Volume 19 ; 19 ; >
+      au < released ; manifest ; 2007-2008 ; Nutrition and Health Volume 19 ; 19 ; >
       au < released ; crawling ; 2009-2011 ; Nutrition and Health Volume 20 ; 20 ; >
-      au < crawling ; exists ; 2012 ; Nutrition and Health Volume 21 ; 21 ; >
+      au < testing ; exists ; 2012 ; Nutrition and Health Volume 21 ; 21 ; >
       au < expected ; exists ; 2013 ; Nutrition and Health Volume 22 ; 22 ; >
 
     }
@@ -27040,7 +27040,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Nutrition in Clinical Practice Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; Nutrition in Clinical Practice Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; Nutrition in Clinical Practice Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2012 ; Nutrition in Clinical Practice Volume 27 ; 27 ; >
+      au < testing ; exists ; 2012 ; Nutrition in Clinical Practice Volume 27 ; 27 ; >
       au < expected ; exists ; 2013 ; Nutrition in Clinical Practice Volume 28 ; 28 ; >
 
     }
@@ -27109,7 +27109,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Organization Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; Organization Volume 17 ; 17 ; >
       au < released ; crawling ; 2011 ; Organization Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2012 ; Organization Volume 19 ; 19 ; >
+      au < testing ; exists ; 2012 ; Organization Volume 19 ; 19 ; >
       au < manifest ; exists ; 2013 ; Organization Volume 20 ; 20 ; >
 
     }
@@ -27164,7 +27164,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Organization & Environment Volume 22 ; 22 ; >
       au < released ; crawling ; 2010 ; Organization & Environment Volume 23 ; 23 ; >
       au < released ; crawling ; 2011 ; Organization & Environment Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2012 ; Organization & Environment Volume 25 ; 25 ; >
+      au < testing ; exists ; 2012 ; Organization & Environment Volume 25 ; 25 ; >
       au < expected ; exists ; 2013 ; Organization & Environment Volume 26 ; 26 ; >
 
     }
@@ -27227,7 +27227,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Organization Studies Volume 30 ; 30 ; >
       au < released ; crawling ; 2010 ; Organization Studies Volume 31 ; 31 ; >
       au < released ; crawling ; 2011 ; Organization Studies Volume 32 ; 32 ; >
-      au < crawling ; exists ; 2012 ; Organization Studies Volume 33 ; 33 ; >
+      au < testing ; exists ; 2012 ; Organization Studies Volume 33 ; 33 ; >
       au < expected ; exists ; 2013 ; Organization Studies Volume 34 ; 34 ; >
 
     }
@@ -27652,7 +27652,7 @@
       au < released ; crawling ; 2009 ; Perspectives on Psychological Science Volume 4 ; 4 ; >
       au < released ; crawling ; 2010 ; Perspectives on Psychological Science Volume 5 ; 5 ; >
       au < released ; crawling ; 2011 ; Perspectives on Psychological Science Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2012 ; Perspectives on Psychological Science Volume 7 ; 7 ; >
+      au < testing ; exists ; 2012 ; Perspectives on Psychological Science Volume 7 ; 7 ; >
       au < expected ; exists ; 2013 ; Perspectives on Psychological Science Volume 8 ; 8 ; >
 
     }
@@ -27911,7 +27911,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Perspectives in Public Health Volume 129 ; 129 ; >
       au < released ; crawling ; 2010 ; Perspectives in Public Health Volume 130 ; 130 ; >
       au < released ; crawling ; 2011 ; Perspectives in Public Health Volume 131 ; 131 ; >
-      au < crawling ; exists ; 2012 ; Perspectives in Public Health Volume 132 ; 132 ; >
+      au < testing ; exists ; 2012 ; Perspectives in Public Health Volume 132 ; 132 ; >
       au < expected ; exists ; 2013 ; Perspectives in Public Health Volume 133 ; 133 ; >
 
     }
@@ -30593,7 +30593,7 @@
       au < manifest ; exists ; 2004-2005 ; Rehabilitation Counseling Bulletin Volume 48 ; 48 ; >
       au < manifest ; exists ; 2005-2006 ; Rehabilitation Counseling Bulletin Volume 49 ; 49 ; >
       au < manifest ; exists ; 2006-2007 ; Rehabilitation Counseling Bulletin Volume 50 ; 50 ; >
-      au < testing ; exists ; 2007-2008 ; Rehabilitation Counseling Bulletin Volume 51 ; 51 ; >
+      au < released ; manifest ; 2007-2008 ; Rehabilitation Counseling Bulletin Volume 51 ; 51 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Rehabilitation Counseling Bulletin Volume 52 ; 52 ; >
       au < released ; crawling ; 2009-2010 ; Rehabilitation Counseling Bulletin Volume 53 ; 53 ; >
       au < released ; crawling ; 2010-2011 ; Rehabilitation Counseling Bulletin Volume 54 ; 54 ; >
@@ -34088,7 +34088,7 @@
       au < manifest ; exists ; 2004-2005 ; Theology and Sexuality Volume 11 ; 11 ; >
       au < manifest ; exists ; 2005-2006 ; Theology and Sexuality Volume 12 ; 12 ; >
       au < manifest ; exists ; 2006-2007 ; Theology and Sexuality Volume 13 ; 13 ; >
-      au < testing ; exists ; 2007-2008 ; Theology and Sexuality Volume 14 ; 14 ; >
+      au < released ; manifest ; 2007-2008 ; Theology and Sexuality Volume 14 ; 14 ; >
 
     }
 
@@ -34171,7 +34171,7 @@
       au < manifest ; exists ; 2004-2005 ; Theology Today Volume 61 ; 61 ; >
       au < manifest ; exists ; 2005-2006 ; Theology Today Volume 62 ; 62 ; >
       au < manifest ; exists ; 2006-2007 ; Theology Today Volume 63 ; 63 ; >
-      au < testing ; exists ; 2007-2008 ; Theology Today Volume 64 ; 64 ; >
+      au < released ; manifest ; 2007-2008 ; Theology Today Volume 64 ; 64 ; >
       au < released ; crawling ; 2008-2009 ; Theology Today Volume 65 ; 65 ; >
       au < released ; crawling ; 2009-2010 ; Theology Today Volume 66 ; 66 ; >
       au < released ; crawling ; 2010-2011 ; Theology Today Volume 67 ; 67 ; >
@@ -35693,7 +35693,7 @@
       au < manifest ; exists ; 2004-2005 ; Update: Applications of Research in Music Education Volume 23 ; 23 ; >
       au < manifest ; exists ; 2005-2006 ; Update: Applications of Research in Music Education Volume 24 ; 24 ; >
       au < manifest ; exists ; 2006-2007 ; Update: Applications of Research in Music Education Volume 25 ; 25 ; >
-      au < testing ; exists ; 2007-2008 ; Update: Applications of Research in Music Education Volume 26 ; 26 ; >
+      au < released ; manifest ; 2007-2008 ; Update: Applications of Research in Music Education Volume 26 ; 26 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Update: Applications of Research in Music Education Volume 27 ; 27 ; >
       au < released ; crawling ; 2009-2010 ; Update: Applications of Research in Music Education Volume 28 ; 28 ; >
       au < released ; crawling ; 2010-2011 ; Update: Applications of Research in Music Education Volume 29 ; 29 ; >
@@ -36455,7 +36455,7 @@
       au < manifest ; exists ; 2004-2005 ; Word of Mouth Volume 16 ; 16 ; >
       au < manifest ; exists ; 2005-2006 ; Word of Mouth Volume 17 ; 17 ; >
       au < manifest ; exists ; 2006-2007 ; Word of Mouth Volume 18 ; 18 ; >
-      au < testing ; exists ; 2007-2008 ; Word of Mouth Volume 19 ; 19 ; >
+      au < released ; manifest ; 2007-2008 ; Word of Mouth Volume 19 ; 19 ; >
       au < released ; crawling ; 2008-2009 ; Word of Mouth Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Word of Mouth Volume 21 ; 21 ; >
       au < released ; crawling ; 2010-2011 ; Word of Mouth Volume 22 ; 22 ; >
@@ -36770,7 +36770,7 @@
       au < manifest ; exists ; 2004-2005 ; Young Exceptional Children Volume 8 ; 8 ; >
       au < manifest ; exists ; 2005-2006 ; Young Exceptional Children Volume 9 ; 9 ; >
       au < manifest ; exists ; 2006-2007 ; Young Exceptional Children Volume 10 ; 10 ; >
-      au < testing ; exists ; 2007-2008 ; Young Exceptional Children Volume 11 ; 11 ; >
+      au < released ; manifest ; 2007-2008 ; Young Exceptional Children Volume 11 ; 11 ; >
       au < released ; crawling ; 2008-2009 ; Young Exceptional Children Volume 12 ; 12 ; >
       au < released ; crawling ; 2009-2010 ; Young Exceptional Children Volume 13 ; 13 ; >
       au < released ; crawling ; 2011 ; Young Exceptional Children Volume 14 ; 14 ; >
@@ -36842,7 +36842,7 @@
       au < manifest ; exists ; 2004-2005 ; Youth & Society Volume 36 ; 36 ; >
       au < manifest ; exists ; 2005-2006 ; Youth & Society Volume 37 ; 37 ; >
       au < manifest ; exists ; 2006-2007 ; Youth & Society Volume 38 ; 38 ; >
-      au < testing ; exists ; 2007-2008 ; Youth & Society Volume 39 ; 39 ; >
+      au < released ; manifest ; 2007-2008 ; Youth & Society Volume 39 ; 39 ; >
       au < released ; crawling ; 2008-2009 ; Youth & Society Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Youth & Society Volume 41 ; 41 ; >
       au < released ; crawling ; 2010 ; Youth & Society Volume 42 ; 42 ; >
