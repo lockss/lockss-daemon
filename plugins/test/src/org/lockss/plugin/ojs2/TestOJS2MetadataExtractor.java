@@ -195,9 +195,8 @@ public class TestOJS2MetadataExtractor extends LockssTestCase {
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
     assertEquals(goodIssue, md.get(MetadataField.DC_FIELD_CITATION_ISSUE));
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
-    assertEquals(goodStartPage, md.get(MetadataField.DC_FIELD_CITATION_SPAGE));
     assertEquals(goodURL, md.get(MetadataField.FIELD_ACCESS_URL));
-    
+        
   } // testExtractFromGoodContent
 
   /*
