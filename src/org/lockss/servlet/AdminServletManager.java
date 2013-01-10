@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.32 2012-12-07 18:58:36 fergaloy-sf Exp $
+ * $Id: AdminServletManager.java,v 1.33 2013-01-10 22:10:45 tlipkis Exp $
  */
 
 /*
@@ -35,15 +35,18 @@ package org.lockss.servlet;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import javax.servlet.http.*;
+import org.mortbay.http.*;
+
+import org.mortbay.jetty.servlet.*;
+import com.planetj.servlet.filter.compression.*;
+
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.account.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
-import org.mortbay.http.*;
-import org.mortbay.jetty.servlet.*;
-import com.planetj.servlet.filter.compression.*;
-import javax.servlet.http.*;
+import org.lockss.exporter.counter.CounterReportsManager;
 
 /**
  * Local UI servlet starter
@@ -474,7 +477,11 @@ public class AdminServletManager extends BaseServletManager {
                        "COUNTER Reports",
 		       "CounterReports",
 		       (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
-		       "COUNTER Report generator");
+		       "COUNTER Report generator") {
+	public boolean isEnabled(LockssDaemon daemon) {
+	  CounterReportsManager mgr = daemon.getCounterReportsManager();
+	  return mgr != null && mgr.isReady();
+	}};
 
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;
