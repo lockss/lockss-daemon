@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.10 2013-01-09 04:05:12 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.11 2013-01-10 03:34:31 tlipkis Exp $
  */
 
 /*
@@ -52,22 +52,20 @@ import javax.sql.DataSource;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.derby.drda.NetworkServerControl;
 import org.apache.derby.jdbc.ClientDataSource;
-import org.lockss.app.BaseLockssDaemonManager;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
-import org.lockss.util.FileUtil;
-import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
+import org.lockss.app.*;
+import org.lockss.config.*;
+import org.lockss.util.*;
 
-public class DbManager extends BaseLockssDaemonManager {
+public class DbManager extends BaseLockssDaemonManager
+  implements ConfigurableManager {
 
   private static final Logger log = Logger.getLogger(DbManager.class);
 
   // Prefix for the database manager configuration entries.
-  private static final String PREFIX = Configuration.PREFIX + "dbManager";
+  private static final String PREFIX = Configuration.PREFIX + "dbManager.";
 
   // Prefix for the datasource configuration entries.
-  private static final String DATASOURCE_ROOT = PREFIX + ".datasource";
+  private static final String DATASOURCE_ROOT = PREFIX + "datasource";
 
   /**
    * Name of the database datasource class. Changes require daemon restart.
@@ -113,20 +111,16 @@ public class DbManager extends BaseLockssDaemonManager {
   public static final String DEFAULT_DATASOURCE_USER = "LOCKSS";
 
   /**
-   * Maximum number of retries for transient SQL exceptions. Changes require
-   * daemon restart.
+   * Maximum number of retries for transient SQL exceptions.
    */
-  public static final String PARAM_MAX_RETRY_COUNT = DATASOURCE_ROOT
-      + ".maxRetryCount";
-  public static final String DEFAULT_MAX_RETRY_COUNT = "10";
+  public static final String PARAM_MAX_RETRY_COUNT = PREFIX + "maxRetryCount";
+  public static final int DEFAULT_MAX_RETRY_COUNT = 10;
 
   /**
-   * Delay in seconds between retries for transient SQL exceptions. Changes
-   * require daemon restart.
+   * Delay  between retries for transient SQL exceptions.
    */
-  public static final String PARAM_RETRY_DELAY = DATASOURCE_ROOT
-      + ".retryDelay";
-  public static final String DEFAULT_RETRY_DELAY = "3";
+  public static final String PARAM_RETRY_DELAY = PREFIX + "retryDelay";
+  public static final long DEFAULT_RETRY_DELAY = 3 * Constants.SECOND;
 
   /**
    * The indicator to be inserted in the database at the end of truncated text
@@ -1485,11 +1479,11 @@ public class DbManager extends BaseLockssDaemonManager {
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
-  private int maxRetryCount = 10;
+  private int maxRetryCount = DEFAULT_MAX_RETRY_COUNT;
 
-  // The number of seconds to wait between consecutive retries when encountering
+  // The interval to wait between consecutive retries when encountering
   // transient SQL exceptions.
-  private int retryDelay = 3;
+  private long retryDelay = DEFAULT_RETRY_DELAY;
 
   /**
    * Starts the DbManager service.
@@ -1508,30 +1502,6 @@ public class DbManager extends BaseLockssDaemonManager {
     // Do nothing more if the database infrastructure cannot be setup.
     if (!setUpInfrastructure()) {
       return;
-    }
-
-    String configOption = null;
-
-    try {
-      configOption =
-	  ConfigManager.getCurrentConfig().get(PARAM_MAX_RETRY_COUNT,
-					       DEFAULT_MAX_RETRY_COUNT);
-
-      maxRetryCount = Integer.parseInt(configOption);
-    } catch (NumberFormatException nfe) {
-      log.info("Invalid configuration option " + PARAM_MAX_RETRY_COUNT
-	  + " = " + configOption + ": Using " + maxRetryCount);
-    }
-
-    try {
-      configOption =
-	  ConfigManager.getCurrentConfig().get(PARAM_RETRY_DELAY,
-					       DEFAULT_RETRY_DELAY);
-
-      retryDelay = Integer.parseInt(configOption);
-    } catch (NumberFormatException nfe) {
-      log.info("Invalid configuration option " + PARAM_RETRY_DELAY
-	  + " = " + configOption + ": Using " + retryDelay);
     }
 
     Connection conn = null;
@@ -1601,6 +1571,18 @@ public class DbManager extends BaseLockssDaemonManager {
     }
 
     log.debug2(DEBUG_HEADER + "DbManager ready? = " + ready);
+  }
+
+  @Override
+  public void setConfig(Configuration config, Configuration prevConfig,
+			Configuration.Differences changedKeys) {
+    if (changedKeys.contains(PREFIX)) {
+	maxRetryCount = config.getInt(PARAM_MAX_RETRY_COUNT,
+				      DEFAULT_MAX_RETRY_COUNT);
+
+	retryDelay = config.getTimeInterval(PARAM_RETRY_DELAY,
+					    DEFAULT_RETRY_DELAY);
+    }
   }
 
   /**
@@ -2717,7 +2699,7 @@ public class DbManager extends BaseLockssDaemonManager {
       } catch (Exception e) {
 	// Control is not ready: wait and try again.
 	try {
-	  Thread.sleep(500); // About 1/2 second.
+	  Deadline.in(500).sleep(); // About 1/2 second.
 	} catch (InterruptedException ie) {
 	  break;
 	}
@@ -2943,12 +2925,12 @@ public class DbManager extends BaseLockssDaemonManager {
    * @param maxRetryCount
    *          An int with the maximum number of retries to be attempted.
    * @param retryDelay
-   *          An int with the number of seconds to wait between consecutive
-   *          retries.
+   *          A long with the number of milliseconds to wait between
+   *          consecutive retries.
    * @return a ResultSet with the results of the query.
    */
   public ResultSet executeQuery(PreparedStatement statement, int maxRetryCount,
-      int retryDelay) throws SQLException {
+      long retryDelay) throws SQLException {
     if (!ready) {
       throw new SQLException("DbManager has not been initialized.");
     }
@@ -2980,17 +2962,16 @@ public class DbManager extends BaseLockssDaemonManager {
    * @param maxRetryCount
    *          An int with the maximum number of retries to be attempted.
    * @param retryDelay
-   *          An int with the number of seconds to wait between consecutive
-   *          retries.
+   *          A long with the number of milliseconds to wait between
+   *          consecutive retries.
    * @return a ResultSet with the results of the query.
    */
   private ResultSet executeQueryBeforeReady(PreparedStatement statement,
-      int maxRetryCount, int retryDelay) throws SQLException {
+      int maxRetryCount, long retryDelay) throws SQLException {
     final String DEBUG_HEADER = "executeQueryBeforeReady(): ";
 
     boolean success = false;
     int retryCount = 0;
-    long delay = retryDelay * 1000;
     ResultSet results = null;
 
     // Keep trying until success.
@@ -3013,11 +2994,12 @@ public class DbManager extends BaseLockssDaemonManager {
 	  // No: Wait for the specified amount of time before attempting the
 	  // next retry.
 	  log.debug(DEBUG_HEADER + "Exception caught", sqltre);
-	  log.debug(DEBUG_HEADER + "Waiting " + retryDelay
-	      + " seconds before retry number " + retryCount + "...");
+	  log.debug(DEBUG_HEADER + "Waiting "
+		    + StringUtil.timeIntervalToString(retryDelay)
+		    + " before retry number " + retryCount + "...");
 
 	  try {
-	    Thread.sleep(delay);
+	    Deadline.in(retryDelay).sleep();
 	  } catch (InterruptedException ie) {
 	    // Continue with the next retry.
 	  }
@@ -3051,12 +3033,12 @@ public class DbManager extends BaseLockssDaemonManager {
    * @param maxRetryCount
    *          An int with the maximum number of retries to be attempted.
    * @param retryDelay
-   *          An int with the number of seconds to wait between consecutive
-   *          retries.
+   *          A long with the number of milliseconds to wait between
+   *          consecutive retries.
    * @return an int with the number of database rows updated.
    */
   public int executeUpdate(PreparedStatement statement, int maxRetryCount,
-      int retryDelay) throws SQLException {
+      long retryDelay) throws SQLException {
     if (!ready) {
       throw new SQLException("DbManager has not been initialized.");
     }
@@ -3088,17 +3070,16 @@ public class DbManager extends BaseLockssDaemonManager {
    * @param maxRetryCount
    *          An int with the maximum number of retries to be attempted.
    * @param retryDelay
-   *          An int with the number of seconds to wait between consecutive
-   *          retries.
+   *          A long with the number of milliseconds to wait between
+   *          consecutive retries.
    * @return an int with the number of database rows updated.
    */
   private int executeUpdateBeforeReady(PreparedStatement statement,
-      int maxRetryCount, int retryDelay) throws SQLException {
+      int maxRetryCount, long retryDelay) throws SQLException {
     final String DEBUG_HEADER = "executeUpdateBeforeReady(): ";
 
     boolean success = false;
     int retryCount = 0;
-    long delay = retryDelay * 1000;
     int updatedCount = 0;
 
     // Keep trying until success.
@@ -3121,11 +3102,11 @@ public class DbManager extends BaseLockssDaemonManager {
 	  // No: Wait for the specified amount of time before attempting the
 	  // next retry.
 	  log.debug(DEBUG_HEADER + "Exception caught", sqltre);
-	  log.debug(DEBUG_HEADER + "Waiting " + retryDelay
-	      + " seconds before retry number " + retryCount + "...");
-
+	  log.debug(DEBUG_HEADER + "Waiting "
+		    + StringUtil.timeIntervalToString(retryDelay)
+		    + " before retry number " + retryCount + "...");
 	  try {
-	    Thread.sleep(delay);
+	    Deadline.in(retryDelay).sleep();
 	  } catch (InterruptedException ie) {
 	    // Continue with the next retry.
 	  }
