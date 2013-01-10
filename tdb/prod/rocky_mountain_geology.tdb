@@ -1,12 +1,10 @@
 {
 
   publisher <
-    name = Rocky Mountain Geology ;
-    info[contract] = 2012 ;
-    info[tester] = 0
+    name = Rocky Mountain Geology
   >
   
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
   param[base_url] = http://rmg.geoscienceworld.org
   implicit < status ; year ; name ; param[volume_name] >
   
