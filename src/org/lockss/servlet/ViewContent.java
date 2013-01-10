@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.24 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.25 2013-01-10 03:34:41 tlipkis Exp $
  */
 
 /*
@@ -257,6 +257,24 @@ public class ViewContent extends LockssServlet {
       } catch (NumberFormatException ignore) {
       }
     }
+    if (!StringUtil.isNullString(getParameter("showall"))) {
+      tbl.newRow();
+      tbl.newRow();
+      tbl.newCell("align=left");
+      tbl.add("<b>Raw Headers");
+      Set<String> keys = new TreeSet(props.keySet());
+      for (String key : keys) {
+	addPropRow(tbl, key, props.getProperty(key));
+      }
+    } else {
+      Properties args = getParamsAsProps();
+      args.setProperty("showall", "1");
+      args.remove("frame");
+      tbl.newRow();
+      tbl.newCell("align=left");
+      tbl.add(srvLink(myServletDescr(), "Show All", args));
+    }
+
     page.add(tbl);
     page.add("<br>");
     Composite comp = new Block(Block.Center);
