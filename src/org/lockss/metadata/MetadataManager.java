@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.7 2013-01-09 04:05:12 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.8 2013-01-10 19:45:27 fergaloy-sf Exp $
  */
 
 /*
@@ -2283,7 +2283,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 					      eIssn, pIsbn, eIsbn, mdItemType);
     } else if (hasIssns && hasName) {
       publicationSeq =
-	  findPublicationByIssnsOrName(conn, title, publisherSeq, pIsbn, eIsbn,
+	  findPublicationByIssnsOrName(conn, title, publisherSeq, pIssn, eIssn,
 				       mdItemType);
     } else if (hasIsbns && hasName) {
       publicationSeq =
@@ -2792,6 +2792,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private Long findPublicationByIssns(Connection conn, Long publisherSeq,
       String pIssn, String eIssn, String mdItemType) throws SQLException {
     final String DEBUG_HEADER = "findPublicationByIssns(): ";
+    log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
+    log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
+    log.debug3(DEBUG_HEADER + "mdItemType = " + mdItemType);
     Long publicationSeq = null;
     ResultSet resultSet = null;
     log.debug3(DEBUG_HEADER + "SQL = '" + FIND_PUBLICATION_BY_ISSNS_QUERY
