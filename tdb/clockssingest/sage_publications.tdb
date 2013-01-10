@@ -152,8 +152,8 @@
        param[base_url] = http://ar-sr.sagepub.com/
        pluginSuffix = ClockssHighWirePressH20Plugin
        
-       au < exists ; exists ; 2012 ; Acta Sociologica Volume 1 ; 1 ; >
-       au < expected ; exists ; 2013 ; Acta Sociologica Volume 2 ; 2 ; >
+       au < exists ; exists ; 2012 ; Acta Radiologica Short Reports Volume 1 ; 1 ; >
+       au < expected ; exists ; 2013 ; Acta Radiologica Short Reports Volume 2 ; 2 ; >
        
   }
     
@@ -22118,7 +22118,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Sandwich Structures and Materials Volume 11 ; 11 ; >
       au < released ; crawling ; 2010 ; Journal of Sandwich Structures and Materials Volume 12 ; 12 ; >
       au < released ; crawling ; 2011 ; Journal of Sandwich Structures and Materials Volume 13 ; 13 ; >
-      au < testing ; exists ; 2012 ; Journal of Sandwich Structures and Materials Volume 14 ; 14 ; >
+      au < released ; manifest ; 2012 ; Journal of Sandwich Structures and Materials Volume 14 ; 14 ; >
       au < expected ; exists ; 2013 ; Journal of Sandwich Structures and Materials Volume 15 ; 15 ; >
 
     }
@@ -26235,7 +26235,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < released ; crawling ; 2011 ; The Neurohospitalist Volume 1 ; 1 ; >
-      au < testing ; exists ; 2012 ; The Neurohospitalist Volume 2 ; 2 ; >
+      au < released ; manifest ; 2012 ; The Neurohospitalist Volume 2 ; 2 ; >
       au < manifest ; exists ; 2013 ; The Neurohospitalist Volume 3 ; 3 ; >
 
     }
@@ -26291,7 +26291,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Neurorehabilitation and Neural Repair Volume 23 ; 23 ; >
       au < released ; crawling ; 2010 ; Neurorehabilitation and Neural Repair Volume 24 ; 24 ; >
       au < released ; crawling ; 2011 ; Neurorehabilitation and Neural Repair Volume 25 ; 25 ; >
-      au < testing ; exists ; 2012 ; Neurorehabilitation and Neural Repair Volume 26 ; 26 ; >
+      au < released ; manifest ; 2012 ; Neurorehabilitation and Neural Repair Volume 26 ; 26 ; >
       au < manifest ; exists ; 2013 ; Neurorehabilitation and Neural Repair Volume 27 ; 27 ; >
 
     }
@@ -26339,7 +26339,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The Neuroscientist Volume 15 ; 15 ; >
       au < released ; crawling ; 2010 ; The Neuroscientist Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; The Neuroscientist Volume 17 ; 17 ; >
-      au < testing ; exists ; 2012 ; The Neuroscientist Volume 18 ; 18 ; >
+      au < released ; manifest ; 2012 ; The Neuroscientist Volume 18 ; 18 ; >
       au < manifest ; exists ; 2013 ; The Neuroscientist Volume 19 ; 19 ; >
 
     }
@@ -26383,7 +26383,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; New Media & Society Volume 11 ; 11 ; >
       au < released ; crawling ; 2010 ; New Media & Society Volume 12 ; 12 ; >
       au < released ; crawling ; 2011 ; New Media & Society Volume 13 ; 13 ; >
-      au < testing ; exists ; 2012 ; New Media & Society Volume 14 ; 14 ; >
+      au < released ; manifest ; 2012 ; New Media & Society Volume 14 ; 14 ; >
       au < expected ; exists ; 2013 ; New Media & Society Volume 15 ; 15 ; >
 
     }
@@ -26454,7 +26454,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Nonprofit and Voluntary Sector Quarterly Volume 38 ; 38 ; >
       au < released ; crawling ; 2010 ; Nonprofit and Voluntary Sector Quarterly Volume 39 ; 39 ; >
       au < released ; crawling ; 2011 ; Nonprofit and Voluntary Sector Quarterly Volume 40 ; 40 ; >
-      au < testing ; exists ; 2012 ; Nonprofit and Voluntary Sector Quarterly Volume 41 ; 41 ; >
+      au < released ; manifest ; 2012 ; Nonprofit and Voluntary Sector Quarterly Volume 41 ; 41 ; >
       au < expected ; exists ; 2013 ; Nonprofit and Voluntary Sector Quarterly Volume 42 ; 42 ; >
 
     }
@@ -26503,7 +26503,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Nursing Ethics Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; Nursing Ethics Volume 17 ; 17 ; >
       au < released ; crawling ; 2011 ; Nursing Ethics Volume 18 ; 18 ; >
-      au < testing ; exists ; 2012 ; Nursing Ethics Volume 19 ; 19 ; >
+      au < released ; manifest ; 2012 ; Nursing Ethics Volume 19 ; 19 ; >
       au < expected ; exists ; 2013 ; Nursing Ethics Volume 20 ; 20 ; >
 
     }
@@ -26558,7 +26558,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Nursing Science Quarterly Volume 22 ; 22 ; >
       au < released ; crawling ; 2010 ; Nursing Science Quarterly Volume 23 ; 23 ; >
       au < released ; crawling ; 2011 ; Nursing Science Quarterly Volume 24 ; 24 ; >
-      au < testing ; exists ; 2012 ; Nursing Science Quarterly Volume 25 ; 25 ; >
+      au < released ; manifest ; 2012 ; Nursing Science Quarterly Volume 25 ; 25 ; >
       au < manifest ; exists ; 2013 ; Nursing Science Quarterly Volume 26 ; 26 ; >
 
     }
@@ -26599,7 +26599,7 @@
       au < manifest ; exists ; 2004-2007 ; Nutrition and Health Volume 18 ; 18 ; >
       au < released ; manifest ; 2007-2008 ; Nutrition and Health Volume 19 ; 19 ; >
       au < released ; crawling ; 2009-2011 ; Nutrition and Health Volume 20 ; 20 ; >
-      au < testing ; exists ; 2012 ; Nutrition and Health Volume 21 ; 21 ; >
+      au < released ; manifest ; 2012 ; Nutrition and Health Volume 21 ; 21 ; >
       au < expected ; exists ; 2013 ; Nutrition and Health Volume 22 ; 22 ; >
 
     }
@@ -26656,7 +26656,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Nutrition in Clinical Practice Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; Nutrition in Clinical Practice Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; Nutrition in Clinical Practice Volume 26 ; 26 ; >
-      au < testing ; exists ; 2012 ; Nutrition in Clinical Practice Volume 27 ; 27 ; >
+      au < released ; manifest ; 2012 ; Nutrition in Clinical Practice Volume 27 ; 27 ; >
       au < expected ; exists ; 2013 ; Nutrition in Clinical Practice Volume 28 ; 28 ; >
 
     }
@@ -26705,7 +26705,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Organization Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; Organization Volume 17 ; 17 ; >
       au < released ; crawling ; 2011 ; Organization Volume 18 ; 18 ; >
-      au < testing ; exists ; 2012 ; Organization Volume 19 ; 19 ; >
+      au < released ; manifest ; 2012 ; Organization Volume 19 ; 19 ; >
       au < manifest ; exists ; 2013 ; Organization Volume 20 ; 20 ; >
 
     }
@@ -26760,7 +26760,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Organization & Environment Volume 22 ; 22 ; >
       au < released ; crawling ; 2010 ; Organization & Environment Volume 23 ; 23 ; >
       au < released ; crawling ; 2011 ; Organization & Environment Volume 24 ; 24 ; >
-      au < testing ; exists ; 2012 ; Organization & Environment Volume 25 ; 25 ; >
+      au < released ; manifest ; 2012 ; Organization & Environment Volume 25 ; 25 ; >
       au < expected ; exists ; 2013 ; Organization & Environment Volume 26 ; 26 ; >
 
     }
@@ -26823,7 +26823,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Organization Studies Volume 30 ; 30 ; >
       au < released ; crawling ; 2010 ; Organization Studies Volume 31 ; 31 ; >
       au < released ; crawling ; 2011 ; Organization Studies Volume 32 ; 32 ; >
-      au < testing ; exists ; 2012 ; Organization Studies Volume 33 ; 33 ; >
+      au < released ; manifest ; 2012 ; Organization Studies Volume 33 ; 33 ; >
       au < expected ; exists ; 2013 ; Organization Studies Volume 34 ; 34 ; >
 
     }
@@ -27248,7 +27248,7 @@
       au < released ; crawling ; 2009 ; Perspectives on Psychological Science Volume 4 ; 4 ; >
       au < released ; crawling ; 2010 ; Perspectives on Psychological Science Volume 5 ; 5 ; >
       au < released ; crawling ; 2011 ; Perspectives on Psychological Science Volume 6 ; 6 ; >
-      au < testing ; exists ; 2012 ; Perspectives on Psychological Science Volume 7 ; 7 ; >
+      au < released ; manifest ; 2012 ; Perspectives on Psychological Science Volume 7 ; 7 ; >
       au < expected ; exists ; 2013 ; Perspectives on Psychological Science Volume 8 ; 8 ; >
 
     }
@@ -27444,7 +27444,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Perspectives in Public Health Volume 129 ; 129 ; >
       au < released ; crawling ; 2010 ; Perspectives in Public Health Volume 130 ; 130 ; >
       au < released ; crawling ; 2011 ; Perspectives in Public Health Volume 131 ; 131 ; >
-      au < testing ; exists ; 2012 ; Perspectives in Public Health Volume 132 ; 132 ; >
+      au < released ; manifest ; 2012 ; Perspectives in Public Health Volume 132 ; 132 ; >
       au < expected ; exists ; 2013 ; Perspectives in Public Health Volume 133 ; 133 ; >
 
     }
@@ -27498,7 +27498,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 21 ; 21 ; >
       au < released ; crawling ; 2010 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 22 ; 22 ; >
       au < released ; crawling ; 2011 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2012 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 24 ; 24 ; >
+      au < testing ; exists ; 2012 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 24 ; 24 ; >
       au < expected ; exists ; 2013 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 25 ; 25 ; >
 
     }
@@ -27566,7 +27566,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Philosophy & Social Criticism Volume 35 ; 35 ; >
       au < released ; crawling ; 2010 ; Philosophy & Social Criticism Volume 36 ; 36 ; >
       au < released ; crawling ; 2011 ; Philosophy & Social Criticism Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2012 ; Philosophy & Social Criticism Volume 38 ; 38 ; >
+      au < testing ; exists ; 2012 ; Philosophy & Social Criticism Volume 38 ; 38 ; >
       au < expected ; exists ; 2013 ; Philosophy & Social Criticism Volume 39 ; 39 ; >
 
     }
@@ -27638,7 +27638,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Philosophy of the Social Sciences Volume 39 ; 39 ; >
       au < released ; crawling ; 2010 ; Philosophy of the Social Sciences Volume 40 ; 40 ; >
       au < released ; crawling ; 2011 ; Philosophy of the Social Sciences Volume 41 ; 41 ; >
-      au < crawling ; exists ; 2012 ; Philosophy of the Social Sciences Volume 42 ; 42 ; >
+      au < testing ; exists ; 2012 ; Philosophy of the Social Sciences Volume 42 ; 42 ; >
       au < expected ; exists ; 2013 ; Philosophy of the Social Sciences Volume 43 ; 43 ; >
 
     }
@@ -27679,7 +27679,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Planning Theory Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; Planning Theory Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; Planning Theory Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2012 ; Planning Theory Volume 11 ; 11 ; >
+      au < testing ; exists ; 2012 ; Planning Theory Volume 11 ; 11 ; >
       au < expected ; exists ; 2013 ; Planning Theory Volume 12 ; 12 ; >
 
     }
@@ -27724,7 +27724,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Police Quarterly Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; Police Quarterly Volume 13 ; 13 ; >
       au < released ; crawling ; 2011 ; Police Quarterly Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2012 ; Police Quarterly Volume 15 ; 15 ; >
+      au < testing ; exists ; 2012 ; Police Quarterly Volume 15 ; 15 ; >
       au < expected ; exists ; 2013 ; Police Quarterly Volume 16 ; 16 ; >
 
     }
@@ -27768,7 +27768,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Policy, Politics, & Nursing Practice Volume 10 ; 10 ; >
       au < notReady ; exists ; 2010 ; Policy, Politics, & Nursing Practice Volume 11 ; 11 ; >
       au < released ; crawling ; 2011 ; Policy, Politics, & Nursing Practice Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2012 ; Policy, Politics, & Nursing Practice Volume 13 ; 13 ; >
+      au < testing ; exists ; 2012 ; Policy, Politics, & Nursing Practice Volume 13 ; 13 ; >
       au < expected ; exists ; 2013 ; Policy, Politics, & Nursing Practice Volume 14 ; 14 ; >
 
     }
@@ -27863,7 +27863,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Political Research Quarterly Volume 62 ; 62 ; >
       au < released ; crawling ; 2010 ; Political Research Quarterly Volume 63 ; 63 ; >
       au < released ; crawling ; 2011 ; Political Research Quarterly Volume 64 ; 64 ; >
-      au < crawling ; exists ; 2012 ; Political Research Quarterly Volume 65 ; 65 ; >
+      au < testing ; exists ; 2012 ; Political Research Quarterly Volume 65 ; 65 ; >
       au < expected ; exists ; 2013 ; Political Research Quarterly Volume 66 ; 66 ; >
 
     }
@@ -27933,7 +27933,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Political Theory Volume 37 ; 37 ; >
       au < released ; crawling ; 2010 ; Political Theory Volume 38 ; 38 ; >
       au < released ; crawling ; 2011 ; Political Theory Volume 39 ; 39 ; >
-      au < crawling ; exists ; 2012 ; Political Theory Volume 40 ; 40 ; >
+      au < testing ; exists ; 2012 ; Political Theory Volume 40 ; 40 ; >
       au < expected ; exists ; 2013 ; Political Theory Volume 41 ; 41 ; >
 
     }
@@ -28004,7 +28004,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Politics & Society Volume 37 ; 37 ; >
       au < notReady ; exists ; 2010 ; Politics & Society Volume 38 ; 38 ; >
       au < released ; crawling ; 2011 ; Politics & Society Volume 39 ; 39 ; >
-      au < crawling ; exists ; 2012 ; Politics & Society Volume 40 ; 40 ; >
+      au < testing ; exists ; 2012 ; Politics & Society Volume 40 ; 40 ; >
       au < expected ; exists ; 2013 ; Politics & Society Volume 41 ; 41 ; >
 
     }
@@ -28045,7 +28045,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Politics, Philosophy & Economics Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; Politics, Philosophy & Economics Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; Politics, Philosophy & Economics Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2012 ; Politics, Philosophy & Economics Volume 11 ; 11 ; >
+      au < testing ; exists ; 2012 ; Politics, Philosophy & Economics Volume 11 ; 11 ; >
       au < expected ; exists ; 2013 ; Politics, Philosophy & Economics Volume 12 ; 12 ; >
 
     }
@@ -28168,7 +28168,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The Prison Journal Volume 89 ; 89 ; >
       au < notReady ; exists ; 2010 ; The Prison Journal Volume 90 ; 90 ; >
       au < released ; crawling ; 2011 ; The Prison Journal Volume 91 ; 91 ; >
-      au < crawling ; exists ; 2012 ; The Prison Journal Volume 92 ; 92 ; >
+      au < testing ; exists ; 2012 ; The Prison Journal Volume 92 ; 92 ; >
       au < expected ; exists ; 2013 ; The Prison Journal Volume 93 ; 93 ; >
 
     }
@@ -28257,7 +28257,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Probation Journal Volume 56 ; 56 ; >
       au < released ; crawling ; 2010 ; Probation Journal Volume 57 ; 57 ; >
       au < released ; crawling ; 2011 ; Probation Journal Volume 58 ; 58 ; >
-      au < crawling ; exists ; 2012 ; Probation Journal Volume 59 ; 59 ; >
+      au < testing ; exists ; 2012 ; Probation Journal Volume 59 ; 59 ; >
       au < expected ; exists ; 2013 ; Probation Journal Volume 60 ; 60 ; >
 
     }
@@ -28312,7 +28312,7 @@
         au < released ; crawling ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 ; >
         au < released ; crawling ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 ; >
         au < released ; crawling ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 ; >
-        au < crawling ; exists ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 56 ; 56 ; >
+        au < testing ; exists ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 56 ; 56 ; >
         au < expected ; exists ; 2013 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 57 ; 57 ; >
 
       }
@@ -28362,7 +28362,7 @@
       au < released ; crawling ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 224 ; 224 ; >
       au < released ; crawling ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 225 ; 225 ; >
-      au < crawling ; exists ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 226 ; 226 ; >
+      au < testing ; exists ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 226 ; 226 ; >
       au < expected ; exists ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 227 ; 227 ; >
 
     }
@@ -28412,7 +28412,7 @@
       au < released ; crawling ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 223 ; 223 ; >
       au < released ; crawling ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 224 ; 224 ; >
       au < released ; crawling ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 225 ; 225 ; >
-      au < crawling ; exists ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 226 ; 226 ; >
+      au < testing ; exists ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 226 ; 226 ; >
       au < expected ; exists ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 227 ; 227 ; >
 
     }
