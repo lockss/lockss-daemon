@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.114 2013-01-06 06:36:32 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.115 2013-01-10 03:35:10 tlipkis Exp $
  */
 
 /*
@@ -1421,7 +1421,7 @@ public class ArchivalUnitStatus
 	  if (curRow < startRow) {
 	    continue;
 	  }
-	  if (curRow >= numRows) {
+	  if (curRow >= endRow1) {
 	    // add 'next'
 	    rowL.add(makeOtherRowsLink(true, endRow1, au.getAuId(), url));
 	    break;
