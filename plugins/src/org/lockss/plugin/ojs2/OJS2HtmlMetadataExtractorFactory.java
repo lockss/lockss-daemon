@@ -1,6 +1,6 @@
 /*
 
- * $Id: OJS2HtmlMetadataExtractorFactory.java,v 1.4 2013-01-02 22:22:05 ldoan Exp $
+ * $Id: OJS2HtmlMetadataExtractorFactory.java,v 1.5 2013-01-10 21:35:25 ldoan Exp $
  */
 
 /*
@@ -75,6 +75,7 @@ public class OJS2HtmlMetadataExtractorFactory implements
       tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_date", MetadataField.FIELD_DATE);
+      tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
       tagMap.put("citation_authors",
           new MetadataField(MetadataField.FIELD_AUTHOR,
               MetadataField.splitAt(";")));
@@ -84,8 +85,9 @@ public class OJS2HtmlMetadataExtractorFactory implements
       tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
       tagMap.put("citation_issue", MetadataField.DC_FIELD_CITATION_ISSUE);
       tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
-      tagMap.put("citation_firstpage", MetadataField.DC_FIELD_CITATION_SPAGE);
-      tagMap.put("citation_lastpage", MetadataField.DC_FIELD_CITATION_EPAGE);
+      tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
+      //tagMap.put("citation_firstpage", MetadataField.DC_FIELD_CITATION_SPAGE);
+      //tagMap.put("citation_lastpage", MetadataField.DC_FIELD_CITATION_EPAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_public_url", MetadataField.FIELD_ACCESS_URL);
             
