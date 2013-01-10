@@ -3,7 +3,7 @@
   publisher <
     name = Pion ;
     info[contract] = 2010 ;
-    info[tester] = 3
+    info[tester] = 4
   >
   
   {
@@ -68,6 +68,7 @@
       au < released ; crawling ; 2010 ; Environment and Planning A Volume 42 ; 42 >
       au < released ; crawling ; 2011 ; Environment and Planning A Volume 43 ; 43 >
       au < released ; crawling ; 2012 ; Environment and Planning A Volume 44 ; 44 >
+      au < expected ; exists ; 2013 ; Environment and Planning A Volume 45 ; 45 >
     
     }
   
@@ -123,6 +124,7 @@
       au < zapped ; down ; 2010 ; Environment and Planning B: Planning and Design Volume 37 ; 37 >
       au < released ; crawling ; 2011 ; Environment and Planning B: Planning and Design Volume 38 ; 38 >
       au < released ; crawling ; 2012 ; Environment and Planning B: Planning and Design Volume 39 ; 39 >
+      au < expected ; exists ; 2013 ; Environment and Planning B: Planning and Design Volume 40 ; 40 >
   
     }
   
@@ -169,6 +171,7 @@
       au < zapped ; down ; 2010 ; Environment and Planning C: Government and Policy Volume 28 ; 28 >
       au < released ; crawling ; 2011 ; Environment and Planning C: Government and Policy Volume 29 ; 29 >
       au < released ; crawling ; 2012 ; Environment and Planning C: Government and Policy Volume 30 ; 30 >
+      au < expected ; exists ; 2013 ; Environment and Planning C: Government and Policy Volume 31 ; 31 >
   
     }
   
@@ -215,6 +218,7 @@
       au < released ; crawling ; 2010 ; Environment and Planning D: Society and Space Volume 28 ; 28 >
       au < released ; crawling ; 2011 ; Environment and Planning D: Society and Space Volume 29 ; 29 >
       au < released ; crawling ; 2012 ; Environment and Planning D: Society and Space Volume 30 ; 30 >
+      au < expected ; exists ; 2013 ; Environment and Planning D: Society and Space Volume 31 ; 31 >
   
     }
   
@@ -232,7 +236,6 @@
       param[short_journal_code] = H
       implicit < status1 ; status ; year ; name ; volume ; param[volume_name] >
       comment[changed_publisher] = http://www.oldcitypublishing.com/index.html, 2008-2012, vols. 37-41
-      comment[status] = changed 2008 and after to doNotProcess
       
 
       au < manifest ; exists ; 1995-1996 ; High Temperatures - High Pressures Volume 27/28 ; 27-28 ; 27 >
@@ -243,11 +246,9 @@
       au < manifest ; exists ; 2001 ; High Temperatures - High Pressures Volume 33 ; 33 ; 33 >
       au < manifest ; exists ; 2002 ; High Temperatures - High Pressures Volume 34 ; 34 ; 34 >
       au < manifest ; exists ; 2003-2007 ; High Temperatures - High Pressures Volume 35/36 ; 35-36 ; 35 >
-      au <doNotProcess ; exists ; 2008 ; High Temperatures - High Pressures Volume 37 ; 37 ; 37 >
-      au <doNotProcess ; exists ; 2009 ; High Temperatures - High Pressures Volume 38 ; 38 ; 38 >
+
       au < zapped ; down ; 2010 ; High Temperatures - High Pressures Volume 39 ; 39 ; 39 >
       au < zapped ; down ; 2011 ; High Temperatures - High Pressures Volume 40 ; 40 ; 40 >
-      au < doNotProcess ; exists ; 2012 ; High Temperatures - High Pressures Volume 41 ; 41 ; 41 >
   
     }
   
@@ -305,7 +306,8 @@
       au < zapped ; down ; 2010 ; Perception Volume 39 ; 39 >
       au < released ; crawling ; 2011 ; Perception Volume 40 ; 40 >
       au < released ; crawling ; 2012 ; Perception Volume 41 ; 41 >
-   
+      au < expected ; exists ; 2013 ; Perception Volume 42 ; 42 >
+    
     }
   
   }
@@ -327,7 +329,8 @@
     
     au < released ; crawling ; 2010 ; i-Perception Volume 1 ; 1 >
     au < released ; crawling ; 2011 ; i-Perception Volume 2 ; 2 >
-    au < released ; crawling ; 2012 ; i-Perception Volume 3 ; 3 >
+    au < manifest ; exists ; 2012 ; i-Perception Volume 3 ; 3 >
+    au < manifest ; exists ; 2013 ; i-Perception Volume 4 ; 4 >
   
   }
         

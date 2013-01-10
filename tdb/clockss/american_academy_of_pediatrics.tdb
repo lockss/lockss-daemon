@@ -64,6 +64,7 @@
       au < released ; crawling ; 2011 ; AAP Grand Rounds Volume 26 ; 26 >
       au < released ; crawling ; 2012 ; AAP Grand Rounds Volume 27 ; 27 >
       au < released ; crawling ; 2012 ; AAP Grand Rounds Volume 28 ; 28 >
+      au < manifest ; exists ; 2013 ; AAP Grand Rounds Volume 29 ; 29 >
 
     }
   
@@ -130,6 +131,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; AAP News Volume 31 ; 31 >
       au < released ; crawling ; 2011 ; AAP News Volume 32 ; 32 >
       au < released ; crawling ; 2012 ; AAP News Volume 33 ; 33 >
+      au < manifest ; exists ; 2013 ; AAP News Volume 34 ; 34 >
 
     }
   
@@ -147,6 +149,7 @@
 
       au < exists ; exists ; 2011 ; Hospital Pediatrics Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
+      au < expected ; exists ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
 
   }
   
@@ -187,6 +190,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; NeoReviews Volume 11 ; 11 >
       au < released ; crawling ; 2011 ; NeoReviews Volume 12 ; 12 >
       au < released ; crawling ; 2012 ; NeoReviews Volume 13 ; 13 >
+      au < manifest ; exists ; 2013 ; NeoReviews Volume 14 ; 14 >
 
     }
   
@@ -350,6 +354,7 @@
       au < released ; crawling ; 2011 ; Pediatrics Volume 128 ; 128 >
       au < released ; crawling ; 2012 ; Pediatrics Volume 129 ; 129 >
       au < released ; crawling ; 2012 ; Pediatrics Volume 130 ; 130 >
+      au < manifest ; exists ; 2013; Pediatrics Volume 131 ; 131 >
 
     }
   
@@ -413,6 +418,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; Pediatrics in Review Volume 31 ; 31 >
       au < released ; crawling ; 2011 ; Pediatrics in Review Volume 32 ; 32 >
       au < released ; crawling ; 2012 ; Pediatrics in Review Volume 33 ; 33 >
+      au < manifest ; exists ; 2013 ; Pediatrics in Review Volume 34 ; 34 >
 
     }
   
@@ -441,6 +447,7 @@
     au < doNotProcess ; exists ; 2006 ; Red Book Online Volume 2006 ; 2006 >
     au < doNotProcess ; exists ; 2009 ; Red Book Online Volume 2009 ; 2009 >
     au < crawling ; exists ; 2012 ; Red Book Online Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; Red Book Online Volume 2 ; 2 >
 
   }
 

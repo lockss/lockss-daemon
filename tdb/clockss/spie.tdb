@@ -10,24 +10,12 @@
     param[base_url] = http://spiedigitallibrary.org/journals/
     implicit < status1 ; status ; year ; name ; param[volume_name] >
  
-  {
-  
-    title < 
-      name = Optical Engineering ;
-      issn = 0091-3286 ;
-      eissn = 1560-2303
-    >
-
-
-    }
-    
     {
   
     title < 
-      name = Journal of Electronic Imaging ;
-      issn = 1017-9909 ;
-      eissn = 1560-229X
-     >
+      name = Journal of Applied Remote Sensing ;
+      eissn = 1931-3195
+    >
 
 
     }
@@ -47,10 +35,10 @@
     {
   
     title < 
-      name = Journal of Micro/Nanolithography, MEMS, and MOEMS ;
-      issn = 1932-5150 ;
-      eissn = 1932-5134
-    >
+      name = Journal of Electronic Imaging ;
+      issn = 1017-9909 ;
+      eissn = 1560-229X
+     >
 
 
     }
@@ -58,8 +46,9 @@
     {
   
     title < 
-      name = Journal of Applied Remote Sensing ;
-      eissn = 1931-3195
+      name = Journal of Micro/Nanolithography, MEMS, and MOEMS ;
+      issn = 1932-5150 ;
+      eissn = 1932-5134
     >
 
 
@@ -80,6 +69,17 @@
     title < 
       name = Journal of Photonics for Energy ;
       eissn = 1947-7988
+    >
+
+
+    }
+    
+    {
+  
+    title < 
+      name = Optical Engineering ;
+      issn = 0091-3286 ;
+      eissn = 1560-2303
     >
 
 

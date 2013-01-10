@@ -22,6 +22,7 @@
     au < released ; crawling ; 2010 ; Administrative Law Review Volume 62 ; 62 >
     au < released ; crawling ; 2011 ; Administrative Law Review Volume 63 ; 63 >
     au < released ; crawling ; 2012 ; Administrative Law Review Volume 64 ; 64 >
+    au < expected ; exists ; 2013 ; Administrative Law Review Volume 65 ; 65 >
 
   }
 
@@ -63,6 +64,7 @@
     au < released ; crawling ; 2009-2010 ; American University International Law Review Volume 25 ; 25 >
     au < released ; crawling ; 2011 ; American University International Law Review Volume 26 ; 26 >
     au < released ; crawling ; 2012 ; American University International Law Review Volume 27 ; 27 >
+    au < expected ; exists ; 2013 ; American University International Law Review Volume 28 ; 28 >
 
   }
 
@@ -76,7 +78,9 @@
 
     au < released ; crawling ; 2010 ; American University Intellectual Property Brief Issue 1 ; 1 >
     au < released ; crawling ; 2010 ; American University Intellectual Property Brief Issue 2 ; 2 >
-    au < released ; crawling ; 2010 ; American University Intellectual Property Brief Issue 3 ; 3 >
+    au < released ; crawling ; 2012 ; American University Intellectual Property Brief Issue 3 ; 3 >
+    au < exists ; exists ; 2012 ; American University Intellectual Property Brief Issue 4 ; 4 >
+    au < expected ; exists ; 2013 ; American University Intellectual Property Brief Issue 5 ; 5 >
 
   }
 
@@ -90,6 +94,7 @@
 
     au < released ; crawling ; 2011 ; American University Labor & Employment Law Forum Volume 1 ; 1 >
     au < released ; crawling ; 2012 ; American University Labor & Employment Law Forum Volume 2 ; 2 >
+    au < expected ; exists ; 2013 ; American University Labor & Employment Law Forum Volume 3 ; 3 >
 
   }
 
@@ -143,8 +148,8 @@
     au < released ; crawling ; 1998 ; The Journal of Gender, Social Policy & the Law Volume 6 ; 6 >
     au < released ; crawling ; 1999 ; The Journal of Gender, Social Policy & the Law Volume 7 ; 7 >
     au < released ; crawling ; 2000 ; The Journal of Gender, Social Policy & the Law Volume 8 ; 8 >
-    au < doesNotExist ; doesNotExist ; 0 ; The Journal of Gender, Social Policy & the Law Volume 9 ; 9 >
-    au < doesNotExist ; doesNotExist ; 0 ; The Journal of Gender, Social Policy & the Law Volume 10 ; 10 >
+    au < crawling ; exists ; 2001 ; The Journal of Gender, Social Policy & the Law Volume 9 ; 9 >
+    au < crawling ; exists ; 2002 ; The Journal of Gender, Social Policy & the Law Volume 10 ; 10 >
     au < released ; crawling ; 2003 ; The Journal of Gender, Social Policy & the Law Volume 11 ; 11 >
     au < released ; crawling ; 2004 ; The Journal of Gender, Social Policy & the Law Volume 12 ; 12 >
     au < released ; crawling ; 2005 ; The Journal of Gender, Social Policy & the Law Volume 13 ; 13 >
@@ -155,6 +160,7 @@
     au < released ; crawling ; 2010 ; The Journal of Gender, Social Policy & the Law Volume 18 ; 18 >
     au < released ; crawling ; 2011 ; The Journal of Gender, Social Policy & the Law Volume 19 ; 19 >
     au < released ; crawling ; 2012 ; The Journal of Gender, Social Policy & the Law Volume 20 ; 20 >
+    au < expected ; exists ; 2013 ; The Journal of Gender, Social Policy & the Law Volume 21 ; 21 >
 
   }
 
@@ -170,6 +176,7 @@
     au < released ; crawling ; 2010 ; Legislation and Policy Brief Volume 2 ; 2 >
     au < released ; crawling ; 2011 ; Legislation and Policy Brief Volume 3 ; 3 >
     au < released ; crawling ; 2012 ; Legislation and Policy Brief Volume 4 ; 4 >
+    au < expected ; exists ; 2013 ; Legislation and Policy Brief Volume 5 ; 5 >
 
   }
 
@@ -189,6 +196,7 @@
     au < released ; crawling ; 2010 ; The Modern American Volume 6 ; 6 >
     au < released ; crawling ; 2011 ; The Modern American Volume 7 ; 7 >
     au < expected ; exists ; 2012 ; The Modern American Volume 8 ; 8 >
+    au < expected ; exists ; 2013 ; The Modern American Volume 9 ; 9 >
 
   }
 
