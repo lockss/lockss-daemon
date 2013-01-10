@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.49 2012-12-07 07:40:58 fergaloy-sf Exp $
+ * $Id: ListHoldings.java,v 1.50 2013-01-10 18:27:30 easyonthemayo Exp $
  */
 
 /*
@@ -595,12 +595,14 @@ public class ListHoldings extends LockssServlet {
         // list of bibliographic items is assumed to be sorted by ISSN
         // TODO (PJG) note: should return AUs from DB and
         // show aggregate health of AU for each title
-        List<? extends BibliographicItem> items =
-            MetadataDatabaseUtil.getBibliographicItems();
+        List<BibliographicItem> items =
+            TdbUtil.filterBibliographicItemsByType(
+                MetadataDatabaseUtil.getBibliographicItems(),
+                type);
         if (items.size() > 0) {
           log.debug2("Found bibliographic items: " + items.size());
           // XXX (NM) Note I moved the conversion algorithm to KbartConverter
-          // to take advantage of paralellisation:
+          // to take advantage of parallelisation:
           return KbartConverter.convertBibliographicItems(items);
         }
       }

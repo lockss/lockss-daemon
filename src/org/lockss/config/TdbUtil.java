@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.17 2012-08-09 22:48:04 pgust Exp $
+ * $Id: TdbUtil.java,v 1.18 2013-01-10 18:27:30 easyonthemayo Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.TitleConfig;
+import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
@@ -288,13 +289,29 @@ public class TdbUtil {
 
 
   /**
+   * Filter a collection of BibliographicItems to return only those of the
+   * specified type.
+   * @param type type of content to filter for
+   * @return a list of BibliographicItems with AUs of only the specified type
+   */
+  public static List<BibliographicItem> filterBibliographicItemsByType(
+      final List<BibliographicItem> items, final ContentType type) {
+    if (type==null) return items;
+    return new ArrayList<BibliographicItem>() {{
+      for (BibliographicItem item: items) {
+        if(type.isOfType(item)) add(item);
+      }
+    }};
+  }
+
+  /**
    * Filter a collection of TdbTitles to return only those of the specified type.
    * Checks the first Au in a title.
    * @param type type of content to filter for
    * @return a list of TdbTitles with AUs of only the specified type
    */
   public static Collection<TdbTitle> filterTitlesByType(Collection<TdbTitle> titles,
-                                                  ContentType type) {
+                                                        ContentType type) {
     if (type==null) return titles;
     Collection<TdbTitle> titlesOfType = new ArrayList<TdbTitle>();
     for (TdbTitle title: titles) {
@@ -682,21 +699,21 @@ public class TdbUtil {
     JOURNALS ("Journals") {
       @Override
       /** An AU is considered a journal if it has no ISBN. */
-      public boolean isOfType(TdbAu au) {
+      public boolean isOfType(BibliographicItem au) {
         return StringUtil.isNullString(au.getIsbn());
       }
     },
     BOOKS ("Books") {
       @Override
       /** An AU is considered a book if it has an ISBN. */
-      public boolean isOfType(TdbAu au) {
+      public boolean isOfType(BibliographicItem au) {
         return !StringUtil.isNullString(au.getIsbn());
       }
     },
     ALL ("All types") {
       @Override
       /** Any AU is of type all. */
-      public boolean isOfType(TdbAu au) { return true; }
+      public boolean isOfType(BibliographicItem au) { return true; }
     };
 
     /** The default fallback type. */
@@ -738,8 +755,8 @@ public class TdbUtil {
       }
     }
 
-    /** A method to establish whether an AU is of the given type. */
-    public abstract boolean isOfType(TdbAu au);
+    /** A method to establish whether a BibliographicItem is of the given type. */
+    public abstract boolean isOfType(BibliographicItem au);
 
     public String toString() {
       return label;

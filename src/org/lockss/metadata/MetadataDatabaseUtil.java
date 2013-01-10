@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.7 2013-01-09 12:59:59 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.8 2013-01-10 18:27:30 easyonthemayo Exp $
  */
 
 /*
@@ -334,7 +334,7 @@ final public class MetadataDatabaseUtil {
    * 
    * @return a list of BibliobraphicItems from the metadata database.
    */
-  static public List<? extends BibliographicItem> getBibliographicItems() {
+  static public List<BibliographicItem> getBibliographicItems() {
     List<BibliographicItem> items = new ArrayList<BibliographicItem>();
     Connection conn = null;
     DbManager dbManager = null;
