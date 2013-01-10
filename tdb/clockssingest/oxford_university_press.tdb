@@ -5294,7 +5294,7 @@
     au < manifest ; exists ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; >
-    au < down ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
+    au < released ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
     au < released ; crawling ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
     au < released ; crawling ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 ; >
     au < manifest ; exists ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 ; >
@@ -5330,7 +5330,7 @@
     param[base_url] = http://ejechocard.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < down ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
+    au < down ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 [superseded] ; 11 ; >
 
     }
 
