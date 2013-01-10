@@ -1,7 +1,8 @@
+ <!--  $Id:     -->
  <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - audrey</string>
+    <string>testing - audrey, mary ellen (new plugin!)</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +25,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -34,7 +35,8 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.53.0</string>
+    <!-- need 1.59 for the embedded issue range in the issue_set -->
+    <string>1.59.0</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -69,8 +71,10 @@
       <!-- example of pdfs: http://www.pensoft.net/inc/journals/download.php?fileId=3070&fileTable=J_GALLEYS 
            http://www.pensoft.net/J_FILES/10/articles/1100/1100-G-3-layout.pdf  -->
       <string>1,"^%sinc/journals/", base_url</string> 
-      <!-- example of abstract|article: 
-      http://www.pensoft.net/journals/compcytogen/article/1141/abstract/cytogenetic-characterization-of-three-balistoidea-fish-species-from-the-atlantic-with-inferences-on-chromosomal-evolutio -->
+      <!-- examples of abstract|article: 
+      http://www.pensoft.net/journals/compcytogen/article/1141/abstract/cytogenetic-characterization-of-three-balistoidea-fish-species-from-the-atlantic-with-inferences-on-chromosomal-evolutio 
+      http://www.pensoft.net/journals/compcytogen/article/1730
+      -->
       <string>1,"^%sjournals/%s/article/", base_url, journal_name</string>
       <!-- example of jpg: http://www.pensoft.net/J_FILES/1317222993JHR-22-cover-temp-110.jpg -->
       <string>1, "^%sJ_FILES/", base_url</string>
@@ -109,23 +113,12 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>issue_set</key>
         <displayName>Issue Set</displayName>
-        <description>A comma delimited list of issues. (eg issue1, issue2)</description>
+        <description>A comma delimited list of issues with optional numeric range. (eg issue1, issue2[, {min-max}]*)</description>
         <type>9</type>
-        <size>100</size>
+        <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
- <!--     
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>num_issue_range</key>
-        <displayName>Numeric Issue Range</displayName>
-        <description>A Range of issues in the form: min-max</description>
-        <type>8</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
- -->     
+      </org.lockss.daemon.ConfigParamDescr>    
     </list>
   </entry>
   <entry>

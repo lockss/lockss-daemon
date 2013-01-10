@@ -55,7 +55,7 @@ public class PensoftArticleIteratorFactory
     "\"%s\", base_url";
   //[http://www.pensoft.net/journals/jhr/]  article/1142/abstract/tiphiidae-wasps-of-madagascar-hymenoptera-tiphiidae-
   protected static final String PATTERN_TEMPLATE =
-    "\"journals/%s/article/[\\d]+/abstract/[\\w-]+\", journal_name";
+    "\"journals/%s/article/[\\d]+/abstract(/[^/]*)?$\", journal_name";
   
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
@@ -79,9 +79,9 @@ public class PensoftArticleIteratorFactory
     protected static Pattern PDF_PATTERN =
       Pattern.compile("J_FILES/[\\d]+/articles/[\\d]+/([^/]+)", Pattern.CASE_INSENSITIVE);
     protected static Pattern HTML_PATTERN =
-      Pattern.compile("journals/[\\w]+/article/[\\d]+/[\\w-]+", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("journals/[\\w]+/article/[\\d]+(/[^/]*)?$", Pattern.CASE_INSENSITIVE);
     protected static Pattern ABSTRACT_PATTERN =
-      Pattern.compile("journals/[\\w]+/article/[\\d]+/abstract/[\\w-]+", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("journals/[\\w]+/article/[\\d]+/abstract(/[^/]*)?$", Pattern.CASE_INSENSITIVE);
     private ArchivalUnit au;
     
     public PensoftArticleIterator(ArchivalUnit au,
