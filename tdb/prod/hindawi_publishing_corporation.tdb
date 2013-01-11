@@ -196,7 +196,7 @@
     au < released ; Advances in Civil Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Civil Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Civil Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Civil Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < ready ; Advances in Civil Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Advances in Civil Engineering Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -246,7 +246,7 @@
     au < released ; Advances in Decision Sciences Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Decision Sciences Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Decision Sciences Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Decision Sciences Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < ready ; Advances in Decision Sciences Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Advances in Decision Sciences Volume 2013 ; 2013 ; 2013 ; 2013 >
     
   }
@@ -303,7 +303,7 @@
     au < ready ; Advances in Hematology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Advances in Hematology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ; Advances in Hematology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Hematology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < ready ; Advances in Hematology Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Advances in Hematology Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -323,7 +323,7 @@
     au < released ; Advances in High Energy Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in High Energy Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in High Energy Physics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in High Energy Physics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < ready ; Advances in High Energy Physics Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Advances in High Energy Physics Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -363,7 +363,7 @@
     au < released ; Advances in Materials Science and Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Materials Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Materials Science and Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Materials Science and Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < ready ; Advances in Materials Science and Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Advances in Materials Science and Engineering Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -381,7 +381,7 @@
     au < released ; Advances in Mathematical Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Mathematical Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Mathematical Physics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Mathematical Physics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < ready ; Advances in Mathematical Physics Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Advances in Mathematical Physics Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -399,7 +399,7 @@
     au < released ; Advances in Mechanical Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Mechanical Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Mechanical Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Mechanical Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < ready ; Advances in Mechanical Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Advances in Mechanical Engineering Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -414,8 +414,8 @@
 
     param[journal_id] = amet
     
-    au < testing ; Advances in Meteorology Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Advances in Meteorology Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Advances in Meteorology Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; Advances in Meteorology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ; Advances in Meteorology Volume 2011 ; 2011 ; 2011 ; 2011 >
     au < testing ; Advances in Meteorology Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Advances in Meteorology Volume 2013 ; 2013 ; 2013 ; 2013 >
