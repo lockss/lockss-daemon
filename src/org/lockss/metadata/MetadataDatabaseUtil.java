@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.8 2013-01-10 18:27:30 easyonthemayo Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.9 2013-01-11 23:55:19 pgust Exp $
  */
 
 /*
@@ -103,8 +103,8 @@ final public class MetadataDatabaseUtil {
       eisbn = MetadataUtil.formatIssn(resultSet.getString(6));
       startvolume = resultSet.getString(7);
       endvolume = resultSet.getString(7);
-      startyear = MetadataUtil.getYearFromDate(resultSet.getString(8));
-      endyear = MetadataUtil.getYearFromDate(resultSet.getString(8));
+      startyear = resultSet.getString(8);
+      endyear = resultSet.getString(8);
     }
 
     @Override
@@ -285,7 +285,7 @@ final public class MetadataDatabaseUtil {
       publisher_name, 
       publication_name,
       p_issn, e_issn, p_isbn, e_isbn,
-      volume, date
+      volume, substr(date,1,4)
     from 
       bib_item, 
       md_item, 
@@ -312,8 +312,8 @@ final public class MetadataDatabaseUtil {
         "select distinct "
       +   "publisher_name, publication_name, "
       +   "p_issn, e_issn, p_isbn, e_isbn, "
-      +   "volume, " + DATE_COLUMN
-      + " from "
+      +   "volume, substr(" + DATE_COLUMN + ",1,4) "
+      + "from "
       +    BIB_ITEM_TABLE + ", "
       +    MD_ITEM_TABLE + ", "
       +    PUBLICATION_TABLE + ", " 
