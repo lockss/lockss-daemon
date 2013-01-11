@@ -34,13 +34,17 @@
     
     param[base_url] = http://www.ai-journal.com/
     param[journal_id] = ai
-
+    {
+       plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
+       comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
+       au < zapped ; down ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 >
+    }
     au < manifest ; exists ; 2006-2007 ; Archaeology International Volume 10 ; 10 ; 2006 >
     au < manifest ; exists ; 2007-2008 ; Archaeology International Volume 11 ; 11 ; 2007 >
     au < manifest ; exists ; 2008-2009 ; Archaeology International Volume 12 ; 12 ; 2008 >
-    au < released ; crawling ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 >
+    au < manifest ; exists ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 >
     au < manifest ; exists ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2011 >
-    
+  
   }
   
   {
@@ -163,6 +167,11 @@
     param[journal_id] = pia
     comment[base_url] = manifest page does not use www.
 
+    {
+       plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
+       comment[zapped] = Released this AU under plugin that is obsolete: replaced by ClockssOJS2Plugin
+        au < zapped ; down ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
+    }
     au < manifest ; exists ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
     au < manifest ; exists ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
     au < manifest ; exists ; 1992 ; Papers from the Institute of Archaeology Volume 3 ; 3 ; 1992 >
@@ -183,7 +192,7 @@
     au < manifest ; exists ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 ; 2007 >
     au < manifest ; exists ; 2009 ; Papers from the Institute of Archaeology Volume 19 ; 19 ; 2009 >
     au < manifest ; exists ; 2010 ; Papers from the Institute of Archaeology Volume 20 ; 20 ; 2010 >
-    au < released ; crawling ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
+    au < manifest ; exists ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
     
   }
   
@@ -197,9 +206,14 @@
     param[base_url] = http://www.presentpasts.info/
     param[journal_id] = pp
 
+    {
+       plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
+       comment[zapped] = Released this AU under plugin that is obsolete: replaced by ClockssOJS2Plugin
+       au < zapped ; down ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
+    }
     au < manifest ; exists ; 2009 ; Present Pasts Volume 1 ; 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Present Pasts Volume 2 ; 2 ; 2010 >
-    au < released ; crawling ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
+    au < manifest ; exists ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
     
   }
 
