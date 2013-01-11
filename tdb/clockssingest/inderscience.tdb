@@ -686,7 +686,7 @@
 
       param[journal_issn] = 1757-8760
       
-      au < crawling ; exists ; 2012 ; International Journal of Auditing Technology Volume 1 ; 1 >
+      au < exists ; exists ; 2012 ; International Journal of Auditing Technology Volume 1 ; 1 >
 
     }
 
@@ -1472,7 +1472,7 @@
 
       param[journal_issn] = 1740-0554
       
-      au < crawling ; exists ; 2012 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
+      au < exists ; exists ; 2012 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
 
     }
 
@@ -1606,7 +1606,7 @@
 
       param[journal_issn] = 1755-4519
       
-      au < crawling ; exists ; 2012 ; International Journal of Computational Medicine and Healthcare Volume 1 ; 1 >
+      au < exists ; exists ; 2012 ; International Journal of Computational Medicine and Healthcare Volume 1 ; 1 >
 
     }
 
@@ -2081,7 +2081,7 @@
 
       param[journal_issn] = 1756-2562
       
-      au < crawling ; exists ; 2012 ; International Journal of Digital Enterprise Technology Volume 1 ; 1 >
+      au < exists ; exists ; 2012 ; International Journal of Digital Enterprise Technology Volume 1 ; 1 >
 
     }
 
@@ -2096,7 +2096,7 @@
 
       param[journal_issn] = 2046-3383
       
-      au < crawling ; exists ; 2012 ; International Journal of the Digital Human Volume 1 ; 1 >
+      au < exists ; exists ; 2012 ; International Journal of the Digital Human Volume 1 ; 1 >
 
     }
 
@@ -4746,8 +4746,8 @@
       au < zapped ; down ; 2011 ; International Journal of Manufacturing Technology and Management Volume 23 ; 23 >
       au < released ; crawling ; 2011 ; International Journal of Manufacturing Technology and Management Volume 24 ; 24 >
       au < zapped ; down ; 2012 ; International Journal of Manufacturing Technology and Management Volume 25 ; 25 >
-      au < crawling ; exists ; 2012 ; International Journal of Manufacturing Technology and Management Volume 26 ; 26 >
-      au < crawling ; exists ; 2012 ; International Journal of Manufacturing Technology and Management Volume 27 ; 27 >
+      au < exists ; exists ; 2012 ; International Journal of Manufacturing Technology and Management Volume 26 ; 26 >
+      au < exists ; exists ; 2012 ; International Journal of Manufacturing Technology and Management Volume 27 ; 27 >
       au < expected ; exists ; 2013 ; International Journal of Manufacturing Technology and Management Volume 28 ; 28 >
 
     }
@@ -7531,7 +7531,7 @@
 
       param[journal_issn] = 1745-3208
       
-      au < crawling ; exists ; 2012 ; International Journal of Vehicle Performance Volume 1 ; 1 >
+      au < exists ; exists ; 2012 ; International Journal of Vehicle Performance Volume 1 ; 1 >
 
     }
 
