@@ -2055,11 +2055,11 @@
       param[base_url] = http://www.apfmj.com/
       param[journal_issn] = 1447-056X
 
-      au < testing ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
-      au < testing ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
-      au < testing ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
-      au < testing ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
-      au < testing ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
+      au < ready ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
+      au < ready ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
+      au < ready ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
+      au < ready ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
+      au < ready ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
       au < expected ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
 
     }
@@ -2768,9 +2768,9 @@
       param[journal_issn] = 1542-6416
       comment[moved_from] = Springer Science+Business Media in 2011
       
-      au < testing ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
+      au < ready ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
       au < testing ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
-      au < testing ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
+      au < ready ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
       au < exists ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
 
     }
@@ -2941,10 +2941,10 @@
       param[base_url] = http://www.dmsjournal.com/
       param[journal_issn] = 1758-5996
 
-      au < testing ; 2009 ; Diabetology & Metabolic Syndrome Volume 1 ; 1 >
-      au < testing ; 2010 ; Diabetology & Metabolic Syndrome Volume 2 ; 2 >
-      au < testing ; 2011 ; Diabetology & Metabolic Syndrome Volume 3 ; 3 >
-      au < testing ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
+      au < ready ; 2009 ; Diabetology & Metabolic Syndrome Volume 1 ; 1 >
+      au < ready ; 2010 ; Diabetology & Metabolic Syndrome Volume 2 ; 2 >
+      au < ready ; 2011 ; Diabetology & Metabolic Syndrome Volume 3 ; 3 >
+      au < ready ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
       au < expected ; 2013 ; Diabetology & Metabolic Syndrome Volume 5 ; 5 >
 
     }
