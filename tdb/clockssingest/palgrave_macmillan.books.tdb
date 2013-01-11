@@ -1,0 +1,21 @@
+{
+  publisher <
+    name = Palgrave Macmillan ;
+    info[contract] = 2012 ;
+    info[tester] = 0
+  >
+
+    plugin = needs.plugin
+    param[base_url] = http://www.palgraveconnect.com/
+    implicit < status ; status2 ; name ; isbn ; eisbn ; param[doi] ; author ; year >
+
+  {
+
+      title <
+        name = Palgrave Macmillan Books 
+      >
+
+      au < exists ; exists ; Building Great Customer Experiences, Revised Edition ; 9780333990131 ; 9780230554719 ; 10.1057/9780230554719 ;  Colin Shaw and John Ivens ; 2002 >
+
+    }
+}
