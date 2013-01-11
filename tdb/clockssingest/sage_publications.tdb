@@ -3,7 +3,7 @@
   publisher <
     name = SAGE Publications ;
     info[contract] = 2008 ;
-    info[tester] = 3
+    info[tester] = 8
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
@@ -505,8 +505,8 @@
         au < zapped ; down ; 2003 ; Adult Learning Volume 14 ; 14 ; >
         au < released ; crawling ; 2004 ; Adult Learning Volume 15 ; 15 ; >
         au < zapped ; down ; 2005 ; Adult Learning Volume 16 ; 16 ; >
-        au < crawling ; exists ; 2006 ; Adult Learning Volume 17 ; 17 ; >
-        au < crawling ; exists ; 2007 ; Adult Learning Volume 18 ; 18 ; >
+        au < testing ; exists ; 2006 ; Adult Learning Volume 17 ; 17 ; >
+        au < testing ; exists ; 2007 ; Adult Learning Volume 18 ; 18 ; >
         au < zapped ; down ; 2008 ; Adult Learning Volume 19 ; 19 ; >
         au < zapped ; down ; 2009 ; Adult Learning Volume 20 ; 20 ; >
         au < zapped ; down ; 2010 ; Adult Learning Volume 21 ; 21 ; >
@@ -23294,7 +23294,7 @@
 
       au < notReady ; exists ; 2010 ; Journal of Tissue Engineering Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Journal of Tissue Engineering Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2012 ; Journal of Tissue Engineering Volume 3 ; 3 ; >
+      au < testing ; exists ; 2012 ; Journal of Tissue Engineering Volume 3 ; 3 ; >
       au < expected ; exists ; 2013 ; Journal of Tissue Engineering Volume 4 ; 4 ; >
 
     }
@@ -31636,7 +31636,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; SIMULATION Volume 85 ; 85 ; >
       au < released ; crawling ; 2010 ; SIMULATION Volume 86 ; 86 ; >
       au < released ; crawling ; 2011 ; SIMULATION Volume 87 ; 87 ; >
-      au < testing ; exists ; 2012 ; SIMULATION Volume 88 ; 88 ; >
+      au < released ; manifest ; 2012 ; SIMULATION Volume 88 ; 88 ; >
       au < expected ; exists ; 2013 ; SIMULATION Volume 89 ; 89 ; >
 
     }
@@ -31709,7 +31709,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Simulation & Gaming Volume 40 ; 40 ; >
       au < zapped ; down ; 2010 ; Simulation & Gaming Volume 41 ; 41 ; >
       au < released ; crawling ; 2011 ; Simulation & Gaming Volume 42 ; 42 ; >
-      au < testing ; exists ; 2012 ; Simulation & Gaming Volume 43 ; 43 ; >
+      au < released ; manifest ; 2012 ; Simulation & Gaming Volume 43 ; 43 ; >
       au < expected ; exists ; 2013 ; Simulation & Gaming Volume 44 ; 44 ; >
 
     }
@@ -31782,7 +31782,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Small Group Research Volume 40 ; 40 ; >
       au < zapped ; down ; 2010 ; Small Group Research Volume 41 ; 41 ; >
       au < released ; crawling ; 2011 ; Small Group Research Volume 42 ; 42 ; >
-      au < testing ; exists ; 2012 ; Small Group Research Volume 43 ; 43 ; >
+      au < released ; manifest ; 2012 ; Small Group Research Volume 43 ; 43 ; >
       au < expected ; exists ; 2013 ; Small Group Research Volume 44 ; 44 ; >
 
     }
@@ -31833,7 +31833,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Social & Legal Studies Volume 18 ; 18 ; >
       au < released ; crawling ; 2010 ; Social & Legal Studies Volume 19 ; 19 ; >
       au < released ; crawling ; 2011 ; Social & Legal Studies Volume 20 ; 20 ; >
-      au < testing ; exists ; 2012 ; Social & Legal Studies Volume 21 ; 21 ; >
+      au < released ; manifest ; 2012 ; Social & Legal Studies Volume 21 ; 21 ; >
       au < expected ; exists ; 2013 ; Social & Legal Studies Volume 22 ; 22 ; >
 
     }
@@ -31922,7 +31922,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Social Compass Volume 56 ; 56 ; >
       au < released ; crawling ; 2010 ; Social Compass Volume 57 ; 57 ; >
       au < released ; crawling ; 2011 ; Social Compass Volume 58 ; 58 ; >
-      au < testing ; exists ; 2012 ; Social Compass Volume 59 ; 59 ; >
+      au < released ; manifest ; 2012 ; Social Compass Volume 59 ; 59 ; >
       au < expected ; exists ; 2013 ; Social Compass Volume 60 ; 60 ; >
 
     }
@@ -31945,7 +31945,7 @@
 
       au < released ; crawling ; 2010 ; Social Psychological and Personality Science Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Social Psychological and Personality Science Volume 2 ; 2 ; >
-      au < testing ; exists ; 2012 ; Social Psychological and Personality Science Volume 3 ; 3 ; >
+      au < released ; manifest ; 2012 ; Social Psychological and Personality Science Volume 3 ; 3 ; >
       au < manifest ; exists ; 2013 ; Social Psychological and Personality Science Volume 4 ; 4 ; >
 
     }
@@ -31974,7 +31974,7 @@
       au < released ; crawling ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 ; >
       au < zapped ; down ; 2010 ; Social Psychology Quarterly Volume 73 ; 73 ; >
       au < released ; crawling ; 2011 ; Social Psychology Quarterly Volume 74 ; 74 ; >
-      au < testing ; exists ; 2012 ; Social Psychology Quarterly Volume 75 ; 75 ; >
+      au < released ; manifest ; 2012 ; Social Psychology Quarterly Volume 75 ; 75 ; >
       au < expected ; exists ; 2013 ; Social Psychology Quarterly Volume 76 ; 76 ; >
 
     }
@@ -32034,7 +32034,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Social Science Computer Review Volume 27 ; 27 ; >
       au < released ; crawling ; 2010 ; Social Science Computer Review Volume 28 ; 28 ; >
       au < zapped ; down ; 2011 ; Social Science Computer Review Volume 29 ; 29 ; >
-      au < testing ; exists ; 2012 ; Social Science Computer Review Volume 30 ; 30 ; >
+      au < released ; manifest ; 2012 ; Social Science Computer Review Volume 30 ; 30 ; >
       au < expected ; exists ; 2013 ; Social Science Computer Review Volume 31 ; 31 ; >
 
     }
@@ -32115,7 +32115,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Social Science Information Volume 48 ; 48 ; >
       au < released ; crawling ; 2010 ; Social Science Information Volume 49 ; 49 ; >
       au < zapped ; down ; 2011 ; Social Science Information Volume 50 ; 50 ; >
-      au < testing ; exists ; 2012 ; Social Science Information Volume 51 ; 51 ; >
+      au < released ; manifest ; 2012 ; Social Science Information Volume 51 ; 51 ; >
       au < expected ; exists ; 2013 ; Social Science Information Volume 52 ; 52 ; >
 
     }
@@ -32187,7 +32187,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Social Studies of Science Volume 39 ; 39 ; >
       au < released ; crawling ; 2010 ; Social Studies of Science Volume 40 ; 40 ; >
       au < zapped ; down ; 2011 ; Social Studies of Science Volume 41 ; 41 ; >
-      au < testing ; exists ; 2012 ; Social Studies of Science Volume 42 ; 42 ; >
+      au < released ; manifest ; 2012 ; Social Studies of Science Volume 42 ; 42 ; >
       au < expected ; exists ; 2013 ; Social Studies of Science Volume 43 ; 43 ; >
 
     }
@@ -32209,7 +32209,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < released ; crawling ; 2011 ; Society and Mental Health Volume 1 ; 1 ; >
-      au < testing ; exists ; 2012 ; Society and Mental Health Volume 2 ; 2 ; >
+      au < released ; manifest ; 2012 ; Society and Mental Health Volume 2 ; 2 ; >
       au < expected ; exists ; 2013 ; Society and Mental Health Volume 3 ; 3 ; >
 
     }
@@ -32279,7 +32279,7 @@
       au < zapped ; down ; 2009 ; Sociological Methods & Research Volume 38 ; 38 ; >
       au < released ; crawling ; 2010 ; Sociological Methods & Research Volume 39 ; 39 ; >
       au < released ; crawling ; 2011 ; Sociological Methods & Research Volume 40 ; 40 ; >
-      au < testing ; exists ; 2012 ; Sociological Methods & Research Volume 41 ; 41 ; >
+      au < released ; manifest ; 2012 ; Sociological Methods & Research Volume 41 ; 41 ; >
       au < expected ; exists ; 2013 ; Sociological Methods & Research Volume 42 ; 42 ; >
 
     }
@@ -32355,7 +32355,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Sociology Volume 43 ; 43 ; >
       au < released ; crawling ; 2010 ; Sociology Volume 44 ; 44 ; >
       au < released ; crawling ; 2011 ; Sociology Volume 45 ; 45 ; >
-      au < testing ; exists ; 2012 ; Sociology Volume 46 ; 46 ; >
+      au < released ; manifest ; 2012 ; Sociology Volume 46 ; 46 ; >
       au < expected ; exists ; 2013 ; Sociology Volume 47 ; 47 ; >
 
     }
@@ -32384,7 +32384,7 @@
       au < zapped ; down ; 2009 ; Sociology of Education Volume 82 ; 82 ; >
       au < released ; crawling ; 2010 ; Sociology of Education Volume 83 ; 83 ; >
       au < zapped ; down ; 2011 ; Sociology of Education Volume 84 ; 84 ; >
-      au < testing ; exists ; 2012 ; Sociology of Education Volume 85 ; 85 ; >
+      au < released ; manifest ; 2012 ; Sociology of Education Volume 85 ; 85 ; >
       au < manifest ; exists ; 2013 ; Sociology of Education Volume 86 ; 86 ; >
 
     }
@@ -32621,7 +32621,7 @@
       au < released ; crawling ; 2009 ; Sports Health: A Multidisciplinary Approach Volume 1 ; 1 ; >
       au < released ; crawling ; 2010 ; Sports Health: A Multidisciplinary Approach Volume 2 ; 2 ; >
       au < released ; crawling ; 2011 ; Sports Health: A Multidisciplinary Approach Volume 3 ; 3 ; >
-      au < testing ; exists ; 2012 ; Sports Health: A Multidisciplinary Approach Volume 4 ; 4 ; >
+      au < released ; manifest ; 2012 ; Sports Health: A Multidisciplinary Approach Volume 4 ; 4 ; >
       au < manifest ; exists ; 2013 ; Sports Health: A Multidisciplinary Approach Volume 5 ; 5 ; >
 
     }
@@ -32657,7 +32657,7 @@
       au < zapped ; down ; 2009 ; State and Local Government Review Volume 41 ; 41 ; >
       au < zapped ; down ; 2010 ; State and Local Government Review Volume 42 ; 42 ; >
       au < zapped ; down ; 2011 ; State and Local Government Review Volume 43 ; 43 ; >
-      au < testing ; exists ; 2012 ; State and Local Government Review Volume 44 ; 44 ; >
+      au < released ; manifest ; 2012 ; State and Local Government Review Volume 44 ; 44 ; >
       au < expected ; exists ; 2013 ; State and Local Government Review Volume 45 ; 45 ; >
 
     }
@@ -32689,7 +32689,7 @@
       au < zapped ; down ; 2009 ; State Politics and Policy Quarterly Volume 9 ; 9 ; >
       au < released ; crawling ; 2010 ; State Politics and Policy Quarterly Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; State Politics and Policy Quarterly Volume 11 ; 11 ; >
-      au < testing ; exists ; 2012 ; State Politics and Policy Quarterly Volume 12 ; 12 ; >
+      au < released ; manifest ; 2012 ; State Politics and Policy Quarterly Volume 12 ; 12 ; >
       au < expected ; exists ; 2013 ; State Politics and Policy Quarterly Volume 13 ; 13 ; >
 
     }
@@ -32740,7 +32740,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Statistical Methods in Medical Research Volume 18 ; 18 ; >
       au < zapped ; down ; 2010 ; Statistical Methods in Medical Research Volume 19 ; 19 ; >
       au < released ; crawling ; 2011 ; Statistical Methods in Medical Research Volume 20 ; 20 ; >
-      au < testing ; exists ; 2012 ; Statistical Methods in Medical Research Volume 21 ; 21 ; >
+      au < released ; manifest ; 2012 ; Statistical Methods in Medical Research Volume 21 ; 21 ; >
       au < expected ; exists ; 2013 ; Statistical Methods in Medical Research Volume 22 ; 22 ; >
 
     }
@@ -32782,7 +32782,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Statistical Modelling Volume 9 ; 9 ; >
       au < released ; crawling ; 2010 ; Statistical Modelling Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; Statistical Modelling Volume 11 ; 11 ; >
-      au < testing ; exists ; 2012 ; Statistical Modelling Volume 12 ; 12 ; >
+      au < released ; manifest ; 2012 ; Statistical Modelling Volume 12 ; 12 ; >
       au < expected ; exists ; 2013 ; Statistical Modelling Volume 13 ; 13 ; >
 
     }
@@ -32822,7 +32822,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Strategic Organization Volume 7 ; 7 ; >
       au < released ; crawling ; 2010 ; Strategic Organization Volume 8 ; 8 ; >
       au < released ; crawling ; 2011 ; Strategic Organization Volume 9 ; 9 ; >
-      au < testing ; exists ; 2012 ; Strategic Organization Volume 10 ; 10 ; >
+      au < released ; manifest ; 2012 ; Strategic Organization Volume 10 ; 10 ; >
       au < expected ; exists ; 2013 ; Strategic Organization Volume 11 ; 11 ; >
 
     }
@@ -32863,7 +32863,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Structural Health Monitoring Volume 8 ; 8 ; >
       au < zapped ; down ; 2010 ; Structural Health Monitoring Volume 9 ; 9 ; >
       au < zapped ; down ; 2011 ; Structural Health Monitoring Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2012 ; Structural Health Monitoring Volume 11 ; 11 ; >
+      au < testing ; exists ; 2012 ; Structural Health Monitoring Volume 11 ; 11 ; >
       au < expected ; exists ; 2013 ; Structural Health Monitoring Volume 12 ; 12 ; >
 
     }
@@ -32918,7 +32918,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Studies in Christian Ethics Volume 22 ; 22 ; >
       au < released ; crawling ; 2010 ; Studies in Christian Ethics Volume 23 ; 23 ; >
       au < released ; crawling ; 2011 ; Studies in Christian Ethics Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2012 ; Studies in Christian Ethics Volume 25 ; 25 ; >
+      au < testing ; exists ; 2012 ; Studies in Christian Ethics Volume 25 ; 25 ; >
       au < expected ; exists ; 2013 ; Studies in Christian Ethics Volume 26 ; 26 ; >
 
     }
@@ -33037,7 +33037,7 @@
       au < zapped ; down ; 2009 ; Studies in Religion/Sciences Religieuses Volume 38 ; 38 ; >
       au < released ; crawling ; 2010 ; Studies in Religion/Sciences Religieuses Volume 39 ; 39 ; >
       au < released ; crawling ; 2011 ; Studies in Religion/Sciences Religieuses Volume 40 ; 40 ; >
-      au < crawling ; exists ; 2012 ; Studies in Religion/Sciences Religieuses Volume 41 ; 41 ; >
+      au < testing ; exists ; 2012 ; Studies in Religion/Sciences Religieuses Volume 41 ; 41 ; >
       au < expected ; exists ; 2013 ; Studies in Religion/Sciences Religieuses Volume 42 ; 42 ; >
 
     }
@@ -33086,7 +33086,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Surgical Innovation Volume 16 ; 16 ; >
       au < zapped ; down ; 2010 ; Surgical Innovation Volume 17 ; 17 ; >
       au < zapped ; down ; 2011 ; Surgical Innovation Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2012 ; Surgical Innovation Volume 19 ; 19 ; >
+      au < testing ; exists ; 2012 ; Surgical Innovation Volume 19 ; 19 ; >
       au < expected ; exists ; 2013 ; Surgical Innovation Volume 20 ; 20 ; >
 
     }
@@ -33173,7 +33173,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < zapped ; down ; 2011 ; Teaching of Psychology Volume 38 ; 38 ; >
-      au < crawling ; exists ; 2012 ; Teaching of Psychology Volume 39 ; 39 ; >
+      au < testing ; exists ; 2012 ; Teaching of Psychology Volume 39 ; 39 ; >
       au < manifest ; exists ; 2013 ; Teaching of Psychology Volume 40 ; 40 ; >
 
     }
@@ -34347,7 +34347,7 @@
       au < released ; manifest ; 2012 ; Thesis Eleven Volume 110 ; 110 ; >
       au < zapped ; down ; 2012 ; Thesis Eleven Volume 111 ; 111 ; >
       au < released ; manifest ; 2012 ; Thesis Eleven Volume 112 ; 112 ; >
-      au < crawling ; exists ; 2012 ; Thesis Eleven Volume 113 ; 113 ; >
+      au < testing ; exists ; 2012 ; Thesis Eleven Volume 113 ; 113 ; >
       au < expected ; exists ; 2013 ; Thesis Eleven Volume 114 ; 114 ; >
       au < expected ; exists ; 2013 ; Thesis Eleven Volume 115 ; 115 ; >
 
@@ -34489,7 +34489,7 @@
       au < zapped ; down ; 2009 ; Tourism and Hospitality Research Volume 9 ; 9 ; >
       au < zapped ; down ; 2010 ; Tourism and Hospitality Research Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; Tourism and Hospitality Research Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2012 ; Tourism and Hospitality Research Volume 12 ; 12 ; >
+      au < testing ; exists ; 2012 ; Tourism and Hospitality Research Volume 12 ; 12 ; >
       au < expected ; exists ; 2013 ; Tourism and Hospitality Research Volume 13 ; 13 ; >
 
     }
@@ -36576,7 +36576,7 @@
 
       au < released ; manifest ; 2009 ; Journal of Infrastructure Development Volume 1 ; 1 ; >
       au < released ; crawling ; 2010 ; Journal of Infrastructure Development Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2011 ; Journal of Infrastructure Development Volume 3 ; 3 ; >
+      au < testing ; exists ; 2011 ; Journal of Infrastructure Development Volume 3 ; 3 ; >
       au < zapped ; down ; 2012 ; Journal of Infrastructure Development Volume 4 ; 4 ; >
       au < expected ; exists ; 2013 ; Journal of Infrastructure Development Volume 5 ; 5 ; >
 
@@ -36737,7 +36737,7 @@
       au < exists ; exists ; 2007 ; Political Science Volume 59 ; 59 ; >
       au < exists ; exists ; 2008 ; Political Science Volume 60 ; 60 ; >
       au < exists ; exists ; 2009 ; Political Science Volume 61 ; 61 ; >
-      au < crawling ; exists ; 2010 ; Political Science Volume 62 ; 62 ; >
+      au < testing ; exists ; 2010 ; Political Science Volume 62 ; 62 ; >
       au < exists ; exists ; 2011 ; Political Science Volume 63 ; 63 ; >
       au < released ; manifest ; 2012 ; Political Science Volume 64 ; 64 ; >
       au < expected ; exists ; 2013 ; Political Science Volume 65 ; 65 ; >
@@ -37111,7 +37111,7 @@
       au < exists ; exists ; 2007 ; Social Change Volume 37 ; 37 ; >
       au < exists ; exists ; 2008 ; Social Change Volume 38 ; 38 ; >
       au < exists ; exists ; 2009 ; Social Change Volume 39 ; 39 ; >
-      au < crawling ; exists ; 2010 ; Social Change Volume 40 ; 40 ; >
+      au < testing ; exists ; 2010 ; Social Change Volume 40 ; 40 ; >
       au < exists ; exists ; 2011 ; Social Change Volume 41 ; 41 ; >
       au < released ; manifest ; 2012 ; Social Change Volume 42 ; 42 ; >
       au < expected ; exists ; 2013 ; Social Change Volume 43 ; 43 ; >
