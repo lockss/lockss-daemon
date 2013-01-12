@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.14 2012-12-07 07:27:05 fergaloy-sf Exp $
+ * $Id: MetadataField.java,v 1.14.4.1 2013-01-12 00:10:56 pgust Exp $
  */
 
 /*
@@ -44,6 +44,23 @@ import java.util.regex.Pattern;
  */
 public class MetadataField {
   static Logger log = Logger.getLogger("MetadataField");
+
+  /**
+   * A language of the resource. Recommended best practice is to use a
+   * controlled vocabulary such as RFC 4646 [RFC4646].
+   */
+  public static final String KEY_LANGUAGE = "language";
+  public static final MetadataField FIELD_LANGUAGE = new MetadataField(
+      KEY_LANGUAGE, Cardinality.Single);
+  
+  /**
+   * The file format, physical medium, or dimensions of the resource.
+   * Recommended best practice is to use a controlled vocabulary such as the
+   * list of Internet Media Types [MIME].
+   */
+  public static final String KEY_FORMAT = "format";
+  public static final MetadataField FIELD_FORMAT = new MetadataField(
+      KEY_FORMAT, Cardinality.Single);
 
   /*
    * The canonical representation of a DOI has key "dc.identifier" and starts

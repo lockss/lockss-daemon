@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataField.java,v 1.11 2012-08-02 13:03:11 pgust Exp $
+ * $Id: TestMetadataField.java,v 1.11.10.1 2013-01-12 00:10:56 pgust Exp $
  */
 
 /*
@@ -66,6 +66,8 @@ public class TestMetadataField extends LockssTestCase {
     assertField(KEY_PUBLISHER, Cardinality.Single, FIELD_PUBLISHER);
     assertField(KEY_START_PAGE, Cardinality.Single, FIELD_START_PAGE);
     assertField(KEY_VOLUME, Cardinality.Single, FIELD_VOLUME);
+    assertField(KEY_LANGUAGE, Cardinality.Single, FIELD_LANGUAGE);
+    assertField(KEY_FORMAT, Cardinality.Single, FIELD_FORMAT);
 
     assertField(DC_KEY_CITATION_CHAPTER, Cardinality.Single,
         DC_FIELD_CITATION_CHAPTER);
