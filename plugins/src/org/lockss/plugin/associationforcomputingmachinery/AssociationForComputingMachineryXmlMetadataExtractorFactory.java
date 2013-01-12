@@ -1,5 +1,5 @@
 /*
- * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.9 2013-01-10 19:47:49 pgust Exp $
+ * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.10 2013-01-12 00:45:32 pgust Exp $
  */
 
 /*
@@ -71,7 +71,8 @@ implements FileMetadataExtractorFactory {
     private static final int FILE_NAME_INDEX = 7;
     private static final int AUTHOR_INDEX = 6;
 
-    private static String[] xpathArr = {"article_publication_date",
+    private static String[] xpathArr = {
+      "article_publication_date",
       "title",
       "page_from",
       "page_to",
@@ -87,9 +88,9 @@ implements FileMetadataExtractorFactory {
       MetadataField.FIELD_START_PAGE,
       MetadataField.FIELD_END_PAGE,
       MetadataField.FIELD_DOI,
-      MetadataField.DC_FIELD_LANGUAGE,
+      MetadataField.FIELD_LANGUAGE,
       MetadataField.FIELD_AUTHOR,
-      MetadataField.DC_FIELD_IDENTIFIER
+      MetadataField.DC_FIELD_IDENTIFIER,
     };
 
     private static String[] xpathValArr = new String[xpathArr.length];
@@ -209,6 +210,7 @@ implements FileMetadataExtractorFactory {
     static {
       // normal journal article schema
       nodeMap.put("/periodical/journal_rec/journal_name", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/periodical/journal_rec/journal_code", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/periodical/journal_rec/issn", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/periodical/journal_rec/eissn", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/periodical/journal_rec/publisher/publisher_name", XmlDomMetadataExtractor.TEXT_VALUE);
@@ -219,6 +221,7 @@ implements FileMetadataExtractorFactory {
       // conference proceeding schema
       nodeMap.put("/proceeding/conference_rec/conference_date/start_date", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/proceeding/proceeding_rec/proc_title", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/proceeding/proceeding_rec/acronym", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/proceeding/proceeding_rec/isbn", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/proceeding/proceeding_rec/copyright_year", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/proceeding/proceeding_rec/publisher/publisher_name", XmlDomMetadataExtractor.TEXT_VALUE);
@@ -235,6 +238,7 @@ implements FileMetadataExtractorFactory {
     static {
       // normal journal article schema
       xpathMap.put("/periodical/journal_rec/journal_name", MetadataField.FIELD_JOURNAL_TITLE);
+      xpathMap.put("/periodical/journal_rec/journal_code", MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
       xpathMap.put("/periodical/journal_rec/issn", MetadataField.FIELD_ISSN);
       xpathMap.put("/periodical/journal_rec/eissn", MetadataField.FIELD_EISSN);
       xpathMap.put("/periodical/journal_rec/publisher/publisher_name", MetadataField.FIELD_PUBLISHER);
@@ -245,6 +249,7 @@ implements FileMetadataExtractorFactory {
       // conference proceeding schema
       xpathMap.put("/proceeding/conference_rec/conference_date/start_date", MetadataField.FIELD_DATE);
       xpathMap.put("/proceeding/proceeding_rec/proc_title", MetadataField.FIELD_JOURNAL_TITLE);
+      xpathMap.put("/proceeding/proceeding_rec/acronym", MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
       xpathMap.put("/proceeding/proceeding_rec/isbn", MetadataField.FIELD_ISBN);
       xpathMap.put("/proceeding/proceeding_rec/copyright_year", MetadataField.DC_FIELD_RIGHTS);
       xpathMap.put("/proceeding/proceeding_rec/publisher/publisher_name", MetadataField.FIELD_PUBLISHER);
@@ -259,7 +264,8 @@ implements FileMetadataExtractorFactory {
       MetadataField.FIELD_DATE,
       MetadataField.FIELD_ISBN,
       MetadataField.DC_FIELD_RIGHTS,
-      MetadataField.FIELD_PUBLISHER
+      MetadataField.FIELD_PUBLISHER,
+      MetadataField.FIELD_PROPRIETARY_IDENTIFIER
     };
 
     /**
