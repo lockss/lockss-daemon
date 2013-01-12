@@ -125,6 +125,8 @@ public class TestHighWirePressH20MetadataExtractor extends LockssTestCase {
   String goodStartPage = "R543";
   String goodEndPage = "R556";
   String goodURL = "http://fakejournaloflaughs.drfriendly.org/415/5/R543";
+  String goodMjid = "acupmed;30/1/8";
+  String goodPropId = "acupmed";
 
   // a chunk of html source code from the publisher's site from where the metadata should be extracted
   String goodContent = "<meta name=\"DC.Format\" content=\"" + goodFormat + "\" />" +
@@ -142,6 +144,7 @@ public class TestHighWirePressH20MetadataExtractor extends LockssTestCase {
   		"<meta content=\"" + goodJournalTitle + "\" name=\"citation_journal_title\" />" +
   		"<meta content=\"" + goodISSN + "\" name=\"citation_issn\" />" +
   		"<meta content=\"" + goodEISSN + "\" name=\"citation_issn\" />" +
+                "<meta content=\"" + goodMjid + "\" name=\"citation_mjid\" />" +
   		"<meta content=\"" + goodAuthors[0] + ";" + 
   		goodAuthors[1] + ";" + 
   		goodAuthors[2] + ";" + 
@@ -171,31 +174,24 @@ public class TestHighWirePressH20MetadataExtractor extends LockssTestCase {
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
     FileMetadataExtractor me = new HighWirePressH20HtmlMetadataExtractorFactory.HighWirePressH20HtmlMetadataExtractor();
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
 
-    assertEquals(goodFormat, md.get(MetadataField.DC_FIELD_FORMAT));
-    assertEquals(goodLanguage, md.get(MetadataField.DC_FIELD_LANGUAGE));
-    assertEquals(goodArticleTitle, md.get(MetadataField.DC_FIELD_TITLE));
-    assertEquals(goodDCDate, md.get(MetadataField.DC_FIELD_DATE));
-    assertEquals(goodPublisher, md.get(MetadataField.DC_FIELD_PUBLISHER));
+    assertEquals(goodFormat, md.get(MetadataField.FIELD_FORMAT));
+    assertEquals(goodLanguage, md.get(MetadataField.FIELD_LANGUAGE));
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(Arrays.asList(goodDCContributors), md.getList(MetadataField.DC_FIELD_CONTRIBUTOR));
     assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(goodVolume, md.get(MetadataField.DC_FIELD_CITATION_VOLUME));
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
-    assertEquals(goodIssue, md.get(MetadataField.DC_FIELD_CITATION_ISSUE));
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
-    assertEquals(goodStartPage, md.get(MetadataField.DC_FIELD_CITATION_SPAGE));
-    assertEquals(goodEndPage, md.get(MetadataField.DC_FIELD_CITATION_EPAGE));
     assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
     assertEquals(goodURL, md.get(MetadataField.FIELD_ACCESS_URL));
+    assertEquals(goodPropId, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
   }
 
   // a chunk of HTML source code from where the TaylorAndFrancisHtmlMetadataExtractorFactory should NOT be able to extract metadata

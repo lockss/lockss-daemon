@@ -32,10 +32,13 @@ import java.io.*;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.apache.commons.lang.StringUtils;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.MetadataField.Cardinality;
+import org.lockss.extractor.MetadataField.Validator;
 import org.lockss.plugin.*;
 import org.w3c.rdf.vocabulary.dublin_core_19990702.DC;
 
@@ -55,18 +58,14 @@ public class HighWirePressH20HtmlMetadataExtractorFactory implements FileMetadat
     // Map HighWire H20 HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("DC.Format", MetadataField.DC_FIELD_FORMAT);
-      tagMap.put("DC.Language", MetadataField.DC_FIELD_LANGUAGE);
-      tagMap.put("DC.Title", MetadataField.DC_FIELD_TITLE);
-      tagMap.put("DC.Identifier", MetadataField.DC_FIELD_IDENTIFIER);
-      tagMap.put("DC.Date", MetadataField.DC_FIELD_DATE);
-      tagMap.put("DC.Publisher", MetadataField.DC_FIELD_PUBLISHER);
+      tagMap.put("DC.Format", MetadataField.FIELD_FORMAT);
+      tagMap.put("DC.Language", MetadataField.FIELD_LANGUAGE);
       tagMap.put("DC.Publisher", MetadataField.FIELD_PUBLISHER);
-      tagMap.put("DC.Contributor", MetadataField.DC_FIELD_CONTRIBUTOR);
       tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_date", MetadataField.FIELD_DATE);
-      tagMap.put("citation_authors", new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(";")));
+      tagMap.put("citation_authors", new MetadataField(
+          MetadataField.FIELD_AUTHOR, MetadataField.splitAt(";")));
       tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       tagMap.put("citation_volume", MetadataField.DC_FIELD_CITATION_VOLUME);
@@ -77,6 +76,10 @@ public class HighWirePressH20HtmlMetadataExtractorFactory implements FileMetadat
       tagMap.put("citation_lastpage", MetadataField.DC_FIELD_CITATION_EPAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_public_url", MetadataField.FIELD_ACCESS_URL);
+      // typical field value: "acupmed;30/1/8": extract "acupmed"
+      tagMap.put("citation_mjid", new MetadataField(
+          MetadataField.FIELD_PROPRIETARY_IDENTIFIER, 
+          MetadataField.extract("^([^;]+);", 1)));
     }
 
     @Override
