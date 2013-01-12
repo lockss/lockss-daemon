@@ -24,7 +24,7 @@
 
     au <  exists ; exists ; 2011 ; Journal of the Electrochemical Society Volume 158 ; 158 >
     au <  manifest ; exists ; 2012 ; Journal of the Electrochemical Society Volume 159 ; 159 >
-    au <  expected ; exists ; 2013 ; Journal of the Electrochemical Society Volume 160 ; 160 >
+    au <  manifest ; exists ; 2013 ; Journal of the Electrochemical Society Volume 160 ; 160 >
     
   }
 
@@ -107,7 +107,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au <  manifest ; exists ; 2012 ; ECS Journal of Solid State Science and Technology Volume 1 ; 1 >
-    au <  expected ; exists ; 2013 ; ECS Journal of Solid State Science and Technology Volume 2 ; 2 >
+    au <  manifest ; exists ; 2013 ; ECS Journal of Solid State Science and Technology Volume 2 ; 2 >
     
   }
 

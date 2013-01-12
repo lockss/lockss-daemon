@@ -398,7 +398,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Advanced Operations Management Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Advanced Operations Management Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Advanced Operations Management Volume 4 ; 4 >
-      au < expected ; exists ; 2013 ; International Journal of Advanced Operations Management Volume 5 ; 5 >
+      au < manifest ; exists ; 2013 ; International Journal of Advanced Operations Management Volume 5 ; 5 >
 
     }
 
@@ -4403,7 +4403,8 @@
 
       param[journal_issn] = 2043-8656
       
-      au < expected ; exists ; 2012 ; International Journal of Lifecycle Performance Engineering Volume 1 ; 1 >
+      au < manifest ; exists ; 2012 ; International Journal of Lifecycle Performance Engineering Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; International Journal of Lifecycle Performance Engineering Volume 2 ; 2 >
 
     }
 
@@ -4884,7 +4885,7 @@
       au < manifest ; exists ; 2009-2010 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 2 ; 2 >
       au < released ; crawling ; 2012 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 3 ; 3 >
-      au < expected ; exists ; 2013 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 4 ; 4 >
+      au < manifest ; exists ; 2013 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 4 ; 4 >
 
     }
 
@@ -7656,7 +7657,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Web Based Communities Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Web Based Communities Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; International Journal of Web Based Communities Volume 8 ; 8 >
-      au < expected ; exists ; 2013 ; International Journal of Web Based Communities Volume 9 ; 9 >
+      au < manifest ; exists ; 2013 ; International Journal of Web Based Communities Volume 9 ; 9 >
 
     }
 
