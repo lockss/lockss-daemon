@@ -209,7 +209,7 @@
     au < released ; crawling ; 2010 ; African Affairs Volume 109 ; 109 ; >
     au < released ; crawling ; 2011 ; African Affairs Volume 110 ; 110 ; >
     au < released ; crawling ; 2012 ; African Affairs Volume 111 ; 111 ; >
-    au < expected ; exists ; 2013 ; African Affairs Volume 112 ; 112 ; >
+    au < manifest ; exists ; 2013 ; African Affairs Volume 112 ; 112 ; >
 
     }
 
@@ -2415,7 +2415,7 @@
     au < zapped ; down ; 2010 ; The British Journal of Aesthetics Volume 50 ; 50 ; >
     au < released ; crawling ; 2011 ; The British Journal of Aesthetics Volume 51 ; 51 ; >
     au < notReady; exists ; 2012 ; The British Journal of Aesthetics Volume 52 ; 52 ; >
-    au < expected; exists ; 2013 ; The British Journal of Aesthetics Volume 53 ; 53 ; >
+    au < manifest; exists ; 2013 ; The British Journal of Aesthetics Volume 53 ; 53 ; >
 
     }
 
@@ -3119,7 +3119,7 @@
     au < zapped ; down ; 2010 ; Cambridge Journal of Economics Volume 34 ; 34 ; >
     au < released ; crawling ; 2011 ; Cambridge Journal of Economics Volume 35 ; 35 ; >
     au < testing ; exists ; 2012 ; Cambridge Journal of Economics Volume 36 ; 36 ; >
-    au < expected ; exists ; 2013 ; Cambridge Journal of Economics Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2013 ; Cambridge Journal of Economics Volume 37 ; 37 ; >
 
     }
 
@@ -3987,7 +3987,7 @@
     au < released ; crawling ; 2010 ; Community Development Journal Volume 45 ; 45 ; >
     au < released ; crawling ; 2011 ; Community Development Journal Volume 46 ; 46 ; >
     au < crawling ; exists ; 2012 ; Community Development Journal Volume 47 ; 47 ; >
-    au < expected ; exists ; 2013 ; Community Development Journal Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2013 ; Community Development Journal Volume 48 ; 48 ; >
 
     }
 
@@ -6298,7 +6298,7 @@
     param[base_url] = http://gji.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; exists ; 2013 ; Geophysical Journal International Volume 192 ; 192 ; >
+    au < manifest ; exists ; 2013 ; Geophysical Journal International Volume 192 ; 192 ; >
 
   }
 
@@ -6656,7 +6656,7 @@
     au < released ; crawling ; 2010 ; Health Policy and Planning Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; Health Policy and Planning Volume 26 ; 26 ; >
     au < released ; crawling ; 2012 ; Health Policy and Planning Volume 27 ; 27 ; >
-    au < expected ; exists ; 2013 ; Health Policy and Planning Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2013 ; Health Policy and Planning Volume 28 ; 28 ; >
 
     }
 
@@ -14071,7 +14071,7 @@
     au < released ; crawling ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 ; >
     au < released ; manifest; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 ; >
     au < crawling ; exists; 2012 ; Nephrology Dialysis Transplantation Volume 27 ; 27 ; >
-    au < expected ; exists; 2013 ; Nephrology Dialysis Transplantation Volume 28 ; 28 ; >
+    au < manifest ; exists; 2013 ; Nephrology Dialysis Transplantation Volume 28 ; 28 ; >
 
     }
 
@@ -14603,7 +14603,7 @@
     au < released ; crawling ; 2010 ; OAH Magazine of History Volume 24 ; 24 ; >
     au < released ; crawling ; 2011 ; OAH Magazine of History Volume 25 ; 25 ; >
     au < released ; crawling ; 2012 ; OAH Magazine of History Volume 26 ; 26 ; >
-    au < expected ; exists ; 2013 ; OAH Magazine of History Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2013 ; OAH Magazine of History Volume 27 ; 27 ; >
 
     }
 
@@ -15624,7 +15624,7 @@
     au < released ; crawling ; 2010 ; Plant and Cell Physiology Volume 51 ; 51 ; >
     au < released ; crawling ; 2011 ; Plant and Cell Physiology Volume 52 ; 52 ; >
     au < crawling ; exists ; 2012 ; Plant and Cell Physiology Volume 53 ; 53 ; >
-    au < expected ; exists ; 2013 ; Plant and Cell Physiology Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2013 ; Plant and Cell Physiology Volume 54 ; 54 ; >
 
     }
 
@@ -16945,7 +16945,7 @@
     au < released ; crawling ; 2010 ; Research Evaluation Volume 19 ; 19 ; >
     au < released ; crawling ; 2011 ; Research Evaluation Volume 20 ; 20 ; >
     au < crawling ; exists ; 2012 ; Research Evaluation Volume 21 ; 21 ; >
-    au < expected ; exists ; 2013 ; Research Evaluation Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2013 ; Research Evaluation Volume 22 ; 22 ; >
 
   }
 
