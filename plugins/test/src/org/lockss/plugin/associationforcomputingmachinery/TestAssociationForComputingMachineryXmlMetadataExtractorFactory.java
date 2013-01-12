@@ -116,6 +116,7 @@ public class TestAssociationForComputingMachineryXmlMetadataExtractorFactory ext
 	String goodDoi = "10.1111/1231231.2342342";
 	String goodLanguage = "Language";
 	String goodAuthor = "Author, John A.; Author, John B.";
+	String goodJournalCode = "Journal Code";
 
 	String goodContent = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>"+
 			"<periodical ver=\"4.0\" ts=\"12/22/2008\">"+
@@ -226,7 +227,7 @@ public class TestAssociationForComputingMachineryXmlMetadataExtractorFactory ext
 		FileMetadataExtractor me = new AssociationForComputingMachineryXmlMetadataExtractorFactory.ACMXmlMetadataExtractor();
 		assertNotNull(me);
 		FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-		List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+		List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
 		assertNotEmpty(mdlist);
 		ArticleMetadata md = mdlist.get(0);
 		assertNotNull(md);
@@ -240,8 +241,10 @@ public class TestAssociationForComputingMachineryXmlMetadataExtractorFactory ext
 		assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
 		assertEquals(goodStart, md.get(MetadataField.FIELD_START_PAGE));
 		assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
-		assertEquals(goodLanguage, md.get(MetadataField.DC_FIELD_LANGUAGE));
+		assertEquals(goodLanguage, md.get(MetadataField.FIELD_LANGUAGE));
 		assertEquals(goodAuthor, md.get(MetadataField.FIELD_AUTHOR));
+                assertEquals(goodJournalCode, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+                assertEquals(goodLanguage, md.get(MetadataField.FIELD_LANGUAGE));
 	}
 
 	String badContent = "<HTML><HEAD><TITLE>"
