@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.8 2013-01-10 19:45:27 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.9 2013-01-14 21:58:19 fergaloy-sf Exp $
  */
 
 /*
@@ -628,7 +628,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     long rowCount = -1;
 
     PreparedStatement stmt =
-	conn.prepareStatement(COUNT_ENABLED_PENDING_AUS_QUERY);
+	dbManager.prepareStatement(conn, COUNT_ENABLED_PENDING_AUS_QUERY);
     ResultSet resultSet = null;
 
     try {
@@ -661,7 +661,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "getArticleCount(): ";
     long rowCount = -1;
 
-    PreparedStatement stmt = conn.prepareStatement(COUNT_BIB_ITEM_QUERY);
+    PreparedStatement stmt =
+	dbManager.prepareStatement(conn, COUNT_BIB_ITEM_QUERY);
     ResultSet resultSet = null;
     try {
       resultSet = dbManager.executeQuery(stmt);
@@ -1003,8 +1004,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       ResultSet results = null;
 
       try {
-	selectPendingAus =
-	    conn.prepareStatement(FIND_PRIORITIZED_PENDING_AUS_QUERY);
+	selectPendingAus = dbManager.prepareStatement(conn,
+	    FIND_PRIORITIZED_PENDING_AUS_QUERY);
         results = dbManager.executeQuery(selectPendingAus);
 
         while ((auIds.size() < maxAuIds) && results.next()) {
@@ -1114,7 +1115,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   void removeFromPendingAus(Connection conn, String auId) throws SQLException {
     PreparedStatement deletePendingAu =
-	conn.prepareStatement(DELETE_PENDING_AU_QUERY);
+	dbManager.prepareStatement(conn, DELETE_PENDING_AU_QUERY);
 
     try {
       String pluginId = PluginManager.pluginIdFromAuId(auId);
@@ -1223,7 +1224,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     log.debug3(DEBUG_HEADER + "SQL = '" + DELETE_MD_ITEM_QUERY + "'.");
     int count = -1;
     PreparedStatement deletePendingAu =
-	conn.prepareStatement(DELETE_MD_ITEM_QUERY);
+	dbManager.prepareStatement(conn, DELETE_MD_ITEM_QUERY);
 
     try {
       String pluginId = PluginManager.pluginIdFromAuId(auId);
@@ -1263,7 +1264,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     log.debug3(DEBUG_HEADER + "auid = " + auId);
     log.debug3(DEBUG_HEADER + "SQL = '" + DELETE_AU_QUERY + "'.");
     int count = -1;
-    PreparedStatement deleteAu = conn.prepareStatement(DELETE_AU_QUERY);
+    PreparedStatement deleteAu =
+	dbManager.prepareStatement(conn, DELETE_AU_QUERY);
 
     try {
       String pluginId = PluginManager.pluginIdFromAuId(auId);
@@ -1442,7 +1444,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     Long pluginSeq = null;
     ResultSet resultSet = null;
 
-    PreparedStatement findPlugin = conn.prepareStatement(FIND_PLUGIN_QUERY);
+    PreparedStatement findPlugin =
+	dbManager.prepareStatement(conn, FIND_PLUGIN_QUERY);
 
     try {
       findPlugin.setString(1, pluginId);
@@ -1478,9 +1481,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "addPlugin(): ";
     Long pluginSeq = null;
     ResultSet resultSet = null;
-    PreparedStatement insertPlugin =
-	conn.prepareStatement(INSERT_PLUGIN_QUERY,
-			      Statement.RETURN_GENERATED_KEYS);
+    PreparedStatement insertPlugin = dbManager.prepareStatement(conn,
+	INSERT_PLUGIN_QUERY, Statement.RETURN_GENERATED_KEYS);
 
     try {
       // skip auto-increment key field #0
@@ -1550,7 +1552,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   Long findAu(Connection conn, Long pluginSeq, String auKey)
       throws SQLException {
     final String DEBUG_HEADER = "findAu(): ";
-    PreparedStatement findAu = conn.prepareStatement(FIND_AU_QUERY);
+    PreparedStatement findAu = dbManager.prepareStatement(conn, FIND_AU_QUERY);
     ResultSet resultSet = null;
     Long auSeq = null;
 
@@ -1586,8 +1588,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private Long addAu(Connection conn, Long pluginSeq, String auKey)
       throws SQLException {
     final String DEBUG_HEADER = "addAu(): ";
-    PreparedStatement insertAu =
-	conn.prepareStatement(INSERT_AU_QUERY, Statement.RETURN_GENERATED_KEYS);
+    PreparedStatement insertAu = dbManager.prepareStatement(conn,
+	INSERT_AU_QUERY, Statement.RETURN_GENERATED_KEYS);
 
     ResultSet resultSet = null;
     Long auSeq = null;
@@ -1631,7 +1633,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     Long auMdSeq = null;
     ResultSet resultSet = null;
 
-    PreparedStatement findAuMd = conn.prepareStatement(FIND_AU_MD_QUERY);
+    PreparedStatement findAuMd = dbManager.prepareStatement(conn,
+	FIND_AU_MD_QUERY);
 
     try {
       findAuMd.setLong(1, auSeq);
@@ -1668,9 +1671,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   public Long addAuMd(Connection conn, Long auSeq, int version,
       long extractTime) throws SQLException {
     final String DEBUG_HEADER = "addAuMd(): ";
-    PreparedStatement insertAuMd =
-	conn.prepareStatement(INSERT_AU_MD_QUERY,
-	                      Statement.RETURN_GENERATED_KEYS);
+    PreparedStatement insertAuMd = dbManager.prepareStatement(conn,
+	INSERT_AU_MD_QUERY, Statement.RETURN_GENERATED_KEYS);
 
     ResultSet resultSet = null;
     Long auMdSeq = null;
@@ -1711,7 +1713,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   void updateAuLastExtractionTime(Connection conn, Long auMdSeq)
       throws SQLException {
     PreparedStatement updateAuLastExtractionTime =
-	conn.prepareStatement(UPDATE_AU_MD_EXTRACT_TIME_QUERY);
+	dbManager.prepareStatement(conn, UPDATE_AU_MD_EXTRACT_TIME_QUERY);
 
     try {
       updateAuLastExtractionTime.setLong(1, TimeBase.nowMs());
@@ -1775,7 +1777,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     ResultSet resultSet = null;
 
     PreparedStatement findPublisher =
-	conn.prepareStatement(FIND_PUBLISHER_QUERY);
+	dbManager.prepareStatement(conn, FIND_PUBLISHER_QUERY);
 
     try {
       findPublisher.setString(1, publisher);
@@ -1809,9 +1811,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "addPublisher(): ";
     Long publisherSeq = null;
     ResultSet resultSet = null;
-    PreparedStatement insertPublisher =
-	conn.prepareStatement(INSERT_PUBLISHER_QUERY,
-			      Statement.RETURN_GENERATED_KEYS);
+    PreparedStatement insertPublisher = dbManager.prepareStatement(conn,
+	INSERT_PUBLISHER_QUERY, Statement.RETURN_GENERATED_KEYS);
 
     try {
       // skip auto-increment key field #0
@@ -2351,9 +2352,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     ResultSet resultSet = null;
 
-    PreparedStatement insertPublication =
-	conn.prepareStatement(INSERT_PUBLICATION_QUERY,
-			      Statement.RETURN_GENERATED_KEYS);
+    PreparedStatement insertPublication = dbManager.prepareStatement(conn,
+	INSERT_PUBLICATION_QUERY, Statement.RETURN_GENERATED_KEYS);
 
     try {
       // skip auto-increment key field #0
@@ -2399,7 +2399,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "findPublicationMetadataItem(): ";
     Long mdItemSeq = null;
     PreparedStatement findMdItem =
-	conn.prepareStatement(FIND_PUBLICATION_METADATA_ITEM_QUERY);
+	dbManager.prepareStatement(conn, FIND_PUBLICATION_METADATA_ITEM_QUERY);
     ResultSet resultSet = null;
 
     try {
@@ -2445,7 +2445,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       return;
     }
 
-    PreparedStatement insertIssn = conn.prepareStatement(INSERT_ISSN_QUERY);
+    PreparedStatement insertIssn =
+	dbManager.prepareStatement(conn, INSERT_ISSN_QUERY);
 
     try {
       if (pIssn != null) {
@@ -2500,7 +2501,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       return;
     }
 
-    PreparedStatement insertIsbn = conn.prepareStatement(INSERT_ISBN_QUERY);
+    PreparedStatement insertIsbn =
+	dbManager.prepareStatement(conn, INSERT_ISBN_QUERY);
 
     try {
       if (pIsbn != null) {
@@ -2589,7 +2591,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     PreparedStatement findIssns =
-	conn.prepareStatement(FIND_MD_ITEM_ISSN_QUERY);
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_ISSN_QUERY);
 
     ResultSet resultSet = null;
 
@@ -2638,7 +2640,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     PreparedStatement findIsbns =
-	conn.prepareStatement(FIND_MD_ITEM_ISBN_QUERY);
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_ISBN_QUERY);
 
     ResultSet resultSet = null;
 
@@ -2801,7 +2803,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     log.debug3(DEBUG_HEADER + "SQL = '" + FIND_PUBLICATION_BY_ISSNS_QUERY
 	+ "'.");
     PreparedStatement findPublicationByIssns =
-	conn.prepareStatement(FIND_PUBLICATION_BY_ISSNS_QUERY);
+	dbManager.prepareStatement(conn, FIND_PUBLICATION_BY_ISSNS_QUERY);
 
     try {
       findPublicationByIssns.setLong(1, publisherSeq);
@@ -2854,7 +2856,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     log.debug3(DEBUG_HEADER + "SQL = '" + FIND_PUBLICATION_BY_ISBNS_QUERY
 	+ "'.");
     PreparedStatement findPublicationByIsbns =
-	conn.prepareStatement(FIND_PUBLICATION_BY_ISBNS_QUERY);
+	dbManager.prepareStatement(conn, FIND_PUBLICATION_BY_ISBNS_QUERY);
 
     try {
       findPublicationByIsbns.setLong(1, publisherSeq);
@@ -2905,7 +2907,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     log.debug3(DEBUG_HEADER + "SQL = '" + FIND_PUBLICATION_BY_NAME_QUERY
     		+ "'.");
     PreparedStatement findPublicationByName =
-	conn.prepareStatement(FIND_PUBLICATION_BY_NAME_QUERY);
+	dbManager.prepareStatement(conn, FIND_PUBLICATION_BY_NAME_QUERY);
 
     try {
       findPublicationByName.setLong(1, publisherSeq);
@@ -2949,7 +2951,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     ResultSet resultSet = null;
 
     PreparedStatement findMdItemType =
-	conn.prepareStatement(FIND_MD_ITEM_TYPE_QUERY);
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_TYPE_QUERY);
 
     try {
       findMdItemType.setString(1, typeName);
@@ -2995,9 +2997,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       Long mdItemTypeSeq, Long auMdSeq, String date,
       String coverage) throws SQLException {
     final String DEBUG_HEADER = "addMdItem(): ";
-    PreparedStatement insertMdItem =
-	conn.prepareStatement(INSERT_MD_ITEM_QUERY,
-	                      Statement.RETURN_GENERATED_KEYS);
+    PreparedStatement insertMdItem = dbManager.prepareStatement(conn,
+	INSERT_MD_ITEM_QUERY, Statement.RETURN_GENERATED_KEYS);
 
     ResultSet resultSet = null;
     Long mdItemSeq = null;
@@ -3055,7 +3056,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       throws SQLException {
     final String DEBUG_HEADER = "getMdItemNames(): ";
     Map<String, String> names = new HashMap<String, String>();
-    PreparedStatement getNames = conn.prepareStatement(FIND_MD_ITEM_NAME_QUERY);
+    PreparedStatement getNames =
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_NAME_QUERY);
     ResultSet resultSet = null;
 
     try {
@@ -3099,7 +3101,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     PreparedStatement insertMdItemName =
-	conn.prepareStatement(INSERT_MD_ITEM_NAME_QUERY);
+	dbManager.prepareStatement(conn, INSERT_MD_ITEM_NAME_QUERY);
 
     try {
       insertMdItemName.setLong(1, mdItemSeq);
@@ -3134,7 +3136,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       String url) throws SQLException {
     final String DEBUG_HEADER = "addMdItemUrl(): ";
     PreparedStatement insertMdItemUrl =
-	conn.prepareStatement(INSERT_URL_QUERY);
+	dbManager.prepareStatement(conn, INSERT_URL_QUERY);
 
     try {
       insertMdItemUrl.setLong(1, mdItemSeq);
@@ -3171,7 +3173,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       return;
     }
 
-    PreparedStatement insertMdItemDoi = conn.prepareStatement(INSERT_DOI_QUERY);
+    PreparedStatement insertMdItemDoi =
+	dbManager.prepareStatement(conn, INSERT_DOI_QUERY);
 
     try {
       insertMdItemDoi.setLong(1, mdItemSeq);
@@ -3305,7 +3308,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private void removeDisabledFromPendingAus(Connection conn, String auId)
       throws SQLException {
     PreparedStatement deletePendingAu =
-	conn.prepareStatement(DELETE_DISABLED_PENDING_AU_QUERY);
+	dbManager.prepareStatement(conn, DELETE_DISABLED_PENDING_AU_QUERY);
 
     try {
       String pluginId = PluginManager.pluginIdFromAuId(auId);
@@ -3385,7 +3388,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         removeFromPendingAus(conn, auId);
 
         PreparedStatement insertDisabledPendingAu =
-    	conn.prepareStatement(INSERT_DISABLED_PENDING_AU_QUERY);
+            dbManager.prepareStatement(conn, INSERT_DISABLED_PENDING_AU_QUERY);
 
         String pluginId = PluginManager.pluginIdFromAuId(auId);
         String auKey = PluginManager.auKeyFromAuId(auId);
@@ -3438,11 +3441,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       boolean inBatch) throws SQLException {
     final String DEBUG_HEADER = "addToPendingAus(): ";
     PreparedStatement selectPendingAu =
-	conn.prepareStatement(FIND_PENDING_AU_QUERY);
+	dbManager.prepareStatement(conn, FIND_PENDING_AU_QUERY);
 
     if (insertPendingAuBatchStatement == null) {
       insertPendingAuBatchStatement =
-	conn.prepareStatement(INSERT_ENABLED_PENDING_AU_QUERY);
+	  dbManager.prepareStatement(conn, INSERT_ENABLED_PENDING_AU_QUERY);
     }
 
     ResultSet results = null;
@@ -3740,7 +3743,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.debug2(DEBUG_HEADER + "auKey = " + auKey);
 
       selectMetadataVersion =
-	  conn.prepareStatement(FIND_AU_METADATA_VERSION_QUERY);
+	  dbManager.prepareStatement(conn, FIND_AU_METADATA_VERSION_QUERY);
       selectMetadataVersion.setString(1, pluginId);
       selectMetadataVersion.setString(2, auKey);
       resultSet = dbManager.executeQuery(selectMetadataVersion);
@@ -3806,18 +3809,18 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     ResultSet resultSet = null;
 
     try {
-	selectLastExtractionTime =
-	    conn.prepareStatement(FIND_AU_MD_EXTRACT_TIME_BY_AUSEQ_QUERY);
-	selectLastExtractionTime.setLong(1, auSeq);
-	resultSet = dbManager.executeQuery(selectLastExtractionTime);
+      selectLastExtractionTime = dbManager.prepareStatement(conn,
+	  FIND_AU_MD_EXTRACT_TIME_BY_AUSEQ_QUERY);
+      selectLastExtractionTime.setLong(1, auSeq);
+      resultSet = dbManager.executeQuery(selectLastExtractionTime);
 
-	if (resultSet.next()) {
-	  timestamp = resultSet.getLong(EXTRACT_TIME_COLUMN);
-	  log.debug2(DEBUG_HEADER + "timestamp = " + timestamp);
-	}
+      if (resultSet.next()) {
+	timestamp = resultSet.getLong(EXTRACT_TIME_COLUMN);
+	log.debug2(DEBUG_HEADER + "timestamp = " + timestamp);
+      }
     } finally {
-	DbManager.safeCloseResultSet(resultSet);
-	DbManager.safeCloseStatement(selectLastExtractionTime);
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(selectLastExtractionTime);
     }
 
     return timestamp;
@@ -3877,16 +3880,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       String auKey = PluginManager.auKeyFromAuId(auId);
       log.debug2(DEBUG_HEADER + "auKey = " + auKey);
 
-	selectLastExtractionTime =
-	    conn.prepareStatement(FIND_AU_MD_EXTRACT_TIME_BY_AU_QUERY);
-	selectLastExtractionTime.setString(1, pluginId);
-	selectLastExtractionTime.setString(2, auKey);
-	resultSet = dbManager.executeQuery(selectLastExtractionTime);
+      selectLastExtractionTime =
+	  dbManager.prepareStatement(conn, FIND_AU_MD_EXTRACT_TIME_BY_AU_QUERY);
+      selectLastExtractionTime.setString(1, pluginId);
+      selectLastExtractionTime.setString(2, auKey);
+      resultSet = dbManager.executeQuery(selectLastExtractionTime);
 
-	if (resultSet.next()) {
-	  timestamp = resultSet.getLong(EXTRACT_TIME_COLUMN);
-	  log.debug2(DEBUG_HEADER + "timestamp = " + timestamp);
-	}
+      if (resultSet.next()) {
+	timestamp = resultSet.getLong(EXTRACT_TIME_COLUMN);
+	log.debug2(DEBUG_HEADER + "timestamp = " + timestamp);
+      }
     } finally {
 	DbManager.safeCloseResultSet(resultSet);
 	DbManager.safeCloseStatement(selectLastExtractionTime);

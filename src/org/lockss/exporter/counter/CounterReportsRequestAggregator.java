@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsRequestAggregator.java,v 1.6 2013-01-04 21:57:37 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestAggregator.java,v 1.7 2013-01-14 21:58:18 fergaloy-sf Exp $
  */
 
 /*
@@ -520,7 +520,7 @@ public class CounterReportsRequestAggregator {
       conn = dbManager.getConnection();
 
       // Prepare the statement used to mark the requests.
-      markRequests = conn.prepareStatement(sql);
+      markRequests = dbManager.prepareStatement(conn, sql);
 
       // Mark the requests.
       int count = dbManager.executeUpdate(markRequests);
@@ -575,7 +575,7 @@ public class CounterReportsRequestAggregator {
 
       // Prepare the statement used to get the year/month pairs for which there
       // are requests that need to be aggregated.
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
 
       // Get the year/month pairs.
       resultSet = dbManager.executeQuery(statement);
@@ -824,7 +824,7 @@ public class CounterReportsRequestAggregator {
       conn = dbManager.getConnection();
 
       // Prepare the statement used to get the books requested during the month.
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -941,7 +941,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to get the count of requests.
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -1015,7 +1015,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to get the count of requests.
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -1092,7 +1092,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to get the existing aggregates.
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -1180,7 +1180,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to persist the record.
-      updateAggregate = conn.prepareStatement(sql);
+      updateAggregate = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -1262,7 +1262,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to persist the record.
-      insertAggregate = conn.prepareStatement(sql);
+      insertAggregate = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -1608,7 +1608,7 @@ public class CounterReportsRequestAggregator {
       conn = dbManager.getConnection();
 
       // Prepare the statement used to get the journals.
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -1685,7 +1685,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to aggregate the total requests.
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -1725,7 +1725,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to aggregate the HTML requests.
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -1765,7 +1765,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to aggregate the PDF requests.
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -1847,7 +1847,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to get the existing aggregations.
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -1944,7 +1944,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to persist the record.
-      updateAggregate = conn.prepareStatement(sql);
+      updateAggregate = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -2034,7 +2034,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to persist the record.
-      insertAggregate = conn.prepareStatement(sql);
+      insertAggregate = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -2119,7 +2119,7 @@ public class CounterReportsRequestAggregator {
     try {
       // Prepare the statement used to aggregate the requests by publication
       // year.
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -2206,7 +2206,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to get the existing aggregation.
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -2291,7 +2291,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to persist the record.
-      updateAggregate = conn.prepareStatement(sql);
+      updateAggregate = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -2371,7 +2371,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to persist the record.
-      insertAggregate = conn.prepareStatement(sql);
+      insertAggregate = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -2520,7 +2520,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to delete the rows.
-      deleteAggregate = conn.prepareStatement(sql);
+      deleteAggregate = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 
@@ -2583,7 +2583,7 @@ public class CounterReportsRequestAggregator {
 
     try {
       // Prepare the statement used to delete the rows.
-      deleteAggregate = conn.prepareStatement(sql);
+      deleteAggregate = dbManager.prepareStatement(conn, sql);
 
       int index = 1;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestAggregator.java,v 1.5 2013-01-09 04:05:12 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestAggregator.java,v 1.6 2013-01-14 21:58:18 fergaloy-sf Exp $
  */
 
 /*
@@ -231,8 +231,8 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     try {
       conn = dbManager.getConnection();
 
-      statement = conn.prepareStatement(sql);
-      resultSet = statement.executeQuery();
+      statement = dbManager.prepareStatement(conn, sql);
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	count = resultSet.getInt(1);
@@ -263,8 +263,8 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     try {
       conn = dbManager.getConnection();
 
-      statement = conn.prepareStatement(sql);
-      resultSet = statement.executeQuery();
+      statement = dbManager.prepareStatement(conn, sql);
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	count = resultSet.getInt(1);
@@ -296,8 +296,8 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     try {
       conn = dbManager.getConnection();
 
-      statement = conn.prepareStatement(sql);
-      resultSet = statement.executeQuery();
+      statement = dbManager.prepareStatement(conn, sql);
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	count = resultSet.getInt(1);
@@ -489,8 +489,8 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     try {
       conn = dbManager.getConnection();
 
-      statement = conn.prepareStatement(sql);
-      resultSet = statement.executeQuery();
+      statement = dbManager.prepareStatement(conn, sql);
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	count = resultSet.getInt(1);
@@ -530,11 +530,11 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     try {
       conn = dbManager.getConnection();
 
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
       statement.setInt(1, requestYear);
       statement.setInt(2, requestMonth);
       statement.setBoolean(3, isPublisherInvolved);
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	count = resultSet.getInt(1);
@@ -578,12 +578,12 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     try {
       conn = dbManager.getConnection();
 
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
       statement.setLong(1, publicationSeq);
       statement.setInt(2, requestYear);
       statement.setInt(3, requestMonth);
       statement.setBoolean(4, isPublisherInvolved);
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	fullCount = resultSet.getInt(FULL_REQUESTS_COLUMN);
@@ -733,11 +733,11 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     try {
       conn = dbManager.getConnection();
 
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
       statement.setInt(1, requestYear);
       statement.setInt(2, requestMonth);
       statement.setBoolean(3, isPublisherInvolved);
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	count = resultSet.getInt(1);
@@ -785,12 +785,12 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     try {
       conn = dbManager.getConnection();
 
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
       statement.setLong(1, publicationSeq);
       statement.setInt(2, requestYear);
       statement.setInt(3, requestMonth);
       statement.setBoolean(4, isPublisherInvolved);
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	htmlCount = resultSet.getInt(HTML_REQUESTS_COLUMN);
@@ -839,12 +839,12 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     try {
       conn = dbManager.getConnection();
 
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
       statement.setLong(1, publicationSeq);
       statement.setInt(2, requestYear);
       statement.setInt(3, requestMonth);
       statement.setBoolean(4, isPublisherInvolved);
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	pubYear = resultSet.getString(PUBLICATION_YEAR_COLUMN);

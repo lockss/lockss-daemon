@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.12 2013-01-10 19:42:17 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.13 2013-01-14 21:58:19 fergaloy-sf Exp $
  */
 
 /*
@@ -1633,7 +1633,8 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   /**
-   * Provides a database connection using the datasource. To be used during
+   * Provides a database connection using the datasource, retrying the operation
+   * in case of transient failures. To be used during
    * initialization.
    * <p />
    * Autocommit is disabled to allow the client code to manage transactions.
@@ -1643,17 +1644,71 @@ public class DbManager extends BaseLockssDaemonManager
    *           if any problem occurred accessing the database.
    */
   private Connection getConnectionBeforeReady() throws SQLException {
+    return getConnectionBeforeReady(maxRetryCount, retryDelay);
+  }
+
+  /**
+   * Provides a database connection using the datasource, retrying the operation
+   * in case of transient failures. To be used during
+   * initialization.
+   * <p />
+   * Autocommit is disabled to allow the client code to manage transactions.
+   * 
+   * @param maxRetryCount
+   *          An int with the maximum number of retries to be attempted.
+   * @param retryDelay
+   *          A long with the number of milliseconds to wait between
+   *          consecutive retries.
+   * @return a Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Connection getConnectionBeforeReady(int maxRetryCount,
+      long retryDelay) throws SQLException {
+    final String DEBUG_HEADER = "getConnectionBeforeReady(): ";
+
+    boolean success = false;
+    int retryCount = 0;
     Connection conn = null;
 
-    if (dataSource instanceof javax.sql.ConnectionPoolDataSource) {
-      conn =
-	  ((javax.sql.ConnectionPoolDataSource) dataSource)
+    // Keep trying until success.
+    while (!success) {
+      try {
+	if (dataSource instanceof javax.sql.ConnectionPoolDataSource) {
+	  conn = ((javax.sql.ConnectionPoolDataSource) dataSource)
 	      .getPooledConnection().getConnection();
-    } else {
-      conn = dataSource.getConnection();
-    }
+	} else {
+	  conn = dataSource.getConnection();
+    	}
 
-    conn.setAutoCommit(false);
+	conn.setAutoCommit(false);
+	success = true;
+      } catch (SQLTransientException sqltre) {
+	// A SQLTransientException is caught: Count the next retry.
+	retryCount++;
+
+	// Check whether the next retry would go beyond the specified maximum
+	// number of retries.
+	if (retryCount > maxRetryCount) {
+	  // Yes: Report the failure.
+	  log.error("Transient exception caught", sqltre);
+	  log.error("Maximum retry count of " + maxRetryCount + " reached.");
+	  throw sqltre;
+	} else {
+	  // No: Wait for the specified amount of time before attempting the
+	  // next retry.
+	  log.debug(DEBUG_HEADER + "Exception caught", sqltre);
+	  log.debug(DEBUG_HEADER + "Waiting "
+	      + StringUtil.timeIntervalToString(retryDelay)
+	      + " before retry number " + retryCount + "...");
+	  try {
+	    Deadline.in(retryDelay).sleep();
+	  } catch (InterruptedException ie) {
+	    // Continue with the next retry.
+	  }
+	}
+      }
+    }
 
     return conn;
   }
@@ -1714,7 +1769,8 @@ public class DbManager extends BaseLockssDaemonManager
       throws SQLException {
     final String DEBUG_HEADER = "getDatabaseVersionBeforeReady(): ";
     int version = 1;
-    PreparedStatement stmt = conn.prepareStatement(GET_DATABASE_VERSION_QUERY);
+    PreparedStatement stmt =
+	prepareStatementBeforeReady(conn, GET_DATABASE_VERSION_QUERY);
     ResultSet resultSet = null;
 
     try {
@@ -1882,7 +1938,7 @@ public class DbManager extends BaseLockssDaemonManager
     }
 
     PreparedStatement insertMetadataItemType =
-	conn.prepareStatement(INSERT_MD_ITEM_TYPE_QUERY);
+	prepareStatementBeforeReady(conn, INSERT_MD_ITEM_TYPE_QUERY);
 
     try {
       insertMetadataItemType.setString(1, typeName);
@@ -2186,7 +2242,7 @@ public class DbManager extends BaseLockssDaemonManager
     final String DEBUG_HEADER = "updateDbVersion(): ";
     int updatedCount = 0;
     PreparedStatement updateVersion =
-	conn.prepareStatement(UPDATE_DB_VERSION_QUERY);
+	prepareStatementBeforeReady(conn, UPDATE_DB_VERSION_QUERY);
 
     try {
       updateVersion.setShort(1, (short)version);
@@ -2215,7 +2271,7 @@ public class DbManager extends BaseLockssDaemonManager
     final String DEBUG_HEADER = "addDbVersion(): ";
     int addedCount = 0;
     PreparedStatement insertVersion =
-	conn.prepareStatement(INSERT_DB_VERSION_QUERY);
+	prepareStatementBeforeReady(conn, INSERT_DB_VERSION_QUERY);
 
     try {
       insertVersion.setString(1, DATABASE_VERSION_TABLE_SYSTEM);
@@ -2240,7 +2296,8 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   /**
-   * Provides a database connection using the datasource.
+   * Provides a database connection using the datasource, retrying the operation
+   * in case of transient failures.
    * <p />
    * Autocommit is disabled to allow the client code to manage transactions.
    * 
@@ -2250,11 +2307,32 @@ public class DbManager extends BaseLockssDaemonManager
    *           database.
    */
   public Connection getConnection() throws SQLException {
+    return getConnection(maxRetryCount, retryDelay);
+  }
+
+  /**
+   * Provides a database connection using the datasource, retrying the operation
+   * in case of transient failures.
+   * <p />
+   * Autocommit is disabled to allow the client code to manage transactions.
+   * 
+   * @param maxRetryCount
+   *          An int with the maximum number of retries to be attempted.
+   * @param retryDelay
+   *          A long with the number of milliseconds to wait between
+   *          consecutive retries.
+   * @return a Connection with the database connection to be used.
+   * @throws SQLException
+   *           if this object is not ready or any problem occurred accessing the
+   *           database.
+   */
+  public Connection getConnection(int maxRetryCount, long retryDelay)
+      throws SQLException {
     if (!ready) {
       throw new SQLException("DbManager has not been initialized.");
     }
 
-    return getConnectionBeforeReady();
+    return getConnectionBeforeReady(maxRetryCount, retryDelay);
   }
 
   /**
@@ -3115,5 +3193,246 @@ public class DbManager extends BaseLockssDaemonManager
     }
 
     return updatedCount;
+  }
+
+  /**
+   * Prepares a statement, retrying the preparation in case of transient
+   * failures.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sql
+   *          A String with the prepared statement SQL query.
+   * @return a PreparedStatement with the prepared statement.
+   */
+  public PreparedStatement prepareStatement(Connection conn, String sql)
+      throws SQLException {
+    return prepareStatement(conn, sql, maxRetryCount, retryDelay);
+  }
+
+  /**
+   * Prepares a statement, retrying the preparation in case of transient
+   * failures.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sql
+   *          A String with the prepared statement SQL query.
+   * @param maxRetryCount
+   *          An int with the maximum number of retries to be attempted.
+   * @param retryDelay
+   *          A long with the number of milliseconds to wait between consecutive
+   *          retries.
+   * @return a PreparedStatement with the prepared statement.
+   */
+  public PreparedStatement prepareStatement(Connection conn, String sql,
+      int maxRetryCount, long retryDelay) throws SQLException {
+    if (!ready) {
+      throw new SQLException("DbManager has not been initialized.");
+    }
+
+    return prepareStatementBeforeReady(conn, sql, maxRetryCount, retryDelay);
+  }
+
+  /**
+   * Prepares a statement, retrying the preparation in case of transient
+   * failures.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sql
+   *          A String with the prepared statement SQL query.
+   * @return a PreparedStatement with the prepared statement.
+   */
+  private PreparedStatement prepareStatementBeforeReady(Connection conn,
+      String sql) throws SQLException {
+    return prepareStatementBeforeReady(conn, sql, maxRetryCount, retryDelay);
+  }
+
+  /**
+   * Prepares a statement, retrying the preparation in case of transient
+   * failures.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sql
+   *          A String with the prepared statement SQL query.
+   * @param maxRetryCount
+   *          An int with the maximum number of retries to be attempted.
+   * @param retryDelay
+   *          A long with the number of milliseconds to wait between consecutive
+   *          retries.
+   * @return a PreparedStatement with the prepared statement.
+   */
+  private PreparedStatement prepareStatementBeforeReady(Connection conn,
+      String sql, int maxRetryCount, long retryDelay) throws SQLException {
+    final String DEBUG_HEADER = "prepareStatementBeforeReady(): ";
+
+    boolean success = false;
+    int retryCount = 0;
+    PreparedStatement statement = null;
+
+    // Keep trying until success.
+    while (!success) {
+      try {
+	statement = conn.prepareStatement(sql);
+	success = true;
+      } catch (SQLTransientException sqltre) {
+	// A SQLTransientException is caught: Count the next retry.
+	retryCount++;
+
+	// Check whether the next retry would go beyond the specified maximum
+	// number of retries.
+	if (retryCount > maxRetryCount) {
+	  // Yes: Report the failure.
+	  log.error("Transient exception caught", sqltre);
+	  log.error("Maximum retry count of " + maxRetryCount + " reached.");
+	  throw sqltre;
+	} else {
+	  // No: Wait for the specified amount of time before attempting the
+	  // next retry.
+	  log.debug(DEBUG_HEADER + "Exception caught", sqltre);
+	  log.debug(DEBUG_HEADER + "Waiting "
+	      + StringUtil.timeIntervalToString(retryDelay)
+	      + " before retry number " + retryCount + "...");
+	  try {
+	    Deadline.in(retryDelay).sleep();
+	  } catch (InterruptedException ie) {
+	    // Continue with the next retry.
+	  }
+	}
+      }
+    }
+
+    return statement;
+  }
+
+  /**
+   * Prepares a statement, retrying the preparation in case of transient
+   * failures.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sql
+   *          A String with the prepared statement SQL query.
+   * @param returnGeneratedKeys
+   *          An int indicating that generated keys should not be made available
+   *          for retrieval.
+   * @return a PreparedStatement with the prepared statement.
+   */
+  public PreparedStatement prepareStatement(Connection conn, String sql,
+      int returnGeneratedKeys) throws SQLException {
+    return prepareStatement(conn, sql, returnGeneratedKeys, maxRetryCount,
+	retryDelay);
+  }
+
+  /**
+   * Prepares a statement, retrying the preparation in case of transient
+   * failures.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sql
+   *          A String with the prepared statement SQL query.
+   * @param returnGeneratedKeys
+   *          An int indicating that generated keys should not be made available
+   *          for retrieval.
+   * @param maxRetryCount
+   *          An int with the maximum number of retries to be attempted.
+   * @param retryDelay
+   *          A long with the number of milliseconds to wait between consecutive
+   *          retries.
+   * @return a PreparedStatement with the prepared statement.
+   */
+  public PreparedStatement prepareStatement(Connection conn, String sql,
+      int returnGeneratedKeys, int maxRetryCount, long retryDelay)
+      throws SQLException {
+    if (!ready) {
+      throw new SQLException("DbManager has not been initialized.");
+    }
+
+    return prepareStatementBeforeReady(conn, sql, returnGeneratedKeys,
+	maxRetryCount, retryDelay);
+  }
+
+  /**
+   * Prepares a statement, retrying the preparation in case of transient
+   * failures.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sql
+   *          A String with the prepared statement SQL query.
+   * @param returnGeneratedKeys
+   *          An int indicating that generated keys should not be made available
+   *          for retrieval.
+   * @return a PreparedStatement with the prepared statement.
+   */
+  private PreparedStatement prepareStatementBeforeReady(Connection conn,
+      String sql, int returnGeneratedKeys) throws SQLException {
+    return prepareStatementBeforeReady(conn, sql, returnGeneratedKeys,
+	maxRetryCount, retryDelay);
+  }
+
+  /**
+   * Prepares a statement, retrying the preparation in case of transient
+   * failures.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sql
+   *          A String with the prepared statement SQL query.
+   * @param returnGeneratedKeys
+   *          An int indicating that generated keys should not be made available
+   *          for retrieval.
+   * @param maxRetryCount
+   *          An int with the maximum number of retries to be attempted.
+   * @param retryDelay
+   *          A long with the number of milliseconds to wait between consecutive
+   *          retries.
+   * @return a PreparedStatement with the prepared statement.
+   */
+  private PreparedStatement prepareStatementBeforeReady(Connection conn,
+      String sql, int returnGeneratedKeys, int maxRetryCount, long retryDelay)
+      throws SQLException {
+    final String DEBUG_HEADER = "prepareStatementBeforeReady(): ";
+
+    boolean success = false;
+    int retryCount = 0;
+    PreparedStatement statement = null;
+
+    // Keep trying until success.
+    while (!success) {
+      try {
+	statement = conn.prepareStatement(sql, returnGeneratedKeys);
+	success = true;
+      } catch (SQLTransientException sqltre) {
+	// A SQLTransientException is caught: Count the next retry.
+	retryCount++;
+
+	// Check whether the next retry would go beyond the specified maximum
+	// number of retries.
+	if (retryCount > maxRetryCount) {
+	  // Yes: Report the failure.
+	  log.error("Transient exception caught", sqltre);
+	  log.error("Maximum retry count of " + maxRetryCount + " reached.");
+	  throw sqltre;
+	} else {
+	  // No: Wait for the specified amount of time before attempting the
+	  // next retry.
+	  log.debug(DEBUG_HEADER + "Exception caught", sqltre);
+	  log.debug(DEBUG_HEADER + "Waiting "
+	      + StringUtil.timeIntervalToString(retryDelay)
+	      + " before retry number " + retryCount + "...");
+	  try {
+	    Deadline.in(retryDelay).sleep();
+	  } catch (InterruptedException ie) {
+	    // Continue with the next retry.
+	  }
+	}
+      }
+    }
+
+    return statement;
   }
 }

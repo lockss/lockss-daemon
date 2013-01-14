@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.25 2012-12-07 07:27:05 fergaloy-sf Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.26 2013-01-14 21:58:19 fergaloy-sf Exp $
  */
 
 /*
@@ -35,9 +35,9 @@ package org.lockss.daemon;
 import static org.lockss.db.DbManager.*;
 import java.io.*;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
@@ -285,8 +285,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     assertEquals(0, metadataManager.getPrioritizedAuIdsToReindex(con, Integer.MAX_VALUE).size());
 
     String query = "select " + URL_COLUMN + " from " + URL_TABLE; 
-    Statement stmt = con.createStatement();
-    ResultSet resultSet = stmt.executeQuery(query);
+    PreparedStatement stmt = dbManager.prepareStatement(con, query);
+    ResultSet resultSet = dbManager.executeQuery(stmt);
     if (!resultSet.next()) {
       fail("No entries in " + URL_TABLE + " table");
     }

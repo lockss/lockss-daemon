@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsRequestRecorder.java,v 1.6 2013-01-04 21:57:37 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestRecorder.java,v 1.7 2013-01-14 21:58:18 fergaloy-sf Exp $
  */
 
 /*
@@ -161,7 +161,8 @@ public class CounterReportsRequestRecorder {
       conn = dbManager.getConnection();
 
       // Prepare the query.
-      getUrlMdItemId = conn.prepareStatement(SQL_QUERY_MD_ITEM_ID_FROM_URL);
+      getUrlMdItemId =
+	  dbManager.prepareStatement(conn, SQL_QUERY_MD_ITEM_ID_FROM_URL);
       getUrlMdItemId.setString(1, url);
 
       // Get any results.

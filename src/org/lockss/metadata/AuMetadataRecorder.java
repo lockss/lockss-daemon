@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.3 2013-01-09 04:05:12 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.4 2013-01-14 21:58:19 fergaloy-sf Exp $
  */
 
 /*
@@ -622,7 +622,8 @@ public class AuMetadataRecorder {
   private void updateAuMd(Connection conn, Long auMdSeq, int version)
       throws SQLException {
     final String DEBUG_HEADER = "updateAuMd(): ";
-    PreparedStatement updateAu = conn.prepareStatement(UPDATE_AU_MD_QUERY);
+    PreparedStatement updateAu =
+	dbManager.prepareStatement(conn, UPDATE_AU_MD_QUERY);
 
     try {
       updateAu.setShort(1, (short) version);
@@ -851,7 +852,7 @@ public class AuMetadataRecorder {
     final String DEBUG_HEADER = "getMdItemTypeName(): ";
     String typeName = null;
     PreparedStatement getMdItemTypeName =
-	conn.prepareStatement(GET_MD_ITEM_TYPE_NAME_QUERY);
+	dbManager.prepareStatement(conn, GET_MD_ITEM_TYPE_NAME_QUERY);
     ResultSet resultSet = null;
 
     try {
@@ -891,7 +892,8 @@ public class AuMetadataRecorder {
     Long mdItemSeq = null;
     ResultSet resultSet = null;
 
-    PreparedStatement findMdItem = conn.prepareStatement(FIND_MD_ITEM_QUERY);
+    PreparedStatement findMdItem =
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_QUERY);
 
     try {
       findMdItem.setLong(1, mdItemTypeSeq);
@@ -1008,7 +1010,7 @@ public class AuMetadataRecorder {
     }
 
     PreparedStatement insertMdItemAuthor =
-	conn.prepareStatement(INSERT_AUTHOR_QUERY);
+	dbManager.prepareStatement(conn, INSERT_AUTHOR_QUERY);
 
     try {
       for (String author : authors) {
@@ -1048,7 +1050,7 @@ public class AuMetadataRecorder {
     }
 
     PreparedStatement insertMdItemKeyword =
-	conn.prepareStatement(INSERT_KEYWORD_QUERY);
+	dbManager.prepareStatement(conn, INSERT_KEYWORD_QUERY);
 
     try {
       for (String keyword : keywords) {
@@ -1094,7 +1096,7 @@ public class AuMetadataRecorder {
     newUrls.put(ACCESS_URL_FEATURE, accessUrl);
 
     PreparedStatement findMdItemFeaturedUrl =
-	conn.prepareStatement(FIND_MD_ITEM_FEATURED_URL_QUERY);
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_FEATURED_URL_QUERY);
 
     ResultSet resultSet = null;
     String feature;
@@ -1152,7 +1154,7 @@ public class AuMetadataRecorder {
     Set<String> newAuthors = new HashSet<String>(authors);
 
     PreparedStatement findMdItemAuthor =
-	conn.prepareStatement(FIND_MD_ITEM_AUTHOR_QUERY);
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_AUTHOR_QUERY);
 
     ResultSet resultSet = null;
 
@@ -1202,7 +1204,7 @@ public class AuMetadataRecorder {
     Set<String> newKeywords = new HashSet<String>(keywords);
 
     PreparedStatement findMdItemKeyword =
-	conn.prepareStatement(FIND_MD_ITEM_KEYWORD_QUERY);
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_KEYWORD_QUERY);
 
     ResultSet resultSet = null;
 
@@ -1249,7 +1251,7 @@ public class AuMetadataRecorder {
     }
 
     PreparedStatement findMdItemDoi =
-	conn.prepareStatement(FIND_MD_ITEM_DOI_QUERY);
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_DOI_QUERY);
 
     ResultSet resultSet = null;
 
@@ -1293,7 +1295,7 @@ public class AuMetadataRecorder {
     final String DEBUG_HEADER = "updateBibItem(): ";
     int updatedCount = 0;
     PreparedStatement updateBibItem =
-	conn.prepareStatement(UPDATE_BIB_ITEM_QUERY);
+	dbManager.prepareStatement(conn, UPDATE_BIB_ITEM_QUERY);
 
     try {
       updateBibItem.setString(1, volume);
@@ -1338,7 +1340,7 @@ public class AuMetadataRecorder {
     final String DEBUG_HEADER = "addBibItem(): ";
     int addedCount = 0;
     PreparedStatement insertBibItem =
-	conn.prepareStatement(INSERT_BIB_ITEM_QUERY);
+	dbManager.prepareStatement(conn, INSERT_BIB_ITEM_QUERY);
 
     try {
       insertBibItem.setLong(1, mdItemSeq);
