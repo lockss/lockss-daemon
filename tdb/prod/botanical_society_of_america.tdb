@@ -43,9 +43,15 @@
       name = Applications in Plant Sciences (APPS) ;
       eissn = 2168-0450
     >
-     
-     comment[0] = coming 2013
-    
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = apps
+
+      au < manifest ; Applications in Plant Sciences Volume 1 ; 1 >
+    }
   }
 
 }
