@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.8.2.1 2013-01-12 00:27:35 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.8.2.2 2013-01-15 06:28:37 fergaloy-sf Exp $
  */
 
 /*
@@ -344,7 +344,7 @@ final public class MetadataDatabaseUtil {
     try {
       dbManager = getDaemon().getDbManager();
       conn = dbManager.getConnection();
-      statement = conn.prepareStatement(bibliographicItemsQuery);
+      statement = dbManager.prepareStatement(conn, bibliographicItemsQuery);
       resultSet = dbManager.executeQuery(statement);
 
       while (resultSet.next()) {

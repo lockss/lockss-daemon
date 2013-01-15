@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsManager.java,v 1.7 2013-01-04 21:57:37 fergaloy-sf Exp $
+ * $Id: CounterReportsManager.java,v 1.7.2.1 2013-01-15 06:28:37 fergaloy-sf Exp $
  */
 
 /*
@@ -467,7 +467,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 
       try {
         // Prepare the statement used to persist the request.
-        insertRequest = conn.prepareStatement(sql);
+        insertRequest = dbManager.prepareStatement(conn, sql);
 
         short index = 1;
 

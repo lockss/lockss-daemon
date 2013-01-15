@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsBookReport2.java,v 1.4 2013-01-09 04:05:12 fergaloy-sf Exp $
+ * $Id: CounterReportsBookReport2.java,v 1.4.2.1 2013-01-15 06:28:37 fergaloy-sf Exp $
  */
 
 /*
@@ -212,7 +212,7 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
 
     try {
       // Get the books to be included in the report.
-      statement = conn.prepareStatement(sql);
+      statement = daemon.getDbManager().prepareStatement(conn, sql);
 
       short index = 1;
 
@@ -342,7 +342,7 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
 
     try {
       // Get the request counts for all the rows to be included in the report.
-      statement = conn.prepareStatement(sql);
+      statement = daemon.getDbManager().prepareStatement(conn, sql);
 
       short index = 1;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.43 2013-01-09 20:11:45 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.43.2.1 2013-01-15 06:28:38 fergaloy-sf Exp $
  */
 
 /*
@@ -1062,7 +1062,7 @@ public class OpenUrlResolver {
 	  + " where u." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
 	  + " and upper(d." + DOI_COLUMN + ") = ?";
       
-      PreparedStatement stmt = conn.prepareStatement(query);
+      PreparedStatement stmt = dbMgr.prepareStatement(conn, query);
       stmt.setString(1, doi.toUpperCase());
       ResultSet resultSet = dbMgr.executeQuery(stmt);
       if (resultSet.next()) {
@@ -1297,7 +1297,8 @@ public class OpenUrlResolver {
       List<String> args) throws SQLException {
     final String DEBUG_HEADER = "resolveFromQuery(): ";
     log.debug3(DEBUG_HEADER + "query: " + query);
-    PreparedStatement stmt = conn.prepareStatement(query.toString());
+    PreparedStatement stmt =
+	daemon.getDbManager().prepareStatement(conn, query.toString());
     for (int i = 0; i < args.size(); i++) {
       log.debug3(DEBUG_HEADER + "  query arg:  " + args.get(i));      
       stmt.setString(i+1, args.get(i));

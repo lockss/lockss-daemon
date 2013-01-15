@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport5.java,v 1.6 2013-01-09 04:05:12 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport5.java,v 1.6.2.1 2013-01-15 06:28:37 fergaloy-sf Exp $
  */
 
 /*
@@ -569,16 +569,18 @@ public class TestCounterReportsJournalReport5 extends LockssTestCase {
     try {
       conn = dbManager.getConnection();
 
-      statement = conn.prepareStatement(SQL_QUERY_PUBYEAR_REQUEST_DELETE);
-      statement.executeUpdate();
+      statement =
+	  dbManager.prepareStatement(conn, SQL_QUERY_PUBYEAR_REQUEST_DELETE);
+      dbManager.executeUpdate(statement);
       DbManager.safeCloseStatement(statement);
 
-      statement = conn.prepareStatement(SQL_QUERY_TYPE_REQUEST_DELETE);
-      statement.executeUpdate();
+      statement =
+	  dbManager.prepareStatement(conn, SQL_QUERY_TYPE_REQUEST_DELETE);
+      dbManager.executeUpdate(statement);
       DbManager.safeCloseStatement(statement);
 
-      statement = conn.prepareStatement(SQL_QUERY_JOURNAL_DELETE);
-      statement.executeUpdate();
+      statement = dbManager.prepareStatement(conn, SQL_QUERY_JOURNAL_DELETE);
+      dbManager.executeUpdate(statement);
 
       conn.commit();
     } finally {

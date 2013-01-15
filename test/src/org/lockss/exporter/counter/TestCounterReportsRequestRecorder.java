@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestRecorder.java,v 1.5 2013-01-09 04:05:12 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestRecorder.java,v 1.5.2.1 2013-01-15 06:28:37 fergaloy-sf Exp $
  */
 
 /*
@@ -295,8 +295,8 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
     try {
       conn = dbManager.getConnection();
 
-      statement = conn.prepareStatement(sql);
-      resultSet = statement.executeQuery();
+      statement = dbManager.prepareStatement(conn, sql);
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	count = resultSet.getInt(1);
@@ -332,9 +332,9 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
     try {
       conn = dbManager.getConnection();
 
-      statement = conn.prepareStatement(sql);
+      statement = dbManager.prepareStatement(conn, sql);
       statement.setBoolean(1, isPublisherInvolved);
-      resultSet = statement.executeQuery();
+      resultSet = dbManager.executeQuery(statement);
 
       if (resultSet.next()) {
 	count = resultSet.getInt(1);

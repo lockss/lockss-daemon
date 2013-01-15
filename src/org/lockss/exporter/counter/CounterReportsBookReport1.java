@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsBookReport1.java,v 1.4 2013-01-09 04:05:12 fergaloy-sf Exp $
+ * $Id: CounterReportsBookReport1.java,v 1.4.2.1 2013-01-15 06:28:36 fergaloy-sf Exp $
  */
 
 /*
@@ -219,7 +219,7 @@ public class CounterReportsBookReport1 extends CounterReportsBookReport {
 
     try {
       // Get the books to be included in the report.
-      statement = conn.prepareStatement(sql);
+      statement = daemon.getDbManager().prepareStatement(conn, sql);
 
       short index = 1;
 
@@ -362,7 +362,7 @@ public class CounterReportsBookReport1 extends CounterReportsBookReport {
       // Each result will correspond to an item (month) in the report.
       // They will be sorted by book in exactly the same order as the books are
       // when using the rowIterator to walk the rows.
-      statement = conn.prepareStatement(sql);
+      statement = daemon.getDbManager().prepareStatement(conn, sql);
 
       short index = 1;
 
