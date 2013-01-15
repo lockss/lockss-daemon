@@ -7,8 +7,8 @@
   >
 
   plugin = needs.plugin
-  implicit < status ; status2 ; year ; name ; param[volume] >
-  param[base_url] = 
+  implicit < status ; status2 ; year ; name ; volume ; param[year] >
+  param[base_url] = http://www.arl.org/
 
   {
   
@@ -18,7 +18,7 @@
       issnl = 1538-8999
     >
 
-    
+    param[journal_id] = law
 
   }
 
@@ -30,7 +30,7 @@
       issnl = 1538-9006
     >
 
-    
+    param[journal_id] = med
 
   }
 
@@ -42,7 +42,7 @@
       issnl = 0361-5669
     >
 
-    
+    param[journal_id] = salary
 
   }
 
@@ -54,7 +54,7 @@
       issnl = 0147-2135
     >
 
-    
+    param[journal_id] = arlstats
 
   }
 
@@ -66,7 +66,8 @@
       issnl = 1947-4911
     >
 
-    
+    comment[url] = This one seems to have a different url from the others
+    param[journal_id] = rli
 
   }
 
@@ -78,7 +79,8 @@
       issnl = 0160-3582
     >
 
-    
+    comment[url] = This one also seems to have a different url from the ones above
+    param[journal_id] = spec
 
   }
 
