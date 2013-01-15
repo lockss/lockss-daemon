@@ -31475,7 +31475,35 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://sex.sagepub.com/
 
-      comment[base_url] = Use sexualities.sagepub.com.  Both sex.sagepub.com and sexualities.sagepub.com will work.
+      comment[base_url] = Use sex.sagepub.com.  Both sex.sagepub.com and sexualities.sagepub.com will work.
+      comment[sexualities] = manifest pages reference sex base_url after V12.
+
+      au < exists ; exists ; 1998 ; Sexualities Volume 1 ; 1 ; >
+      au < exists ; exists ; 1999 ; Sexualities Volume 2 ; 2 ; >
+      au < exists ; exists ; 2000 ; Sexualities Volume 3 ; 3 ; >
+      au < exists ; exists ; 2001 ; Sexualities Volume 4 ; 4 ; >
+      au < exists ; exists ; 2002 ; Sexualities Volume 5 ; 5 ; >
+      au < exists ; exists ; 2003 ; Sexualities Volume 6 ; 6 ; >
+      au < exists ; exists ; 2004 ; Sexualities Volume 7 ; 7 ; >
+      au < exists ; exists ; 2005 ; Sexualities Volume 8 ; 8 ; >
+      au < exists ; exists ; 2006 ; Sexualities Volume 9 ; 9 ; >
+      au < exists ; exists ; 2007 ; Sexualities Volume 10 ; 10 ; >
+      au < exists ; exists ; 2008 ; Sexualities Volume 11 ; 11 ; >
+      au < exists ; exists ; 2009 ; Sexualities Volume 12 ; 12 ; >
+      au < exists ; exists ; 2010 ; Sexualities Volume 13 ; 13 ; >
+      au < released ; crawling ; 2011 ; Sexualities Volume 14 ; 14 ; >
+      au < exists ; exists ; 2012 ; Sexualities Volume 15 ; 15 ; >
+      au < expected ; exists ; 2013 ; Sexualities Volume 16 ; 16 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://sexualities.sagepub.com/
+
+      comment[base_url] = Use sex.sagepub.com.  Both sex.sagepub.com and sexualities.sagepub.com will work.
+      comment[sexualities] = manifest pages reference sex base_url after V12.
 
       au < doNotProcess ; doNotProcess ; 1998 ; Sexualities Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 1999 ; Sexualities Volume 2 ; 2 ; >
@@ -31489,36 +31517,9 @@
       au < doNotProcess ; doNotProcess ; 2007 ; Sexualities Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Sexualities Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Sexualities Volume 12 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; Sexualities Volume 13 ; 13 ; >
-      au < released ; crawling ; 2011 ; Sexualities Volume 14 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Sexualities Volume 15 ; 15 ; >
-      au < expected ; exists ; 2013 ; Sexualities Volume 16 ; 16 ; >
-
-    }
-
-    {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
-      param[base_url] = http://sexualities.sagepub.com/
-
-      comment[base_url] = Use sexualities.sagepub.com.  Both sex.sagepub.com and sexualities.sagepub.com will work.
-      comment[sexualities13] = manifest page references old base url. need to contact
-
-      au < manifest ; exists ; 1998 ; Sexualities Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1999 ; Sexualities Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2000 ; Sexualities Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2001 ; Sexualities Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2002 ; Sexualities Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2003 ; Sexualities Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2004 ; Sexualities Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2005 ; Sexualities Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2006 ; Sexualities Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2007 ; Sexualities Volume 10 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Sexualities Volume 11 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Sexualities Volume 12 ; 12 ; >
-      au < notReady ; exists ; 2010 ; Sexualities Volume 13 ; 13 ; >
+      au < down ; exists ; 2010 ; Sexualities Volume 13 [superseded] ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Sexualities Volume 14 ; 14 ; >
-      au < released ; manifest ; 2012 ; Sexualities Volume 15 ; 15 ; >
+      au < down ; exists ; 2012 ; Sexualities Volume 15 [superseded] ; 15 ; >
       au < expected ; exists ; 2013 ; Sexualities Volume 16 ; 16 ; >
 
     }
