@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.18 2012-08-14 23:23:38 thib_gc Exp $
+# $Id: tdbparse.py,v 1.19 2013-01-15 23:30:19 thib_gc Exp $
 
 __copyright__ = '''\
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.6'''
+__version__ = '''0.4.7'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -268,7 +268,7 @@ class TdbScanner(object):
                 return self.__tok
             # Quoted string
             if ch == TdbparseLiteral.QUOTE_DOUBLE:
-                raise TdbparseSyntaxError("Quoted strings are no longer legal", self.file_name(), self.__tok.line(), self.__tok.col())
+                raise TdbparseSyntaxError("Quoted strings are no longer legal and leading quote marks need to be escaped", self.file_name(), self.__tok.line(), self.__tok.col())
             # Unquoted string
             return self.__ustring()
         # Single-character tokens
@@ -340,8 +340,8 @@ class TdbScanner(object):
         whitespace character and continuing to the end of the line,
         a semicolon, or a closing angle bracket.
 
-        Semicolons, closing angle brackets, backslashes, and leading
-        and trailing spaces must be escaped.'''
+        Semicolons, closing angle brackets, backslashes, leading and
+        trailing spaces, and leading quote marks must be escaped.'''
         self.__token(TdbparseToken.STRING)
         cur = self.__cur
         index = 0
@@ -356,7 +356,7 @@ class TdbScanner(object):
             if index >= maxindex: raise TdbparseSyntaxError('run-on unquoted string', self.file_name(), self.__tok.line(), self.__tok.col()+index)
             ch = cur[index]
             if not (ch == TdbparseLiteral.SEMICOLON or ch == TdbparseLiteral.ANGLE_CLOSE \
-                or ch == ' ' or ch == '\\'): raise TdbparseSyntaxError('invalid unquoted string escape: %s' % ch, self.file_name(), self.__line, self.__col-1+index)
+                or ch == ' ' or ch == '\\' or (ch == '"' and index == 1)): raise TdbparseSyntaxError('invalid unquoted string escape: %s' % ch, self.file_name(), self.__line, self.__col-1+index)
           index = index + 1 # Count the character
         val = cur[0:index].rstrip()
         self.__move(index) # Consume the characters
@@ -855,7 +855,9 @@ h =    \\    one leading space side effect
 i =    one trailing space\\    
 j = embedded\\ space
 k = embedded\\;semicolon
-l = embedded\\>angle'''), self.options())
+l = embedded\\>angle
+m = \\"leading quote mark
+n = embedded"quote"marks'''), self.options())
         tok = scanner.next()
         for val in [#'nothing special',
                     #'embedded"quote',
@@ -868,7 +870,9 @@ l = embedded\\>angle'''), self.options())
                     'one trailing space ',
                     'embedded space',
                     'embedded;semicolon',
-                    'embedded>angle']:
+                    'embedded>angle',
+                    '"leading quote mark',
+                    'embedded"quote"marks']:
             while tok.type() != TdbparseToken.STRING: tok = scanner.next()
             self.assertEquals(val, tok.value())
             tok = scanner.next()
@@ -948,7 +952,7 @@ class TestTdbParser(unittest.TestCase):
   >
 }
 ''', #TdbparseSyntaxError('expected } but got publisher', '<string>', 3, 3)),
-     TdbparseSyntaxError('Quoted strings are no longer legal', '<string>', 2, 7)),
+     TdbparseSyntaxError('Quoted strings are no longer legal and leading quote marks need to be escaped', '<string>', 2, 7)),
                          ('''\
 {
   publisher <
