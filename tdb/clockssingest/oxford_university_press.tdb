@@ -7749,41 +7749,6 @@
   {
 
     title <
-      name = InnovAiT: The RCGP Journal for Associates in Training ;
-      issn = 1755-7380 ;
-      eissn = 1755-7399 ;
-      issnl = 1755-7380
-    >
-
-    {
-
-    param[base_url] = http://rcgp-innovait.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePlugin
-
-    au < released ; crawling ; 2008 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 ; 1 ; >
-    au < zapped ; down ; 2009 ; InnovAiT: The RCGP Journal for Associates in Training Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-
-    }
-
-    {
-
-    param[base_url] = http://rcgp-innovait.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
-
-    au < released ; crawling ; 2008 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 ; 1 ; >
-    au < released ; crawling ; 2009 ; InnovAiT: The RCGP Journal for Associates in Training Volume 2 ; 2 ; >
-    au < released ; crawling ; 2010 ; InnovAiT: The RCGP Journal for Associates in Training Volume 3 ; 3 ; >
-    au < released ; crawling ; 2011 ; InnovAiT: The RCGP Journal for Associates in Training Volume 4 ; 4 ; >
-    au < released ; crawling ; 2012 ; InnovAiT: The RCGP Journal for Associates in Training Volume 5 ; 5 ; >
-    au < expected ; exists ; 2013 ; InnovAiT: The RCGP Journal for Associates in Training Volume 6 ; 6 ; >
-
-    }
-
-  }
-
-  {
-
-    title <
       name = Interactive Cardiovascular and Thoracic Surgery ;
       issn = 1569-9293 ;
       eissn = 1569-9285 ;

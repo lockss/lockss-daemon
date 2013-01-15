@@ -37586,11 +37586,43 @@
         issnl = 1755-7380
       >
 
-    comment[upcoming] = online 2013
-    pluginSuffix = ClockssHighWirePressH20Plugin
-    param[base_url] = http://ino.sagepub.com/
+      {
+      
+        comment[upcoming] = online 2013
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://ino.sagepub.com/
+    
+        au < doNotProcess ; doNotProcess ; 2008 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 ; 1 ; >
+        au < doNotProcess ; doNotProcess ; 2009 ; InnovAiT: The RCGP Journal for Associates in Training Volume 2 ; 2 ; >
+        au < doNotProcess ; doNotProcess ; 2010 ; InnovAiT: The RCGP Journal for Associates in Training Volume 3 ; 3 ; >
+        au < doNotProcess ; doNotProcess ; 2011 ; InnovAiT: The RCGP Journal for Associates in Training Volume 4 ; 4 ; >
+        au < doNotProcess ; doNotProcess ; 2012 ; InnovAiT: The RCGP Journal for Associates in Training Volume 5 ; 5 ; >
+        au < expected ; exists ; 2013 ; InnovAiT: The RCGP Journal for Associates in Training Volume 6 ; 6 ; >
+        
+      }
+      
+      {
 
-    au < exists ; exists ; 2013 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 ; 1 ; >
+        param[base_url] = http://rcgp-innovait.oxfordjournals.org/
+        pluginSuffix = ClockssHighWirePlugin
+
+        au < down ; crawling ; 2008 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 ; 1 ; >
+        au < zapped ; down ; 2009 ; InnovAiT: The RCGP Journal for Associates in Training Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+
+      }
+
+      {
+
+        param[base_url] = http://rcgp-innovait.oxfordjournals.org/
+        pluginSuffix = ClockssHighWirePressH20Plugin
+
+        au < down ; crawling ; 2008 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 ; 1 ; >
+        au < down ; crawling ; 2009 ; InnovAiT: The RCGP Journal for Associates in Training Volume 2 ; 2 ; >
+        au < down ; crawling ; 2010 ; InnovAiT: The RCGP Journal for Associates in Training Volume 3 ; 3 ; >
+        au < down ; crawling ; 2011 ; InnovAiT: The RCGP Journal for Associates in Training Volume 4 ; 4 ; >
+        au < down ; crawling ; 2012 ; InnovAiT: The RCGP Journal for Associates in Training Volume 5 ; 5 ; >
+
+      }
 
     }
 
