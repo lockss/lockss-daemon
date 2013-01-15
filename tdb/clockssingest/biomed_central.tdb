@@ -5307,6 +5307,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; crawling ; 2010 ; Patient Safety in Surgery Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; Patient Safety in Surgery Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Patient Safety in Surgery Volume 6 ; 6 >
+      au < expected ; exists ; 2013 ; Patient Safety in Surgery Volume 7 ; 7 >
 
     }
 
@@ -5346,6 +5347,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2047-0525
 
       au < exists ; exists ; 2012 ; Perioperative Medicine Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; Perioperative Medicine Volume 2 ; 2 >
 
     }
 
@@ -5388,6 +5390,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; crawling ; 2010 ; Plant Methods Volume 6 ; 6 >
       au < released ; crawling ; 2011 ; Plant Methods Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Plant Methods Volume 8 ; 8 >
+      au < expected ; exists ; 2013 ; Plant Methods Volume 9 ; 9 >
 
     }
 
@@ -5411,6 +5414,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Population Health Metrics Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; Population Health Metrics Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Population Health Metrics Volume 10 ; 10 >
+      au < expected ; exists ; 2013 ; Population Health Metrics Volume 11 ; 11 >
 
     }
 
@@ -5434,6 +5438,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Proteome Science Volume 8 ; 8 >
       au < crawling ; exists ; 2011 ; Proteome Science Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Proteome Science Volume 10 ; 10 >
+      au < expected ; exists ; 2013 ; Proteome Science Volume 11 ; 11 >
 
     }
 
@@ -5454,6 +5459,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Radiation Oncology Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Radiation Oncology Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Radiation Oncology Volume 7 ; 7 >
+      au < expected ; exists ; 2013 ; Radiation Oncology Volume 8 ; 8 >
 
     }
 
@@ -5491,6 +5497,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Reproductive Biology and Endocrinology Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; Reproductive Biology and Endocrinology Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Reproductive Biology and Endocrinology Volume 10 ; 10 >
+      au < expected ; exists ; 2013 ; Reproductive Biology and Endocrinology Volume 11 ; 11 >
 
     }
 
@@ -5513,6 +5520,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Reproductive Health Volume 7 ; 7 >
       au < released ; crawling ; 2011 ; Reproductive Health Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Reproductive Health Volume 9 ; 9 >
+      au < expected ; exists ; 2013 ; Reproductive Health Volume 10 ; 10 >
 
     }
 
@@ -5562,6 +5570,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Retrovirology Volume 7 ; 7 >
       au < released ; crawling ; 2011 ; Retrovirology Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Retrovirology Volume 9 ; 9 >
+      au < expected ; exists ; 2013 ; Retrovirology Volume 10 ; 10 >
 
     }
 
@@ -5623,6 +5632,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Scoliosis Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Scoliosis Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Scoliosis Volume 7 ; 7 >
+      au < expected ; exists ; 2013 ; Scoliosis Volume 8 ; 8 >
 
     }
 
@@ -5676,6 +5686,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Source Code for Biology and Medicine Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Source Code for Biology and Medicine Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 >
+      au < expected ; exists ; 2013 ; Source Code for Biology and Medicine Volume 8 ; 8 >
 
     }
 
@@ -5731,6 +5742,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 >
+      au < expected ; exists ; 2013 ; Substance Abuse Treatment, Prevention, and Policy Volume 8 ; 8 >
 
     }
 
@@ -5768,6 +5780,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Theoretical Biology and Medical Modelling Volume 7 ; 7 >
       au < released ; crawling ; 2011 ; Theoretical Biology and Medical Modelling Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Theoretical Biology and Medical Modelling Volume 9 ; 9 >
+      au < expected ; exists ; 2013 ; Theoretical Biology and Medical Modelling Volume 10 ; 10 >
 
     }
 
