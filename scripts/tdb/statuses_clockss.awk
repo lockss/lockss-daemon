@@ -8,6 +8,7 @@ BEGIN {
 
 {
   # add a loop to add line only if ending year is gt or eq to contract year
+  current_year = 2013
   end_year = 0
   incontract = 0
   test_year = ""
@@ -21,7 +22,9 @@ BEGIN {
   }
   #printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\n", $1,$2,$3,$4,$7,end_year,test_year
   if (end_year >= test_year) {
-    incontract = 1
+    if ((end_year < current_year) || ((end_year >= current_year) && (incl_cur == 1))) {
+      incontract = 1
+    }
   } 
 
   if (incontract == 1) {
