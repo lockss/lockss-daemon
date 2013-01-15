@@ -1,5 +1,5 @@
 /*
- * $Id: BMCPluginHtmlMetadataExtractorFactory.java,v 1.2 2012-05-04 20:08:41 akanshab01 Exp $
+ * $Id: BMCPluginHtmlMetadataExtractorFactory.java,v 1.3 2013-01-15 23:15:01 aishizaki Exp $
  */
 
 /*
@@ -53,38 +53,39 @@ public class BMCPluginHtmlMetadataExtractorFactory implements
   public static class BMCPluginHtmlMetadataExtractor 
     extends SimpleHtmlMetaTagMetadataExtractor {
 
-    // Map BePress-specific HTML meta tag names to cooked metadata fields
+    // Map BMC-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-       //general pattern for capturing start and end page number. 
-      String pagenumpattern = "[pP\\. ]*([^-]+)(?:-(.+))?";
-      String authorpattern = ".*\\p{L}";
+      //general pattern for capturing start and end page number. 
       // tagMap.put("dc.creator", MetadataField.DC_FIELD_CONTRIBUTOR);
       // <meta name="citation_authors"
       // content="G Poelmans, J K Buitelaar, D L Pauls, B Franke" />
-     tagMap.put("citation_authors", new MetadataField(
-          MetadataField.FIELD_AUTHOR, MetadataField.splitAt(";")));
-     // <meta name="DC.Date.issued" scheme="ISO860pp\\.[ ]+.*-(.*)1" content="2009-12-29" />
-      tagMap.put("dc.date", MetadataField.FIELD_DATE);
-      // <meta name="citation_title" 
-      // content="Altered arachidonic acid cascade enzymes in postmortem 
-      //brain from bipolar disorder patients"/>
+      //tagMap.put("citation_authors", new MetadataField(
+      //    MetadataField.FIELD_AUTHOR, MetadataField.splitAt(";")));
+      tagMap.put("citation_author", new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(",")));
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
-      // <meta name="citation_journal_title" content="Molecular Psychiatry" />
       tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
-      // <meta name="citation_volume" content="19" />
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
-      // <meta name="citation_issue" content="2" />
       tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);    
-      // <meta name="citation_firstpage" content="pp. 12-13|p24|13-14" />
-      tagMap.put("citation_firstpage", new MetadataField(
-                 MetadataField.FIELD_START_PAGE,
-                 MetadataField.groupExtractor(pagenumpattern, 1)));
+      tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
-      // <meta name="prism.issn" content="0955-9930" />
-      // tagMap.put("prism.issn", MetadataField.FIELD_ISSN);
-      // <meta name="prism.eIssn" content="1476-5489" />
+      tagMap.put("citation_date", MetadataField.FIELD_DATE);
       tagMap.put("prism.issn", MetadataField.FIELD_ISSN);
+      tagMap.put("dc.title", MetadataField.FIELD_JOURNAL_TITLE); 
+      tagMap.put("dc.creator", MetadataField.DC_FIELD_CREATOR); 
+      tagMap.put("dc.type", MetadataField.DC_FIELD_TYPE); 
+      tagMap.put("dc.source", MetadataField.DC_FIELD_SOURCE); 
+      tagMap.put("dc.date", MetadataField.DC_FIELD_DATE); 
+      tagMap.put("dc.identifier", MetadataField.DC_FIELD_IDENTIFIER); 
+      tagMap.put("dc.publisher", MetadataField.DC_FIELD_PUBLISHER); 
+      tagMap.put("dc.rights", MetadataField.DC_FIELD_RIGHTS); 
+      tagMap.put("dc.format", MetadataField.DC_FIELD_FORMAT); 
+      tagMap.put("dc.language", MetadataField.DC_FIELD_LANGUAGE);
+      /*
+       tagMap.put("citation_mjid", new MetadataField(
+         MetadataField.FIELD_PROPRIETARY_IDENTIFIER, 
+         MetadataField.extract("^([^;]+);", 1)));
+       */
     }
 
     @Override
