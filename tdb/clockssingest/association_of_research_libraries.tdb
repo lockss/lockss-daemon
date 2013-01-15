@@ -13,36 +13,12 @@
   {
   
     title < 
-      name = ARL Academic Law Library Statistics ;
-      issn = 1538-8999 ;
-      issnl = 1538-8999
-    >
-
-    param[journal_id] = law
-
-  }
-
-  {
-  
-    title < 
-      name = ARL Academic Health Sciences Library Statistics ;
-      issn = 1538-9006 ;
-      issnl = 1538-9006
-    >
-
-    param[journal_id] = med
-
-  }
-
-  {
-  
-    title < 
       name = ARL Annual Salary Survey ;
       issn = 0361-5669 ;
       issnl = 0361-5669
     >
 
-    param[journal_id] = salary
+    param[journal_id] = salary-survey
 
   }
 
@@ -54,7 +30,7 @@
       issnl = 0147-2135
     >
 
-    param[journal_id] = arlstats
+    param[journal_id] = statistics
 
   }
 
@@ -66,8 +42,7 @@
       issnl = 1947-4911
     >
 
-    comment[url] = This one seems to have a different url from the others
-    param[journal_id] = rli
+    param[journal_id] = issues
 
   }
 
@@ -79,8 +54,7 @@
       issnl = 0160-3582
     >
 
-    comment[url] = This one also seems to have a different url from the ones above
-    param[journal_id] = spec
+    param[journal_id] = spec-kit
 
   }
 
