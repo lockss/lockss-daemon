@@ -61,7 +61,7 @@ IFS=""
 JAVA_VERSTR=`${LOCKSS_JAVA_CMD} -version 2>&1`
 JAVA_VERSION=`echo "${JAVA_VERSTR}" | head -1 | sed -e 's/.* "\(.*\)"/\1/'`
 JAVA_BITS=32
-echo "${JAVA_VERSTR}" | grep -qi '64[- ]?bit' && JAVA_BITS=64 >/dev/null 2>&1
+echo "${JAVA_VERSTR}" | egrep -qi '64[- ]?bit' && JAVA_BITS=64 >/dev/null 2>&1
 IFS="${OLD_IFS}"
 
 # 64-bit JVM can handle (and requires) much larger heap
