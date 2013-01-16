@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.10 2013-01-14 21:58:19 fergaloy-sf Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.11 2013-01-16 21:04:26 pgust Exp $
  */
 
 /*
@@ -77,6 +77,7 @@ final public class MetadataDatabaseUtil {
   static class BibliographicDatabaseItem implements BibliographicItem {
     final String publisher;
     final String title;
+    final String proprietaryId;
     final String printisbn;
     final String eisbn;
     final String printissn;
@@ -105,6 +106,7 @@ final public class MetadataDatabaseUtil {
       endvolume = resultSet.getString(7);
       startyear = resultSet.getString(8);
       endyear = resultSet.getString(8);
+      proprietaryId = resultSet.getString(9);
     }
 
     @Override
@@ -140,6 +142,11 @@ final public class MetadataDatabaseUtil {
     @Override
     public String getIssnL() {
       return null;
+    }
+
+    @Override
+    public String getProprietaryId() {
+      return proprietaryId;
     }
 
     @Override
@@ -285,7 +292,7 @@ final public class MetadataDatabaseUtil {
       publisher_name, 
       publication_name,
       p_issn, e_issn, p_isbn, e_isbn,
-      volume, substr(date,1,4)
+      volume, substr(date,1,4) "year", publication_id
     from 
       bib_item, 
       md_item, 
@@ -312,7 +319,8 @@ final public class MetadataDatabaseUtil {
         "select distinct "
       +   "publisher_name, publication_name, "
       +   "p_issn, e_issn, p_isbn, e_isbn, "
-      +   "volume, substr(" + DATE_COLUMN + ",1,4) "
+      +   "volume, substr(" + DATE_COLUMN + ",1,4) \"year\", "
+      +   "publication_id "
       + "from "
       +    BIB_ITEM_TABLE + ", "
       +    MD_ITEM_TABLE + ", "
