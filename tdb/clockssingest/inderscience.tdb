@@ -4544,7 +4544,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Management and Decision Making Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; International Journal of Management and Decision Making Volume 10 ; 10 >
       au < released ; crawling ; 2010-2011 ; International Journal of Management and Decision Making Volume 11 ; 11 >
-      au < crawling ; exists ; 2012 ; International Journal of Management and Decision Making Volume 12 ; 12 >
+      au < testing ; exists ; 2012 ; International Journal of Management and Decision Making Volume 12 ; 12 >
       au < expected ; exists ; 2013 ; International Journal of Management and Decision Making Volume 13 ; 13 >
 
     }
@@ -4826,8 +4826,8 @@
       au < zapped ; down ; 2011 ; International Journal of Materials and Product Technology Volume 41 ; 41 >
       au < released ; crawling ; 2011 ; International Journal of Materials and Product Technology Volume 42 ; 42 >
       au < released ; crawling ; 2012 ; International Journal of Materials and Product Technology Volume 43 ; 43 >
-      au < crawling ; exists ; 2012 ; International Journal of Materials and Product Technology Volume 44 ; 44 >
-      au < crawling ; exists ; 2012 ; International Journal of Materials and Product Technology Volume 45 ; 45 >
+      au < testing ; exists ; 2012 ; International Journal of Materials and Product Technology Volume 44 ; 44 >
+      au < testing ; exists ; 2012 ; International Journal of Materials and Product Technology Volume 45 ; 45 >
       au < expected ; exists ; 2013 ; International Journal of Materials and Product Technology Volume 46 ; 46 >
 
     }
@@ -4919,7 +4919,7 @@
 
       param[journal_issn] = 2047-7252
       
-      au < crawling ; exists ; 2012 ; International Journal of Mechanisms and Robotic Systems Volume 1 ; 1 >
+      au < testing ; exists ; 2012 ; International Journal of Mechanisms and Robotic Systems Volume 1 ; 1 >
       au < expected ; exists ; 2013 ; International Journal of Mechanisms and Robotic Systems Volume 2 ; 2 >
 
     }
@@ -4997,7 +4997,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Metadata, Semantics and Ontologies Volume 4 ; 4 >
       au < manifest ; exists ; 2010 ; International Journal of Metadata, Semantics and Ontologies Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Metadata, Semantics and Ontologies Volume 6 ; 6 >
-      au < crawling ; exists ; 2012 ; International Journal of Metadata, Semantics and Ontologies Volume 7 ; 7 >
+      au < testing ; exists ; 2012 ; International Journal of Metadata, Semantics and Ontologies Volume 7 ; 7 >
       au < expected ; exists ; 2013 ; International Journal of Metadata, Semantics and Ontologies Volume 8 ; 8 >
 
     }
@@ -5167,7 +5167,7 @@
       au < zapped ; down ; 2011 ; International Journal of Modelling, Identification and Control Volume 14 ; 14 >
       au < zapped ; down ; 2012 ; International Journal of Modelling, Identification and Control Volume 15 ; 15 >
       au < released ; crawling ; 2012 ; International Journal of Modelling, Identification and Control Volume 16 ; 16 >
-      au < crawling ; exists ; 2012 ; International Journal of Modelling, Identification and Control Volume 17 ; 17 >
+      au < testing ; exists ; 2012 ; International Journal of Modelling, Identification and Control Volume 17 ; 17 >
       au < expected ; exists ; 2013 ; International Journal of Modelling, Identification and Control Volume 18 ; 18 >
 
     }
@@ -5255,7 +5255,7 @@
       au < manifest ; exists ; 2007-2008 ; International Journal of Nano and Biomaterials Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Nano and Biomaterials Volume 2 ; 2 >
       au < zapped ; down ; 2010-2011 ; International Journal of Nano and Biomaterials Volume 3 ; 3 >
-      au < crawling ; exists ; 2012 ; International Journal of Nano and Biomaterials Volume 4 ; 4 >
+      au < testing ; exists ; 2012 ; International Journal of Nano and Biomaterials Volume 4 ; 4 >
       au < expected ; exists ; 2013 ; International Journal of Nano and Biomaterials Volume 5 ; 5 >
 
     }
@@ -5348,7 +5348,7 @@
       au < zapped ; down ; 2011 ; International Journal of Networking and Virtual Organisations Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; International Journal of Networking and Virtual Organisations Volume 9 ; 9 >
       au < zapped ; down ; 2012 ; International Journal of Networking and Virtual Organisations Volume 10 ; 10 >
-      au < crawling ; exists ; 2012 ; International Journal of Networking and Virtual Organisations Volume 11 ; 11 >
+      au < testing ; exists ; 2012 ; International Journal of Networking and Virtual Organisations Volume 11 ; 11 >
       au < expected ; exists ; 2013 ; International Journal of Networking and Virtual Organisations Volume 12 ; 12 >
       au < expected ; exists ; 2013 ; International Journal of Networking and Virtual Organisations Volume 13 ; 13 >
 
@@ -5543,7 +5543,7 @@
       au < zapped ; down ; 2011 ; International Journal of Operational Research Volume 12 ; 12 >
       au < released ; crawling ; 2012 ; International Journal of Operational Research Volume 13 ; 13 >
       au < released ; crawling ; 2012 ; International Journal of Operational Research Volume 14 ; 14 >
-      au < crawling ; exists ; 2012 ; International Journal of Operational Research Volume 15 ; 15 >
+      au < testing ; exists ; 2012 ; International Journal of Operational Research Volume 15 ; 15 >
       au < manifest ; exists ; 2013 ; International Journal of Operational Research Volume 16 ; 16 >
       au < expected ; exists ; 2013 ; International Journal of Operational Research Volume 17 ; 17 >
       au < expected ; exists ; 2013 ; International Journal of Operational Research Volume 18 ; 18 >
@@ -5730,7 +5730,7 @@
       
       au < manifest ; exists ; 2007-2010 ; International Journal of Precision Technology Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Precision Technology Volume 2 ; 2 >
-      au < crawling ; exists ; 2012 ; International Journal of Precision Technology Volume 3 ; 3 >
+      au < testing ; exists ; 2012 ; International Journal of Precision Technology Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; International Journal of Precision Technology Volume 4 ; 4 >
 
     }
@@ -5836,7 +5836,7 @@
       au < zapped ; down ; 2011 ; International Journal of Product Development Volume 14 ; 14 >
       au < zapped ; down ; 2011 ; International Journal of Product Development Volume 15 ; 15 >
       au < released ; crawling ; 2012 ; International Journal of Product Development Volume 16 ; 16 >
-      au < crawling ; exists ; 2012 ; International Journal of Product Development Volume 17 ; 17 >
+      au < testing ; exists ; 2012 ; International Journal of Product Development Volume 17 ; 17 >
       au < expected ; exists ; 2012 ; International Journal of Product Development Volume 18 ; 18 >
       au < expected ; exists ; 2013 ; International Journal of Product Development Volume 19 ; 19 >
       au < expected ; exists ; 2013 ; International Journal of Product Development Volume 20 ; 20 >
@@ -6224,7 +6224,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Security and Networks Volume 4 ; 4 >
       au < manifest ; exists ; 2010 ; International Journal of Security and Networks Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Security and Networks Volume 6 ; 6 >
-      au < crawling ; exists ; 2012 ; International Journal of Security and Networks Volume 7 ; 7 >
+      au < testing ; exists ; 2012 ; International Journal of Security and Networks Volume 7 ; 7 >
       au < expected ; exists ; 2013 ; International Journal of Security and Networks Volume 8 ; 8 >
 
     }
@@ -6251,7 +6251,7 @@
       au < zapped ; down ; 2011 ; International Journal of Sensor Networks Volume 9 ; 9 >
       au < zapped ; down ; 2011 ; International Journal of Sensor Networks Volume 10 ; 10 >
       au < zapped ; down ; 2012 ; International Journal of Sensor Networks Volume 11 ; 11 >
-      au < crawling ; exists ; 2012 ; International Journal of Sensor Networks Volume 12 ; 12 >
+      au < testing ; exists ; 2012 ; International Journal of Sensor Networks Volume 12 ; 12 >
       au < expected ; exists ; 2013 ; International Journal of Sensor Networks Volume 13 ; 13 >
       au < expected ; exists ; 2013 ; International Journal of Sensor Networks Volume 14 ; 14 >
 
@@ -6295,7 +6295,7 @@
       au < zapped ; down ; 2011 ; International Journal of Services and Operations Management Volume 10 ; 10 >
       au < released ; crawling ; 2012 ; International Journal of Services and Operations Management Volume 11 ; 11 >
       au < zapped ; down ; 2012 ; International journal of Services and Operations Management Volume 12 ; 12 >
-      au < crawling ; exists ; 2012 ; International Journal of Services and Operations Management Volume 13 ; 13 >
+      au < testing ; exists ; 2012 ; International Journal of Services and Operations Management Volume 13 ; 13 >
       au < manifest ; exists ; 2013 ; International Journal of Services and Operations Management Volume 14 ; 14 >
       au < expected ; exists ; 2013 ; International Journal of Services and Operations Management Volume 15 ; 15 >
       au < expected ; exists ; 2013 ; International Journal of Services and Operations Management Volume 16 ; 16 >
@@ -6320,7 +6320,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Services and Standards Volume 5 ; 5 >
       au < manifest ; exists ; 2010 ; International Journal of Services and Standards Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Services and Standards Volume 7 ; 7 >
-      au < crawling ; exists ; 2012 ; International Journal of Services and Standards Volume 8 ; 8 >
+      au < testing ; exists ; 2012 ; International Journal of Services and Standards Volume 8 ; 8 >
       au < expected ; exists ; 2013 ; International Journal of Services and Standards Volume 9 ; 9 >
 
     }
