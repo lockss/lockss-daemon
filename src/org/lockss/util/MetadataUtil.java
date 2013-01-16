@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.17 2013-01-08 06:28:44 pgust Exp $
+ * $Id: MetadataUtil.java,v 1.17.2.1 2013-01-16 21:37:11 pgust Exp $
  */
 
 /*
@@ -184,13 +184,36 @@ public class MetadataUtil {
   }  
 
   /**
+   * Check that ISBN is valid. If it is, return the ISBN, otherwise return
+   * <tt>null</tt>. Check digit is not verified.
+   *
+   * @param isbn the isbn string
+   * @return the isbn if it is valid, <tt>null</tt> otherwise
+   */
+  public static String validateIsbn(String isbn) {
+    return validateIsbn(isbn, false);
+  }
+
+  /**
+   * Check that ISBN is valid. If it is, return the ISBN, otherwise return
+   * <tt>null</tt>. Check digit is verified.
+   *
+   * @param isbn the isbn string
+   * @param strict if true, also verify checksum, otherwise just check form
+   * @return the issn if it is valid, <tt>null</tt> otherwise
+   */
+  public static String validateIsbn(String isbn, boolean strict) {
+    return isIsbn(isbn, strict) ? isbn : null;
+  }
+
+  /**
    * Check that the ISBN is a valid. The method validates both ISBN-10 and ISBN-13,
    * with or without punctuation. Checksum is not verified.
    * @param isbn the ISBN string
    * @return true if ISBN is valid, false otherwise
    */
   public static boolean isIsbn(String isbn) {
-	  return isIsbn(isbn, false);
+    return isIsbn(isbn, false);
   }
 
   /**
