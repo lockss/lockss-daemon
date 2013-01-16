@@ -4403,7 +4403,7 @@
 
       param[journal_issn] = 2043-8656
       
-      au < testing ; exists ; 2012 ; International Journal of Lifecycle Performance Engineering Volume 1 ; 1 >
+      au < released ; manifest ; 2012 ; International Journal of Lifecycle Performance Engineering Volume 1 ; 1 >
       au < expected ; exists ; 2013 ; International Journal of Lifecycle Performance Engineering Volume 2 ; 2 >
 
     }
@@ -6342,7 +6342,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Services Operations and Informatics Volume 4 ; 4 >
       au < manifest ; exists ; 2010 ; International Journal of Services Operations and Informatics Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Services Operations and Informatics Volume 6 ; 6 >
-      au < testing ; exists ; 2012 ; International Journal of Services Operations and Informatics Volume 7 ; 7 >
+      au < released ; manifest ; 2012 ; International Journal of Services Operations and Informatics Volume 7 ; 7 >
       au < expected ; exists ; 2013 ; International Journal of Services Operations and Informatics Volume 8 ; 8 >
 
     }
@@ -6394,7 +6394,7 @@
       au < zapped ; down ; 2011 ; International Journal of Services Technology and Management Volume 15 ; 15 >
       au < zapped ; down ; 2011 ; International Journal of Services Technology and Management Volume 16 ; 16 >
       au < released ; crawling ; 2012 ; International Journal of Services Technology and Management Volume 17 ; 17 >
-      au < testing ; exists ; 2012 ; International Journal of Services Technology and Management Volume 18 ; 18 >
+      au < released ; manifest ; 2012 ; International Journal of Services Technology and Management Volume 18 ; 18 >
       au < expected ; exists ; 2013 ; International Journal of Services Technology and Management Volume 19 ; 19 >
       au < expected ; exists ; 2013 ; International Journal of Services Technology and Management Volume 20 ; 20 >
 
@@ -6638,7 +6638,7 @@
       au < zapped ; down ; 2011 ; International Journal of Sport Management and Marketing Volume 9 ; 9 >
       au < zapped ; down ; 2011 ; International Journal of Sport Management and Marketing Volume 10 ; 10 >
       au < zapped ; down ; 2012 ; International Journal of Sport Management and Marketing Volume 11 ; 11 >
-      au < testing ; exists ; 2012 ; International Journal of Sport Management and Marketing Volume 12 ; 12 >
+      au < released ; manifest ; 2012 ; International Journal of Sport Management and Marketing Volume 12 ; 12 >
       au < expected ; exists ; 2013 ; International Journal of Sport Management and Marketing Volume 13 ; 13 >
       au < expected ; exists ; 2013 ; International Journal of Sport Management and Marketing Volume 14 ; 14 >
 
@@ -7044,7 +7044,7 @@
       au < manifest ; exists ; 2008-2009 ; International Journal of Technology Enhanced Learning Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Technology Enhanced Learning Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Technology Enhanced Learning Volume 3 ; 3 >
-      au < testing ; exists ; 2012 ; International Journal of Technology Enhanced Learning Volume 4 ; 4 >
+      au < released ; manifest ; 2012 ; International Journal of Technology Enhanced Learning Volume 4 ; 4 >
       au < expected ; exists ; 2013 ; International Journal of Technology Enhanced Learning Volume 5 ; 5 >
 
     }
@@ -7142,7 +7142,7 @@
       au < released ; crawling ; 2012 ; International Journal of Technology Management Volume 57 ; 57 >
       au < released ; crawling ; 2012 ; International Journal of Technology Management Volume 58 ; 58 >
       au < released ; crawling ; 2012 ; International Journal of Technology Management Volume 59 ; 59 >
-      au < testing ; exists ; 2012 ; International Journal of Technology Management Volume 60 ; 60 >
+      au < released ; manifest ; 2012 ; International Journal of Technology Management Volume 60 ; 60 >
       au < manifest ; exists ; 2013 ; International Journal of Technology Management Volume 61 ; 61 >
       au < expected ; exists ; 2013 ; International Journal of Technology Management Volume 62 ; 62 >
 
@@ -7475,7 +7475,7 @@
       au < zapped ; down ; 2011 ; International Journal of Vehicle Design Volume 57 ; 57 >
       au < zapped ; down ; 2012 ; International Journal of Vehicle Design Volume 58 ; 58 >
       au < zapped ; down ; 2012 ; International Journal of Vehicle Design Volume 59 ; 59 >
-      au < testing ; exists ; 2012 ; International Journal of Vehicle Design Volume 60 ; 60 >
+      au < released ; manifest ; 2012 ; International Journal of Vehicle Design Volume 60 ; 60 >
       au < manifest ; exists ; 2013 ; International Journal of Vehicle Design Volume 61 ; 61 >
       au < expected ; exists ; 2013 ; International Journal of Vehicle Design Volume 62 ; 62 >
       au < expected ; exists ; 2013 ; International Journal of Vehicle Design Volume 63 ; 63 >
@@ -7517,7 +7517,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Vehicle Noise and Vibration Volume 5 ; 5 >
       au < manifest ; exists ; 2010 ; International Journal of Vehicle Noise and Vibration Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Vehicle Noise and Vibration Volume 7 ; 7 >
-      au < testing ; exists ; 2012 ; International Journal of Vehicle Noise and Vibration Volume 8 ; 8 >
+      au < released ; manifest ; 2012 ; International Journal of Vehicle Noise and Vibration Volume 8 ; 8 >
       au < expected ; exists ; 2013 ; International Journal of Vehicle Noise and Vibration Volume 9 ; 9 >
 
     }
@@ -7553,7 +7553,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Vehicle Safety Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; International Journal of Vehicle Safety Volume 4 ; 4 >
       au < zapped ; down ; 2010-2011 ; International Journal of Vehicle Safety Volume 5 ; 5 >
-      au < testing ; exists ; 2012 ; International Journal of Vehicle Safety Volume 6 ; 6 >
+      au < released ; manifest ; 2012 ; International Journal of Vehicle Safety Volume 6 ; 6 >
       au < expected ; exists ; 2013 ; International Journal of Vehicle Safety Volume 7 ; 7 >
 
     }
@@ -7751,7 +7751,7 @@
       au < manifest ; exists ; 2007-2008 ; International Journal of Work Organisation and Emotion Volume 2 ; 2 >
       au < manifest ; exists ; 2009-2010 ; International Journal of Work Organisation and Emotion Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Work Organisation and Emotion Volume 4 ; 4 >
-      au < testing ; exists ; 2012 ; International Journal of Work Organisation and Emotion Volume 5 ; 5 >
+      au < released ; manifest ; 2012 ; International Journal of Work Organisation and Emotion Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; International Journal of Work Organisation and Emotion Volume 6 ; 6 >
 
     }
