@@ -32,15 +32,12 @@ import java.io.*;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
-import org.apache.commons.lang.StringUtils;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.extractor.MetadataField.Cardinality;
-import org.lockss.extractor.MetadataField.Validator;
 import org.lockss.plugin.*;
-import org.w3c.rdf.vocabulary.dublin_core_19990702.DC;
 
 
 public class HighWirePressH20HtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
@@ -54,12 +51,20 @@ public class HighWirePressH20HtmlMetadataExtractorFactory implements FileMetadat
   
   public static class HighWirePressH20HtmlMetadataExtractor 
     implements FileMetadataExtractor {
-
+ 
+    // To do (PJG): Use the definitions from MetadataField once 1.59 is out
+    private static final String KEY_LANGUAGE = "language";
+    private static final MetadataField FIELD_LANGUAGE = new MetadataField(
+        KEY_LANGUAGE, Cardinality.Single);
+    private static final String KEY_FORMAT = "format";
+    public static final MetadataField FIELD_FORMAT = new MetadataField(
+        KEY_FORMAT, Cardinality.Single);
+    
     // Map HighWire H20 HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("DC.Format", MetadataField.FIELD_FORMAT);
-      tagMap.put("DC.Language", MetadataField.FIELD_LANGUAGE);
+      tagMap.put("DC.Format", FIELD_FORMAT);
+      tagMap.put("DC.Language", FIELD_LANGUAGE);
       tagMap.put("DC.Publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
