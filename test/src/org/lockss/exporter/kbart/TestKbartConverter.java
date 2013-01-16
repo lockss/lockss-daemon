@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartConverter.java,v 1.19 2012-11-16 16:16:46 easyonthemayo Exp $
+ * $Id: TestKbartConverter.java,v 1.19.4.1 2013-01-16 21:53:06 pgust Exp $
  */
 
 /*
@@ -347,7 +347,7 @@ public class TestKbartConverter extends LockssTestCase {
 
       // The title URL is based on a very specific string - see KbartConverter
       put(Field.TITLE_URL,
-          KbartConverter.LABEL_PARAM_LOCKSS_RESOLVER +
+          KbartConverter.DEFAULT_TITLE_URL_PREFIX +
               kbt.getResolverUrlParams());
     }};
 
