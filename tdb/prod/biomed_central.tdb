@@ -2564,8 +2564,10 @@
       >
       
       comment[continued_by] = 2045-8118
-      param[base_url] = http://www.cerebrospinalfluidresearch.com/
       param[journal_issn] = 1743-8454
+
+      {
+      param[base_url] = http://www.cerebrospinalfluidresearch.com/
 
       au < down ; 2004 ; Cerebrospinal Fluid Research Volume 1 [superseded] ; 1 >
       au < down ; 2005 ; Cerebrospinal Fluid Research Volume 2 [superseded] ; 2 >
@@ -2574,6 +2576,20 @@
       au < down ; 2008 ; Cerebrospinal Fluid Research Volume 5 [superseded] ; 5 >
       au < down ; 2009 ; Cerebrospinal Fluid Research Volume 6 [superseded] ; 6 >
       au < down ; 2010 ; Cerebrospinal Fluid Research Volume 7 [superseded] ; 7 >
+      }
+      
+      {
+      param[base_url] = http://www.fluidsbarrierscns.com/
+
+      au < doNotProcess ; 2004 ; Cerebrospinal Fluid Research Volume 1 ; 1 >
+      au < doNotProcess ; 2005 ; Cerebrospinal Fluid Research Volume 2 ; 2 >
+      au < doNotProcess ; 2006 ; Cerebrospinal Fluid Research Volume 3 ; 3 >
+      au < doNotProcess ; 2007 ; Cerebrospinal Fluid Research Volume 4 ; 4 >
+      au < doNotProcess ; 2008 ; Cerebrospinal Fluid Research Volume 5 ; 5 >
+      au < doNotProcess ; 2009 ; Cerebrospinal Fluid Research Volume 6 ; 6 >
+      au < doNotProcess ; 2010 ; Cerebrospinal Fluid Research Volume 7 ; 7 >
+      
+      }
 
     }
 
@@ -3236,19 +3252,13 @@
       
       comment[continued_from] = 1743-8454
       param[base_url] = http://www.fluidsbarrierscns.com/
+      
       param[journal_issn] = 2045-8118
 
-      au < doNotProcess ; 2004 ; Cerebrospinal Fluid Research Volume 1 ; 1 >
-      au < doNotProcess ; 2005 ; Cerebrospinal Fluid Research Volume 2 ; 2 >
-      au < doNotProcess ; 2006 ; Cerebrospinal Fluid Research Volume 3 ; 3 >
-      au < doNotProcess ; 2007 ; Cerebrospinal Fluid Research Volume 4 ; 4 >
-      au < doNotProcess ; 2008 ; Cerebrospinal Fluid Research Volume 5 ; 5 >
-      au < doNotProcess ; 2009 ; Cerebrospinal Fluid Research Volume 6 ; 6 >
-      au < doNotProcess ; 2010 ; Cerebrospinal Fluid Research Volume 7 ; 7 >
       au < released ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
       au < manifest ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
       au < expected ; 2013 ; Fluids and Barriers of the CNS Volume 10 ; 10 >
-
+      
     }
 
     {
