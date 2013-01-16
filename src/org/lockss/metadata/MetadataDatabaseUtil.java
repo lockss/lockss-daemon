@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.8.2.2 2013-01-15 06:28:37 fergaloy-sf Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.8.2.3 2013-01-16 21:04:20 pgust Exp $
  */
 
 /*
@@ -77,6 +77,7 @@ final public class MetadataDatabaseUtil {
   static class BibliographicDatabaseItem implements BibliographicItem {
     final String publisher;
     final String title;
+    final String proprietaryId;
     final String printisbn;
     final String eisbn;
     final String printissn;
@@ -105,6 +106,7 @@ final public class MetadataDatabaseUtil {
       endvolume = resultSet.getString(7);
       startyear = resultSet.getString(8);
       endyear = resultSet.getString(8);
+      proprietaryId = resultSet.getString(9);
     }
 
     @Override
@@ -143,6 +145,11 @@ final public class MetadataDatabaseUtil {
     }
 
     @Override
+    public String getProprietaryId() {
+      return proprietaryId;
+    }
+
+    @Override
     public String getJournalTitle() {
       return title;
     }
@@ -160,9 +167,9 @@ final public class MetadataDatabaseUtil {
     @Override
     public String getVolume() {
       if (startvolume == null) {
-	return null;
+        return null;
       } else if (endvolume == null) {
-	return endvolume;
+        return endvolume;
       }
       return startvolume + "-" + endvolume;
     }
@@ -170,9 +177,9 @@ final public class MetadataDatabaseUtil {
     @Override
     public String getYear() {
       if (startyear == null) {
-	return null;
+        return null;
       } else if (endyear == null) {
-	return endyear;
+        return endyear;
       }
       return startyear + "-" + endyear;
     }
@@ -285,7 +292,7 @@ final public class MetadataDatabaseUtil {
       publisher_name, 
       publication_name,
       p_issn, e_issn, p_isbn, e_isbn,
-      volume, substr(date,1,4)
+      volume, substr(date,1,4) "year", publication_id
     from 
       bib_item, 
       md_item, 
@@ -312,7 +319,8 @@ final public class MetadataDatabaseUtil {
         "select distinct "
       +   "publisher_name, publication_name, "
       +   "p_issn, e_issn, p_isbn, e_isbn, "
-      +   "volume, substr(" + DATE_COLUMN + ",1,4) "
+      +   "volume, substr(" + DATE_COLUMN + ",1,4) \"year\", "
+      +   "publication_id "
       + "from "
       +    BIB_ITEM_TABLE + ", "
       +    MD_ITEM_TABLE + ", "
@@ -348,8 +356,8 @@ final public class MetadataDatabaseUtil {
       resultSet = dbManager.executeQuery(statement);
 
       while (resultSet.next()) {
-	BibliographicItem item = new BibliographicDatabaseItem(resultSet);
-	items.add(item);
+        BibliographicItem item = new BibliographicDatabaseItem(resultSet);
+        items.add(item);
       }
     } catch (IllegalArgumentException ex) {
       log.warning(ex.getMessage());

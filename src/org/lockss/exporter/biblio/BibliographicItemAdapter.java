@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.6 2012-11-14 12:05:09 easyonthemayo Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.6.4.1 2013-01-16 21:09:24 pgust Exp $
  */
 
 /*
@@ -65,6 +65,7 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   protected String eIssn = null;
   protected String issnL = null;
   protected String journalTitle = null;
+  protected String proprietaryId = null;
   protected String publisherName = null;
   protected String name = null;
   protected String volume = null;
@@ -105,6 +106,7 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
    *
    * @return an ISSN for the bibliographic item
    */
+  @Override
   public String getIssn() {
     String theIssn = getIssnL();
     if (!MetadataUtil.isIssn(theIssn)) {
@@ -119,66 +121,86 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     return theIssn;
   }
 
+  @Override
   public String getPrintIssn() {
     return printIssn;
   }
 
+  @Override
   public String getEissn() {
     return eIssn;
   }
 
+  @Override
   public String getIssnL() {
     return issnL;
   }
 
+  @Override
+  public String getProprietaryId() {
+    return proprietaryId;
+  }
+
+  @Override
   public String getJournalTitle() {
     return journalTitle;
   }
 
+  @Override
   public String getPublisherName() {
     return publisherName;
   }
 
+  @Override
   public String getName() {
     return name;
   }
 
+  @Override
   public String getVolume() {
     return volume;
   }
 
+  @Override
   public String getYear() {
     return year;
   }
 
+  @Override
   public String getIssue() {
     return issue;
   }
 
+  @Override
   public String getStartVolume() {
     // Return the start volume if available, or get it from the volume string.
     //return startVolume == null ? NumberUtil.getRangeStart(volume) : startVolume;
     return startVolume;
   }
 
+  @Override
   public String getEndVolume() {
     // Return the end volume if available, or get it from the volume string.
     //return endVolume == null ? NumberUtil.getRangeEnd(volume) : endVolume;
     return endVolume;
   }
 
+  @Override
   public String getStartYear() {
     return startYear;
   }
 
+  @Override
   public String getEndYear() {
     return endYear;
   }
 
+  @Override
   public String getStartIssue() {
     return startIssue;
   }
 
+  @Override
   public String getEndIssue() {
     return endIssue;
   }
@@ -212,6 +234,11 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
 
   public BibliographicItemAdapter setJournalTitle(String journalTitle) {
     this.journalTitle = journalTitle;
+    return this;
+  }
+
+  public BibliographicItemAdapter setProprietaryId(String proprietaryId) {
+    this.proprietaryId = proprietaryId;
     return this;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItem.java,v 1.3 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: BibliographicItem.java,v 1.3.10.1 2013-01-16 21:09:25 pgust Exp $
  */
 
 /*
@@ -112,6 +112,13 @@ public interface BibliographicItem {
    * @return the ISSN-L for this title or <code>null</code> if not specified
    */
   public String getIssnL();
+
+  /**
+   * Returns the proprietary ID of of the journal of which the bibliographic 
+   * item is a part.
+   * @return the proprietary ID of the bibliographic item's journal
+   */
+  public String getProprietaryId();
 
   /**
    * Returns the title of the journal of which the bibliographic item is a part.
