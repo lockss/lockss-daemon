@@ -1981,15 +1981,14 @@
 
       param[base_url] = http://www.aquaticbiosystems.org/
       param[journal_issn] = 2046-9063
-      comment[complete] = Only Volume 8 has a complete run. This may cause the substance check fails?
 
-      au < notReady ; 2005 ; Aquatic Biosystems Volume 1 ; 1 >
-      au < notReady ; 2006 ; Aquatic Biosystems Volume 2 ; 2 >
-      au < notReady ; 2007 ; Aquatic Biosystems Volume 3 ; 3 >
-      au < notReady ; 2008 ; Aquatic Biosystems Volume 4 ; 4 >
-      au < notReady ; 2009 ; Aquatic Biosystems Volume 5 ; 5 >
-      au < notReady ; 2010 ; Aquatic Biosystems Volume 6 ; 6 >
-      au < notReady ; 2011 ; Aquatic Biosystems Volume 7 ; 7 >
+      au < manifest ; 2005 ; Aquatic Biosystems Volume 1 ; 1 >
+      au < manifest ; 2006 ; Aquatic Biosystems Volume 2 ; 2 >
+      au < manifest ; 2007 ; Aquatic Biosystems Volume 3 ; 3 >
+      au < manifest ; 2008 ; Aquatic Biosystems Volume 4 ; 4 >
+      au < manifest ; 2009 ; Aquatic Biosystems Volume 5 ; 5 >
+      au < manifest ; 2010 ; Aquatic Biosystems Volume 6 ; 6 >
+      au < manifest ; 2011 ; Aquatic Biosystems Volume 7 ; 7 >
       au < released ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
       au < expected ; 2013 ; Aquatic Biosystems Volume 9 ; 9 >
 
@@ -2165,7 +2164,7 @@
         issnl = 1745-6150
       >
 
-      comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/supplementary/OST-HTH_Supp.html
+      comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/5/1/56/mathml/M2 
 
       param[base_url] = http://www.biology-direct.com/
       param[journal_issn] = 1745-6150
