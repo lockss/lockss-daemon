@@ -1705,7 +1705,7 @@
     au < manifest ; exists ; 2007 ; Astronomy & Geophysics Volume 48 ; 48 ; >
     au < manifest ; exists ; 2008 ; Astronomy & Geophysics Volume 49 ; 49 ; >
     au < manifest ; exists ; 2009 ; Astronomy & Geophysics Volume 50 ; 50 ; >
-    au < manifest ; exists ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 ; >
     au < crawling ; exists ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 ; >
     au < crawling ; exists ; 2012 ; Astronomy & Geophysics Volume 53 ; 53 ; >
     au < expected ; exists ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 ; >
@@ -4318,7 +4318,7 @@
     au < manifest ; exists ; 2007 ; Diplomatic History Volume 31 ; 31 ; >
     au < manifest ; exists ; 2008 ; Diplomatic History Volume 32 ; 32 ; >
     au < manifest ; exists ; 2009 ; Diplomatic History Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2010 ; Diplomatic History Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2010 ; Diplomatic History Volume 34 ; 34 ; >
     au < crawling ; exists ; 2011 ; Diplomatic History Volume 35 ; 35 ; >
     au < crawling ; exists ; 2012 ; Diplomatic History Volume 36 ; 36 ; >
     au < expected ; exists ; 2013 ; Diplomatic History Volume 37 ; 37 ; >
@@ -8011,7 +8011,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
       au < expected ; exists ; 2011 ; International Immunology Meeting Abstracts Volume 23 ; 23 ; >
 
     }
