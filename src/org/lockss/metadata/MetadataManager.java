@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.8.2.1 2013-01-15 06:28:37 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.8.2.2 2013-01-16 08:05:31 tlipkis Exp $
  */
 
 /*
@@ -517,9 +517,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       new ArrayList<ReindexingTask>();
 
   /**
-   * Metadata manager indexing enabled flag
+   * Metadata manager indexing enabled flag.  Initial value should always
+   * be false, independent of DEFAULT_INDEXING_ENABLED, so
+   * setIndexingEnabled() sees a transition.
    */
-  boolean reindexingEnabled = DEFAULT_INDEXING_ENABLED;
+  boolean reindexingEnabled = false;
+
+  /**
+   * XXX temporary one-time startup
+   */
+  boolean everEnabled = false;
 
   /**
    * Metadata manager use metadata extractor flag. Note: set this to false only
@@ -608,10 +615,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     statusServ.registerOverviewAccessor(METADATA_STATUS_TABLE_NAME,
         new MetadataManagerStatusAccessor.IndexingOverview(this));
 
-    // Start the metadata extraction.
+    resetConfig();
+    log.debug(DEBUG_HEADER + "MetadataManager service successfully started");
+  }
+
+  /** Start the starter thread, which waits for AUs to be started,
+   * registers AuEvent handler and performs initial scan of AUs
+   */
+  void startStarter() {
     MetadataStarter starter = new MetadataStarter(dbManager, this, pluginMgr);
     new Thread(starter).start();
-    log.debug(DEBUG_HEADER + "MetadataManager service successfully started");
   }
 
   /**
@@ -703,9 +716,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       disableCrawlRescheduleTask =
 	  config.getBoolean(PARAM_DISABLE_CRAWL_RESCHEDULE_TASK,
 			    DEFAULT_DISABLE_CRAWL_RESCHEDULE_TASK);
-      boolean doEnable =
+      if (isDaemonInited()) {
+	boolean doEnable =
 	  config.getBoolean(PARAM_INDEXING_ENABLED, DEFAULT_INDEXING_ENABLED);
-      setIndexingEnabled(doEnable);
+	setIndexingEnabled(doEnable);
+      }
 
       if (changedKeys.contains(PARAM_HISTORY_MAX)) {
 	int histSize = config.getInt(PARAM_HISTORY_MAX, DEFAULT_HISTORY_MAX);
@@ -740,19 +755,25 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   void setIndexingEnabled(boolean enable) {
     final String DEBUG_HEADER = "setIndexingEnabled(): ";
-    boolean wasEnabled = reindexingEnabled;
-    reindexingEnabled = enable;
-    log.debug(DEBUG_HEADER + "enabled: " + reindexingEnabled);
+    log.debug(DEBUG_HEADER + "enabled: " + enable);
 
     // Start or stop reindexing if initialized.
     if (dbManager != null) {
-      if (!wasEnabled && reindexingEnabled) {
+      if (!reindexingEnabled && enable) {
+	if (everEnabled) {
         // Start reindexing
-        startReindexing();
-      } else if (wasEnabled && !reindexingEnabled) {
+	  startReindexing();
+	} else {
+	  // start first-time startup thread (XXX needs to be periodic?)
+	  startStarter();
+	  everEnabled = true;
+	}
+	reindexingEnabled = enable;
+      } else if (reindexingEnabled && !enable) {
         // Stop any pending reindexing operations
         stopReindexing();
       }
+      reindexingEnabled = enable;
     }
   }
 
@@ -3624,10 +3645,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   
     int version = 1;
     String pluginVersion = plugin.getFeatureVersion(Feature.Metadata);
-    log.debug3(DEBUG_HEADER + "pluginVersion = " + pluginVersion);
-
+    if (log.isDebug3()) {
+      log.debug3(DEBUG_HEADER + "Metadata Featrure version: " +pluginVersion
+		 + " for " + plugin.getPluginName());
+    }
     if (StringUtil.isNullString(pluginVersion)) {
-      log.info("Plugin version not found: Using " + version);
+      log.debug2("Plugin version not found: Using " + version);
       return version;
     }
 
