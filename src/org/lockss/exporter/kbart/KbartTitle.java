@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitle.java,v 1.17 2012-10-22 15:07:09 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.18 2013-01-16 21:30:17 pgust Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.util.Logger;
+import org.lockss.util.MetadataUtil;
 import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
 
@@ -209,16 +210,29 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
    * @return a parameter string appropriate for OpenURL resolving
    */
   public String getResolverUrlParams() {
-    // TODO Use title id (prefers ISBN) if possible
-    if (hasFieldValue(Field.ONLINE_IDENTIFIER))
-      return "?eissn=" + getField(Field.ONLINE_IDENTIFIER);
-    if (hasFieldValue(Field.PRINT_IDENTIFIER))
-      return "?issn=" + getField(Field.PRINT_IDENTIFIER);
+    // Use online identifier if available
+    String onlineId = getField(Field.ONLINE_IDENTIFIER);
+    if (MetadataUtil.isIsbn(onlineId)) {
+      return "eisbn=" + onlineId;
+    }
+    if (MetadataUtil.isIssn(onlineId)) {
+      return "eissn=" + onlineId;
+    }
+
+    // Use print identifier if available
+    String printId = getField(Field.PRINT_IDENTIFIER);
+    if (MetadataUtil.isIsbn(printId)) {
+      return "isbn=" + printId;
+    }
+    if (MetadataUtil.isIssn(printId)) {
+      return "issn=" + printId;
+    }
+
     // Resort to title and publisher (assume that they exist)
     String pubTitle = UrlUtil.encodeUrl(getField(Field.PUBLICATION_TITLE));
     String pubName = UrlUtil.encodeUrl(getField(Field.PUBLISHER_NAME));
     // Build the arg url
-    StringBuilder sb = new StringBuilder("?");
+    StringBuilder sb = new StringBuilder();
     sb.append(OpenUrlSyntax.PUBLICATION_TITLE).append("=").append(pubTitle);
     sb.append("&"+OpenUrlSyntax.PUBLISHER_NAME).append("=").append(pubName);
     return sb.toString();
