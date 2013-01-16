@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicItemImpl.java,v 1.3 2012-11-14 12:05:10 easyonthemayo Exp $
+ * $Id: TestBibliographicItemImpl.java,v 1.4 2013-01-16 21:55:45 pgust Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ public class TestBibliographicItemImpl extends LockssTestCase {
   private final static String eIssn = "1533-8606";
   private final static String issnL = "1556-326X";
   private final static String title = "A Journal";
+  private final static String titleId = "A JournalId";
   private final static String publisher = "A Publisher";
   private final static String name = "A Journal Volume X";
   private final static String volume = "s1-s10";
@@ -72,11 +73,11 @@ public class TestBibliographicItemImpl extends LockssTestCase {
 
   // A BibliographicItem constructed using vol/year/issue convenience strings
   private BibliographicItemImpl bibItem1 = new BibliographicItemImpl(
-      pIsbn, pIssn, title, publisher, name, volume, year, issue
+      pIsbn, pIssn, title, titleId, publisher, name, volume, year, issue
   );
   // A BibliographicItem constructed using vol/year/issue start and end strings
   private BibliographicItemImpl bibItem2 = new BibliographicItemImpl(
-      pIsbn, pIssn, title,
+      pIsbn, pIssn, title, titleId,
       publisher, name,
       sVol, eVol,
       sYear, eYear,
