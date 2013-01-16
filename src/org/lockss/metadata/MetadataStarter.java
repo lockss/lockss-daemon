@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataStarter.java,v 1.3.2.1 2013-01-16 08:05:46 tlipkis Exp $
+ * $Id: MetadataStarter.java,v 1.3.2.2 2013-01-16 08:10:51 tlipkis Exp $
  */
 
 /*
@@ -135,7 +135,6 @@ public class MetadataStarter extends LockssRunnable {
 	    // Yes: index it.
 	    toBeIndexed.add(au);
 	  }
-	  conn.rollback();  // Don't keep database locked for a long time
 	} catch (SQLException sqle) {
 	  log.error("Cannot get AU metadata version: " + sqle);
 	}
