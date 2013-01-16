@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>76</string>
+    <string>77</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>10</string>
+        <string>11</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -107,6 +107,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>2,&quot;^%s.*\.cover.gif$&quot;, base_url</string>
       <string>1,&quot;^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%slockss-manifest/vol_%s_manifest\.dtl$&quot;, base_url, volume_name</string>
@@ -178,14 +179,14 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>4000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_mime_rate_limiter_map</string>
     <map>
       <entry>
         <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-        <string>1/5000</string>
+        <string>1/4000</string>
       </entry>
     </map>
   </entry>
