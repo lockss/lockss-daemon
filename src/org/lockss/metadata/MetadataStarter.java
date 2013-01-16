@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataStarter.java,v 1.3 2013-01-04 21:57:37 fergaloy-sf Exp $
+ * $Id: MetadataStarter.java,v 1.4 2013-01-16 08:07:40 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,8 @@ import static org.lockss.db.DbManager.*;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Collection;
-import java.util.Iterator;
+import java.util.List;
+import java.util.ArrayList;
 import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.db.DbManager;
@@ -44,6 +45,7 @@ import org.lockss.plugin.AuEvent;
 import org.lockss.plugin.AuEventHandler;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.PluginManager;
+import org.lockss.util.CollectionUtil;
 import org.lockss.util.Logger;
 
 /**
@@ -110,41 +112,43 @@ public class MetadataStarter extends LockssRunnable {
     // with the archival unit.
     pluginManager.registerAuEventHandler(new ArchivalUnitEventHandler());
 
-    // Add all the AUs to a list of potentially pending AUs.
-    Collection<ArchivalUnit> allAus = pluginManager.getRandomizedAus();
+    log.debug2(DEBUG_HEADER + "Examining AUs");
 
-    ArchivalUnit au;
+    List<ArchivalUnit> toBeIndexed = new ArrayList<ArchivalUnit>();
 
-    // Loop through all the potentially pending AUs.
-    for (Iterator<ArchivalUnit> itr = allAus.iterator(); itr.hasNext();) {
-      au = itr.next();
-      log.debug(DEBUG_HEADER + "AU = " + au.getName());
+    // Loop through all the AUs to see which need to be on the pending queue.
+    for (ArchivalUnit au : pluginManager.getAllAus()) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "AU = " + au.getName());
 
       // Check whether the AU has not been crawled.
       if (!AuUtil.hasCrawled(au)) {
 	// Yes: Do not index it.
-	itr.remove();
+	continue;
       } else {
-	// No: Check whether the AU plugin version is not newer than the version
-	// of the metadata already in the database and whether the AU metadata
-	// has been extracted after the last successful crawl.
+	// No: Check whether the plugin's md extractor version is newer
+	// than the version of the metadata already in the database or
+	// whether the AU metadata hasn't been extracted since the last
+	// successful crawl.
 	try {
-	  if (!mdManager.isAuMetadataForObsoletePlugin(conn, au)
-	      && !mdManager.isAuCrawledAndNotExtracted(conn, au)) {
-	    // Yes: Do not index it.
-	    itr.remove();
+	  if (mdManager.isAuMetadataForObsoletePlugin(conn, au)
+	      || mdManager.isAuCrawledAndNotExtracted(conn, au)) {
+	    // Yes: index it.
+	    toBeIndexed.add(au);
 	  }
 	} catch (SQLException sqle) {
 	  log.error("Cannot get AU metadata version: " + sqle);
 	}
       }
     }
+    log.debug2(DEBUG_HEADER + "Done examining AUs");
 
     // Add the AUs to be indexed to the table of pending AUs, if not already
     // there.
     try {
-      mdManager.addToPendingAus(conn, allAus);
+      mdManager.addToPendingAus(conn,
+				CollectionUtil.randomPermutation(toBeIndexed));
       conn.commit();
+      log.debug2(DEBUG_HEADER + "Queue updated");
     } catch (SQLException sqle) {
       log.error("Cannot add to pending AUs table \"" + PENDING_AU_TABLE + "\"",
 		sqle);
