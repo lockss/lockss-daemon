@@ -1999,7 +1999,8 @@
         issn = 2046-9063 ;
         issnl = 2046-9063
       >
-
+      
+      comment[name_change] = Title changed name/url/issn from Saline Systems/salinesystems.org but redirects accordingly
       param[base_url] = http://www.aquaticbiosystems.org/
       param[journal_issn] = 2046-9063
 
@@ -4752,6 +4753,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of Translational Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2011 ; Journal of Translational Medicine Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Journal of Translational Medicine Volume 10 ; 10 >
+      au < expected ; exists ; 2013 ; Journal of Translational Medicine Volume 11 ; 11 >
 
     }
 
@@ -4771,6 +4773,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of Trauma Management & Outcomes Volume 4 ; 4 >
       au < crawling ; exists ; 2011 ; Journal of Trauma Management & Outcomes Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Journal of Trauma Management & Outcomes Volume 6 ; 6 >
+      au < expected ; exists ; 2013 ; Journal of Trauma Management & Outcomes Volume 7 ; 7 >
 
     }
 
@@ -5585,14 +5588,11 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.salinesystems.org/
       param[journal_issn] = 1746-1448
 
-      au < manifest ; exists ; 2005 ; Saline Systems Volume 1 ; 1 >
-      au < manifest ; exists ; 2006 ; Saline Systems Volume 2 ; 2 >
-      au < manifest ; exists ; 2007 ; Saline Systems Volume 3 ; 3 >
-      au < crawling ; exists ; 2008 ; Saline Systems Volume 4 ; 4 >
-      au < crawling ; exists ; 2009 ; Saline Systems Volume 5 ; 5 >
-      au < crawling ; exists ; 2010 ; Saline Systems Volume 6 ; 6 >
-      au < testing ; exists ; 2011 ; Saline Systems Volume 7 ; 7 >
-      au < crawling ; exists ; 2012 ; Saline Systems Volume 8 ; 8 >
+      au < superseded ; exists ; 2008 ; Saline Systems Volume 4 ; 4 >
+      au < superseded ; exists ; 2009 ; Saline Systems Volume 5 ; 5 >
+      au < superseded ; exists ; 2010 ; Saline Systems Volume 6 ; 6 >
+      au < superseded ; exists ; 2011 ; Saline Systems Volume 7 ; 7 >
+      au < superseded ; exists ; 2012 ; Saline Systems Volume 8 ; 8 >
 
     }
 
@@ -5804,6 +5804,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Thrombosis Journal Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; Thrombosis Journal Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Thrombosis Journal Volume 10 ; 10 >
+      au < expected ; exists ; 2013 ; Thrombosis Journal Volume 11 ; 11 >
 
     }
 
@@ -5859,6 +5860,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2047-9158
 
       au < exists ; exists ; 2012 ; Translational Neurodegeneration Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; Translational Neurodegeneration Volume 2 ; 2 >
 
     }
 
@@ -5874,6 +5876,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2047-1440
 
       au < exists ; exists ; 2012 ; Transplantation Research Volume 1 ; 1 >
+      au < exists ; exists ; 2013 ; Transplantation Research Volume 2 ; 2 >
 
     }
 
@@ -5900,6 +5903,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Trials Volume 11 ; 11 >
       au < released ; crawling ; 2011 ; Trials Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; Trials Volume 13 ; 13 >
+      au < expected ; exists ; 2013 ; Trials Volume 14 ; 14 >
 
     }
 
@@ -5933,6 +5937,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; crawling ; 2011 ; Veterinary Research Volume 42 ; 42 >
       au < crawling ; exists ; 2012 ; Veterinary Research Volume 43 ; 43 >
+      au < expected ; exists ; 2013 ; Veterinary Research Volume 44 ; 44 >
 
     }
 
@@ -5966,9 +5971,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2007 ; Virology Journal Volume 4 ; 4 >
       au < crawling ; exists ; 2008 ; Virology Journal Volume 5 ; 5 >
       au < crawling ; exists ; 2009 ; Virology Journal Volume 6 ; 6 >
-      au < crawling ; exists ; 2010 ; Virology Journal Volume 7 ; 7 >      
+      au < crawling ; exists ; 2010 ; Virology Journal Volume 7 ; 7 >
       au < testing ; exists ; 2011 ; Virology Journal Volume 8 ; 8 >
-      au < crawling ; exists ; 2012 ; Virology Journal Volume 9 ; 9>
+      au < crawling ; exists ; 2012 ; Virology Journal Volume 9 ; 9 >
+      au < expected ; exists ; 2013 ; Virology Journal Volume 10 ; 10 >
 
     }
 
@@ -6003,6 +6009,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; World Journal of Emergency Surgery Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; World Journal of Emergency Surgery Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; World Journal of Emergency Surgery Volume 7 ; 7 >
+      au < expected ; exists ; 2013 ; World Journal of Emergency Surgery Volume 8 ; 8 >
 
     }
 
@@ -6026,6 +6033,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; World Journal of Surgical Oncology Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; World Journal of Surgical Oncology Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; World Journal of Surgical Oncology Volume 10 ; 10 >
+      au < expected ; exists ; 2013 ; World Journal of Surgical Oncology Volume 11 ; 11 >
 
     }
         
