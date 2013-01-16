@@ -5432,6 +5432,8 @@
 
       param[base_url] = http://www.pophealthmetrics.com/
       param[journal_issn] = 1478-7954
+      
+      comment[notReady] = Volume 8, fetch error. Possible 500 error.
 
       au < released ; 2003 ; Population Health Metrics Volume 1 ; 1 >
       au < released ; 2004 ; Population Health Metrics Volume 2 ; 2 >
@@ -5614,14 +5616,11 @@
       param[base_url] = http://www.salinesystems.org/
       param[journal_issn] = 1746-1448
 
-      au < released ; 2005 ; Saline Systems Volume 1 ; 1 >
-      au < released ; 2006 ; Saline Systems Volume 2 ; 2 >
-      au < released ; 2007 ; Saline Systems Volume 3 ; 3 >
-      au < released ; 2008 ; Saline Systems Volume 4 ; 4 >
-      au < notReady ; 2009 ; Saline Systems Volume 5 ; 5 >
-      au < notReady ; 2010 ; Saline Systems Volume 6 ; 6 >
-      au < notReady ; 2011 ; Saline Systems Volume 7 ; 7 >
-      au < superseded ; 2012 ; Saline Systems Volume 8 ; 8 >
+      au < down ; 2005 ; Saline Systems Volume 1 ; 1 >
+      au < down ; 2006 ; Saline Systems Volume 2 ; 2 >
+      au < down ; 2007 ; Saline Systems Volume 3 ; 3 >
+      au < down ; 2008 ; Saline Systems Volume 4 ; 4 >
+      au < superseded ; 2012 ; Saline Systems Volume 8 [superseded] ; 8 >
 
     }
 
