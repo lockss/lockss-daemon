@@ -45,12 +45,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+    
+      implicit < status ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = apps
 
-      au < manifest ; Applications in Plant Sciences Volume 1 ; 1 >
+      au < manifest ; 2013 ; Applications in Plant Sciences Volume 1 ; 1 >
+      
     }
   }
 
