@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.25 2013-01-10 03:34:41 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.26 2013-01-16 08:07:51 tlipkis Exp $
  */
 
 /*
@@ -268,11 +268,15 @@ public class ViewContent extends LockssServlet {
       }
     } else {
       Properties args = getParamsAsProps();
-      args.setProperty("showall", "1");
       args.remove("frame");
+      args.setProperty("showall", "1");
+      args.setProperty("frame", "summary");
+
       tbl.newRow();
       tbl.newCell("align=left");
-      tbl.add(srvLink(myServletDescr(), "Show All", args));
+      Link lnk = new Link(srvURL(myServletDescr(), args), "Show all");
+      lnk.attribute("target", "CuMeta");
+      tbl.add(lnk);
     }
 
     page.add(tbl);
