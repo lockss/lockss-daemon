@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.39 2013-01-05 04:43:40 tlipkis Exp $
+ * $Id: KbartConverter.java,v 1.39.2.1 2013-01-16 21:34:21 pgust Exp $
  */
 
 /*
@@ -126,12 +126,23 @@ public class KbartConverter {
   public static final int DEFAULT_CONVERT_TITLES_POOL_SIZE =
       Runtime.getRuntime().availableProcessors() + 1;
 
-  /** 
-   * The string used as a substitution parameter in the output. Occurrences of 
-   * this string will be replaced in local LOCKSS boxes with the protocol, host 
-   * and port of ServeContent.
+  /**
+   * Determines whether MedataExtractor specified by plugin should be used if it
+   * is available. If <code>false</code>, a MetaDataExtractor is created that
+   * returns data from the TDB rather than from the content metadata. This is
+   * faster than extracting metadata form content, but less complete. Use only
+   * when minimal article info is required.
    */
-  public static final String LABEL_PARAM_LOCKSS_RESOLVER = "LOCKSS_RESOLVER";
+  public static final String PARAM_TITLE_URL_PREFIX = PREFIX + "titleUrlPrefix";
+
+  /**
+   * Default value of titleUrlPrefix configuration parameter. This string
+   * preceeds the OpenURL parameters of the title URL. The default value 
+   * "LOCKSS_RESOLVER?" is replaced by the URL of ServeContent for a specific
+   * LOCKSS box by link resolvers. The trailing "?" is required in this case. 
+   */
+  public static final String DEFAULT_TITLE_URL_PREFIX = "LOCKSS_RESOLVER?";
+
   
   /** The minimum number that will be considered a date of publication. */
   public static final int MIN_PUB_DATE = 1600;
@@ -149,7 +160,7 @@ public class KbartConverter {
   private static AdjustableFixedSizeThreadPoolExecutor getThreadPoolExecutor() {
     if (CONVERT_TITLES_EXECUTOR == null) {
       CONVERT_TITLES_EXECUTOR =
-	new AdjustableFixedSizeThreadPoolExecutor(DEFAULT_CONVERT_TITLES_POOL_SIZE);
+        new AdjustableFixedSizeThreadPoolExecutor(DEFAULT_CONVERT_TITLES_POOL_SIZE);
     }
     return CONVERT_TITLES_EXECUTOR;
   }
@@ -753,7 +764,7 @@ public class KbartConverter {
 
 
   /**
-   * Use the supplied BibliographicItem to create a KbartTitle with the basic common
+   * Use the supplied BibliographicItem to create a KbartTitle with basic common
    * fields set, which can then be cloned to create KbartTitles on which the 
    * remaining range-specific fields can be set. The fields which are set on 
    * the base title are the generic title fields, that is publisher name, 
@@ -773,20 +784,23 @@ public class KbartConverter {
     baseKbt.setField(PUBLICATION_TITLE, au.getJournalTitle());
 
     // Now add information that can be retrieved from the AUs.
-    // Add ISSN, EISSN and a preferred ISSN.
-    baseKbt.setField(PRINT_IDENTIFIER,
-        MetadataUtil.validateIssn(au.getPrintIssn()));
-    baseKbt.setField(ONLINE_IDENTIFIER,
-        MetadataUtil.validateIssn(au.getEissn()));
+    // Add ISBN/EISBN (for books) or ISSN/EISSN (for periodicals)
+    String printId = MetadataUtil.validateIsbn(au.getPrintIsbn());
+    String onlineId = MetadataUtil.validateIsbn(au.getEisbn());
+    if ((printId == null) && (onlineId == null)) {
+      printId = MetadataUtil.validateIssn(au.getPrintIssn());
+      onlineId = MetadataUtil.validateIssn(au.getEissn());
+    }
+    baseKbt.setField(PRINT_IDENTIFIER, printId);
+    baseKbt.setField(ONLINE_IDENTIFIER, onlineId);
     baseKbt.setField(TITLE_ID, getTitleId(au));
-    // TODO Validate as either ISBN or ISSN
-    //MetadataUtil.validateIssn(au.getIssn()));
 
     // Title URL
     // Set using a substitution parameter 
     // e.g. LOCKSS_RESOLVER?issn=1234-5678 (issn or eissn or issn-l)
-    baseKbt.setField(TITLE_URL, 
-        LABEL_PARAM_LOCKSS_RESOLVER + baseKbt.getResolverUrlParams()
+    String prefix = CurrentConfig.getParam(
+        PARAM_TITLE_URL_PREFIX, DEFAULT_TITLE_URL_PREFIX);
+    baseKbt.setField(TITLE_URL, prefix +  baseKbt.getResolverUrlParams()
     ); 
     return baseKbt;
   }
@@ -844,17 +858,13 @@ public class KbartConverter {
 
 
   /**
-   * Get the value that will be used in the title_id field, that is, as an
-   * internal unique identifier. This will be an ISBN if available, then an ISSN
-   * if available, in order of preference for those two fields as defined in
+   * Get the value that will be used in the title_id field as defined in
    * the BibliographicItem.
    * @param au a BibliographicItem
-   * @return
+   * @return the proprietary ID for the AU
    */
   public static String getTitleId(BibliographicItem au) {
-    String id = au.getIsbn();
-    if (id==null) id = au.getIssn();
-    return id;
+    return au.getProprietaryId();
   }
   
   /**
