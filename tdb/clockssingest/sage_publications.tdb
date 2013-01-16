@@ -505,8 +505,8 @@
         au < zapped ; down ; 2003 ; Adult Learning Volume 14 ; 14 ; >
         au < released ; crawling ; 2004 ; Adult Learning Volume 15 ; 15 ; >
         au < zapped ; down ; 2005 ; Adult Learning Volume 16 ; 16 ; >
-        au < testing ; exists ; 2006 ; Adult Learning Volume 17 ; 17 ; >
-        au < testing ; exists ; 2007 ; Adult Learning Volume 18 ; 18 ; >
+        au < released ; manifest ; 2006 ; Adult Learning Volume 17 ; 17 ; >
+        au < released ; manifest ; 2007 ; Adult Learning Volume 18 ; 18 ; >
         au < zapped ; down ; 2008 ; Adult Learning Volume 19 ; 19 ; >
         au < zapped ; down ; 2009 ; Adult Learning Volume 20 ; 20 ; >
         au < zapped ; down ; 2010 ; Adult Learning Volume 21 ; 21 ; >
@@ -23292,9 +23292,9 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       comment[tej1] = missing manifest. need to contact publisher
 
-      au < notReady ; exists ; 2010 ; Journal of Tissue Engineering Volume 1 ; 1 ; >
+      au < exists ; exists ; 2010 ; Journal of Tissue Engineering Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Journal of Tissue Engineering Volume 2 ; 2 ; >
-      au < testing ; exists ; 2012 ; Journal of Tissue Engineering Volume 3 ; 3 ; >
+      au < released ; manifest ; 2012 ; Journal of Tissue Engineering Volume 3 ; 3 ; >
       au < expected ; exists ; 2013 ; Journal of Tissue Engineering Volume 4 ; 4 ; >
 
     }
@@ -32919,7 +32919,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Studies in Christian Ethics Volume 22 ; 22 ; >
       au < released ; crawling ; 2010 ; Studies in Christian Ethics Volume 23 ; 23 ; >
       au < released ; crawling ; 2011 ; Studies in Christian Ethics Volume 24 ; 24 ; >
-      au < testing ; exists ; 2012 ; Studies in Christian Ethics Volume 25 ; 25 ; >
+      au < released ; manifest ; 2012 ; Studies in Christian Ethics Volume 25 ; 25 ; >
       au < expected ; exists ; 2013 ; Studies in Christian Ethics Volume 26 ; 26 ; >
 
     }
@@ -33174,7 +33174,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < zapped ; down ; 2011 ; Teaching of Psychology Volume 38 ; 38 ; >
-      au < testing ; exists ; 2012 ; Teaching of Psychology Volume 39 ; 39 ; >
+      au < released ; manifest ; 2012 ; Teaching of Psychology Volume 39 ; 39 ; >
       au < manifest ; exists ; 2013 ; Teaching of Psychology Volume 40 ; 40 ; >
 
     }
@@ -34348,7 +34348,7 @@
       au < released ; manifest ; 2012 ; Thesis Eleven Volume 110 ; 110 ; >
       au < zapped ; down ; 2012 ; Thesis Eleven Volume 111 ; 111 ; >
       au < released ; manifest ; 2012 ; Thesis Eleven Volume 112 ; 112 ; >
-      au < testing ; exists ; 2012 ; Thesis Eleven Volume 113 ; 113 ; >
+      au < released ; manifest ; 2012 ; Thesis Eleven Volume 113 ; 113 ; >
       au < expected ; exists ; 2013 ; Thesis Eleven Volume 114 ; 114 ; >
       au < expected ; exists ; 2013 ; Thesis Eleven Volume 115 ; 115 ; >
 
@@ -34490,7 +34490,7 @@
       au < zapped ; down ; 2009 ; Tourism and Hospitality Research Volume 9 ; 9 ; >
       au < zapped ; down ; 2010 ; Tourism and Hospitality Research Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; Tourism and Hospitality Research Volume 11 ; 11 ; >
-      au < testing ; exists ; 2012 ; Tourism and Hospitality Research Volume 12 ; 12 ; >
+      au < released ; manifest ; 2012 ; Tourism and Hospitality Research Volume 12 ; 12 ; >
       au < expected ; exists ; 2013 ; Tourism and Hospitality Research Volume 13 ; 13 ; >
 
     }
@@ -36577,7 +36577,7 @@
 
       au < released ; manifest ; 2009 ; Journal of Infrastructure Development Volume 1 ; 1 ; >
       au < released ; crawling ; 2010 ; Journal of Infrastructure Development Volume 2 ; 2 ; >
-      au < testing ; exists ; 2011 ; Journal of Infrastructure Development Volume 3 ; 3 ; >
+      au < released ; manifest ; 2011 ; Journal of Infrastructure Development Volume 3 ; 3 ; >
       au < zapped ; down ; 2012 ; Journal of Infrastructure Development Volume 4 ; 4 ; >
       au < expected ; exists ; 2013 ; Journal of Infrastructure Development Volume 5 ; 5 ; >
 
@@ -37112,8 +37112,8 @@
       au < exists ; exists ; 2007 ; Social Change Volume 37 ; 37 ; >
       au < exists ; exists ; 2008 ; Social Change Volume 38 ; 38 ; >
       au < exists ; exists ; 2009 ; Social Change Volume 39 ; 39 ; >
-      au < testing ; exists ; 2010 ; Social Change Volume 40 ; 40 ; >
-      au < exists ; exists ; 2011 ; Social Change Volume 41 ; 41 ; >
+      au < released ; manifest ; 2010 ; Social Change Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2011 ; Social Change Volume 41 ; 41 ; >
       au < released ; manifest ; 2012 ; Social Change Volume 42 ; 42 ; >
       au < expected ; exists ; 2013 ; Social Change Volume 43 ; 43 ; >
 
