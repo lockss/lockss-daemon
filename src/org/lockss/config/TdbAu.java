@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.18 2012-06-25 05:49:17 tlipkis Exp $
+ * $Id: TdbAu.java,v 1.19 2013-01-16 21:27:07 pgust Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.*;
 
-import sun.util.logging.resources.logging;
 
 /**
  * This class represents a title database archival unit (AU).
@@ -215,6 +214,32 @@ public class TdbAu implements BibliographicItem {
    */
   public String getName() {
     return name;
+  }
+  
+  /**
+   * Array of props/attrs that can be used as a publisher-specified
+   * journal id.
+   */
+  private final String[] journal_ids = {
+      "journal_id",
+      "journal_code",
+      "journal_abbr"
+  };
+  
+  /**
+   * Get the proprietary ID of the AU. This is a publisher spececified
+   * value found in the 'journal_id' attribute or parameter.
+   * 
+   * @return the name of this AU
+   */
+  public String getProprietaryId() {
+    for (String journal_id : journal_ids) {
+      String propId = getParam(journal_id);
+      if (propId != null) return propId;
+      propId = getAttr(journal_id);
+      if (propId != null) return propId;
+    }
+    return null;
   }
   
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.12 2012-07-16 21:10:49 easyonthemayo Exp $
+ * $Id: TdbTitle.java,v 1.13 2013-01-16 21:27:07 pgust Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  * This class represents a title database title.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.12 2012-07-16 21:10:49 easyonthemayo Exp $
+ * @version $Id: TdbTitle.java,v 1.13 2013-01-16 21:27:07 pgust Exp $
  */
 public class TdbTitle {
   /**
@@ -201,6 +201,24 @@ public class TdbTitle {
     
     this.publisher = publisher;
   }
+
+  /**
+   * Return proprietary ID for this title. 
+   * 
+   * @return proprietary ID for this title or <code>null</code> 
+   * if not specified
+   */
+  public String getProprietaryId() {
+    String value = null;
+    for (TdbAu tdbau : tdbAus.values()) {
+      value = tdbau.getProprietaryId();
+      if (value != null) {
+        break;
+      }
+    }
+    return value;
+  }
+
   
   /**
    * Return print ISSN for this title.
