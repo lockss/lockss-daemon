@@ -4,257 +4,391 @@
     name = Manchester University Press
   >
   
-  plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-  param[base_url] = http://www.ingentaconnect.com/
-  param[api_url] = http://api.ingentaconnect.com/
-  param[graphics_url] = http://graphics.ingentaconnect.com/
-
-  comment[platform] = Ingenta
-
-  param[publisher_id] = manup
   implicit < status ; year ; name ; param[volume_name] >
 
   {
+     plugin = org.lockss.plugin.metapress.MetaPressPlugin
+     param[base_url] = http://manchester.metapress.com/
 
-    title <
-      name = Alexandria ;
-      issn = 0955-7490 ;
-      issnl = 0955-7490
-    >
+    {
     
-   param[journal_id] = alex 
-   param[journal_issn] = 0955-7490 
-   
-   au < exists ; 2009 ; Alexandria Volume 21 ; 21 >
-   au < exists ; 2011 ; Alexandria Volume 22 ; 22 >
+      title <
+        name = Alexandria ;
+        issn = 0955-7490 ;
+        eissn = 2050-4551 ;
+        issnl = 0955-7490
+      >
+      
+     param[journal_issn] = 2050-4551 
+     
+     au < exists ; 2009 ; Alexandria Volume 21 ; 21 >
+     au < exists ; 2011 ; Alexandria Volume 22 ; 22 >
+     au < exists ; 2012 ; Alexandria Volume 23 ; 23 >
+     au < expected ; 2013 ; Alexandria Volume 24 ; 24 >
+    
+    }
+    
+    
+    {
+    
+      title <
+        name = Critical Studies in Television: Scholarly Studies in Small Screen Fictions ;
+        issn = 1749-6020 ;
+        eissn = 1749-6039 ;
+        issnl = 1749-6020
+      >
+      
+     param[journal_issn] = 1749-6039
+     
+     au < exists ; 2006 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 1 ; 1 >
+     au < exists ; 2007 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 2 ; 2 >
+     au < exists ; 2008 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 3 ; 3 >
+     au < exists ; 2009 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 4 ; 4 >
+     au < exists ; 2010 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 5 ; 5 >
+     au < exists ; 2011 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 6 ; 6 >
+     au < exists ; 2012 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 7 ; 7 >
+     au < expected ; 2013 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 8 ; 8 >
+    
+    }
+    
+    
+    {
+    
+      title <
+        name = Gothic Studies ;
+        issn = 1362-7937 ;
+        eissn = 2050-456X ;
+        issnl = 1362-7937
+      >
+      
+     param[journal_issn] = 2050-456X
+     
+     au < exists ; 1999 ; Gothic Studies Volume 1 ; 1 >
+     au < exists ; 2000 ; Gothic Studies Volume 2 ; 2 >
+     au < exists ; 2001 ; Gothic Studies Volume 3 ; 3 >
+     au < exists ; 2002 ; Gothic Studies Volume 4 ; 4 >
+     au < exists ; 2003 ; Gothic Studies Volume 5 ; 5 >
+     au < exists ; 2004 ; Gothic Studies Volume 6 ; 6 >
+     au < exists ; 2005 ; Gothic Studies Volume 7 ; 7 >
+     au < exists ; 2006 ; Gothic Studies Volume 8 ; 8 >
+     au < exists ; 2007 ; Gothic Studies Volume 9 ; 9 >
+     au < exists ; 2008 ; Gothic Studies Volume 10 ; 10 >
+     au < exists ; 2009 ; Gothic Studies Volume 11 ; 11 >
+     au < exists ; 2010 ; Gothic Studies Volume 12 ; 12 >
+     au < exists ; 2011 ; Gothic Studies Volume 13 ; 13 >
+     au < exists ; 2012 ; Gothic Studies Volume 14 ; 14 >
+     au < expected ; 2013 ; Gothic Studies Volume 15 ; 15 >
+    
+    }
+    
+    
+    {
+    
+      title <
+        name = International Journal of Electrical Engineering Education ;
+        issn = 0020-7209 ;
+        eissn = 2050-4578 ;
+        issnl = 0020-7209
+      >
+      
+     param[journal_issn] = 2050-4578
+     
+     au < exists ; 1999 ; International Journal of Electrical Engineering Education Volume 36 ; 36 >
+     au < exists ; 2000 ; International Journal of Electrical Engineering Education Volume 37 ; 37 >
+     au < exists ; 2001 ; International Journal of Electrical Engineering Education Volume 38 ; 38 >
+     au < exists ; 2002 ; International Journal of Electrical Engineering Education Volume 39 ; 39 >
+     au < exists ; 2003 ; International Journal of Electrical Engineering Education Volume 40 ; 40 >
+     au < exists ; 2004 ; International Journal of Electrical Engineering Education Volume 41 ; 41 >
+     au < exists ; 2005 ; International Journal of Electrical Engineering Education Volume 42 ; 42 >
+     au < exists ; 2006 ; International Journal of Electrical Engineering Education Volume 43 ; 43 >
+     au < exists ; 2007 ; International Journal of Electrical Engineering Education Volume 44 ; 44 >
+     au < exists ; 2008 ; International Journal of Electrical Engineering Education Volume 45 ; 45 >
+     au < exists ; 2009 ; International Journal of Electrical Engineering Education Volume 46 ; 46 >
+     au < exists ; 2010 ; International Journal of Electrical Engineering Education Volume 47 ; 47 >
+     au < exists ; 2011 ; International Journal of Electrical Engineering Education Volume 48 ; 48 >
+     au <  exists ; 2012 ; International Journal of Electrical Engineering Education Volume 49 ; 49 >
+     au < expected ; 2013 ; International Journal of Electrical Engineering Education Volume 50 ; 50 >
+    
+    }
+    
+    
+    {
+    
+      title <
+        name = International Journal of Low-Carbon Technologies ;
+        issn = 1748-1317 ;
+        eissn = 1748-1325 ;
+        issnl = 1748-1317
+      >
+      
+     comment[0] = Journal not online yet.
+    
+    }
+    
+    
+    {
+    
+      title <
+        name = International Journal of Mechanical Engineering Education ;
+        issn = 0306-4190 ;
+        eissn = 2050-4586 ;
+        issnl = 0306-4190
+      >
+      
+     param[journal_issn] = 2050-4586
+     
+     au < exists ; 1999 ; International Journal of Electrical Engineering Education Volume 27 ; 27 >
+     au < exists ; 2000 ; International Journal of Electrical Engineering Education Volume 28 ; 28 >
+     au < exists ; 2001 ; International Journal of Electrical Engineering Education Volume 29 ; 29 >
+     au < exists ; 2002 ; International Journal of Electrical Engineering Education Volume 30 ; 30 >
+     au < exists ; 2003 ; International Journal of Electrical Engineering Education Volume 31 ; 31 >
+     au < exists ; 2004 ; International Journal of Electrical Engineering Education Volume 32 ; 32 >
+     au < exists ; 2005 ; International Journal of Electrical Engineering Education Volume 33 ; 33 >
+     au < exists ; 2006 ; International Journal of Electrical Engineering Education Volume 34 ; 34 >
+     au < exists ; 2007 ; International Journal of Electrical Engineering Education Volume 35 ; 35 >
+     au < exists ; 2008 ; International Journal of Electrical Engineering Education Volume 36 ; 36 >
+     au < exists ; 2009 ; International Journal of Electrical Engineering Education Volume 37 ; 37 >
+     au < exists ; 2010 ; International Journal of Electrical Engineering Education Volume 38 ; 38 >
+     au < exists ; 2011 ; International Journal of Electrical Engineering Education Volume 39 ; 39 >
+     au < exists ; 2012 ; International Journal of Electrical Engineering Education Volume 40 ; 40 >
+     au < expected ; 2013 ; International Journal of Electrical Engineering Education Volume 41 ; 41 >
+    
+    }
+    
+    
+    {
+    
+      title <
+        name = Irish Economic and Social History ;
+        issn = 0332-4893 ;
+        eissn = 2050-4918 ;
+        issnl = 0332-4893
+      >
+      
+     param[journal_issn] = 2050-4918
+     
+     au < exists ; 2007 ; Irish Economic and Social History Volume 34 ; 34 >
+     au < exists ; 2008 ; Irish Economic and Social History Volume 35 ; 35 >
+     au < exists ; 2009 ; Irish Economic and Social History Volume 36 ; 36 >
+     au < exists ; 2010 ; Irish Economic and Social History Volume 37 ; 37 >
+     au < exists ; 2011 ; Irish Economic and Social History Volume 38 ; 38 >
+     au < exists ; 2012 ; Irish Economic and Social History Volume 39 ; 39 >
+     au < expected ; 2013 ; Irish Economic and Social History Volume 40 ; 40 >
+    
+    }
+    
+    
+    {
+    
+      title <
+        name = Irish Journal of Sociology ;
+        issn = 0791-6035 ;
+        eissn = 2050-5280 ;
+        issnl = 0791-6035
+      >
+      
+     param[journal_issn] = 2050-5280
+     
+     au < exists ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 >
+     au < exists ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 >
+     au < exists ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 >
+     au < exists ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 >
+     au < expected ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 >
+     
+     }
+    
+    
+     {
+    
+      title <
+        name = Journal of Adult and Continuing Education ;
+        issn = 1477-9714 ;
+        eissn = 1479-7194 ; 
+        issnl = 1477-9714
+      >
+      
+     param[journal_issn] = 1479-7194
+     
+     au < exists ; 2002-2003 ; Journal of Adult and Continuing Education Volume 8 ; 8 >
+     au < exists ; 2003 ; Journal of Adult and Continuing Education Volume 9 ; 9 >
+     au < exists ; 2004 ; Journal of Adult and Continuing Education Volume 10 ; 10 >
+     au < exists ; 2005 ; Journal of Adult and Continuing Education Volume 11 ; 11 >
+     au < exists ; 2006 ; Journal of Adult and Continuing Education Volume 12 ; 12 >
+     au < exists ; 2007 ; Journal of Adult and Continuing Education Volume 13 ; 13 >
+     au < exists ; 2008 ; Journal of Adult and Continuing Education Volume 14 ; 14 >
+     au < exists ; 2010 ; Journal of Adult and Continuing Education Volume 16 ; 16 >
+     au < exists ; 2011 ; Journal of Adult and Continuing Education Volume 17 ; 17 >
+     au < exists ; 2012 ; Journal of Adult and Continuing Education Volume 18 ; 18 >
+     au < expected ; 2013 ; Journal of Adult and Continuing Education Volume 19 ; 19 >
+     
+    }
+    
+    {
+    
+      title <
+        name = The Journal of Transport History ;
+        issn = 0022-5266 ;
+        eissn = 1759-3999 ;
+        issnl = 0022-5266
+      >
+      
+     param[journal_issn] = 1759-3999
+     
+     au < exists ; 1999 ; The Journal of Transport History Volume 20 ; 20 >
+     au < exists ; 2000 ; The Journal of Transport History Volume 21 ; 21 >
+     au < exists ; 2001 ; The Journal of Transport History Volume 22 ; 22 >
+     au < exists ; 2002 ; The Journal of Transport History Volume 23 ; 23 >
+     au < exists ; 2003 ; The Journal of Transport History Volume 24 ; 24 >
+     au < exists ; 2004 ; The Journal of Transport History Volume 25 ; 25 >
+     au < exists ; 2005 ; The Journal of Transport History Volume 26 ; 26 >
+     au < exists ; 2006 ; The Journal of Transport History Volume 27 ; 27 >
+     au < exists ; 2007 ; The Journal of Transport History Volume 28 ; 28 >
+     au < exists ; 2008 ; The Journal of Transport History Volume 29 ; 29 >
+     au < exists ; 2009 ; The Journal of Transport History Volume 30 ; 30 >
+     au < exists ; 2010 ; The Journal of Transport History Volume 31 ; 31 >
+     au < exists ; 2011 ; The Journal of Transport History Volume 32 ; 32 >
+     au < exists ; 2012 ; The Journal of Transport History Volume 33 ; 33 >    
+     au < expected ; 2013 ; The Journal of Transport History Volume 34 ; 34 > 
 
-  }
+    }
+    
+    {
+    
+      title <
+        name = Literature & History ;
+        issn = 0306-1973 ;
+        eissn = 2050-4594 ;
+        issnl = 0306-1973
+      >
+      
+     param[journal_issn] = 2050-4594
+     
+     au < exists ; 2002 ; Literature & History Volume 11 ; 11 >
+     au < exists ; 2003 ; Literature & History Volume 12 ; 12 >
+     au < exists ; 2004 ; Literature & History Volume 13 ; 13 >
+     au < exists ; 2005 ; Literature & History Volume 14 ; 14 >
+     au < exists ; 2006 ; Literature & History Volume 15 ; 15 >
+     au < exists ; 2007 ; Literature & History Volume 16 ; 16 >
+     au < exists ; 2008 ; Literature & History Volume 17 ; 17 >
+     au < exists ; 2009 ; Literature & History Volume 18 ; 18 >
+     au < exists ; 2010 ; Literature & History Volume 19 ; 19 >
+     au < exists ; 2011 ; Literature & History Volume 20 ; 20 >
+    
+    }
+    
   
-  {
+    {
+    
+      title <
+        name = Nineteenth Century Theatre and Film ;
+        issn = 1748-3727 ;
+        eissn = 2048-2906 ;
+        issnl = 1748-3727
+      >
+      
+     param[journal_issn] = 2048-2906
+     
+     au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 >
+     au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 >
+     au < exists ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 >
+     au < exists ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 >
+     au < exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 >
+     au < exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 >
+     au < exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 >
+     au < expected ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 >
+    
+    }
+    
+    
+    {
+    
+      title <
+        name = Research in Education ;
+        issn = 0034-5237 ;
+        eissn = 2050-4608 ;
+        issnl = 0034-5237
+      >
+      
+     param[journal_issn] = 2050-4608
+     
+     au < exists ; 2004 ; Nineteenth Century Theatre and Film Volume 71 ; 71 >
+     au < exists ; 2004 ; Nineteenth Century Theatre and Film Volume 72 ; 72 >
+     au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 73 ; 73 >
+     au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 74 ; 74 >
+     au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 75 ; 75 >
+     au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 76 ; 76 >
+     au < exists ; 2007 ; Nineteenth Century Theatre and Film Volume 77 ; 77 >
+     au < exists ; 2007 ; Nineteenth Century Theatre and Film Volume 78 ; 78 >
+     au < exists ; 2008 ; Nineteenth Century Theatre and Film Volume 79 ; 79 >
+     au < exists ; 2008 ; Nineteenth Century Theatre and Film Volume 80 ; 80 >
+     au < exists ; 2009 ; Nineteenth Century Theatre and Film Volume 81 ; 81 >
+     au < exists ; 2009 ; Nineteenth Century Theatre and Film Volume 82 ; 82 >
+     au < exists ; 2010 ; Nineteenth Century Theatre and Film Volume 83 ; 83 >
+     au < exists ; 2010 ; Nineteenth Century Theatre and Film Volume 84 ; 84 >
+     au < exists ; 2011 ; Nineteenth Century Theatre and Film Volume 85 ; 85 >
+     au < exists ; 2011 ; Nineteenth Century Theatre and Film Volume 86 ; 86 >
+    
+    }
+
+    
+    {
 
     title <
-      name = Critical Studies in Television: Scholarly Studies in Small Screen Fictions ;
-      issn = 1749-6020 ;
-      eissn = 1749-6039 ;
-      issnl = 1749-6020
+      name = Research in Education ;
+      issn = 0034-5237 ;
+      eissn = 2050-4608 ;
+      issnl = 0034-5237
     >
     
-   param[journal_id] = cstv 
-   param[journal_issn] = 1749-6020
-   
-   au < exists ; 2006 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 1 ; 1 >
-   au < exists ; 2007 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 2 ; 2 >
-   au < exists ; 2008 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 3 ; 3 >
-   au < exists ; 2009 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 4 ; 4 >
-   au < exists ; 2010 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 5 ; 5 >
-   au < exists ; 2011 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 6 ; 6 >
-
-  }
-
-
-  {
-
-    title <
-      name = Gothic Studies ;
-      issn = 1362-7937 ;
-      eissn = 2050-456X ;
-      issnl = 1362-7937
-    >
+     param[journal_issn] = 2050-4608
+     
+     au < exists ; 1999 ; Research in Education Volume 61 ; 61 >
+     au < exists ; 1999 ; Research in Education Volume 62 ; 62 >
+     au < exists ; 2000 ; Research in Education Volume 63 ; 63 >
+     au < exists ; 2000 ; Research in Education Volume 64 ; 64 >
+     au < exists ; 2001 ; Research in Education Volume 65 ; 65 >
+     au < exists ; 2001 ; Research in Education Volume 66 ; 66 >
+     au < exists ; 2002 ; Research in Education Volume 67 ; 67 >
+     au < exists ; 2002 ; Research in Education Volume 68 ; 68 >
+     au < exists ; 2003 ; Research in Education Volume 69 ; 69 >
+     au < exists ; 2003 ; Research in Education Volume 70 ; 70 >
+     au < exists ; 2004 ; Research in Education Volume 71 ; 71 >   
+     au < exists ; 2004 ; Research in Education Volume 72 ; 72 >   
+     au < exists ; 2005 ; Research in Education Volume 73 ; 73 >   
+     au < exists ; 2005 ; Research in Education Volume 74 ; 74 >   
+     au < exists ; 2005 ; Research in Education Volume 74 ; 74 >
+     au < exists ; 2006 ; Research in Education Volume 75 ; 75 >
+     au < exists ; 2006 ; Research in Education Volume 76 ; 76 >
+     au < exists ; 2007 ; Research in Education Volume 77 ; 77 >
+     au < exists ; 2007 ; Research in Education Volume 78 ; 78 >
+     au < exists ; 2008 ; Research in Education Volume 79 ; 79 >
+     au < exists ; 2008 ; Research in Education Volume 80 ; 80 >
+     au < exists ; 2009 ; Research in Education Volume 81 ; 81 >
+     au < exists ; 2009 ; Research in Education Volume 82 ; 82 >
+     au < exists ; 2010 ; Research in Education Volume 83 ; 83 >
+     au < exists ; 2010 ; Research in Education Volume 84 ; 84 >
+     au < exists ; 2011 ; Research in Education Volume 85 ; 85 >
+     au < exists ; 2011 ; Research in Education Volume 86 ; 86 >
+     au < exists ; 2012 ; Research in Education Volume 87 ; 87 >
+     au < expected ; 2012 ; Research in Education Volume 88 ; 88 >
     
-   param[journal_id] = gothst 
-   param[journal_issn] = 1362-7937
-   
-   au < exists ; 1999 ; Gothic Studies Volume 1 ; 1 >
-   au < exists ; 2000 ; Gothic Studies Volume 2 ; 2 >
-   au < exists ; 2001 ; Gothic Studies Volume 3 ; 3 >
-   au < exists ; 2002 ; Gothic Studies Volume 4 ; 4 >
-   au < exists ; 2003 ; Gothic Studies Volume 5 ; 5 >
-   au < exists ; 2004 ; Gothic Studies Volume 6 ; 6 >
-   au < exists ; 2005 ; Gothic Studies Volume 7 ; 7 >
-   au < exists ; 2006 ; Gothic Studies Volume 8 ; 8 >
-   au < exists ; 2007 ; Gothic Studies Volume 9 ; 9 >
-   au < exists ; 2008 ; Gothic Studies Volume 10 ; 10 >
-   au < exists ; 2009 ; Gothic Studies Volume 11 ; 11 >
-   au < exists ; 2010 ; Gothic Studies Volume 12 ; 12 >
-   au < exists ; 2011 ; Gothic Studies Volume 13 ; 13 >
-
-  }
-
-
-  {
-
-    title <
-      name = International Journal of Electrical Engineering Education ;
-      issn = 0020-7209 ;
-      eissn = 2050-4578;
-      issnl = 0020-7209
-    >
-    
-   param[journal_id] = ijeee 
-   param[journal_issn] = 1362-7937
-   
-   au < exists ; 2005 ; International Journal of Electrical Engineering Education Volume 42 ; 42 >
-   au < exists ; 2006 ; International Journal of Electrical Engineering Education Volume 43 ; 43 >
-   au < exists ; 2007 ; International Journal of Electrical Engineering Education Volume 44 ; 44 >
-   au < exists ; 2008 ; International Journal of Electrical Engineering Education Volume 45 ; 45 >
-   au < exists ; 2009 ; International Journal of Electrical Engineering Education Volume 46 ; 46 >
-   au < exists ; 2010 ; International Journal of Electrical Engineering Education Volume 47 ; 47 >
-   au < exists ; 2011 ; International Journal of Electrical Engineering Education Volume 48 ; 48 >
-
-  }
-
-
-  {
-
-    title <
-      name = International Journal of Low Carbon Technologies ;
-      issn = 1748-1317 ;
-      eissn = 1748-1325 ;
-      issnl = 1748-1317
-    >
-    
-   comment[0] = Journal not online yet.
-
-  }
-
-
-  {
-
-    title <
-      name = International Journal of Mechanical Engineering Education ;
-      issn = 0306-4190 ;
-      eissn = 2050-4586 ;
-      issnl = 0306-4190
-    >
-    
-   param[journal_id] = ijmee 
-   param[journal_issn] = 0306-4190
-   
-   au < exists ; 2004-2005 ; International Journal of Electrical Engineering Education Volume 32 ; 32 >
-   au < exists ; 2005 ; International Journal of Electrical Engineering Education Volume 33 ; 33 >
-   au < exists ; 2006 ; International Journal of Electrical Engineering Education Volume 34 ; 34 >
-   au < exists ; 2007 ; International Journal of Electrical Engineering Education Volume 35 ; 35 >
-   au < exists ; 2008 ; International Journal of Electrical Engineering Education Volume 36 ; 36 >
-   au < exists ; 2009 ; International Journal of Electrical Engineering Education Volume 37 ; 37 >
-   au < exists ; 2010 ; International Journal of Electrical Engineering Education Volume 38 ; 38 >
-   au < exists ; 2011 ; International Journal of Electrical Engineering Education Volume 39 ; 39 >
-
-  }
-
-
-  {
-
-    title <
-      name = Irish Economic and Social History ;
-      issn = 0332-4893 ;
-      eissn = 2050-4918 ;
-      issnl = 0332-4893
-    >
-    
-   param[journal_id] = iesh 
-   param[journal_issn] = 0332-4893
-   
-   au < exists ; 2007 ; Irish Economic and Social History Volume 34 ; 34 >
-   au < exists ; 2008 ; Irish Economic and Social History Volume 35 ; 35 >
-   au < exists ; 2009 ; Irish Economic and Social History Volume 36 ; 36 >
-   au < exists ; 2010 ; Irish Economic and Social History Volume 37 ; 37 >
-   au < exists ; 2011 ; Irish Economic and Social History Volume 38 ; 38 >
-   
-
-  }
-
-  {
-
-    title <
-      name = Irish Journal of Sociology ;
-      issn = 0791-6035 ;
-      eissn = 2050-5280 ;
-      issnl = 0791-6035
-    >
-    
-   param[journal_id] = ijs 
-   param[journal_issn] = 0791-6035
-   
-   au < exists ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 >
-   au < exists ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 >
-   au < exists ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 >
-   
-   }
-
-   {
-  
-    title <
-      name = Journal of Adult and Continuing Education ;
-      issn = 1477-9714 ;
-      eissn = 1479-7194 ; 
-      issnl = 1477-9714
-    >
-    
-   param[journal_id] = jace 
-   param[journal_issn] = 1477-9714
-   
-   au < exists ; 2002-2003 ; Journal of Adult and Continuing Education Volume 8 ; 8 >
-   au < exists ; 2003 ; Journal of Adult and Continuing Education Volume 9 ; 9 >
-   au < exists ; 2004 ; Journal of Adult and Continuing Education Volume 10 ; 10 >
-   au < exists ; 2005 ; Journal of Adult and Continuing Education Volume 11 ; 11 >
-   au < exists ; 2006 ; Journal of Adult and Continuing Education Volume 12 ; 12 >
-   au < exists ; 2007 ; Journal of Adult and Continuing Education Volume 13 ; 13 >
-   au < exists ; 2008 ; Journal of Adult and Continuing Education Volume 14 ; 14 >
-   au < exists ; 2010 ; Journal of Adult and Continuing Education Volume 16 ; 16 >
-   au < exists ; 2011 ; Journal of Adult and Continuing Education Volume 17 ; 17 >
+    }
    
   }
 
 
-  {
-
-    title <
-      name = The Journal of Transport History ;
-      issn = 0022-5266 ;
-      eissn = 1759-3999 ;
-      issnl = 0022-5266
-    >
-    
-   param[journal_id] = jtth 
-   param[journal_issn] = 0022-5266
-   
-   au < exists ; 2005 ; The Journal of Transport History Volume 26 ; 26 >
-   au < exists ; 2006 ; The Journal of Transport History Volume 27 ; 27 >
-   au < exists ; 2007 ; The Journal of Transport History Volume 28 ; 28 >
-   au < exists ; 2008 ; The Journal of Transport History Volume 29 ; 29 >
-   au < exists ; 2009 ; The Journal of Transport History Volume 30 ; 30 >
-   au < exists ; 2010 ; The Journal of Transport History Volume 31 ; 31 >
-   au < exists ; 2011 ; The Journal of Transport History Volume 32 ; 32 >
-
-  }
-
 
   {
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
 
-    title <
-      name = Literature & History ;
-      issn = 0306-1973 ;
-      issnl = 0306-1973
-    >
-    
-   param[journal_id] = lah 
-   param[journal_issn] = 0306-1973
-   
-   au < exists ; 2002 ; Literature & History Volume 11 ; 11 >
-   au < exists ; 2003 ; Literature & History Volume 12 ; 12 >
-   au < exists ; 2004 ; Literature & History Volume 13 ; 13 >
-   au < exists ; 2005 ; Literature & History Volume 14 ; 14 >
-   au < exists ; 2006 ; Literature & History Volume 15 ; 15 >
-   au < exists ; 2007 ; Literature & History Volume 16 ; 16 >
-   au < exists ; 2008 ; Literature & History Volume 17 ; 17 >
-   au < exists ; 2009 ; Literature & History Volume 18 ; 18 >
-   au < exists ; 2010 ; Literature & History Volume 19 ; 19 >
-   au < exists ; 2011 ; Literature & History Volume 20 ; 20 >
+    comment[platform] = Ingenta
 
-  }
+    param[publisher_id] = manup
 
-
-  {
+    {
 
     title <
       name = Mediterranean Studies ;
@@ -263,74 +397,22 @@
       issnl = 1074-164X
     >
     
-   param[journal_id] = medst 
-   param[journal_issn] = 1074-164X
-   
-   au < released ; 2005 ; Mediterranean Studies Volume 14 ; 14 >
-   au < released ; 2006 ; Mediterranean Studies Volume 15 ; 15 >
-   au < released ; 2007 ; Mediterranean Studies Volume 16 ; 16 >
-   au < released ; 2008 ; Mediterranean Studies Volume 17 ; 17 >
-   au < released ; 2009 ; Mediterranean Studies Volume 18 ; 18 >
-   au < released ; 2010 ; Mediterranean Studies Volume 19 ; 19 >
-
-  }
-
-
-  {
-
-    title <
-      name = Nineteenth Century Theatre and Film ;
-      issn = 1748-3727 ;
-      eissn = 2048-2906 ;
-      issnl = 1748-3727
-    >
+     param[journal_id] = medst 
+     param[journal_issn] = 1074-164X
+    comment[0] = Moving off of Ingenta 2012, move to Pennsylvania State University Press
+     
+     au < down ; 2005 ; Mediterranean Studies Volume 14 ; 14 >
+     au < down ; 2006 ; Mediterranean Studies Volume 15 ; 15 >
+     au < down ; 2007 ; Mediterranean Studies Volume 16 ; 16 >
+     au < down ; 2008 ; Mediterranean Studies Volume 17 ; 17 >
+     au < down ; 2009 ; Mediterranean Studies Volume 18 ; 18 >
+     au < down ; 2010 ; Mediterranean Studies Volume 19 ; 19 >
     
-   param[journal_id] = nttf 
-   param[journal_issn] = 1748-3727
-   
-   au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 >
-   au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 >
-   au < exists ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 >
-   au < exists ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 >
-   au < exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 >
-   au < exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 >
-
-  }
-
-
-  {
-
-    title <
-      name = Research in Education ;
-      issn = 0034-5237 ;
-      issnl = 0034-5237
-    >
+    }
+ 
     
-   param[journal_id] = rie 
-   param[journal_issn] = 0034-5237
-   
-   au < exists ; 2004 ; Nineteenth Century Theatre and Film Volume 71 ; 71 >
-   au < exists ; 2004 ; Nineteenth Century Theatre and Film Volume 72 ; 72 >
-   au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 73 ; 73 >
-   au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 74 ; 74 >
-   au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 75 ; 75 >
-   au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 76 ; 76 >
-   au < exists ; 2007 ; Nineteenth Century Theatre and Film Volume 77 ; 77 >
-   au < exists ; 2007 ; Nineteenth Century Theatre and Film Volume 78 ; 78 >
-   au < exists ; 2008 ; Nineteenth Century Theatre and Film Volume 79 ; 79 >
-   au < exists ; 2008 ; Nineteenth Century Theatre and Film Volume 80 ; 80 >
-   au < exists ; 2009 ; Nineteenth Century Theatre and Film Volume 81 ; 81 >
-   au < exists ; 2009 ; Nineteenth Century Theatre and Film Volume 82 ; 82 >
-   au < exists ; 2010 ; Nineteenth Century Theatre and Film Volume 83 ; 83 >
-   au < exists ; 2010 ; Nineteenth Century Theatre and Film Volume 84 ; 84 >
-   au < exists ; 2011 ; Nineteenth Century Theatre and Film Volume 85 ; 85 >
-   au < exists ; 2011 ; Nineteenth Century Theatre and Film Volume 86 ; 86 >
-
-  }
-
-
-  {
-
+    {
+    
     title <
       name = The Seventeenth Century ;
       issn = 0268-117X ;
@@ -338,24 +420,24 @@
       issnl = 0268-117X
     >
     
-   param[journal_id] = tsc 
-   param[journal_issn] = 0268-117X
-   
-   comment[URGENT] = Moving off of Ingenta Dec 2012
-   
-   au < released ; 2005 ; The Seventeenth Century Volume 20 ; 20 >
-   au < released ; 2006 ; The Seventeenth Century Volume 21 ; 21 >
-   au < released ; 2007 ; The Seventeenth Century Volume 22 ; 22 >
-   au < released ; 2008 ; The Seventeenth Century Volume 23 ; 23 >
-   au < released ; 2009 ; The Seventeenth Century Volume 24 ; 24 >
-   au < released ; 2010 ; The Seventeenth Century Volume 25 ; 25 >
-   au < released ; 2011 ; The Seventeenth Century Volume 26 ; 26 >
-   au < released ; 2012 ; The Seventeenth Century Volume 27 ; 27 >
+     param[journal_id] = tsc 
+     param[journal_issn] = 0268-117X
+     
+     comment[0] = Moving off of Ingenta Dec 2012 and picked up by T&F
+     
+     au < down ; 2005 ; The Seventeenth Century Volume 20 ; 20 >
+     au < down ; 2006 ; The Seventeenth Century Volume 21 ; 21 >
+     au < down ; 2007 ; The Seventeenth Century Volume 22 ; 22 >
+     au < down ; 2008 ; The Seventeenth Century Volume 23 ; 23 >
+     au < down ; 2009 ; The Seventeenth Century Volume 24 ; 24 >
+     au < down ; 2010 ; The Seventeenth Century Volume 25 ; 25 >
+     au < down ; 2011 ; The Seventeenth Century Volume 26 ; 26 >
+     au < down ; 2012 ; The Seventeenth Century Volume 27 ; 27 >
+    
+    }
 
-  }
 
-
-  {
+    {
 
     title <
       name = Visual Culture in Britain ;
@@ -364,17 +446,17 @@
       issnl = 1471-4787
     >
     
-   param[journal_id] = vcb 
-   param[journal_issn] = 1471-4787
+     param[journal_id] = vcb 
+     param[journal_issn] = 1471-4787
+     
+     comment[0] = Discontinuing publication Dec 2012 and picked up by T&F
    
-   comment[URGENT] = Discontinuing publication Dec 2012
-
-   au < down ; 2004 ; Visual Culture in Britain Volume 5 ; 5 >
-   au < down ; 2005 ; Visual Culture in Britain Volume 6 ; 6 >
-   au < down ; 2006 ; Visual Culture in Britain Volume 7 ; 7 >
-   au < down ; 2007 ; Visual Culture in Britain Volume 8 ; 8 >
-   au < down ; 2008 ; Visual Culture in Britain Volume 9 ; 9 >
-
+     au < down ; 2004 ; Visual Culture in Britain Volume 5 ; 5 >
+     au < down ; 2005 ; Visual Culture in Britain Volume 6 ; 6 >
+     au < down ; 2006 ; Visual Culture in Britain Volume 7 ; 7 >
+     au < down ; 2007 ; Visual Culture in Britain Volume 8 ; 8 >
+     au < down ; 2008 ; Visual Culture in Britain Volume 9 ; 9 >
+   
+    }
   }
-
 }
