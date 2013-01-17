@@ -161,15 +161,17 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     assertIdentityXform(exp, in);
   }
 
-  public void testregisterTag() throws Exception {
-    InputStream in = new StringInputStream("text<a>inner</a>end");
-    HtmlFilterInputStream filt =
-      new HtmlFilterInputStream(in, new IdentityXform());
-    List lst = new ArrayList();
-    MyLinkTag tag = new MyLinkTag(lst);
-    filt.registerTag(tag);
-    assertInputStreamMatchesString("text<a>inner</a>end", filt);
-    assertEquals(ListUtil.list("s4", "e7"), tag.lst);
+  // Ensure that the script parser has been put into non-strict mode
+  public void testScript() throws IOException {
+    String in = "<HTML><BODY>" +
+      "<script>document.write (\"<a>This is strictly illegal</A>\")" +
+      " more('stu<a style=\"' + 'foo\">ff');" +
+      " more('<h2');" +
+      " more('stuff</h2>');" +
+      " more('stuff</a>');" +
+      "</script>" +
+      "</body></html>";
+    assertIdentityXform(in, in);
   }
 
   public void testCharset() throws Exception {
