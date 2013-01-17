@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExportFilter.java,v 1.16 2012-10-22 17:24:06 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.16.8.1 2013-01-17 00:01:35 pgust Exp $
  */
 
 /*
@@ -928,13 +928,15 @@ public class KbartExportFilter {
     ),
 
     // TITLE_ID only - should have an id for every record
-    TITLE_ID_ONLY("Title ID only", "Produce a list of unique identifiers",
-        TITLE_ID
-    ),
+//    TITLE_ID_ONLY("Title ID only", "Produce a list of unique identifiers",
+//        TITLE_ID
+//    ),
 
     // SFX fields only
     SFX("SFX Fields", "Produce a list of fields for SFX DataLoader",
-        TITLE_ID,
+//        TITLE_ID,
+        PRINT_IDENTIFIER,  // PJG
+        ONLINE_IDENTIFIER,
         "ACTIVE",
         COVERAGE_NOTES
     ),
