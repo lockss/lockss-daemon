@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.28 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestV3LcapMessage.java,v 1.28.10.1 2013-01-17 00:12:25 tlipkis Exp $
  */
 
 /*
@@ -147,7 +147,7 @@ public class TestV3LcapMessage extends LockssTestCase {
       "Key:key " +
       "PN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
       "VN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
-      "B:10 ver 3 rev 4]";
+      "B:10 ver 3 rev 5]";
     assertEquals(expectedResult, m_testMsg.toString());
   }
   
