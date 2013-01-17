@@ -1106,7 +1106,7 @@
     au < released ; crawling ; 2010 ; Analysis Volume 70 ; 70 ; >
     au < released ; crawling ; 2011 ; Analysis Volume 71 ; 71 ; >
     au < released ; crawling ; 2012 ; Analysis Volume 72 ; 72 ; >
-    au < expected ; exists ; 2013 ; Analysis Volume 73 ; 73 ; >
+    au < manifest ; exists ; 2013 ; Analysis Volume 73 ; 73 ; >
 
     }
 
@@ -1384,7 +1384,7 @@
     au < released ; crawling ; 2010 ; The Annals of Occupational Hygiene Volume 54 ; 54 ; >
     au < released ; crawling ; 2011 ; The Annals of Occupational Hygiene Volume 55 ; 55 ; >
     au < released ; crawling ; 2012 ; The Annals of Occupational Hygiene Volume 56 ; 56 ; >
-    au < expected ; exists ; 2013 ; The Annals of Occupational Hygiene Volume 57 ; 57 ; >
+    au < manifest ; exists ; 2013 ; The Annals of Occupational Hygiene Volume 57 ; 57 ; >
 
     }
 
@@ -1674,7 +1674,7 @@
     au < released ; crawling ; 2010 ; Archives of Clinical Neuropsychology Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; Archives of Clinical Neuropsychology Volume 26 ; 26 ; >
     au < testing ; exists ; 2012 ; Archives of Clinical Neuropsychology Volume 27 ; 27 ; >
-    au < expected ; exists ; 2013 ; Archives of Clinical Neuropsychology Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2013 ; Archives of Clinical Neuropsychology Volume 28 ; 28 ; >
 
     }
 
@@ -1708,7 +1708,7 @@
     au < crawling ; exists ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 ; >
     au < crawling ; exists ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 ; >
     au < crawling ; exists ; 2012 ; Astronomy & Geophysics Volume 53 ; 53 ; >
-    au < expected ; exists ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 ; >
 
   }
   
@@ -4150,7 +4150,7 @@
     au < released ; crawling ; 2010 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 10 ; 10 ; >
     au < released ; crawling ; 2011 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 11 ; 11 ; >
     au < crawling ; exists ; 2012 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 12 ; 12 ; >
-    au < expected ; exists ; 2013 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2013 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 13 ; 13 ; >
 
     }
 
@@ -4321,7 +4321,7 @@
     au < crawling ; exists ; 2010 ; Diplomatic History Volume 34 ; 34 ; >
     au < crawling ; exists ; 2011 ; Diplomatic History Volume 35 ; 35 ; >
     au < crawling ; exists ; 2012 ; Diplomatic History Volume 36 ; 36 ; >
-    au < expected ; exists ; 2013 ; Diplomatic History Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2013 ; Diplomatic History Volume 37 ; 37 ; >
 
   }
 
@@ -5979,7 +5979,7 @@
     au < released ; crawling ; 2010 ; Forestry: An International Journal of Forest Research Volume 83 ; 83 ; >
     au < released ; crawling ; 2011 ; Forestry: An International Journal of Forest Research Volume 84 ; 84 ; >
     au < released ; crawling ; 2012 ; Forestry: An International Journal of Forest Research Volume 85 ; 85 ; >
-    au < expected ; exists ; 2013 ; Forestry: An International Journal of Forest Research Volume 86 ; 86 ; >
+    au < manifest ; exists ; 2013 ; Forestry: An International Journal of Forest Research Volume 86 ; 86 ; >
 
     }
 
@@ -7941,7 +7941,7 @@
     param[base_url] = http://inthealth.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; exists ; 2013 ; International Health Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; International Health Volume 1 ; 1 ; >
 
   }
 
@@ -9160,7 +9160,7 @@
     au < released ; crawling ; 2010 ; Journal of Analytical Toxicology Volume 34 ; 34 ; >
     au < released ; crawling ; 2011 ; Journal of Analytical Toxicology Volume 35 ; 35 ; >
     au < released ; crawling ; 2012 ; Journal of Analytical Toxicology Volume 36 ; 36 ; >
-    au < expected ; exists ; 2013 ; Journal of Analytical Toxicology Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2013 ; Journal of Analytical Toxicology Volume 37 ; 37 ; >
 
   }
 
@@ -11496,7 +11496,7 @@
     au < released ; crawling ; 2010 ; Journal of Molluscan Studies Volume 76 ; 76 ; >
     au < released ; crawling ; 2011 ; Journal of Molluscan Studies Volume 77 ; 77 ; >
     au < crawling ; exists ; 2012 ; Journal of Molluscan Studies Volume 78 ; 78 ; >
-    au < expected ; exists ; 2013 ; Journal of Molluscan Studies Volume 79 ; 79 ; >
+    au < manifest ; exists ; 2013 ; Journal of Molluscan Studies Volume 79 ; 79 ; >
 
     }
 
@@ -13152,7 +13152,7 @@
     au < released ; crawling ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 ; >
     au < zapped ; down ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 ; >
     au < crawling ; exists ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 ; >
-    au < expected ; exists ; 2013 ; Logic Journal of the IGPL Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2013 ; Logic Journal of the IGPL Volume 21 ; 21 ; >
 
     }
 
@@ -15675,7 +15675,7 @@
     au < released ; crawling ; 2010 ; Political Analysis Volume 18 ; 18 ; >
     au < released ; crawling ; 2011 ; Political Analysis Volume 19 ; 19 ; >
     au < crawling ; exists ; 2012 ; Political Analysis Volume 20 ; 20 ; >
-    au < expected ; exists ; 2013 ; Political Analysis Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2013 ; Political Analysis Volume 21 ; 21 ; >
 
     }
 
@@ -17607,7 +17607,7 @@
     au < released ; crawling ; 2010 ; Social Cognitive and Affective Neuroscience Volume 5 ; 5 ; >
     au < released ; crawling ; 2011 ; Social Cognitive and Affective Neuroscience Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; Social Cognitive and Affective Neuroscience Volume 7 ; 7 ; >
-    au < expected ; exists ; 2013 ; Social Cognitive and Affective Neuroscience Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2013 ; Social Cognitive and Affective Neuroscience Volume 8 ; 8 ; >
 
     }
 
@@ -18599,7 +18599,7 @@
     au < zapped ; down ; 2010 ; Trusts & Trustees Volume 16 ; 16 ; >
     au < released ; crawling ; 2011 ; Trusts & Trustees Volume 17 ; 17 ; >
     au < testing ; exists ; 2012 ; Trusts & Trustees Volume 18 ; 18 ; >
-    au < expected ; exists ; 2013 ; Trusts & Trustees Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2013 ; Trusts & Trustees Volume 19 ; 19 ; >
 
     }
 
