@@ -263,6 +263,9 @@
       
      param[journal_issn] = 2050-4594
      
+     au < exists ; 1999 ; Literature & History Volume 8 ; 8 >
+     au < exists ; 2000 ; Literature & History Volume 9 ; 9 >
+     au < exists ; 2001 ; Literature & History Volume 10 ; 10 >
      au < exists ; 2002 ; Literature & History Volume 11 ; 11 >
      au < exists ; 2003 ; Literature & History Volume 12 ; 12 >
      au < exists ; 2004 ; Literature & History Volume 13 ; 13 >
@@ -273,6 +276,8 @@
      au < exists ; 2009 ; Literature & History Volume 18 ; 18 >
      au < exists ; 2010 ; Literature & History Volume 19 ; 19 >
      au < exists ; 2011 ; Literature & History Volume 20 ; 20 >
+     au < exists ; 2012 ; Literature & History Volume 21 ; 21 >
+     au < expected ; 2013 ; Literature & History Volume 22 ; 22 >
     
     }
     
@@ -288,6 +293,9 @@
       
      param[journal_issn] = 2048-2906
      
+     au < exists ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 >
+     au < exists ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 >
+     au < exists ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 >
      au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 >
      au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 >
      au < exists ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 >
@@ -299,37 +307,6 @@
     
     }
     
-    
-    {
-    
-      title <
-        name = Research in Education ;
-        issn = 0034-5237 ;
-        eissn = 2050-4608 ;
-        issnl = 0034-5237
-      >
-      
-     param[journal_issn] = 2050-4608
-     
-     au < exists ; 2004 ; Nineteenth Century Theatre and Film Volume 71 ; 71 >
-     au < exists ; 2004 ; Nineteenth Century Theatre and Film Volume 72 ; 72 >
-     au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 73 ; 73 >
-     au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 74 ; 74 >
-     au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 75 ; 75 >
-     au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 76 ; 76 >
-     au < exists ; 2007 ; Nineteenth Century Theatre and Film Volume 77 ; 77 >
-     au < exists ; 2007 ; Nineteenth Century Theatre and Film Volume 78 ; 78 >
-     au < exists ; 2008 ; Nineteenth Century Theatre and Film Volume 79 ; 79 >
-     au < exists ; 2008 ; Nineteenth Century Theatre and Film Volume 80 ; 80 >
-     au < exists ; 2009 ; Nineteenth Century Theatre and Film Volume 81 ; 81 >
-     au < exists ; 2009 ; Nineteenth Century Theatre and Film Volume 82 ; 82 >
-     au < exists ; 2010 ; Nineteenth Century Theatre and Film Volume 83 ; 83 >
-     au < exists ; 2010 ; Nineteenth Century Theatre and Film Volume 84 ; 84 >
-     au < exists ; 2011 ; Nineteenth Century Theatre and Film Volume 85 ; 85 >
-     au < exists ; 2011 ; Nineteenth Century Theatre and Film Volume 86 ; 86 >
-    
-    }
-
     
     {
 
