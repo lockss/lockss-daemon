@@ -111,10 +111,12 @@
   {
     title <
       name = Libraries & the Cultural Record ;
-      issn = 1932-4855 ;
-      eissn = 1932-9555 ;
-      issnl = 1932-4855
+      issn = 0894-8631 ;
+      eissn = 1534-7591 ;
+      issnl = 0894-8631
     >
+
+    comment[continued_by] = Continued by Information & Culture, after volume 41, no. 2, Spring 2006 (E-ISSN: 1534-7591, Print ISSN: 0894-8631)
 
     param[journal_dir] = libraries_and_culture
     attr[journal_id] = lac
@@ -125,12 +127,26 @@
     au < released ; 2004 ; Libraries & the Cultural Record Volume 39 ; 39 >
     au < released ; 2005 ; Libraries & the Cultural Record Volume 40 ; 40 >
     au < released ; 2006 ; Libraries & the Cultural Record Volume 41 ; 41 >
-    au < released ; 2007 ; Libraries & the Cultural Record Volume 42 ; 42 >
-    au < released ; 2008 ; Libraries & the Cultural Record Volume 43 ; 43 >
-    au < released ; 2009 ; Libraries & the Cultural Record Volume 44 ; 44 >
-    au < released ; 2010 ; Libraries & the Cultural Record Volume 45 ; 45 >
-    au < released ; 2011 ; Libraries & the Cultural Record Volume 46 ; 46 >
-    au < released ; 2012 ; Libraries & the Cultural Record Volume 47 ; 47 >
+
+  }
+
+  {
+    title <
+      name = Information & Culture: A Journal of History ;
+      issn = 2164-8034 
+    >
+
+    comment[continued_from] = Formerly Libraries & Culture, through volume 41, no. 2, Spring 2006 (E-ISSN: 1534-7591, Print ISSN: 0894-8631)
+
+    param[journal_dir] = libraries_and_culture
+    attr[journal_id] = lac
+
+    au < released ; 2007 ; Information & Culture: A Journal of History Volume 42 ; 42 >
+    au < released ; 2008 ; Information & Culture: A Journal of History Volume 43 ; 43 >
+    au < released ; 2009 ; Information & Culture: A Journal of History Volume 44 ; 44 >
+    au < released ; 2010 ; Information & Culture: A Journal of History Volume 45 ; 45 >
+    au < released ; 2011 ; Information & Culture: A Journal of History Volume 46 ; 46 >
+    au < released ; 2012 ; Information & Culture: A Journal of History Volume 47 ; 47 >
 
   }
 
