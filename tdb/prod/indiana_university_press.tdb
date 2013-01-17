@@ -1286,7 +1286,7 @@
   {
 
     title <
-      name = Spectrum: The Journal on Black Men ;
+      name = Spectrum: A Journal on Black Men ;
       issn = 2162-3244 ;
       eissn = 2162-3252 ;
       issnl = 2162-3244
@@ -1300,7 +1300,7 @@
       attr[journal_id] = spe
       implicit < status ; year ; name ; param[volume] >
     
-      au < released ; 2012 ; Spectrum: The Journal on Black Men Volume 1 ; 1 >
+      au < released ; 2012 ; Spectrum: A Journal on Black Men Volume 1 ; 1 >
 
     }
     
