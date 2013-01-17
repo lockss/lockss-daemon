@@ -1135,7 +1135,7 @@
   {
 
     title <
-      name = Prooftexts: A Journal of Jewish Literary History ;
+      name = Prooftexts ;
       issn = 0272-9601 ;
       eissn = 1086-3311
     >
@@ -1147,16 +1147,16 @@
       param[journal_id] = pft
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < down ; 2000 ; Prooftexts: A Journal of Jewish Literary History Volume 20 ; 20 >
-      au < down ; 2001 ; Prooftexts: A Journal of Jewish Literary History Volume 21 ; 21 >
-      au < down ; 2002 ; Prooftexts: A Journal of Jewish Literary History Volume 22 ; 22 >
-      au < down ; 2003 ; Prooftexts: A Journal of Jewish Literary History Volume 23 ; 23 >
-      au < down ; 2004 ; Prooftexts: A Journal of Jewish Literary History Volume 24 ; 24 >
-      au < down ; 2005 ; Prooftexts: A Journal of Jewish Literary History Volume 25 ; 25 >
-      au < down ; 2006 ; Prooftexts: A Journal of Jewish Literary History Volume 26 ; 26 >
-      au < down ; 2007 ; Prooftexts: A Journal of Jewish Literary History Volume 27 ; 27 >
-      au < down ; 2008 ; Prooftexts: A Journal of Jewish Literary History Volume 28 ; 28 >
-      au < down ; 2009 ; Prooftexts: A Journal of Jewish Literary History Volume 29 ; 29 >
+      au < down ; 2000 ; Prooftexts Volume 20 ; 20 >
+      au < down ; 2001 ; Prooftexts Volume 21 ; 21 >
+      au < down ; 2002 ; Prooftexts Volume 22 ; 22 >
+      au < down ; 2003 ; Prooftexts Volume 23 ; 23 >
+      au < down ; 2004 ; Prooftexts Volume 24 ; 24 >
+      au < down ; 2005 ; Prooftexts Volume 25 ; 25 >
+      au < down ; 2006 ; Prooftexts Volume 26 ; 26 >
+      au < down ; 2007 ; Prooftexts Volume 27 ; 27 >
+      au < down ; 2008 ; Prooftexts Volume 28 ; 28 >
+      au < down ; 2009 ; Prooftexts Volume 29 ; 29 >
 
     }
 
@@ -1168,20 +1168,18 @@
       attr[journal_id] = ptx
       implicit < status ; year ; name ; param[volume] >
     
-      comment[pt28] = 500 errors
-
-      au < released ; 2000 ; Prooftexts: A Journal of Jewish Literary History Volume 20 ; 20 >
-      au < released ; 2001 ; Prooftexts: A Journal of Jewish Literary History Volume 21 ; 21 >
-      au < released ; 2002 ; Prooftexts: A Journal of Jewish Literary History Volume 22 ; 22 >
-      au < released ; 2003 ; Prooftexts: A Journal of Jewish Literary History Volume 23 ; 23 >
-      au < released ; 2004 ; Prooftexts: A Journal of Jewish Literary History Volume 24 ; 24 >
-      au < released ; 2005 ; Prooftexts: A Journal of Jewish Literary History Volume 25 ; 25 >
-      au < released ; 2006 ; Prooftexts: A Journal of Jewish Literary History Volume 26 ; 26 >
-      au < released ; 2007 ; Prooftexts: A Journal of Jewish Literary History Volume 27 ; 27 >
-      au < released ; 2008 ; Prooftexts: A Journal of Jewish Literary History Volume 28 ; 28 >
-      au < released ; 2009 ; Prooftexts: A Journal of Jewish Literary History Volume 29 ; 29 >
-      au < released ; 2010 ; Prooftexts: A Journal of Jewish Literary History Volume 30 ; 30 >
-      au < released ; 2011 ; Prooftexts: A Journal of Jewish Literary History Volume 31 ; 31 >
+      au < released ; 2000 ; Prooftexts Volume 20 ; 20 >
+      au < released ; 2001 ; Prooftexts Volume 21 ; 21 >
+      au < released ; 2002 ; Prooftexts Volume 22 ; 22 >
+      au < released ; 2003 ; Prooftexts Volume 23 ; 23 >
+      au < released ; 2004 ; Prooftexts Volume 24 ; 24 >
+      au < released ; 2005 ; Prooftexts Volume 25 ; 25 >
+      au < released ; 2006 ; Prooftexts Volume 26 ; 26 >
+      au < released ; 2007 ; Prooftexts Volume 27 ; 27 >
+      au < released ; 2008 ; Prooftexts Volume 28 ; 28 >
+      au < released ; 2009 ; Prooftexts Volume 29 ; 29 >
+      au < released ; 2010 ; Prooftexts Volume 30 ; 30 >
+      au < released ; 2011 ; Prooftexts Volume 31 ; 31 >
     }
 
   }
