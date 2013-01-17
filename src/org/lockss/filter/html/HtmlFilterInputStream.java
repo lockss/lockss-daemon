@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.18 2012-12-22 21:18:19 tlipkis Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.18.4.1 2013-01-17 00:10:37 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,8 @@ import org.apache.commons.io.*;
 import org.htmlparser.*;
 import org.htmlparser.lexer.*;
 import org.htmlparser.util.*;
+import org.htmlparser.scanners.ScriptScanner;
+
 import org.lockss.config.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
@@ -337,6 +339,10 @@ public class HtmlFilterInputStream extends InputStream {
   void setupHtmlParser() {
     // Tell HtmlParser to accept common html comment variants.
     Lexer.STRICT_REMARKS = false;
+    // Tell <script> scanner to accept common html script variants.  (Don't
+    // stop scanning when find ETAGO ("</"), as is required by
+    // http://www.w3.org/TR/html4/appendix/notes.html#notes-specifying-data)
+    ScriptScanner.STRICT = false;
   }
 
   public static String nodeString(NodeList nl) {
