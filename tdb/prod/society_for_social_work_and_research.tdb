@@ -4,18 +4,28 @@
     name = Society for Social Work and Research
   >
 
-    {
-      title <
-        name = Journal of the Society for Social Work and Research (JSSWR) ;
-        eissn = 1948-822X ;
-        issnl = 1948-822X
-      >
+  comment[notReady] = RU issue3674, issue4205
+  plugin = org.lockss.plugin.scholarlyexchange.ScholarlyExchangePlugin
+  implicit < status ; year ; name ; volume ;  param[year] >
+  
+  {
+    title <
+      name = Journal of the Society for Social Work and Research;
+      eissn = 1948-822X ;
+      issnl = 1948-822X
+    >
 
-      param[base_url] = http://www.jsswr.org/
-	  plugin = needs.plugin
-      comment[platform] = new platform similar to OJS2 RU4205
-      
-     }
+    param[base_url] = http://www.jsswr.org/
+    param[journal_id] = jsswr
+
+    
+    au < exists ; 2010 ; Journal of the Society for Social Work and Research Volume 1 ; 1 ; 2010 >
+    au < exists ; 2011 ; Journal of the Society for Social Work and Research Volume 2 ; 2 ; 2011 >
+    au < exists ; 2012 ; Journal of the Society for Social Work and Research Volume 3 ; 3 ; 2012 >
+    
+  }
      
 }
+
+
 
