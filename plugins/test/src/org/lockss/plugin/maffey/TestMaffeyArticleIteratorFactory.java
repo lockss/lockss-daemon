@@ -50,6 +50,7 @@ import org.lockss.util.CIProperties;
 import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.lockss.util.UrlUtil;
 
 /*
  * PDF Full Text: http://www.la-press.com/redirect_file.php?fileType=pdf&fileId=4199&filename=3103-ACI-Holistic-Control-of-Herbal-Teas-and-Tinctures-Based-on-Sage-(Salvia-of.pdf&nocount=1
@@ -120,7 +121,7 @@ public class TestMaffeyArticleIteratorFactory extends ArticleIteratorTestCase {
     
     for (String url : urls) {
       UrlNormalizer norm = new MaffeyUrlNormalizer();
-      UrlCacher uc = au.makeUrlCacher(norm.normalizeUrl(url, null));
+      UrlCacher uc = au.makeUrlCacher(norm.normalizeUrl(UrlUtil.minimallyEncodeUrl(url), null));
       
       if(url.contains("-article-a1234")) {
 	uc.storeContent(getAbsAlteredInputStream("http://la-press.com/redirect_file.php?fileId=2222&filename=1234-Foo-Bar-(Hello.pdf&fileType=pdf"), getAbsProperties());
@@ -134,7 +135,7 @@ public class TestMaffeyArticleIteratorFactory extends ArticleIteratorTestCase {
     }
     
     Stack<String[]> expStack = new Stack<String[]>();
-    String [] af1 = {null,
+    String [] af1 = {BASE_URL + "bad-pdf-article-a22",
 		     BASE_URL + "bad-pdf-article-a22"};
     
     String [] af2 = {BASE_URL + "redirect_file.php?fileType=pdf&fileId=1111&filename= Hello World ( Foo ",
@@ -152,13 +153,8 @@ public class TestMaffeyArticleIteratorFactory extends ArticleIteratorTestCase {
       String[] act = {af.getFullTextUrl(),
 		      af.getRoleUrl(ArticleFiles.ROLE_ABSTRACT)};
       String[] exp = expStack.pop();
-      if (act.length == exp.length) {
- 	for (int i = 0;i< act.length; i++) {
-	  assertEquals(ARTICLE_FAIL_MSG, exp[i],act[i]);
-        }
-      } else {
-	fail(ARTICLE_FAIL_MSG + " length of expected and actual ArticleFiles content not the same:" + exp.length + "!=" + act.length);
-      }
+      assertEquals(ARTICLE_FAIL_MSG, UrlUtil.minimallyEncodeUrl(exp[0]),act[0]);
+      assertEquals(ARTICLE_FAIL_MSG, UrlUtil.minimallyEncodeUrl(exp[1]),act[1]);
     }
     
   }
