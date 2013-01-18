@@ -1,5 +1,5 @@
 /*
- * $Id: MaffeyArticleIteratorFactory.java,v 1.2 2012-11-07 01:07:20 wkwilson Exp $
+ * $Id: MaffeyArticleIteratorFactory.java,v 1.3 2013-01-18 06:32:24 pgust Exp $
  */
 
 /*
@@ -34,11 +34,8 @@ package org.lockss.plugin.maffey;
 
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.regex.*;
@@ -46,8 +43,6 @@ import java.util.regex.*;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Parser;
-import org.htmlparser.PrototypicalNodeFactory;
-import org.htmlparser.Tag;
 import org.htmlparser.lexer.InputStreamSource;
 import org.htmlparser.lexer.Lexer;
 import org.htmlparser.lexer.Page;
@@ -57,9 +52,7 @@ import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.filter.html.HtmlTags;
 import org.lockss.plugin.*;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 
@@ -120,6 +113,11 @@ public class MaffeyArticleIteratorFactory implements ArticleIteratorFactory,
       NodeList nl = null;
       ArticleFiles af = new ArticleFiles();
       if (absCu != null && absCu.hasContent()) {
+        // TEMPORARY: set absCU as default full text CU in case there is
+        // no PDF CU with content; the current metadata manager currently 
+        // uses only the full text CU, but this will change with the new
+        // metadata schema that can have multiple CUs for an article.
+        af.setFullTextCu(absCu);
 	af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
         try {
           InputStreamSource is = new InputStreamSource(new Stream(absCu.getUnfilteredInputStream()));
@@ -147,7 +145,10 @@ public class MaffeyArticleIteratorFactory implements ArticleIteratorFactory,
       try {
         if(nl != null) {
           if (nl.size() > 0) {
-            URL pdfUrl = new URL(UrlUtil.minimallyEncodeUrl(((MetaTag)nl.elementAt(0)).getMetaContent()));
+            // minimally encode URL to prevent URL constructor
+            // from stripping trailing spaces
+            String pdfUrlStr = ((MetaTag)nl.elementAt(0)).getMetaContent();
+            URL pdfUrl = new URL(UrlUtil.minimallyEncodeUrl(pdfUrlStr));
             List<String> paramList = new ArrayList<String>();
             paramList.add("fileType");
             paramList.add("fileId");
@@ -155,12 +156,15 @@ public class MaffeyArticleIteratorFactory implements ArticleIteratorFactory,
             pdfUrl = reArrangeUrlParams(pdfUrl, paramList);
             
             if(!pdfUrl.getHost().startsWith("www.")) {
-          	  pdfUrl = new URL(pdfUrl.getProtocol(), "www." + pdfUrl.getHost(), pdfUrl.getFile());
+              pdfUrl = new URL(pdfUrl.getProtocol(), 
+          	               "www." + pdfUrl.getHost(),
+          	               pdfUrl.getFile());
             }
             
-            CachedUrl pdfCu = au.makeCachedUrl(UrlUtil.decodeUrl(pdfUrl.toString()));
-            
+            // note: must leave URL encoded because that's how we store URLs
+            CachedUrl pdfCu = au.makeCachedUrl(pdfUrl.toString());
             if (pdfCu != null && pdfCu.hasContent()) {
+                  // replace absCU with pdfCU if exists and has content
         	  af.setFullTextCu(pdfCu);
         	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
             }
