@@ -1046,6 +1046,7 @@
     au < released ; crawling ; 2010 ; International Journal of Obesity Volume 34 ; 2010 ; 34 >
     au < released ; crawling ; 2011 ; International Journal of Obesity Volume 35 ; 2011 ; 35 >
     au < testing ; exists ; 2012 ; International Journal of Obesity Volume 36 ; 2012 ; 36 >
+    au < manifest ; exists ; 2013 ; International Journal of Obesity Volume 37 ; 2013 ; 37 >
 
   }
 
@@ -1066,6 +1067,7 @@
     au < testing ; exists ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 >
     au < zapped ; down ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 >
     au < testing ; exists ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 >
+    au < manifest ; exists ; 2013 ; The ISME Journal Volume 7 ; 2013 ; 7 >
 
   }
 
@@ -1079,6 +1081,7 @@
     >
 
     param[journal_id] = jidsp
+    comment[0] = There is no volume published in 2010, 2011 is the last issue as of 1/18/13
 
     au < exists ; exists ; 1997 ; JID Symposium Proceedings Volume 2 ; 1997 ; 2 >
     au < exists ; exists ; 1998 ; JID Symposium Proceedings Volume 3 ; 1998 ; 3 >
@@ -1093,7 +1096,7 @@
     au < exists ; exists ; 2007 ; JID Symposium Proceedings Volume 12 ; 2007 ; 12 >
     au < testing ; exists ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 >
     au < testing ; exists ; 2009 ; JID Symposium Proceedings Volume 14 ; 2009 ; 14 >
-    au < released ; crawling ; 2010 ; JID Symposium Proceedings Volume 15 ; 2010 ; 15 >
+    au < released ; crawling ; 2011 ; JID Symposium Proceedings Volume 15 ; 2011 ; 15 >
 	
   }
 
