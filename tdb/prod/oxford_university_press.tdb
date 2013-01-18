@@ -1106,7 +1106,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Analysis Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Analysis Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Analysis Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Analysis Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Analysis Volume 73 ; 73 >
 
     }
 
@@ -1384,7 +1384,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; The Annals of Occupational Hygiene Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Annals of Occupational Hygiene Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; released ; 2012 ; The Annals of Occupational Hygiene Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; The Annals of Occupational Hygiene Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; The Annals of Occupational Hygiene Volume 57 ; 57 >
 
     }
 
@@ -1660,7 +1660,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Archives of Clinical Neuropsychology Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Archives of Clinical Neuropsychology Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Archives of Clinical Neuropsychology Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Archives of Clinical Neuropsychology Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Archives of Clinical Neuropsychology Volume 28 ; 28 >
 
     }
 
@@ -1695,7 +1695,7 @@
     au < manifest ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 >
     au < manifest ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 >
     au < manifest ; 2012 ; Astronomy & Geophysics Volume 53 ; 53 >
-    au < expected ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 >
+    au < manifest ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 >
 
   }
   
@@ -2827,7 +2827,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; The British Journal of Social Work Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The British Journal of Social Work Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; released ; 2012 ; The British Journal of Social Work Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; The British Journal of Social Work Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; The British Journal of Social Work Volume 43 ; 43 >
 
     }
 
@@ -3274,7 +3274,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Capital Markets Law Journal Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Capital Markets Law Journal Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Capital Markets Law Journal Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Capital Markets Law Journal Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Capital Markets Law Journal Volume 8 ; 8 >
 
     }
 
@@ -4201,7 +4201,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 13 ; 13 >
 
     }
 
@@ -4376,7 +4376,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Diplomatic History Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Diplomatic History Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Diplomatic History Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Diplomatic History Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Diplomatic History Volume 37 ; 37 >
 
   }
 
@@ -6145,7 +6145,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Forestry: An International Journal of Forest Research Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Forestry: An International Journal of Forest Research Volume 84 ; 84 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Forestry: An International Journal of Forest Research Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Forestry: An International Journal of Forest Research Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Forestry: An International Journal of Forest Research Volume 86 ; 86 >
 
     }
 
@@ -8262,7 +8262,7 @@
     param[base_url] = http://inthealth.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; expected ; 2013 ; International Health Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; International Health Volume 1 ; 1 >
 
   }
 
@@ -9470,7 +9470,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Analytical Toxicology Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Analytical Toxicology Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Analytical Toxicology Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Analytical Toxicology Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Analytical Toxicology Volume 37 ; 37 >
 
   }
 
@@ -11866,7 +11866,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Molluscan Studies Volume 76 ; 76 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Molluscan Studies Volume 77 ; 77 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Molluscan Studies Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Molluscan Studies Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Molluscan Studies Volume 79 ; 79 >
 
     }
 
@@ -12084,7 +12084,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Pediatric Psychology Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Pediatric Psychology Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Pediatric Psychology Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Pediatric Psychology Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Pediatric Psychology Volume 38 ; 38 >
 
     }
 
@@ -13530,7 +13530,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Logic Journal of the IGPL Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Logic Journal of the IGPL Volume 21 ; 21 >
 
     }
 
@@ -18233,7 +18233,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Social History of Medicine Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Social History of Medicine Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Social History of Medicine Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Social History of Medicine Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Social History of Medicine Volume 26 ; 26 >
 
     }
 
@@ -18352,7 +18352,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Social Science Japan Journal Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Social Science Japan Journal Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Social Science Japan Journal Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Social Science Japan Journal Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Social Science Japan Journal Volume 16 ; 16 >
 
     }
 
