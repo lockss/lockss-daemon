@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''Pylorus content validation and ingestion gateway
 Michael R Bax, 2008-2009
-$Id: pylorus.py,v 2.26 2013-01-10 23:32:24 thib_gc Exp $'''
+$Id: pylorus.py,v 2.27 2013-01-18 23:24:04 thib_gc Exp $'''
 
 
 import ConfigParser
@@ -27,15 +27,15 @@ fix_auth_failure.fix_auth_failure()
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.26 $'.split()[ 1 ]
+REVISION = '$Revision: 2.27 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 SERVER_READY_TIMEOUT = 600
 MINIMUM_SLEEP_DURATION = 60
 MAXIMUM_SLEEP_DURATION = 300
 REMOTE_CRAWL_RETRY_TOTAL = 3
-POLL_FAILURE_RETRY_TOTAL = 3
-POLL_MISMATCH_RETRY_TOTAL = 3
+POLL_FAILURE_RETRY_TOTAL = 6
+POLL_MISMATCH_RETRY_TOTAL = 6
 MAXIMUM_URLError = SERVER_READY_TIMEOUT / MINIMUM_SLEEP_DURATION
 CONFIGURATION_DEFAULTS = { 
     'configuration':    '',
