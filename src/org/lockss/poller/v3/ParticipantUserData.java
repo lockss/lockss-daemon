@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.29.10.2 2013-01-06 01:27:33 dshr Exp $
+ * $Id: ParticipantUserData.java,v 1.29.10.3 2013-01-19 11:17:35 dshr Exp $
  */
 
 /*
@@ -286,7 +286,7 @@ public class ParticipantUserData implements LockssSerializable {
   }
 
   public void setVoterNonce2(byte[] voterNonce2) {
-    if (voterNonce2 != null && voterNonce2 != LcapMessage.EMPTY_BYTE_ARRAY) {
+    if (voterNonce2 != null && voterNonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
       this.voterNonce2 = voterNonce2;
     }
   }

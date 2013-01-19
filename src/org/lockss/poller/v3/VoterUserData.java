@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.24.8.2 2013-01-09 03:45:49 dshr Exp $
+ * $Id: VoterUserData.java,v 1.24.8.3 2013-01-19 11:17:35 dshr Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ public class VoterUserData
     this.createTime = TimeBase.nowMs();
     this.messageDir = messageDir;
     this.voteBlocks = new DiskVoteBlocks(voter.getStateDir());
-    if (voterNonce2 != null && voterNonce2 != V3LcapMessage.EMPTY_BYTE_ARRAY) {
+    if (voterNonce2 != null && voterNonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
       this.symmetricVoteBlocks = new DiskVoteBlocks(voter.getStateDir());
     }
   }
@@ -306,6 +306,10 @@ public class VoterUserData
 
   public V3Voter getVoter() {
     return voter;
+  }
+
+  public File getMessageDir() {
+    return messageDir;
   }
 
   public PsmInterpStateBean getPsmState() {

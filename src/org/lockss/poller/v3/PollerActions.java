@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.30.32.2 2013-01-09 03:45:48 dshr Exp $
+ * $Id: PollerActions.java,v 1.30.32.3 2013-01-19 11:17:35 dshr Exp $
  */
 
 /*
@@ -320,7 +320,7 @@ public class PollerActions {
     msg.setExpiration(ud.getPoller().getPollExpiration());
     msg.setRetryMax(1);
     byte[] nonce2 = ud.getVoterNonce2();
-    if (nonce2 != null && nonce2 != V3LcapMessage.EMPTY_BYTE_ARRAY) {
+    if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
       msg.setVoterNonce2(nonce2);
       msg.setVoteBlocks(ud.getVoteBlocks());
     }

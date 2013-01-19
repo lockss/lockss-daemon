@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.77.8.3 2013-01-09 03:45:48 dshr Exp $
+ * $Id: V3Voter.java,v 1.77.8.4 2013-01-19 11:17:35 dshr Exp $
  */
 
 /*
@@ -258,7 +258,7 @@ public class V3Voter extends BasePoll {
       CurrentConfig.getIntParam(V3Poller.PARAM_MAX_BLOCK_ERROR_COUNT,
                                 V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT);
 
-    byte[] maybeNonce2 = LcapMessage.EMPTY_BYTE_ARRAY;
+    byte[] maybeNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
     // XXX DSHR there needs to be a policy here not just a param
     if (CurrentConfig.getBooleanParam(PARAM_ALL_SYMMETRIC_POLLS,
 				      DEFAULT_ALL_SYMMETRIC_POLLS)) {
@@ -830,7 +830,7 @@ public class V3Voter extends BasePoll {
    */
   private byte[][] initHasherByteArrays() {
     byte[] nonce2 = voterUserData.getVoterNonce2();
-    if (nonce2 == null || nonce2 == LcapMessage.EMPTY_BYTE_ARRAY) {
+    if (nonce2 == null || nonce2 == ByteArray.EMPTY_BYTE_ARRAY) {
       return new byte[][] {
         {}, // Plain Hash
         ByteArray.concat(voterUserData.getPollerNonce(),
@@ -856,7 +856,7 @@ public class V3Voter extends BasePoll {
    */
   private MessageDigest[] initHasherDigests() throws NoSuchAlgorithmException {
     byte[] nonce2 = voterUserData.getVoterNonce2();
-    boolean symPoll = nonce2 != null && nonce2 != LcapMessage.EMPTY_BYTE_ARRAY;
+    boolean symPoll = nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY;
     return PollUtil.createMessageDigestArray(symPoll ? 3 : 2,
 					     getHashAlgorithm());
   }
@@ -927,7 +927,7 @@ public class V3Voter extends BasePoll {
     stateMachine.enqueueEvent(V3Events.evtHashingDone,
 			      ehAbortPoll(errmsg));
     byte[] nonce2 = voterUserData.getVoterNonce2();
-    if (nonce2 != null && nonce2 != LcapMessage.EMPTY_BYTE_ARRAY) {
+    if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
       // XXX DSHR - do something with the symmetric poll hashes.
       log.debug("Poll " + voterUserData.getPollKey() + " is symmetric");
     }
@@ -945,7 +945,7 @@ public class V3Voter extends BasePoll {
     VoteBlock vb = new VoteBlock(block.getUrl());
     VoteBlock svb = null;
     byte[] nonce2 = voterUserData.getVoterNonce2();
-    if (nonce2 != null && nonce2 != LcapMessage.EMPTY_BYTE_ARRAY) {
+    if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
       svb = new VoteBlock(block.getUrl());
     }
     Iterator hashVersionIter = block.versionIterator();

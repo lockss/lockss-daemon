@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.28.6.1 2013-01-04 19:50:46 dshr Exp $
+ * $Id: VoterActions.java,v 1.28.6.2 2013-01-19 11:17:35 dshr Exp $
  */
 
 /*
@@ -297,6 +297,22 @@ public class VoterActions {
     IdentityManager idmgr = ud.getVoter().getIdentityManager();
     idmgr.signalPartialAgreementHint(poller, ud.getVoter().getAu(),
 				     (float) agreementHint);
+    byte[] nonce2 = msg.getVoterNonce2();
+    if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
+      // Is it the same as the one we sent?
+      if (ByteArray.lexicographicalCompare(nonce2, ud.getVoterNonce2()) == 0) {
+	VoteBlocksTallier vbt = new VoteBlocksTallier();
+	vbt.tallyVoteBlocks(ud.getSymmetricVoteBlocks(),
+			    msg.getVoteBlocks());
+	int nAgree = vbt.countAgreeUrl();
+	int nDisgree = vbt.countDisagreeUrl();
+	int nVoterOnly = vbt.countVoterOnlyUrl();
+	int nPollerOnly = vbt.countPollerOnlyUrl();
+	// XXX what to do with these numbers?
+      } else {
+	log.error("Nonce2 mismatch");
+      }
+    }
     return V3Events.evtReceiptOk;
   }
 
