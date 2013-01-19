@@ -169,7 +169,6 @@
     
       param[base_url] = http://www.atmos-chem-phys.net/
       param[home_url] = http://www.atmospheric-chemistry-and-physics.net/
-      comment[notReady] = missing ris, bib, html & pdf
 
       au < ready ; 2001 ; 2001 ; Atmospheric Chemistry and Physics (ACP) Volume 1 ; 1 >
       au < ready ; 2002 ; 2002 ; Atmospheric Chemistry and Physics (ACP) Volume 2 ; 2 >
@@ -489,18 +488,17 @@
     
       param[base_url] = http://www.nat-hazards-earth-syst-sci.net/
       param[home_url] = http://www.natural-hazards-and-earth-system-sciences.net/
-      comment[notReady] = missing pdf file
 
       au < ready ; 2001 ; 2001 ; Natural Hazards and Earth System Sciences (NHESS) Volume 1 ; 1 >
       au < ready ; 2002 ; 2002 ; Natural Hazards and Earth System Sciences (NHESS) Volume 2 ; 2 >
       au < ready ; 2003 ; 2003 ; Natural Hazards and Earth System Sciences (NHESS) Volume 3 ; 3 >
-      au < notReady ; 2004 ; 2004 ; Natural Hazards and Earth System Sciences (NHESS) Volume 4 ; 4 >
+      au < ready ; 2004 ; 2004 ; Natural Hazards and Earth System Sciences (NHESS) Volume 4 ; 4 >
       au < ready ; 2005 ; 2005 ; Natural Hazards and Earth System Sciences (NHESS) Volume 5 ; 5 >
       au < ready ; 2006 ; 2006 ; Natural Hazards and Earth System Sciences (NHESS) Volume 6 ; 6 >
       au < ready ; 2007 ; 2007 ; Natural Hazards and Earth System Sciences (NHESS) Volume 7 ; 7 >
       au < ready ; 2008 ; 2008 ; Natural Hazards and Earth System Sciences (NHESS) Volume 8 ; 8 >
-      au < notReady ; 2009 ; 2009 ; Natural Hazards and Earth System Sciences (NHESS) Volume 9 ; 9 >
-      au < notReady ; 2010 ; 2010 ; Natural Hazards and Earth System Sciences (NHESS) Volume 10 ; 10 >
+      au < ready ; 2009 ; 2009 ; Natural Hazards and Earth System Sciences (NHESS) Volume 9 ; 9 >
+      au < ready ; 2010 ; 2010 ; Natural Hazards and Earth System Sciences (NHESS) Volume 10 ; 10 >
       au < ready ; 2011 ; 2011 ; Natural Hazards and Earth System Sciences (NHESS) Volume 11 ; 11 >
       au < ready ; 2012 ; 2012 ; Natural Hazards and Earth System Sciences (NHESS) Volume 12 ; 12 >
       au < manifest ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences (NHESS) Volume 13 ; 13 >
@@ -519,11 +517,11 @@
       comment[notReady] = low agreement, different Y1 in ris
       comment[notReady15] = Notice on Corrigendum
 
-      au < notReady ; 1994 ; 1994 ; Nonlinear Processes in Geophysics (NPG) Volume 1 ; 1 >
+      au < ready ; 1994 ; 1994 ; Nonlinear Processes in Geophysics (NPG) Volume 1 ; 1 >
       au < notReady ; 1995 ; 1995 ; Nonlinear Processes in Geophysics (NPG) Volume 2 ; 2 >
       au < ready ; 1996 ; 1996 ; Nonlinear Processes in Geophysics (NPG) Volume 3 ; 3 >
-      au < notReady ; 1997 ; 1997 ; Nonlinear Processes in Geophysics (NPG) Volume 4 ; 4 >
-      au < notReady ; 1998 ; 1998 ; Nonlinear Processes in Geophysics (NPG) Volume 5 ; 5 >
+      au < ready ; 1997 ; 1997 ; Nonlinear Processes in Geophysics (NPG) Volume 4 ; 4 >
+      au < ready ; 1998 ; 1998 ; Nonlinear Processes in Geophysics (NPG) Volume 5 ; 5 >
       au < notReady ; 1999 ; 1999 ; Nonlinear Processes in Geophysics (NPG) Volume 6 ; 6 >
       au < ready ; 2000 ; 2000 ; Nonlinear Processes in Geophysics (NPG) Volume 7 ; 7 >
       au < notReady ; 2001 ; 2001 ; Nonlinear Processes in Geophysics (NPG) Volume 8 ; 8 >
@@ -533,7 +531,7 @@
       au < ready ; 2005 ; 2005 ; Nonlinear Processes in Geophysics (NPG) Volume 12 ; 12 >
       au < ready ; 2006 ; 2006 ; Nonlinear Processes in Geophysics (NPG) Volume 13 ; 13 >
       au < ready ; 2007 ; 2007 ; Nonlinear Processes in Geophysics (NPG) Volume 14 ; 14 >
-      au < notReady ; 2008 ; 2008 ; Nonlinear Processes in Geophysics (NPG) Volume 15 ; 15 >
+      au < ready ; 2008 ; 2008 ; Nonlinear Processes in Geophysics (NPG) Volume 15 ; 15 >
       au < ready ; 2009 ; 2009 ; Nonlinear Processes in Geophysics (NPG) Volume 16 ; 16 >
       au < ready ; 2010 ; 2010 ; Nonlinear Processes in Geophysics (NPG) Volume 17 ; 17 >
       au < ready ; 2011 ; 2011 ; Nonlinear Processes in Geophysics (NPG) Volume 18 ; 18 >
@@ -573,11 +571,10 @@
     
       param[base_url] = http://www.soc-geogr.net/
       param[home_url] = http://www.social-geography.net/
-      comment[notReady] = low agreement, iframe
 
       au < ready ; 2005 ; 2005 ; Social Geography (SG) Volume 1 ; 1 >
-      au < notReady ; 2007 ; 2007 ; Social Geography (SG) Volume 2 ; 2 >
-      au < notReady ; 2008 ; 2008 ; Social Geography (SG) Volume 3 ; 3 >
+      au < ready ; 2007 ; 2007 ; Social Geography (SG) Volume 2 ; 2 >
+      au < ready ; 2008 ; 2008 ; Social Geography (SG) Volume 3 ; 3 >
       au < ready ; 2009 ; 2009 ; Social Geography (SG) Volume 4 ; 4 >
       au < ready ; 2010 ; 2010 ; Social Geography (SG) Volume 5 ; 5 >
       au < ready ; 2011 ; 2011 ; Social Geography (SG) Volume 6 ; 6 >
@@ -595,7 +592,6 @@
     
       param[base_url] = http://www.solid-earth.net/
       param[home_url] = http://www.solid-earth.net/
-      comment[notReady] = low agreement, iframe
 
       au < ready ; 2010 ; 2010 ; Solid Earth (SE) Volume 1 ; 1 >
       au < ready ; 2011 ; 2011 ; Solid Earth (SE) Volume 2 ; 2 >
@@ -613,12 +609,11 @@
     
       param[base_url] = http://www.stephan-mueller-spec-publ-ser.net/
       param[home_url] = http://www.stephan-mueller-special-publication-series.net/
-      comment[notReady] = low agreement, iframe
 
-      au < notReady ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 1 ; 1 >
+      au < ready ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 1 ; 1 >
       au < ready ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 2 ; 2 >
       au < ready ; 2002 ; 2002 ; Stephan Mueller Special Publication Series (SMSPS) Volume 3 ; 3 >
-      au < notReady ; 2009 ; 2009 ; Stephan Mueller Special Publication Series (SMSPS) Volume 4 ; 4 >
+      au < ready ; 2009 ; 2009 ; Stephan Mueller Special Publication Series (SMSPS) Volume 4 ; 4 >
     
    }
     
