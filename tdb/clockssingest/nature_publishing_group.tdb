@@ -566,8 +566,13 @@
 
     param[journal_id] = cmi
 
-    au < exists ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 >
-    
+    au < manifest ; exists ; 2008 ; Cellular & Molecular Immunology Volume 5 ; 2008 ; 5 >
+	au < manifest ; exists ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 >
+	au < manifest ; exists ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 >
+	au < manifest ; exists ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 >
+	au < manifest ; exists ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 >
+	au < exists ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 >
+	    
   }
   
   {
@@ -580,7 +585,11 @@
     >
 
     param[journal_id] = ctg
+    comment[notReady] = 404 error
 
+    au < notReady ; exists ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 >
+    au < notReady ; exists ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 >
+    au < manifest ; exists ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 >
     au < exists ; exists ; 2013 ; Clinical and Translational Gastroenterology Volume 4 ; 2013 ; 4 >
     
   }
