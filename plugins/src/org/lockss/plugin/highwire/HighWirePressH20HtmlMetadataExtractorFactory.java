@@ -59,6 +59,11 @@ public class HighWirePressH20HtmlMetadataExtractorFactory implements FileMetadat
     private static final String KEY_FORMAT = "format";
     public static final MetadataField FIELD_FORMAT = new MetadataField(
         KEY_FORMAT, Cardinality.Single);
+    public static final String KEY_PROPRIETARY_IDENTIFIER =
+        "propietary_identifier";
+    public static final MetadataField FIELD_PROPRIETARY_IDENTIFIER =
+        new MetadataField(KEY_PROPRIETARY_IDENTIFIER, Cardinality.Single);
+
     
     // Map HighWire H20 HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
@@ -73,17 +78,14 @@ public class HighWirePressH20HtmlMetadataExtractorFactory implements FileMetadat
           MetadataField.FIELD_AUTHOR, MetadataField.splitAt(";")));
       tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
-      tagMap.put("citation_volume", MetadataField.DC_FIELD_CITATION_VOLUME);
       tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
-      tagMap.put("citation_issue", MetadataField.DC_FIELD_CITATION_ISSUE);
       tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
-      tagMap.put("citation_firstpage", MetadataField.DC_FIELD_CITATION_SPAGE);
-      tagMap.put("citation_lastpage", MetadataField.DC_FIELD_CITATION_EPAGE);
+      tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_public_url", MetadataField.FIELD_ACCESS_URL);
       // typical field value: "acupmed;30/1/8": extract "acupmed"
       tagMap.put("citation_mjid", new MetadataField(
-          MetadataField.FIELD_PROPRIETARY_IDENTIFIER, 
+          FIELD_PROPRIETARY_IDENTIFIER, 
           MetadataField.extract("^([^;]+);", 1)));
     }
 
