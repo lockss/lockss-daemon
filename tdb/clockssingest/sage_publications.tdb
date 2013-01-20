@@ -7216,7 +7216,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Dementia Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; Dementia Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; Dementia Volume 10 ; 10 ; >
-      au < testing ; exists ; 2012 ; Dementia Volume 11 ; 11 ; >
+      au < released ; manifest ; 2012 ; Dementia Volume 11 ; 11 ; >
       au < manifest ; exists ; 2013 ; Dementia Volume 12 ; 12 ; >
 
     }
@@ -29529,7 +29529,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment [notReady] = consistent low poll
+      comment[notReady] = Vol 25 no permission from pub on ingest3 and 4.
 
       au < manifest ; exists ; 1986 ; Public Policy and Administration Volume 1 ; 1 ; >
       au < manifest ; exists ; 1987 ; Public Policy and Administration Volume 2 ; 2 ; >
@@ -29555,7 +29555,7 @@
       au < manifest ; exists ; 2007 ; Public Policy and Administration Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Public Policy and Administration Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Public Policy and Administration Volume 24 ; 24 ; >
-      au < testing ; exists ; 2010 ; Public Policy and Administration Volume 25 ; 25 ; >
+      au < notReady ; exists ; 2010 ; Public Policy and Administration Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; Public Policy and Administration Volume 26 ; 26 ; >
       au < released ; crawling ; 2012 ; Public Policy and Administration Volume 27 ; 27 ; >
       au < manifest ; exists ; 2013 ; Public Policy and Administration Volume 28 ; 28 ; >
