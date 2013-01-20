@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksTallier.java,v 1.1.2.1 2013-01-19 11:17:35 dshr Exp $
+ * $Id: VoteBlocksTallier.java,v 1.1.2.2 2013-01-20 18:17:46 dshr Exp $
  */
 
 /*
@@ -69,51 +69,28 @@ public class VoteBlocksTallier {
 				    VoteBlocks pollerBlocks) {
     Comparator<VoteBlock> comparator = new Comparator<VoteBlock>() {
       public int compare(VoteBlock vb, VoteBlock pb) {
-	// null sorts after everything else.
-	String vUrl = vb.getUrl();
-	String pUrl = pb.getUrl();
-	return StringUtil.compareToNullHigh(vUrl, pUrl);
+        // null sorts after everything else.
+        String vUrl = vb.getUrl();
+        String pUrl = pb.getUrl();
+        return StringUtil.compareToNullHigh(vUrl, pUrl);
       }
     };
-    // XXX using PriorityQueue here won't work in practice because
-    // XXX it will use too much memory.
-    // Build a PriorityQueue of our VoteBlock instances in URL order
-    java.util.PriorityQueue<VoteBlock> vBlockQueue =
-      new java.util.PriorityQueue(voterBlocks.size(), comparator);
+    // VoteBlocks.iterator() delivers VoteBlock instances in URL order.
     try {
-      for (VoteBlocksIterator it = voterBlocks.iterator(); it.hasNext(); ) {
-	VoteBlock block = it.next();
-	vBlockQueue.add(block);
-      }
-    } catch (IOException ex) {
-      log.error("IOException while building voter VoteBlock queue", ex);
-      return;
-    }
-    // Build a PriorityQueue of the poller's VoteBlock instances in URL order
-    java.util.PriorityQueue<VoteBlock> pBlockQueue =
-      new java.util.PriorityQueue(pollerBlocks.size(), comparator);
-    try {
-      for (VoteBlocksIterator it = pollerBlocks.iterator(); it.hasNext(); ) {
-	VoteBlock block = it.next();
-	vBlockQueue.add(block);
-      }
-    } catch (IOException ex) {
-      log.error("IOException while building poller VoteBlock queue", ex);
-      return;
-    }
-    if (vBlockQueue.size() > 0 || pBlockQueue.size() > 0) {
+      VoteBlocksIterator vIterator = voterBlocks.iterator();
+      VoteBlocksIterator pIterator = pollerBlocks.iterator();
       VoteBlock vBlock = null;
       VoteBlock pBlock = null;
     
       while (true) {
 	if (vBlock == null) {
-	  vBlock = vBlockQueue.remove();
+	  vBlock = vIterator.next();
 	}
 	if (pBlock == null) {
-	  pBlock = pBlockQueue.remove();
+	  pBlock = pIterator.next();
 	}
 	if (vBlock == null && pBlock == null) {
-	  // Run out of blocks in both queues
+	  // Run out of blocks in both iterators
 	  break;
 	}
 	String vUrl = vBlock.getUrl();
@@ -139,6 +116,9 @@ public class VoteBlocksTallier {
 	  pBlock = null;
 	}
       }
+    } catch (IOException ex) {
+      log.error("IOException while tallying symmetric poll", ex);
+      return;
     }
   }
 
