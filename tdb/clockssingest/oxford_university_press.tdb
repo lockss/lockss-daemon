@@ -2982,6 +2982,8 @@
     au < crawling ; exists ; 2008 ; British Yearbook of International Law Volume 79 ; 79 ; >
     au < released ; crawling ; 2009 ; British Yearbook of International Law Volume 80 ; 80 ; >
     au < released ; crawling ; 2010 ; British Yearbook of International Law Volume 81 ; 81 ; >
+    au < exists ; exists ; 2011 ; British Yearbook of International Law Volume 82 ; 82 ; >
+    au < expected ; exists ; 2012 ; British Yearbook of International Law Volume 83 ; 83 ; >
 
   }
 
@@ -7941,7 +7943,11 @@
     param[base_url] = http://inthealth.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2013 ; International Health Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2009 ; International Health Volume 1 ; 1 ; >
+    au < exists ; exists ; 2010 ; International Health Volume 2 ; 2 ; >
+    au < exists ; exists ; 2011 ; International Health Volume 3 ; 3 ; >
+    au < exists ; exists ; 2012 ; International Health Volume 4 ; 4 ; >
+    au < expected ; exists ; 2013 ; International Health Volume 5 ; 5 ; >
 
   }
 
