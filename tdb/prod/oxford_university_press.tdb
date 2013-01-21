@@ -3004,6 +3004,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2008 ; British Yearbook of International Law Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; released ; 2009 ; British Yearbook of International Law Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Yearbook of International Law Volume 81 ; 81 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; British Yearbook of International Law Volume 82 ; 82 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; British Yearbook of International Law Volume 83 ; 83 >
 
   }
 
@@ -8262,7 +8264,11 @@
     param[base_url] = http://inthealth.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; International Health Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; International Health Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; International Health Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; International Health Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; International Health Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; expected ; 2013 ; International Health Volume 5 ; 5 >
 
   }
 
