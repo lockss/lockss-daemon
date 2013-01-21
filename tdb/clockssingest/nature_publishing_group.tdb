@@ -20,7 +20,6 @@
     >
 
     param[journal_id] = aps
-    comment[notReady] = fetch error on ingest1 (401 unauthorized)
 
     au < manifest ; exists ; 2005 ; Acta Pharmacologica Sinica Volume 26 ; 2005 ; 26 >
     au < manifest ; exists ; 2006 ; Acta Pharmacologica Sinica Volume 27 ; 2006 ; 27 >
@@ -29,7 +28,7 @@
     au < released ; crawling ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
     au < released ; crawling ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 >
     au < released ; crawling ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 >
-    au < testing ; exists ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 >
+    au < released ; manifest ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 >
     au < manifest ; exists ; 2013 ; Acta Pharmacologica Sinica Volume 33 ; 2013 ; 33 >
     au < manifest ; exists ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 >
 
@@ -208,18 +207,19 @@
       
     >
 
-    param[journal_id] = bonekey
+    param[journal_id] = bonekeyreports
+    comment[notReady] = no substance
   
-    au < manifest ; exists ; 2004 ; BoneKEy Reports Volume 1 ; 2004 ; 1 >
-    au < manifest ; exists ; 2005 ; BoneKEy Reports Volume 2 ; 2005 ; 2 >
-    au < manifest ; exists ; 2006 ; BoneKEy Reports Volume 3 ; 2006 ; 3 >
-    au < manifest ; exists ; 2007 ; BoneKEy Reports Volume 4 ; 2007 ; 4 >
-    au < manifest ; exists ; 2008 ; BoneKEy Reports Volume 5 ; 2008 ; 5 >
-    au < manifest ; exists ; 2009 ; BoneKEy Reports Volume 6 ; 2009 ; 6 >
-    au < manifest ; exists ; 2010 ; BoneKEy Reports Volume 7 ; 2010 ; 7 >
-    au < manifest ; exists ; 2011 ; BoneKEy Reports Volume 8 ; 2011 ; 8 >
-    au < manifest ; exists ; 2012 ; BoneKEy Reports Volume 9 ; 2012 ; 9 >
-  	au < exists ; exists ; 2013 ; BoneKEy Reports Volume 10 ; 2013 ; 10 >
+    au < notReady ; exists ; 2004 ; BoneKEy Reports Volume 1 ; 2004 ; 1 >
+    au < notReady ; exists ; 2005 ; BoneKEy Reports Volume 2 ; 2005 ; 2 >
+    au < notReady ; exists ; 2006 ; BoneKEy Reports Volume 3 ; 2006 ; 3 >
+    au < notReady ; exists ; 2007 ; BoneKEy Reports Volume 4 ; 2007 ; 4 >
+    au < notReady ; exists ; 2008 ; BoneKEy Reports Volume 5 ; 2008 ; 5 >
+    au < notReady ; exists ; 2009 ; BoneKEy Reports Volume 6 ; 2009 ; 6 >
+    au < notReady ; exists ; 2010 ; BoneKEy Reports Volume 7 ; 2010 ; 7 >
+    au < notReady ; exists ; 2011 ; BoneKEy Reports Volume 8 ; 2011 ; 8 >
+    au < notReady ; exists ; 2012 ; BoneKEy Reports Volume 9 ; 2012 ; 9 >
+  	au < notReady ; exists ; 2013 ; BoneKEy Reports Volume 10 ; 2013 ; 10 >
   	
   }
 
@@ -763,6 +763,7 @@
     >
     
     param[journal_id] = cti
+    
     	au < exists ; exists ; 2013 ; Clinical & Translational Immunology Volume 1 ; 2013 ; 1 >
     
   }
@@ -1071,6 +1072,7 @@
     >
 
     param[journal_id] = gim
+    comment[notReady] = no links on 2011 manifest page
 
     au < exists ; exists ; 1998-1999 ; Genetics in Medicine Volume 1 ; 1998-1999 ; 1 >
     au < exists ; exists ; 2000 ; Genetics in Medicine Volume 2 ; 2000 ; 2 >
@@ -1083,8 +1085,8 @@
     au < exists ; exists ; 2007 ; Genetics in Medicine Volume 9 ; 2007 ; 9 >
     au < exists ; exists ; 2008 ; Genetics in Medicine Volume 10 ; 2008 ; 10 >
     au < exists ; exists ; 2009 ; Genetics in Medicine Volume 11 ; 2009 ; 11 >
-    au < exists ; exists ; 2010 ; Genetics in Medicine Volume 12 ; 2010 ; 12 >
-    au < exists ; exists ; 2011 ; Genetics in Medicine Volume 13 ; 2011 ; 13 >
+    au < manifest ; exists ; 2010 ; Genetics in Medicine Volume 12 ; 2010 ; 12 >
+    au < notReady ; exists ; 2011 ; Genetics in Medicine Volume 13 ; 2011 ; 13 >
     au < manifest ; exists ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 >
     au < exists ; exists ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 >
   }
@@ -1237,6 +1239,32 @@
     au < testing ; exists ; 2013 ; Hypertension Research Volume 36 ; 2013 ; 36 >
   }
 
+  {
+  
+    title <
+      name = IBMS BoneKEy ; 
+      eissn = 1940-8692
+    >
+    
+    param[journal_id] = bonekey
+    comment[notReady] = no substance
+    
+    au < notReady ; exists ; 2001 ; IBMS BoneKEy 3 ; 2001 ; 3 >
+    au < notReady ; exists ; 2002 ; IBMS BoneKEy 4 ; 2002 ; 4 >
+    au < notReady ; exists ; 2003 ; IBMS BoneKEy 5 ; 2003 ; 5 >
+    au < notReady ; exists ; 2004 ; IBMS BoneKEy 6 ; 2004 ; 6 >
+    au < notReady ; exists ; 2005 ; IBMS BoneKEy 7 ; 2005 ; 7 >
+    au < notReady ; exists ; 2006 ; IBMS BoneKEy 8 ; 2006 ; 8 >
+    au < notReady ; exists ; 2007 ; IBMS BoneKEy 9 ; 2007 ; 9 >
+    au < notReady ; exists ; 2008 ; IBMS BoneKEy 10 ; 2008 ; 10 >
+    au < notReady ; exists ; 2009 ; IBMS BoneKEy 11 ; 2009 ; 11 >
+    au < notReady ; exists ; 2010 ; IBMS BoneKEy Volume 12 ; 2010 ; 12 >
+    au < notReady ; exists ; 2011 ; IBMS BoneKEy Volume 13 ; 2011 ; 13 >
+    au < notReady ; exists ; 2012 ; IBMS BoneKEy Volume 14 ; 2012 ; 14 >
+    au < notReady ; exists ; 2013 ; IBMS BoneKEy Volume 15 ; 2013 ; 15 >
+     
+  }
+  
   {
 
     title <
