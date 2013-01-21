@@ -12717,6 +12717,8 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      
+      comment[notReady] = ingest4 has 23 extra urls not on the other ingest machines.
 
       au < manifest ; exists ; 1985 ; Information Development Volume 1 ; 1 ; >
       au < manifest ; exists ; 1986 ; Information Development Volume 2 ; 2 ; >
@@ -12743,7 +12745,7 @@
       au < manifest ; exists ; 2007 ; Information Development Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Information Development Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Information Development Volume 25 ; 25 ; >
-      au < testing ; exists ; 2010 ; Information Development Volume 26 ; 26 ; >
+      au < notReady ; exists ; 2010 ; Information Development Volume 26 ; 26 ; >
       au < released ; crawling ; 2011 ; Information Development Volume 27 ; 27 ; >
       au < released ; manifest ; 2012 ; Information Development Volume 28 ; 28 ; >
       au < expected ; exists ; 2013 ; Information Development Volume 29 ; 29 ; >
