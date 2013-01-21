@@ -45,9 +45,9 @@
     param[journal_dir] = contemporary_southeast_asia_a_journal_of_international_and_strategic_affairs
     attr[journal_id] = csa
 
-    au < testing ; 2003 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 25 ; 25 >
-    au < testing ; 2004 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 26 ; 26 >
-    au < testing ; 2005 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 27 ; 27 >
+    au < ready ; 2003 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 25 ; 25 >
+    au < ready ; 2004 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 26 ; 26 >
+    au < ready ; 2005 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 27 ; 27 >
     au < released ; 2006 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 28 ; 28 >
     au < released ; 2007 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 29 ; 29 >
     au < released ; 2008 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 30 ; 30 >
@@ -70,9 +70,9 @@
     param[journal_dir] = sojourn_journal_of_social_issues_in_southeast_asia
     attr[journal_id] =  soj
 
-    au < testing ; 2003 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 18 ; 18 >
-    au < testing ; 2004 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 19 ; 19 >
-    au < testing ; 2005 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 20 ; 20 >
+    au < ready ; 2003 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 18 ; 18 >
+    au < ready ; 2004 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 19 ; 19 >
+    au < ready ; 2005 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 20 ; 20 >
     au < released ; 2006 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 21 ; 21 >
     au < released ; 2007 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 22 ; 22 >
     au < released ; 2008 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 23 ; 23 >
@@ -94,16 +94,16 @@
     param[journal_dir] = southeast_asian_affairs
     attr[journal_id] = saa
 
-    au < testing ; 2003 ; Southeast Asian Affairs Volume 2003 ; 2003 >
-    au < testing ; 2004 ; Southeast Asian Affairs Volume 2004 ; 2004 >
-    au < testing ; 2005 ; Southeast Asian Affairs Volume 2005 ; 2005 >
-    au < testing ; 2006 ; Southeast Asian Affairs Volume 2006 ; 2006 >
-    au < testing ; 2007 ; Southeast Asian Affairs Volume 2007 ; 2007 >
+    au < ready ; 2003 ; Southeast Asian Affairs Volume 2003 ; 2003 >
+    au < ready ; 2004 ; Southeast Asian Affairs Volume 2004 ; 2004 >
+    au < ready ; 2005 ; Southeast Asian Affairs Volume 2005 ; 2005 >
+    au < ready ; 2006 ; Southeast Asian Affairs Volume 2006 ; 2006 >
+    au < ready ; 2007 ; Southeast Asian Affairs Volume 2007 ; 2007 >
     au < released ; 2008 ; Southeast Asian Affairs Volume 2008 ; 2008 >
     au < released ; 2009 ; Southeast Asian Affairs Volume 2009 ; 2009 >
     au < released ; 2010 ; Southeast Asian Affairs Volume 2010 ; 2010 >
-    au < testing ; 2011 ; Southeast Asian Affairs Volume 2011 ; 2011 >
-    au < testing ; 2012 ; Southeast Asian Affairs Volume 2012 ; 2012 >
+    au < ready ; 2011 ; Southeast Asian Affairs Volume 2011 ; 2011 >
+    au < ready ; 2012 ; Southeast Asian Affairs Volume 2012 ; 2012 >
 
   }
 
