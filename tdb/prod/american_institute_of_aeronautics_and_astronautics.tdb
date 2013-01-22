@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.aiaa.AIAAPlugin
-  param[base_url] = http://aiaa.org/
+  param[base_url] = http://arc.aiaa.org/
   implicit < status ; year; name ; param[volume] >
   
 comment[aiaa] = plugin in development: platform is Atypon
@@ -22,6 +22,7 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       eissn = 1533-385X ;
       issnl = 0001-1452
     >
+    param[journal_id] = aiaaj
     
   } 
   
@@ -32,6 +33,7 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       issn = 1542-9423 ;
       issnl = 1542-9423
     >
+    param[journal_id] = jacic
     
   }
 
@@ -55,6 +57,7 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       eissn = 1555-5917 ;
       issnl = 0146-0412
     >
+    param[journal_id] = je
     
   } 
 
@@ -66,6 +69,7 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       eissn = 1533-3884 ;
       issnl = 0731-5090
     >
+    param[journal_id] = jgcd
     
   } 
 
@@ -77,6 +81,7 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       eissn = 1555-5909 ;
       issnl = 0022-1716
     >
+    param[journal_id] = jh
     
   } 
 
@@ -88,6 +93,7 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       eissn = 1533-3876 ;
       issnl = 0748-4658
     >
+    param[journal_id] = jpp
     
   } 
 
@@ -99,6 +105,7 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       eissn = 1533-6794 ;
       issnl = 0022-4650
     >
+    param[journal_id] = jsr
     
   } 
 
@@ -110,6 +117,7 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       eissn = 1533-6808 ;
       issnl = 0887-8722
     >
+    param[journal_id] = jjtht
     
   } 
   
