@@ -2923,11 +2923,26 @@
      param[journal_id] = nclimate
 
     au < manifest ; exists ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 >
-    au < manifest ; exists ; 2012 ;Nature Climate Change Volume 2 ; 2012 ; 2 >
-    au < manifest ; exists ; 2013 ;Nature Climate Change Volume 3 ; 2013 ; 3 >
+    au < manifest ; exists ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 >
+    au < manifest ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 >
 
   }
 
+{
+    title <
+      name = Nature Communications ;
+      eissn = 2041-1723
+
+    >
+
+     param[journal_id] = ncomms
+
+    au < exists ; exists ; 2010 ; Nature Communications Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Nature Communications Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Nature Communications Volume 3 ; 2012 ; 3 >
+    au < exists ; exists ; 2013 ; Nature Communications Volume 4 ; 2013 ; 4 >
+  
+  }
   {
 
     title <
@@ -2960,43 +2975,42 @@
     >
 
     param[journal_id] = ng
-    comment[TODO] = remove unnecessary parenthesized years
 
-    au < exists ; exists ; 1993 ; Nature Genetics Volume 1 (1992) ; 1992 ; 1 >
-    au < exists ; exists ; 1993 ; Nature Genetics Volume 2 (1992) ; 1992 ; 2 >
-    au < exists ; exists ; 1993 ; Nature Genetics Volume 3 (1993) ; 1993 ; 3 >
-    au < exists ; exists ; 1993 ; Nature Genetics Volume 4 (1993) ; 1993 ; 4 >
-    au < exists ; exists ; 1993 ; Nature Genetics Volume 5 (1993) ; 1993 ; 5 >
-    au < exists ; exists ; 1994 ; Nature Genetics Volume 6 (1994) ; 1994 ; 6 >
-    au < exists ; exists ; 1994 ; Nature Genetics Volume 7 (1994) ; 1994 ; 7 >
-    au < exists ; exists ; 1994 ; Nature Genetics Volume 8 (1994) ; 1994 ; 8 >
-    au < exists ; exists ; 1995 ; Nature Genetics Volume 9 (1995) ; 1995 ; 9 >
-    au < exists ; exists ; 1995 ; Nature Genetics Volume 10 (1995) ; 1995 ; 10 >
-    au < exists ; exists ; 1995 ; Nature Genetics Volume 11 (1995) ; 1995 ; 11 >
-    au < exists ; exists ; 1996 ; Nature Genetics Volume 12 (1996) ; 1996 ; 12 >
-    au < exists ; exists ; 1996 ; Nature Genetics Volume 13 (1996) ; 1996 ; 13 >
-    au < exists ; exists ; 1996 ; Nature Genetics Volume 14 (1996) ; 1996 ; 14 >
-    au < exists ; exists ; 1997 ; Nature Genetics Volume 15 (1997) ; 1997 ; 15 >
-    au < exists ; exists ; 1997 ; Nature Genetics Volume 16 (1997) ; 1997 ; 16 >
-    au < exists ; exists ; 1997 ; Nature Genetics Volume 17 (1997) ; 1997 ; 17 >
-    au < exists ; exists ; 1998 ; Nature Genetics Volume 18 (1998) ; 1998 ; 18 >
-    au < exists ; exists ; 1998 ; Nature Genetics Volume 19 (1998) ; 1998 ; 19 >
-    au < exists ; exists ; 1998 ; Nature Genetics Volume 20 (1998) ; 1998 ; 20 >
-    au < exists ; exists ; 1999 ; Nature Genetics Volume 21 (1999) ; 1999 ; 21 >
-    au < exists ; exists ; 1999 ; Nature Genetics Volume 22 (1999) ; 1999 ; 22 >
-    au < exists ; exists ; 1999 ; Nature Genetics Volume 23 (1999) ; 1999 ; 23 >
-    au < exists ; exists ; 2000 ; Nature Genetics Volume 24 (2000) ; 2000 ; 24 >
-    au < exists ; exists ; 2000 ; Nature Genetics Volume 25 (2000) ; 2000 ; 25 >
-    au < exists ; exists ; 2000 ; Nature Genetics Volume 26 (2000) ; 2000 ; 26 >
-    au < exists ; exists ; 2001 ; Nature Genetics Volume 27 (2001) ; 2001 ; 27 >
-    au < exists ; exists ; 2001 ; Nature Genetics Volume 28 (2001) ; 2001 ; 28 >
-    au < exists ; exists ; 2001 ; Nature Genetics Volume 29 (2001) ; 2001 ; 29 >
-    au < exists ; exists ; 2002 ; Nature Genetics Volume 30 (2002) ; 2002 ; 30 >
-    au < exists ; exists ; 2002 ; Nature Genetics Volume 31 (2002) ; 2002 ; 31 >
-    au < exists ; exists ; 2002 ; Nature Genetics Volume 32 (2002) ; 2002 ; 32 >
-    au < exists ; exists ; 2003 ; Nature Genetics Volume 33 (2003) ; 2003 ; 33 >
-    au < exists ; exists ; 2003 ; Nature Genetics Volume 34 (2003) ; 2003 ; 34 >
-    au < exists ; exists ; 2003 ; Nature Genetics Volume 35 (2003) ; 2003 ; 35 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 1 ; 1992 ; 1 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 2 ; 1992 ; 2 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 3 ; 1993 ; 3 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 4 ; 1993 ; 4 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 5 ; 1993 ; 5 >
+    au < exists ; exists ; 1994 ; Nature Genetics Volume 6 ; 1994 ; 6 >
+    au < exists ; exists ; 1994 ; Nature Genetics Volume 7 ; 1994 ; 7 >
+    au < exists ; exists ; 1994 ; Nature Genetics Volume 8 ; 1994 ; 8 >
+    au < exists ; exists ; 1995 ; Nature Genetics Volume 9 ; 1995 ; 9 >
+    au < exists ; exists ; 1995 ; Nature Genetics Volume 10 ; 1995 ; 10 >
+    au < exists ; exists ; 1995 ; Nature Genetics Volume 11 ; 1995 ; 11 >
+    au < exists ; exists ; 1996 ; Nature Genetics Volume 12 ; 1996 ; 12 >
+    au < exists ; exists ; 1996 ; Nature Genetics Volume 13 ; 1996 ; 13 >
+    au < exists ; exists ; 1996 ; Nature Genetics Volume 14 ; 1996 ; 14 >
+    au < exists ; exists ; 1997 ; Nature Genetics Volume 15 ; 1997 ; 15 >
+    au < exists ; exists ; 1997 ; Nature Genetics Volume 16 ; 1997 ; 16 >
+    au < exists ; exists ; 1997 ; Nature Genetics Volume 17 ; 1997 ; 17 >
+    au < exists ; exists ; 1998 ; Nature Genetics Volume 18 ; 1998 ; 18 >
+    au < exists ; exists ; 1998 ; Nature Genetics Volume 19 ; 1998 ; 19 >
+    au < exists ; exists ; 1998 ; Nature Genetics Volume 20 ; 1998 ; 20 >
+    au < exists ; exists ; 1999 ; Nature Genetics Volume 21 ; 1999 ; 21 >
+    au < exists ; exists ; 1999 ; Nature Genetics Volume 22 ; 1999 ; 22 >
+    au < exists ; exists ; 1999 ; Nature Genetics Volume 23 ; 1999 ; 23 >
+    au < exists ; exists ; 2000 ; Nature Genetics Volume 24 ; 2000 ; 24 >
+    au < exists ; exists ; 2000 ; Nature Genetics Volume 25 ; 2000 ; 25 >
+    au < exists ; exists ; 2000 ; Nature Genetics Volume 26 ; 2000 ; 26 >
+    au < exists ; exists ; 2001 ; Nature Genetics Volume 27 ; 2001 ; 27 >
+    au < exists ; exists ; 2001 ; Nature Genetics Volume 28 ; 2001 ; 28 >
+    au < exists ; exists ; 2001 ; Nature Genetics Volume 29 ; 2001 ; 29 >
+    au < exists ; exists ; 2002 ; Nature Genetics Volume 30 ; 2002 ; 30 >
+    au < exists ; exists ; 2002 ; Nature Genetics Volume 31 ; 2002 ; 31 >
+    au < exists ; exists ; 2002 ; Nature Genetics Volume 32 ; 2002 ; 32 >
+    au < exists ; exists ; 2003 ; Nature Genetics Volume 33 ; 2003 ; 33 >
+    au < exists ; exists ; 2003 ; Nature Genetics Volume 34 ; 2003 ; 34 >
+    au < exists ; exists ; 2003 ; Nature Genetics Volume 35 ; 2003 ; 35 >
     au < exists ; exists ; 2004 ; Nature Genetics Volume 36 ; 2004 ; 36 >
     au < exists ; exists ; 2005 ; Nature Genetics Volume 37 ; 2005 ; 37 >
     au < exists ; exists ; 2006 ; Nature Genetics Volume 38 ; 2006 ; 38 >
@@ -3598,7 +3612,6 @@
     >
 
     param[journal_id] = nrrheum
-    notReady[comment] = fetch error on ingest3 (401 unauthorized)
 
     au < exists ; exists ; 2005 ; Nature Reviews Rheumatology Volume 1 ; 2005 ; 1 >
     au < exists ; exists ; 2006 ; Nature Reviews Rheumatology Volume 2 ; 2006 ; 2 >
@@ -3710,7 +3723,37 @@
     au < manifest ; exists ; 2013 ; Neuropsychopharmacology Volume 38 ; 2013 ; 38 >
 
   }
+  
+  {
 
+    title <
+      name = NPG Asia Materials ;
+      eissn = 1884-4057 
+    >
+
+    param[journal_id] = am
+    
+    au < manifest ; exists ; 2009 ; NPG Asia Materials Volume 1 ; 2009 ; 1 >
+    au < manifest ; exists ; 2010 ; NPG Asia Materials Volume 2 ; 2010 ; 2 >
+    au < manifest ; exists ; 2011 ; NPG Asia Materials Volume 3 ; 2011 ; 3 >
+    au < manifest ; exists ; 2012 ; NPG Asia Materials Volume 4 ; 2012 ; 4 >
+    au < manifest ; exists ; 2013 ; NPG Asia Materials Volume 5 ; 2013 ; 5 >
+  }
+
+  {
+
+    title <
+      name = Nutrition & Diabetes ;
+      eissn = 2044-4052 
+    >
+
+    param[journal_id] = nutd
+    
+    au < manifest ; exists ; 2011 ; Nutrition & Diabetes Volume 1 ; 2011 ; 1 >
+    au < manifest ; exists ; 2012 ; Nutrition & Diabetes Volume 2 ; 2012 ; 2 >
+  
+  }
+    
   {
 
     title <
@@ -3780,13 +3823,98 @@
     title <
       name = Oncogenesis ;
       issn = 2157-9024
-
     >
-
-
+    param[journal_id] = onc
+    
     au < manifest ; exists ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
     au < manifest ; exists ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 >
 
+  }
+
+  {
+
+    title <
+      name = Pediatric Research ;
+      issn = 0031-3998 ;
+      eissn = 1530-0447
+    >
+
+    param[journal_id] = pr
+    
+    au < manifest ; exists ; 1967 ; Pediatric Research Volume 1 ; 1967; 1 >
+    au < manifest ; exists ; 1968 ; Pediatric Research Volume 2 ; 1968; 2 >
+    au < manifest ; exists ; 1969 ; Pediatric Research Volume 3 ; 1969; 3 >
+    au < manifest ; exists ; 1970 ; Pediatric Research Volume 4 ; 1970; 4 >
+    au < manifest ; exists ; 1971 ; Pediatric Research Volume 5 ; 1971; 5 >
+    au < manifest ; exists ; 1972 ; Pediatric Research Volume 6 ; 1972; 6 >
+    au < manifest ; exists ; 1973 ; Pediatric Research Volume 7 ; 1973; 7 >
+    au < manifest ; exists ; 1974 ; Pediatric Research Volume 8 ; 1974; 8 >
+    au < manifest ; exists ; 1975 ; Pediatric Research Volume 9 ; 1975; 9 >
+    au < manifest ; exists ; 1976 ; Pediatric Research Volume 10 ; 1976 ; 10 >
+    au < manifest ; exists ; 1977 ; Pediatric Research Volume 11 ; 1977 ; 11 >
+    au < manifest ; exists ; 1978 ; Pediatric Research Volume 12 ; 1978 ; 12 >
+    au < manifest ; exists ; 1979 ; Pediatric Research Volume 13 ; 1979 ; 13 >
+    au < manifest ; exists ; 1980 ; Pediatric Research Volume 14 ; 1980 ; 14 >
+    au < manifest ; exists ; 1981 ; Pediatric Research Volume 15 ; 1981 ; 15 >
+    au < manifest ; exists ; 1982 ; Pediatric Research Volume 16 ; 1982 ; 16 >
+    au < manifest ; exists ; 1983 ; Pediatric Research Volume 17 ; 1983 ; 17 >
+    au < manifest ; exists ; 1984 ; Pediatric Research Volume 18 ; 1984 ; 18 >
+    au < manifest ; exists ; 1985 ; Pediatric Research Volume 19 ; 1985 ; 19 >
+    au < manifest ; exists ; 1986 ; Pediatric Research Volume 20 ; 1986 ; 20 >
+    au < manifest ; exists ; 1987 ; Pediatric Research Volume 21 ; 1987 ; 21 >
+    au < manifest ; exists ; 1987 ; Pediatric Research Volume 22 ; 1987 ; 22 >
+    au < manifest ; exists ; 1988 ; Pediatric Research Volume 23 ; 1988 ; 23 >
+    au < manifest ; exists ; 1988 ; Pediatric Research Volume 24 ; 1988 ; 24 >
+    au < manifest ; exists ; 1989 ; Pediatric Research Volume 25 ; 1989 ; 25 >
+    au < manifest ; exists ; 1989 ; Pediatric Research Volume 26 ; 1989 ; 26 >
+    au < manifest ; exists ; 1990 ; Pediatric Research Volume 27 ; 1990 ; 27 >
+    au < manifest ; exists ; 1990 ; Pediatric Research Volume 28 ; 1990 ; 28 >
+    au < manifest ; exists ; 1991 ; Pediatric Research Volume 29 ; 1991 ; 29 >
+    au < manifest ; exists ; 1991 ; Pediatric Research Volume 30 ; 1991 ; 30 >
+    au < manifest ; exists ; 1992 ; Pediatric Research Volume 31 ; 1992 ; 31 >
+    au < manifest ; exists ; 1992 ; Pediatric Research Volume 32 ; 1992 ; 32 >
+    au < manifest ; exists ; 1993 ; Pediatric Research Volume 33 ; 1993 ; 33 >
+    au < manifest ; exists ; 1993 ; Pediatric Research Volume 34 ; 1993 ; 34 >
+    au < manifest ; exists ; 1994 ; Pediatric Research Volume 35 ; 1994 ; 35 >
+    au < manifest ; exists ; 1994 ; Pediatric Research Volume 36 ; 1994 ; 36 >
+    au < manifest ; exists ; 1995 ; Pediatric Research Volume 37 ; 1995 ; 37 >
+    au < manifest ; exists ; 1995 ; Pediatric Research Volume 38 ; 1995 ; 38 >
+    au < manifest ; exists ; 1996 ; Pediatric Research Volume 39 ; 1996 ; 39 >
+    au < manifest ; exists ; 1996 ; Pediatric Research Volume 40 ; 1996 ; 40 >
+    au < manifest ; exists ; 1997 ; Pediatric Research Volume 41 ; 1997 ; 41 >
+    au < manifest ; exists ; 1997 ; Pediatric Research Volume 42 ; 1997 ; 42 >
+    au < manifest ; exists ; 1998 ; Pediatric Research Volume 43 ; 1998 ; 43 >
+    au < manifest ; exists ; 1998 ; Pediatric Research Volume 44 ; 1998 ; 44 >
+    au < manifest ; exists ; 1999 ; Pediatric Research Volume 45 ; 1999 ; 45 >
+    au < manifest ; exists ; 1999 ; Pediatric Research Volume 46 ; 1999 ; 46 >
+    au < manifest ; exists ; 2000 ; Pediatric Research Volume 47 ; 2000 ; 47 >
+    au < manifest ; exists ; 2000 ; Pediatric Research Volume 48 ; 2000 ; 48 >
+    au < manifest ; exists ; 2001 ; Pediatric Research Volume 49 ; 2001 ; 49 >
+    au < manifest ; exists ; 2001 ; Pediatric Research Volume 50 ; 2001 ; 50 >
+    au < manifest ; exists ; 2002 ; Pediatric Research Volume 51 ; 2002 ; 51 >
+    au < manifest ; exists ; 2002 ; Pediatric Research Volume 52 ; 2002 ; 52 >
+    au < manifest ; exists ; 2003 ; Pediatric Research Volume 53 ; 2003 ; 53 >
+    au < manifest ; exists ; 2003 ; Pediatric Research Volume 54 ; 2003 ; 54 >
+    au < manifest ; exists ; 2004 ; Pediatric Research Volume 55 ; 2004 ; 55 >
+    au < manifest ; exists ; 2004 ; Pediatric Research Volume 56 ; 2004 ; 56 >
+    au < manifest ; exists ; 2005 ; Pediatric Research Volume 57 ; 2005 ; 57 >
+    au < manifest ; exists ; 2005 ; Pediatric Research Volume 58 ; 2005 ; 58 >
+    au < manifest ; exists ; 2006 ; Pediatric Research Volume 59 ; 2006 ; 59 >
+    au < manifest ; exists ; 2006 ; Pediatric Research Volume 60 ; 2006 ; 60 >
+    au < manifest ; exists ; 2007 ; Pediatric Research Volume 61 ; 2007 ; 61 >
+    au < manifest ; exists ; 2007 ; Pediatric Research Volume 62 ; 2007 ; 62 >
+    au < manifest ; exists ; 2008 ; Pediatric Research Volume 63 ; 2008 ; 63 >
+    au < manifest ; exists ; 2008 ; Pediatric Research Volume 64 ; 2008 ; 64 >
+    au < manifest ; exists ; 2009 ; Pediatric Research Volume 65 ; 2009 ; 65 >
+    au < manifest ; exists ; 2009 ; Pediatric Research Volume 66 ; 2009 ; 66 >
+    au < manifest ; exists ; 2010 ; Pediatric Research Volume 67 ; 2010 ; 67 >
+    au < manifest ; exists ; 2010 ; Pediatric Research Volume 68 ; 2010 ; 68 >
+    au < manifest ; exists ; 2011 ; Pediatric Research Volume 69 ; 2011 ; 69 >
+    au < manifest ; exists ; 2011 ; Pediatric Research Volume 70 ; 2011 ; 70 >
+    au < manifest ; exists ; 2012 ; Pediatric Research Volume 71 ; 2012 ; 71 >
+    au < manifest ; exists ; 2012 ; Pediatric Research Volume 72 ; 2012 ; 72 >
+    au < manifest ; exists ; 2013 ; Pediatric Research Volume 73 ; 2013 ; 73 >
+    au < expected ; exists ; 2013 ; Pediatric Research Volume 74 ; 2013 ; 74 >
   }
 
   {
@@ -3817,6 +3945,25 @@
 
   }
 
+{
+
+    title <
+      name = Polymer Journal ;
+      issn = 0032-3896 ;
+      eissn = 1349-0540
+    >
+
+    param[journal_id] = pj
+
+	au < manifest ; exists ; 2006 ; Polymer Journal Volume 38 ; 2006 ; 38 >
+    au < manifest ; exists ; 2007 ; Polymer Journal Volume 39 ; 2007 ; 39 >
+    au < manifest ; exists ; 2008 ; Polymer Journal Volume 40 ; 2008 ; 40 >
+    au < manifest ; exists ; 2009 ; Polymer Journal Volume 41 ; 2009 ; 41 >
+    au < manifest ; exists ; 2010 ; Polymer Journal Volume 42 ; 2010 ; 42 >
+    au < manifest ; exists ; 2011 ; Polymer Journal Volume 43 ; 2011 ; 43 >
+    au < manifest ; exists ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 >
+    au < manifest ; exists ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 >
+  }
   {
 
     title <
