@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-	<string>2</string>
+	<string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -46,7 +46,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;International Union of Crystallography Plugin, Base URL %s, Scripts URL %s, Journal ID %s, Year %d, Issue %s&quot;, base_url, scripts_url, journal_id, year, issue</string>
+    <string>"International Union of Crystallography Plugin, Base URL %s, Scripts URL %s, Journal ID %s, Year %d, Issue %s", base_url, scripts_url, journal_id, year, issue</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -55,40 +55,40 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^https?://(%s|%s)/&quot;, base_url_host, scripts_url_host</string>
-      <string>1,&quot;^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host, scripts_url_host</string>
-      <string>1,&quot;^%s%s/issues/%d/lockss\.html$&quot;, base_url, journal_id, year</string>
-      <string>1,&quot;^%slockss\.html$&quot;, scripts_url</string>
-      <string>1,&quot;^%s%s/issues/%d/%s/&quot;, base_url, journal_id, year, issue</string>
-      <string>1,&quot;^%scgi-bin/(sendcif|sendsup|sendsupfiles)\?&quot;, scripts_url</string>
+      <string>4,"^https?://(%s|%s)/", base_url_host, scripts_url_host</string>
+      <string>1,"^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, scripts_url_host</string>
+      <string>1,"^%s%s/issues/%d/lockss\.html$", base_url, journal_id, year</string>
+      <string>1,"^%slockss\.html$", scripts_url</string>
+      <string>1,"^%s%s/issues/%d/%s/", base_url, journal_id, year, issue</string>
+      <string>1,"^%scgi-bin/(sendcif|sendsup|sendsupfiles)\?", scripts_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%s/issues/%d/%s/00/issconts.html&quot;, base_url, journal_id, year, issue</string>
+    <string>"%s%s/issues/%d/%s/00/issconts.html", base_url, journal_id, year, issue</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
     <entry>
       <string>au_title</string>
-      <string>&quot;%s%s/journalhomepage.html&quot;, base_url, journal_id</string>
+      <string>"%s%s/journalhomepage.html", base_url, journal_id</string>
     </entry>
     <entry>
       <string>au_volume</string>
-      <string>&quot;%s%s/issues/%d/csaindx.html&quot;, base_url, journal_id, year</string>
+      <string>"%s%s/issues/%d/csaindx.html", base_url, journal_id, year</string>
     </entry>
     <entry>
       <string>au_issue</string>
-      <string>&quot;%s%s/issues/%d/%s/00/issconts.html&quot;, base_url, journal_id, year, issue</string>
+      <string>"%s%s/issues/%d/%s/00/issconts.html", base_url, journal_id, year, issue</string>
     </entry>
     </map>
   </entry>
   <entry>
     <string>au_manifest</string>
     <list>
-      <string>&quot;%s%s/issues/%d/lockss.html&quot;, base_url, journal_id, year</string>
-      <string>&quot;%slockss.html&quot;, scripts_url</string>
+      <string>"%s%s/issues/%d/lockss.html", base_url, journal_id, year</string>
+      <string>"%slockss.html", scripts_url</string>
     </list>
   </entry>
   <entry>
@@ -148,7 +148,20 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%s%s/issues/%d/%s/00/[^/]+/index\.html$&quot;, base_url, journal_id, year, issue</string>
+      <string>"^%s%s/issues/%d/%s/00/[^/]+/index\.html$", base_url, journal_id, year, issue</string>
     </list>
+  </entry>
+    <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.internationalunionofcrystallography.InternationalUnionOfCrystallographyArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.internationalunionofcrystallography.InternationalUnionOfCrystallographyHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
 </map>
