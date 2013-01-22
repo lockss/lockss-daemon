@@ -4015,7 +4015,33 @@
   }
 
   {
+    title <
+      name = Scientific American ; 
+      issn = ISSN: 0036-8733
+    >
+    
+    param[journal_id] = scientificamerican
+    
+    au < exists ; exists ; 2006 ; Scientific American Volume 294 ; 2006 ; 294 >
+    au < exists ; exists ; 2006 ; Scientific American Volume 295 ; 2006 ; 295 >
+    au < exists ; exists ; 2007 ; Scientific American Volume 296 ; 2007 ; 296 >
+    au < exists ; exists ; 2007 ; Scientific American Volume 297 ; 2007 ; 297 >
+    au < exists ; exists ; 2008 ; Scientific American Volume 298 ; 2008 ; 298 >
+    au < exists ; exists ; 2008 ; Scientific American Volume 299 ; 2008 ; 299 >
+    au < exists ; exists ; 2009 ; Scientific American Volume 300 ; 2009 ; 300 >
+    au < exists ; exists ; 2009 ; Scientific American Volume 301 ; 2009 ; 301 >
+    au < exists ; exists ; 2010 ; Scientific American Volume 302 ; 2010 ; 302 >
+    au < exists ; exists ; 2010 ; Scientific American Volume 303 ; 2010 ; 303 >
+    au < exists ; exists ; 2011 ; Scientific American Volume 304 ; 2011 ; 304 >
+    au < exists ; exists ; 2011 ; Scientific American Volume 305 ; 2011 ; 305 >
+    au < exists ; exists ; 2012 ; Scientific American Volume 306 ; 2012 ; 306 >
+    au < exists ; exists ; 2012 ; Scientific American Volume 307 ; 2012 ; 307 >
+    au < exists ; exists ; 2013 ; Scientific American Volume 308 ; 2013 ; 308 >
+    au < exists ; exists ; 2013 ; Scientific American Volume 309 ; 2013 ; 309 >
+    
+  }
 
+  {
     title <
       name = Spinal Cord ;
       issn = 1362-4393 ;
