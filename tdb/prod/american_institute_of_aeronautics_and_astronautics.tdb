@@ -23,9 +23,123 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       issnl = 0001-1452
     >
     param[journal_id] = aiaaj
-    
+
+    au < exists ; 1963 ; AIAA Journal Volume 1 ; 1 >
+    au < exists ; 1964 ; AIAA Journal Volume 2 ; 2 >
+    au < exists ; 1965 ; AIAA Journal Volume 3 ; 3 >
+    au < exists ; 1966 ; AIAA Journal Volume 4 ; 4 >
+    au < exists ; 1967 ; AIAA Journal Volume 5 ; 5 >
+    au < exists ; 1968 ; AIAA Journal Volume 6 ; 6 >
+    au < exists ; 1969 ; AIAA Journal Volume 7 ; 7 >
+    au < exists ; 1970 ; AIAA Journal Volume 8 ; 8 >
+    au < exists ; 1971 ; AIAA Journal Volume 9 ; 9 >
+    au < exists ; 1972 ; AIAA Journal Volume 10 ; 10 >
+    au < exists ; 1973 ; AIAA Journal Volume 11 ; 11 >
+    au < exists ; 1974 ; AIAA Journal Volume 12 ; 12 >
+    au < exists ; 1975 ; AIAA Journal Volume 13 ; 13 >
+    au < exists ; 1976 ; AIAA Journal Volume 14 ; 14 >
+    au < exists ; 1977 ; AIAA Journal Volume 15 ; 15 >
+    au < exists ; 1978 ; AIAA Journal Volume 16 ; 16 >
+    au < exists ; 1979 ; AIAA Journal Volume 17 ; 17 >
+    au < exists ; 1980 ; AIAA Journal Volume 18 ; 18 >
+    au < exists ; 1981 ; AIAA Journal Volume 19 ; 19 >
+    au < exists ; 1982 ; AIAA Journal Volume 20 ; 20 >
+    au < exists ; 1983 ; AIAA Journal Volume 21 ; 21 >
+    au < exists ; 1984 ; AIAA Journal Volume 22 ; 22 >
+    au < exists ; 1985 ; AIAA Journal Volume 23 ; 23 >
+    au < exists ; 1986 ; AIAA Journal Volume 24 ; 24 >
+    au < exists ; 1987 ; AIAA Journal Volume 25 ; 25 >
+    au < exists ; 1988 ; AIAA Journal Volume 26 ; 26 >
+    au < exists ; 1989 ; AIAA Journal Volume 27 ; 27 >
+    au < exists ; 1990 ; AIAA Journal Volume 28 ; 28 >
+    au < exists ; 1991 ; AIAA Journal Volume 29 ; 29 >
+    au < exists ; 1992 ; AIAA Journal Volume 30 ; 30 >
+    au < exists ; 1993 ; AIAA Journal Volume 31 ; 31 >
+    au < exists ; 1994 ; AIAA Journal Volume 32 ; 32 >
+    au < exists ; 1995 ; AIAA Journal Volume 33 ; 33 >
+    au < exists ; 1996 ; AIAA Journal Volume 34 ; 34 >
+    au < exists ; 1997 ; AIAA Journal Volume 35 ; 35 >
+    au < exists ; 1998 ; AIAA Journal Volume 36 ; 36 >
+    au < exists ; 1999 ; AIAA Journal Volume 37 ; 37 >
+    au < exists ; 2000 ; AIAA Journal Volume 38 ; 38 >
+    au < exists ; 2001 ; AIAA Journal Volume 39 ; 39 >
+    au < exists ; 2002 ; AIAA Journal Volume 40 ; 40 >
+    au < exists ; 2003 ; AIAA Journal Volume 41 ; 41 >
+    au < exists ; 2004 ; AIAA Journal Volume 42 ; 42 >
+    au < exists ; 2005 ; AIAA Journal Volume 43 ; 43 >
+    au < exists ; 2006 ; AIAA Journal Volume 44 ; 44 >
+    au < exists ; 2007 ; AIAA Journal Volume 45 ; 45 >
+    au < exists ; 2008 ; AIAA Journal Volume 46 ; 46 >
+    au < exists ; 2009 ; AIAA Journal Volume 47 ; 47 >
+    au < exists ; 2010 ; AIAA Journal Volume 48 ; 48 >
+    au < exists ; 2011 ; AIAA Journal Volume 49 ; 49 >
+    au < exists ; 2012 ; AIAA Journal Volume 50 ; 50 >
+    au < exists ; 2013 ; AIAA Journal Volume 51 ; 51 >
+
   } 
-  
+
+  {
+
+    title <
+      name = ARS Journal ;
+      issn = ;
+      issnl = 
+    >
+    param[journal_id] = arsj
+
+    comment[access] = No access to this title.
+
+    au < exists ; 1959 ; ARS Journal Volume 29 ; 29 >
+    au < exists ; 1960 ; ARS Journal Volume 30 ; 30 >
+    au < exists ; 1961 ; ARS Journal Volume 31 ; 31 >
+    au < exists ; 1962 ; ARS Journal Volume 32 ; 32 >
+
+  }
+
+  {
+
+    title <
+      name = Astronautics ;
+      issn = ;
+      issnl = 
+    >
+    param[journal_id] = jastn
+
+    comment[access] = No access to this title.
+
+    au < exists ; 1932 ; Astronautics Volume 2 ; 2 >
+    au < exists ; 1933 ; Astronautics Volume 3 ; 3 >
+    au < exists ; 1934 ; Astronautics Volume 4 ; 4 >
+    au < exists ; 1935 ; Astronautics Volume 5 ; 5 >
+    au < exists ; 1936 ; Astronautics Volume 6 ; 6 >
+    au < exists ; 1937 ; Astronautics Volume 7 ; 7 >
+    au < exists ; 1938 ; Astronautics Volume 8 ; 8 >
+    au < exists ; 1939 ; Astronautics Volume 9 ; 9 >
+    au < exists ; 1940 ; Astronautics Volume 10 ; 10 >
+    au < exists ; 1941 ; Astronautics Volume 11 ; 11 >
+    au < exists ; 1942 ; Astronautics Volume 12 ; 12 >
+    au < exists ; 1943 ; Astronautics Volume 13 ; 13 >
+    au < exists ; 1944 ; Astronautics Volume 14 ; 14 >
+
+  }
+
+  {
+
+    title <
+      name = Bulletin of the American Interplanetary Society ;
+      issn = ;
+      issnl = 
+    >
+    param[journal_id] = bais
+
+    comment[access] = No access to this title.
+
+    au < exists ; 1930 ; Bulletin of the American Interplanetary Society Volume 0 ; 0 >
+    au < exists ; 1931 ; Bulletin of the American Interplanetary Society Volume 1 ; 1 >
+    au < exists ; 1932 ; Bulletin of the American Interplanetary Society Volume 2 ; 2 >
+
+  }
+
   {
 
     title <
@@ -34,7 +148,17 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       issnl = 1542-9423
     >
     param[journal_id] = jacic
-    
+
+    au < exists ; 2004 ; Journal of Aerospace Computing, Information, and Communication Volume 1 ; 1 >
+    au < exists ; 2005 ; Journal of Aerospace Computing, Information, and Communication Volume 2 ; 2 >
+    au < exists ; 2006 ; Journal of Aerospace Computing, Information, and Communication Volume 3 ; 3 >
+    au < exists ; 2007 ; Journal of Aerospace Computing, Information, and Communication Volume 4 ; 4 >
+    au < exists ; 2008 ; Journal of Aerospace Computing, Information, and Communication Volume 5 ; 5 >
+    au < exists ; 2009 ; Journal of Aerospace Computing, Information, and Communication Volume 6 ; 6 >
+    au < exists ; 2010 ; Journal of Aerospace Computing, Information, and Communication Volume 7 ; 7 >
+    au < exists ; 2011 ; Journal of Aerospace Computing, Information, and Communication Volume 8 ; 8 >
+    au < exists ; 2012 ; Journal of Aerospace Computing, Information, and Communication Volume 9 ; 9 >
+
   }
 
   {
@@ -46,7 +170,57 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       issnl = 0021-8669
     >
     param[journal_id] = ja
-    
+
+    au < exists ; 1964 ; Journal of Aircraft Volume 1 ; 1 >
+    au < exists ; 1965 ; Journal of Aircraft Volume 2 ; 2 >
+    au < exists ; 1966 ; Journal of Aircraft Volume 3 ; 3 >
+    au < exists ; 1967 ; Journal of Aircraft Volume 4 ; 4 >
+    au < exists ; 1968 ; Journal of Aircraft Volume 5 ; 5 >
+    au < exists ; 1969 ; Journal of Aircraft Volume 6 ; 6 >
+    au < exists ; 1970 ; Journal of Aircraft Volume 7 ; 7 >
+    au < exists ; 1971 ; Journal of Aircraft Volume 8 ; 8 >
+    au < exists ; 1972 ; Journal of Aircraft Volume 9 ; 9 >
+    au < exists ; 1973 ; Journal of Aircraft Volume 10 ; 10 >
+    au < exists ; 1974 ; Journal of Aircraft Volume 11 ; 11 >
+    au < exists ; 1975 ; Journal of Aircraft Volume 12 ; 12 >
+    au < exists ; 1976 ; Journal of Aircraft Volume 13 ; 13 >
+    au < exists ; 1977 ; Journal of Aircraft Volume 14 ; 14 >
+    au < exists ; 1978 ; Journal of Aircraft Volume 15 ; 15 >
+    au < exists ; 1979 ; Journal of Aircraft Volume 16 ; 16 >
+    au < exists ; 1980 ; Journal of Aircraft Volume 17 ; 17 >
+    au < exists ; 1981 ; Journal of Aircraft Volume 18 ; 18 >
+    au < exists ; 1982 ; Journal of Aircraft Volume 19 ; 19 >
+    au < exists ; 1983 ; Journal of Aircraft Volume 20 ; 20 >
+    au < exists ; 1984 ; Journal of Aircraft Volume 21 ; 21 >
+    au < exists ; 1985 ; Journal of Aircraft Volume 22 ; 22 >
+    au < exists ; 1986 ; Journal of Aircraft Volume 23 ; 23 >
+    au < exists ; 1987 ; Journal of Aircraft Volume 24 ; 24 >
+    au < exists ; 1988 ; Journal of Aircraft Volume 25 ; 25 >
+    au < exists ; 1989 ; Journal of Aircraft Volume 26 ; 26 >
+    au < exists ; 1990 ; Journal of Aircraft Volume 27 ; 27 >
+    au < exists ; 1991 ; Journal of Aircraft Volume 28 ; 28 >
+    au < exists ; 1992 ; Journal of Aircraft Volume 29 ; 29 >
+    au < exists ; 1993 ; Journal of Aircraft Volume 30 ; 30 >
+    au < exists ; 1994 ; Journal of Aircraft Volume 31 ; 31 >
+    au < exists ; 1995 ; Journal of Aircraft Volume 32 ; 32 >
+    au < exists ; 1996 ; Journal of Aircraft Volume 33 ; 33 >
+    au < exists ; 1997 ; Journal of Aircraft Volume 34 ; 34 >
+    au < exists ; 1998 ; Journal of Aircraft Volume 35 ; 35 >
+    au < exists ; 1999 ; Journal of Aircraft Volume 36 ; 36 >
+    au < exists ; 2000 ; Journal of Aircraft Volume 37 ; 37 >
+    au < exists ; 2001 ; Journal of Aircraft Volume 38 ; 38 >
+    au < exists ; 2002 ; Journal of Aircraft Volume 39 ; 39 >
+    au < exists ; 2003 ; Journal of Aircraft Volume 40 ; 40 >
+    au < exists ; 2004 ; Journal of Aircraft Volume 41 ; 41 >
+    au < exists ; 2005 ; Journal of Aircraft Volume 42 ; 42 >
+    au < exists ; 2006 ; Journal of Aircraft Volume 43 ; 43 >
+    au < exists ; 2007 ; Journal of Aircraft Volume 44 ; 44 >
+    au < exists ; 2008 ; Journal of Aircraft Volume 45 ; 45 >
+    au < exists ; 2009 ; Journal of Aircraft Volume 46 ; 46 >
+    au < exists ; 2010 ; Journal of Aircraft Volume 47 ; 47 >
+    au < exists ; 2011 ; Journal of Aircraft Volume 48 ; 48 >
+    au < exists ; 2012 ; Journal of Aircraft Volume 49 ; 49 >
+
   }
 
   {
@@ -58,8 +232,16 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       issnl = 0146-0412
     >
     param[journal_id] = je
-    
-  } 
+
+    au < exists ; 1977 ; Journal of Energy Volume 1 ; 1 >
+    au < exists ; 1978 ; Journal of Energy Volume 2 ; 2 >
+    au < exists ; 1979 ; Journal of Energy Volume 3 ; 3 >
+    au < exists ; 1980 ; Journal of Energy Volume 4 ; 4 >
+    au < exists ; 1981 ; Journal of Energy Volume 5 ; 5 >
+    au < exists ; 1982 ; Journal of Energy Volume 6 ; 6 >
+    au < exists ; 1983 ; Journal of Energy Volume 7 ; 7 >
+
+  }
 
   {
 
@@ -70,8 +252,44 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       issnl = 0731-5090
     >
     param[journal_id] = jgcd
-    
-  } 
+
+    au < exists ; 1978 ; Journal of Guidance, Control, and Dynamics Volume 1 ; 1 >
+    au < exists ; 1979 ; Journal of Guidance, Control, and Dynamics Volume 2 ; 2 >
+    au < exists ; 1980 ; Journal of Guidance, Control, and Dynamics Volume 3 ; 3 >
+    au < exists ; 1981 ; Journal of Guidance, Control, and Dynamics Volume 4 ; 4 >
+    au < exists ; 1982 ; Journal of Guidance, Control, and Dynamics Volume 5 ; 5 >
+    au < exists ; 1983 ; Journal of Guidance, Control, and Dynamics Volume 6 ; 6 >
+    au < exists ; 1984 ; Journal of Guidance, Control, and Dynamics Volume 7 ; 7 >
+    au < exists ; 1985 ; Journal of Guidance, Control, and Dynamics Volume 8 ; 8 >
+    au < exists ; 1986 ; Journal of Guidance, Control, and Dynamics Volume 9 ; 9 >
+    au < exists ; 1987 ; Journal of Guidance, Control, and Dynamics Volume 10 ; 10 >
+    au < exists ; 1988 ; Journal of Guidance, Control, and Dynamics Volume 11 ; 11 >
+    au < exists ; 1989 ; Journal of Guidance, Control, and Dynamics Volume 12 ; 12 >
+    au < exists ; 1990 ; Journal of Guidance, Control, and Dynamics Volume 13 ; 13 >
+    au < exists ; 1991 ; Journal of Guidance, Control, and Dynamics Volume 14 ; 14 >
+    au < exists ; 1992 ; Journal of Guidance, Control, and Dynamics Volume 15 ; 15 >
+    au < exists ; 1993 ; Journal of Guidance, Control, and Dynamics Volume 16 ; 16 >
+    au < exists ; 1994 ; Journal of Guidance, Control, and Dynamics Volume 17 ; 17 >
+    au < exists ; 1995 ; Journal of Guidance, Control, and Dynamics Volume 18 ; 18 >
+    au < exists ; 1996 ; Journal of Guidance, Control, and Dynamics Volume 19 ; 19 >
+    au < exists ; 1997 ; Journal of Guidance, Control, and Dynamics Volume 20 ; 20 >
+    au < exists ; 1998 ; Journal of Guidance, Control, and Dynamics Volume 21 ; 21 >
+    au < exists ; 1999 ; Journal of Guidance, Control, and Dynamics Volume 22 ; 22 >
+    au < exists ; 2000 ; Journal of Guidance, Control, and Dynamics Volume 23 ; 23 >
+    au < exists ; 2001 ; Journal of Guidance, Control, and Dynamics Volume 24 ; 24 >
+    au < exists ; 2002 ; Journal of Guidance, Control, and Dynamics Volume 25 ; 25 >
+    au < exists ; 2003 ; Journal of Guidance, Control, and Dynamics Volume 26 ; 26 >
+    au < exists ; 2004 ; Journal of Guidance, Control, and Dynamics Volume 27 ; 27 >
+    au < exists ; 2005 ; Journal of Guidance, Control, and Dynamics Volume 28 ; 28 >
+    au < exists ; 2006 ; Journal of Guidance, Control, and Dynamics Volume 29 ; 29 >
+    au < exists ; 2007 ; Journal of Guidance, Control, and Dynamics Volume 30 ; 30 >
+    au < exists ; 2008 ; Journal of Guidance, Control, and Dynamics Volume 31 ; 31 >
+    au < exists ; 2009 ; Journal of Guidance, Control, and Dynamics Volume 32 ; 32 >
+    au < exists ; 2010 ; Journal of Guidance, Control, and Dynamics Volume 33 ; 33 >
+    au < exists ; 2011 ; Journal of Guidance, Control, and Dynamics Volume 34 ; 34 >
+    au < exists ; 2012 ; Journal of Guidance, Control, and Dynamics Volume 35 ; 35 >
+
+  }
 
   {
 
@@ -82,8 +300,42 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       issnl = 0022-1716
     >
     param[journal_id] = jh
-    
-  } 
+
+    au < exists ; 1967 ; Journal of Hydronautics Volume 1 ; 1 >
+    au < exists ; 1968 ; Journal of Hydronautics Volume 2 ; 2 >
+    au < exists ; 1969 ; Journal of Hydronautics Volume 3 ; 3 >
+    au < exists ; 1970 ; Journal of Hydronautics Volume 4 ; 4 >
+    au < exists ; 1971 ; Journal of Hydronautics Volume 5 ; 5 >
+    au < exists ; 1972 ; Journal of Hydronautics Volume 6 ; 6 >
+    au < exists ; 1973 ; Journal of Hydronautics Volume 7 ; 7 >
+    au < exists ; 1974 ; Journal of Hydronautics Volume 8 ; 8 >
+    au < exists ; 1975 ; Journal of Hydronautics Volume 9 ; 9 >
+    au < exists ; 1976 ; Journal of Hydronautics Volume 10 ; 10 >
+    au < exists ; 1977 ; Journal of Hydronautics Volume 11 ; 11 >
+    au < exists ; 1978 ; Journal of Hydronautics Volume 12 ; 12 >
+    au < exists ; 1979 ; Journal of Hydronautics Volume 13 ; 13 >
+    au < exists ; 1980 ; Journal of Hydronautics Volume 14 ; 14 >
+    au < exists ; 1981 ; Journal of Hydronautics Volume 15 ; 15 >
+
+  }
+
+  {
+    title <
+      name = Journal of Jet Propulsion ;
+      issn = ;
+      issnl = 
+    >
+    param[journal_id] = jjp
+
+    comment[access] = no access to this title.
+
+    au < exists ; 1954 ; Journal of Jet Propulsion Volume 24 ; 24 >
+    au < exists ; 1955 ; Journal of Jet Propulsion Volume 25 ; 25 >
+    au < exists ; 1956 ; Journal of Jet Propulsion Volume 26 ; 26 >
+    au < exists ; 1957 ; Journal of Jet Propulsion Volume 27 ; 27 >
+    au < exists ; 1958 ; Journal of Jet Propulsion Volume 28 ; 28 >
+
+  }
 
   {
 
@@ -94,8 +346,37 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       issnl = 0748-4658
     >
     param[journal_id] = jpp
-    
-  } 
+
+    au < exists ; 1985 ; Journal of Propulsion and Power Volume 1 ; 1 >
+    au < exists ; 1986 ; Journal of Propulsion and Power Volume 2 ; 2 >
+    au < exists ; 1987 ; Journal of Propulsion and Power Volume 3 ; 3 >
+    au < exists ; 1988 ; Journal of Propulsion and Power Volume 4 ; 4 >
+    au < exists ; 1989 ; Journal of Propulsion and Power Volume 5 ; 5 >
+    au < exists ; 1990 ; Journal of Propulsion and Power Volume 6 ; 6 >
+    au < exists ; 1991 ; Journal of Propulsion and Power Volume 7 ; 7 >
+    au < exists ; 1992 ; Journal of Propulsion and Power Volume 8 ; 8 >
+    au < exists ; 1993 ; Journal of Propulsion and Power Volume 9 ; 9 >
+    au < exists ; 1994 ; Journal of Propulsion and Power Volume 10 ; 10 >
+    au < exists ; 1995 ; Journal of Propulsion and Power Volume 11 ; 11 >
+    au < exists ; 1996 ; Journal of Propulsion and Power Volume 12 ; 12 >
+    au < exists ; 1997 ; Journal of Propulsion and Power Volume 13 ; 13 >
+    au < exists ; 1998 ; Journal of Propulsion and Power Volume 14 ; 14 >
+    au < exists ; 1999 ; Journal of Propulsion and Power Volume 15 ; 15 >
+    au < exists ; 2000 ; Journal of Propulsion and Power Volume 16 ; 16 >
+    au < exists ; 2001 ; Journal of Propulsion and Power Volume 17 ; 17 >
+    au < exists ; 2002 ; Journal of Propulsion and Power Volume 18 ; 18 >
+    au < exists ; 2003 ; Journal of Propulsion and Power Volume 19 ; 19 >
+    au < exists ; 2004 ; Journal of Propulsion and Power Volume 20 ; 20 >
+    au < exists ; 2005 ; Journal of Propulsion and Power Volume 21 ; 21 >
+    au < exists ; 2006 ; Journal of Propulsion and Power Volume 22 ; 22 >
+    au < exists ; 2007 ; Journal of Propulsion and Power Volume 23 ; 23 >
+    au < exists ; 2008 ; Journal of Propulsion and Power Volume 24 ; 24 >
+    au < exists ; 2009 ; Journal of Propulsion and Power Volume 25 ; 25 >
+    au < exists ; 2010 ; Journal of Propulsion and Power Volume 26 ; 26 >
+    au < exists ; 2011 ; Journal of Propulsion and Power Volume 27 ; 27 >
+    au < exists ; 2012 ; Journal of Propulsion and Power Volume 28 ; 28 >
+
+  }
 
   {
 
@@ -106,8 +387,134 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       issnl = 0022-4650
     >
     param[journal_id] = jsr
-    
-  } 
+
+    au < exists ; 1964 ; Journal of Spacecraft and Rockets Volume 1 ; 1 >
+    au < exists ; 1965 ; Journal of Spacecraft and Rockets Volume 2 ; 2 >
+    au < exists ; 1966 ; Journal of Spacecraft and Rockets Volume 3 ; 3 >
+    au < exists ; 1967 ; Journal of Spacecraft and Rockets Volume 4 ; 4 >
+    au < exists ; 1968 ; Journal of Spacecraft and Rockets Volume 5 ; 5 >
+    au < exists ; 1969 ; Journal of Spacecraft and Rockets Volume 6 ; 6 >
+    au < exists ; 1970 ; Journal of Spacecraft and Rockets Volume 7 ; 7 >
+    au < exists ; 1971 ; Journal of Spacecraft and Rockets Volume 8 ; 8 >
+    au < exists ; 1972 ; Journal of Spacecraft and Rockets Volume 9 ; 9 >
+    au < exists ; 1973 ; Journal of Spacecraft and Rockets Volume 10 ; 10 >
+    au < exists ; 1974 ; Journal of Spacecraft and Rockets Volume 11 ; 11 >
+    au < exists ; 1975 ; Journal of Spacecraft and Rockets Volume 12 ; 12 >
+    au < exists ; 1976 ; Journal of Spacecraft and Rockets Volume 13 ; 13 >
+    au < exists ; 1977 ; Journal of Spacecraft and Rockets Volume 14 ; 14 >
+    au < exists ; 1978 ; Journal of Spacecraft and Rockets Volume 15 ; 15 >
+    au < exists ; 1979 ; Journal of Spacecraft and Rockets Volume 16 ; 16 >
+    au < exists ; 1980 ; Journal of Spacecraft and Rockets Volume 17 ; 17 >
+    au < exists ; 1981 ; Journal of Spacecraft and Rockets Volume 18 ; 18 >
+    au < exists ; 1982 ; Journal of Spacecraft and Rockets Volume 19 ; 19 >
+    au < exists ; 1983 ; Journal of Spacecraft and Rockets Volume 20 ; 20 >
+    au < exists ; 1984 ; Journal of Spacecraft and Rockets Volume 21 ; 21 >
+    au < exists ; 1985 ; Journal of Spacecraft and Rockets Volume 22 ; 22 >
+    au < exists ; 1986 ; Journal of Spacecraft and Rockets Volume 23 ; 23 >
+    au < exists ; 1987 ; Journal of Spacecraft and Rockets Volume 24 ; 24 >
+    au < exists ; 1988 ; Journal of Spacecraft and Rockets Volume 25 ; 25 >
+    au < exists ; 1989 ; Journal of Spacecraft and Rockets Volume 26 ; 26 >
+    au < exists ; 1990 ; Journal of Spacecraft and Rockets Volume 27 ; 27 >
+    au < exists ; 1991 ; Journal of Spacecraft and Rockets Volume 28 ; 28 >
+    au < exists ; 1992 ; Journal of Spacecraft and Rockets Volume 29 ; 29 >
+    au < exists ; 1993 ; Journal of Spacecraft and Rockets Volume 30 ; 30 >
+    au < exists ; 1994 ; Journal of Spacecraft and Rockets Volume 31 ; 31 >
+    au < exists ; 1995 ; Journal of Spacecraft and Rockets Volume 32 ; 32 >
+    au < exists ; 1996 ; Journal of Spacecraft and Rockets Volume 33 ; 33 >
+    au < exists ; 1997 ; Journal of Spacecraft and Rockets Volume 34 ; 34 >
+    au < exists ; 1998 ; Journal of Spacecraft and Rockets Volume 35 ; 35 >
+    au < exists ; 1999 ; Journal of Spacecraft and Rockets Volume 36 ; 36 >
+    au < exists ; 2000 ; Journal of Spacecraft and Rockets Volume 37 ; 37 >
+    au < exists ; 2001 ; Journal of Spacecraft and Rockets Volume 38 ; 38 >
+    au < exists ; 2002 ; Journal of Spacecraft and Rockets Volume 39 ; 39 >
+    au < exists ; 2003 ; Journal of Spacecraft and Rockets Volume 40 ; 40 >
+    au < exists ; 2004 ; Journal of Spacecraft and Rockets Volume 41 ; 41 >
+    au < exists ; 2005 ; Journal of Spacecraft and Rockets Volume 42 ; 42 >
+    au < exists ; 2006 ; Journal of Spacecraft and Rockets Volume 43 ; 43 >
+    au < exists ; 2007 ; Journal of Spacecraft and Rockets Volume 44 ; 44 >
+    au < exists ; 2008 ; Journal of Spacecraft and Rockets Volume 45 ; 45 >
+    au < exists ; 2009 ; Journal of Spacecraft and Rockets Volume 46 ; 46 >
+    au < exists ; 2010 ; Journal of Spacecraft and Rockets Volume 47 ; 47 >
+    au < exists ; 2011 ; Journal of Spacecraft and Rockets Volume 48 ; 48 >
+    au < exists ; 2012 ; Journal of Spacecraft and Rockets Volume 49 ; 49 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) ;
+      issn = ;
+      issnl = 
+    >
+    param[journal_id] = jans
+
+    comment[access] = No access to this title
+
+    au < exists ; 1934 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 1 ; 1 >
+    au < exists ; 1935 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 2 ; 2 >
+    au < exists ; 1936 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 3 ; 3 >
+    au < exists ; 1937 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 4 ; 4 >
+    au < exists ; 1938 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 5 ; 5 >
+    au < exists ; 1939 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 6 ; 6 >
+    au < exists ; 1940 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 7 ; 7 >
+    au < exists ; 1941 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 8 ; 8 >
+    au < exists ; 1942 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 9 ; 9 >
+    au < exists ; 1943 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 10 ; 10 >
+    au < exists ; 1944 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 11 ; 11 >
+    au < exists ; 1945 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 12 ; 12 >
+    au < exists ; 1946 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 13 ; 13 >
+    au < exists ; 1947 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 14 ; 14 >
+    au < exists ; 1948 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 15 ; 15 >
+    au < exists ; 1949 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 16 ; 16 >
+    au < exists ; 1950 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 17 ; 17 >
+    au < exists ; 1951 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 18 ; 18 >
+    au < exists ; 1952 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 19 ; 19 >
+    au < exists ; 1953 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 20 ; 20 >
+    au < exists ; 1954 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 21 ; 21 >
+    au < exists ; 1955 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 22 ; 22 >
+    au < exists ; 1956 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 23 ; 23 >
+    au < exists ; 1957 ; Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences) Volume 24 ; 24 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of the Aerospace Sciences ;
+      issn = ;
+      issnl = 
+    >
+    param[journal_id] = jasps
+
+    comment[access] = no access to this title.
+
+    au < exists ; 1958 ; Journal of the Aerospace Sciences Volume 25 ; 25 >
+    au < exists ; 1959 ; Journal of the Aerospace Sciences Volume 26 ; 26 >
+    au < exists ; 1960 ; Journal of the Aerospace Sciences Volume 27 ; 27 >
+    au < exists ; 1961 ; Journal of the Aerospace Sciences Volume 28 ; 28 >
+    au < exists ; 1962 ; Journal of the Aerospace Sciences Volume 29 ; 29 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of the American Rocket Society ;
+      issn = ;
+      issnl = 
+    >
+    param[journal_id] = jars
+
+    comment[access] = No access to this title
+
+    au < exists ; 1949 ; Journal of the American Rocket Society Volume 19 ; 19 >
+    au < exists ; 1950 ; Journal of the American Rocket Society Volume 20 ; 20 >
+    au < exists ; 1951 ; Journal of the American Rocket Society Volume 21 ; 21 >
+    au < exists ; 1952 ; Journal of the American Rocket Society Volume 22 ; 22 >
+    au < exists ; 1953 ; Journal of the American Rocket Society Volume 23 ; 23 >
+
+  }
 
   {
 
@@ -118,7 +525,34 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       issnl = 0887-8722
     >
     param[journal_id] = jjtht
-    
+
+    au < exists ; 1987 ; Journal of Thermophysics and Heat Transfer Volume 1 ; 1 >
+    au < exists ; 1988 ; Journal of Thermophysics and Heat Transfer Volume 2 ; 2 >
+    au < exists ; 1989 ; Journal of Thermophysics and Heat Transfer Volume 3 ; 3 >
+    au < exists ; 1990 ; Journal of Thermophysics and Heat Transfer Volume 4 ; 4 >
+    au < exists ; 1991 ; Journal of Thermophysics and Heat Transfer Volume 5 ; 5 >
+    au < exists ; 1992 ; Journal of Thermophysics and Heat Transfer Volume 6 ; 6 >
+    au < exists ; 1993 ; Journal of Thermophysics and Heat Transfer Volume 7 ; 7 >
+    au < exists ; 1994 ; Journal of Thermophysics and Heat Transfer Volume 8 ; 8 >
+    au < exists ; 1995 ; Journal of Thermophysics and Heat Transfer Volume 9 ; 9 >
+    au < exists ; 1996 ; Journal of Thermophysics and Heat Transfer Volume 10 ; 10 >
+    au < exists ; 1997 ; Journal of Thermophysics and Heat Transfer Volume 11 ; 11 >
+    au < exists ; 1998 ; Journal of Thermophysics and Heat Transfer Volume 12 ; 12 >
+    au < exists ; 1999 ; Journal of Thermophysics and Heat Transfer Volume 13 ; 13 >
+    au < exists ; 2000 ; Journal of Thermophysics and Heat Transfer Volume 14 ; 14 >
+    au < exists ; 2001 ; Journal of Thermophysics and Heat Transfer Volume 15 ; 15 >
+    au < exists ; 2002 ; Journal of Thermophysics and Heat Transfer Volume 16 ; 16 >
+    au < exists ; 2003 ; Journal of Thermophysics and Heat Transfer Volume 15 ; 15 >
+    au < exists ; 2004 ; Journal of Thermophysics and Heat Transfer Volume 16 ; 16 >
+    au < exists ; 2005 ; Journal of Thermophysics and Heat Transfer Volume 17 ; 17 >
+    au < exists ; 2006 ; Journal of Thermophysics and Heat Transfer Volume 18 ; 18 >
+    au < exists ; 2007 ; Journal of Thermophysics and Heat Transfer Volume 19 ; 19 >
+    au < exists ; 2008 ; Journal of Thermophysics and Heat Transfer Volume 20 ; 20 >
+    au < exists ; 2009 ; Journal of Thermophysics and Heat Transfer Volume 21 ; 21 >
+    au < exists ; 2010 ; Journal of Thermophysics and Heat Transfer Volume 22 ; 22 >
+    au < exists ; 2011 ; Journal of Thermophysics and Heat Transfer Volume 23 ; 23 >
+    au < exists ; 2012 ; Journal of Thermophysics and Heat Transfer Volume 24 ; 24 >
+
   } 
   
 }
