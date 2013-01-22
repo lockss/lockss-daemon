@@ -266,7 +266,7 @@
     au < HighWirePressH20Plugin ; released ; 1974 ; Journal of Pharmacology and Experimental Therapeutics Volume 188 ; 188 >
     au < HighWirePressH20Plugin ; ready ; 1974 ; Journal of Pharmacology and Experimental Therapeutics Volume 189 ; 189 >
     au < HighWirePressH20Plugin ; notReady ; 1974 ; Journal of Pharmacology and Experimental Therapeutics Volume 190 ; 190 >
-    au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of Pharmacology and Experimental Therapeutics Volume 191 ; 191 >
+    au < HighWirePressH20Plugin ; ready ; 1974 ; Journal of Pharmacology and Experimental Therapeutics Volume 191 ; 191 >
     au < HighWirePressH20Plugin ; released ; 1975 ; Journal of Pharmacology and Experimental Therapeutics Volume 192 ; 192 >
     au < HighWirePressH20Plugin ; released ; 1975 ; Journal of Pharmacology and Experimental Therapeutics Volume 193 ; 193 >
     au < HighWirePressH20Plugin ; released ; 1975 ; Journal of Pharmacology and Experimental Therapeutics Volume 194 ; 194 >
@@ -307,7 +307,7 @@
     au < HighWirePressH20Plugin ; ready ; 1984 ; Journal of Pharmacology and Experimental Therapeutics Volume 229 ; 229 >
     au < HighWirePressH20Plugin ; ready ; 1984 ; Journal of Pharmacology and Experimental Therapeutics Volume 230 ; 230 >
     au < HighWirePressH20Plugin ; ready ; 1984 ; Journal of Pharmacology and Experimental Therapeutics Volume 231 ; 231 >
-    au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of Pharmacology and Experimental Therapeutics Volume 232 ; 232 >
+    au < HighWirePressH20Plugin ; ready ; 1985 ; Journal of Pharmacology and Experimental Therapeutics Volume 232 ; 232 >
     au < HighWirePressH20Plugin ; ready ; 1985 ; Journal of Pharmacology and Experimental Therapeutics Volume 233 ; 233 >
     au < HighWirePressH20Plugin ; ready ; 1985 ; Journal of Pharmacology and Experimental Therapeutics Volume 234 ; 234 >
     au < HighWirePressH20Plugin ; ready ; 1985 ; Journal of Pharmacology and Experimental Therapeutics Volume 235 ; 235 >
@@ -480,46 +480,46 @@
 
     param[base_url] = http://molpharm.aspetjournals.org/
 
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Molecular Pharmacology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Molecular Pharmacology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Molecular Pharmacology Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Molecular Pharmacology Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Molecular Pharmacology Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Molecular Pharmacology Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Molecular Pharmacology Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Molecular Pharmacology Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Molecular Pharmacology Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Molecular Pharmacology Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Molecular Pharmacology Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Molecular Pharmacology Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Molecular Pharmacology Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Molecular Pharmacology Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Molecular Pharmacology Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Molecular Pharmacology Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Molecular Pharmacology Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Molecular Pharmacology Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Molecular Pharmacology Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Molecular Pharmacology Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Molecular Pharmacology Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Molecular Pharmacology Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Molecular Pharmacology Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Molecular Pharmacology Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Molecular Pharmacology Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Molecular Pharmacology Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Molecular Pharmacology Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Molecular Pharmacology Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Molecular Pharmacology Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Molecular Pharmacology Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Molecular Pharmacology Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Molecular Pharmacology Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Molecular Pharmacology Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Molecular Pharmacology Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Molecular Pharmacology Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Molecular Pharmacology Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Molecular Pharmacology Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Molecular Pharmacology Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Molecular Pharmacology Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Molecular Pharmacology Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; testing ; 1965 ; Molecular Pharmacology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1966 ; Molecular Pharmacology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1967 ; Molecular Pharmacology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1968 ; Molecular Pharmacology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; testing ; 1969 ; Molecular Pharmacology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1970 ; Molecular Pharmacology Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 1971 ; Molecular Pharmacology Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 1972 ; Molecular Pharmacology Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; testing ; 1973 ; Molecular Pharmacology Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 1974 ; Molecular Pharmacology Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; testing ; 1975 ; Molecular Pharmacology Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 1976 ; Molecular Pharmacology Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 1977 ; Molecular Pharmacology Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; testing ; 1978 ; Molecular Pharmacology Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 1979 ; Molecular Pharmacology Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 1979 ; Molecular Pharmacology Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 1980 ; Molecular Pharmacology Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; testing ; 1980 ; Molecular Pharmacology Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; testing ; 1981 ; Molecular Pharmacology Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 1981 ; Molecular Pharmacology Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 1982 ; Molecular Pharmacology Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 1982 ; Molecular Pharmacology Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; testing ; 1983 ; Molecular Pharmacology Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; testing ; 1983 ; Molecular Pharmacology Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 1984 ; Molecular Pharmacology Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; testing ; 1984 ; Molecular Pharmacology Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; testing ; 1985 ; Molecular Pharmacology Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; testing ; 1985 ; Molecular Pharmacology Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; testing ; 1986 ; Molecular Pharmacology Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; testing ; 1986 ; Molecular Pharmacology Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; testing ; 1987 ; Molecular Pharmacology Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; testing ; 1987 ; Molecular Pharmacology Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; testing ; 1988 ; Molecular Pharmacology Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; testing ; 1988 ; Molecular Pharmacology Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; testing ; 1989 ; Molecular Pharmacology Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; testing ; 1989 ; Molecular Pharmacology Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; testing ; 1990 ; Molecular Pharmacology Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; testing ; 1990 ; Molecular Pharmacology Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; testing ; 1991 ; Molecular Pharmacology Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; testing ; 1991 ; Molecular Pharmacology Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; manifest ; 1992 ; Molecular Pharmacology Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 1992 ; Molecular Pharmacology Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Molecular Pharmacology Volume 43 ; 43 >
