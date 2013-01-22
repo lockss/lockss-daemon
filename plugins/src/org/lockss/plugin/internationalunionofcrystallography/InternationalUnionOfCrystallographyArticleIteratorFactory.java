@@ -1,5 +1,5 @@
 /*
- * $Id: InternationalUnionOfCrystallographyArticleIteratorFactory.java,v 1.3 2011-09-20 19:55:20 thib_gc Exp $
+ * $Id: InternationalUnionOfCrystallographyArticleIteratorFactory.java,v 1.4 2013-01-22 13:42:19 pgust Exp $
  */
 
 /*
@@ -36,11 +36,15 @@ import java.util.Iterator;
 import java.util.regex.*;
 
 import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.ArticleMetadataExtractorFactory;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class InternationalUnionOfCrystallographyArticleIteratorFactory implements ArticleIteratorFactory {
+public class InternationalUnionOfCrystallographyArticleIteratorFactory 
+  implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
   protected static Logger log = Logger.getLogger("InternationalUnionOfCrystallographyArticleIteratorFactory");
 
@@ -82,33 +86,40 @@ public class InternationalUnionOfCrystallographyArticleIteratorFactory implement
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-//      guessFullTextPdf(af, htmlMat);
-//      guessAbstract(af, htmlMat);
-//      guessSupplementaryMaterials(af, htmlMat);
+      af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, htmlCu);
+      guessFullTextPdf(af, htmlMat);
+      guessAbstract(af, htmlMat);
+      guessSupplementaryMaterials(af, htmlMat);
       return af;
     }
 
-//    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
-//      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/$1/$1.pdf"));
-//      if (pdfCu != null && pdfCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-//      }
-//    }
-//    
-//    protected void guessAbstract(ArticleFiles af, Matcher mat) {
-//      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1/$1abs.html"));
-//      if (absCu != null && absCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-//      }
-//    }
-//    
-//    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
-//      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1/$1sup0.html"));
-//      if (absCu != null && absCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, absCu);
-//      }
-//    }
+    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
+      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/$1/$1.pdf"));
+      if (pdfCu != null && pdfCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+      }
+    }
     
+    protected void guessAbstract(ArticleFiles af, Matcher mat) {
+      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1/$1abs.html"));
+      if (absCu != null && absCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+      }
+    }
+    
+    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
+      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1/$1sup0.html"));
+      if (absCu != null && absCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, absCu);
+      }
+    }
+    
+  }
+
+  @Override
+  public ArticleMetadataExtractor createArticleMetadataExtractor(
+      MetadataTarget target) throws PluginException {
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 
 }
