@@ -10,19 +10,13 @@
   param[base_url] = http://www.igi-global.com/
   implicit < status ; status2 ; year ; name ; param[volume] >
   
-   {
+ {
   
   
     title < 
-      name = Innovative Mobile Platform Developments for Electronic Services Design and Delivery ;
-      type = bookSeries 
-      
+      name = Placeholder
       >
-      comment[0] = series string - /business_technology/
-      
 
-    }   
-      
-    
-    }   
+  }   
+}   
   
