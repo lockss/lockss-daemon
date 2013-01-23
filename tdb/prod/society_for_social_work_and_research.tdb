@@ -5,7 +5,7 @@
   >
 
   comment[notReady] = RU issue3674, issue4205
-  plugin = org.lockss.plugin.scholarlyexchange.ScholarlyExchangePlugin
+  plugin = org.lockss.plugin.scholarlyexchange.ScholarlyExchangeOJS2Plugin
   implicit < status ; year ; name ; volume ;  param[year] >
   
   {
