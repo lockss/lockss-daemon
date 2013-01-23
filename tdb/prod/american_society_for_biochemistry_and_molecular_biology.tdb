@@ -156,8 +156,8 @@
       param[base_url] = http://www.mcponline.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Molecular & Cellular Proteomics Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Molecular & Cellular Proteomics Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; wanted ; 2002 ; Molecular & Cellular Proteomics Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; wanted ; 2003 ; Molecular & Cellular Proteomics Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; ready ; 2004 ; Molecular & Cellular Proteomics Volume 3 ; 3 >
       au < HighWirePressPlugin ; down ; 2005 ; Molecular & Cellular Proteomics Volume 4 ; 4 >
       au < HighWirePressPlugin ; down ; 2006 ; Molecular & Cellular Proteomics Volume 5 ; 5 >
@@ -165,8 +165,8 @@
       au < HighWirePressPlugin ; down ; 2008 ; Molecular & Cellular Proteomics Volume 7 ; 7 >
       au < HighWirePressPlugin ; down ; 2009 ; Molecular & Cellular Proteomics Volume 8 ; 8 >
       au < HighWirePressPlugin ; down ; 2010 ; Molecular & Cellular Proteomics Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Molecular & Cellular Proteomics Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; Molecular & Cellular Proteomics Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; wanted ; 2011 ; Molecular & Cellular Proteomics Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; wanted ; 2012 ; Molecular & Cellular Proteomics Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Molecular & Cellular Proteomics Volume 12 ; 12 >
 
     }

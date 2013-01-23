@@ -26,10 +26,10 @@
     
     comment[notReady] = RT3894 host may have crawler trap?
 
-    au < ready ; 2008 ; Journal of Strategic Security (JSS) Volume 1 ; 1 >
-    au < ready ; 2009 ; Journal of Strategic Security (JSS) Volume 2 ; 2 >
-    au < ready ; 2010 ; Journal of Strategic Security (JSS) Volume 3 ; 3 >
-    au < ready ; 2011 ; Journal of Strategic Security (JSS) Volume 4 ; 4 >
+    au < releasing ; 2008 ; Journal of Strategic Security (JSS) Volume 1 ; 1 >
+    au < releasing ; 2009 ; Journal of Strategic Security (JSS) Volume 2 ; 2 >
+    au < releasing ; 2010 ; Journal of Strategic Security (JSS) Volume 3 ; 3 >
+    au < releasing ; 2011 ; Journal of Strategic Security (JSS) Volume 4 ; 4 >
     au < manifest ; 2012 ; Journal of Strategic Security (JSS) Volume 5 ; 5 >
     au < expected ; 2013 ; Journal of Strategic Security (JSS) Volume 6 ; 6 >
 

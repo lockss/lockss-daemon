@@ -466,11 +466,11 @@
 
     param[journal_id] = 65
 
-    au < ready; 2008 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 1 ; 2008 >
-    au < ready; 2009 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 2 ; 2009 >
-    au < ready; 2010 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 3 ; 2010 >
-    au < ready; 2011 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 4 ; 2011 >
-    au < ready; 2012 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 5 ; 2012 >
+    au < releasing ; 2008 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 1 ; 2008 >
+    au < releasing ; 2009 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 2 ; 2009 >
+    au < releasing ; 2010 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 3 ; 2010 >
+    au < releasing ; 2011 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 4 ; 2011 >
+    au < releasing ; 2012 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 5 ; 2012 >
     au < expected ; 2013 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 6 ; 2013 >
 
   }
@@ -1113,9 +1113,9 @@
 
     param[journal_id] = 97
 
-    au < ready; 2008 ; International Journal of Tryptophan Research Volume 1 ; 2008 >
-    au < ready; 2009 ; International Journal of Tryptophan Research Volume 2 ; 2009 >
-    au < ready; 2010 ; International Journal of Tryptophan Research Volume 3 ; 2010 >
+    au < releasing ; 2008 ; International Journal of Tryptophan Research Volume 1 ; 2008 >
+    au < releasing ; 2009 ; International Journal of Tryptophan Research Volume 2 ; 2009 >
+    au < releasing ; 2010 ; International Journal of Tryptophan Research Volume 3 ; 2010 >
     au < released ; 2011 ; International Journal of Tryptophan Research Volume 4 ; 2011 >
     au < released ; 2012 ; International Journal of Tryptophan Research Volume 5 ; 2012 >
     au < expected ; 2013 ; International Journal of Tryptophan Research Volume 6 ; 2013 >

@@ -96,9 +96,9 @@
     implicit < status ; year ; name ; volume ; param[year] >
 
     au < released ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 ; 2009 >
-    au < ready ; 2010 ; Journal of Biomedical Discovery and Collaboration Volume 5 ; 5 ; 2010 >
+    au < releasing ; 2010 ; Journal of Biomedical Discovery and Collaboration Volume 5 ; 5 ; 2010 >
     au < released ; 2011 ; Journal of Biomedical Discovery and Collaboration Volume 6 ; 6 ; 2011 >
-    au < ready ; 2012 ; Journal of Biomedical Discovery and Collaboration Volume 7 ; 7 ; 2012 >
+    au < releasing ; 2012 ; Journal of Biomedical Discovery and Collaboration Volume 7 ; 7 ; 2012 >
     au < expected ; 2013 ; Journal of Biomedical Discovery and Collaboration Volume 8 ; 8 ; 2013 >
 
   }
@@ -118,9 +118,9 @@
     comment[0] = RU3806 (substance checker problem)
 
     au < released ; 2009 ; Online Journal of Public Health Informatics Volume 1 ; 1 ; 2009 >
-    au < ready ; 2010 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2010 >
-    au < ready ; 2011 ; Online Journal of Public Health Informatics Volume 3 ; 3 ; 2011 >
-    au < ready ; 2012 ; Online Journal of Public Health Informatics Volume 4 ; 4 ; 2012 >
+    au < releasing ; 2010 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2010 >
+    au < releasing ; 2011 ; Online Journal of Public Health Informatics Volume 3 ; 3 ; 2011 >
+    au < releasing ; 2012 ; Online Journal of Public Health Informatics Volume 4 ; 4 ; 2012 >
     au < expected ; 2013 ; Online Journal of Public Health Informatics Volume 5 ; 5 ; 2013 >
 
   }
@@ -139,9 +139,9 @@
     
     implicit < status ; year ; name ; volume ; param[year] >
 
-    au < ready ; 2010 ; Uncommon Culture Volume 1 ; 1 ; 2010 >
-    au < ready ; 2011 ; Uncommon Culture Volume 2 ; 2 ; 2011 >
-    au < ready ; 2012 ; Uncommon Culture Volume 3 ; 3 ; 2012 >
+    au < releasing ; 2010 ; Uncommon Culture Volume 1 ; 1 ; 2010 >
+    au < releasing ; 2011 ; Uncommon Culture Volume 2 ; 2 ; 2011 >
+    au < releasing ; 2012 ; Uncommon Culture Volume 3 ; 3 ; 2012 >
     au < expected ; 2013 ; Uncommon Culture Volume 4 ; 4 ; 2013 >
 
   }
