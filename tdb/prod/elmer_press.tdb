@@ -23,7 +23,7 @@
 
       au < released ; 2010 ; Cardiology Research Volume 1 ; 1 ; 2010 >
       au < released ; 2011 ; Cardiology Research Volume 2 ; 2 ; 2011 >
-      au < releasing ; 2012 ; Cardiology Research Volume 3 ; 3 ; 2012 >
+      au < released ; 2012 ; Cardiology Research Volume 3 ; 3 ; 2012 >
 
     }
 
@@ -40,10 +40,10 @@
       param[journal_id] = Gastrores
       
       au < released ; 2008 ; Gastroenterology Research Volume 1 ; 1 ; 2008 >
-      au < releasing ; 2009 ; Gastroenterology Research Volume 2 ; 2 ; 2009 >
-      au < releasing ; 2010 ; Gastroenterology Research Volume 3 ; 3 ; 2010 >
-      au < releasing ; 2011 ; Gastroenterology Research Volume 4 ; 4 ; 2011 >
-      au < releasing ; 2012 ; Gastroenterology Research Volume 5 ; 5 ; 2012 >
+      au < released ; 2009 ; Gastroenterology Research Volume 2 ; 2 ; 2009 >
+      au < released ; 2010 ; Gastroenterology Research Volume 3 ; 3 ; 2010 >
+      au < released ; 2011 ; Gastroenterology Research Volume 4 ; 4 ; 2011 >
+      au < released ; 2012 ; Gastroenterology Research Volume 5 ; 5 ; 2012 >
 
     }
 
@@ -92,10 +92,10 @@
       param[base_url] = http://www.jocmr.org/
       param[journal_id] = jocmr
 
-      au < releasing ; 2009 ; Journal of Clinical Medicine Research Volume 1 ; 1 ; 2009 >
-      au < releasing ; 2010 ; Journal of Clinical Medicine Research Volume 2 ; 2 ; 2010 >
-      au < releasing ; 2011 ; Journal of Clinical Medicine Research Volume 3 ; 3 ; 2011 >
-      au < releasing ; 2012 ; Journal of Clinical Medicine Research Volume 4 ; 4 ; 2012 >
+      au < released ; 2009 ; Journal of Clinical Medicine Research Volume 1 ; 1 ; 2009 >
+      au < released ; 2010 ; Journal of Clinical Medicine Research Volume 2 ; 2 ; 2010 >
+      au < released ; 2011 ; Journal of Clinical Medicine Research Volume 3 ; 3 ; 2011 >
+      au < released ; 2012 ; Journal of Clinical Medicine Research Volume 4 ; 4 ; 2012 >
 
     }
 
