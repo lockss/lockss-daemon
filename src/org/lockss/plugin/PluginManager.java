@@ -1,10 +1,10 @@
 /*
- * $Id: PluginManager.java,v 1.238 2013-01-09 09:39:13 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.239 2013-01-23 20:28:55 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2770,8 +2770,7 @@ public class PluginManager
 	  }
 	  plugin = info.getPlugin();
 	} catch (Exception ex) {
-	  log.error("Unable to load plugin " + pluginName +
-		    ", skipping: " + ex.getMessage());
+	  log.error(String.format("Unable to load plugin %s", pluginName), ex);
 	  return;
 	}
 
@@ -2782,7 +2781,7 @@ public class PluginManager
 	  info.setVersion(version);
 	} catch (IllegalArgumentException ex) {
 	  // Don't let this runtime exception stop the daemon.  Skip the plugin.
-	  log.error("Skipping plugin " + pluginName + ": " + ex.getMessage());
+	  log.error(String.format("Skipping plugin %s: %s", pluginName, ex.getMessage()));
 	  // must stop plugin to enable it to be collected
 	  plugin.stopPlugin();
 	  return;
