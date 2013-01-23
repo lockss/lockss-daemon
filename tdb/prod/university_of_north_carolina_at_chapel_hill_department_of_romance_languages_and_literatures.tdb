@@ -1,17 +1,14 @@
 {
+
   publisher <
-    name = The Department of Romance Languages and Literatures, The University of North Carolina at Chapel Hill
+    name = University of North Carolina at Chapel Hill Department of Romance Languages and Literatures
   >
+
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
-
-  param[journal_dir] = hispanofila
-  attr[journal_id] = hsf
-
-    {
 
     title <
       name = Hispanófila ;
@@ -19,6 +16,9 @@
       eissn = 2165-6185 ;
       issnl = 0018-2206
     >
+
+    param[journal_dir] = hispanofila
+    attr[journal_id] = hsf
 
     au < released ; 2008 ; Hispanófila Volume 151 ; 151 >
     au < released ; 2008 ; Hispanófila Volume 152 ; 152 >
@@ -38,16 +38,9 @@
     au < expected ; 2013 ; Hispanófila Volume 166 ; 166 >
     au < expected ; 2013 ; Hispanófila Volume 167 ; 167 >
 
-    }
-
   }
 
   {
-
-  param[journal_dir] = romance_notes
-  attr[journal_id] = rmc
-
-    {
 
     title <
       name = Romance Notes ;
@@ -56,6 +49,9 @@
       issnl = 0035-7995
     >
 
+    param[journal_dir] = romance_notes
+    attr[journal_id] = rmc
+
     au < released ; 2006 ; Romance Notes Volume 47 ; 47 >
     au < released ; 2007 ; Romance Notes Volume 48 ; 48 >
     au < released ; 2009 ; Romance Notes Volume 49 ; 49 >
@@ -63,8 +59,6 @@
     au < released ; 2011 ; Romance Notes Volume 51 ; 51 >
     au < released ; 2012 ; Romance Notes Volume 52 ; 52 >
     au < expected ; 2013 ; Romance Notes Volume 53 ; 53 >
-
-    }
 
   }
 
