@@ -1,0 +1,69 @@
+<map>
+<!-- 
+  This plugin is neither complete nor QAed.  This is the initial development
+  using the JATS source file samples from AIP.  AIP's production is
+  estimated to be released in Mar/Apr 2013.  Issue4582.
+ -->
+  <entry>
+    <string>plugin_status</string>
+    <string>down</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.aipjats.AIPJatsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>American Institute of Physics Source Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>5</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"American Institute of Physics Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"./permission.html"</string>
+  </entry>
+  <entry>
+    <string>plugin_archive_file_types</string>
+    <string>standard</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.aipjats.AIPJatsArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.aipjats.AIPJatsArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+      	<string>*</string>
+        <string>org.lockss.plugin.aipjats.AIPJatsMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>    
