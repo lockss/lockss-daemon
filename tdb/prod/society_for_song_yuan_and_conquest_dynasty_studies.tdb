@@ -1,6 +1,6 @@
 {
   publisher <
-    name = The Society for Song, Yuan, and Conquest Dynasty Studies
+    name = Society for Song, Yuan, and Conquest Dynasty Studies
   >
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
