@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = CMOSH (Chattagram Maa-O-Shishu Hospital) Medical College ;
+    name = Chattagram Maa-O-Shishu Hospital (CMOSH) Medical College ;
     info[contract] = 2013 ;
     info[tester] = 0
 
@@ -15,7 +15,7 @@
   {
 
     title < 
-      name = Chattagram Maa-O-Shishu Hospital Medical College Journal ;
+      name = Chattagram Maa-O-Shishu Hospital (CMOSH) Medical College Journal ;
       issn = 2305-7890 
     >
 
@@ -24,5 +24,21 @@
     au < exists ; exists ; 2013 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 12 ; 12 >
    
   }
+  
+  {
+  
+    title < 
+      name = Bangladesh Journal of Endosurgery ;
+      issn = 2306-4560 ;
+      eissn = 2306-4390
+    >
+    
+    comment[publisher] = published out of CMOSH Medical College under name Pediatric Endosurgery Group, Bangladesh
+    param[journal_issn] = 2306-4560
+
+    au < expected ; exists ; 2013 ; Bangladesh Journal of Endosurgery Volume 1 ; 1 >
+   
+  }
     
 }
+  
