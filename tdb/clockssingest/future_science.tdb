@@ -20,10 +20,10 @@
     
     param[journal_id] = bio
 
-    au < exists ; exists ; 2009 ; Bioanalysis Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Bioanalysis Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Bioanalysis Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Bioanalysis Volume 4 ; 2012 >
+    au < manifest ; exists ; 2009 ; Bioanalysis Volume 1 ; 2009 >
+    au < manifest ; exists ; 2010 ; Bioanalysis Volume 2 ; 2010 >
+    au < manifest ; exists ; 2011 ; Bioanalysis Volume 3 ; 2011 >
+    au < manifest ; exists ; 2012 ; Bioanalysis Volume 4 ; 2012 >
     
   }
 
@@ -37,9 +37,9 @@
     
     param[journal_id] = bfs
 
-    au < exists ; exists ; 2010 ; Biofuels Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Biofuels Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Biofuels Volume 3 ; 2012 >
+    au < manifest ; exists ; 2010 ; Biofuels Volume 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; Biofuels Volume 2 ; 2011 >
+    au < manifest ; exists ; 2012 ; Biofuels Volume 3 ; 2012 >
    
   }
 
@@ -52,9 +52,9 @@
     
     param[journal_id] = cmt
 
-    au < exists ; exists ; 2010 ; Carbon Management Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Carbon Management Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Carbon Management Volume 3 ; 2012 >
+    au < manifest ; exists ; 2010 ; Carbon Management Volume 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; Carbon Management Volume 2 ; 2011 >
+    au < manifest ; exists ; 2012 ; Carbon Management Volume 3 ; 2012 >
   
   }
 
@@ -67,8 +67,8 @@
     
     param[journal_id] = cli
 
-    au < exists ; exists ; 2011 ; Clinical Investigation Volume 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical Investigation Volume 2 ; 2012 >
+    au < manifest ; exists ; 2011 ; Clinical Investigation Volume 1 ; 2011 >
+    au < manifest ; exists ; 2012 ; Clinical Investigation Volume 2 ; 2012 >
     
   }
 
@@ -82,10 +82,10 @@
     
     param[journal_id] = fmc
 
-    au < exists ; exists ; 2009 ; Future Medicinal Chemistry Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Future Medicinal Chemistry Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Future Medicinal Chemistry Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Future Medicinal Chemistry Volume 4 ; 2012 >
+    au < manifest ; exists ; 2009 ; Future Medicinal Chemistry Volume 1 ; 2009 >
+    au < manifest ; exists ; 2010 ; Future Medicinal Chemistry Volume 2 ; 2010 >
+    au < manifest ; exists ; 2011 ; Future Medicinal Chemistry Volume 3 ; 2011 >
+    au < manifest ; exists ; 2012 ; Future Medicinal Chemistry Volume 4 ; 2012 >
     
   }
 
@@ -98,7 +98,7 @@
     
     param[journal_id] = ppa
 
-    au < exists ; exists ; 2012 ; Pharmaceutical Patent Analyst Volume 1 ; 2012 >
+    au < manifest ; exists ; 2012 ; Pharmaceutical Patent Analyst Volume 1 ; 2012 >
     
   }
 
@@ -111,9 +111,9 @@
     
     param[journal_id] = tde
 
-    au < exists ; exists ; 2010 ; Therapeutic Delivery Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Therapeutic Delivery Volume 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Therapeutic Delivery Volume 3 ; 2012 >
+    au < manifest ; exists ; 2010 ; Therapeutic Delivery Volume 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; Therapeutic Delivery Volume 2 ; 2011 >
+    au < manifest ; exists ; 2012 ; Therapeutic Delivery Volume 3 ; 2012 >
     
   }
 
