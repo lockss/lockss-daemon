@@ -1,0 +1,120 @@
+{
+
+  publisher <
+    name = Future Science ;
+    info[contract] = 2012 ;
+    info[tester] = 0
+  >
+
+  plugin = needs.plugin
+  param[base_url] = http://www.future-science.com/
+  implicit < status ; status2 ; year ; name ; param[year] >
+
+  {
+  
+    title < 
+      name = Bioanalysis ;
+      issn = 1757-6180 ;
+      eissn = 1757-6199
+    >
+    
+    param[journal_id] = bio
+
+    au < manifest ; exists ; 2009 ; Bioanalysis Volume 1 ; 2009 >
+    au < manifest ; exists ; 2010 ; Bioanalysis Volume 2 ; 2010 >
+    au < manifest ; exists ; 2011 ; Bioanalysis Volume 3 ; 2011 >
+    au < manifest ; exists ; 2012 ; Bioanalysis Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Biofuels ;
+      issn = 1759-7269 ; 
+      eissn = 1759-7277
+    >
+    
+    param[journal_id] = bfs
+
+    au < manifest ; exists ; 2010 ; Biofuels Volume 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; Biofuels Volume 2 ; 2011 >
+    au < manifest ; exists ; 2012 ; Biofuels Volume 3 ; 2012 >
+   
+  }
+
+  {
+  
+    title < 
+      name = Carbon Management ;
+      issn = 1758-3004
+    >
+    
+    param[journal_id] = cmt
+
+    au < manifest ; exists ; 2010 ; Carbon Management Volume 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; Carbon Management Volume 2 ; 2011 >
+    au < manifest ; exists ; 2012 ; Carbon Management Volume 3 ; 2012 >
+  
+  }
+
+  {
+  
+    title < 
+      name = Clinical Investigation ;
+      issn = 2041-6792
+    >
+    
+    param[journal_id] = cli
+
+    au < manifest ; exists ; 2011 ; Clinical Investigation Volume 1 ; 2011 >
+    au < manifest ; exists ; 2012 ; Clinical Investigation Volume 2 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Future Medicinal Chemistry ;
+      issn = 1756-8919 ;
+      eissn = 1756-8927
+    >
+    
+    param[journal_id] = fmc
+
+    au < manifest ; exists ; 2009 ; Future Medicinal Chemistry Volume 1 ; 2009 >
+    au < manifest ; exists ; 2010 ; Future Medicinal Chemistry Volume 2 ; 2010 >
+    au < manifest ; exists ; 2011 ; Future Medicinal Chemistry Volume 3 ; 2011 >
+    au < manifest ; exists ; 2012 ; Future Medicinal Chemistry Volume 4 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Pharmaceutical Patent Analyst ;
+      issn = 2046-8954
+    >
+    
+    param[journal_id] = ppa
+
+    au < manifest ; exists ; 2012 ; Pharmaceutical Patent Analyst Volume 1 ; 2012 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Therapeutic Delivery ;
+      issn = 2041-5990
+    >
+    
+    param[journal_id] = tde
+
+    au < manifest ; exists ; 2010 ; Therapeutic Delivery Volume 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; Therapeutic Delivery Volume 2 ; 2011 >
+    au < manifest ; exists ; 2012 ; Therapeutic Delivery Volume 3 ; 2012 >
+    
+  }
+
+}
