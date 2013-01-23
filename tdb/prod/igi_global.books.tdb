@@ -1,0 +1,22 @@
+{
+
+  publisher <
+    name = IGI Global
+  >
+
+  plugin = needs.plugin
+  param[base_url] = http://www.igi-global.com/
+  implicit < status ; year; name ; param[volume] >
+  
+  {
+  
+  
+    title < 
+      name = Placeholder
+      >
+    
+  }   
+      
+    
+}   
+  
