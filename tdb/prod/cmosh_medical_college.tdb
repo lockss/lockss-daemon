@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = Chattagram Maa-O-Shishu Hospital (CMOSH) Medical College
+
+  >
+  comment[platform] = Metapress
+
+  {
+
+    title < 
+      name = Chattagram Maa-O-Shishu Hospital (CMOSH) Medical College Journal ;
+      issn = 2305-7890 
+    >
+    
+    plugin = org.lockss.plugin.metapress.MetaPressPlugin
+    param[base_url] = http://http://essential.metapress.com/
+    implicit < status ; year ; name ; param[volume_name] >
+    param[journal_issn] = 2305-7890
+
+    au < exists ; 2013 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 12 ; 12 >
+   
+  }
+  
+  {
+  
+    title < 
+      name = Bangladesh Journal of Endosurgery ;
+      issn = 2306-4560 ;
+      eissn = 2306-4390
+    >
+    
+    comment[publisher] = Expected to publish in 2013
+    comment[0] = Will publish under different publisher name Pediatric Endosurgery Group, Bangladesh, which is part of CMOSH Medical College
+   
+  }
+    
+}
+  
