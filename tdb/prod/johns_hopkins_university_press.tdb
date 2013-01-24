@@ -340,6 +340,10 @@
       issn = 0007-8069 
     >
 
+    param[journal_dir] = cea_critic
+    attr[journal_id] = 
+
+    au < expected ; 2013 ; CEA Critic Volume 1 ; 1 >
 
   }
 

@@ -15,6 +15,10 @@
       issn = 1680-2012 
     >
 
+    param[journal_dir] = china_review
+    attr[journal_id] = 
+
+    au < expected ; 2013 ; China Review Volume 13 ; 13 >
 
   }
 

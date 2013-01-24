@@ -257,9 +257,14 @@
   
     title <
       name = Cartographica: The International Journal for Geographic Information and Geovisualization ;
-      issn = 0317-7173 
+      issn = 0317-7173 ;
+      eissn = 1911-9925 
     >
 
+    param[journal_dir] = cartographica
+    attr[journal_id] = 
+
+    au < expected ; 2013 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 1 ; 1 >
 
   }
 
