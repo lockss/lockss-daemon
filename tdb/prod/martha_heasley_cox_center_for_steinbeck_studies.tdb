@@ -35,8 +35,8 @@
     param[journal_dir] = steinbeck_review
     attr[journal_id] = str
 
-    au < manifest ; 2006 ; Steinbeck Review Volume 3 ; 3 >
-    au < manifest ; 2007 ; Steinbeck Review Volume 4 ; 4 >
+    au < testing ; 2006 ; Steinbeck Review Volume 3 ; 3 >
+    au < testing ; 2007 ; Steinbeck Review Volume 4 ; 4 >
 
   }
 
