@@ -4,7 +4,7 @@
     name = Liverpool University Press
   >
   
-  comment[publisher] = also in CLOCKSS (MetaPress platform only)
+  comment[platform] = MetaPress
   comment[param_journal_issn] = MetaPress param journal_issn is set to the journal's eISSN, not print ISSN
 
   {
@@ -245,7 +245,7 @@
   {
 
     title <
-      name = European Journal of Language Policy / Revue européenne de politique linguistique ;
+      name = European Journal of Language Policy / Revue europ��enne de politique linguistique ;
       issn = 1757-6822 ;
       eissn = 1757-6830 ;  
       issnl = 1757-6822
@@ -256,11 +256,11 @@
     implicit < status ; year ; name ; param[volume_name] >     
     param[journal_issn] = 1757-6830     
 
-    au < released ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 >
-    au < released ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
-    au < released ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
-    au < released ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 >
-    au < expected ; 2013 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 5 ; 5 >
+    au < released ; 2009 ; European Journal of Language Policy / Revue europ��enne de politique linguistique Volume 1 ; 1 >
+    au < released ; 2010 ; European Journal of Language Policy / Revue europ��enne de politique linguistique Volume 2 ; 2 >
+    au < released ; 2011 ; European Journal of Language Policy / Revue europ��enne de politique linguistique Volume 3 ; 3 >
+    au < released ; 2012 ; European Journal of Language Policy / Revue europ��enne de politique linguistique Volume 4 ; 4 >
+    au < expected ; 2013 ; European Journal of Language Policy / Revue europ��enne de politique linguistique Volume 5 ; 5 >
 
   }
 
