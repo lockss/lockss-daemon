@@ -1,10 +1,10 @@
 /*
- * $Id: ListObjects.java,v 1.22 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.23 2013-01-24 21:49:27 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,25 +32,26 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import javax.servlet.*;
 import java.io.*;
 import java.util.*;
+import java.util.List;
 
-import org.apache.commons.lang.mutable.*;
-import org.mortbay.html.Page;
-import org.mortbay.html.Composite;
+import javax.servlet.*;
 
-import org.lockss.util.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.*;
 import org.lockss.extractor.*;
+import org.lockss.plugin.*;
+import org.lockss.util.*;
+import org.mortbay.html.*;
 
 /** Plain output of various lists - AUs, URLs, metadata, etc.  Mostly for
  * debugging/testing; also able to handle unlimited length lists. */
 public class ListObjects extends LockssServlet {
-  static final Logger log = Logger.getLogger("ListObjects");
+  
+  private static final Logger log = Logger.getLogger(ListObjects.class);
 
   private String auid;
+  
   private ArchivalUnit au;
 
   private PluginManager pluginMgr;
@@ -94,25 +95,25 @@ public class ListObjects extends LockssServlet {
 	return;
       }
       if (type.equalsIgnoreCase("urls")) {
-	new UrlList(au).execute();
+	new UrlList().execute();
       } else if (type.equalsIgnoreCase("urlsm")) {
-	new UrlMemberList(au).execute();
+	new UrlMemberList().execute();
       } else if (type.equalsIgnoreCase("files")) {
-	new FileList(au).execute();
+	new FileList().execute();
       } else if (type.equalsIgnoreCase("filesm")) {
-	new FileMemberList(au).execute();
+	new FileMemberList().execute();
       } else if (type.equalsIgnoreCase("articles")) {
 	boolean isDoi = !StringUtil.isNullString(getParameter("doi"));
 	if (isDoi) {
 	  // XXX Backwards compatible - still needed?
-	  new DoiList(au, MetadataTarget.DOI).setIncludeUrl(true).execute();
+	  new DoiList().setIncludeUrl(true).execute();
 	} else {
-	  new ArticleUrlList(au).execute();
+	  new ArticleUrlList().execute();
 	}
       } else if (type.equalsIgnoreCase("dois")) {
-	new DoiList(au, MetadataTarget.DOI).execute();
+	new DoiList().execute();
       } else if (type.equalsIgnoreCase("metadata")) {
-	new MetadataList(au, MetadataTarget.Any).execute();
+	new MetadataList().execute();
       } else {
 	displayError("Unknown list type: " + type);
 	return;
@@ -124,7 +125,7 @@ public class ListObjects extends LockssServlet {
   // Metadata and DOIs
   public static boolean hasArticleMetadata(ArchivalUnit au) {
     return null !=
-      au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au);
+      au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article(), au);
 
       // Shouldn't invoke factory, but this method isn't in interface
 //     return null !=
@@ -148,7 +149,9 @@ public class ListObjects extends LockssServlet {
 
   /** Base for classes that print lists of objexts */
   abstract class BaseList {
+    
     PrintWriter wrtr;
+    
     boolean isError = false;
 
     /** Subs must print a header */
@@ -173,18 +176,13 @@ public class ListObjects extends LockssServlet {
       doBody();
       finish();
     }
+    
   }
 
   /** Lists of objects (URLs, files, etc.) which are based on AU's
    * repository nodes */
   abstract class BaseNodeList extends BaseList {
-    ArchivalUnit au;
-
-    BaseNodeList(ArchivalUnit au) {
-      super();
-      this.au = au;
-    }
-
+    
     /** Subs must process content CUs */
     abstract void processContentCu(CachedUrl cu);
 
@@ -212,14 +210,12 @@ public class ListObjects extends LockssServlet {
 	processContentCu(cu);
       }
     }
+    
   }
 
   /** List URLs in AU */
   class UrlList extends BaseNodeList {
-    UrlList(ArchivalUnit au) {
-      super(au);
-    }
-
+    
     void printHeader() {
       wrtr.println("# URLs in " + au.getName());
       wrtr.println();
@@ -228,14 +224,12 @@ public class ListObjects extends LockssServlet {
     void processContentCu(CachedUrl cu) {
       wrtr.println(cu.getUrl());
     }
+    
   }
 
   /** List URLs in AU, including archive file members */
   class UrlMemberList extends UrlList {
-    UrlMemberList(ArchivalUnit au) {
-      super(au);
-    }
-
+    
     void printHeader() {
       wrtr.println("# URLs* in " + au.getName());
       wrtr.println();
@@ -244,14 +238,12 @@ public class ListObjects extends LockssServlet {
     Iterator getIterator() {
       return au.getAuCachedUrlSet().archiveMemberIterator();
     }
+    
   }
 
   /** List URLs, content type and length. */
   class FileList extends BaseNodeList {
-    FileList(ArchivalUnit au) {
-      super(au);
-    }
-
+    
     void printHeader() {
       wrtr.println("# Files in " + au.getName());
       wrtr.println("# URL\tContentType\tsize");
@@ -267,15 +259,13 @@ public class ListObjects extends LockssServlet {
       }
       wrtr.println(url + "\t" + contentType + "\t" + bytes);
     }
+    
   }
 
   /** List URLs, content type and length, including archive file members. */
   // MetaArchive experiment 2010ish.  Still in use?
   class FileMemberList extends FileList {
-    FileMemberList(ArchivalUnit au) {
-      super(au);
-    }
-
+    
     void printHeader() {
       wrtr.println("# Files* in " + au.getName());
       wrtr.println("# URL\tContentType\tsize");
@@ -285,19 +275,22 @@ public class ListObjects extends LockssServlet {
     Iterator getIterator() {
       return au.getAuCachedUrlSet().archiveMemberIterator();
     }
+    
   }
 
   /** Base for lists based on ArticleIterator */
   abstract class BaseArticleList extends BaseList {
-    ArchivalUnit au;
+    
     int errCnt = 0;
+    
     int maxErrs = 3;
+    
+    MetadataTarget target = null;
 
-    BaseArticleList(ArchivalUnit au) {
-      super();
-      this.au = au;
+    void setMetadataTarget(MetadataTarget target) {
+      this.target = target;
     }
-
+    
     /** Subs must process each article */
     abstract void processArticle(ArticleFiles af)
 	throws IOException, PluginException;
@@ -308,8 +301,9 @@ public class ListObjects extends LockssServlet {
     }
 
     void doBody() throws IOException {
-      for (Iterator<ArticleFiles> iter = au.getArticleIterator();
-	   iter.hasNext(); ) {
+      Iterator<ArticleFiles> iter =
+          (target == null) ? au.getArticleIterator() : au.getArticleIterator(target);
+      while (iter.hasNext()) {
 	ArticleFiles af = iter.next();
 	if (af.isEmpty()) {
 	  // Probable plugin error.  Shouldn't happen, but if it does it
@@ -328,19 +322,17 @@ public class ListObjects extends LockssServlet {
 	}
       }
     }
+    
   }
 
   /** Base for lists requiring metadata extraction */
   abstract class BaseMetadataList extends BaseArticleList {
-    MetadataTarget target;
+  
     ArticleMetadataExtractor mdExtractor;
+    
     ArticleMetadataExtractor.Emitter emitter;
 
-    BaseMetadataList(ArchivalUnit au, MetadataTarget target) {
-      super(au);
-      this.target = target;
-    }
-
+    @Override
     void begin() throws IOException {
       super.begin();
       mdExtractor = au.getPlugin().getArticleMetadataExtractor(target, au);
@@ -349,6 +341,7 @@ public class ListObjects extends LockssServlet {
     /** Subs must process each article and list of metadata */
     abstract void processArticle(ArticleFiles af, List<ArticleMetadata> amlst);
 
+    @Override
     void doBody() throws IOException {
       if (mdExtractor == null) {
 	// XXX error format
@@ -368,10 +361,12 @@ public class ListObjects extends LockssServlet {
       // If we finish one normally, start logging errors again.
       errCnt = 0;
     }
+    
   }
 
   /** Metadata emitter that collects ArticleMetadata into a list. */
   static class ListEmitter implements ArticleMetadataExtractor.Emitter {
+    
     List<ArticleMetadata> amlst = new ArrayList<ArticleMetadata>();
 
     public void emitMetadata(ArticleFiles af, ArticleMetadata md) {
@@ -384,15 +379,19 @@ public class ListObjects extends LockssServlet {
     public List<ArticleMetadata> getAmList() {
       return amlst;
     }
+    
   }
 
   /** List DOIs of articles in AU */
   class DoiList extends BaseMetadataList {
+    
     protected boolean isIncludeUrl = false;
+    
     int logMissing = 3;
 
-    DoiList(ArchivalUnit au, MetadataTarget target) {
-      super(au, target);
+    DoiList() {
+      super();
+      setMetadataTarget(MetadataTarget.Doi());
     }
 
     void printHeader() {
@@ -433,14 +432,17 @@ public class ListObjects extends LockssServlet {
       isIncludeUrl = val;
       return this;
     }
+    
   }
 
   /** List URL of articles in AU */
   class ArticleUrlList extends BaseArticleList {
+    
     int logMissing = 3;
 
-    ArticleUrlList(ArchivalUnit au) {
-      super(au);
+    ArticleUrlList() {
+      super();
+      setMetadataTarget(MetadataTarget.Article());
     }
 
     void printHeader() {
@@ -458,13 +460,17 @@ public class ListObjects extends LockssServlet {
 	}
       }
     }
+    
   }
 
   /** Dump all ArticleFiles and metadata of articles in AU */
   class MetadataList extends BaseMetadataList {
-    MetadataList(ArchivalUnit au, MetadataTarget target) {
-      super(au, target);
+    
+    MetadataList() {
+      super();
+      setMetadataTarget(MetadataTarget.Any());
     }
+    
     void printHeader() {
       wrtr.println("# All metadata in " + au.getName());
     }
@@ -481,10 +487,11 @@ public class ListObjects extends LockssServlet {
       }      
       wrtr.println();
     }
+    
   }
 
   /** Base for lists of AUs */
-  abstract class AuList extends BaseList {
+  abstract class BaseAuList extends BaseList {
 
     void doBody() throws IOException {
       boolean includeInternalAus = isDebugUser();
@@ -497,10 +504,12 @@ public class ListObjects extends LockssServlet {
 
     /** Subs must process each AU */
     abstract void processAu(ArchivalUnit au);
+    
   }
 
   /** List AU names */
-  class AuNameList extends AuList {
+  class AuNameList extends BaseAuList {
+    
     void printHeader() {
       wrtr.println("# AUs on " + getMachineName());
     }
@@ -508,10 +517,12 @@ public class ListObjects extends LockssServlet {
     void processAu(ArchivalUnit au) {
       wrtr.println(au.getName());
     }
+    
   }
 
   /** List AUIDs */
-  class AuidList extends AuList {
+  class AuidList extends BaseAuList {
+    
     void printHeader() {
       wrtr.println("# AUIDs on " + getMachineName());
     }
@@ -519,5 +530,7 @@ public class ListObjects extends LockssServlet {
     void processAu(ArchivalUnit au) {
       wrtr.println(au.getAuId());
     }
+    
   }
+  
 }
