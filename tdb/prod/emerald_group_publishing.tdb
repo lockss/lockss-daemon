@@ -4066,15 +4066,15 @@
     param[journal_issn] = 1744-9200
     comment[0] = online from 2005
       
-    au < exists ; 2013 ; International Journal of Prisoner Health Volume 43 ; 43 >
-    au < exists ; 2013 ; International Journal of Prisoner Health Volume 43 ; 43 >
-    au < exists ; 2013 ; International Journal of Prisoner Health Volume 43 ; 43 >
-    au < exists ; 2013 ; International Journal of Prisoner Health Volume 43 ; 43 >
-    au < exists ; 2013 ; International Journal of Prisoner Health Volume 43 ; 43 >
-    au < exists ; 2013 ; International Journal of Prisoner Health Volume 43 ; 43 >
-    au < exists ; 2013 ; International Journal of Prisoner Health Volume 43 ; 43 >
-    au < exists ; 2013 ; International Journal of Prisoner Health Volume 43 ; 43 >
-    au < expected ; 2013 ; International Journal of Prisoner Health Volume 43 ; 43 >
+    au < exists ; 2005 ; International Journal of Prisoner Health Volume 1 ; 1 >
+    au < exists ; 2006 ; International Journal of Prisoner Health Volume 2 ; 2 >
+    au < exists ; 2007 ; International Journal of Prisoner Health Volume 3 ; 3 >
+    au < exists ; 2008 ; International Journal of Prisoner Health Volume 4 ; 4 >
+    au < exists ; 2009 ; International Journal of Prisoner Health Volume 5 ; 5 >
+    au < exists ; 2010 ; International Journal of Prisoner Health Volume 6 ; 6 >
+    au < exists ; 2011 ; International Journal of Prisoner Health Volume 7 ; 7 >
+    au < exists ; 2012 ; International Journal of Prisoner Health Volume 8 ; 8 >
+    au < expected ; 2013 ; International Journal of Prisoner Health Volume 9 ; 9 >
   
   
   
@@ -5577,6 +5577,7 @@
     au < released ; 2010 ; Journal of Fashion Marketing and Management Volume 14 ; 14 >
     au < released ; 2011 ; Journal of Fashion Marketing and Management Volume 15 ; 15 >
     au < released ; 2012 ; Journal of Fashion Marketing and Management Volume 16 ; 16 >
+    au < expected ; 2013 ; Journal of Fashion Marketing and Management Volume 17 ; 17 >
 
   }
 
@@ -5609,6 +5610,7 @@
     au < released ; 2010 ; Journal of Financial Crime Volume 17 ; 17 >
     au < released ; 2011 ; Journal of Financial Crime Volume 18 ; 18 >
     au < released ; 2012 ; Journal of Financial Crime Volume 19 ; 19 >
+    au < expected ; 2013 ; Journal of Financial Crime Volume 20 ; 20 >
 
   }
 
@@ -5626,6 +5628,7 @@
     au < released ; 2010 ; Journal of Financial Economic Policy Volume 2 ; 2 >
     au < released ; 2011 ; Journal of Financial Economic Policy Volume 3 ; 3 >
     au < released ; 2012 ; Journal of Financial Economic Policy Volume 4 ; 4 >
+    au < expected ; 2013 ; Journal of Financial Economic Policy Volume 5 ; 5 >
 
   }
 
@@ -5647,7 +5650,8 @@
     au < released ; 2009 ; Journal of Financial Management of Property and Construction Volume 14 ; 14 >
     au < released ; 2010 ; Journal of Financial Management of Property and Construction Volume 15 ; 15 >
     au < released ; 2011 ; Journal of Financial Management of Property and Construction Volume 16 ; 16 >
-    au < expected ; 2012 ; Journal of Financial Management of Property and Construction Volume 17 ; 17 >
+    au < exists ; 2012 ; Journal of Financial Management of Property and Construction Volume 17 ; 17 >
+    au < exists ; 2013 ; Journal of Financial Management of Property and Construction Volume 18 ; 18 >
 
   }
 
@@ -5681,6 +5685,7 @@
     au < released ; 2010 ; Journal of Financial Regulation and Compliance Volume 18 ; 18 >
     au < released ; 2011 ; Journal of Financial Regulation and Compliance Volume 19 ; 19 >
     au < released ; 2012 ; Journal of Financial Regulation and Compliance Volume 20 ; 20 >
+    au < expected ; 2013 ; Journal of Financial Regulation and Compliance Volume 21 ; 21 >
 
   }
 
@@ -5703,7 +5708,8 @@
     au < released ; 2009 ; Journal of Financial Reporting & Accounting Volume 7 ; 7 >
     au < released ; 2010 ; Journal of Financial Reporting & Accounting Volume 8 ; 8 >
     au < released ; 2011 ; Journal of Financial Reporting & Accounting Volume 9 ; 9 >
-    au < expected ; 2012 ; Journal of Financial Reporting & Accounting Volume 10 ; 10 >
+    au < exists ; 2012 ; Journal of Financial Reporting & Accounting Volume 10 ; 10 >
+    au < expected ; 2013 ; Journal of Financial Reporting & Accounting Volume 11 ; 11 >
 
   }
 
@@ -5720,6 +5726,7 @@
     au < released ; 2010 ; Journal of Global Responsibility Volume 1 ; 1 >
     au < released ; 2011 ; Journal of Global Responsibility Volume 2 ; 2 >
     au < released ; 2012 ; Journal of Global Responsibility Volume 3 ; 3 >
+    au < expected ; 2013 ; Journal of Global Responsibility Volume 4 ; 4 >
 
   }
 
@@ -5744,6 +5751,7 @@
     au < released ; 2010 ; Journal of Health Organization and Management Volume 24 ; 24 >
     au < released ; 2011 ; Journal of Health Organization and Management Volume 25 ; 25 >
     au < released ; 2012 ; Journal of Health Organization and Management Volume 26 ; 26 >
+    au < expected ; 2013 ; Journal of Health Organization and Management Volume 27 ; 27 >
 
   }
 
@@ -5761,6 +5769,7 @@
     au < released ; 2010 ; Journal of Historical Research in Marketing Volume 2 ; 2 >
     au < released ; 2011 ; Journal of Historical Research in Marketing Volume 3 ; 3 >
     au < released ; 2012 ; Journal of Historical Research in Marketing Volume 4 ; 4 >
+    au < expected ; 2013 ; Journal of Historical Research in Marketing Volume 5 ; 5 >
 
   }
 
@@ -5777,6 +5786,7 @@
     au < released ; 2010 ; Journal of Hospitality and Tourism Technology Volume 1 ; 1 >
     au < released ; 2011 ; Journal of Hospitality and Tourism Technology Volume 2 ; 2 >
     au < ready ; 2012 ; Journal of Hospitality and Tourism Technology Volume 3 ; 3 >
+    au < expected ; 2013 ; Journal of Hospitality and Tourism Technology Volume 4 ; 4 >
 
   }
 
@@ -5805,7 +5815,8 @@
     au < released ; 2009 ; Journal of Human Resource Costing & Accounting Volume 13 ; 13 >
     au < released ; 2010 ; Journal of Human Resource Costing & Accounting Volume 14 ; 14 >
     au < released ; 2011 ; Journal of Human Resource Costing & Accounting Volume 15 ; 15 >
-    au < expected ; 2012 ; Journal of Human Resource Costing & Accounting Volume 16 ; 16 >
+    au < exists ; 2012 ; Journal of Human Resource Costing & Accounting Volume 16 ; 16 >
+    au < expected ; 2013 ; Journal of Human Resource Costing & Accounting Volume 17 ; 17 >
 
   }
 
@@ -5819,6 +5830,7 @@
     
     au < released ; 2011 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 1 ; 1 >
     au < released ; 2012 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 2 ; 2 >
+    au < expected ; 2013 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 3 ; 3 >
 
   }
 
@@ -5836,6 +5848,7 @@
     au < released ; 2010 ; Journal of Indian Business Research Volume 2 ; 2 >
     au < released ; 2011 ; Journal of Indian Business Research Volume 3 ; 3 >
     au < released ; 2012 ; Journal of Indian Business Research Volume 4 ; 4 >
+    au < expected ; 2013 ; Journal of Indian Business Research Volume 5 ; 5 >
 
   }
 
@@ -5859,6 +5872,7 @@
     au < released ; 2010 ; Journal of Information, Communication and Ethics in Society Volume 8 ; 8 >
     au < released ; 2011 ; Journal of Information, Communication and Ethics in Society Volume 9 ; 9 >
     au < released ; 2012 ; Journal of Information, Communication and Ethics in Society Volume 10 ; 10 >
+    au < expected ; 2013 ; Journal of Information, Communication and Ethics in Society Volume 11 ; 11 >
 
   }
 
@@ -5889,6 +5903,7 @@
     au < released ; 2010 ; Journal of Integrated Care: Practical evidence for service improvement Volume 18 ; 18 >    
     au < released ; 2011 ; Journal of Integrated Care: Practical evidence for service improvement Volume 19 ; 19 >
     au < released ; 2012 ; Journal of Integrated Care: Practical evidence for service improvement Volume 20 ; 20 >
+    au < expected ; 2013 ; Journal of Integrated Care: Practical evidence for service improvement Volume 21 ; 21 >
  
   }
 
@@ -5915,6 +5930,7 @@
     au < released ; 2010 ; Journal of Intellectual Capital Volume 11 ; 11 >
     au < released ; 2011 ; Journal of Intellectual Capital Volume 12 ; 12 >
     au < released ; 2012 ; Journal of Intellectual Capital Volume 13 ; 13 >
+    au < expected ; 2013 ; Journal of Intellectual Capital Volume 14 ; 14 >
 
   }
 
@@ -5931,6 +5947,8 @@
     au < released ; 2009 ; Journal of International Education in Business Volume 2 ; 2 >
     au < released ; 2010 ; Journal of International Education in Business Volume 3 ; 3 >
     au < released ; 2011 ; Journal of International Education in Business Volume 4 ; 4 >
+    au < exists ; 2012 ; Journal of International Education in Business Volume 5 ; 5 >
+    au < expected ; 2013 ; Journal of International Education in Business Volume 6 ; 6 >
     
   }
 
@@ -5955,6 +5973,7 @@
     au < released ; 2010 ; Journal of International Trade Law and Policy Volume 9 ; 9 >
     au < released ; 2011 ; Journal of International Trade Law and Policy Volume 10 ; 10 >
     au < released ; 2012 ; Journal of International Trade Law and Policy Volume 11 ; 11 >
+    au < expected ; 2013 ; Journal of International Trade Law and Policy Volume 12 ; 12 >
 
   }
 
@@ -5980,7 +5999,8 @@
     au < released ; 2009 ; Journal of Investment Compliance Volume 10 ; 10 >
     au < released ; 2010 ; Journal of Investment Compliance Volume 11 ; 11 >
     au < released ; 2011 ; Journal of Investment Compliance Volume 12 ; 12 >
-    au < expected ; 2012 ; Journal of Investment Compliance Volume 13 ; 13 >
+    au < exist ; 2012 ; Journal of Investment Compliance Volume 13 ; 13 >
+    au < expected ; 2013 ; Journal of Investment Compliance Volume 14 ; 14 >
 
   }
 
@@ -5996,7 +6016,8 @@
     
     au < released ; 2010 ; Journal of Islamic Accounting and Business Research Volume 1 ; 1 >
     au < released ; 2011 ; Journal of Islamic Accounting and Business Research Volume 2 ; 2 >
-    au < expected ; 2012 ; Journal of Islamic Accounting and Business Research Volume 3 ; 3 >
+    au < exists ; 2012 ; Journal of Islamic Accounting and Business Research Volume 3 ; 3 >
+    au < expected ; 2013 ; Journal of Islamic Accounting and Business Research Volume 4 ; 4 >
 
   }
 
@@ -6013,6 +6034,7 @@
     au < released ; 2010 ; Journal of Islamic Marketing Volume 1 ; 1 >
     au < released ; 2011 ; Journal of Islamic Marketing Volume 2 ; 2 >
     au < released ; 2012 ; Journal of Islamic Marketing Volume 3 ; 3 >
+    au < expected ; 2013 ; Journal of Islamic Marketing Volume 4 ; 4 >
 
   }
 
@@ -6042,6 +6064,7 @@
     au < released ; 2010 ; Journal of Knowledge Management Volume 14 ; 14 >
     au < released ; 2011 ; Journal of Knowledge Management Volume 15 ; 15 >
     au < released ; 2012 ; Journal of Knowledge Management Volume 16 ; 16 >
+    au < expected ; 2013 ; Journal of Knowledge Management Volume 17 ; 17 >
 
   }
 
@@ -6059,6 +6082,7 @@
     au < released ; 2010 ; Journal of Knowledge-based Innovation in China Volume 2 ; 2 >
     au < released ; 2011 ; Journal of Knowledge-based Innovation in China Volume 3 ; 3 >
     au < released ; 2012 ; Journal of Knowledge-based Innovation in China Volume 4 ; 4 >
+    au < expected ; 2013 ; Journal of Knowledge-based Innovation in China Volume 5 ; 5 >
 
   }
 
@@ -6073,7 +6097,9 @@
     param[journal_issn] = 2042-0927
     
     au < released ; 2010 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 1 ; 1 >
-    au < released ; 2010 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 2 ; 2 > 
+    au < released ; 2011 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 2 ; 2 > 
+    au < exists ; 2012 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 3 ; 3 > 
+    au < expected ; 2013 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 4 ; 4 > 
     
  
   }
@@ -6119,6 +6145,7 @@
     au < released ; 2010 ; Journal of Management Development Volume 29 ; 29 >
     au < released ; 2011 ; Journal of Management Development Volume 30 ; 30 >
     au < released ; 2012 ; Journal of Management Development Volume 31 ; 31 >
+    au < expected ; 2013 ; Journal of Management Development Volume 32 ; 32 >
 
   }
 
@@ -6140,6 +6167,7 @@
     au < released ; 2010 ; Journal of Management History Volume 16 ; 16 >
     au < released ; 2011 ; Journal of Management History Volume 17 ; 17 >
     au < ready ; 2012 ; Journal of Management History Volume 18 ; 18 >
+    au < expected ; 2013 ; Journal of Management History Volume 19 ; 19 >
     
   }
 
@@ -6230,6 +6258,7 @@
     au < released ; 2010 ; Journal of Managerial Psychology Volume 25 ; 25 >
     au < released ; 2011 ; Journal of Managerial Psychology Volume 26 ; 26 >
     au < released ; 2012 ; Journal of Managerial Psychology Volume 27 ; 27 >
+    au < expected ; 2013 ; Journal of Managerial Psychology Volume 28 ; 28 >
 
   }
 
@@ -6253,6 +6282,7 @@
     au < released ; 2010 ; Journal of Manufacturing Technology Management Volume 21 ; 21 >
     au < released ; 2011 ; Journal of Manufacturing Technology Management Volume 22 ; 22 >
     au < released ; 2012 ; Journal of Manufacturing Technology Management Volume 23 ; 23 >
+    au < expected ; 2013 ; Journal of Manufacturing Technology Management Volume 24 ; 24 >
 
   }
 
@@ -6291,7 +6321,8 @@
     au < released ; 2009 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 4 ; 4 >
     au < released ; 2010 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 5 ; 5 >
     au < released ; 2011 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 6 ; 6 >
-    au < expected ; 2012 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 7 ; 7 >
+    au < exists ; 2012 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 7 ; 7 >
+    au < expected ; 2013 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 8 ; 8 >
 
   }
 
@@ -6312,6 +6343,7 @@
     au < released ; 2010 ; Journal of Modelling in Management Volume 5 ; 5 >
     au < released ; 2011 ; Journal of Modelling in Management Volume 6 ; 6 >
     au < released ; 2012 ; Journal of Modelling in Management Volume 7 ; 7 >
+    au < expected ; 2013 ; Journal of Modelling in Management Volume 8 ; 8 >
 
   }
 
@@ -6340,6 +6372,7 @@
     au < released ; 2010 ; Journal of Money Laundering Control Volume 13 ; 13 >
     au < released ; 2011 ; Journal of Money Laundering Control Volume 14 ; 14 >
     au < released ; 2012 ; Journal of Money Laundering Control Volume 15 ; 15 >
+    au < expected ; 2013 ; Journal of Money Laundering Control Volume 16 ; 16 >
 
   }
 
@@ -6378,6 +6411,7 @@
     au < released ; 2010 ; Journal of Organizational Change Management Volume 23 ; 23 >
     au < released ; 2011 ; Journal of Organizational Change Management Volume 24 ; 24 >
     au < released ; 2012 ; Journal of Organizational Change Management Volume 25 ; 25 >
+    au < expected ; 2013 ; Journal of Organizational Change Management Volume 26 ; 26 >
 
   }
 
@@ -6391,6 +6425,7 @@
     param[journal_issn] = 2046-6749
 
     au < ready ; 2012 ; Journal of Organizational Ethnography Volume 1 ; 1 >
+    au < expected ; 2013 ; Journal of Organizational Ethnography Volume 2 ; 2 >
     
 
   }
@@ -6410,6 +6445,7 @@
     au < released ; 2010 ; Journal of Place Management and Development Volume 3 ; 3 >
     au < released ; 2011 ; Journal of Place Management and Development Volume 4 ; 4 >
     au < released ; 2012 ; Journal of Place Management and Development Volume 5 ; 5 >
+    au < expected ; 2013 ; Journal of Place Management and Development Volume 6 ; 6 >
 
   }
 
@@ -6444,6 +6480,7 @@
     au < released ; 2010 ; Journal of Product & Brand Management Volume 19 ; 19 >
     au < released ; 2011 ; Journal of Product & Brand Management Volume 20 ; 20 >
     au < released ; 2012 ; Journal of Product & Brand Management Volume 21 ; 21 >
+    au < expected ; 2013 ; Journal of Product & Brand Management Volume 22 ; 22 >
 
   }
 
@@ -6494,6 +6531,8 @@
     au < released ; 2009 ; Journal of Property Investment & Finance Volume 27 ; 27 >
     au < released ; 2010 ; Journal of Property Investment & Finance Volume 28 ; 28 >
     au < released ; 2011 ; Journal of Property Investment & Finance Volume 29 ; 29 >
+    au < exists ; 2012 ; Journal of Property Investment & Finance Volume 30 ; 30 >
+    au < exists ; 2013 ; Journal of Property Investment & Finance Volume 31 ; 31 >
 
   }
 
@@ -6547,6 +6586,7 @@
     au < released ; 2010 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 9 ; 9 >
     au < released ; 2011 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 10 ; 10 >
     au < released ; 2012 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 11 ; 11 >
+    au < expected ; 2013 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 12 ; 12 >
     
   }
 
@@ -6578,6 +6618,7 @@
     au < released ; 2010 ; Journal of Quality in Maintenance Engineering Volume 16 ; 16 >
     au < released ; 2011 ; Journal of Quality in Maintenance Engineering Volume 17 ; 17 >
     au < released ; 2012 ; Journal of Quality in Maintenance Engineering Volume 18 ; 18 >
+    au < expected ; 2013 ; Journal of Quality in Maintenance Engineering Volume 19 ; 19 >
 
   }
 
@@ -6594,7 +6635,8 @@
     
     au < released ; 2010 ; Journal of Research in Interactive Marketing Volume 4 ; 4 >
     au < released ; 2011 ; Journal of Research in Interactive Marketing Volume 5 ; 5 >
-    au < expected ; 2012 ; Journal of Research in Interactive Marketing Volume 6 ; 6 >
+    au < exists ; 2012 ; Journal of Research in Interactive Marketing Volume 6 ; 6 >
+    au < expected ; 2013 ; Journal of Research in Interactive Marketing Volume 7 ; 7 >
 
   }
 
@@ -6621,7 +6663,8 @@
     au < released ; 2009 ; Journal of Research in Marketing and Entrepreneurship Volume 11 ; 11 >
     au < released ; 2010 ; Journal of Research in Marketing and Entrepreneurship Volume 12 ; 12 >
     au < released ; 2011 ; Journal of Research in Marketing and Entrepreneurship Volume 13 ; 13 >
-    au < expected ; 2012 ; Journal of Research in Marketing and Entrepreneurship Volume 14 ; 14 >
+    au < exists ; 2012 ; Journal of Research in Marketing and Entrepreneurship Volume 14 ; 14 >
+    au < expected ; 2013 ; Journal of Research in Marketing and Entrepreneurship Volume 15 ; 15 >
 
   }
 
@@ -6647,6 +6690,7 @@
     au < released ; 2010 ; The Journal of Risk Finance Volume 11 ; 11 >
     au < released ; 2011 ; The Journal of Risk Finance Volume 12 ; 12 >
     au < released ; 2012 ; The Journal of Risk Finance Volume 13 ; 13 >
+    au < expected ; 2013 ; The Journal of Risk Finance Volume 14 ; 14 >
 
   }
 
@@ -6663,6 +6707,7 @@
     au < released ; 2010 ; Journal of Science and Technology Policy in China Volume 1 ; 1 >
     au < released ; 2011 ; Journal of Science and Technology Policy in China Volume 2 ; 2 >
     au < released ; 2012 ; Journal of Science and Technology Policy in China Volume 3 ; 3 >
+    au < expected ; 2013 ; Journal of Science and Technology Policy in China Volume 4 ; 4 >
 
   }
 
@@ -6681,6 +6726,7 @@
     au < released ; 2010 ; Journal of Service Management Volume 21 ; 21 >
     au < released ; 2011 ; Journal of Service Management Volume 22 ; 22 >
     au < released ; 2012 ; Journal of Service Management Volume 23 ; 23 >
+    au < expected ; 2013 ; Journal of Service Management Volume 24 ; 24 >
 
   }
 
@@ -6719,6 +6765,7 @@
     au < released ; 2010 ; Journal of Services Marketing Volume 24 ; 24 >
     au < released ; 2011 ; Journal of Services Marketing Volume 25 ; 25 >
     au < released ; 2012 ; Journal of Services Marketing Volume 26 ; 26 >
+    au < expected ; 2013 ; Journal of Services Marketing Volume 27 ; 27 >
 
   }
 
@@ -6751,6 +6798,7 @@
     au < released ; 2010 ; Journal of Small Business and Enterprise Development Volume 17 ; 17 >
     au < released ; 2011 ; Journal of Small Business and Enterprise Development Volume 18 ; 18 >
     au < released ; 2012 ; Journal of Small Business and Enterprise Development Volume 19 ; 19 >
+    au < expected ; 2013 ; Journal of Small Business and Enterprise Development Volume 20 ; 20 >
 
   }
 
@@ -6765,6 +6813,7 @@
     
     au < released ; 2011 ; Journal of Social Marketing Volume 1 ; 1 >
     au < released ; 2012 ; Journal of Social Marketing Volume 2 ; 2 >
+    au < expected ; 2013 ; Journal of Social Marketing Volume 3 ; 3 >
 
   }
   
@@ -6783,6 +6832,7 @@
     au < released ; 2010 ; Journal of Strategy and Management Volume 3 ; 3 >
     au < released ; 2011 ; Journal of Strategy and Management Volume 4 ; 4 >
     au < released ; 2012 ; Journal of Strategy and Management Volume 5 ; 5 >
+    au < expected ; 2013 ; Journal of Strategy and Management Volume 6 ; 6 >
 
   }
 
@@ -6810,6 +6860,7 @@
     au < released ; 2010 ; Journal of Systems and Information Technology Volume 12 ; 12 >
     au < released ; 2011 ; Journal of Systems and Information Technology Volume 13 ; 13 >
     au < released ; 2012 ; Journal of Systems and Information Technology Volume 14 ; 14 >
+    au < expected ; 2013 ; Journal of Systems and Information Technology Volume 15 ; 15 >
 
   }
 
@@ -6829,6 +6880,7 @@
     au < exists ; 2010 ; Journal of Technology Management and Strategy in China Volume 5 ; 5 >
     au < exists ; 2011 ; Journal of Technology Management and Strategy in China Volume 6 ; 6 >
     au < exists ; 2012 ; Journal of Technology Management and Strategy in China Volume 7 ; 7 >
+    au < expected ; 2013 ; Journal of Technology Management and Strategy in China Volume 8 ; 8 >
 
   }
 
@@ -6849,6 +6901,7 @@
     au < released ; 2010 ; Journal of Technology Management in China Volume 5 ; 5 >
     au < released ; 2011 ; Journal of Technology Management in China Volume 6 ; 6 >
     au < released ; 2012 ; Journal of Technology Management in China Volume 7 ; 7 >
+    au < expected ; 2013 ; Journal of Technology Management in China Volume 8 ; 8 >
 
   }
 
@@ -6886,6 +6939,7 @@
     au < released ; 2010 ; Journal of Workplace Learning Volume 22 ; 22 >
     au < released ; 2011 ; Journal of Workplace Learning Volume 23 ; 23 >
     au < released ; 2012 ; Journal of Workplace Learning Volume 24 ; 24 >
+    au < expected ; 2013 ; Journal of Workplace Learning Volume 25 ; 25 >
 
   }
 
@@ -6939,7 +6993,8 @@
     au < released ; 2009 ; Kybernetes Volume 38 ; 38 >
     au < released ; 2010 ; Kybernetes Volume 39 ; 39 >
     au < released ; 2011 ; Kybernetes Volume 40 ; 40 >
-    au < expected ; 2012 ; Kybernetes Volume 41 ; 41 >
+    au < exists ; 2012 ; Kybernetes Volume 41 ; 41 >
+    au < exists ; 2013 ; Kybernetes Volume 42 ; 42 >
 
   }
 
@@ -6986,6 +7041,7 @@
     au < released ; 2010 ; Leadership & Organization Development Journal Volume 31 ; 31 >
     au < released ; 2011 ; Leadership & Organization Development Journal Volume 32 ; 32 >
     au < released ; 2012 ; Leadership & Organization Development Journal Volume 33 ; 33 >
+    au < expected ; 2013 ; Leadership & Organization Development Journal Volume 34 ; 34 >
 
   }
 
@@ -7016,6 +7072,7 @@
     au < released ; 2010 ; Leadership in Health Services Volume 23 ; 23 >
     au < released ; 2011 ; Leadership in Health Services Volume 24 ; 24 >
     au < released ; 2012 ; Leadership in Health Services Volume 25 ; 25 >
+    au < expected ; 2013 ; Leadership in Health Services Volume 26 ; 26 >
 
   }
 
@@ -7048,6 +7105,7 @@
     au < released ; 2010 ; The Learning Organization Volume 17 ; 17 >
     au < released ; 2011 ; The Learning Organization Volume 18 ; 18 >
     au < released ; 2012 ; The Learning Organization Volume 19 ; 19 >
+    au < expected ; 2013 ; The Learning Organization Volume 20 ; 20 >
 
   }
 
@@ -7126,6 +7184,7 @@
     au < released ; 2010 ; Library Hi Tech Volume 28 ; 28 >
     au < released ; 2011 ; Library Hi Tech Volume 29 ; 29 >
     au < released ; 2012 ; Library Hi Tech Volume 30 ; 30 >
+    au < expected ; 2013 ; Library Hi Tech Volume 31 ; 31 >
 
   }
 
@@ -7152,6 +7211,7 @@
     au < released ; 2010 ; Library Hi Tech News Volume 27 ; 27 >
     au < released ; 2011 ; Library Hi Tech News Volume 28 ; 28 >
     au < released ; 2012 ; Library Hi Tech News Volume 29 ; 29 >
+    au < expected ; 2013 ; Library Hi Tech News Volume 30 ; 30 >
 
   }
 
@@ -7198,6 +7258,7 @@
     au < released ; 2010 ; Library Management Volume 31 ; 31 >
     au < released ; 2011 ; Library Management Volume 32 ; 32 >
     au < released ; 2012 ; Library Management Volume 33 ; 33 >
+    au < expected ; 2013 ; Library Management Volume 34 ; 34 >
 
   }
 
@@ -7272,6 +7333,7 @@
     au < released ; 2010 ; Library Review Volume 59 ; 59 >
     au < released ; 2011 ; Library Review Volume 60 ; 60 >
     au < released ; 2012 ; Library Review Volume 61 ; 61 >
+    au < expected ; 2013 ; Library Review Volume 62 ; 62 >
 
   }
 
@@ -7361,6 +7423,7 @@
     au < released ; 2010 ; Management Decision Volume 48 ; 48 >
     au < released ; 2011 ; Management Decision Volume 49 ; 49 >
     au < released ; 2012 ; Management Decision Volume 50 ; 50 >
+    au < expected ; 2013 ; Management Decision Volume 51 ; 51 >
  
   }
 
@@ -7405,6 +7468,7 @@
     au < released ; 2010 ; Management of Environmental Quality: An International Journal Volume 21 ; 21 >
     au < released ; 2011 ; Management of Environmental Quality: An International Journal Volume 22 ; 22 >
     au < released ; 2012 ; Management of Environmental Quality: An International Journal Volume 23 ; 23 >
+    au < expected ; 2013 ; Management of Environmental Quality: An International Journal Volume 24 ; 24 >
 
   }
 
@@ -7467,6 +7531,7 @@
     au < released ; 2010 ; Management Research Review Volume 33 ; 33 >
     au < released ; 2011 ; Management Research Review Volume 34 ; 34 >
     au < released ; 2012 ; Management Research Review Volume 35 ; 35 >
+    au < expected ; 2013 ; Management Research Review Volume 36 ; 36 >
 
   }
 
@@ -7489,7 +7554,8 @@
     au < released ; 2009 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 7 ; 7 >
     au < released ; 2010 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 8 ; 8 >
     au < released ; 2011 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 9 ; 9 >
-    au < expected ; 2012 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 10 ; 10 >
+    au < exists ; 2012 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 10 ; 10 >
+    au < expected ; 2013 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 11 ; 11 >
 
   }
 
@@ -7530,6 +7596,7 @@
     au < released ; 2010 ; Managerial Auditing Journal Volume 25 ; 25 >
     au < released ; 2011 ; Managerial Auditing Journal Volume 26 ; 26 >
     au < released ; 2012 ; Managerial Auditing Journal Volume 27 ; 27 >
+    au < expected ; 2013 ; Managerial Auditing Journal Volume 28 ; 28 >
 
   }
 
@@ -7581,6 +7648,7 @@
     au < released ; 2010 ; Managerial Finance Volume 36 ; 36 >
     au < released ; 2011 ; Managerial Finance Volume 37 ; 37 >
     au < released ; 2012 ; Managerial Finance Volume 38 ; 38 >
+    au < expected ; 2013 ; Managerial Finance Volume 39 ; 39 >
 
   }
 
@@ -7679,6 +7747,7 @@
     au < released ; 2010 ; Managing Service Quality Volume 20 ; 20 >
     au < released ; 2011 ; Managing Service Quality Volume 21 ; 21 >
     au < released ; 2012 ; Managing Service Quality Volume 22 ; 22 >
+    au < expected ; 2013 ; Managing Service Quality Volume 23 ; 23 >
 
   }
 
@@ -7722,6 +7791,7 @@
     au < released ; 2010 ; Marketing Intelligence & Planning Volume 28 ; 28 >
     au < released ; 2011 ; Marketing Intelligence & Planning Volume 29 ; 29 >
     au < released ; 2012 ; Marketing Intelligence & Planning Volume 30 ; 30 >
+    au < expected ; 2013 ; Marketing Intelligence & Planning Volume 31 ; 31 >
 
   }
 
@@ -7751,6 +7821,7 @@
     au < released ; 2010 ; Measuring Business Excellence Volume 14 ; 14 >
     au < released ; 2011 ; Measuring Business Excellence Volume 15 ; 15 >
     au < released ; 2012 ; Measuring Business Excellence Volume 16 ; 16 >
+    au < expected ; 2013 ; Measuring Business Excellence Volume 17 ; 17 >
 
   }
 
@@ -7760,19 +7831,41 @@
       issn = 1022-2529 
     >
 
+    {
     param[journal_issn] = 1022-2529
 
-    au < released ; 2000 ; Meditari Accountancy Research Volume 8 ; 8 >
-    au < released ; 2001 ; Meditari Accountancy Research Volume 9 ; 9 >
-    au < released ; 2002 ; Meditari Accountancy Research Volume 10 ; 10 >
-    au < released ; 2003 ; Meditari Accountancy Research Volume 11 ; 11 >
-    au < released ; 2004 ; Meditari Accountancy Research Volume 12 ; 12 >
-    au < released ; 2005 ; Meditari Accountancy Research Volume 13 ; 13 >
-    au < released ; 2006 ; Meditari Accountancy Research Volume 14 ; 14 >
-    au < released ; 2007 ; Meditari Accountancy Research Volume 15 ; 15 >
-    au < released ; 2008 ; Meditari Accountancy Research Volume 16 ; 16 > 
-    au < released ; 2009 ; Meditari Accountancy Research Volume 17 ; 17 >
-    au < released ; 2010 ; Meditari Accountancy Research Volume 18 ; 18 >
+    au < superseded ; 2000 ; Meditari Accountancy Research Volume 8 [superseded] ; 8 >
+    au < superseded ; 2001 ; Meditari Accountancy Research Volume 9 [superseded] ; 9 >
+    au < superseded ; 2002 ; Meditari Accountancy Research Volume 10 [superseded] ; 10 >
+    au < superseded ; 2003 ; Meditari Accountancy Research Volume 11 [superseded] ; 11 >
+    au < superseded ; 2004 ; Meditari Accountancy Research Volume 12 [superseded] ; 12 >
+    au < superseded ; 2005 ; Meditari Accountancy Research Volume 13 [superseded] ; 13 >
+    au < superseded ; 2006 ; Meditari Accountancy Research Volume 14 [superseded] ; 14 >
+    au < superseded ; 2007 ; Meditari Accountancy Research Volume 15 [superseded] ; 15 >
+    au < superseded ; 2008 ; Meditari Accountancy Research Volume 16 [superseded] ; 16 > 
+    au < superseded ; 2009 ; Meditari Accountancy Research Volume 17 [superseded] ; 17 >
+    au < superseded ; 2010 ; Meditari Accountancy Research Volume 18 [superseded] ; 18 >
+    }
+
+    {
+    param[journal_issn] = 2049-372X
+    comment[0] = Online from 2000
+
+    au < exists ; 2000 ; Meditari Accountancy Research Volume 8 ; 8 >
+    au < exists ; 2001 ; Meditari Accountancy Research Volume 9 ; 9 >
+    au < exists ; 2002 ; Meditari Accountancy Research Volume 10 ; 10 >
+    au < exists ; 2003 ; Meditari Accountancy Research Volume 11 ; 11 >
+    au < exists ; 2004 ; Meditari Accountancy Research Volume 12 ; 12 >
+    au < exists ; 2005 ; Meditari Accountancy Research Volume 13 ; 13 >
+    au < exists ; 2006 ; Meditari Accountancy Research Volume 14 ; 14 >
+    au < exists ; 2007 ; Meditari Accountancy Research Volume 15 ; 15 >
+    au < exists ; 2008 ; Meditari Accountancy Research Volume 16 ; 16 > 
+    au < exists ; 2009 ; Meditari Accountancy Research Volume 17 ; 17 >
+    au < exists ; 2010 ; Meditari Accountancy Research Volume 18 ; 18 >
+    au < exists ; 2011 ; Meditari Accountancy Research Volume 19 ; 19 >
+    au < exists ; 2012 ; Meditari Accountancy Research Volume 20 ; 20 >
+    au < exists ; 2013 ; Meditari Accountancy Research Volume 21 ; 21 >
+    }
 
   }
 
@@ -7803,6 +7896,7 @@
     au < released ; 2010 ; Mental Health and Social Inclusion Volume 14 ; 14 >
     au < released ; 2011 ; Mental Health and Social Inclusion Volume 15 ; 15 >
     au < released ; 2012 ; Mental Health and Social Inclusion Volume 16 ; 16 >
+    au < expected ; 2013 ; Mental Health and Social Inclusion Volume 17 ; 17 >
     
   }  
  
@@ -7833,6 +7927,7 @@
     au < released ; 2010 ; Mental Health Review Journal: Research, Policy and Practice Volume 15 ; 15 >
     au < released ; 2011 ; Mental Health Review Journal: Research, Policy and Practice Volume 16 ; 16 >
     au < released ; 2012 ; Mental Health Review Journal: Research, Policy and Practice Volume 17 ; 17 >
+    au < expected ; 2013 ; Mental Health Review Journal: Research, Policy and Practice Volume 18 ; 18 >
 
   }
     
@@ -7875,6 +7970,7 @@
     au < released ; 2010 ; Microelectronics International Volume 27 ; 27 >
     au < released ; 2011 ; Microelectronics International Volume 28 ; 28 >
     au < released ; 2012 ; Microelectronics International Volume 29 ; 29 >
+    au < expected ; 2013 ; Microelectronics International Volume 30 ; 30 >
 
   }
 
@@ -7894,6 +7990,7 @@
     au < released ; 2010 ; Multicultural Education & Technology Journal Volume 4 ; 4 >
     au < released ; 2011 ; Multicultural Education & Technology Journal Volume 5 ; 5 >
     au < released ; 2012 ; Multicultural Education & Technology Journal Volume 6 ; 6 >
+    au < expected ; 2013 ; Multicultural Education & Technology Journal Volume 7 ; 7 >
 
   }
 
@@ -7906,11 +8003,17 @@
     >
 
     param[journal_issn] = 1573-6105
-    comment[0] = online from 2010
+    comment[0] = online from 2005
     
+    au < exists ; 2005 ; Multidiscipline Modeling in Materials and Structures Volume 1 ; 1 >
+    au < exists ; 2006 ; Multidiscipline Modeling in Materials and Structures Volume 2 ; 2 >
+    au < exists ; 2007 ; Multidiscipline Modeling in Materials and Structures Volume 3 ; 3 >
+    au < exists ; 2008 ; Multidiscipline Modeling in Materials and Structures Volume 4 ; 4 >
+    au < exists ; 2009 ; Multidiscipline Modeling in Materials and Structures Volume 5 ; 5 >
     au < released ; 2010 ; Multidiscipline Modeling in Materials and Structures Volume 6 ; 6 >
     au < released ; 2011 ; Multidiscipline Modeling in Materials and Structures Volume 7 ; 7 >
-    au < expected ; 2011 ; Multidiscipline Modeling in Materials and Structures Volume 8 ; 8 >
+    au < exists ; 2012 ; Multidiscipline Modeling in Materials and Structures Volume 8 ; 8 >
+    au < expected ; 2013 ; Multidiscipline Modeling in Materials and Structures Volume 9 ; 9 >
 
   }
 
@@ -7930,6 +8033,7 @@
     au < released ; 2010 ; Multinational Business Review Volume 18 ; 18 >
     au < released ; 2011 ; Multinational Business Review Volume 19 ; 19 >
     au < released ; 2012 ; Multinational Business Review Volume 20 ; 20 >
+    au < expected ; 2013 ; Multinational Business Review Volume 21 ; 21 >
 
   }
 
@@ -7946,6 +8050,7 @@
     au < released ; 2010 ; Nankai Business Review International Volume 1 ; 1 >
     au < released ; 2011 ; Nankai Business Review International Volume 2 ; 2 >
     au < released ; 2012 ; Nankai Business Review International Volume 3 ; 3 >
+    au < expected ; 2013 ; Nankai Business Review International Volume 4 ; 4 >
 
   }
 
@@ -8072,6 +8177,7 @@
     au < released ; 2010 ; New Library World Volume 111 ; 111 >
     au < released ; 2011 ; New Library World Volume 112 ; 112 >
     au < released ; 2012 ; New Library World Volume 113 ; 113 >
+    au < expected ; 2013 ; New Library World Volume 114 ; 114 >
 
   }
 
@@ -8129,6 +8235,7 @@
     au < released ; 2010 ; Nutrition & Food Science Volume 40 ; 40 >
     au < released ; 2011 ; Nutrition & Food Science Volume 41 ; 41 >
     au < released ; 2012 ; Nutrition & Food Science Volume 42 ; 42 >
+    au < expected ; 2013 ; Nutrition & Food Science Volume 43 ; 43 >
 
   }
 
@@ -8169,6 +8276,7 @@
     au < released ; 2010 ; OCLC Systems & Services Volume 26 ; 26 >
     au < released ; 2011 ; OCLC Systems & Services Volume 27 ; 27 >
     au < released ; 2012 ; OCLC Systems & Services Volume 28 ; 28 >
+    au < expected ; 2013 ; OCLC Systems & Services Volume 29 ; 29 >
 
   }
 
@@ -8196,6 +8304,7 @@
     au < released ; 2010 ; On The Horizon Volume 18 ; 18 >
     au < released ; 2011 ; On The Horizon Volume 19 ; 19 >
     au < released ; 2012 ; On The Horizon Volume 20 ; 20 >
+    au < expected ; 2013 ; On The Horizon Volume 21 ; 21 >
 
   }
 
@@ -8245,6 +8354,7 @@
     au < released ; 2010 ; Online Information Review Volume 34 ; 34 >
     au < released ; 2011 ; Online Information Review Volume 35 ; 35 >
     au < released ; 2012 ; Online Information Review Volume 36 ; 36 >
+    au < expected ; 2013 ; Online Information Review Volume 37 ; 37 >
 
   }
 
@@ -8274,7 +8384,8 @@
     au < released ; 2009 ; Pacific Accounting Review Volume 21 ; 21 >
     au < released ; 2010 ; Pacific Accounting Review Volume 22 ; 22 >
     au < released ; 2011 ; Pacific Accounting Review Volume 23 ; 23 >
-    au < expected ; 2012 ; Pacific Accounting Review Volume 24 ; 24 >
+    au < exists ; 2012 ; Pacific Accounting Review Volume 24 ; 24 >
+    au < expected ; 2013 ; Pacific Accounting Review Volume 25 ; 25 >
 
   }
 
@@ -8314,6 +8425,7 @@
     au < released ; 2010 ; Performance Measurement and Metrics Volume 11 ; 11 >
     au < released ; 2011 ; Performance Measurement and Metrics Volume 12 ; 12 >
     au < released ; 2012 ; Performance Measurement and Metrics Volume 13 ; 13 >
+    au < expected ; 2013 ; Performance Measurement and Metrics Volume 14 ; 14 >
 
   }
 
@@ -8368,6 +8480,7 @@
     au < released ; 2010 ; Personnel Review Volume 39 ; 39 >
     au < released ; 2011 ; Personnel Review Volume 40 ; 40 >
     au < released ; 2012 ; Personnel Review Volume 41 ; 41 >
+    au < expected ; 2013 ; Personnel Review Volume 42 ; 42 >
 
   }
 
@@ -8422,6 +8535,7 @@
     au < released ; 2010 ; Pigment & Resin Technology Volume 39 ; 39 >
     au < released ; 2011 ; Pigment & Resin Technology Volume 40 ; 40 >
     au < released ; 2012 ; Pigment & Resin Technology Volume 41 ; 41 >
+    au < expected ; 2013 ; Pigment & Resin Technology Volume 42 ; 42 >
 
   }
 
@@ -8468,6 +8582,7 @@
     au < released ; 2010 ; Policing: An International Journal of Police Strategies & Management Volume 33 ; 33 >
     au < released ; 2011 ; Policing: An International Journal of Police Strategies & Management Volume 34 ; 34 >
     au < released ; 2012 ; Policing: An International Journal of Police Strategies & Management Volume 35 ; 35 >
+    au < expected ; 2013 ; Policing: An International Journal of Police Strategies & Management Volume 36 ; 36 >
 
   }
 
@@ -8543,6 +8658,7 @@
     au < released ; 2010 ; Program: Electronic Library and Information Systems Volume 44 ; 44 >
     au < released ; 2011 ; Program: Electronic Library and Information Systems Volume 45 ; 45 >
     au < released ; 2012 ; Program: Electronic Library and Information Systems Volume 46 ; 46 >
+    au < expected ; 2013 ; Program: Electronic Library and Information Systems Volume 47 ; 47 >
 
   }
 
@@ -8586,6 +8702,7 @@
     au < released ; 2010 ; Property Management Volume 28 ; 28 >
     au < released ; 2011 ; Property Management Volume 29 ; 29 >
     au < released ; 2012 ; Property Management Volume 30 ; 30 >
+    au < expected ; 2013 ; Property Management Volume 31 ; 31 >
 
   }
 
@@ -8614,6 +8731,7 @@
     au < released ; 2010 ; Qualitative Market Research: An International Journal Volume 13 ; 13 >
     au < released ; 2011 ; Qualitative Market Research: An International Journal Volume 14 ; 14 >
     au < released ; 2012 ; Qualitative Market Research: An International Journal Volume 15 ; 15 >
+    au < expected ; 2013 ; Qualitative Market Research: An International Journal Volume 16 ; 16 >
 
   }
 
@@ -8636,6 +8754,7 @@
     au < released ; 2010 ; Qualitative Research in Accounting & Management Volume 7 ; 7 >
     au < released ; 2011 ; Qualitative Research in Accounting & Management Volume 8 ; 8 >
     au < released ; 2012 ; Qualitative Research in Accounting & Management Volume 9 ; 9 >
+    au < expected ; 2013 ; Qualitative Research in Accounting & Management Volume 10 ; 10 >
 
   }
 
@@ -8651,6 +8770,7 @@
     au < released ; 2010 ; Qualitative Research in Financial Markets Volume 2 ; 2 >
     au < released ; 2011 ; Qualitative Research in Financial Markets Volume 3 ; 3 >
     au < released ; 2012 ; Qualitative Research in Financial Markets Volume 4 ; 4 >
+    au < expected ; 2013 ; Qualitative Research in Financial Markets Volume 5 ; 5 >
 
   }
 
@@ -8671,6 +8791,7 @@
     au < released ; 2010 ; Qualitative Research in Organizations and Management: An International Journal Volume 5 ; 5 >
     au < released ; 2011 ; Qualitative Research in Organizations and Management: An International Journal Volume 6 ; 6 >
     au < released ; 2012 ; Qualitative Research in Organizations and Management: An International Journal Volume 7 ; 7 >
+    au < expected ; 2013 ; Qualitative Research in Organizations and Management: An International Journal Volume 8 ; 8 >
 
   }
   
@@ -8684,6 +8805,7 @@
     param[journal_issn] = 1443-9883
     
     au < exists ; 2012 ; Qualitative Research Journal Volume 1 ; 1 >
+    au < expected ; 2013 ; Qualitative Research Journal Volume 2 ; 2 >
   
   }
 
@@ -8717,6 +8839,7 @@
     au < released ; 2010 ; Quality Assurance in Education Volume 18 ; 18 >
     au < released ; 2011 ; Quality Assurance in Education Volume 19 ; 19 >
     au < released ; 2012 ; Quality Assurance in Education Volume 20 ; 20 >
+    au < expected ; 2013 ; Quality Assurance in Education Volume 21 ; 21 >
 
   }
 
@@ -8743,6 +8866,7 @@
     au < released ; 2010 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 11 ; 11 >
     au < released ; 2011 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 12 ; 12 >
     au < ready ; 2012 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 13 ; 13 >  
+    au < expected ; 2013 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 14 ; 14 >  
 
   }
 
@@ -8774,6 +8898,7 @@
     au < released ; 2010 ; Rapid Prototyping Journal Volume 16 ; 16 >
     au < released ; 2011 ; Rapid Prototyping Journal Volume 17 ; 17 >
     au < released ; 2012 ; Rapid Prototyping Journal Volume 18 ; 18 >
+    au < expected ; 2013 ; Rapid Prototyping Journal Volume 19 ; 19 >
 
   }
 
@@ -8809,6 +8934,7 @@
     au < released ; 2010 ; Records Management Journal Volume 20 ; 20 >
     au < released ; 2011 ; Records Management Journal Volume 21 ; 21 >
     au < released ; 2012 ; Records Management Journal Volume 22 ; 22 >
+    au < expected ; 2013 ; Records Management Journal Volume 23 ; 23 >
 
   }
 
@@ -8839,6 +8965,7 @@
     au < released ; 2010 ; Reference Reviews Volume 24 ; 24 >
     au < released ; 2011 ; Reference Reviews Volume 25 ; 25 >
     au < released ; 2012 ; Reference Reviews Volume 26 ; 26 >
+    au < expected ; 2013 ; Reference Reviews Volume 27 ; 27 >
 
   }
 
@@ -8891,6 +9018,7 @@
     au < released ; 2010 ; Reference Services Review Volume 38 ; 38 >
     au < released ; 2011 ; Reference Services Review Volume 39 ; 39 >
     au < released ; 2012 ; Reference Services Review Volume 40 ; 40 >
+    au < expected ; 2013 ; Reference Services Review Volume 41 ; 41 >
 
   }
 
@@ -8915,6 +9043,7 @@
     au < released ; 2010 ; Review of Accounting and Finance Volume 9 ; 9 >
     au < released ; 2011 ; Review of Accounting and Finance Volume 10 ; 10 >
     au < released ; 2012 ; Review of Accounting and Finance Volume 11 ; 11 >
+    au < expected ; 2013 ; Review of Accounting and Finance Volume 12 ; 12 >
 
   }
   
@@ -8932,6 +9061,8 @@
     au < released ; 2009 ; Review of Behavioral Finance Volume 1 ; 1 >
     au < released ; 2010 ; Review of Behavioral Finance Volume 2 ; 2 >
     au < released ; 2011 ; Review of Behavioral Finance Volume 3 ; 3 >
+    au < released ; 2012 ; Review of Behavioral Finance Volume 4 ; 4 >
+    au < expected ; 2013 ; Review of Behavioral Finance Volume 5 ; 5 >
 
   }
 
@@ -8957,6 +9088,7 @@
     au < released ; 2010 ; Safer Communities: A journal of practice, opinion, policy and research Volume 9 ; 9 >
     au < released ; 2011 ; Safer Communities: A journal of practice, opinion, policy and research Volume 10 ; 10 >
     au < released ; 2012 ; Safer Communities: A journal of practice, opinion, policy and research Volume 11 ; 11 >
+    au < expected ; 2013 ; Safer Communities: A journal of practice, opinion, policy and research Volume 12 ; 12 >
 
 
   }
@@ -9004,6 +9136,7 @@
     au < released ; 2010 ; Sensor Review Volume 30 ; 30 >
     au < released ; 2011 ; Sensor Review Volume 31 ; 31 >
     au < released ; 2012 ; Sensor Review Volume 32 ; 32 >
+    au < expected ; 2013 ; Sensor Review Volume 33 ; 33 >
 
   }
 
@@ -9016,6 +9149,7 @@
     param[journal_issn] = 2046-6099
 
     au < released ; 2012 ; Smart and Sustainable Built Environment Volume 1 ; 1 >
+    au < expected ; 2013 ; Smart and Sustainable Built Environment Volume 2 ; 2 >
     
 
   }
@@ -9033,6 +9167,7 @@
     au < released ; 2010 ; Social Care and Neurodisability: A journal on practice, management, research and law Volume 1 ; 1 >
     au < released ; 2011 ; Social Care and Neurodisability: A journal on practice, management, research and law Volume 2 ; 2 >
     au < released ; 2012 ; Social Care and Neurodisability: A journal on practice, management, research and law Volume 3 ; 3 >
+    au < expected ; 2013 ; Social Care and Neurodisability: A journal on practice, management, research and law Volume 4 ; 4 >
 
   }
 
@@ -9054,6 +9189,7 @@
     au < released ; 2010 ; Social Enterprise Journal Volume 6 ; 6 >
     au < released ; 2011 ; Social Enterprise Journal Volume 7 ; 7 >
     au < released ; 2012 ; Social Enterprise Journal Volume 8 ; 8 >
+    au < expected ; 2013 ; Social Enterprise Journal Volume 9 ; 9 >
 
   }
 
@@ -9075,6 +9211,7 @@
     au < released ; 2010 ; Social Responsibility Journal Volume 6 ; 6 >
     au < released ; 2011 ; Social Responsibility Journal Volume 7 ; 7 >
     au < released ; 2012 ; Social Responsibility Journal Volume 8 ; 8 >
+    au < expected ; 2013 ; Social Responsibility Journal Volume 9 ; 9 >
 
   }
 
@@ -9095,6 +9232,7 @@
     au < released ; 2010 ; Society and Business Review Volume 5 ; 5 >
     au < released ; 2011 ; Society and Business Review Volume 6 ; 6 >
     au < released ; 2012 ; Society and Business Review Volume 7 ; 7 >
+    au < expected ; 2013 ; Society and Business Review Volume 8 ; 8 >
 
   }
 
@@ -9132,6 +9270,7 @@
     au < released ; 2010 ; Soldering & Surface Mount Technology Volume 22 ; 22 >
     au < released ; 2011 ; Soldering & Surface Mount Technology Volume 23 ; 23 >
     au < released ; 2012 ; Soldering & Surface Mount Technology Volume 24 ; 24 >
+    au < expected ; 2013 ; Soldering & Surface Mount Technology Volume 25 ; 25 >
 
   }
 
@@ -9144,6 +9283,7 @@
     param[journal_issn] = 2045-4457
 
     au < released ; 2012 ; South Asian Journal of Global Business Research Volume 1 ; 1 >
+    au < expected ; 2013 ; South Asian Journal of Global Business Research Volume 2 ; 2 >
     
 
   }
@@ -9159,6 +9299,7 @@
     
     au < released ; 2011 ; Sport, Business and Management: An International Journal Volume 1 ; 1 >
     au < released ; 2012 ; Sport, Business and Management: An International Journal Volume 2 ; 2 >
+    au < expected ; 2013 ; Sport, Business and Management: An International Journal Volume 3 ; 3 >
  
   }
   
@@ -9184,6 +9325,7 @@
     au < released ; 2010 ; Strategic Direction Volume 26 ; 26 >
     au < released ; 2011 ; Strategic Direction Volume 27 ; 27 >
     au < released ; 2012 ; Strategic Direction Volume 28 ; 28 >
+    au < expected ; 2013 ; Strategic Direction Volume 29 ; 29 >
 
   }
 
@@ -9206,6 +9348,7 @@
     au < released ; 2010 ; Strategic HR Review Volume 9 ; 9 >
     au < released ; 2011 ; Strategic HR Review Volume 10 ; 10 >
     au < released ; 2012 ; Strategic HR Review Volume 11 ; 11 >
+    au < expected ; 2013 ; Strategic HR Review Volume 12 ; 12 >
 
   }
 
@@ -9225,6 +9368,7 @@
     au < released ; 2010 ; Strategic Outsourcing: An international Journal Volume 3 ; 3 >
     au < released ; 2011 ; Strategic Outsourcing: An international Journal Volume 4 ; 4 >
     au < released ; 2012 ; Strategic Outsourcing: An international Journal Volume 5 ; 5 >
+    au < expected ; 2013 ; Strategic Outsourcing: An international Journal Volume 6 ; 6 >
 
   }
 
@@ -9277,6 +9421,7 @@
     au < released ; 2010 ; Strategy & Leadership Volume 38 ; 38 >
     au < released ; 2011 ; Strategy & Leadership Volume 39 ; 39 >
     au < released ; 2012 ; Strategy & Leadership Volume 40 ; 40 >
+    au < expected ; 2013 ; Strategy & Leadership Volume 41 ; 41 >
 
   }
 
@@ -9319,7 +9464,8 @@
     au < released ; 2009 ; Structural Survey Volume 27 ; 27 >
     au < released ; 2010 ; Structural Survey Volume 28 ; 28 >
     au < released ; 2011 ; Structural Survey Volume 29 ; 29 >
-    au < expected ; 2012 ; Structural Survey Volume 30 ; 30 >
+    au < exists ; 2012 ; Structural Survey Volume 30 ; 30 >
+    au < expected ; 2013 ; Structural Survey Volume 31 ; 31 >
 
   }
 
@@ -9362,6 +9508,7 @@
     au < released ; 2010 ; Studies in Economics and Finance Volume 27 ; 27 >
     au < released ; 2011 ; Studies in Economics and Finance Volume 28 ; 28 >
     au < released ; 2012 ; Studies in Economics and Finance Volume 29 ; 29 >
+    au < expected ; 2013 ; Studies in Economics and Finance Volume 30 ; 30 >
 
   }
 
@@ -9392,6 +9539,7 @@
     au < released ; 2010 ; Supply Chain Management: An International Journal Volume 15 ; 15 >
     au < released ; 2011 ; Supply Chain Management: An International Journal Volume 16 ; 16 >
     au < released ; 2012 ; Supply Chain Management: An International Journal Volume 17 ; 17 >
+    au < expected ; 2013 ; Supply Chain Management: An International Journal Volume 18 ; 18 >
 
   }
 
@@ -9409,6 +9557,7 @@
     au < released ; 2010 ; Sustainability Accounting, Management and Policy Journal Volume 1 ; 1 >
     au < released ; 2011 ; Sustainability Accounting, Management and Policy Journal Volume 2 ; 2 >
     au < released ; 2012 ; Sustainability Accounting, Management and Policy Journal Volume 3 ; 3 >
+    au < expected ; 2013 ; Sustainability Accounting, Management and Policy Journal Volume 4 ; 4 >
 
   }
 
@@ -9440,6 +9589,7 @@
     au < released ; 2010 ; Team Performance Management Volume 16 ; 16 >
     au < released ; 2011 ; Team Performance Management Volume 17 ; 17 >
     au < released ; 2012 ; Team Performance Management Volume 18 ; 18 >
+    au < expected ; 2013 ; Team Performance Management Volume 19 ; 19 >
 
   }
 
@@ -9471,6 +9621,7 @@
     au < released ; 2010 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 15 ; 15 >
     au < released ; 2011 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 16 ; 16 >
     au < released ; 2012 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 17 ; 17 >
+    au < expected ; 2013 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 18 ; 18 >
 
   }
 
@@ -9482,7 +9633,12 @@
       issnl = 0964-1866
     >
 
-    comment[0] = coming in 2013
+    param[journal_issn] = 0964-1866
+    comment[0] = Online from 2012
+
+    au < exists ; 2012 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 33 ; 33 >
+    au < expected ; 2013 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 34 ; 34 >
+
   }
   
   {
@@ -9563,6 +9719,7 @@
     au < released ; 2010 ; Tourism Review Volume 65 ; 65 >
     au < released ; 2011 ; Tourism Review Volume 66 ; 66 >
     au < released ; 2012 ; Tourism Review Volume 67 ; 67 >
+    au < expected ; 2013 ; Tourism Review Volume 68 ; 68 >
 
   }
 
@@ -9583,6 +9740,7 @@
     au < released ; 2010 ; The TQM Journal Volume 22 ; 22 >
     au < released ; 2011 ; The TQM Journal Volume 23 ; 23 >
     au < released ; 2012 ; The TQM Journal Volume 24 ; 24 >
+    au < expected ; 2013 ; The TQM Journal Volume 25 ; 25 >
 
   }
 
@@ -9670,6 +9828,7 @@
     au < released ; 2010 ; Transforming Government: People, Process and Policy Volume 4 ; 4 >
     au < released ; 2011 ; Transforming Government: People, Process and Policy Volume 5 ; 5 >
     au < released ; 2012 ; Transforming Government: People, Process and Policy Volume 6 ; 6 >
+    au < expected ; 2013 ; Transforming Government: People, Process and Policy Volume 7 ; 7 >
 
   }
 
@@ -9725,6 +9884,7 @@
     au < released ; 2010 ; VINE Volume 40 ; 40 >
     au < released ; 2011 ; VINE Volume 41 ; 41 >
     au < released ; 2012 ; VINE Volume 42 ; 42 >
+    au < expected ; 2013 ; VINE Volume 43 ; 43 >
 
   }
 
@@ -9852,6 +10012,7 @@
     au < released ; 2010 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 14 ; 14 >
     au < released ; 2011 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 15 ; 15 >
     au < released ; 2012 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 16 ; 16 >
+    au < expected ; 2013 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 17 ; 17 >
 
   }
 
@@ -9882,6 +10043,7 @@
     au < exists ; 2010 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 >
     au < exists ; 2011 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 >
     au < exists ; 2012 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 8 ; 8 >
+    au < expected ; 2013 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 9 ; 9 >
 
   }
 
@@ -9897,6 +10059,7 @@
       au < exists ; 2010 ; World Journal of Science, Technology and Sustainable Development Volume 7 ; 7 >
       au < exists ; 2011 ; World Journal of Science, Technology and Sustainable Development Volume 8 ; 8 >
       au < exists ; 2012 ; World Journal of Science, Technology and Sustainable Development Volume 9 ; 9 >
+      au < expected ; 2013 ; World Journal of Science, Technology and Sustainable Development Volume 10 ; 10 >
 
   }
 
@@ -9914,6 +10077,7 @@
     au < released ; 2010 ; Worldwide Hospitality and Tourism Themes Volume 2 ; 2 >
     au < released ; 2011 ; Worldwide Hospitality and Tourism Themes Volume 3 ; 3 >
     au < released ; 2012 ; Worldwide Hospitality and Tourism Themes Volume 4 ; 4 >
+    au < expected ; 2013 ; Worldwide Hospitality and Tourism Themes Volume 5 ; 5 >
 
   }
 
@@ -9940,6 +10104,7 @@
     au < released ; 2010 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 11 ; 11 >
     au < released ; 2011 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 12 ; 12 >
     au < released ; 2012 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 13 ; 13 >
+    au < expected ; 2013 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 14 ; 14 >
 
   }
   
