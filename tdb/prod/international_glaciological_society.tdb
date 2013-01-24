@@ -23,36 +23,35 @@
     param[publisher_id] = igsoc
     param[journal_id] = agl 
     param[journal_issn] = 0260-3055
-    comment[notReady] = extra string added in URL, similar case to RU4494
 
-    au < exists ; 1981 ; Annals of Glaciology Volume 1 ; 1 >
-    au < manifest ; 1994 ; Annals of Glaciology Volume 20 ; 20 >
-    au < manifest ; 1999 ; Annals of Glaciology Volume 28 ; 28 >
-    au < manifest ; 1999 ; Annals of Glaciology Volume 29 ; 29 >
-    au < manifest ; 2000 ; Annals of Glaciology Volume 30 ; 30 >
-    au < manifest ; 2000 ; Annals of Glaciology Volume 31 ; 31 >
-    au < manifest ; 2001 ; Annals of Glaciology Volume 32 ; 32 >
-    au < manifest ; 2001 ; Annals of Glaciology Volume 33 ; 33 >
-    au < manifest ; 2002 ; Annals of Glaciology Volume 34 ; 34 >
-    au < manifest ; 2002 ; Annals of Glaciology Volume 35 ; 35 >
-    au < manifest ; 2003 ; Annals of Glaciology Volume 36 ; 36 >
-    au < manifest ; 2003 ; Annals of Glaciology Volume 37 ; 37 >
-    au < manifest ; 2004 ; Annals of Glaciology Volume 38 ; 38 >
-    au < manifest ; 2004 ; Annals of Glaciology Volume 39 ; 39 >
-    au < manifest ; 2005 ; Annals of Glaciology Volume 40 ; 40 >
-    au < manifest ; 2005 ; Annals of Glaciology Volume 41 ; 41 >
-    au < manifest ; 2005 ; Annals of Glaciology Volume 42 ; 42 >
-    au < manifest ; 2006 ; Annals of Glaciology Volume 43 ; 43 >
-    au < manifest ; 2006 ; Annals of Glaciology Volume 44 ; 44 >
-    au < manifest ; 2007 ; Annals of Glaciology Volume 45 ; 45 >
-    au < manifest ; 2007 ; Annals of Glaciology Volume 46 ; 46 >
-    au < manifest ; 2007 ; Annals of Glaciology Volume 47 ; 47 >
-    au < manifest ; 2008 ; Annals of Glaciology Volume 48 ; 48 >
-    au < manifest ; 2008 ; Annals of Glaciology Volume 49 ; 49 >
-    au < manifest ; 2009-2010 ; Annals of Glaciology Volume 50 ; 50 >
-    au < manifest ; 2010 ; Annals of Glaciology Volume 51 ; 51 >
-    au < manifest ; 2011 ; Annals of Glaciology Volume 52 ; 52 >
-    au < notReady ; 2012 ; Annals of Glaciology Volume 53 ; 53 >
+    au < exists ; 1981 ; Annals of Glaciology Volume 2 ; 2 >
+    au < testing ; 1994 ; Annals of Glaciology Volume 20 ; 20 >
+    au < testing ; 1999 ; Annals of Glaciology Volume 28 ; 28 >
+    au < testing ; 1999 ; Annals of Glaciology Volume 29 ; 29 >
+    au < testing ; 2000 ; Annals of Glaciology Volume 30 ; 30 >
+    au < testing ; 2000 ; Annals of Glaciology Volume 31 ; 31 >
+    au < testing ; 2001 ; Annals of Glaciology Volume 32 ; 32 >
+    au < testing ; 2001 ; Annals of Glaciology Volume 33 ; 33 >
+    au < testing ; 2002 ; Annals of Glaciology Volume 34 ; 34 >
+    au < testing ; 2002 ; Annals of Glaciology Volume 35 ; 35 >
+    au < testing ; 2003 ; Annals of Glaciology Volume 36 ; 36 >
+    au < testing ; 2003 ; Annals of Glaciology Volume 37 ; 37 >
+    au < testing ; 2004 ; Annals of Glaciology Volume 38 ; 38 >
+    au < testing ; 2004 ; Annals of Glaciology Volume 39 ; 39 >
+    au < testing ; 2005 ; Annals of Glaciology Volume 40 ; 40 >
+    au < testing ; 2005 ; Annals of Glaciology Volume 41 ; 41 >
+    au < testing ; 2005 ; Annals of Glaciology Volume 42 ; 42 >
+    au < testing ; 2006 ; Annals of Glaciology Volume 43 ; 43 >
+    au < testing ; 2006 ; Annals of Glaciology Volume 44 ; 44 >
+    au < testing ; 2007 ; Annals of Glaciology Volume 45 ; 45 >
+    au < testing ; 2007 ; Annals of Glaciology Volume 46 ; 46 >
+    au < testing ; 2007 ; Annals of Glaciology Volume 47 ; 47 >
+    au < testing ; 2008 ; Annals of Glaciology Volume 48 ; 48 >
+    au < testing ; 2008 ; Annals of Glaciology Volume 49 ; 49 >
+    au < testing ; 2009-2010 ; Annals of Glaciology Volume 50 ; 50 >
+    au < testing ; 2010 ; Annals of Glaciology Volume 51 ; 51 >
+    au < testing ; 2011 ; Annals of Glaciology Volume 52 ; 52 >
+    au < testing ; 2012 ; Annals of Glaciology Volume 53 ; 53 >
     au < exists ; 2013 ; Annals of Glaciology Volume 54 ; 54 >
      
    }    
