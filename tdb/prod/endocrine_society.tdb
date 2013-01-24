@@ -415,10 +415,11 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://rphr.endojournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+      comment[0] = RU4584, plugin needs to change crawl rule
 
-      au < HighWirePressH20Plugin ; testing ; 2001 ; Recent Progress in Hormone Research Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; Recent Progress in Hormone Research Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; testing ; 2003 ; Recent Progress in Hormone Research Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; notReady ; 2001 ; Recent Progress in Hormone Research Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; notReady ; 2002 ; Recent Progress in Hormone Research Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; notReady ; 2003 ; Recent Progress in Hormone Research Volume 58 ; 58 >
       au < HighWirePressPlugin ; down ; 2004 ; Recent Progress in Hormone Research Volume 59 ; 59 >
 
     }
