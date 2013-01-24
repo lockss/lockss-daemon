@@ -1,7 +1,7 @@
 {
   publisher <
     name = Johns Hopkins University Press ;
-    info[tester] = 3
+    info[tester] = 5
   >
 
   implicit < status ; year ; name ; param[volume] >
@@ -504,6 +504,8 @@
     au < released ; 2007 ; diacritics Volume 37 ; 37 >
     au < released ; 2008 ; diacritics Volume 38 ; 38 >
     au < released ; 2009 ; diacritics Volume 39 ; 39 >
+    au < exists ; 2012 ; diacritics Volume 40 ; 40 >
+    au < expected ; 2012 ; diacritics Volume 41 ; 41 >
     
   }
 
@@ -798,6 +800,8 @@
     au < released ; 2009 ; Journal of Colonialism and Colonial History Volume 10 ; 10 >
     au < released ; 2010 ; Journal of Colonialism and Colonial History Volume 11 ; 11 >
     au < released ; 2011 ; Journal of Colonialism and Colonial History Volume 12 ; 12 >
+    au < exists ; 2012 ; Journal of Colonialism and Colonial History Volume 13 ; 13 >
+    au < expected ; 2013 ; Journal of Colonialism and Colonial History Volume 14 ; 14 >
 
   }
 
@@ -1071,6 +1075,7 @@
     au < released ; 2010 ; L'Esprit Créateur Volume 50 ; 50 >
     au < released ; 2011 ; L'Esprit Créateur Volume 51 ; 51 >
     au < released ; 2012 ; L'Esprit Créateur Volume 52 ; 52 >
+    au < expected ; 2013 ; L'Esprit Créateur Volume 53 ; 53 >
 
   }
 
@@ -1123,7 +1128,8 @@
     au < released ; 2009 ; Library Trends Volume 57 ; 57 >
     au < released ; 2009 ; Library Trends Volume 58 ; 58 >
     au < released ; 2010 ; Library Trends Volume 59 ; 59 >
-    au < released ; 2011 ; Library Trends Volume 60 ; 60 >
+    au < released ; 2011-2012 ; Library Trends Volume 60 ; 60 >
+    au < exists ; 2012-2013 ; Library Trends Volume 61 ; 61 >
 
   }
 
@@ -1239,6 +1245,8 @@
     au < released ; 2009 ; MLN Volume 124 ; 124 >
     au < released ; 2010 ; MLN Volume 125 ; 125 >
     au < released ; 2011 ; MLN Volume 126 ; 126 >
+    au < exists ; 2012 ; MLN Volume 127 ; 127 >
+    au < expected ; 2013 ; MLN Volume 128 ; 128 >
 
   }
 
@@ -1287,7 +1295,9 @@
       param[journal_dir] = narrative_inquiry_in_bioethics
 	  attr[journal_id] = nib
   
-      au < released ; 2011 ; Narrative Inquiry in Bioethics Volume 1 ;1 >
+      au < released ; 2011 ; Narrative Inquiry in Bioethics Volume 1 ; 1 >
+      au < exists ; 2012 ; Narrative Inquiry in Bioethics Volume 2 ; 2 >
+      au < expected ; 2013 ; Narrative Inquiry in Bioethics Volume 3 ; 3 >
       
   }
       
