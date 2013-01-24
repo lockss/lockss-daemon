@@ -7,9 +7,30 @@
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.portlandpress.PortlandPressPlugin</string>
   </entry>
+ <entry>
+    <string>required_daemon_version</string>
+    <string>1.57.0</string>
+  </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -17,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Portland Press Plugin, Base URL %s, Journal ID %s, Volume Name %s&quot;, base_url, journal_id, volume_name</string>
+    <string>"Portland Press Plugin, Base URL %s, Journal ID %s, Volume Name %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -30,30 +51,31 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>2,&quot;^%s%s(/ev)?/%s/[^/]+/[^/]+/[^/]_browse\.htm&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%s%s(/ev)?/%s/&quot;, base_url, journal_id, volume_name</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <!--  I find www.biochemj.org/bj/200/0043/bj2000043_browse.htm -->
+      <string>2,"^%s%s(/ev)?/%s/[^/]+/[^/]_browse\.htm", base_url, journal_id, volume_name</string>
+      <string>1,"^%s%s(/ev)?/%s/", base_url, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%s/%s/lockss.htm&quot;, base_url, journal_id, volume_name</string>
+    <string>"%s%s/%s/lockss.htm", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
   	<map>
 	  <entry>
 	    <string>au_title</string>
-	    <string>&quot;%s%s&quot;, base_url, journal_id</string>
+	    <string>"%s%s", base_url, journal_id</string>
 	  </entry>
 	  <entry>
 	    <string>au_volume</string>
-        <string>&quot;%s%s/%s/lockss.htm&quot;, base_url, journal_id, volume_name</string>
+        <string>"%s%s/%s/lockss.htm", base_url, journal_id, volume_name</string>
 	  </entry>
 	  <entry>
 	    <string>au_issue</string>
-        <string>&quot;%s%s/%s/%s/default.htm&quot;, base_url, journal_id, volume_name, issue</string>
+        <string>"%s%s/%s/%s/default.htm", base_url, journal_id, volume_name, issue</string>
 	  </entry>
   	</map>
   </entry>
@@ -89,6 +111,23 @@
     </list>
   </entry>
   <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+       	<!-- <base>/<jid>/<vnum>/<stpage>/<volstpage>.(pdf|htm) -->
+      	<!-- <base>/<jid>/ev/<vnum>/<stpage>/<volstpage>_ev.htm -->
+       	<string>"^%s%s(/ev)?/%s/[^/]+/(?!default.htm)[^/]+\.(pdf|htm)$", base_url, journal_id, volume_name</string>
+    </list>
+  </entry> 
+  <entry>
+  <string>text/html_metadata_extractor_factory_map</string>
+  <map>
+    <entry>
+    <string>*;RIS</string>
+    <string>org.lockss.plugin.portlandpress.PortlandPressHtmlMetadataExtractorFactory</string>
+   </entry>
+  </map>
+  </entry>
+  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.portlandpress.PortlandPressHtmlFilterFactory</string>
   </entry>
@@ -96,5 +135,13 @@
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.portlandpress.PortlandPressHtmlLinkExtractorFactory</string>
   </entry>
+    <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.portlandpress.PortlandPressArticleIteratorFactory</string>
+  </entry> 
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.portlandpress.PortlandPressArticleIteratorFactory</string>
+  </entry> 
 </map>
 
