@@ -3,9 +3,11 @@
   publisher <
     name = Centro de Filosofia da Universidade de Lisboa
   >
-  
+
+    plugin = needs.plugin
+    
   {
-  
+
     title <
       name = Disputatio ;
       issn = 0873-626X ;
@@ -37,7 +39,34 @@
     au < exists ; 2011 ; Disputatio 2011 ; 2011 ; IV ; 030, 031 >
     au < exists ; 2012 ; Disputatio 2012 ; 2012 ; IV ; 032, 033 >
 
-  
+
   }
   
+  {
+  
+    title <
+      name = Philosophy;
+      issn = 2132-4371
+    >  
+    
+  }
+  
+  {
+  
+    title <
+      name = Philosophica ;
+      issn = 0872-4784
+    >  
+
+  }
+  
+  {
+  
+    title <
+      name = Phainomenon ;
+      issn = 0874-9493
+    >  
+    
+  }
+
 }
