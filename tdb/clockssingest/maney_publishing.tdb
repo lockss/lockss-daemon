@@ -4898,31 +4898,10 @@
 
   {
 
-    title <
-      name = Ultrasound ;
-      issn = 1742-271X ;
-      eissn = 1743-1344 ;
-      issnl = 1742-271X 
-    >
-
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = maney
-    param[journal_id] = ultra 
-    param[journal_issn] = 1742-271X
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[moved] = published by Royal Society of Medicine Press from 2010
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
-    
-    au < doNotProcess ; doNotProcess ; 2004 ; Ultrasound Volume 12 ; 12 > 
-    au < doNotProcess ; doNotProcess ; 2005 ; Ultrasound Volume 13 ; 13 > 
-    au < doNotProcess ; doNotProcess ; 2006 ; Ultrasound Volume 14 ; 14 > 
-    au < doNotProcess ; doNotProcess ; 2007 ; Ultrasound Volume 15 ; 15 > 
-    au < doNotProcess ; doNotProcess ; 2008 ; Ultrasound Volume 16 ; 16 > 
-    au < doNotProcess ; doNotProcess ; 2009 ; Ultrasound Volume 17 ; 17 > 
+      comment[name] = Ultrasound
+      comment[issn] = 1742-271X
+      comment[eissn] = 1743-1344
+      comment[moved] = This journal moved to Royal Society of Medicine in 2010 and Sage in 2013.
 
   }
 
