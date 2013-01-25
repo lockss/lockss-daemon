@@ -135,19 +135,30 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
   
   private static final String svgContentHtml = 
       "</a></div><div class=\"groupcaption\"><b>Figure 10: </b>" +
-      "Coherency caption goes here" +
-      "<svg style=\"vertical-align:-3.39066pt;width:30.025px;\" " +
-      "id=\"M47\" height=\"16.299999\" version=\"1.1\" viewBox=\"0 0 30.025 16.299999\" width=\"30.025\" " +     
-      "xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns=\"http://www.w3.org/2000/svg\">" +
-      "<g transform=\"matrix(.017,0,0,-.017,.062,12.013)\"><use xlink:href=\"#x1D463\"/></g>" +
-      "<g transform=\"matrix(.012,0,0,-.012,8.225,16.088)\"><use xlink:href=\"#x1D460\"/></g>" +
-      "" +
-      "<g transform=\"matrix(.017,0,0,-.017,13.313,12.013)\"><use xlink:href=\"#x2F\"/></g><g transform=\"matrix(.017,0,0,-.017,20.316,12.013)\">" +
-      "<use xlink:href=\"#x1D6FC\"/></g></svg>"; 
-  
- private static final String svgContentFiltered =
-     "</a></div><div class=\"groupcaption\"><b>Figure 10: </b>" +
-     "Coherency caption goes here";     
+          "Coherency caption goes here" +
+          "<svg style=\"vertical-align:-3.39066pt;width:30.025px;\" " +
+          "id=\"M47\" height=\"16.299999\" version=\"1.1\" viewBox=\"0 0 30.025 16.299999\" width=\"30.025\" " +     
+          "xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns=\"http://www.w3.org/2000/svg\">" +
+          "<g transform=\"matrix(.017,0,0,-.017,.062,12.013)\"><use xlink:href=\"#x1D463\"/></g>" +
+          "<g transform=\"matrix(.012,0,0,-.012,8.225,16.088)\"><use xlink:href=\"#x1D460\"/></g>" +
+          "" +
+          "<g transform=\"matrix(.017,0,0,-.017,13.313,12.013)\"><use xlink:href=\"#x2F\"/></g><g transform=\"matrix(.017,0,0,-.017,20.316,12.013)\">" +
+          "<use xlink:href=\"#x1D6FC\"/></g></svg>"; 
+
+  private static final String svgContentFiltered =
+      "</a></div><div class=\"groupcaption\"><b>Figure 10: </b>" +
+          "Coherency caption goes here";     
+
+  private static final String styleWidthHtml=
+      "<td align=\"center\" colspan=\"2\"><span style=\"width: 17.7875px;\">" +
+          "<svg style=\"vertical\">" +
+          "<g transform=\"matrix(.012,0,0,-.012,8.225,16.088)\"><use xlink:href=\"#x1D460\"/></g>" +
+          "</svg>" +
+          "</span></td>" +
+          "<td align=\"center\" colspan=\"2\">Bias</td>";
+  private static final String styleWidthFiltered=
+      "<td align=\"center\" colspan=\"2\"></td>" +
+          "<td align=\"center\" colspan=\"2\">Bias</td>";
   
   public void testScriptFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
@@ -232,6 +243,14 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
 
     assertEquals(svgContentFiltered, StringUtil.fromInputStream(actIn));
   }
+
+  public void testAutoWidth() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(styleWidthHtml),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(styleWidthFiltered, StringUtil.fromInputStream(actIn));
+  } 
 
 }
 

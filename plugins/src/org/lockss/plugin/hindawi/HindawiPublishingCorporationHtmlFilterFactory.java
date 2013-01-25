@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.11 2013-01-04 19:08:20 alexandraohlson Exp $
+ * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.12 2013-01-25 00:16:45 alexandraohlson Exp $
  */
 
 /*
@@ -74,6 +74,8 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
             // ASP cookies; once without '__', now with  
             HtmlNodeFilters.tagWithAttribute("input", "id", "EVENTVALIDATION"),
             HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
+            // not sure if this will work because the <svg> goop is embedded between the <span></span>
+            HtmlNodeFilters.tagWithAttributeRegex("span", "style", "^width"),
     };
         HtmlTransform xform = new HtmlTransform() {
           @Override
