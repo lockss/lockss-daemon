@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.14 2012-10-16 20:07:13 alexandraohlson Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.15 2013-01-25 20:26:06 alexandraohlson Exp $
  */
 
 /*
@@ -39,9 +39,13 @@ import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
+import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ListUtil;
 import org.lockss.util.ReaderInputStream;
 
 /**
@@ -99,12 +103,23 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("meta", "name", "WT.site_id"),
         // breadcrumb horiz menu at top varies when current issue becomes archived version
         HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
+        // just remove the header section of the html file... addition of links to stylesheets
+        // addition of new meta tags, etc. 
+        new TagNameFilter("head"),
+        // adding words to footer boilerplate and we don't need it
+        HtmlNodeFilters.tagWithAttribute("div", "class", "footer"),
         
     };
-    InputStream filtered =  new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    InputStream filtered =  new HtmlFilterInputStream(in, 
+        encoding, 
+        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
+        ListUtil.list(   
+            new TagPair("<!--", "-->")
+            ));   
+    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
 
 }
