@@ -716,8 +716,8 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$bmc_tag/) && ($man_contents =~ m/content\/$param{volume_name}/)) {
-        if ($man_contents =~ m/<strong>Journal title:</strong>(.*)<br />/si) {
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+        if ($man_contents =~ m/<strong>Journal title:<\/strong>(.*)<br \/>/si) {
           $vol_title = $1 . " Volume " . $param{volume_name};
           $vol_title =~ s/\s*\n\s*/ /g;
           if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
