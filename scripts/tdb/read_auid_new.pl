@@ -708,6 +708,31 @@ while (my $line = <>) {
     }
     sleep(5);
                 
+  } elsif ($plugin eq "EmeraldPlugin") {
+    $url = sprintf("%scrawlers/lockss.htm?issn=%s&volume=%s", 
+      $param{base_url}, $param{journal_issn}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$bmc_tag/) && ($man_contents =~ m/content\/$param{volume_name}/)) {
+        if ($man_contents =~ m/<strong>Journal title:</strong>(.*)<br />/si) {
+          $vol_title = $1 . " Volume " . $param{volume_name};
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(5);
+                
   } 
   if ($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN* %s, %s, %s, %s\n",$result,$vol_title,$auid,$man_url);
