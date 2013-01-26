@@ -290,8 +290,10 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = 
+      param[journal_dir] = journal_of_eastern_mediterranean_archaeology_and_heritage_studies
       attr[journal_id] = 
+      
+      au < expected ; 2013 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 1 ; 1 >
       
     }
     
