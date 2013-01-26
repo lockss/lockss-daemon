@@ -226,11 +226,11 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/))) {
+      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/$param{journal_id}\/$param{volume_name}/))) {
     if ($man_contents =~ m/<title>(.*) CLOCKSS Manifest Page<\/title>/si) {
         $vol_title = $1;
         $vol_title =~ s/\s*\n\s*/ /g;
-        $vol_title =~ s/2012/Volume $param{volume_name}/g;
+        $vol_title =~ s/2013/Volume $param{volume_name}/g;
         if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
           $vol_title = "\"" . $vol_title . "\"";
         }
