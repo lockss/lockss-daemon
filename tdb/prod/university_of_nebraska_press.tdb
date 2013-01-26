@@ -177,6 +177,21 @@
   {
   
     title <
+      name = Journal of Austrian Studies ;
+      issn = 2165-669X ;
+      issnl = 2165-669X 
+    >
+
+    param[journal_dir] = journal_of_austrian_studies
+    attr[journal_id] = 
+
+    au < expected ; 2013 ; Journal of Austrian Studies Volume 1 ; 1 >
+    
+  }
+
+  {
+  
+    title <
       name = Journal of Literature and Trauma Studies ;
       issn = 2162-3627 ;
       eissn = 2045-4740 ;
