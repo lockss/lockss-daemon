@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksTallier.java,v 1.1.2.2 2013-01-20 18:17:46 dshr Exp $
+ * $Id: VoteBlocksTallier.java,v 1.1.2.3 2013-01-26 04:16:55 dshr Exp $
  */
 
 /*
@@ -57,6 +57,15 @@ public class VoteBlocksTallier {
   private HashSet<String> disagreeUrl = new HashSet<String>();
   private HashSet<String> voterOnlyUrl = new HashSet<String>();
   private HashSet<String> pollerOnlyUrl = new HashSet<String>();
+
+  public VoteBlocksTallier() {
+  }
+
+  public VoteBlocksTallier(VoteBlocks voterBlocks, VoteBlocks pollerBlocks) {
+    // log.setLevel(Logger.LEVEL_DEBUG3);
+    tallyVoteBlocks(voterBlocks, pollerBlocks);
+  }
+
   /**
    * Used by the voter in a symmetric poll to tally the VoteBlocks
    * in the receipt message aginst the VoteBlocks object, which
@@ -72,6 +81,7 @@ public class VoteBlocksTallier {
         // null sorts after everything else.
         String vUrl = vb.getUrl();
         String pUrl = pb.getUrl();
+	log.debug3("Compare(" + vUrl + "," + pUrl + ")");
         return StringUtil.compareToNullHigh(vUrl, pUrl);
       }
     };
@@ -92,28 +102,41 @@ public class VoteBlocksTallier {
 	if (vBlock == null && pBlock == null) {
 	  // Run out of blocks in both iterators
 	  break;
-	}
-	String vUrl = vBlock.getUrl();
-	int comparison = comparator.compare(vBlock, pBlock);
-	if (comparison == 0) {
-	  // Voter and Poller both have this URL
-	  if (voteBlockAgree(vBlock, pBlock)) {
-	    agreeUrl.add(vUrl);
-	  } else {
-	    disagreeUrl.add(vUrl);
-	  }
-	  // Consume both VoteBlocks
-	  vBlock = pBlock = null;
-	} else if (comparison < 0) {
-	  // Voter has this URL, Poller doesn't
-	  voterOnlyUrl.add(vUrl);
+	} else if (vBlock == null) {
+	  // Poller has blocks after Vote
+	  pollerOnlyUrl.add(pBlock.getUrl());
 	  // Consume the Voter's VoteBlock
+	  pBlock = null;
+	} else if (pBlock == null) {
+	  voterOnlyUrl.add(vBlock.getUrl());
 	  vBlock = null;
 	} else {
-	  // Poller has this URL, Voter doesn't
-	  pollerOnlyUrl.add(vUrl);;
-	  // Consume the Poller's VoteBlock
-	  pBlock = null;
+	  String vUrl = vBlock.getUrl();
+	  String pUrl = pBlock.getUrl();
+	  int comparison = comparator.compare(vBlock, pBlock);
+	  if (comparison == 0) {
+	    log.debug3("Both have " + vUrl);
+	    // Voter and Poller both have this URL
+	    if (voteBlockAgree(vBlock, pBlock)) {
+	      agreeUrl.add(vUrl);
+	    } else {
+	      disagreeUrl.add(vUrl);
+	    }
+	    // Consume both VoteBlocks
+	    vBlock = pBlock = null;
+	  } else if (comparison < 0) {
+	    log.debug3("Voter has " + vUrl);
+	    // Voter has this URL, Poller doesn't
+	    voterOnlyUrl.add(vUrl);
+	    // Consume the Voter's VoteBlock
+	    vBlock = null;
+	  } else {
+	    log.debug3("Poller has " + vUrl);
+	    // Poller has this URL, Voter doesn't
+	    pollerOnlyUrl.add(pUrl);;
+	    // Consume the Poller's VoteBlock
+	    pBlock = null;
+	  }
 	}
       }
     } catch (IOException ex) {
@@ -133,17 +156,21 @@ public class VoteBlocksTallier {
     HashSet<byte[]> pHashes = new HashSet<byte[]>();
     for (java.util.Iterator it = pBlock.versionIterator(); it.hasNext(); ) {
       VoteBlock.Version ver = (VoteBlock.Version)it.next();
+      log.debug3("Poller hash " + ByteArray.toHexString(ver.getHash()));
       pHashes.add(ver.getHash());
     }
     // Look up each of the voter's hashes in the HashSet
     for (java.util.Iterator it = vBlock.versionIterator(); it.hasNext(); ) {
       VoteBlock.Version ver = (VoteBlock.Version)it.next();
+      log.debug3("Voter hash " + ByteArray.toHexString(ver.getHash()));
       if (pHashes.contains(ver.getHash())) {
 	// At least one voter version agrees with a poller version
+	log.debug3("Agree");
 	return true;
       }
     }
     // No agreement on any version
+    log.debug3("Disgree");
     return false;
   }
 

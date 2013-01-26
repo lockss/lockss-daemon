@@ -1,5 +1,5 @@
 /*
- * $Id: V3TestUtils.java,v 1.7 2012-07-02 16:27:50 tlipkis Exp $
+ * $Id: V3TestUtils.java,v 1.7.10.1 2013-01-26 04:16:55 dshr Exp $
  */
 
 /*
@@ -71,6 +71,7 @@ public class V3TestUtils {
     ArrayList<VoteBlock> vbList = new ArrayList<VoteBlock>();
     for (int ix = 0; ix < count; ix++) {
       String fileName = "/test-" + ix + ".html";
+      // XXX DSHR shouldn't the hash go somewhere?
       V3TestUtils.computeHash(fileName);
       VoteBlock vb = V3TestUtils.makeVoteBlock(fileName);
       vbList.add(vb);
@@ -105,4 +106,5 @@ public class V3TestUtils {
     }
     return vb;
   }
+
 }
