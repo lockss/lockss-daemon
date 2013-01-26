@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = National Trust for Historic Preservation
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Forum Journal ;
+      issn = 1536-1012 ;
+      eissn = 2325-7296
+    >
+
+    param[journal_dir] = forum_journal
+    attr[journal_id] = 
+
+    au < expected ; 2012 ; Forum Journal Volume 27 ; 27 >
+    au < expected ; 2013 ; Forum Journal Volume 28 ; 28 >
+
+  }
+
+}

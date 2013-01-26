@@ -128,6 +128,21 @@
 
   {
     title <
+      name = J19: The Journal of Nineteenth-Century Americanists ;
+      issn = 2166-742X ;
+      eissn = 2166-7438 ;
+      issnl = 2166-742X
+    >
+
+    param[journal_dir] = the_journal_of_nineteenth_century_americanists
+    attr[journal_id] = 
+
+    au < expected ; 2013 ; J19: The Journal of Nineteenth-Century Americanists Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
       name = Jewish Quarterly Review ;
       issn = 0021-6682 ;
       eissn = 1553-0604 ;

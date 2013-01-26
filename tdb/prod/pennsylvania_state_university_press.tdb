@@ -159,6 +159,28 @@
   {
   
     title <
+      name = The F. Scott Fitzgerald Review ;
+      issn = 1543-3951 ;
+      eissn = 1755-6333 ;
+      issnl = 1543-3951 
+    >
+  
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/    
+      param[journal_dir] = f_scott_fitzgerald_review
+      attr[journal_id] = 
+    
+      au < expected ; 2013 ; The F. Scott Fitzgerald Review Volume 1 ; 1 >
+      
+    }
+
+  }
+
+  {
+  
+    title <
       name = The Good Society ;
       issn = 1089-0017 ;
       eissn = 1538-9731 ;
