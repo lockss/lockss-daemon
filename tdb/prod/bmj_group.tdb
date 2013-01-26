@@ -49,7 +49,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Acupuncture in Medicine Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Acupuncture in Medicine Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Acupuncture in Medicine Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Acupuncture in Medicine Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Acupuncture in Medicine Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Acupuncture in Medicine Volume 31 ; 31 >
 
   }
@@ -152,52 +152,52 @@
     param[base_url] = http://adc.bmj.com/
 
     au < HighWirePressH20Plugin ; exists ; 1926 ; Archives of Disease in Childhood Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 1927 ; Archives of Disease in Childhood Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 1928 ; Archives of Disease in Childhood Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; testing ; 1929 ; Archives of Disease in Childhood Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; testing ; 1930 ; Archives of Disease in Childhood Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; testing ; 1931 ; Archives of Disease in Childhood Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; 1932 ; Archives of Disease in Childhood Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; testing ; 1933 ; Archives of Disease in Childhood Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 1934 ; Archives of Disease in Childhood Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; testing ; 1935 ; Archives of Disease in Childhood Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 1936 ; Archives of Disease in Childhood Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 1937 ; Archives of Disease in Childhood Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 1938 ; Archives of Disease in Childhood Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 1939 ; Archives of Disease in Childhood Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; testing ; 1940 ; Archives of Disease in Childhood Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 1941 ; Archives of Disease in Childhood Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; testing ; 1942 ; Archives of Disease in Childhood Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; 1943 ; Archives of Disease in Childhood Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; 1944 ; Archives of Disease in Childhood Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; 1945 ; Archives of Disease in Childhood Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 1946 ; Archives of Disease in Childhood Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; testing ; 1947 ; Archives of Disease in Childhood Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; testing ; 1948 ; Archives of Disease in Childhood Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; testing ; 1949 ; Archives of Disease in Childhood Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; testing ; 1950 ; Archives of Disease in Childhood Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; testing ; 1951 ; Archives of Disease in Childhood Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; testing ; 1952 ; Archives of Disease in Childhood Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; 1953 ; Archives of Disease in Childhood Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; testing ; 1954 ; Archives of Disease in Childhood Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; testing ; 1955 ; Archives of Disease in Childhood Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; testing ; 1956 ; Archives of Disease in Childhood Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; testing ; 1957 ; Archives of Disease in Childhood Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; testing ; 1958 ; Archives of Disease in Childhood Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; testing ; 1959 ; Archives of Disease in Childhood Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; testing ; 1960 ; Archives of Disease in Childhood Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; Archives of Disease in Childhood Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; Archives of Disease in Childhood Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; Archives of Disease in Childhood Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; Archives of Disease in Childhood Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Archives of Disease in Childhood Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Archives of Disease in Childhood Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Archives of Disease in Childhood Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Archives of Disease in Childhood Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Archives of Disease in Childhood Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Archives of Disease in Childhood Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Archives of Disease in Childhood Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Archives of Disease in Childhood Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; ready ; 1927 ; Archives of Disease in Childhood Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1928 ; Archives of Disease in Childhood Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1929 ; Archives of Disease in Childhood Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 1930 ; Archives of Disease in Childhood Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 1931 ; Archives of Disease in Childhood Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 1932 ; Archives of Disease in Childhood Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1933 ; Archives of Disease in Childhood Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 1934 ; Archives of Disease in Childhood Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 1935 ; Archives of Disease in Childhood Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1936 ; Archives of Disease in Childhood Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 1937 ; Archives of Disease in Childhood Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 1938 ; Archives of Disease in Childhood Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 1939 ; Archives of Disease in Childhood Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1940 ; Archives of Disease in Childhood Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1941 ; Archives of Disease in Childhood Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 1942 ; Archives of Disease in Childhood Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 1943 ; Archives of Disease in Childhood Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; ready ; 1944 ; Archives of Disease in Childhood Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 1945 ; Archives of Disease in Childhood Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; ready ; 1946 ; Archives of Disease in Childhood Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 1947 ; Archives of Disease in Childhood Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 1948 ; Archives of Disease in Childhood Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 1949 ; Archives of Disease in Childhood Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; 1950 ; Archives of Disease in Childhood Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; 1951 ; Archives of Disease in Childhood Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; ready ; 1952 ; Archives of Disease in Childhood Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; ready ; 1953 ; Archives of Disease in Childhood Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 1954 ; Archives of Disease in Childhood Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; ready ; 1955 ; Archives of Disease in Childhood Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; ready ; 1956 ; Archives of Disease in Childhood Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; ready ; 1957 ; Archives of Disease in Childhood Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 1958 ; Archives of Disease in Childhood Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; ready ; 1959 ; Archives of Disease in Childhood Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; ready ; 1960 ; Archives of Disease in Childhood Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; testing ; 1961 ; Archives of Disease in Childhood Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; testing ; 1962 ; Archives of Disease in Childhood Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; testing ; 1963 ; Archives of Disease in Childhood Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; testing ; 1964 ; Archives of Disease in Childhood Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; testing ; 1965 ; Archives of Disease in Childhood Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; testing ; 1966 ; Archives of Disease in Childhood Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; testing ; 1967 ; Archives of Disease in Childhood Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; testing ; 1968 ; Archives of Disease in Childhood Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; testing ; 1969 ; Archives of Disease in Childhood Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; testing ; 1970 ; Archives of Disease in Childhood Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; testing ; 1971 ; Archives of Disease in Childhood Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; testing ; 1972 ; Archives of Disease in Childhood Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; released ; 1973 ; Archives of Disease in Childhood Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; released ; 1974 ; Archives of Disease in Childhood Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 1975 ; Archives of Disease in Childhood Volume 50 ; 50 >
@@ -247,7 +247,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Archives of Disease in Childhood Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Archives of Disease in Childhood Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Archives of Disease in Childhood Volume 96 ; 96 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Archives of Disease in Childhood Volume 97 ; 97 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Archives of Disease in Childhood Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Archives of Disease in Childhood Volume 98 ; 98 >
 
   }
@@ -271,7 +271,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Archives of Disease in Childhood - Education and Practice Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Archives of Disease in Childhood - Education and Practice Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Archives of Disease in Childhood - Education and Practice Volume 96 ; 96 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Archives of Disease in Childhood - Education and Practice Volume 97 ; 97 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Archives of Disease in Childhood - Education and Practice Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Archives of Disease in Childhood - Education and Practice Volume 98 ; 98 >
 
   }
@@ -314,7 +314,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 96 ; 96 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 97 ; 97 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 98 ; 98 >
 
   }
@@ -437,7 +437,7 @@
     param[base_url] = http://bmjopen.bmj.com/
 
     au < HighWirePressH20Plugin ; ready ; 2011 ; BMJ Open Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; BMJ Open Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; BMJ Open Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; BMJ Open Volume 3 ; 3 >
 
   }
@@ -507,15 +507,15 @@
     au < HighWirePressH20Plugin ; released ; 1937 ; British Journal of Ophthalmology Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 1938 ; British Journal of Ophthalmology Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 1939 ; British Journal of Ophthalmology Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1940 ; British Journal of Ophthalmology Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 1941 ; British Journal of Ophthalmology Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 1942 ; British Journal of Ophthalmology Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 1943 ; British Journal of Ophthalmology Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; manifest ; 1944 ; British Journal of Ophthalmology Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 1945 ; British Journal of Ophthalmology Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; manifest ; 1946 ; British Journal of Ophthalmology Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 1947 ; British Journal of Ophthalmology Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; British Journal of Ophthalmology Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; testing ; 1940 ; British Journal of Ophthalmology Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 1941 ; British Journal of Ophthalmology Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; testing ; 1942 ; British Journal of Ophthalmology Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; testing ; 1943 ; British Journal of Ophthalmology Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; testing ; 1944 ; British Journal of Ophthalmology Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; testing ; 1945 ; British Journal of Ophthalmology Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; testing ; 1946 ; British Journal of Ophthalmology Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; testing ; 1947 ; British Journal of Ophthalmology Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; testing ; 1948 ; British Journal of Ophthalmology Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 1949 ; British Journal of Ophthalmology Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; manifest ; 1950 ; British Journal of Ophthalmology Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; manifest ; 1951 ; British Journal of Ophthalmology Volume 35 ; 35 >
