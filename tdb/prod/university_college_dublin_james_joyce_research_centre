@@ -1,6 +1,6 @@
 {
   publisher <
-    name = James Joyce Research Centre at University College Dublin
+    name = University College Dublin James Joyce Research Centre
   >
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
