@@ -171,7 +171,7 @@
       au < manifest ; exists ; 2010 ; European Journal of Industrial Engineering Volume 4 ; 4 >
       au < zapped ; down ; 2011 ; European Journal of Industrial Engineering Volume 5 ; 5 >
       au < zapped ; down ; 2012 ; European Journal of Industrial Engineering Volume 6 ; 6 >
-      au < expected ; exists ; 2013 ; European Journal of Industrial Engineering Volume 7 ; 7 >
+      au < manifest ; exists ; 2013 ; European Journal of Industrial Engineering Volume 7 ; 7 >
 
     }
 
@@ -1923,7 +1923,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Critical Infrastructures Volume 6 ; 6 > 
       au < zapped ; down ; 2011 ; International Journal of Critical Infrastructures Volume 7 ; 7 > 
       au < zapped ; down ; 2012 ; International Journal of Critical Infrastructures Volume 8 ; 8 >
-      au < expected ; exists ; 2013 ; International Journal of Critical Infrascructures Volume 9 ; 9 >
+      au < manifest ; exists ; 2013 ; International Journal of Critical Infrascructures Volume 9 ; 9 >
 
     }
 
@@ -1938,7 +1938,7 @@
 
       param[journal_issn] = 1756-5677
       
-      au < expected ; exists ; 2012 ; International Journal of Cultural Management Volume 1 ; 1 >
+      au < manifest ; exists ; 2012 ; International Journal of Cultural Management Volume 1 ; 1 >
 
     }
 
@@ -1953,7 +1953,7 @@
 
       param[journal_issn] = 2048-2183
       
-      au < expected ; exists ; 2012 ; International Journal of Cyberspace Sciences and Emergency Management Volume 1 ; 1 >
+      au < manifest ; exists ; 2012 ; International Journal of Cyberspace Sciences and Emergency Management Volume 1 ; 1 >
 
     }
 
@@ -7477,7 +7477,7 @@
       au < zapped ; down ; 2012 ; International Journal of Vehicle Design Volume 59 ; 59 >
       au < released ; manifest ; 2012 ; International Journal of Vehicle Design Volume 60 ; 60 >
       au < manifest ; exists ; 2013 ; International Journal of Vehicle Design Volume 61 ; 61 >
-      au < expected ; exists ; 2013 ; International Journal of Vehicle Design Volume 62 ; 62 >
+      au < manifest ; exists ; 2013 ; International Journal of Vehicle Design Volume 62 ; 62 >
       au < expected ; exists ; 2013 ; International Journal of Vehicle Design Volume 63 ; 63 >
 
     }
