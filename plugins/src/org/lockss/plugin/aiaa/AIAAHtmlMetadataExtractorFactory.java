@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAHtmlMetadataExtractorFactory.java,v 1.2 2013-01-28 21:24:57 alexandraohlson Exp $
+ * $Id: AIAAHtmlMetadataExtractorFactory.java,v 1.3 2013-01-28 21:38:22 alexandraohlson Exp $
  */
 
 /*
@@ -102,7 +102,6 @@ public class AIAAHtmlMetadataExtractorFactory
         String patternString = "^" + base_url + "doi/[^/]+/([^/]+)/([^/]+)$";
         Pattern ABSTRACT_PATTERN = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
         String url = cu.getUrl();
-        System.out.println(" the cu.url for matching is: " + cu.getUrl());
         Matcher mat = ABSTRACT_PATTERN.matcher(url);
         
         if (mat.matches()) {
