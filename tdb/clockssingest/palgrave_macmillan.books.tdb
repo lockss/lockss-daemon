@@ -7,7 +7,7 @@
 
     plugin = needs.plugin
     param[base_url] = http://www.palgraveconnect.com/pc/doifinder/
-    implicit < status ; status2 ; eisbn ; doi ; year ; param[eisbn] ; author ; name >
+    implicit < status ; status2 ; eisbn ; doi ; year ; param[eisbn] ; name ; author >
 
    {
 
