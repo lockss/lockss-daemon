@@ -3731,10 +3731,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2006 ; Infectious Agents and Cancer Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Infectious Agents and Cancer Volume 2 ; 2 >
       au < crawling ; exists ; 2008 ; Infectious Agents and Cancer Volume 3 ; 3 >
-      au < crawling ; exists ; 2009 ; Infectious Agents and Cancer Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; Infectious Agents and Cancer Volume 5 ; 5 >
-      au < crawling ; exists ; 2011 ; Infectious Agents and Cancer Volume 6 ; 6 >
-      au < crawling ; exists ; 2012 ; Infectious Agents and Cancer Volume 7 ; 7 >
+      au < testing ; exists ; 2009 ; Infectious Agents and Cancer Volume 4 ; 4 >
+      au < testing ; exists ; 2010 ; Infectious Agents and Cancer Volume 5 ; 5 >
+      au < testing ; exists ; 2011 ; Infectious Agents and Cancer Volume 6 ; 6 >
+      au < testing ; exists ; 2012 ; Infectious Agents and Cancer Volume 7 ; 7 >
       au < expected ; exists ; 2013 ; Infectious Agents and Cancer Volume 8 ; 8 >
 
     }
