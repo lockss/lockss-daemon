@@ -263,21 +263,22 @@
       >
       
      param[journal_issn] = 2050-4594
+     comment[notReady] = low agreement
      
-     au < testing ; 1999 ; Literature & History Volume 8 ; 8 >
-     au < testing ; 2000 ; Literature & History Volume 9 ; 9 >
-     au < testing ; 2001 ; Literature & History Volume 10 ; 10 >
-     au < testing ; 2002 ; Literature & History Volume 11 ; 11 >
-     au < testing ; 2003 ; Literature & History Volume 12 ; 12 >
-     au < testing ; 2004 ; Literature & History Volume 13 ; 13 >
-     au < testing ; 2005 ; Literature & History Volume 14 ; 14 >
-     au < testing ; 2006 ; Literature & History Volume 15 ; 15 >
-     au < testing ; 2007 ; Literature & History Volume 16 ; 16 >
-     au < testing ; 2008 ; Literature & History Volume 17 ; 17 >
-     au < testing ; 2009 ; Literature & History Volume 18 ; 18 >
-     au < testing ; 2010 ; Literature & History Volume 19 ; 19 >
-     au < testing ; 2011 ; Literature & History Volume 20 ; 20 >
-     au < testing ; 2012 ; Literature & History Volume 21 ; 21 >
+     au < ready ; 1999 ; Literature & History Volume 8 ; 8 >
+     au < ready ; 2000 ; Literature & History Volume 9 ; 9 >
+     au < notReady ; 2001 ; Literature & History Volume 10 ; 10 >
+     au < notReady ; 2002 ; Literature & History Volume 11 ; 11 >
+     au < notReady ; 2003 ; Literature & History Volume 12 ; 12 >
+     au < ready ; 2004 ; Literature & History Volume 13 ; 13 >
+     au < ready ; 2005 ; Literature & History Volume 14 ; 14 >
+     au < ready ; 2006 ; Literature & History Volume 15 ; 15 >
+     au < ready ; 2007 ; Literature & History Volume 16 ; 16 >
+     au < notReady ; 2008 ; Literature & History Volume 17 ; 17 >
+     au < ready ; 2009 ; Literature & History Volume 18 ; 18 >
+     au < notReady ; 2010 ; Literature & History Volume 19 ; 19 >
+     au < notReady ; 2011 ; Literature & History Volume 20 ; 20 >
+     au < ready ; 2012 ; Literature & History Volume 21 ; 21 >
      au < expected ; 2013 ; Literature & History Volume 22 ; 22 >
     
     }
@@ -294,16 +295,16 @@
       
      param[journal_issn] = 2048-2906
      
-     au < manifest ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 >
-     au < manifest ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 >
-     au < manifest ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 >
-     au < manifest ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 >
-     au < manifest ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 >
-     au < manifest ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 >
-     au < manifest ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 >
-     au < manifest ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 >
-     au < manifest ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 >
-     au < manifest ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 >
+     au < testing ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 >
+     au < testing ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 >
+     au < testing ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 >
+     au < testing ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 >
+     au < testing ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 >
+     au < testing ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 >
+     au < testing ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 >
+     au < testing ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 >
+     au < testing ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 >
+     au < testing ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 >
      au < expected ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 >
     
     }
@@ -334,12 +335,12 @@
      au < exists ; 2004 ; Research in Education Volume 72 ; 72 >   
      au < exists ; 2005 ; Research in Education Volume 73 ; 73 >   
      au < exists ; 2005 ; Research in Education Volume 74 ; 74 >   
-     au < manifest ; 2006 ; Research in Education Volume 75 ; 75 >
-     au < manifest ; 2006 ; Research in Education Volume 76 ; 76 >
-     au < manifest ; 2007 ; Research in Education Volume 77 ; 77 >
-     au < manifest ; 2007 ; Research in Education Volume 78 ; 78 >
-     au < manifest ; 2008 ; Research in Education Volume 79 ; 79 >
-     au < manifest ; 2008 ; Research in Education Volume 80 ; 80 >
+     au < testing ; 2006 ; Research in Education Volume 75 ; 75 >
+     au < testing ; 2006 ; Research in Education Volume 76 ; 76 >
+     au < testing ; 2007 ; Research in Education Volume 77 ; 77 >
+     au < testing ; 2007 ; Research in Education Volume 78 ; 78 >
+     au < testing ; 2008 ; Research in Education Volume 79 ; 79 >
+     au < testing ; 2008 ; Research in Education Volume 80 ; 80 >
      au < exists ; 2009 ; Research in Education Volume 81 ; 81 >
      au < exists ; 2009 ; Research in Education Volume 82 ; 82 >
      au < exists ; 2010 ; Research in Education Volume 83 ; 83 >
