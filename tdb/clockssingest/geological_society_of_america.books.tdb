@@ -53,7 +53,8 @@
       name = Geological Society of America Special Papers ;
       issn = 0072-1077
     >
-
+    
+    comment[0] = not in usual HighWire shape
     param[base_url] = http://specialpapers.gsapubs.org/
     implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] >
 
