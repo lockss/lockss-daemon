@@ -119,58 +119,6 @@
 
   }
 
-  {
-    title <
-      name = Geological Society of America Memoirs ;
-      type = bookSeries ;
-      issn = 0072-1069
-    >
-  
-    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-    param[base_url] = http://memoirs.gsapubs.org/
-
-    {
-      implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] >
-    
-      au < exists ; exists ; 1995 ; 978-0-8137-1186-7 ; Geological Society of America Memoirs Volume 186 ; 186 >
-      au < exists ; exists ; 1995 ; 978-0-8137-1187-4 ; Geological Society of America Memoirs Volume 187 ; 187 >
-      au < manifest ; exists ; 1996 ; 978-0-8137-1188-1 ; Geological Society of America Memoirs Volume 188 ; 188 >
-      au < manifest ; exists ; 1996 ; 978-0-8137-1189-8 ; Geological Society of America Memoirs Volume 189 ; 189 >
-      au < manifest ; exists ; 1997 ; 978-0-8137-1190-4 ; Geological Society of America Memoirs Volume 190 ; 190 >
-      au < manifest ; exists ; 1997 ; 978-0-8137-1191-1 ; Geological Society of America Memoirs Volume 191 ; 191 >
-      au < manifest ; exists ; 1999 ; 978-0-8137-1192-8 ; Geological Society of America Memoirs Volume 192 ; 192 >
-      au < manifest ; exists ; 2001 ; 978-0-8137-1193-5 ; Geological Society of America Memoirs Volume 193 ; 193 >
-      au < manifest ; exists ; 2001 ; 978-0-8137-1194-2 ; Geological Society of America Memoirs Volume 194 ; 194 >
-      au < manifest ; exists ; 2002 ; 978-0-8137-1195-9 ; Geological Society of America Memoirs Volume 195 ; 195 >
-      au < manifest ; exists ; 2003 ; 978-0-8137-1196-6 ; Geological Society of America Memoirs Volume 196 ; 196 >
-      au < manifest ; exists ; 2004 ; 978-0-8137-1197-3 ; Geological Society of America Memoirs Volume 197 ; 197 >
-      au < manifest ; exists ; 2006 ; 978-0-8137-1198-0 ; Geological Society of America Memoirs Volume 198 ; 198 >
-      au < manifest ; exists ; 2007 ; 978-0-8137-1199-7 ; Geological Society of America Memoirs Volume 199 ; 199 >
-      au < manifest ; exists ; 2007 ; 978-0-8137-1200-0 ; Geological Society of America Memoirs Volume 200 ; 200 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-1201-7 ; Geological Society of America Memoirs Volume 201 ; 201 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-1202-4 ; Geological Society of America Memoirs Volume 202 ; 202 >
-      au < manifest ; exists ; 2009 ; 978-0-8137-1203-1 ; Geological Society of America Memoirs Volume 203 ; 203 >
-      au < manifest ; exists ; 2009 ; 978-0-8137-1204-8 ; Geological Society of America Memoirs Volume 204 ; 204 >
-      au < manifest ; exists ; 2010 ; 978-0-8137-1205-5 ; Geological Society of America Memoirs Volume 205 ; 205 >
-      au < manifest ; exists ; 2010 ; 978-0-8137-1206-2 ; Geological Society of America Memoirs Volume 206 ; 206 >
-      au < released ; crawling ; 2011 ; 978-0-8137-1207-9 ; Geological Society of America Memoirs Volume 207 ; 207 >
-      au < released ; crawling ; 2012 ; 978-0-8137-1208-6 ; Geological Society of America Memoirs Volume 208 ; 208 >
-      au < crawling ; exists ; 2012 ; 978-0-8137-1209-3 ; Geological Society of America Memoirs Volume 209 ; 209 >
-      au < expected ; exists ; 2013 ; comment[isbn] ; Geological Society of America Memoirs Volume 210 ; 210 >
-      au < expected ; exists ; 2013 ; comment[isbn] ; Geological Society of America Memoirs Volume 211 ; 211 >
-      
-      
-    }
-
-  }
-
-  {
-  
-    comment[1] = Geological Society of America Special Papers
-    comment[2] = not in usual HighWire shape
-    comment[3] = http://specialpapers.gsapubs.org/
-  
-  }
 
   {
 
@@ -253,55 +201,6 @@
   }
 
   {
-  
-    title <
-      name = GSA Field Guides ;
-      type = bookSeries
-    >
-    
-    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-    param[base_url] = http://fieldguides.gsapubs.org/
-
-    {
-    
-      implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] >
-    
-      au < manifest ; exists ; 1999 ; 978-0-8137-0001-4 ; GSA Field Guides Volume 1 ; 1 >
-      au < manifest ; exists ; 2000 ; 978-0-8137-0002-1 ; GSA Field Guides Volume 2 ; 2 >
-      au < manifest ; exists ; 2002 ; 978-0-8137-0003-5 ; GSA Field Guides Volume 3 ; 3 >
-      au < manifest ; exists ; 2003 ; 978-0-8137-0004-5 ; GSA Field Guides Volume 4 ; 4 >
-      au < manifest ; exists ; 2004 ; 978-0-8137-0005-2 ; GSA Field Guides Volume 5 ; 5 >
-      au < manifest ; exists ; 2005 ; 978-0-8137-0006-9 ; GSA Field Guides Volume 6 ; 6 >
-      au < manifest ; exists ; 2006 ; 978-0-8137-0007-6 ; GSA Field Guides Volume 7 ; 7 >
-      au < manifest ; exists ; 2006 ; 978-0-8137-0008-3 ; GSA Field Guides Volume 8 ; 8 >
-      au < manifest ; exists ; 2007 ; 978-0-8137-0009-0 ; GSA Field Guides Volume 9 ; 9 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-0010-6 ; GSA Field Guides Volume 10 ; 10 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-0011-3 ; GSA Field Guides Volume 11 ; 11 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-0012-0 ; GSA Field Guides Volume 12 ; 12 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-0013-7 ; GSA Field Guides Volume 13 ; 13 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-0014-4 ; GSA Field Guides Volume 14 ; 14 >
-      au < manifest ; exists ; 2009 ; 978-0-8137-0015-1 ; GSA Field Guides Volume 15 ; 15 >
-      au < manifest ; exists ; 2010 ; 978-0-8137-0016-8 ; GSA Field Guides Volume 16 ; 16 >
-      au < manifest ; exists ; 2010 ; 978-0-8137-0017-5 ; GSA Field Guides Volume 17 ; 17 >
-      au < manifest ; exists ; 2010 ; 978-0-8137-0018-2 ; GSA Field Guides Volume 18 ; 18 >
-      au < zapped ; down ; 2011 ; 978-0-8137-0019-9 ; GSA Field Guides Volume 19 ; 19 >
-      au < released ; crawling ; 2011 ; 978-0-8137-0020-5 ; GSA Field Guides Volume 20 ; 20 >
-      au < released ; crawling ; 2011 ; 978-0-8137-0021-2 ; GSA Field Guides Volume 21 ; 21 >
-      au < released ; crawling ; 2011 ; 978-0-8137-0022-9 ; GSA Field Guides Volume 22 ; 22 >
-      au < zapped ; down ; 2011 ; 978-0-8137-0023-6 ; GSA Field Guides Volume 23 ; 23 >
-      au < zapped ; down ; 2011 ; 978-0-8137-0024-3 ; GSA Field Guides Volume 24 ; 24 >
-      au < released ; crawling ; 2012 ; 978-0-8137-0025-0 ; GSA Field Guides Volume 25 ; 25 >
-      au < released ; crawling ; 2012 ; 978-0-8137-0026-7 ; GSA Field Guides Volume 26 ; 26 >
-      au < released ; crawling ; 2012 ; 978-0-8137-0027-4 ; GSA Field Guides Volume 27 ; 27 >
-      au < crawling ; exists ; 2012 ; 978-0-8137-0028-1 ; GSA Field Guides Volume 28 ; 28 >
-      au < crawling ; exists ; 2012 ; 978-0-8137-0029-8 ; GSA Field Guides Volume 29 ; 29 >
-      au < expected ; exists ; 2012 ; XXXX ; GSA Field Guides Volume 30 ; 30 >
-      au < expected ; exists ; 2012 ; XXXX ; GSA Field Guides Volume 31 ; 31 >
-    }
-  
-  }
-
-  {
 
     title <
       name = Lithosphere ;
@@ -320,14 +219,6 @@
     au < testing ; exists ; 2012 ; Lithosphere Volume 4 ; 4 >
     au < manifest ; exists ; 2013 ; Lithosphere Volume 5 ; 5 >
 
-  }
-
-  {
-  
-    comment[1] = Reviews in Engineering Geology
-    comment[2] = not in usual HighWire shape
-    comment[3] = http://reg.gsapubs.org/
-  
   }
 
 }
