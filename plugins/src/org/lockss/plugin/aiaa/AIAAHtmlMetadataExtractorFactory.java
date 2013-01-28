@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAHtmlMetadataExtractorFactory.java,v 1.1 2012-12-18 17:41:14 alexandraohlson Exp $
+ * $Id: AIAAHtmlMetadataExtractorFactory.java,v 1.2 2013-01-28 21:24:57 alexandraohlson Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.aiaa;
 
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
@@ -41,6 +43,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.definable.DefinableArchivalUnit;
 
 
 public class AIAAHtmlMetadataExtractorFactory 
@@ -79,6 +82,9 @@ public class AIAAHtmlMetadataExtractorFactory
       tagMap.put("dc.Coverage",MetadataField.DC_FIELD_COVERAGE);
     }
     
+    
+    private String base_url;
+    
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
@@ -87,6 +93,24 @@ public class AIAAHtmlMetadataExtractorFactory
  
       am.cook(tagMap);
       
+      // if the doi isn't in the metadata, we can still get it from the filename
+      if (am.get(MetadataField.FIELD_DOI) == null) {
+        
+        /*matches() is anchored so must create complete pattern or else use .finds() */
+        /* URL is "<base>/doi/(abs|full)/<doi1st>/<doi2nd> */
+        base_url = cu.getArchivalUnit().getConfiguration().get("base_url");
+        String patternString = "^" + base_url + "doi/[^/]+/([^/]+)/([^/]+)$";
+        Pattern ABSTRACT_PATTERN = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
+        String url = cu.getUrl();
+        System.out.println(" the cu.url for matching is: " + cu.getUrl());
+        Matcher mat = ABSTRACT_PATTERN.matcher(url);
+        
+        if (mat.matches()) {
+          log.debug3("Pull DOI from URL " + mat.group(1) + "." + mat.group(2));
+          am.put(MetadataField.FIELD_DOI, mat.group(1) + "/" + mat.group(2));
+        }
+      }
+
       // publisher name does not appear anywhere on the page in this form
       am.put(MetadataField.FIELD_PUBLISHER, "American Institute of Aeronautics and Astronautics");
       emitter.emitMetadata(cu, am);

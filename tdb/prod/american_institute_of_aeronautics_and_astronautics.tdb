@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.aiaa.AIAAPlugin
   param[base_url] = http://arc.aiaa.org/
-  implicit < status ; year; name ; param[volume] >
+  implicit < status ; year; name ; param[volume_name] >
   
 comment[aiaa] = plugin in development: platform is Atypon
 comment[todo_1] = review and update list of titles
@@ -524,7 +524,7 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
       eissn = 1533-6808 ;
       issnl = 0887-8722
     >
-    param[journal_id] = jjtht
+    param[journal_id] = jtht
 
     au < exists ; 1987 ; Journal of Thermophysics and Heat Transfer Volume 1 ; 1 >
     au < exists ; 1988 ; Journal of Thermophysics and Heat Transfer Volume 2 ; 2 >

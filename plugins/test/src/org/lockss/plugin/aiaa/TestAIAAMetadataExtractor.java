@@ -161,6 +161,21 @@ public class TestAIAAMetadataExtractor extends LockssTestCase {
     assertEquals(goodCreator, md.get(MetadataField.DC_FIELD_CREATOR));
   }
 
+  public void testDOIExtraction() throws Exception {
+    String url = BASE_URL + "doi/abs/10.2514/1.55555";
+    MockCachedUrl cu = new MockCachedUrl(url, bau);
+    cu.setContent(goodContent);
+    cu.setContentSize(goodContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    FileMetadataExtractor me = new AIAAHtmlMetadataExtractorFactory.AIAAHtmlMetadataExtractor();
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    assertEquals("10.2514/1.55555", md.get(MetadataField.FIELD_DOI));
+  }
 
   /**
    * Inner class that where a number of Archival Units can be created
