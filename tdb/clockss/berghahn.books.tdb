@@ -1,0 +1,18 @@
+{
+
+  publisher <
+    name = Berghahn Books ;
+    info[contract] = 2012
+  >
+  
+  
+  {
+  
+    title <
+      name = Berghahn Books Source Content
+    >
+
+    plugin = needs.plugin
+  }
+
+}
