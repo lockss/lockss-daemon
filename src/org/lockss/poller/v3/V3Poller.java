@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.129.2.2 2013-01-06 01:27:33 dshr Exp $
+ * $Id: V3Poller.java,v 1.129.2.3 2013-01-28 21:35:55 dshr Exp $
  */
 
 /*
@@ -1259,7 +1259,6 @@ public class V3Poller extends BasePoll {
     BlockTally tally = urlTallier.tallyPollerUrl(pollerUrl, hashBlock);
     signalNodeAgreement(tally, pollerUrl);
     checkTally(tally, pollerUrl, true);
-    // XXX DSHR - need to do something with any votes that have nonce2
     return tally;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlocksTallier.java,v 1.1.2.1 2013-01-26 04:16:55 dshr Exp $
+ * $Id: TestVoteBlocksTallier.java,v 1.1.2.2 2013-01-28 21:35:56 dshr Exp $
  */
 
 /*
@@ -94,6 +94,50 @@ public class TestVoteBlocksTallier extends LockssTestCase {
     doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100);
   }
   
+  public void testVFourPThreeThreeVersion() throws Exception {
+    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, 3, 3);
+  }
+  
+  public void testVFourPThreeThreeVsFiveVersion() throws Exception {
+    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, 3, 5);
+  }
+  
+  public void testVFourPThreeFiveVsThreeVersion() throws Exception {
+    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, 5, 3);
+  }
+  
+  public void testVFourPThreeMinusThreeVsFiveVersion() throws Exception {
+    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, -3, 5);
+  }
+  
+  public void testVFourPThreeFiveVsMinusThreeVersion() throws Exception {
+    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, 5, -3);
+  }
+  
+  public void testVFourPThreeDisagreeTwoMinusThreeVsFiveVersion() throws Exception {
+    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 2, -3, 5);
+  }
+  
+  public void testVFourPThreeDisagreeTwoFiveVsMinusThreeVersion() throws Exception {
+    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 2, 5, -3);
+  }
+  
+  public void testVFourPThreeThreeVsMinusFiveVersion() throws Exception {
+    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, 3, -5);
+  }
+  
+  public void testVFourPThreeMinusFiveVsThreeVersion() throws Exception {
+    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, -5, 3);
+  }
+  
+  public void testVFourPThreeMinusThreeVsMinusFiveVersion() throws Exception {
+    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, -3, -5);
+  }
+  
+  public void testVFourPThreeMinusFiveVsMinusThreeVersion() throws Exception {
+    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, -5, -3);
+  }
+  
   private int min(int a, int b) {
     return ( a < b ? a : b );
   }
@@ -119,10 +163,24 @@ public class TestVoteBlocksTallier extends LockssTestCase {
    */
   private void doTest(int v1, int v2, int v3, int v4,
 		      int p1, int p2, int p3, int p4, int d) {
-    VoteBlocks vBlocks = new MyVoteBlocks(v1, v2, v3, v4, d);
+    doTest(v1, v2, v3, v4, p1, p2, p3, p4, d, 1, 1);
+  }
+
+  /**
+   * Execute a test in which the poller has URLs:
+   * content[p1..p2-1] and content[p3..p4-1]
+   * and the voter has URLs:
+   * content[v1..v2-1] and content[v3..v4-1]
+   * The voter has vVer versions and the poller has pVer versions,
+   * and they disagree about URL: content[d]
+   */
+  private void doTest(int v1, int v2, int v3, int v4,
+		      int p1, int p2, int p3, int p4,
+		      int d, int vVer, int pVer) {
+    VoteBlocks vBlocks = new MyVoteBlocks(v1, v2, v3, v4, d, vVer);
     assertNotNull(vBlocks);
     assert(vBlocks.size() >= 0);
-    VoteBlocks pBlocks = new MyVoteBlocks(p1, p2, p3, p4, 100);
+    VoteBlocks pBlocks = new MyVoteBlocks(p1, p2, p3, p4, 100, pVer);
     assertNotNull(pBlocks);
     assert(pBlocks.size() >= 0);
     VoteBlocksTallier vbt = new VoteBlocksTallier(vBlocks, pBlocks);
@@ -157,7 +215,6 @@ public class TestVoteBlocksTallier extends LockssTestCase {
     assertEquals(shouldVoterOnly, numVoterOnly);
   }
 
-  private static byte[] badHash = ByteArray.makeRandomBytes(20);
   private class MyContent {
     String url;
     byte[] plainHash;
@@ -171,14 +228,20 @@ public class TestVoteBlocksTallier extends LockssTestCase {
   }
 
   public class MyVoteBlocks implements VoteBlocks {
-    // XXX need to test VoteBlock versions
     ArrayList<VoteBlock> blocks = new ArrayList<VoteBlock>();
     String url;
     
-    MyVoteBlocks(int b1, int b2, int b3, int b4, int d) {
+    MyVoteBlocks(int b1, int b2, int b3, int b4, int d, int numVer) {
       if (b1 >= 0) {
 	for (int i = b1; i < b2; i++) {
 	  VoteBlock vb = new VoteBlock(content[i].url);
+	  for (int j = 0; j < (numVer-1); j++) {
+	    vb.addVersion(0, 1000, // filtered offset/length
+			  0, 1000, // unfiltered offset/length
+			  ByteArray.makeRandomBytes(20),
+			  ByteArray.makeRandomBytes(20),
+			  false); // Hash error
+	  }
 	  if (i != d) {
 	    vb.addVersion(0, 1000, // filtered offset/length
 			  0, 1000, // unfiltered offset/length
@@ -189,8 +252,18 @@ public class TestVoteBlocksTallier extends LockssTestCase {
 	    // Voter & poller disagree on content[d]
 	    vb.addVersion(0, 1000, // filtered offset/length
 			  0, 1000, // unfiltered offset/length
-			  badHash,
-			  badHash,
+			  ByteArray.makeRandomBytes(20),
+			  ByteArray.makeRandomBytes(20),
+			  false); // Hash error
+	  }
+	  if (numVer < 0) {
+	    numVer = -numVer;
+	  }
+	  for (int j = 0; j < (numVer-1); j++) {
+	    vb.addVersion(0, 1000, // filtered offset/length
+			  0, 1000, // unfiltered offset/length
+			  ByteArray.makeRandomBytes(20),
+			  ByteArray.makeRandomBytes(20),
 			  false); // Hash error
 	  }
 	  blocks.add(vb);
@@ -209,8 +282,8 @@ public class TestVoteBlocksTallier extends LockssTestCase {
 	    // Voter & poller disagree on content[d]
 	    vb.addVersion(0, 1000, // filtered offset/length
 			  0, 1000, // unfiltered offset/length
-			  badHash,
-			  badHash,
+			  ByteArray.makeRandomBytes(20),
+			  ByteArray.makeRandomBytes(20),
 			  false); // Hash error
 	  }
 	  blocks.add(vb);

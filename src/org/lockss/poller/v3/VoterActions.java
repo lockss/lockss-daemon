@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.28.6.2 2013-01-19 11:17:35 dshr Exp $
+ * $Id: VoterActions.java,v 1.28.6.3 2013-01-28 21:35:55 dshr Exp $
  */
 
 /*
@@ -305,10 +305,15 @@ public class VoterActions {
 	vbt.tallyVoteBlocks(ud.getSymmetricVoteBlocks(),
 			    msg.getVoteBlocks());
 	int nAgree = vbt.countAgreeUrl();
-	int nDisgree = vbt.countDisagreeUrl();
+	int nDisagree = vbt.countDisagreeUrl();
 	int nVoterOnly = vbt.countVoterOnlyUrl();
 	int nPollerOnly = vbt.countPollerOnlyUrl();
-	// XXX what to do with these numbers?
+	log.debug("Symmetric poll result:" +
+		  " agree " + nAgree +
+		  " disagree " + nDisagree +
+		  " Voter only " + nVoterOnly +
+		  " Poller only " + nPollerOnly);
+	// XXX DSHR what to do with these numbers?
       } else {
 	log.error("Nonce2 mismatch");
       }
