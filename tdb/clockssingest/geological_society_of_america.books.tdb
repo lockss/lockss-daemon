@@ -299,6 +299,7 @@
       issn = 0080-2018
     
     >
+    comment[0] = not in usual HighWire shape
     param[base_url] = http://reg.gsapubs.org/
     implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] >
     
