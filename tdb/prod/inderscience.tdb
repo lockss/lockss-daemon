@@ -1934,8 +1934,9 @@
       >
 
       param[journal_issn] = 1756-5677
+      comment[0] = title is not yet published, 1/28/2013
       
-      au < testing ; 2012 ; International Journal of Cultural Management Volume 1 ; 1 >
+      au < expected ; 2013 ; International Journal of Cultural Management Volume 1 ; 1 >
 
     }
 
@@ -1949,8 +1950,9 @@
       >
 
       param[journal_issn] = 2048-2183
+      comment[0] = title is not yet published, 1/28/2013
       
-      au < testing ; 2012 ; International Journal of Cyberspace Sciences and Emergency Management Volume 1 ; 1 >
+      au < expected ; 2013 ; International Journal of Cyberspace Sciences and Emergency Management Volume 1 ; 1 >
 
     }
 
@@ -4738,7 +4740,7 @@
       au < released ; 2011 ; International Journal of Manufacturing Technology and Management Volume 23 ; 23 >
       au < released ; 2011 ; International Journal of Manufacturing Technology and Management Volume 24 ; 24 >
       au < released ; 2012 ; International Journal of Manufacturing Technology and Management Volume 25 ; 25 >
-      au < testing ; 2012 ; International Journal of Manufacturing Technology and Management Volume 26 ; 26 >
+      au < ready ; 2012 ; International Journal of Manufacturing Technology and Management Volume 26 ; 26 >
       au < expected ; 2012 ; International Journal of Manufacturing Technology and Management Volume 27 ; 27 >
       au < expected ; 2013 ; International Journal of Manufacturing Technology and Management Volume 28 ; 28 >
 
@@ -6753,7 +6755,7 @@
       param[journal_issn] = 1743-8292
       
       au < released ; 2008-2011 ; International Journal of Sustainable Design Volume 1 ; 1 >
-      au < testing ; 2012 ; International Journal of Sustainable Design Volume 2 ; 2 >
+      au < ready ; 2012 ; International Journal of Sustainable Design Volume 2 ; 2 >
 
     }
 
