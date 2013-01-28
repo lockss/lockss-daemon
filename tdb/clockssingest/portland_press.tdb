@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Portland Press
+    name = Portland Press ;
+    info[contract] = 2013 ;
+    info[tester] = 0
   >
   
   plugin = org.lockss.plugin.portlandpress.ClockssPortlandPressPlugin
