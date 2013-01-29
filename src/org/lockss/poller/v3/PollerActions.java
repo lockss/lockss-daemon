@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.30.32.3 2013-01-19 11:17:35 dshr Exp $
+ * $Id: PollerActions.java,v 1.30.32.4 2013-01-29 16:55:42 dshr Exp $
  */
 
 /*
@@ -322,7 +322,7 @@ public class PollerActions {
     byte[] nonce2 = ud.getVoterNonce2();
     if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
       msg.setVoterNonce2(nonce2);
-      msg.setVoteBlocks(ud.getVoteBlocks());
+      msg.setVoteBlocks(ud.getSymmetricVoteBlocks());
     }
     try {
       ud.sendMessageTo(msg, ud.getVoterId());

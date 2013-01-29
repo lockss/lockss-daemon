@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksTallier.java,v 1.1.2.3 2013-01-26 04:16:55 dshr Exp $
+ * $Id: VoteBlocksTallier.java,v 1.1.2.4 2013-01-29 16:55:42 dshr Exp $
  */
 
 /*
@@ -93,10 +93,10 @@ public class VoteBlocksTallier {
       VoteBlock pBlock = null;
     
       while (true) {
-	if (vBlock == null) {
+	if (vBlock == null && vIterator.hasNext()) {
 	  vBlock = vIterator.next();
 	}
-	if (pBlock == null) {
+	if (pBlock == null && pIterator.hasNext()) {
 	  pBlock = pIterator.next();
 	}
 	if (vBlock == null && pBlock == null) {
@@ -152,25 +152,30 @@ public class VoteBlocksTallier {
    * @return true if at least one voter version agrees with a poller version
    */
   protected boolean voteBlockAgree(VoteBlock vBlock, VoteBlock pBlock) {
-    // Build a HashSet of the poller's hashes
-    HashSet<byte[]> pHashes = new HashSet<byte[]>();
+    // Build a HashSet of the poller's hashes. Works if elements are String
+    // not if elements byte[]
+    HashSet<String> pHashes = new HashSet<String>();
     for (java.util.Iterator it = pBlock.versionIterator(); it.hasNext(); ) {
       VoteBlock.Version ver = (VoteBlock.Version)it.next();
-      log.debug3("Poller hash " + ByteArray.toHexString(ver.getHash()));
-      pHashes.add(ver.getHash());
+      String pHash = ByteArray.toHexString(ver.getHash());
+      log.debug3("Poller hash " + pHash);
+      pHashes.add(pHash);
     }
     // Look up each of the voter's hashes in the HashSet
     for (java.util.Iterator it = vBlock.versionIterator(); it.hasNext(); ) {
       VoteBlock.Version ver = (VoteBlock.Version)it.next();
-      log.debug3("Voter hash " + ByteArray.toHexString(ver.getHash()));
-      if (pHashes.contains(ver.getHash())) {
+      String vHash = ByteArray.toHexString(ver.getHash());
+      log.debug3("Voter hash " + vHash);
+      if (pHashes.contains(vHash)) {
 	// At least one voter version agrees with a poller version
 	log.debug3("Agree");
 	return true;
+      } else {
+	log.debug3("No match with " + vHash);
       }
     }
     // No agreement on any version
-    log.debug3("Disgree");
+    log.debug3("Disagree");
     return false;
   }
 

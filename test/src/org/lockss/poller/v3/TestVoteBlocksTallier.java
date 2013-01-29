@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlocksTallier.java,v 1.1.2.2 2013-01-28 21:35:56 dshr Exp $
+ * $Id: TestVoteBlocksTallier.java,v 1.1.2.3 2013-01-29 16:55:42 dshr Exp $
  */
 
 /*
@@ -341,7 +341,7 @@ public class TestVoteBlocksTallier extends LockssTestCase {
       if (index < list.size()) {
 	return list.get(index++);
       }
-      return null;
+      throw new NoSuchElementException();
     }
   
     public VoteBlock peek() {
