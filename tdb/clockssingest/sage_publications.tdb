@@ -24620,6 +24620,8 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      
+      comment[0] = Leaving Sage for Taylor & Francis in 2013.
 
       au < manifest ; exists ; 2006 ; Management & Organizational History Volume 1 ; 1 ; >
       au < manifest ; exists ; 2007 ; Management & Organizational History Volume 2 ; 2 ; >
@@ -24628,7 +24630,6 @@
       au < zapped ; down ; 2010 ; Management & Organizational History Volume 5 ; 5 ; >
       au < released ; crawling ; 2011 ; Management & Organizational History Volume 6 ; 6 ; >
       au < released ; crawling ; 2012 ; Management & Organizational History Volume 7 ; 7 ; >
-      au < expected ; exists ; 2013 ; Management & Organizational History Volume 8 ; 8 ; >
 
     }
 

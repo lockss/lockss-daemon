@@ -27829,6 +27829,8 @@ comment[mpj] = now published by Brill
         param[base_url] = http://moh.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        comment[0] = Leaving Sage for Taylor & Francis in 2013.
+
         au < doNotProcess ; 2006 ; Management & Organizational History Volume 1 ; 1 >
         au < doNotProcess ; 2007 ; Management & Organizational History Volume 2 ; 2 >
         au < doNotProcess ; 2008 ; Management & Organizational History Volume 3 ; 3 >
@@ -27836,7 +27838,6 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Management & Organizational History Volume 5 ; 5 >
         au < released ; 2011 ; Management & Organizational History Volume 6 ; 6 >
         au < released ; 2012 ; Management & Organizational History Volume 7 ; 7 >
-        au < expected ; 2013 ; Management & Organizational History Volume 8 ; 8 >
 
       }
 
