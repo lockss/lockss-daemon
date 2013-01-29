@@ -13,6 +13,24 @@
   {
 
     title <
+      name = Federal Communications Law Journal ;
+      issn = 0163-7676 
+      
+    >
+
+    param[journal_abbr] = fclj
+
+    au < exists ; exists ; 1993 ; Federal Communications Law Journal Volume 46 ; 46 >
+    au < exists ; exists ; 1994 ; Federal Communications Law Journal Volume 47 ; 47 >
+    au < exists ; exists ; 1995 ; Federal Communications Law Journal Volume 48 ; 48 >
+    au < exists ; exists ; 1996 ; Federal Communications Law Journal Volume 49 ; 49 >
+    au < exists ; exists ; 1997 ; Federal Communications Law Journal Volume 50 ; 50 >
+    
+  }
+
+  {
+
+    title <
       name = Indiana Journal of Global Legal Studies ;
       issn = 1080-0727 ;
       eissn = 1543-0367
@@ -39,6 +57,8 @@
     au < manifest ; exists ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
     au < manifest ; exists ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 ; 17 >
     au < manifest ; exists ; 2011 ; Indiana Journal of Global Legal Studies Volume 18 ; 18 >
+    au < exists ; exists ; 2012 ; Indiana Journal of Global Legal Studies Volume 19 ; 19 >
+    au < expected ; exists ; 2013 ; Indiana Journal of Global Legal Studies Volume 20 ; 20 >
     
   }
 
@@ -151,6 +171,7 @@
     au < manifest ; exists ; 2009-2010 ; Indiana Law Journal Volume 85 ; 85 >  
     au < manifest ; exists ; 2010-2011 ; Indiana Law Journal Volume 86 ; 86 > 
     au < released ; crawling ; 2012 ; Indiana Law Journal Volume 87 ; 87 >
+    au < expected ; exists ; 2013 ; Indiana Law Journal Volume 88 ; 88 >
     
   }
   
@@ -166,6 +187,8 @@
 
     au < manifest ; exists ; 2010 ; IP Theory Volume 1 ; 1 >
     au < released ; crawling ; 2011-2012 ; IP Theory Volume 2 ; 2 >
+    au < exists ; exists ; 2012 ; IP Theory Volume 3 ; 3 >
+    au < expected ; exists ; 2013 ;IP Theory Volume 4 ; 4 >
 
   }
 
