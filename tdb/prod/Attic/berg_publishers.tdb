@@ -63,7 +63,7 @@
     param[journal_id] = aitj 
     param[journal_issn] = 1756-1310
 
-    comment[UX] = Not on Delta1
+    comment[UX] = Not completely on Delta1 yet 1/29/2013
 
     au < released ; 2009 ; Art In Translation Volume 1 ; 1 >
     au < released ; 2010 ; Art In Translation Volume 2 ; 2 >
@@ -83,6 +83,8 @@
     >    
     param[journal_id] = cash
     param[journal_issn] = 1478-0038
+
+    comment[UX] = complete
 
     au < released ; 2004 ; Cultural and Social History Volume 1 ; 1 >
     au < released ; 2005 ; Cultural and Social History Volume 2 ; 2 >
@@ -108,6 +110,7 @@
     param[journal_id] = dgcj
     param[journal_issn] = 1754-7075
 
+    comment[UX] = complete
 
     au < released ; 2009 ; Design and Culture Volume 1 ; 1 >
     au < released ; 2010 ; Design and Culture Volume 2 ; 2 >
