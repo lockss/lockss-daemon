@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.331 2013-01-29 03:30:50 fergaloy-sf Exp $
+ $Id: build.xml,v 1.332 2013-01-29 20:47:36 fergaloy-sf Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -319,6 +319,7 @@ Args:
   <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.7.jar" />
   <property name="heritrix-guava.jar" value="${lib}/guava-r08.jar" />
 
+  <!-- Database schema documentation. -->
   <property name="schemaSpy.jar" value="${lib}/schemaSpy_5.0.0.jar" />
 
   <property name="ext.javadoc"
@@ -354,7 +355,6 @@ Args:
   <property name="requires-1.7" value="test/requires-1.7"/>
 
   <!-- Database schema documentation. -->
-  <property name="schema.doc.db.dir" value="schema_doc_db" />
   <property name="schema.doc.dir" value="${javadoc}/schemadoc"/>
 
   <!--  Compiler options -->
@@ -493,7 +493,6 @@ Args:
   <path id="tools.run.classpath">
     <path refid="tools.compile.classpath" />
     <pathelement path="${lockss.tools.jar}" />
-	<pathelement path="${schemaSpy.jar}" />
   </path>
 
   <path id="tools.test.compile.classpath">
@@ -783,7 +782,7 @@ The target you have selected requires compiling under JDK 1.7.
 	<include name="java??????/"/>
 	<include name="locksstest*.tmp/"/>
 	<include name="MetadataManager*md"/>
-	<include name="${schema.doc.db.dir}/"/>
+	<include name="schema_doc*/**"/>
       </fileset>
     </delete>
     <if>
@@ -797,7 +796,7 @@ The target you have selected requires compiling under JDK 1.7.
 	    <include name="java??????/"/>
 	    <include name="**/locksstest*.tmp/"/>
 	    <include name="MetadataManager*md"/>
-	    <include name="${schema.doc.db.dir}/"/>
+	    <include name="schema_doc*/**"/>
 	  </fileset>
 	</delete>
       </then>
@@ -1723,7 +1722,7 @@ published on the Web. http://www.lockss.org
    description="Build the LOCKSS javadoc">
   </target>
 
-  <target name="-do-javadoc" depends="jar-tests,prepare-javadoc,-load-build-info,param-docs">
+  <target name="-do-javadoc" depends="jar-tests,prepare-javadoc,-load-build-info,param-docs,schema-doc">
     <!-- Write the text param doc into the doc tree -->
     <java classname="ParamDoc" fork="true">
        <classpath refid="test.run.classpath" />
@@ -3093,16 +3092,14 @@ optionally -Dtests= for tests to be run.
     </antcall>
   </target>
 
-  <target name="clean-schema-doc-db"
-          description="Deletes a database generated for documentation." >
-    <delete dir="${tmpdir}/${schema.doc.db.dir}" quiet="true"/>
-  </target>
-
-  <target name="schema-doc-createdb" depends="clean-schema-doc-db,jar-tools"
+  <target name="schema-doc-createdb" depends="jar-tools"
           description="Creates a database to generate database schema documentation.">
+    <tempfile property="schema.doc.db.dir" deleteonexit="true"
+              destdir="${tmpdir}" prefix="schema_doc"/>
+    <mkdir dir="${schema.doc.db.dir}" />
     <java classname="org.lockss.db.SchemaDocDbCreator" fork="true">
       <classpath refid="tools.run.classpath" />
-      <arg line="-d ${tmpdir}/${schema.doc.db.dir}" />
+      <arg line="-d ${schema.doc.db.dir}" />
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
     </java>
   </target>
@@ -3124,9 +3121,8 @@ optionally -Dtests= for tests to be run.
     <if>
       <isset property="dot.is.available" />
    	  <then>
-        <java jar="${schemaSpy.jar}" fork="true">
-          <classpath refid="tools.run.classpath" />
-          <arg line="-t derby -db ${tmpdir}/${schema.doc.db.dir}/db/DbManager -dp ${derbynet.jar} -hq -noads -norows -u LOCKSS -o ${schema.doc.dir}" />
+        <java jar="${schemaSpy.jar}" fork="true" dir="${schema.doc.db.dir}/db">
+          <arg line="-t derby -db DbManager -dp ${derbynet.jar} -hq -noads -norows -u LOCKSS -o ${schema.doc.dir}" />
           <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
         </java>
       </then>
@@ -3134,6 +3130,7 @@ optionally -Dtests= for tests to be run.
         <echo message="Schema documentation not generated because the dot program is not available; continuing..."/>
       </else>
     </if>
+    <delete dir="${schema.doc.db.dir}" quiet="true"/>
   </target>
 
 </project>
