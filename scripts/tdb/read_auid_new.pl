@@ -716,7 +716,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/crawlers/lockss.htm?issn=$param{journal_issn}&amp;volume=$param{volume_name}/)) {
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/crawlers\/lockss.htm?issn=$param{journal_issn}&amp;volume=$param{volume_name}/)) {
         if ($man_contents =~ m/<strong>Journal title:<\/strong>(.*)<br \/>/si) {
           $vol_title = $1 . " Volume " . $param{volume_name};
           $vol_title =~ s/\s*\n\s*/ /g;
