@@ -7,7 +7,7 @@
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
   implicit < status ; year ; name ; volume ; param[year] >
   comment[0] = publisher title list at http://www.elmerpress.com/journals.html
-  comment[notReady] = Roundup 3997, 3998
+  comment[notReady] = RU 3997, 4492
 
     {
 
