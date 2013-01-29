@@ -453,7 +453,6 @@
     >
 
     param[journal_id] = cgt
-    comment[notReady] = fetch error on ingest1 (401 unauthorized)
 
     au < manifest ; exists ; 1999 ; Cancer Gene Therapy Volume 6 ; 1999 ; 6 >
     au < manifest ; exists ; 2000 ; Cancer Gene Therapy Volume 7 ; 2000 ; 7 >
@@ -468,7 +467,7 @@
     au < zapped ; down ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Cancer Gene Therapy Volume 17 ; 2010 ; 17 >
     au < released ; crawling ; 2011 ; Cancer Gene Therapy Volume 18 ; 2011 ; 18 >
-    au < testing ; exists ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 >
+    au < released ; manifest ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 >
 	au < manifest ; exists ; 2013 ; Cancer Gene Therapy Volume 20 ; 2013 ; 20 >
 
   }
