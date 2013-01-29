@@ -145,7 +145,7 @@
       param[journal_id] = bcj
 
       au < manifest ; exists ; 2011 ; Blood Cancer Journal Volume 1 ; 2011 ; 1 >
-    au < manifest ; exists ; 2012 ; Blood Cancer Journal Volume 2 ; 2012 ; 2 >
+    au < crawling ; exists ; 2012 ; Blood Cancer Journal Volume 2 ; 2012 ; 2 >
     au < exists ; exists ; 2013 ; Blood Cancer Journal Volume 3 ; 2013 ; 3 >
 
   }
@@ -315,8 +315,8 @@
     au < exists ; exists ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 >
     au < exists ; exists ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 >
     au < exists ; exists ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 >
-    au < manifest ; exists ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 >
-    au < manifest ; exists ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 >
+    au < crawling ; exists ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 >
+    au < crawling ; exists ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 >
     au < manifest ; exists ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 >
 
   }
@@ -514,7 +514,7 @@
 
     au < manifest ; exists ; 2011 ; Cell Death & Disease Volume 1 ; 2011 ; 1 >
     au < manifest ; exists ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 >
-    au < manifest ; exists ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 >
+    au < crawling ; exists ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 >
     au < exists ; exists ; 2013 ; Cell Death & Disease Volume 4 ; 2013 ; 4 >
 
     }
@@ -564,7 +564,7 @@
     au < manifest ; exists ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 >
     au < manifest ; exists ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 >
     au < manifest ; exists ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 >
-    au < manifest ; exists ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 >
+    au < crawling ; exists ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 >
     au < exists ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 >
 
   }
@@ -582,7 +582,7 @@
 
     au < notReady ; exists ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 >
     au < notReady ; exists ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 >
-    au < manifest ; exists ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 >
+    au < crawling ; exists ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 >
     au < exists ; exists ; 2013 ; Clinical and Translational Gastroenterology Volume 4 ; 2013 ; 4 >
 
   }
@@ -827,7 +827,7 @@
     au < released ; crawling ; 2009 ; European Journal of Human Genetics Volume 17 ; 2009 ; 17 >
     au < released ; crawling ; 2010 ; European Journal of Human Genetics Volume 18 ; 2010 ; 18 >
     au < released ; crawling ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 >
-    au < manifest ; exists ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 >
+    au < crawling ; exists ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 >
     au < manifest ; exists ; 2013 ; European Journal of Human Genetics Volume 21 ; 2013 ; 21 >
   }
 
@@ -1016,7 +1016,7 @@
     au < exists ; exists ; 2009 ; Genetics in Medicine Volume 11 ; 2009 ; 11 >
     au < manifest ; exists ; 2010 ; Genetics in Medicine Volume 12 ; 2010 ; 12 >
     au < notReady ; exists ; 2011 ; Genetics in Medicine Volume 13 ; 2011 ; 13 >
-    au < manifest ; exists ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 >
+    au < crawling ; exists ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 >
     au < exists ; exists ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 >
   }
 
@@ -1139,7 +1139,7 @@
     au < released ; crawling ; 2011 ; Heredity Volume 106 ; 2011 ; 106 >
     au < released ; crawling ; 2011 ; Heredity Volume 107 ; 2011 ; 107 >
     au < released ; crawling ; 2012 ; Heredity Volume 108 ; 2012 ; 108 >
-    au < manifest ; exists ; 2012 ; Heredity Volume 109 ; 2012 ; 109 >
+    au < crawling ; exists ; 2012 ; Heredity Volume 109 ; 2012 ; 109 >
     au < manifest ; exists ; 2013 ; Heredity Volume 110 ; 2013 ; 110 >
 
 
@@ -2107,7 +2107,7 @@
 
     param[journal_id] = mtna
 
-    au < manifest ; exists ; 2012 ; Molecular Therapy - Nucleic Acids Volume 1 (2000) ; 2012 ; 1 >
+    au < crawling ; exists ; 2012 ; Molecular Therapy - Nucleic Acids Volume 1 (2000) ; 2012 ; 1 >
     au < exists ; exists ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 (2000) ; 2013 ; 2 >
 
   }
@@ -2855,7 +2855,7 @@
      param[journal_id] = nclimate
 
     au < manifest ; exists ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 >
-    au < manifest ; exists ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 >
+    au < crawling ; exists ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 >
     au < manifest ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 >
 
   }
@@ -3669,7 +3669,7 @@
     au < manifest ; exists ; 2009 ; NPG Asia Materials Volume 1 ; 2009 ; 1 >
     au < manifest ; exists ; 2010 ; NPG Asia Materials Volume 2 ; 2010 ; 2 >
     au < manifest ; exists ; 2011 ; NPG Asia Materials Volume 3 ; 2011 ; 3 >
-    au < manifest ; exists ; 2012 ; NPG Asia Materials Volume 4 ; 2012 ; 4 >
+    au < crawling ; exists ; 2012 ; NPG Asia Materials Volume 4 ; 2012 ; 4 >
     au < manifest ; exists ; 2013 ; NPG Asia Materials Volume 5 ; 2013 ; 5 >
   }
 
@@ -3683,7 +3683,7 @@
     param[journal_id] = nutd
     
     au < manifest ; exists ; 2011 ; Nutrition & Diabetes Volume 1 ; 2011 ; 1 >
-    au < manifest ; exists ; 2012 ; Nutrition & Diabetes Volume 2 ; 2012 ; 2 >
+    au < crawling ; exists ; 2012 ; Nutrition & Diabetes Volume 2 ; 2012 ; 2 >
   
   }
     
@@ -3759,7 +3759,7 @@
     >
     param[journal_id] = onc
     
-    au < manifest ; exists ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
+    au < crawling ; exists ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
     au < manifest ; exists ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 >
 
   }
@@ -3844,8 +3844,8 @@
     au < manifest ; exists ; 2010 ; Pediatric Research Volume 68 ; 2010 ; 68 >
     au < manifest ; exists ; 2011 ; Pediatric Research Volume 69 ; 2011 ; 69 >
     au < manifest ; exists ; 2011 ; Pediatric Research Volume 70 ; 2011 ; 70 >
-    au < manifest ; exists ; 2012 ; Pediatric Research Volume 71 ; 2012 ; 71 >
-    au < manifest ; exists ; 2012 ; Pediatric Research Volume 72 ; 2012 ; 72 >
+    au < crawling ; exists ; 2012 ; Pediatric Research Volume 71 ; 2012 ; 71 >
+    au < crawling ; exists ; 2012 ; Pediatric Research Volume 72 ; 2012 ; 72 >
     au < manifest ; exists ; 2013 ; Pediatric Research Volume 73 ; 2013 ; 73 >
     au < expected ; exists ; 2013 ; Pediatric Research Volume 74 ; 2013 ; 74 >
   }
@@ -3893,7 +3893,7 @@
     au < manifest ; exists ; 2009 ; Polymer Journal Volume 41 ; 2009 ; 41 >
     au < manifest ; exists ; 2010 ; Polymer Journal Volume 42 ; 2010 ; 42 >
     au < manifest ; exists ; 2011 ; Polymer Journal Volume 43 ; 2011 ; 43 >
-    au < manifest ; exists ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 >
+    au < crawling ; exists ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 >
     au < manifest ; exists ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 >
   }
   {
@@ -4093,7 +4093,7 @@
     au < released ; crawling ; 2011 ; Vital Volume 8 ; 2011 ; 8 >
     au < released ; crawling ; 2011 ; Vital Volume 9 (2011) ; 2011 ; 9 >
     au < released ; crawling ; 2012 ; Vital Volume 9 (2012) ; 2012 ; 9 >
-    au < manifest ; exists ; 2012 ; Vital Volume 10 ; 2012 ; 10 >
+    au < crawling ; exists ; 2012 ; Vital Volume 10 (2012) ; 2012 ; 10 >
     au < expected ; exists ; 2013 ; Vital Volume 10 (2013) ; 2013 ; 10 >
 
   }
