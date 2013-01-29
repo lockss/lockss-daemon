@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.329 2013-01-10 22:25:22 tlipkis Exp $
+ $Id: build.xml,v 1.330 2013-01-29 01:24:35 fergaloy-sf Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -319,6 +319,8 @@ Args:
   <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.7.jar" />
   <property name="heritrix-guava.jar" value="${lib}/guava-r08.jar" />
 
+  <property name="schemaSpy.jar" value="${lib}/schemaSpy_5.0.0.jar" />
+
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
 
@@ -350,6 +352,10 @@ Args:
                           value="net/sf/antcontrib/antcontrib.properties"/>
 
   <property name="requires-1.7" value="test/requires-1.7"/>
+
+  <!-- Database schema documentation. -->
+  <property name="schema.doc.db.dir" value="schema_doc_db" />
+  <property name="schema.doc.dir" value="${javadoc}/schemadoc"/>
 
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
@@ -487,6 +493,7 @@ Args:
   <path id="tools.run.classpath">
     <path refid="tools.compile.classpath" />
     <pathelement path="${lockss.tools.jar}" />
+	<pathelement path="${schemaSpy.jar}" />
   </path>
 
   <path id="tools.test.compile.classpath">
@@ -776,6 +783,7 @@ The target you have selected requires compiling under JDK 1.7.
 	<include name="java??????/"/>
 	<include name="locksstest*.tmp/"/>
 	<include name="MetadataManager*md"/>
+	<include name="${schema.doc.db.dir}/"/>
       </fileset>
     </delete>
     <if>
@@ -789,6 +797,7 @@ The target you have selected requires compiling under JDK 1.7.
 	    <include name="java??????/"/>
 	    <include name="**/locksstest*.tmp/"/>
 	    <include name="MetadataManager*md"/>
+	    <include name="${schema.doc.db.dir}/"/>
 	  </fileset>
 	</delete>
       </then>
@@ -3082,6 +3091,34 @@ optionally -Dtests= for tests to be run.
       <param name="srcdir" value="${src}"/>
       <param name="clsdir" value="${classes}"/>
     </antcall>
+  </target>
+
+  <target name="clean-schema-doc-db"
+          description="Deletes a database generated for documentation." >
+    <delete dir="${tmpdir}/${schema.doc.db.dir}" quiet="true"/>
+  </target>
+
+  <target name="schema-doc-createdb" depends="clean-schema-doc-db,jar-tools"
+          description="Creates a database to generate database schema documentation.">
+    <java classname="org.lockss.db.SchemaDocDbCreator" fork="true">
+      <classpath refid="tools.run.classpath" />
+      <arg line="-d ${tmpdir}/${schema.doc.db.dir}" />
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+    </java>
+  </target>
+
+  <target name="clean-schema-doc"
+          description="Deletes the database schema documentation." >
+    <delete dir="${schema.doc.dir}" quiet="true"/>
+  </target>
+
+  <target name="schema-doc" depends="clean-schema-doc,schema-doc-createdb"
+          description="Creates database schema documentation diagrams.">
+    <java jar="${schemaSpy.jar}" fork="true">
+      <classpath refid="tools.run.classpath" />
+      <arg line="-t derby -db ${tmpdir}/${schema.doc.db.dir}/db/DbManager -dp ${derbynet.jar} -hq -noads -norows -u LOCKSS -o ${schema.doc.dir}" />
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+    </java>
   </target>
 
 </project>
