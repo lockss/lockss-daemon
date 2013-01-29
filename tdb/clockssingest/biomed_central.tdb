@@ -128,7 +128,7 @@
       attr[journal_code] = bmcbiophys
 
       au < manifest ; exists ; 2008 ; BMC Biophysics Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; BMC Biophysics Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; BMC Biophysics Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; BMC Biophysics Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; BMC Biophysics Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; BMC Biophysics Volume 5 ; 5 >
@@ -356,7 +356,7 @@
       au < manifest ; exists ; 2006 ; BMC Clinical Pharmacology Volume 6 ; 6 >
       au < manifest ; exists ; 2007 ; BMC Clinical Pharmacology Volume 7 ; 7 >
       au < manifest ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 ; 8 >
-      au < manifest ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
+      au < crawling ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
       au < crawling ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
       au < doNotProcess ; doNotProcess ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
@@ -902,7 +902,7 @@
       attr[journal_code] = bmcmedgenomics
 
       au < manifest ; exists ; 2008 ; BMC Medical Genomics Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; BMC Medical Genomics Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; BMC Medical Genomics Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; BMC Medical Genomics Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; BMC Medical Genomics Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; BMC Medical Genomics Volume 5 ; 5 >
@@ -1002,7 +1002,7 @@
       comment[0] = This journal started at start of 2008. Continuation of BMC Nuclear Medicine
 
       au < manifest ; exists ; 2008 ; BMC Medical Physics Volume 8 ; 8 >
-      au < manifest ; exists ; 2009 ; BMC Medical Physics Volume 9 ; 9 >
+      au < crawling ; exists ; 2009 ; BMC Medical Physics Volume 9 ; 9 >
       au < crawling ; exists ; 2010 ; BMC Medical Physics Volume 10 ; 10 >
       au < crawling ; exists ; 2011 ; BMC Medical Physics Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Medical Physics Volume 12 ; 12 >
@@ -1569,7 +1569,7 @@
       attr[journal_code] = bmcresnotes
 
       au < manifest ; exists ; 2008 ; BMC Research Notes Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; BMC Research Notes Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; BMC Research Notes Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; BMC Research Notes Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; BMC Research Notes Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; BMC Research Notes Volume 5 ; 5 >
@@ -1864,7 +1864,7 @@
       au < manifest ; exists ; 2006 ; Allergy, Asthma & Clinical Immunology Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; Allergy, Asthma & Clinical Immunology Volume 3 ; 3 >
       au < manifest ; exists ; 2008 ; Allergy, Asthma & Clinical Immunology Volume 4 ; 4 >
-      au < manifest ; exists ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 >
       au < crawling ; exists ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 >
       au < crawling ; exists ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 >
@@ -1882,7 +1882,7 @@
       param[base_url] = http://alzres.com/
       param[journal_issn] = 1758-9193
 
-      au < manifest ; exists ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
+      au < crawling ; exists ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
       au < crawling ; exists ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
       au < crawling ; exists ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
       au < crawling ; exists ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
@@ -2075,7 +2075,7 @@
       param[journal_issn] = 1447-056X
 
       au < manifest ; exists ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
-      au < manifest ; exists ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
+      au < crawling ; exists ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
       au < crawling ; exists ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
@@ -2151,7 +2151,7 @@
       param[journal_issn] = 1756-0381
 
       au < manifest ; exists ; 2008 ; BioData Mining Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; BioData Mining Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; BioData Mining Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; BioData Mining Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; BioData Mining Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; BioData Mining Volume 5 ; 5 >
@@ -2794,7 +2794,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2006 ; Comparative Hepatology Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; Comparative Hepatology Volume 6 ; 6 >
       au < manifest ; exists ; 2008 ; Comparative Hepatology Volume 7 ; 7 >
-      au < manifest ; exists ; 2009 ; Comparative Hepatology Volume 8 ; 8 >
+      au < crawling ; exists ; 2009 ; Comparative Hepatology Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Comparative Hepatology Volume 9 ; 9 >
       au < crawling ; exists ; 2011 ; Comparative Hepatology Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Comparative Hepatology Volume 11 ; 11 >
@@ -2814,7 +2814,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2007 ; Conflict and Health Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; Conflict and Health Volume 2 ; 2 >
-      au < manifest ; exists ; 2009 ; Conflict and Health Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Conflict and Health Volume 3 ; 3 >
       au < crawling ; exists ; 2010 ; Conflict and Health Volume 4 ; 4 >
       au < crawling ; exists ; 2011 ; Conflict and Health Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Conflict and Health Volume 6 ; 6 >
@@ -2838,7 +2838,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2006 ; Cost Effectiveness and Resource Allocation Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Cost Effectiveness and Resource Allocation Volume 5 ; 5 >
       au < manifest ; exists ; 2008 ; Cost Effectiveness and Resource Allocation Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; Cost Effectiveness and Resource Allocation Volume 7 ; 7 >
+      au < crawling ; exists ; 2009 ; Cost Effectiveness and Resource Allocation Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Cost Effectiveness and Resource Allocation Volume 8 ; 8 >
       au < crawling ; exists ; 2011 ; Cost Effectiveness and Resource Allocation Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Cost Effectiveness and Resource Allocation Volume 10 ; 10 >
@@ -2925,7 +2925,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.dmsjournal.com/
       param[journal_issn] = 1758-5996
 
-      au < manifest ; exists ; 2009 ; Diabetology & Metabolic Syndrome Volume 1 ; 1 >
+      au < crawling ; exists ; 2009 ; Diabetology & Metabolic Syndrome Volume 1 ; 1 >
       au < crawling ; exists ; 2010 ; Diabetology & Metabolic Syndrome Volume 2 ; 2 >
       au < crawling ; exists ; 2011 ; Diabetology & Metabolic Syndrome Volume 3 ; 3 >
       au < crawling ; exists ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
@@ -3075,7 +3075,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1756-8935
 
       au < manifest ; exists ; 2008 ; Epigenetics & Chromatin Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; Epigenetics & Chromatin Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; Epigenetics & Chromatin Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Epigenetics & Chromatin Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; Epigenetics & Chromatin Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Epigenetics & Chromatin Volume 5 ; 5 >
@@ -3108,7 +3108,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.eurjmedres.com/
       param[journal_issn] = 2047-783X
 
-      au < manifest ; exists ; 2009 ; European Journal of Medical Research Volume 14 ; 14 >
+      au < crawling ; exists ; 2009 ; European Journal of Medical Research Volume 14 ; 14 >
       au < crawling ; exists ; 2010 ; European Journal of Medical Research Volume 15 ; 15 >
       au < crawling ; exists ; 2011 ; European Journal of Medical Research Volume 16 ; 16 >
       au < crawling ; exists ; 2012 ; European Journal of Medical Research Volume 17 ; 17 >
@@ -3143,7 +3143,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.etsmjournal.com/
       param[journal_issn] = 2040-7378
 
-      au < manifest ; exists ; 2009 ; Experimental & Translational Stroke Medicine Volume 1 ; 1 >
+      au < crawling ; exists ; 2009 ; Experimental & Translational Stroke Medicine Volume 1 ; 1 >
       au < crawling ; exists ; 2010 ; Experimental & Translational Stroke Medicine Volume 2 ; 2 >
       au < crawling ; exists ; 2011 ; Experimental & Translational Stroke Medicine Volume 3 ; 3 >
       au < crawling ; exists ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
@@ -3191,7 +3191,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1755-1536
 
       au < manifest ; exists ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
@@ -3328,7 +3328,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2006 ; Genetics Selection Evolution Volume 38 ; 38 >
       au < manifest ; exists ; 2007 ; Genetics Selection Evolution Volume 39 ; 39 >
       au < manifest ; exists ; 2008 ; Genetics Selection Evolution Volume 40 ; 40 >
-      au < manifest ; exists ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 >
+      au < crawling ; exists ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 >
       au < crawling ; exists ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 >
       au < crawling ; exists ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
       au < crawling ; exists ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
@@ -3472,7 +3472,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.gutpathogens.com/
       param[journal_issn] = 1757-4749
 
-      au < manifest ; exists ; 2009 ; Gut Pathogens Volume 1 ; 1 >
+      au < crawling ; exists ; 2009 ; Gut Pathogens Volume 1 ; 1 >
       au < crawling ; exists ; 2010 ; Gut Pathogens Volume 2 ; 2 >
       au < crawling ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 >
       au < crawling ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 >
@@ -3605,7 +3605,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2006 ; Hereditary Cancer in Clinical Practice Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Hereditary Cancer in Clinical Practice Volume 5 ; 5 >
       au < manifest ; exists ; 2008 ; Hereditary Cancer in Clinical Practice Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; Hereditary Cancer in Clinical Practice Volume 7 ; 7 >
+      au < crawling ; exists ; 2009 ; Hereditary Cancer in Clinical Practice Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Hereditary Cancer in Clinical Practice Volume 8 ; 8 >
       au < crawling ; exists ; 2011 ; Hereditary Cancer in Clinical Practice Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Hereditary Cancer in Clinical Practice Volume 10 ; 10 >
@@ -4008,7 +4008,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1824-7288
 
       au < manifest ; exists ; 2008 ; Italian Journal of Pediatrics Volume 34 ; 34 >
-      au < manifest ; exists ; 2009 ; Italian Journal of Pediatrics Volume 35 ; 35 >
+      au < crawling ; exists ; 2009 ; Italian Journal of Pediatrics Volume 35 ; 35 >
       au < crawling ; exists ; 2010 ; Italian Journal of Pediatrics Volume 36 ; 36 >
       au < crawling ; exists ; 2011 ; Italian Journal of Pediatrics Volume 37 ; 37 >
       au < crawling ; exists ; 2012 ; Italian Journal of Pediatrics Volume 38 ; 38 >
@@ -4133,7 +4133,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jbiomedsci.com/
       param[journal_issn] = 1423-0127
 
-      au < manifest ; exists ; 2009 ; Journal of Biomedical Science Volume 16 ; 16 >
+      au < crawling ; exists ; 2009 ; Journal of Biomedical Science Volume 16 ; 16 >
       au < crawling ; exists ; 2010 ; Journal of Biomedical Science Volume 17 ; 17 >
       au < crawling ; exists ; 2011 ; Journal of Biomedical Science Volume 18 ; 18 >
       au < crawling ; exists ; 2012 ; Journal of Biomedical Science Volume 19 ; 19 >
@@ -4363,7 +4363,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1757-1146
 
       au < manifest ; exists ; 2008 ; Journal of Foot and Ankle Research Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; Journal of Foot and Ankle Research Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; Journal of Foot and Ankle Research Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Journal of Foot and Ankle Research Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; Journal of Foot and Ankle Research Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Journal of Foot and Ankle Research Volume 5 ; 5 >
@@ -4449,7 +4449,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2007 ; Journal of Medical Case Reports Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; Journal of Medical Case Reports Volume 2 ; 2 >
-      au < manifest ; exists ; 2009 ; Journal of Medical Case Reports Volume 3 ; 3 >
+      au < crawling ; exists ; 2009 ; Journal of Medical Case Reports Volume 3 ; 3 >
       au < crawling ; exists ; 2010 ; Journal of Medical Case Reports Volume 4 ; 4 >
       au < crawling ; exists ; 2011 ; Journal of Medical Case Reports Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Journal of Medical Case Reports Volume 6 ; 6 >
@@ -4671,7 +4671,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1757-2215
 
       au < manifest ; exists ; 2008 ; Journal of Ovarian Research Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; Journal of Ovarian Research Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; Journal of Ovarian Research Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Journal of Ovarian Research Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; Journal of Ovarian Research Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Journal of Ovarian Research Volume 5 ; 5 >
@@ -4969,7 +4969,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1756-6606
 
       au < manifest ; exists ; 2008 ; Molecular Brain Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; Molecular Brain Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; Molecular Brain Volume 2 ; 2 >
       au < released ; crawling ; 2010 ; Molecular Brain Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; Molecular Brain Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Molecular Brain Volume 5 ; 5 >
@@ -5544,7 +5544,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2006 ; Respiratory Research Volume 7 ; 7 >
       au < manifest ; exists ; 2007 ; Respiratory Research Volume 8 ; 8 >
       au < manifest ; exists ; 2008 ; Respiratory Research Volume 9 ; 9 >
-      au < manifest ; exists ; 2009 ; Respiratory Research Volume 10 ; 10 >
+      au < crawling ; exists ; 2009 ; Respiratory Research Volume 10 ; 10 >
       au < crawling ; exists ; 2010 ; Respiratory Research Volume 11 ; 11 >
       au < crawling ; exists ; 2011 ; Respiratory Research Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; Respiratory Research Volume 13 ; 13 >
@@ -5625,7 +5625,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1757-7241
 
       au < manifest ; exists ; 2008 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 16 ; 16 >
-      au < manifest ; exists ; 2009 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 17 ; 17 >
+      au < crawling ; exists ; 2009 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 17 ; 17 >
       au < crawling ; exists ; 2010 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 18 ; 18 >
       au < crawling ; exists ; 2011 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 19 ; 19 >
       au < crawling ; exists ; 2012 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 20 ; 20 >
@@ -5718,7 +5718,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.substanceabusepolicy.com/
       param[journal_issn] = 1758-2555
 
-      au < manifest ; exists ; 2009 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
+      au < crawling ; exists ; 2009 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
       au < crawling ; exists ; 2010 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
       au < crawling ; exists ; 2011 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
       au < crawling ; exists ; 2012 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
@@ -5837,7 +5837,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1756-6614
 
       au < manifest ; exists ; 2008 ; Thyroid Research Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; Thyroid Research Volume 2 ; 2 >
+      au < crawling ; exists ; 2009 ; Thyroid Research Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; Thyroid Research Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; Thyroid Research Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Thyroid Research Volume 5 ; 5 >
@@ -5859,7 +5859,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2004 ; Tobacco Induced Diseases Volume 2 ; 2 >
       au < manifest ; exists ; 2005-2007 ; Tobacco Induced Diseases Volume 3 ; 3 >
       au < manifest ; exists ; 2008 ; Tobacco Induced Diseases Volume 4 ; 4 >
-      au < manifest ; exists ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 >
       au < crawling ; exists ; 2010 ; Tobacco Induced Diseases Volume 6 ; 6 >
       au < crawling ; exists ; 2011 ; Tobacco Induced Diseases Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Tobacco Induced Diseases Volume 8 ; 8 >
@@ -5935,7 +5935,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.vascularcell.com/
       param[journal_issn] = 2045-824X
 
-      au < manifest ; exists ; 2009 ; Vascular Cell Volume 1 ; 1 >
+      au < crawling ; exists ; 2009 ; Vascular Cell Volume 1 ; 1 >
       au < crawling ; exists ; 2010 ; Vascular Cell Volume 2 ; 2 >
       au < crawling ; exists ; 2011 ; Vascular Cell Volume 3 ; 3 >
       au < crawling ; exists ; 2012 ; Vascular Cell Volume 4 ; 4 >
