@@ -4050,12 +4050,12 @@
     param[base_url] = http://ccl.sagepub.com/
 
     {
+    
+      comment[0] = Ceasing publication but still online as of Jan 2012.
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < released ; crawling ; 2011 ; Cardiac Cath Lab Director Volume 1 ; 1 ; >
-      au < expected ; exists ; 2012 ; Cardiac Cath Lab Director Volume 2 ; 2 ; >
-      au < expected ; exists ; 2013 ; Cardiac Cath Lab Director Volume 3 ; 3 ; >
 
     }
 

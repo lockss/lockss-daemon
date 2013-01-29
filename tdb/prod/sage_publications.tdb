@@ -4594,10 +4594,10 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://ccl.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[0] = Ceasing publication but still online as of Jan 2012.
 
         au < released ; 2011 ; Cardiac Cath Lab Director Volume 1 ; 1 >
-        au < expected ; 2012 ; Cardiac Cath Lab Director Volume 2 ; 2 >
-        au < expected ; 2013 ; Cardiac Cath Lab Director Volume 3 ; 3 >
 
       }
 
