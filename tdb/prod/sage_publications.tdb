@@ -8501,8 +8501,9 @@
     {
   
         title <
-          name = Drug Information Journal ;
-          issn = 0092-8615 
+          name = Therapeutic Innovation & Regulatory Science ;
+          issn = 0092-8615 ;
+          eissn = 2164-9200
       >
   
       {
@@ -8510,6 +8511,8 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://dij.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[0] = Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
         
         au < manifest ; 1970 ; Drug Information Journal Volume 4 ; 4 >
         au < doesNotExist ; 0 ; Drug Information Journal Volume 5 ; 5 >
@@ -8554,7 +8557,7 @@
         au < released ; 2010 ; Drug Information Journal Volume 44 ; 44 >
         au < released ; 2011 ; Drug Information Journal Volume 45 ; 45 >
         au < released ; 2012 ; Drug Information Journal Volume 46 ; 46 >
-        au < manifest ; 2013 ; Drug Information Journal Volume 47 ; 47 >
+        au < manifest ; 2013 ; Therapeutic Innovation & Regulatory Science Volume 47 ; 47 >
   
       }
   
@@ -26017,7 +26020,7 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Journal of the International Association of Physicians in AIDS Care (JIAPAC) ;
+        name = Journal of the International Association of Providers in AIDS Care (JIAPAC) ;
         issn = 1545-1097 ;
         eissn = 1557-0886 ;
         issnl = 1545-1097
@@ -26043,6 +26046,8 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jia.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        comment[0] = Jan 2013 name changed from "Physicians" to "Providers"
+
         au < manifest ; 2002 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 1 ; 1 >
         au < manifest ; 2003 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 2 ; 2 >
         au < manifest ; 2004 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 3 ; 3 >
@@ -26054,7 +26059,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 9 ; 9 >
         au < released ; 2011 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 10 ; 10 >
         au < released ; 2012 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 11 ; 11 >
-        au < expected ; 2013 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 12 ; 12 >
+        au < expected ; 2013 ; Journal of the International Association of Providers in AIDS Care (JIAPAC) Volume 12 ; 12 >
 
       }
 
@@ -40681,12 +40686,21 @@ comment[mpj] = now published by Brill
         issnl = 2319-510X
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://abr.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
+    
+    comment[0] = Jan 2012 name changed from Asia Pacific Business Review to Asia-Pacific Journal of Management Research and Innovation
 
-    au < exists ; 2013 ; Asia-Pacific Journal of Management Research and Innovation Volume 1 ; 1 >
+    au < exists ; 2005 ; Asia Pacific Business Review Volume 1 ; 1 >
+    au < exists ; 2006 ; Asia Pacific Business Review Volume 2 ; 2 >
+    au < exists ; 2007 ; Asia Pacific Business Review Volume 3 ; 3 >
+    au < exists ; 2008 ; Asia Pacific Business Review Volume 4 ; 4 >
+    au < exists ; 2009 ; Asia Pacific Business Review Volume 5 ; 5 >
+    au < exists ; 2010 ; Asia Pacific Business Review Volume 6 ; 6 >
+    au < exists ; 2011 ; Asia Pacific Business Review Volume 7 ; 7 >
+    au < exists ; 2012 ; Asia-Pacific Journal of Management Research and Innovation Volume 8 ; 8 >
+    au < expected ; 2013 ; Asia-Pacific Journal of Management Research and Innovation Volume 9 ; 9 >
 
     }
 
@@ -41131,15 +41145,23 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Journal of Clinical Urology
+        name = Journal of Clinical Urology ;
+        issn = 2051-4158 ;
+        eissn = 2051-4166
       >
 
-    comment[upcoming] = online 2013
-    pluginSuffix = HighWirePressH20Plugin
-    param[base_url] = http://uro.sagepub.com/
-    implicit < status ; year ; name ; param[volume_name] >
-
-    au < exists ; 2013 ; Journal of Clinical Urology Volume 1 ; 1 >
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://uro.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      comment[0] = Jan 2013 name changed from British Journal of Medical and Surgical Urology to Journal of Clinical Urology
+      
+      au < exists ; 2008 ; British Journal of Medical and Surgical Urology Volume 1 ; 1 >
+      au < exists ; 2009 ; British Journal of Medical and Surgical Urology Volume 2 ; 2 >
+      au < exists ; 2010 ; British Journal of Medical and Surgical Urology Volume 3 ; 3 >
+      au < exists ; 2011 ; British Journal of Medical and Surgical Urology Volume 4 ; 4 >
+      au < exists ; 2012 ; British Journal of Medical and Surgical Urology Volume 5 ; 5 >
+      au < expected ; 2013 ; Journal of Clinical Urology Volume 6 ; 6 >
 
     }
 
