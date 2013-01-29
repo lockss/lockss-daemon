@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.330 2013-01-29 01:24:35 fergaloy-sf Exp $
+ $Id: build.xml,v 1.331 2013-01-29 03:30:50 fergaloy-sf Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -3112,13 +3112,28 @@ optionally -Dtests= for tests to be run.
     <delete dir="${schema.doc.dir}" quiet="true"/>
   </target>
 
-  <target name="schema-doc" depends="clean-schema-doc,schema-doc-createdb"
+  <target name="check-for-dot">
+    <exec executable="dot" failonerror="false" failifexecutionfails="false"
+          resultproperty="dot.is.available">
+      <arg value="-V"/>
+    </exec>
+  </target>
+
+  <target name="schema-doc" depends="check.contrib,clean-schema-doc,check-for-dot,schema-doc-createdb"
           description="Creates database schema documentation diagrams.">
-    <java jar="${schemaSpy.jar}" fork="true">
-      <classpath refid="tools.run.classpath" />
-      <arg line="-t derby -db ${tmpdir}/${schema.doc.db.dir}/db/DbManager -dp ${derbynet.jar} -hq -noads -norows -u LOCKSS -o ${schema.doc.dir}" />
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-    </java>
+    <if>
+      <isset property="dot.is.available" />
+   	  <then>
+        <java jar="${schemaSpy.jar}" fork="true">
+          <classpath refid="tools.run.classpath" />
+          <arg line="-t derby -db ${tmpdir}/${schema.doc.db.dir}/db/DbManager -dp ${derbynet.jar} -hq -noads -norows -u LOCKSS -o ${schema.doc.dir}" />
+          <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+        </java>
+      </then>
+      <else>
+        <echo message="Schema documentation not generated because the dot program is not available; continuing..."/>
+      </else>
+    </if>
   </target>
 
 </project>
