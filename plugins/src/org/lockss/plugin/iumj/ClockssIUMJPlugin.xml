@@ -1,4 +1,8 @@
+<!--  $Id: ClockssIUMJPlugin.xml,v 1.4 2013-01-30 00:02:02 aishizaki Exp $ -->
 <map>
+  <!-- ClockssIUMJPlugin.xml inherited from IUMJPlugin.xml.
+       The main differences are names, version.
+  -->  
   <entry>
     <string>plugin_status</string>
     <string>testing - Collin</string>
@@ -8,9 +12,23 @@
     <string>org.lockss.plugin.iumj.ClockssIUMJPlugin</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>2</string>
+    <string>plugin_name</string>
+    <string>Indiana University Mathematics Journal Plugin (CLOCKSS)</string>
   </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.iumj.IUMJPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>3</string>
+  </entry>
+<!-- only add version numbers if CLOCKSS version adds different
+     substance/metadata/poll rules
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
@@ -28,106 +46,10 @@
       </entry>
     </map>
   </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>Indiana University Mathematics Journal Plugin (CLOCKSS)</string>
-  </entry>
+-->
   <entry>
     <string>au_name</string>
     <string>"Indiana University Mathematics Journal Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>"%sIUMJ/YEAR/%d", base_url, year</string>
-  </entry>
-  <entry>
-    <string>au_feature_urls</string>
-    <map>
-      <entry>
-        <string>au_title</string>
-        <string>"%s", base_url</string>
-      </entry>
-      <entry>
-        <string>au_volume</string>
-        <string>"%sIUMJ/YEAR/%d", base_url, year</string>
-      </entry>
-      <entry>
-        <string>au_issue</string>
-        <string>"%sIUMJ/YEAR/%d/%s", base_url, year, issue</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,"^%sIUMJ/(YEAR|ABS|FULLTEXT|FTDLOAD)/%d/", base_url, year</string>
-      <string>1,"^%sMETA/%d/([^/])+", base_url, year</string>
-      <string>1,"^%s(Images|icons)/", base_url, volume_name</string>
-      <string>1,"^%sstylesheet/([^/])+\.css$", base_url, volume_name</string>
-      <string>1,"^%soai/%d/%s/([^/])+/([^/])+", base_url, year, volume_name</string>
-      <string>4,"^%s", base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>"^%sIUMJ/FTDLOAD/%d/%s/([^/])+/pdf$", base_url, year, volume_name</string>
-    </list>
-  </entry>
-  <entry>
-    <string>plugin_config_props</string>
-    <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>           
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>volume_name</key>
-        <displayName>Volume Name</displayName>
-        <type>1</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-    </list>
-  </entry>
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.iumj.IUMJArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.iumj.IUMJArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>application/pdf_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;DublinCore</string>
-        <string>org.lockss.plugin.iumj.IUMJXmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>1000</long>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
+
 </map>
