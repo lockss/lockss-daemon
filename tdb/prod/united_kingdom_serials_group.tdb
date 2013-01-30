@@ -33,6 +33,7 @@
     implicit < status ; year ; name ; param[volume_name]>
     
     au < manifest ; 2012 ; Insights: the UKSG journal Volume 25 ; 25 >
+    au < expected ; 2013 ; Insights: the UKSG journal Volume 26 ; 26 >
     
   }
   
@@ -73,6 +74,7 @@
     au < released ; 2010 ; Serials: The Journal for the Serials Community Volume 23 ; 23 >
     au < released ; 2011 ; Serials: The Journal for the Serials Community Volume 24 ; 24 >
     au < expected ; 2012 ; Serials: The Journal for the Serials Community Volume 25 ; 25 >
+    au < expected ; 2013 ; Serials: The Journal for the Serials Community Volume 26 ; 26 >
 
   }
 
