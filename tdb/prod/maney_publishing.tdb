@@ -61,62 +61,62 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 1937 ; Ambix Volume 1 ; 1 > 
-    au < manifest ; 1938-1946 ; Ambix Volume 2 ; 2 > 
-    au < manifest ; 1948-1949 ; Ambix Volume 3 ; 3 > 
-    au < manifest ; 1949-1951 ; Ambix Volume 4 ; 4 > 
-    au < manifest ; 1953-1956 ; Ambix Volume 5 ; 5 > 
-    au < manifest ; 1957-1958 ; Ambix Volume 6 ; 6 > 
-    au < manifest ; 1959 ; Ambix Volume 7 ; 7 >
-    au < manifest ; 1960 ; Ambix Volume 8 ; 8 >
-    au < manifest ; 1961 ; Ambix Volume 9 ; 9 >
-    au < manifest ; 1962 ; Ambix Volume 10 ; 10 >
-    au < manifest ; 1963 ; Ambix Volume 11 ; 11 >
-    au < manifest ; 1964 ; Ambix Volume 12 ; 12 > 
-    au < manifest ; 1965-1966 ; Ambix Volume 13 ; 13 > 
-    au < manifest ; 1967 ; Ambix Volume 14 ; 14 >
-    au < manifest ; 1968 ; Ambix Volume 15 ; 15 >
-    au < manifest ; 1969 ; Ambix Volume 16 ; 16 >
-    au < manifest ; 1970 ; Ambix Volume 17 ; 17 >
-    au < manifest ; 1971 ; Ambix Volume 18 ; 18 >
-    au < manifest ; 1972 ; Ambix Volume 19 ; 19 >
-    au < manifest ; 1973 ; Ambix Volume 20 ; 20 >
-    au < manifest ; 1974 ; Ambix Volume 21 ; 21 >
-    au < manifest ; 1975 ; Ambix Volume 22 ; 22 >
-    au < manifest ; 1976 ; Ambix Volume 23 ; 23 >
-    au < manifest ; 1977 ; Ambix Volume 24 ; 24 >
-    au < manifest ; 1978 ; Ambix Volume 25 ; 25 >
-    au < manifest ; 1979 ; Ambix Volume 26 ; 26 >
-    au < manifest ; 1980 ; Ambix Volume 27 ; 27 >
-    au < manifest ; 1981 ; Ambix Volume 28 ; 28 >
-    au < manifest ; 1982 ; Ambix Volume 29 ; 29 >
-    au < manifest ; 1983 ; Ambix Volume 30 ; 30 >
-    au < manifest ; 1984 ; Ambix Volume 31 ; 31 >
-    au < manifest ; 1985 ; Ambix Volume 32 ; 32 >
-    au < manifest ; 1986 ; Ambix Volume 33 ; 33 >
-    au < manifest ; 1987 ; Ambix Volume 34 ; 34 >
-    au < manifest ; 1988 ; Ambix Volume 35 ; 35 >
-    au < manifest ; 1989 ; Ambix Volume 36 ; 36 >
-    au < manifest ; 1990 ; Ambix Volume 37 ; 37 >
-    au < manifest ; 1991 ; Ambix Volume 38 ; 38 >
-    au < manifest ; 1992 ; Ambix Volume 39 ; 39 >
-    au < manifest ; 1993 ; Ambix Volume 40 ; 40 >
-    au < manifest ; 1994 ; Ambix Volume 41 ; 41 >
-    au < manifest ; 1995 ; Ambix Volume 42 ; 42 >
-    au < manifest ; 1996 ; Ambix Volume 43 ; 43 >
-    au < manifest ; 1997 ; Ambix Volume 44 ; 44 >
-    au < manifest ; 1998 ; Ambix Volume 45 ; 45 >
-    au < manifest ; 1999 ; Ambix Volume 46 ; 46 >
-    au < manifest ; 2000 ; Ambix Volume 47 ; 47 >
-    au < manifest ; 2001 ; Ambix Volume 48 ; 48 >
-    au < manifest ; 2002 ; Ambix Volume 49 ; 49 >
-    au < manifest ; 2003 ; Ambix Volume 50 ; 50 >
-    au < manifest ; 2004 ; Ambix Volume 51 ; 51 >
-    au < manifest ; 2005 ; Ambix Volume 52 ; 52 >
-    au < manifest ; 2006 ; Ambix Volume 53 ; 53 >
-    au < manifest ; 2007 ; Ambix Volume 54 ; 54 >
-    au < manifest ; 2008 ; Ambix Volume 55 ; 55 >
-    au < manifest ; 2009 ; Ambix Volume 56 ; 56 >
+    au < testing ; 1937 ; Ambix Volume 1 ; 1 > 
+    au < testing ; 1938-1946 ; Ambix Volume 2 ; 2 > 
+    au < testing ; 1948-1949 ; Ambix Volume 3 ; 3 > 
+    au < testing ; 1949-1951 ; Ambix Volume 4 ; 4 > 
+    au < testing ; 1953-1956 ; Ambix Volume 5 ; 5 > 
+    au < testing ; 1957-1958 ; Ambix Volume 6 ; 6 > 
+    au < testing ; 1959 ; Ambix Volume 7 ; 7 >
+    au < testing ; 1960 ; Ambix Volume 8 ; 8 >
+    au < testing ; 1961 ; Ambix Volume 9 ; 9 >
+    au < testing ; 1962 ; Ambix Volume 10 ; 10 >
+    au < testing ; 1963 ; Ambix Volume 11 ; 11 >
+    au < testing ; 1964 ; Ambix Volume 12 ; 12 > 
+    au < testing ; 1965-1966 ; Ambix Volume 13 ; 13 > 
+    au < testing ; 1967 ; Ambix Volume 14 ; 14 >
+    au < testing ; 1968 ; Ambix Volume 15 ; 15 >
+    au < testing ; 1969 ; Ambix Volume 16 ; 16 >
+    au < testing ; 1970 ; Ambix Volume 17 ; 17 >
+    au < testing ; 1971 ; Ambix Volume 18 ; 18 >
+    au < testing ; 1972 ; Ambix Volume 19 ; 19 >
+    au < testing ; 1973 ; Ambix Volume 20 ; 20 >
+    au < testing ; 1974 ; Ambix Volume 21 ; 21 >
+    au < testing ; 1975 ; Ambix Volume 22 ; 22 >
+    au < testing ; 1976 ; Ambix Volume 23 ; 23 >
+    au < testing ; 1977 ; Ambix Volume 24 ; 24 >
+    au < testing ; 1978 ; Ambix Volume 25 ; 25 >
+    au < testing ; 1979 ; Ambix Volume 26 ; 26 >
+    au < testing ; 1980 ; Ambix Volume 27 ; 27 >
+    au < testing ; 1981 ; Ambix Volume 28 ; 28 >
+    au < testing ; 1982 ; Ambix Volume 29 ; 29 >
+    au < testing ; 1983 ; Ambix Volume 30 ; 30 >
+    au < testing ; 1984 ; Ambix Volume 31 ; 31 >
+    au < testing ; 1985 ; Ambix Volume 32 ; 32 >
+    au < testing ; 1986 ; Ambix Volume 33 ; 33 >
+    au < testing ; 1987 ; Ambix Volume 34 ; 34 >
+    au < testing ; 1988 ; Ambix Volume 35 ; 35 >
+    au < testing ; 1989 ; Ambix Volume 36 ; 36 >
+    au < testing ; 1990 ; Ambix Volume 37 ; 37 >
+    au < testing ; 1991 ; Ambix Volume 38 ; 38 >
+    au < testing ; 1992 ; Ambix Volume 39 ; 39 >
+    au < testing ; 1993 ; Ambix Volume 40 ; 40 >
+    au < testing ; 1994 ; Ambix Volume 41 ; 41 >
+    au < testing ; 1995 ; Ambix Volume 42 ; 42 >
+    au < testing ; 1996 ; Ambix Volume 43 ; 43 >
+    au < testing ; 1997 ; Ambix Volume 44 ; 44 >
+    au < testing ; 1998 ; Ambix Volume 45 ; 45 >
+    au < testing ; 1999 ; Ambix Volume 46 ; 46 >
+    au < testing ; 2000 ; Ambix Volume 47 ; 47 >
+    au < testing ; 2001 ; Ambix Volume 48 ; 48 >
+    au < testing ; 2002 ; Ambix Volume 49 ; 49 >
+    au < testing ; 2003 ; Ambix Volume 50 ; 50 >
+    au < testing ; 2004 ; Ambix Volume 51 ; 51 >
+    au < testing ; 2005 ; Ambix Volume 52 ; 52 >
+    au < testing ; 2006 ; Ambix Volume 53 ; 53 >
+    au < testing ; 2007 ; Ambix Volume 54 ; 54 >
+    au < testing ; 2008 ; Ambix Volume 55 ; 55 >
+    au < testing ; 2009 ; Ambix Volume 56 ; 56 >
     au < released ; 2010 ; Ambix Volume 57 ; 57 >
     au < released ; 2011 ; Ambix Volume 58 ; 58 >
     au < released ; 2012 ; Ambix Volume 59 ; 59 >
@@ -226,7 +226,7 @@
     au < released ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
     au < released ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
     au < released ; 2011 ; Applied Earth Science: IMM Transactions section B Volume 120 ; 120 > 
-    au < manifest ; 2012 ; Applied Earth Science: IMM Transactions section B Volume 121 ; 121 > 
+    au < testing ; 2012 ; Applied Earth Science: IMM Transactions section B Volume 121 ; 121 > 
     au < expected ; 2013 ; Applied Earth Science: IMM Transactions section B Volume 122 ; 122 > 
 
   }
@@ -690,13 +690,13 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2003 ; Central Europe Volume 1 ; 1 > 
-    au < manifest ; 2004 ; Central Europe Volume 2 ; 2 > 
-    au < manifest ; 2005 ; Central Europe Volume 3 ; 3 > 
-    au < manifest ; 2006 ; Central Europe Volume 4 ; 4 > 
-    au < manifest ; 2007 ; Central Europe Volume 5 ; 5 > 
-    au < manifest ; 2008 ; Central Europe Volume 6 ; 6 > 
-    au < manifest ; 2009 ; Central Europe Volume 7 ; 7 > 
+    au < testing ; 2003 ; Central Europe Volume 1 ; 1 > 
+    au < testing ; 2004 ; Central Europe Volume 2 ; 2 > 
+    au < testing ; 2005 ; Central Europe Volume 3 ; 3 > 
+    au < testing ; 2006 ; Central Europe Volume 4 ; 4 > 
+    au < testing ; 2007 ; Central Europe Volume 5 ; 5 > 
+    au < testing ; 2008 ; Central Europe Volume 6 ; 6 > 
+    au < testing ; 2009 ; Central Europe Volume 7 ; 7 > 
     au < released ; 2010 ; Central Europe Volume 8 ; 8 > 
     au < released ; 2011 ; Central Europe Volume 9 ; 9 > 
     au < released ; 2012 ; Central Europe Volume 10 ; 10 > 
@@ -782,13 +782,13 @@
     param[journal_issn] = 1477-5700
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2003 ; Comparative American Studies Volume 1 ; 1 > 
-    au < manifest ; 2004 ; Comparative American Studies Volume 2 ; 2 > 
-    au < manifest ; 2005 ; Comparative American Studies Volume 3 ; 3 > 
-    au < manifest ; 2006 ; Comparative American Studies Volume 4 ; 4 > 
-    au < manifest ; 2007 ; Comparative American Studies Volume 5 ; 5 > 
-    au < manifest ; 2008 ; Comparative American Studies Volume 6 ; 6 > 
-    au < manifest ; 2009 ; Comparative American Studies Volume 7 ; 7 > 
+    au < testing ; 2003 ; Comparative American Studies Volume 1 ; 1 > 
+    au < testing ; 2004 ; Comparative American Studies Volume 2 ; 2 > 
+    au < testing ; 2005 ; Comparative American Studies Volume 3 ; 3 > 
+    au < testing ; 2006 ; Comparative American Studies Volume 4 ; 4 > 
+    au < testing ; 2007 ; Comparative American Studies Volume 5 ; 5 > 
+    au < testing ; 2008 ; Comparative American Studies Volume 6 ; 6 > 
+    au < testing ; 2009 ; Comparative American Studies Volume 7 ; 7 > 
     au < released ; 2010 ; Comparative American Studies Volume 8 ; 8 > 
     au < released ; 2011 ; Comparative American Studies Volume 9 ; 9 > 
     au < released ; 2012 ; Comparative American Studies Volume 10 ; 10 > 
@@ -815,14 +815,14 @@
     param[journal_issn] = 1024-5294
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2002 ; Competition & Change Volume 6 ; 6 > 
-    au < manifest ; 2003 ; Competition & Change Volume 7 ; 7 > 
-    au < manifest ; 2004 ; Competition & Change Volume 8 ; 8 > 
-    au < manifest ; 2005 ; Competition & Change Volume 9 ; 9 > 
-    au < manifest ; 2006 ; Competition & Change Volume 10 ; 10 > 
-    au < manifest ; 2007 ; Competition & Change Volume 11 ; 11 > 
-    au < manifest ; 2008 ; Competition & Change Volume 12 ; 12 > 
-    au < manifest ; 2009 ; Competition & Change Volume 13 ; 13 > 
+    au < testing ; 2002 ; Competition & Change Volume 6 ; 6 > 
+    au < testing ; 2003 ; Competition & Change Volume 7 ; 7 > 
+    au < testing ; 2004 ; Competition & Change Volume 8 ; 8 > 
+    au < testing ; 2005 ; Competition & Change Volume 9 ; 9 > 
+    au < testing ; 2006 ; Competition & Change Volume 10 ; 10 > 
+    au < testing ; 2007 ; Competition & Change Volume 11 ; 11 > 
+    au < testing ; 2008 ; Competition & Change Volume 12 ; 12 > 
+    au < testing ; 2009 ; Competition & Change Volume 13 ; 13 > 
     au < released ; 2010 ; Competition & Change Volume 14 ; 14 > 
     au < released ; 2011 ; Competition & Change Volume 15 ; 15 > 
     au < released ; 2012 ; Competition & Change Volume 16 ; 16 > 
