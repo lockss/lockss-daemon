@@ -4962,9 +4962,10 @@
     {
     
       pluginSuffix = ClockssHighWirePressH20Plugin
+      
+      comment[0] = Moving to Wiley Blackwell in 2013
 
-      au < released ; crawling ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 ; >
-      au < expected ; exists ; 2013 ; Clinical Pharmacology in Drug Development Volume 2 ; 2 ; >
+      au < down ; crawling ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 ; >
 
     }
     
@@ -16630,6 +16631,8 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      
+      comment[0] = Moving to Wiley Blackwell in 2013.
 
       au < released ; crawling ; 1961 ; The Journal of Clinical Pharmacology Volume 1 ; 1 ; >
       au < zapped ; down ; 1962 ; The Journal of Clinical Pharmacology Volume 2 ; 2 ; >
@@ -16683,7 +16686,6 @@
       au < released ; crawling ; 2010 ; The Journal of Clinical Pharmacology Volume 50 ; 50 ; >
       au < released ; crawling ; 2011 ; The Journal of Clinical Pharmacology Volume 51 ; 51 ; >
       au < released ; crawling ; 2012 ; The Journal of Clinical Pharmacology Volume 52 ; 52 ; >
-      au < expected ; exists ; 2013 ; The Journal of Clinical Pharmacology Volume 53 ; 53 ; >
 
     }
 
