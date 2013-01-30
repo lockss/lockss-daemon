@@ -462,6 +462,7 @@ comment[bj1] = no permission from publisher
     au < exists ; exists ; 2011 ; Biochemical Journal Volume 436 ; 436 >
     au < exists ; exists ; 2011 ; Biochemical Journal Volume 437 ; 437 >
     au < exists ; exists ; 2012 ; Biochemical Journal Volume 438 ; 438 >
+    au < exists ; exists ; 2013 ; Biochemical Journal Volume 439 ; 439 >
     
   }
   
@@ -594,6 +595,7 @@ comment[ownership] = changed hands to wiley
     au < exists ; exists ; 2010 ; Biochemical Society Transactions Volume 38 ; 038 >
     au < exists ; exists ; 2011 ; Biochemical Society Transactions Volume 39 ; 039 >
     au < exists ; exists ; 2012 ; Biochemical Society Transactions Volume 40 ; 040 >
+    au < exists ; exists ; 2013 ; Biochemical Society Transactions Volume 41 ; 041 >
     
   }
   
@@ -643,6 +645,7 @@ comment[ownership] = changed hands to wiley
     au < exists ; exists ; 2010 ; Bioscience Reports Volume 30 ; 030 >
     au < exists ; exists ; 2011 ; Bioscience Reports Volume 31 ; 031 >
     au < exists ; exists ; 2012 ; Bioscience Reports Volume 32 ; 032 >
+    au < exists ; exists ; 2013 ; Bioscience Reports Volume 33 ; 033 >
 
   }
 
@@ -793,6 +796,8 @@ comment[publisher] = changed hands to Wiley but not on Muse. Can't preserve new 
     au < exists ; exists ; 2011 ; Clinical Science Volume 121 ; 121 >
     au < exists ; exists ; 2012 ; Clinical Science Volume 122 ; 122 >
     au < exists ; exists ; 2012 ; Clinical Science Volume 123 ; 123 >
+    au < exists ; exists ; 2013 ; Clinical Science Volume 124 ; 124 >
+    au < exists ; exists ; 2013 ; Clinical Science Volume 125 ; 125 >
         
   }
   
@@ -827,7 +832,8 @@ comment[publisher] = changed hands to Wiley but not on Muse. Can't preserve new 
     au < exists ; exists ; 2011 ; Essays in Biochemistry Volume 49 ; 049 >
     au < exists ; exists ; 2011 ; Essays in Biochemistry Volume 50 ; 050 >
     au < exists ; exists ; 2011 ; Essays in Biochemistry Volume 51 ; 051 >
-    au < expected ; exists ; 2012 ; Essays in Biochemistry Volume 52 ; 052 >
+    au < exists ; exists ; 2012 ; Essays in Biochemistry Volume 52 ; 052 >
+    au < exists ; exists ; 2012 ; Essays in Biochemistry Volume 53 ; 053 >
 
   }
   
