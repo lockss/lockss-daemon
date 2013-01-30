@@ -376,22 +376,22 @@
     au < HighWirePressH20Plugin ; released ; 2001 ; Journal of Pharmacology and Experimental Therapeutics Volume 298 ; 298 >
     au < HighWirePressH20Plugin ; ready ; 2001 ; Journal of Pharmacology and Experimental Therapeutics Volume 299 ; 299 >
     au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Pharmacology and Experimental Therapeutics Volume 300 ; 300 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Journal of Pharmacology and Experimental Therapeutics Volume 301 ; 301 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Pharmacology and Experimental Therapeutics Volume 301 ; 301 >
     au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Pharmacology and Experimental Therapeutics Volume 302 ; 302 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Journal of Pharmacology and Experimental Therapeutics Volume 303 ; 303 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Journal of Pharmacology and Experimental Therapeutics Volume 304 ; 304 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Pharmacology and Experimental Therapeutics Volume 303 ; 303 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Pharmacology and Experimental Therapeutics Volume 304 ; 304 >
     au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Pharmacology and Experimental Therapeutics Volume 305 ; 305 >
     au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Pharmacology and Experimental Therapeutics Volume 306 ; 306 >
     au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Pharmacology and Experimental Therapeutics Volume 307 ; 307 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; Journal of Pharmacology and Experimental Therapeutics Volume 308 ; 308 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; Journal of Pharmacology and Experimental Therapeutics Volume 309 ; 309 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Journal of Pharmacology and Experimental Therapeutics Volume 308 ; 308 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Journal of Pharmacology and Experimental Therapeutics Volume 309 ; 309 >
     au < HighWirePressH20Plugin ; ready ; 2004 ; Journal of Pharmacology and Experimental Therapeutics Volume 310 ; 310 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; Journal of Pharmacology and Experimental Therapeutics Volume 311 ; 311 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Journal of Pharmacology and Experimental Therapeutics Volume 311 ; 311 >
     au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Pharmacology and Experimental Therapeutics Volume 312 ; 312 >
     au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Pharmacology and Experimental Therapeutics Volume 313 ; 313 >
     au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Pharmacology and Experimental Therapeutics Volume 314 ; 314 >
     au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Pharmacology and Experimental Therapeutics Volume 315 ; 315 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Journal of Pharmacology and Experimental Therapeutics Volume 316 ; 316 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; Journal of Pharmacology and Experimental Therapeutics Volume 316 ; 316 >
     au < HighWirePressH20Plugin ; released ; 2006 ; Journal of Pharmacology and Experimental Therapeutics Volume 317 ; 317 >
     au < HighWirePressH20Plugin ; released ; 2006 ; Journal of Pharmacology and Experimental Therapeutics Volume 318 ; 318 >
     au < HighWirePressH20Plugin ; released ; 2006 ; Journal of Pharmacology and Experimental Therapeutics Volume 319 ; 319 >
@@ -410,7 +410,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Pharmacology and Experimental Therapeutics Volume 332 ; 332 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Pharmacology and Experimental Therapeutics Volume 333 ; 333 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Pharmacology and Experimental Therapeutics Volume 334 ; 334 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of Pharmacology and Experimental Therapeutics Volume 335 ; 335 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Pharmacology and Experimental Therapeutics Volume 335 ; 335 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Pharmacology and Experimental Therapeutics Volume 336 ; 336 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Pharmacology and Experimental Therapeutics Volume 337 ; 337 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Pharmacology and Experimental Therapeutics Volume 338 ; 338 >
@@ -479,6 +479,7 @@
     >
 
     param[base_url] = http://molpharm.aspetjournals.org/
+    comment[notReady] = low agreement
 
     au < HighWirePressH20Plugin ; ready ; 1965 ; Molecular Pharmacology Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; ready ; 1966 ; Molecular Pharmacology Volume 2 ; 2 >
@@ -523,29 +524,29 @@
     au < HighWirePressH20Plugin ; ready ; 1992 ; Molecular Pharmacology Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; ready ; 1992 ; Molecular Pharmacology Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; ready ; 1993 ; Molecular Pharmacology Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; testing ; 1993 ; Molecular Pharmacology Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; testing ; 1994 ; Molecular Pharmacology Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; ready ; 1993 ; Molecular Pharmacology Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; notReady ; 1994 ; Molecular Pharmacology Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; ready ; 1994 ; Molecular Pharmacology Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; testing ; 1995 ; Molecular Pharmacology Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; ready ; 1995 ; Molecular Pharmacology Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; ready ; 1995 ; Molecular Pharmacology Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; testing ; 1996 ; Molecular Pharmacology Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; ready ; 1996 ; Molecular Pharmacology Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; ready ; 1996 ; Molecular Pharmacology Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; testing ; 1997 ; Molecular Pharmacology Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; testing ; 1997 ; Molecular Pharmacology Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; testing ; 1998 ; Molecular Pharmacology Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; ready ; 1997 ; Molecular Pharmacology Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; ready ; 1997 ; Molecular Pharmacology Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; ready ; 1998 ; Molecular Pharmacology Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; ready ; 1998 ; Molecular Pharmacology Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; testing ; 1999 ; Molecular Pharmacology Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; ready ; 1999 ; Molecular Pharmacology Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; ready ; 1999 ; Molecular Pharmacology Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; testing ; 2000 ; Molecular Pharmacology Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Molecular Pharmacology Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; notReady ; 2000 ; Molecular Pharmacology Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; ready ; 2001 ; Molecular Pharmacology Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Molecular Pharmacology Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Molecular Pharmacology Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; ready ; 2002 ; Molecular Pharmacology Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; ready ; 2002 ; Molecular Pharmacology Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; ready ; 2003 ; Molecular Pharmacology Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Molecular Pharmacology Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; Molecular Pharmacology Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; Molecular Pharmacology Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Molecular Pharmacology Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; notReady ; 2004 ; Molecular Pharmacology Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Molecular Pharmacology Volume 66 ; 66 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Molecular Pharmacology Volume 67 ; 67 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Molecular Pharmacology Volume 68 ; 68 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Molecular Pharmacology Volume 69 ; 69 >
@@ -557,7 +558,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Molecular Pharmacology Volume 75 ; 75 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Molecular Pharmacology Volume 76 ; 76 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Molecular Pharmacology Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Molecular Pharmacology Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; Molecular Pharmacology Volume 78 ; 78 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Molecular Pharmacology Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Molecular Pharmacology Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Molecular Pharmacology Volume 81 ; 81 >
@@ -580,37 +581,37 @@
 
     au < HighWirePressH20Plugin ; ready ; 1949 ; Pharmacological Reviews Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; ready ; 1950 ; Pharmacological Reviews Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 1951 ; Pharmacological Reviews Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1951 ; Pharmacological Reviews Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 1952 ; Pharmacological Reviews Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; ready ; 1953 ; Pharmacological Reviews Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; ready ; 1954 ; Pharmacological Reviews Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; 1955 ; Pharmacological Reviews Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; testing ; 1956 ; Pharmacological Reviews Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 1955 ; Pharmacological Reviews Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1956 ; Pharmacological Reviews Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; ready ; 1957 ; Pharmacological Reviews Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; testing ; 1958 ; Pharmacological Reviews Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 1959 ; Pharmacological Reviews Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 1960 ; Pharmacological Reviews Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 1961 ; Pharmacological Reviews Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 1962 ; Pharmacological Reviews Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; testing ; 1963 ; Pharmacological Reviews Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1958 ; Pharmacological Reviews Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1959 ; Pharmacological Reviews Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 1960 ; Pharmacological Reviews Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 1961 ; Pharmacological Reviews Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 1962 ; Pharmacological Reviews Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1963 ; Pharmacological Reviews Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; ready ; 1964 ; Pharmacological Reviews Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; ready ; 1965 ; Pharmacological Reviews Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; ready ; 1966 ; Pharmacological Reviews Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; notReady ; 1967 ; Pharmacological Reviews Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 1967 ; Pharmacological Reviews Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; ready ; 1968 ; Pharmacological Reviews Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; notReady ; 1969 ; Pharmacological Reviews Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; notReady ; 1970 ; Pharmacological Reviews Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 1969 ; Pharmacological Reviews Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 1970 ; Pharmacological Reviews Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; ready ; 1971 ; Pharmacological Reviews Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; notReady ; 1972 ; Pharmacological Reviews Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; 1972 ; Pharmacological Reviews Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; ready ; 1973 ; Pharmacological Reviews Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; ready ; 1974 ; Pharmacological Reviews Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; notReady ; 1975 ; Pharmacological Reviews Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; notReady ; 1976 ; Pharmacological Reviews Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 1975 ; Pharmacological Reviews Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; ready ; 1976 ; Pharmacological Reviews Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; ready ; 1977 ; Pharmacological Reviews Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; ready ; 1978 ; Pharmacological Reviews Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; notReady ; 1979 ; Pharmacological Reviews Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; notReady ; 1980 ; Pharmacological Reviews Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; notReady ; 1981 ; Pharmacological Reviews Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; ready ; 1979 ; Pharmacological Reviews Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; ready ; 1980 ; Pharmacological Reviews Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 1981 ; Pharmacological Reviews Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; ready ; 1982 ; Pharmacological Reviews Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; ready ; 1983 ; Pharmacological Reviews Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; ready ; 1984 ; Pharmacological Reviews Volume 36 ; 36 >
