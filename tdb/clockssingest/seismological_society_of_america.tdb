@@ -5,7 +5,10 @@
     info[contract] = 2012 ;
     info[tester] = 0
   >
-  
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
+
   {
   
     title < 
@@ -15,9 +18,7 @@
       issnl = 0037-1106
      >
     
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://www.bssaonline.org/
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
     
     
       au < manifest ; exists ; 1911 ; Bulletin of the Seismological Society of America Volume 1 ; 1 >
@@ -122,6 +123,7 @@
       au < manifest ; exists ; 2010 ; Bulletin of the Seismological Society of America Volume 100 ; 100 >
       au < manifest ; exists ; 2011 ; Bulletin of the Seismological Society of America Volume 101 ; 101 >
       au < crawling ; exists ; 2012 ; Bulletin of the Seismological Society of America Volume 102 ; 102 >
+      au < expected ; exists ; 2013 ; Bulletin of the Seismological Society of America Volume 103 ; 103 >
 
   }
 
@@ -133,7 +135,12 @@
       eissn = 1938-2057 
      >
 
-    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    param[base_url] = http://srl.geoscienceworld.org/
+
+    au < exists ; exists ; 2011 ; Seismological Research Letters Volume 82 ; 82 >
+    au < exists ; exists ; 2012 ; Seismological Research Letters Volume 83 ; 83 >
+    au < exists ; exists ; 2013 ; Seismological Research Letters Volume 84 ; 84 >
+
   }
   
 }
