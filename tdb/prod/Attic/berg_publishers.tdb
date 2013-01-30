@@ -131,6 +131,7 @@
     param[journal_id] = dsgj
     param[journal_issn] = 1460-6925
 
+    comment[UX] = complete
 
     au < released ; 1997-1998 ; The Design Journal Volume 1 ; 1 >
     au < released ; 1999 ; The Design Journal Volume 2 ; 2 >
@@ -162,6 +163,7 @@
     param[journal_id] = fpcj
     param[journal_issn] = 1756-9370
 
+    comment[UX] = issues with images in html format of articles
 
     au < released ; 2009 ; Fashion Practice Volume 1 ; 1 >
     au < released ; 2010 ; Fashion Practice Volume 2 ; 2 >
