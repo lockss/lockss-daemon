@@ -5620,9 +5620,10 @@
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://cpd.sagepub.com/
+        
+        comment[0] = Moving to Wiley Blackwell in 2013.
 
         au < released ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 >
-        au < expected ; 2013 ; Clinical Pharmacology in Drug Development Volume 2 ; 2 >
 
       }
       
@@ -19048,6 +19049,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jcp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[0] = moving to Wiley Blackwell in 2013
 
         au < released ; 1961 ; The Journal of Clinical Pharmacology Volume 1 ; 1 >
         au < released ; 1962 ; The Journal of Clinical Pharmacology Volume 2 ; 2 >
@@ -19101,7 +19104,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2010 ; The Journal of Clinical Pharmacology Volume 50 ; 50 >
         au < released ; 2011 ; The Journal of Clinical Pharmacology Volume 51 ; 51 >
         au < released ; 2012 ; The Journal of Clinical Pharmacology Volume 52 ; 52 >
-        au < expected ; 2013 ; The Journal of Clinical Pharmacology Volume 53 ; 53 >
 
       }
 
