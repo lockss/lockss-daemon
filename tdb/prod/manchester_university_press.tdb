@@ -294,17 +294,18 @@
       >
       
      param[journal_issn] = 2048-2906
+     comment[notReady] = low agreement
      
-     au < testing ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 >
-     au < testing ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 >
-     au < testing ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 >
-     au < testing ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 >
-     au < testing ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 >
-     au < testing ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 >
-     au < testing ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 >
-     au < testing ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 >
-     au < testing ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 >
-     au < testing ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 >
+     au < notReady ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 >
+     au < ready ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 >
+     au < ready ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 >
+     au < ready ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 >
+     au < ready ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 >
+     au < ready ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 >
+     au < ready ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 >
+     au < ready ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 >
+     au < notReady ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 >
+     au < notReady ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 >
      au < expected ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 >
     
     }
@@ -335,12 +336,12 @@
      au < exists ; 2004 ; Research in Education Volume 72 ; 72 >   
      au < exists ; 2005 ; Research in Education Volume 73 ; 73 >   
      au < exists ; 2005 ; Research in Education Volume 74 ; 74 >   
-     au < testing ; 2006 ; Research in Education Volume 75 ; 75 >
-     au < testing ; 2006 ; Research in Education Volume 76 ; 76 >
-     au < testing ; 2007 ; Research in Education Volume 77 ; 77 >
-     au < testing ; 2007 ; Research in Education Volume 78 ; 78 >
-     au < testing ; 2008 ; Research in Education Volume 79 ; 79 >
-     au < testing ; 2008 ; Research in Education Volume 80 ; 80 >
+     au < ready ; 2006 ; Research in Education Volume 75 ; 75 >
+     au < ready ; 2006 ; Research in Education Volume 76 ; 76 >
+     au < ready ; 2007 ; Research in Education Volume 77 ; 77 >
+     au < ready ; 2007 ; Research in Education Volume 78 ; 78 >
+     au < ready ; 2008 ; Research in Education Volume 79 ; 79 >
+     au < ready ; 2008 ; Research in Education Volume 80 ; 80 >
      au < exists ; 2009 ; Research in Education Volume 81 ; 81 >
      au < exists ; 2009 ; Research in Education Volume 82 ; 82 >
      au < exists ; 2010 ; Research in Education Volume 83 ; 83 >
