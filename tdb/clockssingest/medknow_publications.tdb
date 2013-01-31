@@ -231,7 +231,7 @@
 
     param[base_url] = http://www.saudiannals.net/
     param[journal_issn] = 0256-4947 
-    comment[0] = base_url & journal are not up yet.
+    comment[0] = base_url & journal are not up yet
 
 
   }
@@ -1793,6 +1793,9 @@
     param[base_url] = http://www.ijciis.org/
     param[journal_issn] = 2229-5151
 
+    au < exists ; exists ; 2011 ; International Journal of Critical Illness and Injury Science Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; International Journal of Critical Illness and Injury Science Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; International Journal of Critical Illness and Injury Science Volume 3 ; 2013 ; 3 >
 
   }
   
@@ -1807,6 +1810,13 @@
     param[base_url] = http://www.greenpharmacy.info/
     param[journal_issn] = 0973-8258
 
+    au < exists ; exists ; 2007 ; International Journal of Green Pharmacy Volume 1 ; 2007 ; 1 >
+    au < exists ; exists ; 2008 ; International Journal of Green Pharmacy Volume 2 ; 2008 ; 2 >
+    au < exists ; exists ; 2009 ; International Journal of Green Pharmacy Volume 3 ; 2009 ; 3 >
+    au < exists ; exists ; 2010 ; International Journal of Green Pharmacy Volume 4 ; 2010 ; 4 >
+    au < exists ; exists ; 2011 ; International Journal of Green Pharmacy Volume 5 ; 2011 ; 5 >
+    au < exists ; exists ; 2012 ; International Journal of Green Pharmacy Volume 6 ; 2012 ; 6 >
+    au < expected ; exists ; 2013 ; International Journal of Green Pharmacy Volume 7 ; 2013 ; 7 >
 
   }
 
@@ -1821,6 +1831,9 @@
     param[base_url] = http://www.ijnpnd.com/
     param[journal_issn] = 2231-0738
 
+    au < exists ; exists ; 2011 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 3 ; 2013 ; 3 >
 
   }
 
@@ -1835,12 +1848,15 @@
     param[base_url] = http://www.jpionline.org/
     param[journal_issn] = 2230-973X 
 
+    au < exists ; exists ; 2011 ; International Journal of Pharmaceutical Investigation Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; International Journal of Pharmaceutical Investigation Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; International Journal of Pharmaceutical Investigation Volume 3 ; 2013 ; 3 >
 
   }
 
   {
     title <
-      name = International Journal of Preventive Medicine;
+      name = International Journal of Preventive Medicine ;
       issn = 2008-7802 ;
       eissn = 2008-8213 ; 
       issnl = 2008-7802 
@@ -1848,6 +1864,11 @@
 
     param[base_url] = http://ijpm.mui.ac.ir/index.php/ijpm
 	comment[ijpm] = the url structure is the new version
+
+    au < exists ; exists ; 2010 ; International Journal of Preventive Medicine Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; International Journal of Preventive Medicine Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; International Journal of Preventive Medicine Volume 3 ; 2012 ; 3 >
+    au < exists ; exists ; 2013 ; International Journal of Preventive Medicine Volume 4 ; 2013 ; 4 >
 
   }
         
@@ -1861,6 +1882,13 @@
     param[base_url] = http://www.internationalshoulderjournal.org/
     param[journal_issn] = 0973-6042
 
+    au < exists ; exists ; 2007 ; International Journal of Shoulder Surgery Volume 1 ; 2007 ; 1 >
+    au < exists ; exists ; 2008 ; International Journal of Shoulder Surgery Volume 2 ; 2008 ; 2 >
+    au < exists ; exists ; 2009 ; International Journal of Shoulder Surgery Volume 3 ; 2009 ; 3 >
+    au < exists ; exists ; 2010 ; International Journal of Shoulder Surgery Volume 4 ; 2010 ; 4 >
+    au < exists ; exists ; 2011 ; International Journal of Shoulder Surgery Volume 5 ; 2011 ; 5 >
+    au < exists ; exists ; 2012 ; International Journal of Shoulder Surgery Volume 6 ; 2012 ; 6 >
+    au < expected ; exists ; 2013 ; International Journal of Shoulder Surgery Volume 7 ; 2013 ; 7 >
 
   }
 
@@ -1875,6 +1903,11 @@
     param[base_url] = http://www.ijtrichology.com/
     param[journal_issn] = 0974-7753
 
+    au < exists ; exists ; 2009 ; International Journal of Trichology Volume 1 ; 2009 ; 1 >
+    au < exists ; exists ; 2010 ; International Journal of Trichology Volume 2 ; 2010 ; 2 >
+    au < exists ; exists ; 2011 ; International Journal of Trichology Volume 3 ; 2011 ; 3 >
+    au < exists ; exists ; 2012 ; International Journal of Trichology Volume 4 ; 2012 ; 4 >
+    au < expected ; exists ; 2013 ; International Journal of Trichology Volume 5 ; 2013 ; 5 >
 
   }
 
@@ -1889,6 +1922,12 @@
     param[base_url] = http://www.ijoy.org.in/
     param[journal_issn] = 0973-6131
 
+    au < exists ; exists ; 2008 ; International Journal of Shoulder Surgery Volume 1 ; 2008 ; 1 >
+    au < exists ; exists ; 2009 ; International Journal of Shoulder Surgery Volume 2 ; 2009 ; 2 >
+    au < exists ; exists ; 2010 ; International Journal of Shoulder Surgery Volume 3 ; 2010 ; 3 >
+    au < exists ; exists ; 2011 ; International Journal of Shoulder Surgery Volume 4 ; 2011 ; 4 >
+    au < exists ; exists ; 2012 ; International Journal of Shoulder Surgery Volume 5 ; 2012 ; 5 >
+    au < exists ; exists ; 2013 ; International Journal of Shoulder Surgery Volume 6 ; 2013 ; 6 >
 
   }
 
@@ -1903,6 +1942,18 @@
     param[base_url] = http://ijnmr.mui.ac.ir/index.php/ijnmr
 	comment[ijnmr] = the url structure is the new version
 
+    au < exists ; exists ; 2002 ; Iranian Journal of Nursing and Midwifery Research Volume 7 ; 2002 ; 7 >
+    au < exists ; exists ; 2003 ; Iranian Journal of Nursing and Midwifery Research Volume 8 ; 2003 ; 8 >
+    au < exists ; exists ; 2004 ; Iranian Journal of Nursing and Midwifery Research Volume 9 ; 2004 ; 9 >
+    au < exists ; exists ; 2005 ; Iranian Journal of Nursing and Midwifery Research Volume 10 ; 2005 ; 10 >
+    au < exists ; exists ; 2006 ; Iranian Journal of Nursing and Midwifery Research Volume 11 ; 2006 ; 11 >
+    au < exists ; exists ; 2007 ; Iranian Journal of Nursing and Midwifery Research Volume 12 ; 2007 ; 12 >
+    au < exists ; exists ; 2008 ; Iranian Journal of Nursing and Midwifery Research Volume 13 ; 2008 ; 13 >
+    au < exists ; exists ; 2009 ; Iranian Journal of Nursing and Midwifery Research Volume 14 ; 2009 ; 14 >
+    au < exists ; exists ; 2010 ; Iranian Journal of Nursing and Midwifery Research Volume 15 ; 2010 ; 15 >
+    au < exists ; exists ; 2011 ; Iranian Journal of Nursing and Midwifery Research Volume 16 ; 2011 ; 16 >
+    au < exists ; exists ; 2012 ; Iranian Journal of Nursing and Midwifery Research Volume 17 ; 2012 ; 17 >
+    au < expected ; exists ; 2013 ; Iranian Journal of Nursing and Midwifery Research Volume 18 ; 2013 ; 18 >
 
   }
 
@@ -1916,6 +1967,8 @@
     param[base_url] = http://www.e-jams.org/
     param[journal_issn] = 2249-4855
 
+    au < exists ; exists ; 2012 ; Journal of Academy of Medical Sciences Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; Journal of Academy of Medical Sciences Volume 3 ; 2013 ; 3 >
 
   }
 
@@ -1930,6 +1983,10 @@
     param[base_url] = http://www.japtr.org/
     param[journal_issn] = 2231-4040
 
+    au < exists ; exists ; 2010 ; Journal of Advanced Pharmaceutical Technology & Research Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Journal of Advanced Pharmaceutical Technology & Research Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Journal of Advanced Pharmaceutical Technology & Research Volume 3 ; 2012 ; 3 >
+    au < expected ; exists ; 2013 ; Journal of Advanced Pharmaceutical Technology & Research Volume 4 ; 2013 ; 4 >
 
   }
 
@@ -1944,6 +2001,15 @@
     param[base_url] = http://www.joacp.org/
     param[journal_issn] = 0970-9185
 
+    au < exists ; exists ; 2005 ; Journal of Anaesthesiology Clinical Pharmacology Volume 21 ; 2005 ; 21 >
+    au < exists ; exists ; 2006 ; Journal of Anaesthesiology Clinical Pharmacology Volume 22 ; 2006 ; 22 >
+    au < exists ; exists ; 2007 ; Journal of Anaesthesiology Clinical Pharmacology Volume 23 ; 2007 ; 23 >
+    au < exists ; exists ; 2008 ; Journal of Anaesthesiology Clinical Pharmacology Volume 24 ; 2008 ; 24 >
+    au < exists ; exists ; 2009 ; Journal of Anaesthesiology Clinical Pharmacology Volume 25 ; 2009 ; 25 >
+    au < exists ; exists ; 2010 ; Journal of Anaesthesiology Clinical Pharmacology Volume 26 ; 2010 ; 26 >
+    au < exists ; exists ; 2011 ; Journal of Anaesthesiology Clinical Pharmacology Volume 27 ; 2011 ; 27 >
+    au < exists ; exists ; 2012 ; Journal of Anaesthesiology Clinical Pharmacology Volume 28 ; 2012 ; 28 >
+    au < exists ; exists ; 2013 ; Journal of Anaesthesiology Clinical Pharmacology Volume 29 ; 2013 ; 29 >
 
   }
                 
@@ -1956,6 +2022,7 @@
 
     param[base_url] = 
     param[journal_issn] = 0974-1224
+    comment[0] = base_url & journal are not up yet
 
 
   }
@@ -1971,6 +2038,10 @@
     param[base_url] = http://www.jaim.in/
     param[journal_issn] = 0975-9476
     
+    au < exists ; exists ; 2010 ; Journal of Ayurveda and Integrative Medicine Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Journal of Ayurveda and Integrative Medicine Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Journal of Ayurveda and Integrative Medicine Volume 3 ; 2012 ; 3 >
+    au < expected ; exists ; 2013 ; Journal of Ayurveda and Integrative Medicine Volume 4 ; 2013 ; 4 >
 
   }
 
@@ -1985,6 +2056,15 @@
     param[base_url] = http://www.cancerjournal.net/
     param[journal_issn] = 0973-1482
 
+    au < exists ; exists ; 2005 ; Journal of Cancer Research and Therapeutics Volume 1 ; 2005 ; 1 >
+    au < exists ; exists ; 2006 ; Journal of Cancer Research and Therapeutics Volume 2 ; 2006 ; 2 >
+    au < exists ; exists ; 2007 ; Journal of Cancer Research and Therapeutics Volume 3 ; 2007 ; 3 >
+    au < exists ; exists ; 2008 ; Journal of Cancer Research and Therapeutics Volume 4 ; 2008 ; 4 >
+    au < exists ; exists ; 2009 ; Journal of Cancer Research and Therapeutics Volume 5 ; 2009 ; 5 >
+    au < exists ; exists ; 2010 ; Journal of Cancer Research and Therapeutics Volume 6 ; 2010 ; 6 >
+    au < exists ; exists ; 2011 ; Journal of Cancer Research and Therapeutics Volume 7 ; 2011 ; 7 >
+    au < exists ; exists ; 2012 ; Journal of Cancer Research and Therapeutics Volume 8 ; 2012 ; 8 >
+    au < expected ; exists ; 2013 ; Journal of Cancer Research and Therapeutics Volume 9 ; 2013 ; 9 >
 
   }
 
@@ -1999,6 +2079,18 @@
     param[base_url] = http://www.carcinogenesis.com/
     param[journal_issn] = 0974-6773
 
+    au < exists ; exists ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 >
+    au < exists ; exists ; 2003 ; Journal of Carcinogenesis Volume 2 ; 2003 ; 2 >
+    au < exists ; exists ; 2004 ; Journal of Carcinogenesis Volume 3 ; 2004 ; 3 >
+    au < exists ; exists ; 2005 ; Journal of Carcinogenesis Volume 4 ; 2005 ; 4 >
+    au < exists ; exists ; 2006 ; Journal of Carcinogenesis Volume 5 ; 2006 ; 5 >
+    au < exists ; exists ; 2007 ; Journal of Carcinogenesis Volume 6 ; 2007 ; 6 >
+    au < exists ; exists ; 2008 ; Journal of Carcinogenesis Volume 7 ; 2008 ; 7 >
+    au < exists ; exists ; 2009 ; Journal of Carcinogenesis Volume 8 ; 2009 ; 8 >
+    au < exists ; exists ; 2010 ; Journal of Carcinogenesis Volume 9 ; 2010 ; 9 >
+    au < exists ; exists ; 2011 ; Journal of Carcinogenesis Volume 10 ; 2011 ; 10 >
+    au < exists ; exists ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 >
+    au < exists ; exists ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 >
 
   }
 
@@ -2013,6 +2105,10 @@
     param[base_url] = http://www.jcdronline.com/
     param[journal_issn] = 0975-3583 
 
+    au < exists ; exists ; 2010 ; Journal of Cardiovascular Disease Research Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Journal of Cardiovascular Disease Research Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Journal of Cardiovascular Disease Research Volume 3 ; 2012 ; 3 >
+    au < expected ; exists ; 2013 ; Journal of Cardiovascular Disease Research Volume 4 ; 2013 ; 4 >
 
   }
 
@@ -2027,6 +2123,9 @@
     param[base_url] = http://www.clinicalimagingscience.org/
     param[journal_issn] = 2156-7514 
 
+    au < exists ; exists ; 2011 ; Journal of Clinical Imaging Science Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; Journal of Clinical Imaging Science Volume 2 ; 2012 ; 2 >
+    au < exists ; exists ; 2013 ; Journal of Clinical Imaging Science Volume 3 ; 2013 ; 3 >
 
   }
 
@@ -2040,6 +2139,8 @@
     param[base_url] = http://www.jcnonweb.com/
     param[journal_issn] = 2249-4847
 
+    au < exists ; exists ; 2012 ; Journal of Clinical Neonatology Volume 1 ; 2012 ; 1 >
+    au < expected ; exists ; 2013 ; Journal of Clinical Neonatology Volume 2 ; 2013 ; 2 >
 
   }
 
@@ -2052,7 +2153,8 @@
 
     param[base_url] = http://www.ayurvedarheumatology.org/
     param[journal_issn] = 2231-072X
-
+    comment[base_url] = redirect to http://msd.ancientscienceoflife.org/
+    comment[0] = journal is not up yet
 
   }
 
@@ -2067,6 +2169,22 @@
     param[base_url] = http://www.jcd.org.in/
     param[journal_issn] = 0972-0707
 
+    au < exists ; exists ; 1998 ; Journal of Conservative Dentistry Volume 1 ; 1998 ; 1 >
+    au < exists ; exists ; 1999 ; Journal of Conservative Dentistry Volume 2 ; 1999 ; 2 >
+    au < exists ; exists ; 2000 ; Journal of Conservative Dentistry Volume 3 ; 2000 ; 3 >
+    au < exists ; exists ; 2001 ; Journal of Conservative Dentistry Volume 4 ; 2001 ; 4 >
+    au < exists ; exists ; 2002 ; Journal of Conservative Dentistry Volume 5 ; 2002 ; 5 >
+    au < exists ; exists ; 2003 ; Journal of Conservative Dentistry Volume 6 ; 2003 ; 6 >
+    au < exists ; exists ; 2004 ; Journal of Conservative Dentistry Volume 7 ; 2004 ; 7 >
+    au < exists ; exists ; 2005 ; Journal of Conservative Dentistry Volume 8 ; 2005 ; 8 >
+    au < exists ; exists ; 2006 ; Journal of Conservative Dentistry Volume 9 ; 2006 ; 9 >
+    au < exists ; exists ; 2007 ; Journal of Conservative Dentistry Volume 10 ; 2007 ; 10 >
+    au < exists ; exists ; 2008 ; Journal of Conservative Dentistry Volume 11 ; 2008 ; 11 >
+    au < exists ; exists ; 2009 ; Journal of Conservative Dentistry Volume 12 ; 2009 ; 12 >
+    au < exists ; exists ; 2010 ; Journal of Conservative Dentistry Volume 13 ; 2010 ; 13 >
+    au < exists ; exists ; 2011 ; Journal of Conservative Dentistry Volume 14 ; 2011 ; 14 >
+    au < exists ; exists ; 2012 ; Journal of Conservative Dentistry Volume 15 ; 2012 ; 15 >
+    au < exists ; exists ; 2013 ; Journal of Conservative Dentistry Volume 16 ; 2013 ; 16 >
 
   }
 
