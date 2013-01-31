@@ -42,8 +42,8 @@
     au < manifest ; exists ; 2006-2007 ; Archaeology International Volume 10 ; 10 ; 2006 >
     au < manifest ; exists ; 2007-2008 ; Archaeology International Volume 11 ; 11 ; 2007 >
     au < manifest ; exists ; 2008-2009 ; Archaeology International Volume 12 ; 12 ; 2008 >
-    au < released ; manifest ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 >
-    au < released ; manifest ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2011 >
+    au < crawling ; exists ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 >
+    au < crawling ; exists ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2011 >
     au < expected ; exists ; 2012-2013 ; Archaeology International Volume 16 ; 16 ; 2012 >
   
   }
@@ -102,8 +102,8 @@
     au < manifest ; exists ; 1999 ; The Journal of Conservation and Museum Studies Volume 6 ; 6 ; 1999 >
     au < manifest ; exists ; 2001 ; The Journal of Conservation and Museum Studies Volume 7 ; 7 ; 2001 >
     au < manifest ; exists ; 2002 ; The Journal of Conservation and Museum Studies Volume 8 ; 8 ; 2002 >
-    au < released ; manifest ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
-    au < released ; manifest ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
+    au < crawling ; exists ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
+    au < crawling ; exists ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
     au < expected ; exists ; 2013 ; The Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 >
     
   }
@@ -156,8 +156,8 @@
     au < manifest ; exists ; 2008 ; Opticon1826 Volume 4-5 ; 4-5 ; 2008 >
     au < manifest ; exists ; 2009 ; Opticon1826 Volume 6-7 ; 6-7 ; 2009 >
     au < manifest ; exists ; 2010 ; Opticon1826 Volume 8-9 ; 8-9 ; 2010 >
-    au < released ; manifest ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 >
-    au < released ; manifest ; 2012 ; Opticon1826 Volume 12 ; 12 ; 2012 >
+    au < crawling ; exists ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 >
+    au < crawling ; exists ; 2012 ; Opticon1826 Volume 12 ; 12 ; 2012 >
     au < expected ; exists ; 2013 ; Opticon1826 Volume 13 ; 13 ; 2013 >
     
   }
@@ -198,7 +198,7 @@
     au < manifest ; exists ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 ; 2007 >
     au < manifest ; exists ; 2009 ; Papers from the Institute of Archaeology Volume 19 ; 19 ; 2009 >
     au < manifest ; exists ; 2010 ; Papers from the Institute of Archaeology Volume 20 ; 20 ; 2010 >
-    au < released ; manifest ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
+    au < crawling ; exists ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
     au < expected ; exists ; 2012 ; Papers from the Institute of Archaeology Volume 22 ; 22 ; 2012 >
     
   }
@@ -218,9 +218,10 @@
        comment[zapped] = Released this AU under plugin that is obsolete: replaced by ClockssOJS2Plugin
        au < zapped ; down ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
     }
+    
     au < manifest ; exists ; 2009 ; Present Pasts Volume 1 ; 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Present Pasts Volume 2 ; 2 ; 2010 >
-    au < released ; manifest ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
+    au < crawling ; exists ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
     au < expected ; exists ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
     
   }
