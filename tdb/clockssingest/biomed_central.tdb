@@ -2291,7 +2291,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; BioMedical Engineering OnLine Volume 4 ; 4 >
       au < manifest ; exists ; 2006 ; BioMedical Engineering OnLine Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; BioMedical Engineering OnLine Volume 6 ; 6 >
-      au < crawling ; exists ; 2008 ; BioMedical Engineering OnLine Volume 7 ; 7 >
+      au < released ; manifest ; 2008 ; BioMedical Engineering OnLine Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; BioMedical Engineering OnLine Volume 8 ; 8 >
       au < released ; crawling ; 2010 ; BioMedical Engineering OnLine Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; BioMedical Engineering OnLine Volume 10 ; 10 >
@@ -2547,7 +2547,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Cell Division Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Cell Division Volume 2 ; 2 >
-      au < crawling ; exists ; 2008 ; Cell Division Volume 3 ; 3 >
+      au < released ; manifest ; 2008 ; Cell Division Volume 3 ; 3 >
       au < crawling ; exists ; 2009 ; Cell Division Volume 4 ; 4 >
       au < released ; crawling ; 2010 ; Cell Division Volume 5 ; 5 >
       au < testing ; exists ; 2011 ; Cell Division Volume 6 ; 6 >
