@@ -2309,7 +2309,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1751-0759
 
       au < manifest ; exists ; 2007 ; BioPsychoSocial Medicine Volume 1 ; 1 >
-      au < crawling ; exists ; 2008 ; BioPsychoSocial Medicine Volume 2 ; 2 >
+      au < released ; manifest ; 2008 ; BioPsychoSocial Medicine Volume 2 ; 2 >
       au < crawling ; exists ; 2009 ; BioPsychoSocial Medicine Volume 3 ; 3 >
       au < released ; crawling ; 2010 ; BioPsychoSocial Medicine Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
@@ -2396,7 +2396,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Cancer Cell International Volume 5 ; 5 >
       au < manifest ; exists ; 2006 ; Cancer Cell International Volume 6 ; 6 >
       au < manifest ; exists ; 2007 ; Cancer Cell International Volume 7 ; 7 >
-      au < crawling ; exists ; 2008 ; Cancer Cell International Volume 8 ; 8 >
+      au < released ; manifest ; 2008 ; Cancer Cell International Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; Cancer Cell International Volume 9 ; 9 >
       au < released ; crawling ; 2010 ; Cancer Cell International Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; Cancer Cell International Volume 11 ; 11 >
@@ -2417,7 +2417,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < manifest ; exists ; 2006 ; Carbon Balance and Management Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Carbon Balance and Management Volume 2 ; 2 >
-      au < crawling ; exists ; 2008 ; Carbon Balance and Management Volume 3 ; 3 >
+      au < released ; manifest ; 2008 ; Carbon Balance and Management Volume 3 ; 3 >
       au < crawling ; exists ; 2009 ; Carbon Balance and Management Volume 4 ; 4 >
       au < released ; crawling ; 2010 ; Carbon Balance and Management Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Carbon Balance and Management Volume 6 ; 6 >
@@ -2442,7 +2442,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Cardiovascular Diabetology Volume 4 ; 4 >
       au < manifest ; exists ; 2006 ; Cardiovascular Diabetology Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; Cardiovascular Diabetology Volume 6 ; 6 >
-      au < crawling ; exists ; 2008 ; Cardiovascular Diabetology Volume 7 ; 7 >
+      au < released ; manifest ; 2008 ; Cardiovascular Diabetology Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; Cardiovascular Diabetology Volume 8 ; 8 >
       au < released ; crawling ; 2010 ; Cardiovascular Diabetology Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Cardiovascular Diabetology Volume 10 ; 10 >
@@ -2524,7 +2524,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; Cell Communication and Signaling Volume 3 ; 3 >
       au < manifest ; exists ; 2006 ; Cell Communication and Signaling Volume 4 ; 4 >
       au < manifest ; exists ; 2007 ; Cell Communication and Signaling Volume 5 ; 5 >
-      au < crawling ; exists ; 2008 ; Cell Communication and Signaling Volume 6 ; 6 >
+      au < released ; manifest ; 2008 ; Cell Communication and Signaling Volume 6 ; 6 >
       au < crawling ; exists ; 2009 ; Cell Communication and Signaling Volume 7 ; 7 >
       au < released ; crawling ; 2010 ; Cell Communication and Signaling Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; Cell Communication and Signaling Volume 9 ; 9 >
