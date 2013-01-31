@@ -11,9 +11,18 @@
       issn = 1930-2975 
     >
 
-    plugin = needs.plugin
-    rights = openaccess
+    plugin = org.lockss.plugin.sjdm.JudgmentAndDecisionMakingPlugin
     param[base_url] = http://journal.sjdm.org/
+    rights = openaccess
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < testing ; 2006 ; Judgment and Decision Making Volume 1 ; 1 >
+    au < testing ; 2007 ; Judgment and Decision Making Volume 2 ; 2 >
+    au < testing ; 2008 ; Judgment and Decision Making Volume 3 ; 3 >
+    au < testing ; 2009 ; Judgment and Decision Making Volume 4 ; 4 >
+    au < testing ; 2010 ; Judgment and Decision Making Volume 5 ; 5 >
+    au < testing ; 2011 ; Judgment and Decision Making Volume 6 ; 6 >
+    au < testing ; 2012 ; Judgment and Decision Making Volume 7 ; 7 >
 
   }
 
