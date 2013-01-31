@@ -2068,6 +2068,8 @@
       param[base_url] = http://www.anzhealthpolicy.com/
       param[journal_issn] = 1743-8462
 
+      comment[0] = Journal stopped publishing with BioMedCentral after 2010.
+
       au < released ; 2004 ; Australia and New Zealand Health Policy Volume 1 ; 1 >
       au < released ; 2005 ; Australia and New Zealand Health Policy Volume 2 ; 2 >
       au < released ; 2006 ; Australia and New Zealand Health Policy Volume 3 ; 3 >
@@ -2075,7 +2077,7 @@
       au < released ; 2008 ; Australia and New Zealand Health Policy Volume 5 ; 5 >
       au < released ; 2009 ; Australia and New Zealand Health Policy Volume 6 ; 6 >
       au < released ; 2010 ; Australia and New Zealand Health Policy Volume 7 ; 7 >
-      au < released ; 2011 ; Australia and New Zealand Health Policy Volume 8 ; 8 >
+      au < down ; 2011 ; Australia and New Zealand Health Policy Volume 8 ; 8 >
 
     }
 
@@ -2989,6 +2991,8 @@
 
       param[base_url] = http://www.dynamic-med.com/
       param[journal_issn] = 1476-5918
+      
+      comment[0] = This journal stopped publishing through BioMedCentral after 2009.
 
       au < released ; 2002 ; Dynamic Medicine Volume 1 ; 1 >
       au < released ; 2003 ; Dynamic Medicine Volume 2 ; 2 >
@@ -2998,8 +3002,8 @@
       au < released ; 2007 ; Dynamic Medicine Volume 6 ; 6 >
       au < released ; 2008 ; Dynamic Medicine Volume 7 ; 7 >
       au < released ; 2009 ; Dynamic Medicine Volume 8 ; 8 >
-      au < released ; 2010 ; Dynamic Medicine Volume 9 ; 9 >
-      au < released ; 2011 ; Dynamic Medicine Volume 10 ; 10 >
+      au < down ; 2010 ; Dynamic Medicine Volume 9 ; 9 >
+      au < down ; 2011 ; Dynamic Medicine Volume 10 ; 10 >
 
     }
 
@@ -5921,8 +5925,10 @@
       au < manifest ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 >
       au < doesNotExist ; 0 ; Tobacco Induced Diseases Volume 6 ; 6 >
       au < doesNotExist ; 0 ; Tobacco Induced Diseases Volume 7 ; 7 >
-      au < manifest ; 2012 ; Tobacco Induced Diseases Volume 8 ; 8 >
-      au < expected ; 2013 ; Tobacco Induced Diseases Volume 9 ; 9 >
+      au < manifest ; 2010 ; Tobacco Induced Diseases Volume 8 ; 8 >
+      au < exists ; 2011 ; Tobacco Induced Diseases Volume 9 ; 9 >
+      au < exists ; 2012 ; Tobacco Induced Diseases Volume 10 ; 10 >
+      au < exists ; 2013 ; Tobacco Induced Diseases Volume 11 ; 11 >
 
     }
 
