@@ -3111,11 +3111,11 @@
       param[base_url] = http://www.epigeneticsandchromatin.com/
       param[journal_issn] = 1756-8935
 
-      au < testing ; 2008 ; Epigenetics & Chromatin Volume 1 ; 1 >
-      au < testing ; 2009 ; Epigenetics & Chromatin Volume 2 ; 2 >
-      au < testing ; 2010 ; Epigenetics & Chromatin Volume 3 ; 3 >
-      au < testing ; 2011 ; Epigenetics & Chromatin Volume 4 ; 4 >
-      au < testing ; 2012 ; Epigenetics & Chromatin Volume 5 ; 5 >
+      au < ready ; 2008 ; Epigenetics & Chromatin Volume 1 ; 1 >
+      au < ready ; 2009 ; Epigenetics & Chromatin Volume 2 ; 2 >
+      au < ready ; 2010 ; Epigenetics & Chromatin Volume 3 ; 3 >
+      au < ready ; 2011 ; Epigenetics & Chromatin Volume 4 ; 4 >
+      au < ready ; 2012 ; Epigenetics & Chromatin Volume 5 ; 5 >
       au < expected ; 2013 ; Epigenetics & Chromatin Volume 6 ; 6 >
 
     }
@@ -3146,10 +3146,10 @@
       param[base_url] = http://www.eurjmedres.com/
       param[journal_issn] = 2047-783X
 
-      au < testing ; 2009 ; European Journal of Medical Research Volume 14 ; 14 >
-      au < testing ; 2010 ; European Journal of Medical Research Volume 15 ; 15 >
-      au < testing ; 2011 ; European Journal of Medical Research Volume 16 ; 16 >
-      au < testing ; 2012 ; European Journal of Medical Research Volume 17 ; 17 >
+      au < ready ; 2009 ; European Journal of Medical Research Volume 14 ; 14 >
+      au < ready ; 2010 ; European Journal of Medical Research Volume 15 ; 15 >
+      au < ready ; 2011 ; European Journal of Medical Research Volume 16 ; 16 >
+      au < ready ; 2012 ; European Journal of Medical Research Volume 17 ; 17 >
       au < expected ; 2013 ; European Journal of Medical Research Volume 18 ; 18 >
 
     }
