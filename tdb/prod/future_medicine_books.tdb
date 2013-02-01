@@ -1,17 +1,16 @@
 {
   publisher <
-    name = Future Science ;
-    info[tester] = 0
+    name = Future Medicine 
   >
 
   plugin = needs.plugin
-  param[base_url] = http://www.future-science.com/
+  param[base_url] = http://www.futuremedicine.com/
   implicit < status ; isbn ; eisbn ; name ; param[isbn] >
 
   {
 
     title <
-      name = Future Science Books
+      name = Future Medicine Books
     >
 
     au < exists ; 978-1-78084-100-7 ; 978-1-78084-001-7 ; Human Papillomavirus Vaccines ; 978-1-78084-100-7 >
@@ -42,9 +41,9 @@
     au < exists ; 978-1-78084-121-2 ; 978-1-78084-043-7 ; Advances in Asthma Management ; 978-1-78084-121-2 >
     au < exists ; 978-1-78084-139-7 ; 978-1-78084-079-6 ; Clinical Applications of Renin–Angiotensin System Inhibitors ; 978-1-78084-139-7 >
     au < exists ; 978-1-78084-126-7 ; 978-1-78084-053-6 ; Immunotherapeutic Agents for SLE ; 978-1-78084-126-7 >
-    au < exists ; 978-1-78084-137-3 ; 978-1-78084-075-8 ; Analgesics for Cancer Parn ; 978-1-78084-137-3 >
-    au < exists ; 978-1-78084-133-5 ; 978-1-78084-067-3 ; Triptans for Miqraine ; 978-1-78084-137-3 >
-    au < exists ; 978-1-78084-130-4 ; 978-1-78084-061-1 ; Emulsion-based Vacctne Adjuvants ; 978-1-78084-130-4 >
+    au < exists ; 978-1-78084-137-3 ; 978-1-78084-075-8 ; Analgesics for Cancer Pain ; 978-1-78084-137-3 >
+    au < exists ; 978-1-78084-133-5 ; 978-1-78084-067-3 ; Triptans for Migraine ; 978-1-78084-133-5 >
+    au < exists ; 978-1-78084-130-4 ; 978-1-78084-061-1 ; Emulsion-based Vaccine Adjuvants ; 978-1-78084-130-4 >
     au < exists ; 978-1-78084-122-9 ; 978-1-78084-045-1 ; Advances in the Treatment of B-Cell Chronic Lymphocytic Leukemia ; 978-1-78084-122-9 >
     au < exists ; 978-1-78084-140-3 ; 978-1-78084-081-9 ; Advances  in Ovarian Cancer Management ; 978-1-78084-140-3 >
     au < exists ; 978-1-78084-124-3 ; 978-1-78084-049-9 ; Emerging Oral Medications for Multiple Sclerosis ; 978-1-78084-124-3 >
