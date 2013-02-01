@@ -3107,6 +3107,7 @@
 
     param[base_url] = http://www.mlcdentists.in/
     param[journal_issn] = 0976-2531
+    comment[0] = base_url & journal are not up yet
 
 
   }
@@ -3122,6 +3123,12 @@
     param[base_url] = http://www.mlcd.in/
     param[journal_issn] = 0974-1234
 
+    au < exists ; exists ; 2008 ; Medical Law Cases - For Doctors Volume 1 ; 2008 ; 1 >
+    au < exists ; exists ; 2009 ; Medical Law Cases - For Doctors Volume 2 ; 2009 ; 2 >
+    au < exists ; exists ; 2010 ; Medical Law Cases - For Doctors Volume 3 ; 2010 ; 3 >
+    au < exists ; exists ; 2011 ; Medical Law Cases - For Doctors Volume 4 ; 2011 ; 4 >
+    au < exists ; exists ; 2012 ; Medical Law Cases - For Doctors Volume 5 ; 2012 ; 5 >
+    au < expected ; exists ; 2013 ; Medical Law Cases - For Doctors Volume 6 ; 2013 ; 6 >
 
   }
 
@@ -3136,6 +3143,17 @@
     param[base_url] = http://www.msmonographs.org/
     param[journal_issn] = 0973-1229
 
+    au < exists ; exists ; 2003 ; Mens Sana Monographs Volume 1 ; 2003 ; 1 >
+    au < exists ; exists ; 2004 ; Mens Sana Monographs Volume 2 ; 2004 ; 2 >
+    au < exists ; exists ; 2005 ; Mens Sana Monographs Volume 3 ; 2005 ; 3 >
+    au < exists ; exists ; 2006 ; Mens Sana Monographs Volume 4 ; 2006 ; 4 >
+    au < exists ; exists ; 2007 ; Mens Sana Monographs Volume 5 ; 2007 ; 5 >
+    au < exists ; exists ; 2008 ; Mens Sana Monographs Volume 6 ; 2008 ; 6 >
+    au < exists ; exists ; 2009 ; Mens Sana Monographs Volume 7 ; 2009 ; 7 >
+    au < exists ; exists ; 2010 ; Mens Sana Monographs Volume 8 ; 2010 ; 8 >
+    au < exists ; exists ; 2011 ; Mens Sana Monographs Volume 9 ; 2011 ; 9 >
+    au < exists ; exists ; 2012 ; Mens Sana Monographs Volume 10 ; 2012 ; 10 >
+    au < expected ; exists ; 2013 ; Mens Sana Monographs Volume 11 ; 2013 ; 11 >
 
   }
 
@@ -3150,6 +3168,13 @@
     param[base_url] = http://www.meajo.org/
     param[journal_issn] = 0974-9233
 
+    au < exists ; exists ; 2007 ; Middle East African Journal of Ophthalmology Volume 14 ; 2007 ; 14 >
+    au < exists ; exists ; 2008 ; Middle East African Journal of Ophthalmology Volume 15 ; 2008 ; 15 >
+    au < exists ; exists ; 2009 ; Middle East African Journal of Ophthalmology Volume 16 ; 2009 ; 16 >
+    au < exists ; exists ; 2010 ; Middle East African Journal of Ophthalmology Volume 17 ; 2010 ; 17 >
+    au < exists ; exists ; 2011 ; Middle East African Journal of Ophthalmology Volume 18 ; 2011 ; 18 >
+    au < exists ; exists ; 2012 ; Middle East African Journal of Ophthalmology Volume 19 ; 2012 ; 19 >
+    au < exists ; exists ; 2013 ; Middle East African Journal of Ophthalmology Volume 20 ; 2013 ; 20 >
 
   }
 
@@ -3164,6 +3189,10 @@
     param[base_url] = http://www.njms.in/
     param[journal_issn] = 0975-5950
 
+    au < exists ; exists ; 2010 ; National Journal of Maxillofacial Surgery Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; National Journal of Maxillofacial Surgery Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; National Journal of Maxillofacial Surgery Volume 3 ; 2012 ; 3 >
+    au < expected ; exists ; 2013 ; National Journal of Maxillofacial Surgery Volume 4 ; 2013 ; 4 >
 
   }
 
@@ -3178,6 +3207,27 @@
     param[base_url] = http://www.neurologyindia.com/
     param[journal_issn] = 0028-3886
 
+    au < exists ; exists ; 1993 ; Neurology India Volume 41 ; 1993 ; 41 >
+    au < doesNotExist ; doesNotExist ; 1994 ; Neurology India Volume 42 ; 0 ; 0 >
+    au < exists ; exists ; 1995 ; Neurology India Volume 43 ; 1995 ; 43 >
+    au < exists ; exists ; 1996 ; Neurology India Volume 44 ; 1996 ; 44 >
+    au < exists ; exists ; 1997 ; Neurology India Volume 45 ; 1997 ; 45 >
+    au < exists ; exists ; 1998 ; Neurology India Volume 46 ; 1998 ; 46 >
+    au < exists ; exists ; 1999 ; Neurology India Volume 47 ; 1999 ; 47 >
+    au < exists ; exists ; 2000 ; Neurology India Volume 48 ; 2000 ; 48 >
+    au < exists ; exists ; 2001 ; Neurology India Volume 49 ; 2001 ; 49 >
+    au < exists ; exists ; 2002 ; Neurology India Volume 50 ; 2002 ; 50 >
+    au < exists ; exists ; 2004 ; Neurology India Volume 51 ; 2003 ; 51 >
+    au < exists ; exists ; 2004 ; Neurology India Volume 52 ; 2004 ; 52 >
+    au < exists ; exists ; 2005 ; Neurology India Volume 53 ; 2005 ; 53 >
+    au < exists ; exists ; 2006 ; Neurology India Volume 54 ; 2006 ; 54 >
+    au < exists ; exists ; 2007 ; Neurology India Volume 55 ; 2007 ; 55 >
+    au < exists ; exists ; 2008 ; Neurology India Volume 56 ; 2008 ; 56 >
+    au < exists ; exists ; 2009 ; Neurology India Volume 57 ; 2009 ; 57 >
+    au < exists ; exists ; 2010 ; Neurology India Volume 58 ; 2010 ; 58 >
+    au < exists ; exists ; 2011 ; Neurology India Volume 59 ; 2011 ; 59 >
+    au < exists ; exists ; 2012 ; Neurology India Volume 60 ; 2012 ; 60 >
+    au < expected ; exists ; 2013 ; Neurology India Volume 61 ; 2013 ; 61 >
 
   }
 
@@ -3192,6 +3242,15 @@
     param[base_url] = http://www.njcponline.com/
     param[journal_issn] = 1119-3077
 
+    au < exists ; exists ; 2005 ; Nigerian Journal of Clinical Practice Volume 8 ; 2005 ; 8 >
+    au < exists ; exists ; 2006 ; Nigerian Journal of Clinical Practice Volume 9 ; 2006 ; 9 >
+    au < exists ; exists ; 2007 ; Nigerian Journal of Clinical Practice Volume 10 ; 2007 ; 10 >
+    au < exists ; exists ; 2008 ; Nigerian Journal of Clinical Practice Volume 11 ; 2008 ; 11 >
+    au < exists ; exists ; 2009 ; Nigerian Journal of Clinical Practice Volume 12 ; 2009 ; 12 >
+    au < exists ; exists ; 2010 ; Nigerian Journal of Clinical Practice Volume 13 ; 2010 ; 13 >
+    au < exists ; exists ; 2011 ; Nigerian Journal of Clinical Practice Volume 14 ; 2011 ; 14 >
+    au < exists ; exists ; 2012 ; Nigerian Journal of Clinical Practice Volume 15 ; 2012 ; 15 >
+    au < expected ; exists ; 2013 ; Nigerian Journal of Clinical Practice Volume 16 ; 2013 ; 16 >
 
   }
 
@@ -3205,6 +3264,9 @@
     param[base_url] = http://www.nigerianjsurg.com
     param[journal_issn] = 1117-6806
 
+    au < exists ; exists ; 2011 ; Nigerian Journal of Surgery Volume 17 ; 2011 ; 17 >
+    au < exists ; exists ; 2012 ; Nigerian Journal of Surgery Volume 18 ; 2012 ; 18 >
+    au < expected ; exists ; 2013 ; Nigerian Journal of Surgery Volume 19 ; 2013 ; 19 >
 
   }
 
@@ -3219,6 +3281,11 @@
     param[base_url] = http://www.nigeriamedj.com/
     param[journal_issn] = 0300-1652
 
+    au < exists ; exists ; 2009 ; Nigerian Medical Journal Volume 50 ; 2009 ; 50 >
+    au < exists ; exists ; 2010 ; Nigerian Medical Journal Volume 51 ; 2010 ; 51 >
+    au < exists ; exists ; 2011 ; Nigerian Medical Journal Volume 52 ; 2011 ; 52 >
+    au < exists ; exists ; 2012 ; Nigerian Medical Journal Volume 53 ; 2012 ; 53 >
+    au < expected ; exists ; 2013 ; Nigerian Medical Journal Volume 54 ; 2013 ; 54 >
 
   }
 
@@ -3233,6 +3300,21 @@
     param[base_url] = http://www.noiseandhealth.org/
     param[journal_issn] = 1463-1741
 
+    au < exists ; exists ; 1999 ; Noise and Health Volume 1 ; 1999 ; 1 >
+    au < exists ; exists ; 2000 ; Noise and Health Volume 2 ; 2000 ; 2 >
+    au < exists ; exists ; 2001 ; Noise and Health Volume 3 ; 2001 ; 3 >
+    au < exists ; exists ; 2002 ; Noise and Health Volume 4 ; 2002 ; 4 >
+    au < exists ; exists ; 2004 ; Noise and Health Volume 5 ; 2003 ; 5 >
+    au < exists ; exists ; 2004 ; Noise and Health Volume 6 ; 2004 ; 6 >
+    au < exists ; exists ; 2005 ; Noise and Health Volume 7 ; 2005 ; 7 >
+    au < exists ; exists ; 2006 ; Noise and Health Volume 8 ; 2006 ; 8 >
+    au < exists ; exists ; 2007 ; Noise and Health Volume 9 ; 2007 ; 9 >
+    au < exists ; exists ; 2008 ; Noise and Health Volume 10 ; 2008 ; 10 >
+    au < exists ; exists ; 2009 ; Noise and Health Volume 11 ; 2009 ; 11 >
+    au < exists ; exists ; 2010 ; Noise and Health Volume 12 ; 2010 ; 12 >
+    au < exists ; exists ; 2011 ; Noise and Health Volume 13 ; 2011 ; 13 >
+    au < exists ; exists ; 2012 ; Noise and Health Volume 14 ; 2012 ; 14 >
+    au < expected ; exists ; 2013 ; Noise and Health Volume 15 ; 2013 ; 15 >
 
   }
 
@@ -3247,6 +3329,12 @@
     param[base_url] = http://ojoonline.org/
     param[journal_issn] = 0974-620X
 
+    au < exists ; exists ; 2008 ; Oman Journal of Ophthalmology Volume 1 ; 2008 ; 1 >
+    au < exists ; exists ; 2009 ; Oman Journal of Ophthalmology Volume 2 ; 2009 ; 2 >
+    au < exists ; exists ; 2010 ; Oman Journal of Ophthalmology Volume 3 ; 2010 ; 3 >
+    au < exists ; exists ; 2011 ; Oman Journal of Ophthalmology Volume 4 ; 2011 ; 4 >
+    au < exists ; exists ; 2012 ; Oman Journal of Ophthalmology Volume 5 ; 2012 ; 5 >
+    au < expected ; exists ; 2013 ; Oman Journal of Ophthalmology Volume 6 ; 2013 ; 6 >
 
   }
 
@@ -3261,6 +3349,10 @@
     param[base_url] = http://www.picronline.org/
     param[journal_issn] = 2229-3485
 
+    au < exists ; exists ; 2010 ; Perspectives in Clinical Research Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Perspectives in Clinical Research Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Perspectives in Clinical Research Volume 3 ; 2012 ; 3 >
+    au < exists ; exists ; 2013 ; Perspectives in Clinical Research Volume 4 ; 2013 ; 4 >
 
   }
 
@@ -3275,6 +3367,10 @@
     param[base_url] = http://www.phmethods.org/
     param[journal_issn] = 2229-4708
 
+    au < exists ; exists ; 2010 ; Pharmaceutical Methods Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Pharmaceutical Methods Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Pharmaceutical Methods Volume 3 ; 2012 ; 3 >
+    au < expected ; exists ; 2013 ; Pharmaceutical Methods Volume 4 ; 2013 ; 4 >
 
   }
 
@@ -3289,6 +3385,15 @@
     param[base_url] = http://www.phcog.com/
     param[journal_issn] = 0973-1296
 
+    au < exists ; exists ; 2005 ; Pharmacognosy Magazine Volume 1 ; 2005 ; 1 >
+    au < exists ; exists ; 2006 ; Pharmacognosy Magazine Volume 2 ; 2006 ; 2 >
+    au < exists ; exists ; 2007 ; Pharmacognosy Magazine Volume 3 ; 2007 ; 3 >
+    au < exists ; exists ; 2008 ; Pharmacognosy Magazine Volume 4 ; 2008 ; 4 >
+    au < exists ; exists ; 2009 ; Pharmacognosy Magazine Volume 5 ; 2009 ; 5 >
+    au < exists ; exists ; 2010 ; Pharmacognosy Magazine Volume 6 ; 2010 ; 6 >
+    au < exists ; exists ; 2011 ; Pharmacognosy Magazine Volume 7 ; 2011 ; 7 >
+    au < exists ; exists ; 2012 ; Pharmacognosy Magazine Volume 8 ; 2012 ; 8 >
+    au < expected ; exists ; 2013 ; Pharmacognosy Magazine Volume 9 ; 2013 ; 9 >
 
   }
 
@@ -3303,6 +3408,11 @@
     param[base_url] = http://www.phcogres.com/
     param[journal_issn] = 0976-4836
 
+    au < exists ; exists ; 2009 ; Pharmacognosy Research Volume 1 ; 2009 ; 1 >
+    au < exists ; exists ; 2010 ; Pharmacognosy Research Volume 2 ; 2010 ; 2 >
+    au < exists ; exists ; 2011 ; Pharmacognosy Research Volume 3 ; 2011 ; 3 >
+    au < exists ; exists ; 2012 ; Pharmacognosy Research Volume 4 ; 2012 ; 4 >
+    au < exists ; exists ; 2013 ; Pharmacognosy Research Volume 5 ; 2013 ; 5 >
 
   }  
 
@@ -3317,6 +3427,13 @@
     param[base_url] = http://www.phcogrev.com/
     param[journal_issn] = 0973-7847
 
+    au < exists ; exists ; 2007 ; Pharmacognosy Reviews Volume 1 ; 2007 ; 1 >
+    au < exists ; exists ; 2008 ; Pharmacognosy Reviews Volume 2 ; 2008 ; 2 >
+    au < exists ; exists ; 2009 ; Pharmacognosy Reviews Volume 3 ; 2009 ; 3 >
+    au < exists ; exists ; 2010 ; Pharmacognosy Reviews Volume 4 ; 2010 ; 4 >
+    au < exists ; exists ; 2011 ; Pharmacognosy Reviews Volume 5 ; 2011 ; 5 >
+    au < exists ; exists ; 2012 ; Pharmacognosy Reviews Volume 6 ; 2012 ; 6 >
+    au < expected ; exists ; 2013 ; Pharmacognosy Reviews Volume 7 ; 2013 ; 7 >
 
   }  
 
@@ -3331,6 +3448,9 @@
     param[base_url] = http://www.pulmonarycirculation.org/
     param[journal_issn] = 2045-8932
 
+    au < exists ; exists ; 2011 ; Pulmonary Circulation Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; Pulmonary Circulation Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; Pulmonary Circulation Volume 3 ; 2013 ; 3 >
 
   }  
         
@@ -3345,6 +3465,11 @@
     param[base_url] = http://www.pvrireview.org/
     param[journal_issn] = 0974-6013
 
+    au < exists ; exists ; 2009 ; PVRI Review Volume 1 ; 2009 ; 1 >
+    au < exists ; exists ; 2010 ; PVRI Review Volume 2 ; 2010 ; 2 >
+    au < exists ; exists ; 2011 ; PVRI Review Volume 3 ; 2011 ; 3 >
+    au < exists ; exists ; 2012 ; PVRI Review Volume 4 ; 2012 ; 4 >
+    au < expected ; exists ; 2013 ; PVRI Review Volume 5 ; 2013 ; 5 >
 
   }
         
@@ -3358,6 +3483,8 @@
     param[base_url] = http://www.rpe.org.in/
     param[journal_issn] = 0972-0464
 
+    au < exists ; exists ; 2010 ; Radiation Protection and Environment Volume 33 ; 2010 ; 33 >
+    au < exists ; exists ; 2011 ; Radiation Protection and Environment Volume 34 ; 2011 ; 34 >
 
   }
         
@@ -3372,6 +3499,7 @@
     param[base_url] = http://www.rljae.org/
     param[journal_issn] = 2013-8393
 
+    au < exists ; exists ; 2011 ; Ramon Llull Journal of Applied Ethics Volume 1 ; 2011 ; 1 >
 
   }  
         
@@ -3386,6 +3514,15 @@
     param[base_url] = http://rps.mui.ac.ir/index.php/jrps
  	comment[jrps] = the url structure is the new version
 
+    au < exists ; exists ; 2006 ; Research in Pharmaceutical Sciences Volume 1 ; 2006 ; 1 >
+    au < exists ; exists ; 2007 ; Research in Pharmaceutical Sciences Volume 2 ; 2007 ; 2 >
+    au < exists ; exists ; 2008 ; Research in Pharmaceutical Sciences Volume 3 ; 2008 ; 3 >
+    au < exists ; exists ; 2009 ; Research in Pharmaceutical Sciences Volume 4 ; 2009 ; 4 >
+    au < exists ; exists ; 2010 ; Research in Pharmaceutical Sciences Volume 5 ; 2010 ; 5 >
+    au < exists ; exists ; 2011 ; Research in Pharmaceutical Sciences Volume 6 ; 2011 ; 6 >
+    au < exists ; exists ; 2012 ; Research in Pharmaceutical Sciences Volume 7 ; 2012 ; 7 >
+    au < exists ; exists ; 2013 ; Research in Pharmaceutical Sciences Volume 8 ; 2013 ; 8 >
+
   }  
     
   {
@@ -3399,6 +3536,13 @@
     param[base_url] = http://www.saudija.org/
     param[journal_issn] = 1658-354X
 
+    au < exists ; exists ; 2007 ; Saudi Journal of Anaesthesia Volume 1 ; 2007 ; 1 >
+    au < exists ; exists ; 2008 ; Saudi Journal of Anaesthesia Volume 2 ; 2008 ; 2 >
+    au < exists ; exists ; 2009 ; Saudi Journal of Anaesthesia Volume 3 ; 2009 ; 3 >
+    au < exists ; exists ; 2010 ; Saudi Journal of Anaesthesia Volume 4 ; 2010 ; 4 >
+    au < exists ; exists ; 2011 ; Saudi Journal of Anaesthesia Volume 5 ; 2011 ; 5 >
+    au < exists ; exists ; 2012 ; Saudi Journal of Anaesthesia Volume 6 ; 2012 ; 6 >
+    au < expected ; exists ; 2013 ; Saudi Journal of Anaesthesia Volume 7 ; 2013 ; 7 >
 
   }
     
@@ -3413,6 +3557,25 @@
     param[base_url] = http://www.saudijgastro.com/
     param[journal_issn] = 1319-3767
 
+    au < exists ; exists ; 1995 ; Saudi Journal of Gastroenterology Volume 1 ; 1995 ; 1 >
+    au < exists ; exists ; 1996 ; Saudi Journal of Gastroenterology Volume 2 ; 1996 ; 2 >
+    au < exists ; exists ; 1997 ; Saudi Journal of Gastroenterology Volume 3 ; 1997 ; 3 >
+    au < exists ; exists ; 1998 ; Saudi Journal of Gastroenterology Volume 4 ; 1998 ; 4 >
+    au < exists ; exists ; 1999 ; Saudi Journal of Gastroenterology Volume 5 ; 1999 ; 5 >
+    au < exists ; exists ; 2000 ; Saudi Journal of Gastroenterology Volume 6 ; 2000 ; 6 >
+    au < exists ; exists ; 2001 ; Saudi Journal of Gastroenterology Volume 7 ; 2001 ; 7 >
+    au < exists ; exists ; 2002 ; Saudi Journal of Gastroenterology Volume 8 ; 2002 ; 8 >
+    au < exists ; exists ; 2004 ; Saudi Journal of Gastroenterology Volume 9 ; 2003 ; 9 >
+    au < exists ; exists ; 2004 ; Saudi Journal of Gastroenterology Volume 10 ; 2004 ; 10 >
+    au < exists ; exists ; 2005 ; Saudi Journal of Gastroenterology Volume 11 ; 2005 ; 11 >
+    au < exists ; exists ; 2006 ; Saudi Journal of Gastroenterology Volume 12 ; 2006 ; 12 >
+    au < exists ; exists ; 2007 ; Saudi Journal of Gastroenterology Volume 13 ; 2007 ; 13 >
+    au < exists ; exists ; 2008 ; Saudi Journal of Gastroenterology Volume 14 ; 2008 ; 14 >
+    au < exists ; exists ; 2009 ; Saudi Journal of Gastroenterology Volume 15 ; 2009 ; 15 >
+    au < exists ; exists ; 2010 ; Saudi Journal of Gastroenterology Volume 16 ; 2010 ; 16 >
+    au < exists ; exists ; 2011 ; Saudi Journal of Gastroenterology Volume 17 ; 2011 ; 17 >
+    au < exists ; exists ; 2012 ; Saudi Journal of Gastroenterology Volume 18 ; 2012 ; 18 >
+    au < exists ; exists ; 2013 ; Saudi Journal of Gastroenterology Volume 19 ; 2013 ; 19 >
 
   }
     
@@ -3422,8 +3585,9 @@
       issn =
    >
 
-    param[base_url] = 
+    param[base_url] = http://www.saudioj.org/
 	comment[soj] = the website info for this journal is incorrect in Medknow Publications website.
+    comment[0] = base_url & journal are not up yet
 
 
   }
@@ -3431,14 +3595,15 @@
   {
     title <
       name = Scholars' Research Journal ;
-      issn = ;
+      issn = 2249-5975;
       eissn = 0976-8459 ;
-      issnl = 0976-8459
+      issnl = 2249-5975
    >
 
     param[base_url] = http://www.scholarsjournal.in/
-    param[journal_issn] =
+    param[journal_issn] = 2249-5975
 
+    au < exists ; exists ; 2011 ; Scholars' Research Journal Volume 1 ; 2011 ; 1 >
 
   }
   
@@ -3453,6 +3618,10 @@
     param[base_url] = http://www.surgicalneurologyint.com/
     param[journal_issn] = 2229-5097 
 
+    au < exists ; exists ; 2010 ; Surgical Neurology International Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Surgical Neurology International Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Surgical Neurology International Volume 3 ; 2012 ; 3 >
+    au < exists ; exists ; 2013 ; Surgical Neurology International Volume 4 ; 2013 ; 4 >
 
   }
   
@@ -3467,6 +3636,8 @@
     param[base_url] = http://www.sysrevpharm.org/
     param[journal_issn] = 0975-8453 
 
+    au < exists ; exists ; 2010 ; Systematic Reviews in Pharmacy Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Systematic Reviews in Pharmacy Volume 2 ; 2011 ; 2 >
 
   }
   
@@ -3481,6 +3652,16 @@
     param[base_url] = http://www.toxicologyinternational.com/
     param[journal_issn] = 0971-6580
 
+    au < exists ; exists ; 2004 ; Toxicology International Volume 11 ; 2004 ; 11 >
+    au < exists ; exists ; 2005 ; Toxicology International Volume 12 ; 2005 ; 12 >
+    au < exists ; exists ; 2006 ; Toxicology International Volume 13 ; 2006 ; 13 >
+    au < exists ; exists ; 2007 ; Toxicology International Volume 14 ; 2007 ; 14 >
+    au < exists ; exists ; 2008 ; Toxicology International Volume 15 ; 2008 ; 15 >
+    au < exists ; exists ; 2009 ; Toxicology International Volume 16 ; 2009 ; 16 >
+    au < exists ; exists ; 2010 ; Toxicology International Volume 17 ; 2010 ; 17 >
+    au < exists ; exists ; 2011 ; Toxicology International Volume 18 ; 2011 ; 18 >
+    au < exists ; exists ; 2012 ; Toxicology International Volume 19 ; 2012 ; 19 >
+    au < expected ; exists ; 2013 ; Toxicology International Volume 20 ; 2013 ; 20 >
 
   }
   
@@ -3495,6 +3676,9 @@
     param[base_url] = http://www.tropicalparasitology.org/
     param[journal_issn] = 2229-5070
 
+    au < exists ; exists ; 2011 ; Tropical Parasitology Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; Tropical Parasitology Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; Tropical Parasitology Volume 3 ; 2013 ; 3 >
 
   }
             
@@ -3509,6 +3693,11 @@
     param[base_url] = http://www.urologyannals.com/
     param[journal_issn] = 0974-7796
 
+    au < exists ; exists ; 2009 ; Urology Annals Volume 1 ; 2009 ; 1 >
+    au < exists ; exists ; 2010 ; Urology Annals Volume 2 ; 2010 ; 2 >
+    au < exists ; exists ; 2011 ; Urology Annals Volume 3 ; 2011 ; 3 >
+    au < exists ; exists ; 2012 ; Urology Annals Volume 4 ; 2012 ; 4 >
+    au < expected ; exists ; 2013 ; Urology Annals Volume 5 ; 2013 ; 5 >
 
   }
             
@@ -3523,6 +3712,15 @@
     param[base_url] = http://www.wjnm.org/
     param[journal_issn] = 1450-1147
 
+    au < exists ; exists ; 2005 ; World Journal of Nuclear Medicine Volume 4 ; 2005 ; 4 >
+    au < exists ; exists ; 2006 ; World Journal of Nuclear Medicine Volume 5 ; 2006 ; 5 >
+    au < exists ; exists ; 2007 ; World Journal of Nuclear Medicine Volume 6 ; 2007 ; 6 >
+    au < exists ; exists ; 2008 ; World Journal of Nuclear Medicine Volume 7 ; 2008 ; 7 >
+    au < exists ; exists ; 2009 ; World Journal of Nuclear Medicine Volume 8 ; 2009 ; 8 >
+    au < exists ; exists ; 2010 ; World Journal of Nuclear Medicine Volume 9 ; 2010 ; 9 >
+    au < exists ; exists ; 2011 ; World Journal of Nuclear Medicine Volume 10 ; 2011 ; 10 >
+    au < exists ; exists ; 2012 ; World Journal of Nuclear Medicine Volume 11 ; 2012 ; 11 >
+    au < expected ; exists ; 2013 ; World Journal of Nuclear Medicine Volume 12 ; 2013 ; 12 >
 
   }
   
@@ -3537,6 +3735,18 @@
     param[base_url] = http://www.butrousfoundation.com/ysjournal/
     param[journal_issn] = 0974-6102
 
+    au < exists ; exists ; 2006 ; Young Scientists Journal Volume 1 ; 2006 ; 1 >
+    au < exists ; exists ; 2007 ; Young Scientists Journal Volume 2 ; 2007 ; 2 >
+    au < exists ; exists ; 2007 ; Young Scientists Journal Volume 3 ; 2007 ; 3 >
+    au < exists ; exists ; 2008 ; Young Scientists Journal Volume 4 ; 2008 ; 4 >
+    au < exists ; exists ; 2008 ; Young Scientists Journal Volume 5 ; 2008 ; 5 >
+    au < exists ; exists ; 2009 ; Young Scientists Journal Volume 6 ; 2009 ; 6 >
+    au < exists ; exists ; 2009 ; Young Scientists Journal Volume 7 ; 2009 ; 7 >
+    au < exists ; exists ; 2010 ; Young Scientists Journal Volume 8 ; 2010 ; 8 >
+    au < exists ; exists ; 2011 ; Young Scientists Journal Volume 9 ; 2011 ; 9 >
+    au < exists ; exists ; 2011 ; Young Scientists Journal Volume 10 ; 2011 ; 10 >
+    au < exists ; exists ; 2012 ; Young Scientists Journal Volume 11 ; 2012 ; 11 >
+    au < expected ; exists ; 2013 ; Young Scientists Journal Volume 12 ; 2013 ; 12 >
 
   }
 
