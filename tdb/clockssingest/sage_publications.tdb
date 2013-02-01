@@ -23159,7 +23159,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      comment[0] = Jan 2013 name changed from "Physicians" to "Providers"
+      comment[0] = Jan 2013 name changed from "Physicians in" to "Providers of"
 
       au < manifest ; exists ; 2002 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 1 ; 1 ; >
       au < manifest ; exists ; 2003 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 2 ; 2 ; >
@@ -23172,7 +23172,7 @@
       au < released ; crawling ; 2010 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 10 ; 10 ; >
       au < released ; manifest ; 2012 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 11 ; 11 ; >
-      au < expected ; exists ; 2013 ; Journal of the International Association of Providers in AIDS Care (JIAPAC) Volume 12 ; 12 ; >
+      au < expected ; exists ; 2013 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 12 ; 12 ; >
 
     }
 

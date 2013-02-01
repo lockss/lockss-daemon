@@ -26034,11 +26034,11 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2005 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 4 ; 4 >
-        au < HighWireStrVolPlugin ; down ; 2006 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 5 ; 5 >
-        au < HighWireStrVolPlugin ; down ; 2007 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 6 ; 6 >
-        au < HighWirePressPlugin ; down ; 2008 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 7 ; 7 >
-        au < HighWirePressPlugin ; down ; 2009 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 8 ; 8 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 5 ; 5 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 6 ; 6 >
+        au < HighWirePressPlugin ; down ; 2008 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 7 ; 7 >
+        au < HighWirePressPlugin ; down ; 2009 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 8 ; 8 >
 
       }
 
@@ -26048,19 +26048,19 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jia.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        comment[0] = Jan 2013 name changed from "Physicians" to "Providers"
+        comment[0] = Jan 2013 name changed from "Physicians in" to "Providers of"
 
-        au < manifest ; 2002 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 1 ; 1 >
-        au < manifest ; 2003 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 2 ; 2 >
-        au < manifest ; 2004 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 3 ; 3 >
-        au < doNotProcess ; 2005 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 4 ; 4 >
-        au < doNotProcess ; 2006 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 5 ; 5 >
-        au < doNotProcess ; 2007 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 6 ; 6 >
-        au < doNotProcess ; 2008 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 7 ; 7 >
-        au < doNotProcess ; 2009 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 8 ; 8 >
-        au < released ; 2010 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 9 ; 9 >
-        au < released ; 2011 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 10 ; 10 >
-        au < released ; 2012 ; Journal of the International Association of Physicians of AIDS Care (JIAPAC) Volume 11 ; 11 >
+        au < manifest ; 2002 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 1 ; 1 >
+        au < manifest ; 2003 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 2 ; 2 >
+        au < manifest ; 2004 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 3 ; 3 >
+        au < doNotProcess ; 2005 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 4 ; 4 >
+        au < doNotProcess ; 2006 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 5 ; 5 >
+        au < doNotProcess ; 2007 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 6 ; 6 >
+        au < doNotProcess ; 2008 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 7 ; 7 >
+        au < doNotProcess ; 2009 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 8 ; 8 >
+        au < released ; 2010 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 9 ; 9 >
+        au < released ; 2011 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 10 ; 10 >
+        au < released ; 2012 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 11 ; 11 >
         au < expected ; 2013 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 12 ; 12 >
 
       }
