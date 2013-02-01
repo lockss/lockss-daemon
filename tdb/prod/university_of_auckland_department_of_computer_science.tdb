@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = University of Auckland Department of Computer Science
+  >
+  
+  {
+  
+    title <
+      name = Online Journal of Analytic Combinatorics  ;
+      issn = 1931-3365 ;
+      issnl = 1931-3365
+    >
+
+    rights = openaccess
+
+    {
+    
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      param[base_url] = http://www.analytic-combinatorics.org/
+      param[journal_id] = ojac
+      implicit < status ; year ; name ; volume ; param[year] >
+    
+      au < exists ; 2006 ; Online Journal of Analytic Combinatorics Volume 1 ; 1 ; 2006 >
+      au < exists ; 2007 ; Online Journal of Analytic Combinatorics Volume 2 ; 2 ; 2007 >
+      au < exists ; 2008 ; Online Journal of Analytic Combinatorics Volume 3 ; 3 ; 2008 >
+      au < exists ; 2011 ; Online Journal of Analytic Combinatorics Volume 6 ; 6 ; 2011 >
+      au < exists ; 2012 ; Online Journal of Analytic Combinatorics Volume 7 ; 7 ; 2012 >
+      au < expected ; 2013 ; Online Journal of Analytic Combinatorics Volume 8 ; 8 ; 2013 >
+   
+    }
+
+  }
+
+}
