@@ -10,7 +10,8 @@
   {
 
     title <
-      name = Future Medicine Books
+      name = Future Medicine Books ;
+      type = bookSeries
     >
 
     au < exists ; 978-1-78084-100-7 ; 978-1-78084-001-7 ; Human Papillomavirus Vaccines ; 978-1-78084-100-7 >
