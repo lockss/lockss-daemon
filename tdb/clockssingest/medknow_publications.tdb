@@ -2199,6 +2199,8 @@
     param[base_url] = http://www.jcvjs.com/
     param[journal_issn] = 0974-8237
 
+    au < exists ; exists ; 2010 ; Journal of Craniovertebral Junction and Spine Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Journal of Craniovertebral Junction and Spine Volume 2 ; 2011 ; 2 >
 
   }
   
@@ -2213,6 +2215,12 @@
     param[base_url] = http://www.jcasonline.com/
     param[journal_issn] = 0378-6326
 
+    au < exists ; exists ; 2008 ; Journal of Cutaneous and Aesthetic Surgery Volume 1 ; 2008 ; 1 >
+    au < exists ; exists ; 2009 ; Journal of Cutaneous and Aesthetic Surgery Volume 2 ; 2009 ; 2 >
+    au < exists ; exists ; 2010 ; Journal of Cutaneous and Aesthetic Surgery Volume 3 ; 2010 ; 3 >
+    au < exists ; exists ; 2011 ; Journal of Cutaneous and Aesthetic Surgery Volume 4 ; 2011 ; 4 >
+    au < exists ; exists ; 2012 ; Journal of Cutaneous and Aesthetic Surgery Volume 5 ; 2012 ; 5 >
+    au < expected ; exists ; 2013 ; Journal of Cutaneous and Aesthetic Surgery Volume 6 ; 2013 ; 6 >
 
   }
 
@@ -2227,6 +2235,13 @@
     param[base_url] = http://www.jcytol.org/
     param[journal_issn] = 0970-9371
 
+    au < exists ; exists ; 2007 ; Journal of Cytology Volume 24 ; 2007 ; 24 >
+    au < exists ; exists ; 2008 ; Journal of Cytology Volume 25 ; 2008 ; 25 >
+    au < exists ; exists ; 2009 ; Journal of Cytology Volume 26 ; 2009 ; 26 >
+    au < exists ; exists ; 2010 ; Journal of Cytology Volume 27 ; 2010 ; 27 >
+    au < exists ; exists ; 2011 ; Journal of Cytology Volume 28 ; 2011 ; 28 >
+    au < exists ; exists ; 2012 ; Journal of Cytology Volume 29 ; 2012 ; 29 >
+    au < expected ; exists ; 2013 ; Journal of Cytology Volume 30 ; 2013 ; 30 >
 
   }
 
@@ -2241,6 +2256,9 @@
     param[base_url] = http://www.jdionline.org/
     param[journal_issn] = 0974-6781
 
+    au < exists ; exists ; 2011 ; Journal of Dental Implants Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; Journal of Dental Implants Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; Journal of Dental Implants Volume 3 ; 2013 ; 3 >
 
   }
 
@@ -2255,6 +2273,9 @@
     param[base_url] = http://www.jdionline.org/
     param[journal_issn] = 0976-5042
 
+    au < exists ; exists ; 2011 ; Journal of Digestive Endoscopy Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; Journal of Digestive Endoscopy Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; Journal of Digestive Endoscopy Volume 3 ; 2013 ; 3 >
 
   }
 
@@ -2262,11 +2283,14 @@
     title <
       name = Journal of Education and Ethics in Dentistry ;
       issn = 0974-7761 ;
+      eissn = 2277-9191 ;
       issnl = 0974-7761
     >
 
     param[base_url] = http://www.jeed.in/
     param[journal_issn] = 0974-7761
+
+    au < exists ; exists ; 2011 ; Journal of Education and Ethics in Dentistry Volume 1 ; 2011 ; 1 >
     
   }
 
@@ -2281,6 +2305,12 @@
     param[base_url] = http://www.onlinejets.org/
     param[journal_issn] = 0974-2700
 
+    au < exists ; exists ; 2008 ; Journal of Emergencies, Trauma, and Shock Volume 1 ; 2008 ; 1 >
+    au < exists ; exists ; 2009 ; Journal of Emergencies, Trauma, and Shock Volume 2 ; 2009 ; 2 >
+    au < exists ; exists ; 2010 ; Journal of Emergencies, Trauma, and Shock Volume 3 ; 2010 ; 3 >
+    au < exists ; exists ; 2011 ; Journal of Emergencies, Trauma, and Shock Volume 4 ; 2011 ; 4 >
+    au < exists ; exists ; 2012 ; Journal of Emergencies, Trauma, and Shock Volume 5 ; 2012 ; 5 >
+    au < exists ; exists ; 2013 ; Journal of Emergencies, Trauma, and Shock Volume 6 ; 2013 ; 6 >
 
   }
 
@@ -2295,6 +2325,9 @@
     param[base_url] = http://www.onlinejet.net/
     param[journal_issn] = 0976-8580
 
+    au < exists ; exists ; 2011 ; Journal of Engineering and Technology Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; Journal of Engineering and Technology Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; Journal of Engineering and Technology Volume 3 ; 2013 ; 3 >
 
   }
 
@@ -2309,6 +2342,26 @@
     param[base_url] = http://www.jfcmonline.com/
     param[journal_issn] = 2230-8229
 
+    au < exists ; exists ; 1994 ; Journal of Family and Community Medicine Volume 1 ; 1994 ; 1 >
+    au < exists ; exists ; 1995 ; Journal of Family and Community Medicine Volume 2 ; 1995 ; 2 >
+    au < exists ; exists ; 1996 ; Journal of Family and Community Medicine Volume 3 ; 1996 ; 3 >
+    au < exists ; exists ; 1997 ; Journal of Family and Community Medicine Volume 4 ; 1997 ; 4 >
+    au < exists ; exists ; 1998 ; Journal of Family and Community Medicine Volume 5 ; 1998 ; 5 >
+    au < exists ; exists ; 1999 ; Journal of Family and Community Medicine Volume 6 ; 1999 ; 6 >
+    au < exists ; exists ; 2000 ; Journal of Family and Community Medicine Volume 7 ; 2000 ; 7 >
+    au < exists ; exists ; 2001 ; Journal of Family and Community Medicine Volume 8 ; 2001 ; 8 >
+    au < exists ; exists ; 2002 ; Journal of Family and Community Medicine Volume 9 ; 2002 ; 9 >
+    au < exists ; exists ; 2003 ; Journal of Family and Community Medicine Volume 10 ; 2003 ; 10 >
+    au < exists ; exists ; 2004 ; Journal of Family and Community Medicine Volume 11 ; 2004 ; 11 >
+    au < exists ; exists ; 2005 ; Journal of Family and Community Medicine Volume 12 ; 2005 ; 12 >
+    au < exists ; exists ; 2006 ; Journal of Family and Community Medicine Volume 13 ; 2006 ; 13 >
+    au < exists ; exists ; 2007 ; Journal of Family and Community Medicine Volume 14 ; 2007 ; 14 >
+    au < exists ; exists ; 2008 ; Journal of Family and Community Medicine Volume 15 ; 2008 ; 15 >
+    au < exists ; exists ; 2009 ; Journal of Family and Community Medicine Volume 16 ; 2009 ; 16 >
+    au < exists ; exists ; 2010 ; Journal of Family and Community Medicine Volume 17 ; 2010 ; 17 >
+    au < exists ; exists ; 2011 ; Journal of Family and Community Medicine Volume 18 ; 2011 ; 18 >
+    au < exists ; exists ; 2012 ; Journal of Family and Community Medicine Volume 19 ; 2012 ; 19 >
+    au < expected ; exists ; 2013 ; Journal of Family and Community Medicine Volume 20 ; 2013 ; 20 >
 
   }
 
@@ -2322,6 +2375,8 @@
     param[base_url] = http://www.jfmpc.com/
     param[journal_issn] = 2249-4863
 
+    au < exists ; exists ; 2012 ; Journal of Family Medicine and Primary Care Volume 1 ; 2012 ; 1 >
+    au < expected ; exists ; 2013 ; Journal of Family Medicine and Primary Care Volume 2 ; 2013 ; 2 >
 
   }
 
@@ -2336,6 +2391,11 @@
     param[base_url] = http://www.jfds.org/
     param[journal_issn] = 0975-1475
 
+    au < exists ; exists ; 2009 ; Journal of Forensic Dental Sciences Volume 1 ; 2009 ; 1 >
+    au < exists ; exists ; 2010 ; Journal of Forensic Dental Sciences Volume 2 ; 2010 ; 2 >
+    au < exists ; exists ; 2011 ; Journal of Forensic Dental Sciences Volume 3 ; 2011 ; 3 >
+    au < exists ; exists ; 2012 ; Journal of Forensic Dental Sciences Volume 4 ; 2012 ; 4 >
+    au < expected ; exists ; 2013 ; Journal of Forensic Dental Sciences Volume 5 ; 2013 ; 5 >
 
   }
 
@@ -2350,6 +2410,11 @@
     param[base_url] = http://www.jgid.org/
     param[journal_issn] = 0974-777X
 
+    au < exists ; exists ; 2009 ; Journal of Global Infectious Diseases Volume 1 ; 2009 ; 1 >
+    au < exists ; exists ; 2010 ; Journal of Global Infectious Diseases Volume 2 ; 2010 ; 2 >
+    au < exists ; exists ; 2011 ; Journal of Global Infectious Diseases Volume 3 ; 2011 ; 3 >
+    au < exists ; exists ; 2012 ; Journal of Global Infectious Diseases Volume 4 ; 2012 ; 4 >
+    au < expected ; exists ; 2013 ; Journal of Global Infectious Diseases Volume 5 ; 2013 ; 5 >
 
   }
 
@@ -2364,6 +2429,8 @@
     param[base_url] = http://www.gynecendoscopy.org/
     param[journal_issn] = 0974-1216
 
+    au < exists ; exists ; 2009 ; Journal of Gynecological Endoscopy and Surgery Volume 1 ; 2009 ; 1 >
+    au < exists ; exists ; 2011 ; Journal of Gynecological Endoscopy and Surgery Volume 2 ; 2011 ; 2 >
 
   }
 
@@ -2378,6 +2445,12 @@
     param[base_url] = http://www.jhrsonline.org/
     param[journal_issn] = 0974-1208
 
+    au < exists ; exists ; 2008 ; Journal of Human Reproductive Sciences Volume 1 ; 2008 ; 1 >
+    au < exists ; exists ; 2009 ; Journal of Human Reproductive Sciences Volume 2 ; 2009 ; 2 >
+    au < exists ; exists ; 2010 ; Journal of Human Reproductive Sciences Volume 3 ; 2010 ; 3 >
+    au < exists ; exists ; 2011 ; Journal of Human Reproductive Sciences Volume 4 ; 2011 ; 4 >
+    au < exists ; exists ; 2012 ; Journal of Human Reproductive Sciences Volume 5 ; 2012 ; 5 >
+    au < expected ; exists ; 2013 ; Journal of Human Reproductive Sciences Volume 6 ; 2013 ; 6 >
 
   }
 
@@ -2392,6 +2465,24 @@
     param[base_url] = http://www.jiaps.com/
     param[journal_issn] = 0971-9261
 
+    au < exists ; exists ; 1996 ; Journal of Indian Association of Pediatric Surgeons Volume 1 ; 1996 ; 1 >
+    au < exists ; exists ; 1997 ; Journal of Indian Association of Pediatric Surgeons Volume 2 ; 1997 ; 2 >
+    au < exists ; exists ; 1998 ; Journal of Indian Association of Pediatric Surgeons Volume 3 ; 1998 ; 3 >
+    au < exists ; exists ; 1999 ; Journal of Indian Association of Pediatric Surgeons Volume 4 ; 1999 ; 4 >
+    au < exists ; exists ; 2000 ; Journal of Indian Association of Pediatric Surgeons Volume 5 ; 2000 ; 5 >
+    au < exists ; exists ; 2001 ; Journal of Indian Association of Pediatric Surgeons Volume 6 ; 2001 ; 6 >
+    au < exists ; exists ; 2002 ; Journal of Indian Association of Pediatric Surgeons Volume 7 ; 2002 ; 7 >
+    au < exists ; exists ; 2003 ; Journal of Indian Association of Pediatric Surgeons Volume 8 ; 2003 ; 8 >
+    au < exists ; exists ; 2004 ; Journal of Indian Association of Pediatric Surgeons Volume 9 ; 2004 ; 9 >
+    au < exists ; exists ; 2005 ; Journal of Indian Association of Pediatric Surgeons Volume 10 ; 2005 ; 10 >
+    au < exists ; exists ; 2006 ; Journal of Indian Association of Pediatric Surgeons Volume 11 ; 2006 ; 11 >
+    au < exists ; exists ; 2007 ; Journal of Indian Association of Pediatric Surgeons Volume 12 ; 2007 ; 12 >
+    au < exists ; exists ; 2008 ; Journal of Indian Association of Pediatric Surgeons Volume 13 ; 2008 ; 13 >
+    au < exists ; exists ; 2009 ; Journal of Indian Association of Pediatric Surgeons Volume 14 ; 2009 ; 14 >
+    au < exists ; exists ; 2010 ; Journal of Indian Association of Pediatric Surgeons Volume 15 ; 2010 ; 15 >
+    au < exists ; exists ; 2011 ; Journal of Indian Association of Pediatric Surgeons Volume 16 ; 2011 ; 16 >
+    au < exists ; exists ; 2012 ; Journal of Indian Association of Pediatric Surgeons Volume 17 ; 2012 ; 17 >
+    au < expected ; exists ; 2013 ; Journal of Indian Association of Pediatric Surgeons Volume 18 ; 2013 ; 18 >
 
   }
 
@@ -2406,6 +2497,24 @@
     param[base_url] = http://www.jisppd.com/
     param[journal_issn] = 0970-4388
 
+    au < exists ; exists ; 1996 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 14 ; 1996 ; 14 >
+    au < exists ; exists ; 1997 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 15 ; 1997 ; 15 >
+    au < exists ; exists ; 1998 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 16 ; 1998 ; 16 >
+    au < exists ; exists ; 1999 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 17 ; 1999 ; 17 >
+    au < exists ; exists ; 2000 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 18 ; 2000 ; 18 >
+    au < exists ; exists ; 2001 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 19 ; 2001 ; 19 >
+    au < exists ; exists ; 2002 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 20 ; 2002 ; 20 >
+    au < exists ; exists ; 2003 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 21 ; 2003 ; 21 >
+    au < exists ; exists ; 2004 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 22 ; 2004 ; 22 >
+    au < exists ; exists ; 2005 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 23 ; 2005 ; 23 >
+    au < exists ; exists ; 2006 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 24 ; 2006 ; 24 >
+    au < exists ; exists ; 2007 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 25 ; 2007 ; 25 >
+    au < exists ; exists ; 2008 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 26 ; 2008 ; 26 >
+    au < exists ; exists ; 2009 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 27 ; 2009 ; 27 >
+    au < exists ; exists ; 2010 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 28 ; 2010 ; 28 >
+    au < exists ; exists ; 2011 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 29 ; 2011 ; 29 >
+    au < exists ; exists ; 2012 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 30 ; 2012 ; 30 >
+    au < expected ; exists ; 2013 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 31 ; 2013 ; 31 >
 
   }
 
@@ -2420,6 +2529,12 @@
     param[base_url] = http://www.jisponline.com/
     param[journal_issn] = 0972-124X
 
+    au < exists ; exists ; 2008 ; Journal of Indian Society of Periodontology Volume 12 ; 2008 ; 12 >
+    au < exists ; exists ; 2009 ; Journal of Indian Society of Periodontology Volume 13 ; 2009 ; 13 >
+    au < exists ; exists ; 2010 ; Journal of Indian Society of Periodontology Volume 14 ; 2010 ; 14 >
+    au < exists ; exists ; 2011 ; Journal of Indian Society of Periodontology Volume 15 ; 2011 ; 15 >
+    au < exists ; exists ; 2012 ; Journal of Indian Society of Periodontology Volume 16 ; 2012 ; 16 >
+    au < expected ; exists ; 2013 ; Journal of Indian Society of Periodontology Volume 17 ; 2013 ; 17 >
 
   }
 
@@ -2434,6 +2549,9 @@
     param[base_url] = http://www.jidonline.com/
     param[journal_issn] = 2229-5194
 
+    au < exists ; exists ; 2011 ; Journal of Interdisciplinary Dentistry Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; Journal of Interdisciplinary Dentistry Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; Journal of Interdisciplinary Dentistry Volume 3 ; 2013 ; 3 >
 
   }
 
@@ -2441,12 +2559,16 @@
     title <
       name = Journal of International Society of Preventive and Community Dentistry ;
       issn = 2231-0762 ;
+      eissn = 2250-1002 ;
       issnl = 2231-0762
     >
 
     param[base_url] = http://www.jispcd.org/
     param[journal_issn] = 2231-0762
 
+    au < exists ; exists ; 2011 ; Journal of International Society of Preventive and Community Dentistry Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; Journal of International Society of Preventive and Community Dentistry Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; Journal of International Society of Preventive and Community Dentistry Volume 3 ; 2013 ; 3 >
 
   }
     
@@ -2461,6 +2583,11 @@
     param[base_url] = http://www.jlponline.org/
     param[journal_issn] = 0974-2727
 
+    au < exists ; exists ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 2009 ; 1 >
+    au < exists ; exists ; 2010 ; Journal of Laboratory Physicians Volume 2 ; 2010 ; 2 >
+    au < exists ; exists ; 2011 ; Journal of Laboratory Physicians Volume 3 ; 2011 ; 3 >
+    au < exists ; exists ; 2012 ; Journal of Laboratory Physicians Volume 4 ; 2012 ; 4 >
+    au < expected ; exists ; 2013 ; Journal of Laboratory Physicians Volume 5 ; 2013 ; 5 >
 
   }
     
@@ -2475,6 +2602,9 @@
     param[base_url] = http://www.laryngologyandvoice.org/
     param[journal_issn] = 2230-9748
 
+    au < exists ; exists ; 2011 ; Journal of Laryngology and Voice Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; Journal of Laryngology and Voice Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; Journal of Laryngology and Voice Volume 3 ; 2013 ; 3 >
 
   }
 
@@ -2489,6 +2619,42 @@
     param[base_url] = http://www.jmp.org.in/
     param[journal_issn] = 0971-6203
 
+    au < exists ; exists ; 1978 ; Journal of Medical Physics Volume 3 ; 1978 ; 3 >
+    au < exists ; exists ; 1979 ; Journal of Medical Physics Volume 4 ; 1979 ; 4 >
+    au < exists ; exists ; 1980 ; Journal of Medical Physics Volume 5 ; 1980 ; 5 >
+    au < exists ; exists ; 1981 ; Journal of Medical Physics Volume 6 ; 1981 ; 6 >
+    au < doesNotExist ; doesNotExist ; 1982 ; Journal of Medical Physics Volume 7 ; 0 ; 0 >
+    au < exists ; exists ; 1983 ; Journal of Medical Physics Volume 8 ; 1983 ; 8 >
+    au < exists ; exists ; 1984 ; Journal of Medical Physics Volume 9 ; 1984 ; 9 >
+    au < exists ; exists ; 1985 ; Journal of Medical Physics Volume 10 ; 1985 ; 10 >
+    au < exists ; exists ; 1986 ; Journal of Medical Physics Volume 11 ; 1986 ; 11 >
+    au < exists ; exists ; 1987 ; Journal of Medical Physics Volume 12 ; 1987 ; 12 >
+    au < exists ; exists ; 1988 ; Journal of Medical Physics Volume 13 ; 1988 ; 13 >
+    au < exists ; exists ; 1989 ; Journal of Medical Physics Volume 14 ; 1989 ; 14 >
+    au < exists ; exists ; 1990 ; Journal of Medical Physics Volume 15 ; 1990 ; 15 >
+    au < exists ; exists ; 1991 ; Journal of Medical Physics Volume 16 ; 1991 ; 16 >
+    au < exists ; exists ; 1992 ; Journal of Medical Physics Volume 17 ; 1992 ; 17 >
+    au < exists ; exists ; 1993 ; Journal of Medical Physics Volume 18 ; 1993 ; 18 >
+    au < exists ; exists ; 1994 ; Journal of Medical Physics Volume 19 ; 1994 ; 19 >
+    au < exists ; exists ; 1995 ; Journal of Medical Physics Volume 20 ; 1995 ; 20 >
+    au < exists ; exists ; 1996 ; Journal of Medical Physics Volume 21 ; 1996 ; 21 >
+    au < exists ; exists ; 1997 ; Journal of Medical Physics Volume 22 ; 1997 ; 22 >
+    au < exists ; exists ; 1998 ; Journal of Medical Physics Volume 23 ; 1998 ; 23 >
+    au < exists ; exists ; 1999 ; Journal of Medical Physics Volume 24 ; 1999 ; 24 >
+    au < exists ; exists ; 2000 ; Journal of Medical Physics Volume 25 ; 2000 ; 25 >
+    au < exists ; exists ; 2001 ; Journal of Medical Physics Volume 26 ; 2001 ; 26 >
+    au < exists ; exists ; 2002 ; Journal of Medical Physics Volume 27 ; 2002 ; 27 >
+    au < exists ; exists ; 2003 ; Journal of Medical Physics Volume 28 ; 2003 ; 28 >
+    au < exists ; exists ; 2004 ; Journal of Medical Physics Volume 29 ; 2004 ; 29 >
+    au < exists ; exists ; 2005 ; Journal of Medical Physics Volume 30 ; 2005 ; 30 >
+    au < exists ; exists ; 2006 ; Journal of Medical Physics Volume 31 ; 2006 ; 31 >
+    au < exists ; exists ; 2007 ; Journal of Medical Physics Volume 32 ; 2007 ; 32 >
+    au < exists ; exists ; 2008 ; Journal of Medical Physics Volume 33 ; 2008 ; 33 >
+    au < exists ; exists ; 2009 ; Journal of Medical Physics Volume 34 ; 2009 ; 34 >
+    au < exists ; exists ; 2010 ; Journal of Medical Physics Volume 35 ; 2010 ; 35 >
+    au < exists ; exists ; 2011 ; Journal of Medical Physics Volume 36 ; 2011 ; 36 >
+    au < exists ; exists ; 2012 ; Journal of Medical Physics Volume 37 ; 2012 ; 37 >
+    au < exists ; exists ; 2013 ; Journal of Medical Physics Volume 38 ; 2013 ; 38 >
 
   }
 
@@ -2502,6 +2668,9 @@
     param[base_url] = http://jmss.mui.ac.ir/index.php/jmss
 	comment[jmss] = the url structure is the new version
 
+    au < exists ; exists ; 2011 ; Journal of Medical Signals & Sensors Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; Journal of Medical Signals & Sensors Volume 2 ; 2012 ; 2 >
+    au < exists ; exists ; 2013 ; Journal of Medical Signals & Sensors Volume 3 ; 2013 ; 3 >
 
   }
 
@@ -2516,6 +2685,10 @@
     param[base_url] = http://www.jmidlifehealth.org/
     param[journal_issn] = 0976-7800
 
+    au < exists ; exists ; 2010 ; Journal of Mid-life Health Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Journal of Mid-life Health Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Journal of Mid-life Health Volume 3 ; 2012 ; 3 >
+    au < expected ; exists ; 2013 ; Journal of Mid-life Health Volume 4 ; 2013 ; 4 >
 
   }
 
@@ -2530,6 +2703,15 @@
     param[base_url] = http://www.journalofmas.com/
     param[journal_issn] = 0972-9941
 
+    au < exists ; exists ; 2005 ; Journal of Minimal Access Surgery Volume 1 ; 2005 ; 1 >
+    au < exists ; exists ; 2006 ; Journal of Minimal Access Surgery Volume 2 ; 2006 ; 2 >
+    au < exists ; exists ; 2007 ; Journal of Minimal Access Surgery Volume 3 ; 2007 ; 3 >
+    au < exists ; exists ; 2008 ; Journal of Minimal Access Surgery Volume 4 ; 2008 ; 4 >
+    au < exists ; exists ; 2009 ; Journal of Minimal Access Surgery Volume 5 ; 2009 ; 5 >
+    au < exists ; exists ; 2010 ; Journal of Minimal Access Surgery Volume 6 ; 2010 ; 6 >
+    au < exists ; exists ; 2011 ; Journal of Minimal Access Surgery Volume 7 ; 2011 ; 7 >
+    au < exists ; exists ; 2012 ; Journal of Minimal Access Surgery Volume 8 ; 2012 ; 8 >
+    au < expected ; exists ; 2013 ; Journal of Minimal Access Surgery Volume 9 ; 2013 ; 9 >
 
   }
 
@@ -2544,6 +2726,10 @@
     param[base_url] = http://www.jnatpharm.org/
     param[journal_issn] = 2229-5119
 
+    au < exists ; exists ; 2010 ; Journal of Natural Pharmaceuticals Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Journal of Natural Pharmaceuticals Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Journal of Natural Pharmaceuticals Volume 3 ; 2012 ; 3 >
+    au < expected ; exists ; 2013 ; Journal of Natural Pharmaceuticals Volume 4 ; 2013 ; 4 >
 
   }
   
@@ -2558,6 +2744,10 @@
     param[base_url] = http://www.jnsbm.org/
     param[journal_issn] = 0976-9668
 
+    au < exists ; exists ; 2010 ; Journal of Natural Science, Biology and Medicine Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Journal of Natural Science, Biology and Medicine Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Journal of Natural Science, Biology and Medicine Volume 3 ; 2012 ; 3 >
+    au < expected ; exists ; 2013 ; Journal of Natural Science, Biology and Medicine Volume 4 ; 2013 ; 4 >
 
   }
   
@@ -2572,6 +2762,10 @@
     param[base_url] = http://www.ruralneuropractice.com/
     param[journal_issn] = 0976-3147
 
+    au < exists ; exists ; 2010 ; Journal of Neurosciences in Rural Practice Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Journal of Neurosciences in Rural Practice Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Journal of Neurosciences in Rural Practice Volume 3 ; 2012 ; 3 >
+    au < exists ; exists ; 2013 ; Journal of Neurosciences in Rural Practice Volume 4 ; 2013 ; 4 >
 
   }
   
@@ -2585,6 +2779,9 @@
     param[base_url] = http://www.joacc.com/
     param[journal_issn] = 2249-4472
 
+    au < exists ; exists ; 2011 ; Journal of Obstetric Anaesthesia and Critical Care Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; Journal of Obstetric Anaesthesia and Critical Care Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; Journal of Obstetric Anaesthesia and Critical Care Volume 3 ; 2013 ; 3 >
 
   }
       
@@ -2599,6 +2796,17 @@
     param[base_url] = http://www.jomfp.in/
     param[journal_issn] = 0973-029X
 
+    au < exists ; exists ; 2003 ; Journal of Oral and Maxillofacial Pathology Volume 7 ; 2003 ; 7 >
+    au < exists ; exists ; 2004 ; Journal of Oral and Maxillofacial Pathology Volume 8 ; 2004 ; 8 >
+    au < exists ; exists ; 2005 ; Journal of Oral and Maxillofacial Pathology Volume 9 ; 2005 ; 9 >
+    au < exists ; exists ; 2006 ; Journal of Oral and Maxillofacial Pathology Volume 10 ; 2006 ; 10 >
+    au < exists ; exists ; 2007 ; Journal of Oral and Maxillofacial Pathology Volume 11 ; 2007 ; 11 >
+    au < exists ; exists ; 2008 ; Journal of Oral and Maxillofacial Pathology Volume 12 ; 2008 ; 12 >
+    au < exists ; exists ; 2009 ; Journal of Oral and Maxillofacial Pathology Volume 13 ; 2009 ; 13 >
+    au < exists ; exists ; 2010 ; Journal of Oral and Maxillofacial Pathology Volume 14 ; 2010 ; 14 >
+    au < exists ; exists ; 2011 ; Journal of Oral and Maxillofacial Pathology Volume 15 ; 2011 ; 15 >
+    au < exists ; exists ; 2012 ; Journal of Oral and Maxillofacial Pathology Volume 16 ; 2012 ; 16 >
+    au < expected ; exists ; 2013 ; Journal of Oral and Maxillofacial Pathology Volume 17 ; 2013 ; 17 >
 
   }
       
@@ -2613,6 +2821,10 @@
     param[base_url] = http://www.jpathinformatics.org/
     param[journal_issn] = 2229-5089
 
+    au < exists ; exists ; 2010 ; Journal of Pathology Informatics Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Journal of Pathology Informatics Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Journal of Pathology Informatics Volume 3 ; 2012 ; 3 >
+    au < exists ; exists ; 2013 ; Journal of Pathology Informatics Volume 4 ; 2013 ; 4 >
 
   }
 
@@ -2627,6 +2839,14 @@
     param[base_url] = http://www.pediatricneurosciences.com/
     param[journal_issn] = 1817-1745
 
+    au < exists ; exists ; 2006 ; Journal of Pediatric Neurosciences Volume 1 ; 2006 ; 1 >
+    au < exists ; exists ; 2007 ; Journal of Pediatric Neurosciences Volume 2 ; 2007 ; 2 >
+    au < exists ; exists ; 2008 ; Journal of Pediatric Neurosciences Volume 3 ; 2008 ; 3 >
+    au < exists ; exists ; 2009 ; Journal of Pediatric Neurosciences Volume 4 ; 2009 ; 4 >
+    au < exists ; exists ; 2010 ; Journal of Pediatric Neurosciences Volume 5 ; 2010 ; 5 >
+    au < exists ; exists ; 2011 ; Journal of Pediatric Neurosciences Volume 6 ; 2011 ; 6 >
+    au < exists ; exists ; 2012 ; Journal of Pediatric Neurosciences Volume 7 ; 2012 ; 7 >
+    au < expected ; exists ; 2013 ; Journal of Pediatric Neurosciences Volume 8 ; 2013 ; 8 >
 
   }
 
@@ -2641,6 +2861,10 @@
     param[base_url] = http://www.pnrjournal.com/
     param[journal_issn] = 0976-9234
 
+    au < exists ; exists ; 2010 ; Journal of Pharmaceutical Negative Results Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Journal of Pharmaceutical Negative Results Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Journal of Pharmaceutical Negative Results Volume 3 ; 2012 ; 3 >
+    au < expected ; exists ; 2013 ; Journal of Pharmaceutical Negative Results Volume 4 ; 2013 ; 4 >
 
   }
 
@@ -2655,6 +2879,10 @@
     param[base_url] = http://www.jpharmacol.com/
     param[journal_issn] = 0976-500X
 
+    au < exists ; exists ; 2010 ; Journal of Pharmacology and Pharmacotherapeutics Volume 1 ; 2010 ; 1 >
+    au < exists ; exists ; 2011 ; Journal of Pharmacology and Pharmacotherapeutics Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Journal of Pharmacology and Pharmacotherapeutics Volume 3 ; 2012 ; 3 >
+    au < expected ; exists ; 2013 ; Journal of Pharmacology and Pharmacotherapeutics Volume 4 ; 2013 ; 4 >
 
   }
 
@@ -2669,6 +2897,11 @@
     param[base_url] = http://www.jpbsonline.org/
     param[journal_issn] = 0976-4879
 
+    au < exists ; exists ; 2009 ; Journal of Pharmacy and Bioallied Sciences Volume 1 ; 2009 ; 1 >
+    au < exists ; exists ; 2010 ; Journal of Pharmacy and Bioallied Sciences Volume 2 ; 2010 ; 2 >
+    au < exists ; exists ; 2011 ; Journal of Pharmacy and Bioallied Sciences Volume 3 ; 2011 ; 3 >
+    au < exists ; exists ; 2012 ; Journal of Pharmacy and Bioallied Sciences Volume 4 ; 2012 ; 4 >
+    au < exists ; exists ; 2013 ; Journal of Pharmacy and Bioallied Sciences Volume 5 ; 2013 ; 5 >
 
   }
 
@@ -2683,6 +2916,44 @@
     param[base_url] = http://www.jpgmonline.com/
     param[journal_issn] = 0022-3859
 
+    au < exists ; exists ; 1976 ; Journal of Postgraduate Medicine Volume 22 ; 1976 ; 22 >
+    au < exists ; exists ; 1977 ; Journal of Postgraduate Medicine Volume 23 ; 1977 ; 23 >
+    au < exists ; exists ; 1978 ; Journal of Postgraduate Medicine Volume 24 ; 1978 ; 24 >
+    au < exists ; exists ; 1979 ; Journal of Postgraduate Medicine Volume 25 ; 1979 ; 25 >
+    au < exists ; exists ; 1980 ; Journal of Postgraduate Medicine Volume 26 ; 1980 ; 26 >
+    au < exists ; exists ; 1981 ; Journal of Postgraduate Medicine Volume 27 ; 1981 ; 27 >
+    au < exists ; exists ; 1982 ; Journal of Postgraduate Medicine Volume 28 ; 1982 ; 28 >
+    au < exists ; exists ; 1983 ; Journal of Postgraduate Medicine Volume 29 ; 1983 ; 29 >
+    au < exists ; exists ; 1984 ; Journal of Postgraduate Medicine Volume 30 ; 1984 ; 30 >
+    au < exists ; exists ; 1985 ; Journal of Postgraduate Medicine Volume 31 ; 1985 ; 31 >
+    au < exists ; exists ; 1986 ; Journal of Postgraduate Medicine Volume 32 ; 1986 ; 32 >
+    au < exists ; exists ; 1987 ; Journal of Postgraduate Medicine Volume 33 ; 1987 ; 33 >
+    au < exists ; exists ; 1988 ; Journal of Postgraduate Medicine Volume 34 ; 1988 ; 34 >
+    au < exists ; exists ; 1989 ; Journal of Postgraduate Medicine Volume 35 ; 1989 ; 35 >
+    au < exists ; exists ; 1990 ; Journal of Postgraduate Medicine Volume 36 ; 1990 ; 36 >
+    au < exists ; exists ; 1991 ; Journal of Postgraduate Medicine Volume 37 ; 1991 ; 37 >
+    au < exists ; exists ; 1992 ; Journal of Postgraduate Medicine Volume 38 ; 1992 ; 38 >
+    au < exists ; exists ; 1993 ; Journal of Postgraduate Medicine Volume 39 ; 1993 ; 39 >
+    au < exists ; exists ; 1994 ; Journal of Postgraduate Medicine Volume 40 ; 1994 ; 40 >
+    au < exists ; exists ; 1995 ; Journal of Postgraduate Medicine Volume 41 ; 1995 ; 41 >
+    au < exists ; exists ; 1996 ; Journal of Postgraduate Medicine Volume 42 ; 1996 ; 42 >
+    au < exists ; exists ; 1997 ; Journal of Postgraduate Medicine Volume 43 ; 1997 ; 43 >
+    au < exists ; exists ; 1998 ; Journal of Postgraduate Medicine Volume 44 ; 1998 ; 44 >
+    au < exists ; exists ; 1999 ; Journal of Postgraduate Medicine Volume 45 ; 1999 ; 45 >
+    au < exists ; exists ; 2000 ; Journal of Postgraduate Medicine Volume 46 ; 2000 ; 46 >
+    au < exists ; exists ; 2001 ; Journal of Postgraduate Medicine Volume 47 ; 2001 ; 47 >
+    au < exists ; exists ; 2002 ; Journal of Postgraduate Medicine Volume 48 ; 2002 ; 48 >
+    au < exists ; exists ; 2003 ; Journal of Postgraduate Medicine Volume 49 ; 2003 ; 49 >
+    au < exists ; exists ; 2004 ; Journal of Postgraduate Medicine Volume 50 ; 2004 ; 50 >
+    au < exists ; exists ; 2005 ; Journal of Postgraduate Medicine Volume 51 ; 2005 ; 51 >
+    au < exists ; exists ; 2006 ; Journal of Postgraduate Medicine Volume 52 ; 2006 ; 52 >
+    au < exists ; exists ; 2007 ; Journal of Postgraduate Medicine Volume 53 ; 2007 ; 53 >
+    au < exists ; exists ; 2008 ; Journal of Postgraduate Medicine Volume 54 ; 2008 ; 54 >
+    au < exists ; exists ; 2009 ; Journal of Postgraduate Medicine Volume 55 ; 2009 ; 55 >
+    au < exists ; exists ; 2010 ; Journal of Postgraduate Medicine Volume 56 ; 2010 ; 56 >
+    au < exists ; exists ; 2011 ; Journal of Postgraduate Medicine Volume 57 ; 2011 ; 57 >
+    au < exists ; exists ; 2012 ; Journal of Postgraduate Medicine Volume 58 ; 2012 ; 58 >
+    au < expected ; exists ; 2013 ; Journal of Postgraduate Medicine Volume 59 ; 2013 ; 59 >
 
   }
 
@@ -2697,6 +2968,7 @@
     param[base_url] = http://www.jpdt.org/
     param[journal_issn] = 0976-1756
 
+    au < exists ; exists ; 2010 ; Journal of Prenatal Diagnosis and Therapy Volume 1 ; 2010 ; 1 >
 
   }
 
@@ -2711,6 +2983,20 @@
     param[base_url] = http://www.journals.mui.ac.ir/jrms
 	comment[jrms] = the url structure is the new version
 	
+    au < exists ; exists ; 2000 ; Journal of Research in Medical Sciences Volume 5 [Abstract only] ; 2000 ; 5 >
+    au < exists ; exists ; 2001 ; Journal of Research in Medical Sciences Volume 6 [Abstract only] ; 2001 ; 6 >
+    au < exists ; exists ; 2002 ; Journal of Research in Medical Sciences Volume 7 [Abstract only] ; 2002 ; 7 >
+    au < exists ; exists ; 2003 ; Journal of Research in Medical Sciences Volume 8 [Abstract only] ; 2003 ; 8 >
+    au < exists ; exists ; 2004 ; Journal of Research in Medical Sciences Volume 9 ; 2004 ; 9 >
+    au < exists ; exists ; 2005 ; Journal of Research in Medical Sciences Volume 10 ; 2005 ; 10 >
+    au < exists ; exists ; 2006 ; Journal of Research in Medical Sciences Volume 11 ; 2006 ; 11 >
+    au < exists ; exists ; 2007 ; Journal of Research in Medical Sciences Volume 12 ; 2007 ; 12 >
+    au < exists ; exists ; 2008 ; Journal of Research in Medical Sciences Volume 13 ; 2008 ; 13 >
+    au < exists ; exists ; 2009 ; Journal of Research in Medical Sciences Volume 14 ; 2009 ; 14 >
+    au < exists ; exists ; 2010 ; Journal of Research in Medical Sciences Volume 15 ; 2010 ; 15 >
+    au < exists ; exists ; 2011 ; Journal of Research in Medical Sciences Volume 16 ; 2011 ; 16 >
+    au < exists ; exists ; 2012 ; Journal of Research in Medical Sciences Volume 17 ; 2012 ; 17 >
+    au < exists ; exists ; 2013 ; Journal of Research in Medical Sciences Volume 18 ; 2013 ; 18 >
 
   }
 
@@ -2725,6 +3011,11 @@
     param[base_url] = http://www.jstcr.org/
     param[journal_issn] = 2006-8808
 
+    au < exists ; exists ; 2009 ; Journal of Surgical Technique and Case Report Volume 1 ; 2009 ; 1 >
+    au < exists ; exists ; 2010 ; Journal of Surgical Technique and Case Report Volume 2 ; 2010 ; 2 >
+    au < exists ; exists ; 2011 ; Journal of Surgical Technique and Case Report Volume 3 ; 2011 ; 3 >
+    au < exists ; exists ; 2012 ; Journal of Surgical Technique and Case Report Volume 4 ; 2012 ; 4 >
+    au < expected ; exists ; 2013 ; Journal of Surgical Technique and Case Report Volume 5 ; 2013 ; 5 >
 
   }
 
@@ -2739,6 +3030,8 @@
     param[base_url] = http://www.jicdro.org/
     param[journal_issn] = 2231-0754
 
+    au < exists ; exists ; 2009 ; Journal of the International Clinical Dental Research Organization Volume 1 ; 2009 ; 1 >
+    au < exists ; exists ; 2010 ; Journal of the International Clinical Dental Research Organization Volume 2 ; 2010 ; 2 >
 
   }
     
@@ -2753,6 +3046,11 @@
     param[base_url] = http://www.jyoungpharm.in/
     param[journal_issn] = 0975-1483
 
+    au < exists ; exists ; 2009 ; Journal of Young Pharmacists Volume 1 ; 2009 ; 1 >
+    au < exists ; exists ; 2010 ; Journal of Young Pharmacists Volume 2 ; 2010 ; 2 >
+    au < exists ; exists ; 2011 ; Journal of Young Pharmacists Volume 3 ; 2011 ; 3 >
+    au < exists ; exists ; 2012 ; Journal of Young Pharmacists Volume 4 ; 2012 ; 4 >
+    au < expected ; exists ; 2013 ; Journal of Young Pharmacists Volume 5 ; 2013 ; 5 >
 
   }
     
@@ -2767,6 +3065,36 @@
     param[base_url] = http://www.lungindia.com/
     param[journal_issn] = 0970-2113
 
+    au < exists ; exists ; 1983 ; Lung India Volume 1 ; 1983 ; 1 >
+    au < exists ; exists ; 1984 ; Lung India Volume 2 ; 1984 ; 2 >
+    au < exists ; exists ; 1985 ; Lung India Volume 3 ; 1985 ; 3 >
+    au < exists ; exists ; 1986 ; Lung India Volume 4 ; 1986 ; 4 >
+    au < exists ; exists ; 1987 ; Lung India Volume 5 ; 1987 ; 5 >
+    au < exists ; exists ; 1988 ; Lung India Volume 6 ; 1988 ; 6 >
+    au < exists ; exists ; 1989 ; Lung India Volume 7 ; 1989 ; 7 >
+    au < exists ; exists ; 1990 ; Lung India Volume 8 ; 1990 ; 8 >
+    au < exists ; exists ; 1991 ; Lung India Volume 9 ; 1991 ; 9 >
+    au < exists ; exists ; 1992 ; Lung India Volume 10 ; 1992 ; 10 >
+    au < exists ; exists ; 1993 ; Lung India Volume 11 ; 1993 ; 11 >
+    au < exists ; exists ; 1994 ; Lung India Volume 12 ; 1994 ; 12 >
+    au < exists ; exists ; 1995 ; Lung India Volume 13 ; 1995 ; 13 >
+    au < exists ; exists ; 1996 ; Lung India Volume 14 ; 1996 ; 14 >
+    au < exists ; exists ; 1997 ; Lung India Volume 15 ; 1997 ; 15 >
+    au < exists ; exists ; 1998 ; Lung India Volume 16 ; 1998 ; 16 >
+    au < exists ; exists ; 1999 ; Lung India Volume 17 ; 1999 ; 17 >
+    au < exists ; exists ; 2000 ; Lung India Volume 18 ; 2000 ; 18 >
+    au < exists ; exists ; 2001 ; Lung India Volume 19 ; 2001 ; 19 >
+    au < exists ; exists ; 2002 ; Lung India Volume 20 ; 2002 ; 20 >
+    au < exists ; exists ; 2004 ; Lung India Volume 21 ; 2004 ; 21 >
+    au < exists ; exists ; 2005 ; Lung India Volume 22 ; 2005 ; 22 >
+    au < exists ; exists ; 2006 ; Lung India Volume 23 ; 2006 ; 23 >
+    au < exists ; exists ; 2007 ; Lung India Volume 24 ; 2007 ; 24 >
+    au < exists ; exists ; 2008 ; Lung India Volume 25 ; 2008 ; 25 >
+    au < exists ; exists ; 2009 ; Lung India Volume 26 ; 2009 ; 26 >
+    au < exists ; exists ; 2010 ; Lung India Volume 27 ; 2010 ; 27 >
+    au < exists ; exists ; 2011 ; Lung India Volume 28 ; 2011 ; 28 >
+    au < exists ; exists ; 2012 ; Lung India Volume 29 ; 2012 ; 29 >
+    au < exists ; exists ; 2013 ; Lung India Volume 30 ; 2013 ; 30 >
 
   }
     
