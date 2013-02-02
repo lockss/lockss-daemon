@@ -1838,6 +1838,8 @@
 
       param[base_url] = http://www.almob.org/
       param[journal_issn] = 1748-7188
+      
+      comment[v5] = Fetch error 500 error on 5 urls including http://www.almob.org/content/5/1/39/mathml/M3
 
       au < manifest ; exists ; 2006 ; Algorithms for Molecular Biology Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; Algorithms for Molecular Biology Volume 2 ; 2 >
