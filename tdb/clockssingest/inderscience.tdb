@@ -581,7 +581,7 @@
 
       param[journal_issn] = 1752-2870
       
-      au < manifest ; exists ; 2012 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 >
       au < manifest ; exists ; 2013 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 >
 
     }
@@ -597,7 +597,7 @@
 
       param[journal_issn] = 2049-8888
       
-      au < manifest ; exists ; 2012 ; International Journal of Applied Pattern Recognition Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; International Journal of Applied Pattern Recognition Volume 1 ; 1 >
 
     }
 
@@ -1938,7 +1938,7 @@
 
       param[journal_issn] = 1756-5677
       
-      au < manifest ; exists ; 2012 ; International Journal of Cultural Management Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; International Journal of Cultural Management Volume 1 ; 1 >
 
     }
 
@@ -1953,7 +1953,7 @@
 
       param[journal_issn] = 2048-2183
       
-      au < manifest ; exists ; 2012 ; International Journal of Cyberspace Sciences and Emergency Management Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; International Journal of Cyberspace Sciences and Emergency Management Volume 1 ; 1 >
 
     }
 
@@ -4747,7 +4747,7 @@
       au < zapped ; down ; 2011 ; International Journal of Manufacturing Technology and Management Volume 23 ; 23 >
       au < released ; crawling ; 2011 ; International Journal of Manufacturing Technology and Management Volume 24 ; 24 >
       au < zapped ; down ; 2012 ; International Journal of Manufacturing Technology and Management Volume 25 ; 25 >
-      au < manifest ; exists ; 2012 ; International Journal of Manufacturing Technology and Management Volume 26 ; 26 >
+      au < crawling ; exists ; 2012 ; International Journal of Manufacturing Technology and Management Volume 26 ; 26 >
       au < exists ; exists ; 2012 ; International Journal of Manufacturing Technology and Management Volume 27 ; 27 >
       au < expected ; exists ; 2013 ; International Journal of Manufacturing Technology and Management Volume 28 ; 28 >
 
@@ -6612,7 +6612,7 @@
 
       param[journal_issn] = 2048-8467
       
-      au < manifest ; exists ; 2012 ; International Journal of Space Science and Engineering Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; International Journal of Space Science and Engineering Volume 1 ; 1 >
 
     }
 
@@ -6763,7 +6763,8 @@
       param[journal_issn] = 1743-8292
       
       au < released ; crawling ; 2008-2011 ; International Journal of Sustainable Design Volume 1 ; 1 >
-      au < manifest ; exists ; 2012 ; International Journal of Sustainable Design Volume 2 ; 2 >
+      au < crawling ; exists ; 2012 ; International Journal of Sustainable Design Volume 2 ; 2 >
+      au < expected ; exists ; 2013 ; International Journal of Sustainable Design Volume 3 ; 3 >
 
     }
 
