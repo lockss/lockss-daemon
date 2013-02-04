@@ -2688,12 +2688,12 @@
         comment[0] = This journal does not have a stable base_url and will not get substance.
         comment[1] = Volume home page, and issue home page url do not have www, all others do.
 
-        au < doNotProcess ; 2005 ; Chiropractic & Manual Therapy Volume 13 ; 13 >
-        au < doNotProcess ; 2006 ; Chiropractic & Manual Therapy Volume 14 ; 14 >
-        au < doNotProcess ; 2007 ; Chiropractic & Manual Therapy Volume 15 ; 15 >
-        au < doNotProcess ; 2008 ; Chiropractic & Manual Therapy Volume 16 ; 16 >
-        au < doNotProcess ; 2009 ; Chiropractic & Manual Therapy Volume 17 ; 17 >
-        au < doNotProcess ; 2010 ; Chiropractic & Manual Therapy Volume 18 ; 18 >
+        au < doNotProcess ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
+        au < doNotProcess ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
+        au < doNotProcess ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
+        au < doNotProcess ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
+        au < doNotProcess ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
+        au < doNotProcess ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
       
       }
       
