@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.11 2012-02-17 16:29:08 pgust Exp $
+ * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.12 2013-02-04 19:33:40 alexandraohlson Exp $
  */
 
 /*
@@ -76,6 +76,8 @@ public class NaturePublishingGroupArticleIteratorFactory
     
     protected static Pattern PDF_PATTERN = Pattern.compile("/pdf/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
     
+    protected static Pattern ABS_PATTERN = Pattern.compile("/abs/([^/]+)\\.html$", Pattern.CASE_INSENSITIVE);
+    
     protected NaturePublishingGroupArticleIterator(ArchivalUnit au,
                                                    SubTreeArticleIterator.Spec spec) {
       super(au, spec);
@@ -85,52 +87,49 @@ public class NaturePublishingGroupArticleIteratorFactory
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
       Matcher mat;
+      ArticleFiles af = new ArticleFiles();
+      boolean articleTarget = false;
+      
+      /* minimize the work you do if you are just counting articles */
+      if ( (spec.getTarget() != null) && (spec.getTarget().isArticle())) {
+        articleTarget = true;
+      }
       
       mat = HTML_PATTERN.matcher(url);
       if (mat.find()) {
         if ("index".equalsIgnoreCase(mat.group(1))) {
           return null; // HTTP 404 served as HTTP 200
         }
-        return processFullTextHtml(cu, mat);
-      }
-        
-      mat = PDF_PATTERN.matcher(url);
-      if (mat.find()) {
-        return processFullTextPdf(cu, mat);
+        af = processFullTextHtml(cu, mat);
+      } else {
+        mat = PDF_PATTERN.matcher(url);
+        if (mat.find()) {
+          af = processFullTextPdf(cu, mat);
+        }      
       }
       
+      /* we have an article and we need to collect metadata */
+      if ((af != null) && !articleTarget) {
+        guessOtherParts(af, mat);
+      }
+      
+      if (af == null) {
       log.warning("Mismatch between article iterator factory and article iterator: " + url);
-      return null;
+      }
+      return af;
     }
 
+    /* this method only if there was .../full/<article>.html */
     protected ArticleFiles processFullTextHtml(CachedUrl htmlCu, Matcher htmlMat) {
       ArticleFiles af = new ArticleFiles();
+      
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
       guessFullTextPdf(af, htmlMat);
-//      guessOtherParts(af, htmlMat);
       return af;
     }
     
-    protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
-      CachedUrl htmlCu = au.makeCachedUrl(pdfMat.replaceFirst("/full/$1.html"));
-      if (htmlCu != null && htmlCu.hasContent()) {
-        return null;
-      }
-      ArticleFiles af = new ArticleFiles();
-      af.setFullTextCu(pdfCu);
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-//      guessOtherParts(af, pdfMat);
-      return af;
-    }
-    
-//    protected void guessOtherParts(ArticleFiles af, Matcher mat) {
-//      guessAbstract(af, mat);
-//      guessFigures(af, mat);
-//      guessSupplementaryMaterials(af, mat);
-//      guessRisCitation(af, mat);
-//    }
-    
+    /* this method if there WAS a full text html, and now checking for pdf as well */
     protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
       CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/pdf/$1.pdf"));
       if (pdfCu != null && pdfCu.hasContent()) {
@@ -138,36 +137,61 @@ public class NaturePublishingGroupArticleIteratorFactory
       }
     }
     
-//    protected void guessAbstract(ArticleFiles af, Matcher mat) {
-//      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/abs/$1.html"));
-//      if (absCu != null && absCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-//        if (af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
-//          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
-//        }
-//      }
-//    }
-//    
-//    protected void guessFigures(ArticleFiles af, Matcher mat) {
-//      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/fig_tab/$1_ft.html"));
-//      if (absCu != null && absCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_FIGURES_TABLES, absCu);
-//      }
-//    }
-//    
-//    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
-//      CachedUrl suppinfoCu = au.makeCachedUrl(mat.replaceFirst("/suppinfo/$1.html"));
-//      if (suppinfoCu != null && suppinfoCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppinfoCu);
-//      }
-//    }
-//    
-//    protected void guessRisCitation(ArticleFiles af, Matcher mat) {
-//      CachedUrl risCu = au.makeCachedUrl(mat.replaceFirst("/ris/$1.ris"));
-//      if (risCu != null && risCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_CITATION + "_" + "application/x-research-info-systems", risCu);
-//      }
-//    }
+    /* this method only if there was .../pdf/<article.pdf and no .../full/<article>.html */
+    protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
+      /* This check is probably unneccessary. We shouldn't get to this method
+       * if the full/blah.html file exists
+       */
+      CachedUrl htmlCu = au.makeCachedUrl(pdfMat.replaceFirst("/full/$1.html"));
+      if (htmlCu != null && htmlCu.hasContent()) {
+        return null;
+      }
+      ArticleFiles af = new ArticleFiles();
+      af.setFullTextCu(pdfCu);
+      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+      return af;
+    }
+    
+    /* this method if we have an af with full_text_cu of some sort and need metadata */
+    protected void guessOtherParts(ArticleFiles af, Matcher mat) {
+      guessAbstract(af, mat);
+      guessFigures(af, mat);
+      guessSupplementaryMaterials(af, mat);
+      guessRisCitation(af, mat);
+    }
+    
+
+    
+    protected void guessAbstract(ArticleFiles af, Matcher mat) {
+      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/abs/$1.html"));
+     if (absCu != null && absCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+        if (af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
+          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
+        }
+      }
+    }
+    
+    protected void guessFigures(ArticleFiles af, Matcher mat) {
+      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/fig_tab/$1_ft.html"));
+      if (absCu != null && absCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_FIGURES_TABLES, absCu);
+      }
+    }
+    
+    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
+      CachedUrl suppinfoCu = au.makeCachedUrl(mat.replaceFirst("/suppinfo/$1.html"));
+      if (suppinfoCu != null && suppinfoCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppinfoCu);
+      }
+    }
+    
+    protected void guessRisCitation(ArticleFiles af, Matcher mat) {
+      CachedUrl risCu = au.makeCachedUrl(mat.replaceFirst("/ris/$1.ris"));
+      if (risCu != null && risCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_CITATION + "_" + "application/x-research-info-systems", risCu);
+      }
+    }
     
   }
 
