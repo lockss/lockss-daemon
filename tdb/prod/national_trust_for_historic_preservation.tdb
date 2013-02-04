@@ -17,7 +17,7 @@
     param[journal_dir] = forum_journal
     attr[journal_id] = 
 
-    au < expected ; 2012 ; Forum Journal Volume 27 ; 27 >
+    au < manifest ; 2012 ; Forum Journal Volume 27 ; 27 >
     au < expected ; 2013 ; Forum Journal Volume 28 ; 28 >
 
   }
