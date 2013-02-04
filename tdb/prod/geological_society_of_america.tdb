@@ -16,7 +16,6 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://gsabulletin.gsapubs.org/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[notReady] = low agreement with "viewspecificaccesscheck", similar as RU4503
 
     au < released ; 1918 ; Geological Society of America Bulletin Volume 29 [abstracts only] ; 29 >
     au < released ; 1919 ; Geological Society of America Bulletin Volume 30 [abstracts only] ; 30 >
