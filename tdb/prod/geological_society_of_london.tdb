@@ -590,24 +590,24 @@
       param[base_url] = http://pg.lyellcollection.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1995 ; Petroleum Geoscience Volume 1 ; 1 >
-      au < manifest ; 1996 ; Petroleum Geoscience Volume 2 ; 2 >
-      au < manifest ; 1997 ; Petroleum Geoscience Volume 3 ; 3 >
-      au < manifest ; 1998 ; Petroleum Geoscience Volume 4 ; 4 >
-      au < manifest ; 1999 ; Petroleum Geoscience Volume 5 ; 5 >
-      au < manifest ; 2000 ; Petroleum Geoscience Volume 6 ; 6 >
-      au < manifest ; 2001 ; Petroleum Geoscience Volume 7 ; 7 >
-      au < manifest ; 2002 ; Petroleum Geoscience Volume 8 ; 8 >
-      au < manifest ; 2003 ; Petroleum Geoscience Volume 9 ; 9 >
-      au < manifest ; 2004 ; Petroleum Geoscience Volume 10 ; 10 >
-      au < manifest ; 2005 ; Petroleum Geoscience Volume 11 ; 11 >
-      au < manifest ; 2006 ; Petroleum Geoscience Volume 12 ; 12 >
-      au < manifest ; 2007 ; Petroleum Geoscience Volume 13 ; 13 >
-      au < manifest ; 2008 ; Petroleum Geoscience Volume 14 ; 14 >
-      au < manifest ; 2009 ; Petroleum Geoscience Volume 15 ; 15 >
-      au < manifest ; 2010 ; Petroleum Geoscience Volume 16 ; 16 >
-      au < manifest ; 2011 ; Petroleum Geoscience Volume 17 ; 17 >
-      au < manifest ; 2012 ; Petroleum Geoscience Volume 18 ; 18 >
+      au < testing ; 1995 ; Petroleum Geoscience Volume 1 ; 1 >
+      au < testing ; 1996 ; Petroleum Geoscience Volume 2 ; 2 >
+      au < testing ; 1997 ; Petroleum Geoscience Volume 3 ; 3 >
+      au < testing ; 1998 ; Petroleum Geoscience Volume 4 ; 4 >
+      au < testing ; 1999 ; Petroleum Geoscience Volume 5 ; 5 >
+      au < testing ; 2000 ; Petroleum Geoscience Volume 6 ; 6 >
+      au < testing ; 2001 ; Petroleum Geoscience Volume 7 ; 7 >
+      au < testing ; 2002 ; Petroleum Geoscience Volume 8 ; 8 >
+      au < testing ; 2003 ; Petroleum Geoscience Volume 9 ; 9 >
+      au < testing ; 2004 ; Petroleum Geoscience Volume 10 ; 10 >
+      au < testing ; 2005 ; Petroleum Geoscience Volume 11 ; 11 >
+      au < testing ; 2006 ; Petroleum Geoscience Volume 12 ; 12 >
+      au < testing ; 2007 ; Petroleum Geoscience Volume 13 ; 13 >
+      au < testing ; 2008 ; Petroleum Geoscience Volume 14 ; 14 >
+      au < testing ; 2009 ; Petroleum Geoscience Volume 15 ; 15 >
+      au < testing ; 2010 ; Petroleum Geoscience Volume 16 ; 16 >
+      au < testing ; 2011 ; Petroleum Geoscience Volume 17 ; 17 >
+      au < testing ; 2012 ; Petroleum Geoscience Volume 18 ; 18 >
       au < expected ; 2013 ; Petroleum Geoscience Volume 19 ; 19 >
     
   }
