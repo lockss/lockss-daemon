@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.117 2012-12-07 07:22:12 fergaloy-sf Exp $
+ * $Id: LockssDaemon.java,v 1.118 2013-02-04 18:43:39 fergaloy-sf Exp $
  */
 
 /*
@@ -180,6 +180,12 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(METADATA_MANAGER, "org.lockss.metadata.MetadataManager"),
     // start proxy and servlets after plugin manager
     new ManagerDesc(REMOTE_API, "org.lockss.remote.RemoteApi"),
+    // Start the COUNTER reports manager.
+    new ManagerDesc(COUNTER_REPORTS_MANAGER,
+	"org.lockss.exporter.counter.CounterReportsManager"),
+    // NOTE: Any managers that are needed to decide whether a servlet is to be
+    // enabled or not (through ServletDescr.isEnabled()) need to appear before
+    // the AdminServletManager on the next line.
     new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.AdminServletManager"),
     new ManagerDesc(CONTENT_SERVLET_MANAGER,
                     "org.lockss.servlet.ContentServletManager"),
@@ -217,9 +223,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
         return isClockss();
       }},
     // watchdog last
-    new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
-    // Start the COUNTER reports manager.
-    new ManagerDesc(COUNTER_REPORTS_MANAGER, "org.lockss.exporter.counter.CounterReportsManager"),
+    new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE)
   };
 
   // AU-specific manager descriptors.  As each AU is created its managers
