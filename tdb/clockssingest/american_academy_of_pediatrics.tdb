@@ -441,12 +441,13 @@
     
     comment[online] = The 2012 Volume is located at aapredbook.aapublications.org, and other volumes will eventually move there.
     comment[doNotProcess] = wait for jounral move to new url
+    comment[notReady] = RU4596, no substance gets
 
     au < doNotProcess ; exists ; 2000 ; Red Book Online Volume 2000 ; 2000 >
     au < doNotProcess ; exists ; 2003 ; Red Book Online Volume 2003 ; 2003 >
     au < doNotProcess ; exists ; 2006 ; Red Book Online Volume 2006 ; 2006 >
     au < doNotProcess ; exists ; 2009 ; Red Book Online Volume 2009 ; 2009 >
-    au < crawling ; exists ; 2012 ; Red Book Online Volume 1 ; 1 >
+    au < notReady ; exists ; 2012 ; Red Book Online Volume 1 ; 1 >
     au < expected ; exists ; 2013 ; Red Book Online Volume 2 ; 2 >
 
   }
