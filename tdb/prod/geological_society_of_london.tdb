@@ -40,9 +40,9 @@
     au < HighWirePressPlugin ; down ; 2006 ; Engineering Geology Special Publications Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Engineering Geology Special Publications Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Engineering Geology Special Publications Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Engineering Geology Special Publications Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Engineering Geology Special Publications Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Engineering Geology Special Publications Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Engineering Geology Special Publications Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Engineering Geology Special Publications Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Engineering Geology Special Publications Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Engineering Geology Special Publications Volume 27 ; 27 >
     
   }
@@ -90,7 +90,7 @@
     param[base_url] = http://mem.lyellcollection.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 1958 ; Geological Society of London Memoirs Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1958 ; Geological Society of London Memoirs Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 1960 ; Geological Society of London Memoirs Volume 2 ; 2 >
     au < HighWirePressPlugin ; down ; 1962 ; Geological Society of London Memoirs Volume 3 ; 3 >
     au < HighWirePressPlugin ; down ; 1968 ; Geological Society of London Memoirs Volume 4 ; 4 >
@@ -124,8 +124,9 @@
     au < HighWirePressPlugin ; down ; 2006 ; Geological Society of London Memoirs Volume 32 ; 32 >
     au < HighWirePressPlugin ; down ; 2008 ; Geological Society of London Memoirs Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Memoirs Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Geological Society of London Memoirs Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Geological Society of London Memoirs Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Geological Society of London Memoirs Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Memoirs Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; expected ; 2013 ; Geological Society of London Memoirs Volume 37 ; 37 >
 
   }
 
@@ -142,7 +143,7 @@
     param[base_url] = http://sp.lyellcollection.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; Geological Society of London Special Publications Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1964 ; Geological Society of London Special Publications Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 1967 ; Geological Society of London Special Publications Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 1969 ; Geological Society of London Special Publications Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 1974 ; Geological Society of London Special Publications Volume 4 ; 4 >
@@ -498,21 +499,21 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Special Publications Volume 354 ; 354 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Special Publications Volume 355 ; 355 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Special Publications Volume 356 ; 356 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Geological Society of London Special Publications Volume 357 ; 357 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Geological Society of London Special Publications Volume 358 ; 358 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Geological Society of London Special Publications Volume 359 ; 359 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Geological Society of London Special Publications Volume 360 ; 360 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Geological Society of London Special Publications Volume 361 ; 361 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Geological Society of London Special Publications Volume 362 ; 362 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Geological Society of London Special Publications Volume 363 ; 363 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Geological Society of London Special Publications Volume 364 ; 364 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Geological Society of London Special Publications Volume 365 ; 365 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Geological Society of London Special Publications Volume 357 ; 357 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Geological Society of London Special Publications Volume 358 ; 358 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Geological Society of London Special Publications Volume 359 ; 359 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Geological Society of London Special Publications Volume 360 ; 360 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 361 ; 361 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 362 ; 362 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 363 ; 363 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 364 ; 364 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 365 ; 365 >
     au < HighWirePressH20Plugin ; doesNotExist ; 2012 ; Geological Society of London Special Publications Volume 366 ; 366 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Geological Society of London Special Publications Volume 367 ; 367 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Geological Society of London Special Publications Volume 368 ; 368 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 367 ; 367 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 368 ; 368 >
     au < HighWirePressH20Plugin ; exists ; 2012 ; Geological Society of London Special Publications Volume 369 ; 369 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Geological Society of London Special Publications Volume 370 ; 370 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Geological Society of London Special Publications Volume 371 ; 371 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 370 ; 370 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 371 ; 371 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Geological Society of London Special Publications Volume 372 ; 372 >
 
   }
@@ -572,7 +573,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Journal of the Geological Society of London Volume 166 ; 166 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of the Geological Society of London Volume 167 ; 167 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the Geological Society of London Volume 168 ; 168 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of the Geological Society of London Volume 169 ; 169 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Journal of the Geological Society of London Volume 169 ; 169 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the Geological Society of London Volume 170 ; 170 >
 
   }
@@ -668,7 +669,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 46 ; 46 >
       
   }
@@ -684,18 +685,18 @@
     param[base_url] = http://trn.lyellcollection.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 1811 ; Transactions of the Geological Society of London Series 1 Volume 1 ; s1-1 >
-    au < manifest ; 1814 ; Transactions of the Geological Society of London Series 1 Volume 2 ; s1-2 >
-    au < manifest ; 1816 ; Transactions of the Geological Society of London Series 1 Volume 3 ; s1-3 >
-    au < manifest ; 1817 ; Transactions of the Geological Society of London Series 1 Volume 4 ; s1-4 >
-    au < manifest ; 1821 ; Transactions of the Geological Society of London Series 1 Volume 5 ; s1-5 >
-    au < manifest ; 1822-1824 ; Transactions of the Geological Society of London Series 2 Volume 1 ; s2-1 >
-    au < manifest ; 1826-1828 ; Transactions of the Geological Society of London Series 2 Volume 2 ; s2-2 >
-    au < manifest ; 1829-1835 ; Transactions of the Geological Society of London Series 2 Volume 3 ; s2-3 >
-    au < manifest ; 1835-1836 ; Transactions of the Geological Society of London Series 2 Volume 4 ; s2-4 >
-    au < manifest ; 1837-1840 ; Transactions of the Geological Society of London Series 2 Volume 5 ; s2-5 >
-    au < manifest ; 1841-1842 ; Transactions of the Geological Society of London Series 2 Volume 6 ; s2-6 >
-    au < manifest ; 1845-1856 ; Transactions of the Geological Society of London Series 2 Volume 7 ; s2-7 >
+    au < testing ; 1811 ; Transactions of the Geological Society of London Series 1 Volume 1 ; s1-1 >
+    au < testing ; 1814 ; Transactions of the Geological Society of London Series 1 Volume 2 ; s1-2 >
+    au < testing ; 1816 ; Transactions of the Geological Society of London Series 1 Volume 3 ; s1-3 >
+    au < testing ; 1817 ; Transactions of the Geological Society of London Series 1 Volume 4 ; s1-4 >
+    au < testing ; 1821 ; Transactions of the Geological Society of London Series 1 Volume 5 ; s1-5 >
+    au < testing ; 1822-1824 ; Transactions of the Geological Society of London Series 2 Volume 1 ; s2-1 >
+    au < testing ; 1826-1828 ; Transactions of the Geological Society of London Series 2 Volume 2 ; s2-2 >
+    au < testing ; 1829-1835 ; Transactions of the Geological Society of London Series 2 Volume 3 ; s2-3 >
+    au < testing ; 1835-1836 ; Transactions of the Geological Society of London Series 2 Volume 4 ; s2-4 >
+    au < testing ; 1837-1840 ; Transactions of the Geological Society of London Series 2 Volume 5 ; s2-5 >
+    au < testing ; 1841-1842 ; Transactions of the Geological Society of London Series 2 Volume 6 ; s2-6 >
+    au < testing ; 1845-1856 ; Transactions of the Geological Society of London Series 2 Volume 7 ; s2-7 >
 
   }
 
