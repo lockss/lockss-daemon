@@ -57,7 +57,7 @@
     au < manifest ; exists ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
     au < manifest ; exists ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 ; 17 >
     au < manifest ; exists ; 2011 ; Indiana Journal of Global Legal Studies Volume 18 ; 18 >
-    au < manifest ; exists ; 2012 ; Indiana Journal of Global Legal Studies Volume 19 ; 19 >
+    au < crawling ; exists ; 2012 ; Indiana Journal of Global Legal Studies Volume 19 ; 19 >
     au < expected ; exists ; 2013 ; Indiana Journal of Global Legal Studies Volume 20 ; 20 >
     
   }
@@ -187,7 +187,7 @@
 
     au < manifest ; exists ; 2010 ; IP Theory Volume 1 ; 1 >
     au < released ; crawling ; 2011-2012 ; IP Theory Volume 2 ; 2 >
-    au < manifest ; exists ; 2012 ; IP Theory Volume 3 ; 3 >
+    au < crawling ; manifest ; 2012 ; IP Theory Volume 3 ; 3 >
     au < expected ; exists ; 2013 ;IP Theory Volume 4 ; 4 >
 
   }
