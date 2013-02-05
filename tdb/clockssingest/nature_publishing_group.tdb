@@ -512,8 +512,8 @@
 
     param[journal_id] = cddis
 
-    au < manifest ; exists ; 2011 ; Cell Death & Disease Volume 1 ; 2011 ; 1 >
-    au < manifest ; exists ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 >
+    au < crawling ; exists ; 2011 ; Cell Death & Disease Volume 1 ; 2011 ; 1 >
+    au < crawling ; exists ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 >
     au < crawling ; exists ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 >
     au < exists ; exists ; 2013 ; Cell Death & Disease Volume 4 ; 2013 ; 4 >
 
@@ -560,10 +560,10 @@
 
     param[journal_id] = cmi
 
-    au < manifest ; exists ; 2008 ; Cellular & Molecular Immunology Volume 5 ; 2008 ; 5 >
-    au < manifest ; exists ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 >
-    au < manifest ; exists ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 >
-    au < manifest ; exists ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 >
+    au < crawling ; exists ; 2008 ; Cellular & Molecular Immunology Volume 5 ; 2008 ; 5 >
+    au < crawling ; exists ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 >
+    au < crawling ; exists ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 >
+    au < crawling ; exists ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 >
     au < crawling ; exists ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 >
     au < exists ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 >
 
@@ -1014,7 +1014,7 @@
     au < exists ; exists ; 2007 ; Genetics in Medicine Volume 9 ; 2007 ; 9 >
     au < exists ; exists ; 2008 ; Genetics in Medicine Volume 10 ; 2008 ; 10 >
     au < exists ; exists ; 2009 ; Genetics in Medicine Volume 11 ; 2009 ; 11 >
-    au < manifest ; exists ; 2010 ; Genetics in Medicine Volume 12 ; 2010 ; 12 >
+    au < crawling ; exists ; 2010 ; Genetics in Medicine Volume 12 ; 2010 ; 12 >
     au < notReady ; exists ; 2011 ; Genetics in Medicine Volume 13 ; 2011 ; 13 >
     au < crawling ; exists ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 >
     au < exists ; exists ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 >
@@ -1387,9 +1387,9 @@
     param[journal_id] = ijos
     comment[notReady] = 2012 links on 2013 page, missing Vol. 4, Iss 4 on 2012 page
 
-    au < manifest ; exists ; 2009 ; International Journal of Oral Science Volume 1 ; 2009 ; 1 >
-    au < manifest ; exists ; 2010 ; International Journal of Oral Science Volume 2 ; 2010 ; 2 >
-    au < manifest ; exists ; 2011 ; International Journal of Oral Science Volume 3 ; 2011 ; 3 >
+    au < crawling ; exists ; 2009 ; International Journal of Oral Science Volume 1 ; 2009 ; 1 >
+    au < crawling ; exists ; 2010 ; International Journal of Oral Science Volume 2 ; 2010 ; 2 >
+    au < crawling ; exists ; 2011 ; International Journal of Oral Science Volume 3 ; 2011 ; 3 >
     au < notReady ; exists ; 2012 ; International Journal of Oral Science Volume 4 ; 2012 ; 4 >
     au < notReady ; exists ; 2013 ; International Journal of Oral Science Volume 5 ; 2013 ; 5 >
 
@@ -1914,7 +1914,7 @@
 
     param[journal_id] = kisup
 
-    au < manifest ; exists ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 >
+    au < crawling ; exists ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 >
     au < exists ; exists ; 2012 ; Kidney International Supplements Volume 2 ; 2012 ; 2 >
     au < exists ; exists ; 2013 ; Kidney International Supplements Volume 3 ; 2013 ; 3 >
 
@@ -2854,7 +2854,7 @@
 
      param[journal_id] = nclimate
 
-    au < manifest ; exists ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 >
+    au < crawling ; exists ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 >
     au < crawling ; exists ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 >
     au < manifest ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 >
 
@@ -3666,9 +3666,9 @@
 
     param[journal_id] = am
     
-    au < manifest ; exists ; 2009 ; NPG Asia Materials Volume 1 ; 2009 ; 1 >
-    au < manifest ; exists ; 2010 ; NPG Asia Materials Volume 2 ; 2010 ; 2 >
-    au < manifest ; exists ; 2011 ; NPG Asia Materials Volume 3 ; 2011 ; 3 >
+    au < crawling ; exists ; 2009 ; NPG Asia Materials Volume 1 ; 2009 ; 1 >
+    au < crawling ; exists ; 2010 ; NPG Asia Materials Volume 2 ; 2010 ; 2 >
+    au < crawling ; exists ; 2011 ; NPG Asia Materials Volume 3 ; 2011 ; 3 >
     au < crawling ; exists ; 2012 ; NPG Asia Materials Volume 4 ; 2012 ; 4 >
     au < manifest ; exists ; 2013 ; NPG Asia Materials Volume 5 ; 2013 ; 5 >
   }
@@ -3682,7 +3682,7 @@
 
     param[journal_id] = nutd
     
-    au < manifest ; exists ; 2011 ; Nutrition & Diabetes Volume 1 ; 2011 ; 1 >
+    au < crawling ; exists ; 2011 ; Nutrition & Diabetes Volume 1 ; 2011 ; 1 >
     au < crawling ; exists ; 2012 ; Nutrition & Diabetes Volume 2 ; 2012 ; 2 >
   
   }
@@ -3836,14 +3836,14 @@
     au < manifest ; exists ; 2006 ; Pediatric Research Volume 60 ; 2006 ; 60 >
     au < manifest ; exists ; 2007 ; Pediatric Research Volume 61 ; 2007 ; 61 >
     au < manifest ; exists ; 2007 ; Pediatric Research Volume 62 ; 2007 ; 62 >
-    au < manifest ; exists ; 2008 ; Pediatric Research Volume 63 ; 2008 ; 63 >
-    au < manifest ; exists ; 2008 ; Pediatric Research Volume 64 ; 2008 ; 64 >
-    au < manifest ; exists ; 2009 ; Pediatric Research Volume 65 ; 2009 ; 65 >
-    au < manifest ; exists ; 2009 ; Pediatric Research Volume 66 ; 2009 ; 66 >
-    au < manifest ; exists ; 2010 ; Pediatric Research Volume 67 ; 2010 ; 67 >
-    au < manifest ; exists ; 2010 ; Pediatric Research Volume 68 ; 2010 ; 68 >
-    au < manifest ; exists ; 2011 ; Pediatric Research Volume 69 ; 2011 ; 69 >
-    au < manifest ; exists ; 2011 ; Pediatric Research Volume 70 ; 2011 ; 70 >
+    au < crawling ; exists ; 2008 ; Pediatric Research Volume 63 ; 2008 ; 63 >
+    au < crawling ; exists ; 2008 ; Pediatric Research Volume 64 ; 2008 ; 64 >
+    au < crawling ; exists ; 2009 ; Pediatric Research Volume 65 ; 2009 ; 65 >
+    au < crawling ; exists ; 2009 ; Pediatric Research Volume 66 ; 2009 ; 66 >
+    au < crawling ; exists ; 2010 ; Pediatric Research Volume 67 ; 2010 ; 67 >
+    au < crawling ; exists ; 2010 ; Pediatric Research Volume 68 ; 2010 ; 68 >
+    au < crawling ; exists ; 2011 ; Pediatric Research Volume 69 ; 2011 ; 69 >
+    au < crawling ; exists ; 2011 ; Pediatric Research Volume 70 ; 2011 ; 70 >
     au < crawling ; exists ; 2012 ; Pediatric Research Volume 71 ; 2012 ; 71 >
     au < crawling ; exists ; 2012 ; Pediatric Research Volume 72 ; 2012 ; 72 >
     au < manifest ; exists ; 2013 ; Pediatric Research Volume 73 ; 2013 ; 73 >
@@ -3889,10 +3889,10 @@
 
 	au < manifest ; exists ; 2006 ; Polymer Journal Volume 38 ; 2006 ; 38 >
     au < manifest ; exists ; 2007 ; Polymer Journal Volume 39 ; 2007 ; 39 >
-    au < manifest ; exists ; 2008 ; Polymer Journal Volume 40 ; 2008 ; 40 >
-    au < manifest ; exists ; 2009 ; Polymer Journal Volume 41 ; 2009 ; 41 >
-    au < manifest ; exists ; 2010 ; Polymer Journal Volume 42 ; 2010 ; 42 >
-    au < manifest ; exists ; 2011 ; Polymer Journal Volume 43 ; 2011 ; 43 >
+    au < crawling ; exists ; 2008 ; Polymer Journal Volume 40 ; 2008 ; 40 >
+    au < crawling ; exists ; 2009 ; Polymer Journal Volume 41 ; 2009 ; 41 >
+    au < crawling ; exists ; 2010 ; Polymer Journal Volume 42 ; 2010 ; 42 >
+    au < crawling ; exists ; 2011 ; Polymer Journal Volume 43 ; 2011 ; 43 >
     au < crawling ; exists ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 >
     au < manifest ; exists ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 >
   }
