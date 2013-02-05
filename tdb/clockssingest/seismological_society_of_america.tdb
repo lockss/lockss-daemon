@@ -137,8 +137,8 @@
 
     param[base_url] = http://srl.geoscienceworld.org/
 
-    au < exists ; exists ; 2011 ; Seismological Research Letters Volume 82 ; 82 >
-    au < exists ; exists ; 2012 ; Seismological Research Letters Volume 83 ; 83 >
+    au < manifest ; exists ; 2011 ; Seismological Research Letters Volume 82 ; 82 >
+    au < manifest ; exists ; 2012 ; Seismological Research Letters Volume 83 ; 83 >
     au < exists ; exists ; 2013 ; Seismological Research Letters Volume 84 ; 84 >
 
   }
