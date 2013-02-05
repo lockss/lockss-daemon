@@ -9,6 +9,7 @@ use HTTP::Cookies;
 my $lockss_tag  = "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 my $oa_tag      = "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
 my $clockss_tag = "CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit";
+my $cc_tag = "<a rel="license" href="http://creativecommons.org/licenses/by"
 my $bmc_tag = "<span>Archive</span>";
 my $igi_tag = "/gateway/issue/";
 my $cc_tag = "rel..license";
@@ -201,7 +202,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
+      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) || ($man_contents =~ m/$oa_tag/) || ($man_contents =~ m/$cc_tag/)) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
     if ($man_contents =~ m/<title>(.*)<\/title>/si) {
         $vol_title = $1;
         $vol_title =~ s/\s*\n\s*/ /g;
