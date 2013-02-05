@@ -9,10 +9,9 @@ use HTTP::Cookies;
 my $lockss_tag  = "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 my $oa_tag      = "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
 my $clockss_tag = "CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit";
-my $cc_tag = "<a rel=.license. href=.http://creativecommons.org/licenses/by"
+my $cc_tag = "rel..license. href..http://creativecommons.org/licenses/by";
 my $bmc_tag = "<span>Archive</span>";
 my $igi_tag = "/gateway/issue/";
-my $cc_tag = "rel..license";
 my $total_manifests = 0;
 my $total_missing = 0;
 my $total_missing_plugin = 0;
