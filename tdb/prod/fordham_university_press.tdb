@@ -38,8 +38,9 @@
 
     comment[ds] = coming 2012
     param[journal_dir] = dante_studies
+    attr[journal_id] = 
     
-    au < expected ; 2013 ; Dante Studies Volume 2013 ; 2013 >
+    au < expected ; 2013 ; Dante Studies Volume 1 ; 1 >
     
   }
 
