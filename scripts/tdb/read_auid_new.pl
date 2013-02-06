@@ -697,7 +697,8 @@ while (my $line = <>) {
       if (defined($man_contents) && ($man_contents =~ m/$bmc_tag/) && ($man_contents =~ m/content\/$param{volume_name}/)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
-          $vol_title =~ s/ | / /g;
+          $vol_title =~ s/ \| / /g;
+          $vol_title =~ s/2013/Volume $param{volume_name}/g;
           $vol_title =~ s/\s*\n\s*/ /g;
           if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
             $vol_title = "\"" . $vol_title . "\"";
