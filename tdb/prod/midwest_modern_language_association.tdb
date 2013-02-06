@@ -15,9 +15,12 @@
       issnl = 0742-5562
     >
 
-    param[journal_dir] = 
+    param[journal_dir] = journal_of_the_midwest_modern_language_association
+    attr[journal_id] = 
     comment[upcoming1] = the journal is upcoming in muse
-    comment[upcoming2] = journal issues not on Muse online 5-8-12
+    comment[upcoming2] = journal issues not on Muse online 20130205
+
+    au < expected ; 2013 ; Journal of the Midwest Modern Language Association Volume 1 ; 1 >
 
   }
 

@@ -58,9 +58,11 @@
       issnl = 0022-6858
     >
 
-    param[journal_dir] = xxx
+    param[journal_dir] = the_jurist
+    attr[journal_id] = 
     
     comment[0] = content not online yet
+    au < expected ; 2013 ; The Jurist: Studies in Church Law and Ministry Volume 1 ; 1 >
 
   }
 
