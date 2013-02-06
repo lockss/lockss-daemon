@@ -119,7 +119,7 @@
     title <
       name = The Edgar Allan Poe Review ;
       issn = 2150-0428 ;
-      eissn = 2166-2932 ;
+      eissn = 2165-2932 ;
       issnl = 2150-0428
     >
     
@@ -129,7 +129,9 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = edgar_allan_poe_review
       attr[journal_id] = 
-     
+
+      au < expected ; 2013 ; The Edgar Allan Poe Review Volume 1 ; 1 >
+
     }
 
   }
@@ -249,8 +251,10 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_africana_religions
-      attr[journal_id] = 
-      
+      attr[journal_id] = oar
+
+      au < exists ; 2013 ; Journal of Africana Religions Volume 1 ; 1 >
+
     }
     
   }
