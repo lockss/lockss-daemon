@@ -9,7 +9,7 @@
   {
 
     comment[eblip] = Only this one title - "Evidence Based Library and Information Practice" is participating in CLOCKSS. No other titles are forthcoming.
-    plugin = org.lockss.plugin.universityofalberta.ClockssUniversityOfAlbertaPlugin 
+    
     param[base_url] = http://ejournals.library.ualberta.ca/
     implicit < status ; status2 ; year ; name ; param[year] ; volume >
 
@@ -18,18 +18,36 @@
       title <
         name = Evidence Based Library and Information Practice
       >
+      {
+      
+        plugin = org.lockss.plugin.universityofalberta.ClockssUniversityOfAlbertaPlugin 
+        param[journal_id] = eblip
 
-      param[journal_id] = eblip
+        au < down ; crawling ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 >
+        au < down ; crawling ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 >
+        au < down ; crawling ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 >
+        au < down ; crawling ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 >
+        au < down ; crawling ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 ; 5 >
+        au < down ; crawling ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 ; 6 >
+        au < down ; crawling ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 ; 7 >
+        au < expected ; exists ; 2013 ; Evidence Based Library and Information Practice Volume 8 ; 2013 ; 8 >
+      }
+      
+      {
+      
+        plugin = org.lockss.plugin.oj2.ClockssOJS2Plugin 
+        param[journal_id] = eblip
 
-      au < released ; crawling ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 >
-      au < released ; crawling ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 >
-      au < released ; crawling ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 >
-      au < released ; crawling ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 >
-      au < released ; crawling ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 ; 5 >
-      au < released ; crawling ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 ; 6 >
-      au < released ; crawling ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 ; 7 >
-      au < expected ; exists ; 2013 ; Evidence Based Library and Information Practice Volume 8 ; 2013 ; 8 >
-
+        au < doNotProcess ; exists ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 >
+        au < doNotProcess ; exists ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 >
+        au < doNotProcess ; exists ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 >
+        au < doNotProcess ; exists ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 >
+        au < doNotProcess ; exists ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 ; 6 >
+        au < doNotProcess ; exists ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 ; 7 >
+        au < expected ; exists ; 2013 ; Evidence Based Library and Information Practice Volume 8 ; 2013 ; 8 >
+      }
+      
     }
 
   }
