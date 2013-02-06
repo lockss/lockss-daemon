@@ -1113,6 +1113,21 @@
 
   {
     title <
+      name = Leviathan ;
+      issn = 1525-6995 ;
+      eissn = 1750-1849 ;
+      issnl = 1525-6995
+    >
+
+    param[journal_dir] = leviathan
+    attr[journal_id] = 
+
+    au < expected ; 2013 ; Leviathan Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
       name = Library Trends ;
       issn = 0024-2594 ;
       eissn = 1559-0682 ;
@@ -1472,6 +1487,21 @@
     au < released ; 2011 ; Philosophy, Psychiatry, & Psychology Volume 18 ; 18 >
     au < released ; 2012 ; Philosophy, Psychiatry, & Psychology Volume 19 ; 19 >
     au < expected ; 2013 ; Philosophy, Psychiatry, & Psychology Volume 20 ; 20 >
+
+  }
+
+  {
+    title <
+      name = Poe Studies ;
+      issn = 1947-4644 ;
+      eissn = 1754-6095 ;
+      issnl = 1947-4644
+    >
+
+    param[journal_dir] = poe_studies
+    attr[journal_id] = 
+
+    au < expected ; 2013 ; Poe Studies Volume 1 ; 1 >
 
   }
 
