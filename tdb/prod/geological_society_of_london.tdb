@@ -59,20 +59,19 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://geea.lyellcollection.org/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[notReady] = login page found, RU4424
 
-    au < notReady ; 2001 ; Geochemistry: Exploration, Environment, Analysis Volume 1 ; 1 >
+    au < ready ; 2001 ; Geochemistry: Exploration, Environment, Analysis Volume 1 ; 1 >
     au < ready ; 2002 ; Geochemistry: Exploration, Environment, Analysis Volume 2 ; 2 >
     au < ready ; 2003 ; Geochemistry: Exploration, Environment, Analysis Volume 3 ; 3 >
-    au < notReady ; 2004 ; Geochemistry: Exploration, Environment, Analysis Volume 4 ; 4 >
-    au < notReady ; 2005 ; Geochemistry: Exploration, Environment, Analysis Volume 5 ; 5 >
-    au < notReady ; 2006 ; Geochemistry: Exploration, Environment, Analysis Volume 6 ; 6 >
+    au < ready ; 2004 ; Geochemistry: Exploration, Environment, Analysis Volume 4 ; 4 >
+    au < wanted ; 2005 ; Geochemistry: Exploration, Environment, Analysis Volume 5 ; 5 >
+    au < wanted ; 2006 ; Geochemistry: Exploration, Environment, Analysis Volume 6 ; 6 >
     au < ready ; 2007 ; Geochemistry: Exploration, Environment, Analysis Volume 7 ; 7 >
-    au < notReady ; 2008 ; Geochemistry: Exploration, Environment, Analysis Volume 8 ; 8 >
+    au < ready ; 2008 ; Geochemistry: Exploration, Environment, Analysis Volume 8 ; 8 >
     au < ready ; 2009 ; Geochemistry: Exploration, Environment, Analysis Volume 9 ; 9 >
     au < ready ; 2010 ; Geochemistry: Exploration, Environment, Analysis Volume 10 ; 10 >
-    au < notReady ; 2011 ; Geochemistry: Exploration, Environment, Analysis Volume 11 ; 11 >
-    au < notReady ; 2012 ; Geochemistry: Exploration, Environment, Analysis Volume 12 ; 12 >
+    au < wanted ; 2011 ; Geochemistry: Exploration, Environment, Analysis Volume 11 ; 11 >
+    au < wanted ; 2012 ; Geochemistry: Exploration, Environment, Analysis Volume 12 ; 12 >
     au < expected ; 2013 ; Geochemistry: Exploration, Environment, Analysis Volume 13 ; 13 >
 
   }
