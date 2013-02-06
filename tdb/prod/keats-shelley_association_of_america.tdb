@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = Keats-Shelley Association of America
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Keats-Shelley Journal ;
+      issn = 0453-4387 ;
+      issnl = 0453-4387
+    >
+
+    param[journal_dir] = keats-shelley_journal
+    attr[journal_id] = 
+
+    au < expected ; 2013 ; Keats-Shelley Journal Volume 1 ; 1 >
+
+  }
+
+}
