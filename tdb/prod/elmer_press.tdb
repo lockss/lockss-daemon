@@ -6,8 +6,6 @@
 
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
   implicit < status ; year ; name ; volume ; param[year] >
-  comment[0] = publisher title list at http://www.elmerpress.com/journals.html
-  comment[notReady] = RU 3997, 4492
 
     {
 
@@ -21,9 +19,9 @@
       param[base_url] =  http://www.cardiologyres.org/
       param[journal_id] = Cardiologyres
 
-      au < released ; 2010 ; Cardiology Research Volume 1 ; 1 ; 2010 >
-      au < released ; 2011 ; Cardiology Research Volume 2 ; 2 ; 2011 >
-      au < released ; 2012 ; Cardiology Research Volume 3 ; 3 ; 2012 >
+      au < down ; 2010 ; Cardiology Research Volume 1 ; 1 ; 2010 >
+      au < down ; 2011 ; Cardiology Research Volume 2 ; 2 ; 2011 >
+      au < down ; 2012 ; Cardiology Research Volume 3 ; 3 ; 2012 >
 
     }
 
@@ -39,45 +37,27 @@
       param[base_url] = http://www.gastrores.org/
       param[journal_id] = Gastrores
       
-      au < released ; 2008 ; Gastroenterology Research Volume 1 ; 1 ; 2008 >
-      au < released ; 2009 ; Gastroenterology Research Volume 2 ; 2 ; 2009 >
-      au < released ; 2010 ; Gastroenterology Research Volume 3 ; 3 ; 2010 >
-      au < released ; 2011 ; Gastroenterology Research Volume 4 ; 4 ; 2011 >
-      au < released ; 2012 ; Gastroenterology Research Volume 5 ; 5 ; 2012 >
+      au < down ; 2008 ; Gastroenterology Research Volume 1 ; 1 ; 2008 >
+      au < down ; 2009 ; Gastroenterology Research Volume 2 ; 2 ; 2009 >
+      au < down ; 2010 ; Gastroenterology Research Volume 3 ; 3 ; 2010 >
+      au < down ; 2011 ; Gastroenterology Research Volume 4 ; 4 ; 2011 >
+      au < down ; 2012 ; Gastroenterology Research Volume 5 ; 5 ; 2012 >
 
     }
 
     {
  
-      title <
-        name = International Journal of Clinical Pediatrics ;
-        issn = 1927-1255 ;
-        eissn = 1927-1263 ;
-        issnl = 1927-1255 
-      >
-
-      param[base_url] = http://ijcp.elmerpress.com/
-      param[journal_id] = ijcp
-      comment[notReady] = low agreement
-
-      au < notReady ; 2012 ; International Journal of Clinical Pediatrics Volume 1 ; 1 ; 2012 >
+      comment[0] = International Journal of Clinical Pediatrics, 1927-1255, 1927-1263
+      comment[1] = http://ijcp.elmerpress.com/
+      comment[2] = Do not process.
       
     }
 
     {
  
-      title <
-        name = Journal of Clinical Gynecology and Obstetrics ;
-        issn = 1927-1271 ;
-        eissn = 1927-128X ;
-        issnl = 1927-1271 
-      >
-
-      param[base_url] = http://jcgo.elmerpress.com/
-      param[journal_id] = jcgo
-      comment[notReady] = low agreement
-
-      au < notReady ; 2012 ; Journal of Clinical Gynecology and Obstetrics Volume 1 ; 1 ; 2012 >
+      comment[0] = Journal of Clinical Gynecology and Obstetrics, 1927-1271, 1927-128X
+      comment[1] = http://jcgo.elmerpress.com/
+      comment[2] = Do not process.
       
     }
 
@@ -92,109 +72,59 @@
       param[base_url] = http://www.jocmr.org/
       param[journal_id] = jocmr
 
-      au < released ; 2009 ; Journal of Clinical Medicine Research Volume 1 ; 1 ; 2009 >
-      au < released ; 2010 ; Journal of Clinical Medicine Research Volume 2 ; 2 ; 2010 >
-      au < released ; 2011 ; Journal of Clinical Medicine Research Volume 3 ; 3 ; 2011 >
-      au < released ; 2012 ; Journal of Clinical Medicine Research Volume 4 ; 4 ; 2012 >
+      au < down ; 2009 ; Journal of Clinical Medicine Research Volume 1 ; 1 ; 2009 >
+      au < down ; 2010 ; Journal of Clinical Medicine Research Volume 2 ; 2 ; 2010 >
+      au < down ; 2011 ; Journal of Clinical Medicine Research Volume 3 ; 3 ; 2011 >
+      au < down ; 2012 ; Journal of Clinical Medicine Research Volume 4 ; 4 ; 2012 >
 
     }
 
     {
-
-      title <
-        name = Journal of Current Surgery ;
-        issn = 1927-1298 ;
-        eissn = 1927-1301 ;
-        issnl = 1927-1298 
-      >
-
-      param[base_url] = http://jcs.elmerpress.com/
-      param[journal_id] = jcs
-      
-      au < notReady ; 2011 ; Journal of Current Surgery Volume 1 ; 1 ; 2011 >
-      au < notReady ; 2012 ; Journal of Current Surgery Volume 2 ; 2 ; 2012 >
+    
+      comment[0] = Journal of Current Surgery, 1927-1298, 1927-1301
+      comment[1] = http://jcs.elmerpress.com/
+      comment[3] = Do not process.
 
     }
 
     {
  
-      title <
-        name = Journal of Endocrinology and Metabolism ;
-        issn = 1923-2861 ;
-        eissn = 1923-287X ;
-        issnl = 1923-2861 
-      >
-      param[base_url] = http://www.jofem.org/
-      param[journal_id] = jofem
-
-      au < notReady ; 2011 ; Journal of Endocrinology and Metabolism Volume 1 ; 1 ; 2011 >
-      au < manifest ; 2012 ; Journal of Endocrinology and Metabolism Volume 2 ; 2 ; 2012 >
+      comment[0] = Journal of Endocrinology and Metabolism, 1923-2861, 1923-287X
+      comment[1] = http://www.jofem.org/
+      comment[2] = Do not process.
 
     }
 
     {
 
-      title <
-        name = Journal of Hematology ;
-        issn = 1927-1212 ;
-        eissn = 1927-1220 ;
-        issnl = 1927-1212 
-      >
-
-      param[base_url] = http://jh.elmerpress.com/
-      param[journal_id] = jh
-
-      au < manifest ; 2012 ; Journal of Hematology Volume 1 ; 1 ; 2012 >
+      comment[0] = Journal of Hematology, 1927-1212, 1927-1220
+      comment[1] = http://jh.elmerpress.com/
+      comment[2] = Do not process.
 
     }
 
     {
 
-      title <
-        name = Journal of Medical Cases ;
-        issn = 1923-4155 ;
-        eissn = 1923-4163 ;
-        issnl = 1923-4155 
-      >
-      param[base_url] = http://www.journalmc.org/
-      param[journal_id] = jmc
-
-      au < notReady ; 2010 ; Journal of Medical Cases Volume 1 ; 1 ; 2010 >
-      au < notReady ; 2011 ; Journal of Medical Cases Volume 2 ; 2 ; 2011 >
-      au < notReady ; 2012 ; Journal of Medical Cases Volume 3 ; 3 ; 2012 >
+      comment[0] = Journal of Medical Cases, 1923-4155, 1923-4163
+      comment[1] = http://www.journalmc.org/
+      comment[2] = Do not process.
 
     }
 
     {
 
-      title <
-        name = Journal of Neurology Research ;
-        issn = 1923-2845 ;
-        eissn = 1923-2853 ;
-        issnl = 1923-2845 
-      >
-      param[base_url] = http://www.neurores.org/
-      param[journal_id] = neurores
-
-      au < notReady ; 2011 ; Journal of Neurology Research Volume 1 ; 1 ; 2011 >
-      au < manifest ; 2012 ; Journal of Neurology Research Volume 2 ; 2 ; 2012 >
+      comment[0] = Journal of Neurology Research, 1923-2845, 1923-2853
+      comment[1] = http://www.neurores.org/
+      comment[2] = Do not process.
 
     }
 
     {
 
-      title <
-        name = World Journal of Nephrology and Urology ;
-        issn = 1927-1239 ;
-        eissn = 1927-1247 ;
-        issnl = 1927-1239 
-      >
+      comment[0] = World Journal of Nephrology and Urology, 1927-1239, 1927-1247
+      comment[1] = http://wjnu.elmerpress.com/
+      comment[2] = Do not process.
 
-      param[base_url] = http://wjnu.elmerpress.com/
-      param[journal_id] = wjnu
-      comment[0] = no content published yet--Feb 2012 launch
-      
-      au < manifest ; 2012 ; World Journal of Nephrology and Urology Volume 1 ; 1 ; 2012 >
     }
 
     {
@@ -208,9 +138,8 @@
       param[base_url] = http://www.wjon.org/
       param[journal_id] = wjon
 
-      au < released ; 2010 ; World Journal of Oncology Volume 1 ; 1 ; 2010 >
-      au < released ; 2011 ; World Journal of Oncology Volume 2 ; 2 ; 2011 >
-      au < manifest ; 2012 ; World Journal of Oncology Volume 3 ; 3 ; 2012 >
+      au < down ; 2010 ; World Journal of Oncology Volume 1 ; 1 ; 2010 >
+      au < down ; 2011 ; World Journal of Oncology Volume 2 ; 2 ; 2011 >
 
     }
     
