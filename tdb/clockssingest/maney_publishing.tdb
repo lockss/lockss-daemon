@@ -3749,7 +3749,8 @@
     comment[continues] = 0272-4936 
     comment[0] = forthcoming in 2012
     
-    au < expected ; exists ; 2012 ; Paediatrics and International Child Health Volume 1 ; 1 > 
+    au < expected ; exists ; 2012 ; Paediatrics and International Child Health Volume 32 ; 32 >
+    au < expected ; exists ; 2013 ; Paediatrics and International Child Health Volume 33 ; 33 >
     
   }
 
@@ -3861,7 +3862,8 @@
     comment[continued_from] = 0003-4983
     comment[0] = forthcoming in 2012
     
-    au < expected ; exists ; 2012 ; Pathogens and Global Health Volume 1 ; 1 > 
+    au < exists ; exists ; 2012 ; Pathogens and Global Health Volume 106 ; 106 >
+    au < exists ; exists ; 2013 ; Pathogens and Global Health Volume 107 ; 107 >
     
   }
 
