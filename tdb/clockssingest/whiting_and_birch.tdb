@@ -7,7 +7,7 @@
     info[tester] = 7
     
   >
-    plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+    plugin = needs.plugin
     param[base_url] = http://essential.metapress.com/content/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     
@@ -45,14 +45,17 @@
     plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
     param[publisher_id] = wab
-    param[journal_id] = jpthsw
-    param[journal_issn] = 1460-6690
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.WhitingAndBirchPdfTransform
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[continued_by] = 1759-5150
+    param[journal_id] = jpthsw                                  
+    param[journal_issn] = 1460-6690
 
     au < manifest ; exists ; 2004 ; The Journal of Practice Teaching in Health and Social Work Volume 5 ; 5 >
     au < manifest ; exists ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 6 ; 6 >
-      
+
   }
 
   {
