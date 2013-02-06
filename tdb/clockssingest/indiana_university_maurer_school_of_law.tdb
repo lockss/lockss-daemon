@@ -38,7 +38,11 @@
     >
 
     param[journal_abbr] = ijgls
-    comment[notReady] = under lockss-probe, embargo until October 15, 2013
+    comment[notReady15] = under lockss-probe, embargo until August 01, 2013
+    comment[notReady17] = under lockss-probe, embargo until February 01, 2015
+    comment[notReady18] = under lockss-probe, embargo until August 01, 2016    
+    comment[notReady19] = under lockss-probe, embargo until October 15, 2013
+    
 
     au < manifest ; exists ; 1993-1994 ; Indiana Journal of Global Legal Studies Volume 1 ; 1 >
     au < manifest ; exists ; 1994-1995 ; Indiana Journal of Global Legal Studies Volume 2 ; 2 >
@@ -54,10 +58,10 @@
     au < manifest ; exists ; 2005 ; Indiana Journal of Global Legal Studies Volume 12 ; 12 >
     au < manifest ; exists ; 2006 ; Indiana Journal of Global Legal Studies Volume 13 ; 13 >
     au < manifest ; exists ; 2007 ; Indiana Journal of Global Legal Studies Volume 14 ; 14 >
-    au < manifest ; exists ; 2008 ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
+    au < notReady ; exists ; 2008 ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
     au < manifest ; exists ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
-    au < manifest ; exists ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 ; 17 >
-    au < crawling ; exists ; 2011 ; Indiana Journal of Global Legal Studies Volume 18 ; 18 >
+    au < notReady ; exists ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 ; 17 >
+    au < notReady ; exists ; 2011 ; Indiana Journal of Global Legal Studies Volume 18 ; 18 >
     au < notReady ; exists ; 2012 ; Indiana Journal of Global Legal Studies Volume 19 ; 19 >
     au < expected ; exists ; 2013 ; Indiana Journal of Global Legal Studies Volume 20 ; 20 >
     
