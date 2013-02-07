@@ -3617,7 +3617,7 @@
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
     param[publisher_id] = maney
-    param[journal_id] = prm 
+    param[journal_id] = ptssrm 
     param[journal_issn] = 1746-5095
     implicit < status ; year ; name ; param[volume_name] >
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
