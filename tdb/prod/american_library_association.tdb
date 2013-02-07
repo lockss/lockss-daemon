@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = American Library Association
+  >
+
+  {
+
+      title <
+        name = Choice Reviews Online ;
+        issn = 0009-4978 ;
+        eissn = 1523-8253 
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://www.cro3.org
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 1988 ; Choice Reviews Online Volume 26 ; 26 >
+      au < exists ; 1989 ; Choice Reviews Online Volume 27 ; 27 >
+      au < exists ; 1990 ; Choice Reviews Online Volume 28 ; 28 >
+      au < exists ; 1991 ; Choice Reviews Online Volume 29 ; 29 >
+      au < exists ; 1992 ; Choice Reviews Online Volume 30 ; 30 >
+      au < exists ; 1993 ; Choice Reviews Online Volume 31 ; 31 >
+      au < exists ; 1994 ; Choice Reviews Online Volume 32 ; 32 >
+      au < exists ; 1995 ; Choice Reviews Online Volume 33 ; 33 >
+      au < exists ; 1996 ; Choice Reviews Online Volume 34 ; 34 >
+
+    }
+
+  }
+
+}
