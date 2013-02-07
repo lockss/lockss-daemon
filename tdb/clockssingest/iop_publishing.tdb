@@ -447,7 +447,7 @@
 
     param[journal_issn] = 0295-5075
     comment[param] = print issn preferred
-    comment[notReady] = low agreement, different css style used
+    comment[notReady] = crawl failure
 
     au < manifest ; exists ; 1986 ; EPL (Europhysics Letters) Volume 1 ; 1 > 
     au < manifest ; exists ; 1986 ; EPL (Europhysics Letters) Volume 2 ; 2 > 
@@ -547,8 +547,8 @@
     au < released ; crawling ; 2011 ; EPL (Europhysics Letters) Volume 96 ; 96 >
     au < notReady ; exists ; 2012 ; EPL (Europhysics Letters) Volume 97 ; 97 >
     au < released ; crawling ; 2012 ; EPL (Europhysics Letters) Volume 98 ; 98 >
-    au < testing ; exists ; 2012 ; EPL (Europhysics Letters) Volume 99 ; 99 >
-    au < testing ; exists ; 2012 ; EPL (Europhysics Letters) Volume 100 ; 100 >
+    au < notReady ; exists ; 2012 ; EPL (Europhysics Letters) Volume 99 ; 99 >
+    au < notReady ; exists ; 2012 ; EPL (Europhysics Letters) Volume 100 ; 100 >
     au < manifest ; exists ; 2013 ; EPL (Europhysics Letters) Volume 101 ; 101 >
 
   }
