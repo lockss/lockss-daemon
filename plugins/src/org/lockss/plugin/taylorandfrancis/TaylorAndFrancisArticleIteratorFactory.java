@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisArticleIteratorFactory.java,v 1.2 2011-11-22 00:44:41 thib_gc Exp $
+ * $Id: TaylorAndFrancisArticleIteratorFactory.java,v 1.3 2013-02-07 22:44:37 alexandraohlson Exp $
  */
 
 /*
@@ -138,7 +138,11 @@ public class TaylorAndFrancisArticleIteratorFactory
       CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/doi/abs/$1"));
       if (absCu != null && absCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-      }
+//      If there is no abstract it will default to whatever the FULL_TEXT_CU is (probably full html)
+        if (af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
+          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
+        }
+      } 
     }
 
     protected void guessReferences(ArticleFiles af, Matcher mat) {
@@ -152,7 +156,7 @@ public class TaylorAndFrancisArticleIteratorFactory
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
     // Ask Phil how to talk to our real metadata extractor here
   }
 
