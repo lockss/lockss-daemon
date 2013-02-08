@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
       	<string>Poll</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Emerald Group Publishing Plugin, Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
+    <string>"Emerald Group Publishing Plugin, Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -51,30 +51,30 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%scrawlers/lockss\.htm\?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
-      <string>1,&quot;^%s(journals|books)\.htm\?issn=%s&amp;volume=%s&amp;issue=[0-9]+&amp;articleid=&quot;, base_url, journal_issn, volume_name</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%scrawlers/lockss\.htm\?issn=%s&amp;volume=%s", base_url, journal_issn, volume_name</string>
+      <string>1,"^%s(journals|books)\.htm\?issn=%s&amp;volume=%s&amp;issue=[0-9]+&amp;articleid=", base_url, journal_issn, volume_name</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%scrawlers/lockss.htm?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
+    <string>"%scrawlers/lockss.htm?issn=%s&amp;volume=%s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
       <entry>
         <string>au_title</string>
-        <string>&quot;%sjournals.htm?issn=%s&quot;, base_url, journal_issn</string>
+        <string>"%sjournals.htm?issn=%s", base_url, journal_issn</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>&quot;%scrawlers/lockss.htm?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
+        <string>"%scrawlers/lockss.htm?issn=%s&amp;volume=%s", base_url, journal_issn, volume_name</string>
       </entry>
       <entry>
         <string>au_issue</string>
-        <string>&quot;%scrawlers/lockss.htm?issn=%s&amp;volume=%s&amp;issue=%s&quot;, base_url, journal_issn, volume_name, issue</string>
+        <string>"%scrawlers/lockss.htm?issn=%s&amp;volume=%s&amp;issue=%s", base_url, journal_issn, volume_name, issue</string>
       </entry>
     </map>
   </entry>
@@ -138,10 +138,18 @@
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.emerald.EmeraldLoginPageChecker</string>
   </entry>
+   <!-- new test substance checker  -->
+  <entry>
+    <string>plugin_substance_predicate_factory</string>
+    <string>org.lockss.plugin.emerald.EmeraldSubstancePredicateFactory</string>
+  </entry>
+
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%s(journals|books)\.htm\?issn=%s&amp;volume=%s.*&amp;(articleid|chapterid)=[^&amp;]*&amp;show=(html|pdf)&quot;, base_url, journal_issn, volume_name</string>
+      <!-- making assumption that for Emerald Publishing, only .pdf are "substantial"; 
+           substance pattern needs to be consistent with EmeraldSubstancePredicateFactory -->
+      <string>"^%s(journals|books)\.htm\?issn=%s&amp;volume=%s.*&amp;(articleid|chapterid)=[^&amp;]*&amp;show=pdf", base_url, journal_issn, volume_name</string>
     </list>
   </entry>
 </map>
