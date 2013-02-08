@@ -14,7 +14,7 @@
     >
 
     plugin = org.lockss.plugin.ojs.OJSPlugin
-    param[base_url] = http://www.i-journals.org/ssy
+    param[base_url] = http://www.i-journals.org/ssy/
     comment[plugin] = checked that ojsplugin still used in Feb 6, 2013
         
     au < testing ; 2011 ; Stochastic Systems Volume 1 ; 1 ; 2011 >
