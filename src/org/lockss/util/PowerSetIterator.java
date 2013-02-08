@@ -1,5 +1,5 @@
 /*
- * $Id: PowerSetIterator.java,v 1.2 2012-09-21 20:45:22 clairegriffin Exp $
+ * $Id: PowerSetIterator.java,v 1.3 2013-02-08 23:26:11 clairegriffin Exp $
  */
 /*
 
@@ -79,6 +79,12 @@ public class PowerSetIterator<T> implements Iterator<List<T>> {
   static public long resultSize(final int N) {
 
     return (long)Math.pow(2, N);
+  }
+
+  public void reset()
+  {
+    result.clear();
+    this.mask = new BitSet(items.size()+1);
   }
 
   /**
