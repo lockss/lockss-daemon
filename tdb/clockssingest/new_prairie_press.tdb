@@ -3,7 +3,7 @@
   publisher <
     name = New Prairie Press ;
     info[contract] = 2012 ;
-    info[tester] = 0
+    info[tester] = 7
   >
 
   plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
@@ -19,14 +19,15 @@
 
     param[base_url] = http://www.thebalticyearbook.org/journals/
     param[journal_id] = baltic
+    comment[0] = no volume published in 2011
 
-    au < exists ; exists ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; 2005 >
-    au < exists ; exists ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; 2006 >
-    au < exists ; exists ; 2007 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 3 ; 3 ; 2007 >
-    au < exists ; exists ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; 2008 >
-    au < exists ; exists ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; 2009 >
-    au < exists ; exists ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; 2010 >
-
+    au < manifest ; exists ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; 2005 >
+    au < manifest ; exists ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; 2006 >
+    au < manifest ; exists ; 2007 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 3 ; 3 ; 2007 >
+    au < manifest ; exists ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; 2008 >
+    au < manifest ; exists ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; 2009 >
+    au < manifest ; exists ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; 2010 >
+    au < testing ; exists ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; 2012 >
   }
 
   {
@@ -40,32 +41,33 @@
 
     param[base_url] = http://www.newprairiepress.org/journals/
     param[journal_id] = gdr
+    comment[0] = ceased publication in 1999 at volume 26
 
-    au < exists ; exists ; 1975 ; GDR Bulletin Volume 1 ; 1 ; 1975 >
-    au < exists ; exists ; 1976 ; GDR Bulletin Volume 2 ; 2 ; 1976 >
-    au < exists ; exists ; 1977 ; GDR Bulletin Volume 3 ; 3 ; 1977 >
-    au < exists ; exists ; 1978 ; GDR Bulletin Volume 4 ; 4 ; 1978 >
-    au < exists ; exists ; 1979 ; GDR Bulletin Volume 5 ; 5 ; 1979 >
-    au < exists ; exists ; 1980 ; GDR Bulletin Volume 6 ; 6 ; 1980 >
-    au < exists ; exists ; 1981 ; GDR Bulletin Volume 7 ; 7 ; 1981 >
-    au < exists ; exists ; 1982 ; GDR Bulletin Volume 8 ; 8 ; 1982 >
-    au < exists ; exists ; 1983 ; GDR Bulletin Volume 9 ; 9 ; 1983 >
-    au < exists ; exists ; 1984 ; GDR Bulletin Volume 10 ; 10 ; 1984 >
-    au < exists ; exists ; 1985 ; GDR Bulletin Volume 11 ; 11 ; 1985 >
-    au < exists ; exists ; 1986 ; GDR Bulletin Volume 12 ; 12 ; 1986 >
-    au < exists ; exists ; 1987 ; GDR Bulletin Volume 13 ; 13 ; 1987 >
-    au < exists ; exists ; 1988 ; GDR Bulletin Volume 14 ; 14 ; 1988 >
-    au < exists ; exists ; 1989 ; GDR Bulletin Volume 15 ; 15 ; 1989 >
-    au < exists ; exists ; 1990 ; GDR Bulletin Volume 16 ; 16 ; 1990 >
-    au < exists ; exists ; 1991 ; GDR Bulletin Volume 17 ; 17 ; 1991 >
-    au < exists ; exists ; 1992 ; GDR Bulletin Volume 18 ; 18 ; 1992 >
-    au < exists ; exists ; 1993 ; GDR Bulletin Volume 19 ; 19 ; 1993 >
-    au < exists ; exists ; 1994 ; GDR Bulletin Volume 20-21 ; 20-21 ; 1994 >
-    au < exists ; exists ; 1995 ; GDR Bulletin Volume 22 ; 22 ; 1995 >
-    au < exists ; exists ; 1996 ; GDR Bulletin Volume 23 ; 23 ; 1996 >
-    au < exists ; exists ; 1997 ; GDR Bulletin Volume 24 ; 24 ; 1997 >
-    au < exists ; exists ; 1998 ; GDR Bulletin Volume 25 ; 25 ; 1998 >
-    au < exists ; exists ; 1999 ; GDR Bulletin Volume 26 ; 26 ; 1999 >
+    au < manifest ; exists ; 1975 ; GDR Bulletin Volume 1 ; 1 ; 1975 >
+    au < manifest ; exists ; 1976 ; GDR Bulletin Volume 2 ; 2 ; 1976 >
+    au < manifest ; exists ; 1977 ; GDR Bulletin Volume 3 ; 3 ; 1977 >
+    au < manifest ; exists ; 1978 ; GDR Bulletin Volume 4 ; 4 ; 1978 >
+    au < manifest ; exists ; 1979 ; GDR Bulletin Volume 5 ; 5 ; 1979 >
+    au < manifest ; exists ; 1980 ; GDR Bulletin Volume 6 ; 6 ; 1980 >
+    au < manifest ; exists ; 1981 ; GDR Bulletin Volume 7 ; 7 ; 1981 >
+    au < manifest ; exists ; 1982 ; GDR Bulletin Volume 8 ; 8 ; 1982 >
+    au < manifest ; exists ; 1983 ; GDR Bulletin Volume 9 ; 9 ; 1983 >
+    au < manifest ; exists ; 1984 ; GDR Bulletin Volume 10 ; 10 ; 1984 >
+    au < manifest ; exists ; 1985 ; GDR Bulletin Volume 11 ; 11 ; 1985 >
+    au < manifest ; exists ; 1986 ; GDR Bulletin Volume 12 ; 12 ; 1986 >
+    au < manifest ; exists ; 1987 ; GDR Bulletin Volume 13 ; 13 ; 1987 >
+    au < manifest ; exists ; 1988 ; GDR Bulletin Volume 14 ; 14 ; 1988 >
+    au < manifest ; exists ; 1989 ; GDR Bulletin Volume 15 ; 15 ; 1989 >
+    au < manifest ; exists ; 1990 ; GDR Bulletin Volume 16 ; 16 ; 1990 >
+    au < manifest ; exists ; 1991 ; GDR Bulletin Volume 17 ; 17 ; 1991 >
+    au < manifest ; exists ; 1992 ; GDR Bulletin Volume 18 ; 18 ; 1992 >
+    au < manifest ; exists ; 1993 ; GDR Bulletin Volume 19 ; 19 ; 1993 >
+    au < manifest ; exists ; 1994 ; GDR Bulletin Volume 20-21 ; 20-21 ; 1994 >
+    au < manifest ; exists ; 1995 ; GDR Bulletin Volume 22 ; 22 ; 1995 >
+    au < manifest ; exists ; 1996 ; GDR Bulletin Volume 23 ; 23 ; 1996 >
+    au < manifest ; exists ; 1997 ; GDR Bulletin Volume 24 ; 24 ; 1997 >
+    au < manifest ; exists ; 1998 ; GDR Bulletin Volume 25 ; 25 ; 1998 >
+    au < manifest ; exists ; 1999 ; GDR Bulletin Volume 26 ; 26 ; 1999 >
 
   }
 
@@ -80,7 +82,7 @@
     param[base_url] = http://www.newprairiepress.org/journals/
     param[journal_id] = IJSSW
 
-    comment[expected] = Nothing published yet
+    au < expected ; exists ; 2013 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2013 >
 
   }
 
@@ -95,8 +97,8 @@
     param[base_url] = http://www.jhaponline.org/journals/
     param[journal_id] = jhap
 
-    au < exists ; exists ; 2011-2012 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 >
-    au < expected ; exists ; 2012-2013 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 >
+    au < manifest ; exists ; 2011-2012 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 >
+    au < testing ; exists ; 2012-2013 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 >
 
   }
 
@@ -111,10 +113,10 @@
     param[base_url] = http://www.jftonline.org/journals/
     param[journal_id] = jft
 
-    au < exists ; exists ; 2010 ; Journal of Financial Therapy Volume 1 ; 1 ; 2010 >
-    au < exists ; exists ; 2011 ; Journal of Financial Therapy Volume 2 ; 2 ; 2011 >
-    au < exists ; exists ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 >
-    au < exists ; exists ; 2013 ; Journal of Financial Therapy Volume 4 ; 4 ; 2013 >
+    au < manifest ; exists ; 2010 ; Journal of Financial Therapy Volume 1 ; 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; Journal of Financial Therapy Volume 2 ; 2 ; 2011 >
+    au < testing ; exists ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 >
+    au < manifest ; exists ; 2013 ; Journal of Financial Therapy Volume 4 ; 4 ; 2013 >
 
   }
 
@@ -129,17 +131,17 @@
     param[base_url] = http://www.newprairiepress.org/journals/
     param[journal_id] = jrmh
 
-    au < exists ; exists ; 1996 ; Journal of Rural Mental Health Volume 23 ; 23 ; 1996 >
-    au < exists ; exists ; 1998-1999 ; Journal of Rural Mental Health Volume 24 ; 24 ; 1998 >
-    au < exists ; exists ; 2002 ; Journal of Rural Mental Health Volume 27 ; 27 ; 2002 >
-    au < exists ; exists ; 2003 ; Journal of Rural Mental Health Volume 28 ; 28 ; 2003 >
-    au < exists ; exists ; 2004 ; Journal of Rural Mental Health Volume 29 ; 29 ; 2004 >
-    au < exists ; exists ; 2005 ; Journal of Rural Mental Health Volume 30 ; 30 ; 2005 >
-    au < exists ; exists ; 2006 ; Journal of Rural Mental Health Volume 31 ; 31 ; 2006 >
-    au < exists ; exists ; 2010 ; Journal of Rural Mental Health Volume 34 ; 34 ; 2010 >
-    au < exists ; exists ; 2011 ; Journal of Rural Mental Health Volume 35 ; 35 ; 2011 >
-    au < exists ; exists ; 2012 ; Journal of Rural Mental Health Volume 36 ; 36 ; 2012 >
-    au < exists ; exists ; 2013 ; Journal of Rural Mental Health Volume 37 ; 37 ; 2013 >
+    au < manifest ; exists ; 1996 ; Journal of Rural Mental Health Volume 23 ; 23 ; 1996 >
+    au < manifest ; exists ; 1998-1999 ; Journal of Rural Mental Health Volume 24 ; 24 ; 1998 >
+    au < manifest ; exists ; 2002 ; Journal of Rural Mental Health Volume 27 ; 27 ; 2002 >
+    au < manifest ; exists ; 2003 ; Journal of Rural Mental Health Volume 28 ; 28 ; 2003 >
+    au < manifest ; exists ; 2004 ; Journal of Rural Mental Health Volume 29 ; 29 ; 2004 >
+    au < manifest ; exists ; 2005 ; Journal of Rural Mental Health Volume 30 ; 30 ; 2005 >
+    au < manifest ; exists ; 2006 ; Journal of Rural Mental Health Volume 31 ; 31 ; 2006 >
+    au < manifest ; exists ; 2010 ; Journal of Rural Mental Health Volume 34 ; 34 ; 2010 >
+    au < manifest ; exists ; 2011 ; Journal of Rural Mental Health Volume 35 ; 35 ; 2011 >
+    au < testing ; exists ; 2012 ; Journal of Rural Mental Health Volume 36 ; 36 ; 2012 >
+    au < expected ; exists ; 2013 ; Journal of Rural Mental Health Volume 37 ; 37 ; 2013 >
 
   }
 
@@ -154,9 +156,9 @@
     param[base_url] = http://www.newprairiepress.org/journals/
     param[journal_id] = CULS
 
-    au < exists ; exists ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; 2011 >
-    au < exists ; exists ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
-    au < exists ; exists ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 ; 2013 >
+    au < manifest ; exists ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; 2011 >
+    au < testing ; exists ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
+    au < manifest ; exists ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 ; 2013 >
 
   }
 
@@ -173,13 +175,13 @@
     param[base_url] = http://www.ojrrp.org/journals/
     param[journal_id] = ojrrp
 
-    au < exists ; exists ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; 2006 >
-    au < exists ; exists ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; 2007 >
-    au < exists ; exists ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; 2008 >
-    au < exists ; exists ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; 2009 >
-    au < exists ; exists ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; 2010 >
-    au < exists ; exists ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; 2011 >
-    au < exists ; exists ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
+    au < manifest ; exists ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; 2006 >
+    au < manifest ; exists ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; 2007 >
+    au < manifest ; exists ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; 2008 >
+    au < manifest ; exists ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; 2009 >
+    au < manifest ; exists ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; 2010 >
+    au < manifest ; exists ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; 2011 >
+    au < testing ; exists ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
     au < expected ; exists ; 2013 ; Online Journal of Rural Research & Policy Volume 8 ; 8 ; 2013 >
 
   }
