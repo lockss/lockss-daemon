@@ -4523,7 +4523,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of Nanobiotechnology Volume 8 ; 8 >
       au < crawling ; exists ; 2011 ; Journal of Nanobiotechnology Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Journal of Nanobiotechnology Volume 10 ; 10 >
-      au < expected ; exists ; 2013 ; Journal of Nanobiotechnology Volume 11 ; 11 >
+      au < manifest ; exists ; 2013 ; Journal of Nanobiotechnology Volume 11 ; 11 >
 
     }
 
@@ -4548,7 +4548,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of Negative Results in Biomedicine Volume 9 ; 9 >
       au < crawling ; exists ; 2011 ; Journal of Negative Results in Biomedicine Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Journal of Negative Results in Biomedicine Volume 11 ; 11 >
-      au < expected ; exists ; 2013 ; Journal of Negative Results in BioMedicine Volume 12 ; 12 >
+      au < manifest ; exists ; 2013 ; Journal of Negative Results in BioMedicine Volume 12 ; 12 >
 
     }
 
@@ -4564,7 +4564,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jneurodevdisorders.com/
       param[journal_issn] = 1866-1955
 
-      au < exists ; exists ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 >
+      au < manifest ; exists ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 >
       au < expected ; exists ; 2013 ; Journal of Neurodevelopmental Disorders Volume 5 ; 5 >
 
     }
@@ -4588,7 +4588,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of NeuroEngineering and Rehabilitation Volume 7 ; 7 >
       au < crawling ; exists ; 2011 ; Journal of NeuroEngineering and Rehabilitation Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Journal of NeuroEngineering and Rehabilitation Volume 9 ; 9 >
-      au < expected ; exists ; 2013 ; Journal of NeuroEngineering and Rehabilitation Volume 10 ; 10 >
+      au < manifest ; exists ; 2013 ; Journal of NeuroEngineering and Rehabilitation Volume 10 ; 10 >
 
     }
 
@@ -4611,7 +4611,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of Neuroinflammation Volume 7 ; 7 >
       au < crawling ; exists ; 2011 ; Journal of Neuroinflammation Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Journal of Neuroinflammation Volume 9 ; 9 >
-      au < expected ; exists ; 2013 ; Journal of Neuroinflammation Volume 10 ; 10 >
+      au < manifest ; exists ; 2013 ; Journal of Neuroinflammation Volume 10 ; 10 >
 
     }
 
@@ -4632,7 +4632,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of Occupational Medicine and Toxicology Volume 5 ; 5 >
       au < crawling ; exists ; 2011 ; Journal of Occupational Medicine and Toxicology Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Journal of Occupational Medicine and Toxicology Volume 7 ; 7 >
-      au < expected ; exists ; 2013 ; Journal of Occupational Medicine and Toxicology Volume 8 ; 8 >
+      au < manifest ; exists ; 2013 ; Journal of Occupational Medicine and Toxicology Volume 8 ; 8 >
 
     }
 
@@ -4653,7 +4653,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of Orthopaedic Surgery and Research Volume 5 ; 5 >
       au < crawling ; exists ; 2011 ; Journal of Orthopaedic Surgery and Research Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Journal of Orthopaedic Surgery and Research Volume 7 ; 7 >
-      au < expected ; exists ; 2013 ; Journal of Orthopaedic Surgery and Research Volume 8 ; 8 >
+      au < manifest ; exists ; 2013 ; Journal of Orthopaedic Surgery and Research Volume 8 ; 8 >
 
     }
 
@@ -4686,7 +4686,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of Ovarian Research Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; Journal of Ovarian Research Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Journal of Ovarian Research Volume 5 ; 5 >
-      au < expected ; exists ; 2013 ; Journal of Ovarian Research Volume 6 ; 6 >
+      au < manifest ; exists ; 2013 ; Journal of Ovarian Research Volume 6 ; 6 >
 
     }
 
@@ -4701,7 +4701,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1880-6805
 
       au < crawling ; exists ; 2012 ; Journal of Physiological Anthropology Volume 31 ; 31 >
-      au < expected ; exists ; 2013 ; Journal of Physiological Anthropology Volume 32 ; 32 >
+      au < manifest ; exists ; 2013 ; Journal of Physiological Anthropology Volume 32 ; 32 >
 
     }
 
@@ -4724,7 +4724,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of the International Society of Sports Nutrition Volume 7 ; 7 >
       au < crawling ; exists ; 2011 ; Journal of the International Society of Sports Nutrition Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Journal of the International Society of Sports Nutrition Volume 9 ; 9 >
-      au < expected ; exists ; 2013 ; Journal of the International Society of Sports Nutrition Volume 10 ; 10 >
+      au < manifest ; exists ; 2013 ; Journal of the International Society of Sports Nutrition Volume 10 ; 10 >
 
     }
 
@@ -4762,7 +4762,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of Translational Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2011 ; Journal of Translational Medicine Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Journal of Translational Medicine Volume 10 ; 10 >
-      au < expected ; exists ; 2013 ; Journal of Translational Medicine Volume 11 ; 11 >
+      au < manifest ; exists ; 2013 ; Journal of Translational Medicine Volume 11 ; 11 >
 
     }
 
@@ -4782,7 +4782,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Journal of Trauma Management & Outcomes Volume 4 ; 4 >
       au < crawling ; exists ; 2011 ; Journal of Trauma Management & Outcomes Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Journal of Trauma Management & Outcomes Volume 6 ; 6 >
-      au < expected ; exists ; 2013 ; Journal of Trauma Management & Outcomes Volume 7 ; 7 >
+      au < manifest ; exists ; 2013 ; Journal of Trauma Management & Outcomes Volume 7 ; 7 >
 
     }
 
@@ -4821,7 +4821,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Lipids in Health and Disease Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Lipids in Health and Disease Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Lipids in Health and Disease Volume 11 ; 11 >
-      au < expected ; exists ; 2013 ; Lipids in Health and Disease Volume 12 ; 12 >
+      au < manifest ; exists ; 2013 ; Lipids in Health and Disease Volume 12 ; 12 >
 
     }
 
@@ -4834,8 +4834,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.longevityandhealthspan.com/
       param[journal_issn] = 2046-2395
 
-      au < exists ; exists ; 2012 ; Longevity & Healthspan Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; Longevity & Healthspan Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; Longevity & Healthspan Volume 1 ; 1 >
+      au < manifest ; exists ; 2013 ; Longevity & Healthspan Volume 2 ; 2 >
 
     }
 
@@ -4860,7 +4860,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; crawling ; 2010 ; Malaria Journal Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Malaria Journal Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Malaria Journal Volume 11 ; 11 >
-      au < expected ; exists ; 2013 ; Malaria Journal Volume 12 ; 12 >
+      au < manifest ; exists ; 2013 ; Malaria Journal Volume 12 ; 12 >
 
     }
 
@@ -4876,7 +4876,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; crawling ; 2011 ; Medical Gas Research Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Medical Gas Research Volume 2 ; 2 >
-      au < expected ; exists ; 2013 ; Medical Gas Research Volume 3 ; 3 >
+      au < manifest ; exists ; 2013 ; Medical Gas Research Volume 3 ; 3 >
 
     }
 
@@ -4901,7 +4901,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < testing ; exists ; 2010 ; Microbial Cell Factories Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Microbial Cell Factories Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Microbial Cell Factories Volume 11 ; 11 >
-      au < expected ; exists ; 2013 ; Microbial Cell Factories Volume 12 ; 12 >
+      au < manifest ; exists ; 2013 ; Microbial Cell Factories Volume 12 ; 12 >
 
     }
 
@@ -4917,7 +4917,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; crawling ; 2011 ; Microbial Informatics and Experimentation Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Microbial Informatics and Experimentation Volume 2 ; 2 >
-      au < expected ; exists ; 2013 ; Microbial Informatics and Experimentation Volume 3 ; 3 >
+      au < manifest ; exists ; 2013 ; Microbial Informatics and Experimentation Volume 3 ; 3 >
 
     }
 
@@ -4931,7 +4931,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.microbiomejournal.com/
       param[journal_issn] = 2049-2618
 
-      au < expected ; exists ; 2013 ; Microbiome Volume 1 ; 1 >
+      au < manifest ; exists ; 2013 ; Microbiome Volume 1 ; 1 >
 
     }
 
@@ -4948,7 +4948,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Mobile DNA Volume 1 ; 1 >
       au < crawling ; exists ; 2011 ; Mobile DNA Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; Mobile DNA Volume 3 ; 3 >
-      au < expected ; exists ; 2013 ; Mobile DNA Volume 4 ; 4 >
+      au < manifest ; exists ; 2013 ; Mobile DNA Volume 4 ; 4 >
 
     }
 
@@ -4965,7 +4965,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2010 ; Molecular Autism Volume 1 ; 1 >
       au < crawling ; exists ; 2011 ; Molecular Autism Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; Molecular Autism Volume 3 ; 3 >
-      au < expected ; exists ; 2013 ; Molecular Autism Volume 4 ; 4 >
+      au < manifest ; exists ; 2013 ; Molecular Autism Volume 4 ; 4 >
 
     }
 
@@ -4984,7 +4984,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; crawling ; 2010 ; Molecular Brain Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; Molecular Brain Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; Molecular Brain Volume 5 ; 5 >
-      au < expected ; exists ; 2013 ; Molecular Brain Volume 6 ; 6 >
+      au < manifest ; exists ; 2013 ; Molecular Brain Volume 6 ; 6 >
 
     }
 
