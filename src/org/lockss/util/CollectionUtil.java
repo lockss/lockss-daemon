@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.19 2011-01-08 15:38:57 pgust Exp $
+ * $Id: CollectionUtil.java,v 1.20 2013-02-08 23:23:20 clairegriffin Exp $
  */
 
 /*
@@ -275,6 +275,18 @@ public class CollectionUtil {
       }
     }
     return result;
+  }
+
+  /**
+   * Take a typed collections and return a sorted list
+    * @param coll the collection of type T to sort
+   * @return T a sorted list of type T
+   */
+  public static
+  <T extends Comparable<? super T>> List<T> asSortedList(Collection<T> coll) {
+    List<T> list = new ArrayList<T>(coll);
+    java.util.Collections.sort(list);
+    return list;
   }
 
 }
