@@ -6,7 +6,7 @@
 
   comment[platform] = Atypon publisher
   
-  plugin = needs.plugin  
+  plugin = org.lockss.plugin.americanmeteorologicalsociety.AMetSocPlugin  
   implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://journals.ametsoc.org/
   
