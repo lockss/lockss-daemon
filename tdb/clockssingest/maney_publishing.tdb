@@ -2622,7 +2622,6 @@
     param[journal_issn] = 0068-1288
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[notReady] = crawl failure, RU4463
 
     au < manifest ; exists ; 1980 ; Journal of the British Archaeological Association Volume 133 ; 133 > 
     au < manifest ; exists ; 1981 ; Journal of the British Archaeological Association Volume 134 ; 134 > 
@@ -2656,7 +2655,7 @@
     au < manifest ; exists ; 2009 ; Journal of the British Archaeological Association Volume 162 ; 162 > 
     au < released ; crawling ; 2010 ; Journal of the British Archaeological Association Volume 163 ; 163 >  
     au < released ; crawling ; 2011 ; Journal of the British Archaeological Association Volume 164 ; 164 >  
-    au < notReady ; exists ; 2012 ; Journal of the British Archaeological Association Volume 165 ; 165 > 
+    au < released ; manifest ; 2012 ; Journal of the British Archaeological Association Volume 165 ; 165 > 
     au < expected ; exists ; 2013 ; Journal of the British Archaeological Association Volume 166 ; 166 > 
 
   }
@@ -3993,7 +3992,6 @@
     param[journal_issn] = 0079-4236
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[notReady] = crawl failure, RU4463, missing article page
 
     au < manifest ; exists ; 2005 ; Post-Medieval Archaeology Volume 39 ; 39 > 
     au < manifest ; exists ; 2006 ; Post-Medieval Archaeology Volume 40 ; 40 > 
@@ -4002,7 +4000,7 @@
     au < manifest ; exists ; 2009 ; Post-Medieval Archaeology Volume 43 ; 43 > 
     au < released ; crawling ; 2010 ; Post-Medieval Archaeology Volume 44 ; 44 > 
     au < released ; crawling ; 2011 ; Post-Medieval Archaeology Volume 45 ; 45 > 
-    au < notReady ; exists ; 2012 ; Post-Medieval Archaeology Volume 46 ; 46 > 
+    au < released ; manifest ; 2012 ; Post-Medieval Archaeology Volume 46 ; 46 > 
     au < expected ; exists ; 2013 ; Post-Medieval Archaeology Volume 47 ; 47 > 
 
   }
@@ -4132,15 +4130,13 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     
-    comment[notReady] = crawl failure, RU4463, missing article page
-
     au < manifest ; exists ; 2006 ; Publications of the English Goethe Society Volume 75 ; 75 > 
     au < manifest ; exists ; 2007 ; Publications of the English Goethe Society Volume 76 ; 76 > 
     au < manifest ; exists ; 2008 ; Publications of the English Goethe Society Volume 77 ; 77 > 
     au < manifest ; exists ; 2009 ; Publications of the English Goethe Society Volume 78 ; 78 > 
     au < released ; crawling ; 2010 ; Publications of the English Goethe Society Volume 79 ; 79 > 
     au < released ; crawling ; 2011 ; Publications of the English Goethe Society Volume 80 ; 80 > 
-    au < notReady ; exists ; 2012 ; Publications of the English Goethe Society Volume 81 ; 81 > 
+    au < released ; manifest ; 2012 ; Publications of the English Goethe Society Volume 81 ; 81 > 
     au < expected ; exists ; 2013 ; Publications of the English Goethe Society Volume 82 ; 82 > 
 
   }
