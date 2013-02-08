@@ -17,15 +17,16 @@
     param[base_url] = http://www.radiology.casereports.net/
     param[journal_id] = rcr
     implicit < status ; year ; name ; volume ; param[year] >
-    comment[notReady] = V 2 and 4. see RU3907. Attempt retest.
+    comment[notReady] = V2 RU3907.
    
     au < released ; 2006 ; Radiology Case Reports Volume 1 ; 1 ; 2006 >
     au < notReady ; 2007 ; Radiology Case Reports Volume 2 ; 2 ; 2007 >
     au < released ; 2008 ; Radiology Case Reports Volume 3 ; 3 ; 2008 >
-    au < testing ; 2009 ; Radiology Case Reports Volume 4 ; 4 ; 2009 >
+    au < ready ; 2009 ; Radiology Case Reports Volume 4 ; 4 ; 2009 >
     au < released ; 2010 ; Radiology Case Reports Volume 5 ; 5 ; 2010 >
     au < released ; 2011 ; Radiology Case Reports Volume 6 ; 6 ; 2011 >
     au < released ; 2012 ; Radiology Case Reports Volume 7 ; 7 ; 2012 >
+    au < exists ; 2013 ; Radiology Case Reports Volume 8 ; 8 ; 2013 >
   
   }
 
