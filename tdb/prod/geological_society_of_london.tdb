@@ -89,7 +89,7 @@
     param[base_url] = http://mem.lyellcollection.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; testing ; 1958 ; Geological Society of London Memoirs Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1958 ; Geological Society of London Memoirs Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 1960 ; Geological Society of London Memoirs Volume 2 ; 2 >
     au < HighWirePressPlugin ; down ; 1962 ; Geological Society of London Memoirs Volume 3 ; 3 >
     au < HighWirePressPlugin ; down ; 1968 ; Geological Society of London Memoirs Volume 4 ; 4 >
@@ -124,7 +124,7 @@
     au < HighWirePressPlugin ; down ; 2008 ; Geological Society of London Memoirs Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Memoirs Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Geological Society of London Memoirs Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Memoirs Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Geological Society of London Memoirs Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Geological Society of London Memoirs Volume 37 ; 37 >
 
   }
@@ -142,7 +142,7 @@
     param[base_url] = http://sp.lyellcollection.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; testing ; 1964 ; Geological Society of London Special Publications Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1964 ; Geological Society of London Special Publications Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 1967 ; Geological Society of London Special Publications Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 1969 ; Geological Society of London Special Publications Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 1974 ; Geological Society of London Special Publications Volume 4 ; 4 >
@@ -498,21 +498,21 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Special Publications Volume 354 ; 354 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Special Publications Volume 355 ; 355 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Special Publications Volume 356 ; 356 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Geological Society of London Special Publications Volume 357 ; 357 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Geological Society of London Special Publications Volume 358 ; 358 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Geological Society of London Special Publications Volume 359 ; 359 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Geological Society of London Special Publications Volume 360 ; 360 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 361 ; 361 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 362 ; 362 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 363 ; 363 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 364 ; 364 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 365 ; 365 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Geological Society of London Special Publications Volume 357 ; 357 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Geological Society of London Special Publications Volume 358 ; 358 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Geological Society of London Special Publications Volume 359 ; 359 >
+    au < HighWirePressH20Plugin ; notReady ; 2011 ; Geological Society of London Special Publications Volume 360 ; 360 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Geological Society of London Special Publications Volume 361 ; 361 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Geological Society of London Special Publications Volume 362 ; 362 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Geological Society of London Special Publications Volume 363 ; 363 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Geological Society of London Special Publications Volume 364 ; 364 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Geological Society of London Special Publications Volume 365 ; 365 >
     au < HighWirePressH20Plugin ; doesNotExist ; 2012 ; Geological Society of London Special Publications Volume 366 ; 366 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 367 ; 367 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 368 ; 368 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Geological Society of London Special Publications Volume 367 ; 367 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Geological Society of London Special Publications Volume 368 ; 368 >
     au < HighWirePressH20Plugin ; exists ; 2012 ; Geological Society of London Special Publications Volume 369 ; 369 >
     au < HighWirePressH20Plugin ; ready ; 2012 ; Geological Society of London Special Publications Volume 370 ; 370 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Geological Society of London Special Publications Volume 371 ; 371 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Geological Society of London Special Publications Volume 371 ; 371 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Geological Society of London Special Publications Volume 372 ; 372 >
 
   }
@@ -589,24 +589,24 @@
       param[base_url] = http://pg.lyellcollection.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1995 ; Petroleum Geoscience Volume 1 ; 1 >
-      au < testing ; 1996 ; Petroleum Geoscience Volume 2 ; 2 >
-      au < testing ; 1997 ; Petroleum Geoscience Volume 3 ; 3 >
-      au < testing ; 1998 ; Petroleum Geoscience Volume 4 ; 4 >
+      au < ready ; 1995 ; Petroleum Geoscience Volume 1 ; 1 >
+      au < ready ; 1996 ; Petroleum Geoscience Volume 2 ; 2 >
+      au < ready ; 1997 ; Petroleum Geoscience Volume 3 ; 3 >
+      au < ready ; 1998 ; Petroleum Geoscience Volume 4 ; 4 >
       au < ready ; 1999 ; Petroleum Geoscience Volume 5 ; 5 >
       au < ready ; 2000 ; Petroleum Geoscience Volume 6 ; 6 >
-      au < testing ; 2001 ; Petroleum Geoscience Volume 7 ; 7 >
-      au < testing ; 2002 ; Petroleum Geoscience Volume 8 ; 8 >
-      au < testing ; 2003 ; Petroleum Geoscience Volume 9 ; 9 >
+      au < ready ; 2001 ; Petroleum Geoscience Volume 7 ; 7 >
+      au < ready ; 2002 ; Petroleum Geoscience Volume 8 ; 8 >
+      au < ready ; 2003 ; Petroleum Geoscience Volume 9 ; 9 >
       au < ready ; 2004 ; Petroleum Geoscience Volume 10 ; 10 >
       au < ready ; 2005 ; Petroleum Geoscience Volume 11 ; 11 >
       au < ready ; 2006 ; Petroleum Geoscience Volume 12 ; 12 >
-      au < testing ; 2007 ; Petroleum Geoscience Volume 13 ; 13 >
-      au < testing ; 2008 ; Petroleum Geoscience Volume 14 ; 14 >
+      au < ready ; 2007 ; Petroleum Geoscience Volume 13 ; 13 >
+      au < ready ; 2008 ; Petroleum Geoscience Volume 14 ; 14 >
       au < ready ; 2009 ; Petroleum Geoscience Volume 15 ; 15 >
-      au < testing ; 2010 ; Petroleum Geoscience Volume 16 ; 16 >
+      au < ready ; 2010 ; Petroleum Geoscience Volume 16 ; 16 >
       au < ready ; 2011 ; Petroleum Geoscience Volume 17 ; 17 >
-      au < testing ; 2012 ; Petroleum Geoscience Volume 18 ; 18 >
+      au < ready ; 2012 ; Petroleum Geoscience Volume 18 ; 18 >
       au < expected ; 2013 ; Petroleum Geoscience Volume 19 ; 19 >
     
   }
@@ -684,17 +684,17 @@
     param[base_url] = http://trn.lyellcollection.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < testing ; 1811 ; Transactions of the Geological Society of London Series 1 Volume 1 ; s1-1 >
-    au < testing ; 1814 ; Transactions of the Geological Society of London Series 1 Volume 2 ; s1-2 >
-    au < testing ; 1816 ; Transactions of the Geological Society of London Series 1 Volume 3 ; s1-3 >
-    au < testing ; 1817 ; Transactions of the Geological Society of London Series 1 Volume 4 ; s1-4 >
-    au < testing ; 1821 ; Transactions of the Geological Society of London Series 1 Volume 5 ; s1-5 >
-    au < testing ; 1822-1824 ; Transactions of the Geological Society of London Series 2 Volume 1 ; s2-1 >
-    au < testing ; 1826-1828 ; Transactions of the Geological Society of London Series 2 Volume 2 ; s2-2 >
+    au < ready ; 1811 ; Transactions of the Geological Society of London Series 1 Volume 1 ; s1-1 >
+    au < ready ; 1814 ; Transactions of the Geological Society of London Series 1 Volume 2 ; s1-2 >
+    au < ready ; 1816 ; Transactions of the Geological Society of London Series 1 Volume 3 ; s1-3 >
+    au < ready ; 1817 ; Transactions of the Geological Society of London Series 1 Volume 4 ; s1-4 >
+    au < ready ; 1821 ; Transactions of the Geological Society of London Series 1 Volume 5 ; s1-5 >
+    au < ready ; 1822-1824 ; Transactions of the Geological Society of London Series 2 Volume 1 ; s2-1 >
+    au < ready ; 1826-1828 ; Transactions of the Geological Society of London Series 2 Volume 2 ; s2-2 >
     au < ready ; 1829-1835 ; Transactions of the Geological Society of London Series 2 Volume 3 ; s2-3 >
-    au < testing ; 1835-1836 ; Transactions of the Geological Society of London Series 2 Volume 4 ; s2-4 >
+    au < ready ; 1835-1836 ; Transactions of the Geological Society of London Series 2 Volume 4 ; s2-4 >
     au < ready ; 1837-1840 ; Transactions of the Geological Society of London Series 2 Volume 5 ; s2-5 >
-    au < testing ; 1841-1842 ; Transactions of the Geological Society of London Series 2 Volume 6 ; s2-6 >
+    au < ready ; 1841-1842 ; Transactions of the Geological Society of London Series 2 Volume 6 ; s2-6 >
     au < ready ; 1845-1856 ; Transactions of the Geological Society of London Series 2 Volume 7 ; s2-7 >
 
   }
