@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.27 2013-01-02 20:54:30 tlipkis Exp $
+ * $Id: Constants.java,v 1.28 2013-02-08 23:23:57 clairegriffin Exp $
  */
 
 /*
@@ -193,5 +193,14 @@ public interface Constants {
   
   /** The MIME type string for RIS citation files ({@value}). */
   public static String MIME_TYPE_RIS = "application/x-research-info-systems";
+
+  /** The Form Encoding type string for a "get" or "post" as url ({@value}). */
+  public static String FORM_ENCODING_URL = "application/x-www-form-urlencoded";
+
+  /** The Form Encoding type string for binary "post" ({@value}). */
+  public static String FORM_ENCODING_DATA = "multipart/form-data";
+
+  /** Form Encoding type string for plain "post" ({@value}). */
+  public static String FORM_ENCODING_PLAIN = "text/plain";
 
 }
