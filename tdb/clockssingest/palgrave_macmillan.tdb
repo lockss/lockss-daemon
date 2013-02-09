@@ -11,9 +11,9 @@
     {
 
       title <
-        name = Acta Politica;
-        issn = 0001-6810;
-        eissn = 1741-1416;
+        name = Acta Politica ;
+        issn = 0001-6810 ;
+        eissn = 1741-1416 ;
         issnl = 0001-6810
       >
 
@@ -36,9 +36,9 @@
     {
 
       title <
-        name = Asian Business & Management;
-        issn = 1472-4782;
-        eissn = 1476-9328;
+        name = Asian Business & Management ;
+        issn = 1472-4782 ;
+        eissn = 1476-9328 ;
         issnl = 1472-4782
       >
 
@@ -62,9 +62,9 @@
     {
 
       title <
-        name = British Politics;
-        issn = 1746-918X;
-        eissn = 1746-9198;
+        name = British Politics ;
+        issn = 1746-918X ;
+        eissn = 1746-9198 ;
         issnl = 1746-918X
       >
 
@@ -84,61 +84,127 @@
     {
 
       title <
-        name = Comparative European Politics;
-        issn = 1472-4790;
-        eissn = 1740-388X;
+        name = Comparative European Politics ;
+        issn = 1472-4790 ;
+        eissn = 1740-388X ;
         issnl = 1472-4790
       >
 
       param[journal_id] = cep
 
+      au < exists ; exists ; 2003 ; Comparative European Politics Volume 1 ; 2003 ; 1 >
+      au < exists ; exists ; 2004 ; Comparative European Politics Volume 2 ; 2004 ; 2 >
+      au < exists ; exists ; 2005 ; Comparative European Politics Volume 3 ; 2005 ; 3 >
+      au < exists ; exists ; 2006 ; Comparative European Politics Volume 4 ; 2006 ; 4 >
+      au < exists ; exists ; 2007 ; Comparative European Politics Volume 5 ; 2007 ; 5 >
+      au < exists ; exists ; 2008 ; Comparative European Politics Volume 6 ; 2008 ; 6 >
+      au < exists ; exists ; 2009 ; Comparative European Politics Volume 7 ; 2009 ; 7 >
+      au < exists ; exists ; 2010 ; Comparative European Politics Volume 8 ; 2010 ; 8 >
+      au < exists ; exists ; 2011 ; Comparative European Politics Volume 9 ; 2011 ; 9 >
+      au < exists ; exists ; 2012 ; Comparative European Politics Volume 10 ; 2012 ; 10 >
+      au < exists ; exists ; 2013 ; Comparative European Politics Volume 11 ; 2013 ; 11 >
+
     }
 
     {
 
       title <
-        name = Contemporary Political Theory;
-        issn = 1470-8914;
-        eissn = 1476-9336;
+        name = Contemporary Political Theory ;
+        issn = 1470-8914 ;
+        eissn = 1476-9336 ;
         issnl = 1470-8914
       >
 
       param[journal_id] = cpt
 
+      au < exists ; exists ; 2002 ; Contemporary Political Theory Volume 1 ; 2002 ; 1 >
+      au < exists ; exists ; 2003 ; Contemporary Political Theory Volume 2 ; 2003 ; 2 >
+      au < exists ; exists ; 2004 ; Contemporary Political Theory Volume 3 ; 2004 ; 3 >
+      au < exists ; exists ; 2005 ; Contemporary Political Theory Volume 4 ; 2005 ; 4 >
+      au < exists ; exists ; 2006 ; Contemporary Political Theory Volume 5 ; 2006 ; 5 >
+      au < exists ; exists ; 2007 ; Contemporary Political Theory Volume 6 ; 2007 ; 6 >
+      au < exists ; exists ; 2008 ; Contemporary Political Theory Volume 7 ; 2008 ; 7 >
+      au < exists ; exists ; 2009 ; Contemporary Political Theory Volume 8 ; 2009 ; 8 >
+      au < exists ; exists ; 2010 ; Contemporary Political Theory Volume 9 ; 2010 ; 9 >
+      au < exists ; exists ; 2011 ; Contemporary Political Theory Volume 10 ; 2011 ; 10 >
+      au < exists ; exists ; 2012 ; Contemporary Political Theory Volume 11 ; 2012 ; 11 >
+      au < exists ; exists ; 2013 ; Contemporary Political Theory Volume 12 ; 2013 ; 12 >
+
     }
 
     {
 
       title <
-        name = Corporate Reputation Review;
-        issn = 1363-3589;
-        eissn = 1479-1889;
+        name = Corporate Reputation Review ;
+        issn = 1363-3589 ;
+        eissn = 1479-1889 ;
         issnl = 1363-3589
       >
 
       param[journal_id] = crr
 
+      au < exists ; exists ; 1997 ; Corporate Reputation Review Volume 1 (1997) ; 1997 ; 1 >
+      au < exists ; exists ; 1998 ; Corporate Reputation Review Volume 1 (1998) ; 1998 ; 1 >
+      au < exists ; exists ; 1998 ; Corporate Reputation Review Volume 2 (1998) ; 1998 ; 2 >
+      au < exists ; exists ; 1999 ; Corporate Reputation Review Volume 2 (1999) ; 1999 ; 2 >
+      au < exists ; exists ; 2000 ; Corporate Reputation Review Volume 3 (2000) ; 2000 ; 3 >
+      au < exists ; exists ; 2001 ; Corporate Reputation Review Volume 4 (2001) ; 2001 ; 4 >
+      au < exists ; exists ; 2002 ; Corporate Reputation Review Volume 4 (2002) ; 2002 ; 4 >
+      au < exists ; exists ; 2002 ; Corporate Reputation Review Volume 5 (2002) ; 2002 ; 5 >
+      au < exists ; exists ; 2003 ; Corporate Reputation Review Volume 5 (2003) ; 2003 ; 5 >
+      au < exists ; exists ; 2003 ; Corporate Reputation Review Volume 6 (2003) ; 2003 ; 6 >
+      au < exists ; exists ; 2004 ; Corporate Reputation Review Volume 6 (2004) ; 2004 ; 6 >
+      au < exists ; exists ; 2004 ; Corporate Reputation Review Volume 7 (2004) ; 2004 ; 7 >
+      au < exists ; exists ; 2005 ; Corporate Reputation Review Volume 7 (2005) ; 2005 ; 7 >
+      au < exists ; exists ; 2005 ; Corporate Reputation Review Volume 8 (2005) ; 2005 ; 8 >
+      au < exists ; exists ; 2006 ; Corporate Reputation Review Volume 8 (2006) ; 2006 ; 8 >
+      au < exists ; exists ; 2006 ; Corporate Reputation Review Volume 9 (2006) ; 2006 ; 9 >
+      au < exists ; exists ; 2007 ; Corporate Reputation Review Volume 10 (2007) ; 2007 ; 10 >
+      au < exists ; exists ; 2008 ; Corporate Reputation Review Volume 11 (2008) ; 2008 ; 11 >
+      au < exists ; exists ; 2009 ; Corporate Reputation Review Volume 12 (2009) ; 2009 ; 12 >
+      au < exists ; exists ; 2010 ; Corporate Reputation Review Volume 12 (2010) ; 2010 ; 12 >
+      au < exists ; exists ; 2010 ; Corporate Reputation Review Volume 13 ; 2010 ; 13 >
+      au < exists ; exists ; 2011 ; Corporate Reputation Review Volume 14 ; 2011 ; 14 >
+      au < exists ; exists ; 2012 ; Corporate Reputation Review Volume 15 ; 2012 ; 15 >
+      au < expected ; exists ; 2013 ; Corporate Reputation Review Volume 16 ; 2013 ; 16 >
+
     }
 
     {
 
       title <
-        name = Crime Prevention & Community Safety;
-        issn = 1460-3780;
-        eissn = 1743-4629;
+        name = Crime Prevention & Community Safety ;
+        issn = 1460-3780 ;
+        eissn = 1743-4629 ;
         issnl = 1460-3780
       >
 
       param[journal_id] = cpcs
 
+      au < exists ; exists ; 1999 ; Crime Prevention & Community Safety Volume 1 ; 1999 ; 1 >
+      au < exists ; exists ; 2000 ; Crime Prevention & Community Safety Volume 2 ; 2000 ; 2 >
+      au < exists ; exists ; 2001 ; Crime Prevention & Community Safety Volume 3 ; 2001 ; 3 >
+      au < exists ; exists ; 2002 ; Crime Prevention & Community Safety Volume 4 ; 2002 ; 4 >
+      au < exists ; exists ; 2003 ; Crime Prevention & Community Safety Volume 5 ; 2003 ; 5 >
+      au < exists ; exists ; 2004 ; Crime Prevention & Community Safety Volume 6 ; 2004 ; 6 >
+      au < exists ; exists ; 2005 ; Crime Prevention & Community Safety Volume 7 ; 2005 ; 7 >
+      au < exists ; exists ; 2006 ; Crime Prevention & Community Safety Volume 8 ; 2006 ; 8 >
+      au < exists ; exists ; 2007 ; Crime Prevention & Community Safety Volume 9 ; 2007 ; 9 >
+      au < exists ; exists ; 2008 ; Crime Prevention & Community Safety Volume 10 ; 2008 ; 10 >
+      au < exists ; exists ; 2009 ; Crime Prevention & Community Safety Volume 11 ; 2009 ; 11 >
+      au < exists ; exists ; 2010 ; Crime Prevention & Community Safety Volume 12 ; 2010 ; 12 >
+      au < exists ; exists ; 2011 ; Crime Prevention & Community Safety Volume 13 ; 2011 ; 13 >
+      au < exists ; exists ; 2012 ; Crime Prevention & Community Safety Volume 14 ; 2012 ; 14 >
+      au < exists ; exists ; 2013 ; Crime Prevention & Community Safety Volume 15 ; 2013 ; 15 >
+
     }
 
     {
 
       title <
-        name = French Politics;
-        issn = 1476-3419;
-        eissn = 1476-3427;
+        name = French Politics ;
+        issn = 1476-3419 ;
+        eissn = 1476-3427 ;
         issnl = 1476-3419
       >
 
@@ -149,9 +215,9 @@
     {
 
       title <
-        name = Interest Groups & Advocacy;
-        issn = 2047-7414;
-        eissn = 2047-7422;
+        name = Interest Groups & Advocacy ;
+        issn = 2047-7414 ;
+        eissn = 2047-7422 ;
         issnl = 2047-7414
       >
 
@@ -162,9 +228,9 @@
     {
 
       title <
-        name = International Journal of Disclosure & Governance;
-        issn = 1741-3591;
-        eissn = 1746-6539;
+        name = International Journal of Disclosure & Governance ;
+        issn = 1741-3591 ;
+        eissn = 1746-6539 ;
         issnl = 1741-3591
       >
 
@@ -175,9 +241,9 @@
     {
 
       title <
-        name = International Journal of Educational Advancement;
-        issn = 1744-6503;
-        eissn = 1744-6511;
+        name = International Journal of Educational Advancement ;
+        issn = 1744-6503 ;
+        eissn = 1744-6511 ;
         issnl = 1744-6503
       >
 
@@ -188,9 +254,9 @@
     {
 
       title <
-        name = International Politics;
-        issn = 1384-5748;
-        eissn = 1740-3898;
+        name = International Politics ;
+        issn = 1384-5748 ;
+        eissn = 1740-3898 ;
         issnl = 1384-5748
       >
 
@@ -201,9 +267,9 @@
     {
 
       title <
-        name = Journal of Asset Management;
-        issn = 1470-8272;
-        eissn = 1479-179X;
+        name = Journal of Asset Management ;
+        issn = 1470-8272 ;
+        eissn = 1479-179X ;
         issnl = 1470-8272
       >
 
@@ -214,9 +280,9 @@
     {
 
       title <
-        name = Journal of Banking Regulation;
-        issn = 1745-6452;
-        eissn = 1750-2071;
+        name = Journal of Banking Regulation ;
+        issn = 1745-6452 ;
+        eissn = 1750-2071 ;
         issnl = 1745-6452
       >
 
@@ -227,9 +293,9 @@
     {
 
       title <
-        name = Journal of Brand Management;
-        issn = 1350-231X;
-        eissn = 1479-1803;
+        name = Journal of Brand Management ;
+        issn = 1350-231X ;
+        eissn = 1479-1803 ;
         issnl = 1350-231X
       >
 
@@ -240,9 +306,9 @@
     {
 
       title <
-        name = Journal of Building Appraisal;
-        issn = 1742-8262;
-        eissn = 1744-9545;
+        name = Journal of Building Appraisal ;
+        issn = 1742-8262 ;
+        eissn = 1744-9545 ;
         issnl = 1742-8262
       >
 
@@ -253,9 +319,9 @@
     {
 
       title <
-        name = Journal of Database Marketing & Customer Strategy Management;
-        issn = 1741-2439;
-        eissn = 1741-2447;
+        name = Journal of Database Marketing & Customer Strategy Management ;
+        issn = 1741-2439 ;
+        eissn = 1741-2447 ;
         issnl = 1741-2439
       >
 
@@ -266,9 +332,9 @@
     {
 
       title <
-        name = Journal of Derivatives and Hedge Funds;
-        issn = 1753-9641;
-        eissn = 1753-965X;
+        name = Journal of Derivatives and Hedge Funds ;
+        issn = 1753-9641 ;
+        eissn = 1753-965X ;
         issnl = 1753-9641
       >
 
@@ -279,9 +345,9 @@
     {
 
       title <
-        name = Journal of Digital Asset Management;
-        issn = 1743-6540;
-        eissn = 1743-6559;
+        name = Journal of Digital Asset Management ;
+        issn = 1743-6540 ;
+        eissn = 1743-6559 ;
         issnl = 1743-6540
       >
 
@@ -292,9 +358,9 @@
     {
 
       title <
-        name = Journal of Direct, Data and Digital Marketing Practice;
-        issn = 1746-0166;
-        eissn = 1746-0174;
+        name = Journal of Direct, Data and Digital Marketing Practice ;
+        issn = 1746-0166 ;
+        eissn = 1746-0174 ;
         issnl = 1746-0166
       >
 
@@ -305,9 +371,9 @@
     {
 
       title <
-        name = Journal of Financial Services Marketing;
-        issn = 1363-0539;
-        eissn = 1479-1846;
+        name = Journal of Financial Services Marketing ;
+        issn = 1363-0539 ;
+        eissn = 1479-1846 ;
         issnl = 1363-0539
       >
 
@@ -318,9 +384,9 @@
     {
 
       title <
-        name = Journal of International Relations and Development;
-        issn = 1408-6980;
-        eissn = 1581-1980;
+        name = Journal of International Relations and Development ;
+        issn = 1408-6980 ;
+        eissn = 1581-1980 ;
         issnl = 1408-6980
       >
 
@@ -331,9 +397,9 @@
     {
 
       title <
-        name = Journal of Public Health Policy;
-        issn = 0197-5897;
-        eissn = 1745-655X;
+        name = Journal of Public Health Policy ;
+        issn = 0197-5897 ;
+        eissn = 1745-655X ;
         issnl = 0197-5897
       >
 
@@ -344,9 +410,9 @@
     {
 
       title <
-        name = Journal of Retail & Leisure Property;
-        issn = 1479-1110;
-        eissn = 1750-2098;
+        name = Journal of Retail & Leisure Property ;
+        issn = 1479-1110 ;
+        eissn = 1750-2098 ;
         issnl = 1479-1110
       >
 
@@ -357,9 +423,9 @@
     {
 
       title <
-        name = Journal of Revenue & Pricing Management;
-        issn = 1476-6930;
-        eissn = 1477-657X;
+        name = Journal of Revenue & Pricing Management ;
+        issn = 1476-6930 ;
+        eissn = 1477-657X ;
         issnl = 1476-6930
       >
 
@@ -370,9 +436,9 @@
     {
 
       title <
-        name = Journal of Targeting, Measurement and Analysis for Marketing;
-        issn = 0967-3237;
-        eissn = 1479-1862;
+        name = Journal of Targeting, Measurement and Analysis for Marketing ;
+        issn = 0967-3237 ;
+        eissn = 1479-1862 ;
         issnl = 0967-3237
       >
 
@@ -383,9 +449,9 @@
     {
 
       title <
-        name = Latino Studies;
-        issn = 1476-3435;
-        eissn = 1476-3443;
+        name = Latino Studies ;
+        issn = 1476-3435 ;
+        eissn = 1476-3443 ;
         issnl = 1476-3435
       >
 
@@ -396,9 +462,9 @@
     {
 
       title <
-        name = Maritime Economics & Logistics;
-        issn = 1479-2931;
-        eissn = 1479-294X;
+        name = Maritime Economics & Logistics ;
+        issn = 1479-2931 ;
+        eissn = 1479-294X ;
         issnl = 1479-2931
       >
 
@@ -409,9 +475,9 @@
     {
 
       title <
-        name = Pensions: An International Journal;
-        issn = 1478-5315;
-        eissn = 1750-208X;
+        name = Pensions: An International Journal ;
+        issn = 1478-5315 ;
+        eissn = 1750-208X ;
         issnl = 1478-5315
       >
 
@@ -422,9 +488,9 @@
     {
 
       title <
-        name = Place Branding and Public Diplomacy;
-        issn = 1751-8040;
-        eissn = 1751-8059;
+        name = Place Branding and Public Diplomacy ;
+        issn = 1751-8040 ;
+        eissn = 1751-8059 ;
         issnl = 1751-8040
       >
 
@@ -435,9 +501,9 @@
     {
 
       title <
-        name = postmedieval;
-        issn = 2040-5960;
-        eissn = 2040-5979;
+        name = postmedieval ;
+        issn = 2040-5960 ;
+        eissn = 2040-5979 ;
         issnl = 2040-5960
       >
 
@@ -448,9 +514,9 @@
     {
 
       title <
-        name = Psychoanalysis, Culture & Society;
-        issn = 1088-0763;
-        eissn = 1543-3390;
+        name = Psychoanalysis, Culture & Society ;
+        issn = 1088-0763 ;
+        eissn = 1543-3390 ;
         issnl = 1088-0763
       >
 
@@ -461,9 +527,9 @@
     {
 
       title <
-        name = Risk Management;
-        issn = 1460-3799;
-        eissn = 1743-4637;
+        name = Risk Management ;
+        issn = 1460-3799 ;
+        eissn = 1743-4637 ;
         issnl = 1460-3799
       >
 
@@ -474,9 +540,9 @@
     {
 
       title <
-        name = Security Journal;
-        issn = 0955-1662;
-        eissn = 1743-4645;
+        name = Security Journal ;
+        issn = 0955-1662 ;
+        eissn = 1743-4645 ;
         issnl = 0955-1662
       >
 
@@ -487,9 +553,9 @@
     {
 
       title <
-        name = Social Theory & Health;
-        issn = 1477-8211;
-        eissn = 1477-822X;
+        name = Social Theory & Health ;
+        issn = 1477-8211 ;
+        eissn = 1477-822X ;
         issnl = 1477-8211
       >
 
@@ -500,9 +566,9 @@
     {
 
       title <
-        name = Subjectivity;
-        issn = 1755-6341;
-        eissn = 1755-635X;
+        name = Subjectivity ;
+        issn = 1755-6341 ;
+        eissn = 1755-635X ;
         issnl = 1755-6341
       >
 
@@ -513,9 +579,9 @@
     {
 
       title <
-        name = Urban Design International;
-        issn = 1357-5317;
-        eissn = 1468-4519;
+        name = Urban Design International ;
+        issn = 1357-5317 ;
+        eissn = 1468-4519 ;
         issnl = 1357-5317
       >
 
