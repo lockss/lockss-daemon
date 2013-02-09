@@ -1,6 +1,6 @@
 ## Polling test suite properties file.
 ##
-## $Id: testsuite.props,v 1.9 2011-10-03 05:55:39 tlipkis Exp $
+## $Id: testsuite.props,v 1.9.22.1 2013-02-09 17:16:46 dshr Exp $
 ##
 
 ## For the most part, you don't need to change anything in this file.
@@ -58,5 +58,8 @@
 # org.lockss.poll.v3.enablePerUrlAgreement=false
 # org.lockss.poll.v3.repairFromCachePercent=90
 # org.lockss.poll.v3.minPercentAgreementForRepairs=0
+
+# Enable symmetric polls
+org.lockss.poll.v3.allSymmetricPolls=true
 
 org.lockss.id.pidUiStemMap = TCP:[127.0.0.1]:8801,http://127.0.0.1:8041;TCP:[127.0.0.1]:8802,http://127.0.0.1:8042;TCP:[127.0.0.1]:8803,http://127.0.0.1:8043;TCP:[127.0.0.1]:8804,http://127.0.0.1:8044;TCP:[127.0.0.1]:8805,http://127.0.0.1:8045

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.77.8.5 2013-02-09 16:15:49 dshr Exp $
+ * $Id: V3Voter.java,v 1.77.8.6 2013-02-09 17:16:46 dshr Exp $
  */
 
 /*
@@ -207,8 +207,7 @@ public class V3Voter extends BasePoll {
   /** If true, always request a symmetric poll */
   public static final String PARAM_ALL_SYMMETRIC_POLLS =
     PREFIX + "allSymmetricPolls";
-  // XXX DSHR default true for testing, false eventually
-  public static final boolean DEFAULT_ALL_SYMMETRIC_POLLS = true; // XXX DSHR
+  public static final boolean DEFAULT_ALL_SYMMETRIC_POLLS = false;
 
   /** If true, can request a symmetric poll */
   public static final String PARAM_ENABLE_SYMMETRIC_POLLS =
@@ -939,7 +938,6 @@ public class V3Voter extends BasePoll {
 			      ehAbortPoll(errmsg));
     byte[] nonce2 = voterUserData.getVoterNonce2();
     if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
-      // XXX DSHR - do something with the symmetric poll hashes.
       log.debug("Poll " + voterUserData.getPollKey() + " is symmetric");
     }
   }
@@ -1212,7 +1210,6 @@ public class V3Voter extends BasePoll {
     return this.idManager;
   }
 
-  // XXX DSHR
   double weightSymmetricPoll(PeerIdentity pid) {
     if (CurrentConfig.getBooleanParam(PARAM_ALL_SYMMETRIC_POLLS,
 				      DEFAULT_ALL_SYMMETRIC_POLLS)) {
@@ -1227,8 +1224,9 @@ public class V3Voter extends BasePoll {
       // Poller is already a willing repairer
       return 0.0;
     }
-    // XXX TAL a CompoundLinearSlope mapping cost (hash estimate) to probability.
-    // XXX DSHR does the Poller figure the extra cost of the Voter's nonce?
+    // See http://wiki.lockss.org/cgi-bin/wiki.pl?Mellon/SymmetricPolls
+    // for discussion of symmetric poll costs and policies. Initial
+    // decision is to avoid probabilistic policy here.
     return 1.0;
   }
 

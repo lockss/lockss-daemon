@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlocksTallier.java,v 1.1.2.4 2013-02-09 16:24:46 dshr Exp $
+ * $Id: TestVoteBlocksTallier.java,v 1.1.2.5 2013-02-09 17:16:46 dshr Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class TestVoteBlocksTallier extends LockssTestCase {
     Properties p = new Properties();
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(V3Poller.PARAM_STATE_PATH, tempDirPath);
+    p.setProperty(V3Voter.PARAM_ALL_SYMMETRIC_POLLS, "true");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     IdentityManager idMgr = new V3TestUtils.NoStoreIdentityManager();
     daemon.setIdentityManager(idMgr);
