@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlocksTallier.java,v 1.1.2.3 2013-01-29 16:55:42 dshr Exp $
+ * $Id: TestVoteBlocksTallier.java,v 1.1.2.4 2013-02-09 16:24:46 dshr Exp $
  */
 
 /*
@@ -92,6 +92,18 @@ public class TestVoteBlocksTallier extends LockssTestCase {
   
   public void testVFourPThree() throws Exception {
     doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100);
+  }
+  
+  public void testVGap() throws Exception {
+    doTest(0, 3, 5, 10, 0, 5, 5, 10, 100);
+  }
+  
+  public void testVGapOneDisagree() throws Exception {
+    doTest(0, 3, 5, 10, 0, 5, 5, 10, 7);
+  }
+  
+  public void testPGap() throws Exception {
+    doTest(0, 5, 5, 10, 0, 3, 5, 10, 100);
   }
   
   public void testVFourPThreeThreeVersion() throws Exception {
