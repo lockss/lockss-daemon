@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.24.8.4 2013-02-09 16:15:49 dshr Exp $
+ * $Id: VoterUserData.java,v 1.24.8.5 2013-02-09 20:05:48 dshr Exp $
  */
 
 /*
@@ -335,7 +335,7 @@ public class VoterUserData
   }
 
   public byte[] getVoterNonce2() {
-    return voterNonce;
+    return voterNonce2;
   }
 
   public void setVoterNonce2(byte[] voterNonce) {
