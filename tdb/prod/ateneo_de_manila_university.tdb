@@ -4,6 +4,8 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+  implicit < status ; year ; name ; param[volume] >
 
   {
     title <
@@ -12,13 +14,13 @@
       eissn = 2012-2489 
     >
 
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = philippine_studies
     attr[journal_id] = phs
-    implicit < status ; year ; name ; param[volume] >
-    comment[coverage] = starting from vol.59 
 
     au < released ; 2011 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 59 ; 59 >
+    au < exists ; 2012 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 60 ; 60 >
+    au < expected ; 2013 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 61 ; 61 >
+
   }
   
 }
