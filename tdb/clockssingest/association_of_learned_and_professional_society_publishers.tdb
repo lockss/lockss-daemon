@@ -1,0 +1,41 @@
+{
+
+  publisher <
+    name = Association of Learned and Professional Society Publishers (ALPSP) ;
+    info[contract] = 2012 ;
+    info[tester] = 7
+  >
+  plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+  param[base_url] = http://www.ingentaconnect.com/
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
+  param[publisher_id] = alpsp
+  
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  
+  {
+  
+    title <
+      name = Learned Publishing ;
+      issn = 0953-1513 ;
+      eissn = 1741-4857
+    >
+    au < manifest ; exists ; 1997 ; Perceptual and Motor Skills Volume 10 ; 10 >
+    au < manifest ; exists ; 1998 ; Perceptual and Motor Skills Volume 11 ; 11 >
+    au < manifest ; exists ; 1999 ; Perceptual and Motor Skills Volume 12 ; 12 >
+    au < manifest ; exists ; 2000 ; Perceptual and Motor Skills Volume 13 ; 13 >
+    au < manifest ; exists ; 2001 ; Perceptual and Motor Skills Volume 14 ; 14 >
+    au < manifest ; exists ; 2002 ; Perceptual and Motor Skills Volume 15 ; 15 >
+    au < manifest ; exists ; 2003 ; Perceptual and Motor Skills Volume 16 ; 16 >
+    au < manifest ; exists ; 2004 ; Perceptual and Motor Skills Volume 17 ; 17 >
+    au < manifest ; exists ; 2005 ; Perceptual and Motor Skills Volume 18 ; 18 >
+    au < manifest ; exists ; 2006 ; Perceptual and Motor Skills Volume 19 ; 19 >
+    au < manifest ; exists ; 2007 ; Perceptual and Motor Skills Volume 20 ; 20 >
+    au < manifest ; exists ; 2008 ; Perceptual and Motor Skills Volume 21 ; 21 >
+    au < manifest ; exists ; 2009 ; Perceptual and Motor Skills Volume 22 ; 22 >
+    au < manifest ; exists ; 2010 ; Perceptual and Motor Skills Volume 23 ; 23 >
+    au < manifest ; exists ; 2011 ; Perceptual and Motor Skills Volume 24 ; 24 >
+    au < testing ; exists ; 2012 ; Perceptual and Motor Skills Volume 25 ; 25 >
+    au < manifest ; exists ; 2013 ; Perceptual and Motor Skills Volume 26 ; 26 >
+  }
+}
