@@ -54,7 +54,7 @@
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%scrawlers/lockss\.htm\?issn=%s&amp;volume=%s", base_url, journal_issn, volume_name</string>
-      <string>1,"^%s(journals|books)\.htm\?issn=%s&amp;volume=%s&amp;issue=[0-9]+&amp;articleid=", base_url, journal_issn, volume_name</string>
+      <string>1,"^%s(journals|books)\.htm\?issn=%s&amp;volume=%s", base_url, journal_issn, volume_name</string>
     </list>
   </entry>
   <entry>
