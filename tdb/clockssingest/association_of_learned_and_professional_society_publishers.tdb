@@ -10,6 +10,7 @@
   param[api_url] = http://api.ingentaconnect.com/
   param[graphics_url] = http://graphics.ingentaconnect.com/
   param[publisher_id] = alpsp
+  param[journal_id] = lp
   
   implicit < status ; status2 ; year ; name ; param[volume_name] >
   
