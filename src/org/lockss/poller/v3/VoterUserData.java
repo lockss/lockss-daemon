@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.24.8.3 2013-01-19 11:17:35 dshr Exp $
+ * $Id: VoterUserData.java,v 1.24.8.4 2013-02-09 16:15:49 dshr Exp $
  */
 
 /*
@@ -79,6 +79,10 @@ public class VoterUserData
   private String errorDetail;
   private boolean activePoll = true;
   private double agreementHint;
+  private int numAgreeUrl;
+  private int numDisagreeUrl;
+  private int numVoterOnlyUrl;
+  private int numPollerOnlyUrl;
   private boolean hasReceivedHint = false;
   private SubstanceChecker.State subCheckerState;
   /** @deprecated 
@@ -119,9 +123,7 @@ public class VoterUserData
     this.createTime = TimeBase.nowMs();
     this.messageDir = messageDir;
     this.voteBlocks = new DiskVoteBlocks(voter.getStateDir());
-    if (voterNonce2 != null && voterNonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
-      this.symmetricVoteBlocks = new DiskVoteBlocks(voter.getStateDir());
-    }
+    this.setVoterNonce2(voterNonce2);
   }
 
   public void setPollMessage(LcapMessage msg) {
@@ -338,6 +340,17 @@ public class VoterUserData
 
   public void setVoterNonce2(byte[] voterNonce) {
     this.voterNonce2 = voterNonce2;
+    if (voterNonce2 != null && voterNonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
+      try {
+	this.symmetricVoteBlocks = new DiskVoteBlocks(voter.getStateDir());
+      } catch (IOException ex) {
+	log.error("Setting nonce2 throws " + ex);
+	this.voterNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
+      }
+    } else {
+      this.voterNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
+      this.symmetricVoteBlocks = null;
+    }
   }
 
   public synchronized void hashingDone(boolean hashingDone) {
@@ -429,6 +442,38 @@ public class VoterUserData
 
   public boolean hasReceivedHint() {
     return hasReceivedHint;
+  }
+
+  public int getNumAgreeUrl() {
+    return numAgreeUrl;
+  }
+
+  public void setNumAgreeUrl(int num) {
+    numAgreeUrl = num;
+  }
+
+  public int getNumDisagreeUrl() {
+    return numDisagreeUrl;
+  }
+
+  public void setNumDisagreeUrl(int num) {
+    numDisagreeUrl = num;
+  }
+
+  public int getNumVoterOnlyUrl() {
+    return numVoterOnlyUrl;
+  }
+
+  public void setNumVoterOnlyUrl(int num) {
+    numVoterOnlyUrl = num;
+  }
+
+  public int getNumPollerOnlyUrl() {
+    return numVoterOnlyUrl;
+  }
+
+  public void setNumPollerOnlyUrl(int num) {
+    numPollerOnlyUrl = num;
   }
 
   public SubstanceChecker.State getSubstanceCheckerState() {

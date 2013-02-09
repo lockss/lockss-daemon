@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.28.6.3 2013-01-28 21:35:55 dshr Exp $
+ * $Id: VoterActions.java,v 1.28.6.4 2013-02-09 16:15:49 dshr Exp $
  */
 
 /*
@@ -295,8 +295,8 @@ public class VoterActions {
     // Remember the agreement hint in the agreement history for the AU
     PeerIdentity poller = ud.getPollerId();
     IdentityManager idmgr = ud.getVoter().getIdentityManager();
-    idmgr.signalPartialAgreementHint(poller, ud.getVoter().getAu(),
-				     (float) agreementHint);
+    ArchivalUnit au = ud.getVoter().getAu();
+    idmgr.signalPartialAgreementHint(poller, au, (float) agreementHint);
     byte[] nonce2 = msg.getVoterNonce2();
     if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
       // Is it the same as the one we sent?
@@ -305,15 +305,24 @@ public class VoterActions {
 	vbt.tallyVoteBlocks(ud.getSymmetricVoteBlocks(),
 			    msg.getVoteBlocks());
 	int nAgree = vbt.countAgreeUrl();
+	ud.setNumAgreeUrl(nAgree);
 	int nDisagree = vbt.countDisagreeUrl();
+	ud.setNumDisagreeUrl(nDisagree);
 	int nVoterOnly = vbt.countVoterOnlyUrl();
+	ud.setNumVoterOnlyUrl(nVoterOnly);
 	int nPollerOnly = vbt.countPollerOnlyUrl();
+	ud.setNumPollerOnlyUrl(nPollerOnly);
 	log.debug("Symmetric poll result:" +
 		  " agree " + nAgree +
 		  " disagree " + nDisagree +
 		  " Voter only " + nVoterOnly +
 		  " Poller only " + nPollerOnly);
-	// XXX DSHR what to do with these numbers?
+	int total = nAgree + nDisagree + nVoterOnly + nPollerOnly;
+	float agree = 0.0f;
+	if (total > 0) {
+	  agree = ((float) nAgree) / ((float) total);
+	} 
+	idmgr.signalPartialAgreement(poller, au, agree);
       } else {
 	log.error("Nonce2 mismatch");
       }

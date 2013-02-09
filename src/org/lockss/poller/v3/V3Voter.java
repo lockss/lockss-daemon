@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.77.8.4 2013-01-19 11:17:35 dshr Exp $
+ * $Id: V3Voter.java,v 1.77.8.5 2013-02-09 16:15:49 dshr Exp $
  */
 
 /*
@@ -210,6 +210,15 @@ public class V3Voter extends BasePoll {
   // XXX DSHR default true for testing, false eventually
   public static final boolean DEFAULT_ALL_SYMMETRIC_POLLS = true; // XXX DSHR
 
+  /** If true, can request a symmetric poll */
+  public static final String PARAM_ENABLE_SYMMETRIC_POLLS =
+    PREFIX + "enableSymmetricPolls";
+  public static final boolean DEFAULT_ENABLE_SYMMETRIC_POLLS = true; // XXX DSHR
+
+  /* Minimum weight to call a symmetric poll */
+  public static final String PARAM_MIN_WEIGHT_SYMMETRIC_POLL =
+    PREFIX + "minWeightSymmetricPoll";
+  public static final double DEFAULT_MIN_WEIGHT_SYMMETRIC_POLL = 0.5f; 
 
   private PsmInterp stateMachine;
   private VoterUserData voterUserData;
@@ -258,13 +267,6 @@ public class V3Voter extends BasePoll {
       CurrentConfig.getIntParam(V3Poller.PARAM_MAX_BLOCK_ERROR_COUNT,
                                 V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT);
 
-    byte[] maybeNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
-    // XXX DSHR there needs to be a policy here not just a param
-    if (CurrentConfig.getBooleanParam(PARAM_ALL_SYMMETRIC_POLLS,
-				      DEFAULT_ALL_SYMMETRIC_POLLS)) {
-      // Create a second nonce to request a symmetric poll
-      maybeNonce2 = PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH);
-    }
     try {
       this.voterUserData = new VoterUserData(new PollSpec(msg), this,
                                              msg.getOriginatorId(), 
@@ -273,7 +275,7 @@ public class V3Voter extends BasePoll {
                                              msg.getHashAlgorithm(),
                                              msg.getPollerNonce(),
                                              PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH),
-					     maybeNonce2,
+					     ByteArray.EMPTY_BYTE_ARRAY,
                                              msg.getEffortProof(),
                                              stateDir);
       voterUserData.setPollMessage(msg);
@@ -287,6 +289,15 @@ public class V3Voter extends BasePoll {
     this.pollManager = daemon.getPollManager();
     this.scomm = daemon.getStreamCommManager();
 
+    // Should this be a symmetric poll?
+    double minWeight =
+      CurrentConfig.getDoubleParam(PARAM_MIN_WEIGHT_SYMMETRIC_POLL,
+				   DEFAULT_MIN_WEIGHT_SYMMETRIC_POLL);
+    if (weightSymmetricPoll(msg.getOriginatorId()) >= minWeight) {
+      // Create a second nonce to request a symmetric poll
+      byte[] nonce2 = PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH);
+      voterUserData.setVoterNonce2(nonce2);
+    }
     int min = CurrentConfig.getIntParam(PARAM_MIN_NOMINATION_SIZE,
                                         DEFAULT_MIN_NOMINATION_SIZE);
     int max = CurrentConfig.getIntParam(PARAM_MAX_NOMINATION_SIZE,
@@ -1199,6 +1210,26 @@ public class V3Voter extends BasePoll {
   
   IdentityManager getIdentityManager() {
     return this.idManager;
+  }
+
+  // XXX DSHR
+  double weightSymmetricPoll(PeerIdentity pid) {
+    if (CurrentConfig.getBooleanParam(PARAM_ALL_SYMMETRIC_POLLS,
+				      DEFAULT_ALL_SYMMETRIC_POLLS)) {
+      return 1.0;
+    }
+    if (!CurrentConfig.getBooleanParam(PARAM_ENABLE_SYMMETRIC_POLLS,
+				      DEFAULT_ENABLE_SYMMETRIC_POLLS)) {
+      return 0.0;
+    }
+    double highest = idManager.getHighestPercentAgreement(pid, getAu());
+    if (highest >= pollManager.getMinPercentForRepair()) {
+      // Poller is already a willing repairer
+      return 0.0;
+    }
+    // XXX TAL a CompoundLinearSlope mapping cost (hash estimate) to probability.
+    // XXX DSHR does the Poller figure the extra cost of the Voter's nonce?
+    return 1.0;
   }
 
   /**
