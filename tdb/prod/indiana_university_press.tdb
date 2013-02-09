@@ -1307,6 +1307,29 @@
   {
 
     title <
+      name = Teaching and Learning Inquiry: The ISSOTL Journal ;
+      issn = 2167-4779 ;
+      eissn = 2167-4787 ;
+      issnl = 2167-4779
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = teaching_and_learning_inquiry__the_issotl_journal
+      attr[journal_id] = 
+      implicit < status ; year ; name ; param[volume] >
+    
+      au < expected ; 2013 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 1 ; 1 >
+
+    }
+    
+  }
+    
+  {
+
+    title <
       name = Textual Cultures: Texts, Contexts, Interpretation ;
       issn = 1559-2936 ;
       eissn = 1933-7418 ;

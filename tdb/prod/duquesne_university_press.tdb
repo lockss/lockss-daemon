@@ -10,15 +10,30 @@
   {
 
     title <
+      name = Levinas Studies ;
+      issn = 0076-8820 
+    >
+
+    param[journal_dir] = levinas_studies
+    attr[journal_id] =
+    comment[new] = coming to Muse in 2013
+
+    au < expected ; 2013 ; Levinas Studies Volume 1 ; 1 >
+
+  }
+  
+  {
+
+    title <
       name = Milton Studies ;
       issn = 0076-8820 
     >
 
     param[journal_dir] = milton_studies
     attr[journal_id] =
-    comment[new] = coming to Muse in 2012
+    comment[new] = coming to Muse in 2013
 
-    au < doesNotExist ; 2012 ; Milton Studies Volume 53 ; 53 >
+    au < expected ; 2013 ; Milton Studies Volume 1 ; 1 >
 
   }
 
