@@ -116,7 +116,7 @@ cat ../../tdb/clockssingest/*.tdb | ./tdbout -t publisher,title,issn,eissn | sor
 echo "---------------------"
 echo "---------------------"
 echo "GLN. Muse. Titles missing journal_id"
-cat ../../tdb/prod/*.tdb | ./tdbout -t publisher,param[journal_dir] -Q 'plugin ~ "ProjectMusePlugin" and attr[journal_id] is not set' | sort -u
+cat ../../tdb/prod/*.tdb | ./tdbout -MTNYP -t publisher,param[journal_dir] -Q '(plugin ~ "ProjectMusePlugin" and (attr[journal_id] is not set or attr[journal_id] is ""))' | sort -u
 #
 # Find Titles that don't have AUs
 echo "---------------------"
