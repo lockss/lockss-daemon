@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.12.2.1 2013-01-15 06:28:37 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.12.2.1.2.1 2013-02-12 22:11:59 fergaloy-sf Exp $
  */
 
 /*
@@ -1419,6 +1419,51 @@ public class DbManager extends BaseLockssDaemonManager
 	+ "'org.lockss.util.MetadataUtil.getYearFromDate' "
 	+ "parameter style java no sql", };
 
+  // SQL statements that create the necessary version 3 indices.
+  private static final String[] VERSION_3_INDEX_CREATE_QUERIES = new String[] {
+    "create unique index idx1_" + PLUGIN_TABLE + " on " + PLUGIN_TABLE
+    + "(" + PLUGIN_ID_COLUMN + ")",
+
+    "create index idx1_" + AU_TABLE + " on " + AU_TABLE
+    + "(" + AU_KEY_COLUMN + ")",
+
+    "create index idx1_" + MD_ITEM_TABLE + " on " + MD_ITEM_TABLE
+    + "(" + DATE_COLUMN + ")",
+
+    "create index idx1_" + MD_ITEM_NAME_TABLE + " on " + MD_ITEM_NAME_TABLE
+    + "(" + NAME_COLUMN + ")",
+
+    "create unique index idx1_" + PUBLISHER_TABLE + " on " + PUBLISHER_TABLE
+    + "(" + PUBLISHER_NAME_COLUMN + ")",
+
+    "create index idx1_" + ISSN_TABLE + " on " + ISSN_TABLE
+    + "(" + ISSN_COLUMN + ")",
+
+    "create index idx1_" + ISBN_TABLE + " on " + ISBN_TABLE
+    + "(" + ISBN_COLUMN + ")",
+
+    "create index idx1_" + URL_TABLE + " on " + URL_TABLE
+    + "(" + FEATURE_COLUMN + ")",
+
+    "create index idx2_" + URL_TABLE + " on " + URL_TABLE
+    + "(" + URL_COLUMN + ")",
+
+    "create index idx1_" + BIB_ITEM_TABLE + " on " + BIB_ITEM_TABLE
+    + "(" + VOLUME_COLUMN + ")",
+
+    "create index idx2_" + BIB_ITEM_TABLE + " on " + BIB_ITEM_TABLE
+    + "(" + ISSUE_COLUMN + ")",
+
+    "create index idx3_" + BIB_ITEM_TABLE + " on " + BIB_ITEM_TABLE
+    + "(" + START_PAGE_COLUMN + ")",
+
+    "create index idx1_" + AUTHOR_TABLE + " on " + AUTHOR_TABLE
+    + "(" + AUTHOR_NAME_COLUMN + ")",
+
+    "create unique index idx1_" + PENDING_AU_TABLE + " on " + PENDING_AU_TABLE
+    + "(" + PLUGIN_ID_COLUMN + "," + AU_KEY_COLUMN + ")",
+  };
+
   // Database metadata keys.
   private static final String COLUMN_NAME = "COLUMN_NAME";
   private static final String COLUMN_SIZE = "COLUMN_SIZE";
@@ -1475,7 +1520,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 2;
+  private int targetDatabaseVersion = 3;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -1820,6 +1865,8 @@ public class DbManager extends BaseLockssDaemonManager
 	setUpDatabaseVersion1(conn);
       } else if (from == 1) {
 	updateDatabaseFrom1To2(conn);
+      } else if (from == 2) {
+	updateDatabaseFrom2To3(conn);
       } else {
 	log.error("Non-existent method to update the database from version "
 	    + from + ".");
@@ -2419,7 +2466,7 @@ public class DbManager extends BaseLockssDaemonManager
       throw new SQLException("DbManager has not been initialized.");
     }
 
-    return getDatabaseVersion(conn);
+    return getDatabaseVersionBeforeReady(conn);
   }
 
   /**
@@ -3434,5 +3481,49 @@ public class DbManager extends BaseLockssDaemonManager
     }
 
     return statement;
+  }
+
+  /**
+   * Updates the database from version 2 to version 3.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws BatchUpdateException
+   *           if a batch update exception occurred.
+   * @throws SQLException
+   *           if any other problem occurred accessing the database.
+   */
+  private void updateDatabaseFrom2To3(Connection conn)
+      throws BatchUpdateException, SQLException {
+    //Create the necessary indices.
+    createVersion3Indices(conn);
+  }
+
+  /**
+   * Creates all the necessary version 3 database indices.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void createVersion3Indices(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "createVersion3Indices(): ";
+
+    // Loop through all the indices.
+    for (String query : VERSION_3_INDEX_CREATE_QUERIES) {
+      log.debug2(DEBUG_HEADER + "Query = " + query);
+      PreparedStatement statement = prepareStatementBeforeReady(conn, query);
+
+      try {
+        executeUpdateBeforeReady(statement);
+      } catch (SQLException sqle) {
+        log.error("Cannot create index", sqle);
+        log.error("SQL = '" + query + "'.");
+        throw sqle;
+      } finally {
+        DbManager.safeCloseStatement(statement);
+      }
+    }
   }
 }
