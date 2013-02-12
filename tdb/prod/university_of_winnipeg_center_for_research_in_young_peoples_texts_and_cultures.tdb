@@ -1,6 +1,6 @@
 {
   publisher <
-    name = The Centre for Research in Young People's Texts and Cultures, University of Winnipeg
+    name = University of Winnipeg Centre for Research in Young People's Texts and Cultures
   >
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
@@ -20,10 +20,11 @@
       issnl = 1920-2601
     >
 
-    au < manifest ; 2009 ; Jeunesse: Young People, Texts, Cultures Volume 1 ; 1 >
-    au < manifest ; 2010 ; Jeunesse: Young People, Texts, Cultures Volume 2 ; 2 >
-    au < manifest ; 2011 ; Jeunesse: Young People, Texts, Cultures Volume 3 ; 3 >
-    au < manifest ; 2012 ; Jeunesse: Young People, Texts, Cultures Volume 4 ; 4 >
+    au < testing ; 2009 ; Jeunesse: Young People, Texts, Cultures Volume 1 ; 1 >
+    au < testing ; 2010 ; Jeunesse: Young People, Texts, Cultures Volume 2 ; 2 >
+    au < testing ; 2011 ; Jeunesse: Young People, Texts, Cultures Volume 3 ; 3 >
+    au < testing ; 2012 ; Jeunesse: Young People, Texts, Cultures Volume 4 ; 4 >
+    au < expected ; 2013 ; Jeunesse: Young People, Texts, Cultures Volume 5 ; 5 >
 
     }
 
