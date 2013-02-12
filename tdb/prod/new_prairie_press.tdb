@@ -18,12 +18,12 @@
     param[base_url] = http://www.thebalticyearbook.org/journals/
     param[journal_id] = baltic
 
-    au < manifest ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; 2005 >
-    au < manifest ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; 2006 >
-    au < manifest ; 2007 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 3 ; 3 ; 2007 >
-    au < manifest ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; 2008 >
-    au < manifest ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; 2009 >
-    au < manifest ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; 2010 >
+    au < testing ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; 2005 >
+    au < testing ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; 2006 >
+    au < testing ; 2007 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 3 ; 3 ; 2007 >
+    au < testing ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; 2008 >
+    au < testing ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; 2009 >
+    au < testing ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; 2010 >
 
   }
 
@@ -39,31 +39,31 @@
     param[base_url] = http://www.newprairiepress.org/journals/
     param[journal_id] = gdr
 
-    au < manifest ; 1975 ; GDR Bulletin Volume 1 ; 1 ; 1975 >
-    au < manifest ; 1976 ; GDR Bulletin Volume 2 ; 2 ; 1976 >
-    au < manifest ; 1977 ; GDR Bulletin Volume 3 ; 3 ; 1977 >
-    au < manifest ; 1978 ; GDR Bulletin Volume 4 ; 4 ; 1978 >
-    au < manifest ; 1979 ; GDR Bulletin Volume 5 ; 5 ; 1979 >
-    au < manifest ; 1980 ; GDR Bulletin Volume 6 ; 6 ; 1980 >
-    au < manifest ; 1981 ; GDR Bulletin Volume 7 ; 7 ; 1981 >
-    au < manifest ; 1982 ; GDR Bulletin Volume 8 ; 8 ; 1982 >
+    au < testing ; 1975 ; GDR Bulletin Volume 1 ; 1 ; 1975 >
+    au < testing ; 1976 ; GDR Bulletin Volume 2 ; 2 ; 1976 >
+    au < testing ; 1977 ; GDR Bulletin Volume 3 ; 3 ; 1977 >
+    au < testing ; 1978 ; GDR Bulletin Volume 4 ; 4 ; 1978 >
+    au < testing ; 1979 ; GDR Bulletin Volume 5 ; 5 ; 1979 >
+    au < testing ; 1980 ; GDR Bulletin Volume 6 ; 6 ; 1980 >
+    au < testing ; 1981 ; GDR Bulletin Volume 7 ; 7 ; 1981 >
+    au < testing ; 1982 ; GDR Bulletin Volume 8 ; 8 ; 1982 >
     au < manifest ; 1983 ; GDR Bulletin Volume 9 ; 9 ; 1983 >
-    au < manifest ; 1984 ; GDR Bulletin Volume 10 ; 10 ; 1984 >
-    au < manifest ; 1985 ; GDR Bulletin Volume 11 ; 11 ; 1985 >
-    au < manifest ; 1986 ; GDR Bulletin Volume 12 ; 12 ; 1986 >
-    au < manifest ; 1987 ; GDR Bulletin Volume 13 ; 13 ; 1987 >
-    au < manifest ; 1988 ; GDR Bulletin Volume 14 ; 14 ; 1988 >
-    au < manifest ; 1989 ; GDR Bulletin Volume 15 ; 15 ; 1989 >
-    au < manifest ; 1990 ; GDR Bulletin Volume 16 ; 16 ; 1990 >
-    au < manifest ; 1991 ; GDR Bulletin Volume 17 ; 17 ; 1991 >
-    au < manifest ; 1992 ; GDR Bulletin Volume 18 ; 18 ; 1992 >
+    au < testing ; 1984 ; GDR Bulletin Volume 10 ; 10 ; 1984 >
+    au < testing ; 1985 ; GDR Bulletin Volume 11 ; 11 ; 1985 >
+    au < testing ; 1986 ; GDR Bulletin Volume 12 ; 12 ; 1986 >
+    au < testing ; 1987 ; GDR Bulletin Volume 13 ; 13 ; 1987 >
+    au < testing ; 1988 ; GDR Bulletin Volume 14 ; 14 ; 1988 >
+    au < testing ; 1989 ; GDR Bulletin Volume 15 ; 15 ; 1989 >
+    au < testing ; 1990 ; GDR Bulletin Volume 16 ; 16 ; 1990 >
+    au < testing ; 1991 ; GDR Bulletin Volume 17 ; 17 ; 1991 >
+    au < testing ; 1992 ; GDR Bulletin Volume 18 ; 18 ; 1992 >
     au < manifest ; 1993 ; GDR Bulletin Volume 19 ; 19 ; 1993 >
-    au < manifest ; 1994 ; GDR Bulletin Volume 20-21 ; 20-21 ; 1994 >
-    au < manifest ; 1995 ; GDR Bulletin Volume 22 ; 22 ; 1995 >
-    au < manifest ; 1996 ; GDR Bulletin Volume 23 ; 23 ; 1996 >
-    au < manifest ; 1997 ; GDR Bulletin Volume 24 ; 24 ; 1997 >
-    au < manifest ; 1998 ; GDR Bulletin Volume 25 ; 25 ; 1998 >
-    au < manifest ; 1999 ; GDR Bulletin Volume 26 ; 26 ; 1999 >
+    au < testing ; 1994 ; GDR Bulletin Volume 20-21 ; 20-21 ; 1994 >
+    au < testing ; 1995 ; GDR Bulletin Volume 22 ; 22 ; 1995 >
+    au < testing ; 1996 ; GDR Bulletin Volume 23 ; 23 ; 1996 >
+    au < testing ; 1997 ; GDR Bulletin Volume 24 ; 24 ; 1997 >
+    au < testing ; 1998 ; GDR Bulletin Volume 25 ; 25 ; 1998 >
+    au < testing ; 1999 ; GDR Bulletin Volume 26 ; 26 ; 1999 >
 
   }
 
