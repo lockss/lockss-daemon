@@ -1830,7 +1830,8 @@
 
       param[journal_issn] = 2048-9137
       
-      au < manifest ; exists ; 2012 ; International Journal of Convergence Computing Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; International Journal of Convergence Computing Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; International Journal of Convergence Computing Volume 2 ; 2 >
 
     }
 
@@ -5446,7 +5447,8 @@
       au < manifest ; exists ; 2008-2009 ; International Journal of Nuclear Knowledge Management Volume 3 ; 3 >
       au < crawling ; exists ; 2010 ; International Journal of Nuclear Knowledge Management Volume 4 ; 4 >
       au < zapped ; down ; 2011 ; International Journal of Nuclear Knowledge Management Volume 5 ; 5 >
-      au < manifest ; exists ; 2012 ; International Journal of Nuclear Knowledge Management Volume 6 ; 6 >
+      au < crawling ; exists ; 2012 ; International Journal of Nuclear Knowledge Management Volume 6 ; 6 >
+      au < expected ; exists ; 2013 ; International Journal of Nuclear Knowledge Management Volume 7 ; 7 >
 
     }
 
