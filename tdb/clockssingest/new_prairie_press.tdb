@@ -28,6 +28,7 @@
     au < manifest ; exists ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; 2009 >
     au < manifest ; exists ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; 2010 >
     au < testing ; exists ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; 2012 >
+    au < expected ; exists ; 2013 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 8 ; 8 ; 2013 >
   }
 
   {
@@ -97,7 +98,7 @@
     param[base_url] = http://www.jhaponline.org/journals/
     param[journal_id] = jhap
 
-    au < manifest ; exists ; 2011-2012 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 >
+    au < crawling ; exists ; 2011-2012 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 >
     au < testing ; exists ; 2012-2013 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 >
 
   }
