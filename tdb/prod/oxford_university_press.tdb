@@ -358,26 +358,26 @@
     param[base_url] = http://ahr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 1895-1896 ; The American Historical Review Volume 1  ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1896-1897 ; The American Historical Review Volume 2  ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1897-1898 ; The American Historical Review Volume 3  ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1898-1899 ; The American Historical Review Volume 4  ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1899-1900 ; The American Historical Review Volume 5  ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1900-1901 ; The American Historical Review Volume 6  ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1901-1902 ; The American Historical Review Volume 7  ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1902-1903 ; The American Historical Review Volume 8  ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1903-1904 ; The American Historical Review Volume 9  ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1904-1905 ; The American Historical Review Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1905-1906 ; The American Historical Review Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1906-1907 ; The American Historical Review Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1907-1908 ; The American Historical Review Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1908-1909 ; The American Historical Review Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1909-1910 ; The American Historical Review Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1910-1911 ; The American Historical Review Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1911-1912 ; The American Historical Review Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1912-1913 ; The American Historical Review Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1913-1914 ; The American Historical Review Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1914-1915 ; The American Historical Review Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 1895-1896 ; The American Historical Review Volume 1  ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1896-1897 ; The American Historical Review Volume 2  ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1897-1898 ; The American Historical Review Volume 3  ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1898-1899 ; The American Historical Review Volume 4  ; 4 >
+    au < HighWirePressH20Plugin ; testing ; 1899-1900 ; The American Historical Review Volume 5  ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1900-1901 ; The American Historical Review Volume 6  ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 1901-1902 ; The American Historical Review Volume 7  ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 1902-1903 ; The American Historical Review Volume 8  ; 8 >
+    au < HighWirePressH20Plugin ; testing ; 1903-1904 ; The American Historical Review Volume 9  ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 1904-1905 ; The American Historical Review Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; testing ; 1905-1906 ; The American Historical Review Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 1906-1907 ; The American Historical Review Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 1907-1908 ; The American Historical Review Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; testing ; 1908-1909 ; The American Historical Review Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 1909-1910 ; The American Historical Review Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 1910-1911 ; The American Historical Review Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 1911-1912 ; The American Historical Review Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; testing ; 1912-1913 ; The American Historical Review Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; testing ; 1913-1914 ; The American Historical Review Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 1914-1915 ; The American Historical Review Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; ready ; 1915-1916 ; The American Historical Review Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; ready ; 1916-1917 ; The American Historical Review Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; ready ; 1917-1918 ; The American Historical Review Volume 23 ; 23 >
