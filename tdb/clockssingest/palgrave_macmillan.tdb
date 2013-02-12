@@ -212,6 +212,18 @@
 
       param[journal_id] = fp
 
+      au < exists ; exists ; 2003 ; French Politics Volume 1 ; 2003 ; 1 >
+      au < exists ; exists ; 2004 ; French Politics Volume 2 ; 2004 ; 2 >
+      au < exists ; exists ; 2005 ; French Politics Volume 3 ; 2005 ; 3 >
+      au < exists ; exists ; 2006 ; French Politics Volume 4 ; 2006 ; 4 >
+      au < exists ; exists ; 2007 ; French Politics Volume 5 ; 2007 ; 5 >
+      au < exists ; exists ; 2008 ; French Politics Volume 6 ; 2008 ; 6 >
+      au < exists ; exists ; 2009 ; French Politics Volume 7 ; 2009 ; 7 >
+      au < exists ; exists ; 2010 ; French Politics Volume 8 ; 2010 ; 8 >
+      au < exists ; exists ; 2011 ; French Politics Volume 9 ; 2011 ; 9 >
+      au < exists ; exists ; 2012 ; French Politics Volume 10 ; 2012 ; 10 >
+      au < expected ; exists ; 2013 ; French Politics Volume 11 ; 2013 ; 11 >
+
     }
 
     {
@@ -224,6 +236,9 @@
       >
 
       param[journal_id] = iga
+
+      au < exists ; exists ; 2012 ; Interest Groups & Advocacy Volume 1 ; 2012 ; 1 >
+      au < expected ; exists ; 2013 ; Interest Groups & Advocacy Volume 2 ; 2013 ; 2 >
 
     }
 
