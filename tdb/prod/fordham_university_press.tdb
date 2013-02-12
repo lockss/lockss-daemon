@@ -53,15 +53,15 @@
     param[journal_dir] = traditio
     attr[journal_id] = trd
     
-    au < manifest ; 2002 ; Traditio Volume 57 ; 57 >
-    au < manifest ; 2003 ; Traditio Volume 58 ; 58 >
-    au < manifest ; 2004 ; Traditio Volume 59 ; 59 >
-    au < manifest ; 2005 ; Traditio Volume 60 ; 60 >
-    au < manifest ; 2006 ; Traditio Volume 61 ; 61 >
-    au < manifest ; 2007 ; Traditio Volume 62 ; 62 >
-    au < manifest ; 2008 ; Traditio Volume 63 ; 63 >
-    au < manifest ; 2009 ; Traditio Volume 64 ; 64 >
-    au < manifest ; 2010 ; Traditio Volume 65 ; 65 >
+    au < testing ; 2002 ; Traditio Volume 57 ; 57 >
+    au < testing ; 2003 ; Traditio Volume 58 ; 58 >
+    au < testing ; 2004 ; Traditio Volume 59 ; 59 >
+    au < testing ; 2005 ; Traditio Volume 60 ; 60 >
+    au < testing ; 2006 ; Traditio Volume 61 ; 61 >
+    au < testing ; 2007 ; Traditio Volume 62 ; 62 >
+    au < testing ; 2008 ; Traditio Volume 63 ; 63 >
+    au < testing ; 2009 ; Traditio Volume 64 ; 64 >
+    au < testing ; 2010 ; Traditio Volume 65 ; 65 >
     au < released ; 2011 ; Traditio Volume 66 ; 66 >
     
   }
