@@ -2,11 +2,11 @@
 
   publisher <
     name = Electrochemical Society ;
-    info[contract] = 2013 ;
+    info[contract] = 9999 ;
     info[tester] = 0
   >
   
-    comment[contract] = No contract signed as of Dec 12 2012
+    comment[contract] = No contract 20130211
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
 
   {
