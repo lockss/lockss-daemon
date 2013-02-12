@@ -40,9 +40,9 @@
     au < HighWirePressPlugin ; down ; 2006 ; Engineering Geology Special Publications Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Engineering Geology Special Publications Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Engineering Geology Special Publications Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Engineering Geology Special Publications Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; releasing ; 2012 ; Engineering Geology Special Publications Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; releasing ; 2012 ; Engineering Geology Special Publications Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Engineering Geology Special Publications Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Engineering Geology Special Publications Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Engineering Geology Special Publications Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Engineering Geology Special Publications Volume 27 ; 27 >
     
   }
@@ -60,10 +60,10 @@
     param[base_url] = http://geea.lyellcollection.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < releasing ; 2001 ; Geochemistry: Exploration, Environment, Analysis Volume 1 ; 1 >
-    au < releasing ; 2002 ; Geochemistry: Exploration, Environment, Analysis Volume 2 ; 2 >
-    au < releasing ; 2003 ; Geochemistry: Exploration, Environment, Analysis Volume 3 ; 3 >
-    au < releasing ; 2004 ; Geochemistry: Exploration, Environment, Analysis Volume 4 ; 4 >
+    au < released ; 2001 ; Geochemistry: Exploration, Environment, Analysis Volume 1 ; 1 >
+    au < released ; 2002 ; Geochemistry: Exploration, Environment, Analysis Volume 2 ; 2 >
+    au < released ; 2003 ; Geochemistry: Exploration, Environment, Analysis Volume 3 ; 3 >
+    au < released ; 2004 ; Geochemistry: Exploration, Environment, Analysis Volume 4 ; 4 >
     au < wanted ; 2005 ; Geochemistry: Exploration, Environment, Analysis Volume 5 ; 5 >
     au < wanted ; 2006 ; Geochemistry: Exploration, Environment, Analysis Volume 6 ; 6 >
     au < ready ; 2007 ; Geochemistry: Exploration, Environment, Analysis Volume 7 ; 7 >
@@ -123,8 +123,8 @@
     au < HighWirePressPlugin ; down ; 2006 ; Geological Society of London Memoirs Volume 32 ; 32 >
     au < HighWirePressPlugin ; down ; 2008 ; Geological Society of London Memoirs Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Memoirs Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Geological Society of London Memoirs Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; releasing ; 2012 ; Geological Society of London Memoirs Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Memoirs Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Geological Society of London Memoirs Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Geological Society of London Memoirs Volume 37 ; 37 >
 
   }
@@ -142,7 +142,7 @@
     param[base_url] = http://sp.lyellcollection.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; releasing ; 1964 ; Geological Society of London Special Publications Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 1964 ; Geological Society of London Special Publications Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 1967 ; Geological Society of London Special Publications Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 1969 ; Geological Society of London Special Publications Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 1974 ; Geological Society of London Special Publications Volume 4 ; 4 >
@@ -498,9 +498,9 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Special Publications Volume 354 ; 354 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Special Publications Volume 355 ; 355 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Special Publications Volume 356 ; 356 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Geological Society of London Special Publications Volume 357 ; 357 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Geological Society of London Special Publications Volume 358 ; 358 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Geological Society of London Special Publications Volume 359 ; 359 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Special Publications Volume 357 ; 357 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Special Publications Volume 358 ; 358 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Geological Society of London Special Publications Volume 359 ; 359 >
     au < HighWirePressH20Plugin ; notReady ; 2011 ; Geological Society of London Special Publications Volume 360 ; 360 >
     au < HighWirePressH20Plugin ; ready ; 2012 ; Geological Society of London Special Publications Volume 361 ; 361 >
     au < HighWirePressH20Plugin ; ready ; 2012 ; Geological Society of London Special Publications Volume 362 ; 362 >
@@ -572,7 +572,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Journal of the Geological Society of London Volume 166 ; 166 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of the Geological Society of London Volume 167 ; 167 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the Geological Society of London Volume 168 ; 168 >
-    au < HighWirePressH20Plugin ; releasing ; 2012 ; Journal of the Geological Society of London Volume 169 ; 169 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the Geological Society of London Volume 169 ; 169 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the Geological Society of London Volume 170 ; 170 >
 
   }
@@ -589,24 +589,24 @@
       param[base_url] = http://pg.lyellcollection.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < releasing ; 1995 ; Petroleum Geoscience Volume 1 ; 1 >
-      au < releasing ; 1996 ; Petroleum Geoscience Volume 2 ; 2 >
-      au < releasing ; 1997 ; Petroleum Geoscience Volume 3 ; 3 >
-      au < releasing ; 1998 ; Petroleum Geoscience Volume 4 ; 4 >
-      au < releasing ; 1999 ; Petroleum Geoscience Volume 5 ; 5 >
-      au < releasing ; 2000 ; Petroleum Geoscience Volume 6 ; 6 >
-      au < releasing ; 2001 ; Petroleum Geoscience Volume 7 ; 7 >
-      au < releasing ; 2002 ; Petroleum Geoscience Volume 8 ; 8 >
-      au < releasing ; 2003 ; Petroleum Geoscience Volume 9 ; 9 >
-      au < releasing ; 2004 ; Petroleum Geoscience Volume 10 ; 10 >
-      au < releasing ; 2005 ; Petroleum Geoscience Volume 11 ; 11 >
-      au < releasing ; 2006 ; Petroleum Geoscience Volume 12 ; 12 >
-      au < releasing ; 2007 ; Petroleum Geoscience Volume 13 ; 13 >
-      au < releasing ; 2008 ; Petroleum Geoscience Volume 14 ; 14 >
-      au < releasing ; 2009 ; Petroleum Geoscience Volume 15 ; 15 >
-      au < releasing ; 2010 ; Petroleum Geoscience Volume 16 ; 16 >
-      au < releasing ; 2011 ; Petroleum Geoscience Volume 17 ; 17 >
-      au < releasing ; 2012 ; Petroleum Geoscience Volume 18 ; 18 >
+      au < released ; 1995 ; Petroleum Geoscience Volume 1 ; 1 >
+      au < released ; 1996 ; Petroleum Geoscience Volume 2 ; 2 >
+      au < released ; 1997 ; Petroleum Geoscience Volume 3 ; 3 >
+      au < released ; 1998 ; Petroleum Geoscience Volume 4 ; 4 >
+      au < released ; 1999 ; Petroleum Geoscience Volume 5 ; 5 >
+      au < released ; 2000 ; Petroleum Geoscience Volume 6 ; 6 >
+      au < released ; 2001 ; Petroleum Geoscience Volume 7 ; 7 >
+      au < released ; 2002 ; Petroleum Geoscience Volume 8 ; 8 >
+      au < released ; 2003 ; Petroleum Geoscience Volume 9 ; 9 >
+      au < released ; 2004 ; Petroleum Geoscience Volume 10 ; 10 >
+      au < released ; 2005 ; Petroleum Geoscience Volume 11 ; 11 >
+      au < released ; 2006 ; Petroleum Geoscience Volume 12 ; 12 >
+      au < released ; 2007 ; Petroleum Geoscience Volume 13 ; 13 >
+      au < released ; 2008 ; Petroleum Geoscience Volume 14 ; 14 >
+      au < released ; 2009 ; Petroleum Geoscience Volume 15 ; 15 >
+      au < released ; 2010 ; Petroleum Geoscience Volume 16 ; 16 >
+      au < released ; 2011 ; Petroleum Geoscience Volume 17 ; 17 >
+      au < released ; 2012 ; Petroleum Geoscience Volume 18 ; 18 >
       au < expected ; 2013 ; Petroleum Geoscience Volume 19 ; 19 >
     
   }
@@ -668,7 +668,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; releasing ; 2012 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 46 ; 46 >
       
   }
@@ -684,18 +684,18 @@
     param[base_url] = http://trn.lyellcollection.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < releasing ; 1811 ; Transactions of the Geological Society of London Series 1 Volume 1 ; s1-1 >
-    au < releasing ; 1814 ; Transactions of the Geological Society of London Series 1 Volume 2 ; s1-2 >
-    au < releasing ; 1816 ; Transactions of the Geological Society of London Series 1 Volume 3 ; s1-3 >
-    au < releasing ; 1817 ; Transactions of the Geological Society of London Series 1 Volume 4 ; s1-4 >
-    au < releasing ; 1821 ; Transactions of the Geological Society of London Series 1 Volume 5 ; s1-5 >
-    au < releasing ; 1822-1824 ; Transactions of the Geological Society of London Series 2 Volume 1 ; s2-1 >
-    au < releasing ; 1826-1828 ; Transactions of the Geological Society of London Series 2 Volume 2 ; s2-2 >
-    au < releasing ; 1829-1835 ; Transactions of the Geological Society of London Series 2 Volume 3 ; s2-3 >
-    au < releasing ; 1835-1836 ; Transactions of the Geological Society of London Series 2 Volume 4 ; s2-4 >
-    au < releasing ; 1837-1840 ; Transactions of the Geological Society of London Series 2 Volume 5 ; s2-5 >
-    au < releasing ; 1841-1842 ; Transactions of the Geological Society of London Series 2 Volume 6 ; s2-6 >
-    au < releasing ; 1845-1856 ; Transactions of the Geological Society of London Series 2 Volume 7 ; s2-7 >
+    au < released ; 1811 ; Transactions of the Geological Society of London Series 1 Volume 1 ; s1-1 >
+    au < released ; 1814 ; Transactions of the Geological Society of London Series 1 Volume 2 ; s1-2 >
+    au < released ; 1816 ; Transactions of the Geological Society of London Series 1 Volume 3 ; s1-3 >
+    au < released ; 1817 ; Transactions of the Geological Society of London Series 1 Volume 4 ; s1-4 >
+    au < released ; 1821 ; Transactions of the Geological Society of London Series 1 Volume 5 ; s1-5 >
+    au < released ; 1822-1824 ; Transactions of the Geological Society of London Series 2 Volume 1 ; s2-1 >
+    au < released ; 1826-1828 ; Transactions of the Geological Society of London Series 2 Volume 2 ; s2-2 >
+    au < released ; 1829-1835 ; Transactions of the Geological Society of London Series 2 Volume 3 ; s2-3 >
+    au < released ; 1835-1836 ; Transactions of the Geological Society of London Series 2 Volume 4 ; s2-4 >
+    au < released ; 1837-1840 ; Transactions of the Geological Society of London Series 2 Volume 5 ; s2-5 >
+    au < released ; 1841-1842 ; Transactions of the Geological Society of London Series 2 Volume 6 ; s2-6 >
+    au < released ; 1845-1856 ; Transactions of the Geological Society of London Series 2 Volume 7 ; s2-7 >
 
   }
 
