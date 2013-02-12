@@ -2919,8 +2919,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.darujps.com/
       param[journal_issn] = 1560-8115
 
-      au < exists ; exists ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 1 ; 1 >
-      au < manifest ; exists ; 2013 ; DARU Journal of Pharmaceutical Sciences Volume 2 ; 2 >
+      au < exists ; exists ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 >
+      au < manifest ; exists ; 2013 ; DARU Journal of Pharmaceutical Sciences Volume 21 ; 21 >
     
     }
 
