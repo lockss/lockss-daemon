@@ -2049,11 +2049,11 @@
       param[base_url] = http://www.apfmj.com/
       param[journal_issn] = 1447-056X
 
-      au < ready ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
-      au < ready ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
-      au < ready ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
-      au < ready ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
-      au < ready ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
+      au < releasing ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
+      au < releasing ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
+      au < releasing ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
+      au < releasing ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
+      au < releasing ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
       au < expected ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
 
     }
@@ -2786,7 +2786,7 @@
       param[journal_issn] = 1542-6416
       comment[moved_from] = Springer Science+Business Media in 2011
       
-      au < ready ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
+      au < releasing ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
       au < testing ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
       au < ready ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
       au < manifest ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
@@ -2959,10 +2959,10 @@
       param[base_url] = http://www.dmsjournal.com/
       param[journal_issn] = 1758-5996
 
-      au < ready ; 2009 ; Diabetology & Metabolic Syndrome Volume 1 ; 1 >
-      au < ready ; 2010 ; Diabetology & Metabolic Syndrome Volume 2 ; 2 >
-      au < ready ; 2011 ; Diabetology & Metabolic Syndrome Volume 3 ; 3 >
-      au < ready ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
+      au < releasing ; 2009 ; Diabetology & Metabolic Syndrome Volume 1 ; 1 >
+      au < releasing ; 2010 ; Diabetology & Metabolic Syndrome Volume 2 ; 2 >
+      au < releasing ; 2011 ; Diabetology & Metabolic Syndrome Volume 3 ; 3 >
+      au < releasing ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
       au < manifest ; 2013 ; Diabetology & Metabolic Syndrome Volume 5 ; 5 >
 
     }
@@ -3031,7 +3031,7 @@
       au < released ; 2009 ; Emerging Themes in Epidemiology Volume 6 ; 6 >
       au < released ; 2010 ; Emerging Themes in Epidemiology Volume 7 ; 7 >
       au < released ; 2011 ; Emerging Themes in Epidemiology Volume 8 ; 8 >
-      au < ready ; 2012 ; Emerging Themes in Epidemiology Volume 9 ; 9 >
+      au < releasing ; 2012 ; Emerging Themes in Epidemiology Volume 9 ; 9 >
       au < manifest ; 2013 ; Emerging Themes in Epidemiology Volume 10 ; 10 >
 
     }
@@ -3072,7 +3072,7 @@
       au < released ; 2009 ; Environmental Health Volume 8 ; 8 >
       au < released ; 2010 ; Environmental Health Volume 9 ; 9 >
       au < released ; 2011 ; Environmental Health Volume 10 ; 10 >
-      au < ready ; 2012 ; Environmental Health Volume 11 ; 11 >
+      au < releasing ; 2012 ; Environmental Health Volume 11 ; 11 >
       au < manifest ; 2013 ; Environmental Health Volume 12 ; 12 >
 
     }
@@ -3111,11 +3111,11 @@
       param[base_url] = http://www.epigeneticsandchromatin.com/
       param[journal_issn] = 1756-8935
 
-      au < ready ; 2008 ; Epigenetics & Chromatin Volume 1 ; 1 >
-      au < ready ; 2009 ; Epigenetics & Chromatin Volume 2 ; 2 >
-      au < ready ; 2010 ; Epigenetics & Chromatin Volume 3 ; 3 >
-      au < ready ; 2011 ; Epigenetics & Chromatin Volume 4 ; 4 >
-      au < ready ; 2012 ; Epigenetics & Chromatin Volume 5 ; 5 >
+      au < releasing ; 2008 ; Epigenetics & Chromatin Volume 1 ; 1 >
+      au < releasing ; 2009 ; Epigenetics & Chromatin Volume 2 ; 2 >
+      au < releasing ; 2010 ; Epigenetics & Chromatin Volume 3 ; 3 >
+      au < releasing ; 2011 ; Epigenetics & Chromatin Volume 4 ; 4 >
+      au < releasing ; 2012 ; Epigenetics & Chromatin Volume 5 ; 5 >
       au < manifest ; 2013 ; Epigenetics & Chromatin Volume 6 ; 6 >
 
     }
@@ -3147,10 +3147,10 @@
       param[base_url] = http://www.eurjmedres.com/
       param[journal_issn] = 2047-783X
 
-      au < ready ; 2009 ; European Journal of Medical Research Volume 14 ; 14 >
-      au < ready ; 2010 ; European Journal of Medical Research Volume 15 ; 15 >
-      au < ready ; 2011 ; European Journal of Medical Research Volume 16 ; 16 >
-      au < ready ; 2012 ; European Journal of Medical Research Volume 17 ; 17 >
+      au < releasing ; 2009 ; European Journal of Medical Research Volume 14 ; 14 >
+      au < releasing ; 2010 ; European Journal of Medical Research Volume 15 ; 15 >
+      au < releasing ; 2011 ; European Journal of Medical Research Volume 16 ; 16 >
+      au < releasing ; 2012 ; European Journal of Medical Research Volume 17 ; 17 >
       au < manifest ; 2013 ; European Journal of Medical Research Volume 18 ; 18 >
 
     }

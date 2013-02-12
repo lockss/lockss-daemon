@@ -19,10 +19,10 @@
     param[journal_dir] = eudora_welty_review
     attr[journal_id] = ewr
 
-    au < ready ; 2009 ; Eudora Welty Review Volume 1 ; 1 >
-    au < ready ; 2010 ; Eudora Welty Review Volume 2 ; 2 >
-    au < ready ; 2011 ; Eudora Welty Review Volume 3 ; 3 >
-    au < ready ; 2012 ; Eudora Welty Review Volume 4 ; 4 >
+    au < releasing ; 2009 ; Eudora Welty Review Volume 1 ; 1 >
+    au < releasing ; 2010 ; Eudora Welty Review Volume 2 ; 2 >
+    au < releasing ; 2011 ; Eudora Welty Review Volume 3 ; 3 >
+    au < releasing ; 2012 ; Eudora Welty Review Volume 4 ; 4 >
 
   }
 

@@ -19,12 +19,12 @@
     param[journal_dir] = alabama_review
     attr[journal_id] = ala
     
-    au < ready ; 2007 ; Alabama Review Volume 60 ; 60 >
-    au < ready ; 2008 ; Alabama Review Volume 61 ; 61 >
-    au < ready ; 2009 ; Alabama Review Volume 62 ; 62 >
-    au < ready ; 2010 ; Alabama Review Volume 63 ; 63 >
-    au < ready ; 2011 ; Alabama Review Volume 64 ; 64 >
-    au < ready ; 2012 ; Alabama Review Volume 65 ; 65 >
+    au < releasing ; 2007 ; Alabama Review Volume 60 ; 60 >
+    au < releasing ; 2008 ; Alabama Review Volume 61 ; 61 >
+    au < releasing ; 2009 ; Alabama Review Volume 62 ; 62 >
+    au < releasing ; 2010 ; Alabama Review Volume 63 ; 63 >
+    au < releasing ; 2011 ; Alabama Review Volume 64 ; 64 >
+    au < releasing ; 2012 ; Alabama Review Volume 65 ; 65 >
     au < expected ; 2013 ; Alabama Review Volume 66 ; 66 >
 
   }
