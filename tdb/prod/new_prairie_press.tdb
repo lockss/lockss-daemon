@@ -24,6 +24,8 @@
     au < testing ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; 2008 >
     au < testing ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; 2009 >
     au < testing ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; 2010 >
+    au < exists ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; 2012 >
+    au < expected ; 2013 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 8 ; 8 ; 2013 >
 
   }
 
@@ -78,7 +80,7 @@
     param[base_url] = http://www.newprairiepress.org/journals/
     param[journal_id] = IJSSW
 
-    comment[expected] = Nothing published yet
+    au < expected ; 2013 ; International Journal of School Social Work Volume 1 ; 1 ; 2013 >
 
   }
 
