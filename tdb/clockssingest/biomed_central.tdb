@@ -6023,12 +6023,12 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://new.waojournal.org/
       param[journal_issn] = 1939-4551
 
-      au < exist ; exists ; 2008 ; World Allergy Organization Journal Volume 1 ; 1 >
-      au < exist ; exists ; 2009 ; World Allergy Organization Journal Volume 2 ; 2 >
-      au < exist ; exists ; 2010 ; World Allergy Organization Journal Volume 3 ; 3 >
-      au < exist ; exists ; 2011 ; World Allergy Organization Journal Volume 4 ; 4 >
-      au < exist ; exists ; 2012 ; World Allergy Organization Journal Volume 5 ; 5 >
-      au < exist ; exists ; 2013 ; World Allergy Organization Journal Volume 6 ; 6 >
+      au < exists ; exists ; 2008 ; World Allergy Organization Journal Volume 1 ; 1 >
+      au < exists ; exists ; 2009 ; World Allergy Organization Journal Volume 2 ; 2 >
+      au < exists ; exists ; 2010 ; World Allergy Organization Journal Volume 3 ; 3 >
+      au < exists ; exists ; 2011 ; World Allergy Organization Journal Volume 4 ; 4 >
+      au < exists ; exists ; 2012 ; World Allergy Organization Journal Volume 5 ; 5 >
+      au < exists ; exists ; 2013 ; World Allergy Organization Journal Volume 6 ; 6 >
 
     }
 
