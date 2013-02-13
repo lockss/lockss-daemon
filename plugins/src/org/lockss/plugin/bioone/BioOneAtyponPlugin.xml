@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -65,29 +65,29 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;BioOne Plugin (Atypon Systems Platform), Base URL %s, Journal ID %s, Volume %s&quot;, base_url, journal_id, volume_name</string>
+    <string>"BioOne Plugin (Atypon Systems Platform), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
+    <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
       <entry>
         <string>au_title</string>
-        <string>&quot;%sloi/%s&quot;, base_url, journal_id</string>
+        <string>"%sloi/%s", base_url, journal_id</string>
       </entry>
       <entry>
         <string>au_volume</string>
         <map>
           <entry>
             <string>coas</string>
-            <string>&quot;%sloi/%s&quot;, base_url, journal_id</string>
+            <string>"%sloi/%s", base_url, journal_id</string>
           </entry>
           <entry>
             <string>*</string>
-            <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
+            <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
           </entry>
         </map>
       </entry>
@@ -96,11 +96,11 @@
         <map>
           <entry>
             <string>coas</string>
-            <string>&quot;%sloi/%s&quot;, base_url, journal_id</string>
+            <string>"%sloi/%s", base_url, journal_id</string>
           </entry>
           <entry>
             <string>*</string>
-            <string>&quot;%stoc/%s/%s/%s&quot;, base_url, journal_id, volume_name, issue</string>
+            <string>"%stoc/%s/%s/%s", base_url, journal_id, volume_name, issue</string>
           </entry>
         </map>
       </entry>
@@ -109,13 +109,12 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^https?://%s/&quot;, base_url_host</string>
-      <string>1,&quot;^%slockss/%s/%s/index\.html$&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%stoc/%s/%s($|/)&quot;, base_url, journal_id, volume_name</string>
-      <string>2,&quot;^%sdoi/[^/]+/[^/]+/[-.9]+$&quot;, base_url</string>
-      <string>2,&quot;^%saction/showFullPopup\?doi=.*&amp;id=$&quot;, base_url</string>
-      <string>1,&quot;^%s(action/showFullPopup\?doi=|doi/)&quot;, base_url</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^https?://%s/", base_url_host</string>
+      <string>1,"^%stoc/%s/%s($|/)", base_url, journal_id, volume_name</string>
+      <string>2,"^%sdoi/[^/]+/[^/]+/[-.9]+$", base_url</string>
+      <string>2,"^%saction/showFullPopup\?doi=.*&amp;id=$", base_url</string>
+      <string>1,"^%s(action/showFullPopup\?doi=|doi/)", base_url</string>
     </list>
   </entry>
   <entry>
@@ -137,7 +136,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%sdoi/(full|pdf)/&quot;, base_url</string>
+      <string>"^%sdoi/(full|pdf)/", base_url</string>
     </list>
   </entry>
   <entry>
