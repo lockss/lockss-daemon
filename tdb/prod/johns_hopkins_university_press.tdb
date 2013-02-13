@@ -666,7 +666,7 @@
     au < released ; 2010 ; Historically Speaking Volume 11 ; 11 >
     au < released ; 2011 ; Historically Speaking Volume 12 ; 12 >
     au < released ; 2012 ; Historically Speaking Volume 13 ; 13 >
-    au < expected ; 2013 ; Historically Speaking Volume 14 ; 14 >
+    au < manifest ; 2013 ; Historically Speaking Volume 14 ; 14 >
 
   }
 
@@ -1122,7 +1122,7 @@
     param[journal_dir] = leviathan
     attr[journal_id] = 
 
-    au < expected ; 2013 ; Leviathan Volume 1 ; 1 >
+    au < manifest ; 2013 ; Leviathan Volume 1 ; 1 >
 
   }
 
@@ -1501,7 +1501,7 @@
     param[journal_dir] = poe_studies
     attr[journal_id] = 
 
-    au < expected ; 2013 ; Poe Studies Volume 1 ; 1 >
+    au < manifest ; 2013 ; Poe Studies Volume 1 ; 1 >
 
   }
 
@@ -1890,7 +1890,7 @@
     au < released ; 2010 ; Technology and Culture Volume 51 ; 51 >
     au < released ; 2011 ; Technology and Culture Volume 52 ; 52 >
     au < released ; 2012 ; Technology and Culture Volume 53 ; 53 >
-    au < expected ; 2013 ; Technology and Culture Volume 54 ; 54 >
+    au < manifest ; 2013 ; Technology and Culture Volume 54 ; 54 >
 
   }
 
