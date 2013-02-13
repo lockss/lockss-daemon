@@ -20,14 +20,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = wild
   
-      au < testing ; 2004 ; Journal of Wildlife Management Volume 68 ; 68 >
-      au < testing ; 2005 ; Journal of Wildlife Management Volume 69 ; 69 >
-      au < testing ; 2006 ; Journal of Wildlife Management Volume 70 ; 70 >
-      au < testing ; 2007 ; Journal of Wildlife Management Volume 71 ; 71 >
-      au < testing ; 2008 ; Journal of Wildlife Management Volume 72 ; 72 >
-      au < testing ; 2009 ; Journal of Wildlife Management Volume 73 ; 73 >
-      au < testing ; 2010 ; Journal of Wildlife Management Volume 74 ; 74 >
-      au < testing ; 2011 ; Journal of Wildlife Management Volume 75 ; 75 >
+      au < ready ; 2004 ; Journal of Wildlife Management Volume 68 ; 68 >
+      au < ready ; 2005 ; Journal of Wildlife Management Volume 69 ; 69 >
+      au < ready ; 2006 ; Journal of Wildlife Management Volume 70 ; 70 >
+      au < ready ; 2007 ; Journal of Wildlife Management Volume 71 ; 71 >
+      au < ready ; 2008 ; Journal of Wildlife Management Volume 72 ; 72 >
+      au < ready ; 2009 ; Journal of Wildlife Management Volume 73 ; 73 >
+      au < ready ; 2010 ; Journal of Wildlife Management Volume 74 ; 74 >
+      au < ready ; 2011 ; Journal of Wildlife Management Volume 75 ; 75 >
       au < expected ; 2012 ; Journal of Wildlife Management Volume 76 ; 76 >
 
     }
