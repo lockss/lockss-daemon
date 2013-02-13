@@ -3,6 +3,13 @@
   publisher <
     name = White Horse Press
   >
+
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = whp
+    implicit < status ; year ; name ; param[volume_name] >
   
   {
   
@@ -13,14 +20,8 @@
       issnl = 0967-3407
   >
     
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = whpress 
     param[journal_id] = eh
     param[journal_issn] = 0967-3407
-    implicit < status ; year ; name ; param[volume_name] >
     
     au < testing ; 1995 ; Environment and History Volume 1 ; 1 >
     au < testing ; 1996 ; Environment and History Volume 2 ; 2 >
@@ -53,14 +54,8 @@
       issnl = 0963-2719 
     >
     
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = whpress
     param[journal_id] = ev
     param[journal_issn] = 0963-2719
-    implicit < status ; year ; name ; param[volume_name] >
     
     au < manifest ; 1992 ; Environmental Values Volume 1 ; 1 >
     au < manifest ; 1993 ; Environmental Values Volume 2 ; 2 >
