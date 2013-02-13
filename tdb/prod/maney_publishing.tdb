@@ -687,14 +687,15 @@
     param[journal_issn] = 1479-0963
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
+    comment[notReady] = RU4507, low agreement
 
-    au < testing ; 2003 ; Central Europe Volume 1 ; 1 > 
-    au < testing ; 2004 ; Central Europe Volume 2 ; 2 > 
-    au < testing ; 2005 ; Central Europe Volume 3 ; 3 > 
-    au < testing ; 2006 ; Central Europe Volume 4 ; 4 > 
-    au < testing ; 2007 ; Central Europe Volume 5 ; 5 > 
-    au < testing ; 2008 ; Central Europe Volume 6 ; 6 > 
-    au < testing ; 2009 ; Central Europe Volume 7 ; 7 > 
+    au < notReady ; 2003 ; Central Europe Volume 1 ; 1 > 
+    au < notReady ; 2004 ; Central Europe Volume 2 ; 2 > 
+    au < notReady ; 2005 ; Central Europe Volume 3 ; 3 > 
+    au < notReady ; 2006 ; Central Europe Volume 4 ; 4 > 
+    au < notReady ; 2007 ; Central Europe Volume 5 ; 5 > 
+    au < notReady ; 2008 ; Central Europe Volume 6 ; 6 > 
+    au < notReady ; 2009 ; Central Europe Volume 7 ; 7 > 
     au < released ; 2010 ; Central Europe Volume 8 ; 8 > 
     au < released ; 2011 ; Central Europe Volume 9 ; 9 > 
     au < released ; 2012 ; Central Europe Volume 10 ; 10 > 
@@ -779,14 +780,15 @@
     param[journal_id] = cas 
     param[journal_issn] = 1477-5700
     implicit < status ; year ; name ; param[volume_name] >
+    comment[notReady] = RU4507, low agreement
 
-    au < testing ; 2003 ; Comparative American Studies Volume 1 ; 1 > 
-    au < testing ; 2004 ; Comparative American Studies Volume 2 ; 2 > 
-    au < testing ; 2005 ; Comparative American Studies Volume 3 ; 3 > 
-    au < testing ; 2006 ; Comparative American Studies Volume 4 ; 4 > 
-    au < testing ; 2007 ; Comparative American Studies Volume 5 ; 5 > 
-    au < testing ; 2008 ; Comparative American Studies Volume 6 ; 6 > 
-    au < testing ; 2009 ; Comparative American Studies Volume 7 ; 7 > 
+    au < notReady ; 2003 ; Comparative American Studies Volume 1 ; 1 > 
+    au < notReady ; 2004 ; Comparative American Studies Volume 2 ; 2 > 
+    au < notReady ; 2005 ; Comparative American Studies Volume 3 ; 3 > 
+    au < notReady ; 2006 ; Comparative American Studies Volume 4 ; 4 > 
+    au < notReady ; 2007 ; Comparative American Studies Volume 5 ; 5 > 
+    au < notReady ; 2008 ; Comparative American Studies Volume 6 ; 6 > 
+    au < notReady ; 2009 ; Comparative American Studies Volume 7 ; 7 > 
     au < released ; 2010 ; Comparative American Studies Volume 8 ; 8 > 
     au < released ; 2011 ; Comparative American Studies Volume 9 ; 9 > 
     au < released ; 2012 ; Comparative American Studies Volume 10 ; 10 > 
@@ -812,15 +814,16 @@
     param[journal_id] = com 
     param[journal_issn] = 1024-5294
     implicit < status ; year ; name ; param[volume_name] >
+    comment[notReady] = RU4507, low agreement
 
-    au < testing ; 2002 ; Competition & Change Volume 6 ; 6 > 
-    au < testing ; 2003 ; Competition & Change Volume 7 ; 7 > 
+    au < notReady ; 2002 ; Competition & Change Volume 6 ; 6 > 
+    au < notReady ; 2003 ; Competition & Change Volume 7 ; 7 > 
     au < ready ; 2004 ; Competition & Change Volume 8 ; 8 > 
-    au < testing ; 2005 ; Competition & Change Volume 9 ; 9 > 
-    au < testing ; 2006 ; Competition & Change Volume 10 ; 10 > 
-    au < testing ; 2007 ; Competition & Change Volume 11 ; 11 > 
-    au < testing ; 2008 ; Competition & Change Volume 12 ; 12 > 
-    au < testing ; 2009 ; Competition & Change Volume 13 ; 13 > 
+    au < notReady ; 2005 ; Competition & Change Volume 9 ; 9 > 
+    au < notReady ; 2006 ; Competition & Change Volume 10 ; 10 > 
+    au < notReady ; 2007 ; Competition & Change Volume 11 ; 11 > 
+    au < notReady ; 2008 ; Competition & Change Volume 12 ; 12 > 
+    au < notReady ; 2009 ; Competition & Change Volume 13 ; 13 > 
     au < released ; 2010 ; Competition & Change Volume 14 ; 14 > 
     au < released ; 2011 ; Competition & Change Volume 15 ; 15 > 
     au < released ; 2012 ; Competition & Change Volume 16 ; 16 > 
