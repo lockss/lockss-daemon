@@ -18,12 +18,12 @@
     
     param[journal_id] = mobt
 
-    au < manifest ; 2006 ; Annals of the Missouri Botanical Garden Volume 93 ; 93 >
-    au < manifest ; 2007 ; Annals of the Missouri Botanical Garden Volume 94 ; 94 >
-    au < manifest ; 2008 ; Annals of the Missouri Botanical Garden Volume 95 ; 95 >
-    au < manifest ; 2009 ; Annals of the Missouri Botanical Garden Volume 96 ; 96 >
-    au < manifest ; 2010 ; Annals of the Missouri Botanical Garden Volume 97 ; 97 >
-    au < manifest ; 2011-2012 ; Annals of the Missouri Botanical Garden Volume 98 ; 98 >
+    au < testing ; 2006 ; Annals of the Missouri Botanical Garden Volume 93 ; 93 >
+    au < testing ; 2007 ; Annals of the Missouri Botanical Garden Volume 94 ; 94 >
+    au < testing ; 2008 ; Annals of the Missouri Botanical Garden Volume 95 ; 95 >
+    au < testing ; 2009 ; Annals of the Missouri Botanical Garden Volume 96 ; 96 >
+    au < testing ; 2010 ; Annals of the Missouri Botanical Garden Volume 97 ; 97 >
+    au < testing ; 2011-2012 ; Annals of the Missouri Botanical Garden Volume 98 ; 98 >
     au < expected ; 2012 ; Annals of the Missouri Botanical Garden Volume 99 ; 99 >
  
   }
@@ -38,13 +38,13 @@
     
     param[journal_id] = novo
 
-    au < manifest ; 2006 ; Novon: A Journal for Botanical Nomenclature Volume 16 ; 16 >
-    au < manifest ; 2007 ; Novon: A Journal for Botanical Nomenclature Volume 17 ; 17 >
-    au < manifest ; 2008 ; Novon: A Journal for Botanical Nomenclature Volume 18 ; 18 >
-    au < manifest ; 2009 ; Novon: A Journal for Botanical Nomenclature Volume 19 ; 19 >
-    au < manifest ; 2010 ; Novon: A Journal for Botanical Nomenclature Volume 20 ; 20 >
-    au < manifest ; 2011 ; Novon: A Journal for Botanical Nomenclature Volume 21 ; 21 >
-    au < manifest ; 2012 ; Novon: A Journal for Botanical Nomenclature Volume 22 ; 22 >
+    au < testing ; 2006 ; Novon: A Journal for Botanical Nomenclature Volume 16 ; 16 >
+    au < testing ; 2007 ; Novon: A Journal for Botanical Nomenclature Volume 17 ; 17 >
+    au < testing ; 2008 ; Novon: A Journal for Botanical Nomenclature Volume 18 ; 18 >
+    au < testing ; 2009 ; Novon: A Journal for Botanical Nomenclature Volume 19 ; 19 >
+    au < testing ; 2010 ; Novon: A Journal for Botanical Nomenclature Volume 20 ; 20 >
+    au < testing ; 2011 ; Novon: A Journal for Botanical Nomenclature Volume 21 ; 21 >
+    au < testing ; 2012 ; Novon: A Journal for Botanical Nomenclature Volume 22 ; 22 >
     au < expected ; 2013 ; Novon: A Journal for Botanical Nomenclature Volume 23 ; 23 >
  
   }
