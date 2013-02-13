@@ -27,17 +27,18 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = herp
       
-      au < manifest ; 2002 ; Herpetologica Volume 58 ; 58 >
-      au < manifest ; 2003 ; Herpetologica Volume 59 ; 59 >
-      au < manifest ; 2004 ; Herpetologica Volume 60 ; 60 >
+      au < testing ; 2002 ; Herpetologica Volume 58 ; 58 >
+      au < testing ; 2003 ; Herpetologica Volume 59 ; 59 >
+      au < testing ; 2004 ; Herpetologica Volume 60 ; 60 >
       au < doNotProcess ; 2005 ; Herpetologica Volume 61 ; 61 >
-      au < manifest ; 2006 ; Herpetologica Volume 62 ; 62 >
-      au < manifest ; 2007 ; Herpetologica Volume 63 ; 63 >
-      au < manifest ; 2008 ; Herpetologica Volume 64 ; 64 >
-      au < manifest ; 2009 ; Herpetologica Volume 65 ; 65 >
-      au < manifest ; 2010 ; Herpetologica Volume 66 ; 66 >
-      au < manifest ; 2011 ; Herpetologica Volume 67 ; 67 >
-      au < manifest ; 2012 ; Herpetologica Volume 68 ; 68 >
+      au < testing ; 2006 ; Herpetologica Volume 62 ; 62 >
+      au < testing ; 2007 ; Herpetologica Volume 63 ; 63 >
+      au < testing ; 2008 ; Herpetologica Volume 64 ; 64 >
+      au < testing ; 2009 ; Herpetologica Volume 65 ; 65 >
+      au < testing ; 2010 ; Herpetologica Volume 66 ; 66 >
+      au < testing ; 2011 ; Herpetologica Volume 67 ; 67 >
+      au < testing ; 2012 ; Herpetologica Volume 68 ; 68 >
+      au < exists ; 2013 ; Herpetologica Volume 69 ; 69 >
  
       }
 
@@ -69,16 +70,18 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = hmon
 
-      au < manifest ; 2002 ; Herpetological Monographs Volume 16 ; 16 >
-      au < manifest ; 2003 ; Herpetological Monographs Volume 17 ; 17 >
-      au < manifest ; 2004 ; Herpetological Monographs Volume 18 ; 18 >
-      au < manifest ; 2005 ; Herpetological Monographs Volume 19 ; 19 >
-      au < manifest ; 2006 ; Herpetological Monographs Volume 20 ; 20 >
-      au < manifest ; 2007 ; Herpetological Monographs Volume 21 ; 21 >
+      au < testing ; 2002 ; Herpetological Monographs Volume 16 ; 16 >
+      au < testing ; 2003 ; Herpetological Monographs Volume 17 ; 17 >
+      au < testing ; 2004 ; Herpetological Monographs Volume 18 ; 18 >
+      au < testing ; 2005 ; Herpetological Monographs Volume 19 ; 19 >
+      au < testing ; 2006 ; Herpetological Monographs Volume 20 ; 20 >
+      au < testing ; 2007 ; Herpetological Monographs Volume 21 ; 21 >
       au < doesNotExist ; 2008 ; Herpetological Monographs Volume 22 ; 22 > 
-      au < manifest ; 2009 ; Herpetological Monographs Volume 23 ; 23 >
-      au < manifest ; 2010 ; Herpetological Monographs Volume 24 ; 24 >
-      au < manifest ; 2011 ; Herpetological Monographs Volume 25 ; 25 >
+      au < testing ; 2009 ; Herpetological Monographs Volume 23 ; 23 >
+      au < testing ; 2010 ; Herpetological Monographs Volume 24 ; 24 >
+      au < testing ; 2011 ; Herpetological Monographs Volume 25 ; 25 >
+      au < exists ; 2012 ; Herpetological Monographs Volume 26 ; 26 >
+      au < expected ; 2013 ; Herpetological Monographs Volume 27 ; 27 >
 
     }
 
