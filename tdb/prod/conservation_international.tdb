@@ -48,13 +48,13 @@
     
     param[journal_id] = nepr
   
-    au < ready ; 2004 ; Neotropical Primates Volume 12 ; 12 >
-    au < ready ; 2005 ; Neotropical Primates Volume 13 ; 13 >
-    au < ready ; 2007 ; Neotropical Primates Volume 14 ; 14 >
+    au < wanted ; 2004 ; Neotropical Primates Volume 12 ; 12 >
+    au < wanted ; 2005 ; Neotropical Primates Volume 13 ; 13 >
+    au < wanted ; 2007 ; Neotropical Primates Volume 14 ; 14 >
     au < ready ; 2008 ; Neotropical Primates Volume 15 ; 15 >
     au < ready ; 2009 ; Neotropical Primates Volume 16 ; 16 >
     au < ready ; 2010 ; Neotropical Primates Volume 17 ; 17 >
-    au < manifest ; 2011 ; Neotropical Primates Volume 18 ; 18 >
+    au < wanted ; 2011 ; Neotropical Primates Volume 18 ; 18 >
 
   }
   
