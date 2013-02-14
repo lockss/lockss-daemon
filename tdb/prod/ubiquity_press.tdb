@@ -89,14 +89,14 @@
     param[base_url] = http://www.jcms-journal.com/
     param[journal_id] = jcms
 
-    au < testing ; 1996 ; The Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
-    au < testing ; 1997 ; The Journal of Conservation and Museum Studies Volume 2-3 ; 2-3 ; 1997 >
-    au < testing ; 1998 ; The Journal of Conservation and Museum Studies Volume 4-5 ; 4-5 ; 1998 >
-    au < testing ; 1999 ; The Journal of Conservation and Museum Studies Volume 6 ; 6 ; 1999 >
-    au < testing ; 2001 ; The Journal of Conservation and Museum Studies Volume 7 ; 7 ; 2001 >
-    au < testing ; 2002 ; The Journal of Conservation and Museum Studies Volume 8 ; 8 ; 2002 >
-    au < testing ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
-    au < testing ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
+    au < ready ; 1996 ; The Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
+    au < ready ; 1997 ; The Journal of Conservation and Museum Studies Volume 2-3 ; 2-3 ; 1997 >
+    au < ready ; 1998 ; The Journal of Conservation and Museum Studies Volume 4-5 ; 4-5 ; 1998 >
+    au < ready ; 1999 ; The Journal of Conservation and Museum Studies Volume 6 ; 6 ; 1999 >
+    au < ready ; 2001 ; The Journal of Conservation and Museum Studies Volume 7 ; 7 ; 2001 >
+    au < ready ; 2002 ; The Journal of Conservation and Museum Studies Volume 8 ; 8 ; 2002 >
+    au < ready ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
+    au < ready ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
     au < expected ; 2013 ; The Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 >
     
   }
