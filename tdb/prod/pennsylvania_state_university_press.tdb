@@ -524,9 +524,11 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = mark_twain_annual
+      param[journal_dir] = the_mark_twain_annual
       attr[journal_id] = 
       
+      au < expected ; 2013 ; The Mark Twain Annual Volume 1 ; 1 >
+
     }
     
   }
