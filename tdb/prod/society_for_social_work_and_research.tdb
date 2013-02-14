@@ -4,7 +4,7 @@
     name = Society for Social Work and Research
   >
 
-  comment[notReady] = RU issue3674, issue4205
+  comment[0] = RU issue3674
   plugin = org.lockss.plugin.scholarlyexchange.ScholarlyExchangeOJS2Plugin
   implicit < status ; year ; name ; volume ;  param[year] >
   
@@ -19,9 +19,10 @@
     param[journal_id] = jsswr
 
     
-    au < exists ; 2010 ; Journal of the Society for Social Work and Research Volume 1 ; 1 ; 2010 >
-    au < exists ; 2011 ; Journal of the Society for Social Work and Research Volume 2 ; 2 ; 2011 >
-    au < exists ; 2012 ; Journal of the Society for Social Work and Research Volume 3 ; 3 ; 2012 >
+    au < testing ; 2010 ; Journal of the Society for Social Work and Research Volume 1 ; 1 ; 2010 >
+    au < testing ; 2011 ; Journal of the Society for Social Work and Research Volume 2 ; 2 ; 2011 >
+    au < testing ; 2012 ; Journal of the Society for Social Work and Research Volume 3 ; 3 ; 2012 >
+    au < testing ; 2013 ; Journal of the Society for Social Work and Research Volume 4 ; 4 ; 2013 >
     
   }
      

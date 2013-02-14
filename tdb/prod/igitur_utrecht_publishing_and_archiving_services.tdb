@@ -17,20 +17,21 @@
     param[journal_id] = lq
     implicit < status ; year ; name ; param[year] >
     
-    au < testing ; 1999 ; LIBER Quarterly Volume 9 ; 1999 >
-    au < testing ; 2000 ; LIBER Quarterly Volume 10 ; 2000 >
-    au < testing ; 2001 ; LIBER Quarterly Volume 11 ; 2001 >
-    au < testing ; 2002 ; LIBER Quarterly Volume 12 ; 2002 >
-    au < testing ; 2003 ; LIBER Quarterly Volume 13 ; 2003 >
-    au < testing ; 2004 ; LIBER Quarterly Volume 14 ; 2004 >
-    au < testing ; 2005 ; LIBER Quarterly Volume 15 ; 2005 >
-    au < testing ; 2006 ; LIBER Quarterly Volume 16 ; 2006 >
-    au < testing ; 2007 ; LIBER Quarterly Volume 17 ; 2007 >
-    au < testing ; 2008 ; LIBER Quarterly Volume 18 ; 2008 >
-    au < testing ; 2009 ; LIBER Quarterly Volume 19 ; 2009 >
-    au < testing ; 2010 ; LIBER Quarterly Volume 19-20 ; 2010 >
-    au < testing ; 2011 ; LIBER Quarterly Volume 20-21 ; 2011 >
-    au < testing ; 2012 ; LIBER Quarterly Volume 21-22 ; 2012 >
+    au < ready ; 1999 ; LIBER Quarterly Volume 9 ; 1999 >
+    au < ready ; 2000 ; LIBER Quarterly Volume 10 ; 2000 >
+    au < ready ; 2001 ; LIBER Quarterly Volume 11 ; 2001 >
+    au < ready ; 2002 ; LIBER Quarterly Volume 12 ; 2002 >
+    au < ready ; 2003 ; LIBER Quarterly Volume 13 ; 2003 >
+    au < ready ; 2004 ; LIBER Quarterly Volume 14 ; 2004 >
+    au < ready ; 2005 ; LIBER Quarterly Volume 15 ; 2005 >
+    au < ready ; 2006 ; LIBER Quarterly Volume 16 ; 2006 >
+    au < ready ; 2007 ; LIBER Quarterly Volume 17 ; 2007 >
+    au < ready ; 2008 ; LIBER Quarterly Volume 18 ; 2008 >
+    au < ready ; 2009 ; LIBER Quarterly Volume 19 ; 2009 >
+    au < ready ; 2010 ; LIBER Quarterly Volume 19-20 ; 2010 >
+    au < ready ; 2011 ; LIBER Quarterly Volume 20-21 ; 2011 >
+    au < ready ; 2012 ; LIBER Quarterly Volume 21-22 ; 2012 >
+    au < expected ; 2013 ; LIBER Quarterly Volume 22-23 ; 2013 >
   
   }
 
