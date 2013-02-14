@@ -1120,9 +1120,11 @@
     >
 
     param[journal_dir] = leviathan
-    attr[journal_id] = 
+    attr[journal_id] = lvn
+    
+    comment[0] = do not test till home page is online http://muse.jhu.edu/journals/leviathan/
 
-    au < manifest ; 2013 ; Leviathan Volume 1 ; 1 >
+    au < notReady ; 2012 ; Leviathan Volume 14 ; 14 >
 
   }
 
