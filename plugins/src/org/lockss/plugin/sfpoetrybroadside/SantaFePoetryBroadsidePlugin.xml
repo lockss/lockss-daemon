@@ -9,7 +9,24 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
+  </entry>
+    <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -17,7 +34,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Santa Fe Poetry Broadside Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
+    <string>"Santa Fe Poetry Broadside Plugin, Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -26,32 +43,46 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sLOCKSS/manifest%d\.html&quot;, base_url, year</string>
-      <string>1,&quot;^%s.*(%d|%02d)\.html&quot;, base_url, year, au_short_year</string>
-      <string>1,&quot;^%sbio[0-9]+\.html&quot;, base_url</string>
-      <string>2,&quot;^%s.*[12][09][0-9][0-9]\.html&quot;, base_url</string>
-      <string>2,&quot;^%s.*[09][0-9].html&quot;, base_url</string>
-      <string>2,&quot;^%s(about|broadside|index)\.html$&quot;, base_url</string>
-      <string>1,&quot;^%s.*.(html|jpg|gif|css)&quot;, base_url</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sLOCKSS/manifest%d\.html", base_url, year</string>
+      <string>1,"^%s.*(%d|%02d)\.html", base_url, year, au_short_year</string>
+      <string>1,"^%sbio[0-9]+\.html", base_url</string>
+      <string>2,"^%s.*[12][09][0-9][0-9]\.html", base_url</string>
+      <string>2,"^%s.*[09][0-9].html", base_url</string>
+      <string>2,"^%s(about|broadside|index)\.html$", base_url</string>
+      <string>1,"^%s.*\.(html|jpg|gif|css)", base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sLOCKSS/manifest%d.html&quot;, base_url, year</string>
+    <string>"%sLOCKSS/manifest%d.html", base_url, year</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
   	<map>
 	  <entry>
       <string>au_title</string>
-      <string>&quot;%sbroadside.html&quot;, base_url</string>
+      <string>"%sbroadside.html", base_url</string>
     </entry>
     <entry>
       <string>au_volume</string>
-      <string>&quot;%sbroadside.html&quot;, base_url</string>
+      <string>"%sbroadside.html", base_url</string>
     </entry>
   	</map>
+  </entry>
+  <!--  the content is very flat so substance will be anthing.html that is not NON-substance -->
+  <entry>
+    <string>au_non_substance_url_pattern</string>
+    <list>
+    <!--  NON-substance: bio info, generic web info, issue TOC -->
+      	<string>"^%s(bio[0-9]+|links|contact|.*(%d|%02d))\.html", base_url, year, au_short_year</string>
+    </list>
+  </entry>
+      <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      	<string>"^%s.*\.html", base_url</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
