@@ -676,9 +676,11 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = reception
+      param[journal_dir] = reception_texts_readers_audiences_history
       attr[journal_id] = 
       
+      au < expected ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 1 ; 1 >
+
     }
     
   }
