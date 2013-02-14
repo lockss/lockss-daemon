@@ -122,22 +122,22 @@
       au < released ; 1995 ; SMPTE Motion Imaging Journal Volume 104 ; 104 >
       au < released ; 1996 ; SMPTE Motion Imaging Journal Volume 105 ; 105 >
       au < released ; 1997 ; SMPTE Motion Imaging Journal Volume 106 ; 106 >
-      au < testing ; 1998 ; SMPTE Motion Imaging Journal Volume 107 ; 107 >
-      au < testing ; 1999 ; SMPTE Motion Imaging Journal Volume 108 ; 108 >
-      au < testing ; 2000 ; SMPTE Motion Imaging Journal Volume 109 ; 109 >
-      au < testing ; 2001 ; SMPTE Motion Imaging Journal Volume 110 ; 110 >
-      au < testing ; 2002 ; SMPTE Motion Imaging Journal Volume 111 ; 111 >
-      au < testing ; 2003 ; SMPTE Motion Imaging Journal Volume 112 ; 112 >
-      au < testing ; 2004 ; SMPTE Motion Imaging Journal Volume 113 ; 113 >
-      au < testing ; 2005 ; SMPTE Motion Imaging Journal Volume 114 ; 114 >
-      au < testing ; 2006 ; SMPTE Motion Imaging Journal Volume 115 ; 115 >
-      au < testing ; 2007 ; SMPTE Motion Imaging Journal Volume 116 ; 116 >
-      au < testing ; 2008 ; SMPTE Motion Imaging Journal Volume 117 ; 117 >
-      au < testing ; 2009 ; SMPTE Motion Imaging Journal Volume 118 ; 118 >
-      au < testing ; 2010 ; SMPTE Motion Imaging Journal Volume 119 ; 119 >
-      au < testing ; 2011 ; SMPTE Motion Imaging Journal Volume 120 ; 120 >
-      au < testing ; 2012 ; SMPTE Motion Imaging Journal Volume 121 ; 121 >
-      au < testing ; 2013 ; SMPTE Motion Imaging Journal Volume 122 ; 122 >
+      au < ready ; 1998 ; SMPTE Motion Imaging Journal Volume 107 ; 107 >
+      au < ready ; 1999 ; SMPTE Motion Imaging Journal Volume 108 ; 108 >
+      au < ready ; 2000 ; SMPTE Motion Imaging Journal Volume 109 ; 109 >
+      au < ready ; 2001 ; SMPTE Motion Imaging Journal Volume 110 ; 110 >
+      au < ready ; 2002 ; SMPTE Motion Imaging Journal Volume 111 ; 111 >
+      au < ready ; 2003 ; SMPTE Motion Imaging Journal Volume 112 ; 112 >
+      au < ready ; 2004 ; SMPTE Motion Imaging Journal Volume 113 ; 113 >
+      au < ready ; 2005 ; SMPTE Motion Imaging Journal Volume 114 ; 114 >
+      au < ready ; 2006 ; SMPTE Motion Imaging Journal Volume 115 ; 115 >
+      au < ready ; 2007 ; SMPTE Motion Imaging Journal Volume 116 ; 116 >
+      au < ready ; 2008 ; SMPTE Motion Imaging Journal Volume 117 ; 117 >
+      au < ready ; 2009 ; SMPTE Motion Imaging Journal Volume 118 ; 118 >
+      au < ready ; 2010 ; SMPTE Motion Imaging Journal Volume 119 ; 119 >
+      au < ready ; 2011 ; SMPTE Motion Imaging Journal Volume 120 ; 120 >
+      au < ready ; 2012 ; SMPTE Motion Imaging Journal Volume 121 ; 121 >
+      au < ready ; 2013 ; SMPTE Motion Imaging Journal Volume 122 ; 122 >
 
     }
 
@@ -154,32 +154,32 @@
       param[base_url] = http://conferences.smpte.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1969 ; SMPTE Conference Proceedings Volume 1969 ; 1969 >
-      au < manifest ; 1970 ; SMPTE Conference Proceedings Volume 1970 ; 1970 >
-      au < manifest ; 1971 ; SMPTE Conference Proceedings Volume 1971 ; 1971 >
+      au < ready ; 1969 ; SMPTE Conference Proceedings Volume 1969 ; 1969 >
+      au < testing ; 1970 ; SMPTE Conference Proceedings Volume 1970 ; 1970 >
+      au < testing ; 1971 ; SMPTE Conference Proceedings Volume 1971 ; 1971 >
       au < doesNotExist ; 1972 ; SMPTE Conference Proceedings Volume 1972 ; 1972 >
       au < doesNotExist ; 1973 ; SMPTE Conference Proceedings Volume 1973 ; 1973 >
       au < doesNotExist ; 1974 ; SMPTE Conference Proceedings Volume 1974 ; 1974 >
       au < doesNotExist ; 1975 ; SMPTE Conference Proceedings Volume 1975 ; 1975 >
-      au < manifest ; 1976 ; SMPTE Conference Proceedings Volume 1976 ; 1976 >
+      au < testing ; 1976 ; SMPTE Conference Proceedings Volume 1976 ; 1976 >
       au < doesNotExist ; 1977 ; SMPTE Conference Proceedings Volume 1977 ; 1977 >
-      au < manifest ; 1978 ; SMPTE Conference Proceedings Volume 1978 ; 1978 >
-      au < manifest ; 1979 ; SMPTE Conference Proceedings Volume 1979 ; 1979 >
-      au < manifest ; 1980 ; SMPTE Conference Proceedings Volume 1980 ; 1980 >
-      au < manifest ; 1981 ; SMPTE Conference Proceedings Volume 1981 ; 1981 >
-      au < manifest ; 1982 ; SMPTE Conference Proceedings Volume 1982 ; 1982 >
-      au < manifest ; 1983 ; SMPTE Conference Proceedings Volume 1983 ; 1983 >
+      au < testing ; 1978 ; SMPTE Conference Proceedings Volume 1978 ; 1978 >
+      au < testing ; 1979 ; SMPTE Conference Proceedings Volume 1979 ; 1979 >
+      au < testing ; 1980 ; SMPTE Conference Proceedings Volume 1980 ; 1980 >
+      au < testing ; 1981 ; SMPTE Conference Proceedings Volume 1981 ; 1981 >
+      au < testing ; 1982 ; SMPTE Conference Proceedings Volume 1982 ; 1982 >
+      au < testing ; 1983 ; SMPTE Conference Proceedings Volume 1983 ; 1983 >
       au < doesNotExist ; 1984 ; SMPTE Conference Proceedings Volume 1984 ; 1984 >
-      au < manifest ; 1985 ; SMPTE Conference Proceedings Volume 1985 ; 1985 >
-      au < manifest ; 1986 ; SMPTE Conference Proceedings Volume 1986 ; 1986 >
-      au < manifest ; 1987 ; SMPTE Conference Proceedings Volume 1987 ; 1987 >
-      au < manifest ; 1988 ; SMPTE Conference Proceedings Volume 1988 ; 1988 >
-      au < manifest ; 1989 ; SMPTE Conference Proceedings Volume 1989 ; 1989 >
+      au < testing ; 1985 ; SMPTE Conference Proceedings Volume 1985 ; 1985 >
+      au < testing ; 1986 ; SMPTE Conference Proceedings Volume 1986 ; 1986 >
+      au < testing ; 1987 ; SMPTE Conference Proceedings Volume 1987 ; 1987 >
+      au < testing ; 1988 ; SMPTE Conference Proceedings Volume 1988 ; 1988 >
+      au < testing ; 1989 ; SMPTE Conference Proceedings Volume 1989 ; 1989 >
       au < doesNotExist ; 1990 ; SMPTE Conference Proceedings Volume 1990 ; 1990 >
-      au < manifest ; 1991 ; SMPTE Conference Proceedings Volume 1991 ; 1991 >
-      au < manifest ; 1992 ; SMPTE Conference Proceedings Volume 1992 ; 1992 >
-      au < manifest ; 1993 ; SMPTE Conference Proceedings Volume 1993 ; 1993 >
-      au < manifest ; 1994 ; SMPTE Conference Proceedings Volume 1994 ; 1994 >
+      au < testing ; 1991 ; SMPTE Conference Proceedings Volume 1991 ; 1991 >
+      au < testing ; 1992 ; SMPTE Conference Proceedings Volume 1992 ; 1992 >
+      au < testing ; 1993 ; SMPTE Conference Proceedings Volume 1993 ; 1993 >
+      au < testing ; 1994 ; SMPTE Conference Proceedings Volume 1994 ; 1994 >
       au < manifest ; 1995 ; SMPTE Conference Proceedings Volume 1995 ; 1995 >
       au < manifest ; 1996 ; SMPTE Conference Proceedings Volume 1996 ; 1996 >
       au < manifest ; 1997 ; SMPTE Conference Proceedings Volume 1997 ; 1997 >
