@@ -16,9 +16,11 @@
     >
 
       param[journal_dir] = audem
-      attr[journal_id] = 
+      attr[journal_id] = aud
       
       au< manifest ; 2010 ; AUDEM: The International Journal of Higher Education and Democracy Volume 1 ; 1 >
+      au< exists ; 2011 ; AUDEM: The International Journal of Higher Education and Democracy Volume 2 ; 2 >
+      au< expected ; 2012 ; AUDEM: The International Journal of Higher Education and Democracy Volume 3 ; 3 >
 
   }
 
