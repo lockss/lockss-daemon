@@ -1124,6 +1124,19 @@
     
     comment[0] = do not test till home page is online http://muse.jhu.edu/journals/leviathan/
 
+    au < notReady ; 1999 ; Leviathan Volume 1 ; 1 >
+    au < notReady ; 2000 ; Leviathan Volume 2 ; 2 >
+    au < notReady ; 2001 ; Leviathan Volume 3 ; 3 >
+    au < notReady ; 2002 ; Leviathan Volume 4 ; 4 >
+    au < notReady ; 2003 ; Leviathan Volume 5 ; 5 >
+    au < notReady ; 2004 ; Leviathan Volume 6 ; 6 >
+    au < notReady ; 2005 ; Leviathan Volume 7 ; 7 >
+    au < notReady ; 2006 ; Leviathan Volume 8 ; 8 >
+    au < notReady ; 2007 ; Leviathan Volume 9 ; 9 >
+    au < notReady ; 2008 ; Leviathan Volume 10 ; 10 >
+    au < notReady ; 2009 ; Leviathan Volume 11 ; 11 >
+    au < notReady ; 2010 ; Leviathan Volume 12 ; 12 >
+    au < notReady ; 2011 ; Leviathan Volume 13 ; 13 >
     au < notReady ; 2012 ; Leviathan Volume 14 ; 14 >
 
   }
@@ -1501,9 +1514,14 @@
     >
 
     param[journal_dir] = poe_studies
-    attr[journal_id] = 
+    attr[journal_id] = poe
+    
+    comment[notReady] = Don't test until home page is online http://muse.jhu.edu/journals/poe_studies/
+    comment[add] = Add more AUs to 2011.
 
-    au < manifest ; 2013 ; Poe Studies Volume 1 ; 1 >
+    au < notReady ; 1968 ; Poe Studies Volume 1 ; 1 >
+    au < notReady ; 1969 ; Poe Studies Volume 2 ; 2 >
+    au < notReady ; 1970 ; Poe Studies Volume 3 ; 3 >
 
   }
 
