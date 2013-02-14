@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = The Kyujanggak Institute for Korean Studies
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+  
+    title <
+      name = Seoul Journal of Korean Studies ;
+      issn = 2157-8583 
+    >
+
+      param[journal_dir] = seoul_journal_of_korean_studies
+      attr[journal_id] = 
+      
+      au< expected ; 2012 ; Seoul Journal of Korean Studies Volume 1 ; 1 >
+
+  }
+
+}
