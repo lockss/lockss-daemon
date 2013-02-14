@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Louisiana State University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+  
+    title <
+      name = Southern Review ;
+      issn = 0038-4534 
+    >
+
+      param[journal_dir] = southern_review
+      attr[journal_id] = 
+      
+      au< expected ; 2013 ; Southern Review Volume 1 ; 1 >
+
+  }
+
+}
