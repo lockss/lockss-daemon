@@ -378,6 +378,7 @@
     param[journal_id] = tsas
     param[journal_issn] = 1745-8927
 
+    comment[UX] = complete
 
     au < released ; 2006 ; The Senses & Society Volume 1 ; 1 >
     au < released ; 2007 ; The Senses & Society Volume 2 ; 2 >
@@ -401,6 +402,7 @@
     param[journal_id] = tjcc
     param[journal_issn] = 1475-9756
 
+    comment[UX] = Still has html image isues, but otherwise okay
 
     au < released ; 2003 ; Textile Volume 1 ; 1 >
     au < released ; 2004 ; Textile Volume 2 ; 2 >
