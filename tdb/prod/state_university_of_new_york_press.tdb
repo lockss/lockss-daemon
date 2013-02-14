@@ -42,6 +42,22 @@
   {
   
     title <
+      name = Palimpsest: A Journal on Women, Gender, and the Black International ;
+      issn = 2165-1604 ;
+      eissn = 2165-1612 ;
+      issnl = 2165-1604
+    >
+
+    param[journal_dir] = palimpsest
+    attr[journal_id] = 
+
+    au< expected ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1 ; 1 >
+
+  }
+
+  {
+  
+    title <
       name = philoSOPHIA ;
       issn = 2155-0891 ;
       eissn = 2155-0905 ;
