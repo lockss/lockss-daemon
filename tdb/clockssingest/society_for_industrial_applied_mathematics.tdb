@@ -3,7 +3,7 @@
   publisher <
     name = SIAM: Society for Industrial Applied Mathematics ;
     info[contract] = 2011 ;
-    info[tester] = 0
+    info[tester] = 7
   >
 
   {
@@ -15,21 +15,21 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
-    param[journal_abbr] = mms
+    param[base_url] = http://epubs.siam.org/clockss/
+    param[journal_abbr] = mmsubt
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2003 ; Multiscale Modeling and Simulation Volume 1 ; 1 >
-    au < exists ; exists ; 2003 ; Multiscale Modeling and Simulation Volume 2 ; 2 >
-    au < exists ; exists ; 2004 ; Multiscale Modeling and Simulation Volume 3 ; 3 >
-    au < exists ; exists ; 2005 ; Multiscale Modeling and Simulation Volume 4 ; 4 >
-    au < exists ; exists ; 2006 ; Multiscale Modeling and Simulation Volume 5 ; 5 >
-    au < exists ; exists ; 2007 ; Multiscale Modeling and Simulation Volume 6 ; 6 >
-    au < exists ; exists ; 2008 ; Multiscale Modeling and Simulation Volume 7 ; 7 >
-    au < exists ; exists ; 2009 ; Multiscale Modeling and Simulation Volume 8 ; 8 >
-    au < exists ; exists ; 2011 ; Multiscale Modeling and Simulation Volume 9 ; 9 >
-    au < exists ; exists ; 2012 ; Multiscale Modeling and Simulation Volume 10 ; 10 >
-    au < exists ; exists ; 2013 ; Multiscale Modeling and Simulation Volume 11 ; 11 >
+    au < manifest ; exists ; 2003 ; Multiscale Modeling and Simulation Volume 1 ; 1 >
+    au < manifest ; exists ; 2003 ; Multiscale Modeling and Simulation Volume 2 ; 2 >
+    au < manifest ; exists ; 2004 ; Multiscale Modeling and Simulation Volume 3 ; 3 >
+    au < manifest ; exists ; 2005 ; Multiscale Modeling and Simulation Volume 4 ; 4 >
+    au < manifest ; exists ; 2006 ; Multiscale Modeling and Simulation Volume 5 ; 5 >
+    au < manifest ; exists ; 2007 ; Multiscale Modeling and Simulation Volume 6 ; 6 >
+    au < manifest ; exists ; 2008 ; Multiscale Modeling and Simulation Volume 7 ; 7 >
+    au < manifest ; exists ; 2009 ; Multiscale Modeling and Simulation Volume 8 ; 8 >
+    au < manifest ; exists ; 2011 ; Multiscale Modeling and Simulation Volume 9 ; 9 >
+    au < manifest ; exists ; 2012 ; Multiscale Modeling and Simulation Volume 10 ; 10 >
+    au < manifest ; exists ; 2013 ; Multiscale Modeling and Simulation Volume 11 ; 11 >
       
   }
   
@@ -41,21 +41,21 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = siads
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2003 ; Journal on Applied Dynamical Systems Volume 2 ; 2 >
-    au < exists ; exists ; 2004 ; Journal on Applied Dynamical Systems Volume 3 ; 3 >
-    au < exists ; exists ; 2005 ; Journal on Applied Dynamical Systems Volume 4 ; 4 >
-    au < exists ; exists ; 2006 ; Journal on Applied Dynamical Systems Volume 5 ; 5 >
-    au < exists ; exists ; 2007 ; Journal on Applied Dynamical Systems Volume 6 ; 6 >
-    au < exists ; exists ; 2008 ; Journal on Applied Dynamical Systems Volume 7 ; 7 >
-    au < exists ; exists ; 2009 ; Journal on Applied Dynamical Systems Volume 8 ; 8 >
-    au < exists ; exists ; 2010 ; Journal on Applied Dynamical Systems Volume 9 ; 9 >
-    au < exists ; exists ; 2011 ; Journal on Applied Dynamical Systems Volume 10 ; 10 >
-    au < exists ; exists ; 2012 ; Journal on Applied Dynamical Systems Volume 11 ; 11 > 
-    au < exists ; exists ; 2013 ; Journal on Applied Dynamical Systems Volume 12 ; 12 > 
+    au < manifest ; exists ; 2003 ; Journal on Applied Dynamical Systems Volume 2 ; 2 >
+    au < manifest ; exists ; 2004 ; Journal on Applied Dynamical Systems Volume 3 ; 3 >
+    au < manifest ; exists ; 2005 ; Journal on Applied Dynamical Systems Volume 4 ; 4 >
+    au < manifest ; exists ; 2006 ; Journal on Applied Dynamical Systems Volume 5 ; 5 >
+    au < manifest ; exists ; 2007 ; Journal on Applied Dynamical Systems Volume 6 ; 6 >
+    au < manifest ; exists ; 2008 ; Journal on Applied Dynamical Systems Volume 7 ; 7 >
+    au < manifest ; exists ; 2009 ; Journal on Applied Dynamical Systems Volume 8 ; 8 >
+    au < manifest ; exists ; 2010 ; Journal on Applied Dynamical Systems Volume 9 ; 9 >
+    au < manifest ; exists ; 2011 ; Journal on Applied Dynamical Systems Volume 10 ; 10 >
+    au < manifest ; exists ; 2012 ; Journal on Applied Dynamical Systems Volume 11 ; 11 > 
+    au < manifest ; exists ; 2013 ; Journal on Applied Dynamical Systems Volume 12 ; 12 > 
     
   }
   
@@ -68,21 +68,21 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = siap
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2003 ; Journal on Applied Mathematics Volume 64 ; 64 >
-    au < exists ; exists ; 2004 ; Journal on Applied Mathematics Volume 65 ; 65 >
-    au < exists ; exists ; 2005 ; Journal on Applied Mathematics Volume 66 ; 66 >
-    au < exists ; exists ; 2006 ; Journal on Applied Mathematics Volume 67 ; 67 >
-    au < exists ; exists ; 2007 ; Journal on Applied Mathematics Volume 68 ; 68 >
-    au < exists ; exists ; 2008 ; Journal on Applied Mathematics Volume 69 ; 69 >
-    au < exists ; exists ; 2009 ; Journal on Applied Mathematics Volume 70 ; 70 >
-    au < exists ; exists ; 2010 ; Journal on Applied Mathematics Volume 71 ; 71 >
-    au < exists ; exists ; 2011 ; Journal on Applied Mathematics Volume 72 ; 72 >
-    au < exists ; exists ; 2012 ; Journal on Applied Mathematics Volume 73 ; 73 >
-    au < exists ; exists ; 2013 ; Journal on Applied Mathematics Volume 74 ; 74 >
+    au < manifest ; exists ; 2003 ; Journal on Applied Mathematics Volume 64 ; 64 >
+    au < manifest ; exists ; 2004 ; Journal on Applied Mathematics Volume 65 ; 65 >
+    au < manifest ; exists ; 2005 ; Journal on Applied Mathematics Volume 66 ; 66 >
+    au < manifest ; exists ; 2006 ; Journal on Applied Mathematics Volume 67 ; 67 >
+    au < manifest ; exists ; 2007 ; Journal on Applied Mathematics Volume 68 ; 68 >
+    au < manifest ; exists ; 2008 ; Journal on Applied Mathematics Volume 69 ; 69 >
+    au < manifest ; exists ; 2009 ; Journal on Applied Mathematics Volume 70 ; 70 >
+    au < manifest ; exists ; 2010 ; Journal on Applied Mathematics Volume 71 ; 71 >
+    au < manifest ; exists ; 2011 ; Journal on Applied Mathematics Volume 72 ; 72 >
+    au < manifest ; exists ; 2012 ; Journal on Applied Mathematics Volume 73 ; 73 >
+    au < manifest ; exists ; 2013 ; Journal on Applied Mathematics Volume 74 ; 74 >
     
   } 
   
@@ -95,20 +95,20 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = sicomp
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2003 ; Journal on Computing Volume 33 ; 33 >
-    au < exists ; exists ; 2004 ; Journal on Computing Volume 34 ; 34 >
-    au < exists ; exists ; 2005 ; Journal on Computing Volume 35 ; 35 >
-    au < exists ; exists ; 2006 ; Journal on Computing Volume 36 ; 36 >
-    au < exists ; exists ; 2007 ; Journal on Computing Volume 37 ; 37 >
-    au < exists ; exists ; 2008 ; Journal on Computing Volume 38 ; 38 >
-    au < exists ; exists ; 2009 ; Journal on Computing Volume 39 ; 39 >
-    au < exists ; exists ; 2011 ; Journal on Computing Volume 40 ; 40 >
-    au < exists ; exists ; 2012 ; Journal on Computing Volume 41 ; 41 >
-    au < exists ; exists ; 2013 ; Journal on Computing Volume 42 ; 42 >
+    au < manifest ; exists ; 2003 ; Journal on Computing Volume 33 ; 33 >
+    au < manifest ; exists ; 2004 ; Journal on Computing Volume 34 ; 34 >
+    au < manifest ; exists ; 2005 ; Journal on Computing Volume 35 ; 35 >
+    au < manifest ; exists ; 2006 ; Journal on Computing Volume 36 ; 36 >
+    au < manifest ; exists ; 2007 ; Journal on Computing Volume 37 ; 37 >
+    au < manifest ; exists ; 2008 ; Journal on Computing Volume 38 ; 38 >
+    au < manifest ; exists ; 2009 ; Journal on Computing Volume 39 ; 39 >
+    au < manifest ; exists ; 2011 ; Journal on Computing Volume 40 ; 40 >
+    au < manifest ; exists ; 2012 ; Journal on Computing Volume 41 ; 41 >
+    au < manifest ; exists ; 2013 ; Journal on Computing Volume 42 ; 42 >
     
   }
   
@@ -121,20 +121,20 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = sicon
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2003 ; Journal on Control and Optimization Volume 42 ; 42 >
-    au < exists ; exists ; 2004 ; Journal on Control and Optimization Volume 43 ; 43 >
-    au < exists ; exists ; 2005 ; Journal on Control and Optimization Volume 44 ; 44 >
-    au < exists ; exists ; 2006 ; Journal on Control and Optimization Volume 45 ; 45 >
-    au < exists ; exists ; 2007 ; Journal on Control and Optimization Volume 46 ; 46 >
-    au < exists ; exists ; 2008 ; Journal on Control and Optimization Volume 47 ; 47 >
-    au < exists ; exists ; 2009 ; Journal on Control and Optimization Volume 48 ; 48 >
-    au < exists ; exists ; 2011 ; Journal on Control and Optimization Volume 49 ; 49 >
-    au < exists ; exists ; 2012 ; Journal on Control and Optimization Volume 50 ; 50 >
-    au < exists ; exists ; 2013 ; Journal on Control and Optimization Volume 51 ; 51 >
+    au < manifest ; exists ; 2003 ; Journal on Control and Optimization Volume 42 ; 42 >
+    au < manifest ; exists ; 2004 ; Journal on Control and Optimization Volume 43 ; 43 >
+    au < manifest ; exists ; 2005 ; Journal on Control and Optimization Volume 44 ; 44 >
+    au < manifest ; exists ; 2006 ; Journal on Control and Optimization Volume 45 ; 45 >
+    au < manifest ; exists ; 2007 ; Journal on Control and Optimization Volume 46 ; 46 >
+    au < manifest ; exists ; 2008 ; Journal on Control and Optimization Volume 47 ; 47 >
+    au < manifest ; exists ; 2009 ; Journal on Control and Optimization Volume 48 ; 48 >
+    au < manifest ; exists ; 2011 ; Journal on Control and Optimization Volume 49 ; 49 >
+    au < manifest ; exists ; 2012 ; Journal on Control and Optimization Volume 50 ; 50 >
+    au < manifest ; exists ; 2013 ; Journal on Control and Optimization Volume 51 ; 51 >
     
   }  
   
@@ -147,22 +147,22 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = sidma
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2003 ; Journal on Discrete Mathematics Volume 16 ; 16 >
-    au < exists ; exists ; 2003 ; Journal on Discrete Mathematics Volume 17 ; 17 >
-    au < exists ; exists ; 2004 ; Journal on Discrete Mathematics Volume 18 ; 18 >
-    au < exists ; exists ; 2005 ; Journal on Discrete Mathematics Volume 19 ; 19 >
-    au < exists ; exists ; 2006 ; Journal on Discrete Mathematics Volume 20 ; 20 >
-    au < exists ; exists ; 2007 ; Journal on Discrete Mathematics Volume 21 ; 21 >
-    au < exists ; exists ; 2008 ; Journal on Discrete Mathematics Volume 22 ; 22 >
-    au < exists ; exists ; 2008 ; Journal on Discrete Mathematics Volume 23 ; 23 >
-    au < exists ; exists ; 2010 ; Journal on Discrete Mathematics Volume 24 ; 24 >
-    au < exists ; exists ; 2011 ; Journal on Discrete Mathematics Volume 25 ; 25 >
-    au < exists ; exists ; 2012 ; Journal on Discrete Mathematics Volume 26 ; 26 >
-    au < exists ; exists ; 2013 ; Journal on Discrete Mathematics Volume 27 ; 27 >
+    au < manifest ; exists ; 2003 ; Journal on Discrete Mathematics Volume 16 ; 16 >
+    au < manifest ; exists ; 2003 ; Journal on Discrete Mathematics Volume 17 ; 17 >
+    au < manifest ; exists ; 2004 ; Journal on Discrete Mathematics Volume 18 ; 18 >
+    au < manifest ; exists ; 2005 ; Journal on Discrete Mathematics Volume 19 ; 19 >
+    au < manifest ; exists ; 2006 ; Journal on Discrete Mathematics Volume 20 ; 20 >
+    au < manifest ; exists ; 2007 ; Journal on Discrete Mathematics Volume 21 ; 21 >
+    au < manifest ; exists ; 2008 ; Journal on Discrete Mathematics Volume 22 ; 22 >
+    au < manifest ; exists ; 2008 ; Journal on Discrete Mathematics Volume 23 ; 23 >
+    au < manifest ; exists ; 2010 ; Journal on Discrete Mathematics Volume 24 ; 24 >
+    au < manifest ; exists ; 2011 ; Journal on Discrete Mathematics Volume 25 ; 25 >
+    au < manifest ; exists ; 2012 ; Journal on Discrete Mathematics Volume 26 ; 26 >
+    au < manifest ; exists ; 2013 ; Journal on Discrete Mathematics Volume 27 ; 27 >
     
   }
   
@@ -174,14 +174,14 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = sifin
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2010 ; Journal on Financial Mathematics Volume 1 ; 1 >
-    au < exists ; exists ; 2011 ; Journal on Financial Mathematics Volume 2 ; 2 >
-    au < exists ; exists ; 2012 ; Journal on Financial Mathematics Volume 3 ; 3 >
-    au < exists ; exists ; 2013 ; Journal on Financial Mathematics Volume 4 ; 4 >
+    au < manifest ; exists ; 2010 ; Journal on Financial Mathematics Volume 1 ; 1 >
+    au < manifest ; exists ; 2011 ; Journal on Financial Mathematics Volume 2 ; 2 >
+    au < manifest ; exists ; 2012 ; Journal on Financial Mathematics Volume 3 ; 3 >
+    au < manifest ; exists ; 2013 ; Journal on Financial Mathematics Volume 4 ; 4 >
     
   }  
   
@@ -193,16 +193,16 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = siims
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2008 ; Journal on Imanging Sciences Volume 1 ; 1 >
-    au < exists ; exists ; 2009 ; Journal on Imanging Sciences Volume 2 ; 2 >
-    au < exists ; exists ; 2010 ; Journal on Imanging Sciences Volume 3 ; 3 >
-    au < exists ; exists ; 2011 ; Journal on Imanging Sciences Volume 4 ; 4 >
-    au < exists ; exists ; 2012 ; Journal on Imanging Sciences Volume 5 ; 5 >
-    au < exists ; exists ; 2013 ; Journal on Imanging Sciences Volume 6 ; 6 >
+    au < manifest ; exists ; 2008 ; Journal on Imanging Sciences Volume 1 ; 1 >
+    au < manifest ; exists ; 2009 ; Journal on Imanging Sciences Volume 2 ; 2 >
+    au < manifest ; exists ; 2010 ; Journal on Imanging Sciences Volume 3 ; 3 >
+    au < manifest ; exists ; 2011 ; Journal on Imanging Sciences Volume 4 ; 4 >
+    au < manifest ; exists ; 2012 ; Journal on Imanging Sciences Volume 5 ; 5 >
+    au < manifest ; exists ; 2013 ; Journal on Imanging Sciences Volume 6 ; 6 >
     
   } 
   
@@ -215,21 +215,21 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = 
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2003 ; Journal on Mathematical Analysis Volume 35 ; 35 >
-    au < exists ; exists ; 2004 ; Journal on Mathematical Analysis Volume 36 ; 36 >
-    au < exists ; exists ; 2005 ; Journal on Mathematical Analysis Volume 37 ; 37 >
-    au < exists ; exists ; 2006 ; Journal on Mathematical Analysis Volume 38 ; 38 >
-    au < exists ; exists ; 2007 ; Journal on Mathematical Analysis Volume 39 ; 39 >
-    au < exists ; exists ; 2008 ; Journal on Mathematical Analysis Volume 40 ; 40 >
-    au < exists ; exists ; 2009 ; Journal on Mathematical Analysis Volume 41 ; 41 >
-    au < exists ; exists ; 2010 ; Journal on Mathematical Analysis Volume 42 ; 42 >
-    au < exists ; exists ; 2011 ; Journal on Mathematical Analysis Volume 43 ; 43 >
-    au < exists ; exists ; 2012 ; Journal on Mathematical Analysis Volume 44 ; 44 >
-    au < exists ; exists ; 2013 ; Journal on Mathematical Analysis Volume 45 ; 45 >
+    au < manifest ; exists ; 2003 ; Journal on Mathematical Analysis Volume 35 ; 35 >
+    au < manifest ; exists ; 2004 ; Journal on Mathematical Analysis Volume 36 ; 36 >
+    au < manifest ; exists ; 2005 ; Journal on Mathematical Analysis Volume 37 ; 37 >
+    au < manifest ; exists ; 2006 ; Journal on Mathematical Analysis Volume 38 ; 38 >
+    au < manifest ; exists ; 2007 ; Journal on Mathematical Analysis Volume 39 ; 39 >
+    au < manifest ; exists ; 2008 ; Journal on Mathematical Analysis Volume 40 ; 40 >
+    au < manifest ; exists ; 2009 ; Journal on Mathematical Analysis Volume 41 ; 41 >
+    au < manifest ; exists ; 2010 ; Journal on Mathematical Analysis Volume 42 ; 42 >
+    au < manifest ; exists ; 2011 ; Journal on Mathematical Analysis Volume 43 ; 43 >
+    au < manifest ; exists ; 2012 ; Journal on Mathematical Analysis Volume 44 ; 44 >
+    au < manifest ; exists ; 2013 ; Journal on Mathematical Analysis Volume 45 ; 45 >
     
   }
   
@@ -242,20 +242,20 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = sima
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2003 ; Journal on Matrix Analysis and Application Volume 25 ; 25 >
-    au < exists ; exists ; 2004 ; Journal on Matrix Analysis and Application Volume 26 ; 26 >
-    au < exists ; exists ; 2005 ; Journal on Matrix Analysis and Application Volume 27 ; 27 >
-    au < exists ; exists ; 2006 ; Journal on Matrix Analysis and Application Volume 28 ; 28 >
-    au < exists ; exists ; 2006 ; Journal on Matrix Analysis and Application Volume 29 ; 29 >
-    au < exists ; exists ; 2008 ; Journal on Matrix Analysis and Application Volume 30 ; 30 >
-    au < exists ; exists ; 2009 ; Journal on Matrix Analysis and Application Volume 31 ; 31 >
-    au < exists ; exists ; 2011 ; Journal on Matrix Analysis and Application Volume 32 ; 32 >
-    au < exists ; exists ; 2012 ; Journal on Matrix Analysis and Application Volume 33 ; 33 >
-    au < exists ; exists ; 2013 ; Journal on Matrix Analysis and Application Volume 34 ; 34 >
+    au < manifest ; exists ; 2003 ; Journal on Matrix Analysis and Application Volume 25 ; 25 >
+    au < manifest ; exists ; 2004 ; Journal on Matrix Analysis and Application Volume 26 ; 26 >
+    au < manifest ; exists ; 2005 ; Journal on Matrix Analysis and Application Volume 27 ; 27 >
+    au < manifest ; exists ; 2006 ; Journal on Matrix Analysis and Application Volume 28 ; 28 >
+    au < manifest ; exists ; 2006 ; Journal on Matrix Analysis and Application Volume 29 ; 29 >
+    au < manifest ; exists ; 2008 ; Journal on Matrix Analysis and Application Volume 30 ; 30 >
+    au < manifest ; exists ; 2009 ; Journal on Matrix Analysis and Application Volume 31 ; 31 >
+    au < manifest ; exists ; 2011 ; Journal on Matrix Analysis and Application Volume 32 ; 32 >
+    au < manifest ; exists ; 2012 ; Journal on Matrix Analysis and Application Volume 33 ; 33 >
+    au < manifest ; exists ; 2013 ; Journal on Matrix Analysis and Application Volume 34 ; 34 >
     
   }
   
@@ -268,21 +268,21 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = sinum
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2003 ; Journal on Numerical Analysis Volume 41 ; 41 >
-    au < exists ; exists ; 2004 ; Journal on Numerical Analysis Volume 42 ; 42 >
-    au < exists ; exists ; 2005 ; Journal on Numerical Analysis Volume 43 ; 43 >
-    au < exists ; exists ; 2006 ; Journal on Numerical Analysis Volume 44 ; 44 >
-    au < exists ; exists ; 2007 ; Journal on Numerical Analysis Volume 45 ; 45 >
-    au < exists ; exists ; 2008 ; Journal on Numerical Analysis Volume 46 ; 46 >
-    au < exists ; exists ; 2008 ; Journal on Numerical Analysis Volume 47 ; 47 >
-    au < exists ; exists ; 2010 ; Journal on Numerical Analysis Volume 48 ; 48 >
-    au < exists ; exists ; 2011 ; Journal on Numerical Analysis Volume 49 ; 49 >
-    au < exists ; exists ; 2012 ; Journal on Numerical Analysis Volume 50 ; 50 >
-    au < exists ; exists ; 2013 ; Journal on Numerical Analysis Volume 51 ; 51 >
+    au < manifest ; exists ; 2003 ; Journal on Numerical Analysis Volume 41 ; 41 >
+    au < manifest ; exists ; 2004 ; Journal on Numerical Analysis Volume 42 ; 42 >
+    au < manifest ; exists ; 2005 ; Journal on Numerical Analysis Volume 43 ; 43 >
+    au < manifest ; exists ; 2006 ; Journal on Numerical Analysis Volume 44 ; 44 >
+    au < manifest ; exists ; 2007 ; Journal on Numerical Analysis Volume 45 ; 45 >
+    au < manifest ; exists ; 2008 ; Journal on Numerical Analysis Volume 46 ; 46 >
+    au < manifest ; exists ; 2008 ; Journal on Numerical Analysis Volume 47 ; 47 >
+    au < manifest ; exists ; 2010 ; Journal on Numerical Analysis Volume 48 ; 48 >
+    au < manifest ; exists ; 2011 ; Journal on Numerical Analysis Volume 49 ; 49 >
+    au < manifest ; exists ; 2012 ; Journal on Numerical Analysis Volume 50 ; 50 >
+    au < manifest ; exists ; 2013 ; Journal on Numerical Analysis Volume 51 ; 51 >
     
   }
   
@@ -295,20 +295,20 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = siopt
     implicit < status ; status2 ; year ; name ; param[volume] >
                                                                  
-    au < exists ; exists ; 2003 ; Journal on Optimization Volume 14 ; 14 >
-    au < exists ; exists ; 2004 ; Journal on Optimization Volume 15 ; 15 >
-    au < exists ; exists ; 2005 ; Journal on Optimization Volume 16 ; 16 >
-    au < exists ; exists ; 2006 ; Journal on Optimization Volume 17 ; 17 >
-    au < exists ; exists ; 2007 ; Journal on Optimization Volume 18 ; 18 >
-    au < exists ; exists ; 2008 ; Journal on Optimization Volume 19 ; 19 >
-    au < exists ; exists ; 2009 ; Journal on Optimization Volume 20 ; 20 >
-    au < exists ; exists ; 2011 ; Journal on Optimization Volume 21 ; 21 >
-    au < exists ; exists ; 2012 ; Journal on Optimization Volume 22 ; 22 >
-    au < exists ; exists ; 2013 ; Journal on Optimization Volume 23 ; 23 >
+    au < manifest ; exists ; 2003 ; Journal on Optimization Volume 14 ; 14 >
+    au < manifest ; exists ; 2004 ; Journal on Optimization Volume 15 ; 15 >
+    au < manifest ; exists ; 2005 ; Journal on Optimization Volume 16 ; 16 >
+    au < manifest ; exists ; 2006 ; Journal on Optimization Volume 17 ; 17 >
+    au < manifest ; exists ; 2007 ; Journal on Optimization Volume 18 ; 18 >
+    au < manifest ; exists ; 2008 ; Journal on Optimization Volume 19 ; 19 >
+    au < manifest ; exists ; 2009 ; Journal on Optimization Volume 20 ; 20 >
+    au < manifest ; exists ; 2011 ; Journal on Optimization Volume 21 ; 21 >
+    au < manifest ; exists ; 2012 ; Journal on Optimization Volume 22 ; 22 >
+    au < manifest ; exists ; 2013 ; Journal on Optimization Volume 23 ; 23 >
     
   }
   
@@ -321,21 +321,21 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = sisc
     implicit < status ; status2 ; year ; name ; param[volume] >
                                                                  
-    au < exists ; exists ; 2003 ; Journal on Scientific Computing Volume 25 ; 25 >
-    au < exists ; exists ; 2004 ; Journal on Scientific Computing Volume 26 ; 26 >
-    au < exists ; exists ; 2005 ; Journal on Scientific Computing Volume 27 ; 27 >
-    au < exists ; exists ; 2006 ; Journal on Scientific Computing Volume 28 ; 28 >
-    au < exists ; exists ; 2007 ; Journal on Scientific Computing Volume 29 ; 29 >
-    au < exists ; exists ; 2007 ; Journal on Scientific Computing Volume 30 ; 30 >
-    au < exists ; exists ; 2008 ; Journal on Scientific Computing Volume 31 ; 31 >
-    au < exists ; exists ; 2010 ; Journal on Scientific Computing Volume 32 ; 32 >
-    au < exists ; exists ; 2011 ; Journal on Scientific Computing Volume 33 ; 33 >
-    au < exists ; exists ; 2012 ; Journal on Scientific Computing Volume 34 ; 34 >
-    au < exists ; exists ; 2013 ; Journal on Scientific Computing Volume 35 ; 35 >
+    au < manifest ; exists ; 2003 ; Journal on Scientific Computing Volume 25 ; 25 >
+    au < manifest ; exists ; 2004 ; Journal on Scientific Computing Volume 26 ; 26 >
+    au < manifest ; exists ; 2005 ; Journal on Scientific Computing Volume 27 ; 27 >
+    au < manifest ; exists ; 2006 ; Journal on Scientific Computing Volume 28 ; 28 >
+    au < manifest ; exists ; 2007 ; Journal on Scientific Computing Volume 29 ; 29 >
+    au < manifest ; exists ; 2007 ; Journal on Scientific Computing Volume 30 ; 30 >
+    au < manifest ; exists ; 2008 ; Journal on Scientific Computing Volume 31 ; 31 >
+    au < manifest ; exists ; 2010 ; Journal on Scientific Computing Volume 32 ; 32 >
+    au < manifest ; exists ; 2011 ; Journal on Scientific Computing Volume 33 ; 33 >
+    au < manifest ; exists ; 2012 ; Journal on Scientific Computing Volume 34 ; 34 >
+    au < manifest ; exists ; 2013 ; Journal on Scientific Computing Volume 35 ; 35 >
     
   }
   
@@ -348,21 +348,21 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = sirev
     implicit < status ; status2 ; year ; name ; param[volume] >
                                                                  
-    au < exists ; exists ; 2003 ; SIAM Review Volume 45 ; 45 >
-    au < exists ; exists ; 2004 ; SIAM Review Volume 46 ; 46 >
-    au < exists ; exists ; 2005 ; SIAM Review Volume 47 ; 47 >
-    au < exists ; exists ; 2006 ; SIAM Review Volume 48 ; 48 >
-    au < exists ; exists ; 2007 ; SIAM Review Volume 49 ; 49 >
-    au < exists ; exists ; 2008 ; SIAM Review Volume 50 ; 50 >
-    au < exists ; exists ; 2009 ; SIAM Review Volume 51 ; 51 >
-    au < exists ; exists ; 2010 ; SIAM Review Volume 52 ; 52 >
-    au < exists ; exists ; 2011 ; SIAM Review Volume 53 ; 53 >
-    au < exists ; exists ; 2012 ; SIAM Review Volume 54 ; 54 >
-    au < exists ; exists ; 2013 ; SIAM Review Volume 55 ; 55 >
+    au < manifest ; exists ; 2003 ; SIAM Review Volume 45 ; 45 >
+    au < manifest ; exists ; 2004 ; SIAM Review Volume 46 ; 46 >
+    au < manifest ; exists ; 2005 ; SIAM Review Volume 47 ; 47 >
+    au < manifest ; exists ; 2006 ; SIAM Review Volume 48 ; 48 >
+    au < manifest ; exists ; 2007 ; SIAM Review Volume 49 ; 49 >
+    au < manifest ; exists ; 2008 ; SIAM Review Volume 50 ; 50 >
+    au < manifest ; exists ; 2009 ; SIAM Review Volume 51 ; 51 >
+    au < manifest ; exists ; 2010 ; SIAM Review Volume 52 ; 52 >
+    au < manifest ; exists ; 2011 ; SIAM Review Volume 53 ; 53 >
+    au < manifest ; exists ; 2012 ; SIAM Review Volume 54 ; 54 >
+    au < manifest ; exists ; 2013 ; SIAM Review Volume 55 ; 55 >
     
   }
   
@@ -375,21 +375,21 @@
     >
     
     plugin = needs.plugin 
-    param[base_url] = http://www.siam.org/
+    param[base_url] = http://epubs.siam.org/clockss/
     param[journal_abbr] = tvp
     implicit < status ; status2 ; year ; name ; param[volume] >
                                                                  
-    au < exists ; exists ; 2003 ; Theory of Probability and its Applications Volume 47 ; 47 >
-    au < exists ; exists ; 2004 ; Theory of Probability and its Applications Volume 48 ; 48 >
-    au < exists ; exists ; 2005 ; Theory of Probability and its Applications Volume 49 ; 49 >
-    au < exists ; exists ; 2006 ; Theory of Probability and its Applications Volume 50 ; 50 >
-    au < exists ; exists ; 2007 ; Theory of Probability and its Applications Volume 51 ; 51 >
-    au < exists ; exists ; 2008 ; Theory of Probability and its Applications Volume 52 ; 52 >
-    au < exists ; exists ; 2009 ; Theory of Probability and its Applications Volume 53 ; 53 >
-    au < exists ; exists ; 2010 ; Theory of Probability and its Applications Volume 54 ; 54 >
-    au < exists ; exists ; 2011 ; Theory of Probability and its Applications Volume 55 ; 55 >
-    au < exists ; exists ; 2012 ; Theory of Probability and its Applications Volume 56 ; 56 >
-    au < exists ; exists ; 2013 ; Theory of Probability and its Applications Volume 57 ; 57 >
+    au < manifest ; exists ; 2003 ; Theory of Probability and its Applications Volume 47 ; 47 >
+    au < manifest ; exists ; 2004 ; Theory of Probability and its Applications Volume 48 ; 48 >
+    au < manifest ; exists ; 2005 ; Theory of Probability and its Applications Volume 49 ; 49 >
+    au < manifest ; exists ; 2006 ; Theory of Probability and its Applications Volume 50 ; 50 >
+    au < manifest ; exists ; 2007 ; Theory of Probability and its Applications Volume 51 ; 51 >
+    au < manifest ; exists ; 2008 ; Theory of Probability and its Applications Volume 52 ; 52 >
+    au < manifest ; exists ; 2009 ; Theory of Probability and its Applications Volume 53 ; 53 >
+    au < manifest ; exists ; 2010 ; Theory of Probability and its Applications Volume 54 ; 54 >
+    au < manifest ; exists ; 2011 ; Theory of Probability and its Applications Volume 55 ; 55 >
+    au < manifest ; exists ; 2012 ; Theory of Probability and its Applications Volume 56 ; 56 >
+    au < manifest ; exists ; 2013 ; Theory of Probability and its Applications Volume 57 ; 57 >
     
   }
  
