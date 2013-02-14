@@ -1,0 +1,22 @@
+{
+
+  publisher <
+    name = Elementa: Science of the Anthropocene
+  >
+
+  {
+    title <
+      name = Elementa: Science of the Anthropocene 
+    >
+
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://elementascience.org
+      param[journal_id] = 
+
+      au < expected ; 2013 ; Elementa: Science of the Anthropocene Volume 1 ; 1 >
+
+  }
+
+}
+
