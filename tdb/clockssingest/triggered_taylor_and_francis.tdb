@@ -22,26 +22,26 @@
 
     param[journal_id] = uacp 
 
-    au < manifest ; exists ; 1989 ; Annals of Clinical Psychiatry Volume 1 ; 1 > 
-    au < manifest ; exists ; 1990 ; Annals of Clinical Psychiatry Volume 2 ; 2 > 
-    au < manifest ; exists ; 1991 ; Annals of Clinical Psychiatry Volume 3 ; 3 > 
-    au < manifest ; exists ; 1992 ; Annals of Clinical Psychiatry Volume 4 ; 4 > 
-    au < manifest ; exists ; 1993 ; Annals of Clinical Psychiatry Volume 5 ; 5 > 
-    au < manifest ; exists ; 1994 ; Annals of Clinical Psychiatry Volume 6 ; 6 > 
-    au < manifest ; exists ; 1995 ; Annals of Clinical Psychiatry Volume 7 ; 7 > 
-    au < manifest ; exists ; 1996 ; Annals of Clinical Psychiatry Volume 8 ; 8 > 
-    au < manifest ; exists ; 1997 ; Annals of Clinical Psychiatry Volume 9 ; 9 > 
-    au < manifest ; exists ; 1998 ; Annals of Clinical Psychiatry Volume 10 ; 10 > 
-    au < manifest ; exists ; 1999 ; Annals of Clinical Psychiatry Volume 11 ; 11 > 
-    au < manifest ; exists ; 2000 ; Annals of Clinical Psychiatry Volume 12 ; 12 > 
-    au < manifest ; exists ; 2001 ; Annals of Clinical Psychiatry Volume 13 ; 13 > 
-    au < manifest ; exists ; 2002 ; Annals of Clinical Psychiatry Volume 14 ; 14 > 
-    au < manifest ; exists ; 2003 ; Annals of Clinical Psychiatry Volume 15 ; 15 > 
-    au < manifest ; exists ; 2004 ; Annals of Clinical Psychiatry Volume 16 ; 16 > 
-    au < manifest ; exists ; 2005 ; Annals of Clinical Psychiatry Volume 17 ; 17 > 
-    au < manifest ; exists ; 2006 ; Annals of Clinical Psychiatry Volume 18 ; 18 > 
-    au < manifest ; exists ; 2007 ; Annals of Clinical Psychiatry Volume 19 ; 19 > 
-    au < manifest ; exists ; 2008 ; Annals of Clinical Psychiatry Volume 20 ; 20 > 
+    au < crawling ; exists ; 1989 ; Annals of Clinical Psychiatry Volume 1 ; 1 > 
+    au < crawling ; exists ; 1990 ; Annals of Clinical Psychiatry Volume 2 ; 2 > 
+    au < crawling ; exists ; 1991 ; Annals of Clinical Psychiatry Volume 3 ; 3 > 
+    au < crawling ; exists ; 1992 ; Annals of Clinical Psychiatry Volume 4 ; 4 > 
+    au < crawling ; exists ; 1993 ; Annals of Clinical Psychiatry Volume 5 ; 5 > 
+    au < crawling ; exists ; 1994 ; Annals of Clinical Psychiatry Volume 6 ; 6 > 
+    au < crawling ; exists ; 1995 ; Annals of Clinical Psychiatry Volume 7 ; 7 > 
+    au < crawling ; exists ; 1996 ; Annals of Clinical Psychiatry Volume 8 ; 8 > 
+    au < crawling ; exists ; 1997 ; Annals of Clinical Psychiatry Volume 9 ; 9 > 
+    au < crawling ; exists ; 1998 ; Annals of Clinical Psychiatry Volume 10 ; 10 > 
+    au < crawling ; exists ; 1999 ; Annals of Clinical Psychiatry Volume 11 ; 11 > 
+    au < crawling ; exists ; 2000 ; Annals of Clinical Psychiatry Volume 12 ; 12 > 
+    au < crawling ; exists ; 2001 ; Annals of Clinical Psychiatry Volume 13 ; 13 > 
+    au < crawling ; exists ; 2002 ; Annals of Clinical Psychiatry Volume 14 ; 14 > 
+    au < crawling ; exists ; 2003 ; Annals of Clinical Psychiatry Volume 15 ; 15 > 
+    au < crawling ; exists ; 2004 ; Annals of Clinical Psychiatry Volume 16 ; 16 > 
+    au < crawling ; exists ; 2005 ; Annals of Clinical Psychiatry Volume 17 ; 17 > 
+    au < crawling ; exists ; 2006 ; Annals of Clinical Psychiatry Volume 18 ; 18 > 
+    au < crawling ; exists ; 2007 ; Annals of Clinical Psychiatry Volume 19 ; 19 > 
+    au < crawling ; exists ; 2008 ; Annals of Clinical Psychiatry Volume 20 ; 20 > 
 
 
   }
@@ -57,20 +57,20 @@
 
     param[journal_id] = wjpt 
 
-    au < manifest ; exists ; 1990-1991 ; Journal of Pharmacy Teaching Volume 1 ; 1 > 
-    au < manifest ; exists ; 1991 ; Journal of Pharmacy Teaching Volume 2 ; 2 > 
-    au < manifest ; exists ; 1992-1993 ; Journal of Pharmacy Teaching Volume 3 ; 3 > 
-    au < manifest ; exists ; 1993-1995 ; Journal of Pharmacy Teaching Volume 4 ; 4 > 
-    au < manifest ; exists ; 1996 ; Journal of Pharmacy Teaching Volume 5 ; 5 >    
-    au < manifest ; exists ; 1997-1998 ; Journal of Pharmacy Teaching Volume 6 ; 6 >    
-    au < manifest ; exists ; 1999-2000 ; Journal of Pharmacy Teaching Volume 7 ; 7 >    
-    au < manifest ; exists ; 2000-2001 ; Journal of Pharmacy Teaching Volume 8 ; 8 >    
-    au < manifest ; exists ; 2002 ; Journal of Pharmacy Teaching Volume 9 ; 9 >    
-    au < manifest ; exists ; 2002 ; Journal of Pharmacy Teaching Volume 10 ; 10 >    
-    au < manifest ; exists ; 2003-2004 ; Journal of Pharmacy Teaching Volume 11 ; 11 >    
-    au < manifest ; exists ; 2005 ; Journal of Pharmacy Teaching Volume 12 ; 12 > 
-    au < manifest ; exists ; 2006 ; Journal of Pharmacy Teaching Volume 13 ; 13 >    
-    au < manifest ; exists ; 2007 ; Journal of Pharmacy Teaching Volume 14 ; 14 >       
+    au < crawling ; exists ; 1990-1991 ; Journal of Pharmacy Teaching Volume 1 ; 1 > 
+    au < crawling ; exists ; 1991 ; Journal of Pharmacy Teaching Volume 2 ; 2 > 
+    au < crawling ; exists ; 1992-1993 ; Journal of Pharmacy Teaching Volume 3 ; 3 > 
+    au < crawling ; exists ; 1993-1995 ; Journal of Pharmacy Teaching Volume 4 ; 4 > 
+    au < crawling ; exists ; 1996 ; Journal of Pharmacy Teaching Volume 5 ; 5 >    
+    au < crawling ; exists ; 1997-1998 ; Journal of Pharmacy Teaching Volume 6 ; 6 >    
+    au < crawling ; exists ; 1999-2000 ; Journal of Pharmacy Teaching Volume 7 ; 7 >    
+    au < crawling ; exists ; 2000-2001 ; Journal of Pharmacy Teaching Volume 8 ; 8 >    
+    au < crawling ; exists ; 2002 ; Journal of Pharmacy Teaching Volume 9 ; 9 >    
+    au < crawling ; exists ; 2002 ; Journal of Pharmacy Teaching Volume 10 ; 10 >    
+    au < crawling ; exists ; 2003-2004 ; Journal of Pharmacy Teaching Volume 11 ; 11 >    
+    au < crawling ; exists ; 2005 ; Journal of Pharmacy Teaching Volume 12 ; 12 > 
+    au < crawling ; exists ; 2006 ; Journal of Pharmacy Teaching Volume 13 ; 13 >    
+    au < crawling ; exists ; 2007 ; Journal of Pharmacy Teaching Volume 14 ; 14 >       
        
   }
 
