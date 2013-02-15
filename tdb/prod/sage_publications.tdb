@@ -3485,6 +3485,25 @@
     {
 
       title <
+        name = The Bible Translator ;
+        issn = 0260-0935
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tbt.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < expected ; 2013 ; The Bible Translator Volume 64 ; 64 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Biblical Theology Bulletin: Journal of Bible and Theology ;
         issn = 0146-1079 ;
         eissn = 1945-7596 ;
@@ -28237,6 +28256,26 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Measurement and Control ;
+        issn = 0020-2940 ;
+        eissn = 2051-8730 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://mac.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < expected ; 2013 ; Measurement and Control Volume 1 ; 1 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Measurement and Evaluation in Counseling and Development ;
         issn = 0748-1756 
       >
@@ -33296,6 +33335,57 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Rationality and Society Volume 23 ; 23 >
         au < released ; 2012 ; Rationality and Society Volume 24 ; 24 >
         au < expected ; 2013 ; Rationality and Society Volume 25 ; 25 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Recherche et Applications en Marketing (English Edition) ;
+        eissn = 2051-5707 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://rme.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2007 ; Recherche et Applications en Marketing (English Edition) Volume 22 ; 22 >
+        au < exists ; 2008 ; Recherche et Applications en Marketing (English Edition) Volume 23 ; 23 >
+        au < exists ; 2009 ; Recherche et Applications en Marketing (English Edition) Volume 24 ; 24 >
+        au < exists ; 2010 ; Recherche et Applications en Marketing (English Edition) Volume 25 ; 25 >
+        au < exists ; 2011 ; Recherche et Applications en Marketing (English Edition) Volume 26 ; 26 >
+        au < expected ; 2012 ; Recherche et Applications en Marketing (English Edition) Volume 27 ; 27 >
+        au < expected ; 2013 ; Recherche et Applications en Marketing (English Edition) Volume 28 ; 28 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Recherche et Applications en Marketing ;
+        issn = 0767-3701 ;
+        eissn = 2051-2821 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ram.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2007 ; Recherche et Applications en Marketing Volume 22 ; 22 >
+        au < exists ; 2008 ; Recherche et Applications en Marketing Volume 23 ; 23 >
+        au < exists ; 2009 ; Recherche et Applications en Marketing Volume 24 ; 24 >
+        au < exists ; 2010 ; Recherche et Applications en Marketing Volume 25 ; 25 >
+        au < exists ; 2011 ; Recherche et Applications en Marketing Volume 26 ; 26 >
+        au < expected ; 2012 ; Recherche et Applications en Marketing Volume 27 ; 27 >
+        au < expected ; 2013 ; Recherche et Applications en Marketing Volume 28 ; 28 >
 
       }
 
@@ -40837,6 +40927,23 @@ comment[mpj] = now published by Brill
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2013 ; Canadian Journal of Occupational Therapy Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Canadian Pharmacists Journal  ;
+        issn = 1715-1635 ;
+        eissn = 1913-701X 
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://cph.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Canadian Pharmacists Journal  Volume 1 ; 1 >
 
     }
 
