@@ -607,7 +607,7 @@
       au < exists ; exists ; 2010 ; Journal of Financial Services Marketing Volume 14 (2010) ; 2010 ; 14 >
       au < exists ; exists ; 2010 ; Journal of Financial Services Marketing Volume 15 (2010) ; 2010 ; 15 >
       au < exists ; exists ; 2011 ; Journal of Financial Services Marketing Volume 15 (2011) ; 2011 ; 15 >
-      au < exists ; exists ; 2011 ; Journal of Financial Services Marketing Volume 16 (2011) ; 2011 ; 16 >
+      au < exists ; exists ; 2011 ; Journal of Financial Services Marketing Volume 16 ; 2011 ; 16 >
       au < exists ; exists ; 2012 ; Journal of Financial Services Marketing Volume 17 ; 2012 ; 17 >
       au < expected ; exists ; 2013 ; Journal of Financial Services Marketing Volume 18 ; 2013 ; 18 >
 
@@ -696,6 +696,21 @@
 
       param[journal_id] = rlp
 
+      au < exists ; exists ; 2000 ; Journal of Retail & Leisure Property Volume 1 (2000) ; 2000 ; 1 >
+      au < exists ; exists ; 2001 ; Journal of Retail & Leisure Property Volume 1 (2001) ; 2001 ; 1 >
+      au < exists ; exists ; 2002 ; Journal of Retail & Leisure Property Volume 2 ; 2002 ; 2 >
+      au < exists ; exists ; 2003 ; Journal of Retail & Leisure Property Volume 3 (2003) ; 2003 ; 3 >
+      au < exists ; exists ; 2004 ; Journal of Retail & Leisure Property Volume 3 (2004) ; 2004 ; 3 >
+      au < exists ; exists ; 2004 ; Journal of Retail & Leisure Property Volume 4 (2004) ; 2004 ; 4 >
+      au < exists ; exists ; 2005 ; Journal of Retail & Leisure Property Volume 4 (2005) ; 2005 ; 4 >
+      au < exists ; exists ; 2005 ; Journal of Retail & Leisure Property Volume 5 (2005) ; 2005 ; 5 >
+      au < exists ; exists ; 2006 ; Journal of Retail & Leisure Property Volume 5 (2006) ; 2006 ; 5 >
+      au < exists ; exists ; 2007 ; Journal of Retail & Leisure Property Volume 6 ; 2007 ; 6 >
+      au < exists ; exists ; 2008 ; Journal of Retail & Leisure Property Volume 7 ; 2008 ; 7 >
+      au < exists ; exists ; 2009 ; Journal of Retail & Leisure Property Volume 8 ; 2009 ; 8 >
+      au < exists ; exists ; 2010 ; Journal of Retail & Leisure Property Volume 9 (2010) ; 2010 ; 9 >
+      au < exists ; exists ; 2011 ; Journal of Retail & Leisure Property Volume 9 (2011) ; 2011 ; 9 >
+
     }
 
     {
@@ -708,6 +723,24 @@
       >
 
       param[journal_id] = rpm
+
+      au < exists ; exists ; 2002 ; Journal of Revenue & Pricing Management Volume 1 (2002) ; 2002 ; 1 >
+      au < exists ; exists ; 2003 ; Journal of Revenue & Pricing Management Volume 1 (2003) ; 2003 ; 1 >
+      au < exists ; exists ; 2003 ; Journal of Revenue & Pricing Management Volume 2 (2003) ; 2003 ; 2 >
+      au < exists ; exists ; 2004 ; Journal of Revenue & Pricing Management Volume 2 (2004) ; 2004 ; 2 >
+      au < exists ; exists ; 2004 ; Journal of Revenue & Pricing Management Volume 3 (2004) ; 2004 ; 3 >
+      au < exists ; exists ; 2005 ; Journal of Revenue & Pricing Management Volume 3 (2005) ; 2005 ; 3 >
+      au < exists ; exists ; 2005 ; Journal of Revenue & Pricing Management Volume 4 (2005) ; 2005 ; 4 >
+      au < exists ; exists ; 2006 ; Journal of Revenue & Pricing Management Volume 4 (2006) ; 2006 ; 4 >
+      au < exists ; exists ; 2006 ; Journal of Revenue & Pricing Management Volume 5 (2006) ; 2006 ; 5 >
+      au < exists ; exists ; 2007 ; Journal of Revenue & Pricing Management Volume 5 (2007) ; 2007 ; 5 >
+      au < exists ; exists ; 2007 ; Journal of Revenue & Pricing Management Volume 6 ; 2007 ; 6 >
+      au < exists ; exists ; 2008 ; Journal of Revenue & Pricing Management Volume 7 ; 2008 ; 7 >
+      au < exists ; exists ; 2009 ; Journal of Revenue & Pricing Management Volume 8 ; 2009 ; 8 >
+      au < exists ; exists ; 2010 ; Journal of Revenue & Pricing Management Volume 9 ; 2010 ; 9 >
+      au < exists ; exists ; 2011 ; Journal of Revenue & Pricing Management Volume 10 ; 2011 ; 10 >
+      au < exists ; exists ; 2012 ; Journal of Revenue & Pricing Management Volume 11 ; 2012 ; 11 >
+      au < exists ; exists ; 2013 ; Journal of Revenue & Pricing Management Volume 12 ; 2013 ; 12 >
 
     }
 
@@ -722,6 +755,28 @@
 
       param[journal_id] = jt
 
+      au < exists ; exists ; 2000 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 9 (2000) ; 2000 ; 9 >
+      au < exists ; exists ; 2001 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 9 (2001) ; 2001 ; 9 >
+      au < exists ; exists ; 2001 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 10 (2001) ; 2001 ; 10 >
+      au < exists ; exists ; 2002 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 10 (2002) ; 2002 ; 10 >
+      au < exists ; exists ; 2002 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 11 (2002) ; 2002 ; 11 >
+      au < exists ; exists ; 2003 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 11 (2003) ; 2003 ; 11 >
+      au < exists ; exists ; 2003 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 12 (2003) ; 2003 ; 12 >
+      au < exists ; exists ; 2004 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 12 (2004) ; 2004 ; 12 >
+      au < exists ; exists ; 2004 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 13 (2004) ; 2004 ; 13 >
+      au < exists ; exists ; 2005 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 13 (2005) ; 2005 ; 13 >
+      au < exists ; exists ; 2005 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 14 (2005) ; 2005 ; 14 >
+      au < exists ; exists ; 2006 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 14 (2006) ; 2006 ; 14 >
+      au < exists ; exists ; 2006 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 15 (2006) ; 2006 ; 15 >
+      au < exists ; exists ; 2007 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 15 (2007) ; 2007 ; 15 >
+      au < exists ; exists ; 2007 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 16 (2007) ; 2007 ; 16 >
+      au < exists ; exists ; 2008 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 16 (2008) ; 2008 ; 16 >
+      au < exists ; exists ; 2009 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 17 ; 2009 ; 17 >
+      au < exists ; exists ; 2010 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 18 ; 2010 ; 18 >
+      au < exists ; exists ; 2011 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 19 ; 2011 ; 19 >
+      au < exists ; exists ; 2012 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 20 ; 2012 ; 20 >
+      au < expected ; exists ; 2013 ; Journal of Targeting, Measurement and Analysis for Marketing Volume 21 ; 2013 ; 21 >
+
     }
 
     {
@@ -735,6 +790,18 @@
 
       param[journal_id] = lst
 
+      au < exists ; exists ; 2003 ; Latino Studies Volume 1 ; 2003 ; 1 >
+      au < exists ; exists ; 2004 ; Latino Studies Volume 2 ; 2004 ; 2 >
+      au < exists ; exists ; 2005 ; Latino Studies Volume 3 ; 2005 ; 3 >
+      au < exists ; exists ; 2006 ; Latino Studies Volume 4 ; 2006 ; 4 >
+      au < exists ; exists ; 2007 ; Latino Studies Volume 5 ; 2007 ; 5 >
+      au < exists ; exists ; 2008 ; Latino Studies Volume 6 ; 2008 ; 6 >
+      au < exists ; exists ; 2009 ; Latino Studies Volume 7 ; 2009 ; 7 >
+      au < exists ; exists ; 2010 ; Latino Studies Volume 8 ; 2010 ; 8 >
+      au < exists ; exists ; 2011 ; Latino Studies Volume 9 ; 2011 ; 9 >
+      au < exists ; exists ; 2012 ; Latino Studies Volume 10 ; 2012 ; 10 >
+      au < expected ; exists ; 2013 ; Latino Studies Volume 11 ; 2013 ; 11 >
+
     }
 
     {
@@ -747,6 +814,22 @@
       >
 
       param[journal_id] = mel
+
+      au < exists ; exists ; 1999 ; Maritime Economics & Logistics Volume 1 ; 1999 ; 1 >
+      au < exists ; exists ; 2000 ; Maritime Economics & Logistics Volume 2 ; 2000 ; 2 >
+      au < exists ; exists ; 2001 ; Maritime Economics & Logistics Volume 3 ; 2001 ; 3 >
+      au < exists ; exists ; 2002 ; Maritime Economics & Logistics Volume 4 ; 2002 ; 4 >
+      au < exists ; exists ; 2003 ; Maritime Economics & Logistics Volume 5 ; 2003 ; 5 >
+      au < exists ; exists ; 2004 ; Maritime Economics & Logistics Volume 6 ; 2004 ; 6 >
+      au < exists ; exists ; 2005 ; Maritime Economics & Logistics Volume 7 ; 2005 ; 7 >
+      au < exists ; exists ; 2006 ; Maritime Economics & Logistics Volume 8 ; 2006 ; 8 >
+      au < exists ; exists ; 2007 ; Maritime Economics & Logistics Volume 9 ; 2007 ; 9 >
+      au < exists ; exists ; 2008 ; Maritime Economics & Logistics Volume 10 ; 2008 ; 10 >
+      au < exists ; exists ; 2009 ; Maritime Economics & Logistics Volume 11 ; 2009 ; 11 >
+      au < exists ; exists ; 2010 ; Maritime Economics & Logistics Volume 12 ; 2010 ; 12 >
+      au < exists ; exists ; 2011 ; Maritime Economics & Logistics Volume 13 ; 2011 ; 13 >
+      au < exists ; exists ; 2012 ; Maritime Economics & Logistics Volume 14 ; 2012 ; 14 >
+      au < expected ; exists ; 2013 ; Maritime Economics & Logistics Volume 15 ; 2013 ; 15 >
 
     }
 
