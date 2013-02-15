@@ -82,7 +82,9 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
       ArticleMetadata am = 
-        new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
+   // turn on parser version when it's checked in
+   //     new ParserHtmlMetaTagMetadataExtractor().extract(target, cu);
+          new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
       
       // Strip the extra whitespace found in the HTML around and within the "dc.Creator" and "dc.Publisher" fields
@@ -120,10 +122,10 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     					  spage = biblioInfo[k].substring("pp. ".length(), biblioInfo[k].indexOf("-"));
     					  epage = biblioInfo[k].substring(biblioInfo[k].indexOf('-'), biblioInfo[k].length());
     				  }
-                      // page range separated by en-dash
-    				  else if (biblioInfo[k].contains("–")) {
-                          spage = biblioInfo[k].substring("pp. ".length(), biblioInfo[k].indexOf("–"));
-                          epage = biblioInfo[k].substring(biblioInfo[k].indexOf("–"), biblioInfo[k].length());
+                      // page range separated by en-dash - unicode 2013
+                                  else if (biblioInfo[k].contains("\u2013")) {
+                          spage = biblioInfo[k].substring("pp. ".length(), biblioInfo[k].indexOf("\u2013"));
+                          epage = biblioInfo[k].substring(biblioInfo[k].indexOf("\u2013"), biblioInfo[k].length());
     				  }
     				  // page range is single page
     				  else {
