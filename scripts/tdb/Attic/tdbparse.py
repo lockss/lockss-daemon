@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.19 2013-01-15 23:30:19 thib_gc Exp $
+# $Id: tdbparse.py,v 1.20 2013-02-15 19:54:39 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.7'''
+__version__ = '''0.4.8'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -242,7 +242,7 @@ class TdbScanner(object):
             # Remove line reader's trailing newline; idiom to avoid removing other meaningful whitespace
             if self.__cur[-1] == '\n': self.__cur = self.__cur[0:-1]
             # Optional debug output
-            if self.__options.tdbparse_echo_lines: sys.stderr.write(self.__cur + '\n')
+            if self.__options is not None and self.__options.tdbparse_echo_lines: sys.stderr.write(self.__cur + '\n')
             match = TdbScanner.RE_WHITE1.match(self.__cur)
             if match: self.__move(match.end())
         # Skip initial whitespace
@@ -267,8 +267,7 @@ class TdbScanner(object):
                 self.__tok.set_value('')
                 return self.__tok
             # Quoted string
-            if ch == TdbparseLiteral.QUOTE_DOUBLE:
-                raise TdbparseSyntaxError("Quoted strings are no longer legal and leading quote marks need to be escaped", self.file_name(), self.__tok.line(), self.__tok.col())
+            if ch == TdbparseLiteral.QUOTE_DOUBLE: return self.__qstring()
             # Unquoted string
             return self.__ustring()
         # Single-character tokens
@@ -333,6 +332,44 @@ class TdbScanner(object):
         square brackets, semicolons and equal signs.'''
         self.__token(token)
         self.__move(1)
+        return self.__tok
+
+    def __qstring(self):
+        '''Consumes a quoted string, starting at the initial double
+        quote and continuing to a matching double quote on the same
+        line.
+
+        Double quotes and backslashes must be escaped.'''
+        # __bstring has been altered to count characters and escape the
+        # string conditionally. The same should be done to __qstring,
+        # but it's called very infrequently.
+        self.__token(TdbparseToken.STRING)
+        val = []
+        maxindex = len(self.__cur)
+        index = 1 # Consume the opening quote
+        if index >= maxindex:
+            raise TdbparseSyntaxError('run-on quoted string', self.file_name(), self.__tok.line(), self.__tok.col())
+        ch = self.__cur[index]
+        while ch != TdbparseLiteral.QUOTE_DOUBLE:
+            if ch == '\\':
+                index = index + 1 # Consume the backslash
+                if index >= maxindex:
+                    raise TdbparseSyntaxError('end-of-line after backslash', self.file_name(), self.__tok.line(), self.__tok.col()+index)
+                ch = self.__cur[index]
+                if ch not in '"\\':
+                    raise TdbparseSyntaxError('invalid quoted string escape: %s' % ch, self.file_name(), self.__line, self.__col-1+index)
+            val.append(ch)
+            index = index + 1 # Consume the character
+            if index >= maxindex:
+                raise TdbparseSyntaxError('run-on quoted string', self.file_name(), self.__tok.line(), self.__tok.col()+index)
+            ch = self.__cur[index]
+        index = index + 1 # Consume the closing quote
+        self.__move(index)
+        self.__tok.set_value(''.join(val))
+        if self.__stringFlag == TdbparseToken.EQUAL:
+            self.__stringFlag = None
+        elif self.__stringFlag == TdbparseToken.SEMICOLON:
+            self.__stringFlag = TdbparseToken.AU
         return self.__tok
 
     def __ustring(self):
@@ -951,8 +988,7 @@ class TestTdbParser(unittest.TestCase):
     name = The Publisher
   >
 }
-''', #TdbparseSyntaxError('expected } but got publisher', '<string>', 3, 3)),
-     TdbparseSyntaxError('Quoted strings are no longer legal and leading quote marks need to be escaped', '<string>', 2, 7)),
+''', TdbparseSyntaxError('expected } but got publisher', '<string>', 3, 3)),
                          ('''\
 {
   publisher <
@@ -996,3 +1032,4 @@ class TestTdbParser(unittest.TestCase):
                 self.assertEquals(str(mes), str(exc))
 
 if __name__ == '__main__': unittest.main()
+

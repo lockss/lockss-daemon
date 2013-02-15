@@ -24,8 +24,8 @@
     param[journal_name] = biorisk
     
     au < exists ; exists ; 2008 ; BioRisk Issue 1 ; 1 >
-    au < exists ; exists ; 2009 ; BioRisk Issues 2,3 ; 2,3 >
-    au < exists ; exists ; 2010 ; BioRisk Issues 4,5 ; 4,5 >
+    au < exists ; exists ; 2009 ; BioRisk Issues 2,3 ; "{2-3}" >
+    au < exists ; exists ; 2010 ; BioRisk Issues 4,5 ; "{4-5}" >
     au < exists ; exists ; 2011 ; BioRisk Issue 6 ; 6 >
     au < exists ; exists ; 2012 ; BioRisk Issue 7 ; 7 >
   
@@ -59,7 +59,7 @@
     
     param[journal_name] = ijm
     
-    au < exists ; exists ; 2011 ; International Journal of Myriapodology Issues 4-6 ; 4,5,6 >
+    au < exists ; exists ; 2011 ; International Journal of Myriapodology Issues 4-6 ; "{4-6}" >
     au < exists ; exists ; 2012 ; International Journal of Myriapodology Issue 7 ; 7 >
 
    }
@@ -75,8 +75,8 @@
     
     param[journal_name] = jhr
     
-    au < exists ; exists ; 2011 ; Journal of Hymenoptera Research Issues 20-23 ; 20, 21, 22, 23 >
-    au < exists ; exists ; 2012 ; Journal of Hymenoptera Research Issues 24-29 ; {24-29} >
+    au < exists ; exists ; 2011 ; Journal of Hymenoptera Research Issues 20-23 ; "{20-23}" >
+    au < exists ; exists ; 2012 ; Journal of Hymenoptera Research Issues 24-29 ; "{24-29}" >
   
    }
   
@@ -92,7 +92,7 @@
     param[base_url] = mycokeys
     
     au < exists ; exists ; 2011 ; MycoKeys Issue 1 ; 1 >
-    au < exists ; exists ; 2012 ; MycoKeys Issues 2-6 ; {2-6} >
+    au < exists ; exists ; 2012 ; MycoKeys Issues 2-6 ; "{2-6}" >
   
    }
   
@@ -105,7 +105,7 @@
     
     param[journal_name] = natureconservation
     
-    au < exists ; exists ; 2012 ; Nature Conservation Issue 1-3 ; 1,2,3 >
+    au < exists ; exists ; 2012 ; Nature Conservation Issue 1-3 ; "{1-3}" >
   
    }
   
@@ -120,8 +120,8 @@
     
     param[journal_name] = neobiota
     
-    au < exists ; exists ; 2011 ; NeoBiota Issues 9-11 ; 9,10,11 >
-    au < exists ; exists ; 2012 ; NeoBiota Issues 12-15 ; 12,13,14,15 >
+    au < exists ; exists ; 2011 ; NeoBiota Issues 9-11 ; "{9-11}" >
+    au < exists ; exists ; 2012 ; NeoBiota Issues 12-15 ; "{12-15}" >
   
    }
   
@@ -137,8 +137,8 @@
     param[journal_name] = phytokeys
     
     au < exists ; exists ; 2010 ; PhytoKeys Issue 1 ; 1 >
-    au < exists ; exists ; 2011 ; PhytoKeys Issues 2-7 ; {2-7} >
-    au < exists ; exists ; 2012 ; PhytoKeys Issues 8-19 ; {8-19} >
+    au < exists ; exists ; 2011 ; PhytoKeys Issues 2-7 ; "{2-7}" >
+    au < exists ; exists ; 2012 ; PhytoKeys Issues 8-19 ; "{8-19}" >
   
    }
   
@@ -153,7 +153,7 @@
     
     param[journal_name] = subtbiol
     
-    au < exists ; exists ; 2011 ; Subterranean Biology Issue 8 ; 8,9 >
+    au < exists ; exists ; 2011 ; Subterranean Biology Issue 8 ; "{8-9}" >
 
   
    }
@@ -169,11 +169,11 @@
     
     param[journal_name] = zookeys
     
-    au < exists ; exists ; 2008 ; ZooKeys Issues 1-4 ; {1-4} >
-    au < exists ; exists ; 2009 ; ZooKeys Issues 5-31 ; {5-31} >
-    au < exists ; exists ; 2010 ; ZooKeys Issues 32-73 ; {32-73} >    
-    au < exists ; exists ; 2011 ; ZooKeys Issues 74-160 ; {74-160} >    
-    au < exists ; exists ; 2012 ; ZooKeys Issues 161-255 ; {161-255} >
+    au < exists ; exists ; 2008 ; ZooKeys Issues 1-4 ; "{1-4}" >
+    au < exists ; exists ; 2009 ; ZooKeys Issues 5-31 ; "{5-31}" >
+    au < exists ; exists ; 2010 ; ZooKeys Issues 32-73 ; "{32-73}" >    
+    au < exists ; exists ; 2011 ; ZooKeys Issues 74-160 ; "{74-160}" >    
+    au < exists ; exists ; 2012 ; ZooKeys Issues 161-255 ; "{161-255}" >
   
    }
   
