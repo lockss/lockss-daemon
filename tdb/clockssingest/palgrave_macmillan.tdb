@@ -70,13 +70,13 @@
 
       param[journal_id] = bp
       
-      comment[notReady] = manifest page is malformed.
+      comment[notReady] = V5 manifest page was malformed, now corrected.
 
       au < exists ; exists ; 2006 ; British Politics Volume 1 ; 2006 ; 1 >
       au < exists ; exists ; 2007 ; British Politics Volume 2 ; 2007 ; 2 >
       au < exists ; exists ; 2008 ; British Politics Volume 3 ; 2008 ; 3 >
       au < exists ; exists ; 2009 ; British Politics Volume 4 ; 2009 ; 4 >
-      au < notReady ; exists ; 2010 ; British Politics Volume 5 ; 2010 ; 5 >
+      au < exists ; exists ; 2010 ; British Politics Volume 5 ; 2010 ; 5 >
       au < exists ; exists ; 2011 ; British Politics Volume 6 ; 2011 ; 6 >
       au < released ; manifest ; 2012 ; British Politics Volume 7 ; 2012 ; 7 >
       au < expected ; exists ; 2013 ; British Politics Volume 8 ; 2013 ; 8 >
