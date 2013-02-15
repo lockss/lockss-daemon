@@ -140,13 +140,13 @@
     param[base_url] = http://www.opticon1826.com/
     param[journal_id] = opt
 
-    au < testing ; 2006 ; Opticon1826 Volume 1 ; 1 ; 2006 >
-    au < testing ; 2007 ; Opticon1826 Volume 2-3 ; 2-3 ; 2007 >
-    au < testing ; 2008 ; Opticon1826 Volume 4-5 ; 4-5 ; 2008 >
-    au < testing ; 2009 ; Opticon1826 Volume 6-7 ; 6-7 ; 2009 >
-    au < testing ; 2010 ; Opticon1826 Volume 8-9 ; 8-9 ; 2010 >
-    au < testing ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 >
-    au < testing ; 2012 ; Opticon1826 Volume 12 ; 12 ; 2012 >
+    au < ready ; 2006 ; Opticon1826 Volume 1 ; 1 ; 2006 >
+    au < ready ; 2007 ; Opticon1826 Volume 2-3 ; 2-3 ; 2007 >
+    au < ready ; 2008 ; Opticon1826 Volume 4-5 ; 4-5 ; 2008 >
+    au < ready ; 2009 ; Opticon1826 Volume 6-7 ; 6-7 ; 2009 >
+    au < ready ; 2010 ; Opticon1826 Volume 8-9 ; 8-9 ; 2010 >
+    au < ready ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 >
+    au < ready ; 2012 ; Opticon1826 Volume 12 ; 12 ; 2012 >
     au < expected ; 2013 ; Opticon1826 Volume 13 ; 13 ; 2013 >
     
   }
@@ -161,21 +161,21 @@
     param[base_url] = http://pia-journal.co.uk/
     param[journal_id] = pia
 
-    au < manifest ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
-    au < manifest ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
-    au < manifest ; 1992 ; Papers from the Institute of Archaeology Volume 3 ; 3 ; 1992 >
-    au < manifest ; 1993 ; Papers from the Institute of Archaeology Volume 4 ; 4 ; 1993 >
-    au < manifest ; 1994 ; Papers from the Institute of Archaeology Volume 5 ; 5 ; 1994 >
-    au < manifest ; 1995 ; Papers from the Institute of Archaeology Volume 6 ; 6 ; 1995 >
-    au < manifest ; 1996 ; Papers from the Institute of Archaeology Volume 7 ; 7 ; 1996 >
-    au < manifest ; 1997 ; Papers from the Institute of Archaeology Volume 8 ; 8 ; 1997 >
-    au < manifest ; 1998 ; Papers from the Institute of Archaeology Volume 9 ; 9 ; 1998 >
-    au < manifest ; 1999 ; Papers from the Institute of Archaeology Volume 10 ; 10 ; 1999 >
-    au < manifest ; 2000 ; Papers from the Institute of Archaeology Volume 11 ; 11 ; 2000 >
-    au < manifest ; 2001 ; Papers from the Institute of Archaeology Volume 12 ; 12 ; 2001 >
-    au < manifest ; 2002 ; Papers from the Institute of Archaeology Volume 13 ; 13 ; 2002 >
-    au < manifest ; 2003 ; Papers from the Institute of Archaeology Volume 14 ; 14 ; 2003 >
-    au < manifest ; 2004 ; Papers from the Institute of Archaeology Volume 15 ; 15 ; 2004 >
+    au < testing ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
+    au < testing ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
+    au < testing ; 1992 ; Papers from the Institute of Archaeology Volume 3 ; 3 ; 1992 >
+    au < testing ; 1993 ; Papers from the Institute of Archaeology Volume 4 ; 4 ; 1993 >
+    au < testing ; 1994 ; Papers from the Institute of Archaeology Volume 5 ; 5 ; 1994 >
+    au < testing ; 1995 ; Papers from the Institute of Archaeology Volume 6 ; 6 ; 1995 >
+    au < testing ; 1996 ; Papers from the Institute of Archaeology Volume 7 ; 7 ; 1996 >
+    au < testing ; 1997 ; Papers from the Institute of Archaeology Volume 8 ; 8 ; 1997 >
+    au < testing ; 1998 ; Papers from the Institute of Archaeology Volume 9 ; 9 ; 1998 >
+    au < testing ; 1999 ; Papers from the Institute of Archaeology Volume 10 ; 10 ; 1999 >
+    au < testing ; 2000 ; Papers from the Institute of Archaeology Volume 11 ; 11 ; 2000 >
+    au < testing ; 2001 ; Papers from the Institute of Archaeology Volume 12 ; 12 ; 2001 >
+    au < testing ; 2002 ; Papers from the Institute of Archaeology Volume 13 ; 13 ; 2002 >
+    au < testing ; 2003 ; Papers from the Institute of Archaeology Volume 14 ; 14 ; 2003 >
+    au < testing ; 2004 ; Papers from the Institute of Archaeology Volume 15 ; 15 ; 2004 >
     au < manifest ; 2005 ; Papers from the Institute of Archaeology Volume 16 ; 16 ; 2005 >
     au < manifest ; 2006 ; Papers from the Institute of Archaeology Volume 17 ; 17 ; 2006 >
     au < manifest ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 ; 2007 >
