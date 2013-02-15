@@ -51,9 +51,10 @@
     >
 
     param[journal_dir] = palimpsest
-    attr[journal_id] = 
+    attr[journal_id] = pal
 
-    au< expected ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1 ; 1 >
+    au< manifest ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1 ; 1 >
+    au< expected ; 2013 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 2 ; 2 >
 
   }
 
@@ -71,6 +72,7 @@
 
     au < manifest ; 2011 ; philoSOPHIA Volume 1 ; 1 >
     au < manifest ; 2012 ; philoSOPHIA Volume 2 ; 2 >
+    au < expected ; 2013 ; philoSOPHIA Volume 3 ; 3 >
 
   }
 
