@@ -1,5 +1,5 @@
 /*
- * $Id: TestRunKbartReport.java,v 1.6 2012-11-15 13:21:42 easyonthemayo Exp $
+ * $Id: TestRunKbartReport.java,v 1.7 2013-02-15 16:43:32 easyonthemayo Exp $
  */
 
 /*
@@ -60,11 +60,8 @@ public class TestRunKbartReport extends LockssTestCase {
   // - all final column empty
   static String emptyColumnLabel = "NUM_FIRST_VOL_ONLINE";
 
-  // Note that we have to add title_id to the header list - although we don't
-  // specify any values, they are generated from the available ISSNs, so the
-  // column name will be in the header!
   static String header =
-      "PUBLISHER_NAME,  publication_title, PRINT_IDENTIFIER, ONLINE_identifier, NUM_FIRST_VOL_ONLINE, TITLE_ID";
+      "PUBLISHER_NAME,  publication_title, PRINT_IDENTIFIER, ONLINE_identifier, NUM_FIRST_VOL_ONLINE";
 
   // The expected output header is the list of col names we specify for the input,
   // plus any constant-valued cols specified in the Ordering.
@@ -319,6 +316,7 @@ public class TestRunKbartReport extends LockssTestCase {
     // Header should be equivalent to the defined field ordering
     //assertEquals(expectedHeader.toLowerCase(), outputHeader.toLowerCase());
     // NOTE the utf output includes a BOM, which screws up comparison
+    System.out.format("%s\n%s\n", outputHeader, expectedHeader);
     assertTrue(outputHeader.toLowerCase().endsWith(expectedHeader.toLowerCase()));
 
     // TODO record ordering should be alphabetical by title, or first column

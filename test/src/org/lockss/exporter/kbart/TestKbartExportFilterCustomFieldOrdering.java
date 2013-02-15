@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartExportFilterCustomFieldOrdering.java,v 1.3 2012-10-22 15:07:10 easyonthemayo Exp $
+ * $Id: TestKbartExportFilterCustomFieldOrdering.java,v 1.4 2013-02-15 16:43:31 easyonthemayo Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class TestKbartExportFilterCustomFieldOrdering extends LockssTestCase {
     // XXX cfoStr: Converting fields back to the string?
     //assertIsomorphic(someStrings, cfoStr.getOrderedColumns());
     assertIsomorphic(Field.getFields(someStrings), cfoStr.getOrderedFields());
-    assertIsomorphic(someColumns, ReportColumn.fromStrings(cfoStr.getOrderedLabels()));
+    assertIsomorphic(someColumns, ReportColumn.fromStrings(cfoStr.getOrderedDescriptors()));
     // Check that the fields present in the labels match the set of fields
     assertSameElements(Field.getFields(cfoStr.getOrderedLabels()), cfoStr.getFields());
   }
@@ -101,7 +101,7 @@ public class TestKbartExportFilterCustomFieldOrdering extends LockssTestCase {
   public final void testCustomFieldOrderingListOfColumns() {
     assertIsomorphic(someColumns, cfoCol.getOrderedColumns());
     assertIsomorphic(Field.getFields(someStrings), cfoCol.getOrderedFields());
-    assertIsomorphic(someColumns, ReportColumn.fromStrings(cfoCol.getOrderedLabels()));
+    assertIsomorphic(someColumns, ReportColumn.fromStrings(cfoCol.getOrderedDescriptors()));
     // Check that the fields present in the labels match the set of fields
     assertSameElements(Field.getFields(cfoCol.getOrderedLabels()), cfoCol.getFields());
   }

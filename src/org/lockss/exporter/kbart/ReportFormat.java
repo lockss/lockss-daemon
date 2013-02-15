@@ -1,5 +1,5 @@
 /*
- * $Id: ReportFormat.java,v 1.9 2012-11-14 12:05:10 easyonthemayo Exp $
+ * $Id: ReportFormat.java,v 1.10 2013-02-15 16:43:31 easyonthemayo Exp $
  */
 
 /*
@@ -265,7 +265,15 @@ public class ReportFormat {
         opts.setExcludeNoIdTitles(true);
         opts.setColumnOrdering(getColumnOrdering());
       }
-    }
+    },
+    /*VICKY("Vicky", "Publisher-first minimal details", true,
+        KbartExportFilter.PredefinedColumnOrdering.TITLES_BASIC,
+        CoverageNotesFormat.YEAR_VOLUME_SUMMARY, KbartExporter.OutputFormat.TSV) {
+      @Override
+      public void overrideCustomOptions(KbartCustomOptions opts) {
+        opts.setColumnOrdering(getColumnOrdering());
+      }
+    }*/
     ;
 
     private ReportDataFormat(String label, String footnote, boolean oneLinePerTitle) {

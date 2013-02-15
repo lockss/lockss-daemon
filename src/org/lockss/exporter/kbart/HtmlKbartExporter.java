@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.24 2012-10-22 15:07:09 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.25 2013-02-15 16:43:31 easyonthemayo Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.io.OutputStream;
 import java.io.IOException;
@@ -76,21 +77,12 @@ public class HtmlKbartExporter extends KbartExporter {
   /** The minimum value for health when measured in tortoises. The maximum is 5. */
   private final int tortoiseBaseHealth = 1;
   
-  /** 
-   * The index of the issn field. Will have the td.issn style applied to its 
-   * table cells to stop it wrapping. 
-   */
-  private int issnFieldIndex;
-  /** 
-   * The index of the eissn field. Will have the td.issn style applied to its 
-   * table cells to stop it wrapping. 
-   */
-  private int eissnFieldIndex;
   /**
-   * The index of the issnl field. Will have the td.issn style applied to its
-   * table cells to stop it wrapping.
+   * The index of any fields that may contain ISSN-style hyphenated codes. Will
+   * have the td.issn style applied to their table cells to prevent wrapping.
    */
-  private int issnlFieldIndex;
+  private List<Integer> issnIndices;
+
   /**
    * The index of the coverage_notes field. Will have the td.coverage_notes
    * style applied to its table cells to stop it wrapping.
@@ -156,7 +148,7 @@ public class HtmlKbartExporter extends KbartExporter {
       if (StringUtil.isNullString(val)) val = "&nbsp;";
       // Add appropriate style to issn fields
       String cssClass = "";
-      if (i==issnFieldIndex || i==eissnFieldIndex || i==issnlFieldIndex) {
+      if (issnIndices.contains(i)) {
         cssClass = "issn";
       }
       if (i==covNotesFieldIndex) {
@@ -220,9 +212,11 @@ public class HtmlKbartExporter extends KbartExporter {
         "%s title list created on %s by %s from %d titles.",
         scope, getDate(), getHostName(), tdbTitleTotal);
     this.header = makeHeader();
-    this.issnFieldIndex = findFieldIndex(Field.PRINT_IDENTIFIER);
-    this.eissnFieldIndex = findFieldIndex(Field.ONLINE_IDENTIFIER);
-    this.issnlFieldIndex = findFieldIndex(Field.TITLE_ID);
+    //this.issnFieldIndex = findFieldIndex(Field.PRINT_IDENTIFIER);
+    //this.eissnFieldIndex = findFieldIndex(Field.ONLINE_IDENTIFIER);
+    //this.issnlFieldIndex = findFieldIndex(Field.TITLE_ID);
+    this.issnIndices = findFieldIndices();
+
     this.covNotesFieldIndex = findFieldIndex(Field.COVERAGE_NOTES);
     // The health field index will be one bigger than the last field index
     this.healthFieldIndex = getColumnLabels().size();
@@ -252,6 +246,20 @@ public class HtmlKbartExporter extends KbartExporter {
       if (labs.get(i).equals(name)) return i;
     }
     return -1;
+  }
+
+  /**
+   * Find the indices of all fields which may contain an ISSN.
+   * @return
+   */
+  private List<Integer> findFieldIndices() {
+    List<Integer> ind = new ArrayList<Integer>();
+    List<ReportColumn> cols = filter.getColumnOrdering().getOrderedColumns();
+    // Check each col
+    for (int i=0; i<cols.size(); i++) {
+      if (cols.get(i).holdsIssns()) ind.add(i);
+    }
+    return ind;
   }
 
   /**
