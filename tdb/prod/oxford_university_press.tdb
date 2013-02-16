@@ -3682,6 +3682,23 @@
   {
 
     title <
+      name = Chinese Journal of Comparative Law ;
+      issn = 2050-4802 ;
+      eissn = 2050-4810 ;
+      issnl = 1540-1650
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://cjcl.oxfordjournals.org/ 
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < expected ; 2013 ; Chinese Journal of Comparative Law Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Chinese Journal of International Law ;
       issn = 1540-1650 ;
       eissn = 1746-9937 ;
