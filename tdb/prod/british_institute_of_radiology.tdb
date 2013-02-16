@@ -84,19 +84,19 @@
     au < released ; 1991 ; British Journal of Radiology Volume 64 ; 64 >
     au < released ; 1992 ; British Journal of Radiology Volume 65 ; 65 >
     au < released ; 1993 ; British Journal of Radiology Volume 66 ; 66 >
-    au < testing ; 1994 ; British Journal of Radiology Volume 67 ; 67 >
+    au < ready ; 1994 ; British Journal of Radiology Volume 67 ; 67 >
     au < ready ; 1995 ; British Journal of Radiology Volume 68 ; 68 >
     au < ready ; 1996 ; British Journal of Radiology Volume 69 ; 69 >
-    au < testing ; 1997 ; British Journal of Radiology Volume 70 ; 70 >
-    au < testing ; 1998 ; British Journal of Radiology Volume 71 ; 71 >
-    au < testing ; 1999 ; British Journal of Radiology Volume 72 ; 72 >
-    au < testing ; 2000 ; British Journal of Radiology Volume 73 ; 73 >
-    au < testing ; 2001 ; British Journal of Radiology Volume 74 ; 74 >
-    au < testing ; 2002 ; British Journal of Radiology Volume 75 ; 75 >
-    au < testing ; 2003 ; British Journal of Radiology Volume 76 ; 76 >
-    au < testing ; 2004 ; British Journal of Radiology Volume 77 ; 77 >
+    au < ready ; 1997 ; British Journal of Radiology Volume 70 ; 70 >
+    au < ready ; 1998 ; British Journal of Radiology Volume 71 ; 71 >
+    au < ready ; 1999 ; British Journal of Radiology Volume 72 ; 72 >
+    au < ready ; 2000 ; British Journal of Radiology Volume 73 ; 73 >
+    au < ready ; 2001 ; British Journal of Radiology Volume 74 ; 74 >
+    au < ready ; 2002 ; British Journal of Radiology Volume 75 ; 75 >
+    au < manifest ; 2003 ; British Journal of Radiology Volume 76 ; 76 >
+    au < ready ; 2004 ; British Journal of Radiology Volume 77 ; 77 >
     au < ready ; 2005 ; British Journal of Radiology Volume 78 ; 78 >
-    au < testing ; 2006 ; British Journal of Radiology Volume 79 ; 79 >
+    au < ready ; 2006 ; British Journal of Radiology Volume 79 ; 79 >
     au < released ; 2007 ; British Journal of Radiology Volume 80 ; 80 >
     au < released ; 2008 ; British Journal of Radiology Volume 81 ; 81 >
     au < released ; 2009 ; British Journal of Radiology Volume 82 ; 82 >
@@ -118,28 +118,28 @@
 
     param[base_url] = http://dmfr.birjournals.org/
     
-    au < manifest ; 1989 ; Dentomaxillofacial Radiology Volume 18 ; 18 >
-    au < manifest ; 1990 ; Dentomaxillofacial Radiology Volume 19 ; 19 >
-    au < manifest ; 1991 ; Dentomaxillofacial Radiology Volume 20 ; 20 >
-    au < manifest ; 1992 ; Dentomaxillofacial Radiology Volume 21 ; 21 >
-    au < manifest ; 1993 ; Dentomaxillofacial Radiology Volume 22 ; 22 >
-    au < manifest ; 1994 ; Dentomaxillofacial Radiology Volume 23 ; 23 >
-    au < manifest ; 1995 ; Dentomaxillofacial Radiology Volume 24 ; 24 >
-    au < manifest ; 1996 ; Dentomaxillofacial Radiology Volume 25 ; 25 >
-    au < manifest ; 1997 ; Dentomaxillofacial Radiology Volume 26 ; 26 >
-    au < manifest ; 1998 ; Dentomaxillofacial Radiology Volume 27 ; 27 >
-    au < manifest ; 1999 ; Dentomaxillofacial Radiology Volume 28 ; 28 >
-    au < manifest ; 2000 ; Dentomaxillofacial Radiology Volume 29 ; 29 >
-    au < manifest ; 2001 ; Dentomaxillofacial Radiology Volume 30 ; 30 >
-    au < manifest ; 2002 ; Dentomaxillofacial Radiology Volume 31 ; 31 >
-    au < manifest ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 32 >
-    au < manifest ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 33 >
-    au < manifest ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 34 >
-    au < manifest ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 35 >
-    au < manifest ; 2007 ; Dentomaxillofacial Radiology Volume 36 ; 36 >
-    au < manifest ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 >
-    au < manifest ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 >
-    au < manifest ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 >
+    au < testing ; 1989 ; Dentomaxillofacial Radiology Volume 18 ; 18 >
+    au < testing ; 1990 ; Dentomaxillofacial Radiology Volume 19 ; 19 >
+    au < testing ; 1991 ; Dentomaxillofacial Radiology Volume 20 ; 20 >
+    au < testing ; 1992 ; Dentomaxillofacial Radiology Volume 21 ; 21 >
+    au < testing ; 1993 ; Dentomaxillofacial Radiology Volume 22 ; 22 >
+    au < testing ; 1994 ; Dentomaxillofacial Radiology Volume 23 ; 23 >
+    au < testing ; 1995 ; Dentomaxillofacial Radiology Volume 24 ; 24 >
+    au < testing ; 1996 ; Dentomaxillofacial Radiology Volume 25 ; 25 >
+    au < testing ; 1997 ; Dentomaxillofacial Radiology Volume 26 ; 26 >
+    au < testing ; 1998 ; Dentomaxillofacial Radiology Volume 27 ; 27 >
+    au < testing ; 1999 ; Dentomaxillofacial Radiology Volume 28 ; 28 >
+    au < testing ; 2000 ; Dentomaxillofacial Radiology Volume 29 ; 29 >
+    au < testing ; 2001 ; Dentomaxillofacial Radiology Volume 30 ; 30 >
+    au < testing ; 2002 ; Dentomaxillofacial Radiology Volume 31 ; 31 >
+    au < testing ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 32 >
+    au < testing ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 33 >
+    au < testing ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 34 >
+    au < testing ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 35 >
+    au < testing ; 2007 ; Dentomaxillofacial Radiology Volume 36 ; 36 >
+    au < testing ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 >
+    au < testing ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 >
+    au < testing ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 >
     au < released ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 >
     au < released ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 >
     au < manifest ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 >

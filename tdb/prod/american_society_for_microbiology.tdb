@@ -18,6 +18,8 @@
         issnl = 0066-4804
       >
       param[base_url] = http://aac.asm.org/
+      
+      comment[vol_56] = notReady GC overhead limit exceeded 
   
       au < HighWirePressH20Plugin ; released ; 1972 ; Antimicrobial Agents and Chemotherapy Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 1972 ; Antimicrobial Agents and Chemotherapy Volume 2 ; 2 >
@@ -42,7 +44,7 @@
       au < HighWirePressH20Plugin ; released ; 1982 ; Antimicrobial Agents and Chemotherapy Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; 1982 ; Antimicrobial Agents and Chemotherapy Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; released ; 1983 ; Antimicrobial Agents and Chemotherapy Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; testing ; 1983 ; Antimicrobial Agents and Chemotherapy Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; ready ; 1983 ; Antimicrobial Agents and Chemotherapy Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 1984 ; Antimicrobial Agents and Chemotherapy Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; released ; 1984 ; Antimicrobial Agents and Chemotherapy Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; released ; 1985 ; Antimicrobial Agents and Chemotherapy Volume 27 ; 27 >
@@ -74,7 +76,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Antimicrobial Agents and Chemotherapy Volume 53 ; 53 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Antimicrobial Agents and Chemotherapy Volume 54 ; 54 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Antimicrobial Agents and Chemotherapy Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; testing ; 2012 ; Antimicrobial Agents and Chemotherapy Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; notReady ; 2012 ; Antimicrobial Agents and Chemotherapy Volume 56 ; 56 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Antimicrobial Agents and Chemotherapy Volume 57 ; 57 >
   
     }
@@ -107,17 +109,17 @@
       au < HighWirePressH20Plugin ; released ; 1969 ; Applied Microbiology Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 1969 ; Applied Microbiology Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; released ; 1970 ; Applied Microbiology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; testing ; 1970 ; Applied Microbiology Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; testing ; 1971 ; Applied Microbiology Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; testing ; 1971 ; Applied Microbiology Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; testing ; 1972 ; Applied Microbiology Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; testing ; 1972 ; Applied Microbiology Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; testing ; 1973 ; Applied Microbiology Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; testing ; 1973 ; Applied Microbiology Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; testing ; 1974 ; Applied Microbiology Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; testing ; 1974 ; Applied Microbiology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; testing ; 1975 ; Applied Microbiology Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; testing ; 1975 ; Applied Microbiology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; ready ; 1970 ; Applied Microbiology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; ready ; 1971 ; Applied Microbiology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; ready ; 1971 ; Applied Microbiology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; ready ; 1972 ; Applied Microbiology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; ready ; 1972 ; Applied Microbiology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; ready ; 1973 ; Applied Microbiology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; ready ; 1973 ; Applied Microbiology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; ready ; 1974 ; Applied Microbiology Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; ready ; 1974 ; Applied Microbiology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; ready ; 1975 ; Applied Microbiology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; ready ; 1975 ; Applied Microbiology Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 1976 ; Applied and Environmental Microbiology Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; released ; 1976 ; Applied and Environmental Microbiology Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; released ; 1977 ; Applied and Environmental Microbiology Volume 33 ; 33 >
@@ -128,18 +130,18 @@
       au < HighWirePressH20Plugin ; released ; 1979 ; Applied and Environmental Microbiology Volume 38 ; 38 >
       au < HighWirePressH20Plugin ; released ; 1980 ; Applied and Environmental Microbiology Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; released ; 1980 ; Applied and Environmental Microbiology Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Applied and Environmental Microbiology Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Applied and Environmental Microbiology Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Applied and Environmental Microbiology Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Applied and Environmental Microbiology Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; manifest ; 1983 ; Applied and Environmental Microbiology Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; manifest ; 1983 ; Applied and Environmental Microbiology Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Applied and Environmental Microbiology Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Applied and Environmental Microbiology Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Applied and Environmental Microbiology Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Applied and Environmental Microbiology Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Applied and Environmental Microbiology Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Applied and Environmental Microbiology Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; testing ; 1981 ; Applied and Environmental Microbiology Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; testing ; 1981 ; Applied and Environmental Microbiology Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; testing ; 1982 ; Applied and Environmental Microbiology Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; testing ; 1982 ; Applied and Environmental Microbiology Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; testing ; 1983 ; Applied and Environmental Microbiology Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; testing ; 1983 ; Applied and Environmental Microbiology Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; testing ; 1984 ; Applied and Environmental Microbiology Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; testing ; 1984 ; Applied and Environmental Microbiology Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; testing ; 1985 ; Applied and Environmental Microbiology Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; testing ; 1985 ; Applied and Environmental Microbiology Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; testing ; 1986 ; Applied and Environmental Microbiology Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; testing ; 1986 ; Applied and Environmental Microbiology Volume 52 ; 52 >
       au < HighWirePressH20Plugin ; released ; 1987 ; Applied and Environmental Microbiology Volume 53 ; 53 >
       au < HighWirePressH20Plugin ; released ; 1988 ; Applied and Environmental Microbiology Volume 54 ; 54 >
       au < HighWirePressH20Plugin ; released ; 1989 ; Applied and Environmental Microbiology Volume 55 ; 55 >
@@ -211,7 +213,7 @@
       >
       param[base_url] = http://cmr.asm.org/
   
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Clinical Microbiology Reviews Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 1988 ; Clinical Microbiology Reviews Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 1989 ; Clinical Microbiology Reviews Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; released ; 1990 ; Clinical Microbiology Reviews Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; released ; 1991 ; Clinical Microbiology Reviews Volume 4 ; 4 >
@@ -304,7 +306,7 @@
       au < HighWirePressH20Plugin ; released ; 1980 ; Infection and Immunity Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; released ; 1980 ; Infection and Immunity Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 1981 ; Infection and Immunity Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Infection and Immunity Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; testing ; 1981 ; Infection and Immunity Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; released ; 1981 ; Infection and Immunity Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 1981 ; Infection and Immunity Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 1982 ; Infection and Immunity Volume 35 ; 35 >
@@ -339,7 +341,7 @@
       au < HighWirePressH20Plugin ; released ; 1996 ; Infection and Immunity Volume 64 ; 64 >
       au < HighWirePressH20Plugin ; released ; 1997 ; Infection and Immunity Volume 65 ; 65 >
       au < HighWirePressH20Plugin ; released ; 1998 ; Infection and Immunity Volume 66 ; 66 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Infection and Immunity Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; testing ; 1999 ; Infection and Immunity Volume 67 ; 67 >
       au < HighWirePressH20Plugin ; released ; 2000 ; Infection and Immunity Volume 68 ; 68 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Infection and Immunity Volume 69 ; 69 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Infection and Immunity Volume 70 ; 70 >
