@@ -29,7 +29,7 @@
       au < ready ; 2000 ; Northeastern Naturalist Volume 7 ; 7 >
       au < ready ; 2001 ; Northeastern Naturalist Volume 8 ; 8 >
       au < ready ; 2002 ; Northeastern Naturalist Volume 9 ; 9 >
-      au < testing ; 2003 ; Northeastern Naturalist Volume 10 ; 10 >
+      au < ready ; 2003 ; Northeastern Naturalist Volume 10 ; 10 >
       au < doNotProcess ; 2004 ; Northeastern Naturalist Volume 11 ; 11 >
       au < ready ; 2005 ; Northeastern Naturalist Volume 12 ; 12 >
       au < ready ; 2006 ; Northeastern Naturalist Volume 13 ; 13 >
@@ -67,7 +67,7 @@
       param[journal_id] = sena
   
       au < ready ; 2002 ; Southeastern Naturalist Volume 1 ; 1 >
-      au < testing ; 2003 ; Southeastern Naturalist Volume 2 ; 2 >
+      au < ready ; 2003 ; Southeastern Naturalist Volume 2 ; 2 >
       au < doNotProcess ; 2004 ; Southeastern Naturalist Volume 3 ; 3 >
       au < ready ; 2005 ; Southeastern Naturalist Volume 4 ; 4 >
       au < ready ; 2006 ; Southeastern Naturalist Volume 5 ; 5 >
