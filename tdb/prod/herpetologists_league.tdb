@@ -27,17 +27,17 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = herp
       
-      au < testing ; 2002 ; Herpetologica Volume 58 ; 58 >
-      au < testing ; 2003 ; Herpetologica Volume 59 ; 59 >
-      au < testing ; 2004 ; Herpetologica Volume 60 ; 60 >
+      au < ready ; 2002 ; Herpetologica Volume 58 ; 58 >
+      au < ready ; 2003 ; Herpetologica Volume 59 ; 59 >
+      au < ready ; 2004 ; Herpetologica Volume 60 ; 60 >
       au < doNotProcess ; 2005 ; Herpetologica Volume 61 ; 61 >
       au < ready ; 2006 ; Herpetologica Volume 62 ; 62 >
-      au < testing ; 2007 ; Herpetologica Volume 63 ; 63 >
+      au < ready ; 2007 ; Herpetologica Volume 63 ; 63 >
       au < ready ; 2008 ; Herpetologica Volume 64 ; 64 >
       au < ready ; 2009 ; Herpetologica Volume 65 ; 65 >
-      au < testing ; 2010 ; Herpetologica Volume 66 ; 66 >
-      au < testing ; 2011 ; Herpetologica Volume 67 ; 67 >
-      au < testing ; 2012 ; Herpetologica Volume 68 ; 68 >
+      au < ready ; 2010 ; Herpetologica Volume 66 ; 66 >
+      au < ready ; 2011 ; Herpetologica Volume 67 ; 67 >
+      au < ready ; 2012 ; Herpetologica Volume 68 ; 68 >
       au < manifest ; 2013 ; Herpetologica Volume 69 ; 69 >
  
       }
@@ -73,14 +73,14 @@
       au < ready ; 2002 ; Herpetological Monographs Volume 16 ; 16 >
       au < ready ; 2003 ; Herpetological Monographs Volume 17 ; 17 >
       au < ready ; 2004 ; Herpetological Monographs Volume 18 ; 18 >
-      au < testing ; 2005 ; Herpetological Monographs Volume 19 ; 19 >
+      au < ready ; 2005 ; Herpetological Monographs Volume 19 ; 19 >
       au < ready ; 2006 ; Herpetological Monographs Volume 20 ; 20 >
       au < ready ; 2007 ; Herpetological Monographs Volume 21 ; 21 >
       au < doesNotExist ; 2008 ; Herpetological Monographs Volume 22 ; 22 > 
-      au < testing ; 2009 ; Herpetological Monographs Volume 23 ; 23 >
+      au < ready ; 2009 ; Herpetological Monographs Volume 23 ; 23 >
       au < ready ; 2010 ; Herpetological Monographs Volume 24 ; 24 >
       au < ready ; 2011 ; Herpetological Monographs Volume 25 ; 25 >
-      au < manifest ; 2012 ; Herpetological Monographs Volume 26 ; 26 >
+      au < testing ; 2012 ; Herpetological Monographs Volume 26 ; 26 >
       au < expected ; 2013 ; Herpetological Monographs Volume 27 ; 27 >
 
     }
