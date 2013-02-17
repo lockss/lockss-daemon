@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledContentHasher.java,v 1.1.2.1 2013-02-17 00:19:13 dshr Exp $
+ * $Id: TestSampledContentHasher.java,v 1.1.2.2 2013-02-17 05:47:11 dshr Exp $
  */
 
 /*
@@ -157,52 +157,38 @@ public class TestSampledContentHasher extends LockssTestCase {
     }
   }
 
-  public void testHashMultipleFilesMod1()
-      throws IOException, FileNotFoundException {
-    CachedUrlSet cus = makeFakeCachedUrlSet(10);
-    byte[] expectedBytes = getExpectedCusBytes(cus, 1);
+  private void doTestMultipleFilesWithMod(int numFiles, int mod)
+   throws IOException, FileNotFoundException {
+       CachedUrlSet cus = makeFakeCachedUrlSet(numFiles);
+    byte[] expectedBytes = getExpectedCusBytes(cus, mod);
+    log.debug3("Expect " + expectedBytes.length + " bytes from " +
+	       numFiles + " files mod " + mod);
     MockMessageDigest dig2 = new MockMessageDigest();
     SampledContentHasher hasher = new SampledContentHasher(cus, dig,
-							   testNonce, 1,
+							   testNonce, mod,
 							   dig2);
 
     hashAndCompare(expectedBytes, hasher, expectedBytes.length);
+  }
+
+  public void testHashMultipleFilesMod1()
+      throws IOException, FileNotFoundException {
+    doTestMultipleFilesWithMod(10, 1);
   }
 
   public void testHashMultipleFilesMod2()
       throws IOException, FileNotFoundException {
-    CachedUrlSet cus = makeFakeCachedUrlSet(10);
-    byte[] expectedBytes = getExpectedCusBytes(cus, 2);
-    MockMessageDigest dig2 = new MockMessageDigest();
-    SampledContentHasher hasher = new SampledContentHasher(cus, dig,
-							   testNonce, 2,
-							   dig2);
-
-    hashAndCompare(expectedBytes, hasher, expectedBytes.length);
+    doTestMultipleFilesWithMod(10, 2);
   }
 
   public void testHashSixtyFilesMod1()
       throws IOException, FileNotFoundException {
-    CachedUrlSet cus = makeFakeCachedUrlSet(60);
-    byte[] expectedBytes = getExpectedCusBytes(cus, 1);
-    MockMessageDigest dig2 = new MockMessageDigest();
-    SampledContentHasher hasher = new SampledContentHasher(cus, dig,
-							   testNonce, 1,
-							   dig2);
-
-    hashAndCompare(expectedBytes, hasher, expectedBytes.length);
+    doTestMultipleFilesWithMod(60, 1);
   }
 
   public void testHashSixtyFilesMod5()
       throws IOException, FileNotFoundException {
-    CachedUrlSet cus = makeFakeCachedUrlSet(60);
-    byte[] expectedBytes = getExpectedCusBytes(cus, 5);
-    MockMessageDigest dig2 = new MockMessageDigest();
-    SampledContentHasher hasher = new SampledContentHasher(cus, dig,
-							   testNonce, 5,
-							   dig2);
-
-    hashAndCompare(expectedBytes, hasher, expectedBytes.length);
+    doTestMultipleFilesWithMod(60, 5);
   }
 
   private MockArchivalUnit newMockArchivalUnit(String url) {
@@ -241,11 +227,16 @@ public class TestSampledContentHasher extends LockssTestCase {
 
     while (it.hasNext()) {
       CachedUrl cu = cachedUrlSetNodeToCachedUrl((CachedUrlSetNode) it.next());
-      byte[] hash = cu.getUrl().getBytes();
-      if (cu.hasContent() && ((((int)hash[0] + 128) % mod) == 0)) {
+      String urlName = cu.getUrl();
+      byte[] hash = (testNonce + urlName).getBytes();
+      if (mod > 0 && cu.hasContent() &&
+	  ((((int)hash[hash.length-1] + 128) % mod) == 0)) {
+	log.debug3(urlName + " is in sample");
 	byte[] arr = getExpectedCuBytes(cu);
 	totalSize += arr.length;
 	byteArrays.add(arr);
+      } else {
+	log.debug3(urlName + " isn't in sample");
       }
     }
     byte[] returnArr = new byte[totalSize];

@@ -1,5 +1,5 @@
 /*
- * $Id: SampledContentHasher.java,v 1.1.2.1 2013-02-17 00:19:13 dshr Exp $
+ * $Id: SampledContentHasher.java,v 1.1.2.2 2013-02-17 05:47:11 dshr Exp $
  */
 
 /*
@@ -118,8 +118,10 @@ public class SampledContentHasher extends GenericContentHasher {
       sampleHasher.update(pollerNonce);
       sampleHasher.update(urlName.getBytes());
       byte[] hash = sampleHasher.digest();
-      // Compare low byte with mod
-      ret = ((((int)hash[0] + 128) % mod) == 0);
+      // Compare high byte with mod (simplifies test)
+      ret = ((((int)hash[hash.length-1] + 128) % mod) == 0);
+      log.debug3(urlName + " byte: " + hash[hash.length-1] + " " +
+		 (ret ? "is" : "isn't") + " in sample");
     }
     return ret;
   }
