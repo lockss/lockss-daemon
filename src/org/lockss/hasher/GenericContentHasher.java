@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.26 2009-04-07 04:51:24 tlipkis Exp $
+ * $Id: GenericContentHasher.java,v 1.26.60.1 2013-02-17 00:19:13 dshr Exp $
  */
 
 /*
@@ -43,14 +43,14 @@ import org.lockss.plugin.*;
  * General class to handle content hashing
  */
 public class GenericContentHasher extends GenericHasher {
-  private static final int HASHING_NAME = 1;
-  private static final int HASHING_CONTENT = 2;
+  protected static final int HASHING_NAME = 1;
+  protected static final int HASHING_CONTENT = 2;
 
-  private static final byte NO_CONTENT = -1;
+  protected static final byte NO_CONTENT = -1;
 
-  private int hashState = HASHING_NAME;
+  protected int hashState = HASHING_NAME;
 
-  private byte[] nameBytes = null;
+  protected byte[] nameBytes = null;
   private byte[] contentBytes = null;
   private int nameIdx = -1;
 
@@ -91,7 +91,7 @@ public class GenericContentHasher extends GenericHasher {
     return totalHashed;
   }
 
-  private int hashName(int numBytes) {
+  protected int hashName(int numBytes) {
     int totalHashed = 0;
     if (isTrace) log.debug3("Hashing name");
     if (nameBytes == null) {
