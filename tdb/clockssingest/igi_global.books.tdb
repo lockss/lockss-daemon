@@ -7,16 +7,19 @@
   >
 
   plugin = needs.plugin
-  param[base_url] = http://www.igi-global.com/
-  implicit < status ; status2 ; year ; name ; param[volume] >
-  
- {
-  
-  
-    title < 
-      name = Placeholder
-      >
+  param[base_url] = http://www.igi-global.com/gateway/book/
 
-  }   
+  {
+	implicit < status ; status2 ; eisbn ; isbn10 ; isbn13 ; doi ; year ; param[volume] ; name ; author >
+  
+    {
+        title <
+        name = Business Technologies ;
+        type = bookSeries
+        >
+    
+    au < exists ; exists ; 9781931777995 ; 1591402999 ; 9781591402992 ; 10.4018/978-1-59140-299-2 ; 2004 ; 1 ; 3D Modeling and Animation: Synthesis and Analysis Techniques for the Human Body ; Nikos Sarris and Michael G. Strintzis >
+    }
+   }
 }   
   
