@@ -269,7 +269,7 @@
       name = The Carlyle Letters Online ;
       issn = 1532-0928 ;
       eissn = 1940-1795 ;
-      issnl = 0002-9831
+      issnl = 1532-0928
     >
     
     {
@@ -278,41 +278,41 @@
       param[base_url] = http://carlyleletters.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; manifest ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1824-1825 ; The Carlyle Letters Online Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1826-1828 ; The Carlyle Letters Online Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1829-1831 ; The Carlyle Letters Online Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1831-1833 ; The Carlyle Letters Online Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1833-1834 ; The Carlyle Letters Online Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1835-1836 ; The Carlyle Letters Online Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 1836-1837 ; The Carlyle Letters Online Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 1838 ; The Carlyle Letters Online Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 1839 ; The Carlyle Letters Online Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 1840 ; The Carlyle Letters Online Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 1841 ; The Carlyle Letters Online Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 1842 ; The Carlyle Letters Online Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 1842 ; The Carlyle Letters Online Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; manifest ; 1843 ; The Carlyle Letters Online Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 1843-1844 ; The Carlyle Letters Online Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 1844 ; The Carlyle Letters Online Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; manifest ; 1845 ; The Carlyle Letters Online Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; manifest ; 1845-1846 ; The Carlyle Letters Online Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; manifest ; 1846-1847 ; The Carlyle Letters Online Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; manifest ; 1847-1848 ; The Carlyle Letters Online Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; manifest ; 1848-1849 ; The Carlyle Letters Online Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; manifest ; 1849 ; The Carlyle Letters Online Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; manifest ; 1850 ; The Carlyle Letters Online Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; manifest ; 1851 ; The Carlyle Letters Online Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; manifest ; 1852 ; The Carlyle Letters Online Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; manifest ; 1853 ; The Carlyle Letters Online Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; manifest ; 1854-1855 ; The Carlyle Letters Online Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; manifest ; 1855 ; The Carlyle Letters Online Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; manifest ; 1856 ; The Carlyle Letters Online Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; manifest ; 1856-1857 ; The Carlyle Letters Online Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; manifest ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; manifest ; 1858 ; The Carlyle Letters Online Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; manifest ; 1859 ; The Carlyle Letters Online Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; testing ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 1824-1825 ; The Carlyle Letters Online Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 1826-1828 ; The Carlyle Letters Online Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1829-1831 ; The Carlyle Letters Online Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 1831-1833 ; The Carlyle Letters Online Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 1833-1834 ; The Carlyle Letters Online Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 1835-1836 ; The Carlyle Letters Online Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 1836-1837 ; The Carlyle Letters Online Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 1838 ; The Carlyle Letters Online Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 1839 ; The Carlyle Letters Online Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; testing ; 1840 ; The Carlyle Letters Online Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; testing ; 1841 ; The Carlyle Letters Online Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; testing ; 1842 ; The Carlyle Letters Online Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; testing ; 1842 ; The Carlyle Letters Online Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; testing ; 1843 ; The Carlyle Letters Online Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; testing ; 1843-1844 ; The Carlyle Letters Online Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; testing ; 1844 ; The Carlyle Letters Online Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; testing ; 1845 ; The Carlyle Letters Online Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; testing ; 1845-1846 ; The Carlyle Letters Online Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; testing ; 1846-1847 ; The Carlyle Letters Online Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; testing ; 1847-1848 ; The Carlyle Letters Online Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; testing ; 1848-1849 ; The Carlyle Letters Online Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; testing ; 1849 ; The Carlyle Letters Online Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; testing ; 1850 ; The Carlyle Letters Online Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; testing ; 1851 ; The Carlyle Letters Online Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; testing ; 1852 ; The Carlyle Letters Online Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; testing ; 1853 ; The Carlyle Letters Online Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; testing ; 1854-1855 ; The Carlyle Letters Online Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; testing ; 1855 ; The Carlyle Letters Online Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; testing ; 1856 ; The Carlyle Letters Online Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; testing ; 1856-1857 ; The Carlyle Letters Online Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; testing ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; testing ; 1858 ; The Carlyle Letters Online Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; testing ; 1859 ; The Carlyle Letters Online Volume 35 ; 35 >
  
    }
   
@@ -388,18 +388,18 @@
       param[base_url] = http://complit.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Comparative Literature Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Comparative Literature Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Comparative Literature Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Comparative Literature Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Comparative Literature Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; manifest ; 2005 ; Comparative Literature Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; manifest ; 2006 ; Comparative Literature Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; manifest ; 2007 ; Comparative Literature Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; Comparative Literature Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; Comparative Literature Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Comparative Literature Volume 62 ; 62 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Comparative Literature Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; Comparative Literature Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Comparative Literature Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Comparative Literature Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Comparative Literature Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Comparative Literature Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; testing ; 2005 ; Comparative Literature Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; testing ; 2006 ; Comparative Literature Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; testing ; 2007 ; Comparative Literature Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; testing ; 2008 ; Comparative Literature Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; testing ; 2009 ; Comparative Literature Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; testing ; 2010 ; Comparative Literature Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Comparative Literature Volume 63 ; 63 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Comparative Literature Volume 64 ; 64 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Comparative Literature Volume 65 ; 65 >
 
