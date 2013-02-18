@@ -18,24 +18,29 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = brvo
       
-      au < manifest ; 2004 ; Breviora Volume 512 ; 512 >
-      au < manifest ; 2008 ; Breviora Volume 513 ; 513 > 
-      au < manifest ; 2008 ; Breviora Volume 514 ; 514 >
-      au < manifest ; 2009 ; Breviora Volume 515 ; 515 >
-      au < manifest ; 2009 ; Breviora Volume 516 ; 516 >
-      au < manifest ; 2009 ; Breviora Volume 517 ; 517 >
-      au < manifest ; 2009 ; Breviora Volume 518 ; 518 >
-      au < manifest ; 2010 ; Breviora Volume 519 ; 519 >
-      au < manifest ; 2010 ; Breviora Volume 520 ; 520 >     
-      au < manifest ; 2011 ; Breviora Volume 521 ; 521 >
-      au < manifest ; 2011 ; Breviora Volume 522 ; 522 >
-      au < manifest ; 2011 ; Breviora Volume 523 ; 523 >
-      au < manifest ; 2011 ; Breviora Volume 524 ; 524 >
-      au < manifest ; 2011 ; Breviora Volume 525 ; 525 >
-      au < manifest ; 2011 ; Breviora Volume 526 ; 526 >
-      au < manifest ; 2011 ; Breviora Volume 527 ; 527 >
-      au < manifest ; 2011 ; Breviora Volume 528 ; 528 >
-      au < manifest ; 2012 ; Breviora Volume 529 ; 529 >
+      au < testing ; 2004 ; Breviora Volume 512 ; 512 >
+      au < testing ; 2008 ; Breviora Volume 513 ; 513 > 
+      au < testing ; 2008 ; Breviora Volume 514 ; 514 >
+      au < testing ; 2009 ; Breviora Volume 515 ; 515 >
+      au < testing ; 2009 ; Breviora Volume 516 ; 516 >
+      au < testing ; 2009 ; Breviora Volume 517 ; 517 >
+      au < testing ; 2009 ; Breviora Volume 518 ; 518 >
+      au < testing ; 2010 ; Breviora Volume 519 ; 519 >
+      au < testing ; 2010 ; Breviora Volume 520 ; 520 >     
+      au < testing ; 2011 ; Breviora Volume 521 ; 521 >
+      au < testing ; 2011 ; Breviora Volume 522 ; 522 >
+      au < testing ; 2011 ; Breviora Volume 523 ; 523 >
+      au < testing ; 2011 ; Breviora Volume 524 ; 524 >
+      au < testing ; 2011 ; Breviora Volume 525 ; 525 >
+      au < testing ; 2011 ; Breviora Volume 526 ; 526 >
+      au < testing ; 2011 ; Breviora Volume 527 ; 527 >
+      au < testing ; 2011 ; Breviora Volume 528 ; 528 >
+      au < testing ; 2012 ; Breviora Volume 529 ; 529 >
+      au < exists ; 2012 ; Breviora Volume 530 ; 530 >     
+      au < exists ; 2012 ; Breviora Volume 531 ; 531 >
+      au < exists ; 2012 ; Breviora Volume 532 ; 532 >
+      au < exists ; 2012 ; Breviora Volume 533 ; 533 >
+      au < expected ; 2013 ; Breviora Volume 534 ; 534 >
       
       }
 
@@ -56,9 +61,10 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = harv
       
-      au < manifest ; 2003-2007 ; Bulletin of the Museum of Comparative Zoology Volume 158 ; 158 >
-      au < manifest ; 2007-2009 ; Bulletin of the Museum of Comparative Zoology Volume 159 ; 159 > 
-      au < manifest ; 2010-2011 ; Bulletin of the Museum of Comparative Zoology Volume 160 ; 160 >
+      au < testing ; 2003-2007 ; Bulletin of the Museum of Comparative Zoology Volume 158 ; 158 >
+      au < testing ; 2007-2009 ; Bulletin of the Museum of Comparative Zoology Volume 159 ; 159 > 
+      au < testing ; 2010-2012 ; Bulletin of the Museum of Comparative Zoology Volume 160 ; 160 >
+      au < expected ; 2013-2015 ; Bulletin of the Museum of Comparative Zoology Volume 161 ; 161 >
 
     }
 
