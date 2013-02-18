@@ -19,14 +19,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jche
       
-      au < testing ; 2005 ; Current Herpetology Volume 24 ; 24 >
-      au < testing ; 2006 ; Current Herpetology Volume 25 ; 25 >
-      au < testing ; 2007 ; Current Herpetology Volume 26 ; 26 >
-      au < testing ; 2008 ; Current Herpetology Volume 27 ; 27 >
-      au < testing ; 2009 ; Current Herpetology Volume 28 ; 28 >
-      au < testing ; 2010 ; Current Herpetology Volume 29 ; 29 >
-      au < testing ; 2011 ; Current Herpetology Volume 30 ; 30 >
-      au < testing ; 2012 ; Current Herpetology Volume 31 ; 31 >
+      au < ready ; 2005 ; Current Herpetology Volume 24 ; 24 >
+      au < ready ; 2006 ; Current Herpetology Volume 25 ; 25 >
+      au < ready ; 2007 ; Current Herpetology Volume 26 ; 26 >
+      au < ready ; 2008 ; Current Herpetology Volume 27 ; 27 >
+      au < ready ; 2009 ; Current Herpetology Volume 28 ; 28 >
+      au < ready ; 2010 ; Current Herpetology Volume 29 ; 29 >
+      au < ready ; 2011 ; Current Herpetology Volume 30 ; 30 >
+      au < ready ; 2012 ; Current Herpetology Volume 31 ; 31 >
       au < expected ; 2013 ; Current Herpetology Volume 32 ; 32 >
       
     }
