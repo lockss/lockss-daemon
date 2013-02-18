@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledContentHasher.java,v 1.1.2.2 2013-02-17 05:47:11 dshr Exp $
+ * $Id: TestSampledContentHasher.java,v 1.1.2.3 2013-02-18 17:48:25 dshr Exp $
  */
 
 /*
@@ -191,6 +191,8 @@ public class TestSampledContentHasher extends LockssTestCase {
     doTestMultipleFilesWithMod(60, 5);
   }
 
+  // XXX DSHR - need tests with substance checking enabled
+
   private MockArchivalUnit newMockArchivalUnit(String url) {
     MockArchivalUnit mau = new MockArchivalUnit(new MockPlugin(), url);
     MockCachedUrlSet cus = new MockCachedUrlSet(url);
@@ -311,6 +313,7 @@ public class TestSampledContentHasher extends LockssTestCase {
     while (numBytesHashed < length) {
       assertFalse(hasher.finished());
       numBytesHashed += hasher.hashStep(stepSize);
+      log.debug3(numBytesHashed + " bytes hashed so far out of " + length);
     }
     assertEquals(0, hasher.hashStep(1));
     assertTrue(hasher.finished());

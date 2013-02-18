@@ -1,5 +1,5 @@
 /*
- * $Id: SampledContentHasher.java,v 1.1.2.2 2013-02-17 05:47:11 dshr Exp $
+ * $Id: SampledContentHasher.java,v 1.1.2.3 2013-02-18 17:48:24 dshr Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.security.*;
 
 import org.lockss.util.*;
 import org.lockss.config.*;
+import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 /**
@@ -46,10 +47,15 @@ import org.lockss.plugin.base.*;
  * part of a Proof of Possession poll.
  */
 public class SampledContentHasher extends GenericContentHasher {
+  private static final String PREFIX = Configuration.PREFIX + "hasher.";
+  private static final String PARAM_POP_POLL_SUBSTANCE_CHECK =
+    PREFIX + "enablePopPollSubstanceCheck";
+  private static final boolean DEFAULT_POP_POLL_SUBSTANCE_CHECK = false;
   protected int mod;
   protected byte[] pollerNonce;
   protected MessageDigest sampleHasher = null;
   protected String alg = null;
+  protected SubstanceChecker subCheck = null;
 
   public SampledContentHasher(CachedUrlSet cus,
 			      MessageDigest digest,
@@ -67,6 +73,12 @@ public class SampledContentHasher extends GenericContentHasher {
       log.error("No such hash algorithm: " + alg);
       throw new IllegalArgumentException("No such hash algorithm: " + alg);
     }
+    boolean enableSubCheck =
+      CurrentConfig.getBooleanParam(PARAM_POP_POLL_SUBSTANCE_CHECK,
+				    DEFAULT_POP_POLL_SUBSTANCE_CHECK);
+    if (enableSubCheck) {
+      subCheck = new SubstanceChecker(cus.getArchivalUnit());
+    }
   }
 
   public SampledContentHasher(CachedUrlSet cus,
@@ -82,6 +94,12 @@ public class SampledContentHasher extends GenericContentHasher {
       throw new IllegalArgumentException("new SampledContentHashher()");
     }
     alg = sampleHasher.getAlgorithm();
+    boolean enableSubCheck =
+      CurrentConfig.getBooleanParam(PARAM_POP_POLL_SUBSTANCE_CHECK,
+				    DEFAULT_POP_POLL_SUBSTANCE_CHECK);
+    if (enableSubCheck) {
+      subCheck = new SubstanceChecker(cus.getArchivalUnit());
+    }
   }
 
   public String typeString() {
@@ -110,11 +128,10 @@ public class SampledContentHasher extends GenericContentHasher {
   private boolean isInSample() {
     boolean ret = false;
     CachedUrl cu = getCurrentCu();
-    log.debug3("url: " + cu.getUrl() + " mod: " + mod + " alg: " + alg);
-    // XXX Only substantial URLs should be in the sample
-    if (mod > 0 && cu.hasContent() /* && cu.hasSubstance() */) {
+    String urlName = cu.getUrl();
+    log.debug3("url: " + urlName + " mod: " + mod + " alg: " + alg);
+    if (mod > 0 && cu.hasContent() && hasSubstance(urlName)) {
       // First hash the nonce and the current URL's name
-      String urlName = cu.getUrl();
       sampleHasher.update(pollerNonce);
       sampleHasher.update(urlName.getBytes());
       byte[] hash = sampleHasher.digest();
@@ -122,6 +139,14 @@ public class SampledContentHasher extends GenericContentHasher {
       ret = ((((int)hash[hash.length-1] + 128) % mod) == 0);
       log.debug3(urlName + " byte: " + hash[hash.length-1] + " " +
 		 (ret ? "is" : "isn't") + " in sample");
+    }
+    return ret;
+  }
+
+  private boolean hasSubstance(String url) {
+    boolean ret = true;
+    if (subCheck != null) {
+      ret = subCheck.isSubstanceUrl(url);
     }
     return ret;
   }

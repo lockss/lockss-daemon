@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.24 2012-08-03 19:08:12 barry409 Exp $
+ * $Id: VoterUserData.java,v 1.24.14.1 2013-02-18 17:48:24 dshr Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public class VoterUserData
   private byte[] remainingEffortProof;
   private byte[] repairEffortProof;
   private byte[] receiptEffortProof;
+  private int modulus;
   private boolean hashingDone = false;
   private boolean voteRequested = false;
   private long createTime;
@@ -95,6 +96,7 @@ public class VoterUserData
 
   public VoterUserData(PollSpec spec, V3Voter voter, PeerIdentity pollerId,
                        String pollKey, long duration, String hashAlgorithm,
+		       int modulus,
                        byte[] pollerNonce, byte[] voterNonce,
                        byte[] introEffortProof, File messageDir) throws IOException {
     log.debug3("Creating V3 Voter User Data for poll " + pollKey + ", " + spec);
@@ -110,6 +112,7 @@ public class VoterUserData
     this.duration = duration;
     this.deadline = Deadline.in(duration).getExpirationTime();
     this.hashAlgorithm = hashAlgorithm;
+    this.modulus = modulus;
     this.voterNonce = voterNonce;
     this.pollerNonce = pollerNonce;
     this.introEffortProof = introEffortProof;
@@ -184,6 +187,14 @@ public class VoterUserData
 
   public void setHashAlgorithm(String hashAlgorithm) {
     this.hashAlgorithm = hashAlgorithm;
+  }
+
+  public int getModulus() {
+    return modulus;
+  }
+
+  public void setModulus(int mod) {
+    modulus = mod;
   }
 
   public byte[] getIntroEffortProof() {
@@ -419,6 +430,7 @@ public class VoterUserData
   public V3LcapMessage makeMessage(int opcode) {
     return new V3LcapMessage(getAuId(), getPollKey(), getPluginVersion(),
                              getPollerNonce(), getVoterNonce(), opcode,
+			     getModulus(),
                              getDeadline(), getPollerId(), messageDir,
                              voter.getLockssDaemon());
   }
