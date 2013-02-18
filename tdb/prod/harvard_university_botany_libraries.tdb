@@ -19,14 +19,15 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = hpib
       
-      au < manifest ; 2005 ; Harvard Papers in Botany Volume 10 ; 10 >
-      au < manifest ; 2006-2007 ; Harvard Papers in Botany Volume 11 ; 11 >
-      au < manifest ; 2007 ; Harvard Papers in Botany Volume 12 ; 12 >
-      au < manifest ; 2008 ; Harvard Papers in Botany Volume 13 ; 13 >
-      au < manifest ; 2009 ; Harvard Papers in Botany Volume 14 ; 14 >
-      au < manifest ; 2010 ; Harvard Papers in Botany Volume 15 ; 15 >
-      au < manifest ; 2011 ; Harvard Papers in Botany Volume 16 ; 16 >
-      au < manifest ; 2012 ; Harvard Papers in Botany Volume 17 ; 17 >
+      au < testing ; 2005 ; Harvard Papers in Botany Volume 10 ; 10 >
+      au < testing ; 2006-2007 ; Harvard Papers in Botany Volume 11 ; 11 >
+      au < testing ; 2007 ; Harvard Papers in Botany Volume 12 ; 12 >
+      au < testing ; 2008 ; Harvard Papers in Botany Volume 13 ; 13 >
+      au < testing ; 2009 ; Harvard Papers in Botany Volume 14 ; 14 >
+      au < testing ; 2010 ; Harvard Papers in Botany Volume 15 ; 15 >
+      au < testing ; 2011 ; Harvard Papers in Botany Volume 16 ; 16 >
+      au < testing ; 2012 ; Harvard Papers in Botany Volume 17 ; 17 >
+      au < expected ; 2013 ; Harvard Papers in Botany Volume 18 ; 18 >
 
     }
 
