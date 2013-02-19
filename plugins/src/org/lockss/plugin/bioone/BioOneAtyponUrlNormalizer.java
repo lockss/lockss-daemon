@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneAtyponUrlNormalizer.java,v 1.3 2012-01-13 01:19:02 thib_gc Exp $
+ * $Id: BioOneAtyponUrlNormalizer.java,v 1.4 2013-02-19 18:53:32 janicecheng Exp $
  */
 
 /*
@@ -54,6 +54,13 @@ public class BioOneAtyponUrlNormalizer implements UrlNormalizer {
       for (String ending : endings) {
         url = StringUtils.chomp(url, ending);
       }
+    }
+
+    // Normalize ending
+    // example: http://www.bioone.org/toc/brvo/512?seq=512
+    ind = url.indexOf("?seq=");
+    if (ind >= 0) {
+    	url = url.substring(0, ind);
     }
 
     // Normalize double-slash
