@@ -1,5 +1,5 @@
 /*
- * $Id: SampledContentHasher.java,v 1.1.2.3 2013-02-18 17:48:24 dshr Exp $
+ * $Id: SampledContentHasher.java,v 1.1.2.4 2013-02-19 23:45:33 dshr Exp $
  */
 
 /*
@@ -47,10 +47,6 @@ import org.lockss.plugin.base.*;
  * part of a Proof of Possession poll.
  */
 public class SampledContentHasher extends GenericContentHasher {
-  private static final String PREFIX = Configuration.PREFIX + "hasher.";
-  private static final String PARAM_POP_POLL_SUBSTANCE_CHECK =
-    PREFIX + "enablePopPollSubstanceCheck";
-  private static final boolean DEFAULT_POP_POLL_SUBSTANCE_CHECK = false;
   protected int mod;
   protected byte[] pollerNonce;
   protected MessageDigest sampleHasher = null;
@@ -91,7 +87,7 @@ public class SampledContentHasher extends GenericContentHasher {
     this.mod = mod;
     this.sampleHasher = sampleHasher;
     if (pollerNonce == null || sampleHasher == null || mod <= 0) {
-      throw new IllegalArgumentException("new SampledContentHashher()");
+      throw new IllegalArgumentException("new SampledContentHasher()");
     }
     alg = sampleHasher.getAlgorithm();
     boolean enableSubCheck =

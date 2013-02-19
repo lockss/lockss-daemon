@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.23 2010-08-11 02:58:58 tlipkis Exp $
+ * $Id: GenericHasher.java,v 1.23.38.1 2013-02-19 23:45:32 dshr Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.security.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
+import org.lockss.config.*;
 import org.lockss.crawler.CrawlManager;
 import org.lockss.plugin.*;
 
@@ -46,6 +47,10 @@ import org.lockss.plugin.*;
  */
 public abstract class GenericHasher implements CachedUrlSetHasher {
   protected static Logger log = Logger.getLogger("GenericHasher");
+  protected static final String PREFIX = Configuration.PREFIX + "hasher.";
+  protected static final String PARAM_POP_POLL_SUBSTANCE_CHECK =
+    PREFIX + "enablePopPollSubstanceCheck";
+  protected static final boolean DEFAULT_POP_POLL_SUBSTANCE_CHECK = false;
 
   protected CachedUrlSet cus = null;
   protected ArchivalUnit au = null;

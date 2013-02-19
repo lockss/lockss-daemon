@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.20 2012-07-02 16:21:01 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.20.16.1 2013-02-19 23:45:32 dshr Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class BlockHasher extends GenericHasher {
     this(cus, -1, digests, initByteArrays, cb);
   }
   
-  /** Constuctor that allows specifying number of CU versions to hash */
+  /** Constructor that allows specifying number of CU versions to hash */
   public BlockHasher(CachedUrlSet cus,
 		     int maxVersions,
 		     MessageDigest[] digests,
