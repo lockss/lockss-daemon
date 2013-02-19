@@ -1,5 +1,5 @@
 /*
- * $Id: TestCopernicusHtmlFilterFactory.java,v 1.4 2012-12-18 21:12:17 alexandraohlson Exp $
+ * $Id: TestCopernicusHtmlFilterFactory.java,v 1.5 2013-02-19 18:12:37 alexandraohlson Exp $
  */
 /*
 
@@ -181,7 +181,15 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
           "</table>" +
           " </body>" +
           "</html>";
-
+  
+  private static final String noSpanStyleHtml =
+      "dynamics, but are also important for the validation of ozone measurements.</span>" +
+          "<span class=\"pb_toc_link\"><br /><br /><a href=\"/14/1111/1996/angeo-14-1111-1996.pdf\" >Full Article</a>" +
+          "(PDF, 639 KB)&nbsp;&nbsp;&nbsp;<br /><br /></div></div></div>";
+  private static final String spanStyleHtml =
+      "dynamics, but are also important for the validation of ozone measurements.</span>" +
+          "<span class=\"pb_toc_link\"><br /><br />&nbsp;<span style=\"white-space:nowrap;\"><a href=\"/14/1111/1996/angeo-14-1111-1996.pdf\" >Full Article</a>" +
+          "(PDF, 639 KB)</span>&nbsp; &nbsp;<br /><br /></div></div></div>"; 
   
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -219,6 +227,14 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpacesV1),
         ENC);
     inB = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpacesV2),
+        ENC);
+    assertEquals(StringUtil.fromInputStream(inA),
+        StringUtil.fromInputStream(inB));
+    
+    //serving up slightly different files 
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(noSpanStyleHtml),
+        ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(spanStyleHtml),
         ENC);
     assertEquals(StringUtil.fromInputStream(inA),
         StringUtil.fromInputStream(inB));

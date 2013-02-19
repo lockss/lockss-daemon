@@ -1,5 +1,5 @@
 /*
-* $Id: CopernicusHtmlFilterFactory.java,v 1.5 2012-12-18 21:12:17 alexandraohlson Exp $
+* $Id: CopernicusHtmlFilterFactory.java,v 1.6 2013-02-19 18:12:37 alexandraohlson Exp $
 */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.copernicus;
 
 import java.io.*;
 import java.util.List;
+import java.util.Vector;
 
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
@@ -49,6 +50,7 @@ import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.hindawi.HindawiPublishingCorporationHtmlFilterFactory;
 import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
@@ -63,7 +65,7 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
     public FilteringException(String msg) { super(msg); }
     public FilteringException(Throwable cause) { super(cause); }
   }
-  
+
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -85,18 +87,54 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "page_navigation_left"),    
         
     };    
+    HtmlTransform xform = new HtmlTransform() {
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              String tagName = tag.getTagName().toLowerCase();
+              // addition of new <span style="white-space;nowrap"> but we need the content
+              if ( ("span".equals(tagName))  && (tag.getAttribute("style") != null) ){
+                Tag endTag = tag.getEndTag();
+                // we need the contents in place, so rename the tags for subsequent text based removal
+                tag.setAttributesEx(new Vector()); //empty attribs Vector. Even clears out tag name
+                tag.setTagName("REMOVE");
+                endTag.setTagName("REMOVE");
+              }
+            }
+          });
+        }
+        catch (Exception exc) {
+          log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+        }
+        return nodeList;
+      }
+    };
     InputStream htmlFilter = new HtmlFilterInputStream(in,
         encoding,
-        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters))));
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
 
     Reader reader = FilterUtil.getReader(htmlFilter, encoding);
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader,
         ListUtil.list(   
             // some comments contain a timestamp
-            new TagPair("<!--", "-->")
+            new TagPair("<!--", "-->"),
+            // <REMOVE> tags were created in place of specific span tags that needed removal
+            new TagPair("<REMOVE", ">")
             ));   
-    // Use of "&nbsp;" or " " inconsistent over time
-    Reader stringFilter = new StringFilter(tagFilter, "&nbsp;", " ");
+    // so some replace on strings
+    String[][] findAndReplace = new String[][] {
+        // use of &nbsp; or " " inconsistent over time
+        {"&nbsp;", " "}, 
+        // out of sync - some versions have extraneous single spaces, so remove between tags
+        {"> <", "><"},
+    };
+    Reader stringFilter = StringFilter.makeNestedFilter(tagFilter,
+                                                          findAndReplace,
+                                                          false);
+
     return new ReaderInputStream(new WhiteSpaceFilter(stringFilter));   
     
   }
