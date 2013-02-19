@@ -1,5 +1,5 @@
 /*
-* $Id: CopernicusHtmlFilterFactory.java,v 1.6 2013-02-19 18:12:37 alexandraohlson Exp $
+* $Id: CopernicusHtmlFilterFactory.java,v 1.7 2013-02-19 18:40:18 alexandraohlson Exp $
 */
 
 /*
@@ -50,7 +50,6 @@ import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.hindawi.HindawiPublishingCorporationHtmlFilterFactory;
 import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
