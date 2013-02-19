@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioOneAtyponUrlNormalizer.java,v 1.1 2012-01-13 01:19:18 thib_gc Exp $
+ * $Id: TestBioOneAtyponUrlNormalizer.java,v 1.2 2013-02-19 18:54:00 janicecheng Exp $
  */
 
 /*
@@ -52,6 +52,8 @@ public class TestBioOneAtyponUrlNormalizer extends LockssTestCase {
                  normalizer.normalizeUrl("http://www.example.com/foo?cookieSet=1", null));
     assertEquals("http://www.example.com/foo",
                  normalizer.normalizeUrl("http://www.example.com/foo?prevSearch=", null));
+    assertEquals("http://www.example.com/foo",
+            normalizer.normalizeUrl("http://www.example.com/foo?seq=512", null));
     
     // Remove the first double slash (other than that of http:// or similar)
     assertEquals("http://www.example.com/foo",
