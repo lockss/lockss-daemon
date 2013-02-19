@@ -3691,7 +3691,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://cjcl.oxfordjournals.org/ 
 
-    au < expected ; 2013 ; Chinese Journal of Comparative Law Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; Chinese Journal of Comparative Law Volume 1 ; 1 ; >
 
     }
 
