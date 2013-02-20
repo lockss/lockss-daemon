@@ -1004,7 +1004,8 @@
     param[journal_id] = gim
     comment[notReady] = no links on 2011 manifest page
 
-    au < exists ; exists ; 1998-1999 ; Genetics in Medicine Volume 1 ; 1998-1999 ; 1 >
+    au < exists ; exists ; 1998 ; Genetics in Medicine Volume 1 (1998) ; 1998 ; 1 >
+    au < exists ; exists ; 1999 ; Genetics in Medicine Volume 1 (1999) ; 1999 ; 1 >
     au < exists ; exists ; 2000 ; Genetics in Medicine Volume 2 ; 2000 ; 2 >
     au < exists ; exists ; 2001 ; Genetics in Medicine Volume 3 ; 2001 ; 3 >
     au < exists ; exists ; 2002 ; Genetics in Medicine Volume 4 ; 2002 ; 4 >
