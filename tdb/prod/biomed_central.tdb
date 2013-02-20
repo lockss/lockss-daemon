@@ -2647,16 +2647,23 @@
       >
       
       comment[continued_from] = 1746-1340
-      param[base_url] = http://chiromt.com/
       param[journal_issn] = 2045-709X
-  
-      comment[0] = This journal does not have a stable base_url and will not get substance.
-      comment[1] = Volume home page, and issue home page url do not have www, all others do.
-
-      au < down ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
-      au < notReady ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
-      au < notReady ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
       
+      {
+      param[base_url] = http://chiromt.com/
+      comment[0] = wrong base_url, now changed to http://www.chiromt.com
+
+      au < superseded ; 2011 ; Chiropractic & Manual Therapies Volume 19 [superseded] ; 19 >
+
+      }
+      {
+      
+      param[base_url] = http://www.chiromt.com/
+
+      au < manifest ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
+      au < manifest ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
+      au < manifest ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
+      }
     }
     
     {
@@ -2683,17 +2690,14 @@
       
       {
       
-        param[base_url] = http://chiromt.com/
+        param[base_url] = http://www.chiromt.com/
         
-        comment[0] = This journal does not have a stable base_url and will not get substance.
-        comment[1] = Volume home page, and issue home page url do not have www, all others do.
-
-        au < doNotProcess ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
-        au < doNotProcess ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
-        au < doNotProcess ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
-        au < doNotProcess ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
-        au < doNotProcess ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
-        au < doNotProcess ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
+        au < manifest ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
+        au < manifest ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
+        au < manifest ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
+        au < manifest ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
+        au < manifest ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
+        au < manifest ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
       
       }
       
