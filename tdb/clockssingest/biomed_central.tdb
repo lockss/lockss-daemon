@@ -2642,16 +2642,22 @@ comment[bmr] = journal archive available, but no new volumes
       >
       
       comment[continued_from] = 1746-1340
-      param[base_url] = http://chiromt.com/
       param[journal_issn] = 2045-709X
       
-      comment[0] = This journal does not have a stable base_url and will not get substance.
-      comment[1] = Volume home page, and issue home page url do not have www, all others do.
-
-      au < notReady ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
-      au < notReady ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
-      au < doNotProcess ; exists ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
+      {
+      comment[url] = This base_url is incorrect. base_url is http://www.chiromt.com
+      param[base_url] = http://chiromt.com/
       
+      au < down ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 [to delete] ; 19 >
+      au < down ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 [to delete] ; 20 >
+      }
+      {
+      param[base_url] = http://www.chiromt.com/
+      
+      au < manifest ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
+      au < manifest ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
+      au < expected ; exists ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
+      }
     }
     
     {
@@ -2662,19 +2668,27 @@ comment[bmr] = journal archive available, but no new volumes
       >
       
       comment[continued_by] = 2045-709X
-      param[base_url] = http://chiromt.com/
       param[journal_issn] = 1746-1340
 
+      {
+      param[base_url] = http://chiromt.com/
       comment[0] = This journal does not have a stable base_url and will not get substance.
       comment[1] = Volume home page, and issue home page url do not have www, all others do.
 
-      au < doNotProcess ; exists ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
-      au < doNotProcess ; exists ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
-      au < doNotProcess ; exists ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
-      au < notReady ; exists ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
-      au < notReady ; exists ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
-      au < down ; down ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
-    
+      au < notReady ; exists ; 2008 ; Chiropractic & Osteopathy Volume 16 [to delete] ; 16 >
+      au < notReady ; exists ; 2009 ; Chiropractic & Osteopathy Volume 17 [to delete] ; 17 >
+      au < down ; down ; 2010 ; Chiropractic & Osteopathy Volume 18 [to delete] ; 18 >
+      }
+      {
+      param[base_url] = http://www.chiromt.com/
+
+      au < manifest ; exists ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
+      au < manifest ; exists ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
+      au < manifest ; exists ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
+      au < manifest ; exists ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
+      au < manifest ; exists ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
+      au < manifest ; exists ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
+      }
     }
 
     {
