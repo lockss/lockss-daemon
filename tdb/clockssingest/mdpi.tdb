@@ -1,0 +1,915 @@
+{
+  publisher <
+    name = MDPI
+  >
+
+    plugin = needs.plugin
+    param[base_url] = http://www.mdpi.com/
+
+  {
+
+      title <
+        name = Actuators ;
+        eissn = 2076-0825
+      >
+
+    }
+  {
+
+      title <
+        name = Administrative Sciences ;
+        eissn = 2076-3387
+      >
+
+    }
+  {
+
+      title <
+        name = Aerospace ;
+        eissn = 2226-4310
+      >
+
+    }
+  {
+
+      title <
+        name = Agriculture ;
+        eissn = 2077-0472
+      >
+
+    }
+  {
+
+      title <
+        name = Agronomy ;
+        eissn = 2073-4395
+      >
+
+    }
+  {
+
+      title <
+        name = Algorithms ;
+        eissn = 1999-4893
+      >
+
+    }
+  {
+
+      title <
+        name = Animals ;
+        eissn = 2076-2615
+      >
+
+    }
+  {
+
+      title <
+        name = Antibiotics ;
+        eissn = 2079-6382
+      >
+
+    }
+  {
+
+      title <
+        name = Antibodies ;
+        eissn = 2073-4468
+      >
+
+    }
+  {
+
+      title <
+        name = Antioxidants ;
+        eissn = 2076-3921
+      >
+
+    }
+  {
+
+      title <
+        name = Applied Sciences ;
+        eissn = 2076-3417
+      >
+
+    }
+  {
+
+      title <
+        name = Arts ;
+        eissn = 2076-0752
+      >
+
+    }
+  {
+
+      title <
+        name = Atmosphere ;
+        eissn = 2073-4433
+      >
+
+    }
+  {
+
+      title <
+        name = Atoms ;
+        eissn = 2218-2004
+      >
+
+    }
+  {
+
+      title <
+        name = Axioms ;
+        eissn = 2075-1680
+      >
+
+    }
+  {
+
+      title <
+        name = Behavioral Sciences ;
+        eissn = 2076-328X
+      >
+
+    }
+  {
+
+      title <
+        name = Biology ;
+        eissn = 2079-7737
+      >
+
+    }
+  {
+
+      title <
+        name = Biomolecules ;
+        eissn = 2218-273X
+      >
+
+    }
+  {
+
+      title <
+        name = Biosensors ;
+        eissn = 2079-6374
+      >
+
+    }
+  {
+
+      title <
+        name = Brain Sciences ;
+        eissn = 2076-3425
+      >
+
+    }
+  {
+
+      title <
+        name = Buildings ;
+        eissn = 2075-5309
+      >
+
+    }
+  {
+
+      title <
+        name = Cancers ;
+        eissn = 2072-6694
+      >
+
+    }
+  {
+
+      title <
+        name = Catalysts ;
+        eissn = 2073-4344
+      >
+
+    }
+  {
+
+      title <
+        name = Cells ;
+        eissn = 2073-4409
+      >
+
+    }
+  {
+
+      title <
+        name = Challenges ;
+        eissn = 2078-1547
+      >
+
+    }
+  {
+
+      title <
+        name = Chemosensors ;
+        eissn = 2227-9040
+      >
+
+    }
+  {
+
+      title <
+        name = Chromatography ;
+        eissn = 2227-9075
+      >
+
+    }
+  {
+
+      title <
+        name = Climate ;
+        eissn = 2225-1154
+      >
+
+    }
+  {
+
+      title <
+        name = Coatings ;
+        eissn = 2079-6412
+      >
+
+    }
+  {
+
+      title <
+        name = Computation ;
+        eissn = 2079-3197
+      >
+
+    }
+  {
+
+      title <
+        name = Computers ;
+        eissn = 2073-431X
+      >
+
+    }
+  {
+
+      title <
+        name = Crystals ;
+        eissn = 2073-4352
+      >
+
+    }
+  {
+
+      title <
+        name = Dentistry Journal ;
+        eissn = 2304-6767
+      >
+
+    }
+  {
+
+      title <
+        name = Diagnostics ;
+        eissn = 2075-4418
+      >
+
+    }
+  {
+
+      title <
+        name = Diseases ;
+        eissn = 2079-9721
+      >
+
+    }
+  {
+
+      title <
+        name = Diversity ;
+        eissn = 1424-2818
+      >
+
+    }
+  {
+
+      title <
+        name = Econometrics ;
+        eissn = 2225-1146
+      >
+
+    }
+  {
+
+      title <
+        name = Economies ;
+        eissn = 2227-7099
+      >
+
+    }
+  {
+
+      title <
+        name = Education Sciences ;
+        eissn = 2227-7102
+      >
+
+    }
+  {
+
+      title <
+        name = Electronics ;
+        eissn = 2079-9292
+      >
+
+    }
+  {
+
+      title <
+        name = Energies ;
+        eissn = 1996-1073
+      >
+
+    }
+  {
+
+      title <
+        name = Entropy ;
+        eissn = 1099-4300
+      >
+
+    }
+  {
+
+      title <
+        name = Fibers ;
+        eissn = 2079-6439
+      >
+
+    }
+  {
+
+      title <
+        name = Foods ;
+        eissn = 2304-8158
+      >
+
+    }
+  {
+
+      title <
+        name = Forests ;
+        eissn = 1999-4907
+      >
+
+    }
+  {
+
+      title <
+        name = Future Internet ;
+        eissn = 1999-5903
+      >
+
+    }
+  {
+
+      title <
+        name = Galaxies ;
+        eissn = 2075-4434
+      >
+
+    }
+  {
+
+      title <
+        name = Games ;
+        eissn = 2073-4336
+      >
+
+    }
+  {
+
+      title <
+        name = Genes ;
+        eissn = 2073-4425
+      >
+
+    }
+  {
+
+      title <
+        name = Geosciences ;
+        eissn = 2076-3263
+      >
+
+    }
+  {
+
+      title <
+        name = Healthcare ;
+        eissn = 2227-9032
+      >
+
+    }
+  {
+
+      title <
+        name = Humanities ;
+        eissn = 2076-0787
+      >
+
+    }
+  {
+
+      title <
+        name = Informatics ;
+        eissn = 2227-9709
+      >
+
+    }
+  {
+
+      title <
+        name = Information ;
+        eissn = 2078-2489
+      >
+
+    }
+  {
+
+      title <
+        name = Insects ;
+        eissn = 2075-4450
+      >
+
+    }
+  {
+
+      title <
+        name = International Journal of Environmental Research and Public Health ;
+        eissn = 1660-4601
+      >
+
+    }
+  {
+
+      title <
+        name = International Journal of Financial Studies ;
+        eissn = 2227-7072
+      >
+
+    }
+  {
+
+      title <
+        name = International Journal of Molecular Sciences ;
+        eissn = 1422-0067
+      >
+
+    }
+  {
+
+      title <
+        name = ISPRS International Journal of Geo-Information ;
+        eissn = 2220-9964
+      >
+
+    }
+  {
+
+      title <
+        name = Journal of Clinical Medicine ;
+        eissn = 2077-0383
+      >
+
+    }
+  {
+
+      title <
+        name = Journal of Developmental Biology ;
+        eissn = 2221-3759
+      >
+
+    }
+  {
+
+      title <
+        name = Journal of Functional Biomaterials ;
+        eissn = 2079-4983
+      >
+
+    }
+  {
+
+      title <
+        name = Journal of Intelligence ;
+        eissn = 2079-3200
+      >
+
+    }
+  {
+
+      title <
+        name = Journal of Low Power Electronics and Applications ;
+        eissn = 2079-9268
+      >
+
+    }
+  {
+
+      title <
+        name = Journal of Marine Science and Engineering ;
+        eissn = 2077-1312
+      >
+
+    }
+  {
+
+      title <
+        name = Journal of Personalized Medicine ;
+        eissn = 2075-4426
+      >
+
+    }
+  {
+
+      title <
+        name = Journal of Sensor and Actuator Networks ;
+        eissn = 2224-2708
+      >
+
+    }
+  {
+
+      title <
+        name = Land ;
+        eissn = 2073-445X
+      >
+
+    }
+  {
+
+      title <
+        name = Laws ;
+        eissn = 2075-471X
+      >
+
+    }
+  {
+
+      title <
+        name = Life ;
+        eissn = 2075-1729
+      >
+
+    }
+  {
+
+      title <
+        name = Lubricants ;
+        eissn = 2075-4442
+      >
+
+    }
+  {
+
+      title <
+        name = Machines ;
+        eissn = 2075-1702
+      >
+
+    }
+  {
+
+      title <
+        name = Marine Drugs ;
+        eissn = 1660-3397
+      >
+
+    }
+  {
+
+      title <
+        name = Materials ;
+        eissn = 1996-1944
+      >
+
+    }
+  {
+
+      title <
+        name = Mathematics ;
+        eissn = 2227-7390
+      >
+
+    }
+  {
+
+      title <
+        name = Membranes ;
+        eissn = 2077-0375
+      >
+
+    }
+  {
+
+      title <
+        name = Metabolites ;
+        eissn = 2218-1989
+      >
+
+    }
+  {
+
+      title <
+        name = Metals ;
+        eissn = 2075-4701
+      >
+
+    }
+  {
+
+      title <
+        name = Microarrays ;
+        eissn = 2076-3905
+      >
+
+    }
+  {
+
+      title <
+        name = Micromachines ;
+        eissn = 2072-666X
+      >
+
+    }
+  {
+
+      title <
+        name = Microorganisms ;
+        eissn = 2076-2607
+      >
+
+    }
+  {
+
+      title <
+        name = Minerals ;
+        eissn = 2075-163X
+      >
+
+    }
+  {
+
+      title <
+        name = Molbank ;
+        eissn = 1422-8599
+      >
+
+    }
+  {
+
+      title <
+        name = Molecules ;
+        issn = 1431-5157 ;
+        eissn = 1420-3049
+      >
+
+    }
+  {
+
+      title <
+        name = Nanomaterials ;
+        eissn = 2079-4991
+      >
+
+    }
+  {
+
+      title <
+        name = Nutrients ;
+        issn = 1422-8599 ;
+        eissn = 2072-6643
+      >
+
+    }
+  {
+
+      title <
+        name = Optics ;
+        eissn = 2304-6732
+      >
+
+    }
+  {
+
+      title <
+        name = Pathogens ;
+        eissn = 2076-0817
+      >
+
+    }
+  {
+
+      title <
+        name = Pharmaceuticals ;
+        eissn = 1424-8247
+      >
+
+    }
+  {
+
+      title <
+        name = Pharmaceutics ;
+        eissn = 1999-4923
+      >
+
+    }
+  {
+
+      title <
+        name = Pharmacy ;
+        eissn = 2226-4787
+      >
+
+    }
+  {
+
+      title <
+        name = Plants ;
+        eissn = 2223-7747
+      >
+
+    }
+  {
+
+      title <
+        name = Polymers ;
+        eissn = 2073-4360
+      >
+
+    }
+  {
+
+      title <
+        name = Processes ;
+        eissn = 2227-9717
+      >
+
+    }
+  {
+
+      title <
+        name = Proteomes ;
+        eissn = 2227-7382
+      >
+
+    }
+  {
+
+      title <
+        name = Publications ;
+        eissn = 2304-6775
+      >
+
+    }
+  {
+
+      title <
+        name = Religions ;
+        eissn = 2077-1444
+      >
+
+    }
+  {
+
+      title <
+        name = Remote Sensing ;
+        eissn = 2072-4292
+      >
+
+    }
+  {
+
+      title <
+        name = Resources ;
+        eissn = 2079-9276
+      >
+
+    }
+  {
+
+      title <
+        name = Risks ;
+        eissn = 2227-9091
+      >
+
+    }
+  {
+
+      title <
+        name = Robotics ;
+        eissn = 2218-6581
+      >
+
+    }
+  {
+
+      title <
+        name = Sensors ;
+        eissn = 1424-8220
+      >
+
+    }
+  {
+
+      title <
+        name = Social Sciences ;
+        eissn = 2076-0760
+      >
+
+    }
+  {
+
+      title <
+        name = Societies ;
+        eissn = 2075-4698
+      >
+
+    }
+  {
+
+      title <
+        name = Sports ;
+        eissn = 2075-4663
+      >
+
+    }
+  {
+
+      title <
+        name = Sustainability ;
+        eissn = 2071-1050
+      >
+
+    }
+  {
+
+      title <
+        name = Symmetry ;
+        eissn = 2073-8994
+      >
+
+    }
+  {
+
+      title <
+        name = Systems ;
+        eissn = 2079-8954
+      >
+
+    }
+  {
+
+      title <
+        name = Technologies ;
+        eissn = 2227-7080
+      >
+
+    }
+  {
+
+      title <
+        name = Toxins ;
+        eissn = 2072-6651
+      >
+
+    }
+  {
+
+      title <
+        name = Vaccines ;
+        eissn = 2076-393X
+      >
+
+    }
+  {
+
+      title <
+        name = Viruses ;
+        eissn = 1999-4915
+      >
+
+    }
+  {
+
+      title <
+        name = Water ;
+        eissn = 2073-4441
+      >
+
+    }
+}
