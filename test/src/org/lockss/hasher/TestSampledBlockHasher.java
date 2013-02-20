@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledBlockHasher.java,v 1.1.2.1 2013-02-19 23:45:33 dshr Exp $
+ * $Id: TestSampledBlockHasher.java,v 1.1.2.2 2013-02-20 20:03:42 dshr Exp $
  */
 
 /*
@@ -189,7 +189,19 @@ public class TestSampledBlockHasher extends LockssTestCase {
     hashToLength(hasher, expectedBytes.length, expectedBytes.length);
     List<Event> events = handRec.getEvents();
     assertEquals(numFilesInSample, events.size());
-    // XXX compare bytes too
+    int ex = 0;
+    int eventCount = 0;
+    for (Event ev : events) {
+      for (int i = 0; i < ev.byteArrays.length; i++) {
+	for (int j = 0; j < ev.byteArrays[i].length; j++) {
+	  if (ev.byteArrays[i][j] != expectedBytes[ex++]) {
+	    fail("ev[" + eventCount + "].byteArrays[" + i + "][" + j +
+		 "} mismatch expectedBytes[" + ex + "]");
+	  }
+	}
+      }
+      eventCount++;
+    }
   }
 
   public void testHashMultipleFilesMod1()
@@ -324,21 +336,6 @@ public class TestSampledBlockHasher extends LockssTestCase {
     return returnArr;
   }
 
-  /**
-   * Will hash through in intervals of stepSize and then compare the hashed
-   * bytes to the expected bytes
-   * @param expectedBytes the expected bytes
-   * @param hasher the hasher
-   * @param stepSize the step size
-   * @throws IOException
-   */
-  private void hashAndCompare(byte[] expectedBytes,
-			      MySampledBlockHasher hasher,
-			      int stepSize) throws IOException {
-    hashToLength(hasher, expectedBytes.length, stepSize);
-    assertBytesEqualDigest(expectedBytes, dig);
-  }
-
   private void hashToLength(MySampledBlockHasher hasher,
 			    int length, int stepSize) throws IOException {
     int numBytesHashed = 0;
@@ -361,39 +358,6 @@ public class TestSampledBlockHasher extends LockssTestCase {
     while (!hasher.finished()) {
       hasher.hashStep(stepSize);
     }
-  }
-
-  private void assertBytesEqualDigest(byte[] expectedBytes,
-				      MockMessageDigest dig) {
-    byte[] hashedBytes = dig.getUpdatedBytes();
-    log.debug3("Expected " + expectedBytes.length + " bytes got " +
-	       hashedBytes.length + " bytes ");
-    assertEquals(expectedBytes.length, hashedBytes.length);
-    assertEquals(expectedBytes, hashedBytes);
-  }
-
-  private void assertEquals(MockMessageDigest dig1, MockMessageDigest dig2) {
-    assertEquals(dig1.getNumRemainingBytes(), dig2.getNumRemainingBytes());
-    while (dig1.getNumRemainingBytes() > 0) {
-      assertEquals(dig1.getUpdatedByte(), dig2.getUpdatedByte());
-    }
-  }
-
-  private void assertNotEquals(MockMessageDigest dig1,
-			       MockMessageDigest dig2) {
-    if (dig1.getNumRemainingBytes() != dig2.getNumRemainingBytes()) {
-      return;
-    }
-    while (dig1.getNumRemainingBytes() > 0) {
-      if (dig1.getUpdatedByte() != dig2.getUpdatedByte()) {
-	return;
-      }
-    }
-    if (dig1.getNumRemainingBytes() != dig2.getNumRemainingBytes()) {
-      return;
-    }
-
-    fail("MockMessageDigests were equal");
   }
 
   public class MySampledBlockHasher extends SampledBlockHasher {
@@ -443,11 +407,6 @@ public class TestSampledBlockHasher extends LockssTestCase {
     }
   }
 
-  public static void main(String[] argv) {
-    String[] testCaseList = { TestSampledBlockHasher.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
-  }
-
   class Event {
     HashBlock hblock;
     byte[][] byteArrays;
@@ -473,4 +432,9 @@ public class TestSampledBlockHasher extends LockssTestCase {
     }
   }
   
+  public static void main(String[] argv) {
+    String[] testCaseList = { TestSampledBlockHasher.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
+  }
+
 }
