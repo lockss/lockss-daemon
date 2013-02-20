@@ -1,11 +1,15 @@
 /*
- * $Id: TestSantaFePoetryBroadsideHtmlCrawlFilterFactory.java,v 1.1 2013-02-20 01:59:51 alexandraohlson Exp $
+ * $Id: TestSantaFePoetryBroadsideHtmlCrawlFilterFactory.java,v 1.2 2013-02-20 18:00:15 alexandraohlson Exp $
  */
 package org.lockss.plugin.sfpoetrybroadside;
 
-import java.io.*;
-import org.lockss.util.*;
-import org.lockss.test.*;
+import java.io.InputStream;
+
+import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockArchivalUnit;
+import org.lockss.test.StringInputStream;
+import org.lockss.util.Constants;
+import org.lockss.util.StringUtil;
 
 public class TestSantaFePoetryBroadsideHtmlCrawlFilterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
@@ -13,48 +17,49 @@ public class TestSantaFePoetryBroadsideHtmlCrawlFilterFactory extends LockssTest
   private SantaFePoetryBroadsideHtmlCrawlFilterFactory fact;
   private MockArchivalUnit mau;
 
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     fact = new SantaFePoetryBroadsideHtmlCrawlFilterFactory();
     mau = new MockArchivalUnit();
   }
 
-  private static final String bioPage = 
+  private static final String bioPage =
       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" " +
-       "   \"http://www.w3.org/TR/REC-html40/loose.dtd\"> " +                                                                                                                     
-    "<html>" +                                                                                                                                                                   
-    "<head>" +                                                                                                                                                                   
-    "<title>Santa Fe Poetry Broadside... Bionotes, Issue #1</title>" +                                                                                                           
-    "</head>" +                                                                                                                                                                  
-    "<body bgcolor=\"ffffff\">" +                                                                                                                                                
-    "<a href=\"broadside.html\" title=\"Index of all issues\"><img alt=\"Santa Fe Poetry Broadside\"" +                                                                          
-    "src=\"smbanner.gif\"></a> " +                                                                                                                                               
-    "<center>" +                                                                                                                                                                 
-    "<h2>About the Poets</h2>" +                                                                                                                                                 
-    "</center>" +                                                                                                                                                                
-    "<dl>" +                                                                                                                                                                     
-    "<dt>" +                                                                                                                                                                     
-    "<a name=\"chavezc\"><b>Margo Chavez-Charles</b></a>" +                                                                                                                      
-    "<dd>Sam Q Author teaches" +                                                                                                                                                 
-    "<dd><small><b>poems in the Broadside, this issue...</b><a href=\"author.html\"><i>BOO</i></a></small>" +                                                                    
-    "<dd><small><b>poem in the Broadside, issue #36... </b><a href=\"author3.html\"><i>BOO2</i></a></small>" +                                                                   
-    "<p>" +                                                                                                                                                                      
-    "<dt>" +                                                                                                                                                                     
-    "<br>" +                                                                                                                                                                     
-    "</dl>" +                                                                                                                                                                    
-    "</body>" +                                                                                                                                                                  
-    "</html>";           
+       "   \"http://www.w3.org/TR/REC-html40/loose.dtd\"> " +
+    "<html>" +
+    "<head>" +
+    "<title>Santa Fe Poetry Broadside... Bionotes, Issue #1</title>" +
+    "</head>" +
+    "<body bgcolor=\"ffffff\">" +
+    "<a href=\"broadside.html\" title=\"Index of all issues\"><img alt=\"Santa Fe Poetry Broadside\"" +
+    "src=\"smbanner.gif\"></a> " +
+    "<center>" +
+    "<h2>About the Poets</h2>" +
+    "</center>" +
+    "<dl>" +
+    "<dt>" +
+    "<a name=\"chavezc\"><b>Margo Chavez-Charles</b></a>" +
+    "<dd>Sam Q Author teaches" +
+    "<dd><small><b>poems in the Broadside, this issue...</b><a href=\"author.html\"><i>BOO</i></a></small>" +
+    "<dd><small><b>poem in the Broadside, issue #36... </b><a href=\"author3.html\"><i>BOO2</i></a></small>" +
+    "<p>" +
+    "<dt>" +
+    "<br>" +
+    "</dl>" +
+    "</body>" +
+    "</html>";
 
-  private static final String bioPageFiltered = 
+  private static final String bioPageFiltered =
       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" " +
-          "   \"http://www.w3.org/TR/REC-html40/loose.dtd\"> " +                                                                                                                     
-       "<html>" +                                                                                                                                                                   
-       "<head>" +                                                                                                                                                                   
-       "<title>Santa Fe Poetry Broadside... Bionotes, Issue #1</title>" +                                                                                                           
-       "</head>" + 
-       "</html>";           
-  
-  private static final String notBioPage = 
+          "   \"http://www.w3.org/TR/REC-html40/loose.dtd\"> " +
+       "<html>" +
+       "<head>" +
+       "<title>Santa Fe Poetry Broadside... Bionotes, Issue #1</title>" +
+       "</head>" +
+       "</html>";
+
+  private static final String notBioPage =
       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" " +
           "     \"http://www.w3.org/TR/REC-html4/loose.dtd\">  " +
           "<html>" +
@@ -81,7 +86,7 @@ public class TestSantaFePoetryBroadsideHtmlCrawlFilterFactory extends LockssTest
           "</div> " +
           "</body> " +
           "</html>  ";
-  
+
   private static final String bioPageNoHtml =
       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"" +
           "      \"http://www.w3.org/TR/REC-html4/loose.dtd\">" +
@@ -94,7 +99,7 @@ public class TestSantaFePoetryBroadsideHtmlCrawlFilterFactory extends LockssTest
           "<body>" +
           "<div id=\"header\">" +
           "<hr width=\"70%\">" +
-          "<h4>" +                                                                                                                                                                     
+          "<h4>" +
           "Santa Fe Poetry Broadside... Issue #47, August, 2006 :</h4>" +
           "</div>" +
           "" +
@@ -114,7 +119,7 @@ public class TestSantaFePoetryBroadsideHtmlCrawlFilterFactory extends LockssTest
           "</body>" +
           "</html>";
 
-  
+
   private static final String bioPageNoHtmlFiltered =
       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"" +
           "      \"http://www.w3.org/TR/REC-html4/loose.dtd\">" +
@@ -127,7 +132,7 @@ public class TestSantaFePoetryBroadsideHtmlCrawlFilterFactory extends LockssTest
           "<body>" +
           "<div id=\"header\">" +
           "<hr width=\"70%\">" +
-          "<h4>" +                                                                                                                                                                     
+          "<h4>" +
           "Santa Fe Poetry Broadside... Issue #47, August, 2006 :</h4>" +
           "</div>" +
           "" +
@@ -141,8 +146,8 @@ public class TestSantaFePoetryBroadsideHtmlCrawlFilterFactory extends LockssTest
           "</body>" +
           "</html>";
 
- 
-  
+
+
   private static final String notBioPageNoHtml =
       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" " +
           "     \"http://www.w3.org/TR/REC-html4/loose.dtd\">  " +
@@ -169,28 +174,28 @@ public class TestSantaFePoetryBroadsideHtmlCrawlFilterFactory extends LockssTest
           "</div> " +
           "</body> " +
           "</html>  ";
-  
+
 
   public void testBioPageFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau, new StringInputStream(bioPage),
         Constants.DEFAULT_ENCODING);
     assertEquals(bioPageFiltered, StringUtil.fromInputStream(actIn));
-    
+
     actIn = fact.createFilteredInputStream(mau, new StringInputStream(notBioPage),
         Constants.DEFAULT_ENCODING);
-    /* this shouldn't change at all */
+    // this shouldn't change at all
     assertEquals(notBioPage, StringUtil.fromInputStream(actIn));
-    
+
   }
-  
+
   public void testLateIssueBioPageFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau, new StringInputStream(bioPageNoHtml),
         Constants.DEFAULT_ENCODING);
     assertEquals(bioPageNoHtmlFiltered, StringUtil.fromInputStream(actIn));
-    
+
     actIn = fact.createFilteredInputStream(mau, new StringInputStream(notBioPageNoHtml),
         Constants.DEFAULT_ENCODING);
-    /* this shouldn't change at all */
+    // this shouldn't change at all
     assertEquals(notBioPageNoHtml, StringUtil.fromInputStream(actIn));
   }
 
