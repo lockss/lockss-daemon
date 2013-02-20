@@ -3864,6 +3864,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       param[base_url] = http://www.ij-healthgeographics.com/
       param[journal_issn] = 1476-072X
+      
+      comment[v8] = notReady 500 Internal Server Error http://www.ij-healthgeographics.com/content/7/1/2/mathml/M2
 
       au < manifest ; exists ; 2002 ; International Journal of Health Geographics Volume 1 ; 1 >
       au < manifest ; exists ; 2003 ; International Journal of Health Geographics Volume 2 ; 2 >
@@ -3871,7 +3873,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2005 ; International Journal of Health Geographics Volume 4 ; 4 >
       au < manifest ; exists ; 2006 ; International Journal of Health Geographics Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; International Journal of Health Geographics Volume 6 ; 6 >
-      au < crawling ; exists ; 2008 ; International Journal of Health Geographics Volume 7 ; 7 >
+      au < notReady ; exists ; 2008 ; International Journal of Health Geographics Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; International Journal of Health Geographics Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; International Journal of Health Geographics Volume 9 ; 9 >
       au < crawling ; exists ; 2011 ; International Journal of Health Geographics Volume 10 ; 10 >
