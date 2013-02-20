@@ -1,6 +1,8 @@
 {
   publisher <
-    name = MDPI
+    name = MDPI ;
+    info[contract] = 9999 ;
+    info[tester] = 0
   >
 
     plugin = needs.plugin
