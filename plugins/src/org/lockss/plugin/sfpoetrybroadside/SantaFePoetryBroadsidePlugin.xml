@@ -107,4 +107,8 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsideHtmlCrawlFilterFactory</string>
+  </entry>
 </map>
