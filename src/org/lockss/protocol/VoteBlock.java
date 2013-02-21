@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlock.java,v 1.12.86.1 2013-02-21 04:59:24 dshr Exp $
+ * $Id: VoteBlock.java,v 1.12.86.2 2013-02-21 17:52:30 dshr Exp $
  */
 
 /*
@@ -229,7 +229,8 @@ public class VoteBlock implements LockssSerializable {
   }
   
   /**
-   * Compare two URLs
+   * This defines the canonical ordering of VoteBlocks by comparing
+   * their URLs.
    * @param url1 First URL
    * @param url2 Second URL
    * @return less than 0 if url1 sorts before url2, greater than 0 if after
