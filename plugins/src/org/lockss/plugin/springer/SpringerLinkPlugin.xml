@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>41</string>
+    <string>42</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -96,7 +96,7 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>2,&quot;^%s(content/[A-Za-z0-9]{16}/(export-citation|referrers)/|.*\?(target=(export|print|save)|MUD=MP)|fulltext-image\.asp\?|[^/]+/cover-medium\.jpg$)&quot;, base_url</string>
+      <string>2,&quot;^%s(content/([A-Za-z0-9]{16}/(export-citation|referrers)/|[^/]+/cover-medium\.jpg$)|.*\?(target=(export|print|save)|MUD=MP)|fulltext-image\.asp\?)&quot;, base_url</string>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>1,&quot;^%s(content/(%s/%s($|/)|[A-Za-z0-9]{16}/)|dynamic-file\.axd)&quot;, base_url, journal_issn, volume_name</string>
     </list>
