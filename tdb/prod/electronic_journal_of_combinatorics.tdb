@@ -11,29 +11,29 @@
       plugin = org.lockss.plugin.ojs2.OJS2Plugin
       implicit < status ; year ; name ; volume ; param[year] >
       
-      param[base_url] = http://www.combinatorics.org/
+      param[base_url] = http://www.combinatorics.org/ojs/
       param[journal_id] = eljc
       comment[notReady] = RU4625, crawl rule
 
-      au < notReady ; 1994 ; The Electronic Journal of Combinatorics Volume 1 ; 1 ; 1994 >
-      au < notReady ; 1995 ; The Electronic Journal of Combinatorics Volume 2 ; 2 ; 1995 >
-      au < notReady ; 1996 ; The Electronic Journal of Combinatorics Volume 3 ; 3 ; 1996 >
-      au < notReady ; 1997 ; The Electronic Journal of Combinatorics Volume 4 ; 4 ; 1997 >
-      au < notReady ; 1998 ; The Electronic Journal of Combinatorics Volume 5 ; 5 ; 1998 >
-      au < notReady ; 1999 ; The Electronic Journal of Combinatorics Volume 6 ; 6 ; 1999 >
-      au < notReady ; 2000 ; The Electronic Journal of Combinatorics Volume 7 ; 7 ; 2000 >
-      au < notReady ; 2001 ; The Electronic Journal of Combinatorics Volume 8 ; 8 ; 2001 >
-      au < notReady ; 2002 ; The Electronic Journal of Combinatorics Volume 9 ; 9 ; 2002 >
-      au < notReady ; 2003 ; The Electronic Journal of Combinatorics Volume 10 ; 10 ; 2003 >
-      au < notReady ; 2004 ; The Electronic Journal of Combinatorics Volume 11 ; 11 ; 2004 >
-      au < notReady ; 2005 ; The Electronic Journal of Combinatorics Volume 12 ; 12 ; 2005 >
-      au < notReady ; 2006 ; The Electronic Journal of Combinatorics Volume 13 ; 13 ; 2006 >
-      au < notReady ; 2007 ; The Electronic Journal of Combinatorics Volume 14 ; 14 ; 2007 >
-      au < notReady ; 2008 ; The Electronic Journal of Combinatorics Volume 15 ; 15 ; 2008 >
-      au < notReady ; 2009 ; The Electronic Journal of Combinatorics Volume 16 ; 16 ; 2009 >
-      au < notReady ; 2010 ; The Electronic Journal of Combinatorics Volume 17 ; 17 ; 2010 >
-      au < notReady ; 2011 ; The Electronic Journal of Combinatorics Volume 18 ; 18 ; 2011 >
-      au < notReady ; 2012 ; The Electronic Journal of Combinatorics Volume 19 ; 19 ; 2012 >
+      au < testing ; 1994 ; The Electronic Journal of Combinatorics Volume 1 ; 1 ; 1994 >
+      au < testing ; 1995 ; The Electronic Journal of Combinatorics Volume 2 ; 2 ; 1995 >
+      au < testing ; 1996 ; The Electronic Journal of Combinatorics Volume 3 ; 3 ; 1996 >
+      au < testing ; 1997 ; The Electronic Journal of Combinatorics Volume 4 ; 4 ; 1997 >
+      au < testing ; 1998 ; The Electronic Journal of Combinatorics Volume 5 ; 5 ; 1998 >
+      au < testing ; 1999 ; The Electronic Journal of Combinatorics Volume 6 ; 6 ; 1999 >
+      au < testing ; 2000 ; The Electronic Journal of Combinatorics Volume 7 ; 7 ; 2000 >
+      au < testing ; 2001 ; The Electronic Journal of Combinatorics Volume 8 ; 8 ; 2001 >
+      au < testing ; 2002 ; The Electronic Journal of Combinatorics Volume 9 ; 9 ; 2002 >
+      au < testing ; 2003 ; The Electronic Journal of Combinatorics Volume 10 ; 10 ; 2003 >
+      au < testing ; 2004 ; The Electronic Journal of Combinatorics Volume 11 ; 11 ; 2004 >
+      au < testing ; 2005 ; The Electronic Journal of Combinatorics Volume 12 ; 12 ; 2005 >
+      au < testing ; 2006 ; The Electronic Journal of Combinatorics Volume 13 ; 13 ; 2006 >
+      au < testing ; 2007 ; The Electronic Journal of Combinatorics Volume 14 ; 14 ; 2007 >
+      au < testing ; 2008 ; The Electronic Journal of Combinatorics Volume 15 ; 15 ; 2008 >
+      au < testing ; 2009 ; The Electronic Journal of Combinatorics Volume 16 ; 16 ; 2009 >
+      au < testing ; 2010 ; The Electronic Journal of Combinatorics Volume 17 ; 17 ; 2010 >
+      au < testing ; 2011 ; The Electronic Journal of Combinatorics Volume 18 ; 18 ; 2011 >
+      au < testing ; 2012 ; The Electronic Journal of Combinatorics Volume 19 ; 19 ; 2012 >
       au < exists ; 2013 ; The Electronic Journal of Combinatorics Volume 20 ; 20 ; 2013 >
 
   }
