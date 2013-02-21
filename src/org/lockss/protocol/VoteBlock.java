@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlock.java,v 1.12 2007-05-09 10:34:09 smorabito Exp $
+ * $Id: VoteBlock.java,v 1.12.86.1 2013-02-21 04:59:24 dshr Exp $
  */
 
 /*
@@ -217,7 +217,27 @@ public class VoteBlock implements LockssSerializable {
       return "Unknown";
     }
   }
+
+  public int compareTo(VoteBlock otherVoteBlock) {
+    String url1 = getUrl();
+    String url2 = otherVoteBlock.getUrl();
+    return compareUrls(url1, url2);
+  }
+
+  public static int compare(VoteBlock vb1, VoteBlock vb2) {
+    return vb1.compareTo(vb2);
+  }
   
+  /**
+   * Compare two URLs
+   * @param url1 First URL
+   * @param url2 Second URL
+   * @return less than 0 if url1 sorts before url2, greater than 0 if after
+   */
+  public static int compareUrls(String url1, String url2) {
+    return StringUtil.compareToNullHigh(url1, url2);
+  }
+    
   public int size() {
     return versions.size();
   }

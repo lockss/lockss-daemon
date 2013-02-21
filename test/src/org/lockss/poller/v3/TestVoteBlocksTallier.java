@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlocksTallier.java,v 1.1.2.5 2013-02-09 17:16:46 dshr Exp $
+ * $Id: TestVoteBlocksTallier.java,v 1.1.2.6 2013-02-21 04:59:24 dshr Exp $
  */
 
 /*
@@ -65,6 +65,67 @@ public class TestVoteBlocksTallier extends LockssTestCase {
     for (int i = 0 ; i < content.length ; i++ ) {
       content[i] = new MyContent("http://www.example.com/test-" + i + ".html");
     }
+  }
+
+  /**
+   * Execute a test in which the poller has URLs:
+   * content[p1..p2-1] and content[p3..p4-1]
+   * and the voter has URLs:
+   * content[v1..v2-1] and content[v3..v4-1]
+   * and they disagree about URL: content[d]
+   */
+  private void doTest(int v1, int v2, int v3, int v4,
+		      int p1, int p2, int p3, int p4, int d) {
+    doTest(v1, v2, v3, v4, p1, p2, p3, p4, d, 1, 1);
+  }
+
+  /**
+   * Execute a test in which the poller has URLs:
+   * content[p1..p2-1] and content[p3..p4-1]
+   * and the voter has URLs:
+   * content[v1..v2-1] and content[v3..v4-1]
+   * The voter has vVer versions and the poller has pVer versions,
+   * and they disagree about URL: content[d]
+   */
+  private void doTest(int v1, int v2, int v3, int v4,
+		      int p1, int p2, int p3, int p4,
+		      int d, int vVer, int pVer) {
+    VoteBlocks vBlocks = new MyVoteBlocks(v1, v2, v3, v4, d, vVer);
+    assertNotNull(vBlocks);
+    assert(vBlocks.size() >= 0);
+    VoteBlocks pBlocks = new MyVoteBlocks(p1, p2, p3, p4, 100, pVer);
+    assertNotNull(pBlocks);
+    assert(pBlocks.size() >= 0);
+    VoteBlocksTallier vbt = new VoteBlocksTallier(vBlocks, pBlocks);
+    int numAgree = vbt.countAgreeUrl();
+    int shouldAgree = 0;
+    if (min(v1,v2) >= 0 && min(p1,p2) >= 0) {
+      shouldAgree += atLeastZero(min(v2,p2) - max(v1,p1));
+    }
+    if (min(v3,v4) >= 0 && min(p3,p4) >= 0) {
+      shouldAgree += atLeastZero(min(v4,p4) - max(v3,p3));
+    }
+    int numDisagree = vbt.countDisagreeUrl();
+    int shouldDisagree = 0;
+    if (max(v1,p1) <= d && d <= min(v2,p2)) {
+      // The URL they disagree on is in the first range they both have.
+      shouldAgree--;
+      shouldDisagree++;
+    } else if (max(v3,p3) <= d && d <= min(v4,p4)) {
+      // The URL they disagree on is in the second range they both have.
+      shouldAgree--;
+      shouldDisagree++;
+    }
+    int numVoterOnly = vbt.countVoterOnlyUrl();
+    int shouldVoterOnly = atLeastZero(p1 - v1) + atLeastZero(v2 - p2) +
+      atLeastZero(p3 - v3) + atLeastZero(v4 - p4);
+    int numPollerOnly = vbt.countPollerOnlyUrl();
+    int shouldPollerOnly = atLeastZero(v1 - p1) + atLeastZero(p2 - v2) +
+      atLeastZero(v3 - p3) + atLeastZero(p4 - v4);
+    assertEquals(shouldAgree, numAgree);
+    assertEquals(shouldDisagree, numDisagree);
+    assertEquals(shouldPollerOnly, numPollerOnly);
+    assertEquals(shouldVoterOnly, numVoterOnly);
   }
 
   public void testNoneAgree() throws Exception {
@@ -165,67 +226,6 @@ public class TestVoteBlocksTallier extends LockssTestCase {
 
   private int abs(int a) {
     return ( a > 0 ? a : -a );
-  }
-
-  /**
-   * Execute a test in which the poller has URLs:
-   * content[p1..p2-1] and content[p3..p4-1]
-   * and the voter has URLs:
-   * content[v1..v2-1] and content[v3..v4-1]
-   * and they disagree about URL: content[d]
-   */
-  private void doTest(int v1, int v2, int v3, int v4,
-		      int p1, int p2, int p3, int p4, int d) {
-    doTest(v1, v2, v3, v4, p1, p2, p3, p4, d, 1, 1);
-  }
-
-  /**
-   * Execute a test in which the poller has URLs:
-   * content[p1..p2-1] and content[p3..p4-1]
-   * and the voter has URLs:
-   * content[v1..v2-1] and content[v3..v4-1]
-   * The voter has vVer versions and the poller has pVer versions,
-   * and they disagree about URL: content[d]
-   */
-  private void doTest(int v1, int v2, int v3, int v4,
-		      int p1, int p2, int p3, int p4,
-		      int d, int vVer, int pVer) {
-    VoteBlocks vBlocks = new MyVoteBlocks(v1, v2, v3, v4, d, vVer);
-    assertNotNull(vBlocks);
-    assert(vBlocks.size() >= 0);
-    VoteBlocks pBlocks = new MyVoteBlocks(p1, p2, p3, p4, 100, pVer);
-    assertNotNull(pBlocks);
-    assert(pBlocks.size() >= 0);
-    VoteBlocksTallier vbt = new VoteBlocksTallier(vBlocks, pBlocks);
-    int numAgree = vbt.countAgreeUrl();
-    int shouldAgree = 0;
-    if (min(v1,v2) >= 0 && min(p1,p2) >= 0) {
-      shouldAgree += atLeastZero(min(v2,p2) - max(v1,p1));
-    }
-    if (min(v3,v4) >= 0 && min(p3,p4) >= 0) {
-      shouldAgree += atLeastZero(min(v4,p4) - max(v3,p3));
-    }
-    int numDisagree = vbt.countDisagreeUrl();
-    int shouldDisagree = 0;
-    if (max(v1,p1) <= d && d <= min(v2,p2)) {
-      // The URL they disagree on is in the first range they both have.
-      shouldAgree--;
-      shouldDisagree++;
-    } else if (max(v3,p3) <= d && d <= min(v4,p4)) {
-      // The URL they disagree on is in the second range they both have.
-      shouldAgree--;
-      shouldDisagree++;
-    }
-    int numVoterOnly = vbt.countVoterOnlyUrl();
-    int shouldVoterOnly = atLeastZero(p1 - v1) + atLeastZero(v2 - p2) +
-      atLeastZero(p3 - v3) + atLeastZero(v4 - p4);
-    int numPollerOnly = vbt.countPollerOnlyUrl();
-    int shouldPollerOnly = atLeastZero(v1 - p1) + atLeastZero(p2 - v2) +
-      atLeastZero(v3 - p3) + atLeastZero(p4 - v4);
-    assertEquals(shouldAgree, numAgree);
-    assertEquals(shouldDisagree, numDisagree);
-    assertEquals(shouldPollerOnly, numPollerOnly);
-    assertEquals(shouldVoterOnly, numVoterOnly);
   }
 
   private class MyContent {

@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.28.6.4 2013-02-09 16:15:49 dshr Exp $
+ * $Id: VoterActions.java,v 1.28.6.5 2013-02-21 04:59:23 dshr Exp $
  */
 
 /*
@@ -313,10 +313,10 @@ public class VoterActions {
 	int nPollerOnly = vbt.countPollerOnlyUrl();
 	ud.setNumPollerOnlyUrl(nPollerOnly);
 	log.debug("Symmetric poll result:" +
-		  " agree " + nAgree +
-		  " disagree " + nDisagree +
-		  " Voter only " + nVoterOnly +
-		  " Poller only " + nPollerOnly);
+		  " agree: " + nAgree +
+		  " disagree: " + nDisagree +
+		  " Voter only: " + nVoterOnly +
+		  " Poller only: " + nPollerOnly);
 	int total = nAgree + nDisagree + nVoterOnly + nPollerOnly;
 	float agree = 0.0f;
 	if (total > 0) {

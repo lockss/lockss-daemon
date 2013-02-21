@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.8 2012-06-25 23:10:22 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.8.10.1 2013-02-21 04:59:23 dshr Exp $
  */
 
 /*
@@ -173,7 +173,7 @@ final class UrlTallier {
 	// null sorts after everything else.
 	String url1 = o1.getUrl();
 	String url2 = o2.getUrl();
-	return StringUtil.compareToNullHigh(url1, url2);
+	return VoteBlock.compareUrls(url1, url2);
       }
     };
     this.participantsQueue =
@@ -186,7 +186,7 @@ final class UrlTallier {
       participantsQueue.add(entry);
     }
   }
-    
+
   /**
    * Release unneeded resources used by this object at the end of a poll.
    */

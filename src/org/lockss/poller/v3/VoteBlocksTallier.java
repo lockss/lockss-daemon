@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksTallier.java,v 1.1.2.4 2013-01-29 16:55:42 dshr Exp $
+ * $Id: VoteBlocksTallier.java,v 1.1.2.5 2013-02-21 04:59:23 dshr Exp $
  */
 
 /*
@@ -40,6 +40,8 @@ import org.lockss.hasher.HashBlock;
 import org.lockss.protocol.VoteBlock;
 import org.lockss.protocol.VoteBlocks;
 import org.lockss.protocol.VoteBlocksIterator;
+import org.lockss.config.Configuration;
+import org.lockss.config.CurrentConfig;
 import org.lockss.util.*;
 
 
@@ -53,16 +55,37 @@ import org.lockss.util.*;
  */
 public class VoteBlocksTallier {
   private static final Logger log = Logger.getLogger("VoteBlocksTallier");
-  private HashSet<String> agreeUrl = new HashSet<String>();
-  private HashSet<String> disagreeUrl = new HashSet<String>();
-  private HashSet<String> voterOnlyUrl = new HashSet<String>();
-  private HashSet<String> pollerOnlyUrl = new HashSet<String>();
+  // XXX DSHR cannot keep these lists of URLs in memory - need to put them
+  // XXX DSHR on disk, and make collecting them optional since we actually
+  // XXX DSHR only need the counts
+  private boolean keepUrlLists = false;
+  private ArrayList<String> agreeUrl = new ArrayList<String>();
+  private int agreeCount = 0;
+  private ArrayList<String> disagreeUrl = new ArrayList<String>();
+  private int disagreeCount = 0;
+  private ArrayList<String> voterOnlyUrl = new ArrayList<String>();
+  private int voterOnlyCount = 0;
+  private ArrayList<String> pollerOnlyUrl = new ArrayList<String>();
+  private int pollerOnlyCount = 0;
+
+  private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
+
+  /**
+   * If true, lists of agree/disagree/voterOnly/pollerOnly URLs will
+   * be kept. XXX see comment above
+   */
+  public static final String PARAM_KEEP_URL_LISTS =
+    PREFIX + "keepurlLists";
+  public static final boolean
+    DEFAULT_KEEP_URL_LISTS = false;
 
   public VoteBlocksTallier() {
   }
 
   public VoteBlocksTallier(VoteBlocks voterBlocks, VoteBlocks pollerBlocks) {
-    // log.setLevel(Logger.LEVEL_DEBUG3);
+    keepUrlLists = CurrentConfig.getBooleanParam(PARAM_KEEP_URL_LISTS,
+						 DEFAULT_KEEP_URL_LISTS);
+
     tallyVoteBlocks(voterBlocks, pollerBlocks);
   }
 
@@ -76,64 +99,91 @@ public class VoteBlocksTallier {
    */
   public void tallyVoteBlocks(VoteBlocks voterBlocks,
 				    VoteBlocks pollerBlocks) {
-    Comparator<VoteBlock> comparator = new Comparator<VoteBlock>() {
-      public int compare(VoteBlock vb, VoteBlock pb) {
-        // null sorts after everything else.
-        String vUrl = vb.getUrl();
-        String pUrl = pb.getUrl();
-	log.debug3("Compare(" + vUrl + "," + pUrl + ")");
-        return StringUtil.compareToNullHigh(vUrl, pUrl);
-      }
-    };
     // VoteBlocks.iterator() delivers VoteBlock instances in URL order.
     try {
       VoteBlocksIterator vIterator = voterBlocks.iterator();
       VoteBlocksIterator pIterator = pollerBlocks.iterator();
       VoteBlock vBlock = null;
+      VoteBlock oldVoterBlock = null;
       VoteBlock pBlock = null;
+      VoteBlock oldPollerBlock = null;
     
       while (true) {
 	if (vBlock == null && vIterator.hasNext()) {
 	  vBlock = vIterator.next();
 	}
+	if (vBlock != null && oldVoterBlock != null) {
+	  if (vBlock.compareTo(oldVoterBlock) < 0) {
+	    log.error("Voter VoteBlocks out of order");
+	    break;
+	  }
+	  oldVoterBlock = vBlock;
+	}
 	if (pBlock == null && pIterator.hasNext()) {
 	  pBlock = pIterator.next();
+	}
+	if (pBlock != null && oldPollerBlock != null) {
+	  if (pBlock.compareTo(oldPollerBlock) < 0) {
+	    log.error("Poller VoteBlocks out of order");
+	    break;
+	  }
+	  oldPollerBlock = pBlock;
 	}
 	if (vBlock == null && pBlock == null) {
 	  // Run out of blocks in both iterators
 	  break;
 	} else if (vBlock == null) {
-	  // Poller has blocks after Vote
-	  pollerOnlyUrl.add(pBlock.getUrl());
-	  // Consume the Voter's VoteBlock
+	  // Poller has blocks after Voter
+	  if (keepUrlLists) {
+	    pollerOnlyUrl.add(pBlock.getUrl());
+	  }
+	  pollerOnlyCount++;
+	  // Consume the Poller's VoteBlock
 	  pBlock = null;
 	} else if (pBlock == null) {
-	  voterOnlyUrl.add(vBlock.getUrl());
+	  // Voter has blocks after Poller
+	  if (keepUrlLists) {
+	    voterOnlyUrl.add(vBlock.getUrl());
+	  }
+	  voterOnlyCount++;
+	  // Consume the Voter's VoteBlock
 	  vBlock = null;
 	} else {
 	  String vUrl = vBlock.getUrl();
 	  String pUrl = pBlock.getUrl();
-	  int comparison = comparator.compare(vBlock, pBlock);
+	  int comparison = vBlock.compareTo(pBlock);
 	  if (comparison == 0) {
 	    log.debug3("Both have " + vUrl);
 	    // Voter and Poller both have this URL
 	    if (voteBlockAgree(vBlock, pBlock)) {
-	      agreeUrl.add(vUrl);
+	      if (keepUrlLists) {
+		agreeUrl.add(vUrl);
+	      }
+	      agreeCount++;
 	    } else {
-	      disagreeUrl.add(vUrl);
+	      if (keepUrlLists) {
+		disagreeUrl.add(vUrl);
+	      }
+	      disagreeCount++;
 	    }
 	    // Consume both VoteBlocks
 	    vBlock = pBlock = null;
 	  } else if (comparison < 0) {
 	    log.debug3("Voter has " + vUrl);
 	    // Voter has this URL, Poller doesn't
-	    voterOnlyUrl.add(vUrl);
+	    if (keepUrlLists) {
+	      voterOnlyUrl.add(vUrl);
+	    }
+	    voterOnlyCount++;
 	    // Consume the Voter's VoteBlock
 	    vBlock = null;
 	  } else {
 	    log.debug3("Poller has " + vUrl);
 	    // Poller has this URL, Voter doesn't
-	    pollerOnlyUrl.add(pUrl);;
+	    if (keepUrlLists) {
+	      pollerOnlyUrl.add(pUrl);
+	    }
+	    pollerOnlyCount++;
 	    // Consume the Poller's VoteBlock
 	    pBlock = null;
 	  }
@@ -154,6 +204,7 @@ public class VoteBlocksTallier {
   protected boolean voteBlockAgree(VoteBlock vBlock, VoteBlock pBlock) {
     // Build a HashSet of the poller's hashes. Works if elements are String
     // not if elements byte[]
+    // XXX DSHR should be the same code as in the poller
     HashSet<String> pHashes = new HashSet<String>();
     for (java.util.Iterator it = pBlock.versionIterator(); it.hasNext(); ) {
       VoteBlock.Version ver = (VoteBlock.Version)it.next();
@@ -183,27 +234,56 @@ public class VoteBlocksTallier {
    * @return count of URLs that agree
    */
   protected int countAgreeUrl() {
-    return agreeUrl.size();
+    return agreeCount;
+  }
+
+  /**
+   * @return List of URLs that agree
+   */
+  protected List<String> getAgreeUrls() {
+    return agreeUrl;
   }
 
   /**
    * @return count of URLs that disagree
    */
   protected int countDisagreeUrl() {
-    return disagreeUrl.size();
+    return disagreeCount;
+  }
+
+  /**
+   * @return List of URLs that disagree
+   */
+  protected List<String> getDisagreeUrls() {
+    return disagreeUrl;
   }
 
   /**
    * @return count of URLs that exist only at voter
    */
   protected int countVoterOnlyUrl() {
-    return voterOnlyUrl.size();
+    return voterOnlyCount;
+  }
+
+  /**
+   * @return List of URLs that exist only at voter
+   */
+  protected List<String> getVoterOnlyUrls() {
+    return voterOnlyUrl;
   }
 
   /**
    * @return count of URLs that exist only at poller
    */
   protected int countPollerOnlyUrl() {
-    return pollerOnlyUrl.size();
+    return pollerOnlyCount;
   }
+
+  /**
+   * @return List of URLs that exist only at poller
+   */
+  protected List<String> getPollerOnlyUrls() {
+    return pollerOnlyUrl;
+  }
+
 }

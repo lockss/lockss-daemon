@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.129.2.3 2013-01-28 21:35:55 dshr Exp $
+ * $Id: V3Poller.java,v 1.129.2.4 2013-02-21 04:59:23 dshr Exp $
  */
 
 /*
@@ -1131,7 +1131,9 @@ public class V3Poller extends BasePoll {
    * See V3Voter.blockHashComplete.
    */
   private void processSymmetricHashes(String url, HashBlock block) {
-    // XXX DSHR
+    // XXX DSHR it would be good if this were a utility. Perhaps
+    // XXX DSHR pass in the VoteBlocks object to which the VoteBlock
+    // XXX DSHR should be added and the range of indices in the HashBlock
     // Add each hash block version to this vote block.
     VoteBlock[] vba = new VoteBlock[getPollSize() + symmetricPollSize() +1];
     Iterator hashVersionIter = block.versionIterator();
@@ -2329,9 +2331,6 @@ public class V3Poller extends BasePoll {
   void lockParticipants() {
     // todo(bhayes): Nobody enforces, nobody checks.
     urlTallier = makeUrlTallier();
-  }
-
-  UrlTallier makeUrlTallier() {
     synchronized(theParticipants) {
       if (symmetricParticipants == null) {
 	// Initialize the list
@@ -2347,6 +2346,11 @@ public class V3Poller extends BasePoll {
 	  symmetricParticipants = al;
 	}
       }
+    }
+  }
+
+  UrlTallier makeUrlTallier() {
+    synchronized(theParticipants) {
       return new UrlTallier(new ArrayList(theParticipants.values()));
     }
   }

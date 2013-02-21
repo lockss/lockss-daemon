@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.77.8.6 2013-02-09 17:16:46 dshr Exp $
+ * $Id: V3Voter.java,v 1.77.8.7 2013-02-21 04:59:23 dshr Exp $
  */
 
 /*
@@ -132,7 +132,7 @@ public class V3Voter extends BasePoll {
    * mechanism (e.g., box proves it's the same one by returning a
    * short-lived cookie from a recent poll).
    */
-  public static final String PARAM_REPUTATION_TRANSFER_MAP =
+  public static final String PARAM_REUTATION_TRANSFER_MAP =
     PREFIX + "reputationTransferMap";
 
   /** 
@@ -969,18 +969,22 @@ public class V3Voter extends BasePoll {
                     plainDigest,
                     challengeDigest,
                     ver.getHashError() != null);
-      if (svb != null && ver.getHashes().length > 2) {
-	byte[] symmetricDigest = ver.getHashes()[2];
-	// Add a VoteBlock for the symmetric poll hashes
-	log.debug("Poll " + voterUserData.getPollKey() + " is symmetric:" +
-		  block.getUrl());
-	svb.addVersion(ver.getFilteredOffset(),
-		       ver.getFilteredLength(),
-		       ver.getUnfilteredOffset(),
-		       ver.getUnfilteredLength(),
-		       plainDigest,
-		       symmetricDigest,
-		       ver.getHashError() != null);
+      if (svb != null) {
+	if (ver.getHashes().length > 2) {
+	  byte[] symmetricDigest = ver.getHashes()[2];
+	  // Add a VoteBlock for the symmetric poll hashes
+	  log.debug("Poll " + voterUserData.getPollKey() + " is symmetric:" +
+		    block.getUrl());
+	  svb.addVersion(ver.getFilteredOffset(),
+			 ver.getFilteredLength(),
+			 ver.getUnfilteredOffset(),
+			 ver.getUnfilteredLength(),
+			 plainDigest,
+			 symmetricDigest,
+			 ver.getHashError() != null);
+	} else {
+	  log.error("Symmetric poll but no symmetric hashes.");
+	}
       }
     }
     
