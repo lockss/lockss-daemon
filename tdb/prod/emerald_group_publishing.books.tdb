@@ -11,6 +11,22 @@
 
   {
     title <
+      name = Advanced Series in Management ;
+      issn = 1877-6361 ;
+      issnl = 1877-6361
+    >
+
+    param[journal_issn] = 1877-6361
+
+    au < exists ; 978-1-84855-832-8 ; 1999 ; Advanced Series in Management Volume 6 ; 6 >
+    au < exists ; 978-0-85724-006-4 ; 2000 ; Relational Practices, Participative Organizing Volume 7 ; 7 >
+    au < exists ; 978-0-85724-973-9 ; 2001 ; Electronic HRM in Theory and Practice Volume 8 ; 8 >
+    au < exists ; 978-1-78052-674-4 ; 2002 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 ; 9 >
+
+  }
+  
+  {
+    title <
       name = Advances in Gender Research ;
       issn = 1529-2126 ;
       issnl = 1529-2126
