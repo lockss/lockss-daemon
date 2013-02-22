@@ -28,7 +28,7 @@
       au < testing ; 2009 ; Breviora Volume 518 ; 518 >
       au < testing ; 2010 ; Breviora Volume 519 ; 519 >
       au < testing ; 2010 ; Breviora Volume 520 ; 520 >     
-      au < testing ; 2011 ; Breviora Volume 521 ; 521 >
+      au < ready ; 2011 ; Breviora Volume 521 ; 521 >
       au < testing ; 2011 ; Breviora Volume 522 ; 522 >
       au < testing ; 2011 ; Breviora Volume 523 ; 523 >
       au < testing ; 2011 ; Breviora Volume 524 ; 524 >
@@ -63,8 +63,8 @@
       param[journal_id] = harv
       
       au < testing ; 2003-2007 ; Bulletin of the Museum of Comparative Zoology Volume 158 ; 158 >
-      au < testing ; 2007-2009 ; Bulletin of the Museum of Comparative Zoology Volume 159 ; 159 > 
-      au < testing ; 2010-2012 ; Bulletin of the Museum of Comparative Zoology Volume 160 ; 160 >
+      au < notReady ; 2007-2009 ; Bulletin of the Museum of Comparative Zoology Volume 159 ; 159 > 
+      au < ready ; 2010-2012 ; Bulletin of the Museum of Comparative Zoology Volume 160 ; 160 >
       au < expected ; 2013-2015 ; Bulletin of the Museum of Comparative Zoology Volume 161 ; 161 >
 
     }
