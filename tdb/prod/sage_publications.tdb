@@ -2959,27 +2959,6 @@
 
       }
       
-    }
-
-    {
-
-      title <
-        name = Asia Pacific Media Educator ;
-        issn = 1326-365X ;
-        issnl = 1326-365X
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://ajc.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < expected ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 >
-        au < expected ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 >
-
-      }
-
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -2996,6 +2975,26 @@
         au < released ; 2011 ; Asian Journal of Management Cases Volume 8 ; 8 >
         au < released ; 2012 ; Asian Journal of Management Cases Volume 9 ; 9 >
         au < expected ; 2013 ; Asian Journal of Management Cases Volume 10 ; 10 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Asia Pacific Media Educator ;
+        issn = 1326-365X ;
+        issnl = 1326-365X
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        comment[1] = needs base_url
+        comment[2] = implicit . status . year . name . param[volume_name] .
+
+        comment[3] = au . expected . 2012 . Asia Pacific Media Educator Volume 22 . 22 .
 
       }
 
@@ -40892,6 +40891,24 @@ comment[mpj] = now published by Brill
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2013 ; Annals of the ICRP Volume 43 ; 43 >
+
+    }
+
+    {
+
+      title <
+        name = Sociological Perspectives ;
+        issn = 0731-1214 ;
+        eissn = 1533-8673 ;
+        issnl = 0731-1214
+      >
+
+    comment[upcoming] = online 2014, Volume 57
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://sop.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2014 ; Sociological Perspectives Volume 57 ; 57 >
 
     }
 
