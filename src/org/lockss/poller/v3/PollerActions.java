@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.30 2010-09-01 07:54:33 tlipkis Exp $
+ * $Id: PollerActions.java,v 1.30.38.1 2013-02-22 20:07:16 dshr Exp $
  */
 
 /*
@@ -78,6 +78,16 @@ public class PollerActions {
     try {
       V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL);
       msg.setPollerNonce(ud.getPollerNonce());
+      int mod = ud.getModulus();
+      if (mod != 0) {
+	byte[] sampleNonce = ud.getSampleNonce();
+	if (sampleNonce != null && sampleNonce != ByteArray.EMPTY_BYTE_ARRAY) {
+	  msg.setModulus(mod);
+	  msg.setSampleNonce(sampleNonce);
+	} else {
+	  log.error("Modulus: " + mod + " but no sample nonce");
+	}
+      }
       msg.setEffortProof(ud.getIntroEffortProof());
       msg.setVoteDuration(ud.getPoller().getVoteDuration());
       msg.setExpiration(ud.getPoller().getPollMsgExpiration());

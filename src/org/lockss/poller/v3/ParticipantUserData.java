@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.29.16.1 2013-02-18 17:48:24 dshr Exp $
+ * $Id: ParticipantUserData.java,v 1.29.16.2 2013-02-22 20:07:16 dshr Exp $
  */
 
 /*
@@ -150,6 +150,7 @@ public class ParticipantUserData implements LockssSerializable {
   private byte[] repairEffortProof;
   private byte[] receiptEffortProof;
   private int modulus;
+  private byte[] sampleNonce;
   private boolean isVoteComplete = false;
   private boolean isOuterCircle = false;
   private PsmInterpStateBean psmState;
@@ -477,6 +478,17 @@ public class ParticipantUserData implements LockssSerializable {
     modulus = mod;
   }
 
+  public byte[] getSampleNonce() {
+    if (sampleNonce == null) {
+      return ByteArray.EMPTY_BYTE_ARRAY;
+    }
+    return sampleNonce;
+  }
+
+  public void setSampleNonce(byte[] sampleNonce) {
+    this.sampleNonce = sampleNonce;
+  }
+
   /** Poller delegate methods */
   void sendMessageTo(V3LcapMessage msg, PeerIdentity to) throws IOException {
     poller.sendMessageTo(msg, to);
@@ -507,7 +519,7 @@ public class ParticipantUserData implements LockssSerializable {
   public V3LcapMessage makeMessage(int opcode) {
     return new V3LcapMessage(getAuId(), getKey(), getPluginVersion(),
                              getPollerNonce(), getVoterNonce(), opcode,
-			     modulus,
+			     getModulus(), getSampleNonce(),
                              getDeadline(), getPollerId(), messageDir,
                              poller.getLockssDaemon());
   }

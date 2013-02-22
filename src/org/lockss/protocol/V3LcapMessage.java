@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.49.2.1 2013-02-18 17:48:25 dshr Exp $
+ * $Id: V3LcapMessage.java,v 1.49.2.2 2013-02-22 20:07:17 dshr Exp $
  */
 
 /*
@@ -153,6 +153,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   /** The modulus used to select URLs in a Proof of Possession poll */
   private int m_modulus;
 
+  /** The nonce used to select URLs in a Proof of Possession poll */
+  private byte[] m_sampleNonce;
+
   /** In Vote messages: A list of vote blocks for this vote. */
   VoteBlocks m_voteBlocks;
   
@@ -276,12 +279,13 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_voterNonce = voterNonce;
     m_opcode = opcode;
     m_modulus = 0;
+    m_sampleNonce = EMPTY_BYTE_ARRAY;
     m_originatorID = origin;
   }
 
   public V3LcapMessage(String auId, String pollKey, String pluginVersion,
                        byte[] pollerNonce, byte[] voterNonce, int opcode,
-		       int modulus,
+		       int modulus, byte[] sampleNonce,
                        long deadline, PeerIdentity origin, File messageDir,
                        LockssApp daemon) {
     this(messageDir, daemon);
@@ -294,6 +298,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_voterNonce = voterNonce;
     m_opcode = opcode;
     m_modulus = modulus;
+    m_sampleNonce = sampleNonce;
     m_originatorID = origin;
   }
 
@@ -380,6 +385,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     elapsed = m_props.getInt("elapsed", 0) * 1000L;
     m_opcode = m_props.getInt("opcode", -1);
     m_modulus = m_props.getInt("modulus", 0);
+    m_sampleNonce = m_props.getByteArray("sampleNonce", EMPTY_BYTE_ARRAY);
     m_archivalID = m_props.getProperty("au", "UNKNOWN");
     m_targetUrl = m_props.getProperty("url");
     m_pollerNonce = m_props.getByteArray("pollerNonce", EMPTY_BYTE_ARRAY);
@@ -534,6 +540,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_props.setProperty("key", m_key);
     m_props.putInt("opcode", m_opcode);
     m_props.putInt("modulus", m_modulus);
+    if (m_sampleNonce != null && m_sampleNonce != EMPTY_BYTE_ARRAY) {
+      m_props.putByteArray("sampleNonce", m_sampleNonce);
+    }
     if (m_targetUrl != null) {
       m_props.setProperty("url", m_targetUrl);
     }
@@ -672,6 +681,17 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
 
   public void setModulus(int mod) {
     m_modulus = mod;
+  }
+
+  public byte[] getSampleNonce() {
+    if (m_sampleNonce == null) {
+      return EMPTY_BYTE_ARRAY;
+    }
+    return m_sampleNonce;
+  }
+
+  public void setSampleNonce(byte[] sampleNonce) {
+    m_sampleNonce = sampleNonce;
   }
   
   public void setNak(PollNak nak) {

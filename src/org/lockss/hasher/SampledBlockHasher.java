@@ -1,5 +1,5 @@
 /*
- * $Id: SampledBlockHasher.java,v 1.1.2.1 2013-02-19 23:45:33 dshr Exp $
+ * $Id: SampledBlockHasher.java,v 1.1.2.2 2013-02-22 20:07:16 dshr Exp $
  */
 
 /*
@@ -48,20 +48,24 @@ import org.lockss.util.*;
 public class SampledBlockHasher extends BlockHasher {
   protected static Logger log = Logger.getLogger("SampledBlockHasher");
   protected int modulus = 0;
-  protected byte[] pollerNonce;
+  /* Because we want all participants in the poll to construct
+   * the same sample of URLs we can't reuse the poller or voter
+   * nonces because they are different for each participant.
+   */
+  protected byte[] sampleNonce;
   protected MessageDigest sampleHasher = null;
   protected String alg = null;
 
   public SampledBlockHasher(CachedUrlSet cus,
 			    int maxVersions,
 			    int modulus,
-			    byte[] pollerNonce,
+			    byte[] sampleNonce,
 			    MessageDigest[] digests,
 			    byte[][]initByteArrays,
 			    EventHandler cb) {
     super(cus, maxVersions, digests, initByteArrays, cb);
     this.modulus = modulus;
-    this.pollerNonce = pollerNonce;
+    this.sampleNonce = sampleNonce;
     alg =
       CurrentConfig.getParam(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
 			     BaseUrlCacher.DEFAULT_CHECKSUM_ALGORITHM);
@@ -71,7 +75,7 @@ public class SampledBlockHasher extends BlockHasher {
       log.error("No such hash algorithm: " + alg);
       throw new IllegalArgumentException("No such hash algorithm: " + alg);
     }
-    if (pollerNonce == null || sampleHasher == null || modulus <= 0) {
+    if (sampleNonce == null || sampleHasher == null || modulus <= 0) {
       throw new IllegalArgumentException("new SampledBlockHashher()");
     }
   }
@@ -79,16 +83,16 @@ public class SampledBlockHasher extends BlockHasher {
   public SampledBlockHasher(CachedUrlSet cus,
 			    int maxVersions,
 			    int modulus,
-			    byte[] pollerNonce,
+			    byte[] sampleNonce,
 			    MessageDigest[] digests,
 			    byte[][]initByteArrays,
 			    EventHandler cb,
 			    MessageDigest sampleHasher) {
     super(cus, maxVersions, digests, initByteArrays, cb);
     this.modulus = modulus;
-    this.pollerNonce = pollerNonce;
+    this.sampleNonce = sampleNonce;
     this.sampleHasher = sampleHasher;
-    if (pollerNonce == null || sampleHasher == null || modulus <= 0) {
+    if (sampleNonce == null || sampleHasher == null || modulus <= 0) {
       throw new IllegalArgumentException("new SampledBlockHasher()");
     }
     alg = sampleHasher.getAlgorithm();
@@ -109,7 +113,7 @@ public class SampledBlockHasher extends BlockHasher {
       log.debug3("url: " + urlName + " mod: " + modulus + " alg: " + alg);
       if (modulus > 0) {
 	// First hash the nonce and the current URL's name
-	sampleHasher.update(pollerNonce);
+	sampleHasher.update(sampleNonce);
 	sampleHasher.update(urlName.getBytes());
 	byte[] hash = sampleHasher.digest();
 	// Compare high byte with mod (simplifies test)

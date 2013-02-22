@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.130 2013-01-06 02:55:20 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.130.6.1 2013-02-22 20:07:16 dshr Exp $
  */
 
 /*
@@ -400,6 +400,8 @@ public class V3Poller extends BasePoll {
   // a little extra poll time is required to wait for pending repairs. 
   private long extraPollTime = DEFAULT_V3_EXTRA_POLL_TIME;
   private int quorum;
+  private int modulus = 0;
+  private byte[] sampleNonce = null;
   private int voteMargin;
   private int outerCircleTarget;
   private int maxRepairs = DEFAULT_MAX_REPAIRS;
@@ -1346,11 +1348,22 @@ public class V3Poller extends BasePoll {
                                  BlockHasher.EventHandler eh) {
     log.debug("Scheduling " + cu + "(" + maxVersions + ") hash for poll "
 	      + pollerState.getPollKey());
-    BlockHasher hasher = new BlockHasher(cu,
-					 maxVersions,
-                                         initHasherDigests(),
-                                         initHasherByteArrays(),
-                                         eh);
+    if (modulus != 0) {
+      sampleNonce = PollUtil.makeHashNonce(HASH_NONCE_LENGTH);
+    }
+    BlockHasher hasher = (modulus == 0 || sampleNonce == null ?
+			  new BlockHasher(cu,
+					  maxVersions,
+					  initHasherDigests(),
+					  initHasherByteArrays(),
+					  eh) :
+			  new SampledBlockHasher(cu,
+						 maxVersions,
+						 modulus,
+						 sampleNonce,
+						 initHasherDigests(),
+						 initHasherByteArrays(),
+						 eh));
     // Now schedule the hash
     HashService hashService = theDaemon.getHashService();
     

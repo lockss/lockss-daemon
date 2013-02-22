@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledBlockHasher.java,v 1.1.2.2 2013-02-20 20:03:42 dshr Exp $
+ * $Id: TestSampledBlockHasher.java,v 1.1.2.3 2013-02-22 20:07:17 dshr Exp $
  */
 
 /*
@@ -364,23 +364,23 @@ public class TestSampledBlockHasher extends LockssTestCase {
     public MySampledBlockHasher(CachedUrlSet cus,
 				int maxVersions,
 				int modulus,
-				byte[] pollerNonce,
+				byte[] sampleNonce,
 				MessageDigest[] digests,
 				byte[][] initByteArrays,
 				EventHandler cb) {
-      super(cus, maxVersions, modulus, pollerNonce, digests, initByteArrays,
+      super(cus, maxVersions, modulus, sampleNonce, digests, initByteArrays,
 	    cb);
     }
 
     public MySampledBlockHasher(CachedUrlSet cus,
 				int maxVersions,
 				int modulus,
-				byte[] pollerNonce,
+				byte[] sampleNonce,
 				MessageDigest[] digests,
 				byte[][] initByteArrays,
 				EventHandler cb,
 				MessageDigest sampleHasher) {
-      super(cus, maxVersions, modulus, pollerNonce, digests, initByteArrays,
+      super(cus, maxVersions, modulus, sampleNonce, digests, initByteArrays,
 	    cb, sampleHasher);
     }
 
@@ -394,7 +394,7 @@ public class TestSampledBlockHasher extends LockssTestCase {
       return peerDigests[ix];
     }
     public byte[] getPollerNonce() {
-      return pollerNonce;
+      return sampleNonce;
     }
     public int getMod() {
       return modulus;

@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.24.14.1 2013-02-18 17:48:24 dshr Exp $
+ * $Id: VoterUserData.java,v 1.24.14.2 2013-02-22 20:07:17 dshr Exp $
  */
 
 /*
@@ -70,6 +70,7 @@ public class VoterUserData
   private byte[] repairEffortProof;
   private byte[] receiptEffortProof;
   private int modulus;
+  private byte[] sampleNonce;
   private boolean hashingDone = false;
   private boolean voteRequested = false;
   private long createTime;
@@ -195,6 +196,14 @@ public class VoterUserData
 
   public void setModulus(int mod) {
     modulus = mod;
+  }
+
+  public byte[] getSampleNonce() {
+    return sampleNonce;
+  }
+
+  public void setSampleNonce(byte[] sampleNonce) {
+    this.sampleNonce = sampleNonce;
   }
 
   public byte[] getIntroEffortProof() {
@@ -430,7 +439,7 @@ public class VoterUserData
   public V3LcapMessage makeMessage(int opcode) {
     return new V3LcapMessage(getAuId(), getPollKey(), getPluginVersion(),
                              getPollerNonce(), getVoterNonce(), opcode,
-			     getModulus(),
+			     getModulus(), getSampleNonce(),
                              getDeadline(), getPollerId(), messageDir,
                              voter.getLockssDaemon());
   }

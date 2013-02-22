@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.77.14.1 2013-02-18 17:48:24 dshr Exp $
+ * $Id: V3Voter.java,v 1.77.14.2 2013-02-22 20:07:16 dshr Exp $
  */
 
 /*
@@ -844,11 +844,21 @@ public class V3Voter extends BasePoll {
    */
   boolean generateVote() throws NoSuchAlgorithmException {
     log.debug("Scheduling vote hash for poll " + voterUserData.getPollKey());
-    BlockHasher hasher =
-      new BlockHasher(voterUserData.getCachedUrlSet(),
-		      initHasherDigests(),
-		      initHasherByteArrays(),
-		      new BlockEventHandler());
+    int mod = voterUserData.getModulus();
+    CachedUrlSet cus = voterUserData.getCachedUrlSet();
+    byte[] sampleNonce = voterUserData.getSampleNonce();
+    BlockHasher hasher = (mod == 0 ?
+			  new BlockHasher(cus,
+					  initHasherDigests(),
+					  initHasherByteArrays(),
+					  new BlockEventHandler()) :
+			  new SampledBlockHasher(cus,
+						 -1, // XXX maxversions?
+						 mod,
+						 sampleNonce,
+						 initHasherDigests(),
+						 initHasherByteArrays(),
+						 new BlockEventHandler()));
     if (subChecker != null) {
       hasher.setSubstanceChecker(subChecker);
     }
