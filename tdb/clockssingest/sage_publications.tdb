@@ -2643,7 +2643,7 @@
 
       {
 
-        pluginSuffix = HighWirePressH20Plugin
+        pluginSuffix = ClockssHighWirePressH20Plugin
         comment[1] = needs base_url
         comment[2] = implicit . status . year . name . param[volume_name] .
 
@@ -3092,7 +3092,7 @@
 
       {
 
-        pluginSuffix = HighWirePressH20Plugin
+        pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://tbt.sagepub.com/
         implicit < status ; status2 ; year ; name ; param[volume_name] >
 
@@ -7809,7 +7809,7 @@
 
       {
 
-        pluginSuffix = HighWirePressH20Plugin
+        pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://elr.sagepub.com/
         implicit < status ; status2 ; year ; name ; param[volume_name] >
 
@@ -25027,7 +25027,7 @@
 
       {
 
-        pluginSuffix = HighWirePressH20Plugin
+        pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://mac.sagepub.com/
         implicit < status ; status2 ; year ; name ; param[volume_name] >
 
@@ -30172,7 +30172,7 @@
 
       {
 
-        pluginSuffix = HighWirePressH20Plugin
+        pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://rme.sagepub.com/
         implicit < status ; status2 ; year ; name ; param[volume_name] >
 
@@ -30198,7 +30198,7 @@
 
       {
 
-        pluginSuffix = HighWirePressH20Plugin
+        pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://ram.sagepub.com/
         implicit < status ; status2 ; year ; name ; param[volume_name] >
 
@@ -37608,7 +37608,7 @@
       >
 
     comment[upcoming] = online 2013
-    pluginSuffix = HighWirePressH20Plugin
+    pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://cph.sagepub.com/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
