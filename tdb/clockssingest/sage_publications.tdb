@@ -2633,6 +2633,26 @@
 
   }
 
+    {
+
+      title <
+        name = Asia Pacific Media Educator ;
+        issn = 1326-365X ;
+        issnl = 1326-365X
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        comment[1] = needs base_url
+        comment[2] = implicit . status . year . name . param[volume_name] .
+
+        comment[3] = au . expected . 2012 . Asia Pacific Media Educator Volume 22 . 22 .
+
+      }
+
+    }
+
   {
   
     title <
@@ -3062,6 +3082,25 @@
     }
 
   }
+
+    {
+
+      title <
+        name = The Bible Translator ;
+        issn = 0260-0935
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tbt.sagepub.com/
+        implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+        au < expected ; exists ; 2013 ; The Bible Translator Volume 64 ; 64 >
+
+      }
+
+    }
 
   {
   
@@ -7758,6 +7797,27 @@
     }
 
   }
+
+    {
+
+      title <
+        name = The Economic and Labour Relations Review ;
+        issn = 1035-3046 ;
+        eissn = 1838-2673 ;
+        issnl = 1035-3046
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://elr.sagepub.com/
+        implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+        au < expected ; exists ; 2013 ; The Economic and Labour Relations Review Volume 1 ; 1 >
+
+      }
+
+    }
 
   {
   
@@ -24957,6 +25017,26 @@
 
   }
 
+    {
+
+      title <
+        name = Measurement and Control ;
+        issn = 0020-2940 ;
+        eissn = 2051-8730 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://mac.sagepub.com/
+        implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+        au < expected ; exists ; 2013 ; Measurement and Control Volume 1 ; 1 >
+
+      }
+
+    }
+
   {
   
     title <
@@ -30082,6 +30162,57 @@
     }
 
   }
+
+    {
+
+      title <
+        name = Recherche et Applications en Marketing (English Edition) ;
+        eissn = 2051-5707 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://rme.sagepub.com/
+        implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+        au < exists ; exists ; 2007 ; Recherche et Applications en Marketing (English Edition) Volume 22 ; 22 >
+        au < exists ; exists ; 2008 ; Recherche et Applications en Marketing (English Edition) Volume 23 ; 23 >
+        au < exists ; exists ; 2009 ; Recherche et Applications en Marketing (English Edition) Volume 24 ; 24 >
+        au < exists ; exists ; 2010 ; Recherche et Applications en Marketing (English Edition) Volume 25 ; 25 >
+        au < exists ; exists ; 2011 ; Recherche et Applications en Marketing (English Edition) Volume 26 ; 26 >
+        au < expected ; exists ; 2012 ; Recherche et Applications en Marketing (English Edition) Volume 27 ; 27 >
+        au < expected ; exists ; 2013 ; Recherche et Applications en Marketing (English Edition) Volume 28 ; 28 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Recherche et Applications en Marketing ;
+        issn = 0767-3701 ;
+        eissn = 2051-2821 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ram.sagepub.com/
+        implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+        au < exists ; exists ; 2007 ; Recherche et Applications en Marketing Volume 22 ; 22 >
+        au < exists ; exists ; 2008 ; Recherche et Applications en Marketing Volume 23 ; 23 >
+        au < exists ; exists ; 2009 ; Recherche et Applications en Marketing Volume 24 ; 24 >
+        au < exists ; exists ; 2010 ; Recherche et Applications en Marketing Volume 25 ; 25 >
+        au < exists ; exists ; 2011 ; Recherche et Applications en Marketing Volume 26 ; 26 >
+        au < expected ; exists ; 2012 ; Recherche et Applications en Marketing Volume 27 ; 27 >
+        au < expected ; exists ; 2013 ; Recherche et Applications en Marketing Volume 28 ; 28 >
+
+      }
+
+    }
 
   {
   
@@ -37465,6 +37596,23 @@
     param[base_url] = http://cjo.sagepub.com/
 
     au < exists ; exists ; 2013 ; Canadian Journal of Occupational Therapy Volume 1 ; 1 ; >
+
+    }
+
+    {
+
+      title <
+        name = Canadian Pharmacists Journal  ;
+        issn = 1715-1635 ;
+        eissn = 1913-701X 
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://cph.sagepub.com/
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+    au < exists ; exists ; 2013 ; Canadian Pharmacists Journal  Volume 1 ; 1 >
 
     }
 
