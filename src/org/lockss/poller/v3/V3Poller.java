@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.130.6.1 2013-02-22 20:07:16 dshr Exp $
+ * $Id: V3Poller.java,v 1.130.6.2 2013-02-23 00:18:05 dshr Exp $
  */
 
 /*
@@ -373,6 +373,13 @@ public class V3Poller extends BasePoll {
     PREFIX + "enableHashStats";
   public static final boolean DEFAULT_V3_ENABLE_HASH_STATS = false;
   
+  /**
+   * Override default setting of modulus to force PoP polls for testing
+   */
+  public static final String PARAM_V3_MODULUS =
+    PREFIX + "modulus";
+  public static final int DEFAULT_V3_MODULUS = 0;
+  
   /** Length of poller and voter challenges */
   public static final int HASH_NONCE_LENGTH = 20;
 
@@ -597,6 +604,7 @@ public class V3Poller extends BasePoll {
 				     DEFAULT_LOG_UNIQUE_VERSIONS);
     enableHashStats = c.getBoolean(PARAM_V3_ENABLE_HASH_STATS,
 				   DEFAULT_V3_ENABLE_HASH_STATS);
+    modulus = c.getInt(PARAM_V3_MODULUS, DEFAULT_V3_MODULUS);
   }
 
   PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {
