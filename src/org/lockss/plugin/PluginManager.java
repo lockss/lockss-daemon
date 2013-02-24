@@ -1,10 +1,10 @@
 /*
- * $Id: PluginManager.java,v 1.238 2013-01-09 09:39:13 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.238.2.1 2013-02-24 02:57:10 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -196,6 +196,14 @@ public class PluginManager
   public static final String DEFAULT_PREFERRED_PLUGIN_TYPE =
     "xml";
 
+  /** Step function returns the desired size of an AU search set, given the
+   * number of AUs in the search set */
+  public static final String PARAM_AU_SEARCH_CACHE_SIZE =
+    Configuration.PREFIX + "auSearchCacheSize";
+  public static final String DEFAULT_AU_SEARCH_CACHE_SIZE =
+    "[1,0],[2,1],[5,2],[10,3],[50,10],[200,20]";
+
+
   /** Root of TitleSet definitions.  */
   public static final String PARAM_TITLE_SETS =
     Configuration.PREFIX + "titleSet";
@@ -255,17 +263,7 @@ public class PluginManager
   // maps host to collections of AUs.  Used to quickly locate candidate AUs
   // for incoming URLs.  Each collection is sorted in AU order (for proxy
   // manifest index display).
-  private MultiMap hostAus = new HostAuMap();
-
-  private static class HostAuMap extends MultiValueMap {
-    HostAuMap() {
-      super(new HashMap(),
-	    new org.apache.commons.collections.Factory() {
-	      public Object create() {
-		return new ArrayList(3);
-	      }});
-    }
-  }
+  private Map<String,AuSearchSet> hostAus = new HashMap<String,AuSearchSet>();
 
   private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
 
@@ -297,6 +295,7 @@ public class PluginManager
   private boolean paramDisableURLConnectionCache =
     DEFAULT_DISABLE_URL_CONNECTION_CACHE;
   private boolean acceptExpiredCertificates = DEFAULT_ACCEPT_EXPIRED_CERTS;
+  private IntStepFunction auSearchCacheSizeFunc;
 
   private Map titleMap = null;
   private List allTitles = null;
@@ -455,6 +454,12 @@ public class PluginManager
 	initKeystore(configMgr.getCurrentConfig());
       }
 
+      if (changedKeys.contains(PARAM_AU_SEARCH_CACHE_SIZE)) {
+	String func = config.get(PARAM_AU_SEARCH_CACHE_SIZE,
+				 DEFAULT_AU_SEARCH_CACHE_SIZE);
+	auSearchCacheSizeFunc = new IntStepFunction(func);
+      }
+
       useDefaultPluginRegistries =
 	config.getBoolean(PARAM_USE_DEFAULT_PLUGIN_REGISTRIES,
 			  DEFAULT_USE_DEFAULT_PLUGIN_REGISTRIES);
@@ -495,6 +500,10 @@ public class PluginManager
 	configureAllPlugins(config);
       }
     }
+  }
+
+  public IntStepFunction getAuSearchCacheSizeFunc() {
+    return auSearchCacheSizeFunc;
   }
 
   private enum SkipConfigCondition {ConfigUnchanged, AuRunning};
@@ -1043,40 +1052,57 @@ public class PluginManager
 
   public void addHostAus(ArchivalUnit au) {
     try {
-      Collection stems = au.getUrlStems();
-      if (stems != null) {
-	synchronized (hostAus) {
-	  for (Iterator iter = stems.iterator(); iter.hasNext();) {
-	    String stem = (String)iter.next();
-	    stem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(stem));
-	    log.debug2("Adding stem: " + stem + ", " + au);
-	    hostAus.put(stem, au);
-	  }
+      synchronized (hostAus) {
+	for (String stem : normalizeStems(au.getUrlStems())) {
+	  log.debug2("Adding stem: " + stem + ", " + au);
+	  addStem(stem, au);
 	}
       }
     } catch (Exception e) {
-      log.warning("addHostAus()", e);
+      log.error("addHostAus()", e);
     }
+  }
+
+  private void addStem(String stem, ArchivalUnit au) {
+    AuSearchSet searchSet = hostAus.get(stem);
+    if (searchSet == null) {
+      searchSet = new AuSearchSet(this);
+      hostAus.put(stem, searchSet);
+    }
+    searchSet.addAu(au);
   }
 
   private void delHostAus(ArchivalUnit au) {
     try {
-      Collection stems = au.getUrlStems();
-      if (stems != null) {
-	synchronized (hostAus) {
-	  for (Iterator iter = stems.iterator(); iter.hasNext();) {
-	    String stem = (String)iter.next();
-	    stem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(stem));
-	    log.debug2("Removing stem: " + stem + ", " + au);
-	    hostAus.remove(stem, au);
-	  }
+      synchronized (hostAus) {
+	for (String stem : normalizeStems(au.getUrlStems())) {
+	  log.debug2("Removing stem: " + stem + ", " + au);
+	  delStem(stem, au);
 	}
       }
     } catch (Exception e) {
-      log.warning("delHostAus()", e);
+      log.error("delHostAus()", e);
     }
   }
 
+  private void delStem(String stem, ArchivalUnit au) {
+    AuSearchSet searchSet = hostAus.get(stem);
+    if (searchSet != null) {
+      searchSet.delAu(au);
+      if (searchSet.isEmpty()) {
+	hostAus.remove(stem);
+      }
+    }
+  }
+
+  private List<String> normalizeStems(final Collection<String> stems)
+      throws MalformedURLException {
+    return new ArrayList<String>() {{
+	for (String stem : stems) {
+	  add(UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(stem)));
+	}
+      }};
+  }
 
   // These don't belong here
   /**
@@ -1715,8 +1741,6 @@ public class PluginManager
 
   /** Return a collection of all AUs that have content on the host of this
    * url, sorted in AU title order.  */
-  // This method needs to copy the list anyway, to avoid CME, so this is as
-  // good a place as any to sort it.
   //  XXX Should do something about the redundant normalization involved in
   // calling more than one of these methods
   public Collection<ArchivalUnit> getCandidateAus(String url) 
@@ -1727,14 +1751,11 @@ public class PluginManager
 
   public Collection<ArchivalUnit> getCandidateAusFromStem(String normStem) {
     synchronized (hostAus) {
-      Collection<ArchivalUnit> cand = (Collection)hostAus.get(normStem);
-      if (cand != null) {
-	Set<ArchivalUnit> res = 
-	    new TreeSet<ArchivalUnit>(new AuOrderComparator());
-	res.addAll(cand);
-	cand = res;
+      AuSearchSet searchSet = hostAus.get(normStem);
+      if (searchSet != null) {
+	return searchSet.getSortedAus();
       }
-      return cand;
+      return null;
     }
   }  
 
@@ -1750,12 +1771,16 @@ public class PluginManager
     }
   }
 
-  // Return actual list of candiate AUs, used only for testing
+  // Return  list of candiate AUs, used only for testing
   List<ArchivalUnit> getRawCandidateAus(String url) 
       throws MalformedURLException {
     String normStem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(url));
     synchronized (hostAus) {
-      return (List)hostAus.get(normStem);
+      AuSearchSet searchSet = hostAus.get(normStem);
+      if (searchSet == null) {
+	return Collections.EMPTY_LIST;
+      }
+      return ListUtil.fromIterator(searchSet.iterator());
     }
   }
 
@@ -1940,18 +1965,25 @@ public class PluginManager
       log.warning("findCachedUrls(" + url + ")", e);
       return Collections.EMPTY_LIST;
     }
+    AuSearchSet searchSet;
     synchronized (hostAus) {
-      ArrayList candidateAus = (ArrayList)hostAus.get(normStem);
-      if (candidateAus == null) {
-	log.debug3("findCachedUrls: No AUs for " + normStem);
-	return Collections.EMPTY_LIST;
+      searchSet = hostAus.get(normStem);
+    }
+    if (searchSet == null) {
+      if (log.isDebug3() ) log.debug3("findCachedUrls: No AUs for " + normStem);
+      return Collections.EMPTY_LIST;
+    }
+    CachedUrl bestCu = null;
+    ArchivalUnit bestAu = null;
+    int bestScore = 8;
+    for (ArchivalUnit au : searchSet) {
+
+      if (!isActiveAu(au)) {
+	// This loop can run concurrently with other threads manipulating
+	// set of active AUs, so this AU might still disappear at any point.
+	continue;
       }
-      CachedUrl bestCu = null;
-      int bestAuIx = -1;
-      int bestScore = 8;
-      int auIx = 0;
-      for (Iterator iter = candidateAus.iterator(); iter.hasNext(); auIx++) {
-	ArchivalUnit au = (ArchivalUnit)iter.next();
+      try {
 	if (isTrace) {
 	  log.debug3("findCachedUrls: " + normUrl + " check "
 		     + au.toString());
@@ -1961,88 +1993,88 @@ public class PluginManager
 	  if (isTrace) log.debug3("Recognized archive member: " + ams);
 	  normUrl = ams.getUrl();
 	}
+	String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
+	if (isTrace && !siteUrl.equals(normUrl)) {
+	  log.debug3("Site normalized to: " + siteUrl);
+	}
+// 	normUrl = siteUrl;
 	if (au.shouldBeCached(normUrl)) {
 	  if (isTrace) {
 	    log.debug3("findCachedUrls: " + normUrl + " should be in "
 		       + au.getAuId());
 	  }
-	  try {
-	    String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
-	    CachedUrl cu = au.makeCachedUrl(siteUrl);
-	    if (ams != null) {
-	      cu = cu.getArchiveMemberCu(ams);
-	    }
-	    if (isTrace) {
-	      log.debug3("findCachedUrls(" + siteUrl + ") = " + cu);
-	    }
-	    if (cu == null) {
-	      // can this happen?
-	      continue;
-	    }
-	    boolean hasCont = false;
-	    if (contentReq.wantsContent()) {
-	      hasCont = cu.hasContent();
-	    }
-	    if (bestOnly) {
-	      int auScore = auScore(au, cu, contentReq, hasCont);
-	      switch (action(contentReq, hasCont)) {
-	      case Ignore:
-		break;
-	      case RetCu:
-		makeFirstCandidate(candidateAus, auIx);
-		if (isTrace) log.debug3("findCachedUrls: ret: " + siteUrl);
-		res.add(cu);
-		return res;
-	      case UpdateBest:
-		if (bestCu == null || auScore < bestScore) {
-		  AuUtil.safeRelease(bestCu);
-		  bestCu = cu;
-		  bestAuIx = auIx;
-		  bestScore = auScore;
-		} else {
-		  AuUtil.safeRelease(cu);
-		}
-		break;
+	  CachedUrl cu = au.makeCachedUrl(siteUrl);
+	  if (ams != null) {
+	    cu = cu.getArchiveMemberCu(ams);
+	  }
+	  if (isTrace) {
+	    log.debug3("findCachedUrls(" + siteUrl + ") = " + cu);
+	  }
+	  if (cu == null) {
+	    // can this happen?
+	    continue;
+	  }
+	  boolean hasCont = false;
+	  if (contentReq.wantsContent()) {
+	    hasCont = cu.hasContent();
+	  }
+	  if (bestOnly) {
+	    int auScore = auScore(au, cu, contentReq, hasCont);
+	    switch (action(contentReq, hasCont)) {
+	    case Ignore:
+	      break;
+	    case RetCu:
+	      makeFirstCandidate(searchSet, au);
+	      if (isTrace) log.debug3("findCachedUrls: ret: " + siteUrl);
+	      res.add(cu);
+	      return res;
+	    case UpdateBest:
+	      if (bestCu == null || auScore < bestScore) {
+		AuUtil.safeRelease(bestCu);
+		bestCu = cu;
+		bestAu = au;
+		bestScore = auScore;
+	      } else {
+		AuUtil.safeRelease(cu);
 	      }
-	    } else {
-	      switch (action(contentReq, hasCont)) {
-	      case Ignore:
-		break;
-	      case RetCu:
-	      case UpdateBest:
+	      break;
+	    }
+	  } else {
+	    switch (action(contentReq, hasCont)) {
+	    case Ignore:
+	      break;
+	    case RetCu:
+	    case UpdateBest:
 	      res.add(cu);
 	      break;
-	      }
 	    }
-	  } catch (MalformedURLException ignore) {
-	    // ignored
-	  } catch (PluginBehaviorException ignore) {
-	    // ignored
 	  }
 	}
+      } catch (MalformedURLException ignore) {
+	// ignored
+      } catch (PluginBehaviorException ignore) {
+	// ignored
+      } catch (RuntimeException ignore) {
+	// ignored
       }
-      if (bestOnly) {
-	if (bestCu != null) {
-	  res.add(bestCu);
-	  makeFirstCandidate(candidateAus, bestAuIx);
-	  if (isTrace) {
-	    log.debug3("bestCu was " +
-		       (bestCu == null ? "null" : bestCu.toString()));
-	  }
-	}
-      }
-      return res;
     }
+    if (bestOnly) {
+      if (bestCu != null) {
+	res.add(bestCu);
+	makeFirstCandidate(searchSet, bestAu);
+	if (isTrace) {
+	  log.debug3("bestCu was " +
+		     (bestCu == null ? "null" : bestCu.toString()));
+	}
+      }
+    }
+    return res;
   }
 
   // Move the AU in which we found the CU to the head of the list, as it's
   // likely next request will be for the same AU.
-  private void makeFirstCandidate(List lst, int ix) {
-    if (ix > 0) {
-      synchronized (hostAus) {
-	Collections.swap(lst, ix, 0);
-      }
-    }
+  private void makeFirstCandidate(AuSearchSet searchSet, ArchivalUnit au) {
+    searchSet.addToCache(au);
   }
 
   enum FindUrlAction {Ignore, RetCu, UpdateBest}
