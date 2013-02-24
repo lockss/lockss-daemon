@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.44 2012-11-06 01:26:21 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.45 2013-02-24 04:54:19 dshr Exp $
  */
 
 /*
@@ -1274,6 +1274,29 @@ public class V3PollStatus {
       summary.add(new SummaryInfo("Voter Nonce",
                                   ColumnDescriptor.TYPE_STRING,
                                   ByteArray.toBase64(voter.getVoterNonce())));
+      byte[] nonce2 = userData.getVoterNonce2();
+      if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
+	// Its a symmetric poll
+	summary.add(new SummaryInfo("Voter Nonce2",
+				    ColumnDescriptor.TYPE_STRING,
+				    ByteArray.toBase64(nonce2)));
+	if (voter.getStatus() == STATUS_COMPLETE) {
+	  summary.add(new SummaryInfo("Agreeing URLs",
+				      ColumnDescriptor.TYPE_INT,
+				      userData.getNumAgreeUrl()));
+	  summary.add(new SummaryInfo("Disagreeing URLs",
+				      ColumnDescriptor.TYPE_INT,
+				      userData.getNumDisagreeUrl()));
+	  summary.add(new SummaryInfo("Voter only URLs",
+				      ColumnDescriptor.TYPE_INT,
+				      userData.getNumVoterOnlyUrl()));
+	  summary.add(new SummaryInfo("Poller only URLs",
+				      ColumnDescriptor.TYPE_INT,
+				      userData.getNumPollerOnlyUrl()));
+	}
+      }
+	
+	
       return summary;
     }
 

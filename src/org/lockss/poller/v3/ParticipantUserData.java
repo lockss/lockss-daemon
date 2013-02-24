@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.29 2012-07-02 16:21:01 tlipkis Exp $
+ * $Id: ParticipantUserData.java,v 1.30 2013-02-24 04:54:19 dshr Exp $
  */
 
 /*
@@ -140,9 +140,11 @@ public class ParticipantUserData implements LockssSerializable {
   private PeerIdentity voterId;
   private String hashAlgorithm;
   private VoteBlocks voteBlocks;
+  private VoteBlocks symmetricVoteBlocks;
   private List nominees;
   private byte[] pollerNonce;
   private byte[] voterNonce;
+  private byte[] voterNonce2;
   // XXX: Effort proofs may eventually not be byte arrays.
   private byte[] introEffortProof;
   private byte[] pollAckEffortProof;
@@ -279,6 +281,16 @@ public class ParticipantUserData implements LockssSerializable {
     this.voterNonce = voterNonce;
   }
 
+  public byte[] getVoterNonce2() {
+    return voterNonce2;
+  }
+
+  public void setVoterNonce2(byte[] voterNonce2) {
+    if (voterNonce2 != null && voterNonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
+      this.voterNonce2 = voterNonce2;
+    }
+  }
+
   public void setIntroEffortProof(byte[] b) {
     this.introEffortProof = b;
   }
@@ -325,6 +337,14 @@ public class ParticipantUserData implements LockssSerializable {
 
   public VoteBlocks getVoteBlocks() {
     return voteBlocks;
+  }
+
+  public void setSymmetricVoteBlocks(VoteBlocks blocks) {
+    symmetricVoteBlocks = blocks;
+  }
+
+  public VoteBlocks getSymmetricVoteBlocks() {
+    return symmetricVoteBlocks;
   }
 
   public void addHashStats(VoteBlock vb) {
@@ -497,8 +517,8 @@ public class ParticipantUserData implements LockssSerializable {
    */
   public V3LcapMessage makeMessage(int opcode) {
     return new V3LcapMessage(getAuId(), getKey(), getPluginVersion(),
-                             getPollerNonce(), getVoterNonce(), opcode,
-                             getDeadline(), getPollerId(), messageDir,
+                             getPollerNonce(), getVoterNonce(), getVoterNonce2(),
+			     opcode,getDeadline(), getPollerId(), messageDir,
                              poller.getLockssDaemon());
   }
   

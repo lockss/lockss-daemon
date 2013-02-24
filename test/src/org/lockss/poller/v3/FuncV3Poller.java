@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Poller.java,v 1.21 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: FuncV3Poller.java,v 1.22 2013-02-24 04:54:20 dshr Exp $
  */
 
 /*
@@ -78,6 +78,7 @@ public class FuncV3Poller extends LockssTestCase {
   private V3LcapMessage[] votes;
   private byte[][] pollerNonces;
   private byte[][] voterNonces;
+  private byte[][] voterNonce2s;
   private File tempDir;
 
   private static final String BASE_URL = "http://www.test.org/";
@@ -153,6 +154,7 @@ public class FuncV3Poller extends LockssTestCase {
     this.voters = makeVoters(4);
     this.pollerNonces = makeNonces();
     this.voterNonces = makeNonces();
+    this.voterNonce2s = makeNonces();
     this.pollAcks = makePollAckMessages();
     this.nominates = makeNominateMessages();
     this.votes = makeVoteMessages();
@@ -212,7 +214,8 @@ public class FuncV3Poller extends LockssTestCase {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
       msgs[i] = new V3LcapMessage("auid", "key", "3", pollerNonces[i],
-                                  voterNonces[i], V3LcapMessage.MSG_POLL_ACK,
+                                  voterNonces[i], voterNonce2s[i],
+				  V3LcapMessage.MSG_POLL_ACK,
                                   123456789, voters[i], tempDir, theDaemon);
     }
     return msgs;
@@ -223,6 +226,7 @@ public class FuncV3Poller extends LockssTestCase {
     for (int i = 0; i < voters.length; i++) {
       V3LcapMessage msg = new V3LcapMessage("auid", "key", "3",
                                             pollerNonces[i], voterNonces[i],
+					    voterNonce2s[i],
                                             V3LcapMessage.MSG_NOMINATE,
                                             123456789, voters[i], tempDir,
                                             theDaemon);
@@ -240,6 +244,7 @@ public class FuncV3Poller extends LockssTestCase {
     for (int i = 0; i < voters.length; i++) {
       V3LcapMessage msg = new V3LcapMessage("auid", "key", "3",
                                             pollerNonces[i], voterNonces[i],
+					    voterNonce2s[i],
                                             V3LcapMessage.MSG_VOTE, 123456789,
                                             voters[i], tempDir, theDaemon);
       for (Iterator it = voteBlocks.iterator(); it.hasNext(); ) {

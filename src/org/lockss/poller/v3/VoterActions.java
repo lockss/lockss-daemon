@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.28 2012-09-21 20:55:15 barry409 Exp $
+ * $Id: VoterActions.java,v 1.29 2013-02-24 04:54:19 dshr Exp $
  */
 
 /*
@@ -95,6 +95,7 @@ public class VoterActions {
     // Accept the poll and set status
     ud.setStatus(V3Voter.STATUS_ACCEPTED_POLL);
     msg.setVoterNonce(ud.getVoterNonce());
+    msg.setVoterNonce2(ud.getVoterNonce2());
     msg.setExpiration(ud.getVoter().getHashStartTime());
     msg.setRetryMax(1);
 
@@ -294,8 +295,38 @@ public class VoterActions {
     // Remember the agreement hint in the agreement history for the AU
     PeerIdentity poller = ud.getPollerId();
     IdentityManager idmgr = ud.getVoter().getIdentityManager();
-    idmgr.signalPartialAgreementHint(poller, ud.getVoter().getAu(),
-				     (float) agreementHint);
+    ArchivalUnit au = ud.getVoter().getAu();
+    idmgr.signalPartialAgreementHint(poller, au, (float) agreementHint);
+    byte[] nonce2 = msg.getVoterNonce2();
+    if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
+      // Is it the same as the one we sent?
+      if (ByteArray.lexicographicalCompare(nonce2, ud.getVoterNonce2()) == 0) {
+	VoteBlocksTallier vbt = new VoteBlocksTallier();
+	vbt.tallyVoteBlocks(ud.getSymmetricVoteBlocks(),
+			    msg.getVoteBlocks());
+	int nAgree = vbt.countAgreeUrl();
+	ud.setNumAgreeUrl(nAgree);
+	int nDisagree = vbt.countDisagreeUrl();
+	ud.setNumDisagreeUrl(nDisagree);
+	int nVoterOnly = vbt.countVoterOnlyUrl();
+	ud.setNumVoterOnlyUrl(nVoterOnly);
+	int nPollerOnly = vbt.countPollerOnlyUrl();
+	ud.setNumPollerOnlyUrl(nPollerOnly);
+	log.debug("Symmetric poll result:" +
+		  " agree: " + nAgree +
+		  " disagree: " + nDisagree +
+		  " Voter only: " + nVoterOnly +
+		  " Poller only: " + nPollerOnly);
+	int total = nAgree + nDisagree + nVoterOnly + nPollerOnly;
+	float agree = 0.0f;
+	if (total > 0) {
+	  agree = ((float) nAgree) / ((float) total);
+	} 
+	idmgr.signalPartialAgreement(poller, au, agree);
+      } else {
+	log.error("Nonce2 mismatch");
+      }
+    }
     return V3Events.evtReceiptOk;
   }
 

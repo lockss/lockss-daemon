@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.50 2012-12-20 18:38:48 fergaloy-sf Exp $
+ * $Id: TestV3Poller.java,v 1.51 2013-02-24 04:54:20 dshr Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public class TestV3Poller extends LockssTestCase {
 
   private byte[][] pollerNonces;
   private byte[][] voterNonces;
+  private byte[][] voterNonce2s;
   
   private String localPeerKey = "TCP:[127.0.0.1]:9729";
   
@@ -118,6 +119,7 @@ public class TestV3Poller extends LockssTestCase {
     this.voters = makeVoters(initialPeers);
     this.pollerNonces = makeNonces();
     this.voterNonces = makeNonces();
+    this.voterNonce2s = makeNonces();
     this.pollAcks = makePollAckMessages();
     this.nominates = makeNominateMessages();
     this.votes = makeVoteMessages();
@@ -184,6 +186,7 @@ public class TestV3Poller extends LockssTestCase {
         new V3LcapMessage("auid", "key", "1",
                           ByteArray.makeRandomBytes(20),
                           ByteArray.makeRandomBytes(20),
+                          ByteArray.makeRandomBytes(20),
                           V3LcapMessage.MSG_POLL_ACK,
                           987654321,
                           voters[i],
@@ -196,6 +199,7 @@ public class TestV3Poller extends LockssTestCase {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
       V3LcapMessage msg = new V3LcapMessage("auid", "key", "1",
+                                            ByteArray.makeRandomBytes(20),
                                             ByteArray.makeRandomBytes(20),
                                             ByteArray.makeRandomBytes(20),
                                             V3LcapMessage.MSG_NOMINATE,
@@ -217,6 +221,7 @@ public class TestV3Poller extends LockssTestCase {
       V3LcapMessage msg = new V3LcapMessage("auid", "key", "1",
                                             ByteArray.makeRandomBytes(20),
                                             ByteArray.makeRandomBytes(20),
+                                            ByteArray.makeRandomBytes(20),
                                             V3LcapMessage.MSG_VOTE,
                                             987654321,
                                             voters[i],
@@ -233,6 +238,7 @@ public class TestV3Poller extends LockssTestCase {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
       V3LcapMessage msg = new V3LcapMessage("auid", "key", "1",
+                                            ByteArray.makeRandomBytes(20),
                                             ByteArray.makeRandomBytes(20),
                                             ByteArray.makeRandomBytes(20),
                                             V3LcapMessage.MSG_REPAIR_REP,
@@ -368,36 +374,94 @@ public class TestV3Poller extends LockssTestCase {
     }
   }
 
-  public void testInitHasherByteArrays() throws Exception {
+  public void testInitHasherByteArraysAll() throws Exception {
+    // All symmetric participants
     V3Poller v3Poller = makeInittedV3Poller("foo");
+    doTestInitHasherByteArrays(v3Poller, initialPeers.size());
+  }
+  public void testInitHasherByteArraysTwo() throws Exception {
+    // 2 symmetric participants
+    V3Poller v3Poller = makeInittedV3Poller("foo", 2);
+    doTestInitHasherByteArrays(v3Poller, 2);
+  }
+  public void testInitHasherByteArraysNone() throws Exception {
+    // No symmetric participants
+    V3Poller v3Poller = makeInittedV3Poller("foo", 0);
+    doTestInitHasherByteArrays(v3Poller, 0);
+  }
+
+  protected void doTestInitHasherByteArrays(V3Poller v3Poller,
+					    int numSym) throws Exception {
     Map innerCircle =
       (Map)PrivilegedAccessor.getValue(v3Poller, "theParticipants");
     assertEquals(innerCircle.size(), voters.length);
     byte[][] initBytes =
       (byte[][])PrivilegedAccessor.invokeMethod(v3Poller, "initHasherByteArrays");
-    assertEquals(initBytes.length, innerCircle.size() + 1); // one for plain hash
-    byte[][] compareBytes = new byte[innerCircle.size() + 1][];
-    compareBytes[innerCircle.size()] =
-      new byte[0]; // Plain hash last
+    List symmetricParticipants = 
+      (List)PrivilegedAccessor.getValue(v3Poller, "symmetricParticipants");
+    if (symmetricParticipants == null) {
+      symmetricParticipants = new ArrayList();
+    }
+    // Expected size is number of inner circle peers plus one for the plain
+    // hash plus number of peers that request symmetric polls.
+    assertTrue(symmetricParticipants.size() == numSym);
+    int expectedSize = innerCircle.size() + 1 + symmetricParticipants.size();
+    assertEquals(initBytes.length, expectedSize);
+    byte[][] compareBytes = new byte[expectedSize][];
     int ix = 0;
     for (Iterator it = innerCircle.values().iterator(); it.hasNext();) {
       ParticipantUserData proxy = (ParticipantUserData)it.next();
       compareBytes[ix++] =
         ByteArray.concat(proxy.getPollerNonce(), proxy.getVoterNonce());
     }
-    for (int i = 0; i < initBytes.length; i++) {
-      assertTrue(Arrays.equals(initBytes[i], compareBytes[i]));
+    compareBytes[ix++] =  new byte[0]; // Plain hash 
+    for (Iterator it = symmetricParticipants.iterator(); it.hasNext();) {
+      PeerIdentity peer = (PeerIdentity) it.next();
+      ParticipantUserData proxy = (ParticipantUserData)innerCircle.get(peer);
+      assertNotNull(proxy.getVoterNonce2());
+      compareBytes[ix++] =
+        ByteArray.concat(proxy.getPollerNonce(), proxy.getVoterNonce2());
+    }
+    for (ix = 0; ix < innerCircle.size(); ix++) {
+      assertTrue("Index " + ix + " bytes mismatch",
+		 Arrays.equals(initBytes[ix], compareBytes[ix]));
+    }
+    ix++; // Skip plain hash
+    for (; ix < symmetricParticipants.size(); ix++) {
+      assertTrue("Index " + ix + " bytes mismatch",
+		 Arrays.equals(initBytes[ix], compareBytes[ix]));
     }
   }
 
-  public void testInitHasherDigests() throws Exception {
+  public void testInitHasherDigestsAll() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo");
+    doTestInitHasherDigests(v3Poller, initialPeers.size());
+  }
+  public void testInitHasherDigestsTwo() throws Exception {
+    V3Poller v3Poller = makeInittedV3Poller("foo", 2);
+    doTestInitHasherDigests(v3Poller, 2);
+  }
+  public void testInitHasherDigestsNone() throws Exception {
+    V3Poller v3Poller = makeInittedV3Poller("foo", 0);
+    doTestInitHasherDigests(v3Poller, 0);
+  }
+  public void doTestInitHasherDigests(V3Poller v3Poller,
+				      int numSym) throws Exception {
     Map innerCircle =
       (Map)PrivilegedAccessor.getValue(v3Poller, "theParticipants");
     assertEquals(innerCircle.size(), voters.length);
     MessageDigest[] digests =
       (MessageDigest[])PrivilegedAccessor.invokeMethod(v3Poller, "initHasherDigests");
-    assertEquals(digests.length, innerCircle.size() + 1); // one for plain hash
+    List symmetricParticipants = 
+      (List)PrivilegedAccessor.getValue(v3Poller, "symmetricParticipants");
+    if (symmetricParticipants == null) {
+      symmetricParticipants = new ArrayList();
+    }
+    // Expected size is number of inner circle peers plus one for the plain
+    // hash plus number of peers that request symmetric polls.
+    assertTrue(symmetricParticipants.size() == numSym);
+    int expectedSize = innerCircle.size() + 1 + symmetricParticipants.size();
+    assertEquals(digests.length, expectedSize); // one for plain hash
     for (int i = 0; i < digests.length; i++) {
       assertNotNull("Digest " + i + " unexpectedly null.", digests[i]);
       assertEquals("SHA-1", digests[i].getAlgorithm());
@@ -825,6 +889,11 @@ public class TestV3Poller extends LockssTestCase {
   }
   
   private MyV3Poller makeInittedV3Poller(String key) throws Exception {
+    return makeInittedV3Poller(key, 6);
+  }
+
+  private MyV3Poller makeInittedV3Poller(String key,
+					   int numSym) throws Exception {
     PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
                                    Poll.V3_POLL);
     MyV3Poller p = new MyV3Poller(ps, theDaemon, pollerId, key, 20000,
@@ -836,8 +905,12 @@ public class TestV3Poller extends LockssTestCase {
       ParticipantUserData ud = (ParticipantUserData) innerCircle.get(pid);
       if (ud != null) {
 	ud.setVoterNonce(voterNonces[ix]);
+	if (ix < numSym) {
+	  ud.setVoterNonce2(voterNonce2s[ix]);
+	}
       }
     }
+    p.lockParticipants();
     return p;
   }
 

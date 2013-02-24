@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.24 2012-08-03 19:08:12 barry409 Exp $
+ * $Id: VoterUserData.java,v 1.25 2013-02-24 04:54:19 dshr Exp $
  */
 
 /*
@@ -60,10 +60,12 @@ public class VoterUserData
   private long voteDeadline;
   private String hashAlgorithm;
   private VoteBlocks voteBlocks;
+  private VoteBlocks symmetricVoteBlocks;
   private String url;
   private List nominees;
   private byte[] pollerNonce;
   private byte[] voterNonce;
+  private byte[] voterNonce2;
   private byte[] introEffortProof;
   private byte[] pollAckEffortProof;
   private byte[] remainingEffortProof;
@@ -77,6 +79,10 @@ public class VoterUserData
   private String errorDetail;
   private boolean activePoll = true;
   private double agreementHint;
+  private int numAgreeUrl;
+  private int numDisagreeUrl;
+  private int numVoterOnlyUrl;
+  private int numPollerOnlyUrl;
   private boolean hasReceivedHint = false;
   private SubstanceChecker.State subCheckerState;
   /** @deprecated 
@@ -95,7 +101,7 @@ public class VoterUserData
 
   public VoterUserData(PollSpec spec, V3Voter voter, PeerIdentity pollerId,
                        String pollKey, long duration, String hashAlgorithm,
-                       byte[] pollerNonce, byte[] voterNonce,
+                       byte[] pollerNonce, byte[] voterNonce, byte[] voterNonce2,
                        byte[] introEffortProof, File messageDir) throws IOException {
     log.debug3("Creating V3 Voter User Data for poll " + pollKey + ", " + spec);
     this.spec = spec;
@@ -111,11 +117,13 @@ public class VoterUserData
     this.deadline = Deadline.in(duration).getExpirationTime();
     this.hashAlgorithm = hashAlgorithm;
     this.voterNonce = voterNonce;
+    this.voterNonce2 = voterNonce2;
     this.pollerNonce = pollerNonce;
     this.introEffortProof = introEffortProof;
     this.createTime = TimeBase.nowMs();
     this.messageDir = messageDir;
     this.voteBlocks = new DiskVoteBlocks(voter.getStateDir());
+    this.setVoterNonce2(voterNonce2);
   }
 
   public void setPollMessage(LcapMessage msg) {
@@ -290,8 +298,20 @@ public class VoterUserData
     this.voteBlocks = voteBlocks;
   }
 
+  public VoteBlocks getSymmetricVoteBlocks() {
+    return symmetricVoteBlocks;
+  }
+
+  public void setSymmetricVoteBlocks(VoteBlocks voteBlocks) {
+    this.symmetricVoteBlocks = voteBlocks;
+  }
+
   public V3Voter getVoter() {
     return voter;
+  }
+
+  public File getMessageDir() {
+    return messageDir;
   }
 
   public PsmInterpStateBean getPsmState() {
@@ -312,6 +332,25 @@ public class VoterUserData
 
   public void setVoterNonce(byte[] voterNonce) {
     this.voterNonce = voterNonce;
+  }
+
+  public byte[] getVoterNonce2() {
+    return voterNonce2;
+  }
+
+  public void setVoterNonce2(byte[] voterNonce) {
+    this.voterNonce2 = voterNonce2;
+    if (voterNonce2 != null && voterNonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
+      try {
+	this.symmetricVoteBlocks = new DiskVoteBlocks(voter.getStateDir());
+      } catch (IOException ex) {
+	log.error("Setting nonce2 throws " + ex);
+	this.voterNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
+      }
+    } else {
+      this.voterNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
+      this.symmetricVoteBlocks = null;
+    }
   }
 
   public synchronized void hashingDone(boolean hashingDone) {
@@ -405,6 +444,38 @@ public class VoterUserData
     return hasReceivedHint;
   }
 
+  public int getNumAgreeUrl() {
+    return numAgreeUrl;
+  }
+
+  public void setNumAgreeUrl(int num) {
+    numAgreeUrl = num;
+  }
+
+  public int getNumDisagreeUrl() {
+    return numDisagreeUrl;
+  }
+
+  public void setNumDisagreeUrl(int num) {
+    numDisagreeUrl = num;
+  }
+
+  public int getNumVoterOnlyUrl() {
+    return numVoterOnlyUrl;
+  }
+
+  public void setNumVoterOnlyUrl(int num) {
+    numVoterOnlyUrl = num;
+  }
+
+  public int getNumPollerOnlyUrl() {
+    return numVoterOnlyUrl;
+  }
+
+  public void setNumPollerOnlyUrl(int num) {
+    numPollerOnlyUrl = num;
+  }
+
   public SubstanceChecker.State getSubstanceCheckerState() {
     return subCheckerState;
   }
@@ -418,8 +489,8 @@ public class VoterUserData
    */
   public V3LcapMessage makeMessage(int opcode) {
     return new V3LcapMessage(getAuId(), getPollKey(), getPluginVersion(),
-                             getPollerNonce(), getVoterNonce(), opcode,
-                             getDeadline(), getPollerId(), messageDir,
+                             getPollerNonce(), getVoterNonce(), getVoterNonce2(),
+			     opcode, getDeadline(), getPollerId(), messageDir,
                              voter.getLockssDaemon());
   }
 
@@ -444,5 +515,6 @@ public class VoterUserData
     pollMessage = null;
     psmState = null;
     voteBlocks = null;
+    symmetricVoteBlocks = null;
   }
 }

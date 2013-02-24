@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.77 2012-08-29 20:56:17 barry409 Exp $
+ * $Id: V3Voter.java,v 1.78 2013-02-24 04:54:19 dshr Exp $
  */
 
 /*
@@ -132,7 +132,7 @@ public class V3Voter extends BasePoll {
    * mechanism (e.g., box proves it's the same one by returning a
    * short-lived cookie from a recent poll).
    */
-  public static final String PARAM_REPUTATION_TRANSFER_MAP =
+  public static final String PARAM_REUTATION_TRANSFER_MAP =
     PREFIX + "reputationTransferMap";
 
   /** 
@@ -204,6 +204,20 @@ public class V3Voter extends BasePoll {
   public static final String DEFAULT_VOTE_RETRY_INTERVAL_DURATION_CURVE =
     "[5m,2m],[20m,4m],[1d,5h]";
 
+  /** If true, always request a symmetric poll */
+  public static final String PARAM_ALL_SYMMETRIC_POLLS =
+    PREFIX + "allSymmetricPolls";
+  public static final boolean DEFAULT_ALL_SYMMETRIC_POLLS = false;
+
+  /** If true, can request a symmetric poll */
+  public static final String PARAM_ENABLE_SYMMETRIC_POLLS =
+    PREFIX + "enableSymmetricPolls";
+  public static final boolean DEFAULT_ENABLE_SYMMETRIC_POLLS = false;
+
+  /* Minimum weight to call a symmetric poll */
+  public static final String PARAM_MIN_WEIGHT_SYMMETRIC_POLL =
+    PREFIX + "minWeightSymmetricPoll";
+  public static final double DEFAULT_MIN_WEIGHT_SYMMETRIC_POLL = 0.5f; 
 
   private PsmInterp stateMachine;
   private VoterUserData voterUserData;
@@ -260,6 +274,7 @@ public class V3Voter extends BasePoll {
                                              msg.getHashAlgorithm(),
                                              msg.getPollerNonce(),
                                              PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH),
+					     ByteArray.EMPTY_BYTE_ARRAY,
                                              msg.getEffortProof(),
                                              stateDir);
       voterUserData.setPollMessage(msg);
@@ -273,6 +288,15 @@ public class V3Voter extends BasePoll {
     this.pollManager = daemon.getPollManager();
     this.scomm = daemon.getStreamCommManager();
 
+    // Should this be a symmetric poll?
+    double minWeight =
+      CurrentConfig.getDoubleParam(PARAM_MIN_WEIGHT_SYMMETRIC_POLL,
+				   DEFAULT_MIN_WEIGHT_SYMMETRIC_POLL);
+    if (weightSymmetricPoll(msg.getOriginatorId()) >= minWeight) {
+      // Create a second nonce to request a symmetric poll
+      byte[] nonce2 = PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH);
+      voterUserData.setVoterNonce2(nonce2);
+    }
     int min = CurrentConfig.getIntParam(PARAM_MIN_NOMINATION_SIZE,
                                         DEFAULT_MIN_NOMINATION_SIZE);
     int max = CurrentConfig.getIntParam(PARAM_MAX_NOMINATION_SIZE,
@@ -805,29 +829,46 @@ public class V3Voter extends BasePoll {
 
   /**
    * Create an array of byte arrays containing hasher initializer bytes for
-   * this voter.  The result will be an array of two byte arrays:  The first
+   * this voter.  The result will be an array of 2 or 3 byte arrays:  The first
    * has no initializing bytes, and will be used for the plain hash.  The
    * second is constructed by concatenating the poller nonce and voter nonce,
-   * and will be used for the challenge hash.
+   * and will be used for the challenge hash. If the voter is requesting a
+   * symmetric poll the third will be the concatenation of the poller hash
+   * and the second voter hash.
    *
    * @return Block hasher initialization bytes.
    */
   private byte[][] initHasherByteArrays() {
-    return new byte[][] {
+    byte[] nonce2 = voterUserData.getVoterNonce2();
+    if (nonce2 == null || nonce2 == ByteArray.EMPTY_BYTE_ARRAY) {
+      return new byte[][] {
         {}, // Plain Hash
         ByteArray.concat(voterUserData.getPollerNonce(),
                          voterUserData.getVoterNonce()) // Challenge Hash
-    };
+      };
+    } else {
+      return new byte[][] {
+        {}, // Plain Hash
+        ByteArray.concat(voterUserData.getPollerNonce(),
+                         voterUserData.getVoterNonce()), // Challenge Hash
+        ByteArray.concat(voterUserData.getPollerNonce(),
+                         nonce2) // Symmetric Poll Hash
+      };
+    }
   }
 
   /**
    * Create the message digesters for this voter's hasher -- one for
-   * the plain hash, one for the challenge hash.
+   * the plain hash, one for the challenge hash, and if necessary one for
+   * the symmetric poll.
    *
    * @return An array of MessageDigest objects to be used by the BlockHasher.
    */
   private MessageDigest[] initHasherDigests() throws NoSuchAlgorithmException {
-    return PollUtil.createMessageDigestArray(2, getHashAlgorithm());
+    byte[] nonce2 = voterUserData.getVoterNonce2();
+    boolean symPoll = nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY;
+    return PollUtil.createMessageDigestArray(symPoll ? 3 : 2,
+					     getHashAlgorithm());
   }
 
   private String getHashAlgorithm() {
@@ -895,6 +936,10 @@ public class V3Voter extends BasePoll {
     String errmsg = "State machine error";
     stateMachine.enqueueEvent(V3Events.evtHashingDone,
 			      ehAbortPoll(errmsg));
+    byte[] nonce2 = voterUserData.getVoterNonce2();
+    if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
+      log.debug("Poll " + voterUserData.getPollKey() + " is symmetric");
+    }
   }
 
   /*
@@ -907,6 +952,11 @@ public class V3Voter extends BasePoll {
   public void blockHashComplete(HashBlock block) {
     // Add each hash block version to this vote block.
     VoteBlock vb = new VoteBlock(block.getUrl());
+    VoteBlock svb = null;
+    byte[] nonce2 = voterUserData.getVoterNonce2();
+    if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
+      svb = new VoteBlock(block.getUrl());
+    }
     Iterator hashVersionIter = block.versionIterator();
     while(hashVersionIter.hasNext()) {
       HashBlock.Version ver = (HashBlock.Version)hashVersionIter.next();
@@ -919,12 +969,33 @@ public class V3Voter extends BasePoll {
                     plainDigest,
                     challengeDigest,
                     ver.getHashError() != null);
+      if (svb != null) {
+	if (ver.getHashes().length > 2) {
+	  byte[] symmetricDigest = ver.getHashes()[2];
+	  // Add a VoteBlock for the symmetric poll hashes
+	  log.debug("Poll " + voterUserData.getPollKey() + " is symmetric:" +
+		    block.getUrl());
+	  svb.addVersion(ver.getFilteredOffset(),
+			 ver.getFilteredLength(),
+			 ver.getUnfilteredOffset(),
+			 ver.getUnfilteredLength(),
+			 plainDigest,
+			 symmetricDigest,
+			 ver.getHashError() != null);
+	} else {
+	  log.error("Symmetric poll but no symmetric hashes.");
+	}
+      }
     }
     
-    // Add this vote block to our hash block container.
+    // Add this vote block to our hash block containers.
     VoteBlocks blocks = voterUserData.getVoteBlocks();
+    VoteBlocks symmetricBlocks = voterUserData.getSymmetricVoteBlocks();
     try {
       blocks.addVoteBlock(vb);
+      if (symmetricBlocks != null && svb != null) {
+	symmetricBlocks.addVoteBlock(svb);
+      }
     } catch (IOException ex) {
       log.error("Unexpected IO Exception trying to add vote block " +
                 vb.getUrl() + " in poll " + getKey(), ex);
@@ -1141,6 +1212,26 @@ public class V3Voter extends BasePoll {
   
   IdentityManager getIdentityManager() {
     return this.idManager;
+  }
+
+  double weightSymmetricPoll(PeerIdentity pid) {
+    if (CurrentConfig.getBooleanParam(PARAM_ALL_SYMMETRIC_POLLS,
+				      DEFAULT_ALL_SYMMETRIC_POLLS)) {
+      return 1.0;
+    }
+    if (!CurrentConfig.getBooleanParam(PARAM_ENABLE_SYMMETRIC_POLLS,
+				      DEFAULT_ENABLE_SYMMETRIC_POLLS)) {
+      return 0.0;
+    }
+    double highest = idManager.getHighestPercentAgreement(pid, getAu());
+    if (highest >= pollManager.getMinPercentForRepair()) {
+      // Poller is already a willing repairer
+      return 0.0;
+    }
+    // See http://wiki.lockss.org/cgi-bin/wiki.pl?Mellon/SymmetricPolls
+    // for discussion of symmetric poll costs and policies. Initial
+    // decision is to avoid probabilistic policy here.
+    return 1.0;
   }
 
   /**

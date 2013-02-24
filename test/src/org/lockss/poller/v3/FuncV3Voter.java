@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.28 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: FuncV3Voter.java,v 1.29 2013-02-24 04:54:20 dshr Exp $
  */
 
 /*
@@ -201,6 +201,7 @@ public class FuncV3Voter extends LockssTestCase {
                         msgDeadline, pollerId, tempDir, theDaemon);
     msg.setEffortProof(ByteArray.makeRandomBytes(20));
     msg.setVoterNonce(ByteArray.makeRandomBytes(20));
+    msg.setVoterNonce2(ByteArray.makeRandomBytes(20));
     return msg;
   }
 

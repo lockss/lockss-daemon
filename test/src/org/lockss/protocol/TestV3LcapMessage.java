@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.29 2013-01-17 00:13:26 tlipkis Exp $
+ * $Id: TestV3LcapMessage.java,v 1.30 2013-02-24 04:54:20 dshr Exp $
  */
 
 /*
@@ -102,8 +102,13 @@ public class TestV3LcapMessage extends LockssTestCase {
   }
 
   public void testNoOpMessageCreation() throws Exception {
+    // Without voterNonce2
     V3LcapMessage noopMsg = V3LcapMessage.makeNoOpMsg(m_testID, m_testBytes,
                                                       m_testBytes,
+                                                      theDaemon);
+    // With voterNonce2
+    V3LcapMessage noopMsg2 = V3LcapMessage.makeNoOpMsg(m_testID, m_testBytes,
+						       m_testBytes, m_testBytes,
                                                       theDaemon);
 
     // now check the fields we expect to be valid
@@ -111,9 +116,20 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertTrue(m_testID == noopMsg.getOriginatorId());
     assertEquals(m_testBytes, noopMsg.getPollerNonce());
     assertEquals(m_testBytes, noopMsg.getVoterNonce());
+    assertEquals(LcapMessage.EMPTY_BYTE_ARRAY, noopMsg.getVoterNonce2());
     assertEquals(null, noopMsg.getVoteBlocks());
     assertEquals(V3LcapMessage.EST_ENCODED_HEADER_LENGTH,
 		 noopMsg.getEstimatedEncodedLength());
+
+    // Same for msg with voterNonce2
+    assertEquals(V3LcapMessage.MSG_NO_OP, noopMsg2.getOpcode());
+    assertTrue(m_testID == noopMsg2.getOriginatorId());
+    assertEquals(m_testBytes, noopMsg2.getPollerNonce());
+    assertEquals(m_testBytes, noopMsg2.getVoterNonce());
+    assertEquals(m_testBytes, noopMsg2.getVoterNonce2());
+    assertEquals(null, noopMsg2.getVoteBlocks());
+    assertEquals(V3LcapMessage.EST_ENCODED_HEADER_LENGTH,
+		 noopMsg2.getEstimatedEncodedLength());
   }
 
   public void testRandomNoOpMessageCreation() throws Exception {
@@ -127,6 +143,8 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertTrue(noopMsg1.getOriginatorId() == noopMsg2.getOriginatorId());
     assertFalse(noopMsg1.getPollerNonce() == noopMsg2.getPollerNonce());
     assertFalse(noopMsg1.getVoterNonce() == noopMsg2.getVoterNonce());
+    assertEquals(LcapMessage.EMPTY_BYTE_ARRAY, noopMsg1.getVoterNonce2());
+    assertEquals(LcapMessage.EMPTY_BYTE_ARRAY, noopMsg2.getVoterNonce2());
     assertEquals(null, noopMsg1.getVoteBlocks());
     assertEquals(null, noopMsg2.getVoteBlocks());
   }
@@ -178,6 +196,7 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(V3LcapMessage.MSG_NO_OP, msg.getOpcode());
     assertEquals(m_testBytes, msg.getPollerNonce());
     assertEquals(m_testBytes, msg.getVoterNonce());
+    assertEquals(LcapMessage.EMPTY_BYTE_ARRAY, msg.getVoterNonce2());
   }
 
   public void testMemoryRepairMessage() throws Exception {
@@ -304,6 +323,7 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals("http://foo.com/", reqMsg.getTargetUrl());
     assertEquals(m_testBytes, reqMsg.getPollerNonce());
     assertEquals(m_testBytes, reqMsg.getVoterNonce());
+    assertEquals(LcapMessage.EMPTY_BYTE_ARRAY, reqMsg.getVoterNonce2());
     List aBlocks = new ArrayList();
     List bBlocks = new ArrayList();
     for (VoteBlocksIterator iter = m_testMsg.getVoteBlockIterator(); iter.hasNext(); ) {
@@ -342,6 +362,7 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(a.getProtocolVersion(), b.getProtocolVersion());
     assertEquals(a.getPollerNonce(), b.getPollerNonce());
     assertEquals(a.getVoterNonce(), b.getVoterNonce());
+    assertEquals(a.getVoterNonce2(), b.getVoterNonce2());
     assertEquals(a.getPluginVersion(), b.getPluginVersion());
     assertEquals(a.getHashAlgorithm(), b.getHashAlgorithm());
     assertEquals(a.isVoteComplete(), b.isVoteComplete());
@@ -436,6 +457,16 @@ public class TestV3LcapMessage extends LockssTestCase {
 			   long deadline, PeerIdentity origin, File messageDir,
 			   LockssApp daemon) {
       super(auId, pollKey, pluginVersion, pollerNonce, voterNonce, opcode,
+	    deadline, origin, messageDir, daemon);
+    }
+
+    public MyV3LcapMessage(String auId, String pollKey, String pluginVersion,
+			   byte[] pollerNonce, byte[] voterNonce,
+			   byte[] voterNonce2, int opcode,
+			   long deadline, PeerIdentity origin, File messageDir,
+			   LockssApp daemon) {
+      super(auId, pollKey, pluginVersion, pollerNonce, voterNonce,
+	    voterNonce2, opcode,
 	    deadline, origin, messageDir, daemon);
     }
 
