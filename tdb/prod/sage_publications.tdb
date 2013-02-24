@@ -40812,7 +40812,26 @@ comment[mpj] = now published by Brill
     param[base_url] = http://aaf.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Adoption & Fostering Volume 37 ; 37 >
+    au < exists ; 1994 ; Adoption & Fostering Volume 18 ; 18 >
+    au < exists ; 1995 ; Adoption & Fostering Volume 19 ; 19 >
+    au < exists ; 1996 ; Adoption & Fostering Volume 20 ; 20 >
+    au < exists ; 1997 ; Adoption & Fostering Volume 21 ; 21 >
+    au < exists ; 1998 ; Adoption & Fostering Volume 22 ; 22 >
+    au < exists ; 1999 ; Adoption & Fostering Volume 23 ; 23 >
+    au < exists ; 2000 ; Adoption & Fostering Volume 24 ; 24 >
+    au < exists ; 2001 ; Adoption & Fostering Volume 25 ; 25 >
+    au < exists ; 2002 ; Adoption & Fostering Volume 26 ; 26 >
+    au < exists ; 2003 ; Adoption & Fostering Volume 27 ; 27 >
+    au < exists ; 2004 ; Adoption & Fostering Volume 28 ; 28 >
+    au < exists ; 2005 ; Adoption & Fostering Volume 29 ; 29 >
+    au < exists ; 2006 ; Adoption & Fostering Volume 30 ; 30 >
+    au < exists ; 2007 ; Adoption & Fostering Volume 31 ; 31 >
+    au < exists ; 2008 ; Adoption & Fostering Volume 32 ; 32 >
+    au < exists ; 2009 ; Adoption & Fostering Volume 33 ; 33 >
+    au < exists ; 2010 ; Adoption & Fostering Volume 34 ; 34 >
+    au < exists ; 2011 ; Adoption & Fostering Volume 35 ; 35 >
+    au < manifest ; 2012 ; Adoption & Fostering Volume 36 ; 36 >
+    au < expected ; 2013 ; Adoption & Fostering Volume 37 ; 37 >
 
     }
 
