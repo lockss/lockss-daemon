@@ -1,10 +1,10 @@
 /*
- * $Id: TestPluginManager.java,v 1.102 2013-01-09 09:39:13 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.103 2013-02-24 03:04:10 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1020,6 +1020,12 @@ public class TestPluginManager extends LockssTestCase {
     assertIsomorphic(ListUtil.list(au1, au0, au2),
 		     mgr.getCandidateAus(h2 + " foo.html"));
     assertIsomorphic(ListUtil.list(h2, h1), mgr.getAllStems());
+    mgr.deactivateAu(au2);
+    assertIsomorphic(ListUtil.list(au1, au3),
+		     mgr.getCandidateAus(h1 + " foo.html"));
+    assertIsomorphic(ListUtil.list(au1, au0),
+		     mgr.getCandidateAus(h2 + " foo.html"));
+    assertIsomorphic(ListUtil.list(h2, h1), mgr.getAllStems());
   }
 
 
@@ -1240,9 +1246,11 @@ public class TestPluginManager extends LockssTestCase {
     // manually create necessary pieces, no config
     MockPlugin mpi = new MockPlugin();
     MockArchivalUnit mau = new MyMockArchivalUnit() {
-	// shouldBeCached() is true of anything starting with prefix
+	// shouldBeCached() is true if URL starts with prefix and doesn't
+	// contain SESSION (to ensure shouldBeCached() is called with site
+	// normalized URL
 	public boolean shouldBeCached(String url) {
-	  return StringUtil.startsWithIgnoreCase(url, prefix);
+	  return url.startsWith(prefix) && (url.indexOf("SESSION") < 0);
 	}
 	// siteNormalizeUrl() removes "SESSION/" from url
 	public String siteNormalizeUrl(String url) {
