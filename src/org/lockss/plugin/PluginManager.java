@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.240 2013-02-24 03:04:10 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.241 2013-02-25 08:51:35 tlipkis Exp $
  */
 
 /*
@@ -196,13 +196,28 @@ public class PluginManager
   public static final String DEFAULT_PREFERRED_PLUGIN_TYPE =
     "xml";
 
+  static final String AU_SEARCH_SET_PREFIX = PREFIX + "auSearch.";
+
   /** Step function returns the desired size of an AU search set, given the
    * number of AUs in the search set */
   public static final String PARAM_AU_SEARCH_CACHE_SIZE =
-    Configuration.PREFIX + "auSearchCacheSize";
+    AU_SEARCH_SET_PREFIX + "cacheSize";
   public static final String DEFAULT_AU_SEARCH_CACHE_SIZE =
     "[1,0],[2,1],[5,2],[10,3],[50,10],[200,20]";
 
+  /** Step function returns the desired size of the per-host recent 404
+   * cache, given the number of AUs in the search set */
+  public static final String PARAM_AU_SEARCH_404_CACHE_SIZE =
+    AU_SEARCH_SET_PREFIX + "404CacheSize";
+  public static final String DEFAULT_AU_SEARCH_404_CACHE_SIZE =
+    "[10,10],[1000,100],[5000,200]";
+
+  /** If true, all failed findCachedUrl() searches (though non-empty AU
+   * sets) will be cached.  If false, only those that had to search on disk
+   * will be cached. */
+  public static final String PARAM_AU_SEARCH_CACHE_ALL_404s =
+    AU_SEARCH_SET_PREFIX + "cacheAll404s";
+  public static final boolean DEFAULT_AU_SEARCH_CACHE_ALL_404s = false;
 
   /** Root of TitleSet definitions.  */
   public static final String PARAM_TITLE_SETS =
@@ -296,6 +311,9 @@ public class PluginManager
     DEFAULT_DISABLE_URL_CONNECTION_CACHE;
   private boolean acceptExpiredCertificates = DEFAULT_ACCEPT_EXPIRED_CERTS;
   private IntStepFunction auSearchCacheSizeFunc;
+  private IntStepFunction auSearch404CacheSizeFunc;
+  private boolean paramCacheAll404s = DEFAULT_AU_SEARCH_CACHE_ALL_404s;
+
 
   private Map titleMap = null;
   private List allTitles = null;
@@ -331,6 +349,8 @@ public class PluginManager
     initPluginDir();
     configureDefaultTitleSets();
     PluginStatus.register(getDaemon(), this);
+    // watch for changes to plugin registry AUs and AUs with stems in hostAus
+    registerAuEventHandler(myAuEventHandler);
     
     if (paramDisableURLConnectionCache) {
       // Up through Java 1.6, even after a ClassLoader is freed, and even
@@ -363,7 +383,7 @@ public class PluginManager
     }
     auEventHandlers = new ArrayList<AuEventHandler>();
     PluginStatus.unregister(getDaemon());
-    unregisterAuEventHandler(regAuEventHandler);
+    unregisterAuEventHandler(myAuEventHandler);
     super.stopService();
   }
 
@@ -383,8 +403,6 @@ public class PluginManager
     initLoadablePluginRegistries(getPluginRegistryUrls(config));
     synchStaticPluginList(config);
     configureAllPlugins(config);
-    // Start watching for changes to plugin registry AUs
-    registerAuEventHandler(regAuEventHandler);
     loadablePluginsReady = true;
   }
 
@@ -409,6 +427,7 @@ public class PluginManager
 
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
+
 
     if (changedKeys.contains(PREFIX)) {
       registryTimeout = config.getTimeInterval(PARAM_PLUGIN_LOAD_TIMEOUT,
@@ -454,10 +473,20 @@ public class PluginManager
 	initKeystore(configMgr.getCurrentConfig());
       }
 
-      if (changedKeys.contains(PARAM_AU_SEARCH_CACHE_SIZE)) {
+      if (changedKeys.contains(AU_SEARCH_SET_PREFIX)) {
 	String func = config.get(PARAM_AU_SEARCH_CACHE_SIZE,
 				 DEFAULT_AU_SEARCH_CACHE_SIZE);
 	auSearchCacheSizeFunc = new IntStepFunction(func);
+	func = config.get(PARAM_AU_SEARCH_404_CACHE_SIZE,
+				 DEFAULT_AU_SEARCH_404_CACHE_SIZE);
+	auSearch404CacheSizeFunc = new IntStepFunction(func);
+	synchronized (hostAus) {
+	  for (Map.Entry<String,AuSearchSet> ent : hostAus.entrySet()) {
+	    ent.getValue().setConfig(config, oldConfig, changedKeys);
+	  }
+	}
+	paramCacheAll404s = config.getBoolean(PARAM_AU_SEARCH_CACHE_ALL_404s,
+					      DEFAULT_AU_SEARCH_CACHE_ALL_404s);
       }
 
       useDefaultPluginRegistries =
@@ -502,8 +531,12 @@ public class PluginManager
     }
   }
 
-  public IntStepFunction getAuSearchCacheSizeFunc() {
-    return auSearchCacheSizeFunc;
+  public int getAuSearchCacheSize(int x) {
+    return auSearchCacheSizeFunc.getValue(x);
+  }
+
+  public int getAuSearch404CacheSize(int x) {
+    return auSearch404CacheSizeFunc.getValue(x);
   }
 
   private enum SkipConfigCondition {ConfigUnchanged, AuRunning};
@@ -962,6 +995,19 @@ public class PluginManager
     auEventHandlers.remove(aueh);
   }
 
+  class PlugMgrAuEventHandler extends AuEventHandler.Base {
+    @Override public void auContentChanged(AuEvent event, ArchivalUnit au,
+					   AuEventHandler.ChangeInfo info) {
+      if (loadablePluginsReady && isRegistryAu(au)) {
+	processRegistryAus(ListUtil.list(au), true);
+      }
+      flush404Cache(au);
+    }
+  }
+  private AuEventHandler myAuEventHandler = new PlugMgrAuEventHandler();
+
+
+
   protected void raiseAlert(Alert alert, String msg) {
     if (alertMgr != null) {
       alertMgr.raiseAlert(alert, msg);
@@ -1038,7 +1084,16 @@ public class PluginManager
   protected void putAuInMap(ArchivalUnit au) {
     log.debug2("putAuMap(" + au.getAuId() +", " + au);
     synchronized (auMap) {
-      auMap.put(au.getAuId(), au);
+      ArchivalUnit oldAu = auMap.put(au.getAuId(), au);
+      if (oldAu != null) {
+	if (oldAu == au) {
+	  log.debug("Warning: Redundant putAuInMap: " + au, new Throwable());
+	  return;
+	} else {
+	  log.error("Duplicate AUID in map. old: " + oldAu + ", new: " + au,
+		    new Throwable());
+	}
+      }
       auList = null;
     }
     addHostAus(au);
@@ -1092,6 +1147,21 @@ public class PluginManager
       if (searchSet.isEmpty()) {
 	hostAus.remove(stem);
       }
+    }
+  }
+
+  void flush404Cache(ArchivalUnit au) {
+    try {
+      synchronized (hostAus) {
+	for (String stem : normalizeStems(au.getUrlStems())) {
+	  AuSearchSet searchSet = hostAus.get(stem);
+	  if (searchSet != null) {
+	    searchSet.flush404Cache();
+	  }
+	}
+      }
+    } catch (Exception e) {
+      log.error("flush404Cache()", e);
     }
   }
 
@@ -1815,6 +1885,14 @@ public class PluginManager
 	default: return true;
 	}
       }
+
+      /** Return true if the presence of content is required */
+      boolean needsContent() {
+	switch (this) {
+	case HasContent: return true;
+	default: return false;
+	}
+      }
   }
 
   /** A CU in the recentCu cache, along with a record of the content
@@ -1838,6 +1916,7 @@ public class PluginManager
   private Map<String,RecentCu> recentCuMap = new LRUMap(20);
   private int recentCuHits = 0;
   private int recentCuMisses = 0;
+  private int recent404Hits = 0;
 
   int getRecentCuHits() {
     return recentCuHits;
@@ -1845,6 +1924,10 @@ public class PluginManager
 
   int getRecentCuMisses() {
     return recentCuMisses;
+  }
+
+  int getRecent404Hits() {
+    return recent404Hits;
   }
 
   /**
@@ -1973,11 +2056,18 @@ public class PluginManager
       if (log.isDebug3() ) log.debug3("findCachedUrls: No AUs for " + normStem);
       return Collections.EMPTY_LIST;
     }
+
+    if (contentReq.needsContent() && searchSet.isRecent404(normUrl)) {
+      recent404Hits++;
+      return Collections.EMPTY_LIST;
+    }    
+
     CachedUrl bestCu = null;
     ArchivalUnit bestAu = null;
     int bestScore = 8;
-    for (ArchivalUnit au : searchSet) {
+    int numContentChecks = 0;
 
+    for (ArchivalUnit au : searchSet) {
       if (!isActiveAu(au)) {
 	// This loop can run concurrently with other threads manipulating
 	// set of active AUs, so this AU might still disappear at any point.
@@ -2017,6 +2107,7 @@ public class PluginManager
 	  boolean hasCont = false;
 	  if (contentReq.wantsContent()) {
 	    hasCont = cu.hasContent();
+	    numContentChecks++;
 	  }
 	  if (bestOnly) {
 	    int auScore = auScore(au, cu, contentReq, hasCont);
@@ -2066,6 +2157,10 @@ public class PluginManager
 	  log.debug3("bestCu was " +
 		     (bestCu == null ? "null" : bestCu.toString()));
 	}
+      } else if (paramCacheAll404s || numContentChecks >= 1) {
+	// not found.  Add it to 404 cache for all contentReq, as will only
+	// check for HasContent
+	searchSet.addRecent404(normUrl);
       }
     }
     return res;
@@ -2924,16 +3019,6 @@ public class PluginManager
       return registryUrls;
     }
   }
-
-  class RegistryAuEventHandler extends AuEventHandler.Base {
-    @Override public void auContentChanged(AuEvent event, ArchivalUnit au,
-					   AuEventHandler.ChangeInfo info) {
-      if (isRegistryAu(au)) {
-	processRegistryAus(ListUtil.list(au), true);
-      }
-    }
-  }
-  private AuEventHandler regAuEventHandler = new RegistryAuEventHandler();
 
   /**
    * A simple class that wraps information about a loadable plugin,
