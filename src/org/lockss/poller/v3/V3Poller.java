@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.130.6.2 2013-02-23 00:18:05 dshr Exp $
+ * $Id: V3Poller.java,v 1.130.6.3 2013-02-25 20:17:54 dshr Exp $
  */
 
 /*
@@ -1357,6 +1357,7 @@ public class V3Poller extends BasePoll {
     log.debug("Scheduling " + cu + "(" + maxVersions + ") hash for poll "
 	      + pollerState.getPollKey());
     if (modulus != 0) {
+      log.info("Sampled poll: " + modulus);
       sampleNonce = PollUtil.makeHashNonce(HASH_NONCE_LENGTH);
     }
     BlockHasher hasher = (modulus == 0 || sampleNonce == null ?

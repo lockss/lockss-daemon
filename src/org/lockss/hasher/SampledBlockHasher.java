@@ -1,5 +1,5 @@
 /*
- * $Id: SampledBlockHasher.java,v 1.1.2.2 2013-02-22 20:07:16 dshr Exp $
+ * $Id: SampledBlockHasher.java,v 1.1.2.3 2013-02-25 20:17:54 dshr Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import java.security.*;
 
 import org.lockss.config.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
+import org.lockss.protocol.*;
 import org.lockss.state.SubstanceChecker;
 import org.lockss.util.*;
 
@@ -67,8 +67,8 @@ public class SampledBlockHasher extends BlockHasher {
     this.modulus = modulus;
     this.sampleNonce = sampleNonce;
     alg =
-      CurrentConfig.getParam(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
-			     BaseUrlCacher.DEFAULT_CHECKSUM_ALGORITHM);
+      CurrentConfig.getParam(LcapMessage.PARAM_HASH_ALGORITHM,
+			     LcapMessage.DEFAULT_HASH_ALGORITHM);
     try {
       sampleHasher = MessageDigest.getInstance(alg);
     } catch (NoSuchAlgorithmException ex) {
@@ -78,6 +78,7 @@ public class SampledBlockHasher extends BlockHasher {
     if (sampleNonce == null || sampleHasher == null || modulus <= 0) {
       throw new IllegalArgumentException("new SampledBlockHashher()");
     }
+    log.debug("new SampledBlockHasher: " + modulus + " " + alg);
   }
 
   public SampledBlockHasher(CachedUrlSet cus,
@@ -96,6 +97,7 @@ public class SampledBlockHasher extends BlockHasher {
       throw new IllegalArgumentException("new SampledBlockHasher()");
     }
     alg = sampleHasher.getAlgorithm();
+    log.debug("new SampledBlockHasher: " + modulus + " " + alg);
   }
 
   private String ts = null;
@@ -118,7 +120,7 @@ public class SampledBlockHasher extends BlockHasher {
 	byte[] hash = sampleHasher.digest();
 	// Compare high byte with mod (simplifies test)
 	res = ((((int)hash[hash.length-1] + 128) % modulus) == 0);
-	log.debug3(urlName + " byte: " + hash[hash.length-1] + " " +
+	log.debug(urlName + " byte: " + hash[hash.length-1] + " " +
 		   (res ? "is" : "isn't") + " in sample");
       }
     }

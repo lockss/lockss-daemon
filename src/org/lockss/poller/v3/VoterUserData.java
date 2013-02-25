@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.24.14.2 2013-02-22 20:07:17 dshr Exp $
+ * $Id: VoterUserData.java,v 1.24.14.3 2013-02-25 20:17:55 dshr Exp $
  */
 
 /*
@@ -114,6 +114,9 @@ public class VoterUserData
     this.deadline = Deadline.in(duration).getExpirationTime();
     this.hashAlgorithm = hashAlgorithm;
     this.modulus = modulus;
+    if (modulus != 0) {
+      log.info("Vote in sampled poll, modulus: " + modulus);
+    }
     this.voterNonce = voterNonce;
     this.pollerNonce = pollerNonce;
     this.introEffortProof = introEffortProof;

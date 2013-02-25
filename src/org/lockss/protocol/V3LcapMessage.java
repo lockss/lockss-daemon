@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.49.2.2 2013-02-22 20:07:17 dshr Exp $
+ * $Id: V3LcapMessage.java,v 1.49.2.3 2013-02-25 20:17:55 dshr Exp $
  */
 
 /*
@@ -298,6 +298,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_voterNonce = voterNonce;
     m_opcode = opcode;
     m_modulus = modulus;
+    if (modulus != 0) {
+      log.info("Message modulus: " + modulus);
+    }
     m_sampleNonce = sampleNonce;
     m_originatorID = origin;
   }
@@ -384,8 +387,6 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     duration = m_props.getInt("duration", 0) * 1000L;
     elapsed = m_props.getInt("elapsed", 0) * 1000L;
     m_opcode = m_props.getInt("opcode", -1);
-    m_modulus = m_props.getInt("modulus", 0);
-    m_sampleNonce = m_props.getByteArray("sampleNonce", EMPTY_BYTE_ARRAY);
     m_archivalID = m_props.getProperty("au", "UNKNOWN");
     m_targetUrl = m_props.getProperty("url");
     m_pollerNonce = m_props.getByteArray("pollerNonce", EMPTY_BYTE_ARRAY);
@@ -404,6 +405,11 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_repairProps = m_props.getEncodedProperty("repairProps");
     m_agreementHint = m_props.getDouble("agreementHint", -1.0);
     m_groups = m_props.getProperty("groups");
+    m_modulus = m_props.getInt("modulus", 0);
+    if (m_modulus != 0) {
+      log.info("V3LcapMessage with modulus: " + m_modulus);
+    }
+    m_sampleNonce = m_props.getByteArray("sampleNonce", EMPTY_BYTE_ARRAY);
     String nakString = m_props.getProperty("nak");
     if (nakString != null) {
       try {
@@ -540,6 +546,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_props.setProperty("key", m_key);
     m_props.putInt("opcode", m_opcode);
     m_props.putInt("modulus", m_modulus);
+    if (m_modulus != 0) {
+      log.info("V3LcapMessage sent modulus: " + m_modulus);
+    }
     if (m_sampleNonce != null && m_sampleNonce != EMPTY_BYTE_ARRAY) {
       m_props.putByteArray("sampleNonce", m_sampleNonce);
     }

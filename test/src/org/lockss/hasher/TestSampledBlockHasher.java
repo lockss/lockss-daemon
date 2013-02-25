@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledBlockHasher.java,v 1.1.2.3 2013-02-22 20:07:17 dshr Exp $
+ * $Id: TestSampledBlockHasher.java,v 1.1.2.4 2013-02-25 20:17:55 dshr Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
+import org.lockss.protocol.*;
 
 public class TestSampledBlockHasher extends LockssTestCase {
   private static final String TEST_URL_BASE = "http://www.test.com/blah/";
@@ -66,8 +66,8 @@ public class TestSampledBlockHasher extends LockssTestCase {
     tmpDir = getTempDir();
     dig = new MockMessageDigest();
     mau = new MockArchivalUnit(new MockPlugin(), TEST_URL_BASE);
-    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
-                                  "SHA-1");
+    ConfigurationUtil.addFromArgs(LcapMessage.PARAM_HASH_ALGORITHM,
+                                  LcapMessage.DEFAULT_HASH_ALGORITHM);
   }
 
   public void testConstructors() {
@@ -101,7 +101,7 @@ public class TestSampledBlockHasher extends LockssTestCase {
     cus.setHashIterator(CollectionUtil.EMPTY_ITERATOR);
     cus.setFlatIterator(null);
     cus.setEstimatedHashDuration(54321);
-    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+    ConfigurationUtil.addFromArgs(LcapMessage.PARAM_HASH_ALGORITHM,
                                   "BOGUS_HASH");
     MessageDigest[] digs = { dig };
     byte[][] inits = { testContent };
