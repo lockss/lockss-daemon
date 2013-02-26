@@ -29671,6 +29671,26 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = New Labor Forum ;
+        issn = 1095-7960 ;
+        eissn = 1557-2978 ;
+        issnl = 1095-7960
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://nlf.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2010 ; New Labor Forum Volume 19 ; 19 >
+        au < exists ; 2011 ; New Labor Forum Volume 20 ; 20 >
+        au < exists ; 2012 ; New Labor Forum Volume 21 ; 21 >
+        au < exists ; 2013 ; New Labor Forum Volume 22 ; 22 >
+
+    }
+
+    {
+
+      title <
         name = New Media & Society ;
         issn = 1461-4448 ;
         eissn = 1461-7315 ;

@@ -26440,6 +26440,25 @@
 
   }
 
+    {
+
+      title <
+        name = New Labor Forum ;
+        issn = 1095-7960 ;
+        eissn = 1557-2978 ;
+        issnl = 1095-7960
+      >
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://nlf.sagepub.com/
+
+        au < exists ; exists ; 2010 ; New Labor Forum Volume 19 ; 19 ; >
+        au < exists ; exists ; 2011 ; New Labor Forum Volume 20 ; 20 ; >
+        au < exists ; exists ; 2012 ; New Labor Forum Volume 21 ; 21 ; >
+        au < exists ; exists ; 2013 ; New Labor Forum Volume 22 ; 22 ; >
+
+    }
+
   {
   
     title <
