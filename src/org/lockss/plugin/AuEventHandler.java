@@ -1,5 +1,5 @@
 /*
- * $Id: AuEventHandler.java,v 1.5 2012-12-20 18:38:49 fergaloy-sf Exp $
+ * $Id: AuEventHandler.java,v 1.5.4.1 2013-02-26 00:06:21 tlipkis Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public interface AuEventHandler {
       sb.append(", ");
       sb.append(urls == null ? 0 : urls.size());
       sb.append(" urls, ");
-      sb.append(mimeCounts.size());
+      sb.append(mimeCounts != null ? mimeCounts.size() : 0);
       sb.append(" mime types]");
       return sb.toString();
     }      
