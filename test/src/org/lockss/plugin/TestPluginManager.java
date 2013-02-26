@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.102.2.1 2013-02-24 02:57:10 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.102.2.2 2013-02-26 00:07:03 tlipkis Exp $
  */
 
 /*
@@ -623,6 +623,7 @@ public class TestPluginManager extends LockssTestCase {
     }
 
     // Test creating and deleting by au ID.
+    props.put("a", "c");
     ArchivalUnit au2 = mgr.createAndSaveAuConfiguration(mpi, props);
     assertNotNull(au2);
     try {
@@ -632,6 +633,7 @@ public class TestPluginManager extends LockssTestCase {
     }
 
     // Test setAndSaveAuConfiguration
+    props.put("a", "d");
     ArchivalUnit au3 = mgr.createAu(mpi,
 				    ConfigurationUtil.fromArgs("foo", "bar"),
 				    new AuEvent(AuEvent.Type.Create, false));
@@ -1060,6 +1062,10 @@ public class TestPluginManager extends LockssTestCase {
     String url3 = "http://foo.bar/333";
     String url4 = "http://foo.bar/444";
     doConfig();
+    ConfigurationUtil.addFromArgs(PluginManager.PARAM_AU_SEARCH_404_CACHE_SIZE,
+				  "[1,2]",
+				  PluginManager.PARAM_AU_SEARCH_CACHE_ALL_404s,
+				  "true");
     MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
 
     // get the two archival units
@@ -1071,6 +1077,7 @@ public class TestPluginManager extends LockssTestCase {
     assertNull(mgr.findCachedUrl(url2));
     assertEquals(2, mgr.getRecentCuMisses());
     assertEquals(0, mgr.getRecentCuHits());
+    assertEquals(0, mgr.getRecent404Hits());
     CachedUrl cu1 = au1.addUrl(url1, false, true, null);
     CachedUrl cu2 = au2.addUrl(url2, true, true, null);
     CachedUrl cu31 = au1.addUrl(url3, false, true, null);
@@ -1087,8 +1094,11 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(5, mgr.getRecentCuMisses());
     assertEquals(0, mgr.getRecentCuHits());
 
+    assertEquals(1, mgr.getRecent404Hits());
     assertNull(mgr.findCachedUrl(url1, CuContentReq.HasContent));
+    assertEquals(2, mgr.getRecent404Hits());
     ((MockCachedUrl)cu).setContent("abc");
+    signalAuEvent(au1);
     cu = mgr.findCachedUrl(url1);
     assertEquals(url1, cu.getUrl());
     assertSame(au1, cu.getArchivalUnit());
@@ -1163,6 +1173,8 @@ public class TestPluginManager extends LockssTestCase {
     assertSame(xmau1, cu.getArchivalUnit());
     assertEquals(12, mgr.getRecentCuMisses());
     assertEquals(2, mgr.getRecentCuHits());
+
+    assertEquals(2, mgr.getRecent404Hits());
   }
 
   AuState setUpAuState(MockArchivalUnit mau) {
