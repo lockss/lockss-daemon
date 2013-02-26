@@ -1,0 +1,17 @@
+{
+  publisher <
+    name = eLife Sciences Publications
+  >
+
+  {
+    title <
+      name = eLife ;
+      issn = 2050-084X  
+    >
+
+    param[base_url] = http://elife.elifesciences.org/
+
+  }
+
+}
+
