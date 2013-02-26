@@ -1,5 +1,5 @@
 /*
- * $Id: AuSearchSet.java,v 1.1.2.1 2013-02-24 02:59:27 tlipkis Exp $
+ * $Id: AuSearchSet.java,v 1.1.2.2 2013-02-26 00:06:46 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
+import org.apache.commons.collections.map.LRUMap;
 import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.plugin.PluginManager;
@@ -48,19 +49,20 @@ import org.lockss.plugin.PluginManager;
  */
 public class AuSearchSet implements Iterable<ArchivalUnit> {
 
-  public static String DEFAULT_CACHE_SIZES =
-    "[1,0],[2,1],[5,2],[10,3],[50,10],[200,20]";
-
-  static IntStepFunction defaultSizeFunc =
-    new IntStepFunction(DEFAULT_CACHE_SIZES);
-
   private static Logger log = Logger.getLogger("AuSearchSet");
+
+  PluginManager pluginMgr;
 
   ConcurrentLinkedQueue aus;
   Collection<ArchivalUnit> sorted;
   AuSearchCache cache;
   int size;
-  PluginManager pluginMgr;
+
+  // Cache of recent 404s.  Lazily created as content in most AUs is never
+  // accessed.
+  volatile LRUMap recent404s;
+  int recent404Size = 0;
+
 
   AuSearchSet() {
     aus = new ConcurrentLinkedQueue();
@@ -73,12 +75,18 @@ public class AuSearchSet implements Iterable<ArchivalUnit> {
     this.pluginMgr = pluginMgr;
   }
 
+  public void setConfig(Configuration config, Configuration oldConfig,
+			Configuration.Differences changedKeys) {
+    set404CacheSize(getConfigured404CacheSize());
+  }
+
   /** Add an au to the set */
   public void addAu(ArchivalUnit au) {
     synchronized (this) {
       aus.add(au);
       sorted = null;
       size++;
+      set404CacheSize(getConfigured404CacheSize());
     }
   }
 
@@ -104,25 +112,21 @@ public class AuSearchSet implements Iterable<ArchivalUnit> {
     synchronized (this) {
       if (cache == null) {
 	if (size() >= 2) {
-	  cache = new AuSearchCache(getCacheSize(), au);
+	  cache = new AuSearchCache(getConfiguredCacheSize(), au);
 	  return;
 	}
       } else {
-	cache = cache.addToFront(au, getCacheSize());
+	cache = cache.addToFront(au, getConfiguredCacheSize());
       }
     }
   }
 
-  protected int getCacheSize() {
-    return getSizeFunc().getValue(size());
+  protected int getConfiguredCacheSize() {
+    return pluginMgr.getAuSearchCacheSize(size());
   }
 
-  IntStepFunction getSizeFunc() {
-    if (pluginMgr != null) {
-      return pluginMgr.getAuSearchCacheSizeFunc();
-    } else {
-      return defaultSizeFunc;
-    }
+  protected int getConfigured404CacheSize() {
+    return pluginMgr.getAuSearch404CacheSize(size());
   }
 
   /** Return an unordered collection of the AUs in the set.  The collection
@@ -163,6 +167,62 @@ public class AuSearchSet implements Iterable<ArchivalUnit> {
     synchronized (this) {
       return new AuSearchIterator();
     }
+  }
+
+  public  boolean isRecent404(String url) {
+    LRUMap map = recent404s;
+    if (map == null) {
+      return false;
+    }
+    synchronized (map) {
+      return (map.get(url) != null);
+    }
+  }
+
+  public void addRecent404(String url) {
+    if (isEmpty()) {
+      return;
+    }
+    LRUMap map = recent404s;
+    if (map == null) {
+      if (recent404Size <= 0) {
+	return;
+      }
+
+      map = new LRUMap(recent404Size);
+      recent404s = map;
+    }
+    synchronized (map) {
+      map.put(url, "");
+    }
+  }
+
+  // Grow the 404 cache if necessary.  Never shrinks the cache; to avoid
+  // churn when large batch of AUs is deactivated/reactivated.
+  private void set404CacheSize(int newSize) {
+    if (newSize < 0) {
+      // shouldn't happen, but ignore rather than throw
+      log.error("AuSearchSet size < 0");
+    }
+    LRUMap map = recent404s;
+    if (map == null) {
+      recent404Size = newSize;
+      return;
+    }
+    synchronized (map) {
+      if (newSize == 0) {
+	recent404s = null;
+      } else if (map.maxSize() < newSize) {
+	LRUMap newMap = new LRUMap(newSize);
+	newMap.putAll(map);
+	recent404s = newMap;
+      }
+      recent404Size = newSize;
+    }
+  }
+
+  public void flush404Cache() {
+    recent404s = null;
   }
 
   class AuSearchIterator implements Iterator<ArchivalUnit> {

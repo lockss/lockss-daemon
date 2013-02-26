@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuSearchSet.java,v 1.1.2.1 2013-02-24 02:59:27 tlipkis Exp $
+ * $Id: TestAuSearchSet.java,v 1.1.2.2 2013-02-26 00:06:46 tlipkis Exp $
  */
 
 /*
@@ -60,6 +60,14 @@ public class TestAuSearchSet extends LockssTestCase {
     }
   }
 
+  void setUpSizeFuncs() {
+    ConfigurationUtil.setFromArgs(PluginManager.PARAM_AU_SEARCH_404_CACHE_SIZE,
+				  "[1,1],[2,2],[3,3],[4,4],[5,6]",
+				  PluginManager.PARAM_AU_SEARCH_CACHE_SIZE,
+				  "[1,1],[2,2],[3,3],[4,5]");
+  }
+
+
   Collection sortedAus(Collection aus) {
     Set<ArchivalUnit> res = new TreeSet<ArchivalUnit>(new AuOrderComparator());
     res.addAll(aus);
@@ -99,7 +107,7 @@ public class TestAuSearchSet extends LockssTestCase {
 
   public void testOne() {
     MockArchivalUnit mau = new MockArchivalUnit();
-    AuSearchSet ss = new AuSearchSet();
+    AuSearchSet ss = new MyAuSearchSet();
     ss.addAu(mau);
     assertHasAus(ListUtil.list(mau), ss);
     ss.addToCache(mau);
@@ -201,22 +209,128 @@ public class TestAuSearchSet extends LockssTestCase {
     assertHasAus(byIndices(7,8,0,1,2,3,5,10), ss);
   }
 
+  public void test404Cache() {
+    MockArchivalUnit mau = new MockArchivalUnit("mau1");
+    MyAuSearchSet ss = new MyAuSearchSet().set404CacheSize0(0);
+    ss.addAu(mau);
+    String url1 = "url1";
+    String url2 = "url2";
+    String url3 = "url3";
+    String url4 = "url4";
+    String url5 = "url5";
+    assertFalse(ss.isRecent404(url1));
+    ss.addRecent404(url1);
+    assertFalse(ss.isRecent404(url1));
+
+    ss = new MyAuSearchSet().set404CacheSize0(1);
+    ss.addAu(mau);
+    assertFalse(ss.isRecent404(url1));
+    ss.addRecent404(url1);
+
+    assertTrue(ss.isRecent404(url1));
+    assertFalse(ss.isRecent404(url2));
+    ss.addRecent404(url2);
+    assertFalse(ss.isRecent404(url1));
+    assertTrue(ss.isRecent404(url2));
+    ss.set404CacheSize0(2);
+    ss.addAu(new MockArchivalUnit("mau2"));
+    assertFalse(ss.isRecent404(url1));
+    assertTrue(ss.isRecent404(url2));
+    ss.addRecent404(url1);
+    assertTrue(ss.isRecent404(url1));
+    assertTrue(ss.isRecent404(url2));
+    ss.addRecent404(url3);
+    assertFalse(ss.isRecent404(url1));
+    assertTrue(ss.isRecent404(url3));
+    assertTrue(ss.isRecent404(url2));
+    ss.addRecent404(url4);
+    assertFalse(ss.isRecent404(url1));
+    assertFalse(ss.isRecent404(url3));
+    assertTrue(ss.isRecent404(url2));
+    assertTrue(ss.isRecent404(url4));
+
+    ss.set404CacheSize0(4);
+    ss.addAu(new MockArchivalUnit("mau3"));
+    assertFalse(ss.isRecent404(url1));
+    assertFalse(ss.isRecent404(url3));
+    assertTrue(ss.isRecent404(url4));
+    assertTrue(ss.isRecent404(url2));
+
+    ss.addRecent404(url1);
+    assertTrue(ss.isRecent404(url1));
+    assertFalse(ss.isRecent404(url3));
+    assertTrue(ss.isRecent404(url4));
+    assertTrue(ss.isRecent404(url2));
+
+    ss.addRecent404(url5);
+    assertFalse(ss.isRecent404(url3));
+    assertTrue(ss.isRecent404(url4));
+    assertTrue(ss.isRecent404(url2));
+    assertTrue(ss.isRecent404(url5));
+    assertTrue(ss.isRecent404(url1));
+
+    ss.addRecent404(url3);
+    assertTrue(ss.isRecent404(url1));
+    assertTrue(ss.isRecent404(url3));
+    assertFalse(ss.isRecent404(url4));
+    assertTrue(ss.isRecent404(url2));
+    assertTrue(ss.isRecent404(url5));
+
+  }
 
   class MyAuSearchSet extends AuSearchSet {
+    int mockSize = -1;
+    int cacheSize404 = -1;
     int cacheSize = -1;
 
-    MyAuSearchSet setCacheSize(int size) {
-      this.cacheSize = size;
+    MyAuSearchSet setSize(int size) {
+      this.mockSize = size;
       return this;
     }      
 
-    protected int getCacheSize() {
-      if (cacheSize < 0) {
-	return super.getCacheSize();
+    private MyAuSearchSet setCacheSize(int cacheSize) {
+      this.cacheSize = cacheSize;
+      return this;
+    }      
+
+    private MyAuSearchSet set404CacheSize0(int cacheSize) {
+      this.cacheSize404 = cacheSize;
+      return this;
+    }      
+
+    @Override
+    public int size() {
+      if (mockSize < 0) {
+	return super.size();
       } else {
-	return cacheSize;
+	return mockSize;
       }
     }
+
+    @Override
+    protected int getConfiguredCacheSize() {
+      if (cacheSize >= 0) {
+	return cacheSize;
+      } else {
+	String func =
+	  CurrentConfig.getParam(PluginManager.PARAM_AU_SEARCH_CACHE_SIZE,
+				 PluginManager.DEFAULT_AU_SEARCH_CACHE_SIZE);
+	return new IntStepFunction(func).getValue(size());
+      }
+    }
+
+    @Override
+    protected int getConfigured404CacheSize() {
+      if (cacheSize404 >= 0) {
+	return cacheSize404;
+      } else {
+	String func =
+	  CurrentConfig.getParam(PluginManager.PARAM_AU_SEARCH_404_CACHE_SIZE,
+				 PluginManager.DEFAULT_AU_SEARCH_404_CACHE_SIZE);
+	return new IntStepFunction(func).getValue(size());
+      }
+    }
+
   }
 
 
