@@ -1,5 +1,5 @@
 /*
- * $Id: SubstanceChecker.java,v 1.7 2012-07-09 07:53:42 tlipkis Exp $
+ * $Id: SubstanceChecker.java,v 1.7.12.1 2013-02-26 00:07:15 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.state;
 import java.util.*;
 import java.net.*;
 import java.io.*;
-import org.apache.commons.collections.map.LRUMap;
 import org.apache.oro.text.regex.*;
 
 import org.lockss.util.*;
