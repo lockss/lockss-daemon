@@ -18,11 +18,12 @@
     
     param[journal_id] = went
 
-    au < manifest ; 2008 ; Proceedings of the Entomological Society of Washington Volume 110 ; 110 >
-    au < manifest ; 2009 ; Proceedings of the Entomological Society of Washington Volume 111 ; 111 >
-    au < manifest ; 2010 ; Proceedings of the Entomological Society of Washington Volume 112 ; 112 >
-    au < manifest ; 2011 ; Proceedings of the Entomological Society of Washington Volume 113 ; 113 >
-    au < manifest ; 2012 ; Proceedings of the Entomological Society of Washington Volume 114 ; 114 >
+    au < testing ; 2008 ; Proceedings of the Entomological Society of Washington Volume 110 ; 110 >
+    au < testing ; 2009 ; Proceedings of the Entomological Society of Washington Volume 111 ; 111 >
+    au < testing ; 2010 ; Proceedings of the Entomological Society of Washington Volume 112 ; 112 >
+    au < testing ; 2011 ; Proceedings of the Entomological Society of Washington Volume 113 ; 113 >
+    au < testing ; 2012 ; Proceedings of the Entomological Society of Washington Volume 114 ; 114 >
+    au < exists ; 2013 ; Proceedings of the Entomological Society of Washington Volume 115 ; 115 >
 
   }
   
