@@ -89,7 +89,7 @@
     param[base_url] = http://mem.lyellcollection.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; releasing ; 1958 ; Geological Society of London Memoirs Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 1958 ; Geological Society of London Memoirs Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 1960 ; Geological Society of London Memoirs Volume 2 ; 2 >
     au < HighWirePressPlugin ; down ; 1962 ; Geological Society of London Memoirs Volume 3 ; 3 >
     au < HighWirePressPlugin ; down ; 1968 ; Geological Society of London Memoirs Volume 4 ; 4 >
