@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.130.6.3 2013-02-25 20:17:54 dshr Exp $
+ * $Id: V3Poller.java,v 1.130.6.4 2013-02-26 02:38:59 dshr Exp $
  */
 
 /*
@@ -1021,6 +1021,13 @@ public class V3Poller extends BasePoll {
     final ParticipantUserData participant =
       new ParticipantUserData(id, this, stateDir);
     participant.setPollerNonce(PollUtil.makeHashNonce(HASH_NONCE_LENGTH));
+    if (modulus != 0) {
+      participant.setModulus(modulus);
+      if (sampleNonce == null || sampleNonce == ByteArray.EMPTY_BYTE_ARRAY) {
+        sampleNonce = PollUtil.makeHashNonce(HASH_NONCE_LENGTH);
+      }
+      participant.setSampleNonce(sampleNonce);
+    }
     PsmMachine machine = makeMachine();
     PsmInterp interp = newPsmInterp(machine, participant);
     interp.setCheckpointer(new PsmInterp.Checkpointer() {
@@ -1358,7 +1365,6 @@ public class V3Poller extends BasePoll {
 	      + pollerState.getPollKey());
     if (modulus != 0) {
       log.info("Sampled poll: " + modulus);
-      sampleNonce = PollUtil.makeHashNonce(HASH_NONCE_LENGTH);
     }
     BlockHasher hasher = (modulus == 0 || sampleNonce == null ?
 			  new BlockHasher(cu,

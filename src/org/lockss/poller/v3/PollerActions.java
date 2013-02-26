@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.30.38.1 2013-02-22 20:07:16 dshr Exp $
+ * $Id: PollerActions.java,v 1.30.38.2 2013-02-26 02:38:59 dshr Exp $
  */
 
 /*
@@ -71,14 +71,14 @@ public class PollerActions {
   public static PsmEvent handleSendPoll(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
     if (!ud.isPollActive()) return V3Events.evtError;
+    int mod = ud.getModulus();
     // For auditing purposes, log the poller nonce.
     log.info("Inviting peer " + ud.getVoterId() + " into poll " +
              ud.getKey() + " with poller nonce " +
-             ByteArray.toBase64(ud.getPollerNonce()));
+             ByteArray.toBase64(ud.getPollerNonce()) + " modulus " + mod);
     try {
       V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL);
       msg.setPollerNonce(ud.getPollerNonce());
-      int mod = ud.getModulus();
       if (mod != 0) {
 	byte[] sampleNonce = ud.getSampleNonce();
 	if (sampleNonce != null && sampleNonce != ByteArray.EMPTY_BYTE_ARRAY) {

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.77.14.3 2013-02-25 20:17:55 dshr Exp $
+ * $Id: V3Voter.java,v 1.77.14.4 2013-02-26 02:39:00 dshr Exp $
  */
 
 /*
@@ -265,6 +265,9 @@ public class V3Voter extends BasePoll {
                                              stateDir);
       voterUserData.setPollMessage(msg);
       voterUserData.setVoteDeadline(TimeBase.nowMs() + msg.getVoteDuration());
+      if (msg.getModulus() != 0) {
+        voterUserData.setSampleNonce(msg.getSampleNonce());
+      }
     } catch (IOException ex) {
       log.critical("IOException while trying to create VoterUserData: ", ex);
       stopPoll();
@@ -845,11 +848,11 @@ public class V3Voter extends BasePoll {
   boolean generateVote() throws NoSuchAlgorithmException {
     log.debug("Scheduling vote hash for poll " + voterUserData.getPollKey());
     int mod = voterUserData.getModulus();
+    byte[] sampleNonce = voterUserData.getSampleNonce();
     if (mod != 0) {
-      log.info("Vote in sampled poll. modulus: " + mod);
+      log.info("Vote in sampled poll. modulus: " + mod + " nonce: " + sampleNonce);
     }
     CachedUrlSet cus = voterUserData.getCachedUrlSet();
-    byte[] sampleNonce = voterUserData.getSampleNonce();
     BlockHasher hasher = (mod == 0 ?
 			  new BlockHasher(cus,
 					  initHasherDigests(),

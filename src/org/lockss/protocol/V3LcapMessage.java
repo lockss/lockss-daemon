@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.49.2.3 2013-02-25 20:17:55 dshr Exp $
+ * $Id: V3LcapMessage.java,v 1.49.2.4 2013-02-26 02:39:00 dshr Exp $
  */
 
 /*
@@ -689,6 +689,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   }
 
   public void setModulus(int mod) {
+    log.debug3("setModulus: " + mod);
     m_modulus = mod;
   }
 
