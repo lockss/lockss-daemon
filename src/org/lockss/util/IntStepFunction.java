@@ -1,5 +1,5 @@
 /*
- * $Id: IntStepFunction.java,v 1.1.2.1 2013-02-24 02:57:33 tlipkis Exp $
+ * $Id: IntStepFunction.java,v 1.1.2.2 2013-02-26 00:07:23 tlipkis Exp $
  */
 
 /*
@@ -90,9 +90,8 @@ public class IntStepFunction {
     if (pointList == null || pointList.isEmpty()) {
       throw new IllegalArgumentException("Must supply non-empty pointList");
     }
-    points = new Point[pointList.size() + 1];
+    points = new Point[pointList.size()];
     int ix = 0;
-    points[ix++] = new Point(Integer.MIN_VALUE, 0);
     for (Point p : pointList) {
       points[ix++] = p;
     }
@@ -100,8 +99,10 @@ public class IntStepFunction {
 
   /** Return the value of the function of X */
   public int getValue(int x) {
+    if (x < points[0].x) {
+      return 0;
+    }
     Point p2 = points[0];
-
     for (int ix = 0; ix < points.length - 1; ix++) {
       Point p1 = p2;
       p2 = points[ix + 1];
