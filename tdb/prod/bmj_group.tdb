@@ -516,21 +516,21 @@
     au < HighWirePressH20Plugin ; released ; 1946 ; British Journal of Ophthalmology Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 1947 ; British Journal of Ophthalmology Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 1948 ; British Journal of Ophthalmology Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; testing ; 1949 ; British Journal of Ophthalmology Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; testing ; 1950 ; British Journal of Ophthalmology Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; testing ; 1951 ; British Journal of Ophthalmology Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; testing ; 1952 ; British Journal of Ophthalmology Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; testing ; 1953 ; British Journal of Ophthalmology Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; ready ; 1949 ; British Journal of Ophthalmology Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; ready ; 1950 ; British Journal of Ophthalmology Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; ready ; 1951 ; British Journal of Ophthalmology Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; ready ; 1952 ; British Journal of Ophthalmology Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; 1953 ; British Journal of Ophthalmology Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; testing ; 1954 ; British Journal of Ophthalmology Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; testing ; 1955 ; British Journal of Ophthalmology Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; testing ; 1956 ; British Journal of Ophthalmology Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; ready ; 1955 ; British Journal of Ophthalmology Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; ready ; 1956 ; British Journal of Ophthalmology Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; testing ; 1957 ; British Journal of Ophthalmology Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; testing ; 1958 ; British Journal of Ophthalmology Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; testing ; 1959 ; British Journal of Ophthalmology Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; testing ; 1960 ; British Journal of Ophthalmology Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; testing ; 1961 ; British Journal of Ophthalmology Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; testing ; 1962 ; British Journal of Ophthalmology Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; testing ; 1963 ; British Journal of Ophthalmology Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; ready ; 1958 ; British Journal of Ophthalmology Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; ready ; 1959 ; British Journal of Ophthalmology Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; ready ; 1960 ; British Journal of Ophthalmology Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; ready ; 1961 ; British Journal of Ophthalmology Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; ready ; 1962 ; British Journal of Ophthalmology Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; ready ; 1963 ; British Journal of Ophthalmology Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; manifest ; 1964 ; British Journal of Ophthalmology Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; manifest ; 1965 ; British Journal of Ophthalmology Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; manifest ; 1966 ; British Journal of Ophthalmology Volume 50 ; 50 >
@@ -942,11 +942,11 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://heart.bmj.com/
 
-    au < HighWirePressH20Plugin ; testing ; 1939 ; Heart Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1939 ; Heart Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; ready ; 1940 ; Heart Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; ready ; 1941 ; Heart Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 1942 ; Heart Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; testing ; 1943 ; Heart Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 1943 ; Heart Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 1944 ; Heart Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; released ; 1945 ; Heart Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 1946 ; Heart Volume 8 ; 8 >
@@ -957,10 +957,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 1951 ; Heart Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 1952 ; Heart Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 1953 ; Heart Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 1954 ; Heart Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 1954 ; Heart Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; ready ; 1955 ; Heart Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; 1956 ; Heart Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; 1957 ; Heart Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 1956 ; Heart Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; ready ; 1957 ; Heart Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; ready ; 1958 ; Heart Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; ready ; 1959 ; Heart Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; ready ; 1960 ; Heart Volume 22 ; 22 >
@@ -1064,17 +1064,17 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       param[base_url] = http://injuryprevention.bmj.com/
 
       au < HighWirePressH20Plugin ; ready ; 1995 ; Injury Prevention Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; wanted ; 1996 ; Injury Prevention Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 1996 ; Injury Prevention Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; ready ; 1997 ; Injury Prevention Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; wanted ; 1998 ; Injury Prevention Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1998 ; Injury Prevention Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; ready ; 1999 ; Injury Prevention Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; wanted ; 2000 ; Injury Prevention Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; wanted ; 2001 ; Injury Prevention Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; wanted ; 2002 ; Injury Prevention Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; wanted ; 2003 ; Injury Prevention Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; Injury Prevention Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Injury Prevention Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Injury Prevention Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Injury Prevention Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; ready ; 2004 ; Injury Prevention Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Injury Prevention Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; wanted ; 2006 ; Injury Prevention Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; testing ; 2006 ; Injury Prevention Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Injury Prevention Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Injury Prevention Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Injury Prevention Volume 15 ; 15 >
@@ -1099,13 +1099,13 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     au < HighWirePressH20Plugin ; ready ; 1947-1948 ; Journal of Clinical Pathology Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; ready ; 1949 ; Journal of Clinical Pathology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; wanted ; 1950 ; Journal of Clinical Pathology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1950 ; Journal of Clinical Pathology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 1951 ; Journal of Clinical Pathology Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; wanted ; 1952 ; Journal of Clinical Pathology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1952 ; Journal of Clinical Pathology Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; ready ; 1953 ; Journal of Clinical Pathology Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; ready ; 1954 ; Journal of Clinical Pathology Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; ready ; 1955 ; Journal of Clinical Pathology Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; wanted ; 1956 ; Journal of Clinical Pathology Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 1956 ; Journal of Clinical Pathology Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 1957 ; Journal of Clinical Pathology Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 1958 ; Journal of Clinical Pathology Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 1959 ; Journal of Clinical Pathology Volume 12 ; 12 >
@@ -1287,10 +1287,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; ready ; 1977 ; Journal of Medical Ethics Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 1978 ; Journal of Medical Ethics Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; ready ; 1979 ; Journal of Medical Ethics Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; wanted ; 1980 ; Journal of Medical Ethics Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of Medical Ethics Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; ready ; 1981 ; Journal of Medical Ethics Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; wanted ; 1982 ; Journal of Medical Ethics Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; wanted ; 1983 ; Journal of Medical Ethics Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of Medical Ethics Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; testing ; 1983 ; Journal of Medical Ethics Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; ready ; 1984 ; Journal of Medical Ethics Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; wanted ; 1985 ; Journal of Medical Ethics Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; wanted ; 1986 ; Journal of Medical Ethics Volume 12 ; 12 >
