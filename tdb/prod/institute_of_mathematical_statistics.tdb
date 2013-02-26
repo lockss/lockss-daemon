@@ -124,15 +124,15 @@
       param[base_url] = http://www.i-journals.org/ps/
       comment[0] = checked that this journal use OJSPlugin in 11/19/2012
       
-      au < ready ; 2004 ; Probability Surveys Volume 1 ; 1 ; 2004 >
-      au < ready ; 2005 ; Probability Surveys Volume 2 ; 2 ; 2005 >
-      au < ready ; 2006 ; Probability Surveys Volume 3 ; 3 ; 2006 >
-      au < ready ; 2007 ; Probability Surveys Volume 4 ; 4 ; 2007 >
-      au < ready ; 2008 ; Probability Surveys Volume 5 ; 5 ; 2008 >
-      au < ready ; 2009 ; Probability Surveys Volume 6 ; 6 ; 2009 >
-      au < ready ; 2010 ; Probability Surveys Volume 7 ; 7 ; 2010 >
-      au < ready ; 2011 ; Probability Surveys Volume 8 ; 8 ; 2011 >
-      au < ready ; 2012 ; Probability Surveys Volume 9 ; 9 ; 2012 >
+      au < releasing ; 2004 ; Probability Surveys Volume 1 ; 1 ; 2004 >
+      au < releasing ; 2005 ; Probability Surveys Volume 2 ; 2 ; 2005 >
+      au < releasing ; 2006 ; Probability Surveys Volume 3 ; 3 ; 2006 >
+      au < releasing ; 2007 ; Probability Surveys Volume 4 ; 4 ; 2007 >
+      au < releasing ; 2008 ; Probability Surveys Volume 5 ; 5 ; 2008 >
+      au < releasing ; 2009 ; Probability Surveys Volume 6 ; 6 ; 2009 >
+      au < releasing ; 2010 ; Probability Surveys Volume 7 ; 7 ; 2010 >
+      au < releasing ; 2011 ; Probability Surveys Volume 8 ; 8 ; 2011 >
+      au < releasing ; 2012 ; Probability Surveys Volume 9 ; 9 ; 2012 >
     
     }
   }

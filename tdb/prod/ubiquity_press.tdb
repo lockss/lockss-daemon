@@ -75,14 +75,14 @@
     au < released ; 1996 ; The Bulletin of the History of Archaeology Volume 6 ; 6 ; 1996 >
     au < released ; 1997 ; The Bulletin of the History of Archaeology Volume 7 ; 7 ; 1997 >
     au < released ; 1998 ; The Bulletin of the History of Archaeology Volume 8 ; 8 ; 1998 >
-    au < ready ; 1999 ; The Bulletin of the History of Archaeology Volume 9 ; 9 ; 1999 >
-    au < ready ; 2000 ; The Bulletin of the History of Archaeology Volume 10 ; 10 ; 2000 >
-    au < ready ; 2001 ; The Bulletin of the History of Archaeology Volume 11 ; 11 ; 2001 >
-    au < ready ; 2002 ; The Bulletin of the History of Archaeology Volume 12 ; 12 ; 2002 >
-    au < ready ; 2003 ; The Bulletin of the History of Archaeology Volume 13 ; 13 ; 2003 >
-    au < ready ; 2004 ; The Bulletin of the History of Archaeology Volume 14 ; 14 ; 2004 >
-    au < ready ; 2005 ; The Bulletin of the History of Archaeology Volume 15 ; 15 ; 2005 >
-    au < ready ; 2006 ; The Bulletin of the History of Archaeology Volume 16 ; 16 ; 2006 >
+    au < releasing ; 1999 ; The Bulletin of the History of Archaeology Volume 9 ; 9 ; 1999 >
+    au < releasing ; 2000 ; The Bulletin of the History of Archaeology Volume 10 ; 10 ; 2000 >
+    au < releasing ; 2001 ; The Bulletin of the History of Archaeology Volume 11 ; 11 ; 2001 >
+    au < releasing ; 2002 ; The Bulletin of the History of Archaeology Volume 12 ; 12 ; 2002 >
+    au < releasing ; 2003 ; The Bulletin of the History of Archaeology Volume 13 ; 13 ; 2003 >
+    au < releasing ; 2004 ; The Bulletin of the History of Archaeology Volume 14 ; 14 ; 2004 >
+    au < releasing ; 2005 ; The Bulletin of the History of Archaeology Volume 15 ; 15 ; 2005 >
+    au < releasing ; 2006 ; The Bulletin of the History of Archaeology Volume 16 ; 16 ; 2006 >
     au < released ; 2007 ; The Bulletin of the History of Archaeology Volume 17 ; 17 ; 2007 >
     au < released ; 2008 ; The Bulletin of the History of Archaeology Volume 18 ; 18 ; 2008 >
     au < released ; 2009 ; The Bulletin of the History of Archaeology Volume 19 ; 19 ; 2009 >
@@ -103,14 +103,14 @@
     param[base_url] = http://www.jcms-journal.com/
     param[journal_id] = jcms
 
-    au < ready ; 1996 ; The Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
-    au < ready ; 1997 ; The Journal of Conservation and Museum Studies Volume 2-3 ; 2-3 ; 1997 >
-    au < ready ; 1998 ; The Journal of Conservation and Museum Studies Volume 4-5 ; 4-5 ; 1998 >
-    au < ready ; 1999 ; The Journal of Conservation and Museum Studies Volume 6 ; 6 ; 1999 >
-    au < ready ; 2001 ; The Journal of Conservation and Museum Studies Volume 7 ; 7 ; 2001 >
-    au < ready ; 2002 ; The Journal of Conservation and Museum Studies Volume 8 ; 8 ; 2002 >
-    au < ready ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
-    au < ready ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
+    au < releasing ; 1996 ; The Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
+    au < releasing ; 1997 ; The Journal of Conservation and Museum Studies Volume 2-3 ; 2-3 ; 1997 >
+    au < releasing ; 1998 ; The Journal of Conservation and Museum Studies Volume 4-5 ; 4-5 ; 1998 >
+    au < releasing ; 1999 ; The Journal of Conservation and Museum Studies Volume 6 ; 6 ; 1999 >
+    au < releasing ; 2001 ; The Journal of Conservation and Museum Studies Volume 7 ; 7 ; 2001 >
+    au < releasing ; 2002 ; The Journal of Conservation and Museum Studies Volume 8 ; 8 ; 2002 >
+    au < releasing ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
+    au < releasing ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
     au < expected ; 2013 ; The Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 >
     
   }
@@ -154,13 +154,13 @@
     param[base_url] = http://www.opticon1826.com/
     param[journal_id] = opt
 
-    au < ready ; 2006 ; Opticon1826 Volume 1 ; 1 ; 2006 >
-    au < ready ; 2007 ; Opticon1826 Volume 2-3 ; 2-3 ; 2007 >
-    au < ready ; 2008 ; Opticon1826 Volume 4-5 ; 4-5 ; 2008 >
-    au < ready ; 2009 ; Opticon1826 Volume 6-7 ; 6-7 ; 2009 >
-    au < ready ; 2010 ; Opticon1826 Volume 8-9 ; 8-9 ; 2010 >
-    au < ready ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 >
-    au < ready ; 2012 ; Opticon1826 Volume 12 ; 12 ; 2012 >
+    au < releasing ; 2006 ; Opticon1826 Volume 1 ; 1 ; 2006 >
+    au < releasing ; 2007 ; Opticon1826 Volume 2-3 ; 2-3 ; 2007 >
+    au < releasing ; 2008 ; Opticon1826 Volume 4-5 ; 4-5 ; 2008 >
+    au < releasing ; 2009 ; Opticon1826 Volume 6-7 ; 6-7 ; 2009 >
+    au < releasing ; 2010 ; Opticon1826 Volume 8-9 ; 8-9 ; 2010 >
+    au < releasing ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 >
+    au < releasing ; 2012 ; Opticon1826 Volume 12 ; 12 ; 2012 >
     au < expected ; 2013 ; Opticon1826 Volume 13 ; 13 ; 2013 >
     
   }
