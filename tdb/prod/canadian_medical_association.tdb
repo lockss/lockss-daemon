@@ -110,5 +110,19 @@
 
   }
 
+  {
+    title <
+      name = CMAJ Open ;
+      issn = 2291-0026 ;
+      issnl = 2291-0026
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.cmajopen.ca/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; CMAJ Open Volume 1 ; 1 >
+
+  }
 }
 
