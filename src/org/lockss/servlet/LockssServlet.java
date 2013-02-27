@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.129 2012-08-06 03:34:07 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.129.10.1 2013-02-27 05:57:33 tlipkis Exp $
  */
 
 /*
@@ -141,6 +141,7 @@ public abstract class LockssServlet extends HttpServlet
   protected String clientAddr;	// client addr, even if no param
   protected String localAddr;
   protected MultiPartRequest multiReq;
+  protected long reqStartTime;
 
   private Vector footnotes;
   private int footNumber;
@@ -221,6 +222,7 @@ public abstract class LockssServlet extends HttpServlet
 	}
 	session.setAttribute(SESSION_KEY_REQUEST_HOST, reqHost);
       }
+      reqStartTime = TimeBase.nowMs();
       lockssHandleRequest();
     } catch (ServletException e) {
       log.error("Servlet threw", e);
@@ -240,6 +242,14 @@ public abstract class LockssServlet extends HttpServlet
       resetMyLocals();
       resetLocals();
     }
+  }
+
+  protected long reqStartTime() {
+    return reqStartTime;
+  }
+
+  protected long reqElapsedTime() {
+    return TimeBase.msSince(reqStartTime);
   }
 
   protected void resetState() {

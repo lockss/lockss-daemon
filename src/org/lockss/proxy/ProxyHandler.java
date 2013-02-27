@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.75.2.1 2013-02-24 02:57:19 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.75.2.2 2013-02-27 05:57:33 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.75.2.1 2013-02-24 02:57:19 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.75.2.2 2013-02-27 05:57:33 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -296,7 +296,10 @@ public class ProxyHandler extends AbstractHttpHandler {
 		      HttpResponse response)
       throws HttpException, IOException {
     URI uri = request.getURI();
-    log.debug2("url: " + uri);
+    long reqStartTime = TimeBase.nowMs();
+    if (proxyMgr.isLogReqStart()) {
+      log.info("Proxy handle url: " + uri);
+    }
 
     if (!proxyMgr.isMethodAllowed(request.getMethod())) {
       sendForbid(request,response,uri);
@@ -359,7 +362,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     String urlString = uri.toString();
     if (MANIFEST_INDEX_URL_PATH.equals(urlString)) {
       sendIndexPage(request, response);
-      logAccess(request, "200 index page");
+      logAccess(request, "200 index page", TimeBase.msSince(reqStartTime));
       return;
     }
     String unencUrl = urlString;
@@ -416,7 +419,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  }
 	  serveFromCache(pathInContext, pathParams, request,
 			 response, cu);
-	  logAccess(request, "200 from cache");
+	  logAccess(request, "200 from cache", TimeBase.msSince(reqStartTime));
 	  // Record the necessary information required for COUNTER reports.
 	  CounterReportsRequestRecorder
 	      .getInstance()
@@ -434,11 +437,13 @@ public class ProxyHandler extends AbstractHttpHandler {
 			  response,
 			  404, errmsg,
 			  pluginMgr.getCandidateAus(urlString));
-	    logAccess(request, "not present, no forward, 404 w/index");
+	    logAccess(request, "not present, no forward, 404 w/index",
+		      TimeBase.msSince(reqStartTime));
 	  } else {
 	    response.sendError(HttpResponse.__404_Not_Found, errmsg);
 	    request.setHandled(true);
-	    logAccess(request, "not present, no forward, 404");
+	    logAccess(request, "not present, no forward, 404",
+		      TimeBase.msSince(reqStartTime));
 	  }
 	  return;
 	}
@@ -453,18 +458,20 @@ public class ProxyHandler extends AbstractHttpHandler {
 		      hostMsg("Can't connect to", uri.getHost(),
 			      "Host not responding (cached status)"),
 		      pluginMgr.getCandidateAus(urlString));
-	logAccess(request, "not present, host down, 504");
+	logAccess(request, "not present, host down, 504",
+		  TimeBase.msSince(reqStartTime));
 	return;
       }
       if (UrlUtil.isHttpUrl(urlString)) {
 	if (HttpRequest.__GET.equals(request.getMethod())) {
 	  doLockss(pathInContext, pathParams, request, response,
-		   urlString, cu);
+		   urlString, cu, reqStartTime);
 	  return;
 	}
       }
       doSun(pathInContext, pathParams, request, response);
-      logAccess(request, "unrecognized request type, forwarded");
+      logAccess(request, "unrecognized request type, forwarded",
+		TimeBase.msSince(reqStartTime));
     } finally {
       AuUtil.safeRelease(cu);
     }
@@ -619,13 +626,18 @@ public class ProxyHandler extends AbstractHttpHandler {
     proxyMgr.logAccess(request.getURI().toString(), msg);
   }
 
+  void logAccess(HttpRequest request, String msg, long reqElapsedTime) {
+    proxyMgr.logAccess(request.getURI().toString(), msg, reqElapsedTime);
+  }
+
   /** Proxy a connection using LockssUrlConnection */
   void doLockss(String pathInContext,
 		String pathParams,
 		HttpRequest request,
 		HttpResponse response,
 		String urlString,
-		CachedUrl cu) throws IOException {
+		CachedUrl cu,
+		long reqStartTime) throws IOException {
     boolean isInCache = cu != null && cu.hasContent();
 
     LockssUrlConnection conn = null;
@@ -653,7 +665,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 			|| isPubNever(cu))) {
 	if (log.isDebug2()) log.debug2("Nopub: " + cu.getUrl());
 	serveFromCache(pathInContext, pathParams, request, response, cu);
-	logAccess(request, "200 from cache");
+	logAccess(request, "200 from cache", TimeBase.msSince(reqStartTime));
 	// Record the necessary information required for COUNTER reports.
 	CounterReportsRequestRecorder
 	    .getInstance()
@@ -676,7 +688,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 			  "Host " + request.getURI().getHost() +
 			  " no longer has content",
 			  candidateAus);
-	    logAccess(request, "not present, pub_never, 404 with index");
+	    logAccess(request, "not present, pub_never, 404 with index",
+		      TimeBase.msSince(reqStartTime));
 	    return;
 	  } else {
 	    // what to do here?  No content, no candidate AUs, no pub.
