@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.51 2013-01-06 06:34:53 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.52 2013-02-27 06:01:49 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,10 @@ public class ProxyManager extends BaseProxyManager {
    * To disable set to <tt>none</tt>. */
   static final String PARAM_ACCESS_LOG_LEVEL = PREFIX + "accessLogLevel";
   static final String DEFAULT_ACCESS_LOG_LEVEL = "info";
+
+  /** Log the start of proxy requests if true. */
+  static final String PARAM_LOG_REQUEST_START = PREFIX + "logRequestStart";
+  static final boolean DEFAULT_LOG_REQUEST_START = false;
 
   /** If true, all incoming URLs will be minimally encoded */
   static final String PARAM_MINIMALLY_ENCODE_URLS =
@@ -211,6 +215,7 @@ public class ProxyManager extends BaseProxyManager {
   private LockssUrlConnectionPool quickConnPool = null;
   private int paramAccessLogLevel = -1;
   private boolean paramMinimallyEncodeUrls = DEFAULT_MINIMALLY_ENCODE_URLS;
+  private boolean paramLogReqStart = DEFAULT_LOG_REQUEST_START;
 
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
@@ -226,6 +231,8 @@ public class ProxyManager extends BaseProxyManager {
 	log.error("Couldn't set access log level", e);
 	paramAccessLogLevel = -1;
       }	  
+      paramLogReqStart = config.getBoolean(PARAM_LOG_REQUEST_START,
+					   DEFAULT_LOG_REQUEST_START);
 
       port = config.getInt(PARAM_PORT, DEFAULT_PORT);
       start = config.getBoolean(PARAM_START, DEFAULT_START);
@@ -504,12 +511,23 @@ public class ProxyManager extends BaseProxyManager {
     return paramMinimallyEncodeUrls;
   }
 
+  public boolean isLogReqStart() {
+    return paramLogReqStart;
+  }
+
   public boolean showManifestIndexForResponse(int status) {
     return ! noManifestIndexResponses.contains(new Integer(status));
   }
 
   public boolean isMethodAllowed(String method) {
     return ! disallowedMethods.contains(method);
+  }
+
+
+
+  public void logAccess(String url, String msg, long reqElapsedTime) {
+    logAccess(url, msg + " in " +
+	      StringUtil.timeIntervalToString(reqElapsedTime));
   }
 
   public void logAccess(String url, String msg) {
