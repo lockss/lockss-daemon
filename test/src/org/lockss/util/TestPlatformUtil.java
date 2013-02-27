@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformUtil.java,v 1.12 2012-12-17 23:48:45 clairegriffin Exp $
+ * $Id: TestPlatformUtil.java,v 1.13 2013-02-27 01:25:48 tlipkis Exp $
  */
 
 /*
@@ -115,6 +115,7 @@ public class TestPlatformUtil extends LockssTestCase {
   }
 
   public void testJavaDFEqualsDF() throws Exception {
+    assertSuccessRate(.1, 10);
     String javatmp = System.getProperty("java.io.tmpdir");
     PlatformUtil.DF df = info.getDF(javatmp);
 
