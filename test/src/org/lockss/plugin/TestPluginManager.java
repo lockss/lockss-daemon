@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.102.2.2 2013-02-26 00:07:03 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.102.2.3 2013-02-27 05:57:12 tlipkis Exp $
  */
 
 /*
@@ -874,6 +874,36 @@ public class TestPluginManager extends LockssTestCase {
       cb.crawlCompleted(url);
     }
 
+    Map<String,SimpleQueue> findUrlQueues = new HashMap<String,SimpleQueue>();
+
+    SimpleQueue ensureFindUrlQueue(String url) {
+      synchronized (findUrlQueues) {
+	SimpleQueue res = findUrlQueues.get(url);
+	if (res == null) {
+	  res = new SimpleQueue.Fifo();
+	  findUrlQueues.put(url, res);
+	}
+	return res;
+      }
+    }
+
+    MyPluginManager addToFindUrlQueue(String url, CachedUrl res) {
+      SimpleQueue queue = ensureFindUrlQueue(url);
+      queue.put(res);
+      return this;
+    }
+
+    protected CachedUrl findTheCachedUrl0(String url, CuContentReq contentReq) {
+      SimpleQueue queue;
+      synchronized (findUrlQueues) {
+	queue = findUrlQueues.get(url);
+      }
+      if (queue == null) {
+	return super.findTheCachedUrl0(url, contentReq);
+      }
+      return (CachedUrl)queue.get();
+    }
+
     void setDaemonVersion(DaemonVersion ver) {
       mockDaemonVersion = ver;
     }
@@ -1064,10 +1094,8 @@ public class TestPluginManager extends LockssTestCase {
     doConfig();
     ConfigurationUtil.addFromArgs(PluginManager.PARAM_AU_SEARCH_404_CACHE_SIZE,
 				  "[1,2]",
-				  PluginManager.PARAM_AU_SEARCH_CACHE_ALL_404s,
-				  "true");
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
-
+				  PluginManager.PARAM_AU_SEARCH_MIN_DISK_SEARCHES_FOR_404_CACHE,
+				  "0");
     // get the two archival units
     MockArchivalUnit au1 = (MockArchivalUnit)mgr.getAuFromId(mauauid1);
     MockArchivalUnit au2 = (MockArchivalUnit)mgr.getAuFromId(mauauid2);
@@ -1098,42 +1126,47 @@ public class TestPluginManager extends LockssTestCase {
     assertNull(mgr.findCachedUrl(url1, CuContentReq.HasContent));
     assertEquals(2, mgr.getRecent404Hits());
     ((MockCachedUrl)cu).setContent("abc");
-    signalAuEvent(au1);
-    cu = mgr.findCachedUrl(url1);
-    assertEquals(url1, cu.getUrl());
-    assertSame(au1, cu.getArchivalUnit());
-    assertEquals(7, mgr.getRecentCuMisses());
-    assertEquals(0, mgr.getRecentCuHits());
-    cu = mgr.findCachedUrl(url1a);
-    assertEquals(url1, cu.getUrl());
-    assertSame(au1, cu.getArchivalUnit());
+    signalAuEvent(au1, AuEventHandler.ChangeInfo.Type.Crawl, 1);
+    assertNull(mgr.findCachedUrl(url1));
+    signalAuEvent(au1, AuEventHandler.ChangeInfo.Type.Crawl, 4);
+    CachedUrl rcu1 = mgr.findCachedUrl(url1);
+    assertEquals(url1, rcu1.getUrl());
+    assertSame(au1, rcu1.getArchivalUnit());
     assertEquals(8, mgr.getRecentCuMisses());
     assertEquals(0, mgr.getRecentCuHits());
-    cu = mgr.findCachedUrl(url1b);
-    assertEquals(url1, cu.getUrl());
-    assertSame(au1, cu.getArchivalUnit());
+
+    CachedUrl rcu2 = mgr.findCachedUrl(url1a);
+    assertEquals(url1, rcu2.getUrl());
+    assertSame(au1, rcu2.getArchivalUnit());
     assertEquals(9, mgr.getRecentCuMisses());
     assertEquals(0, mgr.getRecentCuHits());
 
-    cu = mgr.findCachedUrl(url2);
-    assertEquals(url2, cu.getUrl());
-    assertSame(au2, cu.getArchivalUnit());
+    CachedUrl rcu3 = mgr.findCachedUrl(url1b);
+    assertEquals(url1, rcu3.getUrl());
+    assertSame(au1, rcu3.getArchivalUnit());
     assertEquals(10, mgr.getRecentCuMisses());
     assertEquals(0, mgr.getRecentCuHits());
 
+    CachedUrl rcu4 = mgr.findCachedUrl(url2);
+    assertEquals(url2, rcu4.getUrl());
+    assertSame(au2, rcu4.getArchivalUnit());
+    assertEquals(11, mgr.getRecentCuMisses());
+    assertEquals(0, mgr.getRecentCuHits());
+
     // url1 should be in cache
-    cu = mgr.findCachedUrl(url1);
-    assertEquals(url1, cu.getUrl());
-    assertSame(au1, cu.getArchivalUnit());
-    assertEquals(10, mgr.getRecentCuMisses());
+    CachedUrl rcu5 = mgr.findCachedUrl(url1);
+    assertEquals(url1, rcu5.getUrl());
+    assertSame(au1, rcu5.getArchivalUnit());
+    assertEquals(11, mgr.getRecentCuMisses());
     assertEquals(1, mgr.getRecentCuHits());
+    assertSame(cu, rcu5);
 
     // Test PreferContent
-    cu = mgr.findCachedUrl(url3, CuContentReq.PreferContent);
-    assertEquals(url3, cu.getUrl());
-    assertTrue(cu.hasContent());
-    assertSame(au2, cu.getArchivalUnit());
-    assertEquals(11, mgr.getRecentCuMisses());
+    CachedUrl rcu6 = mgr.findCachedUrl(url3, CuContentReq.PreferContent);
+    assertEquals(url3, rcu6.getUrl());
+    assertTrue(rcu6.hasContent());
+    assertSame(au2, rcu6.getArchivalUnit());
+    assertEquals(12, mgr.getRecentCuMisses());
     assertEquals(1, mgr.getRecentCuHits());
 
     // Test findCachedUrls() (returns list)
@@ -1150,10 +1183,10 @@ public class TestPluginManager extends LockssTestCase {
 		       mgr.findCachedUrls(url3, CuContentReq.HasContent));
 
     // url1 should still be in cache
-    cu = mgr.findCachedUrl(url1);
-    assertEquals(url1, cu.getUrl());
-    assertSame(au1, cu.getArchivalUnit());
-    assertEquals(11, mgr.getRecentCuMisses());
+    CachedUrl rcu7 = mgr.findCachedUrl(url1);
+    assertEquals(url1, rcu7.getUrl());
+    assertSame(au1, rcu7.getArchivalUnit());
+    assertEquals(12, mgr.getRecentCuMisses());
     assertEquals(2, mgr.getRecentCuHits());
     Plugin plug1 = au1.getPlugin();
     Configuration au1conf = au1.getConfiguration();
@@ -1168,13 +1201,47 @@ public class TestPluginManager extends LockssTestCase {
     CachedUrl xcu31 = xmau1.addUrl(url3, true, true, null);
 
     // url1 cache entry should be detected as invalid and a new CU returned.
-    cu = mgr.findCachedUrl(url1);
-    assertEquals(url1, cu.getUrl());
-    assertSame(xmau1, cu.getArchivalUnit());
-    assertEquals(12, mgr.getRecentCuMisses());
+    CachedUrl rcu8 = mgr.findCachedUrl(url1);
+    assertEquals(url1, rcu8.getUrl());
+    assertSame(xmau1, rcu8.getArchivalUnit());
+    assertEquals(13, mgr.getRecentCuMisses());
     assertEquals(2, mgr.getRecentCuHits());
 
-    assertEquals(2, mgr.getRecent404Hits());
+    assertEquals(3, mgr.getRecent404Hits());
+
+    assertEquals(0, mgr.getUrlSearchWaits());
+  }
+
+  /** Putter puts something onto a queue in a while */
+  class Putter extends DoLater {
+    SimpleQueue.Fifo queue;
+    Object obj1;
+    Object obj2;
+
+    Putter(long waitMs, SimpleQueue.Fifo queue, Object obj) {
+      this(waitMs, queue, obj, null);
+    }
+
+    Putter(long waitMs, SimpleQueue.Fifo queue, Object obj1, Object obj2) {
+      super(waitMs);
+      this.queue = queue;
+      this.obj1 = obj1;
+      this.obj2 = obj2;
+    }
+
+    protected void doit() {
+      queue.put(obj1);
+      if (obj2 != null) {
+	queue.put(obj2);
+      }
+    }
+  }
+
+  /** Put something onto a queue in a while */
+  private Putter putIn(long ms, SimpleQueue.Fifo queue, Object obj) {
+    Putter p = new Putter(ms, queue, obj);
+    p.start();
+    return p;
   }
 
   AuState setUpAuState(MockArchivalUnit mau) {
@@ -1198,7 +1265,6 @@ public class TestPluginManager extends LockssTestCase {
     ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
 				  "clockss");
     assertTrue(theDaemon.isClockss());
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
 
     // get the two archival units
     MockArchivalUnit au1 = (MockArchivalUnit)mgr.getAuFromId(mauauid1);
@@ -1259,11 +1325,10 @@ public class TestPluginManager extends LockssTestCase {
     MockPlugin mpi = new MockPlugin();
     MockArchivalUnit mau = new MyMockArchivalUnit() {
 	// shouldBeCached() is true if URL starts with prefix and doesn't
-// 	// contain SESSION (to ensure shouldBeCached() is called with site
-// 	// normalized URL
+	// contain SESSION (to ensure shouldBeCached() is called with site
+	// normalized URL
 	public boolean shouldBeCached(String url) {
-	  return url.startsWith(prefix);
-// 	  return url.startsWith(prefix) && (url.indexOf("SESSION") < 0);
+	  return url.startsWith(prefix) && (url.indexOf("SESSION") < 0);
 	}
 	// siteNormalizeUrl() removes "SESSION/" from url
 	public String siteNormalizeUrl(String url) {
@@ -1673,10 +1738,16 @@ public class TestPluginManager extends LockssTestCase {
   }
 
   private void signalAuEvent(final ArchivalUnit au) {
+    signalAuEvent(au, AuEventHandler.ChangeInfo.Type.Crawl, 4);
+  }
+
+  private void signalAuEvent(final ArchivalUnit au,
+			     AuEventHandler.ChangeInfo.Type type,
+			     int numUrls) {
     final AuEventHandler.ChangeInfo chInfo = new AuEventHandler.ChangeInfo();
     chInfo.setAu(au);
-    chInfo.setType(AuEventHandler.ChangeInfo.Type.Crawl);
-    chInfo.setNumUrls(4);
+    chInfo.setType(type);
+    chInfo.setNumUrls(numUrls);
     chInfo.setComplete(true);
     mgr.applyAuEvent(new PluginManager.AuEventClosure() {
 	public void execute(AuEventHandler hand) {
