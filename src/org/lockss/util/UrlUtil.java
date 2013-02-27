@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.59 2013-01-02 20:55:27 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.59.4.1 2013-02-27 05:58:08 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -505,8 +505,7 @@ public class UrlUtil {
   /**
    * @param urlStr string representation of a url
    * @return Prefix of url including protocol and host (and port).  Ends
-   * with "/", because it's not completely well-formed without it.  Returns
-   * the original string if it's already the prefix
+   * with "/", because it's not completely well-formed without it.
    * @throws MalformedURLException if urlStr is not a well formed URL
    */
   public static String getUrlPrefix(URL url)
