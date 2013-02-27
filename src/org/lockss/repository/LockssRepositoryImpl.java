@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.86 2012-07-09 07:54:28 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.87 2013-02-27 22:07:44 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,8 @@ public class LockssRepositoryImpl
   private static String staticCacheLocation = null;
 
   // Maps local repository name (disk path) to LocalRepository instance
-  static Map localRepositories = new HashMap();
+  static Map<String,LocalRepository> localRepositories =
+    new HashMap<String,LocalRepository>();
 
   // starts with a '#' so no possibility of clashing with a URL
   public static final String AU_ID_FILE = "#au_id_file";
@@ -136,7 +137,7 @@ public class LockssRepositoryImpl
     if (CurrentConfig.getBooleanParam(PARAM_CLEAR_DIR_MAP,
 				      DEFAULT_CLEAR_DIR_MAP)) {
       // This should be in RepositoryManager.stopService()
-      localRepositories = new HashMap();
+      localRepositories = new HashMap<String,LocalRepository>();
     }
     super.stopService();
   }
@@ -188,7 +189,7 @@ public class LockssRepositoryImpl
    * @return RepositoryNode the node
    * @throws MalformedURLException
    */
-  private synchronized RepositoryNode getNode(String url, boolean create)
+  private RepositoryNode getNode(String url, boolean create)
       throws MalformedURLException {
     String canonUrl;
     boolean isAuUrl = false;
@@ -207,6 +208,8 @@ public class LockssRepositoryImpl
       return node;
     }
 
+    // Create a new node.  Don't change any other state yet so don't have
+    // to synchronize.
     String nodeLocation;
     if (isAuUrl) {
       // base directory of ArchivalUnit
@@ -232,9 +235,9 @@ public class LockssRepositoryImpl
       }
     }
 
-    // add to node cache
-    nodeCache.put(nodeCacheKey(canonUrl), node);
-    return node;
+    // add to node cache, or discard and return existing node if someone
+    // added one while we were creating ours
+    return (RepositoryNode)nodeCache.putIfNew(nodeCacheKey(canonUrl), node);
   }
 
   Object nodeCacheKey(String canonUrl) {
@@ -573,8 +576,7 @@ public class LockssRepositoryImpl
 
   static LocalRepository getLocalRepository(String repoRoot) {
     synchronized (localRepositories) {
-      LocalRepository localRepo =
-	(LocalRepository)localRepositories.get(repoRoot);
+      LocalRepository localRepo = localRepositories.get(repoRoot);
       if (localRepo == null) {
 	logger.debug2("Creating LocalRepository(" + repoRoot + ")");
 	localRepo = new LocalRepository(repoRoot);
@@ -727,7 +729,7 @@ public class LockssRepositoryImpl
   static class LocalRepository {
     String repoPath;
     File repoCacheFile;
-    Map auMap;
+    Map<String,String> auMap;
     String prevAuDir;
 
     LocalRepository(String repoPath) {
@@ -752,46 +754,56 @@ public class LockssRepositoryImpl
 
     /** Return the auid -> au-subdir-path mapping.  Enumerating the
      * directories if necessary to initialize the map */
-    Map getAuMap() {
+    Map<String,String> getAuMap() {
       if (auMap == null) {
-	logger.debug3("Loading name map for '" + repoCacheFile + "'.");
-	auMap = new HashMap();
-	if (!repoCacheFile.exists()) {
-	  logger.debug3("Creating cache dir:" + repoCacheFile + "'.");
-	  if (!repoCacheFile.mkdirs()) {
-	    logger.critical("Couldn't create directory, check owner/permissions: "
-			    + repoCacheFile);
-	    // return empty map
-	    return auMap;
-	  }
-	} else {
-	  // read each dir's property file and store mapping auid -> dir
-	  File[] auDirs = repoCacheFile.listFiles();
-	  for (int ii = 0; ii < auDirs.length; ii++) {
-	    String dirName = auDirs[ii].getName();
-	    //       if (dirName.compareTo(lastPluginDir) == 1) {
-	    //         // adjust the 'lastPluginDir' upwards if necessary
-	    //         lastPluginDir = dirName;
-	    //       }
-
-	    String path = auDirs[ii].getAbsolutePath();
-	    Properties idProps = getAuIdProperties(path);
-	    if (idProps != null) {
-	      String auid = idProps.getProperty(AU_ID_PROP);
-	      StringBuilder sb = new StringBuilder(path.length() +
-						 File.separator.length());
-	      sb.append(path);
-	      sb.append(File.separator);
-	      auMap.put(auid, sb.toString());
-	      logger.debug3("Mapping to: " + auMap.get(auid) + ": " + auid);
-	    } else {
-	      logger.debug3("Not mapping " + path + ", no auid file.");
-	    }
-	  }
-
-	}
+	auMap = buildAuMap();
       }
       return auMap;
+    }
+
+    /** Return the auid -> au-subdir-path mapping.  Enumerating the
+     * directories if necessary to initialize the map */
+    Map<String,String> buildAuMap() {
+      logger.debug3("Loading name map for '" + repoCacheFile + "'.");
+      logger.critical("Loading name map for '" + repoCacheFile + "'.",
+		      new Throwable());
+      Map<String,String> map = new HashMap<String,String>();
+      if (!repoCacheFile.exists()) {
+	logger.debug3("Creating cache dir:" + repoCacheFile + "'.");
+	if (!repoCacheFile.mkdirs()) {
+	  logger.critical("Couldn't create directory, check owner/permissions: "
+			  + repoCacheFile);
+	  // return empty map
+	  return map;
+	}
+      } else {
+	// read each dir's property file and store mapping auid -> dir
+	File[] auDirs = repoCacheFile.listFiles();
+	for (int ii = 0; ii < auDirs.length; ii++) {
+	  String dirName = auDirs[ii].getName();
+	  //       if (dirName.compareTo(lastPluginDir) == 1) {
+	  //         // adjust the 'lastPluginDir' upwards if necessary
+	  //         lastPluginDir = dirName;
+	  //       }
+
+	  String path = auDirs[ii].getAbsolutePath();
+	  Properties idProps = getAuIdProperties(path);
+	  if (idProps != null) {
+	    // XXX intern auid?
+	    String auid = idProps.getProperty(AU_ID_PROP);
+	    StringBuilder sb = new StringBuilder(path.length() +
+						 File.separator.length());
+	    sb.append(path);
+	    sb.append(File.separator);
+	    map.put(auid, sb.toString());
+	    logger.debug3("Mapping to: " + map.get(auid) + ": " + auid);
+	  } else {
+	    logger.debug3("Not mapping " + path + ", no auid file.");
+	  }
+	}
+
+      }
+      return map;
     }
 
     public String toString() {
