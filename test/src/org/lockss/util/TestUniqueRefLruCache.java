@@ -1,5 +1,5 @@
 /*
- * $Id: TestUniqueRefLruCache.java,v 1.1 2004-10-18 03:25:35 tlipkis Exp $
+ * $Id: TestUniqueRefLruCache.java,v 1.2 2013-02-27 06:02:23 tlipkis Exp $
  */
 
 /*
@@ -121,6 +121,24 @@ public class TestUniqueRefLruCache extends LockssTestCase {
     }
     assertSame(obj, obj2);
     assertEquals(refHits+1, cache.getRefHits());
+  }
+
+  public void testPutIfNew() throws Exception {
+    Object o1 = cache.get("foo");
+    assertEquals(0, cache.getCacheHits());
+    assertEquals(1, cache.getCacheMisses());
+    assertNull(o1);
+
+    Object o2 = new Object();
+    Object o3 = cache.putIfNew("foo", o2);
+    assertSame(o2, o3);
+    assertSame(o2, cache.get("foo"));
+
+    Object o4 = new Object();
+    Object o5 = cache.putIfNew("foo", o4);
+    assertSame(o2, o5);
+    assertNotSame(o4, o5);
+    assertSame(o2, cache.get("foo"));
   }
 
   public void testRemovingFromLRU() throws Exception {

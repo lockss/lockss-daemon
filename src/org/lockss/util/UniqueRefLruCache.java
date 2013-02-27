@@ -1,5 +1,5 @@
 /*
- * $Id: UniqueRefLruCache.java,v 1.1 2004-10-18 03:25:35 tlipkis Exp $
+ * $Id: UniqueRefLruCache.java,v 1.2 2013-02-27 06:02:24 tlipkis Exp $
  */
 
 /*
@@ -122,6 +122,23 @@ public class UniqueRefLruCache {
   public synchronized void put(Object key, Object obj) {
     refMap.put(key, obj);
     lruMap.put(key, obj);
+  }
+
+  /**
+   * Put an object in the cache, only if the key wasn't already associated
+   * with a value, returns the existing value or the new value if none
+   * existing.
+   * @param key the key
+   * @param obj the Object
+   * @return the value now in the map
+   */
+  public synchronized Object putIfNew(Object key, Object obj) {
+    Object val = get(key);
+    if (val != null) {
+      return val;
+    }
+    put(key, obj);
+    return obj;
   }
 
   /**
