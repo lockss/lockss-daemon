@@ -1,5 +1,5 @@
 /*
- * $Id: AuSearchSet.java,v 1.3 2013-02-25 08:50:04 tlipkis Exp $
+ * $Id: AuSearchSet.java,v 1.4 2013-02-27 06:01:05 tlipkis Exp $
  */
 
 /*
@@ -172,10 +172,13 @@ public class AuSearchSet implements Iterable<ArchivalUnit> {
   public  boolean isRecent404(String url) {
     LRUMap map = recent404s;
     if (map == null) {
+      if (log.isDebug2()) log.debug2("isRecent404("+url+"): false (no cache)");
       return false;
     }
     synchronized (map) {
-      return (map.get(url) != null);
+      boolean res = (map.get(url) != null);
+      if (log.isDebug2()) log.debug2("isRecent404("+url+"): " + res);
+      return res;
     }
   }
 
@@ -211,10 +214,12 @@ public class AuSearchSet implements Iterable<ArchivalUnit> {
     }
     synchronized (map) {
       if (newSize == 0) {
+	if (log.isDebug2()) log.debug2("Removing 404 cache.");
 	recent404s = null;
       } else if (map.maxSize() < newSize) {
 	LRUMap newMap = new LRUMap(newSize);
 	newMap.putAll(map);
+	if (log.isDebug2()) log.debug2("Enlarging 404 cache.");
 	recent404s = newMap;
       }
       recent404Size = newSize;
@@ -222,6 +227,7 @@ public class AuSearchSet implements Iterable<ArchivalUnit> {
   }
 
   public void flush404Cache() {
+    if (log.isDebug2()) log.debug2("Flushing 404 cache.");
     recent404s = null;
   }
 
