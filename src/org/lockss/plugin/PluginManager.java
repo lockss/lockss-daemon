@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.241 2013-02-25 08:51:35 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.242 2013-02-27 06:01:20 tlipkis Exp $
  */
 
 /*
@@ -215,9 +215,17 @@ public class PluginManager
   /** If true, all failed findCachedUrl() searches (though non-empty AU
    * sets) will be cached.  If false, only those that had to search on disk
    * will be cached. */
-  public static final String PARAM_AU_SEARCH_CACHE_ALL_404s =
-    AU_SEARCH_SET_PREFIX + "cacheAll404s";
-  public static final boolean DEFAULT_AU_SEARCH_CACHE_ALL_404s = false;
+  public static final String PARAM_AU_SEARCH_MIN_DISK_SEARCHES_FOR_404_CACHE =
+    AU_SEARCH_SET_PREFIX + "minDiskSearchesFor404Cache";
+  public static final int DEFAULT_AU_SEARCH_MIN_DISK_SEARCHES_FOR_404_CACHE = 2;
+
+  /** Prevents concurrent searches for the same URL.  If findCachedUrl() is
+   * called on a URL while another thread is already searching for that
+   * URL, second and successive thread will wait for and return result of
+   * first thread. */
+  public static final String PARAM_PREVENT_CONCURRENT_SEARCHES =
+    AU_SEARCH_SET_PREFIX + "preventConcurrent";
+  public static final boolean DEFAULT_PREVENT_CONCURRENT_SEARCHES = true;
 
   /** Root of TitleSet definitions.  */
   public static final String PARAM_TITLE_SETS =
@@ -312,8 +320,10 @@ public class PluginManager
   private boolean acceptExpiredCertificates = DEFAULT_ACCEPT_EXPIRED_CERTS;
   private IntStepFunction auSearchCacheSizeFunc;
   private IntStepFunction auSearch404CacheSizeFunc;
-  private boolean paramCacheAll404s = DEFAULT_AU_SEARCH_CACHE_ALL_404s;
-
+  private int paramMinDiskSearchesFor404Cache =
+    DEFAULT_AU_SEARCH_MIN_DISK_SEARCHES_FOR_404_CACHE;
+  private boolean paramPreventConcurrentSearches =
+    DEFAULT_PREVENT_CONCURRENT_SEARCHES;
 
   private Map titleMap = null;
   private List allTitles = null;
@@ -485,8 +495,12 @@ public class PluginManager
 	    ent.getValue().setConfig(config, oldConfig, changedKeys);
 	  }
 	}
-	paramCacheAll404s = config.getBoolean(PARAM_AU_SEARCH_CACHE_ALL_404s,
-					      DEFAULT_AU_SEARCH_CACHE_ALL_404s);
+	paramMinDiskSearchesFor404Cache =
+	  config.getInt(PARAM_AU_SEARCH_MIN_DISK_SEARCHES_FOR_404_CACHE,
+			DEFAULT_AU_SEARCH_MIN_DISK_SEARCHES_FOR_404_CACHE);
+	paramPreventConcurrentSearches =
+	  config.getBoolean(PARAM_PREVENT_CONCURRENT_SEARCHES,
+			    DEFAULT_PREVENT_CONCURRENT_SEARCHES);
       }
 
       useDefaultPluginRegistries =
@@ -1001,12 +1015,24 @@ public class PluginManager
       if (loadablePluginsReady && isRegistryAu(au)) {
 	processRegistryAus(ListUtil.list(au), true);
       }
-      flush404Cache(au);
+      if (shouldFlush404Cache(au, info)) {
+	flush404Cache(au);
+      };
     }
   }
   private AuEventHandler myAuEventHandler = new PlugMgrAuEventHandler();
 
-
+  boolean shouldFlush404Cache(ArchivalUnit au,
+			      AuEventHandler.ChangeInfo chInfo) {
+    switch (chInfo.getType()) {
+    case Crawl:
+      // Hack - routine recrawls fetch start page twice, would flush cache
+      // too frequently
+      return chInfo.getNumUrls() > 2;
+    default:
+      return chInfo.getNumUrls() > 0;
+    }
+  }
 
   protected void raiseAlert(Alert alert, String msg) {
     if (alertMgr != null) {
@@ -1107,14 +1133,29 @@ public class PluginManager
 
   public void addHostAus(ArchivalUnit au) {
     try {
+      Collection<String> stems = normalizeStems(au.getUrlStems());
       synchronized (hostAus) {
-	for (String stem : normalizeStems(au.getUrlStems())) {
+	for (String stem : stems) {
 	  log.debug2("Adding stem: " + stem + ", " + au);
 	  addStem(stem, au);
 	}
       }
     } catch (Exception e) {
       log.error("addHostAus()", e);
+    }
+  }
+
+  private void delHostAus(ArchivalUnit au) {
+    try {
+      Collection<String> stems = normalizeStems(au.getUrlStems());
+      synchronized (hostAus) {
+	for (String stem : stems) {
+	  log.debug2("Removing stem: " + stem + ", " + au);
+	  delStem(stem, au);
+	}
+      }
+    } catch (Exception e) {
+      log.error("delHostAus()", e);
     }
   }
 
@@ -1125,19 +1166,6 @@ public class PluginManager
       hostAus.put(stem, searchSet);
     }
     searchSet.addAu(au);
-  }
-
-  private void delHostAus(ArchivalUnit au) {
-    try {
-      synchronized (hostAus) {
-	for (String stem : normalizeStems(au.getUrlStems())) {
-	  log.debug2("Removing stem: " + stem + ", " + au);
-	  delStem(stem, au);
-	}
-      }
-    } catch (Exception e) {
-      log.error("delHostAus()", e);
-    }
   }
 
   private void delStem(String stem, ArchivalUnit au) {
@@ -1152,16 +1180,39 @@ public class PluginManager
 
   void flush404Cache(ArchivalUnit au) {
     try {
+      Collection<String> stems = normalizeStems(au.getUrlStems());
       synchronized (hostAus) {
-	for (String stem : normalizeStems(au.getUrlStems())) {
+	for (String stem : stems) {
 	  AuSearchSet searchSet = hostAus.get(stem);
 	  if (searchSet != null) {
+	    if (log.isDebug2()) {
+	      log.debug2("Flushing 404 cache for: " + stem);
+	    }
 	    searchSet.flush404Cache();
 	  }
 	}
       }
     } catch (Exception e) {
       log.error("flush404Cache()", e);
+    }
+  }
+
+  /** An AU in which we just found a URL is likely to be referenced again
+   * soon.  Move it to the head of the list in all AuSearchSets in which it
+   * appears. */
+  public void promoteAuInSearchSets(ArchivalUnit au) {
+    try {
+      Collection<String> stems = normalizeStems(au.getUrlStems());
+      synchronized (hostAus) {
+	for (String stem : stems) {
+	  AuSearchSet searchSet = hostAus.get(stem);
+	  if (searchSet != null) {
+	    makeFirstCandidate(searchSet, au);
+	  }
+	}
+      }
+    } catch (Exception e) {
+      log.error("promoteAuInSearchSet()", e);
     }
   }
 
@@ -1930,6 +1981,79 @@ public class PluginManager
     return recent404Hits;
   }
 
+  /** Describes a search in progress and provides a way to wait for its
+   * result. */
+  class UrlSearch {
+    String url;
+    CuContentReq contentReq;
+    OneShotSemaphore sem = new OneShotSemaphore();
+    CachedUrl result;
+
+    UrlSearch(String url, CuContentReq contentReq) {
+      this.url = url;
+      this.contentReq = contentReq;
+    }
+
+    /** Return true if this search will satisfy the specified content
+     * requirement */
+    boolean satisfiesReq(CuContentReq req) {
+      return contentReq.satisfies(req);
+    }
+
+    boolean hasResult() {
+      return sem.isFull();
+    }
+
+    CachedUrl getResult() {
+      try {
+	sem.waitFull(Deadline.MAX);
+      } catch (InterruptedException e) {
+	log.warning("UrlSearch timeout, shouldn't happen: " + url);
+	return null;
+      }
+      return result;
+    }
+
+    void putResult(CachedUrl res) {
+      this.result = res;
+      sem.fill();
+    }
+
+    public boolean equals(Object obj) {
+      if (this == obj) {
+	return true;
+      }
+      if (obj instanceof UrlSearch) {
+	UrlSearch o = (UrlSearch)obj;
+	return contentReq.equals(o.contentReq)
+	  && url.equals(o.url);
+      }
+      return false;
+    }
+
+    public int hashCode() {
+      return url.hashCode() ^ contentReq.hashCode();
+    }
+  }
+
+  private Map<UrlSearch,UrlSearch> currentUrlSearches =
+    new HashMap<UrlSearch,UrlSearch>();
+  private int curSearchWaits = 0;
+  private int curSearchRes404 = 0;
+  private int curSearchResCu = 0;
+
+  int getUrlSearchWaits() {
+    return curSearchWaits;
+  }
+
+  int getUrlSearchRes404() {
+    return curSearchRes404;
+  }
+
+  int getUrlSearchResCu() {
+    return curSearchResCu;
+  }
+
   /**
    * Searches for an AU that contains content for the URL and returns the
    * corresponding CachedUrl.
@@ -1983,13 +2107,50 @@ public class PluginManager
 	  log.debug3("cache hit " + rcu.cu.toString() + ", " + rcu.contentReq);
 	}
 	recentCuHits++;
-	return rcu.cu;
+ 	return rcu.cu;
       } else {
 	log.debug3("cache miss for " + url);
 	recentCuMisses++;
       }
     }
-    CachedUrl cu = findTheCachedUrl0(url, contentReq);
+    CachedUrl cu = null;
+    if (paramPreventConcurrentSearches) {
+      UrlSearch newSearch = new UrlSearch(url, contentReq);
+      UrlSearch oldSearch;
+      synchronized (currentUrlSearches) {
+	oldSearch = currentUrlSearches.get(newSearch);
+      }
+      if (oldSearch != null) {
+	if (log.isDebug2()) {
+	  log.debug2("Waiting for result from concurrent search: " + url);
+	}
+	curSearchWaits++;
+	CachedUrl oldRes = oldSearch.getResult();
+	if (log.isDebug2()) {
+	  log.debug2("Got result: " + oldRes);
+	}
+	if (oldRes == null) {
+	  curSearchRes404++;
+	} else {
+	  curSearchResCu++;
+	}
+	return oldRes;
+      } else {
+	synchronized (currentUrlSearches) {
+	  currentUrlSearches.put(newSearch, newSearch);
+	}
+      }
+      try {
+	cu = findTheCachedUrl0(url, contentReq);
+      } finally {
+	newSearch.putResult(cu);
+	synchronized (currentUrlSearches) {
+	  currentUrlSearches.remove(newSearch);
+	}
+      }
+    } else {
+      cu = findTheCachedUrl0(url, contentReq);
+    }
     if (cu != null) {
       synchronized (recentCuMap) {
 	recentCuMap.put(url, new RecentCu(cu, contentReq));
@@ -1999,7 +2160,8 @@ public class PluginManager
     return null;
   }
 
-  private CachedUrl findTheCachedUrl0(String url, CuContentReq contentReq) {
+  // overridable for testing only
+  protected CachedUrl findTheCachedUrl0(String url, CuContentReq contentReq) {
     List<CachedUrl> lst = findCachedUrls0(url, contentReq, true);    
     if (!lst.isEmpty()) {
       return lst.get(0);
@@ -2058,6 +2220,9 @@ public class PluginManager
     }
 
     if (contentReq.needsContent() && searchSet.isRecent404(normUrl)) {
+      if (log.isDebug2()) {
+	log.debug2("404 cache hit: " + normUrl);
+      }
       recent404Hits++;
       return Collections.EMPTY_LIST;
     }    
@@ -2157,9 +2322,12 @@ public class PluginManager
 	  log.debug3("bestCu was " +
 		     (bestCu == null ? "null" : bestCu.toString()));
 	}
-      } else if (paramCacheAll404s || numContentChecks >= 1) {
+      } else if (numContentChecks >= paramMinDiskSearchesFor404Cache) {
 	// not found.  Add it to 404 cache for all contentReq, as will only
 	// check for HasContent
+	if (log.isDebug2()) {
+	  log.debug2("Adding to 404 cache: " + normUrl + ", " + searchSet);
+	}
 	searchSet.addRecent404(normUrl);
       }
     }
