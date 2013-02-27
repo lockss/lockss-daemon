@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.71 2013-01-06 06:34:53 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.72 2013-02-27 06:02:01 tlipkis Exp $
  */
 
 /*
@@ -207,6 +207,7 @@ public class ServeContent extends LockssServlet {
 
 
   private ArchivalUnit au;
+  private ArchivalUnit explicitAu;
   private String url;
   private String versionStr; // non-null iff handling a (possibly-invalid) Memento request
   private CachedUrl cu;
@@ -226,6 +227,7 @@ public class ServeContent extends LockssServlet {
     url = null;
     versionStr = null;
     au = null;
+    explicitAu = null;
     super.resetLocals();
   }
 
@@ -282,7 +284,11 @@ public class ServeContent extends LockssServlet {
   }
 
   protected boolean isInCache() {
-    return (cu != null) && cu.hasContent();
+    boolean res =  (cu != null) && cu.hasContent();
+    if (res && explicitAu != null) {
+      pluginMgr.promoteAuInSearchSets(explicitAu);
+    }
+    return res;
   }
 
   private boolean isIncludedAu(ArchivalUnit au) {
@@ -315,6 +321,8 @@ public class ServeContent extends LockssServlet {
 
   void logAccess(String msg) {
     if (paramAccessLogLevel >= 0) {
+      msg += " in " + StringUtil.timeIntervalToString(reqElapsedTime());
+
       switch (requestType) {
       case None:
 	logAccess(url, msg);
@@ -360,6 +368,8 @@ public class ServeContent extends LockssServlet {
     String auid = getParameter("auid");
     versionStr = getParameter("version");
 
+    au = explicitAu = null;		// redundant, just making sure
+
     if (!StringUtil.isNullString(url)) {
       if (StringUtil.isNullString(auid)) {
         if (isMementoRequest()) {
@@ -372,7 +382,8 @@ public class ServeContent extends LockssServlet {
           return;
         }
       } else {
-        au = pluginMgr.getAuFromId(auid);
+	explicitAu = pluginMgr.getAuFromId(auid);
+        au = explicitAu;
       }
       if (log.isDebug3()) log.debug3("Url req, raw: " + url);
       // handle html-encoded URLs with characters like &amp;
