@@ -3,7 +3,7 @@
   publisher <
     name = New Prairie Press ;
     info[contract] = 2012 ;
-    info[tester] = 7
+    info[tester] = 8
   >
 
   plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
@@ -16,8 +16,14 @@
       eissn = 1944-3676 ;
       issnl = 1944-3676
     >
-
+{
+    comment[delete] = delete this from ingest machines.
     param[base_url] = http://www.thebalticyearbook.org/journals/
+    param[journal_id] = baltic
+    au < crawling ; exists ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; 2012 >
+}
+{
+    param[base_url] = http://thebalticyearbook.org/journals/
     param[journal_id] = baltic
     comment[0] = no volume published in 2011
 
@@ -27,8 +33,9 @@
     au < manifest ; exists ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; 2008 >
     au < manifest ; exists ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; 2009 >
     au < manifest ; exists ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; 2010 >
-    au < testing ; exists ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; 2012 >
+    au < manifest ; exists ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; 2012 >
     au < expected ; exists ; 2013 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 8 ; 8 ; 2013 >
+}
   }
 
   {
@@ -40,7 +47,7 @@
       issnl = 2159-5933
     >
 
-    param[base_url] = http://www.newprairiepress.org/journals/
+    param[base_url] = http://newprairiepress.org/journals/
     param[journal_id] = gdr
     comment[0] = ceased publication in 1999 at volume 26
 
@@ -80,7 +87,7 @@
       issnl = 2161-4148
     >
 
-    param[base_url] = http://www.newprairiepress.org/journals/
+    param[base_url] = http://newprairiepress.org/journals/
     param[journal_id] = IJSSW
 
     au < expected ; exists ; 2013 ; International Journal of School Social Work Volume 1 ; 1 ; 2013 >
@@ -94,13 +101,21 @@
       eissn = 2159-0303 ;
       issnl = 2159-0303
     >
-
+{
+    comment[delete] = delete from ingest machines.
     param[base_url] = http://www.jhaponline.org/journals/
     param[journal_id] = jhap
 
     au < crawling ; exists ; 2011-2012 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 >
-    au < testing ; exists ; 2012-2013 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 >
+    au < crawling ; exists ; 2012-2013 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 >
+}
+    {
+    param[base_url] = http://jhaponline.org/journals/
+    param[journal_id] = jhap
 
+    au < manifest ; exists ; 2011-2012 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 >
+    au < manifest ; exists ; 2012-2013 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 >
+    }
   }
 
   {
@@ -111,14 +126,21 @@
       issnl = 1944-9771
     >
 
+{
+    comment[delete] = delete from ingest machines.
     param[base_url] = http://www.jftonline.org/journals/
+    param[journal_id] = jft
+    au < crawling ; exists ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 >
+}
+    {
+    param[base_url] = http://jftonline.org/journals/
     param[journal_id] = jft
 
     au < manifest ; exists ; 2010 ; Journal of Financial Therapy Volume 1 ; 1 ; 2010 >
     au < manifest ; exists ; 2011 ; Journal of Financial Therapy Volume 2 ; 2 ; 2011 >
-    au < testing ; exists ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 >
+    au < manifest ; exists ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Financial Therapy Volume 4 ; 4 ; 2013 >
-
+    }
   }
 
   {
@@ -129,7 +151,14 @@
       issnl = 2163-8969
     >
 
+{
+    comment[delete] = delete from ingest machines.
     param[base_url] = http://www.newprairiepress.org/journals/
+    param[journal_id] = jrmh
+    au < crawling ; exists ; 2012 ; Journal of Rural Mental Health Volume 36 ; 36 ; 2012 >
+}
+    {
+    param[base_url] = http://newprairiepress.org/journals/
     param[journal_id] = jrmh
 
     au < manifest ; exists ; 1996 ; Journal of Rural Mental Health Volume 23 ; 23 ; 1996 >
@@ -141,9 +170,9 @@
     au < manifest ; exists ; 2006 ; Journal of Rural Mental Health Volume 31 ; 31 ; 2006 >
     au < manifest ; exists ; 2010 ; Journal of Rural Mental Health Volume 34 ; 34 ; 2010 >
     au < manifest ; exists ; 2011 ; Journal of Rural Mental Health Volume 35 ; 35 ; 2011 >
-    au < testing ; exists ; 2012 ; Journal of Rural Mental Health Volume 36 ; 36 ; 2012 >
+    au < manifest ; exists ; 2012 ; Journal of Rural Mental Health Volume 36 ; 36 ; 2012 >
     au < expected ; exists ; 2013 ; Journal of Rural Mental Health Volume 37 ; 37 ; 2013 >
-
+    }
   }
 
   {
@@ -153,14 +182,20 @@
       eissn = 2160-942X ;
       issnl = 2160-942X
     >
-
+{
+    comment[delete] = delete from ingest machines.
     param[base_url] = http://www.newprairiepress.org/journals/
+    param[journal_id] = CULS
+    au < crawling ; exists ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
+}
+    {
+    param[base_url] = http://newprairiepress.org/journals/
     param[journal_id] = CULS
 
     au < manifest ; exists ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; 2011 >
-    au < testing ; exists ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
+    au < manifest ; exists ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
     au < manifest ; exists ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 ; 2013 >
-
+    }
   }
 
   {
@@ -172,8 +207,14 @@
     >
 
     comment[issues] = This journal may need another param for individual issues within each volume
-
+{
+    comment[delete] = delete this from ingest machines.
     param[base_url] = http://www.ojrrp.org/journals/
+    param[journal_id] = ojrrp
+    au < crawling ; exists ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
+}
+    {
+    param[base_url] = http://ojrrp.org/journals/
     param[journal_id] = ojrrp
 
     au < manifest ; exists ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; 2006 >
@@ -182,9 +223,9 @@
     au < manifest ; exists ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; 2009 >
     au < manifest ; exists ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; 2010 >
     au < manifest ; exists ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; 2011 >
-    au < testing ; exists ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
+    au < manifest ; exists ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
     au < expected ; exists ; 2013 ; Online Journal of Rural Research & Policy Volume 8 ; 8 ; 2013 >
-
+    }
   }
 
 }
