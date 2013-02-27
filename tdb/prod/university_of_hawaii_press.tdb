@@ -582,6 +582,44 @@ comment[mn20] = URL with 403 Forbidden error
   
   {
     title <
+      name = Review of Japanese Culture and Society ;
+      issn = 0913-4700 ;
+      issnl = 0913-4700
+    >
+
+    {
+      implicit < status ; year ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = review_of_japanese_culture_and_society
+      attr[journal_id] =
+
+      au < expected ; 2013 ; Review of Japanese Culture and Society Volume 1 ; 1 >
+    
+    }
+  }
+  
+  {
+    title <
+      name = U.S.-Japan Women's Journal ;
+      issn = 1059-9770 ;
+      issnl = 1059-9770
+    >
+
+    {
+      implicit < status ; year ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = us_japan_womens_journal
+      attr[journal_id] =
+
+      au < expected ; 2013 ; U.S.-Japan Women's Journal Volume 1 ; 1 >
+    
+    }
+  }
+  
+  {
+    title <
       name = Yearbook of the Association of Pacific Coast Geographers ;
       issn = 0066-9628 ;
       eissn = 1551-3211 ;
