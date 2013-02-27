@@ -21,14 +21,14 @@
     attr[where] = content1b
     comment[notReady] = persistent 403 errors pointing to empty Frontispiece webpages
   
-    au < notReady ; 2004 ; Tree-Ring Research Volume 60 ; 60 >
-    au < notReady ; 2005 ; Tree-Ring Research Volume 61 ; 61 >
-    au < notReady ; 2006 ; Tree-Ring Research Volume 62 ; 62 >
-    au < notReady ; 2007 ; Tree-Ring Research Volume 63 ; 63 >
-    au < notReady ; 2008 ; Tree-Ring Research Volume 64 ; 64 >
-    au < notReady ; 2009 ; Tree-Ring Research Volume 65 ; 65 >
-    au < notReady ; 2010 ; Tree-Ring Research Volume 66 ; 66 >
-    au < notReady ; 2011 ; Tree-Ring Research Volume 67 ; 67 >
+    au < testing ; 2004 ; Tree-Ring Research Volume 60 ; 60 >
+    au < testing ; 2005 ; Tree-Ring Research Volume 61 ; 61 >
+    au < testing ; 2006 ; Tree-Ring Research Volume 62 ; 62 >
+    au < testing ; 2007 ; Tree-Ring Research Volume 63 ; 63 >
+    au < testing ; 2008 ; Tree-Ring Research Volume 64 ; 64 >
+    au < testing ; 2009 ; Tree-Ring Research Volume 65 ; 65 >
+    au < testing ; 2010 ; Tree-Ring Research Volume 66 ; 66 >
+    au < testing ; 2011 ; Tree-Ring Research Volume 67 ; 67 >
     au < manifest ; 2012 ; Tree-Ring Research Volume 68 ; 68 >
 
   }

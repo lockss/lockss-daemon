@@ -18,10 +18,10 @@
     param[base_url] = http://www.bioone.org/
     param[journal_id] = ipsm
 
-    au < wanted ; 2008 ; Invasive Plant Science and Management Volume 1 ; 1 >
-    au < wanted ; 2009 ; Invasive Plant Science and Management Volume 2 ; 2 >
-    au < wanted ; 2010 ; Invasive Plant Science and Management Volume 3 ; 3 >
-    au < wanted ; 2011 ; Invasive Plant Science and Management Volume 4 ; 4 >
+    au < testing ; 2008 ; Invasive Plant Science and Management Volume 1 ; 1 >
+    au < testing ; 2009 ; Invasive Plant Science and Management Volume 2 ; 2 >
+    au < testing ; 2010 ; Invasive Plant Science and Management Volume 3 ; 3 >
+    au < testing ; 2011 ; Invasive Plant Science and Management Volume 4 ; 4 >
     au < manifest ; 2012 ; Invasive Plant Science and Management Volume 5 ; 5 >
 
   }
