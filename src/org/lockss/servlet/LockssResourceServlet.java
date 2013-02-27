@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceServlet.java,v 1.3 2011-03-03 18:56:42 tlipkis Exp $
+ * $Id: LockssResourceServlet.java,v 1.4 2013-02-27 06:00:53 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions of this code are:
 // ===========================================================================
 // Copyright (c) 1996-2004 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceServlet.java,v 1.3 2011-03-03 18:56:42 tlipkis Exp $
+// $Id: LockssResourceServlet.java,v 1.4 2013-02-27 06:00:53 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.servlet;
@@ -812,7 +812,9 @@ public class LockssResourceServlet extends LockssServlet {
 	}
       }
 
-    response.setHeader(HttpFields.__LastModified,metaData.getLastModified());
+    if (resource.lastModified() >= 0) {
+      response.setHeader(HttpFields.__LastModified,metaData.getLastModified());
+    }
         
     if (_acceptRanges)
       response.setHeader(HttpFields.__AcceptRanges,"bytes");
