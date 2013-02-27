@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.86 2012-07-09 07:54:28 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.86.12.1 2013-02-27 22:05:59 tlipkis Exp $
  */
 
 /*
@@ -188,7 +188,7 @@ public class LockssRepositoryImpl
    * @return RepositoryNode the node
    * @throws MalformedURLException
    */
-  private synchronized RepositoryNode getNode(String url, boolean create)
+  private RepositoryNode getNode(String url, boolean create)
       throws MalformedURLException {
     String canonUrl;
     boolean isAuUrl = false;
@@ -207,6 +207,8 @@ public class LockssRepositoryImpl
       return node;
     }
 
+    // Create a new node.  Don't change any other state yet so don't have
+    // to synchronize.
     String nodeLocation;
     if (isAuUrl) {
       // base directory of ArchivalUnit
@@ -232,9 +234,9 @@ public class LockssRepositoryImpl
       }
     }
 
-    // add to node cache
-    nodeCache.put(nodeCacheKey(canonUrl), node);
-    return node;
+    // add to node cache, or discard and return existing node if someone
+    // added one while we were creating ours
+    return (RepositoryNode)nodeCache.putIfNew(nodeCacheKey(canonUrl), node);
   }
 
   Object nodeCacheKey(String canonUrl) {
