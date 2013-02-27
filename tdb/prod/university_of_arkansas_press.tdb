@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = University of Arkansas Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Philosophical Topics ;
+      issn = 0276-2080 ;
+      issnl = 0276-2080
+    >
+
+    param[journal_dir] = philosophical_topics
+    attr[journal_id] = 
+
+    au < expected ; 2013 ; Philosophical Topics Volume 1 ; 1 >
+
+  }
+
+}
