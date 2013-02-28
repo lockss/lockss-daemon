@@ -20,7 +20,7 @@
     comment[delete] = delete this from ingest machines.
     param[base_url] = http://www.thebalticyearbook.org/journals/
     param[journal_id] = baltic
-    au < crawling ; exists ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; 2012 >
+    au < crawling ; exists ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 [to delete] ; 7 ; 2012 >
 }
 {
     param[base_url] = http://thebalticyearbook.org/journals/
@@ -106,8 +106,8 @@
     param[base_url] = http://www.jhaponline.org/journals/
     param[journal_id] = jhap
 
-    au < crawling ; exists ; 2011-2012 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 >
-    au < crawling ; exists ; 2012-2013 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 >
+    au < crawling ; exists ; 2011-2012 ; Journal for the History of Analytical Philosophy Volume 1 [to delete] ; 1 ; 2011 >
+    au < crawling ; exists ; 2012-2013 ; Journal for the History of Analytical Philosophy Volume 2 [to delete] ; 2 ; 2012 >
 }
     {
     param[base_url] = http://jhaponline.org/journals/
@@ -130,7 +130,7 @@
     comment[delete] = delete from ingest machines.
     param[base_url] = http://www.jftonline.org/journals/
     param[journal_id] = jft
-    au < crawling ; exists ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 >
+    au < crawling ; exists ; 2012 ; Journal of Financial Therapy Volume 3 [to delete] ; 3 ; 2012 >
 }
     {
     param[base_url] = http://jftonline.org/journals/
@@ -155,7 +155,7 @@
     comment[delete] = delete from ingest machines.
     param[base_url] = http://www.newprairiepress.org/journals/
     param[journal_id] = jrmh
-    au < crawling ; exists ; 2012 ; Journal of Rural Mental Health Volume 36 ; 36 ; 2012 >
+    au < crawling ; exists ; 2012 ; Journal of Rural Mental Health Volume 36 [to delete] ; 36 ; 2012 >
 }
     {
     param[base_url] = http://newprairiepress.org/journals/
@@ -186,7 +186,7 @@
     comment[delete] = delete from ingest machines.
     param[base_url] = http://www.newprairiepress.org/journals/
     param[journal_id] = CULS
-    au < crawling ; exists ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
+    au < crawling ; exists ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 [to delete] ; 2 ; 2012 >
 }
     {
     param[base_url] = http://newprairiepress.org/journals/
@@ -211,7 +211,7 @@
     comment[delete] = delete this from ingest machines.
     param[base_url] = http://www.ojrrp.org/journals/
     param[journal_id] = ojrrp
-    au < crawling ; exists ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
+    au < crawling ; exists ; 2012 ; Online Journal of Rural Research & Policy Volume 7 [to delete] ; 7 ; 2012 >
 }
     {
     param[base_url] = http://ojrrp.org/journals/
