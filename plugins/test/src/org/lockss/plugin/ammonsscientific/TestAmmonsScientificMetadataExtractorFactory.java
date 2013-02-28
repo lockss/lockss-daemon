@@ -1,4 +1,4 @@
-/*
+/* $Id: TestAmmonsScientificMetadataExtractorFactory.java,v 1.3 2013-02-28 17:33:46 aishizaki Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -51,7 +51,7 @@ public class TestAmmonsScientificMetadataExtractorFactory extends LockssTestCase
   static Logger log = Logger.getLogger("TestAmmonsScientificMetadataExtractorFactory");
 
   private SimulatedArchivalUnit sau;	// Simulated AU to generate content
-  private ArchivalUnit hau;		//BloomsburyQatar AU
+  private ArchivalUnit hau;
   private MockLockssDaemon theDaemon;
 
   private static String PLUGIN_NAME =
@@ -100,23 +100,29 @@ public class TestAmmonsScientificMetadataExtractorFactory extends LockssTestCase
   Configuration ammonsAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
-    conf.put("volume_name", "ammons");
     conf.put("journal_abbr", "fdr");
+    conf.put("volume_name", "ammons");
     return conf;
   }
   
   String goodDate = "Date";
+  String dateScheme = "WTN8601";
   String goodTitle = "Title";
   String goodPublisher = "Publisher";
   String goodSubject = "Subject";
   String goodDescription = "Summary";
   String goodType = "Type";
   String goodFormat = "Format";
+  String doiScheme = "doi";
   String goodDoi = "10.2446/12.34.56";
   String goodLanguage = "Language";
-  String goodSource = "Source";
   String goodRights = "Rights";
   String goodCoverage = "Coverage";
+  String authorA = "A. Author";
+  String authorB = "B. Author";
+  String authorC = "C. Author";
+  String authorD = "D. Author";
+  
   ArrayList<String> goodAuthors = new ArrayList<String>();
  
   //Unfortunately, it has to be on one line for an accurate representation (and to work)
@@ -125,14 +131,20 @@ public class TestAmmonsScientificMetadataExtractorFactory extends LockssTestCase
 		"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n" +
 		"<html>\n" +
 		"<head>\n" +	    
-		"<link rel=\"schema.DC\" href=\"http://purl.org/DC/elements/1.0/\"></link><meta name=\"dc.Title\" content=\"Title\"></meta><meta name=\"dc.Creator\" content=\"A. Author\"></meta><meta name=\"dc.Creator\" content=\"B. Author\"></meta><meta name=\"dc.Creator\" content=\"C. Author\"></meta><meta name=\"dc.Description\" content=\"Summary\"></meta><meta name=\"dc.Publisher\" content=\"Publisher\"></meta><meta name=\"dc.Date\" scheme=\"WTN8601\" content=\"Date\"></meta><meta name=\"dc.Type\" content=\"Type\"></meta><meta name=\"dc.Format\" content=\"Format\"></meta><meta name=\"dc.Identifier\" scheme=\"doi\" content=\"10.2466/12.34.56\"></meta><meta name=\"dc.Source\" content=\"Source\"></meta><meta name=\"dc.Language\" content=\"Language\"></meta><meta name=\"dc.Coverage\" content=\"Coverage\"></meta><meta name=\"dc.Rights\" content=\"Rights\"></meta>"+
+		"<link rel=\"schema.DC\" href=\"http://purl.org/DC/elements/1.0/\">" +
+	        "</link><meta name=\"dc.Title\" content=\""+goodTitle+"\"></meta><meta name=\"dc.Creator\" content=\""+authorA+"\"></meta><meta name=\"dc.Creator\" content=\""+authorB+"\"></meta><meta name=\"dc.Creator\" content=\""+authorC+"\"></meta><meta name=\"dc.Creator\" content=\""+authorD+"\"></meta><meta name=\"dc.Description\" content=\""+goodDescription+"\"></meta><meta name=\"dc.Publisher\" content=\""+goodPublisher+"\"></meta><meta name=\"dc.Date\" scheme=\""+dateScheme+"\" content=\""+goodDate+"\"></meta><meta name=\"dc.Type\" content=\""+goodType+"\"></meta><meta name=\"dc.Format\" content=\""+goodFormat+
+	        "\"></meta>" +"</meta><meta name=\"dc.Language\" content=\""+goodLanguage+
+	        "\"></meta><meta name=\"dc.Coverage\" content=\""+goodCoverage+"\"></meta><meta name=\"dc.Rights\" content=\""+goodRights+"\"></meta>"+
 		"\n</head>\n" +
 		"</html>";
 
+
   public void testExtractFromGoodContent() throws Exception {
-	  goodAuthors.add("A. Author");
-	  goodAuthors.add("B. Author");
-	  goodAuthors.add("C. Author");
+    goodAuthors.add(authorA);
+    goodAuthors.add(authorB);
+    goodAuthors.add(authorC);
+    goodAuthors.add(authorD);
+
 	  
     String url = "http://www.example.com/vol1/issue2/art3/";
     MockCachedUrl cu = new MockCachedUrl(url, hau);
@@ -153,13 +165,12 @@ public class TestAmmonsScientificMetadataExtractorFactory extends LockssTestCase
     assertEquals(goodDate, md.get(MetadataField.DC_FIELD_DATE));
     assertEquals(goodTitle, md.get(MetadataField.DC_FIELD_TITLE));
     assertEquals(goodPublisher, md.get(MetadataField.DC_FIELD_PUBLISHER));
-    assertEquals(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
+    assertEquals(goodAuthors, md.getList(MetadataField.DC_FIELD_CREATOR));
     assertEquals(goodDescription, md.get(MetadataField.DC_FIELD_DESCRIPTION));
     assertEquals(goodType, md.get(MetadataField.DC_FIELD_TYPE));
     assertEquals(goodFormat, md.get(MetadataField.DC_FIELD_FORMAT));
     assertEquals(goodLanguage, md.get(MetadataField.DC_FIELD_LANGUAGE));
     assertEquals(goodCoverage, md.get(MetadataField.DC_FIELD_COVERAGE));
-    assertEquals(goodSource, md.get(MetadataField.DC_FIELD_SOURCE));
   }
   
   String badContent =

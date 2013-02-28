@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - audrey</string>
+    <string>testing - audrey, collin</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,29 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  
+  <entry>
+    <string>plugin_status</string>
+    <string>down article iterator broken</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -17,7 +39,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Ammons Scientific Plugin (CLOCKSS), Base URL %s, Journal Abbreviation %s, Volume %s&quot;, base_url, journal_abbr, volume_name</string>
+    <string>"Ammons Scientific Plugin (CLOCKSS), Base URL %s, Journal Abbreviation %s, Volume %s", base_url, journal_abbr, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -28,58 +50,51 @@
     <long>1209600000</long>
   </entry>
   <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$&quot;, base_url_host</string>
-      <string>4,&quot;^%s.*%s&quot;, base_url, journal_abbr</string>
-      <string>2,&quot;^%spage&quot;,base_url</string>
-      <string>1,&quot;^%stoc/%s/%s/&quot;, base_url, journal_abbr, volume_name</string>
-      <string>1,&quot;^%sdoi/(pdf|pdfplus|abs|full|suppl)/[0-9]+.[0-9]+/%s\.(.*\.)?%s&quot;, base_url, journal_abbr, volume_name</string>
-    </list>
-  </entry>
-  <entry>
     <string>au_start_url</string>
-    <string>&quot;%sclockss/%s/%s/index.html&quot;, base_url, journal_abbr, volume_name</string>
+    <string>"%sclockss/%s/%s/index.html", base_url, journal_abbr, volume_name</string>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
   	<map>
   	  <entry>
   	    <string>au_title</string>
-        <string>&quot;%sjournal/%s&quot;, base_url, journal_abbr</string>
+        <string>"%sjournal/%s", base_url, journal_abbr</string>
   	  </entry>
   	  <entry>
   	    <string>au_issue</string>
-        <string>&quot;%stoc/%s/%s/%s&quot;, base_url, journal_abbr, volume_name, issue</string>
+        <string>"%stoc/%s/%s/%s", base_url, journal_abbr, volume_name, issue</string>
   	  </entry>
 	  <entry>
 	    <string>au_volume</string>
-    	<string>&quot;%sclockss/%s/%s/index.html&quot;, base_url, journal_abbr, volume_name</string>
+    	<string>"%sclockss/%s/%s/index.html", base_url, journal_abbr, volume_name</string>
 	  </entry>
   	</map>
-  </entry>
+  </entry>  
   <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
+    <!-- example valid abs/pdf urls
+    http://www.amsciepub.com/doi/pdf/10.2466/pms.110.2.353-354
+    http://www.amsciepub.com/doi/abs/10.2466/09.02.10.CP.1.17
+    http://www.amsciepub.com/doi/pdf/10.2466/03.11.IT.1.1
+    http://www.amsciepub.com/doi/abs/10.2466/01.17.21.PR0.107.4.3-14
+    http://www.amsciepub.com/toc/pr0/107/1
+    http://www.amsciepub.com/toc/cp/1/1
+    -->
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$", base_url_host</string>
+      <string>4,"^%s.*%s", base_url, journal_abbr</string>
+      <string>2,"^%spage",base_url</string>
+      <string>1,"^%stoc/%s/%s/", base_url, journal_abbr, volume_name</string>
+      <string>1,"^%sdoi/(pdf|pdfplus|abs|full|suppl)/\d+\.\d+/(\d+\.){0,5}%s\.%s.*", base_url, journal_abbr, volume_name</string>
+    </list>
+  </entry> 
   <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.ammonsscientific.ClockssAmmonsScientificArticleIteratorFactory</string>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%sdoi/pdfplus/\d+\.\d+/(\d+\.){0,5}%s\.%s.*", base_url, journal_abbr, volume_name</string>
+    </list>
   </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.ammonsscientific.ClockssAmmonsScientificArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-     	<string>*;DublinCore</string>
-        <string>org.lockss.plugin.ammonsscientific.ClockssAmmonsScientificMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
+   <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
@@ -110,4 +125,30 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.ammonsscientific.ClockssAmmonsScientificHashHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.ammonsscientific.ClockssAmmonsScientificArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.ammonsscientific.ClockssAmmonsScientificArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.ammonsscientific.ClockssAmmonsScientificMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  
 </map>    

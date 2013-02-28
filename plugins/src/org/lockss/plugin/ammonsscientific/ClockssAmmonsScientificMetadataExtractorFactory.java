@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssAmmonsScientificMetadataExtractorFactory.java,v 1.1 2012-03-16 00:40:00 thib_gc Exp $
+ * $Id: ClockssAmmonsScientificMetadataExtractorFactory.java,v 1.2 2013-02-28 17:33:46 aishizaki Exp $
  */
 
 /*
@@ -40,18 +40,27 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.FileMetadataExtractor.Emitter;
 import org.lockss.plugin.*;
 
-/**
- * One of the articles used to get the html source for this plugin is:
- * view-source:http://www.amsciepub.com/doi/abs/10.2466/07.17.21.PMS.113.6.703-714
- *
+/**  typical metadata
+  <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"></link>
+  <meta name="dc.Title" content="An analysis of resistance to change exposed in individuals' thoughts and behaviors"></meta>
+  <meta name="dc.Creator" content=" Lena M. Forsell"></meta>
+  <meta name="dc.Creator" content=" Jan A. stršm"></meta>
+  <meta name="dc.Description" content="Abstract Resistance to change can be the cause of difficulty when it is either too strong or too weak. Therapy or information can be used to either strengthen or weaken resistance to change to appropriate levels. The purpose of this article is intended to disclose the relationship between resistance to change and some aspects of human behavior. Resistance to change has affective, cognitive, and behavioral components that create a psychological resistance to making a change in particular situations or overall changes in one's life, and often appears in psychotherapy and/or when organizational alterations are underway. Four subfactors of resistance to change have been found and are related to extraversion and neuroticism in the ÒBig FiveÓ personality model. Much indicates that the development of resistance to change begins early in childhood and may be neurophysiologically founded. It can be traced in both macro and micro gestures in body language and is believed to influence general health. Whereas previou..."></meta>
+  <meta name="dc.Publisher" content=" Ammons Scientific, Ltd.  P.O. Box 9229, Missoula, MT 59807-9229 USA  "></meta>
+  <meta name="dc.Date" scheme="WTN8601" content="2012-12-26"></meta>
+  <meta name="dc.Type" content="research-article"></meta>
+  <meta name="dc.Format" content="text/HTML"></meta>
+  <meta name="dc.Language" content="en"></meta>
+  <meta name="dc.Coverage" content=" P.O. Box 9229, Missoula, MT 59807-9229 USA "></meta>
+  <meta name="dc.Rights" content="© Jan A. stršm 2012"></meta>
  */
 public class ClockssAmmonsScientificMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("ClockssAmmonsScientificMetadataExtractorFactory");
-  private static final int DOI_LEN = 7;
-
+  
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
       throws PluginException {
@@ -66,12 +75,8 @@ public class ClockssAmmonsScientificMetadataExtractorFactory
     static { 
       tagMap.put("dc.Title", MetadataField.DC_FIELD_TITLE);
       tagMap.put("dc.Title", MetadataField.FIELD_ARTICLE_TITLE);
-      tagMap.put("dc.Creator",
-              new MetadataField(MetadataField.DC_FIELD_CONTRIBUTOR,
-                                MetadataField.splitAt(";")));
-      tagMap.put("dc.Creator",
-                 new MetadataField(MetadataField.FIELD_AUTHOR,
-                                   MetadataField.splitAt(";")));
+      tagMap.put("dc.Creator", MetadataField.DC_FIELD_CREATOR);
+      tagMap.put("dc.Creator", MetadataField.FIELD_AUTHOR);
       tagMap.put("dc.Description", MetadataField.DC_FIELD_DESCRIPTION);
       tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
       tagMap.put("dc.Publisher", MetadataField.FIELD_PUBLISHER);
@@ -80,15 +85,14 @@ public class ClockssAmmonsScientificMetadataExtractorFactory
       tagMap.put("dc.Format", MetadataField.DC_FIELD_FORMAT);
       tagMap.put("dc.Type", MetadataField.DC_FIELD_TYPE);
       tagMap.put("dc.Language", MetadataField.DC_FIELD_LANGUAGE);
-      tagMap.put("dc.Source", MetadataField.DC_FIELD_SOURCE);
       tagMap.put("dc.Rights", MetadataField.DC_FIELD_RIGHTS);
       tagMap.put("dc.Coverage", MetadataField.DC_FIELD_COVERAGE);
     }
-    
+
     /**
      * Use SimpleHtmlMetaTagMetadataExtractor to extract raw metadata, map
-     * to cooked fields, then extract extra tags by reading the file.
-     */
+     * to cooked fields
+     */ 
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
       throws IOException {
@@ -97,41 +101,9 @@ public class ClockssAmmonsScientificMetadataExtractorFactory
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
 
-      //Extracts author, issue number, and doi information not properly encoded in tags
-      BufferedReader bReader = new BufferedReader(cu.openForReading());
-      try {
-        for (String line = bReader.readLine();
-             line != null; line = bReader.readLine()) {
-          line = line.trim();
-          
-          if (StringUtil.startsWithIgnoreCase(line, "<link rel=\"schema.DC\" href=\"http://purl.org/DC/elements/1.0/\"></link>")) 
-        	  addExtraTags(line, am);
-        }
-      } finally {
-        IOUtil.safeClose(bReader);
-      }
       emitter.emitMetadata(cu, am);
     }
-		
-    /**
-     * Extract issue number, multiple authors, and doi from a line of HTML source code.
-     * @param line The HTML source code that contains these tags 
-     * @param ret The ArticleMetadata object used to put the tags in extracted metadata
-     */
-    
-    protected void addExtraTags(String line, ArticleMetadata ret) {
-      String doiFlag = "<meta name=\"dc.Identifier\" scheme=\"doi\" content=\"";
-      int doiBegin = StringUtil.indexOfIgnoreCase(line, doiFlag);
-      
-      if (doiBegin <= 0) 
-    	  return;
-      
-      doiBegin += doiFlag.length();
-      String doi = line.substring(doiBegin, line.indexOf('"',doiBegin+1));
-      if (doi.length() < DOI_LEN)
-		return;
-      
-      ret.put(MetadataField.FIELD_DOI, doi);
-    }
+
   }
+
 }
