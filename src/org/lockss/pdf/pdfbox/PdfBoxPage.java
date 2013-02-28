@@ -1,10 +1,10 @@
 /*
- * $Id: PdfBoxPage.java,v 1.4 2012-11-20 01:39:19 thib_gc Exp $
+ * $Id: PdfBoxPage.java,v 1.5 2013-02-28 01:55:28 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -74,14 +74,6 @@ public class PdfBoxPage implements PdfPage {
    * @see #isTokenStream(PDXObject)
    */
   private static boolean isByteStream(PDXObject xObject) {
-    /*
-     * IMPLEMENTATION NOTE
-     * 
-     * PDXObject is an abstract class whose subtypes all represent
-     * image XObjects (PDJpeg, PDCcitt or PDPixelMap) i.e. a byte
-     * stream, except one, PDXObjectForm, which represents a form
-     * XObject i.e. a token stream.
-     */
     return !isTokenStream(xObject);
   }
 
@@ -146,8 +138,7 @@ public class PdfBoxPage implements PdfPage {
     PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
       @Override public void operatorCallback() throws PdfException {
         // 'ID' and 'BI'
-        if (   PdfOpcodes.BEGIN_IMAGE_DATA.equals(getOpcode())
-            || PdfOpcodes.BEGIN_IMAGE_OBJECT.equals(getOpcode())) {
+        if (isBeginImageData() || isBeginImageObject()) {
           /*
            * IMPLEMENTATION NOTE
            * 
@@ -158,7 +149,7 @@ public class PdfBoxPage implements PdfPage {
           ret.add(new ByteArrayInputStream(PdfBoxTokens.asPDFOperator(getOperator()).getImageData()));
         }
         // 'Do'
-        else if (PdfOpcodes.INVOKE_XOBJECT.equals(getOpcode())) {
+        else if (isInvokeXObject()) {
           PdfToken operand = getTokens().get(getIndex() - 1);
           if (operand.isName()) {
             PDXObject xObject = getPDXObjectByName(operand.getName());
@@ -187,7 +178,7 @@ public class PdfBoxPage implements PdfPage {
 
     PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
       @Override public void operatorCallback() throws PdfException {
-        if (PdfOpcodes.INVOKE_XOBJECT.equals(getOperator().getOperator())) {
+        if (isInvokeXObject()) {
           PdfToken operand = getTokens().get(getIndex() - 1);
           if (operand.isName()) {
             PDXObject xObject = getPDXObjectByName(operand.getName());

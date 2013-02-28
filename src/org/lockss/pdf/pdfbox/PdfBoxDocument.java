@@ -1,10 +1,10 @@
 /*
- * $Id: PdfBoxDocument.java,v 1.5 2012-07-19 09:57:23 thib_gc Exp $
+ * $Id: PdfBoxDocument.java,v 1.6 2013-02-28 01:55:28 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -237,11 +237,11 @@ public class PdfBoxDocument implements PdfDocument {
      * PDDocumentCatalog line 205) states that all the elements in the
      * returned list are of type PDPage.
      */
-    return new ArrayList<PdfPage>() {{
-      for (Object obj : pdDocument.getDocumentCatalog().getAllPages()) {
-        add(new PdfBoxPage(PdfBoxDocument.this, (PDPage)obj));
-      }
-    }};
+    List<PdfPage> ret = new ArrayList<PdfPage>();
+    for (Object obj : pdDocument.getDocumentCatalog().getAllPages()) {
+      ret.add(new PdfBoxPage(PdfBoxDocument.this, (PDPage)obj));
+    }
+    return ret;
   }
 
   @Override

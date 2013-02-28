@@ -1,10 +1,10 @@
 /*
- * $Id: MassachesettsMedicalSocietyNewPdfFilterFactory.java,v 1.4 2012-07-17 02:48:56 thib_gc Exp $
+ * $Id: MassachesettsMedicalSocietyNewPdfFilterFactory.java,v 1.5 2013-02-28 01:55:28 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,13 @@ import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 
+/**
+ * <p>
+ * This class should replace equivalent functionality in
+ * {@link MassachusettsMedicalSocietyPdfTransform}. It is missing the removal of
+ * per-page watermarking (see {@link NormalizeXObjects}).
+ * </p>
+ */
 public class MassachesettsMedicalSocietyNewPdfFilterFactory extends SimplePdfFilterFactory {
 
   public MassachesettsMedicalSocietyNewPdfFilterFactory() {

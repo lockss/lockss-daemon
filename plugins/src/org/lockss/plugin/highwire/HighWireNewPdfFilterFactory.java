@@ -1,10 +1,10 @@
 /*
- * $Id: HighWireNewPdfFilterFactory.java,v 1.4 2012-07-19 04:01:53 thib_gc Exp $
+ * $Id: HighWireNewPdfFilterFactory.java,v 1.5 2013-02-28 01:55:28 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,6 @@ import java.util.*;
 
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
-import org.lockss.pdf.PdfTokenStreamWorker.Direction;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 
@@ -70,28 +69,36 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
       switch (state) {
         
         case 0: {
+          // FIXME 1.60
           if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { ++state; }
           else { stop(); }
         } break;
         
         case 1: {
+          // FIXME 1.60
           if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { stop(); }
+          // FIXME 1.60
           else if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
                    && DOWNLOADED_FROM.equals(getTokens().get(getIndex() - 1).getString())) { ++state; }
         } break;
         
         case 2: {
+          // FIXME 1.60
           if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { state = 20; }
+          // FIXME 1.60
           else if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
                    && getTokens().get(getIndex() - 1).getString().matches(URL_REGEX)) { ++state; }
         } break;
 
         case 3: {
+          // FIXME 1.60
           if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { stop(); }
+          // FIXME 1.60
           else if (PdfOpcodes.SHOW_TEXT.equals(getOpcode())) { ++state; }
         } break;
         
         case 4: {
+          // FIXME 1.60
           if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) {
             result = true;
             stop();
@@ -99,20 +106,25 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
         } break;
         
         case 20: {
+          // FIXME 1.60
           if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { ++state; }
         } break;
         
         case 21: {
+          // FIXME 1.60
           if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { stop(); }
+          // FIXME 1.60
           else if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
                    && getTokens().get(getIndex() - 1).getString().matches(URL_REGEX)) { ++state; }
         } break;
 
         case 22: {
+          // FIXME 1.60
           if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { ++state; }
         } break;
         
         case 23: {
+          // FIXME 1.60
           if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) {
             result = true;
             stop();
@@ -165,6 +177,7 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
     private int state;
     
     public BMJGroupFrontPageWorker() {
+      // FIXME 1.60
       super(Direction.FORWARD);
     }
     
@@ -180,11 +193,13 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
       switch (state) {
         
         case 0: {
+          // FIXME 1.60
           if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
               && getTokens().get(getIndex() - 1).getString().matches(UPDATED_INFORMATION_AND_SERVICES)) { ++state; }
         } break;
         
         case 1: {
+          // FIXME 1.60
           if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
               && getTokens().get(getIndex() - 1).getString().matches(DOWNLOADED_FROM)) {
             result = true;
@@ -248,26 +263,31 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
       switch (state) {
         
         case 0: case 5: {
+          // FIXME 1.60
           if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
               && getTokens().get(getIndex() - 1).getString().matches(URL_REGEX)) { ++state; }
         } break;
         
         case 1: {
+          // FIXME 1.60
           if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
               && ONLINE_VERSION.equals(getTokens().get(getIndex() - 1).getString())) { ++state; }
         } break;
         
         case 2: {
+          // FIXME 1.60
           if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
               && getTokens().get(getIndex() - 1).getString().matches(PUBLISHED_BY_REGEX)) { ++state; }
         } break;
         
         case 3: {
+          // FIXME 1.60
           if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
               && SAGE_PUBLICATIONS_URL.equals(getTokens().get(getIndex() - 1).getString())) { ++state; }
         } break;
         
         case 4: {
+          // FIXME 1.60
           if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
               && ADDITIONAL_SERVICES.equals(getTokens().get(getIndex() - 1).getString())) { ++state; }
         } break;
@@ -275,6 +295,7 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
         // case 5: see case 0
         
         case 6: {
+          // FIXME 1.60
           if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
               && DOWNLOADED_FROM.equals(getTokens().get(getIndex() - 1).getString())) {
             result = true;
@@ -319,6 +340,7 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
     @Override
     public void operatorCallback()
         throws PdfException {
+      // FIXME 1.60
       if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
           && getTokens().get(getIndex() - 1).getString().startsWith(DOWNLOADED_FROM)) {
         result = true;
@@ -352,10 +374,11 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
 
     @Override
     public void operatorCallback() throws PdfException {
+      // FIXME 1.60
       if (   PdfOpcodes.SHOW_TEXT.equals(getOperator().getOperator())
           && getTokens().get(getIndex() - 1).getString().startsWith(CURRENT_AS_OF)) {
         result = true; // but don't stop()
-        getTokens().set(getIndex() - 1, getFactory().makeString(CURRENT_AS_OF));
+        getTokens().set(getIndex() - 1, getFactory().makeString(CURRENT_AS_OF)); // FIXME 1.60
       }
     }
     
@@ -366,6 +389,7 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
     }
     
     public CurrentAsOfPageWorkerTransform() {
+      // FIXME 1.60
       super(Direction.FORWARD);
     }
     

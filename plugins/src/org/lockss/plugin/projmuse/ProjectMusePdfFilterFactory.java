@@ -1,10 +1,10 @@
 /*
- * $Id: ProjectMusePdfFilterFactory.java,v 1.5 2012-07-31 23:37:23 wkwilson Exp $
+ * $Id: ProjectMusePdfFilterFactory.java,v 1.6 2013-02-28 01:55:28 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,24 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
-import java.util.List;
-
-import org.lockss.filter.pdf.PdfTransform;
-import org.lockss.filter.pdf.SimplePdfFilterFactory;
-import org.lockss.pdf.PdfDocument;
-import org.lockss.pdf.PdfException;
-import org.lockss.pdf.PdfOpcodes;
-import org.lockss.pdf.PdfPage;
-import org.lockss.pdf.PdfToken;
-import org.lockss.pdf.PdfTokenStream;
-import org.lockss.pdf.PdfTokenStreamWorker;
-import org.lockss.pdf.PdfUtil;
+import org.lockss.filter.pdf.*;
+import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 
 public class ProjectMusePdfFilterFactory extends SimplePdfFilterFactory {
   
-  protected static final Logger logger = Logger.getLogger("ProjectMusePdfFilterFactory");
+  private static final Logger logger = Logger.getLogger(ProjectMusePdfFilterFactory.class);
   
   
   @Override
@@ -107,6 +97,7 @@ public class ProjectMusePdfFilterFactory extends SimplePdfFilterFactory {
       switch (state) {
         
         case 0: {
+          // FIXME 1.60
           if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) {
             startIndex = getIndex();
             ++state; 
@@ -114,26 +105,34 @@ public class ProjectMusePdfFilterFactory extends SimplePdfFilterFactory {
         } break;
         
         case 1: {
+          // FIXME 1.60
           if (PdfOpcodes.SHOW_TEXT.equals(getOpcode())
               && getTokens().get(getIndex() - 1).getString().matches(PROVIDED_BY_REGEX)) {
             ++state; 
-          } else if (PdfOpcodes.SHOW_TEXT_GLYPH_POSITIONING.equals(getOpcode())) {
+          } 
+          // FIXME 1.60
+          else if (PdfOpcodes.SHOW_TEXT_GLYPH_POSITIONING.equals(getOpcode())) {
             PdfToken token = getTokens().get(getIndex() - 1);
             if (token.isArray()) {
-              for(PdfToken t : token.getArray()) {
-        	if(t.isString() && t.getString().matches(PROVIDED_BY_REGEX)) {
+              for (PdfToken t : token.getArray()) {
+        	if (t.isString() && t.getString().matches(PROVIDED_BY_REGEX)) {
         	  ++state; 
         	}
               }
-            } else if (token.isString() && token.getString().matches(PROVIDED_BY_REGEX)) {
+            }
+            // FIXME The following never happens, the operand can only be an array
+            else if (token.isString() && token.getString().matches(PROVIDED_BY_REGEX)) {
               ++state; 
             }
-          } else if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { 
+          }
+          // FIXME 1.60
+          else if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { 
             state = 0;
           }
         } break;
         
         case 2: {
+          // FIXME 1.60
           if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) {
             result = true;
             stop(); 

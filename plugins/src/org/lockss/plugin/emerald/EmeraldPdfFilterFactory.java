@@ -1,10 +1,10 @@
 /*
- * $Id: EmeraldPdfFilterFactory.java,v 1.3 2012-11-20 01:01:24 thib_gc Exp $
+ * $Id: EmeraldPdfFilterFactory.java,v 1.4 2013-02-28 01:55:28 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -66,16 +66,20 @@ public class EmeraldPdfFilterFactory extends ExtractingPdfFilterFactory {
       switch (state) {
 
         case 0: case 3: {
+          // FIXME 1.60
           if (PdfOpcodes.SAVE_GRAPHICS_STATE.equals(getOpcode())) { ++state; }
           else { stop(); }
         } break;
         
         case 1: case 4: {
+          // FIXME 1.60
           if (PdfOpcodes.RESTORE_GRAPHICS_STATE.equals(getOpcode())) { stop(); }
+          // FIXME 1.60
           else if (PdfOpcodes.INVOKE_XOBJECT.equals(getOpcode())) { ++state; }
         } break;
         
         case 2: case 5: {
+          // FIXME 1.60
           if (PdfOpcodes.RESTORE_GRAPHICS_STATE.equals(getOpcode())) { ++state; }
         } break;
         
@@ -86,30 +90,38 @@ public class EmeraldPdfFilterFactory extends ExtractingPdfFilterFactory {
         // case 5: see case 2
         
         case 6: {
+          // FIXME 1.60
           if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { ++state; }
         } break;
         
         case 7: {
+          // FIXME 1.60
           if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { state = 6; }
+          // FIXME 1.60
           if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
               && getTokens().get(getIndex() - 1).getString().startsWith("Downloaded on: ")) { ++state; }
         } break;
         
         case 8: {
+          // FIXME 1.60
           if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { ++state; }
         } break;
 
         case 9: {
+          // FIXME 1.60
           if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { ++state; }
         } break;
         
         case 10: {
+          // FIXME 1.60
           if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { state = 9; }
+          // FIXME 1.60
           if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
               && getTokens().get(getIndex() - 1).getString().startsWith("Access to this document was granted through an Emerald subscription provided by ")) { ++state; }
         } break;
         
         case 11: {
+          // FIXME 1.60
           if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) {
             result = true;
             stop();

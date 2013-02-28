@@ -1,10 +1,10 @@
 /*
- * $Id: ExtractingPdfFilterFactory.java,v 1.4 2012-07-20 01:02:31 thib_gc Exp $
+ * $Id: ExtractingPdfFilterFactory.java,v 1.5 2013-02-28 01:55:28 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -294,13 +294,11 @@ public abstract class ExtractingPdfFilterFactory
       PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
         @Override public void operatorCallback() throws PdfException {
           // 'Tj', '\'' and '"'
-          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
-              || PdfOpcodes.NEXT_LINE_SHOW_TEXT.equals(getOpcode())
-              || PdfOpcodes.SET_SPACING_NEXT_LINE_SHOW_TEXT.equals(getOpcode())) {
+          if (isShowText() || isNextLineShowText() || isSetSpacingNextLineShowText()) {
             outputString(getTokens().get(getIndex() - 1).getString());
           }
           // 'TJ'
-          else if (PdfOpcodes.SHOW_TEXT_GLYPH_POSITIONING.equals(getOpcode())) {
+          else if (isShowTextGlyphPositioning()) {
             for (PdfToken token : getTokens().get(getIndex() - 1).getArray()) {
               if (token.isString()) {
                 outputString(token.getString());

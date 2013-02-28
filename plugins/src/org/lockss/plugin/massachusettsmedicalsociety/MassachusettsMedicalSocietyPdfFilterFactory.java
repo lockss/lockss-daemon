@@ -35,6 +35,16 @@ import org.lockss.filter.pdf.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
+/**
+ * <p>
+ * To be replaced by {@link MassachesettsMedicalSocietyNewPdfFilterFactory}
+ * which still needs to implement a way to remove the per-page watermarking (see
+ * {@link NormalizeXObjects}).
+ * </p>
+ * 
+ * @deprecated Work on {@link MassachesettsMedicalSocietyNewPdfFilterFactory}
+ *             instead.
+ */
 @Deprecated
 public class MassachusettsMedicalSocietyPdfFilterFactory implements FilterFactory {
 	private static Logger log = Logger.getLogger("MassachusettsMedicalSocietyPdfFilterFactory");

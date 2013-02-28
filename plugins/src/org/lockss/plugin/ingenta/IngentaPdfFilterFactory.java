@@ -1,10 +1,10 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.6 2012-09-15 18:19:29 pgust Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.7 2013-02-28 01:55:28 thib_gc Exp $
  */ 
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,35 +35,38 @@ package org.lockss.plugin.ingenta;
 import java.io.InputStream;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.pdf.ExtractingPdfFilterFactory;
-import org.lockss.filter.pdf.PdfTransform;
-import org.lockss.filter.pdf.SimplePdfFilterFactory;
-import org.lockss.pdf.DefaultPdfDocumentFactory;
-import org.lockss.pdf.PdfDocument;
-import org.lockss.pdf.PdfDocumentFactory;
-import org.lockss.pdf.PdfException;
-import org.lockss.pdf.PdfOpcodes;
-import org.lockss.pdf.PdfPage;
-import org.lockss.pdf.PdfTokenStream;
-import org.lockss.pdf.PdfTokenStreamWorker;
-import org.lockss.pdf.PdfUtil;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.FilterFactory;
+import org.lockss.filter.pdf.*;
+import org.lockss.pdf.*;
+import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class IngentaPdfFilterFactory implements FilterFactory, 
-						PdfTransform<PdfDocument> {
-  /*
-   *all of the publishers on this platform that have a pdf filter
-   *lse: London School Of Economics
-   *maney: Maney
-   *paaf: Pacific Affairs
-   *wab: Whiting And Birch
-   *berghahn: Berghahn
-   *arn: Hodder Arnold
+public class IngentaPdfFilterFactory
+    implements FilterFactory, PdfTransform<PdfDocument> {
+
+  /**
+   * An enum for publisher IDs used by Ingenta. 
    */
-  private enum PublisherId {UNKNOWN, ARN, BERGHAHN, LSE, MANEY, MANUP, PAAF, WAB}
-  static Logger logger = Logger.getLogger("IngentaPdfFilterFactory");
+  protected enum PublisherId {
+    /** Unknown */
+    UNKNOWN,
+    /** Hodder Arnold */
+    ARN,
+    /** Bergahn Journals */
+    BERGHAHN,
+    /** London School of Economics */
+    LSE,
+    /** Maney Publishing */
+    MANEY,
+    /** Manchester University Press */
+    MANUP,
+    /** Pacific Affairs */
+    PAAF,
+    /** Whiting and Birch */
+    WAB
+  }
+
+  private static final Logger logger = Logger.getLogger(IngentaPdfFilterFactory.class);
+  
   protected PdfDocumentFactory pdfDocumentFactory;
   private FilterFactory normFiltFact = new NormalizingPdfFilterFactory();
   private FilterFactory normExtractFiltFact = new NormalizingExtractingPdfFilterFactory();
@@ -114,7 +117,7 @@ public class IngentaPdfFilterFactory implements FilterFactory,
         PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
         worker.process(pdfTokenStream);
         if (worker.result) {
-  	worker.transform(au, pdfTokenStream);
+          worker.transform(au, pdfTokenStream);
         }
       }
       doNormalizeMetadata(pdfDocument);
@@ -157,7 +160,7 @@ public class IngentaPdfFilterFactory implements FilterFactory,
       publisherId = PublisherId.valueOf(au.getProperties().getString("publisher_id").toUpperCase());
     } catch (IllegalArgumentException e) {
       if (logger.isDebug3()) {
-	logger.debug3("", e);
+	logger.debug3(String.format("Unknown publisher ID: %s", publisherId), e);
       }
     }
     switch (publisherId) {
@@ -203,6 +206,7 @@ public class IngentaPdfFilterFactory implements FilterFactory,
       switch (state) {
         
         case 0: {
+          // FIXME 1.60
           if (PdfOpcodes.RESTORE_GRAPHICS_STATE.equals(getOpcode())) {
             endIndex = getIndex();
             ++state; 
@@ -210,14 +214,17 @@ public class IngentaPdfFilterFactory implements FilterFactory,
         } break;
         
         case 1: {
+          // FIXME 1.60
           if (PdfOpcodes.SHOW_TEXT.equals(getOpcode())
                    && getTokens().get(getIndex() - 1).getString().matches(DELIVERED_BY_REGEX)) {
             ++state;
           }
+          // FIXME 1.60
           else if (PdfOpcodes.RESTORE_GRAPHICS_STATE.equals(getOpcode())) { stop(); }
         } break;
         
         case 2: {
+          // FIXME 1.60
           if (PdfOpcodes.SAVE_GRAPHICS_STATE.equals(getOpcode())) {
             result = true;
             stop(); 
@@ -249,7 +256,7 @@ public class IngentaPdfFilterFactory implements FilterFactory,
     
     @Override
     public void transform(ArchivalUnit au,
-                          PdfTokenStream pdfTokenStream)
+                           PdfTokenStream pdfTokenStream)
         throws PdfException {
       if (result) {
         pdfTokenStream.setTokens(getTokens());
