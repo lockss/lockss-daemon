@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.25 2013-02-24 04:54:19 dshr Exp $
+ * $Id: VoterUserData.java,v 1.26 2013-03-01 04:12:25 dshr Exp $
  */
 
 /*
@@ -71,6 +71,8 @@ public class VoterUserData
   private byte[] remainingEffortProof;
   private byte[] repairEffortProof;
   private byte[] receiptEffortProof;
+  private int modulus;
+  private byte[] sampleNonce;
   private boolean hashingDone = false;
   private boolean voteRequested = false;
   private long createTime;
@@ -101,6 +103,7 @@ public class VoterUserData
 
   public VoterUserData(PollSpec spec, V3Voter voter, PeerIdentity pollerId,
                        String pollKey, long duration, String hashAlgorithm,
+                       int modulus,
                        byte[] pollerNonce, byte[] voterNonce, byte[] voterNonce2,
                        byte[] introEffortProof, File messageDir) throws IOException {
     log.debug3("Creating V3 Voter User Data for poll " + pollKey + ", " + spec);
@@ -116,6 +119,10 @@ public class VoterUserData
     this.duration = duration;
     this.deadline = Deadline.in(duration).getExpirationTime();
     this.hashAlgorithm = hashAlgorithm;
+    this.modulus = modulus;
+    if (modulus != 0) {
+      log.info("Vote in sampled poll, modulus: " + modulus);
+    }
     this.voterNonce = voterNonce;
     this.voterNonce2 = voterNonce2;
     this.pollerNonce = pollerNonce;
@@ -192,6 +199,22 @@ public class VoterUserData
 
   public void setHashAlgorithm(String hashAlgorithm) {
     this.hashAlgorithm = hashAlgorithm;
+  }
+
+  public int getModulus() {
+    return modulus;
+  }
+
+  public void setModulus(int mod) {
+    modulus = mod;
+  }
+
+  public byte[] getSampleNonce() {
+    return sampleNonce;
+  }
+
+  public void setSampleNonce(byte[] sampleNonce) {
+    this.sampleNonce = sampleNonce;
   }
 
   public byte[] getIntroEffortProof() {
@@ -347,6 +370,7 @@ public class VoterUserData
 	log.error("Setting nonce2 throws " + ex);
 	this.voterNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
       }
+      log.debug3("voterNonce2 set to: " + voterNonce2);
     } else {
       this.voterNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
       this.symmetricVoteBlocks = null;
@@ -490,7 +514,8 @@ public class VoterUserData
   public V3LcapMessage makeMessage(int opcode) {
     return new V3LcapMessage(getAuId(), getPollKey(), getPluginVersion(),
                              getPollerNonce(), getVoterNonce(), getVoterNonce2(),
-			     opcode, getDeadline(), getPollerId(), messageDir,
+			     opcode, getModulus(), getSampleNonce(),
+                             getDeadline(), getPollerId(), messageDir,
                              voter.getLockssDaemon());
   }
 

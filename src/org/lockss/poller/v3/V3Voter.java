@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.78 2013-02-24 04:54:19 dshr Exp $
+ * $Id: V3Voter.java,v 1.79 2013-03-01 04:12:25 dshr Exp $
  */
 
 /*
@@ -272,6 +272,7 @@ public class V3Voter extends BasePoll {
                                              msg.getKey(),
                                              duration,
                                              msg.getHashAlgorithm(),
+					     msg.getModulus(),
                                              msg.getPollerNonce(),
                                              PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH),
 					     ByteArray.EMPTY_BYTE_ARRAY,
@@ -279,6 +280,9 @@ public class V3Voter extends BasePoll {
                                              stateDir);
       voterUserData.setPollMessage(msg);
       voterUserData.setVoteDeadline(TimeBase.nowMs() + msg.getVoteDuration());
+      if (msg.getModulus() != 0) {
+        voterUserData.setSampleNonce(msg.getSampleNonce());
+      }
     } catch (IOException ex) {
       log.critical("IOException while trying to create VoterUserData: ", ex);
       stopPoll();
@@ -884,11 +888,24 @@ public class V3Voter extends BasePoll {
    */
   boolean generateVote() throws NoSuchAlgorithmException {
     log.debug("Scheduling vote hash for poll " + voterUserData.getPollKey());
-    BlockHasher hasher =
-      new BlockHasher(voterUserData.getCachedUrlSet(),
-		      initHasherDigests(),
-		      initHasherByteArrays(),
-		      new BlockEventHandler());
+    int mod = voterUserData.getModulus();
+    byte[] sampleNonce = voterUserData.getSampleNonce();
+    if (mod != 0) {
+      log.info("Vote in sampled poll. modulus: " + mod + " nonce: " + sampleNonce);
+    }
+    CachedUrlSet cus = voterUserData.getCachedUrlSet();
+    BlockHasher hasher = (mod == 0 ?
+			  new BlockHasher(cus,
+					  initHasherDigests(),
+					  initHasherByteArrays(),
+					  new BlockEventHandler()) :
+			  new SampledBlockHasher(cus,
+						 -1, // XXX maxversions?
+						 mod,
+						 sampleNonce,
+						 initHasherDigests(),
+						 initHasherByteArrays(),
+						 new BlockEventHandler()));
     if (subChecker != null) {
       hasher.setSubstanceChecker(subChecker);
     }

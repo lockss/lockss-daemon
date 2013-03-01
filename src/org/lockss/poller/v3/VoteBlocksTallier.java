@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksTallier.java,v 1.2 2013-02-24 05:12:41 dshr Exp $
+ * $Id: VoteBlocksTallier.java,v 1.3 2013-03-01 04:12:25 dshr Exp $
  */
 
 /*
@@ -100,6 +100,12 @@ public class VoteBlocksTallier {
   public void tallyVoteBlocks(VoteBlocks voterBlocks,
 				    VoteBlocks pollerBlocks) {
     // VoteBlocks.iterator() delivers VoteBlock instances in URL order.
+    if (voterBlocks == null) {
+      throw new IllegalArgumentException("voterBlocks null");
+    }
+    if (pollerBlocks == null) {
+      throw new IllegalArgumentException("pollerBlocks null");
+    }
     try {
       VoteBlocksIterator vIterator = voterBlocks.iterator();
       VoteBlocksIterator pIterator = pollerBlocks.iterator();

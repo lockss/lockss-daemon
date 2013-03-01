@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.50 2013-02-24 04:54:20 dshr Exp $
+ * $Id: V3LcapMessage.java,v 1.51 2013-03-01 04:12:25 dshr Exp $
  */
 
 /*
@@ -153,6 +153,12 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   /** The effort proof for this message (if any). */
   private byte[] m_effortProof;
 
+  /** The modulus used to select URLs in a Proof of Possession poll */
+  private int m_modulus;
+
+  /** The nonce used to select URLs in a Proof of Possession poll */
+  private byte[] m_sampleNonce;
+
   /** In Vote messages: A list of vote blocks for this vote. */
   VoteBlocks m_voteBlocks;
   
@@ -260,23 +266,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_repairDataThreshold =
       CurrentConfig.getIntParam(PARAM_REPAIR_DATA_THRESHOLD,
                                 DEFAULT_REPAIR_DATA_THRESHOLD);
-  }
-
-  public V3LcapMessage(String auId, String pollKey, String pluginVersion,
-                       byte[] pollerNonce, byte[] voterNonce, int opcode,
-                       long deadline, PeerIdentity origin, File messageDir,
-                       LockssApp daemon) {
-    this(messageDir, daemon);
-    m_archivalID = auId;
-    m_startTime = TimeBase.nowMs();
-    m_stopTime = deadline;
-    m_key = pollKey;
-    m_pluginVersion = pluginVersion;
-    m_pollerNonce = pollerNonce;
-    m_voterNonce = voterNonce;
-    m_voterNonce2 = EMPTY_BYTE_ARRAY;
-    m_opcode = opcode;
-    m_originatorID = origin;
+    m_modulus = 0;
+    m_voterNonce2 = null;
+    m_sampleNonce = null;
   }
 
   public V3LcapMessage(String auId, String pollKey, String pluginVersion,
@@ -294,6 +286,72 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_voterNonce = voterNonce;
     m_voterNonce2 = voterNonce2;
     m_opcode = opcode;
+    m_modulus = 0;
+    m_sampleNonce = null;
+    m_originatorID = origin;
+  }
+
+  public V3LcapMessage(String auId, String pollKey, String pluginVersion,
+                       byte[] pollerNonce, byte[] voterNonce, int opcode,
+                       long deadline, PeerIdentity origin, File messageDir,
+                       LockssApp daemon) {
+    this(messageDir, daemon);
+    m_archivalID = auId;
+    m_startTime = TimeBase.nowMs();
+    m_stopTime = deadline;
+    m_key = pollKey;
+    m_pluginVersion = pluginVersion;
+    m_pollerNonce = pollerNonce;
+    m_voterNonce = voterNonce;
+    m_voterNonce2 = null;
+    m_opcode = opcode;
+    m_modulus = 0;
+    m_sampleNonce = null;
+    m_originatorID = origin;
+  }
+
+  public V3LcapMessage(String auId, String pollKey, String pluginVersion,
+                       byte[] pollerNonce, byte[] voterNonce, int opcode,
+		       int modulus, byte[] sampleNonce,
+                       long deadline, PeerIdentity origin, File messageDir,
+                       LockssApp daemon) {
+    this(messageDir, daemon);
+    m_archivalID = auId;
+    m_startTime = TimeBase.nowMs();
+    m_stopTime = deadline;
+    m_key = pollKey;
+    m_pluginVersion = pluginVersion;
+    m_pollerNonce = pollerNonce;
+    m_voterNonce = voterNonce;
+    m_opcode = opcode;
+    m_modulus = modulus;
+    if (modulus != 0) {
+      log.debug3("Message modulus: " + modulus);
+    }
+    m_sampleNonce = sampleNonce;
+    m_originatorID = origin;
+  }
+
+  public V3LcapMessage(String auId, String pollKey, String pluginVersion,
+                       byte[] pollerNonce, byte[] voterNonce,
+		       byte[] voterNonce2, int opcode,
+		       int modulus, byte[] sampleNonce,
+                       long deadline, PeerIdentity origin, File messageDir,
+                       LockssApp daemon) {
+    this(messageDir, daemon);
+    m_archivalID = auId;
+    m_startTime = TimeBase.nowMs();
+    m_stopTime = deadline;
+    m_key = pollKey;
+    m_pluginVersion = pluginVersion;
+    m_pollerNonce = pollerNonce;
+    m_voterNonce = voterNonce;
+    m_voterNonce2 = voterNonce2;
+    m_opcode = opcode;
+    if (modulus != 0) {
+      log.debug3("Message modulus: " + modulus);
+    }
+    m_sampleNonce = sampleNonce;
     m_originatorID = origin;
   }
 
@@ -398,6 +456,11 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_repairProps = m_props.getEncodedProperty("repairProps");
     m_agreementHint = m_props.getDouble("agreementHint", -1.0);
     m_groups = m_props.getProperty("groups");
+    m_modulus = m_props.getInt("modulus", 0);
+    if (m_modulus != 0) {
+      log.debug3("V3LcapMessage with modulus: " + m_modulus);
+    }
+    m_sampleNonce = m_props.getByteArray("sampleNonce", EMPTY_BYTE_ARRAY);
     String nakString = m_props.getProperty("nak");
     if (nakString != null) {
       try {
@@ -526,7 +589,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       if (m_voterNonce != null) {
         m_props.putByteArray("voterNonce", m_voterNonce);
       }
-      if (m_voterNonce2 != null) {
+      if (m_voterNonce2 != null && m_voterNonce2 != EMPTY_BYTE_ARRAY) {
         m_props.putByteArray("voterNonce2", m_voterNonce2);
       }
       return;
@@ -536,6 +599,13 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_props.putInt("elapsed", (int) (getElapsed() / 1000));
     m_props.setProperty("key", m_key);
     m_props.putInt("opcode", m_opcode);
+    m_props.putInt("modulus", m_modulus);
+    if (m_modulus != 0) {
+      log.debug3("V3LcapMessage sent modulus: " + m_modulus);
+    }
+    if (m_sampleNonce != null && m_sampleNonce != EMPTY_BYTE_ARRAY) {
+      m_props.putByteArray("sampleNonce", m_sampleNonce);
+    }
     if (m_targetUrl != null) {
       m_props.setProperty("url", m_targetUrl);
     }
@@ -552,7 +622,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     if (m_voterNonce != null) {
       m_props.putByteArray("voterNonce", m_voterNonce);
     }
-    if (m_voterNonce2 != null) {
+    if (m_voterNonce2 != null && m_voterNonce2 != EMPTY_BYTE_ARRAY) {
       m_props.putByteArray("voterNonce2", m_voterNonce2);
     }
 
@@ -642,6 +712,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   }
 
   public byte[] getVoterNonce2() {
+    if (m_voterNonce2 == EMPTY_BYTE_ARRAY) {
+      return null;
+    }
     return m_voterNonce2;
   }
 
@@ -677,6 +750,26 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   
   public void setVoteDuration(long l) {
     m_voteDuration = l;
+  }
+
+  public int getModulus() {
+    return m_modulus;
+  }
+
+  public void setModulus(int mod) {
+    log.debug3("setModulus: " + mod);
+    m_modulus = mod;
+  }
+
+  public byte[] getSampleNonce() {
+    if (m_sampleNonce == EMPTY_BYTE_ARRAY) {
+      return null;
+    }
+    return m_sampleNonce;
+  }
+
+  public void setSampleNonce(byte[] sampleNonce) {
+    m_sampleNonce = sampleNonce;
   }
   
   public void setNak(PollNak nak) {
@@ -897,6 +990,25 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     msg.m_voterNonce = voterNonce;
     msg.m_voterNonce2 = voterNonce2;
     msg.m_pollProtocol = Poll.V1_PROTOCOL;
+    msg.m_modulus = 0;
+    return msg;
+  }
+
+  /**
+   * Make a NoOp message.
+   */
+  static public V3LcapMessage makeNoOpMsg(PeerIdentity originator,
+                                          byte[] pollerNonce,
+                                          byte[] voterNonce,
+					  int modulus,
+                                          LockssApp daemon) {
+    V3LcapMessage msg = new V3LcapMessage(null, daemon);
+    msg.m_originatorID = originator;
+    msg.m_opcode = MSG_NO_OP;
+    msg.m_pollerNonce = pollerNonce;
+    msg.m_voterNonce = voterNonce;
+    msg.m_pollProtocol = Poll.V1_PROTOCOL;
+    msg.m_modulus = modulus;
     return msg;
   }
 

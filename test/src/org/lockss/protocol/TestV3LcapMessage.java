@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.30 2013-02-24 04:54:20 dshr Exp $
+ * $Id: TestV3LcapMessage.java,v 1.31 2013-03-01 04:12:25 dshr Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertTrue(m_testID == noopMsg.getOriginatorId());
     assertEquals(m_testBytes, noopMsg.getPollerNonce());
     assertEquals(m_testBytes, noopMsg.getVoterNonce());
-    assertEquals(LcapMessage.EMPTY_BYTE_ARRAY, noopMsg.getVoterNonce2());
+    assertEquals(null, noopMsg.getVoterNonce2());
     assertEquals(null, noopMsg.getVoteBlocks());
     assertEquals(V3LcapMessage.EST_ENCODED_HEADER_LENGTH,
 		 noopMsg.getEstimatedEncodedLength());
@@ -143,8 +143,8 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertTrue(noopMsg1.getOriginatorId() == noopMsg2.getOriginatorId());
     assertFalse(noopMsg1.getPollerNonce() == noopMsg2.getPollerNonce());
     assertFalse(noopMsg1.getVoterNonce() == noopMsg2.getVoterNonce());
-    assertEquals(LcapMessage.EMPTY_BYTE_ARRAY, noopMsg1.getVoterNonce2());
-    assertEquals(LcapMessage.EMPTY_BYTE_ARRAY, noopMsg2.getVoterNonce2());
+    assertEquals(null, noopMsg1.getVoterNonce2());
+    assertEquals(null, noopMsg2.getVoterNonce2());
     assertEquals(null, noopMsg1.getVoteBlocks());
     assertEquals(null, noopMsg2.getVoteBlocks());
   }
@@ -196,7 +196,7 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(V3LcapMessage.MSG_NO_OP, msg.getOpcode());
     assertEquals(m_testBytes, msg.getPollerNonce());
     assertEquals(m_testBytes, msg.getVoterNonce());
-    assertEquals(LcapMessage.EMPTY_BYTE_ARRAY, msg.getVoterNonce2());
+    assertEquals(null, msg.getVoterNonce2());
   }
 
   public void testMemoryRepairMessage() throws Exception {
@@ -323,7 +323,7 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals("http://foo.com/", reqMsg.getTargetUrl());
     assertEquals(m_testBytes, reqMsg.getPollerNonce());
     assertEquals(m_testBytes, reqMsg.getVoterNonce());
-    assertEquals(LcapMessage.EMPTY_BYTE_ARRAY, reqMsg.getVoterNonce2());
+    assertEquals(null, reqMsg.getVoterNonce2());
     List aBlocks = new ArrayList();
     List bBlocks = new ArrayList();
     for (VoteBlocksIterator iter = m_testMsg.getVoteBlockIterator(); iter.hasNext(); ) {

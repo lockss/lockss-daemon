@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.131 2013-02-24 04:54:19 dshr Exp $
+ * $Id: V3Poller.java,v 1.132 2013-03-01 04:12:24 dshr Exp $
  */
 
 /*
@@ -373,6 +373,13 @@ public class V3Poller extends BasePoll {
     PREFIX + "enableHashStats";
   public static final boolean DEFAULT_V3_ENABLE_HASH_STATS = false;
   
+  /**
+   * Override default setting of modulus to force PoP polls for testing
+   */
+  public static final String PARAM_V3_MODULUS =
+    PREFIX + "modulus";
+  public static final int DEFAULT_V3_MODULUS = 0;
+  
   /** Length of poller and voter challenges */
   public static final int HASH_NONCE_LENGTH = 20;
 
@@ -401,6 +408,8 @@ public class V3Poller extends BasePoll {
   // a little extra poll time is required to wait for pending repairs. 
   private long extraPollTime = DEFAULT_V3_EXTRA_POLL_TIME;
   private int quorum;
+  private int sampleModulus = 0;
+  private byte[] sampleNonce = null;
   private int voteMargin;
   private int outerCircleTarget;
   private int maxRepairs = DEFAULT_MAX_REPAIRS;
@@ -596,6 +605,10 @@ public class V3Poller extends BasePoll {
 				     DEFAULT_LOG_UNIQUE_VERSIONS);
     enableHashStats = c.getBoolean(PARAM_V3_ENABLE_HASH_STATS,
 				   DEFAULT_V3_ENABLE_HASH_STATS);
+    sampleModulus = c.getInt(PARAM_V3_MODULUS, DEFAULT_V3_MODULUS);
+    if (sampleModulus != 0) {
+      sampleNonce = PollUtil.makeHashNonce(HASH_NONCE_LENGTH);
+    }
   }
 
   PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {
@@ -1412,11 +1425,22 @@ public class V3Poller extends BasePoll {
                                  BlockHasher.EventHandler eh) {
     log.debug("Scheduling " + cu + "(" + maxVersions + ") hash for poll "
 	      + pollerState.getPollKey());
-    BlockHasher hasher = new BlockHasher(cu,
-					 maxVersions,
-                                         initHasherDigests(),
-                                         initHasherByteArrays(),
-                                         eh);
+    if (sampleModulus != 0) {
+      log.info("Sampled poll: " + sampleModulus);
+    }
+    BlockHasher hasher = (sampleModulus == 0 || sampleNonce == null ?
+			  new BlockHasher(cu,
+					  maxVersions,
+					  initHasherDigests(),
+					  initHasherByteArrays(),
+					  eh) :
+			  new SampledBlockHasher(cu,
+						 maxVersions,
+						 sampleModulus,
+						 sampleNonce,
+						 initHasherDigests(),
+						 initHasherByteArrays(),
+						 eh));
     // Now schedule the hash
     HashService hashService = theDaemon.getHashService();
     
@@ -2799,6 +2823,14 @@ public class V3Poller extends BasePoll {
 
   public ArchivalUnit getAu() {
     return pollerState.getCachedUrlSet().getArchivalUnit();
+  }
+
+  public int getSampleModulus() {
+    return sampleModulus;
+  }
+
+  public byte[] getSampleNonce() {
+    return sampleNonce;
   }
 
   public String getStatusString() {

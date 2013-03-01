@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.31 2013-02-24 04:54:19 dshr Exp $
+ * $Id: PollerActions.java,v 1.32 2013-03-01 04:12:24 dshr Exp $
  */
 
 /*
@@ -71,13 +71,23 @@ public class PollerActions {
   public static PsmEvent handleSendPoll(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
     if (!ud.isPollActive()) return V3Events.evtError;
+    int mod = ud.getPoller().getSampleModulus();
     // For auditing purposes, log the poller nonce.
     log.info("Inviting peer " + ud.getVoterId() + " into poll " +
              ud.getKey() + " with poller nonce " +
-             ByteArray.toBase64(ud.getPollerNonce()));
+             ByteArray.toBase64(ud.getPollerNonce()) + " modulus " + mod);
     try {
       V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL);
       msg.setPollerNonce(ud.getPollerNonce());
+      if (mod != 0) {
+	byte[] sampleNonce = ud.getPoller().getSampleNonce();
+	if (sampleNonce != null && sampleNonce != ByteArray.EMPTY_BYTE_ARRAY) {
+	  msg.setModulus(mod);
+	  msg.setSampleNonce(sampleNonce);
+	} else {
+	  log.error("Modulus: " + mod + " but no sample nonce");
+	}
+      }
       msg.setEffortProof(ud.getIntroEffortProof());
       msg.setVoteDuration(ud.getPoller().getVoteDuration());
       msg.setExpiration(ud.getPoller().getPollMsgExpiration());
