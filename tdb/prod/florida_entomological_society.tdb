@@ -28,17 +28,18 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = flen
       
-      au < manifest ; 2002 ; Florida Entomologist Volume 85 ; 85 >
-      au < manifest ; 2003 ; Florida Entomologist Volume 86 ; 86 >
+      au < testing ; 2002 ; Florida Entomologist Volume 85 ; 85 >
+      au < testing ; 2003 ; Florida Entomologist Volume 86 ; 86 >
       au < doNotProcess ; 2004 ; Florida Entomologist Volume 87 ; 87 >
-      au < manifest ; 2005 ; Florida Entomologist Volume 88 ; 88 >
-      au < manifest ; 2006 ; Florida Entomologist Volume 89 ; 89 >
-      au < manifest ; 2007 ; Florida Entomologist Volume 90 ; 90 >
-      au < manifest ; 2008 ; Florida Entomologist Volume 91 ; 91 >
-      au < manifest ; 2009 ; Florida Entomologist Volume 92 ; 92 >
-      au < manifest ; 2010 ; Florida Entomologist Volume 93 ; 93 >
-      au < manifest ; 2011 ; Florida Entomologist Volume 94 ; 94 >
-      au < manifest ; 2012 ; Florida Entomologist Volume 95 ; 95 >
+      au < testing ; 2005 ; Florida Entomologist Volume 88 ; 88 >
+      au < testing ; 2006 ; Florida Entomologist Volume 89 ; 89 >
+      au < testing ; 2007 ; Florida Entomologist Volume 90 ; 90 >
+      au < testing ; 2008 ; Florida Entomologist Volume 91 ; 91 >
+      au < testing ; 2009 ; Florida Entomologist Volume 92 ; 92 >
+      au < testing ; 2010 ; Florida Entomologist Volume 93 ; 93 >
+      au < testing ; 2011 ; Florida Entomologist Volume 94 ; 94 >
+      au < testing ; 2012 ; Florida Entomologist Volume 95 ; 95 >
+      au < expected ; 2013 ; Florida Entomologist Volume 96 ; 96 >
 
     }
 

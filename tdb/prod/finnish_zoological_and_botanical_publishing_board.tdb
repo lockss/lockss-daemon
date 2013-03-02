@@ -18,10 +18,12 @@
     {
       param[journal_id] = anbf
   
-      au < manifest ; 2008 ; Annales Botanici Fennici Volume 45 ; 45 >
-      au < manifest ; 2009 ; Annales Botanici Fennici Volume 46 ; 46 >
-      au < manifest ; 2010 ; Annales Botanici Fennici Volume 47 ; 47 >
-      au < manifest ; 2011 ; Annales Botanici Fennici Volume 48 ; 48 >
+      au < testing ; 2008 ; Annales Botanici Fennici Volume 45 ; 45 >
+      au < testing ; 2009 ; Annales Botanici Fennici Volume 46 ; 46 >
+      au < testing ; 2010 ; Annales Botanici Fennici Volume 47 ; 47 >
+      au < testing ; 2011 ; Annales Botanici Fennici Volume 48 ; 48 >
+      au < exists ; 2012 ; Annales Botanici Fennici Volume 49 ; 49 >
+      au < expected ; 2013 ; Annales Botanici Fennici Volume 50 ; 50 >
 
     }
 
@@ -37,10 +39,12 @@
     {
       param[journal_id] = anzf
   
-      au < manifest ; 2008 ; Annales Zoologici Fennici Volume 45 ; 45 >
-      au < manifest ; 2009 ; Annales Zoologici Fennici Volume 46 ; 46 >
-      au < manifest ; 2010 ; Annales Zoologici Fennici Volume 47 ; 47 >
-      au < manifest ; 2011 ; Annales Zoologici Fennici Volume 48 ; 48 >
+      au < testing ; 2008 ; Annales Zoologici Fennici Volume 45 ; 45 >
+      au < testing ; 2009 ; Annales Zoologici Fennici Volume 46 ; 46 >
+      au < testing ; 2010 ; Annales Zoologici Fennici Volume 47 ; 47 >
+      au < testing ; 2011 ; Annales Zoologici Fennici Volume 48 ; 48 >
+      au < exists ; 2012 ; Annales Zoologici Fennici Volume 49 ; 49 >
+      au < expected ; 2013 ; Annales Zoologici Fennici Volume 50 ; 50 >
 
     }
 
