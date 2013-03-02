@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.7 2013-02-28 01:55:28 thib_gc Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.8 2013-03-02 02:20:38 thib_gc Exp $
  */ 
 
 /*
@@ -32,7 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ingenta;
 
-import java.io.InputStream;
+import java.io.*;
+import java.util.List;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.pdf.*;
@@ -62,7 +63,9 @@ public class IngentaPdfFilterFactory
     /** Pacific Affairs */
     PAAF,
     /** Whiting and Birch */
-    WAB
+    WAB,
+    /** White Horse Press */
+    WHP,
   }
 
   private static final Logger logger = Logger.getLogger(IngentaPdfFilterFactory.class);
@@ -71,6 +74,7 @@ public class IngentaPdfFilterFactory
   private FilterFactory normFiltFact = new NormalizingPdfFilterFactory();
   private FilterFactory normExtractFiltFact = new NormalizingExtractingPdfFilterFactory();
   private FilterFactory paafFiltFact = new PacificAffairsPdfFilterFactory();
+  private FilterFactory whpFiltFact = new WhiteHorsePressPdfFilterFactory();
   
   /**
    * <p>
@@ -100,6 +104,110 @@ public class IngentaPdfFilterFactory
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
       throws PdfException {
+  }
+  
+  protected static class WhiteHorsePressPdfFilterFactory extends SimplePdfFilterFactory {
+                                      
+    protected static class WhiteHorsePressWorker extends PdfTokenStreamWorker {
+      
+      protected boolean result;
+      
+      protected int beginIndex;
+      
+      protected int endIndex;
+      
+      protected int state;
+      
+      public WhiteHorsePressWorker() {
+        super(Direction.BACKWARD);
+      }
+      
+      @Override
+      public void setUp() throws PdfException {
+        super.setUp();
+        this.state = 0;
+        this.result = false;
+        this.beginIndex = -1;
+        this.endIndex = -1;
+      }
+      
+      @Override
+      public void operatorCallback() throws PdfException {
+        if (logger.isDebug3()) {
+          logger.debug3("WhiteHorsePressWorker: initial: " + state);
+          logger.debug3("WhiteHorsePressWorker: index: " + getIndex());
+          logger.debug3("WhiteHorsePressWorker: operator: " + getOpcode());
+        }
+        
+        switch (state) {
+          
+          case 0: {
+            // FIXME 1.60
+            if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) {
+              endIndex = getIndex();
+              ++state; 
+            }
+          } break;
+          
+          case 1: {
+            // FIXME 1.60
+            if (PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+                && getTokens().get(getIndex() - 1).getString().endsWith(" = Date & Time")) {
+              ++state;
+            }
+            // FIXME 1.60
+            else if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { stop(); }
+          } break;
+          
+          case 2: {
+            // FIXME 1.60
+            if (PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+                && getTokens().get(getIndex() - 1).getString().endsWith(" = IP address")) {
+              ++state;
+            }
+            // FIXME 1.60
+            else if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { stop(); }
+          } break;
+          
+          case 3: {
+            // FIXME 1.60
+            if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) {
+              beginIndex = getIndex();
+              result = true;
+              stop(); 
+            }
+          } break;
+          
+          default: {
+            throw new PdfException("Invalid state in WhiteHorsePressWorker: " + state);
+          }
+      
+        }
+      
+        if (logger.isDebug3()) {
+          logger.debug3("WhiteHorsePressWorker: final: " + state);
+          logger.debug3("WhiteHorsePressWorker: result: " + result);
+        }
+        
+      }
+      
+    }
+    
+    public void transform(ArchivalUnit au,
+                          PdfDocument pdfDocument)
+        throws PdfException {
+      
+      WhiteHorsePressWorker worker = new WhiteHorsePressWorker();
+      for (PdfPage pdfPage : pdfDocument.getPages()) {
+        PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
+        worker.process(pdfTokenStream);
+        if (worker.result) {
+          List<PdfToken> tokens = pdfTokenStream.getTokens();
+          tokens.subList(worker.beginIndex, worker.endIndex).clear();
+          pdfTokenStream.setTokens(tokens);
+        }
+      }
+    }
   }
   
   /*
@@ -172,6 +280,9 @@ public class IngentaPdfFilterFactory
 	
       case PAAF:
 	return paafFiltFact.createFilteredInputStream(au, in, encoding);
+     
+      case WHP:
+        return whpFiltFact.createFilteredInputStream(au, in, encoding);
      
       default:
 	return in;
@@ -263,4 +374,5 @@ public class IngentaPdfFilterFactory
       }
     }
   }
+  
 }
