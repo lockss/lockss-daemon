@@ -1482,7 +1482,7 @@
       param[journal_issn] = 2050-7283
       attr[journal_code] = bmcpsychology
 
-      au < expected ; 2013 ; BMC Psychology Volume 1 ; 1 >
+      au < manifest ; 2013 ; BMC Psychology Volume 1 ; 1 >
 
     }
 
@@ -4859,7 +4859,7 @@
       param[base_url] = http://www.jvat.org/
       param[journal_issn] = 1678-9199
 
-      au < expected ; 2013 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 1 ; 1 >
+      au < manifest ; 2013 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 19 ; 19 >
 
     }
 

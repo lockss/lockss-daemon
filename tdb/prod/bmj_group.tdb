@@ -50,7 +50,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Acupuncture in Medicine Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Acupuncture in Medicine Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Acupuncture in Medicine Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Acupuncture in Medicine Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Acupuncture in Medicine Volume 31 ; 31 >
 
   }
 
@@ -444,14 +444,14 @@
   
   {
     title <
-      name = BMJ Quality Improvement Report ;
+      name = BMJ Quality Improvement Reports ;
       eissn = 2050-1315
    >
     
       param[base_url] = http://qir.bmj.com/
 
-      au < HighWirePressH20Plugin ; exists ; 2012 ; BMJ Quality Improvement Report Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; expected ; 2013 ; BMJ Quality Improvement Report Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; exists ; 2012 ; BMJ Quality Improvement Reports Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 2013 ; BMJ Quality Improvement Reports Volume 2 ; 2 >
       
     }
 
