@@ -388,17 +388,17 @@
       param[base_url] = http://complit.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; testing ; 2000 ; Comparative Literature Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; Comparative Literature Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; Comparative Literature Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; testing ; 2003 ; Comparative Literature Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; testing ; 2004 ; Comparative Literature Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; ready ; 2000 ; Comparative Literature Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; Comparative Literature Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; ready ; 2002 ; Comparative Literature Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; ready ; 2003 ; Comparative Literature Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; ready ; 2004 ; Comparative Literature Volume 56 ; 56 >
       au < HighWirePressH20Plugin ; ready ; 2005 ; Comparative Literature Volume 57 ; 57 >
       au < HighWirePressH20Plugin ; ready ; 2006 ; Comparative Literature Volume 58 ; 58 >
       au < HighWirePressH20Plugin ; ready ; 2007 ; Comparative Literature Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; testing ; 2008 ; Comparative Literature Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; testing ; 2009 ; Comparative Literature Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; Comparative Literature Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; ready ; 2008 ; Comparative Literature Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; ready ; 2009 ; Comparative Literature Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; ready ; 2010 ; Comparative Literature Volume 62 ; 62 >
       au < HighWirePressH20Plugin ; ready ; 2011 ; Comparative Literature Volume 63 ; 63 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Comparative Literature Volume 64 ; 64 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Comparative Literature Volume 65 ; 65 >
