@@ -1,10 +1,10 @@
 /*
- * $Id: TestCounterReportsRequestAggregator.java,v 1.6 2013-01-14 21:58:18 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestAggregator.java,v 1.7 2013-03-04 19:26:59 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -374,13 +374,15 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
       publicationSeq =
 	  metadataManager.findOrCreatePublication(conn, null, null, "FULLPISBN",
 						  "FULLEISBN", publisherSeq,
-						  "Full Name", "2010-01-01",
-						  null, null);
+						  "Full Name", null, null);
+
+      // Add the publishing platform.
+      Long platformSeq = metadataManager.findOrCreatePlatform(conn,
+	  "fullPlatform");
 
       // Add the plugin.
-      Long pluginSeq =
-	  metadataManager.findOrCreatePlugin(conn, "fullPluginId",
-	      "fullPlatform");
+      Long pluginSeq = metadataManager.findOrCreatePlugin(conn, "fullPluginId",
+	  platformSeq);
 
       // Add the AU.
       Long auSeq =
@@ -434,13 +436,15 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 	  metadataManager.findOrCreatePublication(conn, null, null,
 	                                          "SECTIONPISBN",
 	                                          "SECTIONEISBN", publisherSeq,
-						  "Section Name", "2010-01-01",
-						  null, null);
+						  "Section Name", null, null);
+
+      // Add the publishing platform.
+      Long platformSeq = metadataManager.findOrCreatePlatform(conn,
+	  "secPlatform");
 
       // Add the plugin.
-      Long pluginSeq =
-	  metadataManager.findOrCreatePlugin(conn, "secPluginId",
-	      "secPlatform");
+      Long pluginSeq = metadataManager.findOrCreatePlugin(conn, "secPluginId",
+	  platformSeq);
 
       // Add the AU.
       Long auSeq =
@@ -664,12 +668,14 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
       publicationSeq =
 	  metadataManager.findOrCreatePublication(conn, "PISSN", "EISSN",
 						  null, null, publisherSeq,
-						  "JOURNAL", "2009-01-01", null,
-						  null);
+						  "JOURNAL", null, null);
+
+      // Add the publishing platform.
+      Long platformSeq = metadataManager.findOrCreatePlatform(conn, "platform");
 
       // Add the plugin.
-      Long pluginSeq =
-	  metadataManager.findOrCreatePlugin(conn, "pluginId", "platform");
+      Long pluginSeq = metadataManager.findOrCreatePlugin(conn, "pluginId",
+	  platformSeq);
 
       // Add the AU.
       Long auSeq = metadataManager.findOrCreateAu(conn, pluginSeq, "auKey");

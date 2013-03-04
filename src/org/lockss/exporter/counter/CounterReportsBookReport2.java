@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsBookReport2.java,v 1.5 2013-01-14 21:58:18 fergaloy-sf Exp $
+ * $Id: CounterReportsBookReport2.java,v 1.6 2013-03-04 19:26:08 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -61,7 +61,7 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
       + ", n." + NAME_COLUMN
       + ", p." + PUBLICATION_ID_COLUMN
       + ", pu." + PUBLISHER_NAME_COLUMN
-      + ", pl." + PLATFORM_COLUMN
+      + ", pla." + PLATFORM_NAME_COLUMN
       + ", d." + DOI_COLUMN
       + ", i1." + ISBN_COLUMN + " as " + P_ISBN_TYPE
       + ", i2." + ISBN_COLUMN + " as " + E_ISBN_TYPE
@@ -72,6 +72,7 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
       + "," + AU_MD_TABLE + " am"
       + "," + AU_TABLE + " au"
       + "," + PLUGIN_TABLE + " pl"
+      + "," + PLATFORM_TABLE + " pla"
       + "," + MD_ITEM_TABLE + " m1"
       + " left outer join " + ISBN_TABLE + " i1"
       + " on m1." + MD_ITEM_SEQ_COLUMN + " = i1." + MD_ITEM_SEQ_COLUMN
@@ -101,6 +102,7 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
       + " and m2." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
       + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
       + " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
+      + " and pl." + PLATFORM_SEQ_COLUMN + " = pla." + PLATFORM_SEQ_COLUMN
       + " order by n." + NAME_COLUMN + " asc";
 
   // Query to get the book request counts to be included in the report.
@@ -244,7 +246,7 @@ public class CounterReportsBookReport2 extends CounterReportsBookReport {
 	book =
 	    new CounterReportsBook(resultSet.getString(NAME_COLUMN),
 	                           resultSet.getString(PUBLISHER_NAME_COLUMN),
-	                           resultSet.getString(PLATFORM_COLUMN),
+	                           resultSet.getString(PLATFORM_NAME_COLUMN),
 	                           resultSet.getString(DOI_COLUMN),
 	                           resultSet.getString(PUBLICATION_ID_COLUMN),
 	                           formatIsbn(resultSet

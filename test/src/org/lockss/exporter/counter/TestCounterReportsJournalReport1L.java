@@ -1,10 +1,10 @@
 /*
- * $Id: TestCounterReportsJournalReport1L.java,v 1.5 2013-01-09 04:05:12 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport1L.java,v 1.6 2013-03-04 19:26:59 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -266,12 +266,14 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
       publicationSeq =
 	  metadataManager.findOrCreatePublication(conn, "12345678", "98765432",
 						  null, null, publisherSeq,
-						  "JOURNAL", "2010-01-01", null,
-						  null);
+						  "JOURNAL", null, null);
+
+      // Add the publishing platform.
+      Long platformSeq = metadataManager.findOrCreatePlatform(conn, "platform");
 
       // Add the plugin.
-      Long pluginSeq =
-	  metadataManager.findOrCreatePlugin(conn, "pluginId", "platform");
+      Long pluginSeq = metadataManager.findOrCreatePlugin(conn, "pluginId",
+	  platformSeq);
 
       // Add the AU.
       Long auSeq =

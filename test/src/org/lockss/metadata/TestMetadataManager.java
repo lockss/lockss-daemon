@@ -1,10 +1,10 @@
 /*
- * $Id: TestMetadataManager.java,v 1.3 2013-01-14 21:58:18 fergaloy-sf Exp $
+ * $Id: TestMetadataManager.java,v 1.4 2013-03-04 19:26:59 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,7 +37,6 @@ import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.PluginException;
@@ -347,10 +346,14 @@ public class TestMetadataManager extends LockssTestCase {
     // so disable re-indexing.
     metadataManager.setIndexingEnabled(false);
 
-    // Add one AU.
-    metadataManager.addAuToReindex(sau0, true);
-
     Connection con = dbManager.getConnection();
+
+    PreparedStatement insertPendingAuBatchStatement =
+	metadataManager.getInsertPendingAuBatchStatement(con);
+
+    // Add one AU.
+    metadataManager.enableAndAddAuToReindex(sau0, con, insertPendingAuBatchStatement,
+	true);
     
     // Check that nothing has been added yet.
     String query = "select count(*) from " + PENDING_AU_TABLE;
@@ -363,7 +366,8 @@ public class TestMetadataManager extends LockssTestCase {
     assertEquals(0, count);
 
     // Add the second AU.
-    metadataManager.addAuToReindex(sau1, true);
+    metadataManager.enableAndAddAuToReindex(sau1, con, insertPendingAuBatchStatement,
+	true);
     
     // Check that one batch has been executed.
     resultSet = dbManager.executeQuery(stmt);
@@ -374,7 +378,8 @@ public class TestMetadataManager extends LockssTestCase {
     assertEquals(2, count);
 
     // Add the third AU.
-    metadataManager.addAuToReindex(sau2, true);
+    metadataManager.enableAndAddAuToReindex(sau2, con, insertPendingAuBatchStatement,
+	true);
 
     // Check that the third AU has not been added yet.
     resultSet = dbManager.executeQuery(stmt);
@@ -385,7 +390,8 @@ public class TestMetadataManager extends LockssTestCase {
     assertEquals(2, count);
 
     // Add the fourth AU.
-    metadataManager.addAuToReindex(sau3, true);
+    metadataManager.enableAndAddAuToReindex(sau3, con, insertPendingAuBatchStatement,
+	true);
     
     // Check that the second batch has been executed.
     resultSet = dbManager.executeQuery(stmt);
@@ -396,7 +402,8 @@ public class TestMetadataManager extends LockssTestCase {
     assertEquals(4, count);
 
     // Add the last AU.
-    metadataManager.addAuToReindex(sau4, false);
+    metadataManager.enableAndAddAuToReindex(sau4, con, insertPendingAuBatchStatement,
+	false);
 
     // Check that all the AUs have been added.
     resultSet = dbManager.executeQuery(stmt);
@@ -562,6 +569,46 @@ public class TestMetadataManager extends LockssTestCase {
     assertTrue(metadataManager.isEligibleForReindexing(mau1));
 
   }
+
+  /*public void testSerializedFile() throws Exception {
+    Connection conn = dbManager.getConnection();
+
+    String query = "select count(*) from " + MD_ITEM_TABLE;
+    PreparedStatement stmt = dbManager.prepareStatement(conn, query);
+    ResultSet resultSet = dbManager.executeQuery(stmt);
+    int count = 0;
+    if (resultSet.next()) {
+      count = -resultSet.getInt(1);
+    }
+    log.info("mdItemCount = " + -count);
+
+    File serializedFile = new File("/tmp/Springer2010Index.ser");
+    log.info("serializedFile.length() = " + serializedFile.length());
+
+    ArticleMetadataBuffer amBuffer = new ArticleMetadataBuffer();
+    amBuffer.collectedMetadataFile = serializedFile;
+    amBuffer.infoCount = 238831;
+
+    ReindexingTask task = new ReindexingTask(sau1,
+	new BaseArticleMetadataExtractor(null));
+
+    log.info("Running AuMetadataRecorder.recordMetadata()...");
+
+    new AuMetadataRecorder((ReindexingTask) task, metadataManager, sau1)
+	.recordMetadata(conn, amBuffer.iterator());
+
+    conn.commit();
+
+    log.info("updatedArticleCount = " + task.getUpdatedArticleCount());
+
+    resultSet = dbManager.executeQuery(stmt);
+    if (resultSet.next()) {
+      count += resultSet.getInt(1);
+    }
+    log.info("mdItemCount = " + count);
+
+    amBuffer.close();
+  }*/
 
   public static class MySubTreeArticleIteratorFactory
       implements ArticleIteratorFactory {

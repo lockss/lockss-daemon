@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataStarter.java,v 1.4 2013-01-16 08:07:40 tlipkis Exp $
+ * $Id: MetadataStarter.java,v 1.5 2013-03-04 19:26:08 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +33,7 @@ package org.lockss.metadata;
 
 import static org.lockss.db.DbManager.*;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Collection;
 import java.util.List;
@@ -145,8 +146,9 @@ public class MetadataStarter extends LockssRunnable {
     // Add the AUs to be indexed to the table of pending AUs, if not already
     // there.
     try {
-      mdManager.addToPendingAus(conn,
-				CollectionUtil.randomPermutation(toBeIndexed));
+      mdManager.addToPendingAusIfNotThere(conn,
+	  (Collection<ArchivalUnit>) CollectionUtil
+	      .randomPermutation(toBeIndexed));
       conn.commit();
       log.debug2(DEBUG_HEADER + "Queue updated");
     } catch (SQLException sqle) {
@@ -177,43 +179,61 @@ public class MetadataStarter extends LockssRunnable {
     @Override
     public void auCreated(AuEvent event, ArchivalUnit au) {
       final String DEBUG_HEADER = "auCreated(): ";
-      switch (event.getType()) {
-	case StartupCreate:
-	  log.debug2(DEBUG_HEADER + "StartupCreate for au: " + au);
+      Connection conn = null;
+      PreparedStatement insertPendingAuBatchStatement = null;
 
-	  // Since this handler is installed after daemon startup, this case
-	  // only occurs rarely, as when an AU is added to au.txt, which is then
-	  // rescanned by the daemon. If this restores an existing AU that has
-	  // already been crawled, we schedule it to be added to the metadata
-	  // database now. Otherwise it will be added through auContentChanged()
-	  // once the crawl has been completed.
-	  if (AuUtil.hasCrawled(au)) {
-	    mdManager.addAuToReindex(au, event.isInBatch());
-	  }
+      try {
+        conn = dbManager.getConnection();
+        insertPendingAuBatchStatement =
+            mdManager.getInsertPendingAuBatchStatement(conn);
 
-	  break;
-	case Create:
-	  log.debug2(DEBUG_HEADER + "Create for au: " + au);
+        switch (event.getType()) {
+  	  case StartupCreate:
+  	    log.debug2(DEBUG_HEADER + "StartupCreate for au: " + au);
 
-	  // This case occurs when the user has added an AU through the GUI. If
-	  // this restores an existing AU that has already crawled, we schedule
-	  // it to be added to the metadata database now. Otherwise it will be
-	  // added through auContentChanged() once the crawl has been completed.
-	  if (AuUtil.hasCrawled(au)) {
-	    mdManager.addAuToReindex(au, event.isInBatch());
-	  }
+  	    // Since this handler is installed after daemon startup, this case
+  	    // only occurs rarely, as when an AU is added to au.txt, which is
+  	    // then rescanned by the daemon. If this restores an existing AU
+  	    // that has already been crawled, we schedule it to be added to the
+  	    // metadata database now. Otherwise it will be added through
+  	    // auContentChanged() once the crawl has been completed.
+  	    if (AuUtil.hasCrawled(au)) {
+  	      mdManager.enableAndAddAuToReindex(au, conn, insertPendingAuBatchStatement,
+  		  event.isInBatch());
+  	    }
 
-	  break;
-	case RestartCreate:
-	  log.debug2(DEBUG_HEADER + "RestartCreate for au: " + au);
+  	    break;
+  	  case Create:
+  	    log.debug2(DEBUG_HEADER + "Create for au: " + au);
 
-	  // A new version of the plugin has been loaded. Refresh the metadata
-	  // only if the feature version of the metadata extractor increased.
-	  if (mdManager.isAuMetadataForObsoletePlugin(au)) {
-	    mdManager.addAuToReindex(au, event.isInBatch());
-	  }
+  	    // This case occurs when the user has added an AU through the GUI.
+  	    // If this restores an existing AU that has already crawled, we
+  	    // schedule it to be added to the metadata database now. Otherwise
+  	    // it will be added through auContentChanged() once the crawl has
+  	    // been completed.
+  	    if (AuUtil.hasCrawled(au)) {
+  	      mdManager.enableAndAddAuToReindex(au, conn, insertPendingAuBatchStatement,
+  		  event.isInBatch());
+  	    }
 
-	  break;
+  	    break;
+  	  case RestartCreate:
+  	    log.debug2(DEBUG_HEADER + "RestartCreate for au: " + au);
+
+  	    // A new version of the plugin has been loaded. Refresh the metadata
+  	    // only if the feature version of the metadata extractor increased.
+  	    if (mdManager.isAuMetadataForObsoletePlugin(au)) {
+  	      mdManager.enableAndAddAuToReindex(au, conn, insertPendingAuBatchStatement,
+  		  event.isInBatch());
+  	    }
+
+  	    break;
+        }
+      } catch (SQLException sqle) {
+        log.error("Cannot reindex metadata for " + au.getName(), sqle);
+      } finally {
+        DbManager.safeCloseStatement(insertPendingAuBatchStatement);
+        DbManager.safeRollbackAndClose(conn);
       }
     }
 
@@ -241,14 +261,31 @@ public class MetadataStarter extends LockssRunnable {
     @Override
     public void auContentChanged(AuEvent event, ArchivalUnit au,
 	ChangeInfo info) {
+      final String DEBUG_HEADER = "auContentChanged(): ";
+
       switch (event.getType()) {
 	case ContentChanged:
 	  // This case occurs after a change to the AU's content after a crawl.
 	  // This code assumes that a new crawl will simply add new metadata and
 	  // not change existing metadata. Otherwise,
 	  // deleteOrRestartAu(au, true) should be called.
+  	  log.debug2(DEBUG_HEADER + "ContentChanged for au: " + au);
 	  if (info.isComplete()) {
-	    mdManager.addAuToReindex(au, event.isInBatch());
+	    Connection conn = null;
+	    PreparedStatement insertPendingAuBatchStatement = null;
+
+	    try {
+	      conn = dbManager.getConnection();
+	      insertPendingAuBatchStatement =
+		  mdManager.getInsertPendingAuBatchStatement(conn);
+	      mdManager.enableAndAddAuToReindex(au, conn, insertPendingAuBatchStatement,
+		  event.isInBatch());
+	    } catch (SQLException sqle) {
+	      log.error("Cannot reindex metadata for " + au.getName(), sqle);
+	    } finally {
+	      DbManager.safeCloseStatement(insertPendingAuBatchStatement);
+	      DbManager.safeRollbackAndClose(conn);
+	    }
 	  }
       }
     }

@@ -1,10 +1,10 @@
 /*
- * $Id: TestCounterReportsRequestRecorder.java,v 1.6 2013-01-14 21:58:18 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestRecorder.java,v 1.7 2013-03-04 19:26:59 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -142,13 +142,15 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 	  metadataManager.findOrCreatePublication(conn, null, null,
 						  "9876543210987",
 						  "9876543210123", publisherSeq,
-						  "The Full Book", "2009-01-01",
-						  null, null);
+						  "The Full Book", null, null);
+
+      // Add the publishing platform.
+      Long platformSeq = metadataManager.findOrCreatePlatform(conn,
+	  "fullPlatform");
 
       // Add the plugin.
-      Long pluginSeq =
-	  metadataManager.findOrCreatePlugin(conn, "fullPluginId",
-	      "fullPlatform");
+      Long pluginSeq = metadataManager.findOrCreatePlugin(conn, "fullPluginId",
+	  platformSeq);
 
       // Add the AU.
       Long auSeq = metadataManager.findOrCreateAu(conn, pluginSeq, "fullAuKey");

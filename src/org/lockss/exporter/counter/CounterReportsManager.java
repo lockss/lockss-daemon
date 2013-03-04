@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsManager.java,v 1.8 2013-01-14 21:58:18 fergaloy-sf Exp $
+ * $Id: CounterReportsManager.java,v 1.9 2013-03-04 19:26:08 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -198,8 +198,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       // all book requests.
       allBooksPublicationSeq = metadataManager
 	  .findOrCreatePublication(conn, null, null, "CRBPISBN", "CRBEISBN",
-	                           publisherSeq, ALL_BOOKS_NAME, null, null,
-	                           null);
+	                           publisherSeq, ALL_BOOKS_NAME, null, null);
       log.debug2(DEBUG_HEADER + "allBooksPublicationSeq = "
 	  + allBooksPublicationSeq);
 
@@ -215,8 +214,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       // all journal requests.
       allJournalsPublicationSeq = metadataManager
 	  .findOrCreatePublication(conn, "CRJPISSN", "CRJEISSN", null,null,
-	                           publisherSeq, ALL_JOURNALS_NAME, null, null,
-	                           null);
+	                           publisherSeq, ALL_JOURNALS_NAME, null, null);
       log.debug2(DEBUG_HEADER + "allJournalsPublicationSeq = "
 	  + allJournalsPublicationSeq);
 

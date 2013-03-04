@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport5L.java,v 1.7 2013-01-14 21:58:18 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport5L.java,v 1.8 2013-03-04 19:26:59 fergaloy-sf Exp $
  */
 
 /*
@@ -320,19 +320,18 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
       Long publisherSeq =
 	  metadataManager.findOrCreatePublisher(conn, "publisher");
 
-      // The publication date is a couple of years ago.
-      String publicationDate = (year-2) + "-01-01";
-
       // Add the publication.
       publicationSeq =
 	  metadataManager.findOrCreatePublication(conn, "12345678", "98765432",
 						  null, null, publisherSeq,
-						  "JOURNAL", publicationDate,
-						  null, null);
+						  "JOURNAL", null, null);
+
+      // Add the publishing platform.
+      Long platformSeq = metadataManager.findOrCreatePlatform(conn, "platform");
 
       // Add the plugin.
-      Long pluginSeq =
-	  metadataManager.findOrCreatePlugin(conn, "pluginId", "platform");
+      Long pluginSeq = metadataManager.findOrCreatePlugin(conn, "pluginId",
+	  platformSeq);
 
       // Add the AU.
       Long auSeq =
@@ -350,11 +349,14 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
 	  metadataManager.findMetadataItemType(conn,
 	                                       MD_ITEM_TYPE_JOURNAL_ARTICLE);
 
+      // The publication date is a couple of years ago.
+      String publicationDate = (year-2) + "-01-01";
+
       Long mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
                                             auMdSeq, publicationDate, null);
 
-	  metadataManager.addMdItemName(conn, mdItemSeq, "htmlArticle",
-					PRIMARY_NAME_TYPE);
+      metadataManager.addMdItemName(conn, mdItemSeq, "htmlArticle",
+				    PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
                                    HTML_URL);
@@ -362,8 +364,8 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
       mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
                                             auMdSeq, publicationDate, null);
 
-	  metadataManager.addMdItemName(conn, mdItemSeq, "pdfArticle",
-					PRIMARY_NAME_TYPE);
+      metadataManager.addMdItemName(conn, mdItemSeq, "pdfArticle",
+				    PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
                                    PDF_URL);
