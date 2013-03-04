@@ -1,10 +1,10 @@
 /*
- * $Id: DbManager.java,v 1.13 2013-01-14 21:58:19 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.14 2013-03-04 19:16:47 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -229,6 +229,18 @@ public class DbManager extends BaseLockssDaemonManager
   public static final String COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE =
       "counter_journal_pubyear_aggregate";
 
+  /** Name of the platform table. */
+  public static final String PLATFORM_TABLE = "platform";
+
+  /** Name of the subscription table. */
+  public static final String SUBSCRIPTION_TABLE = "subscription";
+
+  /** Name of the subscription range table. */
+  public static final String SUBSCRIPTION_RANGE_TABLE = "subscription_range";
+
+  /** Name of the unconfigured Archival Unit table. */
+  public static final String UNCONFIGURED_AU_TABLE = "unconfigured_au";
+
   //
   // Database table column names.
   //
@@ -431,6 +443,18 @@ public class DbManager extends BaseLockssDaemonManager
   /** Requests column. */
   public static final String REQUESTS_COLUMN = "requests";
 
+  /** Platform identifier column. */
+  public static final String PLATFORM_SEQ_COLUMN = "platform_seq";
+
+  /** Subscription identifier column. */
+  public static final String SUBSCRIPTION_SEQ_COLUMN = "subscription_seq";
+
+  /** Requests column. */
+  public static final String RANGE_COLUMN = "range";
+
+  /** Requests column. */
+  public static final String SUBSCRIBED_COLUMN = "subscribed";
+
   //
   // Maximum lengths of variable text length database columns.
   //
@@ -532,6 +556,9 @@ public class DbManager extends BaseLockssDaemonManager
   /** Length of the system column. */
   public static final int MAX_SYSTEM_COLUMN = 16;
 
+  /** Length of the range column. */
+  public static final int MAX_RANGE_COLUMN = 64;
+
   //
   //Types of metadata items.
   //
@@ -540,6 +567,11 @@ public class DbManager extends BaseLockssDaemonManager
   public static final String MD_ITEM_TYPE_BOOK_SERIES = "book_series";
   public static final String MD_ITEM_TYPE_JOURNAL = "journal";
   public static final String MD_ITEM_TYPE_JOURNAL_ARTICLE = "journal_article";
+
+  /**
+   * The platform name when there is no platform name.
+   */
+  public static final String NO_PLATFORM = "";
 
   // Query to create the table for recording bibliobraphic metadata for an
   // article.
@@ -887,6 +919,44 @@ public class DbManager extends BaseLockssDaemonManager
       + REQUEST_MONTH_COLUMN + " smallint NOT NULL,"
       + PUBLICATION_YEAR_COLUMN + " smallint NOT NULL,"
       + REQUESTS_COLUMN + " integer NOT NULL)";
+
+  // Query to create the table for platforms.
+  private static final String CREATE_PLATFORM_TABLE_QUERY = "create table "
+      + PLATFORM_TABLE + " ("
+      + PLATFORM_SEQ_COLUMN
+      + " bigint primary key generated always as identity,"
+      + PLATFORM_NAME_COLUMN + " varchar(" + MAX_PLATFORM_COLUMN + ") not null"
+      + ")";
+
+  // Query to create the table for subscriptions.
+  private static final String CREATE_SUBSCRIPTION_TABLE_QUERY = "create table "
+      + SUBSCRIPTION_TABLE + " ("
+      + SUBSCRIPTION_SEQ_COLUMN
+      + " bigint primary key generated always as identity,"
+      + PUBLICATION_SEQ_COLUMN + " bigint NOT NULL"
+      + " CONSTRAINT FK_PUBLICATION_SEQ_SUBSCRIPTION"
+      + " REFERENCES " + PUBLICATION_TABLE + " on delete cascade,"
+      + PLATFORM_SEQ_COLUMN + " bigint not null"
+      + " CONSTRAINT FK_PLATFORM_SEQ_SUBSCRIPTION"
+      + " REFERENCES " + PLATFORM_TABLE + " on delete cascade"
+      + ")";
+
+  // Query to create the table for subscription ranges.
+  private static final String CREATE_SUBSCRIPTION_RANGE_TABLE_QUERY = "create table "
+      + SUBSCRIPTION_RANGE_TABLE + " ("
+      + SUBSCRIPTION_SEQ_COLUMN + " bigint NOT NULL"
+      + " CONSTRAINT FK_SUBSCRIPTION_SEQ_COLUMN_SUBSCRIPTION_RANGE"
+      + " REFERENCES " + SUBSCRIPTION_TABLE + " on delete cascade,"
+      + RANGE_COLUMN + " varchar(" + MAX_RANGE_COLUMN + ") not null,"
+      + SUBSCRIBED_COLUMN + " boolean not null"
+      + ")";
+
+  // Query to create the table for unconfigured Archival Units.
+  private static final String CREATE_UNCONFIGURED_AU_TABLE_QUERY = "create table "
+      + UNCONFIGURED_AU_TABLE + " ("
+      + PLUGIN_ID_COLUMN + " varchar(" + MAX_PLUGIN_ID_COLUMN + ") not null,"
+      + AU_KEY_COLUMN + " varchar(" + MAX_AU_KEY_COLUMN + ") not null"
+      + ")";
 
   // The SQL code used to create the necessary version 1 database tables.
   @SuppressWarnings("serial")
@@ -1419,6 +1489,116 @@ public class DbManager extends BaseLockssDaemonManager
 	+ "'org.lockss.util.MetadataUtil.getYearFromDate' "
 	+ "parameter style java no sql", };
 
+  // SQL statements that create the necessary version 3 indices.
+  private static final String[] VERSION_3_INDEX_CREATE_QUERIES = new String[] {
+    "create unique index idx1_" + PLUGIN_TABLE + " on " + PLUGIN_TABLE
+    + "(" + PLUGIN_ID_COLUMN + ")",
+
+    "create index idx1_" + AU_TABLE + " on " + AU_TABLE
+    + "(" + AU_KEY_COLUMN + ")",
+
+    "create index idx1_" + MD_ITEM_TABLE + " on " + MD_ITEM_TABLE
+    + "(" + DATE_COLUMN + ")",
+
+    "create index idx1_" + MD_ITEM_NAME_TABLE + " on " + MD_ITEM_NAME_TABLE
+    + "(" + NAME_COLUMN + ")",
+
+    "create unique index idx1_" + PUBLISHER_TABLE + " on " + PUBLISHER_TABLE
+    + "(" + PUBLISHER_NAME_COLUMN + ")",
+
+    "create index idx1_" + ISSN_TABLE + " on " + ISSN_TABLE
+    + "(" + ISSN_COLUMN + ")",
+
+    "create index idx1_" + ISBN_TABLE + " on " + ISBN_TABLE
+    + "(" + ISBN_COLUMN + ")",
+
+    "create index idx1_" + URL_TABLE + " on " + URL_TABLE
+    + "(" + FEATURE_COLUMN + ")",
+
+    "create index idx2_" + URL_TABLE + " on " + URL_TABLE
+    + "(" + URL_COLUMN + ")",
+
+    "create index idx1_" + BIB_ITEM_TABLE + " on " + BIB_ITEM_TABLE
+    + "(" + VOLUME_COLUMN + ")",
+
+    "create index idx2_" + BIB_ITEM_TABLE + " on " + BIB_ITEM_TABLE
+    + "(" + ISSUE_COLUMN + ")",
+
+    "create index idx3_" + BIB_ITEM_TABLE + " on " + BIB_ITEM_TABLE
+    + "(" + START_PAGE_COLUMN + ")",
+
+    "create index idx1_" + AUTHOR_TABLE + " on " + AUTHOR_TABLE
+    + "(" + AUTHOR_NAME_COLUMN + ")",
+
+    "create unique index idx1_" + PENDING_AU_TABLE + " on " + PENDING_AU_TABLE
+    + "(" + PLUGIN_ID_COLUMN + "," + AU_KEY_COLUMN + ")"
+    };
+
+  // The SQL code used to create the necessary version 4 database tables.
+  @SuppressWarnings("serial")
+  private static final Map<String, String> VERSION_4_TABLE_CREATE_QUERIES =
+    new LinkedHashMap<String, String>() {{
+      put(PLATFORM_TABLE, CREATE_PLATFORM_TABLE_QUERY);
+      put(SUBSCRIPTION_TABLE, CREATE_SUBSCRIPTION_TABLE_QUERY);
+      put(SUBSCRIPTION_RANGE_TABLE, CREATE_SUBSCRIPTION_RANGE_TABLE_QUERY);
+      put(UNCONFIGURED_AU_TABLE, CREATE_UNCONFIGURED_AU_TABLE_QUERY);
+    }};
+
+  // SQL statements that create the necessary version 4 indices.
+  private static final String[] VERSION_4_INDEX_CREATE_QUERIES = new String[] {
+    "create unique index idx1_" + UNCONFIGURED_AU_TABLE
+    + " on " + UNCONFIGURED_AU_TABLE
+    + "(" + PLUGIN_ID_COLUMN + "," + AU_KEY_COLUMN + ")",
+    "create unique index idx1_" + SUBSCRIPTION_RANGE_TABLE
+    + " on " + SUBSCRIPTION_RANGE_TABLE
+    + "(" + SUBSCRIPTION_SEQ_COLUMN + "," + RANGE_COLUMN + ")"
+    };
+
+  // SQL statement that adds the platform reference column to the plugin table.
+  private static final String ADD_PLUGIN_PLATFORM_SEQ_COLUMN = "alter table "
+      + PLUGIN_TABLE
+      + " add column " + PLATFORM_SEQ_COLUMN
+      + " bigint references " + PLATFORM_TABLE + " (" + PLATFORM_SEQ_COLUMN
+      + ") on delete cascade";
+
+  // Query to update the null platforms of plugins.
+  private static final String UPDATE_PLUGIN_NULL_PLATFORM_QUERY = "update "
+      + PLUGIN_TABLE
+      + " set " + PLATFORM_COLUMN + " = ?"
+      + " where " + PLATFORM_COLUMN + " is null";
+  
+  // SQL statement that obtains all the existing platform names in the plugin
+  // table.
+  private static final String GET_VERSION_2_PLATFORMS = "select distinct "
+      + PLATFORM_COLUMN
+      + " from " + PLUGIN_TABLE;
+
+  // Query to add a platform.
+  private static final String INSERT_PLATFORM_QUERY = "insert into "
+      + PLATFORM_TABLE
+      + "(" + PLATFORM_SEQ_COLUMN
+      + "," + PLATFORM_NAME_COLUMN
+      + ") values (default,?)";
+
+  // Query to update the platform reference of a plugin.
+  private static final String UPDATE_PLUGIN_PLATFORM_SEQ_QUERY = "update "
+      + PLUGIN_TABLE
+      + " set " + PLATFORM_SEQ_COLUMN + " = ?"
+      + " where " + PLATFORM_COLUMN + " = ?";
+
+  // SQL statement that removes the obsolete platform column from the plugin
+  // table.
+  private static final String REMOVE_OBSOLETE_PLUGIN_PLATFORM_COLUMN = "alter "
+      + "table " + PLUGIN_TABLE
+      + " drop column " + PLATFORM_COLUMN + " restrict";
+
+  // SQL statement that removes the obsolete platform column from the plugin
+  // table.
+  private static final String SET_PUBLICATION_DATES_TO_NULL = "update "
+      + MD_ITEM_TABLE
+      + " set " + DATE_COLUMN + " = null"
+      + " where " + AU_MD_SEQ_COLUMN + " is null";
+
   // Database metadata keys.
   private static final String COLUMN_NAME = "COLUMN_NAME";
   private static final String COLUMN_SIZE = "COLUMN_SIZE";
@@ -1475,7 +1655,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 2;
+  private int targetDatabaseVersion = 4;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -1820,6 +2000,10 @@ public class DbManager extends BaseLockssDaemonManager
 	setUpDatabaseVersion1(conn);
       } else if (from == 1) {
 	updateDatabaseFrom1To2(conn);
+      } else if (from == 2) {
+	updateDatabaseFrom2To3(conn);
+      } else if (from == 3) {
+	updateDatabaseFrom3To4(conn);
       } else {
 	log.error("Non-existent method to update the database from version "
 	    + from + ".");
@@ -2419,7 +2603,7 @@ public class DbManager extends BaseLockssDaemonManager
       throw new SQLException("DbManager has not been initialized.");
     }
 
-    return getDatabaseVersion(conn);
+    return getDatabaseVersionBeforeReady(conn);
   }
 
   /**
@@ -2808,6 +2992,22 @@ public class DbManager extends BaseLockssDaemonManager
    */
   private static String dropTableQuery(String tableName) {
     return "drop table " + tableName;
+  }
+
+  /**
+   * Provides the version of the database that is the upgrade target of this
+   * daemon.
+   * 
+   * @return an int with the target version of the database.
+   * @throws SQLException
+   *           if this object is not ready.
+   */
+  public int getTargetDatabaseVersion() throws SQLException {
+    if (!ready) {
+      throw new SQLException("DbManager has not been initialized.");
+    }
+
+    return targetDatabaseVersion;
   }
 
   /**
@@ -3434,5 +3634,356 @@ public class DbManager extends BaseLockssDaemonManager
     }
 
     return statement;
+  }
+
+  /**
+   * Updates the database from version 2 to version 3.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws BatchUpdateException
+   *           if a batch update exception occurred.
+   * @throws SQLException
+   *           if any other problem occurred accessing the database.
+   */
+  private void updateDatabaseFrom2To3(Connection conn)
+      throws BatchUpdateException, SQLException {
+    //Create the necessary indices.
+    createVersion3Indices(conn);
+  }
+
+  /**
+   * Creates all the necessary version 3 database indices.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void createVersion3Indices(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "createVersion3Indices(): ";
+
+    // Loop through all the indices.
+    for (String query : VERSION_3_INDEX_CREATE_QUERIES) {
+      log.debug2(DEBUG_HEADER + "Query = " + query);
+      PreparedStatement statement = prepareStatementBeforeReady(conn, query);
+
+      try {
+        executeUpdateBeforeReady(statement);
+      } catch (SQLException sqle) {
+        log.error("Cannot create index", sqle);
+        log.error("SQL = '" + query + "'.");
+        throw sqle;
+      } finally {
+        DbManager.safeCloseStatement(statement);
+      }
+    }
+  }
+
+  /**
+   * Updates the database from version 3 to version 4.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws BatchUpdateException
+   *           if a batch update exception occurred.
+   * @throws SQLException
+   *           if any other problem occurred accessing the database.
+   */
+  private void updateDatabaseFrom3To4(Connection conn)
+      throws BatchUpdateException, SQLException {
+    // Create the necessary tables if they do not exist.
+    createVersion4TablesIfMissing(conn);
+
+    //Create the necessary indices.
+    createVersion4Indices(conn);
+
+    // Migrate the version 3 platforms.
+    addPluginTablePlatformReferenceColumn(conn);
+    populatePlatformTable(conn);
+    removeObsoletePluginTablePlatformColumn(conn);
+
+    // Fix publication dates.
+    setPublicationDatesToNull(conn);
+  }
+
+  /**
+   * Creates all the necessary version 4 database tables if they do not exist.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws BatchUpdateException
+   *           if a batch update exception occurred.
+   * @throws SQLException
+   *           if any other problem occurred accessing the database.
+   */
+  private void createVersion4TablesIfMissing(Connection conn)
+      throws BatchUpdateException, SQLException {
+    final String DEBUG_HEADER = "createVersion4TablesIfMissing(): ";
+
+    // Loop through all the table names.
+    for (String tableName : VERSION_4_TABLE_CREATE_QUERIES.keySet()) {
+      log.debug2(DEBUG_HEADER + "Checking table = " + tableName);
+
+      // Create the table if it does not exist.
+      createTableIfMissingBeforeReady(conn, tableName,
+                                      VERSION_4_TABLE_CREATE_QUERIES
+                                      	.get(tableName));
+    }
+  }
+
+  /**
+   * Creates all the necessary version 4 database indices.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void createVersion4Indices(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "createVersion3Indices(): ";
+
+    // Loop through all the indices.
+    for (String query : VERSION_4_INDEX_CREATE_QUERIES) {
+      log.debug2(DEBUG_HEADER + "Query = " + query);
+      PreparedStatement statement = prepareStatementBeforeReady(conn, query);
+
+      try {
+        executeUpdateBeforeReady(statement);
+      } catch (SQLException sqle) {
+        log.error("Cannot create index", sqle);
+        log.error("SQL = '" + query + "'.");
+        throw sqle;
+      } finally {
+        DbManager.safeCloseStatement(statement);
+      }
+    }
+  }
+
+  /**
+   * Adds the platform reference column to the plugin table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void addPluginTablePlatformReferenceColumn(Connection conn)
+      throws SQLException {
+    final String DEBUG_HEADER = "addPluginTablePlatformReferenceColumn(): ";
+    PreparedStatement statement = prepareStatementBeforeReady(conn,
+	ADD_PLUGIN_PLATFORM_SEQ_COLUMN);
+
+    try {
+      int count = executeUpdateBeforeReady(statement);
+      log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (SQLException sqle) {
+      log.error("Cannot add column", sqle);
+      log.error("SQL = '" + ADD_PLUGIN_PLATFORM_SEQ_COLUMN + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseStatement(statement);
+    }
+  }
+
+  /**
+   * Populates the platform table with the platforms existing in the plugin
+   * table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void populatePlatformTable(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "populatePlatformTable(): ";
+
+    // Update the null platforms in the plugin table.
+    updatePluginNullPlatform(conn);
+
+    // Get all the distinct platforms in the plugin table.
+    PreparedStatement statement =
+	prepareStatementBeforeReady(conn, GET_VERSION_2_PLATFORMS);
+    ResultSet resultSet = null;
+    String platform = null;
+    Long platformSeq = null;
+
+    try {
+      resultSet = executeQueryBeforeReady(statement);
+
+      // Loop through all the distinct platforms in the plugin table.
+      while (resultSet.next()) {
+	// Get the platform.
+  	platform = resultSet.getString(PLATFORM_COLUMN);
+  	log.debug3(DEBUG_HEADER + "platform = " + platform);
+
+        // Add the publishing platform to its own table.
+  	platformSeq = addPlatform(conn, platform);
+  	log.debug3(DEBUG_HEADER + "platformSeq = " + platformSeq);
+
+  	// Update all the plugins using this platform.
+  	updatePluginPlatformReference(conn, platformSeq, platform);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot get platforms", sqle);
+      log.error("SQL = '" + GET_VERSION_2_PLATFORMS + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(statement);
+    }
+  }
+
+  /**
+   * Updates the null platform name in the plugin table during initialization.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void updatePluginNullPlatform(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updatePluginNullPlatform(): ";
+    PreparedStatement statement =
+	prepareStatementBeforeReady(conn, UPDATE_PLUGIN_NULL_PLATFORM_QUERY);
+
+    try {
+      statement.setString(1, NO_PLATFORM);
+      int count = executeUpdateBeforeReady(statement);
+      log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (SQLException sqle) {
+      log.error("Cannot update the platform", sqle);
+      log.error("SQL = '" + UPDATE_PLUGIN_NULL_PLATFORM_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseStatement(statement);
+    }
+  }
+
+  /**
+   * Adds a platform to the database during initialization.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param platformName
+   *          A String with the platform name.
+   * @return a Long with the identifier of the platform just added.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Long addPlatform(Connection conn, String platformName)
+      throws SQLException {
+    final String DEBUG_HEADER = "addPlatform(): ";
+    PreparedStatement statement = prepareStatementBeforeReady(conn,
+	INSERT_PLATFORM_QUERY, Statement.RETURN_GENERATED_KEYS);
+
+    ResultSet resultSet = null;
+    Long platformSeq = null;
+
+    try {
+      // Skip auto-increment key field #0.
+      statement.setString(1, platformName);
+      executeUpdateBeforeReady(statement);
+      resultSet = statement.getGeneratedKeys();
+
+      if (!resultSet.next()) {
+	log.error("Unable to create PLATFORM table row for platformName "
+	    + platformName);
+	return null;
+      }
+
+      platformSeq = resultSet.getLong(1);
+      log.debug3(DEBUG_HEADER + "Added platformSeq = " + platformSeq);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(statement);
+    }
+
+    return platformSeq;
+  }
+
+  /**
+   * Updates the platform reference in the plugin table during initialization.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param platformSeq
+   *          A Long with the identifier of the platform.
+   * @param platformName
+   *          A String with the platform name.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void updatePluginPlatformReference(Connection conn, Long platformSeq,
+      String platformName) throws SQLException {
+    final String DEBUG_HEADER = "updatePluginPlatformReference(): ";
+    PreparedStatement statement =
+	prepareStatementBeforeReady(conn, UPDATE_PLUGIN_PLATFORM_SEQ_QUERY);
+
+    try {
+      statement.setLong(1, platformSeq);
+      statement.setString(2, platformName);
+      int count = executeUpdateBeforeReady(statement);
+      log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (SQLException sqle) {
+      log.error("Cannot update the platform", sqle);
+      log.error("platformSeq = " + platformSeq);
+      log.error("platformName = '" + platformName + "'.");
+      log.error("SQL = '" + UPDATE_PLUGIN_PLATFORM_SEQ_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseStatement(statement);
+    }
+  }
+
+  /**
+   * Removes the obsolete platform column from the plugin table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void removeObsoletePluginTablePlatformColumn(Connection conn)
+      throws SQLException {
+    final String DEBUG_HEADER = "removObsoletePluginTablePlatformColumn(): ";
+    PreparedStatement statement = prepareStatementBeforeReady(conn,
+	REMOVE_OBSOLETE_PLUGIN_PLATFORM_COLUMN);
+
+    try {
+      int count = executeUpdateBeforeReady(statement);
+      log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (SQLException sqle) {
+      log.error("Cannot remove platform column", sqle);
+      log.error("SQL = '" + REMOVE_OBSOLETE_PLUGIN_PLATFORM_COLUMN + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseStatement(statement);
+    }
+  }
+
+  /**
+   * Nulls out the date column for publications, populated in earlier versions by mistake.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void setPublicationDatesToNull(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "setPublicationDatesToNull(): ";
+    PreparedStatement statement =
+	prepareStatementBeforeReady(conn, SET_PUBLICATION_DATES_TO_NULL);
+
+    try {
+      int count = executeUpdateBeforeReady(statement);
+      log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (SQLException sqle) {
+      log.error("Cannot null out publication dates", sqle);
+      log.error("SQL = '" + SET_PUBLICATION_DATES_TO_NULL + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseStatement(statement);
+    }
   }
 }
