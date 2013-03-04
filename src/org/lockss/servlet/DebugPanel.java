@@ -1,10 +1,10 @@
 /*
- * $Id: DebugPanel.java,v 1.35 2013-01-05 20:10:18 pgust Exp $
+ * $Id: DebugPanel.java,v 1.36 2013-03-04 19:35:50 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,9 @@ package org.lockss.servlet;
 
 import javax.servlet.*;
 import java.io.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import org.mortbay.html.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -42,6 +45,7 @@ import org.lockss.poller.*;
 import org.lockss.crawler.*;
 import org.lockss.state.*;
 import org.lockss.config.*;
+import org.lockss.db.DbManager;
 import org.lockss.remote.*;
 import org.lockss.plugin.*;
 import org.lockss.account.*;
@@ -101,6 +105,7 @@ public class DebugPanel extends LockssServlet {
   private PollManager pollManager;
   private CrawlManager crawlMgr;
   private ConfigManager cfgMgr;
+  private DbManager dbMgr;
   private MetadataManager metadataMgr;
   private RemoteApi rmtApi;
 
@@ -135,6 +140,7 @@ public class DebugPanel extends LockssServlet {
     cfgMgr = daemon.getConfigManager();
     rmtApi = daemon.getRemoteApi();
     try {
+      dbMgr = daemon.getDbManager();
       metadataMgr = daemon.getMetadataManager();
     } catch (IllegalArgumentException ex) {}
   }
@@ -358,12 +364,28 @@ public class DebugPanel extends LockssServlet {
 	// fall through
       }
     }
-    
+
     // fully reindex metadata
-    if (metadataMgr.addAuToReindex(au, false, true)) {
-      statusMsg = "Reindexing metadata for " + au.getName();
-      return true;
+    Connection conn = null;
+    PreparedStatement insertPendingAuBatchStatement = null;
+
+    try {
+      conn = dbMgr.getConnection();
+      insertPendingAuBatchStatement =
+	  metadataMgr.getInsertPendingAuBatchStatement(conn);
+
+      if (metadataMgr.enableAndAddAuToReindex(au, conn,
+	  insertPendingAuBatchStatement, false, true)) {
+	statusMsg = "Reindexing metadata for " + au.getName();
+	return true;
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot reindex metadata for " + au.getName(), sqle);
+    } finally {
+      DbManager.safeCloseStatement(insertPendingAuBatchStatement);
+      DbManager.safeRollbackAndClose(conn);
     }
+
     if (force) {
       errMsg = "Still annot reindex metadata for " + au.getName();
     } else {
