@@ -32,10 +32,10 @@
     param[journal_id] = eden
     comment[notReady] = needs URL normalizer RoundUp 3990
      
-    au < notReady ; 2004 ; Edentata Volume 6 ; 6 >
-    au < notReady ; 2006 ; Edentata Volume 7 ; 7 >
-    au < notReady ; 2009 ; Edentata Volume 8, 9, 10 ; 10 >
-    au < notReady ; 2010 ; Edentata Volume 11 ; 11 >
+    au < testing ; 2004 ; Edentata Volume 6 ; 6 >
+    au < testing ; 2006 ; Edentata Volume 7 ; 7 >
+    au < testing ; 2009 ; Edentata Volume 8, 9, 10 ; 10 >
+    au < testing ; 2010 ; Edentata Volume 11 ; 11 >
 
   }
   
@@ -48,13 +48,13 @@
     
     param[journal_id] = nepr
   
-    au < wanted ; 2004 ; Neotropical Primates Volume 12 ; 12 >
-    au < wanted ; 2005 ; Neotropical Primates Volume 13 ; 13 >
-    au < wanted ; 2007 ; Neotropical Primates Volume 14 ; 14 >
+    au < testing ; 2004 ; Neotropical Primates Volume 12 ; 12 >
+    au < testing ; 2005 ; Neotropical Primates Volume 13 ; 13 >
+    au < testing ; 2007 ; Neotropical Primates Volume 14 ; 14 >
     au < ready ; 2008 ; Neotropical Primates Volume 15 ; 15 >
     au < ready ; 2009 ; Neotropical Primates Volume 16 ; 16 >
     au < ready ; 2010 ; Neotropical Primates Volume 17 ; 17 >
-    au < wanted ; 2011 ; Neotropical Primates Volume 18 ; 18 >
+    au < testing ; 2011 ; Neotropical Primates Volume 18 ; 18 >
 
   }
   
@@ -68,8 +68,8 @@
     param[journal_id] = prco
     comment[notReady] = needs URL normalizer RoundUp 3990
   
-    au < notReady ; 2006 ; Primate Conservation Volume 20 ; 20 >
-    au < notReady ; 2006 ; Primate Conservation Volume 21 ; 21 >
+    au < testing ; 2006 ; Primate Conservation Volume 20 ; 20 >
+    au < testing ; 2006 ; Primate Conservation Volume 21 ; 21 >
     au < ready ; 2007 ; Primate Conservation Volume 22 ; 22 >
     au < ready ; 2008 ; Primate Conservation Volume 23 ; 23 >
     au < ready ; 2009 ; Primate Conservation Volume 24 ; 24 >
