@@ -470,7 +470,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Agile Systems and Management Volume 3 ; 3 >
       au < released ; crawling ; 2009-2011 ; International Journal of Agile Systems and Management Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Agile Systems and Management Volume 5 ; 5 >
-      au < expected ; exists ; 2013 ; International Journal of Agile Systems and Management Volue 6 ; 6 >
+      au < manifest ; exists ; 2013 ; International Journal of Agile Systems and Management Volue 6 ; 6 >
 
     }
 
@@ -686,7 +686,7 @@
 
       param[journal_issn] = 1757-8760
       
-      au < exists ; exists ; 2012 ; International Journal of Auditing Technology Volume 1 ; 1 >
+      au < manifest ; exists ; 2012 ; International Journal of Auditing Technology Volume 1 ; 1 >
 
     }
 
@@ -1509,7 +1509,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Computational Biology and Drug Design Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Computational Biology and Drug Design Volume 4 ; 4 >
       au < zapped ; down ; 2012 ; International Journal of Computational Biology and Drug Design Volume 5 ; 5 >
-      au < expected ; exists ; 2013 ; International Journal of Computational Biology and Drug Design Volume 6 ; 6 >
+      au < manifest ; exists ; 2013 ; International Journal of Computational Biology and Drug Design Volume 6 ; 6 >
 
     }
 
