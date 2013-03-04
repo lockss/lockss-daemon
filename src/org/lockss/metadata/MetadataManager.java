@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataManager.java,v 1.11 2013-01-16 08:07:28 tlipkis Exp $
+ * $Id: MetadataManager.java,v 1.12 2013-03-04 19:18:59 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -61,6 +61,7 @@ import org.lockss.plugin.Plugin;
 import org.lockss.plugin.Plugin.Feature;
 import org.lockss.plugin.PluginManager;
 import org.lockss.scheduler.Schedule;
+import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TimeBase;
@@ -151,8 +152,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     PREFIX + "indexPriorityAuidMap";
   static final List<String> DEFAULT_INDEX_PRIORITY_AUID_MAP = null;
 
-  static final int MIN_INDEX_PRIORITY = -10000;
-  static final int ABORT_INDEX_PRIORITY = -20000;
+  private static final int BROKEN_INDEX_PRIORITY = -1000;
+  private static final int MIN_INDEX_PRIORITY = -10000;
+  private static final int ABORT_INDEX_PRIORITY = -20000;
 
   /** Maximum number of AUs to be re-indexed to batch before writing them to the
    * database. */
@@ -217,7 +219,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + PLUGIN_TABLE
       + "(" + PLUGIN_SEQ_COLUMN
       + "," + PLUGIN_ID_COLUMN
-      + "," + PLATFORM_COLUMN
+      + "," + PLATFORM_SEQ_COLUMN
       + ") values (default,?,?)";
 
   // Query to find an Archival Unit by its plugin and key.
@@ -379,30 +381,36 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private static final String COUNT_BIB_ITEM_QUERY = "select count(*) from "
       + BIB_ITEM_TABLE;
 
-  // Query to delete metadata items by Archival Unit key and plugin identifier.
-  private static final String DELETE_MD_ITEM_QUERY = "delete from "
-      + MD_ITEM_TABLE
-      + " where "
-      + AU_MD_SEQ_COLUMN + " in ("
-      + "select m." + AU_MD_SEQ_COLUMN
+  // Query to get the identifier of the metadata of an AU in the database.
+  private static final String FIND_AU_MD_BY_AU_ID_QUERY = "select m."
+      + AU_MD_SEQ_COLUMN
       + " from " + AU_MD_TABLE + " m,"
       + AU_TABLE + " a,"
       + PLUGIN_TABLE + " p"
       + " where m." + AU_SEQ_COLUMN + " = " + "a." + AU_SEQ_COLUMN
       + " and a." + PLUGIN_SEQ_COLUMN + " = " + "p." + PLUGIN_SEQ_COLUMN
       + " and p." + PLUGIN_ID_COLUMN + " = ?"
-      + " and a." + AU_KEY_COLUMN + " = ?)";
+      + " and a." + AU_KEY_COLUMN + " = ?";
+
+  // Query to delete metadata items by Archival Unit key and plugin identifier.
+  private static final String DELETE_MD_ITEM_QUERY = "delete from "
+      + MD_ITEM_TABLE
+      + " where "
+      + AU_MD_SEQ_COLUMN + " = ?";
+
+  // Query to get the identifier of an AU in the database.
+  private static final String FIND_AU_BY_AU_ID_QUERY = "select a."
+      + AU_SEQ_COLUMN
+      + " from " + AU_TABLE + " a,"
+      + PLUGIN_TABLE + " p"
+      + " where a." + PLUGIN_SEQ_COLUMN + " = " + "p." + PLUGIN_SEQ_COLUMN
+      + " and p." + PLUGIN_ID_COLUMN + " = ?"
+      + " and a." + AU_KEY_COLUMN + " = ?";
 
   // Query to delete an AU by Archival Unit key and plugin identifier.
   private static final String DELETE_AU_QUERY = "delete from " + AU_TABLE
       + " where "
-      + PLUGIN_SEQ_COLUMN + " in ("
-      + "select a." + PLUGIN_SEQ_COLUMN
-      + " from " + AU_TABLE + " a,"
-      + PLUGIN_TABLE + " p"
-      + " where a." + PLUGIN_SEQ_COLUMN + " = " + "p." + PLUGIN_SEQ_COLUMN
-      + " and p." + PLUGIN_ID_COLUMN + " = ?)"
-      + " and " + AU_KEY_COLUMN + " = ?";
+      + AU_SEQ_COLUMN + " = ?";
 
   // Query to add a metadata item URL.
   private static final String INSERT_URL_QUERY = "insert into "
@@ -422,15 +430,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   // Query to count enabled pending AUs.
   private static final String COUNT_ENABLED_PENDING_AUS_QUERY = "select "
       + "count(*) from " + PENDING_AU_TABLE
-      + " where " + PRIORITY_COLUMN + " > " + MIN_INDEX_PRIORITY;
+      + " where " + PRIORITY_COLUMN + " >= 0";
   
   // Query to find enabled pending AUs sorted by priority.
-  private static final String FIND_PRIORITIZED_PENDING_AUS_QUERY = "select "
+  private static final String FIND_PRIORITIZED_ENABLED_PENDING_AUS_QUERY =
+      "select "
       + PLUGIN_ID_COLUMN
       + "," + AU_KEY_COLUMN
       + "," + PRIORITY_COLUMN
       + " from " + PENDING_AU_TABLE
-      + " where " + PRIORITY_COLUMN + " > " + MIN_INDEX_PRIORITY
+      + " where " + PRIORITY_COLUMN + " >= 0"
       + " order by " + PRIORITY_COLUMN;
   
   // Query to find a pending AU by its key and plugin identifier.
@@ -439,8 +448,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "," + AU_KEY_COLUMN
       + " from " + PENDING_AU_TABLE
       + " where " + PLUGIN_ID_COLUMN + " = ?"
-      + " and " + AU_KEY_COLUMN + " = ?"
-      ;
+      + " and " + AU_KEY_COLUMN + " = ?";
 
   // Query to add an enabled pending AU at the bottom of the current priority
   // list.
@@ -452,7 +460,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + ") values (?,?,"
       + "(select coalesce(max(" + PRIORITY_COLUMN + "), 0) + 1"
       + " from " + PENDING_AU_TABLE
-      + " where " + PRIORITY_COLUMN + " > " + MIN_INDEX_PRIORITY + "))";
+      + " where " + PRIORITY_COLUMN + " >= 0))";
 
   // Query to add a disabled pending AU.
   private static final String INSERT_DISABLED_PENDING_AU_QUERY = "insert into "
@@ -461,6 +469,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "," + AU_KEY_COLUMN
       + "," + PRIORITY_COLUMN
       + ") values (?,?," + MIN_INDEX_PRIORITY + ")";
+
+  // Query to add a pending AU with broken indexing.
+  private static final String INSERT_BROKEN_PENDING_AU_QUERY = "insert into "
+      + PENDING_AU_TABLE
+      + "(" + PLUGIN_ID_COLUMN
+      + "," + AU_KEY_COLUMN
+      + "," + PRIORITY_COLUMN
+      + ") values (?,?," + BROKEN_INDEX_PRIORITY + ")";
 
   // Query to delete a pending AU by its key and plugin identifier.
   private static final String DELETE_PENDING_AU_QUERY = "delete from "
@@ -473,7 +489,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + PENDING_AU_TABLE
       + " where " + PLUGIN_ID_COLUMN + " = ?"
       + " and " + AU_KEY_COLUMN + " = ?"
-      + " and " + PRIORITY_COLUMN + " <= " + MIN_INDEX_PRIORITY;
+      + " and " + PRIORITY_COLUMN + " < 0";
 
   // Query to get the version of the metadata of an AU as is recorded in the
   // database.
@@ -503,6 +519,19 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + " and a." + PLUGIN_SEQ_COLUMN + " = " + " p." + PLUGIN_SEQ_COLUMN
       + " and p." + PLUGIN_ID_COLUMN + " = ?"
       + " and a." + AU_KEY_COLUMN + " = ?";
+
+  // Query to find a platform by its name.
+  private static final String FIND_PLATFORM_QUERY = "select "
+      + PLATFORM_SEQ_COLUMN
+      + " from " + PLATFORM_TABLE
+      + " where " + PLATFORM_NAME_COLUMN + " = ?";
+
+  // Query to add a platform.
+  private static final String INSERT_PLATFORM_QUERY = "insert into "
+      + PLATFORM_TABLE
+      + "(" + PLATFORM_SEQ_COLUMN
+      + "," + PLATFORM_NAME_COLUMN
+      + ") values (default,?)";
 
   /**
    * Map of running reindexing tasks keyed by their AuIds
@@ -567,8 +596,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   private int pendingAuBatchCurrentSize = 0;
 
-  private Connection pendingAusBatchConnection = null;
-  private PreparedStatement insertPendingAuBatchStatement = null;
+  //private Connection pendingAusBatchConnection = null;
+  //private PreparedStatement insertPendingAuBatchStatement = null;
 
   /** enumeration status for reindexing tasks */
   public enum ReindexingStatus {
@@ -1023,10 +1052,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (pluginMgr != null) {
       PreparedStatement selectPendingAus = null;
       ResultSet results = null;
+      String sql = FIND_PRIORITIZED_ENABLED_PENDING_AUS_QUERY;
+      log.debug3("SQL = '" + sql + "'.");
 
       try {
-	selectPendingAus = dbManager.prepareStatement(conn,
-	    FIND_PRIORITIZED_PENDING_AUS_QUERY);
+	selectPendingAus = dbManager.prepareStatement(conn, sql);
         results = dbManager.executeQuery(selectPendingAus);
 
         while ((auIds.size() < maxAuIds) && results.next()) {
@@ -1048,7 +1078,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	}
       } catch (SQLException sqle) {
 	log.error("Cannot identify the enabled pending AUs", sqle);
-	log.error("SQL = '" + FIND_PRIORITIZED_PENDING_AUS_QUERY + "'.");
+	log.error("SQL = '" + sql + "'.");
       } finally {
         DbManager.safeCloseResultSet(results);
         DbManager.safeCloseStatement(selectPendingAus);
@@ -1188,6 +1218,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	new LockssRunnable(AuUtil.getThreadNameFor("Reindexing",
 	                                           task.getAu())) {
 	  public void lockssRun() {
+	    // TODO
+	    long interval = Constants.MINUTE;
+	    startWDog(interval);
+	    task.setWdog(this);
+
 	    task.handleEvent(Schedule.EventType.START);
 
 	    while (!task.isFinished()) {
@@ -1195,6 +1230,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	    }
 
 	    task.handleEvent(Schedule.EventType.FINISH);
+	    stopWDog();
 	  }
 	};
 
@@ -1242,31 +1278,81 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   int removeAuMetadataItems(Connection conn, String auId) throws SQLException {
     final String DEBUG_HEADER = "removeAuMetadataItems(): ";
     log.debug3(DEBUG_HEADER + "auid = " + auId);
-    log.debug3(DEBUG_HEADER + "SQL = '" + DELETE_MD_ITEM_QUERY + "'.");
-    int count = -1;
-    PreparedStatement deletePendingAu =
-	dbManager.prepareStatement(conn, DELETE_MD_ITEM_QUERY);
+    int count = 0;
 
-    try {
-      String pluginId = PluginManager.pluginIdFromAuId(auId);
-      log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
-      String auKey = PluginManager.auKeyFromAuId(auId);
-      log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+    Long auMdSeq = findAuMdByAuId(conn, auId);
+    log.debug3(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
 
-      deletePendingAu.setString(1, pluginId);
-      deletePendingAu.setString(2, auKey);
-      count = dbManager.executeUpdate(deletePendingAu);
-    } catch (SQLException sqle) {
-      log.error("Cannot delete AU metadata items", sqle);
-      log.error("auid = " + auId);
-      log.error("SQL = '" + DELETE_MD_ITEM_QUERY + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseStatement(deletePendingAu);
+    if (auMdSeq != null) {
+      log.debug3(DEBUG_HEADER + "SQL = '" + DELETE_MD_ITEM_QUERY + "'.");
+      PreparedStatement deleteMetadataItems = dbManager.prepareStatement(conn,
+	  DELETE_MD_ITEM_QUERY);
+
+      try {
+	deleteMetadataItems.setLong(1, auMdSeq);
+	count = dbManager.executeUpdate(deleteMetadataItems);
+      } catch (SQLException sqle) {
+	log.error("Cannot delete AU metadata items", sqle);
+	log.error("auid = " + auId);
+	log.error("SQL = '" + DELETE_MD_ITEM_QUERY + "'.");
+	throw sqle;
+      } finally {
+	DbManager.safeCloseStatement(deleteMetadataItems);
+      }
     }
 
     log.debug3(DEBUG_HEADER + "count = " + count);
     return count;
+  }
+
+  /**
+   * Provides the identifier of an Archival Unit metadata.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the AU identifier.
+   * @return a Long with the identifier of the Archival Unit metadata.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findAuMdByAuId(Connection conn, String auId)
+      throws SQLException {
+    final String DEBUG_HEADER = "findAuMdByAuId(): ";
+    log.debug3(DEBUG_HEADER + "auid = " + auId);
+
+    Long auMdSeq = null;
+    log.debug3(DEBUG_HEADER + "SQL = '" + FIND_AU_MD_BY_AU_ID_QUERY + "'.");
+    PreparedStatement findAuMd =
+	dbManager.prepareStatement(conn, FIND_AU_MD_BY_AU_ID_QUERY);
+    ResultSet resultSet = null;
+
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      log.debug2(DEBUG_HEADER + "pluginId() = " + pluginId);
+
+      String auKey = PluginManager.auKeyFromAuId(auId);
+      log.debug2(DEBUG_HEADER + "auKey = " + auKey);
+
+      findAuMd.setString(1, pluginId);
+      findAuMd.setString(2, auKey);
+      resultSet = dbManager.executeQuery(findAuMd);
+
+      if (resultSet.next()) {
+	auMdSeq = resultSet.getLong(AU_MD_SEQ_COLUMN);
+	log.debug2(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find AU metadata identifier", sqle);
+      log.error("auid = " + auId);
+      log.error("SQL = '" + FIND_AU_MD_BY_AU_ID_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findAuMd);
+    }
+
+    return auMdSeq;
   }
 
   /**
@@ -1283,31 +1369,80 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   int removeAu(Connection conn, String auId) throws SQLException {
     final String DEBUG_HEADER = "removeAu(): ";
     log.debug3(DEBUG_HEADER + "auid = " + auId);
-    log.debug3(DEBUG_HEADER + "SQL = '" + DELETE_AU_QUERY + "'.");
-    int count = -1;
-    PreparedStatement deleteAu =
-	dbManager.prepareStatement(conn, DELETE_AU_QUERY);
+    int count = 0;
 
-    try {
-      String pluginId = PluginManager.pluginIdFromAuId(auId);
-      log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
-      String auKey = PluginManager.auKeyFromAuId(auId);
-      log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+    Long auSeq = findAuByAuId(conn, auId);
+    log.debug3(DEBUG_HEADER + "auSeq = " + auSeq);
 
-      deleteAu.setString(1, pluginId);
-      deleteAu.setString(2, auKey);
-      count = dbManager.executeUpdate(deleteAu);
-    } catch (SQLException sqle) {
-      log.error("Cannot delete AU", sqle);
-      log.error("auid = " + auId);
-      log.error("SQL = '" + DELETE_AU_QUERY + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseStatement(deleteAu);
+    if (auSeq != null) {
+      log.debug3(DEBUG_HEADER + "SQL = '" + DELETE_AU_QUERY + "'.");
+      PreparedStatement deleteAu =
+	  dbManager.prepareStatement(conn, DELETE_AU_QUERY);
+
+      try {
+	deleteAu.setLong(1, auSeq);
+	count = dbManager.executeUpdate(deleteAu);
+      } catch (SQLException sqle) {
+	log.error("Cannot delete AU", sqle);
+	log.error("auid = " + auId);
+	log.error("SQL = '" + DELETE_AU_QUERY + "'.");
+	throw sqle;
+      } finally {
+	DbManager.safeCloseStatement(deleteAu);
+      }
     }
 
     log.debug3(DEBUG_HEADER + "count = " + count);
     return count;
+  }
+
+  /**
+   * Provides the identifier of an Archival Unit.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the AU identifier.
+   * @return a Long with the identifier of the Archival Unit.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findAuByAuId(Connection conn, String auId) throws SQLException {
+    final String DEBUG_HEADER = "findAuByAuId(): ";
+    log.debug3(DEBUG_HEADER + "auid = " + auId);
+
+    Long auSeq = null;
+    log.debug3(DEBUG_HEADER + "SQL = '" + FIND_AU_BY_AU_ID_QUERY + "'.");
+    PreparedStatement findAu =
+	dbManager.prepareStatement(conn, FIND_AU_BY_AU_ID_QUERY);
+    ResultSet resultSet = null;
+
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      log.debug2(DEBUG_HEADER + "pluginId() = " + pluginId);
+
+      String auKey = PluginManager.auKeyFromAuId(auId);
+      log.debug2(DEBUG_HEADER + "auKey = " + auKey);
+
+      findAu.setString(1, pluginId);
+      findAu.setString(2, auKey);
+      resultSet = dbManager.executeQuery(findAu);
+
+      if (resultSet.next()) {
+	auSeq = resultSet.getLong(AU_SEQ_COLUMN);
+	log.debug2(DEBUG_HEADER + "auSeq = " + auSeq);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find AU identifier", sqle);
+      log.error("auid = " + auId);
+      log.error("SQL = '" + FIND_AU_BY_AU_ID_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findAu);
+    }
+
+    return auSeq;
   }
 
   /**
@@ -1349,7 +1484,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private boolean isEligibleForReindexing(String auId) {
     return indexPriorityAuidMap == null
-      || indexPriorityAuidMap.getMatch(auId, 0) > MIN_INDEX_PRIORITY;
+      || indexPriorityAuidMap.getMatch(auId, 0) >= 0;
   }
 
   /**
@@ -1425,14 +1560,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param pluginId
    *          A String with the plugin identifier.
-   * @param platform
-   *          A String with the publishing platform.
+   * @param platformSeq
+   *          A Long with the publishing platform identifier.
    * @return a Long with the identifier of the plugin.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
   public Long findOrCreatePlugin(Connection conn, String pluginId,
-      String platform) throws SQLException {
+      Long platformSeq) throws SQLException {
     final String DEBUG_HEADER = "findOrCreatePlugin(): ";
     log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
     Long pluginSeq = findPlugin(conn, pluginId);
@@ -1441,7 +1576,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // Check whether it is a new plugin.
     if (pluginSeq == null) {
       // Yes: Add to the database the new plugin.
-      pluginSeq = addPlugin(conn, pluginId, platform);
+      pluginSeq = addPlugin(conn, pluginId, platformSeq);
       log.debug3(DEBUG_HEADER + "new pluginSeq = " + pluginSeq);
     }
 
@@ -1491,14 +1626,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param pluginId
    *          A String with the plugin identifier.
-   * @param platform
-   *          A String with the publishing platform.
+   * @param platformSeq
+   *          A Long with the publishing platform identifier.
    * @return a Long with the identifier of the plugin just added.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
   private Long addPlugin(Connection conn, String pluginId,
-      String platform) throws SQLException {
+      Long platformSeq) throws SQLException {
     final String DEBUG_HEADER = "addPlugin(): ";
     Long pluginSeq = null;
     ResultSet resultSet = null;
@@ -1508,7 +1643,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     try {
       // skip auto-increment key field #0
       insertPlugin.setString(1, pluginId);
-      insertPlugin.setString(2, platform);
+
+      if (platformSeq != null) {
+	insertPlugin.setLong(2, platformSeq);
+      } else {
+	insertPlugin.setNull(2, BIGINT);
+      }
+
       dbManager.executeUpdate(insertPlugin);
       resultSet = insertPlugin.getGeneratedKeys();
 
@@ -1791,7 +1932,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private Long findPublisher(Connection conn, String publisher)
+  public Long findPublisher(Connection conn, String publisher)
       throws SQLException {
     final String DEBUG_HEADER = "findPublisher(): ";
     Long publisherSeq = null;
@@ -1874,8 +2015,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A Long with the publisher identifier.
    * @param name
    *          A String with the name of the publication.
-   * @param date
-   *          A String with the publication date of the publication.
    * @param proprietaryId
    *          A String with the proprietary identifier of the publication.
    * @param volume
@@ -1886,7 +2025,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public Long findOrCreatePublication(Connection conn, String pIssn,
       String eIssn, String pIsbn, String eIsbn, Long publisherSeq, String name,
-      String date, String proprietaryId, String volume) throws SQLException {
+      String proprietaryId, String volume) throws SQLException {
     final String DEBUG_HEADER = "findOrCreatePublication(): ";
     Long publicationSeq = null;
 
@@ -1903,23 +2042,19 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (isBookSeries(pIssn, eIssn, pIsbn, eIsbn, volume)) {
       // Yes: Find or create the book series.
       log.debug3(DEBUG_HEADER + "is book series.");
-      publicationSeq =
-	  findOrCreateBookInBookSeries(conn, pIssn, eIssn, pIsbn, eIsbn,
-	                                publisherSeq, name, date, proprietaryId,
-	                                volume);
+      publicationSeq = findOrCreateBookInBookSeries(conn, pIssn, eIssn, pIsbn,
+	  eIsbn, publisherSeq, name, proprietaryId, volume);
       // No: Check whether it is a book.
     } else if (isBook(pIsbn, eIsbn)) {
       // Yes: Find or create the book.
       log.debug3(DEBUG_HEADER + "is book.");
-      publicationSeq =
-	  findOrCreateBook(conn, pIsbn, eIsbn, publisherSeq, title, null, date,
-	                   proprietaryId);
+      publicationSeq = findOrCreateBook(conn, pIsbn, eIsbn, publisherSeq,
+	  title, null, proprietaryId);
     } else {
       // No, it is a journal article: Find or create the journal.
       log.debug3(DEBUG_HEADER + "is journal.");
-      publicationSeq =
-	  findOrCreateJournal(conn, pIssn, eIssn, publisherSeq, title, date,
-	                      proprietaryId);
+      publicationSeq = findOrCreateJournal(conn, pIssn, eIssn, publisherSeq,
+	  title, proprietaryId);
     }
 
     return publicationSeq;
@@ -1944,7 +2079,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private boolean isBookSeries(String pIssn, String eIssn, String pIsbn,
       String eIsbn, String volume) {
-    final String DEBUG_HEADER = "isBook(): ";
+    final String DEBUG_HEADER = "isBookSeries(): ";
 
     // If the metadata contains both ISBN and ISSN values, it is a book that is
     // part of a book series.
@@ -1957,6 +2092,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // Handle book series with no ISSNs.
     if (!isBookSeries && isBook(pIsbn, eIsbn)) {
       isBookSeries = !StringUtil.isNullString(volume);
+      log.debug3(DEBUG_HEADER + "isBookSeries = " + isBookSeries);
     }
 
     return isBookSeries;
@@ -1980,8 +2116,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A Long with the publisher identifier.
    * @param title
    *          A String with the name of the book series.
-   * @param date
-   *          A String with the publication date of the book series.
    * @param proprietaryId
    *          A String with the proprietary identifier of the book series.
    * @param volume
@@ -1992,7 +2126,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private Long findOrCreateBookInBookSeries(Connection conn, String pIssn,
       String eIssn, String pIsbn, String eIsbn, Long publisherSeq, String title,
-      String date, String proprietaryId, String volume) throws SQLException {
+      String proprietaryId, String volume) throws SQLException {
     final String DEBUG_HEADER = "findOrCreateBookInBookSeries(): ";
     Long bookSeq = null;
     Long bookSeriesSeq = null;
@@ -2011,9 +2145,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // Check whether it is a new book series.
     if (bookSeriesSeq == null) {
       // Yes: Add to the database the new book series.
-      bookSeriesSeq =
-	  addPublication(conn, null, MD_ITEM_TYPE_BOOK_SERIES, date, title,
-	                 proprietaryId, publisherSeq);
+      bookSeriesSeq = addPublication(conn, null, MD_ITEM_TYPE_BOOK_SERIES,
+	  title, proprietaryId, publisherSeq);
       log.debug3(DEBUG_HEADER + "new bookSeriesSeq = " + bookSeriesSeq);
 
       // Skip it if the new book series could not be added.
@@ -2032,9 +2165,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.debug3(DEBUG_HEADER + "added title ISSNs.");
 
       // Add to the database the new book.
-      bookSeq =
-	  addPublication(conn, bookSeriesSeq, MD_ITEM_TYPE_BOOK, date,
-	                 bookTitle, proprietaryId, publisherSeq);
+      bookSeq = addPublication(conn, bookSeriesSeq, MD_ITEM_TYPE_BOOK,
+	  bookTitle, proprietaryId, publisherSeq);
       log.debug3(DEBUG_HEADER + "new bookSeq = " + bookSeq);
 
       // Skip it if the new book could not be added.
@@ -2068,7 +2200,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // Find or create the book.
       bookSeq =
 	  findOrCreateBook(conn, pIsbn, eIsbn, publisherSeq, bookTitle,
-			   bookSeriesSeq, date, proprietaryId);
+			   bookSeriesSeq, proprietaryId);
     }
 
     return bookSeq;
@@ -2110,19 +2242,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the name of the book.
    * @param parentSeq
    *          A Long with the publication parent publication identifier.
-   * @param date
-   *          A String with the publication date of the book.
    * @param proprietaryId
    *          A String with the proprietary identifier of the book.
-   * @param volume
-   *          A String with the bibliographic volume.
    * @return a Long with the identifier of the book.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
   private Long findOrCreateBook(Connection conn, String pIsbn, String eIsbn,
-      Long publisherSeq, String title, Long parentSeq, String date,
-      String proprietaryId) throws SQLException {
+      Long publisherSeq, String title, Long parentSeq, String proprietaryId)
+      throws SQLException {
     final String DEBUG_HEADER = "findOrCreateBook(): ";
     Long publicationSeq = null;
     Long mdItemSeq = null;
@@ -2136,9 +2264,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // Check whether it is a new book.
     if (publicationSeq == null) {
       // Yes: Add to the database the new book.
-      publicationSeq =
-	  addPublication(conn, parentSeq, MD_ITEM_TYPE_BOOK, date, title,
-			 proprietaryId, publisherSeq);
+      publicationSeq = addPublication(conn, parentSeq, MD_ITEM_TYPE_BOOK,
+	  title, proprietaryId, publisherSeq);
       log.debug3(DEBUG_HEADER + "new publicationSeq = " + publicationSeq);
 
       // Skip it if the new book could not be added.
@@ -2187,17 +2314,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A Long with the publisher identifier.
    * @param title
    *          A String with the name of the journal.
-   * @param date
-   *          A String with the publication date of the journal.
    * @param proprietaryId
    *          A String with the proprietary identifier of the journal.
    * @return a Long with the identifier of the journal.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private Long findOrCreateJournal(Connection conn, String pIssn,
-      String eIssn, Long publisherSeq, String title, String date,
-      String proprietaryId) throws SQLException {
+  private Long findOrCreateJournal(Connection conn, String pIssn, String eIssn,
+      Long publisherSeq, String title, String proprietaryId)
+      throws SQLException {
     final String DEBUG_HEADER = "findOrCreateJournal(): ";
     Long publicationSeq = null;
     Long mdItemSeq = null;
@@ -2220,9 +2345,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // Check whether it is a new journal.
     if (publicationSeq == null) {
       // Yes: Add to the database the new journal.
-      publicationSeq =
-	  addPublication(conn, parentSeq, MD_ITEM_TYPE_JOURNAL, date, title,
-			 proprietaryId, publisherSeq);
+      publicationSeq = addPublication(conn, parentSeq, MD_ITEM_TYPE_JOURNAL,
+	  title, proprietaryId, publisherSeq);
       log.debug3(DEBUG_HEADER + "new publicationSeq = " + publicationSeq);
 
       // Skip it if the new journal could not be added.
@@ -2334,8 +2458,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A Long with the publication parent publication identifier.
    * @param mdItemType
    *          A String with the type of publication.
-   * @param date
-   *          A String with the publication date of the publication.
    * @param title
    *          A String with the title of the publication.
    * @param proprietaryId
@@ -2347,8 +2469,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *           if any problem occurred accessing the database.
    */
   private Long addPublication(Connection conn, Long parentSeq,
-      String mdItemType, String date, String title, String proprietaryId,
-      Long publisherSeq) throws SQLException {
+      String mdItemType, String title, String proprietaryId, Long publisherSeq)
+      throws SQLException {
     final String DEBUG_HEADER = "addPublication(): ";
     Long publicationSeq = null;
 
@@ -2361,7 +2483,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     Long mdItemSeq =
-	addMdItem(conn, parentSeq, mdItemTypeSeq, null, date, null);
+	addMdItem(conn, parentSeq, mdItemTypeSeq, null, null, null);
     log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
 
     if (mdItemSeq == null) {
@@ -2872,6 +2994,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private Long findPublicationByIsbns(Connection conn, Long publisherSeq,
       String pIsbn, String eIsbn, String mdItemType) throws SQLException {
     final String DEBUG_HEADER = "findPublicationByIsbns(): ";
+    log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    log.debug3(DEBUG_HEADER + "pIsbn = " + pIsbn);
+    log.debug3(DEBUG_HEADER + "eIsbn = " + eIsbn);
+    log.debug3(DEBUG_HEADER + "mdItemType = " + mdItemType);
+
     Long publicationSeq = null;
     ResultSet resultSet = null;
     log.debug3(DEBUG_HEADER + "SQL = '" + FIND_PUBLICATION_BY_ISBNS_QUERY
@@ -2892,9 +3019,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       }
     } catch (SQLException sqle) {
       log.error("Cannot find publication", sqle);
-      log.error("publisherSeq = '" + publisherSeq + "'.");
+      log.error("publisherSeq = " + publisherSeq);
       log.error("pIsbn = " + pIsbn);
       log.error("eIsbn = " + eIsbn);
+      log.error("mdItemType = " + mdItemType);
       log.error("SQL = '" + FIND_PUBLICATION_BY_ISBNS_QUERY + "'.");
       throw sqle;
     } finally {
@@ -3043,7 +3171,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       resultSet = insertMdItem.getGeneratedKeys();
 
       if (!resultSet.next()) {
-    log.error("Unable to create metadata item table row.");
+	log.error("Unable to create metadata item table row.");
 	return null;
       }
 
@@ -3052,6 +3180,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     } catch (SQLException sqle) {
       log.error("Cannot insert metadata item", sqle);
       log.error("SQL = '" + INSERT_MD_ITEM_QUERY + "'.");
+      log.error("parentSeq = " + parentSeq + ".");
+      log.error("mdItemTypeSeq = " + mdItemTypeSeq + ".");
+      log.error("auMdSeq = " + auMdSeq + ".");
+      log.error("date = '" + date + "'.");
+      log.error("coverage = '" + coverage + "'.");
       throw sqle;
     } finally {
       DbManager.safeCloseResultSet(resultSet);
@@ -3212,16 +3345,39 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Adds an AU to the list of AUs to be reindexed.
-   * Does incremental reindexing if possible.
+   * Adds an AU to the list of AUs to be reindexed. Does incremental reindexing
+   * if possible.
    * 
    * @param au
    *          An ArchivalUnit with the AU to be reindexed.
    * @return <code>true</code> if au was added for reindexing
    */
-  public boolean addAuToReindex(ArchivalUnit au) {
-    return addAuToReindex(au, false, false);
-  }
+  /*public boolean addAuToReindex(ArchivalUnit au) {
+    Connection conn = null;
+    PreparedStatement insertPendingAuBatchStatement = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      if (conn == null) {
+	log.error("Cannot connect to database"
+	    + " -- cannot add aus to pending aus" + au.getName());
+	return false;
+      }
+
+      insertPendingAuBatchStatement =
+	  getInsertPendingAuBatchStatement(conn);
+
+      return addAuToReindex(au, conn,
+	  insertPendingAuBatchStatement, false);
+    } catch (SQLException ex) {
+      log.error("Cannot add au to pending AUs: " + au.getName(), ex);
+      return false;
+    } finally {
+      DbManager.safeCloseStatement(insertPendingAuBatchStatement);
+      DbManager.safeRollbackAndClose(conn);
+    }
+  }*/
 
   /**
    * Adds an AU to the list of AUs to be reindexed.
@@ -3229,13 +3385,20 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * 
    * @param au
    *          An ArchivalUnit with the AU to be reindexed.
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param insertPendingAuBatchStatement
+   *          A PreparedStatement with the prepared statement used to insert
+   *          pending AUs.
    * @param inBatch
    *          A boolean indicating whether the reindexing of this AU should be
    *          performed as part of a batch.
    * @return <code>true</code> if au was added for reindexing
    */
-  public boolean addAuToReindex(ArchivalUnit au, boolean inBatch) {
-    return addAuToReindex(au, inBatch, false);
+  public boolean enableAndAddAuToReindex(ArchivalUnit au, Connection conn,
+      PreparedStatement insertPendingAuBatchStatement, boolean inBatch) {
+    return enableAndAddAuToReindex(au, conn, insertPendingAuBatchStatement, inBatch,
+	false);
   }
   
   /**
@@ -3244,6 +3407,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * 
    * @param au
    *          An ArchivalUnit with the AU to be reindexed.
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param insertPendingAuBatchStatement
+   *          A PreparedStatement with the prepared statement used to insert
+   *          pending AUs.
    * @param inBatch
    *          A boolean indicating whether the reindexing of this AU should be
    *          performed as part of a batch.
@@ -3251,8 +3419,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          Causes a full reindex by removing that AU from the database. 
    * @return <code>true</code> if au was added for reindexing
    */
-  public boolean addAuToReindex(
-      ArchivalUnit au, boolean inBatch, boolean fullReindex) {
+  public boolean enableAndAddAuToReindex(ArchivalUnit au, Connection conn,
+      PreparedStatement insertPendingAuBatchStatement, boolean inBatch,
+      boolean fullReindex) {
     final String DEBUG_HEADER = "addAuToReindex(): ";
 
     synchronized (activeReindexingTasks) {
@@ -3268,50 +3437,34 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         }
 
         log.debug2(DEBUG_HEADER + "Adding AU to reindex: " + au.getName());
-        
-        if (pendingAusBatchConnection == null) {
-          pendingAusBatchConnection = dbManager.getConnection();
-
-          if (pendingAusBatchConnection == null) {
-            log.error("Cannot connect to database"
-                + " -- cannot add aus to pending aus");
-            return false;
-          }
-        }
 
         // Remove it from the list if it was marked as disabled.
-        removeDisabledFromPendingAus(pendingAusBatchConnection, au.getAuId());
+        removeDisabledFromPendingAus(conn, au.getAuId());
 
         // If it's not possible to reschedule the current task, add the AU to
         // the pending list.
         if (!rescheduleAuTask(au.getAuId())) {
-          addToPendingAus(pendingAusBatchConnection, Collections.singleton(au),
-                          inBatch);
+          addToPendingAusIfNotThere(conn, Collections.singleton(au),
+              insertPendingAuBatchStatement, inBatch);
         }
 
         // force a full reindex by removing the AU metadata from the database
         if (fullReindex) {
-          removeAu(pendingAusBatchConnection, au.getAuId());
+          removeAu(conn, au.getAuId());
         }
         
-        startReindexing(pendingAusBatchConnection);
-        pendingAusBatchConnection.commit();
+        startReindexing(conn);
+        conn.commit();
 
         // once transaction has committed, resync AU count with database
         if (fullReindex) {
-          metadataArticleCount = getArticleCount(pendingAusBatchConnection);
+          metadataArticleCount = getArticleCount(conn);
         }
         
         return true;
-
       } catch (SQLException ex) {
         log.error("Cannot add au to pending AUs: " + au.getName(), ex);
         return false;
-      } finally {
-	if (!inBatch) {
-	  DbManager.safeRollbackAndClose(pendingAusBatchConnection);
-	  pendingAusBatchConnection = null;
-	}
       }
     }
   }
@@ -3431,7 +3584,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Adds AUs to the list of pending AUs to reindex.
+   * Adds AUs to the table of pending AUs to reindex if they are not there
+   * already.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
@@ -3440,34 +3594,41 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  void addToPendingAus(Connection conn, Collection<ArchivalUnit> aus)
+  void addToPendingAusIfNotThere(Connection conn, Collection<ArchivalUnit> aus)
       throws SQLException {
-    addToPendingAus(conn, aus, false);
+    PreparedStatement insertPendingAuBatchStatement = null;
+
+    try {
+      insertPendingAuBatchStatement = getInsertPendingAuBatchStatement(conn);
+      addToPendingAusIfNotThere(conn, aus, insertPendingAuBatchStatement, false);
+    } finally {
+      DbManager.safeCloseStatement(insertPendingAuBatchStatement);
+    }
   }
 
   /**
-   * Adds AUs to the list of pending AUs to reindex.
+   * Adds AUs to the table of pending AUs to reindex if they are not there
+   * already.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
    * @param aus
    *          A Collection<ArchivalUnit> with the AUs to add.
+   * @param insertPendingAuBatchStatement
+   *          A PreparedStatement with the prepared statement used to insert
+   *          pending AUs.
    * @param inBatch
    *          A boolean indicating whether adding these AUs to the list of
    *          pending AUs to reindex should be performed as part of a batch.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  void addToPendingAus(Connection conn, Collection<ArchivalUnit> aus,
-      boolean inBatch) throws SQLException {
+  void addToPendingAusIfNotThere(Connection conn, Collection<ArchivalUnit> aus,
+      PreparedStatement insertPendingAuBatchStatement, boolean inBatch)
+      throws SQLException {
     final String DEBUG_HEADER = "addToPendingAus(): ";
     PreparedStatement selectPendingAu =
 	dbManager.prepareStatement(conn, FIND_PENDING_AU_QUERY);
-
-    if (insertPendingAuBatchStatement == null) {
-      insertPendingAuBatchStatement =
-	  dbManager.prepareStatement(conn, INSERT_ENABLED_PENDING_AU_QUERY);
-    }
 
     ResultSet results = null;
     log.debug2(DEBUG_HEADER + "maxPendingAuBatchSize = " + maxPendingAuBatchSize);
@@ -3531,14 +3692,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       }
     } finally {
       DbManager.safeCloseResultSet(results);
-
-      // Check whether there are no more AUs to be batched.
-      if (!inBatch) {
-	// Yes: Perform the insertion of all the AUs in the batch.
-	DbManager.safeCloseStatement(insertPendingAuBatchStatement);
-	insertPendingAuBatchStatement = null;
-      }
-
       DbManager.safeCloseStatement(selectPendingAu);
     }
 
@@ -3928,5 +4081,335 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   DbManager getDbManager() {
     return dbManager;
+  }
+
+  /**
+   * Provides the identifier of a publishing platform if existing or after
+   * creating it otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param platformName
+   *          A String with the platform name.
+   * @return a Long with the identifier of the publishing platform.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findOrCreatePlatform(Connection conn, String platformName)
+      throws SQLException {
+    final String DEBUG_HEADER = "findOrCreatePlatform(): ";
+    log.debug3(DEBUG_HEADER + "platformName = " + platformName);
+    
+    if (platformName == null) {
+      platformName = NO_PLATFORM;
+    }
+
+    Long platformSeq = findPlatform(conn, platformName);
+    log.debug3(DEBUG_HEADER + "platformSeq = " + platformSeq);
+
+    // Check whether it is a new platform.
+    if (platformSeq == null) {
+      // Yes: Add to the database the new platform.
+      platformSeq = addPlatform(conn, platformName);
+      log.debug3(DEBUG_HEADER + "new platformSeq = " + platformSeq);
+    }
+
+    return platformSeq;
+  }
+
+  /**
+   * Provides the identifier of a platform.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param platformName
+   *          A String with the platform identifier.
+   * @return a Long with the identifier of the platform.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Long findPlatform(Connection conn, String platformName) throws SQLException {
+    final String DEBUG_HEADER = "findPlatform(): ";
+    log.debug3(DEBUG_HEADER + "platformName = " + platformName);
+    Long platformSeq = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findPlatform =
+	dbManager.prepareStatement(conn, FIND_PLATFORM_QUERY);
+
+    try {
+      findPlatform.setString(1, platformName);
+
+      resultSet = dbManager.executeQuery(findPlatform);
+      if (resultSet.next()) {
+	platformSeq = resultSet.getLong(PLATFORM_SEQ_COLUMN);
+      }
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findPlatform);
+    }
+
+    log.debug3(DEBUG_HEADER + "platformSeq = " + platformSeq);
+    return platformSeq;
+  }
+
+  /**
+   * Adds a platform to the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param platformName
+   *          A String with the platform name.
+   * @return a Long with the identifier of the platform just added.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Long addPlatform(Connection conn, String platformName)
+      throws SQLException {
+    final String DEBUG_HEADER = "addPlatform(): ";
+    Long platformSeq = null;
+    ResultSet resultSet = null;
+    PreparedStatement insertPlatform = dbManager.prepareStatement(conn,
+	INSERT_PLATFORM_QUERY, Statement.RETURN_GENERATED_KEYS);
+
+    try {
+      // Skip auto-increment key field #0
+      insertPlatform.setString(1, platformName);
+      dbManager.executeUpdate(insertPlatform);
+      resultSet = insertPlatform.getGeneratedKeys();
+
+      if (!resultSet.next()) {
+	log.error("Unable to create platform table row.");
+	return null;
+      }
+
+      platformSeq = resultSet.getLong(1);
+      log.debug3(DEBUG_HEADER + "Added platformSeq = " + platformSeq);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(insertPlatform);
+    }
+
+    return platformSeq;
+  }
+
+  /**
+   * Provides the prepared statement used to insert pending AUs.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a PreparedStatement with the prepared statement used to insert
+   *         pending AUs.
+   */
+  public PreparedStatement getInsertPendingAuBatchStatement(Connection conn)
+      throws SQLException {
+    return dbManager.prepareStatement(conn, INSERT_ENABLED_PENDING_AU_QUERY);
+  }
+
+  /**
+   * Provides the identifier of a publication if existing, null otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param pIssn
+   *          A String with the print ISSN of the publication.
+   * @param eIssn
+   *          A String with the electronic ISSN of the publication.
+   * @param pIsbn
+   *          A String with the print ISBN of the publication.
+   * @param eIsbn
+   *          A String with the electronic ISBN of the publication.
+   * @param publisherSeq
+   *          A Long with the publisher identifier.
+   * @param name
+   *          A String with the name of the publication.
+   * @param volume
+   *          A String with the bibliographic volume.
+   * @return a Long with the identifier of the publication.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findPublication(Connection conn, String pIssn, String eIssn,
+      String pIsbn, String eIsbn, Long publisherSeq, String name, String volume)
+	  throws SQLException {
+    final String DEBUG_HEADER = "findPublication(): ";
+    Long publicationSeq = null;
+
+    // Get the title name.
+    String title = null;
+    log.debug3(DEBUG_HEADER + "name = " + name);
+
+    if (!StringUtil.isNullString(name)) {
+      title = name.substring(0, Math.min(name.length(), MAX_NAME_COLUMN));
+    }
+    log.debug3(DEBUG_HEADER + "title = " + title);
+
+    // Check whether it is a book series.
+    if (isBookSeries(pIssn, eIssn, pIsbn, eIsbn, volume)) {
+      // Yes: Find the book series.
+      log.debug3(DEBUG_HEADER + "is book series.");
+      publicationSeq = findBookInBookSeries(conn, pIssn, eIssn, pIsbn,
+	  eIsbn, publisherSeq, name, volume);
+      // No: Check whether it is a book.
+    } else if (isBook(pIsbn, eIsbn)) {
+      // Yes: Find the book.
+      log.debug3(DEBUG_HEADER + "is book.");
+      publicationSeq = findBook(conn, pIsbn, eIsbn, publisherSeq, title);
+    } else {
+      // No, it is a journal article: Find the journal.
+      log.debug3(DEBUG_HEADER + "is journal.");
+      publicationSeq = findJournal(conn, pIssn, eIssn, publisherSeq, title);
+    }
+
+    return publicationSeq;
+  }
+
+  /**
+   * Provides the identifier of an existing book that belongs to a book series,
+   * null otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param pIssn
+   *          A String with the print ISSN of the book series.
+   * @param eIssn
+   *          A String with the electronic ISSN of the book series.
+   * @param pIsbn
+   *          A String with the print ISBN of the book series.
+   * @param eIsbn
+   *          A String with the electronic ISBN of the book series.
+   * @param publisherSeq
+   *          A Long with the publisher identifier.
+   * @param title
+   *          A String with the name of the book series.
+   * @param volume
+   *          A String with the bibliographic volume.
+   * @return a Long with the identifier of the book.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findBookInBookSeries(Connection conn, String pIssn, String eIssn,
+      String pIsbn, String eIsbn, Long publisherSeq, String title,
+      String volume) throws SQLException {
+    final String DEBUG_HEADER = "findBookInBookSeries(): ";
+    Long bookSeq = null;
+
+    // Construct a title for the book in the series.
+    String bookTitle = title + " Volume " + volume;
+    log.debug3(DEBUG_HEADER + "bookTitle = " + bookTitle);
+
+    // Find the book series.
+    Long bookSeriesSeq =
+	findPublication(conn, title, publisherSeq, pIssn, eIssn, pIsbn, eIsbn,
+			MD_ITEM_TYPE_BOOK_SERIES);
+    log.debug3(DEBUG_HEADER + "bookSeriesSeq = " + bookSeriesSeq);
+
+    // Check whether it is an existing book series.
+    if (bookSeriesSeq != null) {
+      // Yes: Find the book.
+      bookSeq = findBook(conn, pIsbn, eIsbn, publisherSeq, bookTitle);
+    }
+
+    return bookSeq;
+  }
+
+  /**
+   * Provides the identifier of an existing book, null otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param pIsbn
+   *          A String with the print ISBN of the book.
+   * @param eIsbn
+   *          A String with the electronic ISBN of the book.
+   * @param publisherSeq
+   *          A Long with the publisher identifier.
+   * @param title
+   *          A String with the name of the book.
+   * @return a Long with the identifier of the book.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findBook(Connection conn, String pIsbn, String eIsbn,
+      Long publisherSeq, String title) throws SQLException {
+    final String DEBUG_HEADER = "findBook(): ";
+
+    // Find the book.
+    Long publicationSeq =
+	findPublication(conn, title, publisherSeq, null, null, pIsbn, eIsbn,
+			MD_ITEM_TYPE_BOOK);
+    log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    return publicationSeq;
+  }
+
+  /**
+   * Provides the identifier of an existing journal, null otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param pIssn
+   *          A String with the print ISSN of the journal.
+   * @param eIssn
+   *          A String with the electronic ISSN of the journal.
+   * @param publisherSeq
+   *          A Long with the publisher identifier.
+   * @param title
+   *          A String with the name of the journal.
+   * @return a Long with the identifier of the journal.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Long findJournal(Connection conn, String pIssn, String eIssn,
+      Long publisherSeq, String title) throws SQLException {
+    final String DEBUG_HEADER = "findJournal(): ";
+    Long publicationSeq = null;
+
+    // Skip it if it no title name or ISSNs, as it will not be possible to
+    // find the journal to which it belongs in the database.
+    if (StringUtil.isNullString(title) && pIssn == null && eIssn == null) {
+      log.error("Title for article cannot be created as it has no name or ISSN "
+	  + "values.");
+      return publicationSeq;
+    }
+
+    // Find the journal.
+    publicationSeq =
+	findPublication(conn, title, publisherSeq, pIssn, eIssn, null, null,
+			MD_ITEM_TYPE_JOURNAL);
+    log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    return publicationSeq;
+  }
+
+  /**
+   * Adds an AU with broken indexing to the list of pending AUs to reindex.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void addBrokenIndexingAuToPendingAus(Connection conn, String auId)
+      throws SQLException {
+    final String DEBUG_HEADER = "addBrokenIndexingAuToPendingAus(): ";
+    PreparedStatement addPendingAuStatement =
+	dbManager.prepareStatement(conn, INSERT_BROKEN_PENDING_AU_QUERY);
+
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      log.debug3(DEBUG_HEADER + "pluginId() = " + pluginId);
+      String auKey = PluginManager.auKeyFromAuId(auId);
+      log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      addPendingAuStatement.setString(1, pluginId);
+      addPendingAuStatement.setString(2, auKey);
+      int count = dbManager.executeUpdate(addPendingAuStatement);
+      log.debug3(DEBUG_HEADER + "count = " + count);
+    } finally {
+      DbManager.safeCloseStatement(addPendingAuStatement);
+    }
   }
 }
