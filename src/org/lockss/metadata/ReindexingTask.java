@@ -1,10 +1,10 @@
 /*
- * $Id: ReindexingTask.java,v 1.3 2013-01-06 06:36:32 tlipkis Exp $
+ * $Id: ReindexingTask.java,v 1.4 2013-03-04 19:20:15 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,6 +37,7 @@ import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadMXBean;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.SQLNonTransientException;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -44,6 +45,7 @@ import java.util.Iterator;
 import java.util.Map;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.TdbAu;
+import org.lockss.daemon.LockssWatchdog;
 import org.lockss.daemon.PluginException;
 import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadata;
@@ -129,6 +131,8 @@ public class ReindexingTask extends StepTask {
   private final Emitter emitter;
   private int extractedCount = 0;
 
+  private LockssWatchdog watchDog;
+
   private static ThreadMXBean tmxb = ManagementFactory.getThreadMXBean();
 
   static {
@@ -171,6 +175,10 @@ public class ReindexingTask extends StepTask {
     // Set the task event handler callback after construction to ensure that the
     // instance is initialized.
     callback = new ReindexingEventHandler();
+  }
+
+  public void setWdog(LockssWatchdog watchDog) {
+    this.watchDog = watchDog;
   }
 
   /**
@@ -230,6 +238,8 @@ public class ReindexingTask extends StepTask {
 	  indexedArticleCount = 0;
 	}
       }
+      
+      watchDog.pokeWDog();
     }
 
     log.debug3(DEBUG_HEADER + "isFinished() = " + isFinished());
@@ -800,7 +810,8 @@ public class ReindexingTask extends StepTask {
 	      // Yes: Write the AU metadata to the database.
 	      new AuMetadataRecorder((ReindexingTask) task, mdManager, au)
 		  .recordMetadata(conn, mditr);
-
+	      
+	      watchDog.pokeWDog();
 	    }
 
 	    // Remove the AU just re-indexed from the list of AUs pending to be
@@ -818,9 +829,15 @@ public class ReindexingTask extends StepTask {
 		- removedArticleCount);
 
 	    break;
-	  } catch (SQLException sqle) {
+	  } catch (SQLNonTransientException sqlnte) {
+	    e = sqlnte;
 	    log.warning("Error updating metadata at FINISH for " + status
-		+ " -- rescheduling", sqle);
+		+ " -- NOT rescheduling", e);
+	    status = ReindexingStatus.Failed;
+	  } catch (SQLException sqle) {
+	    e = sqle;
+	    log.warning("Error updating metadata at FINISH for " + status
+		+ " -- rescheduling", e);
 	    status = ReindexingStatus.Rescheduled;
 	  } finally {
 	    DbManager.safeRollbackAndClose(conn);
@@ -829,25 +846,32 @@ public class ReindexingTask extends StepTask {
 	  // Fall through if SQL exception occurred during update.
 	case Failed:
 	case Rescheduled:
-
-	  mdManager.incrementFailedReindexingCount();
-
-	  // Reindexing not successful, so try again later.
-	  // if status indicates the operation should be rescheduled
+	  // Reindexing not successful, so try again later if status indicates
+	  // the operation should be rescheduled.
 	  log.debug2(DEBUG_HEADER + "Reindexing task (" + status
 	      + ") did not finish for au " + au.getName());
+
+	  mdManager.incrementFailedReindexingCount();
 
 	  try {
 	    // Get a connection to the database.
 	    conn = dbManager.getConnection();
 
-	    // Attempt to move failed AU to end of pending list.
 	    mdManager.removeFromPendingAus(conn, au.getAuId());
 
-	    if (status == ReindexingStatus.Rescheduled) {
+	    if (status == ReindexingStatus.Failed) {
+	      log.debug2(DEBUG_HEADER + "Marking as broken reindexing task au "
+		  + au.getName());
+
+	    // Add the failed AU to the pending list with the right priority to
+	    // avoid processing it again before the underlying problem is fixed.
+	      mdManager.addBrokenIndexingAuToPendingAus(conn, au.getAuId());
+	    } else if (status == ReindexingStatus.Rescheduled) {
 	      log.debug2(DEBUG_HEADER + "Rescheduling reindexing task au "
 		  + au.getName());
-	      mdManager.addToPendingAus(conn, Collections.singleton(au));
+
+	      // Add the re-schedulable AU to the end of the pending list.
+	      mdManager.addToPendingAusIfNotThere(conn, Collections.singleton(au));
 	    }
 
 	    // Complete the database transaction.
