@@ -18,15 +18,18 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = ursu
   
-      au < manifest ; 2004 ; Ursus Volume 15 ; 15 >
-      au < manifest ; 2005 ; Ursus Volume 16 ; 16 >
-      au < manifest ; 2006 ; Ursus Volume 17 ; 17 >
-      au < manifest ; 2007 ; Ursus Volume 18 ; 18 >
-      au < manifest ; 2008 ; Ursus Volume 19 ; 19 >
-      au < manifest ; 2009 ; Ursus Volume 20 ; 20 >
-      au < manifest ; 2010 ; Ursus Volume 21 ; 21 >
-      au < manifest ; 2011 ; Ursus Volume 22 ; 22 >
-    }
+      au < testing ; 2004 ; Ursus Volume 15 ; 15 >
+      au < testing ; 2005 ; Ursus Volume 16 ; 16 >
+      au < testing ; 2006 ; Ursus Volume 17 ; 17 >
+      au < testing ; 2007 ; Ursus Volume 18 ; 18 >
+      au < testing ; 2008 ; Ursus Volume 19 ; 19 >
+      au < testing ; 2009 ; Ursus Volume 20 ; 20 >
+      au < testing ; 2010 ; Ursus Volume 21 ; 21 >
+      au < testing ; 2011 ; Ursus Volume 22 ; 22 >
+      au < exists ; 2012 ; Ursus Volume 23 ; 23 >
+      au < expected ; 2013 ; Ursus Volume 24 ; 24 >
+      
+   }
 
   }
 
