@@ -1,10 +1,10 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.4 2013-01-14 21:58:19 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.5 2013-03-04 19:23:21 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -172,6 +172,19 @@ public class AuMetadataRecorder {
   private Long pluginSeq = null;
   private Long auSeq = null;
   private Long auMdSeq = null;
+
+  // Properties used to take shortcuts in processing.
+  private String journalTitle = null;
+  private String pIsbn = null;
+  private String eIsbn = null;
+  private String pIssn = null;
+  private String eIssn = null;
+  private String proprietaryId = null;
+  private String volume = null;
+  private Long publicationSeq = null;
+  private Long parentSeq = null;
+  private String parentMdItemType = null;
+  private boolean newAu = false;
 
   /**
    * Constructor.
@@ -502,42 +515,57 @@ public class AuMetadataRecorder {
       log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
     }
 
-    // Get any ISBN values received in the metadata.
-    String pIsbn = mdinfo.isbn;
-    log.debug3(DEBUG_HEADER + "pIsbn = " + pIsbn);
+    // Check whether this is a new publication.
+    if (publicationSeq == null || !isSamePublication(mdinfo)) {
+      // Yes.
+      log.debug3(DEBUG_HEADER + "is new publication.");
 
-    String eIsbn = mdinfo.eisbn;
-    log.debug3(DEBUG_HEADER + "eIsbn = " + eIsbn);
+      // Get the journal title received in the metadata.
+      journalTitle = mdinfo.journalTitle;
+      log.debug3(DEBUG_HEADER + "journalTitle = " + journalTitle);
 
-    // Get any ISSN values received in the metadata.
-    String pIssn = mdinfo.issn;
-    log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
+      // Get any ISBN values received in the metadata.
+      pIsbn = mdinfo.isbn;
+      log.debug3(DEBUG_HEADER + "pIsbn = " + pIsbn);
 
-    String eIssn = mdinfo.eissn;
-    log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
+      eIsbn = mdinfo.eisbn;
+      log.debug3(DEBUG_HEADER + "eIsbn = " + eIsbn);
 
-    // Get the proprietary identifier received in the metadata.
-    String proprietaryId = mdinfo.proprietaryIdentifier;
-    log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+      // Get any ISSN values received in the metadata.
+      pIssn = mdinfo.issn;
+      log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
 
-    // Get the publication date received in the metadata.
-    String date = mdinfo.pubDate;
-    log.debug3(DEBUG_HEADER + "date = " + date);
+      eIssn = mdinfo.eissn;
+      log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
 
-    // Get the volume received in the metadata.
-    String volume = mdinfo.volume;
-    log.debug3(DEBUG_HEADER + "volume = " + volume);
+      // Get the proprietary identifier received in the metadata.
+      proprietaryId = mdinfo.proprietaryIdentifier;
+      log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
 
-    // Get the publication to which this metadata belongs.
-    Long publicationSeq =
-	mdManager.findOrCreatePublication(conn, pIssn, eIssn, pIsbn, eIsbn,
-					  publisherSeq, mdinfo.journalTitle,
-					  date, proprietaryId, volume);
-    log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+      // Get the volume received in the metadata.
+      volume = mdinfo.volume;
+      log.debug3(DEBUG_HEADER + "volume = " + volume);
+
+      // Get the publication to which this metadata belongs.
+      publicationSeq = mdManager.findOrCreatePublication(conn, pIssn, eIssn,
+	  pIsbn, eIsbn, publisherSeq, journalTitle, proprietaryId, volume);
+      log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+      // Get the identifier of the parent, which is the publication metadata
+      // item.
+      parentSeq = mdManager.findPublicationMetadataItem(conn, publicationSeq);
+      log.debug3(DEBUG_HEADER + "parentSeq = " + parentSeq);
+
+      // Get the type of the parent.
+      parentMdItemType = getMdItemTypeName(conn, parentSeq);
+      log.debug3(DEBUG_HEADER + "parentMdItemType = " + parentMdItemType);
+    }
 
     // Skip it if the publication could not be found or created.
-    if (publicationSeq == null) {
-      log.debug3(DEBUG_HEADER + "Done: publicationSeq is null.");
+    if (publicationSeq == null || parentSeq == null ||
+	parentMdItemType == null) {
+      log.debug3(DEBUG_HEADER
+	  + "Done: publicationSeq or parentSeq or parentMdItemType is null.");
       return;
     }
 
@@ -547,8 +575,12 @@ public class AuMetadataRecorder {
       String pluginId = PluginManager.pluginIdFromAuId(auId);
       log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
 
+      // Find the publishing platform or create it.
+      Long platformSeq = mdManager.findOrCreatePlatform(conn, platform);
+      log.debug3(DEBUG_HEADER + "platformSeq = " + platformSeq);
+
       // Find the plugin or create it.
-      pluginSeq = mdManager.findOrCreatePlugin(conn, pluginId, platform);
+      pluginSeq = mdManager.findOrCreatePlugin(conn, pluginId, platformSeq);
       log.debug3(DEBUG_HEADER + "pluginSeq = " + pluginSeq);
 
       // Skip it if the plugin could not be found or created.
@@ -579,8 +611,6 @@ public class AuMetadataRecorder {
       log.debug3(DEBUG_HEADER + "new auMdSeq = " + auMdSeq);
     }
 
-    boolean newAu = false;
-
     // Check whether it is a new Archival Unit metadata.
     if (auMdSeq == null) {
       // Yes: Add to the database the new Archival Unit metadata.
@@ -602,7 +632,7 @@ public class AuMetadataRecorder {
     }
 
     // Update or create the metadata item.
-    updateOrCreateMdItem(conn, newAu, publicationSeq, mdinfo);
+    updateOrCreateMdItem(conn, mdinfo);
 
     log.debug3(DEBUG_HEADER + "Done.");
   }
@@ -645,17 +675,13 @@ public class AuMetadataRecorder {
    * 
    * @param conn
    *          A Connection with the connection to the database
-   * @param newAu
-   *          A boolean with the indication of whether this is a new AU.
-   * @param publicationSeq
-   *          A Long with the identifier of the publication.
    * @param mdinfo
    *          An ArticleMetadataInfo providing the metadata.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private void updateOrCreateMdItem(Connection conn, boolean newAu,
-      Long publicationSeq, ArticleMetadataInfo mdinfo) throws SQLException {
+  private void updateOrCreateMdItem(Connection conn, ArticleMetadataInfo mdinfo)
+      throws SQLException {
     final String DEBUG_HEADER = "updateOrCreateMdItem(): ";
 
     // Get the publication date received in the metadata.
@@ -704,16 +730,6 @@ public class AuMetadataRecorder {
     String accessUrl = mdinfo.accessUrl;
     log.debug3(DEBUG_HEADER + "accessUrl = " + accessUrl);
 
-    // Get the identifier of the parent, which is the publication metadata
-    // item.
-    Long parentSeq =
-	mdManager.findPublicationMetadataItem(conn, publicationSeq);
-    log.debug3(DEBUG_HEADER + "parentSeq = " + parentSeq);
-
-    // Get the type of the parent.
-    String parentMdItemType = getMdItemTypeName(conn, parentSeq);
-    log.debug3(DEBUG_HEADER + "parentMdItemType = " + parentMdItemType);
-
     // Determine what type of a metadata item it is.
     String mdItemType = null;
     if (MD_ITEM_TYPE_BOOK.equals(parentMdItemType)) {
@@ -745,12 +761,11 @@ public class AuMetadataRecorder {
     // Check whether it is a metadata item for a new Archival Unit.
     if (newAu) {
       // Yes: Create the new metadata item in the database.
-      mdItemSeq =
-	  mdManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq, date,
-			      coverage);
+      mdItemSeq = mdManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq,
+	  date, coverage);
       log.debug3(DEBUG_HEADER + "new mdItemSeq = " + mdItemSeq);
 
-	  mdManager.addMdItemName(conn, mdItemSeq, itemTitle, PRIMARY_NAME_TYPE);
+      mdManager.addMdItemName(conn, mdItemSeq, itemTitle, PRIMARY_NAME_TYPE);
 
       newMdItem = true;
     } else {
@@ -761,12 +776,11 @@ public class AuMetadataRecorder {
       // Check whether it is a new metadata item.
       if (mdItemSeq == null) {
 	// Yes: Create it.
-	mdItemSeq =
-	    mdManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq, date,
-				coverage);
+	mdItemSeq = mdManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
+	    auMdSeq, date, coverage);
 	log.debug3(DEBUG_HEADER + "new mdItemSeq = " + mdItemSeq);
 
-	  mdManager.addMdItemName(conn, mdItemSeq, itemTitle, PRIMARY_NAME_TYPE);
+	mdManager.addMdItemName(conn, mdItemSeq, itemTitle, PRIMARY_NAME_TYPE);
 
 	newMdItem = true;
       }
@@ -783,12 +797,6 @@ public class AuMetadataRecorder {
       log.debug3(DEBUG_HEADER + "volume = " + volume);
     }
 
-    // Add the bibliographic data.
-    int bibCount =
-	updateOrCreateBibItem(conn, mdItemSeq, volume, issue, startPage,
-			      endPage, itemNo);
-    log.debug3(DEBUG_HEADER + "bibCount = " + bibCount);
-
     // Get the authors received in the metadata.
     Set<String> authors = mdinfo.authorSet;
     log.debug3(DEBUG_HEADER + "authors = " + authors);
@@ -799,7 +807,12 @@ public class AuMetadataRecorder {
 
     // Check whether it is a new metadata item.
     if (newMdItem) {
-      // Yes: Add the item URLs.
+      // Yes: Add the bibliographic data.
+      int addedCount =
+  	addBibItem(conn, mdItemSeq, volume, issue, startPage, endPage, itemNo);
+      log.debug3(DEBUG_HEADER + "addedCount = " + addedCount);
+
+      // Add the item URLs.
       addMdItemUrls(conn, mdItemSeq, accessUrl, featuredUrlMap);
       log.debug3(DEBUG_HEADER + "added AUItem URL.");
 
@@ -816,6 +829,10 @@ public class AuMetadataRecorder {
       log.debug3(DEBUG_HEADER + "added AUItem DOI.");
     } else {
       // No: Since the record exists, only add the properties that are new.
+      int updatedCount = updateBibItem(conn, mdItemSeq, volume, issue,
+	  startPage, endPage, itemNo);
+      log.debug3(DEBUG_HEADER + "updatedCount = " + updatedCount);
+
       // Add the item new URLs.
       addNewMdItemUrls(conn, mdItemSeq, accessUrl, featuredUrlMap);
       log.debug3(DEBUG_HEADER + "added AUItem URL.");
@@ -1356,5 +1373,23 @@ public class AuMetadataRecorder {
 
     log.debug3(DEBUG_HEADER + "addedCount = " + addedCount);
     return addedCount;
+  }
+  
+  private boolean isSamePublication(ArticleMetadataInfo mdinfo) {
+    return isSameProperty(journalTitle, mdinfo.journalTitle) &&
+	isSameProperty(pIsbn, mdinfo.isbn) &&
+	isSameProperty(eIsbn, mdinfo.eisbn) &&
+	isSameProperty(pIssn, mdinfo.issn) &&
+	isSameProperty(eIssn, mdinfo.eissn) &&
+	isSameProperty(proprietaryId, mdinfo.proprietaryIdentifier) &&
+	isSameProperty(volume, mdinfo.volume);
+  }
+  
+  private boolean isSameProperty(String previous, String current) {
+    if (!StringUtil.isNullString(previous)) {
+      return !StringUtil.isNullString(current) && previous.equals(current);
+    }
+
+    return StringUtil.isNullString(current);
   }
 }
