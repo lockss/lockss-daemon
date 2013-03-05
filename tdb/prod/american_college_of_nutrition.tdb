@@ -17,9 +17,9 @@
     param[base_url] = http://www.jacn.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < ready ; 1982 ; Journal of the American College of Nutrition Volume 1 [abstracts only] ; 1 >
-    au < ready ; 1983 ; Journal of the American College of Nutrition Volume 2 [abstracts only] ; 2 >
-    au < ready ; 1984 ; Journal of the American College of Nutrition Volume 3 [abstracts only] ; 3 >
+    au < testing ; 1982 ; Journal of the American College of Nutrition Volume 1 [abstracts only] ; 1 >
+    au < testing ; 1983 ; Journal of the American College of Nutrition Volume 2 [abstracts only] ; 2 >
+    au < testing ; 1984 ; Journal of the American College of Nutrition Volume 3 [abstracts only] ; 3 >
     au < testing ; 1985 ; Journal of the American College of Nutrition Volume 4 [abstracts only] ; 4 >
     au < testing ; 1986 ; Journal of the American College of Nutrition Volume 5 [abstracts only] ; 5 >
     au < testing ; 1987 ; Journal of the American College of Nutrition Volume 6 [abstracts only] ; 6 >
@@ -28,11 +28,11 @@
     au < testing ; 1990 ; Journal of the American College of Nutrition Volume 9 [abstracts only] ; 9 >
     au < testing ; 1991 ; Journal of the American College of Nutrition Volume 10 [abstracts only] ; 10 >
     au < testing ; 1992 ; Journal of the American College of Nutrition Volume 11 [abstracts only] ; 11 >
-    au < ready ; 1993 ; Journal of the American College of Nutrition Volume 12 [abstracts only] ; 12 >
+    au < testing ; 1993 ; Journal of the American College of Nutrition Volume 12 [abstracts only] ; 12 >
     au < testing ; 1994 ; Journal of the American College of Nutrition Volume 13 [abstracts only] ; 13 >
-    au < ready ; 1995 ; Journal of the American College of Nutrition Volume 14 [abstracts only] ; 14 >
+    au < testing ; 1995 ; Journal of the American College of Nutrition Volume 14 [abstracts only] ; 14 >
     au < testing ; 1996 ; Journal of the American College of Nutrition Volume 15 [abstracts only] ; 15 >
-    au < ready ; 1997 ; Journal of the American College of Nutrition Volume 16 [abstracts only] ; 16 >
+    au < testing ; 1997 ; Journal of the American College of Nutrition Volume 16 [abstracts only] ; 16 >
     au < released ; 1998 ; Journal of the American College of Nutrition Volume 17 ; 17 >
     au < released ; 1999 ; Journal of the American College of Nutrition Volume 18 ; 18 >
     au < released ; 2000 ; Journal of the American College of Nutrition Volume 19 ; 19 >
