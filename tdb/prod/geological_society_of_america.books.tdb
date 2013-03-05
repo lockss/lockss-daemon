@@ -56,6 +56,12 @@
     param[base_url] = http://specialpapers.gsapubs.org/
     implicit < status ; year ; isbn ; name ; param[volume_name] >
 
+    au < exists ; 1994 ; 0-8137-2294-2 ; Geological Society of America Special Papers Volume 294 ; 294 >
+    au < exists ; 1995 ; 0-8137-2295-0 ; Geological Society of America Special Papers Volume 295 ; 295 >
+    au < exists ; 1995 ; 0-8137-2296-9 ; Geological Society of America Special Papers Volume 296 ; 296 >
+    au < exists ; 1995 ; 0-8137-2297-7 ; Geological Society of America Special Papers Volume 297 ; 297 >
+    au < exists ; 1995 ; 0-8137-2298-5 ; Geological Society of America Special Papers Volume 298 ; 298 >
+    au < exists ; 1995 ; 0-8137-2299-3 ; Geological Society of America Special Papers Volume 299 ; 299 >
     au < exists ; 1995 ; 978-0-8137-2300-0 ; Geological Society of America Special Papers Volume 300 ; 300 >
     au < exists ; 1995 ; 978-0-8137-2301-9 ; Geological Society of America Special Papers Volume 301 ; 301 >
     au < manifest ; 1996 ; 978-0-8137-2302-7 ; Geological Society of America Special Papers Volume 302 ; 302 >
