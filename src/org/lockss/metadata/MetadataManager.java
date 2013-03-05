@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.12 2013-03-04 19:18:59 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.13 2013-03-05 16:34:51 fergaloy-sf Exp $
  */
 
 /*
@@ -152,7 +152,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     PREFIX + "indexPriorityAuidMap";
   static final List<String> DEFAULT_INDEX_PRIORITY_AUID_MAP = null;
 
-  private static final int BROKEN_INDEX_PRIORITY = -1000;
+  private static final int FAILED_INDEX_PRIORITY = -1000;
   private static final int MIN_INDEX_PRIORITY = -10000;
   private static final int ABORT_INDEX_PRIORITY = -20000;
 
@@ -470,13 +470,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "," + PRIORITY_COLUMN
       + ") values (?,?," + MIN_INDEX_PRIORITY + ")";
 
-  // Query to add a pending AU with broken indexing.
-  private static final String INSERT_BROKEN_PENDING_AU_QUERY = "insert into "
+  // Query to add a pending AU with failed indexing.
+  private static final String INSERT_FAILED_INDEXING_PENDING_AU_QUERY = "insert"
+      + " into "
       + PENDING_AU_TABLE
       + "(" + PLUGIN_ID_COLUMN
       + "," + AU_KEY_COLUMN
       + "," + PRIORITY_COLUMN
-      + ") values (?,?," + BROKEN_INDEX_PRIORITY + ")";
+      + ") values (?,?," + FAILED_INDEX_PRIORITY + ")";
 
   // Query to delete a pending AU by its key and plugin identifier.
   private static final String DELETE_PENDING_AU_QUERY = "delete from "
@@ -490,6 +491,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + " where " + PLUGIN_ID_COLUMN + " = ?"
       + " and " + AU_KEY_COLUMN + " = ?"
       + " and " + PRIORITY_COLUMN + " < 0";
+  
+  // Query to find pending AUs with a given priority.
+  private static final String FIND_PENDING_AUS_WITH_PRIORITY_QUERY =
+      "select "
+      + PLUGIN_ID_COLUMN
+      + "," + AU_KEY_COLUMN
+      + " from " + PENDING_AU_TABLE
+      + " where " + PRIORITY_COLUMN + " = ?";
 
   // Query to get the version of the metadata of an AU as is recorded in the
   // database.
@@ -3559,18 +3568,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           activeReindexingTasks.remove(task);
         }
 
+        // Remove the AU from the list of pending AUs if it is there.
         removeFromPendingAus(conn, auId);
 
-        PreparedStatement insertDisabledPendingAu =
-            dbManager.prepareStatement(conn, INSERT_DISABLED_PENDING_AU_QUERY);
-
-        String pluginId = PluginManager.pluginIdFromAuId(auId);
-        String auKey = PluginManager.auKeyFromAuId(auId);
-
-        insertDisabledPendingAu.setString(1, pluginId);
-        insertDisabledPendingAu.setString(2, auKey);
-        int count = dbManager.executeUpdate(insertDisabledPendingAu);
-  	log.debug2(DEBUG_HEADER + "count = " + count);
+        // Add it marked as disabled.
+        addDisabledAuToPendingAus(conn, auId);
         conn.commit();
 
         return true;
@@ -4383,7 +4385,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Adds an AU with broken indexing to the list of pending AUs to reindex.
+   * Adds a disabled AU to the list of pending AUs to reindex.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
@@ -4392,15 +4394,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  void addBrokenIndexingAuToPendingAus(Connection conn, String auId)
+  void addDisabledAuToPendingAus(Connection conn, String auId)
       throws SQLException {
-    final String DEBUG_HEADER = "addBrokenIndexingAuToPendingAus(): ";
+    final String DEBUG_HEADER = "addDisabledAuToPendingAus(): ";
     PreparedStatement addPendingAuStatement =
-	dbManager.prepareStatement(conn, INSERT_BROKEN_PENDING_AU_QUERY);
+	dbManager.prepareStatement(conn, INSERT_DISABLED_PENDING_AU_QUERY);
 
     try {
       String pluginId = PluginManager.pluginIdFromAuId(auId);
-      log.debug3(DEBUG_HEADER + "pluginId() = " + pluginId);
+      log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
       String auKey = PluginManager.auKeyFromAuId(auId);
       log.debug3(DEBUG_HEADER + "auKey = " + auKey);
 
@@ -4411,5 +4413,146 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     } finally {
       DbManager.safeCloseStatement(addPendingAuStatement);
     }
+  }
+
+  /**
+   * Adds an AU with failed indexing to the list of pending AUs to reindex.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void addFailedIndexingAuToPendingAus(Connection conn, String auId)
+      throws SQLException {
+    final String DEBUG_HEADER = "addFailedIndexingAuToPendingAus(): ";
+    PreparedStatement addPendingAuStatement =
+	dbManager.prepareStatement(conn, INSERT_FAILED_INDEXING_PENDING_AU_QUERY);
+
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+      String auKey = PluginManager.auKeyFromAuId(auId);
+      log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      addPendingAuStatement.setString(1, pluginId);
+      addPendingAuStatement.setString(2, auKey);
+      int count = dbManager.executeUpdate(addPendingAuStatement);
+      log.debug3(DEBUG_HEADER + "count = " + count);
+    } finally {
+      DbManager.safeCloseStatement(addPendingAuStatement);
+    }
+  }
+
+  /**
+   * Provides the identifiers of pending Archival Units that have been disabled.
+   * 
+   * @return a Collection<String> with the identifiers of disabled pending
+   *         Archival Units.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<String> findDisabledPendingAus() throws SQLException {
+    // Get a connection to the database.
+    Connection conn = dbManager.getConnection();
+
+    return findDisabledPendingAus(conn);
+  }
+
+  /**
+   * Provides the identifiers of pending Archival Units that have been disabled.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Collection<String> with the identifiers of disabled pending
+   *         Archival Units.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<String> findDisabledPendingAus(Connection conn)
+      throws SQLException {
+    return findPendingAusWithPriority(conn, MIN_INDEX_PRIORITY);
+  }
+
+  /**
+   * Provides the identifiers of pending Archival Units that failed during
+   * metadata indexing.
+   * 
+   * @return a Collection<String> with the identifiers of pending Archival Units
+   *         with failed metadata indexing processes.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<String> findFailedIndexingPendingAus() throws SQLException {
+    // Get a connection to the database.
+    Connection conn = dbManager.getConnection();
+
+    return findFailedIndexingPendingAus(conn);
+  }
+
+  /**
+   * Provides the identifiers of pending Archival Units that failed during
+   * metadata indexing.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Collection<String> with the identifiers of pending Archival Units
+   *         with failed metadata indexing processes.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<String> findFailedIndexingPendingAus(Connection conn)
+      throws SQLException {
+    return findPendingAusWithPriority(conn, FAILED_INDEX_PRIORITY);
+  }
+
+  /**
+   * Provides the identifiers of pending Archival Units with a given priority.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param priority
+   *          An int with the priority of the requested Archival Units.
+   * @return a Collection<String> with the identifiers of pending Archival Units
+   *         with the given priority.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Collection<String> findPendingAusWithPriority(Connection conn, int priority)
+      throws SQLException {
+    final String DEBUG_HEADER = "findPendingAusWithPriority(): ";
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "priority = " + priority);
+
+    Collection<String> aus = new ArrayList<String>();
+    String pluginId;
+    String auKey;
+    String auId;
+    ResultSet results = null;
+
+    PreparedStatement selectAus =
+	dbManager.prepareStatement(conn, FIND_PENDING_AUS_WITH_PRIORITY_QUERY);
+
+    try {
+      selectAus.setInt(1, priority);
+      results = dbManager.executeQuery(selectAus);
+
+      while (results.next()) {
+	pluginId = results.getString(PLUGIN_ID_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+	auKey = results.getString(AU_KEY_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+	auId = PluginManager.generateAuId(pluginId, auKey);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	aus.add(auId);
+      }
+    } finally {
+      DbManager.safeCloseResultSet(results);
+      DbManager.safeCloseStatement(selectAus);
+    }
+
+    return aus;
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.4 2013-03-04 19:20:15 fergaloy-sf Exp $
+ * $Id: ReindexingTask.java,v 1.5 2013-03-05 16:34:51 fergaloy-sf Exp $
  */
 
 /*
@@ -865,7 +865,7 @@ public class ReindexingTask extends StepTask {
 
 	    // Add the failed AU to the pending list with the right priority to
 	    // avoid processing it again before the underlying problem is fixed.
-	      mdManager.addBrokenIndexingAuToPendingAus(conn, au.getAuId());
+	      mdManager.addFailedIndexingAuToPendingAus(conn, au.getAuId());
 	    } else if (status == ReindexingStatus.Rescheduled) {
 	      log.debug2(DEBUG_HEADER + "Rescheduling reindexing task au "
 		  + au.getName());

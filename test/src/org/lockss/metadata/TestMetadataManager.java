@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.4 2013-03-04 19:26:59 fergaloy-sf Exp $
+ * $Id: TestMetadataManager.java,v 1.5 2013-03-05 16:34:51 fergaloy-sf Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
+
 import org.lockss.config.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.db.DbManager;
@@ -222,6 +223,8 @@ public class TestMetadataManager extends LockssTestCase {
     runModifyMetadataTest();
     runDeleteMetadataTest();
     runTestPriorityPatterns();
+    runTestDisabledIndexingAu();
+    runTestFailedIndexingAu();
   }
 
   private void runCreateMetadataTest() throws Exception {
@@ -569,46 +572,30 @@ public class TestMetadataManager extends LockssTestCase {
     assertTrue(metadataManager.isEligibleForReindexing(mau1));
 
   }
+  
+  private void runTestDisabledIndexingAu() throws Exception {
+    Connection con = dbManager.getConnection();
+    
+    // Add a disabled AU.
+    metadataManager.addDisabledAuToPendingAus(con, sau0.getAuId());
+    con.commit();
 
-  /*public void testSerializedFile() throws Exception {
-    Connection conn = dbManager.getConnection();
+    // Make sure that it is there.
+    assertEquals(1, metadataManager.findDisabledPendingAus(con).size());
+    DbManager.safeRollbackAndClose(con);
+  }
+  
+  private void runTestFailedIndexingAu() throws Exception {
+    Connection con = dbManager.getConnection();
+    
+    // Add an AU with a failed indexing process.
+    metadataManager.addFailedIndexingAuToPendingAus(con, sau1.getAuId());
+    con.commit();
 
-    String query = "select count(*) from " + MD_ITEM_TABLE;
-    PreparedStatement stmt = dbManager.prepareStatement(conn, query);
-    ResultSet resultSet = dbManager.executeQuery(stmt);
-    int count = 0;
-    if (resultSet.next()) {
-      count = -resultSet.getInt(1);
-    }
-    log.info("mdItemCount = " + -count);
-
-    File serializedFile = new File("/tmp/Springer2010Index.ser");
-    log.info("serializedFile.length() = " + serializedFile.length());
-
-    ArticleMetadataBuffer amBuffer = new ArticleMetadataBuffer();
-    amBuffer.collectedMetadataFile = serializedFile;
-    amBuffer.infoCount = 238831;
-
-    ReindexingTask task = new ReindexingTask(sau1,
-	new BaseArticleMetadataExtractor(null));
-
-    log.info("Running AuMetadataRecorder.recordMetadata()...");
-
-    new AuMetadataRecorder((ReindexingTask) task, metadataManager, sau1)
-	.recordMetadata(conn, amBuffer.iterator());
-
-    conn.commit();
-
-    log.info("updatedArticleCount = " + task.getUpdatedArticleCount());
-
-    resultSet = dbManager.executeQuery(stmt);
-    if (resultSet.next()) {
-      count += resultSet.getInt(1);
-    }
-    log.info("mdItemCount = " + count);
-
-    amBuffer.close();
-  }*/
+    // Make sure that it is there.
+    assertEquals(1, metadataManager.findFailedIndexingPendingAus(con).size());
+    DbManager.safeRollbackAndClose(con);
+  }
 
   public static class MySubTreeArticleIteratorFactory
       implements ArticleIteratorFactory {
