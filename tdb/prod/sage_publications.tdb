@@ -41346,7 +41346,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://tai.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Therapeutic Advances in Infectious Disease Volume 2 ; 2 >
+    au < manifest ; 2013 ; Therapeutic Advances in Infectious Disease Volume 1 ; 1 >
 
     }
 
