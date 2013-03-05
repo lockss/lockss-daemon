@@ -66,9 +66,6 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = wmon
 
-      comment[where] = content5b
-      comment[notReady] = manifest page link has double backslash in URL causing crawl failures 
-
       au < doNotProcess ; 2006 ; Wildlife Monographs Number 161 ; 161 >
       au < doNotProcess ; 2006 ; Wildlife Monographs Number 162 ; 162 >
       au < doNotProcess ; 2006 ; Wildlife Monographs Number 163 ; 163 >
