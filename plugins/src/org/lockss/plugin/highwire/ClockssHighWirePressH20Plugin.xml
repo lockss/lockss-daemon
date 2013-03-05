@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>78</string>
+    <string>79</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>11</string>
+        <string>12</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -60,41 +60,41 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;HighWire Press Plugin (H20 for CLOCKSS), Base URL %s, Volume %s&quot;, base_url, volume_name</string>
+    <string>"HighWire Press Plugin (H20 for CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sclockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
+    <string>"%sclockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
       <entry>
         <string>au_title</string>
-        <string>&quot;%s&quot;, base_url</string>
+        <string>"%s", base_url</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>&quot;%sclockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
+        <string>"%sclockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
       </entry>
       <entry>
         <string>au_issue</string>
-        <string>&quot;%scontent/%s/%s.toc&quot;, base_url, volume_name, issue</string>
+        <string>"%scontent/%s/%s.toc", base_url, volume_name, issue</string>
       </entry>
       <entry>
         <string>au_article</string>
         <map>
           <entry>
             <string>pdf+html;*</string>
-            <string>&quot;%scontent/%s/%s/%s.full.pdf+html&quot;, base_url, volume_name, issue, article</string>
+            <string>"%scontent/%s/%s/%s.full.pdf+html", base_url, volume_name, issue, article</string>
           </entry>
           <entry>
             <string>pdf</string>
-            <string>&quot;%scontent/%s/%s/%s.full.pdf&quot;, base_url, volume_name, issue, article</string>
+            <string>"%scontent/%s/%s/%s.full.pdf", base_url, volume_name, issue, article</string>
           </entry>
           <entry>
             <string>html</string>
-            <string>&quot;%scontent/%s/%s/%s.full&quot;, base_url, volume_name, issue, article</string>
+            <string>"%scontent/%s/%s/%s.full", base_url, volume_name, issue, article</string>
           </entry>
         </map>
       </entry>
@@ -106,22 +106,31 @@
   </entry>
   <entry>
     <string>au_crawlrules</string>
+     <!-- 
+    specific inclusions
+
+    specific exclusions 
+      RU4166: exclude oxford supplement author-index pages, e.g.: http://humrep.oxfordjournals.org/content/26/suppl_1.author-index
+      RU4399: exclude with-ds & rss args until normalizer written, eg. 
+            http://jcb.rupress.org/cgi/content/short/195/5/704?rss=1&amp;ssource=mfr and 
+            http://jcb.rupress.org content/195/1/113.full.pdf+html?with-ds=yes
+     -->
     <list>
-      <string>2,&quot;^%s.*\.cover\.gif$&quot;, base_url</string>
-      <string>1,&quot;^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sclockss-manifest/vol_%s_manifest\.dtl$&quot;, base_url, volume_name</string>
-      <string>2,&quot;^%s.*\?tab=(metrics|related|responses)&quot;, base_url</string>
-      <string>2,&quot;^%s(content|lookup/volpage)/%s/.*(cited-by|patientinform-links|related-urls)=yes&quot;, base_url, volume_name</string>
-      <string>2,&quot;^%scontent/%s/.*/href/?$&quot;, base_url, volume_name</string>
-      <string>2,&quot;^%slookup/volpage/%s(/[^/]+)?$&quot;, base_url, volume_name</string>
-      <!-- RU4166: exclude oxford supplement author-index pages, e.g.: http://humrep.oxfordjournals.org/content/26/suppl_1.author-index -->
-      <string>2,&quot;^%scontent/%s/suppl_[0-9]*\.author-index$&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s(content|lookup/volpage)/%s(/|\.)&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s(cgi/content/[^/]+/%s|content/vol%s)/&quot;, base_url, volume_name, volume_name</string>
-      <string>1,&quot;^%s[^?]*DC(Supplemental|[0-9])&quot;, base_url</string>
-      <string>2,&quot;^%shighwire/filestream/powerpoint/&quot;, base_url</string>
-      <string>1,&quot;^%shighwire/filestream/&quot;, base_url</string>
+      <string>2,"^%s.*\.cover\.gif$", base_url</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sclockss-manifest/vol_%s_manifest\.dtl$", base_url, volume_name</string>
+      <string>2,"^%s.*\?tab=(metrics|related|responses)", base_url</string>
+      <string>2,"^%s(content|lookup/volpage)/%s/.*(cited-by|patientinform-links|related-urls)=yes", base_url, volume_name</string>
+      <string>2,"^%scontent/%s/.*/href/?$", base_url, volume_name</string>
+      <string>2,"^%slookup/volpage/%s(/[^/]+)?$", base_url, volume_name</string>
+      <string>2,"^%scontent/%s/suppl_[0-9]*\.author-index$", base_url, volume_name</string>
+      <string>2,"^%s(cgi/content/short|content)/%s/[^/]+/[^/]+[?&amp;](with-ds=|rss=)", base_url, volume_name</string>
+      <string>1,"^%s(content|lookup/volpage)/%s(/|\.)", base_url, volume_name</string>
+      <string>1,"^%s(cgi/content/[^/]+/%s|content/vol%s)/", base_url, volume_name, volume_name</string>
+      <string>1,"^%s[^?]*DC(Supplemental|[0-9])", base_url</string>
+      <string>2,"^%shighwire/filestream/powerpoint/", base_url</string>
+      <string>1,"^%shighwire/filestream/", base_url</string>
     </list>
   </entry>
   <entry>
@@ -174,7 +183,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%scontent/%s/.*\.full(\.pdf(\+html)?)?$&quot;, base_url, volume_name</string>
+      <string>"^%scontent/%s/.*\.full(\.pdf(\+html)?)?$", base_url, volume_name</string>
     </list>
   </entry>
   <entry>
