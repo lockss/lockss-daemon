@@ -17,10 +17,10 @@
     param[journal_abbr] = jorel
     implicit < status ; year ; name ; param[volume] >
     
-    au < exists ; 2009 ; Journal of Outdoor Recreation, Education, and Leadership Volume 1 ; 1 >
-    au < exists ; 2010 ; Journal of Outdoor Recreation, Education, and Leadership Volume 2 ; 2 >
-    au < exists ; 2011 ; Journal of Outdoor Recreation, Education, and Leadership Volume 3 ; 3 >
-    au < exists ; 2012 ; Journal of Outdoor Recreation, Education, and Leadership Volume 4 ; 4 >
+    au < wanted ; 2009 ; Journal of Outdoor Recreation, Education, and Leadership Volume 1 ; 1 >
+    au < wanted ; 2010 ; Journal of Outdoor Recreation, Education, and Leadership Volume 2 ; 2 >
+    au < wanted ; 2011 ; Journal of Outdoor Recreation, Education, and Leadership Volume 3 ; 3 >
+    au < wanted ; 2012 ; Journal of Outdoor Recreation, Education, and Leadership Volume 4 ; 4 >
 
   }
 
