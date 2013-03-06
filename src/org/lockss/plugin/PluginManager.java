@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.242 2013-02-27 06:01:20 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.243 2013-03-06 08:06:33 tlipkis Exp $
  */
 
 /*
@@ -2119,6 +2119,9 @@ public class PluginManager
       UrlSearch oldSearch;
       synchronized (currentUrlSearches) {
 	oldSearch = currentUrlSearches.get(newSearch);
+	if (oldSearch == null) {
+	  currentUrlSearches.put(newSearch, newSearch);
+	}
       }
       if (oldSearch != null) {
 	if (log.isDebug2()) {
@@ -2135,10 +2138,6 @@ public class PluginManager
 	  curSearchResCu++;
 	}
 	return oldRes;
-      } else {
-	synchronized (currentUrlSearches) {
-	  currentUrlSearches.put(newSearch, newSearch);
-	}
       }
       try {
 	cu = findTheCachedUrl0(url, contentReq);
