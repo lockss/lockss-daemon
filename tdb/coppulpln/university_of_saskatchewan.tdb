@@ -59,18 +59,18 @@
     {
     
       param[base_url] = http://library2.usask.ca/
-      attr[approvedForRemoval] = True
+      Xattr[approvedForRemoval] = True
       
-      au < superseded ; 2003 ; University of Saskatchewan Electronic Theses & Dissertations 2003 [approved for removal] ; 2003 >
-      au < superseded ; 2004 ; University of Saskatchewan Electronic Theses & Dissertations 2004 [approved for removal] ; 2004 >
-      au < superseded ; 2005 ; University of Saskatchewan Electronic Theses & Dissertations 2005 [approved for removal] ; 2005 >
-      au < superseded ; 2006 ; University of Saskatchewan Electronic Theses & Dissertations 2006 [approved for removal] ; 2006 >
-      au < superseded ; 2007 ; University of Saskatchewan Electronic Theses & Dissertations 2007 [approved for removal] ; 2007 >
-      au < superseded ; 2008 ; University of Saskatchewan Electronic Theses & Dissertations 2008 [approved for removal] ; 2008 >
-      au < superseded ; 2009 ; University of Saskatchewan Electronic Theses & Dissertations 2009 [approved for removal] ; 2009 >
-      au < superseded ; 2010 ; University of Saskatchewan Electronic Theses & Dissertations 2010 [approved for removal] ; 2010 >
-      au < superseded ; 2011 ; University of Saskatchewan Electronic Theses & Dissertations 2011 [approved for removal] ; 2011 >
-      au < superseded ; 2012 ; University of Saskatchewan Electronic Theses & Dissertations 2012 [approved for removal] ; 2012 >
+      au < down ; 2003 ; University of Saskatchewan Electronic Theses & Dissertations 2003 [approved for removal] ; 2003 >
+      au < down ; 2004 ; University of Saskatchewan Electronic Theses & Dissertations 2004 [approved for removal] ; 2004 >
+      au < down ; 2005 ; University of Saskatchewan Electronic Theses & Dissertations 2005 [approved for removal] ; 2005 >
+      au < down ; 2006 ; University of Saskatchewan Electronic Theses & Dissertations 2006 [approved for removal] ; 2006 >
+      au < down ; 2007 ; University of Saskatchewan Electronic Theses & Dissertations 2007 [approved for removal] ; 2007 >
+      au < down ; 2008 ; University of Saskatchewan Electronic Theses & Dissertations 2008 [approved for removal] ; 2008 >
+      au < down ; 2009 ; University of Saskatchewan Electronic Theses & Dissertations 2009 [approved for removal] ; 2009 >
+      au < down ; 2010 ; University of Saskatchewan Electronic Theses & Dissertations 2010 [approved for removal] ; 2010 >
+      au < down ; 2011 ; University of Saskatchewan Electronic Theses & Dissertations 2011 [approved for removal] ; 2011 >
+      au < down ; 2012 ; University of Saskatchewan Electronic Theses & Dissertations 2012 [approved for removal] ; 2012 >
 
     }
     
