@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.115 2013-01-10 03:35:10 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.116 2013-03-06 08:06:55 tlipkis Exp $
  */
 
 /*
@@ -242,21 +242,30 @@ public class ArchivalUnitStatus
       table.setSummaryInfo(getSummaryInfo(table, inclCols, stats));
     }
 
-    private List getRows(StatusTable table, Set<String> inclCols, Stats stats) {
+    private List getRows(StatusTable table, Set<String> inclCols, Stats stats)
+	throws StatusService.NoSuchTableException {
       PluginManager pluginMgr = theDaemon.getPluginManager();
 
       String key = table.getKey();
       Plugin onlyPlug = null;
-      if (key != null && key.startsWith("plugin:")) {
-	String[] foo = org.apache.commons.lang.StringUtils.split(key, ":", 2);
-	String plugid = foo[1];
-	if (!StringUtil.isNullString(plugid)) {
-	  onlyPlug = pluginMgr.getPlugin(PluginManager.pluginKeyFromId(plugid));
-	  if (onlyPlug != null) {
-	    table.setTitle(TABLE_TITLE + " for plugin " +
-			   StringUtil.shortName(onlyPlug.getPluginName()));
-	  }
+      if (key != null) {
+	if (!key.startsWith("plugin:")) {
+	  throw new StatusService.NoSuchTableException("Unknown selector: "
+						       + key);
 	}
+	String[] foo = org.apache.commons.lang.StringUtils.split(key, ":", 2);
+	if (foo.length < 2 || StringUtil.isNullString(foo[1])) {
+	  throw new StatusService.NoSuchTableException("Empty plugin id: "
+						       + key);
+	}	  
+	String plugid = foo[1];
+	onlyPlug = pluginMgr.getPlugin(PluginManager.pluginKeyFromId(plugid));
+	if (onlyPlug == null) {
+	  throw new StatusService.NoSuchTableException("Plugin not found: "
+						       + plugid);
+	}
+	table.setTitle(TABLE_TITLE + " for plugin " +
+		       StringUtil.shortName(onlyPlug.getPluginName()));
       }	
       boolean includeInternalAus =
 	table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
