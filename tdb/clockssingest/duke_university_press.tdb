@@ -189,42 +189,43 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://carlyleletters.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+      comment[plugin] = This journal is HighWire H10
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1824-1825 ; The Carlyle Letters Online Volume 3 ; 3 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1826-1828 ; The Carlyle Letters Online Volume 4 ; 4 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1829-1831 ; The Carlyle Letters Online Volume 5 ; 5 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1831-1833 ; The Carlyle Letters Online Volume 6 ; 6 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1833-1834 ; The Carlyle Letters Online Volume 7 ; 7 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1835-1836 ; The Carlyle Letters Online Volume 8 ; 8 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1836-1837 ; The Carlyle Letters Online Volume 9 ; 9 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1838 ; The Carlyle Letters Online Volume 10 ; 10 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1839 ; The Carlyle Letters Online Volume 11 ; 11 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1840 ; The Carlyle Letters Online Volume 12 ; 12 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1841 ; The Carlyle Letters Online Volume 13 ; 13 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1842 ; The Carlyle Letters Online Volume 14 ; 14 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1842 ; The Carlyle Letters Online Volume 15 ; 15 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1843 ; The Carlyle Letters Online Volume 16 ; 16 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1843-1844 ; The Carlyle Letters Online Volume 17 ; 17 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1844 ; The Carlyle Letters Online Volume 18 ; 18 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1845 ; The Carlyle Letters Online Volume 19 ; 19 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1845-1846 ; The Carlyle Letters Online Volume 20 ; 20 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1846-1847 ; The Carlyle Letters Online Volume 21 ; 21 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1847-1848 ; The Carlyle Letters Online Volume 22 ; 22 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1848-1849 ; The Carlyle Letters Online Volume 23 ; 23 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1849 ; The Carlyle Letters Online Volume 24 ; 24 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1850 ; The Carlyle Letters Online Volume 25 ; 25 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1851 ; The Carlyle Letters Online Volume 26 ; 26 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1852 ; The Carlyle Letters Online Volume 27 ; 27 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1853 ; The Carlyle Letters Online Volume 28 ; 28 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1854-1855 ; The Carlyle Letters Online Volume 29 ; 29 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1855 ; The Carlyle Letters Online Volume 30 ; 30 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1856 ; The Carlyle Letters Online Volume 31 ; 31 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1856-1857 ; The Carlyle Letters Online Volume 32 ; 32 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1858 ; The Carlyle Letters Online Volume 34 ; 34 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1859 ; The Carlyle Letters Online Volume 35 ; 35 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1824-1825 ; The Carlyle Letters Online Volume 3 ; 3 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1826-1828 ; The Carlyle Letters Online Volume 4 ; 4 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1829-1831 ; The Carlyle Letters Online Volume 5 ; 5 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1831-1833 ; The Carlyle Letters Online Volume 6 ; 6 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1833-1834 ; The Carlyle Letters Online Volume 7 ; 7 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1835-1836 ; The Carlyle Letters Online Volume 8 ; 8 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1836-1837 ; The Carlyle Letters Online Volume 9 ; 9 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1838 ; The Carlyle Letters Online Volume 10 ; 10 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1839 ; The Carlyle Letters Online Volume 11 ; 11 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1840 ; The Carlyle Letters Online Volume 12 ; 12 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1841 ; The Carlyle Letters Online Volume 13 ; 13 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1842 ; The Carlyle Letters Online Volume 14 ; 14 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1842 ; The Carlyle Letters Online Volume 15 ; 15 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1843 ; The Carlyle Letters Online Volume 16 ; 16 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1843-1844 ; The Carlyle Letters Online Volume 17 ; 17 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1844 ; The Carlyle Letters Online Volume 18 ; 18 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1845 ; The Carlyle Letters Online Volume 19 ; 19 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1845-1846 ; The Carlyle Letters Online Volume 20 ; 20 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1846-1847 ; The Carlyle Letters Online Volume 21 ; 21 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1847-1848 ; The Carlyle Letters Online Volume 22 ; 22 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1848-1849 ; The Carlyle Letters Online Volume 23 ; 23 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1849 ; The Carlyle Letters Online Volume 24 ; 24 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1850 ; The Carlyle Letters Online Volume 25 ; 25 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1851 ; The Carlyle Letters Online Volume 26 ; 26 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1852 ; The Carlyle Letters Online Volume 27 ; 27 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1853 ; The Carlyle Letters Online Volume 28 ; 28 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1854-1855 ; The Carlyle Letters Online Volume 29 ; 29 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1855 ; The Carlyle Letters Online Volume 30 ; 30 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1856 ; The Carlyle Letters Online Volume 31 ; 31 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1856-1857 ; The Carlyle Letters Online Volume 32 ; 32 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1858 ; The Carlyle Letters Online Volume 34 ; 34 >
+      au < ClockssHighWirePressPlugin ; manifest ; exists ; 1859 ; The Carlyle Letters Online Volume 35 ; 35 >
 
    }
 
