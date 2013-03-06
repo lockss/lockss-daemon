@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.20 2013-03-06 08:06:22 tlipkis Exp $
+ * $Id: Tdb.java,v 1.21 2013-03-06 09:19:48 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.20 2013-03-06 08:06:22 tlipkis Exp $
+ * @version $Id: Tdb.java,v 1.21 2013-03-06 09:19:48 tlipkis Exp $
  */
 public class Tdb {
   /**
@@ -96,7 +96,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.20 2013-03-06 08:06:22 tlipkis Exp $
+   * @version $Id: Tdb.java,v 1.21 2013-03-06 09:19:48 tlipkis Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -1202,7 +1202,8 @@ public class Tdb {
 	if (input instanceof TdbAu) {
 	  return input;
 	}
-	throw new ClassCastException();
+	throw new
+	  ClassCastException(input+" is not a TdbPublisher, TdbTitle or TdbAu");
       }};
 
   /** ObjectGraphIterator Transformer that descends into collections of
@@ -1215,7 +1216,8 @@ public class Tdb {
 	if (input instanceof TdbTitle) {
 	  return input;
 	}
-	throw new ClassCastException();
+	throw new
+	  ClassCastException(input+" is not a TdbPublisher or TdbTitle");
       }};
 
 
