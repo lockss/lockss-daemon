@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.90 2012-08-06 03:34:07 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.91 2013-03-06 08:06:41 tlipkis Exp $
  */
 
 /*
@@ -409,7 +409,11 @@ public class DaemonStatus extends LockssServlet {
 
   /** Prepend table name to servlet-specfici part of page title */
   protected String getTitleHeading() {
-    return statTable.getTitle() + " - " + super.getTitleHeading();
+    if (statTable == null) {
+      return super.getTitleHeading();
+    } else {
+      return statTable.getTitle() + " - " + super.getTitleHeading();
+    }
   }
 
   // Build the table, writing text to wrtr
