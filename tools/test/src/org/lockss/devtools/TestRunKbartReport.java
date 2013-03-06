@@ -1,5 +1,5 @@
 /*
- * $Id: TestRunKbartReport.java,v 1.7 2013-02-15 16:43:32 easyonthemayo Exp $
+ * $Id: TestRunKbartReport.java,v 1.8 2013-03-06 23:17:46 easyonthemayo Exp $
  */
 
 /*
@@ -299,6 +299,7 @@ public class TestRunKbartReport extends LockssTestCase {
             // retain non-field labels from the ordering
             for (String s : columnOrdering.getNonFieldColumnLabels()) {
               add(s);
+              //add(s.indexOf(" ")>=0 ? String.format("\"%s\"", s) : s);
             }
             // Also add title_url as it is filled in automatically by the exporter
             add(KbartTitle.Field.TITLE_URL.getLabel());
@@ -316,7 +317,9 @@ public class TestRunKbartReport extends LockssTestCase {
     // Header should be equivalent to the defined field ordering
     //assertEquals(expectedHeader.toLowerCase(), outputHeader.toLowerCase());
     // NOTE the utf output includes a BOM, which screws up comparison
-    System.out.format("%s\n%s\n", outputHeader, expectedHeader);
+    // Also remove quotes added by CVS output rules (this is a quick kludge)
+    outputHeader = outputHeader.replaceAll("\"", "");
+    System.out.format("Output %s\nExpected %s\n", outputHeader, expectedHeader);
     assertTrue(outputHeader.toLowerCase().endsWith(expectedHeader.toLowerCase()));
 
     // TODO record ordering should be alphabetical by title, or first column
