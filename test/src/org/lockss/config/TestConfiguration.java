@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.20 2013-03-06 08:06:22 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.21 2013-03-06 08:36:41 tlipkis Exp $
  */
 
 /*
@@ -344,7 +344,25 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals(4, diffs.getTdbAuDifferenceCount());
     assertEquals(SetUtil.set("plugin_t1p1", "plugin_t2p1"),
 		 diffs.getTdbDifferencePluginIds());
+
+    Map<String,TdbAu> tdbAus = getTdbAuMap(tdb1);
+    Tdb.Differences tdbDiffs = diffs.getTdbDifferences();
+    assertSameElements(ListUtil.list(tdbAus.get("a2t2p1"),
+				     tdbAus.get("a1t2p1"),
+				     tdbAus.get("a2t1p1"),
+				     tdbAus.get("a1t1p1")),
+		       ListUtil.fromIterator(tdbDiffs.newTdbAuIterator()));
   }
+
+  Map<String,TdbAu> getTdbAuMap(final Tdb tdb) {
+    Map<String,TdbAu> res = new HashMap<String,TdbAu>() {{
+	for (Iterator<TdbAu> iter = tdb.tdbAuIterator(); iter.hasNext(); ) {
+	  TdbAu tau = iter.next();
+	  put(tau.getName(), tau);
+	}}};
+    return res;
+  }
+
 
   public void testDifferencesNull() throws TdbException {
     testDifferencesNullOrEmpty(null);
@@ -369,6 +387,8 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals(-4, diffs.getTdbAuDifferenceCount());
     assertEquals(SetUtil.set("plugin_t1p1", "plugin_t2p1"),
 		 diffs.getTdbDifferencePluginIds());
+    Tdb.Differences tdbDiffs = diffs.getTdbDifferences();
+    assertEmpty(ListUtil.fromIterator(tdbDiffs.newTdbAuIterator()));
   }
 
   public void testDifferences() throws TdbException {
@@ -403,6 +423,14 @@ public class TestConfiguration extends LockssTestCase {
 				     "Y2plugin_t1p1", "Y2plugin_t2p1"},
       diffs.getTdbDifferencePluginIds());
     assertTrue(diffs.contains("a"));
+
+    Map<String,TdbAu> tdbAus = getTdbAuMap(tdb1);
+    Tdb.Differences tdbDiffs = diffs.getTdbDifferences();
+    assertSameElements(ListUtil.list(tdbAus.get("a2t2p1"),
+				     tdbAus.get("a1t2p1"),
+				     tdbAus.get("a2t1p1"),
+				     tdbAus.get("a1t1p1")),
+		       ListUtil.fromIterator(tdbDiffs.newTdbAuIterator()));
   }
 
   public void testLoad() throws IOException, Configuration.InvalidParam {

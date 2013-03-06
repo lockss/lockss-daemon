@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.37 2013-03-06 08:06:22 tlipkis Exp $
+ * $Id: Configuration.java,v 1.38 2013-03-06 08:36:41 tlipkis Exp $
  */
 
 /*
@@ -926,6 +926,16 @@ public abstract class Configuration {
       return diffKeys;
     }
     
+    /**
+     * Return the {@link Tdb.Differences} describing the changes in the Tdb
+     * between this configuration and the previous one
+     * 
+     * @return a {@link Tdb.Differences}
+     */
+    public Tdb.Differences getTdbDifferences() {
+      return tdbDiffs;
+    }
+
     /**
      * Return a set of pluginIDs for differences between two Tdbs.
      * This method is normally used by plugins.
