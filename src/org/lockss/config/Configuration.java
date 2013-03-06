@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.36 2012-08-29 00:17:31 tlipkis Exp $
+ * $Id: Configuration.java,v 1.37 2013-03-06 08:06:22 tlipkis Exp $
  */
 
 /*
@@ -309,24 +309,6 @@ public abstract class Configuration {
    */
   public abstract Set<String> differentKeys(Configuration otherConfig);
   
-
-  /** Return the set of pluginIds involved in differences between two configurations.
-   * @param otherConfig the config to compare with.  May be null.
-   */
-  public Set<String> differentPluginIds(Configuration otherConfig) {
-    Tdb tdb = getTdb();
-    Tdb otherTdb = (otherConfig == null) ? null : otherConfig.getTdb();
-    if (otherTdb == null) {
-      return (tdb == null) 
-        ? Collections.<String>emptySet() : tdb.getAllPluginsIds();
-    }
-    
-    if (tdb == null) {
-      return otherTdb.getAllPluginsIds();
-    }
-
-    return tdb.getPluginIdsForDifferences(otherTdb);
-  }
 
   /** Return true iff config has no keys or title database 
    * 
@@ -873,18 +855,18 @@ public abstract class Configuration {
   static public class Differences  {
     private final boolean containsAllKeys;
     private final Set<String> diffKeys;
-    private final Set<String> diffPluginIds;
-    private final int tdbAuCountDiff;
+    private final Tdb.Differences tdbDiffs;
     
     /**
-     * Create instance for differences between thisConfig and otherConfig.
+     * Create instance for differences between thisConfig and otherConfig
+     * (generally the previous config, or null)
      * <p>
      * A Configuration with no keys is treated specially. If otherConfig is  
      * null, or either configuration has no keys, the contains() method always 
      * returns <code>true</code>. Many parts of the system rely on this behavior. 
      * 
      * @param thisConfig this configuration
-     * @param otherConfig another configuration
+     * @param otherConfig the previous configuration
      */
     protected Differences(Configuration thisConfig, Configuration otherConfig) {
       if (thisConfig == null) {
@@ -905,8 +887,9 @@ public abstract class Configuration {
 	this.containsAllKeys = false;
 	this.diffKeys = thisConfig.differentKeys(otherConfig);
       }
-      this.tdbAuCountDiff = thisConfig.getTdbAuCount()-((otherConfig == null) ? 0 : otherConfig.getTdbAuCount());
-      this.diffPluginIds = thisConfig.differentPluginIds(otherConfig);
+      this.tdbDiffs = Tdb.computeDifferences(thisConfig.getTdb(),
+					     otherConfig == null ? null :
+					     otherConfig.getTdb());
     }
 
     /**
@@ -915,7 +898,7 @@ public abstract class Configuration {
      * @return <code>true</code> if this instance has no differences
      */
     public boolean isEmpty() {
-      return (tdbAuCountDiff == 0) && diffKeys.isEmpty();
+      return (getTdbAuDifferenceCount() == 0) && diffKeys.isEmpty();
     }
     
     /** 
@@ -950,7 +933,7 @@ public abstract class Configuration {
      * @return a set of pluginIDs for differences between two Tdbs.
      */
     public Set<String> getTdbDifferencePluginIds() {
-      return diffPluginIds;
+      return tdbDiffs.getPluginIdsForDifferences();
     }
 
     /**
@@ -962,7 +945,7 @@ public abstract class Configuration {
      *  the specified plugin
      */
     public boolean containsTdbPluginId(String pluginId) {
-      return diffPluginIds.contains(pluginId);
+      return getTdbDifferencePluginIds().contains(pluginId);
     }
     
     /**
@@ -972,7 +955,7 @@ public abstract class Configuration {
      * @return the difference in the number of Tdbs
      */
     public int getTdbAuDifferenceCount() {
-      return tdbAuCountDiff;
+      return tdbDiffs.getTdbAuDifferenceCount();
     }
 
     // For testing

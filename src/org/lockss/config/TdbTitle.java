@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.13 2013-01-16 21:27:07 pgust Exp $
+ * $Id: TdbTitle.java,v 1.14 2013-03-06 08:06:22 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
+import org.apache.commons.collections.iterators .*;
 
 import org.lockss.config.Tdb.TdbException;
 import org.lockss.util.*;
@@ -41,7 +42,7 @@ import org.lockss.util.*;
  * This class represents a title database title.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.13 2013-01-16 21:27:07 pgust Exp $
+ * @version $Id: TdbTitle.java,v 1.14 2013-03-06 08:06:22 tlipkis Exp $
  */
 public class TdbTitle {
   /**
@@ -523,7 +524,7 @@ public class TdbTitle {
    * Note: The returned collection should be treated as read-only
    * 
    * @param linkType the specified link type
-   * @return
+   * @return collection of title IDs
    */
   public Collection<String> getLinkedTdbTitleIdsForType(LinkType linkType) {
     if (linkType == null) {
@@ -558,6 +559,11 @@ public class TdbTitle {
    */
   public Collection<TdbAu> getTdbAus() {
     return tdbAus.values();
+  }
+
+  public Iterator<TdbAu> tdbAuIterator() {
+    return new ObjectGraphIterator(tdbAus.values().iterator(),
+				   Tdb.AU_ITER_XFORM);
   }
 
   /**
@@ -666,7 +672,7 @@ public class TdbTitle {
    * Add TdbAus with the specified TdbAu name.
    * 
    * @param tdbAuName the name of the AU to select
-   * @param tdbAus the collection to add to
+   * @param aus the collection to add to
    * @return <code>true</code> if TdbAus were added to the collection
    */
   public boolean getTdbAusByName(String tdbAuName, Collection<TdbAu> aus)
@@ -697,7 +703,7 @@ public class TdbTitle {
    * Add TdbAus for like the specified TdbAu name.
    * 
    * @param tdbAuName the name of the AU to select
-   * @param tdbAus the collection to add to
+   * @param aus the collection to add to
    * @return <code>true</code> if TdbAus were added to the collection
    */
   public boolean getTdbAusLikeName(String tdbAuName, Collection<TdbAu> aus)
@@ -741,18 +747,18 @@ public class TdbTitle {
   }
 
   /**
-   * Add all plugin IDs for this title.  This method is used
-   * by {@link Tdb#getChangedPluginIds(Tdb)}.
+   * Add all plugin IDs for this title.  This method is used by {@link
+   * Tdb#addDifferences(Tdb.Differences,Tdb)}.
    * 
-   * @param pluginIds a set of plugin IDs
+   * @param diffs the {@link Tdb.Differences} to add to.
    */
-  protected void addAllPluginIds(Set<String>pluginIds) {
-    if (pluginIds == null) {
-      throw new IllegalArgumentException("pluginIds cannot be null");
+  protected void addAllPluginIds(Tdb.Differences diffs) {
+    if (diffs == null) {
+      throw new IllegalArgumentException("diffs cannot be null");
     }
     
     for (TdbAu au : tdbAus.values()) {
-      pluginIds.add(au.getPluginId());
+      diffs.addPluginId(au.getPluginId());
     }
   }
   
@@ -774,7 +780,7 @@ public class TdbTitle {
       try {
         // if no exception thrown, there are no differences
         // because the method did not try to modify the set
-        addPluginIdsForDifferences(Collections.<String>emptySet(), (TdbTitle)o);
+	addDifferences(new Tdb.Differences.Unmodifiable(), (TdbTitle)o);
         return true;
       } catch (UnsupportedOperationException ex) {
         // differences because method tried to add to unmodifiable set
@@ -801,45 +807,45 @@ public class TdbTitle {
    * Add all plugin IDs for TdbAus that are different between this and
    * the specified title.
    * <p>
-   * This method is used by {@link Tdb#getChangedPluginIds(Tdb)}.
-   * @param pluginIds the pluginIds for TdbAus that are different 
+   * This method is used by {@link Tdb#addDifferences(Tdb.Differences,Tdb)}.
+   * @param diffs the {@link Tdb.Differences} to add to.
    * @throws TdbException if this TdbTitle's ID not set
    */
-  protected void addPluginIdsForDifferences(Set<String>pluginIds,TdbTitle title) 
+  protected void addDifferences(Tdb.Differences diffs, TdbTitle oldTitle) 
     throws TdbException {
     
-    if (pluginIds == null) {
-      throw new IllegalArgumentException("pluginIds cannot be null");
+    if (diffs == null) {
+      throw new IllegalArgumentException("diffs cannot be null");
     }
     
-    if (title == null) {
-      throw new IllegalArgumentException("title cannot be null");
+    if (oldTitle == null) {
+      throw new IllegalArgumentException("oldTitle cannot be null");
     }
     
-    if (!title.getId().equals(id)) {
+    if (!oldTitle.getId().equals(id)) {
       throw new IllegalArgumentException(
-                      "title ID \"" + title.getId() 
+                      "title ID \"" + oldTitle.getId() 
                     + "\" different than \"" + getId() + "\"");
     }
     
-    if (   !title.getName().equals(name)
-        || !title.getAllLinkedTitleIds().equals(this.getAllLinkedTitleIds())) {
+    if (   !oldTitle.getName().equals(name)
+        || !oldTitle.getAllLinkedTitleIds().equals(this.getAllLinkedTitleIds())) {
       // titles have changed if they don't have the same names or links
-      title.addAllPluginIds(pluginIds);
-      this.addAllPluginIds(pluginIds);
+      diffs.addTitle(oldTitle, Tdb.Differences.Type.Old);
+      diffs.addTitle(this, Tdb.Differences.Type.New);
     } else {
 
-      // pluginIDs for TdbAus that only appear in title
-      for (TdbAu titleAu : title.getTdbAus()) {
-        if (!getTdbAus().contains(titleAu)) {
+      // pluginIDs for TdbAus that only appear in oldTitle
+      for (TdbAu oldAu : oldTitle.getTdbAus()) {
+        if (!getTdbAus().contains(oldAu)) {
           // add pluginID for title AU that is not in this TdbTitle
-          pluginIds.add(titleAu.getPluginId());
+	  diffs.addAu(oldAu, Tdb.Differences.Type.Old);
         }
       }
       for (TdbAu thisAu : this.getTdbAus()) {
-        if (!title.getTdbAus().contains(thisAu)) {
-          // add pluginId for AU in this TdbTitle that is not in title 
-          pluginIds.add(thisAu.getPluginId());
+        if (!oldTitle.getTdbAus().contains(thisAu)) {
+          // add pluginId for AU in this TdbTitle that is not in oldTitle 
+	  diffs.addAu(thisAu, Tdb.Differences.Type.New);
         }
       }
     }

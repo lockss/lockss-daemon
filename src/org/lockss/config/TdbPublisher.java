@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.14 2013-01-09 09:37:43 tlipkis Exp $
+ * $Id: TdbPublisher.java,v 1.15 2013-03-06 08:06:22 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
+import org.apache.commons.collections.iterators .*;
 
 import org.lockss.config.Tdb.TdbException;
 import org.lockss.util.*;
@@ -41,7 +42,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.14 2013-01-09 09:37:43 tlipkis Exp $
+ * @version $Id: TdbPublisher.java,v 1.15 2013-03-06 08:06:22 tlipkis Exp $
  */
 public class TdbPublisher {
   /**
@@ -115,6 +116,16 @@ public class TdbPublisher {
     return titlesById.values();
   }
   
+  public Iterator<TdbTitle> tdbTitleIterator() {
+    return new ObjectGraphIterator(titlesById.values().iterator(),
+				   Tdb.TITLE_ITER_XFORM);
+  }
+
+  public Iterator<TdbAu> tdbAuIterator() {
+    return new ObjectGraphIterator(titlesById.values().iterator(),
+				   Tdb.AU_ITER_XFORM);
+  }
+
   /**
    * Return the collection of TdbTitles for this publisher
    * with the specified title name.
@@ -202,7 +213,7 @@ public class TdbPublisher {
    * Add TdbAus with the specified TdbAu name.
    * 
    * @param tdbAuName the name of the AU to select
-   * @param tdbAus the collection to add to
+   * @param aus the collection to add to
    * @return <code>true</code> if TdbAus were added to the collection
    */
   public boolean getTdbAusByName(String tdbAuName, Collection<TdbAu> aus)
@@ -231,7 +242,7 @@ public class TdbPublisher {
    * Add TdbAus for like the specified TdbAu name.
    * 
    * @param tdbAuName the name of the AU to select
-   * @param tdbAus the collection to add to
+   * @param aus the collection to add to
    * @return <code>true</code> if TdbAus were added to the collection
    */
   public boolean getTdbAusLikeName(String tdbAuName, Collection<TdbAu> aus)
@@ -348,54 +359,57 @@ public class TdbPublisher {
   
   /**
    * Add plugin IDs of all TdbAus in this publisher to the input set.
-   * This method is used by {@link Tdb#getChangedPluginIds(Tdb)}.
+   * This method is used by {@link Tdb#addDifferences(Tdb.Differences,Tdb)}.
    * 
-   * @param pluginIds the set of plugin IDs to add to.
+   * @param diffs the {@link Tdb.Differences} to add to.
    */
-  protected void addAllPluginIds(Set<String>pluginIds) {
+  protected void addAllPluginIds(Tdb.Differences diffs) {
     for (TdbTitle title : titlesById.values()) {
-      title.addAllPluginIds(pluginIds);
+      title.addAllPluginIds(diffs);
     }
   }
   
+
+
   /**
    * Add plugin IDs for all TdbAus in this publisher that are
    * different between this and the specified publisher.
    * <p>
-   * This method is used by {@link Tdb#getChangedPluginIds(Tdb)}.
-   * @param pluginIds the set of plugin IDs to add to 
+   * This method is used by {@link Tdb#addDifferences(Tdb.Differences,Tdb)}.
+   * @param diffs the {@link Tdb.Differences} to add to.
+   * @param oldPublisher the other TdbPublisher to compare to.
    */
-  protected void addPluginIdsForDifferences(Set<String>pluginIds, TdbPublisher publisher) {
-    if (pluginIds == null) {
-      throw new IllegalArgumentException("pluginIds cannot be null");
+  protected void addDifferences(Tdb.Differences diffs,
+				TdbPublisher oldPublisher) {
+    if (diffs == null) {
+      throw new IllegalArgumentException("diffs cannot be null");
     }
     
-    if (publisher == null) {
+    if (oldPublisher == null) {
       throw new IllegalArgumentException("pubisher cannot be null");
     }
     
-    // add pluginIDs for TdbTitles that only appear in publisher
-    for (TdbTitle publisherTitle : publisher.getTdbTitles()) {
-      if (this.getTdbTitleById(publisherTitle.getId()) == null) {
-        // add all pluginIDs for publisher title not in this TdbPublisher
-        publisherTitle.addAllPluginIds(pluginIds);
+    // add the TdbTitles that only appear in publisher
+    for (TdbTitle oldTitle : oldPublisher.getTdbTitles()) {
+      if (this.getTdbTitleById(oldTitle.getId()) == null) {
+	diffs.addTitle(oldTitle, Tdb.Differences.Type.Old);
       }
     }
     
     // search titles in this publisher
     for (TdbTitle thisTitle : this.titlesById.values()) {
-      TdbTitle publisherTitle = publisher.getTdbTitleById(thisTitle.getId());
-      if (publisherTitle == null) {
+      TdbTitle oldTitle = oldPublisher.getTdbTitleById(thisTitle.getId());
+      if (oldTitle == null) {
         // add all pluginIDs for title not in publisher
-        thisTitle.addAllPluginIds(pluginIds);
+	diffs.addTitle(thisTitle, Tdb.Differences.Type.New);
+	thisTitle.addAllPluginIds(diffs);
       } else {
         try {
-        // add pluginIDs for differences in titles with the same title ID
-        thisTitle.addPluginIdsForDifferences(pluginIds, publisherTitle);
+	  // add pluginIDs for differences in titles with the same title ID
+	  thisTitle.addDifferences(diffs, oldTitle);
         } catch (TdbException ex) {
           // won't happen because all titles for publisher have an ID
           logger.error("Internal error: title with no id: " + thisTitle, ex);
-          
         }
       }
     }
@@ -417,7 +431,7 @@ public class TdbPublisher {
       try {
         // if no exception thrown, there are no differences
         // because the method did not try to modify the set
-        addPluginIdsForDifferences(Collections.<String>emptySet(), (TdbPublisher)o);
+	addDifferences(new Tdb.Differences.Unmodifiable(), (TdbPublisher)o);
         return true;
       } catch (UnsupportedOperationException ex) {
         // differences because method tried to add to unmodifiable set

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbTitle.java,v 1.6 2012-01-16 17:47:39 pgust Exp $
+ * $Id: TestTdbTitle.java,v 1.7 2013-03-06 08:06:21 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbTitle</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbTitle.java,v 1.6 2012-01-16 17:47:39 pgust Exp $
+ * @version $Id: TestTdbTitle.java,v 1.7 2013-03-06 08:06:21 tlipkis Exp $
  */
 
 public class TestTdbTitle extends LockssTestCase {
@@ -188,6 +188,8 @@ public class TestTdbTitle extends LockssTestCase {
     assertNotNull(aus);
     assertEquals(1, aus.size());
     assertTrue(aus.contains(au));
+    assertSameElements(ListUtil.list(au),
+		       ListUtil.fromIterator(title.tdbAuIterator()));
     
     // can't add same AU twice
     try {
@@ -403,13 +405,13 @@ public class TestTdbTitle extends LockssTestCase {
     au3.setPluginVersion("3");
     title3.addTdbAu(au3);
 
-    Set<String> diff12 = new HashSet<String>();
-    title1.addPluginIdsForDifferences(diff12, title2);
-    assertEquals(0, diff12.size());
+    Tdb.Differences diffs12 = new Tdb.Differences();
+    title1.addDifferences(diffs12, title2);
+    assertEquals(0, diffs12.getPluginIdsForDifferences().size());
     
-    Set<String> diff13 = new HashSet<String>();
-    title1.addPluginIdsForDifferences(diff13, title3);
-    assertEquals(2, diff13.size());
+    Tdb.Differences diffs13 = new Tdb.Differences();
+    title1.addDifferences(diffs13, title3);
+    assertEquals(2, diffs13.getPluginIdsForDifferences().size());
   }
   
   /**

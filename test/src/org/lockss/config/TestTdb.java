@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdb.java,v 1.8 2011-10-26 17:11:29 pgust Exp $
+ * $Id: TestTdb.java,v 1.9 2013-03-06 08:06:22 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.Tdb</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdb.java,v 1.8 2011-10-26 17:11:29 pgust Exp $
+ * @version $Id: TestTdb.java,v 1.9 2013-03-06 08:06:22 tlipkis Exp $
  */
 
 public class TestTdb extends LockssTestCase {
@@ -58,6 +58,17 @@ public class TestTdb extends LockssTestCase {
 
   static Logger log = Logger.getLogger("TestTdb");
 
+  TdbPublisher p1;
+  TdbTitle t1p1;
+  TdbTitle t2p1;
+  TdbTitle t3p1;
+  TdbAu a1t1p1;
+  TdbAu a2t1p1;
+  TdbAu a1t2p1;
+  TdbAu a2t2p1;
+  TdbAu a1t3p1;
+
+
   /**
    * Add test publisher1 to this Tdb. 
    * 
@@ -65,32 +76,32 @@ public class TestTdb extends LockssTestCase {
    * @throws TdbException for invalid Tdb operations
    */
   private void addTestPublisher1(Tdb tdb) throws TdbException {
-    TdbPublisher p1 = new TdbPublisher("p1");
+    p1 = new TdbPublisher("p1");
   
     // create title with 2 aus with different plugins
-    TdbTitle t1p1 = new TdbTitle("t1p1", "0001-0001");
+    t1p1 = new TdbTitle("t1p1", "0001-0001");
     p1.addTdbTitle(t1p1);
-    TdbAu a1t1p1 = new TdbAu("a1t1p1", "plugin_t1p1");
+    a1t1p1 = new TdbAu("a1t1p1", "plugin_t1p1");
     a1t1p1.setParam("param", "1");
     t1p1.addTdbAu(a1t1p1);
-    TdbAu a2t1p1 = new TdbAu("a2t1p1", "plugin_t1p1");
+    a2t1p1 = new TdbAu("a2t1p1", "plugin_t1p1");
     a2t1p1.setParam("param", "2");
     t1p1.addTdbAu(a2t1p1);
 
     // create title with 2 aus with the same plugin
-    TdbTitle t2p1 = new TdbTitle("t2p1", "0010-0010");
+    t2p1 = new TdbTitle("t2p1", "0010-0010");
     p1.addTdbTitle(t2p1);
-    TdbAu a1t2p1 = new TdbAu("a1t2p1", "plugin_t2p1");
+    a1t2p1 = new TdbAu("a1t2p1", "plugin_t2p1");
     a1t2p1.setParam("param", "1");
     t2p1.addTdbAu(a1t2p1);
-    TdbAu a2t2p1 = new TdbAu("a2t2p1", "plugin_t2p1");
+    a2t2p1 = new TdbAu("a2t2p1", "plugin_t2p1");
     a2t2p1.setParam("param", "2");
     t2p1.addTdbAu(a2t2p1);
 
     // create title with 1 au
-    TdbTitle t3p1 = new TdbTitle("t3p1", "0010-1001");
+    t3p1 = new TdbTitle("t3p1", "0010-1001");
     p1.addTdbTitle(t3p1);
-    TdbAu a1t3p1 = new TdbAu("a1t3p1", "plugin_t3p1");
+    a1t3p1 = new TdbAu("a1t3p1", "plugin_t3p1");
     a1t3p1.setParam("param", "1");
     a1t3p1.setAttr("attr", "x");
     t3p1.addTdbAu(a1t3p1);
@@ -103,6 +114,17 @@ public class TestTdb extends LockssTestCase {
     tdb.addTdbAu(a1t3p1);
   }
 
+  TdbPublisher p1_changed;
+  TdbTitle t1p1_changed;
+  TdbTitle t2p1_changed;
+  TdbTitle t3p1_changed;
+  TdbAu a1t1p1_changed;
+  TdbAu a2t1p1_changed;
+  TdbAu a1t2p1_changed;
+  TdbAu a2t2p1_changed;
+  TdbAu a1t3p1_changed;
+
+
   /**
    * Add changed test publisher1 to this Tdb. This pubisher is different
    * than test publisher 1 in that the TdbTitle name is "xyzzy" instead
@@ -112,44 +134,53 @@ public class TestTdb extends LockssTestCase {
    * @throws TdbException for invalid Tdb operations
    */
   private void addTestPublisher1_Changed(Tdb tdb) throws TdbException {
-    TdbPublisher p1 = new TdbPublisher("p1");
+    p1_changed = new TdbPublisher("p1");
   
     // create title with 2 aus with different plugins
-    TdbTitle t1p1 = new TdbTitle("t1p1", "0001-0001");
-    p1.addTdbTitle(t1p1);
-    TdbAu a1t1p1 = new TdbAu("a1t1p1", "plugin_t1p1");
-    a1t1p1.setParam("param", "1");
-    a1t1p1.setPluginVersion("3");
-    t1p1.addTdbAu(a1t1p1);
-    TdbAu a2t1p1 = new TdbAu("a2t1p1", "plugin_t1p1");
-    a2t1p1.setParam("param", "2");
-    t1p1.addTdbAu(a2t1p1);
+    t1p1_changed = new TdbTitle("t1p1", "0001-0001");
+    p1_changed.addTdbTitle(t1p1_changed);
+    a1t1p1_changed = new TdbAu("a1t1p1c", "plugin_t1p1");
+    a1t1p1_changed.setParam("param", "1");
+    a1t1p1_changed.setPluginVersion("3");
+    t1p1_changed.addTdbAu(a1t1p1_changed);
+    a2t1p1_changed = new TdbAu("a2t1p1c", "plugin_t1p1");
+    a2t1p1_changed.setParam("param", "2");
+    t1p1_changed.addTdbAu(a2t1p1_changed);
 
     // create title with 2 aus with the same plugin
-    TdbTitle t2p1 = new TdbTitle("xyzzy", "0010-0010");
-    p1.addTdbTitle(t2p1);
-    TdbAu a1t2p1 = new TdbAu("a1t2p1", "plugin_t2p1");
-    a1t2p1.setParam("param", "1");
-    t2p1.addTdbAu(a1t2p1);
-    TdbAu a2t2p1 = new TdbAu("a2t2p1", "plugin_t2p1");
-    a2t2p1.setParam("param", "2");
-    t2p1.addTdbAu(a2t2p1);
+    t2p1_changed = new TdbTitle("xyzzy", "0010-0010");
+    p1_changed.addTdbTitle(t2p1_changed);
+    a1t2p1_changed = new TdbAu("a1t2p1c", "plugin_t2p1");
+    a1t2p1_changed.setParam("param", "1");
+    t2p1_changed.addTdbAu(a1t2p1_changed);
+    a2t2p1_changed = new TdbAu("a2t2p1c", "plugin_t2p1");
+    a2t2p1_changed.setParam("param", "2");
+    t2p1_changed.addTdbAu(a2t2p1_changed);
 
     // create title with 1 au
-    TdbTitle t3p1 = new TdbTitle("t3p1", "0010-1001");
-    p1.addTdbTitle(t3p1);
-    TdbAu a1t3p1 = new TdbAu("a1t3p1", "plugin_t3p1");
-    a1t3p1.setParam("param", "1");
-    a1t3p1.setAttr("attr", "y");
-    t3p1.addTdbAu(a1t3p1);
+    t3p1_changed = new TdbTitle("t3p1", "0010-1001");
+    p1_changed.addTdbTitle(t3p1_changed);
+    a1t3p1_changed = new TdbAu("a1t3p1c", "plugin_t3p1");
+    a1t3p1_changed.setParam("param", "1");
+    a1t3p1_changed.setAttr("attr", "y");
+    t3p1_changed.addTdbAu(a1t3p1_changed);
 
     // add AUs for publisher p1
-    tdb.addTdbAu(a1t1p1);
-    tdb.addTdbAu(a2t1p1);
-    tdb.addTdbAu(a1t2p1);
-    tdb.addTdbAu(a2t2p1);
-    tdb.addTdbAu(a1t3p1);
+    tdb.addTdbAu(a1t1p1_changed);
+    tdb.addTdbAu(a2t1p1_changed);
+    tdb.addTdbAu(a1t2p1_changed);
+    tdb.addTdbAu(a2t2p1_changed);
+    tdb.addTdbAu(a1t3p1_changed);
   }
+
+  TdbPublisher p2;
+  TdbTitle t1p2;
+  TdbTitle t2p2;
+  TdbAu a1t1p2;
+  TdbAu a2t1p2;
+  TdbAu a1t2p2;
+  TdbAu a2t2p2;
+
 
   /**
    * Add publisher2 to this Tdb.
@@ -158,23 +189,23 @@ public class TestTdb extends LockssTestCase {
    * @throws TdbException for invalid Tdb operations
    */
   private void addTestPublisher2(Tdb tdb) throws TdbException {
-    TdbPublisher p2 = new TdbPublisher("p2");
+    p2 = new TdbPublisher("p2");
     // add two title to p2
-    TdbTitle t1p2 = new TdbTitle("t1p2", "0000-0001");
+    t1p2 = new TdbTitle("t1p2", "0000-0001");
     p2.addTdbTitle(t1p2);
-    TdbAu a1t1p2 = new TdbAu("a1t1p2", "plugin_p2");
+    a1t1p2 = new TdbAu("a1t1p2", "plugin_p2");
     a1t1p2.setParam("param", "1");
     t1p2.addTdbAu(a1t1p2);
-    TdbAu a2t1p2 = new TdbAu("a2t1p2", "plugin_p2");
+    a2t1p2 = new TdbAu("a2t1p2", "plugin_p2");
     a2t1p2.setParam("param", "2");
     t1p2.addTdbAu(a2t1p2);
 
-    TdbTitle t2p2 = new TdbTitle("t2p2", "0000-0002");
+    t2p2 = new TdbTitle("t2p2", "0000-0002");
     p2.addTdbTitle(t2p2);
-    TdbAu a1t2p2 = new TdbAu("a1t2p2", "plugin_p2");
+    a1t2p2 = new TdbAu("a1t2p2", "plugin_p2");
     a1t2p2.setParam("param", "3");
     t2p2.addTdbAu(a1t2p2);
-    TdbAu a2t2p2 = new TdbAu("a2t2p2", "plugin_p2");
+    a2t2p2 = new TdbAu("a2t2p2", "plugin_p2");
     a2t2p2.setParam("param", "4");
     t2p2.addTdbAu(a2t2p2);
 
@@ -185,6 +216,14 @@ public class TestTdb extends LockssTestCase {
     tdb.addTdbAu(a2t2p2);
   }
   
+  TdbPublisher p2_changed;
+  TdbTitle t1p2_changed;
+  TdbTitle t2p2_changed;
+  TdbAu a1t1p2_changed;
+  TdbAu a2t1p2_changed;
+  TdbAu a1t2p2_changed;
+  TdbAu a2t2p2_changed;
+
   /**
    * Add changed test publisher2 to this Tdb. This pubisher is different
    * than test publisher in that TdbTitle t1p2 has a "continuedBy" link
@@ -194,33 +233,33 @@ public class TestTdb extends LockssTestCase {
    * @throws TdbException for invalid Tdb operations
    */
   private void addTestPublisher2_Changed(Tdb tdb) throws TdbException {
-    TdbPublisher p2 = new TdbPublisher("p2");
-    // add two title to p2
-    TdbTitle t1p2 = new TdbTitle("t1p2", "0000-0001");
-    t1p2.addLinkToTdbTitleId(TdbTitle.LinkType.continuedBy, "0001-0001");
-    p2.addTdbTitle(t1p2);
-    TdbAu a1t1p2 = new TdbAu("a1t1p2", "plugin_p2");
-    a1t1p2.setParam("param", "1");
-    t1p2.addTdbAu(a1t1p2);
-    TdbAu a2t1p2 = new TdbAu("a2t1p2", "plugin_p2");
-    a2t1p2.setParam("param", "2");
-    t1p2.addTdbAu(a2t1p2);
+    p2_changed = new TdbPublisher("p2");
+    // add two title to p2_changed
+    t1p2_changed = new TdbTitle("t1p2", "0000-0001");
+    t1p2_changed.addLinkToTdbTitleId(TdbTitle.LinkType.continuedBy, "0001-0001");
+    p2_changed.addTdbTitle(t1p2_changed);
+    a1t1p2_changed = new TdbAu("a1t1p2c", "plugin_p2");
+    a1t1p2_changed.setParam("param", "1");
+    t1p2_changed.addTdbAu(a1t1p2_changed);
+    a2t1p2_changed = new TdbAu("a2t1p2c", "plugin_p2");
+    a2t1p2_changed.setParam("param", "2");
+    t1p2_changed.addTdbAu(a2t1p2_changed);
 
-    TdbTitle t2p2 = new TdbTitle("t2p2", "0000-0002");
-    p2.addTdbTitle(t2p2);
-    TdbAu a1t2p2 = new TdbAu("a1t2p2", "plugin_p2");
-    a1t2p2.setParam("param", "3");
-    t2p2.addTdbAu(a1t2p2);
-    TdbAu a2t2p2 = new TdbAu("a2t2p2", "plugin_p2");
-    a2t2p2.setParam("param1", "value1");
-    a2t2p2.setParam("param", "3");
-    t2p2.addTdbAu(a2t2p2);
+    t2p2_changed = new TdbTitle("t2p2", "0000-0002");
+    p2_changed.addTdbTitle(t2p2_changed);
+    a1t2p2_changed = new TdbAu("a1t2p2c", "plugin_p2");
+    a1t2p2_changed.setParam("param", "3");
+    t2p2_changed.addTdbAu(a1t2p2_changed);
+    a2t2p2_changed = new TdbAu("a2t2p2c", "plugin_p2");
+    a2t2p2_changed.setParam("param1", "value1");
+    a2t2p2_changed.setParam("param", "3");
+    t2p2_changed.addTdbAu(a2t2p2_changed);
 
-    // add AUs for publisher p2
-    tdb.addTdbAu(a1t1p2);
-    tdb.addTdbAu(a2t1p2);
-    tdb.addTdbAu(a1t2p2);
-    tdb.addTdbAu(a2t2p2);
+    // add AUs for publisher p2_changed
+    tdb.addTdbAu(a1t1p2_changed);
+    tdb.addTdbAu(a2t1p2_changed);
+    tdb.addTdbAu(a1t2p2_changed);
+    tdb.addTdbAu(a2t2p2_changed);
   }
   
   /**
@@ -422,11 +461,47 @@ public class TestTdb extends LockssTestCase {
     assertNotEquals(tdb1, tdb5);
 }
   
+  List fromIter(Iterator iter) {
+    return ListUtil.fromIterator(iter);
+  }
+
   /**
-   * Test creating valid TdbTitle.
+   * Test iterators
+   */
+  public void testIterators() throws TdbException {
+    Tdb tdb1 = new Tdb();
+    addTestPublisher1(tdb1);
+    assertSameElements(ListUtil.list(p1),
+		       fromIter(tdb1.tdbPublisherIterator()));
+    assertSameElements(ListUtil.list(t1p1, t2p1, t3p1),
+		       fromIter(tdb1.tdbTitleIterator()));
+    assertSameElements(ListUtil.list(a1t1p1, a2t1p1, a1t2p1, a2t2p1, a1t3p1),
+		       fromIter(tdb1.tdbAuIterator()));
+    
+    assertSameElements(fromIter(tdb1.tdbTitleIterator()),
+		       fromIter(p1.tdbTitleIterator()));
+    assertSameElements(fromIter(tdb1.tdbAuIterator()),
+		       fromIter(p1.tdbAuIterator()));
+    assertSameElements(ListUtil.list(a1t1p1, a2t1p1),
+		       fromIter(t1p1.tdbAuIterator()));
+    
+
+
+    addTestPublisher2(tdb1);
+    assertSameElements(ListUtil.list(p1, p2),
+		       fromIter(tdb1.tdbPublisherIterator()));
+    assertSameElements(ListUtil.list(t1p1, t2p1, t3p1, t1p2, t2p2),
+		       fromIter(tdb1.tdbTitleIterator()));
+    assertSameElements(ListUtil.list(a1t1p1, a2t1p1, a1t2p1, a2t2p1, a1t3p1,
+				     a1t1p2, a2t1p2, a1t2p2, a2t2p2),
+		       fromIter(tdb1.tdbAuIterator()));
+  }    
+
+  /**
+   * Test Tdb.Difference mechanism
    * @throws TdbException for invalid Tdb operations
    */
-  public void testGetPluginIdsForDifferences()  throws TdbException {
+  public void testDifferences() throws TdbException {
     Tdb tdb1 = new Tdb();
     addTestPublisher1(tdb1);
     addTestPublisher2(tdb1);
@@ -435,40 +510,184 @@ public class TestTdb extends LockssTestCase {
     addTestPublisher1(tdb2);
     addTestPublisher2(tdb2);
 
+    // Differences between a Tdb and null should be equal to Tdb
+    Tdb.Differences diffs0 = Tdb.computeDifferences(tdb1, null);
+    assertEquals(4, diffs0.getPluginIdsForDifferences().size());
+    assertSameElements(ListUtil.list(p1, p2),
+		       diffs0.rawNewTdbPublishers());
+    assertSameElements(fromIter(tdb1.tdbPublisherIterator()),
+		       fromIter(diffs0.newTdbPublisherIterator()));
+    assertEmpty(diffs0.rawNewTdbTitles());
+    assertSameElements(fromIter(tdb1.tdbTitleIterator()),
+		       fromIter(diffs0.newTdbTitleIterator()));
+    assertEmpty(diffs0.rawNewTdbAus());
+    assertSameElements(fromIter(tdb1.tdbAuIterator()),
+		       fromIter(diffs0.newTdbAuIterator()));
+
     // verify no differences between a Tdb and itself
-    assertEquals(0, tdb1.getPluginIdsForDifferences(tdb1).size());
+    Tdb.Differences diffs = tdb1.computeDifferences(tdb1);
+    assertEquals(0, diffs.getPluginIdsForDifferences().size());
+    assertEmpty(diffs.rawNewTdbPublishers());
+    assertEmpty(diffs.rawNewTdbTitles());
+    assertEmpty(diffs.rawNewTdbAus());
+    assertEmpty(fromIter(diffs.newTdbTitleIterator()));
+    assertEmpty(fromIter(diffs.newTdbAuIterator()));
+    assertEmpty(fromIter(diffs.newTdbPublisherIterator()));
     
-    Collection<String> changedPluginIds12 = tdb1.getPluginIdsForDifferences(tdb2);
-    assertEquals(0, changedPluginIds12.size());
+    Tdb.Differences diffs12 = tdb1.computeDifferences(tdb2);
+    assertEquals(0, diffs12.getPluginIdsForDifferences().size());
+    assertEmpty(diffs12.rawNewTdbPublishers());
+    assertEmpty(diffs12.rawNewTdbTitles());
+    assertEmpty(diffs12.rawNewTdbAus());
+    assertEmpty(fromIter(diffs12.newTdbTitleIterator()));
+    assertEmpty(fromIter(diffs12.newTdbAuIterator()));
+    assertEmpty(fromIter(diffs12.newTdbPublisherIterator()));
 
     Tdb tdb3 = new Tdb();
     addTestPublisher1_Changed(tdb3);
     addTestPublisher2(tdb3);
     
-    Collection<String> changedPluginIds13 = tdb1.getPluginIdsForDifferences(tdb3);
+    Tdb.Differences diffs13 = tdb1.computeDifferences(tdb3);
+    Collection<String> changedPluginIds13 =
+      diffs13.getPluginIdsForDifferences();
     assertEquals(3, changedPluginIds13.size());
-    assertTrue(changedPluginIds13.contains("plugin_t3p1"));
-    assertTrue(changedPluginIds13.contains("plugin_t2p1"));
-    assertTrue(changedPluginIds13.contains("plugin_t1p1"));
+    assertSameElements(ListUtil.list("plugin_t3p1", "plugin_t2p1", "plugin_t1p1"),
+		       changedPluginIds13);
+    assertEmpty(diffs13.rawNewTdbPublishers());
+    assertEmpty(fromIter(diffs13.newTdbPublisherIterator()));
+    assertSameElements(ListUtil.list(t2p1), diffs13.rawNewTdbTitles());
+    assertSameElements(ListUtil.list(t2p1),
+		       fromIter(diffs13.newTdbTitleIterator()));
+    assertSameElements(ListUtil.list(a1t1p1, a1t3p1), diffs13.rawNewTdbAus());
+    assertSameElements(ListUtil.list(a1t1p1, a1t2p1, a2t2p1, a1t3p1),
+		       fromIter(diffs13.newTdbAuIterator()));
 
+    Tdb.Differences diffs31 = tdb3.computeDifferences(tdb1);
+    Collection<String> changedPluginIds31 =
+      diffs31.getPluginIdsForDifferences();
+    assertEquals(3, changedPluginIds31.size());
+    assertSameElements(ListUtil.list("plugin_t3p1", "plugin_t2p1", "plugin_t1p1"),
+		       changedPluginIds31);
+    assertEmpty(diffs31.rawNewTdbPublishers());
+    assertEmpty(fromIter(diffs31.newTdbPublisherIterator()));
+    assertSameElements(ListUtil.list(t2p1_changed), diffs31.rawNewTdbTitles());
+    assertSameElements(ListUtil.list(t2p1_changed),
+		       fromIter(diffs31.newTdbTitleIterator()));
+    assertSameElements(ListUtil.list(a1t3p1_changed, a1t1p1_changed),
+		       diffs31.rawNewTdbAus());
+    assertSameElements(ListUtil.list(a1t3p1_changed, a1t1p1_changed,
+				     a1t2p1_changed, a2t2p1_changed),
+		       fromIter(diffs31.newTdbAuIterator()));
+    
     Tdb tdb4 = new Tdb();
     addTestPublisher1(tdb4);
     addTestPublisher2_Changed(tdb4);
     
-    Collection<String> changedPluginIds14 = tdb1.getPluginIdsForDifferences(tdb4);
+    Tdb.Differences diffs14 = tdb1.computeDifferences(tdb4);
+    Collection<String> changedPluginIds14 =
+      diffs14.getPluginIdsForDifferences();
     assertEquals(1, changedPluginIds14.size());
     assertTrue(changedPluginIds14.contains("plugin_p2"));
+    assertSameElements(ListUtil.list("plugin_p2"), changedPluginIds14);
+    assertEmpty(diffs14.rawNewTdbPublishers());
+    assertEmpty(fromIter(diffs14.newTdbPublisherIterator()));
+    assertSameElements(ListUtil.list(t1p2), diffs14.rawNewTdbTitles());
+    assertSameElements(ListUtil.list(t1p2),
+		       fromIter(diffs14.newTdbTitleIterator()));
+    assertSameElements(ListUtil.list(a2t2p2), diffs14.rawNewTdbAus());
+    assertSameElements(ListUtil.list(a1t1p2, a2t1p2, a2t2p2),
+		       fromIter(diffs14.newTdbAuIterator()));
+
+
+    Tdb.Differences diffs41 = tdb4.computeDifferences(tdb1);
+    Collection<String> changedPluginIds41 =
+      diffs41.getPluginIdsForDifferences();
+    assertEquals(1, changedPluginIds41.size());
+    assertSameElements(ListUtil.list("plugin_p2"), changedPluginIds41);
+    assertEmpty(diffs41.rawNewTdbPublishers());
+    assertEmpty(fromIter(diffs41.newTdbPublisherIterator()));
+    assertSameElements(ListUtil.list(t1p2_changed), diffs41.rawNewTdbTitles());
+    assertSameElements(ListUtil.list(t1p2_changed),
+		       fromIter(diffs41.newTdbTitleIterator()));
+    assertSameElements(ListUtil.list(a2t2p2_changed), diffs41.rawNewTdbAus());
+    assertSameElements(ListUtil.list(a1t1p2_changed, a2t1p2_changed,
+				     a2t2p2_changed),
+		       fromIter(diffs41.newTdbAuIterator()));
+
 
     Tdb tdb5 = new Tdb();
     addTestPublisher1_Changed(tdb5);
     addTestPublisher2_Changed(tdb5);
     
-    Collection<String> changedPluginIds15 = tdb1.getPluginIdsForDifferences(tdb5);
+    Tdb.Differences diffs15 = tdb1.computeDifferences(tdb5);
+    Collection<String> changedPluginIds15 =
+      diffs15.getPluginIdsForDifferences();
     assertEquals(4, changedPluginIds15.size());
-    assertTrue(changedPluginIds15.contains("plugin_t3p1"));
-    assertTrue(changedPluginIds15.contains("plugin_t2p1"));
-    assertTrue(changedPluginIds15.contains("plugin_t1p1"));
-    assertTrue(changedPluginIds15.contains("plugin_p2"));
+    assertSameElements(ListUtil.list("plugin_p2", "plugin_t1p1",
+				     "plugin_t2p1", "plugin_t3p1"),
+		       changedPluginIds15);
+    assertEmpty(diffs15.rawNewTdbPublishers());
+    assertEmpty(fromIter(diffs15.newTdbPublisherIterator()));
+    assertSameElements(ListUtil.list(t2p1, t1p2), diffs15.rawNewTdbTitles());
+    assertSameElements(ListUtil.list(t1p2, t2p1),
+		       fromIter(diffs15.newTdbTitleIterator()));
+    assertSameElements(ListUtil.list(a1t1p1, a2t2p2, a1t3p1),
+		       diffs15.rawNewTdbAus());
+    assertSameElements(ListUtil.list(a1t1p1, a1t2p1, a2t2p1, a1t3p1,
+				     a1t1p2, a2t1p2, a2t2p2),
+		       fromIter(diffs15.newTdbAuIterator()));
+    
+    Tdb.Differences diffs51 = tdb5.computeDifferences(tdb1);
+    Collection<String> changedPluginIds51 =
+      diffs51.getPluginIdsForDifferences();
+    assertEquals(4, changedPluginIds51.size());
+    assertSameElements(ListUtil.list("plugin_p2", "plugin_t1p1",
+				     "plugin_t2p1", "plugin_t3p1"),
+		       changedPluginIds51);
+    assertEmpty(diffs51.rawNewTdbPublishers());
+    assertEmpty(fromIter(diffs51.newTdbPublisherIterator()));
+    assertSameElements(ListUtil.list(t1p2_changed, t2p1_changed),
+		 diffs51.rawNewTdbTitles());
+    assertSameElements(ListUtil.list(t1p2_changed, t2p1_changed),
+		       fromIter(diffs51.newTdbTitleIterator()));
+    assertSameElements(ListUtil.list(a1t1p1_changed, a2t2p2_changed,
+				     a1t3p1_changed),
+		       diffs51.rawNewTdbAus());
+    assertSameElements(ListUtil.list(a1t1p1_changed, a1t2p1_changed,
+				     a2t2p1_changed, a1t3p1_changed,
+				     a1t1p2_changed, a2t1p2_changed,
+				     a2t2p2_changed),
+		       fromIter(diffs51.newTdbAuIterator()));
+
+    Tdb tdb6 = new Tdb();
+    addTestPublisher2(tdb6);
+    
+    Tdb.Differences diffs16 = tdb1.computeDifferences(tdb6);
+    Collection<String> changedPluginIds16 =
+      diffs16.getPluginIdsForDifferences();
+    assertEquals(3, changedPluginIds16.size());
+    assertSameElements(ListUtil.list("plugin_t1p1", "plugin_t2p1",
+				     "plugin_t3p1"),
+		       changedPluginIds16);
+    assertSameElements(ListUtil.list(p1), diffs16.rawNewTdbPublishers());
+    assertSameElements(ListUtil.list(p1),
+		       fromIter(diffs16.newTdbPublisherIterator()));
+    assertEmpty(diffs16.rawNewTdbTitles());
+    assertEmpty(diffs16.rawNewTdbAus());
+    
+    Tdb.Differences diffs61 = tdb6.computeDifferences(tdb1);
+    Collection<String> changedPluginIds61 =
+      diffs61.getPluginIdsForDifferences();
+    assertEquals(3, changedPluginIds61.size());
+    assertSameElements(ListUtil.list("plugin_t1p1", "plugin_t2p1",
+				     "plugin_t3p1"),
+		       changedPluginIds61);
+    assertEmpty(diffs61.rawNewTdbPublishers());
+    assertEmpty(fromIter(diffs51.newTdbPublisherIterator()));
+    assertEmpty(diffs61.rawNewTdbTitles());
+    assertEmpty(fromIter(diffs61.newTdbTitleIterator()));
+    assertEmpty(diffs61.rawNewTdbAus());
+    assertEmpty(fromIter(diffs61.newTdbAuIterator()));
   }
   
   /**

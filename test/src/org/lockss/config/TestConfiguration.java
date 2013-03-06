@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.19 2012-08-29 00:17:31 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.20 2013-03-06 08:06:22 tlipkis Exp $
  */
 
 /*
@@ -236,7 +236,7 @@ public class TestConfiguration extends LockssTestCase {
     c2.put("a", "cc");
     assertEquals("cc", c2.get("a"));
     Tdb tdb2 = c2.getTdb();
-    assertTrue(tdb1.getPluginIdsForDifferences(tdb2).isEmpty());
+    assertTrue(tdb1.computeDifferences(tdb2).getPluginIdsForDifferences().isEmpty());
     assertFalse(tdb1 == tdb2);
   }
 
@@ -257,7 +257,7 @@ public class TestConfiguration extends LockssTestCase {
     c2.put("a", "cc");
     assertEquals("cc", c2.get("a"));
     Tdb tdb2 = c2.getTdb();
-    assertTrue(tdb1.getPluginIdsForDifferences(tdb2).isEmpty());
+    assertTrue(tdb1.computeDifferences(tdb2).getPluginIdsForDifferences().isEmpty());
     assertFalse(tdb1 == tdb2);
   }
 
@@ -287,7 +287,7 @@ public class TestConfiguration extends LockssTestCase {
     c2.put("a", "cc");
     assertEquals("cc", c2.get("a"));
     Tdb tdb2 = c2.getTdb();
-    assertTrue(tdb1.getPluginIdsForDifferences(tdb2).isEmpty());
+    assertTrue(tdb1.computeDifferences(tdb2).getPluginIdsForDifferences().isEmpty());
     assertFalse(tdb1 == tdb2);
   }
 

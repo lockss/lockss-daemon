@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.14 2012-06-04 21:57:15 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.15 2013-03-06 08:06:22 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.14 2012-06-04 21:57:15 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.15 2013-03-06 08:06:22 tlipkis Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -142,6 +142,10 @@ public class TestTdbAu extends LockssTestCase {
     assertNotEquals(au1, au2);
   }
   
+  List fromIter(Iterator iter) {
+    return ListUtil.fromIterator(iter);
+  }
+
   /**
    * Test addAu() method.
    * @throws TdbException for invalid Tdb operations
@@ -154,6 +158,9 @@ public class TestTdbAu extends LockssTestCase {
     Collection<TdbAu> aus = title.getTdbAus();
     assertEquals(1, aus.size());
     assertTrue(aus.contains(au));
+    assertSameElements(ListUtil.list(au),
+		       ListUtil.fromIterator(title.tdbAuIterator()));
+
     
     // get title
     TdbTitle getTitle = au.getTdbTitle();

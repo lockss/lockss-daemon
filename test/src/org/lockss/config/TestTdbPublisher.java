@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbPublisher.java,v 1.7 2012-01-16 17:47:39 pgust Exp $
+ * $Id: TestTdbPublisher.java,v 1.8 2013-03-06 08:06:21 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbPublisher</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbPublisher.java,v 1.7 2012-01-16 17:47:39 pgust Exp $
+ * @version $Id: TestTdbPublisher.java,v 1.8 2013-03-06 08:06:21 tlipkis Exp $
  */
 
 public class TestTdbPublisher extends LockssTestCase {
@@ -103,13 +103,13 @@ public class TestTdbPublisher extends LockssTestCase {
     TdbPublisher publisher3 = new TdbPublisher("Test Publisher");
     TdbTitle title3 = new TdbTitle("Test Title 3", "0000-0003");
     publisher3.addTdbTitle(title3);
-    assertEquals(publisher1, publisher3);
+    assertNotEquals(publisher1, publisher3);
 
     // differs from publisher3 by publisher name
     TdbPublisher publisher4 = new TdbPublisher("Test Publisher 4");
     TdbTitle title4 = new TdbTitle("Test Title 3", "0000-0004");
     publisher4.addTdbTitle(title4);
-    assertEquals(publisher1, publisher4);
+    assertNotEquals(publisher3, publisher4);
   }
   
   /**
@@ -175,6 +175,7 @@ public class TestTdbPublisher extends LockssTestCase {
 
     Collection<TdbTitle> titles = publisher.getTdbTitles();
     assertEmpty(titles);
+    assertFalse(publisher.tdbTitleIterator().hasNext());
     
     // add two titles
     TdbTitle title1 = new TdbTitle("Journal Title", "1234-5678");
@@ -188,6 +189,19 @@ public class TestTdbPublisher extends LockssTestCase {
 
     titles = publisher.getTdbTitles();
     assertEquals(3, titles.size());
+    assertSameElements(ListUtil.list(title1, title2, title3),
+		       ListUtil.fromIterator(publisher.tdbTitleIterator()));
+    assertEmpty(ListUtil.fromIterator(publisher.tdbAuIterator()));
+
+    TdbAu au1 = new TdbAu("Test AU1", "pluginA");
+    TdbAu au2 = new TdbAu("Test AU2", "pluginB");
+    TdbAu au3 = new TdbAu("Test AU3", "pluginC");
+    title1.addTdbAu(au1);
+    title1.addTdbAu(au2);
+    title3.addTdbAu(au3);
+    assertSameElements(ListUtil.list(au1, au2, au3),
+		       ListUtil.fromIterator(publisher.tdbAuIterator()));
+
     
     // get two titles by name
     Collection<TdbTitle> getTitle1 = publisher.getTdbTitlesByName("Journal Title");
@@ -252,13 +266,13 @@ public class TestTdbPublisher extends LockssTestCase {
     pub3.addTdbTitle(title3);
 
     // no differences becuase pub1 and pub2 are duplicates
-    Set<String> diff12 = new HashSet<String>();
-    pub1.addPluginIdsForDifferences(diff12, pub2);
-    assertEquals(0, diff12.size());
+    Tdb.Differences diffs12 = new Tdb.Differences();
+    pub1.addDifferences(diffs12, pub2);
+    assertEquals(0, diffs12.getPluginIdsForDifferences().size());
     
     // differences are 'pluginA' and 'pluginB'
-    Set<String> diff13 = new HashSet<String>();
-    pub1.addPluginIdsForDifferences(diff13, pub3);
-    assertEquals(2, diff13.size());
+    Tdb.Differences diffs13 = new Tdb.Differences();
+    pub1.addDifferences(diffs13, pub3);
+    assertEquals(2, diffs13.getPluginIdsForDifferences().size());
   }
 }

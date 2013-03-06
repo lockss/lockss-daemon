@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.19 2012-05-30 08:29:03 tlipkis Exp $
+ * $Id: Tdb.java,v 1.20 2013-03-06 08:06:22 tlipkis Exp $
  */
 
 /*
@@ -13,7 +13,7 @@ in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
-n
+
 The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
 
@@ -33,6 +33,8 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
+import org.apache.commons.collections .*;
+import org.apache.commons.collections.iterators .*;
 
 import org.lockss.util.*;
 
@@ -43,7 +45,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.19 2012-05-30 08:29:03 tlipkis Exp $
+ * @version $Id: Tdb.java,v 1.20 2013-03-06 08:06:22 tlipkis Exp $
  */
 public class Tdb {
   /**
@@ -94,7 +96,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.19 2012-05-30 08:29:03 tlipkis Exp $
+   * @version $Id: Tdb.java,v 1.20 2013-03-06 08:06:22 tlipkis Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -280,52 +282,54 @@ public class Tdb {
     return pluginIdTdbAuIdsMap.isEmpty();
   }
   
-  /**
-   * Returns a collection of pluginIds for TdbAus that are
-   * different from those in this Tdb.
-   * 
-   * @param otherTdb a Tdb
-   * @return a collection of pluginIds that are different,
-   * , or all plugin Ids in this Tdb if otherTdb is <code>null</code>
+  /** 
+   * Return an object describing the differences between the Tdbs.
+   * Logically a symmetric operation but currently records only changes and
+   * addition, not deletions.
+   * @param newTdb the new Tdb
+   * @param oldTdb the previous Tdb
+   * @return a {@link Tdb.Differences}
    */
-  public Set<String> getPluginIdsForDifferences(Tdb otherTdb) {
-    if (otherTdb == null) {
-      return pluginIdTdbAuIdsMap.keySet();
+  public static Differences computeDifferences(Tdb newTdb, Tdb oldTdb) {
+    if (newTdb == null) {
+      newTdb = new Tdb();
     }
-    if (otherTdb == this) {
-      return Collections.emptySet();
+    if (oldTdb == null) {
+      oldTdb = new Tdb();
     }
-    
-    Set<String> pluginIds = new HashSet<String>();
-    addPluginIdsForDifferences (pluginIds, otherTdb);
-    return pluginIds;
+    return newTdb.computeDifferences(oldTdb);
   }
-  
+
+  Differences computeDifferences(Tdb oldTdb) {
+    Differences res = new Differences(this, oldTdb);
+    return res;
+  }
+
   /**
-   * Adds a collection of pluginIds for TdbAus that are
-   * different from those in this Tdb.
+   * Adds to the {@link Tdb.Differences} the differences found between
+   * oldTdb and this Tdb
    * 
-   * @param pluginIds the set of pluginIds
+   * @param the {@link Tdb.Differences} to which to add items.
    * @param otherTdb a Tdb
    */
-  private void addPluginIdsForDifferences(Set<String> pluginIds, Tdb otherTdb) {
-    Map<String, TdbPublisher> tdbPublishers = otherTdb.getAllTdbPublishers();
+  private void addDifferences(Differences diffs, Tdb oldTdb) {
+    Map<String, TdbPublisher> oldPublishers = oldTdb.getAllTdbPublishers();
 
-    for (TdbPublisher tdbPublisher : tdbPublishers.values()) {
-      if (!this.tdbPublisherMap.containsKey(tdbPublisher.getName())) {
+    for (TdbPublisher oldPublisher : oldPublishers.values()) {
+      if (!this.tdbPublisherMap.containsKey(oldPublisher.getName())) {
         // add pluginIds for publishers in tdb that are not in this Tdb
-        tdbPublisher.addAllPluginIds(pluginIds);
+        diffs.addPublisher(oldPublisher, Differences.Type.Old);
       }
     }
 
     for (TdbPublisher thisPublisher : tdbPublisherMap.values()) {
-      TdbPublisher tdbPublisher = tdbPublishers.get(thisPublisher.getName());
-      if (tdbPublisher == null) {
+      TdbPublisher oldPublisher = oldPublishers.get(thisPublisher.getName());
+      if (oldPublisher == null) {
         // add pluginIds for publisher in this Tdb that is not in tdb
-        thisPublisher.addAllPluginIds(pluginIds);
+        diffs.addPublisher(thisPublisher, Differences.Type.New);
       } else {
         // add pluginIds for publishers in both Tdbs that are different 
-        thisPublisher.addPluginIdsForDifferences(pluginIds, tdbPublisher);
+        thisPublisher.addDifferences(diffs, oldPublisher);
       }
     }
   }
@@ -347,7 +351,8 @@ public class Tdb {
       try {
         // if no exception thrown, there are no differences
         // because the method did not try to modify the set
-        addPluginIdsForDifferences(Collections.<String>emptySet(), (Tdb)o);
+	Differences diffs = new Differences.Unmodifiable();
+	addDifferences(diffs, (Tdb)o);
         return true;
       } catch (UnsupportedOperationException ex) {
         // differences because method tried to add to unmodifiable set
@@ -949,7 +954,8 @@ public class Tdb {
   /**
    * Get the linked titles for the specified link type.
    * 
-   * @param linkType the link type {@see TdbTitle} for description of link types
+   * @param linkType the link type (see {@link TdbTitle} for description of
+   * link types)
    * @param title the TdbTitle with links
    * @return a collection of linked titles for the specified type 
    */
@@ -1123,7 +1129,7 @@ public class Tdb {
    * Add TdbAus with the specified TdbAu name.
    * 
    * @param tdbAuName the name of the AU to select
-   * @param tdbAus the collection to add to
+   * @param aus the collection to add to
    * @return <code>true</code> if TdbAus were added to the collection
    */
   public boolean getTdbAusByName(String tdbAuName, Collection<TdbAu> aus) {
@@ -1150,7 +1156,7 @@ public class Tdb {
    * Add TdbAus for like (starts with) the specified TdbAu name.
    * 
    * @param tdbAuName the name of the AU to select
-   * @param tdbAus the collection to add to
+   * @param aus the collection to add to
    * @return <code>true</code> if TdbAus were added to the collection
    */
   public boolean getTdbAusLikeName(String tdbAuName, Collection<TdbAu> aus) {
@@ -1183,6 +1189,55 @@ public class Tdb {
       ? tdbPublisherMap : Collections.<String,TdbPublisher>emptyMap();
   }
 
+  /** ObjectGraphIterator Transformer that descends into collections of
+   * TdbPublishers and TdbTitles, returning TdbAus */
+  static Transformer AU_ITER_XFORM = new Transformer() {
+      public Object transform(Object input) {
+	if (input instanceof TdbPublisher) {
+	  return ((TdbPublisher)input).getTdbTitles().iterator();
+	}
+	if (input instanceof TdbTitle) {
+	  return ((TdbTitle)input).getTdbAus().iterator();
+	}
+	if (input instanceof TdbAu) {
+	  return input;
+	}
+	throw new ClassCastException();
+      }};
+
+  /** ObjectGraphIterator Transformer that descends into collections of
+   * TdbPublishers, returning TdbTitles */
+  static Transformer TITLE_ITER_XFORM = new Transformer() {
+      public Object transform(Object input) {
+	if (input instanceof TdbPublisher) {
+	  return ((TdbPublisher)input).getTdbTitles().iterator();
+	}
+	if (input instanceof TdbTitle) {
+	  return input;
+	}
+	throw new ClassCastException();
+      }};
+
+
+  /** @return an Iterator over all the TdbPublishers in this Tdb. */
+  public Iterator<TdbPublisher> tdbPublisherIterator() {
+    return tdbPublisherMap.values().iterator();
+  }
+
+  /** @return an Iterator over all the TdbTitles (in all the TdbPublishers)
+   * in this Tdb. */
+  public Iterator<TdbTitle> tdbTitleIterator() {
+    return new ObjectGraphIterator(tdbPublisherMap.values().iterator(),
+				   TITLE_ITER_XFORM);
+  }
+
+  /** @return an Iterator over all the TdbAus (in all the TdbTitles in all
+   * the TdbPublishers) in this Tdb. */
+  public Iterator<TdbAu> tdbAuIterator() {
+    return new ObjectGraphIterator(tdbPublisherMap.values().iterator(),
+				   AU_ITER_XFORM);
+  }
+
   /** Print a full description of all elements in the Tdb */
   public void prettyPrint(PrintStream ps) {
     ps.println("Tdb");
@@ -1194,4 +1249,137 @@ public class Tdb {
     }
   }
 
+  /** Differences represents the changes in a Tdb from the previous Tdb,
+   * primarily oriented toward enumerating the changes (rather than testing
+   * containment as with {@link Configuration.Differences}).  It currently
+   * retains only additions and changes, as deletions aren't needed (and
+   * would require holding on to objects that could otherwise be GCed).
+   */
+  public static class Differences  {
+    enum Type {Old, New}
+
+    // newly added publishers
+    private final List<TdbPublisher> newPublishers
+      = new ArrayList<TdbPublisher>();;
+    // titles that have been added to existing publishers
+    private final List<TdbTitle> newTitles = new ArrayList<TdbTitle>();;
+    // AUs that have been added to existing titles
+    private final List<TdbAu> newAus = new ArrayList<TdbAu>();
+    // Retained for compatibility with legacy Plugin/TitleConfig mechanism
+    private final Set<String> diffPluginIds = new HashSet<String>();
+    private int tdbAuCountDiff;
+    
+    Differences() {
+    }
+
+    Differences(Tdb newTdb, Tdb oldTdb) {
+      tdbAuCountDiff =
+	newTdb.getTdbAuCount()-((oldTdb == null) ? 0 : oldTdb.getTdbAuCount());
+      newTdb.addDifferences(this, oldTdb);
+    }
+
+    /** Return the ID of every plugin that has at least one changed or
+     * added or removed AU */
+    Set<String> getPluginIdsForDifferences() {
+      return diffPluginIds;
+    }
+
+    /** Return the difference in number of AUs from old to new Tdb. */
+    public int getTdbAuDifferenceCount() {
+      return tdbAuCountDiff;
+    }
+
+    /** @return an Iterator over all the newly added TdbPublishers. */
+    public Iterator<TdbPublisher> newTdbPublisherIterator() {
+      return newPublishers.iterator();
+    }
+
+    /** @return an Iterator over all the newly added TdbTitles, including
+     * those belonging to newly added TdbPublishers. */
+    public Iterator<TdbTitle> newTdbTitleIterator() {
+      return new IteratorChain(new ObjectGraphIterator(newPublishers.iterator(),
+						       TITLE_ITER_XFORM),
+			       newTitles.iterator());
+    }
+
+    /** @return an Iterator over all the newly added TdbAus, including
+     * those belonging to newly added TdbTitles and TdbPublishers. */
+    public Iterator<TdbAu> newTdbAuIterator() {
+      return new IteratorChain(new Iterator[] {
+	  new ObjectGraphIterator(newPublishers.iterator(),
+				  AU_ITER_XFORM),
+	  new ObjectGraphIterator(newTitles.iterator(),
+				  AU_ITER_XFORM),
+	  newAus.iterator()
+	});
+    }
+
+    /** Return the {@link TdbPublisher}s that appear in the new Tdb and not
+     * the old. */
+    public List<TdbPublisher> rawNewTdbPublishers() {
+      return newPublishers;
+    }
+
+    /** Return the {@link TdbTitle}s that have been added to existing
+     * {@link TdbPublisher}s.  To get the entire set of new titles, use
+     * {@link #newTdbTitleIterator()}. */
+    public List<TdbTitle> rawNewTdbTitles() {
+      return newTitles;
+    }
+
+    /** Return the {@link TdbAu}s that have been added to existing
+     * {@link TdbTitle}s.  To get the entire set of new AUs, use
+     * {@link #newTdbAuIterator()}. */
+    public List<TdbAu> rawNewTdbAus() {
+      return newAus;
+    }
+
+    void addPluginId(String id) {
+      diffPluginIds.add(id);
+    }
+
+    void addPublisher(TdbPublisher pub, Type type) {
+      switch (type) {
+      case New:
+	newPublishers.add(pub);
+	break;
+      }
+      pub.addAllPluginIds(this);
+    }
+
+    void addTitle(TdbTitle title, Type type) {
+      switch (type) {
+      case New:
+	newTitles.add(title);
+	break;
+      }
+      title.addAllPluginIds(this);
+    }
+
+    void addAu(TdbAu au, Type type) {
+      switch (type) {
+      case New:
+	newAus.add(au);
+	break;
+      }
+      addPluginId(au.getPluginId());
+    }
+
+    static class Unmodifiable extends Differences {
+      void addPublisher(TdbPublisher pub, Type type) {
+	throw new UnsupportedOperationException("Can't modify unmodifiable Differences");
+      }
+
+      void addTitle(TdbTitle title, Type type) {
+	throw new UnsupportedOperationException("Can't modify unmodifiable Differences");
+      }
+
+      void addAu(TdbAu au, Type type) {
+	throw new UnsupportedOperationException("Can't modify unmodifiable Differences");
+      }
+      void addPluginId(String id) {
+	throw new UnsupportedOperationException("Can't modify unmodifiable Differences");
+      }
+    }
+  }
 }
