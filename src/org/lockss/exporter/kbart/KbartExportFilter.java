@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExportFilter.java,v 1.18 2013-02-15 16:43:31 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.19 2013-03-06 10:06:41 easyonthemayo Exp $
  */
 
 /*
@@ -946,9 +946,8 @@ public class KbartExportFilter {
 
     // SFX fields only
     SFX("SFX Fields", "Produce a list of fields for SFX DataLoader",
-//        TITLE_ID,
-        PRINT_IDENTIFIER,  // PJG
-        ONLINE_IDENTIFIER,
+        // ISSN or eISSN
+        String.format("%s || %s", PRINT_IDENTIFIER, ONLINE_IDENTIFIER),
         "ACTIVE",
         COVERAGE_NOTES
     ),
