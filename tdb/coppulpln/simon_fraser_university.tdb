@@ -163,6 +163,42 @@
   }
   
   {
+  
+    title <
+      name = Simon Fraser University CONTENTdm Collections
+    >
+
+    {
+
+      plugin = ca.sfu.lib.plugin.contentdm.ContentDmFrontEndPlugin
+      param[base_url] = http://lib-general.lib.sfu.ca/
+      implicit < status ; name ; param[collection_alias] >
+      attr[approvedForRemoval= = True
+    
+      au < superseded ; BC Multicultural Photograph Collection at the Vancouver Public Library [approved for removal] ; /vpl >
+      au < superseded ; CCICED Collection [approved for removal] ; /cciced >
+      au < superseded ; Chinatown News [approved for removal] ; /ubcCtn >
+      au < superseded ; Indo-Canadian Oral History Collection [approved for removal] ; /icohc >
+
+    }
+
+    {
+
+      plugin = ca.sfu.lib.plugin.contentdm.LockssdmPlugin
+      param[base_url] = http://content.lib.sfu.ca/
+      implicit < status ; name ; param[collection_id] ; param[chunk_number] >
+    
+      au < manifest ; BC Multicultural Photograph Collection at the Vancouver Public Library Part 1 ; vpl ; 1 >
+      au < manifest ; BC Multicultural Photograph Collection at the Vancouver Public Library Part 1 ; vpl ; 2 >
+      au < manifest ; CCICED Collection ; cciced ; 1 >
+      au < manifest ; Chinatown News ; ubcCtn ; 1 >
+      au < manifest ; Indo-Canadian Oral History Collection ; icohc ; 1 >
+
+    }
+
+  }
+
+  {
 
     title <
       name = Simon Fraser University Library Editorial Cartoons Collection
@@ -363,23 +399,6 @@
       
     }
     
-  }
-
-  {
-  
-    title <
-      name = Simon Fraser University CONTENTdm Collections
-    >
-
-    plugin = ca.sfu.lib.plugin.contentdm.ContentDmFrontEndPlugin
-    param[base_url] = http://lib-general.lib.sfu.ca/ 
-    implicit < status ; name ; param[collection_alias] >
-    
-    au < released ; BC Multicultural Photograph Collection at the Vancouver Public Library [sample CONTENTdm collection] ; /vpl >
-    au < released ; CCICED Collection [sample CONTENTdm collection] ; /cciced >
-    au < released ; Chinatown News [sample CONTENTdm collection] ; /ubcCtn >
-    au < released ; Indo-Canadian Oral History Collection [sample CONTENTdm collection] ; /icohc >
-
   }
 
 }
