@@ -277,6 +277,7 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://carlyleletters.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+      comment[plugin] = This journal is HighWire H10
 
       au < HighWirePressPlugin ; manifest ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 >
       au < HighWirePressPlugin ; manifest ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 >
