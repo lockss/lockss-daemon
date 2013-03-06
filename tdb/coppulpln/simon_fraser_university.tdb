@@ -173,7 +173,7 @@
       plugin = ca.sfu.lib.plugin.contentdm.ContentDmFrontEndPlugin
       param[base_url] = http://lib-general.lib.sfu.ca/
       implicit < status ; name ; param[collection_alias] >
-      attr[approvedForRemoval= = True
+      attr[approvedForRemoval] = True
     
       au < superseded ; BC Multicultural Photograph Collection at the Vancouver Public Library [approved for removal] ; /vpl >
       au < superseded ; CCICED Collection [approved for removal] ; /cciced >
