@@ -17,19 +17,6 @@
       param[base_url] = http://www.rcjournal.com/
       implicit < status ; year ; name ; param[volume_name] >
       
-      au < exists ; 1990 ; Respiratory Care Volume 35 ; 35 >
-      au < exists ; 1991 ; Respiratory Care Volume 36 ; 36 >
-      au < exists ; 1992 ; Respiratory Care Volume 37 ; 37 >
-      au < exists ; 1993 ; Respiratory Care Volume 38 ; 38 >
-      au < exists ; 1994 ; Respiratory Care Volume 39 ; 39 >
-      au < exists ; 1995 ; Respiratory Care Volume 40 ; 40 >
-      au < exists ; 1996 ; Respiratory Care Volume 41 ; 41 >
-      au < exists ; 1997 ; Respiratory Care Volume 42 ; 42 >
-      au < exists ; 1998 ; Respiratory Care Volume 43 ; 43 >
-      au < exists ; 1999 ; Respiratory Care Volume 44 ; 44 >
-      au < exists ; 2000 ; Respiratory Care Volume 45 ; 45 >
-      au < exists ; 2001 ; Respiratory Care Volume 46 ; 46 >
-      au < exists ; 2002 ; Respiratory Care Volume 47 ; 47 >
       au < exists ; 2003 ; Respiratory Care Volume 48 ; 48 >
       au < exists ; 2004 ; Respiratory Care Volume 49 ; 49 >
       au < exists ; 2005 ; Respiratory Care Volume 50 ; 50 >
@@ -40,6 +27,7 @@
       au < exists ; 2010 ; Respiratory Care Volume 55 ; 55 >
       au < exists ; 2011 ; Respiratory Care Volume 56 ; 56 >
       au < exists ; 2012 ; Respiratory Care Volume 57 ; 57 >
+      au < exists ; 2013 ; Respiratory Care Volume 58 ; 58 >
 
     }
 
