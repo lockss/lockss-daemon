@@ -41403,6 +41403,23 @@ comment[mpj] = now published by Brill
     au < exists ; 2013 ; World Future Review Volume 5 ; 5 >
 
     }
+    
+    {
+
+      title <
+        name = Orthopaedic Journal of Sports Medicine ;
+        eissn = 2325-9671 
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://ojs.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; Orthopaedic Journal of Sports Medicine Volume 1 ; 1 >
+
+    }
+
   }
 
 }

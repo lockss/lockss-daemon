@@ -38086,4 +38086,19 @@
 
     }
 
+    {
+
+      title <
+        name = Orthopaedic Journal of Sports Medicine ;
+        eissn = 2325-9671 
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    param[base_url] = http://ojs.sagepub.com/
+
+    au < exists ; exists ; 2013 ; Orthopaedic Journal of Sports Medicine Volume 1 ; 1 ; >
+
+    }
+
 }
