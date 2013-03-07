@@ -38101,4 +38101,23 @@
 
     }
 
+    {
+
+      title <
+        name = Transactional Analysis Journal ;
+        eissn = 0362-1537 
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    param[base_url] = http://tax.sagepub.com/
+
+    au < exists ; exists ; 2009 ; Transactional Analysis Journal Volume 39 ; 39 ; >
+    au < exists ; exists ; 2010 ; Transactional Analysis Journal Volume 40 ; 40 ; >
+    au < exists ; exists ; 2011 ; Transactional Analysis Journal Volume 41 ; 41 ; >
+    au < exists ; exists ; 2012 ; Transactional Analysis Journal Volume 42 ; 42 ; >
+    au < expected ; exists ; 2013 ; Transactional Analysis Journal Volume 43 ; 43 ; >
+
+    }
+
 }

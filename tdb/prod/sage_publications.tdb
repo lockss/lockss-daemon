@@ -41420,6 +41420,26 @@ comment[mpj] = now published by Brill
 
     }
 
+    {
+
+      title <
+        name = Transactional Analysis Journal ;
+        eissn = 0362-1537 
+      >
+
+    comment[upcoming] = online 2013
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://tax.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2009 ; Transactional Analysis Journal Volume 39 ; 39 >
+    au < exists ; 2010 ; Transactional Analysis Journal Volume 40 ; 40 >
+    au < exists ; 2011 ; Transactional Analysis Journal Volume 41 ; 41 >
+    au < exists ; 2012 ; Transactional Analysis Journal Volume 42 ; 42 >
+    au < expected ; 2013 ; Transactional Analysis Journal Volume 43 ; 43 >
+
+    }
+
   }
 
 }
