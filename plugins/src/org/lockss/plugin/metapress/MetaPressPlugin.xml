@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -69,35 +69,41 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;MetaPress Plugin, Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
+    <string>"MetaPress Plugin, Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sopenurl.asp?genre=volume&amp;eissn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
+    <string>"%sopenurl.asp?genre=volume&amp;eissn=%s&amp;volume=%s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
   	<map>
 	  <entry>
 	    <string>au_title</string>
-    	<string>&quot;%sopenurl.asp?genre=volume&amp;eissn=%s&quot;, base_url, journal_issn</string>
+    	<string>"%sopenurl.asp?genre=volume&amp;eissn=%s", base_url, journal_issn</string>
 	  </entry>
 	  <entry>
 	    <string>au_volume</string>
-    	<string>&quot;%sopenurl.asp?genre=volume&amp;eissn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
+    	<string>"%sopenurl.asp?genre=volume&amp;eissn=%s&amp;volume=%s", base_url, journal_issn, volume_name</string>
 	  </entry>
   	</map>
   </entry>  
   <entry>
     <string>au_crawlrules</string>
+<!-- 
+do not crawl out the arguments that are handled by the URL normalizer (mark, p, pi, p_o, sw) so that ServeContent works correctly (RU #4626)
+currently not excluding print views (things that have the ?print=true or &print=true) in their arguments 
+basic content line ends with / on purpose. After normalization of arguments, the / is there and collected
+export.mpx line is for citation information; mode is ris, txt, etc.
+ -->
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sopenurl\.asp\?genre=volume&amp;eissn=%s&amp;volume=%s$&quot;, base_url, journal_issn, volume_name</string>
-      <string>2,&quot;^%scontent/[a-z0-9]{10,16}/(offerings/|fulltext\.pdf\?page=|referencesMode=Show&amp;print=true|print=true&amp;referencesMode=Show)&quot;, base_url</string>
-      <string>2,&quot;^%scontent/[a-z0-9]{10,16}/.*[?&amp;](mark|p|pi|p_o|sortorder|sw)=&quot;, base_url</string>
-      <string>1,&quot;^%scontent/[a-z0-9]{10,16}/&quot;, base_url</string>
-      <string>1,&quot;^%sexport.mpx\?code=[^&amp;]+&amp;mode=&quot;, base_url</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sopenurl\.asp\?genre=volume&amp;eissn=%s&amp;volume=%s$", base_url, journal_issn, volume_name</string>
+      <string>2,"^%scontent/[a-z0-9]{10,16}/(offerings/|fulltext\.pdf\?page=)", base_url</string>
+      <string>2,"^%scontent/[a-z0-9]{10,16}/.*[?&amp;](sortorder)=", base_url</string>
+      <string>1,"^%scontent/[a-z0-9]{10,16}/", base_url</string>
+      <string>1,"^%sexport.mpx\?code=[^&amp;]+&amp;mode=", base_url</string>
     </list>
   </entry>
   <entry>
@@ -123,7 +129,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%scontent/[A-Za-z0-9]{16}/fulltext\.pdf$&quot;, base_url, volume_name</string>
+      <string>"^%scontent/[A-Za-z0-9]{16}/fulltext\.pdf$", base_url, volume_name</string>
     </list>
   </entry>
   <entry>

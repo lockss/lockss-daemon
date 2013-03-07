@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressUrlNormalizer.java,v 1.1 2011-10-04 10:43:59 thib_gc Exp $
+ * $Id: MetaPressUrlNormalizer.java,v 1.2 2013-03-07 20:28:16 alexandraohlson Exp $
  */
 
 /*
@@ -33,7 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.metapress;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.plugin.*;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.UrlNormalizer;
 
 
 public class MetaPressUrlNormalizer implements UrlNormalizer {
@@ -41,7 +42,23 @@ public class MetaPressUrlNormalizer implements UrlNormalizer {
   protected static final String[] QUERY_DISQUALIFY = new String[] {
     "sortorder=",
   };
-  
+
+  /*
+   * arguments we want to remove
+   * p: some random number/letter - seems to be date/time marker, not necessary to view item
+   * pi: related to issue numbering to track previous/next. Not necessary to view
+   * p_o: related to volume numbering to track previous/next. Not necessary to view
+   * For example of above:
+   * http://inderscience.metapress.com/content/m1804w66tn802h54/?p=9bc3f3743d4f48d5ac0793c7ab0d2ccf&pi=3
+   * http://inderscience.metapress.com/content/m1804w66tn802h54
+   * mark: action to add this item to list of marked items, not a unique page
+   * sw: ??
+   *
+   * arguments we DON'T want to remove
+   *    a=# (which language to present article text in, 2011+)
+   *    k=# (which language to present keywords in, 2011+)
+   *    example: http://liverpool.metapress.com/content/5quu123154411492/?k=9&a=12
+   */
   protected static final String[] QUERY_REMOVE = new String[] {
     "p=",
     "pi=",
