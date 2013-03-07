@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkUrlNormalizer.java,v 1.8 2013-02-26 22:02:53 thib_gc Exp $
+ * $Id: SpringerLinkUrlNormalizer.java,v 1.9 2013-03-07 00:51:04 thib_gc Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
         METAPRESS.setAccessIndicatorsClass();
       </script>
    */
-  protected static final String CURRENT_ID_JAVASCRIPT_1 = "76bb4537-0fae-43b1-9c0c-71f06031a6b9";
+  protected static final String CURRENT_ID_JAVASCRIPT_1 = "f6fcb095-3d49-4291-984c-1fa1626f3a8a";
   // 695015e5-1327-447b-b711-8224b68bd201
   
   /*
@@ -125,7 +125,8 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
     m.put("f0b3b809-2b0c-4996-b73e-3b855bcbdafa", CURRENT_ID_JAVASCRIPT_1); // 22:02:30 10/28/12 - 17:36:00 12/11/12 
     m.put("695015e5-1327-447b-b711-8224b68bd201", CURRENT_ID_JAVASCRIPT_1); // 03:31:11 12/21/12 - 09:23:01 01/12/13
     m.put("93bd6382-c886-4f5d-a75f-9ef517e06cbb", CURRENT_ID_JAVASCRIPT_1); // 09:30:43 01/26/13 - 09:33:59 02/09/13
-    m.put(CURRENT_ID_JAVASCRIPT_1, CURRENT_ID_JAVASCRIPT_1); // 09:37:49 02/23/13
+    m.put("76bb4537-0fae-43b1-9c0c-71f06031a6b9", CURRENT_ID_JAVASCRIPT_1); // 14:40:36 02/20/13 - 09:37:49 02/23/13 
+    m.put(CURRENT_ID_JAVASCRIPT_1, CURRENT_ID_JAVASCRIPT_1); // 14:46:54 03/06/13
     // Javascript 2
     // No such links: 00:51:43 11/11/10 - 01:30:26 05/20/11
     m.put("40594b26-7aa9-4e22-b8b8-c1d26d21b52a", CURRENT_ID_JAVASCRIPT_2); // 12:06:11 09/26/11 - 07:10:22 12/07/11
@@ -136,6 +137,18 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
     m.put("54b6894c-8544-45e8-9ca9-333567e5add3", CURRENT_ID_JAVASCRIPT_2); // 07:55:36 06/19/12
     m.put(CURRENT_ID_JAVASCRIPT_2, CURRENT_ID_JAVASCRIPT_2); // 14:17:03 07/03/12 - 17:36:00 12/11/12
   }
+  
+  /*
+Some of these IDs are still unaccounted for.
+
+0c7570d1-00e3-44ab-abfb-30a6ef0a0b92
+1108e1d4-97ac-4875-80c8-37bf1b132c8b
+505cc7ec-c441-4d6a-a89c-4634a00eba34
+6e203a02-a9a3-4ec4-9f41-d2110ca514b6
+deafc402-eb3e-48e7-b0bb-2baa40586f62
+f04d1c36-c4c9-47c9-ab67-95b7e14ca9df
+f0bf38b6-66f3-4c9d-b3f9-ec4e16885d3b
+   */
   
   // Prefix part
   public static final String STARTS_WITH = "http://www.springerlink.com/dynamic-file.axd?id=";
@@ -163,7 +176,7 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
         || !url.startsWith(STARTS_WITH)
         || !url.endsWith(ENDS_WITH)) {
       if (logger.isDebug3()) {
-        logger.debug3("Non-matching: " + url);
+        logger.debug3(String.format("Non-matching: %s in %s", url, au.getName()));
       }
       return url;
     }
@@ -173,26 +186,26 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
         || actualId.charAt(HYPHEN3) != '-'
         || actualId.charAt(HYPHEN4) != '-') {
       if (logger.isDebug2()) {
-        logger.debug2("Irregular: " + url);
+        logger.debug2(String.format("Irregular: %s in %s", url, au.getName()));
       }
       return url;
     }
     String canonicalId = idMapping.get(actualId);
     if (canonicalId == null) {
       if (logger.isDebug2()) {
-        logger.debug2("Unknown: " + url);
+        logger.debug2(String.format("Unknown: %s in %s", url, au.getName()));
       }
       return url;
     }
     if (actualId.equals(canonicalId)) {
       if (logger.isDebug3()) {
-        logger.debug3("Canonical: " + url);
+        logger.debug3(String.format("Canonical: %s in %s", url, au.getName()));
       }
       return url;
     }
     String ret = STARTS_WITH + canonicalId + ENDS_WITH;
     if (logger.isDebug3()) {
-      logger.debug3("Matching: " + url + " -> " + ret);
+      logger.debug3(String.format("Matching: %s -> %s in %s", url, ret, au.getName()));
     }
     return ret;
   }
