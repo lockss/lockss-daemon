@@ -277,18 +277,18 @@
       au < HighWirePressH20Plugin ; released ; 1966 ; Journal of Clinical Endocrinology & Metabolism Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; released ; 1967 ; Journal of Clinical Endocrinology & Metabolism Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; notReady ; 1968 ; Journal of Clinical Endocrinology & Metabolism Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; notReady ; 1969 ; Journal of Clinical Endocrinology & Metabolism Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; ready ; 1969 ; Journal of Clinical Endocrinology & Metabolism Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; released ; 1970 ; Journal of Clinical Endocrinology & Metabolism Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 1970 ; Journal of Clinical Endocrinology & Metabolism Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; released ; 1971 ; Journal of Clinical Endocrinology & Metabolism Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; released ; 1971 ; Journal of Clinical Endocrinology & Metabolism Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 1972 ; Journal of Clinical Endocrinology & Metabolism Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 1972 ; Journal of Clinical Endocrinology & Metabolism Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; notReady ; 1973 ; Journal of Clinical Endocrinology & Metabolism Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; notReady ; 1973 ; Journal of Clinical Endocrinology & Metabolism Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; ready ; 1973 ; Journal of Clinical Endocrinology & Metabolism Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; ready ; 1973 ; Journal of Clinical Endocrinology & Metabolism Volume 37 ; 37 >
       au < HighWirePressH20Plugin ; notReady ; 1974 ; Journal of Clinical Endocrinology & Metabolism Volume 38 ; 38 >
       au < HighWirePressH20Plugin ; released ; 1974 ; Journal of Clinical Endocrinology & Metabolism Volume 39 ; 39 >
-      au < HighWirePressH20Plugin ; notReady ; 1975 ; Journal of Clinical Endocrinology & Metabolism Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; ready ; 1975 ; Journal of Clinical Endocrinology & Metabolism Volume 40 ; 40 >
       au < HighWirePressH20Plugin ; released ; 1975 ; Journal of Clinical Endocrinology & Metabolism Volume 41 ; 41 >
       au < HighWirePressH20Plugin ; released ; 1976 ; Journal of Clinical Endocrinology & Metabolism Volume 42 ; 42 >
       au < HighWirePressH20Plugin ; notReady ; 1976 ; Journal of Clinical Endocrinology & Metabolism Volume 43 ; 43 >
@@ -303,7 +303,7 @@
       au < HighWirePressH20Plugin ; released ; 1981 ; Journal of Clinical Endocrinology & Metabolism Volume 52 ; 52 >
       au < HighWirePressH20Plugin ; released ; 1981 ; Journal of Clinical Endocrinology & Metabolism Volume 53 ; 53 >
       au < HighWirePressH20Plugin ; released ; 1982 ; Journal of Clinical Endocrinology & Metabolism Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; notReady ; 1982 ; Journal of Clinical Endocrinology & Metabolism Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; ready ; 1982 ; Journal of Clinical Endocrinology & Metabolism Volume 55 ; 55 >
       au < HighWirePressH20Plugin ; released ; 1983 ; Journal of Clinical Endocrinology & Metabolism Volume 56 ; 56 >
       au < HighWirePressH20Plugin ; released ; 1983 ; Journal of Clinical Endocrinology & Metabolism Volume 57 ; 57 >
       au < HighWirePressH20Plugin ; released ; 1984 ; Journal of Clinical Endocrinology & Metabolism Volume 58 ; 58 >
@@ -326,7 +326,7 @@
       au < HighWirePressH20Plugin ; released ; 1992 ; Journal of Clinical Endocrinology & Metabolism Volume 75 ; 75 >
       au < HighWirePressH20Plugin ; released ; 1993 ; Journal of Clinical Endocrinology & Metabolism Volume 76 ; 76 >
       au < HighWirePressH20Plugin ; released ; 1993 ; Journal of Clinical Endocrinology & Metabolism Volume 77 ; 77 >
-      au < HighWirePressH20Plugin ; notReady ; 1994 ; Journal of Clinical Endocrinology & Metabolism Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; ready ; 1994 ; Journal of Clinical Endocrinology & Metabolism Volume 78 ; 78 >
       au < HighWirePressH20Plugin ; released ; 1994 ; Journal of Clinical Endocrinology & Metabolism Volume 79 ; 79 >
       au < HighWirePressH20Plugin ; released ; 1995 ; Journal of Clinical Endocrinology & Metabolism Volume 80 ; 80 >
       au < HighWirePressH20Plugin ; released ; 1996 ; Journal of Clinical Endocrinology & Metabolism Volume 81 ; 81 >
@@ -336,7 +336,7 @@
       au < HighWirePressH20Plugin ; released ; 2000 ; Journal of Clinical Endocrinology & Metabolism Volume 85 ; 85 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Journal of Clinical Endocrinology & Metabolism Volume 86 ; 86 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Journal of Clinical Endocrinology & Metabolism Volume 87 ; 87 >
-      au < HighWirePressH20Plugin ; notReady ; 2003 ; Journal of Clinical Endocrinology & Metabolism Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Clinical Endocrinology & Metabolism Volume 88 ; 88 >
       au < HighWirePressH20Plugin ; released ; 2004 ; Journal of Clinical Endocrinology & Metabolism Volume 89 ; 89 >
       au < HighWirePressPlugin ; down ; 2005 ; Journal of Clinical Endocrinology & Metabolism Volume 90 ; 90 >
       au < HighWirePressPlugin ; down ; 2006 ; Journal of Clinical Endocrinology & Metabolism Volume 91 ; 91 >
@@ -368,7 +368,7 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       comment[notReady] = 0% agreement, will re-test later
 
-      au < HighWirePressH20Plugin ; notReady ; 1987 ; Molecular Endocrinology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; ready ; 1987 ; Molecular Endocrinology Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 1988 ; Molecular Endocrinology Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; released ; 1989 ; Molecular Endocrinology Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; released ; 1990 ; Molecular Endocrinology Volume 4 ; 4 >
