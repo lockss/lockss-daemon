@@ -154,8 +154,8 @@
     param[base_url] = http://newprairiepress.org/journals/
     param[journal_id] = CULS
 
-    au < testing ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; 2011 >
-    au < testing ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
+    au < wanted ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; 2011 >
+    au < ready ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
     au < manifest ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 ; 2013 >
 
   }
@@ -173,13 +173,13 @@
     param[base_url] = http://ojrrp.org/journals/
     param[journal_id] = ojrrp
 
-    au < testing ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; 2006 >
-    au < testing ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; 2007 >
-    au < testing ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; 2008 >
-    au < testing ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; 2009 >
-    au < testing ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; 2010 >
-    au < testing ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; 2011 >
-    au < testing ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
+    au < ready ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; 2006 >
+    au < ready ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; 2007 >
+    au < ready ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; 2008 >
+    au < ready ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; 2009 >
+    au < ready ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; 2010 >
+    au < ready ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; 2011 >
+    au < ready ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
     au < expected ; 2013 ; Online Journal of Rural Research & Policy Volume 8 ; 8 ; 2013 >
 
   }
