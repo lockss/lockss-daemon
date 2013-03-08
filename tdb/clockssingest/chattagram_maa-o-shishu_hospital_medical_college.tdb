@@ -34,10 +34,10 @@
       eissn = 2306-4390
 
     >
-    
+    comment[0] = Publisher's official name is "Pediatric Endosurgery Group, Bangladesh"
     param[journal_issn] = 2306-4560
-    comment[publisher] = Expected to publish in 2013
-    comment[0] = Publisher name is Pediatric Endosurgery Group, Bangladesh, based at CMOSH Medical College
+    
+    au < expected ; exists ; 2013 ; Bangladesh Journal of Endosurgery Volume 1 ; 1 >
    
   }
 

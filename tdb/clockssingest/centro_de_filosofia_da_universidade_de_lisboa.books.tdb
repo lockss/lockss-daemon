@@ -6,7 +6,8 @@
     info[tester] = 0
   >
   
-  	plugin = needs.plugin
+  	plugin = needs.plugin ;
+  	comment[0] = Needs updated e-book list with fulltext e-books only.
   	
   {
   
