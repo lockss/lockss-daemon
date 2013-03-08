@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpringerLinkUrlNormalizer.java,v 1.3 2013-03-07 19:36:53 thib_gc Exp $
+ * $Id: TestSpringerLinkUrlNormalizer.java,v 1.4 2013-03-08 02:07:40 thib_gc Exp $
  */
 
 /*
@@ -47,18 +47,22 @@ public class TestSpringerLinkUrlNormalizer extends LockssTestCase {
   
   public void testCssUrls() throws Exception {
     final String expected = "http://www.springerlink.com/dynamic-file.axd?id=80623e25-67f3-4182-9ee3-9a76475bea6e&m=True";
+    doTest(expected);
     doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=a209de6f-81f0-43df-b579-003b2a6c2c3b&m=True");
     doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=7e8f2781-87c9-48ff-ac64-b7521267eb3d&m=True");
     doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=d25b4bf4-02b3-47f8-8cb5-9bdebf5da452&m=True");
     doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=b4a7f886-a7e7-4dfa-8942-6c13eacc7c38&m=True");
     doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=555b8adc-82b5-49e4-a40b-5cae3355208c&m=True");
     doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=be38f38c-6e9c-41c8-8f24-616ce62a7f94&m=True");
-    doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=80623e25-67f3-4182-9ee3-9a76475bea6e&m=True");
   }
   
   public void testJavascript1Urls() throws Exception {
     final String expected = "http://www.springerlink.com/dynamic-file.axd?id=f6fcb095-3d49-4291-984c-1fa1626f3a8a&m=True";
+    doTest(expected);
+    doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=505cc7ec-c441-4d6a-a89c-4634a00eba34&m=True");
+    doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=1108e1d4-97ac-4875-80c8-37bf1b132c8b&m=True");
     doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=71cb314e-b50a-4dc7-bc4d-fe244c65d4f2&m=True");
+    doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=deafc402-eb3e-48e7-b0bb-2baa40586f62&m=True");
     doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=89fb321a-e8ea-40c3-ac9a-b24727113d7f&m=True");
     doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=e462af41-20fd-4966-bf4f-113610bfd1ec&m=True");
     doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=cf0e16f3-cd2d-4cbc-b366-efdc9ec5c6f2&m=True");
@@ -90,6 +94,7 @@ public class TestSpringerLinkUrlNormalizer extends LockssTestCase {
   
   public void testJavascript2Urls() throws Exception {
     final String expected = "http://www.springerlink.com/dynamic-file.axd?id=88d24f97-0be5-46cc-ba7a-c97002f465c0&m=True";
+    doTest(expected);
     doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=40594b26-7aa9-4e22-b8b8-c1d26d21b52a&m=True");
     doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=26cc528d-424b-4f70-93ec-00d6a5ebd0c7&m=True");
     doTest(expected, "http://www.springerlink.com/dynamic-file.axd?id=b0622fd9-cdd1-41f5-9b63-533c6c2421c6&m=True");
@@ -105,6 +110,10 @@ public class TestSpringerLinkUrlNormalizer extends LockssTestCase {
     doTest("http://www.springerlink.com/dynamic-file.axd?id=40594b26-7aa9-4e22-b8b8-c1d26d21b52a");
     doTest("http://www.springerlink.com/dynamic-file.axd?id=40594b26-7aa9-4e22-b8b8-c1d26d21b52&m=True");
     doTest("http://www.springerlink.com/dynamic-file.axd?id=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&m=True");
+    doTest("http://www.springerlink.com/dynamic-file.axd?id=xxxxxxxxXxxxx-xxxx-xxxx-xxxxxxxxxxxx&m=True");
+    doTest("http://www.springerlink.com/dynamic-file.axd?id=xxxxxxxx-xxxxXxxxx-xxxx-xxxxxxxxxxxx&m=True");
+    doTest("http://www.springerlink.com/dynamic-file.axd?id=xxxxxxxx-xxxx-xxxxXxxxx-xxxxxxxxxxxx&m=True");
+    doTest("http://www.springerlink.com/dynamic-file.axd?id=xxxxxxxx-xxxx-xxxx-xxxxXxxxxxxxxxxxx&m=True");
   }
   
   private void doTest(String expected, String url) throws Exception {
