@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.8 2013-03-02 02:20:38 thib_gc Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.9 2013-03-08 02:06:01 thib_gc Exp $
  */ 
 
 /*
@@ -196,7 +196,9 @@ public class IngentaPdfFilterFactory
     public void transform(ArchivalUnit au,
                           PdfDocument pdfDocument)
         throws PdfException {
-      
+      pdfDocument.unsetCreationDate();
+      pdfDocument.unsetModificationDate();
+      PdfUtil.normalizeTrailerId(pdfDocument);
       WhiteHorsePressWorker worker = new WhiteHorsePressWorker();
       for (PdfPage pdfPage : pdfDocument.getPages()) {
         PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
