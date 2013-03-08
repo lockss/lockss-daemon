@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.5 2012-07-23 21:17:21 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.6 2013-03-08 01:20:49 thib_gc Exp $
  */
 
 /*
@@ -401,13 +401,13 @@ public class PdfUtil {
                                   String id0,
                                   String id1)
       throws PdfException {
-    PdfTokenFactory pdfAdapter = pdfDocument.getTokenFactory();
+    PdfTokenFactory pdfTokenFactory = pdfDocument.getTokenFactory();
     Map<String, PdfToken> trailerMapping = pdfDocument.getTrailer();
     trailerMapping.remove(NAME_ID);
     List<PdfToken> idArray = new ArrayList<PdfToken>(2);
-    idArray.add(pdfAdapter.makeString(id0));
-    idArray.add(pdfAdapter.makeString(id1));
-    trailerMapping.put(NAME_ID, pdfAdapter.makeArray(idArray));
+    idArray.add(pdfTokenFactory.makeString(id0));
+    idArray.add(pdfTokenFactory.makeString(id1));
+    trailerMapping.put(NAME_ID, pdfTokenFactory.makeArray(idArray));
     pdfDocument.setTrailer(trailerMapping);
   }
   
