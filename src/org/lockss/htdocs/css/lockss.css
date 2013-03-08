@@ -91,3 +91,13 @@
 .agg-value {
 	text-align: right;
 }
+
+.remove-au-button {
+        float: left;
+        padding: 0px 0px 0px 10px;
+}
+
+.au-details-link {
+        float: left;
+        padding: 0px 0px 0px 30px;
+}

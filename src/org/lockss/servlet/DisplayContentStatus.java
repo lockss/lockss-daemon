@@ -35,7 +35,6 @@ import java.io.*;
 import java.net.URLDecoder;
 import java.text.*;
 import java.util.*;
-import java.util.logging.Level;
 import javax.servlet.*;
 import javax.xml.parsers.*;
 import javax.xml.transform.*;
@@ -54,6 +53,7 @@ import org.w3c.dom.Document;
  * Display Content Status servlet
  */
 public class DisplayContentStatus extends LockssServlet {
+  protected static Logger log = Logger.getLogger("DisplayContentStatus");
 
   public static final String AU_TO_REMOVE = "removeAu";
   /**
@@ -67,6 +67,7 @@ public class DisplayContentStatus extends LockssServlet {
   private String tableKey;
   private String sortKey;
   private String groupKey;
+  private String typeKey;
   private StatusService statSvc;
   private int outputFmt;
   private java.util.List rules;
@@ -182,6 +183,7 @@ public class DisplayContentStatus extends LockssServlet {
     if (StringUtil.isNullString(groupKey)) {
       groupKey = "publisher";
     }
+    typeKey = req.getParameter("type");
 
     switch (outputFmt) {
       case OUTPUT_HTML:
@@ -226,7 +228,8 @@ public class DisplayContentStatus extends LockssServlet {
     // 		       concatParams("text=1", req.getQueryString())));
     //       page.add("</center><br><br>");
 
-    DisplayContentTable content = new DisplayContentTable(page, groupKey);
+    DisplayContentTable content = new DisplayContentTable(page, groupKey, 
+            typeKey);
 
     return page;
   }
@@ -444,17 +447,17 @@ public class DisplayContentStatus extends LockssServlet {
           "Primary sort column, ascending");
   static final Image UPARROW2 = ServletUtil.image("uparrow2blue.gif", 16, 16, 0,
           "Secondary sort column, ascending");
-  static final Image DOWNARROW1 = ServletUtil.image("downarrow1blue.gif", 16, 16, 0,
-          "Primary sort column, descending");
-  static final Image DOWNARROW2 = ServletUtil.image("downarrow2blue.gif", 16, 16, 0,
-          "Secondary sort column, descending");
+  static final Image DOWNARROW1 = ServletUtil.image("downarrow1blue.gif", 16, 16,
+          0, "Primary sort column, descending");
+  static final Image DOWNARROW2 = ServletUtil.image("downarrow2blue.gif", 16, 16,
+          0, "Secondary sort column, descending");
 
   /**
    * Create a column heading element:<ul> <li> plain text if not sortable <li>
-   * if sortable, link with sortkey set to solumn name, descending if was
+   * if sortable, link with sortkey set to column name, descending if was
    * previous primary ascending key <li> plus a possible secondary sort key set
    * to previous sort column <li> if is current primary or secondary sort
-   * colume, display an up or down arrow.</ul>
+   * column, display an up or down arrow.</ul>
    *
    * @param statTable
    * @param cd

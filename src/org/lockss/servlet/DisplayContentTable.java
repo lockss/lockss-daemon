@@ -55,7 +55,9 @@ public class DisplayContentTable {
           new TreeMap<Character, Character>();
   private Integer numberInGroup;
   private String grouping;
+  private String type;
   private ArrayList<String> columnArrayList;
+  private ArrayList<ArchivalUnit> publicationHealth;
 
   /**
    * Constructor method
@@ -65,12 +67,14 @@ public class DisplayContentTable {
    * @param grouping Method used to group the AUs, either by publisher or plugin
    * @throws UnsupportedEncodingException
    */
-  public DisplayContentTable(Page page, Integer numberInGroup, String grouping)
-          throws UnsupportedEncodingException {
+  public DisplayContentTable(Page page, Integer numberInGroup, String grouping,
+          String type) throws UnsupportedEncodingException {
     this.page = page;
     this.numberInGroup = numberInGroup;
     this.grouping = grouping;
+    this.type = type;
     columnArrayList = new ArrayList();
+    publicationHealth = new ArrayList<ArchivalUnit>();
     createColumn("Title");
     createColumn("Year");
     createColumn("ISSN");
@@ -78,6 +82,7 @@ public class DisplayContentTable {
     addCss();
     addJQueryJS();
     createSortLink();
+    createTypeLinks();
     createTabsDiv();
     populateLetterList();
     createTabList();
@@ -86,16 +91,21 @@ public class DisplayContentTable {
 
   public DisplayContentTable(Page page, Integer numberInGroup)
           throws UnsupportedEncodingException {
-    this(page, numberInGroup, DEFAULT_GROUPING);
+    this(page, numberInGroup, DEFAULT_GROUPING, null);
   }
 
   public DisplayContentTable(Page page, String grouping)
           throws UnsupportedEncodingException {
-    this(page, DEFAULT_NUMBER_IN_GROUP, grouping);
+    this(page, DEFAULT_NUMBER_IN_GROUP, grouping, null);
+  }
+
+  public DisplayContentTable(Page page, String grouping, String type)
+          throws UnsupportedEncodingException {
+    this(page, DEFAULT_NUMBER_IN_GROUP, grouping, type);
   }
 
   public DisplayContentTable(Page page) throws UnsupportedEncodingException {
-    this(page, DEFAULT_NUMBER_IN_GROUP, DEFAULT_GROUPING);
+    this(page, DEFAULT_NUMBER_IN_GROUP, DEFAULT_GROUPING, null);
   }
 
   /**
@@ -104,8 +114,7 @@ public class DisplayContentTable {
    * @param allAus Collection of AUs
    * @return TreeMap of AUs in the desired format
    */
-  public static TreeMap<Plugin, TreeSet<ArchivalUnit>> 
-          orderAusByPlugin(Collection allAus) {
+  public static TreeMap<Plugin, TreeSet<ArchivalUnit>> orderAusByPlugin(Collection allAus) {
     Iterator itr = allAus.iterator();
     TreeMap<Plugin, TreeSet<ArchivalUnit>> ausMap =
             new TreeMap<Plugin, TreeSet<ArchivalUnit>>(new PluginComparator());
@@ -131,8 +140,7 @@ public class DisplayContentTable {
    * @param allAus Collection of AUs
    * @return TreeMap of AUs in the desired format
    */
-  public static TreeMap<String, TreeSet<ArchivalUnit>> 
-          orderAusByPublisher(Collection allAus) {
+  public static TreeMap<String, TreeSet<ArchivalUnit>> orderAusByPublisher(Collection allAus) {
     Iterator itr = allAus.iterator();
     TreeMap<String, TreeSet<ArchivalUnit>> ausMap =
             new TreeMap<String, TreeSet<ArchivalUnit>>();
@@ -192,8 +200,33 @@ public class DisplayContentTable {
     Link sortLink = new Link(linkHref);
     sortLink.add(linkText);
     page.add(sortLink);
-    page.add(new Break(Break.Line));
+  }
 
+  private void createTypeLinks() {
+    Block typeDiv = new Block(Block.Div);
+    typeDiv.attribute("class", "typeDiv");
+    typeDiv.add("Filter results by ");
+    String booksLinkString = "DisplayContentStatus?type=books";
+    String journalsLinkString = "DisplayContentStatus?type=journals";
+    String allLinkString = "DisplayContentStatus";
+    if ("plugin".equals(grouping)) {
+      booksLinkString += "&group=plugin";
+      journalsLinkString += "&group=plugin";
+      allLinkString += "&group=plugin";
+    }
+    Link booksLink = new Link(booksLinkString);
+    booksLink.add("books");
+    typeDiv.add(booksLink);
+    typeDiv.add(" | ");
+    Link journalsLink = new Link(journalsLinkString);
+    journalsLink.add("journals");
+    typeDiv.add(journalsLink);
+    typeDiv.add(" | ");
+    Link allLink = new Link(allLinkString);
+    allLink.add("Show all");
+    typeDiv.add(allLink);
+    page.add(typeDiv);
+    page.add(new Break(Break.Line));
   }
 
   /**
@@ -273,8 +306,13 @@ public class DisplayContentTable {
 
     TreeMap ausMap;
     String sortName;
-
     Collection<ArchivalUnit> allAus = TdbUtil.getConfiguredAus();
+
+    if ("books".equals(type)) {
+      allAus = TdbUtil.filterAusByType(allAus, TdbUtil.ContentType.BOOKS);
+    } else if ("journals".equals(type)) {
+      allAus = TdbUtil.filterAusByType(allAus, TdbUtil.ContentType.JOURNALS);
+    }
 
     if ("plugin".equals(grouping)) {
       ausMap = orderAusByPlugin(allAus);
@@ -376,11 +414,13 @@ public class DisplayContentTable {
     divTable.newRow();
     Link headingLink = new Link("javascript:showRows('" + cleanNameString
             + "_class', '" + cleanNameString + "_id', '" + cleanNameString
-            + "_image')");
+            + "_AUimage')");
     headingLink.attribute("id=\"" + cleanNameString + "_id\"");
     Image headingLinkImage = new Image("images/expand.png");
-    headingLinkImage.attribute("id =\"" + cleanNameString + "_image\"");
+    headingLinkImage.attribute("id =\"" + cleanNameString + "_AUimage\"");
     headingLinkImage.attribute("class=\"title-icon\"");
+    headingLinkImage.attribute("alt", "Expand AU");
+    headingLinkImage.attribute("title", "Expand AU");
     headingLink.add(headingLinkImage);
     headingLink.add(sortName);
     Block boldHeadingLink = new Block(Block.Bold);
@@ -400,38 +440,42 @@ public class DisplayContentTable {
   private static void createAuRow(Table divTable, ArchivalUnit au,
           String cleanNameString, int rowCount)
           throws UnsupportedEncodingException {
+    TdbAu tdbAu = TdbUtil.getTdbAu(au);
     String auName = au.getName();
     String cleanedAuName = auName.replaceAll(" ", "_");
     String encodedHref = URLEncoder.encode(au.getAuId(), "UTF-8");
-    divTable.newRow("class=\"" + cleanNameString + "_class hide-row "
-            + rowCss(rowCount) + "\"");
-    Block auDiv = new Block(Block.Div, "id=\"" + cleanedAuName
-            + "\" class=\"au-title\"");
+    divTable.newRow();
+    Block newRow = divTable.row();
+    newRow.attribute("class", cleanNameString + "_class hide-row "
+            + rowCss(rowCount));
+    Block auDiv = new Block(Block.Div);
+    auDiv.attribute("id", cleanedAuName);
+    auDiv.attribute("class", "au-title");
     Link auLink = new Link("DaemonStatus");
-    auLink.attribute("onClick=\"updateDiv('" + cleanedAuName + "', '"
-            + encodedHref + "', '"
-            + cleanNameString + "_image');return false\"");
-    Image auLinkImage = new Image("images/expand.png");
-    auLinkImage.attribute("id=\"" + cleanNameString + "_image\"");
-    auLinkImage.attribute("class=\"title-icon\"");
-    auLink.add(auLinkImage);
-    auLink.add(auName);
-    auDiv.add(auLink);
-    divTable.addCell(auDiv);
-    TdbAu tdbAu = TdbUtil.getTdbAu(au);
-    divTable.addCell(tdbAu.getJournalTitle());
-    divTable.addCell(tdbAu.getYear());
-    divTable.addCell(tdbAu.getIssn());
-    divTable.addCell(checkCollected(au));
-    Input actionInput = new Input(Input.Hidden, "lockssAction");
-    Input removeInput = new Input(Input.Hidden, "removeAu", encodedHref);
-    Form removeForm = new Form();
-    removeForm.attribute("method=\"POST\"");
-    removeForm.attribute("action=\"/DisplayContentStatus\"");
-    removeForm.add(actionInput);
-    removeForm.add(removeInput);
-    removeForm.add(removeAuButton(cleanedAuName));
-    divTable.addCell(removeForm);
+    if (tdbAu != null) {
+      auLink.attribute("onClick", "updateDiv('" + cleanedAuName + "', '"
+              + encodedHref + "', '"
+              + cleanNameString + tdbAu.getYear() + "_image');return false");
+      Image auLinkImage = new Image("images/expand.png");
+      auLinkImage.attribute("id", cleanNameString + tdbAu.getYear() + "_image");
+      auLinkImage.attribute("class", "title-icon");
+      auLinkImage.attribute("alt", "Expand Volume");
+      auLinkImage.attribute("title", "Expand Volume");
+      auLink.add(auLinkImage);
+      auLink.add(auName);
+      auDiv.add(auLink);
+      divTable.addCell(auDiv);
+      divTable.addCell(tdbAu.getJournalTitle());
+      divTable.addCell(tdbAu.getYear());
+      divTable.addCell(tdbAu.getIssn());
+      divTable.addCell(checkCollected(au));
+    }
+    Block serveContentDiv = new Block(Block.Div);
+    Link serveContentLink = new Link("ServeContent?auid=" + encodedHref);
+    serveContentLink.target("_blank");
+    serveContentLink.add("Serve content");
+    serveContentDiv.add(serveContentLink);
+    divTable.addCell(serveContentDiv);
   }
 
   /**
@@ -445,8 +489,12 @@ public class DisplayContentTable {
 
     if (TdbUtil.isAuPreserved(au)) {
       collectedImage = new Image(OK_ICON);
+      collectedImage.attribute("title", "AU has substance");
+      collectedImage.attribute("alt", "AU has substance");
     } else {
       collectedImage = new Image(CANCEL_ICON);
+      collectedImage.attribute("title", "AU does not have substance");
+      collectedImage.attribute("alt", "AU does not have substance");
     }
     return collectedImage;
   }
@@ -494,6 +542,7 @@ public class DisplayContentTable {
   private void addJS(String jsLocation) {
     Script ajaxScript = new Script("");
     ajaxScript.attribute("src", jsLocation);
+    ajaxScript.attribute("type", "text/javascript");
     page.add(ajaxScript);
   }
 }
