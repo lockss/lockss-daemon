@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkBookMetadataExtractorFactory.java,v 1.1 2012-04-16 20:56:16 dylanrhodes Exp $
+ * $Id: SpringerLinkBookMetadataExtractorFactory.java,v 1.2 2013-03-10 18:20:23 alexandraohlson Exp $
  */
 
 /*
@@ -32,14 +32,20 @@
 
 package org.lockss.plugin.springer;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.extractor.*;
-import org.lockss.plugin.*;
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadata;
+import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.FileMetadataExtractorFactory;
+import org.lockss.extractor.MetadataField;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.util.Logger;
+import org.lockss.util.MetadataUtil;
 
 /**
  * One of the articles used to get the html source for this plugin is:
@@ -49,20 +55,21 @@ public class SpringerLinkBookMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("SpringerLinkBookMetadataExtractorFactory");
 
+  @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
       throws PluginException {
     return new SpringerLinkBookMetadataExtractor();
   }
 
-  public static class SpringerLinkBookMetadataExtractor 
+  public static class SpringerLinkBookMetadataExtractor
     implements FileMetadataExtractor {
-	
+
 	private Pattern[] patterns  = {
 			Pattern.compile("(<h1.*>)"),
 			Pattern.compile("(.*Volume [\\d]+(,|/) ?)([\\d]+)(, )?(<span class=\".*)"),
-			Pattern.compile("(.*Volume )([\\d]+)((,|/) ?[\\d]+(, )?<span class=\".*)"), 
-			Pattern.compile("(.*DOI:</span> <span class=\"value\">)([^<]+)(</span>.*)"),			
+			Pattern.compile("(.*Volume )([\\d]+)((,|/) ?[\\d]+(, )?<span class=\".*)"),
+			Pattern.compile("(.*DOI:</span> <span class=\"value\">)([^<]+)(</span>.*)"),
 			Pattern.compile("(.*DOI:</span> <span class=\"value\">[^/]+/)([^<]+)(</span>.*)"),
 			Pattern.compile("(.*<span class=\"subtitle\">)([^<]+)(</span>.*)"),
 			Pattern.compile("(</h1><p class=\"authors\">)(<a[^>]+>)([^<]+)(</a>([^<]+)?)"),
@@ -92,7 +99,7 @@ public class SpringerLinkBookMetadataExtractorFactory
 			"$2"
 	};
 	private String[] metadataValues = new String[patterns.length];
-    
+
     /**
      * Extracts metadata directly by reading the html file
      */
@@ -100,20 +107,23 @@ public class SpringerLinkBookMetadataExtractorFactory
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
       throws IOException {
     	log.debug("The MetadataExtractor attempted to extract metadata from cu: "+cu);
-      ArticleMetadata am = extractFrom(cu);      
+      ArticleMetadata am = extractFrom(cu);
+
+      // publisher name does not appear anywhere on the page in this form
+      am.put(MetadataField.FIELD_PUBLISHER, "Springer Science+Business Media");
       emitter.emitMetadata(cu, am);
     }
-    
+
     private ArticleMetadata extractFrom(CachedUrl cu) throws IOException {
-    	
+
     	ArticleMetadata am = new ArticleMetadata();
-    	
+
     	if(cu.hasContent()) {
     		String startTag = "heading enumeration";
     		BufferedReader bReader = new BufferedReader(cu.openForReading());
-    	
+
     		String line = bReader.readLine();
-    		
+
     		while(line != null) {
     			if(line.contains(startTag)) {
     				fill(am, bReader);
@@ -123,13 +133,13 @@ public class SpringerLinkBookMetadataExtractorFactory
     				line = bReader.readLine();
     		}
     	}
-    	
+
     	return am;
     }
-    
+
     private void fill(ArticleMetadata am, BufferedReader bReader) throws IOException {
     	String line = bReader.readLine(), endTag = "ContentSecondary";
-    	
+
     	while(line != null && !line.contains(endTag)) {
     		for(int i = 0; i < patterns.length; ++i) {
     			if(patterns[i].matcher(line).find()) {
@@ -139,23 +149,32 @@ public class SpringerLinkBookMetadataExtractorFactory
     					processSpecialCase(am, line, i, bReader);
        			}
     		}
-    		
+
     		line = bReader.readLine();
     	}
-    	
+
     	for(int i = 0; i < metadataFields.length; ++i) {
-    		if(metadataValues[i] != null)
-    			am.put(metadataFields[i], metadataValues[i]);
+    	  if(metadataValues[i] != null) {
+    	    if ((MetadataField.FIELD_ISBN).equals(metadataFields[i])) {
+    	      /* special case for ISBN which is not always the 2nd half of DOI
+    	       * and if a bad ISBN goes through it will cause an exception to get thrown
+    	       */
+    	      if (MetadataUtil.isIsbn(metadataValues[i], false)) //don't need strict validation, hence the false
+    	        am.put(metadataFields[i], metadataValues[i]);
+    	    } else {
+    	      am.put(metadataFields[i], metadataValues[i]);
+    	    }
+    	  }
     	}
     }
-    
-    private void processSpecialCase(ArticleMetadata am, String line, int index, BufferedReader bReader) throws IOException {    	
+
+    private void processSpecialCase(ArticleMetadata am, String line, int index, BufferedReader bReader) throws IOException {
     	if(patterns[index].pattern().contains("<h1")) {
     		line = bReader.readLine();
     		metadataValues[index] = line.trim();
     	} else if(patterns[index].pattern().contains("authors")) {
     		Matcher mat = patterns[index].matcher(line);
-    		
+
     		while(mat.find()) {
     			if(metadataValues[index] == null)
     				metadataValues[index] = mat.group(3);

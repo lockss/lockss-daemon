@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+``Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,20 +28,29 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.springer;
 
-import java.io.*;
-import java.util.*;
+import java.util.List;
 
-import org.lockss.test.*;
-import org.lockss.util.*;
-import org.lockss.config.*;
-import org.lockss.repository.*;
-import org.lockss.extractor.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.simulated.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
+import org.lockss.extractor.ArticleMetadata;
+import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.FileMetadataListExtractor;
+import org.lockss.extractor.MetadataField;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.PluginTestUtil;
+import org.lockss.plugin.simulated.SimulatedArchivalUnit;
+import org.lockss.plugin.simulated.SimulatedContentGenerator;
+import org.lockss.plugin.simulated.SimulatedPlugin;
+import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockCachedUrl;
+import org.lockss.test.MockLockssDaemon;
+import org.lockss.util.Logger;
 
 /**
  * One of the articles used to get the xml source for this plugin is:
- * http://www.springerlink.com/content/978-3-642-14308-3 
+ * http://www.springerlink.com/content/978-3-642-14308-3
  */
 public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestSpringerLinkBookMetadataExtractorFactory");
@@ -55,6 +64,7 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
   private static String BASE_URL = "http://www.example.com/";
   private static String SIM_ROOT = BASE_URL + "cgi/reprint/";
 
+  @Override
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = setUpDiskSpace();
@@ -70,6 +80,7 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     hau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, springerAuConfig());
   }
 
+  @Override
   public void tearDown() throws Exception {
     sau.deleteContentTree();
     theDaemon.stopDaemon();
@@ -96,15 +107,17 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     conf.put("book_isbn", "000-0-000-00000-0");
     return conf;
   }
-  
+
   String goodAuthors = "John A. Author; John B. Author";
   String goodVolume = "1234";
   String goodDate = "2010";
   String goodDoi = "10.5555/000-0-000-00000-0";
   String goodTitle = "This is a good title";
   String goodIsbn = "000-0-000-00000-0";
-  
-  String goodContent = 
+
+  //break string in to pieces to allow for bad ISBN test
+  String goodDOI_ISBN = "<span class=\"label\">DOI:</span> <span class=\"value\">10.5555/000-0-000-00000-0</span>";
+  String goodContent_top =
 		  "</ul>\n"+
 		  "</div>\n"+
   		  "<a id=\"ctl00_ContentToolbar_ctl00_SubjectLink\" href=\"../../computer-science/\">Computer Science</a>\n"+
@@ -114,7 +127,8 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
           "<div class=\"primary\">\n"+
           "<a lang=\"en\" href=\"/content/0000-0000/\" title=\"Link to the Book Series of this Book\">Lecture Notes in Computer Science</a>\n"+
           "</div><div class=\"secondary\">\n"+
-          "Volume 1234, 2010<span class=\"doi\">, <span class=\"label\">DOI:</span> <span class=\"value\">10.5555/000-0-000-00000-0</span></span>\n"+
+          "Volume 1234, 2010<span class=\"doi\">, ";
+  String goodContent_bottom = "</span>\n"+
           "</div>\n"+
           "</div><div class=\"heading primitive\">\n"+
           "<div class=\"coverImage\" title=\"Cover Image\" style=\"background-image: url(/content/105633/cover-medium.jpg)\">\n"+
@@ -139,6 +153,7 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
 		  "<div id=\"Cockpit\">\n"+
 		  "<ul class=\"sections count3\" data-ajaxSections=\"\">";
 
+  String goodContent = goodContent_top + goodDOI_ISBN + goodContent_bottom;
 
   public void testExtractFromGoodContent() throws Exception {
     String url = "http://www.example.com/vol1/issue2/art3/";
@@ -156,7 +171,7 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-    
+
     assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodAuthors, md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
@@ -164,9 +179,9 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
     assertEquals(goodIsbn, md.get(MetadataField.FIELD_ISBN));
   }
-  
+
   String badContent =
-    "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
+    "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" +
     "<meta name=\"foo\"" +  " content=\"bar\">\n" +
     "  <div id=\"issn\">" +
     "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: " +
@@ -197,12 +212,56 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     assertNull(md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertNull(md.get(MetadataField.FIELD_DATE));
   }
-  
+
+  String goodDOI_badISBN = "<span class=\"label\">DOI:</span> <span class=\"value\">10.5555/11677437_1</span>";
+  String content_BadISBN = goodContent_top + goodDOI_badISBN + goodContent_bottom;
+
+  public void testExtractWithBadISBN() throws Exception {
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, hau);
+    cu.setContent(content_BadISBN);
+    cu.setContentSize(content_BadISBN.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
+    FileMetadataExtractor me =
+      new SpringerLinkBookMetadataExtractorFactory.SpringerLinkBookMetadataExtractor();
+    assertNotNull(me);
+    log.setLevel("debug3");
+    log.debug3("Extractor: " + me.toString());
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+
+    log.debug3("in extractWithBadISBN, the values pulled are: ");
+    log.debug3(md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    log.debug3("; ");
+    log.debug3(md.get(MetadataField.FIELD_AUTHOR));
+    log.debug3("; ");
+    log.debug3(md.get(MetadataField.FIELD_VOLUME));
+    log.debug3("; ");
+    log.debug3(md.get(MetadataField.FIELD_DATE));
+    log.debug3("; ");
+    log.debug3(md.get(MetadataField.FIELD_DOI));
+    log.debug3("; ");
+    log.debug3(md.get(MetadataField.FIELD_ISBN));
+    log.debug3("!");
+    assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(goodAuthors, md.get(MetadataField.FIELD_AUTHOR));
+    assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
+    assertEquals("10.5555/11677437_1", md.get(MetadataField.FIELD_DOI));
+    assertNull(md.get(MetadataField.FIELD_ISBN));
+  }
+
+
   /**
    * Inner class that where a number of Archival Units can be created
    *
    */
   public static class MySimulatedPlugin extends SimulatedPlugin {
+    @Override
     public ArchivalUnit createAu0(Configuration auConfig)
 	throws ArchivalUnit.ConfigurationException {
       ArchivalUnit au = new SimulatedArchivalUnit(this);
@@ -210,11 +269,12 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
       return au;
     }
 
+    @Override
     public SimulatedContentGenerator getContentGenerator(Configuration cf, String fileRoot) {
       return new MySimulatedContentGenerator(fileRoot);
     }
   }
-  
+
   /**
    * Inner class to create a html source code simulated content
    */
@@ -223,13 +283,14 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
       super(fileRoot);
     }
 
+    @Override
     public String getHtmlFileContent(String filename, int fileNum, int depth, int branchNum, boolean isAbnormal) {
-			
+
       String file_content = "<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
-			
+
       file_content += "  <meta name=\"lockss.filenum\" content=\""+ fileNum + "\">\n";
       file_content += "  <meta name=\"lockss.depth\" content=\"" + depth + "\">\n";
-      file_content += "  <meta name=\"lockss.branchnum\" content=\"" + branchNum + "\">\n";			
+      file_content += "  <meta name=\"lockss.branchnum\" content=\"" + branchNum + "\">\n";
 
       file_content += getHtmlContent(fileNum, depth, branchNum,	isAbnormal);
       file_content += "\n</BODY></HTML>";

@@ -45,34 +45,35 @@ import org.lockss.util.Logger;
 
 public class SpringerLinkBookArticleMetadataExtractor implements ArticleMetadataExtractor{
 
-	private SpringerEmitter emit = null;
+//	private SpringerEmitter emit = null;
 	private static Logger log = Logger.getLogger("SpringerLinkBookArticleMetadataExtractor");
-	
-	public SpringerLinkBookArticleMetadataExtractor() 
+
+	public SpringerLinkBookArticleMetadataExtractor()
 	{
 		super();
 	}
-	
-	 protected void addAccessUrl(ArticleMetadata am, CachedUrl cu) 
+
+	 protected void addAccessUrl(ArticleMetadata am, CachedUrl cu)
 	 {
-		    if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL)) 
+		    if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL))
 		      am.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
 	 }
-	
+
 	@Override
 	public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
 			throws IOException, PluginException {
-		if(emit == null)
-			emit = new SpringerEmitter(af,emitter);
-		
+
+	  /* create a new SpringerEmitter off the passed in emitter */
+	  SpringerEmitter emit = new SpringerEmitter(af, emitter);
+
 		CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
 		FileMetadataExtractor me = null;
-	    
+
 		if(cu != null)
 		{
 			try{
 				me = cu.getFileMetadataExtractor(target);
-				
+
 				if(me != null)
 					me.extract(target, cu, emit);
 				else
@@ -80,7 +81,7 @@ public class SpringerLinkBookArticleMetadataExtractor implements ArticleMetadata
 
 			} catch (RuntimeException e) {
 				log.debug("for af (" + af + ")", e);
-				
+
 				if(me != null)
 					try{
 						emit.emitMetadata(cu, getDefaultArticleMetadata(cu));
@@ -93,7 +94,7 @@ public class SpringerLinkBookArticleMetadataExtractor implements ArticleMetadata
 			}
 		}
 	  }
-	
+
 	ArticleMetadata getDefaultArticleMetadata(CachedUrl cu) {
 	    TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
 	    TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
@@ -107,7 +108,7 @@ public class SpringerLinkBookArticleMetadataExtractor implements ArticleMetadata
 	                                       journalTitle);
 	    return md;
 	  }
-	
+
 	class SpringerEmitter implements FileMetadataExtractor.Emitter {
 	    private Emitter parent;
 	    private ArticleFiles af;
@@ -117,7 +118,8 @@ public class SpringerLinkBookArticleMetadataExtractor implements ArticleMetadata
 	      this.parent = parent;
 	    }
 
-	    public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
+	    @Override
+      public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
 	      addAccessUrl(am, cu);
 	      parent.emitMetadata(af, am);
 	    }
