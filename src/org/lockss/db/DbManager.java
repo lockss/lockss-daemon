@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.14 2013-03-04 19:16:47 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.15 2013-03-10 23:44:59 fergaloy-sf Exp $
  */
 
 /*
@@ -241,6 +241,9 @@ public class DbManager extends BaseLockssDaemonManager
   /** Name of the unconfigured Archival Unit table. */
   public static final String UNCONFIGURED_AU_TABLE = "unconfigured_au";
 
+  /** Name of the Archival Unit problem table. */
+  public static final String AU_PROBLEM_TABLE = "au_problem";
+
   //
   // Database table column names.
   //
@@ -455,6 +458,9 @@ public class DbManager extends BaseLockssDaemonManager
   /** Requests column. */
   public static final String SUBSCRIBED_COLUMN = "subscribed";
 
+  /** Name of the Archival Unit problem description column. */
+  public static final String PROBLEM_COLUMN = "problem";
+
   //
   // Maximum lengths of variable text length database columns.
   //
@@ -558,6 +564,9 @@ public class DbManager extends BaseLockssDaemonManager
 
   /** Length of the range column. */
   public static final int MAX_RANGE_COLUMN = 64;
+
+  /** Length of the problem column. */
+  public static final int MAX_PROBLEM_COLUMN = 512;
 
   //
   //Types of metadata items.
@@ -952,10 +961,19 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for unconfigured Archival Units.
-  private static final String CREATE_UNCONFIGURED_AU_TABLE_QUERY = "create table "
+  private static final String CREATE_UNCONFIGURED_AU_TABLE_QUERY = "create "
+      + "table "
       + UNCONFIGURED_AU_TABLE + " ("
       + PLUGIN_ID_COLUMN + " varchar(" + MAX_PLUGIN_ID_COLUMN + ") not null,"
       + AU_KEY_COLUMN + " varchar(" + MAX_AU_KEY_COLUMN + ") not null"
+      + ")";
+
+  // Query to create the table for Archival Unit problems.
+  private static final String CREATE_AU_PROBLEM_TABLE_QUERY = "create table "
+      + AU_PROBLEM_TABLE + " ("
+      + PLUGIN_ID_COLUMN + " varchar(" + MAX_PLUGIN_ID_COLUMN + ") not null,"
+      + AU_KEY_COLUMN + " varchar(" + MAX_AU_KEY_COLUMN + ") not null,"
+      + PROBLEM_COLUMN + " varchar(" + MAX_PROBLEM_COLUMN + ") not null"
       + ")";
 
   // The SQL code used to create the necessary version 1 database tables.
@@ -1592,12 +1610,25 @@ public class DbManager extends BaseLockssDaemonManager
       + "table " + PLUGIN_TABLE
       + " drop column " + PLATFORM_COLUMN + " restrict";
 
-  // SQL statement that removes the obsolete platform column from the plugin
-  // table.
+  // SQL statement that nulls out publication dates.
   private static final String SET_PUBLICATION_DATES_TO_NULL = "update "
       + MD_ITEM_TABLE
       + " set " + DATE_COLUMN + " = null"
       + " where " + AU_MD_SEQ_COLUMN + " is null";
+
+  // The SQL code used to create the necessary version 5 database tables.
+  @SuppressWarnings("serial")
+  private static final Map<String, String> VERSION_5_TABLE_CREATE_QUERIES =
+    new LinkedHashMap<String, String>() {{
+      put(AU_PROBLEM_TABLE, CREATE_AU_PROBLEM_TABLE_QUERY);
+    }};
+
+  // SQL statements that create the necessary version 5 indices.
+  private static final String[] VERSION_5_INDEX_CREATE_QUERIES = new String[] {
+    "create index idx1_" + AU_PROBLEM_TABLE
+    + " on " + AU_PROBLEM_TABLE
+    + "(" + PLUGIN_ID_COLUMN + "," + AU_KEY_COLUMN + ")"
+  };
 
   // Database metadata keys.
   private static final String COLUMN_NAME = "COLUMN_NAME";
@@ -1655,7 +1686,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 4;
+  private int targetDatabaseVersion = 5;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -2004,6 +2035,8 @@ public class DbManager extends BaseLockssDaemonManager
 	updateDatabaseFrom2To3(conn);
       } else if (from == 3) {
 	updateDatabaseFrom3To4(conn);
+      } else if (from == 4) {
+	updateDatabaseFrom4To5(conn);
       } else {
 	log.error("Non-existent method to update the database from version "
 	    + from + ".");
@@ -3984,6 +4017,78 @@ public class DbManager extends BaseLockssDaemonManager
       throw sqle;
     } finally {
       DbManager.safeCloseStatement(statement);
+    }
+  }
+
+  /**
+   * Updates the database from version 4 to version 5.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws BatchUpdateException
+   *           if a batch update exception occurred.
+   * @throws SQLException
+   *           if any other problem occurred accessing the database.
+   */
+  private void updateDatabaseFrom4To5(Connection conn)
+      throws BatchUpdateException, SQLException {
+    // Create the necessary tables if they do not exist.
+    createVersion5TablesIfMissing(conn);
+
+    //Create the necessary indices.
+    createVersion5Indices(conn);
+  }
+
+  /**
+   * Creates all the necessary version 5 database tables if they do not exist.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws BatchUpdateException
+   *           if a batch update exception occurred.
+   * @throws SQLException
+   *           if any other problem occurred accessing the database.
+   */
+  private void createVersion5TablesIfMissing(Connection conn)
+      throws BatchUpdateException, SQLException {
+    final String DEBUG_HEADER = "createVersion5TablesIfMissing(): ";
+
+    // Loop through all the table names.
+    for (String tableName : VERSION_5_TABLE_CREATE_QUERIES.keySet()) {
+      log.debug2(DEBUG_HEADER + "Checking table = " + tableName);
+
+      // Create the table if it does not exist.
+      createTableIfMissingBeforeReady(conn, tableName,
+                                      VERSION_5_TABLE_CREATE_QUERIES
+                                      	.get(tableName));
+    }
+  }
+
+  /**
+   * Creates all the necessary version 5 database indices.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void createVersion5Indices(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "createVersion3Indices(): ";
+
+    // Loop through all the indices.
+    for (String query : VERSION_5_INDEX_CREATE_QUERIES) {
+      log.debug2(DEBUG_HEADER + "Query = " + query);
+      PreparedStatement statement = prepareStatementBeforeReady(conn, query);
+
+      try {
+        executeUpdateBeforeReady(statement);
+      } catch (SQLException sqle) {
+        log.error("Cannot create index", sqle);
+        log.error("SQL = '" + query + "'.");
+        throw sqle;
+      } finally {
+        DbManager.safeCloseStatement(statement);
+      }
     }
   }
 }

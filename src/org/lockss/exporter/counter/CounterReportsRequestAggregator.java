@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsRequestAggregator.java,v 1.7 2013-01-14 21:58:18 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestAggregator.java,v 1.8 2013-03-10 23:44:59 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -81,37 +81,6 @@ public class CounterReportsRequestAggregator {
 
   private static final Logger log = Logger
       .getLogger(CounterReportsRequestAggregator.class);
-
-  // Query to insert book type aggregates.
-  private static final String SQL_QUERY_BOOK_TYPE_AGGREGATE_INSERT = "insert "
-      + "into " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE + " ("
-      + PUBLICATION_SEQ_COLUMN + ","
-      + IS_PUBLISHER_INVOLVED_COLUMN + ","
-      + REQUEST_YEAR_COLUMN + ","
-      + REQUEST_MONTH_COLUMN + ","
-      + FULL_REQUESTS_COLUMN + ","
-      + SECTION_REQUESTS_COLUMN + ") values (?,?,?,?,?,?)";
-
-  // Query to insert journal type aggregates.
-  private static final String SQL_QUERY_JOURNAL_TYPE_AGGREGATE_INSERT =
-      "insert into " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE + " ("
-      + PUBLICATION_SEQ_COLUMN + ","
-      + IS_PUBLISHER_INVOLVED_COLUMN + ","
-      + REQUEST_YEAR_COLUMN + ","
-      + REQUEST_MONTH_COLUMN + ","
-      + TOTAL_REQUESTS_COLUMN + ","
-      + HTML_REQUESTS_COLUMN + ","
-      + PDF_REQUESTS_COLUMN + ") values (?,?,?,?,?,?,?)";
-
-  // Query to insert journal publication year aggregates.
-  private static final String SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATE_INSERT =
-      "insert into " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE + " ("
-      + PUBLICATION_SEQ_COLUMN + ","
-      + IS_PUBLISHER_INVOLVED_COLUMN + ","
-      + REQUEST_YEAR_COLUMN + ","
-      + REQUEST_MONTH_COLUMN + ","
-      + PUBLICATION_YEAR_COLUMN + ","
-      + REQUESTS_COLUMN + ") values (?,?,?,?,?,?)";
 
   // Query to count the full requests for a book instance during a month.
   private static final String SQL_QUERY_MONTH_BOOK_FULL_REQUEST_COUNT =
@@ -269,28 +238,6 @@ public class CounterReportsRequestAggregator {
       + " and " + "r." + IS_PUBLISHER_INVOLVED_COLUMN + " = ?"
       + " and " + "r." + IN_AGGREGATION_COLUMN + " = true";
 
-  // Query to get the aggregated type requests for a book during a month.
-  private static final String SQL_QUERY_BOOK_TYPE_AGGREGATE_SELECT = "select "
-      + FULL_REQUESTS_COLUMN + ","
-      + SECTION_REQUESTS_COLUMN
-      + " from " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
-      + " where " + PUBLICATION_SEQ_COLUMN + " = ? "
-      + "and " + IS_PUBLISHER_INVOLVED_COLUMN + " = ? "
-      + "and " + REQUEST_YEAR_COLUMN + " = ? "
-      + "and " + REQUEST_MONTH_COLUMN + " = ?";
-
-  // Query to get the aggregated type requests for a journal during a month.
-  private static final String SQL_QUERY_JOURNAL_TYPE_AGGREGATE_SELECT =
-      "select "
-      + TOTAL_REQUESTS_COLUMN + ","
-      + HTML_REQUESTS_COLUMN + ","
-      + PDF_REQUESTS_COLUMN
-      + " from " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
-      + " where " + PUBLICATION_SEQ_COLUMN + " = ? "
-      + "and " + IS_PUBLISHER_INVOLVED_COLUMN + " = ? "
-      + "and " + REQUEST_YEAR_COLUMN + " = ? "
-      + "and " + REQUEST_MONTH_COLUMN + " = ?";
-
   // Query to get the publication year requests for a journal instance during a
   // month.
   private static final String SQL_QUERY_MONTH_JOURNAL_PUBYEAR_REQUEST_SELECT =
@@ -319,18 +266,6 @@ public class CounterReportsRequestAggregator {
       + " and " + "r." + IN_AGGREGATION_COLUMN + " = true"
       + " group by " + "m." + DATE_COLUMN;
 
-  // Query to get the aggregated publication year requests for a journal during
-  // a month.
-  private static final String SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATE_SELECT =
-      "select "
-      + REQUESTS_COLUMN
-      + " from " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
-      + " where " + PUBLICATION_SEQ_COLUMN + " = ? "
-      + "and " + IS_PUBLISHER_INVOLVED_COLUMN + " = ? "
-      + "and " + REQUEST_YEAR_COLUMN + " = ? "
-      + "and " + REQUEST_MONTH_COLUMN + " = ? "
-      + "and " + PUBLICATION_YEAR_COLUMN + " = ?";
-
   // Query to get the year/month pairs that have requests to be aggregated.
   private static final String SQL_QUERY_YEAR_MONTH_REQUEST_SELECT = "select "
       + "distinct " + REQUEST_YEAR_COLUMN + ","
@@ -342,39 +277,6 @@ public class CounterReportsRequestAggregator {
   private static final String SQL_QUERY_MARK_REQUESTS_UPDATE = "update "
       + COUNTER_REQUEST_TABLE
       + " set " + IN_AGGREGATION_COLUMN + " = true";
-
-  // Query to update book type aggregates.
-  private static final String SQL_QUERY_BOOK_TYPE_AGGREGATE_UPDATE = "update "
-      + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
-      + " set " + FULL_REQUESTS_COLUMN + " = ?,"
-      + SECTION_REQUESTS_COLUMN + " = ? "
-      + "where " + PUBLICATION_SEQ_COLUMN + " = ? "
-      + "and " + IS_PUBLISHER_INVOLVED_COLUMN + " = ? "
-      + "and " + REQUEST_YEAR_COLUMN + " = ? "
-      + "and " + REQUEST_MONTH_COLUMN + " = ?";
-
-  // Query to update journal type aggregates.
-  private static final String SQL_QUERY_JOURNAL_TYPE_AGGREGATE_UPDATE =
-      "update "
-      + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
-      + " set " + TOTAL_REQUESTS_COLUMN + " = ?,"
-      + HTML_REQUESTS_COLUMN + " = ?,"
-      + PDF_REQUESTS_COLUMN + " = ? "
-      + "where " + PUBLICATION_SEQ_COLUMN + " = ? "
-      + "and " + IS_PUBLISHER_INVOLVED_COLUMN + " = ? "
-      + "and " + REQUEST_YEAR_COLUMN + " = ? "
-      + "and " + REQUEST_MONTH_COLUMN + " = ?";
-
-  // Query to update journal publication year aggregates.
-  private static final String SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATE_UPDATE =
-      "update "
-      + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
-      + " set " + REQUESTS_COLUMN + " = ? "
-      + "where " + PUBLICATION_SEQ_COLUMN + " = ? "
-      + "and " + IS_PUBLISHER_INVOLVED_COLUMN + " = ? "
-      + "and " + REQUEST_YEAR_COLUMN + " = ? "
-      + "and " + REQUEST_MONTH_COLUMN + " = ? "
-      + "and " + PUBLICATION_YEAR_COLUMN + " = ?";
 
   // Query to delete book requests for a month and a given publisher
   // involvement.
@@ -426,6 +328,7 @@ public class CounterReportsRequestAggregator {
 
   private final LockssDaemon daemon;
   private final DbManager dbManager;
+  private final CounterReportsManager crManager;
 
   /**
    * Constructor.
@@ -436,6 +339,7 @@ public class CounterReportsRequestAggregator {
   public CounterReportsRequestAggregator(LockssDaemon daemon) {
     this.daemon = daemon;
     dbManager = daemon.getDbManager();
+    crManager = daemon.getCounterReportsManager();
   }
 
   /**
@@ -706,9 +610,8 @@ public class CounterReportsRequestAggregator {
 	log.debug2(DEBUG_HEADER + "sectionCount = " + sectionCount);
 
 	// Retrieve the previous aggregate of book requests.
-	previousAggregate =
-	    getExistingAggregateMonthBookTypes(year, month, publicationSeq,
-					       publisherInvolved, conn);
+	previousAggregate = crManager.getExistingAggregateMonthBookTypes(year,
+	    month, publicationSeq, publisherInvolved, conn);
 
 	// Check whether there were previously recorded aggregates.
 	if (previousAggregate != null) {
@@ -723,15 +626,13 @@ public class CounterReportsRequestAggregator {
 	      + previousSectionCount);
 
 	  // Update the existing row in the database.
-	  updateBookTypeAggregate(year, month, publicationSeq,
-	                          publisherInvolved,
-				  previousFullCount + fullCount,
-				  previousSectionCount + sectionCount, conn);
+	  crManager.updateBookTypeAggregate(year, month, publicationSeq,
+	      publisherInvolved, previousFullCount + fullCount,
+	      previousSectionCount + sectionCount, conn);
 	} else {
 	  // No: Insert a new row in the database.
-	  insertBookTypeAggregate(year, month, publicationSeq,
-	                          publisherInvolved, fullCount, sectionCount,
-	                          conn);
+	  crManager.insertBookTypeAggregate(year, month, publicationSeq,
+	      publisherInvolved, fullCount, sectionCount, conn);
 	}
 
 	// Accumulate the aggregations.
@@ -1054,256 +955,6 @@ public class CounterReportsRequestAggregator {
   }
 
   /**
-   * Provides the existing type aggregates of requests for a book during a
-   * month.
-   * 
-   * @param year
-   *          An int with the year of the month for which the aggregates are to
-   *          be provided.
-   * @param month
-   *          An int with the month for which the aggregates are to be provided.
-   * @param publicationSeq
-   *          A Long with the identifier of the book involved.
-   * @param publisherInvolved
-   *          A boolean with the indication of the publisher involvement in
-   *          serving the request.
-   * @param conn
-   *          A Connection representing the database connection.
-   * @return a Map<String, Integer> with the existing aggregated request counts
-   *         or <code>null</code> if there are none.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  private Map<String, Integer> getExistingAggregateMonthBookTypes(int year,
-      int month, Long publicationSeq, boolean publisherInvolved,
-      Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "getExistingAggregateMonthBookTypes(): ";
-    log.debug2(DEBUG_HEADER + "year = " + year);
-    log.debug2(DEBUG_HEADER + "month = " + month);
-    log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-    log.debug2(DEBUG_HEADER + "publisherInvolved = " + publisherInvolved);
-
-    PreparedStatement statement = null;
-    ResultSet resultSet = null;
-    Map<String, Integer> aggregates = null;
-
-    String sql = SQL_QUERY_BOOK_TYPE_AGGREGATE_SELECT;
-    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
-
-    try {
-      // Prepare the statement used to get the existing aggregates.
-      statement = dbManager.prepareStatement(conn, sql);
-
-      int index = 1;
-
-      // Populate the book identifier.
-      statement.setLong(index++, publicationSeq);
-
-      // Populate the publisher involvement indicator.
-      statement.setBoolean(index++, publisherInvolved);
-
-      // Populate the year of the request.
-      statement.setInt(index++, year);
-
-      // Populate the month of the request.
-      statement.setInt(index++, month);
-
-      resultSet = dbManager.executeQuery(statement);
-
-      if (resultSet.next()) {
-	aggregates = new HashMap<String, Integer>();
-
-	int fullCount = resultSet.getInt(FULL_REQUESTS_COLUMN);
-	log.debug2(DEBUG_HEADER + "fullCount = " + fullCount);
-
-	int sectionCount = resultSet.getInt(SECTION_REQUESTS_COLUMN);
-	log.debug2(DEBUG_HEADER + "sectionCount = " + sectionCount);
-
-	aggregates.put(FULL_REQUESTS_COLUMN, fullCount);
-	aggregates.put(SECTION_REQUESTS_COLUMN, sectionCount);
-      }
-
-    } catch (SQLException sqle) {
-      log.error("Cannot get the existing month book request aggregates", sqle);
-      log.error("Year = " + year + ", Month = " + month);
-      log.error("publicationSeq = " + publicationSeq);
-      log.error("publisherInvolved = " + publisherInvolved);
-      log.error("SQL = '" + sql + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(statement);
-    }
-
-    log.debug2(DEBUG_HEADER + "Done.");
-    return aggregates;
-  }
-
-  /**
-   * Updates in the database a row with the aggregates for a book during a
-   * month.
-   * 
-   * @param year
-   *          An int with the year corresponding to the month.
-   * @param month
-   *          An int with the month.
-   * @param publicationSeq
-   *          A long with the identifier of the book involved.
-   * @param publisherInvolved
-   *          A boolean with the indication of the publisher involvement in
-   *          serving the request.
-   * @param fullCount
-   *          An int with the count of full requests for the book during the
-   *          month.
-   * @param sectionCount
-   *          An int with the count of section requests for the book during the
-   *          month.
-   * @param conn
-   *          A Connection representing the database connection.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  private void updateBookTypeAggregate(int year, int month, Long publicationSeq,
-      boolean publisherInvolved, int fullCount, int sectionCount,
-      Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "updateBookTypeAggregate(): ";
-    log.debug2(DEBUG_HEADER + "year = " + year);
-    log.debug2(DEBUG_HEADER + "month = " + month);
-    log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-    log.debug2(DEBUG_HEADER + "publisherInvolved = " + publisherInvolved);
-    log.debug2(DEBUG_HEADER + "fullCount = " + fullCount);
-    log.debug2(DEBUG_HEADER + "sectionCount = " + sectionCount);
-
-    PreparedStatement updateAggregate = null;
-    String sql = SQL_QUERY_BOOK_TYPE_AGGREGATE_UPDATE;
-    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
-
-    try {
-      // Prepare the statement used to persist the record.
-      updateAggregate = dbManager.prepareStatement(conn, sql);
-
-      int index = 1;
-
-      // Populate the full count.
-      updateAggregate.setInt(index++, fullCount);
-
-      // Populate the section count.
-      updateAggregate.setInt(index++, sectionCount);
-
-      // Populate the book identifier.
-      updateAggregate.setLong(index++, publicationSeq);
-
-      // Populate the publisher involvement indicator.
-      updateAggregate.setBoolean(index++, publisherInvolved);
-
-      // Populate the year of the request.
-      updateAggregate.setShort(index++, (short) year);
-
-      // Populate the month of the request.
-      updateAggregate.setShort(index++, (short) month);
-
-      // Update the record.
-      int count = dbManager.executeUpdate(updateAggregate);
-      log.debug2(DEBUG_HEADER + "count = " + count);
-    } catch (SQLException sqle) {
-      log.error("Cannot update the month book request counts", sqle);
-      log.error("Year = " + year + ", Month = " + month);
-      log.error("publicationSeq = " + publicationSeq);
-      log.error("publisherInvolved = " + publisherInvolved);
-      log.error("fullCount = " + fullCount);
-      log.error("sectionCount = " + sectionCount);
-      log.error("SQL = '" + sql + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseStatement(updateAggregate);
-    }
-
-    log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
-   * Inserts in the database a row with the aggregates for a book during a
-   * month.
-   * 
-   * @param year
-   *          An int with the year corresponding to the month.
-   * @param month
-   *          An int with the month.
-   * @param publicationSeq
-   *          A Long with the identifier of the book involved.
-   * @param publisherInvolved
-   *          A boolean with the indication of the publisher involvement in
-   *          serving the request.
-   * @param fullCount
-   *          An int with the count of full requests for the book during the
-   *          month.
-   * @param sectionCount
-   *          An int with the count of section requests for the book during the
-   *          month.
-   * @param conn
-   *          A Connection representing the database connection.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  private void insertBookTypeAggregate(int year, int month, Long publicationSeq,
-      boolean publisherInvolved, int fullCount, int sectionCount,
-      Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "insertBookTypeAggregate(): ";
-    log.debug2(DEBUG_HEADER + "year = " + year);
-    log.debug2(DEBUG_HEADER + "month = " + month);
-    log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-    log.debug2(DEBUG_HEADER + "publisherInvolved = " + publisherInvolved);
-    log.debug2(DEBUG_HEADER + "fullCount = " + fullCount);
-    log.debug2(DEBUG_HEADER + "sectionCount = " + sectionCount);
-
-    PreparedStatement insertAggregate = null;
-    String sql = SQL_QUERY_BOOK_TYPE_AGGREGATE_INSERT;
-    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
-
-    try {
-      // Prepare the statement used to persist the record.
-      insertAggregate = dbManager.prepareStatement(conn, sql);
-
-      int index = 1;
-
-      // Populate the book identifier.
-      insertAggregate.setLong(index++, publicationSeq);
-
-      // Populate the publisher involvement indicator.
-      insertAggregate.setBoolean(index++, publisherInvolved);
-
-      // Populate the year of the request.
-      insertAggregate.setShort(index++, (short) year);
-
-      // Populate the month of the request.
-      insertAggregate.setShort(index++, (short) month);
-
-      // Populate the full requests.
-      insertAggregate.setInt(index++, fullCount);
-
-      // Populate the section requests.
-      insertAggregate.setInt(index++, sectionCount);
-
-      // Insert the record.
-      int count = dbManager.executeUpdate(insertAggregate);
-      log.debug2(DEBUG_HEADER + "count = " + count);
-    } catch (SQLException sqle) {
-      log.error("Cannot insert the month book request counts", sqle);
-      log.error("Year = " + year + ", Month = " + month);
-      log.error("publicationSeq = " + publicationSeq);
-      log.error("publisherInvolved = " + publisherInvolved);
-      log.error("fullCount = " + fullCount);
-      log.error("sectionCount = " + sectionCount);
-      log.error("SQL = '" + sql + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseStatement(insertAggregate);
-    }
-
-    log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
    * Persists the aggregates for all books during a month.
    * 
    * @param year
@@ -1340,9 +991,9 @@ public class CounterReportsRequestAggregator {
 	+ allBooksPublicationSeq);
 
     // Retrieve the previous aggregates of all book requests.
-    Map<String, Integer> previousAggregate =
-	getExistingAggregateMonthBookTypes(year, month, allBooksPublicationSeq,
-					   publisherInvolved, conn);
+    Map<String, Integer> previousAggregate = crManager
+	.getExistingAggregateMonthBookTypes(year, month,
+	    allBooksPublicationSeq, publisherInvolved, conn);
 
     // Check whether there were previously recorded aggregates for all books.
     if (previousAggregate != null) {
@@ -1357,13 +1008,12 @@ public class CounterReportsRequestAggregator {
 	  + allBooksSectionCount);
 
       // Update the existing row in the database.
-      updateBookTypeAggregate(year, month, allBooksPublicationSeq,
-			      publisherInvolved, allBooksFullCount,
-			      allBooksSectionCount, conn);
+      crManager.updateBookTypeAggregate(year, month, allBooksPublicationSeq,
+	  publisherInvolved, allBooksFullCount, allBooksSectionCount, conn);
     } else {
       // No: Insert a new row in the database.
-      insertBookTypeAggregate(year, month, allBooksPublicationSeq,
-			      publisherInvolved, fullCount, sectionCount, conn);
+      crManager.insertBookTypeAggregate(year, month, allBooksPublicationSeq,
+	  publisherInvolved, fullCount, sectionCount, conn);
     }
 
     log.debug2(DEBUG_HEADER + "Done.");
@@ -1437,9 +1087,8 @@ public class CounterReportsRequestAggregator {
 	log.debug2(DEBUG_HEADER + "pdfCount = " + pdfCount);
 
 	// Retrieve the previous aggregate of journal requests.
-	previousAggregate =
-	    getExistingAggregateMonthJournalTypes(year, month, publicationSeq,
-						  publisherInvolved, conn);
+	previousAggregate = crManager.getExistingAggregateMonthJournalTypes(
+	    year, month, publicationSeq, publisherInvolved, conn);
 
 	// Check whether there were previously recorded aggregates.
 	if (previousAggregate != null) {
@@ -1458,16 +1107,13 @@ public class CounterReportsRequestAggregator {
 	  log.debug2(DEBUG_HEADER + "previousPdfCount = " + previousPdfCount);
 
 	  // Update the existing row in the database.
-	  updateJournalTypeAggregate(year, month, publicationSeq,
-	                             publisherInvolved,
-				     previousTotalCount + totalCount,
-				     previousHtmlCount + htmlCount,
-				     previousPdfCount + pdfCount, conn);
+	  crManager.updateJournalTypeAggregate(year, month, publicationSeq,
+	      publisherInvolved, previousTotalCount + totalCount,
+	      previousHtmlCount + htmlCount, previousPdfCount + pdfCount, conn);
 	} else {
 	  // No: Insert a new row in the database.
-	  insertJournalTypeAggregate(year, month, publicationSeq,
-				     publisherInvolved, totalCount, htmlCount,
-				     pdfCount, conn);
+	  crManager.insertJournalTypeAggregate(year, month, publicationSeq,
+	      publisherInvolved, totalCount, htmlCount, pdfCount, conn);
 	}
 
 	// Accumulate the aggregations.
@@ -1491,30 +1137,26 @@ public class CounterReportsRequestAggregator {
 	  log.debug2(DEBUG_HEADER + "publicationYear = " + publicationYear);
 
 	  // Retrieve the previous aggregate for the publication year.
-	  previousPubYearAggregate =
-	      getExistingAggregateMonthJournalPubYear(year, month,
-						      publicationSeq,
-						      publisherInvolved,
-						      publicationYear, conn);
+	  previousPubYearAggregate = crManager
+	      .getExistingAggregateMonthJournalPubYear(year, month,
+		  publicationSeq, publisherInvolved, publicationYear, conn);
 
 	  // Check whether there was previously a recorded aggregate for the
 	  // publication year.
 	  if (previousPubYearAggregate != null) {
-	    updateTitlePubYearAggregate(year,
-					month,
-					publicationSeq,
-					publisherInvolved,
-					publicationYear,
-					previousPubYearAggregate.intValue()
-					    + pubYearAggregate
-						.get(publicationYear)
-						.intValue(), conn);
+	    crManager.updateTitlePubYearAggregate(
+		year,
+		month,
+		publicationSeq,
+		publisherInvolved,
+		publicationYear,
+		previousPubYearAggregate.intValue()
+		    + pubYearAggregate.get(publicationYear).intValue(), conn);
 	  } else {
 	    // No: Insert a new row in the database.
-	    insertTitlePubYearAggregate(year, month, publicationSeq,
-					publisherInvolved, publicationYear,
-					pubYearAggregate.get(publicationYear),
-					conn);
+	    crManager.insertTitlePubYearAggregate(year, month, publicationSeq,
+		publisherInvolved, publicationYear,
+		pubYearAggregate.get(publicationYear), conn);
 	  }
 	}
 
@@ -1809,277 +1451,6 @@ public class CounterReportsRequestAggregator {
   }
 
   /**
-   * Provides the existing type aggregates of requests for a journal during a
-   * month.
-   * 
-   * @param year
-   *          An int with the year of the month for which the aggregates are to
-   *          be provided.
-   * @param month
-   *          An int with the month for which the aggregates are to be provided.
-   * @param publicationSeq
-   *          A Long with the identifier of the journal involved.
-   * @param publisherInvolved
-   *          A boolean with the indication of the publisher involvement in
-   *          serving the request.
-   * @param conn
-   *          A Connection representing the database connection.
-   * @return a Map<String, Integer> with the existing aggregated request counts
-   *         or <code>null</code> if there are none.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  private Map<String, Integer> getExistingAggregateMonthJournalTypes(int year,
-      int month, Long publicationSeq, boolean publisherInvolved,
-      Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "getExistingAggregateMonthJournalTypes(): ";
-    log.debug2(DEBUG_HEADER + "year = " + year);
-    log.debug2(DEBUG_HEADER + "month = " + month);
-    log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-    log.debug2(DEBUG_HEADER + "publisherInvolved = " + publisherInvolved);
-
-    PreparedStatement statement = null;
-    ResultSet resultSet = null;
-    Map<String, Integer> aggregates = null;
-
-    String sql = SQL_QUERY_JOURNAL_TYPE_AGGREGATE_SELECT;
-    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
-
-    try {
-      // Prepare the statement used to get the existing aggregations.
-      statement = dbManager.prepareStatement(conn, sql);
-
-      int index = 1;
-
-      // Populate the journal identifier.
-      statement.setLong(index++, publicationSeq);
-
-      // Populate the publisher involvement indicator.
-      statement.setBoolean(index++, publisherInvolved);
-
-      // Populate the year of the request.
-      statement.setInt(index++, year);
-
-      // Populate the month of the request.
-      statement.setInt(index++, month);
-
-      // Get the existing requests counts.
-      resultSet = dbManager.executeQuery(statement);
-
-      if (resultSet.next()) {
-	aggregates = new HashMap<String, Integer>();
-
-	int totalCount = resultSet.getInt(TOTAL_REQUESTS_COLUMN);
-	log.debug2(DEBUG_HEADER + "totalCount = " + totalCount);
-
-	int htmlCount = resultSet.getInt(HTML_REQUESTS_COLUMN);
-	log.debug2(DEBUG_HEADER + "htmlCount = " + htmlCount);
-
-	int pdfCount = resultSet.getInt(PDF_REQUESTS_COLUMN);
-	log.debug2(DEBUG_HEADER + "pdfCount = " + pdfCount);
-
-	aggregates.put(TOTAL_REQUESTS_COLUMN, totalCount);
-	aggregates.put(HTML_REQUESTS_COLUMN, htmlCount);
-	aggregates.put(PDF_REQUESTS_COLUMN, pdfCount);
-      }
-
-    } catch (SQLException sqle) {
-      log.error("Cannot get the existing month book request aggregates", sqle);
-      log.error("Year = " + year + ", Month = " + month);
-      log.error("publicationSeq = " + publicationSeq);
-      log.error("publisherInvolved = " + publisherInvolved);
-      log.error("SQL = '" + sql + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(statement);
-    }
-
-    log.debug2(DEBUG_HEADER + "Done.");
-    return aggregates;
-  }
-
-  /**
-   * Updates in the database a row with the aggregates for a journal during a
-   * month.
-   * 
-   * @param year
-   *          An int with the year corresponding to the month.
-   * @param month
-   *          An int with the month.
-   * @param publicationSeq
-   *          A Long with the identifier of the journal involved.
-   * @param publisherInvolved
-   *          A boolean with the indication of the publisher involvement in
-   *          serving the request.
-   * @param totalCount
-   *          An int with the total count of requests for the journal during the
-   *          month.
-   * @param htmlCount
-   *          An int with the count of HTML requests for the journal during the
-   *          month.
-   * @param pdfCount
-   *          An int with the count of PDF requests for the journal during the
-   *          month.
-   * @param conn
-   *          A Connection representing the database connection.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  private void updateJournalTypeAggregate(int year, int month,
-      Long publicationSeq, boolean publisherInvolved, int totalCount,
-      int htmlCount, int pdfCount, Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "updateJournalTypeAggregate(): ";
-    log.debug2(DEBUG_HEADER + "year = " + year);
-    log.debug2(DEBUG_HEADER + "month = " + month);
-    log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-    log.debug2(DEBUG_HEADER + "publisherInvolved = " + publisherInvolved);
-    log.debug2(DEBUG_HEADER + "totalCount = " + totalCount);
-    log.debug2(DEBUG_HEADER + "htmlCount = " + htmlCount);
-    log.debug2(DEBUG_HEADER + "pdfCount = " + pdfCount);
-
-    PreparedStatement updateAggregate = null;
-    String sql = SQL_QUERY_JOURNAL_TYPE_AGGREGATE_UPDATE;
-    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
-
-    try {
-      // Prepare the statement used to persist the record.
-      updateAggregate = dbManager.prepareStatement(conn, sql);
-
-      int index = 1;
-
-      // Populate the total count.
-      updateAggregate.setInt(index++, totalCount);
-
-      // Populate the HTML count.
-      updateAggregate.setInt(index++, htmlCount);
-
-      // Populate the PDF count.
-      updateAggregate.setInt(index++, pdfCount);
-
-      // Populate the journal identifier.
-      updateAggregate.setLong(index++, publicationSeq);
-
-      // Populate the publisher involvement indicator.
-      updateAggregate.setBoolean(index++, publisherInvolved);
-
-      // Populate the year of the request.
-      updateAggregate.setShort(index++, (short) year);
-
-      // Populate the month of the request.
-      updateAggregate.setShort(index++, (short) month);
-
-      // Update the record.
-      int count = dbManager.executeUpdate(updateAggregate);
-      log.debug2(DEBUG_HEADER + "count = " + count);
-    } catch (SQLException sqle) {
-      log.error("Cannot update the month journal request counts", sqle);
-      log.error("Year = " + year + ", Month = " + month);
-      log.error("publicationSeq = " + publicationSeq);
-      log.error("publisherInvolved = " + publisherInvolved);
-      log.error("totalCount = " + totalCount);
-      log.error("htmlCount = " + htmlCount);
-      log.error("pdfCount = " + pdfCount);
-      log.error("SQL = '" + sql + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseStatement(updateAggregate);
-    }
-
-    log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
-   * Inserts in the database a row with the type aggregates for a journal during
-   * a month.
-   * 
-   * @param year
-   *          An int with the year of the month to be aggregated.
-   * @param month
-   *          An int with the month to be aggregated.
-   * @param publicationSeq
-   *          A Long with the identifier of the journal involved.
-   * @param publisherInvolved
-   *          A boolean with the indication of the publisher involvement in
-   *          serving the request.
-   * @param totalCount
-   *          An int with the total count of requests for the journal during the
-   *          month.
-   * @param htmlCount
-   *          An int with the count of HTML requests for the journal during the
-   *          month.
-   * @param pdfCount
-   *          An int with the count of PDF requests for the journal during the
-   *          month.
-   * @param conn
-   *          A Connection representing the database connection.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  private void insertJournalTypeAggregate(int year, int month,
-      Long publicationSeq, boolean publisherInvolved, int totalCount,
-      int htmlCount, int pdfCount, Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "insertJournalTypeAggregate(): ";
-    log.debug2(DEBUG_HEADER + "year = " + year);
-    log.debug2(DEBUG_HEADER + "month = " + month);
-    log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-    log.debug2(DEBUG_HEADER + "publisherInvolved = " + publisherInvolved);
-    log.debug2(DEBUG_HEADER + "totalCount = " + totalCount);
-    log.debug2(DEBUG_HEADER + "htmlCount = " + htmlCount);
-    log.debug2(DEBUG_HEADER + "pdfCount = " + pdfCount);
-
-    PreparedStatement insertAggregate = null;
-    String sql = SQL_QUERY_JOURNAL_TYPE_AGGREGATE_INSERT;
-    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
-
-    try {
-      // Prepare the statement used to persist the record.
-      insertAggregate = dbManager.prepareStatement(conn, sql);
-
-      int index = 1;
-
-      // Populate the identifier.
-      insertAggregate.setLong(index++, publicationSeq);
-
-      // Populate the publisher involvement indicator.
-      insertAggregate.setBoolean(index++, publisherInvolved);
-
-      // Populate the year of the request.
-      insertAggregate.setShort(index++, (short) year);
-
-      // Populate the month of the request.
-      insertAggregate.setShort(index++, (short) month);
-
-      // Populate the total requests.
-      insertAggregate.setInt(index++, totalCount);
-
-      // Populate the HTML requests.
-      insertAggregate.setInt(index++, htmlCount);
-
-      // Populate the PDF requests.
-      insertAggregate.setInt(index++, pdfCount);
-
-      // Insert the record.
-      int count = dbManager.executeUpdate(insertAggregate);
-      log.debug2(DEBUG_HEADER + "count = " + count);
-    } catch (SQLException sqle) {
-      log.error("Cannot insert the month journal request counts", sqle);
-      log.error("Year = " + year + ", Month = " + month);
-      log.error("publicationSeq = " + publicationSeq);
-      log.error("publisherInvolved = " + publisherInvolved);
-      log.error("totalCount = " + totalCount);
-      log.error("htmlCount = " + htmlCount);
-      log.error("pdfCount = " + pdfCount);
-      log.error("SQL = '" + sql + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseStatement(insertAggregate);
-    }
-
-    log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
    * Aggregates the publication year requests for a journal during a month.
    * 
    * @param year
@@ -2165,253 +1536,6 @@ public class CounterReportsRequestAggregator {
   }
 
   /**
-   * Provides the existing publication year aggregate of requests for a journal
-   * during a month.
-   * 
-   * @param year
-   *          An int with the year of the month for which the aggregates are to
-   *          be provided.
-   * @param month
-   *          An int with the month for which the aggregates are to be provided.
-   * @param publicationSeq
-   *          A Long with the identifier of the journal involved.
-   * @param publisherInvolved
-   *          A boolean with the indication of the publisher involvement in
-   *          serving the request.
-   * @param publicationYear
-   *          An int with the publication year.
-   * @param conn
-   *          A Connection representing the database connection.
-   * @return an Integer with the existing aggregated request count or
-   *         <code>null</code> if there is none.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  private Integer getExistingAggregateMonthJournalPubYear(int year, int month,
-      Long publicationSeq, boolean publisherInvolved, int publicationYear,
-      Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "getExistingAggregateMonthJournalPubYear(): ";
-    log.debug2(DEBUG_HEADER + "year = " + year);
-    log.debug2(DEBUG_HEADER + "month = " + month);
-    log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-    log.debug2(DEBUG_HEADER + "publisherInvolved = " + publisherInvolved);
-    log.debug2(DEBUG_HEADER + "publicationYear = " + publicationYear);
-
-    PreparedStatement statement = null;
-    ResultSet resultSet = null;
-    Integer count = null;
-
-    String sql = SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATE_SELECT;
-    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
-
-    try {
-      // Prepare the statement used to get the existing aggregation.
-      statement = dbManager.prepareStatement(conn, sql);
-
-      int index = 1;
-
-      // Populate the journal identifier.
-      statement.setLong(index++, publicationSeq);
-
-      // Populate the publisher involvement indicator.
-      statement.setBoolean(index++, publisherInvolved);
-
-      // Populate the year of the request.
-      statement.setInt(index++, year);
-
-      // Populate the month of the request.
-      statement.setInt(index++, month);
-
-      // Populate the publication year.
-      statement.setInt(index++, publicationYear);
-
-      // Get the existing requests count.
-      resultSet = dbManager.executeQuery(statement);
-
-      if (resultSet.next()) {
-	count = resultSet.getInt(REQUESTS_COLUMN);
-	log.debug2(DEBUG_HEADER + "count = " + count);
-      }
-
-    } catch (SQLException sqle) {
-      log.error("Cannot get the existing month journal publication year request aggregate",
-		sqle);
-      log.error("Year = " + year + ", Month = " + month);
-      log.error("publicationSeq = " + publicationSeq);
-      log.error("publisherInvolved = " + publisherInvolved);
-      log.error("publicationYear = " + publicationYear);
-      log.error("SQL = '" + sql + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(statement);
-    }
-
-    log.debug2(DEBUG_HEADER + "Done.");
-    return count;
-  }
-
-  /**
-   * Updates in the database the row with the publication year aggregate for a
-   * journal during a month.
-   * 
-   * @param year
-   *          An int with the year of the month to be aggregated.
-   * @param month
-   *          An int with the month to be aggregated.
-   * @param publicationSeq
-   *          A Long with the identifier of the journal involved.
-   * @param publisherInvolved
-   *          A boolean with the indication of the publisher involvement in
-   *          serving the request.
-   * @param publicationYear
-   *          An int with the publication year.
-   * @param requestCount
-   *          An int with the count of requests for the publication year for the
-   *          journal during the month.
-   * @param conn
-   *          A Connection representing the database connection.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  private void updateTitlePubYearAggregate(int year, int month,
-      Long publicationSeq, boolean publisherInvolved, int publicationYear,
-      int requestCount, Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "updateTitlePubYearAggregate(): ";
-    log.debug2(DEBUG_HEADER + "year = " + year);
-    log.debug2(DEBUG_HEADER + "month = " + month);
-    log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-    log.debug2(DEBUG_HEADER + "publisherInvolved = " + publisherInvolved);
-    log.debug2(DEBUG_HEADER + "publicationYear = " + publicationYear);
-    log.debug2(DEBUG_HEADER + "requestCount = " + requestCount);
-
-    PreparedStatement updateAggregate = null;
-    String sql = SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATE_UPDATE;
-    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
-
-    try {
-      // Prepare the statement used to persist the record.
-      updateAggregate = dbManager.prepareStatement(conn, sql);
-
-      int index = 1;
-
-      // Populate the request count.
-      updateAggregate.setInt(index++, requestCount);
-
-      // Populate the journal identifier.
-      updateAggregate.setLong(index++, publicationSeq);
-
-      // Populate the publisher involvement indicator.
-      updateAggregate.setBoolean(index++, publisherInvolved);
-
-      // Populate the year of the request.
-      updateAggregate.setShort(index++, (short) year);
-
-      // Populate the month of the request.
-      updateAggregate.setShort(index++, (short) month);
-
-      // Populate the publication year.
-      updateAggregate.setShort(index++, (short) publicationYear);
-
-      // Insert the record.
-      int count = dbManager.executeUpdate(updateAggregate);
-      log.debug2(DEBUG_HEADER + "count = " + count);
-    } catch (SQLException sqle) {
-      log.error("Cannot update the month journal request counts", sqle);
-      log.error("Year = " + year + ", Month = " + month);
-      log.error("publicationSeq = " + publicationSeq);
-      log.error("publisherInvolved = " + publisherInvolved);
-      log.error("publicationYear = " + publicationYear);
-      log.error("SQL = '" + sql + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseStatement(updateAggregate);
-    }
-
-    log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
-   * Inserts in the database a row with the publication year aggregate for a
-   * journal during a month.
-   * 
-   * @param year
-   *          An int with the year of the month to be aggregated.
-   * @param month
-   *          An int with the month to be aggregated.
-   * @param publicationSeq
-   *          A Long with the identifier of the journal involved.
-   * @param publisherInvolved
-   *          A boolean with the indication of the publisher involvement in
-   *          serving the request.
-   * @param publicationYear
-   *          An int with the publication year.
-   * @param requestCount
-   *          An int with the count of requests for the publication year for the
-   *          journal during the month.
-   * @param conn
-   *          A Connection representing the database connection.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  private void insertTitlePubYearAggregate(int year, int month,
-      Long publicationSeq, boolean publisherInvolved, int publicationYear,
-      int requestCount, Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "insertTitlePubYearAggregate(): ";
-    log.debug2(DEBUG_HEADER + "year = " + year);
-    log.debug2(DEBUG_HEADER + "month = " + month);
-    log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
-    log.debug2(DEBUG_HEADER + "publisherInvolved = " + publisherInvolved);
-    log.debug2(DEBUG_HEADER + "publicationYear = " + publicationYear);
-    log.debug2(DEBUG_HEADER + "requestCount = " + requestCount);
-
-    PreparedStatement insertAggregate = null;
-    String sql = SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATE_INSERT;
-    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
-
-    try {
-      // Prepare the statement used to persist the record.
-      insertAggregate = dbManager.prepareStatement(conn, sql);
-
-      int index = 1;
-
-      // Populate the journal identifier.
-      insertAggregate.setLong(index++, publicationSeq);
-
-      // Populate the publisher involvement indicator.
-      insertAggregate.setBoolean(index++, publisherInvolved);
-
-      // Populate the year of the request.
-      insertAggregate.setShort(index++, (short) year);
-
-      // Populate the month of the request.
-      insertAggregate.setShort(index++, (short) month);
-
-      // Populate the publication year.
-      insertAggregate.setShort(index++, (short) publicationYear);
-
-      // Populate the request count.
-      insertAggregate.setInt(index++, requestCount);
-
-      // Insert the record.
-      int count = dbManager.executeUpdate(insertAggregate);
-      log.debug2(DEBUG_HEADER + "count = " + count);
-    } catch (SQLException sqle) {
-      log.error("Cannot insert the month journal request counts", sqle);
-      log.error("Year = " + year + ", Month = " + month);
-      log.error("publicationSeq = " + publicationSeq);
-      log.error("publisherInvolved = " + publisherInvolved);
-      log.error("publicationYear = " + publicationYear);
-      log.error("SQL = '" + sql + "'.");
-      throw sqle;
-    } finally {
-      DbManager.safeCloseStatement(insertAggregate);
-    }
-
-    log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
    * Persists the aggregates for all journals during a month.
    * 
    * @param year
@@ -2452,10 +1576,9 @@ public class CounterReportsRequestAggregator {
 	+ allJournalsPublicationSeq);
 
     // Retrieve the previous aggregates of all journal requests.
-    Map<String, Integer> previousAggregate =
-	getExistingAggregateMonthJournalTypes(year, month,
-					      allJournalsPublicationSeq,
-					      publisherInvolved, conn);
+    Map<String, Integer> previousAggregate = crManager
+	.getExistingAggregateMonthJournalTypes(year, month,
+	    allJournalsPublicationSeq, publisherInvolved, conn);
 
     // Check whether there were previously recorded aggregates for all journals.
     if (previousAggregate != null) {
@@ -2475,15 +1598,14 @@ public class CounterReportsRequestAggregator {
       log.debug2(DEBUG_HEADER + "allJournalsPdfCount = " + allJournalsPdfCount);
 
       // Update the existing row in the database.
-      updateJournalTypeAggregate(year, month, allJournalsPublicationSeq,
-				 publisherInvolved, allJournalsTotalCount,
-				 allJournalsHtmlCount, allJournalsPdfCount,
-				 conn);
+      crManager.updateJournalTypeAggregate(year, month,
+	  allJournalsPublicationSeq, publisherInvolved, allJournalsTotalCount,
+	  allJournalsHtmlCount, allJournalsPdfCount, conn);
     } else {
       // No: Insert a new row in the database.
-      insertJournalTypeAggregate(year, month, allJournalsPublicationSeq,
-				 publisherInvolved, totalCount, htmlCount,
-				 pdfCount, conn);
+      crManager.insertJournalTypeAggregate(year, month,
+	  allJournalsPublicationSeq, publisherInvolved, totalCount, htmlCount,
+	  pdfCount, conn);
     }
 
     log.debug2(DEBUG_HEADER + "Done.");

@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.13 2013-03-05 16:34:51 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.14 2013-03-10 23:44:59 fergaloy-sf Exp $
  */
 
 /*
@@ -42,9 +42,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
 import org.lockss.config.Configuration;
@@ -188,6 +190,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   public static final String L_ISSN_TYPE = "l_issn";
   public static final String P_ISBN_TYPE = "p_isbn";
   public static final String P_ISSN_TYPE = "p_issn";
+
+  public static final String ACCESS_URL_FEATURE = "Access";
 
   // Query to find a metadata item type by its name.
   private static final String FIND_MD_ITEM_TYPE_QUERY = "select "
@@ -541,6 +545,130 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "(" + PLATFORM_SEQ_COLUMN
       + "," + PLATFORM_NAME_COLUMN
       + ") values (default,?)";
+
+  // Query to find the publisher of an Archival Unit.
+  private static final String FIND_AU_PUBLISHER_QUERY = "select distinct "
+      + "pr." + PUBLISHER_SEQ_COLUMN
+      + " from " + PUBLISHER_TABLE + " pr"
+      + "," + PUBLICATION_TABLE + " p"
+      + "," + MD_ITEM_TABLE + " m"
+      + "," + AU_MD_TABLE + " am"
+      + " where pr." + PUBLISHER_SEQ_COLUMN + " = p." + PUBLISHER_SEQ_COLUMN
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
+      + " and am." + AU_SEQ_COLUMN + " = ?";
+
+  // Query to get the name of a publisher.
+  private static final String GET_PUBLISHER_NAME_QUERY = "select "
+      + PUBLISHER_NAME_COLUMN
+      + " from " + PUBLISHER_TABLE
+      + " where " + PUBLISHER_SEQ_COLUMN + " = ?";
+  
+  // Query to find AU problems.
+  private static final String FIND_AU_PROBLEMS_QUERY = "select "
+      + PROBLEM_COLUMN
+      + " from " + AU_PROBLEM_TABLE
+      + " where " + PLUGIN_ID_COLUMN + " = ?"
+      + " and " + AU_KEY_COLUMN + " = ?";
+
+  // Query to add an AU problem entry.
+  private static final String INSERT_AU_PROBLEM_QUERY = "insert into "
+      + AU_PROBLEM_TABLE
+      + "(" + PLUGIN_ID_COLUMN
+      + "," + AU_KEY_COLUMN
+      + "," + PROBLEM_COLUMN
+      + ") values (?,?,?)";
+
+  // Query to delete the problems of an AU.
+  private static final String DELETE_AU_PROBLEMS_QUERY = "delete from "
+      + AU_PROBLEM_TABLE
+      + " where " + PLUGIN_ID_COLUMN + " = ?"
+      + " and " + AU_KEY_COLUMN + " = ?";
+
+  // Query to delete an AU problem entry.
+  private static final String DELETE_AU_PROBLEM_QUERY = "delete from "
+      + AU_PROBLEM_TABLE
+      + " where " + PLUGIN_ID_COLUMN + " = ?"
+      + " and " + AU_KEY_COLUMN + " = ?"
+      + " and " + PROBLEM_COLUMN + " = ?";
+
+  // Query to find the publications of a publisher.
+  private static final String FIND_PUBLISHER_PUBLICATIONS_QUERY = "select "
+      + PUBLICATION_SEQ_COLUMN
+      + " from " + PUBLICATION_TABLE
+      + " where " + PUBLISHER_SEQ_COLUMN + " = ?";
+
+  // Query to find the metadata items of a publication.
+  private static final String FIND_PUBLICATION_CHILD_MD_ITEMS_QUERY = "select "
+      + "distinct "
+      + "m." + MD_ITEM_SEQ_COLUMN
+      + " from " + PUBLICATION_TABLE + " p"
+      + "," + MD_ITEM_TABLE + " m"
+      + " where p." + PUBLICATION_SEQ_COLUMN + " = ?"
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN;
+
+  // Query to find the Archival Units of a publisher.
+  private static final String FIND_PUBLISHER_AUS_QUERY = "select distinct "
+      + "am." + AU_SEQ_COLUMN
+      + " from " + PUBLICATION_TABLE + " p"
+      + "," + MD_ITEM_TABLE + " m"
+      + "," + AU_MD_TABLE + " am"
+      + " where p." + PUBLISHER_SEQ_COLUMN + " = ?"
+      + " and p." + MD_ITEM_SEQ_COLUMN + " = m." + PARENT_SEQ_COLUMN
+      + " and m." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN;
+
+  // Query to update the parent sequence of a metadata item.
+  private static final String UPDATE_MD_ITEM_PARENT_SEQ_QUERY = "update "
+      + MD_ITEM_TABLE
+      + " set " + PARENT_SEQ_COLUMN + " = ?"
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
+
+  // Query to find the featured URLs of a metadata item.
+  private static final String FIND_MD_ITEM_FEATURED_URL_QUERY = "select "
+      + FEATURE_COLUMN + "," + URL_COLUMN
+      + " from " + URL_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
+
+  // Query to find the authors of a metadata item.
+  private static final String FIND_MD_ITEM_AUTHOR_QUERY = "select "
+      + AUTHOR_NAME_COLUMN
+      + " from " + AUTHOR_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
+
+  // Query to find the keywords of a metadata item.
+  private static final String FIND_MD_ITEM_KEYWORD_QUERY = "select "
+      + KEYWORD_COLUMN
+      + " from " + KEYWORD_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
+
+  // Query to add a metadata item author.
+  private static final String INSERT_AUTHOR_QUERY = "insert into "
+      + AUTHOR_TABLE
+      + "(" + MD_ITEM_SEQ_COLUMN
+      + "," + AUTHOR_NAME_COLUMN
+      + "," + AUTHOR_IDX_COLUMN
+      + ") values (?,?,"
+      + "(select coalesce(max(" + AUTHOR_IDX_COLUMN + "), 0) + 1"
+      + " from " + AUTHOR_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?))";
+
+  // Query to add a metadata item keyword.
+  private static final String INSERT_KEYWORD_QUERY = "insert into "
+      + KEYWORD_TABLE
+      + "(" + MD_ITEM_SEQ_COLUMN
+      + "," + KEYWORD_COLUMN
+      + ") values (?,?)";
+
+  // Query to find a metadata item by its type, Archival Unit and access URL.
+  private static final String FIND_MD_ITEM_QUERY = "select "
+      + "m." + MD_ITEM_SEQ_COLUMN
+      + " from " + MD_ITEM_TABLE + " m"
+      + "," + URL_TABLE + " u"
+      + " where m." + MD_ITEM_TYPE_SEQ_COLUMN + " = ?"
+      + " and m." + AU_MD_SEQ_COLUMN + " = ?"
+      + " and m." + MD_ITEM_SEQ_COLUMN + " = u." + MD_ITEM_SEQ_COLUMN
+      + " and u." + FEATURE_COLUMN + " = '" + ACCESS_URL_FEATURE + "'"
+      + " and u." + URL_COLUMN + " = ?";
 
   /**
    * Map of running reindexing tasks keyed by their AuIds
@@ -1227,7 +1355,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	new LockssRunnable(AuUtil.getThreadNameFor("Reindexing",
 	                                           task.getAu())) {
 	  public void lockssRun() {
-	    // TODO
 	    long interval = Constants.MINUTE;
 	    startWDog(interval);
 	    task.setWdog(this);
@@ -1416,7 +1543,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private Long findAuByAuId(Connection conn, String auId) throws SQLException {
+  Long findAuByAuId(Connection conn, String auId) throws SQLException {
     final String DEBUG_HEADER = "findAuByAuId(): ";
     log.debug3(DEBUG_HEADER + "auid = " + auId);
 
@@ -1428,7 +1555,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     try {
       String pluginId = PluginManager.pluginIdFromAuId(auId);
-      log.debug2(DEBUG_HEADER + "pluginId() = " + pluginId);
+      log.debug2(DEBUG_HEADER + "pluginId = " + pluginId);
 
       String auKey = PluginManager.auKeyFromAuId(auId);
       log.debug2(DEBUG_HEADER + "auKey = " + auKey);
@@ -1977,8 +2104,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private Long addPublisher(Connection conn, String publisher)
-      throws SQLException {
+  Long addPublisher(Connection conn, String publisher) throws SQLException {
     final String DEBUG_HEADER = "addPublisher(): ";
     Long publisherSeq = null;
     ResultSet resultSet = null;
@@ -2742,6 +2868,41 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       return;
     }
 
+    String issnType;
+
+    Map<String, String> issns = getMdItemIssns(conn, mdItemSeq);
+
+    for (String issn : issns.keySet()) {
+      issnType = issns.get(issn);
+
+      if (pIssn != null && pIssn.equals(issn) && P_ISSN_TYPE.equals(issnType)) {
+	pIssn = null;
+      }
+
+      if (eIssn != null && eIssn.equals(issn) && E_ISSN_TYPE.equals(issnType)) {
+	eIssn = null;
+      }
+    }
+
+    addMdItemIssns(conn, mdItemSeq, pIssn, eIssn);
+  }
+
+  /**
+   * Provides the ISSNs of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @return a Map<String, String> with the ISSNs and their types.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Map<String, String> getMdItemIssns(Connection conn, Long mdItemSeq)
+      throws SQLException {
+
+    Map<String, String> issns = new HashMap<String, String>();
+
     PreparedStatement findIssns =
 	dbManager.prepareStatement(conn, FIND_MD_ITEM_ISSN_QUERY);
 
@@ -2752,22 +2913,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       resultSet = dbManager.executeQuery(findIssns);
 
       while (resultSet.next()) {
-	if (pIssn != null && pIssn.equals(resultSet.getString(ISSN_COLUMN))
-	    && P_ISSN_TYPE.equals(resultSet.getString(ISSN_TYPE_COLUMN))) {
-	  pIssn = null;
-	}
-
-	if (eIssn != null && eIssn.equals(resultSet.getString(ISSN_COLUMN))
-	    && E_ISSN_TYPE.equals(resultSet.getString(ISSN_TYPE_COLUMN))) {
-	  eIssn = null;
-	}
+	issns.put(resultSet.getString(ISSN_COLUMN),
+	    resultSet.getString(ISSN_TYPE_COLUMN));
       }
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(findIssns);
     }
 
-    addMdItemIssns(conn, mdItemSeq, pIssn, eIssn);
+    return issns;
   }
 
   /**
@@ -2791,6 +2945,41 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       return;
     }
 
+    String isbnType;
+
+    Map<String, String> isbns = getMdItemIsbns(conn, mdItemSeq);
+
+    for (String isbn : isbns.keySet()) {
+      isbnType = isbns.get(isbn);
+
+      if (pIsbn != null && pIsbn.equals(isbn) && P_ISBN_TYPE.equals(isbnType)) {
+	pIsbn = null;
+      }
+
+      if (eIsbn != null && eIsbn.equals(isbn) && E_ISBN_TYPE.equals(isbnType)) {
+	eIsbn = null;
+      }
+    }
+
+    addMdItemIsbns(conn, mdItemSeq, pIsbn, eIsbn);
+  }
+
+  /**
+   * Provides the ISBNs of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @return a Map<String, String> with the ISBNs and their types.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private Map<String, String> getMdItemIsbns(Connection conn, Long mdItemSeq)
+      throws SQLException {
+
+    Map<String, String> isbns = new HashMap<String, String>();
+
     PreparedStatement findIsbns =
 	dbManager.prepareStatement(conn, FIND_MD_ITEM_ISBN_QUERY);
 
@@ -2801,22 +2990,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       resultSet = dbManager.executeQuery(findIsbns);
 
       while (resultSet.next()) {
-	if (pIsbn != null && pIsbn.equals(resultSet.getString(ISBN_COLUMN))
-	    && P_ISBN_TYPE.equals(resultSet.getString(ISBN_TYPE_COLUMN))) {
-	  pIsbn = null;
-	}
-
-	if (eIsbn != null && eIsbn.equals(resultSet.getString(ISBN_COLUMN))
-	    && E_ISBN_TYPE.equals(resultSet.getString(ISBN_TYPE_COLUMN))) {
-	  eIsbn = null;
-	}
+	isbns.put(resultSet.getString(ISBN_COLUMN),
+	    resultSet.getString(ISBN_TYPE_COLUMN));
       }
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(findIsbns);
     }
 
-    addMdItemIsbns(conn, mdItemSeq, pIsbn, eIsbn);
+    return isbns;
   }
 
   /**
@@ -3215,7 +3397,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private Map<String, String> getMdItemNames(Connection conn, Long mdItemSeq)
+  Map<String, String> getMdItemNames(Connection conn, Long mdItemSeq)
       throws SQLException {
     final String DEBUG_HEADER = "getMdItemNames(): ";
     Map<String, String> names = new HashMap<String, String>();
@@ -4429,7 +4611,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       throws SQLException {
     final String DEBUG_HEADER = "addFailedIndexingAuToPendingAus(): ";
     PreparedStatement addPendingAuStatement =
-	dbManager.prepareStatement(conn, INSERT_FAILED_INDEXING_PENDING_AU_QUERY);
+	dbManager.prepareStatement(conn,
+	    INSERT_FAILED_INDEXING_PENDING_AU_QUERY);
 
     try {
       String pluginId = PluginManager.pluginIdFromAuId(auId);
@@ -4520,8 +4703,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private Collection<String> findPendingAusWithPriority(Connection conn, int priority)
-      throws SQLException {
+  private Collection<String> findPendingAusWithPriority(Connection conn,
+      int priority) throws SQLException {
     final String DEBUG_HEADER = "findPendingAusWithPriority(): ";
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "priority = " + priority);
 
@@ -4554,5 +4737,1074 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     return aus;
+  }
+
+  /**
+   * Provides the identifier of the publisher of an Archival Unit.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auSeq
+   *          A Long with the identifier of the Archival Unit.
+   * @return a Long with the identifier of the publisher.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findAuPublisher(Connection conn, Long auSeq) throws SQLException {
+    final String DEBUG_HEADER = "findAuPublisher(): ";
+    Long publisherSeq = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findPublisher =
+	dbManager.prepareStatement(conn, FIND_AU_PUBLISHER_QUERY);
+
+    try {
+      findPublisher.setLong(1, auSeq);
+
+      resultSet = dbManager.executeQuery(findPublisher);
+      if (resultSet.next()) {
+	publisherSeq = resultSet.getLong(PUBLISHER_SEQ_COLUMN);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find the publisher of an AU", sqle);
+      log.error("auSeq = '" + auSeq + "'.");
+      log.error("SQL = '" + FIND_AU_PUBLISHER_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findPublisher);
+    }
+
+    log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    return publisherSeq;
+  }
+
+  /**
+   * Provides the name of a publisher.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherSeq
+   *          A Long with the identifier of the publisher.
+   * @return a String with the name of the publisher.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  String getPublisherName(Connection conn, Long publisherSeq)
+      throws SQLException {
+    final String DEBUG_HEADER = "getPublisherName(): ";
+    String publisherName = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement getPublisherNameStatement =
+	dbManager.prepareStatement(conn, GET_PUBLISHER_NAME_QUERY);
+
+    try {
+      getPublisherNameStatement.setLong(1, publisherSeq);
+
+      resultSet = dbManager.executeQuery(getPublisherNameStatement);
+      if (resultSet.next()) {
+	publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find the name of a publisher", sqle);
+      log.error("publisherSeq = '" + publisherSeq + "'.");
+      log.error("SQL = '" + GET_PUBLISHER_NAME_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(getPublisherNameStatement);
+    }
+
+    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+    return publisherName;
+  }
+
+  /**
+   * Provides the problems found indexing an Archival Unit.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   * @return a List<String> with the problems found indexing the Archival Unit.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  List<String> findAuProblems(Connection conn, String auId)
+      throws SQLException {
+    final String DEBUG_HEADER = "findAuProblems(): ";
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+    List<String> problems = new ArrayList<String>();
+    ResultSet results = null;
+    String problem;
+
+    PreparedStatement findProblems =
+	dbManager.prepareStatement(conn, FIND_AU_PROBLEMS_QUERY);
+
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+      String auKey = PluginManager.auKeyFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      findProblems.setString(1, pluginId);
+      findProblems.setString(2, auKey);
+      results = dbManager.executeQuery(findProblems);
+
+      while (results.next()) {
+	problem = results.getString(PROBLEM_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "problem = " + problem);
+
+	problems.add(problem);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find AU problems", sqle);
+      log.error("auId = '" + auId + "'.");
+      log.error("SQL = '" + FIND_AU_PROBLEMS_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseResultSet(results);
+      DbManager.safeCloseStatement(findProblems);
+    }
+
+    return problems;
+  }
+
+  /**
+   * Adds an entry to the table of AU problems.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   * @param problem
+   *          A String with the problem.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void addAuProblem(Connection conn, String auId, String problem)
+      throws SQLException {
+    final String DEBUG_HEADER = "addAuProblem(): ";
+    PreparedStatement addAuProblemStatement =
+	dbManager.prepareStatement(conn, INSERT_AU_PROBLEM_QUERY);
+
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+      String auKey = PluginManager.auKeyFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      addAuProblemStatement.setString(1, pluginId);
+      addAuProblemStatement.setString(2, auKey);
+      addAuProblemStatement.setString(3, problem);
+      int count = dbManager.executeUpdate(addAuProblemStatement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot add problem AU entry", sqle);
+      log.error("auId = '" + auId + "'.");
+      log.error("problem = '" + problem + "'.");
+      log.error("SQL = '" + INSERT_AU_PROBLEM_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseStatement(addAuProblemStatement);
+    }
+  }
+
+  /**
+   * Removes from the table of AU problems all entries for a given AU.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the Archiva lUnit identifier.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void removeAuProblems(Connection conn, String auId)throws SQLException {
+    final String DEBUG_HEADER = "removeAuProblems(): ";
+    PreparedStatement deleteAuProblems =
+	dbManager.prepareStatement(conn, DELETE_AU_PROBLEMS_QUERY);
+
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+      String auKey = PluginManager.auKeyFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      deleteAuProblems.setString(1, pluginId);
+      deleteAuProblems.setString(2, auKey);
+      int count = dbManager.executeUpdate(deleteAuProblems);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot remove problem AU entry", sqle);
+      log.error("auId = '" + auId + "'.");
+      log.error("SQL = '" + DELETE_AU_PROBLEMS_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseStatement(deleteAuProblems);
+    }
+  }
+
+  /**
+   * Removes an entry from the table of AU problems.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the Archiva lUnit identifier.
+   * @param problem
+   *          A String with the problem.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void removeAuProblem(Connection conn, String auId, String problem)
+      throws SQLException {
+    final String DEBUG_HEADER = "removeAuProblem(): ";
+    PreparedStatement deleteAuProblem =
+	dbManager.prepareStatement(conn, DELETE_AU_PROBLEM_QUERY);
+
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+      String auKey = PluginManager.auKeyFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      deleteAuProblem.setString(1, pluginId);
+      deleteAuProblem.setString(2, auKey);
+      deleteAuProblem.setString(3, problem);
+      int count = dbManager.executeUpdate(deleteAuProblem);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot remove problem AU entry", sqle);
+      log.error("auId = '" + auId + "'.");
+      log.error("problem = '" + problem + "'.");
+      log.error("SQL = '" + DELETE_AU_PROBLEM_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseStatement(deleteAuProblem);
+    }
+  }
+
+  /**
+   * Provides the identifiers of the publications of a publisher.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherSeq
+   *          A Long with the identifier of the publisher.
+   * @return a Set<Long> with the identifiers of the publications.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Set<Long> findPublisherPublications(Connection conn, Long publisherSeq)
+      throws SQLException {
+    final String DEBUG_HEADER = "findPublisherPublications(): ";
+    Set<Long> publicationSeqs = new HashSet<Long>();
+    Long publicationSeq = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findPublications =
+	dbManager.prepareStatement(conn, FIND_PUBLISHER_PUBLICATIONS_QUERY);
+
+    try {
+      findPublications.setLong(1, publisherSeq);
+
+      resultSet = dbManager.executeQuery(findPublications);
+      while (resultSet.next()) {
+	publicationSeq = resultSet.getLong(PUBLICATION_SEQ_COLUMN);
+	log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+	publicationSeqs.add(publicationSeq);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find the publications of a publisher", sqle);
+      log.error("publisherSeq = '" + publisherSeq + "'.");
+      log.error("SQL = '" + FIND_PUBLISHER_PUBLICATIONS_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findPublications);
+    }
+
+    return publicationSeqs;
+  }
+
+  /**
+   * Provides the identifiers of the child metadata items (chapters, articles)
+   * of a publication.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publicationSeq
+   *          A Long with the identifier of the publication.
+   * @return a Set<Long> with the identifiers of the metadata items.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Set<Long> findPublicationChildMetadataItems(Connection conn,
+      Long publicationSeq) throws SQLException {
+    final String DEBUG_HEADER = "findPublicationChildMetadataItems(): ";
+    Set<Long> mdItemSeqs = new HashSet<Long>();
+    Long mdItemSeq = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findMdItems =
+	dbManager.prepareStatement(conn, FIND_PUBLICATION_CHILD_MD_ITEMS_QUERY);
+
+    try {
+      findMdItems.setLong(1, publicationSeq);
+
+      resultSet = dbManager.executeQuery(findMdItems);
+      while (resultSet.next()) {
+	mdItemSeq = resultSet.getLong(MD_ITEM_SEQ_COLUMN);
+	log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+	mdItemSeqs.add(mdItemSeq);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find the child metadata items of a publication", sqle);
+      log.error("publicationSeq = '" + publicationSeq + "'.");
+      log.error("SQL = '" + FIND_PUBLICATION_CHILD_MD_ITEMS_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findMdItems);
+    }
+
+    return mdItemSeqs;
+  }
+
+  /**
+   * Provides the identifiers of the Archival Units of a publisher.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherSeq
+   *          A Long with the identifier of the publisher.
+   * @return a Set<Long> with the identifiers of the Archival Units.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Set<Long> findPublisherAus(Connection conn, Long publisherSeq)
+      throws SQLException {
+    final String DEBUG_HEADER = "findPublisherAus(): ";
+    Set<Long> auSeqs = new HashSet<Long>();
+    Long auSeq = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findAus =
+	dbManager.prepareStatement(conn, FIND_PUBLISHER_AUS_QUERY);
+
+    try {
+      findAus.setLong(1, publisherSeq);
+
+      resultSet = dbManager.executeQuery(findAus);
+      while (resultSet.next()) {
+	auSeq = resultSet.getLong(AU_SEQ_COLUMN);
+	log.debug3(DEBUG_HEADER + "auSeq = " + auSeq);
+
+	auSeqs.add(auSeq);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot find the AUs of a publisher", sqle);
+      log.error("publisherSeq = '" + publisherSeq + "'.");
+      log.error("SQL = '" + FIND_PUBLISHER_AUS_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findAus);
+    }
+
+    return auSeqs;
+  }
+
+  /**
+   * Updates the identifier of the parenet of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the identifier of the metadata item.
+   * @param parentSeq
+   *          A Long with the identifier of the parent metadata item.
+   * @return a Set<Long> with the identifiers of the Archival Units.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void updateMdItemParentSeq(Connection conn, Long mdItemSeq, Long parentSeq)
+      throws SQLException {
+    final String DEBUG_HEADER = "updateMdItemParentSeq(): ";
+    log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+    log.debug3(DEBUG_HEADER + "parentSeq = " + parentSeq);
+
+    PreparedStatement updateParentSeq =
+	dbManager.prepareStatement(conn, UPDATE_MD_ITEM_PARENT_SEQ_QUERY);
+
+    try {
+      updateParentSeq.setLong(1, parentSeq);
+      updateParentSeq.setLong(2, mdItemSeq);
+      dbManager.executeUpdate(updateParentSeq);
+    } catch (SQLException sqle) {
+      log.error("Cannot update the parent sequence", sqle);
+      log.error("mdItemSeq = '" + mdItemSeq + "'.");
+      log.error("parentSeq = '" + parentSeq + "'.");
+      log.error("SQL = '" + UPDATE_MD_ITEM_PARENT_SEQ_QUERY + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseStatement(updateParentSeq);
+    }
+  }
+
+  /**
+   * Adds to the database the URLs of a metadata item, if they are new.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param accessUrl
+   *          A String with the access URL to be added.
+   * @param featuredUrlMap
+   *          A Map<String, String> with the URL/feature pairs to be added.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void addNewMdItemUrls(Connection conn, Long mdItemSeq, String accessUrl,
+      Map<String, String> featuredUrlMap) throws SQLException {
+    if (StringUtil.isNullString(accessUrl) && featuredUrlMap.size() == 0) {
+      return;
+    }
+
+    // Initialize the collection of URLs to be added.
+    Map<String, String> newUrls = new HashMap<String, String>(featuredUrlMap);
+    newUrls.put(ACCESS_URL_FEATURE, accessUrl);
+
+    addNewMdItemUrls(conn, mdItemSeq, newUrls);
+  }
+
+  /**
+   * Adds to the database the URLs of a metadata item, if they are new.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param featuredUrlMap
+   *          A Map<String, String> with the URL/feature pairs to be added.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void addNewMdItemUrls(Connection conn, Long mdItemSeq,
+      Map<String, String> featuredUrlMap) throws SQLException {
+    final String DEBUG_HEADER = "addNewMdItemUrls(): ";
+
+    // Initialize the collection of URLs to be added.
+    Map<String, String> newUrls = new HashMap<String, String>(featuredUrlMap);
+
+    Map<String, String> oldUrls = getMdItemUrls(conn, mdItemSeq);
+    String url;
+
+    // Loop through all the URLs already linked to the metadata item.
+    for (String feature : oldUrls.keySet()) {
+      url = oldUrls.get(feature);
+      log.debug3(DEBUG_HEADER + "Found feature = " + feature + ", URL = "
+	  + url);
+
+      // Remove it from the collection to be added if it exists already.
+      if (newUrls.containsKey(feature) && newUrls.get(feature).equals(url)) {
+	log.debug3(DEBUG_HEADER + "Feature = " + feature + ", URL = " + url
+	    + " already exists: Not adding it.");
+
+	newUrls.remove(feature);
+      }
+    }
+
+    // Add the URLs that are new.
+    addMdItemUrls(conn, mdItemSeq, null, newUrls);
+  }
+
+  /**
+   * Provides the URLs of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @return a Map<String, String> with the URL/feature pairs.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Map<String, String> getMdItemUrls(Connection conn, Long mdItemSeq)
+	  throws SQLException {
+    final String DEBUG_HEADER = "getMdItemUrls(): ";
+
+    Map<String, String> featuredUrlMap = new HashMap<String, String>();
+
+    PreparedStatement findMdItemFeaturedUrl =
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_FEATURED_URL_QUERY);
+
+    ResultSet resultSet = null;
+    String feature;
+    String url;
+
+    try {
+      // Get the existing URLs.
+      findMdItemFeaturedUrl.setLong(1, mdItemSeq);
+      resultSet = dbManager.executeQuery(findMdItemFeaturedUrl);
+
+      // Loop through all the URLs already linked to the metadata item.
+      while (resultSet.next()) {
+	feature = resultSet.getString(FEATURE_COLUMN);
+	url = resultSet.getString(URL_COLUMN);
+	log.debug3(DEBUG_HEADER + "Found feature = " + feature + ", URL = "
+	    + url);
+
+	featuredUrlMap.put(feature, url);
+      }
+
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      findMdItemFeaturedUrl.close();
+    }
+
+    // Add the URLs that are new.
+    return featuredUrlMap;
+  }
+
+  /**
+   * Adds to the database the authors of a metadata item, if they are new.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param authors
+   *          A Set<String> with the authors of the metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void addNewMdItemAuthors(Connection conn, Long mdItemSeq,
+      Set<String> authors) throws SQLException {
+    if (authors == null || authors.size() == 0) {
+      return;
+    }
+
+    // Initialize the collection of authors to be added.
+    Set<String> newAuthors = new HashSet<String>(authors);
+
+    // Get the existing authors.
+    Set<String> oldAuthors = getMdItemAuthors(conn, mdItemSeq);
+
+    // Remove them from the collection to be added.
+    newAuthors.removeAll(oldAuthors);
+
+    // Add the authors that are new.
+    addMdItemAuthors(conn, mdItemSeq, newAuthors);
+  }
+
+  /**
+   * Provides the authors of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @return a Set<String> with the authors of the metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Set<String> getMdItemAuthors(Connection conn, Long mdItemSeq)
+      throws SQLException {
+    Set<String> authors = new HashSet<String>();
+
+    PreparedStatement findMdItemAuthor =
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_AUTHOR_QUERY);
+
+    ResultSet resultSet = null;
+
+    try {
+      // Get the existing authors.
+      findMdItemAuthor.setLong(1, mdItemSeq);
+      resultSet = dbManager.executeQuery(findMdItemAuthor);
+
+      while (resultSet.next()) {
+	authors.add(resultSet.getString(AUTHOR_NAME_COLUMN));
+      }
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      findMdItemAuthor.close();
+    }
+
+    return authors;
+  }
+
+  /**
+   * Adds to the database the keywords of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param keywords
+   *          A Set<String> with the keywords of the metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void addNewMdItemKeywords(Connection conn, Long mdItemSeq,
+      Set<String> keywords) throws SQLException {
+    if (keywords == null || keywords.size() == 0) {
+      return;
+    }
+
+    // Initialize the collection of keywords to be added.
+    Set<String> newKeywords = new HashSet<String>(keywords);
+
+    Set<String> oldKeywords = getMdItemKeywords(conn, mdItemSeq);
+
+    // Remove them from the collection to be added.
+    newKeywords.removeAll(oldKeywords);
+
+    // Add the keywords that are new.
+    addMdItemKeywords(conn, mdItemSeq, newKeywords);
+  }
+
+  /**
+   * Provides the keywords of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @return A Set<String> with the keywords of the metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Set<String> getMdItemKeywords(Connection conn, Long mdItemSeq)
+      throws SQLException {
+    Set<String> keywords = new HashSet<String>();
+
+    PreparedStatement findMdItemKeyword =
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_KEYWORD_QUERY);
+
+    ResultSet resultSet = null;
+
+    try {
+      // Get the existing keywords.
+      findMdItemKeyword.setLong(1, mdItemSeq);
+      resultSet = dbManager.executeQuery(findMdItemKeyword);
+
+      while (resultSet.next()) {
+	keywords.add(resultSet.getString(KEYWORD_COLUMN));
+      }
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      findMdItemKeyword.close();
+    }
+
+    return keywords;
+  }
+
+  /**
+   * Adds to the database the URLs of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param accessUrl
+   *          A String with the access URL to be added.
+   * @param featuredUrlMap
+   *          A Map<String, String> with the URL/feature pairs to be added.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void addMdItemUrls(Connection conn, Long mdItemSeq, String accessUrl,
+      Map<String, String> featuredUrlMap) throws SQLException {
+    final String DEBUG_HEADER = "addMdItemUrls(): ";
+
+    if (!StringUtil.isNullString(accessUrl)) {
+      // Add the access URL.
+      addMdItemUrl(conn, mdItemSeq, ACCESS_URL_FEATURE, accessUrl);
+      log.debug3(DEBUG_HEADER + "Added feature = " + ACCESS_URL_FEATURE
+	  + ", URL = " + accessUrl);
+    }
+
+    // Loop through all the featured URLs.
+    for (String feature : featuredUrlMap.keySet()) {
+      // Add the featured URL.
+      addMdItemUrl(conn, mdItemSeq, feature,
+			     featuredUrlMap.get(feature));
+      log.debug3(DEBUG_HEADER + "Added feature = " + feature + ", URL = "
+	  + featuredUrlMap.get(feature));
+    }
+  }
+
+  /**
+   * Adds to the database the authors of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param authors
+   *          A Set<String> with the authors of the metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void addMdItemAuthors(Connection conn, Long mdItemSeq,
+      Set<String> authors) throws SQLException {
+    final String DEBUG_HEADER = "addMdItemAuthors(): ";
+
+    if (authors == null || authors.size() == 0) {
+      return;
+    }
+
+    PreparedStatement insertMdItemAuthor =
+	dbManager.prepareStatement(conn, INSERT_AUTHOR_QUERY);
+
+    try {
+      for (String author : authors) {
+	insertMdItemAuthor.setLong(1, mdItemSeq);
+	insertMdItemAuthor.setString(2, author);
+	insertMdItemAuthor.setLong(3, mdItemSeq);
+	int count = dbManager.executeUpdate(insertMdItemAuthor);
+
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "count = " + count);
+	  log.debug3(DEBUG_HEADER + "Added author = " + author);
+	}
+      }
+    } finally {
+      DbManager.safeCloseStatement(insertMdItemAuthor);
+    }
+  }
+
+  /**
+   * Adds to the database the keywords of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param keywords
+   *          A Set<String> with the keywords of the metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void addMdItemKeywords(Connection conn, Long mdItemSeq,
+      Set<String> keywords) throws SQLException {
+    final String DEBUG_HEADER = "addMdItemKeywords(): ";
+
+    if (keywords == null || keywords.size() == 0) {
+      return;
+    }
+
+    PreparedStatement insertMdItemKeyword =
+	dbManager.prepareStatement(conn, INSERT_KEYWORD_QUERY);
+
+    try {
+      for (String keyword : keywords) {
+	insertMdItemKeyword.setLong(1, mdItemSeq);
+	insertMdItemKeyword.setString(2, keyword);
+	int count = dbManager.executeUpdate(insertMdItemKeyword);
+
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "count = " + count);
+	  log.debug3(DEBUG_HEADER + "Added keyword = " + keyword);
+	}
+      }
+    } finally {
+      DbManager.safeCloseStatement(insertMdItemKeyword);
+    }
+  }
+
+  /**
+   * Provides the identifier of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemTypeSeq
+   *          A Long with the identifier of the metadata item type.
+   * @param auMdSeq
+   *          A Long with the identifier of the archival unit metadata.
+   * @param accessUrl
+   *          A String with the access URL of the metadata item.
+   * @return a Long with the identifier of the metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  Long findMdItem(Connection conn, Long mdItemTypeSeq, Long auMdSeq,
+      String accessUrl) throws SQLException {
+    final String DEBUG_HEADER = "findMdItem(): ";
+    Long mdItemSeq = null;
+    ResultSet resultSet = null;
+
+    PreparedStatement findMdItem =
+	dbManager.prepareStatement(conn, FIND_MD_ITEM_QUERY);
+
+    try {
+      findMdItem.setLong(1, mdItemTypeSeq);
+      findMdItem.setLong(2, auMdSeq);
+      findMdItem.setString(3, accessUrl);
+
+      resultSet = dbManager.executeQuery(findMdItem);
+      if (resultSet.next()) {
+	mdItemSeq = resultSet.getLong(MD_ITEM_SEQ_COLUMN);
+      }
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findMdItem);
+    }
+
+    log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+    return mdItemSeq;
+  }
+
+  /**
+   * Merges the properties of a child metadata item into another child metadata
+   * item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sourceMdItemSeq
+   *          A Long with the identifier of the source metadata item.
+   * @param targetMdItemSeq
+   *          A Long with the identifier of the target metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void mergeChildMdItemProperties(Connection conn, Long sourceMdItemSeq,
+      Long targetMdItemSeq) throws SQLException {
+    final String DEBUG_HEADER = "mergeChildMdItemProperties(): ";
+    log.debug3(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
+    log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
+
+    // Do not merge a metadata item into itself.
+    if (sourceMdItemSeq != targetMdItemSeq) {
+      // Merge the names.
+      mergeMdItemNames(conn, sourceMdItemSeq, targetMdItemSeq);
+
+      // Merge the authors.
+      mergeMdItemAuthors(conn, sourceMdItemSeq, targetMdItemSeq);
+
+      // Merge the keywords.
+      mergeMdItemKeywords(conn, sourceMdItemSeq, targetMdItemSeq);
+
+      // Merge the URLs.
+      mergeMdItemUrls(conn, sourceMdItemSeq, targetMdItemSeq);
+    }
+
+    log.debug3(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Merges the names of a metadata item into another metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sourceMdItemSeq
+   *          A Long with the identifier of the source metadata item.
+   * @param targetMdItemSeq
+   *          A Long with the identifier of the target metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void mergeMdItemNames(Connection conn, Long sourceMdItemSeq,
+      Long targetMdItemSeq) throws SQLException {
+    final String DEBUG_HEADER = "mergeMdItemNames(): ";
+    log.debug3(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
+    log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
+
+    Map<String, String> sourceMdItemNames =
+	getMdItemNames(conn, sourceMdItemSeq);
+
+    for (String mdItemName : sourceMdItemNames.keySet()) {
+      addNewMdItemName(conn, targetMdItemSeq, mdItemName);
+    }
+
+    log.debug3(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Merges the authors of a metadata item into another metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sourceMdItemSeq
+   *          A Long with the identifier of the source metadata item.
+   * @param targetMdItemSeq
+   *          A Long with the identifier of the target metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void mergeMdItemAuthors(Connection conn, Long sourceMdItemSeq,
+      Long targetMdItemSeq) throws SQLException {
+    final String DEBUG_HEADER = "mergeMdItemAuthors(): ";
+    log.debug3(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
+    log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
+
+    Set<String> sourceMdItemAuthors = getMdItemAuthors(conn, sourceMdItemSeq);
+
+    addNewMdItemAuthors(conn, targetMdItemSeq, sourceMdItemAuthors);
+
+    log.debug3(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Merges the keywords of a metadata item into another metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sourceMdItemSeq
+   *          A Long with the identifier of the source metadata item.
+   * @param targetMdItemSeq
+   *          A Long with the identifier of the target metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void mergeMdItemKeywords(Connection conn, Long sourceMdItemSeq,
+      Long targetMdItemSeq) throws SQLException {
+    final String DEBUG_HEADER = "mergeMdItemKeywords(): ";
+    log.debug3(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
+    log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
+
+    Set<String> sourceMdItemKeywords = getMdItemKeywords(conn, sourceMdItemSeq);
+
+    addNewMdItemKeywords(conn, targetMdItemSeq, sourceMdItemKeywords);
+
+    log.debug3(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Merges the URLs of a metadata item into another metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sourceMdItemSeq
+   *          A Long with the identifier of the source metadata item.
+   * @param targetMdItemSeq
+   *          A Long with the identifier of the target metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void mergeMdItemUrls(Connection conn, Long sourceMdItemSeq,
+      Long targetMdItemSeq) throws SQLException {
+    final String DEBUG_HEADER = "mergeMdItemUrls(): ";
+    log.debug3(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
+    log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
+
+    Map<String, String> sourceMdItemUrls = getMdItemUrls(conn, sourceMdItemSeq);
+
+    addNewMdItemUrls(conn, targetMdItemSeq, sourceMdItemUrls);
+
+    log.debug3(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Merges the properties of a parent metadata item into another parent
+   * metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sourceMdItemSeq
+   *          A Long with the identifier of the source metadata item.
+   * @param targetMdItemSeq
+   *          A Long with the identifier of the target metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  void mergeParentMdItemProperties(Connection conn, Long sourceMdItemSeq,
+      Long targetMdItemSeq) throws SQLException {
+    final String DEBUG_HEADER = "mergeParentMdItemProperties(): ";
+    log.debug3(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
+    log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
+
+    // Do not merge a metadata item into itself.
+    if (sourceMdItemSeq != targetMdItemSeq) {
+      // Merge the names.
+      mergeMdItemNames(conn, sourceMdItemSeq, targetMdItemSeq);
+
+      // Merge the ISBNs.
+      mergeMdItemIsbns(conn, sourceMdItemSeq, targetMdItemSeq);
+
+      // Merge the ISSNs.
+      mergeMdItemIssns(conn, sourceMdItemSeq, targetMdItemSeq);
+    }
+
+    log.debug3(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Merges the ISBNs of a metadata item into another metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sourceMdItemSeq
+   *          A Long with the identifier of the source metadata item.
+   * @param targetMdItemSeq
+   *          A Long with the identifier of the target metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void mergeMdItemIsbns(Connection conn, Long sourceMdItemSeq,
+      Long targetMdItemSeq) throws SQLException {
+    final String DEBUG_HEADER = "mergeMdItemIsbns(): ";
+    log.debug3(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
+    log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
+
+    Map<String, String> sourceMdItemIsbns =
+	getMdItemIsbns(conn, sourceMdItemSeq);
+
+    String isbnType;
+
+    for (String isbn : sourceMdItemIsbns.keySet()) {
+      isbnType = sourceMdItemIsbns.get(isbn);
+
+      if (P_ISBN_TYPE.equals(isbnType)) {
+	addNewMdItemIsbns(conn, targetMdItemSeq, isbn, null);
+      } else if (E_ISBN_TYPE.equals(isbnType)) {
+	addNewMdItemIsbns(conn, targetMdItemSeq, null, isbn);
+      }
+    }
+
+    log.debug3(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Merges the ISSNs of a metadata item into another metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param sourceMdItemSeq
+   *          A Long with the identifier of the source metadata item.
+   * @param targetMdItemSeq
+   *          A Long with the identifier of the target metadata item.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void mergeMdItemIssns(Connection conn, Long sourceMdItemSeq,
+      Long targetMdItemSeq) throws SQLException {
+    final String DEBUG_HEADER = "mergeMdItemIssns(): ";
+    log.debug3(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
+    log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
+
+    Map<String, String> sourceMdItemIssns =
+	getMdItemIssns(conn, sourceMdItemSeq);
+
+    String issnType;
+
+    for (String issn : sourceMdItemIssns.keySet()) {
+      issnType = sourceMdItemIssns.get(issn);
+
+      if (P_ISSN_TYPE.equals(issnType)) {
+	addNewMdItemIssns(conn, targetMdItemSeq, issn, null);
+      } else if (E_ISSN_TYPE.equals(issnType)) {
+	addNewMdItemIssns(conn, targetMdItemSeq, null, issn);
+      }
+    }
+
+    log.debug3(DEBUG_HEADER + "Done.");
   }
 }
