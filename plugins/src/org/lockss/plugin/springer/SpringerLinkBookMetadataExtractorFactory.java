@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkBookMetadataExtractorFactory.java,v 1.2 2013-03-10 18:20:23 alexandraohlson Exp $
+ * $Id: SpringerLinkBookMetadataExtractorFactory.java,v 1.3 2013-03-10 21:01:02 alexandraohlson Exp $
  */
 
 /*
@@ -169,21 +169,34 @@ public class SpringerLinkBookMetadataExtractorFactory
     }
 
     private void processSpecialCase(ArticleMetadata am, String line, int index, BufferedReader bReader) throws IOException {
-    	if(patterns[index].pattern().contains("<h1")) {
-    		line = bReader.readLine();
-    		metadataValues[index] = line.trim();
-    	} else if(patterns[index].pattern().contains("authors")) {
-    		Matcher mat = patterns[index].matcher(line);
+      if(patterns[index].pattern().contains("<h1")) {
+        /*
+         * The title might not be a standalone title, it might look like this:
+         *   <a href="/content/7263447022121139/" title="Link to Chapter">Generality Is Predictive of Prediction Accuracy</a>
+         *   but perhaps there are examples where this isn't the case, so make it optional
+         */
+        String titleWithHref = "(<a href=.*\">)([^<]+)(</a>.*)";
+        Pattern hrefTitle = Pattern.compile(titleWithHref);
 
-    		while(mat.find()) {
-    			if(metadataValues[index] == null)
-    				metadataValues[index] = mat.group(3);
-    			else
-    				metadataValues[index] += "; " + mat.group(3);
+        line = bReader.readLine();
+        Matcher mat = hrefTitle.matcher(line);
+        if (mat.find()) {
+          metadataValues[index] = mat.group(2);
+        } else {
+          metadataValues[index] = line.trim();
+        }
+      } else if(patterns[index].pattern().contains("authors")) {
+        Matcher mat = patterns[index].matcher(line);
 
-    			mat.reset(mat.replaceFirst("$1"));
-    		}
-    	}
+        while(mat.find()) {
+          if(metadataValues[index] == null)
+            metadataValues[index] = mat.group(3);
+          else
+            metadataValues[index] += "; " + mat.group(3);
+
+          mat.reset(mat.replaceFirst("$1"));
+        }
+      }
     }
   }
 }

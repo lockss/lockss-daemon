@@ -225,7 +225,6 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     FileMetadataExtractor me =
       new SpringerLinkBookMetadataExtractorFactory.SpringerLinkBookMetadataExtractor();
     assertNotNull(me);
-    log.setLevel("debug3");
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
@@ -255,6 +254,66 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     assertNull(md.get(MetadataField.FIELD_ISBN));
   }
 
+  String trickierContent =
+      "<div class=\"heading enumeration\">\n" +
+          "  <div class=\"primary\">\n" +
+          "          <a lang=\"en\" href=\"/blah/978-3-540-32547-5/\" title=\"Link to the Book of this Chapter\">Book Title</a>\n" +
+          "  </div><div class=\"secondary\">" +
+          "          <a lang=\"en\" href=\"/blah/0302-9743/\" title=\"Link to the Book Series of this Chapter\">Book Series Title</a>, 2006, Volume 3755/2006, " +
+          "<span class=\"pagination\">1-13</span><span class=\"doi\">, " +
+          "<span class=\"label\">DOI:</span> <span class=\"value\">10.1007/11677437_1</span>" +
+          "</span>\n" +
+          "  </div>\n" +
+          "</div><div class=\"heading primitive\">\n" +
+          "  <div class=\"coverImage\" title=\"Cover Image\" style=\"background-image: url(/blah/xxxx/cover-medium.jpg); background-size: contain;\">" +
+          " </div><div class=\"text\">\n" +
+          "          <h1>\n" +
+          "                 <a href=\"/blah/12345/\" title=\"Link to Chapter\">Article Title</a>\n" +
+          "         </h1><p class=\"authors\"><a title=\"View content where Author is Geoffrey I. Author\" href=\"/content/?Author=Geoffrey+I.+Author\">Geoffrey I. Author</a>" +
+          " and <a title=\"View content where Author is Second Brain\" href=\"/content/?Author=Second+Brain\">Second Brain</a></p>\n" +
+          "  </div><div class=\"clearer\">\n"+
+          "<!-- Clear floating elements -->\n"+
+          "</div>\n"+
+          "<div class=\"heading view linkOutView\">\n"+
+          "<div>\n"+
+          "<span class=\"key\">Link Out to this Book:</span><ul class=\"values\">\n"+
+          "<li><a target=\"_blank\" href=\"/link-out/?id=1234&amp;code=WXW3WX33W\"><img alt=\"Linkout Icon\" src=\"http://www.metapress.com/media/public/Products/Admin/LinkoutIcons/1782/wrong.gif\" />find it</a></li>\n"+
+          "</ul><div class=\"clearer\">\n"+
+          "<!-- Clear floating elements -->\n"+
+          "</div>\n"+
+          "</div>\n"+
+          "<div id=\"ContentSecondary\">\n"+
+          "<div id=\"Cockpit\">\n";
+
+  String moreAuthors = "Geoffrey I. Author; Second Brain";
+  public void testTrickierTitle() throws Exception {
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, hau);
+    cu.setContent(trickierContent);
+    cu.setContentSize(trickierContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
+    FileMetadataExtractor me =
+      new SpringerLinkBookMetadataExtractorFactory.SpringerLinkBookMetadataExtractor();
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+
+    log.debug3("in testTrickierContent, the values pulled are: ");
+    log.debug3(md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    log.debug3("; ");
+    log.debug3(md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    log.debug3("; ");
+    log.debug3(md.get(MetadataField.FIELD_AUTHOR));
+    log.debug3("!");
+    assertEquals("Article Title", md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals("Book Title", md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(moreAuthors, md.get(MetadataField.FIELD_AUTHOR));
+  }
 
   /**
    * Inner class that where a number of Archival Units can be created
