@@ -1,5 +1,5 @@
 /*
- * $Id: AMetSocHtmlMetadataExtractorFactory.java,v 1.1 2013-02-08 00:19:42 alexandraohlson Exp $
+ * $Id: AMetSocHtmlMetadataExtractorFactory.java,v 1.2 2013-03-10 17:35:21 alexandraohlson Exp $
  */
 
 /*
@@ -32,30 +32,35 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.americanmeteorologicalsociety;
 
-import java.io.*;
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadata;
+import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.FileMetadataExtractorFactory;
+import org.lockss.extractor.MetadataField;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.util.Logger;
 
-import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.extractor.*;
-import org.lockss.plugin.*;
 
-
-public class AMetSocHtmlMetadataExtractorFactory 
+public class AMetSocHtmlMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("AMetSocHtmlMetadataExtractorFactory");
 
-  public FileMetadataExtractor 
+  @Override
+  public FileMetadataExtractor
     createFileMetadataExtractor(MetadataTarget target, String contentType)
       throws PluginException {
     return new AMetSocHtmlMetadataExtractor();
   }
 
-  public static class AMetSocHtmlMetadataExtractor 
+  public static class AMetSocHtmlMetadataExtractor
     implements FileMetadataExtractor {
 
     private static MultiMap tagMap = new MultiValueMap();
@@ -68,7 +73,7 @@ public class AMetSocHtmlMetadataExtractorFactory
                  new MetadataField(MetadataField.FIELD_AUTHOR,
                                    MetadataField.splitAt(";")));
       tagMap.put("dc.Creator", MetadataField.DC_FIELD_CREATOR);
-      
+
       tagMap.put("dc.Title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("dc.Title", MetadataField.DC_FIELD_TITLE);
       tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
@@ -78,23 +83,23 @@ public class AMetSocHtmlMetadataExtractorFactory
       tagMap.put("dc.Coverage",MetadataField.DC_FIELD_COVERAGE);
       tagMap.put("dc.Rights", MetadataField.DC_FIELD_RIGHTS);
     }
-    
+
     private String base_url;
-    
+
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
-      ArticleMetadata am = 
+      ArticleMetadata am =
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
- 
+
       am.cook(tagMap);
-      
+
       // publisher name does not appear anywhere on the page in this form
       am.put(MetadataField.FIELD_PUBLISHER, "American Meteorological Society");
 
       // if the doi isn't in the metadata, we can still get it from the filename
       if (am.get(MetadataField.FIELD_DOI) == null) {
-        
+
         /*matches() is anchored so must create complete pattern or else use .finds() */
         /* URL is "<base>/doi/(abs|full)/<doi1st>/<doi2nd> */
         base_url = cu.getArchivalUnit().getConfiguration().get("base_url");
@@ -102,15 +107,13 @@ public class AMetSocHtmlMetadataExtractorFactory
         Pattern ABSTRACT_PATTERN = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
         String url = cu.getUrl();
         Matcher mat = ABSTRACT_PATTERN.matcher(url);
-        
+
         if (mat.matches()) {
           log.debug3("Pull DOI from URL " + mat.group(1) + "." + mat.group(2));
           am.put(MetadataField.FIELD_DOI, mat.group(1) + "/" + mat.group(2));
         }
       }
 
-      // publisher name does not appear anywhere on the page in this form
-      am.put(MetadataField.FIELD_PUBLISHER, "American Institute of Aeronautics and Astronautics");
       emitter.emitMetadata(cu, am);
     }
   }
