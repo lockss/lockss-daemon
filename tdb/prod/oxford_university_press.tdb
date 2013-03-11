@@ -6515,7 +6515,18 @@
     param[base_url] = http://gji.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 2011 ; Geophysical Journal International Volume 184 ; 184 >
+    au < exists ; 2011 ; Geophysical Journal International Volume 185 ; 185 >
+    au < exists ; 2011 ; Geophysical Journal International Volume 186 ; 186 >
+    au < exists ; 2011 ; Geophysical Journal International Volume 187 ; 187 >
+    au < exists ; 2012 ; Geophysical Journal International Volume 188 ; 188 >
+    au < exists ; 2012 ; Geophysical Journal International Volume 189 ; 189 >
+    au < exists ; 2012 ; Geophysical Journal International Volume 190 ; 190 >
+    au < exists ; 2012 ; Geophysical Journal International Volume 191 ; 191 >
     au < manifest ; 2013 ; Geophysical Journal International Volume 192 ; 192 >
+    au < manifest ; 2013 ; Geophysical Journal International Volume 193 ; 193 >
+    au < expected ; 2013 ; Geophysical Journal International Volume 194 ; 194 >
+    au < expected ; 2013 ; Geophysical Journal International Volume 195 ; 195 >
 
   }
 
