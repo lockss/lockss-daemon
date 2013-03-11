@@ -6,18 +6,12 @@
     info[tester] = 7
   >
 
+  plugin = needs.plugin
+  
   {
   
     title < 
       name = PeerJ
-    >
-    
-  }
-
-  {
-  
-    title < 
-      name = PeerJ PrePrints
     >
     
   }
