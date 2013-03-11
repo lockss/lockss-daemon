@@ -31,20 +31,21 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = mred
+      comment[notReady] = pdf file is missing, re-test later
   
-      au < testing ; 2000 ; Mountain Research and Development Volume 20 ; 20 >
-      au < testing ; 2001 ; Mountain Research and Development Volume 21 ; 21 >
-      au < testing ; 2002 ; Mountain Research and Development Volume 22 ; 22 >
-      au < testing ; 2003 ; Mountain Research and Development Volume 23 ; 23 >
+      au < ready ; 2000 ; Mountain Research and Development Volume 20 ; 20 >
+      au < ready ; 2001 ; Mountain Research and Development Volume 21 ; 21 >
+      au < ready ; 2002 ; Mountain Research and Development Volume 22 ; 22 >
+      au < ready ; 2003 ; Mountain Research and Development Volume 23 ; 23 >
       au < doNotProcess ; 2004 ; Mountain Research and Development Volume 24 ; 24 >
-      au < testing ; 2005 ; Mountain Research and Development Volume 25 ; 25 >
-      au < testing ; 2006 ; Mountain Research and Development Volume 26 ; 26 >
-      au < testing ; 2007 ; Mountain Research and Development Volume 27 ; 27 >
-      au < testing ; 2008 ; Mountain Research and Development Volume 28 ; 28 >
-      au < testing ; 2009 ; Mountain Research and Development Volume 29 ; 29 >
-      au < testing ; 2010 ; Mountain Research and Development Volume 30 ; 30 >
-      au < testing ; 2011 ; Mountain Research and Development Volume 31 ; 31 >
-      au < testing ; 2012 ; Mountain Research and Development Volume 32 ; 32 >
+      au < ready ; 2005 ; Mountain Research and Development Volume 25 ; 25 >
+      au < ready ; 2006 ; Mountain Research and Development Volume 26 ; 26 >
+      au < ready ; 2007 ; Mountain Research and Development Volume 27 ; 27 >
+      au < ready ; 2008 ; Mountain Research and Development Volume 28 ; 28 >
+      au < ready ; 2009 ; Mountain Research and Development Volume 29 ; 29 >
+      au < notReady ; 2010 ; Mountain Research and Development Volume 30 ; 30 >
+      au < ready ; 2011 ; Mountain Research and Development Volume 31 ; 31 >
+      au < notReady ; 2012 ; Mountain Research and Development Volume 32 ; 32 >
       au < expected ; 2013 ; Mountain Research and Development Volume 33 ; 33 >
       
     }
