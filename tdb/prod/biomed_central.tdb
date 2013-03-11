@@ -2660,9 +2660,9 @@
       
       param[base_url] = http://www.chiromt.com/
 
-      au < testing ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
+      au < ready ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
       au < testing ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
-      au < testing ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
+      au < ready ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
       }
     }
     
@@ -2693,11 +2693,11 @@
         param[base_url] = http://www.chiromt.com/
         
         au < testing ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
-        au < testing ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
+        au < ready ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
         au < testing ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
         au < testing ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
-        au < testing ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
-        au < testing ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
+        au < ready ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
+        au < ready ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
       
       }
       
@@ -2714,7 +2714,7 @@
       param[base_url] = http://www.ciliajournal.com/
       param[journal_issn] = 2046-2530
 
-      au < testing ; 2012 ; Cilia Volume 1 ; 1 >
+      au < ready ; 2012 ; Cilia Volume 1 ; 1 >
       au < manifest ; 2013 ; Cilia Volume 2 ; 2 >
 
     }
