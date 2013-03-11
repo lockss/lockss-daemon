@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = Southeastern Surgical Congress ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+  plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+  param[base_url] = http://www.ingentaconnect.com/
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
+  param[publisher_id] = sesc
+  
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  
+  {
+
+    title <
+      name = The American Surgeon ;
+      issn = 0003-1348 ;
+      eissn = 1555-9823
+    >
+
+    param[journal_id] = tas
+    param[journal_issn] = 0003-1348
+
+    au < exists ; exists ; 2005 ; The American Surgeon Volume 71 ; 71 >
+    au < exists ; exists ; 2006 ; The American Surgeon Volume 72 ; 72 >
+    au < exists ; exists ; 2007 ; The American Surgeon Volume 73 ; 73 >
+    au < exists ; exists ; 2008 ; The American Surgeon Volume 74 ; 74 >
+    au < exists ; exists ; 2009 ; The American Surgeon Volume 75 ; 75 >
+    au < exists ; exists ; 2010 ; The American Surgeon Volume 76 ; 76 >
+    au < exists ; exists ; 2011 ; The American Surgeon Volume 77 ; 77 >
+    au < exists ; exists ; 2012 ; The American Surgeon Volume 78 ; 78 >
+    au < exists ; exists ; 2013 ; The American Surgeon Volume 79 ; 79 >
+
+  }
+}
