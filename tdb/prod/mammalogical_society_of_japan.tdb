@@ -18,13 +18,16 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jmam
   
-      au < manifest ; 2005 ; Mammal Study Volume 30 ; 30 >
-      au < manifest ; 2006 ; Mammal Study Volume 31 ; 31 >
-      au < manifest ; 2007 ; Mammal Study Volume 32 ; 32 >
-      au < manifest ; 2008 ; Mammal Study Volume 33 ; 33 >
-      au < manifest ; 2009 ; Mammal Study Volume 34 ; 34 >
-      au < manifest ; 2010 ; Mammal Study Volume 35 ; 35 >
-      au < manifest ; 2011 ; Mammal Study Volume 36 ; 36 >
+      au < testing ; 2005 ; Mammal Study Volume 30 ; 30 >
+      au < testing ; 2006 ; Mammal Study Volume 31 ; 31 >
+      au < testing ; 2007 ; Mammal Study Volume 32 ; 32 >
+      au < testing ; 2008 ; Mammal Study Volume 33 ; 33 >
+      au < testing ; 2009 ; Mammal Study Volume 34 ; 34 >
+      au < testing ; 2010 ; Mammal Study Volume 35 ; 35 >
+      au < testing ; 2011 ; Mammal Study Volume 36 ; 36 >
+      au < exists ; 2012 ; Mammal Study Volume 37 ; 37 >
+      au < expected ; 2013 ; Mammal Study Volume 38 ; 38 >
+
     }
 
   }

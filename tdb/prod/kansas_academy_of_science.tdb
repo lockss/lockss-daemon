@@ -27,17 +27,20 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = tkas
   
-      au < manifest ; 2001 ; Transactions of the Kansas Academy of Science Volume 104 ; 104 >
-      au < manifest ; 2002 ; Transactions of the Kansas Academy of Science Volume 105 ; 105 >
-      au < manifest ; 2003 ; Transactions of the Kansas Academy of Science Volume 106 ; 106 >
+      au < testing ; 2001 ; Transactions of the Kansas Academy of Science Volume 104 ; 104 >
+      au < testing ; 2002 ; Transactions of the Kansas Academy of Science Volume 105 ; 105 >
+      au < testing ; 2003 ; Transactions of the Kansas Academy of Science Volume 106 ; 106 >
       au < doNotProcess ; 2004 ; Transactions of the Kansas Academy of Science Volume 107 ; 107 >
-      au < manifest ; 2005 ; Transactions of the Kansas Academy of Science Volume 108 ; 108 >
-      au < manifest ; 2006 ; Transactions of the Kansas Academy of Science Volume 109 ; 109 >
-      au < manifest ; 2007 ; Transactions of the Kansas Academy of Science Volume 110 ; 110 >
-      au < manifest ; 2008 ; Transactions of the Kansas Academy of Science Volume 111 ; 111 >
-      au < manifest ; 2009 ; Transactions of the Kansas Academy of Science Volume 112 ; 112 >
-      au < manifest ; 2010 ; Transactions of the Kansas Academy of Science Volume 113 ; 113 >
-      au < manifest ; 2011 ; Transactions of the Kansas Academy of Science Volume 114 ; 114 >
+      au < testing ; 2005 ; Transactions of the Kansas Academy of Science Volume 108 ; 108 >
+      au < testing ; 2006 ; Transactions of the Kansas Academy of Science Volume 109 ; 109 >
+      au < testing ; 2007 ; Transactions of the Kansas Academy of Science Volume 110 ; 110 >
+      au < testing ; 2008 ; Transactions of the Kansas Academy of Science Volume 111 ; 111 >
+      au < testing ; 2009 ; Transactions of the Kansas Academy of Science Volume 112 ; 112 >
+      au < testing ; 2010 ; Transactions of the Kansas Academy of Science Volume 113 ; 113 >
+      au < testing ; 2011 ; Transactions of the Kansas Academy of Science Volume 114 ; 114 >
+      au < exists ; 2012 ; Transactions of the Kansas Academy of Science Volume 115 ; 115 >
+      au < expected ; 2013 ; Transactions of the Kansas Academy of Science Volume 116 ; 116 >
+      
     }
 
   }

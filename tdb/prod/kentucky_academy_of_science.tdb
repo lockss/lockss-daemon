@@ -18,13 +18,16 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = kyac
   
-      au < manifest ; 2005 ; Journal of the Kentucky Academy of Science Volume 66 ; 66 >
-      au < manifest ; 2006 ; Journal of the Kentucky Academy of Science Volume 67 ; 67 >
-      au < manifest ; 2007 ; Journal of the Kentucky Academy of Science Volume 68 ; 68 >
-      au < manifest ; 2008 ; Journal of the Kentucky Academy of Science Volume 69 ; 69 >
-      au < manifest ; 2009 ; Journal of the Kentucky Academy of Science Volume 70 ; 70 >
-      au < manifest ; 2010 ; Journal of the Kentucky Academy of Science Volume 71 ; 71 >
-      au < manifest ; 2011 ; Journal of the Kentucky Academy of Science Volume 72 ; 72 >
+      au < testing ; 2005 ; Journal of the Kentucky Academy of Science Volume 66 ; 66 >
+      au < testing ; 2006 ; Journal of the Kentucky Academy of Science Volume 67 ; 67 >
+      au < testing ; 2007 ; Journal of the Kentucky Academy of Science Volume 68 ; 68 >
+      au < testing ; 2008 ; Journal of the Kentucky Academy of Science Volume 69 ; 69 >
+      au < testing ; 2009 ; Journal of the Kentucky Academy of Science Volume 70 ; 70 >
+      au < testing ; 2010 ; Journal of the Kentucky Academy of Science Volume 71 ; 71 >
+      au < testing ; 2011 ; Journal of the Kentucky Academy of Science Volume 72 ; 72 >
+      au < exists ; 2012 ; Journal of the Kentucky Academy of Science Volume 73 ; 73 >
+      au < expected ; 2013 ; Journal of the Kentucky Academy of Science Volume 74 ; 74 >
+
     }
     
   }
