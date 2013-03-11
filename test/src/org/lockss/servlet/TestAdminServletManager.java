@@ -1,5 +1,5 @@
 /*
- * $Id: TestAdminServletManager.java,v 1.9 2012-10-01 21:12:31 fergaloy-sf Exp $
+ * $Id: TestAdminServletManager.java,v 1.10 2013-03-11 05:43:11 clairegriffin Exp $
  */
 
 /*
@@ -90,6 +90,8 @@ public class TestAdminServletManager extends LockssTestCase {
     SERVLET_EXPORT_CONTENT,
     SERVLET_DISPLAY_CONTENT,
     SERVLET_HASH_CUS,
+    SERVLET_TIME_GATE,
+    SERVLET_TIME_MAP,
     LINK_EXPORTS,
     LINK_LOGS,
   };

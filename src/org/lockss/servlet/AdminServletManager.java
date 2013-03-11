@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.33 2013-01-10 22:10:45 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.34 2013-03-11 05:43:11 clairegriffin Exp $
  */
 
 /*
@@ -349,6 +349,16 @@ public class AdminServletManager extends BaseServletManager {
           ServeContent.class,
           "Serve Content",
           ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+  public static final ServletDescr SERVLET_TIME_GATE =
+      new ServletDescr("TimeGateService",
+		       TimeGateService.class,
+		       "Time Gate",
+		       ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+  public static final ServletDescr SERVLET_TIME_MAP =
+      new ServletDescr("TimeMapService",
+		       TimeMapService.class,
+		       "Time Map",
+		       ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   public static final ServletDescr SERVLET_EXPORT_CONTENT =
           new ServletDescr("ExportContent",
           ExportContent.class,
@@ -516,6 +526,8 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_LIST_HOLDINGS,
     SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
+    SERVLET_TIME_GATE,
+    SERVLET_TIME_MAP,
     LINK_LOGS,
     LINK_ISOS,
     LINK_EXPORTS,
@@ -544,6 +556,8 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DISPLAY_CONTENT_STATUS,
     SERVLET_DISPLAY_CONTENT,
     SERVLET_SERVE_CONTENT,
+    SERVLET_TIME_GATE,
+    SERVLET_TIME_MAP,
     SERVLET_EXPORT_CONTENT,
     SERVLET_LIST_OBJECTS,
     SERVLET_DEBUG_PANEL,
@@ -551,6 +565,8 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_LIST_HOLDINGS,
     SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
+    SERVLET_TIME_GATE,
+    SERVLET_TIME_MAP,
     LINK_LOGS,
     LINK_ISOS,
     LINK_EXPORTS,
@@ -580,6 +596,8 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DISPLAY_CONTENT_STATUS,
     SERVLET_DISPLAY_CONTENT,
     SERVLET_SERVE_CONTENT,
+    SERVLET_TIME_GATE,
+    SERVLET_TIME_MAP,
     SERVLET_EXPORT_CONTENT,
     SERVLET_LIST_OBJECTS,
     SERVLET_DEBUG_PANEL,
