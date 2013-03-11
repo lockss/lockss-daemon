@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.130 2013-02-27 06:01:47 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.131 2013-03-11 05:41:21 clairegriffin Exp $
  */
 
 /*
@@ -1207,6 +1207,45 @@ public abstract class LockssServlet extends HttpServlet
     if (errMsg != null || statusMsg != null) {
       ServletUtil.layoutErrorBlock(composite, errMsg, statusMsg);
     }
+  }
+
+
+  /**
+   * Sends the browser a response with the given status code and a brief page
+   * displaying the given message. Although sendShortMessage might seem to
+   * duplicate resp.sendError(int status, String msg), resp.sendError
+   * incorrectly sets the status code description text to its second argument.
+   * So the HTTP status becomes something like "400 Here is a my long
+   * descriptive error message" instead of "400 Bad Request".
+   *
+   * @param statusCode status code to use with the response
+   * @param message message to display on the error page and quote in the
+   * 	      debug log
+   * @throws java.io.IOException if the page cannot be written to the response
+   */
+  protected void sendShortMessage(int statusCode, String message)
+      throws IOException {
+    resp.setStatus(statusCode);
+    if (log.isDebug()) {
+      log.debug("Unsuccessful Service request, response status " +
+          statusCode + ": " + message);
+    }
+    oneLineMessagePage(message);
+  }
+
+  /**
+   * Sends the browser a page with the given line of text and the LOCKSS
+   * boilerplate.  Does not set the status code.
+   *
+   * @param message the message to display
+   * @throws java.io.IOException if the page cannot be written to the response
+   */
+  protected void oneLineMessagePage(String message) throws IOException {
+    Page page = newPage();
+    Composite comp = new Composite();
+    comp.add(message);
+    page.add(comp);
+    endPage(page);
   }
 
   /** Exception thrown if multipart form data is longer than the
