@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.6 2013-03-10 23:44:59 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.7 2013-03-12 19:32:30 fergaloy-sf Exp $
  */
 
 /*
@@ -60,8 +60,7 @@ import org.lockss.util.TimeBase;
 public class AuMetadataRecorder {
   private static Logger log = Logger.getLogger(AuMetadataRecorder.class);
 
-  private static final String UNKNOWN_PUBLISHER_AU_PROBLEM =
-      "UNKNOWN_PUBLISHER";
+  static final String UNKNOWN_PUBLISHER_AU_PROBLEM = "UNKNOWN_PUBLISHER";
 
   // Query to update the version of an Archival Unit metadata.
   private static final String UPDATE_AU_MD_QUERY = "update "
@@ -1320,13 +1319,26 @@ public class AuMetadataRecorder {
     crManager.mergeBookTypeAggregates(conn, unknownPublicationSeq,
 	publicationSeq);
 
+    // Delete the book type aggregate counts for the unknown publisher
+    // publication.
+    crManager.deleteBookTypeAggregates(conn, unknownPublicationSeq);
+
     // Merge the journal type aggregate counts.
     crManager.mergeJournalTypeAggregates(conn, unknownPublicationSeq,
 	publicationSeq);
 
+    // Delete the journal type aggregate counts for the unknown publisher
+    // publication.
+    crManager.deleteJournalTypeAggregates(conn, unknownPublicationSeq);
+
     // Merge the journal publication year aggregate counts.
     crManager.mergeJournalPubYearAggregates(conn, unknownPublicationSeq,
 	publicationSeq);
+
+    // Delete the journal publication year aggregate counts for the unknown
+    // publisher
+    // publication.
+    crManager.deleteJournalPubYearAggregates(conn, unknownPublicationSeq);
 
     log.debug3(DEBUG_HEADER + "Done.");
   }
