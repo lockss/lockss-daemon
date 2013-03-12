@@ -26,33 +26,33 @@
     comment[notReady] = low agreement, different pdf fontname used
 
     au < manifest; 1981 ; Annals of Glaciology Volume 2 ; 2 >
-    au < releasing ; 1994 ; Annals of Glaciology Volume 20 ; 20 >
-    au < releasing ; 1999 ; Annals of Glaciology Volume 28 ; 28 >
-    au < releasing ; 1999 ; Annals of Glaciology Volume 29 ; 29 >
-    au < releasing ; 2000 ; Annals of Glaciology Volume 30 ; 30 >
-    au < releasing ; 2000 ; Annals of Glaciology Volume 31 ; 31 >
-    au < releasing ; 2001 ; Annals of Glaciology Volume 32 ; 32 >
+    au < released ; 1994 ; Annals of Glaciology Volume 20 ; 20 >
+    au < released ; 1999 ; Annals of Glaciology Volume 28 ; 28 >
+    au < released ; 1999 ; Annals of Glaciology Volume 29 ; 29 >
+    au < released ; 2000 ; Annals of Glaciology Volume 30 ; 30 >
+    au < released ; 2000 ; Annals of Glaciology Volume 31 ; 31 >
+    au < released ; 2001 ; Annals of Glaciology Volume 32 ; 32 >
     au < notReady ; 2001 ; Annals of Glaciology Volume 33 ; 33 >
     au < notReady ; 2002 ; Annals of Glaciology Volume 34 ; 34 >
     au < notReady ; 2002 ; Annals of Glaciology Volume 35 ; 35 >
     au < notReady ; 2003 ; Annals of Glaciology Volume 36 ; 36 >
     au < notReady ; 2003 ; Annals of Glaciology Volume 37 ; 37 >
-    au < releasing ; 2004 ; Annals of Glaciology Volume 38 ; 38 >
-    au < releasing ; 2004 ; Annals of Glaciology Volume 39 ; 39 >
-    au < releasing ; 2005 ; Annals of Glaciology Volume 40 ; 40 >
-    au < releasing ; 2005 ; Annals of Glaciology Volume 41 ; 41 >
-    au < releasing ; 2005 ; Annals of Glaciology Volume 42 ; 42 >
-    au < releasing ; 2006 ; Annals of Glaciology Volume 43 ; 43 >
-    au < releasing ; 2006 ; Annals of Glaciology Volume 44 ; 44 >
-    au < releasing ; 2007 ; Annals of Glaciology Volume 45 ; 45 >
-    au < releasing ; 2007 ; Annals of Glaciology Volume 46 ; 46 >
-    au < releasing ; 2007 ; Annals of Glaciology Volume 47 ; 47 >
-    au < releasing ; 2008 ; Annals of Glaciology Volume 48 ; 48 >
-    au < releasing ; 2008 ; Annals of Glaciology Volume 49 ; 49 >
-    au < releasing ; 2009-2010 ; Annals of Glaciology Volume 50 ; 50 >
-    au < releasing ; 2010 ; Annals of Glaciology Volume 51 ; 51 >
-    au < releasing ; 2011 ; Annals of Glaciology Volume 52 ; 52 >
-    au < releasing ; 2012 ; Annals of Glaciology Volume 53 ; 53 >
+    au < released ; 2004 ; Annals of Glaciology Volume 38 ; 38 >
+    au < released ; 2004 ; Annals of Glaciology Volume 39 ; 39 >
+    au < released ; 2005 ; Annals of Glaciology Volume 40 ; 40 >
+    au < released ; 2005 ; Annals of Glaciology Volume 41 ; 41 >
+    au < released ; 2005 ; Annals of Glaciology Volume 42 ; 42 >
+    au < released ; 2006 ; Annals of Glaciology Volume 43 ; 43 >
+    au < released ; 2006 ; Annals of Glaciology Volume 44 ; 44 >
+    au < released ; 2007 ; Annals of Glaciology Volume 45 ; 45 >
+    au < released ; 2007 ; Annals of Glaciology Volume 46 ; 46 >
+    au < released ; 2007 ; Annals of Glaciology Volume 47 ; 47 >
+    au < released ; 2008 ; Annals of Glaciology Volume 48 ; 48 >
+    au < released ; 2008 ; Annals of Glaciology Volume 49 ; 49 >
+    au < released ; 2009-2010 ; Annals of Glaciology Volume 50 ; 50 >
+    au < released ; 2010 ; Annals of Glaciology Volume 51 ; 51 >
+    au < released ; 2011 ; Annals of Glaciology Volume 52 ; 52 >
+    au < released ; 2012 ; Annals of Glaciology Volume 53 ; 53 >
     au < exists ; 2013 ; Annals of Glaciology Volume 54 ; 54 >
      
    }    
@@ -72,9 +72,9 @@
     param[journal_id] = jog 
     param[journal_issn] = 0022-1430
 
-    au < releasing ; 1949 ; Journal of Glaciology Volume 1 ; 1 >
-    au < releasing ; 1954-1956 ; Journal of Glaciology Volume 2 ; 2 >
-    au < releasing ; 1961 ; Journal of Glaciology Volume 3 ; 3 >
+    au < released ; 1949 ; Journal of Glaciology Volume 1 ; 1 >
+    au < released ; 1954-1956 ; Journal of Glaciology Volume 2 ; 2 >
+    au < released ; 1961 ; Journal of Glaciology Volume 3 ; 3 >
     au < exists ; 1962-1963 ; Journal of Glaciology Volume 4 ; 4 >
     au < exists ; 1964-1965 ; Journal of Glaciology Volume 5 ; 5 >
     au < exists ; 1966-1967 ; Journal of Glaciology Volume 6 ; 6 >

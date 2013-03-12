@@ -18,13 +18,13 @@
     param[base_url] = http://thebalticyearbook.org/journals/
     param[journal_id] = baltic
 
-    au < releasing ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; 2005 >
-    au < releasing ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; 2006 >
-    au < releasing ; 2007 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 3 ; 3 ; 2007 >
-    au < releasing ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; 2008 >
-    au < releasing ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; 2009 >
-    au < releasing ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; 2010 >
-    au < releasing ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; 2012 >
+    au < released ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 ; 2005 >
+    au < released ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 ; 2006 >
+    au < released ; 2007 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 3 ; 3 ; 2007 >
+    au < released ; 2008 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 4 ; 4 ; 2008 >
+    au < released ; 2009 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 5 ; 5 ; 2009 >
+    au < released ; 2010 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 6 ; 6 ; 2010 >
+    au < released ; 2012 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 7 ; 7 ; 2012 >
     au < expected ; 2013 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 8 ; 8 ; 2013 >
 
   }
@@ -41,31 +41,31 @@
     param[base_url] = http://newprairiepress.org/journals/
     param[journal_id] = gdr
 
-    au < releasing ; 1975 ; GDR Bulletin Volume 1 ; 1 ; 1975 >
-    au < releasing ; 1976 ; GDR Bulletin Volume 2 ; 2 ; 1976 >
-    au < releasing ; 1977 ; GDR Bulletin Volume 3 ; 3 ; 1977 >
-    au < releasing ; 1978 ; GDR Bulletin Volume 4 ; 4 ; 1978 >
-    au < releasing ; 1979 ; GDR Bulletin Volume 5 ; 5 ; 1979 >
-    au < releasing ; 1980 ; GDR Bulletin Volume 6 ; 6 ; 1980 >
-    au < releasing ; 1981 ; GDR Bulletin Volume 7 ; 7 ; 1981 >
-    au < releasing ; 1982 ; GDR Bulletin Volume 8 ; 8 ; 1982 >
-    au < releasing ; 1983 ; GDR Bulletin Volume 9 ; 9 ; 1983 >
-    au < releasing ; 1984 ; GDR Bulletin Volume 10 ; 10 ; 1984 >
-    au < releasing ; 1985 ; GDR Bulletin Volume 11 ; 11 ; 1985 >
-    au < releasing ; 1986 ; GDR Bulletin Volume 12 ; 12 ; 1986 >
-    au < releasing ; 1987 ; GDR Bulletin Volume 13 ; 13 ; 1987 >
-    au < releasing ; 1988 ; GDR Bulletin Volume 14 ; 14 ; 1988 >
-    au < releasing ; 1989 ; GDR Bulletin Volume 15 ; 15 ; 1989 >
-    au < releasing ; 1990 ; GDR Bulletin Volume 16 ; 16 ; 1990 >
-    au < releasing ; 1991 ; GDR Bulletin Volume 17 ; 17 ; 1991 >
-    au < releasing ; 1992 ; GDR Bulletin Volume 18 ; 18 ; 1992 >
-    au < releasing ; 1993 ; GDR Bulletin Volume 19 ; 19 ; 1993 >
-    au < releasing ; 1994 ; GDR Bulletin Volume 20-21 ; 20-21 ; 1994 >
-    au < releasing ; 1995 ; GDR Bulletin Volume 22 ; 22 ; 1995 >
-    au < releasing ; 1996 ; GDR Bulletin Volume 23 ; 23 ; 1996 >
-    au < releasing ; 1997 ; GDR Bulletin Volume 24 ; 24 ; 1997 >
-    au < releasing ; 1998 ; GDR Bulletin Volume 25 ; 25 ; 1998 >
-    au < releasing ; 1999 ; GDR Bulletin Volume 26 ; 26 ; 1999 >
+    au < released ; 1975 ; GDR Bulletin Volume 1 ; 1 ; 1975 >
+    au < released ; 1976 ; GDR Bulletin Volume 2 ; 2 ; 1976 >
+    au < released ; 1977 ; GDR Bulletin Volume 3 ; 3 ; 1977 >
+    au < released ; 1978 ; GDR Bulletin Volume 4 ; 4 ; 1978 >
+    au < released ; 1979 ; GDR Bulletin Volume 5 ; 5 ; 1979 >
+    au < released ; 1980 ; GDR Bulletin Volume 6 ; 6 ; 1980 >
+    au < released ; 1981 ; GDR Bulletin Volume 7 ; 7 ; 1981 >
+    au < released ; 1982 ; GDR Bulletin Volume 8 ; 8 ; 1982 >
+    au < released ; 1983 ; GDR Bulletin Volume 9 ; 9 ; 1983 >
+    au < released ; 1984 ; GDR Bulletin Volume 10 ; 10 ; 1984 >
+    au < released ; 1985 ; GDR Bulletin Volume 11 ; 11 ; 1985 >
+    au < released ; 1986 ; GDR Bulletin Volume 12 ; 12 ; 1986 >
+    au < released ; 1987 ; GDR Bulletin Volume 13 ; 13 ; 1987 >
+    au < released ; 1988 ; GDR Bulletin Volume 14 ; 14 ; 1988 >
+    au < released ; 1989 ; GDR Bulletin Volume 15 ; 15 ; 1989 >
+    au < released ; 1990 ; GDR Bulletin Volume 16 ; 16 ; 1990 >
+    au < released ; 1991 ; GDR Bulletin Volume 17 ; 17 ; 1991 >
+    au < released ; 1992 ; GDR Bulletin Volume 18 ; 18 ; 1992 >
+    au < released ; 1993 ; GDR Bulletin Volume 19 ; 19 ; 1993 >
+    au < released ; 1994 ; GDR Bulletin Volume 20-21 ; 20-21 ; 1994 >
+    au < released ; 1995 ; GDR Bulletin Volume 22 ; 22 ; 1995 >
+    au < released ; 1996 ; GDR Bulletin Volume 23 ; 23 ; 1996 >
+    au < released ; 1997 ; GDR Bulletin Volume 24 ; 24 ; 1997 >
+    au < released ; 1998 ; GDR Bulletin Volume 25 ; 25 ; 1998 >
+    au < released ; 1999 ; GDR Bulletin Volume 26 ; 26 ; 1999 >
 
   }
 
@@ -95,7 +95,7 @@
     param[base_url] = http://jhaponline.org/journals/
     param[journal_id] = jhap
 
-    au < releasing ; 2011-2012 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 >
+    au < released ; 2011-2012 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 >
     au < manifest ; 2012-2013 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 >
 
   }
@@ -111,9 +111,9 @@
     param[base_url] = http://jftonline.org/journals/
     param[journal_id] = jft
 
-    au < releasing ; 2010 ; Journal of Financial Therapy Volume 1 ; 1 ; 2010 >
-    au < releasing ; 2011 ; Journal of Financial Therapy Volume 2 ; 2 ; 2011 >
-    au < releasing ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 >
+    au < released ; 2010 ; Journal of Financial Therapy Volume 1 ; 1 ; 2010 >
+    au < released ; 2011 ; Journal of Financial Therapy Volume 2 ; 2 ; 2011 >
+    au < released ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 >
     au < expected ; 2013 ; Journal of Financial Therapy Volume 4 ; 4 ; 2013 >
 
   }
@@ -129,16 +129,16 @@
     param[base_url] = http://newprairiepress.org/journals/
     param[journal_id] = jrmh
 
-    au < releasing ; 1996 ; Journal of Rural Mental Health Volume 23 ; 23 ; 1996 >
-    au < releasing ; 1998-1999 ; Journal of Rural Mental Health Volume 24 ; 24 ; 1998 >
-    au < releasing ; 2002 ; Journal of Rural Mental Health Volume 27 ; 27 ; 2002 >
-    au < releasing ; 2003 ; Journal of Rural Mental Health Volume 28 ; 28 ; 2003 >
-    au < releasing ; 2004 ; Journal of Rural Mental Health Volume 29 ; 29 ; 2004 >
-    au < releasing ; 2005 ; Journal of Rural Mental Health Volume 30 ; 30 ; 2005 >
-    au < releasing ; 2006 ; Journal of Rural Mental Health Volume 31 ; 31 ; 2006 >
-    au < releasing ; 2010 ; Journal of Rural Mental Health Volume 34 ; 34 ; 2010 >
-    au < releasing ; 2011 ; Journal of Rural Mental Health Volume 35 ; 35 ; 2011 >
-    au < releasing ; 2012 ; Journal of Rural Mental Health Volume 36 ; 36 ; 2012 >
+    au < released ; 1996 ; Journal of Rural Mental Health Volume 23 ; 23 ; 1996 >
+    au < released ; 1998-1999 ; Journal of Rural Mental Health Volume 24 ; 24 ; 1998 >
+    au < released ; 2002 ; Journal of Rural Mental Health Volume 27 ; 27 ; 2002 >
+    au < released ; 2003 ; Journal of Rural Mental Health Volume 28 ; 28 ; 2003 >
+    au < released ; 2004 ; Journal of Rural Mental Health Volume 29 ; 29 ; 2004 >
+    au < released ; 2005 ; Journal of Rural Mental Health Volume 30 ; 30 ; 2005 >
+    au < released ; 2006 ; Journal of Rural Mental Health Volume 31 ; 31 ; 2006 >
+    au < released ; 2010 ; Journal of Rural Mental Health Volume 34 ; 34 ; 2010 >
+    au < released ; 2011 ; Journal of Rural Mental Health Volume 35 ; 35 ; 2011 >
+    au < released ; 2012 ; Journal of Rural Mental Health Volume 36 ; 36 ; 2012 >
     au < expected ; 2013 ; Journal of Rural Mental Health Volume 37 ; 37 ; 2013 >
 
   }
@@ -155,7 +155,7 @@
     param[journal_id] = CULS
 
     au < wanted ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; 2011 >
-    au < releasing ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
+    au < released ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
     au < manifest ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 ; 2013 >
 
   }
@@ -173,13 +173,13 @@
     param[base_url] = http://ojrrp.org/journals/
     param[journal_id] = ojrrp
 
-    au < releasing ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; 2006 >
-    au < releasing ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; 2007 >
-    au < releasing ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; 2008 >
-    au < releasing ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; 2009 >
-    au < releasing ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; 2010 >
-    au < releasing ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; 2011 >
-    au < releasing ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
+    au < released ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; 2006 >
+    au < released ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; 2007 >
+    au < released ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; 2008 >
+    au < released ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; 2009 >
+    au < released ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; 2010 >
+    au < released ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; 2011 >
+    au < released ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
     au < expected ; 2013 ; Online Journal of Rural Research & Policy Volume 8 ; 8 ; 2013 >
 
   }
