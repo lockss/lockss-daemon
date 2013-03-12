@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsManager.java,v 1.10 2013-03-10 23:44:59 fergaloy-sf Exp $
+ * $Id: CounterReportsManager.java,v 1.11 2013-03-12 19:24:20 fergaloy-sf Exp $
  */
 
 /*
@@ -236,6 +236,11 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       + " from " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
       + " where " + PUBLICATION_SEQ_COLUMN + " = ?";
 
+  // Query to delete the aggregated type requests for a book.
+  private static final String SQL_QUERY_BOOK_TYPE_AGGREGATES_DELETE = "delete"
+      + " from " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+      + " where " + PUBLICATION_SEQ_COLUMN + " = ?";
+
   // Query to get all the aggregated type requests for a journal.
   private static final String SQL_QUERY_JOURNAL_TYPE_AGGREGATES_SELECT =
       "select "
@@ -248,6 +253,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       + " from " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
       + " where " + PUBLICATION_SEQ_COLUMN + " = ?";
 
+  // Query to delete the aggregated type requests for a journal.
+  private static final String SQL_QUERY_JOURNAL_TYPE_AGGREGATES_DELETE =
+      "delete"
+      + " from " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+      + " where " + PUBLICATION_SEQ_COLUMN + " = ?";
+
   // Query to get all the aggregated publication year requests for a journal.
   private static final String SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATES_SELECT =
       "select "
@@ -256,6 +267,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       + "," + REQUEST_MONTH_COLUMN
       + "," + PUBLICATION_YEAR_COLUMN
       + "," + REQUESTS_COLUMN
+      + " from " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+      + " where " + PUBLICATION_SEQ_COLUMN + " = ?";
+
+  // Query to delete the aggregated type requests for a journal.
+  private static final String SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATES_DELETE =
+      "delete"
       + " from " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
       + " where " + PUBLICATION_SEQ_COLUMN + " = ?";
 
@@ -1517,6 +1534,47 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
   }
 
   /**
+   * Deletes all the type aggregates of a book.
+   * 
+   * @param conn
+   *          A Connection representing the database connection.
+   * @param publicationSeq
+   *          A Long with the identifier of the book involved.
+   * @throws SQLException
+   *           if there are problems accessing the database.
+   */
+  public void deleteBookTypeAggregates(Connection conn, Long publicationSeq)
+      throws SQLException {
+    final String DEBUG_HEADER = "deleteBookTypeAggregates(): ";
+    log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    PreparedStatement deleteAggregate = null;
+    String sql = SQL_QUERY_BOOK_TYPE_AGGREGATES_DELETE;
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
+
+    try {
+      // Prepare the statement used to delete the rows.
+      deleteAggregate = dbManager.prepareStatement(conn, sql);
+
+      int index = 1;
+
+      // Populate the book identifier.
+      deleteAggregate.setLong(index++, publicationSeq);
+
+      // Delete the records.
+      int count = dbManager.executeUpdate(deleteAggregate);
+      log.debug2(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot delete the book type aggregates", sqle);
+      log.error("publicationSeq = " + publicationSeq);
+      log.error("SQL = '" + sql + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseStatement(deleteAggregate);
+    }
+  }
+
+  /**
    * Merges the journal type aggregates of a publication into another
    * publication.
    * 
@@ -1634,6 +1692,47 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
   }
 
   /**
+   * Deletes all the type aggregates of a journal.
+   * 
+   * @param conn
+   *          A Connection representing the database connection.
+   * @param publicationSeq
+   *          A Long with the identifier of the journal involved.
+   * @throws SQLException
+   *           if there are problems accessing the database.
+   */
+  public void deleteJournalTypeAggregates(Connection conn, Long publicationSeq)
+      throws SQLException {
+    final String DEBUG_HEADER = "deleteJournalTypeAggregates(): ";
+    log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    PreparedStatement deleteAggregate = null;
+    String sql = SQL_QUERY_JOURNAL_TYPE_AGGREGATES_DELETE;
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
+
+    try {
+      // Prepare the statement used to delete the rows.
+      deleteAggregate = dbManager.prepareStatement(conn, sql);
+
+      int index = 1;
+
+      // Populate the journal identifier.
+      deleteAggregate.setLong(index++, publicationSeq);
+
+      // Delete the records.
+      int count = dbManager.executeUpdate(deleteAggregate);
+      log.debug2(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot delete the journal type aggregates", sqle);
+      log.error("publicationSeq = " + publicationSeq);
+      log.error("SQL = '" + sql + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseStatement(deleteAggregate);
+    }
+  }
+
+  /**
    * Merges the journal publication year aggregates of a publication into
    * another publication.
    * 
@@ -1725,5 +1824,46 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     }
 
     log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Deletes all the publication year aggregates of a journal.
+   * 
+   * @param conn
+   *          A Connection representing the database connection.
+   * @param publicationSeq
+   *          A Long with the identifier of the journal involved.
+   * @throws SQLException
+   *           if there are problems accessing the database.
+   */
+  public void deleteJournalPubYearAggregates(Connection conn,
+      Long publicationSeq) throws SQLException {
+    final String DEBUG_HEADER = "deleteJournalPubYearAggregates(): ";
+    log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    PreparedStatement deleteAggregate = null;
+    String sql = SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATES_DELETE;
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
+
+    try {
+      // Prepare the statement used to delete the rows.
+      deleteAggregate = dbManager.prepareStatement(conn, sql);
+
+      int index = 1;
+
+      // Populate the journal identifier.
+      deleteAggregate.setLong(index++, publicationSeq);
+
+      // Delete the records.
+      int count = dbManager.executeUpdate(deleteAggregate);
+      log.debug2(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot delete the journal publication year aggregates", sqle);
+      log.error("publicationSeq = " + publicationSeq);
+      log.error("SQL = '" + sql + "'.");
+      throw sqle;
+    } finally {
+      DbManager.safeCloseStatement(deleteAggregate);
+    }
   }
 }
