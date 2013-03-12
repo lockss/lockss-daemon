@@ -26,18 +26,18 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = nena
   
-      au < ready ; 2000 ; Northeastern Naturalist Volume 7 ; 7 >
-      au < ready ; 2001 ; Northeastern Naturalist Volume 8 ; 8 >
-      au < ready ; 2002 ; Northeastern Naturalist Volume 9 ; 9 >
-      au < ready ; 2003 ; Northeastern Naturalist Volume 10 ; 10 >
+      au < releasing ; 2000 ; Northeastern Naturalist Volume 7 ; 7 >
+      au < releasing ; 2001 ; Northeastern Naturalist Volume 8 ; 8 >
+      au < releasing ; 2002 ; Northeastern Naturalist Volume 9 ; 9 >
+      au < releasing ; 2003 ; Northeastern Naturalist Volume 10 ; 10 >
       au < doNotProcess ; 2004 ; Northeastern Naturalist Volume 11 ; 11 >
-      au < ready ; 2005 ; Northeastern Naturalist Volume 12 ; 12 >
-      au < ready ; 2006 ; Northeastern Naturalist Volume 13 ; 13 >
-      au < ready ; 2007 ; Northeastern Naturalist Volume 14 ; 14 >
-      au < ready ; 2008 ; Northeastern Naturalist Volume 15 ; 15 >
-      au < ready ; 2009 ; Northeastern Naturalist Volume 16 ; 16 >
-      au < ready ; 2010 ; Northeastern Naturalist Volume 17 ; 17 >
-      au < ready ; 2011 ; Northeastern Naturalist Volume 18 ; 18 >
+      au < releasing ; 2005 ; Northeastern Naturalist Volume 12 ; 12 >
+      au < releasing ; 2006 ; Northeastern Naturalist Volume 13 ; 13 >
+      au < releasing ; 2007 ; Northeastern Naturalist Volume 14 ; 14 >
+      au < releasing ; 2008 ; Northeastern Naturalist Volume 15 ; 15 >
+      au < releasing ; 2009 ; Northeastern Naturalist Volume 16 ; 16 >
+      au < releasing ; 2010 ; Northeastern Naturalist Volume 17 ; 17 >
+      au < releasing ; 2011 ; Northeastern Naturalist Volume 18 ; 18 >
       au < manifest ; 2012 ; Northeastern Naturalist Volume 19 ; 19 >
       au < expected ; 2013 ; Northeastern Naturalist Volume 20 ; 20 >
     }
@@ -68,16 +68,16 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = sena
   
-      au < ready ; 2002 ; Southeastern Naturalist Volume 1 ; 1 >
-      au < ready ; 2003 ; Southeastern Naturalist Volume 2 ; 2 >
+      au < releasing ; 2002 ; Southeastern Naturalist Volume 1 ; 1 >
+      au < releasing ; 2003 ; Southeastern Naturalist Volume 2 ; 2 >
       au < doNotProcess ; 2004 ; Southeastern Naturalist Volume 3 ; 3 >
-      au < ready ; 2005 ; Southeastern Naturalist Volume 4 ; 4 >
-      au < ready ; 2006 ; Southeastern Naturalist Volume 5 ; 5 >
-      au < ready ; 2007 ; Southeastern Naturalist Volume 6 ; 6 >
-      au < ready ; 2008 ; Southeastern Naturalist Volume 7 ; 7 >
-      au < ready ; 2009 ; Southeastern Naturalist Volume 8 ; 8 >
-      au < ready ; 2010 ; Southeastern Naturalist Volume 9 ; 9 >
-      au < ready ; 2011 ; Southeastern Naturalist Volume 10 ; 10 >
+      au < releasing ; 2005 ; Southeastern Naturalist Volume 4 ; 4 >
+      au < releasing ; 2006 ; Southeastern Naturalist Volume 5 ; 5 >
+      au < releasing ; 2007 ; Southeastern Naturalist Volume 6 ; 6 >
+      au < releasing ; 2008 ; Southeastern Naturalist Volume 7 ; 7 >
+      au < releasing ; 2009 ; Southeastern Naturalist Volume 8 ; 8 >
+      au < releasing ; 2010 ; Southeastern Naturalist Volume 9 ; 9 >
+      au < releasing ; 2011 ; Southeastern Naturalist Volume 10 ; 10 >
       au < manifest ; 2012 ; Southeastern Naturalist Volume 11 ; 11 >
       au < expected ; 2013 ; Southeastern Naturalist Volume 12 ; 12 >
     }

@@ -358,26 +358,26 @@
     param[base_url] = http://ahr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; ready ; 1895-1896 ; The American Historical Review Volume 1  ; 1 >
-    au < HighWirePressH20Plugin ; ready ; 1896-1897 ; The American Historical Review Volume 2  ; 2 >
-    au < HighWirePressH20Plugin ; ready ; 1897-1898 ; The American Historical Review Volume 3  ; 3 >
-    au < HighWirePressH20Plugin ; ready ; 1898-1899 ; The American Historical Review Volume 4  ; 4 >
-    au < HighWirePressH20Plugin ; ready ; 1899-1900 ; The American Historical Review Volume 5  ; 5 >
-    au < HighWirePressH20Plugin ; ready ; 1900-1901 ; The American Historical Review Volume 6  ; 6 >
-    au < HighWirePressH20Plugin ; ready ; 1901-1902 ; The American Historical Review Volume 7  ; 7 >
-    au < HighWirePressH20Plugin ; ready ; 1902-1903 ; The American Historical Review Volume 8  ; 8 >
-    au < HighWirePressH20Plugin ; ready ; 1903-1904 ; The American Historical Review Volume 9  ; 9 >
-    au < HighWirePressH20Plugin ; ready ; 1904-1905 ; The American Historical Review Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; ready ; 1905-1906 ; The American Historical Review Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; ready ; 1906-1907 ; The American Historical Review Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; ready ; 1907-1908 ; The American Historical Review Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; ready ; 1908-1909 ; The American Historical Review Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; ready ; 1909-1910 ; The American Historical Review Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; ready ; 1910-1911 ; The American Historical Review Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; ready ; 1911-1912 ; The American Historical Review Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; ready ; 1912-1913 ; The American Historical Review Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; ready ; 1913-1914 ; The American Historical Review Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; ready ; 1914-1915 ; The American Historical Review Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; releasing ; 1895-1896 ; The American Historical Review Volume 1  ; 1 >
+    au < HighWirePressH20Plugin ; releasing ; 1896-1897 ; The American Historical Review Volume 2  ; 2 >
+    au < HighWirePressH20Plugin ; releasing ; 1897-1898 ; The American Historical Review Volume 3  ; 3 >
+    au < HighWirePressH20Plugin ; releasing ; 1898-1899 ; The American Historical Review Volume 4  ; 4 >
+    au < HighWirePressH20Plugin ; releasing ; 1899-1900 ; The American Historical Review Volume 5  ; 5 >
+    au < HighWirePressH20Plugin ; releasing ; 1900-1901 ; The American Historical Review Volume 6  ; 6 >
+    au < HighWirePressH20Plugin ; releasing ; 1901-1902 ; The American Historical Review Volume 7  ; 7 >
+    au < HighWirePressH20Plugin ; releasing ; 1902-1903 ; The American Historical Review Volume 8  ; 8 >
+    au < HighWirePressH20Plugin ; releasing ; 1903-1904 ; The American Historical Review Volume 9  ; 9 >
+    au < HighWirePressH20Plugin ; releasing ; 1904-1905 ; The American Historical Review Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; releasing ; 1905-1906 ; The American Historical Review Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; releasing ; 1906-1907 ; The American Historical Review Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; releasing ; 1907-1908 ; The American Historical Review Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; releasing ; 1908-1909 ; The American Historical Review Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; releasing ; 1909-1910 ; The American Historical Review Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; releasing ; 1910-1911 ; The American Historical Review Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; releasing ; 1911-1912 ; The American Historical Review Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; releasing ; 1912-1913 ; The American Historical Review Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; releasing ; 1913-1914 ; The American Historical Review Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; releasing ; 1914-1915 ; The American Historical Review Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 1915-1916 ; The American Historical Review Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 1916-1917 ; The American Historical Review Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 1917-1918 ; The American Historical Review Volume 23 ; 23 >
@@ -566,26 +566,26 @@
     au < HighWirePressH20Plugin ; manifest ; 1986 ; American Journal of Agricultural Economics Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; manifest ; 1987 ; American Journal of Agricultural Economics Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; manifest ; 1988 ; American Journal of Agricultural Economics Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; ready ; 1989 ; American Journal of Agricultural Economics Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; ready ; 1990 ; American Journal of Agricultural Economics Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; ready ; 1991 ; American Journal of Agricultural Economics Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; ready ; 1992 ; American Journal of Agricultural Economics Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; ready ; 1993 ; American Journal of Agricultural Economics Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; ready ; 1994 ; American Journal of Agricultural Economics Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; ready ; 1995 ; American Journal of Agricultural Economics Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; ready ; 1996 ; American Journal of Agricultural Economics Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; ready ; 1997 ; American Journal of Agricultural Economics Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; ready ; 1998 ; American Journal of Agricultural Economics Volume 80 ; 80 >
-    au < HighWirePressH20Plugin ; ready ; 1999 ; American Journal of Agricultural Economics Volume 81 ; 81 >
-    au < HighWirePressH20Plugin ; ready ; 2000 ; American Journal of Agricultural Economics Volume 82 ; 82 >
-    au < HighWirePressH20Plugin ; ready ; 2001 ; American Journal of Agricultural Economics Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; ready ; 2002 ; American Journal of Agricultural Economics Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; releasing ; 1989 ; American Journal of Agricultural Economics Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; releasing ; 1990 ; American Journal of Agricultural Economics Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; releasing ; 1991 ; American Journal of Agricultural Economics Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; releasing ; 1992 ; American Journal of Agricultural Economics Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; releasing ; 1993 ; American Journal of Agricultural Economics Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; releasing ; 1994 ; American Journal of Agricultural Economics Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; releasing ; 1995 ; American Journal of Agricultural Economics Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; releasing ; 1996 ; American Journal of Agricultural Economics Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; releasing ; 1997 ; American Journal of Agricultural Economics Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; releasing ; 1998 ; American Journal of Agricultural Economics Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; releasing ; 1999 ; American Journal of Agricultural Economics Volume 81 ; 81 >
+    au < HighWirePressH20Plugin ; releasing ; 2000 ; American Journal of Agricultural Economics Volume 82 ; 82 >
+    au < HighWirePressH20Plugin ; releasing ; 2001 ; American Journal of Agricultural Economics Volume 83 ; 83 >
+    au < HighWirePressH20Plugin ; releasing ; 2002 ; American Journal of Agricultural Economics Volume 84 ; 84 >
     au < HighWirePressH20Plugin ; testing ; 2003 ; American Journal of Agricultural Economics Volume 85 ; 85 >
     au < HighWirePressH20Plugin ; ready ; 2004 ; American Journal of Agricultural Economics Volume 86 ; 86 >
     au < HighWirePressH20Plugin ; ready ; 2005 ; American Journal of Agricultural Economics Volume 87 ; 87 >
     au < HighWirePressH20Plugin ; testing ; 2006 ; American Journal of Agricultural Economics Volume 88 ; 88 >
-    au < HighWirePressH20Plugin ; ready ; 2007 ; American Journal of Agricultural Economics Volume 89 ; 89 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; American Journal of Agricultural Economics Volume 90 ; 90 >
+    au < HighWirePressH20Plugin ; releasing ; 2007 ; American Journal of Agricultural Economics Volume 89 ; 89 >
+    au < HighWirePressH20Plugin ; releasing ; 2008 ; American Journal of Agricultural Economics Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; released ; 2009 ; American Journal of Agricultural Economics Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; released ; 2010 ; American Journal of Agricultural Economics Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; released ; 2011 ; American Journal of Agricultural Economics Volume 93 ; 93 >

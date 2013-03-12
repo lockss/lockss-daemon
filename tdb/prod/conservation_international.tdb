@@ -32,10 +32,10 @@
     param[journal_id] = eden
     comment[notReady] = needs URL normalizer RoundUp 3990
      
-    au < ready ; 2004 ; Edentata Volume 6 ; 6 >
-    au < ready ; 2006 ; Edentata Volume 7 ; 7 >
-    au < ready ; 2009 ; Edentata Volume 8, 9, 10 ; 10 >
-    au < ready ; 2010 ; Edentata Volume 11 ; 11 >
+    au < releasing ; 2004 ; Edentata Volume 6 ; 6 >
+    au < releasing ; 2006 ; Edentata Volume 7 ; 7 >
+    au < releasing ; 2009 ; Edentata Volume 8, 9, 10 ; 10 >
+    au < releasing ; 2010 ; Edentata Volume 11 ; 11 >
 
   }
   
@@ -48,12 +48,12 @@
     
     param[journal_id] = nepr
   
-    au < ready ; 2004 ; Neotropical Primates Volume 12 ; 12 >
-    au < ready ; 2005 ; Neotropical Primates Volume 13 ; 13 >
-    au < ready ; 2007 ; Neotropical Primates Volume 14 ; 14 >
-    au < ready ; 2008 ; Neotropical Primates Volume 15 ; 15 >
-    au < ready ; 2009 ; Neotropical Primates Volume 16 ; 16 >
-    au < ready ; 2010 ; Neotropical Primates Volume 17 ; 17 >
+    au < releasing ; 2004 ; Neotropical Primates Volume 12 ; 12 >
+    au < releasing ; 2005 ; Neotropical Primates Volume 13 ; 13 >
+    au < releasing ; 2007 ; Neotropical Primates Volume 14 ; 14 >
+    au < releasing ; 2008 ; Neotropical Primates Volume 15 ; 15 >
+    au < releasing ; 2009 ; Neotropical Primates Volume 16 ; 16 >
+    au < releasing ; 2010 ; Neotropical Primates Volume 17 ; 17 >
     au < wanted ; 2011 ; Neotropical Primates Volume 18 ; 18 >
 
   }
@@ -70,10 +70,10 @@
   
     au < testing ; 2006 ; Primate Conservation Volume 20 ; 20 >
     au < testing ; 2006 ; Primate Conservation Volume 21 ; 21 >
-    au < ready ; 2007 ; Primate Conservation Volume 22 ; 22 >
-    au < ready ; 2008 ; Primate Conservation Volume 23 ; 23 >
-    au < ready ; 2009 ; Primate Conservation Volume 24 ; 24 >
-    au < ready ; 2010 ; Primate Conservation Volume 25 ; 25 >
+    au < releasing ; 2007 ; Primate Conservation Volume 22 ; 22 >
+    au < releasing ; 2008 ; Primate Conservation Volume 23 ; 23 >
+    au < releasing ; 2009 ; Primate Conservation Volume 24 ; 24 >
+    au < releasing ; 2010 ; Primate Conservation Volume 25 ; 25 >
 
   }
   
