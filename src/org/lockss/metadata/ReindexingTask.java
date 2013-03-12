@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.5 2013-03-05 16:34:51 fergaloy-sf Exp $
+ * $Id: ReindexingTask.java,v 1.6 2013-03-12 19:29:28 fergaloy-sf Exp $
  */
 
 /*
@@ -839,6 +839,11 @@ public class ReindexingTask extends StepTask {
 	    log.warning("Error updating metadata at FINISH for " + status
 		+ " -- rescheduling", e);
 	    status = ReindexingStatus.Rescheduled;
+	  } catch (RuntimeException re) {
+	    e = re;
+	    log.warning("Error updating metadata at FINISH for " + status
+		+ " -- NOT rescheduling", e);
+	    status = ReindexingStatus.Failed;
 	  } finally {
 	    DbManager.safeRollbackAndClose(conn);
 	  }
