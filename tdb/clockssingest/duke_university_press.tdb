@@ -190,6 +190,7 @@
       param[base_url] = http://carlyleletters.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
       comment[plugin] = This journal is HighWire H10
+      comment[gvc] = This journal is not compared in the gln_v_clockss script
 
       au < ClockssHighWirePlugin ; manifest ; exists ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 >
       au < ClockssHighWirePlugin ; manifest ; exists ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 >
