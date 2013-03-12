@@ -247,7 +247,7 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jcem.endojournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-      comment[notReady] = low agreement, 0%-25%
+      comment[notReady] = .full.pdf+html not sync
 
       au < HighWirePressH20Plugin ; released ; 1941 ; Journal of Clinical Endocrinology & Metabolism Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 1942 ; Journal of Clinical Endocrinology & Metabolism Volume 2 ; 2 >
@@ -292,7 +292,7 @@
       au < HighWirePressH20Plugin ; released ; 1975 ; Journal of Clinical Endocrinology & Metabolism Volume 41 ; 41 >
       au < HighWirePressH20Plugin ; released ; 1976 ; Journal of Clinical Endocrinology & Metabolism Volume 42 ; 42 >
       au < HighWirePressH20Plugin ; notReady ; 1976 ; Journal of Clinical Endocrinology & Metabolism Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; notReady ; 1977 ; Journal of Clinical Endocrinology & Metabolism Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; ready ; 1977 ; Journal of Clinical Endocrinology & Metabolism Volume 44 ; 44 >
       au < HighWirePressH20Plugin ; released ; 1977 ; Journal of Clinical Endocrinology & Metabolism Volume 45 ; 45 >
       au < HighWirePressH20Plugin ; released ; 1978 ; Journal of Clinical Endocrinology & Metabolism Volume 46 ; 46 >
       au < HighWirePressH20Plugin ; released ; 1978 ; Journal of Clinical Endocrinology & Metabolism Volume 47 ; 47 >
@@ -322,7 +322,7 @@
       au < HighWirePressH20Plugin ; notReady ; 1990 ; Journal of Clinical Endocrinology & Metabolism Volume 71 ; 71 >
       au < HighWirePressH20Plugin ; released ; 1991 ; Journal of Clinical Endocrinology & Metabolism Volume 72 ; 72 >
       au < HighWirePressH20Plugin ; released ; 1991 ; Journal of Clinical Endocrinology & Metabolism Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; notReady ; 1992 ; Journal of Clinical Endocrinology & Metabolism Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of Clinical Endocrinology & Metabolism Volume 74 ; 74 >
       au < HighWirePressH20Plugin ; released ; 1992 ; Journal of Clinical Endocrinology & Metabolism Volume 75 ; 75 >
       au < HighWirePressH20Plugin ; released ; 1993 ; Journal of Clinical Endocrinology & Metabolism Volume 76 ; 76 >
       au < HighWirePressH20Plugin ; released ; 1993 ; Journal of Clinical Endocrinology & Metabolism Volume 77 ; 77 >
@@ -331,7 +331,7 @@
       au < HighWirePressH20Plugin ; released ; 1995 ; Journal of Clinical Endocrinology & Metabolism Volume 80 ; 80 >
       au < HighWirePressH20Plugin ; released ; 1996 ; Journal of Clinical Endocrinology & Metabolism Volume 81 ; 81 >
       au < HighWirePressH20Plugin ; released ; 1997 ; Journal of Clinical Endocrinology & Metabolism Volume 82 ; 82 >
-      au < HighWirePressH20Plugin ; testing ; 1998 ; Journal of Clinical Endocrinology & Metabolism Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; notReady ; 1998 ; Journal of Clinical Endocrinology & Metabolism Volume 83 ; 83 >
       au < HighWirePressH20Plugin ; notReady ; 1999 ; Journal of Clinical Endocrinology & Metabolism Volume 84 ; 84 >
       au < HighWirePressH20Plugin ; released ; 2000 ; Journal of Clinical Endocrinology & Metabolism Volume 85 ; 85 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Journal of Clinical Endocrinology & Metabolism Volume 86 ; 86 >
