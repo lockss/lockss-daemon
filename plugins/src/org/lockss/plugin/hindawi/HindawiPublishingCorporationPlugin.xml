@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>testing, audrey</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -20,17 +20,21 @@
     <map>
       <entry>
         <string>Substance</string>
-		<string>2</string>
+		<string>3</string>
       </entry>
       <entry>
      	<string>Poll</string>
-		<string>5</string>
+	       <string>5</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Hindawi Publishing Corporation Plugin, Base URL %s, Download URL %s, Journal ID %s, Volume %s&quot;, base_url, download_url, journal_id, volume_name</string>
+    <string>"Hindawi Publishing Corporation Plugin, Base URL %s, Download URL %s, Journal ID %s, Volume %s", base_url, download_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -40,42 +44,49 @@
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,&quot;^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host, download_url_host</string>
-      <string>4,&quot;^(%s|%s)&quot;, base_url, download_url</string>
-      <string>1,&quot;^(%s|%s)lockss.html$&quot;, base_url, download_url</string>
-      <string>1,&quot;^(%s|%s)journals/%s/%s/&quot;, base_url, download_url, journal_id, volume_name</string>
-      <string>1,&quot;^%sfloats/[^/]+/figures/&quot;, base_url</string>
-    </list>
-  </entry>
+
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sjournals/%s/%s/&quot;, base_url, journal_id, volume_name</string>
+    <string>"%sjournals/%s/%s/", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
   	<map>
 	  <entry>
 	    <string>au_title</string>
-	    <string>&quot;%sjournals/%s/&quot;, base_url, journal_id</string>
+	    <string>"%sjournals/%s/", base_url, journal_id</string>
 	  </entry>
 	  <entry>
 	    <string>au_volume</string>
-	    <string>&quot;%sjournals/%s/%s/&quot;, base_url, journal_id, volume_name</string>
+	    <string>"%sjournals/%s/%s/", base_url, journal_id, volume_name</string>
 	  </entry>
 	  <entry>
 	    <string>au_article</string>
-	    <string>&quot;%sjournals/%s/%s/%s/&quot;, base_url, journal_id, volume_name, article</string>
+	    <string>"%sjournals/%s/%s/%s/", base_url, journal_id, volume_name, article</string>
 	  </entry>
   	</map>
   </entry>   
   <entry>
     <string>au_manifest</string>
     <list>
-      <string>&quot;%slockss.html&quot;, base_url</string>
-      <string>&quot;%slockss.html&quot;, download_url</string>
+      <string>"%slockss.html", base_url</string>
+      <string>"%slockss.html", download_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, download_url_host</string>
+      <string>4,"^(%s|%s)", base_url, download_url</string>
+      <string>1,"^(%s|%s)lockss.html$", base_url, download_url</string>
+      <string>1,"^(%s|%s)journals/%s/%s/", base_url, download_url, journal_id, volume_name</string>
+      <string>1,"^%sfloats/[^/]+/figures/", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%sjournals/%s/%s/[^/]+\.pdf$", download_url, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -119,8 +130,21 @@
     </list>
   </entry>
   <entry>
-    <string>application/xhtml+xml_link_extractor_factory</string>
-    <string>org.lockss.extractor.GoslingHtmlLinkExtractor$Factory</string>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.hindawi.HindawiArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.hindawi.HindawiArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/xhtml+xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.hindawi.HindawiHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -141,11 +165,5 @@
       <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
     </list>
   </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>&quot;^%sjournals/%s/%s/[^/]+/$&quot;, base_url, journal_id, volume_name</string>
-      <string>&quot;^%sjournals/%s/%s/[^/]+\.pdf$&quot;, download_url, journal_id, volume_name</string>
-    </list>
-  </entry>
+
 </map>
