@@ -280,41 +280,41 @@
       comment[plugin] = This journal is HighWire H10
       comment[gvc] = This journal is not compared in the gln_v_clockss script
 
-      au < HighWirePressPlugin ; manifest ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 >
-      au < HighWirePressPlugin ; manifest ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 >
-      au < HighWirePressPlugin ; manifest ; 1824-1825 ; The Carlyle Letters Online Volume 3 ; 3 >
-      au < HighWirePressPlugin ; manifest ; 1826-1828 ; The Carlyle Letters Online Volume 4 ; 4 >
-      au < HighWirePressPlugin ; manifest ; 1829-1831 ; The Carlyle Letters Online Volume 5 ; 5 >
-      au < HighWirePressPlugin ; manifest ; 1831-1833 ; The Carlyle Letters Online Volume 6 ; 6 >
-      au < HighWirePressPlugin ; manifest ; 1833-1834 ; The Carlyle Letters Online Volume 7 ; 7 >
-      au < HighWirePressPlugin ; manifest ; 1835-1836 ; The Carlyle Letters Online Volume 8 ; 8 >
-      au < HighWirePressPlugin ; manifest ; 1836-1837 ; The Carlyle Letters Online Volume 9 ; 9 >
-      au < HighWirePressPlugin ; manifest ; 1838 ; The Carlyle Letters Online Volume 10 ; 10 >
-      au < HighWirePressPlugin ; manifest ; 1839 ; The Carlyle Letters Online Volume 11 ; 11 >
-      au < HighWirePressPlugin ; manifest ; 1840 ; The Carlyle Letters Online Volume 12 ; 12 >
-      au < HighWirePressPlugin ; manifest ; 1841 ; The Carlyle Letters Online Volume 13 ; 13 >
-      au < HighWirePressPlugin ; manifest ; 1842 ; The Carlyle Letters Online Volume 14 ; 14 >
-      au < HighWirePressPlugin ; manifest ; 1842 ; The Carlyle Letters Online Volume 15 ; 15 >
-      au < HighWirePressPlugin ; manifest ; 1843 ; The Carlyle Letters Online Volume 16 ; 16 >
-      au < HighWirePressPlugin ; manifest ; 1843-1844 ; The Carlyle Letters Online Volume 17 ; 17 >
-      au < HighWirePressPlugin ; manifest ; 1844 ; The Carlyle Letters Online Volume 18 ; 18 >
-      au < HighWirePressPlugin ; manifest ; 1845 ; The Carlyle Letters Online Volume 19 ; 19 >
-      au < HighWirePressPlugin ; manifest ; 1845-1846 ; The Carlyle Letters Online Volume 20 ; 20 >
-      au < HighWirePressPlugin ; manifest ; 1846-1847 ; The Carlyle Letters Online Volume 21 ; 21 >
-      au < HighWirePressPlugin ; manifest ; 1847-1848 ; The Carlyle Letters Online Volume 22 ; 22 >
-      au < HighWirePressPlugin ; manifest ; 1848-1849 ; The Carlyle Letters Online Volume 23 ; 23 >
-      au < HighWirePressPlugin ; manifest ; 1849 ; The Carlyle Letters Online Volume 24 ; 24 >
-      au < HighWirePressPlugin ; manifest ; 1850 ; The Carlyle Letters Online Volume 25 ; 25 >
-      au < HighWirePressPlugin ; manifest ; 1851 ; The Carlyle Letters Online Volume 26 ; 26 >
-      au < HighWirePressPlugin ; manifest ; 1852 ; The Carlyle Letters Online Volume 27 ; 27 >
-      au < HighWirePressPlugin ; manifest ; 1853 ; The Carlyle Letters Online Volume 28 ; 28 >
-      au < HighWirePressPlugin ; manifest ; 1854-1855 ; The Carlyle Letters Online Volume 29 ; 29 >
-      au < HighWirePressPlugin ; manifest ; 1855 ; The Carlyle Letters Online Volume 30 ; 30 >
-      au < HighWirePressPlugin ; manifest ; 1856 ; The Carlyle Letters Online Volume 31 ; 31 >
-      au < HighWirePressPlugin ; manifest ; 1856-1857 ; The Carlyle Letters Online Volume 32 ; 32 >
-      au < HighWirePressPlugin ; manifest ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 >
-      au < HighWirePressPlugin ; manifest ; 1858 ; The Carlyle Letters Online Volume 34 ; 34 >
-      au < HighWirePressPlugin ; manifest ; 1859 ; The Carlyle Letters Online Volume 35 ; 35 >
+      au < HighWirePressPlugin ; testing ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 >
+      au < HighWirePressPlugin ; testing ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 >
+      au < HighWirePressPlugin ; testing ; 1824-1825 ; The Carlyle Letters Online Volume 3 ; 3 >
+      au < HighWirePressPlugin ; testing ; 1826-1828 ; The Carlyle Letters Online Volume 4 ; 4 >
+      au < HighWirePressPlugin ; testing ; 1829-1831 ; The Carlyle Letters Online Volume 5 ; 5 >
+      au < HighWirePressPlugin ; testing ; 1831-1833 ; The Carlyle Letters Online Volume 6 ; 6 >
+      au < HighWirePressPlugin ; testing ; 1833-1834 ; The Carlyle Letters Online Volume 7 ; 7 >
+      au < HighWirePressPlugin ; testing ; 1835-1836 ; The Carlyle Letters Online Volume 8 ; 8 >
+      au < HighWirePressPlugin ; testing ; 1836-1837 ; The Carlyle Letters Online Volume 9 ; 9 >
+      au < HighWirePressPlugin ; testing ; 1838 ; The Carlyle Letters Online Volume 10 ; 10 >
+      au < HighWirePressPlugin ; testing ; 1839 ; The Carlyle Letters Online Volume 11 ; 11 >
+      au < HighWirePressPlugin ; testing ; 1840 ; The Carlyle Letters Online Volume 12 ; 12 >
+      au < HighWirePressPlugin ; testing ; 1841 ; The Carlyle Letters Online Volume 13 ; 13 >
+      au < HighWirePressPlugin ; testing ; 1842 ; The Carlyle Letters Online Volume 14 ; 14 >
+      au < HighWirePressPlugin ; testing ; 1842 ; The Carlyle Letters Online Volume 15 ; 15 >
+      au < HighWirePressPlugin ; testing ; 1843 ; The Carlyle Letters Online Volume 16 ; 16 >
+      au < HighWirePressPlugin ; testing ; 1843-1844 ; The Carlyle Letters Online Volume 17 ; 17 >
+      au < HighWirePressPlugin ; testing ; 1844 ; The Carlyle Letters Online Volume 18 ; 18 >
+      au < HighWirePressPlugin ; testing ; 1845 ; The Carlyle Letters Online Volume 19 ; 19 >
+      au < HighWirePressPlugin ; testing ; 1845-1846 ; The Carlyle Letters Online Volume 20 ; 20 >
+      au < HighWirePressPlugin ; testing ; 1846-1847 ; The Carlyle Letters Online Volume 21 ; 21 >
+      au < HighWirePressPlugin ; testing ; 1847-1848 ; The Carlyle Letters Online Volume 22 ; 22 >
+      au < HighWirePressPlugin ; testing ; 1848-1849 ; The Carlyle Letters Online Volume 23 ; 23 >
+      au < HighWirePressPlugin ; testing ; 1849 ; The Carlyle Letters Online Volume 24 ; 24 >
+      au < HighWirePressPlugin ; testing ; 1850 ; The Carlyle Letters Online Volume 25 ; 25 >
+      au < HighWirePressPlugin ; testing ; 1851 ; The Carlyle Letters Online Volume 26 ; 26 >
+      au < HighWirePressPlugin ; testing ; 1852 ; The Carlyle Letters Online Volume 27 ; 27 >
+      au < HighWirePressPlugin ; testing ; 1853 ; The Carlyle Letters Online Volume 28 ; 28 >
+      au < HighWirePressPlugin ; testing ; 1854-1855 ; The Carlyle Letters Online Volume 29 ; 29 >
+      au < HighWirePressPlugin ; testing ; 1855 ; The Carlyle Letters Online Volume 30 ; 30 >
+      au < HighWirePressPlugin ; testing ; 1856 ; The Carlyle Letters Online Volume 31 ; 31 >
+      au < HighWirePressPlugin ; testing ; 1856-1857 ; The Carlyle Letters Online Volume 32 ; 32 >
+      au < HighWirePressPlugin ; testing ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 >
+      au < HighWirePressPlugin ; testing ; 1858 ; The Carlyle Letters Online Volume 34 ; 34 >
+      au < HighWirePressPlugin ; testing ; 1859 ; The Carlyle Letters Online Volume 35 ; 35 >
  
    }
   
@@ -488,13 +488,13 @@
       param[base_url] = http://culturalpolitics.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; manifest ; 2005 ; Cultural Politics Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 2006 ; Cultural Politics Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 2007 ; Cultural Politics Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; Cultural Politics Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; Cultural Politics Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Cultural Politics Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Cultural Politics Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 2005 ; Cultural Politics Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 2006 ; Cultural Politics Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 2007 ; Cultural Politics Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 2008 ; Cultural Politics Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 2009 ; Cultural Politics Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 2010 ; Cultural Politics Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Cultural Politics Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Cultural Politics Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Cultural Politics Volume 9 ; 9 >
 
@@ -533,11 +533,11 @@
       param[base_url] = http://differences.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 1999-2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; testing ; 1999-2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
       au < HighWireStrVolPlugin ; down ; 2005 ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
       au < HighWireStrVolPlugin ; down ; 2006 ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >      
       au < HighWirePressH20Plugin ; released ; 2007 ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 >
@@ -820,11 +820,11 @@
       param[base_url] = http://ecl.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Eighteenth-Century Life Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Eighteenth-Century Life Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Eighteenth-Century Life Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Eighteenth-Century Life Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; Eighteenth-Century Life Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Eighteenth-Century Life Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Eighteenth-Century Life Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Eighteenth-Century Life Volume 28 ; 28 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >
@@ -870,11 +870,11 @@
       param[base_url] = http://ethnohistory.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWirePressH20Plugin ; manifest ; 2000 ; Ethnohistory Volume 47 ; 47 >
-     au < HighWirePressH20Plugin ; manifest ; 2001 ; Ethnohistory Volume 48 ; 48 >
-     au < HighWirePressH20Plugin ; manifest ; 2002 ; Ethnohistory Volume 49 ; 49 >
-     au < HighWirePressH20Plugin ; manifest ; 2003 ; Ethnohistory Volume 50 ; 50 >
-     au < HighWirePressH20Plugin ; manifest ; 2004 ; Ethnohistory Volume 51 ; 51 >
+     au < HighWirePressH20Plugin ; testing ; 2000 ; Ethnohistory Volume 47 ; 47 >
+     au < HighWirePressH20Plugin ; testing ; 2001 ; Ethnohistory Volume 48 ; 48 >
+     au < HighWirePressH20Plugin ; testing ; 2002 ; Ethnohistory Volume 49 ; 49 >
+     au < HighWirePressH20Plugin ; testing ; 2003 ; Ethnohistory Volume 50 ; 50 >
+     au < HighWirePressH20Plugin ; testing ; 2004 ; Ethnohistory Volume 51 ; 51 >
      au < HighWireStrVolPlugin ; down ; 2005 ; Ethnohistory Volume 52 ; 52 >
      au < HighWireStrVolPlugin ; down ; 2006 ; Ethnohistory Volume 53 ; 53 >
      au < HighWireStrVolPlugin ; down ; 2007 ; Ethnohistory Volume 54 ; 54 >
@@ -920,11 +920,11 @@
       param[base_url] = http://fhs.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWirePressH20Plugin ; manifest ; 2000 ; French Historical Studies Volume 23 ; 23 >
-     au < HighWirePressH20Plugin ; manifest ; 2001 ; French Historical Studies Volume 24 ; 24 >
-     au < HighWirePressH20Plugin ; manifest ; 2002 ; French Historical Studies Volume 25 ; 25 >
-     au < HighWirePressH20Plugin ; manifest ; 2003 ; French Historical Studies Volume 26 ; 26 >
-     au < HighWirePressH20Plugin ; manifest ; 2004 ; French Historical Studies Volume 27 ; 27 >
+     au < HighWirePressH20Plugin ; testing ; 2000 ; French Historical Studies Volume 23 ; 23 >
+     au < HighWirePressH20Plugin ; testing ; 2001 ; French Historical Studies Volume 24 ; 24 >
+     au < HighWirePressH20Plugin ; testing ; 2002 ; French Historical Studies Volume 25 ; 25 >
+     au < HighWirePressH20Plugin ; testing ; 2003 ; French Historical Studies Volume 26 ; 26 >
+     au < HighWirePressH20Plugin ; testing ; 2004 ; French Historical Studies Volume 27 ; 27 >
      au < HighWireStrVolPlugin ; down ; 2005 ; French Historical Studies Volume 28 ; 28 >
      au < HighWireStrVolPlugin ; down ; 2006 ; French Historical Studies Volume 29 ; 29 >
      au < HighWireStrVolPlugin ; down ; 2007 ; French Historical Studies Volume 30 ; 30 >      
@@ -1012,17 +1012,17 @@
       param[base_url] = http://glq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 1993-1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1996-1997 ; GLQ: A Journal of Lesbian and Gay Studies Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1998 ; GLQ: A Journal of Lesbian and Gay Studies Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 2003-2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; testing ; 1993-1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 1996-1997 ; GLQ: A Journal of Lesbian and Gay Studies Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 1998 ; GLQ: A Journal of Lesbian and Gay Studies Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 2003-2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
       au < HighWireStrVolPlugin ; down ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
       au < HighWireStrVolPlugin ; down ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >      
       au < HighWirePressH20Plugin ; released ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
@@ -1067,11 +1067,11 @@
       param[base_url] = http://hahr.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Hispanic American Historical Review Volume 81 ; 81 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Hispanic American Historical Review Volume 83 ; 83 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Hispanic American Historical Review Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Hispanic American Historical Review Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Hispanic American Historical Review Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Hispanic American Historical Review Volume 84 ; 84 >
      au < HighWireStrVolPlugin ; down ; 2005 ; Hispanic American Historical Review Volume 85 ; 85 >
      au < HighWireStrVolPlugin ; down ; 2006 ; Hispanic American Historical Review Volume 86 ; 86 >
      au < HighWireStrVolPlugin ; down ; 2007 ; Hispanic American Historical Review Volume 87 ; 87 >      
@@ -1117,42 +1117,42 @@
       param[base_url] = http://hope.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWirePressH20Plugin ; manifest ; 1969 ; History of Political Economy Volume 1 ; 1 >
-     au < HighWirePressH20Plugin ; manifest ; 1970 ; History of Political Economy Volume 2 ; 2 >
-     au < HighWirePressH20Plugin ; manifest ; 1971 ; History of Political Economy Volume 3 ; 3 >
-     au < HighWirePressH20Plugin ; manifest ; 1972 ; History of Political Economy Volume 4 ; 4 >
-     au < HighWirePressH20Plugin ; manifest ; 1973 ; History of Political Economy Volume 5 ; 5 >
-     au < HighWirePressH20Plugin ; manifest ; 1974 ; History of Political Economy Volume 6 ; 6 >
-     au < HighWirePressH20Plugin ; manifest ; 1975 ; History of Political Economy Volume 7 ; 7 >
-     au < HighWirePressH20Plugin ; manifest ; 1976 ; History of Political Economy Volume 8 ; 8 >
-     au < HighWirePressH20Plugin ; manifest ; 1977 ; History of Political Economy Volume 9 ; 9 >
-     au < HighWirePressH20Plugin ; manifest ; 1978 ; History of Political Economy Volume 10 ; 10 >
-     au < HighWirePressH20Plugin ; manifest ; 1979 ; History of Political Economy Volume 11 ; 11 >
-     au < HighWirePressH20Plugin ; manifest ; 1980 ; History of Political Economy Volume 12 ; 12 >
-     au < HighWirePressH20Plugin ; manifest ; 1981 ; History of Political Economy Volume 13 ; 13 >
-     au < HighWirePressH20Plugin ; manifest ; 1982 ; History of Political Economy Volume 14 ; 14 >
-     au < HighWirePressH20Plugin ; manifest ; 1983 ; History of Political Economy Volume 15 ; 15 >
-     au < HighWirePressH20Plugin ; manifest ; 1984 ; History of Political Economy Volume 16 ; 16 >
-     au < HighWirePressH20Plugin ; manifest ; 1985 ; History of Political Economy Volume 17 ; 17 >
-     au < HighWirePressH20Plugin ; manifest ; 1986 ; History of Political Economy Volume 18 ; 18 >
-     au < HighWirePressH20Plugin ; manifest ; 1987 ; History of Political Economy Volume 19 ; 19 >
-     au < HighWirePressH20Plugin ; manifest ; 1988 ; History of Political Economy Volume 20 ; 20 >
-     au < HighWirePressH20Plugin ; manifest ; 1989 ; History of Political Economy Volume 21 ; 21 >
-     au < HighWirePressH20Plugin ; manifest ; 1990 ; History of Political Economy Volume 22 ; 22 >
-     au < HighWirePressH20Plugin ; manifest ; 1991 ; History of Political Economy Volume 23 ; 23 >
-     au < HighWirePressH20Plugin ; manifest ; 1992 ; History of Political Economy Volume 24 ; 24 >
-     au < HighWirePressH20Plugin ; manifest ; 1993 ; History of Political Economy Volume 25 ; 25 >
-     au < HighWirePressH20Plugin ; manifest ; 1994 ; History of Political Economy Volume 26 ; 26 >
-     au < HighWirePressH20Plugin ; manifest ; 1995 ; History of Political Economy Volume 27 ; 27 >
-     au < HighWirePressH20Plugin ; manifest ; 1996 ; History of Political Economy Volume 28 ; 28 >
-     au < HighWirePressH20Plugin ; manifest ; 1997 ; History of Political Economy Volume 29 ; 29 >
-     au < HighWirePressH20Plugin ; manifest ; 1998 ; History of Political Economy Volume 30 ; 30 >
-     au < HighWirePressH20Plugin ; manifest ; 1999 ; History of Political Economy Volume 31 ; 31 >
-     au < HighWirePressH20Plugin ; manifest ; 2000 ; History of Political Economy Volume 32 ; 32 >
-     au < HighWirePressH20Plugin ; manifest ; 2001 ; History of Political Economy Volume 33 ; 33 >
-     au < HighWirePressH20Plugin ; manifest ; 2002 ; History of Political Economy Volume 34 ; 34 >
-     au < HighWirePressH20Plugin ; manifest ; 2003 ; History of Political Economy Volume 35 ; 35 >
-     au < HighWirePressH20Plugin ; manifest ; 2004 ; History of Political Economy Volume 36 ; 36 >
+     au < HighWirePressH20Plugin ; testing ; 1969 ; History of Political Economy Volume 1 ; 1 >
+     au < HighWirePressH20Plugin ; testing ; 1970 ; History of Political Economy Volume 2 ; 2 >
+     au < HighWirePressH20Plugin ; testing ; 1971 ; History of Political Economy Volume 3 ; 3 >
+     au < HighWirePressH20Plugin ; testing ; 1972 ; History of Political Economy Volume 4 ; 4 >
+     au < HighWirePressH20Plugin ; testing ; 1973 ; History of Political Economy Volume 5 ; 5 >
+     au < HighWirePressH20Plugin ; testing ; 1974 ; History of Political Economy Volume 6 ; 6 >
+     au < HighWirePressH20Plugin ; testing ; 1975 ; History of Political Economy Volume 7 ; 7 >
+     au < HighWirePressH20Plugin ; testing ; 1976 ; History of Political Economy Volume 8 ; 8 >
+     au < HighWirePressH20Plugin ; testing ; 1977 ; History of Political Economy Volume 9 ; 9 >
+     au < HighWirePressH20Plugin ; testing ; 1978 ; History of Political Economy Volume 10 ; 10 >
+     au < HighWirePressH20Plugin ; testing ; 1979 ; History of Political Economy Volume 11 ; 11 >
+     au < HighWirePressH20Plugin ; testing ; 1980 ; History of Political Economy Volume 12 ; 12 >
+     au < HighWirePressH20Plugin ; testing ; 1981 ; History of Political Economy Volume 13 ; 13 >
+     au < HighWirePressH20Plugin ; testing ; 1982 ; History of Political Economy Volume 14 ; 14 >
+     au < HighWirePressH20Plugin ; testing ; 1983 ; History of Political Economy Volume 15 ; 15 >
+     au < HighWirePressH20Plugin ; testing ; 1984 ; History of Political Economy Volume 16 ; 16 >
+     au < HighWirePressH20Plugin ; testing ; 1985 ; History of Political Economy Volume 17 ; 17 >
+     au < HighWirePressH20Plugin ; testing ; 1986 ; History of Political Economy Volume 18 ; 18 >
+     au < HighWirePressH20Plugin ; testing ; 1987 ; History of Political Economy Volume 19 ; 19 >
+     au < HighWirePressH20Plugin ; testing ; 1988 ; History of Political Economy Volume 20 ; 20 >
+     au < HighWirePressH20Plugin ; testing ; 1989 ; History of Political Economy Volume 21 ; 21 >
+     au < HighWirePressH20Plugin ; testing ; 1990 ; History of Political Economy Volume 22 ; 22 >
+     au < HighWirePressH20Plugin ; testing ; 1991 ; History of Political Economy Volume 23 ; 23 >
+     au < HighWirePressH20Plugin ; testing ; 1992 ; History of Political Economy Volume 24 ; 24 >
+     au < HighWirePressH20Plugin ; testing ; 1993 ; History of Political Economy Volume 25 ; 25 >
+     au < HighWirePressH20Plugin ; testing ; 1994 ; History of Political Economy Volume 26 ; 26 >
+     au < HighWirePressH20Plugin ; testing ; 1995 ; History of Political Economy Volume 27 ; 27 >
+     au < HighWirePressH20Plugin ; testing ; 1996 ; History of Political Economy Volume 28 ; 28 >
+     au < HighWirePressH20Plugin ; testing ; 1997 ; History of Political Economy Volume 29 ; 29 >
+     au < HighWirePressH20Plugin ; testing ; 1998 ; History of Political Economy Volume 30 ; 30 >
+     au < HighWirePressH20Plugin ; testing ; 1999 ; History of Political Economy Volume 31 ; 31 >
+     au < HighWirePressH20Plugin ; testing ; 2000 ; History of Political Economy Volume 32 ; 32 >
+     au < HighWirePressH20Plugin ; testing ; 2001 ; History of Political Economy Volume 33 ; 33 >
+     au < HighWirePressH20Plugin ; testing ; 2002 ; History of Political Economy Volume 34 ; 34 >
+     au < HighWirePressH20Plugin ; testing ; 2003 ; History of Political Economy Volume 35 ; 35 >
+     au < HighWirePressH20Plugin ; testing ; 2004 ; History of Political Economy Volume 36 ; 36 >
      au < HighWireStrVolPlugin ; down ; 2005 ; History of Political Economy Volume 37 ; 37 >
      au < HighWireStrVolPlugin ; down ; 2006 ; History of Political Economy Volume 38 ; 38 >
      au < HighWireStrVolPlugin ; down ; 2007 ; History of Political Economy Volume 39 ; 39 >      
