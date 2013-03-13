@@ -1,4 +1,4 @@
-/* $Id: TestHindawiMetadataExtractorFactory.java,v 1.1 2013-03-12 22:32:20 aishizaki Exp $
+/* $Id: TestHindawiMetadataExtractorFactory.java,v 1.2 2013-03-13 15:58:48 aishizaki Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -145,7 +145,7 @@ public class TestHindawiMetadataExtractorFactory extends LockssTestCase {
                 "<meta name=\"citation_abstract_html_url\" content=\"http://www.humanbean.com/journals/ahci/2008/145363/abs/\"/>" +
                 "<meta name=\"dcterms.issued\" content=\"2008/09/24\"/>" +
                 "<meta name=\"dc.Contributor\" content=\""+goodAuthorA+"\"/>" +
-                "<meta name=\"dc.Contributor\" content=\"+goodAuthorB+\"/>" +
+                "<meta name=\"dc.Contributor\" content=\""+goodAuthorB+"\"/>" +
                "\n</head>\n" +
                 "</html>";
 
@@ -172,7 +172,10 @@ public class TestHindawiMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    //assertEquals(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
+    // for some reason, the following assert did not work, but...
+    //assertEquals(md.getList(MetadataField.FIELD_AUTHOR), goodAuthors);
+    // changing the compare to .toString()  did work...
+    assertEquals(md.getList(MetadataField.FIELD_AUTHOR).toString(), goodAuthors.toString());
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(goodIssn, md.get(MetadataField.FIELD_ISSN)); 
   }
