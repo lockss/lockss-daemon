@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.24 2013-03-13 19:33:50 tlipkis Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.25 2013-03-13 23:52:23 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,9 @@ import org.lockss.filter.html.*;
 
 public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestNodeFilterHtmlLinkRewriterFactory");
+
+  static String ISO = "ISO-8859-1";
+  static String UTF8 = "UTF-8";
 
   private static final String charset_orig =
     "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
@@ -494,7 +497,6 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     extends TestNodeFilterHtmlLinkRewriterFactory {
     private MockArchivalUnit au;
     private NodeFilterHtmlLinkRewriterFactory nfhlrf;
-    private String encoding = Constants.DEFAULT_ENCODING;
     
     private ServletUtil.LinkTransform xform = null;
     private String testPort = "9524";
@@ -532,7 +534,8 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     }
   
     public void testRewriting(String msg,
-  			    String src, String exp, boolean hostRel)
+			      String src, String srcCharset,
+			      String exp, boolean hostRel)
         throws Exception {
       if (hostRel) {
         xform = new ServletUtil.LinkTransform() {
@@ -547,9 +550,15 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   	  }
   	};
       }
+      // Read src string using specified charset
+      InputStream srcIn =
+	new ReaderInputStream(new StringReader(src), srcCharset);
+
+      // Always pass ISO-8859-1 to rewriter - any non-ISO-8859-1 are after
+      // <meta> that changes charset
       InputStream is = nfhlrf.createLinkRewriter("text/html", au,
-  					       new StringInputStream(src),
-  					       encoding, url, xform);
+						 srcIn,
+						 ISO, url, xform);
       String out;
       if (is instanceof EncodedThing) {
 	String filtCharset = ((EncodedThing)is).getCharset();
@@ -558,7 +567,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
 	out = StringUtil.fromInputStream(is);
       }
       
-      log.debug3(msg + " original:\n" + orig);
+      log.debug3(msg + " original:\n" + src);
       log.debug3(msg + " transformed:\n" + out);
       if (hostRel) {
         String relExp =
@@ -570,42 +579,42 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     }
   
     public void testAbsRewriting() throws Exception {
-      testRewriting("Abs", orig, xformed, false);
+      testRewriting("Abs", orig, ISO, xformed, false);
     }
   
     public void testHostRelativeRewriting() throws Exception {
-      testRewriting("Hostrel", orig, xformed, true);
+      testRewriting("Hostrel", orig, ISO, xformed, true);
     }
   
     public void testCssRewritingMinimal() throws Exception {
       ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
   				  "Minimal");
-      testRewriting("CSS abs minimal encoding", origCss, xformedCssMinimal,
+      testRewriting("CSS abs minimal encoding", origCss, ISO, xformedCssMinimal,
   		  false);
     }
   
     public void testCssRewritingFull() throws Exception {
       ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
   				  "Full");
-      testRewriting("CSS abs full encoding", origCss, xformedCssFull,
+      testRewriting("CSS abs full encoding", origCss, ISO, xformedCssFull,
   		  false);
     }
   
     public void testScriptRewritingMinimal() throws Exception {
-      testRewriting("CSS abs minimal encoding", origScript, xformedScript,
+      testRewriting("CSS abs minimal encoding", origScript, ISO, xformedScript,
   		  false);
     }
    
-    public void xxxtestCharsetWrong() throws Exception {
+    public void testCharsetWrong() throws Exception {
       ConfigurationUtil.addFromArgs(HtmlFilterInputStream.PARAM_ADAPT_ENCODING,
   				  "false");
       testRewriting("Charset change, not handled correctly",
-		    charset_orig, charset_xformed_wrong, false);
+		    charset_orig, UTF8, charset_xformed_wrong, false);
     }
   
-    public void xxxtestCharsetRight() throws Exception {
+    public void testCharsetRight() throws Exception {
       testRewriting("Charset change, not handled correctly",
-		    charset_orig, charset_xformed_right, false);
+		    charset_orig, UTF8, charset_xformed_right, false);
     }
   
 
