@@ -42,6 +42,9 @@ import org.htmlparser.util.*;
 
 public class TestHtmlFilterInputStream extends LockssTestCase {
 
+  static String ISO = "ISO-8859-1";
+  static String UTF8 = "UTF-8";
+
   /** Check that the filtered string matches expected. */
   private void assertFilterString(String expected, String input,
 				  HtmlTransform xform)
@@ -193,11 +196,80 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     String exp28 = "<html><body>" +
       "abc\u0060" +
       "</body></html>";
+
+    ConfigurationUtil.addFromArgs(HtmlFilterInputStream.PARAM_ADAPT_ENCODING,
+				  "false");
     assertIdentityXform(exp1, in1, "ISO-8859-1", "ISO-8859-1", "ISO-8859-1");
     assertIdentityXform(exp1, in1, "ISO-8859-1", "ISO-8859-1", null);
     assertIdentityXform(exp1U, in1, "ISO-8859-1", "UTF-8", null);
     assertIdentityXform(exp2, in2, "UTF-8", "UTF-8", "UTF-8");
     assertIdentityXform(exp28, in2, "UTF-8", "UTF-8", null);
+ 
+    try {
+      assertIdentityXform(exp1, in1, "ISO-8859-1", "ISO-8859-1", "UTF-8");
+      fail("Shouldn't match String read with different encoding");
+    } catch (junit.framework.ComparisonFailure e) {
+    }
+
+    ConfigurationUtil.addFromArgs(HtmlFilterInputStream.PARAM_ADAPT_ENCODING,
+				  "true");
+
+    assertIdentityXform(exp1, in1, "ISO-8859-1", "ISO-8859-1", "ISO-8859-1");
+    assertIdentityXform(exp1, in1, "ISO-8859-1", "ISO-8859-1", "UTF-16");
+    assertIdentityXform(exp1, in1, "ISO-8859-1", "ISO-8859-1", null);
+    assertIdentityXform(exp1U, in1, "ISO-8859-1", "UTF-8", null);
+    assertIdentityXform(exp2, in2, "UTF-8", "UTF-8", "UTF-8");
+    assertIdentityXform(exp28, in2, "UTF-8", "UTF-8", null);
+
+    // With adaptEncoding true, outCharset is ignored if it's non-null
+    assertIdentityXform(exp1, in1, "ISO-8859-1", "ISO-8859-1", "UTF-8");
+  }
+
+  public void testKnowsEncoding() throws Exception {
+    String in1 = "<html><body>" +
+      "abc\u00e91234" +
+      "</body></html>";
+    String exp1 = "<html><body>" +
+      "abc\u00e91234" +
+      "</body></html>";
+
+    InputStream in = new ReaderInputStream(new StringReader(in1), ISO);
+    InputStream filt =
+      new HtmlFilterInputStream(in, ISO, ISO, new IdentityXform());
+    assertInputStreamMatchesString(exp1, filt, ISO);
+    assertTrue(filt instanceof EncodedThing);
+    EncodedThing et = (EncodedThing)filt;
+    assertEquals(ISO, et.getCharset());
+  }
+
+  public void testKnowsEncodingChange() throws Exception {
+
+    String in1 = "<html><head>" +
+      "<META http-equiv=Content-Type content=\"text/html; charset=utf-8\">" +
+      "</head></body>" +
+      "abc\u00e91234" +
+      "</body></html>";
+    String exp1 = "<html><head>" +
+      "<META http-equiv=Content-Type content=\"text/html; charset=utf-8\">" +
+      "</head></body>" +
+      "abc\u00e91234" +
+      "</body></html>";
+
+    // With input encoded as UTF-8
+    InputStream in = new ReaderInputStream(new StringReader(in1), UTF8);
+    // And a file whose Content-Type is ISO-8859 and contains a charset
+    // change to UTF-8
+    InputStream filt =
+      new HtmlFilterInputStream(in, ISO, ISO, new IdentityXform());
+    // The filtered stream should know that its encoding is UTF-8 (*before*
+    // anything is read from it)
+    assertTrue(filt instanceof EncodedThing);
+    EncodedThing et = (EncodedThing)filt;
+    assertEquals(UTF8, et.getCharset());
+    // It should match the UTF-8 encoding of the string
+    assertInputStreamMatchesString(exp1, filt, UTF8);
+    // And should still know that its encoding is UTF-8
+    assertEquals(UTF8, et.getCharset());
   }
 
   public void testChangeCharsetFailsIfNoMark() throws Exception {

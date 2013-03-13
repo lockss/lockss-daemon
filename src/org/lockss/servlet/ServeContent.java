@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.72 2013-02-27 06:02:01 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.73 2013-03-13 08:44:29 tlipkis Exp $
  */
 
 /*
@@ -1264,6 +1264,15 @@ public class ServeContent extends LockssServlet {
         } catch (PluginException e) {
           log.error("Can't create link rewriter, not rewriting", e);
         }
+	// If the rewritten stream knows the charset used to encode it,
+	// send that in the response in place of the original file's
+	// charset.
+	if (rewritten instanceof EncodedThing) {
+	  String rewrittenCharset = ((EncodedThing)rewritten).getCharset();
+	  if (!StringUtil.isNullString(rewrittenCharset)) {
+	    resp.setCharacterEncoding(rewrittenCharset);
+	  }
+	}
 	if (length >= 0 && length <= maxBufferedRewrite) {
 	  // if small file rewrite to temp buffer to find length before
 	  // sending.

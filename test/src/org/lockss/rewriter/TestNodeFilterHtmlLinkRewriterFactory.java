@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.22 2012-12-22 14:18:46 pgust Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.23 2013-03-13 08:44:29 tlipkis Exp $
  */
 
 /*
@@ -42,9 +42,60 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.servlet.*;
+import org.lockss.filter.html.*;
 
 public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestNodeFilterHtmlLinkRewriterFactory");
+
+  private static final String charset_orig =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html>\n" +
+    "<head>\n" +
+    "<title>example.com website</title>\n" +
+    "<meta http-equiv=\"content-type\" " +
+    "content=\"text/html; charset=UTF-8\">\n" +
+    "</head>\n" +
+    "<body>\n" +
+    "<br>\n" +
+    "<a href=\"CPROTO://www.example.com/content/index.html\">abs link</a>\n" +
+    "Euro sign: \u20AC \n" +
+    "</body>\n" +
+    "</HTML>\n";
+
+  private static final String charset_xformed_wrong =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html>\n" +
+    "<head>\n" +
+    "<title>example.com website</title>\n" +
+    "<meta http-equiv=\"content-type\" " +
+    "content=\"text/html; charset=UTF-8\">\n" +
+    "</head>\n" +
+    "<body>\n" +
+    "<br>\n" +
+    "<a href=\"CPROTO://www.example.com/content/index.html\">abs link</a>\n" +
+
+    // If characters are re-encoded using ISO-8859, the Euro sign will be
+    // unrepresentable and output as a question-mark.
+
+    "Euro sign: ? \n" +
+    "</body>\n" +
+    "</HTML>\n";
+
+  private static final String charset_xformed_right =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html>\n" +
+    "<head>\n" +
+    "<title>example.com website</title>\n" +
+    "<meta http-equiv=\"content-type\" " +
+    "content=\"text/html; charset=UTF-8\">\n" +
+    "</head>\n" +
+    "<body>\n" +
+    "<br>\n" +
+    "<a href=\"CPROTO://www.example.com/content/index.html\">abs link</a>\n" +
+    "Euro sign: \u20AC \n" +
+    "</body>\n" +
+    "</HTML>\n";
+
 
   /** 
    * The original HTML page; CPROTO is the protocol for the content server.
@@ -499,7 +550,14 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
       InputStream is = nfhlrf.createLinkRewriter("text/html", au,
   					       new StringInputStream(src),
   					       encoding, url, xform);
-      String out = StringUtil.fromInputStream(is);
+      String out;
+      if (is instanceof EncodedThing) {
+	String filtCharset = ((EncodedThing)is).getCharset();
+	log.critical("Filtered read with " + filtCharset);
+	out = StringUtil.fromReader(new InputStreamReader(is, filtCharset));
+      } else {
+	out = StringUtil.fromInputStream(is);
+      }
       
       log.debug3(msg + " original:\n" + orig);
       log.debug3(msg + " transformed:\n" + out);
@@ -539,6 +597,19 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   		  false);
     }
    
+    public void testCharsetWrong() throws Exception {
+      ConfigurationUtil.addFromArgs(HtmlFilterInputStream.PARAM_ADAPT_ENCODING,
+  				  "false");
+      testRewriting("Charset change, not handled correctly",
+		    charset_orig, charset_xformed_wrong, false);
+    }
+  
+    public void testCharsetRight() throws Exception {
+      testRewriting("Charset change, not handled correctly",
+		    charset_orig, charset_xformed_right, false);
+    }
+  
+
     void setupProtos(String cproto, String lproto) {
       this.cproto = cproto;
       this.lproto = lproto;

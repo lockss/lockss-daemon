@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.19 2013-01-17 00:13:14 tlipkis Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.20 2013-03-13 08:44:29 tlipkis Exp $
  */
 
 /*
@@ -73,12 +73,22 @@ import java.io.*;
  * &lt;font&gt; tags would remove only the tag itself; in the second case
  * the tag, text and end tag would be removed.
  *
+ * This class handles encoding changes in the input specified by
+ * <code>&lt;META HTTP-EQUIV="Content-Type" CONTENT="text/html;
+ * charset=..."&gt;</code>.  If such a change occurs, the entire output
+ * InputStream is encoded using that charset.  The caller must process the
+ * stream accordingly, by casting it to {@link EncodedThing} and calling
+ * {@link #getCharset()}.  This is a temporary measure until the code is
+ * fixed so that the output encoding matches the input, switching mid-stream.
+ *
  * @see HtmlTransform
  * @see HtmlNodeFilterTransform
  * @see HtmlNodeFilters
  * @see HtmlTags
  */
-public class HtmlFilterInputStream extends InputStream {
+public class HtmlFilterInputStream
+  extends InputStream implements EncodedThing {
+
   private static Logger log = Logger.getLogger("HtmlFilterInputStream");
 
   /** Maximum offset into file of charset change (<code>&lt;META
@@ -111,6 +121,14 @@ public class HtmlFilterInputStream extends InputStream {
     Configuration.PREFIX + "filter.html.encodingMatchRange";
   public static final int DEFAULT_ENCODING_MATCH_RANGE = 100;
 
+  /** If this parameter is true, then if a charset change occurs, the
+   * result stream will be encoded using the changed-to charset, and {@link
+   * #getOutputEncoding()} must be called in order to determine the
+   * appropriate chatset to use to decode the stream. */
+  public static final String PARAM_ADAPT_ENCODING =
+    Configuration.PREFIX + "filter.html.adaptEncoding";
+  public static final boolean DEFAULT_ADAPT_ENCODING = true;
+
   /** If true, html output will be as close as possible to the input.  If
    * false, missing end tags will be inserted.  */
   public static final String PARAM_VERBATIM =
@@ -131,6 +149,7 @@ public class HtmlFilterInputStream extends InputStream {
   private FeedbackLogger fl = new FeedbackLogger();
 
   private InputStream in;
+  private InputStreamSource isSource;
   private String charset;
   private String outCharset;
   private InputStream out = null;
@@ -142,6 +161,7 @@ public class HtmlFilterInputStream extends InputStream {
   private boolean verbatim;
   private int wrFileThresh;
   private boolean useFile;
+  private boolean adaptEncoding = DEFAULT_ADAPT_ENCODING;
   private File outFile;
   private PrototypicalNodeFactory nodeFact;
 
@@ -169,9 +189,18 @@ public class HtmlFilterInputStream extends InputStream {
    * Create an HtmlFilterInputStream that applies the given transform
    * @param in InputStream to filter from
    * @param xform HtmlTransform to apply to parsed NodeList
-   * @param inCharset the charset in which <code>in</code> is encoded
-   * @param outCharset the charset in which the resulting InputStream
-   * should be encoded
+   * @param inCharset the charset in which <code>in</code> is encoded.
+   * (The input encoding may change mid-stream if so directed by a
+   * <code>&lt;meta http-equiv="Content-Type" ...&gt;</code>.)
+   * @param outCharset specifies the preferred charset in which the
+   * resulting InputStream will be encoded.  If null, the result is encoded
+   * with a fast but non-unique encoding adequate for hashing.  If
+   * outCharset is non-null it is used if {@link #PARAM_ADAPT_ENCODING} is
+   * false.  If outCharset is non-null and {@link #PARAM_ADAPT_ENCODING} is
+   * true, the output encoding is set to that in effect in the
+   * InputStreamSource when the parse finishes.  This may have been altered
+   * by a <code>&lt;meta http-equiv="Content-Type" ...&gt;</code> in the
+   * file.  See {@link #getCharset()}.
    */
   public HtmlFilterInputStream(InputStream in,
 			       String inCharset, String outCharset,
@@ -197,6 +226,8 @@ public class HtmlFilterInputStream extends InputStream {
     verbatim = config.getBoolean(PARAM_VERBATIM, DEFAULT_VERBATIM);
     wrFileThresh = config.getInt(PARAM_WRFILE_THRESH, DEFAULT_WRFILE_THRESH);
     useFile = config.getBoolean(PARAM_USE_FILE, DEFAULT_USE_FILE);
+    adaptEncoding = config.getBoolean(PARAM_ADAPT_ENCODING,
+				     DEFAULT_ADAPT_ENCODING);
   }
 
   /** Parse the input, apply the transform, generate output string and
@@ -215,6 +246,15 @@ public class HtmlFilterInputStream extends InputStream {
       nl = xform.transform(nl);
       if (log.isDebug3()) log.debug3("xformed (" + nl.size() + "):\n" +
                                        nodeString(nl));
+      // outCharset == null means the client wants the no-charset
+      // re-encoding behavior; don't look at the input encoding
+      if (outCharset != null && adaptEncoding) {
+	String sourceCharset = isSource.getEncoding();
+	if (!sourceCharset.equalsIgnoreCase(outCharset)) {
+	  log.debug2("Using changed charset: " + sourceCharset); 
+	  outCharset = sourceCharset;
+	}
+      }
       if(useFile) {
         try {
           setOutToFileInputStream(nl);
@@ -293,17 +333,28 @@ public class HtmlFilterInputStream extends InputStream {
 
   /** Make a parser, register our extra nodes */
   protected Parser makeParser()
-      throws UnsupportedEncodingException {
+      throws UnsupportedEncodingException, IOException {
     // InputStreamSource may reset() the stream if it encounters a charset
     // change.  It expects the stream already to have been mark()ed.
     if (markSize > 0) {
       in.mark(markSize);
     }
-    InputStreamSource is = new InputStreamSource(in, charset, rdrBufSize);
-    if(encodingMatchRange > 0) {
-    	is.setEncodingMatchRange(encodingMatchRange);
+    // If the input stream knows the charset used to encode it, use that
+    // in favor of the inCharset constructor arg.
+    if (adaptEncoding && in instanceof EncodedThing) {
+      String actualInCharset = ((EncodedThing)in).getCharset();
+      if (!StringUtil.isNullString(actualInCharset)) {
+	if (log.isDebug2() && !actualInCharset.equals(charset)) {
+	  log.debug2("Using InputStream's charset: " + actualInCharset);
+	}
+	charset = actualInCharset;
+      }
     }
-    Page pg = new Page(is);
+    isSource = new InputStreamSource(in, charset, rdrBufSize);
+    if(encodingMatchRange > 0) {
+    	isSource.setEncodingMatchRange(encodingMatchRange);
+    }
+    Page pg = new Page(isSource);
     setupHtmlParser();
 
     Lexer lx = new Lexer(pg);
@@ -347,6 +398,15 @@ public class HtmlFilterInputStream extends InputStream {
 
   public static String nodeString(NodeList nl) {
     return StringUtil.separatedString(nl.toNodeArray(), "\n----------\n");
+  }
+
+  /** Get the name of the charset in which this InputStream is encoded.
+   * May be different from that passed to the constructor if the HTML file
+   * specifies a charset inline.  If the input has not already been read
+   * and parsed, this will cause it to be. */
+  public String getCharset() throws IOException {
+    getOut();
+    return outCharset;
   }
 
   InputStream getOut() throws IOException {
