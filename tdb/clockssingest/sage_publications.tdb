@@ -38007,11 +38007,11 @@
         issnl = 2277-9787
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://smp.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; South Asian Journal of Macroeconomics and Public Finance Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2012 ; South Asian Journal of Macroeconomics and Public Finance Volume 1 ; 1 ; >
+    au < expected ; exists ; 2013 ; South Asian Journal of Macroeconomics and Public Finance Volume 2 ; 2 ; >
 
     }
 
