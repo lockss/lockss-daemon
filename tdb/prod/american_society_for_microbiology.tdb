@@ -137,7 +137,7 @@
       au < HighWirePressH20Plugin ; released ; 1983 ; Applied and Environmental Microbiology Volume 45 ; 45 >
       au < HighWirePressH20Plugin ; released ; 1983 ; Applied and Environmental Microbiology Volume 46 ; 46 >
       au < HighWirePressH20Plugin ; released ; 1984 ; Applied and Environmental Microbiology Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; wanted ; 1984 ; Applied and Environmental Microbiology Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; testing ; 1984 ; Applied and Environmental Microbiology Volume 48 ; 48 >
       au < HighWirePressH20Plugin ; released ; 1985 ; Applied and Environmental Microbiology Volume 49 ; 49 >
       au < HighWirePressH20Plugin ; released ; 1985 ; Applied and Environmental Microbiology Volume 50 ; 50 >
       au < HighWirePressH20Plugin ; released ; 1986 ; Applied and Environmental Microbiology Volume 51 ; 51 >
@@ -167,7 +167,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Applied and Environmental Microbiology Volume 75 ; 75 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Applied and Environmental Microbiology Volume 76 ; 76 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Applied and Environmental Microbiology Volume 77 ; 77 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; Applied and Environmental Microbiology Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; testing ; 2012 ; Applied and Environmental Microbiology Volume 78 ; 78 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Applied and Environmental Microbiology Volume 79 ; 79 >
   
     }
@@ -199,7 +199,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Clinical and Vaccine Immunology Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Clinical and Vaccine Immunology Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Clinical and Vaccine Immunology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; Clinical and Vaccine Immunology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; testing ; 2012 ; Clinical and Vaccine Immunology Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Clinical and Vaccine Immunology Volume 20 ; 20 >
   
     }
@@ -237,7 +237,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Clinical Microbiology Reviews Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Clinical Microbiology Reviews Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Clinical Microbiology Reviews Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; Clinical Microbiology Reviews Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; testing ; 2012 ; Clinical Microbiology Reviews Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Clinical Microbiology Reviews Volume 26 ; 26 >
   
     }
@@ -261,7 +261,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Eukaryotic Cell Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; down ; 2010 ; Eukaryotic Cell Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Eukaryotic Cell Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; Eukaryotic Cell Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; testing ; 2012 ; Eukaryotic Cell Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Eukaryotic Cell Volume 12 ; 12 >
       
   
@@ -341,7 +341,7 @@
       au < HighWirePressH20Plugin ; released ; 1996 ; Infection and Immunity Volume 64 ; 64 >
       au < HighWirePressH20Plugin ; released ; 1997 ; Infection and Immunity Volume 65 ; 65 >
       au < HighWirePressH20Plugin ; released ; 1998 ; Infection and Immunity Volume 66 ; 66 >
-      au < HighWirePressH20Plugin ; wanted ; 1999 ; Infection and Immunity Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; testing ; 1999 ; Infection and Immunity Volume 67 ; 67 >
       au < HighWirePressH20Plugin ; released ; 2000 ; Infection and Immunity Volume 68 ; 68 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Infection and Immunity Volume 69 ; 69 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Infection and Immunity Volume 70 ; 70 >
@@ -368,16 +368,16 @@
       >
       param[base_url] = http://jb.asm.org/
   
-      au < HighWirePressH20Plugin ; manifest ; 1916 ; Journal of Bacteriology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1917 ; Journal of Bacteriology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1918 ; Journal of Bacteriology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1919 ; Journal of Bacteriology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1920 ; Journal of Bacteriology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1921 ; Journal of Bacteriology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1922 ; Journal of Bacteriology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1923 ; Journal of Bacteriology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 1924 ; Journal of Bacteriology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 1925 ; Journal of Bacteriology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 1916 ; Journal of Bacteriology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 1917 ; Journal of Bacteriology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 1918 ; Journal of Bacteriology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 1919 ; Journal of Bacteriology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1920 ; Journal of Bacteriology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 1921 ; Journal of Bacteriology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 1922 ; Journal of Bacteriology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 1923 ; Journal of Bacteriology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 1924 ; Journal of Bacteriology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 1925 ; Journal of Bacteriology Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; manifest ; 1926 ; Journal of Bacteriology Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; manifest ; 1926 ; Journal of Bacteriology Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; manifest ; 1927 ; Journal of Bacteriology Volume 13 ; 13 >
@@ -703,8 +703,8 @@
       au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Virology Volume 63 ; 63 >
       au < HighWirePressH20Plugin ; released ; 1990 ; Journal of Virology Volume 64 ; 64 >
       au < HighWirePressH20Plugin ; released ; 1991 ; Journal of Virology Volume 65 ; 65 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of Virology Volume 66 ; 66 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of Virology Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; testing ; 1992 ; Journal of Virology Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; testing ; 1993 ; Journal of Virology Volume 67 ; 67 >
       au < HighWirePressH20Plugin ; released ; 1994 ; Journal of Virology Volume 68 ; 68 >
       au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of Virology Volume 69 ; 69 >
       au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of Virology Volume 70 ; 70 >
@@ -812,7 +812,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Microbiology and Molecular Biology Reviews Volume 73 ; 73 >
       au < HighWirePressH20Plugin ; down ; 2010 ; Microbiology and Molecular Biology Reviews Volume 74 ; 74 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Microbiology and Molecular Biology Reviews Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; Microbiology and Molecular Biology Reviews Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; testing ; 2012 ; Microbiology and Molecular Biology Reviews Volume 76 ; 76 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Microbiology and Molecular Biology Reviews Volume 77 ; 77 >
   
     }
@@ -829,11 +829,11 @@
       au < HighWirePressH20Plugin ; released ; 1981 ; Molecular and Cellular Biology Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 1982 ; Molecular and Cellular Biology Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; released ; 1983 ; Molecular and Cellular Biology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Molecular and Cellular Biology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Molecular and Cellular Biology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 1984 ; Molecular and Cellular Biology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1985 ; Molecular and Cellular Biology Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; released ; 1986 ; Molecular and Cellular Biology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; Molecular and Cellular Biology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Molecular and Cellular Biology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 1987 ; Molecular and Cellular Biology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 1988 ; Molecular and Cellular Biology Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; released ; 1989 ; Molecular and Cellular Biology Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; released ; 1990 ; Molecular and Cellular Biology Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; released ; 1991 ; Molecular and Cellular Biology Volume 11 ; 11 >
@@ -857,7 +857,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Molecular and Cellular Biology Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; down ; 2010 ; Molecular and Cellular Biology Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Molecular and Cellular Biology Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; Molecular and Cellular Biology Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; testing ; 2012 ; Molecular and Cellular Biology Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Molecular and Cellular Biology Volume 33 ; 33 >
   
     }
