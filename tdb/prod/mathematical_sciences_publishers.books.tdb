@@ -1,0 +1,32 @@
+{
+
+  publisher <
+    name = Mathematical Sciences Publishers ;
+    comment = placeholder
+
+  >
+
+    plugin = needs.plugin
+    param[base_url] = http://msp.org/
+    implicit < status ; isbn ; eisbn ; year ; volume ; name ; param[isbn] >
+    
+  {
+  
+    title < 
+      name = Geometry & Topology Monographs ;
+      type = bookSeries ;
+      issn = 1464-8989 ;
+      eissn = 1464-8997
+      >
+      comment[0] = series string - /gtm/
+      
+  }   
+  {
+  
+    title < 
+      name = The Open Book Series ;
+      type = bookSeries 
+      >
+      
+  }      
+}
