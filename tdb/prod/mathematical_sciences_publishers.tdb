@@ -1,0 +1,261 @@
+{
+
+  publisher <
+    name = Mathematical Sciences Publishers ; 
+    comment[0] = back content only or no access to content for five most recent years
+  >
+
+    plugin = needs.plugin
+    param[base_url] = http://msp.org/
+    implicit < status ; year ; name ; param[year] >
+
+  {
+  
+    title < 
+      name = Algebraic & Geometric Topology ;
+      issn = 1472-2747 ;
+      eissn = 1472-2739
+     >
+    
+      param[journal_code] = agt
+    
+     
+     au < manifest ; 2001 ; Algebraic & Geometric Topology Volume 1 ; 1 >
+     au < manifest ; 2002 ; Algebraic & Geometric Topology Volume 2 ; 2 >
+     au < manifest ; 2003 ; Algebraic & Geometric Topology Volume 3 ; 3 >
+     au < manifest ; 2004 ; Algebraic & Geometric Topology Volume 4 ; 4 >
+     au < manifest ; 2005 ; Algebraic & Geometric Topology Volume 5 ; 5 >
+     au < manifest ; 2006 ; Algebraic & Geometric Topology Volume 6 ; 6 >
+     au < manifest ; 2007 ; Algebraic & Geometric Topology Volume 7 ; 7 >
+     au < manifest ; 2008 ; Algebraic & Geometric Topology Volume 8 ; 8 >
+     au < doNotProcess ; 2009 ; Algebraic & Geometric Topology Volume 9 ; 9 >
+     au < doNotProcess ; 2010 ; Algebraic & Geometric Topology Volume 10 ; 10 >
+     au < doNotProcess ; 2011 ; Algebraic & Geometric Topology Volume 11 ; 11 >
+     au < doNotProcess ; 2012 ; Algebraic & Geometric Topology Volume 12 ; 12 >
+     au < doNotProcess ; 2013 ; Algebraic & Geometric Topology Volume 13 ; 13 >
+     
+  }
+  
+  {
+  
+    title < 
+      name = Algebra & Number Theory ;
+      issn = 1937-0652 ;
+      eissn = 1944-7833
+     >
+    
+      param[journal_code] = ant
+    
+
+     au < manifest ; 2007 ; Algebra & Number Theory Volume 1 ; 1 >
+     au < manifest ; 2008 ; Algebra & Number Theory Volume 2 ; 2 >
+     au < doNotProcess ; 2009 ; Algebra & Number Theory Volume 3 ; 3 >
+     au < doNotProcess ; 2010 ; Algebra & Number Theory Volume 4 ; 4 >
+     au < doNotProcess ; 2011 ; Algebra & Number Theory Volume 5 ; 5 >
+     au < doNotProcess ; 2012 ; Algebra & Number Theory Volume 6 ; 6 >
+     au < doNotProcess ; 2013 ; Algebra & Number Theory Volume 7 ; 7 >
+ 
+  }
+  
+  {
+  
+    title < 
+      name = Analysis & PDE  ;
+      issn = 2157-5045 ;
+      eissn = 1948-206X
+     >
+    
+      param[journal_code] = apde
+
+     au < manifest ; 2008 ; Analysis & PDE Volume 1 ; 1 >
+     au < doNotProcess ; 2009 ; Analysis & PDE Volume 2 ; 2 >
+     au < doNotProcess ; 2010 ; Analysis & PDE Volume 3 ; 3 >
+     au < doNotProcess ; 2011 ; Analysis & PDE Volume 4 ; 4 >
+     au < doNotProcess ; 2012 ; Analysis & PDE Volume 5 ; 5 >
+     au < doNotProcess; 2013 ; Analysis & PDE Volume 6 ; 6 >
+
+  }
+   
+  {
+  
+    title < 
+      name = Communications in Applied Mathematics and Computational Science ;
+      issn = 1559-3940 ;
+      eissn = 2157-5452
+     >
+
+      param[journal_code] = camcos
+ 
+     au < manifest ; 2006 ; Communications in Applied Mathematics and Computational Science Volume 1 ; 1 >
+     au < manifest ; 2007 ; Communications in Applied Mathematics and Computational Science Volume 2 ; 2 >
+     au < manifest ; 2008 ; Communications in Applied Mathematics and Computational Science Volume 3 ; 3 >
+     au < manifest ; 2009 ; Communications in Applied Mathematics and Computational Science Volume 4 ; 4 >
+     au < manifest ; 2010 ; Communications in Applied Mathematics and Computational Science Volume 5 ; 5 >
+     au < manifest ; 2011 ; Communications in Applied Mathematics and Computational Science Volume 6 ; 6 >
+     au < doNotProcess; 2012 ; Communications in Applied Mathematics and Computational Science Volume 7 ; 7 >
+     au < doNotProcess ; 2013 ; Communications in Applied Mathematics and Computational Science Volume 8 ; 8 >
+  
+  }
+
+  {
+  
+    title < 
+     name = Geometry & Topology ;
+     issn = 1465-3060 ;
+     eissn = 1364-0380 
+     >
+    
+      param[journal_code] = gt
+
+     au < manifest ; 1997 ; Geometric Topology Volume 1 ; 1 >
+     au < manifest ; 1998 ; Geometric Topology Volume 2 ; 2 >
+     au < manifest ; 1999 ; Geometric Topology Volume 3 ; 3 >
+     au < manifest ; 2000 ; Geometric Topology Volume 4 ; 4 >
+     au < manifest ; 2001 ; Geometric Topology Volume 5 ; 5 >
+     au < manifest ; 2002 ; Geometric Topology Volume 6 ; 6 >
+     au < manifest ; 2003 ; Geometric Topology Volume 7 ; 7 >
+     au < manifest ; 2004 ; Geometric Topology Volume 8 ; 8 >
+     au < manifest ; 2005 ; Geometric Topology Volume 9 ; 9  >
+     au < manifest ; 2006 ; Geometric Topology Volume 10 ; 10 >
+     au < manifest ; 2007 ; Geometric Topology Volume 11 ; 11 >
+     au < manifest ; 2008 ; Geometric Topology Volume 12 ; 12 >
+     au < doNotProcess ; 2009 ; Geometric Topology Volume 13 ; 13 >
+     au < doNotProcess ; 2010 ; Geometric Topology Volume 14 ; 14 >
+     au < doNotProcess ; 2011 ; Geometric Topology Volume 15 ; 15 >
+     au < doNotProcess ; 2012 ; Geometric Topology Volume 16 ; 16 >
+     au < doNotProcess ; 2013 ; Geometric Topology Volume 17 ; 17 >
+ 
+  }
+    
+  {
+  
+    title < 
+     name = Involve: a journal of mathematics ;
+     issn = 1944-4176 ;
+     eissn = 1944-4184
+     >
+    
+      param[journal_code] = involve
+ 
+     au < manifest ; 2008 ; Involve, a journal of mathematics Volume 1 ; 1 >
+     au < doNotProcess ; 2009 ; Involve, a journal of mathematics Volume 2 ; 2 >
+     au < doNotProcess ; 2010 ; Involve, a journal of mathematics Volume 3 ; 3 >
+     au < doNotProcess ; 2011 ; Involve, a journal of mathematics Volume 4 ; 4 >
+     au < doNotProcess ; 2012 ; Involve, a journal of mathematics Volume 5 ; 5 >
+     au < doNotProcess ; 2013 ; Involve, a journal of mathematics Volume 6 ; 6 >
+ 
+   }
+   
+   {
+    title < 
+     name = Journal of Mechanics of Materials and Structures ;
+     issn = 1559-3959 ;
+     issnl = 1559-3959
+    >
+    
+      param[journal_code] = jomms
+ 
+     au < manifest ; 2006 ; Journal of Mechanics of Materials and Structures Volume 1 ; 1 >
+     au < manifest ; 2007 ; Journal of Mechanics of Materials and Structures Volume 2 ; 2 >
+     au < manifest ; 2008 ; Journal of Mechanics of Materials and Structures Volume 3 ; 3 >
+     au < manifest ; 2009 ; Journal of Mechanics of Materials and Structures Volume 4 ; 4 >
+     au < manifest ; 2010 ; Journal of Mechanics of Materials and Structures Volume 5 ; 5 >
+     au < doNotProcess ; 2011 ; Journal of Mechanics of Materials and Structures Volume 6 ; 6 >
+     au < doNotProcess ; 2012 ; Journal of Mechanics of Materials and Structures Volume 7 ; 7 >
+     au < doNotProcess ; 2013 ; Journal of Mechanics of Materials and Structures Volume 8 ; 8 >
+ 
+  }
+   
+  {
+  
+     title <
+       name = Pacific Journal of Mathematics ;
+       issn = 0030-8730 ;
+       issnl = 0030-8730
+       >
+       
+     param[journal_code] = pjm
+     comment[notReady] = manifest exists but has no substance
+       
+     au < notReady ; 1951 ; Pacific Journal of Mathematics Volume 1 ; 1 >
+     au < notReady ; 1952 ; Pacific Journal of Mathematics Volume 2 ; 2 >
+     au < notReady ; 1953 ; Pacific Journal of Mathematics Volume 3 ; 3 >
+     au < notReady ; 1954 ; Pacific Journal of Mathematics Volume 4 ; 4 >
+     au < notReady ; 1955 ; Pacific Journal of Mathematics Volume 5 ; 5 >
+     au < notReady ; 1956 ; Pacific Journal of Mathematics Volume 6 ; 6 >
+     au < notReady ; 1957 ; Pacific Journal of Mathematics Volume 7 ; 7 >
+     au < notReady ; 1958 ; Pacific Journal of Mathematics Volume 8 ; 8 >
+     au < notReady ; 1959 ; Pacific Journal of Mathematics Volume 9 ; 9  >
+     au < notReady ; 1960 ; Pacific Journal of Mathematics Volume 10 ; 10 >
+     au < notReady ; 1961 ; Pacific Journal of Mathematics Volume 11 ; 11 >
+     au < notReady ; 1962 ; Pacific Journal of Mathematics Volume 12 ; 12 >
+     au < notReady ; 1963 ; Pacific Journal of Mathematics Volume 13 ; 13 >
+     au < notReady ; 1964 ; Pacific Journal of Mathematics Volume 14 ; 14 >
+     au < notReady ; 1965 ; Pacific Journal of Mathematics Volume 15 ; 15 >
+     au < notReady ; 1966 ; Pacific Journal of Mathematics Volume 16 ; 16 >
+     au < notReady ; 1967 ; Pacific Journal of Mathematics Volume 17 ; 17 >
+     au < notReady ; 1968 ; Pacific Journal of Mathematics Volume 18 ; 18 >
+     au < notReady ; 1969 ; Pacific Journal of Mathematics Volume 19 ; 19  >
+     au < notReady ; 1970 ; Pacific Journal of Mathematics Volume 20 ; 20 >
+     au < notReady ; 1971 ; Pacific Journal of Mathematics Volume 21 ; 21 >
+     au < notReady ; 1972 ; Pacific Journal of Mathematics Volume 22 ; 22 >
+     au < notReady ; 1973 ; Pacific Journal of Mathematics Volume 23 ; 23 >
+     au < notReady ; 1974 ; Pacific Journal of Mathematics Volume 24 ; 24 >
+     au < notReady ; 1975 ; Pacific Journal of Mathematics Volume 25 ; 25 >
+     au < notReady ; 1976 ; Pacific Journal of Mathematics Volume 26 ; 26 >
+     au < notReady ; 1977 ; Pacific Journal of Mathematics Volume 27 ; 27 >
+     au < notReady ; 1978 ; Pacific Journal of Mathematics Volume 28 ; 28 >
+     au < notReady ; 1979 ; Pacific Journal of Mathematics Volume 29 ; 29  >
+     au < notReady ; 1980 ; Pacific Journal of Mathematics Volume 30 ; 30 >
+     au < notReady ; 1981 ; Pacific Journal of Mathematics Volume 31 ; 31 >
+     au < notReady ; 1982 ; Pacific Journal of Mathematics Volume 32 ; 32 >
+     au < notReady ; 1983 ; Pacific Journal of Mathematics Volume 33 ; 33 >
+     au < notReady ; 1984 ; Pacific Journal of Mathematics Volume 34 ; 34 >
+     au < notReady ; 1985 ; Pacific Journal of Mathematics Volume 35 ; 35 >
+     au < notReady ; 1986 ; Pacific Journal of Mathematics Volume 36 ; 36 >
+     au < notReady ; 1987 ; Pacific Journal of Mathematics Volume 37 ; 37 >
+     au < notReady ; 1988 ; Pacific Journal of Mathematics Volume 38 ; 38 >
+     au < notReady ; 1989 ; Pacific Journal of Mathematics Volume 39 ; 39 >
+     au < notReady ; 1990 ; Pacific Journal of Mathematics Volume 40 ; 40 >
+     au < notReady ; 1991 ; Pacific Journal of Mathematics Volume 41 ; 41 >
+     au < notReady ; 1992 ; Pacific Journal of Mathematics Volume 42 ; 42 >
+     au < notReady ; 1993 ; Pacific Journal of Mathematics Volume 43 ; 43 >
+     au < notReady ; 1994 ; Pacific Journal of Mathematics Volume 44 ; 44 >
+     au < notReady ; 1995 ; Pacific Journal of Mathematics Volume 45 ; 45 >
+     au < notReady ; 1996 ; Pacific Journal of Mathematics Volume 46 ; 46 >
+     au < notReady ; 1997 ; Pacific Journal of Mathematics Volume 47 ; 47 >
+     au < notReady ; 1998 ; Pacific Journal of Mathematics Volume 48 ; 48 >
+     au < notReady ; 1999 ; Pacific Journal of Mathematics Volume 49 ; 49 >
+     au < notReady ; 2000 ; Pacific Journal of Mathematics Volume 50 ; 50 >
+     au < notReady ; 2001 ; Pacific Journal of Mathematics Volume 51 ; 51 >
+     au < notReady ; 2002 ; Pacific Journal of Mathematics Volume 52 ; 52 >
+     au < notReady ; 2003 ; Pacific Journal of Mathematics Volume 53 ; 53 >
+     au < notReady ; 2004 ; Pacific Journal of Mathematics Volume 54 ; 54 >
+     au < notReady ; 2005 ; Pacific Journal of Mathematics Volume 55 ; 55 >
+     au < manifest ; 2006 ; Pacific Journal of Mathematics Volume 56 ; 56 >
+     au < manifest ; 2007 ; Pacific Journal of Mathematics Volume 57 ; 57 >
+     au < manifest ; 2008 ; Pacific Journal of Mathematics Volume 58 ; 58 >
+     au < manifest ; 2009 ; Pacific Journal of Mathematics Volume 59 ; 59 >
+     au < manifest ; 2010 ; Pacific Journal of Mathematics Volume 60 ; 60 >
+     au < manifest ; 2011 ; Pacific Journal of Mathematics Volume 61 ; 61 >
+     au < doNotProcess ; 2012 ; Pacific Journal of Mathematics Volume 62 ; 62 >
+     au < doNotProcess ; 2013 ; Pacific Journal of Mathematics Volume 63 ; 63 >
+     
+  }   
+  
+  {
+    title < 
+      name = Seismic Isolation and Protection Systems ;
+      eissn = 2150-7902 
+    >
+    
+     param[journal_code] = siaps
+
+     au < manifest ; 2010 ; Seismic Isolation and Protection Systems Volume 1 ; 1 >
+     au < manifest ; 2011 ; Seismic Isolation and Protection Systems Volume 2 ; 2 >
+     au < doesNotExist ; 0 ; Seismic Isolation and Protection Systems Volume 3 ; 3 >
+     au < doesNotExist ; 0 ; Seismic Isolation and Protection Systems Volume 4 ; 4 >
+
+  }
+  
+}
