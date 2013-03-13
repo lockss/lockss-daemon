@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.12 2013-02-04 19:33:40 alexandraohlson Exp $
+ * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.13 2013-03-13 19:05:10 alexandraohlson Exp $
  */
 
 /*
@@ -32,22 +32,31 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.nature;
 
-import java.util.*;
-import java.util.regex.*;
+import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.lockss.util.*;
-import org.lockss.plugin.*;
-import org.lockss.extractor.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.ArticleMetadataExtractorFactory;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ArticleFiles;
+import org.lockss.plugin.ArticleIteratorFactory;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.SubTreeArticleIterator;
+import org.lockss.util.Logger;
 
 public class NaturePublishingGroupArticleIteratorFactory
     implements ArticleIteratorFactory,
 	       ArticleMetadataExtractorFactory {
-  
+
   protected static Logger log = Logger.getLogger("NaturePublishingGroupArticleIteratorFactory");
 
   protected static final String ROOT_TEMPLATE = "\"%s%s/journal/v%s/\", base_url, journal_id, volume_name";
-  
+
+  // we trap both full html AND pdfs but are careful to take html as a first choice and to be sure not to double count
   protected static final String PATTERN_TEMPLATE = "\"^%s%s/journal/v[^/]+/n[^/]+/(full/[^/]+\\.html|pdf/[^/]+\\.pdf)$\", base_url, journal_id, volume_name";
 
   /*
@@ -55,6 +64,7 @@ public class NaturePublishingGroupArticleIteratorFactory
    * at a URL like http://www.nature.com/gt/journal/v16/n5/full/gt200929a.html
    * ie <base_url>/<journal_id>/journal/v<volume> is the subtree we want.
    */
+  @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
 						      MetadataTarget target)
       throws PluginException {
@@ -64,6 +74,7 @@ public class NaturePublishingGroupArticleIteratorFactory
                                                         .setPatternTemplate(PATTERN_TEMPLATE));
   }
 
+  @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
     return new BaseArticleMetadataExtractor(null);
@@ -71,13 +82,13 @@ public class NaturePublishingGroupArticleIteratorFactory
 
   protected static class NaturePublishingGroupArticleIterator
       extends SubTreeArticleIterator {
-    
+
     protected static Pattern HTML_PATTERN = Pattern.compile("/full/([^/]+)\\.html$", Pattern.CASE_INSENSITIVE);
-    
+
     protected static Pattern PDF_PATTERN = Pattern.compile("/pdf/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
-    
+
     protected static Pattern ABS_PATTERN = Pattern.compile("/abs/([^/]+)\\.html$", Pattern.CASE_INSENSITIVE);
-    
+
     protected NaturePublishingGroupArticleIterator(ArchivalUnit au,
                                                    SubTreeArticleIterator.Spec spec) {
       super(au, spec);
@@ -87,14 +98,14 @@ public class NaturePublishingGroupArticleIteratorFactory
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
       Matcher mat;
-      ArticleFiles af = new ArticleFiles();
+      ArticleFiles af = null; //new ArticleFiles();
       boolean articleTarget = false;
-      
+
       /* minimize the work you do if you are just counting articles */
       if ( (spec.getTarget() != null) && (spec.getTarget().isArticle())) {
         articleTarget = true;
       }
-      
+
       mat = HTML_PATTERN.matcher(url);
       if (mat.find()) {
         if ("index".equalsIgnoreCase(mat.group(1))) {
@@ -105,30 +116,31 @@ public class NaturePublishingGroupArticleIteratorFactory
         mat = PDF_PATTERN.matcher(url);
         if (mat.find()) {
           af = processFullTextPdf(cu, mat);
-        }      
+        }
       }
-      
+
       /* we have an article and we need to collect metadata */
       if ((af != null) && !articleTarget) {
         guessOtherParts(af, mat);
       }
-      
-      if (af == null) {
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
-      }
+
+      /*
+       * article files could be null if we found a PDF but realized that we will also find an equivalent html
+       * for this article.  In this case we don't want to base the AF on the PDF, so we do nothing.
+       */
       return af;
     }
 
     /* this method only if there was .../full/<article>.html */
     protected ArticleFiles processFullTextHtml(CachedUrl htmlCu, Matcher htmlMat) {
       ArticleFiles af = new ArticleFiles();
-      
+
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
       guessFullTextPdf(af, htmlMat);
       return af;
     }
-    
+
     /* this method if there WAS a full text html, and now checking for pdf as well */
     protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
       CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/pdf/$1.pdf"));
@@ -136,14 +148,17 @@ public class NaturePublishingGroupArticleIteratorFactory
         af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
       }
     }
-    
-    /* this method only if there was .../pdf/<article.pdf and no .../full/<article>.html */
+
+    /* this method if it matched a full text PDF, but if there will be or was an html, we will defer to that */
     protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
-      /* This check is probably unneccessary. We shouldn't get to this method
-       * if the full/blah.html file exists
-       */
+
       CachedUrl htmlCu = au.makeCachedUrl(pdfMat.replaceFirst("/full/$1.html"));
+      /*
+       * so that we don't get two articlefiles for one article, html, if it exists will take precedence
+       * we know it will also be caught by the pattern
+       */
       if (htmlCu != null && htmlCu.hasContent()) {
+        log.debug3("PDF found but deferring to existing html" + htmlCu.getUrl());
         return null;
       }
       ArticleFiles af = new ArticleFiles();
@@ -151,7 +166,7 @@ public class NaturePublishingGroupArticleIteratorFactory
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
       return af;
     }
-    
+
     /* this method if we have an af with full_text_cu of some sort and need metadata */
     protected void guessOtherParts(ArticleFiles af, Matcher mat) {
       guessAbstract(af, mat);
@@ -159,9 +174,9 @@ public class NaturePublishingGroupArticleIteratorFactory
       guessSupplementaryMaterials(af, mat);
       guessRisCitation(af, mat);
     }
-    
 
-    
+
+
     protected void guessAbstract(ArticleFiles af, Matcher mat) {
       CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/abs/$1.html"));
      if (absCu != null && absCu.hasContent()) {
@@ -171,28 +186,28 @@ public class NaturePublishingGroupArticleIteratorFactory
         }
       }
     }
-    
+
     protected void guessFigures(ArticleFiles af, Matcher mat) {
       CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/fig_tab/$1_ft.html"));
       if (absCu != null && absCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_FIGURES_TABLES, absCu);
       }
     }
-    
+
     protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
       CachedUrl suppinfoCu = au.makeCachedUrl(mat.replaceFirst("/suppinfo/$1.html"));
       if (suppinfoCu != null && suppinfoCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppinfoCu);
       }
     }
-    
+
     protected void guessRisCitation(ArticleFiles af, Matcher mat) {
       CachedUrl risCu = au.makeCachedUrl(mat.replaceFirst("/ris/$1.ris"));
       if (risCu != null && risCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_CITATION + "_" + "application/x-research-info-systems", risCu);
+        af.setRoleCu(ArticleFiles.ROLE_CITATION + "_ris", risCu);
       }
     }
-    
+
   }
 
 }
