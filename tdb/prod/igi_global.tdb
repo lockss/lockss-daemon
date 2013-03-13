@@ -24,16 +24,16 @@
     au < released ; 1991 ; Information Resources Management Journal (IRMJ) Volume 4 ; 4 >
     au < released ; 1992 ; Information Resources Management Journal (IRMJ) Volume 5 ; 5 >
     au < released ; 1993 ; Information Resources Management Journal (IRMJ) Volume 6 ; 6 >
-    au < manifest ; 1994 ; Information Resources Management Journal (IRMJ) Volume 7 ; 7 >
+    au < testing ; 1994 ; Information Resources Management Journal (IRMJ) Volume 7 ; 7 >
     au < released ; 1995 ; Information Resources Management Journal (IRMJ) Volume 8 ; 8 >
     au < released ; 1996 ; Information Resources Management Journal (IRMJ) Volume 9 ; 9 >
     au < released ; 1997 ; Information Resources Management Journal (IRMJ) Volume 10 ; 10 >
-    au < manifest ; 1998 ; Information Resources Management Journal (IRMJ) Volume 11 ; 11 >
+    au < testing ; 1998 ; Information Resources Management Journal (IRMJ) Volume 11 ; 11 >
     au < released ; 1999 ; Information Resources Management Journal (IRMJ) Volume 12 ; 12 >
     au < released ; 2000 ; Information Resources Management Journal (IRMJ) Volume 13 ; 13 >
     au < released ; 2001 ; Information Resources Management Journal (IRMJ) Volume 14 ; 14 >
     au < released ; 2002 ; Information Resources Management Journal (IRMJ) Volume 15 ; 15 >
-    au < manifest ; 2003 ; Information Resources Management Journal (IRMJ) Volume 16 ; 16 >
+    au < testing ; 2003 ; Information Resources Management Journal (IRMJ) Volume 16 ; 16 >
     au < released ; 2004 ; Information Resources Management Journal (IRMJ) Volume 17 ; 17 >
     au < released ; 2005 ; Information Resources Management Journal (IRMJ) Volume 18 ; 18 >
     au < released ; 2006 ; Information Resources Management Journal (IRMJ) Volume 19 ; 19 >
@@ -58,8 +58,8 @@
     comment[0] = content not online yet
     param[journal_issn] = 1080-286X
 
-    au < manifest ; 2011 ; Information Technology Management Volume 24 ; 24 >
-    au < manifest ; 2012 ; Information Technology Management Volume 25 ; 25 >
+    au < testing ; 2011 ; Information Technology Management Volume 24 ; 24 >
+    au < testing ; 2012 ; Information Technology Management Volume 25 ; 25 >
     au < expected ; 2013 ; Information Technology Management Volume 26 ; 26 >
 
 
@@ -496,7 +496,7 @@
     >
     param[journal_issn] = 1557-3958
 
-    au < manifest ; 2007 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 1 ; 1 >
+    au < testing ; 2007 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 1 ; 1 >
     au < released ; 2008 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 2 ; 2 >
     au < released ; 2009 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 3 ; 3 >
     au < released ; 2010 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 4 ; 4 >
@@ -755,7 +755,7 @@
     >
     param[journal_issn] = 1947-3494
 
-    au < manifest ; 2010 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 1 ; 1 >
+    au < testing ; 2010 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 4 ; 4 >
