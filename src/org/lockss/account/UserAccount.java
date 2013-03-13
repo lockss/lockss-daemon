@@ -1,5 +1,5 @@
 /*
- * $Id: UserAccount.java,v 1.13 2012-07-17 02:33:26 thib_gc Exp $
+ * $Id: UserAccount.java,v 1.14 2013-03-13 08:43:44 tlipkis Exp $
  */
 
 /*
@@ -319,46 +319,50 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 
   /** Account has logged in */
   public void loggedIn(HttpSession session) {
-    if (alerter == null) {
-      if (active.size() != 0) {
-	log.error("alerter null but " + active.size() + " active");
+    synchronized (active) {
+      if (alerter == null) {
+	if (active.size() != 0) {
+	  log.error("alerter null but " + active.size() + " active");
+	}
+	LockssDaemon daemon = acctMgr.getDaemon();
+	AdminServletManager adminMgr = null;
+	try {
+	  adminMgr =
+	    (AdminServletManager)daemon.getManager(LockssDaemon.SERVLET_MANAGER);
+	} catch (IllegalArgumentException e) {
+	  log.warning("No AdminServletManager, not installing Alerter task");
+	  return;
+	}
+	// Start alerting task
+	alerter = TimerQueue.schedule(Deadline.in(ALERTER_INTERVAL),
+				      ALERTER_INTERVAL, new Alerter(), adminMgr);
       }
-      LockssDaemon daemon = acctMgr.getDaemon();
-      AdminServletManager adminMgr = null;
-      try {
-	adminMgr =
-	  (AdminServletManager)daemon.getManager(LockssDaemon.SERVLET_MANAGER);
-      } catch (IllegalArgumentException e) {
-	log.warning("No AdminServletManager, not installing Alerter task");
-	return;
+      if (!active.containsKey(session)) {
+	active.put(session, this);
+	auditableEvent("logged in");
+      } else {
+	log.debug("Redundant nowAuthenticated()");
       }
-      // Start alerting task
-      alerter = TimerQueue.schedule(Deadline.in(ALERTER_INTERVAL),
-				    ALERTER_INTERVAL, new Alerter(), adminMgr);
-    }
-    if (!active.containsKey(session)) {
-      active.put(session, this);
-      auditableEvent("logged in");
-    } else {
-      log.debug("Redundant nowAuthenticated()");
     }
   }
 
   /** Account has logged out */
   public void loggedOut(HttpSession session) {
-    if (active.containsKey(session)) {
-      active.remove(session);
-      auditableEvent("logged out");
-      if (alerter != null) {
-	if (active.size() == 0) {
-	  TimerQueue.cancel(alerter);
-	  alerter = null;
+    synchronized (active) {
+      if (active.containsKey(session)) {
+	active.remove(session);
+	auditableEvent("logged out");
+	if (alerter != null) {
+	  if (active.size() == 0) {
+	    TimerQueue.cancel(alerter);
+	    alerter = null;
+	  }
+	} else {
+	  log.error("loggedOut but alerter null");
 	}
       } else {
-	log.error("loggedOut but alerter null");
+	log.error("loggedOut() but not active: " + this);
       }
-    } else {
-      log.error("loggedOut() but not active: " + this);
     }
   }
 
