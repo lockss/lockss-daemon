@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.87 2013-02-27 22:07:44 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.88 2013-03-13 23:52:40 tlipkis Exp $
  */
 
 /*
@@ -765,8 +765,6 @@ public class LockssRepositoryImpl
      * directories if necessary to initialize the map */
     Map<String,String> buildAuMap() {
       logger.debug3("Loading name map for '" + repoCacheFile + "'.");
-      logger.critical("Loading name map for '" + repoCacheFile + "'.",
-		      new Throwable());
       Map<String,String> map = new HashMap<String,String>();
       if (!repoCacheFile.exists()) {
 	logger.debug3("Creating cache dir:" + repoCacheFile + "'.");
