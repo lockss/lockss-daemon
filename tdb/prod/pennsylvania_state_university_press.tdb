@@ -106,7 +106,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = critical_philosophy_of_race
-      attr[journal_id] = 
+      attr[journal_id] = por
 
       au < manifest ; 2013 ; Critical Philosophy of Race Volume 1 ; 1 >
      
@@ -296,7 +296,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_eastern_mediterranean_archaeology_and_heritage_studies
-      attr[journal_id] = 
+      attr[journal_id] = ema
       
       au < manifest ; 2013 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 1 ; 1 >
       
