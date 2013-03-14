@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.93 2013-01-06 02:54:50 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.94 2013-03-14 06:38:02 tlipkis Exp $
  */
 
 /*
@@ -324,7 +324,8 @@ public class BaseUrlCacher implements UrlCacher {
       }
       input.mark(CurrentConfig.getIntParam(PARAM_LOGIN_CHECKER_MARK_LIMIT,
 					   DEFAULT_LOGIN_CHECKER_MARK_LIMIT));
-      Reader reader = new InputStreamReader(input, Constants.DEFAULT_ENCODING);
+      Reader reader = new InputStreamReader(input,
+					    AuUtil.getCharsetOrDefault(this));
       try {
 	if (checker.isLoginPage(headers, reader)) {
 	  throw new CacheException.PermissionException("Found a login page");

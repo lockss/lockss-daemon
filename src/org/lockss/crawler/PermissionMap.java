@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.32 2012-09-06 03:59:41 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.33 2013-03-14 06:38:03 tlipkis Exp $
  */
 
 /*
@@ -445,6 +445,7 @@ public class PermissionMap {
     PermissionChecker checker;
 
     InputStream uis = uc.getUncachedInputStream();
+    String charset = AuUtil.getCharsetOrDefault(uc);
     CIProperties props = uc.getUncachedProperties();
     if (props != null) {
       String previousContentType =
@@ -470,7 +471,7 @@ public class PermissionMap {
 	// XXX Some PermissionCheckers close their stream.  This is a
 	// workaround until they're fixed.
         Reader reader = new InputStreamReader(new IgnoreCloseInputStream(is),
-					      Constants.DEFAULT_ENCODING);
+					      charset);
         if (checker.checkPermission(pHelper, reader, pUrl)) {
           logger.debug3("Found permission on "+checker);
           foundPermission = true;
@@ -493,7 +494,7 @@ public class PermissionMap {
       if (pluginPermissionChecker != null) {
 	is = pHelper.resetInputStream(is, pUrl);
 	is.mark(streamResetMax);
-	Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
+	Reader reader = new InputStreamReader(is, charset);
 	if (!pluginPermissionChecker.checkPermission(pHelper, reader, pUrl)) {
 	  logger.siteError("No plugin crawl permission on " + pUrl);
 	  is.close();

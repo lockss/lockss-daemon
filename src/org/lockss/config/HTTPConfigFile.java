@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.17 2011-02-23 21:29:34 tlipkis Exp $
+ * $Id: HTTPConfigFile.java,v 1.18 2013-03-14 06:38:03 tlipkis Exp $
  */
 
 /*
@@ -220,7 +220,9 @@ public class HTTPConfigFile extends BaseConfigFile {
       InputStream in = conn.getUncompressedResponseInputStream();
       // XXX should use the charset parameter in the Content-Type: header
       // if any
-      Reader rdr = new InputStreamReader(in, Constants.DEFAULT_ENCODING);
+      String ctype = conn.getResponseContentType();
+      String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
+      Reader rdr = new InputStreamReader(in, charset);
       String body = StringUtil.fromReader(rdr, 10000);
       if (StringUtil.isNullString(body)) {
 	return msg;
