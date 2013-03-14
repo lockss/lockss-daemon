@@ -1,5 +1,5 @@
 /*
- * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.7 2012-02-24 22:53:02 pgust Exp $
+ * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.8 2013-03-14 20:04:31 alexandraohlson Exp $
  */
 
 /*
@@ -32,19 +32,25 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.nature;
 
-import java.io.*;
+import java.io.IOException;
+
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
-
-import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.extractor.*;
-import org.lockss.plugin.*;
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadata;
+import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.FileMetadataExtractorFactory;
+import org.lockss.extractor.MetadataField;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.util.Logger;
 
 public class NatureHtmlMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("NatureMetadataExtractorFactory");
- 
+
+  @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
       throws PluginException {
@@ -84,6 +90,10 @@ public class NatureHtmlMetadataExtractorFactory
 	throws IOException {
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
+      // Since we know it and since Metadata requires it, set it manually if necessary
+      if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
+        am.put(MetadataField.FIELD_PUBLISHER, "Nature Publishing Group");
+      }
       return am;
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiHtmlMetadataExtractorFactory.java,v 1.1 2013-03-12 22:32:20 aishizaki Exp $
+ * $Id: HindawiHtmlMetadataExtractorFactory.java,v 1.2 2013-03-14 20:04:31 alexandraohlson Exp $
  */
 
 /*
@@ -32,19 +32,25 @@
 
 package org.lockss.plugin.hindawi;
 
-import java.io.*;
+import java.io.IOException;
+
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
-import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.extractor.*;
-import org.lockss.extractor.MetadataField.Extractor;
-import org.lockss.plugin.*;
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadata;
+import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.FileMetadataExtractorFactory;
+import org.lockss.extractor.MetadataField;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.util.Logger;
 
 public class HindawiHtmlMetadataExtractorFactory implements
     FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("HindawiHtmlMetadataExtractorFactory");
 
+  @Override
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType) throws PluginException {
     return new HindawiHtmlMetadataExtractor();
@@ -74,14 +80,14 @@ public class HindawiHtmlMetadataExtractorFactory implements
         <meta name="Description" content="Advances in Human-Computer Interaction is an interdisciplinary journal that publishes theoretical and applied papers covering the broad spectrum of interactive systems. The journal is inherently interdisciplinary, publishing original research in the fields of computing, engineering, artificial intelligence, psychology, linguistics, and social and system organization, as applied to the design, implementation, application, analysis, and evaluation of interactive systems." />
 
  */
-  public static class HindawiHtmlMetadataExtractor 
+  public static class HindawiHtmlMetadataExtractor
     implements FileMetadataExtractor {
 
     // Map Hindawi-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
       tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
-      tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);      
+      tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_date", MetadataField.FIELD_DATE);
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
@@ -89,20 +95,24 @@ public class HindawiHtmlMetadataExtractorFactory implements
       tagMap.put("citation_author", new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(",")));
      /*
        tagMap.put("citation_mjid", new MetadataField(
-         MetadataField.FIELD_PROPRIETARY_IDENTIFIER, 
+         MetadataField.FIELD_PROPRIETARY_IDENTIFIER,
          MetadataField.extract("^([^;]+);", 1)));
        */
     }
 
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
-      throws IOException {      
-      ArticleMetadata am = 
+      throws IOException {
+      ArticleMetadata am =
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
 
+      // Since we know it and since Metadata requires it, set it manually if necessary
+      if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
+        am.put(MetadataField.FIELD_PUBLISHER, "Hindawi Publishing Corporation");
+      }
       emitter.emitMetadata(cu, am);
       }
     }
   }
- 
+

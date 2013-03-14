@@ -28,32 +28,35 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.taylorandfrancis;
 
-import java.io.*;
+import java.io.IOException;
 import java.util.List;
-import java.util.Set;
-import java.util.Iterator;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.apache.commons.lang.StringEscapeUtils;
-
-import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.extractor.*;
-import org.lockss.plugin.*;
-import org.w3c.rdf.vocabulary.dublin_core_19990702.DC;
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadata;
+import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.FileMetadataExtractorFactory;
+import org.lockss.extractor.MetadataField;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.util.Logger;
+import org.lockss.util.MetadataUtil;
 
 
 public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("TaylorAndFrancisHtmlMetadataExtractorFactory");
 
+  @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
       throws PluginException {
     return new TaylorAndFrancisHtmlMetadataExtractor();
   }
-  
-  public static class TaylorAndFrancisHtmlMetadataExtractor 
+
+  public static class TaylorAndFrancisHtmlMetadataExtractor
     implements FileMetadataExtractor {
 
     // Map Taylor & Francis DublinCore HTML meta tag names to cooked metadata fields
@@ -81,31 +84,31 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
-      ArticleMetadata am = 
+      ArticleMetadata am =
    // turn on parser version when it's checked in
    //     new ParserHtmlMetaTagMetadataExtractor().extract(target, cu);
           new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
-      
+
       // Strip the extra whitespace found in the HTML around and within the "dc.Creator" and "dc.Publisher" fields
       TrimWhitespace(am, MetadataField.DC_FIELD_CREATOR);
       TrimWhitespace(am, MetadataField.FIELD_AUTHOR);
       TrimWhitespace(am, MetadataField.DC_FIELD_PUBLISHER);
       TrimWhitespace(am, MetadataField.FIELD_PUBLISHER);
-      
+
       // Parse the dc.Identifier fields with scheme values "publisher-id", "doi", and "coden".
       List<String> cookedIdentifierList = am.getList(MetadataField.DC_FIELD_IDENTIFIER);
       List<String> rawIdentifierList = am.getRawList("dc.Identifier");
-      
+
       String journalTitle = "";
       String volume = "";
       String issue = "";
       String spage = "";
       String epage = "";
       String doi = "";
-      
+
       for (int j = 0; j < cookedIdentifierList.size(); j++) {
-    	  
+
     	  // If our dc.Identifier field has a comma in it, its content is a comma-delimited list of
     	  // the journal title, volume, issue, and page range associated with the article.
     	  // The journal title itself may contain commas, so the list is parsed backwards and all content
@@ -113,7 +116,7 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     	  if (cookedIdentifierList.get(j).contains(", ")) {
     		  String content = cookedIdentifierList.get(j);
     		  String[] biblioInfo = content.split(", ");
-    		  
+
     		  for (int k = biblioInfo.length-1; k >= 0; k--) {
     			  // get the page range
                   if (biblioInfo[k].startsWith("pp. ")) {
@@ -144,18 +147,18 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     			  // the journal title.
     			  else if (!volume.isEmpty()) {
     				  journalTitle = biblioInfo[k].concat(journalTitle);
-    				  
+
     				  // If we're not at the beginning of the comma-separated list
     				  // (i.e. the journal title itself contains commas),
     				  // reinsert the comma that we lost in content.split(", ").
     				  if (k != 0) journalTitle = ", ".concat(journalTitle);
     			  }
     		  }
-    		  
+
     		  // org.apache.commons.lang.StringEscapeUtils contains a method for unescaping HTML codes
     		  // (like &amp;) that may appear in the journal title
     		  journalTitle = StringEscapeUtils.unescapeHtml(journalTitle);
-    		  
+
     		  am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
     		  am.put(MetadataField.FIELD_VOLUME, volume);
               am.put(MetadataField.FIELD_ISSUE, issue);
@@ -165,11 +168,15 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     		  doi = cookedIdentifierList.get(j);
     		  am.put(MetadataField.FIELD_DOI, doi);
     	  }
-    	  
+
+      }
+      // Since we know it and since Metadata requires it, set it manually if necessary
+      if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
+        am.put(MetadataField.FIELD_PUBLISHER, "Taylor & Francis");
       }
       emitter.emitMetadata(cu, am);
     }
-    
+
     private void TrimWhitespace(ArticleMetadata am, MetadataField md) {
     	List<String> list = am.getList(md);
     	for (int i = 0; i < list.size(); i++) {
