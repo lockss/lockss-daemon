@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.52 2013-02-27 06:01:49 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.53 2013-03-14 06:39:16 tlipkis Exp $
  */
 
 /*
@@ -438,6 +438,26 @@ public class ProxyManager extends BaseProxyManager {
     return quickConnPool;
   }
 
+
+  static final String LOCKSS_VIA_VERSION = "1.1";
+  static final String LOCKSS_VIA_COMMENT = "(LOCKSS/jetty)";
+
+  /** Create a Via header value:
+   * 1.1 thishost:port (LOCKSS/Jetty)
+   */
+  public String makeVia(String host, int port) {
+    StringBuilder sb = new StringBuilder();
+    sb.append(LOCKSS_VIA_VERSION);
+    sb.append(" ");
+    sb.append(host);
+    if (port != 0) {
+      sb.append(":");
+      sb.append(port);
+    }
+    sb.append(" ");
+    sb.append(LOCKSS_VIA_COMMENT);
+    return sb.toString();
+  }
 
   /** Determine whether the request is from another LOCKSS cache asking for
    * a repair.  This is indicated by the including the string "Repair" as

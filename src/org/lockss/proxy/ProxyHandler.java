@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.77 2013-02-27 06:01:49 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.78 2013-03-14 06:39:16 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.77 2013-02-27 06:01:49 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.78 2013-03-14 06:39:16 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -76,8 +76,6 @@ public class ProxyHandler extends AbstractHttpHandler {
   private static Log jlog = LogFactory.getLog(ProxyHandler.class);
 
 
-  static final String LOCKSS_VIA_VERSION = "1.1";
-  static final String LOCKSS_VIA_COMMENT = "(LOCKSS/jetty)";
   /** a GET of this path results in an index page of all AU manifest
    * pages */
   public static String MANIFEST_INDEX_URL_PATH = "/";
@@ -186,21 +184,12 @@ public class ProxyHandler extends AbstractHttpHandler {
    * 1.1 thishost:port (LOCKSS/Jetty)
    */
   String makeVia(HttpRequest req) {
-    StringBuffer sb = new StringBuffer();
-    sb.append(LOCKSS_VIA_VERSION);
-    sb.append(" ");
-    sb.append(hostname);
+    int port = 0;
     try {
-      int port = req.getHttpConnection().getServerPort();
-      if (port != 0) {
-	sb.append(":");
-	sb.append(port);
-      }
+      port = req.getHttpConnection().getServerPort();
     } catch (Exception ignore) {
     }
-    sb.append(" ");
-    sb.append(LOCKSS_VIA_COMMENT);
-    return sb.toString();
+    return proxyMgr.makeVia(hostname, port);
   }
 
   protected int _tunnelTimeoutMs=250;
@@ -539,7 +528,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
 
       // Proxy headers
-      connection.setRequestProperty("Via", makeVia(request));
+      connection.addRequestProperty(HttpFields.__Via, makeVia(request));
       connection.addRequestProperty(HttpFields.__XForwardedFor,
 				    request.getRemoteAddr());
       // a little bit of cache control
@@ -603,7 +592,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	hdr=connection.getHeaderFieldKey(h);
 	val=connection.getHeaderField(h);
       }
-      response.addField("Via", makeVia(request));
+      response.addField(HttpFields.__Via, makeVia(request));
 
       // Handled
       request.setHandled(true);
@@ -784,7 +773,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
 
       // Proxy-specifix headers
-      conn.addRequestProperty("Via", makeVia(request));
+      conn.addRequestProperty(HttpFields.__Via, makeVia(request));
       conn.addRequestProperty(HttpFields.__XForwardedFor,
 			      request.getRemoteAddr());
       String cookiePolicy = proxyMgr.getCookiePolicy();
@@ -909,7 +898,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	response.addField(hdr,val);
       }
     }
-    response.addField("Via", makeVia(request));
+    response.addField(HttpFields.__Via, makeVia(request));
 
     // Handled
     request.setHandled(true);
