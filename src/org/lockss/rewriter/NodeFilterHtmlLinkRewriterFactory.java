@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.22 2012-12-22 14:15:50 pgust Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.23 2013-03-14 06:38:19 tlipkis Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
                                         String encoding,
                                         String url,
                                         final ServletUtil.LinkTransform srvLink)
-      throws PluginException {
+      throws PluginException, IOException {
     logger.debug2("Rewriting " + url + " in AU " + au);
     final String targetStem = srvLink.rewrite("");  // XXX - should have better xform
     logger.debug2("targetStem: " + targetStem);
@@ -240,6 +240,17 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     NodeFilter linkXform = new OrFilter(filters);
     // Create a transform to apply them
     HtmlTransform htmlXform = HtmlNodeFilterTransform.exclude(linkXform);
+
+    // If the input stream knows the charset used to encode it, use it.
+    if (in instanceof EncodedThing) {
+      String inCharset = ((EncodedThing)in).getCharset();
+      if (!StringUtil.isNullString(inCharset)) {
+	logger.debug2("InputStream encoded with " + inCharset +
+		      ", overriding " + encoding);
+	encoding = inCharset;
+      }
+    }
+
     InputStream result = new HtmlFilterInputStream(in,
                                                    encoding,
                                                    encoding,
