@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.73 2013-03-13 08:44:29 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.74 2013-03-14 06:40:21 tlipkis Exp $
  */
 
 /*
@@ -869,7 +869,8 @@ public class ServeContent extends LockssServlet {
 
     ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
     String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
-    String charset = HeaderUtil.getCharsetFromContentType(ctype);
+    String charset = cu.getEncoding();
+
     if (log.isDebug3()) {
       log.debug3( "Serving cached content for: " + url
 		  + " mime type=" + mimeType
@@ -986,11 +987,7 @@ public class ServeContent extends LockssServlet {
       
       // create reader for input stream
       String ctype = headers.getProperty("Content-Type");
-      String charset = 
-        (ctype == null) ? null : HeaderUtil.getCharsetFromContentType(ctype);
-      if (charset == null) {
-        charset = Constants.DEFAULT_ENCODING;
-      }
+      String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
 
       try {
         Reader reader = new InputStreamReader(input, charset);
@@ -1068,6 +1065,9 @@ public class ServeContent extends LockssServlet {
       }
     }
 
+    resp.addHeader(HttpFields.__Via,
+		   proxyMgr.makeVia(getMachineName(), reqURL.getPort()));
+
     String contentEncoding = conn.getResponseContentEncoding();
     long responseContentLength = conn.getResponseContentLength();
 
@@ -1096,7 +1096,7 @@ public class ServeContent extends LockssServlet {
       resp.setHeader(HttpFields.__ContentEncoding, contentEncoding);
     }
 
-    String charset = HeaderUtil.getCharsetFromContentType(ctype);
+    String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
     handleRewriteInputStream(respStrm, mimeType, charset,
 			     responseContentLength);
   }
@@ -1201,6 +1201,9 @@ public class ServeContent extends LockssServlet {
     // send address of original requester
     conn.addRequestProperty(HttpFields.__XForwardedFor,
                             req.getRemoteAddr());
+    conn.addRequestProperty(HttpFields.__Via,
+			    proxyMgr.makeVia(getMachineName(),
+					     reqURL.getPort()));
 
     String cookiePolicy = proxyMgr.getCookiePolicy();
     if (cookiePolicy != null &&
@@ -1269,6 +1272,7 @@ public class ServeContent extends LockssServlet {
 	// charset.
 	if (rewritten instanceof EncodedThing) {
 	  String rewrittenCharset = ((EncodedThing)rewritten).getCharset();
+	  log.debug3("rewrittenCharset: " + rewrittenCharset);
 	  if (!StringUtil.isNullString(rewrittenCharset)) {
 	    resp.setCharacterEncoding(rewrittenCharset);
 	  }
