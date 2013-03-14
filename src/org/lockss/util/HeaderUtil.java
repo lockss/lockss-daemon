@@ -1,5 +1,5 @@
 /*
- * $Id: HeaderUtil.java,v 1.9 2011-03-03 18:58:06 tlipkis Exp $
+ * $Id: HeaderUtil.java,v 1.10 2013-03-14 06:38:49 tlipkis Exp $
  */
 
 /*
@@ -104,6 +104,19 @@ public class HeaderUtil {
       }
       return charset;
     }
+  }
+
+  /** Return the charset specified in the Content-Type header, or the
+   * default charset.  Never returns null. */
+  public static String getCharsetOrDefaultFromContentType(String contentType) {
+    if (contentType == null) {
+      return Constants.DEFAULT_ENCODING;
+    }
+    String charset = getCharsetFromContentType(contentType);
+    if (StringUtil.isNullString(charset)) {
+      return Constants.DEFAULT_ENCODING;
+    }
+    return charset;
   }
 
   static final String CHARSET = "charset";

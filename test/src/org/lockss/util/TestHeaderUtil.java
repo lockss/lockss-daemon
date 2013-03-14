@@ -1,5 +1,5 @@
 /*
- * $Id: TestHeaderUtil.java,v 1.6 2011-03-03 18:58:06 tlipkis Exp $
+ * $Id: TestHeaderUtil.java,v 1.7 2013-03-14 06:38:48 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,26 @@ public class TestHeaderUtil extends LockssTestCase {
 		 HeaderUtil.getCharsetFromContentType("text/html;charset=foo-1;other=stuff"));
     assertSame(HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""),
 	       HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""));
+  }
+
+  String gcodfct(String ctype) {
+    return HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
+  }
+
+  public void testGetCharsetOrDefaultFromContentType() {
+    String DEF = Constants.DEFAULT_ENCODING;
+    assertEquals(DEF, gcodfct(null));
+    assertEquals(DEF, gcodfct("text/html"));
+    assertEquals(DEF, gcodfct("text/html;"));
+    assertEquals(DEF, gcodfct("text/html;foobar"));
+    assertEquals(DEF, gcodfct("text/html;charset"));
+    assertEquals("utf-8", gcodfct("text/html;charset=UTF-8"));
+    assertEquals("utf-8", gcodfct("text/html;CHARSET=UTF-8"));
+    assertEquals("iso8859-1", gcodfct("text/html;charset=\"iso8859-1\""));
+    assertEquals("foo-1", gcodfct("text/html;charset=\"foo-1\";other=stuff"));
+    assertEquals("foo-1", gcodfct("text/html;charset=foo-1;other=stuff"));
+    assertSame(gcodfct("text/html;charset=\"iso8859-1\""),
+	       gcodfct("text/html;charset=\"iso8859-1\""));
   }
 
   public void testIsTokenChar() {

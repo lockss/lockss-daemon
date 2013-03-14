@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.36 2013-01-02 20:53:09 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.37 2013-03-14 06:38:49 tlipkis Exp $
  */
 
 /*
@@ -542,6 +542,17 @@ public class AuUtil {
       return (CachedUrl)node;
     }
     return null;
+  }
+
+  /** Return the charset specified in the UC's response headers, or the
+   * default charset.  Never returns null. */
+  public static String getCharsetOrDefault(UrlCacher uc) {
+    CIProperties props = uc.getUncachedProperties();
+    if (props == null) {
+      return Constants.DEFAULT_ENCODING;
+    }
+    String ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+    return HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
   }
 
   /** Return true iff the AU specifies archive file types whose memebers

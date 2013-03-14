@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.20 2013-01-02 20:53:09 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.21 2013-03-14 06:38:49 tlipkis Exp $
  */
 
 /*
@@ -415,6 +415,33 @@ public class TestAuUtil extends LockssTestCase {
     mau.addUrl(url, "foo");
     CachedUrl cu2 = AuUtil.getCu(mcus);
     assertEquals(url, cu2.getUrl());
+  }
+
+  public void assertGetCharsetOrDefault(String expCharset, Properties props) {
+    MockUrlCacher muc = new MockUrlCacher("url", new MockArchivalUnit());
+    if (props != null) {
+      CIProperties cip = CIProperties.fromProperties(props);
+      muc.setUncachedProperties(cip);
+    }
+    assertEquals(expCharset, AuUtil.getCharsetOrDefault(muc));
+  }
+
+  static String DEF = Constants.DEFAULT_ENCODING;
+  static String CT_PROP = CachedUrl.PROPERTY_CONTENT_TYPE;
+
+  public void testGetCharsetOrDefault() {
+    assertGetCharsetOrDefault(DEF, null);
+    assertGetCharsetOrDefault(DEF, PropUtil.fromArgs("foo", "bar"));
+    assertGetCharsetOrDefault(DEF, PropUtil.fromArgs(CT_PROP,
+						     "text/html"));
+    assertGetCharsetOrDefault(DEF, PropUtil.fromArgs(CT_PROP,
+						     "text/html;charset"));
+    assertGetCharsetOrDefault("utf-8",
+			      PropUtil.fromArgs(CT_PROP,
+						"text/html;charset=utf-8"));
+    assertGetCharsetOrDefault("utf-8",
+			      PropUtil.fromArgs(CT_PROP,
+						"text/html;charset=\"utf-8\""));
   }
 
   private static class LocalMockArchivalUnit extends MockArchivalUnit {
