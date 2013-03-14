@@ -24,16 +24,16 @@
     au < released ; 1991 ; Information Resources Management Journal (IRMJ) Volume 4 ; 4 >
     au < released ; 1992 ; Information Resources Management Journal (IRMJ) Volume 5 ; 5 >
     au < released ; 1993 ; Information Resources Management Journal (IRMJ) Volume 6 ; 6 >
-    au < testing ; 1994 ; Information Resources Management Journal (IRMJ) Volume 7 ; 7 >
+    au < ready ; 1994 ; Information Resources Management Journal (IRMJ) Volume 7 ; 7 >
     au < released ; 1995 ; Information Resources Management Journal (IRMJ) Volume 8 ; 8 >
     au < released ; 1996 ; Information Resources Management Journal (IRMJ) Volume 9 ; 9 >
     au < released ; 1997 ; Information Resources Management Journal (IRMJ) Volume 10 ; 10 >
-    au < testing ; 1998 ; Information Resources Management Journal (IRMJ) Volume 11 ; 11 >
+    au < ready ; 1998 ; Information Resources Management Journal (IRMJ) Volume 11 ; 11 >
     au < released ; 1999 ; Information Resources Management Journal (IRMJ) Volume 12 ; 12 >
     au < released ; 2000 ; Information Resources Management Journal (IRMJ) Volume 13 ; 13 >
     au < released ; 2001 ; Information Resources Management Journal (IRMJ) Volume 14 ; 14 >
     au < released ; 2002 ; Information Resources Management Journal (IRMJ) Volume 15 ; 15 >
-    au < testing ; 2003 ; Information Resources Management Journal (IRMJ) Volume 16 ; 16 >
+    au < ready ; 2003 ; Information Resources Management Journal (IRMJ) Volume 16 ; 16 >
     au < released ; 2004 ; Information Resources Management Journal (IRMJ) Volume 17 ; 17 >
     au < released ; 2005 ; Information Resources Management Journal (IRMJ) Volume 18 ; 18 >
     au < released ; 2006 ; Information Resources Management Journal (IRMJ) Volume 19 ; 19 >
@@ -58,8 +58,8 @@
     comment[0] = content not online yet
     param[journal_issn] = 1080-286X
 
-    au < testing ; 2011 ; Information Technology Management Volume 24 ; 24 >
-    au < testing ; 2012 ; Information Technology Management Volume 25 ; 25 >
+    au < exists ; 2011 ; Information Technology Management Volume 24 ; 24 >
+    au < exists ; 2012 ; Information Technology Management Volume 25 ; 25 >
     au < expected ; 2013 ; Information Technology Management Volume 26 ; 26 >
 
 
@@ -496,7 +496,7 @@
     >
     param[journal_issn] = 1557-3958
 
-    au < testing ; 2007 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 1 ; 1 >
+    au < ready ; 2007 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 1 ; 1 >
     au < released ; 2008 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 2 ; 2 >
     au < released ; 2009 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 3 ; 3 >
     au < released ; 2010 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 4 ; 4 >
@@ -755,7 +755,7 @@
     >
     param[journal_issn] = 1947-3494
 
-    au < testing ; 2010 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 1 ; 1 >
+    au < ready ; 2010 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 4 ; 4 >
@@ -772,14 +772,14 @@
     >
     param[journal_issn] = 1539-3100
 
-    au < manifest ; 2003 ; International Journal of Distance Education Technologies (IJDET) Volume 1 ; 1 >
-    au < manifest ; 2004 ; International Journal of Distance Education Technologies (IJDET) Volume 2 ; 2 >
-    au < manifest ; 2005 ; International Journal of Distance Education Technologies (IJDET) Volume 3 ; 3 >
-    au < manifest ; 2006 ; International Journal of Distance Education Technologies (IJDET) Volume 4 ; 4 >
-    au < manifest ; 2007 ; International Journal of Distance Education Technologies (IJDET) Volume 5 ; 5 >
-    au < manifest ; 2008 ; International Journal of Distance Education Technologies (IJDET) Volume 6 ; 6 >
-    au < manifest ; 2009 ; International Journal of Distance Education Technologies (IJDET) Volume 7 ; 7 >
-    au < manifest ; 2010 ; International Journal of Distance Education Technologies (IJDET) Volume 8 ; 8 >
+    au < testing ; 2003 ; International Journal of Distance Education Technologies (IJDET) Volume 1 ; 1 >
+    au < testing ; 2004 ; International Journal of Distance Education Technologies (IJDET) Volume 2 ; 2 >
+    au < testing ; 2005 ; International Journal of Distance Education Technologies (IJDET) Volume 3 ; 3 >
+    au < testing ; 2006 ; International Journal of Distance Education Technologies (IJDET) Volume 4 ; 4 >
+    au < testing ; 2007 ; International Journal of Distance Education Technologies (IJDET) Volume 5 ; 5 >
+    au < testing ; 2008 ; International Journal of Distance Education Technologies (IJDET) Volume 6 ; 6 >
+    au < testing ; 2009 ; International Journal of Distance Education Technologies (IJDET) Volume 7 ; 7 >
+    au < testing ; 2010 ; International Journal of Distance Education Technologies (IJDET) Volume 8 ; 8 >
     au < released ; 2011 ; International Journal of Distance Education Technologies (IJDET) Volume 9 ; 9 >
     au < released ; 2012 ; International Journal of Distance Education Technologies (IJDET) Volume 10 ; 10 >
     au < expected ; 2013 ; International Journal of Distance Education Technologies (IJDET) Volume 11 ; 11 >
@@ -796,7 +796,7 @@
     >
     param[journal_issn] = 1947-3532
 
-    au < manifest ; 2010 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 1 ; 1 >
+    au < testing ; 2010 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 4 ; 4 >
@@ -814,8 +814,8 @@
     >
     param[journal_issn] = 1937-9633
 
-    au < manifest ; 2009 ; International Journal of E-Adoption (IJEA) Volume 1 ; 1 >
-    au < manifest ; 2010 ; International Journal of E-Adoption (IJEA) Volume 2 ; 2 >
+    au < testing ; 2009 ; International Journal of E-Adoption (IJEA) Volume 1 ; 1 >
+    au < testing ; 2010 ; International Journal of E-Adoption (IJEA) Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of E-Adoption (IJEA) Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of E-Adoption (IJEA) Volume 4 ; 4 >
     au < expected ; 2013 ; International Journal of E-Adoption (IJEA) Volume 5 ; 5 >
@@ -833,12 +833,12 @@
     >
     param[journal_issn] = 1548-1131
 
-    au < manifest ; 2005 ; International Journal of E-Business Research (IJEBR) Volume 1 ; 1 >
-    au < manifest ; 2006 ; International Journal of E-Business Research (IJEBR) Volume 2 ; 2 >
-    au < manifest ; 2007 ; International Journal of E-Business Research (IJEBR) Volume 3 ; 3 >
-    au < manifest ; 2008 ; International Journal of E-Business Research (IJEBR) Volume 4 ; 4 >
-    au < manifest ; 2009 ; International Journal of E-Business Research (IJEBR) Volume 5 ; 5 >
-    au < manifest ; 2010 ; International Journal of E-Business Research (IJEBR) Volume 6 ; 6 >
+    au < testing ; 2005 ; International Journal of E-Business Research (IJEBR) Volume 1 ; 1 >
+    au < testing ; 2006 ; International Journal of E-Business Research (IJEBR) Volume 2 ; 2 >
+    au < testing ; 2007 ; International Journal of E-Business Research (IJEBR) Volume 3 ; 3 >
+    au < testing ; 2008 ; International Journal of E-Business Research (IJEBR) Volume 4 ; 4 >
+    au < testing ; 2009 ; International Journal of E-Business Research (IJEBR) Volume 5 ; 5 >
+    au < testing ; 2010 ; International Journal of E-Business Research (IJEBR) Volume 6 ; 6 >
     au < released ; 2011 ; International Journal of E-Business Research (IJEBR) Volume 7 ; 7 >
     au < released ; 2012 ; International Journal of E-Business Research (IJEBR) Volume 8 ; 8 >
     au < manifest ; 2013 ; International Journal of E-Business Research (IJEBR) Volume 9 ; 9 >
@@ -856,12 +856,12 @@
 
      param[journal_issn] = 1548-3673
 
-     au < manifest ; 2005 ; International Journal of e-Collaboration (IJeC) Volume 1 ; 1 >
-     au < manifest ; 2006 ; International Journal of e-Collaboration (IJeC) Volume 2 ; 2 >
-     au < manifest ; 2007 ; International Journal of e-Collaboration (IJeC) Volume 3 ; 3 >
-     au < manifest ; 2008 ; International Journal of e-Collaboration (IJeC) Volume 4 ; 4 >
-     au < manifest ; 2009 ; International Journal of e-Collaboration (IJeC) Volume 5 ; 5 >
-     au < manifest ; 2010 ; International Journal of e-Collaboration (IJeC) Volume 6 ; 6 >
+     au < testing ; 2005 ; International Journal of e-Collaboration (IJeC) Volume 1 ; 1 >
+     au < testing ; 2006 ; International Journal of e-Collaboration (IJeC) Volume 2 ; 2 >
+     au < testing ; 2007 ; International Journal of e-Collaboration (IJeC) Volume 3 ; 3 >
+     au < testing ; 2008 ; International Journal of e-Collaboration (IJeC) Volume 4 ; 4 >
+     au < testing ; 2009 ; International Journal of e-Collaboration (IJeC) Volume 5 ; 5 >
+     au < testing ; 2010 ; International Journal of e-Collaboration (IJeC) Volume 6 ; 6 >
      au < released ; 2011 ; International Journal of e-Collaboration (IJeC) Volume 7 ; 7 >
      au < released ; 2012 ; International Journal of e-Collaboration (IJeC) Volume 8 ; 8 >
      au < manifest ; 2013 ; International Journal of e-Collaboration (IJeC) Volume 9 ; 9 >
