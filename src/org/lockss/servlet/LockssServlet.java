@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.131 2013-03-11 05:41:21 clairegriffin Exp $
+ * $Id: LockssServlet.java,v 1.132 2013-03-14 06:39:59 tlipkis Exp $
  */
 
 /*
@@ -387,7 +387,7 @@ public abstract class LockssServlet extends HttpServlet
     return getHeading(myServletDescr());
   }
 
-  String getLocalIPAddr() {
+  protected String getLocalIPAddr() {
     if (localAddr == null) {
       try {
 	IPAddr localHost = IPAddr.getLocalHost();
@@ -412,15 +412,15 @@ public abstract class LockssServlet extends HttpServlet
     return ip;
   }
 
-  String getRequestHost() {
+  protected String getRequestHost() {
     return reqURL.getHost();
   }
 
-  String getMachineName() {
+  protected String getMachineName() {
     return PlatformUtil.getLocalHostname();
   }
 
-  String getMachineIpAddr() {
+  protected String getMachineIpAddr() {
     return CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_IP_ADDRESS);
   }
 
@@ -454,7 +454,7 @@ public abstract class LockssServlet extends HttpServlet
 //   }
 
   // return IP given name or IP
-  String getMachineIP(String name) {
+  protected String getMachineIP(String name) {
     try {
       IPAddr inet = IPAddr.getByName(name);
       return inet.getHostAddress();
