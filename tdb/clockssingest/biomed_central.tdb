@@ -334,11 +334,11 @@
       comment[0] = This journal stopped publishing after Vol 12, in 2012. The journal merged with another and the journal_code changed.
       attr[journal_code] = bmcclinpharmacol
 
-      au < down ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 ; 8 >
-      au < down ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
-      au < down ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
+      au < down ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 [to delete] ; 8 >
+      au < down ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 [to delete] ; 9 >
+      au < down ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 [to delete] ; 10 >
       au < down ; crawling ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
-      au < down ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
+      au < down ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 [to delete] ; 12 >
       
     }
 
