@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlLinkRewriterFactory.java,v 1.1 2012-12-30 15:39:28 pgust Exp $
+ * $Id: IngentaHtmlLinkRewriterFactory.java,v 1.2 2013-03-14 06:26:28 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.ingenta;
 
 import java.io.InputStream;
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
@@ -105,7 +106,7 @@ public class IngentaHtmlLinkRewriterFactory
       String mimeType, ArchivalUnit au, InputStream in,
       String encoding, String url,
       ServletUtil.LinkTransform xfm)
-  throws PluginException {
+      throws PluginException, IOException {
     InputStream rwIn = 
         createIngentaHtmlLinkRewriter(au, in, encoding);
     return super.createLinkRewriter(mimeType, au, rwIn, encoding, url, xfm);
