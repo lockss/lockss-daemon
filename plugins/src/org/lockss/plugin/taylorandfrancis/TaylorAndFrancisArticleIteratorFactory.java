@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisArticleIteratorFactory.java,v 1.3 2013-02-07 22:44:37 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisArticleIteratorFactory.java,v 1.4 2013-03-14 19:32:16 alexandraohlson Exp $
  */
 
 /*
@@ -33,11 +33,19 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.taylorandfrancis;
 
 import java.util.Iterator;
-import java.util.regex.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.lockss.daemon.*;
-import org.lockss.extractor.*;
-import org.lockss.plugin.*;
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.ArticleMetadataExtractorFactory;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ArticleFiles;
+import org.lockss.plugin.ArticleIteratorFactory;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.util.Logger;
 
 
@@ -46,13 +54,13 @@ public class TaylorAndFrancisArticleIteratorFactory
                ArticleMetadataExtractorFactory {
 
   protected static Logger log = Logger.getLogger("TaylorAndFrancisArticleIteratorFactory");
-  
+
   protected static final String ROOT_TEMPLATE = "\"%sdoi\", base_url"; // params from tdb file corresponding to AU
   // base_url/doi/
-  
+
   protected static final String PATTERN_TEMPLATE = "\"^%sdoi/(full|pdf)/\", base_url";
 
-  
+
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
@@ -67,19 +75,23 @@ public class TaylorAndFrancisArticleIteratorFactory
 
   protected static class TaylorAndFrancisArticleIterator extends SubTreeArticleIterator {
 
-    protected Pattern HTML_PATTERN = Pattern.compile("/doi/full/(.*)$", Pattern.CASE_INSENSITIVE);
-    
-    protected Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/(.*)$", Pattern.CASE_INSENSITIVE);
-    
+    /*
+     * The content lives under a DOI: eg. doi/full/10.1080/blahblah
+     *   but should not be any lower than that. So check for this....
+     */
+    protected Pattern HTML_PATTERN = Pattern.compile("/doi/full/([0-9.]*/[^/]*)$", Pattern.CASE_INSENSITIVE);
+
+    protected Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([0-9.]*/[^/]*)$", Pattern.CASE_INSENSITIVE);
+
     protected MetadataTarget target;
-    
+
     public TaylorAndFrancisArticleIterator(ArchivalUnit au,
                                      SubTreeArticleIterator.Spec spec,
                                      MetadataTarget target /* unnecessary, see below */) {
       super(au, spec);
       this.target = target; // Unnecessary: access via spec.getTarget() visible from parent class
     }
-    
+
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
@@ -98,7 +110,7 @@ public class TaylorAndFrancisArticleIteratorFactory
       log.warning("Mismatch between article iterator factory and article iterator: " + url);
       return null;
     }
-    
+
     protected ArticleFiles processFullTextHtml(CachedUrl htmlCu,
                                                Matcher htmlMat) {
       ArticleFiles af = new ArticleFiles();
@@ -111,7 +123,7 @@ public class TaylorAndFrancisArticleIteratorFactory
       }
       return af;
     }
-    
+
     protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
       CachedUrl htmlCu = au.makeCachedUrl(pdfMat.replaceFirst("/doi/full/$1"));
       if (htmlCu != null && htmlCu.hasContent()) {
@@ -126,7 +138,7 @@ public class TaylorAndFrancisArticleIteratorFactory
       }
       return af;
     }
-    
+
     protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
       CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/doi/pdf/$1"));
       if (pdfCu != null && pdfCu.hasContent()) {
@@ -142,7 +154,7 @@ public class TaylorAndFrancisArticleIteratorFactory
         if (af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
           af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
         }
-      } 
+      }
     }
 
     protected void guessReferences(ArticleFiles af, Matcher mat) {
@@ -152,7 +164,7 @@ public class TaylorAndFrancisArticleIteratorFactory
       }
     }
   }
-  
+
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
