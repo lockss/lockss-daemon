@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Michigan State University
+  >
+
+  {
+  
+    title < 
+      name = Standards in Genomic Sciences ;
+      eissn = 1944-3277 
+    >
+     plugin = org.lockss.plugin.ojs2.OJS2Plugin
+     param[base_url] = http://standardsingenomics.org/
+     param[journal_id] = sigen
+     implicit < status ; year ; param[year] ; name ; volume >
+     
+      au < exists ; 2009 ; 2009 ; Standards in Genomic Sciences Volume 1 ; 1 >  
+      au < exists ; 2010 ; 2010 ; Standards in Genomic Sciences Volume 2-3 ; 2-3 >  
+      au < exists ; 2011 ; 2011 ; Standards in Genomic Sciences Volume 4-5 ; 4-5 >  
+      au < exists ; 2012 ; 2012 ; Standards in Genomic Sciences Volume 6-7 ; 6-7 >  
+      au < expected ; 2013 ; 2013 ; Standards in Genomic Sciences Volume 7-? ; 7-? >  
+     
+  }
+    
+}
