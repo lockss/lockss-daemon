@@ -1,0 +1,187 @@
+{
+  publisher <
+    name = University of Pittsburgh University Library System
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; param[year] ; name ; volume >
+
+  {
+
+      title <
+        name = Central Asian Journal of Global Health ;
+        eissn = 2166-7403
+      >
+
+      param[base_url] = http://cajgh.pitt.edu
+      param[journal_id] = cajgh
+
+      au < exists ; 2012 ; 2012 ; Central Asian Journal of Global Health Volume 1 ; 1 >
+      au < expected ; 2013 ; 2013 ; Central Asian Journal of Global Health Volume 2 ; 2 >
+
+  }
+
+  {
+
+      title <
+        name = Dialogic Pedagogy: An International Online Journal ;
+        eissn = 2325-3290
+      >
+
+      param[base_url] = http://dpj.pitt.edu
+      param[journal_id] = dpj1
+
+      au < exists ; 2013 ; 2013 ; Dialogic Pedagogy: An International Online Journal Volume 1 ; 1 >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Law and Commerce ;
+        issn = 0733-2491 ;
+        eissn = 2164-7984
+      >
+
+      param[base_url] = http://jlc.law.pitt.edu
+      param[journal_id] = jlc
+
+      au < exists ; 2008 ; 2008 ; Journal of Law and Commerce Volume 26-27 ; 26-27 >
+      au < exists ; 2009 ; 2009 ; Journal of Law and Commerce Volume 27-28 ; 27-28 >
+      au < exists ; 2010 ; 2010 ; Journal of Law and Commerce Volume 28-29 ; 28-29 >
+      au < exists ; 2011 ; 2011 ; Journal of Law and Commerce Volume 29 ; 29 >
+      au < exists ; 2012 ; 2012 ; Journal of Law and Commerce Volume 30 ; 30 >
+      au < expected ; 2013 ; 2013 ; Journal of Law and Commerce Volume 31 ; 31 >
+
+  }
+
+  {
+
+      title <
+        name = Motivational Interviewing: Training, Research, Implementation, Practice ;
+        eissn = 2160-584X
+      >
+
+      param[base_url] = http://www.mitrip.org
+      param[journal_id] = mitrip
+
+      au < exists ; 2012 ; 2012 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 ; 1 >
+      au < exists ; 2013 ; 2013 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1-? ; 1-? >
+
+  }
+
+  {
+
+      title <
+        name = Pittsburgh Journal of Environmental and Public Health Law ;
+        eissn = 2164-7976
+      >
+
+      param[base_url] = http://pjephl.law.pitt.edu
+      param[journal_id] = pjephl
+
+      au < exists ; 2007 ; 2007 ; Pittsburgh Journal of Environmental and Public Health Law Volume 1 ; 1 >
+      au < exists ; 2008 ; 2008 ; Pittsburgh Journal of Environmental and Public Health Law Volume 2 ; 2 >
+      au < exists ; 2009 ; 2009 ; Pittsburgh Journal of Environmental and Public Health Law Volume 3 ; 3 >
+      au < exists ; 2010 ; 2010 ; Pittsburgh Journal of Environmental and Public Health Law Volume 4 ; 4 >
+      au < exists ; 2011 ; 2011 ; Pittsburgh Journal of Environmental and Public Health Law Volume 5 ; 5 >
+      au < exists ; 2012 ; 2012 ; Pittsburgh Journal of Environmental and Public Health Law Volume 6 ; 6 >
+      au < exists ; 2013 ; 2013 ; Pittsburgh Journal of Environmental and Public Health Law Volume 7 ; 7 >
+
+  }
+
+  {
+
+      title <
+        name = Pittsburgh Journal of Technology Law and Policy ;
+        issn = 1087-6995 ;
+        eissn = 2164-800X
+      >
+
+      param[base_url] = http://tlp.law-dev.library.pitt.edu
+      param[journal_id] = tlp
+
+      au < exists ; 2001 ; 2001 ; Pittsburgh Journal of Technology Law and Policy Volume 1 ; 1 >
+      au < exists ; 2002 ; 2002 ; Pittsburgh Journal of Technology Law and Policy Volume 2 ; 2 >
+      au < exists ; 2003 ; 2003 ; Pittsburgh Journal of Technology Law and Policy Volume 3 ; 3 >
+      au < exists ; 2004 ; 2004 ; Pittsburgh Journal of Technology Law and Policy Volume 4 ; 4 >
+      au < exists ; 2005 ; 2005 ; Pittsburgh Journal of Technology Law and Policy Volume 5 ; 5 >
+      au < exists ; 2006 ; 2006 ; Pittsburgh Journal of Technology Law and Policy Volume 6 ; 6 >
+      au < exists ; 2007 ; 2007 ; Pittsburgh Journal of Technology Law and Policy Volume 7 ; 7 >
+      au < exists ; 2008 ; 2008 ; Pittsburgh Journal of Technology Law and Policy Volume 8 ; 8 >
+      au < exists ; 2009 ; 2009 ; Pittsburgh Journal of Technology Law and Policy Volume 9 ; 9 >
+      au < exists ; 2010 ; 2010 ; Pittsburgh Journal of Technology Law and Policy Volume 10 ; 10 >
+      au < exists ; 2011 ; 2011 ; Pittsburgh Journal of Technology Law and Policy Volume 11 ; 11 >
+      au < exists ; 2012 ; 2012 ; Pittsburgh Journal of Technology Law and Policy Volume 12 ; 12 >
+
+  }
+
+  {
+
+      title <
+        name = Pittsburgh Papers on the European Union ;
+        eissn = 2161-6590
+      >
+
+      param[base_url] = http://pgheupapers.pitt.edu
+      param[journal_id] = pgheupapers
+
+      au < exists ; 2012 ; 2012 ; Pittsburgh Papers on the European Union Volume 1 ; 1 >
+      au < expected ; 2013 ; 2013 ; Pittsburgh Papers on the European Union Volume 2 ; 2 >
+
+  }
+
+  {
+
+      title <
+        name = SHASHI: The Journal of Japanese Business and Company History ;
+        eissn = 2169-0820
+      >
+
+      param[base_url] = http://shashi.pitt.edu
+      param[journal_id] = shashi
+
+      au < exists ; 2012 ; 2012 ; SHASHI: The Journal of Japanese Business and Company History Volume 1 ; 1 >
+      au < expected ; 2013 ; 2013 ; SHASHI: The Journal of Japanese Business and Company History Volume 2 ; 2 >
+
+  }
+
+  {
+
+      title <
+        name = University of Pittsburgh Law Review ;
+        issn = 0041-9915 ;
+        eissn = 1942-8405
+      >
+
+      param[base_url] = http://lawreview.law-dev.library.pitt.edu
+      param[journal_id] = lawreview
+
+      au < exists ; 2003 ; 2003 ; University of Pittsburgh Law Review Volume 65 ; 65 >
+      au < exists ; 2004 ; 2004 ; University of Pittsburgh Law Review Volume 65-66 ; 65-66 >
+      au < exists ; 2005 ; 2005 ; University of Pittsburgh Law Review Volume 66-67 ; 66-67 >
+      au < exists ; 2006 ; 2006 ; University of Pittsburgh Law Review Volume 67-68 ; 67-68 >
+      au < exists ; 2007 ; 2007 ; University of Pittsburgh Law Review Volume 68-69 ; 68-69 >
+      au < exists ; 2008 ; 2008 ; University of Pittsburgh Law Review Volume 69-70 ; 69-70 >
+      au < exists ; 2009 ; 2009 ; University of Pittsburgh Law Review Volume 71 ; 71 >
+      au < exists ; 2010 ; 2010 ; University of Pittsburgh Law Review Volume 72 ; 72 >
+      au < exists ; 2011 ; 2011 ; University of Pittsburgh Law Review Volume 72-73 ; 72-73 >
+      au < expected ; 2012 ; 2012 ; University of Pittsburgh Law Review Volume 74 ; 74 >
+
+  }
+
+  {
+
+      title <
+        name = Journal of World-Historical Information ;
+        eissn = 2169-0812
+      >
+
+      param[base_url] = http://jwhi.pitt.edu
+      param[journal_id] = jwhi
+
+      au < exists ; 2013 ; 2013 ; Journal of World-Historical Information Volume 1 ; 1 >
+
+  }
+
+}
