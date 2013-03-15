@@ -17,16 +17,15 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jmor
-      comment[notReady] = old ongoing permission problem RT3965
   
-      au < notReady ; 2005 ; Journal of Mammalian Ova Research Volume 22 ; 22 >
-      au < notReady ; 2006 ; Journal of Mammalian Ova Research Volume 23 ; 23 >
-      au < notReady ; 2007 ; Journal of Mammalian Ova Research Volume 24 ; 24 >
-      au < notReady ; 2008 ; Journal of Mammalian Ova Research Volume 25 ; 25 >
+      au < ready ; 2005 ; Journal of Mammalian Ova Research Volume 22 ; 22 >
+      au < ready ; 2006 ; Journal of Mammalian Ova Research Volume 23 ; 23 >
+      au < ready ; 2007 ; Journal of Mammalian Ova Research Volume 24 ; 24 >
+      au < ready ; 2008 ; Journal of Mammalian Ova Research Volume 25 ; 25 >
       au < ready ; 2009 ; Journal of Mammalian Ova Research Volume 26 ; 26 >
-      au < testing ; 2010 ; Journal of Mammalian Ova Research Volume 27 ; 27 >
-      au < notReady ; 2011 ; Journal of Mammalian Ova Research Volume 28 ; 28 >
-      au < testing ; 2012 ; Journal of Mammalian Ova Research Volume 29 ; 29 >
+      au < ready ; 2010 ; Journal of Mammalian Ova Research Volume 27 ; 27 >
+      au < ready ; 2011 ; Journal of Mammalian Ova Research Volume 28 ; 28 >
+      au < ready ; 2012 ; Journal of Mammalian Ova Research Volume 29 ; 29 >
       au < expected ; 2013 ; Journal of Mammalian Ova Research Volume 30 ; 30 >
     }
 
