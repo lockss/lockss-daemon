@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.62 2012-09-06 04:05:37 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.63 2013-03-16 22:04:00 tlipkis Exp $
  */
 
 /*
@@ -50,12 +50,14 @@ import org.lockss.extractor.*;
 import org.lockss.rewriter.*;
 
 public class TestBaseArchivalUnit extends LockssTestCase {
+  private static final String BASE_URL = "http://www.example.com/foo/";
+  private static final String START_URL = BASE_URL + "/index.html";
+  private static final String AU_NAME = "MockBaseArchivalUnit";
+
+
   private PollManager pollMgr;
   private MyBaseArchivalUnit mbau;
   private MyMockPlugin mplug;
-  private String baseUrl = "http://www.example.com/foo/";
-  private String startUrl = baseUrl + "/index.html";
-  private String auName = "MockBaseArchivalUnit";
   private CrawlRule crawlRule = null;
 
   public void setUp() throws Exception {
@@ -63,18 +65,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     setUpCacheDir();
 
-    MockLockssDaemon daemon = getMockLockssDaemon();
-    pollMgr = daemon.getPollManager();
+    pollMgr = getMockLockssDaemon().getPollManager();
 
-    List rules = new LinkedList();
-    // exclude anything which doesn't start with our base url
-    rules.add(new CrawlRules.RE("^" + baseUrl, CrawlRules.RE.NO_MATCH_EXCLUDE));
-    // include the start url
-    rules.add(new CrawlRules.RE(startUrl, CrawlRules.RE.MATCH_INCLUDE));
-    CrawlRule rule = new CrawlRules.FirstMatch(rules);
-    mplug = new MyMockPlugin();
-    mplug.initPlugin(daemon);
-    mbau = new MyBaseArchivalUnit(mplug, auName, rule, startUrl);
+    mbau = makeMbau(AU_NAME, BASE_URL, START_URL);
   }
 
   public void tearDown() throws Exception {
@@ -82,6 +75,20 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     super.tearDown();
   }
 
+  MyBaseArchivalUnit makeMbau(String name, String baseUrl, String startUrl)
+      throws LockssRegexpException {
+    List rules = new LinkedList();
+    // exclude anything which doesn't start with our base url
+    rules.add(new CrawlRules.RE("^" + baseUrl, CrawlRules.RE.NO_MATCH_EXCLUDE));
+    // include the start url
+    rules.add(new CrawlRules.RE(startUrl, CrawlRules.RE.MATCH_INCLUDE));
+    CrawlRule rule = new CrawlRules.FirstMatch(rules);
+    mplug = new MyMockPlugin();
+    mplug.initPlugin(getMockLockssDaemon());
+    MyBaseArchivalUnit au =
+      new MyBaseArchivalUnit(mplug, name, rule, startUrl);
+    return au;
+  }
 
   public void testIllConst() {
     try {
@@ -103,13 +110,13 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     // cofiguration return by getConfiguration same as one previously set
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     Configuration exp = ConfigurationUtil.fromProps(props);
     mbau.setConfiguration(exp);
     assertEquals(exp, mbau.getConfiguration());
     BaseArchivalUnit.ParamHandlerMap paramMap = mbau.getParamMap();
-    assertEquals(baseUrl,
+    assertEquals(BASE_URL,
 		 paramMap.getUrl(BaseArchivalUnit.KEY_AU_BASE_URL).toString());
     assertEquals("www.example.com",
 		 paramMap.getString(ConfigParamDescr.BASE_URL.getKey() +
@@ -124,13 +131,13 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     mplug.setAuConfigDescrs(ListUtil.list(ConfigParamDescr.BASE_URL,
 					  ConfigParamDescr.YEAR));
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.YEAR.getKey(), Integer.toString(year));
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau = new MyBaseArchivalUnit(mplug);
     mbau.setConfiguration(config);
     BaseArchivalUnit.ParamHandlerMap paramMap = mbau.getParamMap();
-    assertEquals(baseUrl,
+    assertEquals(BASE_URL,
 		 paramMap.getUrl(BaseArchivalUnit.KEY_AU_BASE_URL).toString());
     assertEquals("www.example.com",
 		 paramMap.getString(ConfigParamDescr.BASE_URL.getKey() +
@@ -160,7 +167,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     try {
       config =
 	ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
-				   baseUrl);
+				   BASE_URL);
       mbau.setConfiguration(config);
       fail("Missing required param (volume) should throw");
     } catch (ConfigurationException ex) {}
@@ -175,18 +182,18 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void testIllConfigChange() throws ConfigurationException {
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     Configuration exp = ConfigurationUtil.fromProps(props);
     mbau.setConfiguration(exp);
     assertEquals(exp, mbau.getConfiguration());
 
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), "not" + baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), "not" + BASE_URL);
     try {
       mbau.setConfiguration(ConfigurationUtil.fromProps(props));
       fail("Changing definitional param (base_url) should throw");
     } catch (ConfigurationException ex) {}
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     mbau.setConfiguration(exp);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "11");
     try {
@@ -257,7 +264,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   public void testGetAuId() throws ConfigurationException {
     // cofiguration return by getConfiguration same as one previously set
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setConfiguration(config);
@@ -276,7 +283,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     ConfigurationUtil.setFromArgs(BaseArchivalUnit.PARAM_MIN_FETCH_DELAY,
 				  "12004");
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setConfiguration(config);
@@ -287,7 +294,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     ConfigurationUtil.setFromArgs(BaseArchivalUnit.PARAM_MIN_FETCH_DELAY,
 				  "17");
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setConfiguration(config);
@@ -298,7 +305,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     ConfigurationUtil.setFromArgs(BaseArchivalUnit.PARAM_MIN_FETCH_DELAY,
 				  "25");
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.getParamMap().putLong(BaseArchivalUnit.KEY_AU_FETCH_DELAY, 17);
@@ -315,7 +322,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void testFindFetchRateLimiterAu() throws Exception {
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     Configuration config = ConfigurationUtil.fromProps(props);
 
@@ -390,7 +397,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     mbau3.getParamMap().putString(BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE,
 				  "host:base_url");
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     mbau.setConfiguration(ConfigurationUtil.fromProps(props));
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "12");
@@ -427,7 +434,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     setTCAttrs(mbau3, "server", "s1").put("client", "s1");
     setTCAttrs(mbau4, "server", "s1");
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setConfiguration(config);
@@ -462,11 +469,11 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   }
 
   public void testGetName() throws ConfigurationException {
-    String expectedReturn = auName;
+    String expectedReturn = AU_NAME;
     String actualReturn = mbau.getName();
     assertNull(actualReturn);
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     ConfigParamDescr descr = ConfigParamDescr.BASE_URL;
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
@@ -491,12 +498,12 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void testLoadConfigUrl() throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     ConfigParamDescr descr = ConfigParamDescr.BASE_URL;
     Configuration config = ConfigurationUtil.fromProps(props);
     URL expectedReturn = null;
     try {
-      expectedReturn = new URL(baseUrl);
+      expectedReturn = new URL(BASE_URL);
     }
     catch (MalformedURLException ex) {
     }
@@ -548,7 +555,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     // we're null until we're configured
     assertNull(mbau.getCrawlSpec());
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
     assertNotNull(mbau.getCrawlSpec());
@@ -556,39 +563,45 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void testGetNewContentCrawlUrls() throws ConfigurationException {
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
-    List expectedReturn = ListUtil.list(startUrl);
+    List expectedReturn = ListUtil.list(START_URL);
     List actualReturn = mbau.getNewContentCrawlUrls();
     assertIsomorphic("return value", expectedReturn, actualReturn);
   }
   public void testGetPermissionPages() throws ConfigurationException {
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
-    List expectedReturn = ListUtil.list(startUrl);
+    List expectedReturn = ListUtil.list(START_URL);
     List actualReturn = mbau.getPermissionPages();
     assertIsomorphic("return value", expectedReturn, actualReturn);
   }
 
-  public void testGetUrlStems() throws ConfigurationException  {
+  public void testGetUrlStems() throws Exception  {
     // uncofigured base url - return an empty list
+    mbau = makeMbau(AU_NAME, BASE_URL, START_URL);
     assertEmpty(mbau.getUrlStems());
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     Configuration config = ConfigurationUtil.fromProps(props);
+    mbau = makeMbau(AU_NAME, BASE_URL, START_URL);
     mbau.setBaseAuParams(config);
     assertSameElements(ListUtil.list("http://www.example.com/"),
 		       mbau.getUrlStems());
 
-    mbau.setPermissionPages(ListUtil.list(baseUrl,
+    mbau = makeMbau(AU_NAME, BASE_URL, START_URL);
+    mbau.setBaseAuParams(config);
+    mbau.setPermissionPages(ListUtil.list(BASE_URL,
 					  "http://foo.other.com:8080/vol20/manifest.html"));
     assertSameElements(ListUtil.list("http://www.example.com/",
 				     "http://foo.other.com:8080/"),
 		       mbau.getUrlStems());
-    mbau.setPermissionPages(ListUtil.list(baseUrl,
+    mbau = makeMbau(AU_NAME, BASE_URL, START_URL);
+    mbau.setBaseAuParams(config);
+    mbau.setPermissionPages(ListUtil.list(BASE_URL,
 					  "http://foo.other.com:8080/vol20/manifest.html",
 					  "http://foo.other.com:8080/vol21/"));
     assertSameElements(ListUtil.list("http://www.example.com/",
@@ -606,7 +619,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   public void testSetBaseAuParams()
       throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     props.setProperty(BaseArchivalUnit.KEY_PAUSE_TIME, "10000");
     props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "10001");
@@ -614,8 +627,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     mbau.setBaseAuParams(config);
     assertEquals(10000, mbau.findFetchRateLimiter().getInterval());
     assertEquals(10001, mbau.newContentCrawlIntv);
-    assertEquals(auName,mbau.getName());
-    assertEquals(ListUtil.list(startUrl), mbau.getNewContentCrawlUrls());
+    assertEquals(AU_NAME, mbau.getName());
+    assertEquals(ListUtil.list(START_URL), mbau.getNewContentCrawlUrls());
     assertTrue(mbau.getCrawlSpec().getCrawlWindow()
 	       instanceof MyMockCrawlWindow);
     assertEquals("1/10s", mbau.findFetchRateLimiter().getRate());
@@ -624,14 +637,14 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   public void testSetBaseAuParamsDefaults()
       throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
     assertEquals(BaseArchivalUnit.DEFAULT_FETCH_DELAY, mbau.findFetchRateLimiter().getInterval());
     assertEquals(BaseArchivalUnit.DEFAULT_NEW_CONTENT_CRAWL_INTERVAL,
 		 mbau.newContentCrawlIntv);
-    assertEquals(ListUtil.list(startUrl), mbau.getNewContentCrawlUrls());
+    assertEquals(ListUtil.list(START_URL), mbau.getNewContentCrawlUrls());
     assertTrue(mbau.getCrawlSpec().getCrawlWindow()
 	       instanceof MyMockCrawlWindow);
   }
@@ -641,7 +654,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   public void testSetBaseAuParamsWithOverride()
       throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     props.setProperty(BaseArchivalUnit.KEY_PAUSE_TIME, "10000");
     // per-plugin or per-au crawl window settings are overridden by the
@@ -684,7 +697,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     // mark publisher down; should then return false
     Configuration conf =
       ConfigurationUtil.fromArgs(ConfigParamDescr.PUB_DOWN.getKey(), "true",
-				 ConfigParamDescr.BASE_URL.getKey(), baseUrl,
+				 ConfigParamDescr.BASE_URL.getKey(), BASE_URL,
 				 ConfigParamDescr.VOLUME_NUMBER.getKey(),"42");
     mbau.setConfiguration(conf);
     assertFalse(mbau.shouldCrawlForNewContent(state));
@@ -771,7 +784,7 @@ try {
 
   public void testParamHandlerMap() throws ConfigurationException {
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     props.setProperty(BaseArchivalUnit.KEY_PAUSE_TIME, "10000");
     props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "10000");
@@ -806,7 +819,7 @@ try {
 
   public void testMakeCachedUrlNotInAu() throws Exception {
     Properties props = new Properties();
-    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     Configuration exp = ConfigurationUtil.fromProps(props);
     mbau.setConfiguration(exp);

@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.9 2010-08-01 21:34:11 tlipkis Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.10 2013-03-16 22:04:01 tlipkis Exp $
  */
 
 /*
@@ -51,8 +51,8 @@ import org.lockss.state.AuState;
 public class ExplodedArchivalUnit extends DefinableArchivalUnit {
   private String m_explodedBaseUrl = null;
   protected Logger logger = Logger.getLogger("ExplodedArchivalUnit");
-  private ArrayList permissionPageUrls = new ArrayList();
-  private ArrayList urlStems = new ArrayList();
+  private List<String> permissionPageUrls = new ArrayList<String>();
+  private List<String> explodedUrlStems = new ArrayList<String>();
 
   public ExplodedArchivalUnit(ExplodedPlugin plugin, ExternalizableMap defMap) {
     super(plugin, defMap);
@@ -105,8 +105,7 @@ public class ExplodedArchivalUnit extends DefinableArchivalUnit {
    * @return true if it is included
    */
   public boolean shouldBeCached(String url) {
-    for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
-      String stem = (String)it.next();
+    for (String stem : explodedUrlStems) {
       logger.debug3("shouldBeCached(" + url + ") stem " + stem);
       if (url.startsWith(stem)) {
 	return true;
@@ -115,12 +114,13 @@ public class ExplodedArchivalUnit extends DefinableArchivalUnit {
     return false;
   }
 
-  public Collection getUrlStems() {
-    return new ArrayList(urlStems);
+  @Override
+  public Collection<String> getUrlStems() {
+    return new ArrayList<String>(explodedUrlStems);
   }
 
   protected List<String> getPermissionPages() {
-    return new ArrayList(permissionPageUrls);
+    return new ArrayList<String>(permissionPageUrls);
   }
 
   protected CrawlRule makeRules() {
@@ -132,8 +132,7 @@ public class ExplodedArchivalUnit extends DefinableArchivalUnit {
     }
 
     public int match(String url) {
-      for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
-	String stem = (String)it.next();
+      for (String stem : explodedUrlStems) {
 	logger.debug3("match(" + url + ") stem " + stem);
 	if (url.startsWith(stem)) {
 	  return INCLUDE;
@@ -169,8 +168,8 @@ public class ExplodedArchivalUnit extends DefinableArchivalUnit {
     try {
       String stem = UrlUtil.getUrlPrefix(url);
       permissionPageUrls.add(url);
-      if (urlStems.indexOf(stem) < 0) {
-	urlStems.add(stem);
+      if (explodedUrlStems.indexOf(stem) < 0) {
+	explodedUrlStems.add(stem);
       }
     } catch (MalformedURLException ex) {
       logger.debug3("addUrlStemToAU(" + url + ") threw " + ex);

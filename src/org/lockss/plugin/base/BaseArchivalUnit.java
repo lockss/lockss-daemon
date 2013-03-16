@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.162 2013-01-06 06:36:32 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.163 2013-03-16 22:04:01 tlipkis Exp $
  */
 
 /*
@@ -104,6 +104,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   protected long defaultFetchDelay = DEFAULT_FETCH_DELAY;
   protected List<String> startUrls;
+  protected List<String> urlStems;
   protected long newContentCrawlIntv;
   protected long defaultContentCrawlIntv = DEFAULT_NEW_CONTENT_CRAWL_INTERVAL;
 
@@ -413,24 +414,30 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return a List of Urls
    */
   public Collection<String> getUrlStems() {
-    try {
-      List<String> perms = getPermissionPages();
-      Set<String> set = new HashSet<String>();
-      if (perms != null) {
-	for (String url : perms) {
-	  String stem = UrlUtil.getUrlPrefix(url);
-	  set.add(stem);
+    if (urlStems == null) {
+      try {
+	List<String> perms = getPermissionPages();
+	Set<String> set = new HashSet<String>();
+	if (perms != null) {
+	  for (String url : perms) {
+	    String stem = UrlUtil.getUrlPrefix(url);
+	    set.add(stem);
+	  }
 	}
+	ArrayList<String> res = new ArrayList<String>(set.size());
+	res.addAll(set);
+	urlStems = res;
+      } catch (MalformedURLException e) {
+	logger.error("getUrlStems(" + getName() + ")", e);
+	// XXX should throw
+	urlStems = Collections.<String>emptyList();
+      } catch (RuntimeException e) {
+	logger.error("getUrlStems(" + getName() + ")", e);
+	// XXX should throw
+	urlStems = Collections.<String>emptyList();
       }
-      ArrayList<String> res = new ArrayList<String>(set);
-//       res.trimToSize();
-      return res;
-    } catch (Exception e) {
-      logger.error("getUrlStems(" + getName() + ")", e);
-      // TODO: This should throw an exception. ProxyInfo assumes that a
-      // collection will be returned and makes no attempt to catch exceptions
-      return Collections.<String>emptyList();
     }
+    return urlStems;
   }
 
   /**
