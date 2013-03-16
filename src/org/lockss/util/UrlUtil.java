@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.60 2013-02-27 06:02:35 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.61 2013-03-16 22:04:21 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -99,13 +99,13 @@ public class UrlUtil {
     PREFIX + "normalizeAkamaiUrl";
   public static final boolean DEFAULT_NORMALIZE_AKAMAI_URL = false;
 
-  /** Prior to daemon 1.59, plugin-supplied URL normalizers were not
-   * allowed to change the URL scheme, host or port.  As of daemon 1.59
-   * such changes are allowed, unless this is set false.
+  /** If true, plugin-supplied URL normalizers are allowed to change the
+   * URL stem (scheme, host or port), but only within the set of stems on
+   * which the AU has permission to collect content.
    */
-  public static final String PARAM_UNRESTRICTED_SITE_NORMALIZE =
-    PREFIX + "unrestrictedSiteNormalize";
-  public static final boolean DEFAULT_UNRESTRICTED_SITE_NORMALIZE = true;
+  public static final String PARAM_ALLOW_SITE_NORMALIZE_CHANGE_STEM =
+    PREFIX + "allowSiteNormalizeChangeStem";
+  public static final boolean DEFAULT_ALLOW_SITE_NORMALIZE_CHANGE_STEM = true;
 
   private static boolean useHttpClient = DEFAULT_USE_HTTPCLIENT;
   private static int pathTraversalAction = DEFAULT_PATH_TRAVERSAL_ACTION;
@@ -113,8 +113,8 @@ public class UrlUtil {
     DEFAULT_NORMALIZE_URL_ENCODING_CASE;
   private static boolean normalizeEmptyQuery = DEFAULT_NORMALIZE_EMPTY_QUERY;
   private static boolean normalizeAkamaiUrl = DEFAULT_NORMALIZE_AKAMAI_URL;
-  private static boolean unrestrictedSiteNormalize =
-    DEFAULT_UNRESTRICTED_SITE_NORMALIZE;
+  private static boolean allowSiteNormalizeChangeStem =
+    DEFAULT_ALLOW_SITE_NORMALIZE_CHANGE_STEM;
 
 
   /** Called by org.lockss.config.MiscConfig
@@ -134,10 +134,9 @@ public class UrlUtil {
 					      DEFAULT_NORMALIZE_EMPTY_QUERY);
       normalizeAkamaiUrl = config.getBoolean(PARAM_NORMALIZE_AKAMAI_URL,
 					     DEFAULT_NORMALIZE_AKAMAI_URL);
-      unrestrictedSiteNormalize =
-	config.getBoolean(PARAM_UNRESTRICTED_SITE_NORMALIZE,
-			  DEFAULT_UNRESTRICTED_SITE_NORMALIZE);
-
+      allowSiteNormalizeChangeStem =
+	config.getBoolean(PARAM_ALLOW_SITE_NORMALIZE_CHANGE_STEM,
+			  DEFAULT_ALLOW_SITE_NORMALIZE_CHANGE_STEM);
     }
   }
 
@@ -287,19 +286,53 @@ public class UrlUtil {
 	throw new MalformedURLException(url);
       }
       if (site != url) {
-	if (site.equals(url)) {
-	  // ensure return arg if equal
-	  site = url;
-	} else if (!unrestrictedSiteNormalize) {
-	  // illegal normalization if changed proto, host or port
+	String normSite = normalizeUrl(site);
+	if (normSite.equals(url)) {
+	  // ensure return arg if equivalent
+	  return normSite;
+	} else {
+	  // check whether stem was changed
 	  URL origUrl = new URL(url);
-	  URL siteUrl = new URL(site);
-	  if (! (origUrl.getProtocol().equals(siteUrl.getProtocol()) &&
-		 origUrl.getHost().equals(siteUrl.getHost()) &&
-		 isEquivalentPort(origUrl.getProtocol(),
-				  origUrl.getPort(), siteUrl.getPort()))) {
+	  URL siteUrl = new URL(normSite);
+	  if (origUrl.getProtocol().equals(siteUrl.getProtocol()) &&
+	      origUrl.getHost().equals(siteUrl.getHost()) &&
+	      isEquivalentPort(origUrl.getProtocol(),
+			       origUrl.getPort(), siteUrl.getPort())) {
+	    return normSite;
+	  } else if (allowSiteNormalizeChangeStem) {
+	    // Illegal normalization if either the original stem or the new
+	    // one aren't known stems for this AU.
+	    // (This constraint is required by the stam -> candidate-AUs
+	    // mapping in PluginManager.  If the pre-normalized stem isn't
+	    // in the map, the AU won't be found.
+
+	    checkFrom: {
+	      String origStem = UrlUtil.getUrlPrefix(url);
+	      for (String stem : au.getUrlStems()) {
+		if (origStem.equalsIgnoreCase(stem)) {
+		  break checkFrom;
+		}
+	      }
+	      throw new PluginBehaviorException("siteNormalizeUrl(" + url +
+						") changed stem from " +
+						"one not known for AU: " +
+						url);
+	    }
+	    checkTo: {
+	      String siteStem = UrlUtil.getUrlPrefix(normSite);
+	      for (String stem : au.getUrlStems()) {
+		if (siteStem.equalsIgnoreCase(stem)) {
+		  break checkTo;
+		}
+	      }
+	      throw new PluginBehaviorException("siteNormalizeUrl(" + url +
+						") changed stem to " +
+						"one not known for AU: " +
+						site);
+	    }
+	  } else {
 	    throw new PluginBehaviorException("siteNormalizeUrl(" + url +
-					      ") altered non-alterable component: " +
+					      ") changed stem to " +
 					      site);
 	  }
 	}

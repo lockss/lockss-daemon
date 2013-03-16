@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.43 2013-01-07 02:37:33 pgust Exp $
+ * $Id: TestUrlUtil.java,v 1.44 2013-03-16 22:04:21 tlipkis Exp $
  */
 
 /*
@@ -371,6 +371,15 @@ public class TestUrlUtil extends LockssTestCase {
 		 UrlUtil.normalizeUrl("http://www.bioone.org/perlserv/?request=archive-lockss&issn=0044-7447&volume=033#content"));
   }
 
+  void assertIllegalNormalization(String url, MockArchivalUnit au)
+      throws MalformedURLException{
+    try {
+      String norm = UrlUtil.normalizeUrl(url, au);
+      fail("siteNormalizeUrl(" + url + ") should throw, but was " + norm);
+    } catch (PluginBehaviorException e) {
+    }
+  }
+
   public void testNormalizeSite()
       throws MalformedURLException, PluginBehaviorException {
     MockArchivalUnit mau = new MockArchivalUnit();
@@ -381,6 +390,15 @@ public class TestUrlUtil extends LockssTestCase {
 	{"http://a.com/path/file", "http://a.com:80/path/file"},
 	{"https://a.com:443/path/file", "https://a.com/path/file"},
 	{"https://a.com/path3/file", "https://a.com:443/path/file"},
+
+	// Stem changes, illegal unless allowSiteNormalizeChangeStem and
+	// new stem in au.getUrlStems()
+	{"http://host1.com/path/file", "http://host22.com/path/file"},
+	{"http://host2.org:8080/path/file", "http://host2.org/path/file"},
+	{"http://host2.com/path2/file", "http://host2.com:8080/path2/file"},
+	{"http://host3.com/path2/file", "http://host3.com:8080/path2/file"},
+	{"http://scheme.com/path/file", "https://scheme.com/path/file"},
+	{"http://scheme.host/path/file", "https://host.scheme/path/file"},
       });
 
     mau.setUrlNormalizeMap(normMap);
@@ -403,51 +421,69 @@ public class TestUrlUtil extends LockssTestCase {
 		 UrlUtil.normalizeUrl("http://a.com/spurious/file", mau));
 
 
-    // These normalizations are illegal unless
-    // o.l.unrestrictedSiteNormalize is true
-    Map normMap2 = org.apache.commons.lang.ArrayUtils.toMap(new String[][] {
-	{"http://host1.com/path/file", "http://host2.com/path/file"},
-	{"http://a.com:8080/path/file", "http://a.com/path/file"},
-	{"http://a.com/path2/file", "http://a.com:8080/path2/file"},
-	{"http://scheme.com/path/file", "https://scheme.com/path/file"},
-	// one legal one to ensure setting the param false doesn't prevent
-	// all site normalization
-	{"http://a.com/spurious/file", "http://a.com/file"},
-      });
+    // allowSiteNormalizeChangeStem is true by default but the AU has no
+    // stmes so these are all illegal
+    assertEmpty(mau.getUrlStems());
 
-    mau.setUrlNormalizeMap(normMap2);
-
-    assertEquals("http://host2.com/path/file",
-		 UrlUtil.normalizeUrl("http://host1.com/path/file", mau));
-    assertEquals("http://a.com:8080/path2/file",
-		 UrlUtil.normalizeUrl("http://a.com/path2/file", mau));
-    assertEquals("http://a.com/path/file",
-		 UrlUtil.normalizeUrl("http://a.com:8080/path/file", mau));
+    assertIllegalNormalization("http://host1.com/path/file", mau);
+    assertIllegalNormalization("http://host2.com/path2/file", mau);
+    assertIllegalNormalization("http://host3.com/path2/file", mau);
+    assertIllegalNormalization("http://host2.org:8080/path/file", mau);
     assertEquals("http://a.com/file",
 		 UrlUtil.normalizeUrl("http://a.com/spurious/file", mau));
 
-    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_UNRESTRICTED_SITE_NORMALIZE,
+    // Add just the original stems, still all illegal
+    mau.setUrlStems(ListUtil.list("http://host1.com/",
+				  "http://host2.com/",
+				  "http://host3.com/",
+				  "http://host2.org:8080/"));
+
+    assertIllegalNormalization("http://host1.com/path/file", mau);
+    assertIllegalNormalization("http://host2.com/path2/file", mau);
+    assertIllegalNormalization("http://host3.com/path2/file", mau);
+    assertIllegalNormalization("http://host2.org:8080/path/file", mau);
+    assertEquals("http://a.com/file",
+		 UrlUtil.normalizeUrl("http://a.com/spurious/file", mau));
+
+    // Replace with just the normalized stems, still all illegal
+    mau.setUrlStems(ListUtil.list("http://host22.com/",
+				  "http://host2.org:8080/"));
+    assertIllegalNormalization("http://host1.com/path/file", mau);
+    assertIllegalNormalization("http://host2.com/path2/file", mau);
+    assertIllegalNormalization("http://host3.com/path2/file", mau);
+    assertIllegalNormalization("http://host2.org:8080/path/file", mau);
+    assertEquals("http://a.com/file",
+		 UrlUtil.normalizeUrl("http://a.com/spurious/file", mau));
+
+    // With the original and normalized  stems, most are legal
+    mau.setUrlStems(ListUtil.list("http://host1.com/",
+				  "http://host2.com/",
+				  "http://host22.com/",
+				  "http://host3.com/",
+				  "http://host2.com:8080/",
+				  "http://host2.org/",
+				  "http://host2.org:8080/"));
+
+    assertEquals("http://host22.com/path/file",
+		 UrlUtil.normalizeUrl("http://host1.com/path/file", mau));
+    assertEquals("http://host2.com:8080/path2/file",
+		 UrlUtil.normalizeUrl("http://host2.com/path2/file", mau));
+    // result not in stems
+    assertIllegalNormalization("http://host3.com/path2/file", mau);
+    assertEquals("http://host2.org/path/file",
+		 UrlUtil.normalizeUrl("http://host2.org:8080/path/file", mau));
+    assertEquals("http://a.com/file",
+		 UrlUtil.normalizeUrl("http://a.com/spurious/file", mau));
+    assertEquals("http://a.com/file",
+		 UrlUtil.normalizeUrl("http://a.com/spurious/file", mau));
+
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_ALLOW_SITE_NORMALIZE_CHANGE_STEM,
 				  "false");
-    try {
-      UrlUtil.normalizeUrl("http://host1.com/path/file", mau);
-      fail("siteNormalizeUrl() shouldn't allow adding a non-default port");
-    } catch (PluginBehaviorException e) {
-    }
-    try {
-      UrlUtil.normalizeUrl("http://a.com/path2/file", mau);
-      fail("siteNormalizeUrl() shouldn't allow adding a non-default port");
-    } catch (PluginBehaviorException e) {
-    }
-    try {
-      UrlUtil.normalizeUrl("http://a.com:8080/path/file", mau);
-      fail("siteNormalizeUrl() shouldn't allow removing a non-default port");
-    } catch (PluginBehaviorException e) {
-    }
-    try {
-      UrlUtil.normalizeUrl("http://a.com:8080/path/file", mau);
-      fail("siteNormalizeUrl() shouldn't allow adding a non-default port");
-    } catch (PluginBehaviorException e) {
-    }
+
+    assertIllegalNormalization("http://host1.com/path/file", mau);
+    assertIllegalNormalization("http://host2.com/path2/file", mau);
+    assertIllegalNormalization("http://host3.com/path2/file", mau);
+    assertIllegalNormalization("http://host2.org:8080/path/file", mau);
     assertEquals("http://a.com/file",
 		 UrlUtil.normalizeUrl("http://a.com/spurious/file", mau));
   }
