@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.105 2013-02-27 06:01:19 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.106 2013-03-16 22:03:33 tlipkis Exp $
  */
 
 /*
@@ -584,6 +584,7 @@ public class TestPluginManager extends LockssTestCase {
       mgr.registerAuEventHandler(new MyAuEventHandler());
       mgr.deactivateAu(au);
       assertTrue(mgr.getInactiveAuIds().contains(auId));
+      assertTrue(mgr.isInactiveAuId(auId));
       assertFalse(mgr.isActiveAu(au));
       // verify event handler run
       assertEmpty(createEvents);
@@ -598,6 +599,7 @@ public class TestPluginManager extends LockssTestCase {
     assertNotNull(au2);
     assertFalse(mgr.isActiveAu(au));
     assertTrue(mgr.isActiveAu(au2));
+    assertFalse(mgr.isInactiveAuId(auId));
   }
 
   public void testCreateAndSaveAndDeleteAuConfiguration() throws Exception {

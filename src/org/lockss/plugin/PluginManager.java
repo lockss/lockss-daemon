@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.243 2013-03-06 08:06:33 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.244 2013-03-16 22:03:33 tlipkis Exp $
  */
 
 /*
@@ -2432,8 +2432,15 @@ public class PluginManager
     }
   }
 
+  /** Return the AUIDs all AU that have been explicitly deactivated */
   public Collection getInactiveAuIds() {
     return inactiveAuIds;
+  }
+
+  /** Return true if the AUID is that of an AU that has been explicitly
+   * deactivated */
+  public boolean isInactiveAuId(String auid) {
+    return inactiveAuIds.contains(auid);
   }
 
   private void queuePluginRegistryCrawls() {
