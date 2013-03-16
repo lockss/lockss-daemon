@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleConfig.java,v 1.13 2013-01-09 09:38:56 tlipkis Exp $
+ * $Id: TestTitleConfig.java,v 1.14 2013-03-16 22:03:17 tlipkis Exp $
  */
 
 /*
@@ -187,6 +187,10 @@ public class TestTitleConfig extends LockssTestCase {
   }
 
   public void testIsActionable() throws Exception {
+//     ConfigurationUtil.addFromArgs(PluginManager.PARAM_REMOVE_STOPPED_AUS,
+// 				  "true");
+
+    pmgr.startService();  // deactivateAu() below requires service runnning
     MockPlugin mp = new MockPlugin();
     ConfigParamDescr d1 = new ConfigParamDescr("base_url");
     ConfigParamDescr d2 = new ConfigParamDescr("volume");
@@ -206,6 +210,13 @@ public class TestTitleConfig extends LockssTestCase {
 
     assertFalse(tc1.isActionable(pmgr, TitleSet.SET_ADDABLE));
     assertTrue(tc1.isActionable(pmgr, TitleSet.SET_DELABLE));
+    assertFalse(tc1.isActionable(pmgr, TitleSet.SET_REACTABLE));
+
+    // Deactivate the AU
+    pmgr.deactivateAu(au);
+
+    assertFalse(tc1.isActionable(pmgr, TitleSet.SET_ADDABLE));
+    assertFalse(tc1.isActionable(pmgr, TitleSet.SET_DELABLE));
     assertTrue(tc1.isActionable(pmgr, TitleSet.SET_REACTABLE));
   }
 

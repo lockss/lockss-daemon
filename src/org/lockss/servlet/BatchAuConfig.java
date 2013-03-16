@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.47 2013-01-09 09:38:56 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.48 2013-03-16 22:03:17 tlipkis Exp $
  */
 
 /*
@@ -193,7 +193,7 @@ public class BatchAuConfig extends LockssServlet {
   private Iterator getMenuDescriptors() {
     String ACTION = ACTION_TAG + "=";
     int numActive = remoteApi.getAllAus().size();
-    int numInactive = remoteApi.getInactiveAus().size();
+    boolean someInactive = remoteApi.countInactiveAus() > 0;
     ServletDescr myDescr = myServletDescr();
     ArrayList list = new ArrayList(7); // at most 7 entries
 
@@ -221,7 +221,7 @@ public class BatchAuConfig extends LockssServlet {
                                  "Reactivate Titles",
                                  ACTION + ACTION_SELECT_SETS_TO_REACT,
                                  "Reactivate selected titles",
-                                 numInactive > 0));
+                                 someInactive));
     }
 
     // Backup and restore
@@ -229,7 +229,7 @@ public class BatchAuConfig extends LockssServlet {
                                "Backup",
                                ACTION + ACTION_BACKUP,
                                "Backup cache config to a file on your workstation",
-                               numActive > 0 || numInactive > 0));
+                               numActive > 0 || someInactive));
     list.add(getMenuDescriptor(myDescr,
                                "Restore",
                                ACTION + ACTION_RESTORE,

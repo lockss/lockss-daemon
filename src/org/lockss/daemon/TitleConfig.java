@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.20 2013-01-09 09:38:56 tlipkis Exp $
+ * $Id: TitleConfig.java,v 1.21 2013-03-16 22:03:17 tlipkis Exp $
  */
 
 /*
@@ -364,10 +364,12 @@ public class TitleConfig {
     try {
       switch (action) {
       case TitleSet.SET_ADDABLE:
-	// addable if doesn't exist and pub not down
+	// addable if doesn't exist and pub not down and not deactivated
 	return (pluginMgr.getAuFromId(getAuId(pluginMgr)) == null
+		&& !pluginMgr.isInactiveAuId(getAuId(pluginMgr))
 		&& !AuUtil.isPubDown(this));
       case TitleSet.SET_REACTABLE:
+	return pluginMgr.isInactiveAuId(getAuId(pluginMgr));
       case TitleSet.SET_DELABLE:
 	return pluginMgr.getAuFromId(getAuId(pluginMgr)) != null;
       }

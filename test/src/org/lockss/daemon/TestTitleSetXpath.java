@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetXpath.java,v 1.6 2013-01-09 09:38:56 tlipkis Exp $
+ * $Id: TestTitleSetXpath.java,v 1.7 2013-03-16 22:03:17 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ public class TestTitleSetXpath extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     pluginMgr = getMockLockssDaemon().getPluginManager();
+    setUpDiskSpace();
     makeTitles();
   }
 
@@ -249,11 +250,14 @@ public class TestTitleSetXpath extends LockssTestCase {
   void installConfigFromResource(String name) throws IOException {
     URL url = getClass().getResource(name);
     ConfigurationUtil.setCurrentConfigFromUrlList(ListUtil.list(url));
+    // There's no addFromUrlList(), must re-set disk param
+    setUpDiskSpace();
   }
 
   String pname = "org.lockss.daemon.TitlesetTestPlugin";
 
-  public void testBar() throws Exception {
+  public void testSample() throws Exception {
+    pluginMgr.startService();  // deactivateAu() below requires service runnning
     pluginMgr.ensurePluginLoaded(pluginMgr.pluginKeyFromName(pname));
     final Plugin plug = pluginMgr.getPluginFromId(pname);
 
@@ -275,6 +279,27 @@ public class TestTitleSetXpath extends LockssTestCase {
       }};
     assertEquals(8, lst.size());
     assertSameElements(lst, tsa1.getTitles());
+
+    // Create an AU matching this TitleConfig
+    TitleConfig tc = lst.get(3);
+    ArchivalUnit au =
+      PluginTestUtil.createAndStartAu(plug.getPluginId(), tc.getConfig());
+    assertEquals(tc.getAuId(pluginMgr, plug), au.getAuId());
+    assertEquals(7, tsa1.countTitles(TitleSet.SET_ADDABLE));
+    assertEquals(8, tsa1.getTitles().size());
+
+    ArchivalUnit au2 =
+      PluginTestUtil.createAndStartAu(plug.getPluginId(),
+				      lst.get(1).getConfig());
+    assertEquals(6, tsa1.countTitles(TitleSet.SET_ADDABLE));
+    assertEquals(8, tsa1.getTitles().size());
+
+    // Deactivate an AU, ensure it still isn't counted as addable
+    pluginMgr.deactivateAu(au);
+    assertEquals(6, tsa1.countTitles(TitleSet.SET_ADDABLE));
+    assertEquals(8, tsa1.getTitles().size());
+
+
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.23 2008-08-20 05:50:49 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.24 2013-03-16 22:03:17 tlipkis Exp $
  */
 
 /*
@@ -216,6 +216,7 @@ public class TestRemoteApi extends LockssTestCase {
     assertEquals(ListUtil.list(rapi.findInactiveAuProxy(id1),
 			       rapi.findInactiveAuProxy(id2)),
 		 rapi.getInactiveAus());
+    assertEquals(2, rapi.countInactiveAus());
   }
 
   public void testGetRepositoryDF () throws Exception {

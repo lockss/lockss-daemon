@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.75 2012-08-29 00:17:55 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.76 2013-03-16 22:03:17 tlipkis Exp $
  */
 
 /*
@@ -367,6 +367,10 @@ public class RemoteApi
    */
   public List getAllAus() {
     return mapAusToProxies(pluginMgr.getAllAus());
+  }
+
+  public int countInactiveAus() {
+    return pluginMgr.getInactiveAuIds().size();
   }
 
   public List getInactiveAus() {
