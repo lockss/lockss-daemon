@@ -19,7 +19,7 @@
     param[base_url] = http://www.innovationandentrepreneurship.net/
     param[journal_id] = aie
     
-    au < testing ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
+    au < ready ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
     au < ready ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
     au < ready ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
     au < expected ; 2013 ; Annals of Innovation & Entrepreneurship Volume 4 ; 4 ; 2013 >
@@ -36,7 +36,7 @@
     param[base_url] = http://www.childlitaesthetics.net/
     param[journal_id] = blft
 
-    au < testing ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; 2010 >
+    au < ready ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; 2010 >
     au < ready ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 >
     au < ready ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; 2012 >
     au < expected ; 2013 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 4 ; 4 ; 2013 >
@@ -84,11 +84,11 @@
     param[base_url] = http://www.eht-journal.net/
     param[journal_id] = ehtj
 
-    au < testing ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
-    au < testing ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
-    au < testing ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
-    au < testing ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
-    au < testing ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
+    au < ready ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
+    au < ready ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
+    au < ready ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
+    au < ready ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
+    au < ready ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
     au < expected ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 ; 2013 >
     
   }
@@ -107,9 +107,9 @@
 
     au < testing ; 2008 ; Ethics & Global Politics Volume 1 ; 1 ; 2008 >
     au < testing ; 2009 ; Ethics & Global Politics Volume 2 ; 2 ; 2009 >
-    au < testing ; 2010 ; Ethics & Global Politics Volume 3 ; 3 ; 2010 >
-    au < testing ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; 2011 >
-    au < testing ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; 2012 >
+    au < ready ; 2010 ; Ethics & Global Politics Volume 3 ; 3 ; 2010 >
+    au < ready ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; 2011 >
+    au < ready ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; 2012 >
     au < expected ; 2013 ; Ethics & Global Politics Volume 6 ; 6 ; 2013 >
 
   }
