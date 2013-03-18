@@ -15,8 +15,8 @@
     param[base_url] = http://biblios.pitt.edu/ojs/
     param[journal_id] = biblios
 
-    au < released ; 2011 ; BIBLIOS: Librarianship and Information Science Journal Volume 2011 ; 2011 ; 2011 >
-    au < released ; 2012 ; BIBLIOS: Librarianship and Information Science Journal Volume 2012 ; 2012 ; 2012 >
+    au < released ; 2011 ; 2011 ; BIBLIOS: Librarianship and Information Science Journal Volume 2011 ; 2011 >
+    au < released ; 2012 ; 2012 ; BIBLIOS: Librarianship and Information Science Journal Volume 2012 ; 2012 >
 
   }
 
@@ -30,9 +30,9 @@
     param[base_url] = http://bsj.pitt.edu/ojs/
     param[journal_id] = bsj
 
-    au < released ; 2008-2010 ; Bolivian Studies Journal Volume 15-17 ; 15-17 ; 2010 >
-    au < released ; 2011 ; Bolivian Studies Journal Volume 18 ; 18 ; 2011 >
-    au < released ; 2012 ; Bolivian Studies Journal Volume 19 ; 19 ; 2012 >
+    au < released ; 2008-2010 ; 2010 ; Bolivian Studies Journal Volume 15-17 ; 15-17 >
+    au < released ; 2011 ; 2011 ; Bolivian Studies Journal Volume 18 ; 18 >
+    au < released ; 2012 ; 2012 ; Bolivian Studies Journal Volume 19 ; 19 >
 
   }
 
@@ -45,38 +45,38 @@
     param[base_url] = http://carlbeckpapers.pitt.edu/ojs/
     param[journal_id] = cbp
 
-    au < released ; 1981 ; The Carl Beck Papers In Russian And East European Studies Volume 1981 ; 1981 ; 1981 >
-    au < released ; 1982 ; The Carl Beck Papers In Russian And East European Studies Volume 1982 ; 1982 ; 1982 >
-    au < released ; 1983 ; The Carl Beck Papers In Russian And East European Studies Volume 1983 ; 1983 ; 1983 >
-    au < released ; 1984 ; The Carl Beck Papers In Russian And East European Studies Volume 1984 ; 1984 ; 1984 >
-    au < released ; 1985 ; The Carl Beck Papers In Russian And East European Studies Volume 1985 ; 1985 ; 1985 >
-    au < released ; 1986 ; The Carl Beck Papers In Russian And East European Studies Volume 1986 ; 1986 ; 1986 >
-    au < released ; 1987 ; The Carl Beck Papers In Russian And East European Studies Volume 1987 ; 1987 ; 1987 >
-    au < released ; 1988 ; The Carl Beck Papers In Russian And East European Studies Volume 1988 ; 1988 ; 1988 >
-    au < released ; 1989 ; The Carl Beck Papers In Russian And East European Studies Volume 1989 ; 1989 ; 1989 >
-    au < released ; 1990 ; The Carl Beck Papers In Russian And East European Studies Volume 1990 ; 1990 ; 1990 >
-    au < released ; 1991 ; The Carl Beck Papers In Russian And East European Studies Volume 1991 ; 1991 ; 1991 >
-    au < released ; 1992 ; The Carl Beck Papers In Russian And East European Studies Volume 1992 ; 1992 ; 1992 >
-    au < released ; 1993 ; The Carl Beck Papers In Russian And East European Studies Volume 1993 ; 1993 ; 1993 >
-    au < released ; 1994 ; The Carl Beck Papers In Russian And East European Studies Volume 1994 ; 1994 ; 1994 >
-    au < released ; 1995 ; The Carl Beck Papers In Russian And East European Studies Volume 1995 ; 1995 ; 1995 >
-    au < released ; 1996 ; The Carl Beck Papers In Russian And East European Studies Volume 1996 ; 1996 ; 1996 >
-    au < released ; 1997 ; The Carl Beck Papers In Russian And East European Studies Volume 1997 ; 1997 ; 1997 >
-    au < released ; 1998 ; The Carl Beck Papers In Russian And East European Studies Volume 1998 ; 1998 ; 1998 >
-    au < released ; 1999 ; The Carl Beck Papers In Russian And East European Studies Volume 1999 ; 1999 ; 1999 >
-    au < released ; 2000 ; The Carl Beck Papers In Russian And East European Studies Volume 2000 ; 2000 ; 2000 >
-    au < released ; 2001 ; The Carl Beck Papers In Russian And East European Studies Volume 2001 ; 2001 ; 2001 >
-    au < released ; 2002 ; The Carl Beck Papers In Russian And East European Studies Volume 2002 ; 2002 ; 2002 >
-    au < released ; 2003 ; The Carl Beck Papers In Russian And East European Studies Volume 2003 ; 2003 ; 2003 >
-    au < released ; 2004 ; The Carl Beck Papers In Russian And East European Studies Volume 2004 ; 2004 ; 2004 >
-    au < released ; 2005 ; The Carl Beck Papers In Russian And East European Studies Volume 2005 ; 2005 ; 2005 >
-    au < released ; 2006 ; The Carl Beck Papers In Russian And East European Studies Volume 2006 ; 2006 ; 2006 >
-    au < released ; 2007 ; The Carl Beck Papers In Russian And East European Studies Volume 2007 ; 2007 ; 2007 >
-    au < released ; 2008 ; The Carl Beck Papers In Russian And East European Studies Volume 2008 ; 2008 ; 2008 >
-    au < released ; 2009 ; The Carl Beck Papers In Russian And East European Studies Volume 2009 ; 2009 ; 2009 >
-    au < released ; 2010 ; The Carl Beck Papers In Russian And East European Studies Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; The Carl Beck Papers In Russian And East European Studies Volume 2011 ; 2011 ; 2011 >
-    au < released ; 2012 ; The Carl Beck Papers In Russian And East European Studies Volume 2012 ; 2012 ; 2012 >
+    au < released ; 1981 ; 1981 ; The Carl Beck Papers In Russian And East European Studies Volume 1981 ; 1981 >
+    au < released ; 1982 ; 1982 ; The Carl Beck Papers In Russian And East European Studies Volume 1982 ; 1982 >
+    au < released ; 1983 ; 1983 ; The Carl Beck Papers In Russian And East European Studies Volume 1983 ; 1983 >
+    au < released ; 1984 ; 1984 ; The Carl Beck Papers In Russian And East European Studies Volume 1984 ; 1984 >
+    au < released ; 1985 ; 1985 ; The Carl Beck Papers In Russian And East European Studies Volume 1985 ; 1985 >
+    au < released ; 1986 ; 1986 ; The Carl Beck Papers In Russian And East European Studies Volume 1986 ; 1986 >
+    au < released ; 1987 ; 1987 ; The Carl Beck Papers In Russian And East European Studies Volume 1987 ; 1987 >
+    au < released ; 1988 ; 1988 ; The Carl Beck Papers In Russian And East European Studies Volume 1988 ; 1988 >
+    au < released ; 1989 ; 1989 ; The Carl Beck Papers In Russian And East European Studies Volume 1989 ; 1989 >
+    au < released ; 1990 ; 1990 ; The Carl Beck Papers In Russian And East European Studies Volume 1990 ; 1990 >
+    au < released ; 1991 ; 1991 ; The Carl Beck Papers In Russian And East European Studies Volume 1991 ; 1991 >
+    au < released ; 1992 ; 1992 ; The Carl Beck Papers In Russian And East European Studies Volume 1992 ; 1992 >
+    au < released ; 1993 ; 1993 ; The Carl Beck Papers In Russian And East European Studies Volume 1993 ; 1993 >
+    au < released ; 1994 ; 1994 ; The Carl Beck Papers In Russian And East European Studies Volume 1994 ; 1994 >
+    au < released ; 1995 ; 1995 ; The Carl Beck Papers In Russian And East European Studies Volume 1995 ; 1995 >
+    au < released ; 1996 ; 1996 ; The Carl Beck Papers In Russian And East European Studies Volume 1996 ; 1996 >
+    au < released ; 1997 ; 1997 ; The Carl Beck Papers In Russian And East European Studies Volume 1997 ; 1997 >
+    au < released ; 1998 ; 1998 ; The Carl Beck Papers In Russian And East European Studies Volume 1998 ; 1998 >
+    au < released ; 1999 ; 1999 ; The Carl Beck Papers In Russian And East European Studies Volume 1999 ; 1999 >
+    au < released ; 2000 ; 2000 ; The Carl Beck Papers In Russian And East European Studies Volume 2000 ; 2000 >
+    au < released ; 2001 ; 2001 ; The Carl Beck Papers In Russian And East European Studies Volume 2001 ; 2001 >
+    au < released ; 2002 ; 2002 ; The Carl Beck Papers In Russian And East European Studies Volume 2002 ; 2002 >
+    au < released ; 2003 ; 2003 ; The Carl Beck Papers In Russian And East European Studies Volume 2003 ; 2003 >
+    au < released ; 2004 ; 2004 ; The Carl Beck Papers In Russian And East European Studies Volume 2004 ; 2004 >
+    au < released ; 2005 ; 2005 ; The Carl Beck Papers In Russian And East European Studies Volume 2005 ; 2005 >
+    au < released ; 2006 ; 2006 ; The Carl Beck Papers In Russian And East European Studies Volume 2006 ; 2006 >
+    au < released ; 2007 ; 2007 ; The Carl Beck Papers In Russian And East European Studies Volume 2007 ; 2007 >
+    au < released ; 2008 ; 2008 ; The Carl Beck Papers In Russian And East European Studies Volume 2008 ; 2008 >
+    au < released ; 2009 ; 2009 ; The Carl Beck Papers In Russian And East European Studies Volume 2009 ; 2009 >
+    au < released ; 2010 ; 2010 ; The Carl Beck Papers In Russian And East European Studies Volume 2010 ; 2010 >
+    au < released ; 2011 ; 2011 ; The Carl Beck Papers In Russian And East European Studies Volume 2011 ; 2011 >
+    au < released ; 2012 ; 2012 ; The Carl Beck Papers In Russian And East European Studies Volume 2012 ; 2012 >
 
   }
 
@@ -105,8 +105,8 @@
     param[base_url] = http://cinej.pitt.edu/ojs/
     param[journal_id] = cinej
 
-    au < released ; 2011 ; CINEJ Cinema e-Journal Volume 1 ; 1 ; 2011 >
-    au < released ; 2012 ; CINEJ Cinema e-Journal Volume 2 ; 2 ; 2012 >
+    au < released ; 2011 ; 2011 ; CINEJ Cinema e-Journal Volume 1 ; 1 >
+    au < released ; 2012 ; 2012 ; CINEJ Cinema e-Journal Volume 2 ; 2 >
 
   }
 
@@ -119,8 +119,8 @@
     param[base_url] = http://contemporaneity.pitt.edu/ojs/
     param[journal_id] = contemporaneity
 
-    au < released ; 2011 ; Contemporaneity: Historical Presence in Visual Culture Volume 1 ; 1 ; 2011 >
-    au < released ; 2012 ; Contemporaneity: Historical Presence in Visual Culture Volume 2 ; 2 ; 2012 >
+    au < released ; 2011 ; 2011 ; Contemporaneity: Historical Presence in Visual Culture Volume 1 ; 1 >
+    au < released ; 2012 ; 2012 ; Contemporaneity: Historical Presence in Visual Culture Volume 2 ; 2 >
 
   }
 
@@ -147,24 +147,24 @@
 
     param[base_url] = http://emaj.pitt.edu/ojs/
     param[journal_id] = emaj
-    
-    au < released ; 2011 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 (2011) ; 1 ; 2011 >
-    au < released ; 2012 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 (2012) ; 1 ; 2012 >
+
+    au < released ; 2011 ; 2011 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 (2011) ; 1 >
+    au < released ; 2012 ; 2012 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 (2012) ; 1 >
 
   }
 
   {
     title <
       name = Ethnology ;
-      issn = 0014-1828 
+      issn = 0014-1828
     >
 
     param[base_url] = http://ethnology.pitt.edu/ojs/
     param[journal_id] = Ethnology
 
-    au < manifest ; 2008 ; Ethnology Volume 47 ; 47 ; 2008 >
-    au < manifest ; 2009 ; Ethnology Volume 48 ; 48 ; 2009 >
-    au < manifest ; 2010 ; Ethnology Volume 49 ; 49 ; 2010 >
+    au < manifest ; 2008 ; 2008 ; Ethnology Volume 47 ; 47 >
+    au < manifest ; 2009 ; 2009 ; Ethnology Volume 48 ; 48 >
+    au < manifest ; 2010 ; 2010 ; Ethnology Volume 49 ; 49 >
 
   }
 
@@ -178,9 +178,9 @@
     param[base_url] = http://ehe.pitt.edu/ojs/
     param[journal_id] = ehe
 
-    au < released ; 2010 ; Excellence in Higher Education Volume 1 ; 1 ; 2010 >
-    au < released ; 2011 ; Excellence in Higher Education Volume 2 ; 2 ; 2011 >
-    au < released ; 2012 ; Excellence in Higher Education Volume 3 ; 3 ; 2012 >
+    au < released ; 2010 ; 2010 ; Excellence in Higher Education Volume 1 ; 1 >
+    au < released ; 2011 ; 2011 ; Excellence in Higher Education Volume 2 ; 2 >
+    au < released ; 2012 ; 2012 ; Excellence in Higher Education Volume 3 ; 3 >
 
   }
 
@@ -193,8 +193,8 @@
     param[base_url] = http://hcs.pitt.edu/ojs/
     param[journal_id] = hcs
 
-    au < released ; 2011 ; Health, Culture, and Society Volume 1 ; 1 ; 2011 >
-    au < released ; 2012 ; Health, Culture, and Society Volume 2 ; 2 ; 2012 >
+    au < released ; 2011 ; 2011 ; Health, Culture, and Society Volume 1 ; 1 >
+    au < released ; 2012 ; 2012 ; Health, Culture, and Society Volume 2 ; 2 >
 
   }
 
@@ -207,8 +207,8 @@
     param[base_url] = http://iioablett.pitt.edu/ojs/
     param[journal_id] = iioablett
 
-    au < released ; 2011 ; IIOAB Letters Volume 1 ; 1 ; 2011 >
-    au < released ; 2012 ; IIOAB Letters Volume 2 ; 2 ; 2012 >
+    au < released ; 2011 ; 2011 ; IIOAB Letters Volume 1 ; 1 >
+    au < released ; 2012 ; 2012 ; IIOAB Letters Volume 2 ; 2 >
 
   }
 
@@ -221,10 +221,10 @@
     param[base_url] = http://telerehab.pitt.edu/ojs/
     param[journal_id] = telerehab
 
-    au < released ; 2009 ; International Journal of Telerehabilitation Volume 1 ; 1 ; 2009 >
-    au < released ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2 ; 2010 >
-    au < released ; 2011 ; International Journal of Telerehabilitation Volume 3 ; 3 ; 2011 >
-    au < released ; 2012 ; International Journal of Telerehabilitation Volume 4 ; 4 ; 2012 >
+    au < released ; 2009 ; 2009 ; International Journal of Telerehabilitation Volume 1 ; 1 >
+    au < released ; 2010 ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2 >
+    au < released ; 2011 ; 2011 ; International Journal of Telerehabilitation Volume 3 ; 3 >
+    au < released ; 2012 ; 2012 ; International Journal of Telerehabilitation Volume 4 ; 4 >
 
   }
 
@@ -236,28 +236,28 @@
     >
 
     param[base_url] = http://jffp.pitt.edu/ojs/
-    param[journal_id] = jffp 
+    param[journal_id] = jffp
 
-    au < released ; 1989 ; Journal of French and Francophone Philosophy Volume 1 ; 1 ; 1989 >
-    au < released ; 1990 ; Journal of French and Francophone Philosophy Volume 2 ; 2 ; 1990 >
-    au < released ; 1991 ; Journal of French and Francophone Philosophy Volume 3 ; 3 ; 1991 >
-    au < released ; 1992 ; Journal of French and Francophone Philosophy Volume 4 ; 4 ; 1992 >
-    au < released ; 1993 ; Journal of French and Francophone Philosophy Volume 5 ; 5 ; 1993 >
-    au < released ; 1994 ; Journal of French and Francophone Philosophy Volume 6 ; 6 ; 1994 >
-    au < released ; 1995 ; Journal of French and Francophone Philosophy Volume 7 ; 7 ; 1995 >
-    au < released ; 1996 ; Journal of French and Francophone Philosophy Volume 8 ; 8 ; 1996 >
-    au < released ; 1997 ; Journal of French and Francophone Philosophy Volume 9 ; 9 ; 1997 >
-    au < released ; 1998 ; Journal of French and Francophone Philosophy Volume 10 ; 10 ; 1998 >
-    au < released ; 1999 ; Journal of French and Francophone Philosophy Volume 11 ; 11 ; 1999 >
-    au < released ; 2000 ; Journal of French and Francophone Philosophy Volume 12 ; 12 ; 2000 >
-    au < released ; 2003 ; Journal of French and Francophone Philosophy Volume 13 ; 13 ; 2003 >
-    au < released ; 2004 ; Journal of French and Francophone Philosophy Volume 14 ; 14 ; 2004 >
-    au < released ; 2005 ; Journal of French and Francophone Philosophy Volume 15 ; 15 ; 2005 >
-    au < released ; 2006 ; Journal of French and Francophone Philosophy Volume 16 ; 16 ; 2006 >
-    au < released ; 2007 ; Journal of French and Francophone Philosophy Volume 17 ; 17 ; 2007 >
-    au < released ; 2010 ; Journal of French and Francophone Philosophy Volume 18 ; 18 ; 2010 >
-    au < released ; 2011 ; Journal of French and Francophone Philosophy Volume 19 ; 19 ; 2011 >
-    au < released ; 2012 ; Journal of French and Francophone Philosophy Volume 20 ; 20 ; 2012 >
+    au < released ; 1989 ; 1989 ; Journal of French and Francophone Philosophy Volume 1 ; 1 >
+    au < released ; 1990 ; 1990 ; Journal of French and Francophone Philosophy Volume 2 ; 2 >
+    au < released ; 1991 ; 1991 ; Journal of French and Francophone Philosophy Volume 3 ; 3 >
+    au < released ; 1992 ; 1992 ; Journal of French and Francophone Philosophy Volume 4 ; 4 >
+    au < released ; 1993 ; 1993 ; Journal of French and Francophone Philosophy Volume 5 ; 5 >
+    au < released ; 1994 ; 1994 ; Journal of French and Francophone Philosophy Volume 6 ; 6 >
+    au < released ; 1995 ; 1995 ; Journal of French and Francophone Philosophy Volume 7 ; 7 >
+    au < released ; 1996 ; 1996 ; Journal of French and Francophone Philosophy Volume 8 ; 8 >
+    au < released ; 1997 ; 1997 ; Journal of French and Francophone Philosophy Volume 9 ; 9 >
+    au < released ; 1998 ; 1998 ; Journal of French and Francophone Philosophy Volume 10 ; 10 >
+    au < released ; 1999 ; 1999 ; Journal of French and Francophone Philosophy Volume 11 ; 11 >
+    au < released ; 2000 ; 2000 ; Journal of French and Francophone Philosophy Volume 12 ; 12 >
+    au < released ; 2003 ; 2003 ; Journal of French and Francophone Philosophy Volume 13 ; 13 >
+    au < released ; 2004 ; 2004 ; Journal of French and Francophone Philosophy Volume 14 ; 14 >
+    au < released ; 2005 ; 2005 ; Journal of French and Francophone Philosophy Volume 15 ; 15 >
+    au < released ; 2006 ; 2006 ; Journal of French and Francophone Philosophy Volume 16 ; 16 >
+    au < released ; 2007 ; 2007 ; Journal of French and Francophone Philosophy Volume 17 ; 17 >
+    au < released ; 2010 ; 2010 ; Journal of French and Francophone Philosophy Volume 18 ; 18 >
+    au < released ; 2011 ; 2011 ; Journal of French and Francophone Philosophy Volume 19 ; 19 >
+    au < released ; 2012 ; 2012 ; Journal of French and Francophone Philosophy Volume 20 ; 20 >
 
   }
 
@@ -313,17 +313,17 @@
   {
     title <
       name = Pitt Political Review ;
-      eissn = 2160-5807 
+      eissn = 2160-5807
     >
 
     param[base_url] = http://ppr.pitt.edu/ojs/
     param[journal_id] = ppr
 
-    au < released ; 2011 ; Pitt Political Review Volume 8 ; 8 ; 2011 >
-    au < released ; 2012 ; Pitt Political Review Volume 9 ; 9 ; 2012 >
-    
+    au < released ; 2011 ; 2011 ; Pitt Political Review Volume 8 ; 8 >
+    au < released ; 2012 ; 2012 ; Pitt Political Review Volume 9 ; 9 >
+
   }
-  
+
   {
 
       title <
@@ -374,7 +374,7 @@
 
       title <
         name = Pittsburgh Papers on the European Union ;
-        eissn = 2161-6590
+        eissn = 2164-6732
       >
 
       param[base_url] = http://pgheupapers.pitt.edu/ojs/
@@ -395,80 +395,80 @@
     param[base_url] = http://revista-iberoamericana.pitt.edu/ojs/
     param[journal_id] = Iberoamericana
 
-    au < released ; 1939 ; Revista Iberoamericana Volume I ; I ; 1939 >
-    au < released ; 1940 ; Revista Iberoamericana Volume II ; II ; 1940 >
-    au < released ; 1941 ; Revista Iberoamericana Volume III-IV ; III-IV ; 1941 >      
-    au < released ; 1942 ; Revista Iberoamericana Volume IV-V ; IV-V ; 1942 >
-    au < released ; 1943 ; Revista Iberoamericana Volume VI-VII ; VI-VII ; 1943 >
-    au < released ; 1944 ; Revista Iberoamericana Volume VII-VIII ; VII-VIII ; 1944 >
-    au < released ; 1945 ; Revista Iberoamericana Volume IX-X ; IX-X ; 1945 >
-    au < released ; 1946 ; Revista Iberoamericana Volume X-XI ; X-XI ; 1946 >
-    au < released ; 1947 ; Revista Iberoamericana Volume XII-XIII ; XII-XIII ; 1947 >
-    au < released ; 1948 ; Revista Iberoamericana Volume XIII-XIV ; XIII-XIV ; 1948 >
-    au < released ; 1949 ; Revista Iberoamericana Volume XV ; XV ; 1949 >
-    au < released ; 1950 ; Revista Iberoamericana Volume XV-XVI ; XV-XVI ; 1950 >
-    au < released ; 1951 ; Revista Iberoamericana Volume XVI-XVII ; XVI-XVII ; 1951 >
-    au < released ; 1952 ; Revista Iberoamericana Volume XVII-XVIII ; XVII-XVIII ; 1952 >
-    au < released ; 1953 ; Revista Iberoamericana Volume XVIII-XIX ; XVIII-XIX ; 1953 >
-    au < released ; 1954 ; Revista Iberoamericana Volume XIX ; XIX ; 1954 >
-    au < released ; 1955 ; Revista Iberoamericana Volume XX ; XX ; 1955 >
-    au < released ; 1956 ; Revista Iberoamericana Volume XXI ; XXI ; 1956 >
-    au < released ; 1957 ; Revista Iberoamericana Volume XXII ; XXII ; 1957 >
-    au < released ; 1958 ; Revista Iberoamericana Volume XXIII ; XXIII ; 1958 >
-    au < released ; 1959 ; Revista Iberoamericana Volume XXIV ; XXIV ; 1959 >
-    au < released ; 1960 ; Revista Iberoamericana Volume XXV ; XXV ; 1960 >
-    au < released ; 1961 ; Revista Iberoamericana Volume XXVI-XXVII ; XXVI-XXVII ; 1961 >
-    au < released ; 1962 ; Revista Iberoamericana Volume XXVIII ; XXVIII ; 1962 >
-    au < released ; 1963 ; Revista Iberoamericana Volume XXIX ; XXIX ; 1963 >
-    au < released ; 1964 ; Revista Iberoamericana Volume XXX ; XXX ; 1964 >
-    au < released ; 1965 ; Revista Iberoamericana Volume XXXI ; XXXI ; 1965 >
-    au < released ; 1966 ; Revista Iberoamericana Volume XXXII ; XXXII ; 1966 >
-    au < released ; 1967 ; Revista Iberoamericana Volume XXXIII ; XXXIII ; 1967 >
-    au < released ; 1968 ; Revista Iberoamericana Volume XXXIV ; XXXIV ; 1968 >
-    au < released ; 1969 ; Revista Iberoamericana Volume XXXV ; XXXV ; 1969 >
-    au < released ; 1970 ; Revista Iberoamericana Volume XXXVI ; XXXVI ; 1970 >
-    au < released ; 1971 ; Revista Iberoamericana Volume XXXVII ; XXXVII ; 1971 >
-    au < released ; 1972 ; Revista Iberoamericana Volume XXXVIII ; XXXVIII ; 1972 >
-    au < released ; 1973 ; Revista Iberoamericana Volume XXXIX ; XXXIX ; 1973 >
-    au < released ; 1974 ; Revista Iberoamericana Volume XL ; XL ; 1974 >
-    au < released ; 1975 ; Revista Iberoamericana Volume XLI ; XLI ; 1975 >
-    au < released ; 1976 ; Revista Iberoamericana Volume XLII ; XLII ; 1976 >
-    au < released ; 1977 ; Revista Iberoamericana Volume XLIII ; XLIII ; 1977 >
-    au < released ; 1978 ; Revista Iberoamericana Volume XLIV ; XLIV ; 1978 >
-    au < released ; 1979 ; Revista Iberoamericana Volume XLV ; XLV ; 1979 >
-    au < released ; 1980 ; Revista Iberoamericana Volume XLVI ; XLVI ; 1980 >
-    au < released ; 1981 ; Revista Iberoamericana Volume XLVII ; XLVII ; 1981 >
-    au < released ; 1982 ; Revista Iberoamericana Volume XLVIII ; XLVIII ; 1982 >
-    au < released ; 1983 ; Revista Iberoamericana Volume XLIX ; XLIX ; 1983 >
-    au < released ; 1984 ; Revista Iberoamericana Volume L ; L ; 1984 >
-    au < released ; 1985 ; Revista Iberoamericana Volume LI ; LI ; 1985 >
-    au < released ; 1986 ; Revista Iberoamericana Volume LII ; LII ; 1986 >
-    au < released ; 1987 ; Revista Iberoamericana Volume LIII ; LIII ; 1987 >
-    au < released ; 1988 ; Revista Iberoamericana Volume LIV ; LIV ; 1988 >
-    au < released ; 1989 ; Revista Iberoamericana Volume LV ; LV ; 1989 >
-    au < released ; 1990 ; Revista Iberoamericana Volume LVI ; LVI ; 1990 >
-    au < released ; 1991 ; Revista Iberoamericana Volume LVII ; LVII ; 1991 >
-    au < released ; 1992 ; Revista Iberoamericana Volume LVIII ; LVIII ; 1992 >
-    au < released ; 1993 ; Revista Iberoamericana Volume LIX ; LIX ; 1993 >
-    au < released ; 1994 ; Revista Iberoamericana Volume LX ; LX ; 1994 >
-    au < released ; 1995 ; Revista Iberoamericana Volume LXI ; LXI ; 1995 >
-    au < released ; 1996 ; Revista Iberoamericana Volume LXII ; LXII ; 1996 >
-    au < released ; 1997 ; Revista Iberoamericana Volume LXIII ; LXIII ; 1997 >
-    au < released ; 1998 ; Revista Iberoamericana Volume LXIV ; LXIV ; 1998 >
-    au < released ; 1999 ; Revista Iberoamericana Volume LXV ; LXV ; 1999 >
-    au < released ; 2000 ; Revista Iberoamericana Volume LXVI ; LXVI ; 2000 >
-    au < released ; 2001 ; Revista Iberoamericana Volume LXVII ; LXVII ; 2001 >
-    au < released ; 2002 ; Revista Iberoamericana Volume LXVIII ; LXVIII ; 2002 >
-    au < released ; 2003 ; Revista Iberoamericana Volume LXIX ; LXIX ; 2003 >
-    au < released ; 2004 ; Revista Iberoamericana Volume LXX ; LXX ; 2004 >
-    au < released ; 2005 ; Revista Iberoamericana Volume LXXI ; LXXI ; 2005 >
-    au < released ; 2006 ; Revista Iberoamericana Volume LXXII ; LXXII ; 2006 >
-    au < released ; 2007 ; Revista Iberoamericana Volume LXXIII ; LXXIII ; 2007 >
-    au < released ; 2008 ; Revista Iberoamericana Volume LXXIV ; LXXIV ; 2008 >
-    au < released ; 2009 ; Revista Iberoamericana Volume LXXV ; LXXV ; 2009 >
-    au < released ; 2010 ; Revista Iberoamericana Volume LXXVI ; LXXVI ; 2010 >
-    au < released ; 2011 ; Revista Iberoamericana Volume LXXVII ; LXXVII ; 2011 >
-    au < released ; 2012 ; Revista Iberoamericana Volume LXXVIII ; LXXVIII ; 2012 >
+    au < released ; 1939 ; 1939 ; Revista Iberoamericana Volume I ; I >
+    au < released ; 1940 ; 1940 ; Revista Iberoamericana Volume II ; II >
+    au < released ; 1941 ; 1941 ; Revista Iberoamericana Volume III-IV ; III-IV >
+    au < released ; 1942 ; 1942 ; Revista Iberoamericana Volume IV-V ; IV-V >
+    au < released ; 1943 ; 1943 ; Revista Iberoamericana Volume VI-VII ; VI-VII >
+    au < released ; 1944 ; 1944 ; Revista Iberoamericana Volume VII-VIII ; VII-VIII >
+    au < released ; 1945 ; 1945 ; Revista Iberoamericana Volume IX-X ; IX-X >
+    au < released ; 1946 ; 1946 ; Revista Iberoamericana Volume X-XI ; X-XI >
+    au < released ; 1947 ; 1947 ; Revista Iberoamericana Volume XII-XIII ; XII-XIII >
+    au < released ; 1948 ; 1948 ; Revista Iberoamericana Volume XIII-XIV ; XIII-XIV >
+    au < released ; 1949 ; 1949 ; Revista Iberoamericana Volume XV ; XV >
+    au < released ; 1950 ; 1950 ; Revista Iberoamericana Volume XV-XVI ; XV-XVI >
+    au < released ; 1951 ; 1951 ; Revista Iberoamericana Volume XVI-XVII ; XVI-XVII >
+    au < released ; 1952 ; 1952 ; Revista Iberoamericana Volume XVII-XVIII ; XVII-XVIII >
+    au < released ; 1953 ; 1953 ; Revista Iberoamericana Volume XVIII-XIX ; XVIII-XIX >
+    au < released ; 1954 ; 1954 ; Revista Iberoamericana Volume XIX ; XIX >
+    au < released ; 1955 ; 1955 ; Revista Iberoamericana Volume XX ; XX >
+    au < released ; 1956 ; 1956 ; Revista Iberoamericana Volume XXI ; XXI >
+    au < released ; 1957 ; 1957 ; Revista Iberoamericana Volume XXII ; XXII >
+    au < released ; 1958 ; 1958 ; Revista Iberoamericana Volume XXIII ; XXIII >
+    au < released ; 1959 ; 1959 ; Revista Iberoamericana Volume XXIV ; XXIV >
+    au < released ; 1960 ; 1960 ; Revista Iberoamericana Volume XXV ; XXV >
+    au < released ; 1961 ; 1961 ; Revista Iberoamericana Volume XXVI-XXVII ; XXVI-XXVII >
+    au < released ; 1962 ; 1962 ; Revista Iberoamericana Volume XXVIII ; XXVIII >
+    au < released ; 1963 ; 1963 ; Revista Iberoamericana Volume XXIX ; XXIX >
+    au < released ; 1964 ; 1964 ; Revista Iberoamericana Volume XXX ; XXX >
+    au < released ; 1965 ; 1965 ; Revista Iberoamericana Volume XXXI ; XXXI >
+    au < released ; 1966 ; 1966 ; Revista Iberoamericana Volume XXXII ; XXXII >
+    au < released ; 1967 ; 1967 ; Revista Iberoamericana Volume XXXIII ; XXXIII >
+    au < released ; 1968 ; 1968 ; Revista Iberoamericana Volume XXXIV ; XXXIV >
+    au < released ; 1969 ; 1969 ; Revista Iberoamericana Volume XXXV ; XXXV >
+    au < released ; 1970 ; 1970 ; Revista Iberoamericana Volume XXXVI ; XXXVI >
+    au < released ; 1971 ; 1971 ; Revista Iberoamericana Volume XXXVII ; XXXVII >
+    au < released ; 1972 ; 1972 ; Revista Iberoamericana Volume XXXVIII ; XXXVIII >
+    au < released ; 1973 ; 1973 ; Revista Iberoamericana Volume XXXIX ; XXXIX >
+    au < released ; 1974 ; 1974 ; Revista Iberoamericana Volume XL ; XL >
+    au < released ; 1975 ; 1975 ; Revista Iberoamericana Volume XLI ; XLI >
+    au < released ; 1976 ; 1976 ; Revista Iberoamericana Volume XLII ; XLII >
+    au < released ; 1977 ; 1977 ; Revista Iberoamericana Volume XLIII ; XLIII >
+    au < released ; 1978 ; 1978 ; Revista Iberoamericana Volume XLIV ; XLIV >
+    au < released ; 1979 ; 1979 ; Revista Iberoamericana Volume XLV ; XLV >
+    au < released ; 1980 ; 1980 ; Revista Iberoamericana Volume XLVI ; XLVI >
+    au < released ; 1981 ; 1981 ; Revista Iberoamericana Volume XLVII ; XLVII >
+    au < released ; 1982 ; 1982 ; Revista Iberoamericana Volume XLVIII ; XLVIII >
+    au < released ; 1983 ; 1983 ; Revista Iberoamericana Volume XLIX ; XLIX >
+    au < released ; 1984 ; 1984 ; Revista Iberoamericana Volume L ; L >
+    au < released ; 1985 ; 1985 ; Revista Iberoamericana Volume LI ; LI >
+    au < released ; 1986 ; 1986 ; Revista Iberoamericana Volume LII ; LII >
+    au < released ; 1987 ; 1987 ; Revista Iberoamericana Volume LIII ; LIII >
+    au < released ; 1988 ; 1988 ; Revista Iberoamericana Volume LIV ; LIV >
+    au < released ; 1989 ; 1989 ; Revista Iberoamericana Volume LV ; LV >
+    au < released ; 1990 ; 1990 ; Revista Iberoamericana Volume LVI ; LVI >
+    au < released ; 1991 ; 1991 ; Revista Iberoamericana Volume LVII ; LVII >
+    au < released ; 1992 ; 1992 ; Revista Iberoamericana Volume LVIII ; LVIII >
+    au < released ; 1993 ; 1993 ; Revista Iberoamericana Volume LIX ; LIX >
+    au < released ; 1994 ; 1994 ; Revista Iberoamericana Volume LX ; LX >
+    au < released ; 1995 ; 1995 ; Revista Iberoamericana Volume LXI ; LXI >
+    au < released ; 1996 ; 1996 ; Revista Iberoamericana Volume LXII ; LXII >
+    au < released ; 1997 ; 1997 ; Revista Iberoamericana Volume LXIII ; LXIII >
+    au < released ; 1998 ; 1998 ; Revista Iberoamericana Volume LXIV ; LXIV >
+    au < released ; 1999 ; 1999 ; Revista Iberoamericana Volume LXV ; LXV >
+    au < released ; 2000 ; 2000 ; Revista Iberoamericana Volume LXVI ; LXVI >
+    au < released ; 2001 ; 2001 ; Revista Iberoamericana Volume LXVII ; LXVII >
+    au < released ; 2002 ; 2002 ; Revista Iberoamericana Volume LXVIII ; LXVIII >
+    au < released ; 2003 ; 2003 ; Revista Iberoamericana Volume LXIX ; LXIX >
+    au < released ; 2004 ; 2004 ; Revista Iberoamericana Volume LXX ; LXX >
+    au < released ; 2005 ; 2005 ; Revista Iberoamericana Volume LXXI ; LXXI >
+    au < released ; 2006 ; 2006 ; Revista Iberoamericana Volume LXXII ; LXXII >
+    au < released ; 2007 ; 2007 ; Revista Iberoamericana Volume LXXIII ; LXXIII >
+    au < released ; 2008 ; 2008 ; Revista Iberoamericana Volume LXXIV ; LXXIV >
+    au < released ; 2009 ; 2009 ; Revista Iberoamericana Volume LXXV ; LXXV >
+    au < released ; 2010 ; 2010 ; Revista Iberoamericana Volume LXXVI ; LXXVI >
+    au < released ; 2011 ; 2011 ; Revista Iberoamericana Volume LXXVII ; LXXVII >
+    au < released ; 2012 ; 2012 ; Revista Iberoamericana Volume LXXVIII ; LXXVIII >
 
 
   }
@@ -482,9 +482,9 @@
     param[base_url] = http://ricoeur.pitt.edu/ojs/
     param[journal_id] = ricoeur
 
-    au < released ; 2010 ; Ricoeur Studies Volume 1 ; 1 ; 2010 >
-    au < released ; 2011 ; Ricoeur Studies Volume 2 ; 2 ; 2011 >
-    au < released ; 2012 ; Ricoeur Studies Volume 3 ; 3 ; 2012 >
+    au < released ; 2010 ; 2010 ; Ricoeur Studies Volume 1 ; 1 >
+    au < released ; 2011 ; 2011 ; Ricoeur Studies Volume 2 ; 2 >
+    au < released ; 2012 ; 2012 ; Ricoeur Studies Volume 3 ; 3 >
 
   }
 
