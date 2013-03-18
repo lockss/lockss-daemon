@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.19 2013-01-16 21:27:07 pgust Exp $
+ * $Id: TdbAu.java,v 1.20 2013-03-18 23:21:36 pgust Exp $
  */
 
 /*
@@ -233,11 +233,14 @@ public class TdbAu implements BibliographicItem {
    * @return the name of this AU
    */
   public String getProprietaryId() {
+    // give priority to attributes over params for overriding
+    for (String journal_id : journal_ids) {
+      String propId = getAttr(journal_id);
+      if (!StringUtil.isNullString(propId)) return propId;
+    }
     for (String journal_id : journal_ids) {
       String propId = getParam(journal_id);
-      if (propId != null) return propId;
-      propId = getAttr(journal_id);
-      if (propId != null) return propId;
+      if (!StringUtil.isNullString(propId)) return propId;
     }
     return null;
   }
