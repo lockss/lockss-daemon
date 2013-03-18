@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.29 2013-02-24 04:54:19 dshr Exp $
+ * $Id: VoterActions.java,v 1.30 2013-03-18 19:19:33 dshr Exp $
  */
 
 /*
@@ -298,7 +298,7 @@ public class VoterActions {
     ArchivalUnit au = ud.getVoter().getAu();
     idmgr.signalPartialAgreementHint(poller, au, (float) agreementHint);
     byte[] nonce2 = msg.getVoterNonce2();
-    if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
+    if (nonce2 != null && nonce2.length > 0) {
       // Is it the same as the one we sent?
       if (ByteArray.lexicographicalCompare(nonce2, ud.getVoterNonce2()) == 0) {
 	VoteBlocksTallier vbt = new VoteBlocksTallier();

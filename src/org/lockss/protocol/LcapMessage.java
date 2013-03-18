@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.60 2005-12-01 23:28:00 troberts Exp $
+ * $Id: LcapMessage.java,v 1.61 2013-03-18 19:19:33 dshr Exp $
  */
 
 /*
@@ -51,7 +51,6 @@ public abstract class LcapMessage {
 
   public static final String DEFAULT_HASH_ALGORITHM = "SHA-1";
   public static final int SHA_LENGTH = 20;
-  public static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
   public static final byte[] signature = { 'l', 'p', 'm' };
   public static final byte[] protocolByte = { '1', '2', '3' };
 

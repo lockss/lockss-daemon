@@ -163,6 +163,9 @@ class V3TestCases( LockssTestCases ):
         self.local_configuration = {}
         self.simulated_AU_parameters = {}
         self.expected_agreement = '100.00'
+        self.expected_voter_agreement = '0.00'
+        self.symmetric = False
+        self.pop = False
 
     def _await_V3_poll_agreement( self ):
         # Expect to see a top level content poll called by all peers
@@ -222,9 +225,26 @@ class V3TestCases( LockssTestCases ):
 
     def _verify_voter_agreements( self ):
         poll_key = self.victim.getV3PollKey( self.AU )
+        log.info( 'Poll key: %s' % poll_key )
+        for client in self.clients:
+            log.info( 'Checking repairers on client %s' % client )
+            if client != self.victim:
+                repairer_info = client.getAuRepairerInfo( self.AU, 'LastPercentAgreement' )
+                repairer_count = len( repairer_info)
+                for ( box, agreement ) in repairer_info.iteritems():
+                    log.info( "Client %s box %s agree %s" % ( client, box, agreement ) )
+                    self.assertEqual(self.expected_voter_agreement,
+                                     agreement,
+                                     'Client %s wrong agreement %s with box %s' % ( client, agreement, box))
+                    if self.symmetric == True:
+                        log.info( 'Symmetric client OK')
+                    else:
+                        log.info( 'Asymmetric client OK')
+
         repairer_info = self.victim.getAuRepairerInfo( self.AU, 'LastPercentAgreement' )
         self.assertEqual( len( self.clients ) - 1, len( repairer_info ) )
         for ( box, agreement ) in repairer_info.iteritems():
+            log.info( "Client %s box %s agree %s" % ( self.victim, box, agreement ) )
             self.assertEqual( agreement, self.expected_agreement, 
                        'Voter %s had actual agreement: %s expected: %s' % ( box, agreement, self.expected_agreement ) )
 
@@ -301,7 +321,7 @@ class SimpleV3TestCase( V3TestCases ):
     def __init__( self, methodName = 'runTest' ):
         V3TestCases.__init__( self, methodName )
         self.simulated_AU_parameters = { 'numFiles': 3 }
-            
+
     def _damage_AU( self ):
         return [ ]
 
@@ -607,6 +627,7 @@ class TotalLossRecoveryV3TestCase( V3TestCases ):
         self.local_configuration = { 'org.lockss.poll.v3.enableV3Poller': True }    # Enable polling on all peers
         self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'numFiles': 30 }
         self.expected_agreement = '0.00'
+        self.expected_voter_agreement = '100.00'
 
     def _setup_AU( self ):
         V3TestCases._setup_AU( self )
@@ -666,8 +687,92 @@ class TotalLossRecoveryV3TestCase( V3TestCases ):
         self.assert_( self.victim.waitForV3Repair( self.AU, timeout = self.timeout ), 'AU was not repaired by V3' )
 
 
+class TotalLossRecoverySymmetricV3TestCase( V3TestCases ):
+    """Test repairing a cache under V3 that has lost all its contents via a symmetric poll"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'numFiles': 30 }
+        self.expected_agreement = '0.00'
+        self.expected_voter_agreeement = '100.00'
+        self.symmetric = True
+
+    def _setup_AU( self ):
+        V3TestCases._setup_AU( self )
+
+    def runTest( self ):
+        self._setup_AU()
+        # Wait for the first poll to finish
+        log.info( 'Waiting for a V3 poll to be called...' )
+        self.assert_( self.victim.waitForV3Poller( self.AU ), 'Timed out while waiting for V3 poll' )
+        log.info( 'Successfully called a V3 poll' )
+        # XXX this terminates test
+        self._check_v3_result( nodes )
+        # Destroy the AU
+        nodes = self._damage_AU()
+        self._verify_damage( nodes )
+        log.info( 'Waiting for a V3 poll to be called...' )
+        self.assert_( self.victim.waitForV3Poller( self.AU ), 'Timed out while waiting for V3 poll' )
+        log.info( 'Successfully called a V3 poll' )
+        # Check the result
+        self._check_v3_result( nodes )
+
+    def _damage_AU( self ):
+        nodes = self.victim.getAuNodesWithContent( self.AU )
+        log.info( 'Backing up cache configuration on victim cache...' )
+        self.victim.backupConfiguration()
+        log.info( 'Backed up successfully' )
+
+        self.victim.daemon.stop()
+        log.info( 'Stopped daemon running on UI port %s' % self.victim.port )
+        self.victim.simulateDiskFailure()
+        log.info( 'Deleted entire contents of cache on stopped daemon' )
+
+        # Write a TitleDB entry for the simulated AU so it will be marked 'publisher down' when restored.
+        self.framework.appendLocalConfig( { 'org.lockss.auconfig.allowEditDefaultOnlyParams': True,
+                                            'org.lockss.title.sim1.journalTitle': 'Simulated Content',
+                                            'org.lockss.title.sim1.param.1.key': 'root',
+                                            'org.lockss.title.sim1.param.1.value': 'simContent',
+                                            'org.lockss.title.sim1.param.2.key': 'depth',
+                                            'org.lockss.title.sim1.param.2.value': 0,
+                                            'org.lockss.title.sim1.param.3.key': 'branch',
+                                            'org.lockss.title.sim1.param.3.value': 0,
+                                            'org.lockss.title.sim1.param.4.key': 'numFiles',
+                                            'org.lockss.title.sim1.param.4.value': 30,
+                                            'org.lockss.title.sim1.param.pub_down.key': 'pub_down',
+                                            'org.lockss.title.sim1.param.pub_down.value': True,
+                                            'org.lockss.title.sim1.plugin': 'org.lockss.plugin.simulated.SimulatedPlugin',
+                                            'org.lockss.title.sim1.title': 'Simulated Content: simContent' }, self.victim )
+        time.sleep( 5 ) # Settling time
+
+        self.victim.daemon.start()
+        # Wait for the client to come up
+        self.assert_( self.victim.waitForDaemonReady(), 'Daemon is not ready' )
+        log.info( 'Started daemon running on UI port %s' % self.victim.port)
+
+        return nodes
+
+    def _verify_damage( self, nodes ):
+        self.assertFalse( self.victim.hasAu( self.AU ), 'AU still intact' )
+
+        # Restore the backup file
+        log.info( 'Restoring cache configuration...' )
+        self.victim.restoreConfiguration( self.AU )
+        log.info( 'Restored successfully' )
+
+        # These should be equal AU IDs, so both should return true
+        self.assert_( self.victim.hasAu( self.AU ) )
+        self.assert_( self.victim.isPublisherDown( self.AU ) )
+        
+    def _await_repair( self, nodes ):
+        # Expect to see the AU successfully repaired
+        log.info( 'Waiting for successful V3 repair of entire AU' )
+        self.assert_( self.victim.waitForV3Repair( self.AU, timeout = self.timeout ), 'AU was not repaired by V3' )
+
+
 class RepairFromPublisherV3TestCase( V3TestCases ):
     """Ensure that repair from publisher works correctly in V3"""
+    """Hangs if PoP polls enabled"""
 
     def __init__( self, methodName = 'runTest' ):
         V3TestCases.__init__( self, methodName )
@@ -797,6 +902,41 @@ class RepairHugeFromPeerV3TestCase( RepairFromPeerV3Tests ):
         return [ node ]
 
 
+class SimpleV3SymmetricTestCase( V3TestCases ):
+    """Test a V3 symmetric poll with no disagreement"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        # ALWAYS have voter ask for symmetric poll
+        self.local_configuration = { "org.lockss.poll.v3.allSymmetricPolls": True }
+        self.simulated_AU_parameters = { 'numFiles': 3 }
+        self.symmetric = True
+        self.expected_voter_agreement = '100.00'
+            
+    def _damage_AU( self ):
+        return [ ]
+
+
+class SimpleV3PoPTestCase( V3TestCases ):
+    """Test a V3 proof of possession poll with no disagreement"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.local_configuration = { "org.lockss.poll.v3.modulus": 2 }
+        self.simulated_AU_parameters = { 'numFiles': 30 }
+        # XXX need to confirm poll on ~15 files
+        # XXX need to confirm willing repairer status
+        
+    def _damage_AU( self ):
+        return [ ]
+
+# RepairViaSymmetricPollTestCase
+# Have 8041 call a poll and get agreement - ensure no other polls
+# Verify that 804[2345] are willing to repair 8041
+# Damage 8041
+# Have 8041 call a poll and get a repair
+# Verify repair
+
 # Load configuration (*before* creating test instances)
 lockss_util.config.load( 'testsuite.props' )
 
@@ -812,6 +952,8 @@ tinyUiTests = unittest.TestSuite( ( TinyUiUnknownHostTestCase(),
 
 simpleV3Tests = unittest.TestSuite( ( FormatExpectedAgreementTestCase(),
                                       SimpleV3TestCase(),
+                                      SimpleV3SymmetricTestCase(),
+                                      SimpleV3PoPTestCase(),
                                       SimpleDamageV3TestCase(),
                                       SimpleDeleteV3TestCase(),
                                       SimpleExtraFileV3TestCase(),
@@ -825,6 +967,10 @@ simpleV3Tests = unittest.TestSuite( ( FormatExpectedAgreementTestCase(),
                                       RepairFromPublisherV3TestCase(),
                                       RepairFromPeerV3TestCase(),
                                       RepairFromPeerWithDeactivateV3TestCase() ) )
+
+dshrV3Tests = unittest.TestSuite( ( SimpleV3TestCase(),
+                                      #TotalLossRecoverySymmetricV3TestCase(),
+                                      SimpleV3SymmetricTestCase() ) )
 
 randomV3Tests = unittest.TestSuite( ( RandomDamageV3TestCase(),
                                       RandomDeleteV3TestCase(),

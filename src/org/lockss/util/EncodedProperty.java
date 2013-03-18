@@ -1,5 +1,5 @@
 /*
- * $Id: EncodedProperty.java,v 1.12 2011-02-14 00:09:56 tlipkis Exp $
+ * $Id: EncodedProperty.java,v 1.13 2013-03-18 19:19:33 dshr Exp $
  */
 
 /*
@@ -46,7 +46,6 @@ import org.mortbay.util.B64Code;
 public class EncodedProperty extends Properties {
 
   public static final String DEFAULT_ENCODING = "UTF-8";
-  public static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
 
   private static final Logger log = Logger.getLogger("EncodedProperty");
 
@@ -230,9 +229,9 @@ public class EncodedProperty extends Properties {
   }
 
   public EncodedProperty getEncodedProperty(String key) {
-    byte[] encodedVal = getByteArray(key, EMPTY_BYTE_ARRAY);
+    byte[] encodedVal = getByteArray(key, ByteArray.EMPTY_BYTE_ARRAY);
 
-    if (encodedVal == EMPTY_BYTE_ARRAY) { // ref equality should be OK.
+    if (encodedVal == ByteArray.EMPTY_BYTE_ARRAY) { // ref equality should be OK.
       return null;
     }
 

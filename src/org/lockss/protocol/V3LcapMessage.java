@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.51 2013-03-01 04:12:25 dshr Exp $
+ * $Id: V3LcapMessage.java,v 1.52 2013-03-18 19:19:33 dshr Exp $
  */
 
 /*
@@ -439,10 +439,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_opcode = m_props.getInt("opcode", -1);
     m_archivalID = m_props.getProperty("au", "UNKNOWN");
     m_targetUrl = m_props.getProperty("url");
-    m_pollerNonce = m_props.getByteArray("pollerNonce", EMPTY_BYTE_ARRAY);
-    m_voterNonce = m_props.getByteArray("voterNonce", EMPTY_BYTE_ARRAY);
-    m_voterNonce2 = m_props.getByteArray("voterNonce2", EMPTY_BYTE_ARRAY);
-    m_effortProof = m_props.getByteArray("effortproof", EMPTY_BYTE_ARRAY);
+    m_pollerNonce = m_props.getByteArray("pollerNonce", ByteArray.EMPTY_BYTE_ARRAY);
+    m_voterNonce = m_props.getByteArray("voterNonce", ByteArray.EMPTY_BYTE_ARRAY);
+    m_voterNonce2 = m_props.getByteArray("voterNonce2", ByteArray.EMPTY_BYTE_ARRAY);
+    m_effortProof = m_props.getByteArray("effortproof", ByteArray.EMPTY_BYTE_ARRAY);
     m_pluginVersion = m_props.getProperty("plugVer");
 
     // V3 specific message parameters
@@ -460,7 +460,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     if (m_modulus != 0) {
       log.debug3("V3LcapMessage with modulus: " + m_modulus);
     }
-    m_sampleNonce = m_props.getByteArray("sampleNonce", EMPTY_BYTE_ARRAY);
+    m_sampleNonce = m_props.getByteArray("sampleNonce", ByteArray.EMPTY_BYTE_ARRAY);
     String nakString = m_props.getProperty("nak");
     if (nakString != null) {
       try {
@@ -589,7 +589,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       if (m_voterNonce != null) {
         m_props.putByteArray("voterNonce", m_voterNonce);
       }
-      if (m_voterNonce2 != null && m_voterNonce2 != EMPTY_BYTE_ARRAY) {
+      if (m_voterNonce2 != null && m_voterNonce2.length > 0) {
         m_props.putByteArray("voterNonce2", m_voterNonce2);
       }
       return;
@@ -603,7 +603,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     if (m_modulus != 0) {
       log.debug3("V3LcapMessage sent modulus: " + m_modulus);
     }
-    if (m_sampleNonce != null && m_sampleNonce != EMPTY_BYTE_ARRAY) {
+    if (m_sampleNonce != null && m_sampleNonce.length > 0) {
       m_props.putByteArray("sampleNonce", m_sampleNonce);
     }
     if (m_targetUrl != null) {
@@ -622,7 +622,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     if (m_voterNonce != null) {
       m_props.putByteArray("voterNonce", m_voterNonce);
     }
-    if (m_voterNonce2 != null && m_voterNonce2 != EMPTY_BYTE_ARRAY) {
+    if (m_voterNonce2 != null && m_voterNonce2.length > 0) {
       m_props.putByteArray("voterNonce2", m_voterNonce2);
     }
 
@@ -712,7 +712,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   }
 
   public byte[] getVoterNonce2() {
-    if (m_voterNonce2 == EMPTY_BYTE_ARRAY) {
+    if (m_voterNonce2 == ByteArray.EMPTY_BYTE_ARRAY) {
       return null;
     }
     return m_voterNonce2;
@@ -762,10 +762,11 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   }
 
   public byte[] getSampleNonce() {
-    if (m_sampleNonce == EMPTY_BYTE_ARRAY) {
-      return null;
+    byte[] ret = ByteArray.EMPTY_BYTE_ARRAY;
+    if (m_sampleNonce != null) {
+      ret = m_sampleNonce;
     }
-    return m_sampleNonce;
+    return ret;
   }
 
   public void setSampleNonce(byte[] sampleNonce) {
@@ -973,7 +974,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     msg.m_opcode = MSG_NO_OP;
     msg.m_pollerNonce = pollerNonce;
     msg.m_voterNonce = voterNonce;
-    msg.m_voterNonce2 = EMPTY_BYTE_ARRAY;
+    msg.m_voterNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
     msg.m_pollProtocol = Poll.V3_PROTOCOL;
     return msg;
   }

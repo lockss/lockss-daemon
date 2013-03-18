@@ -1,5 +1,5 @@
 /*
- * $Id: TestEncodedProperty.java,v 1.6 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id: TestEncodedProperty.java,v 1.7 2013-03-18 19:19:34 dshr Exp $
  */
 
 /*
@@ -94,8 +94,8 @@ public class TestEncodedProperty extends LockssTestCase {
     assertEquals(280000000L, p1.getLong("long", 0L));
     assertEquals(3.14f, p1.getFloat("float", 0.0f), 0.0);
     assertEquals(3.14159265, p1.getDouble("double", 0.0), 0.0);
-    assertEquals(testArray, p1.getByteArray("bytearray", EncodedProperty.EMPTY_BYTE_ARRAY));
-    assertEquals(testArray, p1.getByteArray("encbytearray", EncodedProperty.EMPTY_BYTE_ARRAY));
+    assertEquals(testArray, p1.getByteArray("bytearray", ByteArray.EMPTY_BYTE_ARRAY));
+    assertEquals(testArray, p1.getByteArray("encbytearray", ByteArray.EMPTY_BYTE_ARRAY));
     assertEquals(b64TestArray, p1.getProperty("encbytearray"));
     assertEquals("String Value", p1.getProperty("string"));
 
@@ -132,8 +132,8 @@ public class TestEncodedProperty extends LockssTestCase {
     assertEquals(1.0f, p1.getFloat("foo", 1.0f), 0.0);
     assertEquals(0.0, p1.getDouble("foo", 0.0), 0.0);
     assertEquals(1.0, p1.getDouble("foo", 1.0), 0.0);
-    assertEquals(EncodedProperty.EMPTY_BYTE_ARRAY,
-		 p1.getByteArray("foo", EncodedProperty.EMPTY_BYTE_ARRAY));
+    assertEquals(ByteArray.EMPTY_BYTE_ARRAY,
+		 p1.getByteArray("foo", ByteArray.EMPTY_BYTE_ARRAY));
     assertNull(p1.getProperty("foo"));
     assertNull(p1.getEncodedProperty("foo"));
     assertNull(p1.getEncodedPropertyList("foo"));

@@ -1,6 +1,6 @@
 """LOCKSS daemon interface library."""
 
-# $Id: lockss_daemon.py,v 1.37 2012-11-08 06:19:48 tlipkis Exp $
+# $Id: lockss_daemon.py,v 1.38 2013-03-18 19:19:33 dshr Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -753,7 +753,7 @@ class Client:
 
     def getAuRepairerInfo( self, AU, key ):
         """Returns a mapping of peers to poll agreement data."""
-        return dict( ( row[ 'Box' ], row.get( key, '0' ).split( '%', 1 )[ 0 ] ) for row in self._getStatusTable( 'PeerRepair', AU.auId )[ 1 ] )
+        return dict( ( row[ 'Box' ], row.get( key, '0.00' ).split( '%', 1 )[ 0 ] ) for row in self._getStatusTable( 'PeerRepair', AU.auId )[ 1 ] )
 
     def getAllAuRepairerInfo(self, auid):
         '''Returns a map from peers to a map, which maps from keys in

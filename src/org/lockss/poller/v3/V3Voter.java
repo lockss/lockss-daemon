@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.79 2013-03-01 04:12:25 dshr Exp $
+ * $Id: V3Voter.java,v 1.80 2013-03-18 19:19:33 dshr Exp $
  */
 
 /*
@@ -300,6 +300,8 @@ public class V3Voter extends BasePoll {
       // Create a second nonce to request a symmetric poll
       byte[] nonce2 = PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH);
       voterUserData.setVoterNonce2(nonce2);
+      voterUserData.initSymmetricVoteBlocks();
+      log.debug3("voterNonce2 set to: " + nonce2);
     }
     int min = CurrentConfig.getIntParam(PARAM_MIN_NOMINATION_SIZE,
                                         DEFAULT_MIN_NOMINATION_SIZE);
@@ -844,7 +846,7 @@ public class V3Voter extends BasePoll {
    */
   private byte[][] initHasherByteArrays() {
     byte[] nonce2 = voterUserData.getVoterNonce2();
-    if (nonce2 == null || nonce2 == ByteArray.EMPTY_BYTE_ARRAY) {
+    if (nonce2 == null || nonce2.length == 0) {
       return new byte[][] {
         {}, // Plain Hash
         ByteArray.concat(voterUserData.getPollerNonce(),
@@ -870,7 +872,7 @@ public class V3Voter extends BasePoll {
    */
   private MessageDigest[] initHasherDigests() throws NoSuchAlgorithmException {
     byte[] nonce2 = voterUserData.getVoterNonce2();
-    boolean symPoll = nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY;
+    boolean symPoll = nonce2 != null && nonce2.length > 0;
     return PollUtil.createMessageDigestArray(symPoll ? 3 : 2,
 					     getHashAlgorithm());
   }
@@ -954,7 +956,7 @@ public class V3Voter extends BasePoll {
     stateMachine.enqueueEvent(V3Events.evtHashingDone,
 			      ehAbortPoll(errmsg));
     byte[] nonce2 = voterUserData.getVoterNonce2();
-    if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
+    if (nonce2 != null && nonce2.length > 0) {
       log.debug("Poll " + voterUserData.getPollKey() + " is symmetric");
     }
   }
@@ -971,7 +973,7 @@ public class V3Voter extends BasePoll {
     VoteBlock vb = new VoteBlock(block.getUrl());
     VoteBlock svb = null;
     byte[] nonce2 = voterUserData.getVoterNonce2();
-    if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
+    if (nonce2 != null && nonce2.length > 0) {
       svb = new VoteBlock(block.getUrl());
     }
     Iterator hashVersionIter = block.versionIterator();

@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.26 2013-03-01 04:12:25 dshr Exp $
+ * $Id: VoterUserData.java,v 1.27 2013-03-18 19:19:33 dshr Exp $
  */
 
 /*
@@ -130,7 +130,7 @@ public class VoterUserData
     this.createTime = TimeBase.nowMs();
     this.messageDir = messageDir;
     this.voteBlocks = new DiskVoteBlocks(voter.getStateDir());
-    this.setVoterNonce2(voterNonce2);
+    initSymmetricVoteBlocks();
   }
 
   public void setPollMessage(LcapMessage msg) {
@@ -329,6 +329,17 @@ public class VoterUserData
     this.symmetricVoteBlocks = voteBlocks;
   }
 
+  public void initSymmetricVoteBlocks() {
+    if (voterNonce2 != null && voterNonce2.length > 0) {
+      try {
+	this.symmetricVoteBlocks = new DiskVoteBlocks(voter.getStateDir());
+      } catch (IOException ex) {
+	log.error("Setting nonce2 throws " + ex);
+	this.voterNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
+      }
+    }
+  }
+
   public V3Voter getVoter() {
     return voter;
   }
@@ -361,20 +372,8 @@ public class VoterUserData
     return voterNonce2;
   }
 
-  public void setVoterNonce2(byte[] voterNonce) {
+  public void setVoterNonce2(byte[] voterNonce2) {
     this.voterNonce2 = voterNonce2;
-    if (voterNonce2 != null && voterNonce2 != ByteArray.EMPTY_BYTE_ARRAY) {
-      try {
-	this.symmetricVoteBlocks = new DiskVoteBlocks(voter.getStateDir());
-      } catch (IOException ex) {
-	log.error("Setting nonce2 throws " + ex);
-	this.voterNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
-      }
-      log.debug3("voterNonce2 set to: " + voterNonce2);
-    } else {
-      this.voterNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
-      this.symmetricVoteBlocks = null;
-    }
   }
 
   public synchronized void hashingDone(boolean hashingDone) {

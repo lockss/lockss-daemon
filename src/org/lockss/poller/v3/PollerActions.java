@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.32 2013-03-01 04:12:24 dshr Exp $
+ * $Id: PollerActions.java,v 1.33 2013-03-18 19:19:33 dshr Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class PollerActions {
       msg.setPollerNonce(ud.getPollerNonce());
       if (mod != 0) {
 	byte[] sampleNonce = ud.getPoller().getSampleNonce();
-	if (sampleNonce != null && sampleNonce != ByteArray.EMPTY_BYTE_ARRAY) {
+	if (sampleNonce != null && sampleNonce.length > 0) {
 	  msg.setModulus(mod);
 	  msg.setSampleNonce(sampleNonce);
 	} else {
@@ -331,8 +331,7 @@ public class PollerActions {
     msg.setRetryMax(1);
     byte[] nonce2 = ud.getVoterNonce2();
     VoteBlocks symmetricVoteBlocks = ud.getSymmetricVoteBlocks();
-    if (nonce2 != null && nonce2 != ByteArray.EMPTY_BYTE_ARRAY &&
-	symmetricVoteBlocks != null) {
+    if (nonce2 != null && nonce2.length > 0 && symmetricVoteBlocks != null) {
       msg.setVoterNonce2(nonce2);
       msg.setVoteBlocks(symmetricVoteBlocks);
     }
