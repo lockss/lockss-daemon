@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.15 2013-01-12 00:14:05 pgust Exp $
+ * $Id: MetadataField.java,v 1.16 2013-03-18 23:13:03 pgust Exp $
  */
 
 /*
@@ -34,7 +34,9 @@ package org.lockss.extractor;
 
 import java.util.*;
 import org.lockss.util.*;
+import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.lang.StringUtils;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -153,7 +155,7 @@ public class MetadataField {
       return eisbn;
     }
   };
-
+  
   public static final MetadataField FIELD_EISBN = new MetadataField(KEY_EISBN,
       Cardinality.Single,eisbnvalid);
   
@@ -207,7 +209,7 @@ public class MetadataField {
         return val;
         }
    };
-   
+
   public static final MetadataField FIELD_AUTHOR = new MetadataField(
       KEY_AUTHOR, Cardinality.Multi,authorvalid);
     
@@ -346,8 +348,7 @@ public class MetadataField {
   public static final String DC_KEY_IDENTIFIER_ISSNM = "dc.identifier.issnm";
   public static final MetadataField DC_FIELD_IDENTIFIER_ISSNM = new 
       MetadataField(
-      DC_KEY_IDENTIFIER_ISSNM, Cardinality.Multi);
-  
+      DC_KEY_IDENTIFIER_ISSNM, Cardinality.Multi);  
   
 
   /** The ISBN of the resource (dc qualified: non-standard NIH) */
@@ -460,28 +461,67 @@ public class MetadataField {
   public static final MetadataField FIELD_PROPRIETARY_IDENTIFIER =
       new MetadataField(KEY_PROPRIETARY_IDENTIFIER, Cardinality.Single);
 
+  /**
+   * An account of the resource. May include but is not limited to: an abstract,
+   * a table of contents, a graphical representation, or a free-text account of
+   * the resource.
+   */
+  public static final String FIELD_KEY_ABSTRACT = "abstract";
+  public static final MetadataField FIELD_ABSTRACT = new MetadataField(
+      FIELD_KEY_ABSTRACT, Cardinality.Single);
+
+  // array of fields -- used to populate key-to-object fieldMap.
+  // IMPORTANT: update this array when adding a new field!
   private static MetadataField[] fields = { 
-    FIELD_VOLUME, 
-    FIELD_ISSUE,
-    FIELD_START_PAGE,
-    FIELD_DATE,
-    FIELD_ARTICLE_TITLE, 
-    FIELD_JOURNAL_TITLE,
-    FIELD_AUTHOR,
+    FIELD_ABSTRACT,
     FIELD_ACCESS_URL,
-    FIELD_KEYWORDS,
-    DC_FIELD_IDENTIFIER,
-    DC_FIELD_DATE,
-    DC_FIELD_CONTRIBUTOR, 
+    FIELD_ARTICLE_TITLE,
+    FIELD_AUTHOR,
     FIELD_COVERAGE,
+    FIELD_DATE,
+    FIELD_END_PAGE,
+    FIELD_FEATURED_URL_MAP,
     FIELD_ITEM_NUMBER,
+    FIELD_JOURNAL_TITLE,
+    FIELD_KEYWORDS,
     FIELD_PROPRIETARY_IDENTIFIER,
-    FIELD_FEATURED_URL_MAP
+    FIELD_PUBLISHER,
+    FIELD_START_PAGE,
+    FIELD_VOLUME,
+    DC_FIELD_CITATION_CHAPTER,
+    DC_FIELD_CITATION_EPAGE,
+    DC_FIELD_CITATION_ISSUE,
+    DC_FIELD_CITATION_SPAGE,
+    DC_FIELD_CITATION_VOLUME,
+    DC_FIELD_CONTRIBUTOR,
+    DC_FIELD_COVERAGE,
+    DC_FIELD_CREATOR,
+    DC_FIELD_DATE,
+    DC_FIELD_DESCRIPTION,
+    DC_FIELD_FORMAT,
+    DC_FIELD_IDENTIFIER,
+    DC_FIELD_IDENTIFIER_ISSN,
+    DC_FIELD_IDENTIFIER_EISSN,
+    DC_FIELD_IDENTIFIER_ISSNL,
+    DC_FIELD_IDENTIFIER_ISSNM,
+    DC_FIELD_IDENTIFIER_ISBN,
+    DC_FIELD_IDENTIFIER_EISBN,
+    DC_FIELD_ISSUED,
+    DC_FIELD_LANGUAGE,
+    DC_FIELD_PUBLISHER,
+    DC_FIELD_RELATION,
+    DC_FIELD_RELATION_ISPARTOF,
+    DC_FIELD_RIGHTS,
+    DC_FIELD_SOURCE,
+    DC_FIELD_SUBJECT,
+    DC_FIELD_TITLE,
+    DC_FIELD_TYPE,
+    
   };
 
   // maps keys to fields
-  private static Map<String, MetadataField> fieldMap = new HashMap<String, 
-    MetadataField>();
+  private static Map<String, MetadataField> fieldMap = 
+      new HashMap<String, MetadataField>();
   static {
     for (MetadataField f : fields) {
       fieldMap.put(f.getKey().toLowerCase(), f);
@@ -808,6 +848,36 @@ public class MetadataField {
       }
       return StringUtil.breakAt(value, splitSep, -1, true, true);
     }
+  }
+  
+  /**
+   * Defines an extractor class that extracts the text from given 
+   * html-formatted input string.
+   * 
+   * @author phil
+   * 
+   */
+  public static class HtmlTextExtractor implements Extractor {
+
+    @Override
+    public String extract(ArticleMetadata am, MetadataField field, String value) 
+    {
+      String result = value;
+      if (!StringUtil.isNullString(value)) {
+        // matches a single html tag
+        result = HtmlUtil.stripHtmlTags(value);
+        result = StringEscapeUtils.unescapeHtml(result);
+      }
+      return result;
+    }
+  }
+  
+  static public Extractor htmlTextExtractor() {
+    return new HtmlTextExtractor();
+  }
+  
+  static public Extractor extractHtmlText() {
+    return htmlTextExtractor();
   }
 
   /**
