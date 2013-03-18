@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataField.java,v 1.12 2013-01-11 23:55:19 pgust Exp $
+ * $Id: TestMetadataField.java,v 1.13 2013-03-18 23:11:15 pgust Exp $
  */
 
 /*
@@ -308,6 +308,12 @@ public class TestMetadataField extends LockssTestCase {
      String testpagepattern2 = "p(23)";
      String testpagepattern3 = "(23)-(45)";
      String testpagepattern4 = "P(23)";
+     String testpagepattern5 = "([^-]+)(-(.+))?";
+     
+     String testhtmlfield = 
+         "A review of the applications of the hydrofiber dressing with silver (Aquacel Ag<sup>&reg;</sup>) in wound care";
+     String testhtmltextfield =
+         "A review of the applications of the hydrofiber dressing with silver (Aquacel Ag\u00ae) in wound care";
     
     ArticleMetadata articleMetadata = new ArticleMetadata();
     MetadataField testvalf0 = new MetadataField(MetadataField.FIELD_START_PAGE,
@@ -320,18 +326,34 @@ public class TestMetadataField extends LockssTestCase {
         MetadataField.groupExtractor(testpagepattern4,1));
     MetadataField testvalf4 = new MetadataField(MetadataField.FIELD_END_PAGE,
         MetadataField.groupExtractor(testpagepattern1,2));
-    MetadataField testvalf5 = new MetadataField(MetadataField.FIELD_END_PAGE,
-        MetadataField.groupExtractor(testpagepattern3,2));
+    MetadataField testvalf5 = new MetadataField(MetadataField.FIELD_START_PAGE,
+        MetadataField.groupExtractor(testpagepattern5,1));
+    MetadataField testvalf6 = new MetadataField(MetadataField.FIELD_END_PAGE,
+        MetadataField.groupExtractor(testpagepattern5,3));
+    MetadataField testvalf7 = new MetadataField(MetadataField.FIELD_ARTICLE_TITLE,
+        MetadataField.htmlTextExtractor());
    
     //test for start page pattern 
     assertEquals("23", testvalf1.extract(articleMetadata,"p23"));
     assertEquals("23", testvalf0.extract(articleMetadata, "pp. 23-45"));
     assertEquals("23", testvalf2.extract(articleMetadata, "23-45"));
     assertEquals("23", testvalf3.extract(articleMetadata, "P23"));
+    assertEquals("23", testvalf5.extract(articleMetadata, "23-45"));
+    assertEquals("23", testvalf5.extract(articleMetadata, "23"));
     
    //test for end page pattern
     assertEquals("45", testvalf4.extract(articleMetadata, "pp. 23-45"));
-    assertEquals("45", testvalf5.extract(articleMetadata, "23-45"));
+    assertEquals("45", testvalf6.extract(articleMetadata, "23-45"));
+    assertEquals(null, testvalf6.extract(articleMetadata, "23"));
+    
+    // test extraction of text from html
+    assertEquals(testhtmltextfield, 
+                 testvalf7.extract(articleMetadata, testhtmlfield));
+    // make sure it works with no html tags or character entities
+    assertEquals(testhtmltextfield, 
+                 testvalf7.extract(articleMetadata, testhtmltextfield));
+    assertEquals("", 
+                 testvalf7.extract(articleMetadata, ""));
 
   }
   public void testAuthor()throws MetadataException.ValidationException {
