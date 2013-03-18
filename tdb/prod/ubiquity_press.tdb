@@ -227,8 +227,8 @@
     param[base_url] = http://www.stabilityjournal.org/
     param[journal_id] = sta
 
-    au < exists ; 2012 ; Stability: International Journal of Security & Development Volume 1 ; 1 ; 2012 >
-    au < expected ; 2013 ; Stability: International Journal of Security & Development Volume 2 ; 2 ; 2013 >
+    au < manifest ; 2012 ; Stability: International Journal of Security & Development Volume 1 ; 1 ; 2012 >
+    au < manifest ; 2013 ; Stability: International Journal of Security & Development Volume 2 ; 2 ; 2013 >
     
   }
 
