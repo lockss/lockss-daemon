@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.10 2011-11-09 06:34:52 pgust Exp $
+ * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.11 2013-03-18 21:27:30 pgust Exp $
  */
 
 /*
@@ -136,7 +136,7 @@ public class SimpleHtmlMetaTagMetadataExtractor
     String content = line.substring(contentBegin, contentEnd);
     // filter out raw HTML tags embedded within content value
     // -- publishers sometimes get sloppy
-    content = content.replaceAll("<[^>]+>", "");
+    content = HtmlUtil.stripHtmlTags(content);
     content = StringEscapeUtils.unescapeHtml(content);
 
     if (log.isDebug3()) log.debug3("Add: " + name + " = " + content);
