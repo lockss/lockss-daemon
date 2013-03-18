@@ -248,27 +248,27 @@
       param[base_url] = http://cameraobscura.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 1976-1977 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; 1979 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 1-2 ; 1-2 >
-      au < HighWirePressH20Plugin ; exists ; 1980 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; 1981 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; 1982 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 3-4 ; 3-4 >
-      au < HighWirePressH20Plugin ; exists ; 1983-1984 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; 1985-1986 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; 1988 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; 1989 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; 1990 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; exists ; 1991 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; 1992 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; exists ; 1993 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; exists ; 1994 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 11-12 ; 11-12 >
-      au < HighWirePressH20Plugin ; exists ; 1995 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; exists ; 1996 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; exists ; 1997-1999 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; exists ; 2000-2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 1976-1977 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 1-2 ; 1-2 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 3-4 ; 3-4 >
+      au < HighWirePressH20Plugin ; manifest ; 1983-1984 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1985-1986 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 11-12 ; 11-12 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 1997-1999 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 2000-2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; exists ; 2004 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 19 ; 19 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 >
@@ -892,12 +892,13 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ethnohistory.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      comment[notReady] = missing article page
       
-     au < HighWirePressH20Plugin ; testing ; 2000 ; Ethnohistory Volume 47 ; 47 >
-     au < HighWirePressH20Plugin ; testing ; 2001 ; Ethnohistory Volume 48 ; 48 >
-     au < HighWirePressH20Plugin ; testing ; 2002 ; Ethnohistory Volume 49 ; 49 >
-     au < HighWirePressH20Plugin ; testing ; 2003 ; Ethnohistory Volume 50 ; 50 >
-     au < HighWirePressH20Plugin ; testing ; 2004 ; Ethnohistory Volume 51 ; 51 >
+     au < HighWirePressH20Plugin ; ready ; 2000 ; Ethnohistory Volume 47 ; 47 >
+     au < HighWirePressH20Plugin ; ready ; 2001 ; Ethnohistory Volume 48 ; 48 >
+     au < HighWirePressH20Plugin ; notReady ; 2002 ; Ethnohistory Volume 49 ; 49 >
+     au < HighWirePressH20Plugin ; ready ; 2003 ; Ethnohistory Volume 50 ; 50 >
+     au < HighWirePressH20Plugin ; ready ; 2004 ; Ethnohistory Volume 51 ; 51 >
      au < HighWireStrVolPlugin ; down ; 2005 ; Ethnohistory Volume 52 ; 52 >
      au < HighWireStrVolPlugin ; down ; 2006 ; Ethnohistory Volume 53 ; 53 >
      au < HighWireStrVolPlugin ; down ; 2007 ; Ethnohistory Volume 54 ; 54 >
