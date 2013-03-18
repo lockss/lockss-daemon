@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.15 2013-03-06 08:06:22 tlipkis Exp $
+ * $Id: TestTdbAu.java,v 1.16 2013-03-18 23:29:33 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.15 2013-03-06 08:06:22 tlipkis Exp $
+ * @version $Id: TestTdbAu.java,v 1.16 2013-03-18 23:29:33 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -97,6 +97,20 @@ public class TestTdbAu extends LockssTestCase {
     TdbAu au2 = new TdbAu("Test AU", "pluginA");
     au2.setParam("pub_down", "true");
     assertTrue(au2.isDown());
+  }
+  
+  /**
+   * Test getProprietaryId() method.
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testProprietaryId() throws TdbException {
+    TdbAu au1 = new TdbAu("Test AU", "pluginA");
+    // use param if specified
+    au1.setParam("journal_id", "foo");
+    assertEquals("foo", au1.getProprietaryId());
+    // use attr instead if also specified
+    au1.setAttr("journal_id", "bar");
+    assertEquals("bar", au1.getProprietaryId());    
   }
   
   /**
