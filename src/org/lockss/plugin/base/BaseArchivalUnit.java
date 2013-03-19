@@ -1,10 +1,10 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.163 2013-03-16 22:04:01 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.164 2013-03-19 04:26:15 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -582,6 +582,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public String getName() {
     return paramMap.getString(KEY_AU_TITLE, auName);
+  }
+
+  public List<Pattern> makeExcludeUrlsFromPollsPatterns()
+      throws ArchivalUnit.ConfigurationException {
+    return null;
   }
 
   public List<Pattern> makeNonSubstanceUrlPatterns()

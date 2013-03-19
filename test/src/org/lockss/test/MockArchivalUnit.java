@@ -1,10 +1,10 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.105 2013-01-06 06:36:32 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.106 2013-03-19 04:26:14 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -58,6 +58,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private String defaultAUId = StringUtil.gensym("MockAU_");
   private CachedUrlSet cus = null;
   private List newContentUrls = null;
+  private List<Pattern> excludeUrlFromPollPatterns = null;
   private List<Pattern> nonSubstanceUrlPatterns = null;
   private List<Pattern> substanceUrlPatterns = null;
   private SubstancePredicate substancePred = null;
@@ -167,6 +168,11 @@ public class MockArchivalUnit implements ArchivalUnit {
     return newContentUrls;
   }
 
+  public List<Pattern> makeExcludeUrlsFromPollsPatterns()
+      throws ArchivalUnit.ConfigurationException {
+    return excludeUrlFromPollPatterns;
+  }
+
   public List<Pattern> makeNonSubstanceUrlPatterns() {
     return nonSubstanceUrlPatterns;
   }
@@ -177,6 +183,10 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public SubstancePredicate makeSubstancePredicate() {
     return substancePred;
+  }
+
+  public void setExcludeUrlsFromPollsPatterns(List<Pattern> pats) {
+    excludeUrlFromPollPatterns = pats;
   }
 
   public void setNonSubstanceUrlPatterns(List<Pattern> pats) {

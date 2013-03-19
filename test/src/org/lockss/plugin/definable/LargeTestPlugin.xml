@@ -180,6 +180,13 @@
     <string>org.lockss.plugin.definable.MockFactories$SubstancePredicateFactory</string>
   </entry>
   <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <list>
+      <string>"%s.*/rotating_ad.*", base_url</string>
+      <string>"%s.*\.css", base_url</string>
+    </list>
+  </entry>
+  <entry>
     <string>au_substance_url_pattern</string>
     <map>
       <entry>

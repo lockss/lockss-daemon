@@ -1,10 +1,10 @@
 /*
- * $Id: BlockHasher.java,v 1.20 2012-07-02 16:21:01 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.21 2013-03-19 04:26:15 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.security.*;
 
+import org.apache.oro.text.regex.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.state.SubstanceChecker;
@@ -79,6 +80,7 @@ public class BlockHasher extends GenericHasher {
   private long verBytesHashed;
   InputStream is = null;
   MessageDigest[] peerDigests;
+  List<Pattern> excludeUrlPats;
 
   protected SubstanceChecker subChecker = null;
 
@@ -126,6 +128,13 @@ public class BlockHasher extends GenericHasher {
       this.maxVersions = maxVersions;
     }
     initDigests();
+    try {
+      excludeUrlPats = cus.getArchivalUnit().makeExcludeUrlsFromPollsPatterns();
+    } catch (NullPointerException e) {
+      log.warning("No AU, thus no excludeUrlPats: " + cus);
+    } catch (ArchivalUnit.ConfigurationException e) {
+      log.warning("Error building excludeUrlPats", e);
+    }
   }
 
   private void setConfig() {
@@ -172,19 +181,24 @@ public class BlockHasher extends GenericHasher {
   /** V3 hashes only content nodes */
   protected boolean isIncluded(CachedUrlSetNode node) {
     String url = node.getUrl();
-    boolean res = node.hasContent();
-    if (res) {
-      if (crawlMgr != null && crawlMgr.isGloballyExcludedUrl(au, url)) {
-	if (isTrace) log.debug3("globally excluded: " + url);
-	return false;
-      }
-      if (ignoreFilesOutsideCrawlSpec && !au.shouldBeCached(url)) {
-	filesIgnored++;
-	if (isTrace) log.debug3("isIncluded(" + url + "): not in spec");
-	return false;
-      }
+    if (crawlMgr != null && crawlMgr.isGloballyExcludedUrl(au, url)) {
+      if (isTrace) log.debug3("isIncluded(" + url + "): globally excluded");
+      return false;
     }
-    if (isTrace) log.debug3("isIncluded(" + url + "): " + res);
+    if (ignoreFilesOutsideCrawlSpec && !au.shouldBeCached(url)) {
+      filesIgnored++;
+      if (isTrace) log.debug3("isIncluded(" + url + "): not in spec");
+      return false;
+    }
+    if (excludeUrlPats != null && isMatch(url, excludeUrlPats)) {
+      filesIgnored++;
+      if (isTrace) log.debug3("isIncluded(" + url + "): excluded by plugin");
+      return false;
+    }
+    boolean res = node.hasContent();
+    if (isTrace) {
+      log.debug3("isIncluded(" + url + "): " + (res ? "true" : "no content"));
+    }
     if (res && subChecker != null) {
       CachedUrl cu = AuUtil.getCu(node);
       try {
@@ -194,6 +208,16 @@ public class BlockHasher extends GenericHasher {
       }
     }
     return res;
+  }
+
+  boolean isMatch(String url, List<Pattern> pats) {
+    Perl5Matcher matcher = RegexpUtil.getMatcher();
+    for (Pattern pat : pats) {
+      if (matcher.contains(url, pat)) {
+	return true;
+      }
+    }
+    return false;
   }
 
   public MessageDigest[] getDigests() {

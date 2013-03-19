@@ -1,9 +1,9 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.95 2013-01-06 02:54:50 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.96 2013-03-19 04:26:15 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -98,6 +98,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   //public static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
   public static final String KEY_AU_EXPLODER_HELPER = "au_exploder_helper";
   public static final String KEY_AU_EXPLODER_PATTERN = "au_exploder_pattern";
+
+  public static final String KEY_AU_EXCLUDE_URLS_FROM_POLLS_PATTERN =
+    "au_exclude_urls_from_polls_pattern";
   public static final String KEY_AU_SUBSTANCE_URL_PATTERN =
     "au_substance_url_pattern";
   public static final String KEY_AU_NON_SUBSTANCE_URL_PATTERN =
@@ -163,6 +166,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     printfKeysContext.put(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN,
 			  PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_CRAWL_RULES, PrintfContext.Regexp);
+    printfKeysContext.put(KEY_AU_EXCLUDE_URLS_FROM_POLLS_PATTERN,
+			  PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_SUBSTANCE_URL_PATTERN, PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_NON_SUBSTANCE_URL_PATTERN,
 			  PrintfContext.Regexp);
@@ -319,6 +324,12 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       log.error(msg + ": " + e.toString());
       throw new ArchivalUnit.ConfigurationException(msg, e);
     }
+  }
+
+  public List<Pattern> makeExcludeUrlsFromPollsPatterns()
+      throws ArchivalUnit.ConfigurationException {
+    return compileRegexpList(KEY_AU_EXCLUDE_URLS_FROM_POLLS_PATTERN,
+			     RegexpContext.Url);
   }
 
   public List<Pattern> makeNonSubstanceUrlPatterns()

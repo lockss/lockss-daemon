@@ -1,10 +1,10 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.62 2013-01-06 02:54:49 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.63 2013-03-19 04:26:15 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -685,6 +685,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEmpty(au.getHttpCookies());
     assertEmpty(au.getHttpRequestHeaders());
 
+    assertNull(au.makeExcludeUrlsFromPollsPatterns());
     assertNull(au.makeNonSubstanceUrlPatterns());
     assertNull(au.makeSubstanceUrlPatterns());
     assertNull(au.makeSubstancePredicate());
@@ -948,6 +949,19 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) {
       assertMatchesRE("Can't compile URL pattern", e.getMessage());
     }
+  }
+
+  public void testMakeExcludeUrlsFromPollsPatterns() throws Exception {
+    defMap.putCollection(DefinableArchivalUnit.KEY_AU_EXCLUDE_URLS_FROM_POLLS_PATTERN,
+			 ListUtil.list("\"vol%d\\.unstable\",volume",
+				       "\"%s/toc\",base_url"));
+    additionalAuConfig.putInt("volume", 125);
+    additionalAuConfig.putString("base_url", "http://si.te/path/");
+    setupAu(additionalAuConfig);
+
+    assertIsomorphic(ListUtil.list("vol125\\.unstable",
+				   "http\\:\\/\\/si\\.te\\/path\\//toc"),
+		     RegexpUtil.regexpCollection(cau.makeExcludeUrlsFromPollsPatterns()));
   }
 
   public void testMakeNonSubstanceUrlPatterns() throws Exception {
@@ -1313,6 +1327,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 			        "", "foo:", ":bar",
 			       "no_colon", "An:other"),
 		 au.getHttpRequestHeaders());
+
+    assertEquals(ListUtil.list("http\\:\\/\\/base\\.foo\\/base_path\\/.*/rotating_ad.*",
+			       "http\\:\\/\\/base\\.foo\\/base_path\\/.*\\.css"),
+		 RegexpUtil.regexpCollection(au.makeExcludeUrlsFromPollsPatterns()));
   }
 
   public void testFeatureUrls() throws Exception {

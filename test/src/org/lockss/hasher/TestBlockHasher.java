@@ -1,10 +1,10 @@
 /*
- * $Id: TestBlockHasher.java,v 1.16 2012-03-19 20:55:12 barry409 Exp $
+ * $Id: TestBlockHasher.java,v 1.17 2013-03-19 04:26:15 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,6 +43,7 @@ import org.lockss.daemon.*;
 import org.lockss.hasher.BlockHasher.EventHandler;
 import org.lockss.util.*;
 import org.lockss.filter.*;
+import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 
 public class TestBlockHasher extends LockssTestCase {
@@ -312,6 +313,49 @@ public class TestBlockHasher extends LockssTestCase {
       new BlockHasher(cus, testDigs, inits, blockHandler);
   }
   
+  public void testIsIncluded() throws Exception {
+    // Need CrawlManager to check global exclusion below
+    CrawlManager cm = getMockLockssDaemon().getCrawlManager();
+    MockArchivalUnit mau = MockArchivalUnit.newInited(getMockLockssDaemon());
+    CachedUrl cu = mau.addUrl(urls[2], false, true);
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.setHashItSource(Collections.EMPTY_LIST);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, null);
+    assertFalse(hasher.isIncluded(cu));
+    addContent(mau, urls[2], s1);
+    assertTrue(hasher.isIncluded(cu));
+
+    ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
+				  "http:");
+    assertFalse(hasher.isIncluded(cu));
+
+    ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
+				  "xyznotfound");
+    assertTrue(hasher.isIncluded(cu));
+
+    // next test need new hashers as config, exclude pats, are accessed at
+    // creation
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_IGNORE_FILES_OUTSIDE_CRAWL_SPEC, "true");
+    hasher = new BlockHasher(cus, digs, inits, null);
+    assertTrue(hasher.isIncluded(cu));
+    log.critical("removing: " + urls[2]);
+    mau.removeUrlToBeCached(urls[2]);
+    assertFalse(hasher.isIncluded(cu));
+    mau.addUrlToBeCached(urls[2]);
+    assertTrue(hasher.isIncluded(cu));
+
+    List<String> pats = ListUtil.list("not-there");
+    mau.setExcludeUrlsFromPollsPatterns(RegexpUtil.compileRegexps(pats));
+    hasher = new BlockHasher(cus, digs, inits, null);
+    assertTrue(hasher.isIncluded(cu));
+    pats = ListUtil.list("x\\.html");
+    mau.setExcludeUrlsFromPollsPatterns(RegexpUtil.compileRegexps(pats));
+    hasher = new BlockHasher(cus, digs, inits, null);
+    assertFalse(hasher.isIncluded(cu));
+  }
+
   public void testNoContent() throws Exception {
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();

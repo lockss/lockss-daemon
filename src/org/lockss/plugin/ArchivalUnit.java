@@ -1,10 +1,10 @@
 /*
- * $Id: ArchivalUnit.java,v 1.66 2013-01-06 06:36:32 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.67 2013-03-19 04:26:15 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -224,15 +224,23 @@ public interface ArchivalUnit {
   public List<String> getHttpRequestHeaders();
 
   /**
-   * Construct a list of Patterns of non-substance URLs.  Used to determine
-   * whether initial crawl collects actual content.
+   * Construct a list of Patterns of URLs that should be excluded from
+   * polls.
+   */
+  public List<Pattern> makeExcludeUrlsFromPollsPatterns()
+      throws ArchivalUnit.ConfigurationException;
+
+  /**
+   * Construct a list of Patterns of non-substance URLs.  If all URLs in
+   * the AU match one of these patterns the AU is considered to have no
+   * substance.
    */
   public List<Pattern> makeNonSubstanceUrlPatterns()
       throws ArchivalUnit.ConfigurationException;
 
   /**
-   * Construct a list of Patterns of substance URLs.  Used to determine
-   * whether initial crawl collects actual content.
+   * Construct a list of Patterns of substance URLs.  If any URL in the AU
+   * matches one of these patterns the AU is considered to have substance.
    */
   public List<Pattern> makeSubstanceUrlPatterns()
       throws ArchivalUnit.ConfigurationException;

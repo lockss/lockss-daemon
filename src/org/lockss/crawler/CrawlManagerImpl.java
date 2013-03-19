@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.147 2012-12-20 18:38:47 fergaloy-sf Exp $
+ * $Id: CrawlManagerImpl.java,v 1.148 2013-03-19 04:26:15 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -249,7 +249,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   /** Regexp matching URLs we never want to collect.  Intended to stop
    * runaway crawls by catching recursive URLS */
-  static final String PARAM_EXCLUDE_URL_PATTERN =
+  public static final String PARAM_EXCLUDE_URL_PATTERN =
     PREFIX + "globallyExcludedUrlPattern";
   static final String DEFAULT_EXCLUDE_URL_PATTERN = null;
 

@@ -1,10 +1,10 @@
 /*
- * $Id: NullPlugin.java,v 1.117 2013-01-06 06:36:32 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.118 2013-03-19 04:26:14 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -457,6 +457,10 @@ public class NullPlugin {
     }
 
     public CrawlSpec getCrawlSpec() {
+      return null;
+    }
+
+    public List<Pattern> makeExcludeUrlsFromPollsPatterns() {
       return null;
     }
 
