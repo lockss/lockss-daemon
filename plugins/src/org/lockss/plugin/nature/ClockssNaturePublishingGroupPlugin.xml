@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>37</string>
+    <string>38</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -29,31 +29,6 @@
       <entry>
         <string>Substance</string>
         <string>2</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.nature.NaturePublishingGroupHtmlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.nature.NaturePublishingGroupArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.nature.NaturePublishingGroupArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;DublinCore</string>
-        <string>org.lockss.plugin.nature.NatureHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -164,6 +139,39 @@
   <entry>
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.nature.NaturePublishingGroupLoginPageChecker</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.nature.NaturePublishingGroupHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.nature.NaturePublishingGroupArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.nature.NaturePublishingGroupArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.nature.NatureHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.nature.NaturePublishingGroupHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.nature.NaturePublishingGroupHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
   </entry>
   <entry>
     <string>clockss_override</string>
