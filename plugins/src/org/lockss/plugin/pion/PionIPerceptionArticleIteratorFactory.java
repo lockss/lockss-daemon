@@ -1,5 +1,5 @@
 /*
- * $Id: PionIPerceptionArticleIteratorFactory.java,v 1.1 2011-12-13 01:17:54 dylanrhodes Exp $
+ * $Id: PionIPerceptionArticleIteratorFactory.java,v 1.2 2013-03-19 23:27:38 alexandraohlson Exp $
  */
 
 /*
@@ -131,7 +131,7 @@ public class PionIPerceptionArticleIteratorFactory
       log.debug("risCu generated is: "+risCu.getUrl());
       if (risCu != null && risCu.hasContent()) {
     	  log.debug("risCu stored");
-        af.setRoleCu(ArticleFiles.ROLE_CITATION + "_" + "application/x-research-info-systems", risCu);
+        af.setRoleCu(ArticleFiles.ROLE_CITATION + "_" + "Ris", risCu);
       }
     }
   }

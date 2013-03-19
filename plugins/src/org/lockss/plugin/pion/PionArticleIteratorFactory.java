@@ -1,5 +1,5 @@
 /*
- * $Id: PionArticleIteratorFactory.java,v 1.3 2011-12-13 01:17:54 dylanrhodes Exp $
+ * $Id: PionArticleIteratorFactory.java,v 1.4 2013-03-19 23:27:38 alexandraohlson Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public class PionArticleIteratorFactory implements ArticleIteratorFactory {
     protected void guessRisCitation(ArticleFiles af, Matcher mat) {
       CachedUrl risCu = au.makeCachedUrl(mat.replaceFirst("/ris.cgi?id=$3"));
       if (risCu != null && risCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_CITATION + "_" + "application/x-research-info-systems", risCu);
+        af.setRoleCu(ArticleFiles.ROLE_CITATION + "_" + "Ris", risCu);
       }
     }
     

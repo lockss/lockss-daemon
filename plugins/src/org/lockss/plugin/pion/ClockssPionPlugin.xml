@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -20,6 +20,10 @@
     <map>
       <entry>
         <string>Substance</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
         <string>2</string>
       </entry>
     </map>
