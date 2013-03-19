@@ -14,7 +14,7 @@
     {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://www.rcjournal.com/
+      param[base_url] = http://rc.rcjournal.com/
       implicit < status ; year ; name ; param[volume_name] >
       
       au < exists ; 2003 ; Respiratory Care Volume 48 ; 48 >
@@ -27,7 +27,7 @@
       au < exists ; 2010 ; Respiratory Care Volume 55 ; 55 >
       au < exists ; 2011 ; Respiratory Care Volume 56 ; 56 >
       au < exists ; 2012 ; Respiratory Care Volume 57 ; 57 >
-      au < exists ; 2013 ; Respiratory Care Volume 58 ; 58 >
+      au < manifest ; 2013 ; Respiratory Care Volume 58 ; 58 >
 
     }
 
