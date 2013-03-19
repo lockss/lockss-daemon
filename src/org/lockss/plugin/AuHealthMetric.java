@@ -1,5 +1,5 @@
 /*
- * $Id: AuHealthMetric.java,v 1.6 2011-08-23 16:16:48 easyonthemayo Exp $
+ * $Id: AuHealthMetric.java,v 1.7 2013-03-19 04:26:53 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.text.DecimalFormat;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +41,7 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.state.AuState;
 import org.lockss.state.SubstanceChecker;
 import org.lockss.state.SubstanceChecker.State;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 
 /**
  * Enums and static methods for creating and manipulating a set of metrics 
@@ -185,8 +184,7 @@ public class AuHealthMetric {
     metrics.put(HealthMetric.SubstanceState, state.getSubstanceState());
     long lps = state.getLastPollStart();
     if (lps != -1) {
-      metrics.put(HealthMetric.TimeSinceLastPoll, 
-	  Calendar.getInstance().getTimeInMillis() - state.getLastPollStart());
+      metrics.put(HealthMetric.TimeSinceLastPoll, TimeBase.msSince(lps));
     } else {
       metrics.put(HealthMetric.TimeSinceLastPoll, NEVER_POLLED);
     }
