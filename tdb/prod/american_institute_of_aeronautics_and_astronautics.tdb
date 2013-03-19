@@ -149,15 +149,15 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
     >
     param[journal_id] = jacic
 
-    au < manifest ; 2004 ; Journal of Aerospace Computing, Information, and Communication Volume 1 ; 1 >
-    au < manifest ; 2005 ; Journal of Aerospace Computing, Information, and Communication Volume 2 ; 2 >
-    au < manifest ; 2006 ; Journal of Aerospace Computing, Information, and Communication Volume 3 ; 3 >
-    au < manifest ; 2007 ; Journal of Aerospace Computing, Information, and Communication Volume 4 ; 4 >
-    au < manifest ; 2008 ; Journal of Aerospace Computing, Information, and Communication Volume 5 ; 5 >
+    au < testing ; 2004 ; Journal of Aerospace Computing, Information, and Communication Volume 1 ; 1 >
+    au < testing ; 2005 ; Journal of Aerospace Computing, Information, and Communication Volume 2 ; 2 >
+    au < testing ; 2006 ; Journal of Aerospace Computing, Information, and Communication Volume 3 ; 3 >
+    au < testing ; 2007 ; Journal of Aerospace Computing, Information, and Communication Volume 4 ; 4 >
+    au < testing ; 2008 ; Journal of Aerospace Computing, Information, and Communication Volume 5 ; 5 >
     au < ready ; 2009 ; Journal of Aerospace Computing, Information, and Communication Volume 6 ; 6 >
-    au < manifest ; 2010 ; Journal of Aerospace Computing, Information, and Communication Volume 7 ; 7 >
+    au < testing ; 2010 ; Journal of Aerospace Computing, Information, and Communication Volume 7 ; 7 >
     au < ready ; 2011 ; Journal of Aerospace Computing, Information, and Communication Volume 8 ; 8 >
-    au < manifest ; 2012 ; Journal of Aerospace Computing, Information, and Communication Volume 9 ; 9 >
+    au < testing ; 2012 ; Journal of Aerospace Computing, Information, and Communication Volume 9 ; 9 >
     au < expected ; 2013 ; Journal of Aerospace Computing, Information, and Communication Volume 10 ; 10 >
 
   }
@@ -174,12 +174,12 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
 
     au < ready ; 1964 ; Journal of Aircraft Volume 1 ; 1 >
     au < ready ; 1965 ; Journal of Aircraft Volume 2 ; 2 >
-    au < manifest ; 1966 ; Journal of Aircraft Volume 3 ; 3 >
-    au < manifest ; 1967 ; Journal of Aircraft Volume 4 ; 4 >
-    au < manifest ; 1968 ; Journal of Aircraft Volume 5 ; 5 >
-    au < manifest ; 1969 ; Journal of Aircraft Volume 6 ; 6 >
-    au < manifest ; 1970 ; Journal of Aircraft Volume 7 ; 7 >
-    au < manifest ; 1971 ; Journal of Aircraft Volume 8 ; 8 >
+    au < testing ; 1966 ; Journal of Aircraft Volume 3 ; 3 >
+    au < testing ; 1967 ; Journal of Aircraft Volume 4 ; 4 >
+    au < testing ; 1968 ; Journal of Aircraft Volume 5 ; 5 >
+    au < testing ; 1969 ; Journal of Aircraft Volume 6 ; 6 >
+    au < testing ; 1970 ; Journal of Aircraft Volume 7 ; 7 >
+    au < testing ; 1971 ; Journal of Aircraft Volume 8 ; 8 >
     au < manifest ; 1972 ; Journal of Aircraft Volume 9 ; 9 >
     au < manifest ; 1973 ; Journal of Aircraft Volume 10 ; 10 >
     au < manifest ; 1974 ; Journal of Aircraft Volume 11 ; 11 >
