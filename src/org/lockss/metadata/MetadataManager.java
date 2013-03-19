@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.14 2013-03-10 23:44:59 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.15 2013-03-19 20:32:01 pgust Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -142,7 +143,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   /** Name of metadata status table */
   public static final String METADATA_STATUS_TABLE_NAME =
-      "metadata_status_table";
+      "MetadataStatusTable";
+  
+  /** Name of metadata status table error table */
+  public static final String METADATA_STATUS_ERROR_TABLE_NAME =
+      "MetadataStatusErrorTable";
+
+  /** Name of metadata status table error info table */
+  public static final String METADATA_STATUS_ERROR_INFO_TABLE_NAME =
+      "MetadataStatusErrorInfoTable";
 
   /** Map of AUID regexp to priority.  If set, AUs are assigned the
    * corresponding priority of the first regexp that their AUID matches.
@@ -680,7 +689,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * List of reindexing tasks in order from most recent (0) to least recent.
    */
   final List<ReindexingTask> reindexingTaskHistory =
-      new ArrayList<ReindexingTask>();
+      new LinkedList<ReindexingTask>();
+  
+  /**
+   * List of reindexing tasks that have failed or been rescheduled,
+   * from most recent (0) to least recent. Only the most recent failed
+   * task for a given AU is retained
+   */
+  final List<ReindexingTask> failedReindexingTasks = 
+      new LinkedList<ReindexingTask>();
 
   /**
    * Metadata manager indexing enabled flag.  Initial value should always
@@ -778,8 +795,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     StatusService statusServ = getDaemon().getStatusService();
     statusServ.registerStatusAccessor(METADATA_STATUS_TABLE_NAME,
         new MetadataManagerStatusAccessor(this));
+    statusServ.registerStatusAccessor(METADATA_STATUS_ERROR_TABLE_NAME,
+        new MetadataManagerErrorStatusAccessor(this));
+    statusServ.registerStatusAccessor(METADATA_STATUS_ERROR_INFO_TABLE_NAME,
+        new MetadataIndexingErrorInfoAccessor(this));
     statusServ.registerOverviewAccessor(METADATA_STATUS_TABLE_NAME,
-        new MetadataManagerStatusAccessor.IndexingOverview(this));
+        new MetadataIndexingOverviewAccessor(this));
 
     resetConfig();
     log.debug(DEBUG_HEADER + "MetadataManager service successfully started");
@@ -955,6 +976,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     synchronized (reindexingTaskHistory) {
       while (reindexingTaskHistory.size() > maxReindexingTaskHistory) {
         reindexingTaskHistory.remove(maxReindexingTaskHistory);
+      }
+    }
+    synchronized(failedReindexingTasks) {
+      while (failedReindexingTasks.size() > maxReindexingTaskHistory) {
+        failedReindexingTasks.remove(maxReindexingTaskHistory);
       }
     }
   }
@@ -1154,7 +1180,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
               // Add the reindexing task to the history; limit history list
               // size.
-              addToHistory(task);
+              addToIndexingTaskHistory(task);
 
 	      log.debug(DEBUG_HEADER + "Running the reindexing task for AU: "
 		  + au.getName());
@@ -1244,7 +1270,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     cancelAuTask(auId);
 
     // Remove from the history list
-    removeFromHistory(auId);
+    removeFromIndexingTaskHistory(auId);
+    removeFromFailedIndexingTasks(auId);
 
     // Remove the metadata for this AU.
     int articleCount = removeAuMetadataItems(conn, auId);
@@ -1330,7 +1357,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @param task
    *          A ReindexingTask with the task.
    */
-  private void addToHistory(ReindexingTask task) {
+  private void addToIndexingTaskHistory(ReindexingTask task) {
     synchronized (reindexingTaskHistory) {
       reindexingTaskHistory.add(0, task);
       setMaxHistory(maxReindexingTaskHistory);
@@ -1375,19 +1402,45 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Removes from history tasks for a specified AU.
+   * Removes from history indexing tasks for a specified AU.
    * 
    * @param auId
    *          A String with the AU identifier.
    * @return an int with the number of items removed.
    */
-  private int removeFromHistory(String auId) {
+  private int removeFromIndexingTaskHistory(String auId) {
     int count = 0;
 
     synchronized (reindexingTaskHistory) {
       // Remove tasks with this auid from task history list.
       for (Iterator<ReindexingTask> itr = reindexingTaskHistory.iterator();
 	  itr.hasNext();) {
+        ReindexingTask task = itr.next();
+
+        if (auId.equals(task.getAu().getAuId())) {
+          itr.remove();
+          count++;
+        }
+      }
+    }
+
+    return count;
+  }
+
+  /**
+   * Removes from failed reindexing tasks for a specified AU.
+   * 
+   * @param auId
+   *          A String with the AU identifier.
+   * @return an int with the number of items removed.
+   */
+  private int removeFromFailedIndexingTasks(String auId) {
+    int count = 0;
+
+    synchronized (failedReindexingTasks) {
+      // Remove tasks with this auid from task history list.
+      for (Iterator<ReindexingTask> itr = failedReindexingTasks.iterator();
+          itr.hasNext();) {
         ReindexingTask task = itr.next();
 
         if (auId.equals(task.getAu().getAuId())) {
@@ -1653,12 +1706,22 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /**
    * Provides the list of reindexing tasks.
    * 
-   * @return a List<ReindexingTask> with the reindexing tasks.
+   * @return a List<ReindexingTask> of reindexing tasks.
    */
   public List<ReindexingTask> getReindexingTasks() {
     return new ArrayList<ReindexingTask>(reindexingTaskHistory);
   }
 
+  /**
+   * Provides a collection of the most recent failed reindexing task
+   * for each task AU.
+   * 
+   * @return a Collection<ReindexingTask> of failed reindexing tasks
+   */
+  public List<ReindexingTask> getFailedReindexingTasks() {
+    return new ArrayList<ReindexingTask>(failedReindexingTasks);
+  }
+  
   /**
    * Provides the number of distinct articles in the metadata database.
    * 
@@ -4010,7 +4073,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     return version;
   }
 
-  void incrementSuccessfulReindexingCount() {
+  /**
+   * Receives notification that a reindexing task was succeessful. 
+   * 
+   * @param task the reindexing task
+   */
+  void addToSuccessfulReindexingTasks(ReindexingTask task) {
     this.successfulReindexingCount++;
   }
 
@@ -4018,8 +4086,21 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     this.metadataArticleCount += count;
   }
 
-  void incrementFailedReindexingCount() {
-    this.failedReindexingCount++;
+  /**
+   * Receives notification that a reindexing task has failed 
+   * or has been rescheduled.
+   * 
+   * @param task the reindexing task
+   */
+  void addToFailedReindexingTasks(ReindexingTask task) {
+    failedReindexingCount++;
+    
+    String taskAuId = task.getAuId();
+    synchronized (failedReindexingTasks) {
+      removeFromFailedIndexingTasks(taskAuId);
+      failedReindexingTasks.add(0, task);
+      setMaxHistory(maxReindexingTaskHistory);
+    }
   }
 
   /**
