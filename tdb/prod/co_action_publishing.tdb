@@ -129,9 +129,9 @@
     comment[supplement_issn_and_eissn] = issn = 2000-8198 eissn = 2000-818X
      
      
-    au < released ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
-    au < released ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
-    au < released ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
+    au < testing ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
+    au < testing ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
+    au < testing ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
     au < expected ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 ; 2013 >
 
   }
@@ -151,11 +151,11 @@
 
 	comment[fnr2008] = 502 Proxy Error
 
-    au < released ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
-    au < released ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
-    au < released ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 >
-    au < released ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
-    au < released ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 >
+    au < testing ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
+    au < testing ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
+    au < testing ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 >
+    au < testing ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
+    au < testing ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 >
     au < expected ; 2013 ; Food & Nutrition Research [including Supplements] Volume 57 ; 57 ; 2013 >
 
   }
