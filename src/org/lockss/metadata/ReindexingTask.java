@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.6 2013-03-12 19:29:28 fergaloy-sf Exp $
+ * $Id: ReindexingTask.java,v 1.7 2013-03-19 20:14:25 pgust Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import java.util.Iterator;
 import java.util.Map;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.TdbAu;
+import org.lockss.config.TdbUtil;
 import org.lockss.daemon.LockssWatchdog;
 import org.lockss.daemon.PluginException;
 import org.lockss.db.DbManager;
@@ -493,7 +494,12 @@ public class ReindexingTask extends StepTask {
 	tdbauIsbn = tdbau.getIsbn();
 	tdbauIssn = tdbau.getPrintIssn();
 	tdbauEissn = tdbau.getEissn();
-	tdbauJournalTitle = tdbau.getJournalTitle();
+	if (TdbUtil.isBook(tdbau)) {
+	  // the journal title is the TdbAu name for a book
+	  tdbauJournalTitle = tdbau.getName();
+	} else {
+	  tdbauJournalTitle = tdbau.getJournalTitle();
+	}
       }
 
       if (tdbau != null) {
@@ -822,7 +828,7 @@ public class ReindexingTask extends StepTask {
 	    conn.commit();
 
 	    // Update the successful re-indexing count.
-	    mdManager.incrementSuccessfulReindexingCount();
+	    mdManager.addToSuccessfulReindexingTasks(ReindexingTask.this);
 
 	    // Update the total article count.
 	    mdManager.addToMetadataArticleCount(updatedArticleCount
@@ -856,7 +862,7 @@ public class ReindexingTask extends StepTask {
 	  log.debug2(DEBUG_HEADER + "Reindexing task (" + status
 	      + ") did not finish for au " + au.getName());
 
-	  mdManager.incrementFailedReindexingCount();
+	  mdManager.addToFailedReindexingTasks(ReindexingTask.this);
 
 	  try {
 	    // Get a connection to the database.
