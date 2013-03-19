@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlUtil.java,v 1.4 2010-11-17 11:28:13 neilmayo Exp $
+ * $Id: TestHtmlUtil.java,v 1.5 2013-03-19 03:45:24 pgust Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public class TestHtmlUtil extends LockssTestCase {
   
   public void testStripHtmlTags() {
       // Remember the result is trimmed
-      assertEquals("Hello", HtmlUtil.stripHtmlTags("<foo><b>  Hello   </b></foo>"));   
+      assertEquals("  Hello   ", HtmlUtil.stripHtmlTags("<foo><b>  Hello   </b></foo>"));   
       assertEquals("", HtmlUtil.stripHtmlTags("<foo><b></b></foo>"));   
       assertEquals("This method should remove only tags.", HtmlUtil.stripHtmlTags("<p>This <word>method</word> sho<irritatingMidWordTag/>uld remove <a href=\"url\">only</a> tags."));   
   }
