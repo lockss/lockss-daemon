@@ -10,45 +10,2929 @@
   implicit < status ; isbn ; year ; name ; param[volume_name] >
 
   {
-    title <
-      name = Advanced Series in Management ;
-      issn = 1877-6361 ;
-      issnl = 1877-6361
-    >
 
-    param[journal_issn] = 1877-6361
+      title <
+        name = Advanced Series in Management ;
+        issn = 1877-6361
+      >
 
-    au < exists ; 978-1-84855-832-8 ; 1999 ; Advanced Series in Management Volume 6 ; 6 >
-    au < exists ; 978-0-85724-006-4 ; 2000 ; Relational Practices, Participative Organizing Volume 7 ; 7 >
-    au < exists ; 978-0-85724-973-9 ; 2001 ; Electronic HRM in Theory and Practice Volume 8 ; 8 >
-    au < exists ; 978-1-78052-674-4 ; 2002 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 ; 9 >
+      param[journal_issn] = 1877-6361
+
+      au < exists ; 978-1-84855-832-8 ; 2009 ; Advanced Series in Management Volume 6 ; 6 >
+      au < exists ; 978-0-85724-006-4 ; 2010 ; Relational Practices, Participative Organizing Volume 7 ; 7 >
+      au < exists ; 978-0-85724-973-9 ; 2011 ; Electronic HRM in Theory and Practice Volume 8 ; 8 >
+      au < exists ; 978-1-78052-674-4 ; 2012 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 ; 9 >
 
   }
-  
+
   {
-    title <
-      name = Advances in Gender Research ;
-      issn = 1529-2126 ;
-      issnl = 1529-2126
-    >
 
-    param[journal_issn] = 1529-2126
+      title <
+        name = Advances in Accounting Behavioral Research ;
+        issn = 1475-1488
+      >
 
-    au < manifest ; 978-0-76230-533-9 ; 1999 ; Social Change for Women and Children Volume 4 ; 4 >
-    au < released ; 978-0-76230-720-3 ; 2001 ; An International Feminist Challenge to Theory Volume 5 ; 5 >
-    au < released ; 978-0-76230-820-0 ; 2005 ; Gendered Sexualities Volume 6 ; 6 >
-    au < released ; 978-0-76231-058-6 ; 2003 ; Gender Perspectives on Health and Medicine Volume 7 ; 7 >
-    au < released ; 978-0-76231-088-3 ; 2004 ; Gender Perspectives on Reproduction and Sexuality Volume 8 ; 8 >
-    au < released ; 978-0-76231-214-6 ; 2005 ; Gender Realities Local and Global Volume 9 ; 9 >
-    au < exists ; 978-0-76231-312-9 ; 2006 ; Gender and the Local-Global Nexus: Theory, Research, and Action Volume 10 ; 10 >
-    au < exists ; 978-0-7623-1439-3 ; 2007 ; Sustainable Feminisms Volume 11 ; 11 >
-    au < exists ; 978-1-84855-026-1 ; 2008 ; Advancing Gender Research from the Nineteenth to the Twenty-First Centuries Volume 12 ; 12 >
-    au < exists ; 978-1-84855-752-9 ; 2009 ; Perceiving Gender Locally, Globally, and Intersectionally Volume 13 ; 13 >
-    au < exists ; 978-1-84950-944-2 ; 2010 ; Interactions and Intersections of Gendered Bodies at Work, at Home, and at Play Volume 14 ; 14 >
-    au < exists ; 978-0-85724-743-8 ; 2011 ; Analyzing Gender, Intersectionality, and Multiple Inequalities: Global, Transnational and Local Contexts Volume 15 ; 15 >
-    au < exists ; 978-1-78052-874-8 ; 2012 ; Social Production and Reproduction at the Interface of Public and Private Spheres Volume 16 ; 16 >
-    au < exists ; 978-1-78190-535-7 ; 2013 ; Notions of Family: Intersectional Perspectives Volume 17 ; 17 >
+      param[journal_issn] = 1475-1488
+
+      au < exists ; 978-0-76230-668-8 ; 2000 ; Advances in Accounting Behavioral Research Volume 3 ; 3 >
+      au < exists ; 978-0-76230-784-5 ; 2001 ; Advances in Accounting Behavioral Research Volume 4 ; 4 >
+      au < exists ; 978-0-76230-953-5 ; 2002 ; Advances in Accounting Behavioral Research Volume 5 ; 5 >
+      au < exists ; 978-0-76231-047-0 ; 2003 ; Advances in Accounting Behavioral Research Volume 6 ; 6 >
+      au < exists ; 978-0-76231-117-0 ; 2004 ; Advances in Accounting Behavioral Research Volume 7 ; 7 >
+      au < exists ; 978-0-76231-218-4 ; 2005 ; Advances in Accounting Behavioral Research Volume 8 ; 8 >
+      au < exists ; 978-0-76231-353-2 ; 2006 ; Advances in Accounting Behavioral Research Volume 9 ; 9 >
+      au < exists ; 978-1-84663-960-9 ; 2008 ; Advances in Accounting Behavioral Research Volume 11 ; 11 >
+      au < exists ; 978-1-84855-738-3 ; 2009 ; Advances in Accounting Behavioral Research Volume 12 ; 12 >
+      au < exists ; 978-0-85724-137-5 ; 2010 ; Advances in Accounting Behavioral Research Volume 13 ; 13 >
+      au < exists ; 978-1-78052-086-5 ; 2011 ; Advances in Accounting Behavioral Research Volume 14 ; 14 >
+      au < exists ; 978-1-78052-758-1 ; 2012 ; Advances in Accounting Behavioral Research Volume 15 ; 15 >
 
   }
-  
+
+  {
+
+      title <
+        name = Advances in Accounting Education ;
+        issn = 1085-4622
+      >
+
+      param[journal_issn] = 1085-4622
+
+      au < exists ; 978-0-76230-515-5 ; 2000 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 2 ; 2 >
+      au < exists ; 978-0-76230-758-6 ; 2000 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 3 ; 3 >
+      au < exists ; 978-0-76230-856-9 ; 2002 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 4 ; 4 >
+      au < exists ; 978-0-76231-035-7 ; 2003 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 5 ; 5 >
+      au < exists ; 978-0-76231-143-9 ; 2004 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 6 ; 6 >
+      au < exists ; 978-0-76231-269-6 ; 2005 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 7 ; 7 >
+      au < exists ; 978-0-76231-447-8 ; 2007 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 8 ; 8 >
+      au < exists ; 978-0-7623-1458-4 ; 2008 ; Advances in Accounting Education Volume 9 ; 9 >
+      au < exists ; 978-1-84855-882-3 ; 2009 ; Advances in Accounting Education Volume 10 ; 10 >
+      au < exists ; 978-0-85724-291-4 ; 2010 ; Advances in Accounting Education Volume 11 ; 11 >
+      au < exists ; 978-1-78052-222-7 ; 2011 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 12 ; 12 >
+      au < exists ; 978-1-78052-756-7 ; 2012 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 13 ; 13 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Agricultural Economic History ;
+        issn = 1569-4933
+      >
+
+      param[journal_issn] = 1569-4933
+
+      au < exists ; 978-0-76230-612-1 ; 2000 ; New Frontiers in Agricultural History Volume 1 ; 1 >
+      au < exists ; 978-0-76231-001-2 ; 2003 ; Advances in Agricultural Economic History Volume 2 ; 2 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Airline Economics ;
+        issn = 2212-1609
+      >
+
+      param[journal_issn] = 2212-1609
+
+      au < exists ; 978-1-78052-468-9 ; 2012 ; Pricing Behavior and Non-Price Characteristics in the Airline Industry Volume 3 ; 3 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Applied Business Strategy ;
+        issn = 0749-6826
+      >
+
+      param[journal_issn] = 0749-6826
+
+      au < exists ; 978-0-76231-168-2 ; 2005 ; Competence Perspective on Managing Internal Process Volume 7 ; 7 >
+      au < exists ; 978-0-76231-169-9 ; 2005 ; Competence Perspectives on Managing Interfirm Interactions Volume 8 ; 8 >
+      au < exists ; 978-0-76231-170-5 ; 2005 ; Competence Perspectives on Resources, Stakeholders and Renewal Volume 9 ; 9 >
+      au < exists ; 978-0-7623-1472-0 ; 2008 ; Advances in Applied Business Strategy Volume 10 ; 10 >
+      au < exists ; 978-0-7623-1466-9 ; 2008 ; Competence Building and Leveraging in Interorganizational Relations Volume 11 ; 11 >
+      au < exists ; 978-1-84855-876-2 ; 2010 ; Enhancing Competences for Competitive Advantage Volume 12 ; 12 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Applied Microeconomics ;
+        issn = 0278-0984
+      >
+
+      param[journal_issn] = 0278-0984
+
+      au < exists ; 978-0-76230-576-6 ; 2000 ; Advances in Applied Microeconomics Volume 8 ; 8 >
+      au < exists ; 978-0-76230-687-9 ; 2000 ; Industrial Organization Volume 9 ; 9 >
+      au < exists ; 978-0-76230-823-1 ; 2001 ; Advertising and Differentiated Products Volume 10 ; 10 >
+      au < exists ; 978-0-76230-971-9 ; 2002 ; The Economics of the Internet and E-commerce Volume 11 ; 11 >
+      au < exists ; 978-0-76231-081-4 ; 2003 ; Organizing the New Industrial Economy Volume 12 ; 12 >
+      au < exists ; 978-0-76231-194-1 ; 2005 ; Experimental and Behavioral Economics Volume 13 ; 13 >
+      au < exists ; 978-0-76231-351-8 ; 2006 ; Improving School Accountability Volume 14 ; 14 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Appreciative Inquiry ;
+        issn = 1475-9152
+      >
+
+      param[journal_issn] = 1475-9152
+
+      au < exists ; 978-0-76230-892-7 ; 2004 ; Constructive Discourse and Human Organization Volume 1 ; 1 >
+      au < exists ; 978-0-7623-1287-0 ; 2007 ; Designing Information and Organizations with a Positive Lens Volume 2 ; 2 >
+      au < exists ; 978-0-85724-369-0 ; 2010 ; Positive Design and Appreciative Construction: From Sustainable Development to Sustainable Value Volume 3 ; 3 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Austrian Economics ;
+        issn = 1529-2134
+      >
+
+      param[journal_issn] = 1529-2134
+
+      au < exists ; 978-1-55938-531-2 ; 1995 ; 2 Part 2 Volume 2 ; 2 >
+      au < exists ; 978-0-76230-055-6 ; 1996 ; Advances in Austrian Economics Volume 3 ; 3 >
+      au < exists ; 978-0-76230-198-0 ; 1997 ; Advances in Austrian Economics Volume 4 ; 4 >
+      au < exists ; 978-0-76231-041-8 ; 2003 ; Austrian Economics and Entrepreneurial Studies Volume 6 ; 6 >
+      au < exists ; 978-0-76231-041-8 ; 2005 ; Evolutionary Psychology and Economic Theory Volume 7 ; 7 >
+      au < exists ; 978-0-76231-053-1 ; 2004 ; The Dynamics of Intervention: Regulation and Redistribution in the Mixed Economy Volume 8 ; 8 >
+      au < exists ; 978-0-76231-378-5 ; 2006 ; Cognition and Economics Volume 9 ; 9 >
+      au < exists ; 978-0-7623-1452-2 ; 2007 ; The Evolution of Consumption: Theories and Practices Volume 10 ; 10 >
+      au < exists ; 978-1-84855-330-9 ; 2008 ; Explorations in Austrian Economics Volume 11 ; 11 >
+      au < exists ; 978-1-84855-998-1 ; 2009 ; Unexplored Dimensions: Karl Mengeron Economics and Philosophy (1923–1938) Volume 12 ; 12 >
+      au < exists ; 978-1-84950-974-9 ; 2010 ; The Social Science of Hayek's ‘The Sensory Order’ Volume 13 ; 13 >
+      au < exists ; 978-0-85724-261-7 ; 2010 ; What is so Austrian about Austrian Economics? Volume 14 ; 14 >
+      au < exists ; 978-1-78052-398-9 ; 2011 ; Hayek in Mind: Hayek's Philosophical Psychology Volume 15 ; 15 >
+      au < exists ; 978-1-78190-006-2 ; 2012 ; The Spatial Market Process Volume 16 ; 16 >
+      au < exists ; 978-1-78190-216-5 ; 2012 ; Experts and Epistemic Monopolies Volume 17 ; 17 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Bioethics ;
+        issn = 1479-3709
+      >
+
+      param[journal_issn] = 1479-3709
+
+      au < exists ; 978-0-76230-757-9 ; 2001 ; Postmodern Malpractice: A Medical Case Study in The Culture War Volume 6 ; 6 >
+      au < exists ; 978-0-76230-764-7 ; 2001 ; The Ethics of Organ Transplantation Volume 7 ; 7 >
+      au < exists ; 978-0-76231-206-1 ; 2005 ; Taking Life and Death Seriously - Bioethics from Japan Volume 8 ; 8 >
+      au < exists ; 978-0-76231-311-2 ; 2006 ; Ethics and Epidemics Volume 9 ; 9 >
+      au < exists ; 978-0-76231-196-5 ; 2006 ; Lost Virtue Volume 10 ; 10 >
+      au < exists ; 978-0-7623-1266-5 ; 2007 ; Empirical Methods for Bioethics: A Primer Volume 11 ; 11 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Business and Management Forecasting ;
+        issn = 1477-4070
+      >
+
+      param[journal_issn] = 1477-4070
+
+      au < exists ; 978-0-7623-1478-2 ; 2008 ; Advances in Business and Management Forecasting Volume 5 ; 5 >
+      au < exists ; 978-1-84855-548-8 ; 2009 ; Advances in Business and Management Forecasting Volume 6 ; 6 >
+      au < exists ; 978-0-85724-201-3 ; 2010 ; Advances in Business and Management Forecasting Volume 7 ; 7 >
+      au < exists ; 978-0-85724-959-3 ; 2011 ; Advances in Business and Management Forecasting Volume 8 ; 8 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Business Marketing and Purchasing ;
+        issn = 1069-0964
+      >
+
+      param[journal_issn] = 1069-0964
+
+      au < exists ; 978-0-76230-633-6 ; 2001 ; Getting Better at Sensemaking Volume 9 ; 9 >
+      au < exists ; 978-0-76230-682-4 ; 2000 ; Designing winning products Volume 10 ; 10 >
+      au < exists ; 978-0-76230-869-9 ; 2002 ; Essays by Distinguished Marketing Scholars of the Society for Marketing Advances Volume 11 ; 11 >
+      au < exists ; 978-0-76231-046-3 ; 2003 ; Evaluating Marketing Actions and Outcomes Volume 12 ; 12 >
+      au < exists ; 978-0-76231-159-0 ; 2005 ; Managing Product Innovation Volume 13 ; 13 >
+      au < exists ; 978-1-84855-172-5 ; 2008 ; Creating and managing superior customer value Volume 14 ; 14 >
+      au < exists ; 978-1-84855-670-6 ; 2009 ; Business-To-Business Brand Management: Theory, Research and Executivecase Study Exercises Volume 15 ; 15 >
+      au < exists ; 978-0-85724-305-8 ; 2010 ; Organizational Culture, Business-to-Business Relationships, and Interfirm Networks Volume 16 ; 16 >
+      au < exists ; 978-1-78052-024-7 ; 2011 ; Interfirm Networks: Theory, Strategy, and Behavior Volume 17 ; 17 >
+      au < exists ; 978-1-78052-576-1 ; 2012 ; Business-to-Business Marketing Management: Strategies, Cases, and Solutions Volume 18 ; 18 >
+      au < exists ; 978-1-78052-996-7 ; 2012 ; Visionary Pricing: Reflections and Advances in Honor of Dan Nimer Volume 19 ; 19 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Culture, Tourism and Hospitality Research ;
+        issn = 1871-3173
+      >
+
+      param[journal_issn] = 1871-3173
+
+      au < exists ; 978-0-76231-451-5 ; 2008 ; Advances in Culture, Tourism and Hospitality Research Volume 2 ; 2 >
+      au < exists ; 978-1-84950-603-8 ; 2009 ; Perspectives on Cross-Cultural, Ethnographic, Brand Image, Storytelling, Unconscious Needs, and Hospitality Guest Research Volume 3 ; 3 >
+      au < exists ; 978-1-84950-900-8 ; 2010 ; Tourism-Marketing Performance Metrics and Usefulness Auditing of Destination Websites Volume 4 ; 4 >
+      au < exists ; 978-0-85724-853-4 ; 2011 ; Tourism Sensemaking: Strategies to Give Meaning to Experience Volume 5 ; 5 >
+      au < exists ; 978-1-78052-742-0 ; 2012 ; Field Guide to Case Study Research in Tourism, Hospitality and Leisure Volume 6 ; 6 >
+      au < exists ; 978-1-78190-210-3 ; 2013 ; Luxury Fashion and Culture Volume 7 ; 7 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Early Education And Day Care ;
+        issn = 0270-4021
+      >
+
+      param[journal_issn] = 0270-4021
+
+      au < exists ; 978-0-76230-810-1 ; 2001 ; Early Education and Care, and Reconceptualizing Play Volume 11 ; 11 >
+      au < exists ; 978-0-76231-063-0 ; 2003 ; Bridging the Gap Between Theory, Research and Practice: The Role of... Volume 12 ; 12 >
+      au < exists ; 978-0-76231-146-0 ; 2004 ; Social Contexts of Early Education, and Reconceptualizing Play (II) Volume 13 ; 13 >
+      au < exists ; 978-0-76231-238-2 ; 2005 ; Practical Transformations and Transformational Practices: Globalization, Postmodernism, and Early Childhood Education Volume 14 ; 14 >
+      au < exists ; 978-0-85724-279-2 ; 2011 ; The Early Childhood Educator Professional Development Grant: Research and Practice Volume 15 ; 15 >
+      au < exists ; 978-1-78190-074-1 ; 2012 ; Early Education in a Global Context Volume 16 ; 16 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Econometrics ;
+        issn = 0731-9053
+      >
+
+      param[journal_issn] = 0731-9053
+
+      au < exists ; 978-0-76230-187-4 ; 1997 ; Applying Maximum Entropy to Econometric Problems Volume 12 ; 12 >
+      au < exists ; 978-0-76230-303-8 ; 1999 ; Messy Data Volume 13 ; 13 >
+      au < exists ; 978-0-76230-688-6 ; 2001 ; Nonstationary Panels, Panel Cointegration, and Dynamic Panels Volume 15 ; 15 >
+      au < exists ; 978-0-76230-857-6 ; 2002 ; Advances in Econometrics Volume 16 ; 16 >
+      au < exists ; 978-0-76231-075-3 ; 2003 ; Maximum Likelihood Estimation of Misspecified Models: Twenty Years Later Volume 17 ; 17 >
+      au < exists ; 978-0-76231-148-4 ; 2004 ; Spatial and Spatiotemporal Econometrics Volume 18 ; 18 >
+      au < exists ; 978-0-76231-150-7 ; 2004 ; Applications of Artificial Intelligence in Finance and Economics Volume 19 ; 19 >
+      au < exists ; 978-0-76231-273-3 ; 2006 ; Econometric Analysis of Financial and Economic Time Series Volume 20 ; 20 >
+      au < exists ; 978-0-76231-274-0 ; 2006 ; Econometric Analysis of Financial and Economic Time Series Volume 20 ; 20 >
+      au < exists ; 978-0-7623-1380-8 ; 2008 ; Modelling and Evaluating Treatment Effects in Econometrics Volume 21 ; 21 >
+      au < exists ; 978-1-84855-196-1 ; 2008 ; Econometrics and Risk Management Volume 22 ; 22 >
+      au < exists ; 978-1-84855-308-8 ; 2008 ; Bayesian Econometrics Volume 23 ; 23 >
+      au < exists ; 978-1-84855-902-8 ; 2009 ; Measurement Error: Consequences, Applications and Solutions Volume 24 ; 24 >
+      au < exists ; 978-1-84950-623-6 ; 2009 ; Nonparametric Econometric Methods Volume 25 ; 25 >
+      au < exists ; 978-0-85724-149-8 ; 2010 ; Maximum Simulated Likelihood Methods and Applications Volume 26 ; 26 >
+      au < exists ; 978-1-78052-526-6 ; 2011 ; Missing Data Methods: Time-Series Methods and Applications Volume 27 ; 27 >
+      au < exists ; 978-1-78052-524-2 ; 2011 ; Missing Data Methods: Cross-sectional Methods and Applications Volume 27 ; 27 >
+      au < exists ; 978-1-78190-305-6 ; 2012 ; DSGE Models in Macroeconomics: Estimation, Evaluation, and New Developments Volume 28 ; 28 >
+      au < exists ; 978-1-78190-307-0 ; 2012 ; Essays in Honor of Jerry Hausman Volume 29 ; 29 >
+      au < exists ; 978-1-78190-309-4 ; 2012 ; 30th Anniversary Edition Volume 30 ; 30 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Ecopolitics ;
+        issn = 2041-806X
+      >
+
+      param[journal_issn] = 2041-806X
+
+      au < exists ; 978-1-78052-666-9 ; 2007 ; Utopias, Ecotopias and Green Communities: Exploring the Activism, Settlements and Living Patterns of Green Idealists Volume 1 ; 1 >
+      au < exists ; 978-1-78052-668-3 ; 2008 ; Advances in Ecopolitics Volume 2 ; 2 >
+      au < exists ; 978-1-78052-670-6 ; 2009 ; Special Edition: Financial Crisis - Environmental Crisis: What is the Link? Volume 3 ; 3 >
+      au < exists ; 978-1-84950-641-0 ; 2009 ; The Transition to Sustainable Living and Practice Volume 4 ; 4 >
+      au < exists ; 978-1-84950-748-6 ; 2010 ; Global Ecological Politics Volume 5 ; 5 >
+      au < exists ; 978-0-85724-301-0 ; 2010 ; Sustainable Justice and the Community Volume 6 ; 6 >
+      au < exists ; 978-1-78052-380-4 ; 2011 ; Community Campaigns for Sustainable Living: Health, Waste & Protest in Civil Society Volume 7 ; 7 >
+      au < exists ; 978-0-85724-761-2 ; 2011 ; Sustainable Politics and the Crisis of the Peripheries: Ireland and Greece Volume 8 ; 8 >
+      au < exists ; 978-1-78052-484-9 ; 2012 ; Enterprising Communities: Grassroots Sustainability Innovations Volume 9 ; 9 >
+      au < exists ; 978-1-78052-202-9 ; 2012 ; Transnational Migration, Gender and Rights Volume 10 ; 10 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Education in Diverse Communities: Research, Policy and Praxis ;
+        issn = 1479-358X
+      >
+
+      param[journal_issn] = 1479-358X
+
+      au < exists ; 978-0-76230-428-8 ; 2002 ; Edmund W. Gordon: Producing Knowledge, Pursuing Understanding Volume 1 ; 1 >
+      au < exists ; 978-0-76230-829-3 ; 2002 ; African American Education: Race, Community, Inequality, and Achievement a Tribute to Edgar G. Epps Volume 2 ; 2 >
+      au < exists ; 978-0-76230-828-6 ; 2004 ; Teacher Unions and Education Policy: Retrenchment of Reform? Volume 3 ; 3 >
+      au < exists ; 978-0-76230-831-6 ; 2004 ; Suffer The Little Children Volume 4 ; 4 >
+      au < exists ; 978-0-76231-182-8 ; 2005 ; Higher Education in a Global Society: Achieving Diversity, Equity and Excellence Volume 5 ; 5 >
+      au < exists ; 978-1-84855-184-8 ; 2008 ; Power, Voice and the Public Good: Schooling and Education in Global Societies Volume 6 ; 6 >
+      au < exists ; 978-1-78052-640-9 ; 2012 ; As the World Turns: Implications of Global Shifts in Higher Education for Theory, Research and Practice Volume 7 ; 7 >
+      au < exists ; 978-1-78052-032-2 ; 2012 ; Living on the Boundaries: Urban Marginality in National and International Contexts Volume 8 ; 8 >
+      au < exists ; 978-1-78190-102-1 ; 2012 ; Health Disparities Among Under-served Populations: Implications for Research, Policy and Praxis Volume 9 ; 9 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Educational Administration ;
+        issn = 1479-3660
+      >
+
+      param[journal_issn] = 1479-3660
+
+      au < exists ; 978-0-76230-426-4 ; 2002 ; Challenges of Urban Education and Efficacy of School Reform Volume 6 ; 6 >
+      au < exists ; 978-0-76231-145-3 ; 2004 ; Administering Special Education: In Pursuit of Dignity and Autonomy Volume 7 ; 7 >
+      au < exists ; 978-0-76231-280-1 ; 2006 ; Technology and Education: Issues in Administration, Policy, and Applications in K12 Schools Volume 8 ; 8 >
+      au < exists ; 978-0-76231-299-3 ; 2006 ; No Child Left Behind and other Federal Programs for Urban School Districts Volume 9 ; 9 >
+      au < exists ; 978-0-7623-1461-4 ; 2007 ; Teaching Leaders to Lead Teachers Volume 10 ; 10 >
+      au < exists ; 978-0-85724-445-1 ; 2010 ; Global Perspectives on Educational Leadership Reform: The Development and Preparation of Leaders of Learning and Learners of Leadership Volume 11 ; 11 >
+      au < exists ; 978-1-78052-184-8 ; 2011 ; Leadership in Education, Corrections and Law Enforcement: A Commitment to Ethics, Equity and Excellence Volume 12 ; 12 >
+      au < exists ; 978-1-78052-642-3 ; 2012 ; Discretionary Behavior and Performance in Educational Organizations: The Missing Link in Educational Leadership and Management Volume 13 ; 13 >
+      au < exists ; 978-1-78052-278-4 ; 2012 ; Global Leadership for Social Justice: Taking it from the Field to Practice Volume 14 ; 14 >
+      au < exists ; 978-1-78190-242-4 ; 2012 ; The Management and Leadership of Educational Marketing: Research, Practice and Applications Volume 15 ; 15 >
+      au < exists ; 978-1-78190-014-7 ; 2012 ; Transforming Learning Environments: Strategies to Shape the Next Generation Volume 16 ; 16 >
+      au < exists ; 978-1-78052-322-4 ; 2012 ; Successful School Leadership Preparation and Development Volume 17 ; 17 >
+      au < exists ; 978-1-78190-501-2 ; 2013 ; Identifying Leaders for Urban Charter, Autonomous and Independent Schools: Above and Beyond the Standards Volume 18 ; 18 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Entrepreneurship, Firm Emergence and Growth ;
+        issn = 1074-7540
+      >
+
+      param[journal_issn] = 1074-7540
+
+      au < exists ; 978-0-76230-325-0 ; 2001 ; Databases for the Study of Entrepreneurship Volume 4 ; 4 >
+      au < exists ; 978-0-76230-877-4 ; 2002 ; Managing People in Entrepreneurial Organizations Volume 5 ; 5 >
+      au < exists ; 978-0-76231-052-4 ; 2003 ; Cognitive Approaches to Entrepreneurship Research Volume 6 ; 6 >
+      au < exists ; 978-0-76231-104-0 ; 2004 ; Advances in Entrepreneurship, Firm Emergence and Growth Volume 7 ; 7 >
+      au < exists ; 978-0-76231-227-6 ; 2005 ; International Entrepreneurship Volume 8 ; 8 >
+      au < exists ; 978-0-76231-329-7 ; 2006 ; Entrepreneurship: Frameworks And Empirical Investigations From Forthcoming Leaders Of European Research Volume 9 ; 9 >
+      au < exists ; 978-0-7623-1429-4 ; 2007 ; Entrepreneurial Strategic Processes Volume 10 ; 10 >
+      au < exists ; 978-1-84855-422-1 ; 2009 ; Entrepreneurial Strategic Content Volume 11 ; 11 >
+      au < exists ; 978-0-85724-097-2 ; 2010 ; Entrepreneurship and Family Business Volume 12 ; 12 >
+      au < exists ; 978-1-78052-072-8 ; 2011 ; Social and Sustainable Entrepreneurship Volume 13 ; 13 >
+      au < exists ; 978-1-78052-900-4 ; 2012 ; Entrepreneurial Action Volume 14 ; 14 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Environmental Accounting & Management ;
+        issn = 1479-3598
+      >
+
+      param[journal_issn] = 1479-3598
+
+      au < exists ; 978-0-76230-334-2 ; 2000 ; Advances in Environmental Accounting & Management Volume 1 ; 1 >
+      au < exists ; 978-0-76231-070-8 ; 2003 ; Advances in Environmental Accounting & Management Volume 2 ; 2 >
+      au < exists ; 978-0-76231-366-2 ; 2006 ; Environmental Accounting Volume 3 ; 3 >
+      au < exists ; 978-1-84950-764-6 ; 2010 ; Sustainability, Environmental Performance and Disclosures Volume 4 ; 4 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Financial Economics ;
+        issn = 1569-3732
+      >
+
+      param[journal_issn] = 1569-3732
+
+      au < exists ; 978-0-76230-713-5 ; 2001 ; Advances in Financial Economics Volume 6 ; 6 >
+      au < exists ; 978-0-76230-897-2 ; 2002 ; Innovations in Investments and Corporate Finance Volume 7 ; 7 >
+      au < exists ; 978-0-76231-027-2 ; 2003 ; Advances in Financial Economics Volume 8 ; 8 >
+      au < exists ; 978-0-76231-133-0 ; 2004 ; Corporate Governance Volume 9 ; 9 >
+      au < exists ; 978-0-76231-137-8 ; 2004 ; The Rise and Fall of Europe's New Stock Markets Volume 10 ; 10 >
+      au < exists ; 978-0-7623-1187-3 ; 2005 ; Corporate Governance Volume 11 ; 11 >
+      au < exists ; 978-0-7623-1373-0 ; 2007 ; Issues in Corporate Governance and Finance Volume 12 ; 12 >
+      au < exists ; 978-1-84855-536-5 ; 2009 ; Corporate Governance and Firm Performance Volume 13 ; 13 >
+      au < exists ; 978-0-85724-915-9 ; 2011 ; International Corporate Governance Volume 14 ; 14 >
+      au < exists ; 978-1-78052-788-8 ; 2012 ; Advances in Financial Economics Volume 15 ; 15 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Gender Research ;
+        issn = 1529-2126
+      >
+
+      param[journal_issn] = 1529-2126
+
+      au < manifest ; 978-0-76230-533-9 ; 1999 ; Social Change for Women and Children Volume 4 ; 4 >
+      au < released ; 978-0-76230-720-3 ; 2001 ; An International Feminist Challenge to Theory Volume 5 ; 5 >
+      au < released ; 978-0-76230-820-0 ; 2005 ; Gendered Sexualities Volume 6 ; 6 >
+      au < released ; 978-0-76231-058-6 ; 2003 ; Gender Perspectives on Health and Medicine Volume 7 ; 7 >
+      au < released ; 978-0-76231-088-3 ; 2004 ; Gendered Perspectives on Reproduction and Sexuality Volume 8 ; 8 >
+      au < released ; 978-0-76231-214-6 ; 2005 ; Gender Realities: Local and Global Volume 9 ; 9 >
+      au < exists ; 978-0-76231-312-9 ; 2006 ; Gender and the Local-Global Nexus: Theory, Research, and Action Volume 10 ; 10 >
+      au < exists ; 978-0-7623-1439-3 ; 2007 ; Sustainable Feminisms Volume 11 ; 11 >
+      au < exists ; 978-1-84855-026-1 ; 2008 ; Advancing Gender Research from the Nineteenth to the Twenty-First Centuries Volume 12 ; 12 >
+      au < exists ; 978-1-84855-752-9 ; 2009 ; Perceiving Gender Locally, Globally, and Intersectionally Volume 13 ; 13 >
+      au < exists ; 978-1-84950-944-2 ; 2010 ; Interactions and Intersections of Gendered Bodies at Work, at Home, and at Play Volume 14 ; 14 >
+      au < exists ; 978-0-85724-743-8 ; 2011 ; Analyzing Gender, Intersectionality, and Multiple Inequalities: Global, Transnational and Local Contexts Volume 15 ; 15 >
+      au < exists ; 978-1-78052-874-8 ; 2012 ; Social Production and Reproduction at the Interface of Public and Private Spheres Volume 16 ; 16 >
+      au < exists ; 978-1-78190-535-7 ; 2013 ; Notions of Family: Intersectional Perspectives Volume 17 ; 17 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Global Leadership ;
+        issn = 1535-1203
+      >
+
+      param[journal_issn] = 1535-1203
+
+      au < exists ; 978-0-76230-723-4 ; 2001 ; Advances in Global Leadership Volume 2 ; 2 >
+      au < exists ; 978-0-76230-866-8 ; 2003 ; Advances in Global Leadership Volume 3 ; 3 >
+      au < exists ; 978-0-76231-160-6 ; 2005 ; Advances in Global Leadership Volume 4 ; 4 >
+      au < exists ; 978-1-84855-256-2 ; 2009 ; Advances in Global Leadership Volume 5 ; 5 >
+      au < exists ; 978-0-85724-467-3 ; 2011 ; Advances in Global Leadership Volume 6 ; 6 >
+      au < exists ; 978-1-78052-002-5 ; 2012 ; Advances in Global Leadership Volume 7 ; 7 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Group Processes ;
+        issn = 0882-6145
+      >
+
+      param[journal_issn] = 0882-6145
+
+      au < exists ; 978-0-76230-651-0 ; 2000 ; Advances in Group Processes Volume 17 ; 17 >
+      au < exists ; 978-0-76230-767-8 ; 2001 ; Advances in Group Processes Volume 18 ; 18 >
+      au < exists ; 978-0-76230-898-9 ; 2002 ; Advances in Group Processes Volume 19 ; 19 >
+      au < exists ; 978-0-76231-030-2 ; 2003 ; Power and Status Volume 20 ; 20 >
+      au < exists ; 978-0-76231-108-8 ; 2004 ; Theory and Research on Human Emotions Volume 21 ; 21 >
+      au < exists ; 978-0-76231-223-8 ; 2005 ; Social Identification in Groups Volume 22 ; 22 >
+      au < exists ; 978-0-76231-330-3 ; 2006 ; Advances in Group Processes Volume 23 ; 23 >
+      au < exists ; 978-0-7623-1430-0 ; 2007 ; Social Psychology of Gender Volume 24 ; 24 >
+      au < exists ; 978-1-84855-104-6 ; 2008 ; Justice Volume 25 ; 25 >
+      au < exists ; 978-1-84855-572-3 ; 2009 ; Altruism and Prosocial Behavior in Groups Volume 26 ; 26 >
+      au < exists ; 978-0-85724-329-4 ; 2010 ; Advances in Group Processes Volume 27 ; 27 >
+      au < exists ; 978-0-85724-773-5 ; 2011 ; Advances in Group Processes Volume 28 ; 28 >
+      au < exists ; 978-1-78190-256-1 ; 2012 ; Biosociology and Neurosociology Volume 29 ; 29 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Health Care Management ;
+        issn = 1474-8231
+      >
+
+      param[journal_issn] = 1474-8231
+
+      au < exists ; 978-0-76230-684-8 ; 2000 ; Advances in Health Care Management Volume 1 ; 1 >
+      au < exists ; 978-0-76230-802-6 ; 2001 ; Advances in Health Care Management Volume 2 ; 2 >
+      au < exists ; 978-0-76230-961-0 ; 2002 ; Advances in Health Care Management Volume 3 ; 3 >
+      au < exists ; 978-0-76231-105-7 ; 2004 ; Bioterrorism Preparedness, Attack and Response Volume 4 ; 4 >
+      au < exists ; 978-0-76231-228-3 ; 2005 ; International Health Care Management Volume 5 ; 5 >
+      au < exists ; 978-0-7623-1328-0 ; 2007 ; Strategic Thinking and Entrepreneurial Action in the Health Care Industry Volume 6 ; 6 >
+      au < exists ; 978-1-84663-954-8 ; 2008 ; Patient Safety and Health Care Management Volume 7 ; 7 >
+      au < exists ; 978-1-84855-672-0 ; 2009 ; Biennial Review of Health Care Management: Meso Perspective Volume 8 ; 8 >
+      au < exists ; 978-1-84950-948-0 ; 2010 ; Strategic Human Resource Management in Health Care Volume 9 ; 9 >
+      au < exists ; 978-0-85724-709-4 ; 2011 ; Organization Development in Healthcare: Conversations on Research and Strategies Volume 10 ; 10 >
+      au < exists ; 978-0-85724-713-1 ; 2011 ; Biennial Review of Health Care Management Volume 11 ; 11 >
+      au < exists ; 978-1-78052-858-8 ; 2012 ; Health Information Technology in the International Context Volume 12 ; 12 >
+      au < exists ; 978-1-78190-190-8 ; 2012 ; Annual Review of Health Care Management: Strategy and Policy Perspectives on Reforming Health Systems Volume 13 ; 13 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Health Economics and Health Services Research ;
+        issn = 0731-2199
+      >
+
+      param[journal_issn] = 0731-2199
+
+      au < exists ; 978-0-76231-233-7 ; 2005 ; Substance Use: Individual Behaviour, Social Interactions, Markets and Politics Volume 16 ; 16 >
+      au < exists ; 978-0-7623-1406-5 ; 2006 ; The Economics of Obesity Volume 17 ; 17 >
+      au < exists ; 978-0-7623-1453-9 ; 2007 ; Evaluating Hospital Policy and Performance: Contributions from Hospital Policy and Productivity Research Volume 18 ; 18 >
+      au < exists ; 978-1-84855-180-0 ; 2008 ; Beyond Health Insurance: Public Policy to Improve Health Volume 19 ; 19 >
+      au < exists ; 978-1-84855-304-0 ; 2008 ; Neuroeconomics Volume 20 ; 20 >
+      au < exists ; 978-1-84855-664-5 ; 2009 ; Innovations in Health System Finance in Developing and Transitional Economies Volume 21 ; 21 >
+      au < exists ; 978-1-84950-716-5 ; 2010 ; Pharmaceutical Markets and Insurance Worldwide Volume 22 ; 22 >
+      au < exists ; 978-1-78190-128-1 ; 2012 ; The Economics of Medical Technology Volume 23 ; 23 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Hospitality and Leisure ;
+        issn = 1745-3542
+      >
+
+      param[journal_issn] = 1745-3542
+
+      au < exists ; 978-0-76231-158-3 ; 2005 ; Advances in Hospitality and Leisure Volume 1 ; 1 >
+      au < exists ; 978-0-76231-284-9 ; 2006 ; Advances in Hospitality and Leisure Volume 2 ; 2 >
+      au < exists ; 978-0-7623-1445-4 ; 2007 ; Advances in Hospitality and Leisure Volume 3 ; 3 >
+      au < exists ; 978-0-7623-1489-8 ; 2008 ; Advances in Hospitality and Leisure Volume 4 ; 4 >
+      au < exists ; 978-1-84855-674-4 ; 2009 ; Advances in Hospitality and Leisure Volume 5 ; 5 >
+      au < exists ; 978-1-84950-718-9 ; 2010 ; Advances in Hospitality and Leisure Volume 6 ; 6 >
+      au < exists ; 978-0-85724-769-8 ; 2011 ; Advances in Hospitality and Leisure Volume 7 ; 7 >
+      au < exists ; 978-1-78052-936-3 ; 2012 ; Advances in Hospitality and Leisure Volume 8 ; 8 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Human Performance and Cognitive Engineering Research ;
+        issn = 1479-3601
+      >
+
+      param[journal_issn] = 1479-3601
+
+      au < exists ; 978-0-76230-748-7 ; 2001 ; Advances in Human Performance and Cognitive Engineering Research Volume 1 ; 1 >
+      au < exists ; 978-0-76230-864-4 ; 2002 ; Advances in Human Performance and Cognitive Engineering Research Volume 2 ; 2 >
+      au < exists ; 978-0-76230-986-3 ; 2003 ; Advances in Human Performance and Cognitive Engineering Research Volume 3 ; 3 >
+      au < exists ; 978-0-76231-049-4 ; 2004 ; Cultural Ergonomics Volume 4 ; 4 >
+      au < exists ; 978-0-76231-141-5 ; 2004 ; The Science and Simulation of Human Performance Volume 5 ; 5 >
+      au < exists ; 978-0-76231-248-1 ; 2006 ; Understanding Adaptability: A Prerequisite for Effective Performance within Complex Environments Volume 6 ; 6 >
+      au < exists ; 978-0-76231-247-4 ; 2006 ; Human Factors of Remotely Operated Vehicles Volume 7 ; 7 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Industrial & Labor Relations ;
+        issn = 0742-6186
+      >
+
+      param[journal_issn] = 0742-6186
+
+      au < exists ; 978-0-76230-750-0 ; 2001 ; New Research on Labor Relations and the Performance of University HR/IR Programs Volume 10 ; 10 >
+      au < exists ; 978-0-76230-853-8 ; 2002 ; Advances in Industrial & Labor Relations Volume 11 ; 11 >
+      au < exists ; 978-0-76231-028-9 ; 2003 ; Advances in Industrial & Labor Relations Volume 12 ; 12 >
+      au < exists ; 978-0-76231-152-1 ; 2004 ; Advances in Industrial & Labor Relations Volume 13 ; 13 >
+      au < exists ; 978-0-76231-265-8 ; 2005 ; Advances in Industrial & Labor Relations Volume 14 ; 14 >
+      au < exists ; 978-0-76231-386-0 ; 2006 ; Advances in Industrial & Labor Relations Volume 15 ; 15 >
+      au < exists ; 978-1-84855-396-5 ; 2009 ; Advances in Industrial & Labor Relations Volume 16 ; 16 >
+      au < exists ; 978-1-84950-932-9 ; 2010 ; Advances in Industrial and Labor Relations Volume 17 ; 17 >
+      au < exists ; 978-0-85724-907-4 ; 2011 ; Advances in Industrial and Labor Relations Volume 18 ; 18 >
+      au < exists ; 978-1-78052-662-1 ; 2012 ; Rethinking Misbehavior and Resistance in Organizations Volume 19 ; 19 >
+      au < exists ; 978-1-78190-377-3 ; 2012 ; Advances in Industrial and Labor Relations Volume 20 ; 20 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Interdisciplinary Studies of Work Teams ;
+        issn = 1572-0977
+      >
+
+      param[journal_issn] = 1572-0977
+
+      au < exists ; 978-0-76230-747-0 ; 2000 ; Advances in Interdisciplinary Studies of Work Teams Volume 7 ; 7 >
+      au < exists ; 978-0-76230-843-9 ; 2001 ; Virtual teams Volume 8 ; 8 >
+      au < exists ; 978-0-76230-981-8 ; 2003 ; Advances in Interdisciplinary Studies of Work Teams Volume 9 ; 9 >
+      au < exists ; 978-0-76231-132-3 ; 2004 ; Complex Collaboration: Building the Capabilities for Working Across Boundaries Volume 10 ; 10 >
+      au < exists ; 978-0-76231-222-1 ; 2005 ; Collaborative Capital: Creating Intangible Value Volume 11 ; 11 >
+      au < exists ; 978-0-76231-331-0 ; 2006 ; Innovation through Collaboration Volume 12 ; 12 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in International Management ;
+        issn = 1571-5027
+      >
+
+      param[journal_issn] = 1571-5027
+
+      au < exists ; 978-0-76231-050-0 ; 2003 ; Managing Multinationals in a Knowledge Economy: Economics, Culture Volume 15 ; 15 >
+      au < exists ; 978-0-76231-126-2 ; 2004 ; Theories of the Multinational Enterprise: Diversity, Complexity and Relevance Volume 16 ; 16 >
+      au < exists ; 978-0-76231-157-6 ; 2004 ; Japanese Firms in Transition: Responding to the Globalization Challenge Volume 17 ; 17 >
+      au < exists ; 978-0-76231-219-1 ; 2005 ; Managing Multinational Teams: Global Perspectives Volume 18 ; 18 >
+      au < exists ; 978-0-7623-1402-7 ; 2007 ; The Global Mindset Volume 19 ; 19 >
+      au < exists ; 978-0-7623-1396-9 ; 2007 ; Product and Market Development for Subsistence Marketplaces Volume 20 ; 20 >
+      au < exists ; 978-0-7623-1401-0 ; 2008 ; The Global Diffusion of Human Resource Practices: Institutional and Cultural Limits Volume 21 ; 21 >
+      au < exists ; 978-1-84855-666-9 ; 2009 ; Managing, Subsidiary Dynamics: Headquarters Role, Capability Development, and China Strategy Volume 22 ; 22 >
+      au < exists ; 978-0-85724-085-9 ; 2010 ; The Past, Present and Future of International Business & Management Volume 23 ; 23 >
+      au < exists ; 978-0-85724-991-3 ; 2011 ; Dynamics of Globalization: Location-Specific Advantages or Liabilities of Foreignness? Volume 24 ; 24 >
+      au < exists ; 978-1-78052-908-0 ; 2012 ; Institutional Theory in International Business and Management Volume 25 ; 25 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in International Marketing ;
+        issn = 1474-7979
+      >
+
+      param[journal_issn] = 1474-7979
+
+      au < exists ; 978-0-76230-669-5 ; 2000 ; Globalization, the Multinational Firm, and Emerging Economies Volume 10 ; 10 >
+      au < exists ; 978-0-76230-795-1 ; 2001 ; Reassesing the Internationalization of the Firm Volume 11 ; 11 >
+      au < exists ; 978-0-76230-950-4 ; 2002 ; New Directions in International Advertising Research Volume 12 ; 12 >
+      au < exists ; 978-0-76230-989-4 ; 2003 ; Study Abroad Volume 13 ; 13 >
+      au < exists ; 978-0-76231-044-9 ; 2003 ; Reviving Traditions in Research on International Market Entry Volume 14 ; 14 >
+      au < exists ; 978-0-76231-185-9 ; 2005 ; Research on International Service Marketing: A state of the Art Volume 15 ; 15 >
+      au < exists ; 978-0-76231-286-3 ; 2006 ; Relationship Between Exporters and Their Foreign Sales and Marketing Intermediaries Volume 16 ; 16 >
+      au < exists ; 978-0-76231-369-3 ; 2006 ; International Marketing Research Volume 17 ; 17 >
+      au < exists ; 978-0-7623-1412-6 ; 2007 ; Cross-Cultural Buyer Behavior Volume 18 ; 18 >
+      au < exists ; 978-1-84855-440-5 ; 2009 ; Michigan State University Contributions to International Business and Innovation Volume 19 ; 19 >
+      au < exists ; 978-1-84855-468-9 ; 2009 ; New Challenges to International Marketing Volume 20 ; 20 >
+      au < exists ; 978-0-85724-447-5 ; 2011 ; International Marketing Volume 21 ; 21 >
+      au < exists ; 978-1-78052-094-0 ; 2011 ; Measurement and Research Methods in International Marketing Volume 22 ; 22 >
+      au < exists ; 978-1-78190-016-1 ; 2012 ; Interdisciplinary Approaches to Product Design, Innovation, & Branding in International Marketing Volume 23 ; 23 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Learning and Behavioral Disabilities ;
+        issn = 0735-004X
+      >
+
+      param[journal_issn] = 0735-004X
+
+      au < exists ; 978-0-76230-815-6 ; 2001 ; Technological Applications Volume 15 ; 15 >
+      au < exists ; 978-0-76231-029-6 ; 2003 ; Advances in Learning and Behavioral Disabilities Volume 16 ; 16 >
+      au < exists ; 978-0-76231-107-1 ; 2004 ; Research in Secondary Schools Volume 17 ; 17 >
+      au < exists ; 978-0-76231-224-5 ; 2005 ; Cognition and Learning in Diverse Settings Volume 18 ; 18 >
+      au < exists ; 978-0-76231-295-5 ; 2006 ; Applications of Research Methodology Volume 19 ; 19 >
+      au < exists ; 978-0-7623-1440-9 ; 2007 ; International Perspectives Volume 20 ; 20 >
+      au < exists ; 978-1-59749-274-4 ; 2008 ; Personnel Preparation Volume 21 ; 21 >
+      au < exists ; 978-1-84855-310-1 ; 2009 ; Policy and Practice Volume 22 ; 22 >
+      au < exists ; 978-1-84950-776-9 ; 2010 ; Literacy and Learning Volume 23 ; 23 >
+      au < exists ; 978-0-85724-829-9 ; 2011 ; Assessment and Intervention Volume 24 ; 24 >
+      au < exists ; 978-1-78052-972-1 ; 2012 ; Classroom Behavior, Contexts, and Interventions Volume 25 ; 25 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Librarianship ;
+        issn = 0065-2830
+      >
+
+      param[journal_issn] = 0065-2830
+
+      au < exists ; 978-0-12024-615-1 ; 1991 ; Advances in Librarianship Volume 15 ; 15 >
+      au < exists ; 978-0-12024-616-8 ; 1992 ; Advances in Librarianship Volume 16 ; 16 >
+      au < exists ; 978-0-12024-617-5 ; 1993 ; Advances in Librarianship Volume 17 ; 17 >
+      au < exists ; 978-0-12024-618-2 ; 1994 ; Advances in Librarianship Volume 18 ; 18 >
+      au < exists ; 978-0-12024-619-9 ; 1995 ; Advances in Librarianship Volume 19 ; 19 >
+      au < exists ; 978-0-12024-620-5 ; 1996 ; Advances in Librarianship Volume 20 ; 20 >
+      au < exists ; 978-0-12024-621-2 ; 1997 ; Advances in Librarianship Volume 21 ; 21 >
+      au < exists ; 978-0-12024-622-9 ; 1998 ; Advances in Librarianship Volume 22 ; 22 >
+      au < exists ; 978-0-12024-623-6 ; 1999 ; Advances in Librarianship Volume 23 ; 23 >
+      au < exists ; 978-0-12024-624-3 ; 2000 ; Advances in Librarianship Volume 24 ; 24 >
+      au < exists ; 978-0-12024-625-0 ; 2001 ; Advances in Librarianship Volume 25 ; 25 >
+      au < exists ; 978-0-12024-626-7 ; 2002 ; Advances in Librarianship Volume 26 ; 26 >
+      au < exists ; 978-0-12-024627-9 ; 2004 ; Advances in Librarianship Volume 27 ; 27 >
+      au < exists ; 978-0-12024-628-1 ; 2004 ; Advances in Librarianship Volume 28 ; 28 >
+      au < exists ; 978-0-12024-629-8 ; 2005 ; Advances in Librarianship Volume 29 ; 29 >
+      au < exists ; 978-0-12-024630-4 ; 2006 ; Advances in Librarianship Volume 30 ; 30 >
+      au < exists ; 978-1-84855-372-9 ; 2008 ; Influence of Funding on Advances in Librarianship Volume 31 ; 31 >
+      au < exists ; 978-1-84950-978-7 ; 2010 ; Advances in Librarianship Volume 32 ; 32 >
+      au < exists ; 978-0-85724-755-1 ; 2011 ; Advances in Librarianship Volume 33 ; 33 >
+      au < exists ; 978-1-78052-390-3 ; 2011 ; Librarianship in Times of Crisis Volume 34 ; 34 >
+      au < exists ; 978-1-78190-060-4 ; 2012 ; Advances in Librarianship Volume 35 ; 35 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Library Administration and Organization ;
+        issn = 0732-0671
+      >
+
+      param[journal_issn] = 0732-0671
+
+      au < exists ; 978-0-76230-647-3 ; 2000 ; Advances in Library Administration and Organization Volume 17 ; 17 >
+      au < exists ; 978-0-76230-718-0 ; 2001 ; Advances in Library Administration and Organization Volume 18 ; 18 >
+      au < exists ; 978-0-76230-868-2 ; 2002 ; Advances in Library Administration and Organization Volume 19 ; 19 >
+      au < exists ; 978-0-76231-010-4 ; 2003 ; Advances in Library Administration and Organization Volume 20 ; 20 >
+      au < exists ; 978-0-76231-121-7 ; 2004 ; Advances in Library Administration and Organization Volume 21 ; 21 >
+      au < exists ; 978-0-76231-195-8 ; 2005 ; Advances in Library Administration and Organization Volume 22 ; 22 >
+      au < exists ; 978-0-76231-297-9 ; 2006 ; Advances in Library Administration and Organization Volume 23 ; 23 >
+      au < exists ; 978-0-7623-1410-2 ; 2006 ; Advances in Library Administration and Organization Volume 24 ; 24 >
+      au < exists ; 978-0-7623-1411-9 ; 2007 ; Advances in Library Administration and Organization Volume 25 ; 25 >
+      au < exists ; 978-0-7623-1488-1 ; 2008 ; Advances in Library Administration and Organization Volume 26 ; 26 >
+      au < exists ; 978-1-84855-710-9 ; 2009 ; Advances in Library Administration and Organization Volume 27 ; 27 >
+      au < exists ; 978-1-84950-579-6 ; 2009 ; Advances in Library Administration and Organization Volume 28 ; 28 >
+      au < exists ; 978-0-85724-287-7 ; 2010 ; Advances in Library Administration and Organization Volume 29 ; 29 >
+      au < exists ; 978-1-78052-014-8 ; 2011 ; Advances in Library Administration and Organization Volume 30 ; 30 >
+      au < exists ; 978-1-78190-313-1 ; 2012 ; Advances in Library Administration and Organization Volume 31 ; 31 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Management Accounting ;
+        issn = 1474-7871
+      >
+
+      param[journal_issn] = 1474-7871
+
+      au < exists ; 978-0-76231-012-8 ; 2003 ; Advances in Management Accounting Volume 11 ; 11 >
+      au < exists ; 978-0-76231-118-7 ; 2004 ; Advances in Management Accounting Volume 12 ; 12 >
+      au < exists ; 978-0-76231-139-2 ; 2004 ; Advances in Management Accounting Volume 13 ; 13 >
+      au < exists ; 978-0-76231-243-6 ; 2005 ; Advances in Management Accounting Volume 14 ; 14 >
+      au < exists ; 978-0-76231-352-5 ; 2006 ; Advances in Management Accounting Volume 15 ; 15 >
+      au < exists ; 978-0-7623-1387-7 ; 2007 ; Advances in Management Accounting Volume 16 ; 16 >
+      au < exists ; 978-1-84855-266-1 ; 2008 ; Advances in Management Accounting Volume 17 ; 17 >
+      au < exists ; 978-1-84950-754-7 ; 2010 ; Advances in Management Accounting Volume 18 ; 18 >
+      au < exists ; 978-0-85724-817-6 ; 2011 ; Advances in Management Accounting Volume 19 ; 19 >
+      au < exists ; 978-1-78052-754-3 ; 2012 ; Advances in Management Accounting Volume 20 ; 20 >
+      au < exists ; 978-1-78190-104-5 ; 2012 ; Advances in Management Accounting Volume 21 ; 21 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Medical Sociology ;
+        issn = 1057-6290
+      >
+
+      param[journal_issn] = 1057-6290
+
+      au < exists ; 978-0-76230-537-7 ; 1999 ; Emergent Issues in the Field of Drug Abuse Volume 7 ; 7 >
+      au < exists ; 978-0-76230-881-1 ; 2002 ; Social Networks and Health Volume 8 ; 8 >
+      au < exists ; 978-0-7623-1438-6 ; 2007 ; Bioethical Issues, Sociological Perspectives Volume 9 ; 9 >
+      au < exists ; 978-1-84855-214-2 ; 2008 ; Patients, Consumers and Civil Society Volume 10 ; 10 >
+      au < exists ; 978-1-84855-080-3 ; 2010 ; Understanding Emerging Epidemics: Social and Political Approaches Volume 11 ; 11 >
+      au < exists ; 978-0-85724-575-5 ; 2011 ; Sociology of Diagnosis Volume 12 ; 12 >
+      au < exists ; 978-1-84855-880-9 ; 2011 ; Sociological Reflections on the Neurosciences Volume 13 ; 13 >
+      au < exists ; 978-1-78052-930-1 ; 2012 ; Critical Perspectives on Addiction Volume 14 ; 14 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Mergers & Acquisitions ;
+        issn = 1479-361X
+      >
+
+      param[journal_issn] = 1479-361X
+
+      au < exists ; 978-0-76230-683-1 ; 2000 ; Advances in Mergers & Acquisitions Volume 1 ; 1 >
+      au < exists ; 978-0-76231-003-6 ; 2003 ; Advances in Mergers & Acquisitions Volume 2 ; 2 >
+      au < exists ; 978-0-76231-101-9 ; 2004 ; Advances in Mergers & Acquisitions Volume 3 ; 3 >
+      au < exists ; 978-0-76231-172-9 ; 2004 ; Advances in Mergers & Acquisitions Volume 4 ; 4 >
+      au < exists ; 978-0-76231-337-2 ; 2006 ; Advances in Mergers & Acquisitions Volume 5 ; 5 >
+      au < exists ; 978-0-7623-1381-5 ; 2007 ; Advances in Mergers & Acquisitions Volume 6 ; 6 >
+      au < exists ; 978-1-84855-100-8 ; 2008 ; Advances in Mergers & Acquisitions Volume 7 ; 7 >
+      au < exists ; 978-1-84855-780-2 ; 2009 ; Advances in Mergers & Acquisitions Volume 8 ; 8 >
+      au < exists ; 978-0-85724-465-9 ; 2010 ; Advances in Mergers and Acquisitions Volume 9 ; 9 >
+      au < exists ; 978-1-78052-196-1 ; 2012 ; Advances in Mergers and Acquisitions Volume 10 ; 10 >
+      au < exists ; 978-1-78190-459-6 ; 2012 ; Advances in Mergers and Acquisitions Volume 11 ; 11 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Motivation and Achievement ;
+        issn = 0749-7423
+      >
+
+      param[journal_issn] = 0749-7423
+
+      au < exists ; 978-0-85724-253-2 ; 2010 ; The Decade Ahead: Applications and Contexts of Motivation and Achievement Volume 16 ; 16 >
+      au < exists ; 978-0-85724-111-5 ; 2010 ; The Decade Ahead: Theoretical Perspectives on Motivation and Achievement Volume 16 ; 16 >
+      au < exists ; 978-1-78190-291-2 ; 2012 ; Transitions Across Schools and Cultures Volume 17 ; 17 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Program Evaluation ;
+        issn = 1474-7863
+      >
+
+      param[journal_issn] = 1474-7863
+
+      au < exists ; 978-0-76230-771-5 ; 2001 ; Vision of Quality: How Evaluators Define, Understand and Represent Program Quality Volume 7 ; 7 >
+      au < exists ; 978-0-76230-861-3 ; 2002 ; School-Based Evaluation: An International Perspective Volume 8 ; 8 >
+      au < exists ; 978-0-76231-120-0 ; 2004 ; Evaluating the Upgrading of Technical Courses at Two-year Colleges: NSF's Advanced Technological Education Program Volume 9 ; 9 >
+      au < exists ; 978-0-7623-1342-6 ; 2007 ; Dilemmas of Engagement: Evaluation and the New Public Management Volume 10 ; 10 >
+      au < exists ; 978-0-7623-1055-5 ; 2004 ; Assessing Teachers for Professional Certification: The First Decade of the National Board for Professional Teaching Standards Volume 11 ; 11 >
+      au < exists ; 978-1-84663-890-9 ; 2008 ; Access, a Zone of Comprehension, and Intrusion Volume 12 ; 12 >
+      au < exists ; 978-1-78052-644-7 ; 2012 ; Perspectives on Evaluating Criminal Justice and Corrections Volume 13 ; 13 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Public Interest Accounting ;
+        issn = 1041-7060
+      >
+
+      param[journal_issn] = 1041-7060
+
+      au < exists ; 978-0-76230-518-6 ; 2001 ; Advances in Accountability: Regulation, Research, Gender and Justice Volume 8 ; 8 >
+      au < exists ; 978-0-76230-958-0 ; 2002 ; Mirrors and Prisms Interrogating Accounting Volume 9 ; 9 >
+      au < exists ; 978-0-76231-154-5 ; 2004 ; Re-Inventing Realities Volume 10 ; 10 >
+      au < exists ; 978-0-76231-205-4 ; 2005 ; Corporate Governance: Does Any Size Fit? Volume 11 ; 11 >
+      au < exists ; 978-0-76231-382-2 ; 2006 ; Independent Accounts Volume 12 ; 12 >
+      au < exists ; 978-0-7623-1462-1 ; 2007 ; Envisioning a New Accountability Volume 13 ; 13 >
+      au < exists ; 978-1-84855-300-2 ; 2009 ; Extending Schumacher's Concept of Total Accounting and Accountability into the 21st Century Volume 14 ; 14 >
+      au < exists ; 978-1-84950-728-8 ; 2010 ; Ethics, Equity, and Regulation Volume 15 ; 15 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Research on Teaching ;
+        issn = 1479-3687
+      >
+
+      param[journal_issn] = 1479-3687
+
+      au < exists ; 978-0-76230-615-2 ; 2001 ; Subject-specific instructional methods and activities Volume 8 ; 8 >
+      au < exists ; 978-0-76230-873-6 ; 2002 ; Social Constructivist Teaching: Affordances and Constraints Volume 9 ; 9 >
+      au < exists ; 978-0-76231-048-7 ; 2003 ; Using Video in Teacher Education Volume 10 ; 10 >
+      au < exists ; 978-0-76231-254-2 ; 2005 ; Learning from Research on Teaching: Perspective, Methodology, and Representation Volume 11 ; 11 >
+      au < exists ; 978-0-85724-099-6 ; 2010 ; Tensions in Teacher Preparation: Accountability, Assessment, and Accreditation Volume 12 ; 12 >
+      au < exists ; 978-0-85724-591-5 ; 2011 ; Narrative Inquiries into Curriculum Making in Teacher Education Volume 13 ; 13 >
+      au < exists ; 978-0-85724-827-5 ; 2011 ; Places of Curriculum Making Volume 14 ; 14 >
+      au < exists ; 978-0-85724-905-0 ; 2011 ; Adolescent Boys' Literate Identity Volume 15 ; 15 >
+      au < exists ; 978-1-78052-924-0 ; 2012 ; Narrative Inquirers in the Midst of Meaning-making: Interpretive Acts of Teacher Educators Volume 16 ; 16 >
+      au < exists ; 978-1-78190-234-9 ; 2012 ; Warrior Women: Remaking Postsecondary Places through Relational Narrative Inquiry Volume 17 ; 17 >
+      au < exists ; 978-1-78190-651-4 ; 2013 ; Emotion and School: Understanding how the Hidden Curriculum Influences Relationships, Leadership, Teaching, and Learning Volume 18 ; 18 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Special Education ;
+        issn = 0270-4013
+      >
+
+      param[journal_issn] = 0270-4013
+
+      au < exists ; 978-0-76230-818-7 ; 2001 ; Autistic Spectrum Disorders: Educational and Clinical Interventions Volume 14 ; 14 >
+      au < exists ; 978-0-76230-975-7 ; 2003 ; Effective Education for Learners with Exceptionalities Volume 15 ; 15 >
+      au < exists ; 978-0-76231-130-9 ; 2005 ; Current Perspectives on Learning Disabilities Volume 16 ; 16 >
+      au < exists ; 978-0-76231-341-9 ; 2006 ; Current Perspectives in Special Education Administration Volume 17 ; 17 >
+      au < exists ; 978-1-84855-356-9 ; 2008 ; Autism and Developmental Disabilities: Current Practices and Issues Volume 18 ; 18 >
+      au < exists ; 978-1-84855-668-3 ; 2009 ; Current Issues and Trends in Special Education: Identification, Assessment and Instruction Volume 19 ; 19 >
+      au < exists ; 978-1-84950-954-1 ; 2010 ; Current Issues and Trends in Special Education: Research, Technology, and Teacher Preparation Volume 20 ; 20 >
+      au < exists ; 978-0-85724-629-5 ; 2011 ; History of Special Education Volume 21 ; 21 >
+      au < exists ; 978-1-78052-504-4 ; 2012 ; Behavioral Disorders: Identification, Assessment, and Instruction of Students with EBD Volume 22 ; 22 >
+      au < exists ; 978-1-78052-506-8 ; 2012 ; Behavioral Disorders: Practice Concerns and Students with EBD Volume 23 ; 23 >
+      au < exists ; 978-1-78190-425-1 ; 2013 ; Learning Disabilities: Identification, Assessment, and Instruction of Students with LD Volume 24 ; 24 >
+      au < exists ; 978-1-78190-427-5 ; 2013 ; Learning Disabilities: Practice Concerns And Students With LD Volume 25 ; 25 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Strategic Management ;
+        issn = 0742-3322
+      >
+
+      param[journal_issn] = 0742-3322
+
+      au < exists ; 978-0-76230-661-9 ; 2000 ; Economics Meets Sociology in Strategic Management Volume 17 ; 17 >
+      au < exists ; 978-0-76230-721-0 ; 2001 ; Multiunit Organization and Multimarket Strategy Volume 18 ; 18 >
+      au < exists ; 978-0-7623-0903-0 ; 2002 ; The New Institutionalism in Strategic Management Volume 19 ; 19 >
+      au < exists ; 978-0-76231-034-0 ; 2003 ; Geography and Strategy Volume 20 ; 20 >
+      au < exists ; 978-0-76231-135-4 ; 2004 ; Business Strategy over the Industry Lifecycle Volume 21 ; 21 >
+      au < exists ; 978-0-76231-200-9 ; 2005 ; Strategy Process Volume 22 ; 22 >
+      au < exists ; 978-0-76231-338-9 ; 2006 ; Ecology and Strategy Volume 23 ; 23 >
+      au < exists ; 978-0-7623-1427-0 ; 2007 ; Real Options Theory Volume 24 ; 24 >
+      au < exists ; 978-0-7623-1442-3 ; 2008 ; Network Strategy Volume 25 ; 25 >
+      au < exists ; 978-1-84855-486-3 ; 2009 ; Economic Institutions of Strategy Volume 26 ; 26 >
+      au < exists ; 978-1-84950-898-8 ; 2010 ; The Globalization of Strategy Research Volume 27 ; 27 >
+      au < exists ; 978-1-78052-192-3 ; 2011 ; Project-Based Organizing and Strategic Management Volume 28 ; 28 >
+      au < exists ; 978-1-78190-024-6 ; 2012 ; History and Strategy Volume 29 ; 29 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Sustainability and Environmental Justice ;
+        issn = 2051-5030
+      >
+
+      param[journal_issn] = 2051-5030
+
+      au < exists ; 978-1-78190-625-5 ; 2013 ; International Business, Sustainability and Corporate Social Responsibility Volume 11 ; 11 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in Taxation ;
+        issn = 1058-7497
+      >
+
+      param[journal_issn] = 1058-7497
+
+      au < exists ; 978-0-76230-670-1 ; 2000 ; Advances in Taxation Volume 12 ; 12 >
+      au < exists ; 978-0-76230-774-6 ; 2001 ; Advances in Taxation Volume 13 ; 13 >
+      au < exists ; 978-0-76230-889-7 ; 2002 ; Advances in Taxation Volume 14 ; 14 >
+      au < exists ; 978-0-76231-065-4 ; 2003 ; Advances in Taxation Volume 15 ; 15 >
+      au < exists ; 978-0-76231-134-7 ; 2004 ; Advances in Taxation Volume 16 ; 16 >
+      au < exists ; 978-0-76231-376-1 ; 2006 ; Advances in Taxation Volume 17 ; 17 >
+      au < exists ; 978-1-84663-912-8 ; 2008 ; Advances in Taxation Volume 18 ; 18 >
+      au < exists ; 978-0-85724-139-9 ; 2010 ; Advances in Taxation Volume 19 ; 19 >
+      au < exists ; 978-1-78052-592-1 ; 2012 ; Advances in Taxation Volume 20 ; 20 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in the Economic Analysis of Participatory & Labor-Managed Firms ;
+        issn = 0885-3339
+      >
+
+      param[journal_issn] = 0885-3339
+
+      au < exists ; 978-0-76231-000-5 ; 2003 ; Advances in the Economic Analysis of Participatory & Labor-Managed Firms Volume 7 ; 7 >
+      au < exists ; 978-0-76231-114-9 ; 2004 ; Employee Participation, Firm Performance and Survival Volume 8 ; 8 >
+      au < exists ; 978-0-76231-278-8 ; 2006 ; Participation in the Age of Globalization and Information Volume 9 ; 9 >
+      au < exists ; 978-0-7623-1389-1 ; 2007 ; Cooperative Firms in Global Markets Volume 10 ; 10 >
+      au < exists ; 978-0-85724-453-6 ; 2010 ; Advances in the Economic Analysis of Participatory & Labor-Managed Firms Volume 11 ; 11 >
+      au < exists ; 978-0-85724-759-9 ; 2011 ; Advances in the Economic Analysis of Participatory and Labor-Managed Firms Volume 12 ; 12 >
+      au < exists ; 978-1-78190-220-2 ; 2012 ; Advances in the Economic Analysis of Participatory and Labor-Managed Firms Volume 13 ; 13 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in the Economics of Environmental Resources ;
+        issn = 1569-3740
+      >
+
+      param[journal_issn] = 1569-3740
+
+      au < exists ; 978-0-76230-305-2 ; 2001 ; The Long-Term Economics of Climate Change: Beyond a Doubling of Greenhouse Gas Concentrations Volume 3 ; 3 >
+      au < exists ; 978-0-76230-850-7 ; 2002 ; Economics of Pesticides, Sustainable Food Production, and Organic Food Markets Volume 4 ; 4 >
+      au < exists ; 978-0-76231-271-9 ; 2005 ; Perspectives on Climate Change: Science, Economics, Politics, Ethics Volume 5 ; 5 >
+      au < exists ; 978-0-08-045327-9 ; 2007 ; Living on the Edge Volume 6 ; 6 >
+      au < exists ; 978-0-7623-1448-5 ; 2007 ; Ecological Economics of Sustainable Watershed Management Volume 7 ; 7 >
+
+  }
+
+  {
+
+      title <
+        name = Advances in the Study of Entrepreneurship, Innovation & Economic Growth ;
+        issn = 1048-4736
+      >
+
+      param[journal_issn] = 1048-4736
+
+      au < exists ; 978-0-76230-689-3 ; 2000 ; Entrepreneurship and economic growth in the American economy Volume 12 ; 12 >
+      au < exists ; 978-0-76230-822-4 ; 2001 ; Entrepreneurial inputs and outcomes: New studies of entrepreneurship in the United States Volume 13 ; 13 >
+      au < exists ; 978-0-76231-002-9 ; 2003 ; Issues in Entrepeneurship Volume 14 ; 14 >
+      au < exists ; 978-0-76231-102-6 ; 2004 ; Intellectual Property and Entrepreneurship Volume 15 ; 15 >
+      au < exists ; 978-0-76231-230-6 ; 2005 ; University Entrepreneurship and Technology Transfer Volume 16 ; 16 >
+      au < exists ; 978-0-7623-1336-5 ; 2007 ; The Cyclic Nature of Innovation: Connecting Hard Sciences with Soft Values Volume 17 ; 17 >
+      au < exists ; 978-0-7623-1481-2 ; 2008 ; Technological Innovation: Generating Economic Results Volume 18 ; 18 >
+      au < exists ; 978-1-84855-466-5 ; 2009 ; Measuring the Social Value of Innovation: A Link in the University Technology Transfer and Entrepreneurship Equation Volume 19 ; 19 >
+      au < exists ; 978-1-84855-950-9 ; 2009 ; Frontiers in Eco-Entrepreneurship Research Volume 20 ; 20 >
+      au < exists ; 978-0-85724-199-3 ; 2010 ; Spanning Boundaries and Disciplines: University Technology Commercialization in the Idea Age Volume 21 ; 21 >
+      au < exists ; 978-1-78052-394-1 ; 2011 ; Entrepreneurship and Global Competitiveness in Regional Economies: Determinants and Policy Implications Volume 22 ; 22 >
+
+  }
+
+  {
+
+      title <
+        name = Applications of Management Science ;
+        issn = 0276-8976
+      >
+
+      param[journal_issn] = 0276-8976
+
+      au < exists ; 0-7623-1221-1 ; 2006 ; Applications of Management Science: In Productivity, Finance, and Operations Volume 12 ; 12 >
+      au < exists ; 978-1-84855-878-6 ; 2009 ; Financial Modeling Applications and Data Envelopment Applications Volume 13 ; 13 >
+      au < exists ; 978-0-85724-469-7 ; 2010 ; Applications in Multicriteria Decision Making, Data Envelopment Analysis, and Finance Volume 14 ; 14 >
+      au < exists ; 978-1-78052-100-8 ; 2012 ; Applications of Management Science Volume 15 ; 15 >
+
+  }
+
+  {
+
+      title <
+        name = Bridging Tourism Theory and Practice ;
+        issn = 2042-1443
+      >
+
+      param[journal_issn] = 2042-1443
+
+      au < exists ; 978-1-84950-720-2 ; 2009 ; Tourism Branding: Communities in Action Volume 1 ; 1 >
+      au < exists ; 978-1-84950-920-6 ; 2010 ; Tourism in the Muslim World Volume 2 ; 2 >
+      au < exists ; 978-0-85724-619-6 ; 2010 ; Tourism and the Implications of Climate Change: Issues and Actions Volume 3 ; 3 >
+      au < exists ; 978-1-78052-980-6 ; 2012 ; Knowledge Management in Tourism: Policy and Governance Applications Volume 4 ; 4 >
+
+  }
+
+  {
+
+      title <
+        name = Community, Environment and Disaster Risk Management  ;
+        issn = 2040-7262
+      >
+
+      param[journal_issn] = 2040-7262
+
+      au < exists ; 978-1-84855-906-6 ; 2009 ; Urban Risk Reduction: An Asian Perspective Volume 1 ; 1 >
+      au < exists ; 978-1-84950-698-4 ; 2010 ; Water Communities Volume 2 ; 2 >
+      au < exists ; 978-0-85724-163-4 ; 2010 ; Integrated Lagoon Fisheries Management: Resource Dynamics and Adaptation Volume 3 ; 3 >
+      au < exists ; 978-0-85724-487-1 ; 2010 ; Climate Change Adaptation and Disaster Risk Reduction: Issues and Challenges Volume 4 ; 4 >
+      au < exists ; 978-0-85724-485-7 ; 2010 ; Climate Change Adaptation and Disaster Risk Reduction: An Asian Perspective Volume 5 ; 5 >
+      au < exists ; 978-0-85724-319-5 ; 2011 ; Climate and Disaster Resilience in Cities Volume 6 ; 6 >
+      au < exists ; 978-0-85724-737-7 ; 2011 ; Disaster Education Volume 7 ; 7 >
+      au < exists ; 978-0-85724-863-3 ; 2011 ; Droughts in Asian Monsoon Region Volume 8 ; 8 >
+      au < exists ; 978-0-85724-865-7 ; 2012 ; Environment Disaster Linkages Volume 9 ; 9 >
+      au < exists ; 978-0-85724-867-1 ; 2012 ; Community-Based Disaster Risk Reduction Volume 10 ; 10 >
+      au < exists ; 978-1-78052-486-3 ; 2012 ; Climate Change Modeling For Local Adaptation In The Hindu Kush-Himalayan Region Volume 11 ; 11 >
+      au < exists ; 978-1-78052-690-4 ; 2012 ; Ecosystem-Based Adaptation Volume 12 ; 12 >
+
+  }
+
+  {
+
+      title <
+        name = Comparative Social Research ;
+        issn = 0195-6310
+      >
+
+      param[journal_issn] = 0195-6310
+
+      au < exists ; 978-0-76230-679-4 ; 2000 ; Comparative Perspectives on Universities Volume 19 ; 19 >
+      au < exists ; 978-0-76230-836-1 ; 2002 ; The Comparative Study of Conscription in the Armed Forces Volume 20 ; 20 >
+      au < exists ; 978-0-76230-885-9 ; 2003 ; Comparative Studies of Culture and Power Volume 21 ; 21 >
+      au < exists ; 978-0-76231-064-7 ; 2003 ; Multicultural Challenge Volume 22 ; 22 >
+      au < exists ; 978-0-76231-379-2 ; 2006 ; Comparative Studies of Social and Political Elites Volume 23 ; 23 >
+      au < exists ; 978-0-7623-1313-6 ; 2007 ; Capitalisms Compared Volume 24 ; 24 >
+      au < exists ; 978-0-7623-1419-5 ; 2008 ; Childhood: Changing Contexts Volume 25 ; 25 >
+      au < exists ; 978-1-84950-607-6 ; 2009 ; Civil Society in Comparative Perspective Volume 26 ; 26 >
+      au < exists ; 978-0-85724-101-6 ; 2010 ; Troubled Regions and Failing States: The Clustering and Contagion of Armed Conflicts Volume 27 ; 27 >
+      au < exists ; 978-0-85724-777-3 ; 2011 ; The Nordic Varieties of Capitalism Volume 28 ; 28 >
+      au < exists ; 978-1-78052-672-0 ; 2012 ; Firms, Boards and Gender Quotas: Comparative Perspectives Volume 29 ; 29 >
+      au < exists ; 978-1-78190-537-1 ; 2013 ; Class and Stratification Analysis Volume 30 ; 30 >
+
+  }
+
+  {
+
+      title <
+        name = Contemporary Issues in Entrepreneurship Research ;
+        issn = 2040-7246
+      >
+
+      param[journal_issn] = 2040-7246
+
+      au < exists ; 978-0-85724-335-5 ; 2010 ; Innovating Women: Contributions to Technological Advancement Volume 1 ; 1 >
+      au < exists ; 978-1-78190-254-7 ; 2012 ; Social and Sustainable Enterprise: Changing the Nature of Business Volume 2 ; 2 >
+
+  }
+
+  {
+
+      title <
+        name = Contemporary Perspectives in Family Research ;
+        issn = 1530-3535
+      >
+
+      param[journal_issn] = 1530-3535
+
+      au < exists ; 978-0-76230-801-9 ; 2003 ; Intergenerational Ambivalences: New Perspectives on Parent-Child Relations in Later Life Volume 4 ; 4 >
+      au < exists ; 978-0-76231-116-3 ; 2004 ; Families in Eastern Europe Volume 5 ; 5 >
+      au < exists ; 978-1-78052-978-3 ; 2012 ; Economic Stress and the Family Volume 6 ; 6 >
+
+  }
+
+  {
+
+      title <
+        name = Contemporary Studies in Economic and Financial Analysis ;
+        issn = 1569-3759
+      >
+
+      param[journal_issn] = 1569-3759
+
+      au < exists ; 978-0-76230-979-5 ; 2002 ; The Irish Economy in Transition: Successes, Problems, and Prospects Volume 85 ; 85 >
+      au < exists ; 978-0-76231-258-0 ; 2005 ; Asia Pacific Financial Markets in Comparative Perspective: Issues and Implications for the 21st Century Volume 86 ; 86 >
+      au < exists ; 978-0-76231-270-2 ; 2005 ; Developments in Litigation Economics Volume 87 ; 87 >
+      au < exists ; 978-0-76231-364-8 ; 2006 ; European Responses to Globalization Volume 88 ; 88 >
+      au < exists ; 978-0-7623-1457-7 ; 2007 ; Globalization: Perspectives from Central and Eastern Europe Volume 89 ; 89 >
+      au < exists ; 978-0-7623-1463-8 ; 2007 ; Privatization in Transition Economies: The Ongoing Story Volume 90 ; 90 >
+      au < exists ; 978-1-84855-302-6 ; 2009 ; Personal Injury and Wrongful Death Damages Calculations: Transatlantic Dialogue Volume 91 ; 91 >
+      au < exists ; 978-1-84950-681-6 ; 2009 ; Moving Beyond Storytelling: Emerging Research in Microfinance Volume 92 ; 92 >
+      au < exists ; 978-0-85724-753-7 ; 2011 ; The Impact of the Global Financial Crisis on Emerging Financial Markets Volume 93 ; 93 >
+      au < exists ; 978-1-78052-616-4 ; 2012 ; Derivative Securities Pricing and Modelling Volume 94 ; 94 >
+
+  }
+
+  {
+
+      title <
+        name = Contributions to Conflict Management, Peace Economics and Development ;
+        issn = 1572-8323
+      >
+
+      param[journal_issn] = 1572-8323
+
+      au < exists ; 978-0-44451-865-1 ; 2005 ; Eurasia Volume 1 ; 1 >
+      au < exists ; 978-0-44451-960-3 ; 2005 ; Military Missions and their Implications Reconsidered: The Aftermath of September 11th Volume 2 ; 2 >
+      au < exists ; 978-0-7623-1357-0 ; 2007 ; Managing Conflict in Economic Convergence of Regions in Greater Europe Volume 3 ; 3 >
+      au < exists ; 978-0-444-53024-0 ; 2007 ; Cultural Differences between the Military and Parent Society in Democratic Countries Volume 4 ; 4 >
+      au < exists ; 978-0-4445-3176-6 ; 2008 ; Conflict and Peace in South Asia Volume 5 ; 5 >
+      au < exists ; 978-0-4445-3244-2 ; 2008 ; War, Peace and Security Volume 6 ; 6 >
+      au < exists ; 978-1-8485-5122-0 ; 2008 ; Armed Forces and Conflict Resolution: Sociological Perspectives Volume 7 ; 7 >
+      au < exists ; 978-1-84855-190-9 ; 2008 ; Regional Development and Conflict Management: A Case for Brazil Volume 8 ; 8 >
+      au < exists ; 978-1-84855-204-3 ; 2009 ; Crisis, Complexity and Conflict Volume 9 ; 9 >
+      au < exists ; 978-1-84855-202-9 ; 2009 ; Putting Teeth in the Tiger: Improving the Effectiveness of Arms Embargoes Volume 10 ; 10 >
+      au < exists ; 978-1-84855-200-5 ; 2009 ; Peace Science: Theory and Cases Volume 11 ; 11 >
+      au < exists ; 978-1-84855-892-2 ; 2009 ; Advances in Military Sociology: Essays in Honor of Charles C. Moskos Volume 12 ; 12 >
+      au < exists ; 978-1-84855-890-8 ; 2009 ; Advances in Military Sociology: Essays in Honor of Charles C. Moskos Volume 12 ; 12 >
+      au < exists ; 978-1-84950-661-8 ; 2009 ; Arms and Conflict in the Middle East Volume 13 ; 13 >
+      au < exists ; 978-0-85724-004-0 ; 2010 ; Economics of War and Peace: Economic, Legal, and Political Perspectives Volume 14 ; 14 >
+      au < exists ; 978-1-84950-972-5 ; 2010 ; Conflict, Complexity and Mathematical Social Science Volume 15 ; 15 >
+      au < exists ; 978-0-85724-701-8 ; 2011 ; Frontiers of Peace Economics and Peace Science Volume 16 ; 16 >
+      au < exists ; 978-1-78052-130-5 ; 2011 ; Ethnic Conflict, Civil War and Cost of Conflict Volume 17 ; 17 >
+      au < exists ; 978-0-85724-895-4 ; 2011 ; Governance, Development and Conflict Volume 18 ; 18 >
+      au < exists ; 978-1-78052-638-6 ; 2012 ; New Wars, New Militaries, New Soldiers: Conflicts, the Armed Forces and the Soldierly Subject Volume 19 ; 19 >
+      au < exists ; 978-1-78190-335-3 ; 2012 ; Cooperation for a Peaceful and Sustainable World Part 1 Volume 20 ; 20 >
+
+  }
+
+  {
+
+      title <
+        name = Contributions to Economic Analysis ;
+        issn = 0573-8555
+      >
+
+      param[journal_issn] = 0573-8555
+
+      au < exists ; 978-0-44489-653-7 ; 1992 ; Economic Modeling in the Nordic Countries Volume 210 ; 210 >
+      au < exists ; 978-0-44481-469-2 ; 1993 ; Contingent Valuation: A Critical Assessment Volume 220 ; 220 >
+      au < exists ; 978-0-44481-787-7 ; 1995 ; Economics, Econometrics and the LINK: Essays in Honor of Lawrence R.Klein Volume 226 ; 226 >
+      au < exists ; 978-0-44482-072-3 ; 1994 ; Economics of Crime: Deterrence and the Rational Offender Volume 227 ; 227 >
+      au < exists ; 978-0-44482-144-7 ; 1996 ; International Comparisons of Prices, Output and Productivity Volume 231 ; 231 >
+      au < exists ; 978-0-44482-481-3 ; 1996 ; Agricultural Markets Volume 234 ; 234 >
+      au < exists ; 978-0-44482-482-0 ; 1996 ; The Peace Dividend Volume 235 ; 235 >
+      au < exists ; 978-0-44482-767-8 ; 1997 ; Government for the Future Volume 238 ; 238 >
+      au < exists ; 978-0-44450-256-8 ; 1999 ; The Creation and Analysis of Employer-Employee Matched Data Volume 241 ; 241 >
+      au < exists ; 978-0-44450-319-0 ; 2000 ; Panel Data and Structural Labour Market Models Volume 243 ; 243 >
+      au < exists ; 978-0-44450-119-6 ; 2000 ; The Theory of Monetary Aggregation Volume 245 ; 245 >
+      au < exists ; 978-0-44450-491-3 ; 2000 ; Environmental Taxation and the Double Dividend Volume 246 ; 246 >
+      au < exists ; 978-0-44450-692-4 ; 1998 ; Explaining Unemployment: Econometric Models for the Netherlands Volume 250 ; 250 >
+      au < exists ; 978-0-44450-860-7 ; 2001 ; Optimal Growth Economics: An Investigation of the Contemporary Issues and the Prospect for Sustainable Growth Volume 252 ; 252 >
+      au < exists ; 978-0-44451-088-4 ; 2002 ; An Input-output Analysis of European Integration Volume 253 ; 253 >
+      au < exists ; 978-0-44451-260-4 ; 2001 ; Dynamic General Equilibrium Modelling for Forecasting and Policy: A Practical Guide and Documentation of MONASH Volume 256 ; 256 >
+      au < exists ; 978-0-44450-995-6 ; 2003 ; Economics of Art and Culture Invited Papers at the 12th International Conference of the Association of Cultural Economics International Volume 260 ; 260 >
+      au < exists ; 978-0-44450-861-4 ; 2004 ; Functional Structure and Approximation in Econometrics Volume 261 ; 261 >
+      au < exists ; 978-0-44451-565-0 ; 2004 ; Economic Growth and Social Welfare: Operationalising Normative Social Choice Theory Volume 262 ; 262 >
+      au < exists ; 978-0-44451-668-8 ; 2004 ; Fostering Productivity: Patterns, Determinants and Policy Implications Volume 263 ; 263 >
+      au < exists ; 978-0-44451-732-6 ; 2004 ; Unfunded Pension Systems: Ageing and Migration Volume 264 ; 264 >
+      au < exists ; 978-0-44451-707-4 ; 2004 ; Tourism, Trade and National Welfare Volume 265 ; 265 >
+      au < exists ; 978-0-44451-481-3 ; 2005 ; Urban Dynamics and Growth: Advances in Urban Economics Volume 266 ; 266 >
+      au < exists ; 978-0-44451-708-1 ; 2004 ; Environmental Policy International Trade and Factor Markets Volume 267 ; 267 >
+      au < exists ; 978-0-44451-677-0 ; 2005 ; Taxing the Hard-to-tax: Lessons from Theory and Practice Volume 268 ; 268 >
+      au < exists ; 978-0-44451-633-6 ; 2004 ; New Directions in Macromodelling Volume 269 ; 269 >
+      au < exists ; 978-0-44451-816-3 ; 2004 ; The Political Economy of Policy Reform: Essays in Honor of J. Michael Finger Volume 270 ; 270 >
+      au < exists ; 978-0-44451-534-6 ; 2004 ; The Economics of Time Use Volume 271 ; 271 >
+      au < exists ; 978-0-44451-858-3 ; 2005 ; Patent Activity and Technical Change in US Industries Volume 272 ; 272 >
+      au < exists ; 978-0-44451-837-8 ; 2005 ; Modelling the Riskiness in Country Risk Ratings Volume 273 ; 273 >
+      au < exists ; 978-0-44452-172-9 ; 2006 ; Panel Data Econometrics Theoretical Contributions and Empirical Applications Volume 274 ; 274 >
+      au < exists ; 978-0-44452-089-0 ; 2006 ; Structural Models of Wage and Employment Dynamics Volume 275 ; 275 >
+      au < exists ; 978-0-44451-838-5 ; 2006 ; Nonlinear Time Series Analysis of Business Cycles Volume 276 ; 276 >
+      au < exists ; 978-0-44452-122-4 ; 2006 ; Quantitative and Empirical Analysis of Nonlinear Dynamic Macromodels Volume 277 ; 277 >
+      au < exists ; 978-0-44452-240-5 ; 2006 ; Explaining Growth in the Middle East Volume 278 ; 278 >
+      au < exists ; 978-0-44452-968-8 ; 2006 ; Designing the New European Union Volume 279 ; 279 >
+      au < exists ; 978-0-44452-242-9 ; 2006 ; Cognitive Economics: New Trends Volume 280 ; 280 >
+      au < exists ; 978-0-44453-051-6 ; 2007 ; Population Change, Labor Markets and Sustainable Growth: Towards a New Economic Paradigm Volume 281 ; 281 >
+      au < exists ; 978-0-44453-093-6 ; 2007 ; The Political Economy of Antitrust Volume 282 ; 282 >
+      au < exists ; 978-0-44452-999-2 ; 2007 ; European Union and the Euro Revolution Volume 283 ; 283 >
+      au < exists ; 978-0-44452-974-9 ; 2007 ; Fighting Corruption in the Public Sector Volume 284 ; 284 >
+      au < exists ; 978-0-444-53253-4 ; 2008 ; Simulating an Ageing Population: A Microsimulation Approach Applied to Sweden Volume 285 ; 285 >
+      au < exists ; 978-0-444-53255-8 ; 2008 ; The Economics of Innovation Volume 286 ; 286 >
+      au < exists ; 978-1-84855-260-9 ; 2009 ; The Asian Economy and Asian Money Volume 287 ; 287 >
+      au < exists ; 978-1-84855-312-5 ; 2009 ; Quantifying Consumer Preferences Volume 288 ; 288 >
+      au < exists ; 978-0-85724-147-4 ; 2010 ; Transportation Indicators and Business Cycles Volume 289 ; 289 >
+      au < exists ; 978-0-85724-155-9 ; 2010 ; Current Issues in Health Economics Volume 290 ; 290 >
+      au < exists ; 978-0-85724-721-6 ; 2011 ; Contributions to Economic Analysis Volume 291 ; 291 >
+      au < exists ; 978-1-78052-314-9 ; 2011 ; The United States of Europe: European Union and the Euro Revolution, Revised Edition Volume 292 ; 292 >
+
+  }
+
+  {
+
+      title <
+        name = Critical Perspectives on International Public Sector Management ;
+        issn = 2045-7944
+      >
+
+      param[journal_issn] = 2045-7944
+
+      au < exists ; 978-0-85724-997-5 ; 2012 ; Emerging and Potential Trends in Public Management: An Age of Austerity Volume 1 ; 1 >
+
+  }
+
+  {
+
+      title <
+        name = Critical Studies on Corporate Responsibility, Governance and Sustainability ;
+        issn = 2043-9059
+      >
+
+      param[journal_issn] = 2043-9059
+
+      au < exists ; 978-0-85724-455-0 ; 2010 ; Reframing Corporate Social Responsibility: Lessons from the Global Financial Crisis Volume 1 ; 1 >
+      au < exists ; 978-1-78052-092-6 ; 2011 ; Finance and Sustainability: Towards a New Paradigm? A Post-Crisis Agenda Volume 2 ; 2 >
+      au < exists ; 978-1-78052-438-2 ; 2011 ; Business and Sustainability: Concepts, Strategies and Changes Volume 3 ; 3 >
+      au < exists ; 978-1-78052-998-1 ; 2012 ; Corporate Social Irresponsibility: A Challenging Concept Volume 4 ; 4 >
+
+  }
+
+  {
+
+      title <
+        name = Current Perspectives in Social Theory ;
+        issn = 0278-1204
+      >
+
+      param[journal_issn] = 0278-1204
+
+      au < exists ; 978-0-76230-762-3 ; 2002 ; Bringing Capitalism Back for Critique by Social Theory Volume 21 ; 21 >
+      au < exists ; 978-0-76230-963-4 ; 2002 ; Critical Theory: Diverse Objects, Diverse Subjects Volume 22 ; 22 >
+      au < exists ; 978-0-76231-236-8 ; 2005 ; Social Theory as Politics in Knowledge Volume 23 ; 23 >
+      au < exists ; 978-0-76231-314-3 ; 2006 ; Globalization between the Cold War and Neo-Imperialism Volume 24 ; 24 >
+      au < exists ; 978-0-7623-1483-6 ; 2008 ; No Social Science without Critical Theory Volume 25 ; 25 >
+      au < exists ; 978-1-84950-605-2 ; 2009 ; Nature, Knowledge and Negation Volume 26 ; 26 >
+      au < exists ; 978-0-85724-223-5 ; 2010 ; Theorizing the Dynamics of Social Processes Volume 27 ; 27 >
+      au < exists ; 978-0-85724-797-1 ; 2011 ; The Vitality Of Critical Theory Volume 28 ; 28 >
+      au < exists ; 978-0-85724-821-3 ; 2011 ; The Diversity of Social Theories Volume 29 ; 29 >
+      au < exists ; 978-1-78190-034-5 ; 2012 ; Theorizing Modern Society as a Dynamic Process Volume 30 ; 30 >
+
+  }
+
+  {
+
+      title <
+        name = Current Research in the Semantics/Pragmatics Interface ;
+        issn = 1472-7870
+      >
+
+      param[journal_issn] = 1472-7870
+
+      au < exists ; 978-0-85724-909-8 ; 2011 ; Making Semantics Pragmatic Volume 24 ; 24 >
+      au < exists ; 978-0-85724-093-4 ; 2011 ; Procedural Meaning: Problems and Perspectives Volume 25 ; 25 >
+
+  }
+
+  {
+
+      title <
+        name = Cutting-edge Technologies in Higher Education ;
+        issn = 2044-9968
+      >
+
+      param[journal_issn] = 2044-9968
+
+      au < exists ; 978-0-85724-649-3 ; 2011 ; Educating Educators with Social Media Volume 1 ; 1 >
+      au < exists ; 978-0-85724-651-6 ; 2011 ; Higher Education Administration with Social Media Volume 2 ; 2 >
+      au < exists ; 978-0-85724-781-0 ; 2011 ; Teaching Arts and Science with the New Social Media Volume 3 ; 3 >
+      au < exists ; 978-1-78052-052-0 ; 2011 ; Transforming Virtual World Learning Volume 4 ; 4 >
+      au < exists ; 978-1-78052-456-6 ; 2012 ; Misbehavior Online in Higher Education Volume 5 ; 5 >
+      au < exists ; 978-1-78190-511-1 ; 2013 ; Increasing Student Engagement and Retention Using Classroom Technologies: Classroom Response Systems and Mediated Discourse Technologies Volume 6 ; 6 >
+      au < exists ; 978-1-78190-509-8 ; 2013 ; Increasing Student Engagement and Retention Using Mobile Applications: Smartphones, Skype and Texting Technologies Volume 6 ; 6 >
+      au < exists ; 978-1-78190-240-0 ; 2012 ; Increasing Student Engagement and Retention Using Immersive Interfaces: Virtual Worlds, Gaming, and Simulation Volume 6 ; 6 >
+      au < exists ; 978-1-78190-238-7 ; 2012 ; Increasing Student Engagement and Retention Using Social Technologies Volume 6 ; 6 >
+      au < exists ; 978-1-78190-236-3 ; 2012 ; Increasing Student Engagement and Retention Using Online Learning Activities Volume 6 ; 6 >
+
+  }
+
+  {
+
+      title <
+        name = Developments in Corporate Governance and Responsibility ;
+        issn = 2043-0523
+      >
+
+      param[journal_issn] = 2043-0523
+
+      au < exists ; 978-0-85724-295-2 ; 2010 ; NGOs and Social Responsibility Volume 1 ; 1 >
+      au < exists ; 978-0-85724-877-0 ; 2011 ; Governance in the Business Environment Volume 2 ; 2 >
+      au < exists ; 978-1-78052-736-9 ; 2012 ; Business Strategy and Sustainability Volume 3 ; 3 >
+      au < exists ; 978-1-78190-589-0 ; 2013 ; Education and Corporate Social Responsibility International Perspectives Volume 4 ; 4 >
+
+  }
+
+  {
+
+      title <
+        name = Dialogues in Critical Management Studies ;
+        issn = 2046-6072
+      >
+
+      param[journal_issn] = 2046-6072
+
+      au < exists ; 978-1-78052-280-7 ; 2011 ; The Third Sector Volume 1 ; 1 >
+
+  }
+
+  {
+
+      title <
+        name = Diversity in Higher Education ;
+        issn = 1479-3644
+      >
+
+      param[journal_issn] = 1479-3644
+
+      au < exists ; 978-0-76230-562-9 ; 2005 ; Beyond Small Numbers Volume 4 ; 4 >
+      au < exists ; 978-0-76231-253-5 ; 2005 ; Lessons in Leadership Volume 5 ; 5 >
+      au < exists ; 978-1-84855-898-4 ; 2009 ; Black American Males in Higher Education: Diminishing Proportions Volume 6 ; 6 >
+      au < exists ; 978-1-84950-643-4 ; 2009 ; Black American Males in Higher Education: Research, Programs and Academe Volume 7 ; 7 >
+      au < exists ; 978-0-85724-943-2 ; 2011 ; Support Systems and Services for Diverse Populations: Considering the Intersection of Race, Gender, and the Needs of Black Female Undergraduates Volume 8 ; 8 >
+      au < exists ; 978-1-78052-180-0 ; 2011 ; Women of Color in Higher Education: Turbulent Past, Promising Future Volume 9 ; 9 >
+      au < exists ; 978-1-78052-182-4 ; 2011 ; Women of Color in Higher Education: Changing Directions and New Perspectives Volume 10 ; 10 >
+      au < exists ; 978-1-78052-168-8 ; 2011 ; Beyond Stock Stories and Folktales: African Americans' Paths to STEM Fields Volume 11 ; 11 >
+      au < exists ; 978-1-78052-502-0 ; 2012 ; Black Female Undergraduates on Campus: Successes and Challenges Volume 12 ; 12 >
+
+  }
+
+  {
+
+      title <
+        name = Frontiers of Economics and Globalization ;
+        issn = 1574-8715
+      >
+
+      param[journal_issn] = 1574-8715
+
+      au < exists ; 978-0-444-52765-3 ; 2006 ; Theory and Practice of Foreign Aid Volume 1 ; 1 >
+      au < exists ; 978-0-444-52764-6 ; 2007 ; Intellectual Property, Growth and Trade Volume 2 ; 2 >
+      au < exists ; 978-0-444-52942-8 ; 2008 ; Forecasting in the Presence of Structural Breaks and Model Uncertainty Volume 3 ; 3 >
+      au < exists ; 978-0-4445-3190-2 ; 2008 ; Contemporary and Emerging Issues in Trade Theory and Policy Volume 4 ; 4 >
+      au < exists ; 978-1-84663-962-3 ; 2008 ; Globalization and Emerging Issues in Trade Theory and Policy Volume 5 ; 5 >
+      au < exists ; 978-1-84855-206-7 ; 2009 ; Trade Disputes and the Dispute Settlement Understanding of the WTO: An Interdisciplinary Assessment Volume 6 ; 6 >
+      au < exists ; 978-0-85724-141-2 ; 2010 ; New Developments in Computable General Equilibrium Analysis for Trade Policy Volume 7 ; 7 >
+      au < exists ; 978-0-85724-153-5 ; 2010 ; Migration and Culture Volume 8 ; 8 >
+      au < exists ; 978-0-85724-745-2 ; 2011 ; The Evolving Role of Asia in Global Finance Volume 9 ; 9 >
+      au < exists ; 978-0-85724-757-5 ; 2011 ; Genetically Modified Food and Global Welfare Volume 10 ; 10 >
+      au < exists ; 978-1-78052-396-5 ; 2011 ; Economic Growth and Development Volume 11 ; 11 >
+
+  }
+
+  {
+
+      title <
+        name = Frontiers of Family Economics ;
+        issn = 1574-0129
+      >
+
+      param[journal_issn] = 1574-0129
+
+      au < exists ; 978-0-444-53263-3 ; 2008 ; Frontiers of Family Economics Volume 1 ; 1 >
+
+  }
+
+  {
+
+      title <
+        name = Innovation and Leadership in English Language Teaching ;
+        issn = 2041-272X
+      >
+
+      param[journal_issn] = 2041-272X
+
+      au < exists ; 978-1-84950-746-2 ; 2010 ; Language Program Leadership in a Changing World: An Ecological Model Volume 1 ; 1 >
+      au < exists ; 978-1-84950-996-1 ; 2010 ; Service, Satisfaction, and Climate: Perspectives on Management in English Language Teaching Volume 2 ; 2 >
+      au < exists ; 978-0-85724-627-1 ; 2011 ; Transforming Literacy: Changing Lives through Reading and Writing Volume 3 ; 3 >
+      au < exists ; 978-1-78052-030-8 ; 2011 ; Culturally Responsive Pedagogy: Teaching Like Our Students' Lives Matter Volume 4 ; 4 >
+      au < exists ; 978-1-78052-384-2 ; 2011 ; English Language and the Medical Profession: Instructing and Assessing the Communication Skills of International Physicians Volume 5 ; 5 >
+      au < exists ; 978-1-78052-646-1 ; 2012 ; Left to My Own Devices: Learner Autonomy and Mobile-Assisted Language Learning Volume 6 ; 6 >
+
+  }
+
+  {
+
+      title <
+        name = International Business and Management  ;
+        issn = 1876-066X
+      >
+
+      param[journal_issn] = 1876-066X
+
+      au < exists ; 978-1-78052-112-1 ; 2011 ; The Role of Expatriates in MNCs Knowledge Mobilization Volume 27 ; 27 >
+      au < exists ; 978-1-78052-990-5 ; 2012 ; Business, Society and Politics Volume 28 ; 28 >
+
+  }
+
+  {
+
+      title <
+        name = International Finance Review ;
+        issn = 1569-3767
+      >
+
+      param[journal_issn] = 1569-3767
+
+      au < exists ; 978-0-76230-686-2 ; 2001 ; Asian Financial Crisis Financial, Structural and International Dimensions Volume 1 ; 1 >
+      au < exists ; 978-0-76230-830-9 ; 2001 ; International Finance Review Volume 2 ; 2 >
+      au < exists ; 978-0-76230-982-5 ; 2002 ; Global Risk Management: Financial, Operational, and Insurance Strategies Volume 3 ; 3 >
+      au < exists ; 978-0-76231-068-5 ; 2003 ; The Japanese Finance: Corporate Finance and Capital Markets in ... Volume 4 ; 4 >
+      au < exists ; 978-0-76231-163-7 ; 2005 ; Latin American Financial Markets: Developments in Financial Innovations Volume 5 ; 5 >
+      au < exists ; 978-0-76231-264-1 ; 2006 ; Emerging European Financial Markets: Independence and Integration Post-Enlargement Volume 6 ; 6 >
+      au < exists ; 978-0-7623-1392-1 ; 2006 ; Value Creation in Multinational Enterprise Volume 7 ; 7 >
+      au < exists ; 978-0-7623-1471-3 ; 2007 ; Asia-Pacific Financial Markets: Integration, Innovation and Challenges Volume 8 ; 8 >
+      au < exists ; 978-1-84855-320-0 ; 2008 ; Institutional Approach to Global Corporate Governance: Business Systems and Beyond Volume 9 ; 9 >
+      au < exists ; 978-1-84950-601-4 ; 2009 ; Credit, Currency, or Derivatives: Instrumentsof Global Financial Stability Orcrisis? Volume 10 ; 10 >
+      au < exists ; 978-1-84950-912-1 ; 2010 ; International Banking in the New Era: Post-Crisis Challenges and Opportunities Volume 11 ; 11 >
+      au < exists ; 978-1-78052-242-5 ; 2011 ; Institutional Investors in Global Capital Markets Volume 12 ; 12 >
+      au < exists ; 978-1-78052-764-2 ; 2012 ; Transparency and Governance in a Global World Volume 13 ; 13 >
+
+  }
+
+  {
+
+      title <
+        name = International Perspectives on Education and Society ;
+        issn = 1479-3679
+      >
+
+      param[journal_issn] = 1479-3679
+
+      au < exists ; 978-0-76230-821-7 ; 2002 ; New Paradigms and Recurring Paradoxes in Education for Citizenship: An International Comparison Volume 5 ; 5 >
+      au < exists ; 978-0-76231-175-0 ; 2005 ; Global Trends in Educational Policy Volume 6 ; 6 >
+      au < exists ; 978-0-76231-308-2 ; 2006 ; The Impact of Comparative Education Research on Institutional Theory Volume 7 ; 7 >
+      au < exists ; 978-0-7623-1441-6 ; 2007 ; Education for All Volume 8 ; 8 >
+      au < exists ; 978-0-7623-1487-4 ; 2008 ; The Worldwide Transformation of Higher Education Volume 9 ; 9 >
+      au < exists ; 978-1-84855-094-0 ; 2009 ; Gender, Equality and Education from International and Comparative Perspectives Volume 10 ; 10 >
+      au < exists ; 978-1-84950-645-8 ; 2009 ; Educational Leadership: Global Contexts and International Comparisons Volume 11 ; 11 >
+      au < exists ; 978-0-85724-303-4 ; 2010 ; International Educational Governance Volume 12 ; 12 >
+      au < exists ; 978-0-85724-449-9 ; 2010 ; The Impact of International Achievement Studies on National Education Policymaking Volume 13 ; 13 >
+      au < exists ; 978-0-85724-417-8 ; 2010 ; Post-Socialism is not Dead: (Re)Reading the Global in Comparative Education Volume 14 ; 14 >
+      au < exists ; 978-1-78052-186-2 ; 2011 ; The Impact and Transformation of Education Policy in China Volume 15 ; 15 >
+      au < exists ; 978-1-78052-276-0 ; 2012 ; Education Strategy in the Developing World: Revising the World Bank's Education Policy Volume 16 ; 16 >
+      au < exists ; 978-1-78190-230-1 ; 2012 ; Community Colleges Worldwide: Investigating the Global Phenomenon Volume 17 ; 17 >
+      au < exists ; 978-1-78190-232-5 ; 2012 ; The Impact of HIV/AIDS on Education Worldwide Volume 18 ; 18 >
+
+  }
+
+  {
+
+      title <
+        name = International Perspectives on Higher Education Research ;
+        issn = 1479-3628
+      >
+
+      param[journal_issn] = 1479-3628
+
+      au < exists ; 978-0-76230-741-8 ; 2000 ; Academic Work and Life: What it is to be an Academic, and How this is Changing Volume 1 ; 1 >
+      au < exists ; 978-0-76230-974-0 ; 2003 ; Access and Exclusion Volume 2 ; 2 >
+      au < exists ; 978-0-76231-244-3 ; 2005 ; International Relations Volume 3 ; 3 >
+      au < exists ; 978-0-7623-1405-8 ; 2007 ; Autonomy in Social Science Research Volume 4 ; 4 >
+      au < exists ; 978-0-85724-371-3 ; 2010 ; Interdisciplinary Higher Education: Perspectives and Practicalities Volume 5 ; 5 >
+      au < exists ; 978-0-85724-903-6 ; 2011 ; Institutional Transformation to Engage a Diverse Student Body Volume 6 ; 6 >
+      au < exists ; 978-1-78052-500-6 ; 2012 ; Hard Labour? Academic Work and the Changing Landscape of Higher Education Volume 7 ; 7 >
+      au < exists ; 978-1-78190-499-2 ; 2013 ; Social Justice Issues and Racism in the College Classroom: Perspectives from Different Voices Volume 8 ; 8 >
+
+  }
+
+  {
+
+      title <
+        name = International Perspectives on Inclusive Education ;
+        issn = 1479-3636
+      >
+
+      param[journal_issn] = 1479-3636
+
+      au < exists ; 978-0-76230-722-7 ; 2001 ; Emotional and Behavioural Difficulties in Mainstream Schools Volume 1 ; 1 >
+      au < exists ; 978-1-78052-710-9 ; 2012 ; Transforming Troubled Lives: Strategies and Interventions for Children with Social, Emotional and Behavioural Difficulties Volume 2 ; 2 >
+
+  }
+
+  {
+
+      title <
+        name = International Research in the Business Disciplines ;
+        issn = 1074-7877
+      >
+
+      param[journal_issn] = 1074-7877
+
+      au < exists ; 978-0-76230-023-5 ; 2001 ; Strategies and Organizations in Transition Volume 3 ; 3 >
+      au < exists ; 978-0-76231-033-3 ; 2003 ; Ethnic Entrepreneurship: Structure and Process Volume 4 ; 4 >
+      au < exists ; 978-0-76231-358-7 ; 2006 ; Developmental Entrepreneurship: Adversity, Risk, and Isolation Volume 5 ; 5 >
+
+  }
+
+  {
+
+      title <
+        name = International Symposia in Economic Theory and Econometrics ;
+        issn = 1571-0386
+      >
+
+      param[journal_issn] = 1571-0386
+
+      au < exists ; 978-0-44451-433-2 ; 2004 ; Economic Complexity Volume 14 ; 14 >
+      au < exists ; 978-0-44453-005-9 ; 2007 ; Modelling Our Future: Population Ageing, Health and Aged Care Volume 16 ; 16 >
+      au < exists ; 978-0-44453-137-7 ; 2007 ; Topics in Analytical Political Economy Volume 17 ; 17 >
+      au < exists ; 978-0-44453-061-5 ; 2007 ; Functional Structure Inference Volume 18 ; 18 >
+      au < exists ; 978-0-444-53243-5 ; 2008 ; Challenges of the Muslim World Volume 19 ; 19 >
+      au < exists ; 978-0-85724-489-5 ; 2010 ; Nonlinear Modeling of Economic and Financial Time-Series Volume 20 ; 20 >
+      au < exists ; 978-1-78190-399-5 ; 2012 ; Recent Developments in Alternative Finance: Empirical Assessments and Economic Implications Volume 22 ; 22 >
+
+  }
+
+  {
+
+      title <
+        name = Library and Information Science ;
+        issn = 1876-0562
+      >
+
+      param[journal_issn] = 1876-0562
+
+      au < exists ; 978-1-78052-170-1 ; 2011 ; New Directions in Information Behaviour Volume 1 ; 1 >
+      au < exists ; 978-0-12334-151-8 ; 2001 ; Models for Library Management, Decision Making and Planning Volume 1 ; 1 >
+      au < exists ; 978-1-78052-470-2 ; 2012 ; Library and Information Science Trends and Research: Asia-Oceania Volume 2 ; 2 >
+      au < exists ; 978-0-12587-780-0 ; 2002 ; Understanding Reference Transactions: Transforming an Art into a Science Volume 2 ; 2 >
+      au < exists ; 978-1-78052-636-2 ; 2012 ; Web Search Engine Research Volume 4 ; 4 >
+      au < exists ; 978-012088-553-4 ; 2004 ; Link Analysis: An Information Science Approach Volume 4 ; 4 >
+      au < exists ; 978-1-78052-832-8 ; 2012 ; Social Information Research Volume 5 ; 5 >
+      au < exists ; 978-0-12088-753-8 ; 2005 ; Power Laws in the Information Production Process: Lotkaian Informetrics Volume 5 ; 5 >
+      au < exists ; 978-1-78052-714-7 ; 2012 ; Library and Information Science Trends and Research: Europe Volume 6 ; 6 >
+      au < exists ; 978-0-12424-520-4 ; 1991 ; Operations Research for Libraries and Information Agencies: Techniques for the Evaluation of Management Decision Alternatives Volume 91 ; 91 >
+      au < exists ; 978-0-12287-041-5 ; 1991 ; Library Technical Services: Operations and Management Volume 91 ; 91 >
+      au < exists ; 978-0-12221-570-4 ; 1994 ; Using Subject Headings for Online Retrieval: Theory, Practice and Potential Volume 94 ; 94 >
+      au < exists ; 978-0-12465-030-5 ; 1994 ; Information Services for Innovative Organizations Volume 94 ; 94 >
+      au < exists ; 978-0-12051-040-5 ; 1996 ; Information Tasks: Toward a User-centered Approach to Information Systems Volume 96 ; 96 >
+      au < exists ; 978-0-12487-415-2 ; 1997 ; Communicating Research Volume 97 ; 97 >
+      au < exists ; 978-0-12266-170-9 ; 1997 ; Automated Information Retrieval: Theory and Methods Volume 97 ; 97 >
+
+  }
+
+  {
+
+      title <
+        name = Literacy Research, Practice and Evaluation ;
+        issn = 2048-0458
+      >
+
+      param[journal_issn] = 2048-0458
+
+      au < exists ; 978-1-78052-630-0 ; 2012 ; Using Informative Assessments towards Effective Literacy Instruction Volume 1 ; 1 >
+      au < exists ; 978-1-78190-503-6 ; 2013 ; Advanced Literacy Practices Volume 2 ; 2 >
+
+  }
+
+  {
+
+      title <
+        name = Monographs in Leadership and Management ;
+        issn = 1479-3571
+      >
+
+      param[journal_issn] = 1479-3571
+
+      au < exists ; 978-0-7623-1332-7 ; 2007 ; Being There Even When You Are Not Volume 4 ; 4 >
+
+  }
+
+  {
+
+      title <
+        name = New Technology-Based Firms in the New Millenium ;
+        issn = 1876-0228
+      >
+
+      param[journal_issn] = 1876-0228
+
+      au < exists ; 978-0-0805-5448-8 ; 2008 ; New Technology-Based Firms in the New Millenium Volume 6 ; 6 >
+      au < exists ; 978-1-84855-782-6 ; 2009 ; New Technology-Based Firms in the New Millenium Volume 7 ; 7 >
+      au < exists ; 978-0-85724-373-7 ; 2010 ; New Technology-Based Firms in the New Millennium Volume 8 ; 8 >
+      au < exists ; 978-1-78052-118-3 ; 2012 ; New Technology-Based Firms in the New Millennium Volume 9 ; 9 >
+      au < exists ; 978-1-78190-315-5 ; 2013 ; New Technology-Based Firms in the New Millennium Volume 10 ; 10 >
+
+  }
+
+  {
+
+      title <
+        name = Organizing for Sustainable Effectiveness ;
+        issn = 2045-0605
+      >
+
+      param[journal_issn] = 2045-0605
+
+      au < exists ; 978-0-85724-557-1 ; 2011 ; Organizing for Sustainability Volume 1 ; 1 >
+      au < exists ; 978-1-78190-032-1 ; 2012 ; Organizing for Sustainable Health Care Volume 2 ; 2 >
+
+  }
+
+  {
+
+      title <
+        name = Political Power and Social Theory ;
+        issn = 0198-8719
+      >
+
+      param[journal_issn] = 0198-8719
+
+      au < exists ; 978-0-76230-763-0 ; 2001 ; Political Power and Social Theory Volume 14 ; 14 >
+      au < exists ; 978-0-76230-883-5 ; 2002 ; Political Power and Social Theory Volume 15 ; 15 >
+      au < exists ; 978-0-76231-036-4 ; 2004 ; Political Power and Social Theory Volume 16 ; 16 >
+      au < exists ; 978-0-76231-190-3 ; 2005 ; Political Power and Social Theory Volume 17 ; 17 >
+      au < exists ; 978-0-76231-340-2 ; 2006 ; Political Power and Social Theory Volume 18 ; 18 >
+      au < exists ; 978-0-76231-418-8 ; 2008 ; Political Power and Social Theory Volume 19 ; 19 >
+      au < exists ; 978-1-84950-667-0 ; 2009 ; Political Power and Social Theory Volume 20 ; 20 >
+      au < exists ; 978-0-85724-325-6 ; 2010 ; Political Power and Social Theory Volume 21 ; 21 >
+      au < exists ; 978-0-85724-911-1 ; 2011 ; Rethinking Obama Volume 22 ; 22 >
+      au < exists ; 978-1-78052-866-3 ; 2012 ; Political Power and Social Theory Volume 23 ; 23 >
+      au < exists ; 978-1-78190-603-3 ; 2013 ; Postcolonial Sociology Volume 24 ; 24 >
+
+  }
+
+  {
+
+      title <
+        name = Progress In International Business Research ;
+        issn = 1745-8862
+      >
+
+      param[journal_issn] = 1745-8862
+
+      au < exists ; 978-1-84855-278-4 ; 2008 ; New Perspectives in International Business Research Volume 3 ; 3 >
+      au < exists ; 978-1-84855-956-1 ; 2009 ; Research on Knowledge, Innovation and Internationalization Volume 4 ; 4 >
+      au < exists ; 978-0-85724-087-3 ; 2010 ; Reshaping the Boundaries of the Firm in an Era of Global Interdependence Volume 5 ; 5 >
+      au < exists ; 978-1-78052-114-5 ; 2011 ; Entrepreneurship in the Global Firm Volume 6 ; 6 >
+      au < exists ; 978-1-78190-020-8 ; 2012 ; New Policy Challenges for European Multinationals Volume 7 ; 7 >
+
+  }
+
+  {
+
+      title <
+        name = Progress in Psychobiology and Physiological Psychology ;
+        issn = 0363-0951
+      >
+
+      param[journal_issn] = 0363-0951
+
+      au < exists ; 978-0-12542-118-8 ; 2003 ; Progress in Psychobiology and Physiological Psychology Volume 18 ; 18 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Accounting in Emerging Economies ;
+        issn = 1479-3563
+      >
+
+      param[journal_issn] = 1479-3563
+
+      au < exists ; 978-1-84855-252-4 ; 2008 ; Corporate Governance in Less Developed and Emerging Economies Volume 8 ; 8 >
+      au < exists ; 978-1-84950-625-0 ; 2009 ; Accounting in Emerging Economies Volume 9 ; 9 >
+      au < exists ; 978-0-85724-451-2 ; 2010 ; Research in Accounting in Emerging Economies Volume 10 ; 10 >
+      au < exists ; 978-1-78052-444-3 ; 2011 ; Accounting in Asia Volume 11 ; 11 >
+      au < exists ; 978-1-78190-224-0 ; 2012 ; Finance and Development in Africa Volume 12 ; 12 >
+      au < exists ; 978-1-78190-222-6 ; 2012 ; Accounting in Africa Volume 12 ; 12 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Biopolitics ;
+        issn = 2042-9940
+      >
+
+      param[journal_issn] = 2042-9940
+
+      au < exists ; 978-0-85724-579-3 ; 2011 ; Biology and Politics Volume 9 ; 9 >
+      au < exists ; 978-1-78052-820-5 ; 2012 ; Biopolicy: The Life Sciences and Public Policy Volume 10 ; 10 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Community and Mental Health ;
+        issn = 0192-0812
+      >
+
+      param[journal_issn] = 0192-0812
+
+      au < exists ; 978-0-76230-671-8 ; 2000 ; Research in Community and Mental Health Volume 11 ; 11 >
+      au < exists ; 978-0-76230-972-6 ; 2002 ; Community-Based Interventions for Criminal Offenders with Severe Mental Illness Volume 12 ; 12 >
+      au < exists ; 978-0-76231-129-3 ; 2004 ; Research on Employment for Persons with Severe Mental Illness Volume 13 ; 13 >
+      au < exists ; 978-0-7623-1315-0 ; 2006 ; Research on Community-Based Mental Health Services for Children and Adolescents Volume 14 ; 14 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Competence-Based Management ;
+        issn = 1744-2117
+      >
+
+      param[journal_issn] = 1744-2117
+
+      au < exists ; 978-1-84855-210-4 ; 2008 ; A Focused Issue on Fundamental Issues in Competence Theory Development Volume 4 ; 4 >
+      au < exists ; 978-1-84950-990-9 ; 2010 ; A Focussed Issue on Identifying, Building, and Linking Competences Volume 5 ; 5 >
+      au < exists ; 978-1-78052-882-3 ; 2012 ; A Focused Issue on Competence Perspectives on New Industry Dynamics Volume 6 ; 6 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Consumer Behavior ;
+        issn = 0885-2111
+      >
+
+      param[journal_issn] = 0885-2111
+
+      au < exists ; 0-7623-1304-8 ; 2006 ; Research in Consumer Behavior Volume 10 ; 10 >
+      au < exists ; 978-0-7623-1446-1 ; 2007 ; Consumer Culture Theory Volume 11 ; 11 >
+      au < exists ; 978-0-85724-443-7 ; 2010 ; Research in Consumer Behavior Volume 12 ; 12 >
+      au < exists ; 978-1-78052-116-9 ; 2011 ; Research in Consumer Behavior Volume 13 ; 13 >
+      au < exists ; 978-1-78190-022-2 ; 2012 ; Research in Consumer Behavior Volume 14 ; 14 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Economic Anthropology ;
+        issn = 0190-1281
+      >
+
+      param[journal_issn] = 0190-1281
+
+      au < exists ; 978-0-76230-899-6 ; 2002 ; Research in Economic Anthropology Volume 21 ; 21 >
+      au < exists ; 978-0-76231-071-5 ; 2003 ; Anthropological Perspectives on Economic Development and Integration Volume 22 ; 22 >
+      au < exists ; 978-0-76231-082-1 ; 2004 ; Socioeconomic Aspects of Human Behavioral Ecology Volume 23 ; 23 >
+      au < exists ; 978-0-76231-225-2 ; 2006 ; Markets and Market Liberalization: Ethnographic Reflections Volume 24 ; 24 >
+      au < exists ; 978-0-76231-375-4 ; 2006 ; Choice in Economic Contexts Volume 25 ; 25 >
+      au < exists ; 978-0-7623-1421-8 ; 2007 ; The Economics of Health and Wellness: Anthropological Perspectives Volume 26 ; 26 >
+      au < exists ; 978-0-7623-1485-0 ; 2008 ; Dimensions of Ritual Economy Volume 27 ; 27 >
+      au < exists ; 978-1-84855-058-2 ; 2008 ; Hidden Hands in the Market: Ethnographies of Fair Trade, Ethical Consumption, and Corporate Social Responsibility Volume 28 ; 28 >
+      au < exists ; 978-1-84855-542-6 ; 2009 ; Economic Development, Integration, and Morality in Asia and the Americas Volume 29 ; 29 >
+      au < exists ; 978-0-85724-117-7 ; 2010 ; Economic Action in Theory and Practice: Anthropological Investigations Volume 30 ; 30 >
+      au < exists ; 978-1-78052-228-9 ; 2011 ; The Economics of Religion: Anthropological Approaches Volume 31 ; 31 >
+      au < exists ; 978-1-78190-058-1 ; 2012 ; Political Economy, Neoliberalism, and the Prehistoric Economies of Latin America Volume 32 ; 32 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Economic History ;
+        issn = 0363-3268
+      >
+
+      param[journal_issn] = 0363-3268
+
+      au < exists ; 978-0-76230-837-8 ; 2001 ; Research in Economic History Volume 20 ; 20 >
+      au < exists ; 978-0-76230-993-1 ; 2003 ; Research in Economic History Volume 21 ; 21 >
+      au < exists ; 978-0-76231-119-4 ; 2004 ; Research in Economic History Volume 22 ; 22 >
+      au < exists ; 978-0-76231-262-7 ; 2006 ; Research in Economic History Volume 23 ; 23 >
+      au < exists ; 978-0-76231-344-0 ; 2006 ; Research in Economic History Volume 24 ; 24 >
+      au < exists ; 978-0-7623-1370-9 ; 2007 ; Research in Economic History Volume 25 ; 25 >
+      au < exists ; 978-1-84855-336-1 ; 2008 ; Research in Economic History Volume 26 ; 26 >
+      au < exists ; 978-1-84950-770-7 ; 2010 ; Research in Economic History Volume 27 ; 27 >
+      au < exists ; 978-1-78052-246-3 ; 2012 ; Research in Economic History Volume 28 ; 28 >
+      au < exists ; 978-1-78190-557-9 ; 2013 ; Research in Economic History Volume 29 ; 29 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Ethical Issues in Organizations ;
+        issn = 1529-2096
+      >
+
+      param[journal_issn] = 1529-2096
+
+      au < exists ; 978-0-76230-663-3 ; 2000 ; Symposium on Health Care Ethics Volume 2 ; 2 >
+      au < exists ; 978-0-76230-809-5 ; 2001 ; The Next Phase of Business Ethics: Integrating Psychology and Ethics Volume 3 ; 3 >
+      au < exists ; 978-0-76230-955-9 ; 2002 ; Re-Imaging Business Ethics: Meaningful Solutions for a Global Economy Volume 4 ; 4 >
+      au < exists ; 978-0-76231-067-8 ; 2003 ; Spiritual Intelligence at Work: Meaning, Metaphor, and Morals Volume 5 ; 5 >
+      au < exists ; 978-0-76231-261-0 ; 2005 ; Crisis and Opportunity in the Professions Volume 6 ; 6 >
+      au < exists ; 978-0-7623-1333-4 ; 2007 ; Insurance Ethics for a More Ethical World Volume 7 ; 7 >
+      au < exists ; 978-1-78052-988-2 ; 2012 ; Applied Ethics: Remembering Patrick Primeaux Volume 8 ; 8 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Experimental Economics ;
+        issn = 0193-2306
+      >
+
+      param[journal_issn] = 0193-2306
+
+      au < exists ; 978-0-76230-702-9 ; 2001 ; Research in Experimental Economics Volume 8 ; 8 >
+      au < exists ; 978-0-76231-174-3 ; 2005 ; Field Experiments in Economics Volume 10 ; 10 >
+      au < exists ; 978-0-76231-301-3 ; 2006 ; Experiments Investigating Fundraising and Charitable Contributors Volume 11 ; 11 >
+      au < exists ; 978-0-7623-1384-6 ; 2008 ; Risk Aversion in Experiments Volume 12 ; 12 >
+      au < exists ; 978-1-84950-768-4 ; 2010 ; Charity with Choice Volume 13 ; 13 >
+      au < exists ; 978-0-85724-747-6 ; 2011 ; Experiments on Energy, the Environment, and Sustainability Volume 14 ; 14 >
+      au < exists ; 978-1-78052-784-0 ; 2012 ; New Advances in Experimental Research on Corruption Volume 15 ; 15 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Finance ;
+        issn = 0196-3821
+      >
+
+      param[journal_issn] = 0196-3821
+
+      au < exists ; 978-0-76230-717-3 ; 2001 ; Research in Finance Volume 18 ; 18 >
+      au < exists ; 978-0-76230-965-8 ; 2002 ; Research in Finance Volume 19 ; 19 >
+      au < exists ; 978-0-76231-073-9 ; 2003 ; Research in Finance Volume 20 ; 20 >
+      au < exists ; 978-0-76231-161-3 ; 2005 ; Research in Finance Volume 21 ; 21 >
+      au < exists ; 978-0-76231-277-1 ; 2005 ; Research in Finance Volume 22 ; 22 >
+      au < exists ; 978-0-7623-1345-7 ; 2006 ; Research in Finance Volume 23 ; 23 >
+      au < exists ; 978-0-7623-1377-8 ; 2008 ; Research in Finance Volume 24 ; 24 >
+      au < exists ; 978-1-84855-446-7 ; 2009 ; Research in Finance Volume 25 ; 25 >
+      au < exists ; 978-1-84950-726-4 ; 2010 ; Research in Finance Volume 26 ; 26 >
+      au < exists ; 978-0-85724-541-0 ; 2011 ; Research in Finance Volume 27 ; 27 >
+      au < exists ; 978-1-78052-752-9 ; 2012 ; Research in Finance Volume 28 ; 28 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Global Strategic Management ;
+        issn = 1064-4857
+      >
+
+      param[journal_issn] = 1064-4857
+
+      au < exists ; 978-1-55938-619-7 ; 1994 ; Research in Global Strategic Management Volume 4 ; 4 >
+      au < exists ; 978-1-55938-434-6 ; 1995 ; Beyond The Diamond Volume 5 ; 5 >
+      au < exists ; 978-0-76230-015-0 ; 1998 ; Multinational Location Strategy Volume 6 ; 6 >
+      au < exists ; 978-0-76230-458-5 ; 1999 ; Research in Global Strategic Management Volume 7 ; 7 >
+      au < exists ; 978-0-76231-038-8 ; 2003 ; Leadership in International Business Education and Research Volume 8 ; 8 >
+      au < exists ; 978-0-76230-966-5 ; 2003 ; Multinationals, Environment and Global Competition Volume 9 ; 9 >
+      au < exists ; 978-0-76231-094-4 ; 2004 ; North American Economic and Financial Integration Volume 10 ; 10 >
+      au < exists ; 978-0-76231-220-7 ; 2005 ; Internalization, International Diversification and the Multinational Enterprise: Essays in Honor of Alan M. Rugman Volume 11 ; 11 >
+      au < exists ; 978-0-76231-296-2 ; 2006 ; Regional Economic Integration Volume 12 ; 12 >
+      au < exists ; 978-0-7623-1395-2 ; 2007 ; Regional Aspects of Multinationality and Performance Volume 13 ; 13 >
+      au < exists ; 978-0-7623-1470-6 ; 2008 ; International Business Scholarship: AIB Fellows on the First 50 Years and Beyond Volume 14 ; 14 >
+      au < exists ; 978-0-85724-555-7 ; 2011 ; The Future of Foreign Direct Investment and the Multinational Enterprise Volume 15 ; 15 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Human Capital and Development ;
+        issn = 0194-3960
+      >
+
+      param[journal_issn] = 0194-3960
+
+      au < exists ; 978-0-76230-529-2 ; 2000 ; The Economics of Disability Volume 13 ; 13 >
+      au < exists ; 978-0-76230-697-8 ; 2001 ; Investing in Health: The Social and Economic Benefits of Health Care Innovation Volume 14 ; 14 >
+      au < exists ; 978-0-76231-111-8 ; 2004 ; The Economics of Gender and Mental Illness Volume 15 ; 15 >
+      au < exists ; 978-0-7623-1346-4 ; 2007 ; The Value of Innovation: Impact on Health, Life Quality, Safety, and Regulatory Research Volume 16 ; 16 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Labor Economics ;
+        issn = 0147-9121
+      >
+
+      param[journal_issn] = 0147-9121
+
+      au < exists ; 978-0-76230-584-1 ; 2000 ; Research in Labor Economics Volume 18 ; 18 >
+      au < exists ; 978-0-76230-693-0 ; 2000 ; Research in Labor Economics Volume 19 ; 19 >
+      au < exists ; 978-0-76230-833-0 ; 2001 ; Worker Wellbeing in a Changing Labor Market Volume 20 ; 20 >
+      au < exists ; 978-0-76230-960-3 ; 2002 ; The Economics of Skills Obsolescence Volume 21 ; 21 >
+      au < exists ; 978-0-76231-026-5 ; 2003 ; Worker Well-Being and Public Policy Volume 22 ; 22 >
+      au < exists ; 978-0-76231-110-1 ; 2004 ; Accounting for Worker Well-Being Volume 23 ; 23 >
+      au < exists ; 978-0-76231-275-7 ; 2006 ; The Economics of Immigration and Social Diversity Volume 24 ; 24 >
+      au < exists ; 978-0-76231-347-1 ; 2006 ; Micro-Simulation in Action Volume 25 ; 25 >
+      au < exists ; 978-0-7623-1390-7 ; 2007 ; Aspects of Worker Well-Being Volume 26 ; 26 >
+      au < exists ; 978-0-7623-1391-4 ; 2007 ; Immigration Volume 27 ; 27 >
+      au < exists ; 978-0-7623-1397-6 ; 2008 ; Work, Earnings and Other Aspects of the Employment Relation Volume 28 ; 28 >
+      au < exists ; 978-1-84950-633-5 ; 2009 ; Ethnicity and Labor Market Outcomes Volume 29 ; 29 >
+      au < exists ; 978-1-84950-766-0 ; 2010 ; Jobs, Training, and Worker Well-being Volume 30 ; 30 >
+      au < exists ; 978-0-85724-000-2 ; 2010 ; Child Labor and the Transition between School and Work Volume 31 ; 31 >
+      au < exists ; 978-0-85724-749-0 ; 2011 ; Who Loses in the Downturn? Economic Crisis, Employment and Income Distribution Volume 32 ; 32 >
+      au < exists ; 978-1-78052-332-3 ; 2011 ; Research in Labor Economics Volume 33 ; 33 >
+      au < exists ; 978-1-78052-786-4 ; 2012 ; Informal Employment in Emerging and Transition Economies Volume 34 ; 34 >
+      au < exists ; 978-1-78190-218-9 ; 2012 ; 35th Anniversary Retrospective Volume 35 ; 35 >
+      au < exists ; 978-1-78190-357-5 ; 2012 ; Research in Labor Economics Volume 36 ; 36 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Law and Economics ;
+        issn = 0193-5895
+      >
+
+      param[journal_issn] = 0193-5895
+
+      au < exists ; 978-0-76230-308-3 ; 2000 ; Research in Law and Economics Volume 19 ; 19 >
+      au < exists ; 978-0-76230-888-0 ; 2002 ; An Introduction to the Law and Economics of Environmental Policy: Issues in Institutional Design Volume 20 ; 20 >
+      au < exists ; 978-0-76231-115-6 ; 2004 ; Antitrust Law and Economics Volume 21 ; 21 >
+      au < exists ; 978-0-7623-1348-8 ; 2007 ; Research in Law and Economics Volume 22 ; 22 >
+      au < exists ; 978-0-7623-1363-1 ; 2007 ; Research in Law and Economics Volume 23 ; 23 >
+      au < exists ; 978-1-84855-334-7 ; 2009 ; Law & Economics: Toward Social Justice Volume 24 ; 24 >
+      au < exists ; 978-1-78052-898-4 ; 2012 ; Research in Law and Economics Volume 25 ; 25 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Middle East Economics ;
+        issn = 1094-5334
+      >
+
+      param[journal_issn] = 1094-5334
+
+      au < exists ; 978-0-76230-714-2 ; 2001 ; The Economics of Women and Work in the Middle East and North Africa Volume 4 ; 4 >
+      au < exists ; 978-0-76230-992-4 ; 2003 ; Food, Agriculture, and Economic Policy in the Middle East and North Africa Volume 5 ; 5 >
+      au < exists ; 978-0-76231-216-0 ; 2005 ; Money and Finance in the Middle East: Missed Oportunities or Future Prospects? Volume 6 ; 6 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Multi Level Issues ;
+        issn = 1475-9144
+      >
+
+      param[journal_issn] = 1475-9144
+
+      au < exists ; 978-0-76230-805-7 ; 2002 ; The many faces of multi-level issues Volume 1 ; 1 >
+      au < exists ; 978-0-76231-039-5 ; 2003 ; Multi-Level Issues in Organizational Behavior and Strategy Volume 2 ; 2 >
+      au < exists ; 978-0-76231-106-4 ; 2005 ; Multi-level Issues in Organizational Behavior and Processes Volume 3 ; 3 >
+      au < exists ; 978-0-76231-184-2 ; 2005 ; Multi-Level Issues in Strategy and Methods Volume 4 ; 4 >
+      au < exists ; 978-0-76231-334-1 ; 2006 ; Multi-Level Issues in Social Systems Volume 5 ; 5 >
+      au < exists ; 978-0-7623-1434-8 ; 2007 ; Multi-Level Issues in Organizations and Time Volume 6 ; 6 >
+      au < exists ; 978-0-7623-1476-8 ; 2008 ; Multi-Level Issues in Creativity and Innovation Volume 7 ; 7 >
+      au < exists ; 978-1-84855-502-0 ; 2009 ; Multi-Level Issues in Organizational Behavior and Leadership Volume 8 ; 8 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Occupational Stress and Well-being ;
+        issn = 1479-3555
+      >
+
+      param[journal_issn] = 1479-3555
+
+      au < exists ; 978-0-76230-846-0 ; 2001 ; Exploring Theoretical Mechanisms and Perspectives Volume 1 ; 1 >
+      au < exists ; 978-0-76230-970-2 ; 2002 ; Historical and Current Perspectives on Stress and Health Volume 2 ; 2 >
+      au < exists ; 978-0-76231-057-9 ; 2003 ; Emotional and Physiological Processes and Positive Intervention Strategies Volume 3 ; 3 >
+      au < exists ; 978-0-76231-153-8 ; 2004 ; Exploring Interpersonal Dynamics Volume 4 ; 4 >
+      au < exists ; 978-0-76231-289-4 ; 2006 ; Employee Health, Coping and Methodologies Volume 5 ; 5 >
+      au < exists ; 978-0-7623-1444-7 ; 2007 ; Exploring the Work and Non-Work Interface Volume 6 ; 6 >
+      au < exists ; 978-1-84855-544-0 ; 2009 ; Current Perspectives on Job-Stress Recovery Volume 7 ; 7 >
+      au < exists ; 978-1-84950-712-7 ; 2010 ; New Developments in Theoretical and Conceptual Approaches to Job Stress Volume 8 ; 8 >
+      au < exists ; 978-0-85724-711-7 ; 2011 ; The Role of Individual Differences in Occupational Stress and Well Being Volume 9 ; 9 >
+      au < exists ; 978-1-78190-004-8 ; 2012 ; The Role of the Economic Crisis on Occupational Stress and Well Being Volume 10 ; 10 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Organizational Change and Development ;
+        issn = 0897-3016
+      >
+
+      param[journal_issn] = 0897-3016
+
+      au < exists ; 978-0-76230-627-5 ; 2000 ; Research in Organizational Change and Development Volume 12 ; 12 >
+      au < exists ; 978-0-76230-827-9 ; 2001 ; Research in Organizational Change and Development Volume 13 ; 13 >
+      au < exists ; 978-0-76230-994-8 ; 2003 ; Research in Organizational Change and Development Volume 14 ; 14 >
+      au < exists ; 978-0-76231-167-5 ; 2005 ; Research in Organizational Change and Development Volume 15 ; 15 >
+      au < exists ; 978-0-7623-1326-6 ; 2007 ; Research in Organizational Change and Development Volume 16 ; 16 >
+      au < exists ; 978-1-84855-546-4 ; 2009 ; Research in Organizational Change and Development Volume 17 ; 17 >
+      au < exists ; 978-0-85724-191-7 ; 2010 ; Research in Organizational Change and Development Volume 18 ; 18 >
+      au < exists ; 978-1-78052-022-3 ; 2011 ; Research in Organizational Change and Development Volume 19 ; 19 >
+      au < exists ; 978-1-78052-806-9 ; 2012 ; Research in Organizational Change and Development Volume 20 ; 20 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Personnel and Human Resources Management ;
+        issn = 0742-7301
+      >
+
+      param[journal_issn] = 0742-7301
+
+      au < exists ; 978-0-76230-751-7 ; 2000 ; Research in Personnel and Human Resources Management Volume 19 ; 19 >
+      au < exists ; 978-0-76230-840-8 ; 2001 ; Research in Personnel and Human Resources Management Volume 20 ; 20 >
+      au < exists ; 978-0-76230-973-3 ; 2002 ; Research in Personnel and Human Resources Management Volume 21 ; 21 >
+      au < exists ; 978-0-76230-959-7 ; 2003 ; Research in Personnel and Human Resources Management Volume 22 ; 22 >
+      au < exists ; 978-0-76231-103-3 ; 2004 ; Research in Personnel and Human Resources Management Volume 23 ; 23 >
+      au < exists ; 978-0-76231-215-3 ; 2005 ; Research in Personnel and Human Resources Management Volume 24 ; 24 >
+      au < exists ; 978-0-76231-327-3 ; 2006 ; Research in Personnel and Human Resources Management Volume 25 ; 25 >
+      au < exists ; 978-0-7623-1432-4 ; 2007 ; Research in Personnel and Human Resources Management Volume 26 ; 26 >
+      au < exists ; 978-1-84855-004-9 ; 2008 ; Research in Personnel and Human Resources Management Volume 27 ; 27 >
+      au < exists ; 978-1-84855-056-8 ; 2009 ; Research in Personnel and Human Resources Management Volume 28 ; 28 >
+      au < exists ; 978-0-85724-125-2 ; 2010 ; Research in Personnel and Human Resources Management Volume 29 ; 29 >
+      au < exists ; 978-0-85724-553-3 ; 2011 ; Research in Personnel and Human Resources Management Volume 30 ; 30 >
+      au < exists ; 978-1-78190-172-4 ; 2012 ; Research in Personnel and Human Resources Management Volume 31 ; 31 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Political Economy ;
+        issn = 0161-7230
+      >
+
+      param[journal_issn] = 0161-7230
+
+      au < exists ; 978-0-76230-696-1 ; 2000 ; Value, Capitalist Dynamics and Money Volume 18 ; 18 >
+      au < exists ; 978-0-76230-838-5 ; 2001 ; Marx's Capital and Capitalism\; Markets in a Socialist Alternative Volume 19 ; 19 >
+      au < exists ; 978-0-76230-984-9 ; 2002 ; Confronting 9-11, Ideologies of Race, and Eminent Economists Volume 20 ; 20 >
+      au < exists ; 978-0-76231-098-2 ; 2004 ; Neoliberalism in Crisis, Accumulation, and Rosa Luxemburg's Legacy Volume 21 ; 21 >
+      au < exists ; 978-0-76231-176-7 ; 2005 ; The Capitalist State and Its Economy: Democracy in Socialism Volume 22 ; 22 >
+      au < exists ; 978-0-76231-305-1 ; 2006 ; The Hidden History of 9-11-2001 Volume 23 ; 23 >
+      au < exists ; 978-0-7623-1383-9 ; 2007 ; Transitions in Latin America and in Poland and Syria Volume 24 ; 24 >
+      au < exists ; 978-1-84855-586-0 ; 2009 ; Why Capitalism Survives Crises: The Shock Absorbers Volume 25 ; 25 >
+      au < exists ; 978-0-85724-493-2 ; 2010 ; The National Question and the Question of Crisis Volume 26 ; 26 >
+      au < exists ; 978-1-78052-254-8 ; 2011 ; Revitalizing Marxist Theory for Today's Capitalism Volume 27 ; 27 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Political Sociology ;
+        issn = 0895-9935
+      >
+
+      param[journal_issn] = 0895-9935
+
+      au < exists ; 978-1-84855-178-7 ; 2008 ; Politics and Public Policy Volume 17 ; 17 >
+      au < exists ; 978-0-85724-091-0 ; 2010 ; Democratic Paths and Trends Volume 18 ; 18 >
+      au < exists ; 978-1-78052-238-8 ; 2011 ; Democracies: Challenges to Societal Health Volume 19 ; 19 >
+      au < exists ; 978-1-78190-337-7 ; 2012 ; Linking Environment, Democracy and Gender Volume 20 ; 20 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Public Policy Analysis and Management ;
+        issn = 0732-1317
+      >
+
+      param[journal_issn] = 0732-1317
+
+      au < exists ; 978-0-76230-759-3 ; 2001 ; Learning from International Public Management Reform: Part A Volume 11 ; 11 >
+      au < exists ; 978-0-76230-760-9 ; 2001 ; Learning from International Public Management Reform: Part B Volume 11 ; 11 >
+      au < exists ; 978-0-76230-904-7 ; 2002 ; The Transformative Power of Dialogue Volume 12 ; 12 >
+      au < exists ; 978-0-76231-031-9 ; 2004 ; Strategies for Public Management Reform Volume 13 ; 13 >
+      au < exists ; 978-0-76231-226-9 ; 2006 ; Public Ethics and Governance: Standards and Practices in Comparative Perspective Volume 14 ; 14 >
+      au < exists ; 978-0-76231-359-4 ; 2006 ; Comparative Public Administration Volume 15 ; 15 >
+      au < exists ; 978-0-7623-1400-3 ; 2007 ; Cultural Aspects of Public Management Reform Volume 16 ; 16 >
+      au < exists ; 978-1-84663-996-8 ; 2008 ; Comparative Governance Reform in Asia: Democracy, Corruption, and Government Trust Volume 17 ; 17 >
+      au < exists ; 978-1-84950-639-7 ; 2009 ; The Many Faces of Public Management Reform in the Asia-Pacific Region Volume 18 ; 18 >
+      au < exists ; 978-1-84950-924-4 ; 2010 ; Public Administration Singapore-style Volume 19 ; 19 >
+      au < exists ; 978-0-85724-819-0 ; 2011 ; Curbing Corruption in Asian Countries: An Impossible Dream? Volume 20 ; 20 >
+      au < exists ; 978-1-78052-110-7 ; 2011 ; New Steering Concepts in Public Management Volume 21 ; 21 >
+      au < exists ; 978-1-78052-868-7 ; 2012 ; Institutional Reforms in the Public Sector: What Did We Learn? Volume 22 ; 22 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Race and Ethnic Relations ;
+        issn = 0195-7449
+      >
+
+      param[journal_issn] = 0195-7449
+
+      au < exists ; 978-0-7623-1409-6 ; 2008 ; Biculturalism, Self Identity and Societal Transformation Volume 15 ; 15 >
+      au < exists ; 978-0-85724-167-2 ; 2010 ; Race in the Age of Obama Volume 16 ; 16 >
+      au < exists ; 978-1-78052-344-6 ; 2012 ; Hispanic Migration and Urban Development: Studies from Washington DC Volume 17 ; 17 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Rural Sociology and Development ;
+        issn = 1057-1922
+      >
+
+      param[journal_issn] = 1057-1922
+
+      au < exists ; 978-0-76230-474-5 ; 2000 ; Research in Rural Sociology and Development Volume 8 ; 8 >
+      au < exists ; 978-0-76230-954-2 ; 2003 ; Walking Towards Justice: Democratization in Rural Life Volume 9 ; 9 >
+      au < exists ; 978-0-76231-162-0 ; 2005 ; Nature, Raw Materials, and Political Economy Volume 10 ; 10 >
+      au < exists ; 978-0-76231-250-4 ; 2005 ; New Directions in the Sociology of Global Development Volume 11 ; 11 >
+      au < exists ; 978-0-76231-317-4 ; 2006 ; Between the Local and the Global Volume 12 ; 12 >
+      au < exists ; 978-0-7623-1420-1 ; 2007 ; Gender Regimes, Citizen Participation and Rural Restructuring Volume 13 ; 13 >
+      au < exists ; 978-1-84855-138-1 ; 2009 ; Beyond the Rural-Urban Divide: Cross-Continental Perspectives on the Differentiated Countryside and its Regulation Volume 14 ; 14 >
+      au < exists ; 978-1-84950-918-3 ; 2010 ; Welfare Reform in Rural Places: Comparative Perspectives Volume 15 ; 15 >
+      au < exists ; 978-0-85724-281-5 ; 2010 ; From Community to Consumption: New and Classical Themes in Rural Sociological Research Volume 16 ; 16 >
+      au < exists ; 978-0-85724-317-1 ; 2011 ; Globalization and the Time–Space Reorganization Volume 17 ; 17 >
+      au < exists ; 978-1-78052-348-4 ; 2012 ; Rethinking Agricultural Policy Regimes: Food Security, Climate Change and the Future Resilience of Global Agriculture Volume 18 ; 18 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Social Movements, Conflicts and Change ;
+        issn = 0163-786X
+      >
+
+      param[journal_issn] = 0163-786X
+
+      au < exists ; 978-0-76230-665-7 ; 2000 ; Research in Social Movements, Conflicts and Change Volume 22 ; 22 >
+      au < exists ; 978-0-76230-786-9 ; 2001 ; Political Opportunities Social Movements, and Democratization Volume 23 ; 23 >
+      au < exists ; 978-0-76230-787-6 ; 2002 ; Consensus Decision Making, Northern Ireland and Indigenous Movements Volume 24 ; 24 >
+      au < exists ; 978-0-76231-037-1 ; 2004 ; Authority in Contention Volume 25 ; 25 >
+      au < exists ; 978-0-76231-263-4 ; 2005 ; Research in Social Movements, Conflicts and Change Volume 26 ; 26 >
+      au < exists ; 978-0-7623-1318-1 ; 2007 ; Research in Social Movements, Conflicts and Change Volume 27 ; 27 >
+      au < exists ; 978-1-84663-892-3 ; 2008 ; Research in Social Movements, Conflicts and Change Volume 28 ; 28 >
+      au < exists ; 978-1-84855-290-6 ; 2008 ; Pushing the Boundaries: New Frontiers in Conflict Resolution and Collaboration Volume 29 ; 29 >
+      au < exists ; 978-0-85724-036-1 ; 2010 ; Research in Social Movements, Conflicts and Change Volume 30 ; 30 >
+      au < exists ; 978-0-85724-609-7 ; 2011 ; Research in Social Movements, Conflicts and Change Volume 31 ; 31 >
+      au < exists ; 978-0-85724-913-5 ; 2011 ; Critical Aspects of Gender in Conflict Resolution, Peacebuilding, and Social Movements Volume 32 ; 32 >
+      au < exists ; 978-1-78052-880-9 ; 2012 ; Media, Movements, and Political Change Volume 33 ; 33 >
+      au < exists ; 978-1-78190-345-2 ; 2012 ; Nonviolent Conflict and Civil Resistance Volume 34 ; 34 >
+      au < exists ; 978-1-78190-635-4 ; 2013 ; Advances in the Visual Analysis of Social Movements Volume 35 ; 35 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Social Problems and Public Policy ;
+        issn = 0196-1152
+      >
+
+      param[journal_issn] = 0196-1152
+
+      au < exists ; 978-0-76230-716-6 ; 2001 ; The Organizational Response to Social Problems Volume 8 ; 8 >
+      au < exists ; 978-0-76230-806-4 ; 2001 ; Environmental Risks: Perception, Evaluation and Management Volume 9 ; 9 >
+      au < exists ; 978-0-76230-854-5 ; 2002 ; The Environmental State Under Pressure Volume 10 ; 10 >
+      au < exists ; 978-0-76231-043-2 ; 2003 ; Terrorism and Disaster: New Threats, New Ideas Volume 11 ; 11 >
+      au < exists ; 978-0-76231-231-3 ; 2005 ; The Organizatioanl Response to Persons with Mental Illness Invloved with the Criminal Justice System Volume 12 ; 12 >
+      au < exists ; 978-0-76231-319-8 ; 2006 ; Long-Term Management of Contaminated Sites Volume 13 ; 13 >
+      au < exists ; 978-0-7623-1371-6 ; 2007 ; Cultures of Contamination Volume 14 ; 14 >
+      au < exists ; 978-0-7623-1417-1 ; 2007 ; Equity and the Environment Volume 15 ; 15 >
+      au < exists ; 978-1-8485-5298-2 ; 2008 ; Integrating the Sciences and Society: Challenges, Practices, and Potentials Volume 16 ; 16 >
+      au < exists ; 978-1-84950-736-3 ; 2010 ; New Approaches to Social Problems Treatment Volume 17 ; 17 >
+      au < exists ; 978-0-85724-183-2 ; 2010 ; Environment and Social Justice: An International Perspective Volume 18 ; 18 >
+      au < exists ; 978-0-85724-389-8 ; 2011 ; Government Secrecy Volume 19 ; 19 >
+      au < exists ; 978-1-78190-375-9 ; 2012 ; Disaster by Design: The Aral Sea and its Lessons for Sustainability Volume 20 ; 20 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Social Science and Disability ;
+        issn = 1479-3547
+      >
+
+      param[journal_issn] = 1479-3547
+
+      au < exists ; 978-0-76230-551-3 ; 2000 ; Expanding the Scope of Social Science Research on Disability Volume 1 ; 1 >
+      au < exists ; 978-0-76230-773-9 ; 2001 ; Exploring Theories and Expanding Methodologies: Where we are and where we need to go Volume 2 ; 2 >
+      au < exists ; 978-0-76231-007-4 ; 2003 ; Using Survey Data to Study Disability: Results from the National Health Survey on Disability Volume 3 ; 3 >
+      au < exists ; 978-0-76231-282-5 ; 2006 ; International Views on Disability Measures: Moving Toward Comparative Measurement Volume 4 ; 4 >
+      au < exists ; 978-0-85724-377-5 ; 2010 ; Disability as a Fluid State Volume 5 ; 5 >
+      au < exists ; 978-0-85724-799-5 ; 2011 ; Disability and Community Volume 6 ; 6 >
+
+  }
+
+  {
+
+      title <
+        name = Research in the History of Economic Thought and Methodology ;
+        issn = 0743-4154
+      >
+
+      param[journal_issn] = 0743-4154
+
+      au < exists ; 978-0-76230-635-0 ; 2000 ; American Economics Volume 18 ; 18 >
+      au < exists ; 978-0-76230-637-4 ; 2000 ; A Research Annual Volume 18 ; 18 >
+      au < exists ; 978-0-76230-654-1 ; 2000 ; Twentieth-Century Economics Volume 18 ; 18 >
+      au < exists ; 978-0-76230-694-7 ; 2001 ; Edward Everett Hale: The Writings of an Economic Maverick Volume 19 ; 19 >
+      au < exists ; 978-0-76230-704-3 ; 2001 ; Edwin Seligman's Lectures on Public Finance, 1927/1928 Volume 19 ; 19 >
+      au < exists ; 978-0-76230-703-6 ; 2001 ; A Research Annual Volume 19 ; 19 >
+      au < exists ; 978-0-76230-847-7 ; 2002 ; A Research Annual Volume 20 ; 20 >
+      au < exists ; 978-0-76230-794-4 ; 2002 ; Richard T Ely: The Story of Economics in the United States Volume 20 ; 20 >
+      au < exists ; 978-0-76230-793-7 ; 2002 ; Henry George's Writings on the United Kingdom Volume 20 ; 20 >
+      au < exists ; 978-0-76230-996-2 ; 2003 ; A Research Annual Volume 21 ; 21 >
+      au < exists ; 978-0-76230-998-6 ; 2003 ; Documents on Modern History of Economic Thought: Part C Volume 21 ; 21 >
+      au < exists ; 978-0-76230-997-9 ; 2003 ; Histories of Economic Thought Volume 21 ; 21 >
+      au < exists ; 978-0-76231-089-0 ; 2004 ; A Research Annual Volume 22 ; 22 >
+      au < exists ; 978-0-76231-090-6 ; 2004 ; Wisconsin "Government and Business" and the History of Heterodox Economic T Volume 22 ; 22 >
+      au < exists ; 978-0-76231-165-1 ; 2005 ; Documents from F. Taylor Ostrander Volume 23 ; 23 >
+      au < exists ; 978-0-76231-164-4 ; 2005 ; A Research Annual Volume 23 ; 23 >
+      au < exists ; 978-0-76231-166-8 ; 2005 ; Further University of Wisconsin Materials: Further Documents of F. Taylor Ostrander Volume 23 ; 23 >
+      au < exists ; 978-0-76231-355-6 ; 2006 ; Documents from and on Economic Thought Volume 24 ; 24 >
+      au < exists ; 978-0-76231-354-9 ; 2006 ; Further Documents from F. Taylor Ostrander Volume 24 ; 24 >
+      au < exists ; 978-0-76231-349-5 ; 2006 ; 24 Part 1 Volume 24 ; 24 >
+      au < exists ; 978-0-7623-1424-9 ; 2007 ; Further Documents from the History of Economic Thought Volume 25 ; 25 >
+      au < exists ; 978-0-7623-1423-2 ; 2007 ; Documents from the History of Economic Thought Volume 25 ; 25 >
+      au < exists ; 978-0-7623-1422-5 ; 2007 ; A Research Annual Volume 25 ; 25 >
+      au < exists ; 978-1-84663-908-1 ; 2008 ; Documents on and from the History of Economic Thought and Methodology Volume 26 ; 26 >
+      au < exists ; 978-1-84663-906-7 ; 2008 ; Documents from F. Taylor Ostrander at Oxford, John R. Commons' Reasonable Value Volume 26 ; 26 >
+      au < exists ; 978-1-84663-904-3 ; 2008 ; A Research Annual Volume 26 ; 26 >
+      au < exists ; 978-1-84855-660-7 ; 2009 ; Documents from Glenn Johnson and F. Taylor Ostrander Volume 27 ; 27 >
+      au < exists ; 978-1-84855-658-4 ; 2009 ; Henry George, the Transatlantic Irish, and their Times Volume 27 ; 27 >
+      au < exists ; 978-1-84855-656-0 ; 2009 ; A Research Annual Volume 27 ; 27 >
+      au < exists ; 978-0-85724-063-7 ; 2010 ; Economic Theory by Taussig, Young, and Carver at Harvard Volume 28 ; 28 >
+      au < exists ; 978-0-85724-061-3 ; 2010 ; English, Irish and Subversives among the Dismal Scientists Volume 28 ; 28 >
+      au < exists ; 978-0-85724-059-0 ; 2010 ; A Research Annual Volume 28 ; 28 >
+      au < exists ; 978-1-78052-010-0 ; 2011 ; Wisconsin, Labor, Income, and Institutions: Contributions from Commons and Bronfenbrenner Volume 29 ; 29 >
+      au < exists ; 978-1-78052-008-7 ; 2011 ; Frank H. Knight in Iowa City, 1919–1928 Volume 29 ; 29 >
+      au < exists ; 978-1-78052-006-3 ; 2011 ; Research in the History of Economic Thought and Methodology Volume 29 ; 29 >
+      au < exists ; 978-1-78052-826-7 ; 2012 ; Documents on Government and the Economy Volume 30 ; 30 >
+      au < exists ; 978-1-78052-824-3 ; 2012 ; Research in the History of Economic Thought and Methodology: A Research Annual Volume 30 ; 30 >
+
+  }
+
+  {
+
+      title <
+        name = Research in the Sociology of Education ;
+        issn = 1479-3539
+      >
+
+      param[journal_issn] = 1479-3539
+
+      au < exists ; 978-076230-817-0 ; 2002 ; Schooling and Social Capital in Diverse Cultures Volume 13 ; 13 >
+      au < exists ; 978-0-76231-061-6 ; 2003 ; Inequality Across Societies: Families, Schools and Persisting Stratification Volume 14 ; 14 >
+      au < exists ; 978-0-76231-291-7 ; 2006 ; Children's Lives and Schooling across Societies Volume 15 ; 15 >
+      au < exists ; 978-1-84663-910-4 ; 2008 ; Strong States, Weak Schools: The Benefits and Dilemmas of Centralized Accountability Volume 16 ; 16 >
+      au < exists ; 978-1-84950-976-3 ; 2010 ; Globalization, Changing Demographics, and Educational Challenges in East Asia Volume 17 ; 17 >
+      au < exists ; 978-1-78052-708-6 ; 2012 ; Beyond the Nation-State Volume 18 ; 18 >
+
+  }
+
+  {
+
+      title <
+        name = Research in the Sociology of Health Care ;
+        issn = 0275-4959
+      >
+
+      param[journal_issn] = 0275-4959
+
+      au < exists ; 978-0-76230-644-2 ; 2000 ; Health Care Providers, Institutions, and Patients: Changing Patterns of Care Provision and Care Delivery Volume 17 ; 17 >
+      au < exists ; 978-0-76230-740-1 ; 2000 ; Health, Illness, and use of Care: The Impact of Social Factors Volume 18 ; 18 >
+      au < exists ; 978-0-76230-808-8 ; 2001 ; Changing Consumers and Changing Technology in Health Care and Health Care Delivery Volume 19 ; 19 >
+      au < exists ; 978-0-76230-957-3 ; 2002 ; Social Inequalities, Health and Health Care Delivery Volume 20 ; 20 >
+      au < exists ; 978-0-76231-069-2 ; 2003 ; Reorganizing Health Care Delivery Systems: Problems of Managed Volume 21 ; 21 >
+      au < exists ; 978-0-76231-147-7 ; 2004 ; Chronic Care, Health Care Systems and Services Integration Volume 22 ; 22 >
+      au < exists ; 978-0-76231-249-8 ; 2005 ; Health Care Services, Racial and Ethnic Minorities and Underserved Populations: Patient and Provider Perspectives Volume 23 ; 23 >
+      au < exists ; 978-0-76231-320-4 ; 2006 ; Access, Quality and Satisfaction with Care Volume 24 ; 24 >
+      au < exists ; 978-0-7623-1474-4 ; 2007 ; Inequalities and Disparities in Health Care and Health: Concerns of Patients, Providers and Insurers Volume 25 ; 25 >
+      au < exists ; 978-1-84855-160-2 ; 2008 ; Care for Major Health Problems and Population Health Concerns: Impacts on Patients, Providers and Policy Volume 26 ; 26 >
+      au < exists ; 978-1-84855-834-2 ; 2009 ; Social Sources of Disparities in Health and Health Care and Linkages to Policy, Population Concerns and Providers of Care Volume 27 ; 27 >
+      au < exists ; 978-1-84950-714-1 ; 2010 ; The Impact of Demographics on Health and Health Care: Race, Ethnicity and Other Social Factors Volume 28 ; 28 >
+      au < exists ; 978-0-85724-715-5 ; 2011 ; Access to Care and Factors that Impact Access, Patients as Partners in Care and Changing Roles of Health Providers Volume 29 ; 29 >
+      au < exists ; 978-1-78190-124-3 ; 2012 ; Issues in Health and Health Care Related to Race/Ethnicity, Immigration, SES and Gender Volume 30 ; 30 >
+
+  }
+
+  {
+
+      title <
+        name = Research in the Sociology of Organizations ;
+        issn = 0733-558X
+      >
+
+      param[journal_issn] = 0733-558X
+
+      au < exists ; 978-0-76230-632-9 ; 2000 ; Research in the Sociology of Organizations Volume 17 ; 17 >
+      au < exists ; 978-0-76230-770-8 ; 2001 ; Social Capital of Organizations Volume 18 ; 18 >
+      au < exists ; 978-0-76230-872-9 ; 2002 ; Social Structure and Organizations Revisited Volume 19 ; 19 >
+      au < exists ; 978-0-76231-005-0 ; 2003 ; The Governance of Relations in Markets and Organizations Volume 20 ; 20 >
+      au < exists ; 978-0-76231-004-3 ; 2003 ; Post Modernism and Management Volume 21 ; 21 >
+      au < exists ; 978-0-76231-008-1 ; 2004 ; Legitimacy Processes in Organizations Volume 22 ; 22 >
+      au < exists ; 978-0-76231-240-5 ; 2005 ; Transformation in Cultural Industries Volume 23 ; 23 >
+      au < exists ; 978-0-76231-302-0 ; 2006 ; Professional Service Firms Volume 24 ; 24 >
+      au < exists ; 978-0-7623-1433-1 ; 2007 ; The Sociology of Entrepreneurship Volume 25 ; 25 >
+      au < exists ; 978-1-84855-646-1 ; 2009 ; Studying Differences between Organizations: Comparative Approaches to Organizational Research Volume 26 ; 26 >
+      au < exists ; 978-1-84855-866-3 ; 2009 ; Institutions and Ideology Volume 27 ; 27 >
+      au < exists ; 978-1-84950-930-5 ; 2010 ; Stanford's Organization Theory Renaissance, 1970–2000 Volume 28 ; 28 >
+      au < exists ; 978-1-84950-984-8 ; 2010 ; Technology and Organization: Essays in Honour of Joan Woodward Volume 29 ; 29 >
+      au < exists ; 978-0-85724-205-1 ; 2010 ; Markets on Trial: The Economic Sociology of the U.S. Financial Crisis: Part B Volume 30 ; 30 >
+      au < exists ; 978-0-85724-207-5 ; 2010 ; Markets on Trial: The Economic Sociology of the U.S. Financial Crisis: Part B Volume 30 ; 30 >
+      au < exists ; 978-0-85724-205-1 ; 2010 ; Markets on Trial: The Economic Sociology of the U.S. Financial Crisis: Part A Volume 30 ; 30 >
+      au < exists ; 978-0-85724-593-9 ; 2010 ; Categories in Markets: Origins and Evolution Volume 31 ; 31 >
+      au < exists ; 978-0-85724-595-3 ; 2011 ; Philosophy and Organization Theory Volume 32 ; 32 >
+      au < exists ; 978-1-78052-284-5 ; 2011 ; Communities and Organizations Volume 33 ; 33 >
+      au < exists ; 978-1-78052-664-5 ; 2012 ; Rethinking Power in Organizations, Institutions, and Markets Volume 34 ; 34 >
+      au < exists ; 978-1-78052-782-6 ; 2012 ; Reinventing Hierarchy and Bureaucracy – from the Bureau to Network Organizations Volume 35 ; 35 >
+      au < exists ; 978-1-78052-712-3 ; 2012 ; The Garbage Can Model of Organizational Choice: Looking Forward at Forty Volume 36 ; 36 >
+      au < exists ; 978-1-78190-505-0 ; 2012 ; Managing ‘Human Resources’ by Exploiting and Exploring People’s Potentials Volume 37 ; 37 >
+
+  }
+
+  {
+
+      title <
+        name = Research in the Sociology of Sport ;
+        issn = 1476-2854
+      >
+
+      param[journal_issn] = 1476-2854
+
+      au < exists ; 978-1-78052-296-8 ; 2012 ; Qualitative Research on Sport and Physical Culture Volume 6 ; 6 >
+
+  }
+
+  {
+
+      title <
+        name = Research in the Sociology of Work ;
+        issn = 0277-2833
+      >
+
+      param[journal_issn] = 0277-2833
+
+      au < exists ; 978-0-76230-766-1 ; 2001 ; The Transformation of Work Volume 10 ; 10 >
+      au < exists ; 978-0-76230-882-8 ; 2003 ; Labor Revitalization: Global Perspectives and New Initiatives Volume 11 ; 11 >
+      au < exists ; 978-0-76230-886-6 ; 2003 ; The Sociology of Job Training Volume 12 ; 12 >
+      au < exists ; 978-0-76231-045-6 ; 2004 ; Globalism/Localism at Work Volume 13 ; 13 >
+      au < exists ; 978-0-76230-788-3 ; 2004 ; Diversity in the Work Force Volume 14 ; 14 >
+      au < exists ; 978-0-76231-191-0 ; 2005 ; Entrepreneurship Volume 15 ; 15 >
+      au < exists ; 978-0-76231-202-3 ; 2005 ; Worker Participation: Current Research and Future Trends Volume 16 ; 16 >
+      au < exists ; 978-0-7623-1268-9 ; 2007 ; Workplace Temporalities Volume 17 ; 17 >
+      au < exists ; 978-1-84855-368-2 ; 2009 ; Economic Sociology of Work Volume 18 ; 18 >
+      au < exists ; 978-1-84855-730-7 ; 2009 ; Work and Organizationsin China Afterthirty Years of Transition Volume 19 ; 19 >
+      au < exists ; 978-1-84855-370-5 ; 2010 ; Gender and Sexuality in the Workplace Volume 20 ; 20 >
+      au < exists ; 978-0-85724-239-6 ; 2010 ; Institutions and Entrepreneurship Volume 21 ; 21 >
+      au < exists ; 978-0-85724-931-9 ; 2011 ; Comparing European Workers Part B: Policies and Institutions Volume 22 ; 22 >
+      au < exists ; 978-1-84950-946-6 ; 2011 ; Comparing European Workers Part A Volume 22 ; 22 >
+      au < exists ; 978-1-78052-346-0 ; 2012 ; Religion, Work and Inequality Volume 23 ; 23 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Urban Policy ;
+        issn = 1479-3520
+      >
+
+      param[journal_issn] = 1479-3520
+
+      au < exists ; 978-0-76230-499-8 ; 2000 ; Citizen Responsive Government Volume 8 ; 8 >
+      au < exists ; 978-0-76231-060-9 ; 2003 ; The City as an Entertainment Machine Volume 9 ; 9 >
+      au < exists ; 978-0-76231-309-9 ; 2006 ; Community and Ecology Volume 10 ; 10 >
+
+  }
+
+  {
+
+      title <
+        name = Research in Urban Sociology ;
+        issn = 1047-0042
+      >
+
+      param[journal_issn] = 1047-0042
+
+      au < exists ; 978-0-76230-540-7 ; 1999 ; Constructions of Urban Space Volume 5 ; 5 >
+      au < exists ; 978-0-76230-541-4 ; 2001 ; Critical Perspectives on Urban Redevelopment Volume 6 ; 6 >
+      au < exists ; 978-0-76231-149-1 ; 2004 ; Race and Ethnicity in New York City Volume 7 ; 7 >
+      au < exists ; 978-0-7623-1321-1 ; 2006 ; Ethnic Landscapes in an Urban World Volume 8 ; 8 >
+      au < exists ; 978-0-7623-1477-5 ; 2008 ; Gender in an Urban World Volume 9 ; 9 >
+      au < exists ; 978-0-85724-347-8 ; 2010 ; Suburbanization in Global Society Volume 10 ; 10 >
+      au < exists ; 978-1-78052-258-6 ; 2011 ; Everyday Life in the Segmented City Volume 11 ; 11 >
+      au < exists ; 978-1-78190-036-9 ; 2012 ; Urban Areas and Global Climate Change Volume 12 ; 12 >
+
+  }
+
+  {
+
+      title <
+        name = Research Methodology in Strategy and Management ;
+        issn = 1479-8387
+      >
+
+      param[journal_issn] = 1479-8387
+
+      au < exists ; 978-0-76231-051-7 ; 2004 ; Research Methodology in Strategy and Management Volume 1 ; 1 >
+      au < exists ; 978-0-76231-208-5 ; 2005 ; Research Methodology in Strategy and Management Volume 2 ; 2 >
+      au < exists ; 978-0-76231-339-6 ; 2006 ; Research Methodology in Strategy and Management Volume 3 ; 3 >
+      au < exists ; 978-0-7623-1404-1 ; 2007 ; Research Methodology in Strategy and Management Volume 4 ; 4 >
+      au < exists ; 978-1-84855-158-9 ; 2009 ; Research Methodology in Strategy and Management Volume 5 ; 5 >
+      au < exists ; 978-1-78052-026-1 ; 2011 ; Building Methodological Bridges Volume 6 ; 6 >
+      au < exists ; 978-1-78190-026-0 ; 2012 ; West Meets East: Toward Methodological Exchange Volume 7 ; 7 >
+      au < exists ; 978-1-78190-028-4 ; 2012 ; West Meets East: Building Theoretical Bridges Volume 8 ; 8 >
+
+  }
+
+  {
+
+      title <
+        name = Research on Economic Inequality ;
+        issn = 1049-2585
+      >
+
+      param[journal_issn] = 1049-2585
+
+      au < exists ; 978-0-76231-014-2 ; 2003 ; Inequality, Welfare and Poverty: Theory and Measurement Volume 9 ; 9 >
+      au < exists ; 978-0-76231-024-1 ; 2003 ; Fiscal Policy, Inequality and Welfare Volume 10 ; 10 >
+      au < exists ; 978-0-76231-113-2 ; 2004 ; Inequality, Welfare and Income Distribution: Experimental Approaches Volume 11 ; 11 >
+      au < exists ; 978-0-76231-136-1 ; 2004 ; Studies on Economic Well-Being: Essays in the Honor of John P. Formby Volume 12 ; 12 >
+      au < exists ; 978-0-76231-350-1 ; 2006 ; Dynamics of Inequality and Poverty Volume 13 ; 13 >
+      au < exists ; 978-0-7623-1374-7 ; 2007 ; Inequality and Poverty Volume 14 ; 14 >
+      au < exists ; 978-0-7623-1450-8 ; 2007 ; Equity Volume 15 ; 15 >
+      au < exists ; 978-1-84855-134-3 ; 2008 ; Inequality and Opportunity: Papers from the Second ECINEQ Society Meeting Volume 16 ; 16 >
+      au < exists ; 978-1-84855-786-4 ; 2009 ; Occupational and Residential Segregation Volume 17 ; 17 >
+      au < exists ; 978-0-85724-145-0 ; 2010 ; Studies in Applied Welfare Analysis: Papers from the Third ECINEQ Meeting Volume 18 ; 18 >
+      au < exists ; 978-1-78052-034-6 ; 2011 ; Inequality of Opportunity: Theory and Measurement Volume 19 ; 19 >
+      au < exists ; 978-1-78190-170-0 ; 2012 ; Inequality, Mobility and Segregation: Essays in Honor of Jacques Silber Volume 20 ; 20 >
+
+  }
+
+  {
+
+      title <
+        name = Research on Emotion in Organizations ;
+        issn = 1746-9791
+      >
+
+      param[journal_issn] = 1746-9791
+
+      au < exists ; 978-0-76231-234-4 ; 2005 ; The Effect of Affect in Organizational Settings Volume 1 ; 1 >
+      au < exists ; 978-0-76231-310-5 ; 2006 ; Individual and Organizational Perspectives on Emotion Management and Display Volume 2 ; 2 >
+      au < exists ; 978-0-7623-1414-0 ; 2007 ; Functionality, Intentionality and Morality Volume 3 ; 3 >
+      au < exists ; 978-1-84663-940-1 ; 2008 ; Emotions, Ethics and Decision-Making Volume 4 ; 4 >
+      au < exists ; 978-1-84855-654-6 ; 2009 ; Emotions in Groups, Organizations and Cultures Volume 5 ; 5 >
+      au < exists ; 978-0-85724-177-1 ; 2010 ; Emotions and Organizational Dynamism Volume 6 ; 6 >
+      au < exists ; 978-1-78052-208-1 ; 2011 ; What Have We Learned? Ten Years On Volume 7 ; 7 >
+      au < exists ; 978-1-78052-676-8 ; 2012 ; Experiencing and Managing Emotions in the Workplace Volume 8 ; 8 >
+
+  }
+
+  {
+
+      title <
+        name = Research on Managing Groups and Teams ;
+        issn = 1534-0856
+      >
+
+      param[journal_issn] = 1534-0856
+
+      au < exists ; 978-0-76230-662-6 ; 2000 ; Technology Volume 3 ; 3 >
+      au < exists ; 978-0-76230-862-0 ; 2002 ; Toward Phenomenology of Groups and Group Membership Volume 4 ; 4 >
+      au < exists ; 978-0-76230-951-1 ; 2003 ; Identity Issues in Groups Volume 5 ; 5 >
+      au < exists ; 978-0-76231-093-7 ; 2004 ; Time in Groups Volume 6 ; 6 >
+      au < exists ; 978-0-76231-229-0 ; 2005 ; Status and Groups Volume 7 ; 7 >
+      au < exists ; 978-0-76231-300-6 ; 2006 ; Ethics in Groups Volume 8 ; 8 >
+      au < exists ; 978-0-76231-362-4 ; 2006 ; National Culture and Groups Volume 9 ; 9 >
+      au < exists ; 978-0-7623-1413-3 ; 2007 ; Affect and Groups Volume 10 ; 10 >
+      au < exists ; 978-1-84855-052-0 ; 2008 ; Diversity and Groups Volume 11 ; 11 >
+      au < exists ; 978-1-84950-583-3 ; 2009 ; Creativity in Groups Volume 12 ; 12 >
+      au < exists ; 978-0-85724-161-0 ; 2010 ; Fairness and Groups Volume 13 ; 13 >
+      au < exists ; 978-0-85724-559-5 ; 2011 ; Negotiation and Groups Volume 14 ; 14 >
+      au < exists ; 978-1-78190-030-7 ; 2012 ; Looking Back, Moving Forward: A Review of Group and Team-Based Research Volume 15 ; 15 >
+
+  }
+
+  {
+
+      title <
+        name = Research on Professional Responsibility and Ethics in Accounting ;
+        issn = 1574-0765
+      >
+
+      param[journal_issn] = 1574-0765
+
+      au < exists ; 978-0-76231-125-5 ; 2004 ; Research on Professional Responsibility and Ethics in Accounting Volume 9 ; 9 >
+      au < exists ; 978-0-76231-239-9 ; 2005 ; Research on Professional Responsibility and Ethics in Accounting Volume 10 ; 10 >
+      au < exists ; 978-0-76231-367-9 ; 2006 ; Research on Professional Responsibility and Ethics in Accounting Volume 11 ; 11 >
+      au < exists ; 978-0-76231-393-8 ; 2007 ; Research on Professional Responsibility and Ethics in Accounting Volume 12 ; 12 >
+      au < exists ; 978-1-84855-376-7 ; 2008 ; Research on Professional Responsibility and Ethics in Accounting Volume 13 ; 13 >
+      au < exists ; 978-1-84950-722-6 ; 2010 ; Research on Professional Responsibility and Ethics in Accounting Volume 14 ; 14 >
+      au < exists ; 978-1-78052-004-9 ; 2011 ; Research on Professional Responsibility and Ethics in Accounting Volume 15 ; 15 >
+      au < exists ; 978-1-78052-760-4 ; 2012 ; Research on Professional Responsibility and Ethics in Accounting Volume 16 ; 16 >
+
+  }
+
+  {
+
+      title <
+        name = Research on Technological Innovation, Management and Policy ;
+        issn = 0737-1071
+      >
+
+      param[journal_issn] = 0737-1071
+
+      au < exists ; 978-0-76230-811-8 ; 2001 ; Comparative Studies of Technological Evolution Volume 7 ; 7 >
+      au < exists ; 978-0-76231-156-9 ; 2004 ; Product Inovation, Interactive Learning and Economic Performance Volume 8 ; 8 >
+      au < exists ; 978-0-76231-241-2 ; 2005 ; The Emergence of Entrepreneurial Economics Volume 9 ; 9 >
+
+  }
+
+  {
+
+      title <
+        name = Review of Marketing Research ;
+        issn = 1548-6435
+      >
+
+      param[journal_issn] = 1548-6435
+
+      au < exists ; 978-0-7656-1304-2 ; 2005 ; Review of Marketing Research Volume 1 ; 1 >
+      au < exists ; 978-0-7656-1305-9 ; 2006 ; Review of Marketing Research Volume 2 ; 2 >
+      au < exists ; 978-0-7656-1306-6 ; 2007 ; Review of Marketing Research Volume 3 ; 3 >
+      au < exists ; 978-0-7656-2092-7 ; 2008 ; Review of Marketing Research Volume 4 ; 4 >
+      au < exists ; 978-0-7656-2125-2 ; 2009 ; Review of Marketing Research Volume 5 ; 5 >
+      au < exists ; 978-0-7656-2127-6 ; 2010 ; Review of Marketing Research Volume 6 ; 6 >
+      au < exists ; 978-0-85724-475-8 ; 2010 ; Review of Marketing Research Volume 7 ; 7 >
+      au < exists ; 978-0-85724-897-8 ; 2011 ; Review of Marketing Research: Special Issue – Marketing Legends Volume 8 ; 8 >
+      au < exists ; 978-1-78052-912-7 ; 2012 ; Special Issue – Toward a Better Understanding of the Role of Value in Markets and Marketing Volume 9 ; 9 >
+
+  }
+
+  {
+
+      title <
+        name = Sociological Studies of Children and Youth ;
+        issn = 1537-4661
+      >
+
+      param[journal_issn] = 1537-4661
+
+      au < exists ; 978-0-76230-051-8 ; 2001 ; Sociological Studies of Children and Youth Volume 8 ; 8 >
+      au < exists ; 978-0-76230-967-2 ; 2003 ; Sociological Studies of Children and Youth Volume 9 ; 9 >
+      au < exists ; 978-0-76231-183-5 ; 2005 ; Sociological Studies of Children and Youth Volume 10 ; 10 >
+      au < exists ; 978-0-76231-256-6 ; 2005 ; Sociological Studies of Children and Youth Volume 11 ; 11 >
+      au < exists ; 978-1-84855-732-1 ; 2009 ; Structural, Historical, and Comparative Perspectives Volume 12 ; 12 >
+      au < exists ; 978-1-84950-734-9 ; 2010 ; Children and Youth Speak for Themselves Volume 13 ; 13 >
+      au < exists ; 978-1-78052-074-2 ; 2011 ; The Well-Being, Peer Cultures and Rights of Children Volume 14 ; 14 >
+      au < exists ; 978-1-78052-876-2 ; 2012 ; Disputes in Everyday Life: Social and Moral Orders of Children and Young People Volume 15 ; 15 >
+      au < exists ; 978-1-78190-543-2 ; 2013 ; Youth Engagement: The Civic-Political Lives of Children and Youth Volume 16 ; 16 >
+
+  }
+
+  {
+
+      title <
+        name = Sociology of Crime Law and Deviance ;
+        issn = 1521-6136
+      >
+
+      param[journal_issn] = 1521-6136
+
+      au < exists ; 978-0-76230-680-0 ; 2000 ; Sociology of Crime, Law and Deviance Volume 2 ; 2 >
+      au < exists ; 978-0-76230-800-2 ; 2001 ; Legal Professions: Work, Structure and Organization Volume 3 ; 3 >
+      au < exists ; 978-0-76231-040-1 ; 2004 ; Terrorism and Counter-Terrorism Volume 5 ; 5 >
+      au < exists ; 978-0-76231-128-6 ; 2005 ; Ethnographies of Law and Social Control Volume 6 ; 6 >
+      au < exists ; 978-0-76231-322-8 ; 2006 ; Sociological Theory and Criminological Research Volume 7 ; 7 >
+      au < exists ; 978-0-76231-307-5 ; 2007 ; Police Occupational Culture Volume 8 ; 8 >
+      au < exists ; 978-0-76231-306-8 ; 2007 ; Crime and Human Rights Volume 9 ; 9 >
+      au < exists ; 978-0-7623-1416-4 ; 2008 ; Surveillance and Governance: Crime Control and Beyond Volume 10 ; 10 >
+      au < exists ; 978-0-7623-1455-3 ; 2008 ; Restorative Justice: from Theory to Practice Volume 11 ; 11 >
+      au < exists ; 978-1-84855-242-5 ; 2009 ; Access to Justice Volume 12 ; 12 >
+      au < exists ; 978-1-84855-438-2 ; 2009 ; Immigration, Crime and Justice Volume 13 ; 13 >
+      au < exists ; 978-1-84950-732-5 ; 2010 ; Popular Culture, Crime and Social Control Volume 14 ; 14 >
+      au < exists ; 978-0-85724-345-4 ; 2010 ; Social Control: Informal, Legal and Medical Volume 15 ; 15 >
+      au < exists ; 978-0-85724-801-5 ; 2011 ; Economic Crisis and Crime Volume 16 ; 16 >
+      au < exists ; 978-1-78052-914-1 ; 2012 ; Disasters, Hazards and Law Volume 17 ; 17 >
+
+  }
+
+  {
+
+      title <
+        name = Studies in Communications ;
+        issn = 0275-7982
+      >
+
+      param[journal_issn] = 0275-7982
+
+      au < exists ; 978-0-76230-052-5 ; 2011 ; Human Rights and Media Volume 6 ; 6 >
+
+  }
+
+  {
+
+      title <
+        name = Studies in Educational Ethnography ;
+        issn = 1529-210X
+      >
+
+      param[journal_issn] = 1529-210X
+
+      au < exists ; 978-0-76230-563-6 ; 1999 ; Explorations in Methodology Volume 2 ; 2 >
+      au < exists ; 978-0-76230-738-8 ; 2001 ; Genders and Sexualities in Educational Ethnography Volume 3 ; 3 >
+      au < exists ; 978-0-76230-768-5 ; 2001 ; Ethnography and Education Policy Volume 4 ; 4 >
+      au < exists ; 978-0-76230-797-5 ; 2001 ; Critical Ethnography and Education Volume 5 ; 5 >
+      au < exists ; 978-0-76230-893-4 ; 2002 ; Debates and Developments in Ethonographic Methodology Volume 6 ; 6 >
+      au < exists ; 978-0-76230-906-1 ; 2002 ; Doing a Doctorate in Educational Ethnography Volume 7 ; 7 >
+      au < exists ; 978-0-76231-018-0 ; 2003 ; Investigating Educational Policy Through Ethnography Volume 8 ; 8 >
+      au < exists ; 978-0-76231-112-5 ; 2004 ; Ethnographies of Educational and Cultural Conflicts: Strategies and Resolutions Volume 9 ; 9 >
+      au < exists ; 978-0-76231-144-6 ; 2004 ; Identity, Agency and Social Institutions in Educational Ethnography Volume 10 ; 10 >
+      au < exists ; 978-0-76231-252-8 ; 2005 ; Methodological Issues and Practices in Ethnography Volume 11 ; 11 >
+      au < exists ; 978-0-7623-1437-9 ; 2007 ; Methodological Developments in Ethnography Volume 12 ; 12 >
+
+  }
+
+  {
+
+      title <
+        name = Studies in Law, Politics, and Society ;
+        issn = 1059-4337
+      >
+
+      param[journal_issn] = 1059-4337
+
+      au < exists ; 978-0-76231-015-9 ; 2003 ; Studies in Law, Politics, and Society Volume 28 ; 28 >
+      au < exists ; 978-0-76231-032-6 ; 2003 ; Studies in Law, Politics, and Society Volume 29 ; 29 >
+      au < exists ; 978-0-76231-072-2 ; 2003 ; Punishment, Politics and Culture Volume 30 ; 30 >
+      au < exists ; 978-0-76231-074-6 ; 2003 ; Studies in Law, Politics, and Society Volume 31 ; 31 >
+      au < exists ; 978-0-76231-097-5 ; 2004 ; Studies in Law, Politics, and Society Volume 32 ; 32 >
+      au < exists ; 978-0-76231-109-5 ; 2004 ; Studies in Law, Politics, and Society Volume 33 ; 33 >
+      au < exists ; 978-0-76231-151-4 ; 2004 ; Aesthetics of Law and Culture: Texts, Images, Screens Volume 34 ; 34 >
+      au < exists ; 978-0-76231-179-8 ; 2005 ; Studies in Law, Politics, and Society Volume 35 ; 35 >
+      au < exists ; 978-0-76231-189-7 ; 2005 ; Toward a Critique of Guilt: Perspectives from Law and the Humanities Volume 36 ; 36 >
+      au < exists ; 978-0-76231-245-0 ; 2005 ; Crime and Punishment: Perspectives from the Humanities Volume 37 ; 37 >
+      au < exists ; 978-0-76231-272-6 ; 2006 ; Studies in Law, Politics, and Society Volume 38 ; 38 >
+      au < exists ; 978-0-76231-323-5 ; 2006 ; Studies in Law, Politics, and Society Volume 39 ; 39 >
+      au < exists ; 978-0-7623-1324-2 ; 2007 ; Studies in Law, Politics, and Society Volume 40 ; 40 >
+      au < exists ; 978-0-7623-1460-7 ; 2007 ; Special Issue Law and Society Reconsidered Volume 41 ; 41 >
+      au < exists ; 978-0-7623-1467-6 ; 2008 ; Special Issue: Is the Death Penalty Dying? Volume 42 ; 42 >
+      au < exists ; 978-0-7623-1482-9 ; 2008 ; Special Issue Law and Literature Reconsidered Volume 43 ; 43 >
+      au < exists ; 978-0-7623-1486-7 ; 2008 ; Special Issue Constitutional Politics in a Conservative Era Volume 44 ; 44 >
+      au < exists ; 978-1-84855-090-2 ; 2008 ; Studies in Law, Politics, and Society Volume 45 ; 45 >
+      au < exists ; 978-1-84855-378-1 ; 2008 ; Studies in Law, Politics, and Society Volume 46 ; 46 >
+      au < exists ; 978-1-84855-652-2 ; 2009 ; Special Issue New Perspectives on Crime and Criminal Justice Volume 47 ; 47 >
+      au < exists ; 978-1-84855-930-1 ; 2009 ; Special Issue Revisiting Rights Volume 48 ; 48 >
+      au < exists ; 978-1-84950-615-1 ; 2009 ; Studies in Law, Politics, and Society Volume 49 ; 49 >
+      au < exists ; 978-1-84950-696-0 ; 2009 ; Studies in Law, Politics, and Society Volume 50 ; 50 >
+      au < exists ; 978-1-84950-750-9 ; 2010 ; Special Issue Interdisciplinary Legal Studies: The Next Generation Volume 51 ; 51 >
+      au < exists ; 978-0-85724-357-7 ; 2010 ; Special Issue Law Firms, Legal Culture, and Legal Practice Volume 52 ; 52 >
+      au < exists ; 978-0-85724-615-8 ; 2010 ; Studies in Law, Politics, and Society Volume 53 ; 53 >
+      au < exists ; 978-0-85724-825-1 ; 2011 ; Special Issue Social Movements/Legal Possibilities Volume 54 ; 54 >
+      au < exists ; 978-1-78052-080-3 ; 2011 ; Studies in Law, Politics, and Society Volume 55 ; 55 >
+      au < exists ; 978-1-78052-252-4 ; 2011 ; Special Issue Human Rights: New Possibilities/New Problems Volume 56 ; 56 >
+      au < exists ; 978-1-78052-622-5 ; 2012 ; Studies in Law, Politics, and Society Volume 57 ; 57 >
+      au < exists ; 978-1-78052-870-0 ; 2012 ; Special Issue: The Discourse of Judging Volume 58 ; 58 >
+      au < exists ; 978-1-78190-343-8 ; 2012 ; Special Issue: The Legacy of Stuart Scheingold Volume 59 ; 59 >
+      au < exists ; 978-1-78190-431-2 ; 2013 ; Special Issue: Who Belongs? Immigration, Citizenship, and the Constitution of Legality Volume 60 ; 60 >
+
+  }
+
+  {
+
+      title <
+        name = Studies in Managerial and Financial Accounting ;
+        issn = 1479-3512
+      >
+
+      param[journal_issn] = 1479-3512
+
+      au < exists ; 978-0-7623-1479-9 ; 2008 ; Performance Measurement and Management Control: Measuring and Rewarding Performance Volume 18 ; 18 >
+      au < exists ; 978-1-84855-254-8 ; 2009 ; Managerial Attitudes toward a Stakeholder Prominence within a Southeast Asia Context Volume 19 ; 19 >
+      au < exists ; 978-1-84950-724-0 ; 2010 ; Performance Measurement and Management Control: Innovative Concepts and Practices Volume 20 ; 20 >
+      au < exists ; 978-0-85724-505-2 ; 2010 ; Reputation Building, Website Disclosure and the Case of Intellectual Capital Volume 21 ; 21 >
+      au < exists ; 978-1-78052-442-9 ; 2011 ; Achieving Global Convergence of Financial Reporting Standards: Implications from the South Pacific Region Volume 22 ; 22 >
+      au < exists ; 978-1-78052-244-9 ; 2012 ; Globalization and Contextual Factors in Accounting: The Case of Germany Volume 23 ; 23 >
+      au < exists ; 978-1-78052-734-5 ; 2012 ; An Organizational Learning Approach to Process Innovations: The Extent and Scope of Diffusion and Adoption in Management Accounting Systems Volume 24 ; 24 >
+      au < exists ; 978-1-78052-910-3 ; 2012 ; Performance Measurement and Management Control: Global Issues Volume 25 ; 25 >
+
+  }
+
+  {
+
+      title <
+        name = Studies in Media and Communications ;
+        issn = 2050-2060
+      >
+
+      param[journal_issn] = 2050-2060
+
+      au < exists ; 978-1-78052-918-9 ; 2012 ; School Shootings: Mediatized Violence in a Global Age Volume 7 ; 7 >
+
+  }
+
+  {
+
+      title <
+        name = Studies in Public and Non-Profit Governance ;
+        issn = 2051-6630
+      >
+
+      param[journal_issn] = 2051-6630
+
+      au < exists ; 978-1-78190-657-6 ; 2013 ; Conceptualizing and Researching Governance in Public and Non-Profit Organizations Volume 1 ; 1 >
+
+  }
+
+  {
+
+      title <
+        name = Studies in Qualitative Methodology ;
+        issn = 1042-3192
+      >
+
+      param[journal_issn] = 1042-3192
+
+      au < exists ; 978-0-76230-053-2 ; 2000 ; Cross-Cultural Case Study Volume 6 ; 6 >
+      au < exists ; 978-0-76231-021-0 ; 2004 ; Seeing is Believing? Approaches to Visual Research Volume 7 ; 7 >
+      au < exists ; 978-0-7623-1283-2 ; 2007 ; Negotiating Boundaries and Borders Volume 8 ; 8 >
+      au < exists ; 978-0-7623-1368-6 ; 2008 ; Qualitative Urban Analysis: An International Perspective Volume 9 ; 9 >
+      au < exists ; 978-1-84663-990-6 ; 2008 ; Qualitative Housing Analysis: An International Perspective Volume 10 ; 10 >
+      au < exists ; 978-1-84950-942-8 ; 2010 ; New Frontiers in Ethnography Volume 11 ; 11 >
+      au < exists ; 978-1-78052-878-6 ; 2012 ; Ethics in Social Research Volume 12 ; 12 >
+
+  }
+
+  {
+
+      title <
+        name = Studies in Symbolic Interaction ;
+        issn = 0163-2396
+      >
+
+      param[journal_issn] = 0163-2396
+
+      au < exists ; 978-0-76230-639-8 ; 2000 ; Studies in Symbolic Interaction Volume 23 ; 23 >
+      au < exists ; 978-0-76230-754-8 ; 2001 ; Studies in Symbolic Interaction Volume 24 ; 24 >
+      au < exists ; 978-0-76230-851-4 ; 2002 ; Studies in Symbolic Interaction Volume 25 ; 25 >
+      au < exists ; 978-0-76231-009-8 ; 2003 ; Studies in Symbolic Interaction Volume 26 ; 26 >
+      au < exists ; 978-0-76231-096-8 ; 2004 ; Studies in Symbolic Interaction Volume 27 ; 27 >
+      au < exists ; 978-0-7623-1186-6 ; 2005 ; Studies in Symbolic Interaction Volume 28 ; 28 >
+      au < exists ; 978-0-7623-1325-9 ; 2006 ; Studies in Symbolic Interaction Volume 29 ; 29 >
+      au < exists ; 978-1-84663-930-2 ; 2008 ; Studies in Symbolic Interaction Volume 30 ; 30 >
+      au < exists ; 978-1-84855-124-4 ; 2008 ; Studies in Symbolic Interaction Volume 31 ; 31 >
+      au < exists ; 978-1-84855-126-8 ; 2008 ; Studies in Symbolic Interaction Volume 32 ; 32 >
+      au < exists ; 978-1-84855-784-0 ; 2009 ; Studies in Symbolic Interaction Volume 33 ; 33 >
+      au < exists ; 978-1-84950-960-2 ; 2010 ; Studies in Symbolic Interaction Volume 34 ; 34 >
+      au < exists ; 978-0-85724-361-4 ; 2010 ; Studies in Symbolic Interaction Volume 35 ; 35 >
+      au < exists ; 978-0-85724-795-7 ; 2011 ; Blue Ribbon Papers: Interactionism: The Emerging Landscape Volume 36 ; 36 >
+      au < exists ; 978-1-78052-156-5 ; 2011 ; Studies in Symbolic Interaction Volume 37 ; 37 >
+      au < exists ; 978-1-78052-746-8 ; 2012 ; Blue-Ribbon Papers: Behind the Professional Mask: The Autobiographies of Leading Symbolic Interactionists Volume 38 ; 38 >
+      au < exists ; 978-1-78190-056-7 ; 2012 ; Studies in Symbolic Interaction Volume 39 ; 39 >
+
+  }
+
+  {
+
+      title <
+        name = Studies in Writing ;
+        issn = 1572-6304
+      >
+
+      param[journal_issn] = 1572-6304
+
+      au < exists ; 978-0-08044-863-3 ; 2006 ; Writing and Digital Media Volume 17 ; 17 >
+      au < exists ; 978-0-08045-325-5 ; 2006 ; Writing and Motivation Volume 19 ; 19 >
+      au < exists ; 978-0-08045-094-0 ; 2007 ; Writing and Cognition Volume 20 ; 20 >
+      au < exists ; 978-0-85724-719-3 ; 2011 ; Voices, Identities, Negotiations, and Conflicts: Writing Academic English Across Cultures Volume 22 ; 22 >
+      au < exists ; 978-0-85724-955-5 ; 2011 ; Research on Writing Approaches in Mental Health Volume 23 ; 23 >
+      au < exists ; 978-1-78052-386-6 ; 2012 ; University Writing: Selves and Texts in Academic Societies Volume 24 ; 24 >
+      au < exists ; 978-1-78052-928-8 ; 2012 ; Learning to Write Effectively: Current Trends in European Research Volume 25 ; 25 >
+
+  }
+
+  {
+
+      title <
+        name = Syntax and Semantics ;
+        issn = 0092-4563
+      >
+
+      param[journal_issn] = 0092-4563
+
+      au < exists ; 978-0-12613-531-2 ; 1998 ; Sentence Processing: A Crosslinguistic Perspective Volume 31 ; 31 >
+      au < exists ; 978-0-12613-532-9 ; 1999 ; The Nature and Function of Syntatic Categories Volume 32 ; 32 >
+      au < exists ; 978-0-12613-533-6 ; 2000 ; Long Distance Reflexives Volume 33 ; 33 >
+      au < exists ; 978-0-12613-534-3 ; 2001 ; Lexical Functional Grammar Volume 34 ; 34 >
+      au < exists ; 978-0-12613-536-7 ; 2005 ; The Dynamics of Language: An Introduction Volume 35 ; 35 >
+      au < exists ; 978-1-84855-020-9 ; 2008 ; Microvariation in Syntactic Doubling Volume 36 ; 36 >
+      au < exists ; 978-1-78052-374-3 ; 2011 ; Experiments at the Interfaces Volume 37 ; 37 >
+      au < exists ; 978-1-78052-376-7 ; 2012 ; The End of Argument Structure? Volume 38 ; 38 >
+
+  }
+
+  {
+
+      title <
+        name = Technology Innovation Entrepreneurship and Competitive Strategy ;
+        issn = 1479-067X
+      >
+
+      param[journal_issn] = 1479-067X
+
+      au < exists ; 978-0-08044-457-4 ; 2004 ; Silicon Valley North Volume 9 ; 9 >
+      au < exists ; 978-0-08045-321-7 ; 2006 ; Astute Competition Volume 11 ; 11 >
+      au < exists ; 978-0-08045-099-5 ; 2007 ; The Take-off of Israeli High-Tech Entrepreneurship During the 1990s Volume 12 ; 12 >
+
+  }
+
+  {
+
+      title <
+        name = Tourism Social Science Series ;
+        issn = 1571-5043
+      >
+
+      param[journal_issn] = 1571-5043
+
+      au < exists ; 978-0-85724-683-7 ; 2012 ; Culture and Society in Tourism Contexts Volume 17 ; 17 >
+
+  }
+
+  {
+
+      title <
+        name = Transport and Sustainability ;
+        issn = 2044-9941
+      >
+
+      param[journal_issn] = 2044-9941
+
+      au < exists ; 978-1-78052-298-2 ; 2012 ; Cycling and Sustainability Volume 1 ; 1 >
+      au < exists ; 978-1-78052-440-5 ; 2012 ; Transport and Climate Change Volume 2 ; 2 >
+      au < exists ; 978-1-78190-475-6 ; 2012 ; Sustainable Transport for Chinese Cities Volume 3 ; 3 >
+
+  }
+
 }
