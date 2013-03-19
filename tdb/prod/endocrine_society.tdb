@@ -72,7 +72,7 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://endo.endojournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-      comment[notReady] = low agreement, div class="article extract-view" & ul class="copyright-statement"
+      comment[notReady] = .full.pdf+html not sync
 
       au < HighWirePressH20Plugin ; released ; 1917 ; Endocrinology Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 1918 ; Endocrinology Volume 2 ; 2 >
@@ -99,7 +99,7 @@
       au < HighWirePressH20Plugin ; released ; 1938 ; Endocrinology Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; released ; 1939 ; Endocrinology Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 1939 ; Endocrinology Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; notReady ; 1940 ; Endocrinology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; ready ; 1940 ; Endocrinology Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; released ; 1940 ; Endocrinology Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; notReady ; 1941 ; Endocrinology Volume 28 ; 28 >
       au < HighWirePressH20Plugin ; released ; 1941 ; Endocrinology Volume 29 ; 29 >
