@@ -348,7 +348,8 @@
     
     param[journal_id] = jms
 
-    au < released ; 2012 ; Journal of Management and Sustainability Volume 2 ; 2; 2012 >
+    au < released ; 2012 ; Journal of Management and Sustainability Volume 2 ; 2 ; 2012 >
+    au < expected ; 2013 ; Journal of Management and Sustainability Volume 3 ; 3 ; 2013 >
   }
   
   {
@@ -365,6 +366,7 @@
     au < released ; 2010 ; Journal of Mathematics Research Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Journal of Mathematics Research Volume 3 ; 3 ; 2011 >
     au < released ; 2012 ; Journal of Mathematics Research Volume 4 ; 4 ; 2012 >
+    au < expected ; 2013 ; Journal of Mathematics Research Volume 5 ; 5 ; 2013 >
   }
   
   {
@@ -379,6 +381,7 @@
     comment[jmbr] = no issues as of 20110615
 
     au < released ; 2012 ; Journal of Molecular Biology Research Volume 1 ; 1 ; 2012 >
+    au < expected ; 2013 ; Journal of Molecular Biology Research Volume 2 ; 2 ; 2013 >
 
   }
   
@@ -397,6 +400,7 @@
     au < released ; 2010 ; Journal of Politics and Law Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; Journal of Politics and Law Volume 4 ; 4 ; 2011 >
     au < released ; 2012 ; Journal of Politics and Law Volume 5 ; 5 ; 2012 >
+    au < expected ; 2013 ; Journal of Politics and Law Volume 6 ; 6 ; 2013 >
   }
   
   {
@@ -414,6 +418,7 @@
     au < released ; 2010 ; Journal of Sustainable Development Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; Journal of Sustainable Development Volume 4 ; 4 ; 2011 >
     au < released ; 2012 ; Journal of Sustainable Development Volume 5 ; 5 ; 2012 >
+    au < expected ; 2013 ; Journal of Sustainable Development Volume 6 ; 6 ; 2013 >
   }
   
   {
@@ -432,6 +437,7 @@
     au < released ; 2010 ; Modern Applied Science Volume 4 ; 4 ; 2010 >
     au < released ; 2011 ; Modern Applied Science Volume 5 ; 5 ; 2011 >
     au < released ; 2012 ; Modern Applied Science Volume 6 ; 6 ; 2012 >
+    au < expected ; 2013 ; Modern Applied Science Volume 7 ; 7 ; 2013 >
   }
   
   {
@@ -448,6 +454,7 @@
     au < released ; 2010 ; Review of European Studies Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Review of European Studies Volume 3 ; 3 ; 2011 >
     au < released ; 2012 ; Review of European Studies Volume 4 ; 4 ; 2012 >
+    au < expected ; 2013 ; Review of European Studies Volume 5 ; 5 ; 2013 >
   }
   
 }
