@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.1 2012-12-07 07:16:06 fergaloy-sf Exp $
+ * $Id: MetadataManagerStatusAccessor.java,v 1.2 2013-03-19 20:20:30 pgust Exp $
  */
 
 /*
@@ -31,14 +31,12 @@
  */
 package org.lockss.metadata;
 
-import static org.lockss.metadata.MetadataManager.*;
 import java.util.ArrayList;
-import java.util.BitSet;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.lockss.daemon.status.ColumnDescriptor;
-import org.lockss.daemon.status.OverviewAccessor;
 import org.lockss.daemon.status.StatusAccessor;
 import org.lockss.daemon.status.StatusService.NoSuchTableException;
 import org.lockss.daemon.status.StatusTable;
@@ -46,13 +44,11 @@ import org.lockss.metadata.MetadataManager.ReindexingStatus;
 import org.lockss.state.ArchivalUnitStatus;
 import org.lockss.util.CatalogueOrderComparator;
 import org.lockss.util.ListUtil;
-import org.lockss.util.StringUtil;
 import org.lockss.util.TimeBase;
 
 /**
- * This class is the StatusAccessor for the MetadataManager.
- * It also implements an OverviewAccessor to display on the 
- * main deamon status page.
+ * This class displays the MetadataManager status for the current
+ * and most recently run indexing operations.
  * 
  * @author Philip Gust
  * @version 1.0
@@ -145,26 +141,40 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         ColumnDescriptor.TYPE_INT,
         successfulOps));
 
-    res.add(new StatusTable.SummaryInfo(
+    if (failedOps > 0) {
+      res.add(new StatusTable.SummaryInfo(
         "Failed/Rescheduled Indexing Operations",
         ColumnDescriptor.TYPE_INT,
-        failedOps));
+        new StatusTable.Reference(failedOps,
+            MetadataManager.METADATA_STATUS_ERROR_TABLE_NAME)));
+    } else {
+      res.add(new StatusTable.SummaryInfo(
+          "Failed/Rescheduled Indexing Operations",
+          ColumnDescriptor.TYPE_INT,
+          failedOps));
+    }
 
     res.add(new StatusTable.SummaryInfo(
         "Total Articles in Index",
         ColumnDescriptor.TYPE_INT,
         articleCount));
 
-    res.add(new StatusTable.SummaryInfo("Indexing Enabled",
-                                          ColumnDescriptor.TYPE_STRING,
-                                          indexingEnabled));
+    res.add(new StatusTable.SummaryInfo(
+        "Indexing Enabled",
+        ColumnDescriptor.TYPE_STRING,
+        indexingEnabled));
+    
     return res;
   }
 
-  private List<Map<String,Object>> getRows() {
+  List<Map<String,Object>> getRows() {
+    return getRows(metadataMgr.getReindexingTasks());
+  }
+  
+  List<Map<String,Object>> getRows(Collection<ReindexingTask> tasks) {
     List<Map<String,Object>> rows = new ArrayList<Map<String,Object>>();
     int rowNum = 0;
-    for (ReindexingTask task : metadataMgr.getReindexingTasks()) {
+    for (ReindexingTask task : tasks) {
       String auName = task.getAuName();
       String auId = task.getAuId();
       boolean auNoSubstance = task.hasNoAuSubstance();
@@ -242,7 +252,16 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
               + " article files containing substantial content were found");
           }
         }
-        row.put(INDEX_STATUS_COL_NAME, status);
+        if (task.getException() != null) {
+          row.put(INDEX_STATUS_COL_NAME,
+                  new StatusTable.Reference(status,
+                      MetadataManager.METADATA_STATUS_ERROR_INFO_TABLE_NAME,
+                      Long.toString(task.getStartTime())));
+          
+        } else {
+          row.put(INDEX_STATUS_COL_NAME, status);
+        }
+
         row.put(NUM_INDEXED_COL_NAME, numIndexed);
         row.put(NUM_UPDATED_COL_NAME, numUpdated);
 
@@ -278,47 +297,12 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
 
   @Override
   public String getDisplayName() {
-    // TODO Auto-generated method stub
     return "Metadata Indexing Status";
   }
 
   @Override
   public boolean requiresKey() {
-    // TODO Auto-generated method stub
     return false;
   }
   
-  // Sort into three groups:
-  // 1: Active, by descending start time
-  // 2: Pending, in queue order
-  // 3: Done, by descending end time
-
-  static class IndexingOverview implements OverviewAccessor {
-    final MetadataManager metadataMgr;
-    
-    public IndexingOverview(MetadataManager metadataMgr) {
-      this.metadataMgr = metadataMgr;
-    }
-
-    @Override
-    public Object getOverview(String tableName, BitSet options) {
-      List<StatusTable.Reference> res = new ArrayList<StatusTable.Reference>();
-      String s;
-      if (metadataMgr.isIndexingEnabled()) {
-        long activeCount = metadataMgr.getActiveReindexingCount();
-        long pendingCount = metadataMgr.getPendingAusCount();
-        s =   StringUtil.numberOfUnits(
-                activeCount, 
-                "active metadata indexing operation", 
-                "active metadata index operations") + ", "
-            + StringUtil.numberOfUnits(
-                pendingCount-activeCount, "pending", "pending");
-      } else {
-        s = "Metadata Indexing Disabled";
-      }
-      res.add(new StatusTable.Reference(s, METADATA_STATUS_TABLE_NAME));
-
-      return res;
-    }
-  }
 }
