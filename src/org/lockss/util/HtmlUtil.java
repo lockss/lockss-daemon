@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlUtil.java,v 1.6 2010-11-17 11:28:13 neilmayo Exp $
+ * $Id: HtmlUtil.java,v 1.7 2013-03-19 03:46:48 pgust Exp $
  */
 
 /*
@@ -159,7 +159,7 @@ public class HtmlUtil {
       if (s==null) return null;
       Perl5Matcher matcher = RegexpUtil.getMatcher();
       String res = Util.substitute(matcher, htmlTagPattern, emptySubstitution, s, Util.SUBSTITUTE_ALL);
-      return res.trim();
+      return res;
   }
 
   /**
@@ -180,7 +180,7 @@ public class HtmlUtil {
       Perl5Matcher matcher = RegexpUtil.getMatcher();
       Pattern pattern = RegexpUtil.uncheckedCompile("<"+tagName+"[^>]*>.*?</"+tagName+">");
       String res = Util.substitute(matcher, pattern, emptySubstitution, s, Util.SUBSTITUTE_ALL);
-      return res.trim();
+      return res;
   }
 
   
