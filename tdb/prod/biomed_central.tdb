@@ -2661,7 +2661,7 @@
       param[base_url] = http://www.chiromt.com/
 
       au < ready ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
-      au < testing ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
+      au < ready ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
       au < manifest ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
       }
     }
@@ -2692,10 +2692,10 @@
       
         param[base_url] = http://www.chiromt.com/
         
-        au < testing ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
+        au < ready ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
         au < ready ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
         au < testing ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
-        au < testing ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
+        au < ready ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
         au < ready ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
         au < ready ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
       
@@ -2789,9 +2789,11 @@
       param[base_url] = http://www.clinicalproteomicsjournal.com/
       param[journal_issn] = 1542-6416
       comment[moved_from] = Springer Science+Business Media in 2011
-      
+
+      comment[not_ready] = No idea why crawl keeps failing
+
       au < released ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
-      au < testing ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
+      au < notReady ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
       au < ready ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
       au < manifest ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
 
@@ -2981,13 +2983,15 @@
       param[base_url] = http://www.diagnosticpathology.org/
       param[journal_issn] = 1746-1596
 
+      comment[not_ready] = No idea why the crawl keeps failing
+
       au < released ; 2006 ; Diagnostic Pathology Volume 1 ; 1 >
       au < released ; 2007 ; Diagnostic Pathology Volume 2 ; 2 >
       au < released ; 2008 ; Diagnostic Pathology Volume 3 ; 3 >
       au < released ; 2009 ; Diagnostic Pathology Volume 4 ; 4 >
       au < released ; 2010 ; Diagnostic Pathology Volume 5 ; 5 >
       au < released ; 2011 ; Diagnostic Pathology Volume 6 ; 6 >
-      au < testing ; 2012 ; Diagnostic Pathology Volume 7 ; 7 >
+      au < notReady ; 2012 ; Diagnostic Pathology Volume 7 ; 7 >
       au < manifest ; 2013 ; Diagnostic Pathology Volume 8 ; 8 >
 
     }
@@ -3091,6 +3095,8 @@
       param[base_url] = http://www.epi-perspectives.com/
       param[journal_issn] = 1742-5573
 
+      comment[not_ready] = Seems to have unusually little content online
+
       au < released ; 2004 ; Epidemiologic Perspectives & Innovations Volume 1 ; 1 >
       au < released ; 2005 ; Epidemiologic Perspectives & Innovations Volume 2 ; 2 >
       au < released ; 2006 ; Epidemiologic Perspectives & Innovations Volume 3 ; 3 >
@@ -3099,7 +3105,7 @@
       au < released ; 2009 ; Epidemiologic Perspectives & Innovations Volume 6 ; 6 >
       au < released ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 >
       au < released ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 ; 8 >
-      au < testing ; 2012 ; Epidemiologic Perspectives & Innovations Volume 9 ; 9 >
+      au < notReady ; 2012 ; Epidemiologic Perspectives & Innovations Volume 9 ; 9 >
       au < expected ; 2013 ; Epidemiologic Perspectives & Innovations Volume 10 ; 10 >
 
     }
