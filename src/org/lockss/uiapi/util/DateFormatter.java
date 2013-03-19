@@ -1,5 +1,5 @@
 /*
- * $Id: DateFormatter.java,v 1.3 2005-10-11 05:47:56 tlipkis Exp $
+ * $Id: DateFormatter.java,v 1.4 2013-03-19 21:24:04 ldoan Exp $
  */
 
 /*
@@ -52,6 +52,13 @@ import java.text.*;
 
   public static final DateFormat Explicit =
                       new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
+  
+  public static final DateFormat w3cShort =
+                      new SimpleDateFormat("yyyy-MM-dd");
+  
+  public static final DateFormat w3cLong =
+                      new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss+hh:00");
+
 
   /**
    * Return current date/time
@@ -86,5 +93,24 @@ import java.text.*;
   public static String explicitFormat(Date date) {
     return Explicit.format(date);
   }
+  
+  /**
+   * W3C short date
+   * @param date
+   * @return <code>yyyy-MM-dd</code>
+   */
+  public static String w3cShortFormat(Date date) {
+    return w3cShort.format(date);
+  }
+  
+  /**
+   * W3C long date
+   * @param date
+   * @return <code>yyyy-MM-dd'T'HH:mm:ss+hh:00</code>
+   */
+  public static String w3cLongFormat(Date date) {
+    return w3cLong.format(date);
+  }
+  
 }
 
