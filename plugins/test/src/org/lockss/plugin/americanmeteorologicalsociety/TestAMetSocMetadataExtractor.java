@@ -1,5 +1,5 @@
 /*
- * $Id: TestAMetSocMetadataExtractor.java,v 1.1 2013-02-08 00:19:41 alexandraohlson Exp $
+ * $Id: TestAMetSocMetadataExtractor.java,v 1.2 2013-03-19 23:36:38 alexandraohlson Exp $
  */
 /*
 
@@ -42,8 +42,6 @@ import org.lockss.config.*;
 import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.aiaa.AIAAHtmlMetadataExtractorFactory;
-import org.lockss.plugin.copernicus.CopernicusRisMetadataExtractorFactory;
 import org.lockss.plugin.simulated.*;
 
 
@@ -161,7 +159,7 @@ public class TestAMetSocMetadataExtractor extends LockssTestCase {
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    FileMetadataExtractor me = new AIAAHtmlMetadataExtractorFactory.AIAAHtmlMetadataExtractor();
+    FileMetadataExtractor me = new AMetSocHtmlMetadataExtractorFactory.AMetSocHtmlMetadataExtractor();
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);

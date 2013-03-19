@@ -1,5 +1,5 @@
 /*
- * $Id: AMetSocHtmlMetadataExtractorFactory.java,v 1.2 2013-03-10 17:35:21 alexandraohlson Exp $
+ * $Id: AMetSocHtmlMetadataExtractorFactory.java,v 1.3 2013-03-19 23:36:38 alexandraohlson Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class AMetSocHtmlMetadataExtractorFactory
     private static MultiMap tagMap = new MultiValueMap();
     static {
       tagMap.put("dc.Identifier", MetadataField.DC_FIELD_IDENTIFIER);
-      tagMap.put("dc.Identifier", MetadataField.FIELD_DOI);
+
       tagMap.put("dc.Date", MetadataField.FIELD_DATE);
       tagMap.put("dc.Date", MetadataField.DC_FIELD_DATE);
       tagMap.put("dc.Creator",
