@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.333 2013-02-08 23:18:33 clairegriffin Exp $
+ $Id: build.xml,v 1.334 2013-03-19 21:10:42 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1746,7 +1746,7 @@ published on the Web. http://www.lockss.org
              verbose="false"
              overview="${src}/overview.html"
              header="${javadoc.header}"
-             bottom="Copyright &amp;copy; 2000-2010 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
+             bottom="Copyright &amp;copy; 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
 <!-- disabled until javadoc back online -->
 <!--        <link href="${ext.javadoc}/commons-collections-3.2/docs/apidocs" /> -->
@@ -1847,7 +1847,7 @@ published on the Web. http://www.lockss.org
              windowtitle="LOCKSS test classes API"
              doctitle="LOCKSS test"
              header="${javadoc.header}"
-             bottom="Copyright &amp;copy; 2000-2010 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
+             bottom="Copyright &amp;copy; 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
 <!--         <fileset dir="${test.src}" includes="**/*.java"/> -->
 <!--        <fileset dir="${test.src}" includes="**/*.java" excludes="**/Test*.java"/> -->
        <classpath refid="test.compile.classpath" />
@@ -2869,7 +2869,7 @@ optionally -Dtests= for tests to be run.
              verbose="false"
              overview="${src}/overview.html"
              header="${javadoc.header}"
-             bottom="Copyright &amp;copy; 2000-2010 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
+             bottom="Copyright &amp;copy; 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
     </javadoc>
   </target>
