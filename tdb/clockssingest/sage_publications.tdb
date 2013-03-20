@@ -31186,6 +31186,22 @@
   {
   
     title <
+      name = Scandinavian Journal of Surgery ;
+      issn = 1457-4969 ;
+      eissn = 1799-7267
+    >
+
+    param[base_url] = http://sjs.sagepub.com/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2012 ; Scandinavian Journal of Surgery Volume 101 ; 101 ; >
+    au < expected ; exists ; 2013 ; Scandinavian Journal of Surgery Volume 102 ; 102 ; >
+
+  }
+
+  {
+  
+    title <
       name = School Psychology International ;
       issn = 0143-0343 ;
       eissn = 1461-7374
