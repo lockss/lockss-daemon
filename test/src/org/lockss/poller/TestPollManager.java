@@ -1,10 +1,10 @@
 /*
- * $Id: TestPollManager.java,v 1.112 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.113 2013-03-20 03:24:04 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -481,12 +481,23 @@ public class TestPollManager extends LockssTestCase {
     pollmanager.enqueueHighPriorityPoll(aus[2], spec);
     pollmanager.pollQueue.rebuildPollQueue();
     assertEquals(aus[2], pollmanager.pollQueue.getPendingQueueAus().get(0));
+
+    // Add an auid->priority map moving mau11 and mau5 to the front.
+    ConfigurationUtil.addFromArgs(PollManager.PARAM_POLL_PRIORITY_AUID_MAP,
+				  "mau5,50.0;mau11,100");
+
+    pollmanager.pollQueue.rebuildPollQueue();
+    List exp4 = ListUtil.list(aus[11], aus[5], aus[0], aus[14], aus[12],
+			      aus[7], aus[10], aus[13], aus[15], aus[9],
+			      aus[1], aus[3]);
+    assertEquals(exp4, weightOrder());
   }
 
   List<ArchivalUnit> weightOrder() {
     final Map<ArchivalUnit,Double> weightMap =
       pollmanager.getWeightMap();
     ArrayList<ArchivalUnit> queued = new ArrayList(weightMap.keySet());
+    log.critical("weightMap: " + weightMap.toString());
     Collections.sort(queued, new Comparator<ArchivalUnit>() {
 	public int compare(ArchivalUnit au1,
 			   ArchivalUnit au2) {

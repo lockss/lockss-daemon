@@ -1,10 +1,10 @@
 /*
- * $Id: PollManager.java,v 1.265 2012-12-20 18:38:47 fergaloy-sf Exp $
+ * $Id: PollManager.java,v 1.266 2013-03-20 03:24:05 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -126,6 +126,13 @@ public class PollManager
     PREFIX + "autoPollAuClassess";
   public static final List<String> DEFAULT_AUTO_POLL_AUS =
     ListUtil.list("All");
+
+  /** Map of AUID regexp to poll weight multiplier.  If set, AU's poll
+   * weight is multiplied by the weight of the first regexp that its AUID
+   * matches.  Weight should be a flost.  This is temporary. */
+  static final String PARAM_POLL_PRIORITY_AUID_MAP =
+    PREFIX + "pollWeightAuidMap";
+  static final List DEFAULT_POLL_PRIORITY_AUID_MAP = null;
 
   // Poll starter
 
@@ -653,6 +660,8 @@ public class PollManager
   private CompoundLinearSlope v3NoAuResetIntervalCurve = null;
   private CompoundLinearSlope v3VoteRetryIntervalDurationCurve = null;
   private ReputationTransfers reputationTransfers;
+  private PatternFloatMap pollPriorityAuidMap;
+
 
   private AuPeersMap atRiskAuInstances = null;
 
@@ -1803,6 +1812,11 @@ public class PollManager
 			     DEFAULT_VOTE_RETRY_INTERVAL_DURATION_CURVE);
       }
 
+      if (changedKeys.contains(PARAM_POLL_PRIORITY_AUID_MAP)) {
+	installPollPriorityAuidMap(newConfig.getList(PARAM_POLL_PRIORITY_AUID_MAP,
+						     DEFAULT_POLL_PRIORITY_AUID_MAP));
+      }
+
       needRebuildPollQueue();
     }
     if (theRepairPolicy != null) {
@@ -1870,6 +1884,24 @@ public class PollManager
     theLog.debug(sb.toString());
     return res;
   }
+
+  /** Set up poll priority map. */
+  void installPollPriorityAuidMap(List<String> patternPairs) {
+    if (patternPairs == null) {
+      log.debug("Installing empty poll priority map");
+      pollPriorityAuidMap = PatternFloatMap.EMPTY;
+    } else {
+      try {
+	pollPriorityAuidMap = new PatternFloatMap(patternPairs);
+	log.debug("Installing poll priority map: " + pollPriorityAuidMap);
+      } catch (IllegalArgumentException e) {
+	log.error("Illegal poll priority map, ignoring", e);
+	log.error("Poll priority map unchanged, still: " +
+		  pollPriorityAuidMap);
+      }
+    }
+  }
+
 
   public Collection<PeerIdentity>
       getAllReputationsTransferredFrom(PeerIdentity pid) {
@@ -2805,6 +2837,9 @@ public class PollManager
     double weight = (double)num / (double)denom;
     if (pollWeightAtRiskPeersCurve != null) {
       weight *= pollWeightAtRiskPeersCurve.getY(numrisk);
+    }
+    if (pollPriorityAuidMap != null) {
+      weight *= pollPriorityAuidMap.getMatch(au.getAuId(), 1.0f);
     }
     return weight;
   }
