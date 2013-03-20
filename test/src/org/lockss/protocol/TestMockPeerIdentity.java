@@ -1,4 +1,8 @@
-/**
+/*
+ * $Id: TestMockPeerIdentity.java,v 1.2 2013-03-20 19:54:10 tlipkis Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
