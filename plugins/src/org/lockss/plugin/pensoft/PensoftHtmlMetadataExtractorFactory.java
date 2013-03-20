@@ -121,9 +121,7 @@ public class PensoftHtmlMetadataExtractorFactory implements
     // Map BePress-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-       //general pattern for capturing start and end page number. 
-      String pagenumpattern = "[pP\\. ]*([^-]+)(?:-(.+))?";
-      String authorpattern = ".*\\p{L}";
+
       tagMap.put("citation_author", new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(",")));
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);

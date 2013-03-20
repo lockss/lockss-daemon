@@ -125,9 +125,8 @@ public class PensoftArticleIteratorFactory
       MetadataTarget at = new MetadataTarget(MetadataTarget.PURPOSE_ARTICLE);
       ArticleMetadata am;
       SimpleHtmlMetaTagMetadataExtractor ext = new SimpleHtmlMetaTagMetadataExtractor();
-      CachedUrl xmlCu = null, htmlCu = null, pdfCu = null;
-      //List <String> fullhtml, pdf, xml;
-      String pdf, fullhtml;
+      CachedUrl htmlCu = null, pdfCu = null;
+
       if (absCu !=null && absCu.hasContent()){
         // 
         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
@@ -139,18 +138,15 @@ public class PensoftArticleIteratorFactory
           // keep entries in their raw state
 
           if (am.containsRawKey("citation_pdf_url")){
-            pdf = am.getRaw("citation_pdf_url");
-            pdfCu = au.makeCachedUrl(pdf);
+            pdfCu = au.makeCachedUrl(am.getRaw("citation_pdf_url"));
             af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
             af.setFullTextCu(pdfCu);
           }
           
           // get the fulltexthtml url as a list:string from the metadata
           if (am.containsRawKey("citation_fulltext_html_url")){
-            fullhtml = am.getRaw("citation_fulltext_html_url");
-            htmlCu = au.makeCachedUrl(fullhtml);
+            htmlCu = au.makeCachedUrl(am.getRaw("citation_fulltext_html_url"));
             af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-            af.setFullTextCu(htmlCu);
           } 
                     
         } catch (IOException e) {

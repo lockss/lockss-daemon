@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -25,7 +25,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -40,11 +40,16 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Pensoft Publishers Plugin, Base URL %s, Journal %s, Issues %s", base_url, journal_name, issue_set</string>
+    <string>"Pensoft Publishers Plugin, Base URL %s, Journal %s, Year %d", base_url, journal_name, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sjournals/%s/issue/%s/", base_url, journal_name, issue_set</string>
+    <!--<string>"%sjournals/%s/issue/%s/", base_url, journal_name, issue_set</string>-->
+    <string>"%sjournals/%s/archive?year=%d", base_url, journal_name, year</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string> "%s", base_url</string>
   </entry>
   
   <entry>
@@ -64,19 +69,22 @@
       </entry>
     </map>
   </entry>
+<!-- example of pdfs: 
+      http://www.pensoft.net/inc/journals/download.php?fileId=3070&fileTable=J_GALLEYS 
+      http://www.pensoft.net/J_FILES/10/articles/1100/1100-G-3-layout.pdf
+    examples of abstract|article: 
+      http://www.pensoft.net/journals/compcytogen/article/1141/abstract/cytogenetic-characterization-of-three-balistoidea-fish-species-from-the-atlantic-with-inferences-on-chromosomal-evolutio 
+      http://www.pensoft.net/journals/compcytogen/article/1730
+    example of jpg: 
+      http://www.pensoft.net/J_FILES/1317222993JHR-22-cover-temp-110.jpg
+-->  
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^%sjournals/%s/issue/%s/", base_url, journal_name, issue_set</string>
-      <!-- example of pdfs: http://www.pensoft.net/inc/journals/download.php?fileId=3070&fileTable=J_GALLEYS 
-           http://www.pensoft.net/J_FILES/10/articles/1100/1100-G-3-layout.pdf  -->
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>1,"^%sjournals/%s/issue/", base_url, journal_name</string>
       <string>1,"^%sinc/journals/", base_url</string> 
-      <!-- examples of abstract|article: 
-      http://www.pensoft.net/journals/compcytogen/article/1141/abstract/cytogenetic-characterization-of-three-balistoidea-fish-species-from-the-atlantic-with-inferences-on-chromosomal-evolutio 
-      http://www.pensoft.net/journals/compcytogen/article/1730
-      -->
       <string>1,"^%sjournals/%s/article/", base_url, journal_name</string>
-      <!-- example of jpg: http://www.pensoft.net/J_FILES/1317222993JHR-22-cover-temp-110.jpg -->
       <string>1, "^%sJ_FILES/", base_url</string>
       <string>4,"^%s", base_url</string>
     </list>
@@ -111,6 +119,16 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>   
+      <!--   
+      <org.lockss.daemon.ConfigParamDescr>
         <key>issue_set</key>
         <displayName>Issue Set</displayName>
         <description>A comma delimited list of issues with optional numeric range. (eg issue1, issue2[, {min-max}]*)</description>
@@ -118,11 +136,12 @@
         <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>    
+      </org.lockss.daemon.ConfigParamDescr>   
+      --> 
     </list>
   </entry>
   <entry>
-    <string>plugin_html_crawlfilter_factory</string>
+    <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.pensoft.PensoftHtmlCrawlFilterFactory</string>
   </entry>
 
