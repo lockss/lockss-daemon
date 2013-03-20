@@ -146,6 +146,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 2047-7724
     comment[dnp] = no manifest pages and html pending plugin workaround or publisher fix
+    comment[dnp1] = no manifest page found on 3/20/2013
 
     au < doNotProcess ; 2002 ; Annals of Tropical Medicine and Parasitology Volume 96 ; 96 > 
     au < doNotProcess ; 2003 ; Annals of Tropical Medicine and Parasitology Volume 97 ; 97 > 
@@ -181,6 +182,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 2046-9047 
     comment[dnp] = no manifest pages and html pending plugin workaround or publisher fix
+    comment[dnp1] = no manifest page found on 3/20/2013
 
     au < doNotProcess ; 2002 ; Annals of Tropical Paediatrics: International Child Health Volume 22 ; 22 > 
     au < doNotProcess ; 2003 ; Annals of Tropical Paediatrics: International Child Health Volume 23 ; 23 > 
