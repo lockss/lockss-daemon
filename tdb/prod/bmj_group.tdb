@@ -1504,7 +1504,9 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
   {
 
       title <
-        name = Journal of the Royal Army Medical Corps - BMJ Journals 
+        name = Journal of the Royal Army Medical Corps ;
+        issn = 0035-8665 ;
+        eissn = 2052-0468
     >
 
     {
@@ -1533,6 +1535,23 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < manifest ; 1912 ; Journal of the Royal Army Medical Corps Volume 18 ; 18 >
       au < manifest ; 1912 ; Journal of the Royal Army Medical Corps Volume 19 ; 19 >
       au < manifest ; 1913 ; Journal of the Royal Army Medical Corps Volume 20 ; 20 >
+      au < manifest ; 1913 ; Journal of the Royal Army Medical Corps Volume 21 ; 21 >
+      au < manifest ; 1914 ; Journal of the Royal Army Medical Corps Volume 22 ; 22 >
+      au < manifest ; 1914 ; Journal of the Royal Army Medical Corps Volume 23 ; 23 >
+      au < manifest ; 1915 ; Journal of the Royal Army Medical Corps Volume 24 ; 24 >
+      au < manifest ; 1915 ; Journal of the Royal Army Medical Corps Volume 25 ; 25 >
+      au < manifest ; 1916 ; Journal of the Royal Army Medical Corps Volume 26 ; 26 >
+      au < manifest ; 1916 ; Journal of the Royal Army Medical Corps Volume 27 ; 27 >
+      au < manifest ; 1917 ; Journal of the Royal Army Medical Corps Volume 28 ; 28 >
+      au < manifest ; 1917 ; Journal of the Royal Army Medical Corps Volume 29 ; 29 >
+      au < manifest ; 1918 ; Journal of the Royal Army Medical Corps Volume 30 ; 30 >
+      au < manifest ; 1918 ; Journal of the Royal Army Medical Corps Volume 31 ; 31 >
+      au < manifest ; 1919 ; Journal of the Royal Army Medical Corps Volume 32 ; 32 >
+      au < manifest ; 1919 ; Journal of the Royal Army Medical Corps Volume 33 ; 33 >
+      au < manifest ; 1920 ; Journal of the Royal Army Medical Corps Volume 34 ; 34 >
+      au < manifest ; 1920 ; Journal of the Royal Army Medical Corps Volume 35 ; 35 >
+      au < manifest ; 1921 ; Journal of the Royal Army Medical Corps Volume 36 ; 36 >
+      au < manifest ; 1921 ; Journal of the Royal Army Medical Corps Volume 37 ; 37 >
 
     }
     
