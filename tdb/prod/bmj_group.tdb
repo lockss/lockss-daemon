@@ -1502,6 +1502,43 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
   }
 
   {
+
+      title <
+        name = Journal of the Royal Army Medical Corps - BMJ Journals 
+    >
+
+    {
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://jramc.bmj.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < manifest ; 1903 ; Journal of the Royal Army Medical Corps Volume 1 ; 1 >
+      au < manifest ; 1904 ; Journal of the Royal Army Medical Corps Volume 2 ; 2 >
+      au < manifest ; 1904 ; Journal of the Royal Army Medical Corps Volume 3 ; 3 >
+      au < manifest ; 1905 ; Journal of the Royal Army Medical Corps Volume 4 ; 4 >
+      au < manifest ; 1905 ; Journal of the Royal Army Medical Corps Volume 5 ; 5 >
+      au < manifest ; 1906 ; Journal of the Royal Army Medical Corps Volume 6 ; 6 >
+      au < manifest ; 1906 ; Journal of the Royal Army Medical Corps Volume 7 ; 7 >
+      au < manifest ; 1907 ; Journal of the Royal Army Medical Corps Volume 8 ; 8 >
+      au < manifest ; 1907 ; Journal of the Royal Army Medical Corps Volume 9 ; 9 >
+      au < manifest ; 1908 ; Journal of the Royal Army Medical Corps Volume 10 ; 10 >
+      au < manifest ; 1908 ; Journal of the Royal Army Medical Corps Volume 11 ; 11 >
+      au < manifest ; 1909 ; Journal of the Royal Army Medical Corps Volume 12 ; 12 >
+      au < manifest ; 1909 ; Journal of the Royal Army Medical Corps Volume 13 ; 13 >
+      au < manifest ; 1910 ; Journal of the Royal Army Medical Corps Volume 14 ; 14 >
+      au < manifest ; 1910 ; Journal of the Royal Army Medical Corps Volume 15 ; 15 >
+      au < manifest ; 1911 ; Journal of the Royal Army Medical Corps Volume 16 ; 16 >
+      au < manifest ; 1911 ; Journal of the Royal Army Medical Corps Volume 17 ; 17 >
+      au < manifest ; 1912 ; Journal of the Royal Army Medical Corps Volume 18 ; 18 >
+      au < manifest ; 1912 ; Journal of the Royal Army Medical Corps Volume 19 ; 19 >
+      au < manifest ; 1913 ; Journal of the Royal Army Medical Corps Volume 20 ; 20 >
+
+    }
+    
+  }
+  
+  {
     title <
       name = Medical Humanities ;
       issn = 1468-215X ;
