@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleFiles.java,v 1.9 2013-03-20 01:01:33 alexandraohlson Exp $
+ * $Id: ArticleFiles.java,v 1.10 2013-03-20 05:36:15 thib_gc Exp $
  */
 
 /*
@@ -80,7 +80,11 @@ public class ArticleFiles {
   public static final String ROLE_FULL_TEXT_HTML = "FullTextHtml";
   
   /** Role for the CU representing the article's full text XML */
-  public static final String ROLE_FULL_TEXT_XML = "FullTextXML";
+  public static final String ROLE_FULL_TEXT_XML = "FullTextXml";
+  
+  /** Role for the CU representing the article's full text EPUB
+   * @since 1.60 */
+  public static final String ROLE_FULL_TEXT_EPUB = "FullTextEpub";
   
   /** Role for the CU representing an HTML page containing or
    * otherwise linking to the article's full text HTML, if
