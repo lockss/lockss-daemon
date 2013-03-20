@@ -1,10 +1,10 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.18 2012-08-21 08:36:15 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.19 2013-03-20 05:30:16 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +38,6 @@ import java.util.regex.*;
 import org.lockss.util.*;
 import org.lockss.util.Constants.RegexpContext;
 import org.lockss.daemon.*;
-import org.lockss.plugin.base.*;
 import org.lockss.extractor.*;
 
 
@@ -51,7 +50,7 @@ import org.lockss.extractor.*;
  */
 public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   
-  static Logger log = Logger.getLogger("SubTreeArticleIterator");
+  static Logger log = Logger.getLogger(SubTreeArticleIterator.class);
   
   /** Specification of the CachedUrls the iterator should return.  Setters
    * are chained. */
@@ -384,7 +383,7 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     }
   }
 
-  /** Encapsulates the varies ways to specifiy a pattern (as a compiled
+  /** Encapsulates the various ways to specifiy a pattern (as a compiled
    * Pattern, a printf template, or a template and compilation flags */
   static class PatSpec {
     private Pattern pat;
@@ -697,4 +696,5 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   public void remove() {
     throw new UnsupportedOperationException("Not implemented");
   }
+  
 }
