@@ -1277,7 +1277,7 @@
       au < HighWirePressH20Plugin ; notReady ; 1985 ; Journal of Health Politics, Policy and Law Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; ready ; 1986 ; Journal of Health Politics, Policy and Law Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; ready ; 1987 ; Journal of Health Politics, Policy and Law Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; testing ; 1988 ; Journal of Health Politics, Policy and Law Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; ready ; 1988 ; Journal of Health Politics, Policy and Law Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; ready ; 1989 ; Journal of Health Politics, Policy and Law Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; ready ; 1990 ; Journal of Health Politics, Policy and Law Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of Health Politics, Policy and Law Volume 16 ; 16 >
@@ -1409,7 +1409,7 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
       au < HighWirePressH20Plugin ; ready ; 2000 ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Medieval and Early Modern Studies Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; ready ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 ; 34 >
@@ -1453,7 +1453,7 @@
       au < HighWirePressH20Plugin ; ready ; 2008 ; Journal of Music Theory Volume 52 ; 52 >
       au < HighWirePressH20Plugin ; ready ; 2009 ; Journal of Music Theory Volume 53 ; 53 >
       au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Music Theory Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Music Theory Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Music Theory Volume 55 ; 55 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Music Theory Volume 56 ; 56 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Music Theory Volume 57 ; 57 >
 
@@ -1574,7 +1574,7 @@
       
       au < HighWirePressH20Plugin ; ready ; 2000 ; Mediterranean Quarterly Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; ready ; 2001 ; Mediterranean Quarterly Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; Mediterranean Quarterly Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; ready ; 2002 ; Mediterranean Quarterly Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; ready ; 2003 ; Mediterranean Quarterly Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; ready ; 2004 ; Mediterranean Quarterly Volume 15 ; 15 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Mediterranean Quarterly Volume 16 ; 16 >
@@ -1727,18 +1727,18 @@
       param[base_url] = http://mlq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; testing ; 1940 ; MLQ: Modern Language Quarterly Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 1941 ; MLQ: Modern Language Quarterly Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; testing ; 1942 ; MLQ: Modern Language Quarterly Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; testing ; 1943 ; MLQ: Modern Language Quarterly Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; ready ; 1940 ; MLQ: Modern Language Quarterly Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; ready ; 1941 ; MLQ: Modern Language Quarterly Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 1942 ; MLQ: Modern Language Quarterly Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; ready ; 1943 ; MLQ: Modern Language Quarterly Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; testing ; 1944 ; MLQ: Modern Language Quarterly Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; testing ; 1945 ; MLQ: Modern Language Quarterly Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; testing ; 1946 ; MLQ: Modern Language Quarterly Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; testing ; 1947 ; MLQ: Modern Language Quarterly Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; testing ; 1948 ; MLQ: Modern Language Quarterly Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; ready ; 1945 ; MLQ: Modern Language Quarterly Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; ready ; 1946 ; MLQ: Modern Language Quarterly Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; ready ; 1947 ; MLQ: Modern Language Quarterly Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; ready ; 1948 ; MLQ: Modern Language Quarterly Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; testing ; 1949 ; MLQ: Modern Language Quarterly Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; testing ; 1950 ; MLQ: Modern Language Quarterly Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; testing ; 1951 ; MLQ: Modern Language Quarterly Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; ready ; 1951 ; MLQ: Modern Language Quarterly Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; testing ; 1952 ; MLQ: Modern Language Quarterly Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; testing ; 1953 ; MLQ: Modern Language Quarterly Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; testing ; 1954 ; MLQ: Modern Language Quarterly Volume 15 ; 15 >
@@ -1749,46 +1749,46 @@
       au < HighWirePressH20Plugin ; testing ; 1959 ; MLQ: Modern Language Quarterly Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; testing ; 1960 ; MLQ: Modern Language Quarterly Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; testing ; 1961 ; MLQ: Modern Language Quarterly Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; testing ; 1962 ; MLQ: Modern Language Quarterly Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; ready ; 1962 ; MLQ: Modern Language Quarterly Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; testing ; 1963 ; MLQ: Modern Language Quarterly Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; testing ; 1964 ; MLQ: Modern Language Quarterly Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; testing ; 1965 ; MLQ: Modern Language Quarterly Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; testing ; 1966 ; MLQ: Modern Language Quarterly Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; ready ; 1966 ; MLQ: Modern Language Quarterly Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; testing ; 1967 ; MLQ: Modern Language Quarterly Volume 28 ; 28 >
       au < HighWirePressH20Plugin ; testing ; 1968 ; MLQ: Modern Language Quarterly Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; testing ; 1969 ; MLQ: Modern Language Quarterly Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; testing ; 1970 ; MLQ: Modern Language Quarterly Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; testing ; 1971 ; MLQ: Modern Language Quarterly Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; ready ; 1970 ; MLQ: Modern Language Quarterly Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; ready ; 1971 ; MLQ: Modern Language Quarterly Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; testing ; 1972 ; MLQ: Modern Language Quarterly Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; testing ; 1973 ; MLQ: Modern Language Quarterly Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; testing ; 1974 ; MLQ: Modern Language Quarterly Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; ready ; 1974 ; MLQ: Modern Language Quarterly Volume 35 ; 35 >
       au < HighWirePressH20Plugin ; testing ; 1975 ; MLQ: Modern Language Quarterly Volume 36 ; 36 >
       au < HighWirePressH20Plugin ; testing ; 1976 ; MLQ: Modern Language Quarterly Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; testing ; 1977 ; MLQ: Modern Language Quarterly Volume 38 ; 38 >
-      au < HighWirePressH20Plugin ; testing ; 1978 ; MLQ: Modern Language Quarterly Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; ready ; 1977 ; MLQ: Modern Language Quarterly Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; ready ; 1978 ; MLQ: Modern Language Quarterly Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; testing ; 1979 ; MLQ: Modern Language Quarterly Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; testing ; 1980 ; MLQ: Modern Language Quarterly Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; ready ; 1980 ; MLQ: Modern Language Quarterly Volume 41 ; 41 >
       au < HighWirePressH20Plugin ; testing ; 1981 ; MLQ: Modern Language Quarterly Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; testing ; 1982 ; MLQ: Modern Language Quarterly Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; testing ; 1983 ; MLQ: Modern Language Quarterly Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; ready ; 1982 ; MLQ: Modern Language Quarterly Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; ready ; 1983 ; MLQ: Modern Language Quarterly Volume 44 ; 44 >
       au < HighWirePressH20Plugin ; testing ; 1984 ; MLQ: Modern Language Quarterly Volume 45 ; 45 >
       au < HighWirePressH20Plugin ; testing ; 1985 ; MLQ: Modern Language Quarterly Volume 46 ; 46 >
       au < HighWirePressH20Plugin ; testing ; 1986 ; MLQ: Modern Language Quarterly Volume 47 ; 47 >
       au < HighWirePressH20Plugin ; testing ; 1987 ; MLQ: Modern Language Quarterly Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; testing ; 1988 ; MLQ: Modern Language Quarterly Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; testing ; 1989 ; MLQ: Modern Language Quarterly Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; ready ; 1988 ; MLQ: Modern Language Quarterly Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; ready ; 1989 ; MLQ: Modern Language Quarterly Volume 50 ; 50 >
       au < HighWirePressH20Plugin ; testing ; 1990 ; MLQ: Modern Language Quarterly Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; testing ; 1991 ; MLQ: Modern Language Quarterly Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; ready ; 1991 ; MLQ: Modern Language Quarterly Volume 52 ; 52 >
       au < HighWirePressH20Plugin ; testing ; 1992 ; MLQ: Modern Language Quarterly Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; testing ; 1993 ; MLQ: Modern Language Quarterly Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; testing ; 1994 ; MLQ: Modern Language Quarterly Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; testing ; 1995 ; MLQ: Modern Language Quarterly Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; ready ; 1993 ; MLQ: Modern Language Quarterly Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; ready ; 1994 ; MLQ: Modern Language Quarterly Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; ready ; 1995 ; MLQ: Modern Language Quarterly Volume 56 ; 56 >
       au < HighWirePressH20Plugin ; testing ; 1996 ; MLQ: Modern Language Quarterly Volume 57 ; 57 >
       au < HighWirePressH20Plugin ; testing ; 1997 ; MLQ: Modern Language Quarterly Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; testing ; 1998 ; MLQ: Modern Language Quarterly Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; ready ; 1998 ; MLQ: Modern Language Quarterly Volume 59 ; 59 >
       au < HighWirePressH20Plugin ; testing ; 1999 ; MLQ: Modern Language Quarterly Volume 60 ; 60 >
       au < HighWirePressH20Plugin ; testing ; 2000 ; MLQ: Modern Language Quarterly Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; MLQ: Modern Language Quarterly Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; MLQ: Modern Language Quarterly Volume 62 ; 62 >
       au < HighWirePressH20Plugin ; testing ; 2002 ; MLQ: Modern Language Quarterly Volume 63 ; 63 >
       au < HighWirePressH20Plugin ; testing ; 2003 ; MLQ: Modern Language Quarterly Volume 64 ; 64 >
       au < HighWirePressH20Plugin ; testing ; 2004 ; MLQ: Modern Language Quarterly Volume 65 ; 65 >
