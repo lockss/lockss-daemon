@@ -1,0 +1,736 @@
+/*
+ * $Id: SubTreeArticleIteratorBuilder.java,v 1.1 2013-03-20 05:37:12 thib_gc Exp $
+ */
+
+/*
+
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
+package org.lockss.plugin;
+
+import java.util.*;
+import java.util.regex.*;
+
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.plugin.SubTreeArticleIteratorBuilder.BuildableSubTreeArticleIterator.Aspect;
+import org.lockss.util.Logger;
+
+/**
+ * <p>
+ * This utility class can programmatically assemble an article iterator
+ * based on the {@link SubTreeArticleIterator} class, using building
+ * blocks called aspects. Though the builder can only express certain categories
+ * of article iterators, it can create subtree article iterators for many
+ * scenarios involving pattern-matching among the URLs found in the archival
+ * unit (AU).
+ * </p>
+ * <p>
+ * Article iterators returned by this builder follow the following general work
+ * flow.
+ * </p>
+ * <ul>
+ * <li>
+ * First potential URLs of interest are enumerated by means of a subtree article
+ * iterator ({@link SubTreeArticleIterator}) and its specification (
+ * {@link SubTreeArticleIterator.Spec}) and passed to a custom implementation of
+ * {@link SubTreeArticleIterator#createArticleFiles(CachedUrl)}.
+ * </li>
+ * <li>
+ * Then the buildable iterator considers a sequence of article aspects in the
+ * order they were declared by the client. The first aspect that recognizes the
+ * CU using one or more patterns ({@link Pattern}), which produces a matcher 
+ * ({@link Matcher}), is selected for further consideration.
+ * </li>
+ * <li>
+ * The aspect queries prior aspects in the sequence to see if the AU contains a
+ * CU that they recognize as corresponding to this article. They do this by
+ * applying one or more replacement strings to the matcher, yielding new URL
+ * strings that can be used to test the presence or absence of a CU in the AU.
+ * If a prior aspect indicates that it recognizes a CU of its own, the aspect
+ * currently under consideration defers to the prior aspect and does not emit an
+ * {@link ArticleFiles} instance for this article.
+ * </li>
+ * <li>
+ * If there are no prior aspects recognizing this article, the aspect under
+ * consideration has the responsibility of emitting an {@link ArticleFiles}
+ * instance for it. It sets the current CU as the full text CU for the article,
+ * and gives it any other roles the client defined it should set. Then it
+ * queries later aspects in the sequence to see if they recognize CUs in the AU
+ * corresponding to this article too. Those that do are asked to set these CUs
+ * as the values for additional roles as defined by the client. During this
+ * process, sequence order prevails; the value of a role, if already set, is not
+ * overwritten.
+ * </li>
+ * <li>
+ * Finally, for those roles whose value is set to that of existing roles in an
+ * order other than aspect order, the client can define such custom orders,
+ * which are applied at the end. This can even apply to the CU designated as the
+ * article's full text CU (in which case that capability is not exercised by the
+ * designated aspect).
+ * </li>
+ * </ul>
+ * <p>
+ * In the jargon of this builder, aspects that define one or more patterns to
+ * match CUs directly from the subtree article iterator are referred to as
+ * "major" and aspects that only recognize additional URLs by matcher
+ * replacement are referred to as "minor".
+ * </p>
+ * <p>
+ * A typical buildable iterator defines one or more major aspects followed by
+ * zero or more minor aspects. The major aspects are intended to pinpoint the
+ * full text CU and the minor aspects ancillary views or components of the
+ * article. The order of major aspects matters.
+ * </p>
+ * <p>
+ * The patterns defined by major aspects and the matcher replacements defined by
+ * all aspects need to be "compatible". That is, they need to be able to agree
+ * on what groups are matched by the various patterns so that the various
+ * matcher replacements can generate the necessary substitute URLs.
+ * </p>
+ * <p>
+ * Examples follow.
+ * </p>
+ * <p>
+ * Site A uses a plugin that defines a <code>base_url</code>, a
+ * <code>journal_id</code> and a <code>volume_name</code> as parameters. Volume
+ * 123 of the Journal of ABC might have the following full text HTML URLs:
+ * </p>
+ * <pre>
+http://www.example.com/content/jabc/v123/i1/95.html
+http://www.example.com/content/jabc/v123/i1/98.html
+http://www.example.com/content/jabc/v123/i1/101.html
+...
+</pre>
+ * <p>
+ * It might also have the following full text PDF URLs:
+ * </p>
+ * <pre>
+http://www.example.com/cgi-bin/download?jid=jabc&vol=123&iss=1&page=95
+http://www.example.com/cgi-bin/download?jid=jabc&vol=123&iss=1&page=101
+http://www.example.com/cgi-bin/download?jid=jabc&vol=123&iss=1&page=104
+...
+</pre>
+ * <p>
+ * An article can have either or both types of full text URLs. If it has both,
+ * HTML is preferred over PDF to be the designated full text CU. A buildable
+ * article iterator for this plugin might look like this:
+ * </p>
+ * <pre>
+    class ArticleIteratorFactoryA implements ArticleIteratorFactory {
+      public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+        SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+        builder.setSpec(target,
+                        Arrays.asList("\"%s%s/v%s/\", base_url, journal_id, volume_name",
+                                      "\"%scgi-bin/\", base_url"),
+                        "\"^%s(%s/v%s/i[^/]+/\\d+\\.html|cgi-bin/download\\?jid=%s&vol=%s&iss=[^&]+&page=\\d+)$\", base_url, journal_id, volume_name, base_url, journal_id, volume_name",
+                        Pattern.CASE_INSENSITIVE);
+        builder.addAspect(Pattern.compile("/([^/]+)/v([^/]+)/i([^/]+)/([^/]+)\\.html$", Pattern.CASE_INSENSITIVE),
+                          "/$1/v$2/i$3/$4.html",
+                          ArticleFiles.ROLE_FULL_TEXT_HTML);
+        builder.addAspect(Pattern.compile("/cgi-bin/download?jid=([^&]+)&vol=([^&]+)&iss=([^&]+)&page=([^&]+)$", Pattern.CASE_INSENSITIVE),
+                          "/cgi-bin/download?jid=$1&vol=$2&iss=$3&page=$4",
+                          ArticleFiles.ROLE_FULL_TEXT_PDF);
+        return builder.getSubTreeArticleIterator();
+      }
+    }
+</pre>
+ * <p>
+ * Site B is just like site A, except in Site B it is guaranteed that all
+ * articles have a full text PDF URL. The buildable article iterator for Site A
+ * would work fine, but one could also do this:
+ * </p>
+ * <pre>
+    class ArticleIteratorFactoryB implements ArticleIteratorFactory {
+      public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+        SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+        builder.setSpec(target,
+                        "\"%scgi-bin/\", base_url",
+                        "\"^%scgi-bin/download\\?jid=%s&vol=%s&iss=[^&]+&page=\\d+$\", base_url, journal_id, volume_name",
+                        Pattern.CASE_INSENSITIVE);
+        builder.addAspect(Pattern.compile("/cgi-bin/download?jid=([^&]+)&vol=([^&]+)&iss=([^&]+)&page=([^&]+)$", Pattern.CASE_INSENSITIVE),
+                          "/cgi-bin/download?jid=$1&vol=$2&iss=$3&page=$4",
+                          ArticleFiles.ROLE_FULL_TEXT_PDF);
+        builder.addAspect("/$1/v$2/i$3/$4.html",
+                          ArticleFiles.ROLE_FULL_TEXT_HTML);
+        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML,
+                                     ArticleFiles.ROLE_FULL_TEXT_PDF);
+        return builder.getSubTreeArticleIterator();
+      }
+    }
+</pre>
+ * <p>
+ * Site C is like Site A, except articles may also have an optional abstract
+ * page, at URLs like these:
+ * </p>
+ * <pre>
+http://www.example.com/content/jabc/v123/i1/95-abstract.html
+http://www.example.com/content/jabc/v123/i1/98-abstract.html
+http://www.example.com/content/jabc/v123/i1/104-abstract.html
+...
+</pre>
+ * <p>
+ * If either the full text HTML URL or the abstract URL is present, one would
+ * like them to be the value of {@link ArticleFiles#ROLE_ARTICLE_METADATA},
+ * because both contain metadata for the article. One way to do this is:
+ * </p>
+ * <pre>
+    class ArticleIteratorFactoryC1 implements ArticleIteratorFactory {
+      public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+        SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+        builder.setSpec(target,
+                        Arrays.asList("\"%s%s/v%s/\", base_url, journal_id, volume_name",
+                                      "\"%scgi-bin/\", base_url"),
+                        "\"^%s(%s/v%s/i[^/]+/\\d+\\.html|cgi-bin/download\\?jid=%s&vol=%s&iss=[^&]+&page=\\d+)$\", base_url, journal_id, volume_name, base_url, journal_id, volume_name");
+        builder.addAspect(Pattern.compile("/([^/]+)/v([^/]+)/i([^/]+)/([^/]+)\\.html$", Pattern.CASE_INSENSITIVE),
+                          "/$1/v$2/i$3/$4.html",
+                          ArticleFiles.ROLE_FULL_TEXT_HTML,
+                          ArticleFiles.ROLE_ARTICLE_METADATA);
+        builder.addAspect(Pattern.compile("/cgi-bin/download?jid=([^&]+)&vol=([^&]+)&iss=([^&]+)&page=([^&]+)$", Pattern.CASE_INSENSITIVE),
+                          "/cgi-bin/download?jid=$1&vol=$2&iss=$3&page=$4",
+                          ArticleFiles.ROLE_FULL_TEXT_PDF);
+        builder.addAspect("/$1/v$2/i$3/$4-abstract.html",
+                          ArticleFiles.ROLE_ABSTRACT,
+                          ArticleFiles.ROLE_ARTICLE_METADATA);
+        return builder.getSubTreeArticleIterator();
+      }
+    }
+</pre>
+ * <p>
+ * Extracting metadata requires parsing the HTML document. If one would favor
+ * the abstract URL over the full text HTML URL for this because abstracts are
+ * much shorter HTML documents, one can define an order for
+ * {@link ArticleFiles#ROLE_ARTICLE_METADATA}:
+ * </p>
+ * <pre>
+    class ArticleIteratorFactoryC2 implements ArticleIteratorFactory {
+      public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+        SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+        builder.setSpec(target,
+                        Arrays.asList("\"%s%s/v%s/\", base_url, journal_id, volume_name",
+                                      "\"%scgi-bin/\", base_url"),
+                        "\"^%s(%s/v%s/i[^/]+/\\d+\\.html|cgi-bin/download\\?jid=%s&vol=%s&iss=[^&]+&page=\\d+)$\", base_url, journal_id, volume_name, base_url, journal_id, volume_name",
+                        Pattern.CASE_INSENSITIVE);
+        builder.addAspect(Pattern.compile("/([^/]+)/v([^/]+)/i([^/]+)/([^/]+)\\.html$", Pattern.CASE_INSENSITIVE),
+                          "/$1/v$2/i$3/$4.html",
+                          ArticleFiles.ROLE_FULL_TEXT_HTML);
+        builder.addAspect(Pattern.compile("/cgi-bin/download?jid=([^&]+)&vol=([^&]+)&iss=([^&]+)&page=([^&]+)$", Pattern.CASE_INSENSITIVE),
+                          "/cgi-bin/download?jid=$1&vol=$2&iss=$3&page=$4",
+                          ArticleFiles.ROLE_FULL_TEXT_PDF);
+        builder.addAspect("/$1/v$2/i$3/$4-abstract.html",
+                          ArticleFiles.ROLE_ABSTRACT);
+        builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
+                                      ArticleFiles.ROLE_ABSTRACT,
+                                      ArticleFiles.ROLE_FULL_TEXT_HTML);
+        return builder.getSubTreeArticleIterator();
+      }
+    }
+</pre>
+ *
+ * @author Thib Guicherd-Callin
+ * @since 1.60
+ */
+public class SubTreeArticleIteratorBuilder {
+
+  /**
+   * <p>
+   * A programmatically buildable subtree article iterator.
+   * </p>
+   * <p>
+   * Currently this class can only be exposed by its enclosing class
+   * {@link SubTreeArticleIteratorBuilder}, but this may change in the future.
+   * </p>
+   * 
+   * @author Thib Guicherd-Callin
+   * @since 1.60
+   */
+  protected static class BuildableSubTreeArticleIterator extends SubTreeArticleIterator {
+
+    /**
+     * <p>
+     * Describes an aspect of an article, that is, one of its renditions, or
+     * components, or display structures.
+     * </p>
+     * <p>
+     * Currently this class is a non-static inner class of its enclosing class
+     * {@link BuildableSubTreeArticleIterator}, but this may change in the
+     * future.
+     * </p>
+     * 
+     * @author Thib Guicherd-Callin
+     * @since 1.60
+     */
+    protected class Aspect {
+      
+      /**
+       * This aspect's ordered matcher replacement strings.
+       * @since 1.60
+       */
+      protected List<String> matcherReplacements;
+      
+      /**
+       * This aspect's ordered patterns.
+       * @since 1.60
+       */
+      protected List<Pattern> patterns;
+      
+      /**
+       * This aspect's roles, set if it recognizes a URL.
+       * @since 1.60
+       */
+      protected List<String> roles;
+      
+      /**
+       * <p>
+       * Builds a new aspect.
+       * </p>
+       * @since 1.60
+       */
+      public Aspect() {
+        this.patterns = new ArrayList<Pattern>();
+        this.matcherReplacements = new ArrayList<String>();
+        this.roles = new ArrayList<String>();
+      }
+
+      /**
+       * <p>
+       * Determines if the given URL matches any of this aspect's patterns.
+       * </p>
+       * <p>
+       * Matching is adjudicated by {@link Matcher#find()}.
+       * </p>
+       * 
+       * @param url
+       *          A URL string.
+       * @return A {@link Matcher} corresponding to the {@link Pattern} that
+       *         matched the given URL, or <code>null</code> if none did.
+       * @since 1.60
+       */
+      public Matcher findCuAmongPatterns(String url) {
+        for (Pattern pat : patterns) {
+          Matcher mat = pat.matcher(url);
+          if (mat.find()) {
+            return mat;
+          }
+        }
+        return null;
+      }
+      
+      /**
+       * <p>
+       * Determines if the AU contains a URL corresponding to this aspect, by
+       * applying its replacement strings to the given matcher.
+       * </p>
+       * 
+       * @param matcher
+       *          A matcher for a given URL (having matched another aspect).
+       * @return A {@link CachedUrl} corresponding to a URL for a successful
+       *         matcher replacement, or <code>null</code> if no such URL exists
+       *         in the AU.
+       * @since 1.60
+       */
+      public CachedUrl findCuByPatternReplacement(Matcher matcher) {
+        CachedUrl replacedCu = null;
+        for (String matcherReplacement : matcherReplacements) {
+          replacedCu = au.makeCachedUrl(matcher.replaceFirst(matcherReplacement));
+          if (replacedCu != null) {
+            if (!replacedCu.hasContent()) {
+              AuUtil.safeRelease(replacedCu);
+              replacedCu = null;
+            }
+            break;
+          }
+        }
+        return replacedCu;
+      }
+
+      /**
+       * <p>
+       * Store the given cached URL as the value of this aspect's roles in the
+       * given {@link ArticleFiles} instance, for any roles not already set.
+       * </p>
+       * 
+       * @param af
+       *          An {@link ArticleFiles} instance.
+       * @param cu
+       *          A cached URL.
+       * @since 1.60
+       */
+      public void processRoles(ArticleFiles af, CachedUrl cu) {
+        for (String role : roles) {
+          if (af.getRoleCu(role) == null) {
+            af.setRoleCu(role, cu);
+          }
+        }
+      }
+      
+    }
+    
+    /**
+     * <p>
+     * This buildable iterator's aspects.
+     * </p>
+     * 
+     * @since 1.60
+     */
+    protected List<Aspect> aspects;
+    
+    /**
+     * <p>
+     * This aspect's ordered list of roles to be used to choose the full text
+     * CU.
+     * </p>
+     * 
+     * @since 1.60
+     */
+    protected List<String> rolesForFullText;
+    
+    /**
+     * <p>
+     * A map from a role to the ordered list of roles to be used to choose the
+     * CU associated with that role.
+     * </p>
+     * 
+     * @since 1.60
+     */
+    protected Map<String, List<String>> rolesFromOtherRoles;
+    
+    /**
+     * <p>
+     * Makes a new buildable iterator for the given AU using the given subtree
+     * article iterator specification.
+     * </p>
+     * 
+     * @param au
+     *          An archival unit.
+     * @param spec
+     *          A subtree article iterator specification.
+     * @since 1.60
+     */
+    public BuildableSubTreeArticleIterator(ArchivalUnit au, SubTreeArticleIterator.Spec spec) {
+      super(au, spec);
+      this.aspects = new ArrayList<Aspect>();
+      this.rolesForFullText = new ArrayList<String>();
+      this.rolesFromOtherRoles = new LinkedHashMap<String, List<String>>();
+    }
+    
+    /**
+     * <p>
+     * A custom implementation of
+     * {@link SubTreeArticleIterator#createArticleFiles(CachedUrl)} performing
+     * the aspect-based logic of this buildable iterator.
+     * </p>
+     * <p>
+     * This class guarantees that it always returns <code>null</code> and uses
+     * {@link SubTreeArticleIterator#emitArticleFiles(ArticleFiles)} to emit
+     * {@link ArticleFiles} instances instead.
+     * </p>
+     * 
+     * @param cu
+     *          The cached URL currently under consideration.
+     * @return <code>null</code>
+     * @since 1.60
+     */
+    
+    @Override
+    protected ArticleFiles createArticleFiles(CachedUrl cu) {
+      String url = cu.getUrl();
+      for (int ci = 0 ; ci < aspects.size() ; ++ci) {
+        Aspect aspect = aspects.get(ci);
+        Matcher matcher = aspect.findCuAmongPatterns(url);
+        if (matcher != null) {
+          // Does this aspect defer to a higher aspect?
+          for (int cj = 0 ; cj < ci ; ++cj) {
+            Aspect higherAspect = aspects.get(cj);
+            CachedUrl higherCu = higherAspect.findCuByPatternReplacement(matcher);
+            if (higherCu != null) {
+              // Defer
+              AuUtil.safeRelease(higherCu);
+              return null;
+            }
+          }
+          // Process this aspect; full text CU (might be overridden later)
+          ArticleFiles af = new ArticleFiles();
+          af.setFullTextCu(cu);
+          aspect.processRoles(af, cu);
+          // Process lower aspects (unless only counting articles)
+          if (spec.getTarget() != null && !spec.getTarget().isArticle()) {
+            for (int cj = ci + 1; cj < aspects.size(); ++cj) {
+              Aspect lowerAspect = aspects.get(cj);
+              CachedUrl lowerCu = lowerAspect.findCuByPatternReplacement(matcher);
+              if (lowerCu != null) {
+                lowerAspect.processRoles(af, lowerCu);
+              }
+            }
+          }
+          // Override full text CU if order specified
+          for (String role : rolesForFullText) {
+            CachedUrl foundCu = af.getRoleCu(role); 
+            if (foundCu != null) {
+              af.setFullTextCu(foundCu);
+              break;
+            }
+          }
+          // Set roles from other roles if orders specified (unless only counting articles)
+          if (spec.getTarget() != null && !spec.getTarget().isArticle()) {
+            for (Map.Entry<String, List<String>> entry : rolesFromOtherRoles.entrySet()) {
+              for (String role : entry.getValue()) {
+                CachedUrl foundCu = af.getRoleCu(role); 
+                if (foundCu != null) {
+                  af.setFullTextCu(foundCu);
+                  break;
+                }
+              }
+            }
+          }
+          // Emit and return
+          emitArticleFiles(af);
+          return null;
+        }
+      }
+      logger.warning(String.format("%s in %s did not match any expected patterns", url, au.getName()));
+      return null;
+    }
+    
+  }
+
+  /**
+   * <p>
+   * A logger for use by this class a nested classes.
+   * </p>
+   * 
+   * @since 1.60
+   */
+  protected static final Logger logger = Logger.getLogger(SubTreeArticleIteratorBuilder.class);
+  
+  /**
+   * <p>
+   * The AU associated with this builder.
+   * </p>
+   * 
+   * @since 1.60
+   */
+  protected ArchivalUnit au;
+  
+  /**
+   * <p>
+   * The most recently created aspect.
+   * </p>
+   * 
+   * @since 1.60
+   */
+  protected Aspect currentAspect;
+  
+  /**
+   * <p>
+   * The current buildable iterator.
+   * </p>
+   * 
+   * @since 1.60
+   */
+  protected BuildableSubTreeArticleIterator iterator;
+
+  protected SubTreeArticleIterator.Spec spec;
+  
+  public SubTreeArticleIteratorBuilder() {
+    // nothing
+  }
+  
+  public SubTreeArticleIteratorBuilder(ArchivalUnit au) {
+    setArchivalUnit(au);
+  }
+  
+  public void addAspect() {
+    if (iterator == null) {
+      throw new IllegalStateException("Cannot create an aspect until the AU and the spec are set");
+    }
+    currentAspect = iterator.new Aspect();
+    iterator.aspects.add(currentAspect);
+  }
+  
+  public void addAspect(List<Pattern> patterns, List<String> matcherReplacements, String... roles) {
+    addAspect();
+    addPatterns(patterns);
+    addMatcherReplacements(matcherReplacements);
+    addRoles(roles);
+  }
+  
+  public void addAspect(List<Pattern> patterns, String matcherReplacement, String... roles) {
+    addAspect(patterns, Arrays.asList(matcherReplacement), roles);
+  }
+  
+  public void addAspect(List<String> matcherReplacements, String... roles) {
+    addAspect();
+    addMatcherReplacements(matcherReplacements);
+    addRoles(roles);
+  }
+  
+  public void addAspect(Pattern pattern, List<String> matcherReplacements, String... roles) {
+    addAspect(Arrays.asList(pattern), matcherReplacements, roles);
+  }
+  
+  public void addAspect(Pattern pattern, String matcherReplacement, String... roles) {
+    addAspect(Arrays.asList(pattern), Arrays.asList(matcherReplacement), roles);
+  }
+  
+  public void addAspect(String matcherReplacement, String... roles) {
+    addAspect(Arrays.asList(matcherReplacement), roles);
+  }
+  
+  public void addMatcherReplacements(List<String> matcherReplacements) {
+    if (currentAspect == null) {
+      throw new IllegalStateException("No aspect has been created");
+    }
+    if (matcherReplacements.size() < 1) {
+      throw new IllegalArgumentException("Must define at least one matcher replacement");
+    }
+    currentAspect.matcherReplacements.addAll(matcherReplacements);
+  }
+  
+  public void addMatcherReplacements(String... matcherReplacements) {
+    addMatcherReplacements(matcherReplacements);
+  }
+  
+  public void addPatterns(List<Pattern> patterns) {
+    if (currentAspect == null) {
+      throw new IllegalStateException("No aspect has been created");
+    }
+    if (patterns.size() < 1) {
+      throw new IllegalArgumentException("Must define at least one pattern");
+    }
+    currentAspect.patterns.addAll(patterns);
+  }
+  
+  public void addPatterns(Pattern... patterns) {
+    addPatterns(Arrays.asList(patterns));
+  }
+  
+  public void addRoles(List<String> roles) {
+    if (currentAspect == null) {
+      throw new IllegalStateException("No aspect has been created");
+    }
+    if (roles.size() < 1) {
+      throw new IllegalArgumentException("Must define at least one role");
+    }
+    currentAspect.roles.addAll(roles);
+  }
+  
+  public void addRoles(String... roles) {
+    addRoles(Arrays.asList(roles));
+  }
+  
+  public SubTreeArticleIterator getSubTreeArticleIterator() {
+    if (iterator == null) {
+      throw new IllegalStateException("Cannot create a subtree article iterator until the AU and the spec are set");
+    }
+    return iterator;
+  }
+
+  public SubTreeArticleIterator.Spec newSpec() {
+    return new SubTreeArticleIterator.Spec();
+  }
+  
+  public void setArchivalUnit(ArchivalUnit au) {
+    if (this.au != null) {
+      throw new IllegalStateException("AU is already set to " + au.getName());
+    }
+    this.au = au;
+    maybeMakeSubTreeArticleIterator();
+  }
+  
+  public void setFullTextFromRoles(List<String> roles) {
+    if (iterator == null) {
+      throw new IllegalStateException("Cannot create a subtree article iterator until the AU and the spec are set");
+    }
+    if (roles.size() < 1) {
+      throw new IllegalArgumentException("Full text role order must contain at least one role");
+    }
+    iterator.rolesForFullText.addAll(roles);
+  }
+
+  public void setFullTextFromRoles(String... roles) {
+    setFullTextFromRoles(Arrays.asList(roles));
+  }
+
+  public void setRoleFromOtherRoles(String newRole, List<String> otherRoles) {
+    if (iterator == null) {
+      throw new IllegalStateException("Cannot create a subtree article iterator until the AU and the spec are set");
+    }
+    if (otherRoles.size() < 1) {
+      throw new IllegalArgumentException("Other role order must contain at least one role");
+    }
+    iterator.rolesFromOtherRoles.put(newRole, otherRoles);
+  }
+
+  public void setRoleFromOtherRoles(String newRole, String... otherRoles) {
+    setRoleFromOtherRoles(newRole, Arrays.asList(otherRoles));
+  }
+
+  public void setSpec(MetadataTarget target,
+                      List<String> rootTemplates,
+                      String patternTemplate) {
+    setSpec(target, rootTemplates, patternTemplate, 0);
+  }
+  
+  public void setSpec(MetadataTarget target,
+                      List<String> rootTemplates,
+                      String patternTemplate,
+                      int patternTemplateFlags) {
+    SubTreeArticleIterator.Spec spec = newSpec();
+    spec.setTarget(target);
+    spec.setRootTemplates(rootTemplates);
+    spec.setPatternTemplate(patternTemplate, patternTemplateFlags);
+    setSpec(spec);
+  }
+
+  public void setSpec(MetadataTarget target,
+                      String rootTemplate,
+                      String patternTemplate) {
+    setSpec(target, Arrays.asList(rootTemplate), patternTemplate, 0);
+  }
+
+  public void setSpec(MetadataTarget target,
+                      String rootTemplate,
+                      String patternTemplate,
+                      int patternTemplateFlags) {
+    setSpec(target, Arrays.asList(rootTemplate), patternTemplate, patternTemplateFlags);
+  }
+
+  public void setSpec(SubTreeArticleIterator.Spec spec) {
+    if (this.spec != null) {
+      throw new IllegalStateException("Spec is already set");
+    }
+    this.spec = spec;
+    maybeMakeSubTreeArticleIterator();
+  }
+  
+  protected void maybeMakeSubTreeArticleIterator() {
+    if (au != null && spec != null && iterator == null) {
+      this.iterator = new BuildableSubTreeArticleIterator(au, spec);
+    }
+  }
+  
+}
