@@ -1,0 +1,40 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing - brand new</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.siam.ClockssSiamPlugin</string>
+  </entry>
+    <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.siam.SiamPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+   <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>SIAM Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"SIAM Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+    <entry>
+    <string>au_start_url</string>
+<!-- the TOC for a specific year (volume) is on a clockss page.The final bit can be index.html, or any issue # (or nothing) -->
+    <string>"%sclockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+  <!--  CLOCKSS does not need this warning message about registering IP addresses -->
+    <string>plugin_au_config_user_msg</string>
+    <org.lockss.util.Default />
+  </entry>
+ </map>

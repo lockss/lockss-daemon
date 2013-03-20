@@ -1,0 +1,131 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing - brand new</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.siam.SiamPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>SIAM Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+   <entry>
+    <string>plugin_publishing_platform</string>
+    <string>Atypon</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"SIAM Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss/%s/%s/1", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%sloi/%s", base_url, journal_id</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%slockss/%s/%s/1", base_url, journal_id, volume_name</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>   
+      <string>1,"^%stoc/%s/%s/[0-9]+", base_url, journal_id, volume_name</string>
+      <string>2,"^%sdoi/(pdf|ref|abs)/[0-9]+\.[0-9]+/[-.9]+$", base_url</string>
+      <string>1,"^%sdoi/(pdf|ref|abs)/[.0-9]+/[^/]+$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      	<string>"^%sdoi/pdf/[.0-9]+/[A-Za-z0-9.]+$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>"Atypon Systems hosts this SIAM archival unit (AU) and require that you &lt;a href=&apos;%saction/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional American Meteorological Society account&lt;/a&gt; before allowing your LOCKSS box to harvest the AU. Failure to comply with this publisher requirement may trigger crawler traps, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all American Meteorological Society AUs.", base_url</string>
+  </entry>
+    <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.siam.SiamHtmlHashFilterFactory</string>
+  </entry>
+    <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.siam.SiamArticleIteratorFactory</string>
+  </entry>
+    <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.siam.SiamArticleIteratorFactory</string>
+  </entry>
+   <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.siam.SiamHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>
