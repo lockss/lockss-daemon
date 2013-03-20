@@ -248,27 +248,27 @@
       param[base_url] = http://cameraobscura.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 1976-1977 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 1-2 ; 1-2 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 3-4 ; 3-4 >
-      au < HighWirePressH20Plugin ; manifest ; 1983-1984 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1985-1986 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1989 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1990 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 1991 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 11-12 ; 11-12 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 1997-1999 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 2000-2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; testing ; 1976-1977 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 1979 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 1-2 ; 1-2 >
+      au < HighWirePressH20Plugin ; testing ; 1980 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 1981 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 1982 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 3-4 ; 3-4 >
+      au < HighWirePressH20Plugin ; testing ; 1983-1984 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1985-1986 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 1988 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 1989 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 1990 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 1991 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 1992 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 1993 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; testing ; 1994 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 11-12 ; 11-12 >
+      au < HighWirePressH20Plugin ; testing ; 1995 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; testing ; 1996 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; testing ; 1997-1999 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; testing ; 2000-2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; exists ; 2004 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 19 ; 19 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 >
@@ -1916,12 +1916,12 @@
       param[base_url] = http://ngc.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
 
-      au < HighWirePressH20Plugin ; manifest ; 2006 ; New German Critique Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; manifest ; 2007 ; New German Critique Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; New German Critique Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; New German Critique Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; New German Critique Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; New German Critique Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; testing ; 2006 ; New German Critique Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; testing ; 2007 ; New German Critique Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; testing ; 2008 ; New German Critique Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; testing ; 2009 ; New German Critique Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; testing ; 2010 ; New German Critique Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; New German Critique Volume 38 ; 38 >
       au < HighWirePressH20Plugin ; released ; 2012 ; New German Critique Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; New German Critique Volume 40 ; 40 >
 
@@ -1975,24 +1975,24 @@
       param[base_url] = http://nka.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Nka: Journal of Contemporary African Art Volume 1994 ; 1994 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Nka: Journal of Contemporary African Art Volume 1995 ; 1995 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Nka: Journal of Contemporary African Art Volume 1996 ; 1996 >
-      au < HighWirePressH20Plugin ; manifest ; 1997 ; Nka: Journal of Contemporary African Art Volume 1997 ; 1997 >
-      au < HighWirePressH20Plugin ; manifest ; 1998 ; Nka: Journal of Contemporary African Art Volume 1998 ; 1998 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Nka: Journal of Contemporary African Art Volume 1999 ; 1999 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Nka: Journal of Contemporary African Art Volume 2000 ; 2000 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Nka: Journal of Contemporary African Art Volume 2001 ; 2001 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Nka: Journal of Contemporary African Art Volume 2002 ; 2002 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Nka: Journal of Contemporary African Art Volume 2003 ; 2003 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Nka: Journal of Contemporary African Art Volume 2004 ; 2004 >
-      au < HighWirePressH20Plugin ; manifest ; 2005 ; Nka: Journal of Contemporary African Art Volume 2005 ; 2005 >
-      au < HighWirePressH20Plugin ; manifest ; 2006 ; Nka: Journal of Contemporary African Art Volume 2006 ; 2006 >
-      au < HighWirePressH20Plugin ; manifest ; 2007 ; Nka: Journal of Contemporary African Art Volume 2007 ; 2007 >
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; Nka: Journal of Contemporary African Art Volume 2008 ; 2008 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; Nka: Journal of Contemporary African Art Volume 2009 ; 2009 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Nka: Journal of Contemporary African Art Volume 2010 ; 2010 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Nka: Journal of Contemporary African Art Volume 2011 ; 2011 >
+      au < HighWirePressH20Plugin ; testing ; 1994 ; Nka: Journal of Contemporary African Art Volume 1994 ; 1994 >
+      au < HighWirePressH20Plugin ; testing ; 1995 ; Nka: Journal of Contemporary African Art Volume 1995 ; 1995 >
+      au < HighWirePressH20Plugin ; testing ; 1996 ; Nka: Journal of Contemporary African Art Volume 1996 ; 1996 >
+      au < HighWirePressH20Plugin ; testing ; 1997 ; Nka: Journal of Contemporary African Art Volume 1997 ; 1997 >
+      au < HighWirePressH20Plugin ; testing ; 1998 ; Nka: Journal of Contemporary African Art Volume 1998 ; 1998 >
+      au < HighWirePressH20Plugin ; testing ; 1999 ; Nka: Journal of Contemporary African Art Volume 1999 ; 1999 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; Nka: Journal of Contemporary African Art Volume 2000 ; 2000 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Nka: Journal of Contemporary African Art Volume 2001 ; 2001 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Nka: Journal of Contemporary African Art Volume 2002 ; 2002 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Nka: Journal of Contemporary African Art Volume 2003 ; 2003 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Nka: Journal of Contemporary African Art Volume 2004 ; 2004 >
+      au < HighWirePressH20Plugin ; testing ; 2005 ; Nka: Journal of Contemporary African Art Volume 2005 ; 2005 >
+      au < HighWirePressH20Plugin ; testing ; 2006 ; Nka: Journal of Contemporary African Art Volume 2006 ; 2006 >
+      au < HighWirePressH20Plugin ; testing ; 2007 ; Nka: Journal of Contemporary African Art Volume 2007 ; 2007 >
+      au < HighWirePressH20Plugin ; testing ; 2008 ; Nka: Journal of Contemporary African Art Volume 2008 ; 2008 >
+      au < HighWirePressH20Plugin ; testing ; 2009 ; Nka: Journal of Contemporary African Art Volume 2009 ; 2009 >
+      au < HighWirePressH20Plugin ; testing ; 2010 ; Nka: Journal of Contemporary African Art Volume 2010 ; 2010 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Nka: Journal of Contemporary African Art Volume 2011 ; 2011 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Nka: Journal of Contemporary African Art Volume 2012 ; 2012 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Nka: Journal of Contemporary African Art Volume 2013 ; 2013 >
 
@@ -2078,20 +2078,20 @@
     param[base_url] = http://novel.dukejournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
 
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Novel: A Forum on Fiction Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Novel: A Forum on Fiction Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Novel: A Forum on Fiction Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Novel: A Forum on Fiction Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Novel: A Forum on Fiction Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Novel: A Forum on Fiction Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Novel: A Forum on Fiction Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Novel: A Forum on Fiction Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Novel: A Forum on Fiction Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Novel: A Forum on Fiction Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Novel: A Forum on Fiction Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Novel: A Forum on Fiction Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Novel: A Forum on Fiction Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Novel: A Forum on Fiction Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; testing ; 1999 ; Novel: A Forum on Fiction Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; testing ; 2000 ; Novel: A Forum on Fiction Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; testing ; 2001 ; Novel: A Forum on Fiction Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; testing ; 2002 ; Novel: A Forum on Fiction Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; testing ; 2003 ; Novel: A Forum on Fiction Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; testing ; 2004 ; Novel: A Forum on Fiction Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; Novel: A Forum on Fiction Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Novel: A Forum on Fiction Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; Novel: A Forum on Fiction Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; Novel: A Forum on Fiction Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Novel: A Forum on Fiction Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; Novel: A Forum on Fiction Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Novel: A Forum on Fiction Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; Novel: A Forum on Fiction Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Novel: A Forum on Fiction Volume 47 ; 47 >
 
   }
