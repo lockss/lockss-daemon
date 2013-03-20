@@ -470,6 +470,30 @@
       param[base_url] = http://cssaame.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
+      au < HighWirePressH20Plugin ; exists ; 1981 ; Comparative Studies of South Asia, Africa and the Middle East Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; exists ; 1982 ; Comparative Studies of South Asia, Africa and the Middle East Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; exists ; 1983 ; Comparative Studies of South Asia, Africa and the Middle East Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; exists ; 1984 ; Comparative Studies of South Asia, Africa and the Middle East Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; exists ; 1985 ; Comparative Studies of South Asia, Africa and the Middle East Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; exists ; 1986 ; Comparative Studies of South Asia, Africa and the Middle East Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; exists ; 1987 ; Comparative Studies of South Asia, Africa and the Middle East Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; exists ; 1988 ; Comparative Studies of South Asia, Africa and the Middle East Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; exists ; 1989 ; Comparative Studies of South Asia, Africa and the Middle East Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; exists ; 1990 ; Comparative Studies of South Asia, Africa and the Middle East Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; exists ; 1991 ; Comparative Studies of South Asia, Africa and the Middle East Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; exists ; 1992 ; Comparative Studies of South Asia, Africa and the Middle East Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; exists ; 1993 ; Comparative Studies of South Asia, Africa and the Middle East Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; exists ; 1994 ; Comparative Studies of South Asia, Africa and the Middle East Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; exists ; 1995 ; Comparative Studies of South Asia, Africa and the Middle East Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; exists ; 1996 ; Comparative Studies of South Asia, Africa and the Middle East Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; exists ; 1997 ; Comparative Studies of South Asia, Africa and the Middle East Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; exists ; 1998 ; Comparative Studies of South Asia, Africa and the Middle East Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; exists ; 1999 ; Comparative Studies of South Asia, Africa and the Middle East Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; exists ; 2000 ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; Comparative Studies of South Asia, Africa and the Middle East Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; Comparative Studies of South Asia, Africa and the Middle East Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; Comparative Studies of South Asia, Africa and the Middle East Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; Comparative Studies of South Asia, Africa and the Middle East Volume 24 ; 24 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >      
