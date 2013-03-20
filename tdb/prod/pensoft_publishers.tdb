@@ -13,6 +13,8 @@
     param[base_url] = http://www.pensoft.net/
     
 
+    comment[GLN] = If this is a GLN title, shouldn't this only have one status?
+
     {
      title <
       name = BioRisk ;
