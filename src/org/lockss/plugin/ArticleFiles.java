@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleFiles.java,v 1.8 2013-01-05 20:07:13 pgust Exp $
+ * $Id: ArticleFiles.java,v 1.9 2013-03-20 01:01:33 alexandraohlson Exp $
  */
 
 /*
@@ -53,9 +53,20 @@ public class ArticleFiles {
   public static final String ROLE_REFERENCES = "References";
   
   /** Role for the CU representing a citation to this article,
-   * if applicable. Intended as a prefix, if multiple MIME types for
-   * this role are present. */
+   * If applicable, use as a prefix if multiple types are for
+   * this role are present. Keep the suffix shorter than 20 characters
+   * to avoid hitting the database field limit of 32
+   * */
   public static final String ROLE_CITATION = "Citation";
+  
+  /* Role for the CU representing a citation to this article in the Bibtex format */
+  public static final String ROLE_CITATION_BIBTEX = "CitationBibtex";
+  
+  /* Role for the CU representing a citation to this article in the RIS format */  
+  public static final String ROLE_CITATION_RIS = "CitationRis";
+  
+  /* Role for the CU representing a citation to this article in the Endnote format */
+  public static final String ROLE_CITATION_ENDNOTE = "CitationEndnote";
   
   /** Role for the CU representing the article's supplementary
    * materials, if applicable */
