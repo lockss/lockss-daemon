@@ -426,11 +426,11 @@
     param[journal_id] = bub 
     param[journal_issn] = 1758-8960
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[notReady] = RU4507, different pdf fontname used
 
-    au < doNotProcess ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
-    au < doNotProcess ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
-    au < doNotProcess ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 > 
+    au < ready ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
+    au < notReady ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
+    au < notReady ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 > 
     au < released ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 > 
     au < expected ; 2013 ; Bubble Science, Engineering and Technology Volume 5 ; 5 > 
 
@@ -541,58 +541,58 @@
     param[journal_id] = cmq  
     param[journal_issn] = 0008-4433
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[notReady] = RU4507, different pdf fontname used
 
-    au < doNotProcess ; 1962 ; Canadian Metallurgical Quarterly Volume 1 ; 1 >
-    au < doNotProcess ; 1963 ; Canadian Metallurgical Quarterly Volume 2 ; 2 >
-    au < doNotProcess ; 1964 ; Canadian Metallurgical Quarterly Volume 3 ; 3 >
-    au < doNotProcess ; 1965 ; Canadian Metallurgical Quarterly Volume 4 ; 4 >
-    au < doNotProcess ; 1966 ; Canadian Metallurgical Quarterly Volume 5 ; 5 >
-    au < doNotProcess ; 1967 ; Canadian Metallurgical Quarterly Volume 6 ; 6 >
-    au < doNotProcess ; 1968 ; Canadian Metallurgical Quarterly Volume 7 ; 7 >
-    au < doNotProcess ; 1969 ; Canadian Metallurgical Quarterly Volume 8 ; 8 >
-    au < doNotProcess ; 1970 ; Canadian Metallurgical Quarterly Volume 9 ; 9 >
-    au < doNotProcess ; 1971 ; Canadian Metallurgical Quarterly Volume 10 ; 10 >
-    au < doNotProcess ; 1972 ; Canadian Metallurgical Quarterly Volume 11 ; 11 >
-    au < doNotProcess ; 1973 ; Canadian Metallurgical Quarterly Volume 12 ; 12 >
-    au < doNotProcess ; 1974 ; Canadian Metallurgical Quarterly Volume 13 ; 13 >
-    au < doNotProcess ; 1975 ; Canadian Metallurgical Quarterly Volume 14 ; 14 >
-    au < doNotProcess ; 1976 ; Canadian Metallurgical Quarterly Volume 15 ; 15 >
+    au < notReady ; 1962 ; Canadian Metallurgical Quarterly Volume 1 ; 1 >
+    au < notReady ; 1963 ; Canadian Metallurgical Quarterly Volume 2 ; 2 >
+    au < notReady ; 1964 ; Canadian Metallurgical Quarterly Volume 3 ; 3 >
+    au < notReady ; 1965 ; Canadian Metallurgical Quarterly Volume 4 ; 4 >
+    au < notReady ; 1966 ; Canadian Metallurgical Quarterly Volume 5 ; 5 >
+    au < notReady ; 1967 ; Canadian Metallurgical Quarterly Volume 6 ; 6 >
+    au < notReady ; 1968 ; Canadian Metallurgical Quarterly Volume 7 ; 7 >
+    au < notReady ; 1969 ; Canadian Metallurgical Quarterly Volume 8 ; 8 >
+    au < notReady ; 1970 ; Canadian Metallurgical Quarterly Volume 9 ; 9 >
+    au < notReady ; 1971 ; Canadian Metallurgical Quarterly Volume 10 ; 10 >
+    au < notReady ; 1972 ; Canadian Metallurgical Quarterly Volume 11 ; 11 >
+    au < notReady ; 1973 ; Canadian Metallurgical Quarterly Volume 12 ; 12 >
+    au < notReady ; 1974 ; Canadian Metallurgical Quarterly Volume 13 ; 13 >
+    au < notReady ; 1975 ; Canadian Metallurgical Quarterly Volume 14 ; 14 >
+    au < notReady ; 1976 ; Canadian Metallurgical Quarterly Volume 15 ; 15 >
     au < doesNotExist ; 1977 ; Canadian Metallurgical Quarterly Volume 16 ; 16 >
     au < doesNotExist ; 1978 ; Canadian Metallurgical Quarterly Volume 17 ; 17 >
-    au < doNotProcess ; 1979 ; Canadian Metallurgical Quarterly Volume 18 ; 18 >
-    au < doNotProcess ; 1980 ; Canadian Metallurgical Quarterly Volume 19 ; 19 >
-    au < doNotProcess ; 1981 ; Canadian Metallurgical Quarterly Volume 20 ; 20 >
-    au < doNotProcess ; 1982 ; Canadian Metallurgical Quarterly Volume 21 ; 21 >
-    au < doNotProcess ; 1983 ; Canadian Metallurgical Quarterly Volume 22 ; 22 >
-    au < doNotProcess ; 1984 ; Canadian Metallurgical Quarterly Volume 23 ; 23 >
-    au < doNotProcess ; 1985 ; Canadian Metallurgical Quarterly Volume 24 ; 24 >
-    au < doNotProcess ; 1986 ; Canadian Metallurgical Quarterly Volume 25 ; 25 >
-    au < doNotProcess ; 1987 ; Canadian Metallurgical Quarterly Volume 26 ; 26 >
-    au < doNotProcess ; 1988 ; Canadian Metallurgical Quarterly Volume 27 ; 27 >
-    au < doNotProcess ; 1989 ; Canadian Metallurgical Quarterly Volume 28 ; 28 >
-    au < doNotProcess ; 1990 ; Canadian Metallurgical Quarterly Volume 29 ; 29 >
-    au < doNotProcess ; 1991 ; Canadian Metallurgical Quarterly Volume 30 ; 30 >
-    au < doNotProcess ; 1992 ; Canadian Metallurgical Quarterly Volume 31 ; 31 >
-    au < doNotProcess ; 1993 ; Canadian Metallurgical Quarterly Volume 32 ; 32 >
-    au < doNotProcess ; 1994 ; Canadian Metallurgical Quarterly Volume 33 ; 33 >
-    au < doNotProcess ; 1995 ; Canadian Metallurgical Quarterly Volume 34 ; 34 >
-    au < doNotProcess ; 1996 ; Canadian Metallurgical Quarterly Volume 35 ; 35 >
-    au < doNotProcess ; 1997 ; Canadian Metallurgical Quarterly Volume 36 ; 36 >
+    au < notReady ; 1979 ; Canadian Metallurgical Quarterly Volume 18 ; 18 >
+    au < notReady ; 1980 ; Canadian Metallurgical Quarterly Volume 19 ; 19 >
+    au < notReady ; 1981 ; Canadian Metallurgical Quarterly Volume 20 ; 20 >
+    au < notReady ; 1982 ; Canadian Metallurgical Quarterly Volume 21 ; 21 >
+    au < notReady ; 1983 ; Canadian Metallurgical Quarterly Volume 22 ; 22 >
+    au < notReady ; 1984 ; Canadian Metallurgical Quarterly Volume 23 ; 23 >
+    au < notReady ; 1985 ; Canadian Metallurgical Quarterly Volume 24 ; 24 >
+    au < notReady ; 1986 ; Canadian Metallurgical Quarterly Volume 25 ; 25 >
+    au < notReady ; 1987 ; Canadian Metallurgical Quarterly Volume 26 ; 26 >
+    au < notReady ; 1988 ; Canadian Metallurgical Quarterly Volume 27 ; 27 >
+    au < notReady ; 1989 ; Canadian Metallurgical Quarterly Volume 28 ; 28 >
+    au < notReady ; 1990 ; Canadian Metallurgical Quarterly Volume 29 ; 29 >
+    au < notReady ; 1991 ; Canadian Metallurgical Quarterly Volume 30 ; 30 >
+    au < notReady ; 1992 ; Canadian Metallurgical Quarterly Volume 31 ; 31 >
+    au < notReady ; 1993 ; Canadian Metallurgical Quarterly Volume 32 ; 32 >
+    au < notReady ; 1994 ; Canadian Metallurgical Quarterly Volume 33 ; 33 >
+    au < notReady ; 1995 ; Canadian Metallurgical Quarterly Volume 34 ; 34 >
+    au < notReady ; 1996 ; Canadian Metallurgical Quarterly Volume 35 ; 35 >
+    au < notReady ; 1997 ; Canadian Metallurgical Quarterly Volume 36 ; 36 >
     au < doesNotExist ; 1998 ; Canadian Metallurgical Quarterly Volume 37 ; 37 >
     au < doesNotExist ; 1999 ; Canadian Metallurgical Quarterly Volume 38 ; 38 >
-    au < doNotProcess ; 2000 ; Canadian Metallurgical Quarterly Volume 39 ; 39 >
-    au < doNotProcess ; 2001 ; Canadian Metallurgical Quarterly Volume 40 ; 40 >
-    au < doNotProcess ; 2002 ; Canadian Metallurgical Quarterly Volume 41 ; 41 >
-    au < doNotProcess ; 2003 ; Canadian Metallurgical Quarterly Volume 42 ; 42 >
-    au < doNotProcess ; 2004 ; Canadian Metallurgical Quarterly Volume 43 ; 43 >
-    au < doNotProcess ; 2005 ; Canadian Metallurgical Quarterly Volume 44 ; 44 >
-    au < doNotProcess ; 2006 ; Canadian Metallurgical Quarterly Volume 45 ; 45 >
-    au < doNotProcess ; 2007 ; Canadian Metallurgical Quarterly Volume 46 ; 46 >
-    au < doNotProcess ; 2008 ; Canadian Metallurgical Quarterly Volume 47 ; 47 >
-    au < doNotProcess ; 2009 ; Canadian Metallurgical Quarterly Volume 48 ; 48 >
-    au < doNotProcess ; 2010 ; Canadian Metallurgical Quarterly Volume 49 ; 49 >
-    au < doNotProcess ; 2011 ; Canadian Metallurgical Quarterly Volume 50 ; 50 >
+    au < notReady ; 2000 ; Canadian Metallurgical Quarterly Volume 39 ; 39 >
+    au < notReady ; 2001 ; Canadian Metallurgical Quarterly Volume 40 ; 40 >
+    au < notReady ; 2002 ; Canadian Metallurgical Quarterly Volume 41 ; 41 >
+    au < notReady ; 2003 ; Canadian Metallurgical Quarterly Volume 42 ; 42 >
+    au < notReady ; 2004 ; Canadian Metallurgical Quarterly Volume 43 ; 43 >
+    au < notReady ; 2005 ; Canadian Metallurgical Quarterly Volume 44 ; 44 >
+    au < notReady ; 2006 ; Canadian Metallurgical Quarterly Volume 45 ; 45 >
+    au < notReady ; 2007 ; Canadian Metallurgical Quarterly Volume 46 ; 46 >
+    au < notReady ; 2008 ; Canadian Metallurgical Quarterly Volume 47 ; 47 >
+    au < notReady ; 2009 ; Canadian Metallurgical Quarterly Volume 48 ; 48 >
+    au < notReady ; 2010 ; Canadian Metallurgical Quarterly Volume 49 ; 49 >
+    au < notReady ; 2011 ; Canadian Metallurgical Quarterly Volume 50 ; 50 >
     au < released ; 2012 ; Canadian Metallurgical Quarterly Volume 51 ; 51 >
     au < doNotProcess ; 2013 ; Canadian Metallurgical Quarterly Volume 52 ; 52 >
 
@@ -815,7 +815,7 @@
     param[journal_id] = com 
     param[journal_issn] = 1024-5294
     implicit < status ; year ; name ; param[volume_name] >
-    comment[notReady] = RU4507, low agreement
+    comment[notReady] = RU4507, different pdf fontname used
 
     au < notReady ; 2002 ; Competition & Change Volume 6 ; 6 > 
     au < notReady ; 2003 ; Competition & Change Volume 7 ; 7 > 
@@ -2958,36 +2958,36 @@
     param[journal_issn] = 0267-0836
     implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 0306-3453
-    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    comment[notReady] = RU4507, different pdf fontname used
     
-    au < doNotProcess ; 1985 ; Materials Science and Technology Volume 1 ; 1 > 
-    au < doNotProcess ; 1986 ; Materials Science and Technology Volume 2 ; 2 > 
-    au < doNotProcess ; 1987 ; Materials Science and Technology Volume 3 ; 3 > 
-    au < doNotProcess ; 1988 ; Materials Science and Technology Volume 4 ; 4 > 
-    au < doNotProcess ; 1989 ; Materials Science and Technology Volume 5 ; 5 > 
-    au < doNotProcess ; 1990 ; Materials Science and Technology Volume 6 ; 6 > 
-    au < doNotProcess ; 1991 ; Materials Science and Technology Volume 7 ; 7 > 
-    au < doNotProcess ; 1992 ; Materials Science and Technology Volume 8 ; 8 > 
-    au < doNotProcess ; 1993 ; Materials Science and Technology Volume 9 ; 9 > 
-    au < doNotProcess ; 1994 ; Materials Science and Technology Volume 10 ; 10 > 
-    au < doNotProcess ; 1995 ; Materials Science and Technology Volume 11 ; 11 > 
-    au < doNotProcess ; 1996 ; Materials Science and Technology Volume 12 ; 12 > 
-    au < doNotProcess ; 1997 ; Materials Science and Technology Volume 13 ; 13 > 
-    au < doNotProcess ; 1998 ; Materials Science and Technology Volume 14 ; 14 > 
-    au < doNotProcess ; 1999 ; Materials Science and Technology Volume 15 ; 15 > 
-    au < doNotProcess ; 2000 ; Materials Science and Technology Volume 16 ; 16 > 
-    au < doNotProcess ; 2001 ; Materials Science and Technology Volume 17 ; 17 > 
-    au < doNotProcess ; 2002 ; Materials Science and Technology Volume 18 ; 18 > 
-    au < doNotProcess ; 2003 ; Materials Science and Technology Volume 19 ; 19 > 
-    au < doNotProcess ; 2004 ; Materials Science and Technology Volume 20 ; 20 > 
-    au < doNotProcess ; 2005 ; Materials Science and Technology Volume 21 ; 21 > 
-    au < doNotProcess ; 2006 ; Materials Science and Technology Volume 22 ; 22 > 
-    au < doNotProcess ; 2007 ; Materials Science and Technology Volume 23 ; 23 > 
-    au < doNotProcess ; 2008 ; Materials Science and Technology Volume 24 ; 24 > 
-    au < doNotProcess ; 2009 ; Materials Science and Technology Volume 25 ; 25 > 
-    au < doNotProcess ; 2010 ; Materials Science and Technology Volume 26 ; 26 > 
-    au < doNotProcess ; 2011 ; Materials Science and Technology Volume 27 ; 27 > 
-    au < doNotProcess ; 2012 ; Materials Science and Technology Volume 28 ; 28 > 
+    au < notReady ; 1985 ; Materials Science and Technology Volume 1 ; 1 > 
+    au < notReady ; 1986 ; Materials Science and Technology Volume 2 ; 2 > 
+    au < notReady ; 1987 ; Materials Science and Technology Volume 3 ; 3 > 
+    au < notReady ; 1988 ; Materials Science and Technology Volume 4 ; 4 > 
+    au < notReady ; 1989 ; Materials Science and Technology Volume 5 ; 5 > 
+    au < notReady ; 1990 ; Materials Science and Technology Volume 6 ; 6 > 
+    au < notReady ; 1991 ; Materials Science and Technology Volume 7 ; 7 > 
+    au < notReady ; 1992 ; Materials Science and Technology Volume 8 ; 8 > 
+    au < notReady ; 1993 ; Materials Science and Technology Volume 9 ; 9 > 
+    au < notReady ; 1994 ; Materials Science and Technology Volume 10 ; 10 > 
+    au < notReady ; 1995 ; Materials Science and Technology Volume 11 ; 11 > 
+    au < notReady ; 1996 ; Materials Science and Technology Volume 12 ; 12 > 
+    au < notReady ; 1997 ; Materials Science and Technology Volume 13 ; 13 > 
+    au < notReady ; 1998 ; Materials Science and Technology Volume 14 ; 14 > 
+    au < notReady ; 1999 ; Materials Science and Technology Volume 15 ; 15 > 
+    au < notReady ; 2000 ; Materials Science and Technology Volume 16 ; 16 > 
+    au < notReady ; 2001 ; Materials Science and Technology Volume 17 ; 17 > 
+    au < notReady ; 2002 ; Materials Science and Technology Volume 18 ; 18 > 
+    au < notReady ; 2003 ; Materials Science and Technology Volume 19 ; 19 > 
+    au < notReady ; 2004 ; Materials Science and Technology Volume 20 ; 20 > 
+    au < notReady ; 2005 ; Materials Science and Technology Volume 21 ; 21 > 
+    au < notReady ; 2006 ; Materials Science and Technology Volume 22 ; 22 > 
+    au < notReady ; 2007 ; Materials Science and Technology Volume 23 ; 23 > 
+    au < notReady ; 2008 ; Materials Science and Technology Volume 24 ; 24 > 
+    au < notReady ; 2009 ; Materials Science and Technology Volume 25 ; 25 > 
+    au < notReady ; 2010 ; Materials Science and Technology Volume 26 ; 26 > 
+    au < notReady ; 2011 ; Materials Science and Technology Volume 27 ; 27 > 
+    au < notReady ; 2012 ; Materials Science and Technology Volume 28 ; 28 > 
     au < manifest ; 2013 ; Materials Science and Technology Volume 29 ; 29 > 
 
   }
