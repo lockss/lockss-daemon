@@ -20,6 +20,8 @@
       param[journal_dir] = africa_the_journal_of_the_international_african_institute
       attr[journal_id] = afr
       implicit < status ; year ; name ; param[volume] >
+      comment[doNotProcess] = move to Cambridge University Press
+      comment[year2005] = Bibliography only
     
       au < doNotProcess ; 2000 ; Africa: The Journal of the International African Institute Volume 70 ; 70 >
       au < doNotProcess ; 2001 ; Africa: The Journal of the International African Institute Volume 71 ; 71 >
