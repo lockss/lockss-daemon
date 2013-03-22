@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = American Meteorological Society
+    name = American Meteorological Society ;
+    info[tester] = 8
   >
 
   comment[platform] = Atypon publisher

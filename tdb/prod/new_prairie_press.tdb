@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = New Prairie Press
+    name = New Prairie Press ;
+    info[tester] = 8
   >
 
   plugin = org.lockss.plugin.ojs2.OJS2Plugin

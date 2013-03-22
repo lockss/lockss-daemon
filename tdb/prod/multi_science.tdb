@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Multi-Science
+    name = Multi-Science ;
+    info[tester] = 8
   >
 
   plugin = org.lockss.plugin.metapress.MetaPressPlugin

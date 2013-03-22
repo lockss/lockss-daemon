@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = European Respiratory Society
+    name = European Respiratory Society ;
+    info[tester] = 8
   >
 
   plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
