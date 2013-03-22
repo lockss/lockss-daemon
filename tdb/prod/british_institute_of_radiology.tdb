@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = British Institute of Radiology
+    name = British Institute of Radiology ;
+    info[tester] = 5
   >
 
   plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin

@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = American Physiological Society 
+    name = American Physiological Society ;
+    info[tester] = 5
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
