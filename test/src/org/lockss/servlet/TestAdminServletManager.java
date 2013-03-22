@@ -1,10 +1,10 @@
 /*
- * $Id: TestAdminServletManager.java,v 1.10 2013-03-11 05:43:11 clairegriffin Exp $
+ * $Id: TestAdminServletManager.java,v 1.11 2013-03-22 04:47:32 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,7 +62,8 @@ public class TestAdminServletManager extends LockssTestCase {
     LOGIN_FORM,
     LINK_LOGOUT,
     SERVLET_EDIT_ACCOUNT,
-    SERVLET_COUNTER_REPORTS
+    SERVLET_COUNTER_REPORTS,
+    SERVLET_CXF_WEB_SERVICES
   };
 
   ServletDescr userAdminDescrs[] = {
@@ -77,7 +78,7 @@ public class TestAdminServletManager extends LockssTestCase {
     SERVLET_BATCH_AU_CONFIG,
     SERVLET_AU_CONFIG,
     SERVLET_PLUGIN_CONFIG,
-    SERVLET_DEBUG_PANEL,
+    SERVLET_DEBUG_PANEL
 };
 
   ServletDescr contentAdminDescrs[] = {

@@ -1,10 +1,10 @@
 /*
- * $Id: AdminServletManager.java,v 1.34 2013-03-11 05:43:11 clairegriffin Exp $
+ * $Id: AdminServletManager.java,v 1.35 2013-03-22 04:47:31 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,16 +37,16 @@ import java.net.*;
 import java.util.*;
 import javax.servlet.http.*;
 import org.mortbay.http.*;
-
 import org.mortbay.jetty.servlet.*;
 import com.planetj.servlet.filter.compression.*;
-
+import org.apache.cxf.transport.servlet.CXFServlet;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.account.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
 import org.lockss.exporter.counter.CounterReportsManager;
+import org.springframework.web.context.ContextLoaderListener;
 
 /**
  * Local UI servlet starter
@@ -493,6 +493,14 @@ public class AdminServletManager extends BaseServletManager {
 	  return mgr != null && mgr.isReady();
 	}};
 
+  protected static final ServletDescr SERVLET_CXF_WEB_SERVICES =
+      new ServletDescr("CXFServlet",
+                       CXFServlet.class,
+                       "JAX-WS CXF Servlet",
+		       "ws/*",
+		       0,
+	               "JAX-WS CXF Web Services");
+
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;
   }
@@ -539,7 +547,8 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_EDIT_ACCOUNTS,
     LINK_HELP,
     LINK_LOGOUT,
-    LOGIN_FORM
+    LOGIN_FORM,
+    SERVLET_CXF_WEB_SERVICES
   };
 
   // XXXUI List of servlets to show in new UI: parallel main list but with new versions
@@ -578,7 +587,8 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_EDIT_ACCOUNTS,
     LINK_HELP,
     LINK_LOGOUT,
-      LOGIN_FORM,
+    LOGIN_FORM,
+    SERVLET_CXF_WEB_SERVICES
   };
   // XXXUI List of servlets to show in transitional UI: combine main list with new versions
   static final ServletDescr servletDescrsTransitional[] = {
@@ -616,6 +626,7 @@ public class AdminServletManager extends BaseServletManager {
     LINK_HELP,
     LINK_LOGOUT,
     LOGIN_FORM,
+    SERVLET_CXF_WEB_SERVICES
   };
 
   // XXXUI Show the transitional or new UI if param is enabled
@@ -770,12 +781,21 @@ public class AdminServletManager extends BaseServletManager {
 
     // user authentication handler
     setContextAuthHandler(context, realm);
+    
+    // Specify the Spring configuration location for the CXF web services.
+    context.setInitParameter("contextConfigLocation", "WEB-INF/beans.xml");
 
-    // Create a servlet container.  WebApplicationHandler is a
-    // ServletHandler that can apply filters (e.g., compression) around
-    // servlets.
-    WebApplicationHandler handler = makeWebAppHandler(context);
+    // Create a servlet container.  ContextListenerWebApplicationHandler is a
+    // WebApplicationHandler that allows the registration of servlet context
+    // listeners, something that the Jetty 5 WebApplicationHandler ignores,
+    // which prevents Apache CXF web services from working.
+    // WebApplicationHandler is a ServletHandler that can apply filters
+    // (e.g., compression) around servlets.
+    ContextListenerWebApplicationHandler handler = makeWebAppHandler(context);
     addCompressionFilter(handler);
+
+    // Add the Spring context listener needed for CXF web services.
+    handler.addEventListener(new ContextLoaderListener());
 
     // Request dump servlet
     handler.addServlet("Dump", "/Dump", "org.mortbay.servlet.Dump");

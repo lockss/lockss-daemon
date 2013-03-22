@@ -1,10 +1,10 @@
 /*
- * $Id: BaseServletManager.java,v 1.37 2012-11-16 14:32:08 easyonthemayo Exp $
+ * $Id: BaseServletManager.java,v 1.38 2013-03-22 04:47:31 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -637,8 +637,15 @@ public abstract class BaseServletManager
     return sc;
   }
 
-  WebApplicationHandler makeWebAppHandler(HttpContext context) {
-    WebApplicationHandler handler = new WebApplicationHandler();
+  ContextListenerWebApplicationHandler makeWebAppHandler(HttpContext context) {
+
+    // Use the ContextListenerWebApplicationHandler instead of Jetty's
+    // WebApplicationHandler, which it extends. This is needed because the
+    // Jetty 5 WebApplicationHandler ignores any ServletContextListener that it
+    // is being told to notify and prevents Apache CXF web services from
+    // working.
+    ContextListenerWebApplicationHandler handler =
+	new ContextListenerWebApplicationHandler();
     handler.setSessionManager(sessionMgr);
     context.setAttribute(CONTEXT_ATTR_SERVLET_HANDLER, handler);
     return handler;
