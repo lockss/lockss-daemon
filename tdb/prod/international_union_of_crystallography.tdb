@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = International Union of Crystallography 
+    name = International Union of Crystallography ;
+    info[tester] = 4
   >
   
   plugin = org.lockss.plugin.internationalunionofcrystallography.InternationalUnionOfCrystallographyPlugin

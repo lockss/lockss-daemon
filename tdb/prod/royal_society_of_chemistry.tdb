@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Royal Society of Chemistry
+    name = Royal Society of Chemistry;
+    info[tester] = 4
   >
 
   plugin = org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin

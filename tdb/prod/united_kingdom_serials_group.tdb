@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = United Kingdom Serials Group
+    name = United Kingdom Serials Group;
+    info[tester] = 4
   >
 
   plugin = org.lockss.plugin.metapress.MetaPressPlugin

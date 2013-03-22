@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Ubiquity Press
+    name = Ubiquity Press;
+    info[tester] = 4
   >
 
   plugin = org.lockss.plugin.ojs2.OJS2Plugin  
