@@ -1290,7 +1290,7 @@
       au < HighWirePressH20Plugin ; ready ; 1998 ; Journal of Health Politics, Policy and Law Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; ready ; 1999 ; Journal of Health Politics, Policy and Law Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; ready ; 2000 ; Journal of Health Politics, Policy and Law Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; Journal of Health Politics, Policy and Law Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; Journal of Health Politics, Policy and Law Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Health Politics, Policy and Law Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Health Politics, Policy and Law Volume 28 ; 28 >
       au < HighWirePressH20Plugin ; ready ; 2004 ; Journal of Health Politics, Policy and Law Volume 29 ; 29 >
@@ -1915,13 +1915,14 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ngc.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      comment[notReady] = different div class"article abstract-view" itemprop"articleBody"
 
       au < HighWirePressH20Plugin ; ready ; 2006 ; New German Critique Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; ready ; 2007 ; New German Critique Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; testing ; 2008 ; New German Critique Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; ready ; 2008 ; New German Critique Volume 35 ; 35 >
       au < HighWirePressH20Plugin ; ready ; 2009 ; New German Critique Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; New German Critique Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; testing ; 2011 ; New German Critique Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; ready ; 2010 ; New German Critique Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; notReady ; 2011 ; New German Critique Volume 38 ; 38 >
       au < HighWirePressH20Plugin ; released ; 2012 ; New German Critique Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; New German Critique Volume 40 ; 40 >
 
@@ -1976,21 +1977,21 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
       au < HighWirePressH20Plugin ; ready ; 1994 ; Nka: Journal of Contemporary African Art Volume 1994 ; 1994 >
-      au < HighWirePressH20Plugin ; testing ; 1995 ; Nka: Journal of Contemporary African Art Volume 1995 ; 1995 >
+      au < HighWirePressH20Plugin ; ready ; 1995 ; Nka: Journal of Contemporary African Art Volume 1995 ; 1995 >
       au < HighWirePressH20Plugin ; ready ; 1996 ; Nka: Journal of Contemporary African Art Volume 1996 ; 1996 >
       au < HighWirePressH20Plugin ; ready ; 1997 ; Nka: Journal of Contemporary African Art Volume 1997 ; 1997 >
       au < HighWirePressH20Plugin ; ready ; 1998 ; Nka: Journal of Contemporary African Art Volume 1998 ; 1998 >
-      au < HighWirePressH20Plugin ; testing ; 1999 ; Nka: Journal of Contemporary African Art Volume 1999 ; 1999 >
-      au < HighWirePressH20Plugin ; testing ; 2000 ; Nka: Journal of Contemporary African Art Volume 2000 ; 2000 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; Nka: Journal of Contemporary African Art Volume 2001 ; 2001 >
+      au < HighWirePressH20Plugin ; ready ; 1999 ; Nka: Journal of Contemporary African Art Volume 1999 ; 1999 >
+      au < HighWirePressH20Plugin ; ready ; 2000 ; Nka: Journal of Contemporary African Art Volume 2000 ; 2000 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; Nka: Journal of Contemporary African Art Volume 2001 ; 2001 >
       au < HighWirePressH20Plugin ; ready ; 2002 ; Nka: Journal of Contemporary African Art Volume 2002 ; 2002 >
       au < HighWirePressH20Plugin ; ready ; 2003 ; Nka: Journal of Contemporary African Art Volume 2003 ; 2003 >
       au < HighWirePressH20Plugin ; ready ; 2004 ; Nka: Journal of Contemporary African Art Volume 2004 ; 2004 >
       au < HighWirePressH20Plugin ; doesNotExist ; 2005 ; Nka: Journal of Contemporary African Art Volume 2005 ; 0 >
       au < HighWirePressH20Plugin ; ready ; 2006 ; Nka: Journal of Contemporary African Art Volume 2006 ; 2006 >
-      au < HighWirePressH20Plugin ; testing ; 2007 ; Nka: Journal of Contemporary African Art Volume 2007 ; 2007 >
+      au < HighWirePressH20Plugin ; ready ; 2007 ; Nka: Journal of Contemporary African Art Volume 2007 ; 2007 >
       au < HighWirePressH20Plugin ; ready ; 2008 ; Nka: Journal of Contemporary African Art Volume 2008 ; 2008 >
-      au < HighWirePressH20Plugin ; testing ; 2009 ; Nka: Journal of Contemporary African Art Volume 2009 ; 2009 >
+      au < HighWirePressH20Plugin ; ready ; 2009 ; Nka: Journal of Contemporary African Art Volume 2009 ; 2009 >
       au < HighWirePressH20Plugin ; ready ; 2010 ; Nka: Journal of Contemporary African Art Volume 2010 ; 2010 >
       au < HighWirePressH20Plugin ; ready ; 2011 ; Nka: Journal of Contemporary African Art Volume 2011 ; 2011 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Nka: Journal of Contemporary African Art Volume 2012 ; 2012 >
@@ -2079,17 +2080,17 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
 
     au < HighWirePressH20Plugin ; ready ; 1999-2000 ; Novel: A Forum on Fiction Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; testing ; 2000-2001 ; Novel: A Forum on Fiction Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; ready ; 2000-2001 ; Novel: A Forum on Fiction Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; ready ; 2001-2002 ; Novel: A Forum on Fiction Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; ready ; 2002-2003 ; Novel: A Forum on Fiction Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; testing ; 2003-2004 ; Novel: A Forum on Fiction Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; ready ; 2003-2004 ; Novel: A Forum on Fiction Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; ready ; 2004-2005 ; Novel: A Forum on Fiction Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; testing ; 2005-2006 ; Novel: A Forum on Fiction Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; testing ; 2006-2007 ; Novel: A Forum on Fiction Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; testing ; 2007-2008 ; Novel: A Forum on Fiction Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; ready ; 2005-2006 ; Novel: A Forum on Fiction Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; ready ; 2006-2007 ; Novel: A Forum on Fiction Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; ready ; 2007-2008 ; Novel: A Forum on Fiction Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; Novel: A Forum on Fiction Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Novel: A Forum on Fiction Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Novel: A Forum on Fiction Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Novel: A Forum on Fiction Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; ready ; 2012 ; Novel: A Forum on Fiction Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Novel: A Forum on Fiction Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; Novel: A Forum on Fiction Volume 47 ; 47 >
@@ -2138,13 +2139,13 @@
       au < HighWirePressH20Plugin ; exists ; 2002 ; Pedagogy Volume 2 ; 2  >
       au < HighWirePressH20Plugin ; exists ; 2003 ; Pedagogy Volume 3 ; 3  >
       au < HighWirePressH20Plugin ; exists ; 2004 ; Pedagogy Volume 4 ; 4  >
-      au < HighWirePressH20Plugin ; testing ; 2005 ; Pedagogy Volume 5 ; 5  >
-      au < HighWirePressH20Plugin ; testing ; 2006 ; Pedagogy Volume 6 ; 6  >
-      au < HighWirePressH20Plugin ; testing ; 2007 ; Pedagogy Volume 7 ; 7  >
-      au < HighWirePressH20Plugin ; testing ; 2008 ; Pedagogy Volume 8 ; 8  >
-      au < HighWirePressH20Plugin ; testing ; 2009 ; Pedagogy Volume 9 ; 9  >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; Pedagogy Volume 10 ;10 >
-      au < HighWirePressH20Plugin ; testing ; 2011 ; Pedagogy Volume 11 ;11 >
+      au < HighWirePressH20Plugin ; ready ; 2005 ; Pedagogy Volume 5 ; 5  >
+      au < HighWirePressH20Plugin ; ready ; 2006 ; Pedagogy Volume 6 ; 6  >
+      au < HighWirePressH20Plugin ; ready ; 2007 ; Pedagogy Volume 7 ; 7  >
+      au < HighWirePressH20Plugin ; ready ; 2008 ; Pedagogy Volume 8 ; 8  >
+      au < HighWirePressH20Plugin ; ready ; 2009 ; Pedagogy Volume 9 ; 9  >
+      au < HighWirePressH20Plugin ; ready ; 2010 ; Pedagogy Volume 10 ;10 >
+      au < HighWirePressH20Plugin ; ready ; 2011 ; Pedagogy Volume 11 ;11 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Pedagogy Volume 12 ;12 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Pedagogy Volume 13 ;13 >
 
@@ -2165,18 +2166,18 @@
       param[base_url] = http://philreview.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; testing ; 2000 ; Philosophical Review Volume 109 ; 109 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; Philosophical Review Volume 110 ; 110 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; Philosophical Review Volume 111 ; 111 >
-      au < HighWirePressH20Plugin ; testing ; 2003 ; Philosophical Review Volume 112 ; 112 >
-      au < HighWirePressH20Plugin ; testing ; 2004 ; Philosophical Review Volume 113 ; 113 >
-      au < HighWirePressH20Plugin ; testing ; 2005 ; Philosophical Review Volume 114 ; 114 >
-      au < HighWirePressH20Plugin ; testing ; 2006 ; Philosophical Review Volume 115 ; 115 >
-      au < HighWirePressH20Plugin ; testing ; 2007 ; Philosophical Review Volume 116 ; 116 >
-      au < HighWirePressH20Plugin ; testing ; 2008 ; Philosophical Review Volume 117 ; 117 >
-      au < HighWirePressH20Plugin ; testing ; 2009 ; Philosophical Review Volume 118 ; 118 >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; Philosophical Review Volume 119 ; 119 >
-      au < HighWirePressH20Plugin ; testing ; 2011 ; Philosophical Review Volume 120 ; 120 >
+      au < HighWirePressH20Plugin ; ready ; 2000 ; Philosophical Review Volume 109 ; 109 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; Philosophical Review Volume 110 ; 110 >
+      au < HighWirePressH20Plugin ; ready ; 2002 ; Philosophical Review Volume 111 ; 111 >
+      au < HighWirePressH20Plugin ; ready ; 2003 ; Philosophical Review Volume 112 ; 112 >
+      au < HighWirePressH20Plugin ; ready ; 2004 ; Philosophical Review Volume 113 ; 113 >
+      au < HighWirePressH20Plugin ; ready ; 2005 ; Philosophical Review Volume 114 ; 114 >
+      au < HighWirePressH20Plugin ; ready ; 2006 ; Philosophical Review Volume 115 ; 115 >
+      au < HighWirePressH20Plugin ; ready ; 2007 ; Philosophical Review Volume 116 ; 116 >
+      au < HighWirePressH20Plugin ; ready ; 2008 ; Philosophical Review Volume 117 ; 117 >
+      au < HighWirePressH20Plugin ; ready ; 2009 ; Philosophical Review Volume 118 ; 118 >
+      au < HighWirePressH20Plugin ; ready ; 2010 ; Philosophical Review Volume 119 ; 119 >
+      au < HighWirePressH20Plugin ; ready ; 2011 ; Philosophical Review Volume 120 ; 120 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Philosophical Review Volume 121 ; 121 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Philosophical Review Volume 122 ; 122 >
 
@@ -2215,11 +2216,11 @@
       param[base_url] = http://poeticstoday.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; testing ; 2000 ; Poetics Today Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; Poetics Today Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; Poetics Today Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; testing ; 2003 ; Poetics Today Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; testing ; 2004 ; Poetics Today Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; ready ; 2000 ; Poetics Today Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; Poetics Today Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; ready ; 2002 ; Poetics Today Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; ready ; 2003 ; Poetics Today Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; ready ; 2004 ; Poetics Today Volume 25 ; 25 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Poetics Today Volume 26 ; 26 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Poetics Today Volume 27 ; 27 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Poetics Today Volume 28 ; 28 >
@@ -2276,18 +2277,18 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       comment[title] = title changed since 2012 in Duke only
       
-      au < HighWirePressH20Plugin ; testing ; 1993 ; positions: east asia cultures critique Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 1994 ; positions: east asia cultures critique Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; testing ; 1995 ; positions: east asia cultures critique Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; testing ; 1996 ; positions: east asia cultures critique Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; testing ; 1997 ; positions: east asia cultures critique Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; testing ; 1998 ; positions: east asia cultures critique Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; testing ; 1999 ; positions: east asia cultures critique Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; ready ; 1993 ; positions: east asia cultures critique Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; ready ; 1994 ; positions: east asia cultures critique Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 1995 ; positions: east asia cultures critique Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; ready ; 1996 ; positions: east asia cultures critique Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; ready ; 1997 ; positions: east asia cultures critique Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; ready ; 1998 ; positions: east asia cultures critique Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; ready ; 1999 ; positions: east asia cultures critique Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; testing ; 2000 ; positions: east asia cultures critique Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; positions: east asia cultures critique Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; positions: east asia cultures critique Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; testing ; 2003 ; positions: east asia cultures critique Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; testing ; 2004 ; positions: east asia cultures critique Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; positions: east asia cultures critique Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; ready ; 2002 ; positions: east asia cultures critique Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; ready ; 2003 ; positions: east asia cultures critique Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; ready ; 2004 ; positions: east asia cultures critique Volume 12 ; 12 >
       au < HighWireStrVolPlugin ; down ; 2005 ; positions: east asia cultures critique Volume 13 ; 13 >
       au < HighWireStrVolPlugin ; down ; 2006 ; positions: east asia cultures critique Volume 14 ; 14 >
       au < HighWireStrVolPlugin ; down ; 2007 ; positions: east asia cultures critique Volume 15 ; 15 >
@@ -2367,22 +2368,22 @@
       param[base_url] = http://publicculture.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; testing ; 1988-1989 ; Public Culture Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 1989-1990 ; Public Culture Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; testing ; 1990-1991 ; Public Culture Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; testing ; 1991-1992 ; Public Culture Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; testing ; 1992-1993 ; Public Culture Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; testing ; 1993-1994 ; Public Culture Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; testing ; 1994-1995 ; Public Culture Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; testing ; 1995-1996 ; Public Culture Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; testing ; 1996-1997 ; Public Culture Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; testing ; 1997-1998 ; Public Culture Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; testing ; 1999 ; Public Culture Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; ready ; 1988-1989 ; Public Culture Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; ready ; 1989-1990 ; Public Culture Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 1990-1991 ; Public Culture Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; ready ; 1991-1992 ; Public Culture Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; ready ; 1992-1993 ; Public Culture Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; ready ; 1993-1994 ; Public Culture Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; ready ; 1994-1995 ; Public Culture Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; ready ; 1995-1996 ; Public Culture Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; ready ; 1996-1997 ; Public Culture Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; ready ; 1997-1998 ; Public Culture Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; ready ; 1999 ; Public Culture Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; testing ; 2000 ; Public Culture Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; Public Culture Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; Public Culture Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; testing ; 2003 ; Public Culture Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; testing ; 2004 ; Public Culture Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; Public Culture Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; ready ; 2002 ; Public Culture Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; ready ; 2003 ; Public Culture Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; ready ; 2004 ; Public Culture Volume 16 ; 16 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Public Culture Volume 17 ; 17 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Public Culture Volume 18 ; 18 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Public Culture Volume 19 ; 19 >
@@ -2433,37 +2434,38 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://rhr.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      comment[notReady] = missing pdf file
       
-      au < HighWirePressH20Plugin ; testing ; 1975 ; Radical History Review Volume 1975 ; 1975 >
-      au < HighWirePressH20Plugin ; testing ; 1976 ; Radical History Review Volume 1976 ; 1976 >
-      au < HighWirePressH20Plugin ; testing ; 1977 ; Radical History Review Volume 1977 ; 1977 >
-      au < HighWirePressH20Plugin ; testing ; 1978 ; Radical History Review Volume 1978 ; 1978 >
-      au < HighWirePressH20Plugin ; testing ; 1979 ; Radical History Review Volume 1979 ; 1979 >
-      au < HighWirePressH20Plugin ; testing ; 1980 ; Radical History Review Volume 1980 ; 1980  >
-      au < HighWirePressH20Plugin ; testing ; 1981 ; Radical History Review Volume 1981 ; 1981  >
-      au < HighWirePressH20Plugin ; testing ; 1982 ; Radical History Review Volume 1982 ; 1982  >
-      au < HighWirePressH20Plugin ; testing ; 1983 ; Radical History Review Volume 1983 ; 1983  >
-      au < HighWirePressH20Plugin ; testing ; 1984 ; Radical History Review Volume 1984 ; 1984 >
-      au < HighWirePressH20Plugin ; testing ; 1985 ; Radical History Review Volume 1985 ; 1985 >
-      au < HighWirePressH20Plugin ; testing ; 1986 ; Radical History Review Volume 1986 ; 1986 >
-      au < HighWirePressH20Plugin ; testing ; 1987 ; Radical History Review Volume 1987 ; 1987 >
-      au < HighWirePressH20Plugin ; testing ; 1988 ; Radical History Review Volume 1988 ; 1988 >
-      au < HighWirePressH20Plugin ; testing ; 1989 ; Radical History Review Volume 1989 ; 1989 >
-      au < HighWirePressH20Plugin ; testing ; 1990 ; Radical History Review Volume 1990 ; 1990 >
-      au < HighWirePressH20Plugin ; testing ; 1991 ; Radical History Review Volume 1991 ; 1991 >
+      au < HighWirePressH20Plugin ; ready ; 1975 ; Radical History Review Volume 1975 ; 1975 >
+      au < HighWirePressH20Plugin ; ready ; 1976 ; Radical History Review Volume 1976 ; 1976 >
+      au < HighWirePressH20Plugin ; ready ; 1977 ; Radical History Review Volume 1977 ; 1977 >
+      au < HighWirePressH20Plugin ; ready ; 1978 ; Radical History Review Volume 1978 ; 1978 >
+      au < HighWirePressH20Plugin ; ready ; 1979 ; Radical History Review Volume 1979 ; 1979 >
+      au < HighWirePressH20Plugin ; ready ; 1980 ; Radical History Review Volume 1980 ; 1980  >
+      au < HighWirePressH20Plugin ; ready ; 1981 ; Radical History Review Volume 1981 ; 1981  >
+      au < HighWirePressH20Plugin ; ready ; 1982 ; Radical History Review Volume 1982 ; 1982  >
+      au < HighWirePressH20Plugin ; ready ; 1983 ; Radical History Review Volume 1983 ; 1983  >
+      au < HighWirePressH20Plugin ; ready ; 1984 ; Radical History Review Volume 1984 ; 1984 >
+      au < HighWirePressH20Plugin ; ready ; 1985 ; Radical History Review Volume 1985 ; 1985 >
+      au < HighWirePressH20Plugin ; ready ; 1986 ; Radical History Review Volume 1986 ; 1986 >
+      au < HighWirePressH20Plugin ; ready ; 1987 ; Radical History Review Volume 1987 ; 1987 >
+      au < HighWirePressH20Plugin ; ready ; 1988 ; Radical History Review Volume 1988 ; 1988 >
+      au < HighWirePressH20Plugin ; ready ; 1989 ; Radical History Review Volume 1989 ; 1989 >
+      au < HighWirePressH20Plugin ; notReady ; 1990 ; Radical History Review Volume 1990 ; 1990 >
+      au < HighWirePressH20Plugin ; ready ; 1991 ; Radical History Review Volume 1991 ; 1991 >
       au < HighWirePressH20Plugin ; testing ; 1992 ; Radical History Review Volume 1992 ; 1992 >
-      au < HighWirePressH20Plugin ; testing ; 1993 ; Radical History Review Volume 1993 ; 1993 >
-      au < HighWirePressH20Plugin ; testing ; 1994 ; Radical History Review Volume 1994 ; 1994 >
-      au < HighWirePressH20Plugin ; testing ; 1995 ; Radical History Review Volume 1995 ; 1995 >
-      au < HighWirePressH20Plugin ; testing ; 1996 ; Radical History Review Volume 1996 ; 1996 >
-      au < HighWirePressH20Plugin ; testing ; 1997 ; Radical History Review Volume 1997 ; 1997 >
+      au < HighWirePressH20Plugin ; ready ; 1993 ; Radical History Review Volume 1993 ; 1993 >
+      au < HighWirePressH20Plugin ; ready ; 1994 ; Radical History Review Volume 1994 ; 1994 >
+      au < HighWirePressH20Plugin ; ready ; 1995 ; Radical History Review Volume 1995 ; 1995 >
+      au < HighWirePressH20Plugin ; ready ; 1996 ; Radical History Review Volume 1996 ; 1996 >
+      au < HighWirePressH20Plugin ; ready ; 1997 ; Radical History Review Volume 1997 ; 1997 >
       au < HighWirePressH20Plugin ; testing ; 1998 ; Radical History Review Volume 1998 ; 1998 >
-      au < HighWirePressH20Plugin ; testing ; 1999 ; Radical History Review Volume 1999 ; 1999 >
-      au < HighWirePressH20Plugin ; testing ; 2000 ; Radical History Review Volume 2000 ; 2000 >
+      au < HighWirePressH20Plugin ; ready ; 1999 ; Radical History Review Volume 1999 ; 1999 >
+      au < HighWirePressH20Plugin ; ready ; 2000 ; Radical History Review Volume 2000 ; 2000 >
       au < HighWirePressH20Plugin ; testing ; 2001 ; Radical History Review Volume 2001 ; 2001 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; Radical History Review Volume 2002 ; 2002 >
-      au < HighWirePressH20Plugin ; testing ; 2003 ; Radical History Review Volume 2003 ; 2003 >
-      au < HighWirePressH20Plugin ; testing ; 2004 ; Radical History Review Volume 2004 ; 2004 >
+      au < HighWirePressH20Plugin ; ready ; 2002 ; Radical History Review Volume 2002 ; 2002 >
+      au < HighWirePressH20Plugin ; ready ; 2003 ; Radical History Review Volume 2003 ; 2003 >
+      au < HighWirePressH20Plugin ; ready ; 2004 ; Radical History Review Volume 2004 ; 2004 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Radical History Review Volume 2005 ; 2005 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Radical History Review Volume 2006 ; 2006 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Radical History Review Volume 2007 ; 2007 >
@@ -2514,17 +2516,17 @@
       param[base_url] = http://smallaxe.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Small Axe Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Small Axe Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Small Axe Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Small Axe Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 2005 ; Small Axe Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 2006 ; Small Axe Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 2007 ; Small Axe Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; Small Axe Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; Small Axe Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Small Axe Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Small Axe Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Small Axe Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Small Axe Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Small Axe Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Small Axe Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 2005 ; Small Axe Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 2006 ; Small Axe Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 2007 ; Small Axe Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; testing ; 2008 ; Small Axe Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; testing ; 2009 ; Small Axe Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; testing ; 2010 ; Small Axe Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Small Axe Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Small Axe Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Small Axe Volume 17 ; 17 >
       
@@ -2571,11 +2573,11 @@
       param[base_url] = http://ssh.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Social Science History Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Social Science History Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Social Science History Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Social Science History Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Social Science History Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; Social Science History Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Social Science History Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Social Science History Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Social Science History Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Social Science History Volume 28 ; 28 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Social Science History Volume 29 ; 29 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Social Science History Volume 30 ; 30 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Social Science History Volume 31 ; 31 >
@@ -2621,11 +2623,11 @@
       param[base_url] = http://socialtext.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Social Text Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Social Text Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Social Text Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Social Text Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Social Text Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; Social Text Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Social Text Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Social Text Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Social Text Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Social Text Volume 22 ; 22 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Social Text Volume 23 ; 23 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Social Text Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Social Text Volume 25 ; 25 >
@@ -2721,40 +2723,40 @@
       param[base_url] = http://theater.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 1968 ; Theater Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1969 ; Theater Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1970-1972 ; Theater Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1973 ; Theater Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1973-1974 ; Theater Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1974-1975 ; Theater Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1975-1976 ; Theater Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1976-1977 ; Theater Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 1977-1978 ; Theater Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 1978-1979 ; Theater Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 1979-1980 ; Theater Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 1980-1981 ; Theater Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 1981-1982 ; Theater Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 1982-1983 ; Theater Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 1983-1984 ; Theater Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; manifest ; 1984-1985 ; Theater Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 1985-1986 ; Theater Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 1986-1987 ; Theater Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; manifest ; 1987-1988 ; Theater Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; manifest ; 1988-1989 ; Theater Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; manifest ; 1990 ; Theater Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; manifest ; 1991 ; Theater Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Theater Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Theater Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Theater Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; manifest ; 1995-1996 ; Theater Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; manifest ; 1996-1997 ; Theater Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; manifest ; 1997-1998 ; Theater Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Theater Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Theater Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Theater Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Theater Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Theater Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Theater Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; testing ; 1968 ; Theater Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 1969 ; Theater Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 1970-1972 ; Theater Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 1973 ; Theater Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1973-1974 ; Theater Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 1974-1975 ; Theater Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 1975-1976 ; Theater Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 1976-1977 ; Theater Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 1977-1978 ; Theater Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 1978-1979 ; Theater Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 1979-1980 ; Theater Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; testing ; 1980-1981 ; Theater Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; testing ; 1981-1982 ; Theater Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; testing ; 1982-1983 ; Theater Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; testing ; 1983-1984 ; Theater Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; testing ; 1984-1985 ; Theater Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; testing ; 1985-1986 ; Theater Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; testing ; 1986-1987 ; Theater Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; testing ; 1987-1988 ; Theater Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; testing ; 1988-1989 ; Theater Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; testing ; 1990 ; Theater Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; testing ; 1991 ; Theater Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; testing ; 1992 ; Theater Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; testing ; 1993 ; Theater Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; testing ; 1994 ; Theater Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; testing ; 1995-1996 ; Theater Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; testing ; 1996-1997 ; Theater Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; testing ; 1997-1998 ; Theater Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; testing ; 1999 ; Theater Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; Theater Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Theater Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Theater Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Theater Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Theater Volume 34 ; 34 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Theater Volume 35 ; 35 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Theater Volume 36 ; 36 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Theater Volume 37 ; 37 >
