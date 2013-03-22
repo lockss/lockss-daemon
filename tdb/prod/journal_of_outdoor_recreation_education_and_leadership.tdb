@@ -17,10 +17,12 @@
     param[journal_abbr] = jorel
     implicit < status ; year ; name ; param[volume] >
     
-    au < wanted ; 2009 ; Journal of Outdoor Recreation, Education, and Leadership Volume 1 ; 1 >
-    au < wanted ; 2010 ; Journal of Outdoor Recreation, Education, and Leadership Volume 2 ; 2 >
-    au < wanted ; 2011 ; Journal of Outdoor Recreation, Education, and Leadership Volume 3 ; 3 >
-    au < wanted ; 2012 ; Journal of Outdoor Recreation, Education, and Leadership Volume 4 ; 4 >
+    comment[doNotProcess] = publisher has not approved gln test and release RT 5256
+    
+    au < doNotProcess ; 2009 ; Journal of Outdoor Recreation, Education, and Leadership Volume 1 ; 1 >
+    au < doNotProcess ; 2010 ; Journal of Outdoor Recreation, Education, and Leadership Volume 2 ; 2 >
+    au < doNotProcess ; 2011 ; Journal of Outdoor Recreation, Education, and Leadership Volume 3 ; 3 >
+    au < doNotProcess ; 2012 ; Journal of Outdoor Recreation, Education, and Leadership Volume 4 ; 4 >
     au < expected ; 2013 ; Journal of Outdoor Recreation, Education, and Leadership Volume 5 ; 5 >
 
   }
