@@ -34,7 +34,8 @@
    
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = 19thcenturymusic 
       implicit < status ; year ; name ; param[volume_name] >
@@ -86,7 +87,8 @@
       issn = 0096-7645 
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = aibsbulletin 
     implicit < status ; year ; name ; param[volume_name] >
@@ -117,7 +119,8 @@
       issnl = 0002-7685
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = amerbiolteac 
     implicit < status ; year ; name ; param[volume_name] >
@@ -231,7 +234,8 @@
 
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = asiansurvey 
       implicit < status ; year ; name ; param[volume_name] >
@@ -319,7 +323,8 @@
  
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = auk 
       implicit < status ; year ; name ; param[volume_name] >
@@ -468,7 +473,8 @@
       issnl = 0006-3568
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = bioscience 
     implicit < status ; year ; name ; param[volume_name] >
@@ -535,7 +541,8 @@
       issnl = 2153-8018
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = boomjcali 
     implicit < status ; year ; name ; param[volume_name] >
@@ -552,7 +559,8 @@
       issn = 1093-3514 
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = buffcrimlawrevi 
     implicit < status ; year ; name ; param[volume_name] >
@@ -578,7 +586,8 @@
       issn = 1544-4708 
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = bullamermusisoci
     implicit < status ; year ; name ; param[volume_name] >
@@ -606,7 +615,8 @@
       issn = 1553-1031 
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = bullcooporniclub
     implicit < status ; year ; name ; param[volume_name] >
@@ -626,7 +636,8 @@
     > 
 
     comment[eissn] = requested via UCPress 7/27
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = calimanarevi 
     implicit < status ; year ; name ; param[volume_name] >
@@ -644,7 +655,8 @@
       issn = 0068-5895 
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = calistudclasanti 
     implicit < status ; year ; name ; param[volume_name] >
@@ -673,7 +685,8 @@
       issn = 1043-1500
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = cardstudlawlite 
     implicit < status ; year ; name ; param[volume_name] >
@@ -702,7 +715,8 @@
       issn = 0095-9367
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = chymia 
     implicit < status ; year ; name ; param[volume_name] >
@@ -756,7 +770,8 @@
 
     {
   
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = clasanti 
       implicit < status ; year ; name ; param[volume_name] >
@@ -823,7 +838,8 @@
 
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = condor 
       implicit < status ; year ; name ; param[volume_name] >
@@ -981,7 +997,8 @@
       issnl = 0362-8949
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = fareasternsurvey 
     implicit < status ; year ; name ; param[volume_name] >
@@ -1050,7 +1067,8 @@
 
     {
      
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = fedesentrepo 
       implicit < status ; year ; name ; param[volume_name] >
@@ -1114,7 +1132,8 @@
     }
  
     {
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = filmquarterly 
       implicit < status ; year ; name ; param[volume_name] >
@@ -1210,7 +1229,8 @@
 
     {
     
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = gastronomica 
       implicit < status ; year ; name ; param[volume_name] >
@@ -1263,7 +1283,8 @@
 
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = histstudnatsci 
       implicit < status ; year ; name ; param[volume_name] >
@@ -1286,7 +1307,8 @@
       issn = 0890-9997
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = histstudphysbiol 
     implicit < status ; year ; name ; param[volume_name] >
@@ -1325,7 +1347,8 @@
       issn = 0073-2672
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = histstudphyssci 
     implicit < status ; year ; name ; param[volume_name] >
@@ -1359,7 +1382,8 @@
       issn = 1549-0076
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = hollquar 
     implicit < status ; year ; name ; param[volume_name] >
@@ -1380,7 +1404,8 @@
       issn = 1935-0708 
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = huntlibrbull 
     implicit < status ; year ; name ; param[volume_name] >
@@ -1429,7 +1454,8 @@
 
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = huntlibrquar 
       implicit < status ; year ; name ; param[volume_name] >
@@ -1540,7 +1566,8 @@
     }
 
     {
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = jempreshumreseth 
       implicit < status ; year ; name ; param[volume_name] >
@@ -1588,7 +1615,8 @@
     }
  
     {
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = jmusicology 
       implicit < status ; year ; name ; param[volume_name] >
@@ -1657,7 +1685,8 @@
     
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = jpalestud 
       implicit < status ; year ; name ; param[volume_name] >
@@ -1739,7 +1768,8 @@
 
     { 
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = jamermusisoci 
       implicit < status ; year ; name ; param[volume_name] >
@@ -1822,7 +1852,8 @@
       issn = 1544-9890
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = jamersociarchhis 
     implicit < status ; year ; name ; param[volume_name] >
@@ -1844,7 +1875,8 @@
       issnl = 0037-9808
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = jsociarchhist 
     implicit < status ; year ; name ; param[volume_name] >
@@ -1945,7 +1977,8 @@
     }
  
     {
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = jvietstud 
       implicit < status ; year ; name ; param[volume_name] >
@@ -1987,7 +2020,8 @@
 
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = jungjcultpsyc 
       implicit < status ; year ; name ; param[volume_name] >
@@ -2035,7 +2069,8 @@
 
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = lawliterature 
       implicit < status ; year ; name ; param[volume_name] >
@@ -2064,7 +2099,8 @@
       issn = 1536-0385 
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = memoinstpacirela 
     implicit < status ; year ; name ; param[volume_name] >
@@ -2108,7 +2144,8 @@
 
     {
  
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = mexistudestumexi 
       implicit < status ; year ; name ; param[volume_name] >
@@ -2177,7 +2214,8 @@
 
     {
  
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = musicperception 
       implicit < status ; year ; name ; param[volume_name] >
@@ -2247,7 +2285,8 @@
 
     { 
     
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = musitheospec 
       implicit < status ; year ; name ; param[volume_name] >
@@ -2326,7 +2365,8 @@
 
     {
  
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = newcrimlawrevi 
       implicit < status ; year ; name ; param[volume_name] >
@@ -2350,7 +2390,8 @@
       issn = 0029-0564 
      > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = ninecentfict 
     implicit < status ; year ; name ; param[volume_name] >
@@ -2428,7 +2469,8 @@
 
     {
          
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = ninecentlite 
       implicit < status ; year ; name ; param[volume_name] >
@@ -2500,7 +2542,8 @@
 
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = novareligio 
       implicit < status ; year ; name ; param[volume_name] >
@@ -2575,7 +2618,8 @@
     
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = ornithmono 
       implicit < status ; year ; name ; param[volume_name] >
@@ -2689,7 +2733,8 @@
 
     {
     
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = pacihistrevi 
       implicit < status ; year ; name ; param[volume_name] >
@@ -2787,7 +2832,8 @@
       issn = 0030-8919 
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = pacisocirevi 
     implicit < status ; year ; name ; param[volume_name] >
@@ -2852,7 +2898,8 @@
     
     {
     
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = publichistorian 
       implicit < status ; year ; name ; param[volume_name] >
@@ -2903,7 +2950,8 @@
       issn = 1549-0068 
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = quarfilmraditele 
     implicit < status ; year ; name ; param[volume_name] >
@@ -2950,7 +2998,8 @@
 
     {
     
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = reliamercult 
       implicit < status ; year ; name ; param[volume_name] >
@@ -3042,7 +3091,8 @@
     
     {
     
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = representations 
       implicit < status ; year ; name ; param[volume_name] >
@@ -3222,7 +3272,8 @@
 
     {
       
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = rhetorica 
       implicit < status ; year ; name ; param[volume_name] >
@@ -3269,7 +3320,8 @@
       issn = 0270-6210 
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = sanfranjunginstj 
     implicit < status ; year ; name ; param[volume_name] >
@@ -3335,7 +3387,8 @@
     
     {
     
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = socialproblems 
       implicit < status ; year ; name ; param[volume_name] >
@@ -3435,7 +3488,8 @@
 
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = socipers 
       implicit < status ; year ; name ; param[volume_name] >
@@ -3487,7 +3541,8 @@
 
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_id] = XXXX
       implicit < status ; year ; name ; param[volume_name] >
@@ -3556,7 +3611,8 @@
     
     {
 
-      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = symbinte 
       implicit < status ; year ; name ; param[volume_name] >
@@ -3607,7 +3663,8 @@
       issn = 1526-4211 
     > 
 
-    plugin = org.lockss.plugin.jstor.JSTORPlugin
+    plugin = needs.plugin
+      comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = trollopian 
     implicit < status ; year ; name ; param[volume_name] >
