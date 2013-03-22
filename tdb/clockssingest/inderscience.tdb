@@ -4236,7 +4236,7 @@
 
       param[journal_issn] = 1756-0330
       
-      au < expected ; exists ; 2012 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 1 ; 1 >
+      au < manifest ; exists ; 2012 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 1 ; 1 >
 
     }
 
@@ -4269,7 +4269,7 @@
 
       param[journal_issn] = 1754-2308
       
-      au < expected ; exists ; 2012 ; International Journal of Lean Enterprise Research Volume 1 ; 1 >
+      au < manifest ; exists ; 2012 ; International Journal of Lean Enterprise Research Volume 1 ; 1 >
 
     }
 
@@ -5036,7 +5036,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Microstructure and Materials Properties Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Microstructure and Materials Properties Volume 6 ; 6 >
       au < zapped ; down ; 2012 ; International Journal of Microstructure and Materials Properties Volume 7 ; 7 >
-      au < expected ; exists ; 2013 ; International Journal of Microstructure and Materials Properties Volume 8 ; 8 >
+      au < manifest ; exists ; 2013 ; International Journal of Microstructure and Materials Properties Volume 8 ; 8 >
 
     }
 
@@ -5715,7 +5715,7 @@
       param[journal_issn] = 1742-4275
       
       au < zapped ; down ; 2011 ; International Journal of Powertrain Volume 1 ; 1 >
-      au < expected ; exists ; 2012 ; International Journal of Powertrain Volume 2 ; 2 >
+      au < manifest ; exists ; 2012 ; International Journal of Powertrain Volume 2 ; 2 >
 
     }
 
@@ -6254,7 +6254,7 @@
       au < zapped ; down ; 2011 ; International Journal of Sensor Networks Volume 10 ; 10 >
       au < zapped ; down ; 2012 ; International Journal of Sensor Networks Volume 11 ; 11 >
       au < released ; manifest ; 2012 ; International Journal of Sensor Networks Volume 12 ; 12 >
-      au < expected ; exists ; 2013 ; International Journal of Sensor Networks Volume 13 ; 13 >
+      au < manifest ; exists ; 2013 ; International Journal of Sensor Networks Volume 13 ; 13 >
       au < expected ; exists ; 2013 ; International Journal of Sensor Networks Volume 14 ; 14 >
 
     }
