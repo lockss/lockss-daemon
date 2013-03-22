@@ -3318,7 +3318,7 @@
       au < zapped ; down ; 2010 ; Body & Society Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; Body & Society Volume 17 ; 17 ; >
       au < zapped ; down ; 2012 ; Body & Society Volume 18 ; 18 ; >
-      au < expected ; exists ; 2013 ; Body & Society Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2013 ; Body & Society Volume 19 ; 19 ; >
 
     }
 
@@ -4494,7 +4494,7 @@
       au < zapped ; down ; 2010 ; China Information Volume 24 ; 24 ; >
       au < released ; crawling ; 2011 ; China Information Volume 25 ; 25 ; >
       au < released ; crawling ; 2012 ; China Information Volume 26 ; 26 ; >
-      au < expected ; exists ; 2013 ; China Information Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2013 ; China Information Volume 27 ; 27 ; >
 
     }
 
@@ -9252,7 +9252,7 @@
       au < zapped ; down ; 2010 ; European Journal of International Relations Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; European Journal of International Relations Volume 17 ; 17 ; >
       au < released ; manifest ; 2012 ; European Journal of International Relations Volume 18 ; 18 ; >
-      au < expected ; exists ; 2013 ; European Journal of International Relations Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2013 ; European Journal of International Relations Volume 19 ; 19 ; >
 
     }
 
@@ -12546,7 +12546,7 @@
       au < zapped ; down ; 2010 ; Index on Censorship Volume 39 ; 39 ; >
       au < released ; crawling ; 2011 ; Index on Censorship Volume 40 ; 40 ; >
       au < released ; manifest ; 2012 ; Index on Censorship Volume 41 ; 41 ; >
-      au < expected ; exists ; 2013 ; Index on Censorship Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2013 ; Index on Censorship Volume 42 ; 42 ; >
 
     }
 
@@ -13188,7 +13188,7 @@
       au < zapped ; down ; 2010 ; International Criminal Justice Review Volume 20 ; 20 ; >
       au < released ; crawling ; 2011 ; International Criminal Justice Review Volume 21 ; 21 ; >
       au < released ; manifest ; 2012 ; International Criminal Justice Review Volume 22 ; 22 ; >
-      au < expected ; exists ; 2013 ; International Criminal Justice Review Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2013 ; International Criminal Justice Review Volume 23 ; 23 ; >
 
     }
 
@@ -13681,7 +13681,7 @@
       au < zapped ; down ; 2010 ; The International Journal of Lower Extremity Wounds Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; The International Journal of Lower Extremity Wounds Volume 10 ; 10 ; >
       au < released ; manifest ; 2012 ; The International Journal of Lower Extremity Wounds Volume 11 ; 11 ; >
-      au < expected ; exists ; 2013 ; The International Journal of Lower Extremity Wounds Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2013 ; The International Journal of Lower Extremity Wounds Volume 12 ; 12 ; >
 
     }
 
@@ -18295,7 +18295,7 @@
       au < released ; crawling ; 2010 ; Journal of Emerging Market Finance Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; Journal of Emerging Market Finance Volume 10 ; 10 ; >
       au < released ; manifest ; 2012 ; Journal of Emerging Market Finance Volume 11 ; 11 ; >
-      au < expected ; exists ; 2013 ; Journal of Emerging Market Finance Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2013 ; Journal of Emerging Market Finance Volume 12 ; 12 ; >
 
     }
 
@@ -22114,7 +22114,7 @@
       au < released ; crawling ; 2010 ; Journal of Research in Music Education Volume 58 ; 58 ; >
       au < released ; crawling ; 2011 ; Journal of Research in Music Education Volume 59 ; 59 ; >
       au < released ; manifest ; 2012 ; Journal of Research in Music Education Volume 60 ; 60 ; >
-      au < expected ; exists ; 2013 ; Journal of Research in Music Education Volume 61 ; 61 ; >
+      au < manifest ; exists ; 2013 ; Journal of Research in Music Education Volume 61 ; 61 ; >
 
     }
 
@@ -23275,7 +23275,7 @@
       au < released ; crawling ; 2010 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 10 ; 10 ; >
       au < released ; manifest ; 2012 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 11 ; 11 ; >
-      au < expected ; exists ; 2013 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2013 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 12 ; 12 ; >
 
     }
 
@@ -30518,7 +30518,7 @@
       au < zapped ; down ; 2010 ; Research Ethics Volume 6 ; 6 ; >
       au < zapped ; down ; 2011 ; Research Ethics Volume 7 ; 7 ; >
       au < released ; crawling ; 2012 ; Research Ethics Volume 8 ; 8 ; >
-      au < expected ; exists ; 2013 ; Research Ethics Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2013 ; Research Ethics Volume 9 ; 9 ; >
 
     }
 
@@ -37703,7 +37703,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://brj.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Jindal Journal of Business Research Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; Jindal Journal of Business Research Volume 1 ; 1 ; >
 
     }
 
