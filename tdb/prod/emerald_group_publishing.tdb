@@ -2,7 +2,7 @@
 
   publisher <
     name = Emerald Group Publishing ;
-    info[tester] = 5
+    info[tester] = 8
   >
 
   plugin = org.lockss.plugin.emerald.EmeraldPlugin
@@ -3873,7 +3873,7 @@
     au < released ; 2009 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 19 ; 19 >
     au < released ; 2010 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 20 ; 20 >
     au < released ; 2011 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 21 ; 21 >
-    au < testing ; 2012 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 22 ; 22 >
+    au < notReady ; 2012 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 22 ; 22 >
     au < manifest ; 2013 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 23 ; 23 >
 
   }
@@ -4067,13 +4067,13 @@
     param[journal_issn] = 1744-9200
     comment[0] = online from 2005
       
-    au < testing ; 2005 ; International Journal of Prisoner Health Volume 1 ; 1 >
-    au < testing ; 2006 ; International Journal of Prisoner Health Volume 2 ; 2 >
-    au < testing ; 2007 ; International Journal of Prisoner Health Volume 3 ; 3 >
-    au < testing ; 2008 ; International Journal of Prisoner Health Volume 4 ; 4 >
-    au < testing ; 2009 ; International Journal of Prisoner Health Volume 5 ; 5 >
+    au < ready ; 2005 ; International Journal of Prisoner Health Volume 1 ; 1 >
+    au < ready ; 2006 ; International Journal of Prisoner Health Volume 2 ; 2 >
+    au < ready ; 2007 ; International Journal of Prisoner Health Volume 3 ; 3 >
+    au < ready ; 2008 ; International Journal of Prisoner Health Volume 4 ; 4 >
+    au < ready ; 2009 ; International Journal of Prisoner Health Volume 5 ; 5 >
     au < doesNotExist ; 0 ; International Journal of Prisoner Health Volume 6 ; 6 >
-    au < testing ; 2011 ; International Journal of Prisoner Health Volume 7 ; 7 >
+    au < ready ; 2011 ; International Journal of Prisoner Health Volume 7 ; 7 >
     au < released ; 2012 ; International Journal of Prisoner Health Volume 8 ; 8 >
     au < manifest ; 2013 ; International Journal of Prisoner Health Volume 9 ; 9 >
   
@@ -4803,9 +4803,9 @@
     param[journal_issn] = 2050-7003
     comment[0] = online from 2009
     
-    au < testing ; 2009 ; Journal of Applied Research in Higher Education Volume 1 ; 1 >
-    au < testing ; 2010 ; Journal of Applied Research in Higher Education Volume 2 ; 2 >
-    au < testing ; 2011 ; Journal of Applied Research in Higher Education Volume 3 ; 3 >
+    au < ready ; 2009 ; Journal of Applied Research in Higher Education Volume 1 ; 1 >
+    au < ready ; 2010 ; Journal of Applied Research in Higher Education Volume 2 ; 2 >
+    au < ready ; 2011 ; Journal of Applied Research in Higher Education Volume 3 ; 3 >
     au < released ; 2012 ; Journal of Applied Research in Higher Education Volume 4 ; 4 >
     au < expected ; 2013 ; Journal of Applied Research in Higher Education Volume 5 ; 5 >
     }
@@ -5234,12 +5234,12 @@
 
     au < released ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 >
     au < released ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 >
-    au < testing ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 >
-    au < testing ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 >
-    au < testing ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 >
-    au < testing ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 >
-    au < testing ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 >
-    au < testing ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 >
+    au < ready ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 >
+    au < ready ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 >
+    au < ready ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 >
+    au < ready ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 >
+    au < ready ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 >
+    au < ready ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 >
     au < doesNotExist ; 0 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 >
     au < released ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 >
     au < expected ; 2013 ; Journal of Economic and Administrative Sciences Volume 29 ; 29 >
@@ -8006,11 +8006,11 @@
     param[journal_issn] = 1573-6105
     comment[0] = online from 2005
     
-    au < testing ; 2005 ; Multidiscipline Modeling in Materials and Structures Volume 1 ; 1 >
-    au < testing ; 2006 ; Multidiscipline Modeling in Materials and Structures Volume 2 ; 2 >
-    au < testing ; 2007 ; Multidiscipline Modeling in Materials and Structures Volume 3 ; 3 >
-    au < testing ; 2008 ; Multidiscipline Modeling in Materials and Structures Volume 4 ; 4 >
-    au < testing ; 2009 ; Multidiscipline Modeling in Materials and Structures Volume 5 ; 5 >
+    au < ready ; 2005 ; Multidiscipline Modeling in Materials and Structures Volume 1 ; 1 >
+    au < ready ; 2006 ; Multidiscipline Modeling in Materials and Structures Volume 2 ; 2 >
+    au < ready ; 2007 ; Multidiscipline Modeling in Materials and Structures Volume 3 ; 3 >
+    au < ready ; 2008 ; Multidiscipline Modeling in Materials and Structures Volume 4 ; 4 >
+    au < ready ; 2009 ; Multidiscipline Modeling in Materials and Structures Volume 5 ; 5 >
     au < released ; 2010 ; Multidiscipline Modeling in Materials and Structures Volume 6 ; 6 >
     au < released ; 2011 ; Multidiscipline Modeling in Materials and Structures Volume 7 ; 7 >
     au < released ; 2012 ; Multidiscipline Modeling in Materials and Structures Volume 8 ; 8 >
@@ -9062,7 +9062,7 @@
     au < released ; 2009 ; Review of Behavioral Finance Volume 1 ; 1 >
     au < released ; 2010 ; Review of Behavioral Finance Volume 2 ; 2 >
     au < released ; 2011 ; Review of Behavioral Finance Volume 3 ; 3 >
-    au < testing ; 2012 ; Review of Behavioral Finance Volume 4 ; 4 >
+    au < ready ; 2012 ; Review of Behavioral Finance Volume 4 ; 4 >
     au < expected ; 2013 ; Review of Behavioral Finance Volume 5 ; 5 >
 
   }
@@ -10041,8 +10041,8 @@
 
     param[journal_issn] = 2042-5961 
 
-    au < testing ; 2010 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 >
-    au < testing ; 2011 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 >
+    au < ready ; 2010 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 >
+    au < notReady ; 2011 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 >
     au < released ; 2012 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 8 ; 8 >
     au < expected ; 2013 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 9 ; 9 >
 
@@ -10057,8 +10057,8 @@
 
     param[journal_issn] = 2042-5945
 
-      au < manifest; 2010 ; World Journal of Science, Technology and Sustainable Development Volume 7 ; 7 >
-      au < manifest; 2011 ; World Journal of Science, Technology and Sustainable Development Volume 8 ; 8 >
+      au < testing ; 2010 ; World Journal of Science, Technology and Sustainable Development Volume 7 ; 7 >
+      au < testing ; 2011 ; World Journal of Science, Technology and Sustainable Development Volume 8 ; 8 >
       au < ready; 2012 ; World Journal of Science, Technology and Sustainable Development Volume 9 ; 9 >
       au < manifest ; 2013 ; World Journal of Science, Technology and Sustainable Development Volume 10 ; 10 >
 
