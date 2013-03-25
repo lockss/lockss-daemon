@@ -30,15 +30,15 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = inva
 
-      au < releasing ; 2000 ; In Vitro Cellular & Developmental Biology - Animal Volume 36 ; 36 >
-      au < releasing ; 2001 ; In Vitro Cellular & Developmental Biology - Animal Volume 37 ; 37 >
-      au < releasing ; 2002 ; In Vitro Cellular & Developmental Biology - Animal Volume 38 ; 38 >
-      au < releasing ; 2003 ; In Vitro Cellular & Developmental Biology - Animal Volume 39 ; 39 >
+      au < released ; 2000 ; In Vitro Cellular & Developmental Biology - Animal Volume 36 ; 36 >
+      au < released ; 2001 ; In Vitro Cellular & Developmental Biology - Animal Volume 37 ; 37 >
+      au < released ; 2002 ; In Vitro Cellular & Developmental Biology - Animal Volume 38 ; 38 >
+      au < released ; 2003 ; In Vitro Cellular & Developmental Biology - Animal Volume 39 ; 39 >
       au < doNotProcess ; 2004 ; In Vitro Cellular & Developmental Biology - Animal Volume 40 ; 40 >
-      au < releasing ; 2005 ; In Vitro Cellular & Developmental Biology - Animal Volume 41 ; 41 >
-      au < releasing ; 2006 ; In Vitro Cellular & Developmental Biology - Animal Volume 42 ; 42 >
-      au < releasing ; 2007 ; In Vitro Cellular & Developmental Biology - Animal Volume 43 ; 43 >
-      au < releasing ; 2008 ; In Vitro Cellular & Developmental Biology - Animal Volume 44 ; 44 >
+      au < released ; 2005 ; In Vitro Cellular & Developmental Biology - Animal Volume 41 ; 41 >
+      au < released ; 2006 ; In Vitro Cellular & Developmental Biology - Animal Volume 42 ; 42 >
+      au < released ; 2007 ; In Vitro Cellular & Developmental Biology - Animal Volume 43 ; 43 >
+      au < released ; 2008 ; In Vitro Cellular & Developmental Biology - Animal Volume 44 ; 44 >
 
     }
 
@@ -71,12 +71,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = invp
 
-      au < releasing ; 2003 ; In Vitro Cellular & Developmental Biology - Plant Volume 39 ; 39 >
+      au < released ; 2003 ; In Vitro Cellular & Developmental Biology - Plant Volume 39 ; 39 >
       au < doNotProcess ; 2004 ; In Vitro Cellular & Developmental Biology - Plant Volume 40 ; 40 >
       au < manifest ; 2005 ; In Vitro Cellular & Developmental Biology - Plant Volume 41 ; 41 >
-      au < releasing ; 2006 ; In Vitro Cellular & Developmental Biology - Plant Volume 42 ; 42 >
-      au < releasing ; 2007 ; In Vitro Cellular & Developmental Biology - Plant Volume 43 ; 43 >
-      au < releasing ; 2008 ; In Vitro Cellular & Developmental Biology - Plant Volume 44 ; 44 >
+      au < released ; 2006 ; In Vitro Cellular & Developmental Biology - Plant Volume 42 ; 42 >
+      au < released ; 2007 ; In Vitro Cellular & Developmental Biology - Plant Volume 43 ; 43 >
+      au < released ; 2008 ; In Vitro Cellular & Developmental Biology - Plant Volume 44 ; 44 >
 
     }
 

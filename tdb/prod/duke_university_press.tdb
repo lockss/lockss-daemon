@@ -535,13 +535,13 @@
       param[base_url] = http://culturalpolitics.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; releasing ; 2005 ; Cultural Politics Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; releasing ; 2006 ; Cultural Politics Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; releasing ; 2007 ; Cultural Politics Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; releasing ; 2008 ; Cultural Politics Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; releasing ; 2009 ; Cultural Politics Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; releasing ; 2010 ; Cultural Politics Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; releasing ; 2011 ; Cultural Politics Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Cultural Politics Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Cultural Politics Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Cultural Politics Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Cultural Politics Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Cultural Politics Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Cultural Politics Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Cultural Politics Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Cultural Politics Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Cultural Politics Volume 9 ; 9 >
 
@@ -580,11 +580,11 @@
       param[base_url] = http://differences.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 1999-2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; released ; 1999-2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
       au < HighWireStrVolPlugin ; down ; 2005 ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
       au < HighWireStrVolPlugin ; down ; 2006 ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >      
       au < HighWirePressH20Plugin ; released ; 2007 ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 >
@@ -867,11 +867,11 @@
       param[base_url] = http://ecl.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; Eighteenth-Century Life Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; Eighteenth-Century Life Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; Eighteenth-Century Life Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; Eighteenth-Century Life Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Eighteenth-Century Life Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Eighteenth-Century Life Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Eighteenth-Century Life Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Eighteenth-Century Life Volume 28 ; 28 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >
@@ -968,11 +968,11 @@
       param[base_url] = http://fhs.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWirePressH20Plugin ; releasing ; 2000 ; French Historical Studies Volume 23 ; 23 >
-     au < HighWirePressH20Plugin ; releasing ; 2001 ; French Historical Studies Volume 24 ; 24 >
-     au < HighWirePressH20Plugin ; releasing ; 2002 ; French Historical Studies Volume 25 ; 25 >
-     au < HighWirePressH20Plugin ; releasing ; 2003 ; French Historical Studies Volume 26 ; 26 >
-     au < HighWirePressH20Plugin ; releasing ; 2004 ; French Historical Studies Volume 27 ; 27 >
+     au < HighWirePressH20Plugin ; released ; 2000 ; French Historical Studies Volume 23 ; 23 >
+     au < HighWirePressH20Plugin ; released ; 2001 ; French Historical Studies Volume 24 ; 24 >
+     au < HighWirePressH20Plugin ; released ; 2002 ; French Historical Studies Volume 25 ; 25 >
+     au < HighWirePressH20Plugin ; released ; 2003 ; French Historical Studies Volume 26 ; 26 >
+     au < HighWirePressH20Plugin ; released ; 2004 ; French Historical Studies Volume 27 ; 27 >
      au < HighWireStrVolPlugin ; down ; 2005 ; French Historical Studies Volume 28 ; 28 >
      au < HighWireStrVolPlugin ; down ; 2006 ; French Historical Studies Volume 29 ; 29 >
      au < HighWireStrVolPlugin ; down ; 2007 ; French Historical Studies Volume 30 ; 30 >      
@@ -1060,17 +1060,17 @@
       param[base_url] = http://glq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 1993-1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; releasing ; 1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; releasing ; 1996-1997 ; GLQ: A Journal of Lesbian and Gay Studies Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; releasing ; 1998 ; GLQ: A Journal of Lesbian and Gay Studies Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; releasing ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; releasing ; 2003-2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; releasing ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; released ; 1993-1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 1995 ; GLQ: A Journal of Lesbian and Gay Studies Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 1996-1997 ; GLQ: A Journal of Lesbian and Gay Studies Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 1998 ; GLQ: A Journal of Lesbian and Gay Studies Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 2003-2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
       au < HighWireStrVolPlugin ; down ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
       au < HighWireStrVolPlugin ; down ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >      
       au < HighWirePressH20Plugin ; released ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
@@ -1115,11 +1115,11 @@
       param[base_url] = http://hahr.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; Hispanic American Historical Review Volume 81 ; 81 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; Hispanic American Historical Review Volume 83 ; 83 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; Hispanic American Historical Review Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Hispanic American Historical Review Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Hispanic American Historical Review Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Hispanic American Historical Review Volume 84 ; 84 >
      au < HighWireStrVolPlugin ; down ; 2005 ; Hispanic American Historical Review Volume 85 ; 85 >
      au < HighWireStrVolPlugin ; down ; 2006 ; Hispanic American Historical Review Volume 86 ; 86 >
      au < HighWireStrVolPlugin ; down ; 2007 ; Hispanic American Historical Review Volume 87 ; 87 >      
@@ -1165,42 +1165,42 @@
       param[base_url] = http://hope.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWirePressH20Plugin ; releasing ; 1969 ; History of Political Economy Volume 1 ; 1 >
-     au < HighWirePressH20Plugin ; releasing ; 1970 ; History of Political Economy Volume 2 ; 2 >
-     au < HighWirePressH20Plugin ; releasing ; 1971 ; History of Political Economy Volume 3 ; 3 >
-     au < HighWirePressH20Plugin ; releasing ; 1972 ; History of Political Economy Volume 4 ; 4 >
-     au < HighWirePressH20Plugin ; releasing ; 1973 ; History of Political Economy Volume 5 ; 5 >
-     au < HighWirePressH20Plugin ; releasing ; 1974 ; History of Political Economy Volume 6 ; 6 >
-     au < HighWirePressH20Plugin ; releasing ; 1975 ; History of Political Economy Volume 7 ; 7 >
-     au < HighWirePressH20Plugin ; releasing ; 1976 ; History of Political Economy Volume 8 ; 8 >
-     au < HighWirePressH20Plugin ; releasing ; 1977 ; History of Political Economy Volume 9 ; 9 >
-     au < HighWirePressH20Plugin ; releasing ; 1978 ; History of Political Economy Volume 10 ; 10 >
-     au < HighWirePressH20Plugin ; releasing ; 1979 ; History of Political Economy Volume 11 ; 11 >
-     au < HighWirePressH20Plugin ; releasing ; 1980 ; History of Political Economy Volume 12 ; 12 >
-     au < HighWirePressH20Plugin ; releasing ; 1981 ; History of Political Economy Volume 13 ; 13 >
-     au < HighWirePressH20Plugin ; releasing ; 1982 ; History of Political Economy Volume 14 ; 14 >
-     au < HighWirePressH20Plugin ; releasing ; 1983 ; History of Political Economy Volume 15 ; 15 >
-     au < HighWirePressH20Plugin ; releasing ; 1984 ; History of Political Economy Volume 16 ; 16 >
-     au < HighWirePressH20Plugin ; releasing ; 1985 ; History of Political Economy Volume 17 ; 17 >
-     au < HighWirePressH20Plugin ; releasing ; 1986 ; History of Political Economy Volume 18 ; 18 >
-     au < HighWirePressH20Plugin ; releasing ; 1987 ; History of Political Economy Volume 19 ; 19 >
-     au < HighWirePressH20Plugin ; releasing ; 1988 ; History of Political Economy Volume 20 ; 20 >
-     au < HighWirePressH20Plugin ; releasing ; 1989 ; History of Political Economy Volume 21 ; 21 >
-     au < HighWirePressH20Plugin ; releasing ; 1990 ; History of Political Economy Volume 22 ; 22 >
-     au < HighWirePressH20Plugin ; releasing ; 1991 ; History of Political Economy Volume 23 ; 23 >
-     au < HighWirePressH20Plugin ; releasing ; 1992 ; History of Political Economy Volume 24 ; 24 >
-     au < HighWirePressH20Plugin ; releasing ; 1993 ; History of Political Economy Volume 25 ; 25 >
-     au < HighWirePressH20Plugin ; releasing ; 1994 ; History of Political Economy Volume 26 ; 26 >
-     au < HighWirePressH20Plugin ; releasing ; 1995 ; History of Political Economy Volume 27 ; 27 >
-     au < HighWirePressH20Plugin ; releasing ; 1996 ; History of Political Economy Volume 28 ; 28 >
-     au < HighWirePressH20Plugin ; releasing ; 1997 ; History of Political Economy Volume 29 ; 29 >
-     au < HighWirePressH20Plugin ; releasing ; 1998 ; History of Political Economy Volume 30 ; 30 >
-     au < HighWirePressH20Plugin ; releasing ; 1999 ; History of Political Economy Volume 31 ; 31 >
-     au < HighWirePressH20Plugin ; releasing ; 2000 ; History of Political Economy Volume 32 ; 32 >
-     au < HighWirePressH20Plugin ; releasing ; 2001 ; History of Political Economy Volume 33 ; 33 >
-     au < HighWirePressH20Plugin ; releasing ; 2002 ; History of Political Economy Volume 34 ; 34 >
-     au < HighWirePressH20Plugin ; releasing ; 2003 ; History of Political Economy Volume 35 ; 35 >
-     au < HighWirePressH20Plugin ; releasing ; 2004 ; History of Political Economy Volume 36 ; 36 >
+     au < HighWirePressH20Plugin ; released ; 1969 ; History of Political Economy Volume 1 ; 1 >
+     au < HighWirePressH20Plugin ; released ; 1970 ; History of Political Economy Volume 2 ; 2 >
+     au < HighWirePressH20Plugin ; released ; 1971 ; History of Political Economy Volume 3 ; 3 >
+     au < HighWirePressH20Plugin ; released ; 1972 ; History of Political Economy Volume 4 ; 4 >
+     au < HighWirePressH20Plugin ; released ; 1973 ; History of Political Economy Volume 5 ; 5 >
+     au < HighWirePressH20Plugin ; released ; 1974 ; History of Political Economy Volume 6 ; 6 >
+     au < HighWirePressH20Plugin ; released ; 1975 ; History of Political Economy Volume 7 ; 7 >
+     au < HighWirePressH20Plugin ; released ; 1976 ; History of Political Economy Volume 8 ; 8 >
+     au < HighWirePressH20Plugin ; released ; 1977 ; History of Political Economy Volume 9 ; 9 >
+     au < HighWirePressH20Plugin ; released ; 1978 ; History of Political Economy Volume 10 ; 10 >
+     au < HighWirePressH20Plugin ; released ; 1979 ; History of Political Economy Volume 11 ; 11 >
+     au < HighWirePressH20Plugin ; released ; 1980 ; History of Political Economy Volume 12 ; 12 >
+     au < HighWirePressH20Plugin ; released ; 1981 ; History of Political Economy Volume 13 ; 13 >
+     au < HighWirePressH20Plugin ; released ; 1982 ; History of Political Economy Volume 14 ; 14 >
+     au < HighWirePressH20Plugin ; released ; 1983 ; History of Political Economy Volume 15 ; 15 >
+     au < HighWirePressH20Plugin ; released ; 1984 ; History of Political Economy Volume 16 ; 16 >
+     au < HighWirePressH20Plugin ; released ; 1985 ; History of Political Economy Volume 17 ; 17 >
+     au < HighWirePressH20Plugin ; released ; 1986 ; History of Political Economy Volume 18 ; 18 >
+     au < HighWirePressH20Plugin ; released ; 1987 ; History of Political Economy Volume 19 ; 19 >
+     au < HighWirePressH20Plugin ; released ; 1988 ; History of Political Economy Volume 20 ; 20 >
+     au < HighWirePressH20Plugin ; released ; 1989 ; History of Political Economy Volume 21 ; 21 >
+     au < HighWirePressH20Plugin ; released ; 1990 ; History of Political Economy Volume 22 ; 22 >
+     au < HighWirePressH20Plugin ; released ; 1991 ; History of Political Economy Volume 23 ; 23 >
+     au < HighWirePressH20Plugin ; released ; 1992 ; History of Political Economy Volume 24 ; 24 >
+     au < HighWirePressH20Plugin ; released ; 1993 ; History of Political Economy Volume 25 ; 25 >
+     au < HighWirePressH20Plugin ; released ; 1994 ; History of Political Economy Volume 26 ; 26 >
+     au < HighWirePressH20Plugin ; released ; 1995 ; History of Political Economy Volume 27 ; 27 >
+     au < HighWirePressH20Plugin ; released ; 1996 ; History of Political Economy Volume 28 ; 28 >
+     au < HighWirePressH20Plugin ; released ; 1997 ; History of Political Economy Volume 29 ; 29 >
+     au < HighWirePressH20Plugin ; released ; 1998 ; History of Political Economy Volume 30 ; 30 >
+     au < HighWirePressH20Plugin ; released ; 1999 ; History of Political Economy Volume 31 ; 31 >
+     au < HighWirePressH20Plugin ; released ; 2000 ; History of Political Economy Volume 32 ; 32 >
+     au < HighWirePressH20Plugin ; released ; 2001 ; History of Political Economy Volume 33 ; 33 >
+     au < HighWirePressH20Plugin ; released ; 2002 ; History of Political Economy Volume 34 ; 34 >
+     au < HighWirePressH20Plugin ; released ; 2003 ; History of Political Economy Volume 35 ; 35 >
+     au < HighWirePressH20Plugin ; released ; 2004 ; History of Political Economy Volume 36 ; 36 >
      au < HighWireStrVolPlugin ; down ; 2005 ; History of Political Economy Volume 37 ; 37 >
      au < HighWireStrVolPlugin ; down ; 2006 ; History of Political Economy Volume 38 ; 38 >
      au < HighWireStrVolPlugin ; down ; 2007 ; History of Political Economy Volume 39 ; 39 >      
@@ -1265,15 +1265,15 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       comment[notReady] = different div class"article abstract-view" itemprop"articleBody"
       
-      au < HighWirePressH20Plugin ; releasing ; 1976 ; Journal of Health Politics, Policy and Law Volume 1; 1 >
-      au < HighWirePressH20Plugin ; releasing ; 1977 ; Journal of Health Politics, Policy and Law Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; releasing ; 1978 ; Journal of Health Politics, Policy and Law Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; releasing ; 1979 ; Journal of Health Politics, Policy and Law Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; releasing ; 1980 ; Journal of Health Politics, Policy and Law Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; releasing ; 1981 ; Journal of Health Politics, Policy and Law Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; releasing ; 1982 ; Journal of Health Politics, Policy and Law Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; releasing ; 1983 ; Journal of Health Politics, Policy and Law Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; releasing ; 1984 ; Journal of Health Politics, Policy and Law Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 1976 ; Journal of Health Politics, Policy and Law Volume 1; 1 >
+      au < HighWirePressH20Plugin ; released ; 1977 ; Journal of Health Politics, Policy and Law Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 1978 ; Journal of Health Politics, Policy and Law Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 1979 ; Journal of Health Politics, Policy and Law Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 1980 ; Journal of Health Politics, Policy and Law Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 1981 ; Journal of Health Politics, Policy and Law Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 1982 ; Journal of Health Politics, Policy and Law Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 1983 ; Journal of Health Politics, Policy and Law Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; released ; 1984 ; Journal of Health Politics, Policy and Law Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; notReady ; 1985 ; Journal of Health Politics, Policy and Law Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; ready ; 1986 ; Journal of Health Politics, Policy and Law Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; ready ; 1987 ; Journal of Health Politics, Policy and Law Volume 12 ; 12 >
@@ -1408,11 +1408,11 @@
       param[base_url] = http://jmems.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; Journal of Medieval and Early Modern Studies Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Journal of Medieval and Early Modern Studies Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 ; 34 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Medieval and Early Modern Studies Volume 36 ; 36 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 >      
@@ -1441,19 +1441,19 @@
       param[base_url] = http://jmt.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 1999 ; Journal of Music Theory Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; Journal of Music Theory Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; Journal of Music Theory Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; Journal of Music Theory Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; Journal of Music Theory Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; Journal of Music Theory Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; releasing ; 2005 ; Journal of Music Theory Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; releasing ; 2006 ; Journal of Music Theory Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; releasing ; 2007 ; Journal of Music Theory Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; releasing ; 2008 ; Journal of Music Theory Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; releasing ; 2009 ; Journal of Music Theory Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; releasing ; 2010 ; Journal of Music Theory Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; releasing ; 2011 ; Journal of Music Theory Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; released ; 1999 ; Journal of Music Theory Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Journal of Music Theory Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Journal of Music Theory Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Journal of Music Theory Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Journal of Music Theory Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Journal of Music Theory Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Music Theory Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Journal of Music Theory Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Music Theory Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Music Theory Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Music Theory Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Music Theory Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Music Theory Volume 55 ; 55 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Music Theory Volume 56 ; 56 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Music Theory Volume 57 ; 57 >
 
@@ -1572,11 +1572,11 @@
       param[base_url] = http://mq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; Mediterranean Quarterly Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; Mediterranean Quarterly Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; Mediterranean Quarterly Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; Mediterranean Quarterly Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; Mediterranean Quarterly Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Mediterranean Quarterly Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Mediterranean Quarterly Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Mediterranean Quarterly Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Mediterranean Quarterly Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Mediterranean Quarterly Volume 15 ; 15 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Mediterranean Quarterly Volume 16 ; 16 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Mediterranean Quarterly Volume 17 ; 17 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Mediterranean Quarterly Volume 18 ; 18 >      
@@ -1727,71 +1727,71 @@
       param[base_url] = http://mlq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 1940 ; MLQ: Modern Language Quarterly Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; releasing ; 1941 ; MLQ: Modern Language Quarterly Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; releasing ; 1942 ; MLQ: Modern Language Quarterly Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; releasing ; 1943 ; MLQ: Modern Language Quarterly Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; releasing ; 1944 ; MLQ: Modern Language Quarterly Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; releasing ; 1945 ; MLQ: Modern Language Quarterly Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; releasing ; 1946 ; MLQ: Modern Language Quarterly Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; releasing ; 1947 ; MLQ: Modern Language Quarterly Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; releasing ; 1948 ; MLQ: Modern Language Quarterly Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; releasing ; 1949 ; MLQ: Modern Language Quarterly Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; releasing ; 1950 ; MLQ: Modern Language Quarterly Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; releasing ; 1951 ; MLQ: Modern Language Quarterly Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; releasing ; 1952 ; MLQ: Modern Language Quarterly Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; releasing ; 1953 ; MLQ: Modern Language Quarterly Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; releasing ; 1954 ; MLQ: Modern Language Quarterly Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; releasing ; 1955 ; MLQ: Modern Language Quarterly Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; releasing ; 1956 ; MLQ: Modern Language Quarterly Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; releasing ; 1957 ; MLQ: Modern Language Quarterly Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; releasing ; 1958 ; MLQ: Modern Language Quarterly Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; releasing ; 1959 ; MLQ: Modern Language Quarterly Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; releasing ; 1960 ; MLQ: Modern Language Quarterly Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; releasing ; 1961 ; MLQ: Modern Language Quarterly Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; releasing ; 1962 ; MLQ: Modern Language Quarterly Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; releasing ; 1963 ; MLQ: Modern Language Quarterly Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; releasing ; 1964 ; MLQ: Modern Language Quarterly Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; releasing ; 1965 ; MLQ: Modern Language Quarterly Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; releasing ; 1966 ; MLQ: Modern Language Quarterly Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; releasing ; 1967 ; MLQ: Modern Language Quarterly Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; releasing ; 1968 ; MLQ: Modern Language Quarterly Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; releasing ; 1969 ; MLQ: Modern Language Quarterly Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; releasing ; 1970 ; MLQ: Modern Language Quarterly Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; releasing ; 1971 ; MLQ: Modern Language Quarterly Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; releasing ; 1972 ; MLQ: Modern Language Quarterly Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; releasing ; 1973 ; MLQ: Modern Language Quarterly Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; releasing ; 1974 ; MLQ: Modern Language Quarterly Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; releasing ; 1975 ; MLQ: Modern Language Quarterly Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; releasing ; 1976 ; MLQ: Modern Language Quarterly Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; releasing ; 1977 ; MLQ: Modern Language Quarterly Volume 38 ; 38 >
-      au < HighWirePressH20Plugin ; releasing ; 1978 ; MLQ: Modern Language Quarterly Volume 39 ; 39 >
-      au < HighWirePressH20Plugin ; releasing ; 1979 ; MLQ: Modern Language Quarterly Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; releasing ; 1980 ; MLQ: Modern Language Quarterly Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; releasing ; 1981 ; MLQ: Modern Language Quarterly Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; releasing ; 1982 ; MLQ: Modern Language Quarterly Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; releasing ; 1983 ; MLQ: Modern Language Quarterly Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; releasing ; 1984 ; MLQ: Modern Language Quarterly Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; releasing ; 1985 ; MLQ: Modern Language Quarterly Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; releasing ; 1986 ; MLQ: Modern Language Quarterly Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; releasing ; 1987 ; MLQ: Modern Language Quarterly Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; releasing ; 1988 ; MLQ: Modern Language Quarterly Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; releasing ; 1989 ; MLQ: Modern Language Quarterly Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; releasing ; 1990 ; MLQ: Modern Language Quarterly Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; releasing ; 1991 ; MLQ: Modern Language Quarterly Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; releasing ; 1992 ; MLQ: Modern Language Quarterly Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; releasing ; 1993 ; MLQ: Modern Language Quarterly Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; releasing ; 1994 ; MLQ: Modern Language Quarterly Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; releasing ; 1995 ; MLQ: Modern Language Quarterly Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; releasing ; 1996 ; MLQ: Modern Language Quarterly Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; releasing ; 1997 ; MLQ: Modern Language Quarterly Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; releasing ; 1998 ; MLQ: Modern Language Quarterly Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; releasing ; 1999 ; MLQ: Modern Language Quarterly Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; MLQ: Modern Language Quarterly Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; MLQ: Modern Language Quarterly Volume 62 ; 62 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; MLQ: Modern Language Quarterly Volume 63 ; 63 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; MLQ: Modern Language Quarterly Volume 64 ; 64 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; MLQ: Modern Language Quarterly Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; released ; 1940 ; MLQ: Modern Language Quarterly Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 1941 ; MLQ: Modern Language Quarterly Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 1942 ; MLQ: Modern Language Quarterly Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 1943 ; MLQ: Modern Language Quarterly Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 1944 ; MLQ: Modern Language Quarterly Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 1945 ; MLQ: Modern Language Quarterly Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 1946 ; MLQ: Modern Language Quarterly Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 1947 ; MLQ: Modern Language Quarterly Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; released ; 1948 ; MLQ: Modern Language Quarterly Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 1949 ; MLQ: Modern Language Quarterly Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; released ; 1950 ; MLQ: Modern Language Quarterly Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; released ; 1951 ; MLQ: Modern Language Quarterly Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; released ; 1952 ; MLQ: Modern Language Quarterly Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; released ; 1953 ; MLQ: Modern Language Quarterly Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; released ; 1954 ; MLQ: Modern Language Quarterly Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; released ; 1955 ; MLQ: Modern Language Quarterly Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; released ; 1956 ; MLQ: Modern Language Quarterly Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; released ; 1957 ; MLQ: Modern Language Quarterly Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; released ; 1958 ; MLQ: Modern Language Quarterly Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; released ; 1959 ; MLQ: Modern Language Quarterly Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; released ; 1960 ; MLQ: Modern Language Quarterly Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; released ; 1961 ; MLQ: Modern Language Quarterly Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; released ; 1962 ; MLQ: Modern Language Quarterly Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; released ; 1963 ; MLQ: Modern Language Quarterly Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; released ; 1964 ; MLQ: Modern Language Quarterly Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; released ; 1965 ; MLQ: Modern Language Quarterly Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; released ; 1966 ; MLQ: Modern Language Quarterly Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; released ; 1967 ; MLQ: Modern Language Quarterly Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; released ; 1968 ; MLQ: Modern Language Quarterly Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; released ; 1969 ; MLQ: Modern Language Quarterly Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; released ; 1970 ; MLQ: Modern Language Quarterly Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; released ; 1971 ; MLQ: Modern Language Quarterly Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; released ; 1972 ; MLQ: Modern Language Quarterly Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; released ; 1973 ; MLQ: Modern Language Quarterly Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; released ; 1974 ; MLQ: Modern Language Quarterly Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; released ; 1975 ; MLQ: Modern Language Quarterly Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; released ; 1976 ; MLQ: Modern Language Quarterly Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; released ; 1977 ; MLQ: Modern Language Quarterly Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; released ; 1978 ; MLQ: Modern Language Quarterly Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; released ; 1979 ; MLQ: Modern Language Quarterly Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; released ; 1980 ; MLQ: Modern Language Quarterly Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; released ; 1981 ; MLQ: Modern Language Quarterly Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; released ; 1982 ; MLQ: Modern Language Quarterly Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; released ; 1983 ; MLQ: Modern Language Quarterly Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; released ; 1984 ; MLQ: Modern Language Quarterly Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; released ; 1985 ; MLQ: Modern Language Quarterly Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; released ; 1986 ; MLQ: Modern Language Quarterly Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; released ; 1987 ; MLQ: Modern Language Quarterly Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; released ; 1988 ; MLQ: Modern Language Quarterly Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; released ; 1989 ; MLQ: Modern Language Quarterly Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; released ; 1990 ; MLQ: Modern Language Quarterly Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; released ; 1991 ; MLQ: Modern Language Quarterly Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; released ; 1992 ; MLQ: Modern Language Quarterly Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; released ; 1993 ; MLQ: Modern Language Quarterly Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; released ; 1994 ; MLQ: Modern Language Quarterly Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; released ; 1995 ; MLQ: Modern Language Quarterly Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; released ; 1996 ; MLQ: Modern Language Quarterly Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; released ; 1997 ; MLQ: Modern Language Quarterly Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; released ; 1998 ; MLQ: Modern Language Quarterly Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; released ; 1999 ; MLQ: Modern Language Quarterly Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; MLQ: Modern Language Quarterly Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; MLQ: Modern Language Quarterly Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; MLQ: Modern Language Quarterly Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; MLQ: Modern Language Quarterly Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; MLQ: Modern Language Quarterly Volume 65 ; 65 >
       au < HighWireStrVolPlugin ; down ; 2005 ; MLQ: Modern Language Quarterly Volume 66 ; 66 >
       au < HighWireStrVolPlugin ; down ; 2006 ; MLQ: Modern Language Quarterly Volume 67 ; 67 >
       au < HighWireStrVolPlugin ; down ; 2007 ; MLQ: Modern Language Quarterly Volume 68 ; 68 >      
@@ -1976,24 +1976,24 @@
       param[base_url] = http://nka.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 1994 ; Nka: Journal of Contemporary African Art Volume 1994 ; 1994 >
-      au < HighWirePressH20Plugin ; releasing ; 1995 ; Nka: Journal of Contemporary African Art Volume 1995 ; 1995 >
-      au < HighWirePressH20Plugin ; releasing ; 1996 ; Nka: Journal of Contemporary African Art Volume 1996 ; 1996 >
-      au < HighWirePressH20Plugin ; releasing ; 1997 ; Nka: Journal of Contemporary African Art Volume 1997 ; 1997 >
-      au < HighWirePressH20Plugin ; releasing ; 1998 ; Nka: Journal of Contemporary African Art Volume 1998 ; 1998 >
-      au < HighWirePressH20Plugin ; releasing ; 1999 ; Nka: Journal of Contemporary African Art Volume 1999 ; 1999 >
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; Nka: Journal of Contemporary African Art Volume 2000 ; 2000 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; Nka: Journal of Contemporary African Art Volume 2001 ; 2001 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; Nka: Journal of Contemporary African Art Volume 2002 ; 2002 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; Nka: Journal of Contemporary African Art Volume 2003 ; 2003 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; Nka: Journal of Contemporary African Art Volume 2004 ; 2004 >
+      au < HighWirePressH20Plugin ; released ; 1994 ; Nka: Journal of Contemporary African Art Volume 1994 ; 1994 >
+      au < HighWirePressH20Plugin ; released ; 1995 ; Nka: Journal of Contemporary African Art Volume 1995 ; 1995 >
+      au < HighWirePressH20Plugin ; released ; 1996 ; Nka: Journal of Contemporary African Art Volume 1996 ; 1996 >
+      au < HighWirePressH20Plugin ; released ; 1997 ; Nka: Journal of Contemporary African Art Volume 1997 ; 1997 >
+      au < HighWirePressH20Plugin ; released ; 1998 ; Nka: Journal of Contemporary African Art Volume 1998 ; 1998 >
+      au < HighWirePressH20Plugin ; released ; 1999 ; Nka: Journal of Contemporary African Art Volume 1999 ; 1999 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Nka: Journal of Contemporary African Art Volume 2000 ; 2000 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Nka: Journal of Contemporary African Art Volume 2001 ; 2001 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Nka: Journal of Contemporary African Art Volume 2002 ; 2002 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Nka: Journal of Contemporary African Art Volume 2003 ; 2003 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Nka: Journal of Contemporary African Art Volume 2004 ; 2004 >
       au < HighWirePressH20Plugin ; doesNotExist ; 2005 ; Nka: Journal of Contemporary African Art Volume 2005 ; 0 >
-      au < HighWirePressH20Plugin ; releasing ; 2006 ; Nka: Journal of Contemporary African Art Volume 2006 ; 2006 >
-      au < HighWirePressH20Plugin ; releasing ; 2007 ; Nka: Journal of Contemporary African Art Volume 2007 ; 2007 >
-      au < HighWirePressH20Plugin ; releasing ; 2008 ; Nka: Journal of Contemporary African Art Volume 2008 ; 2008 >
-      au < HighWirePressH20Plugin ; releasing ; 2009 ; Nka: Journal of Contemporary African Art Volume 2009 ; 2009 >
-      au < HighWirePressH20Plugin ; releasing ; 2010 ; Nka: Journal of Contemporary African Art Volume 2010 ; 2010 >
-      au < HighWirePressH20Plugin ; releasing ; 2011 ; Nka: Journal of Contemporary African Art Volume 2011 ; 2011 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Nka: Journal of Contemporary African Art Volume 2006 ; 2006 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Nka: Journal of Contemporary African Art Volume 2007 ; 2007 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Nka: Journal of Contemporary African Art Volume 2008 ; 2008 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Nka: Journal of Contemporary African Art Volume 2009 ; 2009 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Nka: Journal of Contemporary African Art Volume 2010 ; 2010 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Nka: Journal of Contemporary African Art Volume 2011 ; 2011 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Nka: Journal of Contemporary African Art Volume 2012 ; 2012 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Nka: Journal of Contemporary African Art Volume 2013 ; 2013 >
 
@@ -2079,19 +2079,19 @@
     param[base_url] = http://novel.dukejournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
 
-    au < HighWirePressH20Plugin ; releasing ; 1999-2000 ; Novel: A Forum on Fiction Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; releasing ; 2000-2001 ; Novel: A Forum on Fiction Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; releasing ; 2001-2002 ; Novel: A Forum on Fiction Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; releasing ; 2002-2003 ; Novel: A Forum on Fiction Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; releasing ; 2003-2004 ; Novel: A Forum on Fiction Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; releasing ; 2004-2005 ; Novel: A Forum on Fiction Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; releasing ; 2005-2006 ; Novel: A Forum on Fiction Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; releasing ; 2006-2007 ; Novel: A Forum on Fiction Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; releasing ; 2007-2008 ; Novel: A Forum on Fiction Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; releasing ; 2009 ; Novel: A Forum on Fiction Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Novel: A Forum on Fiction Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Novel: A Forum on Fiction Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; releasing ; 2012 ; Novel: A Forum on Fiction Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; released ; 1999-2000 ; Novel: A Forum on Fiction Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; released ; 2000-2001 ; Novel: A Forum on Fiction Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; released ; 2001-2002 ; Novel: A Forum on Fiction Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; released ; 2002-2003 ; Novel: A Forum on Fiction Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; released ; 2003-2004 ; Novel: A Forum on Fiction Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; released ; 2004-2005 ; Novel: A Forum on Fiction Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; released ; 2005-2006 ; Novel: A Forum on Fiction Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; released ; 2006-2007 ; Novel: A Forum on Fiction Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; released ; 2007-2008 ; Novel: A Forum on Fiction Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Novel: A Forum on Fiction Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Novel: A Forum on Fiction Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Novel: A Forum on Fiction Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Novel: A Forum on Fiction Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; Novel: A Forum on Fiction Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; Novel: A Forum on Fiction Volume 47 ; 47 >
 
@@ -2139,13 +2139,13 @@
       au < HighWirePressH20Plugin ; exists ; 2002 ; Pedagogy Volume 2 ; 2  >
       au < HighWirePressH20Plugin ; exists ; 2003 ; Pedagogy Volume 3 ; 3  >
       au < HighWirePressH20Plugin ; exists ; 2004 ; Pedagogy Volume 4 ; 4  >
-      au < HighWirePressH20Plugin ; releasing ; 2005 ; Pedagogy Volume 5 ; 5  >
-      au < HighWirePressH20Plugin ; releasing ; 2006 ; Pedagogy Volume 6 ; 6  >
-      au < HighWirePressH20Plugin ; releasing ; 2007 ; Pedagogy Volume 7 ; 7  >
-      au < HighWirePressH20Plugin ; releasing ; 2008 ; Pedagogy Volume 8 ; 8  >
-      au < HighWirePressH20Plugin ; releasing ; 2009 ; Pedagogy Volume 9 ; 9  >
-      au < HighWirePressH20Plugin ; releasing ; 2010 ; Pedagogy Volume 10 ;10 >
-      au < HighWirePressH20Plugin ; releasing ; 2011 ; Pedagogy Volume 11 ;11 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Pedagogy Volume 5 ; 5  >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Pedagogy Volume 6 ; 6  >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Pedagogy Volume 7 ; 7  >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Pedagogy Volume 8 ; 8  >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Pedagogy Volume 9 ; 9  >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Pedagogy Volume 10 ;10 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Pedagogy Volume 11 ;11 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Pedagogy Volume 12 ;12 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Pedagogy Volume 13 ;13 >
 
@@ -2166,18 +2166,18 @@
       param[base_url] = http://philreview.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; Philosophical Review Volume 109 ; 109 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; Philosophical Review Volume 110 ; 110 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; Philosophical Review Volume 111 ; 111 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; Philosophical Review Volume 112 ; 112 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; Philosophical Review Volume 113 ; 113 >
-      au < HighWirePressH20Plugin ; releasing ; 2005 ; Philosophical Review Volume 114 ; 114 >
-      au < HighWirePressH20Plugin ; releasing ; 2006 ; Philosophical Review Volume 115 ; 115 >
-      au < HighWirePressH20Plugin ; releasing ; 2007 ; Philosophical Review Volume 116 ; 116 >
-      au < HighWirePressH20Plugin ; releasing ; 2008 ; Philosophical Review Volume 117 ; 117 >
-      au < HighWirePressH20Plugin ; releasing ; 2009 ; Philosophical Review Volume 118 ; 118 >
-      au < HighWirePressH20Plugin ; releasing ; 2010 ; Philosophical Review Volume 119 ; 119 >
-      au < HighWirePressH20Plugin ; releasing ; 2011 ; Philosophical Review Volume 120 ; 120 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Philosophical Review Volume 109 ; 109 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Philosophical Review Volume 110 ; 110 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Philosophical Review Volume 111 ; 111 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Philosophical Review Volume 112 ; 112 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Philosophical Review Volume 113 ; 113 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Philosophical Review Volume 114 ; 114 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Philosophical Review Volume 115 ; 115 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Philosophical Review Volume 116 ; 116 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Philosophical Review Volume 117 ; 117 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Philosophical Review Volume 118 ; 118 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Philosophical Review Volume 119 ; 119 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Philosophical Review Volume 120 ; 120 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Philosophical Review Volume 121 ; 121 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Philosophical Review Volume 122 ; 122 >
 
@@ -2216,11 +2216,11 @@
       param[base_url] = http://poeticstoday.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; Poetics Today Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; Poetics Today Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; Poetics Today Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; Poetics Today Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; Poetics Today Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Poetics Today Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Poetics Today Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Poetics Today Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Poetics Today Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Poetics Today Volume 25 ; 25 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Poetics Today Volume 26 ; 26 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Poetics Today Volume 27 ; 27 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Poetics Today Volume 28 ; 28 >
@@ -2277,18 +2277,18 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       comment[title] = title changed since 2012 in Duke only
       
-      au < HighWirePressH20Plugin ; releasing ; 1993 ; positions: east asia cultures critique Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; releasing ; 1994 ; positions: east asia cultures critique Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; releasing ; 1995 ; positions: east asia cultures critique Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; releasing ; 1996 ; positions: east asia cultures critique Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; releasing ; 1997 ; positions: east asia cultures critique Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; releasing ; 1998 ; positions: east asia cultures critique Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; releasing ; 1999 ; positions: east asia cultures critique Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; positions: east asia cultures critique Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; positions: east asia cultures critique Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; positions: east asia cultures critique Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; positions: east asia cultures critique Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; positions: east asia cultures critique Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; released ; 1993 ; positions: east asia cultures critique Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 1994 ; positions: east asia cultures critique Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 1995 ; positions: east asia cultures critique Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 1996 ; positions: east asia cultures critique Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 1997 ; positions: east asia cultures critique Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 1998 ; positions: east asia cultures critique Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 1999 ; positions: east asia cultures critique Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; positions: east asia cultures critique Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; positions: east asia cultures critique Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; positions: east asia cultures critique Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; positions: east asia cultures critique Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; positions: east asia cultures critique Volume 12 ; 12 >
       au < HighWireStrVolPlugin ; down ; 2005 ; positions: east asia cultures critique Volume 13 ; 13 >
       au < HighWireStrVolPlugin ; down ; 2006 ; positions: east asia cultures critique Volume 14 ; 14 >
       au < HighWireStrVolPlugin ; down ; 2007 ; positions: east asia cultures critique Volume 15 ; 15 >
@@ -2368,22 +2368,22 @@
       param[base_url] = http://publicculture.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 1988-1989 ; Public Culture Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; releasing ; 1989-1990 ; Public Culture Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; releasing ; 1990-1991 ; Public Culture Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; releasing ; 1991-1992 ; Public Culture Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; releasing ; 1992-1993 ; Public Culture Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; releasing ; 1993-1994 ; Public Culture Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; releasing ; 1994-1995 ; Public Culture Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; releasing ; 1995-1996 ; Public Culture Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; releasing ; 1996-1997 ; Public Culture Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; releasing ; 1997-1998 ; Public Culture Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; releasing ; 1999 ; Public Culture Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; Public Culture Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; Public Culture Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; Public Culture Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; Public Culture Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; Public Culture Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; released ; 1988-1989 ; Public Culture Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 1989-1990 ; Public Culture Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 1990-1991 ; Public Culture Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 1991-1992 ; Public Culture Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 1992-1993 ; Public Culture Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 1993-1994 ; Public Culture Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 1994-1995 ; Public Culture Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 1995-1996 ; Public Culture Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; released ; 1996-1997 ; Public Culture Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 1997-1998 ; Public Culture Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; released ; 1999 ; Public Culture Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Public Culture Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Public Culture Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Public Culture Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Public Culture Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Public Culture Volume 16 ; 16 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Public Culture Volume 17 ; 17 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Public Culture Volume 18 ; 18 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Public Culture Volume 19 ; 19 >
@@ -2460,12 +2460,12 @@
       au < HighWirePressH20Plugin ; ready ; 1996 ; Radical History Review Volume 1996 ; 1996 >
       au < HighWirePressH20Plugin ; ready ; 1997 ; Radical History Review Volume 1997 ; 1997 >
       au < HighWirePressH20Plugin ; ready ; 1998 ; Radical History Review Volume 1998 ; 1998 >
-      au < HighWirePressH20Plugin ; releasing ; 1999 ; Radical History Review Volume 1999 ; 1999 >
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; Radical History Review Volume 2000 ; 2000 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; Radical History Review Volume 2001 ; 2001 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; Radical History Review Volume 2002 ; 2002 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; Radical History Review Volume 2003 ; 2003 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; Radical History Review Volume 2004 ; 2004 >
+      au < HighWirePressH20Plugin ; released ; 1999 ; Radical History Review Volume 1999 ; 1999 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Radical History Review Volume 2000 ; 2000 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Radical History Review Volume 2001 ; 2001 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Radical History Review Volume 2002 ; 2002 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Radical History Review Volume 2003 ; 2003 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Radical History Review Volume 2004 ; 2004 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Radical History Review Volume 2005 ; 2005 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Radical History Review Volume 2006 ; 2006 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Radical History Review Volume 2007 ; 2007 >
@@ -2516,17 +2516,17 @@
       param[base_url] = http://smallaxe.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; Small Axe Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; Small Axe Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; Small Axe Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; Small Axe Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; releasing ; 2005 ; Small Axe Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; releasing ; 2006 ; Small Axe Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; releasing ; 2007 ; Small Axe Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; releasing ; 2008 ; Small Axe Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; releasing ; 2009 ; Small Axe Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; releasing ; 2010 ; Small Axe Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; releasing ; 2011 ; Small Axe Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Small Axe Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Small Axe Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Small Axe Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Small Axe Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Small Axe Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Small Axe Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Small Axe Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Small Axe Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Small Axe Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Small Axe Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Small Axe Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Small Axe Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Small Axe Volume 17 ; 17 >
       
@@ -2573,11 +2573,11 @@
       param[base_url] = http://ssh.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; Social Science History Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; Social Science History Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; Social Science History Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; Social Science History Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; Social Science History Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Social Science History Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Social Science History Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Social Science History Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Social Science History Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Social Science History Volume 28 ; 28 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Social Science History Volume 29 ; 29 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Social Science History Volume 30 ; 30 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Social Science History Volume 31 ; 31 >
@@ -2623,11 +2623,11 @@
       param[base_url] = http://socialtext.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; releasing ; 2000 ; Social Text Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; releasing ; 2001 ; Social Text Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; releasing ; 2002 ; Social Text Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; releasing ; 2003 ; Social Text Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; releasing ; 2004 ; Social Text Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Social Text Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Social Text Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Social Text Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Social Text Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Social Text Volume 22 ; 22 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Social Text Volume 23 ; 23 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Social Text Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Social Text Volume 25 ; 25 >

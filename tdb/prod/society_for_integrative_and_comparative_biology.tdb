@@ -31,7 +31,7 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = azoo
 
-      au < releasing ; 2000 ; American Zoologist Volume 40 ; 40 >
+      au < released ; 2000 ; American Zoologist Volume 40 ; 40 >
       au < doNotProcess ; 2001 ; American Zoologist Volume 41 ; 41 >
 
     }
@@ -68,10 +68,10 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = icbi
 
-      au < releasing ; 2002 ; Integrative and Comparative Biology Volume 42 ; 42 >
-      au < releasing ; 2003 ; Integrative and Comparative Biology Volume 43 ; 43 >
+      au < released ; 2002 ; Integrative and Comparative Biology Volume 42 ; 42 >
+      au < released ; 2003 ; Integrative and Comparative Biology Volume 43 ; 43 >
       au < doNotProcess; 2004 ; Integrative and Comparative Biology Volume 44 ; 44 >
-      au < releasing ; 2005 ; Integrative and Comparative Biology Volume 45 ; 45 >
+      au < released ; 2005 ; Integrative and Comparative Biology Volume 45 ; 45 >
 
     }
 
