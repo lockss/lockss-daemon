@@ -188,14 +188,14 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>700</long>
+    <long>600</long>
   </entry>
   <entry>
     <string>au_mime_rate_limiter_map</string>
     <map>
       <entry>
         <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-        <string>1/4000</string>
+        <string>1/3500</string>
       </entry>
     </map>
   </entry>
