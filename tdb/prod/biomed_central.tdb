@@ -2695,7 +2695,7 @@
         
         au < ready ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
         au < ready ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
-        au < testing ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
+        au < ready ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
         au < ready ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
         au < ready ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
         au < ready ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
@@ -3176,9 +3176,9 @@
       param[base_url] = http://www.evodevojournal.com/
       param[journal_issn] = 2041-9139
 
-      au < testing ; 2010 ; EvoDevo Volume 1 ; 1 >
-      au < testing ; 2011 ; EvoDevo Volume 2 ; 2 >
-      au < testing ; 2012 ; EvoDevo Volume 3 ; 3 >
+      au < ready ; 2010 ; EvoDevo Volume 1 ; 1 >
+      au < ready ; 2011 ; EvoDevo Volume 2 ; 2 >
+      au < ready ; 2012 ; EvoDevo Volume 3 ; 3 >
       au < manifest ; 2013 ; EvoDevo Volume 4 ; 4 >
 
     }
@@ -3193,10 +3193,10 @@
       param[base_url] = http://www.etsmjournal.com/
       param[journal_issn] = 2040-7378
 
-      au < testing ; 2009 ; Experimental & Translational Stroke Medicine Volume 1 ; 1 >
-      au < testing ; 2010 ; Experimental & Translational Stroke Medicine Volume 2 ; 2 >
-      au < testing ; 2011 ; Experimental & Translational Stroke Medicine Volume 3 ; 3 >
-      au < testing ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
+      au < ready ; 2009 ; Experimental & Translational Stroke Medicine Volume 1 ; 1 >
+      au < ready ; 2010 ; Experimental & Translational Stroke Medicine Volume 2 ; 2 >
+      au < ready ; 2011 ; Experimental & Translational Stroke Medicine Volume 3 ; 3 >
+      au < ready ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
       au < manifest ; 2013 ; Experimental & Translational Stroke Medicine Volume 5 ; 5 >
 
     }
@@ -3211,7 +3211,7 @@
       param[base_url] = http://www.ehoonline.org/
       param[journal_issn] = 2162-3619
 
-      au < testing ; 2012 ; Experimental Hematology & Oncology Volume 1 ; 1 >
+      au < ready ; 2012 ; Experimental Hematology & Oncology Volume 1 ; 1 >
       au < manifest ; 2013 ; Experimental Hematology & Oncology Volume 2 ; 2 >
 
     }
@@ -3241,11 +3241,11 @@
       param[base_url] = http://www.fibrogenesis.com/
       param[journal_issn] = 1755-1536
 
-      au < testing ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 >
-      au < testing ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
-      au < testing ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
-      au < testing ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
-      au < testing ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
+      au < ready ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 >
+      au < ready ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
+      au < ready ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
+      au < ready ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
+      au < ready ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
       au < manifest ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 >
 
     }
