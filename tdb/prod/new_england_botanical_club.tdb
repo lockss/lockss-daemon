@@ -18,13 +18,13 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = rhod
   
-      au < ready ; 2005 ; Rhodora Volume 107 ; 107 >
-      au < ready ; 2006 ; Rhodora Volume 108 ; 108 >
-      au < ready ; 2007 ; Rhodora Volume 109 ; 109 >
-      au < ready ; 2008 ; Rhodora Volume 110 ; 110 >
-      au < ready ; 2009 ; Rhodora Volume 111 ; 111 >
-      au < ready ; 2010 ; Rhodora Volume 112 ; 112 >
-      au < ready ; 2011 ; Rhodora Volume 113 ; 113 >
+      au < releasing ; 2005 ; Rhodora Volume 107 ; 107 >
+      au < releasing ; 2006 ; Rhodora Volume 108 ; 108 >
+      au < releasing ; 2007 ; Rhodora Volume 109 ; 109 >
+      au < releasing ; 2008 ; Rhodora Volume 110 ; 110 >
+      au < releasing ; 2009 ; Rhodora Volume 111 ; 111 >
+      au < releasing ; 2010 ; Rhodora Volume 112 ; 112 >
+      au < releasing ; 2011 ; Rhodora Volume 113 ; 113 >
       au < testing ; 2012 ; Rhodora Volume 114 ; 114 >
       au < expected ; 2013 ; Rhodora Volume 115 ; 115 >
     }

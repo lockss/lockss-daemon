@@ -30,10 +30,10 @@
       param[journal_id] = eumi
       implicit < status ; year ; name ; param[volume_name] >
       
-      au < ready ; 2000 ; The Journal of Eukaryotic Microbiology Volume 47 ; 47 >
-      au < ready ; 2001-2002 ; The Journal of Eukaryotic Microbiology Volume 48 ; 48 >
-      au < ready ; 2002 ; The Journal of Eukaryotic Microbiology Volume 49 ; 49 >
-      au < ready ; 2003 ; The Journal of Eukaryotic Microbiology Volume 50 ; 50 >
+      au < releasing ; 2000 ; The Journal of Eukaryotic Microbiology Volume 47 ; 47 >
+      au < releasing ; 2001-2002 ; The Journal of Eukaryotic Microbiology Volume 48 ; 48 >
+      au < releasing ; 2002 ; The Journal of Eukaryotic Microbiology Volume 49 ; 49 >
+      au < releasing ; 2003 ; The Journal of Eukaryotic Microbiology Volume 50 ; 50 >
       au < doNotProcess ; 2004 ; The Journal of Eukaryotic Microbiology Volume 51 ; 51 >
 
     }

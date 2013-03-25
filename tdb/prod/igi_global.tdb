@@ -24,16 +24,16 @@
     au < released ; 1991 ; Information Resources Management Journal (IRMJ) Volume 4 ; 4 >
     au < released ; 1992 ; Information Resources Management Journal (IRMJ) Volume 5 ; 5 >
     au < released ; 1993 ; Information Resources Management Journal (IRMJ) Volume 6 ; 6 >
-    au < ready ; 1994 ; Information Resources Management Journal (IRMJ) Volume 7 ; 7 >
+    au < releasing ; 1994 ; Information Resources Management Journal (IRMJ) Volume 7 ; 7 >
     au < released ; 1995 ; Information Resources Management Journal (IRMJ) Volume 8 ; 8 >
     au < released ; 1996 ; Information Resources Management Journal (IRMJ) Volume 9 ; 9 >
     au < released ; 1997 ; Information Resources Management Journal (IRMJ) Volume 10 ; 10 >
-    au < ready ; 1998 ; Information Resources Management Journal (IRMJ) Volume 11 ; 11 >
+    au < releasing ; 1998 ; Information Resources Management Journal (IRMJ) Volume 11 ; 11 >
     au < released ; 1999 ; Information Resources Management Journal (IRMJ) Volume 12 ; 12 >
     au < released ; 2000 ; Information Resources Management Journal (IRMJ) Volume 13 ; 13 >
     au < released ; 2001 ; Information Resources Management Journal (IRMJ) Volume 14 ; 14 >
     au < released ; 2002 ; Information Resources Management Journal (IRMJ) Volume 15 ; 15 >
-    au < ready ; 2003 ; Information Resources Management Journal (IRMJ) Volume 16 ; 16 >
+    au < releasing ; 2003 ; Information Resources Management Journal (IRMJ) Volume 16 ; 16 >
     au < released ; 2004 ; Information Resources Management Journal (IRMJ) Volume 17 ; 17 >
     au < released ; 2005 ; Information Resources Management Journal (IRMJ) Volume 18 ; 18 >
     au < released ; 2006 ; Information Resources Management Journal (IRMJ) Volume 19 ; 19 >
@@ -496,7 +496,7 @@
     >
     param[journal_issn] = 1557-3958
 
-    au < ready ; 2007 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 1 ; 1 >
+    au < releasing ; 2007 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 1 ; 1 >
     au < released ; 2008 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 2 ; 2 >
     au < released ; 2009 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 3 ; 3 >
     au < released ; 2010 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 4 ; 4 >
@@ -755,7 +755,7 @@
     >
     param[journal_issn] = 1947-3494
 
-    au < ready ; 2010 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 4 ; 4 >
@@ -772,14 +772,14 @@
     >
     param[journal_issn] = 1539-3100
 
-    au < ready ; 2003 ; International Journal of Distance Education Technologies (IJDET) Volume 1 ; 1 >
-    au < ready ; 2004 ; International Journal of Distance Education Technologies (IJDET) Volume 2 ; 2 >
-    au < ready ; 2005 ; International Journal of Distance Education Technologies (IJDET) Volume 3 ; 3 >
-    au < ready ; 2006 ; International Journal of Distance Education Technologies (IJDET) Volume 4 ; 4 >
-    au < ready ; 2007 ; International Journal of Distance Education Technologies (IJDET) Volume 5 ; 5 >
-    au < ready ; 2008 ; International Journal of Distance Education Technologies (IJDET) Volume 6 ; 6 >
-    au < ready ; 2009 ; International Journal of Distance Education Technologies (IJDET) Volume 7 ; 7 >
-    au < ready ; 2010 ; International Journal of Distance Education Technologies (IJDET) Volume 8 ; 8 >
+    au < releasing ; 2003 ; International Journal of Distance Education Technologies (IJDET) Volume 1 ; 1 >
+    au < releasing ; 2004 ; International Journal of Distance Education Technologies (IJDET) Volume 2 ; 2 >
+    au < releasing ; 2005 ; International Journal of Distance Education Technologies (IJDET) Volume 3 ; 3 >
+    au < releasing ; 2006 ; International Journal of Distance Education Technologies (IJDET) Volume 4 ; 4 >
+    au < releasing ; 2007 ; International Journal of Distance Education Technologies (IJDET) Volume 5 ; 5 >
+    au < releasing ; 2008 ; International Journal of Distance Education Technologies (IJDET) Volume 6 ; 6 >
+    au < releasing ; 2009 ; International Journal of Distance Education Technologies (IJDET) Volume 7 ; 7 >
+    au < releasing ; 2010 ; International Journal of Distance Education Technologies (IJDET) Volume 8 ; 8 >
     au < released ; 2011 ; International Journal of Distance Education Technologies (IJDET) Volume 9 ; 9 >
     au < released ; 2012 ; International Journal of Distance Education Technologies (IJDET) Volume 10 ; 10 >
     au < expected ; 2013 ; International Journal of Distance Education Technologies (IJDET) Volume 11 ; 11 >
@@ -796,7 +796,7 @@
     >
     param[journal_issn] = 1947-3532
 
-    au < ready ; 2010 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 4 ; 4 >
@@ -814,8 +814,8 @@
     >
     param[journal_issn] = 1937-9633
 
-    au < ready ; 2009 ; International Journal of E-Adoption (IJEA) Volume 1 ; 1 >
-    au < ready ; 2010 ; International Journal of E-Adoption (IJEA) Volume 2 ; 2 >
+    au < releasing ; 2009 ; International Journal of E-Adoption (IJEA) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of E-Adoption (IJEA) Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of E-Adoption (IJEA) Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of E-Adoption (IJEA) Volume 4 ; 4 >
     au < expected ; 2013 ; International Journal of E-Adoption (IJEA) Volume 5 ; 5 >
@@ -833,12 +833,12 @@
     >
     param[journal_issn] = 1548-1131
 
-    au < ready ; 2005 ; International Journal of E-Business Research (IJEBR) Volume 1 ; 1 >
-    au < ready ; 2006 ; International Journal of E-Business Research (IJEBR) Volume 2 ; 2 >
-    au < ready ; 2007 ; International Journal of E-Business Research (IJEBR) Volume 3 ; 3 >
-    au < ready ; 2008 ; International Journal of E-Business Research (IJEBR) Volume 4 ; 4 >
-    au < ready ; 2009 ; International Journal of E-Business Research (IJEBR) Volume 5 ; 5 >
-    au < ready ; 2010 ; International Journal of E-Business Research (IJEBR) Volume 6 ; 6 >
+    au < releasing ; 2005 ; International Journal of E-Business Research (IJEBR) Volume 1 ; 1 >
+    au < releasing ; 2006 ; International Journal of E-Business Research (IJEBR) Volume 2 ; 2 >
+    au < releasing ; 2007 ; International Journal of E-Business Research (IJEBR) Volume 3 ; 3 >
+    au < releasing ; 2008 ; International Journal of E-Business Research (IJEBR) Volume 4 ; 4 >
+    au < releasing ; 2009 ; International Journal of E-Business Research (IJEBR) Volume 5 ; 5 >
+    au < releasing ; 2010 ; International Journal of E-Business Research (IJEBR) Volume 6 ; 6 >
     au < released ; 2011 ; International Journal of E-Business Research (IJEBR) Volume 7 ; 7 >
     au < released ; 2012 ; International Journal of E-Business Research (IJEBR) Volume 8 ; 8 >
     au < manifest ; 2013 ; International Journal of E-Business Research (IJEBR) Volume 9 ; 9 >
@@ -856,12 +856,12 @@
 
      param[journal_issn] = 1548-3673
 
-     au < ready ; 2005 ; International Journal of e-Collaboration (IJeC) Volume 1 ; 1 >
-     au < ready ; 2006 ; International Journal of e-Collaboration (IJeC) Volume 2 ; 2 >
-     au < ready ; 2007 ; International Journal of e-Collaboration (IJeC) Volume 3 ; 3 >
-     au < ready ; 2008 ; International Journal of e-Collaboration (IJeC) Volume 4 ; 4 >
-     au < ready ; 2009 ; International Journal of e-Collaboration (IJeC) Volume 5 ; 5 >
-     au < ready ; 2010 ; International Journal of e-Collaboration (IJeC) Volume 6 ; 6 >
+     au < releasing ; 2005 ; International Journal of e-Collaboration (IJeC) Volume 1 ; 1 >
+     au < releasing ; 2006 ; International Journal of e-Collaboration (IJeC) Volume 2 ; 2 >
+     au < releasing ; 2007 ; International Journal of e-Collaboration (IJeC) Volume 3 ; 3 >
+     au < releasing ; 2008 ; International Journal of e-Collaboration (IJeC) Volume 4 ; 4 >
+     au < releasing ; 2009 ; International Journal of e-Collaboration (IJeC) Volume 5 ; 5 >
+     au < releasing ; 2010 ; International Journal of e-Collaboration (IJeC) Volume 6 ; 6 >
      au < released ; 2011 ; International Journal of e-Collaboration (IJeC) Volume 7 ; 7 >
      au < released ; 2012 ; International Journal of e-Collaboration (IJeC) Volume 8 ; 8 >
      au < manifest ; 2013 ; International Journal of e-Collaboration (IJeC) Volume 9 ; 9 >
@@ -878,7 +878,7 @@
     >
     param[journal_issn] = 1947-8585
 
-    au < ready ; 2010 ; International Journal of E-Entrepreneurship and Innovation (IJEEI) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of E-Entrepreneurship and Innovation (IJEEI) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of E-Entrepreneurship and Innovation (IJEEI) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of E-Entrepreneurship and Innovation (IJEEI) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of E-Entrepreneurship and Innovation (IJEEI) Volume 4 ; 4 >
@@ -896,7 +896,7 @@
     >
     param[journal_issn] = 1947-315X
 
-     au < ready ; 2010 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 1 ; 1 >
+     au < releasing ; 2010 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 1 ; 1 >
      au < released ; 2011 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 2 ; 2 >
      au < released ; 2012 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 3 ; 3 >
      au < expected ; 2013 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 4 ; 4 >
@@ -913,12 +913,12 @@
     >
         param[journal_issn] = 1548-3886
 
-        au < ready ; 2005 ; International Journal of Electronic Government Research (IJEGR) Volume 1 ; 1 >
-        au < ready ; 2006 ; International Journal of Electronic Government Research (IJEGR) Volume 2 ; 2 >
-        au < ready ; 2007 ; International Journal of Electronic Government Research (IJEGR) Volume 3 ; 3 >
-        au < ready ; 2008 ; International Journal of Electronic Government Research (IJEGR) Volume 4 ; 4 >
-        au < ready ; 2009 ; International Journal of Electronic Government Research (IJEGR) Volume 5 ; 5 >
-        au < ready ; 2010 ; International Journal of Electronic Government Research (IJEGR) Volume 6 ; 6 >
+        au < releasing ; 2005 ; International Journal of Electronic Government Research (IJEGR) Volume 1 ; 1 >
+        au < releasing ; 2006 ; International Journal of Electronic Government Research (IJEGR) Volume 2 ; 2 >
+        au < releasing ; 2007 ; International Journal of Electronic Government Research (IJEGR) Volume 3 ; 3 >
+        au < releasing ; 2008 ; International Journal of Electronic Government Research (IJEGR) Volume 4 ; 4 >
+        au < releasing ; 2009 ; International Journal of Electronic Government Research (IJEGR) Volume 5 ; 5 >
+        au < releasing ; 2010 ; International Journal of Electronic Government Research (IJEGR) Volume 6 ; 6 >
         au < released ; 2011 ; International Journal of Electronic Government Research (IJEGR) Volume 7 ; 7 >
         au < released ; 2012 ; International Journal of Electronic Government Research (IJEGR) Volume 8 ; 8 >
         au < expected ; 2013 ; International Journal of Electronic Government Research (IJEGR) Volume 9 ; 9 >
@@ -935,7 +935,7 @@
     >
     param[journal_issn] = 1947-3176
 
-    au < ready ; 2010 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 4 ; 4 >
@@ -969,12 +969,12 @@
     >
     param[journal_issn] = 1548-1115
 
-    au < ready ; 2005 ; International Journal of Enterprise Information Systems (IJEIS) Volume 1 ; 1 >
-    au < ready ; 2006 ; International Journal of Enterprise Information Systems (IJEIS) Volume 2 ; 2 >
-    au < ready ; 2007 ; International Journal of Enterprise Information Systems (IJEIS) Volume 3 ; 3 >
-    au < ready ; 2008 ; International Journal of Enterprise Information Systems (IJEIS) Volume 4 ; 4 >
-    au < ready ; 2009 ; International Journal of Enterprise Information Systems (IJEIS) Volume 5 ; 5 >
-    au < ready ; 2010 ; International Journal of Enterprise Information Systems (IJEIS) Volume 6 ; 6 >
+    au < releasing ; 2005 ; International Journal of Enterprise Information Systems (IJEIS) Volume 1 ; 1 >
+    au < releasing ; 2006 ; International Journal of Enterprise Information Systems (IJEIS) Volume 2 ; 2 >
+    au < releasing ; 2007 ; International Journal of Enterprise Information Systems (IJEIS) Volume 3 ; 3 >
+    au < releasing ; 2008 ; International Journal of Enterprise Information Systems (IJEIS) Volume 4 ; 4 >
+    au < releasing ; 2009 ; International Journal of Enterprise Information Systems (IJEIS) Volume 5 ; 5 >
+    au < releasing ; 2010 ; International Journal of Enterprise Information Systems (IJEIS) Volume 6 ; 6 >
     au < released ; 2011 ; International Journal of Enterprise Information Systems (IJEIS) Volume 7 ; 7 >
     au < released ; 2012 ; International Journal of Enterprise Information Systems (IJEIS) Volume 8 ; 8 >
     au < expected ; 2013 ; International Journal of Enterprise Information Systems (IJEIS) Volume 9 ; 9 >
@@ -1007,7 +1007,7 @@
     >
     param[journal_issn] = 1947-9131
 
-    au < ready ; 2010 ; International Journal of E-Politics (IJEP) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of E-Politics (IJEP) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of E-Politics (IJEP) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of E-Politics (IJEP) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of E-Politics (IJEP)) Volume 4 ; 4 >
@@ -1025,8 +1025,8 @@
     >
         param[journal_issn] = 1941-627X
 
-        au < ready ; 2009 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 1 ; 1 >
-        au < ready ; 2010 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 2 ; 2 >
+        au < releasing ; 2009 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 1 ; 1 >
+        au < releasing ; 2010 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 2 ; 2 >
         au < released ; 2011 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 3 ; 3 >
         au < released ; 2012 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 4 ; 4 >
         au < expected ; 2013 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 5 ; 5 >
@@ -1077,8 +1077,8 @@
     >
     param[journal_issn] = 1942-3888
 
-    au < ready ; 2009 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 1 ; 1 >
-    au < ready ; 2010 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 2 ; 2 >
+    au < releasing ; 2009 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 4 ; 4 >
     au < expected ; 2013 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 5 ; 5 >
@@ -1095,7 +1095,7 @@
     >
     param[journal_issn] = 1947-8488
 
-    au < ready ; 2010 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 4 ; 4 >
@@ -1113,7 +1113,7 @@
     >
     param[journal_issn] = 1948-5018
 
-    au < ready ; 2010 ; International Journal of Green Computing (IJGC) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Green Computing (IJGC) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Green Computing (IJGC) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Green Computing (IJGC) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Green Computing (IJGC) Volume 4 ; 4 >
@@ -1130,8 +1130,8 @@
     >
      param[journal_issn] = 1938-0259
 
-    au < ready ; 2009 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 1 ; 1 >
-    au < ready ; 2010 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 2 ; 2 >
+    au < releasing ; 2009 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 4 ; 4 >
     au < expected ; 2013 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 5 ; 5 >
@@ -1148,7 +1148,7 @@
     >
     param[journal_issn] = 1947-9158
 
-    au < ready ; 2010 ; International Journal of Handheld Computing Research (IJHCR) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Handheld Computing Research (IJHCR) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Handheld Computing Research (IJHCR) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Handheld Computing Research (IJHCR) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Handheld Computing Research (IJHCR) Volume 4 ; 4 >
@@ -1166,8 +1166,8 @@
     >
     param[journal_issn] = 1938-0216
 
-    au < ready ; 2009 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 1 ; 1 >
-    au < ready ; 2010 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 2 ; 2 >
+    au < releasing ; 2009 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 4 ; 4 >
     au < expected ; 2013 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 5 ; 5 >
@@ -1184,11 +1184,11 @@
     >
     param[journal_issn] = 1555-3396
 
-    au < ready ; 2006 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 1 ; 1 >
-    au < ready ; 2007 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 2 ; 2 >
-    au < ready ; 2008 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 3 ; 3 >
-    au < ready ; 2009 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 4 ; 4 >
-    au < ready ; 2010 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 5 ; 5 >
+    au < releasing ; 2006 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 1 ; 1 >
+    au < releasing ; 2007 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 2 ; 2 >
+    au < releasing ; 2008 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 3 ; 3 >
+    au < releasing ; 2009 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 4 ; 4 >
+    au < releasing ; 2010 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 5 ; 5 >
     au < released ; 2011 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 6 ; 6 >
     au < released ; 2012 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 7 ; 7 >
     au < expected ; 2013 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 8 ; 8 >
@@ -1205,7 +1205,7 @@
     >
     param[journal_issn] = 1947-3478
 
-    au < ready ; 2010 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 4 ; 4 >
@@ -1222,7 +1222,7 @@
     >
     param[journal_issn] = 1947-3419
 
-    au < ready ; 2010 ; International Journal of ICT Research and Development in Africa (IJICTRDA) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of ICT Research and Development in Africa (IJICTRDA) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of ICT Research and Development in Africa (IJICTRDA) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of ICT Research and Development in Africa (IJICTRDA) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of ICT Research and Development in Africa (IJICTRDA) Volume 4 ; 4 >
@@ -1239,12 +1239,12 @@
     >
     param[journal_issn] = 1550-1876
 
-    au < ready ; 2005 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 1 ; 1 >
-    au < ready ; 2006 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 2 ; 2 >
-    au < ready ; 2007 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 3 ; 3 >
-    au < ready ; 2008 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 4 ; 4 >
-    au < ready ; 2009 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 5 ; 5 >
-    au < ready ; 2010 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 6 ; 6 >
+    au < releasing ; 2005 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 1 ; 1 >
+    au < releasing ; 2006 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 2 ; 2 >
+    au < releasing ; 2007 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 3 ; 3 >
+    au < releasing ; 2008 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 4 ; 4 >
+    au < releasing ; 2009 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 5 ; 5 >
+    au < releasing ; 2010 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 6 ; 6 >
     au < released ; 2011 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 7 ; 7 >
     au < released ; 2012 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 8 ; 8 >
     au < expected ; 2013 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 9 ; 9 >
@@ -1261,8 +1261,8 @@
     >
     param[journal_issn] = 1935-5661
 
-    au < ready ; 2009 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 1 ; 1 >
-    au < ready ; 2010 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 2 ; 2 >
+    au < releasing ; 2009 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 4 ; 4 >
     au < expected ; 2013 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 5 ; 5 >
@@ -1295,10 +1295,10 @@
     >
     param[journal_issn] = 1930-1650
 
-    au < ready ; 2007 ; International Journal of Information Security and Privacy (IJISP) Volume 1 ; 1 >
-    au < ready ; 2008 ; International Journal of Information Security and Privacy (IJISP) Volume 2 ; 2 >
-    au < ready ; 2009 ; International Journal of Information Security and Privacy (IJISP) Volume 3 ; 3 >
-    au < ready ; 2010 ; International Journal of Information Security and Privacy (IJISP) Volume 4 ; 4 >
+    au < releasing ; 2007 ; International Journal of Information Security and Privacy (IJISP) Volume 1 ; 1 >
+    au < releasing ; 2008 ; International Journal of Information Security and Privacy (IJISP) Volume 2 ; 2 >
+    au < releasing ; 2009 ; International Journal of Information Security and Privacy (IJISP) Volume 3 ; 3 >
+    au < releasing ; 2010 ; International Journal of Information Security and Privacy (IJISP) Volume 4 ; 4 >
     au < released ; 2011 ; International Journal of Information Security and Privacy (IJISP) Volume 5 ; 5 >
     au < released ; 2012 ; International Journal of Information Security and Privacy (IJISP) Volume 6 ; 6 >
     au < expected ; 2013 ; International Journal of Information Security and Privacy (IJISP) Volume 7 ; 7 >
@@ -1315,7 +1315,7 @@
     >
     param[journal_issn] = 1947-8186
 
-    au < ready ; 2010 ; International Journal of Information System Modeling and Design (IJISMD) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Information System Modeling and Design (IJISMD) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Information System Modeling and Design (IJISMD) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Information System Modeling and Design (IJISMD) Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of Information System Modeling and Design (IJISMD) Volume 4 ; 4 >
@@ -1332,7 +1332,7 @@
     >
     param[journal_issn] = 1941-868X
 
-    au < ready ; 2010 ; International Journal of Information Systems and Social Change (IJISSC) Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Information Systems and Social Change (IJISSC) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Information Systems and Social Change (IJISSC) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Information Systems and Social Change (IJISSC) Volume 3 ; 3 >
     au < manifest ; 2013 ; International Journal of Information Systems and Social Change (IJISSC) Volume 4 ; 4 >
@@ -1349,9 +1349,9 @@
     >
     param[journal_issn] = 1935-5726
 
-    au < ready ; 2008 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 1 ; 1 >
-    au < ready ; 2009 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 2 ; 2 >
-    au < ready ; 2010 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 3 ; 3 >
+    au < releasing ; 2008 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 1 ; 1 >
+    au < releasing ; 2009 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 2 ; 2 >
+    au < releasing ; 2010 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 3 ; 3 >
     au < released ; 2011 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 4 ; 4 >
     au < released ; 2012 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 5 ; 5 >
     au < manifest ; 2013 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 6 ; 6 >

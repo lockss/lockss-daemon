@@ -19,9 +19,9 @@
     param[base_url] = http://www.innovationandentrepreneurship.net/
     param[journal_id] = aie
     
-    au < ready ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
-    au < ready ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
-    au < ready ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
+    au < releasing ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
+    au < releasing ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
+    au < releasing ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
     au < expected ; 2013 ; Annals of Innovation & Entrepreneurship Volume 4 ; 4 ; 2013 >
   }
   
@@ -36,9 +36,9 @@
     param[base_url] = http://www.childlitaesthetics.net/
     param[journal_id] = blft
 
-    au < ready ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; 2010 >
-    au < ready ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 >
-    au < ready ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; 2012 >
+    au < releasing ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; 2010 >
+    au < releasing ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 >
+    au < releasing ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; 2012 >
     au < expected ; 2013 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 4 ; 4 ; 2013 >
 
   }
@@ -66,8 +66,8 @@
       param[journal_id] = dfa
 
       au < testing ; 2010 ; Diabetic Foot & Ankle [including Supplements] Volume 1 ; 1 ; 2010 >
-      au < ready ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
-      au < ready ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+      au < releasing ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
+      au < releasing ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
       au < expected ; 2013 ; Diabetic Foot & Ankle [including Supplements] Volume 4 ; 4 ; 2013 >
       
     }
@@ -84,11 +84,11 @@
     param[base_url] = http://www.eht-journal.net/
     param[journal_id] = ehtj
 
-    au < ready ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
-    au < ready ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
-    au < ready ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
-    au < ready ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
-    au < ready ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
+    au < releasing ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
+    au < releasing ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
+    au < releasing ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
+    au < releasing ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
+    au < releasing ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
     au < expected ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 ; 2013 >
     
   }
@@ -106,10 +106,10 @@
     param[journal_id] = egp
 
     au < testing ; 2008 ; Ethics & Global Politics Volume 1 ; 1 ; 2008 >
-    au < ready ; 2009 ; Ethics & Global Politics Volume 2 ; 2 ; 2009 >
-    au < ready ; 2010 ; Ethics & Global Politics Volume 3 ; 3 ; 2010 >
-    au < ready ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; 2011 >
-    au < ready ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; 2012 >
+    au < releasing ; 2009 ; Ethics & Global Politics Volume 2 ; 2 ; 2009 >
+    au < releasing ; 2010 ; Ethics & Global Politics Volume 3 ; 3 ; 2010 >
+    au < releasing ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; 2011 >
+    au < releasing ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; 2012 >
     au < expected ; 2013 ; Ethics & Global Politics Volume 6 ; 6 ; 2013 >
 
   }
@@ -129,9 +129,9 @@
     comment[supplement_issn_and_eissn] = issn = 2000-8198 eissn = 2000-818X
      
      
-    au < ready ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
-    au < ready ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
-    au < ready ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
+    au < releasing ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
+    au < releasing ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
+    au < releasing ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
     au < expected ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 ; 2013 >
 
   }
@@ -151,11 +151,11 @@
 
 	comment[fnr2008] = 502 Proxy Error
 
-    au < ready ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
-    au < ready ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
-    au < ready ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 >
-    au < ready ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
-    au < ready ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 >
+    au < releasing ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
+    au < releasing ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
+    au < releasing ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 >
+    au < releasing ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
+    au < releasing ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 >
     au < expected ; 2013 ; Food & Nutrition Research [including Supplements] Volume 57 ; 57 ; 2013 >
 
   }
@@ -338,7 +338,7 @@
 
     au < released ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 >
     au < released ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 >
-    au < ready ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; 2012 >
+    au < releasing ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; 2012 >
     au < expected ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 ; 2013 >
   }
 
@@ -621,7 +621,7 @@
     param[base_url] = http://www.tellusa.net/
     param[journal_id] = tellusa
     
-    au < ready ; 1949 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1 ; 1 ; 1949 >
+    au < releasing ; 1949 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1 ; 1 ; 1949 >
     au < released ; 1950 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2 ; 2 ; 1950 >
     au < released ; 1951 ; Tellus A: Dynamic Meteorology and Oceanography Volume 3 ; 3 ; 1951 >
     au < released ; 1952 ; Tellus A: Dynamic Meteorology and Oceanography Volume 4 ; 4 ; 1952 >
