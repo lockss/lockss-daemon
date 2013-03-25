@@ -3873,7 +3873,7 @@
     au < released ; 2009 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 19 ; 19 >
     au < released ; 2010 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 20 ; 20 >
     au < released ; 2011 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 21 ; 21 >
-    au < notReady ; 2012 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 22 ; 22 >
+    au < testing ; 2012 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 22 ; 22 >
     au < manifest ; 2013 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 23 ; 23 >
 
   }
@@ -5237,8 +5237,8 @@
     au < ready ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 >
     au < ready ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 >
     au < ready ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 >
-    au < notReady ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 >
-    au < notReady ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 >
+    au < testing ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 >
+    au < testing ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 >
     au < ready ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 >
     au < doesNotExist ; 0 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 >
     au < released ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 >
@@ -10042,7 +10042,7 @@
     param[journal_issn] = 2042-5961 
 
     au < ready ; 2010 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 >
-    au < notReady ; 2011 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 >
+    au < testing ; 2011 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 >
     au < released ; 2012 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 8 ; 8 >
     au < expected ; 2013 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 9 ; 9 >
 
@@ -10057,9 +10057,9 @@
 
     param[journal_issn] = 2042-5945
 
-      au < testing ; 2010 ; World Journal of Science, Technology and Sustainable Development Volume 7 ; 7 >
-      au < testing ; 2011 ; World Journal of Science, Technology and Sustainable Development Volume 8 ; 8 >
-      au < ready; 2012 ; World Journal of Science, Technology and Sustainable Development Volume 9 ; 9 >
+      au < ready ; 2010 ; World Journal of Science, Technology and Sustainable Development Volume 7 ; 7 >
+      au < ready ; 2011 ; World Journal of Science, Technology and Sustainable Development Volume 8 ; 8 >
+      au < ready ; 2012 ; World Journal of Science, Technology and Sustainable Development Volume 9 ; 9 >
       au < manifest ; 2013 ; World Journal of Science, Technology and Sustainable Development Volume 10 ; 10 >
 
   }
