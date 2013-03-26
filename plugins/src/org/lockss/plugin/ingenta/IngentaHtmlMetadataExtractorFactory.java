@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.2 2012-04-17 20:18:02 akanshab01 Exp $
+ * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.3 2013-03-26 23:09:40 pgust Exp $
  */
 
 /*
@@ -57,45 +57,47 @@ public class IngentaHtmlMetadataExtractorFactory implements
     static {
    
       String splitMetaPattern = "(.*)[,](.*)[,](.*)[,]([^-]+)[-]([^-()]+)"; 
+
       //   <meta name="DC.creator" content="Karni, Nirit"/>
       //  <meta name="DC.creator" content="Reiter, Shunit"/>
       //  <meta name="DC.creator" content="Bryen, Diane Nelson"/>  
-      tagMap.put("DC.creator", MetadataField.DC_FIELD_CREATOR);
+      tagMap.put("DC.creator", MetadataField.FIELD_AUTHOR);
       // <meta name="DC.type" scheme="DCMIType" content="Text"/>
       tagMap.put("Dc.type",MetadataField.DC_FIELD_TYPE);
       tagMap.put("DC.Date.issued", MetadataField.FIELD_DATE);
       // <meta name="DC.title" content="Israeli Arab Teachers&#039; Attitudes on 
       //Inclusion of Students with Disabilities"/>
-      tagMap.put("DC.title", MetadataField.DC_FIELD_TITLE);
+      tagMap.put("DC.title", MetadataField.FIELD_ARTICLE_TITLE);
       //<meta name="DCTERMS.issued" content="July 2011"/>
-      tagMap.put("DC.Issued", MetadataField.DC_FIELD_ISSUED);
+      tagMap.put("DC.Issued", MetadataField.FIELD_DATE);
       //  <meta name="DC.identifier" scheme="URI"
       //content="info:doi/10.1179/096979511798967106"/>
-      tagMap.put("DC.identifier",new MetadataField(
-          MetadataField.DC_FIELD_IDENTIFIER, MetadataField.
-          splitAt("info:doi/")));
+      tagMap.put("DC.identifier", new MetadataField(
+          MetadataField.FIELD_DOI, MetadataField.extract("info:doi/(.*)",1)));
       // <meta name="DCTERMS.isPartOf" scheme="URI" content="urn:ISSN:0969-7950"/>
-     tagMap.put("DCTERMS.isPartOf",new MetadataField(
-          MetadataField.DC_FIELD_IDENTIFIER_ISSNM, MetadataField.
-          splitAt("urn:ISSN:")));
-      tagMap.put("DCTERMS.bibliographicCitation",new MetadataField(
-          MetadataField.FIELD_ARTICLE_TITLE,
-          MetadataField.groupExtractor(splitMetaPattern, 1)));
-      //<meta name="DCTERMS.bibliographicCitation" content="The British Journal of Development
-      // Disabilities, 57, 113, 123-132(10)"/>
-     tagMap.put("DCTERMS.bibliographicCitation",new MetadataField(
-         MetadataField.DC_FIELD_CITATION_VOLUME, 
-         MetadataField.groupExtractor(splitMetaPattern, 2)));
-     tagMap.put("DCTERMS.bibliographicCitation",new MetadataField(
-         MetadataField.DC_FIELD_CITATION_ISSUE,
-         MetadataField.groupExtractor(splitMetaPattern, 3)));
-     tagMap.put("DCTERMS.bibliographicCitation",new MetadataField(
-         MetadataField.DC_FIELD_CITATION_SPAGE, 
-         MetadataField.groupExtractor(splitMetaPattern, 4)));
-     tagMap.put("DCTERMS.bibliographicCitation",new MetadataField(
-         MetadataField.DC_FIELD_CITATION_EPAGE, 
-         MetadataField.groupExtractor(splitMetaPattern, 5))); 
-  
+     tagMap.put("DCTERMS.isPartOf", new MetadataField(
+          MetadataField.FIELD_ISSN, MetadataField.extract("urn:ISSN:(.*)",1)));
+     // <meta name="DC.publisher" content="Manchester University Press">
+     tagMap.put("DC.publisher", MetadataField.FIELD_PUBLISHER);
+     // <meta name="DC.bibliographicCitation" content="Visual Culture in Britain">
+     tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
+          MetadataField.FIELD_JOURNAL_TITLE,
+          MetadataField.extract(splitMetaPattern,1)));
+      //<meta name="DCTERMS.bibliographicCitation" 
+      // content="The British Journal of Development
+      //   Disabilities, 57, 113, 123-132(10)"/>
+     tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
+         MetadataField.FIELD_VOLUME, 
+         MetadataField.extract(splitMetaPattern,2)));
+     tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
+         MetadataField.FIELD_ISSUE,
+         MetadataField.extract(splitMetaPattern,3)));
+     tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
+         MetadataField.FIELD_START_PAGE, 
+         MetadataField.extract(splitMetaPattern,4)));
+     tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
+         MetadataField.FIELD_END_PAGE, 
+         MetadataField.extract(splitMetaPattern,5))); 
     }
 
     @Override
