@@ -6288,8 +6288,23 @@
     }
 
   }
+  
+  {
 
- {
+    title <
+      name = Gastroenterology Report 
+      
+    >
+      
+    rights=openaccess
+    param[base_url] = http://gastro.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    au < manifest ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
+      
+  }
+      
+  {
 
     title <
       name = Genome Biology and Evolution ;
@@ -7479,6 +7494,24 @@
 
   }
 
+  {
+  
+    title <
+      name = Journal of Complex Networks ;
+      issn = 2051-1310 ;
+      eissn = 2051-1329
+    >
+    
+    {
+    
+    param[base_url] = http://comnet.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePlugin
+    
+    au < expected ; exists ; 2013 ; Journal of Complex Networks Volume 1 ; 1 ; >
+    
+    }
+  }
+    
   {
 
     title <
@@ -13266,6 +13299,23 @@
 
     }
 
+  }
+  
+  {
+  
+    title <
+      name = Mechanisms, Policy and Practice ;
+      issn = 2051-1434
+    >
+    
+    {
+    
+    param[base_url] = http://conphys.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePlugin
+    
+    au < expected ; exists ; 2013 ; Mechanisms, Policy and Practice Volume 1 ; 1 ; >
+    
+    }
   }
 
   {
