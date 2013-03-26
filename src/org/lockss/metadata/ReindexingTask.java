@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.7 2013-03-19 20:14:25 pgust Exp $
+ * $Id: ReindexingTask.java,v 1.7.2.1 2013-03-26 22:16:35 fergaloy-sf Exp $
  */
 
 /*
@@ -835,6 +835,12 @@ public class ReindexingTask extends StepTask {
 		- removedArticleCount);
 
 	    break;
+	  } catch (MetadataException me) {
+	    e = me;
+	    log.warning("Error updating metadata at FINISH for " + status
+		+ " -- NOT rescheduling", e);
+	    log.warning("ArticleMetadataInfo = " + me.getArticleMetadataInfo());
+	    status = ReindexingStatus.Failed;
 	  } catch (SQLNonTransientException sqlnte) {
 	    e = sqlnte;
 	    log.warning("Error updating metadata at FINISH for " + status

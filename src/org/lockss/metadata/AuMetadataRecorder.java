@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.7 2013-03-12 19:32:30 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.7.2.1 2013-03-26 22:16:35 fergaloy-sf Exp $
  */
 
 /*
@@ -212,11 +212,14 @@ public class AuMetadataRecorder {
    *          A Connection with the database connection to be used.
    * @param mditr
    *          An Iterator<ArticleMetadataInfo> with the metadata.
+   * @throws MetadataException
+   *           if any problem is detected with the passed metadata.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
   public void recordMetadata(Connection conn,
-      Iterator<ArticleMetadataInfo> mditr) throws SQLException {
+      Iterator<ArticleMetadataInfo> mditr) throws MetadataException,
+      SQLException {
     final String DEBUG_HEADER = "recordMetadata(): ";
 
     // Loop through the metadata for each article.
@@ -509,11 +512,13 @@ public class AuMetadataRecorder {
    *          A Connection with the connection to the database
    * @param mdinfo
    *          An ArticleMetadataInfo providing the metadata.
+   * @throws MetadataException
+   *           if any problem is detected with the passed metadata.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
   private void storeMetadata(Connection conn, ArticleMetadataInfo mdinfo)
-      throws SQLException {
+      throws MetadataException, SQLException {
     final String DEBUG_HEADER = "storeMetadata(): ";
     if (log.isDebug3()) {
       log.debug3(DEBUG_HEADER + "Starting: auId = " + auId);
@@ -591,6 +596,10 @@ public class AuMetadataRecorder {
       // Get the journal title received in the metadata.
       journalTitle = mdinfo.journalTitle;
       log.debug3(DEBUG_HEADER + "journalTitle = " + journalTitle);
+
+      if (StringUtil.isNullString(journalTitle)) {
+	throw new MetadataException("Journal title is missing", mdinfo);
+      }
 
       // Get any ISBN values received in the metadata.
       pIsbn = mdinfo.isbn;
