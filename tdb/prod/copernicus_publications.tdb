@@ -17,7 +17,7 @@
     
       param[base_url] = http://www.adv-geosci.net/
       param[home_url] = http://www.advances-in-geosciences.net/
-      comment[notReady] = low agreement, special character & different ISSN record on website
+      comment[notReady] = low agreement, different issue #
 
       au < ready ; 2003 ; 2003 ; Advances in Geosciences (ADGEO) Volume 1 ; 1 >
       au < ready ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 2 ; 2 >
@@ -25,7 +25,7 @@
       au < notReady ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 4 ; 4 >
       au < ready ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 5 ; 5 >
       au < ready ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 6 ; 6 >
-      au < notReady ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 7 ; 7 >
+      au < ready ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 7 ; 7 >
       au < ready ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 8 ; 8 >
       au < notReady ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 9 ; 9 >
       au < notReady ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 10 ; 10 >
