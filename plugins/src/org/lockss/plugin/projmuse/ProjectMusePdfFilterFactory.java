@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePdfFilterFactory.java,v 1.6 2013-02-28 01:55:28 thib_gc Exp $
+ * $Id: ProjectMusePdfFilterFactory.java,v 1.7 2013-03-26 22:48:52 pgust Exp $
  */
 
 /*
@@ -73,7 +73,8 @@ public class ProjectMusePdfFilterFactory extends SimplePdfFilterFactory {
       extends PdfTokenStreamWorker
       implements PdfTransform<PdfTokenStream> {
     
-    public static final String PROVIDED_BY_REGEX = "\\s*Access Provided by .*";
+    // Case may vary, so need to do case-independent match
+    public static final String PROVIDED_BY_REGEX = "\\s*(?i)Access Provided by(?-i) .*";
     
     private boolean result;
     
