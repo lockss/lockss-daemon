@@ -19,32 +19,32 @@
       param[home_url] = http://www.advances-in-geosciences.net/
       comment[notReady] = low agreement, special character & different ISSN record on website
 
-      au < notReady ; 2003 ; 2003 ; Advances in Geosciences (ADGEO) Volume 1 ; 1 >
-      au < notReady ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 2 ; 2 >
-      au < notReady ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 3 ; 3 >
+      au < ready ; 2003 ; 2003 ; Advances in Geosciences (ADGEO) Volume 1 ; 1 >
+      au < ready ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 2 ; 2 >
+      au < ready ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 3 ; 3 >
       au < notReady ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 4 ; 4 >
       au < ready ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 5 ; 5 >
       au < ready ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 6 ; 6 >
       au < notReady ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 7 ; 7 >
-      au < notReady ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 8 ; 8 >
+      au < ready ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 8 ; 8 >
       au < notReady ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 9 ; 9 >
       au < notReady ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 10 ; 10 >
       au < notReady ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 11 ; 11 >
       au < notReady ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 12 ; 12 >
-      au < notReady ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 13 ; 13 >
-      au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 14 ; 14 >
+      au < ready ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 13 ; 13 >
+      au < ready ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 14 ; 14 >
       au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 15 ; 15 >
       au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 16 ; 16 >
-      au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 17 ; 17 >
+      au < ready ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 17 ; 17 >
       au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 18 ; 18 >
       au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 19 ; 19 >
       au < notReady ; 2009 ; 2009 ; Advances in Geosciences (ADGEO) Volume 20 ; 20 >
       au < ready ; 2009 ; 2009 ; Advances in Geosciences (ADGEO) Volume 21 ; 21 >
-      au < notReady ; 2009 ; 2009 ; Advances in Geosciences (ADGEO) Volume 22 ; 22 >
+      au < ready ; 2009 ; 2009 ; Advances in Geosciences (ADGEO) Volume 22 ; 22 >
       au < ready ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 23 ; 23 >
       au < notReady ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 24 ; 24 >
-      au < notReady ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 25 ; 25 >
-      au < notReady ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 26 ; 26 >
+      au < ready ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 25 ; 25 >
+      au < ready ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 26 ; 26 >
       au < ready ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 27 ; 27 >
       au < ready ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 28 ; 28 >
       au < notReady ; 2011 ; 2011 ; Advances in Geosciences (ADGEO) Volume 29 ; 29 >
@@ -87,7 +87,7 @@
     
       param[base_url] = http://www.adv-sci-res.net/
       param[home_url] = http://www.advances-in-science-and-research.net/
-      comment[notReady] = no content
+      comment[notReady] = not online yet
 
       au < released ; 2007 ; 2007 ; Advances in Science and Research (ASR) 2006 Volume 1 ; 1 >
       au < released ; 2008 ; 2008 ; Advances in Science and Research (ASR) 2007 Volume 2 ; 2 >
