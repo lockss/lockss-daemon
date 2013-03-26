@@ -114,4 +114,25 @@
   
   }
 
+  {
+
+    title <
+      name = Data Curation Profile ;
+      issn = 2326-6651 
+    >
+
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://docs.lib.purdue.edu/
+    attr[journal_abbr] = dcp
+    implicit < status ; year ; name ; param[volume] >
+
+    au < manifest ; 2009 ; Data Curation Profile Volume 1 ; 1 >
+    au < manifest ; 2010 ; Data Curation Profile Volume 2 ; 2 >
+    au < manifest ; 2011 ; Data Curation Profile Volume 3 ; 3 >
+    au < manifest ; 2012 ; Data Curation Profile Volume 4 ; 4 >
+    au < manifest ; 2013 ; Data Curation Profile Volume 5 ; 5 >
+
+  }
+    
+
 }
