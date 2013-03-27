@@ -148,6 +148,7 @@
   <entry>
     <string>au_rate_limiter_info</string>
     <org.lockss.plugin.RateLimiterInfo>
+    <rate>1/6s</rate>
     <cond>
 	<entry>
 	  <org.lockss.daemon.CrawlWindows-Daily>

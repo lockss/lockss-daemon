@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.1 2013-03-27 16:04:43 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.2 2013-03-27 18:02:25 alexandraohlson Exp $
  */
 
 /*
@@ -239,7 +239,6 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
  
     RateLimiterInfo rli = au.getRateLimiterInfo();
     CrawlRateLimiter crl = CrawlRateLimiter.Util.forRli(rli);
-    log.setLevel("debug3");
     
     //Using different dates/times check the rate used
     // WINDOW is: 1/2s from 12:00 - 24:00PS/DT; 1/6s from 24:00 - 12:00PS/DT
