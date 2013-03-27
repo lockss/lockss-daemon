@@ -23,8 +23,8 @@
     param[journal_id] = eh
     param[journal_issn] = 0967-3407
     
-    au < testing ; 1995 ; Environment and History Volume 1 ; 1 >
-    au < testing ; 1996 ; Environment and History Volume 2 ; 2 >
+    au < manifest ; 1995 ; Environment and History Volume 1 ; 1 >
+    au < manifest ; 1996 ; Environment and History Volume 2 ; 2 >
     au < manifest ; 1997 ; Environment and History Volume 3 ; 3 >
     au < manifest ; 1998 ; Environment and History Volume 4 ; 4 >
     au < manifest ; 1999 ; Environment and History Volume 5 ; 5 >
@@ -33,14 +33,14 @@
     au < manifest ; 2002 ; Environment and History Volume 8 ; 8 >
     au < manifest ; 2003 ; Environment and History Volume 9 ; 9 >
     au < manifest ; 2004 ; Environment and History Volume 10 ; 10 >
-    au < manifest ; 2005 ; Environment and History Volume 11 ; 11 >
-    au < manifest ; 2006 ; Environment and History Volume 12 ; 12 >
-    au < manifest ; 2007 ; Environment and History Volume 13 ; 13 >
-    au < manifest ; 2008 ; Environment and History Volume 14 ; 14 >
-    au < manifest ; 2009 ; Environment and History Volume 15 ; 15 >
-    au < manifest ; 2010 ; Environment and History Volume 16 ; 16 >
-    au < manifest ; 2011 ; Environment and History Volume 17 ; 17 >
-    au < manifest ; 2012 ; Environment and History Volume 18 ; 18 >
+    au < testing ; 2005 ; Environment and History Volume 11 ; 11 >
+    au < testing ; 2006 ; Environment and History Volume 12 ; 12 >
+    au < testing ; 2007 ; Environment and History Volume 13 ; 13 >
+    au < testing ; 2008 ; Environment and History Volume 14 ; 14 >
+    au < testing ; 2009 ; Environment and History Volume 15 ; 15 >
+    au < testing ; 2010 ; Environment and History Volume 16 ; 16 >
+    au < testing ; 2011 ; Environment and History Volume 17 ; 17 >
+    au < testing ; 2012 ; Environment and History Volume 18 ; 18 >
     au < expected ; 2013 ; Environment and History Volume 19 ; 19 >
   
   }
