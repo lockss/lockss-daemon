@@ -195,27 +195,27 @@
     au < released ; 1933 ; American Journal of Physiology Volume 105 ; 105 >
     au < released ; 1933 ; American Journal of Physiology Volume 106 ; 106 >
     au < released ; 1933-1934 ; American Journal of Physiology Volume 107 ; 107 >
-    au < manifest ; 1934 ; American Journal of Physiology Volume 108 ; 108 >
-    au < manifest ; 1934 ; American Journal of Physiology Volume 109 ; 109 >
-    au < manifest ; 1934 ; American Journal of Physiology Volume 110 ; 110 >
-    au < manifest ; 1935 ; American Journal of Physiology Volume 111 ; 111 >
-    au < manifest ; 1935 ; American Journal of Physiology Volume 112 ; 112 >
-    au < manifest ; 1935 ; American Journal of Physiology Volume 113 ; 113 >
-    au < manifest ; 1935-1936 ; American Journal of Physiology Volume 114 ; 114 >
-    au < manifest ; 1936 ; American Journal of Physiology Volume 115 ; 115 >
-    au < manifest ; 1936 ; American Journal of Physiology Volume 116 ; 116 >
-    au < manifest ; 1936 ; American Journal of Physiology Volume 117 ; 117 >
-    au < manifest ; 1936-1937 ; American Journal of Physiology Volume 118 ; 118 >
-    au < manifest ; 1937 ; American Journal of Physiology Volume 119 ; 119 >
-    au < manifest ; 1937 ; American Journal of Physiology Volume 120 ; 120 >
-    au < manifest ; 1937-1938 ; American Journal of Physiology Volume 121 ; 121 >
-    au < manifest ; 1938 ; American Journal of Physiology Volume 122 ; 122 >
-    au < manifest ; 1938 ; American Journal of Physiology Volume 123 ; 123 >
-    au < manifest ; 1938 ; American Journal of Physiology Volume 124 ; 124 >
-    au < manifest ; 1938-1939 ; American Journal of Physiology Volume 125 ; 125 >
-    au < manifest ; 1939 ; American Journal of Physiology Volume 126 ; 126 >
-    au < manifest ; 1939 ; American Journal of Physiology Volume 127 ; 127 >
-    au < manifest ; 1939-1940 ; American Journal of Physiology Volume 128 ; 128 >
+    au < testing ; 1934 ; American Journal of Physiology Volume 108 ; 108 >
+    au < testing ; 1934 ; American Journal of Physiology Volume 109 ; 109 >
+    au < testing ; 1934 ; American Journal of Physiology Volume 110 ; 110 >
+    au < testing ; 1935 ; American Journal of Physiology Volume 111 ; 111 >
+    au < testing ; 1935 ; American Journal of Physiology Volume 112 ; 112 >
+    au < testing ; 1935 ; American Journal of Physiology Volume 113 ; 113 >
+    au < testing ; 1935-1936 ; American Journal of Physiology Volume 114 ; 114 >
+    au < testing ; 1936 ; American Journal of Physiology Volume 115 ; 115 >
+    au < testing ; 1936 ; American Journal of Physiology Volume 116 ; 116 >
+    au < testing ; 1936 ; American Journal of Physiology Volume 117 ; 117 >
+    au < testing ; 1936-1937 ; American Journal of Physiology Volume 118 ; 118 >
+    au < testing ; 1937 ; American Journal of Physiology Volume 119 ; 119 >
+    au < testing ; 1937 ; American Journal of Physiology Volume 120 ; 120 >
+    au < testing ; 1937-1938 ; American Journal of Physiology Volume 121 ; 121 >
+    au < testing ; 1938 ; American Journal of Physiology Volume 122 ; 122 >
+    au < testing ; 1938 ; American Journal of Physiology Volume 123 ; 123 >
+    au < testing ; 1938 ; American Journal of Physiology Volume 124 ; 124 >
+    au < testing ; 1938-1939 ; American Journal of Physiology Volume 125 ; 125 >
+    au < testing ; 1939 ; American Journal of Physiology Volume 126 ; 126 >
+    au < testing ; 1939 ; American Journal of Physiology Volume 127 ; 127 >
+    au < testing ; 1939-1940 ; American Journal of Physiology Volume 128 ; 128 >
     au < manifest ; 1940 ; American Journal of Physiology Volume 129 ; 129 >
     au < manifest ; 1940 ; American Journal of Physiology Volume 130 ; 130 >
     au < manifest ; 1940 ; American Journal of Physiology Volume 131 ; 131 >
@@ -1055,7 +1055,6 @@
     {
 
       pluginSuffix = HighWirePressH20Plugin
-      comment[jap] = v1-53 missing manifest pages
 
       au < manifest ; 1948-1949 ; Journal of Applied Physiology Volume 1 ; 1 >
       au < manifest ; 1949-1950 ; Journal of Applied Physiology Volume 2 ; 2 >
@@ -1553,7 +1552,6 @@
     {
 
       pluginSuffix = HighWirePressH20Plugin
-      comment[0] = manifest page has malformed urls-- see RU3956
 
       au < manifest ; 1986 ; Physiology Volume 1 ; 1 >
       au < manifest ; 1987 ; Physiology Volume 2 ; 2 >
