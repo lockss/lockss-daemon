@@ -1,5 +1,5 @@
 /**
- * $Id: SitemapException.java,v 1.1 2013-03-19 18:42:23 ldoan Exp $
+ * $Id: SitemapException.java,v 1.2 2013-03-27 22:28:43 ldoan Exp $
  */
 
 /**
@@ -33,26 +33,25 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.extractor;
 
 /**
- * Checked exception hierarchy for errors in sitemap parser code.
+ * Exception hierarchy for errors in sitemap parser code.
  */
 public class SitemapException extends Exception {
 
-  public SitemapException() {
+  SitemapException() {
     super();
   }
 
-  public SitemapException(String msg) {
+  SitemapException(String msg) {
     super(msg);
   }
   
-  public SitemapException(Throwable cause) {
+  SitemapException(Throwable cause) {
     super(cause);
   }
 
-  public SitemapException(String msg, Throwable cause) {
+  SitemapException(String msg, Throwable cause) {
     super(msg, cause);
   }
 
-
-} /** end SitemapException */
+}
 
