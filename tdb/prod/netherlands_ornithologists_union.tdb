@@ -18,12 +18,12 @@
     
     param[journal_id] = arde
 
-    au < testing ; 2007 ; Ardea Volume 95 ; 95 >
-    au < testing ; 2008 ; Ardea Volume 96 ; 96 >
-    au < testing ; 2009 ; Ardea Volume 97 ; 97 >
-    au < testing ; 2010 ; Ardea Volume 98 ; 98 >
-    au < testing ; 2011 ; Ardea Volume 99 ; 99 >
-    au < testing ; 2012 ; Ardea Volume 100 ; 100 >
+    au < ready ; 2007 ; Ardea Volume 95 ; 95 >
+    au < ready ; 2008 ; Ardea Volume 96 ; 96 >
+    au < ready ; 2009 ; Ardea Volume 97 ; 97 >
+    au < ready ; 2010 ; Ardea Volume 98 ; 98 >
+    au < ready ; 2011 ; Ardea Volume 99 ; 99 >
+    au < ready ; 2012 ; Ardea Volume 100 ; 100 >
     au < expected ; 2013 ; Ardea Volume 101 ; 101 >
  
   }
