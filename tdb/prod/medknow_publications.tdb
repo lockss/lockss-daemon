@@ -2980,12 +2980,16 @@
    >
 
     param[base_url] = http://www.journals.mui.ac.ir/jrms
-	comment[jrms] = the url structure is the new version
+    comment[jrms] = the url structure is the new version
 	
-    au < exists ; 2000 ; Journal of Research in Medical Sciences Volume 5 [Abstract only] ; 2000 ; 5 >
-    au < exists ; 2001 ; Journal of Research in Medical Sciences Volume 6 [Abstract only] ; 2001 ; 6 >
-    au < exists ; 2002 ; Journal of Research in Medical Sciences Volume 7 [Abstract only] ; 2002 ; 7 >
-    au < exists ; 2003 ; Journal of Research in Medical Sciences Volume 8 [Abstract only] ; 2003 ; 8 >
+    {
+      attr[au_coverage_depth] = abstracts
+      
+      au < exists ; exists ; 2000 ; Journal of Research in Medical Sciences Volume 5 [Abstract only] ; 2000 ; 5 >
+      au < exists ; exists ; 2001 ; Journal of Research in Medical Sciences Volume 6 [Abstract only] ; 2001 ; 6 >
+      au < exists ; exists ; 2002 ; Journal of Research in Medical Sciences Volume 7 [Abstract only] ; 2002 ; 7 >
+      au < exists ; exists ; 2003 ; Journal of Research in Medical Sciences Volume 8 [Abstract only] ; 2003 ; 8 >
+    }
     au < exists ; 2004 ; Journal of Research in Medical Sciences Volume 9 ; 2004 ; 9 >
     au < exists ; 2005 ; Journal of Research in Medical Sciences Volume 10 ; 2005 ; 10 >
     au < exists ; 2006 ; Journal of Research in Medical Sciences Volume 11 ; 2006 ; 11 >
