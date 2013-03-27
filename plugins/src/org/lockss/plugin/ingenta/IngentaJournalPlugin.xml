@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Ingenta Journal Plugin, Base URL %s, API URL %s, Graphics URL %s, Publisher ID %s, Journal ID %s, Journal ISSN %s, Volume %s&quot;, base_url, api_url, graphics_url, publisher_id, journal_id, journal_issn, volume_name</string>
+    <string>"Ingenta Journal Plugin, Base URL %s, API URL %s, Graphics URL %s, Publisher ID %s, Journal ID %s, Journal ISSN %s, Volume %s", base_url, api_url, graphics_url, publisher_id, journal_id, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -51,42 +51,42 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://(%s|%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host, api_url_host, graphics_url_host</string>
-      <string>4,&quot;^(%s|%s|%s)&quot;, base_url, api_url, graphics_url</string>
-      <string>2,&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}$&quot;, api_url, publisher_id, journal_id, volume_name</string>
-      <string>2,&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}/.{8}$&quot;, api_url, publisher_id, journal_id, volume_name</string>
-      <string>2,&quot;^(%s|%s)content/%s/%s/[0-9]{4}/0*%s/.*(/trial|/citations|\?format=rss)$&quot;, base_url, api_url, publisher_id, journal_id, volume_name</string>
-      <string>1,&quot;^(%s|%s)content/%s/%s/[0-9]{4}/0*%s/&quot;, base_url, api_url, publisher_id, journal_id, volume_name</string>
-      <string>1,&quot;^%s&quot;, graphics_url</string>
+      <string>1,"^https?://(%s|%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, api_url_host, graphics_url_host</string>
+      <string>4,"^(%s|%s|%s)", base_url, api_url, graphics_url</string>
+      <string>2,"^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}$", api_url, publisher_id, journal_id, volume_name</string>
+      <string>2,"^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}/.{8}$", api_url, publisher_id, journal_id, volume_name</string>
+      <string>2,"^(%s|%s)content/%s/%s/[0-9]{4}/0*%s/.*(/trial|/citations|\?format=rss)$", base_url, api_url, publisher_id, journal_id, volume_name</string>
+      <string>1,"^(%s|%s)content/%s/%s/[0-9]{4}/0*%s/", base_url, api_url, publisher_id, journal_id, volume_name</string>
+      <string>1,"^%s", graphics_url</string>
     </list>
   </entry>
   <entry>
-  	<string>au_feature_urls</string>
-  	<map>
-	  <entry>
-	    <string>au_title</string>
-	    <string>&quot;%scontent/%s/%s&quot;, base_url, publisher_id, journal_id</string>
-	  </entry>
-	  <entry>
-	    <string>au_volume</string>
-	    <string>&quot;%scontent/%s?format=lockss&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
-	  </entry>
-	  <entry>
-	    <string>au_issue</string>
-	    <string>&quot;%scontent/%s/%s/%s/%08d/%08d&quot;, base_url, publisher_id, journal_id, year, volume_name, issue</string>
-	  </entry>
-	  <entry>
-	    <string>au_article</string>
-	    <string>&quot;%scontent/%s/%s/%s/%08d/%08d/art%05d&quot;, base_url, publisher_id, journal_id, year, volume_name, issue, article</string>
-	  </entry>
-  	</map>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%scontent/%s/%s", base_url, publisher_id, journal_id</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%scontent/%s?format=lockss&amp;volume=%s", base_url, journal_issn, volume_name</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%scontent/%s/%s/%s/%08d/%08d", base_url, publisher_id, journal_id, year, volume_name, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <string>"%scontent/%s/%s/%s/%08d/%08d/art%05d", base_url, publisher_id, journal_id, year, volume_name, issue, article</string>
+      </entry>
+     </map>
   </entry>
   <entry>
     <string>au_start_url</string>
     <list>
-      <string>&quot;%scontent/%s?format=lockss&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
-      <string>&quot;%scontent/%s?format=lockss&amp;volume=%s&quot;, api_url, journal_issn, volume_name</string>
-      <string>&quot;%slockss.txt&quot;, graphics_url</string>
+      <string>"%scontent/%s?format=lockss&amp;volume=%s", base_url, journal_issn, volume_name</string>
+      <string>"%scontent/%s?format=lockss&amp;volume=%s", api_url, journal_issn, volume_name</string>
+      <string>"%slockss.txt", graphics_url</string>
     </list>
   </entry>
   <entry>
@@ -177,7 +177,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/[^/]+/art[0-9]+\?crawler=true&quot;, api_url, publisher_id, journal_id, volume_name</string>
+      <string>"^%scontent/%s/%s/[0-9]{4}/0*%s/[^/]+/art[0-9]+\?crawler=true", api_url, publisher_id, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
