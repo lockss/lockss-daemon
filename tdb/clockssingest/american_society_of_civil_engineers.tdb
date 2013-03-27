@@ -1,0 +1,410 @@
+{
+
+  publisher <
+    name = American Society of Civil Engineers (ASCE) ;
+    info[contract] = 2010 ;
+    info[tester] = 
+  >
+
+  plugin = needs.plugin
+  param[base_url] = http://ascelibrary.org/
+
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = International Journal of Geomechanics ;
+      issn = 1532-3641 ;
+      eissn = 1943-5622
+    >
+
+    param[journal_id] = ijgnai
+
+  }
+
+  {
+
+    title <
+      name = Journal of Architectural Engineering ;
+      issn = 1076-0431 ;
+      eissn = 1943-5568
+    >
+
+    param[journal_id] = jaeied
+
+  }
+
+  {
+
+    title <
+      name = Journal of Aerospace Engineering ;
+      issn = 0893-1321 ;
+      eissn = 1943-5525
+    >
+
+    param[journal_id] = jaeeez
+
+  }
+
+  {
+
+    title <
+      name = Journal of Bridge Engineering ;
+      issn = 1084-0702 ;
+      eissn = 1943-5592
+    >
+
+    param[journal_id] = jbenf2
+
+  }
+
+  {
+
+    title <
+      name = Journal of Composites for Construction ;
+      issn = 1090-0268 ;
+      eissn = 1943-5614
+    >
+
+    param[journal_id] = jccof2
+
+  }
+
+  {
+
+    title <
+      name = Journal of Performance of Constructed Facilities ;
+      issn = 0887-3828 ;
+      eissn = 1943-5509
+    >
+
+    param[journal_id] = jpcfev
+
+  }
+
+  {
+
+    title <
+      name = Journal of Construction Engineering & Management ;
+      issn = 0733-9364 ;
+      eissn = 1943-7862
+    >
+
+    param[journal_id] = jcemd4
+
+  }
+
+  {
+
+    title <
+      name = Journal of Computing in Civil Engineering ;
+      issn = 0887-3801 ;
+      eissn = 1943-5487
+    >
+
+    param[journal_id] = jccee5
+
+  }
+
+  {
+
+    title <
+      name = Journal of Cold Regions Engineering ;
+      issn = 0887-381X ;
+      eissn = 1943-5495
+    >
+
+    param[journal_id] = jcrgei
+
+  }
+
+  {
+
+    title <
+      name = Journal of Environmental Engineering ;
+      issn = 0733-9372 ;
+      eissn = 1943-7870
+    >
+
+    param[journal_id] = joeedu
+
+  }
+
+  {
+
+    title <
+      name = Journal of Engineering Mechanics ;
+      issn = 0733-9399 ;
+      eissn = 1943-7889
+    >
+
+    param[journal_id] = jenmdt
+
+  }
+
+  {
+
+    title <
+      name = Journal of Energy Engineering ;
+      issn = 0733-9402 ;
+      eissn = 1943-7897
+    >
+
+    param[journal_id] = jleed9
+
+  }
+
+  {
+
+    title <
+      name = Journal of Geotechnical & Geoenvironmental Engineering ;
+      issn = 1090-0241 ;
+      eissn = 1943-5606
+    >
+
+    param[journal_id] = jggefk
+
+  }
+
+  {
+
+    title <
+      name = Journal of Hazardous, Toxic & Radioactive Waste ;
+      issn = 2153-5493 ;
+      eissn = 2153-5515
+    >
+
+    param[journal_id] = jhtrbp
+
+  }
+
+  {
+
+    title <
+      name = Journal of Hydrologic Engineering ;
+      issn = 1084-0699 ;
+      eissn = 1943-5584
+    >
+
+    param[journal_id] = jhyeff
+
+  }
+
+  {
+
+    title <
+      name = Journal of Hydraulic Engineering ;
+      issn = 0733-9429 ;
+      eissn = 1943-7900
+    >
+
+    param[journal_id] = jhend8
+
+  }
+
+  {
+
+    title <
+      name = Journal of Irrigation & Drainage Engineering ;
+      issn = 0733-9437 ;
+      eissn = 1943-4774
+    >
+
+    param[journal_id] = jidedh
+
+  }
+
+  {
+
+    title <
+      name = Journal of Infrastructure Systems ;
+      issn = 1076-0342 ;
+      eissn = 1943-555X
+    >
+
+    param[journal_id] = jitse4
+
+  }
+
+  {
+
+    title <
+      name = Journal of Legal Affairs and Dispute Resolution in Engineering and Construction ;
+      issn = 1943-4162 ;
+      eissn = 1943-4170
+    >
+
+    param[journal_id] = jladah
+
+  }
+
+  {
+
+    title <
+      name = Journal of Management in Engineering ;
+      issn = 0742-597X ;
+      eissn = 1943-5479
+    >
+
+    param[journal_id] = jmenea
+
+  }
+
+  {
+
+    title <
+      name = Journal of Materials in Civil Engineering ;
+      issn = 0899-1561 ;
+      eissn = 1943-5533
+    >
+
+    param[journal_id] = jmcee7
+
+  }
+
+  {
+
+    title <
+      name = Journal of Nanomechanics and Micromechanics ;
+      issn = 2153-5434 ;
+      eissn = 2153-5477
+    >
+
+    param[journal_id] = jnmoco
+
+  }
+
+  {
+
+    title <
+      name = Journal of Professional Issues in Engineering Education & Practice ;
+      issn = 1052-3928 ;
+      eissn = 1943-5541
+    >
+
+    param[journal_id] = jpepe3
+
+  }
+
+  {
+
+    title <
+      name = Journal of Pipeline Sysems Engineering and Practice ;
+      issn = 1949-1190 ;
+      eissn = 1949-1204
+    >
+
+    param[journal_id] = jpsea2
+
+  }
+
+  {
+
+    title <
+      name = Journal of Structural Engineering ;
+      issn = 0733-9445 ;
+      eissn = 1943-541X
+    >
+
+    param[journal_id] = jsendh
+
+  }
+
+  {
+
+    title <
+      name = Journal of Surveying Engineering ;
+      issn = 0733-9453 ;
+      eissn = 1943-5428
+    >
+
+    param[journal_id] = jsued2
+
+  }
+
+  {
+
+    title <
+      name = Journal of Transportation Engineering ;
+      issn = 0733-947X ;
+      eissn = 1943-5436
+    >
+
+    param[journal_id] = jtpedi
+
+  }
+
+  {
+
+    title <
+      name = Journal of Urban Planning and Development ;
+      issn = 0733-9488 ;
+      eissn = 1943-5444
+    >
+
+    param[journal_id] = jupddm
+
+  }
+
+  {
+
+    title <
+      name = Journal of Water Resources Planning and Management ;
+      issn = 0733-9496 ;
+      eissn = 1943-5452
+    >
+
+    param[journal_id] = jwrmd5
+
+  }
+
+  {
+
+    title <
+      name = Journal of Waterway Port Coastal and Ocean Engineering ;
+      issn = 0733-950X ;
+      eissn = 1943-5460
+    >
+
+    param[journal_id] = jwped5
+
+  }
+
+  {
+
+    title <
+      name = Leadership & Management in Engineering ;
+      issn = 1532-6748 ;
+      eissn = 1943-5630
+    >
+
+    param[journal_id] = lmeeaz
+
+  }
+
+  {
+
+    title <
+      name = Natural Hazards Review ;
+      issn = 1527-6988 ;
+      eissn = 1527-6996
+    >
+
+    param[journal_id] = nhrefo
+
+  }
+
+  {
+
+    title <
+      name = Practice Periodical on Structural Design & Construction ;
+      issn = 1084-0680 ;
+      eissn = 1943-5576
+    >
+
+    param[journal_id] = ppscfx
+
+  }
+
+}
