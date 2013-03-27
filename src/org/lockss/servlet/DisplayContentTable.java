@@ -36,6 +36,7 @@ import java.net.URLEncoder;
 import java.util.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 import org.lockss.util.PluginComparator;
 import org.mortbay.html.*;
 
@@ -43,6 +44,7 @@ import org.mortbay.html.*;
  * Display content utility class
  */
 public class DisplayContentTable {
+  protected static Logger log = Logger.getLogger("DisplayContentTable");
 
   private static final int LETTERS_IN_ALPHABET = 26;
   private static final int DEFAULT_NUMBER_IN_GROUP = 4;
@@ -147,6 +149,9 @@ public class DisplayContentTable {
     while (itr.hasNext()) {
       ArchivalUnit au = (ArchivalUnit) itr.next();
       String publisher = AuUtil.getTitleAttribute(au, "publisher");
+      if (publisher == null) {
+        publisher = "unknown publisher";
+      }
       if (ausMap.containsKey(publisher)) {
         TreeSet<ArchivalUnit> auSet = (TreeSet) ausMap.get(publisher);
         auSet.add(au);
@@ -267,11 +272,7 @@ public class DisplayContentTable {
     org.mortbay.html.List tabList =
             new org.mortbay.html.List(org.mortbay.html.List.Unordered);
     tabsDiv.add(tabList);
-
-    Iterator letterIt = startLetterList.entrySet().iterator();
-
-    while (letterIt.hasNext()) {
-      Map.Entry letterPairs = (Map.Entry) letterIt.next();
+    for (Map.Entry letterPairs : startLetterList.entrySet()) {
       Character startLetter = (Character) letterPairs.getKey();
       Character endLetter = (Character) letterPairs.getValue();
       if (numberInGroup > 1) {
@@ -319,11 +320,7 @@ public class DisplayContentTable {
     } else {
       ausMap = orderAusByPublisher(allAus);
     }
-
-    Iterator letterIt = startLetterList.entrySet().iterator();
-
-    while (letterIt.hasNext()) {
-      Map.Entry letterPairs = (Map.Entry) letterIt.next();
+    for (Map.Entry letterPairs : startLetterList.entrySet()) {
       Character startLetter = (Character) letterPairs.getKey();
 
       Table divTable = createTabDiv(startLetter.toString());
@@ -394,9 +391,7 @@ public class DisplayContentTable {
     createTitleRow(divTable, sortName);
     if (auSet != null) {
       int rowCount = 0;
-      Iterator listIterator = auSet.iterator();
-      while (listIterator.hasNext()) {
-        ArchivalUnit au = (ArchivalUnit) listIterator.next();
+      for (ArchivalUnit au : auSet) {
         createAuRow(divTable, au, cleanNameString, rowCount);
         rowCount++;
       }
@@ -468,6 +463,24 @@ public class DisplayContentTable {
       divTable.addCell(tdbAu.getJournalTitle());
       divTable.addCell(tdbAu.getYear());
       divTable.addCell(tdbAu.getIssn());
+      divTable.addCell(checkCollected(au));
+    } else {
+      log.debug("TdbAu not found for Au " + au.getName());
+      auLink.attribute("onClick", "updateDiv('" + cleanedAuName + "', '"
+              + encodedHref + "', '"
+              + cleanNameString + rowCount + "_image');return false");
+      Image auLinkImage = new Image("images/expand.png");
+      auLinkImage.attribute("id", cleanNameString + rowCount + "_image");
+      auLinkImage.attribute("class", "title-icon");
+      auLinkImage.attribute("alt", "Expand Volume");
+      auLinkImage.attribute("title", "Expand Volume");
+      auLink.add(auLinkImage);
+      auLink.add(auName);
+      auDiv.add(auLink);
+      divTable.addCell(auDiv);
+      divTable.addCell(au.getName());
+      divTable.addCell("unknown");
+      divTable.addCell("unknown");
       divTable.addCell(checkCollected(au));
     }
     Block serveContentDiv = new Block(Block.Div);
