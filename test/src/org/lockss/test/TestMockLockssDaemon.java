@@ -1,5 +1,5 @@
 /*
- * $Id: TestMockLockssDaemon.java,v 1.1 2005-11-08 20:29:09 tlipkis Exp $
+ * $Id: TestMockLockssDaemon.java,v 1.2 2013-03-27 22:00:50 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,12 @@ public class TestMockLockssDaemon extends LockssTestCase {
     mockDaemon.setDaemonRunning(true);
     assertTrue(mockDaemon.isDaemonRunning());
     assertTrue(mockDaemon.isAppRunning());
+  }
+
+  public void testSetTestingMode() {
+    assertNull(mockDaemon.getTestingMode());
+    mockDaemon.setTestingMode("foo");
+    assertEquals("foo", mockDaemon.getTestingMode());
   }
 }
 

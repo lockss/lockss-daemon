@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.73 2012-12-07 07:22:11 fergaloy-sf Exp $
+ * $Id: MockLockssDaemon.java,v 1.74 2013-03-27 22:00:50 tlipkis Exp $
  */
 
 /*
@@ -152,6 +152,12 @@ public class MockLockssDaemon extends LockssDaemon {
     cron = null;
 
     //super.stopDaemon();
+  }
+
+  /** Set the testing mode.  (Normally done through config and daemon
+   * startup.) */
+  public void setTestingMode(String mode) {
+    testingMode = mode;
   }
 
   ManagerDesc findManagerDesc(String key) {

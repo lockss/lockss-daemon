@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.118 2013-02-04 18:43:39 fergaloy-sf Exp $
+ * $Id: LockssDaemon.java,v 1.119 2013-03-27 22:00:50 tlipkis Exp $
  */
 
 /*
@@ -252,7 +252,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   private static LockssDaemon theDaemon;
   private boolean isClockss;
-  private String testingMode;
+  protected String testingMode;
 
   protected LockssDaemon(List<String> propUrls) {
     super(propUrls);
