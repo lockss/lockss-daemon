@@ -82,19 +82,19 @@
       param[base_url] = http://rbm.acrl.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 2000 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 1 ; 1 >
-      au < testing ; 2001 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 2 ; 2 >
-      au < testing ; 2002 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 3 ; 3 >
-      au < testing ; 2003 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 4 ; 4 >
-      au < testing ; 2004 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 5 ; 5 >
-      au < testing ; 2005 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 6 ; 6 >
-      au < testing ; 2006 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 7 ; 7 >
-      au < testing ; 2007 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 8 ; 8 >
-      au < testing ; 2008 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 9 ; 9 >
+      au < ready ; 2000 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 1 ; 1 >
+      au < ready ; 2001 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 2 ; 2 >
+      au < ready ; 2002 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 3 ; 3 >
+      au < ready ; 2003 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 4 ; 4 >
+      au < ready ; 2004 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 5 ; 5 >
+      au < ready ; 2005 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 6 ; 6 >
+      au < ready ; 2006 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 7 ; 7 >
+      au < ready ; 2007 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 8 ; 8 >
+      au < ready ; 2008 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 9 ; 9 >
       au < testing ; 2009 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 10 ; 10 >
-      au < testing ; 2010 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 11 ; 11 >
-      au < testing ; 2011 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 12 ; 12 >
-      au < testing ; 2012 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 13 ; 13 >
+      au < ready ; 2010 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 11 ; 11 >
+      au < ready ; 2011 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 12 ; 12 >
+      au < ready ; 2012 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 13 ; 13 >
       au < expected ; 2013 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 14 ; 14 >
 
     }
