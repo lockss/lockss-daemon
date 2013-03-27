@@ -108,12 +108,12 @@ public class TestIngentaHtmlMetadataExtractorFactory extends LockssTestCase {
   }
 
   String goodDate = "Date";
-  String goodTitle = "Title";
+  String goodTitle = "British Corrosion Journal";
   String goodPublisher = "Publisher";
   String goodSubject = "Subject";
   String goodDescription = "Description";
   String goodType = "Type";
-  String goodArticle = "British Corrosion Journal";
+  String goodArticle = "Title";
   String goodFormat = "Format";
   String goodAuthor = " Name1";
   String goodDoi = "10.1179/096979511798967106";
@@ -164,20 +164,20 @@ public class TestIngentaHtmlMetadataExtractorFactory extends LockssTestCase {
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-    assertEquals(goodTitle, md.get(MetadataField.DC_FIELD_TITLE));
-    assertEquals(goodDoi, md.get(MetadataField.DC_FIELD_IDENTIFIER));
-    assertEquals(goodISSN, md.get(MetadataField.DC_FIELD_IDENTIFIER_ISSNM));
+    assertEquals(goodTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
+    assertEquals(goodISSN, md.get(MetadataField.FIELD_ISSN));
     assertEquals(goodType, md.get(MetadataField.DC_FIELD_TYPE));
-    assertEquals(goodAuthor, md.get(MetadataField.DC_FIELD_CREATOR));
+    assertEquals(goodAuthor, md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(goodVolume, md.get(MetadataField.DC_FIELD_CITATION_VOLUME));
-    assertEquals(goodIssue, md.get(MetadataField.DC_FIELD_CITATION_ISSUE));
-    assertEquals(goodStartPage, md.get(MetadataField.DC_FIELD_CITATION_SPAGE));
-    assertEquals(goodEndPage, md.get(MetadataField.DC_FIELD_CITATION_EPAGE));
+    assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
+    assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals(goodEndPage, md.get(MetadataField.FIELD_END_PAGE));
   }
 
   String badContent = "<HTML><HEAD><TITLE>" + goodTitle
