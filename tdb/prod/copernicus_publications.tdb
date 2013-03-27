@@ -113,7 +113,6 @@
       param[base_url] = http://www.ann-geophys.net/
       param[home_url] = http://www.annales-geophysicae.net/
       comment[substance] = volume 12, 13 abstracts only
-      comment[notReady] = white-space issue
 
       au < released ; 1994 ; 1994 ; Annales Geophysicae Volume 12 [abstracts only] ; 12 >
       au < released ; 1995 ; 1995 ; Annales Geophysicae Volume 13 [abstracts only] ; 13 >
@@ -128,9 +127,9 @@
       au < released ; 2004 ; 2004 ; Annales Geophysicae Volume 22 ; 22 >
       au < released ; 2005 ; 2005 ; Annales Geophysicae Volume 23 ; 23 >
       au < released ; 2006 ; 2006 ; Annales Geophysicae Volume 24 ; 24 >
-      au < notReady ; 2007 ; 2007 ; Annales Geophysicae Volume 25 ; 25 >
-      au < notReady ; 2008 ; 2008 ; Annales Geophysicae Volume 26 ; 26 >
-      au < notReady ; 2009 ; 2009 ; Annales Geophysicae Volume 27 ; 27 >
+      au < ready ; 2007 ; 2007 ; Annales Geophysicae Volume 25 ; 25 >
+      au < ready ; 2008 ; 2008 ; Annales Geophysicae Volume 26 ; 26 >
+      au < ready ; 2009 ; 2009 ; Annales Geophysicae Volume 27 ; 27 >
       au < ready ; 2010 ; 2010 ; Annales Geophysicae Volume 28 ; 28 >
       au < ready ; 2011 ; 2011 ; Annales Geophysicae Volume 29 ; 29 >
       au < ready ; 2012 ; 2012 ; Annales Geophysicae Volume 30 ; 30 >
