@@ -50,7 +50,7 @@
       eissn = 2050-5833 
     >
     
-    param[base_url] = http://journal.eahn.org/
+    param[base_url] = http://www.journal.eahn.org/
     param[journal_id] = ah
 
     au < manifest ; 2013 ; Architectural Histories Volume 1 ; 1 ; 2013 >
@@ -123,7 +123,7 @@
       eissn = 2049-1565 
     >
     
-    param[base_url] = http://openarchaeologydata.metajnl.com/
+    param[base_url] = http://www.openarchaeologydata.metajnl.com/
     param[journal_id] = joad
     
     au < testing ; 2012 ; The Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
@@ -138,7 +138,7 @@
       eissn = 2049-9647 
     >
     
-    param[base_url] = http://openresearchsoftware.metajnl.com/
+    param[base_url] = http://www.openresearchsoftware.metajnl.com/
     param[journal_id] = jors
 
     comment[0] = forthcoming, no articles online yet. Doesn't seem to be OJS2.
@@ -173,7 +173,7 @@
       eissn = 2041-9015 
     >
     
-    param[base_url] = http://pia-journal.co.uk/
+    param[base_url] = http://www.pia-journal.co.uk/
     param[journal_id] = pia
 
     au < testing ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
