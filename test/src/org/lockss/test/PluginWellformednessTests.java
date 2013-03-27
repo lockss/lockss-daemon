@@ -1,5 +1,5 @@
 /*
-n * $Id: PluginWellformednessTests.java,v 1.3 2013-03-19 04:26:14 tlipkis Exp $
+n * $Id: PluginWellformednessTests.java,v 1.4 2013-03-27 21:17:05 tlipkis Exp $
  */
 
 /*
@@ -41,11 +41,10 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.extractor.*;
 
-/** Base class for plugin tests.  If invoked as itself, by junit or java,
- * performs basic well-formedness tests on one or more plugins.  The list
+/** Performs basic well-formedness tests on one or more plugins.  The list
  * of plugins may be supplied as a semicolon-separated list in the System
- * property org.lockss.test.TestPluginNames or, if invoked directly, on the
- * command line. */
+ * property org.lockss.test.TestPluginNames or, if invoked directly (i.e.,
+ * not as a junit test), on the command line. */
 
 public final class PluginWellformednessTests extends LockssTestCase {
   static Logger log = Logger.getLogger("PluginWellformednessTests");
@@ -60,11 +59,7 @@ public final class PluginWellformednessTests extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    Properties props = new Properties();
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-		      tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    setUpCacheDir();
 
     daemon = getMockLockssDaemon();
     daemon.getPluginManager().startService();
