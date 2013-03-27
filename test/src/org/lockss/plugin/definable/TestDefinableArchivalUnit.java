@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.63 2013-03-19 04:26:15 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.64 2013-03-27 16:06:48 alexandraohlson Exp $
  */
 
 /*
@@ -1681,11 +1681,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     Map<CrawlWindow,RateLimiterInfo> cond = rli.getCond();
     LinkedHashMap<CrawlWindow,RateLimiterInfo> exp =
       new LinkedHashMap<CrawlWindow,RateLimiterInfo>();
-    exp.put(new CrawlWindows.Daily("8:00", "22:00", "America/Los Angeles"),
+    exp.put(new CrawlWindows.Daily("8:00", "22:00", "America/Los_Angeles"),
 	    new RateLimiterInfo(null, "2/1s")
 	    .setMimeRates(MapUtil.map("text/html,application/pdf", "10/1m",
 				      "image/*", "5/1s")));
-    exp.put(new CrawlWindows.Daily("22:00", "8:00", "America/Los Angeles"),
+    exp.put(new CrawlWindows.Daily("22:00", "8:00", "America/Los_Angeles"),
 	    new RateLimiterInfo(null, "10/2s")
 	    .setMimeRates(MapUtil.map("text/html,application/pdf", "10/300ms",
 				      "image/*", "5/1s")));
@@ -1694,6 +1694,14 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     // their elements do
     assertEquals(new ArrayList(exp.entrySet()),
 		 new ArrayList(cond.entrySet()));
+    
+    // It is also a good idea to check that the crawl windows match to expected times.
+    // If the timezone had a typo in it then it reverts to GMT...
+    CrawlRateLimiter crl = CrawlRateLimiter.Util.forRli(rli);
+    // TimeBase will be GMT - so PS/DT will be 7 or 8 hours earlier
+    TimeBase.setSimulated("2013/03/25 12:00:00"); // will adjust to EARLIER than 8am in America/Los_Angeles
+    assertEquals("10/2s", crl.getRateLimiterFor("file.html", null).getRate());
+    assertEquals("10/300ms", crl.getRateLimiterFor("file.html", "text/html").getRate()); //2nd argument is previous content type
   }
 
   public static class PositiveCrawlRuleFactory

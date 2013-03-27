@@ -11,7 +11,7 @@
 	  <org.lockss.daemon.CrawlWindows-Daily>
 	    <from>8:00</from>
 	    <to>22:00</to>
-	    <timeZoneId>America/Los Angeles</timeZoneId>
+	    <timeZoneId>America/Los_Angeles</timeZoneId>
 	  </org.lockss.daemon.CrawlWindows-Daily>
 	  <org.lockss.plugin.RateLimiterInfo>
 	    <rate>2/1s</rate>
@@ -32,7 +32,7 @@
 	  <org.lockss.daemon.CrawlWindows-Daily>
 	    <from>22:00</from>
 	    <to>8:00</to>
-	    <timeZoneId>America/Los Angeles</timeZoneId>
+	    <timeZoneId>America/Los_Angeles</timeZoneId>
 	  </org.lockss.daemon.CrawlWindows-Daily>
 	  <org.lockss.plugin.RateLimiterInfo>
 	    <rate>10/2s</rate>
