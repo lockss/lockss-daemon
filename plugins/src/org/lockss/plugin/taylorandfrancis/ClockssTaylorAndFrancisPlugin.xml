@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -110,9 +110,33 @@
       <string>&quot;^%sdoi/(full|pdf)/&quot;, base_url</string>
     </list>
   </entry>
+  <!--  Set up different windows with different crawl rate; in place of au_def_pause_time -->
   <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
+    <string>au_rate_limiter_info</string>
+    <org.lockss.plugin.RateLimiterInfo>
+    <cond>
+	<entry>
+	  <org.lockss.daemon.CrawlWindows-Daily>
+	    <from>12:00</from>
+	    <to>24:00</to>
+	    <timeZoneId>America/Los_Angeles</timeZoneId>
+	  </org.lockss.daemon.CrawlWindows-Daily>
+	  <org.lockss.plugin.RateLimiterInfo>
+	    <rate>1/2s</rate>
+	  </org.lockss.plugin.RateLimiterInfo>
+	</entry>
+    <entry>
+	  <org.lockss.daemon.CrawlWindows-Daily>
+	    <from>24:00</from>
+	    <to>12:00</to>
+	    <timeZoneId>America/Los_Angeles</timeZoneId>
+	  </org.lockss.daemon.CrawlWindows-Daily>
+	  <org.lockss.plugin.RateLimiterInfo>
+	    <rate>1/6s</rate>
+    </org.lockss.plugin.RateLimiterInfo>
+	</entry>
+   </cond>
+  </org.lockss.plugin.RateLimiterInfo>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
