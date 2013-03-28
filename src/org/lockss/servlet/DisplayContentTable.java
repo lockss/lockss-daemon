@@ -217,7 +217,7 @@ public class DisplayContentTable {
     if ("plugin".equals(grouping)) {
       booksLinkString += "&group=plugin";
       journalsLinkString += "&group=plugin";
-      allLinkString += "&group=plugin";
+      allLinkString += "?group=plugin";
     }
     Link booksLink = new Link(booksLinkString);
     booksLink.add("books");
