@@ -126,7 +126,7 @@
     param[base_url] = http://www.openarchaeologydata.metajnl.com/
     param[journal_id] = joad
     
-    au < testing ; 2012 ; The Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
+    au < manifest ; 2012 ; The Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
     au < expected ; 2013 ; The Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
 
   }
@@ -176,28 +176,29 @@
     param[base_url] = http://www.pia-journal.co.uk/
     param[journal_id] = pia
 
-    au < testing ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
-    au < testing ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
-    au < testing ; 1992 ; Papers from the Institute of Archaeology Volume 3 ; 3 ; 1992 >
-    au < testing ; 1993 ; Papers from the Institute of Archaeology Volume 4 ; 4 ; 1993 >
-    au < testing ; 1994 ; Papers from the Institute of Archaeology Volume 5 ; 5 ; 1994 >
-    au < testing ; 1995 ; Papers from the Institute of Archaeology Volume 6 ; 6 ; 1995 >
-    au < testing ; 1996 ; Papers from the Institute of Archaeology Volume 7 ; 7 ; 1996 >
-    au < testing ; 1997 ; Papers from the Institute of Archaeology Volume 8 ; 8 ; 1997 >
-    au < testing ; 1998 ; Papers from the Institute of Archaeology Volume 9 ; 9 ; 1998 >
-    au < testing ; 1999 ; Papers from the Institute of Archaeology Volume 10 ; 10 ; 1999 >
-    au < testing ; 2000 ; Papers from the Institute of Archaeology Volume 11 ; 11 ; 2000 >
-    au < testing ; 2001 ; Papers from the Institute of Archaeology Volume 12 ; 12 ; 2001 >
-    au < testing ; 2002 ; Papers from the Institute of Archaeology Volume 13 ; 13 ; 2002 >
-    au < testing ; 2003 ; Papers from the Institute of Archaeology Volume 14 ; 14 ; 2003 >
-    au < testing ; 2004 ; Papers from the Institute of Archaeology Volume 15 ; 15 ; 2004 >
-    au < manifest ; 2005 ; Papers from the Institute of Archaeology Volume 16 ; 16 ; 2005 >
-    au < manifest ; 2006 ; Papers from the Institute of Archaeology Volume 17 ; 17 ; 2006 >
-    au < manifest ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 ; 2007 >
+    au < ready ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
+    au < ready ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
+    au < ready ; 1992 ; Papers from the Institute of Archaeology Volume 3 ; 3 ; 1992 >
+    au < ready ; 1993 ; Papers from the Institute of Archaeology Volume 4 ; 4 ; 1993 >
+    au < ready ; 1994 ; Papers from the Institute of Archaeology Volume 5 ; 5 ; 1994 >
+    au < ready ; 1995 ; Papers from the Institute of Archaeology Volume 6 ; 6 ; 1995 >
+    au < ready ; 1996 ; Papers from the Institute of Archaeology Volume 7 ; 7 ; 1996 >
+    au < ready ; 1997 ; Papers from the Institute of Archaeology Volume 8 ; 8 ; 1997 >
+    au < ready ; 1998 ; Papers from the Institute of Archaeology Volume 9 ; 9 ; 1998 >
+    au < ready ; 1999 ; Papers from the Institute of Archaeology Volume 10 ; 10 ; 1999 >
+    au < ready ; 2000 ; Papers from the Institute of Archaeology Volume 11 ; 11 ; 2000 >
+    au < ready ; 2001 ; Papers from the Institute of Archaeology Volume 12 ; 12 ; 2001 >
+    au < ready ; 2002 ; Papers from the Institute of Archaeology Volume 13 ; 13 ; 2002 >
+    au < ready ; 2003 ; Papers from the Institute of Archaeology Volume 14 ; 14 ; 2003 >
+    au < ready ; 2004 ; Papers from the Institute of Archaeology Volume 15 ; 15 ; 2004 >
+    au < testing ; 2005 ; Papers from the Institute of Archaeology Volume 16 ; 16 ; 2005 >
+    au < testing ; 2006 ; Papers from the Institute of Archaeology Volume 17 ; 17 ; 2006 >
+    au < testing ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 ; 2007 >
     au < released ; 2009 ; Papers from the Institute of Archaeology Volume 19 ; 19 ; 2009 >
     au < released ; 2010 ; Papers from the Institute of Archaeology Volume 20 ; 20 ; 2010 >
     au < released ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
     au < manifest ; 2012 ; Papers from the Institute of Archaeology Volume 22 ; 22 ; 2012 >
+    au < expected ; 2013 ; Papers from the Institute of Archaeology Volume 23 ; 23 ; 2013 >
     
   }
   
@@ -211,10 +212,11 @@
     param[base_url] = http://www.presentpasts.info/
     param[journal_id] = pp
 
-    au < manifest ; 2009 ; Present Pasts Volume 1 ; 1 ; 2009 >
-    au < manifest ; 2010 ; Present Pasts Volume 2 ; 2 ; 2010 >
+    au < testing ; 2009 ; Present Pasts Volume 1 ; 1 ; 2009 >
+    au < testing ; 2010 ; Present Pasts Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
-    au < manifest ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
+    au < testing ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
+    au < expected ; 2013 ; Present Pasts Volume 5 ; 5 ; 2013 >
     
   }
 
@@ -228,7 +230,7 @@
     param[base_url] = http://www.stabilityjournal.org/
     param[journal_id] = sta
 
-    au < manifest ; 2012 ; Stability: International Journal of Security & Development Volume 1 ; 1 ; 2012 >
+    au < testing ; 2012 ; Stability: International Journal of Security & Development Volume 1 ; 1 ; 2012 >
     au < manifest ; 2013 ; Stability: International Journal of Security & Development Volume 2 ; 2 ; 2013 >
     
   }
