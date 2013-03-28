@@ -19,44 +19,52 @@
 
     param[base_url] = http://ammin.geoscienceworld.org/
 
-	au < manifest ; exists ; 1976 ; American Mineralogist Volume 61 [abstracts only] ; 61 >
-	au < manifest ; exists ; 1977 ; American Mineralogist Volume 62 [abstracts only] ; 62 >
-	au < manifest ; exists ; 1978 ; American Mineralogist Volume 63 [abstracts only] ; 63 >
-	au < manifest ; exists ; 1979 ; American Mineralogist Volume 64 [abstracts only] ; 64 >
-	au < manifest ; exists ; 1980 ; American Mineralogist Volume 65 [abstracts only] ; 65 >
-	au < manifest ; exists ; 1981 ; American Mineralogist Volume 66 [abstracts only] ; 66 >
-	au < manifest ; exists ; 1982 ; American Mineralogist Volume 67 [abstracts only] ; 67 >
-	au < manifest ; exists ; 1983 ; American Mineralogist Volume 68 [abstracts only] ; 68 >
-	au < manifest ; exists ; 1984 ; American Mineralogist Volume 69 [abstracts only] ; 69 >
-	au < manifest ; exists ; 1985 ; American Mineralogist Volume 70 [abstracts only] ; 70 >
-	au < manifest ; exists ; 1986 ; American Mineralogist Volume 71 [abstracts only] ; 71 >
-	au < manifest ; exists ; 1987 ; American Mineralogist Volume 72 [abstracts only] ; 72 >
-	au < manifest ; exists ; 1988 ; American Mineralogist Volume 73 [abstracts only] ; 73 >
-	au < manifest ; exists ; 1989 ; American Mineralogist Volume 74 [abstracts only] ; 74 >
-	au < manifest ; exists ; 1990 ; American Mineralogist Volume 75 [abstracts only] ; 75 >
-	au < manifest ; exists ; 1991 ; American Mineralogist Volume 76 [abstracts only] ; 76 >
-	au < manifest ; exists ; 1992 ; American Mineralogist Volume 77 [abstracts only] ; 77 >
-	au < manifest ; exists ; 1993 ; American Mineralogist Volume 78 [abstracts only] ; 78 >
-	au < manifest ; exists ; 1994 ; American Mineralogist Volume 79 [abstracts only] ; 79 >
-	au < manifest ; exists ; 1995 ; American Mineralogist Volume 80 [abstracts only] ; 80 >
-	au < manifest ; exists ; 1996 ; American Mineralogist Volume 81 [abstracts only] ; 81 >
-	au < manifest ; exists ; 1997 ; American Mineralogist Volume 82 [abstracts only] ; 82 >
-	au < manifest ; exists ; 1998 ; American Mineralogist Volume 83 ; 83 >
-	au < manifest ; exists ; 1999 ; American Mineralogist Volume 84 ; 84 >
-	au < manifest ; exists ; 2000 ; American Mineralogist Volume 85 ; 85 >
-	au < manifest ; exists ; 2001 ; American Mineralogist Volume 86 ; 86 >
-	au < manifest ; exists ; 2002 ; American Mineralogist Volume 87 ; 87 >
-	au < manifest ; exists ; 2003 ; American Mineralogist Volume 88 ; 88 >
-	au < manifest ; exists ; 2004 ; American Mineralogist Volume 89 ; 89 >
-	au < manifest ; exists ; 2005 ; American Mineralogist Volume 90 ; 90 >
-	au < manifest ; exists ; 2006 ; American Mineralogist Volume 91 ; 91 >
-	au < manifest ; exists ; 2007 ; American Mineralogist Volume 92 ; 92 >
-	au < manifest ; exists ; 2008 ; American Mineralogist Volume 93 ; 93 >
-	au < manifest ; exists ; 2009 ; American Mineralogist Volume 94 ; 94 >
-	au < manifest ; exists ; 2010 ; American Mineralogist Volume 95 ; 95 >
-	au < manifest ; exists ; 2011 ; American Mineralogist Volume 96 ; 96 >
-	au < manifest ; exists ; 2012 ; American Mineralogist Volume 97 ; 97 >
-	au < manifest ; exists ; 2013 ; American Mineralogist Volume 98 ; 98 >
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < manifest ; exists ; 1976 ; American Mineralogist Volume 61 [abstracts only] ; 61 >
+      au < manifest ; exists ; 1977 ; American Mineralogist Volume 62 [abstracts only] ; 62 >
+      au < manifest ; exists ; 1978 ; American Mineralogist Volume 63 [abstracts only] ; 63 >
+      au < manifest ; exists ; 1979 ; American Mineralogist Volume 64 [abstracts only] ; 64 >
+      au < manifest ; exists ; 1980 ; American Mineralogist Volume 65 [abstracts only] ; 65 >
+      au < manifest ; exists ; 1981 ; American Mineralogist Volume 66 [abstracts only] ; 66 >
+      au < manifest ; exists ; 1982 ; American Mineralogist Volume 67 [abstracts only] ; 67 >
+      au < manifest ; exists ; 1983 ; American Mineralogist Volume 68 [abstracts only] ; 68 >
+      au < manifest ; exists ; 1984 ; American Mineralogist Volume 69 [abstracts only] ; 69 >
+      au < manifest ; exists ; 1985 ; American Mineralogist Volume 70 [abstracts only] ; 70 >
+      au < manifest ; exists ; 1986 ; American Mineralogist Volume 71 [abstracts only] ; 71 >
+      au < manifest ; exists ; 1987 ; American Mineralogist Volume 72 [abstracts only] ; 72 >
+      au < manifest ; exists ; 1988 ; American Mineralogist Volume 73 [abstracts only] ; 73 >
+      au < manifest ; exists ; 1989 ; American Mineralogist Volume 74 [abstracts only] ; 74 >
+      au < manifest ; exists ; 1990 ; American Mineralogist Volume 75 [abstracts only] ; 75 >
+      au < manifest ; exists ; 1991 ; American Mineralogist Volume 76 [abstracts only] ; 76 >
+      au < manifest ; exists ; 1992 ; American Mineralogist Volume 77 [abstracts only] ; 77 >
+      au < manifest ; exists ; 1993 ; American Mineralogist Volume 78 [abstracts only] ; 78 >
+      au < manifest ; exists ; 1994 ; American Mineralogist Volume 79 [abstracts only] ; 79 >
+      au < manifest ; exists ; 1995 ; American Mineralogist Volume 80 [abstracts only] ; 80 >
+      au < manifest ; exists ; 1996 ; American Mineralogist Volume 81 [abstracts only] ; 81 >
+      au < manifest ; exists ; 1997 ; American Mineralogist Volume 82 [abstracts only] ; 82 >
+    }
+    {
+      au < manifest ; exists ; 1998 ; American Mineralogist Volume 83 ; 83 >
+      au < manifest ; exists ; 1999 ; American Mineralogist Volume 84 ; 84 >
+      au < manifest ; exists ; 2000 ; American Mineralogist Volume 85 ; 85 >
+      au < manifest ; exists ; 2001 ; American Mineralogist Volume 86 ; 86 >
+      au < manifest ; exists ; 2002 ; American Mineralogist Volume 87 ; 87 >
+      au < manifest ; exists ; 2003 ; American Mineralogist Volume 88 ; 88 >
+      au < manifest ; exists ; 2004 ; American Mineralogist Volume 89 ; 89 >
+      au < manifest ; exists ; 2005 ; American Mineralogist Volume 90 ; 90 >
+      au < manifest ; exists ; 2006 ; American Mineralogist Volume 91 ; 91 >
+      au < manifest ; exists ; 2007 ; American Mineralogist Volume 92 ; 92 >
+      au < manifest ; exists ; 2008 ; American Mineralogist Volume 93 ; 93 >
+      au < manifest ; exists ; 2009 ; American Mineralogist Volume 94 ; 94 >
+      au < manifest ; exists ; 2010 ; American Mineralogist Volume 95 ; 95 >
+      au < manifest ; exists ; 2011 ; American Mineralogist Volume 96 ; 96 >
+      au < manifest ; exists ; 2012 ; American Mineralogist Volume 97 ; 97 >
+      au < manifest ; exists ; 2013 ; American Mineralogist Volume 98 ; 98 >
+
+    }
 
   }
   
