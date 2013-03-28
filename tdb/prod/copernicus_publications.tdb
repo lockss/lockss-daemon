@@ -20,38 +20,40 @@
       param[home_url] = http://www.advances-in-geosciences.net/
       comment[notReady] = low agreement, different issue #
 
-      au < ready ; 2003 ; 2003 ; Advances in Geosciences (ADGEO) Volume 1 ; 1 >
-      au < ready ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 2 ; 2 >
-      au < ready ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 3 ; 3 >
-      au < notReady ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 4 ; 4 >
-      au < ready ; 2005 ; 2005 ; Advances in Geosciences (ADGEO) Volume 5 ; 5 >
-      au < ready ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 6 ; 6 >
-      au < ready ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 7 ; 7 >
-      au < ready ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 8 ; 8 >
-      au < notReady ; 2006 ; 2006 ; Advances in Geosciences (ADGEO) Volume 9 ; 9 >
-      au < notReady ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 10 ; 10 >
-      au < notReady ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 11 ; 11 >
-      au < notReady ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 12 ; 12 >
-      au < ready ; 2007 ; 2007 ; Advances in Geosciences (ADGEO) Volume 13 ; 13 >
-      au < ready ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 14 ; 14 >
-      au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 15 ; 15 >
-      au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 16 ; 16 >
-      au < ready ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 17 ; 17 >
-      au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 18 ; 18 >
-      au < notReady ; 2008 ; 2008 ; Advances in Geosciences (ADGEO) Volume 19 ; 19 >
-      au < notReady ; 2009 ; 2009 ; Advances in Geosciences (ADGEO) Volume 20 ; 20 >
-      au < ready ; 2009 ; 2009 ; Advances in Geosciences (ADGEO) Volume 21 ; 21 >
-      au < ready ; 2009 ; 2009 ; Advances in Geosciences (ADGEO) Volume 22 ; 22 >
-      au < ready ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 23 ; 23 >
-      au < notReady ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 24 ; 24 >
-      au < ready ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 25 ; 25 >
-      au < ready ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 26 ; 26 >
-      au < ready ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 27 ; 27 >
-      au < ready ; 2010 ; 2010 ; Advances in Geosciences (ADGEO) Volume 28 ; 28 >
-      au < notReady ; 2011 ; 2011 ; Advances in Geosciences (ADGEO) Volume 29 ; 29 >
-      au < notReady ; 2011 ; 2011 ; Advances in Geosciences (ADGEO) Volume 30 ; 30 >
-      au < ready ; 2012 ; 2012 ; Advances in Geosciences (ADGEO) Volume 31 ; 31 >
-      au < manifest ; 2013 ; 2013 ; Advances in Geosciences (ADGEO) Volume 32 ; 32 >
+      au < ready ; 2003 ; 2003 ; Advances in Geosciences Volume 1 ; 1 >
+      au < ready ; 2005 ; 2005 ; Advances in Geosciences Volume 2 ; 2 >
+      au < ready ; 2005 ; 2005 ; Advances in Geosciences Volume 3 ; 3 >
+      au < notReady ; 2005 ; 2005 ; Advances in Geosciences Volume 4 ; 4 >
+      au < ready ; 2005 ; 2005 ; Advances in Geosciences Volume 5 ; 5 >
+      au < ready ; 2006 ; 2006 ; Advances in Geosciences Volume 6 ; 6 >
+      au < ready ; 2006 ; 2006 ; Advances in Geosciences Volume 7 ; 7 >
+      au < ready ; 2006 ; 2006 ; Advances in Geosciences Volume 8 ; 8 >
+      au < notReady ; 2006 ; 2006 ; Advances in Geosciences Volume 9 ; 9 >
+      au < notReady ; 2007 ; 2007 ; Advances in Geosciences Volume 10 ; 10 >
+      au < notReady ; 2007 ; 2007 ; Advances in Geosciences Volume 11 ; 11 >
+      au < notReady ; 2007 ; 2007 ; Advances in Geosciences Volume 12 ; 12 >
+      au < ready ; 2007 ; 2007 ; Advances in Geosciences Volume 13 ; 13 >
+      au < ready ; 2008 ; 2008 ; Advances in Geosciences Volume 14 ; 14 >
+      au < notReady ; 2008 ; 2008 ; Advances in Geosciences Volume 15 ; 15 >
+      au < notReady ; 2008 ; 2008 ; Advances in Geosciences Volume 16 ; 16 >
+      au < ready ; 2008 ; 2008 ; Advances in Geosciences Volume 17 ; 17 >
+      au < notReady ; 2008 ; 2008 ; Advances in Geosciences Volume 18 ; 18 >
+      au < notReady ; 2008 ; 2008 ; Advances in Geosciences Volume 19 ; 19 >
+      au < notReady ; 2009 ; 2009 ; Advances in Geosciences Volume 20 ; 20 >
+      au < ready ; 2009 ; 2009 ; Advances in Geosciences Volume 21 ; 21 >
+      au < ready ; 2009 ; 2009 ; Advances in Geosciences Volume 22 ; 22 >
+      au < ready ; 2010 ; 2010 ; Advances in Geosciences Volume 23 ; 23 >
+      au < notReady ; 2010 ; 2010 ; Advances in Geosciences Volume 24 ; 24 >
+      au < ready ; 2010 ; 2010 ; Advances in Geosciences Volume 25 ; 25 >
+      au < ready ; 2010 ; 2010 ; Advances in Geosciences Volume 26 ; 26 >
+      au < ready ; 2010 ; 2010 ; Advances in Geosciences Volume 27 ; 27 >
+      au < ready ; 2010 ; 2010 ; Advances in Geosciences Volume 28 ; 28 >
+      au < notReady ; 2011 ; 2011 ; Advances in Geosciences Volume 29 ; 29 >
+      au < notReady ; 2011 ; 2011 ; Advances in Geosciences Volume 30 ; 30 >
+      au < ready ; 2012 ; 2012 ; Advances in Geosciences Volume 31 ; 31 >
+      au < manifest ; 2012 ; 2012 ; Advances in Geosciences Volume 32 ; 32 >
+      au < expected ; 2013 ; 2013 ; Advances in Geosciences Volume 33 ; 33 >
+      au < expected ; 2013 ; 2013 ; Advances in Geosciences Volume 34 ; 34 >
     
    }
     
