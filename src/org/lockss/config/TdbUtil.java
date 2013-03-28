@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.18 2013-01-10 18:27:30 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.19 2013-03-28 15:05:21 easyonthemayo Exp $
  */
 
 /*
@@ -599,7 +599,7 @@ public class TdbUtil {
    * @param au
    * @return
    */
-  public static boolean isBook(TdbAu au) {
+  public static boolean isBook(BibliographicItem au) {
     return !StringUtil.isNullString(au.getIsbn());
   }
 
