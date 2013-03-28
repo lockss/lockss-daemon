@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.40 2013-01-16 21:34:24 pgust Exp $
+ * $Id: KbartConverter.java,v 1.40.4.1 2013-03-28 15:06:19 easyonthemayo Exp $
  */
 
 /*
@@ -781,7 +781,8 @@ public class KbartConverter {
     
     // Add publisher and title 
     baseKbt.setField(PUBLISHER_NAME, au.getPublisherName());
-    baseKbt.setField(PUBLICATION_TITLE, au.getJournalTitle());
+    baseKbt.setField(PUBLICATION_TITLE,
+        TdbUtil.isBook(au) ? au.getName() : au.getJournalTitle());
 
     // Now add information that can be retrieved from the AUs.
     // Add ISBN/EISBN (for books) or ISSN/EISSN (for periodicals)
