@@ -9,7 +9,7 @@
   plugin = needs.plugin
   param[base_url] = http://ascelibrary.org/
 
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; name ; param[year] >
 
   {
   
@@ -38,6 +38,20 @@
 
     param[journal_id] = ijgnai
 
+    au < exists ; exists ; 2001 ; International Journal of Geomechanics Volume 1 ; 2001 >
+    au < exists ; exists ; 2002 ; International Journal of Geomechanics Volume 2 ; 2002 >
+    au < exists ; exists ; 2003 ; International Journal of Geomechanics Volume 3 ; 2003 >
+    au < exists ; exists ; 2004 ; International Journal of Geomechanics Volume 4 ; 2004 >
+    au < exists ; exists ; 2005 ; International Journal of Geomechanics Volume 5 ; 2005 >
+    au < exists ; exists ; 2006 ; International Journal of Geomechanics Volume 6 ; 2006 >
+    au < exists ; exists ; 2007 ; International Journal of Geomechanics Volume 7 ; 2007 >
+    au < exists ; exists ; 2008 ; International Journal of Geomechanics Volume 8 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Geomechanics Volume 9 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Geomechanics Volume 10 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Geomechanics Volume 11 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Geomechanics Volume 12 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Geomechanics Volume 13 ; 2013 >
+
   }
 
   {
@@ -49,6 +63,26 @@
     >
 
     param[journal_id] = jaeied
+
+    au < exists ; exists ; 1995 ; Journal of Architectural Engineering Volume 1 ; 1995 >
+    au < exists ; exists ; 1996 ; Journal of Architectural Engineering Volume 2 ; 1996 >
+    au < exists ; exists ; 1997 ; Journal of Architectural Engineering Volume 3 ; 1997 >
+    au < exists ; exists ; 1998 ; Journal of Architectural Engineering Volume 4 ; 1998 >
+    au < exists ; exists ; 1999 ; Journal of Architectural Engineering Volume 5 ; 1999 >
+    au < exists ; exists ; 2000 ; Journal of Architectural Engineering Volume 6 ; 2000 >
+    au < exists ; exists ; 2001 ; Journal of Architectural Engineering Volume 7 ; 2001 >
+    au < exists ; exists ; 2002 ; Journal of Architectural Engineering Volume 8 ; 2002 >
+    au < exists ; exists ; 2003 ; Journal of Architectural Engineering Volume 9 ; 2003 >
+    au < exists ; exists ; 2004 ; Journal of Architectural Engineering Volume 10 ; 2004 >
+    au < exists ; exists ; 2005 ; Journal of Architectural Engineering Volume 11 ; 2005 >
+    au < exists ; exists ; 2006 ; Journal of Architectural Engineering Volume 12 ; 2006 >
+    au < exists ; exists ; 2007 ; Journal of Architectural Engineering Volume 13 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Architectural Engineering Volume 14 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Architectural Engineering Volume 15 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Architectural Engineering Volume 16 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Architectural Engineering Volume 17 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Architectural Engineering Volume 18 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Architectural Engineering Volume 19 ; 2013 >
 
   }
 
@@ -62,6 +96,33 @@
 
     param[journal_id] = jaeeez
 
+    au < exists ; exists ; 1988 ; Journal of Aerospace Engineering Volume 1 ; 1988 >
+    au < exists ; exists ; 1989 ; Journal of Aerospace Engineering Volume 2 ; 1989 >
+    au < exists ; exists ; 1990 ; Journal of Aerospace Engineering Volume 3 ; 1990 >
+    au < exists ; exists ; 1991 ; Journal of Aerospace Engineering Volume 4 ; 1991 >
+    au < exists ; exists ; 1992 ; Journal of Aerospace Engineering Volume 5 ; 1992 >
+    au < exists ; exists ; 1993 ; Journal of Aerospace Engineering Volume 6 ; 1993 >
+    au < exists ; exists ; 1994 ; Journal of Aerospace Engineering Volume 7 ; 1994 >
+    au < exists ; exists ; 1995 ; Journal of Aerospace Engineering Volume 8 ; 1995 >
+    au < exists ; exists ; 1996 ; Journal of Aerospace Engineering Volume 9 ; 1996 >
+    au < exists ; exists ; 1997 ; Journal of Aerospace Engineering Volume 10 ; 1997 >
+    au < exists ; exists ; 1998 ; Journal of Aerospace Engineering Volume 11 ; 1998 >
+    au < exists ; exists ; 1999 ; Journal of Aerospace Engineering Volume 12 ; 1999 >
+    au < exists ; exists ; 2000 ; Journal of Aerospace Engineering Volume 13 ; 2000 >
+    au < exists ; exists ; 2001 ; Journal of Aerospace Engineering Volume 14 ; 2001 >
+    au < exists ; exists ; 2002 ; Journal of Aerospace Engineering Volume 15 ; 2002 >
+    au < exists ; exists ; 2003 ; Journal of Aerospace Engineering Volume 16 ; 2003 >
+    au < exists ; exists ; 2004 ; Journal of Aerospace Engineering Volume 17 ; 2004 >
+    au < exists ; exists ; 2005 ; Journal of Aerospace Engineering Volume 18 ; 2005 >
+    au < exists ; exists ; 2006 ; Journal of Aerospace Engineering Volume 19 ; 2006 >
+    au < exists ; exists ; 2007 ; Journal of Aerospace Engineering Volume 20 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Aerospace Engineering Volume 21 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Aerospace Engineering Volume 22 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Aerospace Engineering Volume 23 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Aerospace Engineering Volume 24 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Aerospace Engineering Volume 25 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Aerospace Engineering Volume 26 ; 2013 >
+
   }
 
   {
@@ -73,6 +134,25 @@
     >
 
     param[journal_id] = jbenf2
+
+    au < exists ; exists ; 1996 ; Journal of Bridge Engineering Volume 1 ; 1996 >
+    au < exists ; exists ; 1997 ; Journal of Bridge Engineering Volume 2 ; 1997 >
+    au < exists ; exists ; 1998 ; Journal of Bridge Engineering Volume 3 ; 1998 >
+    au < exists ; exists ; 1999 ; Journal of Bridge Engineering Volume 4 ; 1999 >
+    au < exists ; exists ; 2000 ; Journal of Bridge Engineering Volume 5 ; 2000 >
+    au < exists ; exists ; 2001 ; Journal of Bridge Engineering Volume 6 ; 2001 >
+    au < exists ; exists ; 2002 ; Journal of Bridge Engineering Volume 7 ; 2002 >
+    au < exists ; exists ; 2003 ; Journal of Bridge Engineering Volume 8 ; 2003 >
+    au < exists ; exists ; 2004 ; Journal of Bridge Engineering Volume 9 ; 2004 >
+    au < exists ; exists ; 2005 ; Journal of Bridge Engineering Volume 10 ; 2005 >
+    au < exists ; exists ; 2006 ; Journal of Bridge Engineering Volume 11 ; 2006 >
+    au < exists ; exists ; 2007 ; Journal of Bridge Engineering Volume 12 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Bridge Engineering Volume 13 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Bridge Engineering Volume 14 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Bridge Engineering Volume 15 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Bridge Engineering Volume 16 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Bridge Engineering Volume 17 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Bridge Engineering Volume 18 ; 2013 >
 
   }
 
@@ -86,6 +166,24 @@
 
     param[journal_id] = jccof2
 
+    au < exists ; exists ; 1997 ; Journal of Composites for Construction Volume 1 ; 1997 >
+    au < exists ; exists ; 1998 ; Journal of Composites for Construction Volume 2 ; 1998 >
+    au < exists ; exists ; 1999 ; Journal of Composites for Construction Volume 3 ; 1999 >
+    au < exists ; exists ; 2000 ; Journal of Composites for Construction Volume 4 ; 2000 >
+    au < exists ; exists ; 2001 ; Journal of Composites for Construction Volume 5 ; 2001 >
+    au < exists ; exists ; 2002 ; Journal of Composites for Construction Volume 6 ; 2002 >
+    au < exists ; exists ; 2003 ; Journal of Composites for Construction Volume 7 ; 2003 >
+    au < exists ; exists ; 2004 ; Journal of Composites for Construction Volume 8 ; 2004 >
+    au < exists ; exists ; 2005 ; Journal of Composites for Construction Volume 9 ; 2005 >
+    au < exists ; exists ; 2006 ; Journal of Composites for Construction Volume 10 ; 2006 >
+    au < exists ; exists ; 2007 ; Journal of Composites for Construction Volume 11 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Composites for Construction Volume 12 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Composites for Construction Volume 13 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Composites for Construction Volume 14 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Composites for Construction Volume 15 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Composites for Construction Volume 16 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Composites for Construction Volume 17 ; 2013 >
+
   }
 
   {
@@ -98,6 +196,34 @@
 
     param[journal_id] = jpcfev
 
+    au < exists ; exists ; 1987 ; Journal of Performance of Constructed Facilities Volume 1 ; 1987 >
+    au < exists ; exists ; 1988 ; Journal of Performance of Constructed Facilities Volume 2 ; 1988 >
+    au < exists ; exists ; 1989 ; Journal of Performance of Constructed Facilities Volume 3 ; 1989 >
+    au < exists ; exists ; 1990 ; Journal of Performance of Constructed Facilities Volume 4 ; 1990 >
+    au < exists ; exists ; 1991 ; Journal of Performance of Constructed Facilities Volume 5 ; 1991 >
+    au < exists ; exists ; 1992 ; Journal of Performance of Constructed Facilities Volume 6 ; 1992 >
+    au < exists ; exists ; 1993 ; Journal of Performance of Constructed Facilities Volume 7 ; 1993 >
+    au < exists ; exists ; 1994 ; Journal of Performance of Constructed Facilities Volume 8 ; 1994 >
+    au < exists ; exists ; 1995 ; Journal of Performance of Constructed Facilities Volume 9 ; 1995 >
+    au < exists ; exists ; 1996 ; Journal of Performance of Constructed Facilities Volume 10 ; 1996 >
+    au < exists ; exists ; 1997 ; Journal of Performance of Constructed Facilities Volume 11 ; 1997 >
+    au < exists ; exists ; 1998 ; Journal of Performance of Constructed Facilities Volume 12 ; 1998 >
+    au < exists ; exists ; 1999 ; Journal of Performance of Constructed Facilities Volume 13 ; 1999 >
+    au < exists ; exists ; 2000 ; Journal of Performance of Constructed Facilities Volume 14 ; 2000 >
+    au < exists ; exists ; 2001 ; Journal of Performance of Constructed Facilities Volume 15 ; 2001 >
+    au < exists ; exists ; 2002 ; Journal of Performance of Constructed Facilities Volume 16 ; 2002 >
+    au < exists ; exists ; 2003 ; Journal of Performance of Constructed Facilities Volume 17 ; 2003 >
+    au < exists ; exists ; 2004 ; Journal of Performance of Constructed Facilities Volume 18 ; 2004 >
+    au < exists ; exists ; 2005 ; Journal of Performance of Constructed Facilities Volume 19 ; 2005 >
+    au < exists ; exists ; 2006 ; Journal of Performance of Constructed Facilities Volume 20 ; 2006 >
+    au < exists ; exists ; 2007 ; Journal of Performance of Constructed Facilities Volume 21 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Performance of Constructed Facilities Volume 22 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Performance of Constructed Facilities Volume 23 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Performance of Constructed Facilities Volume 24 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Performance of Constructed Facilities Volume 25 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Performance of Constructed Facilities Volume 26 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Performance of Constructed Facilities Volume 27 ; 2013 >
+
   }
 
   {
@@ -109,6 +235,38 @@
     >
 
     param[journal_id] = jcemd4
+
+    au < exists ; exists ; 1983 ; Journal of Construction Engineering & Management Volume 109 ; 1983 >
+    au < exists ; exists ; 1984 ; Journal of Construction Engineering & Management Volume 110 ; 1984 >
+    au < exists ; exists ; 1985 ; Journal of Construction Engineering & Management Volume 111 ; 1985 >
+    au < exists ; exists ; 1986 ; Journal of Construction Engineering & Management Volume 112 ; 1986 >
+    au < exists ; exists ; 1987 ; Journal of Construction Engineering & Management Volume 113 ; 1987 >
+    au < exists ; exists ; 1988 ; Journal of Construction Engineering & Management Volume 114 ; 1988 >
+    au < exists ; exists ; 1989 ; Journal of Construction Engineering & Management Volume 115 ; 1989 >
+    au < exists ; exists ; 1990 ; Journal of Construction Engineering & Management Volume 116 ; 1990 >
+    au < exists ; exists ; 1991 ; Journal of Construction Engineering & Management Volume 117 ; 1991 >
+    au < exists ; exists ; 1992 ; Journal of Construction Engineering & Management Volume 118 ; 1992 >
+    au < exists ; exists ; 1993 ; Journal of Construction Engineering & Management Volume 119 ; 1993 >
+    au < exists ; exists ; 1994 ; Journal of Construction Engineering & Management Volume 120 ; 1994 >
+    au < exists ; exists ; 1995 ; Journal of Construction Engineering & Management Volume 121 ; 1995 >
+    au < exists ; exists ; 1996 ; Journal of Construction Engineering & Management Volume 122 ; 1996 >
+    au < exists ; exists ; 1997 ; Journal of Construction Engineering & Management Volume 123 ; 1997 >
+    au < exists ; exists ; 1998 ; Journal of Construction Engineering & Management Volume 124 ; 1998 >
+    au < exists ; exists ; 1999 ; Journal of Construction Engineering & Management Volume 125 ; 1999 >
+    au < exists ; exists ; 2000 ; Journal of Construction Engineering & Management Volume 126 ; 2000 >
+    au < exists ; exists ; 2001 ; Journal of Construction Engineering & Management Volume 127 ; 2001 >
+    au < exists ; exists ; 2002 ; Journal of Construction Engineering & Management Volume 128 ; 2002 >
+    au < exists ; exists ; 2003 ; Journal of Construction Engineering & Management Volume 129 ; 2003 >
+    au < exists ; exists ; 2004 ; Journal of Construction Engineering & Management Volume 130 ; 2004 >
+    au < exists ; exists ; 2005 ; Journal of Construction Engineering & Management Volume 131 ; 2005 >
+    au < exists ; exists ; 2006 ; Journal of Construction Engineering & Management Volume 132 ; 2006 >
+    au < exists ; exists ; 2007 ; Journal of Construction Engineering & Management Volume 133 ; 2007 >
+    au < exists ; exists ; 2008 ; Journal of Construction Engineering & Management Volume 134 ; 2008 >
+    au < exists ; exists ; 2009 ; Journal of Construction Engineering & Management Volume 135 ; 2009 >
+    au < exists ; exists ; 2010 ; Journal of Construction Engineering & Management Volume 136 ; 2010 >
+    au < exists ; exists ; 2011 ; Journal of Construction Engineering & Management Volume 137 ; 2011 >
+    au < exists ; exists ; 2012 ; Journal of Construction Engineering & Management Volume 138 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Construction Engineering & Management Volume 139 ; 2013 >
 
   }
 
