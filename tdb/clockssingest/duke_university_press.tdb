@@ -1872,7 +1872,7 @@
       param[base_url] = http://socialtext.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; 	e 18 ; 18 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Social Text Volume 18 ; 18 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Social Text Volume 19 ; 19 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Social Text Volume 20 ; 20 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Social Text Volume 21 ; 21 >
