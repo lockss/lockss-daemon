@@ -27,13 +27,13 @@
       au < exists ; 1943-1944 ; College & Research Libraries Volume 5 ; 5 >
       au < exists ; 1944-1945 ; College & Research Libraries Volume 6 ; 6 >
       au < exists ; 1946 ; College & Research Libraries Volume 7 ; 7 >
-      au < exists ; 1947 ; College & Research Libraries Volume 8 ; 8 >
-      au < exists ; 1948 ; College & Research Libraries Volume 9 ; 9 >
-      au < exists ; 1949 ; College & Research Libraries Volume 10 ; 10 >
-      au < exists ; 1950 ; College & Research Libraries Volume 11 ; 11 >
-      au < exists ; 1951 ; College & Research Libraries Volume 12 ; 12 >
-      au < exists ; 1952 ; College & Research Libraries Volume 13 ; 13 >
-      au < exists ; 1953 ; College & Research Libraries Volume 14 ; 14 >
+      au < testing ; 1947 ; College & Research Libraries Volume 8 ; 8 >
+      au < testing ; 1948 ; College & Research Libraries Volume 9 ; 9 >
+      au < testing ; 1949 ; College & Research Libraries Volume 10 ; 10 >
+      au < testing ; 1950 ; College & Research Libraries Volume 11 ; 11 >
+      au < testing ; 1951 ; College & Research Libraries Volume 12 ; 12 >
+      au < testing ; 1952 ; College & Research Libraries Volume 13 ; 13 >
+      au < testing ; 1953 ; College & Research Libraries Volume 14 ; 14 >
 
     }
 
@@ -53,15 +53,15 @@
       param[base_url] = http://crln.acrl.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 2004 ; College & Research Libraries News Volume 65 ; 65 >
-      au < testing ; 2005 ; College & Research Libraries News Volume 66 ; 66 >
-      au < testing ; 2006 ; College & Research Libraries News Volume 67 ; 67 >
-      au < testing ; 2007 ; College & Research Libraries News Volume 68 ; 68 >
-      au < testing ; 2008 ; College & Research Libraries News Volume 69 ; 69 >
-      au < testing ; 2009 ; College & Research Libraries News Volume 70 ; 70 >
-      au < testing ; 2010 ; College & Research Libraries News Volume 71 ; 71 >
-      au < testing ; 2011 ; College & Research Libraries News Volume 72 ; 72 >
-      au < testing ; 2012 ; College & Research Libraries News Volume 73 ; 73 >
+      au < ready ; 2004 ; College & Research Libraries News Volume 65 ; 65 >
+      au < ready ; 2005 ; College & Research Libraries News Volume 66 ; 66 >
+      au < ready ; 2006 ; College & Research Libraries News Volume 67 ; 67 >
+      au < ready ; 2007 ; College & Research Libraries News Volume 68 ; 68 >
+      au < ready ; 2008 ; College & Research Libraries News Volume 69 ; 69 >
+      au < ready ; 2009 ; College & Research Libraries News Volume 70 ; 70 >
+      au < ready ; 2010 ; College & Research Libraries News Volume 71 ; 71 >
+      au < ready ; 2011 ; College & Research Libraries News Volume 72 ; 72 >
+      au < ready ; 2012 ; College & Research Libraries News Volume 73 ; 73 >
       au < manifest ; 2013 ; College & Research Libraries News Volume 74 ; 74 >
 
     }
