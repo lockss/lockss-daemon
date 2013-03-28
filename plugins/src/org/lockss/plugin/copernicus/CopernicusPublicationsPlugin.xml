@@ -121,7 +121,7 @@
         </list>
       </entry>
       <entry>
-        <string>fulltext; *</string>
+        <string>*</string> <!-- default to fulltext -->
         <list>
 <!--  so far these are always <base_url>/<vol>/<startpage>/<year>/zz-vol-pg-year.pdf -->
 <!--  but it is better to be defensive and just ensure depth -->
