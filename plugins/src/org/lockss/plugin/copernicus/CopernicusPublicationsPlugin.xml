@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -110,12 +110,26 @@
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
-    <list>
+    <map>
+      <entry>
+        <string>abstracts</string>
+        <list>
+<!--  so far these are always <base_url>/<vol>/<startpage>/<year>/zz-vol-pg-year.html -->
+<!--  but it is better to be defensive and just ensure depth -->
+<!--  only pdf is full text. html is just abstract -->
+          <string>"^%s%s/[^/]+/[^/]+/[^/]+\.html$", base_url, volume_name</string>
+        </list>
+      </entry>
+      <entry>
+        <string>fulltext; *</string>
+        <list>
 <!--  so far these are always <base_url>/<vol>/<startpage>/<year>/zz-vol-pg-year.pdf -->
 <!--  but it is better to be defensive and just ensure depth -->
 <!--  only pdf is full text. html is just abstract -->
-      	<string>"^%s%s/[^/]+/[^/]+/[^/]+\.pdf$", base_url, volume_name</string>
-    </list>
+      	  <string>"^%s%s/[^/]+/[^/]+/[^/]+\.pdf$", base_url, volume_name</string>
+        </list>
+      </entry>
+    </map>
   </entry>
   <entry>
      <string>text/html_filter_factory</string>
