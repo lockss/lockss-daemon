@@ -4,8 +4,6 @@
     name = University of Hawai'i Press
   >
   
-  comment[notReady] = AUs where the manifest page was posted before the content. Click on link to content in manifest page to check.
-
   {
     title <
       name = Archives of Asian Art ;
@@ -25,7 +23,7 @@
       au < released ; 2009 ; Archives of Asian Art Volume 59 ; 59 >
       au < released ; 2010 ; Archives of Asian Art Volume 60 ; 60 >
       au < released ; 2011 ; Archives of Asian Art Volume 61 ; 61 >
-      au < notReady ; 2012 ; Archives of Asian Art Volume 62 ; 62 >
+      au < testing ; 2012 ; Archives of Asian Art Volume 62 ; 62 >
       au < expected ; 2013 ; Archives of Asian Art Volume 63 ; 63 >
       
     }
@@ -339,8 +337,6 @@
       param[journal_dir] = journal_of_world_history
       attr[journal_id] = jwh
       
-      comment[notReady] = Manifest page exists but content is not yet online as of June 2012.
-
       au < released ; 1996 ; Journal of World History Volume 7 ; 7 >
       au < released ; 1997 ; Journal of World History Volume 8 ; 8 >
       au < released ; 1998 ; Journal of World History Volume 9 ; 9 >
@@ -357,7 +353,7 @@
       au < released ; 2009 ; Journal of World History Volume 20 ; 20 >
       au < released ; 2010 ; Journal of World History Volume 21 ; 21 >
       au < released ; 2011 ; Journal of World History Volume 22 ; 22 >
-      au < notReady ; 2012 ; Journal of World History Volume 23 ; 23 >
+      au < testing ; 2012 ; Journal of World History Volume 23 ; 23 >
       au < expected ; 2013 ; Journal of World History Volume 24 ; 24 >
 
     }
@@ -469,7 +465,7 @@ comment[mn20] = URL with 403 Forbidden error
       au < released ; 2005 ; Manoa Volume 17 ; 17 >
       au < released ; 2006 ; Manoa Volume 18 ; 18 >
       au < released ; 2007 ; Manoa Volume 19 ; 19 >
-      au < notReady ; 2008 ; Manoa Volume 20 ; 20 >
+      au < testing ; 2008 ; Manoa Volume 20 ; 20 >
       au < released ; 2009 ; Manoa Volume 21 ; 21 >
       au < released ; 2010 ; Manoa Volume 22 ; 22 >
       au < released ; 2011 ; Manoa Volume 23 ; 23 >
@@ -536,7 +532,7 @@ comment[mn20] = URL with 403 Forbidden error
       au < ready ; 2009 ; Pacific Science Volume 63 ; 63 >
       au < ready ; 2010 ; Pacific Science Volume 64 ; 64 >
       au < ready ; 2011 ; Pacific Science Volume 65 ; 65 >
-      au < manifest ; 2012 ; Pacific Science Volume 66 ; 66 >
+      au < testing ; 2012 ; Pacific Science Volume 66 ; 66 >
       au < expected ; 2013 ; Pacific Science Volume 67 ; 67 >
 
     }
