@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.2 2013-03-27 18:02:25 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.3 2013-03-29 18:50:02 alexandraohlson Exp $
  */
 
 /*
@@ -70,6 +70,7 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
   private static String PluginIdentifier;
   private static String keyword;
   private static String PluginName;
+  private static Boolean override = false; 
   
   //Variant to test with GLN version of plugin
   public static class TestGLNPlugin extends TestTaylorAndFrancisArchivalUnit {
@@ -85,6 +86,7 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
   
   //Variant to test with the CLOCKSS version of plugin
   public static class TestCLOCKSSPlugin extends TestTaylorAndFrancisArchivalUnit {
+    
     public void setUp() throws Exception {
       super.setUp();
       PluginIdentifier="org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin";   
@@ -94,12 +96,27 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
     
   }
 
+  //Variant to test with the CLOCKSS override version of plugin
+  public static class TestOverrideCLOCKSSPlugin extends TestTaylorAndFrancisArchivalUnit {
+    
+    public void setUp() throws Exception {
+      override = true; // must come before super setup();
+      super.setUp();
+      PluginIdentifier="org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin";   
+      keyword="clockss";
+      PluginName = "Taylor & Francis Plugin (CLOCKSS)";
+   }
+  }
+  
   public void setUp() throws Exception {
     super.setUp();
     setUpDiskSpace();
-
     theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
+    if (override) {
+      // If we're doing the variant for clockss-ovverride, set this mode
+      theDaemon.setTestingMode("clockss");
+    }
   }
 
   public void tearDown() throws Exception {
@@ -116,11 +133,17 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
       props.setProperty(BASE_URL_KEY, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
+    
     DefinablePlugin ap = new DefinablePlugin();
     ap.initPlugin(getMockLockssDaemon(),
         PluginIdentifier);
     DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
     return au;
+  }
+  
+  public void testConfig() throws Exception {
+ /* let's see if we can figure out what configuration stuff is happening */
+    
   }
 
   public void testConstructNullUrl() throws Exception {
@@ -214,30 +237,28 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
     assertEquals(PluginName + ", Base URL http://www.bmj.com/, Journal ID uytj20, Volume 24", au1.getName());
   }
 
-  /**
-   * Real tests in TestHighwireArchivalUnit
-   */
-  /*
-   * class Foo {
- void testFoo() {
-   RateLimiterInfo rli au.getRateLimiterInfo();
-   CrawlRateLimiter crl = CrawlRateLimiter.Util.forRli(rli);
-
-   // Repeat as necessary, with different date/times:
-   TimeBase.setSimulated("1970/1/1 13:00:00");
-   assertEquals("3/300", crl.getRateLimiterFor("foo.pdf", null).getRate());
- }
-}
-   */
   public void testCrawlRateWindow() throws Exception {
  
     String slowrate = "1/6s";
     String fastrate = "1/2s";
-    
+  
     DefinableArchivalUnit au =
         makeAu(new URL("http://www.tandfonline.com/"), 39, "rabr20");
- 
+    
     RateLimiterInfo rli = au.getRateLimiterInfo();
+    
+    if (override) {
+      //au_def_pause_time is 100, which will translate to an implied numerator of "1" in RateLimiterInfo
+      slowrate = fastrate = "1/100";
+      String defaultMinimum = "1/6000";
+      //assertEquals(slowrate, rli.getDefaultRate());
+      
+      //Until otherwise changed, the lowest an au_def_pause_time will allow is 1/6000....
+      assertEquals(defaultMinimum, rli.getDefaultRate());
+      return;
+    }
+ 
+    // In the non-override case, we will need to check against crawl window rates...
     CrawlRateLimiter crl = CrawlRateLimiter.Util.forRli(rli);
     
     //Using different dates/times check the rate used
@@ -274,7 +295,8 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
 public static Test suite() {
   return variantSuites(new Class[] {
       TestGLNPlugin.class,
-      TestCLOCKSSPlugin.class
+      TestCLOCKSSPlugin.class,
+      TestOverrideCLOCKSSPlugin.class
     });
 }
 
