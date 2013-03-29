@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.18 2013-01-16 21:37:14 pgust Exp $
+ * $Id: MetadataUtil.java,v 1.19 2013-03-29 11:55:58 easyonthemayo Exp $
  */
 
 /*
@@ -125,7 +125,7 @@ public class MetadataUtil {
       return false;
     }
     
-    // matches form of an ISSN if not doing stricvalidateIssnt checking
+    // matches form of an ISSN if not doing strict checking
     if (!strict) {
       return true;
     }
@@ -167,7 +167,7 @@ public class MetadataUtil {
   
   /**
    * Return formatted form of ISSN with hyphens. This method
-   * does not check for the vaildity of the input ISSN.
+   * does not check for the validity of the input ISSN.
    * 
    * @param isbn an ISBN
    * @return a formatted ISBN
@@ -181,7 +181,18 @@ public class MetadataUtil {
     }
     
     return issn;
-  }  
+  }
+
+  /**
+   * Return formatted and validated ISSN. or null if it is invalid. That is,
+   * if the ISSN is valid, return it formatted with hyphens, otherwise return
+   * null.
+   * @param issn
+   * @return
+   */
+  public static String normaliseIssn(String issn) {
+    return formatIssn(validateIssn(issn));
+  }
 
   /**
    * Check that ISBN is valid. If it is, return the ISBN, otherwise return
@@ -360,7 +371,7 @@ public class MetadataUtil {
   
   /**
    * Return formatted form if ISBN with hyphens. This method
-   * does not check for the vaildity of the input ISBN.
+   * does not check for the validity of the input ISBN.
    * 
    * @param isbn an ISBN
    * @return a formatted ISBN
@@ -385,7 +396,19 @@ public class MetadataUtil {
 
     return isbn;
   }
-  
+
+
+  /**
+   * Return formatted and validated ISBN. or null if it is invalid. That is,
+   * if the ISBN is valid, return it formatted with hyphens, otherwise return
+   * null.
+   * @param isbn
+   * @return
+   */
+  public static String normaliseIsbn(String isbn) {
+    return formatIsbn(validateIsbn(isbn));
+  }
+
   private static Pattern DOI_PAT = Pattern.compile("10\\.\\d{4}/.*");
 
   /**

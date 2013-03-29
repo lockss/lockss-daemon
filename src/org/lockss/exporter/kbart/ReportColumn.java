@@ -1,5 +1,5 @@
 /*
- * $Id: ReportColumn.java,v 1.1 2013-02-15 16:43:31 easyonthemayo Exp $
+ * $Id: ReportColumn.java,v 1.2 2013-03-29 11:55:58 easyonthemayo Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.exporter.kbart;
 
+import org.lockss.util.MetadataUtil;
 import org.lockss.util.StringUtil;
 
 import java.util.ArrayList;
@@ -215,7 +216,7 @@ public class ReportColumn {
    * @return the value of a field in the title, or the value of a constant column
    */
   public String getValue(KbartTitle title) {
-    if (isField()) return  title.getField(field);
+    if (isField()) return getNormalisedFieldValue(title, field);
     else if (isConstant()) return constantFieldValue;
     else if (isRanking()) return getRankingValue(title);
     else return "UNKNOWN";
@@ -227,11 +228,33 @@ public class ReportColumn {
    */
   private String getRankingValue(KbartTitle title) {
     for (KbartTitle.Field f : fieldRanking) {
-      String v = title.getField(f);
+      //String v = title.getField(f);
+      String v = getNormalisedFieldValue(title, f);
       if (!v.isEmpty()) return v;
     }
     return defaultFieldValue;
   }
+
+  /**
+   * Get an appropriately normalised value from a field. Currently this just
+   * normalises values from ISSN and ISBN fields; otherwise it returns the
+   * original value. Invalid ISSN/ISBN will still get turned into null values.
+   * @param title
+   * @param f
+   * @return
+   */
+  private String getNormalisedFieldValue(KbartTitle title, KbartTitle.Field f) {
+    String v = title.getField(f);
+    // Format and validate based on what we /expect/ the field to be.
+    // If the field is an identifier, try to normalise it.
+    if (f == KbartTitle.Field.PRINT_IDENTIFIER ||
+        f == KbartTitle.Field.ONLINE_IDENTIFIER) {
+      if (MetadataUtil.isIssn(v)) return MetadataUtil.normaliseIssn(v);
+      if (MetadataUtil.isIsbn(v)) return MetadataUtil.normaliseIsbn(v);
+    }
+    return v;
+  }
+
 
   /**
    * Generate a list of ReportColumns from a list of Fields.
