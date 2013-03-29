@@ -20,45 +20,52 @@
     
     param[base_url] =  	http://claymin.geoscienceworld.org/ 
 
-    au < manifest ; exists ; 1975 ; Clay Minerals Volume 10 [abstracts only] ; 10 >
-    au < manifest ; exists ; 1976 ; Clay Minerals Volume 11 [abstracts only] ; 11 >
-    au < manifest ; exists ; 1977 ; Clay Minerals Volume 12 [abstracts only] ; 12 >
-    au < manifest ; exists ; 1978 ; Clay Minerals Volume 13 [abstracts only] ; 13 >
-    au < manifest ; exists ; 1979 ; Clay Minerals Volume 14 [abstracts only] ; 14 >
-    au < manifest ; exists ; 1980 ; Clay Minerals Volume 15 [abstracts only] ; 15 >
-    au < manifest ; exists ; 1981 ; Clay Minerals Volume 16 [abstracts only] ; 16 >
-    au < manifest ; exists ; 1982 ; Clay Minerals Volume 17 [abstracts only] ; 17 >
-    au < manifest ; exists ; 1983 ; Clay Minerals Volume 18 [abstracts only] ; 18 >
-    au < manifest ; exists ; 1984 ; Clay Minerals Volume 19 [abstracts only] ; 19 >
-    au < manifest ; exists ; 1985 ; Clay Minerals Volume 20 [abstracts only] ; 20 >
-    au < manifest ; exists ; 1986 ; Clay Minerals Volume 21 [abstracts only] ; 21 >
-    au < manifest ; exists ; 1987 ; Clay Minerals Volume 22 [abstracts only] ; 22 >
-    au < manifest ; exists ; 1988 ; Clay Minerals Volume 23 [abstracts only] ; 23 >
-    au < manifest ; exists ; 1989 ; Clay Minerals Volume 24 [abstracts only] ; 24 >
-    au < manifest ; exists ; 1990 ; Clay Minerals Volume 25 [abstracts only] ; 25 >
-    au < manifest ; exists ; 1991 ; Clay Minerals Volume 26 [abstracts only] ; 26 >
-    au < manifest ; exists ; 1992 ; Clay Minerals Volume 27 [abstracts only] ; 27 >
-    au < manifest ; exists ; 1993 ; Clay Minerals Volume 28 [abstracts only] ; 28 >
-    au < manifest ; exists ; 1994 ; Clay Minerals Volume 29 [abstracts only] ; 29 >
-    au < manifest ; exists ; 1995 ; Clay Minerals Volume 30 [abstracts only] ; 30 >
-    au < manifest ; exists ; 1996 ; Clay Minerals Volume 31 ; 31 >
-    au < manifest ; exists ; 1997 ; Clay Minerals Volume 32 ; 32 >
-    au < manifest ; exists ; 1998 ; Clay Minerals Volume 33 ; 33 >
-    au < manifest ; exists ; 1999 ; Clay Minerals Volume 34 ; 34 >
-    au < manifest ; exists ; 2000 ; Clay Minerals Volume 35 ; 35 >
-    au < manifest ; exists ; 2001 ; Clay Minerals Volume 36 ; 36 >
-    au < manifest ; exists ; 2002 ; Clay Minerals Volume 37 ; 37 >
-    au < manifest ; exists ; 2003 ; Clay Minerals Volume 38 ; 38 >
-    au < manifest ; exists ; 2004 ; Clay Minerals Volume 39 ; 39 >
-    au < manifest ; exists ; 2005 ; Clay Minerals Volume 40 ; 40 >
-    au < manifest ; exists ; 2006 ; Clay Minerals Volume 41 ; 41 >
-    au < manifest ; exists ; 2007 ; Clay Minerals Volume 42 ; 42 >
-    au < manifest ; exists ; 2008 ; Clay Minerals Volume 43 ; 43 >
-    au < manifest ; exists ; 2009 ; Clay Minerals Volume 44 ; 44 >
-    au < crawling ; exists ; 2010 ; Clay Minerals Volume 45 ; 45 >
-    au < released ; manifest ; 2011 ; Clay Minerals Volume 46 ; 46 >
-    au < released ; manifest ; 2012 ; Clay Minerals Volume 47 ; 47 >
-    au < expected ; exists ; 2013 ; Clay Minerals Volume 48 ; 48 >
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < manifest ; exists ; 1975 ; Clay Minerals Volume 10 [abstracts only] ; 10 >
+      au < manifest ; exists ; 1976 ; Clay Minerals Volume 11 [abstracts only] ; 11 >
+      au < manifest ; exists ; 1977 ; Clay Minerals Volume 12 [abstracts only] ; 12 >
+      au < manifest ; exists ; 1978 ; Clay Minerals Volume 13 [abstracts only] ; 13 >
+      au < manifest ; exists ; 1979 ; Clay Minerals Volume 14 [abstracts only] ; 14 >
+      au < manifest ; exists ; 1980 ; Clay Minerals Volume 15 [abstracts only] ; 15 >
+      au < manifest ; exists ; 1981 ; Clay Minerals Volume 16 [abstracts only] ; 16 >
+      au < manifest ; exists ; 1982 ; Clay Minerals Volume 17 [abstracts only] ; 17 >
+      au < manifest ; exists ; 1983 ; Clay Minerals Volume 18 [abstracts only] ; 18 >
+      au < manifest ; exists ; 1984 ; Clay Minerals Volume 19 [abstracts only] ; 19 >
+      au < manifest ; exists ; 1985 ; Clay Minerals Volume 20 [abstracts only] ; 20 >
+      au < manifest ; exists ; 1986 ; Clay Minerals Volume 21 [abstracts only] ; 21 >
+      au < manifest ; exists ; 1987 ; Clay Minerals Volume 22 [abstracts only] ; 22 >
+      au < manifest ; exists ; 1988 ; Clay Minerals Volume 23 [abstracts only] ; 23 >
+      au < manifest ; exists ; 1989 ; Clay Minerals Volume 24 [abstracts only] ; 24 >
+      au < manifest ; exists ; 1990 ; Clay Minerals Volume 25 [abstracts only] ; 25 >
+      au < manifest ; exists ; 1991 ; Clay Minerals Volume 26 [abstracts only] ; 26 >
+      au < manifest ; exists ; 1992 ; Clay Minerals Volume 27 [abstracts only] ; 27 >
+      au < manifest ; exists ; 1993 ; Clay Minerals Volume 28 [abstracts only] ; 28 >
+      au < manifest ; exists ; 1994 ; Clay Minerals Volume 29 [abstracts only] ; 29 >
+      au < manifest ; exists ; 1995 ; Clay Minerals Volume 30 [abstracts only] ; 30 >
+    }
+    {
+      au < manifest ; exists ; 1996 ; Clay Minerals Volume 31 ; 31 >
+      au < manifest ; exists ; 1997 ; Clay Minerals Volume 32 ; 32 >
+      au < manifest ; exists ; 1998 ; Clay Minerals Volume 33 ; 33 >
+      au < manifest ; exists ; 1999 ; Clay Minerals Volume 34 ; 34 >
+      au < manifest ; exists ; 2000 ; Clay Minerals Volume 35 ; 35 >
+      au < manifest ; exists ; 2001 ; Clay Minerals Volume 36 ; 36 >
+      au < manifest ; exists ; 2002 ; Clay Minerals Volume 37 ; 37 >
+      au < manifest ; exists ; 2003 ; Clay Minerals Volume 38 ; 38 >
+      au < manifest ; exists ; 2004 ; Clay Minerals Volume 39 ; 39 >
+      au < manifest ; exists ; 2005 ; Clay Minerals Volume 40 ; 40 >
+      au < manifest ; exists ; 2006 ; Clay Minerals Volume 41 ; 41 >
+      au < manifest ; exists ; 2007 ; Clay Minerals Volume 42 ; 42 >
+      au < manifest ; exists ; 2008 ; Clay Minerals Volume 43 ; 43 >
+      au < manifest ; exists ; 2009 ; Clay Minerals Volume 44 ; 44 >
+      au < crawling ; exists ; 2010 ; Clay Minerals Volume 45 ; 45 >
+      au < released ; manifest ; 2011 ; Clay Minerals Volume 46 ; 46 >
+      au < released ; manifest ; 2012 ; Clay Minerals Volume 47 ; 47 >
+      au < expected ; exists ; 2013 ; Clay Minerals Volume 48 ; 48 >
+    }
    
   }
 
