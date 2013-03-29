@@ -101,7 +101,9 @@
 
     param[base_url] = http://rimg.geoscienceworld.org/ 
    	comment[continued_by] = [1529-6466]
-      
+
+    attr[au_coverage_depth] = abstracts
+
     au < manifest ; exists ; 1980 ; Reviews in Mineralogy Volume 5 [abstracts only] ; 5 >
     au < doesNotExist ; doesNotExist ; 0 ; Reviews in Mineralogy Volume 6 [abstracts only] ; 6 >
     au < manifest ; exists ; 1980 ; Reviews in Mineralogy Volume 7 [abstracts only] ; 7 >
