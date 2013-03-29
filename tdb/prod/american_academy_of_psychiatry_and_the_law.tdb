@@ -41,11 +41,16 @@
       au < released ; 1994 ; Journal of the American Academy of Psychiatry and the Law Online Volume 22 ; 22 >
       au < released ; 1995 ; Journal of the American Academy of Psychiatry and the Law Online Volume 23 ; 23 >
       au < released ; 1996 ; Journal of the American Academy of Psychiatry and the Law Online Volume 24 ; 24 >
-      au < released ; 1997 ; Journal of the American Academy of Psychiatry and the Law Online Volume 25 [abstracts only] ; 25 >
-      au < released ; 1998 ; Journal of the American Academy of Psychiatry and the Law Online Volume 26 [abstracts only] ; 26 >
-      au < released ; 1999 ; Journal of the American Academy of Psychiatry and the Law Online Volume 27 [abstracts only] ; 27 >
-      au < released ; 2000 ; Journal of the American Academy of Psychiatry and the Law Online Volume 28 [abstracts only] ; 28 >
-      au < released ; 2001 ; Journal of the American Academy of Psychiatry and the Law Online Volume 29 [abstracts only] ; 29 >
+      {
+
+        attr[au_coverage_depth] = abstracts
+
+        au < released ; 1997 ; Journal of the American Academy of Psychiatry and the Law Online Volume 25 [abstracts only] ; 25 >
+        au < released ; 1998 ; Journal of the American Academy of Psychiatry and the Law Online Volume 26 [abstracts only] ; 26 >
+        au < released ; 1999 ; Journal of the American Academy of Psychiatry and the Law Online Volume 27 [abstracts only] ; 27 >
+        au < released ; 2000 ; Journal of the American Academy of Psychiatry and the Law Online Volume 28 [abstracts only] ; 28 >
+        au < released ; 2001 ; Journal of the American Academy of Psychiatry and the Law Online Volume 29 [abstracts only] ; 29 >
+      }
       au < released ; 2002 ; Journal of the American Academy of Psychiatry and the Law Online Volume 30 ; 30 >
       au < released ; 2003 ; Journal of the American Academy of Psychiatry and the Law Online Volume 31 ; 31 >
       au < released ; 2004 ; Journal of the American Academy of Psychiatry and the Law Online Volume 32 ; 32 >

@@ -56,36 +56,41 @@
 
     param[base_url] = http://content.onlinejacc.org/
 
-    au < down ; 1983 ; Journal of the American College of Cardiology Volume 1 [abstracts only] ; 1 >
-    au < down ; 1983 ; Journal of the American College of Cardiology Volume 2 [abstracts only] ; 2 >
-    au < down ; 1984 ; Journal of the American College of Cardiology Volume 3 [abstracts only] ; 3 >
-    au < down ; 1984 ; Journal of the American College of Cardiology Volume 4 [abstracts only] ; 4 >
-    au < down ; 1985 ; Journal of the American College of Cardiology Volume 5 [abstracts only] ; 5 >
-    au < down ; 1985 ; Journal of the American College of Cardiology Volume 6 [abstracts only] ; 6 >
-    au < down ; 1986 ; Journal of the American College of Cardiology Volume 7 [abstracts only] ; 7 >
-    au < down ; 1986 ; Journal of the American College of Cardiology Volume 8 [abstracts only] ; 8 >
-    au < down ; 1987 ; Journal of the American College of Cardiology Volume 9 [abstracts only] ; 9 >
-    au < down ; 1987 ; Journal of the American College of Cardiology Volume 10 [abstracts only] ; 10 >
-    au < down ; 1988 ; Journal of the American College of Cardiology Volume 11 [abstracts only] ; 11 >
-    au < down ; 1988 ; Journal of the American College of Cardiology Volume 12 [abstracts only] ; 12 >
-    au < down ; 1989 ; Journal of the American College of Cardiology Volume 13 [abstracts only] ; 13 >
-    au < down ; 1989 ; Journal of the American College of Cardiology Volume 14 [abstracts only] ; 14 >
-    au < down ; 1990 ; Journal of the American College of Cardiology Volume 15 [abstracts only] ; 15 >
-    au < down ; 1990 ; Journal of the American College of Cardiology Volume 16 [abstracts only] ; 16 >
-    au < down ; 1991 ; Journal of the American College of Cardiology Volume 17 [abstracts only] ; 17 >
-    au < down ; 1991 ; Journal of the American College of Cardiology Volume 18 [abstracts only] ; 18 >
-    au < down ; 1992 ; Journal of the American College of Cardiology Volume 19 [abstracts only] ; 19 >
-    au < down ; 1992 ; Journal of the American College of Cardiology Volume 20 [abstracts only] ; 20 >
-    au < down ; 1993 ; Journal of the American College of Cardiology Volume 21 [abstracts only] ; 21 >
-    au < down ; 1993 ; Journal of the American College of Cardiology Volume 22 [abstracts only] ; 22 >
-    au < down ; 1994 ; Journal of the American College of Cardiology Volume 23 [abstracts only] ; 23 >
-    au < down ; 1994 ; Journal of the American College of Cardiology Volume 24 [abstracts only] ; 24 >
-    au < down ; 1995 ; Journal of the American College of Cardiology Volume 25 [abstracts only] ; 25 >
-    au < down ; 1995 ; Journal of the American College of Cardiology Volume 26 [abstracts only] ; 26 >
-    au < down ; 1996 ; Journal of the American College of Cardiology Volume 27 [abstracts only] ; 27 >
-    au < down ; 1996 ; Journal of the American College of Cardiology Volume 28 [abstracts only] ; 28 >
-    au < down ; 1997 ; Journal of the American College of Cardiology Volume 29 [abstracts only] ; 29 >
-    au < down ; 1997 ; Journal of the American College of Cardiology Volume 30 [abstracts only] ; 30 >
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < down ; 1983 ; Journal of the American College of Cardiology Volume 1 [abstracts only] ; 1 >
+      au < down ; 1983 ; Journal of the American College of Cardiology Volume 2 [abstracts only] ; 2 >
+      au < down ; 1984 ; Journal of the American College of Cardiology Volume 3 [abstracts only] ; 3 >
+      au < down ; 1984 ; Journal of the American College of Cardiology Volume 4 [abstracts only] ; 4 >
+      au < down ; 1985 ; Journal of the American College of Cardiology Volume 5 [abstracts only] ; 5 >
+      au < down ; 1985 ; Journal of the American College of Cardiology Volume 6 [abstracts only] ; 6 >
+      au < down ; 1986 ; Journal of the American College of Cardiology Volume 7 [abstracts only] ; 7 >
+      au < down ; 1986 ; Journal of the American College of Cardiology Volume 8 [abstracts only] ; 8 >
+      au < down ; 1987 ; Journal of the American College of Cardiology Volume 9 [abstracts only] ; 9 >
+      au < down ; 1987 ; Journal of the American College of Cardiology Volume 10 [abstracts only] ; 10 >
+      au < down ; 1988 ; Journal of the American College of Cardiology Volume 11 [abstracts only] ; 11 >
+      au < down ; 1988 ; Journal of the American College of Cardiology Volume 12 [abstracts only] ; 12 >
+      au < down ; 1989 ; Journal of the American College of Cardiology Volume 13 [abstracts only] ; 13 >
+      au < down ; 1989 ; Journal of the American College of Cardiology Volume 14 [abstracts only] ; 14 >
+      au < down ; 1990 ; Journal of the American College of Cardiology Volume 15 [abstracts only] ; 15 >
+      au < down ; 1990 ; Journal of the American College of Cardiology Volume 16 [abstracts only] ; 16 >
+      au < down ; 1991 ; Journal of the American College of Cardiology Volume 17 [abstracts only] ; 17 >
+      au < down ; 1991 ; Journal of the American College of Cardiology Volume 18 [abstracts only] ; 18 >
+      au < down ; 1992 ; Journal of the American College of Cardiology Volume 19 [abstracts only] ; 19 >
+      au < down ; 1992 ; Journal of the American College of Cardiology Volume 20 [abstracts only] ; 20 >
+      au < down ; 1993 ; Journal of the American College of Cardiology Volume 21 [abstracts only] ; 21 >
+      au < down ; 1993 ; Journal of the American College of Cardiology Volume 22 [abstracts only] ; 22 >
+      au < down ; 1994 ; Journal of the American College of Cardiology Volume 23 [abstracts only] ; 23 >
+      au < down ; 1994 ; Journal of the American College of Cardiology Volume 24 [abstracts only] ; 24 >
+      au < down ; 1995 ; Journal of the American College of Cardiology Volume 25 [abstracts only] ; 25 >
+      au < down ; 1995 ; Journal of the American College of Cardiology Volume 26 [abstracts only] ; 26 >
+      au < down ; 1996 ; Journal of the American College of Cardiology Volume 27 [abstracts only] ; 27 >
+      au < down ; 1996 ; Journal of the American College of Cardiology Volume 28 [abstracts only] ; 28 >
+      au < down ; 1997 ; Journal of the American College of Cardiology Volume 29 [abstracts only] ; 29 >
+      au < down ; 1997 ; Journal of the American College of Cardiology Volume 30 [abstracts only] ; 30 >
+    }
     au < down ; 1998 ; Journal of the American College of Cardiology Volume 31 ; 31 >
     au < down ; 1998 ; Journal of the American College of Cardiology Volume 32 ; 32 >
     au < down ; 1999 ; Journal of the American College of Cardiology Volume 33 ; 33 >

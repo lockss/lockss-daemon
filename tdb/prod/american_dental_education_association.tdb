@@ -27,33 +27,38 @@
     au < ready ; 1972 ; Journal of Dental Education Volume 36 [tables of contents only] ; 36 >
     au < ready ; 1973 ; Journal of Dental Education Volume 37 [tables of contents only] ; 37 >
     au < ready ; 1974 ; Journal of Dental Education Volume 38 [tables of contents only] ; 38 >
-    au < ready ; 1975 ; Journal of Dental Education Volume 39 [abstracts only] ; 39 >
-    au < ready ; 1976 ; Journal of Dental Education Volume 40 [abstracts only] ; 40 >
-    au < ready ; 1977 ; Journal of Dental Education Volume 41 [abstracts only] ; 41 >
-    au < ready ; 1978 ; Journal of Dental Education Volume 42 [abstracts only] ; 42 >
-    au < ready ; 1979 ; Journal of Dental Education Volume 43 [abstracts only] ; 43 >
-    au < ready ; 1980 ; Journal of Dental Education Volume 44 [abstracts only] ; 44 >
-    au < ready ; 1981 ; Journal of Dental Education Volume 45 [abstracts only] ; 45 >
-    au < ready ; 1982 ; Journal of Dental Education Volume 46 [abstracts only] ; 46 >
-    au < ready ; 1983 ; Journal of Dental Education Volume 47 [abstracts only] ; 47 >
-    au < ready ; 1984 ; Journal of Dental Education Volume 48 [abstracts only] ; 48 >
-    au < ready ; 1985 ; Journal of Dental Education Volume 49 [abstracts only] ; 49 >
-    au < ready ; 1986 ; Journal of Dental Education Volume 50 [abstracts only] ; 50 >
-    au < ready ; 1987 ; Journal of Dental Education Volume 51 [abstracts only] ; 51 >
-    au < ready ; 1988 ; Journal of Dental Education Volume 52 [abstracts only] ; 52 >
-    au < ready ; 1989 ; Journal of Dental Education Volume 53 [abstracts only] ; 53 >
-    au < ready ; 1990 ; Journal of Dental Education Volume 54 [abstracts only] ; 54 >
-    au < ready ; 1991 ; Journal of Dental Education Volume 55 [abstracts only] ; 55 >
-    au < ready ; 1992 ; Journal of Dental Education Volume 56 [abstracts only] ; 56 >
-    au < ready ; 1993 ; Journal of Dental Education Volume 57 [abstracts only] ; 57 >
-    au < ready ; 1994 ; Journal of Dental Education Volume 58 [abstracts only] ; 58 >
-    au < ready ; 1995 ; Journal of Dental Education Volume 59 [abstracts only] ; 59 >
-    au < ready ; 1996 ; Journal of Dental Education Volume 60 [abstracts only] ; 60 >
-    au < ready ; 1997 ; Journal of Dental Education Volume 61 [abstracts only] ; 61 >
-    au < ready ; 1998 ; Journal of Dental Education Volume 62 [abstracts only] ; 62 >
-    au < ready ; 1999 ; Journal of Dental Education Volume 63 [abstracts only] ; 63 >
-    au < ready ; 2000 ; Journal of Dental Education Volume 64 [abstracts only] ; 64 >
-    au < released ; 2001 ; Journal of Dental Education Volume 65 [abstracts only] ; 65 >
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < ready ; 1975 ; Journal of Dental Education Volume 39 [abstracts only] ; 39 >
+      au < ready ; 1976 ; Journal of Dental Education Volume 40 [abstracts only] ; 40 >
+      au < ready ; 1977 ; Journal of Dental Education Volume 41 [abstracts only] ; 41 >
+      au < ready ; 1978 ; Journal of Dental Education Volume 42 [abstracts only] ; 42 >
+      au < ready ; 1979 ; Journal of Dental Education Volume 43 [abstracts only] ; 43 >
+      au < ready ; 1980 ; Journal of Dental Education Volume 44 [abstracts only] ; 44 >
+      au < ready ; 1981 ; Journal of Dental Education Volume 45 [abstracts only] ; 45 >
+      au < ready ; 1982 ; Journal of Dental Education Volume 46 [abstracts only] ; 46 >
+      au < ready ; 1983 ; Journal of Dental Education Volume 47 [abstracts only] ; 47 >
+      au < ready ; 1984 ; Journal of Dental Education Volume 48 [abstracts only] ; 48 >
+      au < ready ; 1985 ; Journal of Dental Education Volume 49 [abstracts only] ; 49 >
+      au < ready ; 1986 ; Journal of Dental Education Volume 50 [abstracts only] ; 50 >
+      au < ready ; 1987 ; Journal of Dental Education Volume 51 [abstracts only] ; 51 >
+      au < ready ; 1988 ; Journal of Dental Education Volume 52 [abstracts only] ; 52 >
+      au < ready ; 1989 ; Journal of Dental Education Volume 53 [abstracts only] ; 53 >
+      au < ready ; 1990 ; Journal of Dental Education Volume 54 [abstracts only] ; 54 >
+      au < ready ; 1991 ; Journal of Dental Education Volume 55 [abstracts only] ; 55 >
+      au < ready ; 1992 ; Journal of Dental Education Volume 56 [abstracts only] ; 56 >
+      au < ready ; 1993 ; Journal of Dental Education Volume 57 [abstracts only] ; 57 >
+      au < ready ; 1994 ; Journal of Dental Education Volume 58 [abstracts only] ; 58 >
+      au < ready ; 1995 ; Journal of Dental Education Volume 59 [abstracts only] ; 59 >
+      au < ready ; 1996 ; Journal of Dental Education Volume 60 [abstracts only] ; 60 >
+      au < ready ; 1997 ; Journal of Dental Education Volume 61 [abstracts only] ; 61 >
+      au < ready ; 1998 ; Journal of Dental Education Volume 62 [abstracts only] ; 62 >
+      au < ready ; 1999 ; Journal of Dental Education Volume 63 [abstracts only] ; 63 >
+      au < ready ; 2000 ; Journal of Dental Education Volume 64 [abstracts only] ; 64 >
+      au < released ; 2001 ; Journal of Dental Education Volume 65 [abstracts only] ; 65 >
+    }
     au < released ; 2002 ; Journal of Dental Education Volume 66 ; 66 >
     au < released ; 2003 ; Journal of Dental Education Volume 67 ; 67 >
     au < released ; 2004 ; Journal of Dental Education Volume 68 ; 68 >

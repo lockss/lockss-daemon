@@ -35,42 +35,47 @@
     au < testing ; 1973 ; The Journal of the American Dental Association Volume 87 [tables of contents only] ; 87 >
     au < testing ; 1974 ; The Journal of the American Dental Association Volume 88 [tables of contents only] ; 88 >
     au < testing ; 1974 ; The Journal of the American Dental Association Volume 89 [tables of contents only] ; 89 >
-    au < testing ; 1975 ; The Journal of the American Dental Association Volume 90 [abstracts only] ; 90 >
-    au < testing ; 1975 ; The Journal of the American Dental Association Volume 91 [abstracts only] ; 91 >
-    au < testing ; 1976 ; The Journal of the American Dental Association Volume 92 [abstracts only] ; 92 >
-    au < testing ; 1976 ; The Journal of the American Dental Association Volume 93 [abstracts only] ; 93 >
-    au < testing ; 1977 ; The Journal of the American Dental Association Volume 94 [abstracts only] ; 94 >
-    au < testing ; 1977 ; The Journal of the American Dental Association Volume 95 [abstracts only] ; 95 >
-    au < testing ; 1978 ; The Journal of the American Dental Association Volume 96 [abstracts only] ; 96 >
-    au < testing ; 1978 ; The Journal of the American Dental Association Volume 97 [abstracts only] ; 97 >
-    au < testing ; 1979 ; The Journal of the American Dental Association Volume 98 [abstracts only] ; 98 >
-    au < testing ; 1979 ; The Journal of the American Dental Association Volume 99 [abstracts only] ; 99 >
-    au < testing ; 1980 ; The Journal of the American Dental Association Volume 100 [abstracts only] ; 100 >
-    au < testing ; 1980 ; The Journal of the American Dental Association Volume 101 [abstracts only] ; 101 >
-    au < testing ; 1981 ; The Journal of the American Dental Association Volume 102 [abstracts only] ; 102 >
-    au < testing ; 1981 ; The Journal of the American Dental Association Volume 103 [abstracts only] ; 103 >
-    au < testing ; 1982 ; The Journal of the American Dental Association Volume 104 [abstracts only] ; 104 >
-    au < testing ; 1982 ; The Journal of the American Dental Association Volume 105 [abstracts only] ; 105 >
-    au < testing ; 1983 ; The Journal of the American Dental Association Volume 106 [abstracts only] ; 106 >
-    au < testing ; 1983 ; The Journal of the American Dental Association Volume 107 [abstracts only] ; 107 >
-    au < testing ; 1984 ; The Journal of the American Dental Association Volume 108 [abstracts only] ; 108 >
-    au < testing ; 1984 ; The Journal of the American Dental Association Volume 109 [abstracts only] ; 109 >
-    au < testing ; 1985 ; The Journal of the American Dental Association Volume 110 [abstracts only] ; 110 >
-    au < testing ; 1985 ; The Journal of the American Dental Association Volume 111 [abstracts only] ; 111 >
-    au < testing ; 1986 ; The Journal of the American Dental Association Volume 112 [abstracts only] ; 112 >
-    au < testing ; 1986 ; The Journal of the American Dental Association Volume 113 [abstracts only] ; 113 >
-    au < testing ; 1987 ; The Journal of the American Dental Association Volume 114 [abstracts only] ; 114 >
-    au < testing ; 1987 ; The Journal of the American Dental Association Volume 115 [abstracts only] ; 115 >
-    au < testing ; 1988 ; The Journal of the American Dental Association Volume 116 [abstracts only] ; 116 >
-    au < testing ; 1988 ; The Journal of the American Dental Association Volume 117 [abstracts only] ; 117 >
-    au < testing ; 1989 ; The Journal of the American Dental Association Volume 118 [abstracts only] ; 118 >
-    au < testing ; 1989 ; The Journal of the American Dental Association Volume 119 [abstracts only] ; 119 >
-    au < testing ; 1990 ; The Journal of the American Dental Association Volume 120 [abstracts only] ; 120 >
-    au < testing ; 1990 ; The Journal of the American Dental Association Volume 121 [abstracts only] ; 121 >
-    au < testing ; 1991 ; The Journal of the American Dental Association Volume 122 [abstracts only] ; 122 >
-    au < testing ; 1992 ; The Journal of the American Dental Association Volume 123 [abstracts only] ; 123 >
-    au < testing ; 1993 ; The Journal of the American Dental Association Volume 124 [abstracts only] ; 124 >
-    au < testing ; 1994 ; The Journal of the American Dental Association Volume 125 [abstracts only] ; 125 >
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < testing ; 1975 ; The Journal of the American Dental Association Volume 90 [abstracts only] ; 90 >
+      au < testing ; 1975 ; The Journal of the American Dental Association Volume 91 [abstracts only] ; 91 >
+      au < testing ; 1976 ; The Journal of the American Dental Association Volume 92 [abstracts only] ; 92 >
+      au < testing ; 1976 ; The Journal of the American Dental Association Volume 93 [abstracts only] ; 93 >
+      au < testing ; 1977 ; The Journal of the American Dental Association Volume 94 [abstracts only] ; 94 >
+      au < testing ; 1977 ; The Journal of the American Dental Association Volume 95 [abstracts only] ; 95 >
+      au < testing ; 1978 ; The Journal of the American Dental Association Volume 96 [abstracts only] ; 96 >
+      au < testing ; 1978 ; The Journal of the American Dental Association Volume 97 [abstracts only] ; 97 >
+      au < testing ; 1979 ; The Journal of the American Dental Association Volume 98 [abstracts only] ; 98 >
+      au < testing ; 1979 ; The Journal of the American Dental Association Volume 99 [abstracts only] ; 99 >
+      au < testing ; 1980 ; The Journal of the American Dental Association Volume 100 [abstracts only] ; 100 >
+      au < testing ; 1980 ; The Journal of the American Dental Association Volume 101 [abstracts only] ; 101 >
+      au < testing ; 1981 ; The Journal of the American Dental Association Volume 102 [abstracts only] ; 102 >
+      au < testing ; 1981 ; The Journal of the American Dental Association Volume 103 [abstracts only] ; 103 >
+      au < testing ; 1982 ; The Journal of the American Dental Association Volume 104 [abstracts only] ; 104 >
+      au < testing ; 1982 ; The Journal of the American Dental Association Volume 105 [abstracts only] ; 105 >
+      au < testing ; 1983 ; The Journal of the American Dental Association Volume 106 [abstracts only] ; 106 >
+      au < testing ; 1983 ; The Journal of the American Dental Association Volume 107 [abstracts only] ; 107 >
+      au < testing ; 1984 ; The Journal of the American Dental Association Volume 108 [abstracts only] ; 108 >
+      au < testing ; 1984 ; The Journal of the American Dental Association Volume 109 [abstracts only] ; 109 >
+      au < testing ; 1985 ; The Journal of the American Dental Association Volume 110 [abstracts only] ; 110 >
+      au < testing ; 1985 ; The Journal of the American Dental Association Volume 111 [abstracts only] ; 111 >
+      au < testing ; 1986 ; The Journal of the American Dental Association Volume 112 [abstracts only] ; 112 >
+      au < testing ; 1986 ; The Journal of the American Dental Association Volume 113 [abstracts only] ; 113 >
+      au < testing ; 1987 ; The Journal of the American Dental Association Volume 114 [abstracts only] ; 114 >
+      au < testing ; 1987 ; The Journal of the American Dental Association Volume 115 [abstracts only] ; 115 >
+      au < testing ; 1988 ; The Journal of the American Dental Association Volume 116 [abstracts only] ; 116 >
+      au < testing ; 1988 ; The Journal of the American Dental Association Volume 117 [abstracts only] ; 117 >
+      au < testing ; 1989 ; The Journal of the American Dental Association Volume 118 [abstracts only] ; 118 >
+      au < testing ; 1989 ; The Journal of the American Dental Association Volume 119 [abstracts only] ; 119 >
+      au < testing ; 1990 ; The Journal of the American Dental Association Volume 120 [abstracts only] ; 120 >
+      au < testing ; 1990 ; The Journal of the American Dental Association Volume 121 [abstracts only] ; 121 >
+      au < testing ; 1991 ; The Journal of the American Dental Association Volume 122 [abstracts only] ; 122 >
+      au < testing ; 1992 ; The Journal of the American Dental Association Volume 123 [abstracts only] ; 123 >
+      au < testing ; 1993 ; The Journal of the American Dental Association Volume 124 [abstracts only] ; 124 >
+      au < testing ; 1994 ; The Journal of the American Dental Association Volume 125 [abstracts only] ; 125 >
+    }
     au < testing ; 1995 ; The Journal of the American Dental Association Volume 126 ; 126 >
     au < testing ; 1996 ; The Journal of the American Dental Association Volume 127 ; 127 >
     au < testing ; 1997 ; The Journal of the American Dental Association Volume 128 ; 128 >
