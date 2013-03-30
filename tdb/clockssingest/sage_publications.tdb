@@ -11060,16 +11060,12 @@
     param[base_url] = http://graft.stanford.clockss.org/
     comment[dcor] = This triggered title is being reingested, so there's no need for the PDF filter
     
-    {
+    pluginSuffix = ClockssHighWirePlugin
     
-      pluginSuffix = ClockssHighWirePlugin
-    
-      au < manifest ; exists ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 ; >
+    au < down ; exists ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 ; >
+    au < down ; exists ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 ; >
+    au < down ; exists ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 ; >
       
-    }
-    
   }
 
   {
@@ -11087,8 +11083,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Group & Organization Management Volume 33 ; 33 ; >
-      au < down ; crawling ; 2009 ; Group & Organization Management Volume 34 ; 34 ; >
+      au < down ; exists ; 2008 ; Group & Organization Management Volume 33 ; 33 ; >
+      au < down ; exists ; 2009 ; Group & Organization Management Volume 34 ; 34 ; >
 
     }
 
