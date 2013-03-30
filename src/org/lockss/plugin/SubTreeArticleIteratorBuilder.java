@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIteratorBuilder.java,v 1.1 2013-03-20 05:37:12 thib_gc Exp $
+ * $Id: SubTreeArticleIteratorBuilder.java,v 1.1.2.1 2013-03-30 01:56:28 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.util.*;
 import java.util.regex.*;
 
 import org.lockss.extractor.MetadataTarget;
-import org.lockss.plugin.SubTreeArticleIteratorBuilder.BuildableSubTreeArticleIterator.Aspect;
 import org.lockss.util.Logger;
 
 /**
@@ -353,18 +352,13 @@ public class SubTreeArticleIteratorBuilder {
        * @since 1.60
        */
       public CachedUrl findCuByPatternReplacement(Matcher matcher) {
-        CachedUrl replacedCu = null;
         for (String matcherReplacement : matcherReplacements) {
-          replacedCu = au.makeCachedUrl(matcher.replaceFirst(matcherReplacement));
-          if (replacedCu != null) {
-            if (!replacedCu.hasContent()) {
-              AuUtil.safeRelease(replacedCu);
-              replacedCu = null;
-            }
-            break;
+          CachedUrl replacedCu = au.makeCachedUrl(matcher.replaceFirst(matcherReplacement));
+          if (replacedCu.hasContent()) {
+            return replacedCu;
           }
         }
-        return replacedCu;
+        return null;
       }
 
       /**
@@ -435,6 +429,9 @@ public class SubTreeArticleIteratorBuilder {
       this.aspects = new ArrayList<Aspect>();
       this.rolesForFullText = new ArrayList<String>();
       this.rolesFromOtherRoles = new LinkedHashMap<String, List<String>>();
+      if (logger.isDebug2()) {
+        logger.debug2(String.format("Processing AU: %s", au.getName()));
+      }
     }
     
     /**
@@ -457,7 +454,15 @@ public class SubTreeArticleIteratorBuilder {
     
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
+      boolean isDebug2 = logger.isDebug2();
+      
+      // Process this CU
       String url = cu.getUrl();
+      if (isDebug2) {
+        logger.debug2(String.format("Processing: %s", url));
+      }
+      
+      // Try each aspect
       for (int ci = 0 ; ci < aspects.size() ; ++ci) {
         Aspect aspect = aspects.get(ci);
         Matcher matcher = aspect.findCuAmongPatterns(url);
@@ -468,6 +473,9 @@ public class SubTreeArticleIteratorBuilder {
             CachedUrl higherCu = higherAspect.findCuByPatternReplacement(matcher);
             if (higherCu != null) {
               // Defer
+              if (isDebug2) {
+                logger.debug2(String.format("Deferring to: %s", higherCu.getUrl()));
+              }
               AuUtil.safeRelease(higherCu);
               return null;
             }
@@ -476,8 +484,14 @@ public class SubTreeArticleIteratorBuilder {
           ArticleFiles af = new ArticleFiles();
           af.setFullTextCu(cu);
           aspect.processRoles(af, cu);
+          if (isDebug2) {
+            logger.debug2(String.format("Full text CU set to: %s", url));
+          }
           // Process lower aspects (unless only counting articles)
           if (spec.getTarget() != null && !spec.getTarget().isArticle()) {
+            if (isDebug2) {
+              logger.debug2("Processing additional aspects");
+            }
             for (int cj = ci + 1; cj < aspects.size(); ++cj) {
               Aspect lowerAspect = aspects.get(cj);
               CachedUrl lowerCu = lowerAspect.findCuByPatternReplacement(matcher);
@@ -486,21 +500,38 @@ public class SubTreeArticleIteratorBuilder {
               }
             }
           }
+          else {
+            if (isDebug2) {
+              logger.debug2("Skipping additional aspects");
+            }
+          }
           // Override full text CU if order specified
-          for (String role : rolesForFullText) {
-            CachedUrl foundCu = af.getRoleCu(role); 
-            if (foundCu != null) {
-              af.setFullTextCu(foundCu);
-              break;
+          if (rolesForFullText.size() > 0) {
+            if (isDebug2) {
+              logger.debug2("Overriding full text CU");
+            }
+            for (String role : rolesForFullText) {
+              CachedUrl foundCu = af.getRoleCu(role);
+              if (foundCu != null) {
+                if (isDebug2) {
+                  logger.debug2(String.format("Full text CU reset to: %s", foundCu.getUrl()));
+                }
+                af.setFullTextCu(foundCu);
+                break;
+              }
             }
           }
           // Set roles from other roles if orders specified (unless only counting articles)
           if (spec.getTarget() != null && !spec.getTarget().isArticle()) {
             for (Map.Entry<String, List<String>> entry : rolesFromOtherRoles.entrySet()) {
-              for (String role : entry.getValue()) {
-                CachedUrl foundCu = af.getRoleCu(role); 
+              String role = entry.getKey();
+              for (String otherRole : entry.getValue()) {
+                CachedUrl foundCu = af.getRoleCu(otherRole); 
                 if (foundCu != null) {
-                  af.setFullTextCu(foundCu);
+                  if (isDebug2) {
+                    logger.debug2(String.format("CU for %s set to: %s", otherRole, foundCu.getUrl()));
+                  }
+                  af.setRoleCu(role, foundCu);
                   break;
                 }
               }
@@ -524,7 +555,7 @@ public class SubTreeArticleIteratorBuilder {
    * 
    * @since 1.60
    */
-  protected static final Logger logger = Logger.getLogger(SubTreeArticleIteratorBuilder.class);
+  private static final Logger logger = Logger.getLogger(SubTreeArticleIteratorBuilder.class);
   
   /**
    * <p>
@@ -542,7 +573,7 @@ public class SubTreeArticleIteratorBuilder {
    * 
    * @since 1.60
    */
-  protected Aspect currentAspect;
+  protected BuildableSubTreeArticleIterator.Aspect currentAspect;
   
   /**
    * <p>
@@ -553,16 +584,52 @@ public class SubTreeArticleIteratorBuilder {
    */
   protected BuildableSubTreeArticleIterator iterator;
 
+  /**
+   * <p>
+   * The subtree article iterator specification associated with this builder.
+   * </p>
+   * 
+   * @since 1.60
+   */
   protected SubTreeArticleIterator.Spec spec;
   
+  /**
+   * <p>
+   * Makes a new builder.
+   * </p>
+   * 
+   * @since 1.60
+   */
   public SubTreeArticleIteratorBuilder() {
     // nothing
   }
   
+  /**
+   * <p>
+   * Convenience method equivalent to calling
+   * {@link #SubTreeArticleIteratorBuilder()} then
+   * {@link #setArchivalUnit(ArchivalUnit)} with the given AU.
+   * </p>
+   * 
+   * @param au
+   *          An archival unit.
+   * @since 1.60
+   */
   public SubTreeArticleIteratorBuilder(ArchivalUnit au) {
+    this();
     setArchivalUnit(au);
   }
   
+  /**
+   * <p>
+   * Instructs the builder to define a new aspect. Subsequent aspect calls (e.g.
+   * {@link #addPatterns(Pattern...)}) apply to this newly-defined aspect.
+   * </p>
+   * 
+   * @throws IllegalStateException
+   *           if the AU and spec are unset.
+   * @since 1.60
+   */
   public void addAspect() {
     if (iterator == null) {
       throw new IllegalStateException("Cannot create an aspect until the AU and the spec are set");
@@ -571,6 +638,23 @@ public class SubTreeArticleIteratorBuilder {
     iterator.aspects.add(currentAspect);
   }
   
+  /**
+   * <p>
+   * Convenience method equivalent to calling {@link #addAspect()}, then
+   * {@link #addPatterns(List)} with the given list of patterns, then
+   * {@link #addMatcherReplacements(List)} with the given list of matcher
+   * replacement strings, then {@link #addRoles(String...)} with the given
+   * sequence of roles.
+   * </p>
+   * 
+   * @param patterns
+   *          A list of patterns for the new aspect.
+   * @param matcherReplacements
+   *          A list of matcher replacement strings for the new aspect.
+   * @param roles
+   *          A sequence of roles for the new aspect.
+   * @since 1.60
+   */
   public void addAspect(List<Pattern> patterns, List<String> matcherReplacements, String... roles) {
     addAspect();
     addPatterns(patterns);
@@ -578,28 +662,119 @@ public class SubTreeArticleIteratorBuilder {
     addRoles(roles);
   }
   
+  /**
+   * <p>
+   * Convenience method equivalent to calling {@link #addAspect()}, then
+   * {@link #addPatterns(List)} with the given list of patterns, then
+   * {@link #addMatcherReplacements(List)} with a singleton list containing the
+   * given matcher replacement string, then {@link #addRoles(String...)} with
+   * the given sequence of roles.
+   * </p>
+   * 
+   * @param patterns
+   *          A list of patterns for the new aspect.
+   * @param matcherReplacement
+   *          A matcher replcamanet string for the new aspect.
+   * @param roles
+   *          A sequence of roles for the new aspect.
+   * @since 1.60
+   */
   public void addAspect(List<Pattern> patterns, String matcherReplacement, String... roles) {
     addAspect(patterns, Arrays.asList(matcherReplacement), roles);
   }
   
+  /**
+   * <p>
+   * Convenience method equivalent to calling {@link #addAspect()}, then
+   * {@link #addMatcherReplacements(List)} with the given list of matcher
+   * replacement strings, then {@link #addRoles(String...)} with the given
+   * sequence of roles.
+   * </p>
+   * 
+   * @param matcherReplacements
+   *          A list of matcher replacement strings for the new aspect.
+   * @param roles
+   *          A sequence of roles for the new aspect.
+   * @since 1.60
+   */
   public void addAspect(List<String> matcherReplacements, String... roles) {
     addAspect();
     addMatcherReplacements(matcherReplacements);
     addRoles(roles);
   }
   
+  /**
+   * <p>
+   * Convenience method equivalent to calling {@link #addAspect()}, then
+   * {@link #addPatterns(List)} with a singleton list containing the given
+   * pattern, then {@link #addMatcherReplacements(List)} with the given list of
+   * matcher replacement strings, then {@link #addRoles(String...)} with the
+   * given sequence of roles.
+   * </p>
+   * 
+   * @param pattern
+   *          A pattern for the new aspect.
+   * @param matcherReplacements
+   *          A list of matcher replacement strings for the new aspect.
+   * @param roles
+   *          A sequence of roles for the new aspect.
+   * @since 1.60
+   */
   public void addAspect(Pattern pattern, List<String> matcherReplacements, String... roles) {
     addAspect(Arrays.asList(pattern), matcherReplacements, roles);
   }
   
+  /**
+   * <p>
+   * Convenience method equivalent to calling {@link #addAspect()}, then
+   * {@link #addPatterns(List)} with a singleton list containing the given
+   * pattern, then {@link #addMatcherReplacements(List)} with a singleton list containing the given 
+   * matcher replacement string, then {@link #addRoles(String...)} with the
+   * given sequence of roles.
+   * </p>
+   * 
+   * @param pattern
+   *          A pattern for the new aspect.
+   * @param matcherReplacement
+   *          A matcher replacement string for the new aspect.
+   * @param roles
+   *          A sequence of roles for the new aspect.
+   * @since 1.60
+   */
   public void addAspect(Pattern pattern, String matcherReplacement, String... roles) {
     addAspect(Arrays.asList(pattern), Arrays.asList(matcherReplacement), roles);
   }
   
+  /**
+   * <p>
+   * Convenience method equivalent to calling {@link #addAspect()}, then
+   * {@link #addMatcherReplacements(List)} with a singleton list containing the
+   * given matcher replacement string, then {@link #addRoles(String...)} with
+   * the given sequence of roles.
+   * </p>
+   * 
+   * @param matcherReplacement
+   *          A matcher replacement string for the new aspect.
+   * @param roles
+   *          A sequence of roles for the new aspect.
+   * @since 1.60
+   */
   public void addAspect(String matcherReplacement, String... roles) {
     addAspect(Arrays.asList(matcherReplacement), roles);
   }
   
+  /**
+   * <p>
+   * Appends matcher replacement strings to the list known by the most currently
+   * created aspect.
+   * </p>
+   * 
+   * @param matcherReplacements
+   *          A list of matcher replacement strings.
+   * @throws IllegalStateException
+   *           if no aspect has been created or the list is empty.
+   * @since 1.60
+   */
   public void addMatcherReplacements(List<String> matcherReplacements) {
     if (currentAspect == null) {
       throw new IllegalStateException("No aspect has been created");
@@ -610,10 +785,31 @@ public class SubTreeArticleIteratorBuilder {
     currentAspect.matcherReplacements.addAll(matcherReplacements);
   }
   
+  /**
+   * <p>
+   * Convenience method that calls {@link #addMatcherReplacements(List)} by
+   * turning the given sequence of matcher replacement strings into a list.
+   * </p>
+   * 
+   * @param matcherReplacements
+   *          A sequence of matcher replacement strings.
+   * @since 1.60
+   */
   public void addMatcherReplacements(String... matcherReplacements) {
-    addMatcherReplacements(matcherReplacements);
+    addMatcherReplacements(Arrays.asList(matcherReplacements));
   }
   
+  /**
+   * <p>
+   * Appends patterns to the list known by the most currently created aspect.
+   * </p>
+   * 
+   * @param patterns
+   *          A list of patterns.
+   * @throws IllegalStateException
+   *           if no aspect has been created or the list is empty.
+   * @since 1.60
+   */
   public void addPatterns(List<Pattern> patterns) {
     if (currentAspect == null) {
       throw new IllegalStateException("No aspect has been created");
@@ -624,10 +820,31 @@ public class SubTreeArticleIteratorBuilder {
     currentAspect.patterns.addAll(patterns);
   }
   
+  /**
+   * <p>
+   * Convenience method that calls {@link #addPatterns(List)} by turning the
+   * given sequence of patterns into a list.
+   * </p>
+   * 
+   * @param patterns
+   *          A sequence of patterns.
+   * @since 1.60
+   */
   public void addPatterns(Pattern... patterns) {
     addPatterns(Arrays.asList(patterns));
   }
   
+  /**
+   * <p>
+   * Appends roles to the list known by the most currently created aspect.
+   * </p>
+   * 
+   * @param roles
+   *          A list of roles.
+   * @throws IllegalStateException
+   *           if no aspect has been created or the list is empty.
+   * @since 1.60
+   */
   public void addRoles(List<String> roles) {
     if (currentAspect == null) {
       throw new IllegalStateException("No aspect has been created");
@@ -638,10 +855,28 @@ public class SubTreeArticleIteratorBuilder {
     currentAspect.roles.addAll(roles);
   }
   
+  /**
+   * <p>
+   * Convenience method that calls {@link #addRoles(List)} by turning the given
+   * sequence of roles into a list.
+   * </p>
+   * 
+   * @param roles
+   *          A sequence of roles.
+   * @since 1.60
+   */
   public void addRoles(String... roles) {
     addRoles(Arrays.asList(roles));
   }
   
+  /**
+   * <p>
+   * Returns the buildable subtree article iterator as it currently is.
+   * </p>
+   * 
+   * @return The currently built subtree article iterator.
+   * @since 1.60
+   */
   public SubTreeArticleIterator getSubTreeArticleIterator() {
     if (iterator == null) {
       throw new IllegalStateException("Cannot create a subtree article iterator until the AU and the spec are set");
@@ -649,10 +884,30 @@ public class SubTreeArticleIteratorBuilder {
     return iterator;
   }
 
+  /**
+   * <p>
+   * Convenience method to obtain a new subtree article iterator specficiation
+   * object.
+   * </p>
+   * 
+   * @return A new spec.
+   * @since 1.60
+   */
   public SubTreeArticleIterator.Spec newSpec() {
     return new SubTreeArticleIterator.Spec();
   }
   
+  /**
+   * <p>
+   * Sets the AU associated with this builder.
+   * </p>
+   * 
+   * @param au
+   *          An archival unit.
+   * @throws IllegalStateException
+   *           if the AU is already set
+   * @since 1.60
+   */
   public void setArchivalUnit(ArchivalUnit au) {
     if (this.au != null) {
       throw new IllegalStateException("AU is already set to " + au.getName());
@@ -661,6 +916,19 @@ public class SubTreeArticleIteratorBuilder {
     maybeMakeSubTreeArticleIterator();
   }
   
+  /**
+   * <p>
+   * Declares an order list of roles from which to pick the cached URL that will
+   * be set as the full text CU after all aspects have been considered for an
+   * article.
+   * </p>
+   * 
+   * @param roles
+   *          An ordered list of roles.
+   * @throws IllegalStateException
+   *           if the AU or spec are not defined or if the list is empty.
+   * @since 1.60
+   */
   public void setFullTextFromRoles(List<String> roles) {
     if (iterator == null) {
       throw new IllegalStateException("Cannot create a subtree article iterator until the AU and the spec are set");
@@ -671,6 +939,16 @@ public class SubTreeArticleIteratorBuilder {
     iterator.rolesForFullText.addAll(roles);
   }
 
+  /**
+   * <p>
+   * Convenience method that calls {@link #setFullTextFromRoles(List)} by
+   * turning the given sequence of roles into a list.
+   * </p>
+   * 
+   * @param roles
+   *          A sequence of roles.
+   * @since 1.60
+   */
   public void setFullTextFromRoles(String... roles) {
     setFullTextFromRoles(Arrays.asList(roles));
   }
