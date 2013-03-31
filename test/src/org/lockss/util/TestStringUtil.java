@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.91 2012-08-17 21:46:28 fergaloy-sf Exp $
+ * $Id: TestStringUtil.java,v 1.92 2013-03-31 07:18:08 tlipkis Exp $
  */
 
 /*
@@ -1028,6 +1028,15 @@ public class TestStringUtil extends LockssTestCase {
 		StringUtil.containsString(new StringReader(""), "blah blah"));
   }
 
+  public void testContainsStringMetaChars() throws IOException {
+    assertFalse("Incorrectly matched metachar",
+		StringUtil.containsString(new StringReader("test blah test"),
+					  "bl.h"));
+    assertTrue("Didn't match metachar",
+		StringUtil.containsString(new StringReader("test [acb]\\s test"),
+					  "[acb]\\s"));
+  }
+
   public void testContainsStringDefaultCaseSensitive() throws IOException {
     assertFalse("Incorrectly matched string ignoring case by default",
 		StringUtil.containsString(new StringReader("Test BlaH test"),
@@ -1046,6 +1055,7 @@ public class TestStringUtil extends LockssTestCase {
 		StringUtil.containsString(new StringReader("Test BlaH test"),
 					  "BLAH", false));
   }
+
   public void testContainsStringParamCaseInsensitive() throws IOException {
     assertTrue("Didn't matched string ignoring case",
 	       StringUtil.containsString(new StringReader("Test BlaH test"),
@@ -1061,16 +1071,34 @@ public class TestStringUtil extends LockssTestCase {
     assertTrue("Didn't find string when it should",
 	       StringUtil.containsString(new StringReader(testStr),
 					 searchStr, 10));
-
   }
 
   public void testContainsStringPartialMatchFullBuffer() throws IOException {
     String testStr = "123456abcdefghi1234567890";
-    String searchStr = "abcdefGHI";
+    String searchStr = "abcdefghi";
     assertTrue("Didn't find string when it should",
 	       StringUtil.containsString(new StringReader(testStr),
 					 searchStr, 10));
+  }
 
+  public void testContainsStringPartialMatchFullBufferCaseInsensitive ()
+      throws IOException {
+    String testStr = "123456abcdefghi1234567890";
+    String searchStr = "abcdeFGHI";
+    assertTrue("Didn't find string when it should",
+	       StringUtil.containsString(new StringReader(testStr),
+					 searchStr, true, 10));
+  }
+
+  // This test fails with the implementation of containsString() that uses
+  // Boyer-Moore
+  public void testContainsStringPartialMatchFullBufferCaseSensitive ()
+      throws IOException {
+    String testStr = "123456abcdefghi1234567890";
+    String searchStr = "abcdeFGHI";
+    assertFalse("Found string when it shouldn't",
+	       StringUtil.containsString(new StringReader(testStr),
+					 searchStr, 10));
   }
 
 
