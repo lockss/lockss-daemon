@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# cat *.tdb | tdbout -t publisher,plugin,publisher:info[tester],status
+# cat *.tdb | tdbout -t publisher,plugin,publisher:info[tester],status,year
 
 BEGIN {
   FS="\t"
@@ -7,6 +7,21 @@ BEGIN {
 }
 
 {
+  # add a loop to add line only if either status is _not_ manifest or ending year is gt or eq to contract year
+  current_year = 2012
+  end_year = 0
+  incontract = 0
+  test_year = ""
+  test_year = 2005
+  if (length($5) > 3) {
+    end_year = substr($5,length($5)-3,4)
+  }
+  #printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\n", $1,$2,$3,$4,$7,end_year,test_year
+  if (($4 != "manifest") || ((end_year >= test_year) && (end_year <= current_year))) {
+    incontract = 1
+  }
+
+  if (incontract == 1) {
     nn = split($2,na,/\./)
     lp2 = na[nn]
     if (!(($1,lp2) in b)) {
@@ -14,12 +29,24 @@ BEGIN {
       n[pn] = lp2
   #    n[pn] = $2
       r[pn] = $3
+      if (r[pn] == "") {
+        if ((substr(p[pn],1,2) >= "Aa") && (substr(p[pn],1,2) <= "Am")) {
+          r[pn] = "7"
+        } else if ((substr(p[pn],1,2) >= "An") && (substr(p[pn],1,2) <= "Cz")) {
+          r[pn] = "4"
+        } else if ((substr(p[pn],1,2) >= "Da") && (substr(p[pn],1,2) <= "Nz")) {
+          r[pn] = "5"
+        } else if (substr(p[pn],1,1) >= "O") {
+          r[pn] = "8"
+        }
+      }
       pn++
     }
     b[$1,lp2]++
     c[$1,lp2,$4]++
     x[$4]++
     tt++
+  }
 }
 
 END {
