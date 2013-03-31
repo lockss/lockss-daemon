@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.16 2013-03-18 23:13:03 pgust Exp $
+ * $Id: MetadataField.java,v 1.16.2.1 2013-03-31 23:51:12 pgust Exp $
  */
 
 /*
@@ -945,14 +945,25 @@ public class MetadataField {
     }
  }
   
-  /**setGroupExtractor(defaultValue);
+  /**
    * Returns the extractor for this pattern.
    * 
-   * @param pattern
-   *          pattern to match
+   * @param pattern pattern to match
+   * @param groupNum the group number to extract
    * @return Extractor that matches the pattern.
    */
   public static Extractor extract(String pattern,int groupNum) {
+        return groupExtractor(pattern, groupNum);
+  }
+
+  /**
+   * Returns the extractor for this pattern.
+   * 
+   * @param pattern pattern to match
+   * @param groupNum the group number to extract
+   * @return Extractor that matches the pattern.
+   */
+  public static Extractor extract(Pattern pattern,int groupNum) {
         return groupExtractor(pattern, groupNum);
   }
 
