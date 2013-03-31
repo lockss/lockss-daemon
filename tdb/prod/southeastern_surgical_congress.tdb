@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Southeastern Surgical Congress
+    name = Southeastern Surgical Congress ;
+    info[tester] = 7
   >
 
   plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
