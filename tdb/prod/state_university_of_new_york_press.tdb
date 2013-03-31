@@ -18,9 +18,9 @@
       param[journal_dir] = audem
       attr[journal_id] = aud
       
-      au< testing ; 2010 ; AUDEM: The International Journal of Higher Education and Democracy Volume 1 ; 1 >
-      au< testing ; 2011 ; AUDEM: The International Journal of Higher Education and Democracy Volume 2 ; 2 >
-      au< testing ; 2012 ; AUDEM: The International Journal of Higher Education and Democracy Volume 3 ; 3 >
+      au< ready ; 2010 ; AUDEM: The International Journal of Higher Education and Democracy Volume 1 ; 1 >
+      au< ready ; 2011 ; AUDEM: The International Journal of Higher Education and Democracy Volume 2 ; 2 >
+      au< ready ; 2012 ; AUDEM: The International Journal of Higher Education and Democracy Volume 3 ; 3 >
       au < expected ; 2013 ; AUDEM: The International Journal of Higher Education and Democracy Volume 4 ; 4 >
 
   }
@@ -54,7 +54,7 @@
     param[journal_dir] = palimpsest
     attr[journal_id] = pal
 
-    au< testing ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1 ; 1 >
+    au< ready ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1 ; 1 >
     au< expected ; 2013 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 2 ; 2 >
 
   }
@@ -71,8 +71,8 @@
     param[journal_dir] = philosophia
     attr[journal_id] = phi
 
-    au < testing ; 2011 ; philoSOPHIA Volume 1 ; 1 >
-    au < testing ; 2012 ; philoSOPHIA Volume 2 ; 2 >
+    au < ready ; 2011 ; philoSOPHIA Volume 1 ; 1 >
+    au < ready ; 2012 ; philoSOPHIA Volume 2 ; 2 >
     au < expected ; 2013 ; philoSOPHIA Volume 3 ; 3 >
 
   }
