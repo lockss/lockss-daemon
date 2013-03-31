@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.11 2013-01-16 21:04:26 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.11.4.1 2013-03-31 23:55:35 pgust Exp $
  */
 
 /*
@@ -228,15 +228,33 @@ final public class MetadataDatabaseUtil {
    * <p>
    * Here is the original SQL query:
    *<pre>
-    select 
-      publication_seq,
-      (select name from md_item_name where md_item_seq = publication.md_item_seq and name_type = 'primary') publication_name, 
-      (select issn from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'p_issn') p_issn, 
-      (select issn from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'e_issn') e_issn,
-      (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'p_isbn') p_isbn, 
-      (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'e_isbn') e_isbn
-     from publisher, publication, md_item 
-     where publisher.publisher_seq = publication.publisher_seq and publication.md_item_seq = md_item.md_item_seq
+select
+  publication_seq,
+  (select name from md_item_name
+   where
+     md_item_seq = publication.md_item_seq and
+     name_type = 'primary') publication_name,
+  (select formatissn(issn) from issn
+   where
+     md_item_seq = publication.md_item_seq and
+     issn.issn_type = 'p_issn') p_issn,
+  (select formatissn(issn) from issn
+   where 
+     md_item_seq = publication.md_item_seq and
+     issn.issn_type = 'e_issn') e_issn,
+  (select formatisbn(isbn) from isbn
+   where 
+     md_item_seq = publication.md_item_seq and
+     isbn.isbn_type = 'p_isbn') p_isbn,
+  (select formatisbn(isbn) from isbn
+   where 
+     md_item_seq = publication.md_item_seq and
+     isbn.isbn_type = 'e_isbn') e_isbn
+from
+  publisher, publication, md_item
+where
+  publisher.publisher_seq = publication.publisher_seq and
+  publication.md_item_seq = md_item.md_item_seq;
    *</pre>
    */
   static final String PUBINFO_QUERY =
@@ -288,32 +306,49 @@ final public class MetadataDatabaseUtil {
    * <p>
    * Here is the original SQL query:
    *<pre>
-    select distinct
-      publisher_name, 
-      publication_name,
-      p_issn, e_issn, p_isbn, e_isbn,
-      volume, substr(date,1,4) "year", publication_id
-    from 
-      bib_item, 
-      md_item, 
-      publication, 
-      publisher, 
-      (select 
-         publication_seq, 
-        (select name from md_item_name where md_item_seq = publication.md_item_seq and name_type = 'primary') publication_name, 
-        (select issn from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'p_issn') p_issn, 
-        (select issn from issn where md_item_seq = publication.md_item_seq and issn.issn_type = 'e_issn') e_issn,
-        (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'p_isbn') p_isbn, 
-        (select isbn from isbn where md_item_seq = publication.md_item_seq and isbn.isbn_type = 'e_isbn') e_isbn
-       from publisher, publication, md_item 
-       where publisher.publisher_seq = publication.publisher_seq and publication.md_item_seq = md_item.md_item_seq) pubinfo
-    where 
-      (bib_item.md_item_seq = md_item.md_item_seq) and
-      (publication.md_item_seq = md_item.parent_seq) and
-      (publication.publisher_seq = publisher.publisher_seq) and
-      (pubinfo.publication_seq = publication.publication_seq)
-    order by 1,2,8;
-   *</pre>
+select distinct
+  publisher_name, 
+  publication_name, 
+  p_issn, e_issn, p_isbn, e_isbn, 
+  volume, substr(date,1,4) "year", publication_id
+from
+  bib_item, 
+  md_item, 
+  publication, 
+  publisher, 
+  (select
+     publication_seq,
+     (select name from md_item_name
+      where
+        md_item_seq = publication.md_item_seq and
+        name_type = 'primary') publication_name,
+     (select formatissn(issn) from issn
+      where
+        md_item_seq = publication.md_item_seq and
+        issn.issn_type = 'p_issn') p_issn,
+     (select formatissn(issn) from issn
+      where 
+        md_item_seq = publication.md_item_seq and
+        issn.issn_type = 'e_issn') e_issn,
+     (select formatisbn(isbn) from isbn
+      where 
+        md_item_seq = publication.md_item_seq and
+        isbn.isbn_type = 'p_isbn') p_isbn,
+     (select formatisbn(isbn) from isbn
+      where 
+        md_item_seq = publication.md_item_seq and
+        isbn.isbn_type = 'e_isbn') e_isbn
+   from
+     publisher, publication, md_item
+   where
+     publisher.publisher_seq = publication.publisher_seq and
+     publication.md_item_seq = md_item.md_item_seq
+  ) pubinfo
+where
+  bib_item.md_item_seq = md_item.md_item_seq and
+  publication.md_item_seq = md_item.parent_seq and
+  publication.publisher_seq = publisher.publisher_seq and
+  pubinfo.publication_seq = publication.publication_seq;   *</pre>
    */
   static final String bibliographicItemsQuery =
         "select distinct "
