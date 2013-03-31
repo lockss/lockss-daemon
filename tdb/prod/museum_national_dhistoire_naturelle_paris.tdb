@@ -19,10 +19,10 @@
     
     param[journal_id] = adan
 
-    au < manifest ; 2009 ; Adansonia Volume 31 ; 31 >
-    au < manifest ; 2010 ; Adansonia Volume 32 ; 32 >
-    au < manifest ; 2011 ; Adansonia Volume 33 ; 33 >
-    au < manifest ; 2012 ; Adansonia Volume 34 ; 34 >
+    au < testing ; 2009 ; Adansonia Volume 31 ; 31 >
+    au < testing ; 2010 ; Adansonia Volume 32 ; 32 >
+    au < testing ; 2011 ; Adansonia Volume 33 ; 33 >
+    au < testing ; 2012 ; Adansonia Volume 34 ; 34 >
     au < expected ; 2013 ; Adansonia Volume 35 ; 35 >
  
   }
@@ -37,10 +37,10 @@
     
     param[journal_id] = anth
 
-    au < manifest ; 2009 ; Anthropozoologica Volume 44 ; 44 >
-    au < manifest ; 2010 ; Anthropozoologica Volume 45 ; 45 >
-    au < manifest ; 2011 ; Anthropozoologica Volume 46 ; 46 >
-    au < manifest ; 2012 ; Anthropozoologica Volume 47 ; 47 >
+    au < testing ; 2009 ; Anthropozoologica Volume 44 ; 44 >
+    au < testing ; 2010 ; Anthropozoologica Volume 45 ; 45 >
+    au < testing ; 2011 ; Anthropozoologica Volume 46 ; 46 >
+    au < testing ; 2012 ; Anthropozoologica Volume 47 ; 47 >
     au < expected ; 2013 ; Anthropozoologica Volume 48 ; 48 >
  
   }
@@ -56,10 +56,10 @@
     
     param[journal_id] = geod
 
-    au < manifest ; 2009 ; Geodiversitas Volume 31 ; 31 >
-    au < manifest ; 2010 ; Geodiversitas Volume 32 ; 32 >
-    au < manifest ; 2011 ; Geodiversitas Volume 33 ; 33 >
-    au < manifest ; 2012 ; Geodiversitas Volume 34 ; 34 >
+    au < testing ; 2009 ; Geodiversitas Volume 31 ; 31 >
+    au < testing ; 2010 ; Geodiversitas Volume 32 ; 32 >
+    au < testing ; 2011 ; Geodiversitas Volume 33 ; 33 >
+    au < testing ; 2012 ; Geodiversitas Volume 34 ; 34 >
     au < expected ; 2013 ; Geodiversitas Volume 35 ; 35 >
  
   }
@@ -75,10 +75,10 @@
     
     param[journal_id] = zoos
 
-    au < manifest ; 2009 ; Zoosystema Volume 31 ; 31 >
+    au < testing ; 2009 ; Zoosystema Volume 31 ; 31 >
     au < released ; 2010 ; Zoosystema Volume 32 ; 32 >
     au < released ; 2011 ; Zoosystema Volume 33 ; 33 >
-    au < manifest ; 2012 ; Zoosystema Volume 34 ; 34 >
+    au < testing ; 2012 ; Zoosystema Volume 34 ; 34 >
     au < expected ; 2013 ; Zoosystema Volume 35 ; 35 >
  
   }
