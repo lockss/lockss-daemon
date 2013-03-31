@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Global Health: Science and Practice
+  >
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      
+  {
+
+    title <
+      name = Global Health: Science and Practice ;
+      issn = 2169-575X
+    >
+    
+      rights = openaccess
+      param[base_url] = http://www.ghspjournal.org/
+
+      au < exists ; 2013 ; Global Health: Science and Practice Volume 1 ; 1 >
+
+  }
+  
+}
