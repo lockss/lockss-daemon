@@ -9,6 +9,7 @@
   param[api_url] = http://api.ingentaconnect.com/
   param[graphics_url] = http://graphics.ingentaconnect.com/
   param[publisher_id] = sesc
+  
   implicit < status ; year ; name ; param[volume_name] >
 
   {
