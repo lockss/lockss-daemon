@@ -48,6 +48,49 @@
   {
   
     title <
+      name = Geochemical Transactions ;
+      issn = 1467-4866 ;
+      issnl = 1467-4866
+    >
+
+    param[base_url] = http://www.geochemicaltransactions.com/
+    param[journal_issn] = 1467-4866
+    
+    au < exists ; 2000 ; Geochemical Transactions Volume 1 ; 1 >
+    au < exists ; 2001 ; Geochemical Transactions Volume 2 ; 2 >
+    au < exists ; 2002 ; Geochemical Transactions Volume 3 ; 3 >
+    au < exists ; 2003 ; Geochemical Transactions Volume 4 ; 4 >
+    au < exists ; 2004 ; Geochemical Transactions Volume 5 ; 5 >
+    au < exists ; 2005 ; Geochemical Transactions Volume 6 ; 6 >
+    au < exists ; 2006 ; Geochemical Transactions Volume 7 ; 7 >
+    au < exists ; 2007 ; Geochemical Transactions Volume 8 ; 8 >
+    au < exists ; 2008 ; Geochemical Transactions Volume 9 ; 9 >
+    au < exists ; 2009 ; Geochemical Transactions Volume 10 ; 10 >
+    au < exists ; 2010 ; Geochemical Transactions Volume 11 ; 11 >
+    au < exists ; 2011 ; Geochemical Transactions Volume 12 ; 12 >
+    au < exists ; 2012 ; Geochemical Transactions Volume 13 ; 13 >
+    au < exists ; 2013 ; Geochemical Transactions Volume 14 ; 14 >
+
+  }
+  
+  {
+  
+    title <
+      name = Heritage Science ;
+      issn = 2050-7445 ;
+      issnl = 2050-7445
+    >
+
+    param[base_url] = http://www.heritagesciencejournal.com/
+    param[journal_issn] = 2050-7445
+    
+    au < expected ; 2013 ; Heritage Science Volume 1 ; 1 >
+
+  }
+  
+  {
+  
+    title <
       name = Journal of Cheminformatics ;
       issn = 1758-2946 ;
       issnl = 1758-2946
@@ -79,6 +122,21 @@
     au < released ; 2011 ; Journal of Systems Chemistry Volume 2 ; 2 >
     au < released ; 2012 ; Journal of Systems Chemistry Volume 3 ; 3 >
     au < manifest ; 2013 ; Journal of Systems Chemistry Volume 4 ; 4 >
+
+  }
+  
+  {
+  
+    title <
+      name = Sustainable Chemical Processes ;
+      issn = 2043-7129 ;
+      issnl = 2043-7129
+    >
+    
+    param[base_url] = http://www.sustainablechemicalprocesses.com/
+    param[journal_issn] = 2043-7129
+    
+    au < expected ; 2013 ; Sustainable Chemical Processes Volume 1 ; 1 >
 
   }
   
