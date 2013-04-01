@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicItemImpl.java,v 1.4 2013-01-16 21:55:45 pgust Exp $
+ * $Id: TestBibliographicItemImpl.java,v 1.5 2013-04-01 17:22:20 pgust Exp $
  */
 
 /*
@@ -59,6 +59,8 @@ public class TestBibliographicItemImpl extends LockssTestCase {
   private final static String eYear = "2010";
   private final static String sIssue = "iss01";
   private final static String eIssue = "iss20";
+  private final static String coverageDepth = "fulltext";
+  private final static String publicationType = "bookSeries";
 
   // Secondary volume/year/isue for testing changes; different to above
   private final static String volume2 = "5-9";
@@ -81,7 +83,8 @@ public class TestBibliographicItemImpl extends LockssTestCase {
       publisher, name,
       sVol, eVol,
       sYear, eYear,
-      sIssue, eIssue
+      sIssue, eIssue,
+      publicationType, coverageDepth
   );
   private BibliographicItemImpl bibItemCopy  = new BibliographicItemImpl(bibItem1);
   private BibliographicItemImpl bibItemClone = bibItem1.clone();
@@ -97,6 +100,8 @@ public class TestBibliographicItemImpl extends LockssTestCase {
     assertEquals(eYear, bibItem1.getEndYear());
     assertEquals(sIssue, bibItem1.getStartIssue());
     assertEquals(eIssue, bibItem1.getEndIssue());
+    assertEquals(publicationType, bibItem1.getPublicationType());
+    assertEquals(coverageDepth, bibItem1.getCoverageDepth());
 
     // Start/end values should not inform the single strings, which are really
     // just a convenience
