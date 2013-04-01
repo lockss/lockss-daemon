@@ -1,5 +1,5 @@
 /*
- * $Id: MapUtil.java,v 1.5 2012-08-15 03:35:27 tlipkis Exp $
+ * $Id: MapUtil.java,v 1.6 2013-04-01 00:45:11 tlipkis Exp $
  *
 
  Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
@@ -117,14 +117,15 @@ public class MapUtil {
 
   /** Returns a copy of the map, treating keys as semicolon-separated list
    * of alternative actual keys.  (<i>Eg</i>, the map [k1 => v1, k2;k3 =>
-   * v2] is transformed into [k1 => v1, k2 => v2, k3 => v2]
+   * v2] is transformed into [k1 => v1, k2 => v2, k3 => v2].  The keys are
+   * trimmed.
    */
   public static Map<String,?> expandAlternativeKeyLists(Map<String,?> map) {
     Map res = new HashMap();
     for (Map.Entry<String,?> ent : map.entrySet()) {
       String multiKey = ent.getKey();
       Object val = ent.getValue();
-      for (String key : StringUtil.breakAt(multiKey, ";")) {
+      for (String key : StringUtil.breakAt(multiKey, ";", true)) {
  	res.put(key, val);
       }
     }

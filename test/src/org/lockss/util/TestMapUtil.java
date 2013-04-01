@@ -1,5 +1,5 @@
 /*
- * $Id: TestMapUtil.java,v 1.3 2012-08-15 03:35:27 tlipkis Exp $
+ * $Id: TestMapUtil.java,v 1.4 2013-04-01 00:45:11 tlipkis Exp $
  */
 
 /*
@@ -91,8 +91,14 @@ public class TestMapUtil extends LockssTestCase {
 		 MapUtil.expandAlternativeKeyLists(MapUtil.map("1", "A")));
     assertEquals(MapUtil.map("1", "A", "2", "A"),
 		 MapUtil.expandAlternativeKeyLists(MapUtil.map("1;2", "A")));
+    assertEquals(MapUtil.map("1", "A", "2", "A"),
+		 MapUtil.expandAlternativeKeyLists(MapUtil.map("1 ; 2", "A")));
     assertEquals(MapUtil.map("1", "A", "2", "B", "*", "B"),
-		 MapUtil.expandAlternativeKeyLists(MapUtil.map("1", "A", "2;*", "B")));
+		 MapUtil.expandAlternativeKeyLists(MapUtil.map("1", "A",
+							       "2;*", "B")));
+    assertEquals(MapUtil.map("1", "A", "2", "B", "*", "B"),
+		 MapUtil.expandAlternativeKeyLists(MapUtil.map(" 1 ", "A",
+							       "2;; *", "B")));
   }
 
 }

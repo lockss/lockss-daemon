@@ -13,11 +13,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Large Plugin AU, Base URL %s, Resolver URL %s, Journal Code %s, Year %d, Issues %s, Range %s&quot;, base_url, resolver_url, journal_code, year, issue_set, num_issue_range</string>
+    <string>"Large Plugin AU, Base URL %s, Resolver URL %s, Journal Code %s, Year %d, Issues %s, Range %s", base_url, resolver_url, journal_code, year, issue_set, num_issue_range</string>
   </entry>
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
-    <string>&quot;%sdenial/denial\.cfm&quot;, base_url</string>
+    <string>"%sdenial/denial\.cfm", base_url</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -42,22 +42,22 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^(%s|%s)&quot;, base_url, resolver_url</string>
-      <string>1,&quot;^%spublishing/journals/lockss/\?journalcode=%s&amp;year=%d&quot;, base_url, journal_code, year</string>
-      <string>1,&quot;^%s\?DOI=&quot;, resolver_url</string>
-      <string>2,&quot;^%serrorpage\.asp&quot;, base_url</string>
-      <string>2,&quot;^%shost/%s&quot;, base_url,base_url_host</string>
-      <string>1,&quot;^%spublishing/journals/%s/article\.asp\?Type=Issue&amp;VolumeYear=%d&amp;JournalCode=%s&quot;, base_url, journal_code, year, journal_code</string>
-      <string>1,&quot;^%s.*\.(bmp|css|ico|gif|jpe?g|js|mol|png|tif?f)$&quot;, base_url</string>
-      <string>1,&quot;%sissueset/issue-%s/.*&quot;, base_url, issue_set</string>
-      <string>1,&quot;%sissuerange/issue-%s/.*&quot;, base_url, num_issue_range</string>
+      <string>4,"^(%s|%s)", base_url, resolver_url</string>
+      <string>1,"^%spublishing/journals/lockss/\?journalcode=%s&amp;year=%d", base_url, journal_code, year</string>
+      <string>1,"^%s\?DOI=", resolver_url</string>
+      <string>2,"^%serrorpage\.asp", base_url</string>
+      <string>2,"^%shost/%s", base_url,base_url_host</string>
+      <string>1,"^%spublishing/journals/%s/article\.asp\?Type=Issue&amp;VolumeYear=%d&amp;JournalCode=%s", base_url, journal_code, year, journal_code</string>
+      <string>1,"^%s.*\.(bmp|css|ico|gif|jpe?g|js|mol|png|tif?f)$", base_url</string>
+      <string>1,"%sissueset/issue-%s/.*", base_url, issue_set</string>
+      <string>1,"%sissuerange/issue-%s/.*", base_url, num_issue_range</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <list>
-     <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;year=%d&quot;, base_url, journal_code, year</string>
-     <string>&quot;%sissuestart/issue-%s/&quot;, base_url, issue_set</string>
+     <string>"%spublishing/journals/lockss/?journalcode=%s&amp;year=%d", base_url, journal_code, year</string>
+     <string>"%sissuestart/issue-%s/", base_url, issue_set</string>
     </list>
   </entry>
   <entry>
@@ -122,9 +122,9 @@
   <entry>
     <string>au_permission_url</string>
     <list>
-      <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;year=%d&quot;, base_url, journal_code, year</string>
-      <string>&quot;%slockss.htm&quot;, resolver_url</string>
-      <string>&quot;%s/issue-%d/issue.htm&quot;, resolver_url, num_issue_range</string>
+      <string>"%spublishing/journals/lockss/?journalcode=%s&amp;year=%d", base_url, journal_code, year</string>
+      <string>"%slockss.htm", resolver_url</string>
+      <string>"%s/issue-%d/issue.htm", resolver_url, num_issue_range</string>
     </list>
   </entry>
   <entry>
@@ -162,7 +162,7 @@
     <string>text/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
-        <string>*;DublinCore</string>
+        <string>*; DublinCore</string>
 	<string>org.lockss.plugin.definable.MockFactories$XmlMetaExtFact</string>
       </entry>
       <entry>
@@ -194,7 +194,7 @@
 	<string>"%sabstract/.*\.html", base_url</string>
       </entry>
       <entry>
-        <string>*;FULLTEXT</string>
+        <string>FULLTEXT; *</string>
 	<list>
 	  <string>"%sarticle/.*\.pdf", base_url</string>
 	  <string>"%sletters/.*\.html", base_url</string>
@@ -255,14 +255,14 @@
     <map>
       <entry>
 	<string>au_feat_single</string>
-	<string>&quot;%s?issue=%d&quot;, base_url, num_issue_range</string>
+	<string>"%s?issue=%d", base_url, num_issue_range</string>
       </entry>
       <entry>
 	<string>au_feat_list</string>
 	<list>
-	  <string>&quot;%s?issue=%d&quot;, base_url, num_issue_range</string>
-	  <string>&quot;%sfoo&quot;, base_url</string>
-	  <string>&quot;%sset/%s&quot;, base_url, issue_set</string>
+	  <string>"%s?issue=%d", base_url, num_issue_range</string>
+	  <string>"%sfoo", base_url</string>
+	  <string>"%sset/%s", base_url, issue_set</string>
 	</list>
       </entry>
       <entry>
@@ -270,13 +270,13 @@
 	<map>
 	  <entry>
 	    <string>key1</string>
-	    <string>&quot;%sbar&quot;, base_url</string>
+	    <string>"%sbar", base_url</string>
 	  </entry>
 	  <entry>
 	    <string>key2;*</string>
 	    <list>
-	      <string>&quot;%s222&quot;, base_url</string>
-	      <string>&quot;%s333/%s&quot;, base_url, issue_set</string>
+	      <string>"%s222", base_url</string>
+	      <string>"%s333/%s", base_url, issue_set</string>
 	    </list>
 	  </entry>
 	</map>
