@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.29 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.30 2013-04-01 00:43:27 tlipkis Exp $
  */
 
 /*
@@ -159,6 +159,7 @@ public interface CachedUrl extends CachedUrlSetNode {
 
   /**
    * Get the properties attached to the url in the cache, if any.
+   * Requires {@link #release()}
    * @return the {@link CIProperties} object attached to the
    *         url.  If no properties have been attached, an
    *         empty {@link CIProperties} object is returned.
@@ -173,12 +174,14 @@ public interface CachedUrl extends CachedUrlSetNode {
 
   /**
    * Return the content type (MIME or MIME;charset)
+   * Accesses the Properties, so requires {@link #release()}
    * @return the content type
    */
   public String getContentType();
 
   /**
    * Return the encoding to use for the CachedUrl
+   * Accesses the Properties, so requires {@link #release()}
    * @return the encoding
    */
   public String getEncoding();
@@ -190,7 +193,8 @@ public interface CachedUrl extends CachedUrlSetNode {
   public ArchivalUnit getArchivalUnit();
 
   /**
-   * Release resources.  Temporary.
+   * Release resources.  Required if the InputStream or Properties have
+   * been accessed.  Should be called in a finally block (when possible).
    */
   public void release();
 

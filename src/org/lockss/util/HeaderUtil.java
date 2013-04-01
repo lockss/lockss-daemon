@@ -1,5 +1,5 @@
 /*
- * $Id: HeaderUtil.java,v 1.10 2013-03-14 06:38:49 tlipkis Exp $
+ * $Id: HeaderUtil.java,v 1.11 2013-04-01 00:43:27 tlipkis Exp $
  */
 
 /*
@@ -62,8 +62,12 @@ public class HeaderUtil {
     return res.toLowerCase();
   }
 
-  /** Extract the MIME type, if any, from a Content-Type header. The result
-   * is cached. */
+  /** Extract the MIME type, if any, from a Content-Type header.  The
+   * result is always lowercase (so can be compared directly with the
+   * MIME-types defined in {@Constants}, e.g., {@link
+   * Constants#MIME_TYPE_HTML}).  E.g. given
+   * <code>TEXT/HTML;charset=utf-8</code> , returns
+   * <code>text/html</code>. */
   public static String getMimeTypeFromContentType(String contentType) {
     synchronized (mimeTypeMap) {
       String mime = (String)mimeTypeMap.get(contentType);
@@ -90,9 +94,10 @@ public class HeaderUtil {
     return null;
   }
 
-  /** Extract the charset, if any, from a Content-Type header,
-   * e.g.<code>text/html;charset=utf-8</code> ,
-   * <code>text/html;charset="utf-8"</code> .  The result is cached. */
+  /** Extract the charset, if any, from a Content-Type header.  E.g. given
+   * <code>text/html;charset=utf-8</code> or
+   * <code>text/html;charset="utf-8"</code> , the result is
+   * <code>utf-8</code>. */
   public static String getCharsetFromContentType(String contentType) {
     synchronized (charsetMap) {
       String charset = (String)charsetMap.get(contentType);
