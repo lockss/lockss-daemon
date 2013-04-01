@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.3 2013-03-26 23:09:40 pgust Exp $
+ * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.4 2013-04-01 22:56:49 pgust Exp $
  */
 
 /*
@@ -98,6 +98,7 @@ public class IngentaHtmlMetadataExtractorFactory implements
      tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
          MetadataField.FIELD_END_PAGE, 
          MetadataField.extract(splitMetaPattern,5))); 
+     tagMap.put("crawler.fulltextlink", MetadataField.FIELD_ACCESS_URL);
     }
 
     @Override
