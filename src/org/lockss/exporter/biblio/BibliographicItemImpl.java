@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemImpl.java,v 1.5 2013-01-16 21:09:28 pgust Exp $
+ * $Id: BibliographicItemImpl.java,v 1.6 2013-04-01 16:53:44 pgust Exp $
  */
 
 /*
@@ -96,7 +96,8 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
                                String publisherName, String name,
                                String startVolume, String endVolume,
                                String startYear, String endYear,
-                               String startIssue, String endIssue) {
+                               String startIssue, String endIssue,
+                               String publicationType, String coverageDepth) {
     setPrintIsbn(printIsbn);
     setPrintIssn(printIssn);
     setJournalTitle(journalTitle);
@@ -109,6 +110,8 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
     setEndYear(endYear);
     setStartIssue(startIssue);
     setEndIssue(endIssue);
+    setPublicationType(publicationType);
+    setCoverageDepth(coverageDepth);
   }
 
   /**
@@ -136,6 +139,8 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
     setIssue(other.getIssue());
     setStartIssue(other.getStartIssue());
     setEndIssue(other.getEndIssue());
+    setPublicationType(other.getPublicationType());
+    setCoverageDepth(other.getCoverageDepth());
   }
 
   /**

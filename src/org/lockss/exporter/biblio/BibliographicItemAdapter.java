@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.7 2013-01-16 21:09:28 pgust Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.8 2013-04-01 16:53:44 pgust Exp $
  */
 
 /*
@@ -77,6 +77,8 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   protected String endYear = null;
   protected String startIssue = null;
   protected String endIssue = null;
+  protected String publicationType = null;
+  protected String coverageDepth = null;
 
   // Getters (implementing the interface)
 
@@ -120,6 +122,17 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     }
     return theIssn;
   }
+  
+  @Override
+  public String getPublicationType() {
+    return (publicationType == null) ? "journal" : publicationType;
+  }
+  
+  @Override
+  public String getCoverageDepth() {
+    return (coverageDepth == null) ? "fulltext" : coverageDepth;
+  }
+  
 
   @Override
   public String getPrintIssn() {
@@ -205,6 +218,16 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     return endIssue;
   }
 
+
+  public BibliographicItemAdapter setPublicationType(String publicationType) {
+    this.publicationType = publicationType;
+    return this;
+  }
+  
+  public BibliographicItemAdapter setCoverageDepth(String coverageDepth) {
+    this.coverageDepth = coverageDepth;
+    return this;
+  }
 
   // Setters (chainable)
   public BibliographicItemAdapter setPrintIsbn(String printIsbn) {
@@ -324,6 +347,10 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
 
     BibliographicItemAdapter that = (BibliographicItemAdapter) o;
 
+    if (publicationType != null ? !publicationType.equals(that.publicationType) : that.publicationType != null)
+      return false;
+    if (coverageDepth != null ? !coverageDepth.equals(that.coverageDepth) : that.coverageDepth != null)
+      return false;
     if (eIsbn != null ? !eIsbn.equals(that.eIsbn) : that.eIsbn != null)
       return false;
     if (eIssn != null ? !eIssn.equals(that.eIssn) : that.eIssn != null)
