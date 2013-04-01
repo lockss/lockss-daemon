@@ -33,50 +33,55 @@
     au < HighWirePressH20Plugin ; manifest ; 1973 ; Canadian Medical Association Journal Volume 109 [tables of contents only] ; 109 >
     au < HighWirePressH20Plugin ; manifest ; 1974 ; Canadian Medical Association Journal Volume 110 [tables of contents only] ; 110 >
     au < HighWirePressH20Plugin ; manifest ; 1974 ; Canadian Medical Association Journal Volume 111 [tables of contents only] ; 111 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Canadian Medical Association Journal Volume 112 [abstracts only] ; 112 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Canadian Medical Association Journal Volume 113 [abstracts only] ; 113 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Canadian Medical Association Journal Volume 114 [abstracts only] ; 114 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Canadian Medical Association Journal Volume 115 [abstracts only] ; 115 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Canadian Medical Association Journal Volume 116 [abstracts only] ; 116 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Canadian Medical Association Journal Volume 117 [abstracts only] ; 117 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Canadian Medical Association Journal Volume 118 [abstracts only] ; 118 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Canadian Medical Association Journal Volume 119 [abstracts only] ; 119 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Canadian Medical Association Journal Volume 120 [abstracts only] ; 120 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Canadian Medical Association Journal Volume 121 [abstracts only] ; 121 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Canadian Medical Association Journal Volume 122 [abstracts only] ; 122 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Canadian Medical Association Journal Volume 123 [abstracts only] ; 123 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Canadian Medical Association Journal Volume 124 [abstracts only] ; 124 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Canadian Medical Association Journal Volume 125 [abstracts only] ; 125 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Canadian Medical Association Journal Volume 126 [abstracts only] ; 126 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Canadian Medical Association Journal Volume 127 [abstracts only] ; 127 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Canadian Medical Association Journal Volume 128 [abstracts only] ; 128 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Canadian Medical Association Journal Volume 129 [abstracts only] ; 129 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Canadian Medical Association Journal Volume 130 [abstracts only] ; 130 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Canadian Medical Association Journal Volume 131 [abstracts only] ; 131 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Canadian Medical Association Journal Volume 132 [abstracts only] ; 132 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Canadian Medical Association Journal Volume 133 [abstracts only] ; 133 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Canadian Medical Association Journal Volume 134 [abstracts only] ; 134 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Canadian Medical Association Journal Volume 135 [abstracts only] ; 135 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Canadian Medical Association Journal Volume 136 [abstracts only] ; 136 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Canadian Medical Association Journal Volume 137 [abstracts only] ; 137 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Canadian Medical Association Journal Volume 138 [abstracts only] ; 138 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Canadian Medical Association Journal Volume 139 [abstracts only] ; 139 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Canadian Medical Association Journal Volume 140 [abstracts only] ; 140 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Canadian Medical Association Journal Volume 141 [abstracts only] ; 141 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Canadian Medical Association Journal Volume 142 [abstracts only] ; 142 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Canadian Medical Association Journal Volume 143 [abstracts only] ; 143 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Canadian Medical Association Journal Volume 144 [abstracts only] ; 144 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Canadian Medical Association Journal Volume 145 [abstracts only] ; 145 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Canadian Medical Association Journal Volume 146 [abstracts only] ; 146 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Canadian Medical Association Journal Volume 147 [abstracts only] ; 147 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Canadian Medical Association Journal Volume 148 [abstracts only] ; 148 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Canadian Medical Association Journal Volume 149 [abstracts only] ; 149 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Canadian Medical Association Journal Volume 150 [abstracts only] ; 150 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Canadian Medical Association Journal Volume 151 [abstracts only] ; 151 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Canadian Medical Association Journal Volume 152 [abstracts only] ; 152 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Canadian Medical Association Journal Volume 153 [abstracts only] ; 153 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Canadian Medical Association Journal Volume 154 [abstracts only] ; 154 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Canadian Medical Association Journal Volume 155 [abstracts only] ; 155 >
+    {
+    
+      attr[au_coverage_depth] = abstracts
+    
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Canadian Medical Association Journal Volume 112 [abstracts only] ; 112 >
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Canadian Medical Association Journal Volume 113 [abstracts only] ; 113 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Canadian Medical Association Journal Volume 114 [abstracts only] ; 114 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Canadian Medical Association Journal Volume 115 [abstracts only] ; 115 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Canadian Medical Association Journal Volume 116 [abstracts only] ; 116 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Canadian Medical Association Journal Volume 117 [abstracts only] ; 117 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Canadian Medical Association Journal Volume 118 [abstracts only] ; 118 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Canadian Medical Association Journal Volume 119 [abstracts only] ; 119 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Canadian Medical Association Journal Volume 120 [abstracts only] ; 120 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Canadian Medical Association Journal Volume 121 [abstracts only] ; 121 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Canadian Medical Association Journal Volume 122 [abstracts only] ; 122 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Canadian Medical Association Journal Volume 123 [abstracts only] ; 123 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Canadian Medical Association Journal Volume 124 [abstracts only] ; 124 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Canadian Medical Association Journal Volume 125 [abstracts only] ; 125 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Canadian Medical Association Journal Volume 126 [abstracts only] ; 126 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Canadian Medical Association Journal Volume 127 [abstracts only] ; 127 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Canadian Medical Association Journal Volume 128 [abstracts only] ; 128 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Canadian Medical Association Journal Volume 129 [abstracts only] ; 129 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Canadian Medical Association Journal Volume 130 [abstracts only] ; 130 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Canadian Medical Association Journal Volume 131 [abstracts only] ; 131 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Canadian Medical Association Journal Volume 132 [abstracts only] ; 132 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Canadian Medical Association Journal Volume 133 [abstracts only] ; 133 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Canadian Medical Association Journal Volume 134 [abstracts only] ; 134 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Canadian Medical Association Journal Volume 135 [abstracts only] ; 135 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Canadian Medical Association Journal Volume 136 [abstracts only] ; 136 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Canadian Medical Association Journal Volume 137 [abstracts only] ; 137 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Canadian Medical Association Journal Volume 138 [abstracts only] ; 138 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Canadian Medical Association Journal Volume 139 [abstracts only] ; 139 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Canadian Medical Association Journal Volume 140 [abstracts only] ; 140 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Canadian Medical Association Journal Volume 141 [abstracts only] ; 141 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Canadian Medical Association Journal Volume 142 [abstracts only] ; 142 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Canadian Medical Association Journal Volume 143 [abstracts only] ; 143 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Canadian Medical Association Journal Volume 144 [abstracts only] ; 144 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Canadian Medical Association Journal Volume 145 [abstracts only] ; 145 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Canadian Medical Association Journal Volume 146 [abstracts only] ; 146 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Canadian Medical Association Journal Volume 147 [abstracts only] ; 147 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Canadian Medical Association Journal Volume 148 [abstracts only] ; 148 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Canadian Medical Association Journal Volume 149 [abstracts only] ; 149 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Canadian Medical Association Journal Volume 150 [abstracts only] ; 150 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Canadian Medical Association Journal Volume 151 [abstracts only] ; 151 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Canadian Medical Association Journal Volume 152 [abstracts only] ; 152 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Canadian Medical Association Journal Volume 153 [abstracts only] ; 153 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Canadian Medical Association Journal Volume 154 [abstracts only] ; 154 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Canadian Medical Association Journal Volume 155 [abstracts only] ; 155 >
+    }
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Canadian Medical Association Journal Volume 156 ; 156 >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Canadian Medical Association Journal Volume 157 ; 157 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Canadian Medical Association Journal Volume 158 ; 158 >

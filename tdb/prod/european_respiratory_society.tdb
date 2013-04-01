@@ -19,12 +19,17 @@
 
     param[base_url] = http://erj.ersjournals.com/
     
-    au < released ; 1988 ; European Respiratory Journal Volume 1 [abstracts only] ; 1 >
-    au < released ; 1989 ; European Respiratory Journal Volume 2 [abstracts only] ; 2 >
-    au < released ; 1990 ; European Respiratory Journal Volume 3 [abstracts only] ; 3 >
-    au < released ; 1991 ; European Respiratory Journal Volume 4 [abstracts only] ; 4 >
-    au < released ; 1992 ; European Respiratory Journal Volume 5 [abstracts only] ; 5 >
-    au < released ; 1993 ; European Respiratory Journal Volume 6 [abstracts only] ; 6 >
+    {
+    
+      attr[au_coverage_depth] = abstracts
+    
+      au < released ; 1988 ; European Respiratory Journal Volume 1 [abstracts only] ; 1 >
+      au < released ; 1989 ; European Respiratory Journal Volume 2 [abstracts only] ; 2 >
+      au < released ; 1990 ; European Respiratory Journal Volume 3 [abstracts only] ; 3 >
+      au < released ; 1991 ; European Respiratory Journal Volume 4 [abstracts only] ; 4 >
+      au < released ; 1992 ; European Respiratory Journal Volume 5 [abstracts only] ; 5 >
+      au < released ; 1993 ; European Respiratory Journal Volume 6 [abstracts only] ; 6 >
+    }
     au < released ; 1994 ; European Respiratory Journal Volume 7 ; 7 >
     au < released ; 1995 ; European Respiratory Journal Volume 8 ; 8 >
     au < released ; 1996 ; European Respiratory Journal Volume 9 ; 9 >

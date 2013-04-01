@@ -96,48 +96,53 @@
     au < manifest ; 1973 ; Veterinary Record Volume 93 [tables of contents only] ; 93 >
     au < manifest ; 1974 ; Veterinary Record Volume 94 [tables of contents only] ; 94 >
     au < manifest ; 1974 ; Veterinary Record Volume 95 [tables of contents only] ; 95 >
-    au < manifest ; 1975 ; Veterinary Record Volume 96 [abstracts only] ; 96 >
-    au < manifest ; 1975 ; Veterinary Record Volume 97 [abstracts only] ; 97 >
-    au < manifest ; 1976 ; Veterinary Record Volume 98 [abstracts only] ; 98 >
-    au < manifest ; 1976 ; Veterinary Record Volume 99 [abstracts only] ; 99 >
-    au < manifest ; 1977 ; Veterinary Record Volume 100 [abstracts only] ; 100 >
-    au < manifest ; 1977 ; Veterinary Record Volume 101 [abstracts only] ; 101 >
-    au < manifest ; 1978 ; Veterinary Record Volume 102 [abstracts only] ; 102 >
-    au < manifest ; 1978 ; Veterinary Record Volume 103 [abstracts only] ; 103 >
-    au < manifest ; 1979 ; Veterinary Record Volume 104 [abstracts only] ; 104 >
-    au < manifest ; 1979 ; Veterinary Record Volume 105 [abstracts only] ; 105 >
-    au < manifest ; 1980 ; Veterinary Record Volume 106 [abstracts only] ; 106 >
-    au < manifest ; 1980 ; Veterinary Record Volume 107 [abstracts only] ; 107 >
-    au < manifest ; 1981 ; Veterinary Record Volume 108 [abstracts only] ; 108 >
-    au < manifest ; 1981 ; Veterinary Record Volume 109 [abstracts only] ; 109 >
-    au < manifest ; 1982 ; Veterinary Record Volume 110 [abstracts only] ; 110 >
-    au < manifest ; 1982 ; Veterinary Record Volume 111 [abstracts only] ; 111 >
-    au < manifest ; 1983 ; Veterinary Record Volume 112 [abstracts only] ; 112 >
-    au < manifest ; 1983 ; Veterinary Record Volume 113 [abstracts only] ; 113 >
-    au < manifest ; 1984 ; Veterinary Record Volume 114 [abstracts only] ; 114 >
-    au < manifest ; 1984 ; Veterinary Record Volume 115 [abstracts only] ; 115 >
-    au < manifest ; 1985 ; Veterinary Record Volume 116 [abstracts only] ; 116 >
-    au < manifest ; 1985 ; Veterinary Record Volume 117 [abstracts only] ; 117 >
-    au < manifest ; 1986 ; Veterinary Record Volume 118 [abstracts only] ; 118 >
-    au < manifest ; 1986 ; Veterinary Record Volume 119 [abstracts only] ; 119 >
-    au < manifest ; 1987 ; Veterinary Record Volume 120 [abstracts only] ; 120 >
-    au < manifest ; 1987 ; Veterinary Record Volume 121 [abstracts only] ; 121 >
-    au < manifest ; 1988 ; Veterinary Record Volume 122 [abstracts only] ; 122 >
-    au < manifest ; 1988 ; Veterinary Record Volume 123 [abstracts only] ; 123 >
-    au < manifest ; 1989 ; Veterinary Record Volume 124 [abstracts only] ; 124 >
-    au < manifest ; 1989 ; Veterinary Record Volume 125 [abstracts only] ; 125 >
-    au < manifest ; 1990 ; Veterinary Record Volume 126 [abstracts only] ; 126 >
-    au < manifest ; 1990 ; Veterinary Record Volume 127 [abstracts only] ; 127 >
-    au < manifest ; 1991 ; Veterinary Record Volume 128 [abstracts only] ; 128 >
-    au < manifest ; 1991 ; Veterinary Record Volume 129 [abstracts only] ; 129 >
-    au < manifest ; 1992 ; Veterinary Record Volume 130 [abstracts only] ; 130 >
-    au < manifest ; 1992 ; Veterinary Record Volume 131 [abstracts only] ; 131 >
-    au < manifest ; 1993 ; Veterinary Record Volume 132 [abstracts only] ; 132 >
-    au < manifest ; 1993 ; Veterinary Record Volume 133 [abstracts only] ; 133 >
-    au < manifest ; 1994 ; Veterinary Record Volume 134 [abstracts only] ; 134 >
-    au < manifest ; 1993 ; Veterinary Record Volume 135 [abstracts only] ; 135 >
-    au < manifest ; 1994 ; Veterinary Record Volume 136 [abstracts only] ; 136 >
-    au < manifest ; 1995 ; Veterinary Record Volume 137 [abstracts only] ; 137 >
+    {
+    
+      attr[au_coverage_depth] = abstracts
+    
+      au < manifest ; 1975 ; Veterinary Record Volume 96 [abstracts only] ; 96 >
+      au < manifest ; 1975 ; Veterinary Record Volume 97 [abstracts only] ; 97 >
+      au < manifest ; 1976 ; Veterinary Record Volume 98 [abstracts only] ; 98 >
+      au < manifest ; 1976 ; Veterinary Record Volume 99 [abstracts only] ; 99 >
+      au < manifest ; 1977 ; Veterinary Record Volume 100 [abstracts only] ; 100 >
+      au < manifest ; 1977 ; Veterinary Record Volume 101 [abstracts only] ; 101 >
+      au < manifest ; 1978 ; Veterinary Record Volume 102 [abstracts only] ; 102 >
+      au < manifest ; 1978 ; Veterinary Record Volume 103 [abstracts only] ; 103 >
+      au < manifest ; 1979 ; Veterinary Record Volume 104 [abstracts only] ; 104 >
+      au < manifest ; 1979 ; Veterinary Record Volume 105 [abstracts only] ; 105 >
+      au < manifest ; 1980 ; Veterinary Record Volume 106 [abstracts only] ; 106 >
+      au < manifest ; 1980 ; Veterinary Record Volume 107 [abstracts only] ; 107 >
+      au < manifest ; 1981 ; Veterinary Record Volume 108 [abstracts only] ; 108 >
+      au < manifest ; 1981 ; Veterinary Record Volume 109 [abstracts only] ; 109 >
+      au < manifest ; 1982 ; Veterinary Record Volume 110 [abstracts only] ; 110 >
+      au < manifest ; 1982 ; Veterinary Record Volume 111 [abstracts only] ; 111 >
+      au < manifest ; 1983 ; Veterinary Record Volume 112 [abstracts only] ; 112 >
+      au < manifest ; 1983 ; Veterinary Record Volume 113 [abstracts only] ; 113 >
+      au < manifest ; 1984 ; Veterinary Record Volume 114 [abstracts only] ; 114 >
+      au < manifest ; 1984 ; Veterinary Record Volume 115 [abstracts only] ; 115 >
+      au < manifest ; 1985 ; Veterinary Record Volume 116 [abstracts only] ; 116 >
+      au < manifest ; 1985 ; Veterinary Record Volume 117 [abstracts only] ; 117 >
+      au < manifest ; 1986 ; Veterinary Record Volume 118 [abstracts only] ; 118 >
+      au < manifest ; 1986 ; Veterinary Record Volume 119 [abstracts only] ; 119 >
+      au < manifest ; 1987 ; Veterinary Record Volume 120 [abstracts only] ; 120 >
+      au < manifest ; 1987 ; Veterinary Record Volume 121 [abstracts only] ; 121 >
+      au < manifest ; 1988 ; Veterinary Record Volume 122 [abstracts only] ; 122 >
+      au < manifest ; 1988 ; Veterinary Record Volume 123 [abstracts only] ; 123 >
+      au < manifest ; 1989 ; Veterinary Record Volume 124 [abstracts only] ; 124 >
+      au < manifest ; 1989 ; Veterinary Record Volume 125 [abstracts only] ; 125 >
+      au < manifest ; 1990 ; Veterinary Record Volume 126 [abstracts only] ; 126 >
+      au < manifest ; 1990 ; Veterinary Record Volume 127 [abstracts only] ; 127 >
+      au < manifest ; 1991 ; Veterinary Record Volume 128 [abstracts only] ; 128 >
+      au < manifest ; 1991 ; Veterinary Record Volume 129 [abstracts only] ; 129 >
+      au < manifest ; 1992 ; Veterinary Record Volume 130 [abstracts only] ; 130 >
+      au < manifest ; 1992 ; Veterinary Record Volume 131 [abstracts only] ; 131 >
+      au < manifest ; 1993 ; Veterinary Record Volume 132 [abstracts only] ; 132 >
+      au < manifest ; 1993 ; Veterinary Record Volume 133 [abstracts only] ; 133 >
+      au < manifest ; 1994 ; Veterinary Record Volume 134 [abstracts only] ; 134 >
+      au < manifest ; 1993 ; Veterinary Record Volume 135 [abstracts only] ; 135 >
+      au < manifest ; 1994 ; Veterinary Record Volume 136 [abstracts only] ; 136 >
+      au < manifest ; 1995 ; Veterinary Record Volume 137 [abstracts only] ; 137 >
+    }
     au < released ; 1996 ; Veterinary Record Volume 138 ; 138 >
     au < released ; 1996 ; Veterinary Record Volume 139 ; 139 >
     au < released ; 1997 ; Veterinary Record Volume 140 ; 140 >

@@ -18,31 +18,37 @@
     
     param[base_url] = http://ccm.geoscienceworld.org/
   
-    au < exists ; 1975 ; Clays and Clay Minerals Volume 23 [abstracts only] ; 23 >
-    au < exists ; 1976 ; Clays and Clay Minerals Volume 24 [abstracts only] ; 24 >
-    au < exists ; 1977 ; Clays and Clay Minerals Volume 25 [abstracts only] ; 25 >
-    au < exists ; 1978 ; Clays and Clay Minerals Volume 26 [abstracts only] ; 26 >
-    au < exists ; 1979 ; Clays and Clay Minerals Volume 27 [abstracts only] ; 27 >
-    au < exists ; 1980 ; Clays and Clay Minerals Volume 28 [abstracts only] ; 28 >
-    au < exists ; 1981 ; Clays and Clay Minerals Volume 29 [abstracts only] ; 29 >
-    au < exists ; 1982 ; Clays and Clay Minerals Volume 30 [abstracts only] ; 30 >
-    au < exists ; 1983 ; Clays and Clay Minerals Volume 31 [abstracts only] ; 31 >
-    au < exists ; 1984 ; Clays and Clay Minerals Volume 32 [abstracts only] ; 32 >
-    au < exists ; 1985 ; Clays and Clay Minerals Volume 33 [abstracts only] ; 33 >
-    au < exists ; 1986 ; Clays and Clay Minerals Volume 34 [abstracts only] ; 34 >
-    au < exists ; 1987 ; Clays and Clay Minerals Volume 35 [abstracts only] ; 35 >
-    au < exists ; 1988 ; Clays and Clay Minerals Volume 36 [abstracts only] ; 36 >
-    au < exists ; 1989 ; Clays and Clay Minerals Volume 37 [abstracts only] ; 37 >
-    au < exists ; 1990 ; Clays and Clay Minerals Volume 38 [abstracts only] ; 38 >
-    au < exists ; 1991 ; Clays and Clay Minerals Volume 39 [abstracts only] ; 39 >
-    au < exists ; 1992 ; Clays and Clay Minerals Volume 40 [abstracts only] ; 40 >
-    au < exists ; 1993 ; Clays and Clay Minerals Volume 41 [abstracts only] ; 41 >
-    au < exists ; 1994 ; Clays and Clay Minerals Volume 42 [abstracts only] ; 42 >
-    au < exists ; 1995 ; Clays and Clay Minerals Volume 43 [abstracts only] ; 43 >
-    au < exists ; 1996 ; Clays and Clay Minerals Volume 44 [abstracts only] ; 44 >
-    au < exists ; 1997 ; Clays and Clay Minerals Volume 45 [abstracts only] ; 45 >
-    au < exists ; 1998 ; Clays and Clay Minerals Volume 46 [abstracts only] ; 46 >
-    au < exists ; 1999 ; Clays and Clay Minerals Volume 47 [abstracts only] ; 47 >
+  
+    {
+    
+      attr[au_coverage_depth] = abstracts
+    
+      au < exists ; 1975 ; Clays and Clay Minerals Volume 23 [abstracts only] ; 23 >
+      au < exists ; 1976 ; Clays and Clay Minerals Volume 24 [abstracts only] ; 24 >
+      au < exists ; 1977 ; Clays and Clay Minerals Volume 25 [abstracts only] ; 25 >
+      au < exists ; 1978 ; Clays and Clay Minerals Volume 26 [abstracts only] ; 26 >
+      au < exists ; 1979 ; Clays and Clay Minerals Volume 27 [abstracts only] ; 27 >
+      au < exists ; 1980 ; Clays and Clay Minerals Volume 28 [abstracts only] ; 28 >
+      au < exists ; 1981 ; Clays and Clay Minerals Volume 29 [abstracts only] ; 29 >
+      au < exists ; 1982 ; Clays and Clay Minerals Volume 30 [abstracts only] ; 30 >
+      au < exists ; 1983 ; Clays and Clay Minerals Volume 31 [abstracts only] ; 31 >
+      au < exists ; 1984 ; Clays and Clay Minerals Volume 32 [abstracts only] ; 32 >
+      au < exists ; 1985 ; Clays and Clay Minerals Volume 33 [abstracts only] ; 33 >
+      au < exists ; 1986 ; Clays and Clay Minerals Volume 34 [abstracts only] ; 34 >
+      au < exists ; 1987 ; Clays and Clay Minerals Volume 35 [abstracts only] ; 35 >
+      au < exists ; 1988 ; Clays and Clay Minerals Volume 36 [abstracts only] ; 36 >
+      au < exists ; 1989 ; Clays and Clay Minerals Volume 37 [abstracts only] ; 37 >
+      au < exists ; 1990 ; Clays and Clay Minerals Volume 38 [abstracts only] ; 38 >
+      au < exists ; 1991 ; Clays and Clay Minerals Volume 39 [abstracts only] ; 39 >
+      au < exists ; 1992 ; Clays and Clay Minerals Volume 40 [abstracts only] ; 40 >
+      au < exists ; 1993 ; Clays and Clay Minerals Volume 41 [abstracts only] ; 41 >
+      au < exists ; 1994 ; Clays and Clay Minerals Volume 42 [abstracts only] ; 42 >
+      au < exists ; 1995 ; Clays and Clay Minerals Volume 43 [abstracts only] ; 43 >
+      au < exists ; 1996 ; Clays and Clay Minerals Volume 44 [abstracts only] ; 44 >
+      au < exists ; 1997 ; Clays and Clay Minerals Volume 45 [abstracts only] ; 45 >
+      au < exists ; 1998 ; Clays and Clay Minerals Volume 46 [abstracts only] ; 46 >
+      au < exists ; 1999 ; Clays and Clay Minerals Volume 47 [abstracts only] ; 47 >
+    }
     au < exists ; 2000 ; Clays and Clay Minerals Volume 48 ; 48 >
     au < exists ; 2001 ; Clays and Clay Minerals Volume 49 ; 49 >
     au < exists ; 2002 ; Clays and Clay Minerals Volume 50 ; 50 >
