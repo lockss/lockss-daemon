@@ -1,5 +1,5 @@
 /*
- * $Id: XmlDomMetadataExtractor.java,v 1.9 2013-04-01 16:34:04 aishizaki Exp $
+ * $Id: XmlDomMetadataExtractor.java,v 1.10 2013-04-01 17:19:42 aishizaki Exp $
  */
 
 /*
@@ -239,9 +239,6 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
     if (cu == null) {
       throw new IllegalArgumentException("null CachedUrl");
     }
-    log.setLevel("Debug3");
-    log.debug3("extract(target,cu) cu="+cu.toString());
-    log.info("cu.hascontent ="+cu.hasContent());
 
     ArticleMetadata am = new ArticleMetadata();
 
