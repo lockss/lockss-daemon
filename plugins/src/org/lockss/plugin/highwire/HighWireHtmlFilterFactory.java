@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlFilterFactory.java,v 1.9 2011-03-10 23:55:39 greya Exp $
+ * $Id: HighWireHtmlFilterFactory.java,v 1.10 2013-04-01 00:30:52 pgust Exp $
  */
 
 /*
@@ -33,8 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire;
 
 import java.io.*;
+import java.util.List;
 
-import org.htmlparser.NodeFilter;
+import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.lockss.util.*;
 import org.lockss.filter.*;
@@ -42,12 +43,20 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 public class HighWireHtmlFilterFactory implements FilterFactory {
-  // Use the logic in HighWireFilterRule.  That class should be retired in
-  // favor of this one once all running daemons support FilterFactory, at
-  // which point the filter logic should be moved here.
+  // Remove everything on the line after these comments
+  static HtmlTagFilter.TagPair[] tagpairs = {
+    new HtmlTagFilter.TagPair("<STRONG>Institution:", "</A>", true),
+    new HtmlTagFilter.TagPair("<A NAME=\"relation_type_", "</HTML>",
+                              true, false),
+    new HtmlTagFilter.TagPair("<A NAME=\"otherarticles\">", "</HTML>"),
+    new HtmlTagFilter.TagPair("<", ">"),
+  };
+  static List<HtmlTagFilter.TagPair> tagList = ListUtil.fromArray(tagpairs);
+
   public InputStream createFilteredInputStream(ArchivalUnit au,
 					       InputStream in,
 					       String encoding) {
+
     NodeFilter[] filters = new NodeFilter[] {
         // Contains variable ad-generating code
         new TagNameFilter("script"),
@@ -103,9 +112,9 @@ public class HighWireHtmlFilterFactory implements FilterFactory {
                                                      HtmlNodeFilterTransform.exclude(orFilter));
 
     // Then filter with HighWireFilterRule
-    Reader reader = FilterUtil.getReader(filtered, encoding);
-    Reader filtReader = HighWireFilterRule.makeFilteredReader(reader);
-    return new ReaderInputStream(filtReader);
+    Reader rdr = FilterUtil.getReader(filtered, encoding);
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(rdr, tagList);
+    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
 
 }
