@@ -1,5 +1,5 @@
 /*
- * $Id: TestRateLimiterInfo.java,v 1.3 2012-05-17 17:58:06 tlipkis Exp $
+ * $Id: TestRateLimiterInfo.java,v 1.4 2013-04-01 00:45:58 tlipkis Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class TestRateLimiterInfo extends LockssTestCase {
     "      <org.lockss.daemon.CrawlWindows-Daily>" +
     "        <from>22:00</from>" +
     "        <to>23:00</to>" +
-    "        <timeZoneId>America/Los Angeles</timeZoneId>" +
+    "        <timeZoneId>America/Los_Angeles</timeZoneId>" +
     "      </org.lockss.daemon.CrawlWindows-Daily>" +
     "      <org.lockss.plugin.RateLimiterInfo>" +
     "        <rate>1/12s</rate>" +
@@ -135,7 +135,7 @@ public class TestRateLimiterInfo extends LockssTestCase {
     List wins = new ArrayList(cond.keySet());
     assertClass(CrawlWindows.Never.class, wins.get(0));
     assertEquals(new CrawlWindows.Daily("22:00", "23:00",
-					"America/Los Angeles"),
+					"America/Los_Angeles"),
 		 wins.get(1));
     List<RateLimiterInfo> rlis = new ArrayList(cond.values());
     RateLimiterInfo rli1 = rlis.get(0);
