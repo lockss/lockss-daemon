@@ -90,8 +90,13 @@
       comment[39] = no permission
       comment[login] = logins resolved
 
-      au < released ; 1997 ; Journal of Nuclear Medicine Technology [abstracts only] Volume 25 ; 25 >
-      au < released ; 1998 ; Journal of Nuclear Medicine Technology [abstracts only] Volume 26 ; 26 >
+      {
+
+        attr[au_coverage_depth] = abstracts
+
+        au < released ; 1997 ; Journal of Nuclear Medicine Technology [abstracts only] Volume 25 ; 25 >
+        au < released ; 1998 ; Journal of Nuclear Medicine Technology [abstracts only] Volume 26 ; 26 >
+      }
       au < released ; 1999 ; Journal of Nuclear Medicine Technology Volume 27 ; 27 >
       au < released ; 2000 ; Journal of Nuclear Medicine Technology Volume 28 ; 28 >
       au < released ; 2001 ; Journal of Nuclear Medicine Technology Volume 29 ; 29 >
