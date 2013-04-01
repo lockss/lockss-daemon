@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.16 2013-03-18 23:29:33 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.17 2013-04-01 16:54:43 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.16 2013-03-18 23:29:33 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.17 2013-04-01 16:54:43 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -449,6 +449,32 @@ public class TestTdbAu extends LockssTestCase {
     assertEquals("-2468", au.getEissn());
     assertEquals("string", au.getIssnL());
     assertNull(au.getIssn());
+  }
+  
+  /**
+   * Test publication type
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testPublicationType() throws TdbException {
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    assertEquals("journal", au.getPublicationType());
+    au.setPropertyByName("issn", "1234-5678");
+    assertEquals("journal", au.getPublicationType());
+    au.setAttr("isbn", "978-3-540-33894-9");
+    assertEquals("bookSeries", au.getPublicationType());
+    au.setPropertyByName("type", "book");
+    assertEquals("book", au.getPublicationType());
+  }
+  
+  /**
+   * Test coverage depth
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testCoverageDepth() throws TdbException {
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    assertEquals("fulltext", au.getCoverageDepth());
+    au.setAttr("au_coverage_depth","abstracts");
+    assertEquals("abstracts", au.getCoverageDepth());
   }
   
   /**

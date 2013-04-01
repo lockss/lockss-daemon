@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbTitle.java,v 1.7 2013-03-06 08:06:21 tlipkis Exp $
+ * $Id: TestTdbTitle.java,v 1.8 2013-04-01 16:54:43 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbTitle</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbTitle.java,v 1.7 2013-03-06 08:06:21 tlipkis Exp $
+ * @version $Id: TestTdbTitle.java,v 1.8 2013-04-01 16:54:43 pgust Exp $
  */
 
 public class TestTdbTitle extends LockssTestCase {
@@ -373,6 +373,58 @@ public class TestTdbTitle extends LockssTestCase {
     assertEquals(1, title.getTdbAusByIsbn("1234567890").size());
   }
   
+  /**
+   * Test publication type
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testPublicationType() throws TdbException {
+    TdbTitle title = new TdbTitle("Test Title", "0000-0000");
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    title.addTdbAu(au);
+    assertEquals("journal", title.getPublicationType());
+    au.setPropertyByName("issn", "1234-5678");
+    au.setPropertyByName("eissn", "2468-1357");
+    au.setPropertyByName("issnl", "8765-4321");
+    assertEquals("journal", title.getPublicationType());
+    au.setAttr("isbn", "1234567890");
+    assertEquals("bookSeries", title.getPublicationType());
+    au.setPropertyByName("type", "book");
+    assertEquals("book", title.getPublicationType());
+  }
+
+  /**
+   * Test publication type
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testCoverageDepth() throws TdbException {
+    TdbTitle title = new TdbTitle("Test Title", "0000-0000");
+    assertEquals("fulltext", title.getCoverageDepth());
+
+    TdbAu au = new TdbAu("Test AU1", "pluginA");
+    au.setAttr("au_coverage_depth", "abstracts");
+    title.addTdbAu(au);
+    
+    au = new TdbAu("Test AU2", "pluginB");
+    au.setAttr("au_coverage_depth", "abstracts");
+    title.addTdbAu(au);
+    
+    au = new TdbAu("Test AU3", "pluginC");
+    au.setAttr("au_coverage_depth", "fulltext");
+    title.addTdbAu(au);
+    
+    assertEquals("abstracts", title.getCoverageDepth());
+
+    au = new TdbAu("Test AU4", "pluginD");
+    au.setAttr("au_coverage_depth", "fulltext");
+    title.addTdbAu(au);
+
+    au = new TdbAu("Test AU5", "pluginE");
+    au.setAttr("au_coverage_depth", "fulltext");
+    title.addTdbAu(au);
+
+    assertEquals("fulltext", title.getCoverageDepth());
+  }
+
   /**
    * Test TdbAu.addPluginIdsForDifferences() method.
    * @throws TdbException for invalid Tdb operations
