@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicItemImpl.java,v 1.5 2013-04-01 17:22:20 pgust Exp $
+ * $Id: TestBibliographicItemImpl.java,v 1.6 2013-04-01 18:13:31 pgust Exp $
  */
 
 /*
@@ -59,9 +59,9 @@ public class TestBibliographicItemImpl extends LockssTestCase {
   private final static String eYear = "2010";
   private final static String sIssue = "iss01";
   private final static String eIssue = "iss20";
-  private final static String coverageDepth = "fulltext";
   private final static String publicationType = "bookSeries";
-
+  private final static String coverageDepth = "abstracts";
+  
   // Secondary volume/year/isue for testing changes; different to above
   private final static String volume2 = "5-9";
   private final static String sVol2 = "5";
@@ -75,7 +75,9 @@ public class TestBibliographicItemImpl extends LockssTestCase {
 
   // A BibliographicItem constructed using vol/year/issue convenience strings
   private BibliographicItemImpl bibItem1 = new BibliographicItemImpl(
-      pIsbn, pIssn, title, titleId, publisher, name, volume, year, issue
+      pIsbn, pIssn, 
+      title, titleId, publisher, name, volume, year, issue,
+      publicationType, coverageDepth
   );
   // A BibliographicItem constructed using vol/year/issue start and end strings
   private BibliographicItemImpl bibItem2 = new BibliographicItemImpl(
@@ -84,7 +86,7 @@ public class TestBibliographicItemImpl extends LockssTestCase {
       sVol, eVol,
       sYear, eYear,
       sIssue, eIssue,
-      publicationType, coverageDepth
+      publicationType, coverageDepth      
   );
   private BibliographicItemImpl bibItemCopy  = new BibliographicItemImpl(bibItem1);
   private BibliographicItemImpl bibItemClone = bibItem1.clone();
@@ -93,6 +95,9 @@ public class TestBibliographicItemImpl extends LockssTestCase {
    * Check that the constructors have set appropriate dependent variables.
    */
   public void testConstructors() {
+    assertEquals(publicationType, bibItem1.getPublicationType());
+    assertEquals(coverageDepth, bibItem1.getCoverageDepth());
+    
     // Start/end values should be set from the single strings
     assertEquals(sVol, bibItem1.getStartVolume());
     assertEquals(eVol, bibItem1.getEndVolume());
@@ -100,8 +105,6 @@ public class TestBibliographicItemImpl extends LockssTestCase {
     assertEquals(eYear, bibItem1.getEndYear());
     assertEquals(sIssue, bibItem1.getStartIssue());
     assertEquals(eIssue, bibItem1.getEndIssue());
-    assertEquals(publicationType, bibItem1.getPublicationType());
-    assertEquals(coverageDepth, bibItem1.getCoverageDepth());
 
     // Start/end values should not inform the single strings, which are really
     // just a convenience
