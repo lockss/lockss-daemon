@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.111 2013-03-31 07:18:08 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.112 2013-04-01 00:45:36 tlipkis Exp $
  */
 
 /*
@@ -1710,24 +1710,26 @@ public class StringUtil {
     }
 
     int strlen = str.length();
+    // simpiify boundary conditions by ensuring buffer always larger than
+    // search string
     buffSize = Math.max(buffSize, strlen * 2);
+    int shiftSize = buffSize - (strlen - 1);
 
     String regex = java.util.regex.Pattern.quote(str);
     int flags = ignoreCase ? java.util.regex.Pattern.CASE_INSENSITIVE : 0;
     java.util.regex.Pattern pat = java.util.regex.Pattern.compile(regex, flags);
-    StringBuilder sb = new StringBuilder();
+    StringBuilder sb = new StringBuilder(buffSize);
+
     while (StringUtil.fillFromReader(reader, sb, buffSize - sb.length())) {
       java.util.regex.Matcher m1 = pat.matcher(sb);
       if (m1.find()) {
 	return true;
       }
-      int sblen = sb.length();
-      if (sblen < buffSize) {
+      if (sb.length() < buffSize) {
+	// avoid unnecessary shift on final iteration
 	return false;
       }
-      int shift = strlen - 1;
-      StringUtil.copyChars(sb, sblen - shift, 0, shift);
-      sb.setLength(shift);
+      sb.delete(0, shiftSize);
     }
     return false;
   }

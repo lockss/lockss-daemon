@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.92 2013-03-31 07:18:08 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.93 2013-04-01 00:45:36 tlipkis Exp $
  */
 
 /*
@@ -1099,6 +1099,9 @@ public class TestStringUtil extends LockssTestCase {
     assertFalse("Found string when it shouldn't",
 	       StringUtil.containsString(new StringReader(testStr),
 					 searchStr, 10));
+    assertTrue("Didn't find string when it should",
+	       StringUtil.containsString(new StringReader(testStr),
+					 searchStr.toLowerCase(), 10));
   }
 
 
