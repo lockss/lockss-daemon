@@ -112,6 +112,20 @@
 
     }
   
+    {
+  
+      param[base_url] = http://digdata4.lib.auburn.edu/CivilWar_Documents/Letters/
+    
+      au < testing ; Auburn University Civil War Documents Digital Collection: Letters: Letters 0-B ; Letters_0_B >
+      au < testing ; Auburn University Civil War Documents Digital Collection: Letters: Letters C-D ; Letters_C_D >
+      au < testing ; Auburn University Civil War Documents Digital Collection: Letters: Letters E-K ; Letters_E_K >
+      au < testing ; Auburn University Civil War Documents Digital Collection: Letters: Letters L-M ; Letters_L_M >
+      au < testing ; Auburn University Civil War Documents Digital Collection: Letters: Letters N-Q ; Letters_N_Q >
+      au < testing ; Auburn University Civil War Documents Digital Collection: Letters: Letters R-S ; Letters_R_S >
+      au < testing ; Auburn University Civil War Documents Digital Collection: Letters: Letters T-Z ; Letters_T_Z >
+
+    }
+  
   }
   
   {
@@ -307,9 +321,27 @@
     
       au < released ; Auburn University Piano Bench Sheet Music Digital Collection: 2006 Scans ; PianoBench_2006 >
       au < released ; Auburn University Piano Bench Sheet Music Digital Collection: 2010 Scans ; PianoBench_2010 >
+      au < testing ; Auburn University Piano Bench Sheet Music Digital Collection: 2011 Scans ; PianoBench_2011 >
+      au < testing ; Auburn University Piano Bench Sheet Music Digital Collection: 2012 Scans ; PianoBench_2012 >
 
     }
   
+  }
+  
+  {
+
+    title <
+      name = Auburn University Pre-Civil War Monographs Digital Collection
+    >
+
+    plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
+    param[base_url] = http://digdata4.lib.auburn.edu/PreCivilWar_Monographs/
+    implicit < status ; name ; param[directory] >
+
+    au < testing ; Auburn University Pre-Civil War Monographs Digital Collection: 1847-1853 ; 1847_1853 >
+    au < testing ; Auburn University Pre-Civil War Monographs Digital Collection: 1854-1857 ; 1854_1857 >
+    au < testing ; Auburn University Pre-Civil War Monographs Digital Collection: 1858-1886 ; 1858_1886 >
+
   }
   
   {
