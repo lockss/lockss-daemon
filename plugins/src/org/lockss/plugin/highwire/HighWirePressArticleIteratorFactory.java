@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.11 2012-05-29 22:25:10 akanshab01 Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.12 2013-04-01 02:26:27 pgust Exp $
  */
 
 /*
@@ -150,7 +150,9 @@ public class HighWirePressArticleIteratorFactory
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-      af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, htmlCu);
+      if (af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
+        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, htmlCu);
+      }
       return af;
     }
     
@@ -189,6 +191,9 @@ public class HighWirePressArticleIteratorFactory
                                   "/cgi/framedreprint/$2");
       if (pdfLandCu != null) {
         af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
+        if (af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
+          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, pdfLandCu);
+        }
       }
     }
     
