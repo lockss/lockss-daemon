@@ -2483,22 +2483,27 @@
     au < HighWirePressH20Plugin ; released ; 1978 ; Journal of Orthodontics Volume 5 [tables of contents only] ; 5 > 
     au < HighWirePressH20Plugin ; released ; 1979 ; Journal of Orthodontics Volume 6 [tables of contents only] ; 6 > 
     au < HighWirePressH20Plugin ; released ; 1980 ; Journal of Orthodontics Volume 7 [tables of contents only] ; 7 > 
-    au < HighWirePressH20Plugin ; released ; 1981 ; Journal of Orthodontics Volume 8 [abstracts only] ; 8 > 
-    au < HighWirePressH20Plugin ; released ; 1982 ; Journal of Orthodontics Volume 9 [abstracts only] ; 9 > 
-    au < HighWirePressH20Plugin ; released ; 1983 ; Journal of Orthodontics Volume 10 [abstracts only] ; 10 > 
-    au < HighWirePressH20Plugin ; released ; 1984 ; Journal of Orthodontics Volume 11 [abstracts only] ; 11 > 
-    au < HighWirePressH20Plugin ; released ; 1985 ; Journal of Orthodontics Volume 12 [abstracts only] ; 12 > 
-    au < HighWirePressH20Plugin ; released ; 1986 ; Journal of Orthodontics Volume 13 [abstracts only] ; 13 > 
-    au < HighWirePressH20Plugin ; released ; 1987 ; Journal of Orthodontics Volume 14 [abstracts only] ; 14 > 
-    au < HighWirePressH20Plugin ; released ; 1988 ; Journal of Orthodontics Volume 15 [abstracts only] ; 15 > 
-    au < HighWirePressH20Plugin ; released ; 1989 ; Journal of Orthodontics Volume 16 [abstracts only] ; 16 > 
-    au < HighWirePressH20Plugin ; released ; 1990 ; Journal of Orthodontics Volume 17 [abstracts only] ; 17 > 
-    au < HighWirePressH20Plugin ; released ; 1991 ; Journal of Orthodontics Volume 18 [abstracts only] ; 18 > 
-    au < HighWirePressH20Plugin ; released ; 1992 ; Journal of Orthodontics Volume 19 [abstracts only] ; 19 > 
-    au < HighWirePressH20Plugin ; released ; 1993 ; Journal of Orthodontics Volume 20 [abstracts only] ; 20 > 
-    au < HighWirePressH20Plugin ; released ; 1994 ; Journal of Orthodontics Volume 21 [abstracts only] ; 21 > 
-    au < HighWirePressH20Plugin ; released ; 1995 ; Journal of Orthodontics Volume 22 [abstracts only] ; 22 > 
-    au < HighWirePressH20Plugin ; released ; 1996 ; Journal of Orthodontics Volume 23 [abstracts only] ; 23 > 
+    {
+    
+      attr[au_coverage_depth] = abstracts
+    
+      au < HighWirePressH20Plugin ; released ; 1981 ; Journal of Orthodontics Volume 8 [abstracts only] ; 8 > 
+      au < HighWirePressH20Plugin ; released ; 1982 ; Journal of Orthodontics Volume 9 [abstracts only] ; 9 > 
+      au < HighWirePressH20Plugin ; released ; 1983 ; Journal of Orthodontics Volume 10 [abstracts only] ; 10 > 
+      au < HighWirePressH20Plugin ; released ; 1984 ; Journal of Orthodontics Volume 11 [abstracts only] ; 11 > 
+      au < HighWirePressH20Plugin ; released ; 1985 ; Journal of Orthodontics Volume 12 [abstracts only] ; 12 > 
+      au < HighWirePressH20Plugin ; released ; 1986 ; Journal of Orthodontics Volume 13 [abstracts only] ; 13 > 
+      au < HighWirePressH20Plugin ; released ; 1987 ; Journal of Orthodontics Volume 14 [abstracts only] ; 14 > 
+      au < HighWirePressH20Plugin ; released ; 1988 ; Journal of Orthodontics Volume 15 [abstracts only] ; 15 > 
+      au < HighWirePressH20Plugin ; released ; 1989 ; Journal of Orthodontics Volume 16 [abstracts only] ; 16 > 
+      au < HighWirePressH20Plugin ; released ; 1990 ; Journal of Orthodontics Volume 17 [abstracts only] ; 17 > 
+      au < HighWirePressH20Plugin ; released ; 1991 ; Journal of Orthodontics Volume 18 [abstracts only] ; 18 > 
+      au < HighWirePressH20Plugin ; released ; 1992 ; Journal of Orthodontics Volume 19 [abstracts only] ; 19 > 
+      au < HighWirePressH20Plugin ; released ; 1993 ; Journal of Orthodontics Volume 20 [abstracts only] ; 20 > 
+      au < HighWirePressH20Plugin ; released ; 1994 ; Journal of Orthodontics Volume 21 [abstracts only] ; 21 > 
+      au < HighWirePressH20Plugin ; released ; 1995 ; Journal of Orthodontics Volume 22 [abstracts only] ; 22 > 
+      au < HighWirePressH20Plugin ; released ; 1996 ; Journal of Orthodontics Volume 23 [abstracts only] ; 23 > 
+    }
     au < HighWirePressH20Plugin ; released ; 1997 ; Journal of Orthodontics Volume 24 ; 24 > 
     au < HighWirePressH20Plugin ; released ; 1998 ; Journal of Orthodontics Volume 25 ; 25 > 
     au < HighWirePressH20Plugin ; released ; 1999 ; Journal of Orthodontics Volume 26 ; 26 > 

@@ -18,7 +18,12 @@
     param[base_url] = http://www.jleukbio.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; released ; 1984 ; Journal of Leukocyte Biology [abstracts only] Volume 35 ; 35 >
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < HighWirePressH20Plugin ; released ; 1984 ; Journal of Leukocyte Biology [abstracts only] Volume 35 ; 35 >
+    }
     au < HighWirePressH20Plugin ; released ; 1984 ; Journal of Leukocyte Biology Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 1985 ; Journal of Leukocyte Biology Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 1985 ; Journal of Leukocyte Biology Volume 38 ; 38 >
