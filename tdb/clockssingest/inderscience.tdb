@@ -749,7 +749,7 @@
       au < released ; manifest ; 2010 ; International Journal of Automotive Technology and Management Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; International Journal of Automotive Technology and Management Volume 11 ; 11 >
       au < released ; crawling ; 2012 ; International Journal of Automotive Technology and Management Volume 12 ; 12 >
-      au < expected ; exists ; 2012 ; International Journal of Automotive Technology and Management Volume 13 ; 13 >
+      au < manifest ; exists ; 2013 ; International Journal of Automotive Technology and Management Volume 13 ; 13 >
       
     }
 
@@ -3002,8 +3002,8 @@
       au < manifest ; exists ; 2007 ; International Journal of Financial Services Management Volume 2 ; 2 >
       au < manifest ; exists ; 2008 ; International Journal of Financial Services Management Volume 3 ; 3 >
       au < crawling ; exists ; 2009-2010 ; International Journal of Financial Services Management Volume 4 ; 4 >
-      au < zapped ; down ; 2011 ; International Journal of Financial Services Management Volume 5 ; 5 >
-      au < expected ; exists ; 2012 ; International Journal of Financial Services Management Volume 6 ; 6 >
+      au < zapped ; down ; 2011-2012 ; International Journal of Financial Services Management Volume 5 ; 5 >
+      au < manifest ; exists ; 2013 ; International Journal of Financial Services Management Volume 6 ; 6 >
 
     }
 
@@ -4336,7 +4336,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Learning Technology Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Learning Technology Volume 6 ; 6 >
       au < zapped ; down ; 2012 ; International Journal of Learning Technology Volume 7 ; 7 >
-      au < expected ; exists ; 2013 ; International Journal of Learning Technology Volume 8 ; 8 >
+      au < manifest ; exists ; 2013 ; International Journal of Learning Technology Volume 8 ; 8 >
 
     }
 
@@ -4611,7 +4611,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Management Concepts and Philosophy Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; International Journal of Management Concepts and Philosophy Volume 5 ; 5 >
       au < zapped ; down ; 2012 ; International Journal of Management Concepts and Philosophy Volume 6 ; 6 >
-      au < expected ; exists ; 2013 ; International Journal of Management Concepts and Philosophy Volume 7 ; 7 >
+      au < manifest ; exists ; 2013 ; International Journal of Management Concepts and Philosophy Volume 7 ; 7 >
 
     }
 
@@ -4829,7 +4829,7 @@
       au < released ; crawling ; 2012 ; International Journal of Materials and Product Technology Volume 43 ; 43 >
       au < released ; manifest ; 2012 ; International Journal of Materials and Product Technology Volume 44 ; 44 >
       au < released ; manifest ; 2012 ; International Journal of Materials and Product Technology Volume 45 ; 45 >
-      au < expected ; exists ; 2013 ; International Journal of Materials and Product Technology Volume 46 ; 46 >
+      au < manifest ; exists ; 2013 ; International Journal of Materials and Product Technology Volume 46 ; 46 >
 
     }
 
@@ -4868,7 +4868,7 @@
       au < crawling ; exists ; 2009-2010 ; International Journal of Materials Engineering Innovation Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Materials Engineering Innovation Volume 2 ; 2 >
       au < released ; crawling ; 2012 ; International Journal of Materials Engineering Innovation Volume 3 ; 3 > 
-      au < expected ; exists ; 2013 ; International Journal of Materials Engineering Innovation Volume 4 ; 4 >
+      au < manifest ; exists ; 2013 ; International Journal of Materials Engineering Innovation Volume 4 ; 4 >
 
     }
 
@@ -4958,7 +4958,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Mechatronics and Manufacturing Systems Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Mechatronics and Manufacturing Systems Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Mechatronics and Manufacturing Systems Volume 5 ; 5 >
-      au < expected ; exists ; 2013 ; International Journal of Mechatronics and Manufacturing Systems Volume 6 ; 6 >
+      au < manifest ; exists ; 2013 ; International Journal of Mechatronics and Manufacturing Systems Volume 6 ; 6 >
 
     }
 
@@ -5280,7 +5280,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Nanomanufacturing Volume 6 ; 6 >
       au < released ; crawling ; 2011 ; International Journal of Nanomanufacturing Volume 7 ; 7 >
       au < zapped ; down ; 2012 ; International Journal of Nanomanufacturing Volume 8 ; 8 >
-      au < expected ; exists ; 2013 ; International Journal of Nanomanufacturing Volume 9 ; 9 >
+      au < manifest ; exists ; 2013 ; International Journal of Nanomanufacturing Volume 9 ; 9 >
 
     }
 
@@ -7638,7 +7638,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Web and Grid Services Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Web and Grid Services Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; International Journal of Web and Grid Services Volume 8 ; 8 >
-      au < expected ; exists ; 2013 ; International Journal of Web and Grid Services Volume 9 ; 9 >
+      au < manifest ; exists ; 2013 ; International Journal of Web and Grid Services Volume 9 ; 9 >
 
     }
 
