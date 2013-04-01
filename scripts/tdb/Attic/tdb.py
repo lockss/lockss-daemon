@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.20 2012-09-27 18:31:29 pgust Exp $
+# $Id: tdb.py,v 1.20.14.1 2013-04-01 13:01:22 pgust Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -116,6 +116,7 @@ class Title(Map):
     TYPE = ('type',)
     class Type:
         BOOK = 'book'
+        BOOKSERIES = 'bookSeries'
         JOURNAL = 'journal'
         DEFAULT = JOURNAL
 
