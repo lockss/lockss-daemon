@@ -1,5 +1,5 @@
 /*
- * $Id: IUMJXmlMetadataExtractorFactory.java,v 1.3 2013-04-01 16:34:03 aishizaki Exp $
+ * $Id: IUMJXmlMetadataExtractorFactory.java,v 1.4 2013-04-01 17:56:16 aishizaki Exp $
  */
 
 /*
@@ -139,7 +139,6 @@ import org.lockss.plugin.*;
         throws IOException, PluginException {
       try {
         ArticleMetadata am;
-        XmlDomMetadataExtractor xdmExt;
         try {
           String xmlUrl = cu.getUrl().replaceFirst("IUMJ/FTDLOAD/([^/]+)/[^/]+/([^/]+)/pdf", "META/$1/$2\\.xml");
           CachedUrl xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
@@ -148,7 +147,11 @@ import org.lockss.plugin.*;
           if (xmlUrl.contains("www.example.com")) {
             xmlCu = cu;
           }
-          am = new XmlDomMetadataExtractor(nodeMap).extract(target, xmlCu);
+          try {
+	    am = new XmlDomMetadataExtractor(nodeMap).extract(target, xmlCu);
+	  } finally {
+	    AuUtil.safeRelease(xmlCu);
+	  }
         } finally {
           AuUtil.safeRelease(cu);
         }
