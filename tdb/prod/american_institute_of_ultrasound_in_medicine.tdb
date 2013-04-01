@@ -17,22 +17,27 @@
       param[base_url] = http://www.jultrasoundmed.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < doNotProcess ; 1982 ; Journal of Ultrasound in Medicine Volume 1 [abstracts only] ; 1 >
-      au < doNotProcess ; 1983 ; Journal of Ultrasound in Medicine Volume 2 [abstracts only] ; 2 >
-      au < doNotProcess ; 1984 ; Journal of Ultrasound in Medicine Volume 3 [abstracts only] ; 3 >
-      au < doNotProcess ; 1985 ; Journal of Ultrasound in Medicine Volume 4 [abstracts only] ; 4 >
-      au < doNotProcess ; 1986 ; Journal of Ultrasound in Medicine Volume 5 [abstracts only] ; 5 >
-      au < doNotProcess ; 1987 ; Journal of Ultrasound in Medicine Volume 6 [abstracts only] ; 6 >
-      au < doNotProcess ; 1988 ; Journal of Ultrasound in Medicine Volume 7 [abstracts only] ; 7 >
-      au < doNotProcess ; 1989 ; Journal of Ultrasound in Medicine Volume 8 [abstracts only] ; 8 >
-      au < doNotProcess ; 1990 ; Journal of Ultrasound in Medicine Volume 9 [abstracts only] ; 9 >
-      au < doNotProcess ; 1991 ; Journal of Ultrasound in Medicine Volume 10 [abstracts only] ; 10 >
-      au < doNotProcess ; 1992 ; Journal of Ultrasound in Medicine Volume 11 [abstracts only] ; 11 >
-      au < doNotProcess ; 1993 ; Journal of Ultrasound in Medicine Volume 12 [abstracts only] ; 12 >
-      au < doNotProcess ; 1994 ; Journal of Ultrasound in Medicine Volume 13 [abstracts only] ; 13 >
-      au < doNotProcess ; 1995 ; Journal of Ultrasound in Medicine Volume 14 [abstracts only] ; 14 >
-      au < doNotProcess ; 1996 ; Journal of Ultrasound in Medicine Volume 15 [abstracts only] ; 15 >
-      au < doNotProcess ; 1997 ; Journal of Ultrasound in Medicine Volume 16 [abstracts only] ; 16 >
+      {
+
+        attr[au_coverage_depth] = abstracts
+
+        au < doNotProcess ; 1982 ; Journal of Ultrasound in Medicine Volume 1 [abstracts only] ; 1 >
+        au < doNotProcess ; 1983 ; Journal of Ultrasound in Medicine Volume 2 [abstracts only] ; 2 >
+        au < doNotProcess ; 1984 ; Journal of Ultrasound in Medicine Volume 3 [abstracts only] ; 3 >
+        au < doNotProcess ; 1985 ; Journal of Ultrasound in Medicine Volume 4 [abstracts only] ; 4 >
+        au < doNotProcess ; 1986 ; Journal of Ultrasound in Medicine Volume 5 [abstracts only] ; 5 >
+        au < doNotProcess ; 1987 ; Journal of Ultrasound in Medicine Volume 6 [abstracts only] ; 6 >
+        au < doNotProcess ; 1988 ; Journal of Ultrasound in Medicine Volume 7 [abstracts only] ; 7 >
+        au < doNotProcess ; 1989 ; Journal of Ultrasound in Medicine Volume 8 [abstracts only] ; 8 >
+        au < doNotProcess ; 1990 ; Journal of Ultrasound in Medicine Volume 9 [abstracts only] ; 9 >
+        au < doNotProcess ; 1991 ; Journal of Ultrasound in Medicine Volume 10 [abstracts only] ; 10 >
+        au < doNotProcess ; 1992 ; Journal of Ultrasound in Medicine Volume 11 [abstracts only] ; 11 >
+        au < doNotProcess ; 1993 ; Journal of Ultrasound in Medicine Volume 12 [abstracts only] ; 12 >
+        au < doNotProcess ; 1994 ; Journal of Ultrasound in Medicine Volume 13 [abstracts only] ; 13 >
+        au < doNotProcess ; 1995 ; Journal of Ultrasound in Medicine Volume 14 [abstracts only] ; 14 >
+        au < doNotProcess ; 1996 ; Journal of Ultrasound in Medicine Volume 15 [abstracts only] ; 15 >
+        au < doNotProcess ; 1997 ; Journal of Ultrasound in Medicine Volume 16 [abstracts only] ; 16 >
+      }
       au < released ; 1998 ; Journal of Ultrasound in Medicine Volume 17 ; 17 >
       au < released ; 1999 ; Journal of Ultrasound in Medicine Volume 18 ; 18 >
       au < released ; 2000 ; Journal of Ultrasound in Medicine Volume 19 ; 19 >
