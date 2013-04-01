@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindows.java,v 1.13 2012-03-27 20:57:56 tlipkis Exp $
+ * $Id: CrawlWindows.java,v 1.14 2013-04-01 00:43:11 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon;
 
 import java.util.*;
 import java.text.*;
+import org.apache.commons.lang.ObjectUtils;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
 import org.lockss.app.LockssApp;
@@ -89,9 +90,9 @@ public class CrawlWindows {
    * issues.
    */
   protected abstract static class BaseCalCrawlWindow extends BaseCrawlWindow {
-    protected transient TimeZone timeZone;
     protected String timeZoneId;
-    transient Calendar windowCal;
+    private transient TimeZone tz;
+    private transient Calendar windowCal;
 
     /**
      * Constructor takes a {@link TimeZone} for the window.  Null defaults
@@ -100,40 +101,50 @@ public class CrawlWindows {
      */
     public BaseCalCrawlWindow(TimeZone windowTZ) {
       super();
-      setWindowTimeZone(windowTZ);
+      tz = windowTZ;
     }
 
     /**
-     * Sets the window's {@link TimeZone}.  Null defaults to the system time
-     * zone.  Used only by tests.
-     * @param windowTZ the new TimeZone
+     * Constructor takes a timeOne ID for the window.  Null defaults
+     * to the system time zone.
+     * @param timeZoneId the window's TimeZone
      */
-    void setWindowTimeZone(TimeZone windowTZ) {
-      if (windowTZ==null) {
-        timeZone = TimeZone.getDefault();
-      } else {
-        timeZone = windowTZ;
-      }
-      timeZoneId = timeZone.getID();
-      windowCal = Calendar.getInstance(timeZone);
+    public BaseCalCrawlWindow(String timeZoneId) {
+      super();
+      this.timeZoneId = timeZoneId;
     }
 
-    protected void postUnmarshal(LockssApp lockssContext) {
-      if (!StringUtil.isNullString(timeZoneId)) {
-        timeZone = TimeZone.getTimeZone(timeZoneId);
+    public TimeZone getTimeZone() {
+      if (tz == null) {
+	if (!StringUtil.isNullString(timeZoneId)) {
+	  tz = TimeZone.getTimeZone(timeZoneId);
+	} else {
+	  tz = TimeZone.getDefault();
+	  timeZoneId = tz.getID();
+	}
+      } else if (timeZoneId == null ) {
+	timeZoneId = tz.getID();
       }
-      else {
-        timeZone = TimeZone.getDefault();
-        timeZoneId = timeZone.getID();
+      return tz;
+    }
+
+    String getTimeZoneId() {
+      getTimeZone();
+      return timeZoneId;
+    }
+
+    protected Calendar getWindowCal() {
+      if (windowCal == null) {
+	windowCal = Calendar.getInstance(getTimeZone());
       }
-      windowCal = Calendar.getInstance(timeZone);
+      return windowCal;
     }
 
     public boolean canCrawl(Date date) {
       // set to the date to test
-      synchronized (windowCal) {
-	windowCal.setTime(date);
-	return isMatch(windowCal);
+      synchronized (getWindowCal()) {
+	getWindowCal().setTime(date);
+	return isMatch(getWindowCal());
       }
     }
 
@@ -192,10 +203,6 @@ public class CrawlWindows {
 
     public Calendar getEndCalendar(){
 	return end;
-    }
-
-    public TimeZone getTimeZone(){
-	return timeZone;
     }
 
     public boolean isMatch(Calendar cal) {
@@ -262,7 +269,7 @@ public class CrawlWindows {
 	append(fieldMask).
 	append(start).
 	append(end).
-	append(timeZoneId).
+	append(getTimeZoneId()).
 	toHashCode();
     }
 
@@ -275,7 +282,7 @@ public class CrawlWindows {
 	return fieldMask == other.fieldMask
 	  && start.equals(other.start)
 	  && end.equals(other.end)
-	  && StringUtil.equalStrings(timeZoneId, other.timeZoneId);
+	  && StringUtil.equalStrings(getTimeZoneId(), other.getTimeZoneId());
       }
       return false;
     }
@@ -287,22 +294,46 @@ public class CrawlWindows {
   }
 
   /**
-   * A window that represents the same range of times each day.
+   * A window that represents the same range of times each day (or selected
+   * days of the week), and has a simple serial representation in plugins.
+   * <code>from</code> and <code>to</code> must be time strings, which are
+   * interpreted in the timezone specified by <code>timeZoneId</code>, or
+   * in the local timezone if not present.  If <code>daysOfWeek</code> is
+   * specified the window is open only during those days (specified
+   * numerically; 1=Sunday, 7=Saturday).
+   * <br><br>This window is open every night from 6:00PM until 8:00AM PST:<pre>
+   *  &lt;org.lockss.daemon.CrawlWindows-Daily&gt;
+   *    &lt;from&gt;8:00&lt;/from&gt;
+   *    &lt;to&gt;22:00&lt;/to&gt;
+   *    &lt;timeZoneId&gt;America/Los_Angeles&lt;/timeZoneId&gt;
+   *  &lt;/org.lockss.daemon.CrawlWindows-Daily&gt;
+   * </pre>
+   * This window is open weekdays from 8:00AM until 10:00PM GMT:<pre>
+   *  &lt;org.lockss.daemon.CrawlWindows-Daily&gt;
+   *    &lt;from&gt;8:00&lt;/from&gt;
+   *    &lt;to&gt;22:00&lt;/to&gt;
+   *    &lt;timeZoneId&gt;GMT&lt;/timeZoneId&gt;
+   *    &lt;daysOfWeek&gt;2;3;4;5;6&lt;/daysOfWeek&gt;
+   *  &lt;/org.lockss.daemon.CrawlWindows-Daily&gt;
+   *  </pre>
    */
-  public static class Daily extends BaseCrawlWindow {
-    static String STEM = "1/1/1 ";
+  public static class Daily extends BaseCalCrawlWindow {
 
     String from;
     String to;
-    String timeZoneId;
+    String daysOfWeek;
     transient Interval intr;
-    transient TimeZone tz;
+    transient Set daySet;
 
     public Daily(String from, String to, String tzName) {
-      super();
+      super(tzName);
       this.from = from;
       this.to = to;
-      this.timeZoneId = tzName;
+    }
+
+    public Daily(String from, String to, String daysOfWeek, String tzName) {
+      this(from, to, tzName);
+      this.daysOfWeek = daysOfWeek;
     }
 
     long parseTime(String time) {
@@ -331,40 +362,55 @@ public class CrawlWindows {
       return intr;
     }
 
-    TimeZone getTimeZone() {
-      if (tz == null) {
-	if (!StringUtil.isNullString(timeZoneId)) {
-	  tz = TimeZone.getTimeZone(timeZoneId);
-	} else {
-	  tz = TimeZone.getDefault();
-	  timeZoneId = tz.getID();
+
+    // sunday == 1
+
+    Set getDays() {
+      if (daySet == null) {
+	if (daysOfWeek == null) {
+	  return null;
 	}
+	Set<Integer> set = new HashSet<Integer>();
+	for (String str : StringUtil.breakAt(daysOfWeek, ";", true)) {
+	  try {
+	    set.add(Integer.parseInt(str));
+	  } catch (NumberFormatException e) {
+	    throw new IllegalArgumentException("Illegal day list: " +
+					       daysOfWeek, e);
+	  }
+	}
+	if (set.isEmpty()) {
+	  throw new IllegalArgumentException("Empty day list: " + daysOfWeek);
+	}
+	daySet = set;
       }
-      return tz;
-    }
-
-    String getTimeZoneId() {
-      getTimeZone();
-      return timeZoneId;
-    }
-
-    public Calendar getStartCalendar(){
-      return getInterval().getStartCalendar();
-    }
-
-    public Calendar getEndCalendar(){
-      return getInterval().getEndCalendar();
+      return daySet;
     }
 
     public boolean canCrawl(Date date) {
-      return getInterval().canCrawl(date);
+      if (!getInterval().canCrawl(date)) {
+	return false;
+      }
+      Set ds = getDays();
+      if (ds == null) {
+	return true;
+      }
+      synchronized (getWindowCal()) {
+	getWindowCal().setTime(date);
+ 	return ds.contains(getWindowCal().get(Calendar.DAY_OF_WEEK));
+      }
+    }
+
+    protected boolean isMatch(Calendar cal) {
+      throw new RuntimeException("Shouldn't happen");
     }
 
     public int hashCode() {
-      return new HashCodeBuilder(31, 43).
+      return new HashCodeBuilder(33, 43).
 	append(getTimeZoneId()).
 	append(from).
 	append(to).
+	append(getDays()).
 	toHashCode();
     }
 
@@ -376,13 +422,28 @@ public class CrawlWindows {
 	Daily other = (Daily)obj;
 	return getTimeZoneId().equals(other.getTimeZoneId())
 	  && from.equals(other.from)
-	  && to.equals(other.to);
+	  && to.equals(other.to)
+	  && ObjectUtils.equals(getDays(), other.getDays());
       }
       return false;
     }
 
     public String toString() {
-      return "Daily from " + from + " to " + to + ", " + getTimeZoneId();
+      StringBuilder sb = new StringBuilder(64);
+      Set ds = getDays();
+      if (ds == null) {
+	sb.append("Daily");
+      } else {
+	sb.append("Days ");
+	sb.append(StringUtil.separatedString(new TreeSet(ds), ";"));
+      }
+      sb.append(" from ");
+      sb.append(from);
+      sb.append(" to ");
+      sb.append(to);
+      sb.append(", ");
+      sb.append(getTimeZoneId());
+      return sb.toString();
     }
   }
 
@@ -459,7 +520,7 @@ public class CrawlWindows {
     }
 
     public int hashCode() {
-      return new HashCodeBuilder(31, 45).
+      return new HashCodeBuilder(35, 45).
 	append(fieldMask).
 	append(calendarSet).
 	toHashCode();
@@ -483,7 +544,7 @@ public class CrawlWindows {
    * empty (returns true).  Otherwise, it returns true iff all of their
    * 'canCrawl()' functions return true.
    */
-  public static class And implements CrawlWindow {
+  public static class And extends BaseCrawlWindow {
     protected Set windows;
 
     public And(Set windowSet) {
@@ -491,10 +552,6 @@ public class CrawlWindows {
         throw new NullPointerException("CrawlWindows.And with null set");
       }
       this.windows = SetUtil.immutableSetOfType(windowSet, CrawlWindow.class);
-    }
-
-    public boolean canCrawl() {
-      return canCrawl(TimeBase.nowDate());
     }
 
     public boolean canCrawl(Date date) {
@@ -508,7 +565,7 @@ public class CrawlWindows {
     }
 
     public int hashCode() {
-      return new HashCodeBuilder(31, 47).
+      return new HashCodeBuilder(37, 47).
 	append(windows).
 	toHashCode();
     }
@@ -534,7 +591,7 @@ public class CrawlWindows {
    * empty (returns false).  Otherwise, it returns true if any of their
    * 'canCrawl()' functions returns true.
    */
-  public static class Or implements CrawlWindow {
+  public static class Or extends BaseCrawlWindow {
     protected Set windows;
 
     public Or(Set windowSet) {
@@ -542,10 +599,6 @@ public class CrawlWindows {
         throw new NullPointerException("CrawlWindows.Or with null set");
       }
       this.windows = SetUtil.immutableSetOfType(windowSet, CrawlWindow.class);
-    }
-
-    public boolean canCrawl() {
-      return canCrawl(TimeBase.nowDate());
     }
 
     public boolean canCrawl(Date date) {
@@ -559,7 +612,7 @@ public class CrawlWindows {
     }
 
     public int hashCode() {
-      return new HashCodeBuilder(31, 49).
+      return new HashCodeBuilder(39, 49).
 	append(windows).
 	toHashCode();
     }
@@ -584,7 +637,7 @@ public class CrawlWindows {
    * The 'NOT' operation window.  It takes a single CrawlWindow, and returns
    * the opposite of it's 'canCrawl()' function.
    */
-  public static class Not implements CrawlWindow {
+  public static class Not extends BaseCrawlWindow {
     CrawlWindow window;
 
     public Not(CrawlWindow window) {
@@ -598,16 +651,12 @@ public class CrawlWindows {
 	return window;
     }
 
-    public boolean canCrawl() {
-      return canCrawl(TimeBase.nowDate());
-    }
-
     public boolean canCrawl(Date date) {
       return !window.canCrawl(date);
     }
 
     public int hashCode() {
-      return new HashCodeBuilder(31, 51).
+      return new HashCodeBuilder(41, 51).
 	append(window).
 	toHashCode();
     }
@@ -642,7 +691,7 @@ public class CrawlWindows {
     }
 
     public int hashCode() {
-      return new HashCodeBuilder(31, 53).
+      return new HashCodeBuilder(43, 53).
 	toHashCode();
     }
 
@@ -670,7 +719,7 @@ public class CrawlWindows {
     }
 
     public int hashCode() {
-      return new HashCodeBuilder(31, 55).
+      return new HashCodeBuilder(45, 55).
 	toHashCode();
     }
 
