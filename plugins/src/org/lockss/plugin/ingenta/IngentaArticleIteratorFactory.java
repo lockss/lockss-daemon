@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaArticleIteratorFactory.java,v 1.3 2012-04-17 19:05:06 akanshab01 Exp $
+ * $Id: IngentaArticleIteratorFactory.java,v 1.4 2013-04-01 00:42:54 tlipkis Exp $
  */
 
 /*
@@ -152,9 +152,10 @@ public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
       if (target != MetadataTarget.Article) {
         guessFullTextHtml(af, plainMat);
       }
-     else {
+      else {
         log.warning("Unexpected content type of " + plainCu.getUrl() + ": "
             + plainCu.getContentType());
+	AuUtil.safeRelease(plainCu);
       }
       if (spec.getTarget() != MetadataTarget.Article) {
         guessAbstract(af, plainMat);

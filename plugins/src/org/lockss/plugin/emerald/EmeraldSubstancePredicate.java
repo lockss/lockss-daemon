@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldSubstancePredicate.java,v 1.2 2013-03-12 22:12:47 thib_gc Exp $
+ * $Id: EmeraldSubstancePredicate.java,v 1.3 2013-04-01 00:42:54 tlipkis Exp $
  */
 
 /*
@@ -88,12 +88,15 @@ public class EmeraldSubstancePredicate implements SubstancePredicate {
     if (cu == null) {     
       return false;
     }
-    if (log.isDebug3()) {
-      log.debug3("MimeType: " + HeaderUtil.getMimeTypeFromContentType(cu.getContentType()) +
-          "\t Returning: "+ (cu.hasContent() &&
-          EM_SUBSTANCE_TYPES.contains(HeaderUtil.getMimeTypeFromContentType(cu.getContentType()))));
+    try {
+      String mime = HeaderUtil.getMimeTypeFromContentType(cu.getContentType());
+      boolean res = cu.hasContent() && EM_SUBSTANCE_TYPES.contains(mime);
+      if (log.isDebug3()) {
+	log.debug3("MimeType: " + mime + "\t Returning: "+ res);
+      }
+      return res;
+    } finally {
+      AuUtil.safeRelease(cu);
     }
-    return cu.hasContent() &&
-      EM_SUBSTANCE_TYPES.contains(HeaderUtil.getMimeTypeFromContentType(cu.getContentType()));
   }
 }

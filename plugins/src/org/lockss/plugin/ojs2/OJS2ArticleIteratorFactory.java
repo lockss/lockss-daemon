@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.4 2012-12-23 21:05:58 ldoan Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.5 2013-04-01 00:42:54 tlipkis Exp $
  */
 
 /*
@@ -382,9 +382,13 @@ public class OJS2ArticleIteratorFactory
 
     protected void guessPdfLanding(ArticleFiles af, CachedUrl cu) {
       
-      if (cu.getContentType().startsWith("application/pdf")) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
-        return;
+      try {
+	if (cu.getContentType().startsWith("application/pdf")) {
+	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
+	  return;
+	}
+      } finally {
+	AuUtil.safeRelease(cu);
       }
       
       Pattern pat = Pattern.compile("/article/view/([^/]+)/(pdf_)?([^/]+)$", Pattern.CASE_INSENSITIVE);
@@ -393,12 +397,13 @@ public class OJS2ArticleIteratorFactory
       if (mat.find()) {
         CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/article/view/$1/$3"));
         
-        if (pdfCu != null && pdfCu.hasContent() && pdfCu.getContentType().startsWith("application/pdf")) {
-          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, cu);
-          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-        }
-        
-        if (pdfCu != null) {
+	try {
+	  if (pdfCu != null && pdfCu.hasContent() &&
+	      pdfCu.getContentType().startsWith("application/pdf")) {
+	    af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, cu);
+	    af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+	  }
+	} finally {
           AuUtil.safeRelease(pdfCu);
         }
         return;
