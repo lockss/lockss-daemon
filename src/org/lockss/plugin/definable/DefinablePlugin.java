@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.72 2013-01-06 02:55:09 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.73 2013-04-01 00:44:41 tlipkis Exp $
  */
 
 /*
@@ -584,7 +584,8 @@ public class DefinablePlugin extends BasePlugin {
 	  String factName = (String)factNameMap.get(mdTypes);
 	  log.debug(mime + " (" + mdTypes + ") metadata extractor: " +
 		    factName);
-	  for (String mdType : (List<String>)StringUtil.breakAt(mdTypes, ";")) {
+	  for (String mdType :
+		 (List<String>)StringUtil.breakAt(mdTypes, ";", true)) {
 	    setMdTypeFact(factClassMap, mdType, factName);
 	  }
 	}
