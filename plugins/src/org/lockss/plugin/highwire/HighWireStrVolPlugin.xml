@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
     </map>
   </entry>
@@ -52,37 +52,37 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;HighWire Press Plugin (H10b), Base URL %s, Volume %s&quot;, base_url, volume_name</string>
+    <string>"HighWire Press Plugin (H10b), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%slockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
+    <string>"%slockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
   	<map>
 	  <entry>
 	    <string>au_title</string>
-	    <string>&quot;%s&quot;, base_url</string>
+	    <string>"%s", base_url</string>
 	  </entry>
 	  <entry>
 	    <string>au_volume</string>
-	    <string>&quot;%slockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
+	    <string>"%slockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
 	  </entry>
 	  <entry>
 	    <string>au_issue</string>
-	    <string>&quot;%scontent/vol%s/issue%s&quot;, base_url, volume_name, issue</string>
+	    <string>"%scontent/vol%s/issue%s", base_url, volume_name, issue</string>
 	  </entry>
 	  <entry>
       <string>au_article</string>
       <map>
         <entry>
           <string>pdf</string>
-          <string>&quot;%scgi/reprint/%s/%s/%s&quot;, base_url, volume_name, issue, article</string>
+          <string>"%scgi/reprint/%s/%s/%s", base_url, volume_name, issue, article</string>
         </entry>
         <entry>
           <string>html;*</string>
-          <string>&quot;%s/cgi/content/full/%s/%s/%s&quot;, base_url, volume_name, issue, article</string>
+          <string>"%s/cgi/content/full/%s/%s/%s", base_url, volume_name, issue, article</string>
         </entry>
       </map>
     </entry>
@@ -95,17 +95,17 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/[^?]+\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%slockss-manifest/vol_%s_manifest\.dtl$&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%scontent/vol%s/&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%scgi/(content|content-nw|issue_pdf)/[^/]+/([^/]+;)?%s/&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%scgi/(data|eletters|entire_issue_pdf|framedreprint|issue_pdf|pdftoc|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar|screenpdf|video|video_dl)/([^/]+;)?%s/&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%scgi/(lookup)&quot;, base_url</string>
-      <string>1,&quot;^%s(this_week)/([^/]+;)?%s/&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%scgi/(content/full|data)/[^/]+/DC[0-9]*&quot;, base_url</string>
-      <string>1,&quot;^%scontent/vol[^/]+/issue[^/]+/images/data/([^/]+/)?DC[0-9]*&quot;, base_url</string>
-      <string>1,&quot;^%sarticletopbar\.dtl&quot;, base_url</string>
+      <string>1,"^https?://%s/[^?]+\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%slockss-manifest/vol_%s_manifest\.dtl$", base_url, volume_name</string>
+      <string>1,"^%scontent/vol%s/", base_url, volume_name</string>
+      <string>1,"^%scgi/(content|content-nw|issue_pdf)/[^/]+/([^/]+;)?%s/", base_url, volume_name</string>
+      <string>1,"^%scgi/(data|eletters|entire_issue_pdf|framedreprint|issue_pdf|pdftoc|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar|screenpdf|video|video_dl)/([^/]+;)?%s/", base_url, volume_name</string>
+      <string>1,"^%scgi/(lookup)", base_url</string>
+      <string>1,"^%s(this_week)/([^/]+;)?%s/", base_url, volume_name</string>
+      <string>1,"^%scgi/(content/full|data)/[^/]+/DC[0-9]*", base_url</string>
+      <string>1,"^%scontent/vol[^/]+/issue[^/]+/images/data/([^/]+/)?DC[0-9]*", base_url</string>
+      <string>1,"^%sarticletopbar\.dtl", base_url</string>
     </list>
   </entry>
   <entry>
@@ -163,8 +163,8 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%scgi/content/full/([^/]+;)?%s/&quot;, base_url, volume_name</string>
-      <string>&quot;^%scgi/reprint/([^/]+;)?%s/&quot;, base_url, volume_name</string>
+      <string>"^%scgi/content/full/([^/]+;)?%s/", base_url, volume_name</string>
+      <string>"^%scgi/reprint/([^/]+;)?%s/", base_url, volume_name</string>
     </list>
   </entry>
   <entry>
