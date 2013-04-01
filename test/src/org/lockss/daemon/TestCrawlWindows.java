@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlWindows.java,v 1.7 2013-04-01 00:43:10 tlipkis Exp $
+ * $Id: TestCrawlWindows.java,v 1.8 2013-04-01 02:51:11 tlipkis Exp $
  */
 
 /*
@@ -530,14 +530,14 @@ public class TestCrawlWindows extends LockssTestCase {
     assertTrue(win.canCrawl(new Date(SATURDAY + " 7:00 GMT")));
   }
 
-  String daily1 =
+  static String daily1 =
     "<org.lockss.daemon.CrawlWindows-Daily>\n" +
     "<from>8:00</from>\n" +
     "<to>22:00</to>\n" +
     "<timeZoneId>GMT-0700</timeZoneId>\n" +
     "</org.lockss.daemon.CrawlWindows-Daily>\n";
 
-  String daily2 =
+  static String daily2 =
     "<org.lockss.daemon.CrawlWindows-Daily>\n" +
     "<from>20:00</from>\n" +
     "<to>6:00</to>\n" +
@@ -545,15 +545,15 @@ public class TestCrawlWindows extends LockssTestCase {
     "<daysOfWeek>2;3;4;5;6</daysOfWeek>\n" +
     "</org.lockss.daemon.CrawlWindows-Daily>\n";
 
-  CrawlWindows.Daily deserDaily(String input) throws Exception {
+  CrawlWindow deserWindow(String input) throws Exception {
     ObjectSerializer deser = new XStreamSerializer(getMockLockssDaemon());
-    return (CrawlWindows.Daily)deser.deserialize(new StringReader(input));
+    return (CrawlWindow)deser.deserialize(new StringReader(input));
   }
 
   public void testDeserDaily() throws Exception {
     CrawlWindows.Daily win;
     
-    win = deserDaily(daily1);
+    win = (CrawlWindows.Daily)deserWindow(daily1);
     assertEquals("Daily from 8:00 to 22:00, GMT-0700", win.toString());
     assertFalse(win.canCrawl(new Date("1/1/1 7:59 GMT-0700")));
     assertTrue(win.canCrawl(new Date("1/1/1 8:00 GMT-0700")));
@@ -565,7 +565,7 @@ public class TestCrawlWindows extends LockssTestCase {
     assertTrue(win.canCrawl(new Date("1/1/2 4:59 GMT")));
     assertFalse(win.canCrawl(new Date("1/1/2 5:01 GMT")));
 
-    win = deserDaily(daily2);
+    win = (CrawlWindows.Daily)deserWindow(daily2);
     assertEquals("Days 2;3;4;5;6 from 20:00 to 6:00, GMT", win.toString());
 
     assertFalse(win.canCrawl(new Date(SUNDAY + " 5:00 GMT")));
@@ -576,6 +576,58 @@ public class TestCrawlWindows extends LockssTestCase {
     assertTrue(win.canCrawl(new Date(THURSDAY + " 5:00 GMT")));
     assertTrue(win.canCrawl(new Date(FRIDAY + " 5:00 GMT")));
     assertFalse(win.canCrawl(new Date(SATURDAY + " 5:00 GMT")));
+  }
+
+  static String and1 =
+    "<org.lockss.daemon.CrawlWindows-And>\n" +
+    "<windows>\n" +
+    daily1 +
+    daily2 +
+    "</windows>\n" +
+    "</org.lockss.daemon.CrawlWindows-And>\n";
+
+  public void testDeserAnd() throws Exception {
+    CrawlWindows.And win;
+    
+    win = (CrawlWindows.And)deserWindow(and1);
+    assertEquals(2, win.windows.size());
+    for (Object x : win.windows) {
+      assertClass(CrawlWindows.Daily.class, x);
+    }
+  }
+
+  static String or1 =
+    "<org.lockss.daemon.CrawlWindows-Or>\n" +
+    "<windows>\n" +
+    daily2 +
+    daily1 +
+    "</windows>\n" +
+    "</org.lockss.daemon.CrawlWindows-Or>\n";
+
+  public void testDeserOr() throws Exception {
+    CrawlWindows.Or win;
+    
+    win = (CrawlWindows.Or)deserWindow(or1);
+    assertEquals(2, win.windows.size());
+    for (Object x : win.windows) {
+      assertClass(CrawlWindows.Daily.class, x);
+    }
+  }
+
+  static String not1 =
+    "<org.lockss.daemon.CrawlWindows-Not>\n" +
+    "<window class=\"org.lockss.daemon.CrawlWindows-Daily\">\n" +
+    "  <from>8:00</from>\n" +
+    "  <to>22:00</to>\n" +
+    "  <timeZoneId>GMT-0600</timeZoneId>\n" +
+    "</window>\n" +
+    "</org.lockss.daemon.CrawlWindows-Not>\n";
+
+  public void testDeserNot() throws Exception {
+    CrawlWindows.Not win;
+    
+    win = (CrawlWindows.Not)deserWindow(not1);
+    assertClass(CrawlWindows.Daily.class, win.window);
   }
 
 
