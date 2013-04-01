@@ -17,21 +17,26 @@
       param[base_url] = http://www.ajnr.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 1980 ; American Journal of Neuroradiology [abstracts only] Volume 1 ; 1 >
-      au < released ; 1981 ; American Journal of Neuroradiology [abstracts only] Volume 2 ; 2 >
-      au < released ; 1982 ; American Journal of Neuroradiology [abstracts only] Volume 3 ; 3 >
-      au < released ; 1983 ; American Journal of Neuroradiology [abstracts only] Volume 4 ; 4 >
-      au < released ; 1984 ; American Journal of Neuroradiology [abstracts only] Volume 5 ; 5 >
-      au < released ; 1985 ; American Journal of Neuroradiology [abstracts only] Volume 6 ; 6 >
-      au < released ; 1986 ; American Journal of Neuroradiology [abstracts only] Volume 7 ; 7 >
-      au < released ; 1987 ; American Journal of Neuroradiology [abstracts only] Volume 8 ; 8 >
-      au < released ; 1988 ; American Journal of Neuroradiology [abstracts only] Volume 9 ; 9 >
-      au < released ; 1989 ; American Journal of Neuroradiology [abstracts only] Volume 10 ; 10 >
-      au < released ; 1990 ; American Journal of Neuroradiology [abstracts only] Volume 11 ; 11 >
-      au < released ; 1991 ; American Journal of Neuroradiology [abstracts only] Volume 12 ; 12 >
-      au < released ; 1992 ; American Journal of Neuroradiology [abstracts only] Volume 13 ; 13 >
-      au < released ; 1993 ; American Journal of Neuroradiology [abstracts only] Volume 14 ; 14 >
-      au < released ; 1994 ; American Journal of Neuroradiology [abstracts only] Volume 15 ; 15 >
+      {
+
+        attr[au_coverage_depth] = abstracts
+
+        au < released ; 1980 ; American Journal of Neuroradiology [abstracts only] Volume 1 ; 1 >
+        au < released ; 1981 ; American Journal of Neuroradiology [abstracts only] Volume 2 ; 2 >
+        au < released ; 1982 ; American Journal of Neuroradiology [abstracts only] Volume 3 ; 3 >
+        au < released ; 1983 ; American Journal of Neuroradiology [abstracts only] Volume 4 ; 4 >
+        au < released ; 1984 ; American Journal of Neuroradiology [abstracts only] Volume 5 ; 5 >
+        au < released ; 1985 ; American Journal of Neuroradiology [abstracts only] Volume 6 ; 6 >
+        au < released ; 1986 ; American Journal of Neuroradiology [abstracts only] Volume 7 ; 7 >
+        au < released ; 1987 ; American Journal of Neuroradiology [abstracts only] Volume 8 ; 8 >
+        au < released ; 1988 ; American Journal of Neuroradiology [abstracts only] Volume 9 ; 9 >
+        au < released ; 1989 ; American Journal of Neuroradiology [abstracts only] Volume 10 ; 10 >
+        au < released ; 1990 ; American Journal of Neuroradiology [abstracts only] Volume 11 ; 11 >
+        au < released ; 1991 ; American Journal of Neuroradiology [abstracts only] Volume 12 ; 12 >
+        au < released ; 1992 ; American Journal of Neuroradiology [abstracts only] Volume 13 ; 13 >
+        au < released ; 1993 ; American Journal of Neuroradiology [abstracts only] Volume 14 ; 14 >
+        au < released ; 1994 ; American Journal of Neuroradiology [abstracts only] Volume 15 ; 15 >
+      }
       au < released ; 1995 ; American Journal of Neuroradiology Volume 16 ; 16 >
       au < released ; 1996 ; American Journal of Neuroradiology Volume 17 ; 17 >
       au < released ; 1997 ; American Journal of Neuroradiology Volume 18 ; 18 >

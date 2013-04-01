@@ -30,25 +30,35 @@
     au < released ; 1975 ; Journal of the American Podiatric Medical Association Volume 65 [tables of contents only] ; 65 >
     au < released ; 1976 ; Journal of the American Podiatric Medical Association Volume 66 [tables of contents only] ; 66 >
     au < released ; 1977 ; Journal of the American Podiatric Medical Association Volume 67 [tables of contents only] ; 67 >
-    au < released ; 1978 ; Journal of the American Podiatric Medical Association Volume 68 [abstracts only] ; 68 >
-    au < released ; 1979 ; Journal of the American Podiatric Medical Association Volume 69 [abstracts only] ; 69 >
-    au < released ; 1980 ; Journal of the American Podiatric Medical Association Volume 70 [abstracts only] ; 70 >
-    au < released ; 1981 ; Journal of the American Podiatric Medical Association Volume 71 [abstracts only] ; 71 >
-    au < released ; 1982 ; Journal of the American Podiatric Medical Association Volume 72 [abstracts only] ; 72 >
-    au < released ; 1983 ; Journal of the American Podiatric Medical Association Volume 73 [abstracts only] ; 73 >
-    au < released ; 1984 ; Journal of the American Podiatric Medical Association Volume 74 [abstracts only] ; 74 >
-    au < released ; 1985 ; Journal of the American Podiatric Medical Association Volume 75 [abstracts only] ; 75 >
-    au < released ; 1986 ; Journal of the American Podiatric Medical Association Volume 76 [abstracts only] ; 76 >
-    au < released ; 1987 ; Journal of the American Podiatric Medical Association Volume 77 [abstracts only] ; 77 >
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < released ; 1978 ; Journal of the American Podiatric Medical Association Volume 68 [abstracts only] ; 68 >
+      au < released ; 1979 ; Journal of the American Podiatric Medical Association Volume 69 [abstracts only] ; 69 >
+      au < released ; 1980 ; Journal of the American Podiatric Medical Association Volume 70 [abstracts only] ; 70 >
+      au < released ; 1981 ; Journal of the American Podiatric Medical Association Volume 71 [abstracts only] ; 71 >
+      au < released ; 1982 ; Journal of the American Podiatric Medical Association Volume 72 [abstracts only] ; 72 >
+      au < released ; 1983 ; Journal of the American Podiatric Medical Association Volume 73 [abstracts only] ; 73 >
+      au < released ; 1984 ; Journal of the American Podiatric Medical Association Volume 74 [abstracts only] ; 74 >
+      au < released ; 1985 ; Journal of the American Podiatric Medical Association Volume 75 [abstracts only] ; 75 >
+      au < released ; 1986 ; Journal of the American Podiatric Medical Association Volume 76 [abstracts only] ; 76 >
+      au < released ; 1987 ; Journal of the American Podiatric Medical Association Volume 77 [abstracts only] ; 77 >
+    }
     au < released ; 1988 ; Journal of the American Podiatric Medical Association Volume 78 ; 78 >
-    au < released ; 1989 ; Journal of the American Podiatric Medical Association Volume 79 [abstracts only] ; 79 >
-    au < released ; 1990 ; Journal of the American Podiatric Medical Association Volume 80 [abstracts only] ; 80 >
-    au < released ; 1991 ; Journal of the American Podiatric Medical Association Volume 81 [abstracts only] ; 81 >
-    au < released ; 1992 ; Journal of the American Podiatric Medical Association Volume 82 [abstracts only] ; 82 >
-    au < released ; 1993 ; Journal of the American Podiatric Medical Association Volume 83 [abstracts only] ; 83 >
-    au < released ; 1994 ; Journal of the American Podiatric Medical Association Volume 84 [abstracts only] ; 84 >
-    au < released ; 1995 ; Journal of the American Podiatric Medical Association Volume 85 [abstracts only] ; 85 >
-    au < released ; 1996 ; Journal of the American Podiatric Medical Association Volume 86 [abstracts only] ; 86 >
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < released ; 1989 ; Journal of the American Podiatric Medical Association Volume 79 [abstracts only] ; 79 >
+      au < released ; 1990 ; Journal of the American Podiatric Medical Association Volume 80 [abstracts only] ; 80 >
+      au < released ; 1991 ; Journal of the American Podiatric Medical Association Volume 81 [abstracts only] ; 81 >
+      au < released ; 1992 ; Journal of the American Podiatric Medical Association Volume 82 [abstracts only] ; 82 >
+      au < released ; 1993 ; Journal of the American Podiatric Medical Association Volume 83 [abstracts only] ; 83 >
+      au < released ; 1994 ; Journal of the American Podiatric Medical Association Volume 84 [abstracts only] ; 84 >
+      au < released ; 1995 ; Journal of the American Podiatric Medical Association Volume 85 [abstracts only] ; 85 >
+      au < released ; 1996 ; Journal of the American Podiatric Medical Association Volume 86 [abstracts only] ; 86 >
+    }
     au < released ; 1997 ; Journal of the American Podiatric Medical Association Volume 87 ; 87 >
     au < released ; 1998 ; Journal of the American Podiatric Medical Association Volume 88 ; 88 >
     au < released ; 1999 ; Journal of the American Podiatric Medical Association Volume 89 ; 89 >

@@ -43,11 +43,16 @@
 
     param[base_url] = http://www.molbiolcell.org/
 
-    au < HighWirePressPlugin ; down ; 1992 ; Molecular Biology of the Cell Volume 3 [abstracts only] ; 3 >
-    au < HighWirePressPlugin ; down ; 1993 ; Molecular Biology of the Cell Volume 4 [abstracts only] ; 4 >
-    au < HighWirePressPlugin ; down ; 1994 ; Molecular Biology of the Cell Volume 5 [abstracts only] ; 5 >
-    au < HighWirePressPlugin ; down ; 1995 ; Molecular Biology of the Cell Volume 6 [abstracts only] ; 6 >
-    au < HighWirePressPlugin ; down ; 1996 ; Molecular Biology of the Cell Volume 7 [abstracts only] ; 7 >
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < HighWirePressPlugin ; down ; 1992 ; Molecular Biology of the Cell Volume 3 [abstracts only] ; 3 >
+      au < HighWirePressPlugin ; down ; 1993 ; Molecular Biology of the Cell Volume 4 [abstracts only] ; 4 >
+      au < HighWirePressPlugin ; down ; 1994 ; Molecular Biology of the Cell Volume 5 [abstracts only] ; 5 >
+      au < HighWirePressPlugin ; down ; 1995 ; Molecular Biology of the Cell Volume 6 [abstracts only] ; 6 >
+      au < HighWirePressPlugin ; down ; 1996 ; Molecular Biology of the Cell Volume 7 [abstracts only] ; 7 >
+    }
     au < HighWirePressPlugin ; down ; 1997 ; Molecular Biology of the Cell Volume 8 ; 8 >
     au < HighWirePressPlugin ; down ; 1998 ; Molecular Biology of the Cell Volume 9 ; 9 >
     au < HighWirePressPlugin ; down ; 1999 ; Molecular Biology of the Cell Volume 10 ; 10 >
