@@ -1,5 +1,5 @@
 /*
- * $Id: XmlDomMetadataExtractor.java,v 1.8 2012-03-13 21:58:28 pgust Exp $
+ * $Id: XmlDomMetadataExtractor.java,v 1.9 2013-04-01 16:34:04 aishizaki Exp $
  */
 
 /*
@@ -239,6 +239,10 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
     if (cu == null) {
       throw new IllegalArgumentException("null CachedUrl");
     }
+    log.setLevel("Debug3");
+    log.debug3("extract(target,cu) cu="+cu.toString());
+    log.info("cu.hascontent ="+cu.hasContent());
+
     ArticleMetadata am = new ArticleMetadata();
 
     DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -255,6 +259,7 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
       return am;
     }
     if (!cu.hasContent()) {
+      log.debug3("no content");
       return am;
     }
     InputSource bReader = new InputSource(cu.openForReading());
@@ -313,7 +318,8 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
           }
           
           if (!StringUtil.isNullString(value)) {
-            am.putRaw(xpathKeys[i], value);
+            // trimming the leading/following whitespace
+            am.putRaw(xpathKeys[i], StringUtil.trimNewlinesAndLeadingWhitespace(value));
           }
         }
       } catch (XPathExpressionException ex) {

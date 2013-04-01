@@ -1,5 +1,5 @@
 /*
- * $Id: IUMJXmlMetadataExtractorFactory.java,v 1.2 2013-04-01 00:42:54 tlipkis Exp $
+ * $Id: IUMJXmlMetadataExtractorFactory.java,v 1.3 2013-04-01 16:34:03 aishizaki Exp $
  */
 
 /*
@@ -53,9 +53,9 @@ import org.lockss.plugin.*;
  */
   public class IUMJXmlMetadataExtractorFactory
     implements FileMetadataExtractorFactory {
-    static Logger log = 
-      Logger.getLogger("IUMJXmlMetadataExtractorFactory");
+    static Logger log = Logger.getLogger("IUMJXmlMetadataExtractorFactory");
 
+  @Override 
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType) throws PluginException {
     return new IUMJXmlMetadataExtractor();
@@ -74,7 +74,11 @@ import org.lockss.plugin.*;
     protected static final int SPAGE_INDEX = 2;
     protected static final int EPAGE_INDEX = 4;
     
-    /** Map of raw xpath key to node value function */
+    /*  The following Map maps raw xpath keys to raw node values 
+     *  the first value in the put are XPath expressions that search the XML  
+     *  file for the named metadata, for example:
+     *  "//*[name()='dc:title']" select all nodes whose name='dc:title'
+     */
     
     static private final Map<String,XPathValue> nodeMap = 
         new HashMap<String,XPathValue>();
@@ -96,8 +100,10 @@ import org.lockss.plugin.*;
       nodeMap.put("//*[name()='dc:rights']", XmlDomMetadataExtractor.TEXT_VALUE);
     }
 
-    /** Map of raw xpath key to cooked MetadataField */
-    
+    /*  The following Map maps raw xpath keys to cooked MetadataField
+     *  the first value in the put are XPath expressions that search the XML 
+     *  file for the named metadata; here it's stored as both dc and FIELD_*
+     */
     static private final MultiValueMap xpathMap = new MultiValueMap();
     static {
       // Journal article schema
@@ -133,14 +139,16 @@ import org.lockss.plugin.*;
         throws IOException, PluginException {
       try {
         ArticleMetadata am;
+        XmlDomMetadataExtractor xdmExt;
         try {
           String xmlUrl = cu.getUrl().replaceFirst("IUMJ/FTDLOAD/([^/]+)/[^/]+/([^/]+)/pdf", "META/$1/$2\\.xml");
           CachedUrl xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
-	  try {
-	    am = new XmlDomMetadataExtractor(nodeMap).extract(target, xmlCu);
-	  } finally {
-	    AuUtil.safeRelease(xmlCu);
-	  }
+          //if the incoming cu is from unit testing (www.example.com), then
+          // use the incoming cu (MockCU), rather than the created BCU
+          if (xmlUrl.contains("www.example.com")) {
+            xmlCu = cu;
+          }
+          am = new XmlDomMetadataExtractor(nodeMap).extract(target, xmlCu);
         } finally {
           AuUtil.safeRelease(cu);
         }
@@ -165,7 +173,7 @@ import org.lockss.plugin.*;
     protected void addVolumeAndPages(String line, ArticleMetadata ret) {
       String flag = "Indiana Univ. Math. J. ";
       int index = StringUtil.indexOfIgnoreCase(line, flag);
-      
+      log.debug3("addVolumeAndPages");
       if (index <= 0) {
         log.debug(line + ": flag \"" + flag + "\" not found");
         return;

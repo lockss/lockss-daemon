@@ -1,5 +1,5 @@
 /*
- * $Id: IUMJArticleIteratorFactory.java,v 1.2 2012-11-21 17:01:21 aishizaki Exp $
+ * $Id: IUMJArticleIteratorFactory.java,v 1.3 2013-04-01 16:34:03 aishizaki Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class IUMJArticleIteratorFactory
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 
 }

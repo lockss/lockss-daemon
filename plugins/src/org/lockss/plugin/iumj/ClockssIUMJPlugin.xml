@@ -1,4 +1,4 @@
-<!--  $Id: ClockssIUMJPlugin.xml,v 1.4 2013-01-30 00:02:02 aishizaki Exp $ -->
+<!--  $Id: ClockssIUMJPlugin.xml,v 1.5 2013-04-01 16:34:03 aishizaki Exp $ -->
 <map>
   <!-- ClockssIUMJPlugin.xml inherited from IUMJPlugin.xml.
        The main differences are names, version.
@@ -21,11 +21,11 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
 <!-- only add version numbers if CLOCKSS version adds different
      substance/metadata/poll rules
