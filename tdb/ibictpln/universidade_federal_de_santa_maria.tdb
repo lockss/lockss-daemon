@@ -19,20 +19,20 @@
 
     param[journal_id] = reveducacao
 
-    au < exists ; 2000 ; 1 ; Educação Volume 1 ; 2000 >
-    au < exists ; 2001 ; 2 ; Educação Volume 2 ; 2001 >
-    au < exists ; 2002 ; 3 ; Educação Volume 3 ; 2002 >
-    au < exists ; 2003 ; 4 ; Educação Volume 4 ; 2003 >
-    au < exists ; 2004 ; 5 ; Educação Volume 5 ; 2004 >
-    au < exists ; 2005 ; 6 ; Educação Volume 6 ; 2005 >
-    au < exists ; 2006 ; 7 ; Educação Volume 7 ; 2006 >
-    au < exists ; 2007 ; 8 ; Educação Volume 8 ; 2007 >
-    au < exists ; 2008 ; 9 ; Educação Volume 9 ; 2008 >
-    au < exists ; 2009 ; 10 ; Educação Volume 10 ; 2009 >
-    au < exists ; 2010 ; 11 ; Educação Volume 11 ; 2010 >
-    au < exists ; 2011 ; 12 ; Educação Volume 12 ; 2011 >
-    au < exists ; 2012 ; 13 ; Educação Volume 13 ; 2012 >
-    au < exists ; 2013 ; 14 ; Educação Volume 14 ; 2013 >
+    au < testing ; 2000 ; 1 ; Educação Volume 1 ; 2000 >
+    au < testing ; 2001 ; 2 ; Educação Volume 2 ; 2001 >
+    au < testing ; 2002 ; 3 ; Educação Volume 3 ; 2002 >
+    au < testing ; 2003 ; 4 ; Educação Volume 4 ; 2003 >
+    au < testing ; 2004 ; 5 ; Educação Volume 5 ; 2004 >
+    au < testing ; 2005 ; 6 ; Educação Volume 6 ; 2005 >
+    au < testing ; 2006 ; 7 ; Educação Volume 7 ; 2006 >
+    au < testing ; 2007 ; 8 ; Educação Volume 8 ; 2007 >
+    au < testing ; 2008 ; 9 ; Educação Volume 9 ; 2008 >
+    au < testing ; 2009 ; 10 ; Educação Volume 10 ; 2009 >
+    au < testing ; 2010 ; 11 ; Educação Volume 11 ; 2010 >
+    au < testing ; 2011 ; 12 ; Educação Volume 12 ; 2011 >
+    au < testing ; 2012 ; 13 ; Educação Volume 13 ; 2012 >
+    au < testing ; 2013 ; 14 ; Educação Volume 14 ; 2013 >
   }
 
   {
@@ -45,18 +45,18 @@
 
     param[journal_id] = fragmentum
 
-    au < exists ; 2001 ; 1 ; Fragmentum Volume 1 ; 2001 >
-    au < exists ; 2002 ; 2 ; Fragmentum Volume 2 ; 2002 >
-    au < exists ; 2003 ; 3 ; Fragmentum Volume 3 ; 2003 >
-    au < exists ; 2004 ; 4 ; Fragmentum Volume 4 ; 2004 >
-    au < exists ; 2005 ; 5 ; Fragmentum Volume 5 ; 2005 >
-    au < exists ; 2006 ; 6 ; Fragmentum Volume 6 ; 2006 >
-    au < exists ; 2007 ; 7 ; Fragmentum Volume 7 ; 2007 >
-    au < exists ; 2008 ; 8 ; Fragmentum Volume 8 ; 2008 >
-    au < exists ; 2009 ; 9 ; Fragmentum Volume 9 ; 2009 >
-    au < exists ; 2010 ; 10 ; Fragmentum Volume 10 ; 2010 >
-    au < exists ; 2011 ; 11 ; Fragmentum Volume 11 ; 2011 >
-    au < exists ; 2012 ; 12 ; Fragmentum Volume 12 ; 2012 >
+    au < testing ; 2001 ; 1 ; Fragmentum Volume 1 ; 2001 >
+    au < testing ; 2002 ; 2 ; Fragmentum Volume 2 ; 2002 >
+    au < testing ; 2003 ; 3 ; Fragmentum Volume 3 ; 2003 >
+    au < testing ; 2004 ; 4 ; Fragmentum Volume 4 ; 2004 >
+    au < testing ; 2005 ; 5 ; Fragmentum Volume 5 ; 2005 >
+    au < testing ; 2006 ; 6 ; Fragmentum Volume 6 ; 2006 >
+    au < testing ; 2007 ; 7 ; Fragmentum Volume 7 ; 2007 >
+    au < testing ; 2008 ; 8 ; Fragmentum Volume 8 ; 2008 >
+    au < testing ; 2009 ; 9 ; Fragmentum Volume 9 ; 2009 >
+    au < testing ; 2010 ; 10 ; Fragmentum Volume 10 ; 2010 >
+    au < testing ; 2011 ; 11 ; Fragmentum Volume 11 ; 2011 >
+    au < testing ; 2012 ; 12 ; Fragmentum Volume 12 ; 2012 >
   }
   
   {
@@ -68,7 +68,7 @@
 
     param[journal_id] = reufsm
 
-    au < exists ; 2011 ; 1 ; Revista de Enfermagem da UFSM Volume 1 ; 2011 >
-    au < exists ; 2012 ; 2 ; Revista de Enfermagem da UFSM Volume 2 ; 2012 >
+    au < testing ; 2011 ; 1 ; Revista de Enfermagem da UFSM Volume 1 ; 2011 >
+    au < testing ; 2012 ; 2 ; Revista de Enfermagem da UFSM Volume 2 ; 2012 >
   }
 }
