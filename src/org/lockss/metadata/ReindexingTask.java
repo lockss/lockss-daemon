@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.8 2013-03-26 22:17:34 fergaloy-sf Exp $
+ * $Id: ReindexingTask.java,v 1.9 2013-04-02 20:29:22 pgust Exp $
  */
 
 /*
@@ -494,12 +494,7 @@ public class ReindexingTask extends StepTask {
 	tdbauIsbn = tdbau.getIsbn();
 	tdbauIssn = tdbau.getPrintIssn();
 	tdbauEissn = tdbau.getEissn();
-	if (TdbUtil.isBook(tdbau)) {
-	  // the journal title is the TdbAu name for a book
-	  tdbauJournalTitle = tdbau.getName();
-	} else {
-	  tdbauJournalTitle = tdbau.getJournalTitle();
-	}
+	tdbauJournalTitle = tdbau.getJournalTitle();
       }
 
       if (tdbau != null) {
