@@ -15,6 +15,14 @@
     <string>plugin_parent</string>
     <string>org.lockss.plugin.highwire.HighWirePressPlugin</string>
   </entry>
+    <entry>
+    <string>plugin_version</string>
+    <string>83</string>
+  </entry>
+   <entry>
+    <string>plugin_parent_version</string>
+    <string>83</string>
+  </entry>
   <entry>
     <string>au_name</string>
     <string>"HighWire Press Plugin (H10c for CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
