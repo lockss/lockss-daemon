@@ -19,7 +19,7 @@
     
     param[journal_abbr] = cp
  
-    au < exists ; exists ; 2012 ; Comprehensive Psychology Volume 1 ; 1 >
+    au < manifest ; exists ; 2012 ; Comprehensive Psychology Volume 1 ; 1 >
     au < expected ; exists ; 2013 ; Comprehensive Psychology Volume 2 ; 2 >
 
   }
@@ -33,7 +33,7 @@
     
     param[journal_abbr] = it
  
-    au < exists ; exists ; 2012 ; Innovative Teaching Volume 1 ; 1 >
+    au < manifest ; exists ; 2012 ; Innovative Teaching Volume 1 ; 1 >
     au < expected ; exists ; 2013 ; Innovative Teaching Volume 2 ; 2 >
 
   }
@@ -157,7 +157,9 @@
     au < testing ; exists ; 2011 ; Psychological Reports Volume 108 ; 108 >
     au < testing ; exists ; 2011 ; Psychological Reports Volume 109 ; 109 >
     au < crawling ; exists ; 2012 ; Psychological Reports Volume 110 ; 110 >
-    au < expected ; exists ; 2013 ; Psychological Reports Volume 111 ; 111 >
+    au < manifest ; exists ; 2012 ; Psychological Reports Volume 111 ; 111 >
+    au < manifest ; exists ; 2013 ; Pyschological Reports Volume 112 ; 112 >
+    
     
   }
 
