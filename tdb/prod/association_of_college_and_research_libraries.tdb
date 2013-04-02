@@ -20,13 +20,13 @@
       
       param[base_url] = http://crl.acrl.org/
   
-      au < exists ; 1939-1940 ; College & Research Libraries Volume 1 ; 1 >
-      au < exists ; 1940-1941 ; College & Research Libraries Volume 2 ; 2 >
-      au < exists ; 1941-1942 ; College & Research Libraries Volume 3 ; 3 >
-      au < exists ; 1942-1943 ; College & Research Libraries Volume 4 ; 4 >
-      au < exists ; 1943-1944 ; College & Research Libraries Volume 5 ; 5 >
-      au < exists ; 1944-1945 ; College & Research Libraries Volume 6 ; 6 >
-      au < exists ; 1946 ; College & Research Libraries Volume 7 ; 7 >
+      au < manifest ; 1939-1940 ; College & Research Libraries Volume 1 ; 1 >
+      au < manifest ; 1940-1941 ; College & Research Libraries Volume 2 ; 2 >
+      au < manifest ; 1941-1942 ; College & Research Libraries Volume 3 ; 3 >
+      au < manifest ; 1942-1943 ; College & Research Libraries Volume 4 ; 4 >
+      au < manifest ; 1943-1944 ; College & Research Libraries Volume 5 ; 5 >
+      au < manifest ; 1944-1945 ; College & Research Libraries Volume 6 ; 6 >
+      au < manifest ; 1946 ; College & Research Libraries Volume 7 ; 7 >
       au < testing ; 1947 ; College & Research Libraries Volume 8 ; 8 >
       au < testing ; 1948 ; College & Research Libraries Volume 9 ; 9 >
       au < testing ; 1949 ; College & Research Libraries Volume 10 ; 10 >
