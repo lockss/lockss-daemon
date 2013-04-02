@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.8 2013-04-01 16:53:44 pgust Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.9 2013-04-02 11:01:14 easyonthemayo Exp $
  */
 
 /*
@@ -80,7 +80,9 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   protected String publicationType = null;
   protected String coverageDepth = null;
 
+  //////////////////////////////////////////////////////////////////////////////
   // Getters (implementing the interface)
+  //////////////////////////////////////////////////////////////////////////////
 
   public String getPrintIsbn() {
     return printIsbn;
@@ -218,18 +220,9 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     return endIssue;
   }
 
-
-  public BibliographicItemAdapter setPublicationType(String publicationType) {
-    this.publicationType = publicationType;
-    return this;
-  }
-  
-  public BibliographicItemAdapter setCoverageDepth(String coverageDepth) {
-    this.coverageDepth = coverageDepth;
-    return this;
-  }
-
+  //////////////////////////////////////////////////////////////////////////////
   // Setters (chainable)
+  //////////////////////////////////////////////////////////////////////////////
   public BibliographicItemAdapter setPrintIsbn(String printIsbn) {
     if (MetadataUtil.isIsbn(printIsbn)) this.printIsbn = printIsbn;
     return this;
@@ -335,9 +328,19 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     return this;
   }
 
+  public BibliographicItemAdapter setPublicationType(String publicationType) {
+    this.publicationType = publicationType;
+    return this;
+  }
+
+  public BibliographicItemAdapter setCoverageDepth(String coverageDepth) {
+    this.coverageDepth = coverageDepth;
+    return this;
+  }
+
   //////////////////////////////////////////////////////////////////////////////
   // Automatically generated equals and hashCode methods.
-  // These should be regerenerated if more fields are added.
+  // These should be regenerated if more fields are added.
   //////////////////////////////////////////////////////////////////////////////
 
   @Override
@@ -408,6 +411,8 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     result = 31 * result + (endYear != null ? endYear.hashCode() : 0);
     result = 31 * result + (startIssue != null ? startIssue.hashCode() : 0);
     result = 31 * result + (endIssue != null ? endIssue.hashCode() : 0);
+    result = 31 * result + (publicationType != null ? publicationType.hashCode() : 0);
+    result = 31 * result + (coverageDepth != null ? coverageDepth.hashCode() : 0);
     return result;
   }
 }

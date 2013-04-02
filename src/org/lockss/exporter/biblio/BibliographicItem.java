@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItem.java,v 1.5 2013-04-01 16:53:44 pgust Exp $
+ * $Id: BibliographicItem.java,v 1.6 2013-04-02 11:01:14 easyonthemayo Exp $
  */
 
 /*
@@ -54,6 +54,9 @@ package org.lockss.exporter.biblio;
  * <p>
  * Note that this interface is currently journal-specific, and may need to be
  * expanded into a set of interfaces or a hierarchy, in order to handle books.
+ * Methods have been added to establish the "type" of a BibliographicItem,
+ * which may be mapped externally to an enumeration. Currently this is left open
+ * so as not to impose an application-specific usage.
  *
  * @author Neil Mayo
  */

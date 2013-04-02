@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.42 2013-03-29 11:55:58 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.43 2013-04-02 11:01:14 easyonthemayo Exp $
  */
 
 /*
@@ -788,7 +788,8 @@ public class KbartConverter {
     // Add ISBN/EISBN (for books) or ISSN/EISSN (for periodicals)
     String printId = MetadataUtil.normaliseIsbn(au.getPrintIsbn());
     String onlineId = MetadataUtil.normaliseIsbn(au.getEisbn());
-    if ((printId == null) && (onlineId == null)) {
+    // Only set ISSNs if the ISBNs are null and the AU is not a book series
+    if ((printId == null) && (onlineId == null) && !TdbUtil.isBookSeries(au)) {
       printId = MetadataUtil.normaliseIssn(au.getPrintIssn());
       onlineId = MetadataUtil.normaliseIssn(au.getEissn());
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.19 2013-03-28 15:05:21 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.20 2013-04-02 11:01:14 easyonthemayo Exp $
  */
 
 /*
@@ -601,7 +601,53 @@ public class TdbUtil {
    */
   public static boolean isBook(BibliographicItem au) {
     return !StringUtil.isNullString(au.getIsbn());
+    //return getBibliographicItemType(au)==BibliographicItemType.BOOK;
   }
+
+  /**
+   * Test whether an AU appears to be part of a book series.
+   * @param au
+   * @return
+   */
+  public static boolean isBookSeries(BibliographicItem au) {
+    return getBibliographicItemType(au)==BibliographicItemType.BOOKSERIES;
+  }
+
+  /**
+   * Get the enumerated type of a BibliographicItem.
+   * @param au
+   * @return
+   */
+  public static BibliographicItemType getBibliographicItemType(BibliographicItem au) {
+    return BibliographicItemType.getType(au.getPublicationType());
+  }
+
+  /**
+   * The type of a BibliographicItem within LOCKSS. This provides an enumerated
+   * interpretation of the publicationType string. Being of a particular type
+   * implies that there are values on a certain set of fields in the item, but
+   * this is not necessarily enforced by BibliographicItem implementations.
+   */
+  public static enum BibliographicItemType {
+    JOURNAL, BOOK, BOOKSERIES, BLOG;
+    /** The default type of item; this is used if no other type matches the
+     * value of a non-null type property string. */
+    public static BibliographicItemType DEFAULT = JOURNAL;
+    /**
+     * Get the type identified by the type string.
+     * @param type a string representing the type of a BibliographicItem
+     * @return the type identified by the string, or the DEFAULT, or null if the string is null
+     */
+    public static BibliographicItemType getType(String type) {
+      if (type==null) return null;
+      try {
+        return valueOf(type.trim().toUpperCase());
+      } catch (IllegalArgumentException e) {
+        return DEFAULT;
+      }
+    }
+  }
+
 
   /**
    * An enum representing the various scopes which can be requested and 

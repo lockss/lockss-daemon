@@ -270,6 +270,18 @@ public class TdbTestUtil {
   }
 
 
+  /**
+   * Create a TdbTitle with a variety of year attributes, holding book TdbAus,
+   * that is with an ISBN and a type of "book". This is only for volume-related
+   * testing; in full use, if AUs identified by the same ISSN and
+   * title have different parameter keys, the export will fail. Additionally,
+   * provides AUs with an incorrect volume value set against other keys, which
+   * should be ignored.
+   *
+   * @param years a list of year strings
+   * @return a new TdbTitle
+   * @throws TdbException
+   */
   public static TdbTitle makeBookTestTitle(String id, String ... years) throws TdbException {
     TdbTitle bk1 = new TdbTitle("book "+id, DEFAULT_TITLE_ID);
     bk1.setTdbPublisher(new TdbPublisher(DEFAULT_PUBLISHER));
@@ -278,6 +290,35 @@ public class TdbTestUtil {
       TdbAu au = createBasicAu("book "+id+":"+i, DEFAULT_PLUGIN);
       au.setAttr("isbn", DEFAULT_ISBN_1);
       au.setParam("year", years[i]);
+      au.setPropertyByName("type", "book");
+      bk1.addTdbAu(au);
+    }
+    return bk1;
+  }
+
+  /**
+   * Create a book series TdbTitle with a variety of year attributes, holding
+   * book TdbAus,that is with an ISBN and a type of "book", and also an ISSN
+   * reflecting the series. This is only for volume-related
+   * testing; in full use, if AUs identified by the same ISSN and
+   * title have different parameter keys, the export will fail. Additionally,
+   * provides AUs with an incorrect volume value set against other keys, which
+   * should be ignored.
+   *
+   * @param years a list of year strings
+   * @return a new TdbTitle
+   * @throws TdbException
+   */
+  public static TdbTitle makeBookSeriesTestTitle(String id, String ... years) throws TdbException {
+    TdbTitle bk1 = new TdbTitle("bookSeries "+id, DEFAULT_TITLE_ID);
+    bk1.setTdbPublisher(new TdbPublisher(DEFAULT_PUBLISHER));
+    for (int i = 0; i < years.length; i++) {
+      // Create AUs with basic properties and different year
+      TdbAu au = createBasicAu("bookSeries "+id+":"+i, DEFAULT_PLUGIN);
+      au.setAttr("isbn", DEFAULT_ISBN_1);
+      au.setAttr("issn", DEFAULT_ISSN_1);
+      au.setParam("year", years[i]);
+      au.setPropertyByName("type", "bookSeries");
       bk1.addTdbAu(au);
     }
     return bk1;
