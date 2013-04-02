@@ -7113,7 +7113,7 @@
         au < released ; 2010 ; Crime, Media, Culture Volume 6 ; 6 >
         au < released ; 2011 ; Crime, Media, Culture Volume 7 ; 7 >
         au < released ; 2012 ; Crime, Media, Culture Volume 8 ; 8 >
-        au < expected ; 2013 ; Crime, Media, Culture Volume 9 ; 9 >
+        au < manifest ; 2013 ; Crime, Media, Culture Volume 9 ; 9 >
 
       }
 
@@ -9523,7 +9523,7 @@
         au < released ; 2010 ; Electronic News Volume 4 ; 4 >
         au < released ; 2011 ; Electronic News Volume 5 ; 5 >
         au < released ; 2012 ; Electronic News Volume 6 ; 6 >
-        au < expected ; 2013 ; Electronic News Volume 7 ; 7 >
+        au < manifest ; 2013 ; Electronic News Volume 7 ; 7 >
 
       }
 
@@ -15399,7 +15399,7 @@
         au < released ; 2010 ; International Journal of Cross Cultural Management Volume 10 ; 10 >
         au < released ; 2011 ; International Journal of Cross Cultural Management Volume 11 ; 11 >
         au < released ; 2012 ; International Journal of Cross Cultural Management Volume 12 ; 12 >
-        au < expected ; 2013 ; International Journal of Cross Cultural Management Volume 13 ; 13 >
+        au < manifest ; 2013 ; International Journal of Cross Cultural Management Volume 13 ; 13 >
 
       }
 
@@ -17653,7 +17653,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2010 ; Journal of Applied Social Science Volume 4 ; 4 >
         au < released ; 2011 ; Journal of Applied Social Science Volume 5 ; 5 >
         au < released ; 2012 ; Journal of Applied Social Science Volume 6 ; 6 >
-        au < expected ; 2013 ; Journal of Applied Social Science Volume 7 ; 7 >
+        au < manifest ; 2013 ; Journal of Applied Social Science Volume 7 ; 7 >
 
     }
 
@@ -31514,7 +31514,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Probation Journal Volume 57 ; 57 >
         au < released ; 2011 ; Probation Journal Volume 58 ; 58 >
         au < released ; 2012 ; Probation Journal Volume 59 ; 59 >
-        au < expected ; 2013 ; Probation Journal Volume 60 ; 60 >
+        au < manifest ; 2013 ; Probation Journal Volume 60 ; 60 >
 
       }
 
@@ -34303,7 +34303,7 @@ comment[mpj] = now published by Brill
 
         au < released ; 2011 ; Sage Open Volume 1 ; 1 >
         au < released ; 2012 ; Sage Open Volume 2 ; 2 >
-        au < expected ; 2013 ; Sage Open Volume 3 ; 3 >
+        au < manifest ; 2013 ; Sage Open Volume 3 ; 3 >
 
     }
 
@@ -35350,7 +35350,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Social Compass Volume 57 ; 57 >
         au < released ; 2011 ; Social Compass Volume 58 ; 58 >
         au < released ; 2012 ; Social Compass Volume 59 ; 59 >
-        au < expected ; 2013 ; Social Compass Volume 60 ; 60 >
+        au < manifest ; 2013 ; Social Compass Volume 60 ; 60 >
 
       }
 
@@ -36055,7 +36055,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Space and Culture Volume 13 ; 13 >
         au < released ; 2011 ; Space and Culture Volume 14 ; 14 >
         au < released ; 2012 ; Space and Culture Volume 15 ; 15 >
-        au < expected ; 2013 ; Space and Culture Volume 16 ; 16 >
+        au < manifest ; 2013 ; Space and Culture Volume 16 ; 16 >
 
       }
 
@@ -37878,7 +37878,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Time & Society Volume 19 ; 19 >
         au < released ; 2011 ; Time & Society Volume 20 ; 20 >
         au < released ; 2012 ; Time & Society Volume 21 ; 21 >
-        au < expected ; 2013 ; Time & Society Volume 22 ; 22 >
+        au < manifest ; 2013 ; Time & Society Volume 22 ; 22 >
 
       }
 
@@ -38554,7 +38554,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Trends in Amplification Volume 14 ; 14 >
         au < released ; 2011 ; Trends in Amplification Volume 15 ; 15 >
         au < released ; 2012 ; Trends in Amplification Volume 16 ; 16 >
-        au < expected ; 2013 ; Trends in Amplification Volume 17 ; 17 >
+        au < manifest ; 2013 ; Trends in Amplification Volume 17 ; 17 >
 
       }
 
@@ -40761,7 +40761,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2010 ; Sociological Theory Volume 28 ; 28 >
         au < manifest ; 2011 ; Sociological Theory Volume 29 ; 29 >
         au < released ; 2012 ; Sociological Theory Volume 30 ; 30 >
-        au < expected ; 2013 ; Sociological Theory Volume 31 ; 31 >
+        au < manifest ; 2013 ; Sociological Theory Volume 31 ; 31 >
   
       }
   
@@ -41456,7 +41456,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://wfr.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; World Future Review Volume 5 ; 5 >
+    au < manifest ; 2013 ; World Future Review Volume 5 ; 5 >
 
     }
     
