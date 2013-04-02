@@ -1,5 +1,5 @@
 /*
- * $Id: IUMJXmlMetadataExtractorFactory.java,v 1.4 2013-04-01 17:56:16 aishizaki Exp $
+ * $Id: IUMJXmlMetadataExtractorFactory.java,v 1.5 2013-04-02 22:41:52 aishizaki Exp $
  */
 
 /*
@@ -142,11 +142,6 @@ import org.lockss.plugin.*;
         try {
           String xmlUrl = cu.getUrl().replaceFirst("IUMJ/FTDLOAD/([^/]+)/[^/]+/([^/]+)/pdf", "META/$1/$2\\.xml");
           CachedUrl xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
-          //if the incoming cu is from unit testing (www.example.com), then
-          // use the incoming cu (MockCU), rather than the created BCU
-          if (xmlUrl.contains("www.example.com")) {
-            xmlCu = cu;
-          }
           try {
 	    am = new XmlDomMetadataExtractor(nodeMap).extract(target, xmlCu);
 	  } finally {
@@ -176,7 +171,6 @@ import org.lockss.plugin.*;
     protected void addVolumeAndPages(String line, ArticleMetadata ret) {
       String flag = "Indiana Univ. Math. J. ";
       int index = StringUtil.indexOfIgnoreCase(line, flag);
-      log.debug3("addVolumeAndPages");
       if (index <= 0) {
         log.debug(line + ": flag \"" + flag + "\" not found");
         return;

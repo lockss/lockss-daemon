@@ -1,5 +1,5 @@
 /*
- * $Id: TestIUMJXmlMetadataExtractorFactory.java,v 1.1 2013-04-01 16:34:03 aishizaki Exp $
+ * $Id: TestIUMJXmlMetadataExtractorFactory.java,v 1.2 2013-04-02 22:41:52 aishizaki Exp $
  */
 
 /*
@@ -49,13 +49,12 @@ import org.lockss.plugin.simulated.*;
 
 /**
  * One of the files used to get the xml source for this plugin is:
- * http://clockss-ingest.lockss.org/sourcefiles/acm-dev/2010/1jun2010/UPD-PROC-POPL10-1706299/
+ * http://www.iumj.indiana.edu/META/2006/2558.xml
  */
 public class TestIUMJXmlMetadataExtractorFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestIUMJXmlMetadataExtractorFactory");
 
-  private SimulatedArchivalUnit sau; // Simulated AU to generate content
-  private ArchivalUnit hau;
+  private MockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
 
   private static String PLUGIN_NAME = "org.lockss.plugin.iumj.IUMJPlugin";
@@ -75,32 +74,10 @@ public class TestIUMJXmlMetadataExtractorFactory extends LockssTestCase {
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
-    log.setLevel("Debug3");
-    sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
-                                              simAuConfig(tempDirPath));
-    hau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, iumjAuConfig());
+    mau = new MockArchivalUnit();
+    mau.setConfiguration(iumjAuConfig());
   }
 
-  public void tearDown() throws Exception {
-    sau.deleteContentTree();
-    theDaemon.stopDaemon();
-    super.tearDown();
-  }
-
-  Configuration simAuConfig(String rootPath) {
-    Configuration conf = ConfigManager.newConfiguration();
-    conf.put("root", rootPath);
-    conf.put("base_url", BASE_URL);
-    conf.put("year", "2011");
-    conf.put("depth", "2");
-    conf.put("branch", "3");
-    conf.put("numFiles", "7");
-    conf.put("fileTypes", "" +
-              SimulatedContentGenerator.FILE_TYPE_HTML);
-    conf.put("binFileSize", "7");
-    return conf;
-  }
-  
   Configuration iumjAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     // must include all the ConfigParamDescriptors from the plugin
@@ -144,17 +121,17 @@ public class TestIUMJXmlMetadataExtractorFactory extends LockssTestCase {
   
   public void testExtractFromGoodContent() throws Exception {
     String url = BASE_URL+"vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, hau);
-    cu.setContent(goodContent);
-    cu.setContentSize(goodContent.length());
-    cu.setExists(true);
-
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
+    CIProperties xmlHeader = new CIProperties();
+    xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
+    MockCachedUrl mcu = mau.addUrl(url, true, true, xmlHeader);
+    mcu.setContent(goodContent);
+    mcu.setContentSize(goodContent.length());
+    
     FileMetadataExtractor me = new IUMJXmlMetadataExtractorFactory.IUMJXmlMetadataExtractor();
     assertNotNull(me);
 
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
 
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
@@ -193,29 +170,19 @@ public class TestIUMJXmlMetadataExtractorFactory extends LockssTestCase {
 
   public void testExtractFromBadContent() throws Exception {
     String url = BASE_URL+"vol1/issue2/bad3/";
-    MockCachedUrl cu = new MockCachedUrl(url, hau);
-    cu.setContent(badContent);
-    cu.setContentSize(badContent.length());
+    CIProperties xmlHeader = new CIProperties();
+    xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
+    MockCachedUrl mcu = mau.addUrl(url, true, true, xmlHeader);
+    mcu.setContent(badContent);
+    mcu.setContentSize(badContent.length());
+
     FileMetadataExtractor me = new IUMJXmlMetadataExtractorFactory.IUMJXmlMetadataExtractor();
     assertNotNull(me);
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
     assertNotNull(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
  
-  }
-
-  /**
-   * Inner class that where a number of Archival Units can be created
-   * 
-   */
-  public static class MySimulatedPlugin extends SimulatedPlugin {
-    public ArchivalUnit createAu0(Configuration auConfig)
-    throws ArchivalUnit.ConfigurationException {
-      ArchivalUnit au = new SimulatedArchivalUnit(this);
-      au.setConfiguration(auConfig);
-      return au;
-    }
   }
 }
