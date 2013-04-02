@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.17 2013-04-01 16:54:43 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.18 2013-04-02 20:30:37 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.17 2013-04-01 16:54:43 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.18 2013-04-02 20:30:37 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -449,6 +449,21 @@ public class TestTdbAu extends LockssTestCase {
     assertEquals("-2468", au.getEissn());
     assertEquals("string", au.getIssnL());
     assertNull(au.getIssn());
+  }
+  
+  /**
+   * Test publication title
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testJournalTitle() throws TdbException {
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    assertNull(au.getJournalTitle());  // because au has no TdbTitle
+    au.setPropertyByName("issn", "1234-5678");
+    assertNull(au.getJournalTitle());  // because au has no TdbTitle
+    au.setAttr("isbn", "978-3-540-33894-9");
+    assertEquals("Test AU", au.getJournalTitle());
+    au.setPropertyByName("type", "book");
+    assertEquals("Test AU", au.getJournalTitle());
   }
   
   /**
