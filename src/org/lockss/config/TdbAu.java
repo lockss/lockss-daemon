@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.21 2013-04-01 16:53:44 pgust Exp $
+ * $Id: TdbAu.java,v 1.22 2013-04-02 20:18:57 pgust Exp $
  */
 
 /*
@@ -524,11 +524,17 @@ public class TdbAu implements BibliographicItem {
   }
 
   /**
-   * Convenience method returns the AU's TdbTitle's name.
+   * Returns the publication title. For books and book series, the
+   * publication title is the TdbAu name, otherwise, it is the TdbTitle name.
    *
-   * @return the name of this AU's TdbTitle, or <tt>null</tt>
+   * @return the name of this publication, or <tt>null</tt>
    */
   public String getJournalTitle() {
+    String pubType = getPublicationType();
+    if (   pubType.equalsIgnoreCase("book") 
+        || pubType.equalsIgnoreCase("bookSeries")) {
+      return name;
+    }
     return (title != null) ? title.getName() : null;
   }
 
