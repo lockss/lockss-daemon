@@ -227,7 +227,7 @@ public class TestTdbUtil extends LockssTestCase {
   public final void testIsBook() throws Tdb.TdbException {
     TdbTitle bookTitle = TdbTestUtil.makeBookTestTitle("v1", "1990", "2000");
     for (TdbAu book:bookTitle.getTdbAus()) {
-      assertTrue(TdbUtil.isBook(book));
+      assertTrue(book.getPublicationType().equalsIgnoreCase("book"));
     }
   }
 
@@ -239,31 +239,9 @@ public class TestTdbUtil extends LockssTestCase {
   public final void testIsBookSeries() throws Tdb.TdbException {
     TdbTitle bookSeriesTitle = TdbTestUtil.makeBookSeriesTestTitle("v1", "1990", "2000");
     for (TdbAu book:bookSeriesTitle.getTdbAus()) {
-      assertTrue(TdbUtil.isBookSeries(book));
+      assertTrue(book.getPublicationType().equalsIgnoreCase("bookSeries"));
     }
   }
-
-  /**
-   * Get the enumerated type of a BibliographicItem.
-   * @param au
-   * @return
-   */
-  public final void testGetBibliographicItemType() throws Tdb.TdbException {
-    // Test books
-    TdbTitle bookTitle = TdbTestUtil.makeBookTestTitle("v1", "1990", "2000");
-    for (TdbAu book:bookTitle.getTdbAus()) {
-      assertTrue(TdbUtil.getBibliographicItemType(book)==TdbUtil.BibliographicItemType.BOOK);
-    }
-    // Test books in a series
-    TdbTitle bookSeriesTitle = TdbTestUtil.makeBookSeriesTestTitle("v1", "1990", "2000");
-    for (TdbAu book:bookSeriesTitle.getTdbAus()) {
-      assertTrue(TdbUtil.getBibliographicItemType(book)==TdbUtil.BibliographicItemType.BOOKSERIES);
-    }
-    // Test default
-    TdbAu au = TdbTestUtil.makeIssueTestAu("v1", "1");
-    assertTrue(TdbUtil.getBibliographicItemType(au)==TdbUtil.BibliographicItemType.JOURNAL);
-  }
-
 
   private final Collection<ArchivalUnit> getMockAus() {
     Collection<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
