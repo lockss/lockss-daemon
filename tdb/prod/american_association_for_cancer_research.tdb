@@ -21,7 +21,7 @@
     
     au < released ; 2011 ; Cancer Discovery Volume 1 ; 1 >
     au < released ; 2012 ; Cancer Discovery Volume 2 ; 2 >
-    au < ready ; 2013 ; Cancer Discovery Volume 3 ; 3 >
+    au < manifest ; 2013 ; Cancer Discovery Volume 3 ; 3 >
 
 
   }
@@ -62,7 +62,7 @@
       au < released ; 2010 ; Cancer Epidemiology Biomarkers & Prevention Volume 19 ; 19 >
       au < released ; 2011 ; Cancer Epidemiology Biomarkers & Prevention Volume 20 ; 20 >
       au < ready ; 2012 ; Cancer Epidemiology Biomarkers & Prevention Volume 21 ; 21 >
-      au < ready ; 2013 ; Cancer Epidemiology Biomarkers & Prevention Volume 22 ; 22 >
+      au < manifest ; 2013 ; Cancer Epidemiology Biomarkers & Prevention Volume 22 ; 22 >
 
     }
 
@@ -87,7 +87,7 @@
       au < HighWirePressPlugin ; down ; 2010 ; Cancer Prevention Research Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Cancer Prevention Research Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Cancer Prevention Research Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; ready ; 2013 ; Cancer Prevention Research Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 2013 ; Cancer Prevention Research Volume 6 ; 6 >
 
     }
 
@@ -179,7 +179,7 @@
       au < HighWirePressPlugin ; down ; 2010 ; Cancer Research Volume 70 ; 70 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Cancer Research Volume 71 ; 71 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Cancer Research Volume 72 ; 72 >
-      au < HighWirePressH20Plugin ; ready ; 2013 ; Cancer Research Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; manifest ; 2013 ; Cancer Research Volume 73 ; 73 >
 
     }
 
@@ -218,7 +218,7 @@
       au < released ; 2010 ; Clinical Cancer Research Volume 16 ; 16 >
       au < released ; 2011 ; Clinical Cancer Research Volume 17 ; 17 >
       au < released ; 2012 ; Clinical Cancer Research Volume 18 ; 18 >
-      au < ready ; 2013 ; Clinical Cancer Research Volume 19 ; 19 >
+      au < manifest ; 2013 ; Clinical Cancer Research Volume 19 ; 19 >
 
     }
 
@@ -249,7 +249,7 @@
       au < released ; 2010 ; Molecular Cancer Research Volume 8 ; 8 >
       au < released ; 2011 ; Molecular Cancer Research Volume 9 ; 9 >
       au < ready ; 2012  ; Molecular Cancer Research Volume 10 ; 10 >
-      au < ready ; 2013 ; Molecular Cancer Research Volume 11 ; 11 >
+      au < manifest ; 2013 ; Molecular Cancer Research Volume 11 ; 11 >
 
     }
 
@@ -281,7 +281,7 @@
       au < released ; 2010 ; Molecular Cancer Therapeutics Volume 9 ; 9 >
       au < released ; 2011 ; Molecular Cancer Therapeutics Volume 10 ; 10 >
       au < released ; 2012 ; Molecular Cancer Therapeutics Volume 11 ; 11 >
-      au < ready ; 2013 ; Molecular Cancer Therapeutics Volume 12 ; 12 >
+      au < manifest ; 2013 ; Molecular Cancer Therapeutics Volume 12 ; 12 >
 
     }
 
