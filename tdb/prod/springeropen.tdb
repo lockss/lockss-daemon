@@ -60,7 +60,7 @@
   {
   
     title <
-      name = Advances in Difference Equations ;
+      name = Agricultural and Food Economics ;
       eissn = 2193-7532 
     >
 
@@ -68,10 +68,41 @@
     param[base_url] = http://www.agrifoodecon.com/
     param[journal_issn] = 2193-7532
 
-    au < exists ; 2010 ; Advances in Difference Equations Volume 2010 ; 2010 >
-    au < exists ; 2011 ; Advances in Difference Equations Volume 2011 ; 2011 >
-    au < exists ; 2012 ; Advances in Difference Equations Volume 2012 ; 2012 >
-    au < exists ; 2013 ; Advances in Difference Equations Volume 2013 ; 2013 >
+    au < expected ; 2013 ; Agricultural and Food Economics Volume 2013 ; 2013 >
+
+  }
+
+  {
+  
+    title <
+      name = AMB Express ;
+      eissn = 2191-0855 
+    >
+
+    plugin = org.lockss.plugin.bmc.BioMedCentralPlugin
+    param[base_url] = http://www.amb-express.com/
+    param[journal_issn] = 2191-0855
+
+    au < exists ; 2011 ; AMB Express Volume 1 ; 1 >
+    au < exists ; 2012 ; AMB Express Volume 2 ; 2 >
+    au < exists ; 2013 ; AMB Express Volume 3 ; 3 >
+
+  }
+
+  {
+  
+    title <
+      name = Annals of Intensive Care ;
+      eissn = 2110-5820 
+    >
+
+    plugin = org.lockss.plugin.springer.SpringerLinkPlugin
+    param[base_url] = http://www.springerlink.com/
+    param[journal_issn] = 2110-5820
+
+    au < exists ; 2011 ; Annals of Intensive Care Volume 1 ; 1 >
+    au < exists ; 2012 ; Annals of Intensive Care Volume 2 ; 2 >
+    au < exists ; 2013 ; Annals of Intensive Care Volume 3 ; 3 >
 
   }
 
