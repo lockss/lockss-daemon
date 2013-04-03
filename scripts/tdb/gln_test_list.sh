@@ -2,7 +2,7 @@
 #
 # Script to generate a list of AUs to test in the gln.
 #
-# cat tdb/prod/*.tdb | ./scripts/tdb/tdbout -MWTN -t publisher,plugin,publisher:info[tester],status | ./scripts/tdb/statuses_gln.awk
+# cat tdb/prod/*.tdb | ./scripts/tdb/tdbout -MWTN -t publisher,plugin,publisher:info[tester],status,year | ./scripts/tdb/statuses_gln.awk
 
 
 tpath="/home/$LOGNAME/tmp"
