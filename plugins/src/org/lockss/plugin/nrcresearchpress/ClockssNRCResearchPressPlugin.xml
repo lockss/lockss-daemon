@@ -1,0 +1,160 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down - audrey</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_publishing_platform</string>
+    <string>Atypon</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"NRC Research Plugin (CLOCKSS), Base URL %s, Journal Abbreviation %s, Volume %s", base_url, journal_abbr, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>NRC Research Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sclockss/%s/%s/index.html", base_url, journal_abbr, volume_name</string>
+  </entry>
+  <entry>
+        <string>au_feature_urls</string>
+        <map>
+          <entry>
+            <string>au_title</string>
+        <string>"%sjournal/%s", base_url, journal_abbr</string>
+          </entry>
+          <entry>
+            <string>au_issue</string>
+        <string>"%stoc/%s/%s/%s", base_url, journal_abbr, volume_name, issue</string>
+          </entry>
+          <entry>
+            <string>au_volume</string>
+        <string>"%sclockss/%s/%s/index.html", base_url, journal_abbr, volume_name</string>
+          </entry>
+        </map>
+  </entry>  
+  <entry>
+    <!-- example valid abs/pdf urls
+    http://www.nrcresearchpress.com/toc/apnm/36/5       Issue TOC
+    http://www.nrcresearchpress.com/doi/full/10.1139/h11-070    fulltext html (has metadata)
+    http://www.nrcresearchpress.com/doi/abs/10.1139/h11-070     abstract (has metadata)
+    http://www.nrcresearchpress.com/doi/pdf/10.1139/h11-070     pdf       
+    http://www.nrcresearchpress.com/doi/pdfplus/10.1139/h11-070 pdfplus
+    http://www.nrcresearchpress.com/doi/pdfplus/10.1139/cgjauthor99
+    http://www.nrcresearchpress.com/doi/abs/10.1139/cgjcontents99
+    -->
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$", base_url_host</string>
+      <string>1,"^%stoc/%s/%s/", base_url, journal_abbr, volume_name</string>
+      <!-- spider link: http://www.nrcresearchpress.com/doi/pdf/10.1046/9999-9999.99999 -->
+      <string>2,"^%sdoi/pdf/\d+\.\d+/9999-9999.99999", base_url</string>
+      <string>1,"^%sdoi/(pdf|pdfplus|abs|full|suppl)/\d+\.\d+/[^/]+", base_url</string>
+      <string>2,"^%s(page|action|servlet|loi)/",base_url</string>
+      <string>4,"^%s.*%s", base_url, journal_abbr</string>
+    </list>
+  </entry> 
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%sdoi/pdf/\d+\.\d+/[^/]+$", base_url</string>
+    </list>
+  </entry>
+   <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_abbr</key>
+        <displayName>Journal Abbreviation</displayName>
+        <description>Identifier for journal</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Descriptor (Year or Number)</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <!--
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressHashHtmlFilterFactory</string>
+  </entry>
+  -->
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressArticleIteratorFactory</string>
+  </entry>
+
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressHtmlCrawlFilterFactory</string>
+  </entry>
+  <!--
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  -->
+</map>    
