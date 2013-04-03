@@ -330,6 +330,7 @@
     comment[bmj_down] = The BMJ site is brand-new and requires changes to the HighWire plugin. Suspending these AUs for now.
 
     param[base_url] = http://www.bmj.com/
+    plugin = needs.plugin
 
     au < HighWirePressH20Plugin ; manifest ; 1840-1841 ; BMJ Volume s1-1 (1840-1841) ; s1-1 >
     au < HighWirePressH20Plugin ; manifest ; 1841 ; BMJ Volume s1-2 (1841) ; s1-2 >
@@ -1080,7 +1081,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; released ; 2009 ; Injury Prevention Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Injury Prevention Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Injury Prevention Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; notReady ; 2012 ; Injury Prevention Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; ready ; 2012 ; Injury Prevention Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Injury Prevention Volume 19 ; 19 >
       
     }
@@ -1260,9 +1261,9 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Family Planning and Reproductive Health Care Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Family Planning and Reproductive Health Care Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Family Planning and Reproductive Health Care Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Journal of Family Planning and Reproductive Health Care Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Journal of Family Planning and Reproductive Health Care Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Journal of Family Planning and Reproductive Health Care Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; Journal of Family Planning and Reproductive Health Care Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Journal of Family Planning and Reproductive Health Care Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; Journal of Family Planning and Reproductive Health Care Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; ready ; 2008 ; Journal of Family Planning and Reproductive Health Care Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; Journal of Family Planning and Reproductive Health Care Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Family Planning and Reproductive Health Care Volume 36 ; 36 >
@@ -1665,9 +1666,9 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < manifest ; 2002 ; Journal of the Royal Army Medical Corps Volume 148 ; 148 >
       au < manifest ; 2003 ; Journal of the Royal Army Medical Corps Volume 149 ; 149 >
       au < manifest ; 2004 ; Journal of the Royal Army Medical Corps Volume 150 ; 150 >
-      au < manifest ; 2005 ; Journal of the Royal Army Medical Corps Volume 151 ; 151 >
-      au < manifest ; 2006 ; Journal of the Royal Army Medical Corps Volume 152 ; 152 >
-      au < manifest ; 2007 ; Journal of the Royal Army Medical Corps Volume 153 ; 153 >
+      au < testing ; 2005 ; Journal of the Royal Army Medical Corps Volume 151 ; 151 >
+      au < testing ; 2006 ; Journal of the Royal Army Medical Corps Volume 152 ; 152 >
+      au < testing ; 2007 ; Journal of the Royal Army Medical Corps Volume 153 ; 153 >
       au < ready ; 2008 ; Journal of the Royal Army Medical Corps Volume 154 ; 154 >
       au < ready ; 2009 ; Journal of the Royal Army Medical Corps Volume 155 ; 155 >
       au < ready ; 2010 ; Journal of the Royal Army Medical Corps Volume 156 ; 156 >
@@ -2091,7 +2092,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Sexually Transmitted Infections Volume 85 ; 85 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Sexually Transmitted Infections Volume 86 ; 86 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Sexually Transmitted Infections Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; notReady ; 2012 ; Sexually Transmitted Infections Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Sexually Transmitted Infections Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Sexually Transmitted Infections Volume 89 ; 89 >
 
   }
