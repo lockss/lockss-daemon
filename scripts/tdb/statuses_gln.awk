@@ -16,7 +16,7 @@ BEGIN {
   if (length($5) > 3) {
     end_year = substr($5,length($5)-3,4)
   }
-  #printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\n", $1,$2,$3,$4,$7,end_year,test_year
+  #printf "%s\n", $0
   if (($4 != "manifest") || ((end_year >= test_year) && (end_year <= current_year))) {
     incontract = 1
   }
