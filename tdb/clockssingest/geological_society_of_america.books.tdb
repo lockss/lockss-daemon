@@ -56,205 +56,327 @@
     
     comment[0] = not in usual HighWire shape
     param[base_url] = http://specialpapers.gsapubs.org/
-    implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; doi ; isbn ; name ; param[volume_name] >
 
-    au < manifest ; exists ; 1994 ; 0-8137-2294-2 ; Geological Society of America Special Papers Volume 294 ; 294 >
-    au < manifest ; exists ; 1995 ; 0-8137-2295-0 ; Geological Society of America Special Papers Volume 295 ; 295 >
-    au < manifest ; exists ; 1995 ; 0-8137-2296-9 ; Geological Society of America Special Papers Volume 296 ; 296 >
-    au < manifest ; exists ; 1995 ; 0-8137-2297-7 ; Geological Society of America Special Papers Volume 297 ; 297 >
-    au < manifest ; exists ; 1995 ; 0-8137-2298-5 ; Geological Society of America Special Papers Volume 298 ; 298 >
-    au < manifest ; exists ; 1995 ; 0-8137-2299-3 ; Geological Society of America Special Papers Volume 299 ; 299 >
-    au < exists ; exists ; 1995 ; 978-0-8137-2300-0 ; Geological Society of America Special Papers Volume 300 ; 300 >
-    au < exists ; exists ; 1995 ; 978-0-8137-2301-9 ; Geological Society of America Special Papers Volume 301 ; 301 >
-    au < manifest ; exists ; 1996 ; 978-0-8137-2302-7 ; Geological Society of America Special Papers Volume 302 ; 302 >
-    au < manifest ; exists ; 1996 ; 978-0-8137-2303-5 ; Geological Society of America Special Papers Volume 303 ; 303 >
-    au < manifest ; exists ; 1996 ; 978-0-8137-2304-3 ; Geological Society of America Special Papers Volume 304 ; 304 >
-    au < manifest ; exists ; 1996 ; 978-0-8137-2305-1 ; Geological Society of America Special Papers Volume 305 ; 305 >
-    au < manifest ; exists ; 1996 ; 978-0-8137-2306-X ; Geological Society of America Special Papers Volume 306 ; 306 >
-    au < manifest ; exists ; 1996 ; 978-0-8137-2307-8 ; Geological Society of America Special Papers Volume 307 ; 307 >
-    au < manifest ; exists ; 1996 ; 978-0-8137-2308-6 ; Geological Society of America Special Papers Volume 308 ; 308 >
-    au < manifest ; exists ; 1996 ; 978-0-8137-2309-4 ; Geological Society of America Special Papers Volume 309 ; 309 >
-    au < manifest ; exists ; 1996 ; 978-0-8137-2310-8 ; Geological Society of America Special Papers Volume 310 ; 310 >
-    au < manifest ; exists ; 1996 ; 978-0-8137-2311-6 ; Geological Society of America Special Papers Volume 311 ; 311 >
-    au < manifest ; exists ; 1997 ; 978-0-8137-2312-4 ; Geological Society of America Special Papers Volume 312 ; 312 >
-    au < manifest ; exists ; 1996 ; 978-0-8137-2313-2 ; Geological Society of America Special Papers Volume 313 ; 313 >
-    au < manifest ; exists ; 1997 ; 978-0-8137-2314-0 ; Geological Society of America Special Papers Volume 314 ; 314 >
-    au < manifest ; exists ; 1996 ; 978-0-8137-2315-9 ; Geological Society of America Special Papers Volume 315 ; 315 >
-    au < manifest ; exists ; 1997 ; 978-0-8137-2316-7 ; Geological Society of America Special Papers Volume 316 ; 316 >
-    au < manifest ; exists ; 1997 ; 978-0-8137-2317-5 ; Geological Society of America Special Papers Volume 317 ; 317 >
-    au < manifest ; exists ; 1997 ; 978-0-8137-2318-3 ; Geological Society of America Special Papers Volume 318 ; 318 >
-    au < manifest ; exists ; 1997 ; 978-0-8137-2319-1 ; Geological Society of America Special Papers Volume 319 ; 319 >
-    au < manifest ; exists ; 1998 ; 978-0-8137-2320-5 ; Geological Society of America Special Papers Volume 320 ; 320 >
-    au < manifest ; exists ; 1997 ; 978-0-8137-2321-3 ; Geological Society of America Special Papers Volume 321 ; 321 >
-    au < manifest ; exists ; 1998 ; 978-0-8137-2322-1 ; Geological Society of America Special Papers Volume 322 ; 322 >
-    au < manifest ; exists ; 1998 ; 978-0-8137-2323-X ; Geological Society of America Special Papers Volume 323 ; 323 >
-    au < manifest ; exists ; 1998 ; 978-0-8137-2324-8 ; Geological Society of America Special Papers Volume 324 ; 324 >
-    au < manifest ; exists ; 1998 ; 978-0-8137-2325-6 ; Geological Society of America Special Papers Volume 325 ; 325 >
-    au < manifest ; exists ; 1998 ; 978-0-8137-2326-4 ; Geological Society of America Special Papers Volume 326 ; 326 >
-    au < manifest ; exists ; 1998 ; 978-0-8137-2327-2 ; Geological Society of America Special Papers Volume 327 ; 327 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2328-0 ; Geological Society of America Special Papers Volume 328 ; 328 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2329-9 ; Geological Society of America Special Papers Volume 329 ; 329 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2330-2 ; Geological Society of America Special Papers Volume 330 ; 330 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2331-0 ; Geological Society of America Special Papers Volume 331 ; 331 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2332-9 ; Geological Society of America Special Papers Volume 332 ; 332 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2333-7 ; Geological Society of America Special Papers Volume 333 ; 333 >
-    au < manifest ; exists ; 2000 ; 978-0-8137-2334-5 ; Geological Society of America Special Papers Volume 334 ; 334 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2335-3 ; Geological Society of America Special Papers Volume 335 ; 335 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2336-1 ; Geological Society of America Special Papers Volume 336 ; 336 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2337-X ; Geological Society of America Special Papers Volume 337 ; 337 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2338-8 ; Geological Society of America Special Papers Volume 338 ; 338 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2339-6 ; Geological Society of America Special Papers Volume 339 ; 339 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2340-X ; Geological Society of America Special Papers Volume 340 ; 340 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2341-8 ; Geological Society of America Special Papers Volume 341 ; 341 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2342-6 ; Geological Society of America Special Papers Volume 342 ; 342 >
-    au < manifest ; exists ; 2000 ; 978-0-8137-2343-4 ; Geological Society of America Special Papers Volume 343 ; 343 >
-    au < manifest ; exists ; 1999 ; 978-0-8137-2344-2 ; Geological Society of America Special Papers Volume 344 ; 344 >
-    au < manifest ; exists ; 2000 ; 978-0-8137-2345-0 ; Geological Society of America Special Papers Volume 345 ; 345 >
-    au < manifest ; exists ; 2000 ; 978-0-8137-2346-9 ; Geological Society of America Special Papers Volume 346 ; 346 >
-    au < manifest ; exists ; 2000 ; 978-0-8137-2347-7 ; Geological Society of America Special Papers Volume 347 ; 347 >
-    au < manifest ; exists ; 2000 ; 978-0-8137-2348-5 ; Geological Society of America Special Papers Volume 348 ; 348 >
-    au < manifest ; exists ; 2000 ; 978-0-8137-2349-3 ; Geological Society of America Special Papers Volume 349 ; 349 >
-    au < manifest ; exists ; 2000 ; 978-0-8137-2350-7 ; Geological Society of America Special Papers Volume 350 ; 350 >
-    au < manifest ; exists ; 2001 ; 978-0-8137-2351-5 ; Geological Society of America Special Papers Volume 351 ; 351 >
-    au < manifest ; exists ; 2001 ; 978-0-8137-2352-3 ; Geological Society of America Special Papers Volume 352 ; 3352>
-    au < manifest ; exists ; 2002 ; 978-0-8137-2353-1 ; Geological Society of America Special Papers Volume 353 ; 3353>
-    au < manifest ; exists ; 2001 ; 978-0-8137-2354-X ; Geological Society of America Special Papers Volume 354 ; 3354>
-    au < manifest ; exists ; 2001 ; 978-0-8137-2355-8 ; Geological Society of America Special Papers Volume 355 ; 3355>
-    au < manifest ; exists ; 2002 ; 978-0-8137-2356-6 ; Geological Society of America Special Papers Volume 356 ; 3356>
-    au < manifest ; exists ; 2002 ; 978-0-8137-2357-4 ; Geological Society of America Special Papers Volume 357 ; 357 >
-    au < manifest ; exists ; 2002 ; 978-0-8137-2358-2 ; Geological Society of America Special Papers Volume 358 ; 358 >
-    au < manifest ; exists ; 2002 ; 978-0-8137-2359-0 ; Geological Society of America Special Papers Volume 359 ; 359 >
-    au < manifest ; exists ; 2002 ; 978-0-8137-2360-4 ; Geological Society of America Special Papers Volume 360 ; 360 >
-    au < manifest ; exists ; 2002 ; 978-0-8137-2361-2 ; Geological Society of America Special Papers Volume 361 ; 361 >
-    au < manifest ; exists ; 2002 ; 978-0-8137-2362-0 ; Geological Society of America Special Papers Volume 362 ; 362 >
-    au < manifest ; exists ; 2002 ; 978-0-8137-2364-7 ; Geological Society of America Special Papers Volume 364 ; 364 >
-    au < manifest ; exists ; 2002 ; 978-0-8137-2365-5 ; Geological Society of America Special Papers Volume 365 ; 365 >
-    au < manifest ; exists ; 2002 ; 978-0-8137-2366-3 ; Geological Society of America Special Papers Volume 366 ; 366 >
-    au < manifest ; exists ; 2003 ; 978-0-8137-2367-1 ; Geological Society of America Special Papers Volume 367 ; 367 >
-    au < manifest ; exists ; 2003 ; 978-0-8137-2368-X ; Geological Society of America Special Papers Volume 368 ; 368 >
-    au < manifest ; exists ; 2003 ; 978-0-8137-2369-8 ; Geological Society of America Special Papers Volume 369 ; 369 >
-    au < manifest ; exists ; 2003 ; 978-0-8137-2370-1 ; Geological Society of America Special Papers Volume 370 ; 370 >
-    au < manifest ; exists ; 2003 ; 978-0-8137-2371-X ; Geological Society of America Special Papers Volume 371 ; 371 >
-    au < manifest ; exists ; 2003 ; 978-0-8137-2372-8 ; Geological Society of America Special Papers Volume 372 ; 372 >
-    au < manifest ; exists ; 2003 ; 978-0-8137-2373-6 ; Geological Society of America Special Papers Volume 373 ; 373 >
-    au < manifest ; exists ; 2003 ; 978-0-8137-2374-4 ; Geological Society of America Special Papers Volume 374 ; 374 >
-    au < manifest ; exists ; 2004 ; 978-0-8137-2375-2 ; Geological Society of America Special Papers Volume 375 ; 375 >
-    au < manifest ; exists ; 2004 ; 978-0-8137-2376-0 ; Geological Society of America Special Papers Volume 376 ; 376 >
-    au < manifest ; exists ; 2004 ; 978-0-8137-2377-9 ; Geological Society of America Special Papers Volume 377 ; 377 >
-    au < manifest ; exists ; 2004 ; 978-0-8137-2378-7 ; Geological Society of America Special Papers Volume 378 ; 378 >
-    au < manifest ; exists ; 2004 ; 978-0-8137-2379-5 ; Geological Society of America Special Papers Volume 379 ; 379 >
-    au < manifest ; exists ; 2004 ; 978-0-8137-2380-9 ; Geological Society of America Special Papers Volume 380 ; 380 >
-    au < manifest ; exists ; 2004 ; 978-0-8137-2381-7 ; Geological Society of America Special Papers Volume 381 ; 381 >
-    au < manifest ; exists ; 2005 ; 978-0-8137-2382-5 ; Geological Society of America Special Papers Volume 382 ; 382 >
-    au < manifest ; exists ; 2004 ; 978-0-8137-2383-3 ; Geological Society of America Special Papers Volume 383 ; 383 >
-    au < manifest ; exists ; 2005 ; 978-0-8137-2384-1 ; Geological Society of America Special Papers Volume 384 ; 384 >
-    au < manifest ; exists ; 2005 ; 978-0-8137-2385-X ; Geological Society of America Special Papers Volume 385 ; 385 >
-    au < manifest ; exists ; 2005 ; 978-0-8137-2386-8 ; Geological Society of America Special Papers Volume 386 ; 386 >
-    au < manifest ; exists ; 2005 ; 978-0-8137-2387-6 ; Geological Society of America Special Papers Volume 387 ; 387 >
-    au < manifest ; exists ; 2005 ; 978-0-8137-2388-4 ; Geological Society of America Special Papers Volume 388 ; 388 >
-    au < manifest ; exists ; 2004 ; 978-0-8137-2389-2 ; Geological Society of America Special Papers Volume 389 ; 389 >
-    au < manifest ; exists ; 2005 ; 978-0-8137-2390-6 ; Geological Society of America Special Papers Volume 390 ; 390 >
-    au < manifest ; exists ; 2005 ; 978-0-8137-2391-4 ; Geological Society of America Special Papers Volume 391 ; 391 >
-    au < manifest ; exists ; 2005 ; 978-0-8137-2392-2 ; Geological Society of America Special Papers Volume 392 ; 392 >
-    au < manifest ; exists ; 2005 ; 978-0-8137-2393-0 ; Geological Society of America Special Papers Volume 393 ; 393 >
-    au < manifest ; exists ; 2005 ; 978-0-8137-2394-9 ; Geological Society of America Special Papers Volume 394 ; 394 >
-    au < manifest ; exists ; 2005 ; 978-0-8137-2395-7 ; Geological Society of America Special Papers Volume 395 ; 395 >
-    au < manifest ; exists ; 2005 ; 978-0-8137-2396-5 ; Geological Society of America Special Papers Volume 396 ; 396 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2397-6 ; Geological Society of America Special Papers Volume 397 ; 397 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2398-3 ; Geological Society of America Special Papers Volume 398 ; 398 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2399-X ; Geological Society of America Special Papers Volume 399 ; 399 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2400-3 ; Geological Society of America Special Papers Volume 400 ; 400 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2401-5 ; Geological Society of America Special Papers Volume 401 ; 401 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2402-3 ; Geological Society of America Special Papers Volume 402 ; 402 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2403-9 ; Geological Society of America Special Papers Volume 403 ; 403 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2404-7 ; Geological Society of America Special Papers Volume 404 ; 404 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2405-8 ; Geological Society of America Special Papers Volume 405 ; 405 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2406-6 ; Geological Society of America Special Papers Volume 406 ; 406 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2407-4 ; Geological Society of America Special Papers Volume 407 ; 407 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2408-2 ; Geological Society of America Special Papers Volume 408 ; 408 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2409-0 ; Geological Society of America Special Papers Volume 409 ; 409 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2410-4 ; Geological Society of America Special Papers Volume 410 ; 410 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2411-2 ; Geological Society of America Special Papers Volume 411 ; 411 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2412-0 ; Geological Society of America Special Papers Volume 412 ; 412 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2413-9 ; Geological Society of America Special Papers Volume 413 ; 413 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2414-0 ; Geological Society of America Special Papers Volume 414 ; 414 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2415-7 ; Geological Society of America Special Papers Volume 415 ; 415 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2416-4 ; Geological Society of America Special Papers Volume 416 ; 416 >
-    au < manifest ; exists ; 2006 ; 978-0-8137-2417-1 ; Geological Society of America Special Papers Volume 417 ; 417 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2418-8 ; Geological Society of America Special Papers Volume 418 ; 418 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2419-5 ; Geological Society of America Special Papers Volume 419 ; 419 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2420-1 ; Geological Society of America Special Papers Volume 420 ; 420 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2421-8 ; Geological Society of America Special Papers Volume 421 ; 421 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2422-5 ; Geological Society of America Special Papers Volume 422 ; 422 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2423-2 ; Geological Society of America Special Papers Volume 423 ; 423 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2424-9 ; Geological Society of America Special Papers Volume 424 ; 424 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2425-6 ; Geological Society of America Special Papers Volume 425 ; 425 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2426-3 ; Geological Society of America Special Papers Volume 426 ; 426 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2427-0 ; Geological Society of America Special Papers Volume 427 ; 427 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2428-7 ; Geological Society of America Special Papers Volume 428 ; 428 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2429-4 ; Geological Society of America Special Papers Volume 429 ; 429 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2430-0 ; Geological Society of America Special Papers Volume 430 ; 430 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2431-7 ; Geological Society of America Special Papers Volume 431 ; 431 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2432-4 ; Geological Society of America Special Papers Volume 432 ; 432 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2433-1 ; Geological Society of America Special Papers Volume 433 ; 433 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2434-8 ; Geological Society of America Special Papers Volume 434 ; 434 >
-    au < manifest ; exists ; 2008 ; 978-0-8137-2435-5 ; Geological Society of America Special Papers Volume 435 ; 435 >
-    au < manifest ; exists ; 2008 ; 978-0-8137-2436-2 ; Geological Society of America Special Papers Volume 436 ; 436 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-2437-9 ; Geological Society of America Special Papers Volume 437 ; 437 >
-    au < manifest ; exists ; 2008 ; 978-0-8137-2438-6 ; Geological Society of America Special Papers Volume 438 ; 438 >
-    au < manifest ; exists ; 2008 ; 978-0-8137-2439-3 ; Geological Society of America Special Papers Volume 439 ; 439 >
-    au < manifest ; exists ; 2008 ; 978-0-8137-2440-9 ; Geological Society of America Special Papers Volume 440 ; 440 >
-    au < manifest ; exists ; 2008 ; 978-0-8137-2441-6 ; Geological Society of America Special Papers Volume 441 ; 441 >
-    au < manifest ; exists ; 2008 ; 978-0-8137-2442-3 ; Geological Society of America Special Papers Volume 442 ; 442 >
-    au < manifest ; exists ; 2008 ; 978-0-8137-2443-0 ; Geological Society of America Special Papers Volume 443 ; 443 >
-    au < manifest ; exists ; 2008 ; 978-0-8137-2444-7 ; Geological Society of America Special Papers Volume 444 ; 444 >
-    au < manifest ; exists ; 2008 ; 978-0-8137-2445-4 ; Geological Society of America Special Papers Volume 445 ; 445 >
-    au < manifest ; exists ; 2008 ; 978-0-8137-2446-1 ; Geological Society of America Special Papers Volume 446 ; 446 >
-    au < manifest ; exists ; 2009 ; 978-0-813-72447-8 ; Geological Society of America Special Papers Volume 447 ; 447 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2448-5 ; Geological Society of America Special Papers Volume 448 ; 448 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2449-2 ; Geological Society of America Special Papers Volume 449 ; 449 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2450-8 ; Geological Society of America Special Papers Volume 450 ; 450 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2451-5 ; Geological Society of America Special Papers Volume 451 ; 451 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2452-2 ; Geological Society of America Special Papers Volume 452 ; 452 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2453-9 ; Geological Society of America Special Papers Volume 453 ; 453 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2454-6 ; Geological Society of America Special Papers Volume 454 ; 454 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2455-3 ; Geological Society of America Special Papers Volume 455 ; 455 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2456-0 ; Geological Society of America Special Papers Volume 456 ; 456 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2446-1 ; Geological Society of America Special Papers Volume 457 ; 457 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2458-4 ; Geological Society of America Special Papers Volume 458 ; 458 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2459-1 ; Geological Society of America Special Papers Volume 459 ; 459 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2460-7 ; Geological Society of America Special Papers Volume 460 ; 460 >
-    au < manifest ; exists ; 2009 ; 978-0-8137-2461-4 ; Geological Society of America Special Papers Volume 461 ; 461 >
-    au < manifest ; exists ; 2010 ; 978-0-8137-2462-1 ; Geological Society of America Special Papers Volume 462 ; 462 >
-    au < manifest ; exists ; 2010 ; 978-0-8137-2463-8 ; Geological Society of America Special Papers Volume 463 ; 463 >
-    au < manifest ; exists ; 2010 ; 978-0-8137-2464-5 ; Geological Society of America Special Papers Volume 464 ; 464 >
-    au < manifest ; exists ; 2010 ; 978-0-8137-2465-2 ; Geological Society of America Special Papers Volume 465 ; 465 >
-    au < manifest ; exists ; 2010 ; 978-0-8137-2466-9 ; Geological Society of America Special Papers Volume 466 ; 466 >
-    au < manifest ; exists ; 2010 ; 978-0-8137-2467-6 ; Geological Society of America Special Papers Volume 467 ; 467 >
-    au < manifest ; exists ; 2010 ; 978-0-8137-2468-3 ; Geological Society of America Special Papers Volume 468 ; 468 >
-    au < manifest ; exists ; 2010 ; 978-0-8137-2469-0 ; Geological Society of America Special Papers Volume 469 ; 469 >
-    au < manifest ; exists ; 2010 ; 978-0-8137-2470-6 ; Geological Society of America Special Papers Volume 470 ; 470 >
-    au < manifest ; exists ; 2010 ; 978-0-8137-2471-3 ; Geological Society of America Special Papers Volume 471 ; 471 >
-    au < manifest ; exists ; 2010 ; 978-0-8137-2472-0 ; Geological Society of America Special Papers Volume 472 ; 472 >
-    au < manifest ; exists ; 2011 ; 978-0-8137-2473-7 ; Geological Society of America Special Papers Volume 473 ; 473 >
-    au < manifest ; exists ; 2011 ; 978-0-8137-2474-4 ; Geological Society of America Special Papers Volume 474 ; 474 >
-    au < manifest ; exists ; 2011 ; 978-0-8137-2475-1 ; Geological Society of America Special Papers Volume 475 ; 475 >
-    au < manifest ; exists ; 2011 ; 978-0-8137-2476-8 ; Geological Society of America Special Papers Volume 476 ; 476 >
-    au < manifest ; exists ; 2011 ; 978-0-8137-2477-5 ; Geological Society of America Special Papers Volume 477 ; 477 >
-    au < manifest ; exists ; 2011 ; 978-0-8137-2478-2 ; Geological Society of America Special Papers Volume 478 ; 478 >
-    au < manifest ; exists ; 2011 ; 978-0-8137-2479-9 ; Geological Society of America Special Papers Volume 479 ; 479 >
-    au < manifest ; exists ; 2011 ; 978-0-8137-2480-5 ; Geological Society of America Special Papers Volume 480 ; 480 >
-    au < manifest ; exists ; 2011 ; 978-0-8137-2481-2 ; Geological Society of America Special Papers Volume 481 ; 481 >
-    au < manifest ; exists ; 2011 ; 978-0-8137-2482-9 ; Geological Society of America Special Papers Volume 482 ; 482 >
-    au < manifest ; exists ; 2011 ; 978-0-8137-2483-6 ; Geological Society of America Special Papers Volume 483 ; 483 >
-    au < manifest ; exists ; 2011 ; 978-0-8137-2484-3 ; Geological Society of America Special Papers Volume 484 ; 484 >
-    au < manifest ; exists ; 2012 ; 978-0-8137-2485-0 ; Geological Society of America Special Papers Volume 485 ; 485 >
-    au < manifest ; exists ; 2012 ; 978-0-8137-2486-7 ; Geological Society of America Special Papers Volume 486 ; 486 >
-    au < manifest ; exists ; 2012 ; 978-0-8137-2487-4 ; Geological Society of America Special Papers Volume 487 ; 487 >
-    au < manifest ; exists ; 2012 ; 978-0-8137-2488-1 ; Geological Society of America Special Papers Volume 488 ; 488 >
-    au < manifest ; exists ; 2012 ; 978-0-8137-2489-8 ; Geological Society of America Special Papers Volume 489 ; 489 >
-    au < manifest ; exists ; 2012 ; 978-0-8137-2490-4 ; Geological Society of America Special Papers Volume 490 ; 490 >
-    au < manifest ; exists ; 2012 ; 978-0-8137-2492-8 ; Geological Society of America Special Papers Volume 492 ; 492 >
+    au < manifest ; exists ; 1934 ; 10.1130/SPE1 ;  ; Geological Society of America Special Papers Volume 1 ; 1 >
+    au < manifest ; exists ; 1935 ; 10.1130/SPE2 ;  ; Geological Society of America Special Papers Volume 2 ; 2 >
+    au < manifest ; exists ; 1935 ; 10.1130/SPE3 ;  ; Geological Society of America Special Papers Volume 3 ; 3 >
+    au < manifest ; exists ; 1936 ; 10.1130/SPE4 ;  ; Geological Society of America Special Papers Volume 4 ; 4 >
+    au < manifest ; exists ; 1937 ; 10.1130/SPE5 ;  ; Geological Society of America Special Papers Volume 5 ; 5 >
+    au < manifest ; exists ; 1937 ; 10.1130/SPE6 ;  ; Geological Society of America Special Papers Volume 6 ; 6 >
+    au < manifest ; exists ; 1939 ; 10.1130/SPE7 ;  ; Geological Society of America Special Papers Volume 7 ; 7 >
+    au < manifest ; exists ; 1938 ; 10.1130/SPE8 ;  ; Geological Society of America Special Papers Volume 8 ; 8 >
+    au < manifest ; exists ; 1938 ; 10.1130/SPE9 ;  ; Geological Society of America Special Papers Volume 9 ; 9 >
+    au < manifest ; exists ; 1938 ; 10.1130/SPE10 ;  ; Geological Society of America Special Papers Volume 10 ; 10 >
+    au < manifest ; exists ; 1938 ; 10.1130/SPE11 ;  ; Geological Society of America Special Papers Volume 11 ; 11 >
+    au < manifest ; exists ; 1938 ; 10.1130/SPE12 ;  ; Geological Society of America Special Papers Volume 12 ; 12 >
+    au < manifest ; exists ; 1938 ; 10.1130/SPE13 ;  ; Geological Society of America Special Papers Volume 13 ; 13 >
+    au < manifest ; exists ; 1938 ; 10.1130/SPE14 ;  ; Geological Society of America Special Papers Volume 14 ; 14 >
+    au < manifest ; exists ; 1938 ; 10.1130/SPE15 ;  ; Geological Society of America Special Papers Volume 15 ; 15 >
+    au < manifest ; exists ; 1938 ; 10.1130/SPE16 ;  ; Geological Society of America Special Papers Volume 16 ; 16 >
+    au < manifest ; exists ; 1939 ; 10.1130/SPE17 ;  ; Geological Society of America Special Papers Volume 17 ; 17 >
+    au < manifest ; exists ; 1939 ; 10.1130/SPE18 ;  ; Geological Society of America Special Papers Volume 18 ; 18 >
+    au < manifest ; exists ; 1939 ; 10.1130/SPE19 ;  ; Geological Society of America Special Papers Volume 19 ; 19 >
+    au < manifest ; exists ; 1939 ; 10.1130/SPE20 ;  ; Geological Society of America Special Papers Volume 20 ; 20 >
+    au < manifest ; exists ; 1939 ; 10.1130/SPE21 ;  ; Geological Society of America Special Papers Volume 21 ; 21 >
+    au < manifest ; exists ; 1939 ; 10.1130/SPE22 ;  ; Geological Society of America Special Papers Volume 22 ; 22 >
+    au < manifest ; exists ; 1939 ; 10.1130/SPE23 ;  ; Geological Society of America Special Papers Volume 23 ; 23 >
+    au < manifest ; exists ; 1939 ; 10.1130/SPE24 ;  ; Geological Society of America Special Papers Volume 24 ; 24 >
+    au < manifest ; exists ; 1940 ; 10.1130/SPE25 ;  ; Geological Society of America Special Papers Volume 25 ; 25 >
+    au < manifest ; exists ; 1940 ; 10.1130/SPE26 ;  ; Geological Society of America Special Papers Volume 26 ; 26 >
+    au < manifest ; exists ; 1940 ; 10.1130/SPE27 ;  ; Geological Society of America Special Papers Volume 27 ; 27 >
+    au < manifest ; exists ; 1940 ; 10.1130/SPE28 ;  ; Geological Society of America Special Papers Volume 28 ; 28 >
+    au < manifest ; exists ; 1940 ; 10.1130/SPE29 ;  ; Geological Society of America Special Papers Volume 29 ; 29 >
+    au < manifest ; exists ; 1941 ; 10.1130/SPE30 ;  ; Geological Society of America Special Papers Volume 30 ; 30 >
+    au < manifest ; exists ; 1941 ; 10.1130/SPE31 ;  ; Geological Society of America Special Papers Volume 31 ; 31 >
+    au < manifest ; exists ; 1941 ; 10.1130/SPE32 ;  ; Geological Society of America Special Papers Volume 32 ; 32 >
+    au < manifest ; exists ; 1941 ; 10.1130/SPE33 ;  ; Geological Society of America Special Papers Volume 33 ; 33 >
+    au < manifest ; exists ; 1941 ; 10.1130/SPE34 ;  ; Geological Society of America Special Papers Volume 34 ; 34 >
+    au < manifest ; exists ; 1941 ; 10.1130/SPE35 ;  ; Geological Society of America Special Papers Volume 35 ; 35 >
+    au < manifest ; exists ; 1942 ; 10.1130/SPE36 ;  ; Geological Society of America Special Papers Volume 36 ; 36 >
+    au < manifest ; exists ; 1942 ; 10.1130/SPE37 ;  ; Geological Society of America Special Papers Volume 37 ; 37 >
+    au < manifest ; exists ; 1942 ; 10.1130/SPE38 ;  ; Geological Society of America Special Papers Volume 38 ; 38 >
+    au < manifest ; exists ; 1942 ; 10.1130/SPE39 ;  ; Geological Society of America Special Papers Volume 39 ; 39 >
+    au < manifest ; exists ; 1942 ; 10.1130/SPE40 ;  ; Geological Society of America Special Papers Volume 40 ; 40 >
+    au < manifest ; exists ; 1942 ; 10.1130/SPE41 ;  ; Geological Society of America Special Papers Volume 41 ; 41 >
+    au < manifest ; exists ; 1942 ; 10.1130/SPE42 ;  ; Geological Society of America Special Papers Volume 42 ; 42 >
+    au < manifest ; exists ; 1943 ; 10.1130/SPE43 ;  ; Geological Society of America Special Papers Volume 43 ; 43 >
+    au < manifest ; exists ; 1943 ; 10.1130/SPE44 ;  ; Geological Society of America Special Papers Volume 44 ; 44 >
+    au < manifest ; exists ; 1943 ; 10.1130/SPE45 ;  ; Geological Society of America Special Papers Volume 45 ; 45 >
+    au < manifest ; exists ; 1943 ; 10.1130/SPE46 ;  ; Geological Society of America Special Papers Volume 46 ; 46 >
+    au < manifest ; exists ; 1943 ; 10.1130/SPE47 ;  ; Geological Society of America Special Papers Volume 47 ; 47 >
+    au < manifest ; exists ; 1943 ; 10.1130/SPE48 ;  ; Geological Society of America Special Papers Volume 48 ; 48 >
+    au < manifest ; exists ; 1943 ; 10.1130/SPE49 ;  ; Geological Society of America Special Papers Volume 49 ; 49 >
+    au < manifest ; exists ; 1943 ; 10.1130/SPE50 ;  ; Geological Society of America Special Papers Volume 50 ; 50 >
+    au < manifest ; exists ; 1944 ; 10.1130/SPE51 ;  ; Geological Society of America Special Papers Volume 51 ; 51 >
+    au < manifest ; exists ; 1944 ; 10.1130/SPE52 ;  ; Geological Society of America Special Papers Volume 52 ; 52 >
+    au < manifest ; exists ; 1944 ; 10.1130/SPE53 ;  ; Geological Society of America Special Papers Volume 53 ; 53 >
+    au < manifest ; exists ; 1944 ; 10.1130/SPE54 ;  ; Geological Society of America Special Papers Volume 54 ; 54 >
+    au < manifest ; exists ; 1944 ; 10.1130/SPE55 ;  ; Geological Society of America Special Papers Volume 55 ; 55 >
+    au < manifest ; exists ; 1944 ; 10.1130/SPE56 ;  ; Geological Society of America Special Papers Volume 56 ; 56 >
+    au < manifest ; exists ; 1944 ; 10.1130/SPE57 ;  ; Geological Society of America Special Papers Volume 57 ; 57 >
+    au < manifest ; exists ; 1944 ; 10.1130/SPE58 ;  ; Geological Society of America Special Papers Volume 58 ; 58 >
+    au < manifest ; exists ; 1945 ; 10.1130/SPE59 ;  ; Geological Society of America Special Papers Volume 59 ; 59 >
+    au < manifest ; exists ; 1945 ; 10.1130/SPE60 ;  ; Geological Society of America Special Papers Volume 60 ; 60 >
+    au < manifest ; exists ; 1945 ; 10.1130/SPE61 ;  ; Geological Society of America Special Papers Volume 61 ; 61 >
+    au < manifest ; exists ; 1955 ; 10.1130/SPE62 ;  ; Geological Society of America Special Papers Volume 62 ; 62 >
+    au < manifest ; exists ; 1955 ; 10.1130/SPE63 ;  ; Geological Society of America Special Papers Volume 63 ; 63 >
+    au < manifest ; exists ; 1957 ; 10.1130/SPE64 ;  ; Geological Society of America Special Papers Volume 64 ; 64 >
+    au < manifest ; exists ; 1959 ; 10.1130/SPE65 ;  ; Geological Society of America Special Papers Volume 65 ; 65 >
+    au < manifest ; exists ; 1958 ; 10.1130/SPE66 ;  ; Geological Society of America Special Papers Volume 66 ; 66 >
+    au < manifest ; exists ; 1958 ; 10.1130/SPE67 ;  ; Geological Society of America Special Papers Volume 67 ; 67 >
+    au < manifest ; exists ; 1962 ; 10.1130/SPE68 ;  ; Geological Society of America Special Papers Volume 68 ; 68 >
+    au < manifest ; exists ; 1962 ; 10.1130/SPE69 ;  ; Geological Society of America Special Papers Volume 69 ; 69 >
+    au < manifest ; exists ; 1962 ; 10.1130/SPE70 ;  ; Geological Society of America Special Papers Volume 70 ; 70 >
+    au < manifest ; exists ; 1962 ; 10.1130/SPE71 ;  ; Geological Society of America Special Papers Volume 71 ; 71 >
+    au < manifest ; exists ; 1962 ; 10.1130/SPE72 ;  ; Geological Society of America Special Papers Volume 72 ; 72 >
+    au < manifest ; exists ; 1963 ; 10.1130/SPE73 ;  ; Geological Society of America Special Papers Volume 73 ; 73 >
+    au < manifest ; exists ; 1963 ; 10.1130/SPE74 ;  ; Geological Society of America Special Papers Volume 74 ; 74 >
+    au < manifest ; exists ; 1964 ; 10.1130/SPE75 ;  ; Geological Society of America Special Papers Volume 75 ; 75 >
+    au < manifest ; exists ; 1964 ; 10.1130/SPE76 ;  ; Geological Society of America Special Papers Volume 76 ; 76 >
+    au < manifest ; exists ; 1964 ; 10.1130/SPE77 ;  ; Geological Society of America Special Papers Volume 77 ; 77 >
+    au < manifest ; exists ; 1964 ; 10.1130/SPE78 ;  ; Geological Society of America Special Papers Volume 78 ; 78 >
+    au < manifest ; exists ; 1964 ; 10.1130/SPE79 ;  ; Geological Society of America Special Papers Volume 79 ; 79 >
+    au < manifest ; exists ; 1965 ; 10.1130/SPE80 ;  ; Geological Society of America Special Papers Volume 80 ; 80 >
+    au < manifest ; exists ; 1965 ; 10.1130/SPE81 ;  ; Geological Society of America Special Papers Volume 81 ; 81 >
+    au < manifest ; exists ; 1965 ; 10.1130/SPE82 ;  ; Geological Society of America Special Papers Volume 82 ; 82 >
+    au < manifest ; exists ; 1965 ; 10.1130/SPE83 ;  ; Geological Society of America Special Papers Volume 83 ; 83 >
+    au < manifest ; exists ; 1965 ; 10.1130/SPE84 ;  ; Geological Society of America Special Papers Volume 84 ; 84 >
+    au < manifest ; exists ; 1966 ; 10.1130/SPE85 ;  ; Geological Society of America Special Papers Volume 85 ; 85 >
+    au < manifest ; exists ; 1967 ; 10.1130/SPE86 ;  ; Geological Society of America Special Papers Volume 86 ; 86 >
+    au < manifest ; exists ; 1966 ; 10.1130/SPE87 ;  ; Geological Society of America Special Papers Volume 87 ; 87 >
+    au < manifest ; exists ; 1968 ; 10.1130/SPE88 ;  ; Geological Society of America Special Papers Volume 88 ; 88 >
+    au < manifest ; exists ; 1967 ; 10.1130/SPE89 ;  ; Geological Society of America Special Papers Volume 89 ; 89 >
+    au < manifest ; exists ; 1967 ; 10.1130/SPE90 ;  ; Geological Society of America Special Papers Volume 90 ; 90 >
+    au < manifest ; exists ; 1967 ; 10.1130/SPE91 ;  ; Geological Society of America Special Papers Volume 91 ; 91 >
+    au < manifest ; exists ; 1967 ; 10.1130/SPE92 ;  ; Geological Society of America Special Papers Volume 92 ; 92 >
+    au < manifest ; exists ; 1966 ; 10.1130/SPE93 ;  ; Geological Society of America Special Papers Volume 93 ; 93 >
+    au < manifest ; exists ; 1967 ; 10.1130/SPE94 ;  ; Geological Society of America Special Papers Volume 94 ; 94 >
+    au < manifest ; exists ; 1968 ; 10.1130/SPE95 ;  ; Geological Society of America Special Papers Volume 95 ; 95 >
+    au < manifest ; exists ; 1968 ; 10.1130/SPE96 ;  ; Geological Society of America Special Papers Volume 96 ; 96 >
+    au < manifest ; exists ; 1967 ; 10.1130/SPE97 ;  ; Geological Society of America Special Papers Volume 97 ; 97 >
+    au < manifest ; exists ; 1968 ; 10.1130/SPE98 ;  ; Geological Society of America Special Papers Volume 98 ; 98 >
+    au < manifest ; exists ; 1968 ; 10.1130/SPE99 ;  ; Geological Society of America Special Papers Volume 99 ; 99 >
+    au < manifest ; exists ; 1969 ; 10.1130/SPE100 ;  ; Geological Society of America Special Papers Volume 100 ; 100 >
+    au < manifest ; exists ; 1968 ; 10.1130/SPE101 ;  ; Geological Society of America Special Papers Volume 101 ; 101 >
+    au < manifest ; exists ; 1970 ; 10.1130/SPE102 ; 8137-2102-4 ; Geological Society of America Special Papers Volume 102 ; 102 >
+    au < manifest ; exists ; 1969 ; 10.1130/SPE103 ; 8137-2103-2 ; Geological Society of America Special Papers Volume 103 ; 103 >
+    au < manifest ; exists ; 1968 ; 10.1130/SPE104 ;  ; Geological Society of America Special Papers Volume 104 ; 104 >
+    au < manifest ; exists ; 1969 ; 10.1130/SPE105 ; 8137-2105-9 ; Geological Society of America Special Papers Volume 105 ; 105 >
+    au < manifest ; exists ; 1968 ; 10.1130/SPE106 ;  ; Geological Society of America Special Papers Volume 106 ; 106 >
+    au < manifest ; exists ; 1969 ; 10.1130/SPE107 ; 8137-2107-5 ; Geological Society of America Special Papers Volume 107 ; 107 >
+    au < manifest ; exists ; 1968 ; 10.1130/SPE108 ;  ; Geological Society of America Special Papers Volume 108 ; 108 >
+    au < manifest ; exists ; 1969 ; 10.1130/SPE109 ; 8137-2109-1 ; Geological Society of America Special Papers Volume 109 ; 109 >
+    au < manifest ; exists ; 1968 ; 10.1130/SPE110 ;  ; Geological Society of America Special Papers Volume 110 ; 110 >
+    au < manifest ; exists ; 1969 ; 10.1130/SPE111 ; 8137-2111-3 ; Geological Society of America Special Papers Volume 111 ; 111 >
+    au < manifest ; exists ; 1968 ; 10.1130/SPE112 ;  ; Geological Society of America Special Papers Volume 112 ; 112 >
+    au < manifest ; exists ; 1968 ; 10.1130/SPE113 ;  ; Geological Society of America Special Papers Volume 113 ; 113 >
+    au < manifest ; exists ; 1969 ; 10.1130/SPE114 ;  ; Geological Society of America Special Papers Volume 114 ; 114 >
+    au < manifest ; exists ; 1968 ; 10.1130/SPE115 ;  ; Geological Society of America Special Papers Volume 115 ; 115 >
+    au < manifest ; exists ; 1969 ; 10.1130/SPE116 ; 8137-2117-4 ; Geological Society of America Special Papers Volume 116 ; 116 >
+    au < manifest ; exists ; 1969 ; 10.1130/SPE117 ; 8137-2117-2 ; Geological Society of America Special Papers Volume 117 ; 117 >
+    au < manifest ; exists ; 1969 ; 10.1130/SPE118 ; 8137-2118-0 ; Geological Society of America Special Papers Volume 118 ; 118 >
+    au < manifest ; exists ; 1969 ; 10.1130/SPE119 ; 8137-2119-9 ; Geological Society of America Special Papers Volume 119 ; 119 >
+    au < manifest ; exists ; 1969 ; 10.1130/SPE120 ; 8137-2120-2 ; Geological Society of America Special Papers Volume 120 ; 120 >
+
+
+    au < manifest ; exists ; 1994 ; ; 0-8137-2294-2 ; Geological Society of America Special Papers Volume 294 ; 294 >
+    au < manifest ; exists ; 1995 ; ; 0-8137-2295-0 ; Geological Society of America Special Papers Volume 295 ; 295 >
+    au < manifest ; exists ; 1995 ; ; 0-8137-2296-9 ; Geological Society of America Special Papers Volume 296 ; 296 >
+    au < manifest ; exists ; 1995 ; ; 0-8137-2297-7 ; Geological Society of America Special Papers Volume 297 ; 297 >
+    au < manifest ; exists ; 1995 ; ; 0-8137-2298-5 ; Geological Society of America Special Papers Volume 298 ; 298 >
+    au < manifest ; exists ; 1995 ; ; 0-8137-2299-3 ; Geological Society of America Special Papers Volume 299 ; 299 >
+    au < exists ; exists ; 1995 ; ; 978-0-8137-2300-0 ; Geological Society of America Special Papers Volume 300 ; 300 >
+    au < exists ; exists ; 1995 ; ; 978-0-8137-2301-9 ; Geological Society of America Special Papers Volume 301 ; 301 >
+    au < manifest ; exists ; 1996 ; ; 978-0-8137-2302-7 ; Geological Society of America Special Papers Volume 302 ; 302 >
+    au < manifest ; exists ; 1996 ; ; 978-0-8137-2303-5 ; Geological Society of America Special Papers Volume 303 ; 303 >
+    au < manifest ; exists ; 1996 ; ; 978-0-8137-2304-3 ; Geological Society of America Special Papers Volume 304 ; 304 >
+    au < manifest ; exists ; 1996 ; ; 978-0-8137-2305-1 ; Geological Society of America Special Papers Volume 305 ; 305 >
+    au < manifest ; exists ; 1996 ; ; 978-0-8137-2306-X ; Geological Society of America Special Papers Volume 306 ; 306 >
+    au < manifest ; exists ; 1996 ; ; 978-0-8137-2307-8 ; Geological Society of America Special Papers Volume 307 ; 307 >
+    au < manifest ; exists ; 1996 ; ; 978-0-8137-2308-6 ; Geological Society of America Special Papers Volume 308 ; 308 >
+    au < manifest ; exists ; 1996 ; ; 978-0-8137-2309-4 ; Geological Society of America Special Papers Volume 309 ; 309 >
+    au < manifest ; exists ; 1996 ; ; 978-0-8137-2310-8 ; Geological Society of America Special Papers Volume 310 ; 310 >
+    au < manifest ; exists ; 1996 ; ; 978-0-8137-2311-6 ; Geological Society of America Special Papers Volume 311 ; 311 >
+    au < manifest ; exists ; 1997 ; ; 978-0-8137-2312-4 ; Geological Society of America Special Papers Volume 312 ; 312 >
+    au < manifest ; exists ; 1996 ; ; 978-0-8137-2313-2 ; Geological Society of America Special Papers Volume 313 ; 313 >
+    au < manifest ; exists ; 1997 ; ; 978-0-8137-2314-0 ; Geological Society of America Special Papers Volume 314 ; 314 >
+    au < manifest ; exists ; 1996 ; ; 978-0-8137-2315-9 ; Geological Society of America Special Papers Volume 315 ; 315 >
+    au < manifest ; exists ; 1997 ; ; 978-0-8137-2316-7 ; Geological Society of America Special Papers Volume 316 ; 316 >
+    au < manifest ; exists ; 1997 ; ; 978-0-8137-2317-5 ; Geological Society of America Special Papers Volume 317 ; 317 >
+    au < manifest ; exists ; 1997 ; ; 978-0-8137-2318-3 ; Geological Society of America Special Papers Volume 318 ; 318 >
+    au < manifest ; exists ; 1997 ; ; 978-0-8137-2319-1 ; Geological Society of America Special Papers Volume 319 ; 319 >
+    au < manifest ; exists ; 1998 ; ; 978-0-8137-2320-5 ; Geological Society of America Special Papers Volume 320 ; 320 >
+    au < manifest ; exists ; 1997 ; ; 978-0-8137-2321-3 ; Geological Society of America Special Papers Volume 321 ; 321 >
+    au < manifest ; exists ; 1998 ; ; 978-0-8137-2322-1 ; Geological Society of America Special Papers Volume 322 ; 322 >
+    au < manifest ; exists ; 1998 ; ; 978-0-8137-2323-X ; Geological Society of America Special Papers Volume 323 ; 323 >
+    au < manifest ; exists ; 1998 ; ; 978-0-8137-2324-8 ; Geological Society of America Special Papers Volume 324 ; 324 >
+    au < manifest ; exists ; 1998 ; ; 978-0-8137-2325-6 ; Geological Society of America Special Papers Volume 325 ; 325 >
+    au < manifest ; exists ; 1998 ; ; 978-0-8137-2326-4 ; Geological Society of America Special Papers Volume 326 ; 326 >
+    au < manifest ; exists ; 1998 ; ; 978-0-8137-2327-2 ; Geological Society of America Special Papers Volume 327 ; 327 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2328-0 ; Geological Society of America Special Papers Volume 328 ; 328 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2329-9 ; Geological Society of America Special Papers Volume 329 ; 329 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2330-2 ; Geological Society of America Special Papers Volume 330 ; 330 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2331-0 ; Geological Society of America Special Papers Volume 331 ; 331 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2332-9 ; Geological Society of America Special Papers Volume 332 ; 332 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2333-7 ; Geological Society of America Special Papers Volume 333 ; 333 >
+    au < manifest ; exists ; 2000 ; ; 978-0-8137-2334-5 ; Geological Society of America Special Papers Volume 334 ; 334 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2335-3 ; Geological Society of America Special Papers Volume 335 ; 335 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2336-1 ; Geological Society of America Special Papers Volume 336 ; 336 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2337-X ; Geological Society of America Special Papers Volume 337 ; 337 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2338-8 ; Geological Society of America Special Papers Volume 338 ; 338 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2339-6 ; Geological Society of America Special Papers Volume 339 ; 339 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2340-X ; Geological Society of America Special Papers Volume 340 ; 340 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2341-8 ; Geological Society of America Special Papers Volume 341 ; 341 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2342-6 ; Geological Society of America Special Papers Volume 342 ; 342 >
+    au < manifest ; exists ; 2000 ; ; 978-0-8137-2343-4 ; Geological Society of America Special Papers Volume 343 ; 343 >
+    au < manifest ; exists ; 1999 ; ; 978-0-8137-2344-2 ; Geological Society of America Special Papers Volume 344 ; 344 >
+    au < manifest ; exists ; 2000 ; ; 978-0-8137-2345-0 ; Geological Society of America Special Papers Volume 345 ; 345 >
+    au < manifest ; exists ; 2000 ; ; 978-0-8137-2346-9 ; Geological Society of America Special Papers Volume 346 ; 346 >
+    au < manifest ; exists ; 2000 ; ; 978-0-8137-2347-7 ; Geological Society of America Special Papers Volume 347 ; 347 >
+    au < manifest ; exists ; 2000 ; ; 978-0-8137-2348-5 ; Geological Society of America Special Papers Volume 348 ; 348 >
+    au < manifest ; exists ; 2000 ; ; 978-0-8137-2349-3 ; Geological Society of America Special Papers Volume 349 ; 349 >
+    au < manifest ; exists ; 2000 ; ; 978-0-8137-2350-7 ; Geological Society of America Special Papers Volume 350 ; 350 >
+    au < manifest ; exists ; 2001 ; ; 978-0-8137-2351-5 ; Geological Society of America Special Papers Volume 351 ; 351 >
+    au < manifest ; exists ; 2001 ; ; 978-0-8137-2352-3 ; Geological Society of America Special Papers Volume 352 ; 3352>
+    au < manifest ; exists ; 2002 ; ; 978-0-8137-2353-1 ; Geological Society of America Special Papers Volume 353 ; 3353>
+    au < manifest ; exists ; 2001 ; ; 978-0-8137-2354-X ; Geological Society of America Special Papers Volume 354 ; 3354>
+    au < manifest ; exists ; 2001 ; ; 978-0-8137-2355-8 ; Geological Society of America Special Papers Volume 355 ; 3355>
+    au < manifest ; exists ; 2002 ; ; 978-0-8137-2356-6 ; Geological Society of America Special Papers Volume 356 ; 3356>
+    au < manifest ; exists ; 2002 ; ; 978-0-8137-2357-4 ; Geological Society of America Special Papers Volume 357 ; 357 >
+    au < manifest ; exists ; 2002 ; ; 978-0-8137-2358-2 ; Geological Society of America Special Papers Volume 358 ; 358 >
+    au < manifest ; exists ; 2002 ; ; 978-0-8137-2359-0 ; Geological Society of America Special Papers Volume 359 ; 359 >
+    au < manifest ; exists ; 2002 ; ; 978-0-8137-2360-4 ; Geological Society of America Special Papers Volume 360 ; 360 >
+    au < manifest ; exists ; 2002 ; ; 978-0-8137-2361-2 ; Geological Society of America Special Papers Volume 361 ; 361 >
+    au < manifest ; exists ; 2002 ; ; 978-0-8137-2362-0 ; Geological Society of America Special Papers Volume 362 ; 362 >
+    au < manifest ; exists ; 2002 ; ; 978-0-8137-2364-7 ; Geological Society of America Special Papers Volume 364 ; 364 >
+    au < manifest ; exists ; 2002 ; ; 978-0-8137-2365-5 ; Geological Society of America Special Papers Volume 365 ; 365 >
+    au < manifest ; exists ; 2002 ; ; 978-0-8137-2366-3 ; Geological Society of America Special Papers Volume 366 ; 366 >
+    au < manifest ; exists ; 2003 ; ; 978-0-8137-2367-1 ; Geological Society of America Special Papers Volume 367 ; 367 >
+    au < manifest ; exists ; 2003 ; ; 978-0-8137-2368-X ; Geological Society of America Special Papers Volume 368 ; 368 >
+    au < manifest ; exists ; 2003 ; ; 978-0-8137-2369-8 ; Geological Society of America Special Papers Volume 369 ; 369 >
+    au < manifest ; exists ; 2003 ; ; 978-0-8137-2370-1 ; Geological Society of America Special Papers Volume 370 ; 370 >
+    au < manifest ; exists ; 2003 ; ; 978-0-8137-2371-X ; Geological Society of America Special Papers Volume 371 ; 371 >
+    au < manifest ; exists ; 2003 ; ; 978-0-8137-2372-8 ; Geological Society of America Special Papers Volume 372 ; 372 >
+    au < manifest ; exists ; 2003 ; ; 978-0-8137-2373-6 ; Geological Society of America Special Papers Volume 373 ; 373 >
+    au < manifest ; exists ; 2003 ; ; 978-0-8137-2374-4 ; Geological Society of America Special Papers Volume 374 ; 374 >
+    au < manifest ; exists ; 2004 ; ; 978-0-8137-2375-2 ; Geological Society of America Special Papers Volume 375 ; 375 >
+    au < manifest ; exists ; 2004 ; ; 978-0-8137-2376-0 ; Geological Society of America Special Papers Volume 376 ; 376 >
+    au < manifest ; exists ; 2004 ; ; 978-0-8137-2377-9 ; Geological Society of America Special Papers Volume 377 ; 377 >
+    au < manifest ; exists ; 2004 ; ; 978-0-8137-2378-7 ; Geological Society of America Special Papers Volume 378 ; 378 >
+    au < manifest ; exists ; 2004 ; ; 978-0-8137-2379-5 ; Geological Society of America Special Papers Volume 379 ; 379 >
+    au < manifest ; exists ; 2004 ; ; 978-0-8137-2380-9 ; Geological Society of America Special Papers Volume 380 ; 380 >
+    au < manifest ; exists ; 2004 ; ; 978-0-8137-2381-7 ; Geological Society of America Special Papers Volume 381 ; 381 >
+    au < manifest ; exists ; 2005 ; ; 978-0-8137-2382-5 ; Geological Society of America Special Papers Volume 382 ; 382 >
+    au < manifest ; exists ; 2004 ; ; 978-0-8137-2383-3 ; Geological Society of America Special Papers Volume 383 ; 383 >
+    au < manifest ; exists ; 2005 ; ; 978-0-8137-2384-1 ; Geological Society of America Special Papers Volume 384 ; 384 >
+    au < manifest ; exists ; 2005 ; ; 978-0-8137-2385-X ; Geological Society of America Special Papers Volume 385 ; 385 >
+    au < manifest ; exists ; 2005 ; ; 978-0-8137-2386-8 ; Geological Society of America Special Papers Volume 386 ; 386 >
+    au < manifest ; exists ; 2005 ; ; 978-0-8137-2387-6 ; Geological Society of America Special Papers Volume 387 ; 387 >
+    au < manifest ; exists ; 2005 ; ; 978-0-8137-2388-4 ; Geological Society of America Special Papers Volume 388 ; 388 >
+    au < manifest ; exists ; 2004 ; ; 978-0-8137-2389-2 ; Geological Society of America Special Papers Volume 389 ; 389 >
+    au < manifest ; exists ; 2005 ; ; 978-0-8137-2390-6 ; Geological Society of America Special Papers Volume 390 ; 390 >
+    au < manifest ; exists ; 2005 ; ; 978-0-8137-2391-4 ; Geological Society of America Special Papers Volume 391 ; 391 >
+    au < manifest ; exists ; 2005 ; ; 978-0-8137-2392-2 ; Geological Society of America Special Papers Volume 392 ; 392 >
+    au < manifest ; exists ; 2005 ; ; 978-0-8137-2393-0 ; Geological Society of America Special Papers Volume 393 ; 393 >
+    au < manifest ; exists ; 2005 ; ; 978-0-8137-2394-9 ; Geological Society of America Special Papers Volume 394 ; 394 >
+    au < manifest ; exists ; 2005 ; ; 978-0-8137-2395-7 ; Geological Society of America Special Papers Volume 395 ; 395 >
+    au < manifest ; exists ; 2005 ; ; 978-0-8137-2396-5 ; Geological Society of America Special Papers Volume 396 ; 396 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2397-6 ; Geological Society of America Special Papers Volume 397 ; 397 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2398-3 ; Geological Society of America Special Papers Volume 398 ; 398 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2399-X ; Geological Society of America Special Papers Volume 399 ; 399 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2400-3 ; Geological Society of America Special Papers Volume 400 ; 400 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2401-5 ; Geological Society of America Special Papers Volume 401 ; 401 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2402-3 ; Geological Society of America Special Papers Volume 402 ; 402 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2403-9 ; Geological Society of America Special Papers Volume 403 ; 403 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2404-7 ; Geological Society of America Special Papers Volume 404 ; 404 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2405-8 ; Geological Society of America Special Papers Volume 405 ; 405 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2406-6 ; Geological Society of America Special Papers Volume 406 ; 406 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2407-4 ; Geological Society of America Special Papers Volume 407 ; 407 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2408-2 ; Geological Society of America Special Papers Volume 408 ; 408 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2409-0 ; Geological Society of America Special Papers Volume 409 ; 409 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2410-4 ; Geological Society of America Special Papers Volume 410 ; 410 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2411-2 ; Geological Society of America Special Papers Volume 411 ; 411 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2412-0 ; Geological Society of America Special Papers Volume 412 ; 412 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2413-9 ; Geological Society of America Special Papers Volume 413 ; 413 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2414-0 ; Geological Society of America Special Papers Volume 414 ; 414 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2415-7 ; Geological Society of America Special Papers Volume 415 ; 415 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2416-4 ; Geological Society of America Special Papers Volume 416 ; 416 >
+    au < manifest ; exists ; 2006 ; ; 978-0-8137-2417-1 ; Geological Society of America Special Papers Volume 417 ; 417 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2418-8 ; Geological Society of America Special Papers Volume 418 ; 418 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2419-5 ; Geological Society of America Special Papers Volume 419 ; 419 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2420-1 ; Geological Society of America Special Papers Volume 420 ; 420 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2421-8 ; Geological Society of America Special Papers Volume 421 ; 421 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2422-5 ; Geological Society of America Special Papers Volume 422 ; 422 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2423-2 ; Geological Society of America Special Papers Volume 423 ; 423 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2424-9 ; Geological Society of America Special Papers Volume 424 ; 424 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2425-6 ; Geological Society of America Special Papers Volume 425 ; 425 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2426-3 ; Geological Society of America Special Papers Volume 426 ; 426 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2427-0 ; Geological Society of America Special Papers Volume 427 ; 427 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2428-7 ; Geological Society of America Special Papers Volume 428 ; 428 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2429-4 ; Geological Society of America Special Papers Volume 429 ; 429 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2430-0 ; Geological Society of America Special Papers Volume 430 ; 430 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2431-7 ; Geological Society of America Special Papers Volume 431 ; 431 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2432-4 ; Geological Society of America Special Papers Volume 432 ; 432 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2433-1 ; Geological Society of America Special Papers Volume 433 ; 433 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2434-8 ; Geological Society of America Special Papers Volume 434 ; 434 >
+    au < manifest ; exists ; 2008 ; ; 978-0-8137-2435-5 ; Geological Society of America Special Papers Volume 435 ; 435 >
+    au < manifest ; exists ; 2008 ; ; 978-0-8137-2436-2 ; Geological Society of America Special Papers Volume 436 ; 436 >
+    au < manifest ; exists ; 2007 ; ; 978-0-8137-2437-9 ; Geological Society of America Special Papers Volume 437 ; 437 >
+    au < manifest ; exists ; 2008 ; ; 978-0-8137-2438-6 ; Geological Society of America Special Papers Volume 438 ; 438 >
+    au < manifest ; exists ; 2008 ; ; 978-0-8137-2439-3 ; Geological Society of America Special Papers Volume 439 ; 439 >
+    au < manifest ; exists ; 2008 ; ; 978-0-8137-2440-9 ; Geological Society of America Special Papers Volume 440 ; 440 >
+    au < manifest ; exists ; 2008 ; ; 978-0-8137-2441-6 ; Geological Society of America Special Papers Volume 441 ; 441 >
+    au < manifest ; exists ; 2008 ; ; 978-0-8137-2442-3 ; Geological Society of America Special Papers Volume 442 ; 442 >
+    au < manifest ; exists ; 2008 ; ; 978-0-8137-2443-0 ; Geological Society of America Special Papers Volume 443 ; 443 >
+    au < manifest ; exists ; 2008 ; ; 978-0-8137-2444-7 ; Geological Society of America Special Papers Volume 444 ; 444 >
+    au < manifest ; exists ; 2008 ; ; 978-0-8137-2445-4 ; Geological Society of America Special Papers Volume 445 ; 445 >
+    au < manifest ; exists ; 2008 ; ; 978-0-8137-2446-1 ; Geological Society of America Special Papers Volume 446 ; 446 >
+    au < manifest ; exists ; 2009 ; ; 978-0-813-72447-8 ; Geological Society of America Special Papers Volume 447 ; 447 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2448-5 ; Geological Society of America Special Papers Volume 448 ; 448 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2449-2 ; Geological Society of America Special Papers Volume 449 ; 449 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2450-8 ; Geological Society of America Special Papers Volume 450 ; 450 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2451-5 ; Geological Society of America Special Papers Volume 451 ; 451 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2452-2 ; Geological Society of America Special Papers Volume 452 ; 452 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2453-9 ; Geological Society of America Special Papers Volume 453 ; 453 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2454-6 ; Geological Society of America Special Papers Volume 454 ; 454 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2455-3 ; Geological Society of America Special Papers Volume 455 ; 455 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2456-0 ; Geological Society of America Special Papers Volume 456 ; 456 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2446-1 ; Geological Society of America Special Papers Volume 457 ; 457 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2458-4 ; Geological Society of America Special Papers Volume 458 ; 458 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2459-1 ; Geological Society of America Special Papers Volume 459 ; 459 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2460-7 ; Geological Society of America Special Papers Volume 460 ; 460 >
+    au < manifest ; exists ; 2009 ; ; 978-0-8137-2461-4 ; Geological Society of America Special Papers Volume 461 ; 461 >
+    au < manifest ; exists ; 2010 ; ; 978-0-8137-2462-1 ; Geological Society of America Special Papers Volume 462 ; 462 >
+    au < manifest ; exists ; 2010 ; ; 978-0-8137-2463-8 ; Geological Society of America Special Papers Volume 463 ; 463 >
+    au < manifest ; exists ; 2010 ; ; 978-0-8137-2464-5 ; Geological Society of America Special Papers Volume 464 ; 464 >
+    au < manifest ; exists ; 2010 ; ; 978-0-8137-2465-2 ; Geological Society of America Special Papers Volume 465 ; 465 >
+    au < manifest ; exists ; 2010 ; ; 978-0-8137-2466-9 ; Geological Society of America Special Papers Volume 466 ; 466 >
+    au < manifest ; exists ; 2010 ; ; 978-0-8137-2467-6 ; Geological Society of America Special Papers Volume 467 ; 467 >
+    au < manifest ; exists ; 2010 ; ; 978-0-8137-2468-3 ; Geological Society of America Special Papers Volume 468 ; 468 >
+    au < manifest ; exists ; 2010 ; ; 978-0-8137-2469-0 ; Geological Society of America Special Papers Volume 469 ; 469 >
+    au < manifest ; exists ; 2010 ; ; 978-0-8137-2470-6 ; Geological Society of America Special Papers Volume 470 ; 470 >
+    au < manifest ; exists ; 2010 ; ; 978-0-8137-2471-3 ; Geological Society of America Special Papers Volume 471 ; 471 >
+    au < manifest ; exists ; 2010 ; ; 978-0-8137-2472-0 ; Geological Society of America Special Papers Volume 472 ; 472 >
+    au < manifest ; exists ; 2011 ; ; 978-0-8137-2473-7 ; Geological Society of America Special Papers Volume 473 ; 473 >
+    au < manifest ; exists ; 2011 ; ; 978-0-8137-2474-4 ; Geological Society of America Special Papers Volume 474 ; 474 >
+    au < manifest ; exists ; 2011 ; ; 978-0-8137-2475-1 ; Geological Society of America Special Papers Volume 475 ; 475 >
+    au < manifest ; exists ; 2011 ; ; 978-0-8137-2476-8 ; Geological Society of America Special Papers Volume 476 ; 476 >
+    au < manifest ; exists ; 2011 ; ; 978-0-8137-2477-5 ; Geological Society of America Special Papers Volume 477 ; 477 >
+    au < manifest ; exists ; 2011 ; ; 978-0-8137-2478-2 ; Geological Society of America Special Papers Volume 478 ; 478 >
+    au < manifest ; exists ; 2011 ; ; 978-0-8137-2479-9 ; Geological Society of America Special Papers Volume 479 ; 479 >
+    au < manifest ; exists ; 2011 ; ; 978-0-8137-2480-5 ; Geological Society of America Special Papers Volume 480 ; 480 >
+    au < manifest ; exists ; 2011 ; ; 978-0-8137-2481-2 ; Geological Society of America Special Papers Volume 481 ; 481 >
+    au < manifest ; exists ; 2011 ; ; 978-0-8137-2482-9 ; Geological Society of America Special Papers Volume 482 ; 482 >
+    au < manifest ; exists ; 2011 ; ; 978-0-8137-2483-6 ; Geological Society of America Special Papers Volume 483 ; 483 >
+    au < manifest ; exists ; 2011 ; ; 978-0-8137-2484-3 ; Geological Society of America Special Papers Volume 484 ; 484 >
+    au < manifest ; exists ; 2012 ; ; 978-0-8137-2485-0 ; Geological Society of America Special Papers Volume 485 ; 485 >
+    au < manifest ; exists ; 2012 ; ; 978-0-8137-2486-7 ; Geological Society of America Special Papers Volume 486 ; 486 >
+    au < manifest ; exists ; 2012 ; ; 978-0-8137-2487-4 ; Geological Society of America Special Papers Volume 487 ; 487 >
+    au < manifest ; exists ; 2012 ; ; 978-0-8137-2488-1 ; Geological Society of America Special Papers Volume 488 ; 488 >
+    au < manifest ; exists ; 2012 ; ; 978-0-8137-2489-8 ; Geological Society of America Special Papers Volume 489 ; 489 >
+    au < manifest ; exists ; 2012 ; ; 978-0-8137-2490-4 ; Geological Society of America Special Papers Volume 490 ; 490 >
+    au < manifest ; exists ; 2012 ; ; 978-0-8137-2492-8 ; Geological Society of America Special Papers Volume 492 ; 492 >
     
   }   
   
