@@ -19,7 +19,7 @@
       attr[journal_id] = cjm
       implicit < status ; year ; name ; param[volume] >
       
-      au < manifest ; 2012 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 43 ; 43 >
+      au < testing ; 2012 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 43 ; 43 >
       au < expected ; 2013 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 44 ; 44 >
       
 
