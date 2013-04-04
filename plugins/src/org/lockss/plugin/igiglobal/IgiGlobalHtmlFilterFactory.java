@@ -106,6 +106,12 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("h2", "style", "border-bottom"),
         // Favorite button
         HtmlNodeFilters.tagWithAttribute("span", "id", "ctl00_ctl00_cphMain_cphCenter_favorite"),
+        
+        //IGI Global books identifies library with access in header
+        HtmlNodeFilters.tagWithAttribute("span", "id", "ctl00_ctl00_cphMain_cphCenter_lblHeader"),
+        //In IGI books, the footer contains sponsor image and no clear marker, but also no needed content
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "Footer"),
+        
         // <h3> replaced <h4> or vice versa at one point
         new TagNameFilter("h3"),
         new TagNameFilter("h4")    

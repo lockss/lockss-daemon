@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,25 +44,27 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 
 /*
- * PDF Full Text: http://www.igi-global.com/viewtitle.aspx?titleid=55656
- * HTML Abstract: http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55656
+ * Chapter abstract: http://www.igi-global.com/gateway/chapter/20212
+ * Chapter PDF with frames: http://www.igi-global.com/gateway/chapter/full-text-pdf/20212
+ * Chapter PDF alone: http://www.igi-global.com/pdf.aspx?tid=20212&ptid=464&ctid=3&t=E-Survey+Methodology
+ *  where & is encoded as %26 and = is encoded as %3D and tid is the chapter number; ptid is the book number
  */
-public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase {
+public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTestCase {
 	
 	private SimulatedArchivalUnit sau;	// Simulated AU to generate content
 	private final String ARTICLE_FAIL_MSG = "Article files not created properly";
 	private final String PATTERN_FAIL_MSG = "Article file URL pattern changed or incorrect";
-	private final String PLUGIN_NAME = "org.lockss.plugin.igiglobal.IgiGlobalPlugin";
+	private final String PLUGIN_NAME = "org.lockss.plugin.igiglobal.ClockssIgiGlobalBooksPlugin";
 	static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
-	static final String JOURNAL_ISSN_KEY = ConfigParamDescr.JOURNAL_ISSN.getKey();
+	static final String BOOK_ISBN_KEY = "book_isbn";
 	static final String VOLUME_NUMBER_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
 	private final String BASE_URL = "http://www.example.com/";
-	private final String VOLUME_NUMBER = "352";
-	private final String JOURNAL_ISSN = "nejm";
+	private final String VOLUME_NUMBER = "464";
+	private final String BOOK_ISBN = "9781591407928";
 	private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
 												BASE_URL_KEY, BASE_URL,
 												VOLUME_NUMBER_KEY, VOLUME_NUMBER,
-												JOURNAL_ISSN_KEY, JOURNAL_ISSN);
+												BOOK_ISBN_KEY, BOOK_ISBN);
 	private static final int DEFAULT_FILESIZE = 3000;
 
   public void setUp() throws Exception {
@@ -107,32 +109,32 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
     
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.wrong.com/article/55656");
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/articles/55656");
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/article/full");
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "/gateway/article/55656");
-    assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/article/55656");
-    assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/article/1");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.wrong.com/gateway/chapter/20212");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/book/464"); //Book TOC
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/full-text-pdf/20212");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "chapter/survey-methodology/20212");
    }
 
   /*
-   * PDF Full Text: http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55656
-   * HTML Abstract: http://www.igi-global.com/viewtitle.aspx?titleid=55656
+   * Chapter abstract: http://www.igi-global.com/gateway/chapter/20212
+   * Chapter PDF with frames: http://www.igi-global.com/gateway/chapter/full-text-pdf/20212
+   * Chapter PDF alone: http://www.igi-global.com/pdf.aspx?tid=20212&ptid=464&ctid=3&t=E-Survey+Methodology
+   *  where & is encoded as %26 and = is encoded as %3D and tid is the chapter number; ptid is the book number
    */
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
+    // Order doesn't matter on these. We're just loading a bunch of URLs into a UrlCacher
+    // Notice that in some cases we have an abstract and the matchingPDF
+    // In other cases we're missing one of the pieces
+    // This is to test edge cases in the ArticleIterator
     String[] urls = {
-					    BASE_URL + "gateway/article/full-text-html/11111",
-					    BASE_URL + "gateway/article/full-text-pdf/2222",
-					    BASE_URL + "gateway/article/full-text-html/55656",
-					    BASE_URL + "gateway/article/full-text-pdf/55656",
-					    BASE_URL + "gateway/article/full-text-pdf/12345",
-					    BASE_URL + "gateway/article/11111",
-					    BASE_URL + "gateway/article/55656",
-					    BASE_URL + "gateway/article/54321",
-					    BASE_URL + "gateway/articles/full-text-pdf/12345",
-					    BASE_URL + "gateway/issue/54321",
-					    BASE_URL + "gateway/issue/12345",
+					    BASE_URL + "gateway/chapter/full-text-pdf/2222",
+					    BASE_URL + "gateway/chapter/full-text-pdf/55656",
+					    BASE_URL + "gateway/chapter/full-text-pdf/12345",
+					    BASE_URL + "gateway/chapter/11111",
+					    BASE_URL + "gateway/chapter/55656",
+					    BASE_URL + "gateway/chapter/54321",
+					    BASE_URL + "gateway/book/464",
 					    BASE_URL,
 					    BASE_URL + "gateway"
     				};
@@ -143,6 +145,11 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
 	    CachedUrl cuPdf = null;
 	    CachedUrl cuHtml = null;
 	    UrlCacher uc;
+	    //
+	    // The only thing we seem to be doing with the content that was created in the SimulatedAU 
+	    // Is to pick up one PDF cu and one HTML cu
+	    // Only the HTML CU is used and then only to put content in to other html URLs in the UrlCacher
+	    //
 	    while(cuIter.hasNext() && (cuPdf == null || cuHtml == null))
 		{
 	    	if(cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL && cusn.hasContent())
@@ -159,6 +166,9 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
 	    	}
 	    	cusn = cuIter.next();
 		}
+	    
+	    // add a URL with content to the "real" au
+	    // oddly, they'll all be html...the PDF URLs have an thml frameset so this is okay
 	    for (String url : urls) {
 	      uc = au.makeUrlCacher(url);
               uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
@@ -166,7 +176,10 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
     }
     
     Stack<String[]> expStack = new Stack<String[]>();
-    String [] af1 = {BASE_URL + "gateway/article/full-text-html/11111",
+    // fulltextcu
+    // FULL_TEXT_PDF
+    // ABSTRACT - must have abstract to even get picked up
+    String [] af1 = {null,
     		     null,
     		     BASE_URL + "gateway/article/11111"};
     
@@ -174,7 +187,7 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
 		     null,
 		     BASE_URL + "gateway/article/54321"};
     
-    String [] af3 = {BASE_URL + "gateway/article/full-text-html/55656",
+    String [] af3 = {BASE_URL + "gateway/article/full-text-pdf/55656",
 		     BASE_URL + "gateway/article/full-text-pdf/55656",
 		     BASE_URL + "gateway/article/55656"};
     

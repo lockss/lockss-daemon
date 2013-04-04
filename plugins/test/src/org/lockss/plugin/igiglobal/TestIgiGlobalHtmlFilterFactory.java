@@ -138,6 +138,54 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
   public static final String dynamicCssHtml = 
     "<link rel=\"stylesheet\" href=\"css/grid2.css?1349472143\" type=\"text/css\" media=\"screen\" />";
   public static final String dynamicCssHtmlFiltered = "";
+  
+  
+  // In IGI Global books, there is a centered banner indicating which institution is viewing the T.O.C.
+  public static final String identityHeaderHtml =
+      "<td valign=\"top\" class=\"FullHeight CenterContentSpace\">" +
+          "<div class=\"CenterContent\">" +
+          "<div style=\"padding: 10px 15px;\"><h1>" +
+          "<span id=\"ctl00_ctl00_cphMain_cphCenter_lblHeader\">Stanford University's IGI Global Research Collection</span>" +
+          "</h1><table class=\"GrayButton\"><tr><td valign=\"middle\">" +
+          "<span class=\"BlankButtonIcon\" style=\"background: url('/jQuery/css/redmond/images/ui-icons_6da8d5_256x240.png') no-repeat 0px -64px;\" />" +
+          "</td>" +
+          "<td valign=\"middle\"><a id=\"ctl00_ctl00_cphMain_cphCenter_lnkBackTop\" class=\"GrayButtonLinks\" href=\"/gateway/database/0\">View All Books</a>" +
+          "</td></tr></table>" +
+          "<br /><br />";
+  
+  public static final String identityHeaderHtmlFiltered =
+      "<td valign=\"top\" class=\"FullHeight CenterContentSpace\">" +
+          "<div class=\"CenterContent\">" +
+          "<div style=\"padding: 10px 15px;\"><h1>" +
+          "</h1><table class=\"GrayButton\"><tr><td valign=\"middle\">" +
+          "<span class=\"BlankButtonIcon\" style=\"background: url('/jQuery/css/redmond/images/ui-icons_6da8d5_256x240.png') no-repeat 0px -64px;\" />" +
+          "</td>" +
+          "<td valign=\"middle\"><a id=\"ctl00_ctl00_cphMain_cphCenter_lnkBackTop\" class=\"GrayButtonLinks\" href=\"/gateway/database/0\">View All Books</a>" +
+          "</td></tr></table>" +
+          "<br /><br />";
+  
+  
+  public static final String footerWithSponsor = 
+      "</table></div></div>" +
+          "<div class=\"Footer\"><div class=\"Content\">" +
+          "<table cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td valign=\"top\" style=\"width:495px;text-align:left;\">" +
+          "<b style=\"font-size:12px;margin:0px;padding:0px;\">LEARN MORE:</b><br />" +
+          "<a href=\"/about/\" class=\"footerlink\">About IGI Global</a>| " +
+          "<a href=\"/contact/\" class=\"footerlink\">Contact</a>|" +
+          "<a href=\"/newsletters/\" class=\"footerlink\">Newsletters</a></td>" +
+          "<td valign=\"top\" style=\"width:495px;text-align:right;\">" +
+          "<div style=\"padding-bottom:10px;\"><a href=\"http://www.facebook.com/\"><span class=\"fb\"></span></a>&nbsp;" +
+          "</div><div style=\"padding-bottom:3px;\"><a href=\"/policies/privacy/\" class=\"footerlink\">Privacy Policy</a>|" +
+          "<a href=\"/policies/content-reuse/\" class=\"footerlink\">Content Reuse Policy</a>" +
+          "</div><div style=\"display:inline-table;\">IGI Global - All Rights Reserved</div>" +
+          "</td></tr></table></div></div><div>";
+
+  public static final String footerWithSponsorFiltered =
+      "</table></div></div>" +
+          "<div>";
+  
+  
+  
 	
 
   public void testSibebarFiltering() throws Exception {
@@ -200,5 +248,19 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 
     assertEquals(dynamicCssHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
+  public void testIdentityHeader() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+                                                       new StringInputStream(identityHeaderHtml),
+                                                       Constants.DEFAULT_ENCODING);
 
+    assertEquals(identityHeaderHtmlFiltered, StringUtil.fromInputStream(actIn));
+  }
+  public void testFooter() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+                                                       new StringInputStream(footerWithSponsor),
+                                                       Constants.DEFAULT_ENCODING);
+
+    assertEquals(footerWithSponsorFiltered, StringUtil.fromInputStream(actIn));
+  }
+  
 }

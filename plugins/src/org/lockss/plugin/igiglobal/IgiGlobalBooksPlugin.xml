@@ -1,69 +1,72 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>testing - new plugin for book layout; can we combine?</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.igiglobal.IgiGlobalPlugin</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalBooksPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>IGI Global Plugin</string>
+    <string>IGI Global Books Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
-        <string>Metadata</string>
-        <string>2</string>
+  <string>Metadata</string>
+  <string>1</string>
       </entry>
       <entry>
-        <string>Poll</string>
-        <string>4</string>
+  <string>Poll</string>
+  <string>1</string>
       </entry>
       <entry>
-        <string>Substance</string>
-        <string>7</string>
+  <string>Substance</string>
+  <string>1</string>
       </entry>
     </map>
   </entry>
   <entry>
+  <!--  The volume is really the publisher's unique book identifier number -->
     <string>au_name</string>
-    <string>&quot;IGI Global Plugin, Base URL %s, Journal ISSN %s, Volume %s&quot;, base_url, journal_issn, volume</string>
+    <string>"IGI Global Books Plugin, Base URL %s, Book ISBN %s, Volume %s", base_url, book_isbn, volume</string>
+  </entry>
+  <entry>
+  <string>au_manifest</string>
+  <string>"%slockss/books.aspx", base_url</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%slockss/journal-issues.aspx?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume</string>
+    <string>"%sgateway/book/%s", base_url, volume</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
       <entry>
-        <string>au_title</string>
-        <string>&quot;%sjournals.aspx?p=%s&quot;, base_url, journal_issn</string>
-      </entry>
-      <entry>
-        <string>au_volume</string>
-        <string>&quot;%slockss/journal-issues.aspx?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume</string>
+  <string>au_title</string>
+        <string>"%sgateway/book/%s", base_url, volume</string>
       </entry>
     </map>
   </entry>
   <entry>
+<!-- CRAWL RULE COMMENT BLOCK                                                                                                                                           
+     start_url is understood and need not be explicitly included
+     abstracts are at <base>chapter/#; pdf in frameset is at <base>chapter/full-text-pdf/#
+     <base>pdf.aspx?<arguments> is pdf by itself
+     we do not need to crawl <base>chapter/<chapter-title>/# because that is just the bookstore page for this chapter 
+-->     
     <string>au_crawlrules</string>
     <list>
-      <string>2,"^%smembership/login", base_url</string>
-      <string>2,"(/App_Master){2}", base_url</string>
       <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.+)?$", base_url</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%sgateway/contentowned/articles\.aspx", base_url</string>
-      <string>1,"^%sgateway/(issue|article(/full-text-pdf|/full-text-html)?)/[0-9]+$", base_url</string>
+      <string>1,"^%sgateway/chapter(/full-text-pdf)?/[0-9]+$", base_url</string>
       <string>1,"^%spdf\.aspx\?", base_url</string>
-      <string>1,"^%sviewtitle\.aspx\?titleid=[0-9]+$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -72,18 +75,19 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>base_url</key>
         <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <description>Usually of the form
+          http://&lt;journal-name&gt;.com/</description>
         <type>3</type>
         <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>journal_issn</key>
-        <displayName>Journal ISSN</displayName>
-        <description>International Standard Serial Number.</description>
+        <key>book_isbn</key>
+        <displayName>Book ISBN</displayName>
+        <description>International Standard Book Number</description>
         <type>1</type>
-        <size>20</size>
+        <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -104,15 +108,9 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%sgateway/article/full-text-html/[0-9]+$", base_url</string>
-      <string>"^%sgateway/article/full-text-pdf/[0-9]+$", base_url</string>
-      <string>"^%sviewtitle\.aspx\?titleid=[0-9]+$", base_url</string>
+      <string>"^%sgateway/chapter/full-text-pdf/[0-9]+$", base_url</string>
       <string>"^%spdf\.aspx\?", base_url</string>
     </list>
-  </entry>
-  <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.igiglobal.IgiGlobalHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -121,10 +119,6 @@
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.igiglobal.IgiGlobalArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.igiglobal.IgiGlobalUrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
@@ -148,3 +142,4 @@
     <long>1209600000</long>
   </entry>
 </map>
+  

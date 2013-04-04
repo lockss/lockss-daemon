@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalHtmlMetadataExtractorFactory.java,v 1.2 2012-10-02 23:42:17 aishizaki Exp $
+ * $Id: IgiGlobalHtmlMetadataExtractorFactory.java,v 1.3 2013-04-04 20:41:24 alexandraohlson Exp $
  */
 
 /*
@@ -60,6 +60,20 @@ import org.lockss.plugin.*;
  * <meta content="en" name="citation_language">
  * <meta name="citation_keywords">
  * <meta content="1990" name="citation_date">
+ * 
+ * Metadata for BOOKS on an abstract page http://www.igi-global.com/gateway/chapter/20217                                                                                 
+ * in the form of:                                                                                                                                                        
+ * meta name="DC.creator" content="Author, Q." />                                                                                                                         
+ * <meta name="DC.identifier" content="9781591407928 DOI: 10.4018/978-1-59140-792-8.ch006" />                                                                             
+ * <meta name="DC.title" content="Book Chapter Title" />                                                                                                                  
+ * <meta name="DC.description" content="Abstract text goes here." />                                                                                                      
+ * <meta name="DC.publisher" content="IGI Global" />                                                                                                                      
+ * <meta name="DC.type" content="chapter" />                                                                                                                              
+ * <meta name="DC.format" content="electronic" />                                                                                                                         
+ * <meta name="DC.source" content="http://services.igi-global.com/resolvedoi/resolve.aspx?doi=10.4018/isbn_number_goes_here.ch006" />                                     
+ * <meta name="DC.language" content="English" />                                                                                                                          
+ * <meta name="DC.coverage" content="dual-mode-electronic-survey-lessons" />                                                                                              
+ * <meta name="DC.rights" content="Access limited to members" />                        
  */
 
 public class IgiGlobalHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
@@ -92,6 +106,27 @@ public class IgiGlobalHtmlMetadataExtractorFactory implements FileMetadataExtrac
       tagMap.put("citation_date", MetadataField.FIELD_DATE);
       //often blank
       tagMap.put("citation_keywords", MetadataField.FIELD_KEYWORDS);
+      
+      // the DC.* values are in book chapter abstracts                                                                                                                    
+      tagMap.put("dc.identifier", MetadataField.DC_FIELD_IDENTIFIER);
+      // This could be more than one type of MetadataField.FIELD_*                                                                                                        
+
+      tagMap.put("dc.creator", MetadataField.DC_FIELD_CREATOR);
+      tagMap.put("dc.creator", MetadataField.FIELD_AUTHOR);
+
+      tagMap.put("dc.title", MetadataField.DC_FIELD_TITLE);
+      tagMap.put("dc.title", MetadataField.FIELD_ARTICLE_TITLE);
+
+      tagMap.put("dc.publisher", MetadataField.DC_FIELD_PUBLISHER);
+      tagMap.put("dc.publisher",  MetadataField.FIELD_PUBLISHER);
+
+      tagMap.put("dc.description", MetadataField.DC_FIELD_DESCRIPTION);
+      tagMap.put("dc.type", MetadataField.DC_FIELD_TYPE);
+      tagMap.put("dc.format", MetadataField.DC_FIELD_FORMAT);
+      tagMap.put("dc.language", MetadataField.DC_FIELD_LANGUAGE);
+      tagMap.put("dc.coverage",MetadataField.DC_FIELD_COVERAGE);
+      tagMap.put("dc.rights", MetadataField.DC_FIELD_RIGHTS);
+      tagMap.put("dc.source", MetadataField.DC_FIELD_SOURCE);
     }
 
     @Override
@@ -99,6 +134,10 @@ public class IgiGlobalHtmlMetadataExtractorFactory implements FileMetadataExtrac
 	throws IOException {
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
+      // Since we know it and since Metadata requires it, set it manually if necessary
+      if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
+        am.put(MetadataField.FIELD_PUBLISHER, "IGI Global");
+      }
       return am;
     }
   }

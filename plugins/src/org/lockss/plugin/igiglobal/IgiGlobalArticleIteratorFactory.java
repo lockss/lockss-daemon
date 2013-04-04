@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.4 2012-10-10 01:42:57 wkwilson Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.5 2013-04-04 20:41:23 alexandraohlson Exp $
  */
 
 /*
@@ -42,8 +42,12 @@ import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 /*
+ * For journals:
  * PDF Full Text: http://www.igi-global.com/article/full-text-pdf/56564
  * HTML Abstract: http://www.igi-global.com/article/56564
+ * For books:
+ * PDF Full Text: http://www.igi-global.com/chapter/20212
+ * HTML Abstract: http://www.igi-global.com/chapter/full-text-pdf/20212
  */
 
 public class IgiGlobalArticleIteratorFactory
@@ -52,9 +56,9 @@ public class IgiGlobalArticleIteratorFactory
 
   protected static Logger log = Logger.getLogger("IgiArticleIteratorFactory");
   
-  protected static final String ROOT_TEMPLATE = "\"%sgateway/article/\", base_url"; // params from tdb file corresponding to AU
+  protected static final String ROOT_TEMPLATE = "\"%sgateway/(article|chapter)/\", base_url"; // params from tdb file corresponding to AU
   
-  protected static final String PATTERN_TEMPLATE = "\"^%sgateway/article/[0-9]+\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"^%sgateway/(article|chapter)/[0-9]+\", base_url";
 
   
   @Override
@@ -70,7 +74,7 @@ public class IgiGlobalArticleIteratorFactory
 
   protected static class IgiGlobalArticleIterator extends SubTreeArticleIterator {
 
-    protected Pattern ABSTRACT_PATTERN = Pattern.compile("article/([0-9]+)$", Pattern.CASE_INSENSITIVE);
+    protected Pattern ABSTRACT_PATTERN = Pattern.compile("(article|chapter)/([0-9]+)$", Pattern.CASE_INSENSITIVE);
     
     public IgiGlobalArticleIterator(ArchivalUnit au,
                                      SubTreeArticleIterator.Spec spec) {
@@ -98,18 +102,23 @@ public class IgiGlobalArticleIteratorFactory
       return af;
     }
     
+    //NOTE -  the full-text-pdf is pdf in an html frameset so it's not
+    // actually a pdf file. 
+    // we are not picking up the straight pdf which lives at:
+    // http://www.igi-global.com/pdf.aspx?tid=20212&ptid=464&ctid=3&t=E-Survey+Methodology
+    // but currently we only have one ROLE_FULL_TEXT_PDF role to use
     protected void guessFullText(ArticleFiles af, Matcher mat) {
-      String pdfUrlBase = mat.replaceFirst("article/full-text-pdf/$1");
-      String htmlUrlBase = mat.replaceFirst("article/full-text-html/$1");
+      String pdfUrlBase = mat.replaceFirst("$1/full-text-pdf/$2");
+      String htmlUrlBase = mat.replaceFirst("$1/full-text-html/$2");
       CachedUrl pdfCu = au.makeCachedUrl(pdfUrlBase);
       CachedUrl htmlCu = au.makeCachedUrl(htmlUrlBase);
       if (pdfCu != null && pdfCu.hasContent()) {
         af.setFullTextCu(pdfCu);
-   	af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
       }
       if (htmlCu != null && htmlCu.hasContent()) {
-	af.setFullTextCu(htmlCu);
-  	af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
+        af.setFullTextCu(htmlCu);
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
       } 
     }
 
