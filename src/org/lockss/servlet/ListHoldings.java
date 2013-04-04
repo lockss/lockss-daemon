@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.50 2013-01-10 18:27:30 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.51 2013-04-04 16:57:12 easyonthemayo Exp $
  */
 
 /*
@@ -1067,10 +1067,10 @@ public class ListHoldings extends LockssServlet {
         Boolean.TRUE.toString(), i18n.tr("Omit header row")+"<br/>",
         opts.isOmitHeader()));
     // Exclude no-id titles option
-    tab.add("<br/>");
+    /*tab.add("<br/>");
     tab.add(ServletUtil.checkbox(this, KEY_EXCLUDE_NOID_TITLES,
         Boolean.TRUE.toString(), i18n.tr("Exclude titles with no title_id")+"<br/>",
-        opts.isExcludeNoIdTitles()));
+        opts.isExcludeNoIdTitles()));*/
     // Show health option if available
     if (isEnablePreserved() && getShowHealthRatings()) {
       tab.add(ServletUtil.checkbox(this, KEY_SHOW_HEALTH,
