@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.21 2013-04-02 20:21:05 pgust Exp $
+ * $Id: TdbUtil.java,v 1.22 2013-04-04 16:49:48 easyonthemayo Exp $
  */
 
 /*
@@ -689,16 +689,25 @@ public class TdbUtil {
   public static enum ContentType {
     JOURNALS ("Journals") {
       @Override
-      /** An AU is considered a journal if it has no ISBN. */
+      /** An AU is considered a journal if it is of type journal and has no
+       * ISBN. This will omit bookSeries. */
       public boolean isOfType(BibliographicItem au) {
-        return StringUtil.isNullString(au.getIsbn());
+        //return StringUtil.isNullString(au.getIsbn());
+        return "journal".equals(au.getPublicationType()) /*&&
+            StringUtil.isNullString(au.getIsbn())*/
+            ;
       }
     },
     BOOKS ("Books") {
       @Override
       /** An AU is considered a book if it has an ISBN. */
       public boolean isOfType(BibliographicItem au) {
-        return !StringUtil.isNullString(au.getIsbn());
+        //return !StringUtil.isNullString(au.getIsbn());
+        return "book".equals(au.getPublicationType()) ||
+            "bookSeries".equals(au.getPublicationType()) /*||
+            // book series collected under journal
+            "journal".equals(au.getPublicationType()) && !StringUtil.isNullString(au.getIsbn())*/
+            ;
       }
     },
     ALL ("All types") {
