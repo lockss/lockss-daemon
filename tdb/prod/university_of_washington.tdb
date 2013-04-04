@@ -17,7 +17,7 @@
     param[base_url] = http://www.radiology.casereports.net/
     param[journal_id] = rcr
     implicit < status ; year ; name ; volume ; param[year] >
-    comment[notReady] = V2 RU3907.
+    comment[notReady] = V2 RU3907. This volume makes the daemon crash.
    
     au < released ; 2006 ; Radiology Case Reports Volume 1 ; 1 ; 2006 >
     au < notReady ; 2007 ; Radiology Case Reports Volume 2 ; 2 ; 2007 >
