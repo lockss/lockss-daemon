@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.40.4.2 2013-03-29 11:59:01 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.40.4.3 2013-04-04 05:30:27 pgust Exp $
  */
 
 /*
@@ -781,14 +781,15 @@ public class KbartConverter {
     
     // Add publisher and title 
     baseKbt.setField(PUBLISHER_NAME, au.getPublisherName());
-    baseKbt.setField(PUBLICATION_TITLE,
-        TdbUtil.isBook(au) ? au.getName() : au.getJournalTitle());
+    baseKbt.setField(PUBLICATION_TITLE, au.getJournalTitle());
 
     // Now add information that can be retrieved from the AUs.
     // Add ISBN/EISBN (for books) or ISSN/EISSN (for periodicals)
     String printId = MetadataUtil.normaliseIsbn(au.getPrintIsbn());
     String onlineId = MetadataUtil.normaliseIsbn(au.getEisbn());
-    if ((printId == null) && (onlineId == null)) {
+    // Only set ISSNs if the ISBNs are null and the AU is not a book series
+    if (   (printId == null) && (onlineId == null) 
+        && !au.getPublicationType().equalsIgnoreCase("bookSeries")) {
       printId = MetadataUtil.normaliseIssn(au.getPrintIssn());
       onlineId = MetadataUtil.normaliseIssn(au.getEissn());
     }

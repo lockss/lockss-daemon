@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.11.4.1 2013-03-31 23:55:35 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.11.4.2 2013-04-04 05:30:28 pgust Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.db.DbManager;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
+import org.lockss.util.StringUtil;
 
 /**
  * This class contains a set of static methods for returning metadata database
@@ -86,6 +87,8 @@ final public class MetadataDatabaseUtil {
     final String endyear;
     final String startvolume;
     final String endvolume;
+    final String publicationType;
+    final String coverageDepth;
 
     /**
      * Creates an instance from the current query result set record.
@@ -107,6 +110,35 @@ final public class MetadataDatabaseUtil {
       startyear = resultSet.getString(8);
       endyear = resultSet.getString(8);
       proprietaryId = resultSet.getString(9);
+      
+      // todo: get from DB first
+      if (   !StringUtil.isNullString(eissn) 
+          || !StringUtil.isNullString(printissn)) {
+        if (   !StringUtil.isNullString(eisbn) 
+            || StringUtil.isNullString(printisbn)) {
+          publicationType = "bookSeries";
+        } else {
+          publicationType = "journal";
+        }
+      } else if (   !StringUtil.isNullString(eisbn) 
+                 || !StringUtil.isNullString(printisbn)) {
+        publicationType = "book";
+      } else {
+        publicationType = "journal";
+      }
+      
+      // todo: get from DB first
+      coverageDepth = "fulltext";
+    }
+
+    @Override
+    public String getPublicationType() {
+      return (publicationType == null) ? "journal" : publicationType;
+    }
+
+    @Override
+    public String getCoverageDepth() {
+      return (coverageDepth == null) ? "fulltext" : coverageDepth;
     }
 
     @Override

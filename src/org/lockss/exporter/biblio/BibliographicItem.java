@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItem.java,v 1.4 2013-01-16 21:09:28 pgust Exp $
+ * $Id: BibliographicItem.java,v 1.4.4.1 2013-04-04 05:30:28 pgust Exp $
  */
 
 /*
@@ -54,6 +54,9 @@ package org.lockss.exporter.biblio;
  * <p>
  * Note that this interface is currently journal-specific, and may need to be
  * expanded into a set of interfaces or a hierarchy, in order to handle books.
+ * Methods have been added to establish the "type" of a BibliographicItem,
+ * which may be mapped externally to an enumeration. Currently this is left open
+ * so as not to impose an application-specific usage.
  *
  * @author Neil Mayo
  */
@@ -120,6 +123,28 @@ public interface BibliographicItem {
    */
   public String getProprietaryId();
 
+  /**
+   * Return publication type this AU. Values include "journal" for a journal,
+   * "book" if each AU is an individual book that is not part of a series, and
+   * "bookSeries" if each AU is an individual book that is part of a series.
+   * For a "bookSeries" the journalTitle() is returns the name of the series.
+   * For a "book" the journalTitle() is simply descriptive of the collection
+   * of books (e.g. "Springer Books") and can be ignored for bibliographic
+   * purposes.
+   * 
+   * @return publication type this title or "journal" if not specified
+   */
+  public String getPublicationType();
+  
+  /**
+   * Return coverage depth of the content in this AU. Values include "fulltext"
+   * for full-text coverage, and "abstracts" for primarily or only "abstracts"
+   * coverage.
+   * 
+   * @return coverage depth this AU or "fulltext" if not specified
+   */
+  public String getCoverageDepth();
+  
   /**
    * Returns the title of the journal of which the bibliographic item is a part.
    * @return the title of the bibliographic item's journal

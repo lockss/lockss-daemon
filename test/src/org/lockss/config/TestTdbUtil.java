@@ -202,6 +202,47 @@ public class TestTdbUtil extends LockssTestCase {
     // correspond to TDB entries.
   }
 
+
+  /**
+   * For each of the the supplied ArchivalUnits, get the corresponding TdbAu
+   * and map it to the AU. Note that if an ArchivalUnit has no TitleConfig,
+   * there will be no corresponding TdbAu in the returned map, and so it may
+   * differ in size to the argument.
+   *
+   * @param units a collection of ArchivalUnits
+   * @return a map of TdbAus to ArchivalUnits
+   */
+  public final void testMapTdbAusToAus() {
+    Collection<ArchivalUnit> aus = getMockAus();
+    Map<TdbAu, ArchivalUnit> tdbAus = TdbUtil.mapTdbAusToAus(aus);
+    assertNotNull(tdbAus);
+    assertTrue(tdbAus.size()<=aus.size());
+  }
+
+  /**
+   * Test whether an AU appears to be a book, that is it has some sort of ISBN.
+   * @param au
+   * @return
+   */
+  public final void testIsBook() throws Tdb.TdbException {
+    TdbTitle bookTitle = TdbTestUtil.makeBookTestTitle("v1", "1990", "2000");
+    for (TdbAu book:bookTitle.getTdbAus()) {
+      assertTrue(book.getPublicationType().equalsIgnoreCase("book"));
+    }
+  }
+
+  /**
+   * Test whether an AU appears to be part of a book series.
+   * @param au
+   * @return
+   */
+  public final void testIsBookSeries() throws Tdb.TdbException {
+    TdbTitle bookSeriesTitle = TdbTestUtil.makeBookSeriesTestTitle("v1", "1990", "2000");
+    for (TdbAu book:bookSeriesTitle.getTdbAus()) {
+      assertTrue(book.getPublicationType().equalsIgnoreCase("bookSeries"));
+    }
+  }
+
   private final Collection<ArchivalUnit> getMockAus() {
     Collection<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
     for (int i=0; i<NUM_MOCK_AUS; i++) aus.add(MockArchivalUnit.newInited());

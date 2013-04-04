@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.18.8.1 2013-03-28 15:06:19 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.18.8.2 2013-04-04 05:30:27 pgust Exp $
  */
 
 /*
@@ -592,15 +592,6 @@ public class TdbUtil {
       if (tdbAu!=null) map.put(tdbAu, unit); 
     }
     return map; 
-  }
-
-  /**
-   * Test whether an AU appears to be a book, that is it has some sort of ISBN.
-   * @param au
-   * @return
-   */
-  public static boolean isBook(BibliographicItem au) {
-    return !StringUtil.isNullString(au.getIsbn());
   }
 
   /**

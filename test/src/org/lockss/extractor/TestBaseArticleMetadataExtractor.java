@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArticleMetadataExtractor.java,v 1.9 2013-01-07 02:31:16 pgust Exp $
+ * $Id: TestBaseArticleMetadataExtractor.java,v 1.9.8.1 2013-04-04 05:30:28 pgust Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
 
     // Tdb with values for some metadata fields
     Properties tdbProps = new Properties();
-    tdbProps.setProperty("title", "Air & Space Volume 1");
+    tdbProps.setProperty("title", "Air and Space Volume 1");
     tdbProps.setProperty("journalTitle", "Air and Space");
     tdbProps.setProperty("attributes.isbn", "976-1-58562-317-7");
     tdbProps.setProperty("issn", "0740-2783");
@@ -72,7 +72,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     tdbProps.setProperty("param.1.key", "base_url");
     tdbProps.setProperty("param.1.value", "http://www.title0.org/");
     tdbProps.setProperty("param.2.key", "volume");
-    tdbProps.setProperty("param.2.value", "vol 1");
+    tdbProps.setProperty("param.2.value", "vol1");
     tdbAu1 = tdb.addTdbAuFromProperties(tdbProps);
     mau1 = makeAu(tdbAu1);
 
@@ -80,15 +80,15 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
       MapUtil.map("eissn", "0740-2783",
 		  "issn", "0740-2783",
 		  "isbn", "976-1-58562-317-7",
-		  "volume", "vol16",
-		  "journal.title", "Air and Space",
+		  "volume", "vol1",
+		  "journal.title", "Air and Space Volume 1",
 		  "publisher", "Publisher[10.0135/12345678]",
 		  "access.url", "fullurl");
 
 
     // Tdb with values for all metadata fields
     tdbProps = new Properties();
-    tdbProps.setProperty("title", "Air & Space Volume 2");
+    tdbProps.setProperty("title", "Air and Space Volume 2");
     tdbProps.setProperty("journalTitle", "Air and Space");
     tdbProps.setProperty("attributes.isbn", "976-1-58562-317-7");
     tdbProps.setProperty("attributes.eisbn", "976-1-58563-317-7");
@@ -102,7 +102,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     tdbProps.setProperty("param.1.key", "base_url");
     tdbProps.setProperty("param.1.value", "http://www.title0.org/");
     tdbProps.setProperty("param.2.key", "volume");
-    tdbProps.setProperty("param.2.value", "vol 2");
+    tdbProps.setProperty("param.2.value", "vol2");
     tdbAu2 = tdb.addTdbAuFromProperties(tdbProps);
     mau2 = makeAu(tdbAu2);
 
@@ -112,8 +112,8 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
 		  "isbn", "976-1-58562-317-7",
 		  "eisbn", "976-1-58563-317-7",
 		  "issue", "40",
-		  "volume", "vol16",
-		  "journal.title", "Air and Space",
+		  "volume", "vol2",
+		  "journal.title", "Air and Space Volume 2",
 		  "date", "1943",
 		  "publisher", "Publisher[10.0135/12345678]",
 		  "access.url", "fullurl");
@@ -238,8 +238,8 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
       
 
   class MyFileMetadataExtractor implements FileMetadataExtractor {
-    List<MetadataTarget> targets = new ArrayList();
-    List<CachedUrl> cus = new ArrayList();
+    List<MetadataTarget> targets = new ArrayList<MetadataTarget>();
+    List<CachedUrl> cus = new ArrayList<CachedUrl>();
     Map<MetadataField,String> amProps;
 
     MyFileMetadataExtractor(Map<MetadataField,String> amProps) {
