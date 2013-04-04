@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.13 2013-04-01 17:06:40 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.14 2013-04-04 18:02:12 pgust Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ final public class MetadataDatabaseUtil {
       if (   !StringUtil.isNullString(eissn) 
           || !StringUtil.isNullString(printissn)) {
         if (   !StringUtil.isNullString(eisbn) 
-            || StringUtil.isNullString(printisbn)) {
+            || !StringUtil.isNullString(printisbn)) {
           publicationType = "bookSeries";
         } else {
           publicationType = "journal";
