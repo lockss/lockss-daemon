@@ -106,4 +106,55 @@
 
   }
 
+  {
+  
+    title <
+      name = Applied Nanoscience ;
+      eissn = 2190-5517 
+    >
+
+    plugin = org.lockss.plugin.springer.SpringerLinkPlugin
+    param[base_url] = http://www.springerlink.com/
+    param[journal_issn] = 2190-5517
+
+    au < exists ; 2011 ; Applied Nanoscience Volume 1 ; 1 >
+    au < exists ; 2012 ; Applied Nanoscience Volume 2 ; 2 >
+    au < exists ; 2013 ; Applied Nanoscience Volume 3 ; 3 >
+
+  }
+
+  {
+  
+    title <
+      name = Applied Petrochemical Research ;
+      eissn = 2190-5533 
+    >
+
+    plugin = org.lockss.plugin.springer.SpringerLinkPlugin
+    param[base_url] = http://www.springerlink.com/
+    param[journal_issn] = 2190-5533
+
+    au < exists ; 2012 ; Applied Petrochemical Research Volume 1 ; 1 >
+    au < exists ; 2012 ; Applied Petrochemical Research Volume 2 ; 2 >
+    au < expected ; 2013 ; Applied Petrochemical Research Volume 3 ; 3 >
+
+  }
+
+  {
+  
+    title <
+      name = Applied Water Science ;
+      eissn = 2190-5495 
+    >
+
+    plugin = org.lockss.plugin.springer.SpringerLinkPlugin
+    param[base_url] = http://www.springerlink.com/
+    param[journal_issn] = 2190-5495
+
+    au < exists ; 2011 ; Applied Water Science Volume 1 ; 1 >
+    au < exists ; 2012 ; Applied Water Science Volume 2 ; 2 >
+    au < exists ; 2013 ; Applied Water Science Volume 3 ; 3 >
+
+  }
+
 }
