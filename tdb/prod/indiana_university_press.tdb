@@ -1323,8 +1323,10 @@
       param[journal_dir] = teaching_and_learning_inquiry__the_issotl_journal
       attr[journal_id] = 
       implicit < status ; year ; name ; param[volume] >
+      
+      comment[0] = manifest is online, but journal site is not as of 20130404. check back later.
     
-      au < manifest ; 2013 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 1 ; 1 >
+      au < notReady ; 2013 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 1 ; 1 >
 
     }
     
