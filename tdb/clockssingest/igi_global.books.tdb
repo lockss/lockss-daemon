@@ -6,11 +6,11 @@
     info[tester] = 7
   >
 
-  plugin = needs.plugin
-  param[base_url] = http://www.igi-global.com/gateway/book/
+  plugin = org.lockss.plugin.igiglobal.ClockssIgiGlobalBooksPlugin
+  param[base_url] = http://www.igi-global.com/
 
   {
-	implicit < status ; status2 ; eisbn ; isbn13 ; doi ; year ; param[volume] ; name ; author >
+	implicit < status ; status2 ; eisbn ; param[book_isbn] ; doi ; year ; param[volume] ; name ; author >
   
     {
         title <
