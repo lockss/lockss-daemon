@@ -68,7 +68,7 @@
       au < released ; 1991 ; Biology of Reproduction Volume 45 ; 45 >
       au < released ; 1992 ; Biology of Reproduction Volume 46 ; 46 >
       au < released ; 1992 ; Biology of Reproduction Volume 47 ; 47 >
-      au < testing ; 1993 ; Biology of Reproduction Volume 48 ; 48 >
+      au < ready ; 1993 ; Biology of Reproduction Volume 48 ; 48 >
       au < released ; 1993 ; Biology of Reproduction Volume 49 ; 49 >
       au < released ; 1994 ; Biology of Reproduction Volume 50 ; 50 >
       au < released ; 1994 ; Biology of Reproduction Volume 51 ; 51 >
@@ -79,7 +79,7 @@
       au < released ; 1997 ; Biology of Reproduction Volume 56 ; 56 >
       au < released ; 1997 ; Biology of Reproduction Volume 57 ; 57 >
       au < released ; 1998 ; Biology of Reproduction Volume 58 ; 58 >
-      au < testing ; 1998 ; Biology of Reproduction Volume 59 ; 59 >
+      au < ready ; 1998 ; Biology of Reproduction Volume 59 ; 59 >
       au < released ; 1999 ; Biology of Reproduction Volume 60 ; 60 >
       au < released ; 1999 ; Biology of Reproduction Volume 61 ; 61 >
       au < released ; 2000 ; Biology of Reproduction Volume 62 ; 62 >
@@ -131,20 +131,19 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = bire
 
-      attr[where] = content2a
       comment[bire63] = v63 persistent 403 errors for URL redirection below
       comment[URL] = http://www.bioone.org/doi/abs/10.1043/0006-3363%282000%29063%3C1219%3AE%3E2.0.CO%3B2
       
       au < ready ; 2000 ; Biology of Reproduction Volume 62 ; 62 >
-      au < testing ; 2000 ; Biology of Reproduction Volume 63 ; 63 >
+      au < notReady ; 2000 ; Biology of Reproduction Volume 63 ; 63 >
       au < ready ; 2001 ; Biology of Reproduction Volume 64 ; 64 >
       au < ready ; 2001 ; Biology of Reproduction Volume 65 ; 65 >
       au < ready ; 2002 ; Biology of Reproduction Volume 66 ; 66 >
       au < ready ; 2002 ; Biology of Reproduction Volume 67 ; 67 >
-      au < testing ; 2003 ; Biology of Reproduction Volume 68 ; 68 >
-      au < testing ; 2003 ; Biology of Reproduction Volume 69 ; 69 >
+      au < notReady ; 2003 ; Biology of Reproduction Volume 68 ; 68 >
+      au < ready ; 2003 ; Biology of Reproduction Volume 69 ; 69 >
       au < testing ; 2004 ; Biology of Reproduction Volume 70 ; 70 >
-      au < testing ; 2004 ; Biology of Reproduction Volume 71 ; 71 >
+      au < notReady ; 2004 ; Biology of Reproduction Volume 71 ; 71 >
       au < doNotProcess; 2005 ; Biology of Reproduction Volume 72 ; 72 >
       au < ready ; 2005 ; Biology of Reproduction Volume 73 ; 73 >
       au < ready ; 2006 ; Biology of Reproduction Volume 74 ; 74 >
