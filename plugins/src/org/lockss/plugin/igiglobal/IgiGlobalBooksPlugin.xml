@@ -108,6 +108,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
+      <string>"^%sgateway/chapter/full-text-html/[0-9]+$", base_url</string>
       <string>"^%sgateway/chapter/full-text-pdf/[0-9]+$", base_url</string>
       <string>"^%spdf\.aspx\?", base_url</string>
     </list>
