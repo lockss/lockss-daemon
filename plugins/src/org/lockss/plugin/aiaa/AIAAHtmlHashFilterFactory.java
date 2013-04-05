@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAHtmlHashFilterFactory.java,v 1.1 2012-12-18 17:41:14 alexandraohlson Exp $
+ * $Id: AIAAHtmlHashFilterFactory.java,v 1.2 2013-04-05 00:34:09 alexandraohlson Exp $
  */
 
 /*
@@ -33,12 +33,19 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.aiaa;
 
 import java.io.InputStream;
+import java.io.Reader;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.WhiteSpaceFilter;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ListUtil;
+import org.lockss.util.ReaderInputStream;
 
 public class AIAAHtmlHashFilterFactory implements FilterFactory {
 
@@ -62,10 +69,15 @@ public class AIAAHtmlHashFilterFactory implements FilterFactory {
         // Contains subscription info/pricing which may change over time
         HtmlNodeFilters.tagWithAttribute("div", "class", "product"),
     };
-    return new HtmlFilterInputStream(in,
+    InputStream filtered = new HtmlFilterInputStream(in,
                                      encoding,
                                      HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-
+    Reader filteredReader = FilterUtil.getReader(filtered,encoding);
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
+        ListUtil.list(   
+            new TagPair("<!--", "-->")
+            ));   
+    return new ReaderInputStream(tagFilter);
   }
 
 }

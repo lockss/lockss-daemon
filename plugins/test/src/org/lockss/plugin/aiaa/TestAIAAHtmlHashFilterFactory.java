@@ -1,5 +1,5 @@
 /*
- * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.1 2012-12-18 17:41:14 alexandraohlson Exp $
+ * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.2 2013-04-05 00:34:09 alexandraohlson Exp $
  */
 /*
 
@@ -158,9 +158,9 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
   private static final String issueNavFiltered =
       "<div class=\"view\">" +
           "<div class=\"view-inner\">" +
-          "  <!-- issueNavigator -->" +
-          "</div> <!-- view-inner -->" +
-          " </div> <!-- view -->";
+          "  " +
+          "</div> " +
+          " </div> ";
 
 
   /* subscription pricing in left panel which is generic, so hash out individual products */
@@ -191,6 +191,28 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
           " </div>" +
           "</div>";
   
+  private static final String commentModified =
+      "<input type=\"checkbox\" name=\"markall\" id=\"markall\" onclick=\"onClickMarkAll(frmAbs)\"/>" +
+          "<label for=\"markall\">Select All</label>" +
+          "<hr/>" +
+          "<!--totalCount2--><!--modified:1364963594000--><table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
+          "<tr>" +
+          "<td align=\"right\" valign=\"top\" width=\"18\"><input type=\"checkbox\" name=\"doi\" value=\"10.2514/1.46304\"></input><br></br>" +
+          "<img src=\"/templates/jsp/images/access_full.gif\" alt=\"full access\" title=\"full access\" class=\"accessIcon\" />" +
+          "</td><td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">391</td>" +
+          "</tr></table>";
+  
+  private static final String commentModifiedFiltered = 
+      "<input type=\"checkbox\" name=\"markall\" id=\"markall\" onclick=\"onClickMarkAll(frmAbs)\"/>" +
+          "<label for=\"markall\">Select All</label>" +
+          "<hr/>" +
+          "<table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
+          "<tr>" +
+          "<td align=\"right\" valign=\"top\" width=\"18\"><input type=\"checkbox\" name=\"doi\" value=\"10.2514/1.46304\"></input><br></br>" +
+          "<img src=\"/templates/jsp/images/access_full.gif\" alt=\"full access\" title=\"full access\" class=\"accessIcon\" />" +
+          "</td><td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">391</td>" +
+          "</tr></table>";
+  
   public void testFiltering() throws Exception {
     InputStream inA;
 
@@ -213,6 +235,10 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau, new StringInputStream(productHtml),
         ENC);
     assertEquals(productFiltered,StringUtil.fromInputStream(inA));
+    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(commentModified),
+        ENC);
+    assertEquals(commentModifiedFiltered,StringUtil.fromInputStream(inA));
  
   }
 }
