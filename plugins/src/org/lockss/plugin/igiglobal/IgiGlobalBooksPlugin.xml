@@ -65,7 +65,7 @@
     <list>
       <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.+)?$", base_url</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%sgateway/chapter(/full-text-pdf)?/[0-9]+$", base_url</string>
+      <string>1,"^%sgateway/chapter(/full-text-pdf|/full-text-html)?/[0-9]+$", base_url</string>
       <string>1,"^%spdf\.aspx\?", base_url</string>
     </list>
   </entry>
