@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.148 2013-03-19 04:26:15 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.148.2.1 2013-04-05 17:59:06 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.crawler;
 
 import java.util.*;
 import org.apache.commons.lang.builder.CompareToBuilder;
+import org.apache.commons.lang.mutable.MutableInt;
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.map.*;
 import org.apache.commons.collections.bag.HashBag; // needed to disambiguate
@@ -277,6 +278,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   // Maps pool key to record of all crawls active in that pool
   // Synchronized on runningCrawlersLock
   private Map<String,PoolCrawlers> poolMap = new HashMap<String,PoolCrawlers>();
+  // Number of AUs needing crawl in each pool.  Used to determine if/when
+  // it's worth rebuilding the queues
+  private Map<String,MutableInt> poolEligible =
+    new HashMap<String,MutableInt>();
 
   // AUs running new content crawls
   // Synchronized on runningCrawlersLock
@@ -1498,7 +1503,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     return pluginMgr != null && pluginMgr.areAusStarted();
   }
 
-  static Object UNSHARED_RATE_KEY = new Object();
+  static String UNSHARED_RATE_KEY = "Un-SharED";
 
   long paramRebuildCrawlQueueInterval = DEFAULT_REBUILD_CRAWL_QUEUE_INTERVAL;
   long paramQueueRecalcAfterNewAu = DEFAULT_QUEUE_RECALC_AFTER_NEW_AU;
@@ -1565,10 +1570,37 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (res != null) {
       return res;
     }
-    if (!rebuilt) {
+    if (!rebuilt && isWorthRebuildingQueue()) {
       rebuildCrawlQueue();
     }
     return nextReqFromBuiltQueue();
+  }
+
+  // true if any pool that now has unused crawl capacity, has additional
+  // AUs that weren't added to its queue at the last queue rebuild.
+   boolean isWorthRebuildingQueue() {
+    Bag runKeys = copySharedRunKeys();
+    for (Map.Entry<String,MutableInt> ent : poolEligible.entrySet()) {
+      int additionalEligible = ent.getValue().intValue();
+      if (additionalEligible <= 0) {
+	continue;
+      }
+      String rateKey = ent.getKey();
+      if (rateKey == UNSHARED_RATE_KEY) {
+	logger.debug2("Pool " + rateKey + ", addtl eligible: " +
+		      additionalEligible);
+	return true;
+      } else {
+	logger.debug2("Pool " + rateKey +
+		      ", size " + getCrawlPoolSize(rateKey) +
+		      ", running " + runKeys.getCount(rateKey) +
+		      ", addtl eligible: " + additionalEligible);
+	if (getCrawlPoolSize(rateKey) > (runKeys.getCount(rateKey))) {
+	  return true;
+	}
+      }
+    }
+    return false;
   }
 
   CrawlReq nextReqFromBuiltQueue() {
@@ -1712,6 +1744,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     int ausWantCrawl = 0;
     int ausEligibleCrawl = 0;
     synchronized (queueLock) {
+      poolEligible.clear();
       unsharedRateReqs.clear();
       sharedRateReqs.clear();
       for (ArchivalUnit au : (areAusStarted()
@@ -1734,11 +1767,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 		String rateKey = au.getFetchRateLimiterKey();
 		if (rateKey == null) {
 		  unsharedRateReqs.add(req);
+		  incrPoolEligible(UNSHARED_RATE_KEY);
 		  if (logger.isDebug3()) {
 		    logger.debug3("Added to queue: null, " + req);
 		  }
 		} else {
 		  sharedRateReqs.put(rateKey, req);
+		  incrPoolEligible(rateKey);
 		  if (logger.isDebug3()) {
 		    logger.debug3("Added to pool queue: " + rateKey +
 				  ", " + req);
@@ -1753,8 +1788,33 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	}
       }
     }
+    adjustEligibleCounts();
     cmStatus.setWaitingCount(ausWantCrawl);
     cmStatus.setEligibleCount(ausEligibleCrawl);
+  }
+
+  void incrPoolEligible(String pool) {
+    MutableInt n = poolEligible.get(pool);
+    if (n == null) {
+      n = new MutableInt();
+      poolEligible.put(pool, n);
+    }
+    n.add(1);
+  }
+
+  void adjustEligibleCounts() {
+    for (Map.Entry<String,MutableInt> ent : poolEligible.entrySet()) {
+      String poolKey = ent.getKey();
+      if (poolKey == UNSHARED_RATE_KEY) {
+	ent.getValue().subtract(unsharedRateReqs.getMaxSize());
+      } else {
+	Set poolQueue = (Set)sharedRateReqs.get(poolKey);
+	if (poolQueue != null) {
+	  ent.getValue().subtract(poolQueue.size());
+	}
+      }
+      logger.debug2("Additional Eligible: " + poolKey + ": " + ent.getValue());
+    }
   }
 
   List<ArchivalUnit> getHighPriorityAus() {

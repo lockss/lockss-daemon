@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.94 2012-12-20 18:38:49 fergaloy-sf Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.94.10.1 2013-04-05 17:59:06 tlipkis Exp $
 */
 
 /*
@@ -1535,9 +1535,11 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       setAu(aus[13], 0, 0, 4001, "bar");
       setAu(aus[14], 0, 0, 4003, "bar"); // repair
 
+      assertFalse(crawlManager.isWorthRebuildingQueue());
       assertEquals(aus[10], crawlManager.nextReq().au);
       crawlManager.addToRunningRateKeys(aus[10]);
       aus[10].setShouldCrawlForNewContent(false);
+      assertTrue(crawlManager.isWorthRebuildingQueue());
       assertEquals(aus[5], crawlManager.nextReq().au);
       MockCrawler cr5 = crawlManager.addToRunningRateKeys(aus[5]);
 
@@ -1573,6 +1575,11 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       aus[3].setShouldCrawlForNewContent(false);
       crawlManager.delFromRunningRateKeys(aus[10]);
       assertEquals(aus[13], crawlManager.nextReq().au);
+      assertEquals(aus[14], crawlManager.nextReq().au);
+      assertEquals(aus[4], crawlManager.nextReq().au);
+      assertNull(crawlManager.nextReq());
+      assertFalse(crawlManager.isWorthRebuildingQueue());
+
     }
 
     public void testCrawlPriorityPatterns() {
