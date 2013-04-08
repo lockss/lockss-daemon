@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.3 2013-03-29 18:50:02 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.4 2013-04-08 17:33:41 alexandraohlson Exp $
  */
 
 /*
@@ -114,6 +114,8 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
     if (override) {
+      // because clockss_override goes faster we need to reduce daemon minimum
+      ConfigurationUtil.addFromArgs(BaseArchivalUnit.PARAM_MIN_FETCH_DELAY,"17");
       // If we're doing the variant for clockss-ovverride, set this mode
       theDaemon.setTestingMode("clockss");
     }
@@ -126,6 +128,7 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
   // make the AU using the appropriate plugin
   private DefinableArchivalUnit makeAu(URL url, int volume, String jid)
       throws Exception {
+
     Properties props = new Properties();
     props.setProperty(VOL_KEY, Integer.toString(volume));
     props.setProperty(JID_KEY, jid);
@@ -249,12 +252,11 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
     
     if (override) {
       //au_def_pause_time is 100, which will translate to an implied numerator of "1" in RateLimiterInfo
+      // note that for override, the daemon also had its default rate minimum set to "17"
       slowrate = fastrate = "1/100";
-      String defaultMinimum = "1/6000";
-      //assertEquals(slowrate, rli.getDefaultRate());
-      
-      //Until otherwise changed, the lowest an au_def_pause_time will allow is 1/6000....
-      assertEquals(defaultMinimum, rli.getDefaultRate());
+
+      log.debug3("AU fetch rate limiter is: " + au.findFetchRateLimiter().getInterval());
+      assertEquals(slowrate, rli.getDefaultRate());
       return;
     }
  
