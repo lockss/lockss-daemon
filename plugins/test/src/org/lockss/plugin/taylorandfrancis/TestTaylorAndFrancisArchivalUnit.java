@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.4 2013-04-08 17:33:41 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.5 2013-04-08 21:34:34 alexandraohlson Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.util.Properties;
 
 import junit.framework.Test;
 
+import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.CrawlRateLimiter;
 import org.lockss.daemon.*;
@@ -113,11 +114,11 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
     setUpDiskSpace();
     theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
+    
+    // reduce the minimum so we check the plugins set value
+    ConfigurationUtil.addFromArgs(BaseArchivalUnit.PARAM_MIN_FETCH_DELAY,"17");
     if (override) {
-      // because clockss_override goes faster we need to reduce daemon minimum
-      ConfigurationUtil.addFromArgs(BaseArchivalUnit.PARAM_MIN_FETCH_DELAY,"17");
-      // If we're doing the variant for clockss-ovverride, set this mode
-      theDaemon.setTestingMode("clockss");
+      ConfigurationUtil.addFromArgs(LockssDaemon.PARAM_TESTING_MODE, "clockss");
     }
   }
 
