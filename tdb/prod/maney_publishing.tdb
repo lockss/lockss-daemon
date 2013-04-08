@@ -31,6 +31,8 @@
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     comment[notReady] = RU4507, different pdf fontname and size used
 
+    comment[UX] = Complete
+
     au < doNotProcess ; 2005 ; Advances in Applied Ceramics Volume 104 ; 104 > 
     au < notReady ; 2006 ; Advances in Applied Ceramics Volume 105 ; 105 > 
     au < doNotProcess ; 2007 ; Advances in Applied Ceramics Volume 106 ; 106 > 
@@ -63,6 +65,8 @@
     implicit < status ; year ; name ; param[volume_name] >
     
     comment[notReady] = different pdf fontname
+
+    comment[UX] = Complete
 
     au < notReady ; 1937 ; Ambix Volume 1 ; 1 > 
     au < notReady ; 1938-1946 ; Ambix Volume 2 ; 2 > 
@@ -217,6 +221,8 @@
     param[journal_issn] = 0371-7453
     implicit < status ; year ; name ; param[volume_name] >
     comment[notReady] = RU4507, low agreement of different FontName use in pdf file
+
+    comment[UX] = Complete
 
     au < notReady ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
     au < notReady ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
