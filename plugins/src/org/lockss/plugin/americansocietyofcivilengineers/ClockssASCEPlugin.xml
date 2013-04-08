@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.americansocietyofcivilengineers.ClockssASCEPlugin.xml</string>
+    <string>org.lockss.plugin.americansocietyofcivilengineers.ClockssASCEPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -102,9 +102,10 @@
       <string>1,"^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%stoc/%s/%s", base_url, journal_id, volume_name</string>
-      <string>1,"^%sdoi/(abs|full|ref|pdf)/.+\.%s\.", base_url, journal_issn</string>
-      <string>1,"^%saction/showCitFormats\?.+\.%s\.", base_url, journal_issn</string>
-      <string>1,"^%saction/downloadCitation", base_url</string>
+      <!-- http://ascelibrary.org/doi/full/10.1061/%28ASCE%291076-0431%282009%2915%3A4%28111%29 -->
+      <string>1,"^%sdoi/(abs|full|ref|pdf)/.+%s.+%d.+%s", base_url, journal_issn, year, volume_name</string>
+      <string>1,"^%saction/showCitFormats.+%s.+%d.+%s", base_url, journal_issn, year, volume_name</string>
+      <string>1,"^%saction/downloadCitation?downloadFileName=", base_url</string>
     </list>
   </entry>
   <entry>
