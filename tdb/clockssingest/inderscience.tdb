@@ -38,7 +38,7 @@
       param[journal_issn] = 2046-4789
       
       au < released ; crawling ; 2012 ; African Journal of Economic and Sustainable Development Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; African Journal of Economic and Sustainable Development Volume 2 ; 2 >
+      au < manifest ; exists ; 2013 ; African Journal of Economic and Sustainable Development Volume 2 ; 2 >
 
     }
 
@@ -800,7 +800,7 @@
       param[journal_issn] = 1755-991X
       
       au < released ; crawling ; 2011-2012 ; International Journal of Aviation Management Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; International Journal of Aviation Management Volume 2 ; 2 >
+      au < manifest ; exists ; 2013 ; International Journal of Aviation Management Volume 2 ; 2 >
 
     }
 
@@ -815,7 +815,7 @@
 
       param[journal_issn] = 1744-280X
 
-      au < expected ; exists ; 2012 ; International Journal of Aviation Management and Logistics Volume 1 ; 1 >
+      au < manifest ; exists ; 2012 ; International Journal of Aviation Management and Logistics Volume 1 ; 1 >
 
     }
 
@@ -912,7 +912,7 @@
       au < released ; manifest ; 2010 ; International Journal of Bio-Inspired Computation Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Bio-Inspired Computation Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Bio-Inspired Computation Volume 4 ; 4 >
-      au < expected ; exists ; 2013 ; International Journal of Bio-Inspired Computation Volume 5 ; 5 >
+      au < manifest ; exists ; 2013 ; International Journal of Bio-Inspired Computation Volume 5 ; 5 >
 
     }
 
@@ -1126,7 +1126,7 @@
       au < crawling ; exists ; 2009-2010 ; International Journal of Business Continuity and Risk Management Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Business Continuity and Risk Management Volume 2 ; 2 >
       au < zapped ; down ; 2012 ; International Journal of Business Continuity and Risk Management Volume 3 ; 3 >
-      au < expected ; exists ; 2013 ; International Journal of Business Continuity and Risk Management Volume 4 ; 4 >
+      au < manifest ; exists ; 2013 ; International Journal of Business Continuity and Risk Management Volume 4 ; 4 >
 
     }
 
@@ -7147,7 +7147,7 @@
       au < released ; crawling ; 2012 ; International Journal of Technology Management Volume 59 ; 59 >
       au < released ; manifest ; 2012 ; International Journal of Technology Management Volume 60 ; 60 >
       au < manifest ; exists ; 2013 ; International Journal of Technology Management Volume 61 ; 61 >
-      au < expected ; exists ; 2013 ; International Journal of Technology Management Volume 62 ; 62 >
+      au < manifest ; exists ; 2013 ; International Journal of Technology Management Volume 62 ; 62 >
 
     }
 
@@ -7719,7 +7719,7 @@
       au < manifest ; exists ; 2008-2009 ; International Journal of Wireless and Mobile Computing Volume 3 ; 3 >
       au < crawling ; exists ; 2010 ; International Journal of Wireless and Mobile Computing Volume 4 ; 4 >
       au < zapped ; down ; 2011-2012 ; International Journal of Wireless and Mobile Computing Volume 5 ; 5 >
-      au < expected ; exists ; 2013 ; International Journal of Wireless and Mobile Computing Volume 6 ; 6 >
+      au < manifest ; exists ; 2013 ; International Journal of Wireless and Mobile Computing Volume 6 ; 6 >
 
     }
 
