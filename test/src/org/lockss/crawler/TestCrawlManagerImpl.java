@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.94 2012-12-20 18:38:49 fergaloy-sf Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.95 2013-04-09 04:46:13 tlipkis Exp $
 */
 
 /*
@@ -1491,16 +1491,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       assertEquals(aus[13], crawlManager.nextReq().au);
       crawlManager.addToRunningRateKeys(aus[13]);
       assertEquals(null, crawlManager.nextReq());
-
-      // ensure can dynamically resize queues
-      p.put(CrawlManagerImpl.PARAM_SHARED_QUEUE_MAX, "3");
-      ConfigurationUtil.addFromProps(p);
-      for (Iterator iter = crawlManager.sharedRateReqs.entrySet().iterator();
-	   iter.hasNext();) {
-	Map.Entry ent = (Map.Entry)iter.next();
-	BoundedTreeSet coll = (BoundedTreeSet)ent.getValue();
-	assertEquals(3, coll.getMaxSize());
-      }
     }
 
     public void testOdcQueueWithConcurrentPool() throws Exception {
@@ -1535,9 +1525,11 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       setAu(aus[13], 0, 0, 4001, "bar");
       setAu(aus[14], 0, 0, 4003, "bar"); // repair
 
+      assertFalse(crawlManager.isWorthRebuildingQueue());
       assertEquals(aus[10], crawlManager.nextReq().au);
       crawlManager.addToRunningRateKeys(aus[10]);
       aus[10].setShouldCrawlForNewContent(false);
+      assertTrue(crawlManager.isWorthRebuildingQueue());
       assertEquals(aus[5], crawlManager.nextReq().au);
       MockCrawler cr5 = crawlManager.addToRunningRateKeys(aus[5]);
 
@@ -1573,6 +1565,11 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       aus[3].setShouldCrawlForNewContent(false);
       crawlManager.delFromRunningRateKeys(aus[10]);
       assertEquals(aus[13], crawlManager.nextReq().au);
+      assertEquals(aus[14], crawlManager.nextReq().au);
+      assertEquals(aus[4], crawlManager.nextReq().au);
+      assertNull(crawlManager.nextReq());
+      assertFalse(crawlManager.isWorthRebuildingQueue());
+
     }
 
     public void testCrawlPriorityPatterns() {
