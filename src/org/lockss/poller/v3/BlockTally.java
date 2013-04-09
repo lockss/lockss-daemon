@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.24 2012-06-25 23:10:22 barry409 Exp $
+ * $Id: BlockTally.java,v 1.25 2013-04-09 23:47:00 barry409 Exp $
  */
 
 /*
@@ -107,23 +107,23 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
    */
   BlockTally.Result getTallyResult(int quorum, int voteMargin) {
     BlockTally.Result result;
-    int agree = agreeVoters.size();
-    int disagree = disagreeVoters.size();
-    int pollerOnly = pollerOnlyVoters.size();
-    int voterOnly = voterOnlyVoters.size();
+    int landslideMinimum = landslideMinimum(voteMargin);
 
     if (numVotes() < quorum) {
       result = BlockTally.Result.NOQUORUM;
-    } else if (!isWithinMargin(voteMargin)) { 
-      result = BlockTally.Result.TOO_CLOSE;
-    } else if (pollerOnly >= quorum) {
-      result = BlockTally.Result.LOST_POLLER_ONLY_BLOCK;
-    } else if (voterOnly >= quorum) {
-      result = BlockTally.Result.LOST_VOTER_ONLY_BLOCK;
-    } else if (agree > disagree) {
+    } else if (agreeVoters.size() >= landslideMinimum) {
       result = BlockTally.Result.WON;
+    } else if (disagreeVoters.size() >= landslideMinimum) {
+      // Which kind of LOST?
+      if (pollerOnlyVoters.size() >= quorum) {
+	result = BlockTally.Result.LOST_POLLER_ONLY_BLOCK;
+      } else if (voterOnlyVoters.size() >= quorum) {
+	result = BlockTally.Result.LOST_VOTER_ONLY_BLOCK;
+      } else {
+	result = BlockTally.Result.LOST;
+      }
     } else {
-      result = BlockTally.Result.LOST;
+      result = BlockTally.Result.TOO_CLOSE;
     }
     return result;
   }
@@ -149,24 +149,10 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
   }
 
   /**
-   * @return if the result is a landslide.
+   * @return the minimum number of voters required for a landslide.
    */
-  boolean isWithinMargin(int voteMargin) {
-    int numAgree = agreeVoters.size();
-    int numDisagree = disagreeVoters.size();
-    double numVotes = numVotes();
-    double actualMargin;
-
-    if (numAgree > numDisagree) {
-      actualMargin = (double) numAgree / numVotes;
-    } else {
-      actualMargin = (double) numDisagree / numVotes;
-    }
-
-    if (actualMargin * 100 < voteMargin) {
-      return false;
-    }
-    return true;
+  int landslideMinimum(int voteMargin) {
+    return (int)Math.ceil(((double)voteMargin / 100) * numVotes());
   }
 
   void addAgreeVoter(ParticipantUserData id) {
