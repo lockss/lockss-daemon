@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.132 2013-03-01 04:12:24 dshr Exp $
+ * $Id: V3Poller.java,v 1.133 2013-04-09 21:48:16 barry409 Exp $
  */
 
 /*
@@ -1256,7 +1256,8 @@ public class V3Poller extends BasePoll {
   private void tallyVoterUrl(String voterUrl) {
     log.debug3("tallyVoterUrl: "+voterUrl);
     BlockTally tally = urlTallier.tallyVoterUrl(voterUrl);
-    checkTally(tally, voterUrl, true);
+    updateTallyStatus(tally, voterUrl);
+    repairIfNeeded(tally, voterUrl);
   }
 
   /**
@@ -1272,7 +1273,8 @@ public class V3Poller extends BasePoll {
     log.debug3("tallyPollerUrl: "+pollerUrl);
     BlockTally tally = urlTallier.tallyPollerUrl(pollerUrl, hashBlock);
     signalNodeAgreement(tally, pollerUrl);
-    checkTally(tally, pollerUrl, true);
+    updateTallyStatus(tally, pollerUrl);
+    repairIfNeeded(tally, pollerUrl);
     return tally;
   }
 
@@ -1310,73 +1312,106 @@ public class V3Poller extends BasePoll {
   }
 
   /**
-   * <p>Check the tally for a block, and perform repairs if necessary.</p>
+   * <p>Update the TallyStatus in the PollerStateBean for a block.</p>
    *
-   * @param tally The tally to check.
-   * @param url The target URL for any possible repairs.
+   * @param tally The tally of the block.
+   * @param url The target URL.
    * @return The status of the tally.
    */
-  private BlockTally.Result checkTally(BlockTally tally, String url,
-				       boolean repairIfNecessary) {
+  private BlockTally.Result updateTallyStatus(BlockTally tally, String url) {
     // Should never happen -- if it does, track it down.
     if (url == null) {
-      throw new NullPointerException("Passed a null url to checkTally!");
+      throw new NullPointerException("Passed a null url to updateTallyStatus!");
     }
     
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
     BlockTally.Result tallyResult =
       tally.getTallyResult(pollerState.getQuorum(),
 			   pollerState.getVoteMargin());
-    PollerStateBean.TallyStatus tallyStatus = pollerState.getTallyStatus();
 
-    // Have now counted agreement in tally and recorded per-file agreement.
-    // Check tally only for quorate polls
+    // Update the TallyStatus only for quorate polls.
+    // todo(bhayes): Is that as it should be?
     if (hasQuorum()) {
+      PollerStateBean.TallyStatus tallyStatus = pollerState.getTallyStatus();
 
-      // Linked hash map - order is significant
-      String pollKey = pollerState.getPollKey();
       String vMsg = "";
       if (log.isDebug2()) {
 	vMsg = tally.votes();
       }
       switch (tallyResult) {
       case WON:
+	log.debug3("Won tally" + vMsg + ": " + url + " in poll " + getKey());
 	tallyStatus.addAgreedUrl(url);
-	// Great, we won!  Do nothing.
-	log.debug3("Won tally" + vMsg + ": " + url + " in poll " + pollKey);
 	break;
       case LOST:
-	tallyStatus.addDisagreedUrl(url);
 	log.debug2("Lost tally" + vMsg + ": " + url + " in poll " + getKey());
-	if (repairIfNecessary) {
-	  requestRepair(url, tally.getDisagreeVoters());
-	}
+	tallyStatus.addDisagreedUrl(url);
 	break;
       case LOST_POLLER_ONLY_BLOCK:
-	log.debug2("Lost tally" + vMsg + ": Removing " + url +
+	// todo: not counted by tallyStatus?
+ 	log.debug2("Lost poller-only tally" + vMsg + ": " + url +
 		   " in poll " + getKey());
+	break;
+      case LOST_VOTER_ONLY_BLOCK:
+ 	log.debug2("Lost voter-only tally: " + url + " in poll " + getKey());
+	tallyStatus.addDisagreedUrl(url);
+	break;
+      case NOQUORUM:
+	// the hasQuorum() above means we have enough voters in the
+	// poll, but this BlockTally may not have enough voters if
+	// some of those votes resulted in voteSpoiled()
+	// calls. BlockTally doesn't count those.
+	log.warning("No Quorum for block " + url + " in poll " + getKey());
+	tallyStatus.addNoQuorumUrl(url);
+	break;
+      case TOO_CLOSE:
+	log.warning("Tally was inconclusive for block " + url + " in poll " +
+		    getKey());
+	tallyStatus.addTooCloseUrl(url);
+	break;
+      default:
+	log.warning("Unexpected results from tallying block " + url + ": "
+		    + tallyResult.printString);
+      }
+    }
+    return tallyResult;
+  }
+
+  /**
+   * <p>Delete or repair the block, if necessary.</p>
+   *
+   * @param tally The tally of the block.
+   * @param url The target URL.
+   */
+  private void repairIfNeeded(BlockTally tally, String url) {
+    // Should never happen -- if it does, track it down.
+    if (url == null) {
+      throw new NullPointerException("Passed a null url to repairIfNeeded!");
+    }
+    
+    // If there isn't a quorum of voters, do no repairs or deletes.
+    if (hasQuorum()) {
+      BlockTally.Result tallyResult =
+	tally.getTallyResult(pollerState.getQuorum(),
+			     pollerState.getVoteMargin());
+      switch(tallyResult) {
+      case WON:
+	break;
+      case LOST:
+	requestRepair(url, tally.getDisagreeVoters());
+	break;
+      case LOST_POLLER_ONLY_BLOCK:
 	deleteBlock(url);
 	break;
       case LOST_VOTER_ONLY_BLOCK:
-	tallyStatus.addDisagreedUrl(url);
-	if (repairIfNecessary) {
-	  // shouldn't happen
-	  log.debug2("Lost tally. Requesting repair for missing block: " +
-		     url + " in poll " + getKey());
-	  requestRepair(url, tally.getVoterOnlyBlockVoters());
-	}
+	requestRepair(url, tally.getVoterOnlyBlockVoters());
 	break;
       case NOQUORUM:
-	tallyStatus.addNoQuorumUrl(url);
-	log.warning("No Quorum for block " + url + " in poll " + getKey());
 	break;
       case TOO_CLOSE:
-	tallyStatus.addTooCloseUrl(url);
-	log.warning("Tally was inconclusive for block " + url + " in poll " +
-		    getKey());
-	if (repairIfNecessary &&
-	    AuUtil.isRepairFromPublisherWhenTooClose(getAu(),
-						     repairFromPublisherWhenTooClose)) {
+	if (AuUtil.isRepairFromPublisherWhenTooClose(
+	      getAu(),
+	      repairFromPublisherWhenTooClose)) {
 	  requestRepairFromPublisher(url);
 	}
 	break;
@@ -1385,7 +1420,6 @@ public class V3Poller extends BasePoll {
 		    + tallyResult.printString);
       }
     }
-    return tallyResult;
   }
 
   /**
@@ -1761,7 +1795,7 @@ public class V3Poller extends BasePoll {
 	  // ParticipantUserData.
 	  setStatus(V3Poller.POLLER_STATUS_TALLYING);
 	  signalNodeAgreement(tally, url);
-	  BlockTally.Result result = checkTally(tally, url, false);
+	  BlockTally.Result result = updateTallyStatus(tally, url);
 	  log.debug3("After-vote hash tally for repaired block " + url
 		     + ": " + result.printString);
 	  pollerState.getRepairQueue().markComplete(url);
