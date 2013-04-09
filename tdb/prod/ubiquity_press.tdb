@@ -176,22 +176,22 @@
     param[base_url] = http://www.pia-journal.co.uk/
     param[journal_id] = pia
 
-    au < ready ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
-    au < ready ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
-    au < ready ; 1992 ; Papers from the Institute of Archaeology Volume 3 ; 3 ; 1992 >
-    au < ready ; 1993 ; Papers from the Institute of Archaeology Volume 4 ; 4 ; 1993 >
-    au < ready ; 1994 ; Papers from the Institute of Archaeology Volume 5 ; 5 ; 1994 >
-    au < ready ; 1995 ; Papers from the Institute of Archaeology Volume 6 ; 6 ; 1995 >
-    au < ready ; 1996 ; Papers from the Institute of Archaeology Volume 7 ; 7 ; 1996 >
-    au < ready ; 1997 ; Papers from the Institute of Archaeology Volume 8 ; 8 ; 1997 >
-    au < ready ; 1998 ; Papers from the Institute of Archaeology Volume 9 ; 9 ; 1998 >
-    au < ready ; 1999 ; Papers from the Institute of Archaeology Volume 10 ; 10 ; 1999 >
-    au < ready ; 2000 ; Papers from the Institute of Archaeology Volume 11 ; 11 ; 2000 >
-    au < ready ; 2001 ; Papers from the Institute of Archaeology Volume 12 ; 12 ; 2001 >
-    au < ready ; 2002 ; Papers from the Institute of Archaeology Volume 13 ; 13 ; 2002 >
-    au < ready ; 2003 ; Papers from the Institute of Archaeology Volume 14 ; 14 ; 2003 >
-    au < ready ; 2004 ; Papers from the Institute of Archaeology Volume 15 ; 15 ; 2004 >
-    au < ready ; 2005 ; Papers from the Institute of Archaeology Volume 16 ; 16 ; 2005 >
+    au < releasing ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
+    au < releasing ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
+    au < releasing ; 1992 ; Papers from the Institute of Archaeology Volume 3 ; 3 ; 1992 >
+    au < releasing ; 1993 ; Papers from the Institute of Archaeology Volume 4 ; 4 ; 1993 >
+    au < releasing ; 1994 ; Papers from the Institute of Archaeology Volume 5 ; 5 ; 1994 >
+    au < releasing ; 1995 ; Papers from the Institute of Archaeology Volume 6 ; 6 ; 1995 >
+    au < releasing ; 1996 ; Papers from the Institute of Archaeology Volume 7 ; 7 ; 1996 >
+    au < releasing ; 1997 ; Papers from the Institute of Archaeology Volume 8 ; 8 ; 1997 >
+    au < releasing ; 1998 ; Papers from the Institute of Archaeology Volume 9 ; 9 ; 1998 >
+    au < releasing ; 1999 ; Papers from the Institute of Archaeology Volume 10 ; 10 ; 1999 >
+    au < releasing ; 2000 ; Papers from the Institute of Archaeology Volume 11 ; 11 ; 2000 >
+    au < releasing ; 2001 ; Papers from the Institute of Archaeology Volume 12 ; 12 ; 2001 >
+    au < releasing ; 2002 ; Papers from the Institute of Archaeology Volume 13 ; 13 ; 2002 >
+    au < releasing ; 2003 ; Papers from the Institute of Archaeology Volume 14 ; 14 ; 2003 >
+    au < releasing ; 2004 ; Papers from the Institute of Archaeology Volume 15 ; 15 ; 2004 >
+    au < releasing ; 2005 ; Papers from the Institute of Archaeology Volume 16 ; 16 ; 2005 >
     au < testing ; 2006 ; Papers from the Institute of Archaeology Volume 17 ; 17 ; 2006 >
     au < testing ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 ; 2007 >
     au < released ; 2009 ; Papers from the Institute of Archaeology Volume 19 ; 19 ; 2009 >
@@ -215,7 +215,7 @@
     au < testing ; 2009 ; Present Pasts Volume 1 ; 1 ; 2009 >
     au < testing ; 2010 ; Present Pasts Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
-    au < ready ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
+    au < releasing ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
     au < expected ; 2013 ; Present Pasts Volume 5 ; 5 ; 2013 >
     
   }

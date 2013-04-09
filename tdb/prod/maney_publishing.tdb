@@ -321,8 +321,8 @@
     comment[continued_by] = 1478-422X
     comment[notReady36] = different pdf version used
 
-    au < ready ; 1999 ; British Corrosion Journal Volume 34 ; 34 > 
-    au < ready ; 2000 ; British Corrosion Journal Volume 35 ; 35 > 
+    au < releasing ; 1999 ; British Corrosion Journal Volume 34 ; 34 > 
+    au < releasing ; 2000 ; British Corrosion Journal Volume 35 ; 35 > 
     au < notReady ; 2001 ; British Corrosion Journal Volume 36 ; 36 > 
     au < doNotProcess ; 2002 ; British Corrosion Journal Volume 37 ; 37 >
 
@@ -434,7 +434,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[notReady] = RU4507, different pdf fontname used
 
-    au < ready ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
+    au < releasing ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
     au < notReady ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
     au < notReady ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 > 
     au < released ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 > 

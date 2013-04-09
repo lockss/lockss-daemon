@@ -28,19 +28,19 @@
       param[journal_id] = ambt
       comment[notReady] = metadata mismatch, retest later
   
-      au < ready ; 2000 ; The American Biology Teacher Volume 62 ; 62 >
-      au < ready ; 2001 ; The American Biology Teacher Volume 63 ; 63 >
-      au < ready ; 2002 ; The American Biology Teacher Volume 64 ; 64 >
+      au < releasing ; 2000 ; The American Biology Teacher Volume 62 ; 62 >
+      au < releasing ; 2001 ; The American Biology Teacher Volume 63 ; 63 >
+      au < releasing ; 2002 ; The American Biology Teacher Volume 64 ; 64 >
       au < notReady ; 2003 ; The American Biology Teacher Volume 65 ; 65 >
       au < doNotProcess ; 2004 ; The American Biology Teacher Volume 66 ; 66 >
-      au < ready ; 2005 ; The American Biology Teacher Volume 67 ; 67 >
-      au < ready ; 2006 ; The American Biology Teacher Volume 68 ; 68 >
-      au < ready ; 2007 ; The American Biology Teacher Volume 69 ; 69 >
-      au < ready ; 2008 ; The American Biology Teacher Volume 70 ; 70 >
-      au < ready ; 2009 ; The American Biology Teacher Volume 71 ; 71 >
+      au < releasing ; 2005 ; The American Biology Teacher Volume 67 ; 67 >
+      au < releasing ; 2006 ; The American Biology Teacher Volume 68 ; 68 >
+      au < releasing ; 2007 ; The American Biology Teacher Volume 69 ; 69 >
+      au < releasing ; 2008 ; The American Biology Teacher Volume 70 ; 70 >
+      au < releasing ; 2009 ; The American Biology Teacher Volume 71 ; 71 >
       au < notReady ; 2010 ; The American Biology Teacher Volume 72 ; 72 >
-      au < ready ; 2011 ; The American Biology Teacher Volume 73 ; 73 >
-      au < ready ; 2012 ; The American Biology Teacher Volume 74 ; 74 >
+      au < releasing ; 2011 ; The American Biology Teacher Volume 73 ; 73 >
+      au < releasing ; 2012 ; The American Biology Teacher Volume 74 ; 74 >
       au < manifest ; 2013 ; The American Biology Teacher Volume 75 ; 75 >
     }
 

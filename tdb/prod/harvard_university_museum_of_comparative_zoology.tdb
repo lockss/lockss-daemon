@@ -19,28 +19,28 @@
       param[journal_id] = brvo
       comment[notReady] = url normalizer needed to add filter
       
-      au < ready ; 2004 ; Breviora Volume 512 ; 512 >
-      au < ready ; 2008 ; Breviora Volume 513 ; 513 > 
-      au < ready ; 2008 ; Breviora Volume 514 ; 514 >
-      au < ready ; 2009 ; Breviora Volume 515 ; 515 >
-      au < ready ; 2009 ; Breviora Volume 516 ; 516 >
-      au < ready ; 2009 ; Breviora Volume 517 ; 517 >
-      au < ready ; 2009 ; Breviora Volume 518 ; 518 >
-      au < ready ; 2010 ; Breviora Volume 519 ; 519 >
-      au < ready ; 2010 ; Breviora Volume 520 ; 520 >     
-      au < ready ; 2011 ; Breviora Volume 521 ; 521 >
-      au < ready ; 2011 ; Breviora Volume 522 ; 522 >
-      au < ready ; 2011 ; Breviora Volume 523 ; 523 >
-      au < ready ; 2011 ; Breviora Volume 524 ; 524 >
-      au < ready ; 2011 ; Breviora Volume 525 ; 525 >
-      au < ready ; 2011 ; Breviora Volume 526 ; 526 >
-      au < ready ; 2011 ; Breviora Volume 527 ; 527 >
-      au < ready ; 2011 ; Breviora Volume 528 ; 528 >
-      au < ready ; 2012 ; Breviora Volume 529 ; 529 >
-      au < ready ; 2012 ; Breviora Volume 530 ; 530 >
-      au < ready ; 2012 ; Breviora Volume 531 ; 531 >
-      au < ready ; 2012 ; Breviora Volume 532 ; 532 >
-      au < ready ; 2012 ; Breviora Volume 533 ; 533 >
+      au < releasing ; 2004 ; Breviora Volume 512 ; 512 >
+      au < releasing ; 2008 ; Breviora Volume 513 ; 513 > 
+      au < releasing ; 2008 ; Breviora Volume 514 ; 514 >
+      au < releasing ; 2009 ; Breviora Volume 515 ; 515 >
+      au < releasing ; 2009 ; Breviora Volume 516 ; 516 >
+      au < releasing ; 2009 ; Breviora Volume 517 ; 517 >
+      au < releasing ; 2009 ; Breviora Volume 518 ; 518 >
+      au < releasing ; 2010 ; Breviora Volume 519 ; 519 >
+      au < releasing ; 2010 ; Breviora Volume 520 ; 520 >     
+      au < releasing ; 2011 ; Breviora Volume 521 ; 521 >
+      au < releasing ; 2011 ; Breviora Volume 522 ; 522 >
+      au < releasing ; 2011 ; Breviora Volume 523 ; 523 >
+      au < releasing ; 2011 ; Breviora Volume 524 ; 524 >
+      au < releasing ; 2011 ; Breviora Volume 525 ; 525 >
+      au < releasing ; 2011 ; Breviora Volume 526 ; 526 >
+      au < releasing ; 2011 ; Breviora Volume 527 ; 527 >
+      au < releasing ; 2011 ; Breviora Volume 528 ; 528 >
+      au < releasing ; 2012 ; Breviora Volume 529 ; 529 >
+      au < releasing ; 2012 ; Breviora Volume 530 ; 530 >
+      au < releasing ; 2012 ; Breviora Volume 531 ; 531 >
+      au < releasing ; 2012 ; Breviora Volume 532 ; 532 >
+      au < releasing ; 2012 ; Breviora Volume 533 ; 533 >
       au < expected ; 2013 ; Breviora Volume 534 ; 534 >
       
       }
@@ -62,9 +62,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = harv
       
-      au < ready ; 2003-2007 ; Bulletin of the Museum of Comparative Zoology Volume 158 ; 158 >
-      au < ready ; 2007-2009 ; Bulletin of the Museum of Comparative Zoology Volume 159 ; 159 > 
-      au < ready ; 2010-2012 ; Bulletin of the Museum of Comparative Zoology Volume 160 ; 160 >
+      au < releasing ; 2003-2007 ; Bulletin of the Museum of Comparative Zoology Volume 158 ; 158 >
+      au < releasing ; 2007-2009 ; Bulletin of the Museum of Comparative Zoology Volume 159 ; 159 > 
+      au < releasing ; 2010-2012 ; Bulletin of the Museum of Comparative Zoology Volume 160 ; 160 >
       au < expected ; 2013-2015 ; Bulletin of the Museum of Comparative Zoology Volume 161 ; 161 >
 
     }

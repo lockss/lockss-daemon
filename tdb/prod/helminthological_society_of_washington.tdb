@@ -30,17 +30,17 @@
       param[journal_id] = copa
       comment[notReady] = open_access vs no_access
       
-      au < ready ; 2002 ; Comparative Parasitology Volume 69 ; 69 >
-      au < ready ; 2003 ; Comparative Parasitology Volume 70 ; 70 >
-      au < ready ; 2004 ; Comparative Parasitology Volume 71 ; 71 >
+      au < releasing ; 2002 ; Comparative Parasitology Volume 69 ; 69 >
+      au < releasing ; 2003 ; Comparative Parasitology Volume 70 ; 70 >
+      au < releasing ; 2004 ; Comparative Parasitology Volume 71 ; 71 >
       au < doNotProcess ; 2005 ; Comparative Parasitology Volume 72 ; 72 >
-      au < ready ; 2006 ; Comparative Parasitology Volume 73 ; 73 >
-      au < ready ; 2007 ; Comparative Parasitology Volume 74 ; 74 >
-      au < ready ; 2008 ; Comparative Parasitology Volume 75 ; 75 >
-      au < ready ; 2009 ; Comparative Parasitology Volume 76 ; 76 >
+      au < releasing ; 2006 ; Comparative Parasitology Volume 73 ; 73 >
+      au < releasing ; 2007 ; Comparative Parasitology Volume 74 ; 74 >
+      au < releasing ; 2008 ; Comparative Parasitology Volume 75 ; 75 >
+      au < releasing ; 2009 ; Comparative Parasitology Volume 76 ; 76 >
       au < notReady ; 2010 ; Comparative Parasitology Volume 77 ; 77 >
-      au < ready ; 2011 ; Comparative Parasitology Volume 78 ; 78 >
-      au < ready ; 2012 ; Comparative Parasitology Volume 79 ; 79 >
+      au < releasing ; 2011 ; Comparative Parasitology Volume 78 ; 78 >
+      au < releasing ; 2012 ; Comparative Parasitology Volume 79 ; 79 >
       au < manifest ; 2013 ; Comparative Parasitology Volume 80 ; 80 >
 
     }

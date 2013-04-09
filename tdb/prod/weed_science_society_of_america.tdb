@@ -18,11 +18,11 @@
     param[base_url] = http://www.bioone.org/
     param[journal_id] = ipsm
 
-    au < ready ; 2008 ; Invasive Plant Science and Management Volume 1 ; 1 >
-    au < ready ; 2009 ; Invasive Plant Science and Management Volume 2 ; 2 >
-    au < ready ; 2010 ; Invasive Plant Science and Management Volume 3 ; 3 >
-    au < ready ; 2011 ; Invasive Plant Science and Management Volume 4 ; 4 >
-    au < ready ; 2012 ; Invasive Plant Science and Management Volume 5 ; 5 >
+    au < releasing ; 2008 ; Invasive Plant Science and Management Volume 1 ; 1 >
+    au < releasing ; 2009 ; Invasive Plant Science and Management Volume 2 ; 2 >
+    au < releasing ; 2010 ; Invasive Plant Science and Management Volume 3 ; 3 >
+    au < releasing ; 2011 ; Invasive Plant Science and Management Volume 4 ; 4 >
+    au < releasing ; 2012 ; Invasive Plant Science and Management Volume 5 ; 5 >
     au < expected ; 2013 ; Invasive Plant Science and Management Volume 6 ; 6 >
 
   }
@@ -70,11 +70,11 @@
       au < doNotProcess ; 2005 ; Weed Science Volume 53 ; 53 >
       au < doNotProcess ; 2006 ; Weed Science Volume 54 ; 54 >
       au < doNotProcess ; 2007 ; Weed Science Volume 55 ; 55 >
-      au < ready ; 2008 ; Weed Science Volume 56 ; 56 >
-      au < ready ; 2009 ; Weed Science Volume 57 ; 57 >
-      au < ready ; 2010 ; Weed Science Volume 58 ; 58 >
-      au < ready ; 2011 ; Weed Science Volume 59 ; 59 >
-      au < ready ; 2012 ; Weed Science Volume 60 ; 60 >
+      au < releasing ; 2008 ; Weed Science Volume 56 ; 56 >
+      au < releasing ; 2009 ; Weed Science Volume 57 ; 57 >
+      au < releasing ; 2010 ; Weed Science Volume 58 ; 58 >
+      au < releasing ; 2011 ; Weed Science Volume 59 ; 59 >
+      au < releasing ; 2012 ; Weed Science Volume 60 ; 60 >
       au < manifest ; 2013 ; Weed Science Volume 61 ; 61 >
 
     }
@@ -124,11 +124,11 @@
       au < doNotProcess ; 2005 ; Weed Technology Volume 19 ; 19 >
       au < doNotProcess ; 2006 ; Weed Technology Volume 20 ; 20 >
       au < doNotProcess ; 2007 ; Weed Technology Volume 21 ; 21 >
-      au < ready ; 2008 ; Weed Technology Volume 22 ; 22 >
-      au < ready ; 2009 ; Weed Technology Volume 23 ; 23 >
-      au < ready ; 2010 ; Weed Technology Volume 24 ; 24 >
-      au < ready ; 2011 ; Weed Technology Volume 25 ; 25 >
-      au < ready ; 2012 ; Weed Technology Volume 26 ; 26 >
+      au < releasing ; 2008 ; Weed Technology Volume 22 ; 22 >
+      au < releasing ; 2009 ; Weed Technology Volume 23 ; 23 >
+      au < releasing ; 2010 ; Weed Technology Volume 24 ; 24 >
+      au < releasing ; 2011 ; Weed Technology Volume 25 ; 25 >
+      au < releasing ; 2012 ; Weed Technology Volume 26 ; 26 >
       au < manifest ; 2013 ; Weed Technology Volume 27 ; 27 >
 
     }

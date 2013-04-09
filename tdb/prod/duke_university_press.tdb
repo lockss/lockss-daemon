@@ -303,39 +303,39 @@
       comment[gvc] = This journal is not compared in the gln_v_clockss script
       comment[notReady] = pages did not crawl
 
-      au < HighWirePressPlugin ; ready ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 >
-      au < HighWirePressPlugin ; ready ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 >
-      au < HighWirePressPlugin ; ready ; 1824-1825 ; The Carlyle Letters Online Volume 3 ; 3 >
-      au < HighWirePressPlugin ; ready ; 1826-1828 ; The Carlyle Letters Online Volume 4 ; 4 >
-      au < HighWirePressPlugin ; ready ; 1829-1831 ; The Carlyle Letters Online Volume 5 ; 5 >
-      au < HighWirePressPlugin ; ready ; 1831-1833 ; The Carlyle Letters Online Volume 6 ; 6 >
-      au < HighWirePressPlugin ; ready ; 1833-1834 ; The Carlyle Letters Online Volume 7 ; 7 >
-      au < HighWirePressPlugin ; ready ; 1835-1836 ; The Carlyle Letters Online Volume 8 ; 8 >
-      au < HighWirePressPlugin ; ready ; 1836-1837 ; The Carlyle Letters Online Volume 9 ; 9 >
-      au < HighWirePressPlugin ; ready ; 1838 ; The Carlyle Letters Online Volume 10 ; 10 >
-      au < HighWirePressPlugin ; ready ; 1839 ; The Carlyle Letters Online Volume 11 ; 11 >
-      au < HighWirePressPlugin ; ready ; 1840 ; The Carlyle Letters Online Volume 12 ; 12 >
-      au < HighWirePressPlugin ; ready ; 1841 ; The Carlyle Letters Online Volume 13 ; 13 >
-      au < HighWirePressPlugin ; ready ; 1842 ; The Carlyle Letters Online Volume 14 ; 14 >
-      au < HighWirePressPlugin ; ready ; 1842 ; The Carlyle Letters Online Volume 15 ; 15 >
-      au < HighWirePressPlugin ; ready ; 1843 ; The Carlyle Letters Online Volume 16 ; 16 >
-      au < HighWirePressPlugin ; ready ; 1843-1844 ; The Carlyle Letters Online Volume 17 ; 17 >
-      au < HighWirePressPlugin ; ready ; 1844 ; The Carlyle Letters Online Volume 18 ; 18 >
-      au < HighWirePressPlugin ; ready ; 1845 ; The Carlyle Letters Online Volume 19 ; 19 >
-      au < HighWirePressPlugin ; ready ; 1845-1846 ; The Carlyle Letters Online Volume 20 ; 20 >
-      au < HighWirePressPlugin ; ready ; 1846-1847 ; The Carlyle Letters Online Volume 21 ; 21 >
-      au < HighWirePressPlugin ; ready ; 1847-1848 ; The Carlyle Letters Online Volume 22 ; 22 >
-      au < HighWirePressPlugin ; ready ; 1848-1849 ; The Carlyle Letters Online Volume 23 ; 23 >
-      au < HighWirePressPlugin ; ready ; 1849 ; The Carlyle Letters Online Volume 24 ; 24 >
-      au < HighWirePressPlugin ; ready ; 1850 ; The Carlyle Letters Online Volume 25 ; 25 >
-      au < HighWirePressPlugin ; ready ; 1851 ; The Carlyle Letters Online Volume 26 ; 26 >
-      au < HighWirePressPlugin ; ready ; 1852 ; The Carlyle Letters Online Volume 27 ; 27 >
-      au < HighWirePressPlugin ; ready ; 1853 ; The Carlyle Letters Online Volume 28 ; 28 >
-      au < HighWirePressPlugin ; ready ; 1854-1855 ; The Carlyle Letters Online Volume 29 ; 29 >
-      au < HighWirePressPlugin ; ready ; 1855 ; The Carlyle Letters Online Volume 30 ; 30 >
-      au < HighWirePressPlugin ; ready ; 1856 ; The Carlyle Letters Online Volume 31 ; 31 >
-      au < HighWirePressPlugin ; ready ; 1856-1857 ; The Carlyle Letters Online Volume 32 ; 32 >
-      au < HighWirePressPlugin ; ready ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 >
+      au < HighWirePressPlugin ; releasing ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 >
+      au < HighWirePressPlugin ; releasing ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 >
+      au < HighWirePressPlugin ; releasing ; 1824-1825 ; The Carlyle Letters Online Volume 3 ; 3 >
+      au < HighWirePressPlugin ; releasing ; 1826-1828 ; The Carlyle Letters Online Volume 4 ; 4 >
+      au < HighWirePressPlugin ; releasing ; 1829-1831 ; The Carlyle Letters Online Volume 5 ; 5 >
+      au < HighWirePressPlugin ; releasing ; 1831-1833 ; The Carlyle Letters Online Volume 6 ; 6 >
+      au < HighWirePressPlugin ; releasing ; 1833-1834 ; The Carlyle Letters Online Volume 7 ; 7 >
+      au < HighWirePressPlugin ; releasing ; 1835-1836 ; The Carlyle Letters Online Volume 8 ; 8 >
+      au < HighWirePressPlugin ; releasing ; 1836-1837 ; The Carlyle Letters Online Volume 9 ; 9 >
+      au < HighWirePressPlugin ; releasing ; 1838 ; The Carlyle Letters Online Volume 10 ; 10 >
+      au < HighWirePressPlugin ; releasing ; 1839 ; The Carlyle Letters Online Volume 11 ; 11 >
+      au < HighWirePressPlugin ; releasing ; 1840 ; The Carlyle Letters Online Volume 12 ; 12 >
+      au < HighWirePressPlugin ; releasing ; 1841 ; The Carlyle Letters Online Volume 13 ; 13 >
+      au < HighWirePressPlugin ; releasing ; 1842 ; The Carlyle Letters Online Volume 14 ; 14 >
+      au < HighWirePressPlugin ; releasing ; 1842 ; The Carlyle Letters Online Volume 15 ; 15 >
+      au < HighWirePressPlugin ; releasing ; 1843 ; The Carlyle Letters Online Volume 16 ; 16 >
+      au < HighWirePressPlugin ; releasing ; 1843-1844 ; The Carlyle Letters Online Volume 17 ; 17 >
+      au < HighWirePressPlugin ; releasing ; 1844 ; The Carlyle Letters Online Volume 18 ; 18 >
+      au < HighWirePressPlugin ; releasing ; 1845 ; The Carlyle Letters Online Volume 19 ; 19 >
+      au < HighWirePressPlugin ; releasing ; 1845-1846 ; The Carlyle Letters Online Volume 20 ; 20 >
+      au < HighWirePressPlugin ; releasing ; 1846-1847 ; The Carlyle Letters Online Volume 21 ; 21 >
+      au < HighWirePressPlugin ; releasing ; 1847-1848 ; The Carlyle Letters Online Volume 22 ; 22 >
+      au < HighWirePressPlugin ; releasing ; 1848-1849 ; The Carlyle Letters Online Volume 23 ; 23 >
+      au < HighWirePressPlugin ; releasing ; 1849 ; The Carlyle Letters Online Volume 24 ; 24 >
+      au < HighWirePressPlugin ; releasing ; 1850 ; The Carlyle Letters Online Volume 25 ; 25 >
+      au < HighWirePressPlugin ; releasing ; 1851 ; The Carlyle Letters Online Volume 26 ; 26 >
+      au < HighWirePressPlugin ; releasing ; 1852 ; The Carlyle Letters Online Volume 27 ; 27 >
+      au < HighWirePressPlugin ; releasing ; 1853 ; The Carlyle Letters Online Volume 28 ; 28 >
+      au < HighWirePressPlugin ; releasing ; 1854-1855 ; The Carlyle Letters Online Volume 29 ; 29 >
+      au < HighWirePressPlugin ; releasing ; 1855 ; The Carlyle Letters Online Volume 30 ; 30 >
+      au < HighWirePressPlugin ; releasing ; 1856 ; The Carlyle Letters Online Volume 31 ; 31 >
+      au < HighWirePressPlugin ; releasing ; 1856-1857 ; The Carlyle Letters Online Volume 32 ; 32 >
+      au < HighWirePressPlugin ; releasing ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 >
       au < HighWirePressPlugin ; notReady ; 1858 ; The Carlyle Letters Online Volume 34 ; 34 >
       au < HighWirePressPlugin ; ready ; 1859 ; The Carlyle Letters Online Volume 35 ; 35 >
  
