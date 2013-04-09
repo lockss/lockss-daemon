@@ -1,6 +1,7 @@
 %define name lockss-daemon
 %define version @RELEASENAME@
 %define release @RPMRELEASE@
+%define buildroot %{_builddir}/%{name}-root
 
 Summary: LOCKSS daemon and configuration files
 Name: %{name}
@@ -9,7 +10,7 @@ Release: %{release}
 License: BSD
 Group: Archiving
 BuildArch: noarch
-BuildRoot: %{_builddir}/%{name}-root
+BuildRoot: %{buildroot}
 URL: http://www.lockss.org/
 Distribution: any
 Provides: lockss-daemon
