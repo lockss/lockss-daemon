@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.94.10.1 2013-04-05 17:59:06 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.94.10.2 2013-04-09 04:44:40 tlipkis Exp $
 */
 
 /*
@@ -1491,16 +1491,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       assertEquals(aus[13], crawlManager.nextReq().au);
       crawlManager.addToRunningRateKeys(aus[13]);
       assertEquals(null, crawlManager.nextReq());
-
-      // ensure can dynamically resize queues
-      p.put(CrawlManagerImpl.PARAM_SHARED_QUEUE_MAX, "3");
-      ConfigurationUtil.addFromProps(p);
-      for (Iterator iter = crawlManager.sharedRateReqs.entrySet().iterator();
-	   iter.hasNext();) {
-	Map.Entry ent = (Map.Entry)iter.next();
-	BoundedTreeSet coll = (BoundedTreeSet)ent.getValue();
-	assertEquals(3, coll.getMaxSize());
-      }
     }
 
     public void testOdcQueueWithConcurrentPool() throws Exception {

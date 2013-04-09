@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.148.2.1 2013-04-05 17:59:06 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.148.2.2 2013-04-09 04:44:40 tlipkis Exp $
  */
 
 /*
@@ -141,7 +141,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   // ODC params
 
-  static String ODC_PREFIX = PREFIX + "odc.";
+  static final String ODC_PREFIX = PREFIX + "odc.";
 
   /** Max interval between recalculating crawl queue order */
   public static final String PARAM_REBUILD_CRAWL_QUEUE_INTERVAL =
@@ -162,12 +162,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   /** Size of queue of unshared rate AUs. */
   public static final String PARAM_UNSHARED_QUEUE_MAX =
     ODC_PREFIX + "unsharedQueueMax";
-  static final int DEFAULT_UNSHARED_QUEUE_MAX = 5;
+  static final int DEFAULT_UNSHARED_QUEUE_MAX = 50;
 
   /** Size of queue of shared rate AUs. */
   public static final String PARAM_SHARED_QUEUE_MAX =
     ODC_PREFIX + "sharedQueueMax";
-  static final int DEFAULT_SHARED_QUEUE_MAX = 5;
+  static final int DEFAULT_SHARED_QUEUE_MAX = 50;
 
   /** Min number of threads available to AUs with unshared rate limiters */
   public static final String PARAM_FAVOR_UNSHARED_RATE_THREADS =
@@ -467,8 +467,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 					    DEFAULT_UNSHARED_QUEUE_MAX);
       paramSharedQueueMax = config.getInt(PARAM_SHARED_QUEUE_MAX,
 					  DEFAULT_SHARED_QUEUE_MAX);
-      unsharedRateReqs.setMaxSize(paramUnsharedQueueMax);
-      sharedRateReqs.setTreeSetSize(paramSharedQueueMax);
 
       paramFavorUnsharedRateThreads =
 	config.getInt(PARAM_FAVOR_UNSHARED_RATE_THREADS,
@@ -1520,23 +1518,16 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   Object queueLock = new Object();	// lock for sharedRateReqs and
 					// unsharedRateReqs
-  MultiCrawlPriorityMap sharedRateReqs =
-    new MultiCrawlPriorityMap(paramSharedQueueMax);
+  MultiCrawlPriorityMap sharedRateReqs = new MultiCrawlPriorityMap();
   BoundedTreeSet unsharedRateReqs =
     new BoundedTreeSet(paramUnsharedQueueMax, CPC);
 
   class MultiCrawlPriorityMap extends MultiValueMap {
-    MultiCrawlPriorityMap(final int maxAus) {
+    MultiCrawlPriorityMap() {
       super(new HashMap(), new org.apache.commons.collections.Factory() {
 	  public Object create() {
-	    return new BoundedTreeSet(maxAus, CPC);
+	    return new BoundedTreeSet(paramSharedQueueMax, CPC);
 	  }});
-    }
-    public void setTreeSetSize(int maxAus) {
-      for (Map.Entry ent : (Collection<Map.Entry>)entrySet()) {
-	BoundedTreeSet ts = (BoundedTreeSet)ent.getValue();
-	ts.setMaxSize(maxAus);
-      }
     }
   }
 
@@ -1553,10 +1544,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     synchronized (highPriorityCrawlRequests) {
       highPriorityCrawlRequests.remove(au);
     }
-    synchronized (queueLock) {
-      unsharedRateReqs.clear();
-      sharedRateReqs.clear();
-    }
+    forceQueueRebuild();
+  }
+
+  private void forceQueueRebuild() {
+    timeToRebuildCrawlQueue.expire();
   }
 
   CrawlReq nextReq() throws InterruptedException {
@@ -1718,7 +1710,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     synchronized (highPriorityCrawlRequests) {
       highPriorityCrawlRequests.put(req.au, req);
     }
-    timeToRebuildCrawlQueue.expire();
+    forceQueueRebuild();
     startOneWait.expire();
   }
 
@@ -1737,7 +1729,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     long startTime = TimeBase.nowMs();
     rebuildCrawlQueue0();
     logger.debug("rebuildCrawlQueue(): "+
-		 (TimeBase.nowMs() - startTime)+"ms");
+		 StringUtil.timeIntervalToString(TimeBase.msSince(startTime)));
   }
 
   void rebuildCrawlQueue0() {
@@ -1746,6 +1738,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     synchronized (queueLock) {
       poolEligible.clear();
       unsharedRateReqs.clear();
+      unsharedRateReqs.setMaxSize(paramUnsharedQueueMax);
       sharedRateReqs.clear();
       for (ArchivalUnit au : (areAusStarted()
 			      ? pluginMgr.getAllAus()
@@ -1802,7 +1795,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     n.add(1);
   }
 
-  void adjustEligibleCounts() {
+  // called within synchronized (queueLock) {...}
+
+  private void adjustEligibleCounts() {
     for (Map.Entry<String,MutableInt> ent : poolEligible.entrySet()) {
       String poolKey = ent.getKey();
       if (poolKey == UNSHARED_RATE_KEY) {
