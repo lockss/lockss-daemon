@@ -25,15 +25,15 @@
     param[journal_id] = tas
     param[journal_issn] = 0003-1348
 
-    au < exists ; exists ; 2005 ; The American Surgeon Volume 71 ; 71 >
-    au < exists ; exists ; 2006 ; The American Surgeon Volume 72 ; 72 >
-    au < exists ; exists ; 2007 ; The American Surgeon Volume 73 ; 73 >
-    au < exists ; exists ; 2008 ; The American Surgeon Volume 74 ; 74 >
-    au < exists ; exists ; 2009 ; The American Surgeon Volume 75 ; 75 >
-    au < exists ; exists ; 2010 ; The American Surgeon Volume 76 ; 76 >
-    au < exists ; exists ; 2011 ; The American Surgeon Volume 77 ; 77 >
-    au < exists ; exists ; 2012 ; The American Surgeon Volume 78 ; 78 >
-    au < exists ; exists ; 2013 ; The American Surgeon Volume 79 ; 79 >
+    au < manifest ; exists ; 2005 ; The American Surgeon Volume 71 ; 71 >
+    au < manifest ; exists ; 2006 ; The American Surgeon Volume 72 ; 72 >
+    au < manifest ; exists ; 2007 ; The American Surgeon Volume 73 ; 73 >
+    au < manifest ; exists ; 2008 ; The American Surgeon Volume 74 ; 74 >
+    au < manifest ; exists ; 2009 ; The American Surgeon Volume 75 ; 75 >
+    au < manifest ; exists ; 2010 ; The American Surgeon Volume 76 ; 76 >
+    au < manifest ; exists ; 2011 ; The American Surgeon Volume 77 ; 77 >
+    au < manifest ; exists ; 2012 ; The American Surgeon Volume 78 ; 78 >
+    au < manifest ; exists ; 2013 ; The American Surgeon Volume 79 ; 79 >
 
   }
 }
