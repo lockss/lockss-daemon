@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.106 2013-03-16 22:03:33 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.107 2013-04-09 18:03:26 tlipkis Exp $
  */
 
 /*
@@ -152,7 +152,10 @@ public class TestPluginManager extends LockssTestCase {
 				  tempDirPath);
   }
 
-  public void testDefaultDisableURLConnCache() throws IOException {
+  // This test disabled because there's currently no privision for
+  // disabling the (static) URLConnection cache, and the order in which
+  // which test methods run is now unpredictable.
+  public void xxxtestDefaultDisableURLConnCache() throws IOException {
     ConfigurationUtil.addFromArgs(PluginManager.PARAM_DISABLE_URL_CONNECTION_CACHE,
 	"false");
     assertFalse(PluginManager.DEFAULT_DISABLE_URL_CONNECTION_CACHE);
