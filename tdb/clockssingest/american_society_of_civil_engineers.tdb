@@ -2,9 +2,12 @@
 
   publisher <
     name = American Society of Civil Engineers ;
-    info[contract] = 2010 ;
-    info[tester] = 
+    info[contract] = 2012 ;
+    info[tester] = 0
   >
+  
+  comment[contract] = Contract is 2010, but 2010-2012 have already been collected by ftp.
+  comment[contract1] = Move back to 2010 when 2012 is tested.
 
   plugin = org.lockss.plugin.americansocietyofcivilengineers.ClockssASCEPlugin
   param[base_url] = http://ascelibrary.org/
