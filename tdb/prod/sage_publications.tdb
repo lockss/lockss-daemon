@@ -2960,8 +2960,8 @@
         au < manifest ; 2002 ; Asia-Pacific Journal of Public Health Volume 14 ; 14 >
         au < manifest ; 2003 ; Asia-Pacific Journal of Public Health Volume 15 ; 15 >
         au < manifest ; 2004 ; Asia-Pacific Journal of Public Health Volume 16 ; 16 >
-        au < testing ; 2005 ; Asia-Pacific Journal of Public Health Volume 17 ; 17 >
-        au < testing ; 2006 ; Asia-Pacific Journal of Public Health Volume 18 ; 18 >
+        au < ready ; 2005 ; Asia-Pacific Journal of Public Health Volume 17 ; 17 >
+        au < ready ; 2006 ; Asia-Pacific Journal of Public Health Volume 18 ; 18 >
         au < doNotProcess ; 2007 ; Asia-Pacific Journal of Public Health Volume 19 ; 19 >
         au < doNotProcess ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 >
         au < doNotProcess ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
@@ -3146,8 +3146,8 @@
         au < manifest ; 2002-2003 ; Assessment for Effective Intervention Volume 28 ; 28 >
         au < manifest ; 2003-2004 ; Assessment for Effective Intervention Volume 29 ; 29 >
         au < manifest ; 2004-2005 ; Assessment for Effective Intervention Volume 30 ; 30 >
-        au < testing ; 2005-2006 ; Assessment for Effective Intervention Volume 31 ; 31 >
-        au < testing ; 2006-2007 ; Assessment for Effective Intervention Volume 32 ; 32 >
+        au < ready ; 2005-2006 ; Assessment for Effective Intervention Volume 31 ; 31 >
+        au < ready ; 2006-2007 ; Assessment for Effective Intervention Volume 32 ; 32 >
         au < doNotProcess ; 2007-2008 ; Assessment for Effective Intervention Volume 33 ; 33 >
         au < doNotProcess ; 2008-2009 ; Assessment for Effective Intervention Volume 34 ; 34 >
         au < doNotProcess ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 >
@@ -3238,9 +3238,9 @@
         au < manifest ; 2002 ; Australasian Psychiatry Volume 10 ; 10 >
         au < manifest ; 2003 ; Australasian Psychiatry Volume 11 ; 11 >
         au < manifest ; 2004 ; Australasian Psychiatry Volume 12 ; 12 >
-        au < testing ; 2005 ; Australasian Psychiatry Volume 13 ; 13 >
-        au < testing ; 2006 ; Australasian Psychiatry Volume 14 ; 14 >
-        au < testing ; 2007 ; Australasian Psychiatry Volume 15 ; 15 >
+        au < ready ; 2005 ; Australasian Psychiatry Volume 13 ; 13 >
+        au < ready ; 2006 ; Australasian Psychiatry Volume 14 ; 14 >
+        au < ready ; 2007 ; Australasian Psychiatry Volume 15 ; 15 >
         au < released ; 2008 ; Australasian Psychiatry Volume 16 ; 16 >
         au < released ; 2009 ; Australasian Psychiatry Volume 17 ; 17 >
         au < released ; 2010 ; Australasian Psychiatry Volume 18 ; 18 >
@@ -3328,9 +3328,9 @@
         au < manifest ; 2002 ; Australian & New Zealand Journal of Psychiatry Volume 36 ; 36 >
         au < manifest ; 2003 ; Australian & New Zealand Journal of Psychiatry Volume 37 ; 37 >
         au < manifest ; 2004 ; Australian & New Zealand Journal of Psychiatry Volume 38 ; 38 >
-        au < testing ; 2005 ; Australian & New Zealand Journal of Psychiatry Volume 39 ; 39 >
-        au < testing ; 2006 ; Australian & New Zealand Journal of Psychiatry Volume 40 ; 40 >
-        au < testing ; 2007 ; Australian & New Zealand Journal of Psychiatry Volume 41 ; 41 >
+        au < ready ; 2005 ; Australian & New Zealand Journal of Psychiatry Volume 39 ; 39 >
+        au < ready ; 2006 ; Australian & New Zealand Journal of Psychiatry Volume 40 ; 40 >
+        au < notReady ; 2007 ; Australian & New Zealand Journal of Psychiatry Volume 41 ; 41 >
         au < released ; 2008 ; Australian & New Zealand Journal of Psychiatry Volume 42 ; 42 >
         au < released ; 2009 ; Australian & New Zealand Journal of Psychiatry Volume 43 ; 43 >
         au < released ; 2010 ; Australian & New Zealand Journal of Psychiatry Volume 44 ; 44 >
@@ -30564,13 +30564,13 @@ comment[mpj] = now published by Brill
         param[base_url] = http://psp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < testing ; 1974 ; Personality and Social Psychology Bulletin Volume 1 ; 1 >
+        au < ready ; 1974 ; Personality and Social Psychology Bulletin Volume 1 ; 1 >
         au < ready ; 1976 ; Personality and Social Psychology Bulletin Volume 2 ; 2 >
         au < ready ; 1976 ; Personality and Social Psychology Bulletin Volume 3 ; 3 >
         au < testing ; 1978 ; Personality and Social Psychology Bulletin Volume 4 ; 4 >
-        au < testing ; 1979 ; Personality and Social Psychology Bulletin Volume 5 ; 5 >
+        au < ready ; 1979 ; Personality and Social Psychology Bulletin Volume 5 ; 5 >
         au < ready ; 1980 ; Personality and Social Psychology Bulletin Volume 6 ; 6 >
-        au < testing ; 1981 ; Personality and Social Psychology Bulletin Volume 7 ; 7 >
+        au < ready ; 1981 ; Personality and Social Psychology Bulletin Volume 7 ; 7 >
         au < ready ; 1982 ; Personality and Social Psychology Bulletin Volume 8 ; 8 >
         au < ready ; 1983 ; Personality and Social Psychology Bulletin Volume 9 ; 9 >
         au < manifest ; 1984 ; Personality and Social Psychology Bulletin Volume 10 ; 10 >
@@ -30638,13 +30638,13 @@ comment[mpj] = now published by Brill
         au < ready ; 1997 ; Personality and Social Psychology Review Volume 1 ; 1 >
         au < ready ; 1998 ; Personality and Social Psychology Review Volume 2 ; 2 >
         au < ready ; 1999 ; Personality and Social Psychology Review Volume 3 ; 3 >
-        au < testing ; 2000 ; Personality and Social Psychology Review Volume 4 ; 4 >
-        au < testing ; 2001 ; Personality and Social Psychology Review Volume 5 ; 5 >
+        au < ready ; 2000 ; Personality and Social Psychology Review Volume 4 ; 4 >
+        au < ready ; 2001 ; Personality and Social Psychology Review Volume 5 ; 5 >
         au < ready ; 2002 ; Personality and Social Psychology Review Volume 6 ; 6 >
         au < testing ; 2003 ; Personality and Social Psychology Review Volume 7 ; 7 >
         au < ready ; 2004 ; Personality and Social Psychology Review Volume 8 ; 8 >
         au < ready ; 2005 ; Personality and Social Psychology Review Volume 9 ; 9 >
-        au < testing ; 2006 ; Personality and Social Psychology Review Volume 10 ; 10 >
+        au < ready ; 2006 ; Personality and Social Psychology Review Volume 10 ; 10 >
         au < doNotProcess ; 2007 ; Personality and Social Psychology Review Volume 11 ; 11 >
         au < doNotProcess ; 2008 ; Personality and Social Psychology Review Volume 12 ; 12 >
         au < doNotProcess ; 2009 ; Personality and Social Psychology Review Volume 13 ; 13 >
@@ -35395,7 +35395,7 @@ comment[mpj] = now published by Brill
 
         au < released ; 2004 ; Social Psychology Quarterly Volume 67 ; 67 >
         au < released ; 2005 ; Social Psychology Quarterly Volume 68 ; 68 >
-        au < testing ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 >
+        au < ready ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 >
         au < released ; 2007 ; Social Psychology Quarterly Volume 70 ; 70 >
         au < released ; 2008 ; Social Psychology Quarterly Volume 71 ; 71 >
         au < released ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 >
