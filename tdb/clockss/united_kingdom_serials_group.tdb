@@ -27,11 +27,12 @@
       eissn = 2048-7754
     >
     
+    comment[from] = issn: 0953-0460
     param[journal_issn] = 2048-7754
     implicit < status1 ; status ; year ; name ; param[volume_name]>
     
     au < crawling ; exists ; 2012 ; Insights: the UKSG journal Volume 25 ; 25 >
-    
+    au < manifest ; exists ; 2012 ; Insights: the UKSG journal Volume 26 ; 26 >
   }
 
   {
@@ -42,7 +43,7 @@
       eissn = 1475-3308 ;
       issnl = 0953-0460
     >
-
+    comment[continued_by] = issn: 2048-7754
     param[journal_issn] = 0953-0460
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
@@ -66,11 +67,10 @@
     au < released ; crawling ; 2005 ; Serials: The Journal for the Serials Community Volume 18 ; 18 >
     au < released ; crawling ; 2006 ; Serials: The Journal for the Serials Community Volume 19 ; 19 >
     au < released ; crawling ; 2007 ; Serials: The Journal for the Serials Community Volume 20 ; 20 >
-    au < notReady ; exists ; 2008 ; Serials: The Journal for the Serials Community Volume 21 ; 21 >
-    au < notReady ; exists ; 2009 ; Serials: The Journal for the Serials Community Volume 22 ; 22 >
+    au < manifest ; exists ; 2008 ; Serials: The Journal for the Serials Community Volume 21 ; 21 >
+    au < manifest ; exists ; 2009 ; Serials: The Journal for the Serials Community Volume 22 ; 22 >
     au < manifest ; exists ; 2010 ; Serials: The Journal for the Serials Community Volume 23 ; 23 >
     au < released ; crawling ; 2011 ; Serials: The Journal for the Serials Community Volume 24 ; 24 >
-    au < expected ; exists ; 2012 ; Serials: The Journal for the Serials Community Volume 25 ; 25 >
 
   }
 
