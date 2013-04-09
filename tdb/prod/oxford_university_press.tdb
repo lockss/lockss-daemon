@@ -933,7 +933,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; American Law and Economics Review Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; American Law and Economics Review Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2012 ; American Law and Economics Review Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; American Law and Economics Review Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; American Law and Economics Review Volume 15 ; 15 >
 
     }
 
@@ -3682,7 +3682,7 @@
   {
 
     title <
-      name = Chinese Journal of Comparative Law ;
+      name = The Chinese Journal of Comparative Law ;
       issn = 2050-4802 ;
       eissn = 2050-4810 ;
       issnl = 1540-1650
@@ -3692,7 +3692,7 @@
     param[base_url] = http://cjcl.oxfordjournals.org/ 
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2013 ; Chinese Journal of Comparative Law Volume 1 ; 1 >
+    au < manifest ; 2013 ; The Chinese Journal of Comparative Law Volume 1 ; 1 >
 
   }
 
@@ -3797,7 +3797,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 19 ; 19 >
 
     }
 
@@ -5624,7 +5624,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of International Law Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of International Law Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2012 ; European Journal of International Law Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; European Journal of International Law Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; European Journal of International Law Volume 24 ; 24 >
 
     }
 
@@ -10579,8 +10579,8 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 65A ; 65A >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 66A ; 66A >
     au < HighWirePressH20Plugin ; released ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A >
-    au < HighWirePressH20Plugin ; exists ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; exists ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68A ; 68A >
 
     }
@@ -18374,7 +18374,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Social Politics Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Social Politics Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Social Politics Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Social Politics Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Social Politics Volume 20 ; 20 >
 
     }
 
@@ -19630,7 +19630,7 @@
     
     {
 
-      au < expected ; 2013 ; Journal of Antitrust Enforcement Volume 1 ; 1 >
+      au < manifest ; 2013 ; Journal of Antitrust Enforcement Volume 1 ; 1 >
 
     }
 
