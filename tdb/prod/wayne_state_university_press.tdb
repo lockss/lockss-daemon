@@ -135,13 +135,13 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = hbio
 
-      au < releasing ; 2006 ; Human Biology Volume 78 ; 78 >
-      au < releasing ; 2007 ; Human Biology Volume 79 ; 79 >
-      au < releasing ; 2008 ; Human Biology Volume 80 ; 80 >
-      au < releasing ; 2009 ; Human Biology Volume 81 ; 81 >
-      au < releasing ; 2010 ; Human Biology Volume 82 ; 82 >
-      au < releasing ; 2011 ; Human Biology Volume 83 ; 83 >
-      au < releasing ; 2012 ; Human Biology Volume 84 ; 84 >
+      au < released ; 2006 ; Human Biology Volume 78 ; 78 >
+      au < released ; 2007 ; Human Biology Volume 79 ; 79 >
+      au < released ; 2008 ; Human Biology Volume 80 ; 80 >
+      au < released ; 2009 ; Human Biology Volume 81 ; 81 >
+      au < released ; 2010 ; Human Biology Volume 82 ; 82 >
+      au < released ; 2011 ; Human Biology Volume 83 ; 83 >
+      au < released ; 2012 ; Human Biology Volume 84 ; 84 >
       au < expected ; 2013 ; Human Biology Volume 85 ; 85 >
 
     }

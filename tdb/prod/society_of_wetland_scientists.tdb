@@ -73,16 +73,16 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = wetl
 
-      au < releasing ; 2000 ; Wetlands Volume 20 ; 20 >
+      au < released ; 2000 ; Wetlands Volume 20 ; 20 >
       au < wanted ; 2001 ; Wetlands Volume 21 ; 21 >
       au < wanted ; 2002 ; Wetlands Volume 22 ; 22 >
       au < wanted ; 2003 ; Wetlands Volume 23 ; 23 >
       au < doNotProcess; 2004 ; Wetlands Volume 24 ; 24 >
-      au < releasing ; 2005 ; Wetlands Volume 25 ; 25 >
-      au < releasing ; 2006 ; Wetlands Volume 26 ; 26 >
-      au < releasing ; 2007 ; Wetlands Volume 27 ; 27 >
-      au < releasing ; 2008 ; Wetlands Volume 28 ; 28 >
-      au < releasing ; 2009 ; Wetlands Volume 29 ; 29 >
+      au < released ; 2005 ; Wetlands Volume 25 ; 25 >
+      au < released ; 2006 ; Wetlands Volume 26 ; 26 >
+      au < released ; 2007 ; Wetlands Volume 27 ; 27 >
+      au < released ; 2008 ; Wetlands Volume 28 ; 28 >
+      au < released ; 2009 ; Wetlands Volume 29 ; 29 >
 
     }
 

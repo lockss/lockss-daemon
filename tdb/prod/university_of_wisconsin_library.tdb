@@ -29,18 +29,18 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = insc
 
-      au < releasing ; 2001 ; Journal of Insect Science Volume 1 ; 1 >
-      au < releasing ; 2002 ; Journal of Insect Science Volume 2 ; 2 >
-      au < releasing ; 2003 ; Journal of Insect Science Volume 3 ; 3 >
+      au < released ; 2001 ; Journal of Insect Science Volume 1 ; 1 >
+      au < released ; 2002 ; Journal of Insect Science Volume 2 ; 2 >
+      au < released ; 2003 ; Journal of Insect Science Volume 3 ; 3 >
       au < doNotProcess ; 2004 ; Journal of Insect Science Volume 4 ; 4 >
-      au < releasing ; 2005 ; Journal of Insect Science Volume 5 ; 5 >
-      au < releasing ; 2006 ; Journal of Insect Science Volume 6 ; 6 >
-      au < releasing ; 2007 ; Journal of Insect Science Volume 7 ; 7 >
-      au < releasing ; 2008 ; Journal of Insect Science Volume 8 ; 8 >
-      au < releasing ; 2009 ; Journal of Insect Science Volume 9 ; 9 >
+      au < released ; 2005 ; Journal of Insect Science Volume 5 ; 5 >
+      au < released ; 2006 ; Journal of Insect Science Volume 6 ; 6 >
+      au < released ; 2007 ; Journal of Insect Science Volume 7 ; 7 >
+      au < released ; 2008 ; Journal of Insect Science Volume 8 ; 8 >
+      au < released ; 2009 ; Journal of Insect Science Volume 9 ; 9 >
       au < testing ; 2010 ; Journal of Insect Science Volume 10 ;10 >
-      au < releasing ; 2011 ; Journal of Insect Science Volume 11 ;11 >
-      au < releasing ; 2012 ; Journal of Insect Science Volume 12 ; 12 >
+      au < released ; 2011 ; Journal of Insect Science Volume 11 ;11 >
+      au < released ; 2012 ; Journal of Insect Science Volume 12 ; 12 >
       au < expected ; 2013 ; Journal of Insect Science Volume 13 ; 13 >
 
     }
