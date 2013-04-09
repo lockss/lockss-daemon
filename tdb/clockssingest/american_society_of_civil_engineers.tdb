@@ -38,6 +38,10 @@
 
     param[journal_issn] = 1943-5622
     param[journal_id] = ijgnai
+
+    {
+    
+    param[journal_issn] = 1532-3641
     
     au < exists ; exists ; 2001 ; International Journal of Geomechanics Volume 1 ; 1 ; 2001 >
     au < exists ; exists ; 2002 ; International Journal of Geomechanics Volume 2 ; 2 ; 2002 >
@@ -49,6 +53,7 @@
     au < exists ; exists ; 2008 ; International Journal of Geomechanics Volume 8 ; 8 ; 2008 >
     au < exists ; exists ; 2009 ; International Journal of Geomechanics Volume 9 ; 9 ; 2009 >
     au < exists ; exists ; 2010 ; International Journal of Geomechanics Volume 10 ; 10 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; International Journal of Geomechanics Volume 11 ; 11 ; 2011 >
     au < exists ; exists ; 2012 ; International Journal of Geomechanics Volume 12 ; 12 ; 2012 >
     au < exists ; exists ; 2013 ; International Journal of Geomechanics Volume 13 ; 13 ; 2013 >
@@ -63,8 +68,12 @@
       eissn = 1943-5568
     >
   
-    param[journal_issn] = 1076-0431
+    param[journal_issn] = 1943-5568
     param[journal_id] = jaeied
+    
+    {
+    
+    param[journal_issn] = 1076-0431
     
     au < exists ; exists ; 1995 ; Journal of Architectural Engineering Volume 1 ; 1; 1995 >
     au < exists ; exists ; 1996 ; Journal of Architectural Engineering Volume 2 ; 2 ; 1996 >
@@ -82,6 +91,7 @@
     au < exists ; exists ; 2008 ; Journal of Architectural Engineering Volume 14 ; 14 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Architectural Engineering Volume 15 ; 15 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Architectural Engineering Volume 16 ; 16 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Architectural Engineering Volume 17 ; 17 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Architectural Engineering Volume 18 ; 18 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Architectural Engineering Volume 19 ; 19 ; 2013 >
@@ -96,8 +106,12 @@
       eissn = 1943-5525
     >
 
-    param[journal_issn] = 0893-1321
+    param[journal_issn] = 1943-5525
     param[journal_id] = jaeeez
+
+    {
+
+    param[journal_issn] = 0893-1321
 
     au < exists ; exists ; 1988 ; Journal of Aerospace Engineering Volume 1 ; 1 ; 1988 >
     au < exists ; exists ; 1989 ; Journal of Aerospace Engineering Volume 2 ; 2 ; 1989 >
@@ -122,6 +136,7 @@
     au < exists ; exists ; 2008 ; Journal of Aerospace Engineering Volume 21 ; 21 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Aerospace Engineering Volume 22 ; 22 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Aerospace Engineering Volume 23 ; 23 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Aerospace Engineering Volume 24 ; 24 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Aerospace Engineering Volume 25 ; 25 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Aerospace Engineering Volume 26 ; 26 ; 2013 >
@@ -142,6 +157,7 @@
     comment[issn3] = see Journal of Geotechnical & Geoenvironmental Engineering (jggefk)
     
     param[journal_id] = jbenf2
+    param[journal_issn] = 1943-5592
 
     {
       param[journal_issn] = 1084-0702
@@ -161,13 +177,9 @@
       au < exists ; exists ; 2009 ; Journal of Bridge Engineering Volume 14 ; 14 ; 2009 >
       au < exists ; exists ; 2010 ; Journal of Bridge Engineering Volume 15 ; 15 ; 2010 >
     }
-    
-    {
-      param[journal_issn] = 1943-5592
       au < exists ; exists ; 2011 ; Journal of Bridge Engineering Volume 16 ; 16 ; 2011 >
       au < exists ; exists ; 2012 ; Journal of Bridge Engineering Volume 17 ; 17 ; 2012 >
       au < exists ; exists ; 2013 ; Journal of Bridge Engineering Volume 18 ; 18 ; 2013 >
-    }
     
   }
 
@@ -179,8 +191,12 @@
       eissn = 1943-5614
     >
 
-    param[journal_issn] = 1090-0268
+    param[journal_issn] = 1943-5614
     param[journal_id] = jccof2
+
+    {
+
+    param[journal_issn] = 1090-0268
 
     au < exists ; exists ; 1997 ; Journal of Composites for Construction Volume 1 ; 1 ; 1997 >
     au < exists ; exists ; 1998 ; Journal of Composites for Construction Volume 2 ; 2 ; 1998 >
@@ -196,6 +212,7 @@
     au < exists ; exists ; 2008 ; Journal of Composites for Construction Volume 12 ; 12 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Composites for Construction Volume 13 ; 13 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Composites for Construction Volume 14 ; 14 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Composites for Construction Volume 15 ; 15 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Composites for Construction Volume 16 ; 16 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Composites for Construction Volume 17 ; 17 ; 2013 >
@@ -210,8 +227,12 @@
       eissn = 1943-5509
     >
 
-    param[journal_issn] = 0887-3828
+    param[journal_issn] = 1943-5509
     param[journal_id] = jpcfev
+
+    {
+
+    param[journal_issn] = 0887-3828
 
     au < exists ; exists ; 1987 ; Journal of Performance of Constructed Facilities Volume 1 ; 1 ; 1987 >
     au < exists ; exists ; 1988 ; Journal of Performance of Constructed Facilities Volume 2 ; 2 ; 1988 >
@@ -237,6 +258,7 @@
     au < exists ; exists ; 2008 ; Journal of Performance of Constructed Facilities Volume 22 ; 22 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Performance of Constructed Facilities Volume 23 ; 23 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Performance of Constructed Facilities Volume 24 ; 24 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Performance of Constructed Facilities Volume 25 ; 25 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Performance of Constructed Facilities Volume 26 ; 26 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Performance of Constructed Facilities Volume 27 ; 27 ; 2013 >
@@ -253,6 +275,10 @@
 
     param[journal_issn] = 1943-7862
     param[journal_id] = jcemd4
+
+    {
+
+    param[journal_issn] = 0733-9364
 
     au < exists ; exists ; 1983 ; Journal of Construction Engineering & Management Volume 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Construction Engineering & Management Volume 110 ; 110 ; 1984 >
@@ -282,6 +308,7 @@
     au < exists ; exists ; 2008 ; Journal of Construction Engineering & Management Volume 134 ; 134 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Construction Engineering & Management Volume 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Construction Engineering & Management Volume 136 ; 136 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Construction Engineering & Management Volume 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Construction Engineering & Management Volume 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Construction Engineering & Management Volume 139 ; 139 ; 2013 >
@@ -296,8 +323,12 @@
       eissn = 1943-5487
     >
 
-    param[journal_issn] = 0887-3801
+    param[journal_issn] = 1943-5487
     param[journal_id] = jccee5
+
+    {
+
+    param[journal_issn] = 0887-3801
 
     au < exists ; exists ; 1987 ; Journal of Computing in Civil Engineering Volume 1 ; 1 ; 1987 >
     au < exists ; exists ; 1988 ; Journal of Computing in Civil Engineering Volume 2 ; 2 ; 1988 >
@@ -323,6 +354,7 @@
     au < exists ; exists ; 2008 ; Journal of Computing in Civil Engineering Volume 22 ; 22 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Computing in Civil Engineering Volume 23 ; 23 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Computing in Civil Engineering Volume 24 ; 24 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Computing in Civil Engineering Volume 25 ; 25 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Computing in Civil Engineering Volume 26 ; 26 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Computing in Civil Engineering Volume 27 ; 27 ; 2013 >
@@ -337,8 +369,12 @@
       eissn = 1943-5495
     >
 
-    param[journal_issn] = 0887-381X
+    param[journal_issn] = 1943-5495
     param[journal_id] = jcrgei
+
+    {
+
+    param[journal_issn] = 0887-381X
 
     au < exists ; exists ; 1987 ; Journal of Cold Regions Engineering Volume 1 ; 1 ; 1987 >
     au < exists ; exists ; 1988 ; Journal of Cold Regions Engineering Volume 2 ; 2 ; 1988 >
@@ -364,6 +400,7 @@
     au < exists ; exists ; 2008 ; Journal of Cold Regions Engineering Volume 22 ; 22 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Cold Regions Engineering Volume 23 ; 23 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Cold Regions Engineering Volume 24 ; 24 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Cold Regions Engineering Volume 25 ; 25 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Cold Regions Engineering Volume 26 ; 26 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Cold Regions Engineering Volume 27 ; 27 ; 2013 >
@@ -378,8 +415,12 @@
       eissn = 1943-7870
     >
 
-    param[journal_issn] = 0733-9372
+    param[journal_issn] = 1943-7870
     param[journal_id] = joeedu
+
+    {
+
+    param[journal_issn] = 0733-9372
 
     au < exists ; exists ; 1983 ; Journal of Environmental Engineering Volume 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Environmental Engineering Volume 110 ; 110 ; 1984 >
@@ -409,6 +450,7 @@
     au < exists ; exists ; 2008 ; Journal of Environmental Engineering Volume 135 ; 135 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Environmental Engineering Volume 136 ; 136 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Environmental Engineering Volume 137 ; 137 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Environmental Engineering Volume 138 ; 138 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Environmental Engineering Volume 139 ; 139 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Environmental Engineering Volume 140 ; 140 ; 2013 >
@@ -423,8 +465,12 @@
       eissn = 1943-7889
     >
 
-    param[journal_issn] = 0733-9399
+    param[journal_issn] = 1943-7889
     param[journal_id] = jenmdt
+
+    {
+
+    param[journal_issn] = 0733-9399
 
     au < exists ; exists ; 1983 ; Journal of Engineering Mechanics Volume 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Engineering Mechanics Volume 110 ; 110 ; 1984 >
@@ -454,6 +500,7 @@
     au < exists ; exists ; 2008 ; Journal of Engineering Mechanics Volume 134 ; 134 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Engineering Mechanics Volume 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Engineering Mechanics Volume 136 ; 136 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Engineering Mechanics Volume 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Engineering Mechanics Volume 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Engineering Mechanics Volume 139 ; 139 ; 2013 >
@@ -468,8 +515,12 @@
       eissn = 1943-7897
     >
 
-    param[journal_issn] = 0733-9402 
+    param[journal_issn] = 1943-7897
     param[journal_id] = jleed9
+
+    {
+
+    param[journal_issn] = 0733-9402
 
     au < exists ; exists ; 1983 ; Journal of Energy Engineering Volume 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Energy Engineering Volume 110 ; 110 ; 1984 >
@@ -499,6 +550,7 @@
     au < exists ; exists ; 2008 ; Journal of Energy Engineering Volume 136 ; 136 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Energy Engineering Volume 137 ; 137 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Energy Engineering Volume 138 ; 138 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Energy Engineering Volume 139 ; 139 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Energy Engineering Volume 140 ; 140 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Energy Engineering Volume 141 ; 141 ; 2013 >
@@ -513,8 +565,12 @@
       eissn = 1943-5606
     >
 
-    param[journal_issn] = 1090-0241
+    param[journal_issn] = 1943-5606
     param[journal_id] = jggefk
+
+    {
+
+    param[journal_issn] = 1090-0241
 
     au < exists ; exists ; 1983 ; Journal of Geotechnical & Geoenvironmental Engineering Volume 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Geotechnical & Geoenvironmental Engineering Volume 110 ; 110 ; 1984 >
@@ -544,6 +600,7 @@
     au < exists ; exists ; 2008 ; Journal of Geotechnical & Geoenvironmental Engineering Volume 134 ; 134 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Geotechnical & Geoenvironmental Engineering Volume 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Geotechnical & Geoenvironmental Engineering Volume 136 ; 136 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Geotechnical & Geoenvironmental Engineering Volume 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Geotechnical & Geoenvironmental Engineering Volume 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Geotechnical & Geoenvironmental Engineering Volume 139 ; 139 ; 2013 >
@@ -558,8 +615,12 @@
       eissn = 2153-5515
     >
 
-    param[journal_issn] = 2153-5493
+    param[journal_issn] = 2153-5515
     param[journal_id] = jhtrbp
+
+    {
+
+    param[journal_issn] = 2153-5493
 
     au < exists ; exists ; 1997 ; Journal of Hazardous, Toxic & Radioactive Waste Volume 1 ; 1 ; 1997 >
     au < exists ; exists ; 1998 ; Journal of Hazardous, Toxic & Radioactive Waste Volume 2 ; 2 ; 1998 >
@@ -575,6 +636,7 @@
     au < exists ; exists ; 2008 ; Journal of Hazardous, Toxic & Radioactive Waste Volume 12 ; 12 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Hazardous, Toxic & Radioactive Waste Volume 13 ; 13 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Hazardous, Toxic & Radioactive Waste Volume 14 ; 14 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Hazardous, Toxic & Radioactive Waste Volume 15 ; 15 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Hazardous, Toxic & Radioactive Waste Volume 16 ; 16 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Hazardous, Toxic & Radioactive Waste Volume 17 ; 17 ; 2013 >
@@ -589,8 +651,12 @@
       eissn = 1943-5584
     >
 
-    param[journal_issn] = 1084-0699
+    param[journal_issn] = 1943-5584
     param[journal_id] = jhyeff
+
+    {
+
+    param[journal_issn] = 1084-0699
 
     au < exists ; exists ; 1996 ; Journal of Hydrologic Engineering Volume 1 ; 1 ; 1996 >
     au < exists ; exists ; 1997 ; Journal of Hydrologic Engineering Volume 2 ; 2 ; 1997 >
@@ -607,6 +673,7 @@
     au < exists ; exists ; 2008 ; Journal of Hydrologic Engineering Volume 13 ; 13 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Hydrologic Engineering Volume 14 ; 14 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Hydrologic Engineering Volume 15 ; 15 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Hydrologic Engineering Volume 16 ; 16 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Hydrologic Engineering Volume 17 ; 17 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Hydrologic Engineering Volume 18 ; 18 ; 2013 >
@@ -621,8 +688,12 @@
       eissn = 1943-7900
     >
 
-    param[journal_issn] = 0733-9429
+    param[journal_issn] = 1943-9429
     param[journal_id] = jhend8
+
+    {
+
+    param[journal_issn] = 0733-9429
 
     au < exists ; exists ; 1983 ; Journal of Hydraulic Engineering Volume 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Hydraulic Engineering Volume 110 ; 110 ; 1984 >
@@ -652,6 +723,7 @@
     au < exists ; exists ; 2008 ; Journal of Hydraulic Engineering Volume 134 ; 134 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Hydraulic Engineering Volume 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Hydraulic Engineering Volume 136 ; 136 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Hydraulic Engineering Volume 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Hydraulic Engineering Volume 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Hydraulic Engineering Volume 139 ; 139 ; 2013 >
@@ -666,8 +738,12 @@
       eissn = 1943-4774
     >
 
-    param[journal_issn] = 0733-9437
+    param[journal_issn] = 1943-4774
     param[journal_id] = jidedh
+
+    {
+
+    param[journal_issn] = 0733-9437
 
     au < exists ; exists ; 1983 ; Journal of Irrigation & Drainage Engineering Volume 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Irrigation & Drainage Engineering Volume 110 ; 110 ; 1984 >
@@ -697,6 +773,7 @@
     au < exists ; exists ; 2008 ; Journal of Irrigation & Drainage Engineering Volume 134 ; 134 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Irrigation & Drainage Engineering Volume 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Irrigation & Drainage Engineering Volume 136 ; 136 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Irrigation & Drainage Engineering Volume 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Irrigation & Drainage Engineering Volume 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Irrigation & Drainage Engineering Volume 139 ; 139 ; 2013 >
@@ -711,8 +788,12 @@
       eissn = 1943-555X
     >
 
-    param[journal_issn] = 1076-0342
+    param[journal_issn] = 1943-555X
     param[journal_id] = jitse4
+
+    {
+
+    param[journal_issn] = 1076-0342
 
     au < exists ; exists ; 1995 ; Journal of Infrastructure Systems Volume 1 ; 1 ; 1995 >
     au < exists ; exists ; 1996 ; Journal of Infrastructure Systems Volume 2 ; 2 ; 1996 >
@@ -730,6 +811,7 @@
     au < exists ; exists ; 2008 ; Journal of Infrastructure Systems Volume 14 ; 14 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Infrastructure Systems Volume 15 ; 15 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Infrastructure Systems Volume 16 ; 16 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Infrastructure Systems Volume 17 ; 17 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Infrastructure Systems Volume 18 ; 18 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Infrastructure Systems Volume 19 ; 19 ; 2013 >
@@ -744,11 +826,16 @@
       eissn = 1943-4170
     >
 
-    param[journal_issn] = 1943-4162
+    param[journal_issn] = 1943-4170
     param[journal_id] = jladah
+
+    {
+
+    param[journal_issn] = 1943-4162
 
     au < exists ; exists ; 2009 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 1 ; 1 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 2 ; 2 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 3 ; 3 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 4 ; 4 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 5 ; 5 ; 2013 >
@@ -763,8 +850,12 @@
       eissn = 1943-5479
     >
 
-    param[journal_issn] = 0742-597X
+    param[journal_issn] = 1943-5479
     param[journal_id] = jmenea
+
+    {
+
+    param[journal_issn] = 0742-597X
 
     au < exists ; exists ; 1985 ; Journal of Management in Engineering Volume 1 ; 1 ; 1985 >
     au < exists ; exists ; 1896 ; Journal of Management in Engineering Volume 2 ; 2 ; 1986 >
@@ -792,6 +883,7 @@
     au < exists ; exists ; 2008 ; Journal of Management in Engineering Volume 24 ; 24 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Management in Engineering Volume 25 ; 25 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Management in Engineering Volume 26 ; 26 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Management in Engineering Volume 27 ; 27 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Management in Engineering Volume 28 ; 28 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Management in Engineering Volume 29 ; 29 ; 2013 >
@@ -806,8 +898,12 @@
       eissn = 1943-5533
     >
 
-    param[journal_issn] = 0899-1561
+    param[journal_issn] = 1943-5533
     param[journal_id] = jmcee7
+
+    {
+
+    param[journal_issn] = 0899-1561
 
     au < exists ; exists ; 1989 ; Journal of Materials in Civil Engineering Volume 1 ; 1 ; 1989 >
     au < exists ; exists ; 1990 ; Journal of Materials in Civil Engineering Volume 2 ; 2 ; 1990 >
@@ -831,6 +927,7 @@
     au < exists ; exists ; 2008 ; Journal of Materials in Civil Engineering Volume 20 ; 20 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Materials in Civil Engineering Volume 21 ; 21 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Materials in Civil Engineering Volume 22 ; 22 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Materials in Civil Engineering Volume 23 ; 23 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Materials in Civil Engineering Volume 24 ; 24 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Materials in Civil Engineering Volume 25 ; 25 ; 2013 >
@@ -862,8 +959,12 @@
       eissn = 1943-5541
     >
 
-    param[journal_issn] = 1052-3928
+    param[journal_issn] = 1943-5541
     param[journal_id] = jpepe3
+
+    {
+
+    param[journal_issn] = 1052-3928
 
     au < exists ; exists ; 1983 ; Journal of Professional Issues in Engineering Education & Practice Volume 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Professional Issues in Engineering Education & Practice Volume 110 ; 110 ; 1984 >
@@ -893,6 +994,7 @@
     au < exists ; exists ; 2008 ; Journal of Professional Issues in Engineering Education & Practice Volume 134 ; 134 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Professional Issues in Engineering Education & Practice Volume 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Professional Issues in Engineering Education & Practice Volume 136 ; 136 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Professional Issues in Engineering Education & Practice Volume 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Professional Issues in Engineering Education & Practice Volume 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Professional Issues in Engineering Education & Practice Volume 139 ; 139 ; 2013 >
@@ -907,10 +1009,15 @@
       eissn = 1949-1204
     >
 
-    param[journal_issn] = 1949-1190
+    param[journal_issn] = 1949-1204
     param[journal_id] = jpsea2
 
+    {
+
+    param[journal_issn] = 1949-1190
+
     au < exists ; exists ; 2010 ; Journal of Pipeline Systems Engineering and Practice Volume 1 ; 1 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Pipeline Systems Engineering and Practice Volume 2 ; 2 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Pipeline Systems Engineering and Practice Volume 3 ; 3 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Pipeline Systems Engineering and Practice Volume 4 ; 4 ; 2013 >
@@ -925,8 +1032,12 @@
       eissn = 1943-541X
     >
 
-    param[journal_issn] = 0733-9445
+    param[journal_issn] = 1943-541X
     param[journal_id] = jsendh
+
+    {
+
+    param[journal_issn] = 0733-9445
 
     au < exists ; exists ; 1983 ; Journal of Structural Engineering Volume 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Structural Engineering Volume 110 ; 110 ; 1984 >
@@ -956,6 +1067,7 @@
     au < exists ; exists ; 2008 ; Journal of Structural Engineering Volume 134 ; 134 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Structural Engineering Volume 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Structural Engineering Volume 136 ; 136 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Structural Engineering Volume 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Structural Engineering Volume 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Structural Engineering Volume 139 ; 139 ; 2013 >
@@ -970,8 +1082,12 @@
       eissn = 1943-5428
     >
 
-    param[journal_issn] = 0733-9453
+    param[journal_issn] = 1943-5428
     param[journal_id] = jsued2
+
+    {
+
+    param[journal_issn] = 0733-9453
 
     au < exists ; exists ; 1983 ; Journal of Surveying Engineering Volume 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Surveying Engineering Volume 110 ; 110 ; 1984 >
@@ -1001,6 +1117,7 @@
     au < exists ; exists ; 2008 ; Journal of Surveying Engineering Volume 134 ; 134 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Surveying Engineering Volume 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Surveying Engineering Volume 136 ; 136 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Surveying Engineering Volume 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Surveying Engineering Volume 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Surveying Engineering Volume 139 ; 139 ; 2013 >
@@ -1015,8 +1132,12 @@
       eissn = 1943-5436
     >
 
-    param[journal_issn] = 0733-947X
+    param[journal_issn] = 1943-5436
     param[journal_id] = jtpedi
+
+    {
+
+    param[journal_issn] = 0733-947X
 
     au < exists ; exists ; 1983 ; Journal of Transportation Engineering Volume 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Transportation Engineering Volume 110 ; 110 ; 1984 >
@@ -1046,6 +1167,7 @@
     au < exists ; exists ; 2008 ; Journal of Transportation Engineering Volume 134 ; 134 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Transportation Engineering Volume 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Transportation Engineering Volume 136 ; 136 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Transportation Engineering Volume 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Transportation Engineering Volume 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Transportation Engineering Volume 139 ; 139 ; 2013 >
@@ -1060,8 +1182,12 @@
       eissn = 1943-5444
     >
 
-    param[journal_issn] = 0733-9488
+    param[journal_issn] = 1943-5444
     param[journal_id] = jupddm
+
+    {
+
+    param[journal_issn] = 0733-9488
 
     au < exists ; exists ; 1983 ; Journal of Urban Planning and Development Volume 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Urban Planning and Development Volume 110 ; 110 ; 1984 >
@@ -1091,6 +1217,7 @@
     au < exists ; exists ; 2008 ; Journal of Urban Planning and Development Volume 134 ; 134 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Urban Planning and Development Volume 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Urban Planning and Development Volume 136 ; 136 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Urban Planning and Development Volume 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Urban Planning and Development Volume 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Urban Planning and Development Volume 139 ; 139 ; 2013 >
@@ -1105,8 +1232,12 @@
       eissn = 1943-5452
     >
 
-    param[journal_issn] = 0733-9496
+    param[journal_issn] = 1943-5452
     param[journal_id] = jwrmd5
+
+    {
+
+    param[journal_issn] = 0733-9496
 
     au < exists ; exists ; 1983 ; Journal of Water Resources Planning and Management Volume 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Water Resources Planning and Management Volume 110 ; 110 ; 1984 >
@@ -1136,6 +1267,7 @@
     au < exists ; exists ; 2008 ; Journal of Water Resources Planning and Management Volume 134 ; 134 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Water Resources Planning and Management Volume 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Water Resources Planning and Management Volume 136 ; 136 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Water Resources Planning and Management Volume 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Water Resources Planning and Management Volume 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Water Resources Planning and Management Volume 139 ; 139 ; 2013 >
@@ -1150,8 +1282,12 @@
       eissn = 1943-5460
     >
 
-    param[journal_issn] = 0733-950X
+    param[journal_issn] = 1943-5460
     param[journal_id] = jwped5
+
+    {
+
+    param[journal_issn] = 0733-950X
 
     au < exists ; exists ; 1983 ; Journal of Waterway Port Coastal and Ocean Engineering 109 ; 109 ; 1983 >
     au < exists ; exists ; 1984 ; Journal of Waterway Port Coastal and Ocean Engineering 110 ; 110 ; 1984 >
@@ -1181,6 +1317,7 @@
     au < exists ; exists ; 2008 ; Journal of Waterway Port Coastal and Ocean Engineering 134 ; 134 ; 2008 >
     au < exists ; exists ; 2009 ; Journal of Waterway Port Coastal and Ocean Engineering 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Waterway Port Coastal and Ocean Engineering 136 ; 136 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Journal of Waterway Port Coastal and Ocean Engineering 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Waterway Port Coastal and Ocean Engineering 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Waterway Port Coastal and Ocean Engineering 139 ; 139 ; 2013 >
@@ -1195,8 +1332,12 @@
       eissn = 1943-5630
     >
 
-    param[journal_issn] = 1532-6748
+    param[journal_issn] = 1943-5630
     param[journal_id] = lmeeaz
+
+    {
+
+    param[journal_issn] = 1532-6748
 
     au < exists ; exists ; 2001 ; Leadership & Management in Engineering Volume 1 ; 1 ; 2001 >
     au < exists ; exists ; 2002 ; Leadership & Management in Engineering Volume 2 ; 2 ; 2002 >
@@ -1208,6 +1349,7 @@
     au < exists ; exists ; 2008 ; Leadership & Management in Engineering Volume 8 ; 8 ; 2008 >
     au < exists ; exists ; 2009 ; Leadership & Management in Engineering Volume 9 ; 9 ; 2009 >
     au < exists ; exists ; 2010 ; Leadership & Management in Engineering Volume 10 ;10 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Leadership & Management in Engineering Volume 11 ;11 ; 2011 >
     au < exists ; exists ; 2012 ; Leadership & Management in Engineering Volume 12 ;12 ; 2012 >
     au < exists ; exists ; 2013 ; Leadership & Management in Engineering Volume 13 ;13 ; 2013 >
@@ -1222,8 +1364,12 @@
       eissn = 1527-6996
     >
 
-    param[journal_issn] = 1527-6988
+    param[journal_issn] = 1527-6996
     param[journal_id] = nhrefo
+
+    {
+
+    param[journal_issn] = 1527-6988
 
     au < exists ; exists ; 2000 ; Natural Hazards Review Volume 1 ; 1 ; 2000 >
     au < exists ; exists ; 2001 ; Natural Hazards Review Volume 2 ; 2 ; 2001 >
@@ -1236,6 +1382,7 @@
     au < exists ; exists ; 2008 ; Natural Hazards Review Volume 9 ; 9 ; 2008 >
     au < exists ; exists ; 2009 ; Natural Hazards Review Volume 10 ; 10 ; 2009 >
     au < exists ; exists ; 2010 ; Natural Hazards Review Volume 11 ; 11 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Natural Hazards Review Volume 12 ; 12 ; 2011 >
     au < exists ; exists ; 2012 ; Natural Hazards Review Volume 13 ; 13 ; 2012 >
     au < exists ; exists ; 2013 ; Natural Hazards Review Volume 14 ; 14 ; 2013 >
@@ -1250,8 +1397,12 @@
       eissn = 1943-5576
     >
 
-    param[journal_issn] = 1084-0680
+    param[journal_issn] = 1943-5576
     param[journal_id] = ppscfx
+
+    {
+
+    param[journal_issn] = 1084-0680
 
     au < exists ; exists ; 1996 ; Practice Periodical on Structural Design & Construction Volume 1 ; 1 ; 1996 >
     au < exists ; exists ; 1997 ; Practice Periodical on Structural Design & Construction Volume 2 ; 2 ; 1997 >
@@ -1268,6 +1419,7 @@
     au < exists ; exists ; 2008 ; Practice Periodical on Structural Design & Construction Volume 13 ; 13 ; 2008 >
     au < exists ; exists ; 2009 ; Practice Periodical on Structural Design & Construction Volume 14 ; 14 ; 2009 >
     au < exists ; exists ; 2010 ; Practice Periodical on Structural Design & Construction Volume 15 ; 15 ; 2010 >
+    }
     au < exists ; exists ; 2011 ; Practice Periodical on Structural Design & Construction Volume 16 ; 16 ; 2011 >
     au < exists ; exists ; 2012 ; Practice Periodical on Structural Design & Construction Volume 17 ; 17 ; 2012 >
     au < exists ; exists ; 2013 ; Practice Periodical on Structural Design & Construction Volume 18 ; 18 ; 2013 >
