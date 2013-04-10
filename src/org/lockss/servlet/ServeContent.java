@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.74 2013-03-14 06:40:21 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.75 2013-04-10 01:38:53 clairegriffin Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
 import java.net.*;
+import java.net.URI;
 import java.util.*;
 import java.util.List;
 import java.util.regex.*;
@@ -45,6 +46,7 @@ import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.commons.collections.*;
 import org.apache.commons.httpclient.util.DateParseException;
 import org.apache.commons.lang.StringEscapeUtils;
+import org.lockss.util.StringUtil;
 import org.mortbay.http.*;
 import org.mortbay.html.*;
 import org.lockss.util.*;
@@ -66,6 +68,7 @@ import static org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.state.*;
 import org.lockss.rewriter.*;
+import org.mortbay.util.*;
 
 /** ServeContent servlet displays cached content with links
  *  rewritten.
@@ -100,9 +103,9 @@ public class ServeContent extends LockssServlet {
    *  This option does not affect requests that contain a version parameter.
    */
   public static final String PARAM_MISSING_FILE_ACTION =
-    PREFIX + "missingFileAction";
+      PREFIX + "missingFileAction";
   public static final MissingFileAction DEFAULT_MISSING_FILE_ACTION =
-    MissingFileAction.HostAuIndex;;
+      MissingFileAction.HostAuIndex;;
 
   /** The log level at which to log all content server accesses.
    * To normally log all content accesses (proxy or ServeContent), set to
@@ -132,12 +135,12 @@ public class ServeContent extends LockssServlet {
     /** Respond with a redirect to the publisher. */
     AlwaysRedirect,
   }
-  
+
   /** If true, rewritten links will be absolute
    * (http://host:port/ServeContent?url=...).  If false, relative
    * (/ServeContent?url=...). */
   public static final String PARAM_ABSOLUTE_LINKS =
-    PREFIX + "absoluteLinks";
+      PREFIX + "absoluteLinks";
   public static final boolean DEFAULT_ABSOLUTE_LINKS = true;
 
   /**
@@ -146,38 +149,38 @@ public class ServeContent extends LockssServlet {
    * will not be rewritten.
    */
   public static final String PARAM_REWRITE_MEMENTO_RESPONSES =
-    PREFIX + "rewriteMementoResponses";
+      PREFIX + "rewriteMementoResponses";
   public static final boolean DEFAULT_REWRITE_MEMENTO_RESPONSES = false;
 
   /** If true, the url arg to ServeContent will be minimally encoded before
    * being looked up. */
   static final String PARAM_MINIMALLY_ENCODE_URLS =
-    PREFIX + "minimallyEncodeUrlArg";
+      PREFIX + "minimallyEncodeUrlArg";
   static final boolean DEFAULT_MINIMALLY_ENCODE_URLS = true;
 
   /** If true, the url arg to ServeContent will be normalized before being
    * looked up. */
   public static final String PARAM_NORMALIZE_URL_ARG =
-    PREFIX + "normalizeUrlArg";
+      PREFIX + "normalizeUrlArg";
   public static final boolean DEFAULT_NORMALIZE_URL_ARG = true;
 
   /** Include in index AUs in listed plugins.  Set only one of
    * PARAM_INCLUDE_PLUGINS or PARAM_EXCLUDE_PLUGINS */
   public static final String PARAM_INCLUDE_PLUGINS =
-    PREFIX + "includePlugins";
+      PREFIX + "includePlugins";
   public static final List<String> DEFAULT_INCLUDE_PLUGINS =
-    Collections.emptyList();
+      Collections.emptyList();
 
   /** Exclude from index AUs in listed plugins.  Set only one of
    * PARAM_INCLUDE_PLUGINS or PARAM_EXCLUDE_PLUGINS */
   public static final String PARAM_EXCLUDE_PLUGINS =
-    PREFIX + "excludePlugins";
+      PREFIX + "excludePlugins";
   public static final List<String> DEFAULT_EXCLUDE_PLUGINS =
-    Collections.emptyList();
+      Collections.emptyList();
 
   /** If true, Include internal AUs (plugin registries) in index */
   public static final String PARAM_INCLUDE_INTERNAL_AUS =
-    PREFIX + "includeInternalAus";
+      PREFIX + "includeInternalAus";
   public static final boolean DEFAULT_INCLUDE_INTERNAL_AUS = false;
 
   /** Files smaller than this will be rewritten into an internal buffer so
@@ -185,15 +188,17 @@ public class ServeContent extends LockssServlet {
    * Content-Length: header.  Larger files will be served without
    * Content-Length: */
   public static final String PARAM_MAX_BUFFERED_REWRITE =
-    PREFIX + "maxBufferedRewrite";
+      PREFIX + "maxBufferedRewrite";
   public static final int DEFAULT_MAX_BUFFERED_REWRITE = 64 * 1024;
 
   /** If true, never forward request nor redirect to publisher */
   public static final String PARAM_NEVER_PROXY = PREFIX + "neverProxy";
   public static final boolean DEFAULT_NEVER_PROXY = false;
+  static final String PARAM_PROCESS_FORMS = PREFIX + "handleFormPost";
+  static final boolean DEFAULT_PROCESS_FORMS = false;
 
   private static MissingFileAction missingFileAction =
-    DEFAULT_MISSING_FILE_ACTION;
+      DEFAULT_MISSING_FILE_ACTION;
   private static boolean absoluteLinks = DEFAULT_ABSOLUTE_LINKS;
   private static boolean rewriteMementoResponses = DEFAULT_REWRITE_MEMENTO_RESPONSES;
   private static boolean normalizeUrl = DEFAULT_NORMALIZE_URL_ARG;
@@ -204,6 +209,7 @@ public class ServeContent extends LockssServlet {
   private static int maxBufferedRewrite = DEFAULT_MAX_BUFFERED_REWRITE;
   private static boolean neverProxy = DEFAULT_NEVER_PROXY;
   private static int paramAccessLogLevel = -1;
+  private static boolean processForms = DEFAULT_PROCESS_FORMS;
 
 
   private ArchivalUnit au;
@@ -241,45 +247,47 @@ public class ServeContent extends LockssServlet {
 
   /** Called by ServletUtil.setConfig() */
   static void setConfig(Configuration config,
-			Configuration oldConfig,
-			Configuration.Differences diffs) {
+                        Configuration oldConfig,
+                        Configuration.Differences diffs) {
     if (diffs.contains(PREFIX)) {
       try {
-	String accessLogLevel = config.get(PARAM_ACCESS_LOG_LEVEL,
-					   DEFAULT_ACCESS_LOG_LEVEL);
-	paramAccessLogLevel = Logger.levelOf(accessLogLevel);
+        String accessLogLevel = config.get(PARAM_ACCESS_LOG_LEVEL,
+            DEFAULT_ACCESS_LOG_LEVEL);
+        paramAccessLogLevel = Logger.levelOf(accessLogLevel);
       } catch (RuntimeException e) {
-	log.error("Couldn't set access log level", e);
-	paramAccessLogLevel = -1;
-      }	  
+        log.error("Couldn't set access log level", e);
+        paramAccessLogLevel = -1;
+      }
       missingFileAction =
-	(MissingFileAction)config.getEnum(MissingFileAction.class,
-					  PARAM_MISSING_FILE_ACTION,
-					  DEFAULT_MISSING_FILE_ACTION);
+          (MissingFileAction)config.getEnum(MissingFileAction.class,
+              PARAM_MISSING_FILE_ACTION,
+              DEFAULT_MISSING_FILE_ACTION);
       excludePlugins = config.getList(PARAM_EXCLUDE_PLUGINS,
-				      DEFAULT_EXCLUDE_PLUGINS);
+          DEFAULT_EXCLUDE_PLUGINS);
       includePlugins = config.getList(PARAM_INCLUDE_PLUGINS,
-				      DEFAULT_INCLUDE_PLUGINS);
+          DEFAULT_INCLUDE_PLUGINS);
       if (!includePlugins.isEmpty() && !excludePlugins.isEmpty()) {
-	log.warning("Both " + PARAM_INCLUDE_PLUGINS + " and " +
-		    PARAM_EXCLUDE_PLUGINS + " are set, ignoring " +
-		    PARAM_EXCLUDE_PLUGINS);
+        log.warning("Both " + PARAM_INCLUDE_PLUGINS + " and " +
+                    PARAM_EXCLUDE_PLUGINS + " are set, ignoring " +
+                    PARAM_EXCLUDE_PLUGINS);
       }
       includeInternalAus = config.getBoolean(PARAM_INCLUDE_INTERNAL_AUS,
-					     DEFAULT_INCLUDE_INTERNAL_AUS);
+          DEFAULT_INCLUDE_INTERNAL_AUS);
       absoluteLinks = config.getBoolean(PARAM_ABSOLUTE_LINKS,
-					DEFAULT_ABSOLUTE_LINKS);
+          DEFAULT_ABSOLUTE_LINKS);
       normalizeUrl = config.getBoolean(PARAM_NORMALIZE_URL_ARG,
-					DEFAULT_NORMALIZE_URL_ARG);
+          DEFAULT_NORMALIZE_URL_ARG);
       minimallyEncodeUrl = config.getBoolean(PARAM_MINIMALLY_ENCODE_URLS,
-					     DEFAULT_MINIMALLY_ENCODE_URLS);
+          DEFAULT_MINIMALLY_ENCODE_URLS);
       neverProxy = config.getBoolean(PARAM_NEVER_PROXY,
-				     DEFAULT_NEVER_PROXY);
+          DEFAULT_NEVER_PROXY);
       maxBufferedRewrite = config.getInt(PARAM_MAX_BUFFERED_REWRITE,
-					 DEFAULT_MAX_BUFFERED_REWRITE);
+          DEFAULT_MAX_BUFFERED_REWRITE);
       rewriteMementoResponses =
-	config.getBoolean(PARAM_REWRITE_MEMENTO_RESPONSES,
-			  DEFAULT_REWRITE_MEMENTO_RESPONSES);
+          config.getBoolean(PARAM_REWRITE_MEMENTO_RESPONSES,
+              DEFAULT_REWRITE_MEMENTO_RESPONSES);
+      processForms = config.getBoolean(PARAM_PROCESS_FORMS,
+          DEFAULT_PROCESS_FORMS);
     }
   }
 
@@ -304,9 +312,9 @@ public class ServeContent extends LockssServlet {
 
   protected boolean isNeverProxy() {
     return neverProxy ||
-      !StringUtil.isNullString(getParameter("noproxy"));
+           !StringUtil.isNullString(getParameter("noproxy"));
   }
-  
+
   protected boolean isNeverProxyForAu(ArchivalUnit au) {
     return isNeverProxy() || ((au != null) && AuUtil.isPubDown(au));
   }
@@ -324,20 +332,20 @@ public class ServeContent extends LockssServlet {
       msg += " in " + StringUtil.timeIntervalToString(reqElapsedTime());
 
       switch (requestType) {
-      case None:
-	logAccess(url, msg);
-	break;
-      case Url:
-	logAccess("URL: " + url, msg);
-	break;
-      case Doi:
-	logAccess("DOI: " + ((accessLogInfo==null) ? "" : accessLogInfo) 
-	          + " resolved to URL: " + url, msg);
-	break;
-      case OpenUrl:
-	logAccess("OpenUrl: " + ((accessLogInfo==null) ? "" : accessLogInfo) 
-	          + " resolved to URL: " + url, msg);
-	break;
+        case None:
+          logAccess(url, msg);
+          break;
+        case Url:
+          logAccess("URL: " + url, msg);
+          break;
+        case Doi:
+          logAccess("DOI: " + ((accessLogInfo==null) ? "" : accessLogInfo)
+                    + " resolved to URL: " + url, msg);
+          break;
+        case OpenUrl:
+          logAccess("OpenUrl: " + ((accessLogInfo==null) ? "" : accessLogInfo)
+                    + " resolved to URL: " + url, msg);
+          break;
       }
     }
   }
@@ -360,9 +368,9 @@ public class ServeContent extends LockssServlet {
       return;
     }
     accessLogInfo = null;
-    
+
     enabledPluginsOnly =
-      !"no".equalsIgnoreCase(getParameter("filterPlugins"));
+        !"no".equalsIgnoreCase(getParameter("filterPlugins"));
 
     url = getParameter("url");
     String auid = getParameter("auid");
@@ -382,39 +390,59 @@ public class ServeContent extends LockssServlet {
           return;
         }
       } else {
-	explicitAu = pluginMgr.getAuFromId(auid);
+        explicitAu = pluginMgr.getAuFromId(auid);
         au = explicitAu;
       }
-      if (log.isDebug3()) log.debug3("Url req, raw: " + url);
+      if (log.isDebug2()) log.debug2("Url req, raw: " + url);
       // handle html-encoded URLs with characters like &amp;
       // that can appear as links embedded in HTML pages
       url = StringEscapeUtils.unescapeHtml(url);
       requestType = AccessLogType.Url;
-      
-      if (minimallyEncodeUrl) {
-      	String unencUrl = url;
-	url = UrlUtil.minimallyEncodeUrl(url);
-	if (!url.equals(unencUrl)) {
-	  log.debug2("Encoded " + unencUrl + " to " + url);
-	}
+      //this is a partial replicate of proxy_handler post logic here
+      if (HttpRequest.__POST.equals(req.getMethod()) && processForms) {
+        log.debug2("POST request found!");
+        FormUrlHelper helper = new FormUrlHelper(url.toString());
+        Enumeration en = req.getParameterNames();
+        while (en.hasMoreElements()) {
+          String name = (String)en.nextElement();
+          String vals[] = req.getParameterValues(name);
+          for(String val : vals) {
+            helper.add(name, val);
+          }
+        }
+        helper.sortKeyValues();
+        org.mortbay.util.URI postUri =
+            new org.mortbay.util.URI(helper.toEncodedString());
+        // We only want to override the post request by proxy if we cached it during crawling.
+        CachedUrl cu = pluginMgr.findCachedUrl(postUri.toString());
+        if (cu != null) {
+          url = postUri.toString();
+          if (log.isDebug2()) log.debug2("Setting url to:" + url);
+        }
       }
-
+      if (minimallyEncodeUrl) {
+        String unencUrl = url;
+        url = UrlUtil.minimallyEncodeUrl(url);
+        if (!url.equals(unencUrl)) {
+          log.debug2("Encoded " + unencUrl + " to " + url);
+        }
+      }
       if (normalizeUrl) {
-      	String normUrl;
-      	if (au != null) {
-      	  try {
-      	    normUrl = UrlUtil.normalizeUrl(url, au);
-      	  } catch (PluginBehaviorException e) {
-      	    log.warning("Couldn't site-normalize URL: " + url, e);
-      	    normUrl = UrlUtil.normalizeUrl(url);
-      	  }
-      	} else {
-      	  normUrl = UrlUtil.normalizeUrl(url);
-      	}
-      	if (normUrl != url) {
-	  log.debug2("Normalized " + url + " to " + normUrl);
-      	  url = normUrl;
-      	}
+        String normUrl;
+        if (au != null) {
+          try {
+            normUrl = UrlUtil.normalizeUrl(url, au);
+          } catch (PluginBehaviorException e) {
+            log.warning("Couldn't site-normalize URL: " + url, e);
+            normUrl = UrlUtil.normalizeUrl(url);
+          }
+        } else {
+          normUrl = UrlUtil.normalizeUrl(url);
+        }
+        if (normUrl != url) {
+          log.debug2("Normalized " + url + " to " + normUrl);
+          url = normUrl;
+        }
       }
       handleUrlRequest();
       return;
@@ -443,15 +471,15 @@ public class ServeContent extends LockssServlet {
         resolved = openUrlResolver.resolveFromDOI(doi);
         requestType = AccessLogType.Doi;
       } else {
-      	// If any params, pass them all to OpenUrl resolver
-      	Map<String,String> pmap = getParamsAsMap();
-      	if (!pmap.isEmpty()) {
-      	  if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
-      	  resolved = openUrlResolver.resolveOpenUrl(pmap);
-      	  requestType = AccessLogType.OpenUrl;
-      	}
+        // If any params, pass them all to OpenUrl resolver
+        Map<String,String> pmap = getParamsAsMap();
+        if (!pmap.isEmpty()) {
+          if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
+          resolved = openUrlResolver.resolveOpenUrl(pmap);
+          requestType = AccessLogType.OpenUrl;
+        }
       }
-      
+
       url = null;
       if (resolved.getResolvedTo() != ResolvedTo.NONE) {
         // record type of access for logging
@@ -459,12 +487,12 @@ public class ServeContent extends LockssServlet {
         url = resolved.getResolvedUrl();
         handleOpenUrlInfo(resolved);
         return;
-      } 
-      
+      }
+
       // redirect to the OpenURL corresponding to the specified auid;
       // ensures that the corresponding OpenURL is available to the client.
       if (auid != null) {
-        String openUrlQueryString = 
+        String openUrlQueryString =
             openUrlResolver.getOpenUrlQueryForAuid(auid);
         if (openUrlQueryString != null) {
           StringBuffer sb = req.getRequestURL();
@@ -501,7 +529,7 @@ public class ServeContent extends LockssServlet {
     try {
       // Get the CachedUrl for the URL, only if it has content.
       if (au != null) {
-      	cu = au.makeCachedUrl(url);
+        cu = au.makeCachedUrl(url);
         if (isMementoRequest()) {
 
           // Replace CU with the historical CU; similar to ViewContent:
@@ -543,13 +571,13 @@ public class ServeContent extends LockssServlet {
 
         }
       } else if (!isMementoRequest()) {
-      	// Find a CU with content if possible.  If none, find an AU where
-      	// it would fit so can rewrite content from publisher if necessary.
-      	cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
-      	if (cu != null) {
-      	  au = cu.getArchivalUnit();
+        // Find a CU with content if possible.  If none, find an AU where
+        // it would fit so can rewrite content from publisher if necessary.
+        cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
+        if (cu != null) {
+          au = cu.getArchivalUnit();
           if (log.isDebug3()) log.debug3("cu: " + cu + " au: " + au);
-      	}
+        }
       } else {
 	/*
 	 * This is a Memento request, and the AU param was provided, but we
@@ -576,20 +604,20 @@ public class ServeContent extends LockssServlet {
       AuUtil.safeRelease(cu);
     }
   }
-  
+
   /**
    * Given a CachedUrl and a string representation of a version number, returns
    * that version of the CachedUrl. Has no side effects within this instance.
    *
-   * @arg cachedUrl the CU that a version of is being requested
-   * @arg verStr string representation of the integer version being requested
+   * @param cachedUrl the CU that a version of is being requested
+   * @param verStr string representation of the integer version being requested
    * @returns the requested version of the given cached URL
    * @throws NumberFormatException if verStr does not represent an integer
    * @throws VersionNotFoundException if cachedUrl lacks the requested version
    * @throws RuntimeException
    */
   private static CachedUrl getHistoricalCu(CachedUrl cachedUrl, String verStr)
-    throws NumberFormatException, VersionNotFoundException, RuntimeException {
+      throws NumberFormatException, VersionNotFoundException, RuntimeException {
     CachedUrl result;
     int version = Integer.parseInt(verStr);
     int curVer = cachedUrl.getVersion();
@@ -611,7 +639,7 @@ public class ServeContent extends LockssServlet {
    * Redirect to the current URL. Uses response redirection
    * unless the URL has a reference, in which case it does
    * client side redirection.
-   * 
+   *
    * @throws IOException if "UTF-8" encoding is not supported
    */
   protected void redirectToUrl() throws IOException {
@@ -621,7 +649,7 @@ public class ServeContent extends LockssServlet {
       ref = new URL(url).getRef();
     } catch (MalformedURLException ex) {
     }
-    
+
     if (ref == null) {
       resp.sendRedirect(url);
     } else {
@@ -636,22 +664,22 @@ public class ServeContent extends LockssServlet {
       }
       sb.append("#" + ref);
       String suffix = sb.toString();
-      
-      String srvUrl = absoluteLinks  
-          ? srvAbsURL(myServletDescr(), suffix) 
-          : srvURL(myServletDescr(), suffix);
+
+      String srvUrl = absoluteLinks
+                      ? srvAbsURL(myServletDescr(), suffix)
+                      : srvURL(myServletDescr(), suffix);
 
       Page p = new Page();
-      p.addHeader(  
+      p.addHeader(
           "<meta HTTP-EQUIV=\"REFRESH\" content=\"0,url=" + srvUrl + "\">");
-      writePage(p); 
+      writePage(p);
     }
   }
-  
+
   /**
    * Handle request for the page specified OpenUrlInfo 
    * that is returned from OpenUrlResolver. 
-   * 
+   *
    * @param info the OpenUrlInfo from the OpenUrl resolver
    * @throws IOException if an IO error happens
    */
@@ -661,7 +689,7 @@ public class ServeContent extends LockssServlet {
       // If we resolved to a URL, get the CachedUrl 
       if (url != null) {
         if (au != null) {
-	  // AU specified explicitly
+          // AU specified explicitly
           cu = au.makeCachedUrl(url);
         } else {
           // Find a CU with content if possible.  If none, find an AU where
@@ -673,7 +701,7 @@ public class ServeContent extends LockssServlet {
           }
         }
       }
-      
+
       if (cu != null) {
         // display cached page if it has content
         String ref = null;
@@ -681,7 +709,7 @@ public class ServeContent extends LockssServlet {
           ref = new URL(url).getRef();
         } catch (MalformedURLException ex) {
         }
-        
+
         if (ref != null) {
           redirectToUrl();
         } else {
@@ -691,7 +719,7 @@ public class ServeContent extends LockssServlet {
 
         return;
       }
-      
+
       handleMissingOpenUrlRequest(info, PubState.Unknown);
 
     } catch (IOException e) {
@@ -701,7 +729,7 @@ public class ServeContent extends LockssServlet {
       AuUtil.safeRelease(cu);
     }
   }
-  
+
   /**
    * Handle request for content that belongs to one of our AUs, whether or not
    * we have content for that URL.  If this request contains a version param,
@@ -709,7 +737,7 @@ public class ServeContent extends LockssServlet {
    * link-rewriting.  For requests without a version param, rewrite links,
    * and serve from publisher if publisher provides it and the daemon options
    * allow it; otherwise, try to serve from cache.
-   * 
+   *
    * @throws IOException for IO errors
    */
   protected void handleAuRequest() throws IOException {
@@ -721,9 +749,9 @@ public class ServeContent extends LockssServlet {
       if (isInCache) {
         serveFromCache();
         logAccess("200 from cache");
-	// Record the necessary information required for COUNTER reports.
-	CounterReportsRequestRecorder.getInstance().recordRequest(url,
-	    CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
+        // Record the necessary information required for COUNTER reports.
+        CounterReportsRequestRecorder.getInstance().recordRequest(url,
+            CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
       } else {
 	/*
 	 * We don't want to redirect to the publisher, so pass KnownDown below
@@ -734,24 +762,24 @@ public class ServeContent extends LockssServlet {
       }
       return;
     }
-    
+
     LockssUrlConnectionPool connPool = proxyMgr.getNormalConnectionPool();
 
     if (!isInCache && isHostDown) {
       switch (proxyMgr.getHostDownAction()) {
-      case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504:
-        handleMissingUrlRequest(url, PubState.RecentlyDown);
-        return;
-      case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_QUICK:
-        connPool = proxyMgr.getQuickConnectionPool();
-        break;
-      default:
-      case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_NORMAL:
-        connPool = proxyMgr.getNormalConnectionPool();
-        break;
+        case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504:
+          handleMissingUrlRequest(url, PubState.RecentlyDown);
+          return;
+        case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_QUICK:
+          connPool = proxyMgr.getQuickConnectionPool();
+          break;
+        default:
+        case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_NORMAL:
+          connPool = proxyMgr.getNormalConnectionPool();
+          break;
       }
     }
-        
+
     // Send request to publisher
     LockssUrlConnection conn = null;
     PubState pstate = PubState.Unknown;
@@ -762,12 +790,12 @@ public class ServeContent extends LockssServlet {
       AuProxyInfo info = AuUtil.getAuProxyInfo(au);
       String proxyHost = info.getHost();
       int proxyPort = info.getPort();
-      if (!StringUtil.isNullString(proxyHost) && (proxyPort > 0)) { 
+      if (!StringUtil.isNullString(proxyHost) && (proxyPort > 0)) {
         try {
           conn.setProxy(info.getHost(), info.getPort());
         } catch (UnsupportedOperationException ex) {
-          log.warning(  "Unsupported connection request proxy: " 
-                      + proxyHost + ":" + proxyPort);
+          log.warning(  "Unsupported connection request proxy: "
+                        + proxyHost + ":" + proxyPort);
         }
       }
       conn.execute();
@@ -784,7 +812,7 @@ public class ServeContent extends LockssServlet {
       IOUtil.safeRelease(conn);
       conn = null;
     }
-    
+
     int response = 0;
     try {
       if (conn != null) {
@@ -796,40 +824,40 @@ public class ServeContent extends LockssServlet {
           // XXX Should check for a login page here
           try {
             serveFromPublisher(conn);
-	    logAccess(present(isInCache, "200 from publisher"));
-	    // Record the necessary information required for COUNTER reports.
-	    CounterReportsRequestRecorder.getInstance()
-		.recordRequest(url,
-		    CounterReportsRequestRecorder.PublisherContacted.TRUE,
-		    response);
-	    return;
+            logAccess(present(isInCache, "200 from publisher"));
+            // Record the necessary information required for COUNTER reports.
+            CounterReportsRequestRecorder.getInstance()
+                                         .recordRequest(url,
+                                             CounterReportsRequestRecorder.PublisherContacted.TRUE,
+                                             response);
+            return;
           } catch (CacheException.PermissionException ex) {
             logAccess("login exception: " + ex.getMessage());
             pstate = PubState.NoContent;
           }
         } else {
-      	  pstate = PubState.NoContent;
-      	}
+          pstate = PubState.NoContent;
+        }
       }
     } finally {
       // ensure connection is closed
       IOUtil.safeRelease(conn);
     }
-    
+
     // Either failed to open connection or got non-200 response.
     if (isInCache) {
       serveFromCache();
       logAccess("present, 200 from cache");
       // Record the necessary information required for COUNTER reports.
       CounterReportsRequestRecorder.getInstance().recordRequest(url,
-	  CounterReportsRequestRecorder.PublisherContacted.TRUE, response);
+          CounterReportsRequestRecorder.PublisherContacted.TRUE, response);
     } else {
       log.debug2("No content for: " + url);
       // return 404 with index
       handleMissingUrlRequest(url, pstate);
     }
   }
-  
+
   /**
    * @return true iff the user is requesting a particular version of the content
    */
@@ -839,7 +867,7 @@ public class ServeContent extends LockssServlet {
 
   /**
    * Serve the content for the specified CU from the cache.
-   * 
+   *
    * @throws IOException if cannot read content
    */
   protected void serveFromCache() throws IOException {
@@ -853,12 +881,12 @@ public class ServeContent extends LockssServlet {
         if (!HeaderUtil.isEarlier(ifModifiedSince, cuLastModified)) {
           ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
           String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
-      	  if (log.isDebug3()) {
-      	    log.debug3( "Cached content not modified for: " + url
-      			+ " mime type=" + mimeType
-      			+ " size=" + cu.getContentSize()
-      			+ " cu=" + cu);
-      	  }
+          if (log.isDebug3()) {
+            log.debug3( "Cached content not modified for: " + url
+                        + " mime type=" + mimeType
+                        + " size=" + cu.getContentSize()
+                        + " cu=" + cu);
+          }
           resp.setStatus(HttpResponse.__304_Not_Modified);
           return;
         }
@@ -873,45 +901,45 @@ public class ServeContent extends LockssServlet {
 
     if (log.isDebug3()) {
       log.debug3( "Serving cached content for: " + url
-		  + " mime type=" + mimeType
-		  + " size=" + cu.getContentSize()
-		  + " cu=" + cu);
+                  + " mime type=" + mimeType
+                  + " size=" + cu.getContentSize()
+                  + " cu=" + cu);
     }
     resp.setContentType(ctype);
     // Set as inline content with name
     resp.setHeader("Content-disposition", "inline; filename="+
-		   ServletUtil.getContentOriginalFilename(cu, true));
+                                          ServletUtil.getContentOriginalFilename(cu, true));
 
     if (cuLastModified != null) {
       resp.setHeader(HttpFields.__LastModified, cuLastModified);
     }
-    
+
     AuState aus = AuUtil.getAuState(au);
     if (!aus.isOpenAccess()) {
       resp.setHeader(HttpFields.__CacheControl, "private");
-    }   
-    
+    }
+
     // Add a header to the response to identify content from LOCKSS cache
     resp.setHeader(Constants.X_LOCKSS, Constants.X_LOCKSS_FROM_CACHE);
 
     // rewrite content from cache
     handleRewriteInputStream(cu.getUnfilteredInputStream(),
-			     mimeType, charset, cu.getContentSize());
+        mimeType, charset, cu.getContentSize());
   }
-  
+
   /**
    * Return the input stream for this connection, after first determining
    * that it is not to a login page. Be sure to close the returned input
    * stream when done with it.
-   *  
+   *
    * @param conn the connection
    * @return the input stream
    * @throws IOException if error getting input stream
    * @throws CacheException.PermissionException if the connection is to a 
    * login page or there was an error checking for a login page
    */
-  private InputStream getInputStream(LockssUrlConnection conn) 
-    throws CacheException.PermissionException, IOException {
+  private InputStream getInputStream(LockssUrlConnection conn)
+      throws CacheException.PermissionException, IOException {
     // get the input stream from the connection
     InputStream input = conn.getResponseInputStream();
 
@@ -934,16 +962,16 @@ public class ServeContent extends LockssServlet {
       // throws CacheException.PermissionException if found login page
       input = checkLoginPage(input, headers);
     }
-    
+
     return input;
   }
-    
+
   /**
    * Check whether the input stream is to a publisher's html permission page.
    * Throws a CacheExcepiton.PermissionException if so; otherwise returns an
    * input stream positioned at the same position. The original input stream
    * will be closed if a new one is created.
-   * 
+   *
    * @param input an input stream
    * @param headers a set of header properties
    * @return an input stream positioned at the same position as the original
@@ -953,18 +981,18 @@ public class ServeContent extends LockssServlet {
    * @throws IOException if IO error while checking the stream
    */
   private InputStream checkLoginPage(InputStream input, CIProperties headers)
-    throws CacheException.PermissionException, IOException {
+      throws CacheException.PermissionException, IOException {
 
     LoginPageChecker checker = au.getCrawlSpec().getLoginPageChecker();
     if (checker != null) {
       InputStream oldInput = input;
-      
+
       // buffer html page stream to allow login page checker to read it
       int limit = CurrentConfig.getIntParam(
-                    BaseUrlCacher.PARAM_LOGIN_CHECKER_MARK_LIMIT,
-                    BaseUrlCacher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT);
-      DeferredTempFileOutputStream dos = 
-        new DeferredTempFileOutputStream(limit);
+          BaseUrlCacher.PARAM_LOGIN_CHECKER_MARK_LIMIT,
+          BaseUrlCacher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT);
+      DeferredTempFileOutputStream dos =
+          new DeferredTempFileOutputStream(limit);
       try {
         StreamUtil.copy(input, dos);
         if (dos.isInMemory()) {
@@ -972,7 +1000,7 @@ public class ServeContent extends LockssServlet {
         } else {
           // create an input stream whose underlying file is deleted
           // when the input stream closes.
-          File tempFile = dos.getFile(); 
+          File tempFile = dos.getFile();
           try {
             input = new FileInputStream(tempFile);
           } catch (FileNotFoundException fnfe) {
@@ -984,48 +1012,48 @@ public class ServeContent extends LockssServlet {
         IOUtil.safeClose(oldInput);
         IOUtil.safeClose(dos);
       }
-      
+
       // create reader for input stream
       String ctype = headers.getProperty("Content-Type");
       String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
 
       try {
         Reader reader = new InputStreamReader(input, charset);
-        
+
         if (checker.isLoginPage(headers, reader)) {
-	  IOUtil.safeClose(input);
-	  input = null;
+          IOUtil.safeClose(input);
+          input = null;
           throw new CacheException.PermissionException("Found a login page");
         }
       } catch (PluginException e) {
-        CacheException.PermissionException ex = 
-          new CacheException.PermissionException("Error checking login page");
+        CacheException.PermissionException ex =
+            new CacheException.PermissionException("Error checking login page");
         ex.initCause(e);
-	IOUtil.safeClose(input);
-	input = null;
+        IOUtil.safeClose(input);
+        input = null;
         throw ex;
       } finally {
-	if (input == null) {
-	  // delete the temp file immediately if not returning an input
-	  // stream open on it
-	  dos.deleteTempFile();
-	} else if (dos.isInMemory()) {
+        if (input == null) {
+          // delete the temp file immediately if not returning an input
+          // stream open on it
+          dos.deleteTempFile();
+        } else if (dos.isInMemory()) {
           input.reset();
         } else {
-	  // special treatment because cannot reset FileInputStream,
-	  // so must close and re-open input stream from temp file
+          // special treatment because cannot reset FileInputStream,
+          // so must close and re-open input stream from temp file
           IOUtil.safeClose(input);
           input = new DeleteFileOnCloseInputStream(dos.getFile());
         }
       }
     }
-    
+
     return input;
   }
 
   /**
    * Serve content from publisher.
-   * 
+   *
    * @param conn the connection
    * @throws IOException if cannot read content
    */
@@ -1033,40 +1061,40 @@ public class ServeContent extends LockssServlet {
     String ctype = conn.getResponseContentType();
     String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
     log.debug2(  "Serving publisher content for: " + url
-               + " mime type=" + mimeType + " size=" + conn.getResponseContentLength());
-    
+                 + " mime type=" + mimeType + " size=" + conn.getResponseContentLength());
+
 
     // copy connection response headers to servlet response
     for (int i = 0; true; i++) {
       String key = conn.getResponseHeaderFieldKey(i);
       String val = conn.getResponseHeaderFieldVal(i);
       if ((key == null) && (val == null)) {
-	break;
+        break;
       }
       if ((key == null) || (val == null)) {
-	// XXX Here to ensure complete compatibility with previous
-	// code. Not sure it's necessary or desirable.
-	continue;
+        // XXX Here to ensure complete compatibility with previous
+        // code. Not sure it's necessary or desirable.
+        continue;
       }
       // Content-Encoding processed below
       // Don't copy the following headers:
       if (HttpFields.__ContentEncoding.equalsIgnoreCase(key) ||
-	  HttpFields.__KeepAlive.equalsIgnoreCase(key) ||
-	  HttpFields.__Connection.equalsIgnoreCase(key)) {
-	continue;
+          HttpFields.__KeepAlive.equalsIgnoreCase(key) ||
+          HttpFields.__Connection.equalsIgnoreCase(key)) {
+        continue;
       }
       if (HttpFields.__ContentType.equalsIgnoreCase(key)) {
-	// Must use setContentType() for Content-Type, both to replace the
-	// default that LockssServlet stored, and to ensure proper charset
-	// processing
-	resp.setContentType(val);
+        // Must use setContentType() for Content-Type, both to replace the
+        // default that LockssServlet stored, and to ensure proper charset
+        // processing
+        resp.setContentType(val);
       } else {
-	resp.addHeader(key, val);
+        resp.addHeader(key, val);
       }
     }
 
     resp.addHeader(HttpFields.__Via,
-		   proxyMgr.makeVia(getMachineName(), reqURL.getPort()));
+        proxyMgr.makeVia(getMachineName(), reqURL.getPort()));
 
     String contentEncoding = conn.getResponseContentEncoding();
     long responseContentLength = conn.getResponseContentLength();
@@ -1080,16 +1108,16 @@ public class ServeContent extends LockssServlet {
       if (contentEncoding != null) {
         if (log.isDebug2())
           log.debug2("Wrapping Content-Encoding: " + contentEncoding);
-      	try {
-      	  respStrm =
-      	    StreamUtil.getUncompressedInputStream(respStrm, contentEncoding);
-      	  // Rewritten response is not encoded
-      	  contentEncoding = null;
-      	} catch (UnsupportedEncodingException e) {
-      	  log.warning("Unsupported Content-Encoding: " + contentEncoding +
-      		      ", not rewriting " + url);
-      	  lrf = null;
-      	}
+        try {
+          respStrm =
+              StreamUtil.getUncompressedInputStream(respStrm, contentEncoding);
+          // Rewritten response is not encoded
+          contentEncoding = null;
+        } catch (UnsupportedEncodingException e) {
+          log.warning("Unsupported Content-Encoding: " + contentEncoding +
+                      ", not rewriting " + url);
+          lrf = null;
+        }
       }
     }
     if (contentEncoding != null) {
@@ -1098,7 +1126,7 @@ public class ServeContent extends LockssServlet {
 
     String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
     handleRewriteInputStream(respStrm, mimeType, charset,
-			     responseContentLength);
+        responseContentLength);
   }
 
   // Patterm to extract url query arg from Referer string
@@ -1107,13 +1135,13 @@ public class ServeContent extends LockssServlet {
 
 
   protected LockssUrlConnection openLockssUrlConnection(LockssUrlConnectionPool
-							pool)
-    throws IOException {
+                                                            pool)
+      throws IOException {
 
     boolean isInCache = isInCache();
     String ifModified = null;
     String referer = null;
-    
+
     LockssUrlConnection conn = UrlUtil.openConnection(url, pool);
 
     // check connection header
@@ -1138,8 +1166,8 @@ public class ServeContent extends LockssServlet {
       }
 
       if (HttpFields.__Referer.equalsIgnoreCase(hdr)) {
-      	referer = req.getHeader(hdr);
-      	continue;
+        referer = req.getHeader(hdr);
+        continue;
       }
 
       // XXX Conceivably should suppress Accept-Encoding: header if it
@@ -1166,9 +1194,9 @@ public class ServeContent extends LockssServlet {
         log.debug3("cuLast: " + cuLast);
       }
       try {
-	ifModified = HeaderUtil.later(ifModified, cuLast);
+        ifModified = HeaderUtil.later(ifModified, cuLast);
       } catch (DateParseException e) {
-	// preserve user's header if parse failure
+        // preserve user's header if parse failure
       }
     }
 
@@ -1180,19 +1208,19 @@ public class ServeContent extends LockssServlet {
     // is in the url query arg.
     if (referer != null) {
       try {
-	URI refUri = new URI(referer);
-	if (refUri.getPath().endsWith(myServletDescr().getPath())) {
-	  String rawquery = refUri.getRawQuery();
-	  if (log.isDebug3()) log.debug3("rawquery: " + rawquery);
-	  if (!StringUtil.isNullString(rawquery))  {
-	    Matcher m1 = URL_ARG_PAT.matcher(rawquery);
-	    if (m1.find()) {
-	      referer = UrlUtil.decodeUrl(m1.group(1));
-	    }
-	  }
-	}
+        URI refUri = new URI(referer);
+        if (refUri.getPath().endsWith(myServletDescr().getPath())) {
+          String rawquery = refUri.getRawQuery();
+          if (log.isDebug3()) log.debug3("rawquery: " + rawquery);
+          if (!StringUtil.isNullString(rawquery))  {
+            Matcher m1 = URL_ARG_PAT.matcher(rawquery);
+            if (m1.find()) {
+              referer = UrlUtil.decodeUrl(m1.group(1));
+            }
+          }
+        }
       } catch (URISyntaxException e) {
-	log.siteWarning("Can't perse Referer:, ignoring: " + referer);
+        log.siteWarning("Can't perse Referer:, ignoring: " + referer);
       }
 
       log.debug2("Sending referer: " + referer);
@@ -1200,24 +1228,24 @@ public class ServeContent extends LockssServlet {
     }
     // send address of original requester
     conn.addRequestProperty(HttpFields.__XForwardedFor,
-                            req.getRemoteAddr());
+        req.getRemoteAddr());
     conn.addRequestProperty(HttpFields.__Via,
-			    proxyMgr.makeVia(getMachineName(),
-					     reqURL.getPort()));
+        proxyMgr.makeVia(getMachineName(),
+            reqURL.getPort()));
 
     String cookiePolicy = proxyMgr.getCookiePolicy();
     if (cookiePolicy != null &&
-	!cookiePolicy.equalsIgnoreCase(ProxyManager.COOKIE_POLICY_DEFAULT)) {
+        !cookiePolicy.equalsIgnoreCase(ProxyManager.COOKIE_POLICY_DEFAULT)) {
       conn.setCookiePolicy(cookiePolicy);
     }
-    
+
     return conn;
   }
 
   LinkRewriterFactory getLinkRewriterFactory(String mimeType) {
     try {
       if (StringUtil.isNullString(getParameter("norewrite"))) {
-	return au.getLinkRewriterFactory(mimeType);
+        return au.getLinkRewriterFactory(mimeType);
       }
     } catch (Exception e) {
       log.error("Error getting LinkRewriterFactory: " + e);
@@ -1226,70 +1254,70 @@ public class ServeContent extends LockssServlet {
   }
 
   protected void handleRewriteInputStream(InputStream original,
-					  String mimeType,
-					  String charset,
-					  long length) throws IOException {
+                                          String mimeType,
+                                          String charset,
+                                          long length) throws IOException {
     handleRewriteInputStream(getLinkRewriterFactory(mimeType),
-			     original, mimeType, charset, length);
+        original, mimeType, charset, length);
   }
 
   protected void handleRewriteInputStream(LinkRewriterFactory lrf,
-					  InputStream original,
-					  String mimeType,
-					  String charset,
-					  long length) throws IOException {
+                                          InputStream original,
+                                          String mimeType,
+                                          String charset,
+                                          long length) throws IOException {
     InputStream rewritten = original;
     OutputStream outStr = null;
     try {
       if (lrf == null || (isMementoRequest() && !rewriteMementoResponses)) {
-	// No rewriting, set length and copy
-	setContentLength(length);
-	outStr = resp.getOutputStream();
-	StreamUtil.copy(original, outStr);
+        // No rewriting, set length and copy
+        setContentLength(length);
+        outStr = resp.getOutputStream();
+        StreamUtil.copy(original, outStr);
       } else {
         try {
           rewritten =
-            lrf.createLinkRewriter(mimeType,
-                                   au,
-                                   original,
-                                   charset,
-                                   url,
-                                   new ServletUtil.LinkTransform() {
-                                     public String rewrite(String url) {
-                                       if (absoluteLinks) {
-                                         return srvAbsURL(myServletDescr(),
-                                                          "url=" + url);
-                                       } else {
-                                         return srvURL(myServletDescr(),
-                                                       "url=" + url);
-                                       }
-                                     }});
+              lrf.createLinkRewriter(mimeType,
+                  au,
+                  original,
+                  charset,
+                  url,
+                  new ServletUtil.LinkTransform() {
+                    public String rewrite(String url) {
+                      if (absoluteLinks) {
+                        return srvAbsURL(myServletDescr(),
+                            "url=" + url);
+                      } else {
+                        return srvURL(myServletDescr(),
+                            "url=" + url);
+                      }
+                    }});
         } catch (PluginException e) {
           log.error("Can't create link rewriter, not rewriting", e);
         }
-	// If the rewritten stream knows the charset used to encode it,
-	// send that in the response in place of the original file's
-	// charset.
-	if (rewritten instanceof EncodedThing) {
-	  String rewrittenCharset = ((EncodedThing)rewritten).getCharset();
-	  log.debug3("rewrittenCharset: " + rewrittenCharset);
-	  if (!StringUtil.isNullString(rewrittenCharset)) {
-	    resp.setCharacterEncoding(rewrittenCharset);
-	  }
-	}
-	if (length >= 0 && length <= maxBufferedRewrite) {
-	  // if small file rewrite to temp buffer to find length before
-	  // sending.
-	  ByteArrayOutputStream baos =
-	    new ByteArrayOutputStream((int)(length * 1.1 + 100));
-	  long bytes = StreamUtil.copy(rewritten, baos);
-	  setContentLength(bytes);
-	  outStr = resp.getOutputStream();
-	  baos.writeTo(outStr);
-	} else {
-	  outStr = resp.getOutputStream();
-	  StreamUtil.copy(rewritten, outStr);
-	}
+        // If the rewritten stream knows the charset used to encode it,
+        // send that in the response in place of the original file's
+        // charset.
+        if (rewritten instanceof EncodedThing) {
+          String rewrittenCharset = ((EncodedThing)rewritten).getCharset();
+          log.debug3("rewrittenCharset: " + rewrittenCharset);
+          if (!StringUtil.isNullString(rewrittenCharset)) {
+            resp.setCharacterEncoding(rewrittenCharset);
+          }
+        }
+        if (length >= 0 && length <= maxBufferedRewrite) {
+          // if small file rewrite to temp buffer to find length before
+          // sending.
+          ByteArrayOutputStream baos =
+              new ByteArrayOutputStream((int)(length * 1.1 + 100));
+          long bytes = StreamUtil.copy(rewritten, baos);
+          setContentLength(bytes);
+          outStr = resp.getOutputStream();
+          baos.writeTo(outStr);
+        } else {
+          outStr = resp.getOutputStream();
+          StreamUtil.copy(rewritten, outStr);
+        }
       }
     } finally {
       IOUtil.safeClose(outStr);
@@ -1301,9 +1329,9 @@ public class ServeContent extends LockssServlet {
   private void setContentLength(long length) {
     if (length >= 0) {
       if (length <= Integer.MAX_VALUE) {
-	resp.setContentLength((int)length);
+        resp.setContentLength((int)length);
       } else {
-	resp.setHeader(HttpFields.__ContentLength, Long.toString(length));
+        resp.setHeader(HttpFields.__ContentLength, Long.toString(length));
       }
     }
   }
@@ -1311,43 +1339,43 @@ public class ServeContent extends LockssServlet {
   // Ensure we don't redirect if neverProxy is true
   MissingFileAction getMissingFileAction(PubState pstate) {
     switch (missingFileAction) {
-    case Redirect:
-      if (isNeverProxy() || !pstate.mightHaveContent()) {
-	return DEFAULT_MISSING_FILE_ACTION;
-      } else {
-	return missingFileAction;
-      }
-    case AlwaysRedirect:
-      if (isNeverProxy()) {
-	return DEFAULT_MISSING_FILE_ACTION;
-      } else {
-	return missingFileAction;
-      }
-    default:
-      return missingFileAction;
+      case Redirect:
+        if (isNeverProxy() || !pstate.mightHaveContent()) {
+          return DEFAULT_MISSING_FILE_ACTION;
+        } else {
+          return missingFileAction;
+        }
+      case AlwaysRedirect:
+        if (isNeverProxy()) {
+          return DEFAULT_MISSING_FILE_ACTION;
+        } else {
+          return missingFileAction;
+        }
+      default:
+        return missingFileAction;
     }
   }
-  
+
   // format used for a row label cell (e.g. Publisher:).
-  static final private String labelfmt = 
+  static final private String labelfmt =
       "style=\"font-weight:bold; padding-right:20px;\"";
 
   // format used for a row
   static final private String rowfmt = "valign=\"top\"";
-  
+
 
   /**
    * Handler for missing OpenURL requests displays synthetic TOC
    * for level returned by OpenURL resolver and offers a link to
    * the URL at the publisher site.
-   * 
+   *
    * @param info the OpenUrlInfo from the OpenUrl resolver
    * @param pstate the pub state
    * @throws IOException if an IO error occurs
    */
   protected void handleMissingOpenUrlRequest(OpenUrlInfo info, PubState pstate)
       throws IOException {
-    
+
     // handle non-cached url according to missingFileAction
     MissingFileAction missingFileAction = getMissingFileAction(pstate);
     switch (missingFileAction) {
@@ -1366,192 +1394,192 @@ public class ServeContent extends LockssServlet {
         // fall through to offer link to publisher url
         break;
     }
-    
+
     // build block with message specific to resolved-to level
     Block block = new Block(Block.Center);
     ResolvedTo resolvedTo = info.getResolvedTo();
     BibliographicItem bibliographicItem = info.getBibliographicItem();
     String proxySpec = info.getProxySpec();
     String proxyMsg = StringUtil.isNullString(proxySpec) ? "."
-        : " by proxying through '" + proxySpec + "'.";
-        
+                                                         : " by proxying through '" + proxySpec + "'.";
+
     Table table = new Table(0, "");
 
     switch (resolvedTo) {
-    case PUBLISHER:
-      
-      // display publisher page
-      if (bibliographicItem == null) {
-        block.add("<h2>Found requested publisher</h2>");
-      } else {
-        block.add("<h2>");
-        block.add(bibliographicItem.getPublisherName());
-        block.add("</h2>");
-      }
-      
-      addLink(table,
-              "Additional publisher information available at the publisher.",
-              "Selecting link takes you away from this LOCKSS box.");
+      case PUBLISHER:
 
-      logAccess("404 to publisher page");
-      break;
-
-    case TITLE:
-      // display title page
-      if (bibliographicItem == null) {
-        block.add("<h2>Found requested title</h2>");
-      } else {
-        block.add("<h2>");
-        block.add(bibliographicItem.getJournalTitle());
-        block.add("</h2>"); 
-        
-        addPublisher(table, bibliographicItem);
-        addIsbnOrIssn(table, bibliographicItem);
-      }
-      
-      addLink(table,
-          "Additional title information available at the publisher" + proxyMsg,
-          "Selecting link takes you away from this LOCKSS box.");
-
-      logAccess("404 title page");
-      break;
-      
-    case VOLUME:
-      // display volume page
-      if (bibliographicItem == null) {
-        block.add("<h2>Found requested volume</h2>");
-      } else {
-        block.add("<h2>");
-        block.add(bibliographicItem.getName());
-        block.add("</h2>");
-
-        addPublisher(table, bibliographicItem);
-        addIsbnOrIssn(table, bibliographicItem);
-        addVolumeAndYear(table, bibliographicItem);
-      }
-        
-      addLink(table, 
-             "Volume is available at the publisher" + proxyMsg,
-             "Selecting link takes you away from this LOCKSS box.");
-
-
-      // display volume page
-      logAccess("404 volume page");
-      break;
-      
-    case ISSUE:
-      // display issue page
-      if (bibliographicItem == null) {
-        block.add("<h2>Found requested issue</h2>");
-      } else {
-        block.add("<h2>");
-        block.add(bibliographicItem.getName());
-        block.add("</h2>");
-        
-        addPublisher(table, bibliographicItem);
-        addIsbnOrIssn(table, bibliographicItem);
-        addVolumeAndYear(table, bibliographicItem);
-        
-        String issue = bibliographicItem.getIssue();
-        if (issue != null) {
-          table.newRow(rowfmt);
-          table.newCell(labelfmt);
-          table.add("<b>Issue:</b>");
-          table.newCell();
-          table.add(issue);
+        // display publisher page
+        if (bibliographicItem == null) {
+          block.add("<h2>Found requested publisher</h2>");
+        } else {
+          block.add("<h2>");
+          block.add(bibliographicItem.getPublisherName());
+          block.add("</h2>");
         }
-      }
-        
-      addLink(table, 
-              "Issue is available at the publisher" + proxyMsg,
-              "Selecting link takes you away from this LOCKSS box.");
 
-      logAccess("404 issue page");
-      break;
-      
-    case CHAPTER:
-      // display chapter page
-      if (bibliographicItem == null) {
-        block.add("<h2>Found requested chapter</h2>");
-      } else {
-        block.add("<h2>");
-        block.add(bibliographicItem.getName());
-        block.add("</h2>");
-        
-        addPublisher(table, bibliographicItem);
-        addIsbnOrIssn(table, bibliographicItem);
-        addVolumeAndYear(table, bibliographicItem);
+        addLink(table,
+            "Additional publisher information available at the publisher.",
+            "Selecting link takes you away from this LOCKSS box.");
 
-        String chapter = bibliographicItem.getIssue();
-        if (chapter != null) {
-          table.newRow(rowfmt);
-          table.newCell(labelfmt);
-          table.add("Chapter:");
-          table.newCell();
-          table.add(chapter);
+        logAccess("404 to publisher page");
+        break;
+
+      case TITLE:
+        // display title page
+        if (bibliographicItem == null) {
+          block.add("<h2>Found requested title</h2>");
+        } else {
+          block.add("<h2>");
+          block.add(bibliographicItem.getJournalTitle());
+          block.add("</h2>");
+
+          addPublisher(table, bibliographicItem);
+          addIsbnOrIssn(table, bibliographicItem);
         }
-      }
-        
-      addLink(table, 
-              "Chapter is available at the publisher" + proxyMsg,
-              "Selecting link takes you away from this LOCKSS box.");
 
+        addLink(table,
+            "Additional title information available at the publisher" + proxyMsg,
+            "Selecting link takes you away from this LOCKSS box.");
 
-      logAccess("404 chapter page");
-      break;
+        logAccess("404 title page");
+        break;
 
-    case ARTICLE:
-      // display article page
-      if (bibliographicItem == null) {
-        block.add("<h2>Found requested article</h2>");
-      } else {
-        block.add("<h2>");
-        block.add(bibliographicItem.getName());
-        block.add("</h2>");
-        
-        addPublisher(table, bibliographicItem);
-        addIsbnOrIssn(table, bibliographicItem);
-        addVolumeAndYear(table, bibliographicItem);
-        
-        String issue = bibliographicItem.getIssue();
-        if (issue != null) {
-          table.newRow(rowfmt);
-          table.newCell(labelfmt);
-          table.add("Issue:");
-          table.newCell();
-          table.add(issue);
+      case VOLUME:
+        // display volume page
+        if (bibliographicItem == null) {
+          block.add("<h2>Found requested volume</h2>");
+        } else {
+          block.add("<h2>");
+          block.add(bibliographicItem.getName());
+          block.add("</h2>");
+
+          addPublisher(table, bibliographicItem);
+          addIsbnOrIssn(table, bibliographicItem);
+          addVolumeAndYear(table, bibliographicItem);
         }
-      }
 
-      addLink(table, 
-              "Article is available at the publisher" + proxyMsg,
-              "Selecting link takes you away from this LOCKSS box.");
-
-      logAccess("404 article page");
-      break;
-      
-    default:
-      // display other page for ResolvedTo.OTHER
-      block.add("<h2>Found requested page</h2>");
-
-      addLink(table, 
-              "Article is available at the publisher" + proxyMsg,
-              "Selecting link takes you away from this LOCKSS box.");
+        addLink(table,
+            "Volume is available at the publisher" + proxyMsg,
+            "Selecting link takes you away from this LOCKSS box.");
 
 
-      logAccess("404 other page");
-      break;
+        // display volume page
+        logAccess("404 volume page");
+        break;
+
+      case ISSUE:
+        // display issue page
+        if (bibliographicItem == null) {
+          block.add("<h2>Found requested issue</h2>");
+        } else {
+          block.add("<h2>");
+          block.add(bibliographicItem.getName());
+          block.add("</h2>");
+
+          addPublisher(table, bibliographicItem);
+          addIsbnOrIssn(table, bibliographicItem);
+          addVolumeAndYear(table, bibliographicItem);
+
+          String issue = bibliographicItem.getIssue();
+          if (issue != null) {
+            table.newRow(rowfmt);
+            table.newCell(labelfmt);
+            table.add("<b>Issue:</b>");
+            table.newCell();
+            table.add(issue);
+          }
+        }
+
+        addLink(table,
+            "Issue is available at the publisher" + proxyMsg,
+            "Selecting link takes you away from this LOCKSS box.");
+
+        logAccess("404 issue page");
+        break;
+
+      case CHAPTER:
+        // display chapter page
+        if (bibliographicItem == null) {
+          block.add("<h2>Found requested chapter</h2>");
+        } else {
+          block.add("<h2>");
+          block.add(bibliographicItem.getName());
+          block.add("</h2>");
+
+          addPublisher(table, bibliographicItem);
+          addIsbnOrIssn(table, bibliographicItem);
+          addVolumeAndYear(table, bibliographicItem);
+
+          String chapter = bibliographicItem.getIssue();
+          if (chapter != null) {
+            table.newRow(rowfmt);
+            table.newCell(labelfmt);
+            table.add("Chapter:");
+            table.newCell();
+            table.add(chapter);
+          }
+        }
+
+        addLink(table,
+            "Chapter is available at the publisher" + proxyMsg,
+            "Selecting link takes you away from this LOCKSS box.");
+
+
+        logAccess("404 chapter page");
+        break;
+
+      case ARTICLE:
+        // display article page
+        if (bibliographicItem == null) {
+          block.add("<h2>Found requested article</h2>");
+        } else {
+          block.add("<h2>");
+          block.add(bibliographicItem.getName());
+          block.add("</h2>");
+
+          addPublisher(table, bibliographicItem);
+          addIsbnOrIssn(table, bibliographicItem);
+          addVolumeAndYear(table, bibliographicItem);
+
+          String issue = bibliographicItem.getIssue();
+          if (issue != null) {
+            table.newRow(rowfmt);
+            table.newCell(labelfmt);
+            table.add("Issue:");
+            table.newCell();
+            table.add(issue);
+          }
+        }
+
+        addLink(table,
+            "Article is available at the publisher" + proxyMsg,
+            "Selecting link takes you away from this LOCKSS box.");
+
+        logAccess("404 article page");
+        break;
+
+      default:
+        // display other page for ResolvedTo.OTHER
+        block.add("<h2>Found requested page</h2>");
+
+        addLink(table,
+            "Article is available at the publisher" + proxyMsg,
+            "Selecting link takes you away from this LOCKSS box.");
+
+
+        logAccess("404 other page");
+        break;
     }
 
-    block.add(table) ; 
+    block.add(table) ;
     block.add("<br/><br/>");
-    
+
     switch (missingFileAction) {
       case AuIndex:
         displayIndexPage(pluginMgr.getAllAus(),
-                         HttpResponse.__404_Not_Found,
-                         block, 
-                         "The LOCKSS box has the following Archival Units");
+            HttpResponse.__404_Not_Found,
+            block,
+            "The LOCKSS box has the following Archival Units");
         logAccess("not present, 404 with index");
         break;
       case Redirect:
@@ -1565,13 +1593,13 @@ public class ServeContent extends LockssServlet {
         } else if (url != null) {
           candidateAus = pluginMgr.getCandidateAus(url);
         }
-        
+
         if (candidateAus != null && !candidateAus.isEmpty()) {
           displayIndexPage(candidateAus,
-                           HttpResponse.__404_Not_Found,
-                           block,
-                           "Possibly related content may be found "
-                           + "in the following Archival Units");
+              HttpResponse.__404_Not_Found,
+              block,
+              "Possibly related content may be found "
+              + "in the following Archival Units");
         } else {
           displayIndexPage(Collections.<ArchivalUnit> emptyList(),
               HttpResponse.__404_Not_Found,
@@ -1580,13 +1608,13 @@ public class ServeContent extends LockssServlet {
           logAccess("not present, 404");
         }
         break;
-      }
+    }
   }
-  
+
   /**
-   * Add publisher to the block.
-   * 
-   * @param block the Block
+   * Add publisher to the table.
+   *
+   * @param table the table
    * @param bibliographicItem the bibliographic item
    */
   private void addPublisher(
@@ -1597,11 +1625,11 @@ public class ServeContent extends LockssServlet {
     table.newCell();
     table.add(bibliographicItem.getPublisherName());
   }
-  
+
   /**
-   * Add isbn or issn information to the block.
-   * 
-   * @param block the Block
+   * Add isbn or issn information to the table.
+   *
+   * @param table the Table
    * @param bibliographicItem the bibliographic item
    */
   private void addIsbnOrIssn(
@@ -1642,11 +1670,11 @@ public class ServeContent extends LockssServlet {
       }
     }
   }
-  
+
   /**
-   * Add volume and year information to the block.
-   * 
-   * @param block the Block
+   * Add volume and year information to the table.
+   *
+   * @param table the Table
    * @param bibliographicItem the bibliographic item
    */
   private void addVolumeAndYear(
@@ -1669,12 +1697,12 @@ public class ServeContent extends LockssServlet {
       table.add(year);
     }
   }
-  
+
   /**
    * Add link to publisher url and additional info 
-   * to the block if the AU for the URL is not down.
-   * 
-   * @param block the block
+   * to the table if the AU for the URL is not down.
+   *
+   * @param table the Table
    * @param additionalInfo additional info to appear in the footnote
    */
   private void addLink(
@@ -1691,43 +1719,43 @@ public class ServeContent extends LockssServlet {
       table.newCell();
       Link link = new Link(url,url);
       table.add(link);
-    }    
+    }
   }
-  
+
   /**
    * Get candidate AUs that match the specified bibliographic item's
    * issn, isbn, or publisher and title fields
-   * 
+   *
    * @param bibliographicItem the bibliographic item
    * @return a collection of candidate AUs
    */
   protected Collection<ArchivalUnit> getCandidateAus(
       BibliographicItem bibliographicItem) {
-   Collection<ArchivalUnit> candidateAus = new ArrayList<ArchivalUnit>();
-   
+    Collection<ArchivalUnit> candidateAus = new ArrayList<ArchivalUnit>();
+
     Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
     String isbn = bibliographicItem.getIsbn();
     String issn = bibliographicItem.getIssn();
     Collection<TdbAu> tdbaus = Collections.emptySet();
-   
+
     if (isbn != null) {
       // get TdbAus for books by thieir ISBN
       tdbaus = tdb.getTdbAusByIsbn(isbn);
-      
+
     } else if (issn != null) {
       // get TdbAus for journals by thieir ISBN
       TdbTitle tdbtitle = tdb.getTdbTitleByIssn(issn);
       if (tdbtitle != null) {
         tdbaus = tdbtitle.getTdbAus();
       }
-      
+
     } else {
       // get TdbAus by publisher and title
       String title = bibliographicItem.getJournalTitle();
       String publisher = bibliographicItem.getPublisherName();
       TdbPublisher tdbpublisher = tdb.getTdbPublisher(publisher);
       if (tdbpublisher != null) {
-        Collection<TdbTitle> tdbtitles = 
+        Collection<TdbTitle> tdbtitles =
             tdbpublisher.getTdbTitlesByName(title);
         tdbaus = new ArrayList<TdbAu>();
         for (TdbTitle tdbtitle : tdbtitles) {
@@ -1735,7 +1763,7 @@ public class ServeContent extends LockssServlet {
         }
       }
     }
-    
+
     // get preserved AUs corresponding to TdbAus found
     for (TdbAu tdbau : tdbaus) {
       ArchivalUnit au = TdbUtil.getAu(tdbau);
@@ -1749,8 +1777,8 @@ public class ServeContent extends LockssServlet {
   protected void handleMissingUrlRequest(String missingUrl, PubState pstate)
       throws IOException {
     String missing =
-      missingUrl + ((au != null) ? " in AU: " + au.getName() : "");
-    
+        missingUrl + ((au != null) ? " in AU: " + au.getName() : "");
+
     Block block = new Block(Block.Center);
     // display publisher page
     block.add("<p>The requested URL is not preserved  on this LOCKSS box. ");
@@ -1761,40 +1789,40 @@ public class ServeContent extends LockssServlet {
     block.add("<a href=\"" + missingUrl + "\">" + missingUrl + "</a><br/><br/>");
 
     switch (getMissingFileAction(pstate)) {
-    case Error_404:
-      resp.sendError(HttpServletResponse.SC_NOT_FOUND,
-		     missing + " is not preserved on this LOCKSS box");
-      logAccess("not present, 404");
-      break;
-    case Redirect:
-    case AlwaysRedirect:
-      redirectToUrl();
-      break;
-    case HostAuIndex:
-      Collection<ArchivalUnit> candidateAus = 
-          pluginMgr.getCandidateAus(missingUrl);
-      if (candidateAus != null && !candidateAus.isEmpty()) {
-	displayIndexPage(candidateAus,
-			 HttpResponse.__404_Not_Found,
-			 block,
-			 "Possibly related content may be found "
-			 + "in the following Archival Units");
-	logAccess("not present, 404 with index");
-      } else {
-        displayIndexPage(Collections.<ArchivalUnit>emptyList(),
+      case Error_404:
+        resp.sendError(HttpServletResponse.SC_NOT_FOUND,
+            missing + " is not preserved on this LOCKSS box");
+        logAccess("not present, 404");
+        break;
+      case Redirect:
+      case AlwaysRedirect:
+        redirectToUrl();
+        break;
+      case HostAuIndex:
+        Collection<ArchivalUnit> candidateAus =
+            pluginMgr.getCandidateAus(missingUrl);
+        if (candidateAus != null && !candidateAus.isEmpty()) {
+          displayIndexPage(candidateAus,
+              HttpResponse.__404_Not_Found,
+              block,
+              "Possibly related content may be found "
+              + "in the following Archival Units");
+          logAccess("not present, 404 with index");
+        } else {
+          displayIndexPage(Collections.<ArchivalUnit>emptyList(),
+              HttpResponse.__404_Not_Found,
+              block,
+              null);
+          logAccess("not present, 404");
+        }
+        break;
+      case AuIndex:
+        displayIndexPage(pluginMgr.getAllAus(),
             HttpResponse.__404_Not_Found,
             block,
             null);
-        logAccess("not present, 404");
-      }
-      break;
-    case AuIndex:
-      displayIndexPage(pluginMgr.getAllAus(),
-		       HttpResponse.__404_Not_Found,
-		       block,
-		       null);
-      logAccess("not present, 404 with index");
-      break;
+        logAccess("not present, 404 with index");
+        break;
     }
   }
 
@@ -1814,16 +1842,16 @@ public class ServeContent extends LockssServlet {
 
   void displayIndexPage(Collection<ArchivalUnit> auList,
                         int result,
-                        String headerText) 
-    throws IOException {
+                        String headerText)
+      throws IOException {
     displayIndexPage(auList, result, (Element)null, headerText);
   }
-  
+
   void displayIndexPage(Collection<ArchivalUnit> auList,
-			int result,
+                        int result,
                         Element headerElement,
-			String headerText)
-    throws IOException {
+                        String headerText)
+      throws IOException {
     Predicate pred;
     boolean offerUnfilteredList = false;
     if (enabledPluginsOnly) {
@@ -1837,41 +1865,41 @@ public class ServeContent extends LockssServlet {
     if (headerElement != null) {
       page.add(headerElement);
     }
-    
+
     Block centeredBlock = new Block(Block.Center);
-    
+
     if (areAllExcluded(auList, pred) && !offerUnfilteredList) {
       ServletUtil.layoutExplanationBlock(centeredBlock,
           "No matching content has been preserved on this LOCKSS box");
     } else {
       // Layout manifest index w/ URLs pointing to this servlet
       Element ele =
-	ServletUtil.manifestIndex(pluginMgr,
-				  auList,
-				  pred,
-				  headerText,
-				  new ServletUtil.ManifestUrlTransform() {
-				    public Object transformUrl(String url,
-							       ArchivalUnit au){
-				      Properties query =
-					PropUtil.fromArgs("url", url);
-				      if (au != null) {
-					query.put("auid", au.getAuId());
-				      }
-				      return srvLink(myServletDescr(),
-						     url, query);
-				    }},
-				  true);
+          ServletUtil.manifestIndex(pluginMgr,
+              auList,
+              pred,
+              headerText,
+              new ServletUtil.ManifestUrlTransform() {
+                public Object transformUrl(String url,
+                                           ArchivalUnit au){
+                  Properties query =
+                      PropUtil.fromArgs("url", url);
+                  if (au != null) {
+                    query.put("auid", au.getAuId());
+                  }
+                  return srvLink(myServletDescr(),
+                      url, query);
+                }},
+              true);
       centeredBlock.add(ele);
       if (offerUnfilteredList) {
-	centeredBlock.add("<br>");
-	centeredBlock.add("Other possibly relevant content has not yet been "
-			  + "certified for use with ServeContent and may not "
-			  + "display correctly.  Click ");
-	Properties args = getParamsAsProps();
-	args.put("filterPlugins", "no");
-	centeredBlock.add(srvLink(myServletDescr(), "here", args));
-	centeredBlock.add(" to see the complete list.");
+        centeredBlock.add("<br>");
+        centeredBlock.add("Other possibly relevant content has not yet been "
+                          + "certified for use with ServeContent and may not "
+                          + "display correctly.  Click ");
+        Properties args = getParamsAsProps();
+        args.put("filterPlugins", "no");
+        centeredBlock.add(srvLink(myServletDescr(), "here", args));
+        centeredBlock.add(" to see the complete list.");
       }
     }
     page.add(centeredBlock);
@@ -1884,7 +1912,7 @@ public class ServeContent extends LockssServlet {
   boolean areAnyExcluded(Collection<ArchivalUnit> auList, Predicate pred) {
     for (ArchivalUnit au : auList) {
       if (!pred.evaluate(au)) {
-	return true;
+        return true;
       }
     }
     return false;
@@ -1893,7 +1921,7 @@ public class ServeContent extends LockssServlet {
   boolean areAllExcluded(Collection<ArchivalUnit> auList, Predicate pred) {
     for (ArchivalUnit au : auList) {
       if (pred.evaluate(au)) {
-	return false;
+        return false;
       }
     }
     return true;
@@ -1901,25 +1929,25 @@ public class ServeContent extends LockssServlet {
 
   // true of non-registry AUs, or all AUs if includeInternalAus
   Predicate allAusPred = new Predicate() {
-      public boolean evaluate(Object obj) {
-	return includeInternalAus
-	  || !pluginMgr.isInternalAu((ArchivalUnit)obj);
-      }};
+    public boolean evaluate(Object obj) {
+      return includeInternalAus
+             || !pluginMgr.isInternalAu((ArchivalUnit)obj);
+    }};
 
   // true of AUs belonging to plugins included by includePlugins and
   // excludePlugins
   Predicate enabledAusPred = new Predicate() {
-      public boolean evaluate(Object obj) {
-	return isIncludedAu((ArchivalUnit)obj);
-      }};
+    public boolean evaluate(Object obj) {
+      return isIncludedAu((ArchivalUnit)obj);
+    }};
 
   static enum PubState {
     KnownDown,
-      RecentlyDown,
-      NoContent,
-      Unknown() {
+    RecentlyDown,
+    NoContent,
+    Unknown() {
       public boolean mightHaveContent() {
-	return true;
+        return true;
       }
     };
     public boolean mightHaveContent() {
