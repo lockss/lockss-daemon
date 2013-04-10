@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -24,7 +24,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-	<string>6</string>
+	<string>7</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -86,6 +86,10 @@
       <string>2,&quot;^%sdoi/[^/]+/[^/]+/[-.9]+$&quot;, base_url</string>
       <string>2,&quot;^%sdoi/(citedby/|.*\?tab=permissions)&quot;, base_url</string>
       <string>1,&quot;^%s(action/showPopup\?|doi/)&quot;, base_url</string>
+<!--  replace the previous crawl rule with the following two once forms crawling is in  
+      <string>1,&quot;^%sdoi/&quot;, base_url</string>
+      <string>1,&quot;^%saction/(showCitFormats|downloadCitation|showPopup)\?|&quot;, base_url</string>
+-->
     </list>
   </entry>
   <entry>

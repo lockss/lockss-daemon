@@ -123,12 +123,18 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     				  // page range separated by hyphen
     				  if (biblioInfo[k].contains("-")) {
     					  spage = biblioInfo[k].substring("pp. ".length(), biblioInfo[k].indexOf("-"));
-    					  epage = biblioInfo[k].substring(biblioInfo[k].indexOf('-'), biblioInfo[k].length());
+    					  epage = biblioInfo[k].substring(biblioInfo[k].indexOf('-')+1, biblioInfo[k].length());
     				  }
-                      // page range separated by en-dash - unicode 2013
+    	                      // page range separated by en-dash - unicode 2013
                                   else if (biblioInfo[k].contains("\u2013")) {
                           spage = biblioInfo[k].substring("pp. ".length(), biblioInfo[k].indexOf("\u2013"));
-                          epage = biblioInfo[k].substring(biblioInfo[k].indexOf("\u2013"), biblioInfo[k].length());
+                          epage = biblioInfo[k].substring(biblioInfo[k].indexOf("\u2013")+1, biblioInfo[k].length());
+                                  }
+                              // page range separated by three characters (decimal 226 218 147)
+    			      // (e.g. "Journal of Pharmacy Teaching" Vol. 1, No. 2 dc.Identifier)
+                                  else if (biblioInfo[k].contains("\u00E2\u0080\u0093")) {
+                          spage = biblioInfo[k].substring("pp. ".length(), biblioInfo[k].indexOf("\u00E2\u0080\u0093"));
+                          epage = biblioInfo[k].substring(biblioInfo[k].indexOf("\u00E2\u0080\u0093")+3, biblioInfo[k].length());
     				  }
     				  // page range is single page
     				  else {
@@ -163,8 +169,9 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     		  am.put(MetadataField.FIELD_VOLUME, volume);
               am.put(MetadataField.FIELD_ISSUE, issue);
               am.put(MetadataField.FIELD_START_PAGE, spage);
+              am.put(MetadataField.FIELD_END_PAGE, epage);
     	  }
-    	  else if (MetadataUtil.isDOI(cookedIdentifierList.get(j))) {
+    	  else if (MetadataUtil.isDoi(cookedIdentifierList.get(j))) {
     		  doi = cookedIdentifierList.get(j);
     		  am.put(MetadataField.FIELD_DOI, doi);
     	  }
