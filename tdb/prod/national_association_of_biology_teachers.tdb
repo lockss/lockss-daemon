@@ -26,12 +26,11 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = ambt
-      comment[notReady] = metadata mismatch, retest later
   
       au < released ; 2000 ; The American Biology Teacher Volume 62 ; 62 >
       au < released ; 2001 ; The American Biology Teacher Volume 63 ; 63 >
       au < released ; 2002 ; The American Biology Teacher Volume 64 ; 64 >
-      au < notReady ; 2003 ; The American Biology Teacher Volume 65 ; 65 >
+      au < ready ; 2003 ; The American Biology Teacher Volume 65 ; 65 >
       au < doNotProcess ; 2004 ; The American Biology Teacher Volume 66 ; 66 >
       au < released ; 2005 ; The American Biology Teacher Volume 67 ; 67 >
       au < released ; 2006 ; The American Biology Teacher Volume 68 ; 68 >
