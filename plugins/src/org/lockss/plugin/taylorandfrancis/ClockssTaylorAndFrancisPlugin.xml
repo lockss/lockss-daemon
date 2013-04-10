@@ -86,7 +86,7 @@
       <string>2,&quot;^%sdoi/[^/]+/[^/]+/[-.9]+$&quot;, base_url</string>
       <string>2,&quot;^%sdoi/(citedby/|.*\?tab=permissions)&quot;, base_url</string>
       <string>1,&quot;^%sdoi/&quot;, base_url</string>
-      <string>1,&quot;^%saction/(showCitFormats|downloadCitation|showPopup)\?|&quot;, base_url</string>
+      <string>1,&quot;^%saction/(showCitFormats|downloadCitation|showPopup)\?&quot;, base_url</string>
     </list>
   </entry>
   <entry>
