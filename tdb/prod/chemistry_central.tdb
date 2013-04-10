@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Chemistry Central
+    name = Chemistry Central;
+    info[tester] = 4
   >
   
   rights = openaccess

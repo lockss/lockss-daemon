@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Co-Action Publishing
+    name = Co-Action Publishing ;
+    info[tester] = 4
   >
 
   comment[notReady] = RU issue 3836, RT 976
