@@ -85,11 +85,8 @@
       <string>1,&quot;^%stoc/%s/%s/&quot;, base_url, journal_id, volume_name</string>
       <string>2,&quot;^%sdoi/[^/]+/[^/]+/[-.9]+$&quot;, base_url</string>
       <string>2,&quot;^%sdoi/(citedby/|.*\?tab=permissions)&quot;, base_url</string>
-      <string>1,&quot;^%s(action/showPopup\?|doi/)&quot;, base_url</string>
-<!--  replace the previous crawl rule with the following two once forms crawling is in  
       <string>1,&quot;^%sdoi/&quot;, base_url</string>
       <string>1,&quot;^%saction/(showCitFormats|downloadCitation|showPopup)\?|&quot;, base_url</string>
--->
     </list>
   </entry>
   <entry>
