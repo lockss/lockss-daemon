@@ -161,7 +161,7 @@
   {
   
     title < 
-      name = (Joint Transportation Research Program) JTRP Technical Reports ;
+      name = JTRP Technical Reports ;
       issn = 2326-6325 
     >
     
@@ -170,6 +170,7 @@
     param[journal_abbr] = jtrp
     implicit < status ; status2 ; year ; name ; param[volume] >
     comment[doNotProcess] = publisher to fix manifest pages RT4593
+    comment[1] = Abbreviation stands for Joint Transportation Research Program
 
     au < doNotProcess ; exists ; 1987 ; JTRP Other Publications and Reports Volume 1987 ; 1987 >
     au < doNotProcess ; exists ; 2008 ; JTRP Other Publications and Reports Volume 2008 ; 2008 >
