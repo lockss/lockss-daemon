@@ -2,7 +2,7 @@
 
   publisher <
     name = Portland Press ;
-    info[tester] = 7
+    info[tester] = 8
   >
   
   plugin = org.lockss.plugin.portlandpress.PortlandPressPlugin
@@ -336,7 +336,7 @@ comment[bj1] = no permission from publisher
     au < released ; 1995 ; Biochemical Journal Volume 311 ; 311 >
     au < released ; 1995 ; Biochemical Journal Volume 312 ; 312 >
     au < released ; 1996 ; Biochemical Journal Volume 313 ; 313 >
-    au < notReady ; 1996 ; Biochemical Journal Volume 314 ; 314 >
+    au < testing ; 1996 ; Biochemical Journal Volume 314 ; 314 >
     au < released ; 1996 ; Biochemical Journal Volume 315 ; 315 >
     au < released ; 1996 ; Biochemical Journal Volume 316 ; 316 >
     au < released ; 1996 ; Biochemical Journal Volume 317 ; 317 >
@@ -357,9 +357,9 @@ comment[bj1] = no permission from publisher
     au < released ; 1998 ; Biochemical Journal Volume 332 ; 332 >
     au < released ; 1998 ; Biochemical Journal Volume 333 ; 333 >
     au < released ; 1998 ; Biochemical Journal Volume 334 ; 334 >
-    au < notReady ; 1998 ; Biochemical Journal Volume 335 ; 335 >
+    au < testing ; 1998 ; Biochemical Journal Volume 335 ; 335 >
     au < released ; 1998 ; Biochemical Journal Volume 336 ; 336 >
-    au < notReady ; 1999 ; Biochemical Journal Volume 337 ; 337 >
+    au < testing ; 1999 ; Biochemical Journal Volume 337 ; 337 >
     au < released ; 1999 ; Biochemical Journal Volume 338 ; 338 >
     au < released ; 1999 ; Biochemical Journal Volume 339 ; 339 >
     au < released ; 1999 ; Biochemical Journal Volume 340 ; 340 >
@@ -384,9 +384,9 @@ comment[bj1] = no permission from publisher
     au < released ; 2001 ; Biochemical Journal Volume 359 ; 359 >
     au < released ; 2001 ; Biochemical Journal Volume 360 ; 360 >
     au < released ; 2002 ; Biochemical Journal Volume 361 ; 361 >
-    au < notReady ; 2002 ; Biochemical Journal Volume 362 ; 362 >
-    au < notReady ; 2002 ; Biochemical Journal Volume 363 ; 363 >
-    au < notReady ; 2002 ; Biochemical Journal Volume 364 ; 364 >
+    au < testing ; 2002 ; Biochemical Journal Volume 362 ; 362 >
+    au < testing ; 2002 ; Biochemical Journal Volume 363 ; 363 >
+    au < testing ; 2002 ; Biochemical Journal Volume 364 ; 364 >
     au < released ; 2002 ; Biochemical Journal Volume 365 ; 365 >
     au < released ; 2002 ; Biochemical Journal Volume 366 ; 366 >
     au < released ; 2002 ; Biochemical Journal Volume 367 ; 367 >
