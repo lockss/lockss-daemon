@@ -637,6 +637,8 @@
         issnl = 0022-538X
       >
       param[base_url] = http://jvi.asm.org/
+      
+      comment[notReady] = V86 500 Internal Server Error (non-fatal) http://jvi.asm.org/content/86/23/12879/F1.large.jpg
   
       au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of Virology Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of Virology Volume 2 ; 2 >
@@ -723,7 +725,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Journal of Virology Volume 83 ; 83 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Virology Volume 84 ; 84 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Virology Volume 85 ; 85 >
-      au < HighWirePressH20Plugin ; testing ; 2012 ; Journal of Virology Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; notReady ; 2012 ; Journal of Virology Volume 86 ; 86 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Virology Volume 87 ; 87 >
   
     }
