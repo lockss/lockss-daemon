@@ -2,7 +2,8 @@
 
   publisher <
     name = Accreditation Council for Graduate Medical Education ;
-    comment[platform] = Atypon
+    comment[platform] = Atypon ;
+    info[tester] = 0
   >
   
   plugin = needs.plugin
