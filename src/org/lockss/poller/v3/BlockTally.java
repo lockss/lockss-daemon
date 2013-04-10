@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.25 2013-04-09 23:47:00 barry409 Exp $
+ * $Id: BlockTally.java,v 1.26 2013-04-10 16:34:03 barry409 Exp $
  */
 
 /*
@@ -115,9 +115,9 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
       result = BlockTally.Result.WON;
     } else if (disagreeVoters.size() >= landslideMinimum) {
       // Which kind of LOST?
-      if (pollerOnlyVoters.size() >= quorum) {
+      if (pollerOnlyVoters.size() >= landslideMinimum) {
 	result = BlockTally.Result.LOST_POLLER_ONLY_BLOCK;
-      } else if (voterOnlyVoters.size() >= quorum) {
+      } else if (voterOnlyVoters.size() >= landslideMinimum) {
 	result = BlockTally.Result.LOST_VOTER_ONLY_BLOCK;
       } else {
 	result = BlockTally.Result.LOST;

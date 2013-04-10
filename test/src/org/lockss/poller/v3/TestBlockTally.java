@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockTally.java,v 1.15 2013-04-09 23:47:00 barry409 Exp $
+ * $Id: TestBlockTally.java,v 1.16 2013-04-10 16:34:03 barry409 Exp $
  */
 
 /*
@@ -202,14 +202,13 @@ public class TestBlockTally extends LockssTestCase {
     tally.addDisagreeVoter(testPeers[3]);
     assertEquals(BlockTally.Result.LOST, tally.getTallyResult(4, 75));
 
-    // Note: a landslide of voters say it doesn't exist, yet a repair
-    // will be requested from a random voter. This is wrong.
     tally = new BlockTally();
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addPollerOnlyVoter(testPeers[1]);
     tally.addPollerOnlyVoter(testPeers[2]);
     tally.addDisagreeVoter(testPeers[3]);
-    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(4, 75));
+    assertEquals(BlockTally.Result.LOST_POLLER_ONLY_BLOCK,
+		 tally.getTallyResult(4, 75));
 
     tally = new BlockTally();
     tally.addPollerOnlyVoter(testPeers[0]);
@@ -219,9 +218,9 @@ public class TestBlockTally extends LockssTestCase {
     assertEquals(BlockTally.Result.LOST_POLLER_ONLY_BLOCK,
 		 tally.getTallyResult(4, 75));
 
-    // The LOST_POLLER_ONLY_BLOCK result is returned when the number
-    // of "poller only" voters is greater than the quorum, even if
-    // there are a lot of disagree voters. This is wrong.
+    // Test regression: BlockTally had been testing poller-only voters
+    // against the quorum rather than the landslide. Test that it
+    // behaves correctly now.
     tally = new BlockTally();
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addPollerOnlyVoter(testPeers[1]);
@@ -233,8 +232,7 @@ public class TestBlockTally extends LockssTestCase {
     tally.addDisagreeVoter(testPeers[7]);
     tally.addDisagreeVoter(testPeers[8]);
     tally.addDisagreeVoter(testPeers[9]);
-    assertEquals(BlockTally.Result.LOST_POLLER_ONLY_BLOCK,
-		 tally.getTallyResult(4, 75));
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(4, 75));
 
     tally = new BlockTally();
     tally.addPollerOnlyVoter(testPeers[0]);
