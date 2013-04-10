@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Expert Reviews
+    name = Expert Reviews ;
+    info[tester] = 0
   >
 
   plugin = needs.plugin

@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = International Union Against Tuberculosis and Lung Disease 
+    name = International Union Against Tuberculosis and Lung Disease ;
+    info[tester] = 7
   >
 
   plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin

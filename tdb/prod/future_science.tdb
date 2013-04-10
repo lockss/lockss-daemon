@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Future Science
+    name = Future Science ;
+    info[tester] = 0
   >
 
   plugin = needs.plugin

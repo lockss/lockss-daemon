@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Dove Medical Press
+    name = Dove Medical Press ;
+    info[tester] = 7
   >
 
   plugin = needs.plugin

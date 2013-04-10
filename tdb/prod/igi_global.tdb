@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = IGI Global
+    name = IGI Global ;
+    info[tester] = 7
   >
 
   plugin = org.lockss.plugin.igiglobal.IgiGlobalPlugin
