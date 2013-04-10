@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Clay Minerals Society
+    name = Clay Minerals Society ;
+    info[tester] = 7
   >
 
 	plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin 
