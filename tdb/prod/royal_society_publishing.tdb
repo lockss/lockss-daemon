@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Royal Society Publishing
+    name = Royal Society Publishing ;
+    info[tester] = 7
   >
 
   plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin

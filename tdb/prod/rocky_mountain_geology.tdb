@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Rocky Mountain Geology
+    name = Rocky Mountain Geology ;
+    info[tester] = 7
   >
   
   plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin

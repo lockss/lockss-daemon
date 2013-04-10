@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Libertas Academica
+    name = Libertas Academica ;
+    info[tester] = 7
   >
 
   plugin = org.lockss.plugin.maffey.MaffeyPlugin

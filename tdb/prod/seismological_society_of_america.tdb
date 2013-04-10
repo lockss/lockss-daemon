@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Seismological Society of America
+    name = Seismological Society of America ;
+    info[tester] = 4
   >
   
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin

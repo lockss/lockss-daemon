@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Manchester University Press
+    name = Manchester University Press ;
+    info[tester] = 7
   >
   
   implicit < status ; year ; name ; param[volume_name] >
