@@ -1,6 +1,6 @@
 {
   publisher <
-    name = African Studies Program, University of Wisconsin-Madison
+    name = University of Wisconsin-Madison African Studies Program
   >
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
@@ -21,6 +21,7 @@
     >
 
     au < manifest ; 2008 ; African Economic History Volume 36 ; 36 >
+    au < manifest ; 2009 ; African Economic History Volume 37 ; 37 >
     au < manifest ; 2010 ; African Economic History Volume 38 ; 38 >
 
     }
