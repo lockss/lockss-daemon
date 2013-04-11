@@ -3754,7 +3754,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[continues] = 0272-4936 
     
-    au < manifest ; exists ; 2012 ; Paediatrics and International Child Health Volume 32 ; 32 >
+    au < crawling ; exists ; 2012 ; Paediatrics and International Child Health Volume 32 ; 32 >
     au < manifest ; exists ; 2013 ; Paediatrics and International Child Health Volume 33 ; 33 >
     
   }
@@ -3866,7 +3866,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[continued_from] = 0003-4983
     
-    au < manifest ; exists ; 2012 ; Pathogens and Global Health Volume 106 ; 106 >
+    au < crawling ; exists ; 2012 ; Pathogens and Global Health Volume 106 ; 106 >
     au < manifest ; exists ; 2013 ; Pathogens and Global Health Volume 107 ; 107 >
     
   }
