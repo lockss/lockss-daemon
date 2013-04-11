@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.133 2013-04-09 21:48:16 barry409 Exp $
+ * $Id: V3Poller.java,v 1.134 2013-04-11 00:00:15 barry409 Exp $
  */
 
 /*
@@ -407,11 +407,8 @@ public class V3Poller extends BasePoll {
   // The length, in ms., to hold the poll open past normal closing if
   // a little extra poll time is required to wait for pending repairs. 
   private long extraPollTime = DEFAULT_V3_EXTRA_POLL_TIME;
-  private int quorum;
   private int sampleModulus = 0;
   private byte[] sampleNonce = null;
-  private int voteMargin;
-  private int outerCircleTarget;
   private int maxRepairs = DEFAULT_MAX_REPAIRS;
   private long voteDeadlinePadding = DEFAULT_VOTE_DURATION_PADDING;
   private long hashBytesBeforeCheckpoint =
@@ -489,6 +486,12 @@ public class V3Poller extends BasePoll {
     this.serializer = new V3PollerSerializer(theDaemon);
     long pollEnd = TimeBase.nowMs() + duration;
 
+    Configuration c = ConfigManager.getCurrentConfig();
+    int outerCircleTarget = c.getInt(PARAM_TARGET_OUTER_CIRCLE_SIZE,
+				     DEFAULT_TARGET_OUTER_CIRCLE_SIZE);
+    int quorum = c.getInt(PARAM_QUORUM, DEFAULT_QUORUM);
+    int voteMargin = c.getInt(PARAM_V3_VOTE_MARGIN, DEFAULT_V3_VOTE_MARGIN);
+
     pollerState = new PollerStateBean(spec, orig, key,
 				      duration, pollEnd,
                                       outerCircleTarget,
@@ -557,12 +560,11 @@ public class V3Poller extends BasePoll {
     log.debug2("Restored serialized poll " + pollerState.getPollKey());
   }
 
-  void setConfig() {
+  private void setConfig() {
+    // All of these parameters are latched from the current
+    // configuration when the V3Poller is created, either initially or
+    // from a saved checkpoint.
     Configuration c = ConfigManager.getCurrentConfig();
-    outerCircleTarget = c.getInt(PARAM_TARGET_OUTER_CIRCLE_SIZE,
-                                 DEFAULT_TARGET_OUTER_CIRCLE_SIZE);
-    quorum = c.getInt(PARAM_QUORUM, DEFAULT_QUORUM);
-    voteMargin = c.getInt(PARAM_V3_VOTE_MARGIN, DEFAULT_V3_VOTE_MARGIN);
     dropEmptyNominators = c.getBoolean(PARAM_DROP_EMPTY_NOMINATIONS,
                                        DEFAULT_DROP_EMPTY_NOMINATIONS);
     deleteExtraFiles = c.getBoolean(PARAM_DELETE_EXTRA_FILES,
@@ -1326,8 +1328,7 @@ public class V3Poller extends BasePoll {
     
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
     BlockTally.Result tallyResult =
-      tally.getTallyResult(pollerState.getQuorum(),
-			   pollerState.getVoteMargin());
+      tally.getTallyResult(getQuorum(), getVoteMargin());
 
     // Update the TallyStatus only for quorate polls.
     // todo(bhayes): Is that as it should be?
@@ -1392,8 +1393,7 @@ public class V3Poller extends BasePoll {
     // If there isn't a quorum of voters, do no repairs or deletes.
     if (hasQuorum()) {
       BlockTally.Result tallyResult =
-	tally.getTallyResult(pollerState.getQuorum(),
-			     pollerState.getVoteMargin());
+	tally.getTallyResult(getQuorum(), getVoteMargin());
       switch(tallyResult) {
       case WON:
 	break;
@@ -2093,7 +2093,7 @@ public class V3Poller extends BasePoll {
   }
 
   int getTargetSize() {
-    return (int)Math.ceil(quorum * targetSizeQuorumMultiplier);
+    return (int)Math.ceil(getQuorum() * targetSizeQuorumMultiplier);
   }
 
   int getInvitationSize(int targetSize) {
