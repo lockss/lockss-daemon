@@ -115,13 +115,12 @@
     param[journal_id] = ojphi
     
     implicit < status ; year ; name ; volume ; param[year] >
-    comment[0] = RU3806 (substance checker problem)
 
     au < released ; 2009 ; Online Journal of Public Health Informatics Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Online Journal of Public Health Informatics Volume 3 ; 3 ; 2011 >
     au < released ; 2012 ; Online Journal of Public Health Informatics Volume 4 ; 4 ; 2012 >
-    au < expected ; 2013 ; Online Journal of Public Health Informatics Volume 5 ; 5 ; 2013 >
+    au < manifest ; 2013 ; Online Journal of Public Health Informatics Volume 5 ; 5 ; 2013 >
 
   }
 

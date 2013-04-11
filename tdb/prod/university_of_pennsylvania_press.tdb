@@ -20,7 +20,7 @@
 
     au < released ; 2011 ; Change Over Time Volume 1 ; 1 >
     au < released ; 2012 ; Change Over Time Volume 2 ; 2 >
-    au < expected ; 2013 ; Change Over Time Volume 3 ; 3 >
+    au < manifest ; 2013 ; Change Over Time Volume 3 ; 3 >
 
   }
 
@@ -39,7 +39,7 @@
     au < released ; 2010 ; Dissent Volume 57 ; 57 >
     au < released ; 2011 ; Dissent Volume 58 ; 58 >
     au < released ; 2012 ; Dissent Volume 59 ; 59 >
-    au < expected ; 2013 ; Dissent Volume 60 ; 60 >
+    au < manifest ; 2013 ; Dissent Volume 60 ; 60 >
 
   }
 
@@ -64,7 +64,7 @@
     au < released ; 2010 ; Early American Studies: An Interdisciplinary Journal Volume 8 ; 8 >
     au < released ; 2011 ; Early American Studies: An Interdisciplinary Journal Volume 9 ; 9 >
     au < released ; 2012 ; Early American Studies: An Interdisciplinary Journal Volume 10 ; 10 >
-    au < expected ; 2013 ; Early American Studies: An Interdisciplinary Journal Volume 11 ; 11 >
+    au < manifest ; 2013 ; Early American Studies: An Interdisciplinary Journal Volume 11 ; 11 >
 
   }
 
@@ -86,7 +86,7 @@
     au < released ; 2010 ; The Eighteenth Century Volume 51 ; 51 >
     au < released ; 2011 ; The Eighteenth Century Volume 52 ; 52 >
     au < released ; 2012 ; The Eighteenth Century Volume 53 ; 53 >
-    au < expected ; 2013 ; The Eighteenth Century Volume 54 ; 54 >
+    au < manifest ; 2013 ; The Eighteenth Century Volume 54 ; 54 >
 
   }
 
@@ -109,7 +109,7 @@
     au < released ; 2010 ; Hispanic Review Volume 78 ; 78 >
     au < released ; 2011 ; Hispanic Review Volume 79 ; 79 >
     au < released ; 2012 ; Hispanic Review Volume 80 ; 80 >
-    au < expected ; 2013 ; Hispanic Review Volume 81 ; 81 >
+    au < manifest ; 2013 ; Hispanic Review Volume 81 ; 81 >
 
   }
 
@@ -127,7 +127,7 @@
     au < released ; 2010 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 1 ; 1 >
     au < released ; 2011 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 2 ; 2 >
     au < released ; 2012 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 3 ; 3 >
-    au < expected ; 2013 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 4 ; 4 >
+    au < manifest ; 2013 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 4 ; 4 >
 
   }
 
@@ -141,9 +141,10 @@
     >
 
     param[journal_dir] = the_journal_of_nineteenth_century_americanists
-    attr[journal_id] = 
+    attr[journal_id] = jnc
+    comment[notReady] = website is not up yet on 4/11/2013
 
-    au < expected ; 2013 ; J19: The Journal of Nineteenth-Century Americanists Volume 1 ; 1 >
+    au < notReady ; 2013 ; J19: The Journal of Nineteenth-Century Americanists Volume 1 ; 1 >
 
   }
 
@@ -166,7 +167,7 @@
     au < released ; 2010 ; Jewish Quarterly Review Volume 100 ; 100 >
     au < released ; 2011 ; Jewish Quarterly Review Volume 101 ; 101 >
     au < released ; 2012 ; Jewish Quarterly Review Volume 102 ; 102 >
-    au < expected ; 2013 ; Jewish Quarterly Review Volume 103 ; 103 >
+    au < manifest ; 2013 ; Jewish Quarterly Review Volume 103 ; 103 >
 
   }
 
@@ -190,7 +191,7 @@
     au < released ; 2010 ; Journal for Early Modern Cultural Studies Volume 10 ; 10 >
     au < released ; 2011 ; Journal for Early Modern Cultural Studies Volume 11 ; 11 >
     au < released ; 2012 ; Journal for Early Modern Cultural Studies Volume 12 ; 12 >
-    au < expected ; 2013 ; Journal for Early Modern Cultural Studies Volume 13 ; 13 >
+    au < manifest ; 2013 ; Journal for Early Modern Cultural Studies Volume 13 ; 13 >
 
   }
 
@@ -213,7 +214,7 @@
     au < released ; 2010 ; Journal of the Early Republic Volume 30 ; 30 >
     au < released ; 2011 ; Journal of the Early Republic Volume 31 ; 31 >
     au < released ; 2012 ; Journal of the Early Republic Volume 32 ; 32 >
-    au < expected ; 2013 ; Journal of the Early Republic Volume 33 ; 33 >
+    au < manifest ; 2013 ; Journal of the Early Republic Volume 33 ; 33 >
 
   }
 
@@ -245,7 +246,7 @@
     au < released ; 2010 ; Journal of the History of Ideas Volume 71 ; 71 >
     au < released ; 2011 ; Journal of the History of Ideas Volume 72 ; 72 >
     au < released ; 2012 ; Journal of the History of Ideas Volume 73 ; 73 >
-    au < expected ; 2013 ; Journal of the History of Ideas Volume 74 ; 74 >
+    au < manifest ; 2013 ; Journal of the History of Ideas Volume 74 ; 74 >
 
   }
 
