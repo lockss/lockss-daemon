@@ -16,12 +16,12 @@
     >
     
     param[journal_id] = naar
-    comment[notReady] = RU4671, pdf files are X X in hash compare
+    comment[notReady] = mismatch placeholder Quick Search
   
     au < testing ; 2006 ; Natural Areas Journal Volume 26 ; 26 >
     au < ready ; 2007 ; Natural Areas Journal Volume 27 ; 27 >
-    au < testing ; 2008 ; Natural Areas Journal Volume 28 ; 28 >
-    au < testing ; 2009 ; Natural Areas Journal Volume 29 ; 29 >
+    au < ready ; 2008 ; Natural Areas Journal Volume 28 ; 28 >
+    au < ready ; 2009 ; Natural Areas Journal Volume 29 ; 29 >
     au < ready ; 2010 ; Natural Areas Journal Volume 30 ; 30 >
     au < ready ; 2011 ; Natural Areas Journal Volume 31 ; 31 >
     au < notReady ; 2012 ; Natural Areas Journal Volume 32 ; 32 >
