@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Society for Judgment and Decision Making ;
-    info[tester] = 1
+    name = Society for Judgment and Decision Making 
   >
 
   {
@@ -18,13 +17,13 @@
     implicit < status ; year ; name ; param[volume_name] >
     
     au < testing ; 2006 ; Judgment and Decision Making Volume 1 ; 1 >
-    au < testing ; 2007 ; Judgment and Decision Making Volume 2 ; 2 >
-    au < testing ; 2008 ; Judgment and Decision Making Volume 3 ; 3 >
-    au < testing ; 2009 ; Judgment and Decision Making Volume 4 ; 4 >
-    au < testing ; 2010 ; Judgment and Decision Making Volume 5 ; 5 >
-    au < testing ; 2011 ; Judgment and Decision Making Volume 6 ; 6 >
-    au < testing ; 2012 ; Judgment and Decision Making Volume 7 ; 7 >
-    au < expected ; 2013 ; Judgment and Decision Making Volume 8 ; 8 >
+    au < manifest ; 2007 ; Judgment and Decision Making Volume 2 ; 2 >
+    au < manifest ; 2008 ; Judgment and Decision Making Volume 3 ; 3 >
+    au < manifest ; 2009 ; Judgment and Decision Making Volume 4 ; 4 >
+    au < manifest ; 2010 ; Judgment and Decision Making Volume 5 ; 5 >
+    au < manifest ; 2011 ; Judgment and Decision Making Volume 6 ; 6 >
+    au < manifest ; 2012 ; Judgment and Decision Making Volume 7 ; 7 >
+    au < manifest ; 2013 ; Judgment and Decision Making Volume 8 ; 8 >
 
   }
 
