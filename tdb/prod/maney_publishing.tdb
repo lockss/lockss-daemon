@@ -260,6 +260,8 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
+    comment[UX] = Complete
+
     au < released ; 2004 ; Arms & Armour Volume 1 ; 1 > 
     au < released ; 2005 ; Arms & Armour Volume 2 ; 2 > 
     au < released ; 2006 ; Arms & Armour Volume 3 ; 3 > 
@@ -344,7 +346,9 @@
     param[journal_issn] = 0969-7950
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 2047-3869 in 2012
-   
+
+    comment[UX] = Complete
+
     au < released ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
 
   }
@@ -366,7 +370,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 1474-8932
  
-    au < released ; 1976-1980 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 17 ; 17 >   
+    au < released ; 1976-1980 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 17 ; 17 > 
     au < released ; 1981-1985 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 18 ; 18 > 
     au < released ; 1986-1989 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 19 ; 19 > 
     au < released ; 1990-1993 ; Bronte Society Transactions: The Journal of Bronte Studies Volume 20 ; 20 > 
