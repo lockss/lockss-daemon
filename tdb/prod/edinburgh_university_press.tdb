@@ -24,11 +24,11 @@
       comment[doNotProcess] = move to Cambridge University Press
       comment[year2005] = Bibliography only
     
-      au < testing ; 2005 ; Africa: The Journal of the International African Institute Bibliography 2005 ; 2005 >
-      au < testing ; 2006 ; Africa: The Journal of the International African Institute Bibliography 2006 ; 2006 >
-      au < testing ; 2007 ; Africa: The Journal of the International African Institute Bibliography 2007 ; 2007 >
-      au < testing ; 2008 ; Africa: The Journal of the International African Institute Bibliography 2008 ; 2008 >
-      au < testing ; 2009 ; Africa: The Journal of the International African Institute Bibliography 2009 ; 2009 >
+      au < ready ; 2005 ; Africa: The Journal of the International African Institute Bibliography 2005 ; 2005 >
+      au < ready ; 2006 ; Africa: The Journal of the International African Institute Bibliography 2006 ; 2006 >
+      au < ready ; 2007 ; Africa: The Journal of the International African Institute Bibliography 2007 ; 2007 >
+      au < ready ; 2008 ; Africa: The Journal of the International African Institute Bibliography 2008 ; 2008 >
+      au < ready ; 2009 ; Africa: The Journal of the International African Institute Bibliography 2009 ; 2009 >
 
       au < doNotProcess ; 2000 ; Africa: The Journal of the International African Institute Volume 70 ; 70 >
       au < doNotProcess ; 2001 ; Africa: The Journal of the International African Institute Volume 71 ; 71 >
@@ -741,7 +741,7 @@
       au < released ; 2009 ; Journal of International Political Theory Volume 5 ; 5 >
       au < released ; 2010 ; Journal of International Political Theory Volume 6 ; 6 >
       au < released ; 2011 ; Journal of International Political Theory Volume 7 ; 7 >
-      au < testing ; 2012 ; Journal of International Political Theory Volume 8 ; 8 >
+      au < ready ; 2012 ; Journal of International Political Theory Volume 8 ; 8 >
       au < manifest ; 2013 ; Journal of International Political Theory Volume 9 ; 9 >
 
     }
