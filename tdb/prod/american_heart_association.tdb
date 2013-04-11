@@ -19,7 +19,7 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2012 ; Journal of the American Heart Association Volume 1 ; 1 >
-      au < testing ; 2013 ; Journal of the American Heart Association Volume 2 ; 2 >
+      au < manifest ; 2013 ; Journal of the American Heart Association Volume 2 ; 2 >
 
     }
 
@@ -71,7 +71,7 @@
       au < released ; 2010 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 30 ; 30 >
       au < released ; 2011 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 31 ; 31 >
       au < manifest ; 2012 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 32 ; 32 >
-      au < testing ; 2013 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 33 ; 33 >
+      au < manifest ; 2013 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 33 ; 33 >
 
     }
 
@@ -182,14 +182,14 @@
       au < manifest ; 1994 ; Circulation Volume 89 ; 89 >
       au < manifest ; 1994 ; Circulation Volume 90 ; 90 >
       au < manifest ; 1995 ; Circulation Volume 91 ; 91 >
-      au < testing ; 1995 ; Circulation Volume 92 ; 92 >
+      au < ready ; 1995 ; Circulation Volume 92 ; 92 >
       au < testing ; 1996 ; Circulation Volume 93 ; 93 >
-      au < testing ; 1996 ; Circulation Volume 94 ; 94 >
+      au < ready ; 1996 ; Circulation Volume 94 ; 94 >
       au < ready ; 1997 ; Circulation Volume 95 ; 95 >
       au < ready ; 1997 ; Circulation Volume 96 ; 96 >
       au < ready ; 1998 ; Circulation Volume 97 ; 97 >
       au < ready ; 1998 ; Circulation Volume 98 ; 98 >
-      au < testing ; 1999 ; Circulation Volume 99 ; 99 >
+      au < ready ; 1999 ; Circulation Volume 99 ; 99 >
       au < released ; 1999 ; Circulation Volume 100 ; 100 >
       au < released ; 2000 ; Circulation Volume 101 ; 101 >
       au < released ; 2000 ; Circulation Volume 102 ; 102 >
@@ -203,12 +203,12 @@
       au < released ; 2004 ; Circulation Volume 110 ; 110 >
       au < released ; 2005 ; Circulation Volume 111 ; 111 >
       au < released ; 2005 ; Circulation Volume 112 ; 112 >
-      au < testing ; 2006 ; Circulation Volume 113 ; 113 >
+      au < ready ; 2006 ; Circulation Volume 113 ; 113 >
       au < testing ; 2006 ; Circulation Volume 114 ; 114 >
       au < ready ; 2007 ; Circulation Volume 115 ; 115 >
       au < ready ; 2007 ; Circulation Volume 116 ; 116 >
       au < ready ; 2008 ; Circulation Volume 117 ; 117 >
-      au < testing ; 2008 ; Circulation Volume 118 ; 118 >
+      au < ready ; 2008 ; Circulation Volume 118 ; 118 >
       au < ready ; 2009 ; Circulation Volume 119 ; 119 >
       au < ready ; 2009 ; Circulation Volume 120 ; 120 >
       au < ready ; 2010 ; Circulation Volume 121 ; 121 >
@@ -217,7 +217,7 @@
       au < testing ; 2011 ; Circulation Volume 124 ; 124 >
       au < testing ; 2012 ; Circulation Volume 125 ; 125 >
       au < testing ; 2012 ; Circulation Volume 126 ; 126 >
-      au < testing ; 2013 ; Circulation Volume 127 ; 127 >
+      au < manifest ; 2013 ; Circulation Volume 127 ; 127 >
 
     }
 
@@ -348,7 +348,7 @@
       au < manifest ; 2011 ; Circulation Research Volume 109 ; 109 >
       au < manifest ; 2012 ; Circulation Research Volume 110 ; 110 >
       au < manifest ; 2012 ; Circulation Research Volume 111 ; 111 >
-      au < testing ; 2013 ; Circulation Research Volume 112 ; 112 >
+      au < manifest ; 2013 ; Circulation Research Volume 112 ; 112 >
       au < expected ; 2013 ; Circulation Research Volume 113 ; 113 >
 
     }
@@ -374,7 +374,7 @@
       au < manifest ; 2010 ; Circulation: Arrhythmia and Electrophysiology Volume 3 ; 3 >
       au < manifest ; 2011 ; Circulation: Arrhythmia and Electrophysiology Volume 4 ; 4 >
       au < manifest ; 2012 ; Circulation: Arrhythmia and Electrophysiology Volume 5 ; 5 >
-      au < testing ; 2013 ; Circulation: Arrhythmia and Electrophysiology Volume 6 ; 6 >
+      au < manifest ; 2013 ; Circulation: Arrhythmia and Electrophysiology Volume 6 ; 6 >
 
     }
 
@@ -399,7 +399,7 @@
       au < manifest ; 2010 ; Circulation: Cardiovascular Genetics Volume 3 ; 3 >
       au < manifest ; 2011 ; Circulation: Cardiovascular Genetics Volume 4 ; 4 >
       au < manifest ; 2012 ; Circulation: Cardiovascular Genetics Volume 5 ; 5 >
-      au < testing ; 2013 ; Circulation: Cardiovascular Genetics Volume 6 ; 6 >
+      au < manifest ; 2013 ; Circulation: Cardiovascular Genetics Volume 6 ; 6 >
 
     }
 
@@ -424,7 +424,7 @@
       au < manifest ; 2010 ; Circulation: Cardiovascular Imaging Volume 3 ; 3 >
       au < manifest ; 2011 ; Circulation: Cardiovascular Imaging Volume 4 ; 4 >
       au < manifest ; 2012 ; Circulation: Cardiovascular Imaging Volume 5 ; 5 >
-      au < testing ; 2013 ; Circulation: Cardiovascular Imaging Volume 6 ; 6 >
+      au < manifest ; 2013 ; Circulation: Cardiovascular Imaging Volume 6 ; 6 >
 
     }
 
@@ -449,7 +449,7 @@
       au < manifest ; 2010 ; Circulation: Cardiovascular Interventions Volume 3 ; 3 >
       au < manifest ; 2011 ; Circulation: Cardiovascular Interventions Volume 4 ; 4 >
       au < manifest ; 2012 ; Circulation: Cardiovascular Interventions Volume 5 ; 5 >
-      au < testing ; 2013 ; Circulation: Cardiovascular Interventions Volume 6 ; 6 >
+      au < manifest ; 2013 ; Circulation: Cardiovascular Interventions Volume 6 ; 6 >
 
     }
 
@@ -474,7 +474,7 @@
       au < manifest ; 2010 ; Circulation: Cardiovascular Quality and Outcomes Volume 3 ; 3 >
       au < manifest ; 2011 ; Circulation: Cardiovascular Quality and Outcomes Volume 4 ; 4 >
       au < manifest ; 2012 ; Circulation: Cardiovascular Quality and Outcomes Volume 5 ; 5 >
-      au < testing ; 2013 ; Circulation: Cardiovascular Quality and Outcomes Volume 6 ; 6 >
+      au < manifest ; 2013 ; Circulation: Cardiovascular Quality and Outcomes Volume 6 ; 6 >
 
     }
 
@@ -499,7 +499,7 @@
       au < manifest ; 2010 ; Circulation: Heart Failure Volume 3 ; 3 >
       au < manifest ; 2011 ; Circulation: Heart Failure Volume 4 ; 4 >
       au < manifest ; 2012 ; Circulation: Heart Failure Volume 5 ; 5 >
-      au < testing ; 2013 ; Circulation: Heart Failure Volume 6 ; 6 >
+      au < manifest ; 2013 ; Circulation: Heart Failure Volume 6 ; 6 >
 
     }
 
@@ -579,7 +579,7 @@
       au < manifest ; 2011 ; Hypertension Volume 58 ; 58 >
       au < manifest ; 2012 ; Hypertension Volume 59 ; 59 >
       au < manifest ; 2012 ; Hypertension Volume 60 ; 60 >
-      au < testing ; 2013 ; Hypertension Volume 61 ; 61 >
+      au < manifest ; 2013 ; Hypertension Volume 61 ; 61 >
 
     }
 
@@ -642,7 +642,7 @@
       au < manifest ; 2010 ; Stroke Volume 41 ; 41 >
       au < manifest ; 2011 ; Stroke Volume 42 ; 42 >
       au < manifest ; 2012 ; Stroke Volume 43 ; 43 >
-      au < testing ; 2013 ; Stroke Volume 44 ; 44 >
+      au < manifest ; 2013 ; Stroke Volume 44 ; 44 >
 
     }
 
