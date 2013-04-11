@@ -1,4 +1,4 @@
-/* $Id: ClockssNRCResearchPressHtmlCrawlFilterFactory.java,v 1.1 2013-04-03 22:53:30 aishizaki Exp $
+/* $Id: ClockssNRCResearchPressHtmlCrawlFilterFactory.java,v 1.2 2013-04-11 20:15:02 aishizaki Exp $
  */
 
 /*
@@ -61,11 +61,12 @@ public class ClockssNRCResearchPressHtmlCrawlFilterFactory implements FilterFact
       HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-right"),
       //  strip below the main title with links to Home, About, Journals, etc...
       HtmlNodeFilters.tagWithAttribute("div", "id", "nav-wrapper"),
-      //   center area above the current issue (has links to prev/next/all issues)
+      // from issue TOC (e.g. http://www.nrcresearchpress.com/toc/cgj/36/5)
+      // center area above the current issue (has links to prev/next/all issues)
       HtmlNodeFilters.tagWithAttribute("div", "class", "box-pad border-gray margin-bottom clearfix"),
       //   area with links to articles that cite this one
       HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
-      //   spider link in this
+      //   spider link in this tag
       HtmlNodeFilters.tagWithAttribute("span", "id", "hide"),
     };
     return new 

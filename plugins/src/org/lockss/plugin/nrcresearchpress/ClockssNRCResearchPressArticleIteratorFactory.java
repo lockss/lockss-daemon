@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssNRCResearchPressArticleIteratorFactory.java,v 1.1 2013-04-03 22:53:30 aishizaki Exp $
+ * $Id: ClockssNRCResearchPressArticleIteratorFactory.java,v 1.2 2013-04-11 20:15:02 aishizaki Exp $
 
 Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -47,7 +47,7 @@ public class ClockssNRCResearchPressArticleIteratorFactory implements ArticleIte
   protected static final String ROOT_TEMPLATE = "\"%s\",base_url";
   //http://www.nrcresearchpress.com/doi/abs/10.1139/h11-070
   //http://www.nrcresearchpress.com/doi/pdf/10.1139/h11-070
-  protected static final String PATTERN_TEMPLATE = "\"^%sdoi/pdf/\\d+\\.\\d+/\\w[\\d-]+\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"^%sdoi/pdf/\\d+\\.\\d+/\\w+[\\d-]+\", base_url";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -67,9 +67,9 @@ public class ClockssNRCResearchPressArticleIteratorFactory implements ArticleIte
               au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey())),
               Pattern.CASE_INSENSITIVE);
     //http://www.nrcresearchpress.com/doi/pdf/10.1139/h11-070
-    //http://www.nrcresearchpress.com/doi/pdfplus/10.1139/h11-070
+    //http://www.nrcresearchpress.com/doi/pdfplus/10.1139/xxy11-070
     protected Pattern PDF_PATTERN = Pattern.compile(
-              String.format("(%sdoi/)pdf(/\\d+\\.\\d+/\\w[\\d-]+)", 
+              String.format("(%sdoi/)pdf(/\\d+\\.\\d+/\\w+[\\d-]+)", 
               au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey())),
               Pattern.CASE_INSENSITIVE);
     
@@ -132,6 +132,7 @@ public class ClockssNRCResearchPressArticleIteratorFactory implements ArticleIte
       log.debug("guessPdfPlus("+cu+")");
 
       if (cu != null && cu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, cu);
         af.setRoleCu(AtyponArticleFiles.ROLE_FULL_TEXT_PDFPLUS, cu);
       } 
       AuUtil.safeRelease(cu);
@@ -142,7 +143,6 @@ public class ClockssNRCResearchPressArticleIteratorFactory implements ArticleIte
       af.setFullTextCu(cu);
       // roles only need to be set for getting metadata
       if (spec.getTarget() != null && !(spec.getTarget().isArticle())){
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, cu);
         af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
         guessAbstract(af, mat);
         guessFullHtml(af, mat);

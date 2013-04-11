@@ -81,7 +81,7 @@
       <string>1,"^%stoc/%s/%s/", base_url, journal_abbr, volume_name</string>
       <!-- spider link: http://www.nrcresearchpress.com/doi/pdf/10.1046/9999-9999.99999 -->
       <string>2,"^%sdoi/pdf/\d+\.\d+/9999-9999.99999", base_url</string>
-      <string>1,"^%sdoi/(pdf|pdfplus|abs|full|suppl)/\d+\.\d+/[^/]+", base_url</string>
+      <string>1,"^%sdoi/(pdf|pdfplus|abs|full|suppl|ref)/\d+\.\d+/[^/]+", base_url</string>
       <string>2,"^%s(page|action|servlet|loi)/",base_url</string>
       <string>4,"^%s.*%s", base_url, journal_abbr</string>
     </list>
@@ -127,12 +127,10 @@
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
-  <!--
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressHashHtmlFilterFactory</string>
+    <string>org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressHtmlHashFilterFactory</string>
   </entry>
-  -->
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressArticleIteratorFactory</string>
@@ -146,15 +144,13 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressHtmlCrawlFilterFactory</string>
   </entry>
-  <!--
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
-  -->
 </map>    
