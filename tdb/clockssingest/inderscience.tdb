@@ -1472,8 +1472,9 @@
       >
 
       param[journal_issn] = 1740-0554
+      comment[0] = title is not yet published on 4/11/2013
       
-      au < crawling ; exists ; 2012 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
+      au < expected ; exists ; 2012 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
 
     }
 
