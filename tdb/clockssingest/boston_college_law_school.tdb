@@ -173,14 +173,30 @@
     au < released ; crawling ; 2012 ; Boston College Law Review Volume 53 ; 53 >
     au < manifest ; exists ; 2013 ; Boston College Law Review Volume 54 ; 54 >
   }
+  
+  {
+  
+    title <
+      name = Boston College Journal of Law & Social Justice ;
+      issn = 2165Ð5235 
+    >
+    
+    comment[continued_from] = 0276-3583
+    param[journal_abbr] = jlsj
+    
+    au < manifest ; exists ; 2012 ; Boston College Journal of Law & Social Justice Volume 32 ; 32 >
+    au < manifest ; exists ; 2013 ; Boston College Journal of Law & Social Justice Volume 33 ; 33 >
 
+  }
+  
   {
 
     title <
       name = Boston College Third World Law Journal ;
       issn = 0276-3583
     >
-
+	
+	comment[continued_by] = 0276-3583
     param[journal_abbr] = twlj
 
     au < released ; crawling ; 1981 ; Boston College Third World Law Journal Volume 1 ; 1 >
@@ -214,8 +230,7 @@
     au < released ; crawling ; 2009 ; Boston College Third World Law Journal Volume 29 ; 29 >
     au < released ; crawling ; 2010 ; Boston College Third World Law Journal Volume 30 ; 30 >
     au < released ; crawling ; 2011 ; Boston College Third World Law Journal Volume 31 ; 31 >
-    au < expected ; exists ; 2012 ; Boston College Third World Law Journal Volume 32 ; 32 >
-    au < expected ; exists ; 2013 ; Boston College Third World Law Journal Volume 33 ; 33 >
+    
   }
 
 }
