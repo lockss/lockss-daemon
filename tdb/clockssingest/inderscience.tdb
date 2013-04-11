@@ -686,7 +686,7 @@
 
       param[journal_issn] = 1757-8760
       
-      au < manifest ; exists ; 2012 ; International Journal of Auditing Technology Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; International Journal of Auditing Technology Volume 1 ; 1 >
 
     }
 
@@ -814,8 +814,9 @@
       >
 
       param[journal_issn] = 1744-280X
+      comment[0] = title is not yet published on 4/11/2013
 
-      au < manifest ; exists ; 2012 ; International Journal of Aviation Management and Logistics Volume 1 ; 1 >
+      au < expected ; exists ; 2012 ; International Journal of Aviation Management and Logistics Volume 1 ; 1 >
 
     }
 
@@ -1434,7 +1435,7 @@
       
       au < crawling ; exists ; 2009-2010 ; International Journal of Collaborative Enterprise Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Collaborative Enterprise Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; International Journal of Collaborative Enterprise Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; International Journal of Collaborative Enterprise Volume 3 ; 3 >
 
     }
 
@@ -1472,7 +1473,7 @@
 
       param[journal_issn] = 1740-0554
       
-      au < manifest ; exists ; 2012 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
 
     }
 
@@ -4221,7 +4222,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 1 ; 1 >
       au < crawling ; exists ; 2010 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 3 ; 3 >
-      au < manifest ; exists ; 2012 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 4 ; 4 >
+      au < crawling ; exists ; 2012 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 4 ; 4 >
 
     }
 
@@ -4235,8 +4236,9 @@
       >
 
       param[journal_issn] = 1756-0330
+      comment[0] = title is not yet published on 4/11/2013
       
-      au < manifest ; exists ; 2012 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 1 ; 1 >
+      au < expected ; exists ; 2012 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 1 ; 1 >
 
     }
 
@@ -4268,8 +4270,9 @@
       >
 
       param[journal_issn] = 1754-2308
+      comment[0] = title is not yet published on 4/11/2013
       
-      au < manifest ; exists ; 2012 ; International Journal of Lean Enterprise Research Volume 1 ; 1 >
+      au < expected ; exists ; 2012 ; International Journal of Lean Enterprise Research Volume 1 ; 1 >
 
     }
 
@@ -5183,8 +5186,9 @@
       >
 
       param[journal_issn] = 1743-825X
+      comment[0] = title is not yet published up on 4/11/2013
       
-      au < manifest ; exists ; 2012 ; International Journal of Molecular Engineering Volume 1 ; 1 >
+      au < expected ; exists ; 2012 ; International Journal of Molecular Engineering Volume 1 ; 1 >
 
     }
 
@@ -5466,7 +5470,7 @@
       au < manifest ; exists ; 2006-2007 ; International Journal of Nuclear Law Volume 1 ; 1 >
       au < manifest ; exists ; 2008-2009 ; International Journal of Nuclear Law Volume 2 ; 2 >
       au < zapped ; down ; 2010-2011 ; International Journal of Nuclear Law Volume 3 ; 3 >
-      au < manifest ; exists ; 2012 ; International Journal of Nuclear Law Volume 4 ; 4 >
+      au < crawling ; exists ; 2012 ; International Journal of Nuclear Law Volume 4 ; 4 >
 
     }
 
@@ -5480,8 +5484,9 @@
       >
 
       param[journal_issn] = 2043-0337
+      comment[0] = title is not yet published on 4/11/2013
       
-      au < manifest ; exists ; 2012 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 >
+      au < expected ; exists ; 2012 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 >
 
     }
 
@@ -5662,7 +5667,7 @@
       
       au < manifest ; exists ; 2006-2009 ; International Journal of Postharvest Technology and Innovation Volume 1 ; 1 >
       au < zapped ; down ; 2010-2011 ; International Journal of Postharvest Technology and Innovation Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; International Journal of Postharvest Technology and Innovation Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; International Journal of Postharvest Technology and Innovation Volume 3 ; 3 >
 
     }
 
@@ -5715,7 +5720,7 @@
       param[journal_issn] = 1742-4275
       
       au < zapped ; down ; 2011 ; International Journal of Powertrain Volume 1 ; 1 >
-      au < manifest ; exists ; 2012 ; International Journal of Powertrain Volume 2 ; 2 >
+      au < crawling ; exists ; 2012 ; International Journal of Powertrain Volume 2 ; 2 >
 
     }
 
@@ -5839,7 +5844,7 @@
       au < zapped ; down ; 2011 ; International Journal of Product Development Volume 15 ; 15 >
       au < released ; crawling ; 2012 ; International Journal of Product Development Volume 16 ; 16 >
       au < released ; manifest ; 2012 ; International Journal of Product Development Volume 17 ; 17 >
-      au < manifest ; exists ; 2012 ; International Journal of Product Development Volume 18 ; 18 >
+      au < crawling ; exists ; 2012 ; International Journal of Product Development Volume 18 ; 18 >
       au < expected ; exists ; 2013 ; International Journal of Product Development Volume 19 ; 19 >
       au < expected ; exists ; 2013 ; International Journal of Product Development Volume 20 ; 20 >
       au < expected ; exists ; 2013 ; International Journal of Product Development Volume 21 ; 21 >
@@ -6270,7 +6275,7 @@
 
       param[journal_issn] = 2045-1768
       
-      au < manifest ; exists ; 2012 ; International Journal of Service and Computing Oriented Manufacturing Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; International Journal of Service and Computing Oriented Manufacturing Volume 1 ; 1 >
 
     }
 
@@ -7360,7 +7365,7 @@
 
       param[journal_issn] = 2048-8386
       
-      au < manifest ; exists ; 2012 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 >
 
     }
 
@@ -7615,7 +7620,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Water Volume 4 ; 4 >
       au < crawling ; exists ; 2009-2010 ; International Journal of Water Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; International Journal of Water Volume 6 ; 6 >
-      au < manifest ; exists ; 2012 ; International Journal of Water Volume 7 ; 7 >
+      au < crawling ; exists ; 2012 ; International Journal of Water Volume 7 ; 7 >
 
     }
 
