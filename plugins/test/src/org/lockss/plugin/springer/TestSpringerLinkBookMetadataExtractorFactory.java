@@ -28,6 +28,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.springer;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.lockss.config.ConfigManager;
@@ -108,7 +109,7 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     return conf;
   }
 
-  String goodAuthors = "John A. Author; John B. Author";
+  String[] goodAuthors = new String[] {"John A. Author", "John B. Author"};
   String goodVolume = "1234";
   String goodDate = "2010";
   String goodDoi = "10.5555/000-0-000-00000-0";
@@ -173,7 +174,7 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     assertNotNull(md);
 
     assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(goodAuthors, md.get(MetadataField.FIELD_AUTHOR));
+    assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
@@ -185,7 +186,7 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     "<meta name=\"foo\"" +  " content=\"bar\">\n" +
     "  <div id=\"issn\">" +
     "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: " +
-    goodAuthors + " </div>\n";
+    goodAuthors.toString() + " </div>\n";
 
   public void testExtractFromBadContent() throws Exception {
     String url = "http://www.example.com/vol1/issue2/art3/";
@@ -247,7 +248,7 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     log.debug3(md.get(MetadataField.FIELD_ISBN));
     log.debug3("!");
     assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(goodAuthors, md.get(MetadataField.FIELD_AUTHOR));
+    assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals("10.5555/11677437_1", md.get(MetadataField.FIELD_DOI));
@@ -285,7 +286,7 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
           "<div id=\"ContentSecondary\">\n"+
           "<div id=\"Cockpit\">\n";
 
-  String moreAuthors = "Geoffrey I. Author; Second Brain";
+  String[] moreAuthors = new String[] {"Geoffrey I. Author", "Second Brain"};
   public void testTrickierTitle() throws Exception {
     String url = "http://www.example.com/vol1/issue2/art3/";
     MockCachedUrl cu = new MockCachedUrl(url, hau);
@@ -312,7 +313,40 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     log.debug3("!");
     assertEquals("Article Title", md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals("Book Title", md.get(MetadataField.FIELD_JOURNAL_TITLE));
-    assertEquals(moreAuthors, md.get(MetadataField.FIELD_AUTHOR));
+    assertEquals(Arrays.asList(moreAuthors), md.getList(MetadataField.FIELD_AUTHOR));
+  }
+
+  String authorContent =
+      "<div class=\"heading enumeration\">\n" +
+      "<div class=\"text\">\n" +
+      "<h1>\n" +
+      "        PolyE+CTR: A Swiss-Army-Knife Mode for Block Ciphers\n" +
+      "</h1><p class=\"authors\"><a title=\"View content where Author is Liting Zhang\" href=\"/content/?Author=Liting+Zhang\">Liting Zhang</a>" +
+      ", <a title=\"View content where Author is Wenling Wu\" href=\"/content/?Author=Wenling+Wu\">Wenling Wu</a>" +
+      " and <a title=\"View content where Author is Peng Wang\" href=\"/content/?Author=Peng+Wang\">Peng Wang</a></p>\n" +
+      "</div>";
+  
+  public void testJustAuthors() throws Exception {
+    String[] justGoodAuthors = new String[] {"Liting Zhang", "Wenling Wu", "Peng Wang"};
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, hau);
+    cu.setContent(authorContent);
+    cu.setContentSize(authorContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    FileMetadataExtractor me =
+        new SpringerLinkBookMetadataExtractorFactory.SpringerLinkBookMetadataExtractor();
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    FileMetadataListExtractor mle =
+        new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+
+    assertEquals(Arrays.asList(justGoodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
+    
+
   }
 
   /**

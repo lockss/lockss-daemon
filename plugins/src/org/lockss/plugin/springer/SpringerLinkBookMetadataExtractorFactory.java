@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkBookMetadataExtractorFactory.java,v 1.3 2013-03-10 21:01:02 alexandraohlson Exp $
+ * $Id: SpringerLinkBookMetadataExtractorFactory.java,v 1.4 2013-04-11 22:17:21 alexandraohlson Exp $
  */
 
 /*
@@ -161,6 +161,12 @@ public class SpringerLinkBookMetadataExtractorFactory
     	       */
     	      if (MetadataUtil.isIsbn(metadataValues[i], false)) //don't need strict validation, hence the false
     	        am.put(metadataFields[i], metadataValues[i]);
+    	    } else if ((MetadataField.FIELD_AUTHOR).equals(metadataFields[i])) {
+              // store individual values of a multi-valued field
+              String[] values = metadataValues[i].split(";");
+              for (String value : values) {
+                am.put(metadataFields[i], value.trim());
+              }
     	    } else {
     	      am.put(metadataFields[i], metadataValues[i]);
     	    }
