@@ -16,14 +16,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -48,17 +48,21 @@
     <map>
     <entry>
       <string>au_title</string>
-      <string>"%sindex.php/%s", base_url, journal_id</string>
-      <string>"%sindex.php", base_url</string>
-      <string>"%s%s", base_url, journal_id</string>
-      <string>"%s", base_url</string>
+      <list>
+        <string>"%sindex.php/%s", base_url, journal_id</string>
+        <string>"%sindex.php", base_url</string>
+        <string>"%s%s", base_url, journal_id</string>
+        <string>"%s", base_url</string>
+      </list>
     </entry>
     <entry>
       <string>au_volume</string>
-      <string>"%sindex.php/%s/gateway/lockss?year=%d", base_url, journal_id, year</string>
-      <string>"%sindex.php/gateway/lockss?year=%d", base_url, year</string>
-      <string>"%s%s/gateway/lockss?year=%d", base_url, journal_id, year</string>
-      <string>"%s/gateway/lockss?year=%d", base_url, year</string>
+	  <list>
+        <string>"%sindex.php/%s/gateway/lockss?year=%d", base_url, journal_id, year</string>
+        <string>"%sindex.php/gateway/lockss?year=%d", base_url, year</string>
+        <string>"%s%s/gateway/lockss?year=%d", base_url, journal_id, year</string>
+        <string>"%s/gateway/lockss?year=%d", base_url, year</string>
+      </list>
     </entry>
     </map>
   </entry>
@@ -133,6 +137,10 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.ojs2.OJS2HtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.ojs2.OJS2JavaScriptLinkRewriterFactory</string>
   </entry>
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
