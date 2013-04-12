@@ -1,5 +1,5 @@
 /*
- * $Id: ASCEArticleIteratorFactory.java,v 1.1 2013-04-02 21:16:22 ldoan Exp $
+ * $Id: ASCEArticleIteratorFactory.java,v 1.2 2013-04-12 17:34:48 ldoan Exp $
  */
 
 /*
@@ -86,15 +86,13 @@ public class ASCEArticleIteratorFactory
     
     // this pattern is derived from PATTERN_TEMPLATE,
     // to create regex 'capturing groups', used for guessing other file types.
-    protected Pattern ABSTRACT_PATTERN = Pattern.compile("(doi)/abs", Pattern.CASE_INSENSITIVE);
+    protected Pattern ABSTRACT_PATTERN = Pattern.compile("doi/abs", Pattern.CASE_INSENSITIVE);
     protected ASCEArticleIterator(ArchivalUnit au,
                                      SubTreeArticleIterator.Spec spec) {
       super(au, spec);
     }
     
     // Start to match abstract url, the guess other file types from it.
-    // Abstrqct url: "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;
-    // volume=9;issue=1;spage=1;epage=2;aulast=Rutz;tyep=0"
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
@@ -118,11 +116,11 @@ public class ASCEArticleIteratorFactory
     }
 
     protected ArticleFiles guessAdditionalFiles(ArticleFiles af, Matcher absMat) {
-      CachedUrl htmlCu = au.makeCachedUrl(absMat.replaceFirst("$1/full"));
+      CachedUrl htmlCu = au.makeCachedUrl(absMat.replaceFirst("doi/full"));
       setArticleRole(af, htmlCu, ArticleFiles.ROLE_FULL_TEXT_HTML);
-      CachedUrl pdfCu = au.makeCachedUrl(absMat.replaceFirst("$1/pdf"));
+      CachedUrl pdfCu = au.makeCachedUrl(absMat.replaceFirst("doi/pdf"));
       setArticleRole(af, pdfCu, ArticleFiles.ROLE_FULL_TEXT_PDF);
-      CachedUrl refCu = au.makeCachedUrl(absMat.replaceFirst("/$1/ref"));
+      CachedUrl refCu = au.makeCachedUrl(absMat.replaceFirst("doi/ref"));
       setArticleRole(af, refCu, ArticleFiles.ROLE_REFERENCES);
       chooseFullTextCu(af);
       return af;

@@ -1,8 +1,4 @@
-/*
- * $Id: ASCEHtmlMetadataExtractorFactory.java,v 1.1 2013-04-02 21:16:22 ldoan Exp $
- */
-
-/*
+/* $Id: ASCEHtmlMetadataExtractorFactory.java,v 1.2 2013-04-12 17:34:48 ldoan Exp $
 
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -65,6 +61,7 @@ public class ASCEHtmlMetadataExtractorFactory implements
       tagMap.put("dc.Format", MetadataField.FIELD_FORMAT);
       tagMap.put("dc.Language", MetadataField.FIELD_LANGUAGE);
       tagMap.put("dc.Coverage", MetadataField.FIELD_COVERAGE);
+      tagMap.put("dc.Creator", MetadataField.FIELD_AUTHOR);
       tagMap.put("keywords",
           new MetadataField(MetadataField.FIELD_KEYWORDS,
               MetadataField.splitAt(",")));
@@ -80,13 +77,9 @@ public class ASCEHtmlMetadataExtractorFactory implements
       // dc.identifier: [http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2010;volume=7;issue=2;spage=61;epage=65;aulast=Gupta;type=0; 0189-6725]
       // extract the muti-value for this field, check if one of the values
       // is valid issn, then set the issn metadata in cooked metadata list.
-      List<String> creatorList = am.getRawList("dc.Creator");
-      for (String creator : creatorList) {
-        am.put(MetadataField.FIELD_AUTHOR, creator);
-      }
       List<String> idList = am.getRawList("dc.Identifier");
       for (String id : idList) {
-        if (id.contains("10.")) {
+        if (MetadataUtil.isDoi(id)) {
           am.put(MetadataField.FIELD_DOI, id);
           break;
         }

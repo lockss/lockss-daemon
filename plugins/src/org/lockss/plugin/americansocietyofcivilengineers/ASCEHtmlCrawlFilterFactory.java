@@ -1,5 +1,5 @@
 /*
- * $Id: ASCEHtmlHashFilterFactory.java,v 1.2 2013-04-12 17:34:48 ldoan Exp $
+ * $Id: ASCEHtmlCrawlFilterFactory.java,v 1.1 2013-04-12 17:34:48 ldoan Exp $
  */
 
 /*
@@ -36,17 +36,19 @@ import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
-public class ASCEHtmlHashFilterFactory implements FilterFactory {
 
+public class ASCEHtmlCrawlFilterFactory implements FilterFactory {
+
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
-      InputStream in, String encoding) {
+                                               InputStream in,
+                                               String encoding)
+      throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-        // infrastructure assessment ad
-        // http://ascelibrary.org/doi/abs/10.1061/%28ASCE%291076-0431%282010%2916%3A1%2837%29
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget type-ad-placeholder ui-helper-clearfix"),
         // left column section history
         // <div class="sessionViewed">
 	// http://ascelibrary.org/toc/jaeied/18/4
@@ -54,14 +56,10 @@ public class ASCEHtmlHashFilterFactory implements FilterFactory {
         // so can't differentiate urls from different AUs.
         // http://ascelibrary.org/doi/full/10.1061/(ASCE)CO.1943-7862.0000372
 	HtmlNodeFilters.tagWithAttribute("div", "class", "sessionViewed"),
-         // footer copyright @ 1996-2013
-        // <div id="copyright">
-        // http://ascelibrary.org/toc/jaeied/18/4
-        HtmlNodeFilters.tagWithAttribute("div", "id", "footer_message"),
-        new TagNameFilter("script"),
     };
-    return new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    }
-    
+    return new HtmlFilterInputStream(in,
+                                     encoding,
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+  }
+
 }

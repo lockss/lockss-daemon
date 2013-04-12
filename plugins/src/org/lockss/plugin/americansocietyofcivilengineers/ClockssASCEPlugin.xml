@@ -99,13 +99,20 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- http://ascelibrary.org/doi/full/10.1061/%28ASCE%291076-0431%282009%2915%3A4%28111%29
+           http://ascelibrary.org/doi/full/10.1061/(ASCE)1076-0431(2007)13:2(105)
+           http://ascelibrary.org/doi/full/10.1061/(ASCE)CO.1943-7862.0000372
+           http://ascelibrary.org/action/showCitFormats?doi=10.1061/(ASCE)1076-0431(2007)13:2(105)
+           http://ascelibrary.org/action/showCitFormats?doi=10.1061/(ASCE)CO.1943-7862.0000372
+      -->
       <string>1,"^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%stoc/%s/%s", base_url, journal_id, volume_name</string>
-      <!-- http://ascelibrary.org/doi/full/10.1061/%28ASCE%291076-0431%282009%2915%3A4%28111%29 -->
-      <string>1,"^%sdoi/(abs|full|ref|pdf)/.+%s.+%d.+%s", base_url, journal_issn, year, volume_name</string>
-      <string>1,"^%saction/showCitFormats.+%s.+%d.+%s", base_url, journal_issn, year, volume_name</string>
-      <string>1,"^%saction/downloadCitation?downloadFileName=", base_url</string>
+      <string>1,"^%stoc/%s/%s/2", base_url, journal_id, volume_name</string>
+      <string>1,"^%s.+/(abs|full|ref|pdf)/.+(%%29|\))%s(%%28|\()%d(%%29|\))", base_url, journal_issn, year</string>
+      <string>1,"^%s.+/(abs|full|ref|pdf)/.+\.%s\.", base_url, journal_issn</string>
+      <string>1,"^%saction/showCitFormats.+(%%29|\))%s(%%28|\()%d(%%29|\))", base_url, journal_issn, year</string>
+      <string>1,"^%saction/showCitFormats.+\.%s\.", base_url, journal_issn</string>
+      <string>1,"^%saction/downloadCitation", base_url</string>
     </list>
   </entry>
   <entry>
@@ -124,8 +131,12 @@
   <entry>
     <string>au_substance_url_pattern</string>
       <list>
-        <string>1,"^%sdoi/(abs|full|ref|pdf)/.+%s.+%d.+%s", base_url, journal_issn, year, volume_name</string>
+        <string>1,"^%sdoi/(abs|full|ref|pdf)", base_url</string>
       </list>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.americansocietyofcivilengineers.ASCEHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>

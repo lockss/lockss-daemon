@@ -1,5 +1,5 @@
 /*
- * $Id: ASCEPdfFilterFactory.java,v 1.1 2013-04-02 21:16:22 ldoan Exp $
+ * $Id: ASCEPdfFilterFactory.java,v 1.2 2013-04-12 17:34:48 ldoan Exp $
  */
 
 /*
@@ -45,10 +45,7 @@ public class ASCEPdfFilterFactory extends SimplePdfFilterFactory {
     super();
   }
 
-
-  /*
-   * The ASCE pdf files have the CreationDate.
-   */
+  // The ASCE pdf files have the CreationDate.
   @Override
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
