@@ -50,11 +50,6 @@ public class ElsevierSourceArticleMetadataExtractor implements ArticleMetadataEx
   private ElsevierEmitter emit = null;
   private static Logger log = Logger.getLogger("ElsevierSourceArticleMetadataExtractor");
 
-  public ElsevierSourceArticleMetadataExtractor() 
-  {
-    super();
-  }
-
   protected void addAccessUrl(ArticleMetadata am, ArticleFiles af) 
   {
     if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL)) 
@@ -64,28 +59,29 @@ public class ElsevierSourceArticleMetadataExtractor implements ArticleMetadataEx
   @Override
   public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
       throws IOException, PluginException {
-    if(emit == null)
+    if (emit == null)
       emit = new ElsevierEmitter(af,emitter);
-    if(emit.hasEmitted(af.getFullTextUrl()))
+    if (emit.hasEmitted(af.getFullTextUrl()))
       return;
 
     CachedUrl cu = af.getFullTextCu();
     FileMetadataExtractor me = null;
 
-    if(cu != null) {
-      try{
+    if (cu != null) {
+      try {
         me = cu.getFileMetadataExtractor(target);
 
-        if (me != null)
+        if (me != null) {
           me.extract(target, cu, emit);
-        else
+        } else {
           emit.emitMetadata(cu, getDefaultArticleMetadata(af, cu));
+        }
 
       } catch (RuntimeException e) {
         log.debug("for af (" + af + ")", e);
 
         if (me != null) 
-          try{
+          try {
             emit.emitMetadata(cu, getDefaultArticleMetadata(af, cu));
           } catch (RuntimeException e2) {
             log.debug("retry with default metadata for af (" + af + ")", e2);
