@@ -105,8 +105,12 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
   
   private static final String withCopyright =
       "<div class=\"block\">"
-          + "<div id=\"copyright\">"
-          + "</div>";
+      + "<div id=\"footer_message\"><span style=\"color: rgb(0, 0, 0);\">"
+      + "<span class=\"fontSize2\"><span style=\"color: rgb(0, 0, 0);\">"
+      + "Copyright © 1996-2013, American So</span>ciety of Civil Engineers</span>"
+      + "<br>"
+      + "</span></div>"
+      + "</div>";
 
   private static final String withoutCopyright =
       "<div class=\"block\"></div>";
