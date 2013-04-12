@@ -1,4 +1,4 @@
-/* $Id: TestASCEHtmlMetadataExtractorFactory.java,v 1.2 2013-04-12 21:31:31 ldoan Exp $
+/* $Id: TestASCEHtmlMetadataExtractorFactory.java,v 1.3 2013-04-12 21:35:15 ldoan Exp $
 
  Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -127,16 +127,8 @@ public class TestASCEHtmlMetadataExtractorFactory extends LockssTestCase {
                     "004901QAE",
                     "AE/2008/022232",
                     "1076-0431()15:1L.4;1"}; 
+  String goodIssn = "1076-0431";
   
-  //String goodDoi = "10.1061/(ASCE)1076-0431(2009)15:1(4)";
-  String goodDoi = "[10.1061/(ASCE)1076-0431(2009)15:1(4)]";
-  String goodISSN = "1076-0431";
-  String goodEISSN = "1943-5568";
-  String goodVolume = "15";
-  String goodIssue = "1";
-  String goodURL = "http://ascelibrary.org/doi/full/10.1061/%28ASCE"
-                    + "%291076-0431%282009%2915%3A1%284%29";
-
   // a chunk of html source code from the publisher's site from where the 
   // metadata should be extracted
   String goodContent = 
@@ -199,7 +191,7 @@ public class TestASCEHtmlMetadataExtractorFactory extends LockssTestCase {
     + " content=\"bar\">\n"
     + "  <div id=\"issn\">"
     + "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: "
-    + goodISSN + " </div>\n";
+    + goodIssn + " </div>\n";
 
   // Method that creates a simulated Cached URL from the source code
   // provided by the badContent String. It then asserts that NO metadata 
