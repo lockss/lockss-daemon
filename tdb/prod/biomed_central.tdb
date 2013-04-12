@@ -2773,7 +2773,7 @@
       param[journal_issn] = 1868-7083
 
       au < exists ; 2011 ; Clinical Epigenetics Volume 2 ; 2 >
-      au < testing ; 2011 ; Clinical Epigenetics Volume 3 ; 3 >
+      au < ready ; 2011 ; Clinical Epigenetics Volume 3 ; 3 >
       au < testing ; 2012 ; Clinical Epigenetics Volume 4 ; 4 >
       au < manifest ; 2013 ; Clinical Epigenetics Volume 5 ; 5 >
 
@@ -2811,8 +2811,8 @@
       param[base_url] = http://www.clinicalsarcomaresearch.com/
       param[journal_issn] = 2045-3329
 
-      au < testing ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
-      au < testing ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
+      au < ready ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
+      au < ready ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
       au < manifest ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 >
 
     }
@@ -2950,7 +2950,7 @@
       param[base_url] = http://www.darujps.com/
       param[journal_issn] = 1560-8115
 
-      au < testing ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 >
+      au < ready ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 >
       au < manifest ; 2013 ; DARU Journal of Pharmaceutical Sciences Volume 21 ; 21 >
 
     }
@@ -3056,7 +3056,7 @@
       param[base_url] = http://www.environmentalevidencejournal.org/
       param[journal_issn] = 2047-2382
 
-      au < testing ; 2011-2012 ; Environmental Evidence Volume 1 ; 1 >
+      au < ready ; 2011-2012 ; Environmental Evidence Volume 1 ; 1 >
       au < manifest ; 2013 ; Environmental Evidence Volume 2 ; 2 >
 
     }
@@ -3143,7 +3143,7 @@
       param[base_url] = http://www.epmajournal.com/
       param[journal_issn] = 1878-5085
 
-      au < testing ; 2012 ; The EPMA Journal Volume 3 ; 3 >
+      au < ready ; 2012 ; The EPMA Journal Volume 3 ; 3 >
       au < manifest ; 2013 ; The EPMA Journal Volume 4 ; 4 >
 
     }
@@ -3260,7 +3260,7 @@
       param[base_url] = http://www.flavourjournal.com/
       param[journal_issn] = 2044-7248
 
-      au < testing ; 2012 ; Flavour Volume 1 ; 1 >
+      au < ready ; 2012 ; Flavour Volume 1 ; 1 >
       au < manifest ; 2013 ; Flavour Volume 2 ; 2 >
 
     }
@@ -3278,7 +3278,7 @@
       param[journal_issn] = 2045-8118
 
       au < released ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
-      au < testing ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
+      au < ready ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
       au < manifest ; 2013 ; Fluids and Barriers of the CNS Volume 10 ; 10 >
       
     }
@@ -3325,7 +3325,7 @@
       au < released ; 2009 ; Genetic Vaccines and Therapy Volume 7 ; 7 >
       au < released ; 2010 ; Genetic Vaccines and Therapy Volume 8 ; 8 >
       au < released ; 2011 ; Genetic Vaccines and Therapy Volume 9 ; 9 >
-      au < testing ; 2012 ; Genetic Vaccines and Therapy Volume 10 ; 10 >
+      au < ready ; 2012 ; Genetic Vaccines and Therapy Volume 10 ; 10 >
       au < expected ; 2013 ; Genetic Vaccines and Therapy Volume 11 ; 11 >
 
     }
@@ -3379,11 +3379,11 @@
       au < manifest ; 2005 ; Genetics Selection Evolution Volume 37 ; 37 >
       au < manifest ; 2006 ; Genetics Selection Evolution Volume 38 ; 38 >
       au < manifest ; 2007 ; Genetics Selection Evolution Volume 39 ; 39 >
-      au < testing ; 2008 ; Genetics Selection Evolution Volume 40 ; 40 >
-      au < testing ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 >
-      au < testing ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 >
-      au < testing ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
-      au < testing ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
+      au < ready ; 2008 ; Genetics Selection Evolution Volume 40 ; 40 >
+      au < ready ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 >
+      au < ready ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 >
+      au < ready ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
+      au < ready ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
       au < manifest ; 2013 ; Genetics Selection Evolution Volume 45 ; 45 >
 
     }
