@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlLinkExtractor.java,v 1.1 2008-10-28 09:19:07 thib_gc Exp $
+ * $Id: OJS2HtmlLinkExtractor.java,v 1.2 2013-04-12 23:35:59 pgust Exp $
  */
 
 /*
@@ -32,73 +32,74 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ojs2;
 
-import java.io.IOException;
-
 import org.apache.oro.text.regex.*;
-import org.lockss.extractor.GoslingHtmlLinkExtractor;
+import org.jsoup.nodes.Node;
+import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
 
-public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
+public class OJS2HtmlLinkExtractor extends JsoupHtmlLinkExtractor {
 
-  public OJS2HtmlLinkExtractor() {
-    super();
-  }
-  
-  @Override
-  protected String extractLinkFromTag(StringBuffer link,
-                                      ArchivalUnit au,
-                                      Callback cb)
-      throws IOException {
-    char ch = link.charAt(0);
-    if ((ch == 'a' || ch == 'A') && Character.isWhitespace(link.charAt(1))) {
-      // <a href="...">
-      String href = getAttributeValue(HREF, link);
-      if (href == null) {
-        return null;
-      }
-      
-      PatternMatcher matcher = RegexpUtil.getMatcher();
-
-      // javascript:openRTWindow(url);
-      Pattern openRTWindowPattern = getOpenRTWindowPattern();
-      if (openRTWindowPattern != null && matcher.contains(href, openRTWindowPattern)) {
-        String openRTWindowLink = interpretRTOpenWindowMatch(matcher.getMatch());
-        if (logger.isDebug3()) {
-          logger.debug3("AU: "
-                        + au.getName()
-                        + ", openRTWindow match: "
-                        + openRTWindowLink);
-        }
-        return openRTWindowLink;
-      }
-
-    }
-
-    return super.extractLinkFromTag(link, au, cb);
-  }
-  
   protected static Logger logger = Logger.getLogger("OJS2HtmlLinkExtractor");
 
-  protected static final Pattern OPEN_RT_WINDOW_PATTERN = RegexpUtil.uncheckedCompile("javascript:openRTWindow\\('([^']*)'\\);",
-                                                                                      Perl5Compiler.READ_ONLY_MASK);
+  protected static final Pattern OPEN_RT_WINDOW_PATTERN = 
+      RegexpUtil.uncheckedCompile("javascript:openRTWindow\\('([^']*)'\\);",
+                                  Perl5Compiler.READ_ONLY_MASK);
 
-  public static Pattern getOpenRTWindowPattern() {
-    return OPEN_RT_WINDOW_PATTERN;
-  }
-
-  public static String interpretRTOpenWindowMatch(MatchResult openRTWindowMatch) {
-    if ((openRTWindowMatch.groups() - 1) != 1) {
-      logger.warning("Internal inconsistency: openRTWindow match '"
-          + openRTWindowMatch.toString()
-          + "' has "
-          + (openRTWindowMatch.groups() - 1)
-          + " proper subgroups; expected 1");
-      if ((openRTWindowMatch.groups() - 1) < 1) {
-        return null;
+  static class ATagLinkExtractor extends BaseLinkExtractor {
+    public void tagBegin(final Node node, final ArchivalUnit au, final Callback cb) {
+      if (node.hasAttr("href")) {
+        String url = node.attr("href");
+        String newUrl = getLink(url);
+        cb.foundLink(getLink(newUrl));
       }
     }
-    return openRTWindowMatch.group(1);
   }
+  
+  static class FormTagLinkExtractor extends BaseLinkExtractor {
+    public void tagBegin(final Node node, final ArchivalUnit au, final Callback cb) {
+      if (node.hasAttr("action")) {
+        String url = node.attr("action");
+        String newUrl = getLink(url);
+        cb.foundLink(getLink(newUrl));
+      }
+    }
+  }
+  
+  static class MetaTagLinkExtractor extends BaseLinkExtractor {
+    public void tagBegin(final Node node, final ArchivalUnit au, final Callback cb) {
+      if ("refresh".equalsIgnoreCase(node.attr("http-equiv"))) {
+        if (node.hasAttr("content")) {
+          String value = node.attr("content");
+          int i = value.indexOf(";url=");
+          if (i >= 0) {
+            String tagPrefix = value.substring(0, i + 5);
+            String url = value.substring(tagPrefix.length());
+            String newUrl = getLink(url);
+            cb.foundLink(getLink(newUrl));
+          }
+        }
+      }
+    }
+  }
+  
+  public OJS2HtmlLinkExtractor() {
+    super();
+    registerTagExtractor("a", new ATagLinkExtractor());
+    registerTagExtractor("form", new FormTagLinkExtractor());
+    registerTagExtractor("meta", new MetaTagLinkExtractor());
+  }
+  
+  public static String getLink(String link) {
+    PatternMatcher matcher = RegexpUtil.getMatcher();
 
+    // javascript:openRTWindow(url);
+    if (OPEN_RT_WINDOW_PATTERN != null && matcher.contains(link, OPEN_RT_WINDOW_PATTERN)) {
+      MatchResult openRTWindowMatch = matcher.getMatch();
+      if (openRTWindowMatch.groups() == 2) {
+        link = openRTWindowMatch.group(1);
+      }
+    }
+    return link;
+  }
 }
