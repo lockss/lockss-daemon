@@ -1,4 +1,4 @@
-/* $Id: TestASCEHtmlMetadataExtractorFactory.java,v 1.1 2013-04-12 17:37:49 ldoan Exp $
+/* $Id: TestASCEHtmlMetadataExtractorFactory.java,v 1.2 2013-04-12 21:31:31 ldoan Exp $
 
  Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -37,8 +37,7 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 
 /*
- * TestASCEMetadataExtractor invokes
- * ASCEHtmlMetadataExtractorFactory.java through 
+ * Invokes ASCEHtmlMetadataExtractorFactory.java through 
  * ASCEArticleIteratorFactory.java.  ASCE AU is created in setUp() method.
  * 
  * One of the articles used to get the HTML source for this plugin is:
@@ -113,22 +112,24 @@ public class TestASCEHtmlMetadataExtractorFactory extends LockssTestCase {
   String goodDCTitle = 
         "Framework for Teaching Engineering Capstone Design Courses "
         + "with Emphasis on Application of Internet-Based Technologies";
-  String[] goodDCCreators = new String[] {"Jonathan U.Dougherty",
-                                          "M. KevinParfitt"};
+  String[] goodDCCreators = 
+      new String[] {"Jonathan U.Dougherty",
+                    "M. KevinParfitt"};
   String goodDCPublisher = "American Society of Civil Engineers";
   String goodDCDate = "2012-02-27";
   String goodDCFormat = "text/HTML";
-  String[] goodDCIdentifiers = 
-      new String [] {"10.1061/(ASCE)1076-0431(2009)15:1(4)",
-                     "1.3071861",
-                     "004901QAE",
-                     "AE/2008/022232",
-                     "1076-0431()15:1L.4;1"};
   String goodDCSource = "http://dx.doi.org/10.1061/(ASCE)1076-0431(2009)15:1(4)";
   String goodDCLanguage = "en";
   String goodDCCoverage = "world";
-  String goodKeywords = "testkwd1, testkwd2";
-
+  String[] goodDCIdentifiers =
+      new String[] {"10.1061/(ASCE)1076-0431(2009)15:1(4)",
+                    "1.3071861",
+                    "004901QAE",
+                    "AE/2008/022232",
+                    "1076-0431()15:1L.4;1"}; 
+  
+  //String goodDoi = "10.1061/(ASCE)1076-0431(2009)15:1(4)";
+  String goodDoi = "[10.1061/(ASCE)1076-0431(2009)15:1(4)]";
   String goodISSN = "1076-0431";
   String goodEISSN = "1943-5568";
   String goodVolume = "15";
@@ -140,7 +141,8 @@ public class TestASCEHtmlMetadataExtractorFactory extends LockssTestCase {
   // metadata should be extracted
   String goodContent = 
       "<meta name=\"dc.Title\" content=\"" + goodDCTitle + "\"></meta>"
-      + "<meta name=\"dc.Creator\" content=\"" + goodDCCreators[0] + "\"></meta>"
+      + "<meta name=\"dc.Creator\" content=\"" + goodDCCreators[0] + "\">" +
+      		"</meta>"
       + "<meta name=\"dc.Creator\" content=\"" + goodDCCreators[1] + "\"></meta>"
       + "<meta name=\"dc.Publisher\" content=\"" + goodDCPublisher + "\"></meta>"
       + "<meta name=\"dc.Date\" scheme=\"WTN8601\" content=\"" + goodDCDate + "\"></meta>"
@@ -152,9 +154,8 @@ public class TestASCEHtmlMetadataExtractorFactory extends LockssTestCase {
       + "<meta name=\"dc.Identifier\" scheme=\"sisac\" content=\"" + goodDCIdentifiers[4] + "\"></meta>"
       + "<meta name=\"dc.Source\" content=\"" + goodDCSource + "\"></meta>"
       + "<meta name=\"dc.Language\" content=\"" + goodDCLanguage + "\"></meta>"
-      + "<meta name=\"dc.Coverage\" content=\"" + goodDCCoverage + "\"></meta>"
-      + "<meta name=\"keywords\" content=\"" + goodKeywords + "\"></meta>";
-
+      + "<meta name=\"dc.Coverage\" content=\"" + goodDCCoverage + "\"></meta>";
+      
   // Method that creates a simulated Cached URL from the source code 
   // provided by the goodContent string. It then asserts that the metadata 
   // extracted with ASCEHtmlMetadataExtractorFactory
@@ -185,9 +186,8 @@ public class TestASCEHtmlMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodDCFormat, md.get(MetadataField.FIELD_FORMAT));
     assertEquals(goodDCLanguage, md.get(MetadataField.FIELD_LANGUAGE));
     assertEquals(goodDCCoverage, md.get(MetadataField.FIELD_COVERAGE));
-    assertEquals(goodKeywords, md.get(MetadataField.FIELD_KEYWORDS));
+    assertEquals(goodDCIdentifiers[0], md.get(MetadataField.FIELD_DOI));
     assertEquals(Arrays.asList(goodDCCreators), md.getList(MetadataField.FIELD_AUTHOR));
-    assertEquals(Arrays.asList(goodDCIdentifiers), md.getList(MetadataField.FIELD_DOI));
   }
 
   // a chunk of HTML source code from where the
@@ -227,7 +227,6 @@ public class TestASCEHtmlMetadataExtractorFactory extends LockssTestCase {
     assertNull(md.get(MetadataField.FIELD_LANGUAGE));
     assertNull(md.get(MetadataField.FIELD_COVERAGE));
     assertNull(md.get(MetadataField.FIELD_AUTHOR));
-    assertNull(md.get(MetadataField.FIELD_KEYWORDS));
     assertEquals(1, md.rawSize());
     assertEquals("bar", md.getRaw("foo"));
   }
