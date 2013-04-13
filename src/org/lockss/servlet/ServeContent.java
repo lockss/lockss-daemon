@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.75 2013-04-10 01:38:53 clairegriffin Exp $
+ * $Id: ServeContent.java,v 1.76 2013-04-13 05:17:50 pgust Exp $
  */
 
 /*
@@ -405,9 +405,11 @@ public class ServeContent extends LockssServlet {
         Enumeration en = req.getParameterNames();
         while (en.hasMoreElements()) {
           String name = (String)en.nextElement();
-          String vals[] = req.getParameterValues(name);
-          for(String val : vals) {
-            helper.add(name, val);
+          if (!"url".equals(name)) {
+            String vals[] = req.getParameterValues(name);
+            for(String val : vals) {
+              helper.add(name, val);
+            }
           }
         }
         helper.sortKeyValues();
