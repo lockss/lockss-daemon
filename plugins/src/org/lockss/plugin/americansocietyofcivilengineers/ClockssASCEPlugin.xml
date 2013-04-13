@@ -107,7 +107,7 @@
       -->
       <string>1,"^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%stoc/%s/%s/2", base_url, journal_id, volume_name</string>
+      <string>1,"^%stoc/%s/%s/", base_url, journal_id, volume_name</string>
       <string>1,"^%s.+/(abs|full|ref|pdf)/.+(%%29|\))%s(%%28|\()%d(%%29|\))", base_url, journal_issn, year</string>
       <string>1,"^%s.+/(abs|full|ref|pdf)/.+\.%s\.", base_url, journal_issn</string>
       <string>1,"^%saction/showCitFormats.+(%%29|\))%s(%%28|\()%d(%%29|\))", base_url, journal_issn, year</string>
@@ -120,11 +120,15 @@
     <map>
       <entry>
         <string>au_title</string>
-        <string>"^%stoc/%s", base_url, journal_id</string>
+        <string>"%stoc/%s", base_url, journal_id</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>"^%stoc/%s/%s", base_url, journal_id, volume_name</string>
+        <string>"%stoc/%s/%s", base_url, journal_id, volume_name</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%stoc/%s/%s/%s", base_url, journal_id, volume_name, issue</string>
       </entry>
     </map>
   </entry>
