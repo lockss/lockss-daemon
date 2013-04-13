@@ -18,16 +18,15 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = shre
       comment[notReady] = missing metadata info
-      comment[notReady31] = RU4671, pdf files are X X in hash compare
         
-      au < testing ; 2005 ; Journal of Shellfish Research Volume 24 ; 24 >
+      au < ready ; 2005 ; Journal of Shellfish Research Volume 24 ; 24 >
       au < released ; 2006 ; Journal of Shellfish Research Volume 25 ; 25 >
-      au < testing ; 2007 ; Journal of Shellfish Research Volume 26 ; 26 >
+      au < ready ; 2007 ; Journal of Shellfish Research Volume 26 ; 26 >
       au < notReady ; 2008 ; Journal of Shellfish Research Volume 27 ; 27 >
       au < released ; 2009 ; Journal of Shellfish Research Volume 28 ; 28 >
       au < released ; 2010 ; Journal of Shellfish Research Volume 29 ; 29 >
       au < released ; 2011 ; Journal of Shellfish Research Volume 30 ; 30 >
-      au < notReady ; 2012 ; Journal of Shellfish Research Volume 31 ; 31 >
+      au < ready ; 2012 ; Journal of Shellfish Research Volume 31 ; 31 >
       au < expected ; 2013 ; Journal of Shellfish Research Volume 32 ; 32 >
     }
 
