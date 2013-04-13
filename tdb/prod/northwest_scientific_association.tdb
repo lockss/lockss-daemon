@@ -16,10 +16,11 @@
     >
     
     param[journal_id] = nwsc
+    comment[notReady] = mismatch placeholder QuickSearch
   
     au < ready ; 2007 ; Northwest Science Volume 81 ; 81 >
     au < ready ; 2008 ; Northwest Science Volume 82 ; 82 >
-    au < testing ; 2009 ; Northwest Science Volume 83 ; 83 >
+    au < notReady ; 2009 ; Northwest Science Volume 83 ; 83 >
     au < ready ; 2010 ; Northwest Science Volume 84 ; 84 >
     au < ready ; 2011 ; Northwest Science Volume 85 ; 85 >
     au < ready ; 2012 ; Northwest Science Volume 86 ; 86 >
