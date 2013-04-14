@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.93 2013-04-01 00:45:36 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.94 2013-04-14 05:27:41 tlipkis Exp $
  */
 
 /*
@@ -663,6 +663,9 @@ public class TestStringUtil extends LockssTestCase {
 		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n \t \t oo"));
     assertEquals("foo",
 		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n\n\t\too"));
+    // does not trim trailing whitespace (other than newlines)
+    assertEquals("f  oo ",
+		 StringUtil.trimNewlinesAndLeadingWhitespace("f  \n\n\t\too "));
   }
 
   public void testTrimHostName() {
