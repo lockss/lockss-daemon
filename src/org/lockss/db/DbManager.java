@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.16 2013-03-26 22:11:53 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.17 2013-04-14 05:24:00 tlipkis Exp $
  */
 
 /*
@@ -109,6 +109,12 @@ public class DbManager extends BaseLockssDaemonManager
    */
   public static final String PARAM_DATASOURCE_USER = DATASOURCE_ROOT + ".user";
   public static final String DEFAULT_DATASOURCE_USER = "LOCKSS";
+
+  /**
+   * Set to false to prevent DbManager from running
+   */
+  public static final String PARAM_DBMANAGER_ENABLED = PREFIX + "enabled";
+  static final boolean DEFAULT_DBMANAGER_ENABLED = true;
 
   /**
    * Maximum number of retries for transient SQL exceptions.
@@ -1726,6 +1732,9 @@ public class DbManager extends BaseLockssDaemonManager
       + " set " + VERSION_COLUMN + " = ?"
       + " where " + SYSTEM_COLUMN + " = ?";
 
+
+  private boolean dbManagerEnabled = DEFAULT_DBMANAGER_ENABLED;
+
   // The database data source.
   private DataSource dataSource = null;
 
@@ -1764,6 +1773,11 @@ public class DbManager extends BaseLockssDaemonManager
     final String DEBUG_HEADER = "startService(): ";
     log.debug2(DEBUG_HEADER + "dataSource != null = " + (dataSource != null));
 
+    // Do nothing if not enabled
+    if (!dbManagerEnabled) {
+      log.info("DbManager not enabled.");
+      return;
+    }
     // Do nothing more if it is already initialized.
     ready = ready && dataSource != null;
     if (ready) {
@@ -1853,6 +1867,9 @@ public class DbManager extends BaseLockssDaemonManager
 
 	retryDelay = config.getTimeInterval(PARAM_RETRY_DELAY,
 					    DEFAULT_RETRY_DELAY);
+
+	dbManagerEnabled = config.getBoolean(PARAM_DBMANAGER_ENABLED,
+					     DEFAULT_DBMANAGER_ENABLED);
     }
   }
 

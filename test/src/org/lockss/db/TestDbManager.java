@@ -1,5 +1,5 @@
 /*
- * $Id: TestDbManager.java,v 1.2 2012-12-07 07:27:05 fergaloy-sf Exp $
+ * $Id: TestDbManager.java,v 1.3 2013-04-14 05:24:00 tlipkis Exp $
  */
 
 /*
@@ -120,6 +120,24 @@ public class TestDbManager extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     createTable();
+  }
+
+  /**
+   * Tests that setting enabled param to false works.
+   * 
+   * @throws Exception
+   */
+  public void testDisabled() throws Exception {
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_DBMANAGER_ENABLED, "false");
+
+    startService();
+    assertFalse(dbManager.isReady());
+
+    try {
+      dbManager.getConnection();
+      fail("getConnection() should throw");
+    } catch (SQLException sqle) {
+    }
   }
 
   /**
