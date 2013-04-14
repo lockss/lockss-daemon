@@ -1,5 +1,5 @@
 /*
- * $Id: PsmMethodAction.java,v 1.5 2008-01-27 06:47:10 tlipkis Exp $
+ * $Id: PsmMethodAction.java,v 1.6 2013-04-14 05:26:12 tlipkis Exp $
  */
 
 /*
@@ -34,10 +34,14 @@ package org.lockss.protocol.psm;
 import java.util.*;
 import java.lang.reflect.*;
 
+import org.lockss.util.*;
+
 /**
  * Action that uses reflection to invoke a method on the specified class.
  */
 public class PsmMethodAction extends PsmAction {
+  static Logger log = Logger.getLogger("PsmMethodAction");
+
   protected Method method;
 
   protected PsmMethodAction() {
@@ -101,19 +105,23 @@ public class PsmMethodAction extends PsmAction {
       // construction time.
       throw new PsmMethodActionException(ex.toString());
     } catch (InvocationTargetException ex) {
-      // This may occur if the method throws a runtime exception.
-      // Rather than wrap it in a PsmMethodActionException, let
-      // it percolate up.  This cast should never fail, but if it
-      // does, throw PsmMethodActionException.
-      try {
-	throw (RuntimeException)(ex.getTargetException());
-      } catch (ClassCastException cce) {
+      // This may occur if the method throws a runtime exception.  Rather
+      // than wrap it in a PsmMethodActionException, let it percolate up.
+      // If not a RuntimeException, wrap it in a PsmMethodActionException.
+      Throwable th = ex.getTargetException();
+      if (th instanceof RuntimeException) {
+	throw (RuntimeException)th;
+      } else {
 	throw new PsmMethodActionException("Exception thrown from " +
 					   "target method invocation " +
-					   " is not a Runtime Exception: " +
-					   cce.toString());
+					   " is not a Runtime Exception",
+					   th);
       }
     }
+  }
+
+  public String toString() {
+    return "[MethodAction: " + method.getName() + "]";
   }
 
   public static class PsmMethodActionException extends RuntimeException {
@@ -123,6 +131,10 @@ public class PsmMethodAction extends PsmAction {
 
     public PsmMethodActionException(String s) {
       super(s);
+    }
+
+    public PsmMethodActionException(String s, Throwable cause) {
+      super(s, cause);
     }
   }
 

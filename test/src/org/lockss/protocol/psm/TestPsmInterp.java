@@ -1,10 +1,10 @@
 /*
- * $Id: TestPsmInterp.java,v 1.15 2008-03-15 04:35:00 tlipkis Exp $
+ * $Id: TestPsmInterp.java,v 1.16 2013-04-14 05:26:12 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -88,6 +88,7 @@ public class TestPsmInterp extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    TimeBase.setReal();
     initPsmManager();
   }
 
@@ -452,6 +453,7 @@ public class TestPsmInterp extends LockssTestCase {
 		 new PsmResponse(Else, "Error")),
     new PsmState("Error"),
     new PsmState("Done"),
+    new PsmState("FinalWithAction", new MyAction(PsmEvents.NoOp)),
   };
 
   // Next few tests record all interpreter events (action, transitions,
@@ -566,6 +568,43 @@ public class TestPsmInterp extends LockssTestCase {
     assertIsomorphic(exp3, interp.events);
     assertTrue(errs.isEmpty());
   }
+
+  PsmState[] statesNoOp = {
+    new PsmState("Start", PsmWait.FOREVER,
+		 new PsmResponse(Sched, new MyAction(PsmEvents.NoOp)),
+		 new PsmResponse(SendOk, "Done")),
+    new PsmState("Done", new MyAction(PsmEvents.NoOp)),
+  };
+
+  public void testNoOpIll() throws PsmException {
+    PsmMachine mach = new PsmMachine("M1", statesNoOp, "Start");
+    MyInterp interp = new MyInterp(mach, null);
+    assertFalse(interp.isFinalState());
+    interp.start();
+    assertFalse(interp.isFinalState());
+    try {
+      interp.handleEvent(Sched);
+      fail("NoOp returned from non-final entry action should throw");
+    } catch (PsmException.IllegalEvent e) {
+    }
+  }
+
+  public void testNoOpFinal() throws PsmException {
+    PsmMachine mach = new PsmMachine("M1", statesNoOp, "Start");
+    MyInterp interp = new MyInterp(mach, null);
+    assertFalse(interp.isFinalState());
+    interp.start();
+    assertFalse(interp.isFinalState());
+    interp.handleEvent(SendOk);
+    ER[] exp1 = {
+      new ER(null, PsmEvents.Start, null, statesNoOp[0]),
+      new ER(statesNoOp[0], PsmEvents.Start, null, null),
+      new ER(statesNoOp[0], SendOk, null, statesNoOp[1]),
+      new ER(statesNoOp[1], SendOk, statesNoOp[1].getEntryAction(), null),
+    };
+    assertIsomorphic(exp1, interp.events);
+  }
+
 
   class MyCheckpointer implements PsmInterp.Checkpointer {
     PsmInterpStateBean lastBean = null;
@@ -918,6 +957,31 @@ public class TestPsmInterp extends LockssTestCase {
     }
   }
 
+  public void testTimeoutWithNoOp() throws PsmException {
+    PsmMachine mach = new PsmMachine("M1", statesTime, "Start");
+    MyInterp interp = new MyInterp(mach, null);
+    TimeBase.setSimulated(1000);
+    interp.start();
+    TimeBase.step(50);
+    assertEquals(statesTime[0], interp.getCurrentState());
+    TimeBase.step(40);
+    assertEquals(statesTime[0], interp.getCurrentState());
+    interp.handleEvent(PsmEvents.NoOp);
+    assertEquals(statesTime[0], interp.getCurrentState());
+    TimeBase.step(50);
+    assertEquals(statesTime[0], interp.getCurrentState());
+    TimeBase.step(40);
+    assertEquals(statesTime[0], interp.getCurrentState());
+    TimeBase.step(20);
+    assertTrue(interp.isFinalState());
+    assertEquals(statesTime[1], interp.getCurrentState());
+
+    assertEquals("Time", interp.getFinalState().getName());
+    assertEquals(ListUtil.list("Start", "Time"), interp.states);
+    long delta = interp.getStateTime(1) - interp.getStateTime(0);
+    assertEquals(200, delta);
+  }
+
   // A more functional test.  Creates a user object in which actions track
   // their progress.  Schedules a "computation" using the TimerQueue to
   // generate the TaskComplete event.  Because the "computation" runs in
@@ -1132,7 +1196,7 @@ public class TestPsmInterp extends LockssTestCase {
     }
   }
 
-  /** An action that does nothing by signal (return) events from a
+  /** An action that does nothing but signal (return) events from a
    * predetermined list */
   static class MyAction extends PsmAction {
     List rets;

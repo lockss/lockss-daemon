@@ -1,5 +1,5 @@
 /*
-* $Id: PsmEvent.java,v 1.2 2005-06-04 21:37:12 tlipkis Exp $
+* $Id: PsmEvent.java,v 1.3 2013-04-14 05:26:12 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,12 @@ public class PsmEvent implements Cloneable {
    */
   final boolean isWaitEvent() {
     return this instanceof PsmWaitEvent;
+  }
+
+  /** Return true if this is a NoOp event.
+   */
+  final boolean isNoOpEvent() {
+    return this instanceof PsmEvents.NoOp;
   }
 
   /** An uninterpreted long value.  Intended to be used to communicate a

@@ -1,5 +1,5 @@
 /*
-* $Id: PsmState.java,v 1.9 2006-01-12 03:13:30 smorabito Exp $
+* $Id: PsmState.java,v 1.10 2013-04-14 05:26:12 tlipkis Exp $
  */
 
 /*
@@ -69,7 +69,8 @@ public class PsmState {
   /** Create a state with no responses.  This state is a final state.
    * @param name state name
    * @param entryAction action to be performed upon entry into the state.
-   * This action is not considered to have a causitive event.
+   * If non-null, it must return {@link PsmEvents#NoOp}.  This action is
+   * not considered to have a causitive event.
    */
   public PsmState(String name, PsmAction entryAction) {
     this(name, entryAction, EMPTY_RESPONSE_ARRAY);

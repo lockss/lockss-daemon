@@ -1,10 +1,10 @@
 /*
-* $Id: PsmInterp.java,v 1.17 2008-03-15 04:35:00 tlipkis Exp $
+* $Id: PsmInterp.java,v 1.18 2013-04-14 05:26:12 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -188,7 +188,7 @@ public class PsmInterp {
       timer.resetTo(duration);
     } else {
       Deadline when = Deadline.in(duration);
-      timer = new StateTimer(when);
+      timer = new StateTimer(duration);
       timer.start();
     }
   }
@@ -198,6 +198,14 @@ public class PsmInterp {
     if (timer != null) {
       log.debug2("Cancelling state timer");
       timer.maybeCancel();
+    }
+  }
+
+  // 
+  synchronized void restartStateTimer() {
+    if (timer != null) {
+      log.debug2("Restarting state timer");
+      timer.restart();
     }
   }
 
@@ -213,8 +221,12 @@ public class PsmInterp {
 	PsmException.MaxChainedEvents("Exceeded maximum chained event count;" +
 				 " possible loop: " + curState + ", " + event);
     }
-    curEventNum++;
-    checkStateTimer();
+    if (event instanceof PsmEvents.NoOp) {
+      if (log.isDebug2()) log.debug2("Event: " + event);
+      curEventNum++;
+      restartStateTimer();
+      return;
+    }
     PsmResponse resp = curState.getResponse(event);
     if (log.isDebug2()) log.debug2("Event: " + event + ": " + resp);
     if (resp == null) {
@@ -222,6 +234,8 @@ public class PsmInterp {
 					  " has no response matching " +
 					  event);
     }
+    curEventNum++;
+    checkStateTimer();
     if (resp.isTransition()) {
       String newStateName = resp.getNewState();
       PsmState newState = machine.getState(newStateName);
@@ -268,6 +282,9 @@ public class PsmInterp {
 					    " returned wait event: " + event);
       }
       handleWait((PsmWaitEvent)event);
+    } else if (event instanceof PsmEvents.NoOp && !curState.isFinal()) {
+      throw new PsmException.IllegalEvent("NoOp event returned from action " +
+					  "in non-final state: " + curState);
     } else {
       handleEvent1(event, eventCtr);
     }
@@ -543,15 +560,22 @@ public class PsmInterp {
   /** State timeout logic.  Refers to several members of PsmInterp. */
   private class StateTimer {
     private int timingEvent;
+    private long duration;
     private Deadline deadline;
     private TimerQueue.Request req;
 
-    StateTimer(Deadline deadline) {
-      this.deadline = deadline;
+    StateTimer(long duration) {
+      this.duration = duration;
       this.timingEvent = getTimedEventNumber();
+      this.deadline = Deadline.in(duration);
+    }
+
+    void restart() {
+      resetTo(duration);
     }
 
     void resetTo(long duration) {
+      this.duration = duration;
       this.timingEvent = getTimedEventNumber();
       deadline.expireIn(duration);
     }

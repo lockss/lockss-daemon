@@ -1,5 +1,5 @@
 /*
-* $Id: PsmEvents.java,v 1.3 2005-10-17 07:49:03 tlipkis Exp $
+* $Id: PsmEvents.java,v 1.4 2013-04-14 05:26:12 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,16 @@ public class PsmEvents {
   /** Event received by resumable state when machine is resumed */
   public final static PsmEvent Resume = new Resume();
 
+  /** NoOp event.  Has two purposes:<ul>
+
+   * <li>If a final state has an entry action, it must return a NoOp event.
+   * (Final states by definition have no responses, so any other event is
+   * illegal.)  Not legal to return from any other action; use {@link
+   * PsmWaitEvent} instead.</li>
+   * <li>Resets any timeout associated with the currently waiting
+   * state.</li></ul> */
+  public final static PsmEvent NoOp = new NoOp();
+
   /** Generic error */
   public final static PsmEvent Error = new Error();
 
@@ -65,6 +75,7 @@ public class PsmEvents {
 
   private static class Start extends PsmEvent {}
   private static class Resume extends PsmEvent {}
+  static class NoOp extends PsmEvent {}
   private static class Error extends PsmEvent {}
   private static class Timeout extends Error {}
 
