@@ -1,5 +1,5 @@
 /*
- * $Id: BoundedTreeSet.java,v 1.1 2007-10-01 08:16:57 tlipkis Exp $
+ * $Id: BoundedTreeSet.java,v 1.2 2013-04-14 05:26:25 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -51,7 +51,7 @@ import java.util.*;
 /**
  * A TreeSet that ensures it never grows beyond a max size.  
  * <code>last()</code> is removed if the <code>size()</code> 
- * get's bigger then <code>getMaxSize()</code>
+ * gets bigger then <code>getMaxSize()</code>
  */
 public class BoundedTreeSet<E> extends TreeSet<E> {
   private int maxSize = Integer.MAX_VALUE;
