@@ -264,7 +264,8 @@ class V3TestCases( LockssTestCases ):
                           'org.lockss.id.initialV3PeerList': ';'.join( [ peer.getV3Identity() for peer in self.clients ] + self.offline_peers ),
                           'org.lockss.platform.v3.identity': client.getV3Identity(),
                           'org.lockss.poll.v3.enableV3Poller': client is self.victim,
-                          'org.lockss.poll.v3.enableV3Voter': True }
+                          'org.lockss.poll.v3.enableV3Voter': True,
+                          'org.lockss.poll.pollStarterInitialDelay': '30s'}
             extraConf.update( self.local_configuration )
             self.framework.appendLocalConfig( extraConf, client )
         self._start_framework()
@@ -369,7 +370,7 @@ class TooCloseV3Tests( V3TestCases ):
         log.info( 'AU successfully repaired' )
 
     def _await_complete( self, nodes ):
-        log.info( 'Waiting for V3 poll to report no quorum...' )
+        log.info( 'Waiting for V3 poll to complete...' )
         self.assert_( self.victim.waitForCompletedV3Poll( self.AU ), 'Timed out while waiting for poll to complete' )
         log.info( 'Poll successfully completed' )
 
@@ -714,14 +715,14 @@ class TotalLossRecoverySymmetricV3TestCase( TotalLossRecoveryV3Tests ):
         log.info( 'Waiting for a V3 poll to be called...' )
         self.assert_( self.victim.waitForV3Poller( self.AU ), 'Timed out while waiting for first V3 poll' )
         log.info( 'Successfully called first V3 poll' )
-        self.victim.waitForV3Repair( self.AU, timeout = self.timeout )
+        self.assert_( self.victim.waitForCompletedV3Poll( self.AU ), 'Timed out while waiting for poll to complete' )
         self._verify_poll_results()
         self._verify_voter_agreements()
         self._verify_voters_counts()
         # Destroy the AU
         nodes = self._damage_AU()
         self._verify_damage( nodes )
-        log.info( 'Waiting for econd V3 poll to be called...' )
+        log.info( 'Waiting for second V3 poll to be called...' )
         self.assert_( self.victim.waitForV3Poller( self.AU ), 'Timed out while waiting for second V3 poll' )
         log.info( 'Successfully called second V3 poll' )
         # Check the result
@@ -935,8 +936,6 @@ tinyUiTests = unittest.TestSuite( ( TinyUiUnknownHostTestCase(),
 
 simpleV3Tests = unittest.TestSuite( ( FormatExpectedAgreementTestCase(),
                                       SimpleV3TestCase(),
-                                      SimpleV3SymmetricTestCase(),
-                                      SimpleV3PoPTestCase(),
                                       SimpleDamageV3TestCase(),
                                       SimpleDeleteV3TestCase(),
                                       SimpleExtraFileV3TestCase(),
@@ -947,8 +946,6 @@ simpleV3Tests = unittest.TestSuite( ( FormatExpectedAgreementTestCase(),
                                       VotersDontParticipateV3TestCase(),
                                       NoQuorumV3TestCase(),
                                       TotalLossRecoveryV3TestCase(),
-                                      TotalLossRecoverySymmetricV3TestCase(),
-                                      TotalLossRecoveryPoPV3TestCase(),
                                       RepairFromPublisherV3TestCase(),
                                       RepairFromPeerV3TestCase(),
                                       RepairFromPeerWithDeactivateV3TestCase() ) )
@@ -957,13 +954,16 @@ symmetricV3Tests = unittest.TestSuite( ( SimpleV3SymmetricTestCase(),
                                       TotalLossRecoverySymmetricV3TestCase() ) )
 
 popV3Tests = unittest.TestSuite( ( SimpleV3PoPTestCase(),
-                                      TotalLossRecoveryPoPV3TestCase() ) )
+                                   TotalLossRecoveryPoPV3TestCase() ) )
 
 randomV3Tests = unittest.TestSuite( ( RandomDamageV3TestCase(),
                                       RandomDeleteV3TestCase(),
                                       RandomExtraFileV3TestCase() ) )
 
-v3Tests = unittest.TestSuite( ( simpleV3Tests, randomV3Tests ) )
+v3Tests = unittest.TestSuite( ( simpleV3Tests,
+                                symmetricV3Tests,
+                                popV3Tests,
+                                randomV3Tests ) )
 
 # Release-candidate tests
 postTagTests = unittest.TestSuite( ( tinyUiTests, v3Tests ) )
