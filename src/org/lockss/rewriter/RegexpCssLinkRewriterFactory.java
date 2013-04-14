@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpCssLinkRewriterFactory.java,v 1.3 2011-09-05 02:58:42 tlipkis Exp $
+ * $Id: RegexpCssLinkRewriterFactory.java,v 1.4 2013-04-14 05:24:27 tlipkis Exp $
  */
 
 /*
@@ -164,7 +164,7 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
 
     Reader rdr = new BufferedReader(StringUtil.getLineReader(in, encoding));
     rdr = StringUtil.getLineContinuationReader(rdr);
-    StringBuilder sb = new StringBuilder();
+    StringBuilder sb = new StringBuilder(maxBuf);
     try {
       while (StringUtil.fillFromReader(rdr, sb, maxBuf - sb.length())) {
 	Matcher m1 = CSS_URL_PAT.matcher(sb);
@@ -201,8 +201,7 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
 	  keep = Math.min(overlap, sblen - lastAppendPosition);
 	}
 	out.append(sb.subSequence(lastAppendPosition, sblen - keep));
-	StringUtil.copyChars(sb, sblen - keep, 0, keep);
-	sb.setLength(keep);
+	sb.delete(0, sblen - keep);
       }
     } finally {
       IOUtil.safeClose(rdr);

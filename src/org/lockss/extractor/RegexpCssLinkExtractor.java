@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpCssLinkExtractor.java,v 1.5 2011-02-14 00:11:06 tlipkis Exp $
+ * $Id: RegexpCssLinkExtractor.java,v 1.6 2013-04-14 05:24:27 tlipkis Exp $
  */
 
 /*
@@ -107,7 +107,9 @@ public class RegexpCssLinkExtractor implements LinkExtractor {
 
     Reader rdr = new BufferedReader(StringUtil.getLineReader(in, encoding));
     rdr = StringUtil.getLineContinuationReader(rdr);
-    StringBuilder sb = new StringBuilder();
+    StringBuilder sb = new StringBuilder(maxBuf);
+    int shift = Math.min(overlap, maxBuf / 2);
+
     try {
       while (StringUtil.fillFromReader(rdr, sb, maxBuf - sb.length())) {
 	Matcher m1 = CSS_URL_PAT.matcher(sb);
@@ -131,9 +133,7 @@ public class RegexpCssLinkExtractor implements LinkExtractor {
 	  break;
 	}
 	// Move the overlap amount to the beginning of the buffer
-	int shift = Math.min(overlap, maxBuf / 2);
-	StringUtil.copyChars(sb, sblen - shift, 0, shift);
-	sb.setLength(shift);
+	sb.delete(0, sblen - shift);
       }
     } finally {
       IOUtil.safeClose(rdr);
