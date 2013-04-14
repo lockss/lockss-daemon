@@ -595,7 +595,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; International Journal of STD & AIDS Volume 20 [superseded] ; 20 >
       au < HighWirePressPlugin ; down ; 2010 ; International Journal of STD & AIDS Volume 21 [superseded] ; 21 >
       au < HighWirePressPlugin ; down ; 2011 ; International Journal of STD & AIDS Volume 22 [superseded] ; 22 >
-      au < HighWirePressH20Plugin ; testing ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; ready ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; International Journal of STD & AIDS Volume 24 ; 24 >
 
     }
@@ -800,7 +800,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Journal of the Royal Society of Medicine Volume 102 [superseded] ; 102 >
       au < HighWirePressPlugin ; down ; 2010 ; Journal of the Royal Society of Medicine Volume 103 [superseded] ; 103 >
       au < HighWirePressPlugin ; down ; 2011 ; Journal of the Royal Society of Medicine Volume 104 [superseded] ; 104 >
-      au < HighWirePressH20Plugin ; testing ; 2012 ; Journal of the Royal Society of Medicine Volume 105 ; 105 >
+      au < HighWirePressH20Plugin ; ready ; 2012 ; Journal of the Royal Society of Medicine Volume 105 ; 105 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the Royal Society of Medicine Volume 106 ; 106 >
 
     }
@@ -931,7 +931,7 @@
       au < released ; 2009 ; Medicine, Science and the Law Volume 49 ; 49 >
       au < released ; 2010 ; Medicine, Science and the Law Volume 50 ; 50 >
       au < released ; 2011 ; Medicine, Science and the Law Volume 51 ; 51 >
-      au < testing ; 2012 ; Medicine, Science and the Law Volume 52 ; 52 >
+      au < notReady ; 2012 ; Medicine, Science and the Law Volume 52 ; 52 >
       au < manifest ; 2013 ; Medicine, Science and the Law Volume 53 ; 53 >
 
     }
@@ -999,7 +999,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Menopause International Volume 15 [superseded] ; 15 >
       au < HighWirePressPlugin ; down ; 2010 ; Menopause International Volume 16 [superseded] ; 16 >
       au < HighWirePressPlugin ; down ; 2011 ; Menopause International Volume 17 [superseded] ; 17 >
-      au < HighWirePressH20Plugin ; testing ; 2012 ; Menopause International Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; notReady ; 2012 ; Menopause International Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Menopause International Volume 19 ; 19 >
 
     }

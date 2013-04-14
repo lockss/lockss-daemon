@@ -18,9 +18,6 @@
     
     param[journal_id] = trre
     
-    attr[where] = content1b
-    comment[notReady] = persistent 403 errors pointing to empty Frontispiece webpages
-  
     au < released ; 2004 ; Tree-Ring Research Volume 60 ; 60 >
     au < released ; 2005 ; Tree-Ring Research Volume 61 ; 61 >
     au < released ; 2006 ; Tree-Ring Research Volume 62 ; 62 >
@@ -29,7 +26,7 @@
     au < released ; 2009 ; Tree-Ring Research Volume 65 ; 65 >
     au < released ; 2010 ; Tree-Ring Research Volume 66 ; 66 >
     au < released ; 2011 ; Tree-Ring Research Volume 67 ; 67 >
-    au < testing ; 2012 ; Tree-Ring Research Volume 68 ; 68 >
+    au < ready ; 2012 ; Tree-Ring Research Volume 68 ; 68 >
     au < manifest ; 2013 ; Tree-Ring Research Volume 69 ; 69 >
 
   }

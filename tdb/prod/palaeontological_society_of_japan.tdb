@@ -18,16 +18,16 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jpal
   
-      au < testing ; 2003 ; Paleontological Research Volume 7 ; 7 >
-      au < testing ; 2004 ; Paleontological Research Volume 8 ; 8 >
-      au < testing ; 2005 ; Paleontological Research Volume 9 ; 9 >
-      au < testing ; 2006 ; Paleontological Research Volume 10 ; 10 >
-      au < testing ; 2007 ; Paleontological Research Volume 11 ; 11 >
-      au < testing ; 2008 ; Paleontological Research Volume 12 ; 12 >
-      au < testing ; 2009 ; Paleontological Research Volume 13 ; 13 >
-      au < testing ; 2010 ; Paleontological Research Volume 14 ; 14 >
-      au < testing ; 2011 ; Paleontological Research Volume 15 ; 15 >
-      au < testing ; 2012 ; Paleontological Research Volume 16 ; 16 >
+      au < notReady ; 2003 ; Paleontological Research Volume 7 ; 7 >
+      au < ready ; 2004 ; Paleontological Research Volume 8 ; 8 >
+      au < notReady ; 2005 ; Paleontological Research Volume 9 ; 9 >
+      au < ready ; 2006 ; Paleontological Research Volume 10 ; 10 >
+      au < ready ; 2007 ; Paleontological Research Volume 11 ; 11 >
+      au < ready ; 2008 ; Paleontological Research Volume 12 ; 12 >
+      au < ready ; 2009 ; Paleontological Research Volume 13 ; 13 >
+      au < ready ; 2010 ; Paleontological Research Volume 14 ; 14 >
+      au < ready ; 2011 ; Paleontological Research Volume 15 ; 15 >
+      au < ready ; 2012 ; Paleontological Research Volume 16 ; 16 >
       au < expected ; 2013 ; Paleontological Research Volume 17 ; 17 >
     }
 
