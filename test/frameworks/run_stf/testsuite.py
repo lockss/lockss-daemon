@@ -982,10 +982,14 @@ if __name__ == '__main__':
             if framework.isRunning:
                 log.info( 'Stopping framework' )
                 framework.stop()
-        if type( exception ) is SystemExit and not exception.code and \
-                deleteAfterSuccess:
-            for framework in frameworkList:
-                framework.clean()
+
+        if type( exception ) is KeyboardInterrupt:
+            sys.exit(2)
+        if type( exception ) is SystemExit:
+            if not exception.code and deleteAfterSuccess:
+                for framework in frameworkList:
+                    framework.clean()
+            raise
     except Exception, exception:
         log.error( exception )
         raise
