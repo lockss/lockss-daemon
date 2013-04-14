@@ -400,24 +400,47 @@
       issnl = 1758-9991
     >
 
-    pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://ht.rsmjournals.com/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    pluginPrefix = org.lockss.plugin.highwire.
 
-    au < HighWirePressH20Plugin ; released ; 2001 ; Hand Therapy Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; released ; 2002 ; Hand Therapy Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; released ; 2003 ; Hand Therapy Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; released ; 2004 ; Hand Therapy Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; released ; 2005 ; Hand Therapy Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; released ; 2006 ; Hand Therapy Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; released ; 2007 ; Hand Therapy Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; released ; 2008 ; Hand Therapy Volume 13 ; 13 >
-    au < HighWirePressPlugin ; down ; 2009 ; Hand Therapy Volume 14 [superseded] ; 14 >
-    au < HighWirePressPlugin ; down ; 2010 ; Hand Therapy Volume 15 [superseded] ; 15 >
-    au < HighWirePressPlugin ; down ; 2011 ; Hand Therapy Volume 16 [superseded] ; 16 >
-    au < HighWirePressH20Plugin ; notReady ; 2012 ; Hand Therapy Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Hand Therapy Volume 18 ; 18 >
+    {
+    
+      param[base_url] = http://ht.rsmjournals.com/
 
+      au < HighWirePressH20Plugin ; down ; 2001 ; Hand Therapy Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Hand Therapy Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Hand Therapy Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Hand Therapy Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; down ; 2005 ; Hand Therapy Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; down ; 2006 ; Hand Therapy Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Hand Therapy Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Hand Therapy Volume 13 ; 13 >
+      au < HighWirePressPlugin ; down ; 2009 ; Hand Therapy Volume 14 [superseded] ; 14 >
+      au < HighWirePressPlugin ; down ; 2010 ; Hand Therapy Volume 15 [superseded] ; 15 >
+      au < HighWirePressPlugin ; down ; 2011 ; Hand Therapy Volume 16 [superseded] ; 16 >
+    
+    }
+    
+    {
+    
+      param[base_url] = http://ht.rsmjournals.com/
+
+      au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Hand Therapy Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Hand Therapy Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Hand Therapy Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Hand Therapy Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Hand Therapy Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Hand Therapy Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Hand Therapy Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Hand Therapy Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; exists ; 2009 ; Hand Therapy Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; exists ; 2010 ; Hand Therapy Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; exists ; 2011 ; Hand Therapy Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; exists ; 2012 ; Hand Therapy Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; expected ; 2013 ; Hand Therapy Volume 18 ; 18 >
+    
+    }
+    
   }
 
   {
