@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmInterp.java,v 1.16 2013-04-14 05:26:12 tlipkis Exp $
+ * $Id: TestPsmInterp.java,v 1.17 2013-04-14 06:57:19 tlipkis Exp $
  */
 
 /*
@@ -453,7 +453,6 @@ public class TestPsmInterp extends LockssTestCase {
 		 new PsmResponse(Else, "Error")),
     new PsmState("Error"),
     new PsmState("Done"),
-    new PsmState("FinalWithAction", new MyAction(PsmEvents.NoOp)),
   };
 
   // Next few tests record all interpreter events (action, transitions,
