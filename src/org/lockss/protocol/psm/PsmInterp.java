@@ -1,5 +1,5 @@
 /*
-* $Id: PsmInterp.java,v 1.18 2013-04-14 05:26:12 tlipkis Exp $
+* $Id: PsmInterp.java,v 1.19 2013-04-14 06:56:52 tlipkis Exp $
  */
 
 /*
@@ -201,7 +201,7 @@ public class PsmInterp {
     }
   }
 
-  // 
+  // Reset timeout to original duration
   synchronized void restartStateTimer() {
     if (timer != null) {
       log.debug2("Restarting state timer");
