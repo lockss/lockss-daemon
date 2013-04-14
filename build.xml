@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.336 2013-04-02 02:11:53 fergaloy-sf Exp $
+ $Id: build.xml,v 1.337 2013-04-14 05:23:28 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -2886,11 +2886,6 @@ optionally -Dtests= for tests to be run.
 
   <target name="javadoc-apiviz" depends="jar-tests,prepare-javadoc,-load-build-info,param-docs"
           description="Make the javadocs along with apiviz UML graphs.">
-    <!-- Write the text param doc into the doc tree -->
-    <java classname="ParamDoc" fork="true">
-       <classpath refid="test.run.classpath" />
-       <arg line="-o ${javadoc}/paramdoc.txt lockss.jar" />
-    </java>
     <javadoc
         doclet="org.jboss.apiviz.APIviz"
         docletpath="${apiviz.jar}"
