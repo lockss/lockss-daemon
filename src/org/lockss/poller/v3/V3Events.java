@@ -1,5 +1,5 @@
 /*
- * $Id: V3Events.java,v 1.10 2008-01-27 06:46:04 tlipkis Exp $
+ * $Id: V3Events.java,v 1.11 2013-04-14 05:25:17 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public class V3Events {
   // Instances
   public static PsmEvent evtElse = PsmEvents.Else;
   public static PsmEvent evtError = PsmEvents.Error;
+  public static PsmEvent evtNoOp = PsmEvents.NoOp;
   public static PsmEvent evtOk = new Ok();
   public static PsmEvent evtVoteIncomplete = new VoteIncomplete();
   public static PsmEvent evtVoteComplete = new VoteComplete();

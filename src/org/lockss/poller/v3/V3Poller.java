@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.134 2013-04-11 00:00:15 barry409 Exp $
+ * $Id: V3Poller.java,v 1.135 2013-04-14 05:25:17 tlipkis Exp $
  */
 
 /*
@@ -100,13 +100,14 @@ public class V3Poller extends BasePoll {
   // The poll expired while it was hibernated
   public static final int POLLER_STATUS_EXPIRED = 9;
   public static final int POLLER_STATUS_WAITING_REPAIRS = 10;
-  public static final int POLLER_STATUS_ABORTED = 11;
+  public static final int POLLER_STATUS_WAITING_EXIT = 11;
+  public static final int POLLER_STATUS_ABORTED = 12;
 
   public static final String[] POLLER_STATUS_STRINGS =
   {
    "Starting", "No Time Available", "Resuming", "Inviting Peers", "Hashing",
    "Tallying", "Complete", "No Quorum", "Error", "Expired", 
-   "Waiting for Repairs", "Aborted",
+   "Waiting for Repairs", "Finishing", "Aborted",
   };
 
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
@@ -854,7 +855,6 @@ public class V3Poller extends BasePoll {
    * Stop the poll, and set the supplied status.
    */
   public void stopPoll(final int status) {
-    pollManager.countPollEndEvent(status);
     // Force the poll to be complete, and continue only if it was
     // previously not complete, to ensure that the rest of this method
     // is executed only once.
@@ -866,6 +866,7 @@ public class V3Poller extends BasePoll {
     log.info("Stopping poll " + getKey() + " with status " + 
              V3Poller.POLLER_STATUS_STRINGS[status]);
     setStatus(status);
+    pollManager.countPollEndEvent(status);
     AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
     auState.pollFinished(status);
     if (task != null && !task.isExpired()) {
@@ -1701,14 +1702,6 @@ public class V3Poller extends BasePoll {
     } else {
       // It's OK to shortcut and end the poll here, there's nothing left to do!
 
-      // XXX hack to allow voter state machine to send receipt.
-      // should wait until all voter state machines have finished
-      try {
-	Deadline.in(1 * Constants.SECOND).sleep();
-      } catch (InterruptedException e) {
-	// ignore
-      }
-
       voteComplete();
       return;
     }
@@ -1848,7 +1841,8 @@ public class V3Poller extends BasePoll {
                   + getKey());
       return;
     }
-    computeNewRepairers();
+    completeVotersAndUpdateRepairers();
+
     if (hasQuorum()) {
       // If the poll is quorate, update 
 
@@ -1862,9 +1856,13 @@ public class V3Poller extends BasePoll {
       AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
       auState.setV3Agreement(getPercentAgreement());
       signalAuEvent();
-      stopPoll(POLLER_STATUS_COMPLETE);
+    }
+    setStatus(V3Poller.POLLER_STATUS_WAITING_EXIT);
+
+    if (hasQuorum()) {
+      stopPollWhenVotersDone(POLLER_STATUS_COMPLETE);
     } else {
-      stopPoll(V3Poller.POLLER_STATUS_NO_QUORUM);
+      stopPollWhenVotersDone(POLLER_STATUS_NO_QUORUM);
     }
   }
 
@@ -1896,9 +1894,10 @@ public class V3Poller extends BasePoll {
     }
   }
 
-  // Independent of quorum, remember peers that agreed with us as they're
-  // now entitled to receive repairs
-  private void computeNewRepairers() {
+  // Notify voter state machines we're done (triggers SendReceipt), and
+  // remember peers that agreed with us as they're now entitled to receive
+  // repairs
+  private void completeVotersAndUpdateRepairers() {
     int newRepairees = 0;
     // CR: repair thread holds this lock for a long time?
     synchronized(theParticipants) {
@@ -1945,6 +1944,55 @@ public class V3Poller extends BasePoll {
       agreement = 0.0f;
     return agreement;
   }
+
+  int eventualStatus = -1;
+
+  synchronized void stopPollWhenVotersDone(int status) {
+    log.debug2("stopPollWhenVotersDone(" + getStatusString(status) + ")");
+    if (isPollActive()) {
+      synchronized (theParticipants) {
+	if (isUnfinishedVoter()) {
+	  eventualStatus = status;
+	} else {
+	  // XXX ok to do this with theParticipants locked?
+	  stopPoll(status);
+	}
+      }
+    }
+  }
+
+
+  /**
+   * Called by participant state machines when final state reached
+   */
+  void voterFinished(ParticipantUserData ud) {
+    log.debug2("Voter finished: " + ud);
+    if (eventualStatus >= 0) {
+      stopPollIfAllFinished(eventualStatus);
+    }
+  }
+
+  void stopPollIfAllFinished(int status) {
+    log.debug2("stopPollIfAllFinished(" + getStatusString(status) + ")");
+    synchronized (theParticipants) {
+      if (!isUnfinishedVoter()) {
+	// XXX ok to do this with theParticipants locked?
+	stopPoll(status);
+      }
+    }
+  }
+
+  // Must be called with theParticipants locked
+  boolean isUnfinishedVoter() {
+    for (ParticipantUserData peer : theParticipants.values()) {
+      if (peer.getStatus() != PEER_STATUS_COMPLETE) {
+	log.debug2("Not complete: " + peer + ": " + peer.getStatusString());
+	return true;
+      }
+    }
+    return false;
+  }
+
 
   /**
    * Called by participant state machines if an error occurs.

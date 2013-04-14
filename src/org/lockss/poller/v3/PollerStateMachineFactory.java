@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateMachineFactory.java,v 1.11 2010-09-01 07:54:33 tlipkis Exp $
+ * $Id: PollerStateMachineFactory.java,v 1.12 2013-04-14 05:25:17 tlipkis Exp $
  */
 
 /*
@@ -111,7 +111,8 @@ public class PollerStateMachineFactory implements PsmMachine.Factory {
         new PsmState("SendReceipt", new PsmMethodAction(actionClass,
                                                        "handleSendReceipt"),
                      new PsmResponse(V3Events.evtOk, "FinalizePoller")),
-        new PsmState("FinalizePoller")
+        new PsmState("FinalizePoller", new PsmMethodAction(actionClass,
+							   "handleFinalize"))
     };
 
     return states;

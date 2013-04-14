@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.33 2013-03-18 19:19:33 dshr Exp $
+ * $Id: PollerActions.java,v 1.34 2013-04-14 05:25:17 tlipkis Exp $
  */
 
 /*
@@ -343,6 +343,13 @@ public class PollerActions {
       return V3Events.evtError;
     }
     return V3Events.evtOk;
+  }
+
+  @ReturnEvents("evtNoOp")
+  public static PsmEvent handleFinalize(PsmEvent evt, PsmInterp interp) {
+    ParticipantUserData ud = getUserData(interp);
+    ud.getPoller().voterFinished(ud);
+    return V3Events.evtNoOp;
   }
 
   @ReturnEvents("evtOk")

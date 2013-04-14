@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollerStateMachineFactory.java,v 1.9 2008-01-27 06:46:04 tlipkis Exp $
+ * $Id: TestPollerStateMachineFactory.java,v 1.10 2013-04-14 05:25:17 tlipkis Exp $
  */
 
 /*
@@ -134,7 +134,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
 				"proveRemainingEffort",
 				"sendPollProof", "receiveNominate",
 				"sendVoteRequest", "receiveVote",
-				"tallyVote", "sendReceipt"};
+				"tallyVote", "sendReceipt", "finalize"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
                      (List)interp.getUserData());
   }
@@ -197,6 +197,11 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
     public static PsmEvent handleSendReceipt(PsmEvent evt, PsmInterp interp) {
       ((List)interp.getUserData()).add("sendReceipt");
       return V3Events.evtOk;
+    }
+
+    public static PsmEvent handleFinalize(PsmEvent evt, PsmInterp interp) {
+      ((List)interp.getUserData()).add("finalize");
+      return V3Events.evtNoOp;
     }
 
     public static PsmEvent handleError(PsmEvent evt, PsmInterp interp) {
