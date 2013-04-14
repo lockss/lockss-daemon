@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.91 2012-08-06 03:34:46 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.92 2013-04-14 05:25:38 tlipkis Exp $
  */
 
 /*
@@ -279,7 +279,7 @@ public class HistoryRepositoryImpl
       return res;
     }
     catch (SerializationException.FileNotFound fnf) {
-      logger.debug2(errorString, fnf);
+      logger.debug2(errorString + ": " + fnf);
       // drop down to return default
     }
     catch (SerializationException se) {

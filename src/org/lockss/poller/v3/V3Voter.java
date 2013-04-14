@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.80 2013-03-18 19:19:33 dshr Exp $
+ * $Id: V3Voter.java,v 1.81 2013-04-14 05:25:39 tlipkis Exp $
  */
 
 /*
@@ -957,7 +957,7 @@ public class V3Voter extends BasePoll {
 			      ehAbortPoll(errmsg));
     byte[] nonce2 = voterUserData.getVoterNonce2();
     if (nonce2 != null && nonce2.length > 0) {
-      log.debug("Poll " + voterUserData.getPollKey() + " is symmetric");
+      log.debug2("Poll " + voterUserData.getPollKey() + " is symmetric");
     }
   }
 
@@ -991,9 +991,9 @@ public class V3Voter extends BasePoll {
       if (svb != null) {
 	if (ver.getHashes().length > 2) {
 	  byte[] symmetricDigest = ver.getHashes()[2];
+	  log.debug3("Poll " + voterUserData.getPollKey() + " is symmetric:" +
+		     block.getUrl());
 	  // Add a VoteBlock for the symmetric poll hashes
-	  log.debug("Poll " + voterUserData.getPollKey() + " is symmetric:" +
-		    block.getUrl());
 	  svb.addVersion(ver.getFilteredOffset(),
 			 ver.getFilteredLength(),
 			 ver.getUnfilteredOffset(),
