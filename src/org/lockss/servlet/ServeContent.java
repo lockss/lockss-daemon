@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.76 2013-04-13 05:17:50 pgust Exp $
+ * $Id: ServeContent.java,v 1.77 2013-04-14 14:05:53 pgust Exp $
  */
 
 /*
@@ -405,9 +405,12 @@ public class ServeContent extends LockssServlet {
         Enumeration en = req.getParameterNames();
         while (en.hasMoreElements()) {
           String name = (String)en.nextElement();
-          if (!"url".equals(name)) {
+          // filter out LOCKSS specific params
+          if (   !"url".equals(name)
+              && !"auid".equals(name)
+              && !"version".equals(name)) {
             String vals[] = req.getParameterValues(name);
-            for(String val : vals) {
+            for (String val : vals) {
               helper.add(name, val);
             }
           }
