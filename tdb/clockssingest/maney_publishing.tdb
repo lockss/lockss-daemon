@@ -30,6 +30,7 @@
     param[journal_issn] = 1743-6753
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_from] = 0967-9782
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
@@ -145,7 +146,8 @@
     param[journal_issn] = 0003-4983
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[continued_by] = 2047-7724 in 2012
+    
+    comment[continued_by] = 2047-7724
     comment[dnp] = no manifest pages and html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 2002 ; Annals of Tropical Medicine and Parasitology Volume 96 ; 96 > 
@@ -158,8 +160,6 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Annals of Tropical Medicine and Parasitology Volume 103 ; 103 > 
     au < doNotProcess ; doNotProcess ; 2010 ; Annals of Tropical Medicine and Parasitology Volume 104 ; 104 > 
     au < doNotProcess ; doNotProcess ; 2011 ; Annals of Tropical Medicine and Parasitology Volume 105 ; 105 > 
-    au < doNotProcess ; doNotProcess ; 2012 ; Annals of Tropical Medicine and Parasitology Volume 106 ; 106 > 
-    au < expected ; exists ; 2013 ; Annals of Tropical Medicine and Parasitology Volume 107 ; 107 > 
 
   }
 
@@ -181,6 +181,7 @@
     param[journal_issn] = 0272-4936
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_by] = 2046-9047
     comment[dnp] = no manifest pages and html pending plugin workaround or publisher fix
 
@@ -194,8 +195,6 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Annals of Tropical Paediatrics: International Child Health Volume 29 ; 29 > 
     au < doNotProcess ; doNotProcess ; 2010 ; Annals of Tropical Paediatrics: International Child Health Volume 30 ; 30 > 
     au < doNotProcess ; doNotProcess ; 2011 ; Annals of Tropical Paediatrics: International Child Health Volume 31 ; 31 > 
-    au < doNotProcess ; doNotProcess ; 2012 ; Annals of Tropical Paediatrics: International Child Health Volume 32 ; 32 > 
-    au < expected ; exists ; 2013 ; Annals of Tropical Paediatrics: International Child Health Volume 33 ; 33 > 
 
   }
 
@@ -285,6 +284,7 @@
     param[journal_issn] = 0967-9782
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_by] = 1743-6753
 
     au < manifest ; exists ; 1999 ; British Ceramic Transactions Volume 98 ; 98 > 
@@ -312,6 +312,7 @@
     param[journal_issn] = 0007-0599
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_by] = 1478-422X
 
     au < manifest ; exists ; 1999 ; British Corrosion Journal Volume 34 ; 34 > 
@@ -336,7 +337,8 @@
     param[journal_id] = bjdd 
     param[journal_issn] = 0969-7950
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[0] = changing name to International Journal of Developmental Disabilities (IJDD) in 2012
+    
+    comment[continued_by] = 2047-3877
     
     au < released ; crawling ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
 
@@ -889,7 +891,7 @@
     param[journal_issn] = 1478-422X
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[continues] = 0007-0599
+    comment[continued_from] = 0007-0599
     comment[notReady] = low agreement
 
     au < manifest ; exists ; 2003 ; Corrosion Engineering, Science and Technology Volume 38 ; 38 > 
@@ -1390,9 +1392,12 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < manifest ; exists ; 2007 ; The Hardy Review Volume 9 ; 9 > 
-    au < manifest ; exists ; 2008 ; The Hardy Review Volume 10 ; 10 > 
-    au < manifest ; exists ; 2009 ; The Hardy Review Volume 11 ; 11 > 
+    comment[1] = ceased publication in 2011
+    comment[notReady] = requesting manifest pages RT 1962
+    
+    au < notReady ; exists ; 2007 ; The Hardy Review Volume 9 ; 9 > 
+    au < notReady ; exists ; 2008 ; The Hardy Review Volume 10 ; 10 > 
+    au < notReady ; exists ; 2009 ; The Hardy Review Volume 11 ; 11 > 
     au < released ; crawling ; 2010 ; The Hardy Review Volume 12 ; 12 > 
     au < released ; crawling ; 2011 ; The Hardy Review Volume 13 ; 13 >  
     au < expected ; exists ; 2012 ; The Hardy Review Volume 14 ; 14 >
@@ -1696,7 +1701,7 @@
     param[journal_issn] = 1758-1206
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[continues] = 0372-0187
+    comment[continued_from] = 0372-0187
 
     au < manifest ; exists ; 2009 ; International Journal for the History of Engineering & Technology Volume 79 ; 79 > 
     au < released ; crawling ; 2010 ; International Journal for the History of Engineering & Technology Volume 80 ; 80 > 
@@ -1756,11 +1761,11 @@
     param[journal_issn] = 2047-3869
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_from] = 0969-7950
     
     au < released ; crawling ; 2012 ; International Journal of Developmental Disabilities Volume 58 ; 58 > 
     au < manifest ; exists ; 2013 ; International Journal of Developmental Disabilities Volume 59 ; 59 > 
-
 
   }
 
@@ -1780,6 +1785,7 @@
     param[journal_id] = ihm
     param[journal_issn] = 2047-9700
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_from] = 1753-3031
     
     au < released ; crawling ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 > 
@@ -1805,8 +1811,9 @@
     param[journal_issn] = 0950-6608
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
-    comment[continued_by] = 0308-4590
+    comment[continued_from] = 0308-4590
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
     
     au < doNotProcess ; doNotProcess ; 1987 ; International Materials Reviews Volume 32 ; 32 > 
@@ -1884,8 +1891,9 @@
     param[journal_issn] = 0308-4590 
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_from] = 0367-9020
-    comment[continued_by] = 0950-6608
+    comment[continued_by] = 0950-6608 
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
     
     au < manifest ; exists ; 1976 ; International Metals Reviews Volume 21 ; 21 > 
@@ -1919,6 +1927,7 @@
     param[journal_issn] = 1753-6146
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 2008 ; International Musculoskeletal Medicine Volume 30 ; 30 > 
@@ -1947,7 +1956,8 @@
     param[journal_issn] = 2042-6445
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[continues] = 0020-3203
+    
+    comment[continued_from] = 0020-3203
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2010 ; International Wood Products Journal Volume 1 ; 1 > 
@@ -1974,6 +1984,7 @@
     param[journal_issn] = 0301-9233
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 1999 ; Ironmaking & Steelmaking Volume 26 ; 26 > 
@@ -2180,6 +2191,7 @@
     param[journal_issn] = 0373-6687
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2002 ; Journal of Bryology Volume 24 ; 24 > 
@@ -2243,6 +2255,7 @@
     param[journal_issn] = 1753-8068
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Communication in Healthcare Volume 1 ; 1 > 
@@ -2359,6 +2372,7 @@
     param[journal_issn] = 0147-8885
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 1977-1978 ; Journal of Histotechnology Volume 1 ; 1 > 
@@ -2417,8 +2431,9 @@
     param[journal_issn] = 1753-3031
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
-    comment[continued_by] = 2047-9700 in 2012
+    comment[continued_by] = 2047-9700
     
     au < doNotProcess ; doNotProcess ; 2007-2008 ; Journal of Management & Marketing in Healthcare Volume 1 ; 1 > 
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Management & Marketing in Healthcare Volume 2 ; 2 > 
@@ -2444,6 +2459,7 @@
     param[journal_issn] = 1066-9817
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 1993 ; Journal of Manual & Manipulative Therapy Volume 1 ; 1 > 
@@ -2604,6 +2620,7 @@
     param[journal_issn] = 1079-0268
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[notReady] = low agreement
 
     au < notReady ; exists ; 2011 ; Journal of Spinal Cord Medicine Volume 34 ; 34 > 
@@ -2686,6 +2703,7 @@
     param[journal_issn] = 0144-2600
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2005 ; Journal of the Energy Institute Volume 78 ; 78 > 
@@ -2718,6 +2736,7 @@
     param[journal_issn] = 0020-3203
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_by] = 2042-6445
 
     au < manifest ; exists ; 2005-2008 ; Journal of the Institute of Wood Science Volume 17 ; 17 > 
@@ -2771,6 +2790,8 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
+    comment[0] = ceased publication 2011
+    
     au < manifest ; exists ; 2005 ; Labour History Review Volume 70 ; 70 > 
     au < manifest ; exists ; 2006 ; Labour History Review Volume 71 ; 71 > 
     au < manifest ; exists ; 2007 ; Labour History Review Volume 72 ; 72 > 
@@ -2778,8 +2799,6 @@
     au < manifest ; exists ; 2009 ; Labour History Review Volume 74 ; 74 > 
     au < released ; crawling ; 2010 ; Labour History Review Volume 75 ; 75 > 
     au < released ; crawling ; 2011 ; Labour History Review Volume 76 ; 76 > 
-    au < expected ; exists ; 2012 ; Labour History Review Volume 77 ; 77 > 
-    au < expected ; exists ; 2013 ; Labour History Review Volume 78 ; 78 > 
 
   }
 
@@ -2828,6 +2847,7 @@
     param[journal_issn] = 0075-8914
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[notReady] = low agreement
 
     au < manifest ; exists ; 1969 ; Levant Volume 1 ; 1 > 
@@ -2894,6 +2914,7 @@
     param[journal_issn] = 0024-2306
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_by] = 1758-3489
 
     au < manifest ; exists ; 2005 ; Library History Volume 21 ; 21 > 
@@ -2921,7 +2942,8 @@
     param[journal_issn] = 1758-3489
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[continues] = 0024-2306
+    
+    comment[continued_from] = 0024-2306
 
     au < manifest ; exists ; 2009 ; Library & Information History Volume 25 ; 25 > 
     au < released ; crawling ; 2010 ; Library & Information History Volume 26 ; 26 > 
@@ -3009,6 +3031,7 @@
     param[journal_issn] = 1432-8917
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2006 ; Materials Research Innovations Volume 10 ; 10 > 
@@ -3040,7 +3063,8 @@
     param[journal_issn] = 0267-0836
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[continues] = 0306-3453
+    
+    comment[continued_from] = 0306-3453
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 1985 ; Materials Science and Technology Volume 1 ; 1 > 
@@ -3093,6 +3117,7 @@
     param[journal_issn] = 1066-7857
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 2006 ; Materials Technology: Advanced Performance Materials Volume 21 ; 21 > 
@@ -3160,6 +3185,7 @@
     param[journal_issn] = 1366-0691
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[notReady] = RU4600, crawl with no substance
 
     au < manifest ; exists ; 2006 ; Medieval Sermon Studies Volume 50 ; 50 > 
@@ -3189,6 +3215,7 @@
     param[journal_issn] = 0306-3453
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[merged_into] = 0267-0836
 
     au < manifest ; exists ; 1967 ; Metal Science Volume 1 ; 1 > 
@@ -3225,9 +3252,10 @@
     param[graphics_url] = http://graphics.ingentaconnect.com/
     param[publisher_id] = maney
     param[journal_id] = mtlr 
-    param[journal_issn] = 0076-6690
+    param[journal_issn] = 0367-9020
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_by] = 0950-6608
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
     
@@ -3329,6 +3357,7 @@
     param[journal_issn] = 0371-9553
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2000 ; Mineral Processing and Extractive Metallurgy Volume 109 ; 109 > 
@@ -3427,6 +3456,7 @@
     param[journal_issn] = 1474-9009
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2000 ; Mining Technology Volume 109 ; 109 > 
@@ -3492,6 +3522,7 @@
     param[journal_issn] = 0161-6412
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2001 ; Neurological Research Volume 23 ; 23 > 
@@ -3525,6 +3556,7 @@
     param[journal_id] = njb
     param[journal_issn] = 2042-3489
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 2011 ; New Journal of Botany Volume 1 ; 1 > 
@@ -3623,6 +3655,7 @@
     param[journal_issn] = 1028-415X
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2002 ; Nutritional Neuroscience Volume 5 ; 5 > 
@@ -3722,6 +3755,7 @@
     param[journal_issn] = 1746-5095
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2004 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 15 ; 15 > 
@@ -3752,7 +3786,8 @@
     param[journal_id] = pch 
     param[journal_issn] = 2046-9047
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[continues] = 0272-4936 
+    
+    comment[continued_from] = 0272-4936 
     
     au < crawling ; exists ; 2012 ; Paediatrics and International Child Health Volume 32 ; 32 >
     au < manifest ; exists ; 2013 ; Paediatrics and International Child Health Volume 33 ; 33 >
@@ -3777,8 +3812,9 @@
     param[journal_issn] = 0169-1112
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[not_continued] = as of 2/23/2012 this journal is no longer published by Maney, and no issues past 2007 are found.
-
+    
+    comment[0] = publication ceased in 2007
+        
     au < manifest ; exists ; 2000 ; The Pain Clinic Volume 12 ; 12 > 
     au < manifest ; exists ; 2001-2002 ; The Pain Clinic Volume 13 ; 13 > 
     au < manifest ; exists ; 2002 ; The Pain Clinic Volume 14 ; 14 > 
@@ -3841,6 +3877,7 @@
     param[journal_issn] = 0957-4190
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[0] = ceased publication in 2005
 
     au < manifest ; exists ; 2003 ; Papillomavirus Report Volume 14 ; 14 > 
@@ -3864,6 +3901,7 @@
     param[journal_id] = pgh
     param[journal_issn] = 2047-7724
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_from] = 0003-4983
     
     au < crawling ; exists ; 2012 ; Pathogens and Global Health Volume 106 ; 106 >
@@ -3890,12 +3928,13 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
+    comment[0] = ceased publication 2012
+
     au < manifest ; exists ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 > 
     au < manifest ; exists ; 2009 ; Pharmaceutical Programming Volume 2 ; 2 > 
     au < released ; crawling ; 2010 ; Pharmaceutical Programming Volume 3 ; 3 >  
     au < released ; manifest ; 2011 ; Pharmaceutical Programming Volume 4 ; 4 > 
     au < released ; manifest ; 2012 ; Pharmaceutical Programming Volume 5 ; 5 >
-    au < expected ; exists ; 2013 ; Pharmaceutical Programming Volume 6 ; 6 >
 
   }
 
@@ -3917,6 +3956,7 @@
     param[journal_issn] = 1083-3196
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 1996 ; Physical Therapy Reviews Volume 1 ; 1 > 
@@ -3958,6 +3998,7 @@
     param[journal_issn] = 1465-8011
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 1999 ; Plastics, Rubber and Composites Volume 28 ; 28 > 
@@ -4027,6 +4068,7 @@
     param[journal_issn] = 0032-5899
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 1999 ; Powder Metallurgy Volume 42 ; 42 > 
@@ -4065,6 +4107,7 @@
     param[journal_issn] = 0969-9260
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2003 ; Progress in Palliative Care Volume 11 ; 11 > 
@@ -4163,6 +4206,7 @@
     param[journal_issn] = 1351-0002
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 1999 ; Redox Report Volume 4 ; 4 > 
@@ -4199,6 +4243,7 @@
     param[journal_issn] = 0893-2344
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_by] = 1521-5385 
 
     au < manifest ; exists ; 1994-1995 ; Republican China Volume 20 ; 20 > 
@@ -4278,6 +4323,7 @@
     param[journal_issn] = 1362-1718
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 1996 ; Science and Technology of Welding & Joining Volume 1 ; 1 > 
@@ -4441,6 +4487,7 @@
     param[journal_issn] = 0267-0844
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 1999 ; Surface Engineering Volume 15 ; 15 > 
@@ -4789,6 +4836,7 @@
     param[journal_issn] = 0020-2967
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2005 ; Transactions of the Institute of Metal Finishing Volume 83 ; 83 > 
@@ -4821,6 +4869,7 @@
     param[journal_issn] = 0372-0187
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_by] = 1758-1206
 
     au < manifest ; exists ; 2006 ; Transactions of the Newcomen Society Volume 76 ; 76 > 
@@ -4847,6 +4896,7 @@
     param[journal_issn] = 1751-5831
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2007 ; Tribology - Materials, Surfaces & Interfaces Volume 1 ; 1 > 
@@ -4877,6 +4927,7 @@
     param[journal_issn] = 1521-5385
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
     comment[continued_from] = 0893-2344 
 
     au < manifest ; exists ; 1997-1998 ; Twentieth-Century China Volume 23 ; 23 > 
@@ -4900,11 +4951,6 @@
 
   {
 
-      comment[name] = Ultrasound
-      comment[issn] = 1742-271X
-      comment[eissn] = 1743-1344
-      comment[moved] = This journal moved to Royal Society of Medicine in 2010 and Sage in 2013.
-
   }
 
   {
@@ -4926,10 +4972,11 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
+    comment[0] = publication ceased December 31, 2012
+    
     au < released ; crawling ; 2010 ; Usus Antiquior Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; Usus Antiquior Volume 2 ; 2 >  
     au < released ; crawling ; 2012 ; Usus Antiquior Volume 3 ; 3 >
-    au < expected ; exists ; 2013 ; Usus Antiquior Volume 4 ; 4 >
 
   }
 
