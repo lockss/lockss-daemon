@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.7 2012-07-03 08:13:10 tlipkis Exp $
+ * $Id: VoteBlockTallier.java,v 1.8 2013-04-15 18:46:07 barry409 Exp $
  */
 
 /*
@@ -63,31 +63,53 @@ public class VoteBlockTallier {
 
   // Null if the poller does not have this URL.
   private final HashBlockComparer comparer;
-  private final Collection<VoteBlockTally> tallies;
+  private final Collection<VoteBlockTally> tallies =
+    new ArrayList<VoteBlockTally>();
   private boolean votingStarted = false;
 
   private static final Logger log = Logger.getLogger("VoteBlockTallier");
 
+  private VoteBlockTallier(HashBlockComparer comparer) {
+    this.comparer = comparer;
+  }
+
   /**
    * Make a tallier for a URL the poller does not have.
    */
-  public VoteBlockTallier() {
-    this((HashBlockComparer)null);
+  public static VoteBlockTallier make() {
+    return make((HashBlockComparer)null);
   }
 
   /**
    * Make a tallier for a URL the poller has.
    */
-  public VoteBlockTallier(HashBlockComparer comparer) {
-    this.comparer = comparer;
-    tallies = new ArrayList<VoteBlockTally>();
+  public static VoteBlockTallier make(HashBlock hashBlock) {
+    return make(new HashBlockComparerImpl(hashBlock));
   }
 
   /**
-   * Make a tallier for a URL the poller has.
+   * Make a tallier for a URL the poller has, when doing repair.
    */
-  public VoteBlockTallier(HashBlock hashBlock) {
-    this(new HashBlockComparerImpl(hashBlock));
+  public static VoteBlockTallier makeForRepair(HashBlock hashBlock) {
+    return makeForRepair(new HashBlockComparerImpl(hashBlock));
+  }
+
+  // package level for testing, rather than private
+  static VoteBlockTallier makeForRepair(HashBlockComparer comparer) {
+    return new VoteBlockTallier(comparer);
+  }
+
+  // package level for testing, rather than private
+  static VoteBlockTallier make(HashBlockComparer comparer) {
+    return new VoteBlockTallier(comparer) {
+      // In addition to tallying, inform the ParticipantUserData block
+      // about each vote.
+      @Override public void vote(VoteBlock voteBlock, ParticipantUserData id,
+				 int participantIndex) {
+	id.addHashStats(voteBlock);
+	super.vote(voteBlock, id, participantIndex);
+      }
+    };
   }
 
   /**
@@ -100,7 +122,7 @@ public class VoteBlockTallier {
     tallies.add(tally);
   }
 
-  // This should be done by using dispatch and a subclass.
+  // This could be done by using dispatch and a subclass.
   private boolean pollerHas() {
     return comparer != null;
   }
@@ -111,7 +133,6 @@ public class VoteBlockTallier {
   public void vote(VoteBlock voteBlock, ParticipantUserData id,
 		   int participantIndex) {
     votingStarted = true;
-    id.addHashStats(voteBlock);
     if (pollerHas()) {
       if (comparer.compare(voteBlock, participantIndex)) {
 	voteAgreed(id);

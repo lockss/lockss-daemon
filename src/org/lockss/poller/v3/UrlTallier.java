@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.9 2013-02-24 04:54:19 dshr Exp $
+ * $Id: UrlTallier.java,v 1.10 2013-04-15 18:46:07 barry409 Exp $
  */
 
 /*
@@ -272,7 +272,7 @@ final class UrlTallier {
     }
 
     BlockTally tally = new BlockTally();
-    VoteBlockTallier voteBlockTallier = new VoteBlockTallier();
+    VoteBlockTallier voteBlockTallier = VoteBlockTallier.make();
     log.debug3("tallyVoterUrl: "+url);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.addTally(ParticipantUserData.voteTally);
@@ -299,7 +299,7 @@ final class UrlTallier {
     }
 
     BlockTally tally = new BlockTally();
-    VoteBlockTallier voteBlockTallier = new VoteBlockTallier(hashBlock);
+    VoteBlockTallier voteBlockTallier = VoteBlockTallier.make(hashBlock);
     log.debug3("tallyPollerUrl: "+url);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.addTally(ParticipantUserData.voteTally);
@@ -326,7 +326,8 @@ final class UrlTallier {
     }
 
     log.debug3("tallyRepairUrl: "+url);
-    VoteBlockTallier voteBlockTallier = new VoteBlockTallier(hashBlock);
+    VoteBlockTallier voteBlockTallier =
+      VoteBlockTallier.makeForRepair(hashBlock);
     BlockTally tally = new BlockTally();
     voteBlockTallier.addTally(tally);
     voteAllParticipants(url, voteBlockTallier);
