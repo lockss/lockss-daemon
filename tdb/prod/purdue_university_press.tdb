@@ -123,7 +123,7 @@
 
     plugin = org.lockss.plugin.bepress.BePressPlugin
     param[base_url] = http://docs.lib.purdue.edu/
-    attr[journal_abbr] = dcp
+    param[journal_abbr] = dcp
     implicit < status ; year ; name ; param[volume] >
 
     au < testing ; 2009 ; Data Curation Profile Volume 1 ; 1 >
