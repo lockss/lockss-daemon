@@ -1,10 +1,10 @@
 /*
- * $Id: TestEmeraldHtmlFilterFactory.java,v 1.5 2012-11-06 01:27:07 thib_gc Exp $
+ * $Id: TestEmeraldHtmlFilterFactory.java,v 1.6 2013-04-15 22:07:23 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -67,11 +67,6 @@ public class TestEmeraldHtmlFilterFactory extends LockssTestCase {
   private static final String releatedHtmlFiltered =
       "";
   
-  private static final String printedHtml =
-      "<p>Printed from: http://www.printers.com on Friday the 13th, 2012 copyright Emerald Group Publishing Limited</p>";
-  private static final String printedHtmlFiltered =
-      "";
-  
   private static final String whiteSpaceHtml =
       "<html>\n\n" +
       "<body>" +
@@ -120,14 +115,6 @@ public class TestEmeraldHtmlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
 
     assertEquals(releatedHtmlFiltered, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testPrintedFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(printedHtml),
-        Constants.DEFAULT_ENCODING);
-
-    assertEquals(printedHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
 
   public void testWhiteSpaceFiltering() throws Exception {
