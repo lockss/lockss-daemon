@@ -45,7 +45,7 @@
 
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://docs.lib.purdue.edu/
-    attr[journal_abbr] = dcp
+    param[journal_abbr] = dcp
     implicit < status ; status2 ; year ; name ; param[volume] >
 
     au < manifest ; exists ; 2009 ; Data Curation Profile Volume 1 ; 1 >
