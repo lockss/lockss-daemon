@@ -3500,7 +3500,7 @@
       au < zapped ; down ; 2010 ; British Journalism Review Volume 21 ; 21 ; >
       au < released ; crawling ; 2011 ; British Journalism Review Volume 22 ; 22 ; >
       au < released ; crawling ; 2012 ; British Journalism Review Volume 23 ; 23 ; >
-      au < expected ; exists ; 2013 ; British Journalism Review Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2013 ; British Journalism Review Volume 24 ; 24 ; >
 
     }
 
@@ -4013,7 +4013,7 @@
       au < zapped ; down ; 2010 ; Business Information Review Volume 27 ; 27 ; >
       au < released ; crawling ; 2011 ; Business Information Review Volume 28 ; 28 ; >
       au < zapped ; down ; 2012 ; Business Information Review Volume 29 ; 29 ; >
-      au < expected ; exists ; 2013 ; Business Information Review Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2013 ; Business Information Review Volume 30 ; 30 ; >
 
     }
 
@@ -8647,7 +8647,7 @@
       au < zapped ; down ; 2010 ; Environment and Urbanization Volume 22 ; 22 ; >
       au < released ; crawling ; 2011 ; Environment and Urbanization Volume 23 ; 23 ; >
       au < released ; crawling ; 2012 ; Environment and Urbanization Volume 24 ; 24 ; >
-      au < expected ; exists ; 2013 ; Environment and Urbanization Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2013 ; Environment and Urbanization Volume 25 ; 25 ; >
 
     }
 
@@ -11047,7 +11047,7 @@
       au < zapped ; down ; 2010 ; Global Social Policy Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; Global Social Policy Volume 11 ; 11 ; >
       au < released ; manifest ; 2012 ; Global Social Policy Volume 12 ; 12 ; >
-      au < expected ; exists ; 2013 ; Global Social Policy Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2013 ; Global Social Policy Volume 13 ; 13 ; >
 
     }
 
@@ -13975,7 +13975,7 @@
       au < zapped ; down ; 2010 ; International Journal of Rural Management Volume 6 ; 6 ; >
       au < zapped ; down ; 2011 ; International Journal of Rural Management Volume 7 ; 7 ; >
       au < released ; manifest ; 2012 ; International Journal of Rural Management Volume 8 ; 8 ; >
-      au < expected ; exists ; 2013 ; International Journal of Rural Management Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2013 ; International Journal of Rural Management Volume 9 ; 9 ; >
 
     }
 
@@ -30264,7 +30264,7 @@
         au < exists ; exists ; 2010 ; Recherche et Applications en Marketing Volume 25 ; 25 >
         au < exists ; exists ; 2011 ; Recherche et Applications en Marketing Volume 26 ; 26 >
         au < expected ; exists ; 2012 ; Recherche et Applications en Marketing Volume 27 ; 27 >
-        au < expected ; exists ; 2013 ; Recherche et Applications en Marketing Volume 28 ; 28 >
+        au < manifest ; exists ; 2013 ; Recherche et Applications en Marketing Volume 28 ; 28 >
 
       }
 
@@ -31194,7 +31194,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2012 ; Scandinavian Journal of Surgery Volume 101 ; 101 ; >
-    au < expected ; exists ; 2013 ; Scandinavian Journal of Surgery Volume 102 ; 102 ; >
+    au < manifest ; exists ; 2013 ; Scandinavian Journal of Surgery Volume 102 ; 102 ; >
 
   }
 
@@ -34749,7 +34749,7 @@
       au < released ; crawling ; 2010 ; Tourist Studies Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; Tourist Studies Volume 11 ; 11 ; >
       au < released ; manifest ; 2012 ; Tourist Studies Volume 12 ; 12 ; >
-      au < expected ; exists ; 2013 ; Tourist Studies Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2013 ; Tourist Studies Volume 13 ; 13 ; >
 
     }
 
@@ -36520,7 +36520,7 @@
       au < released ; crawling ; 2010 ; Youth Justice Volume 10 ; 10 ; >
       au < zapped ; down ; 2011 ; Youth Justice Volume 11 ; 11 ; >
       au < released ; crawling ; 2012 ; Youth Justice Volume 12 ; 12 ; >
-      au < expected ; exists ; 2013 ; Youth Justice Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2013 ; Youth Justice Volume 13 ; 13 ; >
 
     }
 
@@ -38060,7 +38060,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://ueg.sagepub.com/
 
-    au < exists ; exists ; 2013 ; United European Gastroenterology Journal Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; United European Gastroenterology Journal Volume 1 ; 1 ; >
 
     }
 
