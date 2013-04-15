@@ -1916,14 +1916,13 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ngc.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      comment[notReady] = different div class"article abstract-view" itemprop"articleBody"
 
       au < HighWirePressH20Plugin ; ready ; 2006 ; New German Critique Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; ready ; 2007 ; New German Critique Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; ready ; 2008 ; New German Critique Volume 35 ; 35 >
       au < HighWirePressH20Plugin ; ready ; 2009 ; New German Critique Volume 36 ; 36 >
       au < HighWirePressH20Plugin ; ready ; 2010 ; New German Critique Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; notReady ; 2011 ; New German Critique Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; ready ; 2011 ; New German Critique Volume 38 ; 38 >
       au < HighWirePressH20Plugin ; released ; 2012 ; New German Critique Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; New German Critique Volume 40 ; 40 >
 
