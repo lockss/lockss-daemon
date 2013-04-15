@@ -2217,7 +2217,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       param[journal_issn] = 2045-5380
 
       au < manifest ; exists ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 >
-      au < manifest ; exists ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
+      au < crawling ; exists ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
       au < manifest ; exists ; 2013 ; Biology of Mood & Anxiety Disorders Volume 3 ; 3 >
 
     }
@@ -2655,7 +2655,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.chiromt.com/
       
       au < manifest ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
-      au < manifest ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
+      au < crawling ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
       au < manifest ; exists ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
       }
     }
@@ -2760,7 +2760,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < exists ; exists ; 2011 ; Clinical Epigenetics Volume 2 ; 2 >
       au < manifest ; exists ; 2011 ; Clinical Epigenetics Volume 3 ; 3 >
-      au < manifest ; exists ; 2012 ; Clinical Epigenetics Volume 4 ; 4 >
+      au < crawling ; exists ; 2012 ; Clinical Epigenetics Volume 4 ; 4 >
       au < manifest ; exists ; 2013 ; Clinical Epigenetics Volume 5 ; 5 >
 
     }
@@ -2796,7 +2796,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2045-3329
 
       au < manifest ; exists ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
-      au < manifest ; exists ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
+      au < crawling ; exists ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
       au < manifest ; exists ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 >
 
     }
@@ -2933,7 +2933,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.darujps.com/
       param[journal_issn] = 1560-8115
 
-      au < manifest ; exists ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 >
+      au < crawling ; exists ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 >
       au < manifest ; exists ; 2013 ; DARU Journal of Pharmaceutical Sciences Volume 21 ; 21 >
     
     }
@@ -3119,7 +3119,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.epmajournal.com/
       param[journal_issn] = 1878-5085
 
-      au < manifest ; exists ; 2012 ; The EPMA Journal Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; The EPMA Journal Volume 3 ; 3 >
       au < manifest ; exists ; 2013 ; The EPMA Journal Volume 4 ; 4 >
 
     }
@@ -3201,7 +3201,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.extremephysiolmed.com/
       param[journal_issn] = 2046-7648
 
-      au < manifest ; exists ; 2012 ; Extreme Physiology & Medicine Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Extreme Physiology & Medicine Volume 1 ; 1 >
       au < manifest ; exists ; 2013 ; Extreme Physiology & Medicine Volume 2 ; 2 >
 
     }
@@ -3644,7 +3644,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008-2009 ; Human Genomics Volume 3 ; 3 >
       au < manifest ; exists ; 2009-2010 ; Human Genomics Volume 4 ; 4 >
       au < manifest ; exists ; 2010-2011 ; Human Genomics Volume 5 ; 5 >
-      au < manifest ; exists ; 2012 ; Human Genomics Volume 6 ; 6 >
+      au < crawling ; exists ; 2012 ; Human Genomics Volume 6 ; 6 >
       au < manifest ; exists ; 2013 ; Human Genomics Volume 7 ; 7 >
 
     }
@@ -3691,7 +3691,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2009 ; Immunity & Ageing Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; Immunity & Ageing Volume 7 ; 7 >
       au < crawling ; exists ; 2011 ; Immunity & Ageing Volume 8 ; 8 >
-      au < manifest ; exists ; 2012 ; Immunity & Ageing Volume 9 ; 9 >
+      au < crawling ; exists ; 2012 ; Immunity & Ageing Volume 9 ; 9 >
       au < manifest ; exists ; 2013 ; Immunity & Ageing Volume 10 ; 10 >
       
     }
@@ -3751,7 +3751,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.idpjournal.com/
       param[journal_issn] = 2049-9957
 
-      au < manifest ; exists ; 2012 ; Infectious Diseases of Poverty Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Infectious Diseases of Poverty Volume 1 ; 1 >
       au < manifest ; exists ; 2013 ; Infectious Diseases of Poverty Volume 2 ; 2 >
 
     }
@@ -3956,7 +3956,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://ijehse.com/
       param[journal_issn] = 1735-1979
 
-      au < manifest ; exists ; 2012 ; Iranian Journal of Environmental Health Science & Engineering Volume 9 ; 9 >
+      au < crawling ; exists ; 2012 ; Iranian Journal of Environmental Health Science & Engineering Volume 9 ; 9 >
       au < manifest ; exists ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 10 ; 10 >
 
     }
@@ -3995,7 +3995,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.ijhpr.org/
       param[journal_issn] = 2045-4015
 
-      au < manifest ; exists ; 2012 ; Israel Journal of Health Policy Research Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Israel Journal of Health Policy Research Volume 1 ; 1 >
       au < manifest ; exists ; 2013 ; Israel Journal of Health Policy Research Volume 2 ; 2 >
 
     }
@@ -4043,7 +4043,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jasbsci.com/
       param[journal_issn] = 2049-1891
 
-      au < manifest ; exists ; 2012 ; Journal of Animal Science and Biotechnology Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; Journal of Animal Science and Biotechnology Volume 3 ; 3 >
       au < manifest ; exists ; 2013 ; Journal of Animal Science and Biotechnology Volume 4 ; 4 >
 
     }
@@ -4242,7 +4242,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; Journal of Cardiovascular Magnetic Resonance Volume 11 ; 11 >
       au < manifest ; exists ; 2010 ; Journal of Cardiovascular Magnetic Resonance Volume 12 ; 12 >
       au < manifest ; exists ; 2011 ; Journal of Cardiovascular Magnetic Resonance Volume 13 ; 13 >
-      au < manifest ; exists ; 2012 ; Journal of Cardiovascular Magnetic Resonance Volume 14 ; 14 >
+      au < crawling ; exists ; 2012 ; Journal of Cardiovascular Magnetic Resonance Volume 14 ; 14 >
       au < manifest ; exists ; 2013 ; Journal of Cardiovascular Magnetic Resonance Volume 15 ; 15 >
 
     }
@@ -4296,7 +4296,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jdmdonline.com/
       param[journal_issn] = 2251-6581
 
-      au < manifest ; exists ; 2012 ; Journal of Diabetes & Metabolic Disorders Volume 11 ; 11 >
+      au < crawling ; exists ; 2012 ; Journal of Diabetes & Metabolic Disorders Volume 11 ; 11 >
       au < manifest ; exists ; 2013 ; Journal of Diabetes & Metabolic Disorders Volume 12 ; 12 >
 
     }
@@ -4557,7 +4557,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jneurodevdisorders.com/
       param[journal_issn] = 1866-1955
 
-      au < manifest ; exists ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 >
+      au < crawling ; exists ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 >
       au < manifest ; exists ; 2013 ; Journal of Neurodevelopmental Disorders Volume 5 ; 5 >
 
     }
@@ -4827,7 +4827,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.longevityandhealthspan.com/
       param[journal_issn] = 2046-2395
 
-      au < manifest ; exists ; 2012 ; Longevity & Healthspan Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Longevity & Healthspan Volume 1 ; 1 >
       au < manifest ; exists ; 2013 ; Longevity & Healthspan Volume 2 ; 2 >
 
     }
@@ -5351,7 +5351,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.perioperativemedicinejournal.com/
       param[journal_issn] = 2047-0525
 
-      au < manifest ; exists ; 2012 ; Perioperative Medicine Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Perioperative Medicine Volume 1 ; 1 >
       au < manifest ; exists ; 2013 ; Perioperative Medicine Volume 2 ; 2 >
 
     }
@@ -5780,7 +5780,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.systematicreviewsjournal.com/
       param[journal_issn] = 2046-4053
 
-      au < manifest ; exists ; 2012 ; Systematic Reviews Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Systematic Reviews Volume 1 ; 1 >
       au < manifest ; exists ; 2013 ; Systematic Reviews Volume 2 ; 2 >
 
     }
@@ -5870,7 +5870,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < doesNotExist ; doesNotExist ; 0 ; Tobacco Induced Diseases Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Tobacco Induced Diseases Volume 8 ; 8 >
       au < manifest ; exists ; 2011 ; Tobacco Induced Diseases Volume 9 ; 9 >
-      au < manifest ; exists ; 2012 ; Tobacco Induced Diseases Volume 10 ; 10 >
+      au < crawling ; exists ; 2012 ; Tobacco Induced Diseases Volume 10 ; 10 >
       au < manifest ; exists ; 2013 ; Tobacco Induced Diseases Volume 11 ; 11 >
 
     }
@@ -5885,7 +5885,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.translationalneurodegeneration.com/
       param[journal_issn] = 2047-9158
 
-      au < manifest ; exists ; 2012 ; Translational Neurodegeneration Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Translational Neurodegeneration Volume 1 ; 1 >
       au < manifest ; exists ; 2013 ; Translational Neurodegeneration Volume 2 ; 2 >
 
     }
@@ -5901,7 +5901,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.transplantationresearch.com/
       param[journal_issn] = 2047-1440
 
-      au < manifest ; exists ; 2012 ; Transplantation Research Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; Transplantation Research Volume 1 ; 1 >
       au < manifest ; exists ; 2013 ; Transplantation Research Volume 2 ; 2 >
 
     }
@@ -6020,7 +6020,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2009 ; World Allergy Organization Journal Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; World Allergy Organization Journal Volume 3 ; 3 >
       au < manifest ; exists ; 2011 ; World Allergy Organization Journal Volume 4 ; 4 >
-      au < manifest ; exists ; 2012 ; World Allergy Organization Journal Volume 5 ; 5 >
+      au < crawling ; exists ; 2012 ; World Allergy Organization Journal Volume 5 ; 5 >
       au < manifest ; exists ; 2013 ; World Allergy Organization Journal Volume 6 ; 6 >
 
     }
