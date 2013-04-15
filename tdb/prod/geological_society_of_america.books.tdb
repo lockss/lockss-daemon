@@ -604,11 +604,12 @@
     param[base_url] = http://reg.gsapubs.org/
     implicit < status ; year ; isbn ; name ; param[volume_name] >
     
-    au < exists ; 2005 ; 978-0-8137-4120-8 ; Geological Society of America Reviews in Engineeing Geology Volume 16 ; 16 >
-    au < exists ; 2007 ; 978-0-8137-4119-2 ; Geological Society of America Reviews in Engineeing Geology Volume 17 ; 17 >
-    au < exists ; 2007 ; 978-0-8137-4118-5 ; Geological Society of America Reviews in Engineeing Geology Volume 18 ; 18 >
-    au < manifest ; 2008 ; 978-0-8137-4117-8 ; Geological Society of America Reviews in Engineeing Geology Volume 19 ; 19 >
-    au < manifest ; 2008 ; 978-0-8137-4116-1 ; Geological Society of America Reviews in Engineeing Geology Volume 20 ; 20 >
+    au < exists ; 2005 ; 978-0-8137-4120-8 ; Geological Society of America Reviews in Engineering Geology Volume 16 ; 16 >
+    au < exists ; 2007 ; 978-0-8137-4119-2 ; Geological Society of America Reviews in Engineering Geology Volume 17 ; 17 >
+    au < exists ; 2007 ; 978-0-8137-4118-5 ; Geological Society of America Reviews in Engineering Geology Volume 18 ; 18 >
+    au < manifest ; 2008 ; 978-0-8137-4117-8 ; Geological Society of America Reviews in Engineering Geology Volume 19 ; 19 >
+    au < manifest ; 2008 ; 978-0-8137-4116-1 ; Geological Society of America Reviews in Engineering Geology Volume 20 ; 20 >
+    au < manifest ; 2013 ; 978-0-8137-4121-5 ; Geological Society of America Reviews in Engineering Geology Volume 21 ; 21 >
     
   }
 }
