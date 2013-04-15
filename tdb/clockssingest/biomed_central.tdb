@@ -1868,7 +1868,7 @@
       au < manifest ; exists ; 2008 ; Allergy, Asthma & Clinical Immunology Volume 4 ; 4 >
       au < crawling ; exists ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 >
       au < crawling ; exists ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 >
-      au < crawling ; exists ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 >
+      au < testing ; exists ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 >
       au < manifest ; exists ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 >
 
@@ -1886,7 +1886,7 @@
 
       au < crawling ; exists ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
       au < crawling ; exists ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
-      au < crawling ; exists ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
+      au < testing ; exists ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
       au < crawling ; exists ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
       au < expected ; exists ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
 
@@ -2079,7 +2079,7 @@
       au < manifest ; exists ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
-      au < crawling ; exists ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
+      au < testing ; exists ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
       au < expected ; exists ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
 
@@ -2157,7 +2157,7 @@
       au < manifest ; exists ; 2008 ; BioData Mining Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; BioData Mining Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; BioData Mining Volume 3 ; 3 >
-      au < crawling ; exists ; 2011 ; BioData Mining Volume 4 ; 4 >
+      au < testing ; exists ; 2011 ; BioData Mining Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; BioData Mining Volume 5 ; 5 >
       au < manifest ; exists ; 2013 ; BioData Mining Volume 6 ; 6 >
 
@@ -2234,7 +2234,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       param[journal_issn] = 2042-6410
 
       au < crawling ; exists ; 2010 ; Biology of Sex Differences Volume 1 ; 1 >
-      au < crawling ; exists ; 2011 ; Biology of Sex Differences Volume 2 ; 2 >
+      au < testing ; exists ; 2011 ; Biology of Sex Differences Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
       au < manifest ; exists ; 2013 ; Biology of Sex Differences Volume 4 ; 4 >
 
@@ -2507,7 +2507,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.cellandbioscience.com/
       param[journal_issn] = 2045-3701
 
-      au < crawling ; exists ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
+      au < testing ; exists ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
       au < manifest ; exists ; 2013 ; Cell & Bioscience Volume 3 ; 3 >
 
