@@ -1,10 +1,10 @@
 /*
- * $Id: EmeraldHtmlFilterFactory.java,v 1.10 2012-11-12 20:27:36 thib_gc Exp $ 
+ * $Id: EmeraldHtmlFilterFactory.java,v 1.11 2013-04-15 22:06:56 thib_gc Exp $ 
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,9 +35,10 @@ package org.lockss.plugin.emerald;
 import java.io.*;
 import java.util.List;
 
+import org.apache.pdfbox.io.IOUtils;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
-import org.htmlparser.tags.LinkTag;
+import org.htmlparser.tags.*;
 import org.htmlparser.util.*;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.filter.*;
@@ -47,6 +48,82 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 public class EmeraldHtmlFilterFactory implements FilterFactory {
+
+  protected static class EmeraldHtmlTransformWithVisitor implements HtmlTransform {
+
+    protected String charset = null;
+    
+    @Override
+    public NodeList transform(NodeList nodeList) throws IOException {
+      try {
+        nodeList.visitAllNodesWith(new NodeVisitor() {
+          @Override
+          public void visitTag(Tag tag) {
+            String tagName = tag.getTagName().toLowerCase();
+            
+            /*
+             * <abbr>
+             */
+            if ("abbr".equals(tagName)) {
+              // <... title="..."> vs. <... title= "..."> 
+              String title = tag.getAttribute("title");
+              if (title != null) {
+                tag.removeAttribute("title");
+                tag.setAttribute("title", title, '"');
+              }
+            }
+            /*
+             * <a> 
+             */
+            else if (tag instanceof LinkTag) {
+              String href = tag.getAttribute("href");
+              if (href != null) {
+                // Some wrong internal links got fixed
+                tag.removeAttribute("href");
+                if (!href.startsWith("#")) {
+                  // <... href="..."> vs. <... href= "...">
+                  tag.setAttribute("href", href, '"');
+                }
+              }
+              // <... title="..."> vs. <... title= "..."> 
+              String title = tag.getAttribute("title");
+              if (title != null) {
+                tag.removeAttribute("title");
+                tag.setAttribute("title", title, '"');
+              }
+              // <... target="..."> vs. <... target= "..."> 
+              String target = tag.getAttribute("target");
+              if (target != null) {
+                tag.removeAttribute("target");
+                tag.setAttribute("target", target, '"');
+              }
+            }
+            /*
+             * <meta>
+             */
+            else if (tag instanceof MetaTag) {
+              if (charset != null) {
+                // Only the first one counts
+                return;
+              }
+              MetaTag meta = (MetaTag)tag;
+              String httpEquiv = meta.getHttpEquiv();
+              if (httpEquiv != null && "content-type".equals(httpEquiv.toLowerCase())) {
+                String contentType = meta.getMetaContent();
+                if (contentType != null) {
+                  charset = HeaderUtil.getCharsetFromContentType(contentType);
+                }
+              }
+            }
+          }
+        });
+      }
+      catch (Exception exc) {
+        logger.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+      }
+      return nodeList;
+    }
+  }
 
   protected static final Logger logger = Logger.getLogger(EmeraldHtmlFilterFactory.class);
   
@@ -62,6 +139,8 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("br"),
         // <img> vs. <img />
         new TagNameFilter("img"),
+        // Some bars were removed over time
+        new TagNameFilter("hr"),
         // Has number of article download in row
         HtmlNodeFilters.tagWithAttribute("td", "headers", "tocopy"),
         // Has related articles download list
@@ -70,59 +149,31 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("table", "class", "articlePrintTable"),
         // Added later
         HtmlNodeFilters.tagWithAttribute("div", "id", "printJournalHead"),
+        // This heading was later removed
+        HtmlNodeFilters.tagWithAttribute("h2", "class", "article"),
+        // Changed Infotrieve provider
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^https?://www4\\.infotrieve\\.com/"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^https?://www\\.contentscm\\.com/"),
     };
                     
-    HtmlTransform xform = new HtmlTransform() {
-      @Override
-      public NodeList transform(NodeList nodeList) throws IOException {
-        try {
-          nodeList.visitAllNodesWith(new NodeVisitor() {
-            @Override
-            public void visitTag(Tag tag) {
-              String tagName = tag.getTagName().toLowerCase();
-              if ("abbr".equals(tagName)) {
-                // <... title="..."> vs. <... title= "..."> 
-                String title = tag.getAttribute("title");
-                if (title != null) {
-                  tag.removeAttribute("title");
-                  tag.setAttribute("title", title, '"');
-                }
-              }
-              else if (tag instanceof LinkTag) {
-                String href = tag.getAttribute("href");
-                if (href != null) {
-                  // Some wrong internal links got fixed
-                  tag.removeAttribute("href");
-                  if (!href.startsWith("#")) {
-                    // <... href="..."> vs. <... href= "...">
-                    tag.setAttribute("href", href, '"');
-                  }
-                }
-                // <... title="..."> vs. <... title= "..."> 
-                String title = tag.getAttribute("title");
-                if (title != null) {
-                  tag.removeAttribute("title");
-                  tag.setAttribute("title", title, '"');
-                }
-              }
-            }
-          });
-        }
-        catch (Exception exc) {
-          logger.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
-        }
-        return nodeList;
-      }
-    };
-          
+    EmeraldHtmlTransformWithVisitor xform = new EmeraldHtmlTransformWithVisitor();
 
     // First filter with HtmlParser
     InputStream filteredStream = new HtmlFilterInputStream(in,
                                                            encoding,
-                                                           new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),
-                                                                                     xform));
+                                                           new HtmlCompoundTransform(xform,
+                                                                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters))));
         
-
+    try {
+      filteredStream.available(); // Force parse
+      if (xform.charset != null) {
+        logger.debug2(String.format("Http-Equiv changes charset from %s to %s", encoding, xform.charset));
+        encoding = xform.charset;
+      }
+    }
+    catch (IOException ioe) {
+      logger.debug2("IOException on available()", ioe);
+    }
     
     Reader reader = FilterUtil.getReader(filteredStream, encoding);
     Reader filtReader = makeFilteredReader(reader);
@@ -131,7 +182,7 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
 
   static Reader makeFilteredReader(Reader reader) {
     List tagList = ListUtil.list(
-        new TagPair("<p>Printed from:", "Emerald Group Publishing Limited</p>", false, false),
+        //new TagPair("<p>Printed from:", "Emerald Group Publishing Limited</p>", false, false),
         // Variable Javascript between intended </body> and a redundant </body>
         new TagPair("</body>", "</html>", false, false)
     );
