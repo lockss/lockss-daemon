@@ -37594,7 +37594,7 @@
     au < exists ; exists ; 2009 ; Adoption & Fostering Volume 33 ; 33 ; >
     au < exists ; exists ; 2010 ; Adoption & Fostering Volume 34 ; 34 ; >
     au < exists ; exists ; 2011 ; Adoption & Fostering Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2012 ; Adoption & Fostering Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2012 ; Adoption & Fostering Volume 36 ; 36 ; >
     au < expected ; exists ; 2013 ; Adoption & Fostering Volume 37 ; 37 ; >
 
     }
@@ -38025,7 +38025,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://smp.sagepub.com/
 
-    au < manifest ; exists ; 2012 ; South Asian Journal of Macroeconomics and Public Finance Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2012 ; South Asian Journal of Macroeconomics and Public Finance Volume 1 ; 1 ; >
     au < expected ; exists ; 2013 ; South Asian Journal of Macroeconomics and Public Finance Volume 2 ; 2 ; >
 
     }
