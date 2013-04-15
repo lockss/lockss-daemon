@@ -27,7 +27,7 @@
     param[journal_id] = aac 
     param[journal_issn] = 1743-6753
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continues] = 0967-9782
+    comment[continued_from] = 0967-9782
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     comment[notReady] = RU4507, different pdf fontname and size used
 
@@ -148,9 +148,9 @@
     param[journal_id] = atmp 
     param[journal_issn] = 0003-4983
     implicit < status ; year ; name ; param[volume_name] >
+    
     comment[continued_by] = 2047-7724
     comment[dnp] = no manifest pages and html pending plugin workaround or publisher fix
-    comment[dnp1] = no manifest page found on 3/20/2013
 
     au < doNotProcess ; 2002 ; Annals of Tropical Medicine and Parasitology Volume 96 ; 96 > 
     au < doNotProcess ; 2003 ; Annals of Tropical Medicine and Parasitology Volume 97 ; 97 > 
@@ -162,8 +162,7 @@
     au < doNotProcess ; 2009 ; Annals of Tropical Medicine and Parasitology Volume 103 ; 103 > 
     au < doNotProcess ; 2010 ; Annals of Tropical Medicine and Parasitology Volume 104 ; 104 > 
     au < doNotProcess ; 2011 ; Annals of Tropical Medicine and Parasitology Volume 105 ; 105 > 
-    au < doNotProcess ; 2012 ; Annals of Tropical Medicine and Parasitology Volume 106 ; 106 > 
-    au < expected ; 2013 ; Annals of Tropical Medicine and Parasitology Volume 107 ; 107 > 
+
 
   }
 
@@ -199,7 +198,7 @@
     au < doNotProcess ; 2010 ; Annals of Tropical Paediatrics: International Child Health Volume 30 ; 30 > 
     au < doNotProcess ; 2011 ; Annals of Tropical Paediatrics: International Child Health Volume 31 ; 31 >  
     au < doNotProcess ; 2012 ; Annals of Tropical Paediatrics: International Child Health Volume 32 ; 32 >
-    au < expected ; 2013 ; Annals of Tropical Paediatrics: International Child Health Volume 33 ; 33 >
+
 
   }
 
@@ -345,6 +344,7 @@
     param[journal_id] = bjdd 
     param[journal_issn] = 0969-7950
     implicit < status ; year ; name ; param[volume_name] >
+    
     comment[continued_by] = 2047-3869 in 2012
 
     comment[UX] = Complete
@@ -401,7 +401,7 @@
     param[journal_issn] = 1474-8932
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continues] = 0309-7765
+    comment[continued_from] = 0309-7765
     comment[notReady] = various pdf font used, will re-test later
 
     au < doNotProcess ; 2002 ; Bronte Studies Volume 27 ; 27 > 
@@ -895,7 +895,7 @@
     param[journal_id] = cest 
     param[journal_issn] = 1478-422X
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continues] = 0007-0599
+    comment[continued_from] = 0007-0599
 
     au < doNotProcess ; 2003 ; Corrosion Engineering, Science and Technology Volume 38 ; 38 > 
     au < doNotProcess ; 2004 ; Corrosion Engineering, Science and Technology Volume 39 ; 39 > 
@@ -1175,7 +1175,7 @@
   {
 
     title <
-      name = English Heritage Historical Review ;
+      name = ann ;
       issn = 1752-0169
     >
 
@@ -1379,14 +1379,16 @@
     param[journal_id] = hdy 
     param[journal_issn] = 1934-8908
     implicit < status ; year ; name ; param[volume_name] >
+    
+    comment[1] = ceased publication in 2011
+    comment[notReady] = requesting manifest pages RT 1962
 
-    au < doNotProcess ; 2007 ; The Hardy Review Volume 9 ; 9 > 
-    au < doNotProcess ; 2008 ; The Hardy Review Volume 10 ; 10 > 
-    au < doNotProcess ; 2009 ; The Hardy Review Volume 11 ; 11 > 
+    au < notReady ; 2007 ; The Hardy Review Volume 9 ; 9 > 
+    au < notReady ; 2008 ; The Hardy Review Volume 10 ; 10 > 
+    au < notReady ; 2009 ; The Hardy Review Volume 11 ; 11 > 
     au < released ; 2010 ; The Hardy Review Volume 12 ; 12 > 
     au < released ; 2011 ; The Hardy Review Volume 13 ; 13 > 
-    au < doNotProcess ; 2012 ; The Hardy Review Volume 14 ; 14 > 
-    au < expected ; 2013 ; The Hardy Review Volume 15 ; 15 > 
+
 
   }
 
@@ -1678,7 +1680,8 @@
     param[journal_id] = het 
     param[journal_issn] = 1758-1206
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continues] = 0372-0187
+    
+    comment[continued_from] = 0372-0187
 
     au < doNotProcess ; 2009 ; International Journal for the History of Engineering & Technology Volume 79 ; 79 > 
     au < released ; 2010 ; International Journal for the History of Engineering & Technology Volume 80 ; 80 > 
@@ -1737,6 +1740,7 @@
     param[journal_issn] = 2047-3869
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
+    
     comment[continued_from] = 0969-7950
     
     au < released ; 2012 ; International Journal of Developmental Disabilities Volume 58 ; 58 > 
@@ -1824,6 +1828,8 @@
     param[journal_issn] = 0950-6608
     implicit < status ; year ; name ; param[volume_name] >
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
+    
+    comment[continuted_from] = 0367-9020
     comment[continued_by] = 0308-4590
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
     
@@ -1962,7 +1968,7 @@
     param[journal_id] = iwp 
     param[journal_issn] = 2042-6445
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continues] = 0020-3203
+    comment[continued_from] = 0020-3203
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2010 ; International Wood Products Journal Volume 1 ; 1 > 
@@ -2710,6 +2716,8 @@
     param[journal_id] = lhr 
     param[journal_issn] = 0961-5652
     implicit < status ; year ; name ; param[volume_name] >
+    
+    comment[0] = ceased publication 2011
 
     au < manifest ; 2005 ; Labour History Review Volume 70 ; 70 > 
     au < manifest ; 2006 ; Labour History Review Volume 71 ; 71 > 
@@ -2718,8 +2726,7 @@
     au < manifest ; 2009 ; Labour History Review Volume 74 ; 74 > 
     au < released ; 2010 ; Labour History Review Volume 75 ; 75 > 
     au < released ; 2011 ; Labour History Review Volume 76 ; 76 > 
-    au < expected ; 2012 ; Labour History Review Volume 77 ; 77 > 
-    au < expected ; 2013 ; Labour History Review Volume 78 ; 78 > 
+
 
   }
 
@@ -2856,7 +2863,7 @@
     param[journal_id] = lih 
     param[journal_issn] = 1758-3489
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continues] = 0024-2306
+    comment[continued_from] = 0024-2306
 
     au < manifest ; 2009 ; Library & Information History Volume 25 ; 25 > 
     au < released ; 2010 ; Library & Information History Volume 26 ; 26 > 
@@ -2972,7 +2979,7 @@
     param[journal_id] = mst 
     param[journal_issn] = 0267-0836
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continues] = 0306-3453
+    comment[continued_from] = 0306-3453
     comment[notReady] = RU4507, different pdf fontname used
     
     au < notReady ; 1985 ; Materials Science and Technology Volume 1 ; 1 > 
@@ -3155,7 +3162,7 @@
     param[journal_id] = mtlr 
     param[journal_issn] = 0076-6690
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continued_by] = 0950-6608
+    comment[continued_by] = 0367-9020
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
     
     au < manifest ; 1956 ; Metallurgical Reviews Volume 1 ; 1 >
@@ -3669,7 +3676,7 @@
     param[journal_id] = pch 
     param[journal_issn] = 2046-9047
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continues] = 0272-4936 
+    comment[continued_from] = 0272-4936 
     
     au < manifest ; 2012 ; Paediatrics and International Child Health Volume 32 ; 32 > 
     au < manifest ; 2013 ; Paediatrics and International Child Health Volume 33 ; 33 > 
@@ -3693,6 +3700,8 @@
     param[journal_id] = tpc 
     param[journal_issn] = 0169-1112
     implicit < status ; year ; name ; param[volume_name] >
+    
+    comment[0] = ceased publication in 2007
 
     au < manifest ; 2000 ; The Pain Clinic Volume 12 ; 12 > 
     au < manifest ; 2001-2002 ; The Pain Clinic Volume 13 ; 13 > 
@@ -3754,6 +3763,7 @@
     param[journal_id] = pvr 
     param[journal_issn] = 0957-4190
     implicit < status ; year ; name ; param[volume_name] >
+    
     comment[0] = ceased publication in 2005
 
     au < manifest ; 2003 ; Papillomavirus Report Volume 14 ; 14 > 
@@ -3777,7 +3787,7 @@
     param[journal_id] = pgh
     param[journal_issn] = 2047-7724
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continues] = 0003-4983
+    comment[continued_from] = 0003-4983
     
     au < manifest ; 2012 ; Pathogens and Global Health Volume 106 ; 106 >
     au < manifest ; 2013 ; Pathogens and Global Health Volume 107 ; 107 >
@@ -3801,13 +3811,14 @@
     param[journal_id] = pha 
     param[journal_issn] = 1757-0921
     implicit < status ; year ; name ; param[volume_name] >
+    
+    comment[0] = ceased publication 2012
 
     au < manifest ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 > 
     au < manifest ; 2009 ; Pharmaceutical Programming Volume 2 ; 2 > 
     au < released ; 2010 ; Pharmaceutical Programming Volume 3 ; 3 > 
     au < released ; 2011 ; Pharmaceutical Programming Volume 4 ; 4 > 
     au < released ; 2012 ; Pharmaceutical Programming Volume 5 ; 5 > 
-    au < expected ; 2013 ; Pharmaceutical Programming Volume 6 ; 6 > 
 
   }
 
@@ -4104,6 +4115,8 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
+    comment[continued_by] = 1521-5385 
+    
     au < manifest ; 1994-1995 ; Republican China Volume 20 ; 20 > 
     au < manifest ; 1996 ; Republican China Volume 21 ; 21 >
     au < manifest ; 1996-1997 ; Republican China Volume 22 ; 22 >
@@ -4711,6 +4724,8 @@
     param[journal_issn] = 0372-0187
     implicit < status ; year ; name ; param[volume_name] >
 
+    comment[continued_by] = 1758-1214 
+    
     au < manifest ; 2006 ; Transactions of the Newcomen Society Volume 76 ; 76 > 
     au < manifest ; 2007 ; Transactions of the Newcomen Society Volume 77 ; 77 > 
     au < manifest ; 2008 ; Transactions of the Newcomen Society Volume 78 ; 78 > 
@@ -4763,6 +4778,8 @@
     param[journal_issn] = 1521-5385
     implicit < status ; year ; name ; param[volume_name] >
 
+    comment[continued_from] = 0893-2344 
+    
     au < manifest ; 1997-1998 ; Twentieth-Century China Volume 23 ; 23 > 
     au < manifest ; 1998-1999 ; Twentieth-Century China Volume 24 ; 24 > 
     au < manifest ; 1999-2000 ; Twentieth-Century China Volume 25 ; 25 > 
@@ -4809,10 +4826,11 @@
     param[journal_issn] = 1757-8949
     implicit < status ; year ; name ; param[volume_name] >
 
+    comment[0] = publication ceased December 31, 2012
+    
     au < released ; 2010 ; Usus Antiquior Volume 1 ; 1 > 
     au < released ; 2011 ; Usus Antiquior Volume 2 ; 2 >  
     au < released ; 2012 ; Usus Antiquior Volume 3 ; 3 > 
-    au < expected ; 2013 ; Usus Antiquior Volume 4 ; 4 > 
 
   }
 
