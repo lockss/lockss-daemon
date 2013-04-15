@@ -71,6 +71,26 @@
   {
 
     title <
+      name = Cancer Immunology Research ;
+      issn = 2326-6066 ;
+      eissn = 2326-6074 ;
+      issnl = 2326-6066
+    >
+
+    {
+
+      param[base_url] = http://cancerimmunolres.aacrjournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      au < HighWirePressH20Plugin ; expected ; 2013 ; Cancer Immunology Research Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = Cancer Prevention Research ;
       issn = 1940-6207 ;
       eissn = 1940-6215 ;
