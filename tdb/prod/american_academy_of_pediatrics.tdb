@@ -118,9 +118,9 @@
       param[base_url] = http://hosppeds.aappublications.org/
       implicit < status ; year ; name ; param[volume_name] >
       
-      au < exists ; 2011 ; Hospital Pediatrics Volume 1 ; 1 >
-      au < exists ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
-      au < expected ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
+      au < manifest ; 2011 ; Hospital Pediatrics Volume 1 ; 1 >
+      au < manifest ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
+      au < manifest ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
 
     }
     
