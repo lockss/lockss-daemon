@@ -1321,7 +1321,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = teaching_and_learning_inquiry__the_issotl_journal
-      attr[journal_id] = 
+      attr[journal_id] = iss
       implicit < status ; year ; name ; param[volume] >
       
       comment[0] = manifest is online, but journal site is not as of 20130404. check back later.
