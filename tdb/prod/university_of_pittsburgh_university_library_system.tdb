@@ -372,14 +372,14 @@
       au < manifest ; 2002 ; 2002 ; Pittsburgh Journal of Technology Law and Policy Volume 2 ; 2 >
       au < manifest ; 2003 ; 2003 ; Pittsburgh Journal of Technology Law and Policy Volume 3 ; 3 >
       au < manifest ; 2004 ; 2004 ; Pittsburgh Journal of Technology Law and Policy Volume 4 ; 4 >
-      au < testing ; 2005 ; 2005 ; Pittsburgh Journal of Technology Law and Policy Volume 5 ; 5 >
-      au < testing ; 2006 ; 2006 ; Pittsburgh Journal of Technology Law and Policy Volume 6 ; 6 >
-      au < testing ; 2007 ; 2007 ; Pittsburgh Journal of Technology Law and Policy Volume 7 ; 7 >
-      au < testing ; 2008 ; 2008 ; Pittsburgh Journal of Technology Law and Policy Volume 8 ; 8 >
-      au < testing ; 2009 ; 2009 ; Pittsburgh Journal of Technology Law and Policy Volume 9 ; 9 >
-      au < testing ; 2010 ; 2010 ; Pittsburgh Journal of Technology Law and Policy Volume 10 ; 10 >
-      au < testing ; 2011 ; 2011 ; Pittsburgh Journal of Technology Law and Policy Volume 11 ; 11 >
-      au < testing ; 2012 ; 2012 ; Pittsburgh Journal of Technology Law and Policy Volume 12-13 ; 12-13 >
+      au < ready ; 2005 ; 2005 ; Pittsburgh Journal of Technology Law and Policy Volume 5 ; 5 >
+      au < ready ; 2006 ; 2006 ; Pittsburgh Journal of Technology Law and Policy Volume 6 ; 6 >
+      au < ready ; 2007 ; 2007 ; Pittsburgh Journal of Technology Law and Policy Volume 7 ; 7 >
+      au < ready ; 2008 ; 2008 ; Pittsburgh Journal of Technology Law and Policy Volume 8 ; 8 >
+      au < ready ; 2009 ; 2009 ; Pittsburgh Journal of Technology Law and Policy Volume 9 ; 9 >
+      au < ready ; 2010 ; 2010 ; Pittsburgh Journal of Technology Law and Policy Volume 10 ; 10 >
+      au < ready ; 2011 ; 2011 ; Pittsburgh Journal of Technology Law and Policy Volume 11 ; 11 >
+      au < ready ; 2012 ; 2012 ; Pittsburgh Journal of Technology Law and Policy Volume 12-13 ; 12-13 >
       au < expected ; 2013 ; 2013 ; Pittsburgh Journal of Technology Law and Policy Volume 13 ; 13 >
 
   }
@@ -394,7 +394,7 @@
       param[base_url] = http://pgheupapers.pitt.edu/ojs/
       param[journal_id] = pgheupapers
 
-      au < testing ; 2012 ; 2012 ; Pittsburgh Papers on the European Union Volume 1 ; 1 >
+      au < ready ; 2012 ; 2012 ; Pittsburgh Papers on the European Union Volume 1 ; 1 >
       au < expected ; 2013 ; 2013 ; Pittsburgh Papers on the European Union Volume 2 ; 2 >
 
   }
@@ -514,7 +514,7 @@
       param[base_url] = http://shashi.pitt.edu/ojs/
       param[journal_id] = shashi
 
-      au < testing ; 2012 ; 2012 ; SHASHI: The Journal of Japanese Business and Company History Volume 1 ; 1 >
+      au < ready ; 2012 ; 2012 ; SHASHI: The Journal of Japanese Business and Company History Volume 1 ; 1 >
       au < expected ; 2013 ; 2013 ; SHASHI: The Journal of Japanese Business and Company History Volume 2 ; 2 >
 
   }
@@ -532,14 +532,14 @@
 
       au < manifest ; 2003 ; 2003 ; University of Pittsburgh Law Review Volume 65 ; 65 >
       au < manifest ; 2004 ; 2004 ; University of Pittsburgh Law Review Volume 65-66 ; 65-66 >
-      au < testing ; 2005 ; 2005 ; University of Pittsburgh Law Review Volume 66-67 ; 66-67 >
-      au < testing ; 2006 ; 2006 ; University of Pittsburgh Law Review Volume 67-68 ; 67-68 >
-      au < testing ; 2007 ; 2007 ; University of Pittsburgh Law Review Volume 68-69 ; 68-69 >
-      au < testing ; 2008 ; 2008 ; University of Pittsburgh Law Review Volume 69-70 ; 69-70 >
-      au < testing ; 2009 ; 2009 ; University of Pittsburgh Law Review Volume 71 ; 71 >
-      au < testing ; 2010 ; 2010 ; University of Pittsburgh Law Review Volume 72 ; 72 >
-      au < testing ; 2011 ; 2011 ; University of Pittsburgh Law Review Volume 72-73 ; 72-73 >
-      au < testing ; 2012 ; 2012 ; University of Pittsburgh Law Review Volume 73-74 ; 73-74 >
+      au < ready ; 2005 ; 2005 ; University of Pittsburgh Law Review Volume 66-67 ; 66-67 >
+      au < ready ; 2006 ; 2006 ; University of Pittsburgh Law Review Volume 67-68 ; 67-68 >
+      au < ready ; 2007 ; 2007 ; University of Pittsburgh Law Review Volume 68-69 ; 68-69 >
+      au < ready ; 2008 ; 2008 ; University of Pittsburgh Law Review Volume 69-70 ; 69-70 >
+      au < ready ; 2009 ; 2009 ; University of Pittsburgh Law Review Volume 71 ; 71 >
+      au < ready ; 2010 ; 2010 ; University of Pittsburgh Law Review Volume 72 ; 72 >
+      au < ready ; 2011 ; 2011 ; University of Pittsburgh Law Review Volume 72-73 ; 72-73 >
+      au < ready ; 2012 ; 2012 ; University of Pittsburgh Law Review Volume 73-74 ; 73-74 >
       au < expected ; 2013 ; 2013 ; University of Pittsburgh Law Review Volume 75 ; 75 >
 
   }
