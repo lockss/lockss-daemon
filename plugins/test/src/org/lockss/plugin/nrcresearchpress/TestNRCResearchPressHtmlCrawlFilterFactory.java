@@ -1,5 +1,5 @@
 /*
- * $Id: TestNRCResearchPressHtmlCrawlFilterFactory.java,v 1.1 2013-04-11 20:16:42 aishizaki Exp $
+ * $Id: TestNRCResearchPressHtmlCrawlFilterFactory.java,v 1.2 2013-04-16 15:51:43 aishizaki Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class TestNRCResearchPressHtmlCrawlFilterFactory extends LockssTestCase {
   private static final String HtmlTest1Filtered = "Hello";
   
   private static final String HtmlTest2 = 
-    "<div id=\"sidebar-right\">"+
+    "<div class=\"ads\">"+
     "<h3>Readers of this Article also read </h3>\n" +
     "<ul id=\"readers\">\n" +
     "<li><a href=\"a-new-support-measure-to-quantify-the-impact-of-local-optima-in-phylog-article-a2858\">A New Support Measure to Quantify the Impact of Local Optima in Phylogenetic Analyses</a></li>\n" +
