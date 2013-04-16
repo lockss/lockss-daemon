@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -76,15 +76,24 @@
     http://www.nrcresearchpress.com/doi/abs/10.1139/cgjcontents99
     -->
     <string>au_crawlrules</string>
+<!--    
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$", base_url_host</string>
       <string>1,"^%stoc/%s/%s/", base_url, journal_abbr, volume_name</string>
-      <!-- spider link: http://www.nrcresearchpress.com/doi/pdf/10.1046/9999-9999.99999 -->
       <string>2,"^%sdoi/pdf/\d+\.\d+/9999-9999.99999", base_url</string>
       <string>1,"^%sdoi/(pdf|pdfplus|abs|full|suppl|ref)/\d+\.\d+/[^/]+", base_url</string>
       <string>2,"^%s(page|action|servlet|loi)/",base_url</string>
       <string>4,"^%s.*%s", base_url, journal_abbr</string>
     </list>
+ -->
+    <list> 
+      <string>1,"^https?://%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>1,"%sna101/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", base_url, journal_abbr</string> 
+      <string>1,"^%stoc/%s/%s/[0-9]+", base_url, journal_abbr, volume_name</string>
+      <string>2,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|video[^/]+)/[0-9]+\.[0-9]+/[-.9]+$", base_url</string>
+      <string>1,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|video[^/]+)/[0-9]+\.[0-9]+/[^/]+", base_url</string>
+      <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?doi=[^/]+", base_url</string>
+    </list>   
   </entry> 
   <entry>
     <string>au_substance_url_pattern</string>

@@ -1,4 +1,4 @@
-/* $Id: ClockssNRCResearchPressHtmlCrawlFilterFactory.java,v 1.2 2013-04-11 20:15:02 aishizaki Exp $
+/* $Id: ClockssNRCResearchPressHtmlCrawlFilterFactory.java,v 1.3 2013-04-16 15:01:27 aishizaki Exp $
  */
 
 /*
@@ -58,7 +58,9 @@ public class ClockssNRCResearchPressHtmlCrawlFilterFactory implements FilterFact
       //   all stuff in the left sidebar
       HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-left"),
       //   all the stuff in the right sidebar
-      HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-right"),
+      //HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-right"),
+      // was missing the citation request, so now filtering ads in sidebar-right
+      HtmlNodeFilters.tagWithAttribute("div", "class", "ads"),
       //  strip below the main title with links to Home, About, Journals, etc...
       HtmlNodeFilters.tagWithAttribute("div", "id", "nav-wrapper"),
       // from issue TOC (e.g. http://www.nrcresearchpress.com/toc/cgj/36/5)
