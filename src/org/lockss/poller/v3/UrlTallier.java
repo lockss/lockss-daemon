@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.10 2013-04-15 18:46:07 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.11 2013-04-16 22:57:28 barry409 Exp $
  */
 
 /*
@@ -253,7 +253,16 @@ final class UrlTallier {
     }
   }
 
-  /**
+  // package-level for testing.
+  static VoteBlockTallier.VoteCallback makeHashStatsTallier() {
+    return new VoteBlockTallier.VoteCallback() {
+      @Override public void vote(VoteBlock voteBlock, ParticipantUserData id) {
+	id.addHashStats(voteBlock);
+      }
+    };
+  }
+
+ /**
    * <p>Call the appropriate voting routine on the tally for each
    * participant. The poller does not have the given URL, but some
    * voter does.</p>
@@ -272,7 +281,8 @@ final class UrlTallier {
     }
 
     BlockTally tally = new BlockTally();
-    VoteBlockTallier voteBlockTallier = VoteBlockTallier.make();
+    VoteBlockTallier voteBlockTallier =
+      VoteBlockTallier.make(makeHashStatsTallier());
     log.debug3("tallyVoterUrl: "+url);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.addTally(ParticipantUserData.voteTally);
@@ -299,7 +309,8 @@ final class UrlTallier {
     }
 
     BlockTally tally = new BlockTally();
-    VoteBlockTallier voteBlockTallier = VoteBlockTallier.make(hashBlock);
+    VoteBlockTallier voteBlockTallier =
+      VoteBlockTallier.make(hashBlock, makeHashStatsTallier());
     log.debug3("tallyPollerUrl: "+url);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.addTally(ParticipantUserData.voteTally);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.10 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestUrlTallier.java,v 1.11 2013-04-16 22:57:28 barry409 Exp $
  */
 
 /*
@@ -550,6 +550,22 @@ public class TestUrlTallier extends LockssTestCase {
     // peekUrl() doesn't throw anything, but there's no URL since the
     // iterator threw IOException.
     assertEquals(null, urlTallier.peekUrl());
+  }
+
+  public void testHashStatsTallier() throws Exception {
+    V3Poller v3Poller = makeV3Poller("testing poll key");
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    ParticipantUserData participant =
+      new ParticipantUserData(id1, v3Poller, null);
+
+    VoteBlock vb = new VoteBlock("foo", VoteBlock.CONTENT_VOTE);
+    byte[] testBytes = ByteArray.makeRandomBytes(20);
+    vb.addVersion(0, 123, 0, 155, testBytes, testBytes, false);
+
+    VoteBlockTallier.VoteCallback callback = UrlTallier.makeHashStatsTallier();
+    callback.vote(vb, participant);
+    assertEquals(286, participant.getBytesHashed());
+    assertEquals(155, participant.getBytesRead());
   }
   
   private HashBlock makeHashBlock(String url) {

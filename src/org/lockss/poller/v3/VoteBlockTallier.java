@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.8 2013-04-15 18:46:07 barry409 Exp $
+ * $Id: VoteBlockTallier.java,v 1.9 2013-04-16 22:57:28 barry409 Exp $
  */
 
 /*
@@ -61,6 +61,15 @@ public class VoteBlockTallier {
     public boolean compare(VoteBlock voteBlock, int participantIndex);
   }
 
+  /** A callback for when VoteBlockTallier.vote() is called. */
+  public interface VoteCallback {
+    /**
+     * When VoteBlockTallier.vote() is called, VoteCallback.vote()
+     * will be called.
+     */
+    public void vote(VoteBlock voteBlock, ParticipantUserData id);
+  }
+
   // Null if the poller does not have this URL.
   private final HashBlockComparer comparer;
   private final Collection<VoteBlockTally> tallies =
@@ -75,16 +84,23 @@ public class VoteBlockTallier {
 
   /**
    * Make a tallier for a URL the poller does not have.
+   * @param voteCallbacks Each VoteCallback will have its vote()
+   * method called when this VoteBlockTallier's vote() method is
+   * called.
    */
-  public static VoteBlockTallier make() {
-    return make((HashBlockComparer)null);
+  public static VoteBlockTallier make(VoteCallback... voteCallbacks) {
+    return make((HashBlockComparer)null, voteCallbacks);
   }
 
   /**
    * Make a tallier for a URL the poller has.
+   * @param voteCallbacks Each VoteCallback will have its vote()
+   * method called when this VoteBlockTallier's vote() method is
+   * called.
    */
-  public static VoteBlockTallier make(HashBlock hashBlock) {
-    return make(new HashBlockComparerImpl(hashBlock));
+  public static VoteBlockTallier make(HashBlock hashBlock,
+				      VoteCallback... voteCallbacks) {
+    return make(new HashBlockComparerImpl(hashBlock), voteCallbacks);
   }
 
   /**
@@ -100,13 +116,19 @@ public class VoteBlockTallier {
   }
 
   // package level for testing, rather than private
-  static VoteBlockTallier make(HashBlockComparer comparer) {
+  static VoteBlockTallier make(HashBlockComparer comparer,
+			       final VoteCallback... voteCallbacks) {
+    if (voteCallbacks.length == 0) {
+      return new VoteBlockTallier(comparer);
+    }
     return new VoteBlockTallier(comparer) {
       // In addition to tallying, inform the ParticipantUserData block
       // about each vote.
       @Override public void vote(VoteBlock voteBlock, ParticipantUserData id,
 				 int participantIndex) {
-	id.addHashStats(voteBlock);
+	for (VoteCallback voteCallback: voteCallbacks) {
+	  voteCallback.vote(voteBlock, id);
+	}
 	super.vote(voteBlock, id, participantIndex);
       }
     };
