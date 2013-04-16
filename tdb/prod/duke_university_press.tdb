@@ -2722,10 +2722,9 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://theater.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
-      comment[notReady] = missing cover gif
       
       au < HighWirePressH20Plugin ; ready ; 1968 ; Theater Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; notReady ; 1969 ; Theater Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 1969 ; Theater Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; ready ; 1970-1972 ; Theater Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; ready ; 1973 ; Theater Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; ready ; 1973-1974 ; Theater Volume 5 ; 5 >
@@ -2766,7 +2765,7 @@
       au < HighWirePressH20Plugin ; released ; 2010 ; Theater Volume 40 ; 40 >
       au < HighWirePressH20Plugin ; released ; 2011-2012 ; Theater Volume 41 ; 41 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Theater Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; manifest ; 2013 ; Theater Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; expected ; 2013 ; Theater Volume 43 ; 43 >
 
     }
   
