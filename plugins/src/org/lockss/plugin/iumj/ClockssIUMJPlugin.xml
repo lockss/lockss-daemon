@@ -1,11 +1,11 @@
-<!--  $Id: ClockssIUMJPlugin.xml,v 1.5 2013-04-01 16:34:03 aishizaki Exp $ -->
+<!--  $Id: ClockssIUMJPlugin.xml,v 1.6 2013-04-16 17:53:17 cthorman Exp $ -->
 <map>
   <!-- ClockssIUMJPlugin.xml inherited from IUMJPlugin.xml.
        The main differences are names, version.
   -->  
   <entry>
     <string>plugin_status</string>
-    <string>testing - Collin</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
