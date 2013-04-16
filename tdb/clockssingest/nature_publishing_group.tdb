@@ -129,7 +129,7 @@
     au < released ; crawling ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
     au < released ; crawling ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
     au < released ; crawling ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 >
-    au < testing ; exists ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
+    au < released ; manifest ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
     au < manifest ; exists ; 2013 ; Asian Journal of Andrology Volume 15 ; 2013 ; 15 >
 
 
@@ -144,7 +144,7 @@
 
       param[journal_id] = bcj
 
-    au < testing ; exists ; 2011 ; Blood Cancer Journal Volume 1 ; 2011 ; 1 >
+    au < released ; manifest ; 2011 ; Blood Cancer Journal Volume 1 ; 2011 ; 1 >
     au < testing ; exists ; 2012 ; Blood Cancer Journal Volume 2 ; 2012 ; 2 >
     au < exists ; exists ; 2013 ; Blood Cancer Journal Volume 3 ; 2013 ; 3 >
 
@@ -545,7 +545,7 @@
     au < released ; crawling ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 >
     au < released ; crawling ; 2011 ; Cell Research Volume 21 ; 2011 ; 21 >
     au < testing ; exists ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 >
-    au < testing ; exists ; 2013 ; Cell Research Volume 23 ; 2013 ; 23 >
+    au < crawling ; exists ; 2013 ; Cell Research Volume 23 ; 2013 ; 23 >
 
   }
 
@@ -749,12 +749,12 @@
     au < manifest ; exists ; 2005 ; EMBO Reports Volume 6 ; 2005 ; 6 >
     au < manifest ; exists ; 2006 ; EMBO Reports Volume 7 ; 2006 ; 7 >
     au < manifest ; exists ; 2007 ; EMBO Reports Volume 8 ; 2007 ; 8 >
-    au < testing ; exists ; 2008 ; EMBO Reports Volume 9 ; 2008 ; 9 >
+    au < released ; manifest ; 2008 ; EMBO Reports Volume 9 ; 2008 ; 9 >
     au < zapped ; down ; 2009 ; EMBO Reports Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 >
     au < released ; crawling ; 2011 ; EMBO Reports Volume 12 ; 2011 ; 12 >
     au < released ; crawling ; 2012 ; EMBO Reports Volume 13 ; 2012 ; 13 >
-    au < manifest ; exists ; 2013 ; EMBO Reports Volume 14 ; 2013 ; 14 >
+    au < crawling ; exists ; 2013 ; EMBO Reports Volume 14 ; 2013 ; 14 >
 
   }
 
@@ -1166,8 +1166,8 @@
     au < released ; crawling ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
     au < released ; crawling ; 2010 ; Hypertension Research Volume 33 ; 2010 ; 33 >
     au < released ; crawling ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 >
-    au < testing ; exists ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 >
-    au < testing ; exists ; 2013 ; Hypertension Research Volume 36 ; 2013 ; 36 >
+    au < released ; manifest ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 >
+    au < manifest ; exists ; 2013 ; Hypertension Research Volume 36 ; 2013 ; 36 >
   }
 
   {
@@ -1326,7 +1326,7 @@
     au < zapped ; down ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
     au < released ; crawling ; 2010 ; International Journal of Impotence Research Volume 22 ; 2010 ; 22 >
     au < released ; crawling ; 2011 ; International Journal of Impotence Research Volume 23 ; 2011 ; 23 >
-    au < testing ; exists ; 2012 ; International Journal of Impotence Research Volume 24 ; 2012 ; 24 >
+    au < released ; manifest ; 2012 ; International Journal of Impotence Research Volume 24 ; 2012 ; 24 >
     au < manifest ; exists ; 2013 ; International Journal of Impotence Research Volume 25 ; 2013 ; 25 >
   }
 
@@ -1356,7 +1356,7 @@
     au < released ; crawling ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
     au < released ; crawling ; 2010 ; International Journal of Obesity Volume 34 ; 2010 ; 34 >
     au < released ; crawling ; 2011 ; International Journal of Obesity Volume 35 ; 2011 ; 35 >
-    au < testing ; exists ; 2012 ; International Journal of Obesity Volume 36 ; 2012 ; 36 >
+    au < released ; manifest ; 2012 ; International Journal of Obesity Volume 36 ; 2012 ; 36 >
     au < manifest ; exists ; 2013 ; International Journal of Obesity Volume 37 ; 2013 ; 37 >
 
   }
@@ -1410,9 +1410,9 @@
     param[journal_id] = ismej
 
     au < manifest ; exists ; 2007 ; The ISME Journal Volume 1 ; 2007 ; 1 >
-    au < testing ; exists ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 >
-    au < testing ; exists ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 >
-    au < testing ; exists ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 >
+    au < released ; manifest ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 >
+    au < released ; manifest ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 >
+    au < released ; manifest ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 >
     au < zapped ; down ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 >
     au < testing ; exists ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 >
     au < manifest ; exists ; 2013 ; The ISME Journal Volume 7 ; 2013 ; 7 >
@@ -1443,7 +1443,7 @@
     au < exists ; exists ; 2005 ; JID Symposium Proceedings Volume 10 ; 2005 ; 10 >
     au < exists ; exists ; 2006 ; JID Symposium Proceedings Volume 11 ; 2006 ; 11 >
     au < exists ; exists ; 2007 ; JID Symposium Proceedings Volume 12 ; 2007 ; 12 >
-    au < testing ; exists ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 >
+    au < released ; manifest ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 >
     au < testing ; exists ; 2009 ; JID Symposium Proceedings Volume 14 ; 2009 ; 14 >
     au < released ; crawling ; 2011 ; JID Symposium Proceedings Volume 15 ; 2011 ; 15 >
 
@@ -1467,7 +1467,7 @@
     au < zapped ; down ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
     au < released ; crawling ; 2010 ; The Journal of Antibiotics Volume 63 ; 2010 ; 63 >
     au < released ; crawling ; 2011 ; The Journal of Antibiotics Volume 64 ; 2011 ; 64 >
-    au < testing ; exists ; 2012 ; The Journal of Antibiotics Volume 65 ; 2012 ; 65 >
+    au < released ; manifest ; 2012 ; The Journal of Antibiotics Volume 65 ; 2012 ; 65 >
     au < manifest ; exists ; 2013 ; The Journal of Antibiotics Volume 66 ; 2013 ; 66 >
 
   }
@@ -1547,7 +1547,7 @@
     au < zapped ; down ; 2009 ; Journal of Exposure Science and Environmental Epidemiology Volume 19 ; 2009 ; 19 >
     au < released ; crawling ; 2010 ; Journal of Exposure Science and Environmental Epidemiology Volume 20 ; 2010 ; 20 >
     au < released ; crawling ; 2011 ; Journal of Exposure Science and Environmental Epidemiology Volume 21 ; 2011 ; 21 >
-    au < testing ; exists ; 2012 ; Journal of Exposure Science and Environmental Epidemiology Volume 22 ; 2012 ; 22 >
+    au < released ; manifest ; 2012 ; Journal of Exposure Science and Environmental Epidemiology Volume 22 ; 2012 ; 22 >
     au < manifest ; exists ; 2013 ; Journal of Exposure Science and Environmental Epidemiology Volume 23 ; 2013 ; 23 >
 
   }
@@ -1598,7 +1598,7 @@
     au < zapped ; down ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
     au < released ; crawling ; 2010 ; Journal of Human Genetics Volume 55 ; 2010 ; 55 >
     au < released ; crawling ; 2011 ; Journal of Human Genetics Volume 56 ; 2011 ; 56 >
-    au < testing ; exists ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 >
+    au < released ; manifest ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 >
     au < manifest ; exists ; 2013 ; Journal of Human Genetics Volume 58 ; 2013 ; 58 >
 
   }
@@ -1806,7 +1806,7 @@
     au < zapped ; down ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
     au < released ; crawling ; 2010 ; Journal of Perinatology Volume 30 ; 2010 ; 30 >
     au < released ; crawling ; 2011 ; Journal of Perinatology Volume 31 ; 2011 ; 31 >
-    au < testing ; exists ; 2012 ; Journal of Perinatology Volume 32 ; 2012 ; 32 >
+    au < released ; manifest ; 2012 ; Journal of Perinatology Volume 32 ; 2012 ; 32 >
     au < manifest ; exists ; 2013 ; Journal of Perinatology Volume 33 ; 2013 ; 33 >
   }
 
@@ -1900,7 +1900,7 @@
     au < exists ; exists ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 >
     au < exists ; exists ; 2010 ; Kidney International Volume 77 (2010) ; 2010 ; 77 >
     au < exists ; exists ; 2010 ; Kidney International Volume 78 (2010) ; 2010 ; 78 >
-    au < testing ; exists ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 >
+    au < released ; manifest ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 >
     au < testing ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 >
     au < testing ; exists ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 >
     au < expected ; exists ; 2013 ; Kidney International Volume 82 ; 2013 ; 82 >
@@ -2874,7 +2874,7 @@
     au < exists ; exists ; 2010 ; Nature Communications Volume 1 ; 2010 ; 1 >
     au < testing ; exists ; 2011 ; Nature Communications Volume 2 ; 2011 ; 2 >
     au < testing ; exists ; 2012 ; Nature Communications Volume 3 ; 2012 ; 3 >
-    au < testing ; exists ; 2013 ; Nature Communications Volume 4 ; 2013 ; 4 >
+    au < crawling ; exists ; 2013 ; Nature Communications Volume 4 ; 2013 ; 4 >
   
   }
   {
@@ -3749,7 +3749,7 @@
     au < notReady ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
     au < released ; crawling ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
     au < notReady ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
-    au < testing ; exists ; 2013 ; Oncogene Volume 32 ; 2013 ; 32 >
+    au < crawling ; exists ; 2013 ; Oncogene Volume 32 ; 2013 ; 32 >
 
   }
 
