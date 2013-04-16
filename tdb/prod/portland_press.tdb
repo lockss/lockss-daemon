@@ -587,15 +587,15 @@ comment[ownership] = changed hands to wiley
 
 	comment[notReady] = 500 internal errors
 	
-    au < exists ; 1973 ; Biochemical Society Transactions Volume 1 ; 01 >
-    au < exists ; 1974 ; Biochemical Society Transactions Volume 2 ; 02 >
-    au < exists ; 1975 ; Biochemical Society Transactions Volume 3 ; 03 >
-    au < exists ; 1976 ; Biochemical Society Transactions Volume 4 ; 04 >
-    au < exists ; 1977 ; Biochemical Society Transactions Volume 5 ; 05 >
-    au < exists ; 1978 ; Biochemical Society Transactions Volume 6 ; 06 >
-    au < exists ; 1979 ; Biochemical Society Transactions Volume 7 ; 07 >
-    au < exists ; 1980 ; Biochemical Society Transactions Volume 8 ; 08 >
-    au < exists ; 1981 ; Biochemical Society Transactions Volume 9 ; 09 >
+    au < exists ; 1973 ; Biochemical Society Transactions Volume 1 ; 001 >
+    au < exists ; 1974 ; Biochemical Society Transactions Volume 2 ; 002 >
+    au < exists ; 1975 ; Biochemical Society Transactions Volume 3 ; 003 >
+    au < exists ; 1976 ; Biochemical Society Transactions Volume 4 ; 004 >
+    au < exists ; 1977 ; Biochemical Society Transactions Volume 5 ; 005 >
+    au < exists ; 1978 ; Biochemical Society Transactions Volume 6 ; 006 >
+    au < exists ; 1979 ; Biochemical Society Transactions Volume 7 ; 007 >
+    au < exists ; 1980 ; Biochemical Society Transactions Volume 8 ; 008 >
+    au < exists ; 1981 ; Biochemical Society Transactions Volume 9 ; 009 >
     au < exists ; 1982 ; Biochemical Society Transactions Volume 10 ; 010 >
     au < exists ; 1983 ; Biochemical Society Transactions Volume 11 ; 011 >
     au < exists ; 1984 ; Biochemical Society Transactions Volume 12 ; 012 >
@@ -645,15 +645,24 @@ comment[ownership] = changed hands to wiley
     
     comment[notReady] = 500 internal errors
 
-    au < released ; 1981 ; Bioscience Reports Volume 1 ; 01 >
-    au < released ; 1982 ; Bioscience Reports Volume 2 ; 02 >
-    au < released ; 1983 ; Bioscience Reports Volume 3 ; 03 >
-    au < released ; 1984 ; Bioscience Reports Volume 4 ; 04 >
-    au < released ; 1985 ; Bioscience Reports Volume 5 ; 05 >
-    au < released ; 1986 ; Bioscience Reports Volume 6 ; 06 >
-    au < released ; 1987 ; Bioscience Reports Volume 7 ; 07 >
-    au < released ; 1988 ; Bioscience Reports Volume 8 ; 08 >
-    au < released ; 1989 ; Bioscience Reports Volume 9 ; 09 >
+    au < superseded ; 1981 ; Bioscience Reports Volume 1 [superseded] ; 01 >
+    au < released ; 1981 ; Bioscience Reports Volume 1 ; 001 >
+    au < superseded ; 1982 ; Bioscience Reports Volume 2 [superseded] ; 02 >
+    au < released ; 1982 ; Bioscience Reports Volume 2 ; 002 >
+    au < superseded ; 1983 ; Bioscience Reports Volume 3 [superseded] ; 03 >
+    au < released ; 1983 ; Bioscience Reports Volume 3 ; 003 >
+    au < superseded ; 1984 ; Bioscience Reports Volume 4 [superseded] ; 04 >
+    au < released ; 1984 ; Bioscience Reports Volume 4 ; 004 >
+    au < superseded ; 1985 ; Bioscience Reports Volume 5 [superseded] ; 05 >
+    au < released ; 1985 ; Bioscience Reports Volume 5 ; 005 >
+    au < superseded ; 1986 ; Bioscience Reports Volume 6 [superseded] ; 06 >
+    au < released ; 1986 ; Bioscience Reports Volume 6 ; 006 >
+    au < superseded ; 1987 ; Bioscience Reports Volume 7 [superseded] ; 07 >
+    au < released ; 1987 ; Bioscience Reports Volume 7 ; 007 >
+    au < superseded ; 1988 ; Bioscience Reports Volume 8 [superseded] ; 08 >
+    au < released ; 1988 ; Bioscience Reports Volume 8 ; 008 >
+    au < superseded ; 1989 ; Bioscience Reports Volume 9 [superseded] ; 09 >
+    au < released ; 1989 ; Bioscience Reports Volume 9 ; 009 >
     au < released ; 1990 ; Bioscience Reports Volume 10 ; 010 >
     au < released ; 1991 ; Bioscience Reports Volume 11 ; 011 >
     au < released ; 1992 ; Bioscience Reports Volume 12 ; 012 >
