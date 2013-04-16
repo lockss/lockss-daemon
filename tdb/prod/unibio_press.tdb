@@ -1,0 +1,140 @@
+{
+
+  publisher <
+    name = UniBio Press
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOnePlugin
+  param[base_url] = http://www.bioone.org/
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+    title <
+      name = Current Herpetology ;
+      issn = 1345-5834 ;
+      eissn = 1881-1019
+    >
+
+    param[journal_id] = jche
+
+    au < manifest ; 2005 ; Current Herpetology Volume 24 ; 24 >
+    au < manifest ; 2006 ; Current Herpetology Volume 25 ; 25 >
+    au < manifest ; 2007 ; Current Herpetology Volume 26 ; 26 >
+    au < manifest ; 2008 ; Current Herpetology Volume 27 ; 27 >
+    au < manifest ; 2009 ; Current Herpetology Volume 28 ; 28 >
+    au < manifest ; 2010 ; Current Herpetology Volume 29 ; 29 >
+    au < manifest ; 2011 ; Current Herpetology Volume 30 ; 30 >
+    au < manifest ; 2012 ; Current Herpetology Volume 31 ; 31 >
+    au < manifest ; 2013 ; Current Herpetology Volume 32 ; 32 >
+  }
+
+  {
+    title <
+      name = Journal of Mammalian Ova Research ;
+      issn = 1341-7738 ;
+      eissn = 1347-5878
+    >
+
+    param[journal_id] = jmor
+
+    au < manifest ; 2005 ; Journal of Mammalian Ova Research Volume 22 ; 22 >
+    au < manifest ; 2006 ; Journal of Mammalian Ova Research Volume 23 ; 23 >
+    au < manifest ; 2007 ; Journal of Mammalian Ova Research Volume 24 ; 24 >
+    au < manifest ; 2008 ; Journal of Mammalian Ova Research Volume 25 ; 25 >
+    au < manifest ; 2009 ; Journal of Mammalian Ova Research Volume 26 ; 26 >
+    au < manifest ; 2010 ; Journal of Mammalian Ova Research Volume 27 ; 27 >
+    au < manifest ; 2011 ; Journal of Mammalian Ova Research Volume 28 ; 28 >
+    au < manifest ; 2012 ; Journal of Mammalian Ova Research Volume 29 ; 29 >
+    au < expected ; 2013 ; Journal of Mammalian Ova Research Volume 30 ; 30 >
+  }
+
+  {
+    title <
+      name = Mammal Study ;
+      issn = 1343-4152 ;
+      eissn = 1348-6160
+    >
+
+    param[journal_id] = jmam
+
+    au < manifest ; 2005 ; Mammal Study Volume 30 ; 30 >
+    au < manifest ; 2006 ; Mammal Study Volume 31 ; 31 >
+    au < manifest ; 2007 ; Mammal Study Volume 32 ; 32 >
+    au < manifest ; 2008 ; Mammal Study Volume 33 ; 33 >
+    au < manifest ; 2009 ; Mammal Study Volume 34 ; 34 >
+    au < manifest ; 2010 ; Mammal Study Volume 35 ; 35 >
+    au < manifest ; 2011 ; Mammal Study Volume 36 ; 36 >
+    au < manifest ; 2012 ; Mammal Study Volume 37 ; 37 >
+    au < manifest ; 2013 ; Mammal Study Volume 38 ; 38 >
+  }
+
+  {
+    title <
+      name = Ornithological Science ;
+      issn = 1347-0558
+    >
+
+    param[journal_id] = jorn
+
+    au < manifest ; 2005 ; Ornithological Science Volume 4 ; 4 >
+    au < manifest ; 2006 ; Ornithological Science Volume 5 ; 5 >
+    au < manifest ; 2007 ; Ornithological Science Volume 6 ; 6 >
+    au < manifest ; 2008 ; Ornithological Science Volume 7 ; 7 >
+    au < manifest ; 2009 ; Ornithological Science Volume 8 ; 8 >
+    au < manifest ; 2010 ; Ornithological Science Volume 9 ; 9 >
+    au < manifest ; 2011 ; Ornithological Science Volume 10 ; 10 >
+    au < manifest ; 2012 ; Ornithological Science Volume 11 ; 11 >
+    au < expected ; 2013 ; Ornithological Science Volume 12 ; 12 >
+  }
+
+  {
+    title <
+      name = Paleontological Research ;
+      issn = 1342-8144
+    >
+
+    param[journal_id] = jpal
+
+    au < manifest ; 2003 ; Paleontological Research Volume 7 ; 7 >
+    au < manifest ; 2004 ; Paleontological Research Volume 8 ; 8 >
+    au < manifest ; 2005 ; Paleontological Research Volume 9 ; 9 >
+    au < manifest ; 2006 ; Paleontological Research Volume 10 ; 10 >
+    au < manifest ; 2007 ; Paleontological Research Volume 11 ; 11 >
+    au < manifest ; 2008 ; Paleontological Research Volume 12 ; 12 >
+    au < manifest ; 2009 ; Paleontological Research Volume 13 ; 13 >
+    au < manifest ; 2010 ; Paleontological Research Volume 14 ; 14 >
+    au < manifest ; 2011 ; Paleontological Research Volume 15 ; 15 >
+    au < manifest ; 2012 ; Paleontological Research Volume 16 ; 16 >
+    au < expected ; 2013 ; Paleontological Research Volume 17 ; 17 >
+  }
+
+  {
+    title <
+      name = Zoological Science ;
+      issn = 0289-0003
+    >
+
+    param[journal_id] = jzoo
+
+    au < manifest ; 1995 ; Zoological Science Volume 12 ; 12 >
+    au < manifest ; 1996 ; Zoological Science Volume 13 ; 13 >
+    au < manifest ; 1997 ; Zoological Science Volume 14 ; 14 >
+    au < manifest ; 1998 ; Zoological Science Volume 15 ; 15 >
+    au < manifest ; 1999 ; Zoological Science Volume 16 ; 16 >
+    au < manifest ; 2000 ; Zoological Science Volume 17 ; 17 >
+    au < manifest ; 2001 ; Zoological Science Volume 18 ; 18 >
+    au < manifest ; 2002 ; Zoological Science Volume 19 ; 19 >
+    au < manifest ; 2003 ; Zoological Science Volume 20 ; 20 >
+    au < manifest ; 2004 ; Zoological Science Volume 21 ; 21 >
+    au < manifest ; 2005 ; Zoological Science Volume 22 ; 22 >
+    au < manifest ; 2006 ; Zoological Science Volume 23 ; 23 >
+    au < manifest ; 2007 ; Zoological Science Volume 24 ; 24 >
+    au < manifest ; 2008 ; Zoological Science Volume 25 ; 25 >
+    au < manifest ; 2009 ; Zoological Science Volume 26 ; 26 >
+    au < manifest ; 2010 ; Zoological Science Volume 27 ; 27 >
+    au < manifest ; 2011 ; Zoological Science Volume 28 ; 28 >
+    au < manifest ; 2012 ; Zoological Science Volume 29 ; 29 >
+    au < manifest ; 2013 ; Zoological Science Volume 30 ; 30 >
+  }
+
+}
