@@ -140,8 +140,6 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = ecen
       
-      comment[notReady102] = low agreement on open_access vs no_access
-      
       au < doNotProcess ; 2000 ; Journal of Economic Entomology Volume 93 ; 93 >
       au < doNotProcess ; 2001 ; Journal of Economic Entomology Volume 94 ; 94 >
       au < doNotProcess ; 2002 ; Journal of Economic Entomology Volume 95 ; 95 >
@@ -152,7 +150,7 @@
       au < doNotProcess ; 2007 ; Journal of Economic Entomology Volume 100 ; 100 >
 
       au < released ; 2008 ; Journal of Economic Entomology Volume 101 ; 101 >
-      au < notReady ; 2009 ; Journal of Economic Entomology Volume 102 ; 102 >
+      au < ready ; 2009 ; Journal of Economic Entomology Volume 102 ; 102 >
       au < released ; 2010 ; Journal of Economic Entomology Volume 103 ; 103 >
       au < released ; 2011 ; Journal of Economic Entomology Volume 104 ; 104 >
       au < released ; 2012 ; Journal of Economic Entomology Volume 105 ; 105 >
@@ -193,8 +191,6 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = ment
-      
-      comment[notReady] = reference RT 3965
       
       au < doNotProcess ; 2000 ; Journal of Medical Entomology Volume 37 ; 37 >
       au < doNotProcess ; 2001 ; Journal of Medical Entomology Volume 38 ; 38 >
