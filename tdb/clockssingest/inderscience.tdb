@@ -1607,7 +1607,7 @@
 
       param[journal_issn] = 1755-4519
       
-      au < exists ; exists ; 2012 ; International Journal of Computational Medicine and Healthcare Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; International Journal of Computational Medicine and Healthcare Volume 1 ; 1 >
 
     }
 
@@ -1622,7 +1622,7 @@
 
       param[journal_issn] = 2047-9069
       
-      au < expected ; exists ; 2012 ; International Journal of Computational Microbiology and Medical Ecology Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; International Journal of Computational Microbiology and Medical Ecology Volume 1 ; 1 >
 
     }
 
@@ -1831,8 +1831,7 @@
 
       param[journal_issn] = 2048-9137
       
-      au < crawling ; exists ; 2012 ; International Journal of Convergence Computing Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; International Journal of Convergence Computing Volume 2 ; 2 >
+      au < expected ; exists ; 2013 ; International Journal of Convergence Computing Volume 1 ; 1 >
 
     }
 
@@ -2083,7 +2082,7 @@
 
       param[journal_issn] = 1756-2562
       
-      au < exists ; exists ; 2012 ; International Journal of Digital Enterprise Technology Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; International Journal of Digital Enterprise Technology Volume 1 ; 1 >
 
     }
 
@@ -2098,7 +2097,7 @@
 
       param[journal_issn] = 2046-3383
       
-      au < exists ; exists ; 2012 ; International Journal of the Digital Human Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; International Journal of the Digital Human Volume 1 ; 1 >
 
     }
 
@@ -2420,7 +2419,7 @@
 
       param[journal_issn] = 1742-7533
       
-      au < exists ; exists ; 2012 ; International Journal of Electronic Trade Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; International Journal of Electronic Trade Volume 1 ; 1 >
 
     }
 
@@ -2572,7 +2571,7 @@
 
       param[journal_issn] = 1745-3151
       
-      au < exists ; exists ; 2012 ; International Journal of Enterprise Systems Integration and Interoperability Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; International Journal of Enterprise Systems Integration and Interoperability Volume 1 ; 1 >
 
     }
 
@@ -2587,7 +2586,7 @@
 
       param[journal_issn] = 1741-8046
       
-      au < exists ; exists ; 2012 ; International Journal of Entertainment Technology and Management Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; International Journal of Entertainment Technology and Management Volume 1 ; 1 >
 
     }
 
@@ -4752,7 +4751,7 @@
       au < released ; crawling ; 2011 ; International Journal of Manufacturing Technology and Management Volume 24 ; 24 >
       au < zapped ; down ; 2012 ; International Journal of Manufacturing Technology and Management Volume 25 ; 25 >
       au < crawling ; exists ; 2012 ; International Journal of Manufacturing Technology and Management Volume 26 ; 26 >
-      au < exists ; exists ; 2012 ; International Journal of Manufacturing Technology and Management Volume 27 ; 27 >
+      au < expected ; exists ; 2013 ; International Journal of Manufacturing Technology and Management Volume 27 ; 27 >
       au < expected ; exists ; 2013 ; International Journal of Manufacturing Technology and Management Volume 28 ; 28 >
 
     }
@@ -7541,7 +7540,7 @@
 
       param[journal_issn] = 1745-3208
       
-      au < exists ; exists ; 2012 ; International Journal of Vehicle Performance Volume 1 ; 1 >
+      au < expected ; exists ; 2013 ; International Journal of Vehicle Performance Volume 1 ; 1 >
 
     }
 
