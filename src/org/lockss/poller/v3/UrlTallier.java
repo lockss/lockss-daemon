@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.11 2013-04-16 22:57:28 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.12 2013-04-17 15:31:47 barry409 Exp $
  */
 
 /*
@@ -164,10 +164,14 @@ final class UrlTallier {
   // Ordered in the same order as the participants.
   private final List<Entry> participantsList;
     
+  private final int quorum;
+  private final int voteMargin;
+
   /**
    * @param participants An ordered List of participants.
    */
-  UrlTallier(List<ParticipantUserData> participants) {
+  UrlTallier(List<ParticipantUserData> participants,
+	     int quorum, int voteMargin) {
     Comparator<Entry> comparator = new Comparator<Entry>() {
       public int compare(Entry o1, Entry o2) {
 	// null sorts after everything else.
@@ -185,6 +189,8 @@ final class UrlTallier {
       participantsList.add(entry);
       participantsQueue.add(entry);
     }
+    this.quorum = quorum;
+    this.voteMargin = voteMargin;
   }
 
   /**
@@ -280,7 +286,7 @@ final class UrlTallier {
 					 peekUrl()+" not "+url);
     }
 
-    BlockTally tally = new BlockTally();
+    BlockTally tally = new BlockTally(quorum, voteMargin);
     VoteBlockTallier voteBlockTallier =
       VoteBlockTallier.make(makeHashStatsTallier());
     log.debug3("tallyVoterUrl: "+url);
@@ -308,7 +314,7 @@ final class UrlTallier {
 					 " comes before "+url);
     }
 
-    BlockTally tally = new BlockTally();
+    BlockTally tally = new BlockTally(quorum, voteMargin);
     VoteBlockTallier voteBlockTallier =
       VoteBlockTallier.make(hashBlock, makeHashStatsTallier());
     log.debug3("tallyPollerUrl: "+url);
@@ -339,7 +345,7 @@ final class UrlTallier {
     log.debug3("tallyRepairUrl: "+url);
     VoteBlockTallier voteBlockTallier =
       VoteBlockTallier.makeForRepair(hashBlock);
-    BlockTally tally = new BlockTally();
+    BlockTally tally = new BlockTally(quorum, voteMargin);
     voteBlockTallier.addTally(tally);
     voteAllParticipants(url, voteBlockTallier);
     return tally;

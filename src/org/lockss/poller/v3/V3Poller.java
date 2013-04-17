@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.135 2013-04-14 05:25:17 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.136 2013-04-17 15:31:47 barry409 Exp $
  */
 
 /*
@@ -1328,8 +1328,7 @@ public class V3Poller extends BasePoll {
     }
     
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
-    BlockTally.Result tallyResult =
-      tally.getTallyResult(getQuorum(), getVoteMargin());
+    BlockTally.Result tallyResult = tally.getTallyResult();
 
     // Update the TallyStatus only for quorate polls.
     // todo(bhayes): Is that as it should be?
@@ -1393,8 +1392,7 @@ public class V3Poller extends BasePoll {
     
     // If there isn't a quorum of voters, do no repairs or deletes.
     if (hasQuorum()) {
-      BlockTally.Result tallyResult =
-	tally.getTallyResult(getQuorum(), getVoteMargin());
+      BlockTally.Result tallyResult = tally.getTallyResult();
       switch(tallyResult) {
       case WON:
 	break;
@@ -2456,7 +2454,8 @@ public class V3Poller extends BasePoll {
 
   UrlTallier makeUrlTallier() {
     synchronized(theParticipants) {
-      return new UrlTallier(new ArrayList(theParticipants.values()));
+      return new UrlTallier(new ArrayList(theParticipants.values()),
+			    getQuorum(), getVoteMargin());
     }
   }
 

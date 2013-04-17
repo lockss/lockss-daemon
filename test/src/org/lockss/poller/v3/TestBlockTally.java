@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockTally.java,v 1.16 2013-04-10 16:34:03 barry409 Exp $
+ * $Id: TestBlockTally.java,v 1.17 2013-04-17 15:31:47 barry409 Exp $
  */
 
 /*
@@ -60,168 +60,167 @@ public class TestBlockTally extends LockssTestCase {
   }
 
   public void testConstructPollTally() throws Exception {
-    BlockTally tally = new BlockTally();
-    assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult(5, 75));
+    BlockTally tally = new BlockTally(5, 75);
+    assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult());
   }
   
   public void testLandslideMinimum() throws Exception {
     BlockTally tally = null;
     
-    tally = new BlockTally();
-    assertEquals(0, tally.landslideMinimum(50));
-    assertEquals(0, tally.landslideMinimum(75));
-    assertEquals(0, tally.landslideMinimum(80));
-    tally.addAgreeVoter(testPeers[0]);
-    assertEquals(1, tally.landslideMinimum(50));
-    assertEquals(1, tally.landslideMinimum(75));
-    assertEquals(1, tally.landslideMinimum(80));
-    tally.addAgreeVoter(testPeers[1]);
-    assertEquals(1, tally.landslideMinimum(50));
-    assertEquals(2, tally.landslideMinimum(75));
-    assertEquals(2, tally.landslideMinimum(80));
-    tally.addAgreeVoter(testPeers[2]);
-    assertEquals(2, tally.landslideMinimum(50));
-    assertEquals(3, tally.landslideMinimum(75));
-    assertEquals(3, tally.landslideMinimum(80));
-    tally.addAgreeVoter(testPeers[3]);
-    assertEquals(2, tally.landslideMinimum(50));
-    assertEquals(3, tally.landslideMinimum(75));
-    assertEquals(4, tally.landslideMinimum(80));
-    tally.addAgreeVoter(testPeers[4]);
-    assertEquals(3, tally.landslideMinimum(50));
-    assertEquals(4, tally.landslideMinimum(75));
-    assertEquals(4, tally.landslideMinimum(80));
-    tally.addAgreeVoter(testPeers[5]);
-    assertEquals(3, tally.landslideMinimum(50));
-    assertEquals(5, tally.landslideMinimum(75));
-    assertEquals(5, tally.landslideMinimum(80));
-    tally.addAgreeVoter(testPeers[6]);
-    assertEquals(4, tally.landslideMinimum(50));
-    assertEquals(6, tally.landslideMinimum(75));
-    assertEquals(6, tally.landslideMinimum(80));
-    tally.addAgreeVoter(testPeers[7]);
-    assertEquals(4, tally.landslideMinimum(50));
-    assertEquals(6, tally.landslideMinimum(75));
-    assertEquals(7, tally.landslideMinimum(80));
-    tally.addAgreeVoter(testPeers[8]);
-    assertEquals(5, tally.landslideMinimum(50));
-    assertEquals(7, tally.landslideMinimum(75));
-    assertEquals(8, tally.landslideMinimum(80));
-    tally.addAgreeVoter(testPeers[9]);
-    assertEquals(5, tally.landslideMinimum(50));
-    assertEquals(8, tally.landslideMinimum(75));
-    assertEquals(8, tally.landslideMinimum(80));
+    assertEquals(0, BlockTally.landslideMinimum(0, 50));
+    assertEquals(0, BlockTally.landslideMinimum(0, 75));
+    assertEquals(0, BlockTally.landslideMinimum(0, 80));
+
+    assertEquals(1, BlockTally.landslideMinimum(1, 50));
+    assertEquals(1, BlockTally.landslideMinimum(1, 75));
+    assertEquals(1, BlockTally.landslideMinimum(1, 80));
+
+    assertEquals(1, BlockTally.landslideMinimum(2, 50));
+    assertEquals(2, BlockTally.landslideMinimum(2, 75));
+    assertEquals(2, BlockTally.landslideMinimum(2, 80));
+
+    assertEquals(2, BlockTally.landslideMinimum(3, 50));
+    assertEquals(3, BlockTally.landslideMinimum(3, 75));
+    assertEquals(3, BlockTally.landslideMinimum(3, 80));
+
+    assertEquals(2, BlockTally.landslideMinimum(4, 50));
+    assertEquals(3, BlockTally.landslideMinimum(4, 75));
+    assertEquals(4, BlockTally.landslideMinimum(4, 80));
+
+    assertEquals(3, BlockTally.landslideMinimum(5, 50));
+    assertEquals(4, BlockTally.landslideMinimum(5, 75));
+    assertEquals(4, BlockTally.landslideMinimum(5, 80));
+
+    assertEquals(3, BlockTally.landslideMinimum(6, 50));
+    assertEquals(5, BlockTally.landslideMinimum(6, 75));
+    assertEquals(5, BlockTally.landslideMinimum(6, 80));
+
+    assertEquals(4, BlockTally.landslideMinimum(7, 50));
+    assertEquals(6, BlockTally.landslideMinimum(7, 75));
+    assertEquals(6, BlockTally.landslideMinimum(7, 80));
+
+    assertEquals(4, BlockTally.landslideMinimum(8, 50));
+    assertEquals(6, BlockTally.landslideMinimum(8, 75));
+    assertEquals(7, BlockTally.landslideMinimum(8, 80));
+
+    assertEquals(5, BlockTally.landslideMinimum(9, 50));
+    assertEquals(7, BlockTally.landslideMinimum(9, 75));
+    assertEquals(8, BlockTally.landslideMinimum(9, 80));
+
+    assertEquals(5, BlockTally.landslideMinimum(10, 50));
+    assertEquals(8, BlockTally.landslideMinimum(10, 75));
+    assertEquals(8, BlockTally.landslideMinimum(10, 80));
   }
 
   public void testWonPoll() throws Exception {
-    BlockTally tally = new BlockTally();
+    BlockTally tally = new BlockTally(5, 75);
     tally.addDisagreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     tally.addAgreeVoter(testPeers[4]);
-    assertEquals(BlockTally.Result.WON, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.WON, tally.getTallyResult());
   }
 
   public void testLostPoll() throws Exception {
-    BlockTally tally = new BlockTally();
+    BlockTally tally = new BlockTally(5, 75);
     tally.addAgreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
     tally.addDisagreeVoter(testPeers[3]);
     tally.addDisagreeVoter(testPeers[4]);
-    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult());
   }
 
   public void testResultTooCloseUnder() throws Exception {
-    BlockTally tally = new BlockTally();
+    BlockTally tally = new BlockTally(5, 75);
     tally.addDisagreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     tally.addAgreeVoter(testPeers[4]);
     tally.addAgreeVoter(testPeers[5]);
-    assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult());
   }
 
   public void testResultTooCloseOver() throws Exception {
-    BlockTally tally = new BlockTally();
+    BlockTally tally = new BlockTally(5, 75);
     tally.addAgreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
     tally.addDisagreeVoter(testPeers[3]);
     tally.addDisagreeVoter(testPeers[4]);
     tally.addDisagreeVoter(testPeers[5]);
-    assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult());
   }
 
   public void testResultTooCloseEqual() throws Exception {
-    BlockTally tally = new BlockTally();
+    BlockTally tally = new BlockTally(5, 75);
     tally.addAgreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addDisagreeVoter(testPeers[3]);
     tally.addDisagreeVoter(testPeers[4]);
     tally.addDisagreeVoter(testPeers[5]);
-    assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult());
   }
 
   public void testNoQuorum() throws Exception {
-    BlockTally tally = new BlockTally();
+    BlockTally tally = new BlockTally(5, 75);
     tally.addAgreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
-    assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult());
   }
 
   public void testPollerOnly() throws Exception {
     // A combination of disagree, and poller only
     BlockTally tally;
 
-    tally = new BlockTally();
+    tally = new BlockTally(4, 75);
     tally.addDisagreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
     tally.addDisagreeVoter(testPeers[3]);
-    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(4, 75));
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult());
 
     // Note: the reparing peer will be drawn from all the voters,
     // including the one who doesn't have it. This is wrong.
-    tally = new BlockTally();
+    tally = new BlockTally(4, 75);
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
     tally.addDisagreeVoter(testPeers[3]);
-    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(4, 75));
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult());
 
-    tally = new BlockTally();
+    tally = new BlockTally(4, 75);
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addPollerOnlyVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
     tally.addDisagreeVoter(testPeers[3]);
-    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(4, 75));
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult());
 
-    tally = new BlockTally();
+    tally = new BlockTally(4, 75);
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addPollerOnlyVoter(testPeers[1]);
     tally.addPollerOnlyVoter(testPeers[2]);
     tally.addDisagreeVoter(testPeers[3]);
     assertEquals(BlockTally.Result.LOST_POLLER_ONLY_BLOCK,
-		 tally.getTallyResult(4, 75));
+		 tally.getTallyResult());
 
-    tally = new BlockTally();
+    tally = new BlockTally(4, 75);
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addPollerOnlyVoter(testPeers[1]);
     tally.addPollerOnlyVoter(testPeers[2]);
     tally.addPollerOnlyVoter(testPeers[3]);
     assertEquals(BlockTally.Result.LOST_POLLER_ONLY_BLOCK,
-		 tally.getTallyResult(4, 75));
+		 tally.getTallyResult());
 
     // Test regression: BlockTally had been testing poller-only voters
     // against the quorum rather than the landslide. Test that it
     // behaves correctly now.
-    tally = new BlockTally();
+    tally = new BlockTally(4, 75);
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addPollerOnlyVoter(testPeers[1]);
     tally.addPollerOnlyVoter(testPeers[2]);
@@ -232,9 +231,9 @@ public class TestBlockTally extends LockssTestCase {
     tally.addDisagreeVoter(testPeers[7]);
     tally.addDisagreeVoter(testPeers[8]);
     tally.addDisagreeVoter(testPeers[9]);
-    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(4, 75));
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult());
 
-    tally = new BlockTally();
+    tally = new BlockTally(5, 75);
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addPollerOnlyVoter(testPeers[1]);
     tally.addPollerOnlyVoter(testPeers[2]);
@@ -245,24 +244,24 @@ public class TestBlockTally extends LockssTestCase {
     tally.addDisagreeVoter(testPeers[7]);
     tally.addDisagreeVoter(testPeers[8]);
     tally.addDisagreeVoter(testPeers[9]);
-    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult());
   }
 
   public void testAddVoters() {
     BlockTally tally;
-    tally = new BlockTally();
+    tally = new BlockTally(-1, -1);
     tally.addAgreeVoter(testPeers[0]);
     assertEquals("1/0/0/0", tally.votes());
 
-    tally = new BlockTally();
+    tally = new BlockTally(-1, -1);
     tally.addDisagreeVoter(testPeers[0]);
     assertEquals("0/1/0/0", tally.votes());
 
-    tally = new BlockTally();
+    tally = new BlockTally(-1, -1);
     tally.addPollerOnlyVoter(testPeers[0]);
     assertEquals("0/1/1/0", tally.votes());
 
-    tally = new BlockTally();
+    tally = new BlockTally(-1, -1);
     tally.addVoterOnlyVoter(testPeers[0]);
     assertEquals("0/1/0/1", tally.votes());
   }

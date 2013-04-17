@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.11 2013-04-16 22:57:28 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.12 2013-04-17 15:31:48 barry409 Exp $
  */
 
 /*
@@ -206,7 +206,7 @@ public class TestUrlTallier extends LockssTestCase {
     theParticipants.add(makeParticipant(id3, v3Poller,
 					voter3_voteblocks));
 
-    UrlTallier urlTallier = new UrlTallier(theParticipants);
+    UrlTallier urlTallier = new UrlTallier(theParticipants, 5, 75);
 
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
     urlTallier.seek("http://test.com/foo1");
@@ -284,8 +284,7 @@ public class TestUrlTallier extends LockssTestCase {
 					voter2_voteblocks));
     theParticipants.add(makeParticipant(id3, v3Poller,
 					voter3_voteblocks));
-    UrlTallier urlTallier =
-      new UrlTallier(theParticipants);
+    UrlTallier urlTallier = new UrlTallier(theParticipants, 5, 75);
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
     urlTallier.tallyPollerUrl("http://test.com/foo1", hashblocks[0]);
     assertEquals("http://test.com/foo2", urlTallier.peekUrl());
@@ -333,8 +332,7 @@ public class TestUrlTallier extends LockssTestCase {
     theParticipants.add(makeParticipant(id3, v3Poller,
 					voter3_voteblocks));
 
-    UrlTallier urlTallier =
-      new UrlTallier(theParticipants);
+    UrlTallier urlTallier = new UrlTallier(theParticipants, 5, 75);
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
     tally = urlTallier.tallyVoterUrl("http://test.com/foo1");
     // todo(bhayes): BlockTally needs to have a better interface, both
@@ -392,8 +390,7 @@ public class TestUrlTallier extends LockssTestCase {
     theParticipants.add(makeParticipant(id1, v3Poller,
 					voter1_voteblocks));
 
-    UrlTallier urlTallier =
-      new UrlTallier(theParticipants);
+    UrlTallier urlTallier = new UrlTallier(theParticipants, 5, 75);
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
     tally = urlTallier.tallyVoterUrl("http://test.com/foo1");
     assertEquals("http://test.com/foo2", urlTallier.peekUrl());
@@ -454,7 +451,7 @@ public class TestUrlTallier extends LockssTestCase {
 
     theParticipants.add(participant);
     assertFalse(vb.thrown);
-    UrlTallier urlTallier = new UrlTallier(theParticipants);
+    UrlTallier urlTallier = new UrlTallier(theParticipants, 5, 75);
     assertTrue(vb.thrown);
     assertTrue(urlTallier.voteSpoiled(participant));
     // peekUrl() doesn't throw anything, but there's no URL since the
@@ -537,7 +534,7 @@ public class TestUrlTallier extends LockssTestCase {
     participant.setVoteBlocks(vb);
 
     theParticipants.add(participant);
-    UrlTallier urlTallier = new UrlTallier(theParticipants);
+    UrlTallier urlTallier = new UrlTallier(theParticipants, 5, 75);
 
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
     assertFalse(urlTallier.voteSpoiled(participant));

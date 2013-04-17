@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.26 2013-04-10 16:34:03 barry409 Exp $
+ * $Id: BlockTally.java,v 1.27 2013-04-17 15:31:47 barry409 Exp $
  */
 
 /*
@@ -74,6 +74,14 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
   final Collection<ParticipantUserData> voterOnlyVoters =
     new ArrayList<ParticipantUserData>();
 
+  final private int quorum;
+  final private int voteMargin;
+
+  public BlockTally(int quorum, int voteMargin) {
+    this.quorum = quorum;
+    this.voteMargin = voteMargin;
+  }
+
   // Interface methods to springboard to our internal methods.
   public void voteSpoiled(ParticipantUserData id) {}
   public void voteAgreed(ParticipantUserData id) {
@@ -105,9 +113,9 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
   /**
    * @return the result of the tally.
    */
-  BlockTally.Result getTallyResult(int quorum, int voteMargin) {
+  BlockTally.Result getTallyResult() {
     BlockTally.Result result;
-    int landslideMinimum = landslideMinimum(voteMargin);
+    int landslideMinimum = landslideMinimum();
 
     if (numVotes() < quorum) {
       result = BlockTally.Result.NOQUORUM;
@@ -149,10 +157,21 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
   }
 
   /**
+   * @param numVotes The number of votes submitted.
+   * @param voteMargin The percentage (times 100) of submitted votes
+   * required for a landslide.
+   * @return The number of votes required to be considered a
+   * landslide.
+   */
+  public static int landslideMinimum(int numVotes, int voteMargin) {
+    return (int)Math.ceil(((double)voteMargin / 100) * numVotes);
+  }
+
+  /**
    * @return the minimum number of voters required for a landslide.
    */
-  int landslideMinimum(int voteMargin) {
-    return (int)Math.ceil(((double)voteMargin / 100) * numVotes());
+  int landslideMinimum() {
+    return landslideMinimum(numVotes(), voteMargin);
   }
 
   void addAgreeVoter(ParticipantUserData id) {

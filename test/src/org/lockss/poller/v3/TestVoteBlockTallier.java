@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlockTallier.java,v 1.7 2013-04-16 22:57:28 barry409 Exp $
+ * $Id: TestVoteBlockTallier.java,v 1.8 2013-04-17 15:31:48 barry409 Exp $
  */
 
 /*
@@ -91,8 +91,8 @@ public class TestVoteBlockTallier extends LockssTestCase {
   }
 
   public void testConstructPollTally() {
-    BlockTally tally = new BlockTally();
-    assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult(5, 75));
+    BlockTally tally = new BlockTally(5, 75);
+    assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult());
   }
 
   public void testVoteWithBlockTallyPollerHas() {
@@ -106,19 +106,19 @@ public class TestVoteBlockTallier extends LockssTestCase {
       };
 
     voteBlockTallier = VoteBlockTallier.make(comparer);
-    tally = new BlockTally();
+    tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteSpoiled(testPeers[0]);
     assertEquals("0/0/0/0", tally.votes());
 
     voteBlockTallier = VoteBlockTallier.make(comparer);
-    tally = new BlockTally();
+    tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteMissing(testPeers[0]);
     assertEquals("0/1/1/0", tally.votes());
 
     voteBlockTallier = VoteBlockTallier.make(comparer);
-    tally = new BlockTally();
+    tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(makeVoteBlock(), testPeers[0], 0);
     assertEquals("1/0/0/0", tally.votes());
@@ -135,19 +135,19 @@ public class TestVoteBlockTallier extends LockssTestCase {
       };
 
     voteBlockTallier = VoteBlockTallier.make();
-    tally = new BlockTally();
+    tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteSpoiled(testPeers[0]);
     assertEquals("0/0/0/0", tally.votes());
 
     voteBlockTallier = VoteBlockTallier.make();
-    tally = new BlockTally();
+    tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteMissing(testPeers[0]);
     assertEquals("1/0/0/0", tally.votes());
 
     voteBlockTallier = VoteBlockTallier.make();
-    tally = new BlockTally();
+    tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(makeVoteBlock(), testPeers[0], 0);
     assertEquals("0/1/0/1", tally.votes());
