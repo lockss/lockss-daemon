@@ -4,7 +4,7 @@
     name = UniBio Press
   >
 
-  plugin = org.lockss.plugin.bioone.BioOnePlugin
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
   param[base_url] = http://www.bioone.org/
   implicit < status ; year ; name ; param[volume] >
 
