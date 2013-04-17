@@ -512,64 +512,65 @@ comment[bj1] = no permission from publisher
     param[base_url] = http://www.biolcell.org/
     param[journal_id] = boc
 
-comment[boc_allnotredy_aus] = 500 errors, before moving to Wiley
-comment[ownership] = changed hands to wiley
+    comment[boc_notReady] = 500 errors
+    comment[ownership] = moved to Wiley, but only after 2011
 
-    au < down ; 1984 ; Biology of the Cell Volume 48 ; 048 >
-    au < notReady ; 1984 ; Biology of the Cell Volume 49 ; 049 >
-    au < down ; 1984 ; Biology of the Cell Volume 50 ; 050 >
-    au < down ; 1984 ; Biology of the Cell Volume 51 ; 051 >
-    au < down ; 1985 ; Biology of the Cell Volume 52 ; 052 >
-    au < down ; 1985 ; Biology of the Cell Volume 53 ; 053 >
-    au < down ; 1985 ; Biology of the Cell Volume 54 ; 054 >
-    au < down ; 1985 ; Biology of the Cell Volume 55 ; 055 >
-    au < down ; 1986 ; Biology of the Cell Volume 56 ; 056 >
-    au < notReady ; 1986 ; Biology of the Cell Volume 57 ; 057 >
-    au < down ; 1986 ; Biology of the Cell Volume 58 ; 058 >
-    au < down ; 1987 ; Biology of the Cell Volume 59 ; 059 >
-    au < down ; 1987 ; Biology of the Cell Volume 60 ; 060 >
-    au < down ; 1987 ; Biology of the Cell Volume 61 ; 061 >
-    au < down ; 1988 ; Biology of the Cell Volume 62 ; 062 >
-    au < down ; 1988 ; Biology of the Cell Volume 63 ; 063 >
-    au < down ; 1988 ; Biology of the Cell Volume 64 ; 064 >
-    au < down ; 1989 ; Biology of the Cell Volume 65 ; 065 >
-    au < down ; 1989 ; Biology of the Cell Volume 66 ; 066 >
-    au < down ; 1989 ; Biology of the Cell Volume 67 ; 067 >
-    au < down ; 1990 ; Biology of the Cell Volume 68 ; 068 >
-    au < down ; 1990 ; Biology of the Cell Volume 69 ; 069 >
+    au < released ; 1984 ; Biology of the Cell Volume 48 [abstracts only] ; 048 >
+    au < notReady ; 1984 ; Biology of the Cell Volume 49 [abstracts only] ; 049 >
+    au < released ; 1984 ; Biology of the Cell Volume 50 [abstracts only] ; 050 >
+    au < released ; 1984 ; Biology of the Cell Volume 51 [abstracts only] ; 051 >
+    au < released ; 1985 ; Biology of the Cell Volume 52 [abstracts only] ; 052 >
+    au < released ; 1985 ; Biology of the Cell Volume 53 [abstracts only] ; 053 >
+    au < released ; 1985 ; Biology of the Cell Volume 54 [abstracts only] ; 054 >
+    au < released ; 1985 ; Biology of the Cell Volume 55 [abstracts only] ; 055 >
+    au < released ; 1986 ; Biology of the Cell Volume 56 [abstracts only] ; 056 >
+    au < notReady ; 1986 ; Biology of the Cell Volume 57 [abstracts only] ; 057 >
+    au < released ; 1986 ; Biology of the Cell Volume 58 [abstracts only] ; 058 >
+    au < released ; 1987 ; Biology of the Cell Volume 59 [abstracts only] ; 059 >
+    au < released ; 1987 ; Biology of the Cell Volume 60 [abstracts only] ; 060 >
+    au < released ; 1987 ; Biology of the Cell Volume 61 [abstracts only] ; 061 >
+    au < released ; 1988 ; Biology of the Cell Volume 62 ; 062 >
+    au < released ; 1988 ; Biology of the Cell Volume 63 ; 063 >
+    au < released ; 1988 ; Biology of the Cell Volume 64 ; 064 >
+    au < released ; 1989 ; Biology of the Cell Volume 65 ; 065 >
+    au < released ; 1989 ; Biology of the Cell Volume 66 ; 066 >
+    au < released ; 1989 ; Biology of the Cell Volume 67 ; 067 >
+    au < released ; 1990 ; Biology of the Cell Volume 68 ; 068 >
+    au < released ; 1990 ; Biology of the Cell Volume 69 ; 069 >
     au < notReady ; 1990 ; Biology of the Cell Volume 70 ; 070 >
-    au < down ; 1991 ; Biology of the Cell Volume 71 ; 071 >
-    au < down ; 1991 ; Biology of the Cell Volume 72 ; 072 >
-    au < down ; 1991 ; Biology of the Cell Volume 73 ; 073 >
-    au < down ; 1992 ; Biology of the Cell Volume 74 ; 074 >
-    au < down ; 1992 ; Biology of the Cell Volume 75 ; 075 >
-    au < down ; 1992 ; Biology of the Cell Volume 76 ; 076 >
-    au < down ; 1993 ; Biology of the Cell Volume 77 ; 077 >
-    au < down ; 1993 ; Biology of the Cell Volume 78 ; 078 >
-    au < down ; 1993 ; Biology of the Cell Volume 79 ; 079 >
-    au < down ; 1994 ; Biology of the Cell Volume 80 ; 080 >
-    au < down ; 1994 ; Biology of the Cell Volume 81 ; 081 >
-    au < down ; 1994 ; Biology of the Cell Volume 82 ; 082 >
-    au < down ; 1995 ; Biology of the Cell Volume 83 ; 083 >
+    au < released ; 1991 ; Biology of the Cell Volume 71 ; 071 >
+    au < released ; 1991 ; Biology of the Cell Volume 72 ; 072 >
+    au < released ; 1991 ; Biology of the Cell Volume 73 ; 073 >
+    au < released ; 1992 ; Biology of the Cell Volume 74 ; 074 >
+    au < released ; 1992 ; Biology of the Cell Volume 75 ; 075 >
+    au < released ; 1992 ; Biology of the Cell Volume 76 ; 076 >
+    au < released ; 1993 ; Biology of the Cell Volume 77 ; 077 >
+    au < released ; 1993 ; Biology of the Cell Volume 78 ; 078 >
+    au < released ; 1993 ; Biology of the Cell Volume 79 ; 079 >
+    au < released ; 1994 ; Biology of the Cell Volume 80 ; 080 >
+    au < released ; 1994 ; Biology of the Cell Volume 81 ; 081 >
+    au < released ; 1994 ; Biology of the Cell Volume 82 ; 082 >
+    au < released ; 1995 ; Biology of the Cell Volume 83 ; 083 >
     au < notReady ; 1995 ; Biology of the Cell Volume 84 ; 084 >
-    au < down ; 1995 ; Biology of the Cell Volume 85 ; 085 >
-    au < down ; 1996 ; Biology of the Cell Volume 86 ; 086 >
-    au < down ; 1996 ; Biology of the Cell Volume 87 ; 087 >
-    au < down ; 1996 ; Biology of the Cell Volume 88 ; 088 >
-    au < down ; 1997 ; Biology of the Cell Volume 89 ; 089 >
-    au < down ; 1998 ; Biology of the Cell Volume 90 ; 090 >
-    au < down ; 1999 ; Biology of the Cell Volume 91 ; 091 >
-    au < down ; 2000 ; Biology of the Cell Volume 92 ; 092 >
-    au < down ; 2001 ; Biology of the Cell Volume 93 ; 093 >
-    au < down ; 2002 ; Biology of the Cell Volume 94 ; 094 >
-    au < down ; 2003 ; Biology of the Cell Volume 95 ; 095 >
-    au < down ; 2004 ; Biology of the Cell Volume 96 ; 096 >
-    au < down ; 2005 ; Biology of the Cell Volume 97 ; 097 >
-    au < down ; 2006 ; Biology of the Cell Volume 98 ; 098 >
-    au < down ; 2007 ; Biology of the Cell Volume 99 ; 099 >
-    au < down ; 2008 ; Biology of the Cell Volume 100 ; 100 >
+    au < released ; 1995 ; Biology of the Cell Volume 85 ; 085 >
+    au < released ; 1996 ; Biology of the Cell Volume 86 ; 086 >
+    au < released ; 1996 ; Biology of the Cell Volume 87 ; 087 >
+    au < released ; 1996 ; Biology of the Cell Volume 88 ; 088 >
+    au < released ; 1997 ; Biology of the Cell Volume 89 ; 089 >
+    au < released ; 1998 ; Biology of the Cell Volume 90 ; 090 >
+    au < released ; 1999 ; Biology of the Cell Volume 91 ; 091 >
+    au < released ; 2000 ; Biology of the Cell Volume 92 ; 092 >
+    au < released ; 2001 ; Biology of the Cell Volume 93 ; 093 >
+    au < released ; 2002 ; Biology of the Cell Volume 94 ; 094 >
+    au < released ; 2003 ; Biology of the Cell Volume 95 ; 095 >
+    au < released ; 2004 ; Biology of the Cell Volume 96 ; 096 >
+    au < released ; 2005 ; Biology of the Cell Volume 97 ; 097 >
+    au < released ; 2006 ; Biology of the Cell Volume 98 ; 098 >
+    au < released ; 2007 ; Biology of the Cell Volume 99 ; 099 >
+    au < released ; 2008 ; Biology of the Cell Volume 100 ; 100 >
     au < notReady ; 2009 ; Biology of the Cell Volume 101 ; 101 >
-    au < down ; 2010 ; Biology of the Cell Volume 102 ; 102 >
+    au < released ; 2010 ; Biology of the Cell Volume 102 ; 102 >
+    au < exists ; 2011 ; Biology of the Cell Volume 103 ; 103 >
     
   } 
   
