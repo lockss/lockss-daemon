@@ -42,8 +42,17 @@
 
   {
     title <
-      name = Greener Management International 
+      name = Greener Management International ;
+      issn = 0966-9671 ;
+      eissn = 2051-3062
     >
+
+    param[journal_id] = gmi
+    param[journal_issn] = 0966-9671
+
+    au < exists ; 2005 ; Greener Management International Volume 2005 ; 2005 >
+    au < exists ; 2006 ; Greener Management International Volume 2006 ; 2006 >
+    au < exists ; 2007 ; Greener Management International Volume 2007 ; 2007 >
 
   }
 
