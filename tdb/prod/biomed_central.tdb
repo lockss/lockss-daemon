@@ -1560,6 +1560,30 @@
 
     {
       title <
+        name = BMC Sports Science, Medicine and Rehabilitation  ;
+        issn = 1472-6807 ;
+        issnl = 1472-6807
+      >
+
+      attr[journal_code] = bmcsportsscimedrehabil
+      {
+        param[journal_issn] = 1758-2555
+
+        au < exists ; 2009 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
+        au < exists ; 2010 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
+        au < exists ; 2011 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
+        au < exists ; 2012 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
+      }
+      
+      {
+        param[journal_issn] = 2052-1847 
+
+        au < exists ; 2013 ; BMC Sports Science, Medicine and Rehabilitation Volume 5 ; 5 >
+      }
+    }
+
+    {
+      title <
         name = BMC Structural Biology ;
         issn = 1472-6807 ;
         issnl = 1472-6807
@@ -5763,24 +5787,6 @@
       au < released ; 2011 ; Source Code for Biology and Medicine Volume 6 ; 6 >
       au < manifest ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 >
       au < manifest ; 2013 ; Source Code for Biology and Medicine Volume 8 ; 8 >
-
-    }
-
-    {
-      title <
-        name = Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology ;
-        issn = 1758-2555 ;
-        issnl = 1758-2555
-      >
-
-      param[base_url] = http://www.smarttjournal.com/
-      param[journal_issn] = 1758-2555
-
-      au < manifest ; 2009 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
-      au < manifest ; 2010 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
-      au < manifest ; 2011 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
-      au < manifest ; 2012 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
-      au < manifest ; 2013 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 5 ; 5 >
 
     }
 
