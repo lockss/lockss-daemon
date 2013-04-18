@@ -1071,7 +1071,7 @@
     {
   
         title <
-          name = Journal of Headache and Pain ;
+          name = The Journal of Headache and Pain ;
           issn = 1129-2369 ;
           eissn = 1129-2377
         >
@@ -1080,7 +1080,7 @@
         param[journal_issn] = 1129-2369
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; Journal of Headache and Pain Volume 14 ; 14 >
+        au < expected ; exists ; 2013 ; The Journal of Headache and Pain Volume 14 ; 14 >
   
     }
   
