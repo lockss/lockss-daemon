@@ -1,0 +1,37 @@
+{
+
+  publisher <
+    name = GSE Research
+  >
+
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = 
+    implicit < status ; year ; name ; param[volume_name] >
+
+  {
+    title <
+      name = GSE Research ;
+      issn = 2048-7665
+    >
+    
+    param[journal_id] = 
+    param[journal_issn] = 
+
+  }
+
+  {
+    title <
+      name = International Journal of Nuclear Energy Management and Safety ;
+      eissn = 2047-2617
+    >
+
+    param[journal_id] = 
+    param[journal_issn] = 
+
+  }
+
+}
+
