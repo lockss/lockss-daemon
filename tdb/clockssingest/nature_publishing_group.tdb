@@ -56,9 +56,9 @@
     au < exists ; exists ; 2005 ; American Journal of Gastroenterology Volume 100 ; 2005 ; 100 >
     au < exists ; exists ; 2006 ; American Journal of Gastroenterology Volume 101 ; 2006 ; 101 >
     au < exists ; exists ; 2007 ; American Journal of Gastroenterology Volume 102 ; 2007 ; 102 >
-    au < testing ; exists ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
-    au < testing ; exists ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
-    au < testing ; exists ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
+    au < released ; manifest ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
+    au < released ; manifest ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
+    au < released ; manifest ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
     au < released ; crawling ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 >
     au < released ; manifest ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 >
     au < manifest ; exists ; 2013 ; American Journal of Gastroenterology Volume 108 ; 2013 ; 108 >
@@ -564,7 +564,7 @@
     au < crawling ; exists ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 >
     au < crawling ; exists ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 >
     au < crawling ; exists ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 >
-    au < testing ; exists ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 >
+    au < released ; manifest ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 >
     au < exists ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 >
 
   }
@@ -582,7 +582,7 @@
 
     au < testing ; exists ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 >
     au < testing ; exists ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 >
-    au < testing ; exists ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 >
+    au < released ; manifest ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 >
     au < exists ; exists ; 2013 ; Clinical and Translational Gastroenterology Volume 4 ; 2013 ; 4 >
 
   }
@@ -828,7 +828,7 @@
     au < released ; crawling ; 2009 ; European Journal of Human Genetics Volume 17 ; 2009 ; 17 >
     au < released ; crawling ; 2010 ; European Journal of Human Genetics Volume 18 ; 2010 ; 18 >
     au < released ; crawling ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 >
-    au < testing ; exists ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 >
+    au < released ; manifest ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 >
     au < manifest ; exists ; 2013 ; European Journal of Human Genetics Volume 21 ; 2013 ; 21 >
   }
 
@@ -1141,7 +1141,7 @@
     au < released ; crawling ; 2011 ; Heredity Volume 106 ; 2011 ; 106 >
     au < released ; crawling ; 2011 ; Heredity Volume 107 ; 2011 ; 107 >
     au < released ; crawling ; 2012 ; Heredity Volume 108 ; 2012 ; 108 >
-    au < testing ; exists ; 2012 ; Heredity Volume 109 ; 2012 ; 109 >
+    au < released ; manifest ; 2012 ; Heredity Volume 109 ; 2012 ; 109 >
     au < manifest ; exists ; 2013 ; Heredity Volume 110 ; 2013 ; 110 >
 
 
@@ -1414,7 +1414,7 @@
     au < released ; manifest ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 >
     au < released ; manifest ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 >
     au < zapped ; down ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 >
-    au < testing ; exists ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 >
+    au < released ; manifest ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 >
     au < manifest ; exists ; 2013 ; The ISME Journal Volume 7 ; 2013 ; 7 >
 
   }
@@ -1777,7 +1777,7 @@
     au < zapped ; down ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
     au < released ; crawling ; 2010 ; The Journal of Investigative Dermatology Volume 130 ; 2010 ; 130 >
     au < released ; crawling ; 2011 ; The Journal of Investigative Dermatology Volume 131 ; 2011 ; 131 >
-    au < testing ; exists ; 2012 ; The Journal of Investigative Dermatology Volume 132 ; 2012 ; 132 >
+    au < released ; manifest ; 2012 ; The Journal of Investigative Dermatology Volume 132 ; 2012 ; 132 >
     au < manifest ; exists ; 2013 ; The Journal of Investigative Dermatology Volume 133 ; 2013 ; 133 >
 
   }
