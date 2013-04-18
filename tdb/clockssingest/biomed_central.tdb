@@ -1579,6 +1579,30 @@
 
     {
       title <
+        name = BMC Sports Science, Medicine and Rehabilitation  ;
+        issn = 1472-6807 ;
+        issnl = 1472-6807
+      >
+
+      attr[journal_code] = bmcsportsscimedrehabil
+      {
+        param[journal_issn] = 1758-2555
+
+        au < exists ; exists ; 2009 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
+        au < exists ; exists ; 2010 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
+        au < exists ; exists ; 2011 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
+        au < exists ; exists ; 2012 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
+      }
+      
+      {
+        param[journal_issn] = 2052-1847 
+
+        au < exists ; exists ; 2013 ; BMC Sports Science, Medicine and Rehabilitation Volume 5 ; 5 >
+      }
+    }
+
+    {
+      title <
         name = BMC Structural Biology ;
         issn = 1472-6807 ;
         issnl = 1472-6807
@@ -5723,11 +5747,10 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.smarttjournal.com/
       param[journal_issn] = 1758-2555
 
-      au < crawling ; exists ; 2009 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
-      au < crawling ; exists ; 2011 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
-      au < crawling ; exists ; 2012 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
-      au < manifest ; exists ; 2013 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 5 ; 5 >
+      au < notReady ; exists ; 2009 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 [to delete] ; 1 >
+      au < notReady ; exists ; 2010 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 [to delete] ; 2 >
+      au < notReady ; exists ; 2011 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 [to delete] ; 3 >
+      au < notReady ; exists ; 2012 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 [to delete] ; 4 >
 
     }
 
