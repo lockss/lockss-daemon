@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestRecorder.java,v 1.7 2013-03-04 19:26:59 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestRecorder.java,v 1.8 2013-04-18 19:49:11 fergaloy-sf Exp $
  */
 
 /*
@@ -93,6 +93,7 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 	      tempDirPath);
     props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME,
 	"org.apache.derby.jdbc.ClientDataSource");
+    props.setProperty(DbManager.PARAM_DATASOURCE_PASSWORD, "somePassword");
     props.setProperty(CounterReportsManager.PARAM_COUNTER_ENABLED, "true");
     props.setProperty(CounterReportsManager.PARAM_REPORT_BASEDIR_PATH,
 	tempDirPath);

@@ -1,10 +1,10 @@
 /*
- * $Id: TestDbManager.java,v 1.3 2013-04-14 05:24:00 tlipkis Exp $
+ * $Id: TestDbManager.java,v 1.4 2013-04-18 19:49:11 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,6 +40,7 @@ package org.lockss.db;
 
 import java.io.File;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
@@ -117,6 +118,7 @@ public class TestDbManager extends LockssTestCase {
 	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME,
 		      "org.apache.derby.jdbc.ClientDataSource");
+    props.setProperty(DbManager.PARAM_DATASOURCE_PASSWORD, "somePassword");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     createTable();
@@ -156,13 +158,11 @@ public class TestDbManager extends LockssTestCase {
     startService();
     assertEquals(false, dbManager.isReady());
 
-    Connection conn = null;
     try {
-      conn = dbManager.getConnection();
+      dbManager.getConnection();
+      fail("getConnection() should throw");
     } catch (SQLException sqle) {
     }
-    assertNull(conn);
-
   }
 
   /**
@@ -431,5 +431,228 @@ public class TestDbManager extends LockssTestCase {
     assertFalse(original.equals(truncated));
     assertTrue(DbManager.isTruncatedVarchar(truncated));
     assertTrue(truncated.length() == original.length() - 3);
+  }
+
+  /**
+   * Tests authentication with the default data source.
+   * 
+   * @throws Exception
+   */
+  public void testAuthenticationDefault() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    startService();
+
+    String dbUrlRoot = "jdbc:derby://localhost:1527/" + tempDirPath
+	+ "/db/DbManager";
+
+    try {
+      Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+      DriverManager.getConnection(dbUrlRoot);
+      fail("getConnection() should throw");
+    } catch (Exception e) {
+    }
+
+    String dbUrl = dbUrlRoot + ";user=LOCKSS";
+
+    try {
+      Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+      DriverManager.getConnection(dbUrl);
+      fail("getConnection() should throw");
+    } catch (Exception e) {
+    }
+
+    dbUrl = dbUrlRoot + ";user=LOCKSS;password=somePassword";
+
+    try {
+      Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+      DriverManager.getConnection(dbUrl);
+      fail("getConnection() should throw");
+    } catch (Exception e) {
+    }
+  }
+
+  /**
+   * Tests authentication with the embedded data source.
+   * 
+   * @throws Exception
+   */
+  public void testAuthenticationEmbedded() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME,
+	"org.apache.derby.jdbc.EmbeddedDataSource");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    startService();
+
+    String dbUrlRoot = "jdbc:derby://localhost:1527/" + tempDirPath
+	+ "/db/DbManager";
+
+    try {
+      Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+      DriverManager.getConnection(dbUrlRoot);
+      fail("getConnection() should throw");
+    } catch (Exception e) {
+    }
+
+    String dbUrl = dbUrlRoot + ";user=LOCKSS";
+
+    try {
+      Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+      DriverManager.getConnection(dbUrl);
+      fail("getConnection() should throw");
+    } catch (Exception e) {
+    }
+
+    dbUrl = dbUrlRoot + ";user=LOCKSS;password=somePassword";
+
+    try {
+      Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+      DriverManager.getConnection(dbUrl);
+      fail("getConnection() should throw");
+    } catch (Exception e) {
+    }
+  }
+
+  /**
+   * Tests authentication with the client data source.
+   * 
+   * @throws Exception
+   */
+  public void testAuthenticationClient() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME,
+	"org.apache.derby.jdbc.ClientDataSource");
+    props.setProperty(DbManager.PARAM_DATASOURCE_PASSWORD, "somePassword");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    startService();
+
+    Connection conn = null;
+
+    String dbUrlRoot = "jdbc:derby://localhost:1527/" + tempDirPath
+	+ "/db/DbManager";
+
+    try {
+      Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+      conn = DriverManager.getConnection(dbUrlRoot);
+      fail("getConnection() should throw");
+    } catch (Exception e) {
+    }
+
+    String dbUrl = dbUrlRoot + ";user=LOCKSS";
+
+    try {
+      Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+      conn = DriverManager.getConnection(dbUrl);
+      fail("getConnection() should throw");
+    } catch (Exception e) {
+    }
+
+    dbUrl = dbUrlRoot + ";user=LOCKSS;password=wrongPassword";
+
+    try {
+      Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+      conn = DriverManager.getConnection(dbUrl);
+      fail("getConnection() should throw");
+    } catch (Exception e) {
+    }
+
+    dbUrl = dbUrlRoot + ";password=somePassword";
+
+    try {
+      Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+      conn = DriverManager.getConnection(dbUrl);
+      fail("getConnection() should throw");
+    } catch (Exception e) {
+    }
+
+    dbUrl = dbUrlRoot + ";user=wrongUser;password=somePassword";
+
+    try {
+      Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+      conn = DriverManager.getConnection(dbUrl);
+      fail("getConnection() should throw");
+    } catch (Exception e) {
+    }
+
+    dbUrl = dbUrlRoot + ";user=LOCKSS;password=somePassword";
+
+    try {
+      Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+      conn = DriverManager.getConnection(dbUrl);
+    } catch (Exception e) {
+      throw new Exception("Cannot get connection", e);
+    }
+
+    assertNotNull(conn);
+  }
+
+  /**
+   * Tests set up with missing credentials.
+   * 
+   * @throws Exception
+   */
+  public void testMissingCredentialsSetUp() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME,
+	      "org.apache.derby.jdbc.ClientDataSource");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    startService();
+    assertFalse(dbManager.isReady());
+  }
+
+  /**
+   * Tests set up with missing user.
+   * 
+   * @throws Exception
+   */
+  public void testMissingUserSetUp() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME,
+	      "org.apache.derby.jdbc.ClientDataSource");
+    props.setProperty(DbManager.PARAM_DATASOURCE_USER, "");
+    props.setProperty(DbManager.PARAM_DATASOURCE_PASSWORD, "somePassword");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    startService();
+    assertFalse(dbManager.isReady());
+  }
+
+  /**
+   * Tests set up with missing password.
+   * 
+   * @throws Exception
+   */
+  public void testMissingPasswordSetUp() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props
+	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    props.setProperty(DbManager.PARAM_DATASOURCE_CLASSNAME,
+	      "org.apache.derby.jdbc.ClientDataSource");
+    props.setProperty(DbManager.PARAM_DATASOURCE_USER, "LOCKSS");
+    props.setProperty(DbManager.PARAM_DATASOURCE_PASSWORD, "");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    startService();
+    assertFalse(dbManager.isReady());
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.17 2013-04-14 05:24:00 tlipkis Exp $
+ * $Id: DbManager.java,v 1.18 2013-04-18 19:49:11 fergaloy-sf Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import java.io.File;
 import java.net.InetAddress;
 import java.sql.BatchUpdateException;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -109,6 +110,12 @@ public class DbManager extends BaseLockssDaemonManager
    */
   public static final String PARAM_DATASOURCE_USER = DATASOURCE_ROOT + ".user";
   public static final String DEFAULT_DATASOURCE_USER = "LOCKSS";
+
+  /**
+   * Name of the existing database password. Changes require daemon restart.
+   */
+  public static final String PARAM_DATASOURCE_PASSWORD = DATASOURCE_ROOT
+      + ".password";
 
   /**
    * Set to false to prevent DbManager from running
@@ -702,8 +709,8 @@ public class DbManager extends BaseLockssDaemonManager
   // for COUNTER reports.
   private static final String OBSOLETE_CREATE_PUBYEAR_AGGREGATES_TABLE_QUERY
   = "create table " + OBSOLETE_PUBYEAR_AGGREGATES_TABLE + " ("
-      + LOCKSS_ID_COLUMN
-      + " bigint NOT NULL CONSTRAINT FK_LOCKSS_ID_PUBYEAR_AGGREGATES REFERENCES "
+      + LOCKSS_ID_COLUMN + " bigint NOT NULL CONSTRAINT "
+      + "FK_LOCKSS_ID_PUBYEAR_AGGREGATES REFERENCES "
       + OBSOLETE_TITLES_TABLE + ","
       + IS_PUBLISHER_INVOLVED_COLUMN + " boolean NOT NULL,"
       + REQUEST_YEAR_COLUMN + " smallint NOT NULL,"
@@ -957,7 +964,8 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for subscription ranges.
-  private static final String CREATE_SUBSCRIPTION_RANGE_TABLE_QUERY = "create table "
+  private static final String CREATE_SUBSCRIPTION_RANGE_TABLE_QUERY =
+      "create table "
       + SUBSCRIPTION_RANGE_TABLE + " ("
       + SUBSCRIPTION_SEQ_COLUMN + " bigint NOT NULL"
       + " CONSTRAINT FK_SUBSCRIPTION_SEQ_COLUMN_SUBSCRIPTION_RANGE"
@@ -989,7 +997,8 @@ public class DbManager extends BaseLockssDaemonManager
 	{
 	  put(OBSOLETE_METADATA_TABLE, OBSOLETE_CREATE_METADATA_TABLE_QUERY);
 	  put(OBSOLETE_TITLE_TABLE, OBSOLETE_CREATE_TITLE_TABLE_QUERY);
-	  put(OBSOLETE_PENDINGAUS_TABLE, OBSOLETE_CREATE_PENDINGAUS_TABLE_QUERY);
+	  put(OBSOLETE_PENDINGAUS_TABLE,
+	      OBSOLETE_CREATE_PENDINGAUS_TABLE_QUERY);
 	  put(OBSOLETE_FEATURE_TABLE, OBSOLETE_CREATE_FEATURE_TABLE_QUERY);
 	  put(DOI_TABLE, OBSOLETE_CREATE_DOI_TABLE_QUERY);
 	  put(ISBN_TABLE, OBSOLETE_CREATE_ISBN_TABLE_QUERY);
@@ -1113,8 +1122,8 @@ public class DbManager extends BaseLockssDaemonManager
     	+ "parameter style java no sql",
 
         "create function generateAuId(pluginId varchar(128), "
-    	+ "auKey varchar(512)) returns varchar(640) language java external name "
-    	+ "'org.lockss.plugin.PluginManager.generateAuId' "
+    	+ "auKey varchar(512)) returns varchar(640) language java external "
+        + "name " + "'org.lockss.plugin.PluginManager.generateAuId' "
     	+ "parameter style java no sql",
 
         "create function formatIsbn(isbn varchar(17)) "
@@ -1203,8 +1212,8 @@ public class DbManager extends BaseLockssDaemonManager
     	+ "parameter style java no sql",
 
         "create function publisherFromAuId(pluginId varchar(128), "
-    	+ "auKey varchar(512)) returns varchar(256)  language java external name "
-    	+ "'org.lockss.util.SqlStoredProcedures.getPublisherFromAuId' "
+    	+ "auKey varchar(512)) returns varchar(256)  language java external "
+    	+ "name 'org.lockss.util.SqlStoredProcedures.getPublisherFromAuId' "
     	+ "parameter style java no sql",
 
         "create function startVolumeFromAuId(pluginId varchar(128), "
@@ -1228,8 +1237,8 @@ public class DbManager extends BaseLockssDaemonManager
     	+ "parameter style java no sql",
 
         "create function titleFromAuId(pluginId varchar(128), "
-    	+ "auKey varchar(512)) returns varchar(256) language java external name "
-    	+ "'org.lockss.util.SqlStoredProcedures.getTitleFromAuId' "
+    	+ "auKey varchar(512)) returns varchar(256) language java external "
+    	+ "name 'org.lockss.util.SqlStoredProcedures.getTitleFromAuId' "
     	+ "parameter style java no sql",
 
         "create function titleFromIssn(issn varchar(9)) "
@@ -1243,8 +1252,8 @@ public class DbManager extends BaseLockssDaemonManager
     	+ "parameter style java no sql",
 
         "create function volumeTitleFromAuId(pluginId varchar(128), "
-    	+ "auKey varchar(512)) returns varchar(256) language java external name "
-    	+ "'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromAuId' "
+    	+ "auKey varchar(512)) returns varchar(256) language java external "
+    	+ "name 'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromAuId' "
     	+ "parameter style java no sql",
 
         "create function volumeTitleFromIsbn(issn varchar(18)) "
@@ -1364,8 +1373,8 @@ public class DbManager extends BaseLockssDaemonManager
 	+ "parameter style java no sql",
 
     "create function generateAuId(pluginId varchar(128), "
-	+ "auKey varchar(512)) returns varchar(640) language java external name "
-	+ "'org.lockss.plugin.PluginManager.generateAuId' "
+	+ "auKey varchar(512)) returns varchar(640) language java external "
+	+ "name 'org.lockss.plugin.PluginManager.generateAuId' "
 	+ "parameter style java no sql",
 
     "create function formatIsbn(isbn varchar(17)) "
@@ -1454,8 +1463,8 @@ public class DbManager extends BaseLockssDaemonManager
 	+ "parameter style java no sql",
 
     "create function publisherFromAuId(pluginId varchar(128), "
-	+ "auKey varchar(512)) returns varchar(256)  language java external name "
-	+ "'org.lockss.util.SqlStoredProcedures.getPublisherFromAuId' "
+	+ "auKey varchar(512)) returns varchar(256)  language java external "
+	+ "name 'org.lockss.util.SqlStoredProcedures.getPublisherFromAuId' "
 	+ "parameter style java no sql",
 
     "create function startVolumeFromAuId(pluginId varchar(128), "
@@ -1479,8 +1488,8 @@ public class DbManager extends BaseLockssDaemonManager
 	+ "parameter style java no sql",
 
     "create function titleFromAuId(pluginId varchar(128), "
-	+ "auKey varchar(512)) returns varchar(256) language java external name "
-	+ "'org.lockss.util.SqlStoredProcedures.getTitleFromAuId' "
+	+ "auKey varchar(512)) returns varchar(256) language java external "
+	+ "name 'org.lockss.util.SqlStoredProcedures.getTitleFromAuId' "
 	+ "parameter style java no sql",
 
     "create function titleFromIssn(issn varchar(9)) "
@@ -1494,8 +1503,8 @@ public class DbManager extends BaseLockssDaemonManager
 	+ "parameter style java no sql",
 
     "create function volumeTitleFromAuId(pluginId varchar(128), "
-	+ "auKey varchar(512)) returns varchar(256) language java external name "
-	+ "'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromAuId' "
+	+ "auKey varchar(512)) returns varchar(256) language java external "
+	+ "name 'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromAuId' "
 	+ "parameter style java no sql",
 
     "create function volumeTitleFromIsbn(issn varchar(18)) "
@@ -1741,8 +1750,17 @@ public class DbManager extends BaseLockssDaemonManager
   // The data source configuration.
   private Configuration dataSourceConfig = null;
 
+  // The data source class name.
+  private String dataSourceClassName = null;
+
+  // The data source database name.
+  private String dataSourceDbName = null;
+
   // The data source user.
-  private String datasourceUser = null;
+  private String dataSourceUser = null;
+
+  // The data source password.
+  private String dataSourcePassword = null;
 
   // The network server control.
   private NetworkServerControl networkServerControl = null;
@@ -1764,6 +1782,9 @@ public class DbManager extends BaseLockssDaemonManager
   // The interval to wait between consecutive retries when encountering
   // transient SQL exceptions.
   private long retryDelay = DEFAULT_RETRY_DELAY;
+
+  // An indication of whether the database was booted.
+  private boolean dbBooted = false;
 
   /**
    * Starts the DbManager service.
@@ -1789,6 +1810,7 @@ public class DbManager extends BaseLockssDaemonManager
       return;
     }
 
+    dbBooted = true;
     Connection conn = null;
 
     try {
@@ -1878,13 +1900,22 @@ public class DbManager extends BaseLockssDaemonManager
    */
   private boolean setUpInfrastructure() {
     final String DEBUG_HEADER = "setUpInfrastructure(): ";
-
     boolean setUp = false;
 
     // Get the datasource configuration.
     dataSourceConfig = getDataSourceConfig();
 
-    // Create the datasource.
+    // Check whether authentication is required and it is not available.
+    if (!"org.apache.derby.jdbc.EmbeddedDataSource".equals(dataSourceClassName)
+	&& (StringUtil.isNullString(dataSourceUser)
+	    || StringUtil.isNullString(dataSourcePassword))) {
+      // Yes: Report the problem.
+      log.error("Missing required authentication when not using the "
+	  + "embedded datasource - DbManager not ready");
+      return setUp;
+    }
+
+    // No: Create the datasource.
     try {
       dataSource = createDataSource();
     } catch (Exception e) {
@@ -1901,29 +1932,45 @@ public class DbManager extends BaseLockssDaemonManager
 	// Yes: Start it.
 	try {
 	  setUp = startNetworkServerControl();
-	  log.debug2(DEBUG_HEADER + "DbManager set up? = " + setUp);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "setUp = " + setUp);
 	} catch (Exception e) {
 	  log.error("Cannot enable remote access to Derby database - "
 	      + "DbManager not ready", e);
 	  dataSource = null;
 	  return setUp;
 	}
+
+	// Check whether the Derby NetworkServerControl was successfully
+	// started.
+	if (setUp) {
+	  // Yes: Set up the authentication configuration.
+	  try {
+	    setUp = setUpAuthentication(dataSourceUser, dataSourcePassword);
+	  } catch (SQLException sqle) {
+	    log.error("Cannot set up Derby database authentication - "
+		+ "DbManager not ready", sqle);
+	    setUp = false;
+	    dataSource = null;
+	    return setUp;
+	  }
+	}
       } else {
 	setUp = true;
-	log.debug2(DEBUG_HEADER + "DbManager set up? = " + setUp);
       }
     } else {
-      dataSource = null;
       log.error("Could not initialize the datasource - DbManager not ready.");
+      dataSource = null;
+      return setUp;
     }
 
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "DbManager set up? = " + setUp);
     return setUp;
   }
 
   /**
    * Provides a database connection using the datasource, retrying the operation
-   * in case of transient failures. To be used during
-   * initialization.
+   * in case of transient failures. To be used during initialization.
    * <p />
    * Autocommit is disabled to allow the client code to manage transactions.
    * 
@@ -1937,8 +1984,7 @@ public class DbManager extends BaseLockssDaemonManager
 
   /**
    * Provides a database connection using the datasource, retrying the operation
-   * in case of transient failures. To be used during
-   * initialization.
+   * in case of transient failures. To be used during initialization.
    * <p />
    * Autocommit is disabled to allow the client code to manage transactions.
    * 
@@ -2027,7 +2073,7 @@ public class DbManager extends BaseLockssDaemonManager
     try {
       // Get the database schema table data.
       resultSet =
-	  conn.getMetaData().getTables(null, datasourceUser, null, null);
+	  conn.getMetaData().getTables(null, dataSourceUser, null, null);
 
       // Loop through each table.
       while (resultSet.next()) {
@@ -2471,8 +2517,7 @@ public class DbManager extends BaseLockssDaemonManager
 
     try {
       // Get the database schema function data.
-      resultSet =
-	  conn.getMetaData().getFunctions(null, datasourceUser, null);
+      resultSet = conn.getMetaData().getFunctions(null, dataSourceUser, null);
 
       // Loop through each function.
       while (resultSet.next()) {
@@ -2755,9 +2800,8 @@ public class DbManager extends BaseLockssDaemonManager
 
     try {
       // Get the table column data.
-      resultSet =
-	  conn.getMetaData().getColumns(null, datasourceUser,
-	      tableName.toUpperCase(), null);
+      resultSet = conn.getMetaData().getColumns(null, dataSourceUser,
+	  tableName.toUpperCase(), null);
 
       log.debug("Table Name : " + tableName);
       log.debug("Column" + padding.substring(0, 32 - "Column".length())
@@ -2876,39 +2920,74 @@ public class DbManager extends BaseLockssDaemonManager
    */
   @Override
   public void stopService() {
-    final String DEBUG_HEADER = "stopService(): ";
-
     try {
       if (networkServerControl != null) {
 	networkServerControl.shutdown();
       }
 
-      // Create the datasource for shutdown.
-      dataSource = createDataSource();
+      // Shutdown the database.
+      shutdownDb(false, true);
     } catch (Exception e) {
-      log.error("Cannot create the datasource to shutdown the database", e);
+      log.error("Cannot shutdown the database cleanly", e);
       return;
-    }
-
-    dataSourceConfig.remove("createDatabase");
-    dataSourceConfig.put("shutdownDatabase", "shutdown");
-
-    // Check whether the datasource properties have been successfully
-    // initialized.
-    if (initializeDataSourceProperties()) {
-      try {
-	getConnection();
-      } catch (SQLException sqle) {
-	// This is expected.
-	log.debug2(DEBUG_HEADER + "Expected exception caught: " + sqle);
-      }
-      log.debug(DEBUG_HEADER + "Database shutdown.");
-    } else {
-      log.error("Failed database shutdown.");
     }
 
     ready = false;
     dataSource = null;
+  }
+
+  /**
+   * Shuts down the Derby database.
+   * 
+   * @param force
+   *          A boolean indicating whether to shutdown the database even when
+   *          the manager is not ready.
+   * @param deRegister
+   *          A boolean indicating whether to de-register the driver at
+   *          shutdown.
+   * @throws SQLException
+   *           if there are problems shutting down the database.
+   */
+  private void shutdownDb(boolean force, boolean deRegister)
+      throws SQLException {
+    final String DEBUG_HEADER = "shutdownDb(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "force = " + force);
+      log.debug2(DEBUG_HEADER + "deRegister = " + deRegister);
+    }
+
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "dbBooted = " + dbBooted);
+
+    // Check whether the database has not been booted.
+    if (!dbBooted && !force) {
+      // Yes: Nothing to do.
+      return;
+    }
+
+    // Create the JDBC URL used to shutdown the database.
+    String shutdownUrl = "jdbc:derby://" + dataSourceConfig.get("serverName")
+	+ ":" + dataSourceConfig.get("portNumber") + "/" + dataSourceDbName;
+
+    // Check whether the embedded driver is not being used.
+    if (!"org.apache.derby.jdbc.EmbeddedDataSource"
+	.equals(dataSourceClassName)) {
+      // Yes:add the credentials to the URL.
+      shutdownUrl +=
+	  ";user=" + dataSourceUser + ";password=" + dataSourcePassword;
+    }
+
+    // Complete the URL.
+    shutdownUrl += ";shutdown=true;deregister=" + deRegister;
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "shutdownUrl = " + shutdownUrl);
+
+    try {
+      // Shut down the database.
+      DriverManager.getConnection(shutdownUrl);
+    } catch (SQLException sqle) {
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Expected exception " + sqle);
+    }
   }
 
   /**
@@ -2931,6 +3010,9 @@ public class DbManager extends BaseLockssDaemonManager
     // Save the default class name, if not configured.
     dsConfig.put("className", currentConfig.get(
 	PARAM_DATASOURCE_CLASSNAME, DEFAULT_DATASOURCE_CLASSNAME));
+    dataSourceClassName = dsConfig.get("className");
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "dataSourceClassName = " + dataSourceClassName);
 
     // Save the creation directive, if not configured.
     dsConfig.put("createDatabase", currentConfig.get(
@@ -2947,9 +3029,11 @@ public class DbManager extends BaseLockssDaemonManager
       // Save the database name.
       dsConfig.put("databaseName", FileUtil
 	  .getCanonicalOrAbsolutePath(datasourceDir));
-      log.debug2(DEBUG_HEADER + "datasourceDatabaseName = '"
-	  + dsConfig.get("databaseName") + "'.");
     }
+
+    dataSourceDbName = dsConfig.get("databaseName");
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "datasourceDatabaseName = '"
+	  + dsConfig.get("databaseName") + "'.");
 
     // Save the port number, if not configured.
     dsConfig.put("portNumber", currentConfig.get(
@@ -2962,7 +3046,18 @@ public class DbManager extends BaseLockssDaemonManager
     // Save the user name, if not configured.
     dsConfig.put("user",
 	currentConfig.get(PARAM_DATASOURCE_USER, DEFAULT_DATASOURCE_USER));
-    datasourceUser = dsConfig.get("user");
+    dataSourceUser = dsConfig.get("user");
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "dataSourceUser = " + dataSourceUser);
+
+    // Save the configured password.
+    dataSourcePassword = currentConfig.get(PARAM_DATASOURCE_PASSWORD);
+    //if (log.isDebug3())
+      //log.debug3(DEBUG_HEADER + "dataSourcePassword = " + dataSourcePassword);
+
+    if (!StringUtil.isNullString(dataSourcePassword)) {
+      dsConfig.put("password", dataSourcePassword);
+    }
 
     return dsConfig;
   }
@@ -3010,21 +3105,24 @@ public class DbManager extends BaseLockssDaemonManager
     final String DEBUG_HEADER = "initializeDataSourceProperties(): ";
 
     String dataSourceClassName = dataSourceConfig.get("className");
-    log.debug2(DEBUG_HEADER + "dataSourceClassName = '" + dataSourceClassName
-	+ "'.");
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "dataSourceClassName = '"
+	+ dataSourceClassName + "'.");
+
     boolean errors = false;
     String value = null;
 
     // Loop through all the configured datasource properties.
     for (String key : dataSourceConfig.keySet()) {
-      log.debug2(DEBUG_HEADER + "key = '" + key + "'.");
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "key = '" + key + "'.");
 
       // Skip over the class name, as it is not really part of the datasource
       // definition.
       if (!"className".equals(key)) {
 	// Get the property value.
 	value = dataSourceConfig.get(key);
-	log.debug2(DEBUG_HEADER + "value = '" + value + "'.");
+	if (log.isDebug3() && !"password".equals(key)) {
+	  log.debug3(DEBUG_HEADER + "value = '" + value + "'.");
+	}
 
 	// Set the property value in the datasource.
 	try {
@@ -3054,14 +3152,15 @@ public class DbManager extends BaseLockssDaemonManager
 
     ClientDataSource cds = (ClientDataSource) dataSource;
     String serverName = cds.getServerName();
-    log.debug2(DEBUG_HEADER + "serverName = '" + serverName + "'.");
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "serverName = '" + serverName + "'.");
     int serverPort = cds.getPortNumber();
-    log.debug2(DEBUG_HEADER + "serverPort = " + serverPort + ".");
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "serverPort = " + serverPort + ".");
 
     // Start the network server control.
     InetAddress inetAddr = InetAddress.getByName(serverName);
-    networkServerControl =
-	new NetworkServerControl(inetAddr, serverPort);
+    networkServerControl = new NetworkServerControl(inetAddr, serverPort);
     networkServerControl.start(null);
 
     // Wait for the network server control to be ready.
@@ -3082,6 +3181,109 @@ public class DbManager extends BaseLockssDaemonManager
 
     log.error("Cannot enable remote access to Derby database");
     return false;
+  }
+
+  /**
+   * Turns on user authentication and authorization.
+   * 
+   * @param user
+   *          A String with the user name.
+   * @param password
+   *          A String with the password.
+   * @return a boolean with <code>true</code> if the authentication set up
+   *         succeeded, <code>false</code> otherwise.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private boolean setUpAuthentication(String user, String password)
+      throws SQLException {
+    final String DEBUG_HEADER = "setUpAuthentication(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "user = " + user);
+      //log.debug2(DEBUG_HEADER + "password = " + password);
+    }
+
+    boolean success = false;
+    Connection conn = null;
+    Statement stmt = null;
+    ResultSet rs = null;
+
+    try {
+      // Get a connection to the database.
+      conn = getConnectionBeforeReady();
+
+      // Create a statement for authentatication queries.
+      stmt = conn.createStatement();
+
+      // Require authentication.
+      stmt.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	  + "'derby.connection.requireAuthentication', 'true')");
+      rs = stmt.executeQuery("VALUES SYSCS_UTIL.SYSCS_GET_DATABASE_PROPERTY("
+	  + "'derby.connection.requireAuthentication')");
+      rs.next();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "derby.connection.requireAuthentication = " + rs.getString(1));
+      DbManager.safeCloseResultSet(rs);
+
+      // Use our custom Derby authentication provider.
+      stmt.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	  + "'derby.authentication.provider', "
+	  + "'org.lockss.db.DerbyUserAuthenticator')");
+
+      // Prevent unauthenticated access.
+      stmt.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	  + "'derby.database.defaultConnectionMode', 'noAccess')");
+      rs = stmt.executeQuery("VALUES SYSCS_UTIL.SYSCS_GET_DATABASE_PROPERTY("
+	  + "'derby.database.defaultConnectionMode')");
+      rs.next();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "derby.database.defaultConnectionMode = " + rs.getString(1));
+      DbManager.safeCloseResultSet(rs);
+
+      // Allow the user full access.
+      stmt.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	  + "'derby.database.fullAccessUsers', '" + user + "')");
+      rs = stmt.executeQuery("VALUES SYSCS_UTIL.SYSCS_GET_DATABASE_PROPERTY("
+	  + "'derby.database.fullAccessUsers')");
+      rs.next();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "derby.database.fullAccessUsers = " + rs.getString(1));
+      DbManager.safeCloseResultSet(rs);
+
+      // Confirm read-only users
+      rs = stmt.executeQuery("VALUES SYSCS_UTIL.SYSCS_GET_DATABASE_PROPERTY("
+	  + "'derby.database.readOnlyAccessUsers')");
+      rs.next();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "derby.database.readOnlyAccessUsers = " + rs.getString(1));
+      DbManager.safeCloseResultSet(rs);
+
+      // Allow override using system properties.
+      stmt.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	  + "'derby.database.propertiesOnly', 'false')");
+
+      success = true;
+    } finally {
+      DbManager.safeCloseStatement(stmt);
+      if (success) {
+	try {
+	  conn.commit();
+	  DbManager.safeCloseConnection(conn);
+	} catch (SQLException sqle) {
+	  log.error("Exception caught committing the connection", sqle);
+	  DbManager.safeRollbackAndClose(conn);
+	  success = false;
+	}
+      } else {
+	DbManager.safeRollbackAndClose(conn);
+      }
+    }
+
+    // Shut down the database to make static properties take effect.
+    shutdownDb(true, false);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "success = " + success);
+    return success;
   }
 
   /**
@@ -3299,6 +3501,8 @@ public class DbManager extends BaseLockssDaemonManager
    *          A PreparedStatement with the querying prepared statement to be
    *          executed.
    * @return a ResultSet with the results of the query.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   public ResultSet executeQuery(PreparedStatement statement)
       throws SQLException {
@@ -3318,6 +3522,8 @@ public class DbManager extends BaseLockssDaemonManager
    *          A long with the number of milliseconds to wait between
    *          consecutive retries.
    * @return a ResultSet with the results of the query.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   public ResultSet executeQuery(PreparedStatement statement, int maxRetryCount,
       long retryDelay) throws SQLException {
@@ -3330,12 +3536,14 @@ public class DbManager extends BaseLockssDaemonManager
 
   /**
    * Executes a querying prepared statement, retrying the execution in case of
-   * transient failures.
+   * transient failures. To be used during initialization.
    * 
    * @param statement
    *          A PreparedStatement with the querying prepared statement to be
    *          executed.
    * @return a ResultSet with the results of the query.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   private ResultSet executeQueryBeforeReady(PreparedStatement statement)
       throws SQLException {
@@ -3344,7 +3552,7 @@ public class DbManager extends BaseLockssDaemonManager
 
   /**
    * Executes a querying prepared statement, retrying the execution in case of
-   * transient failures.
+   * transient failures. To be used during initialization.
    * 
    * @param statement
    *          A PreparedStatement with the querying prepared statement to be
@@ -3355,6 +3563,8 @@ public class DbManager extends BaseLockssDaemonManager
    *          A long with the number of milliseconds to wait between
    *          consecutive retries.
    * @return a ResultSet with the results of the query.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   private ResultSet executeQueryBeforeReady(PreparedStatement statement,
       int maxRetryCount, long retryDelay) throws SQLException {
@@ -3408,6 +3618,8 @@ public class DbManager extends BaseLockssDaemonManager
    *          A PreparedStatement with the updating prepared statement to be
    *          executed.
    * @return an int with the number of database rows updated.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   public int executeUpdate(PreparedStatement statement) throws SQLException {
     return executeUpdate(statement, maxRetryCount, retryDelay);
@@ -3426,6 +3638,8 @@ public class DbManager extends BaseLockssDaemonManager
    *          A long with the number of milliseconds to wait between
    *          consecutive retries.
    * @return an int with the number of database rows updated.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   public int executeUpdate(PreparedStatement statement, int maxRetryCount,
       long retryDelay) throws SQLException {
@@ -3438,12 +3652,14 @@ public class DbManager extends BaseLockssDaemonManager
 
   /**
    * Executes an updating prepared statement, retrying the execution in case of
-   * transient failures.
+   * transient failures. To be used during initialization.
    * 
    * @param statement
    *          A PreparedStatement with the updating prepared statement to be
    *          executed.
    * @return an int with the number of database rows updated.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   private int executeUpdateBeforeReady(PreparedStatement statement)
       throws SQLException {
@@ -3452,7 +3668,7 @@ public class DbManager extends BaseLockssDaemonManager
 
   /**
    * Executes an updating prepared statement, retrying the execution in case of
-   * transient failures.
+   * transient failures. To be used during initialization.
    * 
    * @param statement
    *          A PreparedStatement with the updating prepared statement to be
@@ -3463,6 +3679,8 @@ public class DbManager extends BaseLockssDaemonManager
    *          A long with the number of milliseconds to wait between
    *          consecutive retries.
    * @return an int with the number of database rows updated.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   private int executeUpdateBeforeReady(PreparedStatement statement,
       int maxRetryCount, long retryDelay) throws SQLException {
@@ -3516,6 +3734,8 @@ public class DbManager extends BaseLockssDaemonManager
    * @param sql
    *          A String with the prepared statement SQL query.
    * @return a PreparedStatement with the prepared statement.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   public PreparedStatement prepareStatement(Connection conn, String sql)
       throws SQLException {
@@ -3536,6 +3756,8 @@ public class DbManager extends BaseLockssDaemonManager
    *          A long with the number of milliseconds to wait between consecutive
    *          retries.
    * @return a PreparedStatement with the prepared statement.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   public PreparedStatement prepareStatement(Connection conn, String sql,
       int maxRetryCount, long retryDelay) throws SQLException {
@@ -3548,13 +3770,15 @@ public class DbManager extends BaseLockssDaemonManager
 
   /**
    * Prepares a statement, retrying the preparation in case of transient
-   * failures.
+   * failures. To be used during initialization.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
    * @param sql
    *          A String with the prepared statement SQL query.
    * @return a PreparedStatement with the prepared statement.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   private PreparedStatement prepareStatementBeforeReady(Connection conn,
       String sql) throws SQLException {
@@ -3563,7 +3787,7 @@ public class DbManager extends BaseLockssDaemonManager
 
   /**
    * Prepares a statement, retrying the preparation in case of transient
-   * failures.
+   * failures. To be used during initialization.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
@@ -3575,6 +3799,8 @@ public class DbManager extends BaseLockssDaemonManager
    *          A long with the number of milliseconds to wait between consecutive
    *          retries.
    * @return a PreparedStatement with the prepared statement.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   private PreparedStatement prepareStatementBeforeReady(Connection conn,
       String sql, int maxRetryCount, long retryDelay) throws SQLException {
@@ -3631,6 +3857,8 @@ public class DbManager extends BaseLockssDaemonManager
    *          An int indicating that generated keys should not be made available
    *          for retrieval.
    * @return a PreparedStatement with the prepared statement.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   public PreparedStatement prepareStatement(Connection conn, String sql,
       int returnGeneratedKeys) throws SQLException {
@@ -3655,6 +3883,8 @@ public class DbManager extends BaseLockssDaemonManager
    *          A long with the number of milliseconds to wait between consecutive
    *          retries.
    * @return a PreparedStatement with the prepared statement.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   public PreparedStatement prepareStatement(Connection conn, String sql,
       int returnGeneratedKeys, int maxRetryCount, long retryDelay)
@@ -3669,7 +3899,7 @@ public class DbManager extends BaseLockssDaemonManager
 
   /**
    * Prepares a statement, retrying the preparation in case of transient
-   * failures.
+   * failures. To be used during initialization.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
@@ -3679,6 +3909,8 @@ public class DbManager extends BaseLockssDaemonManager
    *          An int indicating that generated keys should not be made available
    *          for retrieval.
    * @return a PreparedStatement with the prepared statement.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   private PreparedStatement prepareStatementBeforeReady(Connection conn,
       String sql, int returnGeneratedKeys) throws SQLException {
@@ -3688,7 +3920,7 @@ public class DbManager extends BaseLockssDaemonManager
 
   /**
    * Prepares a statement, retrying the preparation in case of transient
-   * failures.
+   * failures. To be used during initialization.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
@@ -3703,6 +3935,8 @@ public class DbManager extends BaseLockssDaemonManager
    *          A long with the number of milliseconds to wait between consecutive
    *          retries.
    * @return a PreparedStatement with the prepared statement.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   private PreparedStatement prepareStatementBeforeReady(Connection conn,
       String sql, int returnGeneratedKeys, int maxRetryCount, long retryDelay)
@@ -4075,7 +4309,8 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   /**
-   * Nulls out the date column for publications, populated in earlier versions by mistake.
+   * Nulls out the date column for publications, populated in earlier versions
+   * by mistake.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
@@ -4471,5 +4706,41 @@ public class DbManager extends BaseLockssDaemonManager
 	DbManager.safeCloseStatement(statement);
       }
     }
+  }
+
+  /**
+   * Provides the data source class name. To be used during initialization.
+   * 
+   * @return a String with the data source class name.
+   */
+  String getDataSourceClassNameBeforeReady() {
+    return dataSourceClassName;
+  }
+
+  /**
+   * Provides the data source database name. To be used during initialization.
+   * 
+   * @return a String with the data source database name.
+   */
+  String getDataSourceDbNameBeforeReady() {
+    return dataSourceDbName;
+  }
+
+  /**
+   * Provides the data source user name. To be used during initialization.
+   * 
+   * @return a String with the data source user name.
+   */
+  String getDataSourceUserBeforeReady() {
+    return dataSourceUser;
+  }
+
+  /**
+   * Provides the data source password. To be used during initialization.
+   * 
+   * @return a String with the data source password.
+   */
+  String getDataSourcePasswordBeforeReady() {
+    return dataSourcePassword;
   }
 }
