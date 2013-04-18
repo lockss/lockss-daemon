@@ -6,8 +6,6 @@
     info[tester] = 5
   >
 
-  comment[0] = holding off on actually expunging "good" H10 AUs
-
   pluginPrefix = org.lockss.plugin.highwire.
   implicit < status ; status2 ; year ; name ; param[volume_name] ; comment[proxy] >
 
@@ -103,7 +101,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; Advances in Physiology Education Volume 34 ; 34 ; >
       au < released ; crawling ; 2011 ; Advances in Physiology Education Volume 35 ; 35 ; >
       au < released ; crawling ; 2012 ; Advances in Physiology Education Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2013 ; Advances in Physiology Education Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2013 ; Advances in Physiology Education Volume 37 ; 37 ; >
 
     }
 
@@ -759,7 +757,7 @@
       au < released ; crawling ; 2011 ; American Journal of Physiology - Cell Physiology Volume 301 ; 301 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Cell Physiology Volume 302 ; 302 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Cell Physiology Volume 303 ; 303 ; >
-      au < manifest ; exists ; 2013 ; American Journal of Physiology - Cell Physiology Volume 304 ; 304 ; >
+      au < crawling ; exists ; 2013 ; American Journal of Physiology - Cell Physiology Volume 304 ; 304 ; >
       au < expected ; exists ; 2013 ; American Journal of Physiology - Cell Physiology Volume 305 ; 305 ; >
 
     }
@@ -928,7 +926,7 @@
       au < released ; crawling ; 2011 ; American Journal of Physiology - Endocrinology and Metabolism Volume 301 ; 301 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Endocrinology and Metabolism Volume 302 ; 302 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Endocrinology and Metabolism Volume 303 ; 303 ; >
-      au < manifest ; exists ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 304 ; 304 ; >
+      au < crawling ; exists ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 304 ; 304 ; >
       au < expected ; exists ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 305 ; 305 ; >
 
     }
@@ -1097,7 +1095,7 @@
       au < released ; crawling ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 301 ; 301 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 302 ; 302 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 303 ; 303 ; >
-      au < manifest ; exists ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 304 ; 304 ; >
+      au < crawling ; exists ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 304 ; 304 ; >
       au < expected ; exists ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 305 ; 305 ; >
 
     }
@@ -1266,7 +1264,7 @@
       au < released ; crawling ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 301 ; 301 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 302 ; 302 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 303 ; 303 ; >
-      au < manifest ; exists ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 304 ; 304 ; >
+      au < crawling ; exists ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 304 ; 304 ; >
       au < expected ; exists ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 305 ; 305 ; >
 
     }
@@ -1385,7 +1383,7 @@
       au < released ; crawling ; 2011 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 301 ; 301 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 302 ; 302 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 303 ; 303 ; >
-      au < manifest ; exists ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 304 ; 304 ; >
+      au < crawling ; exists ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 304 ; 304 ; >
       au < expected ; exists ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 305 ; 305 ; >
 
     }
@@ -1554,7 +1552,7 @@
       au < released ; crawling ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 301 ; 301 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 302 ; 302 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 303 ; 303 ; >
-      au < manifest ; exists ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 304 ; 304 ; >
+      au < crawling ; exists ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 304 ; 304 ; >
       au < expected ; exists ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 305 ; 305 ; >
 
     }
@@ -1723,7 +1721,7 @@
       au < released ; crawling ; 2011 ; American Journal of Physiology - Renal Physiology Volume 301 ; 301 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Renal Physiology Volume 302 ; 302 ; >
       au < released ; crawling ; 2012 ; American Journal of Physiology - Renal Physiology Volume 303 ; 303 ; >
-      au < manifest ; exists ; 2013 ; American Journal of Physiology - Renal Physiology Volume 304 ; 304 ; >
+      au < crawling ; exists ; 2013 ; American Journal of Physiology - Renal Physiology Volume 304 ; 304 ; >
       au < expected ; exists ; 2013 ; American Journal of Physiology - Renal Physiology Volume 305 ; 305 ; >
 
     }
@@ -1974,7 +1972,7 @@
       au < released ; crawling ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 ; >
       au < released ; crawling ; 2012 ; Journal of Applied Physiology Volume 112 ; 112 ; >
       au < released ; crawling ; 2012 ; Journal of Applied Physiology Volume 113 ; 113 ; >
-      au < manifest ; exists ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 ; >
+      au < crawling ; exists ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 ; >
       au < expected ; exists ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 ; >
 
     }
@@ -2215,7 +2213,7 @@
       au < released ; crawling ; 2011 ; Journal of Neurophysiology Volume 106 ; 106 ; >
       au < released ; crawling ; 2012 ; Journal of Neurophysiology Volume 107 ; 107 ; >
       au < released ; crawling ; 2012 ; Journal of Neurophysiology Volume 108 ; 108 ; >
-      au < manifest ; exists ; 2013 ; Journal of Neurophysiology Volume 109 ; 109 ; >
+      au < crawling ; exists ; 2013 ; Journal of Neurophysiology Volume 109 ; 109 ; >
       au < expected ; exists ; 2013 ; Journal of Neurophysiology Volume 110 ; 110 ; >
 
     }
@@ -2332,7 +2330,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; Physiological Genomics Volume 42A ; 42A ; >
       au < released ; crawling ; 2011 ; Physiological Genomics Volume 43 ; 43 ; >
       au < released ; crawling ; 2012 ; Physiological Genomics Volume 44 ; 44 ; >
-      au < manifest ; exists ; 2013 ; Physiological Genomics Volume 45 ; 45 ; >
+      au < crawling ; exists ; 2013 ; Physiological Genomics Volume 45 ; 45 ; >
 
     }
 
@@ -2542,7 +2540,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; Physiological Reviews Volume 90 ; 90 ; >
       au < released ; crawling ; 2011 ; Physiological Reviews Volume 91 ; 91 ; >
       au < released ; crawling ; 2012 ; Physiological Reviews Volume 92 ; 92 ; >
-      au < manifest ; exists ; 2013 ; Physiological Reviews Volume 93 ; 93 ; >
+      au < crawling ; exists ; 2013 ; Physiological Reviews Volume 93 ; 93 ; >
 
     }
 
@@ -2622,7 +2620,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; Physiology Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; Physiology Volume 26 ; 26 ; >
       au < released ; crawling ; 2012 ; Physiology Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2013 ; Physiology Volume 28 ; 28 ; >
+      au < crawling ; exists ; 2013 ; Physiology Volume 28 ; 28 ; >
 
     }
 
