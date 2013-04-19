@@ -130,7 +130,7 @@
       au < manifest ; exists ; 2008 ; BMC Biophysics Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; BMC Biophysics Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; BMC Biophysics Volume 3 ; 3 >
-      au < crawling ; exists ; 2011 ; BMC Biophysics Volume 4 ; 4 >
+      au < testing ; exists ; 2011 ; BMC Biophysics Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; BMC Biophysics Volume 5 ; 5 >
       au < manifest ; exists ; 2013 ; BMC Biophysics Volume 6 ; 6 >
 
@@ -904,7 +904,7 @@
       au < manifest ; exists ; 2008 ; BMC Medical Genomics Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; BMC Medical Genomics Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; BMC Medical Genomics Volume 3 ; 3 >
-      au < crawling ; exists ; 2011 ; BMC Medical Genomics Volume 4 ; 4 >
+      au < testing ; exists ; 2011 ; BMC Medical Genomics Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; BMC Medical Genomics Volume 5 ; 5 >
       au < manifest ; exists ; 2013 ; BMC Medical Genomics Volume 6 ; 6 >
 
@@ -1004,7 +1004,7 @@
       au < manifest ; exists ; 2008 ; BMC Medical Physics Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Medical Physics Volume 9 ; 9 >
       au < crawling ; exists ; 2010 ; BMC Medical Physics Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Medical Physics Volume 11 ; 11 >
+      au < testing ; exists ; 2011 ; BMC Medical Physics Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Medical Physics Volume 12 ; 12 >
       au < manifest ; exists ; 2013 ; BMC Medical Physics Volume 13 ; 13 >
 
@@ -1571,7 +1571,7 @@
       au < manifest ; exists ; 2008 ; BMC Research Notes Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; BMC Research Notes Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; BMC Research Notes Volume 3 ; 3 >
-      au < crawling ; exists ; 2011 ; BMC Research Notes Volume 4 ; 4 >
+      au < testing ; exists ; 2011 ; BMC Research Notes Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; BMC Research Notes Volume 5 ; 5 >
       au < manifest ; exists ; 2013 ; BMC Research Notes Volume 6 ; 6 >
 
@@ -2766,7 +2766,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.ctajournal.com/
       param[journal_issn] = 2045-7022
 
-      au < crawling ; exists ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
+      au < testing ; exists ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
       au < manifest ; exists ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
 
