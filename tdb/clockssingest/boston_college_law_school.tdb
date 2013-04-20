@@ -58,7 +58,7 @@
     au < released ; crawling ; 2010 ; Boston College Environmental Affairs Law Review Volume 37 ; 37 >
     au < released ; crawling ; 2011 ; Boston College Environmental Affairs Law Review Volume 38 ; 38 >
     au < released ; crawling ; 2012 ; Boston College Environmental Affairs Law Review Volume 39 ; 39 >
-    au < manifest ; exists ; 2013 ; Boston College Environmental Affairs Law Review Volume 40 ; 40 >
+    au < crawling ; exists ; 2013 ; Boston College Environmental Affairs Law Review Volume 40 ; 40 >
   }
 
   {
@@ -106,7 +106,7 @@
     au < released ; crawling ; 2010 ; Boston College International and Comparative Law Review Volume 33 ; 33 >
     au < released ; crawling ; 2011 ; Boston College International and Comparative Law Review Volume 34 ; 34 >
     au < released ; crawling ; 2012 ; Boston College International and Comparative Law Review Volume 35 ; 35 >
-    au < manifest ; exists ; 2013 ; Boston College International and Comparative Law Review Volume 36 ; 36 >
+    au < crawling ; exists ; 2013 ; Boston College International and Comparative Law Review Volume 36 ; 36 >
   }
 
   {
@@ -171,7 +171,7 @@
     au < released ; crawling ; 2010 ; Boston College Law Review Volume 51 ; 51 >
     au < released ; crawling ; 2011 ; Boston College Law Review Volume 52 ; 52 >
     au < released ; crawling ; 2012 ; Boston College Law Review Volume 53 ; 53 >
-    au < manifest ; exists ; 2013 ; Boston College Law Review Volume 54 ; 54 >
+    au < crawling ; exists ; 2013 ; Boston College Law Review Volume 54 ; 54 >
   }
   
   {
@@ -185,7 +185,7 @@
     param[journal_abbr] = jlsj
     
     au < crawling ; exists ; 2012 ; Boston College Journal of Law & Social Justice Volume 32 ; 32 >
-    au < manifest ; exists ; 2013 ; Boston College Journal of Law & Social Justice Volume 33 ; 33 >
+    au < crawling ; exists ; 2013 ; Boston College Journal of Law & Social Justice Volume 33 ; 33 >
 
   }
   
