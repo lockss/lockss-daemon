@@ -20,7 +20,7 @@
     param[base_url] = http://bio.biologists.org/
 
     au < released ; crawling ; 2012 ; Biology Open Volume 1 ; 1 >
-    au < manifest ; exists ; 2013 ; Biology Open Volume 2 ; 2 >
+    au < crawling ; exists ; 2013 ; Biology Open Volume 2 ; 2 >
     
   }
 
@@ -174,7 +174,7 @@
     au < manifest ; exists  ; 2010 ; Development Volume 137 ; 137 >
     au < released ; crawling ; 2011 ; Development Volume 138 ; 138 >
     au < released ; crawling ; 2012 ; Development Volume 139 ; 139 >
-    au < manifest ; exists ; 2013 ; Development Volume 140 ; 140 >
+    au < crawling ; exists ; 2013 ; Development Volume 140 ; 140 >
 
   }
 
@@ -194,7 +194,7 @@
     au < manifest ; exists ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 >
     au < released ; crawling ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 >
     au < released ; crawling ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 >
-    au < manifest ; exists ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 >
+    au < crawling ; exists ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 >
 
   }
 
@@ -336,7 +336,7 @@
     au < manifest ; exists ; 2010 ; Journal of Cell Science Volume 123 ; 123 >
     au < released ; crawling ; 2011 ; Journal of Cell Science Volume 124 ; 124 >
     au < released ; crawling ; 2012 ; Journal of Cell Science Volume 125 ; 125 >
-    au < manifest ; exists ; 2013 ; Journal of Cell Science Volume 126 ; 126 >
+    au < crawling ; exists ; 2013 ; Journal of Cell Science Volume 126 ; 126 >
 
   }
 
@@ -566,7 +566,7 @@
     au < manifest ; exists ; 2010 ; Journal of Experimental Biology Volume 213 ; 213 >
     au < released ; crawling ; 2011 ; Journal of Experimental Biology Volume 214 ; 214 >
     au < released ; crawling ; 2012 ; Journal of Experimental Biology Volume 215 ; 215 >
-    au < manifest ; exists ; 2013 ; Journal of Experimental Biology Volume 216 ; 216 >
+    au < crawling ; exists ; 2013 ; Journal of Experimental Biology Volume 216 ; 216 >
 
   }
 
