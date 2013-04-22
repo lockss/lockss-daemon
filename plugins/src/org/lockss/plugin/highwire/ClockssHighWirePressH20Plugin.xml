@@ -13,51 +13,16 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>80</string>
+    <string>81</string>
   </entry>
   <entry>
-    <string>plugin_feature_version_map</string>
-    <map>
-      <entry>
-        <string>Substance</string>
-        <string>3</string>
-      </entry>
-      <entry>
-        <string>Poll</string>
-        <string>12</string>
-      </entry>
-      <entry>
-        <string>Metadata</string>
-        <string>8</string>
-      </entry>
-    </map>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20Plugin</string>
   </entry>
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.53.0</string>
-  </entry>
-  <entry>
-    <string>plugin_config_props</string>
-    <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>volume_name</key>
-        <displayName>Volume Name</displayName>
-        <type>1</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-    </list>
-  </entry>
+    <string>plugin_parent_version</string>
+    <string>81</string>
+  </entry>  
   <entry>
     <string>au_name</string>
     <string>"HighWire Press Plugin (H20 for CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
@@ -67,137 +32,12 @@
     <string>"%sclockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
   </entry>
   <entry>
-    <string>au_feature_urls</string>
-    <map>
-      <entry>
-        <string>au_title</string>
-        <string>"%s", base_url</string>
-      </entry>
-      <entry>
-        <string>au_volume</string>
-        <string>"%sclockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
-      </entry>
-      <entry>
-        <string>au_issue</string>
-        <string>"%scontent/%s/%s.toc", base_url, volume_name, issue</string>
-      </entry>
-      <entry>
-        <string>au_article</string>
-        <map>
-          <entry>
-            <string>pdf+html;*</string>
-            <string>"%scontent/%s/%s/%s.full.pdf+html", base_url, volume_name, issue, article</string>
-          </entry>
-          <entry>
-            <string>pdf</string>
-            <string>"%scontent/%s/%s/%s.full.pdf", base_url, volume_name, issue, article</string>
-          </entry>
-          <entry>
-            <string>html</string>
-            <string>"%scontent/%s/%s/%s.full", base_url, volume_name, issue, article</string>
-          </entry>
-        </map>
-      </entry>
-    </map>
-  </entry>  
-  <entry>
-    <string>au_permission_checker_factory</string>
-    <string>org.lockss.plugin.highwire.HighWirePermissionCheckerFactory</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-     <!-- 
-    specific inclusions
-
-    specific exclusions 
-      RU4166: exclude oxford supplement author-index pages, e.g.: http://humrep.oxfordjournals.org/content/26/suppl_1.author-index
-      RU4399: exclude with-ds & rss args until normalizer written, eg. 
-            http://jcb.rupress.org/cgi/content/short/195/5/704?rss=1&amp;ssource=mfr and 
-            http://jcb.rupress.org content/195/1/113.full.pdf+html?with-ds=yes
-     -->
-    <list>
-      <string>2,"^%s.*\.cover\.gif$", base_url</string>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%sclockss-manifest/vol_%s_manifest\.dtl$", base_url, volume_name</string>
-      <string>2,"^%s.*\?tab=(metrics|related|responses)", base_url</string>
-      <string>2,"^%s(content|lookup/volpage)/%s/.*(cited-by|patientinform-links|related-urls)=yes", base_url, volume_name</string>
-      <string>2,"^%scontent/%s/.*/href/?$", base_url, volume_name</string>
-      <string>2,"^%slookup/volpage/%s(/[^/]+)?$", base_url, volume_name</string>
-      <string>2,"^%scontent/%s/suppl_[0-9]*\.author-index$", base_url, volume_name</string>
-      <string>2,"^%s(cgi/content/short|content)/%s/[^/]+/[^/]+[?&amp;](with-ds=|rss=)", base_url, volume_name</string>
-      <string>1,"^%s(content|lookup/volpage)/%s(/|\.)", base_url, volume_name</string>
-      <string>1,"^%s(cgi/content/[^/]+/%s|content/vol%s)/", base_url, volume_name, volume_name</string>
-      <string>1,"^%s[^?]*DC(Supplemental|[0-9])", base_url</string>
-      <string>2,"^%shighwire/filestream/powerpoint/", base_url</string>
-      <string>1,"^%shighwire/filestream/", base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
     <string>au_crawlwindow</string>
     <string>org.lockss.plugin.highwire.HighWirePressContentTestingCrawlWindow</string>
   </entry>
   <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.highwire.HighWirePressH20HtmlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_crawl_url_comparator_factory</string>
-    <string>org.lockss.plugin.highwire.HighWirePressH20CrawlUrlComparatorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_cache_result_list</string>
-    <list>
-      <string>500=org.lockss.plugin.highwire.HighWirePressH20HttpResponseHandler</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_login_page_checker</string>
-    <string>org.lockss.plugin.highwire.HighWirePressH20LoginPageChecker</string>
-  </entry>
-  <entry>
-    <string>plugin_fetch_rate_limiter_source</string>
-    <string>key:HighWire</string>
-  </entry>
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.highwire.HighWirePressH20ArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.highwire.HighWirePressH20ArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;DublinCore</string>
-        <string>org.lockss.plugin.highwire.HighWirePressH20HtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>"^%scontent/%s/.*\.full(\.pdf(\+html)?)?$", base_url, volume_name</string>
-    </list>
-  </entry>
-  <entry>
     <string>au_def_pause_time</string>
     <long>600</long>
-  </entry>
-  <entry>
-    <string>au_mime_rate_limiter_map</string>
-    <map>
-      <entry>
-        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-        <string>1/3500</string>
-      </entry>
-    </map>
   </entry>
   <entry>
     <string>clockss_override</string>

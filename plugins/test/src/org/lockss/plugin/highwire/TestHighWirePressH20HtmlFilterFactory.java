@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.12 2012-12-12 21:33:48 alexandraohlson Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.13 2013-04-22 20:17:28 alexandraohlson Exp $
  */
 
 /*
@@ -290,6 +290,22 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       " <div id=\"content-block\">" +
       " <div id=\"toc-header\">" +
       " <h1>Table of Contents</h1><cite>";
+  
+  private static final String viewingDate =
+      "<ul class=\"button-list header-buttons\">" +
+      " <li id=\"na_home\" class=\"first\"><a href=\"/\" title=\"Home\"><span>Home</span></a></li>" +
+      " <li id=\"na_currentvol\"><a href=\"/content/current/\" title=\"Current Volume\"><span>Current Volume</span></a></li>" +
+      "</ul>" +
+      " <div class=\"site-date\">April 22, 2013</div>" +
+      " </div>";
+  
+  private static final String viewingDateFiltered =
+      "<ul class=\"button-list header-buttons\">" +
+      " <li id=\"na_home\" class=\"first\"><a href=\"/\" title=\"Home\"><span>Home</span></a></li>" +
+      " <li id=\"na_currentvol\"><a href=\"/content/current/\" title=\"Current Volume\"><span>Current Volume</span></a></li>" +
+      "</ul>" +
+      " " +
+      " </div>";
 
   public void testFiltering() throws Exception {
     assertFilterToSame(inst1, inst2);
@@ -304,6 +320,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(withNavCurrentIssue, withoutNavCurrentIssue);
     assertFilterToSame(withCol4SquareAds, withoutCol4SquareAds);
     assertFilterToSame(withCol4TowerAds, withoutCol4TowerAds);
+    assertFilterToSame(viewingDate, viewingDateFiltered);
     
     assertFilterToString(textIndexFactor, textIndexFactorFiltered);
     assertFilterToString(hiddenInputHtml, hiddenInputFiltered);

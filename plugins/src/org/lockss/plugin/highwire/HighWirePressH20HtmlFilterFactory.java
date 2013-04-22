@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.43 2012-12-12 21:33:48 alexandraohlson Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.44 2013-04-22 20:17:28 alexandraohlson Exp $
  */
 
 /*
@@ -172,6 +172,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("span", "id", "related-urls"),  
         // For American Journal of Epidemiology
         HtmlNodeFilters.tagWithAttribute("li", "id", "nav_current_issue"),
+        // For lofe.dukejournals.org - shows the current viewing date
+        HtmlNodeFilters.tagWithAttribute("div", "class", "site-date"),
         // There is an "Impact factor" but it is only ctext in an H3 tag
         // and the parent <div> is generic. Use a combination of the grandparent <div> plus the ctext
         // It's not ideal, but there is no better solution. Seen in occmed.oxfordjournals.org

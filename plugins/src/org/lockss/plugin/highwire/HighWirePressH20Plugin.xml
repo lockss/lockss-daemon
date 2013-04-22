@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>80</string>
+    <string>81</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>12</string>
+        <string>13</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -107,6 +107,7 @@
   <entry>
     <string>au_crawlrules</string>
     <!-- 
+    Do not explicitly include the start_url - unnecessary and it is GLN v CLOCKSS specific
     specific inclusions
 
     specific exclusions 
@@ -119,7 +120,6 @@
       <string>2,"^%s.*\.cover\.gif$", base_url</string>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%slockss-manifest/vol_%s_manifest\.dtl$", base_url, volume_name</string>
       <string>2,"^%s.*\?tab=(metrics|related|responses)", base_url</string>
       <string>2,"^%s(content|lookup/volpage)/%s/.*(cited-by|patientinform-links|related-urls)=yes", base_url, volume_name</string>
       <string>2,"^%scontent/%s/.*/href/?$", base_url, volume_name</string>
