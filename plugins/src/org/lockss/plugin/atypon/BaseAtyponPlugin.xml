@@ -82,7 +82,7 @@
       <string>1,"^%stoc/%s/%s/", base_url, journal_id, volume_name</string>
       <string>2,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|video[^/]+)/[0-9.]+/[-.9]+$", base_url</string>
       <string>1,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|video[^/]+)/[0-9.]+/[^/]+", base_url</string>
-      <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]*&amp;)*doi=", base_url</string>
+      <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup|downloadCitation)\?([^=]+=[^&amp;]*&amp;)*doi=", base_url</string>
     </list>
   </entry>
   <entry>
