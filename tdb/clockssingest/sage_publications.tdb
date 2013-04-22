@@ -3134,7 +3134,14 @@
         param[base_url] = http://tbt.sagepub.com/
         implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-        au < expected ; exists ; 2013 ; The Bible Translator Volume 64 ; 64 >
+        au < exists ; exists ; 2006 ; The Bible Translator Volume 57 ; 57 >
+        au < exists ; exists ; 2007 ; The Bible Translator Volume 58 ; 58 >
+        au < exists ; exists ; 2008 ; The Bible Translator Volume 59 ; 59 >
+        au < exists ; exists ; 2009 ; The Bible Translator Volume 60 ; 60 >
+        au < exists ; exists ; 2010 ; The Bible Translator Volume 61 ; 61 >
+        au < exists ; exists ; 2011 ; The Bible Translator Volume 62 ; 62 >
+        au < exists ; exists ; 2012 ; The Bible Translator Volume 63 ; 63 >
+        au < manifest ; exists ; 2013 ; The Bible Translator Volume 64 ; 64 >
 
       }
 
@@ -4205,7 +4212,7 @@
       au < zapped ; down ; 2010 ; Career Development for Exceptional Individuals Volume 33 ; 33 ; >
       au < released ; crawling ; 2011 ; Career Development for Exceptional Individuals Volume 34 ; 34 ; >
       au < released ; crawling ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 ; >
-      au < expected ; exists ; 2013 ; Career Development and Transition for Exceptional Individuals Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2013 ; Career Development and Transition for Exceptional Individuals Volume 36 ; 36 ; >
 
     }
 
@@ -22023,7 +22030,7 @@
       au < released ; crawling ; 2010 ; Journal of Research in International Education Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; Journal of Research in International Education Volume 10 ; 10 ; >
       au < released ; manifest ; 2012 ; Journal of Research in International Education Volume 11 ; 11 ; >
-      au < expected ; exists ; 2013 ; Journal of Research in International Education Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2013 ; Journal of Research in International Education Volume 12 ; 12 ; >
 
     }
 
@@ -22573,7 +22580,7 @@
       au < zapped ; down ; 2010 ; Journal of South Asian Development Volume 5 ; 5 ; >
       au < released ; crawling ; 2011 ; Journal of South Asian Development Volume 6 ; 6 ; >
       au < released ; manifest ; 2012 ; Journal of South Asian Development Volume 7 ; 7 ; >
-      au < expected ; exists ; 2013 ; Journal of South Asian Development Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2013 ; Journal of South Asian Development Volume 8 ; 8 ; >
 
     }
 
@@ -35019,7 +35026,7 @@
       au < released ; crawling ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 ; >
       au < released ; crawling ; 2011 ; Transcultural Psychiatry Volume 48 ; 48 ; >
       au < released ; crawling ; 2012 ; Transcultural Psychiatry Volume 49 ; 49 ; >
-      au < expected ; exists ; 2013 ; Transcultural Psychiatry Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2013 ; Transcultural Psychiatry Volume 50 ; 50 ; >
 
     }
 
@@ -37520,14 +37527,71 @@
       title <
         name = Australian Journal of Education ;
         issn = 0004-9441 ;
+        eissn = 2050-5884 ;
         issnl = 0004-9441
       >
 
-    comment[upcoming] = online 2013
-    pluginSuffix = ClockssHighWirePressH20Plugin
-    param[base_url] = http://aed.sagepub.com/
+      comment[upcoming] = online 2013
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://aed.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Australian Journal of Education Volume 57 ; 57 ; >
+      au < exists ; exists ; 1957 ; Australian Journal of Education Volume 1 ; 1 ; >
+      au < exists ; exists ; 1958 ; Australian Journal of Education Volume 2 ; 2 ; >
+      au < exists ; exists ; 1959 ; Australian Journal of Education Volume 3 ; 3 ; >
+      au < exists ; exists ; 1960 ; Australian Journal of Education Volume 4 ; 4 ; >
+      au < exists ; exists ; 1961 ; Australian Journal of Education Volume 5 ; 5 ; >
+      au < exists ; exists ; 1962 ; Australian Journal of Education Volume 6 ; 6 ; >
+      au < exists ; exists ; 1963 ; Australian Journal of Education Volume 7 ; 7 ; >
+      au < exists ; exists ; 1964 ; Australian Journal of Education Volume 8 ; 8 ; >
+      au < exists ; exists ; 1965 ; Australian Journal of Education Volume 9 ; 9 ; >
+      au < exists ; exists ; 1966 ; Australian Journal of Education Volume 10 ; 10 ; >
+      au < exists ; exists ; 1967 ; Australian Journal of Education Volume 11 ; 11 ; >
+      au < exists ; exists ; 1968 ; Australian Journal of Education Volume 12 ; 12 ; >
+      au < exists ; exists ; 1969 ; Australian Journal of Education Volume 13 ; 13 ; >
+      au < exists ; exists ; 1970 ; Australian Journal of Education Volume 14 ; 14 ; >
+      au < exists ; exists ; 1971 ; Australian Journal of Education Volume 15 ; 15 ; >
+      au < exists ; exists ; 1972 ; Australian Journal of Education Volume 16 ; 16 ; >
+      au < exists ; exists ; 1973 ; Australian Journal of Education Volume 17 ; 17 ; >
+      au < exists ; exists ; 1974 ; Australian Journal of Education Volume 18 ; 18 ; >
+      au < exists ; exists ; 1975 ; Australian Journal of Education Volume 19 ; 19 ; >
+      au < exists ; exists ; 1976 ; Australian Journal of Education Volume 20 ; 20 ; >
+      au < exists ; exists ; 1977 ; Australian Journal of Education Volume 21 ; 21 ; >
+      au < exists ; exists ; 1978 ; Australian Journal of Education Volume 22 ; 22 ; >
+      au < exists ; exists ; 1979 ; Australian Journal of Education Volume 23 ; 23 ; >
+      au < exists ; exists ; 1980 ; Australian Journal of Education Volume 24 ; 24 ; >
+      au < exists ; exists ; 1981 ; Australian Journal of Education Volume 25 ; 25 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Australian Journal of Education Volume 0 ; 0 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Australian Journal of Education Volume 0 ; 0 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Australian Journal of Education Volume 0 ; 0 ; >
+      au < exists ; exists ; 1985 ; Australian Journal of Education Volume 29 ; 29 ; >
+      au < exists ; exists ; 1986 ; Australian Journal of Education Volume 30 ; 30 ; >
+      au < exists ; exists ; 1987 ; Australian Journal of Education Volume 31 ; 31 ; >
+      au < exists ; exists ; 1988 ; Australian Journal of Education Volume 32 ; 32 ; >
+      au < exists ; exists ; 1989 ; Australian Journal of Education Volume 33 ; 33 ; >
+      au < exists ; exists ; 1990 ; Australian Journal of Education Volume 34 ; 34 ; >
+      au < exists ; exists ; 1991 ; Australian Journal of Education Volume 35 ; 35 ; >
+      au < exists ; exists ; 1992 ; Australian Journal of Education Volume 36 ; 36 ; >
+      au < exists ; exists ; 1993 ; Australian Journal of Education Volume 37 ; 37 ; >
+      au < exists ; exists ; 1994 ; Australian Journal of Education Volume 38 ; 38 ; >
+      au < exists ; exists ; 1995 ; Australian Journal of Education Volume 39 ; 39 ; >
+      au < exists ; exists ; 1996 ; Australian Journal of Education Volume 40 ; 40 ; >
+      au < exists ; exists ; 1997 ; Australian Journal of Education Volume 41 ; 41 ; >
+      au < exists ; exists ; 1998 ; Australian Journal of Education Volume 42 ; 42 ; >
+      au < exists ; exists ; 1999 ; Australian Journal of Education Volume 43 ; 43 ; >
+      au < exists ; exists ; 2000 ; Australian Journal of Education Volume 44 ; 44 ; >
+      au < exists ; exists ; 2001 ; Australian Journal of Education Volume 45 ; 45 ; >
+      au < exists ; exists ; 2002 ; Australian Journal of Education Volume 46 ; 46 ; >
+      au < exists ; exists ; 2003 ; Australian Journal of Education Volume 47 ; 47 ; >
+      au < exists ; exists ; 2004 ; Australian Journal of Education Volume 48 ; 48 ; >
+      au < exists ; exists ; 2005 ; Australian Journal of Education Volume 49 ; 49 ; >
+      au < exists ; exists ; 2006 ; Australian Journal of Education Volume 50 ; 50 ; >
+      au < exists ; exists ; 2007 ; Australian Journal of Education Volume 51 ; 51 ; >
+      au < exists ; exists ; 2008 ; Australian Journal of Education Volume 52 ; 52 ; >
+      au < exists ; exists ; 2009 ; Australian Journal of Education Volume 53 ; 53 ; >
+      au < exists ; exists ; 2010 ; Australian Journal of Education Volume 54 ; 54 ; >
+      au < exists ; exists ; 2011 ; Australian Journal of Education Volume 55 ; 55 ; >
+      au < exists ; exists ; 2012 ; Australian Journal of Education Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2013 ; Australian Journal of Education Volume 57 ; 57 ; >
 
     }
 
@@ -37595,7 +37659,7 @@
     au < exists ; exists ; 2010 ; Adoption & Fostering Volume 34 ; 34 ; >
     au < exists ; exists ; 2011 ; Adoption & Fostering Volume 35 ; 35 ; >
     au < crawling ; exists ; 2012 ; Adoption & Fostering Volume 36 ; 36 ; >
-    au < expected ; exists ; 2013 ; Adoption & Fostering Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2013 ; Adoption & Fostering Volume 37 ; 37 ; >
 
     }
 
@@ -37637,7 +37701,28 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://acd.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Australian Journal of Career Development Volume 22 ; 22 ; >
+    au < exists ; exists ; 1992 ; Australian Journal of Career Development Volume 1 ; 1 ; >
+    au < exists ; exists ; 1993 ; Australian Journal of Career Development Volume 2 ; 2 ; >
+    au < exists ; exists ; 1994 ; Australian Journal of Career Development Volume 3 ; 3 ; >
+    au < exists ; exists ; 1995 ; Australian Journal of Career Development Volume 4 ; 4 ; >
+    au < exists ; exists ; 1996 ; Australian Journal of Career Development Volume 5 ; 5 ; >
+    au < exists ; exists ; 1997 ; Australian Journal of Career Development Volume 6 ; 6 ; >
+    au < exists ; exists ; 1998 ; Australian Journal of Career Development Volume 7 ; 7 ; >
+    au < exists ; exists ; 1999 ; Australian Journal of Career Development Volume 8 ; 8 ; >
+    au < exists ; exists ; 2000 ; Australian Journal of Career Development Volume 9 ; 9 ; >
+    au < exists ; exists ; 2001 ; Australian Journal of Career Development Volume 10 ; 10 ; >
+    au < exists ; exists ; 2002 ; Australian Journal of Career Development Volume 11 ; 11 ; >
+    au < exists ; exists ; 2003 ; Australian Journal of Career Development Volume 12 ; 12 ; >
+    au < exists ; exists ; 2004 ; Australian Journal of Career Development Volume 13 ; 13 ; >
+    au < exists ; exists ; 2005 ; Australian Journal of Career Development Volume 14 ; 14 ; >
+    au < exists ; exists ; 2006 ; Australian Journal of Career Development Volume 15 ; 15 ; >
+    au < exists ; exists ; 2007 ; Australian Journal of Career Development Volume 16 ; 16 ; >
+    au < exists ; exists ; 2008 ; Australian Journal of Career Development Volume 17 ; 17 ; >
+    au < exists ; exists ; 2009 ; Australian Journal of Career Development Volume 18 ; 18 ; >
+    au < exists ; exists ; 2010 ; Australian Journal of Career Development Volume 19 ; 19 ; >
+    au < exists ; exists ; 2011 ; Australian Journal of Career Development Volume 20 ; 20 ; >
+    au < exists ; exists ; 2012 ; Australian Journal of Career Development Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2013 ; Australian Journal of Career Development Volume 22 ; 22 ; >
 
     }
 
