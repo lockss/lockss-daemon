@@ -17,8 +17,6 @@
       param[base_url] = http://www.jwildlifedis.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      comment[notReady] = free on highwire after 18 months
-
       au < released ; 1965 ; Journal of Wildlife Diseases Volume 1 ; 1 >
       au < released ; 1966 ; Journal of Wildlife Diseases Volume 2 ; 2 >
       au < released ; 1967 ; Journal of Wildlife Diseases Volume 3 ; 3 >
