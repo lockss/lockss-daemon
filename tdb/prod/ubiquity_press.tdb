@@ -125,8 +125,11 @@
     
     param[base_url] = http://www.openarchaeologydata.metajnl.com/
     param[journal_id] = joad
+    plugin = needs.plugin
     
-    au < manifest ; 2012 ; The Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
+    comment[0] = Not OJS2. 
+    
+    au < exists ; 2012 ; The Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
     au < expected ; 2013 ; The Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
 
   }

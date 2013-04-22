@@ -183,9 +183,8 @@
       eissn = 2041-9015 
     >
     
-    param[base_url] = http://pia-journal.co.uk/
+    param[base_url] = http://www.pia-journal.co.uk/
     param[journal_id] = pia
-    comment[base_url] = manifest page does not use www.
 
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
@@ -214,6 +213,7 @@
     au < manifest ; exists ; 2010 ; Papers from the Institute of Archaeology Volume 20 ; 20 ; 2010 >
     au < crawling ; exists ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
     au < expected ; exists ; 2012 ; Papers from the Institute of Archaeology Volume 22 ; 22 ; 2012 >
+    au < expected ; exists ; 2013 ; Papers from the Institute of Archaeology Volume 23 ; 23 ; 2013 >
     
   }
   
@@ -237,6 +237,7 @@
     au < manifest ; exists ; 2010 ; Present Pasts Volume 2 ; 2 ; 2010 >
     au < crawling ; exists ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
     au < expected ; exists ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
+    au < expected ; exists ; 2013 ; Present Pasts Volume 5 ; 5 ; 2013 >
     
   }
 
