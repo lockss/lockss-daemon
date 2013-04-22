@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.12 2013-04-17 15:31:47 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.13 2013-04-22 17:13:29 barry409 Exp $
  */
 
 /*
@@ -163,7 +163,8 @@ final class UrlTallier {
   // which will involve BlockHasher's use of arrays.
   // Ordered in the same order as the participants.
   private final List<Entry> participantsList;
-    
+
+  private final V3Poller.HashIndexer hashIndexer;
   private final int quorum;
   private final int voteMargin;
 
@@ -171,6 +172,7 @@ final class UrlTallier {
    * @param participants An ordered List of participants.
    */
   UrlTallier(List<ParticipantUserData> participants,
+	     V3Poller.HashIndexer hashIndexer,
 	     int quorum, int voteMargin) {
     Comparator<Entry> comparator = new Comparator<Entry>() {
       public int compare(Entry o1, Entry o2) {
@@ -189,6 +191,7 @@ final class UrlTallier {
       participantsList.add(entry);
       participantsQueue.add(entry);
     }
+    this.hashIndexer = hashIndexer;
     this.quorum = quorum;
     this.voteMargin = voteMargin;
   }
@@ -288,7 +291,7 @@ final class UrlTallier {
 
     BlockTally tally = new BlockTally(quorum, voteMargin);
     VoteBlockTallier voteBlockTallier =
-      VoteBlockTallier.make(makeHashStatsTallier());
+      VoteBlockTallier.make(hashIndexer, makeHashStatsTallier());
     log.debug3("tallyVoterUrl: "+url);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.addTally(ParticipantUserData.voteTally);
@@ -316,7 +319,7 @@ final class UrlTallier {
 
     BlockTally tally = new BlockTally(quorum, voteMargin);
     VoteBlockTallier voteBlockTallier =
-      VoteBlockTallier.make(hashBlock, makeHashStatsTallier());
+      VoteBlockTallier.make(hashBlock, hashIndexer, makeHashStatsTallier());
     log.debug3("tallyPollerUrl: "+url);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.addTally(ParticipantUserData.voteTally);
@@ -344,7 +347,7 @@ final class UrlTallier {
 
     log.debug3("tallyRepairUrl: "+url);
     VoteBlockTallier voteBlockTallier =
-      VoteBlockTallier.makeForRepair(hashBlock);
+      VoteBlockTallier.makeForRepair(hashBlock, hashIndexer);
     BlockTally tally = new BlockTally(quorum, voteMargin);
     voteBlockTallier.addTally(tally);
     voteAllParticipants(url, voteBlockTallier);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.12 2013-04-17 15:31:48 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.13 2013-04-22 17:13:29 barry409 Exp $
  */
 
 /*
@@ -174,7 +174,7 @@ public class TestUrlTallier extends LockssTestCase {
 
   public void testSeek() throws Exception {
 
-    V3Poller v3Poller = makeV3Poller("testing poll key");
+    V3Poller v3Poller = makeV3Poller("testing poll key", 3);
     
     PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
     PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
@@ -206,7 +206,8 @@ public class TestUrlTallier extends LockssTestCase {
     theParticipants.add(makeParticipant(id3, v3Poller,
 					voter3_voteblocks));
 
-    UrlTallier urlTallier = new UrlTallier(theParticipants, 5, 75);
+    UrlTallier urlTallier = new UrlTallier(theParticipants,
+					   v3Poller.getHashIndexer(), 5, 75);
 
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
     urlTallier.seek("http://test.com/foo1");
@@ -245,7 +246,7 @@ public class TestUrlTallier extends LockssTestCase {
 
   public void testTallyPollerUrl() throws Exception {
 
-    V3Poller v3Poller = makeV3Poller("testing poll key");
+    V3Poller v3Poller = makeV3Poller("testing poll key", 4);
     
     PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
     PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
@@ -284,7 +285,8 @@ public class TestUrlTallier extends LockssTestCase {
 					voter2_voteblocks));
     theParticipants.add(makeParticipant(id3, v3Poller,
 					voter3_voteblocks));
-    UrlTallier urlTallier = new UrlTallier(theParticipants, 5, 75);
+    UrlTallier urlTallier = new UrlTallier(theParticipants,
+					   v3Poller.getHashIndexer(), 5, 75);
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
     urlTallier.tallyPollerUrl("http://test.com/foo1", hashblocks[0]);
     assertEquals("http://test.com/foo2", urlTallier.peekUrl());
@@ -298,7 +300,7 @@ public class TestUrlTallier extends LockssTestCase {
 
   public void testTallyVoterUrl() throws Exception {
 
-    V3Poller v3Poller = makeV3Poller("testing poll key");
+    V3Poller v3Poller = makeV3Poller("testing poll key", 3);
     
     PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
     PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
@@ -332,7 +334,8 @@ public class TestUrlTallier extends LockssTestCase {
     theParticipants.add(makeParticipant(id3, v3Poller,
 					voter3_voteblocks));
 
-    UrlTallier urlTallier = new UrlTallier(theParticipants, 5, 75);
+    UrlTallier urlTallier = new UrlTallier(theParticipants,
+					   v3Poller.getHashIndexer(), 5, 75);
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
     tally = urlTallier.tallyVoterUrl("http://test.com/foo1");
     // todo(bhayes): BlockTally needs to have a better interface, both
@@ -370,7 +373,7 @@ public class TestUrlTallier extends LockssTestCase {
 
   public void testTallyVoterUrlNotPeek() throws Exception {
 
-    V3Poller v3Poller = makeV3Poller("testing poll key");
+    V3Poller v3Poller = makeV3Poller("testing poll key", 3);
     
     PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
     PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
@@ -390,7 +393,8 @@ public class TestUrlTallier extends LockssTestCase {
     theParticipants.add(makeParticipant(id1, v3Poller,
 					voter1_voteblocks));
 
-    UrlTallier urlTallier = new UrlTallier(theParticipants, 5, 75);
+    UrlTallier urlTallier = new UrlTallier(theParticipants,
+					   v3Poller.getHashIndexer(), 5, 75);
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
     tally = urlTallier.tallyVoterUrl("http://test.com/foo1");
     assertEquals("http://test.com/foo2", urlTallier.peekUrl());
@@ -435,7 +439,7 @@ public class TestUrlTallier extends LockssTestCase {
       }
     };
 
-    V3Poller v3Poller = makeV3Poller("testing poll key");
+    V3Poller v3Poller = makeV3Poller("testing poll key", 1);
 
     PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
     VoteBlock [] voter1_voteblocks = {};
@@ -451,7 +455,8 @@ public class TestUrlTallier extends LockssTestCase {
 
     theParticipants.add(participant);
     assertFalse(vb.thrown);
-    UrlTallier urlTallier = new UrlTallier(theParticipants, 5, 75);
+    UrlTallier urlTallier = new UrlTallier(theParticipants,
+					   v3Poller.getHashIndexer(), 5, 75);
     assertTrue(vb.thrown);
     assertTrue(urlTallier.voteSpoiled(participant));
     // peekUrl() doesn't throw anything, but there's no URL since the
@@ -509,7 +514,7 @@ public class TestUrlTallier extends LockssTestCase {
       }
     };
 
-    final V3Poller v3Poller = makeV3Poller("testing poll key");
+    final V3Poller v3Poller = makeV3Poller("testing poll key", 1);
 
     PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
     VoteBlock [] voter1_voteblocks = {
@@ -534,7 +539,8 @@ public class TestUrlTallier extends LockssTestCase {
     participant.setVoteBlocks(vb);
 
     theParticipants.add(participant);
-    UrlTallier urlTallier = new UrlTallier(theParticipants, 5, 75);
+    UrlTallier urlTallier = new UrlTallier(theParticipants,
+					   v3Poller.getHashIndexer(), 5, 75);
 
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
     assertFalse(urlTallier.voteSpoiled(participant));
@@ -550,7 +556,7 @@ public class TestUrlTallier extends LockssTestCase {
   }
 
   public void testHashStatsTallier() throws Exception {
-    V3Poller v3Poller = makeV3Poller("testing poll key");
+    V3Poller v3Poller = makeV3Poller("testing poll key", 1);
     PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
     ParticipantUserData participant =
       new ParticipantUserData(id1, v3Poller, null);
@@ -641,10 +647,12 @@ public class TestUrlTallier extends LockssTestCase {
     return ud;
   }
 
-  private MyV3Poller makeV3Poller(String key) throws Exception {
+  private MyV3Poller makeV3Poller(String key, int pollSize) throws Exception {
     PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
                                    Poll.V3_POLL);
-    return new MyV3Poller(ps, theDaemon, pollerId, key, 20000, "SHA-1");
+    MyV3Poller poller = 
+      new MyV3Poller(ps, theDaemon, pollerId, key, 20000, "SHA-1", pollSize);
+    return poller;
   }
   
   private class MyV3Poller extends V3Poller {
@@ -652,11 +660,13 @@ public class TestUrlTallier extends LockssTestCase {
     private Map sentMsgs = Collections.synchronizedMap(new HashMap());
     private Map semaphores = new HashMap();
     private List<PollerStateBean.Repair> repairs;
+    private final int pollSize;
 
     MyV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
-                   String pollkey, long duration, String hashAlg)
+	       String pollkey, long duration, String hashAlg, int pollSize)
         throws PollSerializerException {
       super(spec, daemon, id, pollkey, duration, hashAlg);
+      this.pollSize = pollSize;
     }
     
     @Override
@@ -678,6 +688,40 @@ public class TestUrlTallier extends LockssTestCase {
       }
       return super.getCompletedRepairs();
     }
+
+    @Override
+    public int getPollSize() {
+      return pollSize;
+    }
+  }
+
+  V3Poller.HashIndexer makeHashIndexer(final int pollSize,
+				       final int symmetricPollSize) {
+    return new V3Poller.HashIndexer() {
+      public byte[] getParticipantHash(HashBlock.Version version,
+				       int participantIndex) {
+	if (0 <= participantIndex && participantIndex < pollSize) {
+	  return version.getHashes()[participantIndex];
+	} else {
+	  fail("participantIndex "+participantIndex+ " out of bounds");
+	  return null;
+	}
+      }
+      public byte[] getSymmetricHash(HashBlock.Version version,
+				     int symmetricParticipantIndex) {
+	if (0 <= symmetricParticipantIndex &&
+	    symmetricParticipantIndex < symmetricPollSize) {
+	  return version.getHashes()[pollSize + symmetricParticipantIndex];
+	} else {
+	  fail("symmetricParticipantIndex "+
+	       symmetricParticipantIndex+" out of bounds: ");
+	  return null;
+	}	
+      }
+      public byte[] getPlainHash(HashBlock.Version version) {
+	return version.getHashes()[pollSize + symmetricPollSize];
+      }
+    };
   }
 
   private void initRequiredServices() throws Exception {

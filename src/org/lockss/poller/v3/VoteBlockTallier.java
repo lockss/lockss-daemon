@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.9 2013-04-16 22:57:28 barry409 Exp $
+ * $Id: VoteBlockTallier.java,v 1.10 2013-04-22 17:13:29 barry409 Exp $
  */
 
 /*
@@ -72,14 +72,18 @@ public class VoteBlockTallier {
 
   // Null if the poller does not have this URL.
   private final HashBlockComparer comparer;
+  private final V3Poller.HashIndexer hashIndexer;
+
   private final Collection<VoteBlockTally> tallies =
     new ArrayList<VoteBlockTally>();
   private boolean votingStarted = false;
 
   private static final Logger log = Logger.getLogger("VoteBlockTallier");
 
-  private VoteBlockTallier(HashBlockComparer comparer) {
+  private VoteBlockTallier(HashBlockComparer comparer,
+			   V3Poller.HashIndexer hashIndexer) {
     this.comparer = comparer;
+    this.hashIndexer = hashIndexer;
   }
 
   /**
@@ -88,8 +92,9 @@ public class VoteBlockTallier {
    * method called when this VoteBlockTallier's vote() method is
    * called.
    */
-  public static VoteBlockTallier make(VoteCallback... voteCallbacks) {
-    return make((HashBlockComparer)null, voteCallbacks);
+  public static VoteBlockTallier make(V3Poller.HashIndexer hashIndexer,
+				      VoteCallback... voteCallbacks) {
+    return make((HashBlockComparer)null, hashIndexer, voteCallbacks);
   }
 
   /**
@@ -99,29 +104,34 @@ public class VoteBlockTallier {
    * called.
    */
   public static VoteBlockTallier make(HashBlock hashBlock,
+				      V3Poller.HashIndexer hashIndexer,
 				      VoteCallback... voteCallbacks) {
-    return make(new HashBlockComparerImpl(hashBlock), voteCallbacks);
+    return make(new HashBlockComparerImpl(hashBlock, hashIndexer),
+		hashIndexer, voteCallbacks);
   }
 
   /**
    * Make a tallier for a URL the poller has, when doing repair.
    */
-  public static VoteBlockTallier makeForRepair(HashBlock hashBlock) {
-    return makeForRepair(new HashBlockComparerImpl(hashBlock));
+  public static VoteBlockTallier makeForRepair(HashBlock hashBlock,
+					       V3Poller.HashIndexer hashIndexer) {
+    return makeForRepair(new HashBlockComparerImpl(hashBlock, hashIndexer), hashIndexer);
   }
 
   // package level for testing, rather than private
-  static VoteBlockTallier makeForRepair(HashBlockComparer comparer) {
-    return new VoteBlockTallier(comparer);
+  static VoteBlockTallier makeForRepair(HashBlockComparer comparer,
+					V3Poller.HashIndexer hashIndexer) {
+    return new VoteBlockTallier(comparer, hashIndexer);
   }
 
   // package level for testing, rather than private
   static VoteBlockTallier make(HashBlockComparer comparer,
+			       V3Poller.HashIndexer hashIndexer,
 			       final VoteCallback... voteCallbacks) {
     if (voteCallbacks.length == 0) {
-      return new VoteBlockTallier(comparer);
+      return new VoteBlockTallier(comparer, hashIndexer);
     }
-    return new VoteBlockTallier(comparer) {
+    return new VoteBlockTallier(comparer, hashIndexer) {
       // In addition to tallying, inform the ParticipantUserData block
       // about each vote.
       @Override public void vote(VoteBlock voteBlock, ParticipantUserData id,
@@ -230,12 +240,14 @@ public class VoteBlockTallier {
    */
   static class HashBlockComparerImpl implements HashBlockComparer {
     private final HashBlock.Version[] hbVersions;
+    private final V3Poller.HashIndexer hashIndexer;
 
     /**
      * <p>Create a {@link HashBlockComparer} for the given {@link
      * HashBlock}.</p>
      */
-    HashBlockComparerImpl(HashBlock hashBlock) {
+    HashBlockComparerImpl(HashBlock hashBlock,
+			  V3Poller.HashIndexer hashIndexer) {
       hbVersions = hashBlock.getVersions();
       for (int versionIndex = 0; versionIndex < hbVersions.length;
 	   versionIndex++) {
@@ -247,6 +259,7 @@ public class VoteBlockTallier {
 	  log.warning("HashBlock version "+versionIndex+" had hashing error.");
 	} 
       }
+      this.hashIndexer = hashIndexer;
     }
 
     /**
@@ -264,7 +277,8 @@ public class VoteBlockTallier {
 	if (hbVersion.getHashError() == null) {
 	  // todo(bhayes): the participantIndex could be removed if
 	  // HashBlock could return versions keyed by ParticipantUserData.
-	  byte[] hbHash = hbVersion.getHashes()[participantIndex];
+	  byte[] hbHash = hashIndexer.getParticipantHash(hbVersion,
+							 participantIndex);
 	  VoteBlock.Version[] vbVersions = voteBlock.getVersions();
 	  for (int versionIndex = 0; versionIndex < vbVersions.length;
 	       versionIndex++) {
