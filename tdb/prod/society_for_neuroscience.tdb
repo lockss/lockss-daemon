@@ -17,7 +17,7 @@
       param[base_url] = http://www.jneurosci.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      comment[notReady] = GC overhead limit
+      comment[notReady] = V30 GC overhead limit
 
       au < released ; 1981 ; Journal of Neuroscience Volume 1 ; 1 >
       au < released ; 1982 ; Journal of Neuroscience Volume 2 ; 2 >
@@ -48,9 +48,9 @@
       au < released ; 2007 ; Journal of Neuroscience Volume 27 ; 27 >
       au < released ; 2008 ; Journal of Neuroscience Volume 28 ; 28 >
       au < released ; 2009 ; Journal of Neuroscience Volume 29 ; 29 >
-      au < notReady ; 2010 ; Journal of Neuroscience Volume 30 ; 30 >
+      au < testing ; 2010 ; Journal of Neuroscience Volume 30 ; 30 >
       au < released ; 2011 ; Journal of Neuroscience Volume 31 ; 31 >
-      au < manifest ; 2012 ; Journal of Neuroscience Volume 32 ; 32 >
+      au < testing ; 2012 ; Journal of Neuroscience Volume 32 ; 32 >
       au < manifest ; 2013 ; Journal of Neuroscience Volume 33 ; 33 >
 
     }

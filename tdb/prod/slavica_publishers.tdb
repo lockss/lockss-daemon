@@ -24,7 +24,7 @@
     au < released ; 2009 ; Journal of Slavic Linguistics Volume 17 ; 17 >
     au < released ; 2010 ; Journal of Slavic Linguistics Volume 18 ; 18 >
     au < released ; 2011 ; Journal of Slavic Linguistics Volume 19 ; 19 >
-    au < manifest ; 2012 ; Journal of Slavic Linguistics Volume 20 ; 20 >
+    au < testing ; 2012 ; Journal of Slavic Linguistics Volume 20 ; 20 >
     au < expected ; 2013 ; Journal of Slavic Linguistics Volume 21 ; 21 >
 
   }
@@ -85,9 +85,8 @@
    
     param[journal_dir] = region
     attr[journal_id] = reg
-    comment[notReady] = 4/9/2012sc no Roundup issue yet. plugin issue?
 
-    au < notReady ; 2012 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 1 ; 1 >
+    au < testing ; 2012 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 1 ; 1 >
     au < expected ; 2013 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 2 ; 2 >
 
   }
