@@ -3103,8 +3103,6 @@ comment[bmr] = journal archive available, but no new volumes
         param[journal_issn] = 1742-5573
 
         au < down ; crawling ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 >
-        au < notReady ; exists ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 [to delete] ; 8 >
-        au < notReady ; exists ; 2012 ; Epidemiologic Perspectives & Innovations Volume 9 [to delete] ; 9 >
       
       }
       
