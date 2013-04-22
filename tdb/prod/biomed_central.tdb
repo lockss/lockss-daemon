@@ -3116,23 +3116,40 @@
         issn = 1742-5573 ;
         issnl = 1742-5573
       >
+      
+      {
+      
+        param[base_url] = http://www.epi-perspectives.com/
+        param[journal_issn] = 1742-5573
 
-      param[base_url] = http://www.epi-perspectives.com/
-      param[journal_issn] = 1742-5573
+        au < down ; 2004 ; Epidemiologic Perspectives & Innovations Volume 1 ; 1 >
+        au < down ; 2005 ; Epidemiologic Perspectives & Innovations Volume 2 ; 2 >
+        au < down ; 2006 ; Epidemiologic Perspectives & Innovations Volume 3 ; 3 >
+        au < down ; 2007 ; Epidemiologic Perspectives & Innovations Volume 4 ; 4 >
+        au < down ; 2008 ; Epidemiologic Perspectives & Innovations Volume 5 ; 5 >
+        au < down ; 2009 ; Epidemiologic Perspectives & Innovations Volume 6 ; 6 >
+        au < down ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 >
+        au < down ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 ; 8 >
+      
+      }
+      
+      {
+      
+        param[base_url] = http://archive.biomedcentral.com/1742-5573/
+        param[journal_issn] = 1742-5573
 
-      comment[not_ready] = Seems to have unusually little content online
-
-      au < released ; 2004 ; Epidemiologic Perspectives & Innovations Volume 1 ; 1 >
-      au < released ; 2005 ; Epidemiologic Perspectives & Innovations Volume 2 ; 2 >
-      au < released ; 2006 ; Epidemiologic Perspectives & Innovations Volume 3 ; 3 >
-      au < released ; 2007 ; Epidemiologic Perspectives & Innovations Volume 4 ; 4 >
-      au < released ; 2008 ; Epidemiologic Perspectives & Innovations Volume 5 ; 5 >
-      au < released ; 2009 ; Epidemiologic Perspectives & Innovations Volume 6 ; 6 >
-      au < released ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 >
-      au < released ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 ; 8 >
-      au < notReady ; 2012 ; Epidemiologic Perspectives & Innovations Volume 9 ; 9 >
-      au < expected ; 2013 ; Epidemiologic Perspectives & Innovations Volume 10 ; 10 >
-
+        au < doNotProcess ; 2004 ; Epidemiologic Perspectives & Innovations Volume 1 ; 1 >
+        au < doNotProcess ; 2005 ; Epidemiologic Perspectives & Innovations Volume 2 ; 2 >
+        au < doNotProcess ; 2006 ; Epidemiologic Perspectives & Innovations Volume 3 ; 3 >
+        au < doNotProcess ; 2007 ; Epidemiologic Perspectives & Innovations Volume 4 ; 4 >
+        au < doNotProcess ; 2008 ; Epidemiologic Perspectives & Innovations Volume 5 ; 5 >
+        au < doNotProcess ; 2009 ; Epidemiologic Perspectives & Innovations Volume 6 ; 6 >
+        au < doNotProcess ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 >
+        au < doNotProcess ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 ; 8 >
+        au < exists ; 2012 ; Epidemiologic Perspectives & Innovations Volume 9 ; 9 >
+      
+      }
+      
     }
 
     {
