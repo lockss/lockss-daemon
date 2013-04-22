@@ -348,7 +348,7 @@
     
     param[journal_id] = jms
 
-    au < testing ; 2011 ; Journal of Management and Sustainability Volume 1 ; 1 ; 2011 >
+    au < ready ; 2011 ; Journal of Management and Sustainability Volume 1 ; 1 ; 2011 >
     au < released ; 2012 ; Journal of Management and Sustainability Volume 2 ; 2 ; 2012 >
     au < manifest ; 2013 ; Journal of Management and Sustainability Volume 3 ; 3 ; 2013 >
   }
@@ -381,7 +381,7 @@
     param[journal_id] = jmbr
     comment[jmbr] = no issues as of 20110615
 
-    au < testing ; 2011 ; Journal of Molecular Biology Research Volume 1 ; 1 ; 2011 >
+    au < ready ; 2011 ; Journal of Molecular Biology Research Volume 1 ; 1 ; 2011 >
     au < released ; 2012 ; Journal of Molecular Biology Research Volume 2 ; 2 ; 2012 >
     au < manifest ; 2013 ; Journal of Molecular Biology Research Volume 3 ; 3 ; 2013 >
 
