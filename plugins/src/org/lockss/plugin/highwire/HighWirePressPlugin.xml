@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>83</string>
+    <string>84</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -64,10 +64,6 @@
       <entry>
         <string>au_title</string>
         <string>"%s", base_url</string>
-      </entry>
-      <entry>
-        <string>au_volume</string>
-        <string>"%slockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
       </entry>
       <entry>
         <string>au_issue</string>
