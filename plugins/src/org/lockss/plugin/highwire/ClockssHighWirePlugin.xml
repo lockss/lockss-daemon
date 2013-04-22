@@ -17,11 +17,11 @@
   </entry>
     <entry>
     <string>plugin_version</string>
-    <string>83</string>
+    <string>84</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>83</string>
+    <string>84</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -31,36 +31,6 @@
     <string>au_start_url</string>
     <string>"%sclockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
   </entry>
-  <entry>
-    <string>au_feature_urls</string>
-    <map>
-      <entry>
-        <string>au_title</string>
-        <string>"%s", base_url</string>
-      </entry>
-      <entry>
-        <string>au_volume</string>
-        <string>"%sclockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
-      </entry>
-      <entry>
-        <string>au_issue</string>
-        <string>"%scontent/vol%s/issue%s", base_url, volume_name, issue</string>
-      </entry>
-      <entry>
-        <string>au_article</string>
-        <map>
-          <entry>
-            <string>pdf</string>
-            <string>"%scgi/reprint/%s/%s/%s", base_url, volume_name, issue, article</string>
-          </entry>
-          <entry>
-            <string>html;*</string>
-            <string>"%s/cgi/content/full/%s/%s/%s", base_url, volume_name, issue, article</string>
-          </entry>
-        </map>
-      </entry>
-    </map>
-  </entry>    
   <entry>
     <string>clockss_override</string>
     <map>
