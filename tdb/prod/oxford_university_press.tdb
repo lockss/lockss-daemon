@@ -2226,14 +2226,14 @@
 
     implicit < status ; year ; name ; param[volume_name] ; proxy >
 
-    au < releasing ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 ; reingest.lockss.org:80 >
-    au < releasing ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 ; reingest.lockss.org:80 >
-    au < releasing ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 ; reingest.lockss.org:80 >
-    au < releasing ; 2004 ; Brief Treatment and Crisis Intervention Volume 4 ; 4 ; reingest.lockss.org:80 >
-    au < releasing ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 ; reingest.lockss.org:80 >
-    au < releasing ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 ; reingest.lockss.org:80 >
-    au < releasing ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 ; reingest.lockss.org:80 >
-    au < releasing ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 ; reingest.lockss.org:80 >
+    au < released ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 ; reingest.lockss.org:80 >
+    au < released ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 ; reingest.lockss.org:80 >
+    au < released ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 ; reingest.lockss.org:80 >
+    au < released ; 2004 ; Brief Treatment and Crisis Intervention Volume 4 ; 4 ; reingest.lockss.org:80 >
+    au < released ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 ; reingest.lockss.org:80 >
+    au < released ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 ; reingest.lockss.org:80 >
+    au < released ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 ; reingest.lockss.org:80 >
+    au < released ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 ; reingest.lockss.org:80 >
 
     }
   }
