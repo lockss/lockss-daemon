@@ -2263,6 +2263,7 @@
 
       param[base_url] = http://www.biomagres.com/
       param[journal_issn] = 1477-044X
+      comment[v7] = v7 released in error. No substance and journal has stopped publishing.
 
       au < released ; 2003 ; BioMagnetic Research and Technology Volume 1 ; 1 >
       au < released ; 2004 ; BioMagnetic Research and Technology Volume 2 ; 2 >
@@ -2270,7 +2271,7 @@
       au < released ; 2006 ; BioMagnetic Research and Technology Volume 4 ; 4 >
       au < released ; 2007 ; BioMagnetic Research and Technology Volume 5 ; 5 >
       au < released ; 2008 ; BioMagnetic Research and Technology Volume 6 ; 6 >
-      au < released ; 2009 ; BioMagnetic Research and Technology Volume 7 ; 7 >
+      au < down ; 2009 ; BioMagnetic Research and Technology Volume 7 ; 7 >
 
     }
 
