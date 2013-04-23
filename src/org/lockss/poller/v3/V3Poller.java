@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.139 2013-04-23 21:14:21 barry409 Exp $
+ * $Id: V3Poller.java,v 1.140 2013-04-23 21:15:37 barry409 Exp $
  */
 
 /*
@@ -1167,13 +1167,13 @@ public class V3Poller extends BasePoll {
    * Add any symmetric hash values to the corresponding VoteBlock.
    * See V3Voter.blockHashComplete.
    */
-  private void recordSymmetricHashes(HashBlock block) {
+  private void recordSymmetricHashes(HashBlock hashBlock) {
     // XXX DSHR it would be good if this were a utility. Perhaps
     // XXX DSHR pass in the VoteBlocks object to which the VoteBlock
     // XXX DSHR should be added and the range of indices in the HashBlock
     // Add each hash block version to this vote block.
     if (symmetricPollSize() > 0) {
-      Iterator hashVersionIter = block.versionIterator();
+      Iterator hashVersionIter = hashBlock.versionIterator();
       while(hashVersionIter.hasNext()) {
 	HashBlock.Version ver = (HashBlock.Version)hashVersionIter.next();
 	byte[] plainDigest = getPlainHash(ver);
@@ -1182,7 +1182,7 @@ public class V3Poller extends BasePoll {
 	  if (symmetricDigest == null) {
 	    throw new ShouldNotHappenException("null hash for symmetric poll");
 	  }
-	  VoteBlock vb = new VoteBlock(block.getUrl());
+	  VoteBlock vb = new VoteBlock(hashBlock.getUrl());
 	  vb.addVersion(ver.getFilteredOffset(),
 			ver.getFilteredLength(),
 			ver.getUnfilteredOffset(),
