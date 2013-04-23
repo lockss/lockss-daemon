@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.13 2013-04-22 17:13:29 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.14 2013-04-23 21:52:40 barry409 Exp $
  */
 
 /*
@@ -241,6 +241,63 @@ public class TestUrlTallier extends LockssTestCase {
 
     // And stepping off the end.
     urlTallier.seek("http://test.com/foo5");
+    assertEquals(null, urlTallier.peekUrl());
+  }
+
+  public void testOutOfOrderUrl() throws Exception {
+
+    V3Poller v3Poller = makeV3Poller("testing poll key", 3);
+    
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
+
+    VoteBlock [] voter1_voteblocks = {
+      // NOTE: these URLs are not in the canonical order.
+      makeVoteBlock("http://test.com/foo2", "content for foo2"),
+      makeVoteBlock("http://test.com/foo1", "content for foo1"),
+      makeVoteBlock("http://test.com/foo3", "content for foo3"),
+      makeVoteBlock("http://test.com/foo4", "content for foo4")
+    };
+
+    VoteBlock [] voter2_voteblocks = {
+      makeVoteBlock("http://test.com/foo1", "content for foo1"),
+      makeVoteBlock("http://test.com/foo2", "content for foo2"),
+      makeVoteBlock("http://test.com/foo3", "content for foo3"),
+      makeVoteBlock("http://test.com/foo4", "content for foo4")
+    };
+
+    BlockTally tally;
+
+    List<ParticipantUserData> theParticipants =
+      new ArrayList<ParticipantUserData>();
+
+    theParticipants.add(makeParticipant(id1, v3Poller,
+					voter1_voteblocks));
+    theParticipants.add(makeParticipant(id2, v3Poller,
+					voter2_voteblocks));
+
+    List voter2 = ListUtil.list(theParticipants.get(1));
+
+    UrlTallier urlTallier = new UrlTallier(theParticipants,
+					   v3Poller.getHashIndexer(), 5, 75);
+
+    // The first URL is seen
+    assertEquals("http://test.com/foo1", urlTallier.peekUrl());
+    tally = urlTallier.tallyVoterUrl("http://test.com/foo1");
+    assertSameElements(voter2, tally.getVoterOnlyBlockVoters());
+    assertEquals("http://test.com/foo2", urlTallier.peekUrl());
+    tally = urlTallier.tallyVoterUrl("http://test.com/foo2");
+    // Both have foo2
+    assertSameElements(theParticipants, tally.getVoterOnlyBlockVoters());
+    // But at this point the out-of-order URL in voter1 has been seen,
+    // and voter1 doesn't show any more votes.
+    assertEquals("http://test.com/foo3", urlTallier.peekUrl());
+    tally = urlTallier.tallyVoterUrl("http://test.com/foo3");
+    assertSameElements(voter2, tally.getVoterOnlyBlockVoters());
+    tally = urlTallier.tallyVoterUrl("http://test.com/foo4");
+    assertSameElements(voter2, tally.getVoterOnlyBlockVoters());
+
     assertEquals(null, urlTallier.peekUrl());
   }
 
