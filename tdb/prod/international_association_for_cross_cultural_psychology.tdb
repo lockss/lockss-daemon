@@ -13,7 +13,7 @@
 
     plugin = org.lockss.plugin.bepress.BePressPlugin
     param[base_url] = http://scholarworks.gvsu.edu/
-    attr[journal_abbr] = orpc
+    param[journal_abbr] = orpc
     implicit < status ; year ; name ; param[volume] >
 
     au < manifest ; 2011 ; Online Readings in Psychology and Culture Volume 1 ; 1 >
