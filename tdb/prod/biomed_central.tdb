@@ -5418,13 +5418,15 @@
         issnl = 1546-0096
       >
 
+      comment[v1to4] = V1-4 released in error. No substance.
+
       param[base_url] = http://www.ped-rheum.com/
       param[journal_issn] = 1546-0096
 
-      au < released ; 2003 ; Pediatric Rheumatology Volume 1 ; 1 >
-      au < released ; 2004 ; Pediatric Rheumatology Volume 2 ; 2 >
-      au < released ; 2005 ; Pediatric Rheumatology Volume 3 ; 3 >
-      au < released ; 2006 ; Pediatric Rheumatology Volume 4 ; 4 >
+      au < down ; 2003 ; Pediatric Rheumatology Volume 1 ; 1 >
+      au < down ; 2004 ; Pediatric Rheumatology Volume 2 ; 2 >
+      au < down ; 2005 ; Pediatric Rheumatology Volume 3 ; 3 >
+      au < down ; 2006 ; Pediatric Rheumatology Volume 4 ; 4 >
       au < released ; 2007 ; Pediatric Rheumatology Volume 5 ; 5 >
       au < released ; 2008 ; Pediatric Rheumatology Volume 6 ; 6 >
       au < released ; 2009 ; Pediatric Rheumatology Volume 7 ; 7 >
