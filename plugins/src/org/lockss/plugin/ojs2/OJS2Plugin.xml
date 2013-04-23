@@ -16,8 +16,21 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
+  <!--  This is a list of OJS2 Child plugins - be sure to update
+        the child's plugin_parent_version number to match, then
+        update the child's plugin_version number:
+        ClockssOJS2Plugin.xml
+        ScholarlyExchangeOSJ2Plugin.xml
+        CoActionPublishingPlugin.xml
+        ClockssCoActionPublishingPlugin.xml
+        ClockssUniversityOfAlbertaPlugin.xml
+        ClockssBiologicInstitutePlugin.xml
+        UbiquityPressPlugin.xml
+        ClockssUbiquityPressPlugin.xml
+        JournalOfResearchPracticePlugin.xml
+   -->
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
@@ -44,7 +57,7 @@
     <string>"%sindex.php/%s/gateway/lockss?year=%d", base_url, journal_id, year</string>
   </entry>
   <entry>
-  <string>au_feature_urls</string>
+   <string>au_feature_urls</string>
     <map>
     <entry>
       <string>au_title</string>
@@ -116,6 +129,8 @@
       <string>1,"^%s(index\.php/)?(%s/)?(article|issue)/(download|downloadSuppFile|view|viewArticle|viewDownloadInterstitial|viewFile|viewPDFInterstitial|viewRST)/", base_url, journal_id</string>
       <string>1,"^%s(index\.php/)?(%s/)?rt/bio/", base_url, journal_id</string>
       <string>1,"^%s(index\.php/)?(%s/)?rt/(metadata|printerFriendly|suppFileMetadata|suppFiles|captureCite|findingReferences)/", base_url, journal_id</string>
+      <!-- the following url is redirected-to from the start_url for Ubiquity Press -->
+      <string>1,"^%sgateway/lockss\?year=%d", base_url, year</string>
     </list>
   </entry>
   <entry>
