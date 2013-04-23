@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.138 2013-04-23 17:30:21 barry409 Exp $
+ * $Id: V3Poller.java,v 1.139 2013-04-23 21:14:21 barry409 Exp $
  */
 
 /*
@@ -1158,17 +1158,8 @@ public class V3Poller extends BasePoll {
       }
     }
 
-    totalBytesHashed += hashBlock.getTotalHashedBytes();
-    totalBytesRead += hashBlock.getTotalUnfilteredBytes();
-
     tallyVoterUrls(pollerUrl);
     BlockTally tally = tallyPollerUrl(pollerUrl, hashBlock);
-
-    // Check to see if it's time to checkpoint the poll.
-    bytesHashedSinceLastCheckpoint += hashBlock.getTotalHashedBytes();
-    if (bytesHashedSinceLastCheckpoint >= this.hashBytesBeforeCheckpoint) {
-      checkpointPoll();
-    }
     return tally;
   }
 
@@ -1217,6 +1208,18 @@ public class V3Poller extends BasePoll {
 	  }
 	}
       }
+    }
+  }
+
+  /** Update the bytes processed statistics and check to see if it's
+   * time to checkpoint the poll. */
+  private void checkpointPollIfNeeded(HashBlock hashBlock) {
+    totalBytesHashed += hashBlock.getTotalHashedBytes();
+    totalBytesRead += hashBlock.getTotalUnfilteredBytes();
+
+    bytesHashedSinceLastCheckpoint += hashBlock.getTotalHashedBytes();
+    if (bytesHashedSinceLastCheckpoint >= this.hashBytesBeforeCheckpoint) {
+      checkpointPoll();
     }
   }
 
@@ -2806,6 +2809,7 @@ public class V3Poller extends BasePoll {
       if (pollerState != null) {
 	recordSymmetricHashes(hashBlock);
         tallyBlock(hashBlock);
+	checkpointPollIfNeeded(hashBlock);
       }
     }
   }
