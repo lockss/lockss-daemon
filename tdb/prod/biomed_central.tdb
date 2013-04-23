@@ -2495,11 +2495,13 @@
 
       param[base_url] = http://www.casesjournal.com/
       param[journal_issn] = 1757-1626
+      
+      comment[v4] = V4 Released in error. No content as of 04/2013
 
       au < released ; 2008 ; Cases Journal Volume 1 ; 1 >
       au < released ; 2009 ; Cases Journal Volume 2 ; 2 >
       au < released ; 2010 ; Cases Journal Volume 3 ; 3 >
-      au < released ; 2011 ; Cases Journal Volume 4 ; 4 >
+      au < down ; 2011 ; Cases Journal Volume 4 ; 4 >
       au < expected ; 2012 ; Cases Journal Volume 5 ; 5 >
 
     }
