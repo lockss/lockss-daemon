@@ -23,15 +23,15 @@
 
         implicit < status ;  year ; name ; param[volume_name] ; proxy >
 
-        au < ready ; 1992 ; Archives of Family Medicine Volume 1 ; 1 ;  reingest.lockss.org:80 >
-        au < ready ; 1993 ; Archives of Family Medicine Volume 2 ; 2 ;  reingest.lockss.org:80 >
-        au < ready ; 1994 ; Archives of Family Medicine Volume 3 ; 3 ;  reingest.lockss.org:80 >
-        au < ready ; 1995 ; Archives of Family Medicine Volume 4 ; 4 ;  reingest.lockss.org:80 >
-        au < ready ; 1996 ; Archives of Family Medicine Volume 5 ; 5 ;  reingest.lockss.org:80 >
-        au < ready ; 1997 ; Archives of Family Medicine Volume 6 ; 6 ;  reingest.lockss.org:80 >
-        au < ready ; 1998 ; Archives of Family Medicine Volume 7 ; 7 ;  reingest.lockss.org:80 >
-        au < ready ; 1999 ; Archives of Family Medicine Volume 8 ; 8 ;  reingest.lockss.org:80 >
-        au < ready ; 2000 ; Archives of Family Medicine Volume 9 ; 9 ;  reingest.lockss.org:80 >
+        au < releasing ; 1992 ; Archives of Family Medicine Volume 1 ; 1 ;  reingest.lockss.org:80 >
+        au < releasing ; 1993 ; Archives of Family Medicine Volume 2 ; 2 ;  reingest.lockss.org:80 >
+        au < releasing ; 1994 ; Archives of Family Medicine Volume 3 ; 3 ;  reingest.lockss.org:80 >
+        au < releasing ; 1995 ; Archives of Family Medicine Volume 4 ; 4 ;  reingest.lockss.org:80 >
+        au < releasing ; 1996 ; Archives of Family Medicine Volume 5 ; 5 ;  reingest.lockss.org:80 >
+        au < releasing ; 1997 ; Archives of Family Medicine Volume 6 ; 6 ;  reingest.lockss.org:80 >
+        au < releasing ; 1998 ; Archives of Family Medicine Volume 7 ; 7 ;  reingest.lockss.org:80 >
+        au < releasing ; 1999 ; Archives of Family Medicine Volume 8 ; 8 ;  reingest.lockss.org:80 >
+        au < releasing ; 2000 ; Archives of Family Medicine Volume 9 ; 9 ;  reingest.lockss.org:80 >
 
       }
     }
@@ -55,18 +55,18 @@
 
         implicit < status ; year ; name ; param[volume_name] ; proxy >
 
-        au < ready ; 2003 ; JAMA Français Volume 289 ; 289 ; reingest.lockss.org:80 >
-        au < ready ; 2003 ; JAMA Français Volume 290 ; 290 ; reingest.lockss.org:80 >
-        au < ready ; 2004 ; JAMA Français Volume 291 ; 291 ; reingest.lockss.org:80 >
-        au < ready ; 2004 ; JAMA Français Volume 292 ; 292 ; reingest.lockss.org:80 >
-        au < ready ; 2005 ; JAMA Français Volume 293 ; 293 ; reingest.lockss.org:80 >
-        au < ready ; 2005 ; JAMA Français Volume 294 ; 294 ; reingest.lockss.org:80 >
-        au < ready ; 2006 ; JAMA Français Volume 295 ; 295 ; reingest.lockss.org:80 >
-        au < ready ; 2006 ; JAMA Français Volume 296 ; 296 ; reingest.lockss.org:80 >
-        au < ready ; 2007 ; JAMA Français Volume 297 ; 297 ; reingest.lockss.org:80 >
-        au < ready ; 2007 ; JAMA Français Volume 298 ; 298 ; reingest.lockss.org:80 >
-        au < ready ; 2008 ; JAMA Français Volume 299 ; 299 ; reingest.lockss.org:80 >
-        au < ready ; 2008 ; JAMA Français Volume 300 ; 300 ; reingest.lockss.org:80 >
+        au < releasing ; 2003 ; JAMA Français Volume 289 ; 289 ; reingest.lockss.org:80 >
+        au < releasing ; 2003 ; JAMA Français Volume 290 ; 290 ; reingest.lockss.org:80 >
+        au < releasing ; 2004 ; JAMA Français Volume 291 ; 291 ; reingest.lockss.org:80 >
+        au < releasing ; 2004 ; JAMA Français Volume 292 ; 292 ; reingest.lockss.org:80 >
+        au < releasing ; 2005 ; JAMA Français Volume 293 ; 293 ; reingest.lockss.org:80 >
+        au < releasing ; 2005 ; JAMA Français Volume 294 ; 294 ; reingest.lockss.org:80 >
+        au < releasing ; 2006 ; JAMA Français Volume 295 ; 295 ; reingest.lockss.org:80 >
+        au < releasing ; 2006 ; JAMA Français Volume 296 ; 296 ; reingest.lockss.org:80 >
+        au < releasing ; 2007 ; JAMA Français Volume 297 ; 297 ; reingest.lockss.org:80 >
+        au < releasing ; 2007 ; JAMA Français Volume 298 ; 298 ; reingest.lockss.org:80 >
+        au < releasing ; 2008 ; JAMA Français Volume 299 ; 299 ; reingest.lockss.org:80 >
+        au < releasing ; 2008 ; JAMA Français Volume 300 ; 300 ; reingest.lockss.org:80 >
 
       }
     }

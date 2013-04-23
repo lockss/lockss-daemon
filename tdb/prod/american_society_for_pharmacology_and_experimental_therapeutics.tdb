@@ -458,17 +458,17 @@
 
       implicit < status ; year ; name ; param[volume_name] ; proxy >
 
-      au < ready ; 2001 ; Molecular Interventions Volume 1 ; 1 ; reingest.lockss.org:80 >
-      au < ready ; 2002 ; Molecular Interventions Volume 2 ; 2 ; reingest.lockss.org:80 >
-      au < ready ; 2003 ; Molecular Interventions Volume 3 ; 3 ; reingest.lockss.org:80 >
-      au < ready ; 2004 ; Molecular Interventions Volume 4 ; 4 ; reingest.lockss.org:80 >
-      au < ready ; 2005 ; Molecular Interventions Volume 5 ; 5 ; reingest.lockss.org:80 >
-      au < ready ; 2006 ; Molecular Interventions Volume 6 ; 6 ; reingest.lockss.org:80 >
-      au < ready ; 2007 ; Molecular Interventions Volume 7 ; 7 ; reingest.lockss.org:80 >
-      au < ready ; 2008 ; Molecular Interventions Volume 8 ; 8 ; reingest.lockss.org:80 >
-      au < ready ; 2009 ; Molecular Interventions Volume 9 ; 9 ; reingest.lockss.org:80 >
-      au < ready ; 2010 ; Molecular Interventions Volume 10 ; 10 ; reingest.lockss.org:80 >
-      au < ready ; 2011 ; Molecular Interventions Volume 11 ; 11 ; reingest.lockss.org:80 >
+      au < releasing ; 2001 ; Molecular Interventions Volume 1 ; 1 ; reingest.lockss.org:80 >
+      au < releasing ; 2002 ; Molecular Interventions Volume 2 ; 2 ; reingest.lockss.org:80 >
+      au < releasing ; 2003 ; Molecular Interventions Volume 3 ; 3 ; reingest.lockss.org:80 >
+      au < releasing ; 2004 ; Molecular Interventions Volume 4 ; 4 ; reingest.lockss.org:80 >
+      au < releasing ; 2005 ; Molecular Interventions Volume 5 ; 5 ; reingest.lockss.org:80 >
+      au < releasing ; 2006 ; Molecular Interventions Volume 6 ; 6 ; reingest.lockss.org:80 >
+      au < releasing ; 2007 ; Molecular Interventions Volume 7 ; 7 ; reingest.lockss.org:80 >
+      au < releasing ; 2008 ; Molecular Interventions Volume 8 ; 8 ; reingest.lockss.org:80 >
+      au < releasing ; 2009 ; Molecular Interventions Volume 9 ; 9 ; reingest.lockss.org:80 >
+      au < releasing ; 2010 ; Molecular Interventions Volume 10 ; 10 ; reingest.lockss.org:80 >
+      au < releasing ; 2011 ; Molecular Interventions Volume 11 ; 11 ; reingest.lockss.org:80 >
     }
   }
 
