@@ -101,8 +101,8 @@
     param[base_url] = http://jhaponline.org/journals/
     param[journal_id] = jhap
 
-    au < manifest ; exists ; 2011-2012 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 >
-    au < manifest ; exists ; 2012-2013 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 >
+    au < crawling ; exists ; 2011-2012 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 >
+    au < crawling ; exists ; 2012-2013 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 >
     }
   }
 
@@ -121,7 +121,7 @@
     au < manifest ; exists ; 2010 ; Journal of Financial Therapy Volume 1 ; 1 ; 2010 >
     au < manifest ; exists ; 2011 ; Journal of Financial Therapy Volume 2 ; 2 ; 2011 >
     au < crawling ; exists ; 2012 ; Journal of Financial Therapy Volume 3 ; 3 ; 2012 >
-    au < manifest ; exists ; 2013 ; Journal of Financial Therapy Volume 4 ; 4 ; 2013 >
+    au < crawling ; exists ; 2013 ; Journal of Financial Therapy Volume 4 ; 4 ; 2013 >
     }
   }
 
@@ -165,7 +165,7 @@
 
     au < manifest ; exists ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; 2011 >
     au < crawling ; exists ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
-    au < manifest ; exists ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 ; 2013 >
+    au < crawling ; exists ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 ; 2013 >
     }
   }
 
