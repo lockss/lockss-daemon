@@ -10171,7 +10171,7 @@
       au < released ; crawling ; 2010 ; Feminist Theory Volume 11 ; 11 ; >
       au < released ; crawling ; 2011 ; Feminist Theory Volume 12 ; 12 ; >
       au < released ; manifest ; 2012 ; Feminist Theory Volume 13 ; 13 ; >
-      au < expected ; exists ; 2013 ; Feminist Theory Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2013 ; Feminist Theory Volume 14 ; 14 ; >
 
     }
 
@@ -38124,11 +38124,10 @@
         issnl = 2049-9361
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://tai.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Therapeutic Advances in Infectious Disease Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; Therapeutic Advances in Infectious Disease Volume 1 ; 1 ; >
 
     }
 
