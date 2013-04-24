@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.10 2013-04-22 17:13:29 barry409 Exp $
+ * $Id: VoteBlockTallier.java,v 1.11 2013-04-24 21:51:54 barry409 Exp $
  */
 
 /*
@@ -72,7 +72,6 @@ public class VoteBlockTallier {
 
   // Null if the poller does not have this URL.
   private final HashBlockComparer comparer;
-  private final V3Poller.HashIndexer hashIndexer;
 
   private final Collection<VoteBlockTally> tallies =
     new ArrayList<VoteBlockTally>();
@@ -80,10 +79,8 @@ public class VoteBlockTallier {
 
   private static final Logger log = Logger.getLogger("VoteBlockTallier");
 
-  private VoteBlockTallier(HashBlockComparer comparer,
-			   V3Poller.HashIndexer hashIndexer) {
+  private VoteBlockTallier(HashBlockComparer comparer) {
     this.comparer = comparer;
-    this.hashIndexer = hashIndexer;
   }
 
   /**
@@ -92,9 +89,8 @@ public class VoteBlockTallier {
    * method called when this VoteBlockTallier's vote() method is
    * called.
    */
-  public static VoteBlockTallier make(V3Poller.HashIndexer hashIndexer,
-				      VoteCallback... voteCallbacks) {
-    return make((HashBlockComparer)null, hashIndexer, voteCallbacks);
+  public static VoteBlockTallier make(VoteCallback... voteCallbacks) {
+    return make((HashBlockComparer)null, voteCallbacks);
   }
 
   /**
@@ -107,7 +103,7 @@ public class VoteBlockTallier {
 				      V3Poller.HashIndexer hashIndexer,
 				      VoteCallback... voteCallbacks) {
     return make(new HashBlockComparerImpl(hashBlock, hashIndexer),
-		hashIndexer, voteCallbacks);
+		voteCallbacks);
   }
 
   /**
@@ -115,23 +111,21 @@ public class VoteBlockTallier {
    */
   public static VoteBlockTallier makeForRepair(HashBlock hashBlock,
 					       V3Poller.HashIndexer hashIndexer) {
-    return makeForRepair(new HashBlockComparerImpl(hashBlock, hashIndexer), hashIndexer);
+    return makeForRepair(new HashBlockComparerImpl(hashBlock, hashIndexer));
   }
 
   // package level for testing, rather than private
-  static VoteBlockTallier makeForRepair(HashBlockComparer comparer,
-					V3Poller.HashIndexer hashIndexer) {
-    return new VoteBlockTallier(comparer, hashIndexer);
+  static VoteBlockTallier makeForRepair(HashBlockComparer comparer) {
+    return new VoteBlockTallier(comparer);
   }
 
   // package level for testing, rather than private
   static VoteBlockTallier make(HashBlockComparer comparer,
-			       V3Poller.HashIndexer hashIndexer,
 			       final VoteCallback... voteCallbacks) {
     if (voteCallbacks.length == 0) {
-      return new VoteBlockTallier(comparer, hashIndexer);
+      return new VoteBlockTallier(comparer);
     }
-    return new VoteBlockTallier(comparer, hashIndexer) {
+    return new VoteBlockTallier(comparer) {
       // In addition to tallying, inform the ParticipantUserData block
       // about each vote.
       @Override public void vote(VoteBlock voteBlock, ParticipantUserData id,

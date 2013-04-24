@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.14 2013-04-23 21:52:39 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.15 2013-04-24 21:51:54 barry409 Exp $
  */
 
 /*
@@ -299,7 +299,7 @@ final class UrlTallier {
 
     BlockTally tally = new BlockTally(quorum, voteMargin);
     VoteBlockTallier voteBlockTallier =
-      VoteBlockTallier.make(hashIndexer, makeHashStatsTallier());
+      VoteBlockTallier.make(makeHashStatsTallier());
     log.debug3("tallyVoterUrl: "+url);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.addTally(ParticipantUserData.voteTally);
