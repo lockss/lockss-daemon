@@ -169,6 +169,8 @@
       >
 
       param[journal_issn] = 1471-2326
+      
+      {
       attr[journal_code] = bmcblooddisord
 
       au < released ; 2001 ; BMC Blood Disorders Volume 1 ; 1 >
@@ -183,8 +185,16 @@
       au < released ; 2010 ; BMC Blood Disorders Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Blood Disorders Volume 11 ; 11 >
       au < manifest ; 2012 ; BMC Blood Disorders Volume 12 ; 12 >
-      au < manifest ; 2013 ; BMC Blood Disorders Volume 13 ; 13 >
+      
+      }
+      
+      {
+      attr[journal_code] = bmchematol
+      comment[journal_title] = journal name and journal code change in 2013, same issn used
 
+      au < manifest ; 2013 ; BMC Hematology Volume 13 ; 13 >
+      
+      }
     }
 
     {
