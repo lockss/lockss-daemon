@@ -4517,7 +4517,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jmolecularpsychiatry.com/
       param[journal_issn] = 2049-9256
 
-      au < expected ; exists ; 2013 ; Journal of Molecular Psychiatry Volume 1 ; 1 >
+      au < manifest ; exists ; 2013 ; Journal of Molecular Psychiatry Volume 1 ; 1 >
 
     }
 
