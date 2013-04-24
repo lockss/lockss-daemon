@@ -18,9 +18,9 @@
       param[journal_dir] = audem
       attr[journal_id] = aud
       
-      au< released ; 2010 ; AUDEM: The International Journal of Higher Education and Democracy Volume 1 ; 1 >
-      au< released ; 2011 ; AUDEM: The International Journal of Higher Education and Democracy Volume 2 ; 2 >
-      au< released ; 2012 ; AUDEM: The International Journal of Higher Education and Democracy Volume 3 ; 3 >
+      au < released ; 2010 ; AUDEM: The International Journal of Higher Education and Democracy Volume 1 ; 1 >
+      au < released ; 2011 ; AUDEM: The International Journal of Higher Education and Democracy Volume 2 ; 2 >
+      au < released ; 2012 ; AUDEM: The International Journal of Higher Education and Democracy Volume 3 ; 3 >
       au < expected ; 2013 ; AUDEM: The International Journal of Higher Education and Democracy Volume 4 ; 4 >
 
   }
@@ -37,8 +37,11 @@
     param[journal_dir] = mediaevalia
     attr[journal_id] = mdi
 
-    au< released ; 2011 ; Medaevalia Volume 32 ; 32 >
-    au< manifest ; 2012 ; Medaevalia Volume 33 ; 33 >
+    comment[v33] = manifest online, but not content present as of 04/2013
+    
+    au < released ; 2011 ; Medaevalia Volume 32 ; 32 >
+    au < notReady ; 2012 ; Medaevalia Volume 33 ; 33 >
+    au < expected ; 2013 ; Medaevalia Volume 34 ; 34 >
 
   }
 
@@ -54,8 +57,8 @@
     param[journal_dir] = palimpsest
     attr[journal_id] = pal
 
-    au< released ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1 ; 1 >
-    au< manifest ; 2013 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 2 ; 2 >
+    au < released ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1 ; 1 >
+    au < manifest ; 2013 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 2 ; 2 >
 
   }
 
