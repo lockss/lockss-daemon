@@ -18,7 +18,7 @@
       param[journal_dir] = new_formations
       attr[journal_id] = 
       
-      au< expected ; 2013 ; new formations: a journal of culture/theory/politics Volume 78 ; 78 >
+      au < expected ; 2013 ; new formations: a journal of culture/theory/politics Volume 78 ; 78 >
 
   }
 
@@ -32,7 +32,7 @@
     param[journal_dir] = soundings_a_journal_of_politics_and_culture
     attr[journal_id] = 
 
-    au< expected ; 2013 ; Soundings: A journal of politics and culture Volume 53 ; 53 >
+    au < expected ; 2013 ; Soundings: A journal of politics and culture Volume 53 ; 53 >
 
   }
 
