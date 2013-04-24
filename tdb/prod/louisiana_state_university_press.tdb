@@ -16,9 +16,9 @@
     >
 
       param[journal_dir] = southern_review
-      attr[journal_id] = 
+      attr[journal_id] = srv
       
-      au< expected ; 2013 ; Southern Review Volume 1 ; 1 >
+      au < exists ; 2013 ; Southern Review Volume 49 ; 49 >
 
   }
 
