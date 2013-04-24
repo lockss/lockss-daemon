@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.18 2013-04-18 19:49:11 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.19 2013-04-24 03:29:55 fergaloy-sf Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ import java.io.File;
 import java.net.InetAddress;
 import java.sql.BatchUpdateException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -1741,6 +1740,8 @@ public class DbManager extends BaseLockssDaemonManager
       + " set " + VERSION_COLUMN + " = ?"
       + " where " + SYSTEM_COLUMN + " = ?";
 
+  // Derby SQL state of exception thrown on successful database shutdown.
+  private static final String SHUTDOWN_SUCCESS_STATE_CODE = "08006";
 
   private boolean dbManagerEnabled = DEFAULT_DBMANAGER_ENABLED;
 
@@ -1943,7 +1944,7 @@ public class DbManager extends BaseLockssDaemonManager
 	// Check whether the Derby NetworkServerControl was successfully
 	// started.
 	if (setUp) {
-	  // Yes: Set up the authentication configuration.
+	  // Yes: Set up the authentication configuration, if necessary.
 	  try {
 	    setUp = setUpAuthentication(dataSourceUser, dataSourcePassword);
 	  } catch (SQLException sqle) {
@@ -1955,7 +1956,16 @@ public class DbManager extends BaseLockssDaemonManager
 	  }
 	}
       } else {
-	setUp = true;
+	// No: Remove the authentication configuration, if necessary.
+	try {
+	  setUp = removeAuthentication();
+	} catch (SQLException sqle) {
+	  log.error("Cannot remove Derby database authentication - "
+	      + "DbManager not ready", sqle);
+	  setUp = false;
+	  dataSource = null;
+	  return setUp;
+	}
       }
     } else {
       log.error("Could not initialize the datasource - DbManager not ready.");
@@ -2920,16 +2930,20 @@ public class DbManager extends BaseLockssDaemonManager
    */
   @Override
   public void stopService() {
-    try {
-      if (networkServerControl != null) {
-	networkServerControl.shutdown();
-      }
+    // Check whether the database was booted.
+    if (dbBooted) {
+      try {
+	// Yes: Shutdown the database.
+	shutdownDb();
 
-      // Shutdown the database.
-      shutdownDb(false, true);
-    } catch (Exception e) {
-      log.error("Cannot shutdown the database cleanly", e);
-      return;
+	// Stop the network server control, if it had been started.
+	if (networkServerControl != null) {
+	  networkServerControl.shutdown();
+	}
+      } catch (Exception e) {
+	log.error("Cannot shutdown the database cleanly", e);
+	return;
+      }
     }
 
     ready = false;
@@ -2939,55 +2953,40 @@ public class DbManager extends BaseLockssDaemonManager
   /**
    * Shuts down the Derby database.
    * 
-   * @param force
-   *          A boolean indicating whether to shutdown the database even when
-   *          the manager is not ready.
-   * @param deRegister
-   *          A boolean indicating whether to de-register the driver at
-   *          shutdown.
    * @throws SQLException
    *           if there are problems shutting down the database.
    */
-  private void shutdownDb(boolean force, boolean deRegister)
-      throws SQLException {
+  private void shutdownDb() throws SQLException {
     final String DEBUG_HEADER = "shutdownDb(): ";
-    if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "force = " + force);
-      log.debug2(DEBUG_HEADER + "deRegister = " + deRegister);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    dataSourceConfig.remove("createDatabase");
+    dataSourceConfig.put("shutdownDatabase", "shutdown");
+
+    // Check whether the datasource properties have been successfully
+    // initialized.
+    if (initializeDataSourceProperties()) {
+      // Yes: Getting a connection now it will shutdown the database.
+      try {
+	getConnectionBeforeReady();
+      } catch (SQLException sqle) {
+	// Check whether it is the expected exception.
+	if (SHUTDOWN_SUCCESS_STATE_CODE.equals(sqle.getSQLState())) {
+	  // Yes.
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "Expected exception caught", sqle);
+	} else {
+	  // No: Report the problem.
+	  log.error("Unexpected exception caught shutting down database", sqle);
+	}
+      }
+
+      log.debug(DEBUG_HEADER + "Database shutdown.");
+    } else {
+      log.error("Failed database shutdown.");
     }
 
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "dbBooted = " + dbBooted);
-
-    // Check whether the database has not been booted.
-    if (!dbBooted && !force) {
-      // Yes: Nothing to do.
-      return;
-    }
-
-    // Create the JDBC URL used to shutdown the database.
-    String shutdownUrl = "jdbc:derby://" + dataSourceConfig.get("serverName")
-	+ ":" + dataSourceConfig.get("portNumber") + "/" + dataSourceDbName;
-
-    // Check whether the embedded driver is not being used.
-    if (!"org.apache.derby.jdbc.EmbeddedDataSource"
-	.equals(dataSourceClassName)) {
-      // Yes:add the credentials to the URL.
-      shutdownUrl +=
-	  ";user=" + dataSourceUser + ";password=" + dataSourcePassword;
-    }
-
-    // Complete the URL.
-    shutdownUrl += ";shutdown=true;deregister=" + deRegister;
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "shutdownUrl = " + shutdownUrl);
-
-    try {
-      // Shut down the database.
-      DriverManager.getConnection(shutdownUrl);
-    } catch (SQLException sqle) {
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "Expected exception " + sqle);
-    }
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -3204,68 +3203,120 @@ public class DbManager extends BaseLockssDaemonManager
     }
 
     boolean success = false;
+    boolean requiresCommit = false;
     Connection conn = null;
-    Statement stmt = null;
-    ResultSet rs = null;
+    Statement statement = null;
 
     try {
       // Get a connection to the database.
       conn = getConnectionBeforeReady();
 
       // Create a statement for authentatication queries.
-      stmt = conn.createStatement();
+      statement = conn.createStatement();
 
-      // Require authentication.
-      stmt.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
-	  + "'derby.connection.requireAuthentication', 'true')");
-      rs = stmt.executeQuery("VALUES SYSCS_UTIL.SYSCS_GET_DATABASE_PROPERTY("
-	  + "'derby.connection.requireAuthentication')");
-      rs.next();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	  + "derby.connection.requireAuthentication = " + rs.getString(1));
-      DbManager.safeCloseResultSet(rs);
+      // Get the indication of whether the database requires authentication.
+      String requiresAuthentication = getDatabaseProperty(statement,
+	  "derby.connection.requireAuthentication", "false");
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "requiresAuthentication = "
+	  + requiresAuthentication);
 
-      // Use our custom Derby authentication provider.
-      stmt.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
-	  + "'derby.authentication.provider', "
-	  + "'org.lockss.db.DerbyUserAuthenticator')");
+      // Check whether it does not require authentication.
+      if ("false".equals(requiresAuthentication.trim().toLowerCase())) {
+	// Yes: Require authentication.
+	statement.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	    + "'derby.connection.requireAuthentication', 'true')");
 
-      // Prevent unauthenticated access.
-      stmt.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
-	  + "'derby.database.defaultConnectionMode', 'noAccess')");
-      rs = stmt.executeQuery("VALUES SYSCS_UTIL.SYSCS_GET_DATABASE_PROPERTY("
-	  + "'derby.database.defaultConnectionMode')");
-      rs.next();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	  + "derby.database.defaultConnectionMode = " + rs.getString(1));
-      DbManager.safeCloseResultSet(rs);
+	// Get the indication of whether the database requires authentication.
+	requiresAuthentication = getDatabaseProperty(statement,
+	    "derby.connection.requireAuthentication", "false");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "requiresAuthentication = " + requiresAuthentication);
 
-      // Allow the user full access.
-      stmt.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
-	  + "'derby.database.fullAccessUsers', '" + user + "')");
-      rs = stmt.executeQuery("VALUES SYSCS_UTIL.SYSCS_GET_DATABASE_PROPERTY("
-	  + "'derby.database.fullAccessUsers')");
-      rs.next();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	  + "derby.database.fullAccessUsers = " + rs.getString(1));
-      DbManager.safeCloseResultSet(rs);
+	requiresCommit = true;
+      }
 
-      // Confirm read-only users
-      rs = stmt.executeQuery("VALUES SYSCS_UTIL.SYSCS_GET_DATABASE_PROPERTY("
-	  + "'derby.database.readOnlyAccessUsers')");
-      rs.next();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	  + "derby.database.readOnlyAccessUsers = " + rs.getString(1));
-      DbManager.safeCloseResultSet(rs);
+      // Get the database authentication provider.
+      String authenticationProvider = getDatabaseProperty(statement,
+	  "derby.authentication.provider", "BUILTIN");
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "authenticationProvider = "
+	  + authenticationProvider);
 
-      // Allow override using system properties.
-      stmt.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
-	  + "'derby.database.propertiesOnly', 'false')");
+      // Check whether it does not use our custom Derby authentication provider.
+      if (!"org.lockss.db.DerbyUserAuthenticator"
+	  .equals(authenticationProvider.trim())) {
+	// Yes: Use our custom Derby authentication provider.
+	statement.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	    + "'derby.authentication.provider', "
+	    + "'org.lockss.db.DerbyUserAuthenticator')");
+
+	// Get the database authentication provider.
+	authenticationProvider = getDatabaseProperty(statement,
+	    "derby.authentication.provider", "BUILTIN");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "authenticationProvider = " + authenticationProvider);
+
+	requiresCommit = true;
+      }
+
+      // Get the default connection mode.
+      String defaultConnectionMode = getDatabaseProperty(statement,
+	  "derby.database.defaultConnectionMode", "fullAccess");
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "defaultConnectionMode = "
+	  + defaultConnectionMode);
+
+      // Check whether it does not prevent unauthenticated access.
+      if (!"noAccess".equals(defaultConnectionMode.trim())) {
+	// Yes: Prevent unauthenticated access.
+	statement.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	    + "'derby.database.defaultConnectionMode', 'noAccess')");
+
+	// Get the default connection mode.
+	defaultConnectionMode = getDatabaseProperty(statement,
+	    "derby.database.defaultConnectionMode", "fullAccess");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "defaultConnectionMode = "
+	    + defaultConnectionMode);
+
+	requiresCommit = true;
+      }
+
+      // Get the full access users.
+      String fullAccessUsers =
+	  getDatabaseProperty(statement, "derby.database.fullAccessUsers", "");
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "fullAccessUsers = " + fullAccessUsers);
+
+      // Check whether the user is not in the list of full access users.
+      if (fullAccessUsers.indexOf(user) < 0) {
+	// Yes: Allow the LOCKSS user full access.
+	statement.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	    + "'derby.database.fullAccessUsers', '" + user + "')");
+
+	// Get the full access users.
+	fullAccessUsers = getDatabaseProperty(statement,
+	    "derby.database.fullAccessUsers", "");
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "fullAccessUsers = " + fullAccessUsers);
+
+	requiresCommit = true;
+      }
+
+      // Get the read-only access users.
+      String readOnlyAccessUsers = getDatabaseProperty(statement,
+	  "derby.database.readOnlyAccessUsers", "");
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "readOnlyAccessUsers = "
+	  + readOnlyAccessUsers);
+
+      // Check whether changes to the database properties have been made.
+      if (requiresCommit) {
+	// Yes: Allow override using system properties.
+	statement.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	    + "'derby.database.propertiesOnly', 'false')");
+      }
 
       success = true;
     } finally {
-      DbManager.safeCloseStatement(stmt);
-      if (success) {
+      DbManager.safeCloseStatement(statement);
+      if (success && requiresCommit) {
 	try {
 	  conn.commit();
 	  DbManager.safeCloseConnection(conn);
@@ -3279,11 +3330,235 @@ public class DbManager extends BaseLockssDaemonManager
       }
     }
 
-    // Shut down the database to make static properties take effect.
-    shutdownDb(true, false);
+    // Check whether the database needs to be shut down to make static
+    // properties take effect.
+    if (success && requiresCommit) {
+      // Yes: Shut down the database.
+      shutdownDb();
+
+      // Get the datasource configuration.
+      dataSourceConfig = getDataSourceConfig();
+
+      // Recreate the datasource.
+      try {
+        dataSource = createDataSource();
+      } catch (Exception e) {
+        log.error("Cannot create the datasource - DbManager not ready", e);
+        dataSource = null;
+        return false;
+      }
+
+      // Check whether the datasource properties have been successfully
+      // initialized.
+      if (initializeDataSourceProperties()) {
+	// Yes: Restart the network server control.
+	try {
+	  if (!startNetworkServerControl()) {
+	    log.error("Could not start the network server control - "
+		+ "DbManager not ready.");
+	    dataSource = null;
+	    return false;
+	  }
+	} catch (Exception e) {
+	  log.error("Cannot enable remote access to Derby database - "
+	      + "DbManager not ready", e);
+	  dataSource = null;
+	  return false;
+	}
+      } else {
+        log.error("Could not initialize the datasource - DbManager not ready.");
+        dataSource = null;
+        return false;
+      }
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "success = " + success);
     return success;
+  }
+
+  /**
+   * Turns off user authentication and authorization.
+   * 
+   * @return a boolean with <code>true</code> if the authentication set up
+   *         succeeded, <code>false</code> otherwise.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private boolean removeAuthentication() throws SQLException {
+    final String DEBUG_HEADER = "removeAuthentication(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    boolean success = false;
+    boolean requiresCommit = false;
+    Connection conn = null;
+    Statement statement = null;
+
+    try {
+      // Get a connection to the database.
+      conn = getConnectionBeforeReady();
+
+      // Create a statement for authentication queries.
+      statement = conn.createStatement();
+
+      // Get the indication of whether the database requires authentication.
+      String requiresAuthentication = getDatabaseProperty(statement,
+	  "derby.connection.requireAuthentication", "false");
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "requiresAuthentication = "
+	  + requiresAuthentication);
+
+      // Check whether it does require authentication.
+      if ("true".equals(requiresAuthentication.trim().toLowerCase())) {
+	// Yes: Do not require authentication.
+	statement.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	    + "'derby.connection.requireAuthentication', 'false')");
+
+	// Get the indication of whether the database requires authentication.
+	requiresAuthentication = getDatabaseProperty(statement,
+	    "derby.connection.requireAuthentication", "false");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "requiresAuthentication = " + requiresAuthentication);
+
+	requiresCommit = true;
+      }
+
+      // Get the database authentication provider.
+      String authenticationProvider = getDatabaseProperty(statement,
+	  "derby.authentication.provider", "BUILTIN");
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "authenticationProvider = "
+	  + authenticationProvider);
+
+      // Check whether it does not use the built-in Derby authentication
+      // provider.
+      if (!"BUILTIN".equals(authenticationProvider.trim().toUpperCase())) {
+	// Yes: Use the built-in Derby authentication provider.
+	statement.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	    + "'derby.authentication.provider', 'BUILTIN')");
+
+	// Get the database authentication provider.
+	authenticationProvider = getDatabaseProperty(statement,
+	    "derby.authentication.provider", "BUILTIN");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "authenticationProvider = " + authenticationProvider);
+
+	requiresCommit = true;
+      }
+
+      // Get the default connection mode.
+      String defaultConnectionMode = getDatabaseProperty(statement,
+	  "derby.database.defaultConnectionMode", "fullAccess");
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "defaultConnectionMode = "
+	  + defaultConnectionMode);
+
+      // Check whether it does not allow full unauthenticated access.
+      if (!"fullAccess".equals(defaultConnectionMode.trim())) {
+	// Yes: Allow unauthenticated access.
+	statement.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	    + "'derby.database.defaultConnectionMode', 'fullAccess')");
+
+	// Get the default connection mode.
+	defaultConnectionMode = getDatabaseProperty(statement,
+	    "derby.database.defaultConnectionMode", "fullAccess");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "defaultConnectionMode = "
+	    + defaultConnectionMode);
+
+	requiresCommit = true;
+      }
+
+      // Check whether changes to the database properties have been made.
+      if (requiresCommit) {
+	// Yes: Allow override using system properties.
+	statement.executeUpdate("CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY("
+	    + "'derby.database.propertiesOnly', 'false')");
+      }
+
+      success = true;
+    } finally {
+      DbManager.safeCloseStatement(statement);
+      if (success && requiresCommit) {
+	try {
+	  conn.commit();
+	  DbManager.safeCloseConnection(conn);
+	} catch (SQLException sqle) {
+	  log.error("Exception caught committing the connection", sqle);
+	  DbManager.safeRollbackAndClose(conn);
+	  success = false;
+	}
+      } else {
+	DbManager.safeRollbackAndClose(conn);
+      }
+    }
+
+    // Check whether the database needs to be shut down to make static
+    // properties take effect.
+    if (success && requiresCommit) {
+      // Yes: Shut down the database.
+      shutdownDb();
+
+      // Get the datasource configuration.
+      dataSourceConfig = getDataSourceConfig();
+
+      // Recreate the datasource.
+      try {
+        dataSource = createDataSource();
+      } catch (Exception e) {
+        log.error("Cannot create the datasource - DbManager not ready", e);
+        dataSource = null;
+        return false;
+      }
+
+      // Check whether the datasource properties have not been successfully
+      // initialized.
+      if (!initializeDataSourceProperties()) {
+        log.error("Could not initialize the datasource - DbManager not ready.");
+        dataSource = null;
+        return false;
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "success = " + success);
+    return success;
+  }
+
+  /**
+   * Provides a database property.
+   * 
+   * @param statement
+   *          A Statement to query the database.
+   * @param propertyName
+   *          A String with the name of the requested property.
+   * @param defaultValue
+   *          A String with the default value of the requested property.
+   * @return a String with the value of the database property.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private String getDatabaseProperty(Statement statement, String propertyName,
+      String defaultValue) throws SQLException {
+    final String DEBUG_HEADER = "getDatabaseProperty(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "propertyName = " + propertyName);
+      log.debug2(DEBUG_HEADER + "defaultValue = " + defaultValue);
+    }
+
+    // Get the property.
+    ResultSet rs =
+	statement.executeQuery("VALUES SYSCS_UTIL.SYSCS_GET_DATABASE_PROPERTY("
+	    + "'" + propertyName + "')");
+    rs.next();
+    String propertyValue = rs.getString(1);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "propertyValue = " + propertyValue);
+
+    DbManager.safeCloseResultSet(rs);
+
+    // Return the default, if necessary.
+    if (propertyValue == null) {
+      propertyValue = defaultValue;
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "propertyValue = " + propertyValue);
+    return propertyValue;
   }
 
   /**
