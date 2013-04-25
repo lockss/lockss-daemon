@@ -121,7 +121,7 @@
       au < manifest ; exists ; 2010 ; Geological Society of America Bulletin Volume 122 ; 122 >
       au < released ; crawling ; 2011 ; Geological Society of America Bulletin Volume 123 ; 123 >
       au < released ; crawling ; 2012 ; Geological Society of America Bulletin Volume 124 ; 124 >
-      au < manifest ; exists ; 2013 ; Geological Society of America Bulletin Volume 125 ; 125 >
+      au < crawling ; exists ; 2013 ; Geological Society of America Bulletin Volume 125 ; 125 >
     } 
 
   }
@@ -180,7 +180,7 @@
     au < manifest ; exists ; 2010 ; Geology Volume 38 ; 38 >
     au < released ; crawling ; 2011 ; Geology Volume 39 ; 39 >
     au < released ; crawling ; 2012 ; Geology Volume 40 ; 40 >
-    au < manifest ; exists ; 2013 ; Geology Volume 41 ; 41 >
+    au < crawling ; exists ; 2013 ; Geology Volume 41 ; 41 >
 
   }
 
@@ -203,7 +203,7 @@
     au < manifest ; exists ; 2010 ; Geosphere Volume 6 ; 6 >
     au < released ; crawling ; 2011 ; Geosphere Volume 7 ; 7 >
     au < testing ; exists ; 2012 ; Geosphere Volume 8 ; 8 >
-    au < manifest ; exists ; 2013 ; Geosphere Volume 9 ; 9 >
+    au < crawling ; exists ; 2013 ; Geosphere Volume 9 ; 9 >
 
   }
 
@@ -224,7 +224,7 @@
     au < manifest ; exists ; 2010 ; Lithosphere Volume 2 ; 2 >
     au < released ; crawling ; 2011 ; Lithosphere Volume 3 ; 3 >
     au < testing ; exists ; 2012 ; Lithosphere Volume 4 ; 4 >
-    au < manifest ; exists ; 2013 ; Lithosphere Volume 5 ; 5 >
+    au < crawling ; exists ; 2013 ; Lithosphere Volume 5 ; 5 >
 
   }
 
