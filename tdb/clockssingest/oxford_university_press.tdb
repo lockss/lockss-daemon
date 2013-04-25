@@ -1691,23 +1691,24 @@
 
     param[base_url] = http://astrogeo.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-
-    au < manifest ; exists ; 1997 ; Astronomy & Geophysics Volume 38 ; 38 ; >
-    au < manifest ; exists ; 1998 ; Astronomy & Geophysics Volume 39 ; 39 ; >
-    au < manifest ; exists ; 1999 ; Astronomy & Geophysics Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2000 ; Astronomy & Geophysics Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2001 ; Astronomy & Geophysics Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2002 ; Astronomy & Geophysics Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2003 ; Astronomy & Geophysics Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2004 ; Astronomy & Geophysics Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2005 ; Astronomy & Geophysics Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2006 ; Astronomy & Geophysics Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2007 ; Astronomy & Geophysics Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2008 ; Astronomy & Geophysics Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2009 ; Astronomy & Geophysics Volume 50 ; 50 ; >
-    au < crawling ; exists ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 ; >
-    au < testing ; exists ; 2012 ; Astronomy & Geophysics Volume 53 ; 53 ; >
+    comment[notReady] = RU4706, manifest page found, but links direct to manifest page
+    
+    au < notReady ; exists ; 1997 ; Astronomy & Geophysics Volume 38 ; 38 ; >
+    au < notReady ; exists ; 1998 ; Astronomy & Geophysics Volume 39 ; 39 ; >
+    au < notReady ; exists ; 1999 ; Astronomy & Geophysics Volume 40 ; 40 ; >
+    au < notReady ; exists ; 2000 ; Astronomy & Geophysics Volume 41 ; 41 ; >
+    au < notReady ; exists ; 2001 ; Astronomy & Geophysics Volume 42 ; 42 ; >
+    au < notReady ; exists ; 2002 ; Astronomy & Geophysics Volume 43 ; 43 ; >
+    au < notReady ; exists ; 2003 ; Astronomy & Geophysics Volume 44 ; 44 ; >
+    au < notReady ; exists ; 2004 ; Astronomy & Geophysics Volume 45 ; 45 ; >
+    au < notReady ; exists ; 2005 ; Astronomy & Geophysics Volume 46 ; 46 ; >
+    au < notReady ; exists ; 2006 ; Astronomy & Geophysics Volume 47 ; 47 ; >
+    au < notReady ; exists ; 2007 ; Astronomy & Geophysics Volume 48 ; 48 ; >
+    au < notReady ; exists ; 2008 ; Astronomy & Geophysics Volume 49 ; 49 ; >
+    au < notReady ; exists ; 2009 ; Astronomy & Geophysics Volume 50 ; 50 ; >
+    au < notReady ; exists ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 ; >
+    au < notReady ; exists ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 ; >
+    au < notReady ; exists ; 2012 ; Astronomy & Geophysics Volume 53 ; 53 ; >
     au < manifest ; exists ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 ; >
 
   }
