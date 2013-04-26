@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Zoological Society of Japan
+    name = Zoological Society of Japan ;
+    info[contract] = 2013 ;
+    comment[host_name] = UniBio
   >
 
   {
