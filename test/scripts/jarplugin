@@ -35,6 +35,8 @@ while true ; do
       shift; shift; continue;;
     "-d" )
       dirs="$dirs $2"
+# in order to keep from picking up all child directories of a directory, create a specific file list
+      tardirs="$tardirs $2 $2/*\.*"
       shift; shift; continue;;
   esac
   break;
@@ -55,7 +57,8 @@ for p in $plugs; do
   echo "" >>$manifest
 done
 
-(cd $basedir; tar --create --exclude=CVS --file - $dirs) | (cd $tmpdir; tar xfBp -)
+# do not recurse below requested directory. tardirs includes the directory and all files therein (ending with an extension)
+(cd $basedir; tar --create --exclude=CVS --file - --no-recursion $tardirs) | (cd $tmpdir; tar xfBp -)
 (cd $tmpdir; jar cfm $jar $manifest .)
 
 rm $manifest
