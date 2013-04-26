@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.27 2013-04-17 15:31:47 barry409 Exp $
+ * $Id: BlockTally.java,v 1.28 2013-04-26 20:33:38 barry409 Exp $
  */
 
 /*
@@ -44,12 +44,39 @@ import org.lockss.util.Logger;
  */
 public class BlockTally implements VoteBlockTallier.VoteBlockTally {
 
+  // Note: These result categories make more sense when the
+  // publisher's content for the URL never changes.
+  /**
+   * The result of a poll on a particular block or URL. 
+   */
   public enum Result {
+    /** Not enough voters to draw a conclusion. Note that while the
+     * poll may have a quorum, if one or more voters may have
+     * unreadable VoteBlocks, and the result for this block may not have
+     * a quorum. */
     NOQUORUM("No Quorum"),
+    /**   
+     * No other result applies. The conditions are too complex to
+     * state succinctly.
+     */   
     TOO_CLOSE("Too Close"),
+    /** 
+     * The poller has this block [otherwise this would be
+     * LOST_VOTER_ONLY] and there is not a landslide of voters with no
+     * content, but not a sufficient agreement for WON.
+     */
     LOST("Lost"),
+    /** The poller has this block, and a landslide of voters do not.
+     */
     LOST_POLLER_ONLY_BLOCK("Lost - Poller-only Block"),
+    /** The poller does not have this this block, but a landslide of
+     * voters have some content for it. */
     LOST_VOTER_ONLY_BLOCK("Lost - Voter-only Block"),
+    /** For a landslide of voters, some version the poller has
+     * collected matches some version the voter has collected.  Note:
+     * This does not mean that any particular version has "lots of
+     * copies".
+     */
     WON("Won");
 
     final String printString;
@@ -82,21 +109,22 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
     this.voteMargin = voteMargin;
   }
 
-  // Interface methods to springboard to our internal methods.
-  public void voteSpoiled(ParticipantUserData id) {}
+  // Interface VoteBlockTally methods to springboard to our internal
+  // methods.
+  @Override public void voteSpoiled(ParticipantUserData id) {}
   public void voteAgreed(ParticipantUserData id) {
     addAgreeVoter(id);
   }
-  public void voteDisagreed(ParticipantUserData id) {
+  @Override public void voteDisagreed(ParticipantUserData id) {
     addDisagreeVoter(id);
   }
-  public void votePollerOnly(ParticipantUserData id) {
+  @Override public void votePollerOnly(ParticipantUserData id) {
     addPollerOnlyVoter(id);
   }
-  public void voteVoterOnly(ParticipantUserData id) {
+  @Override  public void voteVoterOnly(ParticipantUserData id) {
     addVoterOnlyVoter(id);
   }
-  public void voteNeither(ParticipantUserData id) {
+  @Override public void voteNeither(ParticipantUserData id) {
     // todo(bhayes): This is questionable.
     addAgreeVoter(id);
   }
