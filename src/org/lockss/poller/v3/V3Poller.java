@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.140 2013-04-23 21:15:37 barry409 Exp $
+ * $Id: V3Poller.java,v 1.141 2013-04-26 21:11:23 barry409 Exp $
  */
 
 /*
@@ -1276,6 +1276,7 @@ public class V3Poller extends BasePoll {
   /**
    * Tally all the voters who have this block which the poller does
    * not, consuming the block in the voters.
+   * @param voterUrl The URL being tallied.
    */
   private void tallyVoterUrl(String voterUrl) {
     log.debug3("tallyVoterUrl: "+voterUrl);
@@ -1318,14 +1319,15 @@ public class V3Poller extends BasePoll {
    * @param url The target URL.
    */
   private void signalNodeAgreement(BlockTally tally, String url) {
-    if (tally.getAgreeVoters().size() > 0) {
+    Collection<ParticipantUserData> agreeVoters = tally.getAgreeVoters();
+    if (! agreeVoters.isEmpty()) {
       try {
         RepositoryNode node = AuUtil.getRepositoryNode(getAu(), url);
         if (node == null) {
 	  // CR: throw new ShouldNotHappenException();
 	} else {
 	  Collection<PeerIdentity> agreeVoterIds = 
-	    getVotersIdentities(tally.getAgreeVoters());
+	    getVotersIdentities(agreeVoters);
           node.signalAgreement(agreeVoterIds);
 	}
       } catch (MalformedURLException ex) {
@@ -1697,6 +1699,10 @@ public class V3Poller extends BasePoll {
       repairQueue.repairFromPublisher(url);
     }
   }
+
+  // todo(bhayes): simply cutting off repairs after maxRepairs biases
+  // repairs to URL listed early. URLs which are down the list may
+  // never be repaired.
 
   // Return true iff we haven't queued more than the max allowed number of
   // repairs
