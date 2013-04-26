@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.28 2013-04-26 20:33:38 barry409 Exp $
+ * $Id: BlockTally.java,v 1.29 2013-04-26 20:35:20 barry409 Exp $
  */
 
 /*
@@ -112,7 +112,7 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
   // Interface VoteBlockTally methods to springboard to our internal
   // methods.
   @Override public void voteSpoiled(ParticipantUserData id) {}
-  public void voteAgreed(ParticipantUserData id) {
+  @Override public void voteAgreed(ParticipantUserData id) {
     addAgreeVoter(id);
   }
   @Override public void voteDisagreed(ParticipantUserData id) {
@@ -121,7 +121,7 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
   @Override public void votePollerOnly(ParticipantUserData id) {
     addPollerOnlyVoter(id);
   }
-  @Override  public void voteVoterOnly(ParticipantUserData id) {
+  @Override public void voteVoterOnly(ParticipantUserData id) {
     addVoterOnlyVoter(id);
   }
   @Override public void voteNeither(ParticipantUserData id) {
