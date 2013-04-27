@@ -18,13 +18,13 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = ecos
 
-      au < testing ; 2005 ; Ecoscience Volume 12 ; 12 >
+      au < ready ; 2005 ; Ecoscience Volume 12 ; 12 >
       au < testing ; 2006 ; Ecoscience Volume 13 ; 13 >
-      au < testing ; 2007 ; Ecoscience Volume 14 ; 14 >      
-      au < testing ; 2008 ; Ecoscience Volume 15 ; 15 >
-      au < testing ; 2009 ; Ecoscience Volume 16 ; 16 >
-      au < testing ; 2010 ; Ecoscience Volume 17 ; 17 >
-      au < testing ; 2011 ; Ecoscience Volume 18 ; 18 >
+      au < ready ; 2007 ; Ecoscience Volume 14 ; 14 >      
+      au < ready ; 2008 ; Ecoscience Volume 15 ; 15 >
+      au < ready ; 2009 ; Ecoscience Volume 16 ; 16 >
+      au < ready ; 2010 ; Ecoscience Volume 17 ; 17 >
+      au < ready ; 2011 ; Ecoscience Volume 18 ; 18 >
       au < exists ; 2012 ; Ecoscience Volume 19 ; 19 >
       au < expected ; 2013 ; Ecoscience Volume 20 ; 20 >
       
