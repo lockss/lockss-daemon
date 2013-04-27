@@ -34,7 +34,6 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.genetics.org/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[notReady] = low agreement, similar case as RU4503
 
     au < released ; 1916 ; Genetics Volume 1 ; 1 >
     au < released ; 1917 ; Genetics Volume 2 ; 2 >
@@ -225,7 +224,7 @@
     au < released ; 2011 ; Genetics Volume 187 ; 187 >
     au < released ; 2011 ; Genetics Volume 188 ; 188 >
     au < released ; 2011 ; Genetics Volume 189 ; 189 >
-    au < notReady ; 2012 ; Genetics Volume 190 ; 190 >
+    au < ready ; 2012 ; Genetics Volume 190 ; 190 >
     au < released ; 2012 ; Genetics Volume 191 ; 191 >
     au < released ; 2012 ; Genetics Volume 192 ; 192 >
     au < manifest ; 2013 ; Genetics Volume 193 ; 193 >
