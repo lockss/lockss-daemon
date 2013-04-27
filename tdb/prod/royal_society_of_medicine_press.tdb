@@ -770,11 +770,12 @@
       issnl = 0141-0768
     >
 
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
     {
 
-      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jrsm.rsmjournals.com/
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressPlugin ; down ; 1965 ; Journal of the Royal Society of Medicine Volume 58 [superseded] ; 58 >
       au < HighWirePressPlugin ; down ; 1966 ; Journal of the Royal Society of Medicine Volume 59 [superseded] ; 59 >
@@ -823,8 +824,62 @@
       au < HighWirePressPlugin ; down ; 2009 ; Journal of the Royal Society of Medicine Volume 102 [superseded] ; 102 >
       au < HighWirePressPlugin ; down ; 2010 ; Journal of the Royal Society of Medicine Volume 103 [superseded] ; 103 >
       au < HighWirePressPlugin ; down ; 2011 ; Journal of the Royal Society of Medicine Volume 104 [superseded] ; 104 >
-      au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Journal of the Royal Society of Medicine Volume 105 ; 105 >
-      au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the Royal Society of Medicine Volume 106 ; 106 >
+
+    }
+
+    {
+
+      param[base_url] = http://jrs.sagepub.com/
+
+      au < HighWirePressH20Plugin ; doNotProcess ; 1965 ; Journal of the Royal Society of Medicine Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1966 ; Journal of the Royal Society of Medicine Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1967 ; Journal of the Royal Society of Medicine Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1968 ; Journal of the Royal Society of Medicine Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1969 ; Journal of the Royal Society of Medicine Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1970 ; Journal of the Royal Society of Medicine Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1971 ; Journal of the Royal Society of Medicine Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1972 ; Journal of the Royal Society of Medicine Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1973 ; Journal of the Royal Society of Medicine Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1974 ; Journal of the Royal Society of Medicine Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1975 ; Journal of the Royal Society of Medicine Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1976 ; Journal of the Royal Society of Medicine Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1977 ; Journal of the Royal Society of Medicine Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1978 ; Journal of the Royal Society of Medicine Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; Journal of the Royal Society of Medicine Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; Journal of the Royal Society of Medicine Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; Journal of the Royal Society of Medicine Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; Journal of the Royal Society of Medicine Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; Journal of the Royal Society of Medicine Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; Journal of the Royal Society of Medicine Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; Journal of the Royal Society of Medicine Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; Journal of the Royal Society of Medicine Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1987 ; Journal of the Royal Society of Medicine Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1988 ; Journal of the Royal Society of Medicine Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1989 ; Journal of the Royal Society of Medicine Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1990 ; Journal of the Royal Society of Medicine Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; Journal of the Royal Society of Medicine Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; Journal of the Royal Society of Medicine Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; Journal of the Royal Society of Medicine Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1994 ; Journal of the Royal Society of Medicine Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; Journal of the Royal Society of Medicine Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; Journal of the Royal Society of Medicine Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; Journal of the Royal Society of Medicine Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Journal of the Royal Society of Medicine Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Journal of the Royal Society of Medicine Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Journal of the Royal Society of Medicine Volume 93 ; 93 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Journal of the Royal Society of Medicine Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Journal of the Royal Society of Medicine Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Journal of the Royal Society of Medicine Volume 96 ; 96 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Journal of the Royal Society of Medicine Volume 97 ; 97 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of the Royal Society of Medicine Volume 98 ; 98 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of the Royal Society of Medicine Volume 99 ; 99 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Journal of the Royal Society of Medicine Volume 100 ; 100 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Journal of the Royal Society of Medicine Volume 101 ; 101 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Journal of the Royal Society of Medicine Volume 102 ; 102 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of the Royal Society of Medicine Volume 103 ; 103 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of the Royal Society of Medicine Volume 104 ; 104 >
+      au < HighWirePressH20Plugin ; exists ; 2012 ; Journal of the Royal Society of Medicine Volume 105 ; 105 >
+      au < HighWirePressH20Plugin ; exists ; 2013 ; Journal of the Royal Society of Medicine Volume 106 ; 106 >
 
     }
 
@@ -852,15 +907,29 @@
       name = JRSM Short Reports ;
       eissn = 2042-5333
     >
+    
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    param[base_url] = http://shortreports.rsmjournals.com/
-    implicit < status ; year ; name ; param[volume_name] >
+    {
+    
+      param[base_url] = http://shortreports.rsmjournals.com/
 
-    au < released ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
-    au < released ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
-    au < doNotProcess ; 2012 ; JRSM Short Reports Volume 3 ; 3 >
-    au < manifest ; 2013 ; JRSM Short Reports Volume 4 ; 4 >
+      au < down ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
+      au < down ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
+    
+    }
+
+    {
+    
+      param[base_url] = http://shr.sagepub.com/
+
+      au < doNotProcess ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
+      au < doNotProcess ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
+      au < exists ; 2012 ; JRSM Short Reports Volume 3 ; 3 >
+      au < exists ; 2013 ; JRSM Short Reports Volume 4 ; 4 >
+    
+    }
 
   }
 
