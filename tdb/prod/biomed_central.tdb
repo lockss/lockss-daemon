@@ -3159,7 +3159,7 @@
         au < doNotProcess ; 2009 ; Epidemiologic Perspectives & Innovations Volume 6 ; 6 >
         au < doNotProcess ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 >
         au < doNotProcess ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 ; 8 >
-        au < exists ; 2012 ; Epidemiologic Perspectives & Innovations Volume 9 ; 9 >
+        au < manifest ; 2012 ; Epidemiologic Perspectives & Innovations Volume 9 ; 9 >
       
       }
       
@@ -4576,7 +4576,7 @@
       param[base_url] = http://www.jmolecularpsychiatry.com/
       param[journal_issn] = 2049-9256
 
-      au < expected ; 2013 ; Journal of Molecular Psychiatry Volume 1 ; 1 >
+      au < manifest ; 2013 ; Journal of Molecular Psychiatry Volume 1 ; 1 >
 
     }
 
@@ -4836,7 +4836,7 @@
       param[base_url] = http://www.jtultrasound.com/
       param[journal_issn] = 2050-5736
 
-      au < expected ; 2013 ; Journal of Therapeutic Ultrasound Volume 1 ; 1 >
+      au < manifest ; 2013 ; Journal of Therapeutic Ultrasound Volume 1 ; 1 >
 
     }
 
