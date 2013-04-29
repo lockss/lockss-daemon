@@ -17,9 +17,8 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = ursu
-      comment[notReady] = low agreement, div class="articleDivider" used
   
-      au < notReady ; 2004 ; Ursus Volume 15 ; 15 >
+      au < ready ; 2004 ; Ursus Volume 15 ; 15 >
       au < released ; 2005 ; Ursus Volume 16 ; 16 >
       au < released ; 2006 ; Ursus Volume 17 ; 17 >
       au < released ; 2007 ; Ursus Volume 18 ; 18 >
