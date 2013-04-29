@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkBookMetadataExtractorFactory.java,v 1.4 2013-04-11 22:17:21 alexandraohlson Exp $
+ * $Id: SpringerLinkBookMetadataExtractorFactory.java,v 1.5 2013-04-29 23:26:25 pgust Exp $
  */
 
 /*
@@ -70,7 +70,8 @@ public class SpringerLinkBookMetadataExtractorFactory
 			Pattern.compile("(.*Volume [\\d]+(,|/) ?)([\\d]+)(, )?(<span class=\".*)"),
 			Pattern.compile("(.*Volume )([\\d]+)((,|/) ?[\\d]+(, )?<span class=\".*)"),
 			Pattern.compile("(.*DOI:</span> <span class=\"value\">)([^<]+)(</span>.*)"),
-			Pattern.compile("(.*DOI:</span> <span class=\"value\">[^/]+/)([^<]+)(</span>.*)"),
+			Pattern.compile("(.*DOI:</span> <span class=\"value\">[^/]+/)([0-9-Xx]+)(.*</span>.*)"),
+                        Pattern.compile("(.*DOI:</span> <span class=\"value\">[^/]+/[0-9-Xx]+)_([0-9]+)(</span>.*)"),
 			Pattern.compile("(.*<span class=\"subtitle\">)([^<]+)(</span>.*)"),
 			Pattern.compile("(</h1><p class=\"authors\">)(<a[^>]+>)([^<]+)(</a>([^<]+)?)"),
 			Pattern.compile("(.*title=\"Link to the Book of this Chapter\">)([^<]+)(</a>.*)"),
@@ -81,7 +82,8 @@ public class SpringerLinkBookMetadataExtractorFactory
 			MetadataField.FIELD_DATE,
 			MetadataField.FIELD_VOLUME,
 			MetadataField.FIELD_DOI,
-			MetadataField.FIELD_ISBN,
+			MetadataField.FIELD_EISBN,
+                        MetadataField.FIELD_ITEM_NUMBER,
 			MetadataField.FIELD_ARTICLE_TITLE,
 			MetadataField.FIELD_AUTHOR,
 			MetadataField.FIELD_JOURNAL_TITLE,
@@ -92,6 +94,7 @@ public class SpringerLinkBookMetadataExtractorFactory
 			"$3",
 			"$2",
 			"$2",
+                        "$2",
 			"$2",
 			"$2",
 			"multiples",
@@ -155,7 +158,7 @@ public class SpringerLinkBookMetadataExtractorFactory
 
     	for(int i = 0; i < metadataFields.length; ++i) {
     	  if(metadataValues[i] != null) {
-    	    if ((MetadataField.FIELD_ISBN).equals(metadataFields[i])) {
+    	    if ((MetadataField.FIELD_EISBN).equals(metadataFields[i])) {
     	      /* special case for ISBN which is not always the 2nd half of DOI
     	       * and if a bad ISBN goes through it will cause an exception to get thrown
     	       */
