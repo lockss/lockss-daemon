@@ -1,5 +1,5 @@
 /*
- * $Id: TestSiamArticleIteratorFactory.java,v 1.1 2013-04-19 22:49:43 alexandraohlson Exp $
+ * $Id: TestSiamArticleIteratorFactory.java,v 1.2 2013-04-29 22:29:09 thib_gc Exp $
  */
 
 /*
@@ -194,8 +194,8 @@ public class TestSiamArticleIteratorFactory extends ArticleIteratorTestCase {
 
     log.debug("Article count is " + count);
     assertEquals(expCount, count);
-    // You'll get an Article count if you have an ABS and/or a PDF, but not if you have neither
-    assertEquals(15, countFullText);
+    // Not considered full text if you only have an abstract
+    assertEquals(14, countFullText);
 }
 
 private void deleteBlock(CachedUrl cu) throws IOException {
