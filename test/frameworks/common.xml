@@ -215,6 +215,7 @@
 		<value>org.lockss.plugin.americansocietyofcivilengineers.ClockssAmericanSocietyOfCivilEngineersSourcePlugin</value>
 		<value>edu.auburn.adpn.directory.AuburnDirectoryPlugin</value>
 		<value>ca.sfu.lib.plugin.contentdm.ContentDmFrontEndPlugin</value>
+		<value>ca.sfu.lib.plugin.contentdm.LockssdmPlugin</value>
 	    <value>org.lockss.plugin.iop.ClockssIOPSciencePlugin</value>
 	    <value>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin</value>
 	    <value>org.lockss.plugin.pion.ClockssPionPlugin</value>
