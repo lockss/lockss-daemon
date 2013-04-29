@@ -18,8 +18,10 @@
       param[journal_id] = jore
       comment[bad_aus] = Bogus AUs for volumes 3 and 4  
 
-      au < manifest ; 2010 ; Journal of Resources and Ecology Volume 1 ; 1 >
-      au < manifest ; 2011 ; Journal of Resources and Ecology Volume 2 ; 2 >
+      au < testing ; 2010 ; Journal of Resources and Ecology Volume 1 ; 1 >
+      au < testing ; 2011 ; Journal of Resources and Ecology Volume 2 ; 2 >
+      au < testing ; 2012 ; Journal of Resources and Ecology Volume 3 ; 3 >
+      au < exists ; 2013 ; Journal of Resources and Ecology Volume 4 ; 4 >
 
     }
 
