@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldHtmlFilterFactory.java,v 1.11 2013-04-15 22:06:56 thib_gc Exp $ 
+ * $Id: EmeraldHtmlFilterFactory.java,v 1.12 2013-04-29 20:21:08 thib_gc Exp $ 
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.plugin.emerald;
 import java.io.*;
 import java.util.List;
 
-import org.apache.pdfbox.io.IOUtils;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.*;
@@ -135,6 +134,7 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("head"),
         // Changing scripts
         new TagNameFilter("script"),
+        new TagNameFilter("noscript"),
         // <br> vs. <br />
         new TagNameFilter("br"),
         // <img> vs. <img />
@@ -144,7 +144,8 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
         // Has number of article download in row
         HtmlNodeFilters.tagWithAttribute("td", "headers", "tocopy"),
         // Has related articles download list
-        HtmlNodeFilters.tagWithAttribute("td", "headers", "releatedlist"),
+        HtmlNodeFilters.tagWithAttribute("td", "headers", "releatedlist"), // Typo?
+        HtmlNodeFilters.tagWithAttribute("td", "headers", "relatedlist"),
         // Alternate related articles download list
         HtmlNodeFilters.tagWithAttribute("table", "class", "articlePrintTable"),
         // Added later
