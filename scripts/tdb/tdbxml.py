@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.35 2013-04-01 13:03:07 pgust Exp $
+# $Id: tdbxml.py,v 1.36 2013-04-29 19:52:46 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.7'
+__version__ = '0.4.8'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -77,13 +77,15 @@ def __escape(str):
     return saxutils.escape(str).replace('"', '&quot;').decode('utf-8').encode('ascii', 'xmlcharrefreplace')
 
 RE_VOLUME = re.compile(r'Volume\s+(\S+)$')
-REPL = [(re.compile(r'Á|À|Â|Ä|̣Ā'), 'A'),
-        (re.compile(r'á|à|â|ä|ā'), 'a'),
+REPL = [(re.compile(r'Á|À|Â|Ä|̣Ā|Ã'), 'A'),
+        (re.compile(r'á|à|â|ä|ā|ã'), 'a'),
         (re.compile(r'æ'), 'ae'),
-        (re.compile(r'É|È|Ê|Ë|Ē'), 'E'),
-        (re.compile(r'é|è|ê|ë|ē'), 'e'),
-        (re.compile(r'Í|Ì|Î|Ï|Ī'), 'I'),
-        (re.compile(r'í|ì|î|ï|ī'), 'i'),
+        (re.compile(r'Ç'), 'c'),
+        (re.compile(r'ç'), 'c'),
+        (re.compile(r'É|È|Ê|Ë|Ē|Ẽ'), 'E'),
+        (re.compile(r'é|è|ê|ë|ē|ẽ'), 'e'),
+        (re.compile(r'Í|Ì|Î|Ï|Ī|Ĩ'), 'I'),
+        (re.compile(r'í|ì|î|ï|ī|ĩ'), 'i'),
         (re.compile(r'Ş'), 'S'),
         (re.compile(r'ş'), 's'),
         (re.compile(r'Ž'), 'Z'),
