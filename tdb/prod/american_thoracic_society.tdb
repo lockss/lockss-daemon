@@ -144,8 +144,6 @@
     >
 
     param[base_url] = http://pats.atsjournals.org/
-    comment[8] = multiple can't fetch permission 500 errors
-    comment[9] = need permissions
 
     au < released ; 2004 ; Proceedings of the American Thoracic Society Volume 1 ; 1 >
     au < released ; 2005 ; Proceedings of the American Thoracic Society Volume 2 ; 2 >
@@ -154,8 +152,8 @@
     au < released ; 2008 ; Proceedings of the American Thoracic Society Volume 5 ; 5 >
     au < released ; 2009 ; Proceedings of the American Thoracic Society Volume 6 ; 6 >
     au < released ; 2010 ; Proceedings of the American Thoracic Society Volume 7 ; 7 >
-    au < notReady ; 2011 ; Proceedings of the American Thoracic Society Volume 8 ; 8 >
-    au < notReady ; 2012 ; Proceedings of the American Thoracic Society Volume 9 ; 9 >
+    au < testing ; 2011 ; Proceedings of the American Thoracic Society Volume 8 ; 8 >
+    au < testing ; 2012 ; Proceedings of the American Thoracic Society Volume 9 ; 9 >
     au < manifest ; 2013 ; Proceedings of the American Thoracic Society Volume 10 ; 10 >
 
   }
