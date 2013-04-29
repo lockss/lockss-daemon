@@ -23,7 +23,7 @@
     param[publisher_id] = igsoc
     param[journal_id] = agl 
     param[journal_issn] = 0260-3055
-    comment[notReady] = low agreement, different pdf fontname used
+    comment[notReady] = RU4507 different pdf fontname used
 
     au < manifest; 1981 ; Annals of Glaciology Volume 2 ; 2 >
     au < released ; 1994 ; Annals of Glaciology Volume 20 ; 20 >
@@ -71,6 +71,7 @@
     param[publisher_id] = igsoc
     param[journal_id] = jog 
     param[journal_issn] = 0022-1430
+    comment[notReady] = RU4507, fontname issue
 
     au < released ; 1949 ; Journal of Glaciology Volume 1 ; 1 >
     au < released ; 1954-1956 ; Journal of Glaciology Volume 2 ; 2 >
@@ -127,7 +128,7 @@
     au < ready ; 2007 ; Journal of Glaciology Volume 53 ; 53 >
     au < ready ; 2008 ; Journal of Glaciology Volume 54 ; 54 >
     au < ready ; 2009 ; Journal of Glaciology Volume 55 ; 55 >
-    au < notReady ; 2010 ; Journal of Glaciology Volume 56 ; 56 >
+    au < ready ; 2010 ; Journal of Glaciology Volume 56 ; 56 >
     au < notReady ; 2011 ; Journal of Glaciology Volume 57 ; 57 >
     au < ready ; 2012 ; Journal of Glaciology Volume 58 ; 58 >
     au < manifest ; 2013 ; Journal of Glaciology Volume 59 ; 59 >
