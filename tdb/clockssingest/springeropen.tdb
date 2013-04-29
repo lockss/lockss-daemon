@@ -2110,7 +2110,7 @@
     {
   
         title <
-          name = SERIEs ;
+          name = SERIEs: Journal of the Spanish Economic Association ;
           issn = 1869-4187 ;
           eissn = 1869-4195
         >
@@ -2119,10 +2119,10 @@
         param[journal_issn] = 1869-4187
         comment[platform] = Springer
   
-        au < exists ; exists ; 2010 ; SERIEs Volume 1 ; 1 >
-        au < exists ; exists ; 2011 ; SERIEs Volume 2 ; 2 >
-        au < exists ; exists ; 2012 ; SERIEs Volume 3 ; 3 >
-        au < expected ; exists ; 2013 ; SERIEs Volume 4 ; 4 >
+        au < exists ; exists ; 2010 ; SERIEs: Journal of the Spanish Economic Association Volume 1 ; 1 >
+        au < exists ; exists ; 2011 ; SERIEs: Journal of the Spanish Economic Association Volume 2 ; 2 >
+        au < exists ; exists ; 2012 ; SERIEs: Journal of the Spanish Economic Association Volume 3 ; 3 >
+        au < expected ; exists ; 2013 ; SERIEs: Journal of the Spanish Economic Association Volume 4 ; 4 >
   
     }
   
