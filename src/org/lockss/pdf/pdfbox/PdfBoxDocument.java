@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxDocument.java,v 1.6 2013-02-28 01:55:28 thib_gc Exp $
+ * $Id: PdfBoxDocument.java,v 1.7 2013-04-29 20:11:44 thib_gc Exp $
  */
 
 /*
@@ -239,7 +239,7 @@ public class PdfBoxDocument implements PdfDocument {
      */
     List<PdfPage> ret = new ArrayList<PdfPage>();
     for (Object obj : pdDocument.getDocumentCatalog().getAllPages()) {
-      ret.add(new PdfBoxPage(PdfBoxDocument.this, (PDPage)obj));
+      ret.add(new PdfBoxPage(this, (PDPage)obj));
     }
     return ret;
   }
