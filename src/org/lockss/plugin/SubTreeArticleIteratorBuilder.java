@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIteratorBuilder.java,v 1.2 2013-03-30 01:54:52 thib_gc Exp $
+ * $Id: SubTreeArticleIteratorBuilder.java,v 1.3 2013-04-29 20:23:17 thib_gc Exp $
  */
 
 /*
@@ -510,6 +510,7 @@ public class SubTreeArticleIteratorBuilder {
             if (isDebug2) {
               logger.debug2("Overriding full text CU");
             }
+            af.setFullTextCu(null);
             for (String role : rolesForFullText) {
               CachedUrl foundCu = af.getRoleCu(role);
               if (foundCu != null) {
