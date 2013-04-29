@@ -529,7 +529,6 @@
     >
 
     param[journal_id] = cr
-    comment[notReady] = fetch error RT 4106
 
     au < manifest ; exists ; 1999 ; Cell Research Volume 9 ; 1999 ; 9 >
     au < manifest ; exists ; 2000 ; Cell Research Volume 10 ; 2000 ; 10 >
@@ -544,7 +543,7 @@
     au < zapped ; down ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
     au < released ; crawling ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 >
     au < released ; crawling ; 2011 ; Cell Research Volume 21 ; 2011 ; 21 >
-    au < testing ; exists ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 >
+    au < released ; manifest ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 >
     au < crawling ; exists ; 2013 ; Cell Research Volume 23 ; 2013 ; 23 >
 
   }
@@ -578,9 +577,9 @@
     >
 
     param[journal_id] = ctg
-    comment[notReady] = 404 error
+    comment[notReady] = no substance
 
-    au < testing ; exists ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 >
+    au < notReady ; exists ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 >
     au < testing ; exists ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 >
     au < released ; manifest ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 >
     au < exists ; exists ; 2013 ; Clinical and Translational Gastroenterology Volume 4 ; 2013 ; 4 >
