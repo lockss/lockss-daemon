@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.9 2013-03-08 02:06:01 thib_gc Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.10 2013-04-29 20:19:46 thib_gc Exp $
  */ 
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.ingenta;
 
 import java.io.*;
-import java.util.List;
+import java.util.*;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.pdf.*;
@@ -41,8 +41,7 @@ import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class IngentaPdfFilterFactory
-    implements FilterFactory, PdfTransform<PdfDocument> {
+public class IngentaPdfFilterFactory implements FilterFactory {
 
   /**
    * An enum for publisher IDs used by Ingenta. 
@@ -70,41 +69,11 @@ public class IngentaPdfFilterFactory
 
   private static final Logger logger = Logger.getLogger(IngentaPdfFilterFactory.class);
   
-  protected PdfDocumentFactory pdfDocumentFactory;
   private FilterFactory normFiltFact = new NormalizingPdfFilterFactory();
   private FilterFactory normExtractFiltFact = new NormalizingExtractingPdfFilterFactory();
+  private FilterFactory maneyFiltFact = new ManeyPublishingPdfFilterFactory();
   private FilterFactory paafFiltFact = new PacificAffairsPdfFilterFactory();
   private FilterFactory whpFiltFact = new WhiteHorsePressPdfFilterFactory();
-  
-  /**
-   * <p>
-   * Makes an instance using {@link DefaultPdfDocumentFactory}.
-   * </p>
-   * @since 1.56
-   * @see DefaultPdfDocumentFactory
-   */
-  public IngentaPdfFilterFactory() {
-    this(DefaultPdfDocumentFactory.getInstance());
-  }
-  
-  /**
-   * <p>
-   * Makes an instance using the given PDF document factory.
-   * </p>
-   * @param pdfDocumentFactory A PDF document factory.
-   * @since 1.56
-   */
-  public IngentaPdfFilterFactory(PdfDocumentFactory pdfDocumentFactory) {
-    this.pdfDocumentFactory = pdfDocumentFactory;
-  }
-  /**
-   * This Transform method is not used
-   */
-  @Override
-  public void transform(ArchivalUnit au,
-                        PdfDocument pdfDocument)
-      throws PdfException {
-  }
   
   protected static class WhiteHorsePressPdfFilterFactory extends SimplePdfFilterFactory {
                                       
@@ -142,36 +111,32 @@ public class IngentaPdfFilterFactory
         switch (state) {
           
           case 0: {
-            // FIXME 1.60
-            if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) {
+            if (isEndTextObject()) {
               endIndex = getIndex();
               ++state; 
             }
           } break;
           
           case 1: {
-            // FIXME 1.60
-            if (PdfOpcodes.SHOW_TEXT.equals(getOpcode())
-                && getTokens().get(getIndex() - 1).getString().endsWith(" = Date & Time")) {
+            if (isShowTextEndsWith(" = Date & Time")) {
               ++state;
             }
-            // FIXME 1.60
-            else if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { stop(); }
+            else if (isBeginTextObject()) {
+              stop();
+            }
           } break;
           
           case 2: {
-            // FIXME 1.60
-            if (PdfOpcodes.SHOW_TEXT.equals(getOpcode())
-                && getTokens().get(getIndex() - 1).getString().endsWith(" = IP address")) {
+            if (isShowTextEndsWith(" = IP address")) {
               ++state;
             }
-            // FIXME 1.60
-            else if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { stop(); }
+            else if (isBeginTextObject()) {
+              stop();
+            }
           } break;
           
           case 3: {
-            // FIXME 1.60
-            if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) {
+            if (isBeginTextObject()) {
               beginIndex = getIndex();
               result = true;
               stop(); 
@@ -196,10 +161,100 @@ public class IngentaPdfFilterFactory
     public void transform(ArchivalUnit au,
                           PdfDocument pdfDocument)
         throws PdfException {
-      pdfDocument.unsetCreationDate();
-      pdfDocument.unsetModificationDate();
-      PdfUtil.normalizeTrailerId(pdfDocument);
+      doNormalizeMetadata(pdfDocument);
       WhiteHorsePressWorker worker = new WhiteHorsePressWorker();
+      for (PdfPage pdfPage : pdfDocument.getPages()) {
+        PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
+        worker.process(pdfTokenStream);
+        if (worker.result) {
+          List<PdfToken> tokens = pdfTokenStream.getTokens();
+          tokens.subList(worker.beginIndex, worker.endIndex).clear();
+          pdfTokenStream.setTokens(tokens);
+        }
+      }
+    }
+    
+  }
+  
+  protected static class ManeyPublishingPdfFilterFactory extends ExtractingPdfFilterFactory {
+    
+    protected static class ManeyPublishingWorker extends PdfTokenStreamWorker {
+      
+      protected boolean result;
+      
+      protected int beginIndex;
+      
+      protected int endIndex;
+      
+      protected int state;
+      
+      public ManeyPublishingWorker() {
+        super(Direction.BACKWARD);
+      }
+      
+      @Override
+      public void setUp() throws PdfException {
+        super.setUp();
+        this.state = 0;
+        this.result = false;
+        this.beginIndex = -1;
+        this.endIndex = -1;
+      }
+      
+      @Override
+      public void operatorCallback() throws PdfException {
+        if (logger.isDebug3()) {
+          logger.debug3("ManeyPublishingWorker: initial: " + state);
+          logger.debug3("ManeyPublishingWorker: index: " + getIndex());
+          logger.debug3("ManeyPublishingWorker: operator: " + getOpcode());
+        }
+        
+        switch (state) {
+          
+          case 0: {
+            if (isEndTextObject()) {
+              endIndex = getIndex();
+              ++state; 
+            }
+          } break;
+          
+          case 1: {
+            if (isShowTextStartsWith("Published by Maney Publishing")) {
+              ++state;
+            }
+            else if (isBeginTextObject()) {
+              stop();
+            }
+          } break;
+          
+          case 2: {
+            if (isBeginTextObject()) {
+              beginIndex = getIndex();
+              result = true;
+              stop(); 
+            }
+          } break;
+          
+          default: {
+            throw new PdfException("Invalid state in ManeyPublishingWorker: " + state);
+          }
+      
+        }
+      
+        if (logger.isDebug3()) {
+          logger.debug3("ManeyPublishingWorker: final: " + state);
+          logger.debug3("ManeyPublishingWorker: result: " + result);
+        }
+        
+      }
+      
+    }
+    
+    public void transform(ArchivalUnit au,
+                          PdfDocument pdfDocument)
+        throws PdfException {
+      doNormalizeMetadata(pdfDocument);
+      ManeyPublishingWorker worker = new ManeyPublishingWorker();
       for (PdfPage pdfPage : pdfDocument.getPages()) {
         PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
         worker.process(pdfTokenStream);
@@ -216,8 +271,80 @@ public class IngentaPdfFilterFactory
    * Filter factory for each different transform because some publisher transforms are
    * simple transforms and some extracting.
    */
-  private class PacificAffairsPdfFilterFactory extends SimplePdfFilterFactory {
-  					
+  private static class PacificAffairsPdfFilterFactory extends SimplePdfFilterFactory {
+
+    public static class DeliveredByWorkerTransform extends PdfTokenStreamWorker {
+
+      private boolean result;
+
+      private int state;
+
+      private int beginIndex;
+
+      private int endIndex;
+
+      public DeliveredByWorkerTransform() {
+        super(Direction.BACKWARD);
+      }
+
+      @Override
+      public void setUp() throws PdfException {
+        super.setUp();
+        this.state = 0;
+        this.result = false;
+        this.beginIndex = -1;
+        this.endIndex = -1;
+      }
+      
+      @Override
+      public void operatorCallback()
+          throws PdfException {
+        if (logger.isDebug3()) {
+          logger.debug3("DeliveredByWorkerTransform: initial: " + state);
+          logger.debug3("DeliveredByWorkerTransform: index: " + getIndex());
+          logger.debug3("DeliveredByWorkerTransform: operator: " + getOpcode());
+        }
+
+        switch (state) {
+
+        case 0: {
+          if (isRestoreGraphicsState()) {
+            endIndex = getIndex();
+            ++state; 
+          }
+        } break;
+
+        case 1: {
+          if (isShowTextMatches("\\s*Delivered by .* to: .*")) {
+            ++state;
+          }
+          else if (isRestoreGraphicsState()) {
+            stop();
+          }
+        } break;
+
+        case 2: {
+          if (isSaveGraphicsState()) {
+            beginIndex = getIndex();
+            result = true;
+            stop(); 
+          }
+        } break;
+
+        default: {
+          throw new PdfException("Invalid state in DeliveredByWorkerTransform: " + state);
+        }
+
+        }
+
+        if (logger.isDebug3()) {
+          logger.debug3("DeliveredByWorkerTransform: final: " + state);
+          logger.debug3("DeliveredByFromWorkerTransform: result: " + result);
+        }
+      }
+
+    }
+
     public void transform(ArchivalUnit au,
                                  PdfDocument pdfDocument)
         throws PdfException {
@@ -227,7 +354,9 @@ public class IngentaPdfFilterFactory
         PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
         worker.process(pdfTokenStream);
         if (worker.result) {
-          worker.transform(au, pdfTokenStream);
+          List<PdfToken> tokens = pdfTokenStream.getTokens();
+          tokens.subList(worker.beginIndex, worker.endIndex).clear();
+          pdfTokenStream.setTokens(tokens);
         }
       }
       doNormalizeMetadata(pdfDocument);
@@ -252,8 +381,8 @@ public class IngentaPdfFilterFactory
     }
   }
   
-  public void doNormalizeMetadata(PdfDocument pdfDocument)
-      				    throws PdfException {
+  public static void doNormalizeMetadata(PdfDocument pdfDocument)
+      throws PdfException {
     pdfDocument.unsetCreationDate();
     pdfDocument.unsetModificationDate();
     pdfDocument.unsetMetadata();
@@ -277,8 +406,11 @@ public class IngentaPdfFilterFactory
       case ARN:
 	return normExtractFiltFact.createFilteredInputStream(au, in, encoding);
 	
-      case BERGHAHN: case LSE: case WAB: case MANEY: case MANUP: case UNKNOWN:
+      case BERGHAHN: case LSE: case MANUP: case WAB: case UNKNOWN:
 	return normFiltFact.createFilteredInputStream(au, in, encoding);
+	
+      case MANEY:
+        return maneyFiltFact.createFilteredInputStream(au, in, encoding);
 	
       case PAAF:
 	return paafFiltFact.createFilteredInputStream(au, in, encoding);
@@ -288,92 +420,6 @@ public class IngentaPdfFilterFactory
      
       default:
 	return in;
-    }
-  }
-  
-  public static class DeliveredByWorkerTransform
-      extends PdfTokenStreamWorker
-      implements PdfTransform<PdfTokenStream> {
-    
-    public static final String DELIVERED_BY_REGEX = "\\s*Delivered by .* to: .*";
-    
-    private boolean result;
-    
-    private int state;
-    
-    private int endIndex;
-    
-    public DeliveredByWorkerTransform() {
-      super(Direction.BACKWARD);
-    }
-    
-    @Override
-    public void operatorCallback()
-        throws PdfException {
-      if (logger.isDebug3()) {
-        logger.debug3("DeliveredByWorkerTransform: initial: " + state);
-        logger.debug3("DeliveredByWorkerTransform: index: " + getIndex());
-        logger.debug3("DeliveredByWorkerTransform: operator: " + getOpcode());
-      }
-      
-      switch (state) {
-        
-        case 0: {
-          // FIXME 1.60
-          if (PdfOpcodes.RESTORE_GRAPHICS_STATE.equals(getOpcode())) {
-            endIndex = getIndex();
-            ++state; 
-          }
-        } break;
-        
-        case 1: {
-          // FIXME 1.60
-          if (PdfOpcodes.SHOW_TEXT.equals(getOpcode())
-                   && getTokens().get(getIndex() - 1).getString().matches(DELIVERED_BY_REGEX)) {
-            ++state;
-          }
-          // FIXME 1.60
-          else if (PdfOpcodes.RESTORE_GRAPHICS_STATE.equals(getOpcode())) { stop(); }
-        } break;
-        
-        case 2: {
-          // FIXME 1.60
-          if (PdfOpcodes.SAVE_GRAPHICS_STATE.equals(getOpcode())) {
-            result = true;
-            stop(); 
-          }
-        } break;
-        
-        default: {
-          throw new PdfException("Invalid state in DeliveredByWorkerTransform: " + state);
-        }
-    
-      }
-    
-      if (logger.isDebug3()) {
-        logger.debug3("DeliveredByWorkerTransform: final: " + state);
-        logger.debug3("DeliveredByFromWorkerTransform: result: " + result);
-      }
-      
-      if (result) {
-        getTokens().subList(getIndex(), endIndex).clear();
-      }
-    }
-    
-    @Override
-    public void setUp() throws PdfException {
-      super.setUp();
-      state = 0;
-      result = false;
-    }
-    
-    @Override
-    public void transform(ArchivalUnit au,
-                           PdfTokenStream pdfTokenStream)
-        throws PdfException {
-      if (result) {
-        pdfTokenStream.setTokens(getTokens());
-      }
     }
   }
   

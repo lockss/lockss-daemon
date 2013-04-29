@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>33</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,13 +24,13 @@
       </entry>
       <entry>
         <string>Poll</string>
-	<string>7</string>
+	<string>8</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.57.4</string>
+    <string>1.60.0</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -51,7 +51,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://(%s|%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, api_url_host, graphics_url_host</string>
+      <string>1,"^https?://(%s|%s|%s|docserver\.ingentaconnect\.com)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, api_url_host, graphics_url_host</string>
       <string>4,"^(%s|%s|%s)", base_url, api_url, graphics_url</string>
       <string>2,"^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}$", api_url, publisher_id, journal_id, volume_name</string>
       <string>2,"^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}/.{8}$", api_url, publisher_id, journal_id, volume_name</string>
@@ -89,6 +89,7 @@
       <string>"%scontent/%s?format=lockss&amp;volume=%s", base_url, journal_issn, volume_name</string>
       <string>"%scontent/%s?format=lockss&amp;volume=%s", api_url, journal_issn, volume_name</string>
       <string>"%slockss.txt", graphics_url</string>
+      <string>"http://docserver.ingentaconnect.com/lockss.txt"</string>
     </list>
   </entry>
   <entry>

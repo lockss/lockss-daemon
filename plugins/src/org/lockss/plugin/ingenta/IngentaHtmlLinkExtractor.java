@@ -1,10 +1,10 @@
 /*
- * $Id: IngentaHtmlLinkExtractor.java,v 1.1 2009-06-30 21:56:18 thib_gc Exp $
+ * $Id: IngentaHtmlLinkExtractor.java,v 1.2 2013-04-29 20:19:46 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.ingenta;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.regex.*;
 
 import org.lockss.extractor.GoslingHtmlLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
@@ -40,11 +42,9 @@ import org.lockss.util.Logger;
 
 public class IngentaHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 
-  protected static Logger logger = Logger.getLogger("IngentaHtmlLinkExtractor");
+  private static final Logger logger = Logger.getLogger(IngentaHtmlLinkExtractor.class);
   
-  public IngentaHtmlLinkExtractor() {
-    super();
-  }
+  protected static final Pattern popupPattern = Pattern.compile("^javascript:popupImage\\(([\"']|%22)(.*)\\1\\)$", Pattern.CASE_INSENSITIVE);
   
   @Override
   protected String extractLinkFromTag(StringBuffer link,
@@ -52,7 +52,19 @@ public class IngentaHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
                                       Callback cb)
       throws IOException {
     char ch = link.charAt(0);
-    if ((ch == 'm' || ch == 'M') && beginsWithTag(link, METATAG)) {
+    if ((ch == 'a' || ch == 'A') && Character.isWhitespace(link.charAt(1))) {
+      String href = getAttributeValue(HREF, link);
+      if (href == null) {
+        return null;
+      }
+      Matcher mat = popupPattern.matcher(href);
+      if (mat.find()) {
+        logger.debug3("Found a suitable <a> tag");
+        if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
+        return resolveUri(baseUrl, mat.group(2));
+      }
+    }
+    else if ((ch == 'm' || ch == 'M') && beginsWithTag(link, METATAG)) {
       String key = getAttributeValue("name", link);
       if (key != null && key.startsWith("CRAWLER.")) {
         logger.debug3("Found a suitable <meta> tag");
@@ -60,7 +72,7 @@ public class IngentaHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       }
     }
     
-    logger.debug3("No suitable <meta> tag");
+    logger.debug3("No suitable <a> or <meta> tag");
     return super.extractLinkFromTag(link, au, cb);
   }
   

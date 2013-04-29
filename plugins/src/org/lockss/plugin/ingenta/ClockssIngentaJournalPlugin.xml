@@ -8,16 +8,16 @@
     <string>org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>34</string>
+  </entry>
+  <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.ingenta.IngentaJournalPlugin</string>
   </entry>
-  <entry>
-    <string>plugin_version</string>
-    <string>33</string>
-  </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>33</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -54,6 +54,7 @@
       <string>"%scontent/%s?format=clockss&amp;volume=%s", base_url, journal_issn, volume_name</string>
       <string>"%scontent/%s?format=clockss&amp;volume=%s", api_url, journal_issn, volume_name</string>
       <string>"%slockss.txt", graphics_url</string>
+      <string>"http://docserver.ingentaconnect.com/lockss.txt"</string>
     </list>
   </entry>
   <entry>
