@@ -35,6 +35,9 @@
       au < released ; 2009 ; Chelonian Conservation and Biology Volume 8 ; 8 >
       au < released ; 2010 ; Chelonian Conservation and Biology Volume 9 ; 9 >
       au < released ; 2011 ; Chelonian Conservation and Biology Volume 10 ;10 >
+      au < exists ; 2012 ; Chelonian Conservation and Biology Volume 11 ;11 >
+      au < expected ; 2013 ; Chelonian Conservation and Biology Volume 12 ;12 >
+
     }
 
   }
@@ -64,6 +67,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = turt
+      comment[0] = no publishing after 2010, checked on 4/29/2013
       
       au < doNotProcess ; 2006 ; Turtle and Tortoise Newsletter Volume 9 ; 9 >
       au < doNotProcess ; 2007 ; Turtle and Tortoise Newsletter Volume 10 ; 10 >   
