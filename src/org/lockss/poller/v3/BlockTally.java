@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.29 2013-04-26 20:35:20 barry409 Exp $
+ * $Id: BlockTally.java,v 1.30 2013-04-29 17:22:10 barry409 Exp $
  */
 
 /*
@@ -125,7 +125,8 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
     addVoterOnlyVoter(id);
   }
   @Override public void voteNeither(ParticipantUserData id) {
-    // todo(bhayes): This is questionable.
+    // Leads to WON if a landslide of voters do not have the URL when
+    // the poller also does not have it.
     addAgreeVoter(id);
   }
 
