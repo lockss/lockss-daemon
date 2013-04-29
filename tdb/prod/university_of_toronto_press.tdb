@@ -165,7 +165,7 @@
     au < released ; 2010 ; Canadian Journal of Women and the Law Volume 22 ; 22 >
     au < released ; 2011 ; Canadian Journal of Women and the Law Volume 23 ; 23 >
     au < released ; 2012 ; Canadian Journal of Women and the Law Volume 24 ; 24 >
-    au < expected ; 2013 ; Canadian Journal of Women and the Law Volume 25 ; 25 >
+    au < manifest ; 2013 ; Canadian Journal of Women and the Law Volume 25 ; 25 >
 
   }
 
@@ -274,7 +274,7 @@
     param[journal_dir] = cartographica
     attr[journal_id] = car
 
-    au < expected ; 2013 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 48 ; 48 >
+    au < manifest ; 2013 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 48 ; 48 >
 
   }
 
@@ -411,7 +411,7 @@
     attr[journal_id] = rpc
 
     au < released ; 2012 ; Journal of Religion and Popular Culture Volume 24 ; 24 >
-    au < expected ; 2013 ; Journal of Religion and Popular Culture Volume 25 ; 25 >
+    au < manifest ; 2013 ; Journal of Religion and Popular Culture Volume 25 ; 25 >
 
   }
 
@@ -521,7 +521,7 @@
 
     au < released ; 2011 ; Toronto Journal of Theology Volume 27 ; 27 >
     au < released ; 2012 ; Toronto Journal of Theology Volume 28 ; 28 >
-    au < expected ; 2013 ; Toronto Journal of Theology Volume 29 ; 29 >
+    au < manifest ; 2013 ; Toronto Journal of Theology Volume 29 ; 29 >
 
   }
 
