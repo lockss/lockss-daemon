@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArticleIteratorFactory.java,v 1.1 2013-04-19 22:49:44 alexandraohlson Exp $
+ * $Id: TestBaseAtyponArticleIteratorFactory.java,v 1.2 2013-04-29 22:12:29 thib_gc Exp $
  */
 
 /*
@@ -36,26 +36,13 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.CachedUrlSetSpec;
-import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.daemon.SingleNodeCachedUrlSetSpec;
-import org.lockss.extractor.ArticleMetadataExtractor;
-import org.lockss.extractor.FileMetadataExtractor;
-import org.lockss.extractor.MetadataTarget;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.ArticleFiles;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.CachedUrlSet;
-import org.lockss.plugin.CachedUrlSetNode;
-import org.lockss.plugin.PluginTestUtil;
-import org.lockss.plugin.SubTreeArticleIterator;
-import org.lockss.plugin.simulated.SimulatedArchivalUnit;
-import org.lockss.plugin.simulated.SimulatedContentGenerator;
+import org.lockss.config.*;
+import org.lockss.daemon.*;
+import org.lockss.extractor.*;
+import org.lockss.plugin.*;
+import org.lockss.plugin.simulated.*;
 import org.lockss.state.NodeManager;
-import org.lockss.test.ArticleIteratorTestCase;
-import org.lockss.test.ConfigurationUtil;
+import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 
 public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCase {
@@ -306,10 +293,7 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
 
     // you will only get a full text for combos with pdf, pdfplus or full
     // so there are only 2 cases - the one with nothing; the one with only abstract;
-    //  assertEquals(18, countFullText);
-    // For now - Builder counts any aspect that can trigger ArticleFiles as FTCU, even abstract
-    // this will change later, but for now, our count will be 19
-    assertEquals(19, countFullText);
+    assertEquals(18, countFullText);
     
     // you need to have either an abstract or a full text to have metadata 4 cases don't have either
     // we're only going to get the right information if the TARGET is not NULL and set to other than isArticle()
