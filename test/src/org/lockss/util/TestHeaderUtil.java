@@ -1,5 +1,5 @@
 /*
- * $Id: TestHeaderUtil.java,v 1.7 2013-03-14 06:38:48 tlipkis Exp $
+ * $Id: TestHeaderUtil.java,v 1.8 2013-04-29 19:55:12 thib_gc Exp $
  */
 
 /*
@@ -56,19 +56,33 @@ public class TestHeaderUtil extends LockssTestCase {
     assertNull(HeaderUtil.getCharsetFromContentType("text/html"));
     assertNull(HeaderUtil.getCharsetFromContentType("text/html;"));
     assertNull(HeaderUtil.getCharsetFromContentType("text/html;foobar"));
+    assertNull(HeaderUtil.getCharsetFromContentType("text/html; foobar"));
     assertNull(HeaderUtil.getCharsetFromContentType("text/html;charset"));
+    assertNull(HeaderUtil.getCharsetFromContentType("text/html; charset"));
     assertEquals("utf-8",
 		 HeaderUtil.getCharsetFromContentType("text/html;charset=UTF-8"));
     assertEquals("utf-8",
+                 HeaderUtil.getCharsetFromContentType("text/html; charset=UTF-8"));
+    assertEquals("utf-8",
 		 HeaderUtil.getCharsetFromContentType("text/html;CHARSET=UTF-8"));
+    assertEquals("utf-8",
+                 HeaderUtil.getCharsetFromContentType("text/html; CHARSET=UTF-8"));
     assertEquals("iso8859-1",
 		 HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""));
+    assertEquals("iso8859-1",
+                 HeaderUtil.getCharsetFromContentType("text/html; charset=\"iso8859-1\""));
+    assertEquals("foo-1",
+                 HeaderUtil.getCharsetFromContentType("text/html;charset=foo-1;other=stuff"));
+    assertEquals("foo-1",
+                 HeaderUtil.getCharsetFromContentType("text/html; charset=foo-1; other=stuff"));
     assertEquals("foo-1",
 		 HeaderUtil.getCharsetFromContentType("text/html;charset=\"foo-1\";other=stuff"));
     assertEquals("foo-1",
-		 HeaderUtil.getCharsetFromContentType("text/html;charset=foo-1;other=stuff"));
+                 HeaderUtil.getCharsetFromContentType("text/html; charset=\"foo-1\"; other=stuff"));
     assertSame(HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""),
 	       HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""));
+    assertSame(HeaderUtil.getCharsetFromContentType("text/html; charset=\"iso8859-1\""),
+               HeaderUtil.getCharsetFromContentType("text/html; charset=\"iso8859-1\""));
   }
 
   String gcodfct(String ctype) {
