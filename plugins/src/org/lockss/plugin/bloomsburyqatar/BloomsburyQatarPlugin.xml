@@ -115,4 +115,8 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>&quot;Atypon Systems host this Bloomsbury Qatar archival unit (AU) and may require you to register the IP address of your LOCKSS box. To ensure continued access through your LOCKSS box, send IP addresses to Paul Coyne &lt;pcoyne@qf.org.qa&gt; before allowing your LOCKSS box to collect this content.&quot;</string>
+  </entry>
 </map>    
