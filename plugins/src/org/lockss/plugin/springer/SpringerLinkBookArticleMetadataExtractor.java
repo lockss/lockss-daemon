@@ -53,11 +53,38 @@ public class SpringerLinkBookArticleMetadataExtractor implements ArticleMetadata
 		super();
 	}
 
-	 protected void addAccessUrl(ArticleMetadata am, CachedUrl cu)
-	 {
-		    if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL))
-		      am.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
-	 }
+        /** For standard bibiographic metadata fields for which the extractor did
+         * not produce a valid value, fill in a value from the TDB if available.
+         * @param af the ArticleFiles on which extract() was called.
+         * @param cu the CachedUrl selected by {@link #getCuToExtract(ArticleFiles)}.
+         * @param am the ArticleMetadata being emitted.
+         */
+        protected void addTdbDefaults(ArticleFiles af, CachedUrl cu, ArticleMetadata am) {
+          if (log.isDebug3()) log.debug3("addTdbDefaults("+af+", "+cu+", "+am+")");
+          if (!cu.getArchivalUnit().isBulkContent()) {
+            // Fill in missing values rom TDB if TDB entries reflect bibliographic
+            // information for the content. This is not the case for bulk data
+            TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
+            if (log.isDebug3()) log.debug3("tc; "+tc);
+            TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
+            if (log.isDebug3()) log.debug3("tdbau; "+tdbau);
+            if (tdbau != null) {
+              if (log.isDebug3()) log.debug3("Adding data from " + tdbau + " to " + am);
+              am.putIfBetter(MetadataField.FIELD_ISBN, tdbau.getPrintIsbn());
+              am.putIfBetter(MetadataField.FIELD_EISBN, tdbau.getEisbn());
+              am.putIfBetter(MetadataField.FIELD_ISSN, tdbau.getPrintIssn());
+              am.putIfBetter(MetadataField.FIELD_EISSN, tdbau.getEissn());
+              am.putIfBetter(MetadataField.FIELD_DATE, tdbau.getStartYear());
+              am.putIfBetter(MetadataField.FIELD_VOLUME, tdbau.getStartVolume());
+              am.putIfBetter(MetadataField.FIELD_ISSUE, tdbau.getStartIssue());
+              am.putIfBetter(MetadataField.FIELD_JOURNAL_TITLE,tdbau.getJournalTitle());
+              am.putIfBetter(MetadataField.FIELD_PUBLISHER,tdbau.getPublisherName());
+            }
+          }
+          if (log.isDebug3()) log.debug3("adding("+af.getFullTextUrl());
+          am.putIfBetter(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
+          if (log.isDebug3()) log.debug3("am: ("+am);
+        }
 
 	@Override
 	public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
@@ -69,22 +96,23 @@ public class SpringerLinkBookArticleMetadataExtractor implements ArticleMetadata
 		CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
 		FileMetadataExtractor me = null;
 
-		if(cu != null)
-		{
+		if(cu != null) {
 			try{
 				me = cu.getFileMetadataExtractor(target);
 
-				if(me != null)
-					me.extract(target, cu, emit);
-				else
-					emit.emitMetadata(cu, getDefaultArticleMetadata(cu));
-
+				if(me != null) {
+				  me.extract(target, cu, emit);
+				} else {
+                                  ArticleMetadata am = new ArticleMetadata();
+                                  emit.emitMetadata(cu, am);
+				}
 			} catch (RuntimeException e) {
 				log.debug("for af (" + af + ")", e);
 
 				if(me != null)
 					try{
-						emit.emitMetadata(cu, getDefaultArticleMetadata(cu));
+					  ArticleMetadata am = new ArticleMetadata();
+					  emit.emitMetadata(cu, am);
 					}
 					catch (RuntimeException e2) {
 						log.debug("retry with default metadata for af (" + af + ")", e2);
@@ -95,21 +123,7 @@ public class SpringerLinkBookArticleMetadataExtractor implements ArticleMetadata
 		}
 	  }
 
-	ArticleMetadata getDefaultArticleMetadata(CachedUrl cu) {
-	    TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
-	    TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
-	    String year = (tdbau == null) ? null : tdbau.getStartYear();
-	    String journalTitle = (tdbau == null) ? null : tdbau.getJournalTitle();
-
-	    ArticleMetadata md = new ArticleMetadata();
-	    md.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
-	    if (year != null) md.put(MetadataField.FIELD_DATE, year);
-	    if (journalTitle != null) md.put(MetadataField.FIELD_JOURNAL_TITLE,
-	                                       journalTitle);
-	    return md;
-	  }
-
-	class SpringerEmitter implements FileMetadataExtractor.Emitter {
+	  class SpringerEmitter implements FileMetadataExtractor.Emitter {
 	    private Emitter parent;
 	    private ArticleFiles af;
 
@@ -119,8 +133,8 @@ public class SpringerLinkBookArticleMetadataExtractor implements ArticleMetadata
 	    }
 
 	    @Override
-      public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
-	      addAccessUrl(am, cu);
+            public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
+	      addTdbDefaults(af, cu, am);
 	      parent.emitMetadata(af, am);
 	    }
 

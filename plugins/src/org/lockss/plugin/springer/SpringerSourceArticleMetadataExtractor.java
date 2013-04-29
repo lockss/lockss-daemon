@@ -24,7 +24,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.springer;
 
@@ -45,85 +45,80 @@ import org.lockss.util.Logger;
 
 public class SpringerSourceArticleMetadataExtractor implements ArticleMetadataExtractor{
 
-	private SpringerEmitter emit = null;
-	private static Logger log = Logger.getLogger("SpringerSourceArticleMetadataExtractor");
-	
-	public SpringerSourceArticleMetadataExtractor() 
-	{
-		super();
-	}
-	
-	 protected void addAccessUrl(ArticleMetadata am, CachedUrl cu) 
-	 {
-		    if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL)) 
-		      am.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
-	 }
-	
-	@Override
-	public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
-			throws IOException, PluginException {
-		if(emit == null)
-			emit = new SpringerEmitter(af,emitter);
-		
-		CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
-		FileMetadataExtractor me = null;
-	    
-		if(cu != null)
-		{
-			try{
-				me = cu.getFileMetadataExtractor(target);
-				
-				if(me != null)
-					me.extract(target, cu, emit);
-				else
-					emit.emitMetadata(cu, getDefaultArticleMetadata(cu));
+  private SpringerEmitter emit = null;
+  private static Logger log = Logger.getLogger("SpringerSourceArticleMetadataExtractor");
 
-			} catch (RuntimeException e) {
-				log.debug("for af (" + af + ")", e);
-				
-				if(me != null)
-					try{
-						emit.emitMetadata(cu, getDefaultArticleMetadata(cu));
-					}
-					catch (RuntimeException e2) {
-						log.debug("retry with default metadata for af (" + af + ")", e2);
-					}
-			} finally {
-				AuUtil.safeRelease(cu);
-			}
-		}
-	  }
-	
-	ArticleMetadata getDefaultArticleMetadata(CachedUrl cu) {
-	    TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
-	    TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
-	    String year = (tdbau == null) ? null : tdbau.getStartYear();
-	    String journalTitle = (tdbau == null) ? null : tdbau.getJournalTitle();
+  public SpringerSourceArticleMetadataExtractor() 
+  {
+    super();
+  }
 
-	    ArticleMetadata md = new ArticleMetadata();
-	    md.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
-	    if (year != null) md.put(MetadataField.FIELD_DATE, year);
-	    if (journalTitle != null) md.put(MetadataField.FIELD_JOURNAL_TITLE,
-	                                       journalTitle);
-	    return md;
-	  }
-	
-	class SpringerEmitter implements FileMetadataExtractor.Emitter {
-	    private Emitter parent;
-	    private ArticleFiles af;
+  /** For standard bibiographic metadata fields for which the extractor did
+   * not produce a valid value, fill in a value from the TDB if available.
+   * @param af the ArticleFiles on which extract() was called.
+   * @param cu the CachedUrl selected by {@link #getCuToExtract(ArticleFiles)}.
+   * @param am the ArticleMetadata being emitted.
+   */
+  protected void addTdbDefaults(ArticleFiles af, CachedUrl cu, ArticleMetadata am) {
+    if (log.isDebug3()) log.debug3("adding("+af.getFullTextUrl());
+    am.putIfBetter(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
+    if (log.isDebug3()) log.debug3("am: ("+am + ")");
+  }
 
-	    SpringerEmitter(ArticleFiles af, Emitter parent) {
-	      this.af = af;
-	      this.parent = parent;
-	    }
+  @Override
+  public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
+      throws IOException, PluginException {
+    if(emit == null)
+      emit = new SpringerEmitter(af,emitter);
 
-	    public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
-	      addAccessUrl(am, cu);
-	      parent.emitMetadata(af, am);
-	    }
+    CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
+    FileMetadataExtractor me = null;
 
-	    void setParentEmitter(Emitter parent) {
-	      this.parent = parent;
-	    }
-	  }
+    if(cu != null)
+    {
+      try{
+        me = cu.getFileMetadataExtractor(target);
+
+        if(me != null) {
+          me.extract(target, cu, emit);
+        } else {
+          ArticleMetadata am = new ArticleMetadata();
+          emit.emitMetadata(cu, am);
+        }
+
+      } catch (RuntimeException e) {
+        log.debug("for af (" + af + ")", e);
+
+        if (me != null)
+          try{
+            ArticleMetadata am = new ArticleMetadata();
+            emit.emitMetadata(cu, am);
+          } 
+          catch (RuntimeException e2) {
+            log.debug("retry with default metadata for af (" + af + ")", e2);
+          }
+      } finally {
+        AuUtil.safeRelease(cu);
+      }
+    }
+  }
+
+  class SpringerEmitter implements FileMetadataExtractor.Emitter {
+    private Emitter parent;
+    private ArticleFiles af;
+
+    SpringerEmitter(ArticleFiles af, Emitter parent) {
+      this.af = af;
+      this.parent = parent;
+    }
+
+    public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
+      addTdbDefaults(af, cu, am);
+      parent.emitMetadata(af, am);
+    }
+
+    void setParentEmitter(Emitter parent) {
+      this.parent = parent;
+    }
+  }
 }
