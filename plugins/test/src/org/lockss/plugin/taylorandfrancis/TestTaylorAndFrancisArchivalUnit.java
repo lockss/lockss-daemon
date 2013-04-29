@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.5 2013-04-08 21:34:34 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.6 2013-04-29 22:46:46 alexandraohlson Exp $
  */
 
 /*
@@ -32,8 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.taylorandfrancis;
 
-import java.io.File;
-import java.io.InputStream;
 import java.net.URL;
 import java.util.Properties;
 
@@ -46,12 +44,6 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.definable.*;
-import org.lockss.plugin.maffey.MaffeyHtmlCrawlFilterFactory;
-import org.lockss.plugin.maffey.TestMaffeyHtmlFilterFactory;
-import org.lockss.plugin.maffey.TestMaffeyHtmlFilterFactory.TestCrawl;
-import org.lockss.plugin.maffey.TestMaffeyHtmlFilterFactory.TestHash;
-import org.lockss.plugin.wrapper.WrapperUtil;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.state.AuState;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -68,15 +60,16 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
   static final String ROOT_URL = "http://www.tandfonline.com/";
   
   static Logger log = Logger.getLogger("TestTaylorAndFrancisArchivalUnit");
-  private static String PluginIdentifier;
-  private static String keyword;
-  private static String PluginName;
-  private static Boolean override = false; 
-  
+  protected String PluginIdentifier;
+  protected String keyword;
+  protected String PluginName;
+  protected Boolean override;
+ 
   //Variant to test with GLN version of plugin
   public static class TestGLNPlugin extends TestTaylorAndFrancisArchivalUnit {
    
     public void setUp() throws Exception {
+      override = false; 
       super.setUp();
       PluginIdentifier="org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin";   
       keyword = "lockss";
@@ -89,6 +82,7 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
   public static class TestCLOCKSSPlugin extends TestTaylorAndFrancisArchivalUnit {
     
     public void setUp() throws Exception {
+      override = false;
       super.setUp();
       PluginIdentifier="org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin";   
       keyword="clockss";
