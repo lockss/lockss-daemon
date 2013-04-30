@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAPdfFilterFactory.java,v 1.1 2013-03-05 16:10:19 alexandraohlson Exp $
+ * $Id: AIAAPdfFilterFactory.java,v 1.2 2013-04-30 23:33:09 alexandraohlson Exp $
  */
 
 /*
@@ -32,24 +32,23 @@
 
 package org.lockss.plugin.aiaa;
 
-import org.lockss.filter.pdf.SimplePdfFilterFactory;
+import org.lockss.filter.pdf.ExtractingPdfFilterFactory;
 import org.lockss.pdf.PdfDocument;
 import org.lockss.pdf.PdfException;
 import org.lockss.pdf.PdfUtil;
 import org.lockss.plugin.ArchivalUnit;
 
-
-public class AIAAPdfFilterFactory extends SimplePdfFilterFactory {
+/*
+ * The AIAA pdf files have the CreationDate and ModDate and the two ID numbers in the trailer
+ * vary from collection to collection. Filter them out to avoid incorrect hash failures.
+ * Because of varying BASEFONT values, must also extract text/images for hash comparison
+ */
+public class AIAAPdfFilterFactory extends ExtractingPdfFilterFactory {
 
   public AIAAPdfFilterFactory() {
     super();
   }
 
-
-  /*
-   * The AIAA pdf files have the CreationDate and ModDate and the two ID numbers in the trailer
-   * vary from collection to collection. Filter them out to avoid incorrect hash failures.
-   */
   @Override
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
