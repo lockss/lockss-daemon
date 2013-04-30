@@ -4,7 +4,7 @@
     name = American Society of Andrology
   >
 
-comment[urgent1] = This publisher is leaving HWP Dec 2012
+comment[0] = Moved to Wiley Dec 2012
 
   {
 
@@ -19,40 +19,39 @@ comment[urgent1] = This publisher is leaving HWP Dec 2012
     param[base_url] = http://www.andrologyjournal.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < released ; 1980 ; Journal of Andrology Volume 1 ; 1 >
-    au < released ; 1981 ; Journal of Andrology Volume 2 ; 2 >
-    au < released ; 1982 ; Journal of Andrology Volume 3 ; 3 >
-    au < released ; 1983 ; Journal of Andrology Volume 4 ; 4 >
-    au < released ; 1984 ; Journal of Andrology Volume 5 ; 5 >
-    au < released ; 1985 ; Journal of Andrology Volume 6 ; 6 >
-    au < released ; 1986 ; Journal of Andrology Volume 7 ; 7 >
-    au < released ; 1987 ; Journal of Andrology Volume 8 ; 8 >
-    au < released ; 1988 ; Journal of Andrology Volume 9 ; 9 >
-    au < released ; 1989 ; Journal of Andrology Volume 10 ; 10 >
-    au < released ; 1990 ; Journal of Andrology Volume 11 ; 11 >
-    au < released ; 1991 ; Journal of Andrology Volume 12 ; 12 >
-    au < released ; 1992 ; Journal of Andrology Volume 13 ; 13 >
-    au < released ; 1993 ; Journal of Andrology Volume 14 ; 14 >
-    au < released ; 1994 ; Journal of Andrology Volume 15 ; 15 >
-    au < released ; 1995 ; Journal of Andrology Volume 16 ; 16 >
-    au < released ; 1996 ; Journal of Andrology Volume 17 ; 17 >
-    au < released ; 1997 ; Journal of Andrology Volume 18 ; 18 >
-    au < released ; 1998 ; Journal of Andrology Volume 19 ; 19 >
-    au < released ; 1999 ; Journal of Andrology Volume 20 ; 20 >
-    au < released ; 2000 ; Journal of Andrology Volume 21 ; 21 >
-    au < released ; 2001 ; Journal of Andrology Volume 22 ; 22 >
-    au < released ; 2002 ; Journal of Andrology Volume 23 ; 23 >
-    au < released ; 2003 ; Journal of Andrology Volume 24 ; 24 >
-    au < released ; 2004 ; Journal of Andrology Volume 25 ; 25 >
-    au < released ; 2005 ; Journal of Andrology Volume 26 ; 26 >
-    au < released ; 2006 ; Journal of Andrology Volume 27 ; 27 >
-    au < released ; 2007 ; Journal of Andrology Volume 28 ; 28 >
-    au < released ; 2008 ; Journal of Andrology Volume 29 ; 29 >
-    au < released ; 2009 ; Journal of Andrology Volume 30 ; 30 >
-    au < released ; 2010 ; Journal of Andrology Volume 31 ; 31 >
-    au < released ; 2011 ; Journal of Andrology Volume 32 ; 32 >
-    au < released ; 2012 ; Journal of Andrology Volume 33 ; 33 >
-    au < expected ; 2013 ; Journal of Andrology Volume 34 ; 34 >
+    au < down ; 1980 ; Journal of Andrology Volume 1 ; 1 >
+    au < down ; 1981 ; Journal of Andrology Volume 2 ; 2 >
+    au < down ; 1982 ; Journal of Andrology Volume 3 ; 3 >
+    au < down ; 1983 ; Journal of Andrology Volume 4 ; 4 >
+    au < down ; 1984 ; Journal of Andrology Volume 5 ; 5 >
+    au < down ; 1985 ; Journal of Andrology Volume 6 ; 6 >
+    au < down ; 1986 ; Journal of Andrology Volume 7 ; 7 >
+    au < down ; 1987 ; Journal of Andrology Volume 8 ; 8 >
+    au < down ; 1988 ; Journal of Andrology Volume 9 ; 9 >
+    au < down ; 1989 ; Journal of Andrology Volume 10 ; 10 >
+    au < down ; 1990 ; Journal of Andrology Volume 11 ; 11 >
+    au < down ; 1991 ; Journal of Andrology Volume 12 ; 12 >
+    au < down ; 1992 ; Journal of Andrology Volume 13 ; 13 >
+    au < down ; 1993 ; Journal of Andrology Volume 14 ; 14 >
+    au < down ; 1994 ; Journal of Andrology Volume 15 ; 15 >
+    au < down ; 1995 ; Journal of Andrology Volume 16 ; 16 >
+    au < down ; 1996 ; Journal of Andrology Volume 17 ; 17 >
+    au < down ; 1997 ; Journal of Andrology Volume 18 ; 18 >
+    au < down ; 1998 ; Journal of Andrology Volume 19 ; 19 >
+    au < down ; 1999 ; Journal of Andrology Volume 20 ; 20 >
+    au < down ; 2000 ; Journal of Andrology Volume 21 ; 21 >
+    au < down ; 2001 ; Journal of Andrology Volume 22 ; 22 >
+    au < down ; 2002 ; Journal of Andrology Volume 23 ; 23 >
+    au < down ; 2003 ; Journal of Andrology Volume 24 ; 24 >
+    au < down ; 2004 ; Journal of Andrology Volume 25 ; 25 >
+    au < down ; 2005 ; Journal of Andrology Volume 26 ; 26 >
+    au < down ; 2006 ; Journal of Andrology Volume 27 ; 27 >
+    au < down ; 2007 ; Journal of Andrology Volume 28 ; 28 >
+    au < down ; 2008 ; Journal of Andrology Volume 29 ; 29 >
+    au < down ; 2009 ; Journal of Andrology Volume 30 ; 30 >
+    au < down ; 2010 ; Journal of Andrology Volume 31 ; 31 >
+    au < down ; 2011 ; Journal of Andrology Volume 32 ; 32 >
+    au < down ; 2012 ; Journal of Andrology Volume 33 ; 33 >
 
   }
 
