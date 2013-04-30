@@ -50,8 +50,6 @@
     param[journal_dir] = discourse
     attr[journal_id] = dis
     
-    comment[0] = content for v34 not online as of 20130404. check later.
-
     au < released ; 2000 ; Discourse Volume 22 ; 22 >
     au < released ; 2001 ; Discourse Volume 23 ; 23 >
     au < released ; 2002 ; Discourse Volume 24 ; 24 >
@@ -64,7 +62,7 @@
     au < released ; 2009 ; Discourse Volume 31 ; 31 >
     au < released ; 2010 ; Discourse Volume 32 ; 32 >
     au < released ; 2011 ; Discourse Volume 33 ; 33 >
-    au < notReady ; 2012 ; Discourse Volume 34 ; 34 >
+    au < testing ; 2012 ; Discourse Volume 34 ; 34 >
     au < expected ; 2013 ; Discourse Volume 35 ; 35 >
 
   }
