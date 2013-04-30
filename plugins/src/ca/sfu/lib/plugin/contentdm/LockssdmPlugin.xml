@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>LOCKSSdm Plugin</string>
+    <string>Simon Fraser University LOCKSSdm Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -49,7 +49,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"LOCKSSdm Plugin, Base URL %s, Collection ID %s, Chunk %d", base_url, collection_id, chunk_number</string>
+    <string>"Simon Fraser University LOCKSSdm Plugin, Base URL %s, Collection ID %s, Chunk %d", base_url, collection_id, chunk_number</string>
   </entry>
   <entry>
     <string>au_start_url</string>

@@ -188,11 +188,11 @@
       param[base_url] = http://content.lib.sfu.ca/
       implicit < status ; name ; param[collection_id] ; param[chunk_number] >
     
-      au < manifest ; BC Multicultural Photograph Collection at the Vancouver Public Library Part 1 ; vpl ; 1 >
-      au < manifest ; BC Multicultural Photograph Collection at the Vancouver Public Library Part 2 ; vpl ; 2 >
-      au < manifest ; CCICED Collection ; cciced ; 1 >
-      au < manifest ; Chinatown News ; ubcCtn ; 1 >
-      au < manifest ; Indo-Canadian Oral History Collection ; icohc ; 1 >
+      au < released ; BC Multicultural Photograph Collection at the Vancouver Public Library (Part 1) ; vpl ; 1 >
+      au < released ; BC Multicultural Photograph Collection at the Vancouver Public Library (Part 2) ; vpl ; 2 >
+      au < released ; CCICED Collection ; cciced ; 1 >
+      au < released ; Chinatown News ; ubcCtn ; 1 >
+      au < released ; Indo-Canadian Oral History Collection ; icohc ; 1 >
 
     }
 
