@@ -12,8 +12,7 @@
 
     title <
       name = Social Behavior and Personality ;
-      eissn = 1179-6391 ;
-      issnl = 0301-2212 
+      issn = 0301-2212
     >
 
     plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
@@ -25,8 +24,6 @@
     param[journal_issn] = 0301-2212
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     
-    comment[nR] = not 100% agreement after several tests, see RU 4703
-    comment[exists] = manifest pages missing
     
     au < exists ; exists ; 1973 ; Social Behavior and Personality Volume 1 ; 1 >
     au < exists ; exists ; 1974 ; Social Behavior and Personality Volume 2 ; 2 >
