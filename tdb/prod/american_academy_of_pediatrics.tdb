@@ -378,7 +378,7 @@
     
       comment[0] = This is a serialized book. As of 8/2012 HW has not defined how book manifests will work.
       comment[1] = Waiting for manifest pages. See RT 4877.
-      comment[2] = A new plugin will be needed. Do not process unless the change is ready.
+      comment[2] = A new plugin will be needed. Do not process unless the change is ready. H10 as of 11/2013.
       plugin = needs.plugin
       
     comment[online] = The 2012 Volume is located at http://aapredbook.aappublications.org/, and other volumes will eventually move there.
