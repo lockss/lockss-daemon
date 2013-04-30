@@ -77,12 +77,18 @@ public class MaffeyHtmlHashFilterFactory implements FilterFactory {
         // # total libertas academica article views
         HtmlNodeFilters.tagWithAttribute("p", "class", "laarticleviews"),
         // dynamic css/js urls
-        new TagNameFilter("link")
+        new TagNameFilter("link"),
+        // Libertas Academica: number of journal views
+        HtmlNodeFilters.tagWithAttribute("div", "class", "journal_heading_stats"),
+        // Libertas Academica: what your colleagues are saying about Libertas Academica
+        HtmlNodeFilters.tagWithAttribute("div", "id", "colleagues"),
+        // Libertas Academica: our service promise
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ourservicepromise"),
     };
     
     return new HtmlFilterInputStream(in,
               		             encoding,
-              			     new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters))));
+              			     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
   
 }
