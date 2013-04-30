@@ -112,12 +112,13 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
   String[] goodAuthors = new String[] {"John A. Author", "John B. Author"};
   String goodVolume = "1234";
   String goodDate = "2010";
-  String goodDoi = "10.5555/000-0-000-00000-0";
+  String goodDoi = "10.5555/000-0-000-00000-0_0";
   String goodTitle = "This is a good title";
   String goodIsbn = "000-0-000-00000-0";
+  String goodItemNo = "0";
 
   //break string in to pieces to allow for bad ISBN test
-  String goodDOI_ISBN = "<span class=\"label\">DOI:</span> <span class=\"value\">10.5555/000-0-000-00000-0</span>";
+  String goodDOI_ISBN = "<span class=\"label\">DOI:</span> <span class=\"value\">10.5555/000-0-000-00000-0_0</span>";
   String goodContent_top =
 		  "</ul>\n"+
 		  "</div>\n"+
@@ -168,7 +169,7 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -178,7 +179,8 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
-    assertEquals(goodIsbn, md.get(MetadataField.FIELD_ISBN));
+    assertEquals(goodIsbn, md.get(MetadataField.FIELD_EISBN));
+    assertEquals(goodItemNo, md.get(MetadataField.FIELD_ITEM_NUMBER));
   }
 
   String badContent =
@@ -207,6 +209,9 @@ public class TestSpringerLinkBookMetadataExtractorFactory extends LockssTestCase
     assertNull(md.get(MetadataField.FIELD_VOLUME));
     assertNull(md.get(MetadataField.FIELD_ISSUE));
     assertNull(md.get(MetadataField.FIELD_START_PAGE));
+    assertNull(md.get(MetadataField.FIELD_ISSN));
+    assertNull(md.get(MetadataField.FIELD_EISBN));
+    assertNull(md.get(MetadataField.FIELD_ITEM_NUMBER));
     assertNull(md.get(MetadataField.FIELD_ISSN));
     assertNull(md.get(MetadataField.FIELD_AUTHOR));
     assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
