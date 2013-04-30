@@ -7,6 +7,7 @@
   >
     
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    type = bookSeries
     
   {
     title <
