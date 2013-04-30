@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.18 2013-04-02 20:30:37 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.19 2013-04-30 15:26:44 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.18 2013-04-02 20:30:37 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.19 2013-04-30 15:26:44 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -487,7 +487,12 @@ public class TestTdbAu extends LockssTestCase {
    */
   public void testCoverageDepth() throws TdbException {
     TdbAu au = new TdbAu("Test AU", "pluginA");
+    // test default when no attributes present
     assertEquals("fulltext", au.getCoverageDepth());
+    // test default when attributes present
+    au.setAttr("attr_name", "attr_value");
+    assertEquals("fulltext", au.getCoverageDepth());
+    // test when au_coverage_depth attribute set
     au.setAttr("au_coverage_depth","abstracts");
     assertEquals("abstracts", au.getCoverageDepth());
   }
