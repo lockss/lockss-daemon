@@ -1,7 +1,7 @@
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,32 +29,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.maffey;
 
-import java.io.*;
+import java.io.InputStream;
 
-import org.htmlparser.*;
+import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
-import org.htmlparser.tags.*;
-import org.htmlparser.util.NodeList;
-import org.htmlparser.util.ParserException;
-import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Logger;
-import org.lockss.util.ReaderInputStream;
 
 public class MaffeyHtmlHashFilterFactory implements FilterFactory {
 
-  Logger log = Logger.getLogger("MaffeyHtmlFilterFactoryy");
-	
-  public static class FilteringException extends PluginException {
-    public FilteringException() { super(); }
-    public FilteringException(String msg, Throwable cause) { super(msg, cause); }
-    public FilteringException(String msg) { super(msg); }
-    public FilteringException(Throwable cause) { super(cause); }
-  }
-  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -63,37 +47,37 @@ public class MaffeyHtmlHashFilterFactory implements FilterFactory {
 	  
     // First filter with HtmlParser
     NodeFilter[] filters = new NodeFilter[] {
-    /*
-    * Crawl filter
-    */
-    //Related articles
-    HtmlNodeFilters.tagWithAttribute("div", "class", "alsoRead"),
-    /*
-    * Hash filter
-    */
-    // Contains ad-specific cookies
-    new TagNameFilter("script"),
-    //Ad
-    HtmlNodeFilters.tagWithAttribute("div", "id", "ad_holder"),
-    //Dicussion and comments
-    HtmlNodeFilters.tagWithAttribute("div", "id", "commentsBoxes"),
-    //Constantly changing reference to css file: css/grid.css?1337026463
-    HtmlNodeFilters.tagWithAttributeRegex("link", "href", "css/grid.css\\?[0-9]+"),
-    //Article views <p class="article_views_p">
-    HtmlNodeFilters.tagWithAttribute("p", "class", "article_views_p"),
-    //News items change over time <div id="news_holder">
-    HtmlNodeFilters.tagWithAttribute("div", "id", "news_holder"),
-    //Chat with support availability status changes
-    HtmlNodeFilters.tagWithAttribute("div", "class", "searchleft"),
-    //Rotating user testimonials	
-    HtmlNodeFilters.tagWithAttribute("div", "class", "categoriescolumn4"),
-    //# article views
-    HtmlNodeFilters.tagWithAttribute("div", "class", "yellowbgright1"),
-    HtmlNodeFilters.tagWithAttribute("div", "class", "article_meta_stats"),
-    //# total libertas academica article views
-    HtmlNodeFilters.tagWithAttribute("p", "class", "laarticleviews"),
-    //dynamic css/js urls
-    new TagNameFilter("link")
+        /*
+        * Crawl filter
+        */
+        //Related articles
+        HtmlNodeFilters.tagWithAttribute("div", "class", "alsoRead"),
+        /*
+        * Hash filter
+        */
+        // Contains ad-specific cookies
+        new TagNameFilter("script"),
+        // Ad
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ad_holder"),
+        // Dicussion and comments
+        HtmlNodeFilters.tagWithAttribute("div", "id", "commentsBoxes"),
+        // Constantly changing reference to css file: css/grid.css?1337026463
+        HtmlNodeFilters.tagWithAttributeRegex("link", "href", "css/grid.css\\?[0-9]+"),
+        // Article views <p class="article_views_p">
+        HtmlNodeFilters.tagWithAttribute("p", "class", "article_views_p"),
+        // News items change over time <div id="news_holder">
+        HtmlNodeFilters.tagWithAttribute("div", "id", "news_holder"),
+        // Chat with support availability status changes
+        HtmlNodeFilters.tagWithAttribute("div", "class", "searchleft"),
+        // Rotating user testimonials	
+        HtmlNodeFilters.tagWithAttribute("div", "class", "categoriescolumn4"),
+        // # article views
+        HtmlNodeFilters.tagWithAttribute("div", "class", "yellowbgright1"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "article_meta_stats"),
+        // # total libertas academica article views
+        HtmlNodeFilters.tagWithAttribute("p", "class", "laarticleviews"),
+        // dynamic css/js urls
+        new TagNameFilter("link")
     };
     
     return new HtmlFilterInputStream(in,
