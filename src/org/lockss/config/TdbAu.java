@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.22 2013-04-02 20:18:57 pgust Exp $
+ * $Id: TdbAu.java,v 1.23 2013-04-30 15:21:49 pgust Exp $
  */
 
 /*
@@ -654,7 +654,7 @@ public class TdbAu implements BibliographicItem {
     if (attrs != null) {
       depth = attrs.get("au_coverage_depth");
       if (depth == null) {
-        depth = "fullText";
+        depth = "fulltext";
       }
     }
     return depth;
