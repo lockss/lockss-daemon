@@ -1,5 +1,5 @@
 /*
- * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.1 2013-04-19 22:49:44 alexandraohlson Exp $
+ * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.2 2013-04-30 23:18:02 alexandraohlson Exp $
  */
 
 /* Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.
@@ -146,7 +146,60 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "  </div></td><td width=\"10\">&nbsp;</td>";
   private static final String alsoReadHtmlFiltered =
       "<td></td><td width=\"10\">&nbsp;</td>";
+  
+  private static final String adPlaceholderHtml = 
+      "<tr><td align=\"center\">" +
+          "<form action=\"/action/doSearch\" name=\"quickSearchBoxForm\" class=\"quickSearchBoxForm\" method=\"get\">" +
+          "<input type=\"hidden\" name=\"volume\" value=\"4\" />" +
+          "<input type=\"hidden\" name=\"journal\" value=\"tde\" />" +
+          "<table border=\"0\" cellspacing=\"3\" cellpadding=\"0\" class=\"quickSearchBoxForm\">" +
+          "<tr><td><label for=\"QSFSearchText\" accesskey=\"t\" class=\"header\">Quick search:</label></td></tr>" +
+          "<tr><td align=\"right\"><a href=\"/search/advanced\">Advanced Search</a></td></tr>" +
+          "</table></form>" +
+          "</td></tr>" +
+          "</table>" +
+          "<!-- placeholder id=null, description=TOC Marketing Message 2 --></td>" +
+          "</tr>" +
+          "</table>" +
+          "</td>" +
+          "</tr>" +
+          "</table>" +
+          "<td valign=\"top\" width=\"170\">" +
+          "<table width=\"165\" cellspacing=\"0\" cellpadding=\"0\">" +
+          "   <tr><td><!-- placeholder id=null, description=Right Region 1 --><a href=\"/action/clickThrough?id=1137&url=http%3A%2F%2Fwww.smi-online.co.uk%2Fgoto%2Fadcsummit37.asp&loc=%2Ftoc%2Ftde%2F4%2F1&pubId=40007148\" target=\"_blank\"><img src=\"/sda/1137/ADCSummit.gif\"/></a></td></tr>" +
+          "<tr><td height=\"5\"></td></tr>" +
+          "<tr><td><!-- placeholder id=null, description=Right Region 2 --></td></tr>" +
+          "<tr><td height=\"5\"></td></tr>" +
+          "<tr><td><!-- placeholder id=null, description=Right Region 3 --><a href=\"mailto:j.walker@future-science.com?subject=Accelerated Publication enquiry\" target=\"_blank\"><img src=\"/sda/1144/APub.jpg\"/></a></td></tr>" +
+          "<tr><td height=\"5\"></td></tr>" +
+          "</table>" +
+          "   </td>" +
+          "</tr>" +
+          "</table>";
+  
+  private static final String adPlaceholderFiltered = 
+      "<tr>" +
+          "</tr>" +
+          "</table>" +
+          "<td valign=\"top\" width=\"170\">" +
+          "<table width=\"165\" cellspacing=\"0\" cellpadding=\"0\">" +
+          "   <tr></tr>" +
+          "<tr><td height=\"5\"></td></tr>" +
+          "<tr></tr>" +
+          "<tr><td height=\"5\"></td></tr>" +
+          "<tr></tr>" +
+          "<tr><td height=\"5\"></td></tr>" +
+          "</table>" +
+          "   </td>" +
+          "</tr>" +
+          "</table>";
+  
+  private static final String adSimple =
+      "<html><body<table><tr><td><!-- placeholder id=null --></td></tr></table></body></html>";
+  private static final String adSimpleFiltered =
+      "<html><body><table><tr></tr></table></body></html>";
 
+  
   public void test_topBannerHtml() throws Exception {
     InputStream actIn = filt.createFilteredInputStream(mau,
         new StringInputStream(topBannerHtml),
@@ -189,6 +242,14 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
         Constants.DEFAULT_ENCODING);
 
     assertEquals(alsoReadHtmlFiltered, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void test_adPlaceholder() throws Exception {
+    InputStream actIn = filt.createFilteredInputStream(mau,
+        new StringInputStream(adSimple),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(adSimpleFiltered, StringUtil.fromInputStream(actIn));
   }
  
 }

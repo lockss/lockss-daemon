@@ -1,5 +1,5 @@
 /*
- * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.1 2013-04-19 22:49:43 alexandraohlson Exp $
+ * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.2 2013-04-30 23:18:02 alexandraohlson Exp $
  */
 
 /*
@@ -36,10 +36,12 @@ import java.io.InputStream;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Remark;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
 import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.Div;
+import org.htmlparser.tags.TableColumn;
 import org.htmlparser.util.SimpleNodeIterator;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.HtmlFilterInputStream;
@@ -76,28 +78,25 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "full_text"),
 
         // TOC has ad placeholders in various places - tricky to isolate
+        // The comment is always there, the ad may or may not follow
+        // The placeholder comments appear to always be in <td> </td> chunks, often with other stuff as well
         // Look for <!-- placeholder id=null...--> comment and if there is one, remove the <a .....> .... </a> chunk after it
-       // new NodeFilter() {
-          
-          //REWACK - this is from siam...
-       // look for a text tag that has the <!-- placeholder comment in it. Find it's <td> parent and remove it
- /*         @Override public boolean accept(Node node) {
- 
-            if (!(node instanceof Div)) return false;
-            String divClass = ((CompositeTag)node).getAttribute("class");
-            if ( (divClass==null) || !(divClass.contains("box collapsible")) ) return false;
-            for (SimpleNodeIterator iter = ((CompositeTag)node).elements() ; iter.hasMoreNodes() ; ) {
-              Node n = iter.nextNode();
-              if (!(n instanceof Div)) { continue; }
-              String childClass = ((CompositeTag)n).getAttribute("class");
-              if ( (childClass !=null) && (childClass.contains("publicationSideBar")) ) {
-                return true;
+        // This is most easily done by removing the entire <td> </td> tag element
+       new NodeFilter() {      
+          // look for a <td> that has a comment <!-- placeholder id=null....--> child somewhere in it. If it's there remove it.
+          @Override public boolean accept(Node node) {
+            if (!(node instanceof TableColumn)) return false;
+              Node childNode = node.getFirstChild();
+              while (childNode != null) {
+                if (childNode instanceof Remark) {
+                  String remarkText = childNode.getText();
+                  if ( (remarkText != null) && remarkText.contains("placeholder id=null") ) return true;
+                }
+                childNode = node.getNextSibling();
               }
-            }
-            return false;
+              return false;
           }
         }
-        */
         
         // Some article listings have a "free" glif. Might that change status over time?
 
