@@ -1388,7 +1388,7 @@
     param[journal_issn] = 1935-5688
 
     au < ready ; 2009 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 1 ; 1 >
-    au < testing ; 2010 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 2 ; 2 >
+    au < ready ; 2010 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 4 ; 4 >
     au < manifest ; 2013 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 5 ; 5 >
@@ -1407,7 +1407,7 @@
 
     au < ready ; 2008 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 1 ; 1 >
     au < ready ; 2009 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 2 ; 2 >
-    au < testing ; 2010 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 3 ; 3 >
+    au < ready ; 2010 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 3 ; 3 >
     au < released ; 2011 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 4 ; 4 >
     au < released ; 2012 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 5 ; 5 >
     au < manifest ; 2013 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 6 ; 6 >
@@ -1480,8 +1480,8 @@
     param[journal_issn] = 1548-3657
 
     au < ready ; 2005 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 1 ; 1 >
-    au < testing ; 2006 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 2 ; 2 >
-    au < testing ; 2007 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 3 ; 3 >
+    au < ready ; 2006 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 2 ; 2 >
+    au < ready ; 2007 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 3 ; 3 >
     au < released ; 2008 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 4 ; 4 >
     au < released ; 2009 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 5 ; 5 >
     au < released ; 2010 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 6 ; 6 >
@@ -1798,12 +1798,14 @@
       eissn = 1941-6326 ;
       issnl = 1941-6318
     >
+    
+    comment[nR] = substance check failed, see RT 4726
     param[journal_issn] = 1941-6318
 
     au < manifest ; 2009 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 >
     au < manifest ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 >
-    au < testing ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 >
+    au < notReady ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 >
     au < expected ; 2013 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 5 ; 5 >
 
   }
@@ -1971,9 +1973,10 @@
       issnl = 2160-9837
     >
 
+    comment[nR] = substance check failed, see RT 4726
     param[journal_issn] = 2160-9837
 
-    au < testing ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 >
+    au < notReady ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 >
     au < expected ; 2013 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 3 ; 3 >
 
   }
@@ -2552,7 +2555,7 @@
     param[journal_issn] = 2155-6261
 
     au < released ; 2011 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 1 ; 1 >
-    au < testing ; 2012 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 2 ; 2 >
+    au < ready ; 2012 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 2 ; 2 >
     au < expected ; 2013 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 3 ; 3 >
 
   }
