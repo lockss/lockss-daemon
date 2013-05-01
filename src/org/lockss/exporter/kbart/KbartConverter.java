@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.44 2013-04-02 20:27:11 pgust Exp $
+ * $Id: KbartConverter.java,v 1.45 2013-05-01 15:52:33 easyonthemayo Exp $
  */
 
 /*
@@ -722,6 +722,8 @@ public class KbartConverter {
         // Construct the KbartTitle for this range of this title
         KbartTitle kbt = baseKbt.clone();
         fillKbartTitle(kbt, range, tri.hasVols);
+        // Set the coverage depth from the first AU
+        kbt.setField(COVERAGE_DEPTH, range.first.getCoverageDepth());
         // Add the title to the map
         kbtList.put(kbt, range);
       }

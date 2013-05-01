@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicKbartTitle.java,v 1.1 2012-05-30 00:31:56 easyonthemayo Exp $
+ * $Id: BibliographicKbartTitle.java,v 1.2 2013-05-01 15:52:33 easyonthemayo Exp $
  */
 
 /*
@@ -100,6 +100,10 @@ public class BibliographicKbartTitle extends BibliographicItemAdapter {
     return kbt.getField(KbartTitle.Field.NUM_LAST_ISSUE_ONLINE);
   }
 
+  @Override
+  public String getCoverageDepth() {
+    return kbt.getField(KbartTitle.Field.COVERAGE_DEPTH);
+  }
 
   @Override
   public BibliographicItemAdapter setPrintIssn(String printIssn) {
@@ -161,4 +165,9 @@ public class BibliographicKbartTitle extends BibliographicItemAdapter {
     return this;
   }
 
+  @Override
+  public BibliographicItemAdapter setCoverageDepth(String coverageDepth) {
+    kbt.setField(KbartTitle.Field.COVERAGE_DEPTH, coverageDepth);
+    return this;
+  }
 }
