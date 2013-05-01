@@ -1,11 +1,11 @@
-<!--  $Id: ClockssPensoftPlugin.xml,v 1.5 2013-03-21 16:55:43 aishizaki Exp $ -->
+<!--  $Id: ClockssPensoftPlugin.xml,v 1.6 2013-05-01 23:01:49 mellen22 Exp $ -->
 <map>
   <!-- ClockssPensoftPlugin.xml inherited from PensoftPlugin.xml.
        The main differences are names, version.
   -->  
   <entry>
     <string>plugin_status</string>
-    <string>testing - audrey</string>
+    <string>testing - audrey/maryellen</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
