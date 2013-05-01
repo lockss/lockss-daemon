@@ -4,13 +4,13 @@
     name = Pensoft Publishers ;
     info[tester] = 7
   >
-  
+
     rights = openaccess
-    implicit < status ; year ; name ;  param[issue_set] >
-   {  
+    implicit < status ; year ; param[year] ; name >
+   {
     plugin = org.lockss.plugin.pensoft.PensoftPlugin
     param[base_url] = http://www.pensoft.net/
-    
+
 
     {
      title <
@@ -19,17 +19,17 @@
       eissn = 1313-2652 ;
       issnl = 1313-2644
      >
-    
+
     param[journal_name] = biorisk
-    
-    au < testing ; 2008 ; BioRisk Issue 1 ; 1 >
-    au < exists ; 2009 ; BioRisk Issues 2-3 ; "{2-3}" >
-    au < exists ; 2010 ; BioRisk Issues 4-5 ; "{4-5}" >
-    au < exists ; 2011 ; BioRisk Issue 6 ; 6 >
-    au < exists ; 2012 ; BioRisk Issue 7 ; 7 >
-  
+
+    au < exists ; 2008 ; 2008 ; BioRisk Issue 1 >
+    au < exists ; 2009 ; 2009 ; BioRisk Issues 2-3 >
+    au < exists ; 2010 ; 2010 ; BioRisk Issues 4-5 >
+    au < exists ; 2011 ; 2011 ; BioRisk Issue 6 >
+    au < exists ; 2012 ; 2012 ; BioRisk Issue 7 >
+
    }
-   
+
    {
       title <
       name = Comparative Cytogenetics ;
@@ -37,16 +37,16 @@
       eissn = 1993-078X ;
       issnl = 1993-0771
     >
-    
+
     param[journal_name] = compcytogen
-    
-    au < exists ; 2009 ; Comparative Cytogenetics Volume 3 ; 3-1,3-2 >
-    au < exists ; 2010 ; Comparative Cytogenetics Volume 4 ; 4-1,4-2 >
-    au < exists ; 2011 ; Comparative Cytogenetics Volume 5 ; 5-1,5-2,5-3,5-4,5-5,5-6 >
-    au < exists ; 2012 ; Comparative Cytogenetics Volume 6 ; 6-1,6-2,6-3,6-4 >
-  
+
+    au < exists ; 2009 ; 2009 ; Comparative Cytogenetics Volume 3 >
+    au < exists ; 2010 ; 2010 ; Comparative Cytogenetics Volume 4 >
+    au < exists ; 2011 ; 2011 ; Comparative Cytogenetics Volume 5 >
+    au < exists ; 2012 ; 2012 ; Comparative Cytogenetics Volume 6 >
+
    }
-  
+
    {
 
     title <
@@ -55,14 +55,14 @@
       eissn = 1875-2543 ;
       issnl = 1875-2535
     >
-    
+
     param[journal_name] = ijm
-    
-    au < exists ; 2011 ; International Journal of Myriapodology Issues 4-6 ; "{4-6}" >
-    au < exists ; 2012 ; International Journal of Myriapodology Issue 7 ; 7 >
+
+    au < exists ; 2011 ; 2011 ; International Journal of Myriapodology Issues 4-6 >
+    au < exists ; 2012 ; 2012 ; International Journal of Myriapodology Issue 7 >
 
    }
-  
+
    {
 
     title <
@@ -71,14 +71,14 @@
       eissn = 1314-2607 ;
       issnl = 1070-9428
     >
-    
+
     param[journal_name] = jhr
-    
-    au < exists ; 2011 ; Journal of Hymenoptera Research Issues 20-23 ; "{20-23}" >
-    au < exists ; 2012 ; Journal of Hymenoptera Research Issues 24-29 ; "{24-29}" >
-  
+
+    au < exists ; 2011 ; 2011 ; Journal of Hymenoptera Research Issues 20-23 >
+    au < exists ; 2012 ; 2012 ; Journal of Hymenoptera Research Issues 24-29 >
+
    }
-  
+
    {
 
     title <
@@ -87,27 +87,27 @@
       eissn = 1314-4049 ;
       issnl = 1314-4057
     >
-    
+
     param[base_url] = mycokeys
-    
-    au < exists ; 2011 ; MycoKeys Issue 1 ; 1 >
-    au < exists ; 2012 ; MycoKeys Issues 2-6 ; "{2-6}" >
-  
+
+    au < exists ; 2011 ; 2011 ; MycoKeys Issue 1 >
+    au < exists ; 2012 ; 2012 ; MycoKeys Issues 2-6 >
+
    }
-  
+
    {
 
     title <
       name =  Nature Conservation ;
       eissn = 1314-3301
     >
-    
+
     param[journal_name] = natureconservation
-    
-    au < exists ; 2012 ; Nature Conservation Issue 1-3 ; "{1-3}" >
-  
+
+    au < exists ; 2012 ; 2012 ; Nature Conservation Issue 1-3 >
+
    }
-  
+
    {
 
     title <
@@ -116,14 +116,14 @@
       eissn = 1314-2488 ;
       issnl = 1619-0033
     >
-    
+
     param[journal_name] = neobiota
-    
-    au < exists ; 2011 ; NeoBiota Issues 9-11 ; "{9-11}" >
-    au < exists ; 2012 ; NeoBiota Issues 12-15 ; "{12-15}" >
-  
+
+    au < exists ; 2011 ; 2011 ; NeoBiota Issues 9-11 >
+    au < exists ; 2012 ; 2012 ; NeoBiota Issues 12-15 >
+
    }
-  
+
    {
 
     title <
@@ -132,15 +132,15 @@
       eissn = 1314-2003 ;
       issnl = 1314-2011
     >
-    
+
     param[journal_name] = phytokeys
-    
-    au < exists ; 2010 ; PhytoKeys Issue 1 ; 1 >
-    au < exists ; 2011 ; PhytoKeys Issues 2-7 ; "{2-7}" >
-    au < exists ; 2012 ; PhytoKeys Issues 8-19 ; "{8-19}" >
-  
+
+    au < exists ; 2010 ; 2010 ; PhytoKeys Issue 1 >
+    au < exists ; 2011 ; 2011 ; PhytoKeys Issues 2-7 >
+    au < exists ; 2012 ; 2012 ; PhytoKeys Issues 8-19 >
+
    }
-  
+
    {
 
     title <
@@ -149,14 +149,14 @@
       eissn = 1314-2615 ;
       issnl = 1768-1448
     >
-    
-    param[journal_name] = subtbiol
-    
-    au < exists ; 2011 ; Subterranean Biology Issues 8-9 ; "{8-9}" >
 
-  
+    param[journal_name] = subtbiol
+
+    au < exists ; 2011 ; 2011 ; Subterranean Biology Issues 8-9 >
+
+
    }
-  
+
    {
 
     title <
@@ -165,17 +165,17 @@
       eissn = 1313-2970 ;
       issnl = 1313-2970
     >
-    
+
     param[journal_name] = zookeys
-    
-    au < exists ; 2008 ; ZooKeys Issues 1-4 ; "{1-4}" >
-    au < exists ; 2009 ; ZooKeys Issues 5-31 ; "{5-31}" >
-    au < exists ; 2010 ; ZooKeys Issues 32-73 ; "{32-73}" >    
-    au < exists ; 2011 ; ZooKeys Issues 74-160 ; "{74-160}" >    
-    au < exists ; 2012 ; ZooKeys Issues 161-255 ; "{161-255}" >
-  
+
+    au < exists ; 2008 ; 2008 ; ZooKeys Issues 1-4 >
+    au < exists ; 2009 ; 2009 ; ZooKeys Issues 5-31 >
+    au < exists ; 2010 ; 2010 ; ZooKeys Issues 32-73 >
+    au < exists ; 2011 ; 2011 ; ZooKeys Issues 74-160 >
+    au < exists ; 2012 ; 2012 ; ZooKeys Issues 161-255 >
+
    }
-  
+
   }
-  
+
 }
