@@ -5,9 +5,9 @@
     info[tester] = 0
   >
 
-    plugin = needs.plugin
-    param[base_url] = http://www.palgraveconnect.com/pc/doifinder/
-    implicit < status ; status2 ; eisbn ; doi ; year ; param[eisbn] ; name ; author >
+    plugin = org.lockss.plugin.palgrave.ClockssPalgraveBookPlugin
+    param[base_url] = http://www.palgraveconnect.com/
+    implicit < status ; status2 ; book_isbn ; doi ; year ; param[book_isbn] ; name ; author >
 
    {
 
@@ -1036,7 +1036,7 @@
       au < manifest ; exists ; 9780230294615 ; 10.1057/9780230294615 ; 2010 ; 9780230294615 ; Corporate Social and Human Rights Responsibilities (9780230294615) ; Edited By Karin Buhmann, Lynn Roseberry and Mette Morsing > 
       au < manifest ; exists ; 9780230300460 ; 10.1057/9780230300460 ; 2010 ; 9780230300460 ; Global Action Networks (9780230300460) ; Steve Waddell > 
       au < manifest ; exists ; 9780230246706 ; 10.1057/9780230246706 ; 2009 ; 9780230246706 ; The Leadership Illusion (9780230246706) ; Tony Hall and Karen Janman > 
-      au < manifest ; exists ; 9781137024497 ; 10.1057/9781137024497 ; 2012 ; 9781137024497 ; The Business of Global Energy Transformation (9781137024497) ; Mats Larsson > 
+      au < testing ; exists ; 9781137024497 ; 10.1057/9781137024497 ; 2012 ; 9781137024497 ; The Business of Global Energy Transformation (9781137024497) ; Mats Larsson > 
       au < manifest ; exists ; 9780230282148 ; 10.1057/9780230282148 ; 2010 ; 9780230282148 ; Family Business Models (9780230282148) ; Alberto Gimeno, Gemma Baulenas and Joan Coma-Cros > 
       au < manifest ; exists ; 9780230307728 ; 10.1057/9780230307728 ; 2011 ; 9780230307728 ; Business for the 21st Century (9780230307728) ; François Dupuy > 
      }
