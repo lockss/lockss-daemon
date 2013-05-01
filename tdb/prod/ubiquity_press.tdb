@@ -123,7 +123,7 @@
       eissn = 2049-1565 
     >
     
-    param[base_url] = http://www.openarchaeologydata.metajnl.com/
+    param[base_url] = http://openarchaeologydata.metajnl.com/
     param[journal_id] = joad
     plugin = needs.plugin
     
