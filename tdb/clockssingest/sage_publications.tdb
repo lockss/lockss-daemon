@@ -6138,7 +6138,7 @@
       au < zapped ; down ; 2010 ; Counseling Outcome Research and Evaluation Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Counseling Outcome Research and Evaluation Volume 2 ; 2 ; >
       au < zapped ; down ; 2012 ; Counseling Outcome Research and Evaluation Volume 3 ; 3 ; >
-      au < expected ; exists ; 2013 ; Counseling Outcome Research and Evaluation Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2013 ; Counseling Outcome Research and Evaluation Volume 4 ; 4 ; >
 
     }
 
@@ -12445,7 +12445,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://ksm.sagepub.com/
 
-      au < exists ; exists ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 ; >
       au < expected ; exists ; 2013 ; IIM Kozhikode Society & Management Review Volume 2 ; 2 ; >
 
     }
@@ -26353,7 +26353,7 @@
       au < released ; manifest ; 2012 ; National Institute Economic Review Volume 221 ; 221 ; >
       au < released ; manifest ; 2012 ; National Institute Economic Review Volume 222 ; 222 ; >
       au < manifest ; exists ; 2013 ; National Institute Economic Review Volume 223 ; 223 ; >
-      au < exists ; exists ; 2013 ; National Institute Economic Review Volume 224 ; 224 ; >
+      au < manifest ; exists ; 2013 ; National Institute Economic Review Volume 224 ; 224 ; >
       au < expected ; exists ; 2013 ; National Institute Economic Review Volume 225 ; 225 ; >
       au < expected ; exists ; 2013 ; National Institute Economic Review Volume 226 ; 226 ; >
 
@@ -30248,7 +30248,7 @@
         au < exists ; exists ; 2010 ; Recherche et Applications en Marketing (English Edition) Volume 25 ; 25 >
         au < exists ; exists ; 2011 ; Recherche et Applications en Marketing (English Edition) Volume 26 ; 26 >
         au < expected ; exists ; 2012 ; Recherche et Applications en Marketing (English Edition) Volume 27 ; 27 >
-        au < expected ; exists ; 2013 ; Recherche et Applications en Marketing (English Edition) Volume 28 ; 28 >
+        au < manifest ; exists ; 2013 ; Recherche et Applications en Marketing (English Edition) Volume 28 ; 28 >
 
       }
 
@@ -37923,7 +37923,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://foi.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 47 ; 47 ; >
 
     }
 
@@ -38200,7 +38200,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://ojs.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Orthopaedic Journal of Sports Medicine Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; Orthopaedic Journal of Sports Medicine Volume 1 ; 1 ; >
 
     }
 
