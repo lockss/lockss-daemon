@@ -324,6 +324,8 @@
     au < released ; 2008 ; Cell Communication Insights Volume 1 ; 2008 >
     au < released ; 2009 ; Cell Communication Insights Volume 2 ; 2009 >
     au < released ; 2010 ; Cell Communication Insights Volume 3 ; 2010 >
+    au < manifest ; 2012 ; Cell Communication Insights Volume 4 ; 2012 >
+    
 
   }
 
@@ -512,6 +514,7 @@
     au < released ; 2008 ; Clinical Medicine Insights: Geriatrics Volume 1-2 ; 2008 >
     au < released ; 2009 ; Clinical Medicine Insights: Geriatrics Volume 3 ; 2009 >
     au < released ; 2011 ; Clinical Medicine Insights: Geriatrics Volume 4 ; 2011 >
+    au < manifest ; 2013 ; Clinical Medicine Insights: Geriatrics Volume 6 ; 2013 >
 
   }
 
@@ -586,7 +589,7 @@
     au < released ; 2008 ; Clinical Medicine Insights: Psychiatry Volume 1 ; 2008 >
     au < released ; 2009 ; Clinical Medicine Insights: Psychiatry Volume 2 ; 2009 >
     au < released ; 2011 ; Clinical Medicine Insights: Psychiatry Volume 3 ; 2011 >
-    au < expected ; 2013 ; Clinical Medicine Insights: Psychiatry Volume 4 ; 2013 >
+    au < manifest ; 2012 ; Clinical Medicine Insights: Psychiatry Volume 4 ; 2012 >
 
   }
 
@@ -640,6 +643,7 @@
     au < manifest ; 2008 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 1 ; 2008 >
     au < released ; 2009 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 2 ; 2009 >
     au < manifest ; 2010 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 3 ; 2010 >
+    au < manifest ; 2013 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 4 ; 2013 >
 
   }
 
@@ -1255,6 +1259,7 @@
 
     au < released ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 2009 >
     au < released ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2010 >
+    au < manifest ; 2013 ; Lymphona and Chronic Lymphocytic Leukemias Volume 3 ; 2013 >
 
   }
 
@@ -1450,7 +1455,9 @@
 
     au < manifest ; 2009 ; Primary Prevention Insights Volume 1 ; 2009 >
     au < manifest ; 2010 ; Primary Prevention Insights Volume 2 ; 2010 >
-
+	au < exists ; 2011 ; Primary Prevention Insights Volume 3 ; 2011 >
+    au < manifest ; 2012 ; Primary Prevention Insights Volume 4 ; 2012 >
+    au < expected ; 2013 ; Primary Prevention Insights Volume 5 ; 2013 >
   }
 
   {
@@ -1484,7 +1491,7 @@
     param[journal_id] = 134
 
     au < manifest ; 2008 ; Rehabilitation Process and Outcome Volume 1 ; 2008 >
-    au < manifest ; 2010 ; Rehabilitation Process and Outcome Volume 3 ; 2010 >
+    au < manifest ; 2010 ; Rehabilitation Process and Outcome Volume 2 ; 2010 >
 
   }
 
@@ -1517,6 +1524,7 @@
 
     au < manifest ; 2008 ; Retrovirology: Research and Treatment Volume 1-2 ; 2008 >
     au < manifest ; 2010 ; Retrovirology: Research and Treatment Volume 3 ; 2010 >
+    au < manifest ; 2012 ; Retrovirology: Research and Treatment Volume 4 ; 2012 >
 
 
   }
@@ -1608,6 +1616,7 @@
 
     au < released ; 2008 ; Virology: Research and Treatment Volume 1 ; 2008 >
     au < released ; 2010 ; Virology: Research and Treatment Volume 2 ; 2010 >
+    au < manifest ; 2013 ; Virology: Research and Treatment Volume 4 ; 2013 >
 
 
   }
