@@ -1,4 +1,4 @@
-/* $Id: TestPalgraveBookRisMetadataExtractorFactory.java,v 1.1 2013-05-02 17:15:43 ldoan Exp $
+/* $Id: TestPalgraveBookRisMetadataExtractorFactory.java,v 1.2 2013-05-02 20:14:47 ldoan Exp $
 
  Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -141,7 +141,7 @@ public class TestPalgraveBookRisMetadataExtractorFactory extends LockssTestCase 
   // match the metadata in the source code. 
   public void testExtractFromGoodContent() throws Exception {
     String goodContent = createGoodContent();
-    log.info(goodContent);
+    //log.info(goodContent);
     // ris file which the metadata extracted from.
     String url = "http://www.palgraveconnect.com/pc/browse/citationExport?isbn=9781137024497&WT.cg_n=eBooks&WT.cg_s=Citation%20Export";
     MockCachedUrl cu = new MockCachedUrl(url, pau);

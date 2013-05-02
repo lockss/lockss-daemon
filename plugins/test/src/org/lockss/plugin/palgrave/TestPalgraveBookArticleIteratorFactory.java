@@ -1,4 +1,4 @@
-/* $Id: TestPalgraveBookArticleIteratorFactory.java,v 1.1 2013-05-02 17:15:43 ldoan Exp $
+/* $Id: TestPalgraveBookArticleIteratorFactory.java,v 1.2 2013-05-02 20:14:47 ldoan Exp $
  
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -150,11 +150,11 @@ public class TestPalgraveBookArticleIteratorFactory extends ArticleIteratorTestC
         CachedUrl cu = (CachedUrl)cusn;
         if (cuPdf == null 
             && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF)) {
-          log.info("pdf contenttype: " + cu.getContentType());
+          //log.info("pdf contenttype: " + cu.getContentType());
           cuPdf = cu;
         } else if (cuHtml == null 
             && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML)) {
-          log.info("html contenttype: " + cu.getContentType());
+          //log.info("html contenttype: " + cu.getContentType());
           cuHtml = cu;
         }
       }
@@ -180,9 +180,9 @@ public class TestPalgraveBookArticleIteratorFactory extends ArticleIteratorTestC
       String[] actualUrls = { af.getFullTextUrl(),
                               af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF),
                               af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE) };
-      log.info("actualUrls: " + actualUrls.length);
+      //log.info("actualUrls: " + actualUrls.length);
       for (int i = 0;i< actualUrls.length; i++) {
-        log.info("url: " + actualUrls[i]);
+        //log.info("url: " + actualUrls[i]);
         assertEquals(expectedUrls[i], actualUrls[i]);
       }   
     }
