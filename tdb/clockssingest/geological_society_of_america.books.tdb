@@ -606,6 +606,7 @@
     param[base_url] = http://reg.gsapubs.org/
     implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] >
     
+    au < manifest ; exists ; 2005 ; 0-8137-4115-7 ; Geological Society of America Reviews in Engineering Geology Volume 15 ; 15 >
     au < exists ; exists ; 2005 ; 978-0-8137-4120-8 ; Geological Society of America Reviews in Engineering Geology Volume 16 ; 16 >
     au < manifest ; exists ; 2007 ; 978-0-8137-4119-2 ; Geological Society of America Reviews in Engineering Geology Volume 17 ; 17 >
     au < manifest ; exists ; 2007 ; 978-0-8137-4118-5 ; Geological Society of America Reviews in Engineering Geology Volume 18 ; 18 >
