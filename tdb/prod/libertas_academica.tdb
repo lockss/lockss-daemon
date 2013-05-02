@@ -207,10 +207,12 @@
     >
 
     param[journal_id] = 120
+    comment[0] = skips years 2011, 2012
 
     au < released ; 2008 ; Bone and Tissue Regeneration Insights Volume 1 ; 2008 >
     au < released ; 2009 ; Bone and Tissue Regeneration Insights Volume 2 ; 2009 >
     au < released ; 2010 ; Bone and Tissue Regeneration Insights Volume 3 ; 2010 >
+    au < exists ; 2013 ; Bone and Tissue Regeneration Insights Volume 4 ; 2013 >
 
 
   }
@@ -285,10 +287,13 @@
     >
 
     param[journal_id] = 125
+    comment[0] = skips year 2011
 
     au < released ; 2008 ; Cell & Tissue Transplantation & Therapy Volume 1 ; 2008 >
     au < released ; 2009 ; Cell & Tissue Transplantation & Therapy Volume 2 ; 2009 >
     au < released ; 2010 ; Cell & Tissue Transplantation & Therapy Volume 3 ; 2010 >
+    au < exists ; 2012 ; Cell & Tissue Transplantation & Therapy Volume 4 ; 2012 >
+    au < exists ; 2013 ; Cell & Tissue Transplantation & Therapy Volume 5 ; 2013 >
 
   }
 
