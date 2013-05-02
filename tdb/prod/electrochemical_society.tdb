@@ -160,7 +160,7 @@
 
     param[base_url] = http://ecst.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[0] = volume46, 47, 48, 51 are not available
+    comment[0] = volume 38, 46, 47, 48, 51 are not available
     comment[notReady] = "article abstract-view"
 
     au < HighWirePressH20Plugin ; notReady ; 2005 ; ECS Transactions Volume 1 ; 1 >
@@ -200,7 +200,6 @@
     au < HighWirePressH20Plugin ; notReady ; 2011 ; ECS Transactions Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; ECS Transactions Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; notReady ; 2011 ; ECS Transactions Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; notReady ; 2011 ; ECS Transactions Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; ECS Transactions Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; ECS Transactions Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; released ; 2011 ; ECS Transactions Volume 41 ; 41 >
