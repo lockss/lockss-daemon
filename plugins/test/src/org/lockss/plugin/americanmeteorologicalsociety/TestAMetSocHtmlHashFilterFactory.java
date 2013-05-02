@@ -1,5 +1,5 @@
 /*
- * $Id: TestAMetSocHtmlHashFilterFactory.java,v 1.1 2013-02-08 00:19:41 alexandraohlson Exp $
+ * $Id: TestAMetSocHtmlHashFilterFactory.java,v 1.2 2013-05-02 20:33:08 alexandraohlson Exp $
  */
 /*
 
@@ -93,7 +93,7 @@ private static final String copyrightHtml =
     "</div>";
   
   private static final String copyrightFiltered = 
-      "\n</div>";
+      " </div>";
   
   /* institutionBanner section */
   private static final String identityBarHtml =
@@ -165,7 +165,7 @@ private static final String copyrightHtml =
           "<div class=\"panelTopMiddle panel_228_width\">";
 
   private static final String journalNavFiltered = 
-      "<div class=\"panel panel_228\"  id=\"journalInfoPanel\">" +
+      "<div class=\"panel panel_228\" id=\"journalInfoPanel\">" +
           "<div class=\"panelTopLeft\"></div>" +
           "<div class=\"panelTopMiddle panel_228_width\">";
 
@@ -195,10 +195,28 @@ private static final String copyrightHtml =
           "<a class=\"ref\" href=\"javascript:newWindow('http://dx.doi.org/10.1175%2F1520-0469%282004%29061%3C0121%3ASVOTNA%3E2.0.CO%3B2')\">[Abstract]</a>" +
           "</td>";
 
-  /* subscription pricing in left panel which is generic, so hash out individual products */
+  private static final String scanTableHtml1=
+      "<div id=\"s3a\" class=\"NLM_sec NLM_sec_level_2\">  <span class=\"title2\" id=\"d2160184e521\">a. QA1: blah</span>" +
+      "  <p>blah <i>G</i><sub>0</sub> blah (<a class=\"ref NLM_xref-bibr\" " +
+      "href=\"javascript:popRef2('i1558-8432-47-4-1006-Iqbal1')\">Iqbal 1983</a>):                                           <table " +
+      "class=\"formula\" style=\"width:100%;vertical-align:middle\" align=\"center\" border=\"0\" " +
+      "cellpadding=\"0\" cellspacing=\"0\" id=\"i1558-8432-47-4-1006-eq1\"><tr><td width=\"90%\" align=\"center\">" +
+      "<img src=\"/na101/blah.gif\" alt=\"\" id=\"_e1\"/></td></tr></table>";
+      
+      private static final String scanTableHtml2=
+          "<div id=\"s3a\" class=\"NLM_sec NLM_sec_level_2\">  <span class=\"title2\" id=\"d801221e521\">a. QA1: blah</span>" +
+          "  <p>blah <i>G</i><sub>0</sub> blah (<a class=\"ref NLM_xref-bibr\" " +
+          "href=\"javascript:popRef2('i1558-8432-47-4-1006-Iqbal1')\">Iqbal 1983</a>):      <table " +
+          "class=\"formula\" style=\"width:100%;vertical-align:middle\" align=\"center\" border=\"0\" " +
+          "cellpadding=\"0\" cellspacing=\"0\" id=\"i1558-8432-47-4-1006-eq1\"><tr><td width=\"90%\" align=\"center\">" +
+          "<img src=\"/na101/blah.gif\" alt=\"\" id=\"_e1\"/></td></tr></table>";
+
+          
+          /* subscription pricing in left panel which is generic, so hash out individual products */
 
   public void testFiltering() throws Exception {
     InputStream inA;
+    InputStream inB;
 
    inA = fact.createFilteredInputStream(mau, new StringInputStream(identityBarHtml),
         ENC);
@@ -223,5 +241,12 @@ private static final String copyrightHtml =
     inA = fact.createFilteredInputStream(mau, new StringInputStream(citedByHtml),
         ENC);
     assertEquals(citedByFiltered,StringUtil.fromInputStream(inA));
+    
+/* in this case, check against two versions that really existed - filter both and compare result */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(scanTableHtml1),
+        ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(scanTableHtml2),
+        ENC);
+    assertEquals(StringUtil.fromInputStream(inA),StringUtil.fromInputStream(inB));
   }
 }

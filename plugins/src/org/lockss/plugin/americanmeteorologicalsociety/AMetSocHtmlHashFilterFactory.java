@@ -1,5 +1,5 @@
 /*
- * $Id: AMetSocHtmlHashFilterFactory.java,v 1.1 2013-02-08 00:19:42 alexandraohlson Exp $
+ * $Id: AMetSocHtmlHashFilterFactory.java,v 1.2 2013-05-02 20:33:08 alexandraohlson Exp $
  */
 
 /*
@@ -32,15 +32,27 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.americanmeteorologicalsociety;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.Reader;
+import java.util.Vector;
 
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
 public class AMetSocHtmlHashFilterFactory implements FilterFactory {
+  
+  Logger log = Logger.getLogger("AMetSocHtmlHashFilterFactoryy");
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -60,9 +72,36 @@ public class AMetSocHtmlHashFilterFactory implements FilterFactory {
         // Contains the linbrary specific "find it" button
         HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+        HtmlTransform xform = new HtmlTransform() {
+          @Override
+          public NodeList transform(NodeList nodeList) throws IOException {
+            try {
+              nodeList.visitAllNodesWith(new NodeVisitor() {
+                @Override
+                public void visitTag(Tag tag) {
+                  String tagName = tag.getTagName().toLowerCase();
+                  // Need to remove <span class="titleX" id="xxxxx"> because id is variable
+                  // cannot remove span tag pair because contents are content. Just remove the id value
+                  if ( ("span".equals(tagName))  && (tag.getAttribute("id") != null) ){
+                    tag.setAttribute("id", "0");
+                  }
+                }
+              });
+            }
+            catch (Exception exc) {
+              log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+            }
+            return nodeList;
+          }
+        };   
+        
+        // Also need white space filter to condense multiple white spaces down to 1
+        InputStream filtered = new HtmlFilterInputStream(in,
+            encoding,
+            new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
+        
+        Reader filteredReader = FilterUtil.getReader(filtered, encoding);
+        return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
 
   }
 
