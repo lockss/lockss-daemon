@@ -106,10 +106,12 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.palgrave.PalgraveBookArticleIteratorFactory</string>
   </entry>
-    <entry>
+<!--
+   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.palgrave.PalgraveBookPdfFilterFactory</string>
   </entry>
+-->
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
     <map>
