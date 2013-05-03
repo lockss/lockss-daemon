@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuMetadataRecorder.java,v 1.2 2013-03-26 22:17:34 fergaloy-sf Exp $
+ * $Id: TestAuMetadataRecorder.java,v 1.3 2013-05-03 02:09:57 tlipkis Exp $
  */
 
 /*
@@ -61,9 +61,7 @@ import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.plugin.simulated.SimulatedPlugin;
-import org.lockss.test.ConfigurationUtil;
-import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockLockssDaemon;
+import org.lockss.test.*;
 import org.lockss.util.ExternalizableMap;
 import org.lockss.util.Logger;
 
@@ -169,6 +167,13 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     runRecordNoJournalTitleNoISSNJournal();
   }
 
+  ReindexingTask newReindexingTask(ArchivalUnit au,
+				   ArticleMetadataExtractor ame) {
+    ReindexingTask res = new ReindexingTask(au, ame);
+    res.setWDog(new MockLockssWatchdog());
+    return res;
+  }
+
   /**
    * Records a journal.
    * 
@@ -196,7 +201,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       int initialArticleCount = countAuMetadataItems(conn);
       assertNotEquals(-1, initialArticleCount);
 
-      ReindexingTask task = new ReindexingTask(sau0, sau0.getPlugin()
+      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata =
@@ -281,7 +286,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       int initialChapterCount = countAuMetadataItems(conn);
       assertNotEquals(-1, initialChapterCount);
 
-      ReindexingTask task = new ReindexingTask(sau0, sau0.getPlugin()
+      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata = getBookMetadata("Publisher", 1, 3);
@@ -365,7 +370,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // Get the initial number of archival unit problems.
       int initialProblemCount = countAuProblems(conn);
 
-      ReindexingTask task = new ReindexingTask(sau0, sau0.getPlugin()
+      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata = getJournalMetadata(null, 1, 8, false);
@@ -453,7 +458,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // Get the initial number of archival unit problems.
       int initialProblemCount = countAuProblems(conn);
 
-      ReindexingTask task = new ReindexingTask(sau0, sau0.getPlugin()
+      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata =
@@ -534,7 +539,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // Get the initial number of archival unit problems.
       int initialProblemCount = countAuProblems(conn);
 
-      ReindexingTask task = new ReindexingTask(sau0, sau0.getPlugin()
+      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata = getJournalMetadata(null, 1, 8, false);
@@ -624,7 +629,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // Get the initial number of archival unit problems.
       int initialProblemCount = countAuProblems(conn);
 
-      ReindexingTask task = new ReindexingTask(sau0, sau0.getPlugin()
+      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata =
@@ -703,7 +708,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       int initialArticleCount = countAuMetadataItems(conn);
       assertNotEquals(-1, initialArticleCount);
 
-      ReindexingTask task = new ReindexingTask(sau0, sau0.getPlugin()
+      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
 		.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
 
       ArticleMetadataBuffer metadata =
