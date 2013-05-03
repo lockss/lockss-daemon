@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.11 2013-04-24 21:51:54 barry409 Exp $
+ * $Id: VoteBlockTallier.java,v 1.12 2013-05-03 17:30:44 barry409 Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.poller.v3;
 import java.util.*;
 
 import org.lockss.hasher.HashBlock;
+import org.lockss.hasher.HashResult;
 import org.lockss.protocol.VoteBlock;
 import org.lockss.util.Logger;
 
@@ -271,8 +272,8 @@ public class VoteBlockTallier {
 	if (hbVersion.getHashError() == null) {
 	  // todo(bhayes): the participantIndex could be removed if
 	  // HashBlock could return versions keyed by ParticipantUserData.
-	  byte[] hbHash = hashIndexer.getParticipantHash(hbVersion,
-							 participantIndex);
+	  HashResult hbHash = hashIndexer.getParticipantHash(hbVersion,
+							     participantIndex);
 	  VoteBlock.Version[] vbVersions = voteBlock.getVersions();
 	  for (int versionIndex = 0; versionIndex < vbVersions.length;
 	       versionIndex++) {
@@ -281,8 +282,8 @@ public class VoteBlockTallier {
 	      log.warning("Voter version "+versionIndex+
 			  " had a hashing error.");
 	    } else {
-	      byte[] vbHash = vbVersion.getHash();
-	      if (Arrays.equals(hbHash, vbHash)) {
+	      HashResult vbHash = HashResult.make(vbVersion.getHash());
+	      if (hbHash.equals(vbHash)) {
 		return true;
 	      }
 	    }

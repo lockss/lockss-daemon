@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.141 2013-04-26 21:11:23 barry409 Exp $
+ * $Id: V3Poller.java,v 1.142 2013-05-03 17:30:44 barry409 Exp $
  */
 
 /*
@@ -394,26 +394,25 @@ public class V3Poller extends BasePoll {
      * @param version The result of hashing some version of a block.
      * @param participantIndex The index in theParticipants of one of
      * the participant voters.
-     * @return the hash digest computed for that participant.
+     * @return the HashResult computed for that participant.
      */
-    public byte[] getParticipantHash(HashBlock.Version version,
-				     int participantIndex);
+    public HashResult getParticipantHash(HashBlock.Version version,
+					 int participantIndex);
     /**
      * @param version The result of hashing some version of a block.
      * @param symmetricParticipantIndex The index in
      * symmetricParticipants of one of the participant voters who has
      * requested a symmetric poll.
-     * @return the hash digest computed for that participant's symmetric
-     * nonce.
+     * @return the HashResult for that participant's symmetric nonce.
      */
-    public byte[] getSymmetricHash(HashBlock.Version version,
-				   int symmetricParticipantIndex);
+    public HashResult getSymmetricHash(HashBlock.Version version,
+				       int symmetricParticipantIndex);
 
     /**
      * @param version The result of hashing some version of a block.
-     * @return the plain hash of the version.
+     * @return the HashResult for the plain hash of the version.
      */
-    public byte[] getPlainHash(HashBlock.Version version);
+    public HashResult getPlainHash(HashBlock.Version version);
   }
 
   // Global state for the poll.
@@ -1127,8 +1126,8 @@ public class V3Poller extends BasePoll {
   final Comparator<HashBlock.Version> plainHashComparator =
     new Comparator<HashBlock.Version>() {
       public int compare(HashBlock.Version o1, HashBlock.Version o2) {
-	byte[] plainHash1 = getPlainHash(o1);
-	byte[] plainHash2 = getPlainHash(o2);
+	byte[] plainHash1 = getPlainHash(o1).getBytes();
+	byte[] plainHash2 = getPlainHash(o2).getBytes();
 	return ByteArray.lexicographicalCompare(plainHash1, plainHash2);
       }
   };
@@ -1176,9 +1175,9 @@ public class V3Poller extends BasePoll {
       Iterator hashVersionIter = hashBlock.versionIterator();
       while(hashVersionIter.hasNext()) {
 	HashBlock.Version ver = (HashBlock.Version)hashVersionIter.next();
-	byte[] plainDigest = getPlainHash(ver);
+	HashResult plainDigest = getPlainHash(ver);
 	for (int i = 0; i < symmetricPollSize(); i++) {
-	  byte[] symmetricDigest = getSymmetricHash(ver, i);
+	  HashResult symmetricDigest = getSymmetricHash(ver, i);
 	  if (symmetricDigest == null) {
 	    throw new ShouldNotHappenException("null hash for symmetric poll");
 	  }
@@ -1187,8 +1186,8 @@ public class V3Poller extends BasePoll {
 			ver.getFilteredLength(),
 			ver.getUnfilteredOffset(),
 			ver.getUnfilteredLength(),
-			plainDigest,
-			symmetricDigest,
+			plainDigest.getBytes(),
+			symmetricDigest.getBytes(),
 			ver.getHashError() != null);
 	  // Find this voter's hash block container
 	  ParticipantUserData ud = symmetricParticipants.get(i);
@@ -1580,10 +1579,10 @@ public class V3Poller extends BasePoll {
    * the participant voters.
    * @return the hash digest computed for that participant.
    */
-  private byte[] getParticipantHash(HashBlock.Version version,
-				    int participantIndex) {
+  private HashResult getParticipantHash(HashBlock.Version version,
+					int participantIndex) {
     if (0 <= participantIndex && participantIndex < getPollSize()) {
-      return version.getHashes()[participantIndex];
+      return HashResult.make(version.getHashes()[participantIndex]);
     } else {
       throw new ShouldNotHappenException("participantIndex "+participantIndex+
 					 " out of bounds: "+getPollSize());
@@ -1598,11 +1597,12 @@ public class V3Poller extends BasePoll {
    * @return the hash digest computed for that participant's symmetric
    * nonce.
    */
-  private byte[] getSymmetricHash(HashBlock.Version version,
-				  int symmetricParticipantIndex) {
+  private HashResult getSymmetricHash(HashBlock.Version version,
+				      int symmetricParticipantIndex) {
     if (0 <= symmetricParticipantIndex &&
 	symmetricParticipantIndex < symmetricPollSize()) {
-      return version.getHashes()[getPollSize() + symmetricParticipantIndex];
+      return HashResult.make(
+	version.getHashes()[getPollSize() + symmetricParticipantIndex]);
     } else {
       throw new
 	ShouldNotHappenException("symmetricParticipantIndex "+
@@ -1615,8 +1615,9 @@ public class V3Poller extends BasePoll {
    * @param version The result of hashing some version of a block.
    * @return the plain hash of the version.
    */
-  private byte[] getPlainHash(HashBlock.Version version) {
-    return version.getHashes()[getPollSize() + symmetricPollSize()];
+  private HashResult getPlainHash(HashBlock.Version version) {
+    return HashResult.make(
+      version.getHashes()[getPollSize() + symmetricPollSize()]);
   }
 
   /**
@@ -1625,16 +1626,16 @@ public class V3Poller extends BasePoll {
    */
   public HashIndexer getHashIndexer() {
     return new HashIndexer() {
-      public byte[] getParticipantHash(HashBlock.Version version,
-				       int participantIndex) {
+      public HashResult getParticipantHash(HashBlock.Version version,
+					   int participantIndex) {
 	return V3Poller.this.getParticipantHash(version, participantIndex);
       }
-      public byte[] getSymmetricHash(HashBlock.Version version,
-				     int symmetricParticipantIndex) {
+      public HashResult getSymmetricHash(HashBlock.Version version,
+					 int symmetricParticipantIndex) {
 	return V3Poller.this.getSymmetricHash(version,
 					      symmetricParticipantIndex);
       }
-      public byte[] getPlainHash(HashBlock.Version version) {
+      public HashResult getPlainHash(HashBlock.Version version) {
 	return V3Poller.this.getPlainHash(version);
       }
     };

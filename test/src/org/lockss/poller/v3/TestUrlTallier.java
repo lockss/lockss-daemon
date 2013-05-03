@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.14 2013-04-23 21:52:40 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.15 2013-05-03 17:30:44 barry409 Exp $
  */
 
 /*
@@ -750,35 +750,6 @@ public class TestUrlTallier extends LockssTestCase {
     public int getPollSize() {
       return pollSize;
     }
-  }
-
-  V3Poller.HashIndexer makeHashIndexer(final int pollSize,
-				       final int symmetricPollSize) {
-    return new V3Poller.HashIndexer() {
-      public byte[] getParticipantHash(HashBlock.Version version,
-				       int participantIndex) {
-	if (0 <= participantIndex && participantIndex < pollSize) {
-	  return version.getHashes()[participantIndex];
-	} else {
-	  fail("participantIndex "+participantIndex+ " out of bounds");
-	  return null;
-	}
-      }
-      public byte[] getSymmetricHash(HashBlock.Version version,
-				     int symmetricParticipantIndex) {
-	if (0 <= symmetricParticipantIndex &&
-	    symmetricParticipantIndex < symmetricPollSize) {
-	  return version.getHashes()[pollSize + symmetricParticipantIndex];
-	} else {
-	  fail("symmetricParticipantIndex "+
-	       symmetricParticipantIndex+" out of bounds: ");
-	  return null;
-	}	
-      }
-      public byte[] getPlainHash(HashBlock.Version version) {
-	return version.getHashes()[pollSize + symmetricPollSize];
-      }
-    };
   }
 
   private void initRequiredServices() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlockTallier.java,v 1.10 2013-04-24 21:51:54 barry409 Exp $
+ * $Id: TestVoteBlockTallier.java,v 1.11 2013-05-03 17:30:44 barry409 Exp $
  */
 
 /*
@@ -90,35 +90,6 @@ public class TestVoteBlockTallier extends LockssTestCase {
     VoteBlock vb = new VoteBlock("foo", VoteBlock.CONTENT_VOTE);
     vb.addVersion(0, 123, 0, 155, testBytes, testBytes, false);
     return vb;
-  }
-
-  V3Poller.HashIndexer makeHashIndexer(final int pollSize,
-				       final int symmetricPollSize) {
-    return new V3Poller.HashIndexer() {
-      public byte[] getParticipantHash(HashBlock.Version version,
-				       int participantIndex) {
-	if (0 <= participantIndex && participantIndex < pollSize) {
-	  return version.getHashes()[participantIndex];
-	} else {
-	  fail("participantIndex "+participantIndex+ " out of bounds");
-	  return null;
-	}
-      }
-      public byte[] getSymmetricHash(HashBlock.Version version,
-				     int symmetricParticipantIndex) {
-	if (0 <= symmetricParticipantIndex &&
-	    symmetricParticipantIndex < symmetricPollSize) {
-	  return version.getHashes()[pollSize + symmetricParticipantIndex];
-	} else {
-	  fail("symmetricParticipantIndex "+
-	       symmetricParticipantIndex+" out of bounds: ");
-	  return null;
-	}	
-      }
-      public byte[] getPlainHash(HashBlock.Version version) {
-	return version.getHashes()[pollSize + symmetricPollSize];
-      }
-    };
   }
 
   public void testConstructPollTally() {
