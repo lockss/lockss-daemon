@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.9 2013-04-02 20:29:22 pgust Exp $
+ * $Id: ReindexingTask.java,v 1.10 2013-05-03 01:59:17 tlipkis Exp $
  */
 
 /*
@@ -178,8 +178,12 @@ public class ReindexingTask extends StepTask {
     callback = new ReindexingEventHandler();
   }
 
-  public void setWdog(LockssWatchdog watchDog) {
+  public void setWDog(LockssWatchdog watchDog) {
     this.watchDog = watchDog;
+  }
+
+  void pokeWDog() {
+    watchDog.pokeWDog();
   }
 
   /**
@@ -240,7 +244,7 @@ public class ReindexingTask extends StepTask {
 	}
       }
       
-      watchDog.pokeWDog();
+      pokeWDog();
     }
 
     log.debug3(DEBUG_HEADER + "isFinished() = " + isFinished());
@@ -812,7 +816,7 @@ public class ReindexingTask extends StepTask {
 	      new AuMetadataRecorder((ReindexingTask) task, mdManager, au)
 		  .recordMetadata(conn, mditr);
 	      
-	      watchDog.pokeWDog();
+	      pokeWDog();
 	    }
 
 	    // Remove the AU just re-indexed from the list of AUs pending to be

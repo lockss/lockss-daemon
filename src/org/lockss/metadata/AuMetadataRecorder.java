@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.8 2013-03-26 22:17:34 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.9 2013-05-03 01:59:17 tlipkis Exp $
  */
 
 /*
@@ -224,6 +224,8 @@ public class AuMetadataRecorder {
 
     // Loop through the metadata for each article.
     while (mditr.hasNext()) {
+      task.pokeWDog();
+
       // Normalize all the metadata fields.
       ArticleMetadataInfo normalizedMdInfo = normalizeMetadata(mditr.next());
 
