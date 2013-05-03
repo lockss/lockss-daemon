@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.23 2013-05-01 14:26:54 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.24 2013-05-03 01:58:40 tlipkis Exp $
  */
 
 /*
@@ -689,32 +689,24 @@ public class TdbUtil {
   public static enum ContentType {
     JOURNALS ("Journals") {
       @Override
-      /**
-       * An AU is considered a journal if it is marked as type "journal"
-       * and has no ISBN. This is complementary to the test for books.
-       */
+      /** An AU is considered a journal if it is of type journal and has no
+       * ISBN. This will omit bookSeries. */
       public boolean isOfType(BibliographicItem au) {
-        //return !BOOKS.isOfType(au); // direct complement of BOOK test
-        // Has no ISBN and is not marked as a book type
-        /*return StringUtil.isNullString(au.getIsbn()) &&
-            !"book".equals(au.getPublicationType()) &&
-            !"bookSeries".equals(au.getPublicationType());*/
-        // Is of type journal and has no ISBN (This will omit bookSeries.)
-        return "journal".equals(au.getPublicationType()) &&
-            StringUtil.isNullString(au.getIsbn())
+        //return StringUtil.isNullString(au.getIsbn());
+        return "journal".equals(au.getPublicationType()) /*&&
+            StringUtil.isNullString(au.getIsbn())*/
             ;
       }
     },
     BOOKS ("Books") {
       @Override
-      /**
-       * An AU is considered a book if it has an ISBN or is marked as type
-       * "book" or "bookSeries".
-       */
+      /** An AU is considered a book if it has an ISBN. */
       public boolean isOfType(BibliographicItem au) {
-        return !StringUtil.isNullString(au.getIsbn()) ||
-            "book".equals(au.getPublicationType()) ||
-            "bookSeries".equals(au.getPublicationType())
+        //return !StringUtil.isNullString(au.getIsbn());
+        return "book".equals(au.getPublicationType()) ||
+            "bookSeries".equals(au.getPublicationType()) /*||
+            // book series collected under journal
+            "journal".equals(au.getPublicationType()) && !StringUtil.isNullString(au.getIsbn())*/
             ;
       }
     },
