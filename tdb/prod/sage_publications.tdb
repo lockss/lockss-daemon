@@ -2977,6 +2977,31 @@
     {
 
       title <
+        name = Asian Cardiovascular and Thoracic Annals ;
+        issn = 0218-4923 ;
+        eissn = 1816-5370 
+    >
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://aan.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2004 ; Asian Cardiovascular and Thoracic Annals Volume 12 ; 12 >
+      au < exists ; 2005 ; Asian Cardiovascular and Thoracic Annals Volume 13 ; 13 >
+      au < exists ; 2006 ; Asian Cardiovascular and Thoracic Annals Volume 14 ; 14 >
+      au < exists ; 2007 ; Asian Cardiovascular and Thoracic Annals Volume 15 ; 15 >
+      au < exists ; 2008 ; Asian Cardiovascular and Thoracic Annals Volume 16 ; 16 >
+      au < exists ; 2009 ; Asian Cardiovascular and Thoracic Annals Volume 17 ; 17 >
+      au < exists ; 2010 ; Asian Cardiovascular and Thoracic Annals Volume 18 ; 18 >
+      au < exists ; 2011 ; Asian Cardiovascular and Thoracic Annals Volume 19 ; 19 >
+      au < exists ; 2012 ; Asian Cardiovascular and Thoracic Annals Volume 20 ; 20 >
+      au < manifest ; 2013 ; Asian Cardiovascular and Thoracic Annals Volume 21 ; 21 >
+
+    }
+    
+    {
+
+      title <
         name = Asian Journal of Management Cases ;
         issn = 0972-8201 ;
         eissn = 0973-0621 ;
@@ -21258,6 +21283,28 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
       title <
+        name = Journal of Experiential Education ;
+        issn = 1053-8259 ;
+        eissn = 2169-009X 
+    >
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://jee.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2001 ; Journal of Experiential Education Volume 24 ; 24 >
+      au < exists ; 2002-2003 ; Journal of Experiential Education Volume 25 ; 25 >
+      au < exists ; 2003-2004 ; Journal of Experiential Education Volume 26 ; 26 >
+      au < exists ; 2004 ; Journal of Experiential Education Volume 27 ; 27 >
+      au < exists ; 2005-2006 ; Journal of Experiential Education Volume 28 ; 28 >
+      au < exists ; 2006-2007 ; Journal of Experiential Education Volume 29 ; 29 >
+      au < exists ; 2013 ; Journal of Experiential Education Volume 36 ; 36 >
+      
+    }
+
+    {
+
+      title <
         name = Journal of Family History ;
         issn = 0363-1990 ;
         eissn = 1552-5473 ;
@@ -32806,6 +32853,32 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Public Personnel Management ;
+        issn = 0091-0260 
+    >
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://ppm.sagepub.com
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2002 ; Public Personnel Management Volume 31 ; 31 >
+      au < exists ; 2003 ; Public Personnel Management Volume 32 ; 32 >
+      au < exists ; 2004 ; Public Personnel Management Volume 33 ; 33 >
+      au < exists ; 2005 ; Public Personnel Management Volume 34 ; 34 >
+      au < exists ; 2006 ; Public Personnel Management Volume 35 ; 35 >
+      au < exists ; 2007 ; Public Personnel Management Volume 36 ; 36 >
+      au < exists ; 2008 ; Public Personnel Management Volume 37 ; 37 >
+      au < exists ; 2009 ; Public Personnel Management Volume 38 ; 38 >
+      au < exists ; 2010 ; Public Personnel Management Volume 39 ; 39 >
+      au < exists ; 2011 ; Public Personnel Management Volume 40 ; 40 >
+      au < exists ; 2012 ; Public Personnel Management Volume 41 ; 41 >
+      au < exists ; 2013 ; Public Personnel Management Volume 42 ; 42 >
+
+    }
+    
+    {
+
+      title <
         name = Public Policy and Administration ;
         issn = 0952-0767 ;
         eissn = 1749-4192 ;
@@ -37688,6 +37761,26 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Therapeutic Advances in Vaccines  ;
+        issn = 2051-0136 ;
+        eissn = 2051-0144 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tav.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2013 ; Therapeutic Advances in Urology Volume 1 ; 1 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Thesis Eleven ;
         issn = 0725-5136 ;
         eissn = 1461-7455 ;
@@ -41282,6 +41375,21 @@ comment[mpj] = now published by Brill
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 47 ; 47 >
+
+    }
+
+    {
+
+      title <
+        name = Foreign Trade Review ;
+        issn = 0015-7325 
+      >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://ftr.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < manifest ; 2013 ; Foreign Trade Review Volume 48 ; 48 >
 
     }
 
