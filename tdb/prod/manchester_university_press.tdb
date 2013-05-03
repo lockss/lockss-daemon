@@ -40,15 +40,14 @@
       >
       
      param[journal_issn] = 1749-6039
-     comment[notReady] = RU4679, no permission statement
      
-     au < notReady ; 2006 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 1 ; 1 >
-     au < notReady ; 2007 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 2 ; 2 >
-     au < notReady ; 2008 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 3 ; 3 >
-     au < notReady ; 2009 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 4 ; 4 >
-     au < notReady ; 2010 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 5 ; 5 >
-     au < notReady ; 2011 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 6 ; 6 >
-     au < notReady ; 2012 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 7 ; 7 >
+     au < testing ; 2006 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 1 ; 1 >
+     au < ready ; 2007 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 2 ; 2 >
+     au < ready ; 2008 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 3 ; 3 >
+     au < ready ; 2009 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 4 ; 4 >
+     au < ready ; 2010 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 5 ; 5 >
+     au < ready ; 2011 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 6 ; 6 >
+     au < ready ; 2012 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 7 ; 7 >
      au < expected ; 2013 ; Critical Studies in Television: Scholarly Studies in Small Screen Fictions Volume 8 ; 8 >
     
     }
