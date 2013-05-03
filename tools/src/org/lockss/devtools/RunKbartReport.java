@@ -1,5 +1,5 @@
 /*
- * $Id: RunKbartReport.java,v 1.5 2012-10-22 17:24:06 easyonthemayo Exp $
+ * $Id: RunKbartReport.java,v 1.6 2013-05-03 12:50:29 easyonthemayo Exp $
  */
 
 /*
@@ -459,6 +459,7 @@ public class RunKbartReport {
             .setEndYear(getValue(Field.DATE_LAST_ISSUE_ONLINE, values))
             .setStartIssue(getValue(Field.NUM_FIRST_ISSUE_ONLINE, values))
             .setEndIssue(getValue(Field.NUM_LAST_ISSUE_ONLINE, values))
+            .setCoverageDepth(getValue(Field.COVERAGE_DEPTH, values))
             // Set volume/year/issue strings last - if they are non-null, they
             // will be used to set the start and end values too, overriding
             // what might have been set earlier in set[Start|End]*
