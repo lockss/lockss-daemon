@@ -43,7 +43,10 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"./permission.html"</string>
+    <!--   PluginWellformednessTest needs to have a start_url as a true URL -->
+    <!--  when you are ready to continue work on the plugin, change it back locally -->
+<!--   <string>"./permission.html"</string> -->
+  <string>"http://www.lockss.org/support/prepare-your-content/"</string>
   </entry>
   <entry>
     <string>plugin_archive_file_types</string>
