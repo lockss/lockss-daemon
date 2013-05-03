@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.15 2013-03-19 20:32:01 pgust Exp $
+ * $Id: MetadataManager.java,v 1.15.2.1 2013-05-03 01:58:06 tlipkis Exp $
  */
 
 /*
@@ -137,6 +137,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * runtime
    */
   public static final String PARAM_HISTORY_MAX = PREFIX + "historySize";
+
+  /** Indexing task watchdog name */
+  static final String WDOG_PARAM_INDEXER = "MetadataIndexer";
+  /** Indexing task watchdog default timeout */
+  static final long WDOG_DEFAULT_INDEXER = 6 * Constants.HOUR;
 
   /** Default maximum reindexing tasks history */
   public static final int DEFAULT_HISTORY_MAX = 200;
@@ -1383,8 +1388,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	                                           task.getAu())) {
 	  public void lockssRun() {
 	    long interval = Constants.MINUTE;
-	    startWDog(interval);
-	    task.setWdog(this);
+	    startWDog(WDOG_PARAM_INDEXER, WDOG_DEFAULT_INDEXER);
+	    task.setWDog(this);
 
 	    task.handleEvent(Schedule.EventType.START);
 
