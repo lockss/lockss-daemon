@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralPluginArticleIteratorFactory.java,v 1.1 2012-03-08 00:03:45 akanshab01 Exp $
+ * $Id: BioMedCentralPluginArticleIteratorFactory.java,v 1.2 2013-05-03 21:17:47 aishizaki Exp $
  */ 
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.bmc;
 
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.regex.*;
 
@@ -46,29 +47,35 @@ public class BioMedCentralPluginArticleIteratorFactory
                ArticleMetadataExtractorFactory {
 
   protected static Logger log = Logger.getLogger("BioMedCentralPluginArticleIteratorFactory");
+  // example pdf
   //http://www.jcheminf.com/content/pdf/1758-2946-2-7.pdf
+  //http://breast-cancer-research.com/content/pdf/bcr3224.pdf
+  //http://genomebiology.com/content/pdf/gb-2002-3-7-research0032.pdf
   protected static final String PDF_ROOT_TEMPLATE = "\"%scontent/pdf\", base_url";
+  // example full text html
   //http://www.jcheminf.com/content/2/1/7
-  protected static final String HTML_ROOT_TEMPLATE ="\"%scontent/%s\", base_url,volume_name";
-  protected static final String PATTERN_TEMPLATE = "\"^%scontent(/%s/[^/]+/[^/]+|/pdf/%s-%s-[^/]+\\.pdf)$\", base_url, volume_name,journal_issn,volume_name";
-
+  //http://breast-cancer-research.com/content/14/4/R104
+  //http://genomebiology.com/2002/3/7/research/0032
+  protected static final String ABS_PATTERN_TEMPLATE = "\"^%s(\\d{4}/)?(content/)?%s/.+abstract$\", base_url, volume_name";
+  // example abstract html
+  //http://www.jcheminf.com/content/2/1/7/abstract
+  //http://breast-cancer-research.com/content/14/4/R104/abstract
+  //http://genomebiology.com/2002/3/7/research/0032/abstract
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
     return new BioMedCentralPluginArticleIterator(au, new SubTreeArticleIterator.Spec()
                                               .setTarget(target)
-                                              //.setRootTemplates(ListUtil.list(HTML_ROOT_TEMPLATE,PDF_ROOT_TEMPLATE))
-                                           //   .setRootTemplate(HTML_ROOT_TEMPLATE)
-                                              .setPatternTemplate(PATTERN_TEMPLATE,Pattern.CASE_INSENSITIVE));
+                                              .setPatternTemplate(ABS_PATTERN_TEMPLATE,Pattern.CASE_INSENSITIVE));
   }
- //.setRootTemplates(ListUtil.list(HTML_ROOT_TEMPLATE,PDF_ROOT_TEMPLATE))
   protected static class BioMedCentralPluginArticleIterator extends SubTreeArticleIterator {
 
+
     protected static Pattern HTML_PATTERN = Pattern.compile("/content/([^/]+)/(\\d)/([^/]+)$", Pattern.CASE_INSENSITIVE);
-    
-    protected static Pattern PDF_PATTERN = Pattern.compile("/content/pdf/([^/]+)-([^/]+)-([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
-    
+    protected static Pattern ABSTRACT_PATTERN = Pattern.compile("/((content/\\d+/)?(\\d{4}/\\d+/)?.+)/abstract$", Pattern.CASE_INSENSITIVE);   
+    protected static Pattern PDF_PATTERN = Pattern.compile("/content/pdf/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+
     public BioMedCentralPluginArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
       super(au, spec);
@@ -78,12 +85,70 @@ public class BioMedCentralPluginArticleIteratorFactory
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
       log.debug3("Entry point: " + url);
-      Matcher mat = HTML_PATTERN.matcher(url);
+      Matcher mat = ABSTRACT_PATTERN.matcher(url);
       if (mat.find()) {
-       return processFullTextHtml(cu, mat);
+       return processWithMetadata(cu, mat);
       }
       log.warning("Mismatch between article iterator factory and article iterator: " + url);
       return null;
+    }
+    
+    /*
+     * processWithMetadata(CachedUrl absCu, Matcher absMat)
+     *   Given the CachedUrl for the abstract file, using the existing
+     *   SimpleHtmlMetaTagMetadataExtractor to parse the abstract and 
+     *   retrieve the associated fulltext PDF file and fulltext html file.  
+     *   NOT defining the Metadata Extractor here!
+     */
+    protected ArticleFiles processWithMetadata(CachedUrl absCu, Matcher absMat) {
+      ArticleFiles af = new ArticleFiles();
+      MetadataTarget at = new MetadataTarget(MetadataTarget.PURPOSE_ARTICLE);
+      ArticleMetadata am;
+      SimpleHtmlMetaTagMetadataExtractor ext = new SimpleHtmlMetaTagMetadataExtractor();
+      CachedUrl htmlCu = null, pdfCu = null;
+
+      if (absCu !=null && absCu.hasContent()){
+        // 
+        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
+        try {
+          at.setFormat("text/html");
+          am = ext.extract(at, absCu);
+          
+          // get the pdf url as a list:string from the metadata
+          // keep entries in their raw state
+          
+          if (am.containsRawKey("citation_pdf_url")){
+            pdfCu = au.makeCachedUrl(am.getRaw("citation_pdf_url"));
+            if (pdfCu != null && pdfCu.hasContent()) {
+              af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+              af.setFullTextCu(pdfCu);
+              log.debug3("found pdf in metadata: " + pdfCu);
+            }
+          }
+          
+          // get the fulltexthtml url as a list:string from the metadata
+          if (am.containsRawKey("citation_fulltext_html_url")){
+              htmlCu = au.makeCachedUrl(am.getRaw("citation_fulltext_html_url"));
+              if (htmlCu != null && htmlCu.hasContent()) {
+                af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
+                log.debug3("found html in metadata: " + htmlCu);
+                if (af.getFullTextCu() == null)
+                  af.setFullTextCu(htmlCu);
+              }
+          } 
+          
+          // if no full text cu found, go to plan B...
+          if (af.getFullTextCu() == null) {
+            log.debug3("no full text CU found yet");
+            guessHtml(af, absMat);
+          }     
+                    
+        } catch (IOException e) {
+          // 
+          e.printStackTrace();
+        }
+      }
+      return af;
     }
 
     protected ArticleFiles processFullTextHtml(CachedUrl htmlCu, Matcher htmlMat) {
@@ -94,6 +159,24 @@ public class BioMedCentralPluginArticleIteratorFactory
        guessAbstract(af, htmlMat);
       }
       return af;
+    }
+    
+    /** Guess the full text Html associated with the given abstract
+     * @param af  the ArticleFile 
+     * @param mat the Matcher from the abstract found
+     * 
+     * this will be called if we could not find a pdf to match the abstract,
+     * so, we'll guess the html and set it to be the FullTextCu
+     * Luckily, the html is easy to manufacture if we have the abstract
+     */
+    protected void guessHtml(ArticleFiles af, Matcher mat) {
+      CachedUrl htmlCu = au.makeCachedUrl(mat.replaceFirst("/$1"));
+      log.debug3("guessing html: "+htmlCu);
+      if (htmlCu != null && htmlCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
+        af.setFullTextCu(htmlCu);
+        AuUtil.safeRelease(htmlCu);
+      }
     }
     
     protected void guessAbstract(ArticleFiles af, Matcher mat) {
@@ -108,7 +191,7 @@ public class BioMedCentralPluginArticleIteratorFactory
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
   
 }
