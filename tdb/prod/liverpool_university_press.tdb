@@ -600,13 +600,13 @@
     param[journal_issn] = 0142-7849 
     comment[0] = RU4501, no permission statement on manifest page
 
-    au < exists ; 1993 ; Third World Planning Review Volume 15 ; 15 >
-    au < exists ; 1994 ; Third World Planning Review Volume 16 ; 16 >
-    au < exists ; 1995 ; Third World Planning Review Volume 17 ; 17 >
-    au < exists ; 1996 ; Third World Planning Review Volume 18 ; 18 >
-    au < exists ; 1997 ; Third World Planning Review Volume 19 ; 19 >
-    au < exists ; 1998 ; Third World Planning Review Volume 20 ; 20 >
-    au < exists ; 1999 ; Third World Planning Review Volume 21 ; 21 >
+    au < manifest ; 1993 ; Third World Planning Review Volume 15 ; 15 >
+    au < manifest ; 1994 ; Third World Planning Review Volume 16 ; 16 >
+    au < manifest ; 1995 ; Third World Planning Review Volume 17 ; 17 >
+    au < manifest ; 1996 ; Third World Planning Review Volume 18 ; 18 >
+    au < manifest ; 1997 ; Third World Planning Review Volume 19 ; 19 >
+    au < manifest ; 1998 ; Third World Planning Review Volume 20 ; 20 >
+    au < manifest ; 1999 ; Third World Planning Review Volume 21 ; 21 >
     au < released ; 2000 ; Third World Planning Review Volume 22 ; 22 >
 
   }
