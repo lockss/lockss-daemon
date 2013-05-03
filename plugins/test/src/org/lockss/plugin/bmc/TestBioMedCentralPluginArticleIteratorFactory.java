@@ -1,4 +1,7 @@
 /*
+ * $Id: TestBioMedCentralPluginArticleIteratorFactory.java,v 1.3 2013-05-03 23:05:07 aishizaki Exp $
+ */
+/*
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -34,6 +37,7 @@ import java.util.regex.Pattern;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.TdbAu;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.TitleConfig;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
@@ -55,11 +59,20 @@ public class TestBioMedCentralPluginArticleIteratorFactory extends
   /**
    * Simulated AU to generate content
    */
+  protected static Logger log = Logger.getLogger("TestBioMedCentralPluginArticleIteratorFactory");
   private SimulatedArchivalUnit sau;
   private static String PLUGIN_NAME = "org.lockss.plugin.bmc.ClockssBioMedCentralPlugin";
-
-  private static String BASE_URL = "http://www.actavetscand.com/ ";
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String JOURNAL_ISSN_KEY = ConfigParamDescr.JOURNAL_ISSN.getKey();
+  static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  private final String BASE_URL = "http://www.jcheminf.com/ ";
+  private final String JOURNAL_ISSN = "1751-0147";
+  private final String VOLUME_NAME = "54";
   private static final int DEFAULT_FILESIZE = 3000;
+  private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(BASE_URL_KEY, BASE_URL,
+      JOURNAL_ISSN_KEY, JOURNAL_ISSN,
+            VOLUME_NAME_KEY, VOLUME_NAME);
+
   protected String cuRole = null;
   ArticleMetadataExtractor.Emitter emitter;
   protected boolean emitDefaultIfNone = false;
@@ -80,49 +93,67 @@ public class TestBioMedCentralPluginArticleIteratorFactory extends
   }
 
   protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
-    return PluginTestUtil.createAndStartAu(PLUGIN_NAME, ConfigurationUtil
-        .fromArgs("base_url", "http://www.actavetscand.com/", "volume_name",
-            "54", "journal_issn", "1751-0147"));
+    return PluginTestUtil.createAndStartAu(PLUGIN_NAME, AU_CONFIG);
   }
 
   Configuration simAuConfig(String rootPath) {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
-    conf.put("base_url", "http://www.actavetscand.com/");
+    conf.put("base_url", BASE_URL);
+    conf.put("journal_issn", JOURNAL_ISSN);
+    conf.put("volume_name", VOLUME_NAME);
     conf.put("depth", "1");
     conf.put("branch", "4");
     conf.put("numFiles", "7");
-    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF));
+    conf.put("fileTypes",
+        "" + (  SimulatedContentGenerator.FILE_TYPE_HTML
+              | SimulatedContentGenerator.FILE_TYPE_PDF));
     conf.put("binFileSize", "" + DEFAULT_FILESIZE);
     return conf;
   }
 
+/*  http://www.infectagentscancer.com/content/pdf/1750-9378-5-9.pdf
+    where the xxxx-yyyy = ISSN, and X-Y = Issue#-Article#
+  http://breast-cancer-research.com/content/pdf/bcr3224.pdf
+    the (journal abbrev) letters don't have a strict pattern (2-5 chars), 
+    nor do the trailing numbers
+  http://genomebiology.com/content/pdf/gb-2012-13-12-r126.pdf
+  http://genomebiology.com/content/pdf/gb-2001-2-7-research0026.pdf
+    we have the two-char name, '-' the year (but we don't have a year param)
+    '-' volume# '-' issue# '-' paperIdentifier.pdf
+  genome biology also has some substance that is non-pdf:
+  http://genomebiology.com/2002/3/2/reports/2010
+  http://genomebiology.com/2002/3/2/spotlight-20020206-01
+ 
+  
+  */
+
   public void testUrlsWithPrefixes() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
-    assertNotMatchesRE(pat,
-        "hhttp://www.actavetscand.com/content/pdf/1471-2253-1-2.pdfll");
-    assertNotMatchesRE(pat,
-        "http://www.actavetscand.com/contentt/volume/1014174823t49006/j0143.pdfwrong");
-    assertMatchesRE(pat, "http://www.actavetscand.com/content/54/1/6");
+    assertNotMatchesRE(pat, "hhttp://www.jcheminf.com/content/pdf/1471-2253-1-2.pdfll");
+    assertNotMatchesRE(pat, "http://www.jcheminf.com/contentt/volume/1014174823t49006/j0143.pdfwrong");
+    assertMatchesRE(pat, "http://www.jcheminf.com/content/54/1/6/abstract");
     assertNotMatchesRE(pat, "http://www.example.com/content/");
     assertNotMatchesRE(pat, "http://www.example.com/content/j");
-    assertNotMatchesRE(pat,
-        "http://www.example.com/content/j0123/j383.pdfwrong");
+    assertNotMatchesRE(pat, "http://www.example.com/content/j0123/j383.pdfwrong");
   }
 
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
-    String pat2 = "/content/([^/]+)/(\\d)/([^/]+)";
+    String pat2 = "/content/pdf/([^/]+)\\.pdf";
     String rep2 = "/content/([^/]+)/(\\d)/([^/]+";
     PluginTestUtil.copyAu(sau, au, ".*", pat2, rep2);
-    String url = "http://www.actavetscand.com/content/54/1/6";
+    String url = "http://www.jcheminf.com/content/2/1/7/abstract";
+
     CachedUrl cu = au.makeCachedUrl(url);
     assertNotNull(cu);
+
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertNotNull(artIter);
     ArticleFiles af = createArticleFiles(artIter, cu);
-    assertEquals(cu, af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML));
+    assertNotNull(af);    
+    //assertEquals(cu, af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF));
 
   }
 
