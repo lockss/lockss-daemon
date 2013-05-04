@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>31</string>
+    <string>32</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -77,7 +77,11 @@
       <string>2,&quot;^%scontent/%s(/mycopy)?/?$&quot;, base_url, book_isbn</string>
       <string>1,&quot;^%scontent/%s/&quot;, base_url, book_isbn</string>
       <string>2,&quot;^%scontent/[A-Za-z0-9]{16}/(export-citation|referrers)/&quot;, base_url</string>
-      <string>1,&quot;^%scontent/[A-Za-z0-9]{16}/&quot;, base_url</string>
+      <!-- this pattern recognizes "xx...xx", "xx...xx/" and "xx...xx/y...";
+           needed because LOCKSS strips off trailing '/' when storing a link,
+           but must also recoginze the original link with the trailing '/'. 
+      -->
+      <string>1,&quot;^%scontent/[A-Za-z0-9]{16}(/|$)&quot;, base_url</string>
       <string>1,&quot;^%sdynamic-file\.axd&quot;, base_url</string>
     </list>
   </entry>
