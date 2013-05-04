@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkBookMetadataExtractorFactory.java,v 1.5 2013-04-29 23:26:25 pgust Exp $
+ * $Id: SpringerLinkBookMetadataExtractorFactory.java,v 1.6 2013-05-04 16:55:02 pgust Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.extractor.FileMetadataExtractorFactory;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
 
@@ -109,7 +110,9 @@ public class SpringerLinkBookMetadataExtractorFactory
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
       throws IOException {
-    	log.debug("The MetadataExtractor attempted to extract metadata from cu: "+cu);
+      if (log.isDebug3()) {
+        log.debug3("The MetadataExtractor attempted to extract metadata from cu: "+cu);
+      }
       ArticleMetadata am = extractFrom(cu);
 
       // publisher name does not appear anywhere on the page in this form
@@ -122,8 +125,10 @@ public class SpringerLinkBookMetadataExtractorFactory
     	ArticleMetadata am = new ArticleMetadata();
 
     	if(cu.hasContent()) {
-    		String startTag = "heading enumeration";
-    		BufferedReader bReader = new BufferedReader(cu.openForReading());
+    	  BufferedReader bReader = null;
+    	  try {
+    	        String startTag = "heading enumeration";
+    		bReader = new BufferedReader(cu.openForReading());
 
     		String line = bReader.readLine();
 
@@ -135,6 +140,9 @@ public class SpringerLinkBookMetadataExtractorFactory
     			else
     				line = bReader.readLine();
     		}
+    	    } finally {
+    	        IOUtil.safeClose(bReader);
+    	    }
     	}
 
     	return am;
