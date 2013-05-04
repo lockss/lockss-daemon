@@ -35,8 +35,6 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = para
       
-      comment[notReady] = V98 403 Forbidden http://www.bioone.org/action/showFullPopup?doi=10.1645%2FGE-2905.1&id=i0022-3395-98-4-801-f02
-
       au < doNotProcess ; 2000 ; Journal of Parasitology Volume 86 ; 86 >
       au < doNotProcess ; 2001 ; Journal of Parasitology Volume 87 ; 87 >
       au < doNotProcess ; 2002 ; Journal of Parasitology Volume 88 ; 88 >
@@ -49,7 +47,7 @@
       au < released ; 2009 ; Journal of Parasitology Volume 95 ; 95 >
       au < released ; 2010 ; Journal of Parasitology Volume 96 ; 96 >
       au < released ; 2011 ; Journal of Parasitology Volume 97 ; 97 >
-      au < notReady ; 2012 ; Journal of Parasitology Volume 98 ; 98 >
+      au < ready ; 2012 ; Journal of Parasitology Volume 98 ; 98 >
       au < manifest ; 2013 ; Journal of Parasitology Volume 99 ; 99 >
 
     }
