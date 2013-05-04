@@ -61,28 +61,28 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;SpringerLink Book Plugin (CLOCKSS), Base URL %s, ISBN %s&quot;, base_url, book_isbn</string>
+    <string>"SpringerLink Book Plugin (CLOCKSS), Base URL %s, ISBN %s", base_url, book_isbn</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%scontent/%s/contents/&quot;, base_url, book_isbn</string>
+    <string>"%scontent/%s/contents/", base_url, book_isbn</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>2,&quot;^%sfulltext-image\.asp\?&quot;, base_url</string>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>2,&quot;^%s.*\?(target=(export|print|save)|MUD=MP)&quot;, base_url</string>
-      <string>2,&quot;^%scontent/%s(/mycopy)?/?$&quot;, base_url, book_isbn</string>
-      <string>1,&quot;^%scontent/%s/&quot;, base_url, book_isbn</string>
-      <string>2,&quot;^%scontent/[A-Za-z0-9]{16}/(export-citation|referrers)/&quot;, base_url</string>
+      <string>4,"^%s", base_url</string>
+      <string>2,"^%sfulltext-image\.asp\?", base_url</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>2,"^%s.*\?(target=(export|print|save)|MUD=MP)", base_url</string>
+      <string>2,"^%scontent/%s(/mycopy)?/?$", base_url, book_isbn</string>
+      <string>1,"^%scontent/%s/", base_url, book_isbn</string>
+      <string>2,"^%scontent/[A-Za-z0-9]{16}/(export-citation|referrers)/", base_url</string>
       <!-- this pattern recognizes "xx...xx", "xx...xx/" and "xx...xx/y...";
            needed because LOCKSS strips off trailing '/' when storing a link,
            but must also recoginze the original link with the trailing '/'. 
       -->
-      <string>1,&quot;^%scontent/[A-Za-z0-9]{16}(/|$)&quot;, base_url</string>
-      <string>1,&quot;^%sdynamic-file\.axd&quot;, base_url</string>
+      <string>1,"^%scontent/[A-Za-z0-9]{16}(/|$)", base_url</string>
+      <string>1,"^%sdynamic-file\.axd", base_url</string>
     </list>
   </entry>
   <entry>
@@ -135,7 +135,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%scontent/[A-Za-z0-9]{16}/fulltext\.pdf$&quot;, base_url</string>
+      <string>"^%scontent/[A-Za-z0-9]{16}/fulltext\.pdf$", base_url</string>
     </list>
   </entry>
   <entry>
