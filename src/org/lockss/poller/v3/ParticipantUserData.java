@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.32 2013-03-18 19:19:33 dshr Exp $
+ * $Id: ParticipantUserData.java,v 1.33 2013-05-06 20:36:06 barry409 Exp $
  */
 
 /*
@@ -178,9 +178,14 @@ public class ParticipantUserData implements LockssSerializable {
    */
   public ParticipantUserData(PeerIdentity id, V3Poller poller,
                              File messageDir) {
+    this(id, poller, poller.getPollerStateBean(), messageDir);
+  }
+
+  public ParticipantUserData(PeerIdentity id, V3Poller poller,
+			     PollerStateBean pollState, File messageDir) {
     this.voterId = id;
     this.poller = poller;
-    this.pollState = poller.getPollerStateBean();
+    this.pollState = pollState;
     this.messageDir = messageDir;
   }
 

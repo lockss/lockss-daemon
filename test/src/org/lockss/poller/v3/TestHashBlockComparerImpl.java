@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashBlockComparerImpl.java,v 1.1 2013-05-03 20:21:31 barry409 Exp $
+ * $Id: TestHashBlockComparerImpl.java,v 1.2 2013-05-06 20:36:06 barry409 Exp $
  */
 
 /*
@@ -120,6 +120,10 @@ public class TestHashBlockComparerImpl extends LockssTestCase {
     voteBlock.getVersions()[versionIndex].setHashError(true);
   }
 
+  void setHash(VoteBlock voteBlock, int versionIndex, byte[] bytes) {
+    voteBlock.getVersions()[versionIndex].setChallengeHash(bytes);
+  }
+
   V3Poller.HashIndexer makeHashIndexer(final HashBlock hashBlock) {
     return new V3Poller.HashIndexer() {
       public HashResult getParticipantHash(HashBlock.Version version,
@@ -218,6 +222,26 @@ public class TestHashBlockComparerImpl extends LockssTestCase {
 
     // We don't match when all versions threw.
     setHashError(voteBlock, 1);
+    assertFalse(comparer.compare(voteBlock, 2));
+  }
+
+  public void testCompareVoterIllegalBytes() throws Exception {
+    byte[] emptyBytes = {};
+    HashBlock hashBlock = makeHashBlock("http://example.com/foo",
+					"aaa", "bbb", "ccc");
+    V3Poller.HashIndexer hashIndexer = makeHashIndexer(hashBlock);
+    HashBlockComparerImpl comparer =
+      new HashBlockComparerImpl(hashBlock, hashIndexer);
+    
+    VoteBlock voteBlock;
+    voteBlock = makeVoteBlock(2, "aaa");
+    assertTrue(comparer.compare(voteBlock, 2));
+
+    // No match, but the error of the voter having no hash error but
+    // illegal bytes is smothered.
+    setHash(voteBlock, 0, null);
+    assertFalse(comparer.compare(voteBlock, 2));
+    setHash(voteBlock, 0, emptyBytes);
     assertFalse(comparer.compare(voteBlock, 2));
   }
 }

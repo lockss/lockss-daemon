@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.54 2013-04-24 23:27:58 barry409 Exp $
+ * $Id: TestV3Poller.java,v 1.55 2013-05-06 20:36:06 barry409 Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.security.*;
 import org.lockss.app.*;
 import org.lockss.config.ConfigManager;
+import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.IdentityManager.IdentityAgreement;
@@ -788,12 +789,24 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(BlockTally.Result.WON, tally.getTallyResult());
     assertSameElements(v3Poller.theParticipants.values(),
 		       tally.getAgreeVoters());
-    
+    try {
+      tally.getRepairVoters();
+      fail("expected ShouldNotHappenException was not thrown.");
+    } catch (ShouldNotHappenException ex) {
+      // Expected
+    }
+
     tally = v3Poller.tallyBlock(hashblocks[1]);
     assertEquals(BlockTally.Result.LOST_POLLER_ONLY_BLOCK,
 		 tally.getTallyResult());
     assertSameElements(v3Poller.theParticipants.values(),
 		       tally.getPollerOnlyBlockVoters());
+    try {
+      tally.getRepairVoters();
+      fail("expected ShouldNotHappenException was not thrown.");
+    } catch (ShouldNotHappenException ex) {
+      // Expected
+    }
     
     tally = v3Poller.tallyBlock(hashblocks[2]);
     assertEquals(BlockTally.Result.WON, tally.getTallyResult());

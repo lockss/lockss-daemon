@@ -1,5 +1,5 @@
 /*
- * $Id: HashBlockComparerImpl.java,v 1.1 2013-05-03 20:21:31 barry409 Exp $
+ * $Id: HashBlockComparerImpl.java,v 1.2 2013-05-06 20:36:06 barry409 Exp $
  */
 
 /*
@@ -93,9 +93,14 @@ class HashBlockComparerImpl implements VoteBlockTallier.HashBlockComparer {
 	    log.warning("Voter version "+versionIndex+
 			" had a hashing error.");
 	  } else {
-	    HashResult vbHash = HashResult.make(vbVersion.getHash());
-	    if (hbHash.equals(vbHash)) {
-	      return true;
+	    try {
+	      HashResult vbHash = HashResult.make(vbVersion.getHash());
+	      if (hbHash.equals(vbHash)) {
+		return true;
+	      }
+	    } catch (HashResult.IllegalByteArray e) {
+	      log.warning("Voter version "+versionIndex+
+			  " had an IllegalByteArray.");
 	    }
 	  }
 	}

@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.30 2013-04-29 17:22:10 barry409 Exp $
+ * $Id: BlockTally.java,v 1.31 2013-05-06 20:36:06 barry409 Exp $
  */
 
 /*
@@ -34,8 +34,11 @@ package org.lockss.poller.v3;
 
 import java.util.*;
 
+import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.hasher.HashBlock;
+import org.lockss.hasher.HashResult;
 import org.lockss.protocol.VoteBlock;
+import org.lockss.util.ByteArray;
 import org.lockss.util.Logger;
 
 
@@ -85,6 +88,20 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
     }
   }
 
+  private static Collection<HashResult>
+    pollerHashes(HashBlock hashBlock,
+		 V3Poller.HashIndexer hashIndexer) {
+    Collection<HashResult> pollerHashes = new HashSet<HashResult>();
+
+    for (HashBlock.Version hbVersion: hashBlock.getVersions()) {
+      if (hbVersion.getHashError() == null) {
+	HashResult plainHash = hashIndexer.getPlainHash(hbVersion);
+	pollerHashes.add(plainHash);
+      }
+    }
+    return pollerHashes;
+  }
+
   private static final Logger log = Logger.getLogger("BlockTally");
 
   // package level, for testing, and access by BlockTally.
@@ -101,12 +118,26 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
   final Collection<ParticipantUserData> voterOnlyVoters =
     new ArrayList<ParticipantUserData>();
 
+  final private VersionCounts versionCounts = VersionCounts.make();
+
   final private int quorum;
   final private int voteMargin;
+  final private Collection<HashResult> pollerHashes;
 
   public BlockTally(int quorum, int voteMargin) {
+    this(quorum, voteMargin, Collections.EMPTY_SET);
+  }
+
+  public BlockTally(int quorum, int voteMargin,
+		    HashBlock hashBlock, V3Poller.HashIndexer hashIndexer) {
+    this(quorum, voteMargin, pollerHashes(hashBlock, hashIndexer));
+  }
+
+  public BlockTally(int quorum, int voteMargin,
+		    Collection<HashResult> pollerHashes) {
     this.quorum = quorum;
     this.voteMargin = voteMargin;
+    this.pollerHashes = pollerHashes;
   }
 
   // Interface VoteBlockTally methods to springboard to our internal
@@ -128,6 +159,10 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
     // Leads to WON if a landslide of voters do not have the URL when
     // the poller also does not have it.
     addAgreeVoter(id);
+  }
+
+  public VoteBlockTallier.VoteCallback getVoteCallback() {
+    return versionCounts;
   }
 
   /**
@@ -163,6 +198,24 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
       result = BlockTally.Result.TOO_CLOSE;
     }
     return result;
+  }
+
+  /**
+   * @return A Collection of ParticipantUserData including only those
+   * with head versions which have at least the minimum support
+   * required to have WON if the poller had had that version. The
+   * Collection may be empty.
+   */
+  public Collection<ParticipantUserData> getRepairVoters() {
+    switch (getTallyResult()) {
+    case LOST:
+    case LOST_VOTER_ONLY_BLOCK:
+      return versionCounts.getRepairCandidates(landslideMinimum(),
+					       pollerHashes).keySet();
+    default:
+      throw new ShouldNotHappenException(
+	"Called with inappropriate tally result "+getTallyResult());
+    }
   }
 
   public Collection<ParticipantUserData> getAgreeVoters() {

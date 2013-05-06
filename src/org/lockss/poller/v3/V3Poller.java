@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.142 2013-05-03 17:30:44 barry409 Exp $
+ * $Id: V3Poller.java,v 1.143 2013-05-06 20:36:06 barry409 Exp $
  */
 
 /*
@@ -1417,15 +1417,19 @@ public class V3Poller extends BasePoll {
       BlockTally.Result tallyResult = tally.getTallyResult();
       switch(tallyResult) {
       case WON:
+	// todo(bhayes): WON doesn't mean that any particular version
+	// is well-preserved. The poller may be missing an opportunity
+	// to repair. Should repair be predicated on the tallyResult
+	// or the VersionCounts?
 	break;
       case LOST:
-	requestRepair(url, tally.getDisagreeVoters());
+	requestRepair(url, tally.getRepairVoters());
 	break;
       case LOST_POLLER_ONLY_BLOCK:
 	deleteBlock(url);
 	break;
       case LOST_VOTER_ONLY_BLOCK:
-	requestRepair(url, tally.getVoterOnlyBlockVoters());
+	requestRepair(url, tally.getRepairVoters());
 	break;
       case NOQUORUM:
 	break;
@@ -1665,25 +1669,30 @@ public class V3Poller extends BasePoll {
   }
 
   /**
-   * Request a repair for the specified URL.  This method appends the URL
-   * and its list of disagreeing voters to a queue, which is examined at the
-   * end of tallying.
+   * Request a repair for the specified URL.  This method appends the
+   * URL and a selected voter to a queue, which is examined at the end
+   * of tallying.
    * 
    * @param url
-   * @param disagreeingVoters Set of disagreeing voters.
+   * @param repairVoters Set of disagreeing voters.
    */
   private void requestRepair(
      final String url,
-     final Collection<ParticipantUserData> disagreeingVoters) {
+     final Collection<ParticipantUserData> repairVoters) {
 
-    if (okToQueueRepair()) {
+    if (!repairVoters.isEmpty() && okToQueueRepair()) {
       PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
+      // todo(bhayes): Having found a list of peers with versions
+      // would reduce entropy, should that information be discarded
+      // and the publisher's current version be fetched? Why give up
+      // the chance to reduce the entropy?
+
       // Choose where to request the repair.
       log.debug2("Deciding whether to repair from cache or publisher.  Repair "
 		 + "from cache probability=" + repairFromCache);
       if (ProbabilisticChoice.choose(repairFromCache) ||
 	  (enableRepairFromCache && AuUtil.isPubDown(getAu()))) {
-	PeerIdentity peer = findPeerForRepair(disagreeingVoters);
+	PeerIdentity peer = findPeerForRepair(repairVoters);
 	log.debug2("Requesting repair from " + peer + ": " + url);
 	repairQueue.repairFromPeer(url, peer);
       } else {
@@ -1717,9 +1726,9 @@ public class V3Poller extends BasePoll {
 
   /* Select a peer to attempt repair from. */
   PeerIdentity
-      findPeerForRepair(Collection<ParticipantUserData> disagreeingVoters) {
+      findPeerForRepair(Collection<ParticipantUserData> repairVoters) {
     ParticipantUserData voter =
-      (ParticipantUserData)CollectionUtil.randomSelection(disagreeingVoters);
+      (ParticipantUserData)CollectionUtil.randomSelection(repairVoters);
     return voter.getVoterId();
   }
 

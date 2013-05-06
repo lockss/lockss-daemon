@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockTally.java,v 1.17 2013-04-17 15:31:47 barry409 Exp $
+ * $Id: TestBlockTally.java,v 1.18 2013-05-06 20:36:06 barry409 Exp $
  */
 
 /*
@@ -120,6 +120,12 @@ public class TestBlockTally extends LockssTestCase {
     tally.addAgreeVoter(testPeers[3]);
     tally.addAgreeVoter(testPeers[4]);
     assertEquals(BlockTally.Result.WON, tally.getTallyResult());
+    try {
+      tally.getRepairVoters();
+      fail("expected ShouldNotHappenException was not thrown.");
+    } catch (ShouldNotHappenException ex) {
+      // Expected
+    }
   }
 
   public void testLostPoll() throws Exception {
@@ -130,6 +136,11 @@ public class TestBlockTally extends LockssTestCase {
     tally.addDisagreeVoter(testPeers[3]);
     tally.addDisagreeVoter(testPeers[4]);
     assertEquals(BlockTally.Result.LOST, tally.getTallyResult());
+    // NOTE: getRepairVoters contains nothing useful (since the
+    // BlockTally's VersionCounts isn't being told about votes) but
+    // does not throw. See TestVersionCounts for unit tests for
+    // VersionCounts.
+    tally.getRepairVoters();
   }
 
   public void testResultTooCloseUnder() throws Exception {
@@ -141,6 +152,12 @@ public class TestBlockTally extends LockssTestCase {
     tally.addAgreeVoter(testPeers[4]);
     tally.addAgreeVoter(testPeers[5]);
     assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult());
+    try {
+      tally.getRepairVoters();
+      fail("expected ShouldNotHappenException was not thrown.");
+    } catch (ShouldNotHappenException ex) {
+      // Expected
+    }
   }
 
   public void testResultTooCloseOver() throws Exception {
@@ -152,6 +169,12 @@ public class TestBlockTally extends LockssTestCase {
     tally.addDisagreeVoter(testPeers[4]);
     tally.addDisagreeVoter(testPeers[5]);
     assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult());
+    try {
+      tally.getRepairVoters();
+      fail("expected ShouldNotHappenException was not thrown.");
+    } catch (ShouldNotHappenException ex) {
+      // Expected
+    }
   }
 
   public void testResultTooCloseEqual() throws Exception {
@@ -163,6 +186,12 @@ public class TestBlockTally extends LockssTestCase {
     tally.addDisagreeVoter(testPeers[4]);
     tally.addDisagreeVoter(testPeers[5]);
     assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult());
+    try {
+      tally.getRepairVoters();
+      fail("expected ShouldNotHappenException was not thrown.");
+    } catch (ShouldNotHappenException ex) {
+      // Expected
+    }
   }
 
   public void testNoQuorum() throws Exception {
@@ -172,6 +201,27 @@ public class TestBlockTally extends LockssTestCase {
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult());
+    try {
+      tally.getRepairVoters();
+      fail("expected ShouldNotHappenException was not thrown.");
+    } catch (ShouldNotHappenException ex) {
+      // Expected
+    }
+  }
+
+  public void testVoterOnly() throws Exception {
+    BlockTally tally = new BlockTally(5, 75);
+    tally.addAgreeVoter(testPeers[0]);
+    tally.addVoterOnlyVoter(testPeers[1]);
+    tally.addVoterOnlyVoter(testPeers[2]);
+    tally.addVoterOnlyVoter(testPeers[3]);
+    tally.addVoterOnlyVoter(testPeers[4]);
+    assertEquals(BlockTally.Result.LOST_VOTER_ONLY_BLOCK,
+		 tally.getTallyResult());
+    // NOTE: getRepairVoters contains nothing useful (since the
+    // BlockTally's VersionCounts isn't being told about votes) but
+    // does not throw.
+    tally.getRepairVoters();
   }
 
   public void testPollerOnly() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.15 2013-04-24 21:51:54 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.16 2013-05-06 20:36:06 barry409 Exp $
  */
 
 /*
@@ -299,7 +299,7 @@ final class UrlTallier {
 
     BlockTally tally = new BlockTally(quorum, voteMargin);
     VoteBlockTallier voteBlockTallier =
-      VoteBlockTallier.make(makeHashStatsTallier());
+      VoteBlockTallier.make(makeHashStatsTallier(), tally.getVoteCallback());
     log.debug3("tallyVoterUrl: "+url);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.addTally(ParticipantUserData.voteTally);
@@ -325,9 +325,11 @@ final class UrlTallier {
 					 " comes before "+url);
     }
 
-    BlockTally tally = new BlockTally(quorum, voteMargin);
+    BlockTally tally = new BlockTally(quorum, voteMargin,
+				      hashBlock, hashIndexer);
     VoteBlockTallier voteBlockTallier =
-      VoteBlockTallier.make(hashBlock, hashIndexer, makeHashStatsTallier());
+      VoteBlockTallier.make(hashBlock, hashIndexer, makeHashStatsTallier(),
+			    tally.getVoteCallback());
     log.debug3("tallyPollerUrl: "+url);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.addTally(ParticipantUserData.voteTally);
@@ -354,9 +356,11 @@ final class UrlTallier {
     }
 
     log.debug3("tallyRepairUrl: "+url);
+    // todo(bhayes): Can use a BlockTally that will reject getRepairVoters.
+    BlockTally tally = new BlockTally(quorum, voteMargin,
+				      hashBlock, hashIndexer);
     VoteBlockTallier voteBlockTallier =
       VoteBlockTallier.makeForRepair(hashBlock, hashIndexer);
-    BlockTally tally = new BlockTally(quorum, voteMargin);
     voteBlockTallier.addTally(tally);
     voteAllParticipants(url, voteBlockTallier);
     return tally;
