@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleFiles.java,v 1.10 2013-03-20 05:36:15 thib_gc Exp $
+ * $Id: ArticleFiles.java,v 1.11 2013-05-06 18:15:00 ldoan Exp $
  */
 
 /*
@@ -86,6 +86,10 @@ public class ArticleFiles {
    * @since 1.60 */
   public static final String ROLE_FULL_TEXT_EPUB = "FullTextEpub";
   
+  /** Role for the CU representing the article's full text Mobile
+   * @beyond 1.60 */
+  public static final String ROLE_FULL_TEXT_MOBILE = "FullTextMobile";
+
   /** Role for the CU representing an HTML page containing or
    * otherwise linking to the article's full text HTML, if
    * applicable */
