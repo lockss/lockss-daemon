@@ -182,11 +182,11 @@
     param[journal_issn] = 2049-3355
     comment[notReady] = RU4501, manifest page missing permission statement
     
-    au < notReady ; 2004 ; Comma Volume 2004 ; 2004 >
-    au < exists ; 2005 ; Comma Volume 2005 ; 2005 >
-    au < notReady ; 2006 ; Comma Volume 2006 ; 2006 >
-    au < notReady ; 2007 ; Comma Volume 2007 ; 2007 >
-    au < notReady ; 2008 ; Comma Volume 2008 ; 2008 >
+    au < testing ; 2004 ; Comma Volume 2004 ; 2004 >
+    au < testing ; 2005 ; Comma Volume 2005 ; 2005 >
+    au < testing ; 2006 ; Comma Volume 2006 ; 2006 >
+    au < testing ; 2007 ; Comma Volume 2007 ; 2007 >
+    au < testing ; 2008 ; Comma Volume 2008 ; 2008 >
     au < released ; 2009 ; Comma Volume 2009 ; 2009 >
     au < released ; 2010 ; Comma Volume 2010 ; 2010 >
     au < exists ; 2011 ; Comma Volume 2011 ; 2011 >
@@ -624,8 +624,7 @@
     param[base_url] = http://liverpool.metapress.com/
     implicit < status ; year ; name ; param[volume_name] >  
     param[journal_issn] = 1478-341X 
-    comment[70] = RU4501, no permission statement on manifest page
-    comment[notReady] = RU4508, license agreement
+    comment[70] = V70 and V75, RU4501, no permission statement on manifest page
     
 
     au < exists ; 1910-1911 ; Town Planning Review Volume 1 ; 1 >
@@ -700,12 +699,12 @@
     au < exists ; 1999 ; Town Planning Review Volume 70 ; 70 >
     au < exists ; 2000 ; Town Planning Review Volume 71 ; 71 >
     au < doesNotExist ; 0 ; Town Planning Review Volume 72 ; 72 >
-    au < testing ; 2002 ; Town Planning Review Volume 73 ; 73 >
-    au < testing ; 2003 ; Town Planning Review Volume 74 ; 74 >
-    au < testing ; 2004 ; Town Planning Review Volume 75 ; 75 >
-    au < testing ; 2005 ; Town Planning Review Volume 76 ; 76 >
-    au < testing ; 2006 ; Town Planning Review Volume 77 ; 77 >
-    au < testing ; 2007 ; Town Planning Review Volume 78 ; 78 >
+    au < ready ; 2002 ; Town Planning Review Volume 73 ; 73 >
+    au < ready ; 2003 ; Town Planning Review Volume 74 ; 74 >
+    au < notReady ; 2004 ; Town Planning Review Volume 75 ; 75 >
+    au < ready ; 2005 ; Town Planning Review Volume 76 ; 76 >
+    au < ready ; 2006 ; Town Planning Review Volume 77 ; 77 >
+    au < ready ; 2007 ; Town Planning Review Volume 78 ; 78 >
     au < ready ; 2008 ; Town Planning Review Volume 79 ; 79 >
     au < released ; 2009 ; Town Planning Review Volume 80 ; 80 >
     au < released ; 2010 ; Town Planning Review Volume 81 ; 81 >
