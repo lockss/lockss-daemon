@@ -221,14 +221,14 @@
 
     comment[UX] = Complete
 
-    au < notReady ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
-    au < notReady ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
+    au < ready ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
+    au < ready ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
     au < notReady ; 2002 ; Applied Earth Science: IMM Transactions section B Volume 111 ; 111 > 
-    au < notReady ; 2003 ; Applied Earth Science: IMM Transactions section B Volume 112 ; 112 > 
+    au < ready ; 2003 ; Applied Earth Science: IMM Transactions section B Volume 112 ; 112 > 
     au < released ; 2004 ; Applied Earth Science: IMM Transactions section B Volume 113 ; 113 > 
     au < released ; 2005 ; Applied Earth Science: IMM Transactions section B Volume 114 ; 114 > 
     au < released ; 2006 ; Applied Earth Science: IMM Transactions section B Volume 115 ; 115 > 
-    au < notReady ; 2007 ; Applied Earth Science: IMM Transactions section B Volume 116 ; 116 > 
+    au < ready ; 2007 ; Applied Earth Science: IMM Transactions section B Volume 116 ; 116 > 
     au < released ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
     au < released ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
     au < released ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
@@ -293,11 +293,11 @@
     comment[notReady] = RU4507
 
     au < doNotProcess ; 1999 ; British Ceramic Transactions Volume 98 ; 98 > 
-    au < notReady ; 2000 ; British Ceramic Transactions Volume 99 ; 99 > 
-    au < notReady ; 2001 ; British Ceramic Transactions Volume 100 ; 100 > 
-    au < notReady ; 2002 ; British Ceramic Transactions Volume 101 ; 101 >
+    au < testing ; 2000 ; British Ceramic Transactions Volume 99 ; 99 > 
+    au < testing ; 2001 ; British Ceramic Transactions Volume 100 ; 100 > 
+    au < testing ; 2002 ; British Ceramic Transactions Volume 101 ; 101 >
     au < doNotProcess ; 2003 ; British Ceramic Transactions Volume 102 ; 102 >    
-    au < notReady ; 2004 ; British Ceramic Transactions Volume 103 ; 103 >
+    au < testing ; 2004 ; British Ceramic Transactions Volume 103 ; 103 >
 
   }
 
@@ -322,7 +322,7 @@
 
     au < released ; 1999 ; British Corrosion Journal Volume 34 ; 34 > 
     au < released ; 2000 ; British Corrosion Journal Volume 35 ; 35 > 
-    au < notReady ; 2001 ; British Corrosion Journal Volume 36 ; 36 > 
+    au < testing ; 2001 ; British Corrosion Journal Volume 36 ; 36 > 
     au < doNotProcess ; 2002 ; British Corrosion Journal Volume 37 ; 37 >
 
   }
