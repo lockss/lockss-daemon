@@ -1,5 +1,5 @@
 /*
- * $Id: HashResult.java,v 1.2 2013-05-06 16:35:58 barry409 Exp $
+ * $Id: HashResult.java,v 1.3 2013-05-06 19:47:06 barry409 Exp $
  */
 
 /*
@@ -67,20 +67,42 @@ final public class HashResult {
    * zero-length.
    */
   public static HashResult make(byte[] bytes) {
-    if (bytes == null || bytes.length == 0) {
-      throw new IllegalByteArray("null or zero-length byte array is not allowed.");
-    }
+    checkBytes(bytes);
     // Keep a safe copy, so someone mucking with the bytes won't break
     // our hash.
     return new HashResult(Arrays.copyOf(bytes, bytes.length));
   }
 
+  /**
+   * @throws {@link IllegalByteArray} if <code>bytes</code> is null or
+   * zero-length.
+   */
+  private static void checkBytes(byte[] bytes) {
+    if (bytes == null || bytes.length == 0) {
+      throw new IllegalByteArray("null or zero-length byte array is not allowed.");
+    }
+  }
+
   /** 
-   * @return A copy of the underlying bytes. This will never be null
-   * or zero-length.
+   * @return A copy of the underlying bytes. This will never be
+   * <code>null</code> or zero-length.
    */
   public byte[] getBytes() {
     return Arrays.copyOf(bytes, bytes.length);
+  }
+
+  /** Compare the given bytes with ours.
+   * <code>x.hasBytes(bytes)</code> is a convenience method which
+   * should behave the same as
+   * <code>x.equals(HashResult.make(bytes))</code>.
+   * @return true iff the given bytes have the same content as this
+   * object's bytes. 
+   * @throws {@link IllegalByteArray} if <code>bytes</code> is null or
+   * zero-length.
+   */
+  public boolean hasBytes(byte[] bytes) {
+    checkBytes(bytes);
+    return MessageDigest.isEqual(this.bytes, bytes);
   }
 
   /** Indicates whether some other object is "equal to" this one. */
@@ -88,7 +110,7 @@ final public class HashResult {
     if (!(other instanceof HashResult)) {
       return false;
     }
-    return MessageDigest.isEqual(this.bytes, ((HashResult)other).bytes);
+    return hasBytes(((HashResult)other).bytes);
   }
 
   /** Returns a hash code value for the object, based on the content. */
