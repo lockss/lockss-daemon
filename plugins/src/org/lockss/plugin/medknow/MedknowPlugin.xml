@@ -1,0 +1,160 @@
+<map>
+<!--
+  Medknow prosposes LOCKSS using Google sitemap to crawl their website.
+-->
+  <entry>
+    <string>plugin_status</string>
+    <string>down</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.medknow.MedknowPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Medknow Publications</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.60</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Medknow Publications, Base URL %s, Issn %s, Year %d, Volume %s", base_url, journal_issn, year, volume_name</string>
+  </entry>
+    <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_issn</key>
+        <displayName>ISSN</displayName>
+        <type>1</type>
+        <size>12</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+     </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%ssitemap.xml", base_url</string>
+  </entry>
+    <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%ssitemap_%d_%s", base_url, year, volume_name</string>
+      <string>1,"^%s(showBackIssue|article|citation|citeman|downloadpdf)\.asp\?issn=%s;year=%d;volume=%s;", base_url, journal_issn, year, volume_name</string>
+      <string>1,"^%stemp/.+\.epub", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%sshowBackIssue.asp?issn=%s;year=%d;volume=%s;issue=%s", base_url, journal_issn, year, volume_name, issue</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+<!--         <string>"^%sarticle.asp\?issn=%s;year=%d;volume=%s;issue=[0-9]+;spage=", base_url, journal_issn, year, volume_name</string> -->
+        <string>"^%sarticle.asp\?issn=%s;year=%d;volume=%s", base_url, journal_issn, year, volume_name</string>
+      </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.medknow.MedknowHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.medknow.MedknowSitemapLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.medknow.MedknowArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.medknow.MedknowArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.medknow.MedknowUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.medknow.MedknowHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>"%ssubscriberlogin\.asp", base_url</string>
+  </entry>
+</map>    
