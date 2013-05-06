@@ -1,5 +1,5 @@
 /*
- * $Id: HashResult.java,v 1.1 2013-05-03 17:30:44 barry409 Exp $
+ * $Id: HashResult.java,v 1.2 2013-05-06 16:35:58 barry409 Exp $
  */
 
 /*
@@ -42,29 +42,33 @@ import org.lockss.util.ByteArray;
  * to force equality and sorting by content of the byte array.
  */
 final public class HashResult {
-  /** The singleton for a zero-length or null byte array. */
-  public static final HashResult NO_BYTES = new HashResult();
-
+  /** An internal byte array, never shared with clients. */
   private final byte[] bytes;
-
-  private HashResult() {
-    this(ByteArray.EMPTY_BYTE_ARRAY);
-  }
 
   private HashResult(byte[] bytes) {
     this.bytes = bytes;
   }
 
   /**
+   * Thrown by {@link #make} for byte arrays which are not permitted.
+   */
+  public static class IllegalByteArray extends IllegalArgumentException {
+    public IllegalByteArray(String msg) {
+      super(msg);
+    }
+  }
+
+  /**
    * Wrap the given bytes.
    * @param bytes The bytes to wrap; probably the output from
    * MessageDigest.digest().
-   * @return The NO_BYTES HashResult if the input is null or
-   * zero-length; a HashResult for these bytes otherwise.
+   * @return A HashResult for these bytes.
+   * @throws {@link IllegalByteArray} if <code>bytes</code> is null or
+   * zero-length.
    */
   public static HashResult make(byte[] bytes) {
     if (bytes == null || bytes.length == 0) {
-      return NO_BYTES;
+      throw new IllegalByteArray("null or zero-length byte array is not allowed.");
     }
     // Keep a safe copy, so someone mucking with the bytes won't break
     // our hash.
@@ -72,7 +76,8 @@ final public class HashResult {
   }
 
   /** 
-   * @return A copy of the underlying bytes.
+   * @return A copy of the underlying bytes. This will never be null
+   * or zero-length.
    */
   public byte[] getBytes() {
     return Arrays.copyOf(bytes, bytes.length);

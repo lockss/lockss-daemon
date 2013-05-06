@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashResult.java,v 1.1 2013-05-03 17:30:44 barry409 Exp $
+ * $Id: TestHashResult.java,v 1.2 2013-05-06 16:35:58 barry409 Exp $
  */
 
 /*
@@ -43,9 +43,18 @@ public class TestHashResult extends LockssTestCase {
 
   public void testCreateNoBytes() {
     byte[] empty_bytes = {};
-    assertTrue(HashResult.NO_BYTES == HashResult.make(null));
-    assertTrue(HashResult.NO_BYTES == HashResult.make(empty_bytes));
-    assertFalse(HashResult.NO_BYTES == HashResult.make(bytes));
+    try {
+      HashResult.make(null);
+      fail();
+    } catch (HashResult.IllegalByteArray e) {
+      // expected
+    }
+    try {
+      HashResult.make(empty_bytes);
+      fail();
+    } catch (HashResult.IllegalByteArray e) {
+      // expected
+    }
   }
 
   public void testEqualsAndHashCode() {
@@ -56,9 +65,6 @@ public class TestHashResult extends LockssTestCase {
     assertFalse(o1 == o2);
     assertTrue(o1.equals(o2));
     assertTrue(o2.equals(o1));
-    assertTrue(HashResult.NO_BYTES.equals(HashResult.NO_BYTES));
-    assertFalse(HashResult.NO_BYTES.equals(o1));
-    assertFalse(o1.equals(HashResult.NO_BYTES));
 
     assertEquals(o1.hashCode(), o2.hashCode());
   }
