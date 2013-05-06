@@ -41671,7 +41671,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://ojs.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Orthopaedic Journal of Sports Medicine Volume 1 ; 1 >
+    au < manifest ; 2013 ; Orthopaedic Journal of Sports Medicine Volume 1 ; 1 >
 
     }
 
