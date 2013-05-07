@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.15.2.1 2013-05-03 01:58:06 tlipkis Exp $
+ * $Id: MetadataManager.java,v 1.15.2.2 2013-05-07 00:54:12 fergaloy-sf Exp $
  */
 
 /*
@@ -2786,6 +2786,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private void addMdItemIssns(Connection conn, Long mdItemSeq, String pIssn,
       String eIssn) throws SQLException {
     final String DEBUG_HEADER = "addMdItemIssns(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "pIssn = " + pIssn);
+      log.debug2(DEBUG_HEADER + "eIssn = " + eIssn);
+    }
 
     if (pIssn == null && eIssn == null) {
       return;
@@ -2796,7 +2801,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     try {
       if (pIssn != null) {
-	log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
 	insertIssn.setLong(1, mdItemSeq);
 	insertIssn.setString(2, pIssn);
 	insertIssn.setString(3, P_ISSN_TYPE);
@@ -2806,10 +2810,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	  log.debug3(DEBUG_HEADER + "count = " + count);
 	  log.debug3(DEBUG_HEADER + "Added PISSN = " + pIssn);
 	}
+
+	insertIssn.clearParameters();
       }
 
       if (eIssn != null) {
-	log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
 	insertIssn.setLong(1, mdItemSeq);
 	insertIssn.setString(2, eIssn);
 	insertIssn.setString(3, E_ISSN_TYPE);
@@ -2820,9 +2825,18 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	  log.debug3(DEBUG_HEADER + "Added EISSN = " + eIssn);
 	}
       }
+    } catch (SQLException sqle) {
+	log.error("Cannot add metadata item ISSNs", sqle);
+	log.error("mdItemSeq = " + mdItemSeq);
+	log.error("pIssn = " + pIssn);
+	log.error("eIssn = " + eIssn);
+	log.error("SQL = '" + INSERT_ISSN_QUERY + "'.");
+	throw sqle;
     } finally {
       DbManager.safeCloseStatement(insertIssn);
     }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -2842,6 +2856,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private void addMdItemIsbns(Connection conn, Long mdItemSeq, String pIsbn,
       String eIsbn) throws SQLException {
     final String DEBUG_HEADER = "addMdItemIsbns(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "pIsbn = " + pIsbn);
+      log.debug2(DEBUG_HEADER + "eIsbn = " + eIsbn);
+    }
 
     if (pIsbn == null && eIsbn == null) {
       return;
@@ -2852,7 +2871,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     try {
       if (pIsbn != null) {
-	log.debug3(DEBUG_HEADER + "pIsbn = " + pIsbn);
 	insertIsbn.setLong(1, mdItemSeq);
 	insertIsbn.setString(2, pIsbn);
 	insertIsbn.setString(3, P_ISBN_TYPE);
@@ -2862,10 +2880,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	  log.debug3(DEBUG_HEADER + "count = " + count);
 	  log.debug3(DEBUG_HEADER + "Added PISBN = " + pIsbn);
 	}
+
+	insertIsbn.clearParameters();
       }
 
       if (eIsbn != null) {
-	log.debug3(DEBUG_HEADER + "eIsbn = " + eIsbn);
 	insertIsbn.setLong(1, mdItemSeq);
 	insertIsbn.setString(2, eIsbn);
 	insertIsbn.setString(3, E_ISBN_TYPE);
@@ -2879,6 +2898,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     } finally {
       DbManager.safeCloseStatement(insertIsbn);
     }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -2932,27 +2953,57 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private void addNewMdItemIssns(Connection conn, Long mdItemSeq, String pIssn,
       String eIssn) throws SQLException {
+    final String DEBUG_HEADER = "addNewMdItemIssns(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "pIssn = " + pIssn);
+      log.debug2(DEBUG_HEADER + "eIssn = " + eIssn);
+    }
+
     if (pIssn == null && eIssn == null) {
       return;
     }
 
     String issnType;
+    String issnValue;
 
-    Map<String, String> issns = getMdItemIssns(conn, mdItemSeq);
+    // Find the existing ISSNs for the current metadata item.
+    Set<Issn> issns = getMdItemIssns(conn, mdItemSeq);
 
-    for (String issn : issns.keySet()) {
-      issnType = issns.get(issn);
+    // Loop through all the ISSNs found.
+    for (Issn issn : issns) {
+      // Get the ISSN value.
+      issnValue = issn.getValue();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issnValue = " + issnValue);
 
-      if (pIssn != null && pIssn.equals(issn) && P_ISSN_TYPE.equals(issnType)) {
+      // Get the ISSN type.
+      issnType = issn.getType();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issnType = " + issnType);
+
+      // Check whether this ISSN matches the passed print ISSN.
+      if (pIssn != null
+	  && pIssn.equals(issnValue)
+	  && P_ISSN_TYPE.equals(issnType)) {
+	// Yes: Skip it as it is already stored.
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "Skipped storing already existing pIssn = " + pIssn);
 	pIssn = null;
+	continue;
       }
 
-      if (eIssn != null && eIssn.equals(issn) && E_ISSN_TYPE.equals(issnType)) {
+      // Check whether this ISSN matches the passed electronic ISSN.
+      if (eIssn != null
+	  && eIssn.equals(issnValue)
+	  && E_ISSN_TYPE.equals(issnType)) {
+	// Yes: Skip it as it is already stored.
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "Skipped storing already existing eIssn = " + eIssn);
 	eIssn = null;
       }
     }
 
     addMdItemIssns(conn, mdItemSeq, pIssn, eIssn);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -2962,33 +3013,50 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param mdItemSeq
    *          A Long with the metadata item identifier.
-   * @return a Map<String, String> with the ISSNs and their types.
+   * @return a Set<Issn> with the ISSNs.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private Map<String, String> getMdItemIssns(Connection conn, Long mdItemSeq)
+  private Set<Issn> getMdItemIssns(Connection conn, Long mdItemSeq)
       throws SQLException {
+    final String DEBUG_HEADER = "getMdItemIssns(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
 
-    Map<String, String> issns = new HashMap<String, String>();
+    Set<Issn> issns = new HashSet<Issn>();
 
     PreparedStatement findIssns =
 	dbManager.prepareStatement(conn, FIND_MD_ITEM_ISSN_QUERY);
 
     ResultSet resultSet = null;
+    Issn issn;
 
     try {
+      // Get the metadata item ISSNs.
       findIssns.setLong(1, mdItemSeq);
       resultSet = dbManager.executeQuery(findIssns);
 
+      // Loop through the results.
       while (resultSet.next()) {
-	issns.put(resultSet.getString(ISSN_COLUMN),
+	// Get the next ISSN.
+	issn = new Issn(resultSet.getString(ISSN_COLUMN),
 	    resultSet.getString(ISSN_TYPE_COLUMN));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Found " + issn);
+
+	// Add it to the results.
+	issns.add(issn);
       }
+    } catch (SQLException sqle) {
+	log.error("Cannot find metadata item ISSNs", sqle);
+	log.error("mdItemSeq = " + mdItemSeq);
+	log.error("SQL = '" + FIND_MD_ITEM_ISSN_QUERY + "'.");
+	throw sqle;
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(findIssns);
     }
 
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "issns.size() = " + issns.size());
     return issns;
   }
 
@@ -3009,27 +3077,56 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private void addNewMdItemIsbns(Connection conn, Long mdItemSeq, String pIsbn,
       String eIsbn) throws SQLException {
+    final String DEBUG_HEADER = "addNewMdItemIsbns(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "pIsbn = " + pIsbn);
+      log.debug2(DEBUG_HEADER + "eIsbn = " + eIsbn);
+    }
+
     if (pIsbn == null && eIsbn == null) {
       return;
     }
 
     String isbnType;
+    String isbnValue;
 
-    Map<String, String> isbns = getMdItemIsbns(conn, mdItemSeq);
+    // Find the existing ISBNs for the current metadata item.
+    Set<Isbn> isbns = getMdItemIsbns(conn, mdItemSeq);
 
-    for (String isbn : isbns.keySet()) {
-      isbnType = isbns.get(isbn);
+    // Loop through all the ISBNs found.
+    for (Isbn isbn : isbns) {
+      // Get the ISBN value.
+      isbnValue = isbn.getValue();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isbnValue = " + isbnValue);
 
-      if (pIsbn != null && pIsbn.equals(isbn) && P_ISBN_TYPE.equals(isbnType)) {
+      // Get the ISBN type.
+      isbnType = isbn.getType();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isbnType = " + isbnType);
+
+      // Check whether this ISBN matches the passed print ISBN.
+      if (pIsbn != null
+	  && pIsbn.equals(isbnValue)
+	  && P_ISBN_TYPE.equals(isbnType)) {
+	// Yes: Skip it as it is already stored.
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "Skipped storing already existing pIsbn = " + pIsbn);
 	pIsbn = null;
       }
 
-      if (eIsbn != null && eIsbn.equals(isbn) && E_ISBN_TYPE.equals(isbnType)) {
+      // Check whether this ISBN matches the passed electronic ISBN.
+      if (eIsbn != null
+	  && eIsbn.equals(isbnValue)
+	  && E_ISBN_TYPE.equals(isbnType)) {
+	// Yes: Skip it as it is already stored.
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "Skipped storing already existing eIsbn = " + eIsbn);
 	eIsbn = null;
       }
     }
 
     addMdItemIsbns(conn, mdItemSeq, pIsbn, eIsbn);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -3039,33 +3136,50 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param mdItemSeq
    *          A Long with the metadata item identifier.
-   * @return a Map<String, String> with the ISBNs and their types.
+   * @return a Set<Isbn> with the ISBNs.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private Map<String, String> getMdItemIsbns(Connection conn, Long mdItemSeq)
+  private Set<Isbn> getMdItemIsbns(Connection conn, Long mdItemSeq)
       throws SQLException {
+    final String DEBUG_HEADER = "getMdItemIsbns(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
 
-    Map<String, String> isbns = new HashMap<String, String>();
+    Set<Isbn> isbns = new HashSet<Isbn>();
 
     PreparedStatement findIsbns =
 	dbManager.prepareStatement(conn, FIND_MD_ITEM_ISBN_QUERY);
 
     ResultSet resultSet = null;
+    Isbn isbn;
 
     try {
+      // Get the metadata item ISBNs.
       findIsbns.setLong(1, mdItemSeq);
       resultSet = dbManager.executeQuery(findIsbns);
 
+      // Loop through the results.
       while (resultSet.next()) {
-	isbns.put(resultSet.getString(ISBN_COLUMN),
+	// Get the next ISBN.
+	isbn = new Isbn(resultSet.getString(ISBN_COLUMN),
 	    resultSet.getString(ISBN_TYPE_COLUMN));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Found " + isbn);
+
+	// Add it to the results.
+	isbns.add(isbn);
       }
+    } catch (SQLException sqle) {
+	log.error("Cannot find metadata item ISBNs", sqle);
+	log.error("mdItemSeq = " + mdItemSeq);
+	log.error("SQL = '" + FIND_MD_ITEM_ISBN_QUERY + "'.");
+	throw sqle;
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(findIsbns);
     }
 
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "isbns.size() = " + isbns.size());
     return isbns;
   }
 
@@ -5837,25 +5951,35 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private void mergeMdItemIsbns(Connection conn, Long sourceMdItemSeq,
       Long targetMdItemSeq) throws SQLException {
     final String DEBUG_HEADER = "mergeMdItemIsbns(): ";
-    log.debug3(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
-    log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
+      log.debug2(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
+    }
 
-    Map<String, String> sourceMdItemIsbns =
-	getMdItemIsbns(conn, sourceMdItemSeq);
+    // Find the existing ISBNs for the source metadata item.
+    Set<Isbn> sourceMdItemIsbns = getMdItemIsbns(conn, sourceMdItemSeq);
 
     String isbnType;
+    String isbnValue;
 
-    for (String isbn : sourceMdItemIsbns.keySet()) {
-      isbnType = sourceMdItemIsbns.get(isbn);
+    // Loop through all the ISBNs found.
+    for (Isbn isbn : sourceMdItemIsbns) {
+      // Get the ISBN value.
+      isbnValue = isbn.getValue();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isbnValue = " + isbnValue);
+
+      // Get the ISBN type.
+      isbnType = isbn.getType();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isbnType = " + isbnType);
 
       if (P_ISBN_TYPE.equals(isbnType)) {
-	addNewMdItemIsbns(conn, targetMdItemSeq, isbn, null);
+	addNewMdItemIsbns(conn, targetMdItemSeq, isbnValue, null);
       } else if (E_ISBN_TYPE.equals(isbnType)) {
-	addNewMdItemIsbns(conn, targetMdItemSeq, null, isbn);
+	addNewMdItemIsbns(conn, targetMdItemSeq, null, isbnValue);
       }
     }
 
-    log.debug3(DEBUG_HEADER + "Done.");
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -5873,24 +5997,34 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private void mergeMdItemIssns(Connection conn, Long sourceMdItemSeq,
       Long targetMdItemSeq) throws SQLException {
     final String DEBUG_HEADER = "mergeMdItemIssns(): ";
-    log.debug3(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
-    log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
+      log.debug2(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
+    }
 
-    Map<String, String> sourceMdItemIssns =
-	getMdItemIssns(conn, sourceMdItemSeq);
+    // Find the existing ISSNs for the source metadata item.
+    Set<Issn> sourceMdItemIssns = getMdItemIssns(conn, sourceMdItemSeq);
 
     String issnType;
+    String issnValue;
 
-    for (String issn : sourceMdItemIssns.keySet()) {
-      issnType = sourceMdItemIssns.get(issn);
+    // Loop through all the ISSNs found.
+    for (Issn issn : sourceMdItemIssns) {
+      // Get the ISSN value.
+      issnValue = issn.getValue();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issnValue = " + issnValue);
+
+      // Get the ISSN type.
+      issnType = issn.getType();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issnType = " + issnType);
 
       if (P_ISSN_TYPE.equals(issnType)) {
-	addNewMdItemIssns(conn, targetMdItemSeq, issn, null);
+	addNewMdItemIssns(conn, targetMdItemSeq, issnValue, null);
       } else if (E_ISSN_TYPE.equals(issnType)) {
-	addNewMdItemIssns(conn, targetMdItemSeq, null, issn);
+	addNewMdItemIssns(conn, targetMdItemSeq, null, issnValue);
       }
     }
 
-    log.debug3(DEBUG_HEADER + "Done.");
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }
