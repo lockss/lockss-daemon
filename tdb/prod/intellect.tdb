@@ -21,7 +21,23 @@
       param[journal_id] = ap3
       param[journal_issn] = 2042-7875
       
-      au < released ; 2011 ; Animation Practice, Production & Process Volume 1 ; 1 >
+      au < released ; 2011-2012 ; Animation Practice, Production & Process Volume 1 ; 1 >
+      au < expected ; 2012-2013 ; Animation Practice, Production & Process Volume 2 ; 2 >
+
+    }
+
+    {
+      title <
+        name = Applied Theatre Research ;
+        issn = 2049-3010 ;
+        eissn = 2042-7883
+      >
+      
+      param[journal_id] = atr
+      param[journal_issn] = 2049-3010
+      
+      au < exists ; 2012 ; Applied Theatre Research Volume 1 ; 1 >
+      au < expected ; 2013 ; Applied Theatre Research Volume 2 ; 2 >
 
     }
 
@@ -36,6 +52,7 @@
       param[journal_issn] = 2042-793X
       
       au < released ; 2011 ; Art & the Public Sphere Volume 1 ; 1 >
+      au < expected ; 2013 ; Art & the Public Sphere Volume 2 ; 2 >
 
     }
 
@@ -58,6 +75,42 @@
       au < released ; 2008-2009 ; Art, Design & Communication in Higher Education Volume 7 ; 7 >
       au < released ; 2009 ; Art, Design & Communication in Higher Education Volume 8 ; 8 >
       au < released ; 2010 ; Art, Design & Communication in Higher Education Volume 9 ; 9 >
+      au < exists ; 2012 ; Art, Design & Communication in Higher Education Volume 10 ; 10 >
+      au < exists ; 2012 ; Art, Design & Communication in Higher Education Volume 11 ; 11 >
+      au < expected ; 2013 ; Art, Design & Communication in Higher Education Volume 12 ; 12 >
+
+    }
+
+    {
+      title <
+        name = Asian Cinema ;
+        issn = 1059-440X ;
+        eissn = 2049-6710
+      >
+
+      param[journal_id] = ac
+      param[journal_issn] = 1059-440X
+      
+      au < exists ; 1993 ; Asian Cinema Volume 5 ; 5 >
+      au < exists ; 1993 ; Asian Cinema Volume 6 ; 6 >
+      au < exists ; 1995 ; Asian Cinema Volume 7 ; 7 >
+      au < exists ; 1996 ; Asian Cinema Volume 8 ; 8 >
+      au < exists ; 1997-1998 ; Asian Cinema Volume 9 ; 9 >
+      au < exists ; 1998-1999 ; Asian Cinema Volume 10 ; 10 >
+      au < exists ; 2000 ; Asian Cinema Volume 11 ; 11 >
+      au < exists ; 2001 ; Asian Cinema Volume 12 ; 12 >
+      au < exists ; 2002 ; Asian Cinema Volume 13 ; 13 >
+      au < exists ; 2003 ; Asian Cinema Volume 14 ; 14 >
+      au < exists ; 2004 ; Asian Cinema Volume 15 ; 15 >
+      au < exists ; 2005 ; Asian Cinema Volume 16 ; 16 >
+      au < exists ; 2006 ; Asian Cinema Volume 17 ; 17 >
+      au < exists ; 2007 ; Asian Cinema Volume 18 ; 18 >
+      au < exists ; 2008 ; Asian Cinema Volume 19 ; 19 >
+      au < exists ; 2009 ; Asian Cinema Volume 20 ; 20 >
+      au < exists ; 2010 ; Asian Cinema Volume 21 ; 21 >
+      au < exists ; 2012 ; Asian Cinema Volume 22 ; 22 >
+      au < exists ; 2012 ; Asian Cinema Volume 23 ; 23 >
+      au < expected ; 2013 ; Asian Cinema Volume 24 ; 24 >
 
     }
 
@@ -72,6 +125,7 @@
       param[journal_issn] = 2045-5852
       
       au < released ; 2011 ; The Australasian Journal of Popular Culture Volume 1 ; 1 >
+      au < exists ; 2012-2013 ; The Australasian Journal of Popular Culture Volume 2 ; 2 >
 
     }
     
@@ -88,17 +142,8 @@
       au < released ; 2007 ; Baha'i Studies Review Volume 14 ; 14 >
       au < released ; 2009 ; Baha'i Studies Review Volume 15 ; 15 >
       au < released ; 2010 ; Baha'i Studies Review Volume 16 ; 16 >
-
-    }
-
-    {
-      title <
-        name = Big Picture Magazine ;
-        issn = 1759-0922 ;
-        eissn = 1759-0930  
-      >
-
-      comment[0] = No volumes found online, not found on pub platform. First published 2009.
+      au < exists ; 2011 ; Baha'i Studies Review Volume 17 ; 17 >
+      au < expected ; 2013 ; Baha'i Studies Review Volume 18 ; 18 >
 
     }
 
@@ -112,17 +157,8 @@
       param[journal_id] = btwo
       param[journal_issn] = 2042-8022
 
-      au < released ; 2012 ; Book 2.0 Volume 1 ; 1 >
-
-    }
-
-    {
-      title <
-        name = The Canadian Journal of Popular Culture ;
-        issn = 2045-581X ;
-        eissn = 2045-5828 
-      >
-      comment[0] = forthcoming 2012
+      au < released ; 2011-2012 ; Book 2.0 Volume 1 ; 1 >
+      au < expected ; 2013 ; Book 2.0 Volume 2 ; 2 >
 
     }
 
@@ -133,12 +169,14 @@
         eissn = 1757-1901 
       >
 
-	  param[journal_id] = cjcs
+      param[journal_id] = cjcs
       param[journal_issn] = 1757-1898
 
       au < released ; 2009 ; Catalan Journal of Communication & Cultural Studies Volume 1 ; 1 >
       au < released ; 2010 ; Catalan Journal of Communication & Cultural Studies Volume 2 ; 2 >
       au < released ; 2011 ; Catalan Journal of Communication & Cultural Studies Volume 3 ; 3 >
+      au < exists ; 2012 ; Catalan Journal of Communication & Cultural Studies Volume 4 ; 4 >
+      au < expected ; 2013 ; Catalan Journal of Communication & Cultural Studies Volume 5 ; 5 >
 
     }
 
@@ -149,10 +187,13 @@
         eissn = 2040-5677 
       >
       
-	  param[journal_id] = chor
+      param[journal_id] = chor
       param[journal_issn] = 2040-5669
 
       au < released ; 2011 ; Choreographic Practices Volume 1 ; 1 >
+      au < exists ; 2012 ; Choreographic Practices Volume 2 ; 2 >
+      au < exists ; 2012 ; Choreographic Practices Volume 3 ; 3 >
+      au < expected ; 2013 ; Choreographic Practices Volume 4 ; 4 >
 
     }
 
@@ -163,11 +204,13 @@
         eissn = 1751-1925 
       >
 
-	  param[journal_id] = ctl
+      param[journal_id] = ctl
       param[journal_issn] = 1751-1917
       
       au < released ; 2010-2011 ; Citizenship Teaching and Learning Volume 6 ; 6 >
-      au < released ; 2011 ; Citizenship Teaching and Learning Volume 7 ; 7 >
+      au < released ; 2011-2012 ; Citizenship Teaching and Learning Volume 7 ; 7 >
+      au < exists ; 2012 ; Citizenship Teaching and Learning Volume 8 ; 8 >
+      au < expected ; 2013 ; Citizenship Teaching and Learning Volume 9 ; 9 >
 
     }
 
@@ -183,6 +226,8 @@
       
       au < released ; 2010 ; Comedy Studies Volume 1 ; 1 >
       au < released ; 2011 ; Comedy Studies Volume 2 ; 2 >
+      au < exists ; 2012 ; Comedy Studies Volume 3 ; 3 >
+      au < expected ; 2013 ; Comedy Studies Volume 4 ; 4 >
 
     }
 
@@ -198,6 +243,8 @@
       
       au < released ; 2010 ; Craft Research Volume 1 ; 1 >
       au < released ; 2011 ; Craft Research Volume 2 ; 2 >
+      au < exists ; 2012 ; Craft Research Volume 3 ; 3 >
+      au < exists ; 2013 ; Craft Research Volume 4 ; 4 >
 
     }
 
@@ -214,7 +261,8 @@
       au < released ; 2008-2009 ; Creative Industries Journal Volume 1 ; 1 >
       au < released ; 2009 ; Creative Industries Journal Volume 2 ; 2 >
       au < released ; 2010-2011 ; Creative Industries Journal Volume 3 ; 3 >
-      au < released ; 2011 ; Creative Industries Journal Volume 4 ; 4 >
+      au < released ; 2011-2012 ; Creative Industries Journal Volume 4 ; 4 >
+      au < expected ; 2013 ; Creative Industries Journal Volume 5 ; 5 >
 
     }
 
@@ -229,6 +277,9 @@
       param[journal_issn] = 2040-4417
       
       au < released ; 2010 ; Critical Studies in Fashion & Beauty Volume 1 ; 1 >
+      au < exists ; 2011 ; Critical Studies in Fashion & Beauty Volume 2 ; 2 >
+      au < exists ; 2012 ; Critical Studies in Fashion & Beauty Volume 3 ; 3 >
+      au < expected ; 2013 ; Critical Studies in Fashion & Beauty Volume 4 ; 4 >
 
     }
 
@@ -244,6 +295,8 @@
       
       au < released ; 2010 ; Crossings: Journal of Migration & Culture Volume 1 ; 1 >
       au < released ; 2011 ; Crossings: Journal of Migration & Culture Volume 2 ; 2 >
+      au < exists ; 2012 ; Crossings: Journal of Migration & Culture Volume 3 ; 3 >
+      au < exists ; 2013 ; Crossings: Journal of Migration & Culture Volume 4 ; 4 >
 
     }
 
@@ -258,6 +311,8 @@
       param[journal_issn] = 2043-068X
       
       au < released ; 2011 ; Design Ecologies Volume 1 ; 1 >
+      au < exists ; 2012 ; Design Ecologies Volume 2 ; 2 >
+      au < expected ; 2013 ; Design Ecologies Volume 3 ; 3 >
 
     }
 
@@ -273,6 +328,8 @@
       
       au < released ; 2009-2010 ; Empedocles: European Journal for the Philosophy of Communication Volume 1 ; 1 >
       au < released ; 2011 ; Empedocles: European Journal for the Philosophy of Communication Volume 2 ; 2 >
+      au < exists ; 2011-2012 ; Empedocles: European Journal for the Philosophy of Communication Volume 3 ; 3 >
+      au < expected ; 2013 ; Empedocles: European Journal for the Philosophy of Communication Volume 4 ; 4 >
 
     }
 
@@ -296,7 +353,9 @@
       au < released ; 2008 ; European Journal of American Culture Volume 27 ; 27 >
       au < released ; 2009 ; European Journal of American Culture Volume 28 ; 28 >
       au < released ; 2010-2011 ; European Journal of American Culture Volume 29 ; 29 >
-      au < released ; 2011 ; European Journal of American Culture Volume 30 ; 30 >
+      au < released ; 2011-2012 ; European Journal of American Culture Volume 30 ; 30 >
+      au < exists ; 2012 ; European Journal of American Culture Volume 31 ; 31 >
+      au < exists ; 2013 ; European Journal of American Culture Volume 32 ; 32 >
 
     }
     
@@ -314,6 +373,9 @@
       au < released ; 2008 ; Explorations in Media Ecology Volume 7 ; 7 >
       au < released ; 2009 ; Explorations in Media Ecology Volume 8 ; 8 >
       au < released ; 2010 ; Explorations in Media Ecology Volume 9 ; 9 >
+      au < exists ; 2011 ; Explorations in Media Ecology Volume 10 ; 10 >
+      au < exists ; 2012 ; Explorations in Media Ecology Volume 11 ; 11 >
+      au < expected ; 2013 ; Explorations in Media Ecology Volume 12 ; 12 >
 
     }
     
@@ -336,6 +398,8 @@
       au < released ; 2009 ; Film International Volume 7 ; 7 >
       au < released ; 2010 ; Film International Volume 8 ; 8 >
       au < released ; 2011 ; Film International Volume 9 ; 9 >
+      au < exists ; 2012 ; Film International Volume 10 ; 10 >
+      au < exists ; 2013 ; Film International Volume 11 ; 11 >
 
     }
 
@@ -351,6 +415,8 @@
       
       au < released ; 2010-2011 ; Film Matters Volume 1 ; 1 >
       au < released ; 2011 ; Film Matters Volume 2 ; 2 >
+      au < exists ; 2012 ; Film Matters Volume 3 ; 3 >
+      au < expected ; 2013 ; Film Matters Volume 4 ; 4 >
 
     }
 
@@ -364,7 +430,8 @@
       param[journal_id] = ffc
       param[journal_issn] = 2044-2823
       
-      au < released ; 2011 ; Film, Fashion & Consumption Volume 1 ; 1 >
+      au < released ; 2011-2012 ; Film, Fashion & Consumption Volume 1 ; 1 >
+      au < expected ; 2013 ; Film, Fashion & Consumption Volume 2 ; 2 >
       
     }
 
