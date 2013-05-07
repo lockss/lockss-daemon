@@ -182,14 +182,14 @@
     param[journal_issn] = 2049-3355
     comment[notReady] = RU4501, manifest page missing permission statement
     
-    au < testing ; 2004 ; Comma Volume 2004 ; 2004 >
-    au < testing ; 2005 ; Comma Volume 2005 ; 2005 >
-    au < testing ; 2006 ; Comma Volume 2006 ; 2006 >
-    au < testing ; 2007 ; Comma Volume 2007 ; 2007 >
-    au < testing ; 2008 ; Comma Volume 2008 ; 2008 >
+    au < ready ; 2004 ; Comma Volume 2004 ; 2004 >
+    au < ready ; 2005 ; Comma Volume 2005 ; 2005 >
+    au < ready ; 2006 ; Comma Volume 2006 ; 2006 >
+    au < ready ; 2007 ; Comma Volume 2007 ; 2007 >
+    au < ready ; 2008 ; Comma Volume 2008 ; 2008 >
     au < released ; 2009 ; Comma Volume 2009 ; 2009 >
     au < released ; 2010 ; Comma Volume 2010 ; 2010 >
-    au < manifest ; 2011 ; Comma Volume 2011 ; 2011 >
+    au < testing ; 2011 ; Comma Volume 2011 ; 2011 >
     
   }
   
@@ -696,12 +696,12 @@
     au < exists ; 1996 ; Town Planning Review Volume 67 ; 67 >
     au < exists ; 1997 ; Town Planning Review Volume 68 ; 68 >
     au < exists ; 1998 ; Town Planning Review Volume 69 ; 69 >
-    au < notReady ; 1999 ; Town Planning Review Volume 70 ; 70 >
-    au < notReady ; 2000 ; Town Planning Review Volume 71 ; 71 >
+    au < testing ; 1999 ; Town Planning Review Volume 70 ; 70 >
+    au < testing ; 2000 ; Town Planning Review Volume 71 ; 71 >
     au < doesNotExist ; 0 ; Town Planning Review Volume 72 ; 72 >
     au < ready ; 2002 ; Town Planning Review Volume 73 ; 73 >
     au < ready ; 2003 ; Town Planning Review Volume 74 ; 74 >
-    au < notReady ; 2004 ; Town Planning Review Volume 75 ; 75 >
+    au < testing ; 2004 ; Town Planning Review Volume 75 ; 75 >
     au < ready ; 2005 ; Town Planning Review Volume 76 ; 76 >
     au < ready ; 2006 ; Town Planning Review Volume 77 ; 77 >
     au < ready ; 2007 ; Town Planning Review Volume 78 ; 78 >
