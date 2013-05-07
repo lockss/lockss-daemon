@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.15.2.2 2013-05-07 00:54:12 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.15.2.3 2013-05-07 20:12:55 fergaloy-sf Exp $
  */
 
 /*
@@ -2331,6 +2331,17 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       String eIssn, String pIsbn, String eIsbn, Long publisherSeq, String title,
       String proprietaryId, String volume) throws SQLException {
     final String DEBUG_HEADER = "findOrCreateBookInBookSeries(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "pIssn = " + pIssn);
+      log.debug2(DEBUG_HEADER + "eIssn = " + eIssn);
+      log.debug2(DEBUG_HEADER + "pIsbn = " + pIsbn);
+      log.debug2(DEBUG_HEADER + "eIsbn = " + eIsbn);
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "title = " + title);
+      log.debug2(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+      log.debug2(DEBUG_HEADER + "volume = " + volume);
+    }
+
     Long bookSeq = null;
     Long bookSeriesSeq = null;
     Long mdItemSeq = null;
@@ -2368,8 +2379,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.debug3(DEBUG_HEADER + "added title ISSNs.");
 
       // Add to the database the new book.
-      bookSeq = addPublication(conn, bookSeriesSeq, MD_ITEM_TYPE_BOOK,
-	  bookTitle, proprietaryId, publisherSeq);
+      bookSeq = addPublication(conn, mdItemSeq, MD_ITEM_TYPE_BOOK, bookTitle,
+	  proprietaryId, publisherSeq);
       log.debug3(DEBUG_HEADER + "new bookSeq = " + bookSeq);
 
       // Skip it if the new book could not be added.
@@ -2401,11 +2412,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.debug3(DEBUG_HEADER + "added new title ISSNs.");
 
       // Find or create the book.
-      bookSeq =
-	  findOrCreateBook(conn, pIsbn, eIsbn, publisherSeq, bookTitle,
-			   bookSeriesSeq, proprietaryId);
+      bookSeq = findOrCreateBook(conn, pIsbn, eIsbn, publisherSeq, bookTitle,
+	  mdItemSeq, proprietaryId);
     }
 
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "bookSeq = " + bookSeq);
     return bookSeq;
   }
 
@@ -2455,6 +2466,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       Long publisherSeq, String title, Long parentSeq, String proprietaryId)
       throws SQLException {
     final String DEBUG_HEADER = "findOrCreateBook(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "pIsbn = " + pIsbn);
+      log.debug2(DEBUG_HEADER + "eIsbn = " + eIsbn);
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "title = " + title);
+      log.debug2(DEBUG_HEADER + "parentSeq = " + parentSeq);
+      log.debug2(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+    }
+
     Long publicationSeq = null;
     Long mdItemSeq = null;
 
@@ -2500,6 +2520,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.debug3(DEBUG_HEADER + "added new title ISBNs.");
     }
 
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     return publicationSeq;
   }
 
@@ -2612,6 +2634,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       String pIssn, String eIssn, String pIsbn, String eIsbn, String mdItemType)
 	  throws SQLException {
     final String DEBUG_HEADER = "findPublication(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "title = " + title);
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "pIssn = " + pIssn);
+      log.debug2(DEBUG_HEADER + "eIssn = " + eIssn);
+      log.debug2(DEBUG_HEADER + "pIsbn = " + pIsbn);
+      log.debug2(DEBUG_HEADER + "eIsbn = " + eIsbn);
+      log.debug2(DEBUG_HEADER + "mdItemType = " + mdItemType);
+    }
+
     Long publicationSeq = null;
     boolean hasIssns = pIssn != null || eIssn != null;
     log.debug3(DEBUG_HEADER + "hasIssns = " + hasIssns);
@@ -2649,6 +2681,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	  findPublicationByName(conn, title, publisherSeq, mdItemType);
     }
 
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     return publicationSeq;
   }
 
@@ -2675,6 +2709,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       String mdItemType, String title, String proprietaryId, Long publisherSeq)
       throws SQLException {
     final String DEBUG_HEADER = "addPublication(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "parentSeq = " + parentSeq);
+      log.debug2(DEBUG_HEADER + "mdItemType = " + mdItemType);
+      log.debug2(DEBUG_HEADER + "title = " + title);
+      log.debug2(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+    }
+
     Long publicationSeq = null;
 
     Long mdItemTypeSeq = findMetadataItemType(conn, mdItemType);
@@ -2726,6 +2768,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       DbManager.safeCloseStatement(insertPublication);
     }
 
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     return publicationSeq;
   }
 
@@ -3310,10 +3354,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private Long findPublicationByIssns(Connection conn, Long publisherSeq,
       String pIssn, String eIssn, String mdItemType) throws SQLException {
     final String DEBUG_HEADER = "findPublicationByIssns(): ";
-    log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-    log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
-    log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
-    log.debug3(DEBUG_HEADER + "mdItemType = " + mdItemType);
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "pIssn = " + pIssn);
+      log.debug2(DEBUG_HEADER + "eIssn = " + eIssn);
+      log.debug2(DEBUG_HEADER + "mdItemType = " + mdItemType);
+    }
+
     Long publicationSeq = null;
     ResultSet resultSet = null;
     log.debug3(DEBUG_HEADER + "SQL = '" + FIND_PUBLICATION_BY_ISSNS_QUERY
@@ -3344,6 +3391,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       DbManager.safeCloseStatement(findPublicationByIssns);
     }
 
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     return publicationSeq;
   }
 
@@ -3367,10 +3416,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private Long findPublicationByIsbns(Connection conn, Long publisherSeq,
       String pIsbn, String eIsbn, String mdItemType) throws SQLException {
     final String DEBUG_HEADER = "findPublicationByIsbns(): ";
-    log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-    log.debug3(DEBUG_HEADER + "pIsbn = " + pIsbn);
-    log.debug3(DEBUG_HEADER + "eIsbn = " + eIsbn);
-    log.debug3(DEBUG_HEADER + "mdItemType = " + mdItemType);
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "pIsbn = " + pIsbn);
+      log.debug2(DEBUG_HEADER + "eIsbn = " + eIsbn);
+      log.debug2(DEBUG_HEADER + "mdItemType = " + mdItemType);
+    }
 
     Long publicationSeq = null;
     ResultSet resultSet = null;
@@ -3403,6 +3454,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       DbManager.safeCloseStatement(findPublicationByIsbns);
     }
 
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     return publicationSeq;
   }
 
@@ -3424,6 +3477,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private Long findPublicationByName(Connection conn, String title,
       Long publisherSeq, String mdItemType) throws SQLException {
     final String DEBUG_HEADER = "findPublicationByName(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "title = " + title);
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "mdItemType = " + mdItemType);
+    }
+
     Long publicationSeq = null;
     ResultSet resultSet = null;
     log.debug3(DEBUG_HEADER + "SQL = '" + FIND_PUBLICATION_BY_NAME_QUERY
@@ -3452,6 +3511,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       DbManager.safeCloseStatement(findPublicationByName);
     }
 
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     return publicationSeq;
   }
 
@@ -3519,6 +3580,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       Long mdItemTypeSeq, Long auMdSeq, String date,
       String coverage) throws SQLException {
     final String DEBUG_HEADER = "addMdItem(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "parentSeq = " + parentSeq);
+      log.debug2(DEBUG_HEADER + "mdItemTypeSeq = " + mdItemTypeSeq);
+      log.debug2(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
+      log.debug2(DEBUG_HEADER + "date = " + date);
+      log.debug2(DEBUG_HEADER + "coverage = " + coverage);
+    }
+
     PreparedStatement insertMdItem = dbManager.prepareStatement(conn,
 	INSERT_MD_ITEM_QUERY, Statement.RETURN_GENERATED_KEYS);
 
@@ -3564,6 +3633,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       DbManager.safeCloseStatement(insertMdItem);
     }
 
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
     return mdItemSeq;
   }
 
@@ -4617,6 +4687,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       String pIsbn, String eIsbn, Long publisherSeq, String name, String volume)
 	  throws SQLException {
     final String DEBUG_HEADER = "findPublication(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "pIssn = " + pIssn);
+      log.debug2(DEBUG_HEADER + "eIssn = " + eIssn);
+      log.debug2(DEBUG_HEADER + "pIsbn = " + pIsbn);
+      log.debug2(DEBUG_HEADER + "eIsbn = " + eIsbn);
+      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+      log.debug2(DEBUG_HEADER + "name = " + name);
+      log.debug2(DEBUG_HEADER + "volume = " + volume);
+    }
+
     Long publicationSeq = null;
 
     // Get the title name.
@@ -4645,6 +4725,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       publicationSeq = findJournal(conn, pIssn, eIssn, publisherSeq, title);
     }
 
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     return publicationSeq;
   }
 
