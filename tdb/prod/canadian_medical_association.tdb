@@ -126,7 +126,7 @@
     param[base_url] = http://www.cmajopen.ca/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; CMAJ Open Volume 1 ; 1 >
+    au < manifest ; 2013 ; CMAJ Open Volume 1 ; 1 >
 
   }
 }
