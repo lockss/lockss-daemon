@@ -74,9 +74,9 @@
       au < released ; 2011 ; African Journal of International and Comparative Law Volume 19 ; 19 >
       au < released ; 2012 ; African Journal of International and Comparative Law Volume 20 ; 20 >
       au < manifest ; 2013 ; African Journal of International and Comparative Law Volume 21 ; 21 >
-	
+    
     }
-	
+    
   }
   
   {
@@ -109,7 +109,7 @@
       au < expected ; 2013 ; Architectural Heritage Volume 24 ; 24 >
 
     }
-	
+    
   }
 
   {
@@ -120,9 +120,9 @@
       eissn = 1755-6260 ;
       issnl = 0260-9541 
      >
-	
-	{
-	
+    
+    {
+    
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = anh
@@ -141,7 +141,7 @@
       au < manifest ; 2013 ; Archives of Natural History Volume 40 ; 40 >
 
     }
-	
+    
   }
   
   {
@@ -153,8 +153,8 @@
       issnl = 1079-3453 
      >
 
-	{
-	
+    {
+    
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = bjj
@@ -166,10 +166,10 @@
       au < released ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
       au < released ; 2011 ; Ben Jonson Journal Volume 18 ; 18 >
       au < released ; 2012 ; Ben Jonson Journal Volume 19 ; 19 >
-      au < expected ; 2013 ; Ben Jonson Journal Volume 20 ; 20 >
-		
+      au < manifest ; 2013 ; Ben Jonson Journal Volume 20 ; 20 >
+
     }
-	
+
   }
 
   {
@@ -181,8 +181,8 @@
       issnl = 2043-8567 
      >
 
-	{
-	
+    {
+    
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = brw
@@ -196,7 +196,7 @@
       au < manifest ; 2013 ; Britain and the World Volume 6 ; 6 >
 
     }
-	
+    
   }
   
   {
@@ -254,8 +254,8 @@
       issnl = 1749-5032 
      >
 
-	{
-	
+    {
+    
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = cor
@@ -269,9 +269,9 @@
       au < released ; 2011 ; Corpora Volume 6 ; 6 >
       au < released ; 2012 ; Corpora Volume 7 ; 7 >
       au < expected ; 2013 ; Corpora Volume 8 ; 8 >
-	
+    
     }
-	
+    
   }
   
   {
@@ -347,9 +347,9 @@
       au < released ; 2011 ; Deleuze Studies Volume 5 ; 5 >
       au < released ; 2012 ; Deleuze Studies Volume 6 ; 6 >
       au < manifest ; 2013 ; Deleuze Studies Volume 7 ; 7 >
-	
+    
     }
-	
+    
   }
 
   {
@@ -376,7 +376,7 @@
       au < manifest ; 2013 ; Derrida Today Volume 6 ; 6 >
 
     }
-	
+    
   }
 
   {
@@ -405,9 +405,9 @@
       au < released ; 2011 ; Edinburgh Law Review Volume 15 ; 15 >
       au < released ; 2012 ; Edinburgh Law Review Volume 16 ; 16 >
       au < manifest ; 2013 ; Edinburgh Law Review Volume 17 ; 17 >
-	
+    
     }
-	
+    
   }
 
   {
@@ -542,9 +542,9 @@
 
       au < released ; 2007 ; The Innes Review Volume 58 ; 58 >
       au < released ; 2008 ; The Innes Review Volume 59 ; 59 >
-	
+    
     }
-	
+    
   }
   
   {
@@ -632,9 +632,9 @@
       au < released ; 2011 ; International Research in Children's Literature Volume 4 ; 4 >
       au < released ; 2012 ; International Research in Children's Literature Volume 5 ; 5 >
       au < expected ; 2013 ; International Research in Children's Literature Volume 6 ; 6 >
-	
+    
     }
-	
+    
   }
 
   {
@@ -682,9 +682,9 @@
       au < released ; 2011 ; Journal of Beckett Studies Volume 20 ; 20 >
       au < released ; 2012 ; Journal of Beckett Studies Volume 21 ; 21 >
       au < manifest ; 2013 ; Journal of Beckett Studies Volume 22 ; 22 >
-	
+    
     }
-	
+    
   }
 
   {
@@ -713,9 +713,9 @@
       au < released ; 2011 ; Journal of British Cinema and Television Volume 8 ; 8 >
       au < released ; 2012 ; Journal of British Cinema and Television Volume 9 ; 9 >
       au < manifest ; 2013 ; Journal of British Cinema and Television Volume 10 ; 10 >
-	
+    
     }
-	
+    
   }
 
   {
@@ -745,7 +745,7 @@
       au < manifest ; 2013 ; Journal of International Political Theory Volume 9 ; 9 >
 
     }
-	
+    
   }    
 
   {
@@ -773,9 +773,9 @@
       au < released ; 2011 ; Journal of Qur'anic Studies Volume 13 ; 13 >
       au < released ; 2012 ; Journal of Qur'anic Studies Volume 14 ; 14 >
       au < manifest ; 2013 ; Journal of Qur'anic Studies Volume 15 ; 15 >
-	
+    
     }
-	
+    
   }
 
   {
@@ -807,9 +807,9 @@
       au < released ; 2011 ; Journal of Scottish Historical Studies Volume 31 ; 31 >
       au < released ; 2012 ; Journal of Scottish Historical Studies Volume 32 ; 32 >
       au < manifest ; 2013 ; Journal of Scottish Historical Studies Volume 33 ; 33 >
-	
+    
     }
-	
+    
   }
 
   {
@@ -839,9 +839,9 @@
       au < released ; 2011 ; Journal of Scottish Philosophy Volume 9 ; 9 >
       au < released ; 2012 ; Journal of Scottish Philosophy Volume 10 ; 10 >
       au < manifest ; 2013 ; Journal of Scottish Philosophy Volume 11 ; 11 >
-	
+    
     }
-	
+    
   }
 
   {
@@ -892,9 +892,9 @@
       au < released ; 2011 ; Katherine Mansfield Studies Volume 3 ; 3 >
       au < released ; 2012 ; Katherine Mansfield Studies Volume 4 ; 4 >
       au < expected ; 2013 ; Katherine Mansfield Studies Volume 5 ; 5 >
-	
+    
     }
-	
+    
   }
 
   {
@@ -921,7 +921,7 @@
       au < released ; 2011 ; Modernist Cultures Volume 6 ; 6 >
       au < released ; 2012 ; Modernist Cultures Volume 7 ; 7 >
       au < manifest ; 2013 ; Modernist Cultures Volume 8 ; 8 >
-	
+    
     }
 
   }
@@ -1021,9 +1021,9 @@
       au < released ; 2011 ; Oxford Literary Review Volume 33 ; 33 >
       au < released ; 2012 ; Oxford Literary Review Volume 34 ; 34 >
       au < expected ; 2013 ; Oxford Literary Review Volume 35 ; 35 >
-	
+    
     }
-	
+    
   }
   
   {
@@ -1131,9 +1131,9 @@
       au < released ; 2011 ; Psychoanalysis and History Volume 13 ; 13 >
       au < released ; 2012 ; Psychoanalysis and History Volume 14 ; 14 >
       au < manifest ; 2013 ; Psychoanalysis and History Volume 15 ; 15 >
-	
+    
     }
-	
+    
   }
   
   {
@@ -1233,9 +1233,9 @@
       au < released ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
       au < released ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
       au < released ; 2010 ; Scottish Archaeological Journal Volume 32 ; 32 >
-	
+    
     }
-	
+    
   }
 
   {
@@ -1249,7 +1249,7 @@
 
     {
 
-	comment[shr89] = 500 error http://www.euppublishing.com/doi/abs/10.3366/shr.2010.0001
+    comment[shr89] = 500 error http://www.euppublishing.com/doi/abs/10.3366/shr.2010.0001
 
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
@@ -1409,9 +1409,9 @@
       au < released ; 2011 ; Word Structure Volume 4 ; 4 >
       au < released ; 2012 ; Word Structure Volume 5 ; 5 >
       au < manifest ; 2013 ; Word Structure Volume 6 ; 6 >
-	
+    
     }
-	
+    
   }
   
 }
