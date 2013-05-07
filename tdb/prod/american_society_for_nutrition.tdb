@@ -16,6 +16,7 @@
     >
 
     param[base_url] = http://advances.nutrition.org/ 
+    comment[nR] = needs permission see RT 5484
 
     au < HighWirePressH20Plugin ; released ; 2010 ; Advances in Nutrition Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Advances in Nutrition Volume 2 ; 2 >
@@ -128,9 +129,9 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; American Journal of Clinical Nutrition Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; released ; 2010 ; American Journal of Clinical Nutrition Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; released ; 2011 ; American Journal of Clinical Nutrition Volume 93 ; 93 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; American Journal of Clinical Nutrition Volume 94 ; 94 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; American Journal of Clinical Nutrition Volume 95 ; 95 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; American Journal of Clinical Nutrition Volume 96 ; 96 >
+    au < HighWirePressH20Plugin ; notReady ; 2011 ; American Journal of Clinical Nutrition Volume 94 ; 94 >
+    au < HighWirePressH20Plugin ; notReady ; 2012 ; American Journal of Clinical Nutrition Volume 95 ; 95 >
+    au < HighWirePressH20Plugin ; notReady ; 2012 ; American Journal of Clinical Nutrition Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; American Journal of Clinical Nutrition Volume 97 ; 97 >
 
   }
