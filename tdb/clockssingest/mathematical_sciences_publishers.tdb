@@ -9,6 +9,8 @@
     plugin = needs.plugin
     param[base_url] = http://msp.org/
     implicit < status ; status2 ; year ; name ; param[year] >
+    
+    comment[doNotProcess] = changed from manfest to doNotProcess till new plugin is ready.
 
   {
   
@@ -21,18 +23,18 @@
       param[journal_code] = agt
     
      
-     au < manifest ; exists ; 2001 ; Algebraic & Geometric Topology Volume 1 ; 1 >
-     au < manifest ; exists ; 2002 ; Algebraic & Geometric Topology Volume 2 ; 2 >
-     au < manifest ; exists ; 2003 ; Algebraic & Geometric Topology Volume 3 ; 3 >
-     au < manifest ; exists ; 2004 ; Algebraic & Geometric Topology Volume 4 ; 4 >
-     au < manifest ; exists ; 2005 ; Algebraic & Geometric Topology Volume 5 ; 5 >
-     au < manifest ; exists ; 2006 ; Algebraic & Geometric Topology Volume 6 ; 6 >
-     au < manifest ; exists ; 2007 ; Algebraic & Geometric Topology Volume 7 ; 7 >
-     au < manifest ; exists ; 2008 ; Algebraic & Geometric Topology Volume 8 ; 8 >
-     au < manifest ; exists ; 2009 ; Algebraic & Geometric Topology Volume 9 ; 9 >
-     au < manifest ; exists ; 2010 ; Algebraic & Geometric Topology Volume 10 ; 10 >
-     au < manifest ; exists ; 2011 ; Algebraic & Geometric Topology Volume 11 ; 11 >
-     au < manifest ; exists ; 2012 ; Algebraic & Geometric Topology Volume 12 ; 12 >
+     au < doNotProcess ; exists ; 2001 ; Algebraic & Geometric Topology Volume 1 ; 1 >
+     au < doNotProcess ; exists ; 2002 ; Algebraic & Geometric Topology Volume 2 ; 2 >
+     au < doNotProcess ; exists ; 2003 ; Algebraic & Geometric Topology Volume 3 ; 3 >
+     au < doNotProcess ; exists ; 2004 ; Algebraic & Geometric Topology Volume 4 ; 4 >
+     au < doNotProcess ; exists ; 2005 ; Algebraic & Geometric Topology Volume 5 ; 5 >
+     au < doNotProcess ; exists ; 2006 ; Algebraic & Geometric Topology Volume 6 ; 6 >
+     au < doNotProcess ; exists ; 2007 ; Algebraic & Geometric Topology Volume 7 ; 7 >
+     au < doNotProcess ; exists ; 2008 ; Algebraic & Geometric Topology Volume 8 ; 8 >
+     au < doNotProcess ; exists ; 2009 ; Algebraic & Geometric Topology Volume 9 ; 9 >
+     au < doNotProcess ; exists ; 2010 ; Algebraic & Geometric Topology Volume 10 ; 10 >
+     au < doNotProcess ; exists ; 2011 ; Algebraic & Geometric Topology Volume 11 ; 11 >
+     au < doNotProcess ; exists ; 2012 ; Algebraic & Geometric Topology Volume 12 ; 12 >
      au < expected ; exists ; 2013 ; Algebraic & Geometric Topology Volume 13 ; 13 >
      
   }
@@ -48,12 +50,12 @@
       param[journal_code] = ant
     
 
-     au < manifest ; exists ; 2007 ; Algebra & Number Theory Volume 1 ; 1 >
-     au < manifest ; exists ; 2008 ; Algebra & Number Theory Volume 2 ; 2 >
-     au < manifest ; exists ; 2009 ; Algebra & Number Theory Volume 3 ; 3 >
-     au < manifest ; exists ; 2010 ; Algebra & Number Theory Volume 4 ; 4 >
-     au < manifest ; exists ; 2011 ; Algebra & Number Theory Volume 5 ; 5 >
-     au < manifest ; exists ; 2012 ; Algebra & Number Theory Volume 6 ; 6 >
+     au < doNotProcess ; exists ; 2007 ; Algebra & Number Theory Volume 1 ; 1 >
+     au < doNotProcess ; exists ; 2008 ; Algebra & Number Theory Volume 2 ; 2 >
+     au < doNotProcess ; exists ; 2009 ; Algebra & Number Theory Volume 3 ; 3 >
+     au < doNotProcess ; exists ; 2010 ; Algebra & Number Theory Volume 4 ; 4 >
+     au < doNotProcess ; exists ; 2011 ; Algebra & Number Theory Volume 5 ; 5 >
+     au < doNotProcess ; exists ; 2012 ; Algebra & Number Theory Volume 6 ; 6 >
      au < expected ; exists ; 2013 ; Algebra & Number Theory Volume 7 ; 7 >
  
   }
@@ -68,11 +70,11 @@
     
       param[journal_code] = apde
 
-     au < manifest ; exists ; 2008 ; Analysis & PDE Volume 1 ; 1 >
-     au < manifest ; exists ; 2009 ; Analysis & PDE Volume 2 ; 2 >
-     au < manifest ; exists ; 2010 ; Analysis & PDE Volume 3 ; 3 >
-     au < manifest ; exists ; 2011 ; Analysis & PDE Volume 4 ; 4 >
-     au < manifest ; exists ; 2012 ; Analysis & PDE Volume 5 ; 5 >
+     au < doNotProcess ; exists ; 2008 ; Analysis & PDE Volume 1 ; 1 >
+     au < doNotProcess ; exists ; 2009 ; Analysis & PDE Volume 2 ; 2 >
+     au < doNotProcess ; exists ; 2010 ; Analysis & PDE Volume 3 ; 3 >
+     au < doNotProcess ; exists ; 2011 ; Analysis & PDE Volume 4 ; 4 >
+     au < doNotProcess ; exists ; 2012 ; Analysis & PDE Volume 5 ; 5 >
      au < expected ; exists ; 2013 ; Analysis & PDE Volume 6 ; 6 >
 
   }
@@ -87,13 +89,13 @@
 
       param[journal_code] = camcos
  
-     au < manifest ; exists ; 2006 ; Communications in Applied Mathematics and Computational Science Volume 1 ; 1 >
-     au < manifest ; exists ; 2007 ; Communications in Applied Mathematics and Computational Science Volume 2 ; 2 >
-     au < manifest ; exists ; 2008 ; Communications in Applied Mathematics and Computational Science Volume 3 ; 3 >
-     au < manifest ; exists ; 2009 ; Communications in Applied Mathematics and Computational Science Volume 4 ; 4 >
-     au < manifest ; exists ; 2010 ; Communications in Applied Mathematics and Computational Science Volume 5 ; 5 >
-     au < manifest ; exists ; 2011 ; Communications in Applied Mathematics and Computational Science Volume 6 ; 6 >
-     au < manifest ; exists ; 2012 ; Communications in Applied Mathematics and Computational Science Volume 7 ; 7 >
+     au < doNotProcess ; exists ; 2006 ; Communications in Applied Mathematics and Computational Science Volume 1 ; 1 >
+     au < doNotProcess ; exists ; 2007 ; Communications in Applied Mathematics and Computational Science Volume 2 ; 2 >
+     au < doNotProcess ; exists ; 2008 ; Communications in Applied Mathematics and Computational Science Volume 3 ; 3 >
+     au < doNotProcess ; exists ; 2009 ; Communications in Applied Mathematics and Computational Science Volume 4 ; 4 >
+     au < doNotProcess ; exists ; 2010 ; Communications in Applied Mathematics and Computational Science Volume 5 ; 5 >
+     au < doNotProcess ; exists ; 2011 ; Communications in Applied Mathematics and Computational Science Volume 6 ; 6 >
+     au < doNotProcess ; exists ; 2012 ; Communications in Applied Mathematics and Computational Science Volume 7 ; 7 >
      au < expected ; exists ; 2013 ; Communications in Applied Mathematics and Computational Science Volume 8 ; 8 >
   
   }
@@ -108,22 +110,22 @@
     
       param[journal_code] = gt
 
-     au < manifest ; exists ; 1997 ; Geometric Topology Volume 1 ; 1 >
-     au < manifest ; exists ; 1998 ; Geometric Topology Volume 2 ; 2 >
-     au < manifest ; exists ; 1999 ; Geometric Topology Volume 3 ; 3 >
-     au < manifest ; exists ; 2000 ; Geometric Topology Volume 4 ; 4 >
-     au < manifest ; exists ; 2001 ; Geometric Topology Volume 5 ; 5 >
-     au < manifest ; exists ; 2002 ; Geometric Topology Volume 6 ; 6 >
-     au < manifest ; exists ; 2003 ; Geometric Topology Volume 7 ; 7 >
-     au < manifest ; exists ; 2004 ; Geometric Topology Volume 8 ; 8 >
-     au < manifest ; exists ; 2005 ; Geometric Topology Volume 9 ; 9  >
-     au < manifest ; exists ; 2006 ; Geometric Topology Volume 10 ; 10 >
-     au < manifest ; exists ; 2007 ; Geometric Topology Volume 11 ; 11 >
-     au < manifest ; exists ; 2008 ; Geometric Topology Volume 12 ; 12 >
-     au < manifest ; exists ; 2009 ; Geometric Topology Volume 13 ; 13 >
-     au < manifest ; exists ; 2010 ; Geometric Topology Volume 14 ; 14 >
-     au < manifest ; exists ; 2011 ; Geometric Topology Volume 15 ; 15 >
-     au < manifest ; exists ; 2012 ; Geometric Topology Volume 16 ; 16 >
+     au < doNotProcess ; exists ; 1997 ; Geometric Topology Volume 1 ; 1 >
+     au < doNotProcess ; exists ; 1998 ; Geometric Topology Volume 2 ; 2 >
+     au < doNotProcess ; exists ; 1999 ; Geometric Topology Volume 3 ; 3 >
+     au < doNotProcess ; exists ; 2000 ; Geometric Topology Volume 4 ; 4 >
+     au < doNotProcess ; exists ; 2001 ; Geometric Topology Volume 5 ; 5 >
+     au < doNotProcess ; exists ; 2002 ; Geometric Topology Volume 6 ; 6 >
+     au < doNotProcess ; exists ; 2003 ; Geometric Topology Volume 7 ; 7 >
+     au < doNotProcess ; exists ; 2004 ; Geometric Topology Volume 8 ; 8 >
+     au < doNotProcess ; exists ; 2005 ; Geometric Topology Volume 9 ; 9  >
+     au < doNotProcess ; exists ; 2006 ; Geometric Topology Volume 10 ; 10 >
+     au < doNotProcess ; exists ; 2007 ; Geometric Topology Volume 11 ; 11 >
+     au < doNotProcess ; exists ; 2008 ; Geometric Topology Volume 12 ; 12 >
+     au < doNotProcess ; exists ; 2009 ; Geometric Topology Volume 13 ; 13 >
+     au < doNotProcess ; exists ; 2010 ; Geometric Topology Volume 14 ; 14 >
+     au < doNotProcess ; exists ; 2011 ; Geometric Topology Volume 15 ; 15 >
+     au < doNotProcess ; exists ; 2012 ; Geometric Topology Volume 16 ; 16 >
      au < expected ; exists ; 2013 ; Geometric Topology Volume 17 ; 17 >
  
   }
@@ -138,11 +140,11 @@
     
       param[journal_code] = involve
  
-     au < manifest ; exists ; 2008 ; Involve, a journal of mathematics Volume 1 ; 1 >
-     au < manifest ; exists ; 2009 ; Involve, a journal of mathematics Volume 2 ; 2 >
-     au < manifest ; exists ; 2010 ; Involve, a journal of mathematics Volume 3 ; 3 >
-     au < manifest ; exists ; 2011 ; Involve, a journal of mathematics Volume 4 ; 4 >
-     au < manifest ; exists ; 2012 ; Involve, a journal of mathematics Volume 5 ; 5 >
+     au < doNotProcess ; exists ; 2008 ; Involve, a journal of mathematics Volume 1 ; 1 >
+     au < doNotProcess ; exists ; 2009 ; Involve, a journal of mathematics Volume 2 ; 2 >
+     au < doNotProcess ; exists ; 2010 ; Involve, a journal of mathematics Volume 3 ; 3 >
+     au < doNotProcess ; exists ; 2011 ; Involve, a journal of mathematics Volume 4 ; 4 >
+     au < doNotProcess ; exists ; 2012 ; Involve, a journal of mathematics Volume 5 ; 5 >
      au < expected ; exists ; 2013 ; Involve, a journal of mathematics Volume 6 ; 6 >
  
    }
@@ -156,13 +158,13 @@
     
       param[journal_code] = jomms
  
-     au < manifest ; exists ; 2006 ; Journal of Mechanics of Materials and Structures Volume 1 ; 1 >
-     au < manifest ; exists ; 2007 ; Journal of Mechanics of Materials and Structures Volume 2 ; 2 >
-     au < manifest ; exists ; 2008 ; Journal of Mechanics of Materials and Structures Volume 3 ; 3 >
-     au < manifest ; exists ; 2009 ; Journal of Mechanics of Materials and Structures Volume 4 ; 4 >
-     au < manifest ; exists ; 2010 ; Journal of Mechanics of Materials and Structures Volume 5 ; 5 >
-     au < manifest ; exists ; 2011 ; Journal of Mechanics of Materials and Structures Volume 6 ; 6 >
-     au < manifest ; exists ; 2012 ; Journal of Mechanics of Materials and Structures Volume 7 ; 7 >
+     au < doNotProcess ; exists ; 2006 ; Journal of Mechanics of Materials and Structures Volume 1 ; 1 >
+     au < doNotProcess ; exists ; 2007 ; Journal of Mechanics of Materials and Structures Volume 2 ; 2 >
+     au < doNotProcess ; exists ; 2008 ; Journal of Mechanics of Materials and Structures Volume 3 ; 3 >
+     au < doNotProcess ; exists ; 2009 ; Journal of Mechanics of Materials and Structures Volume 4 ; 4 >
+     au < doNotProcess ; exists ; 2010 ; Journal of Mechanics of Materials and Structures Volume 5 ; 5 >
+     au < doNotProcess ; exists ; 2011 ; Journal of Mechanics of Materials and Structures Volume 6 ; 6 >
+     au < doNotProcess ; exists ; 2012 ; Journal of Mechanics of Materials and Structures Volume 7 ; 7 >
      au < expected ; exists ; 2013 ; Journal of Mechanics of Materials and Structures Volume 8 ; 8 >
  
   }
@@ -176,7 +178,7 @@
        >
        
      param[journal_code] = pjm
-     comment[notReady] = manifest exists but has no substance
+     comment[notReady] = doNotProcess exists but has no substance
        
      au < notReady ; exists ; 1951 ; Pacific Journal of Mathematics Volume 1 ; 1 >
      au < notReady ; exists ; 1952 ; Pacific Journal of Mathematics Volume 2 ; 2 >
@@ -233,13 +235,13 @@
      au < notReady ; exists ; 2003 ; Pacific Journal of Mathematics Volume 53 ; 53 >
      au < notReady ; exists ; 2004 ; Pacific Journal of Mathematics Volume 54 ; 54 >
      au < notReady ; exists ; 2005 ; Pacific Journal of Mathematics Volume 55 ; 55 >
-     au < manifest ; exists ; 2006 ; Pacific Journal of Mathematics Volume 56 ; 56 >
-     au < manifest ; exists ; 2007 ; Pacific Journal of Mathematics Volume 57 ; 57 >
-     au < manifest ; exists ; 2008 ; Pacific Journal of Mathematics Volume 58 ; 58 >
-     au < manifest ; exists ; 2009 ; Pacific Journal of Mathematics Volume 59 ; 59 >
-     au < manifest ; exists ; 2010 ; Pacific Journal of Mathematics Volume 60 ; 60 >
-     au < manifest ; exists ; 2011 ; Pacific Journal of Mathematics Volume 61 ; 61 >
-     au < manifest ; exists ; 2012 ; Pacific Journal of Mathematics Volume 62 ; 62 >
+     au < doNotProcess ; exists ; 2006 ; Pacific Journal of Mathematics Volume 56 ; 56 >
+     au < doNotProcess ; exists ; 2007 ; Pacific Journal of Mathematics Volume 57 ; 57 >
+     au < doNotProcess ; exists ; 2008 ; Pacific Journal of Mathematics Volume 58 ; 58 >
+     au < doNotProcess ; exists ; 2009 ; Pacific Journal of Mathematics Volume 59 ; 59 >
+     au < doNotProcess ; exists ; 2010 ; Pacific Journal of Mathematics Volume 60 ; 60 >
+     au < doNotProcess ; exists ; 2011 ; Pacific Journal of Mathematics Volume 61 ; 61 >
+     au < doNotProcess ; exists ; 2012 ; Pacific Journal of Mathematics Volume 62 ; 62 >
      au < expected ; exists ; 2013 ; Pacific Journal of Mathematics Volume 63 ; 63 >
      
   }   
@@ -252,8 +254,8 @@
     
      param[journal_code] = siaps
 
-     au < manifest ; exists ; 2010 ; Seismic Isolation and Protection Systems Volume 1 ; 1 >
-     au < manifest ; exists ; 2011 ; Seismic Isolation and Protection Systems Volume 2 ; 2 >
+     au < doNotProcess ; exists ; 2010 ; Seismic Isolation and Protection Systems Volume 1 ; 1 >
+     au < doNotProcess ; exists ; 2011 ; Seismic Isolation and Protection Systems Volume 2 ; 2 >
      au < doesNotExist ; doesNotExist ; 0 ; Seismic Isolation and Protection Systems Volume 3 ; 3 >
      au < doesNotExist ; doesNotExist ; 0 ; Seismic Isolation and Protection Systems Volume 4 ; 4 >
 
