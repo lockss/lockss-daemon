@@ -604,16 +604,29 @@
     >
     comment[0] = not in usual HighWire shape
     param[base_url] = http://reg.gsapubs.org/
-    implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] >
-    
-    au < exists ; exists ; 2001 ; 0-8137-4114-9 ; Geological Society of America Reviews in Engineering Geology Volume 14 ; 14 >
-    au < manifest ; exists ; 2005 ; 0-8137-4115-7 ; Geological Society of America Reviews in Engineering Geology Volume 15 ; 15 >
-    au < exists ; exists ; 2005 ; 978-0-8137-4120-8 ; Geological Society of America Reviews in Engineering Geology Volume 16 ; 16 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-4119-2 ; Geological Society of America Reviews in Engineering Geology Volume 17 ; 17 >
-    au < manifest ; exists ; 2007 ; 978-0-8137-4118-5 ; Geological Society of America Reviews in Engineering Geology Volume 18 ; 18 >
-    au < manifest ; exists ; 2008 ; 978-0-8137-4117-8 ; Geological Society of America Reviews in Engineering Geology Volume 19 ; 19 >
-    au < manifest ; exists ; 2008 ; 978-0-8137-4116-1 ; Geological Society of America Reviews in Engineering Geology Volume 20 ; 20 >
-    au < manifest ; exists ; 2013 ; 978-0-8137-4121-5 ; Geological Society of America Reviews in Engineering Geology Volume 21 ; 21 >
+    implicit < status ; status2 ; year ; doi ; isbn ; name ; param[volume_name] >
+
+    au < exists ; exists ; 1962 ; 10.1130/REG1 ;  ; Reviews in Engineering Geology Volume 1 ; 1 >
+    au < exists ; exists ; 1969 ; 10.1130/REG2 ;  ; Reviews in Engineering Geology Volume 2 ; 2 >
+    au < exists ; exists ; 1977 ; 10.1130/REG3 ; 0-8137-4103-3 ; Reviews in Engineering Geology Volume 3 ; 3 >
+    au < exists ; exists ; 1979 ; 10.1130/REG4 ; 0-8137-4104-1 ; Reviews in Engineering Geology Volume 4 ; 4 >
+    au < exists ; exists ; 1982 ; 10.1130/REG5 ; 0-8137-4105-X ; Reviews in Engineering Geology Volume 5 ; 5 >
+    au < exists ; exists ; 1984 ; 10.1130/REG6 ; 0-8137-4106-8 ; Reviews in Engineering Geology Volume 6 ; 6 >
+    au < exists ; exists ; 1987 ; 10.1130/REG7 ; 0-8137-4107-6 ; Reviews in Engineering Geology Volume 7 ; 7 >
+    au < exists ; exists ; 1990 ; 10.1130/REG8 ; 0-8137-4108-4 ; Reviews in Engineering Geology Volume 8 ; 8 >
+    au < exists ; exists ; 1992 ; 10.1130/REG9 ; 0-8137-4109-2 ; Reviews in Engineering Geology Volume 9 ; 9 >
+    au < exists ; exists ; 1995 ; 10.1130/REG10 ; 0-8137-4110-6 ; Reviews in Engineering Geology Volume 10 ; 10 >
+    au < exists ; exists ; 1997 ; 10.1130/REG11 ; 0-8137-4111-4 ; Reviews in Engineering Geology Volume 11 ; 11 >
+    au < exists ; exists ; 1998 ; 10.1130/REG12 ; 0-8137-4112-2 ; Reviews in Engineering Geology Volume 12 ; 12 >
+    au < exists ; exists ; 1998 ; 10.1130/REG13 ; 0-8137-4113-0 ; Reviews in Engineering Geology Volume 13 ; 13 >
+    au < exists ; exists ; 2001 ; 10.1130/REG14 ; 0-8137-4114-9 ; Reviews in Engineering Geology Volume 14 ; 14 >
+    au < exists ; exists ; 2002 ; 10.1130/REG15 ; 0-8137-4115-7 ; Reviews in Engineering Geology Volume 15 ; 15 >
+    au < exists ; exists ; 2005 ;  ; 978-0-8137-4120-8 ; Reviews in Engineering Geology Volume 16 ; 16 >
+    au < manifest ; exists ; 2007 ;  ; 978-0-8137-4119-2 ; Reviews in Engineering Geology Volume 17 ; 17 >
+    au < manifest ; exists ; 2007 ;  ; 978-0-8137-4118-5 ; Reviews in Engineering Geology Volume 18 ; 18 >
+    au < manifest ; exists ; 2008 ;  ; 978-0-8137-4117-8 ; Reviews in Engineering Geology Volume 19 ; 19 >
+    au < manifest ; exists ; 2008 ;  ; 978-0-8137-4116-1 ; Reviews in Engineering Geology Volume 20 ; 20 >
+    au < manifest ; exists ; 2013 ; 10.1130/9780813741215 ; 978-0-8137-4121-5 ; Reviews in Engineering Geology Volume 21 ; 21 >
 
   }
 }
