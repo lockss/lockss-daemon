@@ -71,8 +71,10 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
       tagMap.put("dc.Identifier", MetadataField.DC_FIELD_IDENTIFIER);
       tagMap.put("dc.Subject", MetadataField.DC_FIELD_SUBJECT);
       tagMap.put("dc.Description", MetadataField.DC_FIELD_DESCRIPTION);
-      tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
-      tagMap.put("dc.Publisher", MetadataField.FIELD_PUBLISHER);
+      // do not pick these up - we will be overriding them and need the values blank
+      // once MetadataField.FIELD_PUBLISHER_IMPRINT is implemented, we'll use that instead for this value
+      //tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
+      //tagMap.put("dc.Publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("dc.Type", MetadataField.DC_FIELD_TYPE);
       tagMap.put("dc.Format", MetadataField.DC_FIELD_FORMAT);
       tagMap.put("dc.Source", MetadataField.DC_FIELD_SOURCE);
@@ -180,16 +182,11 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     	  }
 
       }
-      
-      String publisher_name;
-      // Cannot set it if it's been set because it might be something else, like Routledge (Accounting Education: an international journal)
-      publisher_name = am.get(MetadataField.FIELD_PUBLISHER);
-      if (publisher_name == null) {
-        am.put(MetadataField.FIELD_PUBLISHER, "Taylor & Francis");
-      // Some bizarre cases set this to short version....
-      } else if (publisher_name.equals("TF")) {
-        am.put(MetadataField.FIELD_PUBLISHER, "Taylor & Francis");
-      }
+     
+      // for right now, manually set all T&F titles to the Taylor & Francis Group
+      // once available, we'll use FIELD_PUBLISHER_IMPRINT for the sub publisher (eg. Routledge, Garland, etc)
+      am.put(MetadataField.FIELD_PUBLISHER, "Taylor & Francis Group");
+      am.put(MetadataField.DC_FIELD_PUBLISHER, "Taylor & Francis Group");
       emitter.emitMetadata(cu, am);
     }
 

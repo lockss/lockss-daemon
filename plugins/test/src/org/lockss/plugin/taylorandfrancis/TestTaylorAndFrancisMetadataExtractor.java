@@ -117,8 +117,9 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
   String[] goodAuthors = new String[] {"Melvin Harbison", "Desmond McCallan"};
   String goodSubject = "food and culture; alternative treatment approaches; rhyme therapy"; // Cardinality of dc.subject is single even though content is identical to the keywords field
   String goodDescription = "The description is a lengthier statement, often with mixed punctuation. This should do; let's try it.";
-  String goodPublisher = "Gleeson";
   String goodDate = "2011-09-21";
+  String origPublisher = "Gleeson";
+  String goodPublisher = "Taylor & Francis Group";  
   String goodType = "content-article";
   String goodFormat = "text/HTML";
   String goodLanguage = "en";
@@ -141,7 +142,7 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
           + "<meta name=\"dc.Creator\" content=\" " + goodAuthors[1] + " \"></meta>" 
           + "<meta name=\"dc.Subject\" content=\"" + goodSubject + "\"></meta>" 
           + "<meta name=\"dc.Description\" content=\"" + goodDescription + "\"></meta>"
-          + "<meta name=\"dc.Publisher\" content=\" " + goodPublisher + " \"></meta>" //spaces within content field in dc.Publisher appear like this in the HTML
+          + "<meta name=\"dc.Publisher\" content=\" " + origPublisher + " \"></meta>" //spaces within content field in dc.Publisher appear like this in the HTML
           + "<meta name=\"dc.Date\" scheme=\"WTN8601\" content=\"" + goodDate + "\"></meta>"
           + "<meta name=\"dc.Type\" content=\"" + goodType + "\"></meta>"
           + "<meta name=\"dc.Format\" content=\"" + goodFormat + "\"></meta>"
@@ -258,13 +259,14 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     assertEquals("555", md.get(MetadataField.FIELD_START_PAGE));
   }
 
-  // When a the coden doesn't have spaces before the comma, it can cause problems
-/*  String noSpaceContent = 
+  // When a the coden doesn't have spaces before the comma, it can cause problems - note the use of -u2013 for the hyphen - endash - encoding safe
+  String noSpaceContent = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\"><head>\n" +
+      "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n" +
       "<meta name=\"dc.Title\" content=\"An Integrative, Empowerment Model for Helping Lesbian, Gay, and Bisexual Youth Negotiate the Coming-Out Process\"></meta>" +
       "<meta name=\"dc.Publisher\" content=\" Taylor &amp; Francis Group \"></meta>" +
       "<meta name=\"dc.Identifier\" scheme=\"publisher-id\" content=\"678176\"></meta>" +
       "<meta name=\"dc.Identifier\" scheme=\"doi\" content=\"10.1080/15538605.2012.678176\"></meta>" +
-      "<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Journal of LGBT Issues in Counseling,Vol. 6, No. 2, April-June 2012, pp. 96Ð117\"></meta>";
+      "<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Journal of LGBT Issues in Counseling,Vol. 6, No. 2, April-June 2012, pp. 96\u2013117\"></meta>";
 
   public void testNoSpaceContent() throws Exception {
     String goodTitle = "An Integrative, Empowerment Model for Helping Lesbian, Gay, and Bisexual Youth Negotiate the Coming-Out Process";
@@ -284,7 +286,7 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     assertEquals("96", md.get(MetadataField.FIELD_START_PAGE));
     assertEquals("Journal of LGBT Issues in Counseling", md.get(MetadataField.FIELD_JOURNAL_TITLE));
   }
-*/
+
   /**
    * Inner class that where a number of Archival Units can be created
    *
