@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxPage.java,v 1.5 2013-02-28 01:55:28 thib_gc Exp $
+ * $Id: PdfBoxPage.java,v 1.5.2.1 2013-05-07 01:22:24 thib_gc Exp $
  */
 
 /*
@@ -64,6 +64,35 @@ public class PdfBoxPage implements PdfPage {
   
   /**
    * <p>
+   * Returns an XObject from the given resources, as a {@link PDXObject}
+   * instance.
+   * </p>
+   * 
+   * @param pdResources
+   *          A {@link PDResources} instance.
+   * @param name
+   *          The name of the desired XObject.
+   * @return The requested XObject, or <code>null</code> if not found.
+   * @throws PdfException
+   *           If PDF processing fails.
+   * @since 1.61
+   */
+  protected static PDXObject getPDXObjectByName(PDResources pdResources,
+                                                String name) throws PdfException {
+    /*
+     * IMPLEMENTATION NOTE
+     * 
+     * This map contains objects of type PDXObject (PDFBox 1.6.0:
+     * see PDResources lines 157 and 160), which are null, or of
+     * type either PDXObjectForm (see PDXObject line 162) or PDJpeg
+     * (line 140) or PDCcitt (line 144) or PDPixelMap (line 153).
+     * The latter three have a common supertype, PDXObjectImage.
+     */
+    return (PDXObject)(pdResources.getXObjects().get(name));
+  }
+
+  /**
+   * <p>
    * Determines if the given {@link PDXObject} instance is a byte
    * stream (as opposed to a token stream).
    * </p>
@@ -76,7 +105,7 @@ public class PdfBoxPage implements PdfPage {
   private static boolean isByteStream(PDXObject xObject) {
     return !isTokenStream(xObject);
   }
-
+  
   /**
    * <p>
    * Determines if the given {@link PDXObject} instance is a token
@@ -98,7 +127,7 @@ public class PdfBoxPage implements PdfPage {
      */
     return xObject instanceof PDXObjectForm;
   }
-  
+
   /**
    * <p>
    * The parent {@link PdfBoxDocument} instance.
@@ -133,65 +162,18 @@ public class PdfBoxPage implements PdfPage {
 
   @Override
   public List<InputStream> getAllByteStreams() throws PdfException {
-    final List<InputStream> ret = new ArrayList<InputStream>();
-    
-    PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
-      @Override public void operatorCallback() throws PdfException {
-        // 'ID' and 'BI'
-        if (isBeginImageData() || isBeginImageObject()) {
-          /*
-           * IMPLEMENTATION NOTE
-           * 
-           * getImageData() (PDFBox 1.6.0: PDFOperator line 105) does
-           * not copy the byte array, nor does ByteArrayInputStream
-           * (http://docs.oracle.com/javase/1.5.0/docs/api/java/io/ByteArrayInputStream.html#ByteArrayInputStream%28byte[]%29).
-           */
-          ret.add(new ByteArrayInputStream(PdfBoxTokens.asPDFOperator(getOperator()).getImageData()));
-        }
-        // 'Do'
-        else if (isInvokeXObject()) {
-          PdfToken operand = getTokens().get(getIndex() - 1);
-          if (operand.isName()) {
-            PDXObject xObject = getPDXObjectByName(operand.getName());
-            if (isByteStream(xObject)) {
-              try {
-                ret.add(xObject.getCOSStream().getUnfilteredStream());
-              }
-              catch (IOException ioe) {
-                logger.debug2("getAllByteStreams: Error retrieving a byte stream", ioe);
-              }
-            }
-          }
-          logger.debug2("getAllByteStreams: invalid input");
-        }
-      }
-    };
-    
-    worker.process(getPageTokenStream());
+    List<InputStream> ret = new ArrayList<InputStream>();
+    PdfTokenStream pageTokenStream = getPageTokenStream();
+    recursivelyFindByteStreams(pageTokenStream, pdPage.getResources(), ret);
     return ret;
   }
-
+  
   @Override
   public List<PdfTokenStream> getAllTokenStreams() throws PdfException {
-    final List<PdfTokenStream> ret = new ArrayList<PdfTokenStream>();
-    ret.add(getPageTokenStream()); // First, add the page stream itself
-
-    PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
-      @Override public void operatorCallback() throws PdfException {
-        if (isInvokeXObject()) {
-          PdfToken operand = getTokens().get(getIndex() - 1);
-          if (operand.isName()) {
-            PDXObject xObject = getPDXObjectByName(operand.getName());
-            if (isTokenStream(xObject)) {
-              ret.add(new PdfBoxXObjectTokenStream(PdfBoxPage.this, (PDXObjectForm)xObject));
-            }
-          }
-          logger.debug2("getAllTokenStreams: invalid input");
-        }
-      }
-    };
-    
-    worker.process(getPageTokenStream());
+    List<PdfTokenStream> ret = new ArrayList<PdfTokenStream>();
+    PdfTokenStream pageTokenStream = getPageTokenStream();
+    ret.add(pageTokenStream);
+    recursivelyFindTokenStreams(pageTokenStream, pdPage.getResources(), ret);
     return ret;
   }
 
@@ -216,7 +198,7 @@ public class PdfBoxPage implements PdfPage {
     }
     return PdfBoxTokens.getArray(annots);
   }
-  
+
   @Override
   public PdfDocument getDocument() {
     return pdfBoxDocument;
@@ -231,7 +213,7 @@ public class PdfBoxPage implements PdfPage {
       throw new PdfException("Failed to get the page content stream", ioe);
     }
   }
-
+  
   @Override
   public PdfTokenFactory getTokenFactory() throws PdfException {
     return getDocument().getTokenFactory();
@@ -241,28 +223,114 @@ public class PdfBoxPage implements PdfPage {
   public void setAnnotations(List<PdfToken> annotations) {
     pdPage.getCOSDictionary().setItem(COSName.ANNOTS, PdfBoxTokens.asCOSArray(annotations));
   }
+
+  /**
+   * <p>
+   * Traverses the given token stream (and associated resources object), adding
+   * any embedded image data to the given list, and recursively traversing any
+   * referenced XObject streams.
+   * </p>
+   * 
+   * @param pdfTokenStream
+   *          A token stream.
+   * @param pdResources
+   *          The token stream's resources object,
+   * @param ret
+   *          A list into which byte streams are appended.
+   * @throws PdfException
+   *           If PDF processing fails.
+   * @since 1.61
+   */
+  private void recursivelyFindByteStreams(PdfTokenStream pdfTokenStream,
+                                          final PDResources pdResources,
+                                          final List<InputStream> ret)
+        throws PdfException {
+    PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
+      @Override public void operatorCallback() throws PdfException {
+        // 'ID' and 'BI'
+        if (isBeginImageData() || isBeginImageObject()) {
+          /*
+           * IMPLEMENTATION NOTE
+           * 
+           * getImageData() (PDFBox 1.6.0: PDFOperator line 105) does
+           * not copy the byte array, nor does ByteArrayInputStream
+           * (http://docs.oracle.com/javase/1.5.0/docs/api/java/io/ByteArrayInputStream.html#ByteArrayInputStream%28byte[]%29).
+           */
+          ret.add(new ByteArrayInputStream(PdfBoxTokens.asPDFOperator(getOperator()).getImageData()));
+        }
+        // 'Do'
+        else if (isInvokeXObject()) {
+          PdfToken operand = getTokens().get(getIndex() - 1);
+          if (operand.isName()) {
+            PDXObject xObject = getPDXObjectByName(pdResources, operand.getName());
+            if (isByteStream(xObject)) {
+              try {
+                ret.add(xObject.getCOSStream().getUnfilteredStream());
+              }
+              catch (IOException ioe) {
+                logger.debug2("recursivelyFindByteStreams: Error retrieving a byte stream", ioe);
+              }
+            }
+            else {
+              PDXObjectForm pdxObjectForm = (PDXObjectForm)xObject;
+              PdfBoxXObjectTokenStream referencedTokenStream = new PdfBoxXObjectTokenStream(PdfBoxPage.this, pdxObjectForm);
+              recursivelyFindByteStreams(referencedTokenStream,
+                                         pdxObjectForm.getResources(),
+                                         ret);
+            }
+          }
+          else {
+            logger.debug2("getAllByteStreams: invalid input");
+          }
+        }
+      }
+    };
+    worker.process(pdfTokenStream);
+  }
   
   /**
    * <p>
-   * Returns an XObject from this page, as a {@link PDXObject}
-   * instance.
+   * Traverses the given token stream (and associated resources object), adding
+   * any embedded XObject streams to the given list, and recursively traversing
+   * them. Note that the given stream itself is not appended to the list.
    * </p>
-   * @param name The name of the desired XObject.
-   * @return The requested XObject, or <code>null</code> if not found.
-   * @throws PdfException If PDF processing fails.
-   * @since 1.56
+   * 
+   * @param pdfTokenStream
+   *          A token stream.
+   * @param pdResources
+   *          The token stream's resources object,
+   * @param ret
+   *          A list into which byte streams are appended.
+   * @throws PdfException
+   *           If PDF processing fails.
+   * @since 1.61
    */
-  protected PDXObject getPDXObjectByName(String name) throws PdfException {
-    /*
-     * IMPLEMENTATION NOTE
-     * 
-     * This map contains objects of type PDXObject (PDFBox 1.6.0:
-     * see PDResources lines 157 and 160), which are null, or of
-     * type either PDXObjectForm (see PDXObject line 162) or PDJpeg
-     * (line 140) or PDCcitt (line 144) or PDPixelMap (line 153).
-     * The latter three have a common supertype, PDXObjectImage.
-     */
-    return (PDXObject)(pdPage.getResources().getXObjects().get(name));
+  private void recursivelyFindTokenStreams(PdfTokenStream pdfTokenStream,
+                                           final PDResources pdResources,
+                                           final List<PdfTokenStream> ret)
+      throws PdfException {
+    PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
+      @Override public void operatorCallback() throws PdfException {
+        if (isInvokeXObject()) {
+          PdfToken operand = getTokens().get(getIndex() - 1);
+          if (operand.isName()) {
+            PDXObject xObject = getPDXObjectByName(pdResources, operand.getName());
+            if (isTokenStream(xObject)) {
+              PDXObjectForm pdxObjectForm = (PDXObjectForm)xObject;
+              PdfBoxXObjectTokenStream referencedTokenStream = new PdfBoxXObjectTokenStream(PdfBoxPage.this, pdxObjectForm);
+              ret.add(referencedTokenStream);
+              recursivelyFindTokenStreams(referencedTokenStream,
+                                          pdxObjectForm.getResources(),
+                                          ret);
+            }
+          }
+          else {
+            logger.debug2("recursivelyFindTokenStreams: invalid input");
+          }
+        }
+      }
+    };
+    worker.process(pdfTokenStream);
   }
   
 }
