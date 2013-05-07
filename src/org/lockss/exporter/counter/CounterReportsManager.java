@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsManager.java,v 1.11 2013-03-12 19:24:20 fergaloy-sf Exp $
+ * $Id: CounterReportsManager.java,v 1.12 2013-05-07 14:14:06 fergaloy-sf Exp $
  */
 
 /*
@@ -1762,7 +1762,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     int month;
     int publicationYear;
     int requests;
-    int previousRequests = 0;
+    Integer previousRequests;
 
     String sql = SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATES_SELECT;
     log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
@@ -1801,11 +1801,11 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 		targetPublicationSeq, publisherInvolved, publicationYear, conn);
 
 	// Check whether there were previously recorded aggregates.
-	if (previousRequests > 0) {
+	if (previousRequests != null && previousRequests > 0) {
 	  // Yes: Update the existing row in the database.
 	  updateTitlePubYearAggregate(year, month, targetPublicationSeq,
-	      publisherInvolved, publicationYear, previousRequests + requests,
-	      conn);
+	      publisherInvolved, publicationYear,
+	      previousRequests.intValue() + requests, conn);
 	} else {
 	  // No: Insert a new row in the database.
 	  insertTitlePubYearAggregate(year, month, targetPublicationSeq,
