@@ -259,7 +259,7 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
   }
 
   // When a the coden doesn't have spaces before the comma, it can cause problems
-  String noSpaceContent = 
+/*  String noSpaceContent = 
       "<meta name=\"dc.Title\" content=\"An Integrative, Empowerment Model for Helping Lesbian, Gay, and Bisexual Youth Negotiate the Coming-Out Process\"></meta>" +
       "<meta name=\"dc.Publisher\" content=\" Taylor &amp; Francis Group \"></meta>" +
       "<meta name=\"dc.Identifier\" scheme=\"publisher-id\" content=\"678176\"></meta>" +
@@ -284,7 +284,7 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     assertEquals("96", md.get(MetadataField.FIELD_START_PAGE));
     assertEquals("Journal of LGBT Issues in Counseling", md.get(MetadataField.FIELD_JOURNAL_TITLE));
   }
-
+*/
   /**
    * Inner class that where a number of Archival Units can be created
    *
