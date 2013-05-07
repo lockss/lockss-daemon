@@ -8,12 +8,12 @@
     <string>org.lockss.plugin.atypon.siam.SiamPlugin</string>
   </entry>
   <entry>
-    <string>plugin_name</string>
-    <string>SIAM Plugin</string>
+    <string>plugin_version</string>
+    <string>2</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>1</string>
+    <string>plugin_name</string>
+    <string>SIAM Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>  
    <entry>
     <string>plugin_publishing_platform</string>

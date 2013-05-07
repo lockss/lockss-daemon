@@ -7,21 +7,21 @@
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.atypon.siam.ClockssSiamPlugin</string>
   </entry>
-    <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.atypon.siam.SiamPlugin</string>
-  </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
-  </entry>
-   <entry>
-    <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
     <string>SIAM Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.atypon.siam.SiamPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>

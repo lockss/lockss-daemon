@@ -7,21 +7,21 @@
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.atypon.apha.AmPublicHealthAssocPlugin</string>
   </entry>
-    <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
-  </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
-  </entry>
-   <entry>
-    <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
     <string>American Journal of Public Health Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
+  </entry>
+   <entry>
+    <string>plugin_parent_version</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>

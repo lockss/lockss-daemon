@@ -9,23 +9,23 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
-      <entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>NRC Research Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
   </entry>
     <entry>
     <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
     <string>"NRC Research Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>NRC Research Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_start_url</string>
