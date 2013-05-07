@@ -258,6 +258,33 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     assertEquals("555", md.get(MetadataField.FIELD_START_PAGE));
   }
 
+  // When a the coden doesn't have spaces before the comma, it can cause problems
+  String noSpaceContent = 
+      "<meta name=\"dc.Title\" content=\"An Integrative, Empowerment Model for Helping Lesbian, Gay, and Bisexual Youth Negotiate the Coming-Out Process\"></meta>" +
+      "<meta name=\"dc.Publisher\" content=\" Taylor &amp; Francis Group \"></meta>" +
+      "<meta name=\"dc.Identifier\" scheme=\"publisher-id\" content=\"678176\"></meta>" +
+      "<meta name=\"dc.Identifier\" scheme=\"doi\" content=\"10.1080/15538605.2012.678176\"></meta>" +
+      "<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Journal of LGBT Issues in Counseling,Vol. 6, No. 2, April-June 2012,    pp. 96Ð117\"></meta>";
+
+  public void testNoSpaceContent() throws Exception {
+    String goodTitle = "An Integrative, Empowerment Model for Helping Lesbian, Gay, and Bisexual Youth Negotiate the Coming-Out Process";
+    
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, tafau);
+    cu.setContent(noSpaceContent);
+    cu.setContentSize(noSpaceContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    FileMetadataExtractor me = new TaylorAndFrancisHtmlMetadataExtractorFactory.TaylorAndFrancisHtmlMetadataExtractor();
+    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    assertEquals(goodTitle, md.get(MetadataField.DC_FIELD_TITLE));
+    assertEquals("96", md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals("Journal of LGBT Issues in Counseling", md.get(MetadataField.FIELD_JOURNAL_TITLE));
+  }
+
   /**
    * Inner class that where a number of Archival Units can be created
    *

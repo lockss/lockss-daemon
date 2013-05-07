@@ -113,12 +113,15 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     	  // the journal title, volume, issue, and page range associated with the article.
     	  // The journal title itself may contain commas, so the list is parsed backwards and all content
     	  // before ", Vol." is assumed to be part of the journal title.
-    	  if (cookedIdentifierList.get(j).contains(", ")) {
+        // Cannot assume that the split is ", " (with space), so split on "," only and remove leading spaces later
+        if (cookedIdentifierList.get(j).contains(",")) {
     		  String content = cookedIdentifierList.get(j);
-    		  String[] biblioInfo = content.split(", ");
+    		  String[] biblioInfo = content.split(",");
 
     		  for (int k = biblioInfo.length-1; k >= 0; k--) {
-    			  // get the page range
+  		    //If the data was left with leading spaces after the split, remove 'em
+    		    biblioInfo[k] = biblioInfo[k].trim();
+    		    // get the page range
                   if (biblioInfo[k].startsWith("pp. ")) {
     				  // page range separated by hyphen
     				  if (biblioInfo[k].contains("-")) {
@@ -177,8 +180,14 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     	  }
 
       }
-      // Since we know it and since Metadata requires it, set it manually if necessary
-      if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
+      
+      String publisher_name;
+      // Cannot set it if it's been set because it might be something else, like Routledge (Accounting Education: an international journal)
+      publisher_name = am.get(MetadataField.FIELD_PUBLISHER);
+      if (publisher_name == null) {
+        am.put(MetadataField.FIELD_PUBLISHER, "Taylor & Francis");
+      // Some bizarre cases set this to short version....
+      } else if (publisher_name.equals("TF")) {
         am.put(MetadataField.FIELD_PUBLISHER, "Taylor & Francis");
       }
       emitter.emitMetadata(cu, am);
