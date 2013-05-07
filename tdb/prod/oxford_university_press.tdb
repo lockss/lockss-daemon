@@ -833,64 +833,63 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ajj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[notReady] = manifest page redirects to itself, RU4490
     
     au < HighWirePressH20Plugin ; manifest ; 1956 ; The American Journal of Jurisprudence Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1957 ; The American Journal of Jurisprudence Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1958 ; The American Journal of Jurisprudence Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 1959 ; The American Journal of Jurisprudence Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 1960 ; The American Journal of Jurisprudence Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 1961 ; The American Journal of Jurisprudence Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 1962 ; The American Journal of Jurisprudence Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 1963 ; The American Journal of Jurisprudence Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; 1964 ; The American Journal of Jurisprudence Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; exists ; 1965 ; The American Journal of Jurisprudence Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; exists ; 1966 ; The American Journal of Jurisprudence Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; exists ; 1967 ; The American Journal of Jurisprudence Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; exists ; 1968 ; The American Journal of Jurisprudence Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; exists ; 1969 ; The American Journal of Jurisprudence Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; exists ; 1970 ; The American Journal of Jurisprudence Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; exists ; 1971 ; The American Journal of Jurisprudence Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; exists ; 1972 ; The American Journal of Jurisprudence Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; exists ; 1973 ; The American Journal of Jurisprudence Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; exists ; 1974 ; The American Journal of Jurisprudence Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; exists ; 1975 ; The American Journal of Jurisprudence Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; exists ; 1976 ; The American Journal of Jurisprudence Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; exists ; 1977 ; The American Journal of Jurisprudence Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; exists ; 1978 ; The American Journal of Jurisprudence Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; exists ; 1979 ; The American Journal of Jurisprudence Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; exists ; 1980 ; The American Journal of Jurisprudence Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; exists ; 1981 ; The American Journal of Jurisprudence Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; exists ; 1982 ; The American Journal of Jurisprudence Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; exists ; 1983 ; The American Journal of Jurisprudence Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; exists ; 1984 ; The American Journal of Jurisprudence Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; exists ; 1985 ; The American Journal of Jurisprudence Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; exists ; 1986 ; The American Journal of Jurisprudence Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; exists ; 1987 ; The American Journal of Jurisprudence Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; exists ; 1988 ; The American Journal of Jurisprudence Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; exists ; 1989 ; The American Journal of Jurisprudence Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; exists ; 1990 ; The American Journal of Jurisprudence Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; exists ; 1991 ; The American Journal of Jurisprudence Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; exists ; 1992 ; The American Journal of Jurisprudence Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; exists ; 1993 ; The American Journal of Jurisprudence Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; exists ; 1994 ; The American Journal of Jurisprudence Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; exists ; 1995 ; The American Journal of Jurisprudence Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; exists ; 1996 ; The American Journal of Jurisprudence Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; The American Journal of Jurisprudence Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; The American Journal of Jurisprudence Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; The American Journal of Jurisprudence Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; The American Journal of Jurisprudence Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; The American Journal of Jurisprudence Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; The American Journal of Jurisprudence Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; The American Journal of Jurisprudence Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; The American Journal of Jurisprudence Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; The American Journal of Jurisprudence Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; exists ; 2006 ; The American Journal of Jurisprudence Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; exists ; 2007 ; The American Journal of Jurisprudence Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; exists ; 2008 ; The American Journal of Jurisprudence Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; exists ; 2009 ; The American Journal of Jurisprudence Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; exists ; 2010 ; The American Journal of Jurisprudence Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; The American Journal of Jurisprudence Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; manifest ; 1957 ; The American Journal of Jurisprudence Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1958 ; The American Journal of Jurisprudence Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1959 ; The American Journal of Jurisprudence Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1960 ; The American Journal of Jurisprudence Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1961 ; The American Journal of Jurisprudence Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; The American Journal of Jurisprudence Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; The American Journal of Jurisprudence Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; The American Journal of Jurisprudence Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; The American Journal of Jurisprudence Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; The American Journal of Jurisprudence Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1967 ; The American Journal of Jurisprudence Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; The American Journal of Jurisprudence Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; The American Journal of Jurisprudence Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; The American Journal of Jurisprudence Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; The American Journal of Jurisprudence Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; The American Journal of Jurisprudence Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 1973 ; The American Journal of Jurisprudence Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1974 ; The American Journal of Jurisprudence Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1975 ; The American Journal of Jurisprudence Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; The American Journal of Jurisprudence Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; The American Journal of Jurisprudence Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; The American Journal of Jurisprudence Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; The American Journal of Jurisprudence Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; The American Journal of Jurisprudence Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; The American Journal of Jurisprudence Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; The American Journal of Jurisprudence Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; The American Journal of Jurisprudence Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; The American Journal of Jurisprudence Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; The American Journal of Jurisprudence Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; The American Journal of Jurisprudence Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; The American Journal of Jurisprudence Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; The American Journal of Jurisprudence Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; The American Journal of Jurisprudence Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; The American Journal of Jurisprudence Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; The American Journal of Jurisprudence Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; The American Journal of Jurisprudence Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; The American Journal of Jurisprudence Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; The American Journal of Jurisprudence Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; The American Journal of Jurisprudence Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; The American Journal of Jurisprudence Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; The American Journal of Jurisprudence Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; The American Journal of Jurisprudence Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; The American Journal of Jurisprudence Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; The American Journal of Jurisprudence Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; The American Journal of Jurisprudence Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; The American Journal of Jurisprudence Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; The American Journal of Jurisprudence Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; The American Journal of Jurisprudence Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; The American Journal of Jurisprudence Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; The American Journal of Jurisprudence Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; The American Journal of Jurisprudence Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; The American Journal of Jurisprudence Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; The American Journal of Jurisprudence Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; The American Journal of Jurisprudence Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; The American Journal of Jurisprudence Volume 56 ; 56 >
     
   }
 
@@ -6545,28 +6544,28 @@
     au < exists ; 2006 ; Geophysical Journal International Volume 167 ; 167 >
     au < exists ; 2007 ; Geophysical Journal International Volume 168 ; 168 >
     au < manifest ; 2007 ; Geophysical Journal International Volume 169 ; 169 >
-    au < exists ; 2007 ; Geophysical Journal International Volume 170 ; 170 >
-    au < exists ; 2007 ; Geophysical Journal International Volume 171 ; 171 >
-    au < exists ; 2008 ; Geophysical Journal International Volume 172 ; 172 >
-    au < exists ; 2008 ; Geophysical Journal International Volume 173 ; 173 >
-    au < exists ; 2008 ; Geophysical Journal International Volume 174 ; 174 >
-    au < exists ; 2008 ; Geophysical Journal International Volume 175 ; 175 >
-    au < exists ; 2009 ; Geophysical Journal International Volume 176 ; 176 >
-    au < exists ; 2009 ; Geophysical Journal International Volume 177 ; 177 >
-    au < exists ; 2009 ; Geophysical Journal International Volume 178 ; 178 >
-    au < exists ; 2009 ; Geophysical Journal International Volume 179 ; 179 >
-    au < exists ; 2010 ; Geophysical Journal International Volume 180 ; 180 >
-    au < exists ; 2010 ; Geophysical Journal International Volume 181 ; 181 >
-    au < exists ; 2010 ; Geophysical Journal International Volume 182 ; 182 >
-    au < exists ; 2010 ; Geophysical Journal International Volume 183 ; 183 >
-    au < exists ; 2011 ; Geophysical Journal International Volume 184 ; 184 >
-    au < exists ; 2011 ; Geophysical Journal International Volume 185 ; 185 >
-    au < exists ; 2011 ; Geophysical Journal International Volume 186 ; 186 >
-    au < exists ; 2011 ; Geophysical Journal International Volume 187 ; 187 >
-    au < exists ; 2012 ; Geophysical Journal International Volume 188 ; 188 >
-    au < exists ; 2012 ; Geophysical Journal International Volume 189 ; 189 >
-    au < exists ; 2012 ; Geophysical Journal International Volume 190 ; 190 >
-    au < exists ; 2012 ; Geophysical Journal International Volume 191 ; 191 >
+    au < manifest ; 2007 ; Geophysical Journal International Volume 170 ; 170 >
+    au < manifest ; 2007 ; Geophysical Journal International Volume 171 ; 171 >
+    au < manifest ; 2008 ; Geophysical Journal International Volume 172 ; 172 >
+    au < manifest ; 2008 ; Geophysical Journal International Volume 173 ; 173 >
+    au < manifest ; 2008 ; Geophysical Journal International Volume 174 ; 174 >
+    au < manifest ; 2008 ; Geophysical Journal International Volume 175 ; 175 >
+    au < manifest ; 2009 ; Geophysical Journal International Volume 176 ; 176 >
+    au < manifest ; 2009 ; Geophysical Journal International Volume 177 ; 177 >
+    au < manifest ; 2009 ; Geophysical Journal International Volume 178 ; 178 >
+    au < manifest ; 2009 ; Geophysical Journal International Volume 179 ; 179 >
+    au < manifest ; 2010 ; Geophysical Journal International Volume 180 ; 180 >
+    au < manifest ; 2010 ; Geophysical Journal International Volume 181 ; 181 >
+    au < manifest ; 2010 ; Geophysical Journal International Volume 182 ; 182 >
+    au < manifest ; 2010 ; Geophysical Journal International Volume 183 ; 183 >
+    au < manifest ; 2011 ; Geophysical Journal International Volume 184 ; 184 >
+    au < manifest ; 2011 ; Geophysical Journal International Volume 185 ; 185 >
+    au < manifest ; 2011 ; Geophysical Journal International Volume 186 ; 186 >
+    au < manifest ; 2011 ; Geophysical Journal International Volume 187 ; 187 >
+    au < manifest ; 2012 ; Geophysical Journal International Volume 188 ; 188 >
+    au < manifest ; 2012 ; Geophysical Journal International Volume 189 ; 189 >
+    au < manifest ; 2012 ; Geophysical Journal International Volume 190 ; 190 >
+    au < manifest ; 2012 ; Geophysical Journal International Volume 191 ; 191 >
     au < manifest ; 2013 ; Geophysical Journal International Volume 192 ; 192 >
     au < manifest ; 2013 ; Geophysical Journal International Volume 193 ; 193 >
     au < expected ; 2013 ; Geophysical Journal International Volume 194 ; 194 >
@@ -7151,7 +7150,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Holocaust and Genocide Studies Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Holocaust and Genocide Studies Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Holocaust and Genocide Studies Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Holocaust and Genocide Studies Volume 27 ; 27 >
 
     }
 
@@ -17501,7 +17500,7 @@
 
     au < HighWirePressH20Plugin ; released ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Review of Asset Pricing Studies Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; The Review of Asset Pricing Studies Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; The Review of Asset Pricing Studies Volume 3 ; 3 >
 
   }
 
