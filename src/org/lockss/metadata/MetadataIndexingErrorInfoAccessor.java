@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataIndexingErrorInfoAccessor.java,v 1.1 2013-03-19 20:26:30 pgust Exp $
+ * $Id: MetadataIndexingErrorInfoAccessor.java,v 1.1.2.1 2013-05-08 04:03:11 pgust Exp $
  */
 
 /*
@@ -38,9 +38,14 @@ import java.util.List;
 
 import org.lockss.daemon.status.ColumnDescriptor;
 import org.lockss.daemon.status.StatusAccessor;
+import org.lockss.daemon.status.StatusService;
 import org.lockss.daemon.status.StatusTable;
 import org.lockss.daemon.status.StatusService.NoSuchTableException;
 import org.lockss.metadata.MetadataManager.ReindexingStatus;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.Plugin;
+import org.lockss.plugin.PluginStatus;
+import org.lockss.state.ArchivalUnitStatus;
 
 /**
  * This class displays the error detail information for a
@@ -65,7 +70,7 @@ public class MetadataIndexingErrorInfoAccessor implements StatusAccessor {
 
     try {
       long taskTime = Long.parseLong(key);
-      List<ReindexingTask> tasks = metadataMgr.getReindexingTasks();
+      List<ReindexingTask> tasks = metadataMgr.getFailedReindexingTasks();
       for (ReindexingTask t : tasks) {
         if (taskTime == t.getStartTime()) {
           task = t;
@@ -75,15 +80,21 @@ public class MetadataIndexingErrorInfoAccessor implements StatusAccessor {
     } catch (NumberFormatException ex) {
       // fall through
     }
-    if (task == null) {
-      return;
+    if ( task == null) {
+      throw new StatusService.NoSuchTableException(
+          "Error info from that reindexing task no longer available");
     }
     
     res.add(new StatusTable.SummaryInfo(
-        "Journal Volume",
+        "Volume",
         ColumnDescriptor.TYPE_STRING,
         task.getAuName()));
-
+    ArchivalUnit au = task.getAu();
+    Plugin plugin = au.getPlugin();
+    res.add(new StatusTable.SummaryInfo(
+        "Plugin",
+        ColumnDescriptor.TYPE_STRING,
+        PluginStatus.makePlugRef(plugin.getPluginName(), plugin)));
     res.add(new StatusTable.SummaryInfo(
         "Index Type",
         ColumnDescriptor.TYPE_STRING,
@@ -140,6 +151,14 @@ public class MetadataIndexingErrorInfoAccessor implements StatusAccessor {
         "Articles updated",
         ColumnDescriptor.TYPE_INT,
         task.getUpdatedArticleCount()));
+    
+    res.add(new StatusTable.SummaryInfo(
+        null,
+        ColumnDescriptor.TYPE_STRING,
+        new StatusTable.Reference("AU configuration", 
+            ArchivalUnitStatus.AU_DEFINITION_TABLE_NAME, 
+            au.getAuId())));
+
 
     Exception taskException = task.getException();
     StringWriter sw = new StringWriter();
