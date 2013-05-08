@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.25 2013-05-03 12:50:29 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.26 2013-05-08 09:09:00 tlipkis Exp $
  */
 
 /*
@@ -101,23 +101,11 @@ public class TdbUtil {
    */
   public static ArchivalUnit getAu(TdbAu tdbau) {
     PluginManager pluginMgr = LockssDaemon.getLockssDaemon().getPluginManager();
-    String pluginId = tdbau.getPluginId();
-    Plugin plugin = 
-        pluginMgr.getPlugin(PluginManager.pluginKeyFromName(pluginId));
-    ArchivalUnit au = null;
-    if (plugin != null) {
-      Properties props = new Properties();
-      for (Map.Entry<String,String> prop : tdbau.getParams().entrySet()) {
-        String key = prop.getKey();
-        ConfigParamDescr descr = plugin.findAuConfigDescr(key);
-        if ((descr != null) && descr.isDefinitional()) {
-          props.put(key, prop.getValue());
-        }
-      }
-      String auid = PluginManager.generateAuId(pluginId, props);
-      au = pluginMgr.getAuFromId(auid);
+    String auid = tdbau.getAuId(pluginMgr);
+    if (auid == null) {
+      return null;
     }
-    return au;
+    return pluginMgr.getAuFromId(auid);
   }
   
   /**
@@ -152,14 +140,8 @@ public class TdbUtil {
       if (tdb != null) {
         for (TdbAu.Id id : tdb.getTdbAuIds(pluginId)) {
           TdbAu tdbau = id.getTdbAu();
-          Properties props = new Properties();
-          for (Map.Entry<String,String> prop : tdbau.getParams().entrySet()) {
-            String key = prop.getKey();
-            ConfigParamDescr descr = plugin.findAuConfigDescr(key);
-            if ((descr != null) && descr.isDefinitional()) {
-              props.put(key, prop.getValue());
-            }
-          }
+          Properties props = PluginManager.defPropsFromProps(plugin,
+							     tdbau.getParams());
           String genauid = PluginManager.generateAuId(pluginId, props);
           if (auid.equals(genauid)) {
             return tdbau;

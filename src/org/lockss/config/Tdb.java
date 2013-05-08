@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.21 2013-03-06 09:19:48 tlipkis Exp $
+ * $Id: Tdb.java,v 1.22 2013-05-08 09:09:00 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.21 2013-03-06 09:19:48 tlipkis Exp $
+ * @version $Id: Tdb.java,v 1.22 2013-05-08 09:09:00 tlipkis Exp $
  */
 public class Tdb {
   /**
@@ -96,7 +96,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.21 2013-03-06 09:19:48 tlipkis Exp $
+   * @version $Id: Tdb.java,v 1.22 2013-05-08 09:09:00 tlipkis Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -481,10 +481,10 @@ public class Tdb {
    */
   protected TdbAu findExistingTdbAu(TdbAu otherAu) {
     // check for duplicate AU with same plugin for this Tdb
-    Collection<TdbAu.Id> auIds = getTdbAuIds(otherAu.getPluginId());
-    for (TdbAu.Id auId : auIds) {
-      if (auId.equals(otherAu.getId())) {
-        return auId.getTdbAu();
+    Collection<TdbAu.Id> ids = getTdbAuIds(otherAu.getPluginId());
+    for (TdbAu.Id id : ids) {
+      if (id.equals(otherAu.getId())) {
+        return id.getTdbAu();
       }
     }
     return null;

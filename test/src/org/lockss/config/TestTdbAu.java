@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.19 2013-04-30 15:26:44 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.20 2013-05-08 09:09:00 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.config;
 
 import org.lockss.util.*;
 import org.lockss.config.Tdb.TdbException;
+import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 import org.lockss.test.*;
 
 import java.util.*;
@@ -42,7 +44,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.19 2013-04-30 15:26:44 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.20 2013-05-08 09:09:00 tlipkis Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -663,6 +665,46 @@ public class TestTdbAu extends LockssTestCase {
     assertNotEquals(au1.getId(), au3.getId());
   }
   
+  /**
+   * Test AuId
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testGetAuId() throws TdbException {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+
+    TdbAu au1 = new TdbAu("Test AU1", "pluginA");
+    au1.setAttr("a", "A");
+    au1.setParam("x", "X");
+    try {
+      au1.getAuId(pmgr);
+      fail("getAuId() with no plugin should throw");
+    } catch (IllegalStateException e) {
+    }
+    
+    MockPlugin plug = (MockPlugin)PluginTestUtil.findPlugin(MockPlugin.class);
+    plug.setAuConfigDescrs(ListUtil.list(ConfigParamDescr.BASE_URL,
+					 ConfigParamDescr.VOLUME_NUMBER,
+					 ConfigParamDescr.CRAWL_PROXY));
+
+    TdbAu au2 = new TdbAu("Test AU1", plug.getPluginId());
+    au2.setAttr("a", "A");
+    au2.setParam("base_url", "http://example.com/bbb/");
+    au2.setParam("volume", "12");
+    au2.setParam("crawl_proxy", "foo.bar:8080");
+    assertEquals("org|lockss|test|MockPlugin&base_url~http%3A%2F%2Fexample%2Ecom%2Fbbb%2F&volume~12",
+		 au2.getAuId(pmgr));
+
+    TdbAu au3 = new TdbAu("Test AU1", plug.getPluginId());
+    au3.setAttr("a", "A");
+    au3.setParam("base_url", "http://example.com/bbb/");
+    au3.setParam("crawl_proxy", "foo.bar:8080");
+    try {
+      au3.getAuId(pmgr);
+      fail("getAuId() with missing config param should throw");
+    } catch (NullPointerException e) {
+    }
+  }
+
   /**
    * Test copyForTdbTitle method.
    * @throws TdbException for invalid Tdb operations

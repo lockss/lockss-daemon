@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.23 2013-04-30 15:21:49 pgust Exp $
+ * $Id: TdbAu.java,v 1.24 2013-05-08 09:09:00 tlipkis Exp $
  */
 
 /*
@@ -36,9 +36,10 @@ import java.util.*;
 
 import org.apache.commons.collections.map.Flat3Map;
 import org.lockss.config.Tdb.TdbException;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.exporter.biblio.BibliographicUtil;
-import org.lockss.plugin.PluginManager;
+import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 
@@ -119,9 +120,9 @@ public class TdbAu implements BibliographicItem {
       if (obj == this) {
         return true;
       }
-      TdbAu.Id auId = (TdbAu.Id)obj;
-      return (   TdbAu.this.getPluginId().equals(auId.getTdbAu().getPluginId())
-              && TdbAu.this.getParams().equals(auId.getTdbAu().getParams()));
+      TdbAu.Id other = (TdbAu.Id)obj;
+      return (   TdbAu.this.getPluginId().equals(other.getTdbAu().getPluginId())
+              && TdbAu.this.getParams().equals(other.getTdbAu().getParams()));
     }
     /**
      * Force hashcode to be recomputed because of a TdbAu change.
@@ -168,7 +169,8 @@ public class TdbAu implements BibliographicItem {
     }
     
     this.name = name;
-    this.pluginId = pluginId;
+    this.pluginId = StringPool.PLUGIN_IDS.intern(pluginId)
+;
 //     params = new HashMap<String,String>();
     params = new Flat3Map();
   }
@@ -214,6 +216,28 @@ public class TdbAu implements BibliographicItem {
    */
   public String getName() {
     return name;
+  }
+  
+  /** Return the Plugin, iff it is loaded.
+   * @return the Plugin, or null if no plugin of that name */
+  public Plugin getPlugin(PluginManager pluginMgr) {
+    return pluginMgr.getPluginFromId(pluginId);
+  }
+
+  /**
+   * Get the AUID.  Only possible if the necessary Plugin is loaded.
+   * 
+   * @return the AUID
+   * @throws IllegalStateException if plugin isn't loaded
+   */
+  public String getAuId(PluginManager pluginMgr) {
+    Plugin plug = getPlugin(pluginMgr);
+    if (plug == null) {
+      throw new IllegalStateException("No Plugin, can't get AUID: " + pluginId);
+    }
+    return PluginManager.generateAuId(plug.getPluginId(),
+				      PluginManager.defPropsFromProps(plug,
+								      params));
   }
   
   /**
