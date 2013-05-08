@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.244 2013-03-16 22:03:33 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.245 2013-05-08 09:09:52 tlipkis Exp $
  */
 
 /*
@@ -704,35 +704,39 @@ public class PluginManager
   }
 
   /**
-   * Return a unique identifier for an au based on its plugin id and defining
-   * properties.
+   * Return the unique identifier for an AU based on its plugin id and
+   * definitional config params.
    * @param pluginId plugin id (with . not escaped)
    * @param auDefProps Properties with values for all definitional AU params
-   * @return a unique identifier for an au based on its plugin id and defining
-   * properties.
+   * @return The unique identifier for the AU.
    */
   public static String generateAuId(String pluginId, Properties auDefProps) {
     return generateAuId(pluginId,
 			PropUtil.propsToCanonicalEncodedString(auDefProps));
   }
 
+  /**
+   * Return the unique identifier for an AU based on its plugin and full
+   * set of config params..
+   * @param plugin the Plugin
+   * @param auConfig either the entire AU Configuration or one containing
+   * at least all the definitional params.
+   * @return The unique identifier for the AU.
+   */
   public static String generateAuId(Plugin plugin, Configuration auConfig) {
-    Properties props = new Properties();
-    for (Iterator iter = plugin.getAuConfigDescrs().iterator();
-	 iter.hasNext();) {
-      ConfigParamDescr descr = (ConfigParamDescr)iter.next();
-      if (descr.isDefinitional()) {
-	String key = descr.getKey();
-	String val = auConfig.get(key);
-	if (val == null) {
-	  throw new NullPointerException(key + " is null in: " + auConfig);
-	}
-	props.setProperty(key, val);
-      }
-    }
-    return generateAuId(plugin.getPluginId(), props);
+    return generateAuId(plugin.getPluginId(),
+			PluginManager.defPropsFromProps(plugin, auConfig));
   }
 
+  /**
+   * Return the unique identifier for an AU based on its plugin id and key
+   * constructed from the definitional config params.
+   * @param pluginId plugin id (with . not escaped)
+   * @param auKey The result of
+   * PropUtil#propsToCanonicalEncodedString(Properties) applied to the AU's
+   * definitional config params
+   * @return The unique identifier for the AU.
+   */
   public static String generateAuId(String pluginId, String auKey) {
     String id = pluginKeyFromId(pluginId)+"&"+auKey;
     if (paramUseAuidPool) {
@@ -740,6 +744,38 @@ public class PluginManager
     } else {
       return id;
     }
+  }
+
+  public static Properties defPropsFromProps(Plugin plug,
+					     Map<String,String> auConfigProps) {
+    Properties res = new Properties();
+    for (ConfigParamDescr descr : plug.getAuConfigDescrs()) {
+      if (descr.isDefinitional()) {
+	String key = descr.getKey();
+	String val = auConfigProps.get(key);
+	if (val == null) {
+	  throw new NullPointerException(key + " is null in: " + auConfigProps);
+	}
+	res.setProperty(key, val);
+      }
+    }
+    return res;
+  }
+
+  public static Properties defPropsFromProps(Plugin plug,
+					     Configuration auConfig) {
+    Properties res = new Properties();
+    for (ConfigParamDescr descr : plug.getAuConfigDescrs()) {
+      if (descr.isDefinitional()) {
+	String key = descr.getKey();
+	String val = auConfig.get(key);
+	if (val == null) {
+	  throw new NullPointerException(key + " is null in: " + auConfig);
+	}
+	res.setProperty(key, val);
+      }
+    }
+    return res;
   }
 
   public static String auKeyFromAuId(String auid) {
@@ -764,6 +800,10 @@ public class PluginManager
 
   public static String configKeyFromAuId(String auid) {
     return StringUtil.replaceFirst(auid, "&", ".");
+  }
+
+  public static String auConfigPrefix(String auid) {
+    return PARAM_AU_TREE + "." + PluginManager.configKeyFromAuId(auid);
   }
 
   private void configurePlugin(String pluginKey, Configuration pluginConf,
@@ -1276,7 +1316,7 @@ public class PluginManager
 
   public void updateAuConfigFile(String auid, Configuration auConf)
       throws IOException {
-    String prefix = PARAM_AU_TREE + "." + configKeyFromAuId(auid);
+    String prefix = auConfigPrefix(auid);
     Configuration fqConfig = auConf.addPrefix(prefix);
     synchronized (auAddDelLock) {
       configMgr.updateAuConfigFile(fqConfig, prefix);
@@ -1558,8 +1598,7 @@ public class PluginManager
   public Configuration getStoredAuConfiguration(String auid) {
     String aukey = configKeyFromAuId(auid);
     Configuration config = configMgr.readAuConfigFile();
-    String prefix = PARAM_AU_TREE + "." + aukey;
-    return config.getConfigTree(prefix);
+    return config.getConfigTree(auConfigPrefix(auid));
   }
 
   /**
@@ -1569,8 +1608,7 @@ public class PluginManager
    */
   public Configuration getCurrentAuConfiguration(String auid) {
     String aukey = configKeyFromAuId(auid);
-    String prefix = PARAM_AU_TREE + "." + aukey;
-    return ConfigManager.getCurrentConfig().getConfigTree(prefix);
+    return ConfigManager.getCurrentConfig().getConfigTree(auConfigPrefix(auid));
   }
 
   // Loadable Plugin Support
