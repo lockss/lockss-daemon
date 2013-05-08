@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.24 2013-05-08 09:09:00 tlipkis Exp $
+ * $Id: TdbAu.java,v 1.25 2013-05-08 16:27:10 tlipkis Exp $
  */
 
 /*
@@ -169,8 +169,7 @@ public class TdbAu implements BibliographicItem {
     }
     
     this.name = name;
-    this.pluginId = StringPool.PLUGIN_IDS.intern(pluginId)
-;
+    this.pluginId = StringPool.PLUGIN_IDS.intern(pluginId);
 //     params = new HashMap<String,String>();
     params = new Flat3Map();
   }
