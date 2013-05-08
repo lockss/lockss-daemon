@@ -255,16 +255,6 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents)) {
-        printf("Page Found!\n");
-        if ($man_contents =~ m/$lockss_tag/) {
-          printf("Lockss tag found!");
-        } else {
-          printf("No Lockss tag found!\n");
-        }
-      } else {
-        printf("No Page Found!\n");
-      }
       if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
         if ($man_contents =~ m/<title>(.*)LOCKSS Manifest Page<\/title>/si) {
           $vol_title = $1;
@@ -291,16 +281,6 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents)) {
-        printf("Page Found!\n");
-        if ($man_contents =~ m/$lockss_tag/) {
-          printf("Clockss tag found!");
-        } else {
-          printf("No Clockss tag found!\n");
-        }
-      } else {
-        printf("No Page Found!\n");
-      }
       if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/))) {
         if ($man_contents =~ m/<title>(.*)CLOCKSS Manifest Page<\/title>/si) {
           $vol_title = $1;
@@ -334,6 +314,67 @@ while (my $line = <>) {
             $vol_title = "\"" . $vol_title . "\"";
           }
         } 
+        $result = "Manifest"
+      } else {
+        $result = "--"
+      }
+    } else {
+      $result = "--"
+    }
+    sleep(5);
+        
+  } elsif ($plugin eq "ClockssBioOneAtyponPlugin") {
+    $url = sprintf("%sclockss/%s/%s/index.html", 
+      $param{base_url}, $param{journal_id}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+        if ($man_contents =~ m/<title>(.*)\s*CLOCKSS Manifest Page<\/title>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--"
+      }
+    } else {
+      $result = "--"
+    }
+    sleep(5);
+        
+  } elsif ($plugin eq "PortlandPressPlugin") {
+    $url = sprintf("%s%s/%s/lockss.htm", 
+      $param{base_url}, $param{journal_id}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+        $result = "Manifest"
+      } else {
+        $result = "--"
+      }
+    } else {
+      $result = "--"
+    }
+    sleep(5);
+        
+  } elsif ($plugin eq "ClockssPortlandPressPlugin") {
+    $url = sprintf("%s%s/%s/lockss.htm", 
+      $param{base_url}, $param{journal_id}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         $result = "Manifest"
       } else {
         $result = "--"
