@@ -250,7 +250,7 @@ while (my $line = <>) {
     $url = sprintf("%slockss/%s/%s/index.html", 
       $param{base_url}, $param{journal_id}, $param{volume_name});
     $man_url = uri_unescape($url);
-    printf("\nUrl: %s\n", $man_url);
+    #printf("\nUrl: %s\n", $man_url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
@@ -276,7 +276,7 @@ while (my $line = <>) {
     $url = sprintf("%sclockss/%s/%s/index.html", 
       $param{base_url}, $param{journal_id}, $param{volume_name});
     $man_url = uri_unescape($url);
-    printf("\nUrl: %s\n", $man_url);
+    #printf("\nUrl: %s\n", $man_url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
