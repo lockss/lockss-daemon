@@ -42,7 +42,7 @@
     au < released ; crawling ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
     au < released ; crawling ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 ; >
     au < released ; crawling ; 2012 ; Acta Biochimica et Biophysica Sinica Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2013 ; Acta Biochimica et Biophysica Sinica Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2013 ; Acta Biochimica et Biophysica Sinica Volume 45 ; 45 ; >
 
     }
 
@@ -77,7 +77,7 @@
     au < released ; crawling ; 2010 ; Adaptation Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; Adaptation Volume 4 ; 4 ; >
     au < released ; crawling ; 2012 ; Adaptation Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2013 ; Adaptation Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2013 ; Adaptation Volume 6 ; 6 ; >
 
     }
 
@@ -209,7 +209,7 @@
     au < released ; crawling ; 2010 ; African Affairs Volume 109 ; 109 ; >
     au < released ; crawling ; 2011 ; African Affairs Volume 110 ; 110 ; >
     au < released ; crawling ; 2012 ; African Affairs Volume 111 ; 111 ; >
-    au < manifest ; exists ; 2013 ; African Affairs Volume 112 ; 112 ; >
+    au < crawling ; exists ; 2013 ; African Affairs Volume 112 ; 112 ; >
 
     }
 
@@ -280,7 +280,7 @@
     au < released ; crawling ; 2010 ; Age and Ageing Volume 39 ; 39 ; >
     au < released ; crawling ; 2011 ; Age and Ageing Volume 40 ; 40 ; >
     au < released ; crawling ; 2012 ; Age and Ageing Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2013 ; Age and Ageing Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2013 ; Age and Ageing Volume 42 ; 42 ; >
 
     }
 
@@ -357,7 +357,7 @@
     au < released ; crawling ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
     au < released ; crawling ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
     au < released ; crawling ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ; >
 
     }
 
@@ -494,7 +494,7 @@
     au < released ; crawling ; 2010 ; The American Historical Review Volume 115 ; 115 ; >
     au < released ; crawling ; 2011 ; The American Historical Review Volume 116 ; 116 ; >
     au < released ; crawling ; 2012 ; The American Historical Review Volume 117 ; 117 ; >
-    au < manifest ; exists ; 2013 ; The American Historical Review Volume 118 ; 118 ; >
+    au < crawling ; exists ; 2013 ; The American Historical Review Volume 118 ; 118 ; >
     
     }
     
@@ -608,7 +608,7 @@
     au < released ; crawling ; 2010 ; American Journal of Agricultural Economics Volume 92 ; 92 ; >
     au < released ; crawling ; 2011 ; American Journal of Agricultural Economics Volume 93 ; 93 ; >
     au < released ; crawling ; 2012 ; American Journal of Agricultural Economics Volume 94 ; 94 ; >
-    au < manifest ; exists ; 2013 ; American Journal of Agricultural Economics Volume 95 ; 95 ; >
+    au < crawling ; exists ; 2013 ; American Journal of Agricultural Economics Volume 95 ; 95 ; >
 
     }
 
@@ -818,7 +818,7 @@
     au < released ; crawling ; 2011 ; American Journal of Epidemiology [including Supplements] Volume 174 ; 174 ; >
     au < released ; crawling ; 2012 ; American Journal of Epidemiology [including Supplements] Volume 175 ; 175 ; >
     au < released ; crawling ; 2012 ; American Journal of Epidemiology Volume 176 ; 176 ; >
-    au < manifest ; exists ; 2013 ; American Journal of Epidemiology Volume 177 ; 177 ; >
+    au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 177 ; 177 ; >
     au < expected ; exists ; 2013 ; American Journal of Epidemiology Volume 178 ; 178 ; >
 
     }
@@ -7519,7 +7519,7 @@
     {
     
     param[base_url] = http://comnet.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePlugin
+    pluginSuffix = ClockssHighWireH20Plugin
     
     au < expected ; exists ; 2013 ; Journal of Complex Networks Volume 1 ; 1 ; >
     
