@@ -7519,7 +7519,7 @@
     {
     
     param[base_url] = http://comnet.oxfordjournals.org/
-    pluginSuffix = ClockssHighWireH20Plugin
+    pluginSuffix = ClockssHighWirePressH20Plugin
     
     au < expected ; exists ; 2013 ; Journal of Complex Networks Volume 1 ; 1 ; >
     
