@@ -170,11 +170,12 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     		  // (like &amp;) that may appear in the journal title
     		  journalTitle = StringEscapeUtils.unescapeHtml(journalTitle);
 
-    		  am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
-    		  am.put(MetadataField.FIELD_VOLUME, volume);
-              am.put(MetadataField.FIELD_ISSUE, issue);
-              am.put(MetadataField.FIELD_START_PAGE, spage);
-              am.put(MetadataField.FIELD_END_PAGE, epage);
+    		  // Only put values in to metadata if they have valid content; no value will allow it to look elsewhere
+    		  if ( !journalTitle.isEmpty()) am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
+    		  if ( !volume.isEmpty()) am.put(MetadataField.FIELD_VOLUME, volume);
+    		  if ( !issue.isEmpty()) am.put(MetadataField.FIELD_ISSUE, issue);
+    		  if ( !spage.isEmpty()) am.put(MetadataField.FIELD_START_PAGE, spage);
+    		  if ( !epage.isEmpty()) am.put(MetadataField.FIELD_END_PAGE, epage);
     	  }
     	  else if (MetadataUtil.isDoi(cookedIdentifierList.get(j))) {
     		  doi = cookedIdentifierList.get(j);

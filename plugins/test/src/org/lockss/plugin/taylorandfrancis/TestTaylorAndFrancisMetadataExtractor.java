@@ -286,6 +286,35 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     assertEquals("96", md.get(MetadataField.FIELD_START_PAGE));
     assertEquals("Journal of LGBT Issues in Counseling", md.get(MetadataField.FIELD_JOURNAL_TITLE));
   }
+  
+  String noJournalTitleContent =
+      "<meta name=\"dc.Title\" content=\"Engagement\"></meta>"+
+          "<meta name=\"dc.Creator\" content=\" Stephanie   Burley \"></meta>"+
+          "<meta name=\"dc.Publisher\" content=\" Taylor &amp; Francis Group \"></meta>"+
+          "<meta name=\"dc.Date\" scheme=\"WTN8601\" content=\"2012-06-19\"></meta>"+
+          "<meta name=\"dc.Format\" content=\"text/HTML\"></meta>"+
+          "<meta name=\"dc.Identifier\" scheme=\"publisher-id\" content=\"596666\"></meta>"+
+          "<meta name=\"dc.Identifier\" scheme=\"doi\" content=\"10.1080/03323315.2011.596666\"></meta>"+
+          "<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Irish Educational Studies Vol. 31, No. 2, June 2012, pp. 175\u2013190\"></meta>"+
+          "<meta name=\"dc.Source\" content=\"http://dx.doi.org/10.1080/03323315.2011.596666\"></meta>";
+  
+  public void testNoJournalTitleContent() throws Exception {
+
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, tafau);
+    cu.setContent(noJournalTitleContent);
+    cu.setContentSize(noJournalTitleContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    FileMetadataExtractor me = new TaylorAndFrancisHtmlMetadataExtractorFactory.TaylorAndFrancisHtmlMetadataExtractor();
+    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    assertEquals(null, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals("175", md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+  }
 
   /**
    * Inner class that where a number of Archival Units can be created
