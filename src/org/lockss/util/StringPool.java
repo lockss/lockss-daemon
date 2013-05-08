@@ -1,5 +1,5 @@
 /*
- * $Id: StringPool.java,v 1.1 2012-06-25 05:53:43 tlipkis Exp $
+ * $Id: StringPool.java,v 1.2 2013-05-08 09:10:43 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ public class StringPool {
 
   public static StringPool AU_CONFIG_PROPS = new StringPool("AU config props");
   public static StringPool HTTP_HEADERS = new StringPool("HTTP headers");
+  public static StringPool PLUGIN_IDS = new StringPool("Plugin IDs");
 
   private String name;
   private Map<String,String> map;
