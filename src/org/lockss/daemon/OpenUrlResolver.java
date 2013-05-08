@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.45 2013-05-08 09:09:27 tlipkis Exp $
+ * $Id: OpenUrlResolver.java,v 1.46 2013-05-08 15:20:41 fergaloy-sf Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PrintfConverter;
 import org.lockss.plugin.PrintfConverter.UrlListConverter;
-import org.lockss.plugin.definable.DefinableArchivalUnit;;
+import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.util.ExternalizableMap;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
