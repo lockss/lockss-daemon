@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.61 2013-03-16 22:04:21 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.62 2013-05-08 09:10:53 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -201,7 +201,7 @@ public class UrlUtil {
 	host = matchResult.group(1);
 	path = matchResult.group(2);
 	changed = true;
-	log.info("newhost, newpath: " + host + ", " + path);
+	log.debug2("Akamai rewrite newhost, newpath: " + host + ", " + path);
       }
     }
 
