@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.16 2013-05-03 01:59:17 tlipkis Exp $
+ * $Id: MetadataManager.java,v 1.17 2013-05-08 09:09:39 tlipkis Exp $
  */
 
 /*
@@ -1387,7 +1387,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	new LockssRunnable(AuUtil.getThreadNameFor("Reindexing",
 	                                           task.getAu())) {
 	  public void lockssRun() {
-	    long interval = Constants.MINUTE;
 	    startWDog(WDOG_PARAM_INDEXER, WDOG_DEFAULT_INDEXER);
 	    task.setWDog(this);
 
