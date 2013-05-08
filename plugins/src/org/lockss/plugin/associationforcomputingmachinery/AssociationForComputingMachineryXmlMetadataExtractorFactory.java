@@ -1,5 +1,5 @@
 /*
- * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.10 2013-01-12 00:45:32 pgust Exp $
+ * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.11 2013-05-08 21:46:46 alexandraohlson Exp $
  */
 
 /*
@@ -40,6 +40,8 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.extractor.MetadataField.Cardinality;
+import org.lockss.extractor.MetadataField.Validator;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.w3c.dom.Node;
@@ -67,6 +69,27 @@ implements FileMetadataExtractorFactory {
 
   public static class ACMXmlMetadataExtractor 
   implements FileMetadataExtractor {
+    
+    private static  Validator titlevalid = new Validator(){
+      public String validate(ArticleMetadata am,MetadataField field,String val)
+          throws MetadataException.ValidationException {
+        // normalize title entries so that it's never set to empty string"/>
+          if(val.isEmpty()) {
+            throw new MetadataException.ValidationException("Illegal title: empty string"); 
+          }
+          return val;
+          }
+     };
+    
+    // We're going to override the MetadataField.FIELD_JOURNAL_TITLE 
+    // this local version will ensure against an empty string. 
+    // This improvement should get added in the daemon when possible
+    private static final MetadataField ACM_FIELD_JOURNAL_TITLE = new MetadataField(
+        MetadataField.KEY_JOURNAL_TITLE, Cardinality.Single, titlevalid);
+    
+    // We're going to add a field for Proceeding Description
+    private static final MetadataField ACM_FIELD_PROC_DESC = new MetadataField(
+        "proceeding.description", Cardinality.Single);
 
     private static final int FILE_NAME_INDEX = 7;
     private static final int AUTHOR_INDEX = 6;
@@ -221,6 +244,7 @@ implements FileMetadataExtractorFactory {
       // conference proceeding schema
       nodeMap.put("/proceeding/conference_rec/conference_date/start_date", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/proceeding/proceeding_rec/proc_title", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/proceeding/proceeding_rec/proc_desc", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/proceeding/proceeding_rec/acronym", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/proceeding/proceeding_rec/isbn", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/proceeding/proceeding_rec/copyright_year", XmlDomMetadataExtractor.TEXT_VALUE);
@@ -237,7 +261,7 @@ implements FileMetadataExtractorFactory {
     static private final MultiValueMap xpathMap = new MultiValueMap();
     static {
       // normal journal article schema
-      xpathMap.put("/periodical/journal_rec/journal_name", MetadataField.FIELD_JOURNAL_TITLE);
+      xpathMap.put("/periodical/journal_rec/journal_name", ACM_FIELD_JOURNAL_TITLE);
       xpathMap.put("/periodical/journal_rec/journal_code", MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
       xpathMap.put("/periodical/journal_rec/issn", MetadataField.FIELD_ISSN);
       xpathMap.put("/periodical/journal_rec/eissn", MetadataField.FIELD_EISSN);
@@ -248,7 +272,8 @@ implements FileMetadataExtractorFactory {
 
       // conference proceeding schema
       xpathMap.put("/proceeding/conference_rec/conference_date/start_date", MetadataField.FIELD_DATE);
-      xpathMap.put("/proceeding/proceeding_rec/proc_title", MetadataField.FIELD_JOURNAL_TITLE);
+      xpathMap.put("/proceeding/proceeding_rec/proc_title", ACM_FIELD_JOURNAL_TITLE);
+      xpathMap.put("/proceeding/proceeding_rec/proc_desc", ACM_FIELD_PROC_DESC);
       xpathMap.put("/proceeding/proceeding_rec/acronym", MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
       xpathMap.put("/proceeding/proceeding_rec/isbn", MetadataField.FIELD_ISBN);
       xpathMap.put("/proceeding/proceeding_rec/copyright_year", MetadataField.DC_FIELD_RIGHTS);
@@ -256,7 +281,7 @@ implements FileMetadataExtractorFactory {
     }
 
     static private final MetadataField[] journalMetadataFields = {
-      MetadataField.FIELD_JOURNAL_TITLE,
+      ACM_FIELD_JOURNAL_TITLE,
       MetadataField.FIELD_ISSN,
       MetadataField.FIELD_EISSN,
       MetadataField.FIELD_VOLUME,
@@ -315,6 +340,14 @@ implements FileMetadataExtractorFactory {
         
         // If not present, add "ACM" publisher name (shouldn't happen!)
         am.putIfBetter(MetadataField.FIELD_PUBLISHER, "ACM");
+        
+        // If the journal_title is empty, we might be able to get what we need from a different field....give it a try
+        if ( am.get(ACM_FIELD_JOURNAL_TITLE) == null ) {
+          if (am.get(ACM_FIELD_PROC_DESC) != null) {
+            am.put(ACM_FIELD_JOURNAL_TITLE,  am.get(ACM_FIELD_PROC_DESC));
+          }
+        }
+       
         emitAllMetadata(am, emit);
         return am;
       } catch (XPathExpressionException ex) {

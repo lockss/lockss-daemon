@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<proceeding ver="5.0" ts="12/22/2008">
+<conference_rec>
+	<conference_date>
+		<start_date>08/02/2010</start_date>
+		<end_date>08/05/2010</end_date>
+	</conference_date>
+	<conference_loc>
+		<city><![CDATA[Pittsburgh]]></city>
+		<state>Pennsylvania</state>
+		<country></country>
+	</conference_loc>
+	<conference_url></conference_url>
+</conference_rec>
+<series_rec>
+	<series>
+		<series_id>SERIES13492</series_id>
+		<series_title><![CDATA[Conference on Stuff]]></series_title>
+		<series_vol></series_vol>
+	</series>
+</series_rec>
+<proceeding_rec>
+	<proc_id>1838574</proc_id>
+	<acronym>TG '10</acronym>
+	<proc_desc>Proceedings of the 2010 Stuff Conference</proc_desc>
+	<conference_number>2010</conference_number>
+	<proc_class>conference</proc_class>
+	<proc_title></proc_title>
+	<proc_subtitle></proc_subtitle>
+	<proc_volume_no></proc_volume_no>
+	<isbn>978-1-11111-818-6</isbn>
+	<issn></issn>
+	<copyright_year>2010</copyright_year>
+	<publication_date>08/02/2010</publication_date>
+	<pages>177</pages>
+	<plus_pages></plus_pages>
+	<order_no></order_no>
+	<price><![CDATA[]]></price>
+	<other_source></other_source>
+	<abstract>
+		<par><![CDATA[<p>On behalf of.</p> <p>This year's conference.</p>]]></par>
+	</abstract>
+	<publisher>
+		<publisher_id>PUB00</publisher_id>
+		<publisher_code>XXXXX</publisher_code>
+		<publisher_name>XXX</publisher_name>
+		<publisher_address>2 XXX Plaza, Suite 000</publisher_address>
+		<publisher_city>New York</publisher_city>
+		<publisher_state>NY</publisher_state>
+		<publisher_country>USA</publisher_country>
+		<publisher_zip_code>10121-0701</publisher_zip_code>
+		<publisher_contact>Fred Publisher</publisher_contact>
+		<publisher_phone>212 857-6309</publisher_phone>
+		<publisher_isbn_prefix></publisher_isbn_prefix>
+		<publisher_url>www.xxx.org/publications</publisher_url>
+	</publisher>
+	<sponsor_rec>
+		<sponsor>
+			<sponsor_id>SP000</sponsor_id>
+			<sponsor_name>Sponsor University</sponsor_name>
+			<sponsor_abbr>Sponsor Mellon University</sponsor_abbr>
+		</sponsor>
+		<sponsor>
+			<sponsor_id>SP001</sponsor_id>
+			<sponsor_name>Another Sponsor (ASP)</sponsor_name>
+			<sponsor_abbr></sponsor_abbr>
+		</sponsor>
+	</sponsor_rec>
+	<categories>
+		<primary_category>
+			<cat_node/>
+			<descriptor/>
+			<type/>
+		</primary_category>
+	</categories>
+	<chair_editor>
+		<ch_ed>
+			<person_id>P2268774</person_id>
+			<seq_no>1</seq_no>
+			<first_name><![CDATA[Fred]]></first_name>
+			<middle_name><![CDATA[]]></middle_name>
+			<last_name><![CDATA[Smith]]></last_name>
+			<suffix><![CDATA[]]></suffix>
+			<affiliation><![CDATA[ASP]]></affiliation>
+			<role><![CDATA[Conference Chair]]></role>
+		</ch_ed>
+		<ch_ed>
+			<person_id>P2268775</person_id>
+			<seq_no>2</seq_no>
+			<first_name><![CDATA[Jean]]></first_name>
+			<middle_name><![CDATA[]]></middle_name>
+			<last_name><![CDATA[Miller]]></last_name>
+			<suffix><![CDATA[]]></suffix>
+			<affiliation><![CDATA[UCC]]></affiliation>
+			<role><![CDATA[Conference Chair]]></role>
+		</ch_ed>
+	</chair_editor>
+	<front_matter>
+		<fm_file>frontmatter.pdf</fm_file>
+		<fm_text>Front matter (Welcome, Conference chairs, TOC)</fm_text>
+	</front_matter>
+</proceeding_rec>
+<article_rec>
+	<article_id>1838575</article_id>
+	<sort_key>10</sort_key>
+	<display_label>a</display_label>
+	<display_no>1</display_no>
+	<article_publication_date>08-02-2010</article_publication_date>
+	<seq_no>1</seq_no>
+	<title><![CDATA[Title For Article 1]]></title>
+	<subtitle><![CDATA[Subtitle Information]]></subtitle>
+	<page_from>1</page_from>
+	<page_to>10</page_to>
+	<doi_number>10.1145/1838574.xxxxx</doi_number>
+	<url></url>
+	<foreign_title></foreign_title>
+	<foreign_subtitle></foreign_subtitle>
+	<language></language>
+	<abstract>
+		<par><![CDATA[<p>Nowadays.</p>]]></par>
+	</abstract>
+	<keywords>
+		<kw><![CDATA[e-collaboration]]></kw>
+		<kw><![CDATA[e-science]]></kw>
+		<kw><![CDATA[grid computing]]></kw>
+		<kw><![CDATA[grid portal]]></kw>
+		<kw><![CDATA[science gateway]]></kw>
+	</keywords>
+	<categories>
+		<primary_category>
+			<cat_node>H.5.3</cat_node>
+			<descriptor/>
+			<type/>
+		</primary_category>
+	</categories>
+	<authors>
+		<au>
+			<person_id>P2268777</person_id>
+			<seq_no>1</seq_no>
+			<first_name><![CDATA[Q.]]></first_name>
+			<middle_name><![CDATA[]]></middle_name>
+			<last_name><![CDATA[Surname]]></last_name>
+			<suffix><![CDATA[]]></suffix>
+			<affiliation><![CDATA[University of Whatsit, Italy]]></affiliation>
+			<role><![CDATA[Author]]></role>
+		</au>
+		<au>
+			<person_id>P2268778</person_id>
+			<seq_no>2</seq_no>
+			<first_name><![CDATA[S.]]></first_name>
+			<middle_name><![CDATA[]]></middle_name>
+			<last_name><![CDATA[La Author]]></last_name>
+			<suffix><![CDATA[]]></suffix>
+			<affiliation><![CDATA[Italian National Institute, Italy]]></affiliation>
+			<role><![CDATA[Author]]></role>
+		</au>
+	</authors>
+	<references>
+		<ref>
+			<ref_obj_id></ref_obj_id>
+			<ref_seq_no>1</ref_seq_no>
+			<ref_text><![CDATA[Science Gateway home page. Available at: http://www.sciencegateway.org/]]></ref_text>
+			<ref_id></ref_id>
+		</ref>
+		<ref>
+			<ref_obj_id></ref_obj_id>
+			<ref_seq_no>2</ref_seq_no>
+			<ref_text><![CDATA[Other Science Gateway home page. Available at: https://www.other.org/web/science-gateways/home]]></ref_text>
+			<ref_id></ref_id>
+		</ref>
+	</references>
+	<fulltext>
+		<file>
+			<seq_no>1</seq_no>
+			<fname>a1-barbera.pdf</fname>
+		</file>
+	</fulltext>
+		<ccc>
+		  <copyright_holder>
+		      <copyright_holder_name>ACM</copyright_holder_name>
+		      <copyright_holder_year>2010</copyright_holder_year>
+		  </copyright_holder>
+		</ccc>
+</article_rec>
+<article_rec>
+	<article_id>1838576</article_id>
+	<sort_key>20</sort_key>
+	<display_label>a</display_label>
+	<display_no>2</display_no>
+	<article_publication_date>08-02-2010</article_publication_date>
+	<seq_no>2</seq_no>
+	<title><![CDATA[A Second Article]]></title>
+	<subtitle><![CDATA[implementation and lessons learned]]></subtitle>
+	<page_from>1</page_from>
+	<page_to>6</page_to>
+	<doi_number>10.1145/1838574.xxxxx</doi_number>
+	<url></url>
+	<foreign_title></foreign_title>
+	<foreign_subtitle></foreign_subtitle>
+	<language></language>
+	<abstract>
+		<par><![CDATA[<p>In this paper, we present.</p>]]></par>
+	</abstract>
+	<keywords>
+		<kw><![CDATA[PKI]]></kw>
+		<kw><![CDATA[SAML]]></kw>
+		<kw><![CDATA[TeraGrid]]></kw>
+		<kw><![CDATA[science gateways]]></kw>
+	</keywords>
+	<categories>
+		<primary_category>
+			<cat_node>K.6.5</cat_node>
+			<descriptor>Authentication</descriptor>
+			<type>S</type>
+		</primary_category>
+	</categories>
+	<general_terms>
+		<gt>Security</gt>
+	</general_terms>
+	<authors>
+		<au>
+			<person_id>P2268783</person_id>
+			<seq_no>1</seq_no>
+			<first_name><![CDATA[Jim]]></first_name>
+			<middle_name><![CDATA[]]></middle_name>
+			<last_name><![CDATA[Writer]]></last_name>
+			<suffix><![CDATA[]]></suffix>
+			<affiliation><![CDATA[NCSA, University of State]]></affiliation>
+			<role><![CDATA[Author]]></role>
+		</au>
+		<au>
+			<person_id>P2268784</person_id>
+			<seq_no>2</seq_no>
+			<first_name><![CDATA[Von]]></first_name>
+			<middle_name><![CDATA[]]></middle_name>
+			<last_name><![CDATA[Words]]></last_name>
+			<suffix><![CDATA[]]></suffix>
+			<affiliation><![CDATA[Independent Consultant, Blah, IL]]></affiliation>
+			<role><![CDATA[Author]]></role>
+		</au>
+		<au>
+			<person_id>P2268785</person_id>
+			<seq_no>3</seq_no>
+			<first_name><![CDATA[Nancy]]></first_name>
+			<middle_name><![CDATA[]]></middle_name>
+			<last_name><![CDATA[Another-Writer]]></last_name>
+			<suffix><![CDATA[]]></suffix>
+			<affiliation><![CDATA[University of California, San Diego]]></affiliation>
+			<role><![CDATA[Author]]></role>
+		</au>
+	</authors>
+	<references>
+		<ref>
+			<ref_obj_id></ref_obj_id>
+			<ref_seq_no>1</ref_seq_no>
+			<ref_text><![CDATA[Von Writer. A Book Title, 2006. http://dx.doi.org/10.1002/xxx]]></ref_text>
+			<ref_id></ref_id>
+		</ref>
+	</references>
+	<fulltext>
+		<file>
+			<seq_no>1</seq_no>
+			<fname>a2-basney.pdf</fname>
+		</file>
+	</fulltext>
+		<ccc>
+		  <copyright_holder>
+		      <copyright_holder_name>ACM</copyright_holder_name>
+		      <copyright_holder_year>2010</copyright_holder_year>
+		  </copyright_holder>
+		</ccc>
+</article_rec>
+</proceeding>

@@ -270,6 +270,41 @@ public class TestAssociationForComputingMachineryXmlMetadataExtractorFactory ext
 		List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
 		assertNotNull(mdlist);
 	}
+	
+	// Read input from one of two XML files (which have been sanitized for anonymity
+	// If you wish to add to the test for a specific issues, you can modify or add to one of both of the XML files
+	public void testExtractFromProceedingsFile() throws Exception {
+	  // read in the xml for testing from a file. It's simpler
+	  InputStream input = null;
+	  String filename = "org/lockss/plugin/associationforcomputingmachinery/proceedingsA.xml";
+	 //String filename = "org/lockss/plugin/associationforcomputingmachinery/proceedingsB.xml";
+	  String proceedingsA_title = "Principles of Stuff";
+	  String proceedingsB_title = "Proceedings of the 2010 Stuff Conference";
+	  String proceedingsTitle=proceedingsA_title;
+	  
+	  try {
+	    input = getClass().getClassLoader().getResourceAsStream(filename);
+	    String fileContent = StringUtil.fromInputStream(input);
+
+	    String url = "http://www.clockss-ingest.lockss.org/sourcefiles/acm-dev/2010/8aug2010/TEST-TEST00/TEST-TEST00.xml";
+	    MockCachedUrl cu = new MockCachedUrl(url, hau);
+	    cu.setContent(fileContent);
+	    cu.setContentSize(fileContent.length());
+	    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+	    FileMetadataExtractor me = new AssociationForComputingMachineryXmlMetadataExtractorFactory.ACMXmlMetadataExtractor();
+	    assertNotNull(me);
+	    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
+	    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+	    assertNotEmpty(mdlist);
+	    ArticleMetadata md = mdlist.get(0);
+	    assertNotNull(md);
+
+	    assertEquals(proceedingsTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+	  } finally {
+	    IOUtil.safeClose(input);
+	  }
+
+	}
 
 	/**
 	 * Inner class that where a number of Archival Units can be created
