@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.48 2013-03-16 22:03:17 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.49 2013-05-08 09:10:18 tlipkis Exp $
  */
 
 /*
@@ -510,8 +510,7 @@ public class BatchAuConfig extends LockssServlet {
 	  !tcConfig.containsKey(PluginManager.AU_PARAM_REPOSITORY)) {
 	tcConfig.put(PluginManager.AU_PARAM_REPOSITORY, defaultRepo);
       }
-      String prefix = PluginManager.PARAM_AU_TREE + "." +
-	PluginManager.configKeyFromAuId(auid);
+      String prefix = PluginManager.auConfigPrefix(auid);
       createConfig.addAsSubTree(tcConfig, prefix);
     }
     if (log.isDebug2()) log.debug2("createConfig: " + createConfig);

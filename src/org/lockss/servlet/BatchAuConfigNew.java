@@ -510,8 +510,7 @@ public class BatchAuConfigNew extends LockssServlet {
 	  !tcConfig.containsKey(PluginManager.AU_PARAM_REPOSITORY)) {
 	tcConfig.put(PluginManager.AU_PARAM_REPOSITORY, defaultRepo);
       }
-      String prefix = PluginManager.PARAM_AU_TREE + "." +
-	PluginManager.configKeyFromAuId(auid);
+      String prefix = PluginManager.auConfigPrefix(auid);
       createConfig.addAsSubTree(tcConfig, prefix);
     }
     if (log.isDebug2()) log.debug2("createConfig: " + createConfig);
