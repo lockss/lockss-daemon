@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.44 2013-01-14 21:58:18 fergaloy-sf Exp $
+ * $Id: OpenUrlResolver.java,v 1.45 2013-05-08 09:09:27 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,7 @@ import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PrintfConverter;
 import org.lockss.plugin.PrintfConverter.UrlListConverter;
+import org.lockss.plugin.definable.DefinableArchivalUnit;;
 import org.lockss.util.ExternalizableMap;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
@@ -148,19 +149,29 @@ public class OpenUrlResolver {
     }
   }
   
+  private static final String FEATURE_URLS =
+    DefinableArchivalUnit.KEY_AU_FEATURE_URL_MAP;
+
+  private static final String START_URLS =
+    DefinableArchivalUnit.KEY_AU_START_URL;
+
+
+
+
+
   /**
    * Keys to search for a matching journal feature. The order of the keys 
    * is the order they will be tried, from article, to issue, to volume, 
    * to title, to publisher.
    */
   private static final FeatureEntry[] auJournalFeatures = {
-//    "au_feature_urls/au_abstract",
-    new FeatureEntry("au_feature_urls/au_article",OpenUrlInfo.ResolvedTo.ARTICLE),
-    new FeatureEntry("au_feature_urls/au_issue", OpenUrlInfo.ResolvedTo.ISSUE),
-    new FeatureEntry("au_feature_urls/au_volume", OpenUrlInfo.ResolvedTo.VOLUME),
-    new FeatureEntry("au_start_url", OpenUrlInfo.ResolvedTo.VOLUME),
-    new FeatureEntry("au_feature_urls/au_title", OpenUrlInfo.ResolvedTo.TITLE),
-    new FeatureEntry("au_feature_urls/au_publisher", OpenUrlInfo.ResolvedTo.PUBLISHER),
+//    FEATURE_URLS + "/au_abstract",
+    new FeatureEntry(FEATURE_URLS + "/au_article",OpenUrlInfo.ResolvedTo.ARTICLE),
+    new FeatureEntry(FEATURE_URLS + "/au_issue", OpenUrlInfo.ResolvedTo.ISSUE),
+    new FeatureEntry(FEATURE_URLS + "/au_volume", OpenUrlInfo.ResolvedTo.VOLUME),
+    new FeatureEntry(START_URLS, OpenUrlInfo.ResolvedTo.VOLUME),
+    new FeatureEntry(FEATURE_URLS + "/au_title", OpenUrlInfo.ResolvedTo.TITLE),
+    new FeatureEntry(FEATURE_URLS + "/au_publisher", OpenUrlInfo.ResolvedTo.PUBLISHER),
   };
   
   /**
@@ -169,11 +180,11 @@ public class OpenUrlResolver {
    * publisher.
    */
   private static final FeatureEntry[] auBookAuFeatures = {
-    new FeatureEntry("au_feature_urls/au_chapter", OpenUrlInfo.ResolvedTo.CHAPTER),
-    new FeatureEntry("au_feature_urls/au_volume", OpenUrlInfo.ResolvedTo.VOLUME),
-    new FeatureEntry("au_start_url", OpenUrlInfo.ResolvedTo.VOLUME),
-    new FeatureEntry("au_feature_urls/au_title", OpenUrlInfo.ResolvedTo.TITLE),
-    new FeatureEntry("au_feature_urls/au_publisher", OpenUrlInfo.ResolvedTo.PUBLISHER),
+    new FeatureEntry(FEATURE_URLS + "/au_chapter", OpenUrlInfo.ResolvedTo.CHAPTER),
+    new FeatureEntry(FEATURE_URLS + "/au_volume", OpenUrlInfo.ResolvedTo.VOLUME),
+    new FeatureEntry(START_URLS, OpenUrlInfo.ResolvedTo.VOLUME),
+    new FeatureEntry(FEATURE_URLS + "/au_title", OpenUrlInfo.ResolvedTo.TITLE),
+    new FeatureEntry(FEATURE_URLS + "/au_publisher", OpenUrlInfo.ResolvedTo.PUBLISHER),
   };
   
   /** The name of the TDB au_feature key selector */
