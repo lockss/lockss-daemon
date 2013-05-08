@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.337 2013-04-14 05:23:28 tlipkis Exp $
+ $Id: build.xml,v 1.338 2013-05-08 09:08:27 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -2791,6 +2791,18 @@ Test results in ${test.results}
       <auxClasspath refid="test.compile.classpath" />
       <sourcePath path="${src}" />
       <class location="${lockss.jar}" />
+    </findbugs>
+  </target>
+
+  <target name="findbugs-plugins" depends="jar-plugins, -load.findbugs"
+   description="Run FindBugs on the plugins source tree." >
+    <findbugs home="${findbugs.home}"
+              output="emacs"
+              jvmargs="-Xmx512m"
+              excludeFilter="test/scripts/findbugsexclude.xml" >
+      <auxClasspath refid="plugins.test.run.classpath" />
+      <sourcePath path="${plugins.src}" />
+      <class location="${lockss.plugins.jar}" />
     </findbugs>
   </target>
 
