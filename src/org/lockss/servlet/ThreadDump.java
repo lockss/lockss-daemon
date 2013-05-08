@@ -1,5 +1,5 @@
 /*
- * $Id: ThreadDump.java,v 1.11 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: ThreadDump.java,v 1.12 2013-05-08 09:10:29 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.servlet;
 import java.io.*;
 import java.util.*;
 import java.util.List;
+import java.text.*;
 import javax.servlet.*;
 import java.lang.management.*;
 import org.mortbay.html.*;
@@ -179,6 +180,8 @@ public class ThreadDump extends LockssServlet {
   }
 
   private Element makeThreads(ThreadMXBean tmxb, Map<Long,Thread> idMap) {
+    DecimalFormat timeFmt = new DecimalFormat("0.000");
+
     Composite comp = new Composite();
     boolean isThreadContentionMonitoringSupported =
       tmxb.isThreadContentionMonitoringSupported();
@@ -256,18 +259,18 @@ public class ThreadDump extends LockssServlet {
       tbl.add(status);
       if (isThreadCpuTimeEnabled) {
 	tbl.newCell("align = \"right\"");
-	tbl.add((tmxb.getThreadCpuTime(tId)/1.0e9) +
-		" (" + (tmxb.getThreadUserTime(tId)/1.0e9) + ")");;
+	tbl.add((timeFmt.format(tmxb.getThreadCpuTime(tId)/1.0e9)) + " (" +
+		timeFmt.format(tmxb.getThreadUserTime(tId)/1.0e9) + ")");;
       }
       tbl.newCell("align = \"right\"");
       tbl.add(tInfo.getBlockedCount() +
 	      (isThreadContentionMonitoringEnabled
-	       ? " (" + tInfo.getBlockedTime()/1.0e9 + ")"
+	       ? " (" + timeFmt.format(tInfo.getBlockedTime()/1.0e9) + ")"
 	       : ""));
       tbl.newCell("align = \"right\"");
       tbl.add(tInfo.getWaitedCount() +
 	      (isThreadContentionMonitoringEnabled
-	       ? " (" + tInfo.getWaitedTime()/1.0e9 + ")"
+	       ? " (" + timeFmt.format(tInfo.getWaitedTime()/1.0e9) + ")"
 	       : ""));
 
       // Add thread's stack trace to string
