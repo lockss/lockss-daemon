@@ -116,6 +116,19 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     	  // The journal title itself may contain commas, so the list is parsed backwards and all content
     	  // before ", Vol." is assumed to be part of the journal title.
         // Cannot assume that the split is ", " (with space), so split on "," only and remove leading spaces later
+
+// This whole thing isn't ideal.  We're counting on the metadata always having standard formatting
+        // not to mention that the doi could have a comma in it...
+        // While I'll go with the comma split, I am adding regexp checking to try to 
+        // find stuff wherever possible. Ultimately there is only so much we can do - for example when a title is missing entirely
+        // Here are some real examples (sanitized to protect the innocent):
+        
+        // comma in title
+        //<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"One, Two &amp; Three, Vol. 19, No. 6, December 2010, pp. 555-567\"></meta>"                
+        // no comma after title
+        //<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Title Name Vol. 31, No. 2, June 2012, pp. 175Ð190\"></meta>
+        // no title at all and alternately formatted info
+        //<meta name="dc.Identifier" scheme="coden" content="Volume 17, Comment 1 Ð January 2011"></meta>
         if (cookedIdentifierList.get(j).contains(",")) {
     		  String content = cookedIdentifierList.get(j);
     		  String[] biblioInfo = content.split(",");
@@ -154,6 +167,17 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     			  else if (biblioInfo[k].startsWith("Vol. ")) {
      				 volume = biblioInfo[k].substring("Vol. ".length(), biblioInfo[k].length());
     			  }
+                          // we might be at the title, but let's see if, because of a missing comma, it includes the volume
+    			  else if (biblioInfo[k].contains("Vol. ")) {
+    			    volume = biblioInfo[k].substring(biblioInfo[k].indexOf("Vol. ") + "Vol. ".length(), biblioInfo[k].length());
+    			    // and the rest would be the title...but check to make sure this isn't just part of it
+    			    // If we're not at the beginning of the comma-separated list
+    			    // (i.e. the journal title itself contains commas),
+    			    // reinsert the comma that we lost in content.split(", ").
+    			    String titleBit = biblioInfo[k].substring(0,biblioInfo[k].indexOf("Vol. "));
+    			    journalTitle = titleBit.concat(journalTitle);
+    			    if (k != 0) journalTitle = ", ".concat(journalTitle);
+    			  }
     			  // by this point, we've come backwards in our comma-delimited list and reached
     			  // the journal title.
     			  else if (!volume.isEmpty()) {
@@ -163,13 +187,14 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     				  // (i.e. the journal title itself contains commas),
     				  // reinsert the comma that we lost in content.split(", ").
     				  if (k != 0) journalTitle = ", ".concat(journalTitle);
-    			  }
+    			  } 
     		  }
 
     		  // org.apache.commons.lang.StringEscapeUtils contains a method for unescaping HTML codes
     		  // (like &amp;) that may appear in the journal title
     		  journalTitle = StringEscapeUtils.unescapeHtml(journalTitle);
-
+    		  journalTitle = journalTitle.trim(); // mal-formatted identifier could end up with trailing white space
+    		  
     		  // Only put values in to metadata if they have valid content; no value will allow it to look elsewhere
     		  if ( !journalTitle.isEmpty()) am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
     		  if ( !volume.isEmpty()) am.put(MetadataField.FIELD_VOLUME, volume);
