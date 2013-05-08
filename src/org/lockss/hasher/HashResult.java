@@ -1,5 +1,5 @@
 /*
- * $Id: HashResult.java,v 1.3 2013-05-06 19:47:06 barry409 Exp $
+ * $Id: HashResult.java,v 1.4 2013-05-08 23:28:05 barry409 Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ final public class HashResult {
   }
 
   /** Compare the given bytes with ours.
-   * <code>x.hasBytes(bytes)</code> is a convenience method which
+   * <code>x.equals(bytes)</code> is a convenience method which
    * should behave the same as
    * <code>x.equals(HashResult.make(bytes))</code>.
    * @return true iff the given bytes have the same content as this
@@ -100,7 +100,7 @@ final public class HashResult {
    * @throws {@link IllegalByteArray} if <code>bytes</code> is null or
    * zero-length.
    */
-  public boolean hasBytes(byte[] bytes) {
+  public boolean equals(byte[] bytes) {
     checkBytes(bytes);
     return MessageDigest.isEqual(this.bytes, bytes);
   }
@@ -110,7 +110,7 @@ final public class HashResult {
     if (!(other instanceof HashResult)) {
       return false;
     }
-    return hasBytes(((HashResult)other).bytes);
+    return equals(((HashResult)other).bytes);
   }
 
   /** Returns a hash code value for the object, based on the content. */

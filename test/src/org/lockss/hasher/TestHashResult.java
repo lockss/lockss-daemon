@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashResult.java,v 1.3 2013-05-06 19:47:06 barry409 Exp $
+ * $Id: TestHashResult.java,v 1.4 2013-05-08 23:28:05 barry409 Exp $
  */
 
 /*
@@ -57,18 +57,18 @@ public class TestHashResult extends LockssTestCase {
     }
   }
 
-  public void testHasBytes() {
+  public void testEqualsBytes() {
     HashResult o1 = HashResult.make(bytes);
-    assertTrue(o1.hasBytes(bytes));
+    assertTrue(o1.equals(bytes));
 
     try {
-      o1.hasBytes(null);
+      o1.equals(null);
     } catch (HashResult.IllegalByteArray e) {
       // expected
     }
 
     try {
-      o1.hasBytes(empty_bytes);
+      o1.equals(empty_bytes);
     } catch (HashResult.IllegalByteArray e) {
       // expected
     }
