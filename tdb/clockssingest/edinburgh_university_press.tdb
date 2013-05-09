@@ -330,7 +330,7 @@
       eissn = 1750-0117 ;
       issnl = 1742-3600 
      >
-
+    comment[0] = Published by Cambridge in 2012
     param[journal_id] = epi
 
     au < released ; crawling ; 2004 ; Episteme Volume 1 ; 1 >
@@ -341,8 +341,6 @@
     au < released ; crawling ; 2009 ; Episteme Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Episteme Volume 7 ; 7 >
     au < released ; crawling ; 2011 ; Episteme Volume 8 ; 8 >
-    au < expected ; exists ; 2012 ; Episteme Volume 9 ; 9 >
-    au < expected ; exists ; 2013 ; Episteme Volume 10 ; 10 >
 
   }
 
