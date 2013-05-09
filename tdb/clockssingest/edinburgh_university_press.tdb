@@ -159,7 +159,7 @@
     au < released ; crawling ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
     au < released ; crawling ; 2011 ; Ben Jonson Journal Volume 18 ; 18 >
     au < released ; manifest ; 2012 ; Ben Jonson Journal Volume 19 ; 19 >
-    au < expected ; exists ; 2013 ; Ben Jonson Journal Volume 20 ; 20 >
+    au < manifest ; exists ; 2013 ; Ben Jonson Journal Volume 20 ; 20 >
 
   }
 
@@ -225,7 +225,7 @@
     au < released ; crawling ; 2010 ; Corpora Volume 5 ; 5 >
     au < released ; crawling ; 2011 ; Corpora Volume 6 ; 6 >
     au < released ; manifest ; 2012 ; Corpora Volume 7 ; 7 >
-    au < expected ; exists ; 2013 ; Corpora Volume 8 ; 8 >
+    au < manifest ; exists ; 2013 ; Corpora Volume 8 ; 8 >
 
   }
 
@@ -483,7 +483,7 @@
       param[journal_id] = iur
       
       au < released ; manifest ; 2012 ; Irish University Review Volume 42 ; 42 >
-      au < expected ; exists ; 2013 ; Irish University Review Volume 43 ; 43 >
+      au < manifest ; exists ; 2013 ; Irish University Review Volume 43 ; 43 >
   
     }
   
