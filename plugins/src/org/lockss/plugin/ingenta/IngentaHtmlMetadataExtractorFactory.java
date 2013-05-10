@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.4 2013-04-01 22:56:49 pgust Exp $
+ * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.5 2013-05-10 00:11:40 alexandraohlson Exp $
  */
 
 /*
@@ -33,12 +33,14 @@
 package org.lockss.plugin.ingenta;
 
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.extractor.MetadataField.Extractor;
 import org.lockss.plugin.*;
 
 public class IngentaHtmlMetadataExtractorFactory implements
@@ -52,10 +54,11 @@ public class IngentaHtmlMetadataExtractorFactory implements
 
   public static class IngentaHtmlMetadataExtractor 
     extends SimpleHtmlMetaTagMetadataExtractor {
-
+    
     private static MultiMap tagMap = new MultiValueMap();
     static {
    
+      // not used at the moment
       String splitMetaPattern = "(.*)[,](.*)[,](.*)[,]([^-]+)[-]([^-()]+)"; 
 
       //   <meta name="DC.creator" content="Karni, Nirit"/>
@@ -79,9 +82,17 @@ public class IngentaHtmlMetadataExtractorFactory implements
           MetadataField.FIELD_ISSN, MetadataField.extract("urn:ISSN:(.*)",1)));
      // <meta name="DC.publisher" content="Manchester University Press">
      tagMap.put("DC.publisher", MetadataField.FIELD_PUBLISHER);
+     
+     /* 
+      * Currently the extract using pattern will put an actual "null" in to the 
+      * value list for they stated key if the pattern doesn't match. 
+      * This will mean that the value cannot be later overwritten.  
+      * So for now, do this manually after cooking... 
+      */
+     /*
      // <meta name="DC.bibliographicCitation" content="Visual Culture in Britain">
      tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
-          MetadataField.FIELD_JOURNAL_TITLE,
+          ING_FIELD_JOURNAL_TITLE,
           MetadataField.extract(splitMetaPattern,1)));
       //<meta name="DCTERMS.bibliographicCitation" 
       // content="The British Journal of Development
@@ -97,7 +108,7 @@ public class IngentaHtmlMetadataExtractorFactory implements
          MetadataField.extract(splitMetaPattern,4)));
      tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
          MetadataField.FIELD_END_PAGE, 
-         MetadataField.extract(splitMetaPattern,5))); 
+         MetadataField.extract(splitMetaPattern,5))); */
      tagMap.put("crawler.fulltextlink", MetadataField.FIELD_ACCESS_URL);
     }
 
@@ -107,6 +118,42 @@ public class IngentaHtmlMetadataExtractorFactory implements
      
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
+      
+      /* 
+       * Handle the biobliographicCitation manually
+       * While this isn't particularly pretty, it is equivalent to the tagMap with extract
+       * but handles mismatches more gracefully
+       */
+      String raw_biblio = am.getRaw("DCTERMS.bibliographicCitation");
+      if (raw_biblio != null && !(raw_biblio.isEmpty())) {
+        Boolean hadAMatch = true;
+        // <meta name=\"DCTERMS.bibliographicCitation\"
+        Pattern fullPattern = Pattern.compile("(.*)[,](.*)[,](.*)[,]([^-]+)[-]([^-()]+)", Pattern.CASE_INSENSITIVE);
+        Pattern noPagePattern = Pattern.compile("(.*)[,](.*)[,](.*)[,]", Pattern.CASE_INSENSITIVE); // go for the first 3 item - check for numbers because of possible , in title
+        Matcher m = fullPattern.matcher(raw_biblio);
+        // eg. content="The British Journal of Development Disabilities, 57, 113, 123-132(10)"/>
+        if (!(m.find())) { 
+          // full pattern didn't match, see if we match shortened pattern
+          m = noPagePattern.matcher(raw_biblio);
+          // eg. content=\"Bronte Studies, 37, 4, iii"</meta>  
+          hadAMatch = m.find();
+        }
+        if (hadAMatch) {
+          // use what we did find with the matcher - we know we at least had 3 groups... 
+          if (!(m.group(1)).isEmpty()) { am.put(MetadataField.FIELD_JOURNAL_TITLE, m.group(1)); }
+          if (!(m.group(2)).isEmpty()) { am.put(MetadataField.FIELD_VOLUME,  m.group(2));}
+          if (!(m.group(3)).isEmpty()) { am.put(MetadataField.FIELD_ISSUE,  m.group(3));}
+          if (m.groupCount() > 3) {
+            // we matched the full pattern, so we have groups 4&5 as well
+            if (!(m.group(4)).isEmpty()) { am.put(MetadataField.FIELD_START_PAGE,  m.group(4));}
+            if (!(m.group(5)).isEmpty()) { am.put(MetadataField.FIELD_END_PAGE,  m.group(5));}
+          }
+        } else {
+          // eg  content="Visual Culture in Britain"/>
+          // we can't really guess - the title might have commas, just put the whole thing in....
+          am.put(MetadataField.FIELD_JOURNAL_TITLE, raw_biblio);
+        }
+      }     
       return am;
     }
   }

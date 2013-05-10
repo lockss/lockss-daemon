@@ -28,13 +28,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ingenta;
 
-import java.io.*;
 import java.util.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
@@ -195,7 +193,7 @@ public class TestIngentaHtmlMetadataExtractorFactory extends LockssTestCase {
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -207,6 +205,51 @@ public class TestIngentaHtmlMetadataExtractorFactory extends LockssTestCase {
     assertNull(md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertNull(md.get(MetadataField.FIELD_DATE));
     assertEquals(1, md.rawSize());
+  }
+  
+  // bibliographicCitation that won't match extraction pattern
+  // and make sure that it will handle comma's in the title....
+  String oddBiblioContent = 
+      "<meta name=\"DC.title\" content=\"Editorial\"/>" +
+          "<meta name=\"DC.type\" scheme=\"DCMIType\" content=\"Text\"/>" +
+          "<meta name=\"DC.creator\" content=\"Pearson, Sara L\"/>" +
+          "<meta name=\"DC.publisher\" content=\"Maney Publishing\"/>" +
+          "<meta name=\"DC.identifier\" scheme=\"URI\" content=\"info:doi/10.1179/1474893212Z.00000000046\"/>" +
+          "<meta name=\"DCTERMS.issued\" content=\"November 2012\"/>" +
+          "<meta name=\"DCTERMS.isPartOf\" scheme=\"URI\" content=\"urn:ISSN:1474-8932\"/>" +
+          "<meta name=\"DCTERMS.bibliographicCitation\" content=\"Bronte, Wolf, and Blah Studies, 37, 4, iii\"/>";  
+  String shortBiblioContent =
+      "<meta name=\"DC.title\" content=\"Editorial\"/>" +
+          "<meta name=\"DCTERMS.bibliographicCitation\" content=\"Just a Title so Move Along\"/>";  
+
+  public void testOddBiblioContent() throws Exception {
+    
+    String goodTitle = "Editorial";
+    
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, hau);
+    cu.setContent(oddBiblioContent);
+    cu.setContentSize(oddBiblioContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    FileMetadataExtractor me = new IngentaHtmlMetadataExtractorFactory.IngentaHtmlMetadataExtractor();
+    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals("Bronte, Wolf, and Blah Studies", md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    
+    // try other content as well
+    cu.setContent(shortBiblioContent);
+    cu.setContentSize(shortBiblioContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    List<ArticleMetadata> mdlist2 = mle.extract(MetadataTarget.Any(), cu);
+    assertNotEmpty(mdlist2);
+    md = mdlist2.get(0);
+    assertNotNull(md);
+    assertEquals("Just a Title so Move Along", md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    
   }
 
   /**
