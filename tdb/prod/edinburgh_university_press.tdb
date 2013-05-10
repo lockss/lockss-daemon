@@ -427,6 +427,8 @@
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = epi
       implicit < status ; year ; name ; param[volume_name] >
+      
+      comment[moved] = moved to Cambridge U Press as of 2012. Previous issues still online.
 
       au < released ; 2004 ; Episteme Volume 1 ; 1 >
       au < released ; 2005 ; Episteme Volume 2 ; 2 >
@@ -436,8 +438,6 @@
       au < released ; 2009 ; Episteme Volume 6 ; 6 >
       au < released ; 2010 ; Episteme Volume 7 ; 7 >
       au < released ; 2011 ; Episteme Volume 8 ; 8 >
-      au < expected ; 2012 ; Episteme Volume 9 ; 9 >
-      au < expected ; 2013 ; Episteme Volume 10 ; 10 >
 
     }
 
