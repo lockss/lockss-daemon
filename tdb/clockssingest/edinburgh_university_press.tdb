@@ -403,8 +403,9 @@
     {
     
     param[journal_id] = hac
-    comment[changed_name] = called History and Computing from 1994 to 2002
-    comment[continued_by] = 1753-8548 International Journal of Humanities and Arts Computing
+    comment[continued_by] = 1753-8548
+    comment[0] = names changes to International Journal of Humanities and Arts Computing in 2007
+    comment[1] = History and Computing from 1994 to 2002
     
     au < released ; crawling ; 1994 ; History and Computing Volume 6 (1994) ; 6 >
     au < released ; crawling ; 1995 ; History and Computing Volume 7 (1995) ; 7 >
@@ -432,8 +433,8 @@
     {
     
     param[journal_id] = ijhac
-    comment[changed_name] = formerly History and Computing until 2002
-    comment[0] = old journal id volumes consolidated with new journal id volumes
+    comment[continued_from] = 0957-0144
+    comment[0] = journal id changes to ijhac from hac
 
     au < released ; crawling ; 2007 ; International Journal of Humanities and Arts Computing Volume 1 (2007) ; 1 >
     au < released ; crawling ; 2008 ; International Journal of Humanities and Arts Computing Volume 2 (2008) ; 2 >
@@ -586,8 +587,38 @@
       eissn = 1755-1749 ;
       issnl = 1748-538X 
      >
+     
+   {
+    param[journal_id] = sesh
+    comment[0] = name changes to Journal of Scottish Historical Studies Volume 21
 
+    au < manifest ; exists ; 1981 ; Scottish Economic and Social History Volume 1 ; 21 >
+    au < manifest ; exists ; 1982 ; Scottish Economic and Social History Volume 2 ; 22 >
+    au < manifest ; exists ; 1983 ; Scottish Economic and Social History Volume 3 ; 23 >
+    au < manifest ; exists ; 1984 ; Scottish Economic and Social History Volume 4 ; 24 >
+    au < manifest ; exists ; 1985 ; Scottish Economic and Social History Volume 5 ; 25 >
+    au < manifest ; exists ; 1986 ; Scottish Economic and Social History Volume 6 ; 26 >
+    au < manifest ; exists ; 1987 ; Scottish Economic and Social History Volume 7 ; 27 >
+    au < manifest ; exists ; 1988 ; Scottish Economic and Social History Volume 8 ; 28 >
+    au < manifest ; exists ; 1989 ; Scottish Economic and Social History Volume 9 ; 29 >
+    au < manifest ; exists ; 1990 ; Scottish Economic and Social History Volume 10 ; 30 >
+    au < manifest ; exists ; 1991 ; Scottish Economic and Social History Volume 11 ; 31 >
+    au < manifest ; exists ; 1992 ; Scottish Economic and Social History Volume 12 ; 32 >
+    au < manifest ; exists ; 1993 ; Scottish Economic and Social History Volume 13 ; 33 >
+    au < manifest ; exists ; 1994 ; Scottish Economic and Social History Volume 14 ; 33 >
+    au < manifest ; exists ; 1995 ; Scottish Economic and Social History Volume 15 ; 33 >
+    au < manifest ; exists ; 1996 ; Scottish Economic and Social History Volume 16 ; 33 >
+    au < manifest ; exists ; 1997 ; Scottish Economic and Social History Volume 17 ; 33 >
+    au < manifest ; exists ; 1998 ; Scottish Economic and Social History Volume 18 ; 33 >
+    au < manifest ; exists ; 1999 ; Scottish Economic and Social History Volume 19 ; 33 >
+    au < manifest ; exists ; 2000 ; Scottish Economic and Social History Volume 20 ; 33 >
+    
+
+  }
+
+{
     param[journal_id] = jshs
+    comment[0] = formerly Scottish Economic and Social History 
 
     au < released ; crawling ; 2001 ; Journal of Scottish Historical Studies Volume 21 ; 21 >
     au < released ; crawling ; 2002 ; Journal of Scottish Historical Studies Volume 22 ; 22 >
@@ -605,6 +636,7 @@
 
   }
 
+  }
   {
 
     title <
@@ -840,30 +872,60 @@
       eissn = 1755-2028 ;
       issnl = 1471-5767 
      >
-
+     
+  {
+    param[journal_id] = gas
+    comment[0] = Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
+    
+    au < manifest ; exists ; 1969 ; Glasgow Archaeological Journal Volume 1 ; 1 >
+    au < manifest ; exists ; 1971 ; Glasgow Archaeological Journal Volume 2 ; 2 >
+    au < manifest ; exists ; 1974 ; Glasgow Archaeological Journal Volume 3 ; 3 >
+    au < manifest ; exists ; 1976 ; Glasgow Archaeological Journal Volume 4 ; 4 >
+    au < manifest ; exists ; 1978 ; Glasgow Archaeological Journal Volume 5 ; 5 >
+    au < manifest ; exists ; 1979 ; Glasgow Archaeological Journal Volume 6 ; 6 >
+    au < manifest ; exists ; 1980 ; Glasgow Archaeological Journal Volume 7 ; 7 >
+    au < manifest ; exists ; 1981 ; Glasgow Archaeological Journal Volume 8 ; 8 >
+    au < manifest ; exists ; 1982 ; Glasgow Archaeological Journal Volume 9 ; 9 >
+    au < manifest ; exists ; 1983 ; Glasgow Archaeological Journal Volume 10 ; 10 >
+    au < manifest ; exists ; 1984 ; Glasgow Archaeological Journal Volume 11 ; 11 >
+    au < manifest ; exists ; 1985 ; Glasgow Archaeological Journal Volume 12 ; 12 >
+    au < manifest ; exists ; 1986 ; Glasgow Archaeological Journal Volume 13 ; 13 >
+    au < manifest ; exists ; 1987 ; Glasgow Archaeological Journal Volume 14 ; 14 >
+    au < manifest ; exists ; 1988 ; Glasgow Archaeological Journal Volume 15 ; 15 >
+    au < manifest ; exists ; 1989 ; Glasgow Archaeological Journal Volume 16 ; 16 >
+    au < manifest ; exists ; 1991 ; Glasgow Archaeological Journal Volume 17 ; 17 >
+    au < manifest ; exists ; 1993 ; Glasgow Archaeological Journal Volume 18 ; 18 >
+    au < manifest ; exists ; 1994 ; Glasgow Archaeological Journal Volume 19 ; 19 >
+    au < manifest ; exists ; 1996 ; Glasgow Archaeological Journal Volume 20 ; 20 >
+    au < manifest ; exists ; 1998 ; Glasgow Archaeological Journal Volume 21 ; 21 >
+  
+  }
+  
+  {
     param[journal_id] = saj
-
-    au < released ; crawling ; 1969 ; Scottish Archaeological Journal Volume 1 ; 1 >
-    au < released ; crawling ; 1971 ; Scottish Archaeological Journal Volume 2 ; 2 >
-    au < released ; crawling ; 1974 ; Scottish Archaeological Journal Volume 3 ; 3 >
-    au < released ; crawling ; 1976 ; Scottish Archaeological Journal Volume 4 ; 4 >
-    au < released ; crawling ; 1978 ; Scottish Archaeological Journal Volume 5 ; 5 >
-    au < released ; crawling ; 1979 ; Scottish Archaeological Journal Volume 6 ; 6 >
-    au < released ; crawling ; 1980 ; Scottish Archaeological Journal Volume 7 ; 7 >
-    au < released ; crawling ; 1981 ; Scottish Archaeological Journal Volume 8 ; 8 >
-    au < released ; crawling ; 1982 ; Scottish Archaeological Journal Volume 9 ; 9 >
-    au < released ; crawling ; 1983 ; Scottish Archaeological Journal Volume 10 ; 10 >
-    au < released ; crawling ; 1984 ; Scottish Archaeological Journal Volume 11 ; 11 >
-    au < released ; crawling ; 1985 ; Scottish Archaeological Journal Volume 12 ; 12 >
-    au < released ; crawling ; 1986 ; Scottish Archaeological Journal Volume 13 ; 13 >
-    au < released ; crawling ; 1987 ; Scottish Archaeological Journal Volume 14 ; 14 >
-    au < released ; crawling ; 1988 ; Scottish Archaeological Journal Volume 15 ; 15 >
-    au < released ; crawling ; 1989 ; Scottish Archaeological Journal Volume 16 ; 16 >
-    au < released ; crawling ; 1991 ; Scottish Archaeological Journal Volume 17 ; 17 >
-    au < released ; crawling ; 1993 ; Scottish Archaeological Journal Volume 18 ; 18 >
-    au < released ; crawling ; 1994 ; Scottish Archaeological Journal Volume 19 ; 19 >
-    au < released ; crawling ; 1996 ; Scottish Archaeological Journal Volume 20 ; 20 >
-    au < released ; crawling ; 1998 ; Scottish Archaeological Journal Volume 21 ; 21 >
+    comment[0] = Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
+    
+    au < down ; crawling ; 1969 ; Scottish Archaeological Journal Volume 1 ; 1 >
+    au < down ; crawling ; 1971 ; Scottish Archaeological Journal Volume 2 ; 2 >
+    au < down ; crawling ; 1974 ; Scottish Archaeological Journal Volume 3 ; 3 >
+    au < down ; crawling ; 1976 ; Scottish Archaeological Journal Volume 4 ; 4 >
+    au < down ; crawling ; 1978 ; Scottish Archaeological Journal Volume 5 ; 5 >
+    au < down ; crawling ; 1979 ; Scottish Archaeological Journal Volume 6 ; 6 >
+    au < down ; crawling ; 1980 ; Scottish Archaeological Journal Volume 7 ; 7 >
+    au < down ; crawling ; 1981 ; Scottish Archaeological Journal Volume 8 ; 8 >
+    au < down ; crawling ; 1982 ; Scottish Archaeological Journal Volume 9 ; 9 >
+    au < down ; crawling ; 1983 ; Scottish Archaeological Journal Volume 10 ; 10 >
+    au < down ; crawling ; 1984 ; Scottish Archaeological Journal Volume 11 ; 11 >
+    au < down ; crawling ; 1985 ; Scottish Archaeological Journal Volume 12 ; 12 >
+    au < down ; crawling ; 1986 ; Scottish Archaeological Journal Volume 13 ; 13 >
+    au < down ; crawling ; 1987 ; Scottish Archaeological Journal Volume 14 ; 14 >
+    au < down ; crawling ; 1988 ; Scottish Archaeological Journal Volume 15 ; 15 >
+    au < down ; crawling ; 1989 ; Scottish Archaeological Journal Volume 16 ; 16 >
+    au < down ; crawling ; 1991 ; Scottish Archaeological Journal Volume 17 ; 17 >
+    au < down ; crawling ; 1993 ; Scottish Archaeological Journal Volume 18 ; 18 >
+    au < down ; crawling ; 1994 ; Scottish Archaeological Journal Volume 19 ; 19 >
+    au < down ; crawling ; 1996 ; Scottish Archaeological Journal Volume 20 ; 20 >
+    au < down ; crawling ; 1998 ; Scottish Archaeological Journal Volume 21 ; 21 >
     au < released ; crawling ; 2000 ; Scottish Archaeological Journal Volume 22 ; 22 >
     au < released ; crawling ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 >
     au < released ; crawling ; 2002 ; Scottish Archaeological Journal Volume 24 ; 24 >
@@ -875,9 +937,9 @@
     au < released ; crawling ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
     au < released ; crawling ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
     au < released ; crawling ; 2010 ; Scottish Archaeological Journal Volume 32 ; 32 >
-
   }
-
+  }
+   
   {
 
     title <
