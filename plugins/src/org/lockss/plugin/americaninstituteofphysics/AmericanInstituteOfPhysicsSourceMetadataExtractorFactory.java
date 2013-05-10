@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanInstituteOfPhysicsSourceMetadataExtractorFactory.java,v 1.1 2012-03-09 00:23:56 dylanrhodes Exp $
+ * $Id: AmericanInstituteOfPhysicsSourceMetadataExtractorFactory.java,v 1.2 2013-05-10 20:14:05 alexandraohlson Exp $
  */
 
 /*
@@ -99,6 +99,7 @@ public class AmericanInstituteOfPhysicsSourceMetadataExtractorFactory
 	      // normal journal article schema
 	      nodeMap.put("/article/front/titlegrp/title", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/article/front/authgrp/author", AUTHOR_VALUE);
+	      nodeMap.put("/article/front/pubfront/journal",  XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/article/front/pubfront/journal/@issn", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/article/front/pubfront/volume", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/article/front/pubfront/history/published/@date", XmlDomMetadataExtractor.TEXT_VALUE);
@@ -118,6 +119,7 @@ public class AmericanInstituteOfPhysicsSourceMetadataExtractorFactory
 	      // normal journal article schema
 	      xpathMap.put("/article/front/titlegrp/title", MetadataField.FIELD_ARTICLE_TITLE);
 		  xpathMap.put("/article/front/authgrp/author", MetadataField.FIELD_AUTHOR);
+		  xpathMap.put("/article/front/pubfront/journal", MetadataField.FIELD_JOURNAL_TITLE);
 		  xpathMap.put("/article/front/pubfront/journal/@issn", MetadataField.FIELD_ISSN);
 		  xpathMap.put("/article/front/pubfront/volume", MetadataField.FIELD_VOLUME);
 		  xpathMap.put("/article/front/pubfront/history/published/@date", MetadataField.FIELD_DATE);

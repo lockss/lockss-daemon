@@ -46,7 +46,6 @@ import org.lockss.plugin.simulated.*;
 public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestAmericanInstituteOfPhysicsMetadataExtractorFactory");
 
-  private SimulatedArchivalUnit sau;	// Simulated AU to generate content
   private ArchivalUnit hau;		//BloomsburyQatar AU
   private MockLockssDaemon theDaemon;
 
@@ -54,11 +53,10 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
     "org.lockss.plugin.americaninstituteofphysics.ClockssAmericanInstituteOfPhysicsSourcePlugin";
 
   private static String BASE_URL = "http://www.example.com";
-  private static String SIM_ROOT = BASE_URL + "cgi/reprint/";
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = setUpDiskSpace();
+    String tempDirPath = setUpDiskSpace();//even though you don't use path, you need to call method
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
@@ -66,30 +64,14 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
 
-    sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
-					     simAuConfig(tempDirPath));
     hau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, aipAuConfig());
   }
 
   public void tearDown() throws Exception {
-    sau.deleteContentTree();
     theDaemon.stopDaemon();
     super.tearDown();
   }
 
-  Configuration simAuConfig(String rootPath) {
-    Configuration conf = ConfigManager.newConfiguration();
-    conf.put("root", rootPath);
-    conf.put("base_url", SIM_ROOT);
-    conf.put("year", "2012");
-    conf.put("depth", "2");
-    conf.put("branch", "3");
-    conf.put("numFiles", "7");
-    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
-				SimulatedContentGenerator.FILE_TYPE_HTML));
-    conf.put("binFileSize", "7");
-    return conf;
-  }
 
   Configuration aipAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
@@ -109,6 +91,7 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
   ArrayList<String> goodKeywords = new ArrayList<String>();
   String goodDescription = "Summary";
   String goodRights = "Rights";
+  String goodJournal = "Fake Journal";
   
   String goodContent =
 	  "<article xmlns:m=\"http://www.w3.org/1998/Math/MathML\">"+
@@ -176,7 +159,7 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -192,6 +175,7 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
     assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
     assertEquals(goodDescription, md.get(MetadataField.DC_FIELD_DESCRIPTION));
     assertEquals(goodRights, md.get(MetadataField.DC_FIELD_RIGHTS));
+    assertEquals(goodJournal, md.get(MetadataField.FIELD_JOURNAL_TITLE));
   }
   
   String badContent =
@@ -212,7 +196,7 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -227,45 +211,54 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
     assertNull(md.get(MetadataField.FIELD_DATE));
   }
   
-  /**
-   * Inner class that where a number of Archival Units can be created
-   *
-   */
-  public static class MySimulatedPlugin extends SimulatedPlugin {
-    public ArchivalUnit createAu0(Configuration auConfig)
-	throws ArchivalUnit.ConfigurationException {
-      ArchivalUnit au = new SimulatedArchivalUnit(this);
-      au.setConfiguration(auConfig);
-      return au;
-    }
-
-    public SimulatedContentGenerator getContentGenerator(Configuration cf, String fileRoot) {
-      return new MySimulatedContentGenerator(fileRoot);
-    }
-  }
+  String missingJournalContent =
+      "<article xmlns:m=\"http://www.w3.org/1998/Math/MathML\">"+
+      "<front>"+
+      "<pubfront><volume>Volume</volume>"+
+      "</pubfront>"+
+      "</front>"+
+      "</article>";
+  String emptyJournalContent =
+      "<article xmlns:m=\"http://www.w3.org/1998/Math/MathML\">"+
+      "<front>"+
+      "<pubfront><journal coden=\"XXXX\" issn=\"5555-5555\" jcode=\"SE\" short=\"S. Empty\"></journal><volume>Volume</volume>"+
+      "</pubfront>"+
+      "</front>"+
+      "</article>";
   
-  /**
-   * Inner class to create a html source code simulated content
-   */
-  public static class MySimulatedContentGenerator extends	SimulatedContentGenerator {
-    protected MySimulatedContentGenerator(String fileRoot) {
-      super(fileRoot);
-    }
+  public void testExtractJournalContent() throws Exception {
 
-    public String getHtmlFileContent(String filename, int fileNum, int depth, int branchNum, boolean isAbnormal) {
-			
-      String file_content = "<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
-			
-      file_content += "  <meta name=\"lockss.filenum\" content=\""+ fileNum + "\">\n";
-      file_content += "  <meta name=\"lockss.depth\" content=\"" + depth + "\">\n";
-      file_content += "  <meta name=\"lockss.branchnum\" content=\"" + branchNum + "\">\n";			
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, hau);
+    cu.setContent(missingJournalContent);
+    cu.setContentSize(missingJournalContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
+    FileMetadataExtractor me =
+        new AmericanInstituteOfPhysicsSourceMetadataExtractorFactory.AIPXmlMetadataExtractor();
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    FileMetadataListExtractor mle =
+        new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
 
-      file_content += getHtmlContent(fileNum, depth, branchNum,	isAbnormal);
-      file_content += "\n</BODY></HTML>";
-      logger.debug2("MySimulatedContentGenerator.getHtmlFileContent: "
-		    + file_content);
-
-      return file_content;
-    }
+    assertEquals(null, md.get(MetadataField.FIELD_ISSN));
+    assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(null, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    
+    cu.setContent(emptyJournalContent);
+    cu.setContentSize(emptyJournalContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
+    List<ArticleMetadata> md2list = mle.extract(MetadataTarget.Any(), cu);
+    assertNotEmpty(md2list);
+    ArticleMetadata md2 = md2list.get(0);
+    assertNotNull(md2);
+    
+    assertEquals(goodIssn, md2.get(MetadataField.FIELD_ISSN));
+    assertEquals(goodVolume, md2.get(MetadataField.FIELD_VOLUME));
+    assertEquals(null, md2.get(MetadataField.FIELD_JOURNAL_TITLE));
   }
+
 }
