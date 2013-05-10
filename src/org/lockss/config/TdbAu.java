@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.25 2013-05-08 16:27:10 tlipkis Exp $
+ * $Id: TdbAu.java,v 1.26 2013-05-10 14:35:49 fergaloy-sf Exp $
  */
 
 /*
@@ -742,8 +742,8 @@ public class TdbAu implements BibliographicItem {
    */
   public String getPrintIsbn() {
     String printIsbn = (attrs == null) ? null : attrs.get("isbn");
-    if (printIsbn != null) {
-      logger.debug("Found " + printIsbn + " for " + getName());
+    if (logger.isDebug3() && printIsbn != null) {
+      logger.debug3("Found " + printIsbn + " for " + getName());
     }
     return printIsbn;
   }
@@ -755,8 +755,8 @@ public class TdbAu implements BibliographicItem {
    */
   public String getEisbn() {
     String eisbn = (attrs == null) ? null : attrs.get("eisbn");
-    if (eisbn != null) {
-      logger.debug("Found " + eisbn + " for " + getName());
+    if (logger.isDebug3() && eisbn != null) {
+      logger.debug3("Found " + eisbn + " for " + getName());
     }
     return eisbn;
   }
