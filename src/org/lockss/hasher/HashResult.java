@@ -1,5 +1,5 @@
 /*
- * $Id: HashResult.java,v 1.4 2013-05-08 23:28:05 barry409 Exp $
+ * $Id: HashResult.java,v 1.5 2013-05-10 17:00:21 barry409 Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ final public class HashResult {
    * @throws {@link IllegalByteArray} if <code>bytes</code> is null or
    * zero-length.
    */
-  public boolean equals(byte[] bytes) {
+  public boolean equalsBytes(byte[] bytes) {
     checkBytes(bytes);
     return MessageDigest.isEqual(this.bytes, bytes);
   }
@@ -110,7 +110,7 @@ final public class HashResult {
     if (!(other instanceof HashResult)) {
       return false;
     }
-    return equals(((HashResult)other).bytes);
+    return equalsBytes(((HashResult)other).bytes);
   }
 
   /** Returns a hash code value for the object, based on the content. */
