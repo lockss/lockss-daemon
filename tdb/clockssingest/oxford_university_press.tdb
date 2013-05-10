@@ -1413,6 +1413,8 @@
 
     param[base_url] = http://annonc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    comment[notReady] = V24 has many 509 errors.
 
     au < manifest ; exists ; 1990 ; Annals of Oncology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1991 ; Annals of Oncology Volume 2 ; 2 ; >
@@ -1437,7 +1439,7 @@
     au < released ; crawling ; 2010 ; Annals of Oncology Volume 21 ; 21 ; >
     au < released ; crawling ; 2011 ; Annals of Oncology Volume 22 ; 22 ; >
     au < released ; manifest ; 2012 ; Annals of Oncology Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2013; Annals of Oncology Volume 24 ; 24 ; >
+    au < notReady ; exists ; 2013; Annals of Oncology Volume 24 ; 24 ; >
 
     }
 
