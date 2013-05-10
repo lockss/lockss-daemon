@@ -1,5 +1,5 @@
 /*
- * $Id: HashBlockComparerImpl.java,v 1.2 2013-05-06 20:36:06 barry409 Exp $
+ * $Id: HashBlockComparerImpl.java,v 1.3 2013-05-10 18:26:57 barry409 Exp $
  */
 
 /*
@@ -32,6 +32,8 @@
 
 package org.lockss.poller.v3;
 
+import java.util.*;
+
 import org.lockss.hasher.HashBlock;
 import org.lockss.hasher.HashResult;
 import org.lockss.protocol.VoteBlock;
@@ -43,66 +45,123 @@ import org.lockss.util.Logger;
  * VoteBlock} objects.</p>
  */
 class HashBlockComparerImpl implements VoteBlockTallier.HashBlockComparer {
-  private final HashBlock.Version[] hbVersions;
+  /** A map from the poller's plain hash to a Version with that hash. */
+  private final Map<HashResult, HashBlock.Version> plainMap;
+  /** The index mapper for this poll. */
   private final V3Poller.HashIndexer hashIndexer;
 
-  private static final Logger log = Logger.getLogger("HashBlockComparerImpl");
+  private static final Logger log = Logger.getLogger(VoteBlockTallier.class);
+
+  private HashBlockComparerImpl(Map<HashResult, HashBlock.Version> plainMap,
+				V3Poller.HashIndexer hashIndexer) {
+    this.plainMap = plainMap;
+    this.hashIndexer = hashIndexer;
+  }
 
   /**
    * <p>Create a {@link HashBlockComparer} for the given {@link
    * HashBlock}.</p>
+   * @param hashBlock The {@link HashBlock} with the poller's versions
+   * of the file and various hashes of that version.
+   * @param hashIndexer The {@link V3Poller.HashIndexer} to map a
+   * voter's index into the collection of hashes in <code>hashBlock</code>.
+   * @throws {@link HashResult.IllegalByteArray} if any version in
+   * <code>hashBlock</code> has no hash error, and an unacceptable
+   * value for its plain hash. This should not happen, and indicates a
+   * defect in the hasher.
    */
   HashBlockComparerImpl(HashBlock hashBlock,
 			V3Poller.HashIndexer hashIndexer) {
-    hbVersions = hashBlock.getVersions();
+    this(makePlainMap(hashBlock, hashIndexer), hashIndexer);
+  }
+
+  // If the HashBlock does not have a hashing error but does not have
+  // valid bytes, this class may raise IllegalByteArray. That should
+  // not happen unless there is a bug in the hasher code. No attempt
+  // is made to catch it at this level, and the poll will terminate.
+
+  // If the VoteBlock does not have a hashing error but does not have
+  // valid bytes, the voter may be a Black Hat trying to cause
+  // mayhem. We catch and recover from that situation.
+
+  // Make a Map from the plain hash of each version to that version.
+  private static Map<HashResult, HashBlock.Version>
+    makePlainMap(HashBlock hashBlock,
+		 V3Poller.HashIndexer hashIndexer) {
+    Map<HashResult, HashBlock.Version> plainMap =
+      new HashMap<HashResult, HashBlock.Version>();
+    HashBlock.Version[] hbVersions = hashBlock.getVersions();
     for (int versionIndex = 0; versionIndex < hbVersions.length;
 	 versionIndex++) {
       HashBlock.Version hbVersion = hbVersions[versionIndex];
       if (hbVersion.getHashError() != null) {
-	// Only log the hash error in the poller at
+	// Only log the hash error in the HashBlock at
 	// initialize. There's probably a more detailed error in the
 	// log.
 	log.warning("HashBlock version "+versionIndex+" had hashing error.");
-      } 
+      } else {
+	HashResult plainHash = hashIndexer.getPlainHash(hbVersion);
+	
+	// We could check for a plainHash already in the map, and
+	// check that all the nonced hashes match. If they do not,
+	// something odd is happening in the hasher. But it's not
+	// worth it.
+	plainMap.put(plainHash, hbVersion);
+      }
     }
-    this.hashIndexer = hashIndexer;
+    // todo(bhayes): Move logging of PARAM_LOG_UNIQUE_VERSIONS to here?
+    return plainMap;
   }
 
   /**
    * <p>Compare the given {@link VoteBlock} to the {@link HashBlock}
    * provided at construction.</p>
-   * @return true iff any version of the participant's hash matches
-   * any version of the poller's expected hashes for that
-   * participant.
+   * @param voteBlock The vote returned by the voter.
+   * @param participantIndex The voter's index in this poll.
+   * @return true iff some version of the participant's hash matches
+   * any version of the poller's hashes for that participant.
+   * @throws {@link HashResult.IllegalByteArray} if the {@link
+   * HashBlock} supplied at construction is found to have a version
+   * with no hashing error, but a disallowed value for some nonced
+   * hash. This should not happen, and indicates a defect in the
+   * hasher.
    */
   public boolean compare(VoteBlock voteBlock, int participantIndex) {
-    // Note: At worst, n*m byte[] compares to notice a non-match. In
-    // reality: "versioned voting" needs to be improved, and the
-    // "any match of any version" condition needs to be refined.
-    for (HashBlock.Version hbVersion : hbVersions) {
-      if (hbVersion.getHashError() == null) {
-	// todo(bhayes): the participantIndex could be removed if
-	// HashBlock could return versions keyed by ParticipantUserData.
-	HashResult hbHash = hashIndexer.getParticipantHash(hbVersion,
-							   participantIndex);
-	VoteBlock.Version[] vbVersions = voteBlock.getVersions();
-	for (int versionIndex = 0; versionIndex < vbVersions.length;
-	     versionIndex++) {
-	  VoteBlock.Version vbVersion = vbVersions[versionIndex];
-	  if (vbVersion.getHashError()) {
-	    log.warning("Voter version "+versionIndex+
-			" had a hashing error.");
-	  } else {
-	    try {
-	      HashResult vbHash = HashResult.make(vbVersion.getHash());
-	      if (hbHash.equals(vbHash)) {
-		return true;
-	      }
-	    } catch (HashResult.IllegalByteArray e) {
-	      log.warning("Voter version "+versionIndex+
-			  " had an IllegalByteArray.");
+    VoteBlock.Version[] vbVersions = voteBlock.getVersions();
+    for (int versionIndex = 0; versionIndex < vbVersions.length;
+	 versionIndex++) {
+      VoteBlock.Version vbVersion = vbVersions[versionIndex];
+      if (vbVersion.getHashError()) {
+	log.warning("Voter "+participantIndex+" version "+versionIndex+
+		    " had a hashing error.");
+      } else {
+	// Look up the version's plain hash in the map of the poller's
+	// known plain hashes.
+	HashResult voterPlainHash;
+	try {
+	  voterPlainHash = HashResult.make(vbVersion.getPlainHash());
+	} catch (HashResult.IllegalByteArray e) {
+	  log.warning("Voter "+participantIndex+" version "+versionIndex+
+		      " had an IllegalByteArray plain hash.");
+	  continue;
+	}
+	HashBlock.Version hbVersion = plainMap.get(voterPlainHash);
+	if (hbVersion != null) {
+	  HashResult pollerNoncedHash =
+	    hashIndexer.getParticipantHash(hbVersion, participantIndex);
+	  try {
+	    if (pollerNoncedHash.equalsBytes(vbVersion.getHash())) {
+	      return true;
 	    }
+	  } catch (HashResult.IllegalByteArray e) {
+	    log.warning("Voter "+participantIndex+" version "+versionIndex+
+			" had an IllegalByteArray.");
+	    continue;
 	  }
+	  // The voter and poller match plain hash, but not nonced
+	  // hash.
+	  log.warning("Voter "+participantIndex+" version "+versionIndex+
+		      " matched plain but not nonced hash.");
 	}
       }
     }
