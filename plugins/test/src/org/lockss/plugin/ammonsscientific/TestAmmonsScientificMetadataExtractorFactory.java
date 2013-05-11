@@ -1,4 +1,4 @@
-/* $Id: TestAmmonsScientificMetadataExtractorFactory.java,v 1.3 2013-02-28 17:33:46 aishizaki Exp $
+/* $Id: TestAmmonsScientificMetadataExtractorFactory.java,v 1.4 2013-05-11 02:35:05 ldoan Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -28,22 +28,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ammonsscientific;
 
-import java.io.*;
 import java.util.*;
-import java.util.regex.*;
-
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
-/**
+/*
  * One of the articles used to get the html source for this plugin is:
  * http://www.amsciepub.com/doi/abs/10.2466/07.17.21.PMS.113.6.703-714 
  */
@@ -92,7 +85,6 @@ public class TestAmmonsScientificMetadataExtractorFactory extends LockssTestCase
     conf.put("numFiles", "7");
     conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
 				SimulatedContentGenerator.FILE_TYPE_HTML));
-//     conf.put("default_article_mime_type", "application/pdf");
     conf.put("binFileSize", "7");
     return conf;
   }
@@ -107,7 +99,8 @@ public class TestAmmonsScientificMetadataExtractorFactory extends LockssTestCase
   
   String goodDate = "Date";
   String dateScheme = "WTN8601";
-  String goodTitle = "Title";
+  String goodArticleTitle = "Article Title";
+  String goodJournalTitle = "Paa and Moo Journal";
   String goodPublisher = "Publisher";
   String goodSubject = "Subject";
   String goodDescription = "Summary";
@@ -116,7 +109,7 @@ public class TestAmmonsScientificMetadataExtractorFactory extends LockssTestCase
   String doiScheme = "doi";
   String goodDoi = "10.2446/12.34.56";
   String goodLanguage = "Language";
-  String goodRights = "Rights";
+  String goodRights = "\u00a9 Paa and Moo Journal 2011"; // Copyright unicode
   String goodCoverage = "Coverage";
   String authorA = "A. Author";
   String authorB = "B. Author";
@@ -127,16 +120,26 @@ public class TestAmmonsScientificMetadataExtractorFactory extends LockssTestCase
  
   //Unfortunately, it has to be on one line for an accurate representation (and to work)
   String goodContent =
-
-		"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n" +
-		"<html>\n" +
-		"<head>\n" +	    
-		"<link rel=\"schema.DC\" href=\"http://purl.org/DC/elements/1.0/\">" +
-	        "</link><meta name=\"dc.Title\" content=\""+goodTitle+"\"></meta><meta name=\"dc.Creator\" content=\""+authorA+"\"></meta><meta name=\"dc.Creator\" content=\""+authorB+"\"></meta><meta name=\"dc.Creator\" content=\""+authorC+"\"></meta><meta name=\"dc.Creator\" content=\""+authorD+"\"></meta><meta name=\"dc.Description\" content=\""+goodDescription+"\"></meta><meta name=\"dc.Publisher\" content=\""+goodPublisher+"\"></meta><meta name=\"dc.Date\" scheme=\""+dateScheme+"\" content=\""+goodDate+"\"></meta><meta name=\"dc.Type\" content=\""+goodType+"\"></meta><meta name=\"dc.Format\" content=\""+goodFormat+
-	        "\"></meta>" +"</meta><meta name=\"dc.Language\" content=\""+goodLanguage+
-	        "\"></meta><meta name=\"dc.Coverage\" content=\""+goodCoverage+"\"></meta><meta name=\"dc.Rights\" content=\""+goodRights+"\"></meta>"+
-		"\n</head>\n" +
-		"</html>";
+      "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" "
+        + "\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">"
+        + "<html>"
+	+ "<head>"	    
+	+ "<link rel=\"schema.DC\" href=\"http://purl.org/DC/elements/1.0/\"></link>"
+	+ "<meta name=\"dc.Title\" content=\"" + goodArticleTitle + "\"></meta>"
+	+ "<meta name=\"dc.Creator\" content=\""+ authorA + "\"></meta>"
+	+ "<meta name=\"dc.Creator\" content=\"" + authorB + "\"></meta>"
+	+ "<meta name=\"dc.Creator\" content=\"" + authorC + "\"></meta>"
+	+ "<meta name=\"dc.Creator\" content=\"" + authorD + "\"></meta>"
+	+ "<meta name=\"dc.Description\" content=\"" + goodDescription + "\"></meta>"
+	+ "<meta name=\"dc.Publisher\" content=\"" + goodPublisher + "\"></meta>"
+	+ "<meta name=\"dc.Date\" scheme=\"" + dateScheme + "\" content=\"" + goodDate + "\"></meta>"
+	+ "<meta name=\"dc.Type\" content=\"" + goodType + "\"></meta>"
+	+ "<meta name=\"dc.Format\" content=\"" + goodFormat + "\"></meta>"
+	+ "<meta name=\"dc.Language\" content=\"" + goodLanguage + "\"></meta>"
+	+ "<meta name=\"dc.Coverage\" content=\"" + goodCoverage + "\"></meta>"
+	+ "<meta name=\"dc.Rights\" content=\"" + goodRights + "\"></meta>"
+	+ "</head>"
+	+ "</html>";
 
 
   public void testExtractFromGoodContent() throws Exception {
@@ -144,7 +147,6 @@ public class TestAmmonsScientificMetadataExtractorFactory extends LockssTestCase
     goodAuthors.add(authorB);
     goodAuthors.add(authorC);
     goodAuthors.add(authorD);
-
 	  
     String url = "http://www.example.com/vol1/issue2/art3/";
     MockCachedUrl cu = new MockCachedUrl(url, hau);
@@ -157,24 +159,26 @@ public class TestAmmonsScientificMetadataExtractorFactory extends LockssTestCase
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
     
-    assertEquals(goodDate, md.get(MetadataField.DC_FIELD_DATE));
-    assertEquals(goodTitle, md.get(MetadataField.DC_FIELD_TITLE));
-    assertEquals(goodPublisher, md.get(MetadataField.DC_FIELD_PUBLISHER));
-    assertEquals(goodAuthors, md.getList(MetadataField.DC_FIELD_CREATOR));
-    assertEquals(goodDescription, md.get(MetadataField.DC_FIELD_DESCRIPTION));
+    assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
+    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
+    assertEquals(goodFormat, md.get(MetadataField.FIELD_FORMAT));
+    assertEquals(goodLanguage, md.get(MetadataField.FIELD_LANGUAGE));
+    assertEquals(goodCoverage, md.get(MetadataField.FIELD_COVERAGE));
     assertEquals(goodType, md.get(MetadataField.DC_FIELD_TYPE));
-    assertEquals(goodFormat, md.get(MetadataField.DC_FIELD_FORMAT));
-    assertEquals(goodLanguage, md.get(MetadataField.DC_FIELD_LANGUAGE));
-    assertEquals(goodCoverage, md.get(MetadataField.DC_FIELD_COVERAGE));
-  }
+    assertEquals(goodRights, md.get(MetadataField.DC_FIELD_RIGHTS));
+    assertEquals(goodDescription, md.get(MetadataField.DC_FIELD_DESCRIPTION));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+}
   
   String badContent =
-    "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
+    "<HTML><HEAD><TITLE>" + goodArticleTitle + "</TITLE></HEAD><BODY>\n" + 
     "<meta name=\"foo\"" +  " content=\"bar\">\n" +
     "  <div id=\"issn\">" +
     "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: " +
@@ -191,7 +195,7 @@ public class TestAmmonsScientificMetadataExtractorFactory extends LockssTestCase
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -208,7 +212,7 @@ public class TestAmmonsScientificMetadataExtractorFactory extends LockssTestCase
     assertEquals("bar", md.getRaw("foo"));
   }
   
-  /**
+  /*
    * Inner class that where a number of Archival Units can be created
    * 
    */
@@ -223,13 +227,12 @@ public class TestAmmonsScientificMetadataExtractorFactory extends LockssTestCase
     public SimulatedContentGenerator getContentGenerator(Configuration cf, String fileRoot) {
       return new MySimulatedContentGenerator(fileRoot);
     }
-
   }
   
-  /**
+  /*
    * Inner class to create a html source code simulated content
    */
-  public static class MySimulatedContentGenerator extends	SimulatedContentGenerator {
+  public static class MySimulatedContentGenerator extends SimulatedContentGenerator {
     protected MySimulatedContentGenerator(String fileRoot) {
       super(fileRoot);
     }
