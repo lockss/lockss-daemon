@@ -8,7 +8,7 @@
 
   comment[platform] = Atypon
   
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressPlugin
   param[base_url] = http://www.nrcresearchpress.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] >
   
@@ -29,7 +29,7 @@
     au < exists ; exists ; 2009 ; Applied Physiology, Nutrition, and Metabolism Volume 34 ; 34 >
     au < exists ; exists ; 2010 ; Applied Physiology, Nutrition, and Metabolism Volume 35 ; 35 >
     au < exists ; exists ; 2011 ; Applied Physiology, Nutrition, and Metabolism Volume 36 ; 36 >
-    au < exists ; exists ; 2012 ; Applied Physiology, Nutrition, and Metabolism Volume 37 ; 37 >
+    au < testing ; exists ; 2012 ; Applied Physiology, Nutrition, and Metabolism Volume 37 ; 37 >
     au < exists ; exists ; 2013 ; Applied Physiology, Nutrition, and Metabolism Volume 38 ; 38 >
     
   }  
