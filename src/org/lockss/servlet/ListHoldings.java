@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.50.8.2 2013-05-11 05:01:51 pgust Exp $
+ * $Id: ListHoldings.java,v 1.50.8.3 2013-05-11 05:58:21 pgust Exp $
  */
 
 /*
@@ -711,6 +711,8 @@ public class ListHoldings extends LockssServlet {
       CurrentConfig.getBooleanParam(
         PARAM_USE_METADATA_FOR_PRESERVED_HOLDINGS,
         DEFAULT_USE_METADATA_FOR_PRESERVED_HOLDINGS);
+    if (log.isDebug3())
+      log.debug3(PARAM_USE_METADATA_FOR_PRESERVED_HOLDINGS+": "+useMetadata);
     return useMetadata;
   }
 
