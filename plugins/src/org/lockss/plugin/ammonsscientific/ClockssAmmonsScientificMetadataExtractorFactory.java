@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssAmmonsScientificMetadataExtractorFactory.java,v 1.2 2013-02-28 17:33:46 aishizaki Exp $
+ * $Id: ClockssAmmonsScientificMetadataExtractorFactory.java,v 1.3 2013-05-11 02:19:18 ldoan Exp $
  */
 
 /*
@@ -33,6 +33,8 @@
 package org.lockss.plugin.ammonsscientific;
 
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
@@ -73,20 +75,16 @@ public class ClockssAmmonsScientificMetadataExtractorFactory
     // Map Ammons Scientific-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static { 
-      tagMap.put("dc.Title", MetadataField.DC_FIELD_TITLE);
       tagMap.put("dc.Title", MetadataField.FIELD_ARTICLE_TITLE);
-      tagMap.put("dc.Creator", MetadataField.DC_FIELD_CREATOR);
       tagMap.put("dc.Creator", MetadataField.FIELD_AUTHOR);
-      tagMap.put("dc.Description", MetadataField.DC_FIELD_DESCRIPTION);
-      tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
       tagMap.put("dc.Publisher", MetadataField.FIELD_PUBLISHER);
-      tagMap.put("dc.Date", MetadataField.DC_FIELD_DATE);
       tagMap.put("dc.Date", MetadataField.FIELD_DATE);
-      tagMap.put("dc.Format", MetadataField.DC_FIELD_FORMAT);
+      tagMap.put("dc.Format", MetadataField.FIELD_FORMAT);
+      tagMap.put("dc.Language", MetadataField.FIELD_LANGUAGE);
+      tagMap.put("dc.Coverage", MetadataField.FIELD_COVERAGE);
       tagMap.put("dc.Type", MetadataField.DC_FIELD_TYPE);
-      tagMap.put("dc.Language", MetadataField.DC_FIELD_LANGUAGE);
       tagMap.put("dc.Rights", MetadataField.DC_FIELD_RIGHTS);
-      tagMap.put("dc.Coverage", MetadataField.DC_FIELD_COVERAGE);
+      tagMap.put("dc.Description", MetadataField.DC_FIELD_DESCRIPTION);
     }
 
     /**
@@ -100,10 +98,23 @@ public class ClockssAmmonsScientificMetadataExtractorFactory
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
-
+      
+      // handle journal.title
+      String copyRightStr = am.getRaw("dc.Rights");
+      if (copyRightStr != null) {
+        log.debug3("copyRightStr: "+ copyRightStr);
+        // unicode of copyright symbol is \u00a9
+        // dc.Rights: "© Perceptual and Motor Skills 2011"
+        Pattern copyRightPat = Pattern.compile("(\\u00a9\\s)(.+)(\\s\\d{4})");
+        Matcher mat = copyRightPat.matcher(copyRightStr);
+        if (mat.find()) {
+          log.debug3("found match for copyRightStr");
+          String journalTitle = mat.replaceFirst("$2");
+          log.debug3("journalTitle: " + journalTitle);
+          am.put(MetadataField.FIELD_JOURNAL_TITLE, mat.replaceFirst("$2"));
+        }
+      }
       emitter.emitMetadata(cu, am);
     }
-
   }
-
 }
