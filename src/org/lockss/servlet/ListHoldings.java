@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.51 2013-04-04 16:57:12 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.52 2013-05-11 04:57:03 pgust Exp $
  */
 
 /*
@@ -599,8 +599,8 @@ public class ListHoldings extends LockssServlet {
             TdbUtil.filterBibliographicItemsByType(
                 MetadataDatabaseUtil.getBibliographicItems(),
                 type);
+        log.debug2("Found bibliographic items: " + items.size());
         if (items.size() > 0) {
-          log.debug2("Found bibliographic items: " + items.size());
           // XXX (NM) Note I moved the conversion algorithm to KbartConverter
           // to take advantage of parallelisation:
           return KbartConverter.convertBibliographicItems(items);
@@ -609,12 +609,14 @@ public class ListHoldings extends LockssServlet {
       // list content from the TDB title database
       Collection<ArchivalUnit> aus = TdbUtil.getAus(scope, type);
       Map<TdbTitle, List<ArchivalUnit>> map = TdbUtil.mapTitlesToAus(aus);
+      log.debug2("Found AUs: " + map.size());
       titles = KbartConverter.convertTitleAus(map.values(), getShowHealthRatings(), rangeFieldsIncluded);
       //TODO titleIterator = new KbartConverter.AuKbartTitleIterator(
       // map.values().iterator(), getShowHealthRatings(), rangeFieldsIncluded);
 
     }
     // TODO Sort here if not performed in KbartConverter
+    log.debug2("Found titles: " + titles.size());
     return titles;
   }
 
@@ -705,9 +707,11 @@ public class ListHoldings extends LockssServlet {
    * @return <code>true</code> if use metadata option is enabled
    */
   private boolean useMetadataForPreserved() {
-    return CurrentConfig.getBooleanParam(
+    boolean useMetadata = 
+      CurrentConfig.getBooleanParam(
         PARAM_USE_METADATA_FOR_PRESERVED_HOLDINGS,
         DEFAULT_USE_METADATA_FOR_PRESERVED_HOLDINGS);
+    return useMetadata;
   }
 
   /**
