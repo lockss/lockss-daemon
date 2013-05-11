@@ -87,7 +87,7 @@
       au < crawling ; exists ; 2008 ; BMC Bioinformatics Volume 9 ; 9 >
       au < crawling ; exists ; 2009 ; BMC Bioinformatics Volume 10 ; 10 >
       au < crawling ; exists ; 2010 ; BMC Bioinformatics Volume 11 ; 11 >
-      au < testing ; exists ; 2011 ; BMC Bioinformatics Volume 12 ; 12 >
+      au < crawling ; exists ; 2011 ; BMC Bioinformatics Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Bioinformatics Volume 13 ; 13 >
       au < manifest ; exists ; 2013 ; BMC Bioinformatics Volume 14 ; 14 >
 
@@ -130,7 +130,7 @@
       au < manifest ; exists ; 2008 ; BMC Biophysics Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; BMC Biophysics Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; BMC Biophysics Volume 3 ; 3 >
-      au < testing ; exists ; 2011 ; BMC Biophysics Volume 4 ; 4 >
+      au < crawling ; exists ; 2011 ; BMC Biophysics Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; BMC Biophysics Volume 5 ; 5 >
       au < manifest ; exists ; 2013 ; BMC Biophysics Volume 6 ; 6 >
 
@@ -577,7 +577,7 @@
       au < crawling ; exists ; 2008 ; BMC Evolutionary Biology Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Evolutionary Biology Volume 9 ; 9 >
       au < crawling ; exists ; 2010 ; BMC Evolutionary Biology Volume 10 ; 10 >
-      au < testing ; exists ; 2011 ; BMC Evolutionary Biology Volume 11 ; 11 >
+      au < crawling ; exists ; 2011 ; BMC Evolutionary Biology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Evolutionary Biology Volume 12 ; 12 >
       au < manifest ; exists ; 2013 ; BMC Evolutionary Biology Volume 13 ; 13 >
 
@@ -657,7 +657,7 @@
       au < crawling ; exists ; 2008 ; BMC Genetics Volume 9 ; 9 >
       au < crawling ; exists ; 2009 ; BMC Genetics Volume 10 ; 10 >
       au < crawling ; exists ; 2010 ; BMC Genetics Volume 11 ; 11 >
-      au < testing ; exists ; 2011 ; BMC Genetics Volume 12 ; 12 >
+      au < crawling ; exists ; 2011 ; BMC Genetics Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Genetics Volume 13 ; 13 >
       au < manifest ; exists ; 2013 ; BMC Genetics Volume 14 ; 14 >
 
@@ -914,7 +914,7 @@
       au < manifest ; exists ; 2008 ; BMC Medical Genomics Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; BMC Medical Genomics Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; BMC Medical Genomics Volume 3 ; 3 >
-      au < testing ; exists ; 2011 ; BMC Medical Genomics Volume 4 ; 4 >
+      au < crawling ; exists ; 2011 ; BMC Medical Genomics Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; BMC Medical Genomics Volume 5 ; 5 >
       au < manifest ; exists ; 2013 ; BMC Medical Genomics Volume 6 ; 6 >
 
@@ -1014,7 +1014,7 @@
       au < manifest ; exists ; 2008 ; BMC Medical Physics Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Medical Physics Volume 9 ; 9 >
       au < crawling ; exists ; 2010 ; BMC Medical Physics Volume 10 ; 10 >
-      au < testing ; exists ; 2011 ; BMC Medical Physics Volume 11 ; 11 >
+      au < crawling ; exists ; 2011 ; BMC Medical Physics Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Medical Physics Volume 12 ; 12 >
       au < manifest ; exists ; 2013 ; BMC Medical Physics Volume 13 ; 13 >
 
@@ -1581,7 +1581,7 @@
       au < manifest ; exists ; 2008 ; BMC Research Notes Volume 1 ; 1 >
       au < crawling ; exists ; 2009 ; BMC Research Notes Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; BMC Research Notes Volume 3 ; 3 >
-      au < testing ; exists ; 2011 ; BMC Research Notes Volume 4 ; 4 >
+      au < crawling ; exists ; 2011 ; BMC Research Notes Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; BMC Research Notes Volume 5 ; 5 >
       au < manifest ; exists ; 2013 ; BMC Research Notes Volume 6 ; 6 >
 
@@ -2776,7 +2776,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.ctajournal.com/
       param[journal_issn] = 2045-7022
 
-      au < testing ; exists ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
+      au < crawling ; exists ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
       au < manifest ; exists ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
 
@@ -2812,7 +2812,7 @@ comment[bmr] = journal archive available, but no new volumes
       comment[moved_from] = Springer Science+Business Media in 2011
       
       au < crawling ; exists ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
-      au < testing ; exists ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
+      au < crawling ; exists ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
       au < manifest ; exists ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
 
@@ -4938,7 +4938,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2007 ; Microbial Cell Factories Volume 6 ; 6 >
       au < crawling ; exists ; 2008 ; Microbial Cell Factories Volume 7 ; 7 >
       au < crawling ; exists ; 2009 ; Microbial Cell Factories Volume 8 ; 8 >
-      au < testing ; exists ; 2010 ; Microbial Cell Factories Volume 9 ; 9 >
+      au < crawling ; exists ; 2010 ; Microbial Cell Factories Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Microbial Cell Factories Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Microbial Cell Factories Volume 11 ; 11 >
       au < manifest ; exists ; 2013 ; Microbial Cell Factories Volume 12 ; 12 >
@@ -5336,7 +5336,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2007 ; Particle and Fibre Toxicology Volume 4 ; 4 >
       au < crawling ; exists ; 2008 ; Particle and Fibre Toxicology Volume 5 ; 5 >
       au < crawling ; exists ; 2009 ; Particle and Fibre Toxicology Volume 6 ; 6 >
-      au < testing ; exists ; 2010 ; Particle and Fibre Toxicology Volume 7 ; 7 >
+      au < crawling ; exists ; 2010 ; Particle and Fibre Toxicology Volume 7 ; 7 >
       au < released ; crawling ; 2011 ; Particle and Fibre Toxicology Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Particle and Fibre Toxicology Volume 9 ; 9 >
       au < manifest ; exists ; 2013 ; Particle and Fibre Toxicology Volume 10 ; 10 >
@@ -6046,7 +6046,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2008 ; Virology Journal Volume 5 ; 5 >
       au < crawling ; exists ; 2009 ; Virology Journal Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; Virology Journal Volume 7 ; 7 >
-      au < testing ; exists ; 2011 ; Virology Journal Volume 8 ; 8 >
+      au < crawling ; exists ; 2011 ; Virology Journal Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Virology Journal Volume 9 ; 9 >
       au < manifest ; exists ; 2013 ; Virology Journal Volume 10 ; 10 >
 
