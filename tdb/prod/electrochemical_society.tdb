@@ -160,17 +160,17 @@
     param[base_url] = http://ecst.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     comment[0] = volume 38, 46, 47, 48, 51 are not available
-    comment[notReady] = "article abstract-view"
+    comment[notReady] = needs hash filter RU 4503
 
     au < HighWirePressH20Plugin ; ready ; 2005 ; ECS Transactions Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; ECS Transactions Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; notReady ; 2006 ; ECS Transactions Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; ready ; 2006 ; ECS Transactions Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 2006 ; ECS Transactions Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; testing ; 2006 ; ECS Transactions Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; testing ; 2007 ; ECS Transactions Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; ECS Transactions Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; notReady ; 2007 ; ECS Transactions Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; testing ; 2007 ; ECS Transactions Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; ECS Transactions Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; notReady ; 2007 ; ECS Transactions Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; testing ; 2007 ; ECS Transactions Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; ready ; 2007 ; ECS Transactions Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; testing ; 2007 ; ECS Transactions Volume 12 ; 12 >
@@ -192,7 +192,7 @@
     au < HighWirePressH20Plugin ; ready ; 2010 ; ECS Transactions Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; testing ; 2010 ; ECS Transactions Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; testing ; 2010 ; ECS Transactions Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; ECS Transactions Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; notReady ; 2010 ; ECS Transactions Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; testing ; 2010 ; ECS Transactions Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; ECS Transactions Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; testing ; 2011 ; ECS Transactions Volume 34 ; 34 >
@@ -207,7 +207,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Transactions Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Transactions Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Transactions Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; ECS Transactions Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; notReady ; 2012 ; ECS Transactions Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; ECS Transactions Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; ECS Transactions Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; ECS Transactions Volume 54 ; 54 >
