@@ -1,5 +1,5 @@
 /*
- * $Id: RoyalSocietyOfChemistryArticleIteratorFactory.java,v 1.7 2011-04-19 20:34:24 thib_gc Exp $
+ * $Id: RoyalSocietyOfChemistryArticleIteratorFactory.java,v 1.8 2013-05-13 18:14:35 alexandraohlson Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class RoyalSocietyOfChemistryArticleIteratorFactory
 
     protected ArticleFiles processUrl(CachedUrl xlinkCu, Matcher xlinkMat) {
       ArticleFiles af = new ArticleFiles();
-      af.setRoleString(ROLE_ARTICLE_CODE, xlinkMat.group(1));
+      //af.setRoleString(ROLE_ARTICLE_CODE, xlinkMat.group(1));// causes a metadata pprint exception casting to CU and it's not used
       guessAbstract(af, xlinkMat);
 //      guessFullTextPdf(af, xlinkMat);
 //      guessOtherParts(af, xlinkMat);
@@ -127,9 +127,11 @@ public class RoyalSocietyOfChemistryArticleIteratorFactory
       // If more than one variant, add nested if's here; see guessFullTextPdf()
       if (absCu != null && absCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA,  absCu); // there isn't much, but this is where we'll get it
       }
       else {
-        log.warning("Could not infer abstract URL for article code " + af.getRoleString(ROLE_ARTICLE_CODE));
+        //log.warning("Could not infer abstract URL for article code " + af.getRoleString(ROLE_ARTICLE_CODE));
+        log.warning("Could not infer abstract URL for article code ");
       }
     }
 
