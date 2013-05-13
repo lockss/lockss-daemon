@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.15 2013-05-03 17:30:44 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.16 2013-05-13 21:00:14 barry409 Exp $
  */
 
 /*
@@ -713,10 +713,6 @@ public class TestUrlTallier extends LockssTestCase {
   }
   
   private class MyV3Poller extends V3Poller {
-    // For testing:  Hashmap of voter IDs to V3LcapMessages.
-    private Map sentMsgs = Collections.synchronizedMap(new HashMap());
-    private Map semaphores = new HashMap();
-    private List<PollerStateBean.Repair> repairs;
     private final int pollSize;
 
     MyV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
@@ -724,26 +720,6 @@ public class TestUrlTallier extends LockssTestCase {
         throws PollSerializerException {
       super(spec, daemon, id, pollkey, duration, hashAlg);
       this.pollSize = pollSize;
-    }
-    
-    @Override
-    public void sendMessageTo(V3LcapMessage msg, PeerIdentity to) {
-      fail("");
-      sentMsgs.put(to, msg);
-      SimpleBinarySemaphore sem = (SimpleBinarySemaphore)semaphores.get(to);
-      if (sem == null) {
-        sem = new SimpleBinarySemaphore();
-        semaphores.put(to, sem);
-      }
-      sem.give();
-    }
-
-    @Override
-    public List getCompletedRepairs() {
-      if (repairs != null) {
-	return repairs;
-      }
-      return super.getCompletedRepairs();
     }
 
     @Override
