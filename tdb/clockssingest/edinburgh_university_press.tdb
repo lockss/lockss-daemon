@@ -582,7 +582,7 @@
   {
 
     title <
-      name = Journal of Scottish Historical Studies ;
+      name = Scottish Economic and Social History ;
       issn = 1748-538X ;
       eissn = 1755-1749 ;
       issnl = 1748-538X 
@@ -590,7 +590,7 @@
      
    {
     param[journal_id] = sesh
-    comment[0] = name changes to Journal of Scottish Historical Studies Volume 21
+    comment[0] = name changes to Journal of Scottish Historical Studies in 2001 Volume 21
 
     au < manifest ; exists ; 1981 ; Scottish Economic and Social History Volume 1 ; 21 >
     au < manifest ; exists ; 1982 ; Scottish Economic and Social History Volume 2 ; 22 >
