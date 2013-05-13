@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.14 2013-04-04 18:02:12 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.15 2013-05-13 22:21:32 pgust Exp $
  */
 
 /*
@@ -269,19 +269,19 @@ select
   (select formatissn(issn) from issn
    where
      md_item_seq = publication.md_item_seq and
-     issn.issn_type = 'p_issn') p_issn,
+     issn.issn_type = 'p_issn' fetch first 1 rows only) p_issn,
   (select formatissn(issn) from issn
    where 
      md_item_seq = publication.md_item_seq and
-     issn.issn_type = 'e_issn') e_issn,
+     issn.issn_type = 'e_issn' fetch first 1 rows only) e_issn,
   (select formatisbn(isbn) from isbn
    where 
      md_item_seq = publication.md_item_seq and
-     isbn.isbn_type = 'p_isbn') p_isbn,
+     isbn.isbn_type = 'p_isbn' fetch first 1 rows only) p_isbn,
   (select formatisbn(isbn) from isbn
    where 
      md_item_seq = publication.md_item_seq and
-     isbn.isbn_type = 'e_isbn') e_isbn
+     isbn.isbn_type = 'e_isbn' fetch first 1 rows only) e_isbn
 from
   publisher, publication, md_item
 where
@@ -303,25 +303,25 @@ where
       +      MD_ITEM_SEQ_COLUMN 
       +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
       +      ISSN_TABLE + "." + ISSN_TYPE_COLUMN
-      +      " = 'p_issn') p_issn, "
+      +      " = 'p_issn' fetch first 1 rows only) p_issn, "
       +   "(select formatissn(" + ISSN_COLUMN + ") from " + ISSN_TABLE
       +   " where " 
       +      MD_ITEM_SEQ_COLUMN 
       +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
       +      ISSN_TABLE + "." + ISSN_TYPE_COLUMN
-      +      " = 'e_issn') e_issn, "
+      +      " = 'e_issn' fetch first 1 rows only) e_issn, "
       +   "(select formatisbn(" + ISBN_COLUMN + ") from " + ISBN_TABLE
       +   " where " 
       +      MD_ITEM_SEQ_COLUMN 
       +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
       +      ISBN_TABLE + "." + ISBN_TYPE_COLUMN
-      +      " = 'p_isbn') p_isbn, "
+      +      " = 'p_isbn' fetch first 1 rows only) p_isbn, "
       +   "(select formatisbn(" + ISBN_COLUMN + ") from " + ISBN_TABLE
       +   " where " 
       +      MD_ITEM_SEQ_COLUMN 
       +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
       +      ISBN_TABLE + "." + ISBN_TYPE_COLUMN
-      +      " = 'e_isbn') e_isbn "
+      +      " = 'e_isbn' fetch first 1 rows only) e_isbn "
       + "from " 
       +   PUBLISHER_TABLE + ", " + PUBLICATION_TABLE + ", " + MD_ITEM_TABLE
       + " where "
@@ -357,19 +357,19 @@ from
      (select formatissn(issn) from issn
       where
         md_item_seq = publication.md_item_seq and
-        issn.issn_type = 'p_issn') p_issn,
+        issn.issn_type = 'p_issn' fetch first 1 rows only) p_issn,
      (select formatissn(issn) from issn
       where 
         md_item_seq = publication.md_item_seq and
-        issn.issn_type = 'e_issn') e_issn,
+        issn.issn_type = 'e_issn' fetch first 1 rows only) e_issn,
      (select formatisbn(isbn) from isbn
       where 
         md_item_seq = publication.md_item_seq and
-        isbn.isbn_type = 'p_isbn') p_isbn,
+        isbn.isbn_type = 'p_isbn' fetch first 1 rows only) p_isbn,
      (select formatisbn(isbn) from isbn
       where 
         md_item_seq = publication.md_item_seq and
-        isbn.isbn_type = 'e_isbn') e_isbn
+        isbn.isbn_type = 'e_isbn' fetch first 1 rows only) e_isbn
    from
      publisher, publication, md_item
    where
