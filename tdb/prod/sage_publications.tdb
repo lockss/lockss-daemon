@@ -41742,22 +41742,22 @@ comment[mpj] = now published by Brill
       
         param[base_url] = http://acr.sagepub.com/
   
-        au < exists ; 1997 ; Acta Radiologica Volume 38 ; 38 >
-        au < exists ; 1998 ; Acta Radiologica Volume 39 ; 39 >
-        au < exists ; 1999 ; Acta Radiologica Volume 40 ; 40 >
-        au < exists ; 2000 ; Acta Radiologica Volume 41 ; 41 >
-        au < exists ; 2001 ; Acta Radiologica Volume 42 ; 42 >
-        au < exists ; 2002 ; Acta Radiologica Volume 43 ; 43 >
-        au < exists ; 2003 ; Acta Radiologica Volume 44 ; 44 >
-        au < exists ; 2004 ; Acta Radiologica Volume 45 ; 45 >
-        au < exists ; 2005 ; Acta Radiologica Volume 46 ; 46 >
-        au < exists ; 2006 ; Acta Radiologica Volume 47 ; 47 >
-        au < exists ; 2007 ; Acta Radiologica Volume 48 ; 48 >
-        au < exists ; 2008 ; Acta Radiologica Volume 49 ; 49 >
-        au < exists ; 2009 ; Acta Radiologica Volume 50 ; 50 >
-        au < exists ; 2010 ; Acta Radiologica Volume 51 ; 51 >
-        au < exists ; 2011 ; Acta Radiologica Volume 52 ; 52 >
-        au < exists ; 2012 ; Acta Radiologica Volume 53 ; 53 >
+        au < doNotProcess ; 1997 ; Acta Radiologica Volume 38 ; 38 >
+        au < doNotProcess ; 1998 ; Acta Radiologica Volume 39 ; 39 >
+        au < doNotProcess ; 1999 ; Acta Radiologica Volume 40 ; 40 >
+        au < doNotProcess ; 2000 ; Acta Radiologica Volume 41 ; 41 >
+        au < doNotProcess ; 2001 ; Acta Radiologica Volume 42 ; 42 >
+        au < doNotProcess ; 2002 ; Acta Radiologica Volume 43 ; 43 >
+        au < doNotProcess ; 2003 ; Acta Radiologica Volume 44 ; 44 >
+        au < doNotProcess ; 2004 ; Acta Radiologica Volume 45 ; 45 >
+        au < doNotProcess ; 2005 ; Acta Radiologica Volume 46 ; 46 >
+        au < doNotProcess ; 2006 ; Acta Radiologica Volume 47 ; 47 >
+        au < doNotProcess ; 2007 ; Acta Radiologica Volume 48 ; 48 >
+        au < doNotProcess ; 2008 ; Acta Radiologica Volume 49 ; 49 >
+        au < doNotProcess ; 2009 ; Acta Radiologica Volume 50 ; 50 >
+        au < doNotProcess ; 2010 ; Acta Radiologica Volume 51 ; 51 >
+        au < doNotProcess ; 2011 ; Acta Radiologica Volume 52 ; 52 >
+        au < doNotProcess ; 2012 ; Acta Radiologica Volume 53 ; 53 >
         au < exists ; 2013 ; Acta Radiologica Volume 54 ; 54 >
         
       }
@@ -41831,13 +41831,13 @@ comment[mpj] = now published by Brill
 
         param[base_url] = http://cet.sagepub.com/
   
-        au < HighWirePressH20Plugin ; exists ; 2006 ; Clinical Ethics Volume 1 ; 1 >
-        au < HighWirePressH20Plugin ; exists ; 2007 ; Clinical Ethics Volume 2 ; 2 >
-        au < HighWirePressH20Plugin ; exists ; 2008 ; Clinical Ethics Volume 3 ; 3 >
-        au < HighWirePressH20Plugin ; exists ; 2009 ; Clinical Ethics Volume 4 ; 4 >
-        au < HighWirePressH20Plugin ; exists ; 2010 ; Clinical Ethics Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; exists ; 2011 ; Clinical Ethics Volume 6 ; 6 >
-        au < HighWirePressH20Plugin ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Clinical Ethics Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Clinical Ethics Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Clinical Ethics Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Clinical Ethics Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Clinical Ethics Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Clinical Ethics Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Clinical Ethics Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; exists ; 2013 ; Clinical Ethics Volume 8 ; 8 >
         
       }
@@ -42374,22 +42374,22 @@ comment[mpj] = now published by Brill
   
         param[base_url] = http://std.sagepub.com/
   
-        au < HighWirePressH20Plugin ; exists ; 1996 ; International Journal of STD & AIDS Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; exists ; 1997 ; International Journal of STD & AIDS Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; exists ; 1998 ; International Journal of STD & AIDS Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; exists ; 1999 ; International Journal of STD & AIDS Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; exists ; 2000 ; International Journal of STD & AIDS Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; exists ; 2001 ; International Journal of STD & AIDS Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; exists ; 2002 ; International Journal of STD & AIDS Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; exists ; 2003 ; International Journal of STD & AIDS Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; exists ; 2004 ; International Journal of STD & AIDS Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; exists ; 2005 ; International Journal of STD & AIDS Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; exists ; 2006 ; International Journal of STD & AIDS Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; exists ; 2007 ; International Journal of STD & AIDS Volume 18 ; 18 >
-        au < HighWirePressH20Plugin ; exists ; 2008 ; International Journal of STD & AIDS Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; exists ; 2009 ; International Journal of STD & AIDS Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; exists ; 2010 ; International Journal of STD & AIDS Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; exists ; 2011 ; International Journal of STD & AIDS Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; International Journal of STD & AIDS Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; International Journal of STD & AIDS Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; International Journal of STD & AIDS Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; International Journal of STD & AIDS Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; International Journal of STD & AIDS Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; International Journal of STD & AIDS Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; International Journal of STD & AIDS Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; International Journal of STD & AIDS Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; International Journal of STD & AIDS Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; International Journal of STD & AIDS Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; International Journal of STD & AIDS Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; International Journal of STD & AIDS Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; International Journal of STD & AIDS Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; International Journal of STD & AIDS Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; International Journal of STD & AIDS Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; International Journal of STD & AIDS Volume 22 ; 22 >
         au < HighWirePressH20Plugin ; exists ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 >
         au < HighWirePressH20Plugin ; expected ; 2013 ; International Journal of STD & AIDS Volume 24 ; 24 >
   
@@ -42488,12 +42488,12 @@ comment[mpj] = now published by Brill
         issnl = 0969-1413
       >
   
-      {
-        comment[notmoved] = this journal has not moved to Sage yet.
-  
         pluginPrefix = org.lockss.plugin.highwire.
-        param[base_url] = http://jms.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      {
+
+        param[base_url] = http://jms.rsmjournals.com/
   
         au < HighWirePressPlugin ; down ; 1998 ; Journal of Medical Screening Volume 5 [superseded] ; 5 >
         au < HighWirePressPlugin ; down ; 1999 ; Journal of Medical Screening Volume 6 [superseded] ; 6 >
@@ -42509,7 +42509,28 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Journal of Medical Screening Volume 16 [superseded] ; 16 >
         au < HighWirePressPlugin ; down ; 2010 ; Journal of Medical Screening Volume 17 [superseded] ; 17 >
         au < HighWirePressPlugin ; down ; 2011 ; Journal of Medical Screening Volume 18 [superseded] ; 18 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Journal of Medical Screening Volume 19 ; 19 >
+  
+      }
+  
+      {
+
+        param[base_url] = http://msc.sagepub.com/
+  
+        au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of Medical Screening Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of Medical Screening Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Journal of Medical Screening Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Journal of Medical Screening Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 2012 ; Journal of Medical Screening Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Medical Screening Volume 20 ; 20 >
   
       }
@@ -43092,14 +43113,12 @@ comment[mpj] = now published by Brill
         eissn = 1758-1133 ;
         issnl = 0049-4755
       >
-  
-      {
-      
-        comment[notmoved] = this journal has not moved to Sage yet.
-  
         pluginPrefix = org.lockss.plugin.highwire.
-        param[base_url] = http://td.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        
+      {
+
+        param[base_url] = http://td.rsmjournals.com/
   
         au < HighWirePressPlugin ; down ; 2005 ; Tropical Doctor Volume 35 [superseded] ; 35 >
         au < HighWirePressPlugin ; down ; 2006 ; Tropical Doctor Volume 36 [superseded] ; 36 >
@@ -43110,6 +43129,22 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2011 ; Tropical Doctor Volume 41 [superseded] ; 41 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Tropical Doctor Volume 42 ; 42 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Tropical Doctor Volume 43 ; 43 >
+  
+      }
+  
+      {
+
+        param[base_url] = http://tdo.sagepub.com 
+  
+        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Tropical Doctor Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Tropical Doctor Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Tropical Doctor Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Tropical Doctor Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Tropical Doctor Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Tropical Doctor Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Tropical Doctor Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; exists ; 2012 ; Tropical Doctor Volume 42 ; 42 >
+        au < HighWirePressH20Plugin ; exists ; 2013 ; Tropical Doctor Volume 43 ; 43 >
   
       }
   
@@ -43153,24 +43188,37 @@ comment[mpj] = now published by Brill
         eissn = 1708-539X
       >
       
-      comment[notmoved] = this journal has not moved to Sage yet.
-      
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://vascular.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[18] = found a login page
-  
-      au < released ; 2004 ; Vascular Volume 12 ; 12 >
-      au < released ; 2005 ; Vascular Volume 13 ; 13 >
-      au < released ; 2006 ; Vascular Volume 14 ; 14 >
-      au < released ; 2007 ; Vascular Volume 15 ; 15 >
-      au < released ; 2008 ; Vascular Volume 16 ; 16 >
-      au < released ; 2009 ; Vascular Volume 17 ; 17 >
-      au < notReady ; 2010 ; Vascular Volume 18 ; 18 >
-      au < released ; 2011 ; Vascular Volume 19 ; 19 >
-      au < expected ; 2012 ; Vascular Volume 20 ; 20 >
-      au < expected ; 2013 ; Vascular Volume 21 ; 21 >
 
+     {
+      param[base_url] = http://vascular.rsmjournals.com/
+  
+      au < down ; 2004 ; Vascular Volume 12 ; 12 >
+      au < down ; 2005 ; Vascular Volume 13 ; 13 >
+      au < down ; 2006 ; Vascular Volume 14 ; 14 >
+      au < down ; 2007 ; Vascular Volume 15 ; 15 >
+      au < down ; 2008 ; Vascular Volume 16 ; 16 >
+      au < down ; 2009 ; Vascular Volume 17 ; 17 >
+      au < down ; 2011 ; Vascular Volume 19 ; 19 >
+
+     }
+     
+     {
+      param[base_url] = http://vas.sagepub.com/
+  
+      au < doNotProcess ; 2004 ; Vascular Volume 12 ; 12 >
+      au < doNotProcess ; 2005 ; Vascular Volume 13 ; 13 >
+      au < doNotProcess ; 2006 ; Vascular Volume 14 ; 14 >
+      au < doNotProcess ; 2007 ; Vascular Volume 15 ; 15 >
+      au < doNotProcess ; 2008 ; Vascular Volume 16 ; 16 >
+      au < doNotProcess ; 2009 ; Vascular Volume 17 ; 17 >
+      au < exists ; 2010 ; Vascular Volume 18 ; 18 >
+      au < doNotProcess ; 2011 ; Vascular Volume 19 ; 19 >
+      au < exists ; 2012 ; Vascular Volume 20 ; 20 >
+      au < expected ; 2013 ; Vascular Volume 21 ; 21 >
+     }
+     
     }
 
   }
