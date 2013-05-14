@@ -10,7 +10,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>BioMed Central Plugin (BMC Journals, Chemistry Central, for CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -18,30 +22,18 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>au_name</string>
     <string>"BioMed Central Plugin (BMC Journals, Chemistry Central, for CLOCKSS), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
-    <string>plugin_name</string>
-    <string>BioMed Central Plugin (BMC Journals, Chemistry Central, for CLOCKSS)</string>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>"%scontent/%s", base_url, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_feature_urls</string>
+    <string>clockss_override</string>
     <map>
       <entry>
-        <string>au_title</string>
-        <string>"%scontent", base_url</string>
-      </entry>
-      <entry>
-        <string>au_volume</string>
-        <string>"%scontent/%s", base_url, volume_name</string>
+        <string>au_def_pause_time</string>
+        <long>100</long>
       </entry>
     </map>
   </entry>
