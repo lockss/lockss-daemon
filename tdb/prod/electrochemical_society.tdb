@@ -123,24 +123,24 @@
     comment[notReady] = "article abstract-view"
     comment[previous] = 2002 through 2006 are on a non-HighWire website at http://www.electrochem.org/dl/ma/
 
-    au < HighWirePressH20Plugin ; ready ; 2005 ; ECS Meeting Abstracts Volume MA2005-01 ; MA2005-01 >
-    au < HighWirePressH20Plugin ; ready ; 2005 ; ECS Meeting Abstracts Volume MA2005-02 ; MA2005-02 >
-    au < HighWirePressH20Plugin ; ready ; 2005 ; ECS Meeting Abstracts Volume MA2005-03 ; MA2005-03 >
+    au < HighWirePressH20Plugin ; releasing ; 2005 ; ECS Meeting Abstracts Volume MA2005-01 ; MA2005-01 >
+    au < HighWirePressH20Plugin ; releasing ; 2005 ; ECS Meeting Abstracts Volume MA2005-02 ; MA2005-02 >
+    au < HighWirePressH20Plugin ; releasing ; 2005 ; ECS Meeting Abstracts Volume MA2005-03 ; MA2005-03 >
     au < HighWirePressH20Plugin ; notReady ; 2006 ; ECS Meeting Abstracts Volume MA2006-01 ; MA2006-01 >
-    au < HighWirePressH20Plugin ; ready ; 2006 ; ECS Meeting Abstracts Volume MA2006-02 ; MA2006-02 >
-    au < HighWirePressH20Plugin ; ready ; 2007 ; ECS Meeting Abstracts Volume MA2007-01 ; MA2007-01 >
-    au < HighWirePressH20Plugin ; ready ; 2007 ; ECS Meeting Abstracts Volume MA2007-02 ; MA2007-02 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; ECS Meeting Abstracts Volume MA2008-01 ; MA2008-01 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; ECS Meeting Abstracts Volume MA2008-02 ; MA2008-02 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; ECS Meeting Abstracts Volume MA2009-01 ; MA2009-01 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; ECS Meeting Abstracts Volume MA2009-02 ; MA2009-02 >
-    au < HighWirePressH20Plugin ; ready ; 2010 ; ECS Meeting Abstracts Volume MA2010-01 ; MA2010-01 >
-    au < HighWirePressH20Plugin ; ready ; 2010 ; ECS Meeting Abstracts Volume MA2010-02 ; MA2010-02 >
-    au < HighWirePressH20Plugin ; ready ; 2010 ; ECS Meeting Abstracts Volume MA2010-03 ; MA2010-03 >
-    au < HighWirePressH20Plugin ; ready ; 2011 ; ECS Meeting Abstracts Volume MA2011-01 ; MA2011-01 >
-    au < HighWirePressH20Plugin ; ready ; 2011 ; ECS Meeting Abstracts Volume MA2011-02 ; MA2011-02 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Meeting Abstracts Volume MA2012-01 ; MA2012-01 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Meeting Abstracts Volume MA2012-02 ; MA2012-02 >
+    au < HighWirePressH20Plugin ; releasing ; 2006 ; ECS Meeting Abstracts Volume MA2006-02 ; MA2006-02 >
+    au < HighWirePressH20Plugin ; releasing ; 2007 ; ECS Meeting Abstracts Volume MA2007-01 ; MA2007-01 >
+    au < HighWirePressH20Plugin ; releasing ; 2007 ; ECS Meeting Abstracts Volume MA2007-02 ; MA2007-02 >
+    au < HighWirePressH20Plugin ; releasing ; 2008 ; ECS Meeting Abstracts Volume MA2008-01 ; MA2008-01 >
+    au < HighWirePressH20Plugin ; releasing ; 2008 ; ECS Meeting Abstracts Volume MA2008-02 ; MA2008-02 >
+    au < HighWirePressH20Plugin ; releasing ; 2009 ; ECS Meeting Abstracts Volume MA2009-01 ; MA2009-01 >
+    au < HighWirePressH20Plugin ; releasing ; 2009 ; ECS Meeting Abstracts Volume MA2009-02 ; MA2009-02 >
+    au < HighWirePressH20Plugin ; releasing ; 2010 ; ECS Meeting Abstracts Volume MA2010-01 ; MA2010-01 >
+    au < HighWirePressH20Plugin ; releasing ; 2010 ; ECS Meeting Abstracts Volume MA2010-02 ; MA2010-02 >
+    au < HighWirePressH20Plugin ; releasing ; 2010 ; ECS Meeting Abstracts Volume MA2010-03 ; MA2010-03 >
+    au < HighWirePressH20Plugin ; releasing ; 2011 ; ECS Meeting Abstracts Volume MA2011-01 ; MA2011-01 >
+    au < HighWirePressH20Plugin ; releasing ; 2011 ; ECS Meeting Abstracts Volume MA2011-02 ; MA2011-02 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; ECS Meeting Abstracts Volume MA2012-01 ; MA2012-01 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; ECS Meeting Abstracts Volume MA2012-02 ; MA2012-02 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; ECS Meeting Abstracts Volume MA2013-01 ; MA2013-01 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; ECS Meeting Abstracts Volume MA2013-02 ; MA2013-02 >
     
@@ -206,7 +206,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; ECS Transactions Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Transactions Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Transactions Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; ready ; 2012 ; ECS Transactions Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; releasing ; 2012 ; ECS Transactions Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; notReady ; 2012 ; ECS Transactions Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; ECS Transactions Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; ECS Transactions Volume 53 ; 53 >
