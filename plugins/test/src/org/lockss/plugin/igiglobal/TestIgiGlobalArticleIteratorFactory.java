@@ -99,8 +99,8 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
 
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals("Article file root URL pattern changed or incorrect" ,ListUtil.list(BASE_URL + "gateway/(article|chapter)/"),
-		 getRootUrls(artIter));
+    assertEquals("Article file root URL pattern changed or incorrect", 
+        ListUtil.list(BASE_URL + "gateway/article/", BASE_URL + "gateway/chapter/"), getRootUrls(artIter));
   }
 
   public void testUrlsWithPrefixes() throws Exception {

@@ -101,8 +101,8 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
 
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals("Article file root URL pattern changed or incorrect" ,ListUtil.list(BASE_URL + "gateway/(article|chapter)/"),
-		 getRootUrls(artIter));
+    assertEquals("Article file root URL pattern changed or incorrect" ,
+        ListUtil.list(BASE_URL + "gateway/article/", BASE_URL + "gateway/chapter/"), getRootUrls(artIter));
   }
 
   public void testUrlsWithPrefixes() throws Exception {
@@ -181,15 +181,15 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
     // ABSTRACT - must have abstract to even get picked up
     String [] af1 = {null,
     		     null,
-    		     BASE_URL + "gateway/article/11111"};
+    		     BASE_URL + "gateway/chapter/11111"};
     
     String [] af2 = {null,
 		     null,
-		     BASE_URL + "gateway/article/54321"};
+		     BASE_URL + "gateway/chapter/54321"};
     
-    String [] af3 = {BASE_URL + "gateway/article/full-text-pdf/55656",
-		     BASE_URL + "gateway/article/full-text-pdf/55656",
-		     BASE_URL + "gateway/article/55656"};
+    String [] af3 = {BASE_URL + "gateway/chapter/full-text-pdf/55656",
+		     BASE_URL + "gateway/chapter/full-text-pdf/55656",
+		     BASE_URL + "gateway/chapter/55656"};
     
     expStack.push(af3);
     expStack.push(af2);

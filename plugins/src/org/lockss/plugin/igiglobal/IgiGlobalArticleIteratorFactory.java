@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.5 2013-04-04 20:41:23 alexandraohlson Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.6 2013-05-14 22:37:23 alexandraohlson Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Constants;
+import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 
 /*
@@ -56,8 +57,9 @@ public class IgiGlobalArticleIteratorFactory
 
   protected static Logger log = Logger.getLogger("IgiArticleIteratorFactory");
   
-  protected static final String ROOT_TEMPLATE = "\"%sgateway/(article|chapter)/\", base_url"; // params from tdb file corresponding to AU
-  
+  protected static final String JOURNAL_ROOT_TEMPLATE = "\"%sgateway/article/\", base_url"; // params from tdb file corresponding to AU
+  protected static final String BOOK_ROOT_TEMPLATE = "\"%sgateway/chapter/\", base_url"; // params from tdb file corresponding to AU
+
   protected static final String PATTERN_TEMPLATE = "\"^%sgateway/(article|chapter)/[0-9]+\", base_url";
 
   
@@ -68,7 +70,7 @@ public class IgiGlobalArticleIteratorFactory
     return new IgiGlobalArticleIterator(au,
                                          new SubTreeArticleIterator.Spec()
                                              .setTarget(target)
-                                             .setRootTemplate(ROOT_TEMPLATE)
+                                             .setRootTemplates(ListUtil.list(JOURNAL_ROOT_TEMPLATE, BOOK_ROOT_TEMPLATE))
                                              .setPatternTemplate(PATTERN_TEMPLATE));
   }
 
