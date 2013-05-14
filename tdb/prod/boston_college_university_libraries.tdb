@@ -61,8 +61,8 @@
       param[base_url] = http://ejournals.bc.edu/ojs/
       param[journal_id] = ital
       
-      au < manifest ; 2011 ; Information Technology and Libraries Volume 30 (2011) ; 30 ; 2011 >
-      au < manifest ; 2012 ; Information Technology and Libraries Volume 31 (2012) ; 31 ; 2012 >
+      au < testing ; 2011 ; Information Technology and Libraries Volume 30 (2011) ; 30 ; 2011 >
+      au < testing ; 2012 ; Information Technology and Libraries Volume 31 (2012) ; 31 ; 2012 >
 
     }
 
@@ -97,7 +97,7 @@
       param[base_url] = http://ejournals.bc.edu/ojs/
       param[journal_id] = levantine
 
-      au < manifest ; 2012 ; Levantine Review Volume 1 (2012) ; 1 ; 2012 >
+      au < testing ; 2012 ; Levantine Review Volume 1 (2012) ; 1 ; 2012 >
       
      }
           
@@ -109,8 +109,8 @@
       param[base_url] = http://ejournals.bc.edu/ojs/
       param[journal_id] = lumenetvita
       
-      au < manifest ; 2011 ; Lumen et Vita Volume 1 (2011) ; 1 ; 2011 >
-      au < manifest ; 2012 ; Lumen et Vita Volume 2 (2012) ; 2 ; 2012 >
+      au < testing ; 2011 ; Lumen et Vita Volume 1 (2011) ; 1 ; 2011 >
+      au < testing ; 2012 ; Lumen et Vita Volume 2 (2012) ; 2 ; 2012 >
 
       }
      
