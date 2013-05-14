@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanInstituteOfPhysicsSourceMetadataExtractorFactory.java,v 1.2 2013-05-10 20:14:05 alexandraohlson Exp $
+ * $Id: AmericanInstituteOfPhysicsSourceMetadataExtractorFactory.java,v 1.3 2013-05-14 21:38:25 pgust Exp $
  */
 
 /*
@@ -109,6 +109,7 @@ public class AmericanInstituteOfPhysicsSourceMetadataExtractorFactory
 	      nodeMap.put("/article/front/spin/jouidx/addidx", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/article/front/abstract", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/article/front/cpyrt/cpyrtdate/@date", XmlDomMetadataExtractor.TEXT_VALUE);
+              nodeMap.put("/article/front/cpyrt/cpyrtholder", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/article/front/pubfront/fpage", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/article/front/pubfront/lpage", XmlDomMetadataExtractor.TEXT_VALUE);
 	    }
@@ -129,6 +130,7 @@ public class AmericanInstituteOfPhysicsSourceMetadataExtractorFactory
 		  xpathMap.put("/article/front/spin/jouidx/addidx", MetadataField.FIELD_KEYWORDS);
 		  xpathMap.put("/article/front/abstract", MetadataField.DC_FIELD_DESCRIPTION);
 		  xpathMap.put("/article/front/cpyrt/cpyrtdate/@date", MetadataField.DC_FIELD_RIGHTS);
+                  xpathMap.put("/article/front/cpyrt/cpyrtholder", MetadataField.FIELD_PUBLISHER);
 		  xpathMap.put("/article/front/pubfront/fpage", MetadataField.FIELD_START_PAGE);
 		  xpathMap.put("/article/front/pubfront/lpage", MetadataField.FIELD_END_PAGE);
 	    }
@@ -163,6 +165,9 @@ public class AmericanInstituteOfPhysicsSourceMetadataExtractorFactory
 	          ArticleMetadata am = 
 	            new XmlDomMetadataExtractor(nodeMap).extract(target, cu);
 	          am.cook(xpathMap);
+	          if (!am.hasValidValue(MetadataField.FIELD_PUBLISHER)) {
+	            am.put(MetadataField.FIELD_PUBLISHER, "American Institute of Physics");
+	          }
 	          return am;
 	        } catch (XPathExpressionException ex) {
 	          PluginException ex2 = new PluginException("Error parsing XPaths");
