@@ -1,5 +1,5 @@
 /*
- * $Id: TFileCache.java,v 1.3 2012-03-13 22:35:25 tlipkis Exp $
+ * $Id: TFileCache.java,v 1.4 2013-05-14 04:10:12 tlipkis Exp $
  */
 
 /*
@@ -140,26 +140,29 @@ public class TFileCache {
    */
   public Entry getCachedTFileEntry(CachedUrl cu) throws IOException {
     String key = getKey(cu);
-    Entry ent = getEnt(key);
-    if (ent != null) {
+    synchronized (cmap) {
+      Entry ent = getEnt(key);
+      if (ent != null) {
+	return ent;
+      }
+      cacheMisses++;
+      ent = createEnt(key, cu);
+
+      if (ent == null) {
+	return null;
+      }
+      ensureSpace(ent);
+      fillTFile(ent, cu);
+      if (ent.valid) {
+	curSize += ent.size;
+      } else {
+	// TFile wasn't fully created, delete temp file and remove from map
+	log.warning("Incompletely created TFile for: " + cu);
+	flushEntry(ent);
+	return null;
+      }
       return ent;
     }
-    cacheMisses++;
-    ent = createEnt(key, cu);
-    if (ent == null) {
-      return null;
-    }
-    ensureSpace(ent);
-    fillTFile(ent, cu);
-    if (ent.valid) {
-      curSize += ent.size;
-    } else {
-      // TFile wasn't fully created, delete temp file and remove from map
-      log.warning("Incompletely created TFile for: " + cu);
-      flushEntry(ent);
-      return null;
-    }
-    return ent;
   }    
 
   /** Properties of an archive file CU that should be inherited by its
@@ -203,14 +206,12 @@ public class TFileCache {
   }
 
   private Entry getEnt(String key) {
-    synchronized (cmap) {
-      Entry ent = cmap.get(key);
-      if (ent != null) {
-	cacheHits++;
-	ent.used();
-      }
-      return ent;
+    Entry ent = cmap.get(key);
+    if (ent != null) {
+      cacheHits++;
+      ent.used();
     }
+    return ent;
   }
 
   private Entry createEnt(String key, CachedUrl cu)
