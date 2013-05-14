@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
   <!--  This is a list of OJS2 Child plugins - be sure to update
         the child's plugin_parent_version number to match, then
@@ -127,8 +127,7 @@
       <string>4,"^%s", base_url</string>
       <string>2,"^%s(index\.php/)?(%s/)?(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:", base_url, journal_id</string>
       <string>1,"^%s(index\.php/)?(%s/)?(article|issue)/(download|downloadSuppFile|view|viewArticle|viewDownloadInterstitial|viewFile|viewPDFInterstitial|viewRST)/", base_url, journal_id</string>
-      <string>1,"^%s(index\.php/)?(%s/)?rt/bio/", base_url, journal_id</string>
-      <string>1,"^%s(index\.php/)?(%s/)?rt/(metadata|printerFriendly|suppFileMetadata|suppFiles|captureCite|findingReferences)/", base_url, journal_id</string>
+      <string>1,"^%s(index\.php/)?(%s/)?rt/(bio|findingReferences|metadata|printerFriendly|suppFileMetadata|suppFiles)/", base_url, journal_id</string>
       <!-- the following url is redirected-to from the start_url for Ubiquity Press -->
       <string>1,"^%sgateway/lockss\?year=%d", base_url, year</string>
     </list>
