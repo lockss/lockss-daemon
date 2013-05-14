@@ -41856,6 +41856,7 @@ comment[mpj] = now published by Brill
       >
   
       {
+        comment[notmoved] = not yet moved to Sage.
   
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -41888,10 +41889,12 @@ comment[mpj] = now published by Brill
       >
   
       {
+      
+        comment[notmoved] = not yet moved to Sage.
   
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-        param[base_url] = http://ebm.rsmjournals.com/
         implicit < status ; year ; name ; param[volume_name] >
+        param[base_url] = http://ebm.rsmjournals.com/
   
         au < released ; 1903 ; Experimental Biology and Medicine Volume 1 ; 1 >
         au < released ; 1904 ; Experimental Biology and Medicine Volume 2 ; 2 >
@@ -42341,11 +42344,12 @@ comment[mpj] = now published by Brill
         issnl = 0956-4624
       >
   
+        pluginPrefix = org.lockss.plugin.highwire.
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       {
   
-        pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://ijsa.rsmjournals.com/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
         au < HighWirePressPlugin ; down ; 1996 ; International Journal of STD & AIDS Volume 7 [superseded] ; 7 >
         au < HighWirePressPlugin ; down ; 1997 ; International Journal of STD & AIDS Volume 8 [superseded] ; 8 >
@@ -42363,7 +42367,30 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; International Journal of STD & AIDS Volume 20 [superseded] ; 20 >
         au < HighWirePressPlugin ; down ; 2010 ; International Journal of STD & AIDS Volume 21 [superseded] ; 21 >
         au < HighWirePressPlugin ; down ; 2011 ; International Journal of STD & AIDS Volume 22 [superseded] ; 22 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 >
+  
+      }
+  
+      {
+  
+        param[base_url] = http://std.sagepub.com/
+  
+        au < HighWirePressH20Plugin ; exists ; 1996 ; International Journal of STD & AIDS Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; exists ; 1997 ; International Journal of STD & AIDS Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; International Journal of STD & AIDS Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; International Journal of STD & AIDS Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; International Journal of STD & AIDS Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; International Journal of STD & AIDS Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; International Journal of STD & AIDS Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; International Journal of STD & AIDS Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; International Journal of STD & AIDS Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; 2005 ; International Journal of STD & AIDS Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; 2006 ; International Journal of STD & AIDS Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; 2007 ; International Journal of STD & AIDS Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 2008 ; International Journal of STD & AIDS Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; 2009 ; International Journal of STD & AIDS Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; exists ; 2010 ; International Journal of STD & AIDS Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; exists ; 2011 ; International Journal of STD & AIDS Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; exists ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 >
         au < HighWirePressH20Plugin ; expected ; 2013 ; International Journal of STD & AIDS Volume 24 ; 24 >
   
       }
@@ -42379,11 +42406,12 @@ comment[mpj] = now published by Brill
         issnl = 1355-8196
       >
   
+        pluginPrefix = org.lockss.plugin.highwire.
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       {
   
-        pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://jhsrp.rsmjournals.com/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
         au < HighWirePressPlugin ; down ; 2001 ; Journal of Health Services Research & Policy Volume 6 [superseded] ; 6 >
         au < HighWirePressPlugin ; down ; 2002 ; Journal of Health Services Research & Policy Volume 7 [superseded] ; 7 >
@@ -42396,8 +42424,26 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Journal of Health Services Research & Policy Volume 14 [superseded] ; 14 >
         au < HighWirePressPlugin ; down ; 2010 ; Journal of Health Services Research & Policy Volume 15 [superseded] ; 15 >
         au < HighWirePressPlugin ; down ; 2011 ; Journal of Health Services Research & Policy Volume 16 [superseded] ; 16 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 >
+  
+      }
+  
+      {
+  
+        param[base_url] = http://hsr.sagepub.com/
+  
+        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 >
   
       }
   
@@ -42413,6 +42459,7 @@ comment[mpj] = now published by Brill
       >
   
       {
+        comment[notmoved] = this journal has not moved to Sage yet.
   
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://jmb.rsmjournals.com/
@@ -42442,6 +42489,7 @@ comment[mpj] = now published by Brill
       >
   
       {
+        comment[notmoved] = this journal has not moved to Sage yet.
   
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://jms.rsmjournals.com/
@@ -42478,6 +42526,7 @@ comment[mpj] = now published by Brill
       >
   
       {
+        comment[notmoved] = this journal has not moved to Sage yet.
   
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://jtt.rsmjournals.com/
@@ -42638,7 +42687,7 @@ comment[mpj] = now published by Brill
       >
   
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://cvd.rsmjournals.com/
+      param[base_url] = http://cvd.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
   
       au < exists ; 2012 ; JRSM Cardiovascular Disease Volume 1 ; 1 >
@@ -42687,11 +42736,12 @@ comment[mpj] = now published by Brill
         issnl = 0023-6772
       >
   
+        pluginPrefix = org.lockss.plugin.highwire.
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       {
   
-        pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://la.rsmjournals.com/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
         au < HighWirePressPlugin ; down ; 1967 ; Laboratory Animals Volume 1 [superseded] ; 1 >
         au < HighWirePressPlugin ; down ; 1968 ; Laboratory Animals Volume 2 [superseded] ; 2 >
@@ -42738,8 +42788,60 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Laboratory Animals Volume 43 [superseded] ; 43 >
         au < HighWirePressPlugin ; down ; 2010 ; Laboratory Animals Volume 44 [superseded] ; 44 >
         au < HighWirePressPlugin ; down ; 2011 ; Laboratory Animals Volume 45 [superseded] ; 45 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Laboratory Animals Volume 46 ; 46 >
-        au < HighWirePressH20Plugin ; manifest ; 2013 ; Laboratory Animals Volume 47 ; 47 >
+  
+      }
+  
+      {
+  
+        param[base_url] = http://lan.sagepub.com/
+  
+        au < HighWirePressH20Plugin ; doNotProcess ; 1967 ; Laboratory Animals Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1968 ; Laboratory Animals Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1969 ; Laboratory Animals Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1970 ; Laboratory Animals Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1971 ; Laboratory Animals Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1972 ; Laboratory Animals Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1973 ; Laboratory Animals Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1974 ; Laboratory Animals Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1975 ; Laboratory Animals Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1976 ; Laboratory Animals Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1977 ; Laboratory Animals Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1978 ; Laboratory Animals Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; Laboratory Animals Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; Laboratory Animals Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; Laboratory Animals Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; Laboratory Animals Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; Laboratory Animals Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; Laboratory Animals Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; Laboratory Animals Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; Laboratory Animals Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1987 ; Laboratory Animals Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1988 ; Laboratory Animals Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1989 ; Laboratory Animals Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1990 ; Laboratory Animals Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; Laboratory Animals Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; Laboratory Animals Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; Laboratory Animals Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1994 ; Laboratory Animals Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; Laboratory Animals Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; Laboratory Animals Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; Laboratory Animals Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Laboratory Animals Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Laboratory Animals Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Laboratory Animals Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Laboratory Animals Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Laboratory Animals Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Laboratory Animals Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Laboratory Animals Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Laboratory Animals Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Laboratory Animals Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Laboratory Animals Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Laboratory Animals Volume 42 ; 42 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Laboratory Animals Volume 43 ; 43 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Laboratory Animals Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Laboratory Animals Volume 45 ; 45 >
+        au < HighWirePressH20Plugin ; exists ; 2012 ; Laboratory Animals Volume 46 ; 46 >
+        au < HighWirePressH20Plugin ; exists ; 2013 ; Laboratory Animals Volume 47 ; 47 >
   
       }
   
@@ -42801,6 +42903,8 @@ comment[mpj] = now published by Brill
       >
   
       {
+      
+        comment[notmoved] = This journal has not yet moved to Sage.
   
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://mlj.rsmjournals.com/
@@ -42890,6 +42994,7 @@ comment[mpj] = now published by Brill
       >
   
       {
+        comment[notmoved] = this journal has not moved to Sage yet.
   
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://obmed.rsmjournals.com/
@@ -42915,11 +43020,12 @@ comment[mpj] = now published by Brill
         issnl = 0268-3555
       >
   
+        pluginPrefix = org.lockss.plugin.highwire.
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
       {
   
-        pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://phleb.rsmjournals.com/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
         au < HighWirePressPlugin ; down ; 2003 ; Phlebology Volume 18 [superseded] ; 18 >
         au < HighWirePressPlugin ; down ; 2004 ; Phlebology Volume 19 [superseded] ; 19 >
@@ -42930,8 +43036,24 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Phlebology Volume 24 [superseded] ; 24 >
         au < HighWirePressPlugin ; down ; 2010 ; Phlebology Volume 25 [superseded] ; 25 >
         au < HighWirePressPlugin ; down ; 2011 ; Phlebology Volume 26 [superseded] ; 26 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Phlebology Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; manifest ; 2013 ; Phlebology Volume 28 ; 28 >
+  
+      }
+  
+      {
+  
+        param[base_url] = http://phl.sagepub.com/
+  
+        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Phlebology Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Phlebology Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Phlebology Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Phlebology Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Phlebology Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Phlebology Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Phlebology Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Phlebology Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Phlebology Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; exists ; 2012 ; Phlebology Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; exists ; 2013 ; Phlebology Volume 28 ; 28 >
   
       }
   
@@ -42945,6 +43067,8 @@ comment[mpj] = now published by Brill
         eissn = 2045-6441
       >
   
+      comment[notmoved] = this journal has not moved to Sage yet.
+      
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://smj.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
@@ -42970,6 +43094,8 @@ comment[mpj] = now published by Brill
       >
   
       {
+      
+        comment[notmoved] = this journal has not moved to Sage yet.
   
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://td.rsmjournals.com/
@@ -42998,6 +43124,7 @@ comment[mpj] = now published by Brill
       >
   
       {
+        comment[notmoved] = this journal has not moved to Sage yet.
   
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         param[base_url] = http://ult.rsmjournals.com/
@@ -43025,7 +43152,9 @@ comment[mpj] = now published by Brill
         issn = 1708-5381 ;
         eissn = 1708-539X
       >
-  
+      
+      comment[notmoved] = this journal has not moved to Sage yet.
+      
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://vascular.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
